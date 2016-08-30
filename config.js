@@ -69,6 +69,10 @@ module.exports = {
         tasks: ['css']
       },
       {
+        match: ['./src/assets/**/*.scss'],
+        tasks: ['sass']
+      },
+      {
         match: ['./src/assets/**/*.js'],
         tasks: ['js']
       },

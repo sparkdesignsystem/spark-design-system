@@ -1,0 +1,27 @@
+// Global utility stlyes
+@import "../../../../node_modules/scalescss/node_modules/scales-utilities-normalize/normalize";
+@import "../../../../node_modules/scalescss/node_modules/scales-utilities-reset/reset";
+@import "../../../../node_modules/scalescss/node_modules/scales-utilities-clearfix/clearfix";
+
+// Base styles for standard HTML elements
+@import "../../../../node_modules/scalescss/node_modules/scales-base-typography/typography";
+@import "../../../../node_modules/scalescss/node_modules/scales-base-images/images";
+@import "../../../../node_modules/scalescss/node_modules/scales-base-lists/lists";
+@import "../../../../node_modules/scalescss/node_modules/scales-base-blockquotes/blockquotes";
+@import "../../../../node_modules/scalescss/node_modules/scales-base-forms/forms";
+@import "../../../../node_modules/scalescss/node_modules/scales-base-tables/tables";
+
+// OOCSS based design patterns
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-box/box";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-horizontal-list/horizontal-list";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-vertical-list/vertical-list";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-media-object/media-object";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-flag/flag";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-buttons/buttons";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-split/split";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-stats/stats";
+@import "../../../../node_modules/scalescss/node_modules/scales-patterns-multi-col-list/multi-col-list";
+
+// Overrides that need to come later in the cascade
+@import "../../../../node_modules/scalescss/node_modules/scales-overrides-size/size";
+@import "../../../../node_modules/scalescss/node_modules/scales-overrides-spacing/spacing";

@@ -5,6 +5,9 @@ const gulp = require('gulp');
 const ghPages = require('gulp-gh-pages');
 const helpers = require('@cloudfour/hbs-helpers');
 const tasks = require('@cloudfour/gulp-tasks');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
 const env = require('gulp-util').env;
 const config = require('./config');
 
@@ -21,9 +24,20 @@ Object.assign(config.drizzle, { helpers });
 ].forEach(name => tasks[name](gulp, config[name]));
 
 // Register special CSS tasks
-tasks.css(gulp, config['css:toolkit']);
 tasks.css(gulp, config['css:drizzle']);
-gulp.task('css', ['css:drizzle', 'css:toolkit']);
+gulp.task('css', ['css:drizzle']);
+
+// Sass task
+gulp.task('sass', () => {
+    gulp.src('src/assets/toolkit/styles/**/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['> 1%','last 4 versions'],
+            cascade: false
+        }))
+        .pipe(cssnano())
+        .pipe(gulp.dest('./dist/assets/toolkit/styles'));
+});
 
 // Register Drizzle builder task
 gulp.task('drizzle', () => {
@@ -36,6 +50,7 @@ gulp.task('frontend', [
   'drizzle',
   'copy',
   'css',
+  'sass',
   'js'
 ]);
 

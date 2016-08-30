@@ -4,13 +4,13 @@ notes: |
   These are the brand colors.
 ---
 
-<h1>{{title}}</h1>
+<h1 class="heading--primary heading-divider">{{title}}</h1>
 
 {{#each (data "colors")}}
-  <h4 class="drizzle-u-capitalize">{{@key}}</h4>
+  <h4 class="heading--secondary">{{@key}}</h4>
   <ul class="drizzle-u-listInline">
     {{#each this}}
-      <li class="drizzle-u-marginBottom">
+      <li>
         {{> drizzle.swatch }}
       </li>
     {{/each}}

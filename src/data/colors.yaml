@@ -1,25 +1,59 @@
-brand:
-  - color: "#001F3F"
-    property: "--color-navy"
-  - color: "#0074D9"
-    property: "--color-blue"
-  - color: "#7FDBFF"
-    property: "--color-aqua"
-  - color: "#39CCCC"
-    property: "--color-teal"
+Primary:
+  - label: Blue Dark
+    color: "#0C4569"
+    property: "$blue-dark"
+  - label: Blue Medium
+    color: "#2081BF"
+    property: "$blue-medium"
+  - label: Blue Light
+    color: "#C3D3E3"
+    property: "$blue-light"
 
-grays:
-  - color: "#111111"
-    property: "--color-black"
-  - color: "#AAAAAA"
-    property: "--color-gray"
-  - color: "#DDDDDD"
-    property: "--color-silver"
+Secondary:
+  - label: Red Dark
+    color: "#8C181D"
+    property: "$red-dark"
+  - label: Red Medium (QL Red)
+    color: "#B5121B"
+    property: "$red-medium"
+  - label: Red-light
+    color: "#FACCC4"
+    property: "$red-light"
+  - label: Purple Dark
+    color: "#44235D"
+    property: "$purple-dark"
+  - label: Purple
+    color: "#551387"
+    property: "$purple"
+  - label: Orange Dark
+    color: "#E67800"
+    property: "$orange-dark"
+  - label: Orange
+    color: "#FF9B00"
+    property: "$orange"
+  - label: Green Dark
+    color: "#3C7814"
+    property: "$green-dark"
+  - label: Green Medium
+    color: "#6C9F2E"
+    property: "$green-medium"
+  - label: Green Light
+    color: "#D3EF8D"
+    property: "$green-light"
 
-states:
-  - color: "#2ECC40"
-    property: "--color-green"
-  - color: "#FFDC00"
-    property: "--color-yellow"
-  - color: "#FF4136"
-    property: "--color-red"
+Neutral:
+  - label: Black
+    color: "#222222"
+    property: "$black"
+  - label: Gray Dark
+    color: "#5A5A5A"
+    property: "$gray-dark"
+  - label: Gray Medium
+    color: "#AAAAAA"
+    property: "$gray-medium"
+  - label: Gray Light
+    color: "#E5E5E5"
+    property: "$gray-light"
+  - label: White
+    color: "#FFFFFF"
+    property: "$white"
