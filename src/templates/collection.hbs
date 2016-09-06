@@ -1,6 +1,9 @@
 {{#extend "default"}}
   {{#content "main"}}
     <h1 class="heading--primary heading-divider">{{name}}</h1>
+    {{#if notes}}
+        <p>{{notes}}</p>
+    {{/if}}
     {{#each patterns}}
       {{> drizzle.item}}
     {{/each}}
