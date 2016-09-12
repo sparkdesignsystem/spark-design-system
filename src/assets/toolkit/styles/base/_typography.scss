@@ -1,0 +1,29 @@
+.heading {
+  font-family: "quatro-slab", "times new roman", serif;
+  color: $blue-dark;
+}
+
+.heading--primary {
+  font-size: ms(34);
+}
+
+.heading--secondary {
+  font-size: ms(21);
+}
+
+.heading--sub {
+  font-size: ms(17);
+  font-weight: normal;
+  color: $black;
+}
+
+.heading-divider {
+  border-bottom: 2px solid $grey-medium;
+  margin-bottom: ms(0);
+}
+
+.body-divider, hr {
+  border: 0;
+  border-bottom: 2px dashed $grey-medium;
+  margin-bottom: ms(0);
+}

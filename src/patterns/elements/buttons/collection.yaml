@@ -1,0 +1,5 @@
+# Make this appear before its sibling collections in listings
+order: 3
+
+notes: |
+  Examples of foundational typographic elements like headings, paragraphs, and lists.

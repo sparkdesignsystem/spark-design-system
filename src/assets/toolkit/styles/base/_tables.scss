@@ -1,0 +1,11 @@
+$table-breakpoint: 46em;
+
+.table--primary {
+    margin-bottom: ms(0);
+    text-align: center;
+}
+
+.table--primary__head {
+    background-color: $blue-dark;
+    color: $white;
+}

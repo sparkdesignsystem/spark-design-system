@@ -28,9 +28,9 @@ Secondary:
   - label: Orange Dark
     color: "#E67800"
     property: "$orange-dark"
-  - label: Orange
+  - label: Orange Medium
     color: "#FF9B00"
-    property: "$orange"
+    property: "$orange-medium"
   - label: Green Dark
     color: "#3C7814"
     property: "$green-dark"

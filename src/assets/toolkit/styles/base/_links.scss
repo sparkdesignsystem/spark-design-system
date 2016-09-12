@@ -1,0 +1,23 @@
+a, .link-btn, .link {
+  color: $blue-medium;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-btn {
+  padding: ms(0) ms(17);
+  background: transparent;
+  display: inline-block;
+  margin-bottom: 1em;
+  vertical-align: middle;
+}
+
+.link--plain {
+  text-decoration: none;
+}
+
+.link--visited {
+  color: $blue-dark;
+}

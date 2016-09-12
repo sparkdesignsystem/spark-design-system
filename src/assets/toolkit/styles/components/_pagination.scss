@@ -1,0 +1,30 @@
+.pagination {
+    //
+    // Remove whitespace caused by inline-block.
+    ///
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+    @include horizontal-list;
+}
+
+.pagination__item {
+    letter-spacing: normal;
+    word-spacing: normal;
+    padding: ms(-50) ms(-12);
+    margin: ms(-50);
+
+    &.current {
+        background-color: $grey-light;
+        border-radius: 4px;
+    }
+
+    .disabled {
+        color: $grey-medium;
+        text-decoration: none;
+        pointer-events: none;
+
+        &:hover, &:active {
+            text-decoration: none;
+        }
+    }
+}

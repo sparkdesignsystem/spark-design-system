@@ -1,0 +1,64 @@
+label, .label {
+    font-size: ms(4);
+    font-weight: bold;
+    color: $blue-dark;
+}
+
+.text-input, textarea {
+    color: $grey-dark;
+    outline: none;
+    font-size: ms(0);
+
+    &:focus {
+        border-color: $blue-medium;
+        box-shadow: 0 0 0 3px $blue-medium;
+    }
+}
+
+input[readonly] {
+    color: $white;
+    &:focus {
+      border-color: $grey-medium;
+      box-shadow: 0 0 0 3px $grey-medium;
+    }
+}
+
+//
+// Placeholder colors
+///
+::-webkit-input-placeholder {
+  color: $grey-medium;
+}
+:-moz-placeholder {
+  color: $grey-medium;
+}
+::-moz-placeholder {
+  color: $grey-medium;
+}
+:-ms-input-placeholder {
+  color: $grey-medium;
+}
+
+
+.helper-text {
+  color: $grey-medium;
+}
+
+textarea {
+    min-height: 125px;
+    margin-bottom: ms(0);
+}
+
+.text-input--error {
+    border-color: $red-medium;
+
+    &:focus {
+        border-color: $red-medium;
+        box-shadow: 0 0 0 3px $red-medium;
+        background-color: $red-light;
+    }
+}
+
+.error {
+    color: $red-medium;
+}
