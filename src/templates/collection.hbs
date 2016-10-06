@@ -7,5 +7,21 @@
     {{#each patterns}}
       {{> drizzle.item}}
     {{/each}}
+    {{#if additional}}
+        <h2>Additional Information</h2>
+        <ul>
+          {{#each additional}}
+            <li>{{.}}</li>
+          {{/each}}
+        </ul>
+    {{/if}}
+    {{#if nonos}}
+        <h3>No-no's</h3>
+        <ul>
+          {{#each nonos}}
+            <li>{{.}}</li>
+          {{/each}}
+        </ul>
+    {{/if}}
   {{/content}}
 {{/extend}}
