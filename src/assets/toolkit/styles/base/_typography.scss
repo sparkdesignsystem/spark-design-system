@@ -27,3 +27,17 @@
   border-bottom: 2px dashed $grey-medium;
   margin-bottom: ms(0);
 }
+
+.list--unordered,
+.list--indented {
+  padding-left: ms(5);
+}
+
+.list--ordered {
+  padding-left: ms(0);
+}
+
+.list--indented {
+  padding-left: ms(12);
+  margin-left: ms(0);
+}
