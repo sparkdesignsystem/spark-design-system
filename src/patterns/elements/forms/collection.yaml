@@ -1,5 +1,7 @@
+name: Inputs
+
 # Make this appear before its sibling collections in listings
 order: 4
 
 notes: |
-  Examples of the types of links that are available.
+  Examples of types of form inputs.

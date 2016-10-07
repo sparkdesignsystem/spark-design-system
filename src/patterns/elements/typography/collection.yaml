@@ -1,6 +1,3 @@
-# Override the default folder-based name ("Typographic")
-name: Typography
-
 # Make this appear before its sibling collections in listings
 order: 1
 
