@@ -46,6 +46,7 @@
     "modularscale-sass": "^2.1.1",
     "postcss-cssnext": "^2.5.2",
     "prismjs": "^1.4.1",
+    "sass-lint": "^1.9.1",
     "scalescss": "^2.6.1",
     "suitcss-base": "^2.0.0",
     "suitcss-components-arrange": "^1.1.1",
