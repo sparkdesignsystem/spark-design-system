@@ -50,7 +50,8 @@ textarea {
 }
 
 .text-input--error {
-    border-color: $red-medium;
+  background-color: $red-light;
+  border-color: $red-medium;
 
     &:focus {
         border-color: $red-medium;
