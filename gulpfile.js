@@ -8,6 +8,7 @@ const tasks = require('@cloudfour/gulp-tasks');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
+const svgSprite = require('gulp-svg-sprite');
 const env = require('gulp-util').env;
 const config = require('./config');
 
@@ -29,14 +30,21 @@ gulp.task('css', ['css:drizzle']);
 
 // Sass task
 gulp.task('sass', () => {
-    gulp.src('src/assets/toolkit/styles/**/*.scss')
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['> 1%','last 4 versions'],
-            cascade: false
-        }))
-        .pipe(cssnano())
-        .pipe(gulp.dest('./dist/assets/toolkit/styles'));
+  gulp.src('src/assets/toolkit/styles/**/*.scss')
+    .pipe(sass())
+    .pipe(autoprefixer({
+      browsers: ['> 1%','last 4 versions'],
+      cascade: false
+    }))
+    .pipe(cssnano())
+    .pipe(gulp.dest('./dist/assets/toolkit/styles'));
+});
+
+// SVG icon task
+gulp.task('icons', () => {
+  gulp.src(config.icons.src)
+    .pipe(svgSprite(config.icons))
+    .pipe(gulp.dest(config.icons.dest));
 });
 
 // Register Drizzle builder task

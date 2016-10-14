@@ -19,6 +19,21 @@ module.exports = {
     dest: './dist'
   },
 
+  icons: {
+    src: './src/assets/toolkit/**/*.svg',
+    dest: './dist/assets/toolkit/images',
+    mode: {
+      symbol: {
+        dest: '.',
+        sprite: 'icons.svg'
+      }
+    },
+    svg: {
+      xmlDeclaration: false,
+      doctypeDeclaration: false
+    }
+  },
+
   js: {
     plugins: {
       webpack: {
