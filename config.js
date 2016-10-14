@@ -20,7 +20,7 @@ module.exports = {
   },
 
   icons: {
-    src: './src/assets/toolkit/**/*.svg',
+    src: './src/assets/toolkit/images/icons/**/*.svg',
     dest: './dist/assets/toolkit/images',
     mode: {
       symbol: {

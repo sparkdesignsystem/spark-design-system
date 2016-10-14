@@ -59,6 +59,7 @@ gulp.task('frontend', [
   'copy',
   'css',
   'sass',
+  'icons',
   'js'
 ]);
 
