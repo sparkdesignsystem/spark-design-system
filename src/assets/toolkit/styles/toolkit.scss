@@ -9,6 +9,7 @@
 @import "settings/settings";
 
 // Tools
+@import "tools/animations";
 
 // Generic utility stlyes
 @import "../../../../node_modules/scales-utilities-normalize/normalize";
@@ -43,7 +44,7 @@
 @import "components/navigation";
 @import "components/notifications";
 @import "components/pagination";
-@import "components/spinner";
+@import "components/spinners";
 
 // Overrides that need to come later in the cascade
 @import "../../../../node_modules/scales-overrides-size/size";

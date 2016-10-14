@@ -1,0 +1,17 @@
+$spinner-size: 1.5em !default;
+$spinner-speed: 1s !default;
+$spinner-thickness: 0.25em !default;
+$spinner-color: $white !default;
+
+.c-Spinner {
+    animation: rotate-infinite $spinner-speed linear infinite;
+    display: inline-block;
+    height: $spinner-size;
+    width: $spinner-size;
+}
+
+.c-Spinner--circle {
+    border: $spinner-thickness solid $spinner-color;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
