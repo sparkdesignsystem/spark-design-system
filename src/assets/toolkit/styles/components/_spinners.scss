@@ -12,6 +12,6 @@ $spinner-color: $white !default;
 
 .c-Spinner--circle {
     border: $spinner-thickness solid $spinner-color;
-    border-right-color: transparent;
     border-radius: 50%;
+    border-right-color: transparent;
 }
