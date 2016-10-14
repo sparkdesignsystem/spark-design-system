@@ -1,4 +1,4 @@
-.notification {
+.c-Notification {
   background-color: $grey-light;
   border-radius: 5px;
   display: table;
@@ -7,40 +7,45 @@
   width: 100%;
 }
 
-.notification__text,
-.notification__icon {
+.c-Notification__text,
+.c-Notification__icon {
   display: table-cell;
   padding: ms(0);
 }
 
-.notification__text {
+.c-Notification__text {
   color: $grey-dark;
   font-weight: bold;
   vertical-align: middle;
 }
 
-.notification__icon {
+.c-Notification__icon {
   min-height: 50px;
-  width: 50px
+  width: 50px;
 }
 
-.notification__icon--success {
+.c-Notification__icon--success {
   background-color: $green-medium;
 }
 
-.notification__icon--alert {
+.c-Notification__icon--alert {
   background-color: $orange-medium;
 }
 
-.notification__icon--failure {
+.c-Notification__icon--failure {
   background-color: $red-medium;
 }
 
-.notification__icon--info {
+.c-Notification__icon--info {
   background-color: $blue-medium;
 }
 
-.notification__icon:first-child {
+.c-Notification__icon--close {
+  background-color: transparent;
+  border: 0;
+}
+
+.c-Notification__icon:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-align: center;
@@ -48,11 +53,11 @@
 }
 
 //because the icons are svgs in this case
-.notification__icon:first-child .icon {
+.c-Notification__icon:first-child .icon {
   fill: $white;
 }
 
-.notification__icon:last-child {
+.c-Notification__icon:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: pointer;
@@ -60,6 +65,6 @@
 }
 
 //because the icons are svgs in this case
-.notification__icon:last-child .icon {
+.c-Notification__icon:last-child .icon {
   fill: $grey-dark;
 }
