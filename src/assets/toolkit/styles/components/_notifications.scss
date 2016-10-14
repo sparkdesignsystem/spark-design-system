@@ -53,7 +53,7 @@
 }
 
 //because the icons are svgs in this case
-.c-Notification__icon:first-child .icon {
+.c-Notification__icon:first-child .o-icon {
   fill: $white;
 }
 
@@ -65,6 +65,6 @@
 }
 
 //because the icons are svgs in this case
-.c-Notification__icon:last-child .icon {
+.c-Notification__icon:last-child .o-icon {
   fill: $grey-dark;
 }
