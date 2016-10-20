@@ -42,6 +42,7 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^2.3.2",
+    "gulp-svg-sprite": "^1.3.6",
     "gulp-util": "^3.0.7",
     "modularscale-sass": "^2.1.1",
     "postcss-cssnext": "^2.5.2",
