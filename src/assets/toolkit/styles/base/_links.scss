@@ -1,23 +1,19 @@
-a, .link-btn, .link {
+a, .o-Link-btn, .o-Link {
   color: $blue-medium;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.o-Link--plain {
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
 }
 
-.link-btn {
-  padding: ms(0) ms(17);
-  background: transparent;
-  display: inline-block;
-  margin-bottom: 1em;
-  vertical-align: middle;
-}
-
-.link--plain {
-  text-decoration: none;
-}
-
-.link--visited {
+.o-Link--visited {
   color: $blue-dark;
 }
