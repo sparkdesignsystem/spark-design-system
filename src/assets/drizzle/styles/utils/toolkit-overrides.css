@@ -1,0 +1,7 @@
+.u-drizzleModalOverride [class~=c-Modal] {
+  position: relative !important;
+}
+
+.u-drizzleModalOverride [class~=c-ModalMask] {
+  display: none !important;
+}
