@@ -1,8 +1,12 @@
-///
-// Main Navigation
-//
+// ==================================================================
+// Navigation
+// ==================================================================
 
-// Variables
+//
+// Main Navigation
+///
+
+// Available Variables
 $main-nav-breakpoint: 46em;
 
 .c-Navigation {
@@ -154,9 +158,9 @@ $main-nav-breakpoint: 46em;
   }
 }
 
-///
-// Tabbed Navigation
 //
+// Tabbed Navigation
+///
 
 .tabs {
   display: flex;
@@ -202,4 +206,26 @@ $main-nav-breakpoint: 46em;
 
 .tab:first-child {
   border-left: none;
+}
+
+//
+// Pagination
+///
+.c-Pagination {
+  // Remove whitespace caused by inline-block.
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  @include horizontal-list;
+}
+
+.c-Pagination__item {
+  letter-spacing: normal;
+  word-spacing: normal;
+  padding: ms(-50) ms(-12);
+  margin: ms(-50);
+}
+
+.c-Pagination__item--current {
+  background-color: $grey-light;
+  border-radius: 4px;
 }

@@ -14,6 +14,17 @@ a, .o-Link-btn, .o-Link {
   }
 }
 
+.o-Link--disabled {
+  color: $grey-medium;
+  text-decoration: none;
+  pointer-events: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
 .o-Link--visited {
   color: $blue-dark;
 }
