@@ -2,10 +2,6 @@
 // Navigation
 // ==================================================================
 
-//
-// Main Navigation
-///
-
 // Available Variables
 $main-nav-breakpoint: 46em;
 
@@ -156,76 +152,4 @@ $main-nav-breakpoint: 46em;
       @include hoverline($blue-medium, 100%);
     }
   }
-}
-
-//
-// Tabbed Navigation
-///
-
-.tabs {
-  display: flex;
-  margin-bottom: 2em;
-}
-
-.tab {
-  background-color: $green-medium;
-  color: $white;
-  cursor: pointer;
-  flex: 1;
-  border-left: 1px solid $white;
-
-  &:first-child {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  &:last-child {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-}
-
-.tab--active,
-.tab:focus,
-.tab:hover {
-  background-color: $green-dark;
-}
-
-.tab--disabled,
-.tab--disabled:hover {
-  cursor: default;
-  background-color: $grey-medium;
-}
-
-.tab__content {
-  line-height: 50px;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-}
-
-.tab:first-child {
-  border-left: none;
-}
-
-//
-// Pagination
-///
-.c-Pagination {
-  // Remove whitespace caused by inline-block.
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-  @include horizontal-list;
-}
-
-.c-Pagination__item {
-  letter-spacing: normal;
-  word-spacing: normal;
-  padding: ms(-50) ms(-12);
-  margin: ms(-50);
-}
-
-.c-Pagination__item--current {
-  background-color: $grey-light;
-  border-radius: 4px;
 }
