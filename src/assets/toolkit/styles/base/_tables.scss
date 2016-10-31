@@ -1,11 +1,166 @@
+$table-padding: 1em;
+$table-heading-padding: 0.5em;
 $table-breakpoint: 46em;
+$column-group-mobile-indent: 4em;
 
-.table--primary {
-    margin-bottom: ms(0);
+.data-table {
+  @media screen and (min-width: $table-breakpoint) {
     text-align: center;
+  }
 }
 
-.table--primary__head {
-    background-color: $blue-dark;
-    color: $white;
+.data-table__row {
+  display: block;
+  margin-bottom: 0.5em;
+
+  @media screen and (min-width: $table-breakpoint) {
+    display: table-row;
+  }
 }
+
+.data-table__row:nth-child(2n) {
+  @media screen and (min-width: $table-breakpoint) {
+    background-color: $blue-light;
+  }
+}
+
+.data-table__row--heading {
+  background-color: $blue-dark;
+  color: $white;
+  display: none;
+  padding: $table-heading-padding;
+
+  @media screen and (min-width: $table-breakpoint) {
+    display: table-row;
+  }
+}
+
+.data-table__cell {
+  background-color: $blue-light;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: $table-padding;
+
+  @media screen and (min-width: $table-breakpoint) {
+    background-color: inherit;
+    border-right: 2px solid $white;
+    display: table-cell;
+  }
+}
+
+.data-table__cell:first-child {
+  background-color: $blue-dark;
+  color: $white;
+
+  @media screen and (min-width: $table-breakpoint) {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+.data-table__row--heading .data-table__cell--sub-heading {
+  background-color: $blue-dark;
+  border: 0;
+  color: $gray-light;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.column-name::before {
+  margin-right: 1em;
+  font-weight: normal;
+}
+
+.column-group {
+  padding-left: $column-group-mobile-indent;
+  margin-bottom: 0;
+
+  @media screen and (min-width: $table-breakpoint) {
+    padding-left: 0;
+    border-right: 0;
+  }
+}
+
+.column-group--first {
+  display: block;
+  padding: $table-padding;
+
+  @media screen and (min-width: $table-breakpoint) {
+    display: none;
+  }
+}
+
+.column-group--last {
+  margin-bottom: 2px;
+
+  @media screen and (min-width: $table-breakpoint) {
+    border-right: 2px solid $white;
+  }
+}
+
+@media screen and (max-width: $table-breakpoint) {
+  .column-name--sample::before {
+    content: 'Column Heading';
+  }
+}
+
+.data-table--row-comparison {
+  display: none;
+  @media (min-width: $table-breakpoint) {
+    display: table;
+  }
+}
+
+/* mobile table */
+
+.mobile-table {
+  box-sizing: border-box;
+  margin: 1em 0;
+  display: block;
+  @media (min-width: $table-breakpoint) {
+    display: none;
+  }
+}
+
+.mobile-table-card {
+  margin-bottom: 1em;
+}
+
+.mobile-table-card__header {
+  background-color: $blue-dark;
+  color: $white;
+  margin: 0;
+  padding: 1rem;
+}
+
+.mobile-table-card__content {
+  width: 100%;
+}
+
+.mobile-table-card__row {
+  background-color: $blue-light;
+  border-bottom: 3px solid $white;
+}
+
+.mobile-table-card__cell {
+  padding: 1rem;
+}
+
+.mobile-table-card__cell--middle {
+  text-align: center;
+}
+
+.mobile-table-card__cell--right{
+  text-align: right;
+}
+
+
+.escrow-table--mobile .mobile-table-card {
+  table-layout: fixed;
+}
+
+.escrow-table--mobile .mobile-table-card__cell {
+  width: 50%;
+}
+
