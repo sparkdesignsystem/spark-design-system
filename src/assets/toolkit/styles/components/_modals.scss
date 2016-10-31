@@ -1,3 +1,7 @@
+// ==================================================================
+// Modals
+// ==================================================================
+
 .c-Modal {
   background-color: $white;
   left: 0;
@@ -34,7 +38,8 @@
   text-align: right;
 }
 
-.c-Modal__body, .c-Modal__footer {
+.c-Modal__body,
+.c-Modal__footer {
   padding: ms(0);
 }
 

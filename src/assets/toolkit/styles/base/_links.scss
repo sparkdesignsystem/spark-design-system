@@ -1,4 +1,10 @@
-a, .o-Link-btn, .o-Link {
+// ==================================================================
+// Links
+// ==================================================================
+
+.o-Link,
+.o-Link-btn,
+a {
   color: $blue-medium;
 
   &:hover {
@@ -19,8 +25,8 @@ a, .o-Link-btn, .o-Link {
   text-decoration: none;
   pointer-events: none;
 
-  &:hover,
-  &:active {
+  &:active,
+  &:hover {
     text-decoration: none;
   }
 }

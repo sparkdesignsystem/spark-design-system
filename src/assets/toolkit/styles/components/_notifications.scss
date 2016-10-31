@@ -1,3 +1,7 @@
+// ==================================================================
+// Notifications
+// ==================================================================
+
 .c-Notification {
   background-color: $grey-light;
   border-radius: 5px;
@@ -7,8 +11,8 @@
   width: 100%;
 }
 
-.c-Notification__text,
-.c-Notification__icon {
+.c-Notification__icon,
+.c-Notification__text {
   display: table-cell;
   padding: ms(0);
 }
@@ -52,7 +56,7 @@
   vertical-align: middle;
 }
 
-//because the icons are svgs in this case
+// Because the icons are svgs in this case
 .c-Notification__icon:first-child .o-icon {
   fill: $white;
 }
@@ -64,7 +68,7 @@
   float: right;
 }
 
-//because the icons are svgs in this case
+// Because the icons are svgs in this case
 .c-Notification__icon:last-child .o-icon {
   fill: $grey-dark;
 }
