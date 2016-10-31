@@ -9,6 +9,7 @@
 @import "settings/settings";
 
 // Tools
+@import "tools/mixins";
 @import "tools/animations";
 
 // Generic utility stlyes
@@ -47,6 +48,7 @@
 @import "components/notifications";
 @import "components/modals";
 @import "components/pagination";
+@import "components/tabs";
 
 // Overrides that need to come later in the cascade
 @import "../../../../node_modules/scales-overrides-size/size";
