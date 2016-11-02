@@ -2,7 +2,7 @@
 // Buttons
 // ==================================================================
 
-.btn--primary {
+.c-Button--primary {
   background-color: $green-medium;
   border: 2px solid $green-medium;
   color: $white;
@@ -14,7 +14,7 @@
   }
 }
 
-.btn--secondary {
+.c-Button--secondary {
   background-color: transparent;
   border: 2px solid $blue-medium;
   color: $blue-medium;
@@ -25,7 +25,7 @@
   }
 }
 
-.btn--tertiary {
+.c-Button--tertiary {
   background-color: $blue-medium;
   border: 2px solid $blue-medium;
   color: $white;
@@ -37,7 +37,7 @@
   }
 }
 
-.btn--removal {
+.c-Button--removal {
   background-color: transparent;
   border: 2px solid $red-medium;
   color: $red-medium;
