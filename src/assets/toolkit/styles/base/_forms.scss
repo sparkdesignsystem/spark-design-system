@@ -2,11 +2,15 @@
 // Forms
 // ==================================================================
 
-.label,
+.o-label,
 label {
   font-size: ms(4);
   font-weight: bold;
   color: $blue-dark;
+}
+
+.o-label--inline {
+  display: inline-block;
 }
 
 .text-input,
@@ -18,6 +22,19 @@ textarea {
   &:focus {
     border-color: $blue-medium;
     box-shadow: 0 0 0 3px $blue-medium;
+  }
+}
+
+
+.text-input--monetary {
+  position: relative;
+
+  &:before {
+    content: '$';
+    color: $grey-dark;
+    position: absolute;
+    top: .6em;
+    left: .55em;
   }
 }
 
