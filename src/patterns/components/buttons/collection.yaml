@@ -1,0 +1,17 @@
+# Make this appear before its sibling collections in listings
+order: 6
+
+notes: |
+  Examples of buttons.
+
+additional:
+  - <button> should be used when doing some action that doesn't have a meaningful URL.
+  - <a> should be used when you want the look of a button but are linking to a meaningful URL.
+  - Button height and width will be dependent on the size of the content, but the content should always be centered both vertically and horizontally.
+  - Buttons should have 40px of horizontal padding on each side of the content.
+  - Extend the buttons to the full width of the container when on mobile and stack when there is more than one (TODO:\ Determine breakpoints)
+
+nonos:
+  - No orange buttons
+  - No icons on buttons
+  - Do not use <input type="submit">

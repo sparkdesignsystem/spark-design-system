@@ -1,0 +1,20 @@
+.u-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.u-verticalCenter {
+  display: flex;
+  align-items: center;
+}
+
+.u-horizontalCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.u-spaceAround {
+  display: flex;
+  justify-content: space-around;
+}

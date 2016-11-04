@@ -1,21 +1,31 @@
-/**
- * Toolkit Styles
- */
+// ==================================================================
+// Design System Imports
+// ==================================================================
 
+//
 // Settings
+///
 @import "../../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "../../../../node_modules/modularscale-sass/stylesheets/modular-scale";
 @import "settings/colors";
 @import "settings/settings";
 
+//
 // Tools
+///
+@import "tools/mixins";
+@import "tools/animations";
 
+//
 // Generic utility stlyes
+///
 @import "../../../../node_modules/scales-utilities-normalize/normalize";
 @import "../../../../node_modules/scales-utilities-reset/reset";
 @import "../../../../node_modules/scales-utilities-clearfix/clearfix";
 
+//
 // Base styles for standard HTML elements
+///
 @import "../../../../node_modules/scales-base-typography/typography";
 @import "../../../../node_modules/scales-base-images/images";
 @import "../../../../node_modules/scales-base-lists/lists";
@@ -29,7 +39,9 @@
 @import "base/forms";
 @import "base/tables";
 
-// Design free objects
+//
+// Shared objects
+///
 @import "../../../../node_modules/scales-patterns-box/box";
 @import "../../../../node_modules/scales-patterns-horizontal-list/horizontal-list";
 @import "../../../../node_modules/scales-patterns-vertical-list/vertical-list";
@@ -38,12 +50,20 @@
 @import "../../../../node_modules/scales-patterns-split/split";
 @import "../../../../node_modules/scales-patterns-stats/stats";
 @import "../../../../node_modules/scales-patterns-multi-col-list/multi-col-list";
+@import "objects/icons";
+@import "objects/spinners";
 
+//
 // Components
+///
 @import "components/navigation";
 @import "components/notifications";
+@import "components/modals";
 @import "components/pagination";
+@import "components/tabs";
 
+//
 // Overrides that need to come later in the cascade
+///
 @import "../../../../node_modules/scales-overrides-size/size";
 @import "../../../../node_modules/scales-overrides-spacing/spacing";

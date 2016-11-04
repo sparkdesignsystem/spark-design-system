@@ -1,0 +1,16 @@
+// ==================================================================
+// Mixins
+// ==================================================================
+
+// Underline used on hover in main navigation
+// Use within a :hover selector
+@mixin hoverline($color, $width) {
+  &:after {
+    background-color: $color;
+    content: ' ';
+    height: 2px;
+    display: block;
+    width: $width;
+    margin: 0 auto;
+  }
+}

@@ -1,3 +1,7 @@
+// ==================================================================
+// Typography
+// ==================================================================
+
 .heading {
   font-family: "quatro-slab", "times new roman", serif;
   color: $blue-dark;
@@ -22,8 +26,23 @@
   margin-bottom: ms(0);
 }
 
-.body-divider, hr {
+.body-divider,
+hr {
   border: 0;
   border-bottom: 2px dashed $grey-medium;
   margin-bottom: ms(0);
+}
+
+.list--indented,
+.list--unordered {
+  padding-left: ms(5);
+}
+
+.list--ordered {
+  padding-left: ms(0);
+}
+
+.list--indented {
+  padding-left: ms(12);
+  margin-left: ms(0);
 }

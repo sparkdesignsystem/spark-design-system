@@ -1,0 +1,44 @@
+// ==================================================================
+// Tabbed Navigation
+// ==================================================================
+
+.c-Tabs__buttons {
+  background-color: $white;
+  display: flex;
+  margin-bottom: ms(0);
+}
+
+.c-Tabs__button {
+  -webkit-appearance: none;
+  background: $white;
+  flex: 1 1 100%;
+  color: $green-medium;
+  border-top: 2px solid $green-medium;
+  border-bottom: 2px solid $green-medium;
+  border-left: 2px solid $green-medium;
+  border-right: 0;
+  padding-top: ms(-36);
+  padding-bottom: ms(-36);
+
+  &:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 2px solid $green-medium;
+  }
+}
+
+.c-Tabs__button--active,
+.c-Tabs__button:focus,
+.c-Tabs__button:hover {
+  background-color: $green-medium;
+  color: $white;
+}
+
+.c-Tabs__content {
+  display: block;
+}

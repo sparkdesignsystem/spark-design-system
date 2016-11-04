@@ -43,6 +43,15 @@
         </li>
       {{/each}}
     </ul>
+    {{!-- Component Patterns --}}
+    <h5 class="drizzle-Nav-item">Animations</h5>
+    <ul class="drizzle-Nav-menu">
+      {{#each (collections "animations" sortby="order")}}
+        <li>
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
     {{!-- Other pages --}}
     <h5 class="drizzle-Nav-item">Other Stuff</h5>
     <ul class="drizzle-Nav-menu">

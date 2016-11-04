@@ -1,0 +1,8 @@
+order: 5
+
+notes: |
+  Examples of modals. Modals overtake the users screen forcing them to interact with it or to wait while the system performs an action in the background.
+
+additional:
+  - Modals should be added to the DOM with Javascript.
+  - Confirmation modals should be dismissible by tapping outside the modal, clicking cancel, and hitting the esc key.

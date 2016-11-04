@@ -19,6 +19,21 @@ module.exports = {
     dest: './dist'
   },
 
+  icons: {
+    src: './src/assets/toolkit/images/icons/**/*.svg',
+    dest: './dist/assets/toolkit/images',
+    mode: {
+      symbol: {
+        dest: '.',
+        sprite: 'icons.svg'
+      }
+    },
+    svg: {
+      xmlDeclaration: false,
+      doctypeDeclaration: false
+    }
+  },
+
   js: {
     plugins: {
       webpack: {
@@ -79,7 +94,8 @@ module.exports = {
       {
         match: [
           './src/**/*.hbs',
-          './src/data/**/*'
+          './src/data/**/*',
+          '.src/**/*.yaml'
         ],
         tasks: ['drizzle']
       }

@@ -1,41 +1,49 @@
-.btn--primary {
-    background-color: $green-medium;
-    border: 2px solid $green-medium;
+// ==================================================================
+// Buttons
+// ==================================================================
+
+.c-Button--primary {
+  background-color: $green-medium;
+  border: 2px solid $green-medium;
+  color: $white;
+
+  &:hover {
+    background-color: $green-dark;
+    border: 2px solid $green-dark;
     color: $white;
-    &:hover {
-        background-color: $green-dark;
-        border: 2px solid $green-dark;
-        color: $white;
-    }
+  }
 }
 
-.btn--secondary {
-    background-color: transparent;
-    border: 2px solid $blue-medium;
-    color: $blue-medium;
-    &:hover {
-        background-color: $blue-medium;
-        color: $white;
-    }
-}
+.c-Button--secondary {
+  background-color: transparent;
+  border: 2px solid $blue-medium;
+  color: $blue-medium;
 
-.btn--tertiary {
+  &:hover {
     background-color: $blue-medium;
-    border: 2px solid $blue-medium;
     color: $white;
-    &:hover {
-        background-color: $blue-dark;
-        border: 2px solid $blue-dark;
-        color: $white;
-    }
+  }
 }
 
-.btn--removal {
-    background-color: transparent;
-    border: 2px solid $red-medium;
+.c-Button--tertiary {
+  background-color: $blue-medium;
+  border: 2px solid $blue-medium;
+  color: $white;
+
+  &:hover {
+    background-color: $blue-dark;
+    border: 2px solid $blue-dark;
+    color: $white;
+  }
+}
+
+.c-Button--removal {
+  background-color: transparent;
+  border: 2px solid $red-medium;
+  color: $red-medium;
+
+  &:hover {
+    background-color: $red-light;
     color: $red-medium;
-    &:hover {
-        background-color: $red-light;
-        color: $red-medium;
-    }
+  }
 }

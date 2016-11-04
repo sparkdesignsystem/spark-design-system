@@ -1,0 +1,12 @@
+---
+name: Submission Spinner
+notes: |
+  Use this spinner on any button that is being used to save or submit data. Time out timing and time out errors are based on products or scenarios, but when a time out happens, an alert to the user with clear content and instruction is a required.
+
+  When the button is clicked the text is replaced by the spinner animation. The button must stay the same size when the spinner is applied.
+order: 6
+---
+
+<button class="btn c-Button--primary{{class}}{{#if disabled}} is-disabled{{/if}}">
+  <span class="o-Spinner o-Spinner--circle"></span>
+</button>
