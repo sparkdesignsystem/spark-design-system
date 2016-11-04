@@ -38,6 +38,8 @@ $helper-text-hidden: false;
 //
 // Tables
 ///
-$table-stripe-color: $blue-light;
-$table-border-color: $white;
+$table-padding-medium: 1em;
+$table-padding-small: 0.5em;
 $table-border-width: 2px;
+$table-border-color: $white;
+$table-stripe-color: $blue-light;
