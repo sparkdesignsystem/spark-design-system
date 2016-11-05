@@ -22,6 +22,9 @@ module.exports = {
   icons: {
     src: './src/assets/toolkit/images/icons/**/*.svg',
     dest: './dist/assets/toolkit/images',
+    shape: {
+      dest: '.'
+    },
     mode: {
       symbol: {
         dest: '.',

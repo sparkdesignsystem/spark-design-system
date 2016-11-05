@@ -2,47 +2,47 @@
 // Typography
 // ==================================================================
 
-.heading {
+.o-heading {
   font-family: "quatro-slab", "times new roman", serif;
   color: $blue-dark;
 }
 
-.heading--primary {
+.o-heading--primary {
   font-size: ms(34);
 }
 
-.heading--secondary {
+.o-heading--secondary {
   font-size: ms(21);
 }
 
-.heading--sub {
+.o-heading--sub {
   font-size: ms(17);
   font-weight: normal;
   color: $black;
 }
 
-.heading-divider {
+.o-heading-divider {
   border-bottom: 2px solid $grey-medium;
   margin-bottom: ms(0);
 }
 
-.body-divider,
+.o-body-divider,
 hr {
   border: 0;
   border-bottom: 2px dashed $grey-medium;
   margin-bottom: ms(0);
 }
 
-.list--indented,
-.list--unordered {
+.o-list--indented,
+.o-list--unordered {
   padding-left: ms(5);
 }
 
-.list--ordered {
+.o-list--ordered {
   padding-left: ms(0);
 }
 
-.list--indented {
+.o-list--indented {
   padding-left: ms(12);
   margin-left: ms(0);
 }

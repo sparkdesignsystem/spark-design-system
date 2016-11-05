@@ -38,6 +38,12 @@ textarea {
   }
 }
 
+.text-input--date-picker {
+  background-image: url('../images/calendar.svg');
+  background-position: 5px 3px;
+  padding-left: 3em;
+}
+
 input[readonly] {
   color: $white;
 
