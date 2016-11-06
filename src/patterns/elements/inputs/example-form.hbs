@@ -2,14 +2,14 @@
 name: Example Form
 notes:
   This is a form with a mix of inputs.
-order: 16
+order: 19
 labels:
   - inprogress
 ---
 
 <form>
   {{#embed "patterns.elements.inputs.text-input"}}{{/embed}}
-  {{#embed "patterns.elements.inputs.password"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.validation-base" state1="unmet" state2="unmet" state3="unmet" icon1="times" icon2="times" icon3="times"}}{{/embed}}
   {{#embed "patterns.elements.inputs.phone"}}{{/embed}}
   {{#embed "patterns.elements.inputs.select"}}{{/embed}}
   {{#embed "patterns.elements.inputs.ssn"}}{{/embed}}
