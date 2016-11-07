@@ -1,6 +1,9 @@
 name: Tables
 
-order: 1
+order: 2
 
 notes: |
   Examples of tables.
+
+links:
+  Scales Tables: https://github.com/ScalesCSS/base-tables
