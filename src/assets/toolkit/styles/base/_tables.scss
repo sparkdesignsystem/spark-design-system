@@ -1,31 +1,28 @@
 // ==================================================================
 // Tables
 // ==================================================================
-.table {
+.c-table {
   text-align: center;
 }
 
-.table__head {
+.c-table__head {
   background-color: $blue-dark;
   color: $white;
 }
 
-.table__grouped-column {
+.c-table__grouped-column {
   background-color: $blue-dark;
   border-right: 0;
   font-size: 0.8em;
   font-weight: normal;
 }
 
-.table__grouped-columns .table__grouped-column {
-  border: none;
+.c-table__grouped-columns .c-table__grouped-column,
+.c-table--row-comparison .c-table__empty-heading {
+  border: 0;
 }
 
-.table--row-comparison .table__empty-heading {
-  border: none;
-}
-
-.table__row-heading {
+.c-table__row-heading {
   background-color: $blue-dark;
   color: $white;
   border-bottom: $table-border-width $table-border-style $table-border-color;
