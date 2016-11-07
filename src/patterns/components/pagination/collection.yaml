@@ -2,3 +2,6 @@ order: 3
 
 notes: |
   Examples of pagination.
+
+links:
+  Scales Horizontal List: https://github.com/ScalesCSS/patterns-horizontal-list

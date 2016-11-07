@@ -3,7 +3,7 @@ order: 4
 notes: |
   Examples of notifications.
 
-additional:
+info:
   - Notifications are meant to provide the user with feedback based on completing an action or the lack of completion.
   - They appear near the top of the page.
   - May have timed visibility (10 seconds) and/or be dismissed by the user by clicking the "x" icon.
