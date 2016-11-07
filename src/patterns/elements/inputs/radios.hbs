@@ -1,6 +1,5 @@
 ---
 name: Radio Buttons
-sourceless: true
 notes: |
   These are radio buttons. They use the native browser styles.
 labels:
@@ -8,4 +7,21 @@ labels:
 order: 6
 ---
 
-TODO
+<div class="input-container">
+  <label id="notification-label">Notification Preference</label>
+
+  <div class="selection-container">
+    <input id="email-pref" name="notification-pref" type="radio" checked="checked" aria-labelledby="notification-label">
+    <label class="o-label--inline mls" for="email-pref">Email</label>
+  </div>
+
+  <div class="selection-container">
+    <input id="text-pref" name="notification-pref" type="radio" aria-labelledby="notification-label">
+    <label class="o-label--inline mls" for="text-pref">Text</label>
+  </div>
+
+  <div class="selection-container">
+    <input id="email-and-text-pref" name="notification-pref" type="radio" aria-labelledby="notification-label">
+    <label class="o-label--inline mls" for="email-and-text-pref">Email &amp; Text</label>
+  </div>
+</div>

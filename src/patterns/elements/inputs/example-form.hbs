@@ -2,48 +2,21 @@
 name: Example Form
 notes:
   This is a form with a mix of inputs.
-order: 15
+order: 19
 labels:
   - inprogress
 ---
 
 <form>
-  <div class="input-container">
-    <label for="account">Account #</label>
-    <input class="text-input size-100" id="account" type="num" value="123456789" readonly>
-  </div>
-
-  <div class="input-container">
-    <label for="email">Email</label>
-    <input class="text-input size-100" id="email" type="email" placeholder="user@name.com">
-    <span class="helper-text">Enter your email address</span>
-  </div>
-
-  <div class="input-container">
-    <label for="password">Password</label>
-    <input class="text-input size-100" id="password" type="password" disabled>
-  </div>
-
-  <div class="input-container">
-    <label for="gender">Gender</label>
-    <select id="gender">
-      <option>Female</option>
-      <option>Male</option>
-      <option>Other</option>
-    </select>
-  </div>
-
-  <div class="input-container">
-    <label>Introduce yourself</label>
-    <textarea class="text-input size-100"></textarea>
-  </div>
-
-  <div class="input-container">
-    <label for="newsletter">
-      <input id="newsletter" type="checkbox"> Send me the newsletter
-    </label>
-  </div>
-
-  <button type="submit" class="btn btn--primary">Sign in</button>
-  <a class="mlh" href="">Cancel</a>
+  {{#embed "patterns.elements.inputs.text-input"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.validation-base" state1="unmet" state2="unmet" state3="unmet" icon1="times" icon2="times" icon3="times"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.phone"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.select"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.ssn"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.money"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.datepicker"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.textarea"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.checkbox"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.radios"}}{{/embed}}
+  {{#embed "patterns.elements.inputs.secondary-action"}}{{/embed}}
 </form>

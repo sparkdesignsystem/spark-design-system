@@ -1,6 +1,5 @@
 ---
 name: Checkboxes
-sourceless: true
 notes: |
   This is a checkbox. It uses the native browser styles.
 labels:
@@ -8,4 +7,21 @@ labels:
 order: 5
 ---
 
-TODO
+<div class="input-container">
+  <label id="signup-label">Sign up for stuff</label>
+
+  <div class="selection-container">
+    <input id="newsletter" type="checkbox" aria-labelledby="signup-label">
+    <label for="newsletter" class="o-label--inline mls">Send me the newsletter</label>
+  </div>
+
+  <div class="selection-container">
+    <input id="magazine" type="checkbox" aria-labelledby="signup-label">
+    <label for="magazine" class="o-label--inline mls">Send me the magazine</label>
+  </div>
+
+  <div class="selection-container">
+    <input id="texts" type="checkbox" aria-labelledby="signup-label">
+    <label for="texts" class="o-label--inline mls">Send me text messages</label>
+  </div>
+</div>

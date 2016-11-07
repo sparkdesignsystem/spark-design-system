@@ -2,11 +2,15 @@
 // Forms
 // ==================================================================
 
-.label,
+.o-label,
 label {
   font-size: ms(4);
   font-weight: bold;
   color: $blue-dark;
+}
+
+.o-label--inline {
+  display: inline-block;
 }
 
 .text-input,
@@ -19,6 +23,25 @@ textarea {
     border-color: $blue-medium;
     box-shadow: 0 0 0 3px $blue-medium;
   }
+}
+
+
+.text-input--monetary {
+  position: relative;
+
+  &:before {
+    content: '$';
+    color: $grey-dark;
+    position: absolute;
+    top: .6em;
+    left: .55em;
+  }
+}
+
+.text-input--date-picker {
+  background-image: url('../images/calendar.svg');
+  background-position: 5px 3px;
+  padding-left: 3em;
 }
 
 input[readonly] {
@@ -67,6 +90,21 @@ textarea {
   }
 }
 
-.error {
+.error-text {
   color: $red-medium;
+}
+
+.c-ValidationCriteria__item--unmet {
+  color: $grey-medium;
+  fill: $grey-medium;
+}
+
+.c-ValidationCriteria__item--met {
+  color: $green-medium;
+  fill: $green-medium;
+}
+
+.c-ValidationCriteria__item--error {
+  color: $red-medium;
+  fill: $red-medium;
 }
