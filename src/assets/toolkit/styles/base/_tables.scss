@@ -1,28 +1,28 @@
 // ==================================================================
 // Tables
 // ==================================================================
-.c-table {
+.c-Table{
     text-align: center;
 }
 
-.c-table__head {
+.c-Table__head {
     background-color: $blue-dark;
     color: $white;
 }
 
-.c-table__grouped-column {
+.c-Table__grouped-column {
     background-color: $blue-dark;
     border-right: 0;
     font-size: 0.8em;
     font-weight: normal;
 }
 
-.c-table__grouped-columns .c-table__grouped-column,
-.c-table--row-comparison .c-table__empty-heading {
+.c-Table__grouped-columns .c-Table__grouped-column,
+.c-Table--row-comparison .c-Table__empty-heading {
     border: 0;
 }
 
-.c-table__row-heading {
+.c-Table__row-heading{
     background-color: $blue-dark;
     border-bottom: $table-border-width $table-border-style $table-border-color;
     color: $white;
