@@ -37,7 +37,6 @@
 @import "base/links";
 @import "base/buttons";
 @import "base/forms";
-@import "base/tables";
 
 //
 // Shared objects
@@ -62,6 +61,7 @@
 @import "components/pagination";
 @import "components/tabs";
 @import "components/datepicker";
+@import "components/tables";
 
 //
 // Overrides that need to come later in the cascade
