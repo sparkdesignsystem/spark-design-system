@@ -7,14 +7,15 @@
 ///
 @import "../../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "../../../../node_modules/modularscale-sass/stylesheets/modular-scale";
-@import "settings/colors";
+@import "../../../../node_modules/scales-dpl/styles/settings/colors";
+@import "../../../../node_modules/scales-dpl/styles/settings/settings";
 @import "settings/settings";
 
 //
 // Tools
 ///
-@import "tools/mixins";
-@import "tools/animations";
+@import "../../../../node_modules/scales-dpl/styles/tools/mixins";
+@import "../../../../node_modules/scales-dpl/styles/tools/animations";
 
 //
 // Generic utility stlyes
@@ -33,10 +34,10 @@
 @import "../../../../node_modules/scales-patterns-buttons/buttons";
 @import "../../../../node_modules/scales-base-forms/forms";
 @import "../../../../node_modules/scales-base-tables/tables";
-@import "base/typography";
-@import "base/links";
-@import "base/buttons";
-@import "base/forms";
+@import "../../../../node_modules/scales-dpl/styles/base/typography";
+@import "../../../../node_modules/scales-dpl/styles/base/links";
+@import "../../../../node_modules/scales-dpl/styles/base/buttons";
+@import "../../../../node_modules/scales-dpl/styles/base/forms";
 
 //
 // Shared objects
@@ -49,19 +50,19 @@
 @import "../../../../node_modules/scales-patterns-split/split";
 @import "../../../../node_modules/scales-patterns-stats/stats";
 @import "../../../../node_modules/scales-patterns-multi-col-list/multi-col-list";
-@import "objects/icons";
-@import "objects/spinners";
+@import "../../../../node_modules/scales-dpl/styles/objects/icons";
+@import "../../../../node_modules/scales-dpl/styles/objects/spinners";
 
 //
 // Components
 ///
-@import "components/navigation";
-@import "components/notifications";
-@import "components/modals";
-@import "components/pagination";
-@import "components/tabs";
-@import "components/datepicker";
-@import "components/tables";
+@import "../../../../node_modules/scales-dpl/styles/components/navigation";
+@import "../../../../node_modules/scales-dpl/styles/components/notifications";
+@import "../../../../node_modules/scales-dpl/styles/components/modals";
+@import "../../../../node_modules/scales-dpl/styles/components/pagination";
+@import "../../../../node_modules/scales-dpl/styles/components/tabs";
+@import "../../../../node_modules/scales-dpl/styles/components/datepicker";
+@import "../../../../node_modules/scales-dpl/styles/components/tables";
 
 //
 // Overrides that need to come later in the cascade
