@@ -3,48 +3,9 @@
 // ==================================================================
 
 //
-// Reset
-///
-$selection-bg-color: $blue-medium;
-
-//
 // Typography
 ///
-$ms-base: 1rem 1.75rem;
-$ms-ratio: $minor-second;
-$text-margins: 0 0 ms(0);
 $code-block-padding: ms(0) ms(26);
 $code-block-bg-color: $grey-light;
 $code-block-text-color: $black;
 $heading-font-stack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'Segoe UI', 'lucida grande', 'helvetica neue', helvetica, 'Fira Sans', roboto, noto, 'Droid Sans', cantarell, oxygen, ubuntu, 'franklin gothic medium', 'century gothic', sans-serif;
-$base-font-stack: "myriad-pro", "arial", sans-serif;
-$heading-font-weight: bold;
-
-//
-// Buttons
-///
-$btn-border-radius: 5px;
-$btn-padding: ms(0) ms(28);
-$btn-disabled-opacity: 1;
-$btn-disabled-background-color: $grey-medium;
-$btn-disabled-text-color: $white;
-
-//
-// Forms
-///
-$text-input-border-radius: 5px;
-$text-input-border-color: $grey-medium;
-$text-input-border-width: 2px;
-$input-container-margin-bottom: ms(0);
-$input-disabled-border-color: $grey-medium;
-$input-disabled-text-color: $white;
-$helper-text-hidden: false;
-
-//
-// Tables
-///
-$table-padding-medium: 1em;
-$table-padding-small: 0.5em;
-$table-border-width: 2px;
-$table-border-color: $white;
-$table-stripe-color: $blue-light;
