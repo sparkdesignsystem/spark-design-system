@@ -38,6 +38,7 @@
 @import "../../../../node_modules/scales-dpl/styles/base/links";
 @import "../../../../node_modules/scales-dpl/styles/base/buttons";
 @import "../../../../node_modules/scales-dpl/styles/base/forms";
+@import "base/typography";
 
 //
 // Shared objects
@@ -63,6 +64,7 @@
 @import "../../../../node_modules/scales-dpl/styles/components/tabs";
 @import "../../../../node_modules/scales-dpl/styles/components/datepicker";
 @import "../../../../node_modules/scales-dpl/styles/components/tables";
+@import "../../../../node_modules/scales-dpl/styles/components/button-secondary-action";
 
 //
 // Overrides that need to come later in the cascade
