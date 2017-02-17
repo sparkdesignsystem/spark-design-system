@@ -46,7 +46,7 @@
     "postcss-cssnext": "^2.5.2",
     "prismjs": "^1.4.1",
     "sass-lint": "^1.9.1",
-    "scales-dpl": "git:ProductDesign/scales-dpl.git#v1.0.0-alpha.5",
+    "scales-dpl": "git+http://git/productdesign/scales-dpl.git#040f801a3e9d17cb06fc43384b56d8b706b94eb3",
     "suitcss-base": "^2.0.0",
     "suitcss-components-arrange": "^1.1.1",
     "suitcss-components-button": "^5.0.0",
