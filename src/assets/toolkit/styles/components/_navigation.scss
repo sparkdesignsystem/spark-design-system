@@ -1,0 +1,21 @@
+.c-Navigation {
+  // TODO: Need to figure out the actual animation that's wanted here
+  transition: opacity .4s linear, height .4s step-start;
+  position: absolute;
+  width: 100%;
+  background-color: $white;
+
+  @media (min-width: $main-nav-breakpoint) {
+    transition: none;
+    position: relative;
+  }
+}
+
+.c-Navigation.is-hidden\@sm {
+  @media (max-width: $main-nav-breakpoint) {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: linear, step-end;
+  }
+}
