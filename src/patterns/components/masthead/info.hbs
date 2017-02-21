@@ -1,0 +1,39 @@
+---
+name: Masthead with Links and Additional Info
+notes: |
+  This is a masthead with secondary navigation links and additional info.
+order: 4
+labels:
+  - inprogress
+---
+
+<header class="c-Masthead" role="banner">
+  <div class="c-Masthead__hamburger">
+    <button class="c-Hamburger js-open-nav" type="button" aria-expanded="false">
+      <svg class="o-icon c-Hamburger__icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+        <g>
+          <path class="c-Hamburger__line c-Hamburger__line--1" d="M5 13h90v14H5z"/>
+          <path class="c-Hamburger__line c-Hamburger__line--2" d="M5 43h90v14H5z"/>
+          <path class="c-Hamburger__line c-Hamburger__line--3" d="M5 73h90v14H5z"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+  <div class="c-Masthead__logo">
+    <a href="">
+      <svg class="c-Masthead__image" viewBox="0 0 432 53">
+        <use xlink:href="../../assets/toolkit/images/icons.svg#quicken-loans-logo" />
+      </svg>
+      <span class="u-VisuallyHidden">Go to the home page</span>
+    </a>
+  </div>
+  <div class="c-Masthead__secondary">
+    <ul class="horizontal-list">
+      <li data-delimiter=" | "><a href="" class="o-Link--plain">Link</a></li>
+      <li><a href="" class="o-Link--plain">Link</a></li>
+    </ul>
+    <p class="mbn">Hello, Fellow Human</p>
+    <p>Loan #1234567890</p>
+  </div>
+  {{#embed "patterns.components.navigation.main" class="is-hidden@sm"}}{{/embed}}
+</header>

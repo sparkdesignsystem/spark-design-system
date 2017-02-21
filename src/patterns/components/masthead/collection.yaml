@@ -1,0 +1,5 @@
+# Make this appear before its sibling collections in listings
+order: 1
+
+notes: |
+  These are basic examples of mastheads.
