@@ -4,37 +4,17 @@
 }
 
 .c-HighlightBoard__bgimage {
-    width: 100%;
-    height: auto;
-    
-    // hard-coded to make example image fit example text. Remove?
-    min-height: 31.25em; 
-
-    // is this the image behavior we want?
-    object-fit: cover;
+    height: 100%;
+	object-fit: cover;
 }
 
 .c-HighlightBoard__content {
     margin: 0 auto;
-    left: 0;
-    right: 0; 
-    width: 100%;
+    width: 95%;
 }
 
 .c-HighlightBoard__content--imagebackground {
     position: absolute;
-    top: 50%; // move to half of container (which is position: relative)
-    transform: translateY(-50%); // move half of own height up, to be centered, visually
-}
-
-.c-HighlightBoard__heading {
-    // padding-top: 1em;
-}
-
-.c-HighlightBoard__subheading {
-    
-}
-
-.c-HighlightBoard__cta {
-    // margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
