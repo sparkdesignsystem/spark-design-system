@@ -1,5 +1,0 @@
-# Make this appear before its sibling collections in listings
-order: 9
-
-notes: |
- Note: For variants of this pattern that utilize a background image, the aspect ratio of the image will not be altered by this pattern's CSS.  Make sure to choose an image that is an appropriate size for your content.
