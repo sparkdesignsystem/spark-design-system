@@ -1,0 +1,27 @@
+.c-DescriptionTable {
+    border: 2px solid $gray-medium;
+}
+
+.c-DescriptionTable__header {
+    border-bottom: 2px solid $gray-medium;
+}
+
+.c-DescriptionTable__keyvaluepair {
+    width: 100%;
+}
+
+    .c-DescriptionTable__keyvaluepair:nth-child(odd) {
+        background: $gray-light;
+    }
+
+.c-DescriptionTable__key {
+    // font-weight: bold;
+    display: inline-block;
+    width: 50%;
+}
+
+.c-DescriptionTable__value {
+    display: inline-block;
+    word-wrap: break-word;
+    width: auto;
+}
