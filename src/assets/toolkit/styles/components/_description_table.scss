@@ -10,12 +10,11 @@
     width: 100%;
 }
 
-    .c-DescriptionTable__keyvaluepair:nth-child(odd) {
+    .c-DescriptionTable__keyvaluepair:nth-child(even) {
         background: $gray-light;
     }
 
 .c-DescriptionTable__key {
-    // font-weight: bold;
     display: inline-block;
     width: 50%;
 }
