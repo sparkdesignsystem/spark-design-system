@@ -18,16 +18,15 @@
     display: inline-block;
     width: 100%;
 
-    padding: 1em;
+    padding: .5em;
 }
 
 .c-DescriptionTable__value {
     display: inline-block;
-    // width: auto;
 
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
 }
 
 @media only screen and (min-width: 615px) {
