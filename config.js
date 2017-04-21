@@ -36,7 +36,10 @@ module.exports = {
       doctypeDeclaration: false
     }
   },
-
+  images: {
+    src:'./src/assets/toolkit/images/*.jpg',
+    dest: './dist/assets/toolkit/images'
+  },
   js: {
     plugins: {
       webpack: {
