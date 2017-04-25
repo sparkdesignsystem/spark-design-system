@@ -1,17 +1,43 @@
 .c-SneakPeek {
-    border: 2px solid $gray_light;
-    
+    // border: 2px solid $gray_light;
+    padding: 1em;
+
+    // pattern is meant to be used with a bunch of them
+    // together in a row.  We'll need to come up with
+    // a grid layout and figure out how to apply it to this
+    // pattern.
+    // width: 33%;    
+    // float: left;
+}
+
+.oneof2 {
+    width: 50%;
+    float: left;
+}
+
+.oneof3 {
+    width: 33%;
+    float: left;
+}
+
+.oneof5 {
+    width: 20%;
+    float: left;
 }
 
 .c-SneakPeek__image {
-    height: 100%;
+    width: 100%;
 	object-fit: cover;
 }
 
 .c-SneakPeek__headline {
-
+    font-size: 1rem;
 }
 
 .c-SneakPeek__body {
 
+}
+
+.c-SneakPeek__cta {
+ 
 }
