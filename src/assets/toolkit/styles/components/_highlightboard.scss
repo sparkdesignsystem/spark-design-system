@@ -1,20 +1,33 @@
 .c-HighlightBoard {
     text-align: center;
-    overflow: auto;
+    position: relative;
 }
 
-.c-HighlightBoard__bgimage {
+.c-HighlightBoard__image {
     height: 100%;
 	object-fit: cover;
 }
 
 .c-HighlightBoard__content {
-    margin: 0 auto;
-    width: 95%;
+    padding: ms(21) ms(0);
+    width: 100%;
 }
 
-.c-HighlightBoard__content--imagebackground {
+.c-HighlightBoard__content--image {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: ms(0);
+}
+
+@media only screen and (min-width: 615px) {
+    .btn {
+        margin-right: ms(0);
+        width: auto;
+        margin-bottom: auto;
+    }
 }
