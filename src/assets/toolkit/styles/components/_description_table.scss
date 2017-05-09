@@ -1,0 +1,38 @@
+.c-DescriptionTable {
+    border: 1px solid $gray-medium;
+}
+
+.c-DescriptionTable__header {
+    border-bottom: 1px solid $gray-medium;
+    padding: ms(0);
+}
+
+.c-DescriptionTable__keyvaluepair {
+    width: 100%;
+    padding: ms(0);
+
+    @media all and (min-width: 38.4375em) {
+        display: table;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+.c-DescriptionTable--striped .c-DescriptionTable__keyvaluepair:nth-child(even) {
+    background: $gray-light;
+}
+
+.c-DescriptionTable__key, 
+.c-DescriptionTable__value {
+    @media all and (min-width: 38.4375em) {
+        display: table-cell;
+        flex: 1;
+    }
+}
+
+.c-DescriptionTable__key {
+    @media all and (min-width: 38.4375em) {
+        width: 50%;
+    }
+}
