@@ -36,7 +36,7 @@ $description-table-breakpoint: 38.4375em;
 }
 
 .c-DescriptionTable__key {
-    @media all and (min-width: 38.4375em) {
+    @media all and (min-width: $description-table-breakpoint) {
         width: 50%;
     }
 }
