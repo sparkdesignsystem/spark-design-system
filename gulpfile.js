@@ -47,6 +47,12 @@ gulp.task('icons', () => {
     .pipe(gulp.dest(config.icons.dest));
 });
 
+// copy images
+gulp.task('images', () => {
+  gulp.src(config.images.src)
+  .pipe(gulp.dest(config.images.dest));
+});
+
 // Register Drizzle builder task
 gulp.task('drizzle', () => {
   const result = drizzle(config.drizzle);
@@ -60,6 +66,7 @@ gulp.task('frontend', [
   'css',
   'sass',
   'icons',
+  'images',
   'js'
 ]);
 
