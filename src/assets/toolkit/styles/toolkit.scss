@@ -54,7 +54,7 @@
 @import "../../../../node_modules/scales-dpl/styles/objects/icons";
 @import "../../../../node_modules/scales-dpl/styles/objects/spinners";
 @import "objects/horizontal-list";
-@import "objects/horizontal-groups";
+@import "objects/flex-grid";
 
 //
 // Components
@@ -68,10 +68,9 @@
 @import "../../../../node_modules/scales-dpl/styles/components/tables";
 @import "../../../../node_modules/scales-dpl/styles/components/button-secondary-action";
 @import "components/navigation";
-@import "components/highlightboard";
+@import "components/highlight-board";
 @import "components/masthead";
 @import "components/hamburger";
-@import "components/sneakpeek";
 @import "components/description-table";
 
 //
