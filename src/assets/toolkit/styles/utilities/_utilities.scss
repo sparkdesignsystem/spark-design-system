@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 // TODO: In scales-dpl, remove bottom margin from small .c-Button@sm
 // and add margin top to adjacent sibling instead.
 .c-Button\@sm {
@@ -19,10 +20,18 @@
   }
 }
 
+=======
+>>>>>>> d67e74baa99dc247b90651e68a530431d7d41012
 .u-TextColor--white {
   color: $white;
 }
 
+<<<<<<< HEAD
 .u-BackgroundColor--gray-dark {
   background-color: $gray-dark;
 }
+=======
+.u-BackgroundColor--graydark {
+  background-color: $gray-dark;
+}
+>>>>>>> d67e74baa99dc247b90651e68a530431d7d41012
