@@ -1,4 +1,9 @@
-# Make this appear before its sibling collections in listings
 order: 9
 
 notes: |
+  Examples of the Highlight Board pattern.
+
+info:
+  - Headlines should grab attention and be concise.
+  - Subheadlines provide additional context.
+  - Headlines and Subheadlines should not exceed 2 lines.
