@@ -1,0 +1,21 @@
+.o-FlexGrid {
+  @media all and (min-width: 30em) {
+    display: flex;
+  }
+}
+
+.o-FlexGrid__column {
+  @media all and (min-width: 30em) {
+    flex: 1;
+  }
+}
+
+.o-FlexGrid--gutters .o-FlexGrid__column {
+  @media all and (min-width: 30em) {
+    margin-right: ms(0);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
