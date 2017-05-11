@@ -1,0 +1,23 @@
+// Variables
+$highlight-board-content-padding: ms(21) ms(0);
+
+.c-HighlightBoard {
+  text-align: center;
+  position: relative;
+}
+
+.c-HighlightBoard__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-HighlightBoard__content {
+  padding: $highlight-board-content-padding;
+  width: 100%;
+}
+
+.c-HighlightBoard__content--image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
