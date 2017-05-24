@@ -1,12 +1,3 @@
-.u-VisuallyHidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 // TODO: In scales-dpl, remove bottom margin from small .c-Button@sm
 // and add margin top to adjacent sibling instead.
 .c-Button\@sm {
@@ -17,12 +8,4 @@
   @media all and (max-width: 30em) {
     margin-top: 1em;
   }
-}
-
-.u-TextColor--white {
-  color: $white;
-}
-
-.u-BackgroundColor--gray-dark {
-  background-color: $gray-dark;
 }
