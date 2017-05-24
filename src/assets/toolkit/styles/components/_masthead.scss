@@ -1,16 +1,7 @@
+$main-nav-breakpoint: 46rem !default;
+
 .c-Masthead {
   position: relative;
-
-  &:before {
-    content: '';
-    background: linear-gradient(to right,$green-medium 0%, $green-medium 16.667%,$blue-medium 16.667%, $blue-medium 33.334%,
-      $blue-dark 33.334%, $blue-dark 50%, $orange-medium 50%, $orange-medium 66.667%,$red-medium 66.667%, $red-medium 83.334%,$purple 83.334%, $purple);
-    background-repeat: repeat-y;
-    background-size: 100%;
-    display: block;
-    height: 10px;
-    width: 100%;
-  }
 
   @media (min-width: $main-nav-breakpoint) {
     border-bottom: 2px solid $grey-medium;
@@ -23,7 +14,7 @@
 
 .c-Masthead__hamburger {
   float: left;
-  margin: ms(-15) ms(0) 0 ms(-25);
+  margin-right: ms(0);
 
   @media (min-width: $main-nav-breakpoint) {
     display: none;
