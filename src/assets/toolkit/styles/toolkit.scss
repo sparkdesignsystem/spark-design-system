@@ -36,7 +36,6 @@
 @import "../../../../node_modules/scales-base-tables/tables";
 @import "../../../../node_modules/scales-dpl/styles/base/typography";
 @import "../../../../node_modules/scales-dpl/styles/base/links";
-@import "../../../../node_modules/scales-dpl/styles/base/buttons";
 @import "../../../../node_modules/scales-dpl/styles/base/forms";
 @import "base/typography";
 
@@ -59,6 +58,7 @@
 //
 // Components
 ///
+@import "../../../../node_modules/scales-dpl/styles/components/buttons";
 @import "../../../../node_modules/scales-dpl/styles/components/navigation";
 @import "../../../../node_modules/scales-dpl/styles/components/notifications";
 @import "../../../../node_modules/scales-dpl/styles/components/modals";
@@ -67,7 +67,6 @@
 @import "../../../../node_modules/scales-dpl/styles/components/datepicker";
 @import "../../../../node_modules/scales-dpl/styles/components/tables";
 @import "../../../../node_modules/scales-dpl/styles/components/button-secondary-action";
-@import "components/navigation";
 @import "components/highlight-board";
 @import "../../../../node_modules/scales-dpl/styles/components/masthead";
 @import "../../../../node_modules/scales-dpl/styles/components/hamburger";
@@ -79,4 +78,3 @@
 @import "../../../../node_modules/scales-overrides-size/size";
 @import "../../../../node_modules/scales-overrides-spacing/spacing";
 @import "../../../../node_modules/scales-dpl/styles/utilities/utilities";
-@import "utilities/utilities";
