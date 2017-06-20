@@ -9,6 +9,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const svgSprite = require('gulp-svg-sprite');
+const plumber = require('gulp-plumber');
 const env = require('gulp-util').env;
 const config = require('./config');
 
@@ -31,6 +32,7 @@ gulp.task('css', ['css:drizzle']);
 // Sass task
 gulp.task('sass', () => {
   gulp.src('src/assets/toolkit/styles/**/*.scss')
+    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['> 1%','last 4 versions'],
