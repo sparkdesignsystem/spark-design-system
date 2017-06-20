@@ -101,7 +101,7 @@ module.exports = {
         match: [
           './src/**/*.hbs',
           './src/data/**/*',
-          '.src/**/*.yaml'
+          './src/**/*.yaml'
         ],
         tasks: ['drizzle']
       }
