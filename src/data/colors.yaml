@@ -13,7 +13,7 @@ Secondary:
   - label: Red Dark
     color: "#8C181D"
     property: "$red-dark"
-  - label: Red Medium (QL Red)
+  - label: Red Medium
     color: "#B5121B"
     property: "$red-medium"
   - label: Red-light
