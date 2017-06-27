@@ -1,10 +1,10 @@
 ---
-title: Accessibility
+title: Accessibility Guidelines
 ---
 
-<h1>Accessibility Guidelines</h1>
+# {{title}}
 
-<h2>Four Principles of Accessibility</h2>
+## Four Principles of Accessibility
 <dl>
   <dt><strong>Perceivable</strong></dt>
   <dd class="drizzle-u-padBottom">Information and user interface components must be presentable to users in ways they can perceive (e.g. alt tags that say what the item actually does, like ‘Submit form Button’).</dd>
@@ -16,7 +16,7 @@ title: Accessibility
   <dd class="drizzle-u-padBottom">Content must be robust enough so it can be interpreted reliably by a wide variety of user agents, including assistive technologies. In other words, don’t use tags or code that only certain browsers understand.</dd>
 </dl>
 
-<h2>Guidelines Checklist</h2>
+## Guidelines Checklist
 <dl>
   <dt><strong>Text Alternatives</strong></dt>
   <dd class="drizzle-u-padBottom">Provide alternatives for non-text content (e.g., images) so that it can be accessed by impaired individuals.</dd>
@@ -44,9 +44,7 @@ title: Accessibility
   <dd class="drizzle-u-padBottom">Maximize compatibility with current and future user agents, including assistive technologies.</dd>
 </dl>
 
-<h2>Resources</h2>
-<ul>
-  <li><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines 2.0 (WCAG 2.0)</a></li>
-  <li><a href="https://www.section508.gov/">Section 508 Standards</a></li>
-  <li><a href="https://www.usability.gov/">Usability Standards</a></li>
-</ul>
+### Resources
+* [Web Content Accessibility Guidelines 2.0 (WCAG 2.0)](https://www.w3.org/TR/WCAG20/)
+* [Section 508 Standards](https://www.section508.gov/)
+* [Usability Standards](https://www.usability.gov/)

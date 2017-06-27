@@ -1,0 +1,70 @@
+---
+title: Class Naming Convention
+---
+
+# {{title}}
+
+The DPL uses a strict class naming convention. This allows us to keep our classes flat, avoid conflicts, provide clarity, and improve legibility. This is done by combining 4 techniques: a global namespace, class prefixes, pascal casing, and BEM syntax.
+
+All classes in the DPL must adhere to this naming convention.
+
+## Global Namespace
+```
+.dpl-
+```
+One of the most annoying things that happens when you use a CSS library is class naming conflicts. You already use the class `.button` and the library also uses it and it overrides your styles.
+
+To avoid this, the DPL uses a global namespace to ensure that it's styles don't interfere with the custom styles in your app.
+
+## Class prefixes
+After the global namespace, each class name has a prefix which gives information about what the class is doing. The prefixes available are:
+
+* **`b-`** (Base) For classes that add additional style to base HTML elements.
+* **`o-`** (Object) Cosmetic-free design patterns that are very dangerous to change because they are often used in unrelated contexts. E.g. the OOCSS Media Object.
+* **`c-`** (Component) Implementation-specific pieces of UI. CSS is safe to change because it is isolated to the specific component.
+* **`u-`** (Utility) Highly specific, highly reusable, usually single purpose, and have high specificity.
+* **`is-`, `has-`** (State) These classes are typically added and removed through JavaScript or on the server to show specific states.
+* **`js-`** (JavaScript) For targeting JavaScript specific functionality. No styles should be bound to these classes. They are only meant for behavior.
+
+## Pascal Casing
+After the namespace and prefix, the main part of the class name doesn't stand out very well. For this reason we use pascal case to visually separate it from the rest of the name. For example:
+```
+.dpl-c-HighlightBoard__content
+```
+
+## BEM Syntax
+BEM stands for "Block, Element, Modifier". It is a modular application development methodology whose naming convention has become very popular for writing modular, flat CSS selectors. The 3 parts of BEM are:
+
+#### Block
+The primary component block. In our convention it refers to the PascalCase part of the class. For example:
+```
+.dpl-c-HighlightBoard
+```
+
+#### Element
+A child of the primary block. It is represented by two underscores that separate it form the Block. For example:
+```
+.dpl-c-HighlightBoard__content
+```
+The following is not allowed:
+```
+.dpl-c-HighlightBoard__content__child-content
+```
+
+#### Modifier
+A variation that extends either a Block or an Element. It is represented by two dashes that separate it from the Block or Element. For example:
+```
+.dpl-c-HighlightBoard--jumbo
+.dpl-c-HighlightBoard__content--image
+```
+The following is not allowed:
+```
+.dpl-c-HighlightBoard--jumbo--red
+```
+
+### Additional Resources
+* [CSS Architecture for Design Systems](http://bradfrost.com/blog/post/css-architecture-for-design-systems/) - Brad Frost with thoughts on a very similar naming system.
+* [More transparent UI Code with Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/) - Harry Roberts explains class prefixes.
+* [SUIT CSS Component Names](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md#components) - Nicolas Gallagher's SUIT CSS component naming convention.
+* [MindBEMding – getting your head ’round BEM syntax](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) - Harry Roberts explains BEM syntax.
+* [Managing Large CSS Projects with ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) - Harry Roberts explains the ITCSS architecture.
