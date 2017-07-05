@@ -1,0 +1,74 @@
+// ==================================================================
+// Notifications
+// ==================================================================
+
+.c-Notification {
+  background-color: $grey-light;
+  border-radius: 5px;
+  display: table;
+  margin-bottom: ms(0);
+  min-height: 50px;
+  width: 100%;
+}
+
+.c-Notification__icon,
+.c-Notification__text {
+  display: table-cell;
+  padding: ms(0);
+}
+
+.c-Notification__text {
+  color: $grey-dark;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.c-Notification__icon {
+  min-height: 50px;
+  width: 50px;
+}
+
+.c-Notification__icon--success {
+  background-color: $green-medium;
+}
+
+.c-Notification__icon--alert {
+  background-color: $orange-medium;
+}
+
+.c-Notification__icon--failure {
+  background-color: $red-medium;
+}
+
+.c-Notification__icon--info {
+  background-color: $blue-medium;
+}
+
+.c-Notification__icon--close {
+  background-color: transparent;
+  border: 0;
+}
+
+.c-Notification__icon:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// Because the icons are svgs in this case
+.c-Notification__icon:first-child .o-icon {
+  fill: $white;
+}
+
+.c-Notification__icon:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+// Because the icons are svgs in this case
+.c-Notification__icon:last-child .o-icon {
+  fill: $grey-dark;
+}

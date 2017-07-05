@@ -1,0 +1,52 @@
+// ==================================================================
+// Typography
+// ==================================================================
+
+.b-Heading {
+  font-family: "quatro-slab", "times new roman", serif;
+  color: $blue-dark;
+}
+
+.b-Heading--primary {
+  font-size: ms(34);
+}
+
+.b-Heading--secondary {
+  font-size: ms(21);
+}
+
+.b-Heading--sub {
+  font-size: ms(17);
+  font-weight: normal;
+  color: $black;
+}
+
+.b-HeadingDivider {
+  border-bottom: 2px solid $grey-medium;
+  margin-bottom: ms(0);
+}
+
+.b-BodyDivider,
+hr {
+  border: 0;
+  border-bottom: 2px dashed $grey-medium;
+  margin-bottom: ms(0);
+}
+
+.b-List--indented,
+.b-List--unordered {
+  padding-left: ms(5);
+}
+
+.b-List--ordered {
+  padding-left: ms(0);
+}
+
+.b-List--indented {
+  padding-left: ms(12);
+  margin-left: ms(0);
+}
+
+.b-List--bare {
+  list-style-type: none;
+}

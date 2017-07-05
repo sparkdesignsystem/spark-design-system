@@ -1,0 +1,16 @@
+.u-VisuallyHidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.u-TextColor--white {
+  color: $white;
+}
+
+.u-BackgroundColor--gray-dark {
+  background-color: $gray-dark;
+}

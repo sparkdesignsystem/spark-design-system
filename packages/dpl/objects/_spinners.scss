@@ -1,0 +1,28 @@
+// ==================================================================
+// Spinner Animation
+// ==================================================================
+
+// Avialable variables
+$spinner-size: 1.5em !default;
+$spinner-size-large: 3em !default;
+$spinner-speed: 1s !default;
+$spinner-thickness: 0.25em !default;
+$spinner-color: $white !default;
+
+.o-Spinner {
+  animation: rotate-infinite $spinner-speed linear infinite;
+  display: inline-block;
+  height: $spinner-size;
+  width: $spinner-size;
+}
+
+.o-Spinner--circle {
+  border: $spinner-thickness solid $spinner-color;
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+.o-Spinner--large {
+  width: $spinner-size-large;
+  height: $spinner-size-large;
+}
