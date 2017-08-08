@@ -44,7 +44,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-svg-sprite": "^1.3.6",
     "gulp-util": "^3.0.7",
-    "lerna": "^2.0.0-rc.5",
+    "lerna": "^2.0.0",
     "postcss-cssnext": "^2.5.2",
     "prismjs": "^1.4.1",
     "sass-lint": "^1.9.1",

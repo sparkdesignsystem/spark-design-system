@@ -1,0 +1,20 @@
+.sprk-c-ButtonSecondaryAction {
+  list-style-type: none;
+}
+
+.sprk-c-ButtonSecondaryAction__button,
+.sprk-c-ButtonSecondaryAction__link {
+  width: 100%;
+  text-align: center;
+
+  @media all and (min-width: 30em) {
+    text-align: left;
+    display: inline;
+  }
+}
+
+.sprk-c-ButtonSecondaryAction__link {
+  @media all and (min-width: 30em) {
+    margin-left: ms(34);
+  }
+}

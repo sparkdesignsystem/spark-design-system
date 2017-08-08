@@ -1,0 +1,73 @@
+// ==================================================================
+// Tabbed Navigation
+// ==================================================================
+
+.sprk-c-Tabs__buttons {
+  display: block;
+  border-bottom: 0;
+  margin-bottom: ms(0);
+  background-color: $white;
+
+  @media all and (min-width: 46em) {
+    display: flex;
+    border: 0;
+  }
+}
+
+.sprk-c-Tabs__button {
+  -webkit-appearance: none;
+  background: $white;
+  display: block;
+  color: $green-medium;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 2px solid $green-medium;
+  border-left: 2px solid $green-medium;
+  border-right: 2px solid $green-medium;
+  border-top: 0;
+  width: 100%;
+  padding-top: ms(-36);
+  padding-bottom: ms(-36);
+
+  &:first-of-type {
+    border-top: 2px solid $green-medium;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  @media all and (min-width: 46em) {
+    flex: 1 1 100%;
+    border-top: 2px solid $green-medium;
+    border-left: 2px solid $green-medium;
+    border-right: 0;
+
+    &:first-of-type {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 0px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 0px;
+      border-right: 2px solid $green-medium;
+    }
+  }
+}
+
+.sprk-c-Tabs__button--active,
+.sprk-c-Tabs__button:focus,
+.sprk-c-Tabs__button:hover {
+  background-color: $green-medium;
+  color: $white;
+}
+
+.sprk-c-Tabs__content {
+  display: block;
+}

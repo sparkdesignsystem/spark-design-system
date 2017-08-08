@@ -1,0 +1,102 @@
+// ==================================================================
+// Date Picker
+// ==================================================================
+
+.sprk-c-DatePicker {
+  border: 2px solid $gray-medium;
+  border-radius: 5px;
+  padding: ms(-20);
+  position: relative;
+  max-width: 20em;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+  	bottom: 100%;
+  	left: 1.25em;
+  	border: solid transparent;
+  }
+
+  &:after {
+  	border-bottom-color: #ffffff;
+  	border-width: 10px;
+  	margin-left: -10px;
+  }
+
+  &:before {
+  	border-bottom-color: $gray-medium;
+  	border-width: 13px;
+  	margin-left: -13px;
+  }
+}
+
+.sprk-c-DatePicker__header {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid $gray-medium;
+  padding-bottom: ms(-40);
+  margin-bottom: ms(-20);
+}
+
+.sprk-c-DatePicker__month-year {
+  font-size: ms(13);
+  font-weight: normal;
+}
+
+.sprk-c-DatePicker__back,
+.sprk-c-DatePicker__forward {
+  position: absolute;
+  top: 0.25em;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .sprk-c-Icon {
+    fill: $blue-medium;
+  }
+}
+
+.sprk-c-DatePicker__back {
+  left: 0.5em;
+}
+
+.sprk-c-DatePicker__forward {
+  right: 0.5em;
+}
+
+.sprk-c-DatePicker__table {
+  text-align: center;
+  vertical-align: middle;
+
+  tr {
+    border-bottom: 1px solid $gray-medium;
+  }
+}
+
+.sprk-c-DatePicker__thead {
+  tr {
+    border-bottom: 2px solid $gray-medium;
+  }
+
+  th {
+    padding-bottom: ms(-40);
+  }
+}
+
+.sprk-c-DatePicker__day {
+  border-left: 1px solid $gray-medium;
+  border-right: 1px solid $gray-medium;
+  padding: ms(-20);
+}
+
+.sprk-c-DatePicker__day--current,
+.sprk-c-DatePicker__day:hover {
+  background-color: $blue-light;
+  cursor: pointer;
+}
+
+.sprk-c-DatePicker__day--muted {
+  color: $gray-medium;
+}

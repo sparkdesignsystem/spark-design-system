@@ -1,0 +1,42 @@
+// Variables
+$description-table-border: 1px solid $gray-medium;
+$description-table-stripe-color: $gray-light;
+$description-table-breakpoint: 38.4375em;
+
+.sprk-c-DescriptionTable {
+    border: $description-table-border;
+}
+
+.sprk-c-DescriptionTable__header {
+    border-bottom: $description-table-border;
+    padding: ms(0);
+}
+
+.sprk-c-DescriptionTable__keyvaluepair {
+    width: 100%;
+    padding: ms(0);
+
+    @media all and (min-width: $description-table-breakpoint) {
+        display: table;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sprk-c-DescriptionTable--striped .sprk-c-DescriptionTable__keyvaluepair:nth-child(even) {
+    background: $description-table-stripe-color;
+}
+
+.sprk-c-DescriptionTable__key,
+.sprk-c-DescriptionTable__value {
+    @media all and (min-width: $description-table-breakpoint) {
+        display: table-cell;
+        flex: 1;
+    }
+}
+
+.sprk-c-DescriptionTable__key {
+    @media all and (min-width: $description-table-breakpoint) {
+        width: 50%;
+    }
+}

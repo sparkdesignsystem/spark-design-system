@@ -1,0 +1,56 @@
+// ==================================================================
+// Forms
+// ==================================================================
+
+.sprk-b-Label,
+label {
+  font-size: ms(4);
+  font-weight: bold;
+  color: $blue-dark;
+}
+
+.sprk-b-Label--inline {
+  display: inline-block;
+}
+
+.sprk-b-TextInput,
+textarea {
+  color: $gray-dark;
+  outline: none;
+  font-size: ms(0);
+
+  &:focus {
+    border-color: $blue-medium;
+    box-shadow: 0 0 0 3px $blue-medium;
+  }
+}
+
+input[readonly] {
+  color: $white;
+
+  &:focus {
+    border-color: $gray-medium;
+    box-shadow: 0 0 0 3px $gray-medium;
+  }
+}
+
+// Placeholder colors
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: $gray-medium;
+}
+
+.sprk-b-HelperText {
+  color: $gray-medium;
+}
+
+textarea {
+  min-height: 125px;
+  margin-bottom: ms(0);
+}
+
+.sprk-b-ErrorText {
+  color: $red-medium;
+}

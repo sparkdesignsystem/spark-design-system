@@ -1,0 +1,32 @@
+// ==================================================================
+// Input Component
+// ==================================================================
+
+.sprk-b-TextInput--monetary {
+  position: relative;
+
+  &:before {
+    content: '$';
+    color: $gray-dark;
+    position: absolute;
+    top: .6em;
+    left: .55em;
+  }
+}
+
+.sprk-b-TextInput--date-picker {
+  background-image: url('../images/calendar.svg');
+  background-position: 5px 3px;
+  padding-left: 3em;
+}
+
+.sprk-b-TextInput--error {
+  background-color: $red-light;
+  border-color: $red-medium;
+
+  &:focus {
+    border-color: $red-medium;
+    box-shadow: 0 0 0 3px $red-medium;
+    background-color: $red-light;
+  }
+}

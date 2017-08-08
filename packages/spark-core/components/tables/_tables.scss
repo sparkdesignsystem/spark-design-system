@@ -1,0 +1,29 @@
+// ==================================================================
+// Tables
+// ==================================================================
+.sprk-c-Table {
+  text-align: center;
+}
+
+.sprk-c-Table__head {
+  background-color: $blue-dark;
+  color: $white;
+}
+
+.sprk-c-Table__grouped-column {
+  background-color: $blue-dark;
+  border-right: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.sprk-c-Table--row-comparison .sprk-c-Table__empty-heading,
+.sprk-c-Table__grouped-columns .sprk-c-Table__grouped-column {
+  border: 0;
+}
+
+.sprk-c-Table__row-heading {
+  background-color: $blue-dark;
+  border-bottom: $table-border-width $table-border-style $table-border-color;
+  color: $white;
+}

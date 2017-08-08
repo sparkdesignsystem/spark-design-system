@@ -1,0 +1,74 @@
+// ==================================================================
+// Notifications
+// ==================================================================
+
+.sprk-c-Notification {
+  background-color: $gray-light;
+  border-radius: 5px;
+  display: table;
+  margin-bottom: ms(0);
+  min-height: 50px;
+  width: 100%;
+}
+
+.sprk-c-Notification__icon,
+.sprk-c-Notification__text {
+  display: table-cell;
+  padding: ms(0);
+}
+
+.sprk-c-Notification__text {
+  color: $gray-dark;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.sprk-c-Notification__icon {
+  min-height: 50px;
+  width: 50px;
+}
+
+.sprk-c-Notification__icon--success {
+  background-color: $green-medium;
+}
+
+.sprk-c-Notification__icon--alert {
+  background-color: $orange-medium;
+}
+
+.sprk-c-Notification__icon--failure {
+  background-color: $red-medium;
+}
+
+.sprk-c-Notification__icon--info {
+  background-color: $blue-medium;
+}
+
+.sprk-c-Notification__icon--close {
+  background-color: transparent;
+  border: 0;
+}
+
+.sprk-c-Notification__icon:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// Because the icons are svgs in this case
+.sprk-c-Notification__icon:first-child .sprk-c-Icon {
+  fill: $white;
+}
+
+.sprk-c-Notification__icon:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+// Because the icons are svgs in this case
+.sprk-c-Notification__icon:last-child .sprk-c-Icon {
+  fill: $gray-dark;
+}

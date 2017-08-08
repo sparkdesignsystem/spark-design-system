@@ -1,0 +1,58 @@
+// ==================================================================
+// Modals
+// ==================================================================
+
+.sprk-c-Modal {
+  background-color: $white;
+  left: 0;
+  padding-bottom: ms(-20);
+  margin: 0 auto;
+  max-width: 43.75em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1006;
+
+  @media all and (min-width: 300px) and (min-height: 300px) {
+    top: 30%;
+  }
+}
+
+.sprk-c-Modal__header {
+  background-color: $blue-medium;
+  display: table;
+  padding: ms(-20) ms(0);
+  margin-bottom: ms(-20);
+  width: 100%;
+
+  .sprk-b-Heading {
+    color: $white;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.sprk-c-Modal__spinner {
+  display: table-cell;
+  text-align: right;
+}
+
+.sprk-c-Modal__body,
+.sprk-c-Modal__footer {
+  padding: ms(0);
+}
+
+.sprk-c-Modal__body {
+  padding-bottom: 0;
+}
+
+.sprk-c-ModalMask {
+  background-color: rgba(34, 34, 34, .35);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1005;
+}
