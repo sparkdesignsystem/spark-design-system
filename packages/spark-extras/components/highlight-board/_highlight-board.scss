@@ -12,7 +12,10 @@ $highlight-board-content-padding: ms(21) ms(0);
 }
 
 .sprk-c-HighlightBoard__content {
-  padding: $highlight-board-content-padding;
+  padding-top: 1.949rem;
+  padding-bottom: 1.949rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   width: 100%;
 }
 

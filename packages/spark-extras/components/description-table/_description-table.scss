@@ -9,12 +9,18 @@ $description-table-breakpoint: 38.4375em;
 
 .sprk-c-DescriptionTable__header {
     border-bottom: $description-table-border;
-    padding: ms(0);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .sprk-c-DescriptionTable__keyvaluepair {
     width: 100%;
-    padding: ms(0);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @media all and (min-width: $description-table-breakpoint) {
         display: table;
