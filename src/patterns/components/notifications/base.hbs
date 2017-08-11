@@ -3,18 +3,18 @@ notes: This is the base notifications class.
 hidden: true
 ---
 
-<div class="c-Notification">
-  <div class="c-Notification__icon c-Notification__icon--{{type}}">
-    <svg class="o-icon o-icon--big" viewBox="0 0 100 100">
+<div class="sprk-c-Notification">
+  <div class="sprk-c-Notification__icon sprk-c-Notification__icon--{{type}}">
+    <svg class="sprk-c-Icon sprk-c-Icon--big" viewBox="0 0 100 100">
       <!-- href should point to the icon svg in your project -->
       <use xlink:href="../../assets/toolkit/images/icons.svg#{{icon}}" />
     </svg>
   </div>
-  <div class="c-Notification__text">
+  <div class="sprk-c-Notification__text">
     <span>{{#block "content"}}This is a notification{{/block}}</span>
   </div>
-  <button class="c-Notification__icon c-Notification__icon--close" type="button">
-    <svg class="o-icon o-icon--big" viewBox="0 0 100 100">
+  <button class="sprk-c-Notification__icon sprk-c-Notification__icon--close" type="button">
+    <svg class="sprk-c-Icon sprk-c-Icon--big" viewBox="0 0 100 100">
       <!-- href should point to the icon svg in your project -->
       <use xlink:href="../../assets/toolkit/images/icons.svg#times" />
     </svg>

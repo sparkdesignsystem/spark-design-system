@@ -3,31 +3,31 @@ notes: This is the base for validation criteria.
 hidden: true
 ---
 
-<div class="input-container">
+<div class="sprk-b-InputContainer">
   <label for="password">Password</label>
-  <input class="text-input{{#if error}} text-input--error{{/if}} size-100 js-password" id="password" type="password">
-  <div class="selection-container">
+  <input class="sprk-b-TextInput{{#if error}} sprk-b-TextInput--error{{/if}} sprk-u-Size-100 js-password" id="password" type="password">
+  <div class="sprk-b-SelectionContainer">
     <input id="show-password" type="checkbox" class="js-remove-mask">
-    <label for="show-password" class="b-Label--inline mls">Show Password</label>
+    <label for="show-password" class="sprk-b-Label--inline sprk-u-mls">Show Password</label>
   </div>
 
-  <ul class="c-ValidationCriteria b-List--bare mts">
-    <li class="c-ValidationCriteria__item c-ValidationCriteria__item--{{state1}}">
-      <svg class="o-icon" viewBox="0 0 100 100">
+  <ul class="sprk-c-ValidationCriteria sprk-b-List--bare sprk-u-mts">
+    <li class="sprk-c-ValidationCriteria__item sprk-c-ValidationCriteria__item--{{state1}}">
+      <svg class="sprk-c-Icon" viewBox="0 0 100 100">
         <!-- href should point to the icon svg in your project -->
         <use xlink:href="../../assets/toolkit/images/icons.svg#{{icon1}}" />
       </svg>
       <span class="">8 or more characters</span>
     </li>
-    <li class="c-ValidationCriteria__item c-ValidationCriteria__item--{{state2}}">
-      <svg class="o-icon" viewBox="0 0 100 100">
+    <li class="sprk-c-ValidationCriteria__item sprk-c-ValidationCriteria__item--{{state2}}">
+      <svg class="sprk-c-Icon" viewBox="0 0 100 100">
         <!-- href should point to the icon svg in your project -->
         <use xlink:href="../../assets/toolkit/images/icons.svg#{{icon2}}" />
       </svg>
       <span class="">Upper and lowercase letters</span>
     </li>
-    <li class="c-ValidationCriteria__item c-ValidationCriteria__item--{{state3}}">
-      <svg class="o-icon" viewBox="0 0 100 100">
+    <li class="sprk-c-ValidationCriteria__item sprk-c-ValidationCriteria__item--{{state3}}">
+      <svg class="sprk-c-Icon" viewBox="0 0 100 100">
         <!-- href should point to the icon svg in your project -->
         <use xlink:href="../../assets/toolkit/images/icons.svg#{{icon3}}" />
       </svg>

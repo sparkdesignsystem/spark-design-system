@@ -6,15 +6,15 @@
 // Settings
 ///
 @import "../../../../node_modules/modularscale-sass/stylesheets/modular-scale";
-@import "../../../../packages/dpl/settings/colors";
-@import "../../../../packages/dpl/settings/settings";
+@import "../../../../packages/spark-core/settings/colors";
+@import "../../../../packages/spark-core/settings/settings";
 @import "settings/settings";
 
 //
 // Tools
 ///
-@import "../../../../packages/dpl/tools/mixins";
-@import "../../../../packages/dpl/tools/animations";
+@import "../../../../packages/spark-core/tools/mixins";
+@import "../../../../packages/spark-core/tools/animations";
 
 //
 // Generic utility stlyes
@@ -31,9 +31,9 @@
 @import "../../../../node_modules/@scalescss/base-blockquotes/blockquotes";
 @import "../../../../node_modules/@scalescss/base-forms/forms";
 @import "../../../../node_modules/@scalescss/base-tables/tables";
-@import "../../../../packages/dpl/base/typography";
-@import "../../../../packages/dpl/base/links";
-@import "../../../../packages/dpl/base/forms";
+@import "../../../../packages/spark-core/base/typography";
+@import "../../../../packages/spark-core/base/links";
+@import "../../../../packages/spark-core/base/forms";
 @import "base/typography";
 
 //
@@ -47,27 +47,33 @@
 @import "../../../../node_modules/@scalescss/objects-split/split";
 @import "../../../../node_modules/@scalescss/objects-stats/stats";
 @import "../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list";
-@import "../../../../packages/dpl/objects/icons";
-@import "../../../../packages/dpl/objects/spinners";
 @import "objects/flex-grid";
 
 //
 // Components
 ///
 @import "../../../../node_modules/@scalescss/components-buttons/buttons";
-@import "../../../../packages/dpl/components/buttons";
-@import "../../../../packages/dpl/components/navigation";
-@import "../../../../packages/dpl/components/notifications";
-@import "../../../../packages/dpl/components/modals";
-@import "../../../../packages/dpl/components/pagination";
-@import "../../../../packages/dpl/components/tabs";
-@import "../../../../packages/dpl/components/datepicker";
-@import "../../../../packages/dpl/components/tables";
-@import "../../../../packages/dpl/components/button-secondary-action";
-@import "../../../../packages/dpl/components/highlight-board";
-@import "../../../../packages/dpl/components/masthead";
-@import "../../../../packages/dpl/components/hamburger";
-@import "../../../../packages/dpl/components/description-table";
+@import "../../../../packages/spark-core/components/icons/icons";
+@import "../../../../packages/spark-core/components/spinners/spinners";
+@import "../../../../packages/spark-core/components/buttons/buttons";
+@import "../../../../packages/spark-core/components/input/input";
+@import "../../../../packages/spark-core/components/validation-criteria/validation-criteria";
+@import "../../../../packages/spark-core/components/navigation/navigation";
+@import "../../../../packages/spark-core/components/notifications/notifications";
+@import "../../../../packages/spark-core/components/modals/modals";
+@import "../../../../packages/spark-core/components/pagination/pagination";
+@import "../../../../packages/spark-core/components/tabs/tabs";
+@import "../../../../packages/spark-core/components/datepicker/datepicker";
+@import "../../../../packages/spark-core/components/tables/tables";
+@import "../../../../packages/spark-core/components/button-secondary-action/button-secondary-action";
+@import "../../../../packages/spark-core/components/masthead/masthead";
+@import "../../../../packages/spark-core/components/hamburger/hamburger";
+
+//
+//
+///
+@import "../../../../packages/spark-extras/components/highlight-board/highlight-board";
+@import "../../../../packages/spark-extras/components/description-table/description-table";
 
 //
 // Overrides that need to come later in the cascade
@@ -75,4 +81,4 @@
 @import "../../../../node_modules/@scalescss/utilities-clearfix/clearfix";
 @import "../../../../node_modules/@scalescss/utilities-size/size";
 @import "../../../../node_modules/@scalescss/utilities-spacing/spacing";
-@import "../../../../packages/dpl/utilities/utilities";
+@import "../../../../packages/spark-core/utilities/utilities";
