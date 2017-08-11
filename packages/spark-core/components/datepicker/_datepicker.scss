@@ -5,9 +5,12 @@
 .sprk-c-DatePicker {
   border: 2px solid $gray-medium;
   border-radius: 5px;
-  padding: ms(-20);
+  padding-top: 0.52446rem;
+  padding-bottom: 0.52446rem;
+  padding-left: 0.52446rem;
+  padding-right: 0.52446rem;
   position: relative;
-  max-width: 20em;
+  max-width: 20rem;
 
   &:after,
   &:before {
@@ -35,12 +38,12 @@
   position: relative;
   text-align: center;
   border-bottom: 1px solid $gray-medium;
-  padding-bottom: ms(-40);
-  margin-bottom: ms(-20);
+  padding-bottom: 0.27506rem;
+  margin-bottom: 0.52446rem;
 }
 
 .sprk-c-DatePicker__month-year {
-  font-size: ms(13);
+  font-size: ms(2);
   font-weight: normal;
 }
 
@@ -81,14 +84,17 @@
   }
 
   th {
-    padding-bottom: ms(-40);
+    padding-bottom: 0.27506rem;
   }
 }
 
 .sprk-c-DatePicker__day {
   border-left: 1px solid $gray-medium;
   border-right: 1px solid $gray-medium;
-  padding: ms(-20);
+  padding-top: 0.52446rem;
+  padding-bottom: 0.52446rem;
+  padding-left: 0.52446rem;
+  padding-right: 0.52446rem;
 }
 
 .sprk-c-DatePicker__day--current,

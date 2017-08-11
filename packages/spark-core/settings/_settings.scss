@@ -19,17 +19,17 @@ $selection-bg-color: $blue-medium;
 //
 // Typography
 ///
-$ms-base: 1rem 1.75rem;
-$ms-ratio: $minor-second;
-$text-margins: 0 0 ms(0);
-$base-font-stack: "myriad-pro", "arial", sans-serif;
-$heading-font-weight: bold;
+$ms-base: 1rem;
+$ms-ratio: 1.1;
+$text-margins: 0;
+$base-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$heading-font-weight: normal;
 
 //
 // Buttons
 ///
 $btn-border-radius: 5px;
-$btn-padding: ms(0) ms(28);
+$btn-padding: 1rem 2.46832rem;
 $btn-disabled-opacity: 1;
 $btn-disabled-background-color: $gray-medium;
 $btn-disabled-text-color: $white;
@@ -42,7 +42,7 @@ $btn-disabled-border-color: $gray-medium;
 $text-input-border-radius: 5px;
 $text-input-border-color: $gray-medium;
 $text-input-border-width: 2px;
-$input-container-margin-bottom: ms(0);
+$input-container-margin-bottom: 1rem;
 $input-disabled-border-color: $gray-medium;
 $input-disabled-text-color: $white;
 $helper-text-hidden: false;
@@ -50,8 +50,8 @@ $helper-text-hidden: false;
 //
 // Tables
 ///
-$table-padding-medium: 1em;
-$table-padding-small: 0.5em;
+$table-padding-medium: 1rem;
+$table-padding-small: 0.5rem;
 $table-border-width: 2px;
 $table-border-color: $white;
 $table-stripe-color: $blue-light;

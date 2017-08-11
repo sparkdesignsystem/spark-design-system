@@ -6,7 +6,7 @@
   background-color: $gray-light;
   border-radius: 5px;
   display: table;
-  margin-bottom: ms(0);
+  margin-bottom: 1rem;
   min-height: 50px;
   width: 100%;
 }
@@ -14,7 +14,10 @@
 .sprk-c-Notification__icon,
 .sprk-c-Notification__text {
   display: table-cell;
-  padding: ms(0);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .sprk-c-Notification__text {

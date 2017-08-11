@@ -34,11 +34,11 @@ $main-nav-breakpoint: 46em;
 }
 
 .sprk-c-Navigation__item {
-  line-height: ms(36);
+  line-height: 3.19534rem;
 
   @media all and (min-width: $main-nav-breakpoint) {
     display: table-cell;
-    line-height: ms(20);
+    line-height: 1.90672rem;
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -50,7 +50,7 @@ $main-nav-breakpoint: 46em;
   border-top: 0;
   color: $blue-dark;
   display: block;
-  padding-left: ms(20);
+  padding-left: 1.90672rem;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
@@ -100,14 +100,17 @@ $main-nav-breakpoint: 46em;
 .sprk-c-Navigation__arrow {
   fill: $blue-dark;
   float: right;
-  margin-right: ms(20);
-  margin-top: ms(0);
+  margin-right: 1.90672rem;
+  margin-top: 1rem;
   width: 15px;
 
   @media all and (min-width: $main-nav-breakpoint) {
     fill: $blue-dark;
     float: none;
-    margin: 0 0 ms(-40) ms(-40);
+    margin-top: 0;
+    margin-bottom: 0.27506rem;
+    margin-left: 0.27506rem;
+    margin-right: 0;
   }
 }
 
@@ -127,8 +130,11 @@ $main-nav-breakpoint: 46em;
 
   @media all and (min-width: $main-nav-breakpoint) {
     float: left;
-    line-height: ms(20);
-    padding: ms(-20) ms(0);
+    line-height: 1.90672rem;
+    padding-top: 0.52446rem;
+    padding-bottom: 0.52446rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: left;
     width: 100%;
   }
@@ -138,7 +144,7 @@ $main-nav-breakpoint: 46em;
 
   @media all and (min-width: $main-nav-breakpoint) {
     a {
-      margin-bottom: ms(-20);
+      margin-bottom: 0.52446rem;
     }
   }
 }

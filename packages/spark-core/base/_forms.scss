@@ -4,7 +4,7 @@
 
 .sprk-b-Label,
 label {
-  font-size: ms(4);
+  font-size: ms(1);
   font-weight: bold;
   color: $blue-dark;
 }
@@ -13,16 +13,17 @@ label {
   display: inline-block;
 }
 
-.sprk-b-TextInput,
-textarea {
-  color: $gray-dark;
-  outline: none;
-  font-size: ms(0);
+.sprk-b-HelperText {
+  color: $gray-medium;
+}
 
-  &:focus {
-    border-color: $blue-medium;
-    box-shadow: 0 0 0 3px $blue-medium;
-  }
+.sprk-b-ErrorText {
+  color: $red-medium;
+}
+
+textarea {
+  min-height: 125px;
+  margin-bottom: 1rem;
 }
 
 input[readonly] {
@@ -40,17 +41,4 @@ input[readonly] {
 ::-moz-placeholder,
 :-ms-input-placeholder {
   color: $gray-medium;
-}
-
-.sprk-b-HelperText {
-  color: $gray-medium;
-}
-
-textarea {
-  min-height: 125px;
-  margin-bottom: ms(0);
-}
-
-.sprk-b-ErrorText {
-  color: $red-medium;
 }

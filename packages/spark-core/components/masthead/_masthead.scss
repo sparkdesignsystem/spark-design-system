@@ -10,7 +10,8 @@ $masthead-column-width: 64rem !default;
     .sprk-c-Navigation {
       border-bottom: 0;
       clear: both;
-      margin: 0 auto;
+      margin-right: auto;
+      margin-left: auto;
       max-width: $masthead-column-width;
     }
   }
@@ -18,25 +19,26 @@ $masthead-column-width: 64rem !default;
 
 .sprk-c-Masthead__hamburger {
   float: left;
-  margin-right: ms(0);
+  margin-right: 1rem;
 
   @media all and (min-width: $main-nav-breakpoint) {
     display: none;
   }
 }
 
-.sprk-c-Masthead__wrapper {
-  margin: 0 auto;
-  max-width: $masthead-column-width;
-}
-
 .sprk-c-Masthead__logo {
-  margin: ms(-10) 0;
+  margin-top: 0.7242rem;
+  margin-bottom: 0.7242rem;
+  margin-left: 0;
+  margin-right: 0;
   text-align: center;
 
   @media all and (min-width: $main-nav-breakpoint) {
     float: left;
-    margin: ms(10) ms(-25) ms(30);
+    margin-top: 1.38084rem;
+    margin-bottom: 2.63288rem;
+    margin-left: 0.45127rem;
+    margin-right: 0.45127rem;
   }
 }
 
@@ -54,7 +56,10 @@ $masthead-column-width: 64rem !default;
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     float: right;
-    margin: ms(10) ms(-25) 0 0;
+    margin-top: 1.38084rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0.45127rem;
     text-align: right;
   }
 }
@@ -65,7 +70,10 @@ $masthead-column-width: 64rem !default;
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     float: right;
-    margin: ms(-10) ms(-25) 0 ms(0);
+    margin-top: 0.7242rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 0.45127rem;
     width: 30%;
   }
 }

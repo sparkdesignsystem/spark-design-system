@@ -2,11 +2,14 @@
   border: none;
   background: $white;
   display: inline-block;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .sprk-c-Hamburger__icon {
-  height: ms(16);
+  height: 1.67583rem;
   fill: $blue-medium;
   margin-top: -5px;
   transition: all 0.25s ease-in-out;
