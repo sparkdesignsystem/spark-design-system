@@ -1,0 +1,21 @@
+---
+name: Example Form
+notes:
+  This is a form with a mix of inputs.
+order: 18
+labels:
+  - inprogress
+---
+
+<form>
+  {{#embed "patterns.components.inputs.text-input"}}{{/embed}}
+  {{#embed "patterns.components.inputs.validation-base" state1="unmet" state2="unmet" state3="unmet" icon1="times" icon2="times" icon3="times"}}{{/embed}}
+  {{#embed "patterns.components.inputs.phone"}}{{/embed}}
+  {{#embed "patterns.components.inputs.select"}}{{/embed}}
+  {{#embed "patterns.components.inputs.ssn"}}{{/embed}}
+  {{#embed "patterns.components.inputs.money"}}{{/embed}}
+  {{#embed "patterns.components.inputs.datepicker"}}{{/embed}}
+  {{#embed "patterns.components.inputs.textarea"}}{{/embed}}
+  {{#embed "patterns.components.inputs.checkbox"}}{{/embed}}
+  {{#embed "patterns.components.inputs.radios"}}{{/embed}}
+</form>
