@@ -5,76 +5,80 @@
 //
 // Settings
 ///
-@import "../../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "../../../../node_modules/modularscale-sass/stylesheets/modular-scale";
-@import "../../../../node_modules/scales-dpl/styles/settings/colors";
-@import "../../../../node_modules/scales-dpl/styles/settings/settings";
+@import "../../../../packages/spark-core/settings/colors";
+@import "../../../../packages/spark-core/settings/settings";
 @import "settings/settings";
 
 //
 // Tools
 ///
-@import "../../../../node_modules/scales-dpl/styles/tools/mixins";
-@import "../../../../node_modules/scales-dpl/styles/tools/animations";
+@import "../../../../packages/spark-core/tools/mixins";
+@import "../../../../packages/spark-core/tools/animations";
 
 //
 // Generic utility stlyes
 ///
-@import "../../../../node_modules/scales-utilities-normalize/normalize";
-@import "../../../../node_modules/scales-utilities-reset/reset";
-@import "../../../../node_modules/scales-utilities-clearfix/clearfix";
+@import "../../../../node_modules/@scalescss/generic-normalize/normalize";
+@import "../../../../node_modules/@scalescss/generic-reset/reset";
 
 //
 // Base styles for standard HTML elements
 ///
-@import "../../../../node_modules/scales-base-typography/typography";
-@import "../../../../node_modules/scales-base-images/images";
-@import "../../../../node_modules/scales-base-lists/lists";
-@import "../../../../node_modules/scales-base-blockquotes/blockquotes";
-@import "../../../../node_modules/scales-patterns-buttons/buttons";
-@import "../../../../node_modules/scales-base-forms/forms";
-@import "../../../../node_modules/scales-base-tables/tables";
-@import "../../../../node_modules/scales-dpl/styles/base/typography";
-@import "../../../../node_modules/scales-dpl/styles/base/links";
-@import "../../../../node_modules/scales-dpl/styles/base/forms";
+@import "../../../../node_modules/@scalescss/base-typography/typography";
+@import "../../../../node_modules/@scalescss/base-images/images";
+@import "../../../../node_modules/@scalescss/base-lists/lists";
+@import "../../../../node_modules/@scalescss/base-blockquotes/blockquotes";
+@import "../../../../node_modules/@scalescss/base-forms/forms";
+@import "../../../../node_modules/@scalescss/base-tables/tables";
+@import "../../../../packages/spark-core/base/typography";
+@import "../../../../packages/spark-core/base/links";
+@import "../../../../packages/spark-core/base/forms";
 @import "base/typography";
 
 //
 // Shared objects
 ///
-@import "../../../../node_modules/scales-patterns-box/box";
-@import "../../../../node_modules/scales-patterns-horizontal-list/horizontal-list";
-@import "../../../../node_modules/scales-patterns-vertical-list/vertical-list";
-@import "../../../../node_modules/scales-patterns-media-object/media-object";
-@import "../../../../node_modules/scales-patterns-flag/flag";
-@import "../../../../node_modules/scales-patterns-split/split";
-@import "../../../../node_modules/scales-patterns-stats/stats";
-@import "../../../../node_modules/scales-patterns-multi-col-list/multi-col-list";
-@import "../../../../node_modules/scales-dpl/styles/objects/icons";
-@import "../../../../node_modules/scales-dpl/styles/objects/spinners";
-@import "objects/horizontal-list";
+@import "../../../../node_modules/@scalescss/objects-box/box";
+@import "../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list";
+@import "../../../../node_modules/@scalescss/objects-vertical-list/vertical-list";
+@import "../../../../node_modules/@scalescss/objects-media-object/media-object";
+@import "../../../../node_modules/@scalescss/objects-flag/flag";
+@import "../../../../node_modules/@scalescss/objects-split/split";
+@import "../../../../node_modules/@scalescss/objects-stats/stats";
+@import "../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list";
 @import "objects/flex-grid";
 
 //
 // Components
 ///
-@import "../../../../node_modules/scales-dpl/styles/components/buttons";
-@import "../../../../node_modules/scales-dpl/styles/components/navigation";
-@import "../../../../node_modules/scales-dpl/styles/components/notifications";
-@import "../../../../node_modules/scales-dpl/styles/components/modals";
-@import "../../../../node_modules/scales-dpl/styles/components/pagination";
-@import "../../../../node_modules/scales-dpl/styles/components/tabs";
-@import "../../../../node_modules/scales-dpl/styles/components/datepicker";
-@import "../../../../node_modules/scales-dpl/styles/components/tables";
-@import "../../../../node_modules/scales-dpl/styles/components/button-secondary-action";
-@import "components/highlight-board";
-@import "../../../../node_modules/scales-dpl/styles/components/masthead";
-@import "../../../../node_modules/scales-dpl/styles/components/hamburger";
-@import "components/description-table";
+@import "../../../../node_modules/@scalescss/components-buttons/buttons";
+@import "../../../../packages/spark-core/components/icons/icons";
+@import "../../../../packages/spark-core/components/spinners/spinners";
+@import "../../../../packages/spark-core/components/buttons/buttons";
+@import "../../../../packages/spark-core/components/input/input";
+@import "../../../../packages/spark-core/components/validation-criteria/validation-criteria";
+@import "../../../../packages/spark-core/components/navigation/navigation";
+@import "../../../../packages/spark-core/components/notifications/notifications";
+@import "../../../../packages/spark-core/components/modals/modals";
+@import "../../../../packages/spark-core/components/pagination/pagination";
+@import "../../../../packages/spark-core/components/tabs/tabs";
+@import "../../../../packages/spark-core/components/datepicker/datepicker";
+@import "../../../../packages/spark-core/components/tables/tables";
+@import "../../../../packages/spark-core/components/button-secondary-action/button-secondary-action";
+@import "../../../../packages/spark-core/components/masthead/masthead";
+@import "../../../../packages/spark-core/components/hamburger/hamburger";
+
+//
+//
+///
+@import "../../../../packages/spark-extras/components/highlight-board/highlight-board";
+@import "../../../../packages/spark-extras/components/description-table/description-table";
 
 //
 // Overrides that need to come later in the cascade
 ///
-@import "../../../../node_modules/scales-overrides-size/size";
-@import "../../../../node_modules/scales-overrides-spacing/spacing";
-@import "../../../../node_modules/scales-dpl/styles/utilities/utilities";
+@import "../../../../node_modules/@scalescss/utilities-clearfix/clearfix";
+@import "../../../../node_modules/@scalescss/utilities-size/size";
+@import "../../../../node_modules/@scalescss/utilities-spacing/spacing";
+@import "../../../../packages/spark-core/utilities/utilities";

@@ -1,0 +1,79 @@
+$main-nav-breakpoint: 46rem !default;
+$masthead-column-width: 64rem !default;
+
+.sprk-c-Masthead {
+  position: relative;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    border-bottom: 2px solid $gray-medium;
+
+    .sprk-c-Navigation {
+      border-bottom: 0;
+      clear: both;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: $masthead-column-width;
+    }
+  }
+}
+
+.sprk-c-Masthead__hamburger {
+  float: left;
+  margin-right: 1rem;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    display: none;
+  }
+}
+
+.sprk-c-Masthead__logo {
+  margin-top: 0.7242rem;
+  margin-bottom: 0.7242rem;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    float: left;
+    margin-top: 1.38084rem;
+    margin-bottom: 2.63288rem;
+    margin-left: 0.45127rem;
+    margin-right: 0.45127rem;
+  }
+}
+
+.sprk-c-Masthead__image {
+  width: 13em;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    width: 15em;
+  }
+}
+
+.sprk-c-Masthead__secondary {
+  display: none;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    display: block;
+    float: right;
+    margin-top: 1.38084rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0.45127rem;
+    text-align: right;
+  }
+}
+
+.sprk-c-Masthead__search {
+  display: none;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    display: block;
+    float: right;
+    margin-top: 0.7242rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 0.45127rem;
+    width: 30%;
+  }
+}

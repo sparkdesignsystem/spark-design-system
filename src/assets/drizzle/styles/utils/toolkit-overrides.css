@@ -1,7 +1,7 @@
-.u-drizzleModalOverride [class~=c-Modal] {
+.u-drizzleModalOverride [class~=sprk-c-Modal] {
   position: relative !important;
 }
 
-.u-drizzleModalOverride [class~=c-ModalMask] {
+.u-drizzleModalOverride [class~=sprk-c-ModalMask] {
   display: none !important;
 }

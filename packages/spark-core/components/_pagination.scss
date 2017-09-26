@@ -1,0 +1,28 @@
+// ==================================================================
+// Pagination
+// ==================================================================
+
+.sprk-c-Pagination {
+  // Remove whitespace caused by inline-block.
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  @include HorizontalList;
+}
+
+.sprk-c-Pagination__item {
+  letter-spacing: normal;
+  word-spacing: normal;
+  padding-top: 0.1992rem;
+  padding-bottom: 0.1992rem;
+  padding-left: 0.67893rem;
+  padding-right: 0.67893rem;
+  margin-top: 0.1992rem;
+  margin-bottom: 0.1992rem;
+  margin-left: 0.1992rem;
+  margin-right: 0.1992rem;
+}
+
+.sprk-c-Pagination__item--current {
+  background-color: $gray-light;
+  border-radius: 4px;
+}

@@ -1,0 +1,17 @@
+---
+name: Validation Criteria, Met
+notes: |
+  This is an example of inline validation on a field with validation criteria where all criteria are met.
+info:
+  - This is only used for fields that have uncommon criteria or restrictions. For example, password and username.
+  - The criteria should start hidden and appear below the form field when the field is focused.
+  - Once anything is entered into the field, the criteria should remain visible.
+  - If all criteria are met, all list items will turn green and Xs will become check marks.
+nono:
+  - The x-mark is not to be used for regular error messages.
+labels:
+  - inprogress
+order: 16
+---
+
+{{#embed "patterns.components.inputs.validation-base" state1="met" state2="met" state3="met" icon1="check" icon2="check" icon3="check"}}{{/embed}}

@@ -1,0 +1,57 @@
+// ==================================================================
+// Settings
+// ==================================================================
+
+//
+// Namespaces
+///
+$scales-namespace: 'sprk-';
+$scales-base-class-namespace: 'b-';
+$scales-components-class-namespace: 'c-';
+$scales-objects-class-namespace: 'o-';
+$scales-utilities-class-namespace: 'u-';
+
+//
+// Reset
+///
+$selection-bg-color: $blue-medium;
+
+//
+// Typography
+///
+$ms-base: 1rem;
+$ms-ratio: 1.1;
+$text-margins: 0 0 1rem;
+$base-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$heading-font-weight: normal;
+
+//
+// Buttons
+///
+$btn-border-radius: 5px;
+$btn-padding: 1rem 2.46832rem;
+$btn-disabled-opacity: 1;
+$btn-disabled-background-color: $gray-medium;
+$btn-disabled-text-color: $white;
+$btn-disabled-border-width: 2px;
+$btn-disabled-border-color: $gray-medium;
+
+//
+// Forms
+///
+$text-input-border-radius: 5px;
+$text-input-border-color: $gray-medium;
+$text-input-border-width: 2px;
+$input-container-margin-bottom: 1rem;
+$input-disabled-border-color: $gray-medium;
+$input-disabled-text-color: $white;
+$helper-text-hidden: false;
+
+//
+// Tables
+///
+$table-padding-medium: 1rem;
+$table-padding-small: 0.5rem;
+$table-border-width: 2px;
+$table-border-color: $white;
+$table-stripe-color: $blue-light;

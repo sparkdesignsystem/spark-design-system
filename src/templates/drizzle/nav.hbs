@@ -43,10 +43,10 @@
         </li>
       {{/each}}
     </ul>
-    {{!-- Animation Patterns --}}
-    <h5 class="drizzle-Nav-item">Animations</h5>
+    {{!-- Interaction Patterns --}}
+    <h5 class="drizzle-Nav-item">Interactions</h5>
     <ul class="drizzle-Nav-menu">
-      {{#each (collections "animations" sortby="order")}}
+      {{#each (collections "interactions" sortby="order")}}
         <li>
           {{> nav-item label=name}}
         </li>

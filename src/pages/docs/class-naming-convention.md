@@ -4,17 +4,17 @@ title: Class Naming Convention
 
 # {{title}}
 
-The DPL uses a strict class naming convention. This allows us to keep our classes flat, avoid conflicts, provide clarity, and improve legibility. This is done by combining 4 techniques: a global namespace, class prefixes, pascal casing, and BEM syntax.
+The Spark Design System uses a strict class naming convention. This allows us to keep our classes flat, avoid conflicts, provide clarity, and improve legibility. This is done by combining 4 techniques: a global namespace, class prefixes, pascal casing, and BEM syntax.
 
-All classes in the DPL must adhere to this naming convention.
+All classes in the Spark Design System must adhere to this naming convention.
 
 ## Global Namespace
 ```
-.dpl-
+.sprk-
 ```
 One of the most annoying things that happens when you use a CSS library is class naming conflicts. You already use the class `.button` and the library also uses it and it overrides your styles.
 
-To avoid this, the DPL uses a global namespace to ensure that it's styles don't interfere with the custom styles in your app.
+To avoid this, the Spark Design System uses a global namespace to ensure that it's styles don't interfere with the custom styles in your app.
 
 ## Class prefixes
 After the global namespace, each class name has a prefix which gives information about what the class is doing. The prefixes available are:
@@ -29,7 +29,7 @@ After the global namespace, each class name has a prefix which gives information
 ## Pascal Casing
 After the namespace and prefix, the main part of the class name doesn't stand out very well. For this reason we use pascal case to visually separate it from the rest of the name. For example:
 ```
-.dpl-c-HighlightBoard__content
+.sprk-c-HighlightBoard__content
 ```
 
 ## BEM Syntax
@@ -38,28 +38,28 @@ BEM stands for "Block, Element, Modifier". It is a modular application developme
 #### Block
 The primary component block. In our convention it refers to the PascalCase part of the class. For example:
 ```
-.dpl-c-HighlightBoard
+.sprk-c-HighlightBoard
 ```
 
 #### Element
 A child of the primary block. It is represented by two underscores that separate it form the Block. For example:
 ```
-.dpl-c-HighlightBoard__content
+.sprk-c-HighlightBoard__content
 ```
 The following is not allowed:
 ```
-.dpl-c-HighlightBoard__content__child-content
+.sprk-c-HighlightBoard__content__child-content
 ```
 
 #### Modifier
 A variation that extends either a Block or an Element. It is represented by two dashes that separate it from the Block or Element. For example:
 ```
-.dpl-c-HighlightBoard--jumbo
-.dpl-c-HighlightBoard__content--image
+.sprk-c-HighlightBoard--jumbo
+.sprk-c-HighlightBoard__content--image
 ```
 The following is not allowed:
 ```
-.dpl-c-HighlightBoard--jumbo--red
+.sprk-c-HighlightBoard--jumbo--red
 ```
 
 ### Additional Resources

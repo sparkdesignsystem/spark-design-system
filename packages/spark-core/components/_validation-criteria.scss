@@ -1,0 +1,18 @@
+// ==================================================================
+// Validation Criteria
+// ==================================================================
+
+.sprk-c-ValidationCriteria__item--unmet {
+  color: $gray-medium;
+  fill: $gray-medium;
+}
+
+.sprk-c-ValidationCriteria__item--met {
+  color: $green-medium;
+  fill: $green-medium;
+}
+
+.sprk-c-ValidationCriteria__item--error {
+  color: $red-medium;
+  fill: $red-medium;
+}
