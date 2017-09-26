@@ -5,5 +5,5 @@ npm-debug.log
 *.swp
 *.swo
 .DS_Store
-
+lerna-debug.log
 .idea
