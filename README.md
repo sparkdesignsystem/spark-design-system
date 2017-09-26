@@ -10,9 +10,9 @@ Spark is managed as a monorepo. All of the Spark source code lives in a single r
 
 ## Getting Started
 More information on contributing to Spark will be available in the future. For now, if you want to get Spark running locally, follow these steps:
-0. Run `npm install`
-0. Run `gulp --dev`
-0. Open your browser to `http://localhost:3000/`
+1. Run `npm install`
+1. Run `gulp --dev`
+1. Open your browser to `http://localhost:3000/`
 
 ## Credit
 Spark Design System uses [Drizzle](https://github.com/cloudfour/drizzle) as an authoring environment. Drizzle is an open source project from [Cloudfour](https://github.com/cloudfour) and is licensed under MIT.
