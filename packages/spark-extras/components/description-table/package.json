@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-description-table",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Spark Description Table is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
   "main": "_description-table.scss",
   "repository": {
@@ -13,8 +13,6 @@
     "url": "https://git/sparkdesignsystem/spark-design-system/issues"
   },
   "homepage": "https://git/sparkdesignsystem/spark-design-system#readme",
-  "dependencies": {
-  },
   "devDependencies": {
     "lerna": "^2.0.0"
   }
