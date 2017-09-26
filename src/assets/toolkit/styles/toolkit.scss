@@ -5,7 +5,7 @@
 //
 // Settings
 ///
-@import "../../../../node_modules/modularscale-sass/stylesheets/modular-scale";
+@import "../../../../node_modules/modularscale-sass/stylesheets/modularscale";
 @import "../../../../packages/spark-core/settings/colors";
 @import "../../../../packages/spark-core/settings/settings";
 @import "settings/settings";
@@ -53,24 +53,24 @@
 // Components
 ///
 @import "../../../../node_modules/@scalescss/components-buttons/buttons";
-@import "../../../../packages/spark-core/components/icons/icons";
-@import "../../../../packages/spark-core/components/spinners/spinners";
-@import "../../../../packages/spark-core/components/buttons/buttons";
-@import "../../../../packages/spark-core/components/input/input";
-@import "../../../../packages/spark-core/components/validation-criteria/validation-criteria";
-@import "../../../../packages/spark-core/components/navigation/navigation";
-@import "../../../../packages/spark-core/components/notifications/notifications";
-@import "../../../../packages/spark-core/components/modals/modals";
-@import "../../../../packages/spark-core/components/pagination/pagination";
-@import "../../../../packages/spark-core/components/tabs/tabs";
-@import "../../../../packages/spark-core/components/datepicker/datepicker";
-@import "../../../../packages/spark-core/components/tables/tables";
-@import "../../../../packages/spark-core/components/button-secondary-action/button-secondary-action";
-@import "../../../../packages/spark-core/components/masthead/masthead";
-@import "../../../../packages/spark-core/components/hamburger/hamburger";
+@import "../../../../packages/spark-core/components/icons";
+@import "../../../../packages/spark-core/components/spinners";
+@import "../../../../packages/spark-core/components/buttons";
+@import "../../../../packages/spark-core/components/input";
+@import "../../../../packages/spark-core/components/validation-criteria";
+@import "../../../../packages/spark-core/components/navigation";
+@import "../../../../packages/spark-core/components/notifications";
+@import "../../../../packages/spark-core/components/modals";
+@import "../../../../packages/spark-core/components/pagination";
+@import "../../../../packages/spark-core/components/tabs";
+@import "../../../../packages/spark-core/components/datepicker";
+@import "../../../../packages/spark-core/components/tables";
+@import "../../../../packages/spark-core/components/button-secondary-action";
+@import "../../../../packages/spark-core/components/masthead";
+@import "../../../../packages/spark-core/components/hamburger";
 
 //
-//
+// Spark Extras - Components
 ///
 @import "../../../../packages/spark-extras/components/highlight-board/highlight-board";
 @import "../../../../packages/spark-extras/components/description-table/description-table";

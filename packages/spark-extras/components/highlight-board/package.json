@@ -5,14 +5,14 @@
   "main": "_highlight-board.scss",
   "repository": {
     "type": "git",
-    "url": "https://git/sparkdesignsystem/spark-design-system"
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "author": "Quicken Loans",
   "license": "MIT",
   "bugs": {
-    "url": "https://git/sparkdesignsystem/spark-design-system/issues"
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
-  "homepage": "https://git/sparkdesignsystem/spark-design-system#readme",
+  "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "devDependencies": {
     "lerna": "^2.0.0"
   }

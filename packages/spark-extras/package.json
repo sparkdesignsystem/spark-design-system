@@ -4,14 +4,14 @@
   "description": "Spark Extras is a supplementary package that adds additional components that are not part of Spark Core. Many sites will use these components, but they aren't necessary for every Quicken Loans Fintech product.",
   "repository": {
     "type": "git",
-    "url": "https://git/sparkdesignsystem/spark-design-system"
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "author": "Quicken Loans",
   "license": "MIT",
   "bugs": {
-    "url": "https://git/sparkdesignsystem/spark-design-system/issues"
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
-  "homepage": "https://git/sparkdesignsystem/spark-design-system#readme",
+  "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
     "@sparkdesignsystem/spark-description-table": "^1.0.0-alpha.2",
     "@sparkdesignsystem/spark-highlight-board": "^1.0.0-alpha.2"

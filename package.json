@@ -1,26 +1,16 @@
 {
-  "name": "drizzle",
-  "version": "0.0.1-alpha",
-  "private": true,
-  "author": "Cloud Four",
+  "name": "spark-design-system",
+  "version": "1.0.0-alpha.3",
+  "author": "Quicken Loans",
   "description": "A pattern library authoring environment",
-  "homepage": "https://github.com/cloudfour/drizzle",
+  "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "license": "MIT",
-  "keywords": [
-    "pattern",
-    "styleguide",
-    "component",
-    "framework",
-    "boilerplate",
-    "html",
-    "ui",
-    "css",
-    "bem",
-    "typography"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cloudfour/drizzle.git"
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -28,7 +18,8 @@
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.0.1",
     "@cloudfour/hbs-helpers": "^0.6.1",
-    "@scalescss/scalescss": "^3.1.1",
+    "@sparkdesignsystem/spark-core": "^1.0.0-alpha.2",
+    "@sparkdesignsystem/spark-extras": "^1.0.0-alpha.2",
     "babel-core": "^6.7.6",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",
@@ -45,6 +36,7 @@
     "gulp-svg-sprite": "^1.3.6",
     "gulp-util": "^3.0.7",
     "lerna": "^2.0.0",
+    "modularscale-sass": "^3.0.3",
     "postcss-cssnext": "^2.5.2",
     "prismjs": "^1.4.1",
     "sass-lint": "^1.9.1",
