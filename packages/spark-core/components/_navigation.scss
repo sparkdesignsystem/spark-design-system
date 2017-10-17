@@ -27,7 +27,7 @@ $main-nav-breakpoint: 46em;
   list-style-type: none;
 }
 
-.sprk-c-Navigation.is-hidden\@sm {
+.sprk-c-Navigation.sprk-is-Hidden\@sm {
   @media all and (max-width: $main-nav-breakpoint) {
     display: none;
   }
@@ -66,14 +66,14 @@ $main-nav-breakpoint: 46em;
   }
 
   @media all and (min-width: $main-nav-breakpoint) {
-    @include HoverLine($white, 85%);
+    @include sprk-HoverLine($white, 85%);
     border: 0;
     padding-left: 0;
 
     &.sprk-c-Navigation__item--active,
     &:focus,
     &:hover {
-      @include HoverLine($blue-medium, 85%);
+      @include sprk-HoverLine($blue-medium, 85%);
       background-color: $white;
       color: $blue-medium;
 
@@ -108,8 +108,8 @@ $main-nav-breakpoint: 46em;
     fill: $blue-dark;
     float: none;
     margin-top: 0;
-    margin-bottom: 0.27506rem;
-    margin-left: 0.27506rem;
+    margin-bottom: .27506rem;
+    margin-left: .27506rem;
     margin-right: 0;
   }
 }
@@ -131,8 +131,8 @@ $main-nav-breakpoint: 46em;
   @media all and (min-width: $main-nav-breakpoint) {
     float: left;
     line-height: 1.90672rem;
-    padding-top: 0.52446rem;
-    padding-bottom: 0.52446rem;
+    padding-top: .52446rem;
+    padding-bottom: .52446rem;
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: left;
@@ -144,7 +144,7 @@ $main-nav-breakpoint: 46em;
 
   @media all and (min-width: $main-nav-breakpoint) {
     a {
-      margin-bottom: 0.52446rem;
+      margin-bottom: .52446rem;
     }
   }
 }
@@ -159,12 +159,12 @@ $main-nav-breakpoint: 46em;
   }
 
   @media all and (min-width: $main-nav-breakpoint) {
-    @include HoverLine($white, 100%);
+    @include sprk-HoverLine($white, 100%);
     background-color: $white;
 
     &:focus,
     &:hover {
-      @include HoverLine($blue-medium, 100%);
+      @include sprk-HoverLine($blue-medium, 100%);
       color: $blue-medium;
     }
   }

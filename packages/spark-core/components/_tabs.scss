@@ -26,8 +26,8 @@
   border-right: 2px solid $green-medium;
   border-top: 0;
   width: 100%;
-  padding-top: 0.31296rem;
-  padding-bottom: 0.31296rem;
+  padding-top: .31296rem;
+  padding-bottom: .31296rem;
 
   &:first-of-type {
     border-top: 2px solid $green-medium;
@@ -49,13 +49,13 @@
     &:first-of-type {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
-      border-top-right-radius: 0px;
+      border-top-right-radius: 0;
     }
 
     &:last-of-type {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 0px;
+      border-bottom-left-radius: 0;
       border-right: 2px solid $green-medium;
     }
   }

@@ -4,45 +4,45 @@ $description-table-stripe-color: $gray-light;
 $description-table-breakpoint: 38.4375em;
 
 .sprk-c-DescriptionTable {
-    border: $description-table-border;
+  border: $description-table-border;
 }
 
 .sprk-c-DescriptionTable__header {
-    border-bottom: $description-table-border;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  border-bottom: $description-table-border;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .sprk-c-DescriptionTable__keyvaluepair {
-    width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-    @media all and (min-width: $description-table-breakpoint) {
-        display: table;
-        display: flex;
-        align-items: center;
+  @media all and (min-width: $description-table-breakpoint) {
+    display: table;
+    display: flex;
+    align-items: center;
     }
 }
 
 .sprk-c-DescriptionTable--striped .sprk-c-DescriptionTable__keyvaluepair:nth-child(even) {
-    background: $description-table-stripe-color;
+  background: $description-table-stripe-color;
 }
 
 .sprk-c-DescriptionTable__key,
 .sprk-c-DescriptionTable__value {
-    @media all and (min-width: $description-table-breakpoint) {
-        display: table-cell;
-        flex: 1;
-    }
+  @media all and (min-width: $description-table-breakpoint) {
+    display: table-cell;
+    flex: 1;
+  }
 }
 
 .sprk-c-DescriptionTable__key {
-    @media all and (min-width: $description-table-breakpoint) {
-        width: 50%;
-    }
+  @media all and (min-width: $description-table-breakpoint) {
+    width: 50%;
+  }
 }

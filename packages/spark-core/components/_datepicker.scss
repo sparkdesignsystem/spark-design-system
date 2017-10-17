@@ -5,32 +5,32 @@
 .sprk-c-DatePicker {
   border: 2px solid $gray-medium;
   border-radius: 5px;
-  padding-top: 0.52446rem;
-  padding-bottom: 0.52446rem;
-  padding-left: 0.52446rem;
-  padding-right: 0.52446rem;
+  padding-top: .52446rem;
+  padding-bottom: .52446rem;
+  padding-left: .52446rem;
+  padding-right: .52446rem;
   position: relative;
   max-width: 20rem;
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     content: '';
     position: absolute;
-  	bottom: 100%;
-  	left: 1.25em;
-  	border: solid transparent;
+    bottom: 100%;
+    left: 1.25em;
+    border: solid transparent;
   }
 
-  &:after {
-  	border-bottom-color: #ffffff;
-  	border-width: 10px;
-  	margin-left: -10px;
+  &::after {
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
   }
 
-  &:before {
-  	border-bottom-color: $gray-medium;
-  	border-width: 13px;
-  	margin-left: -13px;
+  &::before {
+    border-bottom-color: $gray-medium;
+    border-width: 13px;
+    margin-left: -13px;
   }
 }
 
@@ -38,8 +38,8 @@
   position: relative;
   text-align: center;
   border-bottom: 1px solid $gray-medium;
-  padding-bottom: 0.27506rem;
-  margin-bottom: 0.52446rem;
+  padding-bottom: .27506rem;
+  margin-bottom: .52446rem;
 }
 
 .sprk-c-DatePicker__month-year {
@@ -50,7 +50,7 @@
 .sprk-c-DatePicker__back,
 .sprk-c-DatePicker__forward {
   position: absolute;
-  top: 0.25em;
+  top: .25em;
 
   &:hover {
     cursor: pointer;
@@ -62,11 +62,11 @@
 }
 
 .sprk-c-DatePicker__back {
-  left: 0.5em;
+  left: .5em;
 }
 
 .sprk-c-DatePicker__forward {
-  right: 0.5em;
+  right: .5em;
 }
 
 .sprk-c-DatePicker__table {
@@ -84,17 +84,17 @@
   }
 
   th {
-    padding-bottom: 0.27506rem;
+    padding-bottom: .27506rem;
   }
 }
 
 .sprk-c-DatePicker__day {
   border-left: 1px solid $gray-medium;
   border-right: 1px solid $gray-medium;
-  padding-top: 0.52446rem;
-  padding-bottom: 0.52446rem;
-  padding-left: 0.52446rem;
-  padding-right: 0.52446rem;
+  padding-top: .52446rem;
+  padding-bottom: .52446rem;
+  padding-left: .52446rem;
+  padding-right: .52446rem;
 }
 
 .sprk-c-DatePicker__day--current,
