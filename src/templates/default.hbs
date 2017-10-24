@@ -1,7 +1,11 @@
 {{#extend "blank" htmlclass="drizzle-Layout" bodyclass="drizzle-Layout-body"}}
   {{#content "head" mode="append"}}
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="stylesheet" href="https://use.typekit.net/exb7ocq.css">
     <link rel="stylesheet" href="{{@root.baseurl}}/assets/drizzle/styles/drizzle.css">
     <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/toolkit.css">
+
+
   {{/content}}
   {{#content "body"}}
     {{> drizzle.nav}}
@@ -16,7 +20,5 @@
   {{#content "foot"}}
     <script src="{{@root.baseurl}}/assets/drizzle/scripts/drizzle.js"></script>
     <script src="{{@root.baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
-    <script src="https://use.typekit.net/kch1xai.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   {{/content}}
 {{/extend}}
