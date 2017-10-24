@@ -14,6 +14,10 @@
   position: relative;
 }
 
+.Layout-main {
+  max-width: 70em;
+}
+
 @media (--lg-viewport) {
   .Layout-nav {
     position: fixed;

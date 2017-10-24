@@ -6,3 +6,9 @@ code,
 pre {
   font-family: var(--monospace), monospace !important;
 }
+
+.CodeHighlight {
+  background-color: var(--color-silver);
+  padding: 6px 10px;
+  line-height: 1.75;
+}
