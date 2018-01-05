@@ -51,5 +51,8 @@
     "start": "gulp --dev",
     "build": "npm run prestart && gulp",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md"
+  },
+  "dependencies": {
+    "marked": "^0.3.6"
   }
 }
