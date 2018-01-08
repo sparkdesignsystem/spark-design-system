@@ -53,6 +53,6 @@
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md"
   },
   "dependencies": {
-    "marked": "^0.3.6"
+    "marked": "^0.3.9"
   }
 }
