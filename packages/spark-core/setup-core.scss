@@ -1,0 +1,62 @@
+///
+// Generic utility styles
+///
+
+@import "../@scalescss/generic-normalize/normalize";
+@import "../@scalescss/generic-reset/reset";
+
+///
+// Spark-core settings
+///
+@import './settings/colors';
+@import './settings/settings';
+
+///
+// ScalesCss
+///
+@import "../@scalescss/base-typography/typography";
+@import "../@scalescss/base-images/images";
+@import "../@scalescss/base-lists/lists";
+@import "../@scalescss/base-blockquotes/blockquotes";
+@import "../@scalescss/base-forms/forms";
+@import "../@scalescss/base-tables/tables";
+@import "../@scalescss/objects-box/box";
+@import "../@scalescss/objects-horizontal-list/horizontal-list";
+@import "../@scalescss/objects-vertical-list/vertical-list";
+@import "../@scalescss/objects-media-object/media-object";
+@import "../@scalescss/objects-flag/flag";
+@import "../@scalescss/objects-split/split";
+@import "../@scalescss/objects-stats/stats";
+@import "../@scalescss/objects-multi-col-list/multi-col-list";
+@import "../@scalescss/components-buttons/buttons";
+@import "../@scalescss/utilities-clearfix/clearfix";
+@import "../@scalescss/utilities-size/size";
+@import "../@scalescss/utilities-spacing/spacing";
+
+///
+// Spark-core
+///
+@import './tools/mixins';
+
+@import './base/forms';
+@import './base/links';
+@import './base/typography';
+
+@import './components/button-secondary-action';
+@import './components/buttons';
+@import './components/datepicker';
+@import './components/hamburger';
+@import './components/icons';
+@import './components/input';
+@import './components/masthead';
+@import './components/modals';
+@import './components/navigation';
+@import './components/notifications';
+@import './components/pagination';
+@import './components/spinners';
+@import './components/tables';
+@import './components/tabs';
+@import './components/validation-criteria';
+
+@import './tools/animations';
+@import './utilities/utilities';
