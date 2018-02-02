@@ -1,15 +1,15 @@
 ///
+// Spark-core settings
+///
+@import './settings/colors';
+@import './settings/settings';
+
+///
 // Generic utility styles
 ///
 
 @import "../@scalescss/generic-normalize/normalize";
 @import "../@scalescss/generic-reset/reset";
-
-///
-// Spark-core settings
-///
-@import './settings/colors';
-@import './settings/settings';
 
 ///
 // ScalesCss
@@ -36,6 +36,7 @@
 ///
 // Spark-core
 ///
+@import './tools/animations';
 @import './tools/mixins';
 
 @import './base/forms';
@@ -58,5 +59,4 @@
 @import './components/tabs';
 @import './components/validation-criteria';
 
-@import './tools/animations';
 @import './utilities/utilities';
