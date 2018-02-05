@@ -3,26 +3,91 @@ title: Getting Started
 order: 1
 ---
 
-<h1>Welcome to the Spark Design System</h1>
+<div class="sds-warning-section">
+    <h1>WARNING</h1>
+    <p class="sds-warning-section__text">Spark is currently in alpha. It is subject to changes of all
+    sizes at any time and not suitable for production use. Please reach out to the
+    <a href="mailto:sparkdesignsystem@quickenloans.com">Spark team</a> for guidance.</p>
+</div>
 
-<p>Spark is used to build the user interfaces for Quicken Loans Fintech products.</p>
+<h1>Spark Design System</h1>
 
-<h2>Want to use Spark?</h2>
-
-<p>Spark is currently in <code class="drizzle-CodeHighlight">alpha</code>. It is subject to changes of all sizes at any time and may not be suitable for production use. Please reach out to the <a href="mailto:sparkdesignsystem@quickenloans.com">Spark Team</a> for guidance.</p>
-
-<h3>Feeling adventurous?</h3>
-<p>Spark consists of 2 main packages which can be installed like so:</p>
-
+<p>Welcome to the Spark Design System, a product of
+    <a href="https://github.com/quickenloans">Quicken Loans</a>.</p>
+<p>Spark Design System is a system of patterns and components used to
+    create the user interface for the Quicken Loans family of Fintech
+    products.</p>
+<p>Spark's patterns are separated into two groups:</p>
 <ul class="sprk-b-List--indented">
-  <li><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code>
-    <ul class="sprk-b-List--indented sprk-u-mbm">
-      <li><strong>Spark Core</strong> is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.</li>
-    </ul>
-  </li>
-  <li><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-extras</code>
-    <ul class="sprk-b-List--indented">
-      <li><strong>Spark Extras</strong> is a supplementary package that adds additional components that are not part of Spark Core. Many sites will use these components, but they aren't necessary for every Quicken Loans Fintech product.</li>
-    </ul>
-  </li>
+    <li>
+        <p>Spark Core</p>
+        <p>Spark Core contains the basic patterns and components that make up
+            the visual and interaction design of the Quicken Loans family of
+            Fintech products. If your application is expected to look and behave
+            like a Quicken Loans application, this package is the starting point.</p>
+    </li>
+    <li>
+        <p>Spark Extras</p>
+        <p>Spark Extras are components that may not be needed by all
+            applications, but are consistent with the style of Spark Core.</p>
+    </li>
 </ul>
+<h2>Getting Started</h2>
+<p><strong>Spark assumes your project is using <a href="https://sass-lang.com/">Sass</a> for styling and
+    also that your project has a Javascript build step that will transpile and polyfill appropriately
+    for browser support.</strong></p>
+<h3>Spark Core</h3>
+<ul class="sprk-b-List--indented">
+    <li>
+        <p>Install the npm package</p>
+        <p><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code></p>
+    </li>
+    <li>
+        <p>Import the setup file in your sass build</p>
+        <p><code class="drizzle-CodeHighlight">@import &quot;node_modules/@sparkdesignsystem/spark&quot;;</code></p>
+        <p>This will bring all spark-core patterns into your build. The spark classes
+            are namespaced so they don't affect any existing css.</p>
+    </li>
+</ul>
+<h3>Spark Extras</h3>
+<ul class="sprk-b-List--indented">
+    <li>
+        <p>Install the npm package</p>
+        <p><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-extras</code></p>
+    </li>
+    <li>
+        <p>Import any of the spark-extras patterns that you need</p>
+        <p><code class="drizzle-CodeHighlight">@import &quot;node_modules/@sparkdesignsystem/spark-extras/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;</code></p>
+    </li>
+</ul>
+<h2>Contribution Guide</h2>
+
+<h3>Code Organization</h3>
+<p>Spark is managed as a monorepo. All of the Spark source code lives in a
+    single repo, but is released as separate packages using
+    <a href="https://github.com/lerna/lerna">Lerna</a>.</p>
+<p>This repo consists of the design system packages, wrapped in an instance
+    of <a href="https://github.com/cloudfour/drizzle">Drizzle</a>, a tool built
+    by <a href="https://github.com/cloudfour">cloudfour</a>, for displaying pattern
+    libraries. Spark uses Drizzle for documentation and plain html code examples.</p>
+<p>In the packages folder are spark-core and spark-extras. These are the files
+    that are published to npm.</p>
+
+<h3>Dev Environment</h3>
+<p>If you want to run a copy of Drizzle locally:</p>
+<ol class="sprk-b-List--indented">
+    <li>Run <code>npm install</code></li>
+    <li>Run <code>gulp --dev</code></li>
+    <li>Open your browser to <code>http://localhost:3000/</code></li>
+</ol>
+
+<h3>Code Style</h3>
+<p><code class="drizzle-CodeHighlight">Coming Soon</code></p>
+<h3>Change Workflow</h3>
+<p><code class="drizzle-CodeHighlight">Coming Soon</code></p>
+
+<h2>Credit</h2>
+<p>
+    <a href="https://github.com/cloudfour/drizzle">Drizzle</a>
+    <a href="docs">Drizzle Documentation</a>
+</p>
