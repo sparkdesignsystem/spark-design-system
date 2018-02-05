@@ -6,22 +6,23 @@
 
 Welcome to the Spark Design System, a product of [Quicken Loans](https://github.com/quickenloans).
 
-Spark Design System is a collection of patterns used to create the user
-interface of Quicken Loans and Fintech products.
+Spark Design System is a system of patterns and components used to
+create the user interface for the Quicken Loans family of Fintech
+products.
 
 Spark's patterns are separated into two groups:
 
-* Spark-core
+* Spark Core
 
-  Core consists of all basic patterns, the adoption of which will make the interface
-  of your application feel like a Quicken Loans, Fintech family of companies
-  app. Patterns in core have been identified as necessary to most if
-  not all applications.
+  Spark Core contains the basic patterns and components that make up
+  the visual and interaction design of the Quicken Loans family of
+  Fintech products. If your application is expected to look and behave
+  like a Quicken Loans application, this package the starting point.
 
-* Spark-extras
+* Spark Extras
 
-  Extras patterns are things that are not needed on all applications, but when they
-  are needed, its desirable to be consistant.
+  Spark Extras are components that may not be needed by all
+  applications, but are consistent with the style of Spark Core.
 
 ## Getting Started
 
@@ -37,10 +38,10 @@ for browser support.**
 
 * Import the setup file in your sass build
 
-  `@import node_modules/@sparkdesignsystem/spark';`
+  `@import "node_modules/@sparkdesignsystem/spark";`
 
-  This will bring all spark-core patterns into your build. The spark classes
-  are namespaced and should not affect any existing css.
+  This will bring all Spark-core patterns into your build. The spark classes
+  are namespaced do they don't affect any existing css.
 
 ### Spark Extras
 
@@ -48,14 +49,9 @@ for browser support.**
 
   `npm install --save-dev @sparkdesignsystem/spark-extras`
 
-* Import any of the spark extras patterns that you need
+* Import any of the spark-extras patterns that you need
 
-  `@import node_modules/@sparkdesignsystem/spark-extras/<pattern-name>/<pattern-name>';`
-
-  The available patterns as of the current release are:
-
-  * description-table
-  * highlight-board
+  `@import "node_modules/@sparkdesignsystem/spark-extras/<pattern-name>/<pattern-name>";`
 
 ## Contribution Guide
 
