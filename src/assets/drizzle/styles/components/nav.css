@@ -1,7 +1,7 @@
 :root {
   --Nav-background: var(--color-silver);
   --Nav-active-background: var(--color-white);
-  --Nav-header-background: var(--color-blue);
+  --Nav-header-background: var(--color-black);
   --Nav-header-color: var(--color-white);
   --Nav-toggle-size: 3em;
   --Nav-item-padding: calc(var(--space) * 0.75) var(--space);
