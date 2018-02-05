@@ -17,7 +17,7 @@ Spark's patterns are separated into two groups:
   Spark Core contains the basic patterns and components that make up
   the visual and interaction design of the Quicken Loans family of
   Fintech products. If your application is expected to look and behave
-  like a Quicken Loans application, this package the starting point.
+  like a Quicken Loans application, this package is the starting point.
 
 * Spark Extras
 
@@ -40,8 +40,8 @@ for browser support.**
 
   `@import "node_modules/@sparkdesignsystem/spark";`
 
-  This will bring all Spark-core patterns into your build. The spark classes
-  are namespaced do they don't affect any existing css.
+  This will bring all spark-core patterns into your build. The spark classes
+  are namespaced so they don't affect any existing css.
 
 ### Spark Extras
 
