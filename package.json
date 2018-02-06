@@ -54,7 +54,11 @@
     "prestart": "npm install",
     "start": "gulp --dev",
     "build": "npm run prestart && gulp",
-    "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md"
+    "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "packages/**/*.scss": ["prettier-stylelint --write", "git add"]
   },
   "dependencies": {
     "marked": "^0.3.9"
