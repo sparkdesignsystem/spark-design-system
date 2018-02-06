@@ -2,6 +2,11 @@
 // Modals
 // ==================================================================
 
+//
+// Available Variables
+///
+$modal-mask-color: rgba(34, 34, 34, 0.35);
+
 .sprk-c-Modal {
   background-color: $white;
   left: 0;
@@ -55,7 +60,7 @@
 }
 
 .sprk-c-ModalMask {
-  background-color: rgba(34, 34, 34, .35);
+  background-color: $modal-mask-color;
   height: 100%;
   left: 0;
   position: fixed;

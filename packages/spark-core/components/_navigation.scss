@@ -2,7 +2,9 @@
 // Navigation
 // ==================================================================
 
+//
 // Available Variables
+///
 $main-nav-breakpoint: 46em;
 
 .sprk-c-Navigation {
@@ -27,7 +29,7 @@ $main-nav-breakpoint: 46em;
   list-style-type: none;
 }
 
-.sprk-c-Navigation.is-hidden\@sm {
+.sprk-c-Navigation.sprk-is-Hidden\@sm {
   @media all and (max-width: $main-nav-breakpoint) {
     display: none;
   }
@@ -66,22 +68,29 @@ $main-nav-breakpoint: 46em;
   }
 
   @media all and (min-width: $main-nav-breakpoint) {
-    @include HoverLine($white, 85%);
+    @include HoverLine($color: $white, $width: 85%);
+
     border: 0;
     padding-left: 0;
 
     &.sprk-c-Navigation__item--active,
     &:focus,
     &:hover {
-      @include HoverLine($blue-medium, 85%);
+      @include HoverLine($color: $blue-medium, $width: 85%);
+
       background-color: $white;
       color: $blue-medium;
 
+      //
       // Kinda gross but need to change the color of this icon on
       // hover of nav item anchor
+      //
+      // stylelint-disable max-nesting-depth
+      ///
       .sprk-c-Navigation__arrow {
         fill: $blue-medium;
       }
+      // stylelint-enable
     }
   }
 }
@@ -89,7 +98,6 @@ $main-nav-breakpoint: 46em;
 // Show the sub navigation on hover and focus
 .sprk-c-Navigation__item:focus .sprk-c-Navigation__sub,
 .sprk-c-Navigation__item:hover .sprk-c-Navigation__sub {
-
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     position: absolute;
@@ -141,7 +149,6 @@ $main-nav-breakpoint: 46em;
 }
 
 .sprk-c-Navigation__sub-item:last-child {
-
   @media all and (min-width: $main-nav-breakpoint) {
     a {
       margin-bottom: 0.52446rem;
@@ -159,12 +166,14 @@ $main-nav-breakpoint: 46em;
   }
 
   @media all and (min-width: $main-nav-breakpoint) {
-    @include HoverLine($white, 100%);
+    @include HoverLine($color: $white, $width: 100%);
+
     background-color: $white;
 
     &:focus,
     &:hover {
-      @include HoverLine($blue-medium, 100%);
+      @include HoverLine($color: $blue-medium, $width: 100%);
+
       color: $blue-medium;
     }
   }

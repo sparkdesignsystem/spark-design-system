@@ -1,5 +1,8 @@
+// ==================================================================
+// Hamburger
+// ==================================================================
 .sprk-c-Hamburger {
-  border: none;
+  border: 0;
   background: $white;
   display: inline-block;
   padding-top: 0;
@@ -12,7 +15,6 @@
   height: 1.67583rem;
   fill: $blue-medium;
   margin-top: -5px;
-  transition: all 0.25s ease-in-out;
 }
 
 .sprk-c-Hamburger__line {
@@ -22,22 +24,22 @@
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-.sprk-c-Hamburger__line--1 {
+.sprk-c-Hamburger__line--one {
   transform-origin: 1em 2.5em;
 }
 
-.sprk-c-Hamburger__line--3 {
-  transform-origin: .9em 3.8em;
+.sprk-c-Hamburger__line--three {
+  transform-origin: 0.9em 3.8em;
 }
 
-.is-Open .sprk-c-Hamburger__line--1 {
+.sprk-is-Open .sprk-c-Hamburger__line--one {
   transform: rotate(45deg) translateY(0) translateX(0);
 }
 
-.is-Open .sprk-c-Hamburger__line--2 {
+.sprk-is-Open .sprk-c-Hamburger__line--two {
   opacity: 0;
 }
 
-.is-Open .sprk-c-Hamburger__line--3 {
-  transform: rotate(-45deg) translateY(0em) translateX(0em);
+.sprk-is-Open .sprk-c-Hamburger__line--three {
+  transform: rotate(-45deg) translateY(0) translateX(0);
 }

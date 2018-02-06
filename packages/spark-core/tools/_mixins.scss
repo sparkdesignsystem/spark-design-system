@@ -6,8 +6,9 @@
 // Underline used on hover in main navigation
 // Use within a :hover selector
 ///
+
 @mixin HoverLine($color, $width) {
-  &:after {
+  &::after {
     background-color: $color;
     content: ' ';
     height: 2px;
