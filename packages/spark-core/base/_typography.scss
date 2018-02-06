@@ -1,7 +1,6 @@
 // ==================================================================
 // Typography
 // ==================================================================
-
 .sprk-b-BodyCopy {
   color: $black;
   font-family: $base-font-stack;
@@ -18,6 +17,8 @@
 
 .sprk-b-Heading {
   // set here to avoid scales styling elements (h1-h6)
+
+  // prettier-ignore
   font-family: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
 }
 

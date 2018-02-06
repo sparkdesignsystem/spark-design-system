@@ -1,12 +1,16 @@
 // ==================================================================
 // Modals
 // ==================================================================
-$modal-mask-color: rgba(34, 34, 34, .35);
+
+//
+// Available Variables
+///
+$modal-mask-color: rgba(34, 34, 34, 0.35);
 
 .sprk-c-Modal {
   background-color: $white;
   left: 0;
-  padding-bottom: .52446rem;
+  padding-bottom: 0.52446rem;
   margin-right: auto;
   margin-left: auto;
   max-width: 43.75em;
@@ -24,11 +28,11 @@ $modal-mask-color: rgba(34, 34, 34, .35);
 .sprk-c-Modal__header {
   background-color: $blue-medium;
   display: table;
-  padding-top: .52446rem;
-  padding-bottom: .52446rem;
+  padding-top: 0.52446rem;
+  padding-bottom: 0.52446rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-bottom: .52446rem;
+  margin-bottom: 0.52446rem;
   width: 100%;
 
   .sprk-b-Heading {

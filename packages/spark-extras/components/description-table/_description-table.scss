@@ -1,4 +1,10 @@
-// Variables
+// ==================================================================
+// Date Picker
+// ==================================================================
+
+//
+// Available Variables
+///
 $description-table-border: 1px solid $gray-medium;
 $description-table-stripe-color: $gray-light;
 $description-table-breakpoint: 38.4375em;
@@ -26,9 +32,10 @@ $description-table-breakpoint: 38.4375em;
     display: table;
     display: flex;
     align-items: center;
-    }
+  }
 }
 
+// prettier-ignore
 .sprk-c-DescriptionTable--striped .sprk-c-DescriptionTable__keyvaluepair:nth-child(even) {
   background: $description-table-stripe-color;
 }

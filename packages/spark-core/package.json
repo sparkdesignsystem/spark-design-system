@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@scalescss/scalescss": "^3.1.1"
+    "@scalescss/scalescss": "^3.3.0"
   },
   "devDependencies": {
     "lerna": "^2.0.0"

@@ -6,7 +6,8 @@
 // Underline used on hover in main navigation
 // Use within a :hover selector
 ///
-@mixin sprk-HoverLine($color, $width) {
+
+@mixin HoverLine($color, $width) {
   &::after {
     background-color: $color;
     content: ' ';

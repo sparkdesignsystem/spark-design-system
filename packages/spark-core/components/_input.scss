@@ -1,7 +1,6 @@
 // ==================================================================
 // Input Component
 // ==================================================================
-
 .sprk-b-TextInput,
 textarea {
   color: $gray-dark;
@@ -21,8 +20,8 @@ textarea {
     content: '$';
     color: $gray-dark;
     position: absolute;
-    top: .6rem;
-    left: .55rem;
+    top: 0.6rem;
+    left: 0.55rem;
   }
 }
 

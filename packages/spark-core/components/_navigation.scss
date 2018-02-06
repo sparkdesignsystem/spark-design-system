@@ -2,7 +2,9 @@
 // Navigation
 // ==================================================================
 
+//
 // Available Variables
+///
 $main-nav-breakpoint: 46em;
 
 .sprk-c-Navigation {
@@ -66,22 +68,29 @@ $main-nav-breakpoint: 46em;
   }
 
   @media all and (min-width: $main-nav-breakpoint) {
-    @include sprk-HoverLine($white, 85%);
+    @include HoverLine($color: $white, $width: 85%);
+
     border: 0;
     padding-left: 0;
 
     &.sprk-c-Navigation__item--active,
     &:focus,
     &:hover {
-      @include sprk-HoverLine($blue-medium, 85%);
+      @include HoverLine($color: $blue-medium, $width: 85%);
+
       background-color: $white;
       color: $blue-medium;
 
+      //
       // Kinda gross but need to change the color of this icon on
       // hover of nav item anchor
+      //
+      // stylelint-disable max-nesting-depth
+      ///
       .sprk-c-Navigation__arrow {
         fill: $blue-medium;
       }
+      // stylelint-enable
     }
   }
 }
@@ -89,7 +98,6 @@ $main-nav-breakpoint: 46em;
 // Show the sub navigation on hover and focus
 .sprk-c-Navigation__item:focus .sprk-c-Navigation__sub,
 .sprk-c-Navigation__item:hover .sprk-c-Navigation__sub {
-
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     position: absolute;
@@ -108,8 +116,8 @@ $main-nav-breakpoint: 46em;
     fill: $blue-dark;
     float: none;
     margin-top: 0;
-    margin-bottom: .27506rem;
-    margin-left: .27506rem;
+    margin-bottom: 0.27506rem;
+    margin-left: 0.27506rem;
     margin-right: 0;
   }
 }
@@ -131,8 +139,8 @@ $main-nav-breakpoint: 46em;
   @media all and (min-width: $main-nav-breakpoint) {
     float: left;
     line-height: 1.90672rem;
-    padding-top: .52446rem;
-    padding-bottom: .52446rem;
+    padding-top: 0.52446rem;
+    padding-bottom: 0.52446rem;
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: left;
@@ -141,10 +149,9 @@ $main-nav-breakpoint: 46em;
 }
 
 .sprk-c-Navigation__sub-item:last-child {
-
   @media all and (min-width: $main-nav-breakpoint) {
     a {
-      margin-bottom: .52446rem;
+      margin-bottom: 0.52446rem;
     }
   }
 }
@@ -159,12 +166,14 @@ $main-nav-breakpoint: 46em;
   }
 
   @media all and (min-width: $main-nav-breakpoint) {
-    @include sprk-HoverLine($white, 100%);
+    @include HoverLine($color: $white, $width: 100%);
+
     background-color: $white;
 
     &:focus,
     &:hover {
-      @include sprk-HoverLine($blue-medium, 100%);
+      @include HoverLine($color: $blue-medium, $width: 100%);
+
       color: $blue-medium;
     }
   }
