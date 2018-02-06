@@ -1,7 +1,6 @@
 // ==================================================================
 // Date Picker
 // ==================================================================
-
 .sprk-c-DatePicker {
   border: 2px solid $gray-medium;
   border-radius: 5px;
@@ -12,25 +11,25 @@
   position: relative;
   max-width: 20rem;
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     content: '';
     position: absolute;
-  	bottom: 100%;
-  	left: 1.25em;
-  	border: solid transparent;
+    bottom: 100%;
+    left: 1.25em;
+    border: solid transparent;
   }
 
-  &:after {
-  	border-bottom-color: #ffffff;
-  	border-width: 10px;
-  	margin-left: -10px;
+  &::after {
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
   }
 
-  &:before {
-  	border-bottom-color: $gray-medium;
-  	border-width: 13px;
-  	margin-left: -13px;
+  &::before {
+    border-bottom-color: $gray-medium;
+    border-width: 13px;
+    margin-left: -13px;
   }
 }
 
@@ -47,6 +46,14 @@
   font-weight: normal;
 }
 
+.sprk-c-DatePicker__back {
+  left: 0.5em;
+}
+
+.sprk-c-DatePicker__forward {
+  right: 0.5em;
+}
+
 .sprk-c-DatePicker__back,
 .sprk-c-DatePicker__forward {
   position: absolute;
@@ -59,14 +66,6 @@
   .sprk-c-Icon {
     fill: $blue-medium;
   }
-}
-
-.sprk-c-DatePicker__back {
-  left: 0.5em;
-}
-
-.sprk-c-DatePicker__forward {
-  right: 0.5em;
 }
 
 .sprk-c-DatePicker__table {

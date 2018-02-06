@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-core",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Spark Core is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@scalescss/scalescss": "^3.1.1"
+    "@scalescss/scalescss": "^3.3.0"
   },
   "devDependencies": {
     "lerna": "^2.0.0"

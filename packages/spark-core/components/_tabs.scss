@@ -1,7 +1,6 @@
 // ==================================================================
 // Tabbed Navigation
 // ==================================================================
-
 .sprk-c-Tabs__buttons {
   display: block;
   border-bottom: 0;
@@ -49,13 +48,13 @@
     &:first-of-type {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
-      border-top-right-radius: 0px;
+      border-top-right-radius: 0;
     }
 
     &:last-of-type {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 0px;
+      border-bottom-left-radius: 0;
       border-right: 2px solid $green-medium;
     }
   }

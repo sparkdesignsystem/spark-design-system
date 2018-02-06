@@ -1,7 +1,6 @@
 // ==================================================================
 // Forms
 // ==================================================================
-
 .sprk-b-Label,
 label {
   font-size: ms(1);
@@ -37,8 +36,8 @@ input[readonly] {
 
 // Placeholder colors
 ::-webkit-input-placeholder,
-:-moz-placeholder,
 ::-moz-placeholder,
-:-ms-input-placeholder {
+:-ms-input-placeholder,
+::placeholder {
   color: $gray-medium;
 }
