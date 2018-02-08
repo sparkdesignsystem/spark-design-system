@@ -5,7 +5,7 @@
 textarea {
   color: $gray-dark;
   outline: none;
-  font-size: ms(0); // set again to prevent mobile safari zooming
+  font-size: $font-size-body-copy;
 
   &:focus {
     border-color: $blue-medium;

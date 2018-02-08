@@ -1,85 +1,67 @@
 // ==================================================================
 // Typography
 // ==================================================================
+
+// font-size-steps
+$font-size-jumbo: 3rem;
+$font-size-heading-1: 2rem;
+$font-size-heading-2: 1.8rem;
+$font-size-heading-3: 1.3rem;
+$font-size-title: 1.2rem;
+$font-size-label: 1.1rem;
+$font-size-sub-label: 1rem;
+$font-size-input: 1.1rem;
+$font-size-body-copy: 0.8rem;
+$font-size-caption: 0.9rem;
+$font-size-legal: 0.8rem;
+
 .sprk-b-BodyCopy {
   color: $black;
   font-family: $base-font-stack;
-  font-size: ms(0);
+  font-size: $font-size-body-copy;
 }
 
 .sprk-b-Caption {
+  font-size: $font-size-caption;
   font-style: italic;
 }
 
 .sprk-b-Legal {
-  font-size: ms(-2);
+  font-size: $font-size-legal;
 }
 
 .sprk-b-Heading {
   // set here to avoid scales styling elements (h1-h6)
-
   // prettier-ignore
   font-family: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
 }
 
 .sprk-b-Heading--jumbo {
   color: $blue-dark;
-  font-size: ms(16);
+  font-size: $font-size-jumbo;
   font-weight: bold;
 }
 
 .sprk-b-Heading--primary {
   color: $blue-dark;
-  font-size: ms(10);
+  font-size: $font-size-heading-1;
   font-weight: bold;
 }
 
 .sprk-b-Heading--secondary {
   color: $black;
-  font-size: ms(6);
+  font-size: $font-size-heading-2;
   font-weight: normal;
 }
 
 .sprk-b-Heading--sub {
   color: $black;
-  font-size: ms(2);
+  font-size: $font-size-heading-3;
   font-weight: bold;
 }
 
 .sprk-b-Heading--title {
   color: $blue-dark;
-  font-size: ms(-1);
+  font-size: $font-size-title;
   font-weight: bold;
-}
-
-.sprk-b-HeadingDivider {
-  border-bottom: 2px solid $gray-medium;
-  margin-bottom: 1rem;
-}
-
-.sprk-b-BodyDivider,
-hr {
-  display: block;
-  border: 0;
-  border-bottom: 2px solid $gray-medium;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.sprk-b-List--indented,
-.sprk-b-List--unordered {
-  padding-left: 1.1rem;
-}
-
-.sprk-b-List--ordered {
-  padding-left: 1.1rem;
-}
-
-.sprk-b-List--indented {
-  padding-left: 1.21rem;
-  margin-left: 1rem;
-}
-
-.sprk-b-List--bare {
-  list-style-type: none;
 }

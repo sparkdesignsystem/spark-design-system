@@ -1,36 +1,3 @@
 .spark-preview {
-  font-family: "myriad-pro", "arial", sans-serif;
+  font-family: myriad-pro, arial, sans-serif;
 }
-
-[class*=ms-] {
-  line-height: 1;
-  margin-bottom: 2rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.ms-16 {font-size: ms(16)}
-.ms-15 {font-size: ms(15)}
-.ms-14 {font-size: ms(14)}
-.ms-13 {font-size: ms(13)}
-.ms-12 {font-size: ms(12)}
-.ms-11 {font-size: ms(11)}
-.ms-10 {font-size: ms(10)}
-.ms-9 {font-size: ms(9)}
-.ms-8 {font-size: ms(8)}
-.ms-7 {font-size: ms(7)}
-.ms-6 {font-size: ms(6)}
-.ms-5 {font-size: ms(5)}
-.ms-4 {font-size: ms(4)}
-.ms-3 {font-size: ms(3)}
-.ms-2 {font-size: ms(2)}
-.ms-1 {font-size: ms(1)}
-.ms-0 {font-size: ms(0)}
-.ms--1 {font-size: ms(-1)}
-.ms--2 {font-size: ms(-2)}
-.ms--3 {font-size: ms(-3)}
-.ms--4 {font-size: ms(-4)}
-.ms--5 {font-size: ms(-5)}
-.ms--6 {font-size: ms(-6)}
