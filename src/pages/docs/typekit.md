@@ -43,3 +43,51 @@ have finished loading ('fonts-active').
   s.parentNode.insertBefore(tk,s)
 })(document);
 ```
+
+## Fallback fonts
+
+In the event that a client has issues loading typefaces from typekit, we've defined the
+following system and web-safe typefaces to be used in their place:
+
+### Headings
+
+* -apple-system
+* BlinkMacSystemFont
+* avenir next
+* avenir
+* Segoe UI
+* lucida grande
+* helvetica neue
+* helvetica
+* Fira Sans
+* roboto
+* noto
+* Droid Sans
+* cantarell
+* oxygen
+* ubuntu
+* franklin gothic medium
+* century gothic
+* sans-serif;
+
+### Body Copy
+
+* -apple-system
+* BlinkMacSystemFont
+* avenir next
+* avenir
+* Segoe UI
+* lucida grande
+* helvetica neue
+* helvetica
+* Fira Sans
+* roboto
+* noto
+* Droid Sans
+* cantarell
+* oxygen
+* ubuntu
+* franklin gothic medium
+* century gothic
+* sans-serif;
+
