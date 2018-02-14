@@ -29,30 +29,35 @@
       </ul>
     </div>
   {{/if}}
-  {{!-- Preview --}}
-  <div class="drizzle-u-border spark-preview">
-    <div class="drizzle-u-pad drizzle-u-cf drizzle-u-posRelative {{data.previewClass}}">
-      {{{pattern id @root}}}
+  {{!-- Layouts --}}
+  {{#if data.doclayout}}
+    {{{pattern id @root}}}
+    {{else}}
+      {{!-- Preview --}}
+      <div class="drizzle-u-border spark-preview">
+        <div class="drizzle-u-pad drizzle-u-cf drizzle-u-posRelative {{data.previewClass}}">
+          {{{pattern id @root}}}
+        </div>
+        {{!-- Code sample --}}
+        {{#unless data.sourceless}}
+          <pre class="drizzle-u-borderTop drizzle-u-pad"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
+        {{/unless}}
+      </div>
+      {{#if data.info}}
+          <h3>Additional Info</h3>
+          <ul>
+            {{#each data.info}}
+              <li>{{.}}</li>
+            {{/each}}
+          </ul>
+      {{/if}}
+      {{#if data.nonos}}
+          <h4>No-no's</h4>
+          <ul>
+            {{#each data.nonos}}
+              <li>{{.}}</li>
+            {{/each}}
+          </ul>
+      {{/if}}
     </div>
-    {{!-- Code sample --}}
-    {{#unless data.sourceless}}
-      <pre class="drizzle-u-borderTop drizzle-u-pad"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
-    {{/unless}}
-  </div>
-  {{#if data.info}}
-      <h3>Additional Info</h3>
-      <ul>
-        {{#each data.info}}
-          <li>{{.}}</li>
-        {{/each}}
-      </ul>
   {{/if}}
-  {{#if data.nonos}}
-      <h4>No-no's</h4>
-      <ul>
-        {{#each data.nonos}}
-          <li>{{.}}</li>
-        {{/each}}
-      </ul>
-  {{/if}}
-</div>

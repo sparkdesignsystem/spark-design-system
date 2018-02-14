@@ -2,4 +2,4 @@ order: 2
 notes: |
   Examples of foundational typographic elements.
 prereqs:
-  Typekit Setup: /docs/typekit.html
+  Typekit Setup: /docs/typekit.hbs
