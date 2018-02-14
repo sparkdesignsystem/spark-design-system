@@ -3,65 +3,87 @@
 // ==================================================================
 
 // font-size-steps
-$font-size-jumbo: 3rem;
-$font-size-heading-1: 2rem;
-$font-size-heading-2: 1.8rem;
-$font-size-heading-3: 1.3rem;
-$font-size-title: 1.2rem;
-$font-size-label: 1.1rem;
-$font-size-sub-label: 1rem;
-$font-size-input: 1.1rem;
-$font-size-body-copy: 0.8rem;
-$font-size-caption: 0.9rem;
-$font-size-legal: 0.8rem;
-
-.sprk-b-BodyCopy {
-  color: $black;
-  font-family: $base-font-stack;
-  font-size: $font-size-body-copy;
-}
-
-.sprk-b-Caption {
-  font-size: $font-size-caption;
-  font-style: italic;
-}
-
-.sprk-b-Legal {
-  font-size: $font-size-legal;
-}
+$font-size-display-one: 3.797rem;
+$font-size-display-two: 2.853rem;
+$font-size-display-three: 2.594rem;
+$font-size-display-four: 2.144rem;
+$font-size-display-five: 1.772rem;
+$font-size-display-six: 1.464rem;
+$font-size-display-seven: 1.464rem;
+$font-size-body-one: 1.21rem;
+$font-size-body-two: 1.21rem;
+$font-size-body-three: 1rem;
+$font-size-body-four: 0.826rem;
 
 .sprk-b-Heading {
-  // set here to avoid scales styling elements (h1-h6)
-  // prettier-ignore
-  font-family: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
-}
-
-.sprk-b-Heading--jumbo {
   color: $blue-dark;
-  font-size: $font-size-jumbo;
+  font-family: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman', Times,
+    serif;
   font-weight: bold;
 }
 
-.sprk-b-Heading--primary {
-  color: $blue-dark;
-  font-size: $font-size-heading-1;
-  font-weight: bold;
+.sprk-b-Heading--display-one {
+  font-size: $font-size-display-one;
 }
 
-.sprk-b-Heading--secondary {
+h1,
+.sprk-b-Heading--display-two {
+  font-size: $font-size-display-two;
+}
+
+h2,
+.sprk-b-Heading--display-three {
   color: $black;
-  font-size: $font-size-heading-2;
+  font-size: $font-size-display-three;
   font-weight: normal;
 }
 
-.sprk-b-Heading--sub {
+h3,
+.sprk-b-Heading--display-four {
   color: $black;
-  font-size: $font-size-heading-3;
+  font-size: $font-size-display-four;
+}
+
+h4,
+.sprk-b-Heading--display-five {
+  font-size: $font-size-display-five;
+  font-weight: normal;
+}
+
+h5,
+.sprk-b-Heading--display-six {
+  font-size: $font-size-display-six;
+  font-weight: normal;
+}
+
+h6,
+.sprk-b-Heading--display-seven {
+  font-size: $font-size-display-seven;
+  font-weight: normal;
+}
+
+body,
+.sprk-b-BodyCopy {
+  color: $black;
+  font-family: $base-font-stack;
+}
+
+strong,
+.sprk-b-BodyCopy--body-one {
+  font-size: $font-size-body-one;
   font-weight: bold;
 }
 
-.sprk-b-Heading--title {
-  color: $blue-dark;
-  font-size: $font-size-title;
-  font-weight: bold;
+body,
+.sprk-b-BodyCopy--body-two {
+  font-size: $font-size-body-two;
+}
+
+small,
+.sprk-b-BodyCopy--body-three {
+  font-size: $font-size-body-three;
+}
+
+.sprk-b-BodyCopy--body-four {
+  font-size: $font-size-body-four;
 }
