@@ -45,7 +45,7 @@ $space-stack-m: 0 0 16px 0;
 $space-stack-l: 0 0 32px 0;
 $space-stack-xl: 0 0 64px 0;
 
-// Global Spacing
+// Global Spacing Utilities
 $space-xs: 4px;
 $space-s: 8px;
 $space-m: 16px;
@@ -164,8 +164,27 @@ $text-input-padding: $space-s;
 //
 // Tables
 ///
-$table-padding-medium: $space-m;
-$table-padding-small: $space-s;
+$table-padding-small: $space-inset-s;
+$table-padding-medium: $space-inset-m;
+$table-padding-large: $space-inset-l;
 $table-border-width: 2px;
 $table-border-color: $white;
 $table-stripe-color: $blue-light;
+
+//
+// Box
+///
+$box-padding-tiny: $space-inset-xs;
+$box-padding-small: $space-inset-s;
+$box-padding: $space-inset-m;
+$box-padding-large: $space-inset-l;
+$box-padding-huge: $space-inset-xl;
+
+//
+// Media
+//
+$media-gutter-tiny: $space-xs;
+$media-gutter-small: $space-s;
+$media-gutter: $space-m;
+$media-gutter-large: $space-l;
+$media-gutter-huge: $space-xl;
