@@ -1,11 +1,11 @@
 {{#extend "default"}}
   {{#content "main"}}
-    <h1>{{name}}</h1>
+    <h1 class="drizzle-h1">{{name}}</h1>
     {{#if notes}}
         <p>{{notes}}</p>
     {{/if}}
     {{#if info}}
-        <h2>Info</h2>
+        <h2 class="drizzle-h2">Info</h2>
         <ul>
           {{#each info}}
             <li>{{.}}</li>
@@ -13,7 +13,7 @@
         </ul>
     {{/if}}
     {{#if nonos}}
-        <h3>No-no's</h3>
+        <h3 class="drizzle-h3">No-no's</h3>
         <ul>
           {{#each nonos}}
             <li>{{.}}</li>
@@ -23,7 +23,7 @@
     {{!-- prereqs --}}
     {{#if prereqs }}
         <div>
-            <h3>Prerequisites</h3>
+            <h2 class="drizzle-h3">Prerequisites</h2>
             <p>Please see the following sections for additional setup required by this pattern:</p>
             <ul class="drizzle-Arrange drizzle-Arrange--withGutter">
                 {{#each prereqs as |url label|}}
@@ -44,7 +44,7 @@
     {{!-- Links --}}
     {{#if links}}
       <div class="drizzle-u-inlineBlock">
-        <h3>Scales CSS Docs</h3>
+        <h3 class="drizzle-h3">Scales CSS Docs</h3>
         <p>See how Scales CSS affects this pattern.</p>
         <ul class="drizzle-Arrange drizzle-Arrange--withGutter">
           {{#each links as |url label|}}

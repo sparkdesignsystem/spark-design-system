@@ -12,3 +12,44 @@ pre {
   padding: 6px 10px;
   line-height: 1.75;
 }
+
+.drizzle-h1,
+.drizzle-h2,
+.drizzle-h3,
+.drizzle-h4,
+.drizzle-h5,
+.drizzle-h6,
+.drizzle-copy {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+}
+
+.drizzle-h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.drizzle-h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.drizzle-h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.drizzle-h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.drizzle-h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.drizzle-h6 {
+  font-size: 1rem;
+}

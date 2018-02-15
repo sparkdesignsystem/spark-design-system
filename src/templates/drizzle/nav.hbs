@@ -1,6 +1,6 @@
 {{!-- Nav item partial --}}
 {{#*inline "nav-item"}}
-  <a class="drizzle-Nav-item" href="{{@root.baseurl}}/{{url}}">
+  <a class="drizzle-Nav-item drizzle-copy" href="{{@root.baseurl}}/{{url}}">
     {{label}}
   </a>
 {{/inline}}
@@ -26,7 +26,7 @@
       {{/each}}
     </ul>
     {{!-- Fundementals --}}
-    <h5 class="drizzle-Nav-item">Fundamentals</h5>
+    <h5 class="drizzle-Nav-item drizzle-h5">Fundamentals</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (collections "elements" sortby="order")}}
         <li>
@@ -35,7 +35,7 @@
       {{/each}}
     </ul>
     {{!-- Components --}}
-    <h5 class="drizzle-Nav-item">Components</h5>
+    <h5 class="drizzle-Nav-item drizzle-h5">Components</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (collections "components" sortby="order")}}
         <li>
@@ -44,7 +44,7 @@
       {{/each}}
     </ul>
     {{!-- Interaction Patterns --}}
-    <h5 class="drizzle-Nav-item">Interactions</h5>
+    <h5 class="drizzle-Nav-item drizzle-h5">Interactions</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (collections "interactions" sortby="order")}}
         <li>
@@ -53,7 +53,7 @@
       {{/each}}
     </ul>
     {{!-- Other pages --}}
-    <h5 class="drizzle-Nav-item">Documentation</h5>
+    <h5 class="drizzle-Nav-item drizzle-h5">Documentation</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (pages "docs" ignore="index")}}
         <li>

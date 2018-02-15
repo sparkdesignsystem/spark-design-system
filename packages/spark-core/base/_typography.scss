@@ -1,89 +1,85 @@
 // ==================================================================
 // Typography
 // ==================================================================
-
-// font-size-steps
-$font-size-display-one: 3.797rem;
-$font-size-display-two: 2.853rem;
-$font-size-display-three: 2.594rem;
-$font-size-display-four: 2.144rem;
-$font-size-display-five: 1.772rem;
-$font-size-display-six: 1.464rem;
-$font-size-display-seven: 1.464rem;
-$font-size-body-one: 1.21rem;
-$font-size-body-two: 1.21rem;
-$font-size-body-three: 1rem;
-$font-size-body-four: 0.826rem;
-
-.sprk-b-Heading {
-  color: $blue-dark;
-  font-family: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman', Times,
-    serif;
-  font-weight: bold;
-}
-
-.sprk-b-Heading--display-one {
+.sprk-b-TypeDisplayOne {
+  color: $color-display-one;
   font-size: $font-size-display-one;
+  font-weight: $font-weight-display-one;
+  line-height: $line-height-display-one;
 }
 
-h1,
-.sprk-b-Heading--display-two {
+.sprk-b-TypeDisplayTwo {
+  color: $color-display-two;
   font-size: $font-size-display-two;
+  font-weight: $font-weight-display-two;
+  line-height: $line-height-display-two;
 }
 
-h2,
-.sprk-b-Heading--display-three {
-  color: $black;
+.sprk-b-TypeDisplayThree {
+  color: $color-display-three;
   font-size: $font-size-display-three;
-  font-weight: normal;
+  font-weight: $font-weight-display-three;
+  line-height: $line-height-display-three;
 }
 
-h3,
-.sprk-b-Heading--display-four {
-  color: $black;
+.sprk-b-TypeDisplayFour {
   font-size: $font-size-display-four;
+  color: $color-display-four;
+  font-weight: $font-weight-display-four;
+  line-height: $line-height-display-four;
 }
 
-h4,
-.sprk-b-Heading--display-five {
+.sprk-b-TypeDisplayFive {
   font-size: $font-size-display-five;
-  font-weight: normal;
+  color: $color-display-five;
+  font-weight: $font-weight-display-five;
+  line-height: $line-height-display-five;
 }
 
-h5,
-.sprk-b-Heading--display-six {
+.sprk-b-TypeDisplaySix {
   font-size: $font-size-display-six;
-  font-weight: normal;
+  color: $color-display-six;
+  font-weight: $font-weight-display-six;
+  line-height: $line-height-display-six;
 }
 
-h6,
-.sprk-b-Heading--display-seven {
+.sprk-b-TypeDisplaySeven {
   font-size: $font-size-display-seven;
-  font-weight: normal;
+  color: $color-display-seven;
+  font-weight: $font-weight-display-seven;
+  line-height: $line-height-display-seven;
 }
 
-body,
-.sprk-b-BodyCopy {
-  color: $black;
-  font-family: $base-font-stack;
-}
-
-strong,
-.sprk-b-BodyCopy--body-one {
+.sprk-b-TypeBodyOne {
   font-size: $font-size-body-one;
-  font-weight: bold;
+  color: $color-body-one;
+  font-weight: $font-weight-body-one;
+  line-height: $line-height-body-one;
 }
 
-body,
-.sprk-b-BodyCopy--body-two {
+.sprk-b-TypeBodyTwo {
   font-size: $font-size-body-two;
+  color: $color-body-two;
+  font-weight: $font-weight-body-two;
+  line-height: $line-height-body-two;
 }
 
 small,
-.sprk-b-BodyCopy--body-three {
+.sprk-b-TypeBodyThree {
   font-size: $font-size-body-three;
+  color: $color-body-three;
+  font-weight: $font-weight-body-three;
+  line-height: $line-height-body-three;
 }
 
-.sprk-b-BodyCopy--body-four {
+.sprk-b-TypeBodyFour {
   font-size: $font-size-body-four;
+  color: $color-body-four;
+  font-weight: $font-weight-body-four;
+  line-height: $line-height-body-four;
+}
+
+// TODO: see if this is done already in scales
+strong {
+  font-weight: bold;
 }

@@ -19,11 +19,83 @@ $selection-bg-color: $blue-medium;
 //
 // Typography
 ///
-$ms-base: 1rem;
-$ms-ratio: 1.1;
-$text-margins: 0 0 1rem;
-$base-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
-$heading-font-weight: normal;
+// font-size-steps
+$font-size-display-one: 3.797rem;
+$color-display-one: $black;
+$line-height-display-one: 1.5;
+$font-weight-display-one: bold;
+$font-size-display-two: 2.853rem;
+$color-display-two: $black;
+$line-height-display-two: 1.5;
+$font-weight-display-two: bold;
+$font-size-display-three: 2.594rem;
+$color-display-three: $black;
+$line-height-display-three: 1.5;
+$font-weight-display-three: bold;
+$font-size-display-four: 2.144rem;
+$color-display-four: $black;
+$line-height-display-four: 1.5;
+$font-weight-display-four: bold;
+$font-size-display-five: 1.772rem;
+$color-display-five: $black;
+$line-height-display-five: 1.5;
+$font-weight-display-five: bold;
+$font-size-display-six: 1.464rem;
+$color-display-six: $black;
+$line-height-display-six: 1.5;
+$font-weight-display-six: bold;
+$font-size-display-seven: 1.464rem;
+$color-display-seven: $black;
+$line-height-display-seven: 1.5;
+$font-weight-display-seven: bold;
+$font-size-body-one: 1.21rem;
+$color-body-one: $black;
+$line-height-body-one: 1.5;
+$font-weight-body-one: bold;
+$font-size-body-two: 1.21rem;
+$color-body-two: $black;
+$line-height-body-two: 1.5;
+$font-weight-body-two: bold;
+$font-size-body-three: 1rem;
+$color-body-three: $black;
+$line-height-body-three: 1.5;
+$font-weight-body-three: bold;
+$font-size-body-four: 0.826rem;
+$color-body-four: $black;
+$line-height-body-four: 1.5;
+$font-weight-body-four: bold;
+$system-font-stack: null;
+$system-body-fonts: false;
+$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$system-heading-fonts: false;
+$heading-font-stack: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman',
+  Times, serif;
+$h1-size: $font-size-display-two;
+$h1-color: $color-display-two;
+$h1-line-height: $line-height-display-two;
+$h1-weight: $font-weight-display-two;
+$h2-size: $font-size-display-three;
+$h2-color: $color-display-three;
+$h2-line-height: $line-height-display-three;
+$h2-weight: $font-weight-display-three;
+$h3-size: $font-size-display-four;
+$h3-color: $color-display-four;
+$h3-line-height: $line-height-display-four;
+$h3-weight: $font-weight-display-four;
+$h4-size: $font-size-display-five;
+$h4-color: $color-display-five;
+$h4-line-height: $line-height-display-five;
+$h4-weight: $font-weight-display-five;
+$h5-size: $font-size-display-six;
+$h5-color: $color-display-six;
+$h5-line-height: $line-height-display-six;
+$h5-weight: $font-weight-display-six;
+$h6-size: $font-size-body-two;
+$h6-color: $color-body-two;
+$h6-line-height: $line-height-body-two;
+$h6-weight: $font-weight-body-two;
+$base-font-size: $font-size-body-two;
+$font-size-unit: rem;
 
 //
 // Buttons
