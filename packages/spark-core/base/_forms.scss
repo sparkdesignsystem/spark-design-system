@@ -1,11 +1,14 @@
 // ==================================================================
 // Forms
 // ==================================================================
-.sprk-b-Label,
-label {
-  font-size: ms(1);
+.sprk-b-Label {
+  font-size: $font-size-body-one;
   font-weight: bold;
   color: $blue-dark;
+}
+
+.sprk-b-SubLabel {
+  font-size: $font-size-body-two;
 }
 
 .sprk-b-Label--inline {
@@ -20,12 +23,12 @@ label {
   color: $red-medium;
 }
 
-textarea {
+.sprk-b-TextArea {
   min-height: 125px;
   margin-bottom: 1rem;
 }
 
-input[readonly] {
+.sprk-b-TextInput[readonly] {
   color: $white;
 
   &:focus {

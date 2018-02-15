@@ -38,7 +38,7 @@ for browser support.**
 
 * Import the setup file in your sass build
 
-  `@import "node_modules/@sparkdesignsystem/spark";`
+  `@import "node_modules/@sparkdesignsystem/spark-core";`
 
   This will bring all spark-core patterns into your build. The spark classes
   are namespaced so they don't affect any existing css.
