@@ -63,7 +63,7 @@
     ]
   },
   "dependencies": {
-    "@scalescss/scalescss": "^3.1.1",
+    "@scalescss/scalescss": "^3.4.0",
     "marked": "^0.3.9"
   }
 }
