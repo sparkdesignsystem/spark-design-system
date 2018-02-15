@@ -1,10 +1,13 @@
 ---
-notes: This is the base button class.
-hidden: true
+name: Primary Action
+notes: This is the Primary Action button class.
+order: 1
+labels:
+  - inprogress
 ---
 
-<button class="sprk-c-Button {{class}}{{#if disabled}} is-Disabled{{/if}}">
+<button class="sprk-c-Button{{#if class}} {{class}}{{/if}}{{#if disabled}} is-Disabled{{/if}}">
   Button Button
 </button>
 
-<a href="" class="sprk-c-Button {{class}}{{#if disabled}} is-Disabled{{/if}}">Link Button</a>
+<a href="" class="sprk-c-Button{{#if class}} {{class}}{{/if}}{{#if disabled}} is-Disabled{{/if}}">Link Button</a>

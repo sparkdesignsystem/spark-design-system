@@ -11,9 +11,10 @@
       {{else}}
         <title>{{data "project.title"}}</title>
       {{/if}}
-      {{#each styles}}
-        <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/{{this}}.css">
-      {{/each}}
+      <link rel="preconnect" href="https://use.typekit.net">
+      <link rel="stylesheet" href="https://use.typekit.net/exb7ocq.css">
+      <link rel="stylesheet" href="{{@root.baseurl}}/assets/drizzle/styles/drizzle.css">
+      <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/toolkit.css">
     {{/block}}
   </head>
   <body class="{{bodyclass}} drizzle-copy">
@@ -25,5 +26,6 @@
     {{#block "foot"}}
 
     {{/block}}
+    <script src="{{@root.baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
   </body>
 </html>
