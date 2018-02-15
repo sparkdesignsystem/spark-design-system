@@ -98,15 +98,57 @@ $base-font-size: $font-size-body-two;
 $font-size-unit: rem;
 
 //
+// Spacing
+///
+$space-inset-xs: 4px 4px 4px 4px;
+$space-inset-s: 8px 8px 8px 8px;
+$space-inset-m: 16px 16px 16px 16px;
+$space-inset-l: 32px 32px 32px 32px;
+$space-inset-xl: 64px 64px 64px 64px;
+
+// Inset Squish
+$space-inset-squish-xs: 2px 4px 2px 4px;
+$space-inset-squish-s: 4px 8px 4px 8px;
+$space-inset-squish-m: 8px 16px 8px 16px;
+$space-inset-squish-l: 16px 32px 16px 32px;
+$space-inset-squish-xl: 32px 64px 32px 64px;
+
+// Inset Stretch
+$space-inset-stretch-xs: 4px 4px 4px 4px;
+$space-inset-stretch-s: 12px 8px 12px 8px;
+$space-inset-stretch-m: 24px 16px 24px 16px;
+$space-inset-stretch-l: 48px 32px 48px 32px;
+$space-inset-stretch-xl: 96px 64px 96px 64px;
+
+// Stack
+$space-stack-xs: 0 0 4px 0;
+$space-stack-s: 0 0 8px 0;
+$space-stack-m: 0 0 16px 0;
+$space-stack-l: 0 0 32px 0;
+$space-stack-xl: 0 0 64px 0;
+
+// Global Spacing
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 16px;
+$space-l: 32px;
+$space-xl: 64px;
+
+//
 // Buttons
 ///
+$btn-background-color: $green-medium;
+$btn-border-style: solid;
 $btn-border-radius: 5px;
-$btn-padding: 1rem 2.46832rem;
 $btn-disabled-opacity: 1;
 $btn-disabled-background-color: $gray-medium;
 $btn-disabled-text-color: $white;
 $btn-disabled-border-width: 2px;
 $btn-disabled-border-color: $gray-medium;
+$btn-hover-background-color: $green-dark;
+$btn-hover-text-color: $white;
+$btn-padding: $space-inset-squish-l;
+$btn-text-color: $white;
 
 //
 // Forms
@@ -114,16 +156,17 @@ $btn-disabled-border-color: $gray-medium;
 $text-input-border-radius: 5px;
 $text-input-border-color: $gray-medium;
 $text-input-border-width: 2px;
-$input-container-margin-bottom: 1rem;
+$input-container-margin-bottom: $space-m;
 $input-disabled-border-color: $gray-medium;
 $input-disabled-text-color: $white;
 $helper-text-hidden: false;
+$text-input-padding: $space-s;
 
 //
 // Tables
 ///
-$table-padding-medium: 1rem;
-$table-padding-small: 0.5rem;
+$table-padding-medium: $space-m;
+$table-padding-small: $space-s;
 $table-border-width: 2px;
 $table-border-color: $white;
 $table-stripe-color: $blue-light;
