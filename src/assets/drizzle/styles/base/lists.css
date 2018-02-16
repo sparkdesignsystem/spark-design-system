@@ -1,0 +1,13 @@
+.List {
+  list-style-position: inside;
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.List--nested {
+  margin-left: 1rem;
+  list-style-type: circle;
+}
+
+.List__item {
+}
