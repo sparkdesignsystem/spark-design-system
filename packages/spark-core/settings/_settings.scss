@@ -32,7 +32,7 @@ $space-inset-squish-l: 16px 32px 16px 32px;
 $space-inset-squish-xl: 32px 64px 32px 64px;
 
 // Inset Stretch
-$space-inset-stretch-xs: 4px 4px 4px 4px;
+$space-inset-stretch-xs: 6px 4px 6px 4px;
 $space-inset-stretch-s: 12px 8px 12px 8px;
 $space-inset-stretch-m: 24px 16px 24px 16px;
 $space-inset-stretch-l: 48px 32px 48px 32px;
@@ -51,6 +51,7 @@ $space-s: 8px;
 $space-m: 16px;
 $space-l: 32px;
 $space-xl: 64px;
+$space-h: $space-xl;
 
 //
 // Typography

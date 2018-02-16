@@ -1,14 +1,44 @@
 ---
 name: Stack
 text: This is stack
-sourceless: true
+doclayout: true
 notes:
-  Typical use is to stack elements. Applies margin on the bottom.
+  Incorporate the stack variables to add a consistent margin bottom.
 order: 4
 labels:
   - inprogress
 ---
-<p>
-  This is a paragraph of text brought to you by the developers of the Spark Design System.
-  Notice that paragraph text has a medium space stack applied to it.
-</p>
+<div class="drizzle-Space-stack-xs">
+  <p class="sprk-b-TypeBodyTwo">
+    The orange shows the extra small stack spacing of 4px.
+  </p>
+</div>
+<div class="drizzle-Space-stack-s sprk-u-man">
+  <p class="sprk-b-TypeBodyTwo">
+    The orange shows the small stack spacing of 8px.
+  </p>
+</div>
+<div class="drizzle-Space-stack-m sprk-u-man">
+  <p class="sprk-b-TypeBodyTwo">
+    The orange shows the medium stack spacing of 16px.
+  </p>
+</div>
+<div class="drizzle-Space-stack-l sprk-u-man">
+  <p class="sprk-b-TypeBodyTwo">
+    The orange shows the large stack spacing of 32px.
+  </p>
+</div>
+<div class="drizzle-Space-stack-xl sprk-u-man">
+  <p class="sprk-b-TypeBodyTwo">
+    The orange shows the extra large stack spacing of 64px.
+  </p>
+</div>
+<pre class="drizzle-u-borderTop drizzle-u-pad">
+  <code class="language-markup">
+    $space-stack-xs: 0 0 4px 0;
+    $space-stack-s: 0 0 8px 0;
+    $space-stack-m: 0 0 16px 0;
+    $space-stack-l: 0 0 32px 0;
+    $space-stack-xl: 0 0 64px 0;
+  </code>
+</pre>
