@@ -5,79 +5,88 @@
 //
 // Settings
 ///
-@import "../../../../packages/spark-core/settings/colors";
-@import "../../../../packages/spark-core/settings/settings";
-@import "settings/settings";
+
+@import '../../../../packages/spark-core/settings/colors';
+@import '../../../../packages/spark-core/settings/settings';
+@import 'settings/settings';
 
 //
 // Tools
 ///
-@import "../../../../packages/spark-core/tools/mixins";
-@import "../../../../packages/spark-core/tools/animations";
+
+@import '../../../../packages/spark-core/tools/mixins';
+@import '../../../../packages/spark-core/tools/functions';
+@import '../../../../packages/spark-core/tools/animations';
 
 //
 // Generic utility stlyes
 ///
-@import "../../../../node_modules/@scalescss/generic-normalize/normalize";
-@import "../../../../node_modules/@scalescss/generic-reset/reset";
+
+@import '../../../../node_modules/@scalescss/generic-normalize/normalize';
+@import '../../../../node_modules/@scalescss/generic-reset/reset';
 
 //
 // Base styles for standard HTML elements
 ///
-@import "../../../../node_modules/@scalescss/base-typography/typography";
-@import "../../../../node_modules/@scalescss/base-images/images";
-@import "../../../../node_modules/@scalescss/base-lists/lists";
-@import "../../../../node_modules/@scalescss/base-blockquotes/blockquotes";
-@import "../../../../node_modules/@scalescss/base-forms/forms";
-@import "../../../../node_modules/@scalescss/base-tables/tables";
-@import "../../../../packages/spark-core/base/typography";
-@import "../../../../packages/spark-core/base/links";
-@import "../../../../packages/spark-core/base/forms";
-@import "base/typography";
+
+@import '../../../../node_modules/@scalescss/base-typography/typography';
+@import '../../../../node_modules/@scalescss/base-images/images';
+@import '../../../../node_modules/@scalescss/base-lists/lists';
+@import '../../../../node_modules/@scalescss/base-blockquotes/blockquotes';
+@import '../../../../node_modules/@scalescss/base-forms/forms';
+@import '../../../../node_modules/@scalescss/base-tables/tables';
+@import '../../../../packages/spark-core/base/typography';
+@import '../../../../packages/spark-core/base/links';
+@import '../../../../packages/spark-core/base/forms';
+@import 'base/typography';
 
 //
 // Shared objects
 ///
-@import "../../../../node_modules/@scalescss/objects-box/box";
-@import "../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list";
-@import "../../../../node_modules/@scalescss/objects-vertical-list/vertical-list";
-@import "../../../../node_modules/@scalescss/objects-media-object/media-object";
-@import "../../../../node_modules/@scalescss/objects-flag/flag";
-@import "../../../../node_modules/@scalescss/objects-split/split";
-@import "../../../../node_modules/@scalescss/objects-stats/stats";
-@import "../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list";
-@import "objects/flex-grid";
+
+@import '../../../../node_modules/@scalescss/objects-box/box';
+@import '../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list';
+@import '../../../../node_modules/@scalescss/objects-vertical-list/vertical-list';
+@import '../../../../node_modules/@scalescss/objects-media-object/media-object';
+@import '../../../../node_modules/@scalescss/objects-flag/flag';
+@import '../../../../node_modules/@scalescss/objects-split/split';
+@import '../../../../node_modules/@scalescss/objects-stats/stats';
+@import '../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list';
+@import 'objects/flex-grid';
 
 //
 // Components
 ///
-@import "../../../../node_modules/@scalescss/components-buttons/buttons";
-@import "../../../../packages/spark-core/components/icons";
-@import "../../../../packages/spark-core/components/spinners";
-@import "../../../../packages/spark-core/components/buttons";
-@import "../../../../packages/spark-core/components/input";
-@import "../../../../packages/spark-core/components/validation-criteria";
-@import "../../../../packages/spark-core/components/navigation";
-@import "../../../../packages/spark-core/components/notifications";
-@import "../../../../packages/spark-core/components/modals";
-@import "../../../../packages/spark-core/components/pagination";
-@import "../../../../packages/spark-core/components/tabs";
-@import "../../../../packages/spark-core/components/datepicker";
-@import "../../../../packages/spark-core/components/tables";
-@import "../../../../packages/spark-core/components/button-secondary-action";
-@import "../../../../packages/spark-core/components/masthead";
-@import "../../../../packages/spark-core/components/hamburger";
+
+@import '../../../../node_modules/@scalescss/components-buttons/buttons';
+@import '../../../../packages/spark-core/components/icons';
+@import '../../../../packages/spark-core/components/spinners';
+@import '../../../../packages/spark-core/components/buttons';
+@import '../../../../packages/spark-core/components/input';
+@import '../../../../packages/spark-core/components/validation-criteria';
+@import '../../../../packages/spark-core/components/navigation';
+@import '../../../../packages/spark-core/components/notifications';
+@import '../../../../packages/spark-core/components/modals';
+@import '../../../../packages/spark-core/components/pagination';
+@import '../../../../packages/spark-core/components/tabs';
+@import '../../../../packages/spark-core/components/datepicker';
+@import '../../../../packages/spark-core/components/tables';
+@import '../../../../packages/spark-core/components/button-secondary-action';
+@import '../../../../packages/spark-core/components/masthead';
+@import '../../../../packages/spark-core/components/hamburger';
 
 //
 // Spark Extras - Components
 ///
-@import "../../../../packages/spark-extras/components/highlight-board/highlight-board";
-@import "../../../../packages/spark-extras/components/description-table/description-table";
+
+@import '../../../../packages/spark-extras/components/highlight-board/highlight-board';
+@import '../../../../packages/spark-extras/components/description-table/description-table';
 
 //
 // Overrides that need to come later in the cascade
 ///
-@import "../../../../node_modules/@scalescss/utilities-clearfix/clearfix";
-@import "../../../../node_modules/@scalescss/utilities-size/size";
-@import "../../../../node_modules/@scalescss/utilities-spacing/spacing";
-@import "../../../../packages/spark-core/utilities/utilities";
+
+@import '../../../../node_modules/@scalescss/utilities-clearfix/clearfix';
+@import '../../../../node_modules/@scalescss/utilities-size/size';
+@import '../../../../node_modules/@scalescss/utilities-spacing/spacing';
+@import '../../../../packages/spark-core/utilities/utilities';
