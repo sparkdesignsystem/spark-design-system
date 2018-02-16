@@ -18,3 +18,43 @@
     margin-left: auto;
   }
 }
+
+// Text Cropping for avoiding line-height collision
+// See http://text-crop.eightshapes.com/ and
+// https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+///
+
+@mixin TextCrop(
+  $line-height: 1.3,
+  $top-adjustment: 0,
+  $bottom-adjustment: 0,
+  $top-crop: 0,
+  $bottom-crop: 0,
+  $crop-font-size: 16,
+  $crop-line-height: 1.3
+) {
+  // Apply values to calculate em-based margins that work with any font size
+  // prettier-ignore
+  $dynamic-top-crop: max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+  // prettier-ignore
+  $dynamic-bottom-crop: max(( $bottom-crop + ($line-height - $crop-line-height) * ( $crop-font-size / 2 ) ), 0) / $crop-font-size;
+
+  // Mixin output
+  line-height: $line-height;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  &::before {
+    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+  }
+
+  &::after {
+    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+  }
+}
