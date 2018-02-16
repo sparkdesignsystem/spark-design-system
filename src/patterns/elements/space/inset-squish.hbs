@@ -1,6 +1,7 @@
 ---
 name: Inset Squish
 text: Inset Squish
+doclayout: true
 notes: Inset Squish decreases the top and bottom spacing by 50%.
       Spark Buttons use the $space-inset-squish-l value for padding.
       This reduces the top and bottom padding of the buttons by 50%.
@@ -10,4 +11,37 @@ order: 2
 labels:
   - inprogress
 ---
-{{#embed "patterns.components.buttons.base"}}{{/embed}}
+<div class="drizzle-Space-inset-squish-xs">
+  <p class="sprk-b-TypeBodyTwo">
+    The green border shows the extra small inset squish of 2px 4px 2px 4px.
+  </p>
+</div>
+<div class="drizzle-Space-inset-squish-s">
+  <p class="sprk-b-TypeBodyTwo">
+    The green border shows the small inset squish of 4px 8px 4px 8px.
+  </p>
+</div>
+<div class="drizzle-Space-inset-squish-m">
+  <p class="sprk-b-TypeBodyTwo">
+    The green border shows the medium inset squish of 8px 16px 8px 16px.
+  </p>
+</div>
+<div class="drizzle-Space-inset-squish-l">
+  <p class="sprk-b-TypeBodyTwo">
+    The green border shows the large inset squish of 16px 32px 16px 32px.
+  </p>
+</div>
+<div class="drizzle-Space-inset-squish-xl">
+  <p class="sprk-b-TypeBodyTwo">
+    The green border shows the extra large inset squish of 32px 64px 32px 64px.
+  </p>
+</div>
+<pre class="drizzle-u-borderTop drizzle-u-pad">
+  <code class="language-markup">
+    $space-inset-squish-xs: 2px 4px 2px 4px;
+    $space-inset-squish-s: 4px 8px 4px 8px;
+    $space-inset-squish-m: 8px 16px 8px 16px;
+    $space-inset-squish-l: 16px 32px 16px 32px;
+    $space-inset-squish-xl: 32px 64px 32px 64px;
+  </code>
+</pre>
