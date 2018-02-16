@@ -14,6 +14,11 @@
   overflow: hidden;
 }
 
+// TODO: find a place for this, scales has s - l but not xs
+.sprk-u-paxs {
+  padding: $space-xs;
+}
+
 // TODO: refactor maybe? look at type
 //
 // Text color utilities
