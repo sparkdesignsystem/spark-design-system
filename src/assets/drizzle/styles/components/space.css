@@ -7,8 +7,8 @@
   --space-l: 32px;
   --space-xl: 64px;
 }
-/* Inset Stretch */
-.Space-inset-stretch-xs {
+/* Inset tall */
+.Space-inset-tall-xs {
   box-shadow:
     inset 0 calc(-1*(var(--space-xs)*1.5)) 0 var(--space-padding-color),
     inset 0 calc(var(--space-xs)*1.5) 0 var(--space-padding-color),
@@ -17,7 +17,7 @@
   padding: calc(var(--space-xs)*1.5) var(--space-xs) calc(var(--space-xs)*1.5) var(--space-xs);
 }
 
-.Space-inset-stretch-s {
+.Space-inset-tall-s {
   box-shadow:
     inset 0 calc(-1*(var(--space-s)*1.5)) 0 var(--space-padding-color),
     inset 0 calc(var(--space-s)*1.5) 0 var(--space-padding-color),
@@ -26,7 +26,7 @@
   padding: calc(var(--space-s)*1.5) var(--space-s) calc(var(--space-s)*1.5) var(--space-s);
 }
 
-.Space-inset-stretch-m {
+.Space-inset-tall-m {
   box-shadow:
     inset 0 calc(-1*(var(--space-m)*1.5)) 0 var(--space-padding-color),
     inset 0 calc(var(--space-m)*1.5) 0 var(--space-padding-color),
@@ -35,7 +35,7 @@
   padding: calc(var(--space-m)*1.5) var(--space-m) calc(var(--space-m)*1.5) var(--space-m);
 }
 
-.Space-inset-stretch-l {
+.Space-inset-tall-l {
   box-shadow:
     inset 0 calc(-1*(var(--space-l)*1.5)) 0 var(--space-padding-color),
     inset 0 calc(var(--space-l)*1.5) 0 var(--space-padding-color),
@@ -44,7 +44,7 @@
   padding: calc(var(--space-l)*1.5) var(--space-l) calc(var(--space-l)*1.5) var(--space-l);
 }
 
-.Space-inset-stretch-xl {
+.Space-inset-tall-xl {
   box-shadow:
     inset 0 calc(-1*(var(--space-xl)*1.5)) 0 var(--space-padding-color),
     inset 0 calc(var(--space-xl)*1.5) 0 var(--space-padding-color),
@@ -53,8 +53,8 @@
   padding: calc(var(--space-xl)*1.5) var(--space-xl) calc(var(--space-xl)*1.5) var(--space-xl);
 }
 
-/* Inset Squish */
-.Space-inset-squish-xs {
+/* Inset short */
+.Space-inset-short-xs {
   box-shadow:
     inset 0 calc(-1*(var(--space-xs)/2)) 0 var(--space-padding-color),
     inset 0 calc(var(--space-xs)/2) 0 var(--space-padding-color),
@@ -63,7 +63,7 @@
   padding: calc(var(--space-xs)/2) var(--space-xs) calc(var(--space-xs)/2) var(--space-xs);
 }
 
-.Space-inset-squish-s {
+.Space-inset-short-s {
   box-shadow:
     inset 0 calc(-1*var(--space-xs)) 0 var(--space-padding-color),
     inset 0 var(--space-xs) 0 var(--space-padding-color),
@@ -72,7 +72,7 @@
   padding: var(--space-xs) var(--space-s) var(--space-xs) var(--space-s);
 }
 
-.Space-inset-squish-m {
+.Space-inset-short-m {
   box-shadow:
     inset 0 calc(-1*var(--space-s)) 0 var(--space-padding-color),
     inset 0 var(--space-s) 0 var(--space-padding-color),
@@ -81,7 +81,7 @@
   padding: var(--space-s) var(--space-m) var(--space-s) var(--space-m);
 }
 
-.Space-inset-squish-l {
+.Space-inset-short-l {
   box-shadow:
     inset 0 calc(-1*var(--space-m)) 0 var(--space-padding-color),
     inset 0 var(--space-m) 0 var(--space-padding-color),
@@ -90,7 +90,7 @@
   padding: var(--space-m) var(--space-l) var(--space-m) var(--space-l);
 }
 
-.Space-inset-squish-xl {
+.Space-inset-short-xl {
   box-shadow:
     inset 0 calc(-1*var(--space-l)) 0 var(--space-padding-color),
     inset 0 var(--space-l) 0 var(--space-padding-color),
