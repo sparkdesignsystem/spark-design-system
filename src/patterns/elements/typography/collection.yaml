@@ -1,4 +1,3 @@
-order: 2
 notes: |
    Type in spark consists of eleven settings, documented below. See each setting for intended use.
    If your application is consuming spark-core, the body copy and heading elements are set automatically

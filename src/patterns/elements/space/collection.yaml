@@ -1,4 +1,2 @@
-order: 3
-
 notes: |
   There are 5 spacing sizes to choose from. The sizes are xs, s, m, l, and xl. Using these variables helps to keep spacing consistent throughout the system.
