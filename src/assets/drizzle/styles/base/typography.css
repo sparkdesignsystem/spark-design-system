@@ -24,6 +24,13 @@ pre {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
+  &::before {
+    margin: 0;
+  }
+  &::after {
+    margin: 0;
+   }
+
 }
 
 .drizzle-h1 {
