@@ -1,4 +1,3 @@
-order: 1
 name: Lists
 notes: |
   There are 4 list styles available: unordered, ordered, indented, and bare.

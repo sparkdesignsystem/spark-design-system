@@ -1,5 +1,3 @@
-order: 3
-
 notes: |
   Spark has five spacing sizes to select from for creating new components or objects.
   The sizing options are xs, s, m, l, and xl. Using these sizes will help keep spacing consistent throughout the interface.
