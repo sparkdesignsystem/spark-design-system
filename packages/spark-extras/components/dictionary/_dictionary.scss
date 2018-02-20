@@ -1,0 +1,55 @@
+// ==================================================================
+// Description Table
+// ==================================================================
+
+//
+// Available Variables
+///
+$dictionary-border: 1px solid $gray-medium;
+$dictionary-stripe-color: $gray-light;
+$dictionary-breakpoint: 38.4375em;
+
+.sprk-c-Dictionary--striped {
+  border: $dictionary-border;
+}
+
+.sprk-c-Dictionary__header {
+  border-bottom: $dictionary-border;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sprk-c-Dictionary__keyvaluepair {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media all and (min-width: $dictionary-breakpoint) {
+    display: table;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// prettier-ignore
+.sprk-c-Dictionary--striped .sprk-c-Dictionary__keyvaluepair:nth-child(even) {
+  background: $dictionary-stripe-color;
+}
+
+.sprk-c-Dictionary__key,
+.sprk-c-Dictionary__value {
+  @media all and (min-width: $dictionary-breakpoint) {
+    display: table-cell;
+    flex: 1;
+  }
+}
+
+.sprk-c-Dictionary__key {
+  @media all and (min-width: $dictionary-breakpoint) {
+    width: 50%;
+  }
+}

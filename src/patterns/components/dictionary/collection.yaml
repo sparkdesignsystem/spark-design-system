@@ -1,0 +1,8 @@
+notes: |
+  This spark-extras pattern is intended for displays of key-value pairs.
+restrictions:
+   - This pattern expects a list of key-value pairs
+   - Each key should have one, and only one, value.
+   - Nesting Dictionaries is not supported
+   - Tooltips or additional text is not supported
+   - The length of keys and values is not limited, but will wrap to the next line if there's no room.
