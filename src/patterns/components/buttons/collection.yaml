@@ -1,17 +1,25 @@
 notes: |
-  Examples of buttons.
+  Button types available in Spark are Primary, Secondary, Tertiary, Submission, Diasabled,
+  and Remove. The Primary button is built by using the .sprk-c-Button class. To get any of the other
+  modified button versions you would add that versions modified CSS class in addition to
+  the .sprk-c-Button class. A button should always trigger an action or trigger something
+  that changes the state of the site. For example, submitting a form or entering edit mode.
 
 info:
-  - <button> should be used when doing some action that doesn't have a meaningful URL.
-  - <a> should be used when you want the look of a button but are linking to a meaningful URL.
-  - Button height and width will be dependent on the size of the content, but the content should always be centered both vertically and horizontally.
-  - Buttons should have 40px of horizontal padding on each side of the content.
-  - Extend the buttons to the full width of the container when on mobile and stack when there is more than one (TODO - Determine breakpoints)
+  - A button element should be used when doing some action that doesn't have a meaningful URL
+  - An anchor element should be used when you want the look of a button but are linking to a URL
+  - Button height and width will be dependent on the size of the content inside the button
+  - The content will always be centered both vertically and horizontally inside the button
+  - Buttons use the $space-inset-short-l value for padding which makes the button padding 16px on the top/bottom and 32px on the sides
+  - Use the type="button" attribute if your <button> is not a submit button otherwise omit it as the default type is submit
+  - Use the disabled attribute on <buttons> that are disabled
 
 nonos:
   - No orange buttons
-  - No icons on buttons
-  - Do not use <input type="submit">
+  - No icons within buttons
+  - Do not use <input type="submit"> but use <button> instead
+  - Do not exceed 280px width for a button
+  - Button content should be short enough so that it does not wrap
 
 links:
   Scales Buttons: https://github.com/ScalesCSS/patterns-buttons

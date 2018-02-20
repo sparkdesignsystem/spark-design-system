@@ -2,19 +2,19 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  transition: background-color 0.3s;
+  transition: background-color $btn-transition-speed;
 
   &:visited,
   &:active,
   &:focus {
-    color: $white;
+    color: $btn-text-color;
   }
 }
 
 .sprk-c-Button--full\@sm {
   width: 100%;
 
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: $btn-full-breakpoint) {
     width: auto;
   }
 }

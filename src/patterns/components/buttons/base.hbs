@@ -1,12 +1,13 @@
 ---
-name: Primary Action
-notes: This is the Primary Action button class.
+name: Primary Button
+notes: Primary buttons should only have a single action for
+      the user to take.
 order: 1
 labels:
   - inprogress
 ---
 
-<button class="sprk-c-Button{{#if class}} {{class}}{{/if}}{{#if disabled}} is-Disabled{{/if}}">
+<button class="sprk-c-Button{{#if class}} {{class}}{{/if}}{{#if disabled}} is-Disabled{{/if}}" {{#if button}} type="button"{{/if}} {{#if disabled}} disabled{{/if}}>
   Button Button
 </button>
 
