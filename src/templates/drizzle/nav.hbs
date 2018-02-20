@@ -28,7 +28,7 @@
     {{!-- Fundementals --}}
     <h5 class="drizzle-Nav-item drizzle-h5">Fundamentals</h5>
     <ul class="drizzle-Nav-menu">
-      {{#each (collections "elements" sortby="order")}}
+      {{#each (collections "elements")}}
         <li>
           {{> nav-item label=name}}
         </li>
@@ -37,16 +37,7 @@
     {{!-- Components --}}
     <h5 class="drizzle-Nav-item drizzle-h5">Components</h5>
     <ul class="drizzle-Nav-menu">
-      {{#each (collections "components" sortby="order")}}
-        <li>
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-    {{!-- Interaction Patterns --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Interactions</h5>
-    <ul class="drizzle-Nav-menu">
-      {{#each (collections "interactions" sortby="order")}}
+      {{#each (collections "components")}}
         <li>
           {{> nav-item label=name}}
         </li>
