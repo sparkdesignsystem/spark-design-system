@@ -3,4 +3,4 @@ notes: |
    If your application is consuming spark-core, the body copy and heading elements are set automatically
    and don't require you to add classes.
 prereqs:
-  Typekit Setup: /patterns/elements/typography.html#typekit-setup
+  Typekit Setup: /patterns/fundamentals/typography.html#typekit-setup
