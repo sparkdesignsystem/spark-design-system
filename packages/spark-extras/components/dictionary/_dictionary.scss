@@ -13,20 +13,9 @@ $dictionary-breakpoint: 38.4375em;
   border: $dictionary-border;
 }
 
-.sprk-c-Dictionary__header {
-  border-bottom: $dictionary-border;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .sprk-c-Dictionary__keyvaluepair {
   width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: $space-inset-m;
 
   @media all and (min-width: $dictionary-breakpoint) {
     display: table;
