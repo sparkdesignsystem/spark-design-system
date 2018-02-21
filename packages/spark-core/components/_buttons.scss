@@ -4,9 +4,9 @@
 .sprk-c-Button {
   transition: background-color $btn-transition-speed;
 
-  &:visited,
   &:active,
   &:focus {
+    background-color: $btn-hover-background-color;
     color: $btn-text-color;
   }
 }
@@ -24,12 +24,8 @@
   border: 2px solid $blue-medium;
   color: $blue-medium;
 
-  &:visited,
   &:active,
-  &:focus {
-    color: $blue-medium;
-  }
-
+  &:focus,
   &:hover {
     background-color: $blue-medium;
     border: 2px solid $blue-medium;
@@ -40,6 +36,8 @@
 .sprk-c-Button--tertiary {
   background-color: $blue-medium;
 
+  &:active,
+  &:focus,
   &:hover {
     background-color: $blue-dark;
   }
@@ -50,12 +48,20 @@
   border: 2px solid $red-medium;
   color: $red-medium;
 
-  &:visited,
   &:active,
   &:focus,
   &:hover {
     background-color: $red-light;
     border: 2px solid $red-medium;
     color: $red-medium;
+  }
+}
+
+.sprk-c-Button.is-Disabled,
+.sprk-c-Button[disabled] {
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $btn-disabled-background-color;
   }
 }
