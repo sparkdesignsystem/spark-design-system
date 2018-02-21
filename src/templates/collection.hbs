@@ -12,11 +12,11 @@
           {{/each}}
         </ul>
     {{/if}}
-    {{#if nonos}}
-        <h3 class="drizzle-h3">No-no's</h3>
-        <ul>
-          {{#each nonos}}
-            <li>{{.}}</li>
+    {{#if restrictions}}
+        <h3 class="drizzle-h3">Restrictions</h3>
+        <ul class="drizzle-List drizzle-List--nested">
+          {{#each restrictions}}
+            <li class="drizzle-List__item">{{.}}</li>
           {{/each}}
         </ul>
     {{/if}}
