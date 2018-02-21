@@ -14,7 +14,7 @@
 .sprk-c-Button--full\@sm {
   width: 100%;
 
-  @media screen and (min-width: $btn-full-breakpoint) {
+  @media screen and (min-width: $btn-breakpoint) {
     width: auto;
   }
 }
