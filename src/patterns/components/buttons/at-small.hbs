@@ -2,15 +2,10 @@
 name: Button at small screen size
 notes: |
   This is a button with small screen behavior using the `.sprk-c-Button--full@sm` class.
-  When the screen is less than 30em in width the button will take up 100% width of it's container.
+  When the screen is less than 30em the buttons become full width and stack onto each other.
 order: 8
 labels:
   - inprogress
 ---
-<button class="sprk-c-Button sprk-c-Button--full@sm">
-  Button Button
-</button>
 
-<a href="" class="sprk-c-Button sprk-c-Button--full@sm">
-  Link Button
-</a>
+{{#embed "patterns.components.buttons.base" class="sprk-c-Button--full@sm" button=true}}{{/embed}}

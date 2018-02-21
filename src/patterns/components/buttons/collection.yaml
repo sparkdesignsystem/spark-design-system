@@ -1,9 +1,8 @@
 notes: |
   Button types available in Spark are Primary, Secondary, Tertiary, Submission, Diasabled,
-  and Remove. The Primary button is built by using the .sprk-c-Button class. To get any of the other
-  modified button versions you would add that versions modified CSS class in addition to
-  the .sprk-c-Button class. A button should always trigger an action or trigger something
-  that changes the state of the site. For example, submitting a form or entering edit mode.
+  and Remove. The Primary button is built by using the .sprk-c-Button class and the other buttons are built
+  by adding their modified class name alongside the Primary button class. A button should always
+  trigger an action or trigger something that changes the state of the site. For example, submitting a form or entering edit mode.
 
 info:
   - A button element should be used when doing some action that doesn't have a meaningful URL
