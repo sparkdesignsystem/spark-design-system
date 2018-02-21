@@ -1,25 +1,20 @@
-notes: |
-  Spark buttons are found in the Spark-Core package. The different types available in Spark are Primary, Secondary,
-  Tertiary, Submission, Diasabled, and Remove buttons. The Primary button is built by using the .sprk-c-Button class. To get any of the other
-  buttons add their class to the Primary button class. A button should always
-  trigger an action or trigger something that changes the state of the site. For example,
-  submitting a form or entering edit mode.
+notes:
+  Spark buttons are found in the Spark-Core package. The different button
+  types available in Spark are Primary, Secondary,
+  Tertiary, Submission, Diasabled, and Remove. A button should always
+  trigger an action or something that changes the current state. For example,
+  submitting a form or entering into edit mode. Buttons use the large variation of the
+  Inset Short spacing setting which makes them have 16px of vertical padding and 32px of horizontal padding.
 
-info:
-  - A button HTML element should be used when doing some action that doesn't have a meaningful URL
-  - An anchor HTML element should be used when you want the look of a button but are linking to a URL
-  - Button height and width will be dependent on the size of the content inside the button
-  - The content will always be centered both vertically and horizontally inside the button
-  - Buttons use the $space-inset-short-l value for padding which makes the button have 16px of vertical padding and 32px of horizontal padding
+restrictions:
+  - Do not use icons within buttons
+  - Do not use <input type="submit"> for submit buttons, use <button> instead
   - If your button is not a submit button then use the type="button" attribute
-  - If your button is disabled or becomes disabled then add the disabled attribute
-
-nonos:
-  - No orange buttons
-  - No icons within buttons
-  - Do not use <input type="submit"> but use <button> instead
   - Do not exceed 280px in width for a single button
-  - Button content should be short enough so that it does not wrap
+  - Button content should not wrap to two lines
+  - A button HTML element should be used when doing an action that doesn't have a meaningful URL
+  - An anchor HTML element should be used when you want the look of a button but are linking to a URL
+  - If your button is disabled or becomes disabled then add the `disabled` attribute
 
 links:
   Scales Buttons: https://github.com/ScalesCSS/patterns-buttons
