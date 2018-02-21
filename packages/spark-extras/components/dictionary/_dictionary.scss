@@ -26,7 +26,7 @@ $dictionary-breakpoint: 38.4375em;
 
 // prettier-ignore
 .sprk-c-Dictionary--striped .sprk-c-Dictionary__keyvaluepair:nth-child(even) {
-  background: $dictionary-stripe-color;
+  background-color: $dictionary-stripe-color;
 }
 
 .sprk-c-Dictionary__key,
