@@ -1,12 +1,9 @@
-.sprk-b-HeadingDivider {
-  border-bottom: 2px solid $gray-medium;
-  margin-bottom: 1rem;
-}
+$divider-border: 2px solid $gray-medium;
 
-.sprk-b-BodyDivider {
+hr,
+.sprk-c-Divider {
   display: block;
-  border: 0;
-  border-bottom: 2px solid $gray-medium;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  border-bottom: $divider-border;
+  margin-bottom: $space-m;
+  margin-top: $space-m;
 }
