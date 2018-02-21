@@ -1,2 +1,6 @@
 notes: |
-  There are 5 spacing sizes to choose from. The sizes are xs, s, m, l, and xl. Using these variables helps to keep spacing consistent throughout the system.
+  Spark has five spacing sizes to select from for creating new components or objects.
+  The sizing options are xs, s, m, l, and xl. Using these sizes will help keep spacing consistent throughout the interface.
+  The main forms of spacing are inset padding, inset with shorter vertical padding,
+  inset with taller vertical padding, stacking, and aligning items inline. See each section below for a description, the variables to use,
+  and examples. The green shows the padding and the the orange shows the margin.
