@@ -21,14 +21,12 @@ module.exports = {
 
   icons: {
     src: './src/assets/toolkit/images/icons/**/*.svg',
-    dest: './dist/assets/toolkit/images',
-    shape: {
-      dest: '.'
-    },
+    dest: './packages/spark-core',
     mode: {
+      inline: true,
       symbol: {
-        dest: '.',
-        sprite: 'icons.svg'
+        sprite: 'icons.svg',
+        dest: '.'
       }
     },
     svg: {
@@ -37,7 +35,7 @@ module.exports = {
     }
   },
   images: {
-    src:'./src/assets/toolkit/images/*.jpg',
+    src: './src/assets/toolkit/images/*.*',
     dest: './dist/assets/toolkit/images'
   },
   js: {
@@ -74,7 +72,7 @@ module.exports = {
         open: false,
         notify: false,
         files: ['./dist/**/*'],
-        server: { baseDir: './dist' }
+        server: {baseDir: './dist'}
       }
     }
   },
