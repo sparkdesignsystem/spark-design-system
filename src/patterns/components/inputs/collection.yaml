@@ -1,7 +1,6 @@
 name: Inputs
-
 notes: |
   Examples of types of form inputs.
-
 links:
   Scales Forms: https://github.com/ScalesCSS/base-forms
+sparkPackageCore: true

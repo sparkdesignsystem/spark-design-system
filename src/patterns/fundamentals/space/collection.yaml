@@ -4,3 +4,4 @@ notes: |
   The main forms of spacing are inset padding, inset with shorter vertical padding,
   inset with taller vertical padding, stacking, and aligning items inline. See each section below for a description, the variables to use,
   and examples. The green shows the padding and the the orange shows the margin.
+sparkPackageCore: true

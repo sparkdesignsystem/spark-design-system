@@ -12,17 +12,13 @@ products.
 
 Spark's patterns are separated into two groups:
 
-* Spark Core
-
-  Spark Core contains the basic patterns and components that make up
+* [Spark-Core](https://www.npmjs.com/package/@sparkdesignsystem/spark-core) contains the basic patterns and components that make up
   the visual and interaction design of the Quicken Loans family of
   Fintech products. If your application is expected to look and behave
   like a Quicken Loans application, this package is the starting point.
 
-* Spark Extras
-
-  Spark Extras are components that may not be needed by all
-  applications, but are consistent with the style of Spark Core.
+* [Spark-Extras](https://www.npmjs.com/package/@sparkdesignsystem/spark-extras) are components that may not be needed by all
+  applications, but are consistent with the style of Spark-Core.
 
 ## Getting Started
 
@@ -36,12 +32,12 @@ for browser support.**
 
   `npm install --save-dev @sparkdesignsystem/spark-core`
 
-* Import the setup file in your sass build
+* Import the setup file in your Sass build
 
   `@import "node_modules/@sparkdesignsystem/spark-core";`
 
-  This will bring all spark-core patterns into your build. The spark classes
-  are namespaced so they don't affect any existing css.
+  This will bring all Spark-Core patterns into your build. The Spark classes
+  are namespaced so they don't affect any existing CSS.
 
 ### Spark Extras
 
@@ -49,7 +45,7 @@ for browser support.**
 
   `npm install --save-dev @sparkdesignsystem/spark-extras`
 
-* Import any of the spark-extras patterns that you need
+* Import any of the Spark-Extras patterns that you need
 
   `@import "node_modules/@sparkdesignsystem/spark-extras/<pattern-name>/<pattern-name>";`
 
@@ -66,7 +62,7 @@ of [Drizzle](https://github.com/cloudfour/drizzle), a tool built
 by [cloudfour](https://github.com/cloudfour), for displaying pattern
 libraries. Spark uses Drizzle for documentation and plain html code examples.
 
-In the packages folder are spark-core and spark-extras. These are the files
+In the packages folder are Spark-Core and Spark-Extras. These are the files
 that are published to npm.
 
 ### Dev Environment

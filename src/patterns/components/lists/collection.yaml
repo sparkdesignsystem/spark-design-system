@@ -1,5 +1,5 @@
 name: Lists
 notes: |
   There are 4 list styles available: unordered, ordered, indented, and bare.
-
   When lists are within a block of text, indented should be used.
+sparkPackageCore: true
