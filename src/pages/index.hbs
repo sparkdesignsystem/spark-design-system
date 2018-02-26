@@ -15,14 +15,20 @@ order: 1
 <p>Welcome to the Spark Design System, a product of <a href="https://github.com/quickenloans">Quicken Loans</a>.</p>
 <p>Spark Design System is a system of patterns and components used to create the user interface for the Quicken Loans family of Fintech products.</p>
 <p>Spark's patterns are separated into two groups:</p>
-<ul class="sprk-b-List--indented">
+<ul class="drizzle-u-padLeft">
   <li>
-    <p>Spark Core</p>
-    <p>Spark Core contains the basic patterns and components that make up the visual and interaction design of the Quicken Loans family of Fintech products. If your application is expected to look and behave like a Quicken Loans application, this package is the starting point.</p>
+    <p>
+      <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Core</a>
+      contains the basic patterns and components that make up the visual and interaction
+      design of the Quicken Loans family of Fintech products. If your application is expected
+      to look and behave like a Quicken Loans application, this package is the starting point.
+    </p>
   </li>
   <li>
-    <p>Spark Extras</p>
-    <p>Spark Extras are components that may not be needed by all applications, but are consistent with the style of Spark Core.</p>
+    <p>
+      <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-extras">Spark-Extras</a>
+       are components that may not be needed by all applications,
+      but are consistent with the style of Spark Core.</p>
   </li>
 </ul>
 <h2 class="drizzle-h2">Getting Started</h2>
@@ -30,7 +36,7 @@ order: 1
     also that your project has a Javascript build step that will transpile and polyfill appropriately
     for browser support.</strong></p>
 <h3 class="drizzle-h3">Spark Core</h3>
-<ul class="sprk-b-List--indented">
+<ul class="drizzle-u-padLeft">
     <li>
         <p>Install the npm package</p>
         <p><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code></p>
@@ -38,18 +44,18 @@ order: 1
     <li>
         <p>Import the setup file in your sass build</p>
         <p><code class="drizzle-CodeHighlight">@import &quot;node_modules/@sparkdesignsystem/spark-core&quot;;</code></p>
-        <p>This will bring all spark-core patterns into your build. The spark classes
+        <p>This will bring all Spark-Core patterns into your build. The Spark classes
             are namespaced so they don't affect any existing css.</p>
     </li>
 </ul>
 <h3 class="drizzle-h3">Spark Extras</h3>
-<ul class="sprk-b-List--indented">
+<ul class="drizzle-u-padLeft">
     <li>
         <p>Install the npm package</p>
         <p><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-extras</code></p>
     </li>
     <li>
-        <p>Import any of the spark-extras patterns that you need</p>
+        <p>Import any of the Spark-Extras patterns that you need</p>
         <p><code class="drizzle-CodeHighlight">@import &quot;node_modules/@sparkdesignsystem/spark-extras/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;</code></p>
     </li>
 </ul>
@@ -63,12 +69,12 @@ order: 1
     of <a href="https://github.com/cloudfour/drizzle">Drizzle</a>, a tool built
     by <a href="https://github.com/cloudfour">cloudfour</a>, for displaying pattern
     libraries. Spark uses Drizzle for documentation and plain html code examples.</p>
-<p>In the packages folder are spark-core and spark-extras. These are the files
+<p>In the packages folder are Spark-Core and Spark-Extras. These are the files
     that are published to npm.</p>
 
 <h3 class="drizzle-h3">Dev Environment</h3>
 <p>If you want to run a copy of Drizzle locally:</p>
-<ol class="sprk-b-List--indented">
+<ol class="drizzle-u-padLeft">
     <li>Run <code>npm install</code></li>
     <li>Run <code>gulp --dev</code></li>
     <li>Open your browser to <code>http://localhost:3000/</code></li>

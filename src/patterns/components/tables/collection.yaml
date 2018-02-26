@@ -1,7 +1,6 @@
 name: Tables
-
 notes: |
   Examples of tables.
-
 links:
   Scales Tables: https://github.com/ScalesCSS/base-tables
+sparkPackageCore: true
