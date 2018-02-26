@@ -1,6 +1,5 @@
 notes:
-  Spark buttons are found in the Spark-Core package. The different button
-  types available in Spark are Primary, Secondary,
+  The different button types available in Spark are Primary, Secondary,
   Tertiary, Submission, Diasabled, and Remove. A button should always
   trigger an action or something that changes the current state. For example,
   submitting a form or entering into edit mode. Buttons use the large variation of the
@@ -15,6 +14,6 @@ restrictions:
   - A button HTML element should be used when doing an action that doesn't have a meaningful URL
   - An anchor HTML element should be used when you want the look of a button but are linking to a URL
   - If your button is disabled or becomes disabled then add the disabled attribute
-
+sparkPackageCore: true
 links:
   Scales Buttons: https://github.com/ScalesCSS/patterns-buttons
