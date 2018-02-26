@@ -23,9 +23,9 @@ module.exports = {
     src: './src/assets/toolkit/images/icons/**/*.svg',
     dest: './packages/spark-core',
     mode: {
-      inline: true,
       symbol: {
-        sprite: 'icons.svg',
+        inline: true,
+        sprite: 'spark-core-icons.svg',
         dest: '.'
       }
     },

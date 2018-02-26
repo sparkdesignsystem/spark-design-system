@@ -10,11 +10,12 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
 const env = require('gulp-util').env;
 const config = require('./config');
 
 // Append config
-Object.assign(config.drizzle, { helpers });
+Object.assign(config.drizzle, {helpers});
 
 // Register core tasks
 [
@@ -35,7 +36,7 @@ gulp.task('sass', () => {
     .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
-      browsers: ['> 1%','last 4 versions'],
+      browsers: ['> 1%', 'last 4 versions'],
       cascade: false
     }))
     .pipe(cssnano())
@@ -43,10 +44,14 @@ gulp.task('sass', () => {
 });
 
 // SVG icon task
-gulp.task('icons', () => {
+gulp.task('icons', done => {
   gulp.src(config.icons.src)
     .pipe(svgSprite(config.icons))
-    .pipe(gulp.dest(config.icons.dest));
+    .pipe(gulp.dest(config.icons.dest))
+    .pipe(rename(path => {
+      path.extname = ".hbs";
+    }))
+    .pipe(gulp.dest('./src/templates/drizzle')).on('end', done);
 });
 
 // copy images
@@ -56,18 +61,18 @@ gulp.task('images', () => {
 });
 
 // Register Drizzle builder task
-gulp.task('drizzle', () => {
+gulp.task('drizzle', ['icons'], () => {
   const result = drizzle(config.drizzle);
-  return result;
+  return result.done(); // makes sure that the icons are finished before the templates are processed
 });
 
 // Register frontend composite task
 gulp.task('frontend', [
+  'icons',
   'drizzle',
   'copy',
   'css',
   'sass',
-  'icons',
   'images',
   'js'
 ]);
