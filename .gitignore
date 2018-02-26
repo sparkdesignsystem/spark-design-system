@@ -7,3 +7,4 @@ npm-debug.log
 .DS_Store
 lerna-debug.log
 .idea
+src/templates/drizzle/spark-core-icons.hbs
