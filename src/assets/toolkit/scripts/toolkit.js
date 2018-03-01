@@ -2,7 +2,7 @@
 // Import all of Spark-Core JS
 import sparkCore from '../../../../packages/spark-core/spark-core';
 // Import Spark-Extras JS individually
-import highlightBoard from '../../../../packages/spark-extras/components/highlight-board/highlight-board.js';
+import highlightBoard from '../../../../packages/spark-extras/components/highlight-board/highlight-board';
 highlightBoard();
 
 //
