@@ -7,14 +7,33 @@ order: 1
   <h2 class="drizzle-Alert__icon drizzle-h2">
     <svg width="50" height="50" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1088 1248v224q0 26-19 45t-45 19H768q-26 0-45-19t-19-45v-224q0-26 19-45t45-19h256q26 0 45 19t19 45zm30-1056l-28 768q-1 26-20.5 45t-45.5 19H768q-26 0-45.5-19T702 960l-28-768q-1-26 17.5-45t44.5-19h320q26 0 44.5 19t17.5 45z"/></svg>
   </h2>
-  <p class="drizzle-Alert__text drizzle-u-noMarginBottom">Spark is currently in alpha. It is subject to changes of all sizes at any time and not suitable for production use. Please reach out to the <a href="mailto:sparkdesignsystem@quickenloans.com">Spark team</a> for guidance.</p>
+  <p class="drizzle-Alert__text drizzle-u-noMarginBottom">
+    Spark is currently in alpha. It is subject to changes of all
+    sizes at any time and not suitable for production use. Please
+    reach out to the <a href="mailto:sparkdesignsystem@quickenloans.com">Spark team</a>
+    for guidance.
+  </p>
 </div>
 
-<h1 class="drizzle-h1">Spark Design System</h1>
+<h1 class="drizzle-h1">
+  Spark Design System
+</h1>
 
-<p>Welcome to the Spark Design System, a product of <a href="https://github.com/quickenloans">Quicken Loans</a>.</p>
-<p>Spark Design System is a system of patterns and components used to create the user interface for the Quicken Loans family of Fintech products.</p>
-<p>Spark's patterns are separated into two groups:</p>
+<p>
+  Welcome to the Spark Design System, a product
+  of <a href="https://github.com/quickenloans">Quicken Loans</a>.
+</p>
+
+<p>
+  Spark Design System is a system of patterns and components
+  used to create the user interface for the Quicken Loans
+  family of Fintech products.
+</p>
+
+<p>
+  Spark's patterns are separated into two groups:
+</p>
+
 <ul class="drizzle-u-padLeft">
   <li>
     <p>
@@ -22,70 +41,199 @@ order: 1
       contains the basic patterns and components that make up the visual and interaction
       design of the Quicken Loans family of Fintech products. If your application is expected
       to look and behave like a Quicken Loans application, this package is the starting point.
+      When the Spark-Core Sass and JS setup files are imported into an application you will receive
+      code for all of Spark-Core.
     </p>
   </li>
+
   <li>
     <p>
       <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-extras">Spark-Extras</a>
-       are components that may not be needed by all applications,
-      but are consistent with the style of Spark Core.</p>
+      are components that may not be needed by all applications,
+      but are consistent with the style of Spark Core.
+      Spark-Extras Sass and JS are imported into an application on an individual basis.
+      You import the components that you need.
+    </p>
   </li>
 </ul>
-<h2 class="drizzle-h2">Getting Started</h2>
-<p><strong>Spark assumes your project is using <a href="https://sass-lang.com/">Sass</a> for styling and
-    also that your project has a Javascript build step that will transpile and polyfill appropriately
-    for browser support.</strong></p>
-<h3 class="drizzle-h3">Spark Core</h3>
+
+<h2 class="drizzle-h2">
+  Getting Started
+</h2>
+
+<p>
+  <strong>
+    Spark assumes your project is using <a href="https://sass-lang.com/">Sass</a> for styling and
+    that your project has a Javascript build step that will transpile ES6+ and polyfill appropriately
+    for browser support.
+  </strong>
+</p>
+
+<h3 class="drizzle-h3">
+  Spark Core
+</h3>
+
 <ul class="drizzle-u-padLeft">
     <li>
-        <p>Install the npm package</p>
-        <p><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code></p>
+        <p>
+          Install the npm package
+        </p>
+
+        <p>
+          <code class="drizzle-CodeHighlight">
+            npm install --save-dev @sparkdesignsystem/spark-core
+          </code>
+        </p>
     </li>
+
     <li>
-        <p>Import the setup file in your sass build</p>
-        <p><code class="drizzle-CodeHighlight">@import &quot;node_modules/@sparkdesignsystem/spark-core&quot;;</code></p>
-        <p>This will bring all Spark-Core patterns into your build. The Spark classes
-            are namespaced so they don't affect any existing css.</p>
+        <p>
+          Import the Sass setup file in your Sass build
+        </p>
+
+        <p>
+          <code class="drizzle-CodeHighlight">
+            @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
+          </code>
+        </p>
+
+        <p>
+          This will bring all Spark-Core Sass patterns into your build. The Spark classes
+          are namespaced so they don't affect any existing css.
+        </p>
+    </li>
+
+    <li>
+        <p>
+          Import the JS setup file in your JS build
+        </p>
+
+        <p>
+          <code class="drizzle-CodeHighlight">
+            import sparkCore from &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
+          </code>
+        </p>
+
+        <p>
+          This will bring all Spark-Core JS into your build.
+        </p>
     </li>
 </ul>
-<h3 class="drizzle-h3">Spark Extras</h3>
+
+<h3 class="drizzle-h3">
+  Spark Extras
+</h3>
+
 <ul class="drizzle-u-padLeft">
     <li>
-        <p>Install the npm package</p>
-        <p><code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-extras</code></p>
+        <p>
+          Install the npm package
+        </p>
+
+        <p>
+          <code class="drizzle-CodeHighlight">
+            npm install --save-dev @sparkdesignsystem/spark-extras
+          </code>
+        </p>
     </li>
+
     <li>
-        <p>Import any of the Spark-Extras patterns that you need</p>
-        <p><code class="drizzle-CodeHighlight">@import &quot;node_modules/@sparkdesignsystem/spark-extras/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;</code></p>
+        <p>
+          Import any of the Spark-Extras Sass patterns that you need
+        </p>
+
+        <p>
+          <code class="drizzle-CodeHighlight">
+            @import &quot;node_modules/@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
+          </code>
+        </p>
+    </li>
+
+    <li>
+        <p>
+          Import any of the Spark-Extras JS patterns that you need
+        </p>
+
+        <p>
+          <code class="drizzle-CodeHighlight">
+            import &lt;pattern-name&gt; from &quot;node_modules/@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
+          </code>
+        </p>
     </li>
 </ul>
-<h2 class="drizzle-h2">Contribution Guide</h2>
 
-<h3 class="drizzle-h3">Code Organization</h3>
-<p>Spark is managed as a monorepo. All of the Spark source code lives in a
-    single repo, but is released as separate packages using
-    <a href="https://github.com/lerna/lerna">Lerna</a>.</p>
-<p>This repo consists of the design system packages, wrapped in an instance
-    of <a href="https://github.com/cloudfour/drizzle">Drizzle</a>, a tool built
-    by <a href="https://github.com/cloudfour">cloudfour</a>, for displaying pattern
-    libraries. Spark uses Drizzle for documentation and plain html code examples.</p>
-<p>In the packages folder are Spark-Core and Spark-Extras. These are the files
-    that are published to npm.</p>
+<h2 class="drizzle-h2">
+  Contribution Guide
+</h2>
 
-<h3 class="drizzle-h3">Dev Environment</h3>
-<p>If you want to run a copy of Drizzle locally:</p>
+<h3 class="drizzle-h3">
+  Code Organization
+</h3>
+
+<p>
+  Spark is managed as a monorepo. All of the Spark source code lives in a
+  single repo, but is released as separate packages using
+  <a href="https://github.com/lerna/lerna">Lerna</a>.
+</p>
+
+<p>
+  This repo consists of the design system packages, wrapped in an instance
+  of <a href="https://github.com/cloudfour/drizzle">Drizzle</a>, a tool built
+  by <a href="https://github.com/cloudfour">cloudfour</a>, for displaying pattern
+  libraries. Spark uses Drizzle for documentation and plain html code examples.
+</p>
+
+<p>
+  In the packages folder are Spark-Core and Spark-Extras. These are the files
+  that are published to npm.
+</p>
+
+<h3 class="drizzle-h3">
+  Dev Environment
+</h3>
+
+<p>
+  If you want to run a copy of Drizzle locally:
+</p>
+
 <ol class="drizzle-u-padLeft">
-    <li>Run <code>npm install</code></li>
-    <li>Run <code>gulp --dev</code></li>
-    <li>Open your browser to <code>http://localhost:3000/</code></li>
+    <li>
+      Run <code>npm install</code>
+    </li>
+
+    <li>
+      Run <code>gulp --dev</code>
+    </li>
+
+    <li>
+      Open your browser to <code>http://localhost:3000/</code>
+    </li>
 </ol>
 
-<h3 class="drizzle-h3">Code Style</h3>
-<p><code class="drizzle-CodeHighlight">Coming Soon</code></p>
-<h3 class="drizzle-h3">Change Workflow</h3>
-<p><code class="drizzle-CodeHighlight">Coming Soon</code></p>
+<h3 class="drizzle-h3">
+  Code Style
+</h3>
 
-<h2 class="drizzle-h2">Credit</h2>
+<p>
+  <code class="drizzle-CodeHighlight">
+    Coming Soon
+  </code>
+</p>
+
+<h3 class="drizzle-h3">
+  Change Workflow
+</h3>
+
+<p>
+  <code class="drizzle-CodeHighlight">
+    Coming Soon
+  </code>
+</p>
+
+<h2 class="drizzle-h2">
+  Credit
+</h2>
+
 <p>
   <a href="https://github.com/cloudfour/drizzle">Drizzle</a>
 </p>
