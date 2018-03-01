@@ -1,0 +1,25 @@
+---
+title: Icons
+layout: blank
+---
+<h1> Icons </h1>
+{{> drizzle.spark-core-icons}}
+
+
+{{#each (data "icons")}}
+<div class="drizzle-Space-inset-m">
+    <svg class="sprk-c-Icon sprk-c-Icon--small" viewBox="0 0 100 100">
+      <use xlink:href="#{{this.name}}" />
+    </svg>
+
+    <svg class="sprk-c-Icon" viewBox="0 0 100 100">
+      <use xlink:href="#{{this.name}}" />
+    </svg>
+
+    <svg class="sprk-c-Icon sprk-c-Icon--large" viewBox="0 0 100 100">
+      <use xlink:href="#{{this.name}}" />
+    </svg>
+</div>
+{{else}}
+  Theres nothing
+{{/each}}
