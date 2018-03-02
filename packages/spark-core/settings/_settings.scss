@@ -16,6 +16,7 @@ $scales-utilities-class-namespace: 'u-';
 ///
 $selection-bg-color: $blue-medium;
 
+//
 // Spacing
 ///
 $space-inset-xs: 4px 4px 4px 4px;
@@ -135,11 +136,16 @@ $base-font-size: $font-size-body-two;
 $font-size-unit: rem;
 
 //
+// Consistent Style Vars
+//
+$corners: 5px;
+
+//
 // Buttons
 ///
 $btn-background-color: $green-medium;
 $btn-border-style: solid;
-$btn-border-radius: 5px;
+$btn-border-radius: $corners;
 $btn-disabled-opacity: 1;
 $btn-disabled-background-color: $gray-medium;
 $btn-disabled-text-color: $white;
@@ -162,7 +168,7 @@ $link-transition: 0.3s;
 //
 // Forms
 ///
-$text-input-border-radius: 5px;
+$text-input-border-radius: $corners;
 $text-input-border-color: $gray-medium;
 $text-input-border-width: 2px;
 $input-container-margin-bottom: $space-m;

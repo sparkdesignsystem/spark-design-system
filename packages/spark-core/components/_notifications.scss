@@ -3,9 +3,8 @@
 // ==================================================================
 .sprk-c-Notification {
   background-color: $gray-light;
-  border-radius: 5px;
+  border-radius: $corners;
   display: table;
-  margin-bottom: 1rem;
   min-height: 50px;
   width: 100%;
 }
@@ -13,10 +12,7 @@
 .sprk-c-Notification__icon,
 .sprk-c-Notification__text {
   display: table-cell;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: $space-inset-m;
 }
 
 .sprk-c-Notification__text {
@@ -52,8 +48,8 @@
 }
 
 .sprk-c-Notification__icon:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: $corners;
+  border-bottom-left-radius: $corners;
   text-align: center;
   vertical-align: middle;
 }
@@ -64,8 +60,8 @@
 }
 
 .sprk-c-Notification__icon:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: $corners;
+  border-bottom-right-radius: $corners;
   cursor: pointer;
   float: right;
 }
