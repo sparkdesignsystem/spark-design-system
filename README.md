@@ -16,15 +16,18 @@ Spark's patterns are separated into two groups:
   the visual and interaction design of the Quicken Loans family of
   Fintech products. If your application is expected to look and behave
   like a Quicken Loans application, this package is the starting point.
+  When the Spark-Core Sass and JS setup files are imported into an application you will receive code for all of Spark-Core.
 
 * [Spark-Extras](https://www.npmjs.com/package/@sparkdesignsystem/spark-extras) are components that may not be needed by all
   applications, but are consistent with the style of Spark-Core.
+  Spark-Extras Sass and JS are imported into an application on an individual basis. You import the components that you need.
+
+
 
 ## Getting Started
 
 **Spark assumes your project is using [Sass](https://sass-lang.com/) for styling and
-also that your project has a Javascript build step that will transpile and polyfill appropriately
-for browser support.**
+also that your project has a Javascript build step that will transpile ES6+ and polyfill appropriately for browser support.**
 
 ### Spark Core
 
@@ -32,12 +35,18 @@ for browser support.**
 
   `npm install --save-dev @sparkdesignsystem/spark-core`
 
-* Import the setup file in your Sass build
+* Import the Sass setup file in your Sass build
 
-  `@import "node_modules/@sparkdesignsystem/spark-core";`
+  `@import "node_modules/@sparkdesignsystem/spark-core/spark-core";`
 
-  This will bring all Spark-Core patterns into your build. The Spark classes
+  This will bring all Spark-Core Sass patterns into your build. The Spark classes
   are namespaced so they don't affect any existing CSS.
+
+* Import the JS setup file in your JS build
+
+  `import sparkCore from "node_modules/@sparkdesignsystem/spark-core/spark-core";`
+
+  This will bring all Spark-Core JS into your build.
 
 ### Spark Extras
 
@@ -45,10 +54,13 @@ for browser support.**
 
   `npm install --save-dev @sparkdesignsystem/spark-extras`
 
-* Import any of the Spark-Extras patterns that you need
+* Import any of the Spark-Extras Sass patterns that you need
 
-  `@import "node_modules/@sparkdesignsystem/spark-extras/<pattern-name>/<pattern-name>";`
+  `@import "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
 
+* Import any of the Spark-Extras JS patterns that you need
+
+  `import <pattern-name> from "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
 ## Contribution Guide
 
 ### Code Organization
