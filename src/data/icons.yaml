@@ -1,39 +1,77 @@
 - name: bars
+  viewBox: 0 0 448 512
 - name: bell
+  viewBox: 0 0 448 512
 - name: calculator
+  viewBox: 0 0 448 512
 - name: calendar
+  viewBox: 0 0 448 512
 - name: chat
+  viewBox: 0 0 576 512
 - name: check
+  viewBox: 0 0 512 512
 - name: chevron-down
+  viewBox: 0 0 448 512
 - name: chevron-left
+  viewBox: 0 0 320 512
 - name: chevron-right
+  viewBox: 0 0 320 512
 - name: chevron-up
+  viewBox: 0 0 448 512
 - name: clock
+  viewBox: 0 0 512 512
 - name: cloud-download
+  viewBox: 0 0 640 512
 - name: cog
+  viewBox: 0 0 512 512
 - name: computer-screen
+  viewBox: 0 0 576 512
 - name: document
+  viewBox: 0 0 384 512
 - name: download
+  viewBox: 0 0 512 512
 - name: envelope
+  viewBox: 0 0 512 512
 - name: exclamation
+  viewBox: 0 0 576 512
 - name: facebook
+  viewBox: 0 0 448 512
 - name: home
+  viewBox: 0 0 576 512
 - name: info
+  viewBox: 0 0 512 512
 - name: instagram
+  viewBox: 0 0 448 512
 - name: lock
+  viewBox: 0 0 448 512
 - name: paper-plane
+  viewBox: 0 0 512 512
 - name: payment
+  viewBox: 0 0 640 512
 - name: pencil
+  viewBox: 0 0 576 512
 - name: phone
+  viewBox: 0 0 512 512
 - name: play
+  viewBox: 0 0 512 512
 - name: plus
+  viewBox: 0 0 512 512
 - name: print
+  viewBox: 0 0 512 512
 - name: question
+  viewBox: 0 0 512 512
 - name: rocket
+  viewBox: 0 0 512 512
 - name: search
+  viewBox: 0 0 512 512
 - name: times
+  viewBox: 0 0 384 512
 - name: twitter
+  viewBox: 0 0 448 512
 - name: update
+  viewBox: 0 0 512 512
 - name: upload
+  viewBox: 0 0 512 512
 - name: youtube
+  viewBox: 0 0 448 512
 
