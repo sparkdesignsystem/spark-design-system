@@ -98,6 +98,7 @@ module.exports = {
       {
         match: [
           './src/**/*.hbs',
+          '!./src/templates/drizzle/spark-core-icons.hbs',
           './src/data/**/*',
           './src/**/*.yaml',
           './src/**/*.md'

@@ -11,7 +11,6 @@ const cssnano = require('gulp-cssnano');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
-const env = require('gulp-util').env;
 const config = require('./config');
 
 // Append config
@@ -98,8 +97,7 @@ gulp.task('demo', () => {
 // Register default task
 gulp.task('default', ['frontend'], done => {
   gulp.start('serve');
-  if (env.dev) {
-    gulp.start('watch');
-  }
+  gulp.start('watch');
   done();
 });
+
