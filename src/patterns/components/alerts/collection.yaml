@@ -1,0 +1,11 @@
+notes: |
+  Alert banners appear near the top of the page and are meant to provide the user
+  with feedback based on completing an action or the lack of completion.
+info:
+  - May have timed visibility (10 seconds) and/or be dismissed by the user by clicking the "x" icon
+  - Should fill the width of the viewport
+  - The content should be kept short and concise
+  - If the content wraps to a new line the icon on the left should
+    remain vertically centered, but the dismiss icon should remain in place at the top right
+  - role="alert" is required so that assistive technology can inform users their attention is needed
+sparkPackageCore: true

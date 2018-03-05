@@ -1,0 +1,26 @@
+---
+notes: Base Alert
+hidden: true
+---
+
+<div class="sprk-c-Alert" role="alert">
+  <div class="sprk-c-Alert__icon sprk-c-Alert__icon--{{type}}">
+    <svg class="sprk-c-Icon sprk-c-Icon--large" viewBox="{{viewBox}}" aria-hidden="true">
+      <use xlink:href="#{{icon}}" />
+    </svg>
+  </div>
+
+  <div class="sprk-c-Alert__text">
+    <p class="sprk-b-TypeBodyOne sprk-u-TextColor--gray-dark">
+      {{#block "content"}}
+      This is an Alert
+      {{/block}}
+    </p>
+  </div>
+
+  <button class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss">
+    <svg class="sprk-c-Icon sprk-c-Icon--large" viewBox="0 0 384 512" aria-hidden="true">
+      <use xlink:href="#times" />
+    </svg>
+  </button>
+</div>
