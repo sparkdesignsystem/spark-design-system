@@ -1,6 +1,7 @@
 'use strict';
 
 import 'prismjs';
+import './form-state-changer';
 
 const dom = {};
 

@@ -1,0 +1,24 @@
+.drizzle-state-switcher {
+    border: 1px solid #e2e2e2;
+    padding: 2rem;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+}
+
+.drizzle-state-switcher__heading {
+    margin-bottom: 1rem;
+}
+
+.drizzle-state-switcher__state {
+    align-items: center;
+    display: flex;
+}
+
+.drizzle-state-switcher__state-item {
+    margin-bottom: 0.3rem;
+}
+
+.drizzle-state-switcher__state-item:first-child {
+    margin-right: 1rem;
+}
