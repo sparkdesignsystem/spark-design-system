@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "@scalescss/scalescss": "git://github.com/ScalesCSS/scalescss.git#36927530b8375735d3beb8c4393c3dbf10a41e2a",
-    "marked": "^0.3.9"
+    "marked": "^0.3.9",
+    "npm": "^5.7.1"
   }
 }

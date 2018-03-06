@@ -1,0 +1,68 @@
+// ==================================================================
+// Alerts
+// ==================================================================
+.sprk-c-Alert {
+  background-color: $gray-light;
+  border-radius: $border-radius;
+}
+
+.sprk-c-Alert,
+.sprk-c-Alert__icon {
+  display: flex;
+}
+
+.sprk-c-Alert__icon,
+.sprk-c-Alert__text {
+  padding: $space-inset-m;
+}
+
+.sprk-c-Alert__text,
+.sprk-c-Alert__icon .sprk-c-Icon {
+  flex: 1;
+}
+
+.sprk-c-Alert__text {
+  align-self: center;
+}
+
+.sprk-c-Alert__icon {
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+}
+
+.sprk-c-Alert__icon:first-child {
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+.sprk-c-Alert__icon:first-child .sprk-c-Icon {
+  fill: $white;
+}
+
+.sprk-c-Alert__icon:last-child {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.sprk-c-Alert__icon:last-child .sprk-c-Icon {
+  fill: $gray-dark;
+}
+
+.sprk-c-Alert__icon--success {
+  background-color: $green-medium;
+}
+
+.sprk-c-Alert__icon--info {
+  background-color: $orange-medium;
+}
+
+.sprk-c-Alert__icon--fail {
+  background-color: $red-medium;
+}
+
+.sprk-c-Alert__icon--dismiss {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 0;
+}
