@@ -1,6 +1,20 @@
 // ==================================================================
 // Input Component
 // ==================================================================
+label,
+.sprk-b-Label {
+  @include TextCrop(
+    $line-height: $line-height-display-seven,
+    $top-crop: 8,
+    $bottom-crop: 8,
+    $crop-font-size: (strip-unit($font-size-display-seven) * 16),
+    $crop-line-height: $line-height-display-seven);
+
+  font-size: $font-size-display-seven;
+  color: $color-display-seven;
+  font-weight: $font-weight-display-seven;
+}
+
 .sprk-b-TextInput,
 textarea {
   color: $gray-dark;
@@ -40,4 +54,9 @@ textarea {
     box-shadow: 0 0 0 3px $red-medium;
     background-color: $red-light;
   }
+}
+
+.sprk-b-InputContainer > .sprk-b-Label,
+.sprk-b-InputContainer > label {
+  margin-bottom: $space-m;
 }

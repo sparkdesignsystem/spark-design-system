@@ -1,0 +1,18 @@
+---
+name: Text Input
+notes:
+   This is the basic style for any text input.
+info:
+  - You need to make sure that the label's for attribute matches the id attribute of the input element.
+    The input element's id should be unique on the page.
+  - You need to make sure that the input element's type attribute is using the correct value that semantically
+    matches your field's data.
+  - You should use helper text, as seen below, when a user needs further clarification beyond the label.
+order: 1
+---
+
+<div class="sprk-b-InputContainer">
+  <label for="<your input's id>">Text Input Label</label>
+  <input class="sprk-b-TextInput sprk-u-Size-100" id="<your input's id>" type="<your field type>">
+  <span class="sprk-b-HelperText">Optional helper text, used to clarify the field's intent.</span>
+</div>
