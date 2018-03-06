@@ -3,7 +3,7 @@
 // ==================================================================
 .sprk-c-Alert {
   background-color: $gray-light;
-  border-radius: $corners;
+  border-radius: $border-radius;
 }
 
 .sprk-c-Alert,
@@ -24,12 +24,16 @@
 .sprk-c-Alert__icon {
   align-items: center;
   justify-content: center;
-  width: 4.375rem;
+  width: 3.5rem;
+
+  @media all and (min-width: 30rem) {
+    width: 4.375rem;
+  }
 }
 
 .sprk-c-Alert__icon:first-child {
-  border-top-left-radius: $corners;
-  border-bottom-left-radius: $corners;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
 }
 
 .sprk-c-Alert__icon:first-child .sprk-c-Icon {
@@ -37,8 +41,8 @@
 }
 
 .sprk-c-Alert__icon:last-child {
-  border-top-right-radius: $corners;
-  border-bottom-right-radius: $corners;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }
 
 .sprk-c-Alert__icon:last-child .sprk-c-Icon {

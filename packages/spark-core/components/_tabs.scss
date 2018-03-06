@@ -30,13 +30,13 @@
 
   &:first-of-type {
     border-top: 2px solid $green-medium;
-    border-top-left-radius: $corners;
-    border-top-right-radius: $corners;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
   }
 
   &:last-of-type {
-    border-bottom-left-radius: $corners;
-    border-bottom-right-radius: $corners;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   @media all and (min-width: 46em) {
@@ -46,14 +46,14 @@
     border-right: 0;
 
     &:first-of-type {
-      border-top-left-radius: $corners;
-      border-bottom-left-radius: $corners;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
       border-top-right-radius: 0;
     }
 
     &:last-of-type {
-      border-top-right-radius: $corners;
-      border-bottom-right-radius: $corners;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
       border-bottom-left-radius: 0;
       border-right: 2px solid $green-medium;
     }
