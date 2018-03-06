@@ -16,19 +16,19 @@
   padding: $space-inset-m;
 }
 
+.sprk-c-Alert__text,
+.sprk-c-Alert__icon .sprk-c-Icon {
+  flex: 1;
+}
+
 .sprk-c-Alert__text {
   align-self: center;
-  flex: 1;
 }
 
 .sprk-c-Alert__icon {
   align-items: center;
   justify-content: center;
   width: 3.5rem;
-
-  @media all and (min-width: 30rem) {
-    width: 4.375rem;
-  }
 }
 
 .sprk-c-Alert__icon:first-child {
