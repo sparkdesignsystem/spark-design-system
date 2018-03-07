@@ -1,4 +1,4 @@
-<div class="{{#unless data.noHeader}}drizzle-Item drizzle-u-rhythm{{/unless}} {{#if data.invisible}}hidden{{/if}}"
+<div class="{{#if data.noHeader}}drizzle-u-noMarginTop{{else}}drizzle-Item drizzle-u-rhythm{{/if}} {{#if data.invisible}}hidden{{/if}}"
      data-template-id="{{toSlug name}}">
   {{!-- Header, labels --}}
     {{#unless data.noHeader}}
@@ -63,6 +63,5 @@
           <pre class="drizzle-u-borderTop drizzle-u-pad"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
         {{/unless}}
       </div>
-
-    </div>
   {{/if}}
+</div>
