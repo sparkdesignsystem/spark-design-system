@@ -1,9 +1,9 @@
 .drizzle-state-switcher {
     background-color: #fff;
     display: flex;
+    max-width: 250px;
 
     @media (min-width: 960px) {
-      max-width: 250px;
       padding: 1rem;
     }
 }
