@@ -2,7 +2,7 @@
 // Icons
 // ==================================================================
 .sprk-c-Icon {
-  height: 1rem;
+  height: $font-size-body-two;
   width: auto;
 }
 
@@ -11,5 +11,5 @@
 }
 
 .sprk-c-Icon--large {
-  height: 2rem;
+  height: $font-size-body-two + 0.25;
 }
