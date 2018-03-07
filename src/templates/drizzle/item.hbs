@@ -1,4 +1,7 @@
-<div class="drizzle-Item drizzle-u-rhythm">
+{{#if data.stateChanger}}
+  {{> drizzle.statechanger}}
+{{/if}}
+<div class="drizzle-Item drizzle-u-rhythm {{#if data.invisible}}hidden{{/if}}" data-template-id="{{toSlug name}}">
   {{!-- Header, labels --}}
   <div class="drizzle-u-marginEnds">
     {{#unless data.noHeader}}
@@ -35,6 +38,7 @@
   {{#if data.doclayout}}
     {{{pattern id @root}}}
     {{else}}
+
       {{!-- Preview --}}
       <div class="drizzle-u-border spark-preview sprk-b-TypeBodyTwo">
         <div class="drizzle-u-pad drizzle-u-cf drizzle-u-posRelative {{data.previewClass}}">

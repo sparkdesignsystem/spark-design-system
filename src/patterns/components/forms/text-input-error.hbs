@@ -2,9 +2,14 @@
 name: Text Input - Error State
 notes:
   This is a basic text input with an error.
+info:
+  - You need to make sure that the label's for attribute matches the id attribute of the input element.
+    The input element's id should be unique on the page.
+  - You need to make sure that the input element's type attribute is using the correct value that semantically
+    matches your field's data.
+  - You should use helper text, as seen below, when a user needs further clarification beyond the label.
 order: 2
-labels:
-  - inprogress
+invisible: true
 ---
 
 <div class="sprk-b-InputContainer">
