@@ -11,10 +11,19 @@
       {{else}}
         <title>{{data "project.title"}}</title>
       {{/if}}
+
       <link rel="preconnect" href="https://use.typekit.net">
       <link rel="stylesheet" href="https://use.typekit.net/exb7ocq.css">
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/drizzle/styles/drizzle.css">
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/toolkit.css">
+
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
     {{/block}}
   </head>
   <body class="{{bodyclass}}">
