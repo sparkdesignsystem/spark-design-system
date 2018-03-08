@@ -2,16 +2,16 @@ name: Inputs
 notes: |
   Examples of form elements.
 contents:
-  Text Input: forms.html#text-input
-  Search Input: forms.html#search-input
-  Textarea Input: forms.html#textarea-input
-  Check Box: forms.html#check-box
-  Radio Buttons: forms.html#radio-buttons
-  Select Box: forms.html#select-box
-  SSN Input: forms.html#ssn-input
-  Password Input: forms.html#password-input
-  Phone Number: forms.html#phone-input
-  Money Input: forms.html#money-input
-  Date Input: forms.html#date-input
+  Text Input: inputs.html#text-input
+  Search Input: inputs.html#search-input
+  Textarea Input: inputs.html#textarea-input
+  Check Box: inputs.html#check-box
+  Radio Buttons: inputs.html#radio-buttons
+  Select Box: inputs.html#select-box
+  SSN Input: inputs.html#ssn-input
+  Password Input: inputs.html#password-input
+  Phone Number: inputs.html#phone-input
+  Money Input: inputs.html#money-input
+  Date Input: inputs.html#date-input
   Date Picker: date-picker.html
 sparkPackageCore: true
