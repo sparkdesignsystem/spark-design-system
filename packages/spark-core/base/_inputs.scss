@@ -13,6 +13,7 @@ label,
   font-size: $font-size-display-seven;
   color: $color-display-seven;
   font-weight: $font-weight-display-seven;
+  line-height: $line-height-display-seven;
 }
 
 .sprk-b-Label--inline {
@@ -85,6 +86,9 @@ textarea {
 
 .sprk-b-ErrorText {
   color: $red-medium;
+  font-size: $font-size-body-two;
+  line-height: $line-height-body-two;
+  font-weight: $font-weight-body-two;
 }
 
 .sprk-b-TextArea {
