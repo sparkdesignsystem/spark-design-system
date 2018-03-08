@@ -43,9 +43,31 @@ layout: blank
       </div>
     </div>
 
+    <h2 class="drizzle-h2">Search Input</h2>
 
-
-
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer">
+        <label for="search-normal-test">Search</label>
+        <input class="sprk-b-TextInput sprk-u-Size-100" id="search-normal-test"
+               type="search" role="search">
+      </div>
+    </div>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer">
+        <label for="search-error-test">Search</label>
+        <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100"
+               aria-invalid="true" id="search-error-test" type="search" role="search"
+               aria-describedby="search--error-container">
+        <span class="sprk-b-ErrorText"
+              id="search--error-container">There is an error on this field.</span>
+      </div>
+    </div>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer">
+        <label for="search-disabled-test">Search</label>
+        <input disabled class="sprk-b-TextInput sprk-u-Size-100" id="search-disabled-test" type="search" role="search">
+      </div>
+    </div>
 
 
     <div class="drizzle-Space-inset-m"> </div>

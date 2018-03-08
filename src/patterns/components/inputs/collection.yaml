@@ -14,4 +14,11 @@ contents:
   Money Input: inputs.html#money-input
   Date Input: inputs.html#date-input
   Date Picker: date-picker.html
+restrictions:
+  - Make sure that labels 'for' attribute matches the 'id' attribute of the corresponding
+    input element.
+  - The input element's 'id' should be unique on the page.
+  - You need to make sure that the id referenced in aria-describedby matches the id on the error container.
+  - You should use helper text, as linked below, when a user needs further clarification beyond the label.
+  - Error messages should not exceed more than four lines of text at a 320px viewport width.
 sparkPackageCore: true

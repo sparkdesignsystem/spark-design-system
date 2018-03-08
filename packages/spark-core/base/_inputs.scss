@@ -16,24 +16,21 @@ label,
   line-height: $line-height-display-seven;
 }
 
-.sprk-b-Label--inline {
-  display: inline-block;
-}
-
 .sprk-b-SubLabel {
   font-size: $font-size-body-two;
   font-weight: $font-weight-body-two;
 }
 
 .sprk-b-TextInput,
+select,
 textarea {
   color: $gray-dark;
   outline: none;
-  font-size: $font-size-body-one;
+  font-size: $font-size-body-two;
 
   &:focus {
     border-color: $blue-medium;
-    box-shadow: 0 0 0 3px $blue-medium;
+    box-shadow: $input-box-shadow;
   }
 }
 
@@ -52,7 +49,7 @@ textarea {
 .sprk-b-TextInput--date-picker {
   background-image: url('../images/calendar.svg');
   background-position: 5px 3px;
-  padding-left: 3rem;
+  padding-left: $space-l;
 }
 
 .sprk-b-TextInput--error {
@@ -61,7 +58,7 @@ textarea {
 
   &:focus {
     border-color: $red-medium;
-    box-shadow: 0 0 0 3px $red-medium;
+    box-shadow: $input-error-box-shadow;
     background-color: $red-light;
   }
 }
@@ -70,8 +67,7 @@ textarea {
   color: $white;
 
   &:focus {
-    border-color: $gray-medium;
-    box-shadow: 0 0 0 3px $gray-medium;
+    box-shadow: $input-disabled-box-shadow;
   }
 }
 
@@ -86,9 +82,6 @@ textarea {
 
 .sprk-b-ErrorText {
   color: $red-medium;
-  font-size: $font-size-body-two;
-  line-height: $line-height-body-two;
-  font-weight: $font-weight-body-two;
 }
 
 .sprk-b-TextArea {
