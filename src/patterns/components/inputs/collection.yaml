@@ -3,22 +3,22 @@ notes: |
   Examples of form elements.
 contents:
   Text Input: inputs.html#text-input
-  Search Input: inputs.html#search-input
-  Textarea Input: inputs.html#textarea-input
-  Check Box: inputs.html#check-box
+  Checkboxes: inputs.html#checkboxes
   Radio Buttons: inputs.html#radio-buttons
   Select Box: inputs.html#select-box
+  Textarea Input: inputs.html#textarea-input
   SSN Input: inputs.html#ssn-input
+  Search Input: inputs.html#search-input
   Password Input: inputs.html#password-input
   Phone Number: inputs.html#phone-input
   Money Input: inputs.html#money-input
   Date Input: inputs.html#date-input
   Date Picker: date-picker.html
 restrictions:
-  - Make sure that labels 'for' attribute matches the 'id' attribute of the corresponding
+  - Make sure that each label's 'for' attribute matches the 'id' attribute of the corresponding
     input element.
-  - The input element's 'id' should be unique on the page.
+  - Each input element's 'id' should be unique on the page.
   - You need to make sure that the id referenced in aria-describedby matches the id on the error container.
   - You should use helper text, as linked below, when a user needs further clarification beyond the label.
-  - Error messages should not exceed more than four lines of text at a 320px viewport width.
+  - Labels and error messages should be short and to the point.
 sparkPackageCore: true

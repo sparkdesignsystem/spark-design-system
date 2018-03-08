@@ -4,19 +4,25 @@
 label,
 .sprk-b-Label {
   @include TextCrop(
-    $line-height: $line-height-display-seven,
+    $line-height: $line-height-body-one,
     $top-crop: 8,
     $bottom-crop: 8,
-    $crop-font-size: (strip-unit($font-size-display-seven) * 16),
-    $crop-line-height: $line-height-display-seven);
+    $crop-font-size: (strip-unit($font-size-body-one) * 16),
+    $crop-line-height: $line-height-body-one);
 
-  font-size: $font-size-display-seven;
-  color: $color-display-seven;
-  font-weight: $font-weight-display-seven;
-  line-height: $line-height-display-seven;
+  font-size: $font-size-body-one;
+  color: $blue-dark;
+  font-weight: $font-weight-body-one;
+  line-height: $line-height-body-one;
+}
+
+.sprk-b-Label--inline {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .sprk-b-SubLabel {
+  color: $color-body-two;
   font-size: $font-size-body-two;
   font-weight: $font-weight-body-two;
 }
@@ -71,9 +77,17 @@ textarea {
   }
 }
 
+.sprk-b-InputContainer {
+  max-width: 27.5rem;
+}
+
+.sprk-b-InputContainer\@sm {
+  max-width: none;
+}
+
 .sprk-b-InputContainer > .sprk-b-Label,
 .sprk-b-InputContainer > label {
-  margin-bottom: $space-m;
+  margin-bottom: $space-s;
 }
 
 .sprk-b-HelperText {
