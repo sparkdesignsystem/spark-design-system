@@ -1,6 +1,39 @@
 ---
-title: Forms Tests
+title: Inputs Tests
 layout: blank
 ---
+<h1> Inputs </h1>
+{{> drizzle.spark-core-icons}}
 
-Forms!
+<div class="drizzle-Space-inset-m">
+  <div class="sprk-b-InputContainer">
+    <label for="text-input-normal-test">Name</label>
+    <input class="sprk-b-TextInput sprk-u-Size-100" id="text-input-normal-test" type="text">
+  </div>
+</div>
+<div class="drizzle-Space-inset-m">
+  <div class="sprk-b-InputContainer">
+    <label for="text-input-error-test">Name</label>
+    <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100"
+           id="text-input-error-test" type="text"
+           aria-describedby="text-input-error-test--error-container" aria-invalid="true">
+    <span class="sprk-b-ErrorText" id="text-input-error-test--error-container">There is an error on this field.</span>
+  </div>
+</div>
+<div class="drizzle-Space-inset-m">
+  <div class="sprk-b-InputContainer">
+    <label for="text-input-disabled-test">Text Input Label</label>
+    <input disabled class="sprk-b-TextInput sprk-u-Size-100" id="text-input-disabled-test" type="text">
+  </div>
+</div>
+
+
+
+
+
+
+<div class="drizzle-Space-inset-m"> </div>
+<div class="drizzle-Space-inset-m"> </div>
+<div class="drizzle-Space-inset-m"> </div>
+<div class="drizzle-Space-inset-m"> </div>
+<div class="drizzle-Space-inset-m"> </div>

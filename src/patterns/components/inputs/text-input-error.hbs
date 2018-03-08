@@ -2,18 +2,22 @@
 name: Text Input - Error State
 notes:
   This is a basic text input with an error.
-info:
+restrictions:
   - You need to make sure that the label's for attribute matches the id attribute of the input element.
     The input element's id should be unique on the page.
   - You need to make sure that the input element's type attribute is using the correct value that semantically
     matches your field's data.
-  - You should use helper text, as seen below, when a user needs further clarification beyond the label.
+  - You need to make sure that the id referenced in aria-describedby matches the id on the error container.
+  - You should use helper text, as linked below, when a user needs further clarification beyond the label.
+links:
+  Helper Text:  inputs.html#helper-text
 order: 2
 invisible: true
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="email">Email</label>
-  <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100" id="email" type="email" placeholder="user@name.com">
-  <span class="sprk-b-ErrorText">There is an error on this field.</span>
+  <label for="<your input's id>">Text Input Label</label>
+  <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100" id="<your input's id>"
+         type="<your field type>" aria-describedby="<your input's id--error-container>">
+  <span class="sprk-b-ErrorText" id="<your input's id>--error-container">There is an error on this field.</span>
 </div>
