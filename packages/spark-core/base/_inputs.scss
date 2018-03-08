@@ -15,6 +15,15 @@ label,
   font-weight: $font-weight-display-seven;
 }
 
+.sprk-b-Label--inline {
+  display: inline-block;
+}
+
+.sprk-b-SubLabel {
+  font-size: $font-size-body-two;
+  font-weight: $font-weight-body-two;
+}
+
 .sprk-b-TextInput,
 textarea {
   color: $gray-dark;
@@ -56,7 +65,37 @@ textarea {
   }
 }
 
+.sprk-b-TextInput[readonly] {
+  color: $white;
+
+  &:focus {
+    border-color: $gray-medium;
+    box-shadow: 0 0 0 3px $gray-medium;
+  }
+}
+
 .sprk-b-InputContainer > .sprk-b-Label,
 .sprk-b-InputContainer > label {
   margin-bottom: $space-m;
+}
+
+.sprk-b-HelperText {
+  color: $gray-medium;
+}
+
+.sprk-b-ErrorText {
+  color: $red-medium;
+}
+
+.sprk-b-TextArea {
+  min-height: 125px;
+  margin: $space-stack-m;
+}
+
+// Placeholder colors
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+::placeholder {
+  color: $gray-medium;
 }
