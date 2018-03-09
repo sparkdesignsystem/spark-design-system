@@ -146,6 +146,7 @@ layout: blank
     </div>
 
     <h2 class="drizzle-h2">Radios</h2>
+
     <div class="drizzle-Space-inset-m">
       <div class="sprk-b-InputContainer">
         <fieldset>
@@ -212,6 +213,55 @@ layout: blank
             <label for="radio-disabled-test2" class="sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
           </div>
         </fieldset>
+      </div>
+    </div>
+
+    <h2 class="drizzle-h2">Select Box</h2>
+
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer">
+        <label for="select-normal">Select Box Label</label>
+        <select id="select-normal">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <optgroup label="Grouped Options">
+            <option value="g1">Grouped Option 1</option>
+            <option value="g2">Grouped Option 2</option>
+            <option value="g3">Grouped Option 3</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer">
+        <label for="select-error">Select Box Label</label>
+        <select id="select-error" aria-describedby="selectid--error-container" aria-invalid="true">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <optgroup label="Grouped Options">
+            <option value="g1">Grouped Option 1</option>
+            <option value="g2">Grouped Option 2</option>
+            <option value="g3">Grouped Option 3</option>
+          </optgroup>
+        </select>
+        <span class="sprk-b-ErrorText" id="selectid--error-container">There is an error on this field.</span>
+      </div>
+    </div>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer">
+        <label for="selectdisabled">Select Box Label</label>
+        <select disabled id="selectdisabled">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <optgroup label="Grouped Options">
+            <option value="g1">Grouped Option 1</option>
+            <option value="g2">Grouped Option 2</option>
+            <option value="g3">Grouped Option 3</option>
+          </optgroup>
+        </select>
       </div>
     </div>
 </div>
