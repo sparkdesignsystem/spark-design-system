@@ -193,6 +193,10 @@ $input-disabled-border-color: $gray-medium;
 $input-disabled-text-color: $white;
 $helper-text-hidden: false;
 $text-input-padding: $space-s;
+$input-readonly-border-color: $gray-medium;
+$input-box-shadow: 0 0 0 3px $blue-medium;
+$input-error-box-shadow: 0 0 0 3px $red-medium;
+$input-disabled-box-shadow: 0 0 0 3px $gray-medium;
 
 //
 // Tables

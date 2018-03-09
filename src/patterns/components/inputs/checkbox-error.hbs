@@ -1,7 +1,8 @@
 ---
-name: Checkboxes
+name: Checkboxes - Error State
 notes: |
   This is a checkbox. It uses the native browser styles.
+invisible: true
 order: 3
 ---
 
@@ -11,16 +12,17 @@ order: 3
       <label>Checkbox Group Label</label>
     </legend>
     <div class="sprk-b-SelectionContainer">
-      <input id="<id1>" type="checkbox">
+      <input id="<id1>" type="checkbox" aria-describedby="<id>--error-container">
       <label for="<id1>" class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 1</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<id2>" type="checkbox">
+      <input id="<id2>" type="checkbox" aria-describedby="<id>--error-container">
       <label for="<id2>" class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 2</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<id3>" type="checkbox">
+      <input id="<id3>" type="checkbox" aria-describedby="<id>--error-container">
       <label for="<id3>" class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 3</label>
     </div>
   </fieldset>
+  <span class="sprk-b-ErrorText" id="<id>--error-container">There is an error on this field.</span>
 </div>
