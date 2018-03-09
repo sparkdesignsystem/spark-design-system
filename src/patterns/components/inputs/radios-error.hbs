@@ -1,7 +1,8 @@
 ---
-name: Radio Buttons
+name: Radio Buttons - Error State
 notes: |
   These are radio buttons. They use the native browser styles.
+invisible: true
 order: 5
 ---
 
@@ -11,16 +12,17 @@ order: 5
       <label>Radio Buttons Group Label</label>
     </legend>
     <div class="sprk-b-SelectionContainer">
-      <input id="<radioid1>" type="radio" name="radioname">
+      <input id="<radioid1>" type="radio" name="radioname" aria-describedby="<radioid>--error-container">
       <label for="<radioid1>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<radioid2>" type="radio" name="radioname">
+      <input id="<radioid2>" type="radio" name="radioname" aria-describedby="<radioid>--error-container">
       <label for="<radioid2>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<radioid3>" type="radio" name="radioname">
+      <input id="<radioid3>" type="radio" name="radioname" aria-describedby="<radioid>--error-container">
       <label for="<radioid3>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
     </div>
   </fieldset>
+  <span class="sprk-b-ErrorText" id="<radioid>--error-container">There is an error on this field.</span>
 </div>
