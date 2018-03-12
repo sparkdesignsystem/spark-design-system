@@ -92,7 +92,7 @@ module.exports = {
         tasks: ['sass']
       },
       {
-        match: ['./src/assets/**/*.js'],
+        match: ['./src/assets/**/*.js', './packages/spark-core/**/*.js'],
         tasks: ['js']
       },
       {

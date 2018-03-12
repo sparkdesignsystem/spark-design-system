@@ -266,6 +266,7 @@ layout: blank
     </div>
 
     <h2 class="drizzle-h2">Textarea</h2>
+
     <div class="drizzle-Space-inset-m">
       <div class="sprk-b-InputContainer">
         <label for="textarea-normal">Description</label>
@@ -282,6 +283,39 @@ layout: blank
       <div class="sprk-b-InputContainer">
         <label for="textarea-disabled">Description</label>
         <textarea class="sprk-b-TextInput sprk-u-Size-100" id="textarea-disabled"></textarea>
+      </div>
+    </div>
+
+    <h2 class="drizzle-h2">SSN Input</h2>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer" data-sprk-input="ssn">
+        <label for="ssn-normal">Social Security #</label>
+        <input class="sprk-b-TextInput sprk-u-Size-100" id="ssn-normal" type="password" placeholder="000-00-0000">
+        <div class="sprk-b-SelectionContainer">
+          <input id="show-ssn-normal" type="checkbox">
+          <label for="show-ssn-normal" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
+        </div>
+      </div>
+    </div>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer" data-sprk-input="ssn">
+        <label for="ssn-error">Social Security #</label>
+        <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100" id="ssn-error" type="password" placeholder="000-00-0000" aria-describedby="ssn--error-container">
+        <div class="sprk-b-SelectionContainer">
+          <input id="show-ssn-error" type="checkbox">
+          <label for="show-ssn-error" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
+        </div>
+        <span class="sprk-b-ErrorText" id="ssn--error-container">There is an error on this field.</span>
+      </div>
+    </div>
+    <div class="drizzle-Space-inset-m">
+      <div class="sprk-b-InputContainer" data-sprk-input="ssn">
+        <label for="ssn-disabled">Social Security #</label>
+        <input disabled class="sprk-b-TextInput sprk-u-Size-100 js-ssn" id="ssn-disabled" type="text" placeholder="000-00-0000">
+        <div class="sprk-b-SelectionContainer">
+          <input disabled id="show-ssn-disabled" type="checkbox" class="js-remove-mask">
+          <label for="show-ssn-disabled" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
+        </div>
       </div>
     </div>
 </div>

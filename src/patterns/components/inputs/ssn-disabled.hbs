@@ -1,5 +1,5 @@
 ---
-name: SSN Input
+name: SSN Input - Disabled State
 notes: |
   This is an SSN input.
 info:
@@ -8,14 +8,15 @@ info:
   - On blur of the text input, if the "Show SSN" box is checked, add dashes between the 3rd and 4th number and the 5th and 6th number (ex. 000-00-0000).
   - 'Placeholder text should read: 000-00-0000.'
   - On key press, reveal the placeholder inline with the label.
+invisible: true
 order: 11
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="ssn">
   <label for="ssn">Social Security #</label>
-  <input class="sprk-b-TextInput sprk-u-Size-100" id="ssn" type="password" placeholder="000-00-0000">
+  <input disabled class="sprk-b-TextInput sprk-u-Size-100 js-ssn" id="ssn" type="text" placeholder="000-00-0000">
   <div class="sprk-b-SelectionContainer">
-    <input id="show-ssn" type="checkbox">
+    <input disabled id="show-ssn" type="checkbox" class="js-remove-mask">
     <label for="show-ssn" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
   </div>
 </div>
