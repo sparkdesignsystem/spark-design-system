@@ -1,0 +1,14 @@
+---
+name: Inline Search Input - Error State
+notes:
+  This search input is intended for use in the masthead and similar patterns.
+order: 16
+invisible: true
+---
+<div class="sprk-b-InputContainer">
+  <label for="inline-search" class="sprk-u-VisuallyHidden">Search</label>
+  <input placeholder="Search" class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100" aria-invalid="true"
+         id="inline-search" type="search" role="search" aria-describedby="search--error-container">
+  <span class="sprk-b-ErrorText"
+        id="search--error-container">There is an error on this field.</span>
+</div>
