@@ -1,14 +1,13 @@
 /* global describe it*/
-
-require('babel-register');
-const jsdom = require("mocha-jsdom");
+const jsdom = require("jsdom");
+import {formatSSN} from '../base/ssnInput';
 const expect = require('chai').expect;
 
-import {formatSSN} from '../base/ssnInput';
+const {JSDOM} = jsdom;
+const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+global.document = dom.window.document;
 
 describe('formatSSN tests', () => {
-  jsdom();
-
   it('if the value.length is < 9, do nothing', () => {
     const div = document.createElement('input');
     div.value = '12345678';

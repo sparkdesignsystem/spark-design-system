@@ -1,21 +1,22 @@
 import {toggleValue} from '../utilities/toggleValue';
+import {getElements} from '../utilities/getElements';
 
 function ssnInput () {
-  const ssnInputs = document.querySelectorAll('[data-sprk-input="ssn"]');
+  getElements('[data-sprk-input="ssn"]', bindUIEvents);
+}
 
-  ssnInputs.forEach(ssnInput => {
-    const field = ssnInput.querySelectorAll('input')[0];
-    const checkbox = ssnInput.querySelectorAll('input[type=checkbox]')[0];
+function bindUIEvents (element) {
+  const field = element.querySelectorAll('input')[0];
+  const checkbox = element.querySelectorAll('input[type=checkbox]')[0];
 
-    // set up the 'show ssn' button
-    checkbox.addEventListener('change', () => {
-      field.setAttribute('type', toggleValue(field.getAttribute('type'), 'text', 'password'));
-    });
+  // set up the 'show ssn' button
+  checkbox.addEventListener('change', () => {
+    field.setAttribute('type', toggleValue(field.getAttribute('type'), 'text', 'password'));
+  });
 
-    // set up the autoformat
-    field.addEventListener('blur', () => {
-      field.value = formatSSN(field);
-    });
+  // set up the autoformat
+  field.addEventListener('blur', () => {
+    field.value = formatSSN(field);
   });
 }
 
