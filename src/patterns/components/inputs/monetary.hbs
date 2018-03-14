@@ -1,0 +1,18 @@
+---
+name: Monetary Input
+notes: |
+  This is a monetary input.
+info:
+  - On blur, format the input to include commas and a decimal followed by two zeros (ex. 1,000.00).
+restrictions:
+  - Do not use placeholder text.
+order: 18
+---
+
+<div class="sprk-b-InputContainer" data-sprk-input="monetary">
+  <label for="payment">Payment</label>
+  <span class="sprk-b-TextInput--monetary">
+    <input class="sprk-b-TextInput sprk-u-Size-100 sprk-u-plm" id="payment">
+  </span>
+  <span class="sprk-b-ErrorText" id="payment--error-container"></span>
+</div>

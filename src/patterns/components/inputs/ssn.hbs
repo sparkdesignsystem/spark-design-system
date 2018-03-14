@@ -8,6 +8,8 @@ info:
   - On blur of the text input, if the "Show SSN" box is checked, add dashes between the 3rd and 4th number and the 5th and 6th number (ex. 000-00-0000).
   - 'Placeholder text should read: 000-00-0000.'
   - On key press, reveal the placeholder inline with the label.
+  - To override the invalid SSN content, place an attribute on the input container called 'data-sprk-input-invalid-ssn-content' and set the value
+    to your content. This value is read when the validation runs.
 order: 11
 ---
 
@@ -18,4 +20,5 @@ order: 11
     <input id="show-ssn" type="checkbox">
     <label for="show-ssn" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
   </div>
+  <span class="sprk-b-ErrorText" id="ssn--error-container"></span>
 </div>

@@ -10,9 +10,9 @@ contents:
   SSN Input: inputs.html#ssn-input
   Search Input: inputs.html#search-input
   Inline Search Input: inputs.html#inline-search-input
+  Money Input: inputs.html#monetary-input
   Password Input: inputs.html#password-input
   Phone Number: inputs.html#phone-input
-  Money Input: inputs.html#money-input
   Date Input: inputs.html#date-input
   Date Picker: date-picker.html
 restrictions:
