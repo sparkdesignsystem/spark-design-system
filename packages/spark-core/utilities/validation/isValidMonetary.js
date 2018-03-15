@@ -1,5 +1,5 @@
 function isValidMonetary (value) {
-  const expression = /^[0-9]\d*(((,\d{3}){1})?(\.\d{0,2})?)$/;
+  const expression = /(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$/;
   return expression.test(value);
 }
 
