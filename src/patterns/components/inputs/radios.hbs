@@ -1,26 +1,41 @@
 ---
 name: Radio Buttons
-notes: |
-  These are radio buttons. They use the native browser styles.
 order: 5
 ---
 
 <div class="sprk-b-InputContainer">
   <fieldset>
     <legend>
-      <label>Radio Buttons Group Label</label>
+      <label>Radio Group Label</label>
     </legend>
     <div class="sprk-b-SelectionContainer">
-      <input id="<radioid1>" type="radio" name="radioname">
-      <label for="<radioid1>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             class="sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<radioid2>" type="radio" name="radioname">
-      <label for="<radioid2>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             class="sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<radioid3>" type="radio" name="radioname">
-      <label for="<radioid3>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             class="sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
     </div>
   </fieldset>
+  <span class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

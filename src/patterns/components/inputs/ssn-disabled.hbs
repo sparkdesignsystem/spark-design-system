@@ -1,7 +1,5 @@
 ---
 name: SSN Input - Disabled State
-notes: |
-  This is an SSN input.
 info:
   - Use *'s to mask the value by default.
   - Checking "Show SSN" removes the mask and shows the actual SSN.
@@ -12,12 +10,6 @@ invisible: true
 order: 11
 ---
 
-<div class="sprk-b-InputContainer" data-sprk-input="ssn">
-  <label for="ssn">Social Security #</label>
-  <input disabled class="sprk-b-TextInput sprk-u-Size-100 js-ssn" id="ssn" type="text" placeholder="000-00-0000">
-  <div class="sprk-b-SelectionContainer">
-    <input disabled id="show-ssn" type="checkbox" class="js-remove-mask">
-    <label for="show-ssn" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
-  </div>
-  <span class="sprk-b-ErrorText" id="ssn--error-container"></span>
-</div>
+{{#embed "patterns.components.inputs.ssn"
+         idattr="ssn-disabled"
+         disabled=true}}{{/embed}}

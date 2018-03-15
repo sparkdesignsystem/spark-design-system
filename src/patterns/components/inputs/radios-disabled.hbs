@@ -1,27 +1,10 @@
 ---
 name: Radio Buttons - Disabled State
-notes: |
-  These are radio buttons. They use the native browser styles.
 invisible: true
 order: 5
 ---
 
-<div class="sprk-b-InputContainer">
-  <fieldset>
-    <legend>
-      <label>Radio Buttons Group Label</label>
-    </legend>
-    <div class="sprk-b-SelectionContainer">
-      <input disabled id="<radioid1>" type="radio" name="radioname">
-      <label for="<radioid1>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
-    </div>
-    <div class="sprk-b-SelectionContainer">
-      <input disabled id="<radioid2>" type="radio" name="radioname">
-      <label for="<radioid2>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
-    </div>
-    <div class="sprk-b-SelectionContainer">
-      <input disabled id="<radioid3>" type="radio" name="radioname">
-      <label for="<radioid3>" class="sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
-    </div>
-  </fieldset>
-</div>
+{{#embed "patterns.components.inputs.radios"
+         idattr="radio-disabled"
+         disabled=true}}
+{{/embed}}

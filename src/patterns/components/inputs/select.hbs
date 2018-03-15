@@ -1,13 +1,13 @@
 ---
 name: Select Box
-notes: |
-  This is a select box.
 order: 7
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="selectid">Select Box Label</label>
-  <select id="selectid">
+  <label for="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}">Select Box Label</label>
+  <select id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
+          aria-describedby="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container"
+          {{#if disabled}} disabled{{/if}}>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
@@ -17,4 +17,7 @@ order: 7
       <option value="g3">Grouped Option 3</option>
     </optgroup>
   </select>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container">
+        {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

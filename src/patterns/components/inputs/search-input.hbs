@@ -1,11 +1,16 @@
 ---
 name: Search Input
-notes:
-  This is a basic search input.
 order: 13
-stateChanger: true
 ---
+
 <div class="sprk-b-InputContainer">
-  <label for="search">Search</label>
-  <input class="sprk-b-TextInput sprk-u-Size-100" id="search" type="search" role="search">
+  <label for="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}">Search</label>
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+         id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}"
+         type="search"
+         role="search"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container"
+         {{#if disabled}} disabled{{/if}}>
+  <span class="sprk-b-ErrorText"
+        id="search--error-container">{{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

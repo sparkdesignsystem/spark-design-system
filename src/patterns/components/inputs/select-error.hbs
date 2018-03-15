@@ -1,22 +1,9 @@
 ---
 name: Select Box - Error State
-notes: |
-  This is a select box.
 invisible: true
 order: 7
 ---
 
-<div class="sprk-b-InputContainer">
-  <label for="selectid">Select Box Label</label>
-  <select class="" id="selectid" aria-describedby="selectid--error-container" aria-invalid="true">
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <optgroup label="Grouped Options">
-      <option value="g1">Grouped Option 1</option>
-      <option value="g2">Grouped Option 2</option>
-      <option value="g3">Grouped Option 3</option>
-    </optgroup>
-  </select>
-  <span class="sprk-b-ErrorText" id="selectid--error-container">There is an error on this field.</span>
-</div>
+{{#embed "patterns.components.inputs.select"
+         idattr="select-error"
+         errorMessage="There is an error on this field."}}{{/embed}}
