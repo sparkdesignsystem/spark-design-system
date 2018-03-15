@@ -15,18 +15,21 @@ function bindUIEvents (element) {
   });
 
   field.addEventListener('blur', () => {
-    field.value = formatMonetary(field.value);
-    runValidation(element);
+    if (runValidation(element)) {
+      field.value = formatMonetary(field.value);
+    }
   });
 }
 
 function runValidation (element) {
   const field = element.querySelectorAll('input')[0];
-  if (isValidMonetary(field.value)) {
+  const validTest = isValidMonetary(field.value);
+  if (validTest) {
     setValidTextInput(element);
   } else {
     setInvalidTextInput(element, 'There is an error on this field.');
   }
+  return validTest;
 }
 
 function formatMonetary (value) {

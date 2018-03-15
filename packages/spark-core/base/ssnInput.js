@@ -19,14 +19,21 @@ function bindUIEvents (element) {
 
   // set up the validation and formatter
   field.addEventListener('keyup', () => {
-    if (isValidSSN(field.value)) {
+    if (runValidation(element)) {
       field.value = formatSSN(field.value);
-      setValidTextInput(element);
-    } else {
-      // set Invalid
-      setInvalidTextInput(element, 'There is an error on this field.');
     }
   });
+}
+
+function runValidation (element) {
+  const field = element.querySelectorAll('input')[0];
+  const validTest = isValidSSN(field.value);
+  if (validTest) {
+    setValidTextInput(element);
+  } else {
+    setInvalidTextInput(element, 'There is an error on this field.');
+  }
+  return validTest;
 }
 
 function formatSSN (value) {
@@ -49,5 +56,6 @@ function formatSSN (value) {
 
 export {
   ssnInput,
-  formatSSN
+  formatSSN,
+  runValidation
 };
