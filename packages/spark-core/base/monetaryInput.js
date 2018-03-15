@@ -40,5 +40,6 @@ function formatMonetary (value) {
 
 export {
   monetaryInputs,
-  formatMonetary
+  formatMonetary,
+  runValidation
 };

@@ -8,8 +8,8 @@ describe('isValidSSN tests', () => {
     expect(isValidSSN('123456789')).eql(true);
   });
 
-  it('should fail on empty', () => {
-    expect(isValidSSN('')).eql(false);
+  it('should pass on empty', () => {
+    expect(isValidSSN('')).eql(true);
   });
 
   it('should fail on undefined', () => {

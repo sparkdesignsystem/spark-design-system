@@ -1,6 +1,7 @@
-/* global describe it*/
+/* global describe before it*/
 const jsdom = require("jsdom");
-import {formatSSN} from '../base/ssnInput';
+import {formatSSN, runValidation} from '../base/ssnInput';
+
 const expect = require('chai').expect;
 
 const {JSDOM} = jsdom;
@@ -15,3 +16,25 @@ describe('formatSSN tests', () => {
   });
 });
 
+describe('runValidation tests', () => {
+  let inputContainer;
+  let input;
+
+  before(() => {
+    inputContainer = document.createElement('div');
+    const errorContainer = document.createElement('span');
+    errorContainer.classList.add('sprk-b-ErrorText');
+    input = document.createElement('input');
+    inputContainer.appendChild(input);
+    inputContainer.appendChild(errorContainer);
+  });
+
+  it('should return true if the validation passes', () => {
+    input.value = '123456789';
+    expect(runValidation(inputContainer)).eql(true);
+  });
+  it('should return false if the validation fails', () => {
+    input.value = '12345678';
+    expect(runValidation(inputContainer)).eql(false);
+  });
+});
