@@ -6,6 +6,16 @@ order: 16
 stateChanger: true
 ---
 <div class="sprk-b-InputContainer">
-  <label for="inline-search" class="sprk-u-VisuallyHidden">Search</label>
-  <input placeholder="Search" class="sprk-b-TextInput sprk-u-Size-100" id="inline-search" type="search" role="search">
+  <label for="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}" class="sprk-u-VisuallyHidden">Search</label>
+  <input placeholder="Search"
+         class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Size-100"
+         id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}"
+         type="search"
+         role="search"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container"
+         {{#if disabled}} disabled{{/if}}>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container">
+        {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>
+

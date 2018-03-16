@@ -5,7 +5,7 @@ notes:
 order: 16
 invisible: true
 ---
-<div class="sprk-b-InputContainer">
-  <label for="inline-search" class="sprk-u-VisuallyHidden">Search</label>
-  <input placeholder="Search" disabled class="sprk-b-TextInput sprk-u-Size-100" id="inline-search" type="search" role="search">
-</div>
+
+{{#embed "patterns.components.inputs.inline-search-input"
+         idattr="inline-search-disabled"
+         disabled=true}}{{/embed}}

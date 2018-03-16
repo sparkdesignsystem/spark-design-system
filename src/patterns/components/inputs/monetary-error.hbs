@@ -8,12 +8,7 @@ invisible: true
 order: 18
 ---
 
-<div class="sprk-b-InputContainer">
-  <label for="payment">Payment</label>
-  <span class="sprk-b-TextInput--monetary">
-    <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100 sprk-u-plm" id="payment"
-        aria-invalid="true" aria-describedby="payment--error-container">
-  </span>
-  <span class="sprk-b-ErrorText" id="payment--error-container">There is an error on this field.</span>
-</div>
+{{#embed "patterns.components.inputs.monetary"
+         idattr="monetary-error"
+         errorMessage="There is an error on this field."
+         class="sprk-b-TextInput--error"}}{{/embed}}

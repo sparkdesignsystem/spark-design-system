@@ -1,6 +1,6 @@
 /* global describe before it*/
 const jsdom = require("jsdom");
-import {formatSSN, runValidation} from '../base/ssnInput';
+import {formatPhone, runValidation} from '../base/phoneInput';
 
 const expect = require('chai').expect;
 
@@ -8,15 +8,15 @@ const {JSDOM} = jsdom;
 const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
 global.document = dom.window.document;
 
-describe('formatSSN tests', () => {
-  it('should format the ssn in the XXX-XX-XXXX style', () => {
+describe('formatPhone tests', () => {
+  it('should format the Phone in the (XXX) XXX-XXXX style', () => {
     const div = document.createElement('input');
-    div.value = '123456789';
-    expect(formatSSN(div.value)).eql('123-45-6789');
+    div.value = '1234567890';
+    expect(formatPhone(div.value)).eql('(123) 456-7890');
   });
 });
 
-describe('ssn runValidation tests', () => {
+describe('phone runValidation tests', () => {
   let inputContainer;
   let input;
 
@@ -30,7 +30,7 @@ describe('ssn runValidation tests', () => {
   });
 
   it('should return true if the validation passes', () => {
-    input.value = '123456789';
+    input.value = '1234567890';
     expect(runValidation(inputContainer)).eql(true);
   });
   it('should return false if the validation fails', () => {

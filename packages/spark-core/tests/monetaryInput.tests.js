@@ -41,7 +41,7 @@ describe('formatMonetary tests', () => {
   });
 });
 
-describe('runValidation tests', () => {
+describe('monetary runValidation tests', () => {
   let inputContainer;
   let input;
 

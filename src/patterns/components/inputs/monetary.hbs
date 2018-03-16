@@ -8,9 +8,14 @@ order: 18
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="monetary">
-  <label for="payment">Payment</label>
+  <label for="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}">Payment</label>
   <span class="sprk-b-TextInput--monetary">
-    <input class="sprk-b-TextInput sprk-u-Size-100 sprk-u-plm" id="payment">
+    <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Size-100 sprk-u-plm"
+           id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}"
+           aria-describedby="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container"
+           {{#if disabled}} disabled{{/if}}>
   </span>
-  <span class="sprk-b-ErrorText" id="payment--error-container"></span>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container">
+        {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>
