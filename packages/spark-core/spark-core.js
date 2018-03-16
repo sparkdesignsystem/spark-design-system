@@ -1,14 +1,16 @@
 // Import all Spark-Core components
 import {ssnInput} from './base/ssnInput';
 import {passwordInput} from './base/passwordInput';
-import {monetaryInputs} from './base/monetaryInput';
+import {monetaryInput} from './base/monetaryInput';
 import {phoneInput} from './base/phoneInput';
+import {dateInput} from './base/dateInput';
 import modals from './components/modals';
 
 // Init
 ssnInput();
 passwordInput();
-monetaryInputs();
+monetaryInput();
 phoneInput();
+dateInput();
 modals();
 

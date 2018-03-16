@@ -1,10 +1,10 @@
 import {getElements} from '../utilities/getElements';
-import {isValidMonetary} from '../utilities/validation/isValidMonetary';
+import {isValidDate} from '../utilities/validation/isValidDate';
 import {setValidTextInput} from '../utilities/validation/setValidTextInput';
 import {setInvalidTextInput} from '../utilities/validation/setInvalidTextInput';
 
-function monetaryInput () {
-  getElements('[data-sprk-input="monetary"]', bindUIEvents);
+function dateInput () {
+  getElements('[data-sprk-input="date"]', bindUIEvents);
 }
 
 function bindUIEvents (element) {
@@ -16,14 +16,14 @@ function bindUIEvents (element) {
 
   field.addEventListener('blur', () => {
     if (runValidation(element)) {
-      field.value = formatMonetary(field.value);
+      field.value = formatDate(field.value);
     }
   });
 }
 
 function runValidation (element) {
   const field = element.querySelectorAll('input')[0];
-  const validTest = isValidMonetary(field.value);
+  const validTest = isValidDate(field.value);
   if (validTest) {
     setValidTextInput(element);
   } else {
@@ -32,14 +32,21 @@ function runValidation (element) {
   return validTest;
 }
 
-function formatMonetary (value) {
-  return Number(value.replace(/,/g, ''))
-    .toLocaleString('en-US', {style: 'currency', currency: 'USD'})
-    .replace(/\$/g, '');
+function formatDate (value) {
+  let newValue = "";
+  const cleanValue = value.replace(/[\/-]/g, '');
+  for (let i = 0; i < cleanValue.length; i++) {
+    if (i === 1 || i === 3) {
+      newValue += `${cleanValue[i]}/`;
+    } else {
+      newValue += cleanValue[i];
+    }
+  }
+  return newValue;
 }
 
 export {
-  monetaryInput,
-  formatMonetary,
+  dateInput,
+  formatDate,
   runValidation
 };

@@ -25,6 +25,17 @@
 - name: patterns.components.inputs.monetary
 - name: patterns.components.inputs.monetary-error
 - name: patterns.components.inputs.monetary-disabled
+- name: patterns.components.inputs.password
+- name: patterns.components.inputs.password-error
+- name: patterns.components.inputs.password-disabled
+- name: patterns.components.inputs.helper-text
+- name: patterns.components.inputs.phone
+- name: patterns.components.inputs.phone-error
+- name: patterns.components.inputs.phone-disabled
+- name: patterns.components.inputs.date
+- name: patterns.components.inputs.date-error
+- name: patterns.components.inputs.date-disabled
+
 
 
 
