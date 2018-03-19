@@ -1,14 +1,28 @@
 export default () => {
-  // Set aria-label to 'Page <number>'
-  // based on the pagination item's number
-  const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]');
-  const longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
-  let defaultPagItems,
-      longPagItems,
+
+  /*
+   *  Set aria-label to 'Page <number>'
+   *  based on the pagination item's number
+   */
+  const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]'),
+        longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
+  let defaultNextLink,
+      defaultPagItems,
       defaultPrevLink,
-      longPrevLink,
-      defaultNextLink,
-      longNextLink;
+      longNextLink,
+      longPagItems,
+      longPrevLink;
+
+  const setAriaLabel = pagItem => {
+    // Get page item's page number
+    const pagNum = pagItem.textContent;
+
+    // Create new ARIA label based on each item's page number
+    const ariaLabel = `Page ${pagNum}`;
+
+    // Set the new ARIA label to the page item
+    pagItem.setAttribute('aria-label', ariaLabel);
+  };
 
   // Go through each default pagination found and compose list of items
   defaultPaginations.forEach(defaultPag => {
@@ -29,42 +43,31 @@ export default () => {
     // Initially set aria labels on page load
     setAriaLabel(defaultPagItem);
     // Listen for clicks on all pagination links and reset aria label on items
-    defaultPagItem.addEventListener('click', event => {
+    defaultPagItem.addEventListener('click', () => {
       setAriaLabel(defaultPagItem);
     });
     // Listen for clicks on prev link and reset aria label on items
-    defaultPrevLink.addEventListener('click', event => {
+    defaultPrevLink.addEventListener('click', () => {
       setAriaLabel(defaultPagItem);
     });
     // Listen for clicks on next link and reset aria label on items
-    defaultNextLink.addEventListener('click', event => {
+    defaultNextLink.addEventListener('click', () => {
       setAriaLabel(defaultPagItem);
     });
   });
 
   longPagItems.forEach(longPagItem => {
     setAriaLabel(longPagItem);
-    longPagItem.addEventListener('click', event => {
+    longPagItem.addEventListener('click', () => {
       setAriaLabel(longPagItem);
     });
 
-    longPrevLink.addEventListener('click', event => {
+    longPrevLink.addEventListener('click', () => {
       setAriaLabel(longPagItem);
     });
 
-    longNextLink.addEventListener('click', event => {
+    longNextLink.addEventListener('click', () => {
       setAriaLabel(longPagItem);
     });
   });
-
-  function setAriaLabel (pagItem) {
-    // Get page item's page number
-    let pagNum = pagItem.textContent;
-
-    // Create new ARIA label based on each item's page number
-    let ariaLabel = `Page ${pagNum}`;
-
-    // Set the new ARIA label to the page item
-    pagItem.setAttribute('aria-label', ariaLabel);
-  }
-}
+};
