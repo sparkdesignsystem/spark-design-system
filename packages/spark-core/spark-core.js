@@ -6,6 +6,7 @@ import { phoneInput } from './base/phoneInput';
 import { dateInput } from './base/dateInput';
 import datePicker from './base/datePicker';
 import modals from './components/modals';
+import pagination from './components/pagination';
 
 // Init
 ssnInput();
@@ -15,3 +16,4 @@ phoneInput();
 dateInput();
 datePicker();
 modals();
+pagination();
