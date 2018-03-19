@@ -1,6 +1,6 @@
-// // ==================================================================
-// // Pagination
-// // ==================================================================
+// ==================================================================
+// Pagination
+// ==================================================================
 
 //
 // Available Variables
@@ -26,7 +26,7 @@ $pag-breakpoint: 24.25rem;
     margin-right: 0;
   }
 
-  @media (min-width: $pag-breakpoint) {
+  @media all and (min-width: $pag-breakpoint) {
     margin-right: $space-s;
     padding: $space-inset-short-s;
   }
