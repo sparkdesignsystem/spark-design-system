@@ -32,6 +32,9 @@
 - name: patterns.components.inputs.phone
 - name: patterns.components.inputs.phone-error
 - name: patterns.components.inputs.phone-disabled
+- name: patterns.components.inputs.datepicker
+- name: patterns.components.inputs.datepicker-error
+- name: patterns.components.inputs.datepicker-disabled
 - name: patterns.components.inputs.date
 - name: patterns.components.inputs.date-error
 - name: patterns.components.inputs.date-disabled

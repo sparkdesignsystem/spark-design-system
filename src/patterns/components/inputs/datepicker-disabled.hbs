@@ -1,0 +1,17 @@
+---
+name: Date Picker - Disabled State
+info:
+  - Only to be used for future dates (ex. Schedule a future payment).
+  - The date picker is hidden by default and becomes visible on focus.
+  - 'Selecting a date hides the date picker and puts the value in the input in the MM/DD/YYYY format.'
+  - 'On blur, format the input to this format: MM/DD/YYYY.'
+  - 'Placeholder text should read: MM/DD/YYYY.'
+  - On key press, reveal the placeholder inline with the label.
+order: 25
+invisible: true
+---
+
+{{#embed "patterns.components.inputs.datepicker"
+         idattr="datepicker-disabled"
+         class="sprk-b-TextInput--error"
+         disabled=true}}{{/embed}}

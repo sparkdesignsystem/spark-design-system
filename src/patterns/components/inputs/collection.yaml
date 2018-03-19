@@ -15,7 +15,7 @@ contents:
   Helper Text: inputs.html#helper-text
   Phone Number: inputs.html#phone-input
   Date Input: inputs.html#date-input
-  Date Picker: date-picker.html
+  Date Picker: inputs.html#date-picker
 restrictions:
   - Make sure that each label's 'for' attribute matches the 'id' attribute of the corresponding
     input element.

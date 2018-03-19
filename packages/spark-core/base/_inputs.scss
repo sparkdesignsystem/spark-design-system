@@ -40,23 +40,26 @@ textarea {
   }
 }
 
+.sprk-b-TextInput--date-picker,
 .sprk-b-TextInput--monetary {
   position: relative;
-
-  &::before {
-    content: '$';
-    color: $gray-dark;
-    position: absolute;
-    top: 0.6rem;
-    left: 0.55rem;
-    z-index: 1;
-  }
 }
 
-.sprk-b-TextInput--date-picker {
-  background-image: url('../images/calendar.svg');
-  background-position: 5px 3px;
-  padding-left: $space-l;
+.sprk-b-TextInput--date-picker > .sprk-c-Icon,
+.sprk-b-TextInput--monetary::before {
+  color: $gray-dark;
+  position: absolute;
+  left: 0.55rem;
+  z-index: 1;
+}
+
+.sprk-b-TextInput--date-picker > .sprk-c-Icon {
+  top: 0.75rem;
+}
+
+.sprk-b-TextInput--monetary::before {
+  content: '$';
+  top: 0.6rem;
 }
 
 .sprk-b-TextInput--error {

@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@scalescss/scalescss": "^3.4.0"
+    "@scalescss/scalescss": "^3.4.0",
+    "tiny-date-picker": "^3.2.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
