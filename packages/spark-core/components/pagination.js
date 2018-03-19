@@ -6,9 +6,7 @@ export default () => {
    */
   const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]'),
         longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
-  let defaultNextLink,
-      defaultPagItems,
-      defaultPrevLink,
+  let defaultPagItems,
       longNextLink,
       longPagItems,
       longPrevLink;
@@ -27,8 +25,6 @@ export default () => {
   // Go through each default pagination found and compose list of items
   defaultPaginations.forEach(defaultPag => {
     defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]');
-    defaultPrevLink = defaultPag.querySelector('[data-sprk-pagination="prev"]');
-    defaultNextLink = defaultPag.querySelector('[data-sprk-pagination="next"]');
   });
 
   // Go through each long pagination found and compose list of items
@@ -42,18 +38,6 @@ export default () => {
   defaultPagItems.forEach(defaultPagItem => {
     // Initially set aria labels on page load
     setAriaLabel(defaultPagItem);
-    // Listen for clicks on all pagination links and reset aria label on items
-    defaultPagItem.addEventListener('click', () => {
-      setAriaLabel(defaultPagItem);
-    });
-    // Listen for clicks on prev link and reset aria label on items
-    defaultPrevLink.addEventListener('click', () => {
-      setAriaLabel(defaultPagItem);
-    });
-    // Listen for clicks on next link and reset aria label on items
-    defaultNextLink.addEventListener('click', () => {
-      setAriaLabel(defaultPagItem);
-    });
   });
 
   longPagItems.forEach(longPagItem => {
