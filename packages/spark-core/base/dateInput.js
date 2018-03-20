@@ -1,13 +1,33 @@
-import {getElements} from '../utilities/getElements';
-import {isValidDate} from '../utilities/validation/isValidDate';
-import {setValidTextInput} from '../utilities/validation/setValidTextInput';
-import {setInvalidTextInput} from '../utilities/validation/setInvalidTextInput';
+import getElements from '../utilities/getElements';
+import isValidDate from '../utilities/validation/isValidDate';
+import setValidTextInput from '../utilities/validation/setValidTextInput';
+import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
-function dateInput () {
-  getElements('[data-sprk-input="date"]', bindUIEvents);
-}
+const runValidation = (element) => {
+  const field = element.querySelectorAll('input')[0];
+  const validTest = isValidDate(field.value);
+  if (validTest) {
+    setValidTextInput(element);
+  } else {
+    setInvalidTextInput(element, 'There is an error on this field.');
+  }
+  return validTest;
+};
 
-function bindUIEvents (element) {
+const formatDate = (value) => {
+  let newValue = '';
+  const cleanValue = value.replace(/[/-]/g, '');
+  for (let i = 0; i < cleanValue.length; i += 1) {
+    if (i === 1 || i === 3) {
+      newValue += `${cleanValue[i]}/`;
+    } else {
+      newValue += cleanValue[i];
+    }
+  }
+  return newValue;
+};
+
+const bindUIEvents = (element) => {
   const field = element.querySelectorAll('input')[0];
 
   field.addEventListener('keyup', () => {
@@ -19,34 +39,10 @@ function bindUIEvents (element) {
       field.value = formatDate(field.value);
     }
   });
-}
-
-function runValidation (element) {
-  const field = element.querySelectorAll('input')[0];
-  const validTest = isValidDate(field.value);
-  if (validTest) {
-    setValidTextInput(element);
-  } else {
-    setInvalidTextInput(element, 'There is an error on this field.');
-  }
-  return validTest;
-}
-
-function formatDate (value) {
-  let newValue = "";
-  const cleanValue = value.replace(/[\/-]/g, '');
-  for (let i = 0; i < cleanValue.length; i++) {
-    if (i === 1 || i === 3) {
-      newValue += `${cleanValue[i]}/`;
-    } else {
-      newValue += cleanValue[i];
-    }
-  }
-  return newValue;
-}
-
-export {
-  dateInput,
-  formatDate,
-  runValidation
 };
+
+const dateInput = () => {
+  getElements('[data-sprk-input="date"]', bindUIEvents);
+};
+
+export { dateInput, formatDate, runValidation };

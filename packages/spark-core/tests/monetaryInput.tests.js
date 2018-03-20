@@ -1,11 +1,11 @@
-/* global describe before it*/
-const jsdom = require("jsdom");
-import {formatMonetary, runValidation} from '../base/monetaryInput';
+/* global document describe before it */
+import { formatMonetary, runValidation } from '../base/monetaryInput';
 
-const expect = require('chai').expect;
+const jsdom = require('jsdom');
+const { expect } = require('chai');
 
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+const { JSDOM } = jsdom;
+const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
 
 describe('formatMonetary tests', () => {

@@ -1,5 +1,4 @@
-'use strict';
-
+/* global require */
 const drizzle = require('drizzle-builder');
 const gulp = require('gulp');
 const ghPages = require('gulp-gh-pages');
@@ -14,16 +13,10 @@ const rename = require('gulp-rename');
 const config = require('./config');
 
 // Append config
-Object.assign(config.drizzle, {helpers});
+Object.assign(config.drizzle, { helpers });
 
 // Register core tasks
-[
-  'clean',
-  'copy',
-  'js',
-  'serve',
-  'watch'
-].forEach(name => tasks[name](gulp, config[name]));
+['clean', 'copy', 'js', 'serve', 'watch'].forEach(name => tasks[name](gulp, config[name]));
 
 // Register special CSS tasks
 tasks.css(gulp, config['css:drizzle']);
@@ -31,32 +24,34 @@ gulp.task('css', ['css:drizzle']);
 
 // Sass task
 gulp.task('sass', () => {
-  gulp.src('src/assets/toolkit/styles/**/*.scss')
+  gulp
+    .src('src/assets/toolkit/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['> 1%', 'last 4 versions'],
-      cascade: false
+      cascade: false,
     }))
     .pipe(cssnano())
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
 });
 
 // SVG icon task
-gulp.task('icons', done => {
-  gulp.src(config.icons.src)
+gulp.task('icons', (done) => {
+  gulp
+    .src(config.icons.src)
     .pipe(svgSprite(config.icons))
     .pipe(gulp.dest(config.icons.dest))
-    .pipe(rename(path => {
-      path.extname = ".hbs";
+    .pipe(rename({
+      extname: '.hbs',
     }))
-    .pipe(gulp.dest('./src/templates/drizzle')).on('end', done);
+    .pipe(gulp.dest('./src/templates/drizzle'))
+    .on('end', done);
 });
 
 // copy images
 gulp.task('images', () => {
-  gulp.src(config.images.src)
-  .pipe(gulp.dest(config.images.dest));
+  gulp.src(config.images.src).pipe(gulp.dest(config.images.dest));
 });
 
 // Register Drizzle builder task
@@ -66,18 +61,10 @@ gulp.task('drizzle', ['icons'], () => {
 });
 
 // Register frontend composite task
-gulp.task('frontend', [
-  'icons',
-  'drizzle',
-  'copy',
-  'css',
-  'sass',
-  'images',
-  'js'
-]);
+gulp.task('frontend', ['icons', 'drizzle', 'copy', 'css', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build', ['clean'], done => {
+gulp.task('build', ['clean'], (done) => {
   gulp.start('frontend');
   done();
 });
@@ -88,16 +75,14 @@ gulp.task('build', ['clean'], done => {
  */
 gulp.task('demo', () => {
   const buildDest = `${config.drizzle.dest.pages}/**/*`;
-  return gulp.src(buildDest)
-    .pipe(ghPages({
-      cacheDir: 'demo'
-    }));
+  return gulp.src(buildDest).pipe(ghPages({
+    cacheDir: 'demo',
+  }));
 });
 
 // Register default task
-gulp.task('default', ['frontend'], done => {
+gulp.task('default', ['frontend'], (done) => {
   gulp.start('serve');
   gulp.start('watch');
   done();
 });
-

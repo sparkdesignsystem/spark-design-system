@@ -1,13 +1,12 @@
-/* global describe before it*/
-const jsdom = require("jsdom");
+/* global document describe before it */
+import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
-const expect = require('chai').expect;
+const jsdom = require('jsdom');
+const { expect } = require('chai');
 
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+const { JSDOM } = jsdom;
+const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
-
-import {setInvalidTextInput} from '../utilities/validation/setInvalidTextInput';
 
 describe('setInvalidTextInput tests', () => {
   let inputContainer;
@@ -24,15 +23,15 @@ describe('setInvalidTextInput tests', () => {
   });
 
   it('should add the error class to the input element', () => {
-    setInvalidTextInput(inputContainer, "This is an error message.");
+    setInvalidTextInput(inputContainer, 'This is an error message.');
     expect(input.classList.contains('sprk-b-TextInput--error')).eql(true);
   });
   it('should add the correct aria classes to the input', () => {
-    setInvalidTextInput(inputContainer, "This is an error message.");
+    setInvalidTextInput(inputContainer, 'This is an error message.');
     expect(input.getAttribute('aria-invalid')).eql('true');
   });
   it('should set the errorContainer text', () => {
-    const error = "This is an error message";
+    const error = 'This is an error message';
     setInvalidTextInput(inputContainer, error);
     expect(errorContainer.textContent).eql(error);
   });

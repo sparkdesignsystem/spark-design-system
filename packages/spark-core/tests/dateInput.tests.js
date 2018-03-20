@@ -1,11 +1,11 @@
-/* global describe before it*/
-const jsdom = require("jsdom");
-import {formatDate, runValidation} from '../base/dateInput';
+/* global document describe before it */
+import { formatDate, runValidation } from '../base/dateInput';
 
-const expect = require('chai').expect;
+const jsdom = require('jsdom');
+const { expect } = require('chai');
 
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+const { JSDOM } = jsdom;
+const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
 
 describe('formatDate tests', () => {

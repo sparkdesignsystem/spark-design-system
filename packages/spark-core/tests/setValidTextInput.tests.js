@@ -1,14 +1,13 @@
-/* global describe before it*/
-const jsdom = require("jsdom");
+/* global document describe before it */
+import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
+import setValidTextInput from '../utilities/validation/setValidTextInput';
 
-const expect = require('chai').expect;
+const jsdom = require('jsdom');
+const { expect } = require('chai');
 
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+const { JSDOM } = jsdom;
+const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
-
-import {setInvalidTextInput} from '../utilities/validation/setInvalidTextInput';
-import {setValidTextInput} from '../utilities/validation/setValidTextInput';
 
 describe('setValidTextInput tests', () => {
   let inputContainer;
@@ -22,7 +21,7 @@ describe('setValidTextInput tests', () => {
     input = document.createElement('input');
     inputContainer.appendChild(input);
     inputContainer.appendChild(errorContainer);
-    setInvalidTextInput(inputContainer, "This is my error");
+    setInvalidTextInput(inputContainer, 'This is my error');
   });
 
   it('should add the error class to the input element', () => {
@@ -35,6 +34,6 @@ describe('setValidTextInput tests', () => {
   });
   it('should set the errorContainer text', () => {
     setValidTextInput(inputContainer);
-    expect(errorContainer.textContent).eql("");
+    expect(errorContainer.textContent).eql('');
   });
 });

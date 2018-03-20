@@ -1,5 +1,4 @@
-
-function setInvalidTextInput (inputContainer, defaultErrorMessage) {
+function setInvalidTextInput(inputContainer, defaultErrorMessage) {
   const overrideErrorMessage = inputContainer.getAttribute('data-sprk-input-invalid-ssn-content');
   const input = inputContainer.querySelectorAll('input')[0];
   const errorContainer = inputContainer.querySelectorAll('.sprk-b-ErrorText')[0];
@@ -10,6 +9,4 @@ function setInvalidTextInput (inputContainer, defaultErrorMessage) {
   errorContainer.textContent = overrideErrorMessage || defaultErrorMessage;
 }
 
-export {
-  setInvalidTextInput
-};
+export { setInvalidTextInput as default };

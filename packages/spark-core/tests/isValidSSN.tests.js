@@ -1,7 +1,7 @@
-/* global describe it*/
-import {isValidSSN} from '../utilities/validation/isValidSSN';
+/* global describe it */
+import isValidSSN from '../utilities/validation/isValidSSN';
 
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 describe('isValidSSN tests', () => {
   it('should pass on a valid ssn', () => {
@@ -40,4 +40,3 @@ describe('isValidSSN tests', () => {
     expect(isValidSSN('1.23e10')).eql(false);
   });
 });
-

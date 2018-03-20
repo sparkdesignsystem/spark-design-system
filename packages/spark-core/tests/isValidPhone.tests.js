@@ -1,7 +1,7 @@
-/* global describe it*/
-import {isValidPhone} from '../utilities/validation/isValidPhone';
+/* global describe it */
+import isValidPhone from '../utilities/validation/isValidPhone';
 
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 describe('isValidPhone tests', () => {
   it('should pass on a valid Phone', () => {
@@ -52,4 +52,3 @@ describe('isValidPhone tests', () => {
     expect(isValidPhone('(123)4567890')).eql(true);
   });
 });
-

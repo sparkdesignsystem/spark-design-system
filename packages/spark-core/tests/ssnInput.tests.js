@@ -1,11 +1,11 @@
-/* global describe before it*/
-const jsdom = require("jsdom");
-import {formatSSN, runValidation} from '../base/ssnInput';
+/* global document describe before it */
+import { formatSSN, runValidation } from '../base/ssnInput';
 
-const expect = require('chai').expect;
+const jsdom = require('jsdom');
+const { expect } = require('chai');
 
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+const { JSDOM } = jsdom;
+const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
 
 describe('formatSSN tests', () => {

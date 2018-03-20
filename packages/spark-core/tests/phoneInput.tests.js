@@ -1,11 +1,11 @@
-/* global describe before it*/
-const jsdom = require("jsdom");
-import {formatPhone, runValidation} from '../base/phoneInput';
+/* global document describe before it */
+import { formatPhone, runValidation } from '../base/phoneInput';
 
-const expect = require('chai').expect;
+const jsdom = require('jsdom');
+const { expect } = require('chai');
 
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+const { JSDOM } = jsdom;
+const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
 
 describe('formatPhone tests', () => {

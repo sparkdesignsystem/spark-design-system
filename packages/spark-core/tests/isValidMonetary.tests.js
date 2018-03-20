@@ -1,7 +1,7 @@
-/* global describe it*/
-import {isValidMonetary} from '../utilities/validation/isValidMonetary';
+/* global describe it */
+import isValidMonetary from '../utilities/validation/isValidMonetary';
 
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 describe('isValidMonetary tests', () => {
   it('should pass on a valid ssn', () => {

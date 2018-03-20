@@ -1,7 +1,7 @@
-/* global describe it*/
-import {isValidDate} from '../utilities/validation/isValidDate';
+/* global describe it */
+import isValidDate from '../utilities/validation/isValidDate';
 
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 describe('isValidDate tests', () => {
   it('should pass on 8 digits', () => {
@@ -60,4 +60,3 @@ describe('isValidDate tests', () => {
     expect(isValidDate('11/11-1111')).eql(true);
   });
 });
-

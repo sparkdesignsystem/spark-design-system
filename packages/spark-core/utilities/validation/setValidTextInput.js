@@ -1,4 +1,4 @@
-function setValidTextInput (inputContainer) {
+function setValidTextInput(inputContainer) {
   const input = inputContainer.querySelectorAll('input')[0];
   const errorContainer = inputContainer.querySelectorAll('.sprk-b-ErrorText')[0];
 
@@ -7,6 +7,4 @@ function setValidTextInput (inputContainer) {
   errorContainer.textContent = '';
 }
 
-export {
-  setValidTextInput
-};
+export { setValidTextInput as default };
