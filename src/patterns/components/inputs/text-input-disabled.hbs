@@ -1,7 +1,5 @@
 ---
 name: Text Input - Disabled State
-notes:
-  This is a basic text input that is disabled
 restrictions:
   - The input's 'type' attribute should be the most appropriate value that semantically matches your
     use case.
@@ -11,7 +9,7 @@ order: 1
 invisible: true
 ---
 
-<div class="sprk-b-InputContainer">
-  <label for="<your input's id>">Text Input Label</label>
-  <input disabled class="sprk-b-TextInput sprk-u-Size-100" id="<your input's id>" type="<your field type>">
-</div>
+{{#embed "patterns.components.inputs.text-input"
+         idattr="text-input-disabled"
+         disabled=true}}{{/embed}}
+

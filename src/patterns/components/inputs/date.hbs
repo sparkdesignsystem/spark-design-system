@@ -1,16 +1,21 @@
 ---
 name: Date Input
-notes: |
-  This is a date input.
 info:
   - 'On blur, format the input to this format: MM/DD/YYYY.'
   - 'Placeholder text should read: MM/DD/YYYY.'
   - On key press, reveal the placeholder inline with the label.
-labels:
-  - inprogress
-order: 13
+order: 27
 ---
-<div class="sprk-b-InputContainer">
-  <label for="date">Birth Date</label>
-  <input class="sprk-b-TextInput sprk-u-Size-100" id="date" type="text" placeholder="MM/DD/YYYY">
+
+<div class="sprk-b-InputContainer" data-sprk-input="date">
+  <label for="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}">Date</label>
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+         id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}"
+         type="text"
+         placeholder="MM/DD/YYYY"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container"
+    {{#if disabled}} disabled{{/if}}>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

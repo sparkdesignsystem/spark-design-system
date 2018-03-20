@@ -1,13 +1,10 @@
 ---
 name: Helper Text
 info:
-  - You should use helper text, as seen below, when a user needs further clarification beyond the label.
+  - You should use helper text, when a user needs further clarification beyond the label.
+  - Helper text should be placed between above the error container span in each input pattern.
 stateChanger: true
-order: 10
+order: 22
 ---
 
-<div class="sprk-b-InputContainer">
-  <label for="<your input's id>">Text Input Label</label>
-  <input class="sprk-b-TextInput sprk-u-Size-100" id="<your input's id>" type="<your field type>">
-  <span class="sprk-b-HelperText">Optional helper text, used to clarify the field's intent.</span>
-</div>
+<span class="sprk-b-HelperText">Optional helper text, used to clarify the field's intent.</span>

@@ -1,27 +1,41 @@
 ---
 name: Radio Buttons
-notes: |
-  These are radio buttons. They use the native browser styles.
-labels:
-  - inprogress
-order: 9
+order: 5
 ---
 
 <div class="sprk-b-InputContainer">
-  <label id="notification-label">Notification Preference</label>
-
-  <div class="sprk-b-SelectionContainer">
-    <input id="email-pref" name="notification-pref" type="radio" checked="checked" aria-labelledby="notification-label">
-    <label class="sprk-b-Label--inline sprk-u-mls" for="email-pref">Email</label>
-  </div>
-
-  <div class="sprk-b-SelectionContainer">
-    <input id="text-pref" name="notification-pref" type="radio" aria-labelledby="notification-label">
-    <label class="sprk-b-Label--inline sprk-u-mls" for="text-pref">Text</label>
-  </div>
-
-  <div class="sprk-b-SelectionContainer">
-    <input id="email-and-text-pref" name="notification-pref" type="radio" aria-labelledby="notification-label">
-    <label class="sprk-b-Label--inline sprk-u-mls" for="email-and-text-pref">Email &amp; Text</label>
-  </div>
+  <fieldset>
+    <legend>
+      <label>Radio Group Label</label>
+    </legend>
+    <div class="sprk-b-SelectionContainer">
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             class="sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
+    </div>
+    <div class="sprk-b-SelectionContainer">
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             class="sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
+    </div>
+    <div class="sprk-b-SelectionContainer">
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             class="sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
+    </div>
+  </fieldset>
+  <span class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

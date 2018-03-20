@@ -1,7 +1,5 @@
 ---
 name: Checkboxes
-notes: |
-  This is a checkbox. It uses the native browser styles.
 order: 3
 ---
 
@@ -11,16 +9,30 @@ order: 3
       <label>Checkbox Group Label</label>
     </legend>
     <div class="sprk-b-SelectionContainer">
-      <input id="<id1>" type="checkbox">
-      <label for="<id1>" class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 1</label>
+      <input id="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}-1"
+             type="checkbox"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}--error-container"
+             {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}-1"
+             class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 1</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<id2>" type="checkbox">
-      <label for="<id2>" class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 2</label>
+      <input id="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}-2"
+             type="checkbox"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}--error-container"
+             {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}-2"
+             class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 2</label>
     </div>
     <div class="sprk-b-SelectionContainer">
-      <input id="<id3>" type="checkbox">
-      <label for="<id3>" class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 3</label>
+      <input id="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}-3"
+             type="checkbox"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}--error-container"
+             {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}-3"
+             class="sprk-b-Label--inline sprk-u-mls">Checkbox Item 3</label>
     </div>
   </fieldset>
+  <span class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}checkbox-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

@@ -1,17 +1,23 @@
 ---
 name: Select Box
-notes: |
-  This is a select box.
-labels:
-  - inprogress
-order: 8
+order: 7
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="county">Choose your county</label>
-  <select id="county">
-    <option>Wayne</option>
-    <option>Oakland</option>
-    <option>Washtenaw</option>
+  <label for="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}">Select Box Label</label>
+  <select id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
+          aria-describedby="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container"
+          {{#if disabled}} disabled{{/if}}>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <optgroup label="Grouped Options">
+      <option value="g1">Grouped Option 1</option>
+      <option value="g2">Grouped Option 2</option>
+      <option value="g3">Grouped Option 3</option>
+    </optgroup>
   </select>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container">
+        {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

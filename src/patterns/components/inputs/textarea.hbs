@@ -1,13 +1,14 @@
 ---
 name: Textarea
-notes:
-  This is a textarea.
 order: 9
-labels:
-  - inprogress
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="description">Description</label>
-  <textarea class="sprk-b-TextInput sprk-u-Size-100" id="description"></textarea>
+  <label for="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}">Description</label>
+  <textarea class="sprk-b-TextInput  {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+            id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}"
+            aria-describedby="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container"
+            {{#if disabled}} disabled{{/if}}></textarea>
+  <span class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container">
+  {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

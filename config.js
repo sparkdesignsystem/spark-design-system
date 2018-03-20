@@ -1,22 +1,20 @@
-'use strict';
-
 module.exports = {
   'css:toolkit': {
     src: './src/assets/toolkit/styles/*.css',
     dest: './dist/assets/toolkit/styles',
-    name: 'css:toolkit'
+    name: 'css:toolkit',
   },
 
   'css:drizzle': {
     src: './src/assets/**/drizzle.css',
     dest: './dist/assets',
     prefix: 'drizzle-',
-    name: 'css:drizzle'
+    name: 'css:drizzle',
   },
 
   copy: {
     src: './src/static/**/*',
-    dest: './dist'
+    dest: './dist',
   },
 
   icons: {
@@ -26,44 +24,42 @@ module.exports = {
       symbol: {
         inline: true,
         sprite: 'spark-core-icons.svg',
-        dest: '.'
-      }
+        dest: '.',
+      },
     },
     svg: {
       xmlDeclaration: false,
-      doctypeDeclaration: false
-    }
+      doctypeDeclaration: false,
+    },
   },
   images: {
     src: './src/assets/toolkit/images/*.*',
-    dest: './dist/assets/toolkit/images'
+    dest: './dist/assets/toolkit/images',
   },
   js: {
     plugins: {
       webpack: {
         entry: {
           // Drizzle UI scripts
-          'drizzle/scripts/drizzle':
-            './src/assets/drizzle/scripts/drizzle.js',
+          'drizzle/scripts/drizzle': './src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
-          'toolkit/scripts/toolkit':
-            './src/assets/toolkit/scripts/toolkit.js'
+          'toolkit/scripts/toolkit': './src/assets/toolkit/scripts/toolkit.js',
         },
         output: {
           path: './dist/assets',
-          filename: '[name].js'
+          filename: '[name].js',
         },
         module: {
           loaders: [
             {
               test: /\.js$/,
-              loaders: ['babel-loader']
-            }
-          ]
+              loaders: ['babel-loader'],
+            },
+          ],
         },
-        externals: {}
-      }
-    }
+        externals: {},
+      },
+    },
   },
 
   serve: {
@@ -72,28 +68,28 @@ module.exports = {
         open: false,
         notify: false,
         files: ['./dist/**/*'],
-        server: {baseDir: './dist'}
-      }
-    }
+        server: { baseDir: './dist' },
+      },
+    },
   },
 
   watch: {
     watchers: [
       {
         match: ['./src/static/**/*'],
-        tasks: ['copy']
+        tasks: ['copy'],
       },
       {
         match: ['./src/assets/**/*.css'],
-        tasks: ['css']
+        tasks: ['css'],
       },
       {
-        match: ['./src/assets/**/*.scss'],
-        tasks: ['sass']
+        match: ['./src/assets/**/*.scss', './packages/spark-core/**/*.scss'],
+        tasks: ['sass'],
       },
       {
-        match: ['./src/assets/**/*.js'],
-        tasks: ['js']
+        match: ['./src/assets/**/*.js', './packages/spark-core/**/*.js'],
+        tasks: ['js'],
       },
       {
         match: [
@@ -101,11 +97,11 @@ module.exports = {
           '!./src/templates/drizzle/spark-core-icons.hbs',
           './src/data/**/*',
           './src/**/*.yaml',
-          './src/**/*.md'
+          './src/**/*.md',
         ],
-        tasks: ['drizzle']
-      }
-    ]
+        tasks: ['drizzle'],
+      },
+    ],
   },
 
   drizzle: {
@@ -116,28 +112,27 @@ module.exports = {
       indent_with_tabs: false,
       max_preserve_newlines: 1,
       wrap_line_length: 0,
-      unformatted:
-        `a abbr acronym address b bdo big cite code col del dfn dt em font
+      unformatted: `a abbr acronym address b bdo big cite code col del dfn dt em font
         h1 h2 h3 h4 h5 h6 i img ins kbd mark pre q s samp small span
-        strike strong sub sup tt u var`.split(' ')
+        strike strong sub sup tt u var`.split(' '),
       /* eslint-enable camelcase */
     },
     src: {
       patterns: {
         basedir: './src/patterns',
-        glob: './src/patterns/**/*.hbs'
+        glob: './src/patterns/**/*.hbs',
       },
       templates: {
         basedir: './src/templates',
-        glob: './src/templates/**/*.hbs'
-      }
+        glob: './src/templates/**/*.hbs',
+      },
     },
     dest: {
       pages: './dist',
-      patterns: './dist/patterns'
+      patterns: './dist/patterns',
     },
     fieldParsers: {
-      notes: 'markdown'
-    }
-  }
+      notes: 'markdown',
+    },
+  },
 };

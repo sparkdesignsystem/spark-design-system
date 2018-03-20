@@ -6,14 +6,16 @@ contents:
   Checkboxes: inputs.html#checkboxes
   Radio Buttons: inputs.html#radio-buttons
   Select Box: inputs.html#select-box
-  Textarea Input: inputs.html#textarea-input
+  Textarea Input: inputs.html#textarea
   SSN Input: inputs.html#ssn-input
   Search Input: inputs.html#search-input
+  Inline Search Input: inputs.html#inline-search-input
+  Money Input: inputs.html#monetary-input
   Password Input: inputs.html#password-input
+  Helper Text: inputs.html#helper-text
   Phone Number: inputs.html#phone-input
-  Money Input: inputs.html#money-input
   Date Input: inputs.html#date-input
-  Date Picker: date-picker.html
+  Date Picker: inputs.html#date-picker
 restrictions:
   - Make sure that each label's 'for' attribute matches the 'id' attribute of the corresponding
     input element.

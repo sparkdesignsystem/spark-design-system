@@ -1,7 +1,5 @@
 ---
 name: Text Input
-notes:
-  This is the basic style for any text input.
 restrictions:
   - The input's 'type' attribute should be the most appropriate value that semantically matches your
     use case.
@@ -12,6 +10,13 @@ order: 1
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="<your input's id>">Text Input Label</label>
-  <input class="sprk-b-TextInput sprk-u-Size-100" id="<your input's id>" type="<your field type>">
+  <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}">Text Input Label</label>
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+         id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
+         type="text"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
+         {{#if disabled}} disabled{{/if}}>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

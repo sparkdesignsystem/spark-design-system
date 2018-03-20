@@ -1,7 +1,5 @@
 ---
 name: Text Input - Error State
-notes:
-  This is a basic text input with an error.
 restrictions:
   - The input's 'type' attribute should be the most appropriate value that semantically matches your
     use case.
@@ -10,10 +8,7 @@ links:
 order: 1
 invisible: true
 ---
-
-<div class="sprk-b-InputContainer">
-  <label for="<your input's id>">Text Input Label</label>
-  <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100" id="<your input's id>"
-         type="<your field type>" aria-describedby="<your input's id--error-container>">
-  <span class="sprk-b-ErrorText" id="<your input's id>--error-container">There is an error on this field.</span>
-</div>
+{{#embed "patterns.components.inputs.text-input"
+         idattr="text-input-error"
+         errorMessage="There is an error on this field."
+         class="sprk-b-TextInput--error"}}{{/embed}}

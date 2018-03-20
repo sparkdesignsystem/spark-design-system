@@ -1,11 +1,9 @@
 ---
 name: Search Input - Disabled State
-notes:
-  This is a basic search input.
-order: 7
+order: 13
 invisible: true
 ---
-<div class="sprk-b-InputContainer">
-  <label for="search">Search</label>
-  <input disabled class="sprk-b-TextInput sprk-u-Size-100" id="search" type="search" role="search">
-</div>
+
+{{#embed "patterns.components.inputs.search-input"
+         idattr="search-disabled"
+         disabled=true}}{{/embed}}

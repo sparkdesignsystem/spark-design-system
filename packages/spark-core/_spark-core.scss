@@ -42,13 +42,13 @@
 @import './tools/animations';
 @import './tools/functions';
 @import './tools/mixins';
-@import 'base/inputs';
+@import './base/inputs';
 @import './base/links';
 @import './base/lists';
 @import './base/typography';
 @import './components/alerts';
 @import './components/buttons';
-@import './components/datepicker';
+@import 'components/datepicker';
 @import './components/dividers';
 @import './components/hamburger';
 @import './components/icons';

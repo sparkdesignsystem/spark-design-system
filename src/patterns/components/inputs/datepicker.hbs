@@ -1,0 +1,29 @@
+---
+name: Date Picker
+info:
+  - Only to be used for future dates (ex. Schedule a future payment).
+  - The date picker is hidden by default and becomes visible on focus.
+  - 'Selecting a date hides the date picker and puts the value in the input in the MM/DD/YYYY format.'
+  - 'On blur, format the input to this format: MM/DD/YYYY.'
+  - 'Placeholder text should read: MM/DD/YYYY.'
+  - On key press, reveal the placeholder inline with the label.
+order: 25
+---
+
+<div class="sprk-b-InputContainer" data-sprk-input="datepicker">
+  <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}">Date</label>
+  <span class="sprk-b-TextInput--date-picker">
+      <svg class="sprk-c-Icon" viewBox="0 0 100 100">
+          <use xlink:href="#calendar" />
+      </svg>
+      <input class="sprk-b-TextInput sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+             id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}"
+             type="text"
+             placeholder="MM/DD/YYYY"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+  </span>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
+</div>
