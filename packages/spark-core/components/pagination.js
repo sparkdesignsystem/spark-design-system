@@ -1,6 +1,6 @@
 export default () => {
 
-  /*
+  /**
    *  Set aria-label to 'Page <number>'
    *  based on the pagination item's number
    */
