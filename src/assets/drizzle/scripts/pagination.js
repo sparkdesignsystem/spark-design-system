@@ -1,8 +1,24 @@
-// Grab paginations
-const defaultPags = document.querySelectorAll('[data-sprk-pagination="default"]');
-const longPags = document.querySelectorAll('[data-sprk-pagination="long"]');
+/**
+ *  Pagination Documentation Demo JS
+ *  Assume only one type of
+ *  each pagination version on page.
+ *
+ * data-sprk-pagination="default"
+ * This identifies a default pagination component.
+ *
+ * data-sprk-pagination="long"
+ * This identifies a long pagination component.
+ *
+ * data-sprk-pagination="item"
+ * This identifies an item in the pagination components.
+ *
+ * data-sprk-pagination="next" and data-sprk-pagination="prev"
+ * These identify the previous and next links in the pagination components.
+ */
+const defaultPag = document.querySelector('[data-sprk-pagination="default"]');
+const longPag = document.querySelector('[data-sprk-pagination="long"]');
 
-// Add attr to new page link, remove from old
+// Add aria-current attr to new page link, remove from old
 const setAriaCurrent = (newPagelink, oldPageLink) => {
   if (!newPagelink.hasAttribute('aria-current')) {
     newPagelink.setAttribute('aria-current', true);
@@ -12,7 +28,7 @@ const setAriaCurrent = (newPagelink, oldPageLink) => {
   }
 };
 
-// Add class to new item and remove from old
+// Add CSS class to new item and remove from old
 const updatePageStyles = (addItem, removeItem, classCSS) => {
   if (!addItem.classList.contains(classCSS)) {
     addItem.classList.add(classCSS);
@@ -22,67 +38,71 @@ const updatePageStyles = (addItem, removeItem, classCSS) => {
   }
 };
 
-// If default pagination is found on page
-if (defaultPags) {
-  const defaultPagItems = defaultPags[0].querySelectorAll('[data-sprk-pagination="item"]'),
+// Default Pagination
+if (defaultPag) {
+  const defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]'),
         [link1, link2, link3] = defaultPagItems,
-        next = defaultPags[0].querySelector('[data-sprk-pagination="next"]'),
-        prev = defaultPags[0].querySelector('[data-sprk-pagination="prev"]');
+        next = defaultPag.querySelector('[data-sprk-pagination="next"]'),
+        prev = defaultPag.querySelector('[data-sprk-pagination="prev"]');
 
-  // Listener for when individual links are clicked
+  // Listen for page number link clicks
   defaultPagItems.forEach(item => {
     item.addEventListener('click', event => {
       const currentItemNum = parseInt(item.textContent, 10),
-            currentPage = defaultPags[0].querySelector('[aria-current="true"]'),
+            currentPage = defaultPag.querySelector('[aria-current="true"]'),
             currentPageNum = parseInt(currentPage.textContent, 10);
 
       event.preventDefault();
 
+      // If link clicked is not currenlty selected link
       if (currentItemNum !== currentPageNum) {
-        if (currentItemNum === 1) {
+        if (currentItemNum === defaultPagItems.length - 2) {
           updatePageStyles(item.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
           setAriaCurrent(item, currentPage);
-          prev.classList.add('sprk-b-Link--disabled');
-        } else if (currentItemNum === 2) {
+          updatePageStyles(prev, next, 'sprk-b-Link--disabled');
+        } else if (currentItemNum === defaultPagItems.length - 1) {
           updatePageStyles(item.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
           setAriaCurrent(item, currentPage);
+          // Enable both prev/links since we are on middle link
           prev.classList.remove('sprk-b-Link--disabled');
           next.classList.remove('sprk-b-Link--disabled');
-        } else if (currentItemNum === 3) {
+        } else if (currentItemNum === defaultPagItems.length) {
           updatePageStyles(item.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
           setAriaCurrent(item, currentPage);
-          next.classList.add('sprk-b-Link--disabled');
+          updatePageStyles(next, prev, 'sprk-b-Link--disabled');
         }
       }
     });
   });
 
   prev.addEventListener('click', event => {
-    const currentPage = defaultPags[0].querySelector('[aria-current="true"]'),
+    const currentPage = defaultPag.querySelector('[aria-current="true"]'),
           currentPageNum = parseInt(currentPage.textContent, 10);
-    event.preventDefault();
 
-    // Check if current page number is less than the max page number
-    if (currentPageNum < 4) {
+    event.preventDefault();
+    // If current page number is less than the max number of items
+    if (currentPageNum <= defaultPagItems.length) {
       // Update DOM CSS and add aria-current to new link
-      if (currentPageNum === 2) {
+      if (currentPageNum === defaultPagItems.length - 1) {
         updatePageStyles(link1.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
         setAriaCurrent(link1, currentPage);
         prev.classList.add('sprk-b-Link--disabled');
-      } else if (currentPageNum === 3) {
+      } else if (currentPageNum === defaultPagItems.length) {
         updatePageStyles(link2.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
         setAriaCurrent(link2, currentPage);
+        // Disable next link since we are on last link
         next.classList.remove('sprk-b-Link--disabled');
       }
     }
   });
 
   next.addEventListener('click', event => {
-    const currentPage = defaultPags[0].querySelector('[aria-current="true"]'),
+    const currentPage = defaultPag.querySelector('[aria-current="true"]'),
           currentPageNum = parseInt(currentPage.textContent, 10);
+
     event.preventDefault();
 
-    if (currentPageNum < 3) {
+    if (currentPageNum <= defaultPagItems.length) {
       if (currentPageNum === 1) {
         updatePageStyles(link2.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
         setAriaCurrent(link2, currentPage);
@@ -96,38 +116,44 @@ if (defaultPags) {
   });
 }
 
-// If long version pagination is found on page
-if (longPags) {
-  const dots = longPags[0].querySelectorAll('[data-sprk-pagination="dots"]'),
-        longPagItems = longPags[0].querySelectorAll('[data-sprk-pagination="item"]'),
-        next = longPags[0].querySelector('[data-sprk-pagination="next"]'),
-        prev = longPags[0].querySelector('[data-sprk-pagination="prev"]'),
+// Long Pagination
+if (longPag) {
+  const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]'),
+        longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]'),
+        next = longPag.querySelector('[data-sprk-pagination="next"]'),
+        prev = longPag.querySelector('[data-sprk-pagination="prev"]'),
         [link1, link2, link3] = longPagItems;
 
+  // Add click listener in case individual links are tapped/clicked
   longPagItems.forEach(item => {
     item.addEventListener('click', event => {
       const currentItemNum = parseInt(item.textContent, 10),
-            currentPage = longPags[0].querySelector('[aria-current="true"]'),
+            currentPage = longPag.querySelector('[aria-current="true"]'),
             currentPageNum = parseInt(currentPage.textContent, 10),
             maxPageNum = parseInt(link3.textContent, 10);
 
       event.preventDefault();
 
+      // Make sure link clicked is not itself
       if (currentItemNum !== currentPageNum) {
         if (currentItemNum === 1) {
-          dots[0].classList.add('hidden');
-          dots[1].classList.remove('hidden');
-          link3.parentElement.classList.remove('hidden');
-          link1.parentElement.classList.add('hidden');
+          // Hide 1st set of dots, make sure 2nd set is shown
+          updatePageStyles(dots[0], dots[1], 'hidden');
+          // Hide 1st link and make sure last is shown
+          updatePageStyles(link1.parentElement, link3.parentElement, 'hidden');
+          // Disable Prev link and show Next link
           updatePageStyles(prev, next, 'sprk-b-Link--disabled');
+          // Update link number to new number
           link2.textContent = link1.textContent;
         } else if (currentItemNum === maxPageNum) {
+          // Hide last set of dots, make sure 1st set is shown
+          updatePageStyles(dots[1], dots[0], 'hidden');
+          // Hide last link and make sure first is shown
+          updatePageStyles(link3.parentElement, link1.parentElement, 'hidden');
+          // Disable Next link since we are on last link
           updatePageStyles(next, prev, 'sprk-b-Link--disabled');
-          link1.parentElement.classList.remove('hidden');
-          link3.parentElement.classList.add('hidden');
+            // Update link number to new number
           link2.textContent = maxPageNum;
-          dots[1].classList.add('hidden');
-          dots[0].classList.remove('hidden');
         }
       }
     });
@@ -135,31 +161,47 @@ if (longPags) {
 
   // Add click listener to previous link
   prev.addEventListener('click', event => {
-    const currentPage = longPags[0].querySelector('[aria-current="true"]'),
+    const currentPage = longPag.querySelector('[aria-current="true"]'),
           maxPageNum = parseInt(link3.textContent, 10);
     let currentPageNum = parseInt(currentPage.textContent, 10);
+
     event.preventDefault();
 
     if (currentPageNum > 1) {
       if (currentPageNum === 2) {
+        // Page number is two when prev is clicked so decrement page number
         currentPageNum -= 1;
-        link1.parentElement.classList.add('hidden');
-        currentPage.textContent = currentPageNum;
+        // Hide the 1st set of dots
         dots[0].classList.add('hidden');
+        // Hide the 1st link
+        link1.parentElement.classList.add('hidden');
+        // Update link number with new number
+        currentPage.textContent = currentPageNum;
+        // Disable prev link since we can't go back any farther than 1st link
         prev.classList.add('sprk-b-Link--disabled');
       } else if (currentPageNum === 3) {
-        dots[0].classList.add('hidden');
+        // Decrement page number
         currentPageNum -= 1;
+        // We go back to two link layout when number is < 3
+        dots[0].classList.add('hidden');
+        // Update link number with new number
         currentPage.textContent = currentPageNum;
       } else if (currentPageNum === maxPageNum) {
+        // Decrement page number
         currentPageNum -= 1;
+        // Show last link number
         link3.parentElement.classList.remove('hidden');
+        // Enable the Next link since we are no longer on last link
         next.classList.remove('sprk-b-Link--disabled');
+        // Update link number with new number
         currentPage.textContent = currentPageNum;
       } else {
+        // Decrement page number
         currentPageNum -= 1;
+        // Show bot sets of dots
         dots[0].classList.remove('hidden');
         dots[1].classList.remove('hidden');
+        // Update link number with new number
         currentPage.textContent = currentPageNum;
       }
     }
@@ -167,7 +209,7 @@ if (longPags) {
 
   // Add listener to next link
   next.addEventListener('click', event => {
-    const currentPage = longPags[0].querySelector('[aria-current="true"]'),
+    const currentPage = longPag.querySelector('[aria-current="true"]'),
           maxPageNum = parseInt(link3.textContent, 10);
 
     let currentPageNum = parseInt(currentPage.textContent, 10);
