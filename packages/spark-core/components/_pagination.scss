@@ -19,11 +19,19 @@ $pag-breakpoint: 24.25rem;
 }
 
 .sprk-c-Pagination__item {
-  margin-right: $space-s;
+  margin-right: $space-m;
   padding: $space-inset-short-s;
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.sprk-c-Pagination__item--long {
+  margin-right: $space-xs;
+
+  @media all and (min-width: $pag-breakpoint) {
+    margin-right: $space-s;
   }
 }
 
