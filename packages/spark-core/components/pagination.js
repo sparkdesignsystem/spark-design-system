@@ -1,17 +1,17 @@
+/* global document */
 export default () => {
-
   /**
    *  Set aria-label to 'Page <number>'
    *  based on the pagination item's number
    */
-  const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]'),
-        longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
-  let defaultPagItems,
-      longNextLink,
-      longPagItems,
-      longPrevLink;
+  const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]');
+  const longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
+  let defaultPagItems;
+  let longNextLink;
+  let longPagItems;
+  let longPrevLink;
 
-  const setAriaLabel = pagItem => {
+  const setAriaLabel = (pagItem) => {
     // Get page item's page number
     const pagNum = pagItem.textContent;
 
@@ -23,24 +23,24 @@ export default () => {
   };
 
   // Go through each default pagination found and compose list of items
-  defaultPaginations.forEach(defaultPag => {
+  defaultPaginations.forEach((defaultPag) => {
     defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]');
   });
 
   // Go through each long pagination found and compose list of items
-  longPaginations.forEach(longPag => {
+  longPaginations.forEach((longPag) => {
     longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     longPrevLink = longPag.querySelector('[data-sprk-pagination="prev"]');
     longNextLink = longPag.querySelector('[data-sprk-pagination="next"]');
   });
 
   // Loop through all pagination items for each default pagination component
-  defaultPagItems.forEach(defaultPagItem => {
+  defaultPagItems.forEach((defaultPagItem) => {
     // Initially set aria labels on page load
     setAriaLabel(defaultPagItem);
   });
 
-  longPagItems.forEach(longPagItem => {
+  longPagItems.forEach((longPagItem) => {
     setAriaLabel(longPagItem);
     longPagItem.addEventListener('click', () => {
       setAriaLabel(longPagItem);

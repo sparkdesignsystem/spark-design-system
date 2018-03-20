@@ -1,3 +1,4 @@
+/* global document */
 /**
  *  Pagination Documentation Demo JS
  *  Assume only one type of
@@ -40,34 +41,46 @@ const updatePageStyles = (addItem, removeItem, classCSS) => {
 
 // Default Pagination
 if (defaultPag) {
-  const defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]'),
-        [link1, link2, link3] = defaultPagItems,
-        next = defaultPag.querySelector('[data-sprk-pagination="next"]'),
-        prev = defaultPag.querySelector('[data-sprk-pagination="prev"]');
+  const defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]');
+  const [link1, link2, link3] = defaultPagItems;
+  const next = defaultPag.querySelector('[data-sprk-pagination="next"]');
+  const prev = defaultPag.querySelector('[data-sprk-pagination="prev"]');
 
   // Listen for page number link clicks
-  defaultPagItems.forEach(item => {
-    item.addEventListener('click', event => {
-      const currentItemNum = parseInt(item.textContent, 10),
-            currentPage = defaultPag.querySelector('[aria-current="true"]'),
-            currentPageNum = parseInt(currentPage.textContent, 10);
+  defaultPagItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      const currentItemNum = parseInt(item.textContent, 10);
+      const currentPage = defaultPag.querySelector('[aria-current="true"]');
+      const currentPageNum = parseInt(currentPage.textContent, 10);
 
       event.preventDefault();
 
       // If link clicked is not currenlty selected link
       if (currentItemNum !== currentPageNum) {
         if (currentItemNum === defaultPagItems.length - 2) {
-          updatePageStyles(item.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+          updatePageStyles(
+            item.parentElement,
+            currentPage.parentElement,
+            'sprk-c-Pagination__item--current',
+          );
           setAriaCurrent(item, currentPage);
           updatePageStyles(prev, next, 'sprk-b-Link--disabled');
         } else if (currentItemNum === defaultPagItems.length - 1) {
-          updatePageStyles(item.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+          updatePageStyles(
+            item.parentElement,
+            currentPage.parentElement,
+            'sprk-c-Pagination__item--current',
+          );
           setAriaCurrent(item, currentPage);
           // Enable both prev/links since we are on middle link
           prev.classList.remove('sprk-b-Link--disabled');
           next.classList.remove('sprk-b-Link--disabled');
         } else if (currentItemNum === defaultPagItems.length) {
-          updatePageStyles(item.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+          updatePageStyles(
+            item.parentElement,
+            currentPage.parentElement,
+            'sprk-c-Pagination__item--current',
+          );
           setAriaCurrent(item, currentPage);
           updatePageStyles(next, prev, 'sprk-b-Link--disabled');
         }
@@ -75,20 +88,28 @@ if (defaultPag) {
     });
   });
 
-  prev.addEventListener('click', event => {
-    const currentPage = defaultPag.querySelector('[aria-current="true"]'),
-          currentPageNum = parseInt(currentPage.textContent, 10);
+  prev.addEventListener('click', (event) => {
+    const currentPage = defaultPag.querySelector('[aria-current="true"]');
+    const currentPageNum = parseInt(currentPage.textContent, 10);
 
     event.preventDefault();
     // If current page number is less than the max number of items
     if (currentPageNum <= defaultPagItems.length) {
       // Update DOM CSS and add aria-current to new link
       if (currentPageNum === defaultPagItems.length - 1) {
-        updatePageStyles(link1.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+        updatePageStyles(
+          link1.parentElement,
+          currentPage.parentElement,
+          'sprk-c-Pagination__item--current',
+        );
         setAriaCurrent(link1, currentPage);
         prev.classList.add('sprk-b-Link--disabled');
       } else if (currentPageNum === defaultPagItems.length) {
-        updatePageStyles(link2.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+        updatePageStyles(
+          link2.parentElement,
+          currentPage.parentElement,
+          'sprk-c-Pagination__item--current',
+        );
         setAriaCurrent(link2, currentPage);
         // Disable next link since we are on last link
         next.classList.remove('sprk-b-Link--disabled');
@@ -96,19 +117,27 @@ if (defaultPag) {
     }
   });
 
-  next.addEventListener('click', event => {
-    const currentPage = defaultPag.querySelector('[aria-current="true"]'),
-          currentPageNum = parseInt(currentPage.textContent, 10);
+  next.addEventListener('click', (event) => {
+    const currentPage = defaultPag.querySelector('[aria-current="true"]');
+    const currentPageNum = parseInt(currentPage.textContent, 10);
 
     event.preventDefault();
 
     if (currentPageNum <= defaultPagItems.length) {
       if (currentPageNum === 1) {
-        updatePageStyles(link2.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+        updatePageStyles(
+          link2.parentElement,
+          currentPage.parentElement,
+          'sprk-c-Pagination__item--current',
+        );
         setAriaCurrent(link2, currentPage);
         prev.classList.remove('sprk-b-Link--disabled');
       } else if (currentPageNum === 2) {
-        updatePageStyles(link3.parentElement, currentPage.parentElement, 'sprk-c-Pagination__item--current');
+        updatePageStyles(
+          link3.parentElement,
+          currentPage.parentElement,
+          'sprk-c-Pagination__item--current',
+        );
         setAriaCurrent(link3, currentPage);
         next.classList.add('sprk-b-Link--disabled');
       }
@@ -118,19 +147,19 @@ if (defaultPag) {
 
 // Long Pagination
 if (longPag) {
-  const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]'),
-        longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]'),
-        next = longPag.querySelector('[data-sprk-pagination="next"]'),
-        prev = longPag.querySelector('[data-sprk-pagination="prev"]'),
-        [link1, link2, link3] = longPagItems;
+  const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+  const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+  const next = longPag.querySelector('[data-sprk-pagination="next"]');
+  const prev = longPag.querySelector('[data-sprk-pagination="prev"]');
+  const [link1, link2, link3] = longPagItems;
 
   // Add click listener in case individual links are tapped/clicked
-  longPagItems.forEach(item => {
-    item.addEventListener('click', event => {
-      const currentItemNum = parseInt(item.textContent, 10),
-            currentPage = longPag.querySelector('[aria-current="true"]'),
-            currentPageNum = parseInt(currentPage.textContent, 10),
-            maxPageNum = parseInt(link3.textContent, 10);
+  longPagItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      const currentItemNum = parseInt(item.textContent, 10);
+      const currentPage = longPag.querySelector('[aria-current="true"]');
+      const currentPageNum = parseInt(currentPage.textContent, 10);
+      const maxPageNum = parseInt(link3.textContent, 10);
 
       event.preventDefault();
 
@@ -152,7 +181,7 @@ if (longPag) {
           updatePageStyles(link3.parentElement, link1.parentElement, 'hidden');
           // Disable Next link since we are on last link
           updatePageStyles(next, prev, 'sprk-b-Link--disabled');
-            // Update link number to new number
+          // Update link number to new number
           link2.textContent = maxPageNum;
         }
       }
@@ -160,9 +189,9 @@ if (longPag) {
   });
 
   // Add click listener to previous link
-  prev.addEventListener('click', event => {
-    const currentPage = longPag.querySelector('[aria-current="true"]'),
-          maxPageNum = parseInt(link3.textContent, 10);
+  prev.addEventListener('click', (event) => {
+    const currentPage = longPag.querySelector('[aria-current="true"]');
+    const maxPageNum = parseInt(link3.textContent, 10);
     let currentPageNum = parseInt(currentPage.textContent, 10);
 
     event.preventDefault();
@@ -208,9 +237,9 @@ if (longPag) {
   });
 
   // Add listener to next link
-  next.addEventListener('click', event => {
-    const currentPage = longPag.querySelector('[aria-current="true"]'),
-          maxPageNum = parseInt(link3.textContent, 10);
+  next.addEventListener('click', (event) => {
+    const currentPage = longPag.querySelector('[aria-current="true"]');
+    const maxPageNum = parseInt(link3.textContent, 10);
 
     let currentPageNum = parseInt(currentPage.textContent, 10);
 
