@@ -1,7 +1,7 @@
 function setInvalidTextInput(inputContainer, defaultErrorMessage) {
-  const overrideErrorMessage = inputContainer.getAttribute('data-sprk-input-invalid-ssn-content');
-  const input = inputContainer.querySelectorAll('input')[0];
-  const errorContainer = inputContainer.querySelectorAll('.sprk-b-ErrorText')[0];
+  const overrideErrorMessage = inputContainer.getAttribute('data-sprk-input-invalid-content');
+  const input = inputContainer.querySelector('input');
+  const errorContainer = inputContainer.querySelector('.sprk-b-ErrorText');
 
   input.classList.add('sprk-b-TextInput--error');
   input.setAttribute('aria-invalid', 'true');

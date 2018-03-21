@@ -4,7 +4,7 @@ import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
-  const field = element.querySelectorAll('input')[0];
+  const field = element.querySelector('input');
   const validTest = isValidPhone(field.value);
   if (validTest) {
     setValidTextInput(element);
@@ -21,7 +21,7 @@ const formatPhone = (value) => {
 };
 
 const bindUIEvents = (element) => {
-  const field = element.querySelectorAll('input')[0];
+  const field = element.querySelector('input');
 
   // set up the validation and formatter
   field.addEventListener('keyup', () => {
