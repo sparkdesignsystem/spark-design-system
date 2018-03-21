@@ -1,4 +1,4 @@
-import { toggleValue } from '../utilities/toggleValue';
+import toggleValue from '../utilities/toggleValue';
 import getElements from '../utilities/getElements';
 import isValidSSN from '../utilities/validation/isValidSSN';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
