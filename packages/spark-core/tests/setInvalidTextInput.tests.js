@@ -35,4 +35,11 @@ describe('setInvalidTextInput tests', () => {
     setInvalidTextInput(inputContainer, error);
     expect(errorContainer.textContent).eql(error);
   });
+  it('should support overriding the error message', () => {
+    const defaultError = 'This is an error message';
+    const newError = 'This is my custom error.';
+    inputContainer.setAttribute('data-sprk-input-invalid-content', newError);
+    setInvalidTextInput(inputContainer, defaultError);
+    expect(errorContainer.textContent).eql(newError);
+  });
 });
