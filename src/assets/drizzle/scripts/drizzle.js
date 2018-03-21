@@ -1,6 +1,9 @@
 /* global document window */
+
 import 'prismjs';
 import './form-state-changer';
+import './pagination/long';
+import './pagination/default';
 
 const dom = {};
 

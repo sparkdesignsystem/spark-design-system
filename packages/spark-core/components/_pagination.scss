@@ -1,27 +1,46 @@
 // ==================================================================
 // Pagination
 // ==================================================================
+
+//
+// Available Variables
+///
+$pag-breakpoint: 24.25rem;
+
 .sprk-c-Pagination {
-  @include HorizontalList;
-  // Remove whitespace caused by inline-block.
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 26rem;
+  width: 100%;
 }
 
 .sprk-c-Pagination__item {
-  letter-spacing: normal;
-  word-spacing: normal;
-  padding-top: 0.1992rem;
-  padding-bottom: 0.1992rem;
-  padding-left: 0.67893rem;
-  padding-right: 0.67893rem;
-  margin-top: 0.1992rem;
-  margin-bottom: 0.1992rem;
-  margin-left: 0.1992rem;
-  margin-right: 0.1992rem;
+  margin-right: $space-m;
+  padding: $space-inset-short-s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// For items in the long pagination version
+.sprk-c-Pagination__item--long {
+  margin-right: $space-xs;
+
+  @media all and (min-width: $pag-breakpoint) {
+    margin-right: $space-s;
+  }
 }
 
 .sprk-c-Pagination__item--current {
   background-color: $gray-light;
-  border-radius: 4px;
+  border-radius: $border-radius;
+}
+
+.sprk-c-Pagination__item--current .sprk-b-Link {
+  font-weight: bold;
 }

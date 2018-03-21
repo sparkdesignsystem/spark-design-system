@@ -8,6 +8,7 @@ import datePicker from './base/datePicker';
 import modals from './components/modals';
 import { requiredTextInput } from './base/requiredTextInput';
 import { requiredTick } from './base/requiredTick';
+import pagination from './components/pagination';
 
 // Init
 requiredTick();
@@ -19,3 +20,4 @@ phoneInput();
 dateInput();
 datePicker();
 modals();
+pagination();

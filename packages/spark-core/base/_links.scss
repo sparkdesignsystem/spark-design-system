@@ -31,3 +31,18 @@
     text-decoration: underline;
   }
 }
+
+.sprk-b-Link--disabled {
+  color: $gray-medium;
+  pointer-events: none;
+
+  &:visited {
+    color: $gray-medium;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $gray-medium;
+  }
+}
