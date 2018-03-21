@@ -4,7 +4,7 @@ import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
-  const field = element.querySelectorAll('input')[0];
+  const field = element.querySelector('input');
   const validTest = isValidMonetary(field.value);
   if (validTest) {
     setValidTextInput(element);
@@ -20,7 +20,7 @@ const formatMonetary = value =>
     .replace(/\$/g, '');
 
 const bindUIEvents = (element) => {
-  const field = element.querySelectorAll('input')[0];
+  const field = element.querySelector('input');
 
   field.addEventListener('keyup', () => {
     runValidation(element);

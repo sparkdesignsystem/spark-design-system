@@ -5,7 +5,7 @@ import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
-  const field = element.querySelectorAll('input')[0];
+  const field = element.querySelector('input');
   const validTest = isValidSSN(field.value);
   if (validTest) {
     setValidTextInput(element);
@@ -32,8 +32,8 @@ const formatSSN = (value) => {
 };
 
 const bindUIEvents = (element) => {
-  const field = element.querySelectorAll('input')[0];
-  const checkbox = element.querySelectorAll('input[type=checkbox]')[0];
+  const field = element.querySelector('input');
+  const checkbox = element.querySelector('input[type=checkbox]');
 
   // set up the 'show ssn' button
   checkbox.addEventListener('change', () => {

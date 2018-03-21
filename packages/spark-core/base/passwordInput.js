@@ -2,8 +2,8 @@ import toggleValue from '../utilities/toggleValue';
 import getElements from '../utilities/getElements';
 
 const bindUIEvents = (element) => {
-  const field = element.querySelectorAll('input')[0];
-  const checkbox = element.querySelectorAll('input[type=checkbox]')[0];
+  const field = element.querySelector('input');
+  const checkbox = element.querySelector('input[type=checkbox]');
 
   // set up the 'show password' button
   checkbox.addEventListener('change', () => {

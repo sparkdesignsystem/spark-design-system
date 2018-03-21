@@ -1,7 +1,7 @@
 import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../utilities/getElements';
 
-function datePicker() {
+const datePicker = () => {
   getElements('[data-sprk-input="datepicker"] input', (element) => {
     TinyDatePicker(element, {
       mode: 'dp-below',
@@ -9,6 +9,6 @@ function datePicker() {
       max: '01/1/2068',
     });
   });
-}
+};
 
 export { datePicker as default };
