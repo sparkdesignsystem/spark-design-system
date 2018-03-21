@@ -12,5 +12,5 @@ order: 13
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}>
   <span class="sprk-b-ErrorText"
-        id="search--error-container">{{#if errorMessage}}{{errorMessage}}{{/if}}</span>
+        id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container">{{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>
