@@ -92,7 +92,7 @@ for unit tests. To run unit tests in Spark:
 
 1. Navigate to the root of the Spark-Core or Spark-Extras repository
 2. Run `npm install` if you have not already
-3. Run `mocha --compilers js:babel-core/register ./tests/*.tests.js`
+3. Run `npm test`
 4. See test output in terminal to determine number of passing or failed tests
 
 ### Code Style
