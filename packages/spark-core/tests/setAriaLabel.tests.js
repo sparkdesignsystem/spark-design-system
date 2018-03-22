@@ -20,16 +20,11 @@ describe('Pagination tests', () => {
     listItem = document.createElement('li');
     pagLink = document.createElement('a');
 
-    // add addtribute to nav container
     navContainer.setAttribute('data-sprk-pagination', 'default');
-    // add item addtributes to links
     pagLink.setAttribute('data-sprk-pagination', 'item');
     pagLink.textContent = 22;
-    // add links to be inside list items
     listItem.appendChild(pagLink);
-    // add list items to be inside unordered list
     uListContainer.appendChild(listItem);
-    // add unordered list to nav
     navContainer.appendChild(uListContainer);
   });
 
