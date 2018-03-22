@@ -9,7 +9,7 @@ const { JSDOM } = jsdom;
 const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
 
-describe('setInvalidTextInput tests', () => {
+describe('setInvalidTick tests', () => {
   let inputContainer;
   let selectionContainer1;
   let radio1;

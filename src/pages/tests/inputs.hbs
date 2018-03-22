@@ -57,4 +57,28 @@ layout: blank
           </div>
         </div>
       </div>
+
+  <h2 class="drizzle-h2">Required Select</h2>
+  <div class="drizzle-Space-inset-m">
+    <div class="sprk-b-TypeBodyTwo">
+      <div class="sprk-b-InputContainer" data-sprk-required="select">
+        <label for="select-required">Select Box Label</label>
+        <select id="select-required" aria-describedby="select-required--error-container" required>
+          <option value="not-selected">Please Choose an Option...</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <optgroup label="Grouped Options">
+            <option value="g1">Grouped Option 1</option>
+            <option value="g2">Grouped Option 2</option>
+            <option value="g3">Grouped Option 3</option>
+          </optgroup>
+        </select>
+        <span class="sprk-b-ErrorText" id="select-required--error-container">
+          This field is required.
+        </span>
+      </div>
+    </div>
+
+  </div>
 </form>
