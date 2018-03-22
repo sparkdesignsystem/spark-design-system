@@ -9,7 +9,7 @@ import modals from './components/modals';
 import { requiredTextInput } from './base/requiredTextInput';
 import { requiredTick } from './base/requiredTick';
 import { requiredSelect } from './base/requiredSelect';
-import pagination from './components/pagination';
+import { pagination } from './components/pagination';
 
 // Init
 requiredSelect();
