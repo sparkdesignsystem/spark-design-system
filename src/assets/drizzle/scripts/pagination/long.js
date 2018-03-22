@@ -14,7 +14,7 @@
  * These identify the previous and next links in the pagination components.
  */
 import { updatePageStyles } from './default';
-import { pagination } from '../../../../../packages/spark-core/components/pagination';
+import { setAriaLabel } from '../../../../../packages/spark-core/components/pagination';
 
 const longPag = document.querySelector('[data-sprk-pagination="long"]');
 
@@ -58,7 +58,7 @@ if (longPag) {
           link2.textContent = maxPageNum;
         }
       }
-      pagination(item);
+      setAriaLabel(currentPage);
     });
   });
 
