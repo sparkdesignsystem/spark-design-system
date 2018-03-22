@@ -37,10 +37,13 @@ export const updatePageStyles = (addItem, removeItem, classCSS) => {
 
 // Default Pagination
 if (defaultPag) {
-  const defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]');
+  let defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]');
   const [link1, link2, link3] = defaultPagItems;
   const next = defaultPag.querySelector('[data-sprk-pagination="next"]');
   const prev = defaultPag.querySelector('[data-sprk-pagination="prev"]');
+
+  // Convert nodelists to arrs
+  defaultPagItems = Array.from(defaultPagItems);
 
   // Listen for page number link clicks
   defaultPagItems.forEach((item) => {

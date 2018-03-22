@@ -16,16 +16,22 @@ const setAriaLabel = (pagItem) => {
 };
 
 const pagination = () => {
-  const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]');
-  const longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
+  let defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]');
+  let longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
   let defaultPagItems;
   let longNextLink;
   let longPagItems;
   let longPrevLink;
 
+  // Convert nodelists to arrs
+  defaultPaginations = Array.from(defaultPaginations);
+  longPaginations = Array.from(longPaginations);
+
   // Go through each default pagination found and compose list of items
   defaultPaginations.forEach((defaultPag) => {
     defaultPagItems = defaultPag.querySelectorAll('[data-sprk-pagination="item"]');
+    // Convert nodelists to arrs
+    defaultPagItems = Array.from(defaultPagItems);
   });
 
   // Go through each long pagination found and compose list of items
@@ -33,6 +39,9 @@ const pagination = () => {
     longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     longPrevLink = longPag.querySelector('[data-sprk-pagination="prev"]');
     longNextLink = longPag.querySelector('[data-sprk-pagination="next"]');
+
+    // Convert nodelists to arrs
+    longPagItems = Array.from(longPagItems);
   });
 
   // Loop through all pagination items for each default pagination component

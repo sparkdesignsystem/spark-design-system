@@ -20,11 +20,15 @@ const longPag = document.querySelector('[data-sprk-pagination="long"]');
 
 // Long Pagination
 if (longPag) {
-  const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-  const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+  let dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+  let longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
   const next = longPag.querySelector('[data-sprk-pagination="next"]');
   const prev = longPag.querySelector('[data-sprk-pagination="prev"]');
   const [link1, link2, link3] = longPagItems;
+
+  // Convert nodelists to arrs
+  dots = Array.from(dots);
+  longPagItems = Array.from(longPagItems);
 
   // Add click listener in case individual links are tapped/clicked
   longPagItems.forEach((item) => {
