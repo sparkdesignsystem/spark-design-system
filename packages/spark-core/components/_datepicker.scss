@@ -11,7 +11,9 @@
   padding: $space-inset-m;
   position: relative;
   max-width: 20rem;
+}
 
+.dp-below-top {
   // for the little arrow above the dp box
   &::after,
   &::before {
@@ -20,6 +22,31 @@
     content: '';
     left: $space-l;
     position: absolute;
+  }
+
+  &::after {
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+
+  &::before {
+    border-bottom-color: $gray-medium;
+    border-width: 13px;
+    margin-left: -13px;
+  }
+}
+
+.dp-above-top {
+  // for the little arrow below the dp box
+  &::after,
+  &::before {
+    border: solid transparent;
+    content: '';
+    left: $space-l;
+    position: absolute;
+    top: 100%;
+    transform: rotate(180deg);
   }
 
   &::after {
