@@ -91,7 +91,7 @@ framework with the [Chai](http://www.chaijs.com/) assertion library
 for unit tests. To run unit tests in Spark:
 
 1. Navigate to the root of the Spark-Core or Spark-Extras repository
-2. Make sure you have run `npm install` already
+2. Run `npm install` if you have not already
 3. Run `mocha --compilers js:babel-core/register ./tests/*.tests.js`
 4. See test output in terminal to determine number of passing or failed tests
 
