@@ -1,11 +1,10 @@
 import getElements from '../utilities/getElements';
-import isValidMonetary from '../utilities/validation/isValidMonetary';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
   const field = element.querySelector('input');
-  const validTest = isValidMonetary(field.value);
+  const validTest = field.validity.valid;
   if (validTest) {
     setValidTextInput(element);
   } else {
@@ -37,4 +36,4 @@ const monetaryInput = () => {
   getElements('[data-sprk-input="monetary"]', bindUIEvents);
 };
 
-export { monetaryInput, formatMonetary, runValidation };
+export { monetaryInput, formatMonetary };

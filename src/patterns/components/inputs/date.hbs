@@ -12,6 +12,7 @@ order: 27
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
          id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}"
          type="text"
+         pattern="(^\d{2}((\/)|-)\d{2}((\/)|-)\d{4}$)|(^\d{8}$)|^$"
          placeholder="MM/DD/YYYY"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container"
     {{#if disabled}} disabled{{/if}}>

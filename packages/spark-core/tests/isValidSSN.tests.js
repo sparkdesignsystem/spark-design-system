@@ -1,4 +1,11 @@
 /* global describe it */
+
+/*
+* These tests are for testing the regex provided in isValidSSN, although in practice, the regex is
+* assigned to the pattern attribute in the markup.
+*
+*/
+
 import isValidSSN from '../utilities/validation/isValidSSN';
 
 const { expect } = require('chai');

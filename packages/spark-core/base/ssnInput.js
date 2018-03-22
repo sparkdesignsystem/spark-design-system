@@ -1,12 +1,11 @@
 import toggleValue from '../utilities/toggleValue';
 import getElements from '../utilities/getElements';
-import isValidSSN from '../utilities/validation/isValidSSN';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
   const field = element.querySelector('input');
-  const validTest = isValidSSN(field.value);
+  const validTest = field.validity.valid;
   if (validTest) {
     setValidTextInput(element);
   } else {
@@ -52,4 +51,4 @@ const ssnInput = () => {
   getElements('[data-sprk-input="ssn"]', bindUIEvents);
 };
 
-export { ssnInput, formatSSN, runValidation };
+export { ssnInput, formatSSN };
