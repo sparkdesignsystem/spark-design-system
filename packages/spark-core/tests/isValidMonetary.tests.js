@@ -1,4 +1,10 @@
 /* global describe it */
+
+/*
+* These tests are for testing the regex provided in isValidMonetary, although in practice, the
+* regex is assigned to the pattern attribute in the markup.
+*
+*/
 import isValidMonetary from '../utilities/validation/isValidMonetary';
 
 const { expect } = require('chai');

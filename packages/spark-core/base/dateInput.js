@@ -1,11 +1,10 @@
 import getElements from '../utilities/getElements';
-import isValidDate from '../utilities/validation/isValidDate';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
   const field = element.querySelector('input');
-  const validTest = isValidDate(field.value);
+  const validTest = field.validity.valid;
   if (validTest) {
     setValidTextInput(element);
   } else {
@@ -45,4 +44,4 @@ const dateInput = () => {
   getElements('[data-sprk-input="date"]', bindUIEvents);
 };
 
-export { dateInput, formatDate, runValidation };
+export { dateInput, formatDate };

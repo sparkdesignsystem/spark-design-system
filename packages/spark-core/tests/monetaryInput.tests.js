@@ -1,5 +1,5 @@
-/* global document describe before it */
-import { formatMonetary, runValidation } from '../base/monetaryInput';
+/* global document describe it */
+import { formatMonetary } from '../base/monetaryInput';
 
 const jsdom = require('jsdom');
 const { expect } = require('chai');
@@ -38,28 +38,5 @@ describe('formatMonetary tests', () => {
     const div = document.createElement('input');
     div.value = '0.115';
     expect(formatMonetary(div.value)).eql('0.12');
-  });
-});
-
-describe('monetary runValidation tests', () => {
-  let inputContainer;
-  let input;
-
-  before(() => {
-    inputContainer = document.createElement('div');
-    const errorContainer = document.createElement('span');
-    errorContainer.classList.add('sprk-b-ErrorText');
-    input = document.createElement('input');
-    inputContainer.appendChild(input);
-    inputContainer.appendChild(errorContainer);
-  });
-
-  it('should return true if the validation passes', () => {
-    input.value = '123456789';
-    expect(runValidation(inputContainer)).eql(true);
-  });
-  it('should return false if the validation fails', () => {
-    input.value = 'Hello';
-    expect(runValidation(inputContainer)).eql(false);
   });
 });
