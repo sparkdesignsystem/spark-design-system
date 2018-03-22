@@ -13,10 +13,14 @@ contents:
   Money Input: inputs.html#monetary-input
   Password Input: inputs.html#password-input
   Helper Text: inputs.html#helper-text
-  Phone Number: inputs.html#phone-input
+  Phone Number: inputs.html#phone-number-input
   Date Input: inputs.html#date-input
   Date Picker: inputs.html#date-picker
 restrictions:
+  - You should add the 'novalidate' attribute to your form, since we handle form validation ourselves,
+    and don't use the browser's implementation
+  - You'll need to strip input values on submission of special characters that we add to the values
+    for certain inputs.
   - Make sure that each label's 'for' attribute matches the 'id' attribute of the corresponding
     input element.
   - Each input element's 'id' should be unique on the page.

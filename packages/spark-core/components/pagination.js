@@ -35,23 +35,27 @@ export default () => {
   });
 
   // Loop through all pagination items for each default pagination component
-  defaultPagItems.forEach((defaultPagItem) => {
-    // Initially set aria labels on page load
-    setAriaLabel(defaultPagItem);
-  });
-
-  longPagItems.forEach((longPagItem) => {
-    setAriaLabel(longPagItem);
-    longPagItem.addEventListener('click', () => {
-      setAriaLabel(longPagItem);
+  if (defaultPagItems) {
+    defaultPagItems.forEach((defaultPagItem) => {
+      // Initially set aria labels on page load
+      setAriaLabel(defaultPagItem);
     });
+  }
 
-    longPrevLink.addEventListener('click', () => {
+  if (longPagItems) {
+    longPagItems.forEach((longPagItem) => {
       setAriaLabel(longPagItem);
-    });
+      longPagItem.addEventListener('click', () => {
+        setAriaLabel(longPagItem);
+      });
 
-    longNextLink.addEventListener('click', () => {
-      setAriaLabel(longPagItem);
+      longPrevLink.addEventListener('click', () => {
+        setAriaLabel(longPagItem);
+      });
+
+      longNextLink.addEventListener('click', () => {
+        setAriaLabel(longPagItem);
+      });
     });
-  });
+  }
 };
