@@ -1,26 +1,27 @@
 /* global document */
-export default () => {
-  /**
-   *  Set aria-label to 'Page <number>'
-   *  based on the pagination item's number
-   */
+/**
+ *  Set aria-label to 'Page <number>'
+ *  based on the pagination item's number
+ */
+
+const setAriaLabel = (pagItem) => {
+  // Get page item's page number
+  const pagNum = pagItem.textContent;
+
+  // Create new ARIA label based on each item's page number
+  const ariaLabel = `Page ${pagNum}`;
+
+  // Set the new ARIA label to the page item
+  pagItem.setAttribute('aria-label', ariaLabel);
+};
+
+const pagination = () => {
   const defaultPaginations = document.querySelectorAll('[data-sprk-pagination="default"]');
   const longPaginations = document.querySelectorAll('[data-sprk-pagination="long"]');
   let defaultPagItems;
   let longNextLink;
   let longPagItems;
   let longPrevLink;
-
-  const setAriaLabel = (pagItem) => {
-    // Get page item's page number
-    const pagNum = pagItem.textContent;
-
-    // Create new ARIA label based on each item's page number
-    const ariaLabel = `Page ${pagNum}`;
-
-    // Set the new ARIA label to the page item
-    pagItem.setAttribute('aria-label', ariaLabel);
-  };
 
   // Go through each default pagination found and compose list of items
   defaultPaginations.forEach((defaultPag) => {
@@ -59,3 +60,5 @@ export default () => {
     });
   }
 };
+
+export { setAriaLabel, pagination };

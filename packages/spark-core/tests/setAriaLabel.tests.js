@@ -1,5 +1,5 @@
 /* global document describe before it */
-import setAriaLabel from '../components/pagination';
+import { setAriaLabel } from '../components/pagination';
 
 const jsdom = require('jsdom');
 const { expect } = require('chai');
@@ -8,35 +8,37 @@ const { JSDOM } = jsdom;
 const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
 global.document = dom.window.document;
 
-describe('setAriaLabel tests', () => {
+describe('Pagination tests', () => {
   let navContainer;
-  let listContainer;
-  let listItemContainer;
-  let listItemLink;
+  let uListContainer;
+  let listItem;
+  let pagLink;
 
   before(() => {
     navContainer = document.createElement('nav');
-    listContainer = document.createElement('ul');
-    listItemContainer = document.createElement('li');
-    listItemLink = document.createElement('a');
+    uListContainer = document.createElement('ul');
+    listItem = document.createElement('li');
+    pagLink = document.createElement('a');
 
+    // add addtribute to nav container
     navContainer.setAttribute('data-sprk-pagination', 'default');
-    listContainer.classList.add('sprk-c-Pagination sprk-b-List sprk-b-List--bare');
-    listItemContainer.classList.add('sprk-c-Pagination__item');
-    listItemLink.classList.add('sprk-b-Link sprk-b-Link--standalone');
-    listItemLink.setAttribute('data-sprk-pagination', 'item');
-
-    navContainer.appendChild(listContainer);
-    listContainer.appendChild(listItemContainer);
-    listItemContainer.appendChild(listItemLink);
+    // add item addtributes to links
+    pagLink.setAttribute('data-sprk-pagination', 'item');
+    pagLink.textContent = 22;
+    // add links to be inside list items
+    listItem.appendChild(pagLink);
+    // add list items to be inside unordered list
+    uListContainer.appendChild(listItem);
+    // add unordered list to nav
+    navContainer.appendChild(uListContainer);
   });
 
-  it('should add the correct aria labels to the page links', () => {
-    setAriaLabel(listItemLink);
-    expect(listItemLink.hasAttribute('aria-label')).eql('true');
-  });
-  it('should set the aria labels to match the link text', () => {
-    setAriaLabel(listItemLink);
-    expect(listItemLink.getAttribute('aria-label')).eql(listItemLink.textContent);
+  it('should add/set the aria label to match the link text', () => {
+    setAriaLabel(pagLink);
+
+    const pagNum = pagLink.textContent;
+    const pagLabel = `Page ${pagNum}`;
+
+    expect(pagLink.getAttribute('aria-label')).eql(pagLabel);
   });
 });
