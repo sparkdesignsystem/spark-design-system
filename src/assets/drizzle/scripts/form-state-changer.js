@@ -1,4 +1,7 @@
 /* global document */
+import NodeListForEach from '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
+NodeListForEach();
+
 // TODO: unit test this code, once the drizzle unit test system is set up
 document.querySelectorAll('[data-state-changer-id]').forEach((changer) => {
   changer.addEventListener('change', (event) => {
