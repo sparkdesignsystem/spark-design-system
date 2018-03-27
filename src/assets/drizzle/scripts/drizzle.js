@@ -3,6 +3,7 @@ import 'prismjs';
 import '../../../../packages/spark-core/utilities/polyfills/ArrayFrom';
 import '../../../../packages/spark-core/utilities/polyfills/StringIncludes';
 import '../../../../packages/spark-core/utilities/polyfills/ArrayFind';
+import '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
 import './form-state-changer';
 import './pagination/long';
 import './pagination/default';

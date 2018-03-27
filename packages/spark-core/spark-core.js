@@ -15,9 +15,7 @@ import { pagination } from './components/pagination';
 import './utilities/polyfills/ArrayFrom';
 import './utilities/polyfills/StringIncludes';
 import './utilities/polyfills/ArrayFind';
-import NodeListForEach from './utilities/polyfills/NodeListForEach';
-
-NodeListForEach();
+import './utilities/polyfills/NodeListForEach';
 
 // Init
 requiredSelect();
