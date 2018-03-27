@@ -1,6 +1,10 @@
 /* global document window */
-
 import 'prismjs';
+
+import NodeListForEach from '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
+
+NodeListForEach();
+
 import './form-state-changer';
 import './pagination/long';
 import './pagination/default';
