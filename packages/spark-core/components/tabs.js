@@ -33,7 +33,6 @@ const getActiveTabIndex = (tabs) => {
 
 const advanceTab = (tabs, tabpanels) => {
   const activeIndex = getActiveTabIndex(tabs);
-
   resetTabs(tabs, tabpanels);
 
   if (activeIndex + 1 <= tabs.length - 1) {
@@ -107,4 +106,12 @@ const tabs = () => {
   });
 };
 
-export { tabs, ariaOrientation, resetTabs, setActiveTab, advanceTab, retreatTab };
+export {
+  tabs,
+  ariaOrientation,
+  resetTabs,
+  setActiveTab,
+  advanceTab,
+  retreatTab,
+  getActiveTabIndex,
+};
