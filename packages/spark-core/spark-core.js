@@ -12,6 +12,7 @@ import { requiredSelect } from './base/requiredSelect';
 import { pagination } from './components/pagination';
 
 // Polyfills
+import './utilities/polyfills/ArrayFrom';
 import NodeListForEach from './utilities/polyfills/NodeListForEach';
 
 NodeListForEach();
