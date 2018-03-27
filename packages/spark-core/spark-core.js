@@ -14,6 +14,8 @@ import { pagination } from './components/pagination';
 // Polyfills
 import NodeListForEach from './utilities/polyfills/NodeListForEach';
 
+NodeListForEach();
+
 // Init
 requiredSelect();
 requiredTick();
@@ -27,4 +29,3 @@ datePicker();
 modals();
 pagination();
 
-NodeListForEach();
