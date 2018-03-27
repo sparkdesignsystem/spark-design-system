@@ -1,2 +1,5 @@
 name: Tabbed Navigation
 sparkPackageCore: true
+restrictions:
+  - You should not have more than 7 tabs
+  - Try to limit the content of each tab label so that its not too long

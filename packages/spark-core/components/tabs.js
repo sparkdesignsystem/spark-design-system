@@ -68,16 +68,26 @@ const bindUIEvents = (element) => {
   });
 
   tabContainer.addEventListener('keydown', (event) => {
-    if (event.keyCode === 37) {
-      retreatTab(tabs, tabpanels);
-    } else if (event.keyCode === 39) {
-      advanceTab(tabs, tabpanels);
-    }
-  });
+    const keys = {
+      end: 35,
+      home: 36,
+      left: 37,
+      right: 39,
+      tab: 9,
+    };
 
-  tabContainer.addEventListener('focusin', () => {
-    const activeIndex = getActiveTabIndex(tabs);
-    tabs[activeIndex].focus();
+    if (event.keyCode === keys.left) {
+      retreatTab(tabs, tabpanels);
+    } else if (event.keyCode === keys.right) {
+      advanceTab(tabs, tabpanels);
+    } else if (event.keyCode === keys.tab) {
+      event.preventDefault();
+      tabpanels[getActiveTabIndex(tabs)].focus();
+    } else if (event.keyCode === keys.home) {
+      setActiveTab(tabs[0], tabpanels[0]);
+    } else if (event.keyCode === keys.end) {
+      setActiveTab(tabs[tabs.length - 1], tabpanels[tabpanels.length - 1]);
+    }
   });
 };
 
