@@ -11,6 +11,9 @@ import { requiredTick } from './base/requiredTick';
 import { requiredSelect } from './base/requiredSelect';
 import { pagination } from './components/pagination';
 
+// Polyfills
+import NodeListForEach from './utilities/polyfills/NodeListForEach';
+
 // Init
 requiredSelect();
 requiredTick();
@@ -23,3 +26,5 @@ dateInput();
 datePicker();
 modals();
 pagination();
+
+NodeListForEach();
