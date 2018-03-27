@@ -1,6 +1,7 @@
 /* global document window */
 import 'prismjs';
 import '../../../../packages/spark-core/utilities/polyfills/ArrayFrom';
+import '../../../../packages/spark-core/utilities/polyfills/StringIncludes';
 import '../../../../packages/spark-core/utilities/polyfills/ArrayFind';
 import './form-state-changer';
 import './pagination/long';
