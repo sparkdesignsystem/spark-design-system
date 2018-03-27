@@ -10,26 +10,28 @@ import './pagination/default';
 
 const dom = {};
 
-dom.nav = document.getElementById('nav');
-dom.navMenu = document.getElementById('nav-menu');
-dom.navToggle = dom.nav.querySelector('a[href="#nav"]');
-dom.navLinks = dom.navMenu.querySelectorAll('a');
-
-function setActiveNavItem(pathname) {
+function setActiveNavItem(pathname, navLinks) {
   const noIndex = str => str.replace(/index\.html$/, '');
   const isMatch = a => noIndex(a.pathname) === noIndex(pathname);
-  const item = Array.from(dom.navLinks).find(isMatch);
+  const item = Array.from(navLinks).find(isMatch);
   if (item) {
     item.classList.add('is-active');
   }
 }
 
-dom.navToggle.addEventListener('click', (event) => {
-  event.preventDefault();
-  dom.nav.classList.toggle('is-active');
-});
+dom.nav = document.getElementById('nav');
+dom.navMenu = document.getElementById('nav-menu');
 
-setActiveNavItem(window.location.pathname);
+if (dom.nav) {
+  dom.navToggle = dom.nav.querySelector('a[href="#nav"]');
+  dom.navLinks = dom.navMenu.querySelectorAll('a');
+
+  dom.navToggle.addEventListener('click', (event) => {
+    event.preventDefault();
+    dom.nav.classList.toggle('is-active');
+  });
+  setActiveNavItem(window.location.pathname, dom.navLinks);
+}
 
 dom.frameContainers = document.querySelectorAll('[data-drizzle-append-iframe]');
 
