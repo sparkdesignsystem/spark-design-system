@@ -12,7 +12,7 @@
  *  on load if we detect the toggle container.
  */
 // Toggle the hide class on the content
-const toggleContentCSS = (toggleTrigger, toggleContent) => {
+const toggleContentCSS = (toggleContent) => {
   toggleContent.classList.toggle('sprk-u-Hide');
 };
 
@@ -23,17 +23,22 @@ const toggleIconCSS = (toggleIcon) => {
 
 // Toggle the aria expanded attribute
 const toggleAriaExpanded = (toggleTrigger) => {
-  const isExpanded = toggleTrigger.getAttribute('aria-expanded');
-  toggleTrigger.setAttribute('aria-expanded', isExpanded === 'false' ? 'true' : 'false');
+  // If the trigger has the attr then determine toggle state
+  if (toggleTrigger.hasAttribute('aria-expanded')) {
+    const isExpanded = toggleTrigger.getAttribute('aria-expanded');
+    toggleTrigger.setAttribute('aria-expanded', isExpanded === 'false' ? 'true' : 'false');
+  } else {
+    // If it doesn't have it then set it to false initially
+    toggleTrigger.setAttribute('aria-expanded', 'false');
+  }
 };
 
 const toggle = () => {
   let toggleContainer = document.querySelectorAll('[data-sprk-toggle="container"]');
-
   // Convert toggleContainer nodelist to array
   toggleContainer = Array.from(toggleContainer);
   // First check if toggles are available in the DOM
-  if (toggleContainer) {
+  if (toggleContainer.length) {
     // For each toggle that we find we want to add a click listener and fn call on trigger
     toggleContainer.forEach((elem) => {
       // Get the toggle's trigger and content elems
@@ -43,11 +48,11 @@ const toggle = () => {
       // Hide the toggle content initially
       toggleContent.classList.add('sprk-u-Hide');
       // Set aria-expanded to false initially
-      toggleTrigger.setAttribute('aria-expanded', 'false');
+      toggleAriaExpanded(toggleTrigger);
       // Add click event listener to trigger for each toggle collection we find
       toggleTrigger.addEventListener('click', (event) => {
         event.preventDefault();
-        toggleContentCSS(toggleTrigger, toggleContent);
+        toggleContentCSS(toggleContent);
         toggleIconCSS(toggleIcon);
         toggleAriaExpanded(toggleTrigger);
       });
