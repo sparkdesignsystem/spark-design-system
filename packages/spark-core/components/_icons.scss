@@ -13,3 +13,12 @@
 .sprk-c-Icon--large {
   height: $font-size-body-two + 0.25;
 }
+
+.sprk-c-Icon--currentColor {
+  fill: currentColor;
+}
+
+.sprk-c-Icon--flip {
+  transform: rotate(180deg);
+  transform-origin: 50% 45%;
+}
