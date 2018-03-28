@@ -2,9 +2,12 @@
 import 'prismjs';
 import 'babel-polyfill';
 import '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
-import './form-state-changer';
 import './pagination/long';
 import './pagination/default';
+
+import { formStateChanger } from './form-state-changer';
+
+formStateChanger();
 
 const dom = {};
 
