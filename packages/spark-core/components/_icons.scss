@@ -3,6 +3,7 @@
 // ==================================================================
 .sprk-c-Icon {
   height: $font-size-body-two;
+  fill: currentColor;
   width: auto;
 }
 
@@ -14,11 +15,7 @@
   height: $font-size-body-two + 0.25;
 }
 
-.sprk-c-Icon--currentColor {
-  fill: currentColor;
-}
-
-.sprk-c-Icon--flip {
+.sprk-c-Icon--open {
   transform: rotate(180deg);
   transform-origin: 50% 45%;
 }
