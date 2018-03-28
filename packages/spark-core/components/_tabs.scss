@@ -4,10 +4,10 @@
 .sprk-c-Tabs__buttons {
   display: block;
   border-bottom: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $space-m;
   background-color: $white;
 
-  @media all and (min-width: 46em) {
+  @media all and (min-width: 46rem) {
     display: flex;
     border: 0;
   }
@@ -25,8 +25,8 @@
   border-right: 2px solid $green-medium;
   border-top: 0;
   width: 100%;
-  padding-top: 0.31296rem;
-  padding-bottom: 0.31296rem;
+  padding-top: $space-xs;
+  padding-bottom: $space-xs;
 
   &:first-of-type {
     border-top: 2px solid $green-medium;
