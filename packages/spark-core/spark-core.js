@@ -12,6 +12,12 @@ import { requiredSelect } from './base/requiredSelect';
 import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
 
+// Polyfills
+import './utilities/polyfills/ArrayFrom';
+import './utilities/polyfills/StringIncludes';
+import './utilities/polyfills/ArrayFind';
+import './utilities/polyfills/NodeListForEach';
+
 // Init
 requiredSelect();
 requiredTick();
