@@ -2,16 +2,9 @@
 doclayout: true
 order: 1
 name: Icon Sizing
-notes: There are three sizes available for all icons. The medium size is the default for all icons,
+notes: There are four sizes available for all icons. The default for all icons is 16px by 16px,
     you can use the modifiers below to adjust the size.
 ---
-
-<div>
-    <svg class="sprk-c-Icon sprk-c-Icon--small" viewBox="0 0 100 100">
-      <use xlink:href="#bars" />
-    </svg>
-</div>
-
 <div>
     <svg class="sprk-c-Icon" viewBox="0 0 100 100">
       <use xlink:href="#bars" />
@@ -19,15 +12,28 @@ notes: There are three sizes available for all icons. The medium size is the def
 </div>
 
 <div>
-    <svg class="sprk-c-Icon sprk-c-Icon--large" viewBox="0 0 100 100">
+    <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 100 100">
+      <use xlink:href="#bars" />
+    </svg>
+</div>
+
+<div>
+    <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
+      <use xlink:href="#bars" />
+    </svg>
+</div>
+
+<div>
+    <svg class="sprk-c-Icon sprk-c-Icon--xxl" viewBox="0 0 100 100">
       <use xlink:href="#bars" />
     </svg>
 </div>
 
 <pre class="drizzle-u-borderTop drizzle-u-pad">
   <code class="language-markup">
-    // Classes
-    .sprk-c-Icon--small
-    .sprk-c-Icon--large
+    // Modifier Classes
+    .sprk-c-Icon--l
+    .sprk-c-Icon--xl
+    .sprk-c-Icon--xxl
   </code>
 </pre>
