@@ -5,13 +5,11 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-113915182-1');
     </script>
-
   {{/content}}
+
   {{#content "body"}}
-      {{> drizzle.spark-core-icons}}
     {{> drizzle.nav}}
     <div class="drizzle-Layout-main drizzle-u-cf drizzle-copy">
       <div class="drizzle-u-pad drizzle-u-rhythm">
@@ -21,7 +19,7 @@
       </div>
     </div>
   {{/content}}
+
   {{#content "foot"}}
-    <script src="{{@root.baseurl}}/assets/drizzle/scripts/drizzle.js"></script>
   {{/content}}
 {{/extend}}

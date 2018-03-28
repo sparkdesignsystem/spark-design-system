@@ -11,6 +11,7 @@ import { requiredTick } from './base/requiredTick';
 import { requiredSelect } from './base/requiredSelect';
 import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
+import { toggle } from './components/toggle';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -31,3 +32,4 @@ datePicker();
 modals();
 pagination();
 tabs();
+toggle();
