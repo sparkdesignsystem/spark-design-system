@@ -8,3 +8,4 @@ npm-debug.log
 lerna-debug.log
 .idea
 src/templates/drizzle/spark-core-icons.hbs
+packages/spark-core/.nyc_output
