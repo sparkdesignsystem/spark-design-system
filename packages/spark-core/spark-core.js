@@ -10,6 +10,7 @@ import { requiredTextInput } from './base/requiredTextInput';
 import { requiredTick } from './base/requiredTick';
 import { requiredSelect } from './base/requiredSelect';
 import { pagination } from './components/pagination';
+import { toggle } from './components/toggle';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -29,4 +30,4 @@ dateInput();
 datePicker();
 modals();
 pagination();
-
+toggle();

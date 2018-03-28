@@ -29,14 +29,18 @@
     {{/block}}
   </head>
   <body class="{{bodyclass}}">
+    {{> drizzle.spark-core-icons}}
+
     {{#block "body"}}
       {{#block "main"}}
 
       {{/block}}
     {{/block}}
-    {{#block "foot"}}
 
+    {{#block "foot"}}
     {{/block}}
+
+    <script src="{{@root.baseurl}}/assets/drizzle/scripts/drizzle.js"></script>
     <script src="{{@root.baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
   </body>
 </html>
