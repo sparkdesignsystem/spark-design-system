@@ -40,6 +40,7 @@ module.exports = {
     plugins: {
       webpack: {
         entry: {
+          'babel-polyfill': './src/assets/drizzle/scripts/drizzle.js',
           // Drizzle UI scripts
           'drizzle/scripts/drizzle': './src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
