@@ -5,8 +5,8 @@ label,
 .sprk-b-Label {
   @include TextCrop(
     $line-height: $line-height-body-one,
-    $top-crop: 8,
-    $bottom-crop: 8,
+    $top-crop: 6,
+    $bottom-crop: 6,
     $crop-font-size: (strip-unit($font-size-body-one) * 16),
     $crop-line-height: $line-height-body-one);
 
