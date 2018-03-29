@@ -1,28 +1,40 @@
 /* global document */
-// TODO: unit test this code, once the drizzle unit test system is set up
-document.querySelectorAll('[data-state-changer-id]').forEach((changer) => {
-  changer.addEventListener('change', (event) => {
-    const { value } = event.target;
-    const changerId = changer.getAttribute('data-state-changer-id');
-    const templates = document.querySelectorAll('[data-template-id]');
+import getElements from '../../../../packages/spark-core/utilities/getElements';
 
-    // map state changer to the right templates
-    const matchingTemplates = Array.from(templates).filter((template) => {
-      const templateId = template.getAttribute('data-template-id');
-      return (
-        templateId === changerId ||
-        templateId === `${changerId}-error-state` ||
-        templateId === `${changerId}-disabled-state`
-      );
-    });
-
-    // loop through matches and decide whether to show / hide
-    matchingTemplates.forEach((matchingTemplate) => {
-      const templateId = matchingTemplate.getAttribute('data-template-id');
-      matchingTemplate.classList.add('hidden');
-      if ((templateId === changerId && value === 'normal') || templateId.includes(value)) {
-        matchingTemplate.classList.remove('hidden');
-      }
-    });
+const mapTemplates = (id, templates) => {
+  const matchingTemplates = Array.from(templates).filter((template) => {
+    const templateId = template.getAttribute('data-template-id');
+    return (
+      templateId === id ||
+      templateId === `${id}-error-state` ||
+      templateId === `${id}-disabled-state`
+    );
   });
-});
+  return matchingTemplates;
+};
+
+const toggleTemplate = (id, value, templates) => {
+  // loop through matches and decide whether to show / hide
+  templates.forEach((matchingTemplate) => {
+    const templateId = matchingTemplate.getAttribute('data-template-id');
+    matchingTemplate.classList.add('hidden');
+    if ((templateId === id && value === 'normal') || templateId.includes(value)) {
+      matchingTemplate.classList.remove('hidden');
+    }
+  });
+};
+
+const bindUIEvents = (element) => {
+  element.addEventListener('change', (event) => {
+    const { value } = event.target;
+    const changerId = element.getAttribute('data-state-changer-id');
+    const templates = document.querySelectorAll('[data-template-id]');
+    toggleTemplate(changerId, value, mapTemplates(changerId, templates));
+  });
+};
+
+const formStateChanger = () => {
+  getElements('[data-state-changer-id]', bindUIEvents);
+};
+
+export { formStateChanger, mapTemplates, toggleTemplate };
