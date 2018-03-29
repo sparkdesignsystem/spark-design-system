@@ -18,7 +18,7 @@
   "nyc": {
     "exclude": [
       "packages/**/*.js",
-      "dist"
+      "tests"
     ]
   },
   "devDependencies": {
