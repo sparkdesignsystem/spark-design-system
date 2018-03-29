@@ -109,17 +109,8 @@ and an additional code formatter, [prettier](https://github.com/prettier/prettie
 #### HTML
 
 * Two spaces for indentation
-* For readability purposes, if an element has a multitude of attributes
-  that exceed the line length of 80 characters the attributes should each be on a new line,
-  ex.
-```
-  <input
-    class="sprk-b-TextInput sprk-u-pll sprk-u-Size-100"
-    id="datepicker-normal"
-    type="text"
-    placeholder="MM/DD/YYYY"
-    aria-describedby="datepicker-normal--error-container">
-```
+* For better code readability the attributes of elements should each be on their own line
+  when the number of attributes makes that element exceed a line length of 80 characters
 
 #### CSS
 
@@ -139,7 +130,7 @@ and an additional code formatter, [prettier](https://github.com/prettier/prettie
 * ESLint is setup to use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
   and Spark JS coding conventions come from there
 * We follow JS recommendations from the [Quicken Loans JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md)
-* Data attributes on DOM elements is the chosen method for DOM manipulation, ex. `data-sprk-component="item"`
+* Data attributes on DOM elements is the chosen method for DOM selection
 
 ### Change Workflow
 
