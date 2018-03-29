@@ -107,6 +107,7 @@ automatically on commit. The pre-commit hooks run
 and an additional code formatter, [prettier](https://github.com/prettier/prettier).
 
 #### HTML
+
 * Two spaces for indentation
 * For readability purposes, if an element has a multitude of attributes
   that exceed the line length of 80 characters the attributes should each be on a new line,
@@ -121,6 +122,7 @@ and an additional code formatter, [prettier](https://github.com/prettier/prettie
 ```
 
 #### CSS
+
 * Two spaces for indentation
 * CSS is written in [Sass](https://sass-lang.com/) and preprocessed into CSS
 * Class Naming Conventions can be found [here](https://sparkdesignsystem.com/docs/class-naming-convention)
@@ -129,6 +131,7 @@ and an additional code formatter, [prettier](https://github.com/prettier/prettie
   in the [Stylelint configuration file ](https://github.com/sparkdesignsystem/spark-design-system/blob/master/.stylelintrc)
 
 #### JS
+
 * Two spaces for indentation
 * Spark JS will use new features from ESNext and assumes applications using Spark
   have a JavaScript compiler setup
