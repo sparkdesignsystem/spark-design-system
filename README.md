@@ -100,6 +100,11 @@ for unit tests. To run unit tests in Spark:
 
 Spark follows specific coding styles for HTML, CSS and
 JavaScript to ensure maintainability and scalability.
+To successfully make a commit in this repo the code
+must pass the pre-commit hooks that will run
+automatically on commit. The pre-commit hooks run
+[ESLint](https://eslint.org/), [Stylelint](https://github.com/stylelint/stylelint)
+and an additional code formatter, [prettier](https://github.com/prettier/prettier).
 
 #### HTML
 * Two spaces for indentation
