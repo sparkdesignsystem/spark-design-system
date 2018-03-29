@@ -16,7 +16,7 @@ One of the most annoying things that happens when you use a CSS library is class
 
 To avoid this, the Spark Design System uses a global namespace to ensure that it's styles don't interfere with the custom styles in your app.
 
-## Class prefixes
+## Class Prefixes
 After the global namespace, each class name has a prefix which gives information about what the class is doing. The prefixes available are:
 
 * **`b-`** (Base) For classes that add additional style to base HTML elements.
@@ -24,12 +24,17 @@ After the global namespace, each class name has a prefix which gives information
 * **`c-`** (Component) Implementation-specific pieces of UI. CSS is safe to change because it is isolated to the specific component.
 * **`u-`** (Utility) Highly specific, highly reusable, usually single purpose, and have high specificity.
 * **`is-`, `has-`** (State) These classes are typically added and removed through JavaScript or on the server to show specific states.
-* **`js-`** (JavaScript) For targeting JavaScript specific functionality. No styles should be bound to these classes. They are only meant for behavior.
 
 ## Pascal Casing
 After the namespace and prefix, the main part of the class name doesn't stand out very well. For this reason we use pascal case to visually separate it from the rest of the name. For example:
 ```
 .sprk-c-HighlightBoard__content
+```
+
+## Class Suffixes
+Responsive suffixes on classes are utilized when the need to have styles start at a specific breakpoint occurs. The `@` symbol must be escaped in the stylesheet. For example:
+```
+.sprk-o-Flex\@xl
 ```
 
 ## BEM Syntax
@@ -68,3 +73,4 @@ The following is not allowed:
 * [SUIT CSS Component Names](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md#components) - Nicolas Gallagher's SUIT CSS component naming convention.
 * [MindBEMding – getting your head ’round BEM syntax](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) - Harry Roberts explains BEM syntax.
 * [Managing Large CSS Projects with ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) - Harry Roberts explains the ITCSS architecture.
+* [Responsive Suffixes](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) - Harry Roberts explains adding to responsive suffixes to BEM naming

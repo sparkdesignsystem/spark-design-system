@@ -86,6 +86,7 @@ If you want to run a copy of Drizzle locally:
 3. Open your browser to `http://localhost:3000/`
 
 ### Unit Tests
+
 Spark uses the [Mocha](http://https://mochajs.org/.chaijs.com/) test
 framework with the [Chai](http://www.chaijs.com/) assertion library
 for unit tests. To run unit tests in Spark:
@@ -95,9 +96,42 @@ for unit tests. To run unit tests in Spark:
 3. Run `npm test`
 4. See test output in terminal to determine number of passing or failed tests
 
-### Code Style
+### Code Style Standards
 
-`Coming Soon`
+Spark follows specific coding styles for HTML, CSS and
+JavaScript to ensure maintainability and scalability.
+
+#### HTML
+* Two spaces for indentation
+* For readability purposes, if an element has a multitude of attributes
+  that exceed the line length of 80 characters the attributes should each be on a new line,
+  ex.
+```
+  <input
+    class="sprk-b-TextInput sprk-u-pll sprk-u-Size-100"
+    id="datepicker-normal"
+    type="text"
+    placeholder="MM/DD/YYYY"
+    aria-describedby="datepicker-normal--error-container">
+```
+
+#### CSS
+* Two spaces for indentation
+* CSS is written in [Sass](https://sass-lang.com/) and preprocessed into CSS
+* Class Naming Conventions can be found [here](https://sparkdesignsystem.com/docs/class-naming-convention)
+* [Stylelint](https://github.com/stylelint/stylelint) is used to lint
+  Sass files and all of Spark Sass coding conventions can be found
+  in the [Stylelint configuration file ](https://github.com/sparkdesignsystem/spark-design-system/blob/master/.stylelintrc)
+
+#### JS
+* Two spaces for indentation
+* Spark JS will use new features from ESNext and assumes applications using Spark
+  have a JavaScript compiler setup
+* Spark uses [ESLint](https://eslint.org/) for JS linting
+* ESLint is setup to use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+  and Spark JS coding conventions come from there
+* We follow JS recommendations from the [Quicken Loans JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md)
+* Data attributes on DOM elements is the chosen method for DOM manipulation, ex. `data-sprk-component="item"`
 
 ### Change Workflow
 
