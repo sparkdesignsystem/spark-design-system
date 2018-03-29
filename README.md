@@ -31,18 +31,18 @@ also that your project has a Javascript build step that will transpile ES6+ and 
 
 ### Spark Core
 
-* Install the npm package
+* Install the npm package.
 
   `npm install --save-dev @sparkdesignsystem/spark-core`
 
-* Import the Sass setup file in your Sass build
+* Import the Sass setup file in your Sass build.
 
   `@import "node_modules/@sparkdesignsystem/spark-core/spark-core";`
 
   This will bring all Spark-Core Sass patterns into your build. The Spark classes
   are namespaced so they don't affect any existing CSS.
 
-* Import the JS setup file in your JS build
+* Import the JS setup file in your JS build.
 
   `import sparkCore from "node_modules/@sparkdesignsystem/spark-core/spark-core";`
 
@@ -50,15 +50,15 @@ also that your project has a Javascript build step that will transpile ES6+ and 
 
 ### Spark Extras
 
-* Install the npm package
+* Install the npm package.
 
   `npm install --save-dev @sparkdesignsystem/spark-extras`
 
-* Import any of the Spark-Extras Sass patterns that you need
+* Import any of the Spark-Extras Sass patterns that you need.
 
   `@import "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
 
-* Import any of the Spark-Extras JS patterns that you need
+* Import any of the Spark-Extras JS patterns that you need.
 
   `import <pattern-name> from "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
 ## Contribution Guide
@@ -81,9 +81,9 @@ that are published to npm.
 
 If you want to run a copy of Drizzle locally:
 
-1. Run `npm install`
-2. Run `gulp --dev`
-3. Open your browser to `http://localhost:3000/`
+1. Run `npm install`.
+2. Run `gulp --dev`.
+3. Open your browser to `http://localhost:3000/`.
 
 ### Unit Tests
 
@@ -91,10 +91,10 @@ Spark uses the [Mocha](http://https://mochajs.org/.chaijs.com/) test
 framework with the [Chai](http://www.chaijs.com/) assertion library
 for unit tests. To run unit tests in Spark:
 
-1. Navigate to the root of the Spark-Core or Spark-Extras repository
-2. Run `npm install` if you have not already
-3. Run `npm test`
-4. See test output in terminal to determine number of passing or failed tests
+1. Navigate to the root of the Spark-Core or Spark-Extras repository.
+2. Run `npm install` if you have not already.
+3. Run `npm test`.
+4. See test output in terminal to determine number of passing or failed tests.
 
 ### Code Style Standards
 
@@ -108,29 +108,29 @@ and an additional code formatter, [prettier](https://github.com/prettier/prettie
 
 #### HTML
 
-* Two spaces for indentation
+* Two spaces for indentation.
 * For better code readability the attributes of elements should each be on their own line
-  when the number of attributes makes that element exceed a line length of 80 characters
+  when the number of attributes makes that element exceed a line length of 80 characters.
 
 #### CSS
 
-* Two spaces for indentation
-* CSS is written in [Sass](https://sass-lang.com/) and preprocessed into CSS
-* Class Naming Conventions can be found [here](https://sparkdesignsystem.com/docs/class-naming-convention)
+* Two spaces for indentation.
+* CSS is written in [Sass](https://sass-lang.com/) and preprocessed into CSS.
+* Class Naming Conventions can be found [here](https://sparkdesignsystem.com/docs/class-naming-convention).
 * [Stylelint](https://github.com/stylelint/stylelint) is used to lint
   Sass files and all of Spark Sass coding conventions can be found
-  in the [Stylelint configuration file ](https://github.com/sparkdesignsystem/spark-design-system/blob/master/.stylelintrc)
+  in the [Stylelint configuration file ](https://github.com/sparkdesignsystem/spark-design-system/blob/master/.stylelintrc).
 
 #### JS
 
-* Two spaces for indentation
+* Two spaces for indentation.
 * Spark JS will use new features from ESNext and assumes applications using Spark
-  have a JavaScript compiler setup
-* Spark uses [ESLint](https://eslint.org/) for JS linting
+  have a JavaScript compiler setup.
+* Spark uses [ESLint](https://eslint.org/) for JS linting.
 * ESLint is setup to use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-  and Spark JS coding conventions come from there
-* We follow JS recommendations from the [Quicken Loans JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md)
-* Data attributes on DOM elements is the chosen method for DOM selection
+  and Spark JS coding conventions come from there.
+* We follow JS recommendations from the [Quicken Loans JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md).
+* Data attributes on DOM elements is the chosen method for DOM selection.
 
 ### Change Workflow
 
