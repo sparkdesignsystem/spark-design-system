@@ -73,4 +73,4 @@ The following is not allowed:
 * [SUIT CSS Component Names](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md#components) - Nicolas Gallagher's SUIT CSS component naming convention.
 * [MindBEMding – getting your head ’round BEM syntax](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) - Harry Roberts explains BEM syntax.
 * [Managing Large CSS Projects with ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) - Harry Roberts explains the ITCSS architecture.
-* [Responsive Suffixes](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) - Harry Roberts explains adding to responsive suffixes to BEM naming
+* [Responsive Suffixes](https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) - Harry Roberts explains adding responsive suffixes to BEM naming
