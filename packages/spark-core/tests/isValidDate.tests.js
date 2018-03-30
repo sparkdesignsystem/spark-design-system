@@ -5,10 +5,8 @@
 * assigned to the pattern attribute in the markup.
 *
 */
-
+import { expect } from 'chai';
 import isValidDate from '../utilities/validation/isValidDate';
-
-const { expect } = require('chai');
 
 describe('isValidDate tests', () => {
   it('should pass on 8 digits', () => {

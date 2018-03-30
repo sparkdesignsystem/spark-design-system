@@ -1,13 +1,13 @@
 /* global document before describe it */
-
-import { ariaOrientation, resetTabs, setActiveTab, advanceTab, retreatTab, getActiveTabIndex } from '../components/tabs';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
+import { expect } from 'chai';
+import {
+  ariaOrientation,
+  resetTabs,
+  setActiveTab,
+  advanceTab,
+  retreatTab,
+  getActiveTabIndex,
+} from '../components/tabs';
 
 describe('aria Orientation tests', () => {
   let tabContainer;
@@ -228,7 +228,6 @@ describe('advanceTab tests', () => {
     advanceTab(tabs, panels);
     expect(tab2.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
-
 
   it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
     advanceTab(tabs, panels); // set to 3

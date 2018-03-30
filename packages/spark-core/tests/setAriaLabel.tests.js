@@ -1,12 +1,6 @@
 /* global document describe before it */
+import { expect } from 'chai';
 import { setAriaLabel } from '../components/pagination';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('Pagination tests', () => {
   let navContainer;

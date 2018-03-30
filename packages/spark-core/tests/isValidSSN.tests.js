@@ -5,10 +5,8 @@
 * assigned to the pattern attribute in the markup.
 *
 */
-
+import { expect } from 'chai';
 import isValidSSN from '../utilities/validation/isValidSSN';
-
-const { expect } = require('chai');
 
 describe('isValidSSN tests', () => {
   it('should pass on a valid ssn', () => {

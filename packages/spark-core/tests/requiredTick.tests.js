@@ -1,12 +1,6 @@
 /* global document describe before it */
+import { expect } from 'chai';
 import { runValidation } from '../base/requiredTick';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('requiredTick runValidation tests', () => {
   let inputContainer;
