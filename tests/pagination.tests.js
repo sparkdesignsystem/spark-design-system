@@ -1,5 +1,4 @@
 /* global describe it document before */
-/* eslint-disable import/first */
 import { expect } from 'chai';
 import { setAriaCurrent, updatePageStyles } from '../src/assets/drizzle/scripts/pagination/default';
 import { goForwardOne, goBackOne } from '../src/assets/drizzle/scripts/pagination/long';
