@@ -79,10 +79,6 @@
       "prettier-stylelint --write",
       "git add"
     ],
-    "*.css": [
-      "prettier-stylelint --write",
-      "git add"
-    ],
     "*.js": [
       "prettier-eslint --write",
       "git add"
