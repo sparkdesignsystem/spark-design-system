@@ -17,6 +17,6 @@
     "@sparkdesignsystem/spark-highlight-board": "^1.0.0-alpha.4"
   },
   "devDependencies": {
-    "lerna": "^2.0.0"
+    "lerna": "^2.9.0"
   }
 }
