@@ -1,14 +1,8 @@
 /* global describe it document before */
+/* eslint-disable import/first */
+import { expect } from 'chai';
 import { setAriaCurrent, updatePageStyles } from '../src/assets/drizzle/scripts/pagination/default';
-// import { setAriaLabel } from '../src/assets/drizzle/scripts/pagination/long';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
-global.window = dom.window;
+import { goForwardOne, goBackOne } from '../src/assets/drizzle/scripts/pagination/long';
 
 describe('default pagination tests', () => {
   let newPageLink;
@@ -54,8 +48,12 @@ describe('default pagination tests', () => {
   });
 });
 
-// describe('long pagination tests', () => {
-//   it('should have tests written', () => {
-//     expect(1).eql(2);
-//   });
-// });
+describe('long pagination tests', () => {
+  it('should go back one page', () => {
+    expect(goBackOne(3)).eql(2);
+  });
+
+  it('should go forward one page', () => {
+    expect(goForwardOne(1)).eql(2);
+  });
+});

@@ -5,9 +5,8 @@
 * regex is assigned to the pattern attribute in the markup.
 *
 */
+import { expect } from 'chai';
 import isValidPhone from '../utilities/validation/isValidPhone';
-
-const { expect } = require('chai');
 
 describe('isValidPhone tests', () => {
   it('should pass on a valid Phone', () => {

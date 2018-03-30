@@ -1,12 +1,6 @@
 /* global document describe it */
+import { expect } from 'chai';
 import getElements from '../utilities/getElements';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('getElements tests', () => {
   it('should call the given function for each element found', () => {
