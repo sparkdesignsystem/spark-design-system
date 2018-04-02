@@ -3,7 +3,7 @@ import 'prismjs';
 import 'babel-polyfill';
 import '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
 
-import './pagination/long';
+import { paginationLong } from './pagination/long';
 import { paginationDefault } from './pagination/default';
 
 import setActiveNavItem from './navigation/setActiveNavItem';
@@ -29,4 +29,5 @@ const bindUIEvents = () => {
 // init
 formStateChanger();
 paginationDefault();
+paginationLong();
 bindUIEvents();

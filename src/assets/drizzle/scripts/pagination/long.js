@@ -139,6 +139,5 @@ const paginationLong = () => {
     });
   });
 };
-// TODO:remove this
-paginationLong();
+
 export { paginationLong, goBackOne, goForwardOne };
