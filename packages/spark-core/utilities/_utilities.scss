@@ -2,28 +2,281 @@
 // Utilities
 // ==================================================================
 
-// TODO: Dave is doing utils
-.sprk-u-Hide {
-  display: none;
+//
+// Single property utilities
+//
+// These utilities should map directly to a single CSS property and
+// value and should always use !important.
+//
+// Properties with vendor prefixes count as single properties.
+///
+
+// Display and Visibility
+.sprk-u-Display--none,
+.js .sprk-u-HideWhenJS {
+  display: none !important;
 }
 
-.sprk-u-Block {
-  display: block;
+.sprk-u-Display--block {
+  display: block !important;
 }
 
+.sprk-u-Display--inline {
+  display: inline !important;
+}
+
+.sprk-u-Display--inline-block {
+  display: inline-block !important;
+}
+
+.sprk-u-Visibility--hidden {
+  visibility: hidden !important;
+}
+
+.sprk-u-Visibility--visible {
+  visibility: visible !important;
+}
+
+// Floats, positioning, and alignment
+.sprk-u-Float--none {
+  float: none !important;
+}
+
+.sprk-u-Float--left {
+  float: left !important;
+}
+
+.sprk-u-Float--right {
+  float: right !important;
+}
+
+.sprk-u-Position--relative {
+  position: relative !important;
+}
+
+.sprk-u-Position--absolute {
+  position: absolute !important;
+}
+
+.sprk-u-Position--fixed {
+  position: fixed !important;
+}
+
+.sprk-u-Position--static {
+  position: static !important;
+}
+
+.sprk-u-Top--zero {
+  top: 0 !important;
+}
+
+.sprk-u-Bottom--zero {
+  bottom: 0 !important;
+}
+
+.sprk-u-Left--zero {
+  left: 0 !important;
+}
+
+.sprk-u-Right--zero {
+  right: 0 !important;
+}
+
+.sprk-u-TextAlign--left {
+  text-align: left !important;
+}
+
+.sprk-u-TextAlign--right {
+  text-align: right !important;
+}
+
+.sprk-u-TextAlign--center {
+  text-align: center !important;
+}
+
+.sprk-u-VerticalAlign--top {
+  vertical-align: top !important;
+}
+
+.sprk-u-VerticalAlign--middle {
+  vertical-align: middle !important;
+}
+
+.sprk-u-VerticalAlign--bottom {
+  vertical-align: bottom !important;
+}
+
+.sprk-u-VerticalAlign--baseline {
+  vertical-align: baseline !important;
+}
+
+// Text transform
+.sprk-u-TextTransform--uppercase {
+  text-transform: uppercase !important;
+}
+
+.sprk-u-TextTransform--none {
+  text-transform: none !important;
+}
+
+// Overflow
 // TODO: Dave is doing utils, add this one
 .sprk-u-OverflowHidden {
   overflow: hidden;
 }
 
-.js .sprk-u-HideWhenJS {
-  display: none;
+// Text color
+.sprk-u-Color--green-light {
+  color: $green-light !important;
+}
+
+.sprk-u-Color--green-medium {
+  color: $green-medium !important;
+}
+
+.sprk-u-Color--green-dark {
+  color: $green-dark !important;
+}
+
+.sprk-u-Color--blue-light {
+  color: $blue-light !important;
+}
+
+.sprk-u-Color--blue-medium {
+  color: $blue-medium !important;
+}
+
+.sprk-u-Color--blue-dark {
+  color: $blue-dark !important;
+}
+
+.sprk-u-Color--purple-medium {
+  color: $purple-medium !important;
+}
+
+.sprk-u-Color--purple-dark {
+  color: $purple-dark !important;
+}
+
+.sprk-u-Color--red-light {
+  color: $red-light !important;
+}
+
+.sprk-u-Color--red-medium {
+  color: $red-medium !important;
+}
+
+.sprk-u-Color--red-dark {
+  color: $red-dark !important;
+}
+
+.sprk-u-Color--orange-medium {
+  color: $orange-medium !important;
+}
+
+.sprk-u-Color--orange-dark {
+  color: $orange-dark !important;
+}
+
+.sprk-u-Color--gray-light {
+  color: $gray-light !important;
+}
+
+.sprk-u-Color--gray-medium {
+  color: $gray-medium !important;
+}
+
+.sprk-u-Color--gray-dark {
+  color: $gray-dark !important;
+}
+
+.sprk-u-Color--black {
+  color: $black !important;
+}
+
+.sprk-u-Color--white {
+  color: $white !important;
+}
+
+// Background color
+.sprk-u-BackgroundColor--green-light {
+  background-color: $green-light !important;
+}
+
+.sprk-u-BackgroundColor--green-medium {
+  background-color: $green-medium !important;
+}
+
+.sprk-u-BackgroundColor--green-dark {
+  background-color: $green-dark !important;
+}
+
+.sprk-u-BackgroundColor--blue-light {
+  background-color: $blue-light !important;
+}
+
+.sprk-u-BackgroundColor--blue-medium {
+  background-color: $blue-medium !important;
+}
+
+.sprk-u-BackgroundColor--blue-dark {
+  background-color: $blue-dark !important;
+}
+
+.sprk-u-BackgroundColor--purple-medium {
+  background-color: $purple-medium !important;
+}
+
+.sprk-u-BackgroundColor--purple-dark {
+  background-color: $purple-dark !important;
+}
+
+.sprk-u-BackgroundColor--red-light {
+  background-color: $red-light !important;
+}
+
+.sprk-u-BackgroundColor--red-medium {
+  background-color: $red-medium !important;
+}
+
+.sprk-u-BackgroundColor--red-dark {
+  background-color: $red-dark !important;
+}
+
+.sprk-u-BackgroundColor--orange-medium {
+  background-color: $orange-medium !important;
+}
+
+.sprk-u-BackgroundColor--orange-dark {
+  background-color: $orange-dark !important;
+}
+
+.sprk-u-BackgroundColor--gray-light {
+  background-color: $gray-light !important;
+}
+
+.sprk-u-BackgroundColor--gray-medium {
+  background-color: $gray-medium !important;
+}
+
+.sprk-u-BackgroundColor--gray-dark {
+  background-color: $gray-dark !important;
+}
+
+.sprk-u-BackgroundColor--black {
+  background-color: $black !important;
+}
+
+.sprk-u-BackgroundColor--white {
+  background-color: $white !important;
 }
 
 //
-// Accessible element hiding
+// Multi-property utilities
 ///
-.sprk-u-VisuallyHidden {
+
+// Accessibility
+.sprk-u-ScreenReaderText {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -32,145 +285,25 @@
   overflow: hidden;
 }
 
-// TODO: refactor maybe? look at type
-//
-// Text color utilities
-///
-.sprk-u-TextColor--green-light {
-  color: $green-light;
+.sprk-u-ScreenReaderText.sprk-u-ShowOnFocus:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
 
-.sprk-u-TextColor--green-medium {
-  color: $green-medium;
+// Alignment
+.sprk-u-AbsoluteCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sprk-u-TextColor--green-dark {
-  color: $green-dark;
-}
-
-.sprk-u-TextColor--blue-light {
-  color: $blue-light;
-}
-
-.sprk-u-TextColor--blue-medium {
-  color: $blue-medium;
-}
-
-.sprk-u-TextColor--blue-dark {
-  color: $blue-dark;
-}
-
-.sprk-u-TextColor--purple {
-  color: $purple-medium;
-}
-
-.sprk-u-TextColor--red-light {
-  color: $red-light;
-}
-
-.sprk-u-TextColor--red-medium {
-  color: $red-medium;
-}
-
-.sprk-u-TextColor--red-dark {
-  color: $red-dark;
-}
-
-.sprk-u-TextColor--orange-medium {
-  color: $orange-medium;
-}
-
-.sprk-u-TextColor--orange-dark {
-  color: $orange-dark;
-}
-
-.sprk-u-TextColor--gray-light {
-  color: $gray-light;
-}
-
-.sprk-u-TextColor--gray-medium {
-  color: $gray-medium;
-}
-
-.sprk-u-TextColor--gray-dark {
-  color: $gray-dark;
-}
-
-.sprk-u-TextColor--black {
-  color: $black;
-}
-
-.sprk-u-TextColor--white {
-  color: $white;
-}
-
-//
-// Background color utilities
-///
-.sprk-u-BackgroundColor--green-light {
-  background-color: $green-light;
-}
-
-.sprk-u-BackgroundColor--green-medium {
-  background-color: $green-medium;
-}
-
-.sprk-u-BackgroundColor--green-dark {
-  background-color: $green-dark;
-}
-
-.sprk-u-BackgroundColor--blue-light {
-  background-color: $blue-light;
-}
-
-.sprk-u-BackgroundColor--blue-medium {
-  background-color: $blue-medium;
-}
-
-.sprk-u-BackgroundColor--blue-dark {
-  background-color: $blue-dark;
-}
-
-.sprk-u-BackgroundColor--purple {
-  background-color: $purple-medium;
-}
-
-.sprk-u-BackgroundColor--red-light {
-  background-color: $red-light;
-}
-
-.sprk-u-BackgroundColor--red-medium {
-  background-color: $red-medium;
-}
-
-.sprk-u-BackgroundColor--red-dark {
-  background-color: $red-dark;
-}
-
-.sprk-u-BackgroundColor--orange-medium {
-  background-color: $orange-medium;
-}
-
-.sprk-u-BackgroundColor--orange-dark {
-  background-color: $orange-dark;
-}
-
-.sprk-u-BackgroundColor--gray-light {
-  background-color: $gray-light;
-}
-
-.sprk-u-BackgroundColor--gray-medium {
-  background-color: $gray-medium;
-}
-
-.sprk-u-BackgroundColor--gray-dark {
-  background-color: $gray-dark;
-}
-
-.sprk-u-BackgroundColor--black {
-  background-color: $black;
-}
-
-.sprk-u-BackgroundColor--white {
-  background-color: $white;
+// Typography
+.sprk-u-Hyphenate {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
