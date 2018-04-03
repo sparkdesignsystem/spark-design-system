@@ -1,6 +1,12 @@
 // ==================================================================
 // Tables
 // ==================================================================
+.sprk-c-TableContainer {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+}
+
 .sprk-c-Table {
   text-align: center;
 }
