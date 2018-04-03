@@ -1,13 +1,7 @@
 /* global document describe before it */
+import { expect } from 'chai';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('setValidTextInput tests', () => {
   let inputContainer;

@@ -1,12 +1,6 @@
 /* global document describe before it */
+import { expect } from 'chai';
 import setValidTick from '../utilities/validation/setValidTick';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('setValidTick tests', () => {
   let inputContainer;

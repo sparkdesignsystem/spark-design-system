@@ -1,12 +1,6 @@
 /* global document before describe it */
+import { expect } from 'chai';
 import { mapTemplates, toggleTemplate } from '../src/assets/drizzle/scripts/form-state-changer';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('mapTemplates ', () => {
   const templates = [];

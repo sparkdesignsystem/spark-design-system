@@ -4,7 +4,7 @@ import 'babel-polyfill';
 import '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
 
 import './pagination/long';
-import './pagination/default';
+import { paginationDefault } from './pagination/default';
 
 import setActiveNavItem from './navigation/setActiveNavItem';
 import appendIFrames from './navigation/appendIFrames';
@@ -28,4 +28,5 @@ const bindUIEvents = () => {
 
 // init
 formStateChanger();
+paginationDefault();
 bindUIEvents();

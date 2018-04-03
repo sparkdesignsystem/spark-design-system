@@ -1,7 +1,6 @@
 /* global describe it require */
+import { expect } from 'chai';
 import toggleValue from '../utilities/toggleValue';
-
-const { expect } = require('chai');
 
 describe('toggle value tests', () => {
   it('if the current value is equal to value 1, return value 2', () => {

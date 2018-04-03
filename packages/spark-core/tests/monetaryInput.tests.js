@@ -1,12 +1,6 @@
 /* global document describe it */
+import { expect } from 'chai';
 import { formatMonetary } from '../base/monetaryInput';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('formatMonetary tests', () => {
   it('one digit', () => {

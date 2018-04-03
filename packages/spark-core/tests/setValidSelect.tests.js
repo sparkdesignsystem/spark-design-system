@@ -1,12 +1,6 @@
 /* global document describe before it */
+import { expect } from 'chai';
 import setValidSelect from '../utilities/validation/setValidSelect';
-
-const jsdom = require('jsdom');
-const { expect } = require('chai');
-
-const { JSDOM } = jsdom;
-const dom = new JSDOM('<!DOCTYPE html><p>Hello world</p>');
-global.document = dom.window.document;
 
 describe('setValidSelect tests', () => {
   let inputContainer;
