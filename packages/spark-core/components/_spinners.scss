@@ -19,10 +19,14 @@ $spinner-color: $white !default;
 .sprk-c-Spinner--circle {
   border: $spinner-thickness solid $spinner-color;
   border-radius: 50%;
-  border-right-color: transparent;
+  border-right-color: transparent !important;
 }
 
 .sprk-c-Spinner--large {
   width: $spinner-size-large;
   height: $spinner-size-large;
+}
+
+.sprk-c-Spinner--dark {
+  border-color: $blue-medium;
 }
