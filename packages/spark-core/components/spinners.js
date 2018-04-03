@@ -17,9 +17,11 @@ const getSpinnerClasses = (options) => {
 
 const setSpinning = (element, options) => {
   const el = element;
+  const width = element.offsetWidth;
   el.setAttribute('data-sprk-spinner-text', el.textContent);
   el.innerHTML = `<span class="${getSpinnerClasses(options)}"></span>`;
   el.setAttribute('data-sprk-has-spinner', 'true');
+  el.setAttribute('style', `width: ${width}px`);
 };
 
 const cancelSpinning = (element) => {
@@ -27,6 +29,7 @@ const cancelSpinning = (element) => {
   el.innerHTML = '';
   el.textContent = el.getAttribute('data-sprk-spinner-text') || 'Submit';
   el.removeAttribute('data-sprk-has-spinner');
+  el.removeAttribute('style');
 };
 
 const spinners = () => {
