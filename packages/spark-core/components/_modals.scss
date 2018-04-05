@@ -7,17 +7,20 @@
 ///
 $modal-mask-color: rgba(34, 34, 34, 0.35);
 
+.sprk-c-Modal,
+.sprk-c-ModalMask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 .sprk-c-Modal {
   background-color: $white;
-  left: 0;
-  padding-bottom: 0.52446rem;
   margin-right: auto;
   margin-left: auto;
   max-width: 43.75em;
-  position: fixed;
   right: 0;
-  top: 0;
-  width: 100%;
   z-index: 1006;
 
   @media all and (min-width: 300px) and (min-height: 300px) {
@@ -27,44 +30,24 @@ $modal-mask-color: rgba(34, 34, 34, 0.35);
 
 .sprk-c-Modal__header {
   background-color: $blue-medium;
-  display: table;
-  padding-top: 0.52446rem;
-  padding-bottom: 0.52446rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0.52446rem;
-  width: 100%;
-
-  .sprk-b-Heading {
-    color: $white;
-    display: table-cell;
-    vertical-align: middle;
-  }
 }
 
-.sprk-c-Modal__spinner {
-  display: table-cell;
-  text-align: right;
+.sprk-c-Modal__header .sprk-b-TypeDisplayThree {
+  color: $white;
 }
 
+.sprk-c-Modal__header,
 .sprk-c-Modal__body,
 .sprk-c-Modal__footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: $space-inset-m;
 }
 
 .sprk-c-Modal__body {
-  padding-bottom: 0;
+  padding-top: $space-l;
 }
 
 .sprk-c-ModalMask {
   background-color: $modal-mask-color;
   height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
   z-index: 1005;
 }

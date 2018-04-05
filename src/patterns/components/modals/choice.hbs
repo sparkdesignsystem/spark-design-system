@@ -1,0 +1,38 @@
+---
+name: Choice
+notes: |
+  Choice modals pose a question to the user.
+order: 1
+previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
+---
+<div
+  class="sprk-c-Modal sprk-u-Hide"
+  role="dialog" tabindex="-1"
+  aria-labelledby="modal-choice-heading"
+  aria-modal="true"
+  aria-describedby="modal-content-id-1"
+  data-sprk-modal="choice">
+  <header class="sprk-c-Modal__header">
+    <h2 class="sprk-b-TypeDisplayThree" id="modal-choice-heading">
+      Are you sure?
+    </h2>
+  </header>
+
+  <div class="sprk-c-Modal__body">
+    <p class="sprk-b-TypeBodyTwo">
+      This is some content that is in a modal. It explains what the modal is for.
+      There will also be a way to close the modal.
+    </p>
+  </div>
+
+  <footer class="sprk-c-Modal__footer">
+    <button class="sprk-c-Button">
+      Confirm
+    </button>
+
+    <a class="sprk-b-Link sprk-b-Link--standalone" href="" data-sprk-modal-cancel="choice">
+      Cancel
+    </a>
+  </footer>
+</div>
+<div data-sprk-modal="choice" class="sprk-c-ModalMask sprk-u-Hide"></div>
