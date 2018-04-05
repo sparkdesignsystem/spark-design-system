@@ -1,4 +1,0 @@
-notes: |
-  Use this circular spinner with infinite rotating animation to indicate that something is happening or loading.
-  You can add the attribute data-sprk-spinner="click" to an element to insert a spinner on click.
-sparkPackageCore: true
