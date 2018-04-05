@@ -1,0 +1,29 @@
+---
+name: Wait
+notes: |
+  Wait modals contain a spinner to give feedback that progress is being made based on a user's action.
+order: 1
+previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
+---
+<div
+  class="sprk-c-Modal sprk-u-Hide"
+  role="dialog" tabindex="-1"
+  aria-labelledby="modal-wait-heading"
+  aria-modal="true"
+  aria-describedby="modal-content-id-1"
+  data-sprk-modal="wait">
+  <header class="sprk-c-Modal__header">
+    <h2 class="sprk-b-TypeDisplayThree" id="modal-wait-heading">
+      Please Wait While We Do Something
+      <span class="sprk-c-Spinner sprk-c-Spinner--circle"></span>
+    </h2>
+  </header>
+
+  <div class="sprk-c-Modal__body">
+    <p class="sprk-b-TypeBodyTwo">
+      This is some content that is in a modal. It explains what the modal is for.
+      There will also be a way to close the modal.
+    </p>
+  </div>
+</div>
+<div data-sprk-modal="wait" class="sprk-c-ModalMask sprk-u-Hide"></div>

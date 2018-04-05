@@ -1,0 +1,28 @@
+---
+name: Info
+notes: |
+  Info modals show information to the user that is dismissible but requires no action on their part.
+order: 1
+previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
+---
+<div
+  class="sprk-c-Modal sprk-u-Hide"
+  role="dialog" tabindex="-1"
+  aria-labelledby="modal-info-heading"
+  aria-modal="true"
+  aria-describedby="modal-content-id-1"
+  data-sprk-modal="info">
+  <header class="sprk-c-Modal__header">
+    <h2 class="sprk-b-TypeDisplayThree" id="modal-info-heading">
+      Information Model
+    </h2>
+  </header>
+
+  <div class="sprk-c-Modal__body">
+    <p class="sprk-b-TypeBodyTwo">
+      This is some content that is in a modal. It explains what the modal is for.
+      There will also be a way to close the modal.
+    </p>
+  </div>
+</div>
+<div data-sprk-modal="info" class="sprk-c-ModalMask sprk-u-Hide"></div>
