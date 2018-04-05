@@ -115,7 +115,7 @@ describe('resetTabs tests', () => {
     resetTabs(tabs, panels);
 
     panels.forEach((panel) => {
-      if (!panel.classList.contains('sprk-u-Hidden')) {
+      if (!panel.classList.contains('sprk-u-Display--none')) {
         allAreHidden = false;
       }
     });
@@ -141,7 +141,7 @@ describe('setActive tab tests', () => {
 
     panel1 = document.createElement('div');
     panel1.classList.add('sprk-c-Tabs__button');
-    panel1.classList.add('sprk-u-Hidden');
+    panel1.classList.add('sprk-u-Display--none');
     panel1.setAttribute('role', 'tabpanel');
 
     tabContainer.appendChild(tab1);
@@ -155,7 +155,7 @@ describe('setActive tab tests', () => {
 
   it('should show the right panel', () => {
     setActiveTab(tab1, panel1);
-    expect(panel1.classList.contains('sprk-u-Hidden')).eql(false);
+    expect(panel1.classList.contains('sprk-u-Display--none')).eql(false);
   });
 
   it('should set aria-selected to true', () => {

@@ -7,7 +7,7 @@ const resetTabs = (tabs, tabpanels) => {
     tab.classList.remove('sprk-c-Tabs__button--active');
     tab.setAttribute('aria-selected', 'false');
     tabpanels.forEach((panel) => {
-      panel.classList.add('sprk-u-Hidden');
+      panel.classList.add('sprk-u-Display--none');
     });
   });
 };
@@ -16,7 +16,7 @@ const resetTabs = (tabs, tabpanels) => {
 const setActiveTab = (tab, tabpanel) => {
   tab.classList.add('sprk-c-Tabs__button--active');
   tab.setAttribute('aria-selected', 'true');
-  tabpanel.classList.remove('sprk-u-Hidden');
+  tabpanel.classList.remove('sprk-u-Display--none');
   tab.focus();
 };
 

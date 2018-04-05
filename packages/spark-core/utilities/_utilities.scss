@@ -29,6 +29,9 @@
   display: inline-block !important;
 }
 
+//
+// Visibility
+///
 .sprk-u-Visibility--hidden {
   visibility: hidden !important;
 }
@@ -37,7 +40,9 @@
   visibility: visible !important;
 }
 
-// Floats, positioning, and alignment
+//
+// Floats
+///
 .sprk-u-Float--none {
   float: none !important;
 }
@@ -50,6 +55,9 @@
   float: right !important;
 }
 
+//
+// Positioning
+///
 .sprk-u-Position--relative {
   position: relative !important;
 }
@@ -82,6 +90,9 @@
   right: 0 !important;
 }
 
+//
+// Alignment
+///
 .sprk-u-TextAlign--left {
   text-align: left !important;
 }
@@ -110,7 +121,9 @@
   vertical-align: baseline !important;
 }
 
+//
 // Text transform
+///
 .sprk-u-TextTransform--uppercase {
   text-transform: uppercase !important;
 }
@@ -125,157 +138,15 @@
   overflow: hidden;
 }
 
-// Text color
-.sprk-u-Color--green-light {
-  color: $green-light !important;
-}
-
-.sprk-u-Color--green-medium {
-  color: $green-medium !important;
-}
-
-.sprk-u-Color--green-dark {
-  color: $green-dark !important;
-}
-
-.sprk-u-Color--blue-light {
-  color: $blue-light !important;
-}
-
-.sprk-u-Color--blue-medium {
-  color: $blue-medium !important;
-}
-
-.sprk-u-Color--blue-dark {
-  color: $blue-dark !important;
-}
-
-.sprk-u-Color--purple-medium {
-  color: $purple-medium !important;
-}
-
-.sprk-u-Color--purple-dark {
-  color: $purple-dark !important;
-}
-
-.sprk-u-Color--red-light {
-  color: $red-light !important;
-}
-
-.sprk-u-Color--red-medium {
-  color: $red-medium !important;
-}
-
-.sprk-u-Color--red-dark {
-  color: $red-dark !important;
-}
-
-.sprk-u-Color--orange-medium {
-  color: $orange-medium !important;
-}
-
-.sprk-u-Color--orange-dark {
-  color: $orange-dark !important;
-}
-
-.sprk-u-Color--gray-light {
-  color: $gray-light !important;
-}
-
-.sprk-u-Color--gray-medium {
-  color: $gray-medium !important;
-}
-
-.sprk-u-Color--gray-dark {
-  color: $gray-dark !important;
-}
-
-.sprk-u-Color--black {
-  color: $black !important;
-}
-
-.sprk-u-Color--white {
-  color: $white !important;
-}
-
-// Background color
-.sprk-u-BackgroundColor--green-light {
-  background-color: $green-light !important;
-}
-
-.sprk-u-BackgroundColor--green-medium {
-  background-color: $green-medium !important;
-}
-
-.sprk-u-BackgroundColor--green-dark {
-  background-color: $green-dark !important;
-}
-
-.sprk-u-BackgroundColor--blue-light {
-  background-color: $blue-light !important;
-}
-
-.sprk-u-BackgroundColor--blue-medium {
-  background-color: $blue-medium !important;
-}
-
-.sprk-u-BackgroundColor--blue-dark {
-  background-color: $blue-dark !important;
-}
-
-.sprk-u-BackgroundColor--purple-medium {
-  background-color: $purple-medium !important;
-}
-
-.sprk-u-BackgroundColor--purple-dark {
-  background-color: $purple-dark !important;
-}
-
-.sprk-u-BackgroundColor--red-light {
-  background-color: $red-light !important;
-}
-
-.sprk-u-BackgroundColor--red-medium {
-  background-color: $red-medium !important;
-}
-
-.sprk-u-BackgroundColor--red-dark {
-  background-color: $red-dark !important;
-}
-
-.sprk-u-BackgroundColor--orange-medium {
-  background-color: $orange-medium !important;
-}
-
-.sprk-u-BackgroundColor--orange-dark {
-  background-color: $orange-dark !important;
-}
-
-.sprk-u-BackgroundColor--gray-light {
-  background-color: $gray-light !important;
-}
-
-.sprk-u-BackgroundColor--gray-medium {
-  background-color: $gray-medium !important;
-}
-
-.sprk-u-BackgroundColor--gray-dark {
-  background-color: $gray-dark !important;
-}
-
-.sprk-u-BackgroundColor--black {
-  background-color: $black !important;
-}
-
-.sprk-u-BackgroundColor--white {
-  background-color: $white !important;
-}
-
 //
 // Multi-property utilities
 ///
 
+//
 // Accessibility
+///
+
+// Hides visually but gets read by a screensaver.
 .sprk-u-ScreenReaderText {
   position: absolute;
   left: -10000px;
@@ -285,25 +156,19 @@
   overflow: hidden;
 }
 
-.sprk-u-ScreenReaderText.sprk-u-ShowOnFocus:focus {
+// When combined with `.sprk-u-ScreenReaderText` the element will become
+// visible on focus.
+.sprk-u-ShowOnFocus:focus {
   position: static;
   width: auto;
   height: auto;
 }
 
+//
 // Alignment
+///
 .sprk-u-AbsoluteCenter {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-// Typography
-.sprk-u-Hyphenate {
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
 }
