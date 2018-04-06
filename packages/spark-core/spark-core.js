@@ -12,6 +12,7 @@ import { requiredSelect } from './base/requiredSelect';
 import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
 import { toggle } from './components/toggle';
+import { spinners } from './components/spinners';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -33,3 +34,4 @@ modals();
 pagination();
 tabs();
 toggle();
+spinners();
