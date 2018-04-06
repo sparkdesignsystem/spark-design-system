@@ -6,6 +6,9 @@
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
     "coverage": "nyc npm test"
   },
+  "nyc": {
+    "exclude": "tests/*.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
