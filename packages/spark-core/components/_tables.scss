@@ -7,9 +7,12 @@
   overflow: auto;
 }
 
-.sprk-c-Table__head {
+.sprk-c-Table__head,
+.sprk-c-Table__row-heading {
   background-color: $blue-dark;
   color: $white;
+  font-weight: $font-size-body-one;
+  font-size: $font-size-body-one;
 }
 
 .sprk-c-Table__grouped-column {
@@ -22,6 +25,10 @@
 .sprk-c-Table--row-comparison .sprk-c-Table__empty-heading,
 .sprk-c-Table__grouped-columns .sprk-c-Table__grouped-column {
   border: 0;
+}
+
+.sprk-c-Table__empty-heading {
+  background-color: $white;
 }
 
 .sprk-c-Table__row-heading {
