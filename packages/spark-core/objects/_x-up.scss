@@ -1,0 +1,17 @@
+.sprk-o-TwoUp,
+.sprk-o-ThreeUp,
+.sprk-o-FourUp,
+.sprk-o-FiveUp,
+.sprk-o-SixUp {
+  display: flex;
+}
+
+.sprk-o-TwoUp__item,
+.sprk-o-ThreeUp__item,
+.sprk-o-FourUp__item,
+.sprk-o-FiveUp__item,
+.sprk-o-SixUp__item {
+  flex: 1;
+  margin-right: $space-m;
+}
+
