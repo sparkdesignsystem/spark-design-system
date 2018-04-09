@@ -4,8 +4,8 @@ notes: |
   The three different types of modals are Choice, Wait and Info.
 info:
   - Spark JS will hook into the 'data-sprk-modal-trigger="<modalName>"' attribute to get the modal name and show that modal when the trigger is clicked.
-  - Each modal container should have the attribute of 'data-sprk-modal="<modalName>"' if you want the simple trigger click event to show the modal.
-  - Add 'data-sprk-modal-cancel="<modalName>"' to the cancel element inside the modal if you want it to close the modal
+  - Each modal container should have the attribute of 'data-sprk-modal="<modalName>"' if you would like the trigger click event to show the modal.
+  - Add 'data-sprk-modal-cancel="<modalName>"' to the cancel element inside the modal if you would like it to close the modal when clicked
   - Omit the 'data-sprk-modal-trigger="<modalName>"', 'data-sprk-modal="<modalName>"' and 'data-sprk-modal-cancel="<modalName>"'
     attributes from the trigger, modal container and cancel element if you do not want
     to use the Spark JS.
@@ -15,6 +15,7 @@ restrictions:
   - Modals should be dismissible by tapping outside the modal, clicking cancel, or hitting the esc key.
   - Modals should trap focus when a user presses the Tab key or Shift+Tab inside the modal.
   - Modals should have the attribute of role="dialog".
+  - Modal and Mask HTML elements should have tabindex="-1" to prevent them from receiving focus.
   - When the modal is open we tell assistive devices that everything behind it is hidden by adding aria-hidden="true" on the document body.
   - If the content in the modal is too large for the viewport then the modal must show a scroll bar.
 sparkPackageCore: true

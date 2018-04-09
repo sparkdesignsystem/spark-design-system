@@ -1,28 +1,35 @@
 ---
 name: Info
 notes: |
-  Info modals show information to the user that is dismissible but requires no action on their part.
+  Info modals show information to the user that is dismissible if they would like but does not require an action.
 order: 1
 previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
 ---
 <div
   class="sprk-c-Modal sprk-u-Hide"
-  role="dialog" tabindex="-1"
+  role="dialog"
+  tabindex="-1"
   aria-labelledby="modal-info-heading"
   aria-modal="true"
-  aria-describedby="modal-content-id-1"
+  aria-describedby="modal-info-content"
   data-sprk-modal="info">
   <header class="sprk-c-Modal__header">
     <h2 class="sprk-b-TypeDisplayThree" id="modal-info-heading">
-      Information Model
+      Info Modal
     </h2>
+
+    <button class="sprk-c-Modal__icon" data-sprk-modal-cancel="info" type="button" title="Dismiss">
+      <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true">
+        <use xlink:href="#times"></use>
+      </svg>
+    </button>
   </header>
 
   <div class="sprk-c-Modal__body">
-    <p class="sprk-b-TypeBodyTwo">
+    <p class="sprk-b-TypeBodyTwo" id="modal-info-content">
       This is some content that is in a modal. It explains what the modal is for.
       There will also be a way to close the modal.
     </p>
   </div>
 </div>
-<div data-sprk-modal="info" class="sprk-c-ModalMask sprk-u-Hide"></div>
+<div data-sprk-modal="mask" class="sprk-c-ModalMask sprk-u-Hide" tabindex="-1"></div>
