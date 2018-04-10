@@ -104,6 +104,13 @@ const setupCancelEl = (modal, modalName, focusedBodyEl) => {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
     });
+    // On cancel el we also listen for enter key
+    cancel.addEventListener('keyup', (event) => {
+      if (event.key === 'Enter') {
+        cancel.click();
+        event.preventDefault();
+      }
+    });
   });
 };
 
