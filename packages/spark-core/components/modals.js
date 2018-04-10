@@ -8,7 +8,7 @@ const getFocusableEls = (modal) => {
   return focusEls;
 };
 
-// Focus first el in modal
+// Focus first element in modal
 const focusFirstModalEl = (modal) => {
   const focusEls = getFocusableEls(modal);
   if (focusEls.length > 0) {
@@ -22,7 +22,7 @@ const isMaskClicked = e => e.target.getAttribute('data-sprk-modal') === 'mask';
 
 const isEscPressed = e => e.key === 'Escape';
 
-// Hide the modal and mask and also remove aria-hidden on body
+// Hide the modal, mask, remove aria-hidden on body and send focus back
 const hideModal = (modal, focusedBodyEl) => {
   const isHidden = modal.classList.contains('sprk-u-Hide');
   const mask = document.querySelector('[data-sprk-modal="mask"]');
@@ -37,7 +37,7 @@ const hideModal = (modal, focusedBodyEl) => {
   }
 };
 
-// Show the modal and set aria-hidden true on body
+// Show the modal, mask and set aria-hidden=true on body
 const showModal = (modal) => {
   const isNotShown = modal.classList.contains('sprk-u-Hide');
   const mask = document.querySelector('[data-sprk-modal="mask"]');
@@ -135,4 +135,15 @@ const setupModals = () => {
   });
 };
 
-export { setupModals, showModal, hideModal };
+export {
+  setupModals,
+  showModal,
+  hideModal,
+  getFocusableEls,
+  focusFirstModalEl,
+  isTabPressed,
+  isMaskClicked,
+  isEscPressed,
+  setupCancelEl,
+  handleModalEvents,
+};
