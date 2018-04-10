@@ -7,47 +7,29 @@
 ///
 $main-nav-breakpoint: 46em;
 
-.sprk-c-Navigation {
+.sprk-c-WideNavigation {
   background-color: $white;
-  border-top: 2px solid $gray-medium;
-  position: absolute;
+  border-bottom: 2px solid $gray-medium;
+  display: table; // Makes each item equal width regardless of number of items
+  position: relative;
+  table-layout: fixed;
   width: 100%;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    border-bottom: 2px solid $gray-medium;
-    border-top: 0;
-    // Makes each item equal width reguardless of number of items
-    display: table;
-    position: relative;
-    table-layout: fixed;
-    width: 100%;
-  }
 }
 
-.sprk-c-Navigation,
-.sprk-c-Navigation__sub {
+.sprk-c-WideNavigation,
+.sprk-c-WideNavigation__sub {
   list-style-type: none;
 }
 
-.sprk-c-Navigation.sprk-is-Hidden\@sm {
-  @media all and (max-width: $main-nav-breakpoint) {
-    display: none;
-  }
+.sprk-c-WideNavigation__item {
+  display: table-cell;
+  line-height: 1.90672rem;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.sprk-c-Navigation__item {
-  line-height: 3.19534rem;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: table-cell;
-    line-height: 1.90672rem;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-  }
-}
-
-.sprk-c-Navigation__item a {
+.sprk-c-WideNavigation__item a {
   border: 2px solid $gray-medium;
   border-top: 0;
   color: $blue-dark;
@@ -62,7 +44,7 @@ $main-nav-breakpoint: 46em;
     background-color: $blue-dark;
     color: $white;
 
-    .sprk-c-Navigation__arrow {
+    .sprk-c-WideNavigation__arrow {
       fill: $white;
     }
   }
@@ -73,7 +55,7 @@ $main-nav-breakpoint: 46em;
     border: 0;
     padding-left: 0;
 
-    &.sprk-c-Navigation__item--active,
+    &.sprk-c-WideNavigation__item--active,
     &:focus,
     &:hover {
       @include HoverLine($color: $blue-medium, $width: 85%);
@@ -87,7 +69,7 @@ $main-nav-breakpoint: 46em;
       //
       // stylelint-disable max-nesting-depth
       ///
-      .sprk-c-Navigation__arrow {
+      .sprk-c-WideNavigation__arrow {
         fill: $blue-medium;
       }
       // stylelint-enable
@@ -96,8 +78,8 @@ $main-nav-breakpoint: 46em;
 }
 
 // Show the sub navigation on hover and focus
-.sprk-c-Navigation__item:focus .sprk-c-Navigation__sub,
-.sprk-c-Navigation__item:hover .sprk-c-Navigation__sub {
+.sprk-c-WideNavigation__item:focus .sprk-c-WideNavigation__sub,
+.sprk-c-WideNavigation__item:hover .sprk-c-WideNavigation__sub {
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     position: absolute;
@@ -105,7 +87,7 @@ $main-nav-breakpoint: 46em;
   }
 }
 
-.sprk-c-Navigation__arrow {
+.sprk-c-WideNavigation__arrow {
   fill: $blue-dark;
   float: right;
   margin-right: 1.90672rem;
@@ -122,7 +104,7 @@ $main-nav-breakpoint: 46em;
   }
 }
 
-.sprk-c-Navigation__sub {
+.sprk-c-WideNavigation__sub {
   border-bottom: 2px solid $gray-medium;
 
   @media all and (min-width: $main-nav-breakpoint) {
@@ -132,7 +114,7 @@ $main-nav-breakpoint: 46em;
   }
 }
 
-.sprk-c-Navigation__sub-item {
+.sprk-c-WideNavigation__sub-item {
   background-color: $white;
   width: 100%;
 
@@ -148,7 +130,7 @@ $main-nav-breakpoint: 46em;
   }
 }
 
-.sprk-c-Navigation__sub-item:last-child {
+.sprk-c-WideNavigation__sub-item:last-child {
   @media all and (min-width: $main-nav-breakpoint) {
     a {
       margin-bottom: 0.52446rem;
@@ -156,7 +138,7 @@ $main-nav-breakpoint: 46em;
   }
 }
 
-.sprk-c-Navigation__sub-item a {
+.sprk-c-WideNavigation__sub-item a {
   border: 0;
   color: $blue-dark;
   text-transform: none;

@@ -1,0 +1,162 @@
+// ==================================================================
+// Navigation
+// ==================================================================
+
+//
+// Available Variables
+///
+$main-nav-breakpoint: 46em;
+
+.sprk-c-WideNavigation {
+  background-color: $white;
+  border-bottom: 2px solid $gray-medium;
+  display: table; // Makes each item equal width regardless of number of items
+  position: relative;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.sprk-c-WideNavigation,
+.sprk-c-WideNavigation__sub {
+  list-style-type: none;
+}
+
+.sprk-c-WideNavigation__item {
+  display: table-cell;
+  line-height: 1.90672rem;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sprk-c-WideNavigation__item a {
+  border: 2px solid $gray-medium;
+  border-top: 0;
+  color: $blue-dark;
+  display: block;
+  padding-left: 1.90672rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:focus,
+  &:hover {
+    background-color: $blue-dark;
+    color: $white;
+
+    .sprk-c-WideNavigation__arrow {
+      fill: $white;
+    }
+  }
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    @include HoverLine($color: $white, $width: 85%);
+
+    border: 0;
+    padding-left: 0;
+
+    &.sprk-c-WideNavigation__item--active,
+    &:focus,
+    &:hover {
+      @include HoverLine($color: $blue-medium, $width: 85%);
+
+      background-color: $white;
+      color: $blue-medium;
+
+      //
+      // Kinda gross but need to change the color of this icon on
+      // hover of nav item anchor
+      //
+      // stylelint-disable max-nesting-depth
+      ///
+      .sprk-c-WideNavigation__arrow {
+        fill: $blue-medium;
+      }
+      // stylelint-enable
+    }
+  }
+}
+
+// Show the sub navigation on hover and focus
+.sprk-c-WideNavigation__item:focus .sprk-c-WideNavigation__sub,
+.sprk-c-WideNavigation__item:hover .sprk-c-WideNavigation__sub {
+  @media all and (min-width: $main-nav-breakpoint) {
+    display: block;
+    position: absolute;
+    z-index: 100;
+  }
+}
+
+.sprk-c-WideNavigation__arrow {
+  fill: $blue-dark;
+  float: right;
+  margin-right: 1.90672rem;
+  margin-top: 1rem;
+  width: 15px;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    fill: $blue-dark;
+    float: none;
+    margin-top: 0;
+    margin-bottom: 0.27506rem;
+    margin-left: 0.27506rem;
+    margin-right: 0;
+  }
+}
+
+.sprk-c-WideNavigation__sub {
+  border-bottom: 2px solid $gray-medium;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    border: 2px solid $gray-medium;
+    border-top: 0;
+    display: none;
+  }
+}
+
+.sprk-c-WideNavigation__sub-item {
+  background-color: $white;
+  width: 100%;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    float: left;
+    line-height: 1.90672rem;
+    padding-top: 0.52446rem;
+    padding-bottom: 0.52446rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.sprk-c-WideNavigation__sub-item:last-child {
+  @media all and (min-width: $main-nav-breakpoint) {
+    a {
+      margin-bottom: 0.52446rem;
+    }
+  }
+}
+
+.sprk-c-WideNavigation__sub-item a {
+  border: 0;
+  color: $blue-dark;
+  text-transform: none;
+
+  &:hover {
+    color: $white;
+  }
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    @include HoverLine($color: $white, $width: 100%);
+
+    background-color: $white;
+
+    &:focus,
+    &:hover {
+      @include HoverLine($color: $blue-medium, $width: 100%);
+
+      color: $blue-medium;
+    }
+  }
+}

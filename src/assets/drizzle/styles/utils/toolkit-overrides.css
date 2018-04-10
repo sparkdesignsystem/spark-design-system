@@ -5,3 +5,13 @@
 .u-drizzleModalOverride [class~=sprk-c-ModalMask] {
   display: none !important;
 }
+
+.drizzle-u-pad .sprk-c-WideNavigation {
+  @media (max-width: 46rem) {
+    display: none;
+  }
+}
+
+.drizzle-u-pad .sprk-c-NarrowNavigation {
+  max-width: 300px;
+}

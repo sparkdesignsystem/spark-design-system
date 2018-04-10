@@ -1,0 +1,35 @@
+---
+name: Narrow Navigation
+notes: |
+  This component is intended for narrow viewports. On wide_wide-navigation.scss viewports, you should use the wide navigation component.
+order: 2
+---
+
+<nav role="navigation">
+  <ul class="sprk-c-NarrowNavigation">
+    <li class="sprk-c-NarrowNavigation__item">
+      <a href="#nogo">Item 1</a>
+    </li>
+    <li class="sprk-c-NarrowNavigation__item">
+      <a href="#nogo">Item 2, Sub
+        <svg class="sprk-c-Icon sprk-c-NarrowNavigation__arrow" viewBox="0 0 100 100">
+          <use xlink:href="#chevron-down" />
+        </svg>
+      </a>
+      <ul class="sprk-c-NarrowNavigation__sub">
+        <li class="sprk-c-NarrowNavigation__sub-item"><a href="#nogo">Item 1</a></li>
+        <li class="sprk-c-NarrowNavigation__sub-item"><a href="#nogo">Item 2</a></li>
+        <li class="sprk-c-NarrowNavigation__sub-item"><a href="#nogo">Item 3</a></li>
+      </ul>
+    </li>
+    <li class="sprk-c-NarrowNavigation__item">
+      <a href="#nogo">Item 3</a>
+    </li>
+    <li class="sprk-c-NarrowNavigation__item">
+      <a href="#nogo">Item 4</a>
+    </li>
+    <li class="sprk-c-NarrowNavigation__item">
+      <a href="#nogo">Item 5</a>
+    </li>
+  </ul>
+</nav>
