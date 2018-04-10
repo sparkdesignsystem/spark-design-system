@@ -53,30 +53,30 @@ const showModal = (modal) => {
 const handleModalEvents = (modal, focusedBodyEl) => {
   // Grab body element
   const docBodyHidden = document.querySelector('[aria-hidden="true"]');
-
-  // Attach listener for keydown events
+  const modalType = modal.getAttribute('data-sprk-modal-type');
+  // Attach listener for esc, tab, shift+tab events
   docBodyHidden.addEventListener('keydown', (e) => {
     const focusableEls = getFocusableEls(modal);
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
-
-    // If escape is pressed then hide the modal
-    if (isEscPressed(e)) {
+    // If escape is pressed then hide the modal if type is not 'wait'
+    if (isEscPressed(e) && modalType !== 'wait') {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
     }
 
-    // If only one focusable element prevent default
-    if (focusableEls.length === 1) {
+    // TODO: switch case here maybe
+    // If only one focusable element prevent default if type is not 'wait'
+    if (focusableEls.length === 1 && modalType !== 'wait') {
       e.preventDefault();
-    } else if (isTabPressed(e) && e.shiftKey) {
+    } else if (isTabPressed(e) && e.shiftKey && modalType !== 'wait') {
       // If user tabs backward from the first focusable element
       // then move to the last focusable element.
       if (document.activeElement === firstFocusableEl) {
         e.preventDefault();
         lastFocusableEl.focus();
       }
-    } else if (isTabPressed(e)) {
+    } else if (isTabPressed(e) && modalType !== 'wait') {
       // If user tabs forward from the last focusable element
       // then move to the first focusable element
       if (document.activeElement === lastFocusableEl) {
@@ -88,8 +88,8 @@ const handleModalEvents = (modal, focusedBodyEl) => {
 
   // Attach listener for modal mask clicks on document
   docBodyHidden.addEventListener('click', (e) => {
-    // If mask is clicked then hide the modal
-    if (isMaskClicked(e)) {
+    // If mask is clicked we hide the modal if type != wait
+    if (isMaskClicked(e) && modalType !== 'wait') {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
     }
