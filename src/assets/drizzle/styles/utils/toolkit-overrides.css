@@ -16,11 +16,7 @@
   height: 4rem;
 }
 
-.drizzle-u-pad .sprk-o-TwoUp .sprk-o-TwoUp__item,
-.drizzle-u-pad .sprk-o-ThreeUp .sprk-o-ThreeUp__item,
-.drizzle-u-pad .sprk-o-FourUp .sprk-o-FourUp__item,
-.drizzle-u-pad .sprk-o-FiveUp .sprk-o-FiveUp__item,
-.drizzle-u-pad .sprk-o-SixUp .sprk-o-SixUp__item {
+.drizzle-u-pad .sprk-o-SideBySide .sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
 }
