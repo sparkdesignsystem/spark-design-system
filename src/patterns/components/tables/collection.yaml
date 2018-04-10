@@ -1,6 +1,7 @@
 name: Tables
 notes: |
-  Examples of tables.
-links:
-  Scales Tables: https://github.com/ScalesCSS/base-tables
+  Tables should be used for tabular data that is intended for comparison. If your data is only label value pairs, consider
+  the dictionary component instead. The table patterns here will squish the spacing to some degree, but will mostly preserve
+  their width on narrow viewports. The tables will become scrollable if the content overflows. If your content does not
+  fit well with this component on mobile, you can switch to an alternate component for mobile.
 sparkPackageCore: true
