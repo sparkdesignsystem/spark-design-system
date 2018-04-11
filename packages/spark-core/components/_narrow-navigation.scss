@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.sprk-c-NarrowNavigation__item:last-child .sprk-c-NarrowNavigation--sub {
+  border-bottom: 0;
+}
+
 .sprk-c-NarrowNavigation--sub {
   border-bottom: 2px solid $gray-medium;
   border-top: 0;

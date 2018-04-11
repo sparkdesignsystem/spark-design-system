@@ -14,7 +14,7 @@ import getElements from '../utilities/getElements';
 
 // Toggle the hide class on the content
 const toggleContentCSS = (toggleContent) => {
-  toggleContent.classList.toggle('sprk-u-Hide');
+  toggleContent.classList.toggle('sprk-u-HideWhenJS');
 };
 
 // Toggle the open class on the icon
@@ -41,14 +41,16 @@ const toggle = () => {
     const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
     const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
     // Hide the toggle content initially
-    toggleContent.classList.add('sprk-u-Hide');
+    toggleContent.classList.add('sprk-u-HideWhenJS');
     // Set aria-expanded to false initially
     toggleAriaExpanded(toggleTrigger);
     // Add click event listener to trigger for each toggle collection we find
     toggleTrigger.addEventListener('click', (event) => {
       event.preventDefault();
       toggleContentCSS(toggleContent);
-      toggleIconCSS(toggleIcon);
+      if (toggleIcon) {
+        toggleIconCSS(toggleIcon);
+      }
       toggleAriaExpanded(toggleTrigger);
     });
   });
