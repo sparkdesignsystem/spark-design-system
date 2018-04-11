@@ -12,7 +12,8 @@
   }
 }
 
+.Test-Page .sprk-c-NarrowNavigation,
 .drizzle-u-pad .sprk-c-NarrowNavigation {
-  max-width: 300px;
+  max-width: 320px;
   position: static;
 }
