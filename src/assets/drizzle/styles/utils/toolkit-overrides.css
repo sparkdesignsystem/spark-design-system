@@ -14,4 +14,5 @@
 
 .drizzle-u-pad .sprk-c-NarrowNavigation {
   max-width: 300px;
+  position: static;
 }

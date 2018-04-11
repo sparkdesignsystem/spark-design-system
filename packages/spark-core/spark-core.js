@@ -13,6 +13,7 @@ import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
 import { toggle } from './components/toggle';
 import { spinners } from './components/spinners';
+import { WideNavigation } from './components/wide-navigation';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -35,3 +36,4 @@ pagination();
 tabs();
 toggle();
 spinners();
+WideNavigation();
