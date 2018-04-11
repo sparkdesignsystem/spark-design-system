@@ -1,17 +1,8 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import {
-  // setupModals,
-  showModal,
-  hideModal,
-  getFocusableEls,
-  focusFirstModalEl,
-  // isTabPressed,
-  // isMaskClicked,
-  // isEscPressed,
-  // setupCancelEl,
-  // handleModalEvents,
-} from '../components/modals';
+import { showModal, hideModal, isMaskClicked } from '../components/modals';
+import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
+import { isTabPressed, isEscPressed, isEnterPressed } from '../utilities/keypress';
 
 describe('Modal tests', () => {
   let triggerDefaultModal;
@@ -21,6 +12,7 @@ describe('Modal tests', () => {
   let modalMask;
   let cancelDefault;
   let containerDiv;
+  let link;
   const HIDE_CLASS = 'sprk-u-Hide';
 
   before(() => {
@@ -47,6 +39,10 @@ describe('Modal tests', () => {
     cancelDefault.textContent = 'Cancel';
     cancelDefault.href = '#';
 
+    link = document.createElement('a');
+    cancelDefault.textContent = 'Link';
+    cancelDefault.href = '#';
+
     triggerDefaultModal = document.createElement('button');
     triggerDefaultModal.setAttribute('data-sprk-modal-trigger', 'exampleChoiceModal');
     triggerDefaultModal.textContent = 'Launch Default Modal';
@@ -56,6 +52,7 @@ describe('Modal tests', () => {
     triggerWaitModal.textContent = 'Launch Wait Modal';
 
     defaultModal.append(cancelDefault);
+    defaultModal.append(link);
 
     containerDiv.appendChild(triggerWaitModal);
     containerDiv.appendChild(triggerDefaultModal);
@@ -146,9 +143,77 @@ describe('Modal tests', () => {
   });
 
   it('should focus the first focusable element in the modal', () => {
-    focusFirstModalEl(defaultModal);
+    focusFirstEl(defaultModal);
     // Anchor link in default modal should be focused
     const isFocused = document.activeElement === cancelDefault;
     expect(isFocused).eql(true);
+  });
+
+  it('should determine if Tab key was pressed', () => {
+    const tabKeyEvent = {
+      key: 'Tab',
+      keyCode: 9,
+    };
+    const notTabKeyEvent = {
+      key: 'Enter',
+      keyCode: 13,
+    };
+    expect(isTabPressed(tabKeyEvent)).eql(true);
+    expect(isTabPressed(notTabKeyEvent)).eql(false);
+  });
+
+  it('should determine if Escape key was pressed', () => {
+    const escKeyEvent = {
+      key: 'Escape',
+      keyCode: 27,
+    };
+    const notEscKeyEvent = {
+      key: 'Enter',
+      keyCode: 13,
+    };
+    expect(isEscPressed(escKeyEvent)).eql(true);
+    expect(isEscPressed(notEscKeyEvent)).eql(false);
+  });
+
+  it('should return true when modal mask is clicked', () => {
+    let event;
+    document.addEventListener('click', (e) => {
+      event = e;
+      return e;
+    });
+    modalMask.click();
+    expect(isMaskClicked(event)).eql(true);
+  });
+
+  it('should return false when modal mask is not clicked', () => {
+    let event;
+    document.addEventListener('click', (e) => {
+      event = e;
+      return e;
+    });
+    cancelDefault.click();
+    expect(isMaskClicked(event)).eql(false);
+  });
+
+  it('should determine if Enter key was pressed', () => {
+    const notEnterKeyEvent = {
+      key: 'Escape',
+      keyCode: 27,
+    };
+    const enterKeyEvent = {
+      key: 'Enter',
+      keyCode: 13,
+    };
+    expect(isEnterPressed(enterKeyEvent)).eql(true);
+    expect(isEnterPressed(notEnterKeyEvent)).eql(false);
+  });
+
+  it('should determine if element is active element', () => {
+    const notActiveLink = document.createElement('a');
+    // Give focus to cancel link
+    cancelDefault.focus();
+    isActiveElement(cancelDefault);
+    expect(document.activeElement).eql(cancelDefault);
+    expect(document.activeElement).to.not.eql(notActiveLink);
   });
 });

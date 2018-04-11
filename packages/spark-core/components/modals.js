@@ -1,26 +1,22 @@
 /* global document */
+/**
+ * Modal Functionality
+ * Hides Modals, Shows Modals, Sets up Aria
+ * Expects:
+ * - modal container to have attribute `data-sprk-modal="customID"`
+ * - 'Wait' modal type to have `data-sprk-modal-type="wait"` in addition
+ * - 'customID' should be unique identifier for each modal
+ * - modal mask element to have `data-sprk-modal="mask"`
+ * - modal child element cancel to have `data-sprk-modal-cancel="customID"`
+ * - trigger element for modal to have `data-sprk-modal-trigger="customID"``
+ */
+
 import getElements from '../utilities/getElements';
-
-// Get focusable elements in modal
-const getFocusableEls = (modal) => {
-  let focusEls = modal.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-  focusEls = Array.prototype.slice.call(focusEls);
-  return focusEls;
-};
-
-// Focus first element in modal
-const focusFirstModalEl = (modal) => {
-  const focusEls = getFocusableEls(modal);
-  if (focusEls.length > 0) {
-    focusEls[0].focus();
-  }
-};
-
-const isTabPressed = e => e.code === 'Tab' || e.keyCode === 9;
+import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
+import { isTabPressed, isEscPressed, isEnterPressed } from '../utilities/keypress';
 
 const isMaskClicked = e => e.target.getAttribute('data-sprk-modal') === 'mask';
-
-const isEscPressed = e => e.key === 'Escape';
+const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';
 
 // Hide the modal, mask, remove aria-hidden on body and send focus back
 const hideModal = (modal, focusedBodyEl) => {
@@ -50,52 +46,58 @@ const showModal = (modal) => {
   }
 };
 
+// Attach keydown(Esc, Tab, Shift+Tab) and click listeners while modal is open
 const handleModalEvents = (modal, focusedBodyEl) => {
-  // Grab body element
+  // Wait modal does not need keydown/click event functions
+  if (isWaitModal(modal)) return;
+  // When modal is open the body will have aria-hidden=true
   const docBodyHidden = document.querySelector('[aria-hidden="true"]');
-  const modalType = modal.getAttribute('data-sprk-modal-type');
-  // Attach listener for esc, tab, shift+tab events
+  // Listener for Esc, Tab, Shift+Tab events
   docBodyHidden.addEventListener('keydown', (e) => {
     const focusableEls = getFocusableEls(modal);
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
-    // If escape is pressed then hide the modal if type is not 'wait'
-    if (isEscPressed(e) && modalType !== 'wait') {
+
+    // If only one focusable element in modal then prevent tabbing
+    if (focusableEls.length === 1) {
       e.preventDefault();
-      hideModal(modal, focusedBodyEl);
     }
 
-    // TODO: switch case here maybe
-    // If only one focusable element prevent default if type is not 'wait'
-    if (focusableEls.length === 1 && modalType !== 'wait') {
-      e.preventDefault();
-    } else if (isTabPressed(e) && e.shiftKey && modalType !== 'wait') {
-      // If user tabs backward from the first focusable element
-      // then move to the last focusable element.
-      if (document.activeElement === firstFocusableEl) {
+    // Handle key events
+    switch (true) {
+      case isEscPressed(e):
         e.preventDefault();
-        lastFocusableEl.focus();
-      }
-    } else if (isTabPressed(e) && modalType !== 'wait') {
-      // If user tabs forward from the last focusable element
-      // then move to the first focusable element
-      if (document.activeElement === lastFocusableEl) {
-        e.preventDefault();
-        firstFocusableEl.focus();
-      }
+        hideModal(modal, focusedBodyEl);
+        break;
+      case isTabPressed(e) && e.shiftKey:
+        // Handle backward tabbing if tabbing from first element
+        if (isActiveElement(firstFocusableEl)) {
+          e.preventDefault();
+          lastFocusableEl.focus();
+        }
+        break;
+      case isTabPressed(e):
+        // Handle forward tabbing if tabbing from last element
+        if (isActiveElement(lastFocusableEl)) {
+          e.preventDefault();
+          firstFocusableEl.focus();
+        }
+        break;
+      default:
+        break;
     }
   });
 
-  // Attach listener for modal mask clicks on document
+  // If mask is clicked we hide the modal
   docBodyHidden.addEventListener('click', (e) => {
-    // If mask is clicked we hide the modal if type != wait
-    if (isMaskClicked(e) && modalType !== 'wait') {
+    if (isMaskClicked(e)) {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
     }
   });
 };
 
+// Add click/keyup listeners to cancel elements to handle hiding modal
 const setupCancelEl = (modal, modalName, focusedBodyEl) => {
   // Look for cancel elements
   getElements(`[data-sprk-modal-cancel="${modalName}"]`, (cancel) => {
@@ -106,9 +108,9 @@ const setupCancelEl = (modal, modalName, focusedBodyEl) => {
     });
     // On cancel el we also listen for enter key
     cancel.addEventListener('keyup', (event) => {
-      if (event.key === 'Enter') {
-        cancel.click();
+      if (isEnterPressed(event)) {
         event.preventDefault();
+        cancel.click();
       }
     });
   });
@@ -127,7 +129,7 @@ const setupModals = () => {
       getElements(`[data-sprk-modal="${modalName}"]`, (modal) => {
         // Show the modal that was clicked
         showModal(modal, focusedBodyEl);
-        focusFirstModalEl(modal);
+        focusFirstEl(modal);
         setupCancelEl(modal, modalName, focusedBodyEl);
         handleModalEvents(modal, focusedBodyEl);
       });
@@ -140,10 +142,13 @@ export {
   showModal,
   hideModal,
   getFocusableEls,
-  focusFirstModalEl,
+  focusFirstEl,
   isTabPressed,
   isMaskClicked,
+  isWaitModal,
   isEscPressed,
+  isEnterPressed,
   setupCancelEl,
+  isActiveElement,
   handleModalEvents,
 };
