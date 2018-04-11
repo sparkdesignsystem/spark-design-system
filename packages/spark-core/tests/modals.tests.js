@@ -2,7 +2,7 @@
 import { expect } from 'chai';
 import { showModal, hideModal, isMaskClicked } from '../components/modals';
 import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
-import { isTabPressed, isEscPressed, isEnterPressed } from '../utilities/keypress';
+import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
 describe('Modal tests', () => {
   let triggerDefaultModal;
@@ -193,19 +193,6 @@ describe('Modal tests', () => {
     });
     cancelDefault.click();
     expect(isMaskClicked(event)).eql(false);
-  });
-
-  it('should determine if Enter key was pressed', () => {
-    const notEnterKeyEvent = {
-      key: 'Escape',
-      keyCode: 27,
-    };
-    const enterKeyEvent = {
-      key: 'Enter',
-      keyCode: 13,
-    };
-    expect(isEnterPressed(enterKeyEvent)).eql(true);
-    expect(isEnterPressed(notEnterKeyEvent)).eql(false);
   });
 
   it('should determine if element is active element', () => {

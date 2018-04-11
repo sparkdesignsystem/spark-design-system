@@ -13,7 +13,7 @@
 
 import getElements from '../utilities/getElements';
 import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
-import { isTabPressed, isEscPressed, isEnterPressed } from '../utilities/keypress';
+import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
 const isMaskClicked = e => e.target.getAttribute('data-sprk-modal') === 'mask';
 const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';
@@ -60,7 +60,7 @@ const handleModalEvents = (modal, focusedBodyEl) => {
 
     // If only one focusable element in modal then prevent tabbing
     if (focusableEls.length === 1) {
-      e.preventDefault();
+      // e.preventDefault();
     }
 
     // Handle key events
@@ -97,7 +97,7 @@ const handleModalEvents = (modal, focusedBodyEl) => {
   });
 };
 
-// Add click/keyup listeners to cancel elements to handle hiding modal
+// Add click listeners to cancel elements to handle hiding modal
 const setupCancelEl = (modal, modalName, focusedBodyEl) => {
   // Look for cancel elements
   getElements(`[data-sprk-modal-cancel="${modalName}"]`, (cancel) => {
@@ -105,13 +105,6 @@ const setupCancelEl = (modal, modalName, focusedBodyEl) => {
     cancel.addEventListener('click', (e) => {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
-    });
-    // On cancel el we also listen for enter key
-    cancel.addEventListener('keyup', (event) => {
-      if (isEnterPressed(event)) {
-        event.preventDefault();
-        cancel.click();
-      }
     });
   });
 };
@@ -147,7 +140,6 @@ export {
   isMaskClicked,
   isWaitModal,
   isEscPressed,
-  isEnterPressed,
   setupCancelEl,
   isActiveElement,
   handleModalEvents,
