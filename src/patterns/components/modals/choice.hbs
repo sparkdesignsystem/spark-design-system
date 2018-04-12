@@ -3,8 +3,14 @@ name: Choice
 notes: |
   Choice modals pose a question to the user and allow them to take an action.
 order: 1
-previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
 ---
+<button
+  class="sprk-c-Button"
+  data-sprk-modal-trigger="exampleChoiceModal"
+  type="button">
+  Open Choice Modal
+</button>
+
 <div
   class="sprk-c-Modal sprk-u-Hide"
   role="dialog"
@@ -14,16 +20,24 @@ previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
   aria-describedby="modal-choice-content"
   data-sprk-modal="exampleChoiceModal">
   <header class="sprk-c-Modal__header">
-    <h2 class="sprk-b-TypeDisplayThree" id="modal-choice-heading">
+    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modal-choice-heading">
       Are you sure?
     </h2>
+
+    <button
+      class="sprk-c-Modal__icon"
+      data-sprk-modal-cancel="exampleChoiceModal"
+      type="button" aria-label="Close Modal">
+      <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true">
+        <use xlink:href="#times"></use>
+      </svg>
+    </button>
   </header>
 
   <div class="sprk-c-Modal__body">
     <p class="sprk-b-TypeBodyTwo" id="modal-choice-content">
       This is some content that is in a modal. It explains what the modal is for.
-      There will also be a way to close the modal. When this modal is open there
-      will be an aria-hidden="true" attribute added to the document body.
+      There will also be a way to close the modal.
     </p>
   </div>
 
@@ -31,10 +45,7 @@ previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
     <button class="sprk-c-Button">
       Confirm
     </button>
-
-    <a class="sprk-b-Link sprk-b-Link--standalone" href="" data-sprk-modal-cancel="exampleChoiceModal">
-      Cancel
-    </a>
   </footer>
 </div>
+
 <div data-sprk-modal="mask" class="sprk-c-ModalMask sprk-u-Hide" tabindex="-1"></div>
