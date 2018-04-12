@@ -17,41 +17,222 @@ $scales-utilities-class-namespace: 'u-';
 $selection-bg-color: $blue-medium;
 
 //
+// Spacing
+///
+$space-inset-xs: 4px 4px 4px 4px;
+$space-inset-s: 8px 8px 8px 8px;
+$space-inset-m: 16px 16px 16px 16px;
+$space-inset-l: 32px 32px 32px 32px;
+$space-inset-xl: 64px 64px 64px 64px;
+
+// Inset Short
+$space-inset-short-xs: 2px 4px 2px 4px;
+$space-inset-short-s: 4px 8px 4px 8px;
+$space-inset-short-m: 8px 16px 8px 16px;
+$space-inset-short-l: 16px 32px 16px 32px;
+$space-inset-short-xl: 32px 64px 32px 64px;
+
+// Inset Tall
+$space-inset-tall-xs: 6px 4px 6px 4px;
+$space-inset-tall-s: 12px 8px 12px 8px;
+$space-inset-tall-m: 24px 16px 24px 16px;
+$space-inset-tall-l: 48px 32px 48px 32px;
+$space-inset-tall-xl: 96px 64px 96px 64px;
+
+// Stack
+$space-stack-xs: 0 0 4px 0;
+$space-stack-s: 0 0 8px 0;
+$space-stack-m: 0 0 16px 0;
+$space-stack-l: 0 0 32px 0;
+$space-stack-xl: 0 0 64px 0;
+
+// Global Spacing Utilities
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 16px;
+$space-l: 32px;
+$space-xl: 64px;
+$space-h: $space-xl;
+
+//
+// Icons
+//
+$icon-m: 16px;
+$icon-l: 32px;
+$icon-xl: 64px;
+$icon-xxl: 128px;
+
+//
 // Typography
 ///
-$ms-base: 1rem;
-$ms-ratio: 1.1;
-$text-margins: 0 0 1rem;
-$base-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
-$heading-font-weight: normal;
+// font-size-steps
+$font-size-display-one: 3.797rem;
+$color-display-one: $black;
+$line-height-display-one: 1.2;
+$font-weight-display-one: bold;
+// Display Two
+$font-size-display-two: 2.853rem;
+$color-display-two: $blue-dark;
+$line-height-display-two: 1.3;
+$font-weight-display-two: bold;
+// Display Three
+$font-size-display-three: 2.594rem;
+$color-display-three: $blue-dark;
+$line-height-display-three: 1.3;
+$font-weight-display-three: bold;
+// Display Four
+$font-size-display-four: 2.144rem;
+$color-display-four: $black;
+$line-height-display-four: 1.3;
+$font-weight-display-four: normal;
+// Display Five
+$font-size-display-five: 1.772rem;
+$color-display-five: $blue-medium;
+$line-height-display-five: 1.3;
+$font-weight-display-five: bold;
+// Display Six
+$font-size-display-six: 1.464rem;
+$color-display-six: $black;
+$line-height-display-six: 1.5;
+$font-weight-display-six: bold;
+// Display Seven
+$font-size-display-seven: 1.464rem;
+$color-display-seven: $blue-dark;
+$line-height-display-seven: 1.5;
+$font-weight-display-seven: bold;
+// Body One
+$font-size-body-one: 1.21rem;
+$color-body-one: $black;
+$line-height-body-one: 1.3;
+$font-weight-body-one: bold;
+// Body Two
+$font-size-body-two: 1.21rem;
+$color-body-two: $black;
+$line-height-body-two: 1.3;
+$font-weight-body-two: normal;
+// Body Three
+$font-size-body-three: 1rem;
+$color-body-three: $black;
+$line-height-body-three: 1.3;
+$font-weight-body-three: normal;
+// Body Four
+$font-size-body-four: 0.826rem;
+$color-body-four: $black;
+$line-height-body-four: 1.3;
+$font-weight-body-four: normal;
+// Font Stack
+$system-font-stack: null;
+$system-body-fonts: false;
+$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$system-heading-fonts: false;
+$heading-font-stack: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman',
+  Times, serif;
+// Set Scales vars
+$h1-size: $font-size-display-two;
+$h1-color: $color-display-two;
+$h1-line-height: $line-height-display-two;
+$h1-weight: $font-weight-display-two;
+$h2-size: $font-size-display-three;
+$h2-color: $color-display-three;
+$h2-line-height: $line-height-display-three;
+$h2-weight: $font-weight-display-three;
+$h3-size: $font-size-display-four;
+$h3-color: $color-display-four;
+$h3-line-height: $line-height-display-four;
+$h3-weight: $font-weight-display-four;
+$h4-size: $font-size-display-five;
+$h4-color: $color-display-five;
+$h4-line-height: $line-height-display-five;
+$h4-weight: $font-weight-display-five;
+$h5-size: $font-size-display-six;
+$h5-color: $color-display-six;
+$h5-line-height: $line-height-display-six;
+$h5-weight: $font-weight-display-six;
+$h6-size: $font-size-body-two;
+$h6-color: $color-body-two;
+$h6-line-height: $line-height-body-two;
+$h6-weight: $font-weight-body-two;
+$base-font-size: $font-size-body-two;
+$base-line-height: $line-height-body-two;
+$font-size-unit: rem;
+
+//
+// Consistent Style Vars
+//
+$border-radius: 5px;
 
 //
 // Buttons
 ///
-$btn-border-radius: 5px;
-$btn-padding: 1rem 2.46832rem;
+$btn-background-color: $green-medium;
+$btn-border-style: solid;
+$btn-border-radius: $border-radius;
 $btn-disabled-opacity: 1;
 $btn-disabled-background-color: $gray-medium;
 $btn-disabled-text-color: $white;
 $btn-disabled-border-width: 2px;
 $btn-disabled-border-color: $gray-medium;
+$btn-hover-background-color: $green-dark;
+$btn-hover-text-color: $white;
+$btn-padding: $space-inset-short-l;
+$btn-text-color: $white;
+$btn-breakpoint: 30em;
+$btn-transition-speed: 0.3s;
+
+//
+// Links
+///
+$link-color: $blue-medium;
+$link-visited-color: $blue-dark;
+$link-transition: 0.3s;
+
+//
+// Lists
+///
+$list-margin-left: $space-m;
 
 //
 // Forms
 ///
-$text-input-border-radius: 5px;
+$text-input-border-radius: $border-radius;
 $text-input-border-color: $gray-medium;
 $text-input-border-width: 2px;
-$input-container-margin-bottom: 1rem;
+$input-container-margin-bottom: $space-m;
 $input-disabled-border-color: $gray-medium;
 $input-disabled-text-color: $white;
 $helper-text-hidden: false;
+$text-input-padding: $space-s;
+$input-readonly-border-color: $gray-medium;
+$input-box-shadow: 0 0 0 3px $blue-medium;
+$input-error-box-shadow: 0 0 0 3px $red-medium;
+$input-disabled-box-shadow: 0 0 0 3px $gray-medium;
 
 //
 // Tables
 ///
-$table-padding-medium: 1rem;
-$table-padding-small: 0.5rem;
+$table-padding-small: $space-inset-s;
+$table-padding-medium: $space-inset-m;
+$table-padding-large: $space-inset-l;
 $table-border-width: 2px;
 $table-border-color: $white;
 $table-stripe-color: $blue-light;
+$table-heading-alignment: center;
+$table-cell-alignment: center;
+
+//
+// Box
+///
+$box-padding-tiny: $space-inset-xs;
+$box-padding-small: $space-inset-s;
+$box-padding: $space-inset-m;
+$box-padding-large: $space-inset-l;
+$box-padding-huge: $space-inset-xl;
+
+//
+// Media
+//
+$media-gutter-tiny: $space-xs;
+$media-gutter-small: $space-s;
+$media-gutter: $space-m;
+$media-gutter-large: $space-l;
+$media-gutter-huge: $space-xl;

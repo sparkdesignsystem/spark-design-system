@@ -2,14 +2,27 @@
 // Icons
 // ==================================================================
 .sprk-c-Icon {
-  height: 1rem;
-  width: auto;
+  height: $icon-m;
+  fill: currentColor;
+  width: $icon-m;
 }
 
-.sprk-c-Icon--big {
-  height: 1.38084rem;
+.sprk-c-Icon--l {
+  height: $icon-l;
+  width: $icon-l;
 }
 
-.sprk-c-Icon--huge {
-  height: 1.90672rem;
+.sprk-c-Icon--xl {
+  height: $icon-xl;
+  width: $icon-xl;
+}
+
+.sprk-c-Icon--xxl {
+  height: $icon-xxl;
+  width: $icon-xxl;
+}
+
+.sprk-c-Icon--open {
+  transform: rotate(180deg);
+  transform-origin: 50% 45%;
 }

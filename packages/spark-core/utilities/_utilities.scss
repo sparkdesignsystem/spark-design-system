@@ -2,6 +2,15 @@
 // Utilities
 // ==================================================================
 
+// TODO: Dave is doing utils
+.sprk-u-Hide {
+  display: none;
+}
+
+.sprk-u-Block {
+  display: block;
+}
+
 //
 // Accessible element hiding
 ///
@@ -14,6 +23,7 @@
   overflow: hidden;
 }
 
+// TODO: refactor maybe? look at type
 //
 // Text color utilities
 ///

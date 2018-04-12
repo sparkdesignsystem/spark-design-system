@@ -1,13 +1,15 @@
 ---
 name: Text Input - Disabled State
-notes:
-  This is a basic text input that is disabled.
-order: 3
-labels:
-  - inprogress
+restrictions:
+  - The input's 'type' attribute should be the most appropriate value that semantically matches your
+    use case.
+links:
+  Helper Text:  inputs.html#helper-text
+order: 1
+invisible: true
 ---
 
-<div class="sprk-b-InputContainer">
-  <label for="email">Email</label>
-  <input disabled class="sprk-b-TextInput sprk-u-Size-100" id="email" type="email" value="user@name.com">
-</div>
+{{#embed "patterns.components.inputs.text-input"
+         idattr="text-input-disabled"
+         disabled=true}}{{/embed}}
+

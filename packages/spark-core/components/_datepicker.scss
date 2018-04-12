@@ -1,23 +1,27 @@
 // ==================================================================
 // Date Picker
 // ==================================================================
-.sprk-c-DatePicker {
+
+/* stylelint-disable */
+.dp {
+  background: $white;
   border: 2px solid $gray-medium;
-  border-radius: 5px;
-  padding-top: 0.52446rem;
-  padding-bottom: 0.52446rem;
-  padding-left: 0.52446rem;
-  padding-right: 0.52446rem;
+  border-radius: $border-radius;
+  font-size: $font-size-body-three;
+  padding: $space-inset-m;
   position: relative;
   max-width: 20rem;
+}
 
+.dp-below-top {
+  // for the little arrow above the dp box
   &::after,
   &::before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 1.25em;
     border: solid transparent;
+    bottom: 100%;
+    content: '';
+    left: $space-l;
+    position: absolute;
   }
 
   &::after {
@@ -33,75 +37,169 @@
   }
 }
 
-.sprk-c-DatePicker__header {
-  position: relative;
+.dp-above-top {
+  // for the little arrow below the dp box
+  &::after,
+  &::before {
+    border: solid transparent;
+    content: '';
+    left: $space-l;
+    position: absolute;
+    top: 100%;
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+
+  &::before {
+    border-bottom-color: $gray-medium;
+    border-width: 13px;
+    margin-left: -13px;
+  }
+}
+
+.dp-header {
+  display: flex;
+}
+
+.dp-prev {
+  flex: 1;
+}
+
+.dp-next {
+  flex: 1;
+}
+
+.dp-year,
+.dp-month,
+.dp-cal-header button {
+  border: none;
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+// hiding the footer functionality
+.dp-cal-footer {
+  display: none;
+}
+
+.dp-col-header {
+  font-weight: bold;
+  font-size: $font-size-body-three;
+  padding: $space-s 0;
+}
+
+.dp-col-header,
+.dp-day {
+  display: inline-block;
+  padding: $space-s;
   text-align: center;
-  border-bottom: 1px solid $gray-medium;
-  padding-bottom: 0.27506rem;
-  margin-bottom: 0.52446rem;
+  width: 14.28571429%;
 }
 
-.sprk-c-DatePicker__month-year {
-  font-size: ms(2);
-  font-weight: normal;
+.dp-day {
+  background: none;
+  border: 1px solid $gray-light;
 }
 
-.sprk-c-DatePicker__back {
-  left: 0.5em;
+.dp-day-today {
+  font-weight: bold;
+  box-shadow: inset $input-box-shadow;
 }
 
-.sprk-c-DatePicker__forward {
-  right: 0.5em;
+.dp-current,
+.dp-selected,
+.dp-year:hover,
+.dp-month:hover,
+.dp-day:hover {
+  background: $blue-light;
 }
 
-.sprk-c-DatePicker__back,
-.sprk-c-DatePicker__forward {
-  position: absolute;
-  top: 0.25em;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  .sprk-c-Icon {
-    fill: $blue-medium;
-  }
-}
-
-.sprk-c-DatePicker__table {
-  text-align: center;
-  vertical-align: middle;
-
-  tr {
-    border-bottom: 1px solid $gray-medium;
-  }
-}
-
-.sprk-c-DatePicker__thead {
-  tr {
-    border-bottom: 2px solid $gray-medium;
-  }
-
-  th {
-    padding-bottom: 0.27506rem;
-  }
-}
-
-.sprk-c-DatePicker__day {
-  border-left: 1px solid $gray-medium;
-  border-right: 1px solid $gray-medium;
-  padding-top: 0.52446rem;
-  padding-bottom: 0.52446rem;
-  padding-left: 0.52446rem;
-  padding-right: 0.52446rem;
-}
-
-.sprk-c-DatePicker__day--current,
-.sprk-c-DatePicker__day:hover {
-  background-color: $blue-light;
-  cursor: pointer;
-}
-
-.sprk-c-DatePicker__day--muted {
+.dp-day-disabled,
+.dp-edge-day {
   color: $gray-medium;
 }
+
+.dp-cal-header {
+  border-bottom: 1px solid $gray-medium;
+  display: flex;
+  padding-bottom: $space-s;
+}
+
+.dp-cal-month,
+.dp-cal-year {
+  font-size: $font-size-display-seven;
+  flex: 1;
+}
+
+.dp-next,
+.dp-prev {
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  font-size: 0;
+  height: 50px;
+  overflow: hidden;
+  top: $space-m;
+  width: 50px;
+  // to make them look like carets, rather than have text
+  &::before {
+    border: 3px solid $blue-medium;
+    content: '';
+    display: inline-block;
+    height: 15px;
+    margin: 13px 0 40px;
+    transform: rotate(-45deg);
+    transition: border-color 0.2s;
+    width: 15px;
+  }
+}
+
+// caret-right
+.dp-next::before {
+  border-left: 0;
+  border-top: 0;
+  float: right;
+  margin-left: 0;
+}
+
+// caret-left
+.dp-prev::before {
+  border-right: 0;
+  border-bottom: 0;
+  float: left;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.dp-years {
+  max-height: 500px;
+  overflow: scroll;
+  padding: $space-m;
+}
+
+.dp-year {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dp {
+  position: relative;
+
+  &::before {
+    position: absolute;
+  }
+}
+
+.dp-below {
+  margin-top: $space-m;
+  position: absolute;
+  z-index: 3;
+}
+
+/* stylelint-enable*/

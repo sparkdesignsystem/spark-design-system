@@ -1,16 +1,22 @@
 ---
 name: Text Input
-notes:
-  This is a basic text input with a label, placeholder text, and helper text.
-info:
-  - If there is a placeholder, on key press reveal the placeholder inline with the label.
+restrictions:
+  - The input's 'type' attribute should be the most appropriate value that semantically matches your
+    use case.
+links:
+  Helper Text:  inputs.html#helper-text
+stateChanger: true
 order: 1
-labels:
-  - inprogress
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="email">Email</label>
-  <input class="sprk-b-TextInput sprk-u-Size-100" id="email" type="email" placeholder="user@name.com">
-  <span class="sprk-b-HelperText">Enter the email address you signed up with.</span>
+  <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+         id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
+         type="text"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
+         {{#if disabled}} disabled{{/if}}>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

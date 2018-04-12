@@ -1,7 +1,5 @@
 ---
-name: Future Date Picker
-notes: |
-  This is a future date picker.
+name: Date Picker
 info:
   - Only to be used for future dates (ex. Schedule a future payment).
   - The date picker is hidden by default and becomes visible on focus.
@@ -9,89 +7,23 @@ info:
   - 'On blur, format the input to this format: MM/DD/YYYY.'
   - 'Placeholder text should read: MM/DD/YYYY.'
   - On key press, reveal the placeholder inline with the label.
-labels:
-  - inprogress
-order: 13
+order: 25
 ---
-<div class="sprk-b-InputContainer">
-  <label for="future-date">Select payment date</label>
-  <input class="sprk-b-TextInput sprk-b-TextInput--date-picker sprk-u-Size-100" id="future-date" type="text" placeholder="MM/DD/YYYY">
-</div>
 
-<div class="sprk-c-DatePicker">
-  <header class="sprk-c-DatePicker__header">
-    <h2 class="sprk-c-DatePicker__month-year">January 2040</h2>
-    <span class="sprk-c-DatePicker__back">
-      <svg class="sprk-c-Icon sprk-c-Icon--big" viewBox="0 0 100 100">
-        <!-- href should point to the icon svg in your project -->
-        <use xlink:href="../../assets/toolkit/images/icons.svg#chevron-left" />
+<div class="sprk-b-InputContainer" data-sprk-input="datepicker">
+  <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label">Date</label>
+  <span class="sprk-b-TextInput--date-picker">
+      <svg class="sprk-c-Icon" viewBox="0 0 100 100">
+          <use xlink:href="#calendar" />
       </svg>
-    </span>
-    <span class="sprk-c-DatePicker__forward">
-      <svg class="sprk-c-Icon sprk-c-Icon--big" viewBox="0 0 100 100">
-        <!-- href should point to the icon svg in your project -->
-        <use xlink:href="../../assets/toolkit/images/icons.svg#chevron-right" />
-      </svg>
-    </span>
-  </header>
-  <table class="sprk-c-DatePicker__table table--fixed">
-    <thead class="sprk-c-DatePicker__thead">
-      <tr>
-        <th>Sun</th>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="sprk-c-DatePicker__day">1</td>
-        <td class="sprk-c-DatePicker__day">2</td>
-        <td class="sprk-c-DatePicker__day">3</td>
-        <td class="sprk-c-DatePicker__day">4</td>
-        <td class="sprk-c-DatePicker__day">5</td>
-        <td class="sprk-c-DatePicker__day">6</td>
-        <td class="sprk-c-DatePicker__day">7</td>
-      </tr>
-      <tr>
-        <td class="sprk-c-DatePicker__day">8</td>
-        <td class="sprk-c-DatePicker__day">9</td>
-        <td class="sprk-c-DatePicker__day">10</td>
-        <td class="sprk-c-DatePicker__day">11</td>
-        <td class="sprk-c-DatePicker__day">12</td>
-        <td class="sprk-c-DatePicker__day">13</td>
-        <td class="sprk-c-DatePicker__day">14</td>
-      </tr>
-      <tr>
-        <td class="sprk-c-DatePicker__day">15</td>
-        <td class="sprk-c-DatePicker__day">16</td>
-        <td class="sprk-c-DatePicker__day">17</td>
-        <td class="sprk-c-DatePicker__day sprk-c-DatePicker__day--current">18</td>
-        <td class="sprk-c-DatePicker__day">19</td>
-        <td class="sprk-c-DatePicker__day">20</td>
-        <td class="sprk-c-DatePicker__day">21</td>
-      </tr>
-      <tr>
-        <td class="sprk-c-DatePicker__day">22</td>
-        <td class="sprk-c-DatePicker__day">23</td>
-        <td class="sprk-c-DatePicker__day">24</td>
-        <td class="sprk-c-DatePicker__day">25</td>
-        <td class="sprk-c-DatePicker__day">26</td>
-        <td class="sprk-c-DatePicker__day">27</td>
-        <td class="sprk-c-DatePicker__day">28</td>
-      </tr>
-      <tr>
-        <td class="sprk-c-DatePicker__day">29</td>
-        <td class="sprk-c-DatePicker__day">30</td>
-        <td class="sprk-c-DatePicker__day">31</td>
-        <td class="sprk-c-DatePicker__day sprk-c-DatePicker__day--muted">1</td>
-        <td class="sprk-c-DatePicker__day sprk-c-DatePicker__day--muted">2</td>
-        <td class="sprk-c-DatePicker__day sprk-c-DatePicker__day--muted">3</td>
-        <td class="sprk-c-DatePicker__day sprk-c-DatePicker__day--muted">4</td>
-      </tr>
-    </tbody>
-  </table>
+      <input class="sprk-b-TextInput sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+             id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}"
+             type="text"
+             placeholder="MM/DD/YYYY"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+  </span>
+  <span class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>

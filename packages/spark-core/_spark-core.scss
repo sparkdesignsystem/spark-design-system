@@ -40,23 +40,23 @@
 ///
 
 @import './tools/animations';
+@import './tools/functions';
 @import './tools/mixins';
-@import './base/forms';
+@import './base/inputs';
 @import './base/links';
+@import './base/lists';
 @import './base/typography';
-@import './components/button-secondary-action';
+@import './components/alerts';
 @import './components/buttons';
-@import './components/datepicker';
+@import 'components/datepicker';
+@import './components/dividers';
 @import './components/hamburger';
 @import './components/icons';
-@import './components/input';
 @import './components/masthead';
 @import './components/modals';
 @import './components/navigation';
-@import './components/notifications';
 @import './components/pagination';
 @import './components/spinners';
 @import './components/tables';
 @import './components/tabs';
-@import './components/validation-criteria';
 @import './utilities/utilities';

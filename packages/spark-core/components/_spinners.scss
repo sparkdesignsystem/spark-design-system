@@ -26,3 +26,9 @@ $spinner-color: $white !default;
   width: $spinner-size-large;
   height: $spinner-size-large;
 }
+
+.sprk-c-Spinner--dark {
+  border-top-color: $blue-medium;
+  border-left-color: $blue-medium;
+  border-bottom-color: $blue-medium;
+}

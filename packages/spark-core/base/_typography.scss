@@ -1,85 +1,165 @@
 // ==================================================================
 // Typography
 // ==================================================================
-.sprk-b-BodyCopy {
-  color: $black;
-  font-family: $base-font-stack;
-  font-size: ms(0);
+.sprk-b-TypeDisplayOne {
+  @include TextCrop(
+    $line-height: $line-height-display-one,
+    $top-crop: 12,
+    $bottom-crop: 13,
+    $crop-font-size: (strip-unit($font-size-display-one) * 16),
+    $crop-line-height: $line-height-display-one);
+
+  color: $color-display-one;
+  font-size: $font-size-display-one;
+  font-weight: $font-weight-display-one;
 }
 
-.sprk-b-Caption {
-  font-style: italic;
+h1,
+.sprk-b-TypeDisplayTwo {
+  @include TextCrop(
+    $line-height: $line-height-display-two,
+    $top-crop: 11,
+    $bottom-crop: 11,
+    $crop-font-size: (strip-unit($font-size-display-two) * 16),
+    $crop-line-height: $line-height-display-two);
 }
 
-.sprk-b-Legal {
-  font-size: ms(-2);
+.sprk-b-TypeDisplayTwo {
+  color: $color-display-two;
+  font-size: $font-size-display-two;
+  font-weight: $font-weight-display-two;
 }
 
-.sprk-b-Heading {
-  // set here to avoid scales styling elements (h1-h6)
-
-  // prettier-ignore
-  font-family: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
+h2,
+.sprk-b-TypeDisplayThree {
+  @include TextCrop(
+    $line-height: $line-height-display-three,
+    $top-crop: 11,
+    $bottom-crop: 11,
+    $crop-font-size: (strip-unit($font-size-display-three) * 16),
+    $crop-line-height: $line-height-display-three);
 }
 
-.sprk-b-Heading--jumbo {
-  color: $blue-dark;
-  font-size: ms(16);
-  font-weight: bold;
+.sprk-b-TypeDisplayThree {
+  color: $color-display-three;
+  font-size: $font-size-display-three;
+  font-weight: $font-weight-display-three;
 }
 
-.sprk-b-Heading--primary {
-  color: $blue-dark;
-  font-size: ms(10);
-  font-weight: bold;
+h3,
+.sprk-b-TypeDisplayFour {
+  @include TextCrop(
+    $line-height: $line-height-display-four,
+    $top-crop: 8,
+    $bottom-crop: 8,
+    $crop-font-size: (strip-unit($font-size-display-four) * 16),
+    $crop-line-height: $line-height-display-four);
 }
 
-.sprk-b-Heading--secondary {
-  color: $black;
-  font-size: ms(6);
-  font-weight: normal;
+.sprk-b-TypeDisplayFour {
+  font-size: $font-size-display-four;
+  color: $color-display-four;
+  font-weight: $font-weight-display-four;
 }
 
-.sprk-b-Heading--sub {
-  color: $black;
-  font-size: ms(2);
-  font-weight: bold;
+h4,
+.sprk-b-TypeDisplayFive {
+  @include TextCrop(
+    $line-height: $line-height-display-five,
+    $top-crop: 7,
+    $bottom-crop: 7,
+    $crop-font-size: (strip-unit($font-size-display-five) * 16),
+    $crop-line-height: $line-height-display-five);
 }
 
-.sprk-b-Heading--title {
-  color: $blue-dark;
-  font-size: ms(-1);
-  font-weight: bold;
+.sprk-b-TypeDisplayFive {
+  font-size: $font-size-display-five;
+  color: $color-display-five;
+  font-weight: $font-weight-display-five;
 }
 
-.sprk-b-HeadingDivider {
-  border-bottom: 2px solid $gray-medium;
-  margin-bottom: 1rem;
+h5,
+.sprk-b-TypeDisplaySix {
+  @include TextCrop(
+    $line-height: $line-height-display-six,
+    $top-crop: 9,
+    $bottom-crop: 9,
+    $crop-font-size: (strip-unit($font-size-display-six) * 16),
+    $crop-line-height: $line-height-display-six);
 }
 
-.sprk-b-BodyDivider,
-hr {
-  display: block;
-  border: 0;
-  border-bottom: 2px solid $gray-medium;
-  margin-top: 0;
-  margin-bottom: 1rem;
+.sprk-b-TypeDisplaySix {
+  font-size: $font-size-display-six;
+  color: $color-display-six;
+  font-weight: $font-weight-display-six;
+  line-height: $line-height-display-six;
 }
 
-.sprk-b-List--indented,
-.sprk-b-List--unordered {
-  padding-left: 1.1rem;
+h6,
+.sprk-b-TypeDisplaySeven {
+  @include TextCrop(
+    $line-height: $line-height-display-seven,
+    $top-crop: 8,
+    $bottom-crop: 8,
+    $crop-font-size: (strip-unit($font-size-display-seven) * 16),
+    $crop-line-height: $line-height-display-seven);
 }
 
-.sprk-b-List--ordered {
-  padding-left: 1.1rem;
+.sprk-b-TypeDisplaySeven {
+  font-size: $font-size-display-seven;
+  color: $color-display-seven;
+  font-weight: $font-weight-display-seven;
 }
 
-.sprk-b-List--indented {
-  padding-left: 1.21rem;
-  margin-left: 1rem;
+.sprk-b-TypeBodyOne {
+  @include TextCrop(
+    $line-height: $line-height-body-one,
+    $top-crop: 6,
+    $bottom-crop: 6,
+    $crop-font-size: (strip-unit($font-size-body-one) * 16),
+    $crop-line-height: $line-height-body-one);
+
+  font-size: $font-size-body-one;
+  color: $color-body-one;
+  font-weight: $font-weight-body-one;
 }
 
-.sprk-b-List--bare {
-  list-style-type: none;
+.sprk-b-TypeBodyTwo {
+  @include TextCrop(
+    $line-height: $line-height-body-two,
+    $top-crop: 7,
+    $bottom-crop: 7,
+    $crop-font-size: (strip-unit($font-size-body-two) * 16),
+    $crop-line-height: $line-height-body-two);
+
+  font-size: $font-size-body-two;
+  color: $color-body-two;
+  font-weight: $font-weight-body-two;
+}
+
+small,
+.sprk-b-TypeBodyThree {
+  @include TextCrop(
+    $line-height: $line-height-body-three,
+    $top-crop: 6,
+    $bottom-crop: 6,
+    $crop-font-size: (strip-unit($font-size-body-three) * 16),
+    $crop-line-height: $line-height-body-three);
+
+  font-size: $font-size-body-three;
+  color: $color-body-three;
+  font-weight: $font-weight-body-three;
+}
+
+.sprk-b-TypeBodyFour {
+  @include TextCrop(
+    $line-height: $line-height-body-four,
+    $top-crop: 5,
+    $bottom-crop: 5,
+    $crop-font-size: (strip-unit($font-size-body-four) * 16),
+    $crop-line-height: $line-height-body-four);
+
+  font-size: $font-size-body-four;
+  color: $color-body-four;
+  font-weight: $font-weight-body-four;
 }

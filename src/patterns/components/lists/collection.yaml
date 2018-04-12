@@ -1,0 +1,4 @@
+name: Lists
+notes: |
+  There are 3 list styles available: default list, bare, and indented.
+sparkPackageCore: true

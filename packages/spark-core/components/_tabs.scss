@@ -1,13 +1,15 @@
 // ==================================================================
 // Tabbed Navigation
 // ==================================================================
+$tab-navigation-breakpoint: 46rem;
+
 .sprk-c-Tabs__buttons {
   display: block;
   border-bottom: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $space-m;
   background-color: $white;
 
-  @media all and (min-width: 46em) {
+  @media all and (min-width: $tab-navigation-breakpoint) {
     display: flex;
     border: 0;
   }
@@ -25,35 +27,36 @@
   border-right: 2px solid $green-medium;
   border-top: 0;
   width: 100%;
-  padding-top: 0.31296rem;
-  padding-bottom: 0.31296rem;
+  padding: $space-inset-short-s;
+  padding-top: $space-xs;
+  padding-bottom: $space-xs;
 
   &:first-of-type {
     border-top: 2px solid $green-medium;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
   }
 
   &:last-of-type {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
-  @media all and (min-width: 46em) {
+  @media all and (min-width: $tab-navigation-breakpoint) {
     flex: 1 1 100%;
     border-top: 2px solid $green-medium;
     border-left: 2px solid $green-medium;
     border-right: 0;
 
     &:first-of-type {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
       border-top-right-radius: 0;
     }
 
     &:last-of-type {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
       border-bottom-left-radius: 0;
       border-right: 2px solid $green-medium;
     }
@@ -67,6 +70,7 @@
   color: $white;
 }
 
-.sprk-c-Tabs__content {
-  display: block;
+//TODO: remove when utilities is done
+.sprk-u-Hidden {
+  display: none;
 }

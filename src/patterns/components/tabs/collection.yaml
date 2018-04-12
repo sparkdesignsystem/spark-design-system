@@ -1,4 +1,6 @@
-order: 4
-
-notes: |
-  Examples of tabbed navigation.
+name: Tabbed Navigation
+sparkPackageCore: true
+restrictions:
+  - You should have at least 2 tabs
+  - You should not have more than 7 tabs
+  - Try to limit the content of each tab label so that its not too long

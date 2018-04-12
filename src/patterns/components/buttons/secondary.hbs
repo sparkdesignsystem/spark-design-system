@@ -1,11 +1,11 @@
 ---
 name: Secondary Button
-notes:
-  This is a secondary button. When a secondary action is required and is relevant to the whole page / view. (Think a print page or a share action)
-
+notes: |
+  When there is more then one action within a single view, secondary
+  buttons can be a good option to allow the user to take another action other then the primary.
+  Use this when a secondary action is required that is relevant to
+  the whole page (think of a print page or a share action).
 order: 2
-labels:
-  - inprogress
 ---
 
-{{#embed "patterns.components.buttons.base" class="sprk-c-Button--secondary"}}{{/embed}}
+{{#embed "patterns.components.buttons.base" class="sprk-c-Button--secondary" button=true}}{{/embed}}

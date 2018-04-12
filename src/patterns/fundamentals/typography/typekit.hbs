@@ -1,0 +1,75 @@
+---
+name: Typekit Setup
+order: 11
+sourceless: true
+doclayout: true
+---
+<div class="drizzle-u-rhythm">
+    <p>In order to implement Spark-Core, you'll need to create a
+        kit on <a href="https://typekit.com">Typekit.com</a> for your application.</p>
+
+    <p>Need access to typekit for your internal Quicken Loans application? Email
+      <a href="mailto:sparkdesignsystem@quickenloans.com">sparkdesignsystem@quickenloans.com</a></p>
+
+    <p>The kit should include two font families, but you should only add the listed weights. We
+      currently do not use italics in our type treatment.</p>
+    <ul class="drizzle-List">
+      <li class="drizzle-List__item"><a href="https://typekit.com/fonts/myriad">Myriad Pro</a>
+        <ul class="drizzle-List drizzle-List--nested">
+          <li class="drizzle-List__item">Regular (400)</li>
+          <li class="drizzle-List__item">Bold (700)</li>
+        </ul>
+      </li>
+      <li class="drizzle-List__item"><a href="https://typekit.com/fonts/quatro-slab">Quatro Slab</a>
+        <ul class="drizzle-List drizzle-List--nested">
+          <li class="drizzle-List__item">Regular (400)</li>
+          <li class="drizzle-List__item">Bold (700)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Please see <a href="/patterns/elements/typography.html">Typography</a> for font usage.</p>
+    <h3 class="drizzle-h3" id="typekit-loader">Loader</h3>
+    <p>You'll need to include the following snippet into your
+        site's code. Spark includes fallback font definitions, so
+        it's recommended that you include it before the closing
+        tag, in order to avoid render blocking.</p>
+    <p><strong>You'll need to insert your new kit's id into the snippet below.</strong></p>
+    <p>Included in the code below is an event that gets dispatched when the fonts
+        have finished loading ('fonts-active').</p>
+    <pre><code class="language-javascript">(function(d) {
+    var config = {
+        kitId: '&lt;your-kit-id-here&gt;',
+        scriptTimeout: 3000,
+      active: function () {
+        // Create the event.
+        var event = document.createEvent('Event');
+        event.initEvent('fonts-active', true, true);
+        document.dispatchEvent(event);
+      }
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&amp;&amp;a!="complete"&amp;&amp;a!="loaded")return;f=true;clearTimeout(t);try{
+      Typekit.load(config)}catch(e){}};
+  s.parentNode.insertBefore(tk,s)
+})(document);
+</code></pre>
+
+  <h3 class="drizzle-h3" id="fallback-fonts">Fallback fonts</h3>
+    <p>In the event that a client has issues loading typefaces from typekit, we've defined the
+        following system and web-safe typefaces that will be used in their place:</p>
+    <h4 class="drizzle-h4" id="headings">Headings</h4>
+    <ul class="drizzle-List">
+        <li class="drizzle-List__item">Garamond</li>
+        <li class="drizzle-List__item">Hoefler Text</li>
+        <li class="drizzle-List__item">Times New Roman</li>
+        <li class="drizzle-List__item">Times</li>
+        <li class="drizzle-List__item">serif</li>
+    </ul>
+    <h4 class="drizzle-h4" id="body-copy">Body Copy</h4>
+    <ul class="drizzle-List">
+        <li class="drizzle-List__item">Helvetica</li>
+        <li class="drizzle-List__item">Helvetica Neue</li>
+        <li class="drizzle-List__item">Arial</li>
+        <li class="drizzle-List__item">sans-serif</li>
+    </ul>
+</div>

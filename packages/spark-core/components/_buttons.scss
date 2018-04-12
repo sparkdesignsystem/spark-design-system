@@ -1,28 +1,21 @@
 // ==================================================================
 // Buttons
 // ==================================================================
+.sprk-c-Button {
+  transition: background-color $btn-transition-speed;
 
-@media all and (max-width: 30em) {
-  .sprk-c-Button--full\@sm {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-
-  .sprk-c-Button--full\@sm + .sprk-c-Button--full\@sm {
-    margin-top: 1rem;
+  &:active,
+  &:focus {
+    background-color: $btn-hover-background-color;
+    color: $btn-text-color;
   }
 }
 
-.sprk-c-Button--primary {
-  background-color: $green-medium;
-  border: 2px solid $green-medium;
-  color: $white;
+.sprk-c-Button--full\@sm {
+  width: 100%;
 
-  &:hover {
-    background-color: $green-dark;
-    border: 2px solid $green-dark;
-    color: $white;
+  @media screen and (min-width: $btn-breakpoint) {
+    width: auto;
   }
 }
 
@@ -31,21 +24,22 @@
   border: 2px solid $blue-medium;
   color: $blue-medium;
 
+  &:active,
+  &:focus,
   &:hover {
     background-color: $blue-medium;
+    border: 2px solid $blue-medium;
     color: $white;
   }
 }
 
 .sprk-c-Button--tertiary {
   background-color: $blue-medium;
-  border: 2px solid $blue-medium;
-  color: $white;
 
+  &:active,
+  &:focus,
   &:hover {
     background-color: $blue-dark;
-    border: 2px solid $blue-dark;
-    color: $white;
   }
 }
 
@@ -54,8 +48,20 @@
   border: 2px solid $red-medium;
   color: $red-medium;
 
+  &:active,
+  &:focus,
   &:hover {
     background-color: $red-light;
+    border: 2px solid $red-medium;
     color: $red-medium;
+  }
+}
+
+.sprk-c-Button.is-Disabled,
+.sprk-c-Button[disabled] {
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $btn-disabled-background-color;
   }
 }

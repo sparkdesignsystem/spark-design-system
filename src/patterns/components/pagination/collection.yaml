@@ -1,7 +1,10 @@
-order: 5
-
 notes: |
-  Examples of pagination.
+  Pagination provides a way to separate a large portion of content into smaller portions.
+  It serves as navigation and informs users where they are currently and where they
+  can go in the future.
+restrictions:
+  - The outer nav element with aria-label="Pagination Navigation" is required for user accessibility
+  - Spark-Core Pagination JavaScript will take care of adding in the correct aria-label
+    to each link on first page load and when the items are tapped or clicked to ensure accessibility
 
-links:
-  Scales Horizontal List: https://github.com/ScalesCSS/patterns-horizontal-list
+sparkPackageCore: true

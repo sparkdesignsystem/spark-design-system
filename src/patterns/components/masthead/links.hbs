@@ -1,0 +1,37 @@
+---
+name: Masthead with Links
+notes: |
+  This is a masthead with secondary navigation links.
+order: 2
+labels:
+  - inprogress
+---
+
+<header class="sprk-c-Masthead" role="banner">
+  <div class="sprk-c-Masthead__hamburger">
+    <button class="sprk-c-Hamburger js-open-nav" type="button" aria-expanded="false">
+      <svg class="sprk-c-Icon sprk-c-Hamburger__icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+        <g>
+          <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one" d="M5 13h90v14H5z"/>
+          <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two" d="M5 43h90v14H5z"/>
+          <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--three" d="M5 73h90v14H5z"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+  <div class="sprk-c-Masthead__logo">
+    <a href="">
+      <svg class="sprk-c-Masthead__image" viewBox="0 0 432 53">
+        <use xlink:href="../../assets/toolkit/images/icons.svg#quicken-loans-logo" />
+      </svg>
+      <span class="sprk-u-VisuallyHidden">Go to the home page</span>
+    </a>
+  </div>
+  <div class="sprk-c-Masthead__secondary">
+    <ul class="sprk-o-HorizontalList">
+      <li data-delimiter=" | "><a href="" class="sprk-b-Link--plain">Link</a></li>
+      <li><a href="" class="sprk-b-Link--plain">Link</a></li>
+    </ul>
+  </div>
+  {{#embed "patterns.components.navigation.main" class="sprk-is-Hidden@sm"}}{{/embed}}
+</header>

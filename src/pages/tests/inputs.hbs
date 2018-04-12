@@ -1,0 +1,87 @@
+---
+title: Inputs Tests
+layout: blank
+---
+<h1 class="drizzle-h1"> Inputs </h1>
+<form action="" novalidate>
+    <div class="sprk-b-TypeBodyTwo">
+        {{#each (data "inputs")}}
+            <h2 class="drizzle-h2">{{this.name}}</h2>
+            <div class="drizzle-Space-inset-m">
+              {{#embed this.name}}{{/embed}}
+            </div>
+        {{else}}
+          Theres nothing
+        {{/each}}
+    </div>
+
+    <h2 class="drizzle-h2">Required Text Input</h2>
+      <div class="drizzle-Space-inset-m">
+        <div class="sprk-b-TypeBodyTwo">
+          <div class="sprk-b-InputContainer">
+            <label for="text-input-required" class="sprk-b-Label">Text Input Label</label>
+            <input
+              class="sprk-b-TextInput sprk-u-Size-100"
+              id="text-input-required"
+              type="text"
+              aria-describedby="text-input-required--error-container"
+              required>
+            <span class="sprk-b-ErrorText" id="text-input-required--error-container">
+              This field is required.
+          </span>
+          </div>
+        </div>
+      </div>
+
+    <h2 class="drizzle-h2">Required Tick</h2>
+
+      <div class="drizzle-Space-inset-m">
+        <div class="sprk-b-TypeBodyTwo">
+          <div class="sprk-b-InputContainer">
+            <fieldset>
+              <legend>
+                <label class="sprk-b-Label">Checkbox Group Label</label>
+              </legend>
+              <div class="sprk-b-SelectionContainer">
+                <input id="checkbox-required-1" type="checkbox" aria-describedby="checkbox-required--error-container">
+                <label for="checkbox-required-1" class="sprk-b-Label sprk-b-Label--inline sprk-u-mls" required>Checkbox Item 1</label>
+              </div>
+              <div class="sprk-b-SelectionContainer">
+                <input id="checkbox-required-2" type="checkbox" aria-describedby="checkbox-required--error-container">
+                <label for="checkbox-required-2" class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Checkbox Item 2</label>
+              </div>
+              <div class="sprk-b-SelectionContainer">
+                <input id="checkbox-required-3" type="checkbox" aria-describedby="checkbox-required--error-container">
+                <label for="checkbox-required-3" class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Checkbox Item 3</label>
+              </div>
+            </fieldset>
+            <span class="sprk-b-ErrorText" id="checkbox-required--error-container">
+              This field is required.</span>
+          </div>
+        </div>
+      </div>
+
+  <h2 class="drizzle-h2">Required Select</h2>
+  <div class="drizzle-Space-inset-m">
+    <div class="sprk-b-TypeBodyTwo">
+      <div class="sprk-b-InputContainer" data-sprk-required="select">
+        <label for="select-required" class="sprk-b-Label">Select Box Label</label>
+        <select id="select-required" aria-describedby="select-required--error-container" required>
+          <option value="not-selected">Please Choose an Option...</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <optgroup label="Grouped Options">
+            <option value="g1">Grouped Option 1</option>
+            <option value="g2">Grouped Option 2</option>
+            <option value="g3">Grouped Option 3</option>
+          </optgroup>
+        </select>
+        <span class="sprk-b-ErrorText" id="select-required--error-container">
+          This field is required.
+        </span>
+      </div>
+    </div>
+
+  </div>
+</form>

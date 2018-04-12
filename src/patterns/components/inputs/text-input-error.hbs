@@ -1,14 +1,14 @@
 ---
 name: Text Input - Error State
-notes:
-  This is a basic text input with an error.
-order: 2
-labels:
-  - inprogress
+restrictions:
+  - The input's 'type' attribute should be the most appropriate value that semantically matches your
+    use case.
+links:
+  Helper Text:  inputs.html#helper-text
+order: 1
+invisible: true
 ---
-
-<div class="sprk-b-InputContainer">
-  <label for="email">Email</label>
-  <input class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Size-100" id="email" type="email" placeholder="user@name.com">
-  <span class="sprk-b-ErrorText">There is an error on this field.</span>
-</div>
+{{#embed "patterns.components.inputs.text-input"
+         idattr="text-input-error"
+         errorMessage="There is an error on this field."
+         class="sprk-b-TextInput--error"}}{{/embed}}
