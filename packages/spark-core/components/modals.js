@@ -28,6 +28,8 @@ const hideModal = (modal, focusedBodyEl) => {
     mask.classList.add('sprk-u-Hide');
     // Remove the hidden aria attr from body
     document.body.removeAttribute('aria-hidden');
+    // Remove overflow hidden to allow scrolling again
+    document.body.classList.remove('sprk-u-OverflowHidden');
     // Send focus back to last active element before modal was shown
     focusedBodyEl.focus();
   }
@@ -43,6 +45,8 @@ const showModal = (modal) => {
     mask.classList.remove('sprk-u-Hide');
     // We want to alert assistive devices that body is hidden
     document.body.setAttribute('aria-hidden', 'true');
+    // Prevent background body from scrolling
+    document.body.classList.add('sprk-u-OverflowHidden');
   }
 };
 

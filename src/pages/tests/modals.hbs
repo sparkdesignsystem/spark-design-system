@@ -6,47 +6,6 @@ layout: blank
   Modals
 </h1>
 
-<button class="sprk-c-Button" data-sprk-modal-trigger="exampleChoiceModal" type="button">Choice Modal</button>
-<button class="sprk-c-Button" data-sprk-modal-trigger="exampleWaitModal" type="button">Wait Modal</button>
-<button class="sprk-c-Button" data-sprk-modal-trigger="exampleInfoModal" type="button">Info Modal</button>
-<button class="sprk-c-Button" data-sprk-modal-trigger="exampleChoiceModal2" type="button">Choice 2 Modal</button>
-
-<div
-  class="sprk-c-Modal sprk-u-Hide"
-  role="dialog"
-  tabindex="-1"
-  aria-labelledby="modal-choice-heading2"
-  aria-modal="true"
-  aria-describedby="modal-choice-content2"
-  data-sprk-modal="exampleChoiceModal2">
-  <header class="sprk-c-Modal__header">
-    <h2 class="sprk-b-TypeDisplayThree" id="modal-choice-heading2">
-      Are you sure?
-    </h2>
-  </header>
-
-  <div class="sprk-c-Modal__body">
-    <p class="sprk-b-TypeBodyTwo" id="modal-choice-content2">
-      This is some content that is in a modal. It explains what the modal is for.
-      There will also be a way to close the modal. When this modal is open there
-      will be an aria-hidden="true" attribute added to the document body.
-    </p>
-  </div>
-
-  <footer class="sprk-c-Modal__footer">
-    <button class="sprk-c-Button">
-      Confirm
-    </button>
-
-    <a class="sprk-b-Link sprk-b-Link--standalone" href="" data-sprk-modal-cancel="exampleChoiceModal2">
-      Cancel
-    </a>
-
-    <a class="sprk-b-Link sprk-b-Link--standalone" href="">
-      link 2
-    </a>
-  </footer>
-</div>
 {{#embed "patterns.components.modals.choice"}}{{/embed}}
 {{#embed "patterns.components.modals.wait"}}{{/embed}}
 {{#embed "patterns.components.modals.info"}}{{/embed}}

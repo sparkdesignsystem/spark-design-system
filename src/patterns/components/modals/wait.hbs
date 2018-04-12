@@ -1,10 +1,16 @@
 ---
 name: Wait
 notes: |
-  Wait modals contain a spinner to indicate something is happening. There is no action for the user to take on Wait modals.
+  Wait modals contain a spinner to indicate something is happening and can not be closed by the user.
 order: 1
-previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
 ---
+<button
+  class="sprk-c-Button"
+  data-sprk-modal-trigger="exampleWaitModal"
+  type="button">
+  Open Wait Modal
+</button>
+
 <div
   class="sprk-c-Modal sprk-u-Hide"
   role="dialog"
@@ -15,7 +21,7 @@ previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
   data-sprk-modal="exampleWaitModal"
   data-sprk-modal-type="wait">
   <header class="sprk-c-Modal__header">
-    <h2 class="sprk-b-TypeDisplayThree" id="modal-wait-heading">
+    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modal-wait-heading">
       Please Wait...
     </h2>
 
@@ -31,4 +37,5 @@ previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
     </p>
   </div>
 </div>
+
 <div data-sprk-modal="mask" class="sprk-c-ModalMask sprk-u-Hide" tabindex="-1"></div>

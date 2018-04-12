@@ -6,36 +6,54 @@
 // Available Variables
 ///
 $modal-mask-color: rgba(34, 34, 34, 0.35);
+$modal-max-width: 43.75rem;
+$modal-height: 70%;
+$modal-breakpoint-small: 25rem;
+$modal-breakpoint-medium: 37.5rem;
 
 .sprk-c-Modal,
 .sprk-c-ModalMask {
-  position: fixed;
   left: 0;
+  position: fixed;
+}
+
+.sprk-c-ModalMask {
+  background-color: $modal-mask-color;
+  height: 100%;
+  width: 100%;
   top: 0;
+  z-index: 1005;
 }
 
 .sprk-c-Modal {
   background-color: $white;
   margin-right: auto;
   margin-left: auto;
-  max-width: 43.75em;
-  overflow: auto;
+  max-width: $modal-max-width;
+  max-height: $modal-height;
+  overflow-y: auto;
   right: 0;
+  top: 5%;
   width: 95%;
   z-index: 1006;
 
-  @media all and (min-width: 300px) and (min-height: 300px) {
+  @media all and (min-width: $modal-breakpoint-small) and (min-height: $modal-breakpoint-small) {
+    top: 15%;
+  }
+  @media all and (min-width: $modal-breakpoint-medium) and (min-height: $modal-breakpoint-medium) {
+    height: auto;
     top: 30%;
   }
 }
 
 .sprk-c-Modal__header {
+  align-items: center;
   background-color: $blue-medium;
   display: flex;
-  align-items: center;
+  padding: $space-inset-m;
 }
 
-.sprk-c-Modal__header .sprk-b-TypeDisplayThree {
+.sprk-c-Modal__heading {
   color: $white;
   flex: 1 1 auto;
   margin-right: $space-s;
@@ -49,18 +67,10 @@ $modal-mask-color: rgba(34, 34, 34, 0.35);
   flex: 0 1 auto;
 }
 
-.sprk-c-Modal__header,
 .sprk-c-Modal__body {
-  padding: $space-inset-m;
+  padding: $space-inset-tall-m;
 }
 
 .sprk-c-Modal__footer {
   padding: 0 $space-m $space-m;
-}
-
-.sprk-c-ModalMask {
-  background-color: $modal-mask-color;
-  height: 100%;
-  width: 100%;
-  z-index: 1005;
 }

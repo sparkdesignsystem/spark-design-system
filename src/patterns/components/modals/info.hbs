@@ -1,10 +1,16 @@
 ---
 name: Info
 notes: |
-  Info modals show information to the user that is dismissible if they would like but does not require an action.
+  Info modals show information to the user that is dismissible.
 order: 1
-previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
 ---
+<button
+  class="sprk-c-Button"
+  data-sprk-modal-trigger="exampleInfoModal"
+  type="button">
+  Open Info Modal
+</button>
+
 <div
   class="sprk-c-Modal sprk-u-Hide"
   role="dialog"
@@ -14,11 +20,14 @@ previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
   aria-describedby="modal-info-content"
   data-sprk-modal="exampleInfoModal">
   <header class="sprk-c-Modal__header">
-    <h2 class="sprk-b-TypeDisplayThree" id="modal-info-heading">
+    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modal-info-heading">
       Info Modal
     </h2>
 
-    <button class="sprk-c-Modal__icon" data-sprk-modal-cancel="exampleInfoModal" type="button" title="Dismiss">
+    <button
+      class="sprk-c-Modal__icon"
+      data-sprk-modal-cancel="exampleInfoModal"
+      type="button" aria-label="Close Modal">
       <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true">
         <use xlink:href="#times"></use>
       </svg>
@@ -32,4 +41,5 @@ previewClass: drizzle-u-bgBlack35 drizzle-u-drizzleModalOverride
     </p>
   </div>
 </div>
+
 <div data-sprk-modal="mask" class="sprk-c-ModalMask sprk-u-Hide" tabindex="-1"></div>
