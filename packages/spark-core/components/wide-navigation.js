@@ -1,10 +1,6 @@
 import getElements from '../utilities/getElements';
 
 const showDropDown = (container) => {
-  getElements('.sprk-c-WideNavigation--sub', (nav) => {
-    nav.classList.add('sprk-u-Hide');
-  });
-
   const subNav = container.querySelector('.sprk-c-WideNavigation--sub');
   if (subNav) {
     subNav.classList.remove('sprk-u-Hide');
@@ -13,6 +9,9 @@ const showDropDown = (container) => {
 
 const bindUIEvents = (element) => {
   element.addEventListener('focusin', (e) => {
+    getElements('.sprk-c-WideNavigation--sub', (nav) => {
+      nav.classList.add('sprk-u-Hide');
+    });
     showDropDown(element);
     e.stopPropagation();
   });
