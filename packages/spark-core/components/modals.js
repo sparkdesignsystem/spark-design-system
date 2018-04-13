@@ -52,23 +52,25 @@ const showModal = (modal) => {
 
 // Attach keydown(Esc, Tab, Shift+Tab) and click listeners while modal is open
 const handleModalEvents = (modal, focusedBodyEl) => {
-  // Wait modal does not need keydown/click event functions
-  if (isWaitModal(modal)) return;
+  const focusableEls = getFocusableEls(modal);
+  const firstFocusableEl = focusableEls[0];
+  const lastFocusableEl = focusableEls[focusableEls.length - 1];
   // When modal is open the body will have aria-hidden=true
   const docBodyHidden = document.querySelector('[aria-hidden="true"]');
+
+  // When wait modal opens and has no focusable elements we apply focus to modal container
+  if (isWaitModal(modal) && focusableEls.length === 0) {
+    modal.focus();
+  }
+
   // Listener for Esc, Tab, Shift+Tab events
   docBodyHidden.addEventListener('keydown', (e) => {
-    const focusableEls = getFocusableEls(modal);
-    const firstFocusableEl = focusableEls[0];
-    const lastFocusableEl = focusableEls[focusableEls.length - 1];
-
-    // If only one focusable element in modal then prevent tabbing
-    if (focusableEls.length === 1) {
-      // e.preventDefault();
-    }
-
     // Handle key events
     switch (true) {
+      case isWaitModal(modal):
+        // Prevent wait modal tabbing
+        e.preventDefault();
+        break;
       case isEscPressed(e):
         e.preventDefault();
         hideModal(modal, focusedBodyEl);
@@ -94,7 +96,7 @@ const handleModalEvents = (modal, focusedBodyEl) => {
 
   // If mask is clicked we hide the modal
   docBodyHidden.addEventListener('click', (e) => {
-    if (isMaskClicked(e)) {
+    if (isMaskClicked(e) && !isWaitModal(modal)) {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
     }
