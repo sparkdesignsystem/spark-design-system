@@ -5,14 +5,12 @@ notes: |
   the "Wait" modals do not allow the user to take an action that will close the modal whereas the default modal
   type allows the user to hit a cancel element or to press the "Escape" key to close the modal.
 info:
-  - Wait modals need the additional 'data-sprk-modal-type="wait"'
-    attribute to signify they will have different functionality than the default modals.
   - Spark JS will hook into the 'data-sprk-modal-trigger="<modalName>"'
     attribute to get the modal name and show that specific modal when the trigger is clicked.
   - Each modal container should have the attribute of 'data-sprk-modal="<modalName>"'
     if you would like the trigger click event to show the modal.
   - Add 'data-sprk-modal-cancel="<modalName>"' to the cancel element
-    inside the modal if you would like it to close the modal when clicked.
+    inside the modal if you would like to add close modal functionality to it.
   - Omit the 'data-sprk-modal-trigger="<modalName>"',
     'data-sprk-modal="<modalName>"' and 'data-sprk-modal-cancel="<modalName>"'.
     attributes from the trigger, modal container and cancel element if you do not want
