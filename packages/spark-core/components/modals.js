@@ -115,7 +115,7 @@ const setupCancelEl = (modal, modalName, focusedBodyEl) => {
   });
 };
 
-const setupModals = () => {
+const modals = () => {
   getElements('[data-sprk-modal-trigger]', (modalTrigger) => {
     // Add click listener to each modal trigger found
     modalTrigger.addEventListener('click', (event) => {
@@ -137,7 +137,7 @@ const setupModals = () => {
 };
 
 export {
-  setupModals,
+  modals,
   showModal,
   hideModal,
   getFocusableEls,
