@@ -22,32 +22,36 @@ const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wai
 const hideModal = (modal, focusedBodyEl) => {
   const isHidden = modal.classList.contains('sprk-u-Hide');
   const mask = document.querySelector('[data-sprk-modal="mask"]');
+  const main = document.querySelector('[data-sprk-main]');
 
-  if (!isHidden) {
-    modal.classList.add('sprk-u-Hide');
-    mask.classList.add('sprk-u-Hide');
-    // Remove the hidden aria attr from body
-    document.body.removeAttribute('aria-hidden');
-    // Remove overflow hidden to allow scrolling again
-    document.body.classList.remove('sprk-u-OverflowHidden');
-    // Send focus back to last active element before modal was shown
-    focusedBodyEl.focus();
-  }
+  // If the modal is hidden already or there are no mask and main els then exit
+  if (isHidden || mask === null || main === null) return;
+
+  modal.classList.add('sprk-u-Hide');
+  mask.classList.add('sprk-u-Hide');
+  // Remove the hidden aria attr from main content
+  main.removeAttribute('aria-hidden');
+  // Remove overflow hidden to allow scrolling again
+  document.body.classList.remove('sprk-u-OverflowHidden');
+  // Send focus back to last active element before modal was shown
+  focusedBodyEl.focus();
 };
 
 // Show the modal, mask and set aria-hidden=true on body
 const showModal = (modal) => {
-  const isNotShown = modal.classList.contains('sprk-u-Hide');
+  const isHidden = modal.classList.contains('sprk-u-Hide');
   const mask = document.querySelector('[data-sprk-modal="mask"]');
+  const main = document.querySelector('[data-sprk-main]');
 
-  if (isNotShown) {
-    modal.classList.remove('sprk-u-Hide');
-    mask.classList.remove('sprk-u-Hide');
-    // We want to alert assistive devices that body is hidden
-    document.body.setAttribute('aria-hidden', 'true');
-    // Prevent background body from scrolling
-    document.body.classList.add('sprk-u-OverflowHidden');
-  }
+  // If the modal is shown already or there are no mask and main els then exit
+  if (!isHidden || mask === null || main === null) return;
+
+  modal.classList.remove('sprk-u-Hide');
+  mask.classList.remove('sprk-u-Hide');
+  // We want to alert assistive devices that main content is hidden
+  main.setAttribute('aria-hidden', 'true');
+  // Prevent background body from scrolling
+  document.body.classList.add('sprk-u-OverflowHidden');
 };
 
 // Attach keydown(Esc, Tab, Shift+Tab) and click listeners while modal is open
@@ -55,8 +59,10 @@ const handleModalEvents = (modal, focusedBodyEl) => {
   const focusableEls = getFocusableEls(modal);
   const firstFocusableEl = focusableEls[0];
   const lastFocusableEl = focusableEls[focusableEls.length - 1];
-  // When modal is open the body will have aria-hidden=true
-  const docBodyHidden = document.querySelector('[aria-hidden="true"]');
+  const isOpen = document.querySelector('[data-sprk-main]').hasAttribute('aria-hidden');
+  // When modal is open the main content area will have aria-hidden=true
+  // If it doesn't, we want to exit
+  if (!isOpen) return;
 
   // When wait modal opens and has no focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {
@@ -64,7 +70,7 @@ const handleModalEvents = (modal, focusedBodyEl) => {
   }
 
   // Listener for Esc, Tab, Shift+Tab events
-  docBodyHidden.addEventListener('keydown', (e) => {
+  document.addEventListener('keydown', (e) => {
     // Handle key events
     switch (true) {
       case isWaitModal(modal):
@@ -95,7 +101,7 @@ const handleModalEvents = (modal, focusedBodyEl) => {
   });
 
   // If mask is clicked we hide the modal
-  docBodyHidden.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
     if (isMaskClicked(e) && !isWaitModal(modal)) {
       e.preventDefault();
       hideModal(modal, focusedBodyEl);
