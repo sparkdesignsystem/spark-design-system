@@ -1,33 +1,30 @@
 notes: |
-  Modals are triggered by an action and are displayed over the top of all other content.
-  There are three different UI types of modals, Choice, Wait and Info. There are two types of JS functionality
-  that the three modals use. The default type and the "Wait" type. The difference between the two is
+  Modals are displayed over the top of all other content.
+  There are three different UI types of modals, Choice, Wait and Info. Spark supplies JS to
+  open and close modals that works when certain data attributes are added (identified below).
+  Spark JS will also take care of the modal accessibility and keyboard events.
+  If you would like to use your own modal JS instead of the Spark JS you should omit the
+  required data attributes. You may also choose to use only certain Spark functions
+  such as showModal() and hideModal() to utilize in your own code.
+  There are two types of JS functionality that the three modal designs use.
+  The two types are "default" and "Wait". The main difference between the two is
   the "Wait" modals do not allow the user to take an action that will close the modal whereas the default modal
-  type allows the user to hit a cancel element or to press the "Escape" key to close the modal.
-info:
-  - Spark JS will hook into the 'data-sprk-modal-trigger="<modalName>"'
-    attribute to get the modal name and show that specific modal when the trigger is clicked.
-  - Each modal container should have the attribute of 'data-sprk-modal="<modalName>"'
-    if you would like the trigger click event to show the modal.
-  - Add 'data-sprk-modal-cancel="<modalName>"' to the cancel element
-    inside the modal if you would like to add close modal functionality to it.
-  - Omit the 'data-sprk-modal-trigger="<modalName>"',
-    'data-sprk-modal="<modalName>"' and 'data-sprk-modal-cancel="<modalName>"'.
-    attributes from the trigger, modal container and cancel element if you do not want
-    to use the Spark JS.
-  - If you wish to use your own modal JS you may import the Spark modal
-    functions such as showModal() and hideModal() to utilize in your own code.
+  allows the user to hit a cancel element, press the "Escape" key, or click the modal background mask to
+  close the modal. Each modal should have a trigger element that has
+  the 'data-sprk-modal-trigger="<modalName>"' attribute. The trigger element should
+  be outside the modal container and will open the modal when clicked or tapped.
 restrictions:
-  - Modal container HTML should be added right above the closing body tag.
-  - Must be dismissible by tapping outside the modal, clicking a cancel element, or hitting the Escape key.
-  - Modals should trap focus inside the modal when a user presses the Tab or Shift+Tab keys inside the modal.
+  - Modal container HTML should be added right above the closing body tag and must be outside of the main site content area.
+  - The main content area should have the attribute of 'data-sprk-main'.
+  - Modals Must be dismissible by tapping outside the modal, clicking a cancel element, or hitting the Escape key (Spark JS provides this functionality).
+  - Modals should trap focus inside the modal when a user presses the Tab or Shift+Tab keys inside the modal (Spark JS provides this functionality).
   - The container of the modal should have the attribute of role="dialog".
   - The modal and mask elements must have a tabindex="-1" to prevent them from receiving focus.
   - When the modal is open we must tell assistive devices that everything behind it is
-    hidden by adding aria-hidden="true" on the document body and removing it once modal is closed.
-  - If the content in the modal is too large for the viewport then the modal must show a scroll bar.
+    hidden by adding aria-hidden="true" on the main content container and removing it once modal is closed (Spark JS provides this functionality).
+  - If the content in the modal is too large for the viewport then the modal must show a scroll bar (Spark SCSS provides this functionality).
   - When the modal is open we must capture the document's active element and return focus to this element
-    once the modal is closed.
+    once the modal is closed (Spark JS provides this functionality).
   - When the modal opens we must detect the number of focusable elements inside the modal and
-    apply focus to the first one.
+    apply focus to the first one (Spark JS provides this functionality).
 sparkPackageCore: true
