@@ -23,7 +23,6 @@
     "@scalescss/scalescss": "^3.4.0",
     "chai": "^4.1.2",
     "jsdom": "^11.6.2",
-    "npm": "^5.8.0",
     "nyc": "^11.6.0",
     "tiny-date-picker": "^3.2.0"
   },
