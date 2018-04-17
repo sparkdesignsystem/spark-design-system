@@ -17,6 +17,7 @@ describe('Modal tests', () => {
 
   before(() => {
     containerDiv = document.createElement('div');
+    containerDiv.setAttribute('data-sprk-main', 'true');
 
     modalMask = document.createElement('div');
     modalMask.setAttribute('data-sprk-modal', 'mask');
@@ -63,7 +64,7 @@ describe('Modal tests', () => {
     document.body.appendChild(containerDiv);
   });
 
-  it('should show the default modal, mask and set aria-hidden=true on body', () => {
+  it('should show the default modal, mask and set aria-hidden=true on main container', () => {
     showModal(defaultModal);
 
     // showModal should remove the hide class from the modal mask
@@ -72,8 +73,8 @@ describe('Modal tests', () => {
     // showModal should remove the hide class from the modal
     expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
 
-    // // showModal should add the aria-hidden attribute to body
-    expect(document.body.hasAttribute('aria-hidden')).eql(true);
+    // showModal should add the aria-hidden attribute to main container
+    expect(containerDiv.hasAttribute('aria-hidden')).eql(true);
   });
 
   it('should show the wait modal, mask and set aria-hidden=true on body', () => {
@@ -86,7 +87,7 @@ describe('Modal tests', () => {
     expect(waitModal.classList.contains(HIDE_CLASS)).eql(false);
 
     // // showModal should add the aria-hidden attribute to body
-    expect(document.body.hasAttribute('aria-hidden')).eql(true);
+    expect(containerDiv.hasAttribute('aria-hidden')).eql(true);
   });
 
   it('should hide the default modal, mask, remove aria-hidden=true on body, and send focus back to trigger element', () => {
