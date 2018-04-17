@@ -7,27 +7,26 @@
  * - modal container is outside of `data-sprk-main` and has `data-sprk-modal="customID"`
  * - 'Wait' modal type to have `data-sprk-modal-type="wait"` in addition
  * - 'customID' should be unique identifier for each modal
- * - modal mask element to have `data-sprk-modal="mask"`
+ * - modal mask element to have `data-sprk-modal-mask="true"`
  * - modal child element cancel to have `data-sprk-modal-cancel="customID"`
  * - trigger element for modal to have `data-sprk-modal-trigger="customID"``
  */
 
-import getElements from '../utilities/getElements';
 import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
 import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
-const isMaskClicked = e => e.target.getAttribute('data-sprk-modal') === 'mask';
+const isMaskClicked = e => e.target.getAttribute('data-sprk-modal-mask') === 'true';
 const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';
 
-// Hide the modal, mask, remove aria-hidden on body and send focus back
-const hideModal = (modal, focusedBodyEl) => {
+// Hide the modal, mask, remove aria-hidden on main and send focus back
+const hideModal = (modal, mask, main) => {
   const isHidden = modal.classList.contains('sprk-u-Hide');
-  const mask = document.querySelector('[data-sprk-modal="mask"]');
-  const main = document.querySelector('[data-sprk-main]');
-
-  // If the modal is hidden already or there are no mask and main els then exit
+  // Grab value of modal data-attr to get the trigger's corresponding modal name
+  const modalName = modal.getAttribute('data-sprk-modal');
+  // Grab modal trigger so it can be focused once modal is closed
+  const modalTrigger = document.querySelector(`[data-sprk-modal-trigger="${modalName}"]`);
+  // If modal is hidden already or there are no mask and main els then exit
   if (isHidden || mask === null || main === null) return;
-
   modal.classList.add('sprk-u-Hide');
   mask.classList.add('sprk-u-Hide');
   // Remove the hidden aria attr from main content
@@ -35,42 +34,58 @@ const hideModal = (modal, focusedBodyEl) => {
   // Remove overflow hidden to allow scrolling again
   document.body.classList.remove('sprk-u-OverflowHidden');
   // Send focus back to last active element before modal was shown
-  focusedBodyEl.focus();
+  modalTrigger.focus();
 };
 
-const handleMaskEvents = (modal, focusedBodyEl, e) => {
-  if (isMaskClicked(e) && !isWaitModal(modal)) {
+const currentOpenModal = (modalsList) => {
+  let openModalEl;
+  // Loop through modals to find open modal
+  modalsList.forEach((modalEl) => {
+    const isHidden = modalEl.classList.contains('sprk-u-Hide');
+    if (!isHidden) openModalEl = modalEl;
+  });
+  return openModalEl;
+};
+
+const handleMaskEvents = (modalsList, mask, main, e) => {
+  // Hide modal as long as its not the wait modal
+  const currentOpenModalEl = currentOpenModal(modalsList);
+  if (isMaskClicked(e) && !isWaitModal(currentOpenModalEl)) {
     e.preventDefault();
-    hideModal(modal, focusedBodyEl);
+    hideModal(currentOpenModalEl, mask, main);
   }
 };
 
-// When modal is open and key is pressed
-const handleModalKeyEvents = (modal, focusedBodyEl, event) => {
-  const focusableEls = getFocusableEls(modal);
+// Handle when modal is open and a key is pressed
+const handleModalKeyEvents = (modalsList, mask, main, e) => {
+  const currentOpenModalEl = currentOpenModal(modalsList);
+  if (!currentOpenModalEl) return;
+  const focusableEls = getFocusableEls(currentOpenModal(modalsList));
   const firstFocusableEl = focusableEls[0];
   const lastFocusableEl = focusableEls[focusableEls.length - 1];
 
   switch (true) {
-    case isWaitModal(modal):
-      // Prevent wait modal tabbing
-      event.preventDefault();
+    case isEscPressed(e):
+      if (!isWaitModal(currentOpenModalEl)) {
+        e.preventDefault();
+        hideModal(currentOpenModalEl, mask, main);
+      }
       break;
-    case isEscPressed(event):
-      event.preventDefault();
-      hideModal(modal, focusedBodyEl);
-      break;
-    case isTabPressed(event) && event.shiftKey:
-      // Handle backward tabbing if tabbing from first element
-      if (isActiveElement(firstFocusableEl)) {
-        event.preventDefault();
+    case isTabPressed(e) && e.shiftKey:
+      if (isWaitModal(currentOpenModalEl)) {
+        e.preventDefault();
+        currentOpenModalEl.focus();
+      } else if (isActiveElement(firstFocusableEl)) {
+        e.preventDefault();
         lastFocusableEl.focus();
       }
       break;
-    case isTabPressed(event):
-      // Handle forward tabbing if tabbing from last element
-      if (isActiveElement(lastFocusableEl)) {
-        event.preventDefault();
+    case isTabPressed(e):
+      if (isWaitModal(currentOpenModalEl)) {
+        e.preventDefault();
+        currentOpenModalEl.focus();
+      } else if (isActiveElement(lastFocusableEl)) {
+        e.preventDefault();
         firstFocusableEl.focus();
       }
       break;
@@ -80,10 +95,8 @@ const handleModalKeyEvents = (modal, focusedBodyEl, event) => {
 };
 
 // Show the modal, mask and set aria-hidden=true on body
-const showModal = (modal, focusedBodyEl) => {
+const showModal = (modal, mask, main) => {
   const isHidden = modal.classList.contains('sprk-u-Hide');
-  const mask = document.querySelector('[data-sprk-modal="mask"]');
-  const main = document.querySelector('[data-sprk-main]');
   const focusableEls = getFocusableEls(modal);
 
   // If the modal is shown already or there are no mask and main els then exit
@@ -93,7 +106,7 @@ const showModal = (modal, focusedBodyEl) => {
   modal.classList.remove('sprk-u-Hide');
   mask.classList.remove('sprk-u-Hide');
 
-  // We want to alert assistive devices that main content is hidden
+  // Alert assistive devices that main content is hidden
   main.setAttribute('aria-hidden', 'true');
 
   // Prevent background body from scrolling
@@ -103,47 +116,60 @@ const showModal = (modal, focusedBodyEl) => {
   if (isWaitModal(modal) && focusableEls.length === 0) {
     modal.focus();
   }
-
-  // Listener for Esc, Tab, Shift+Tab events
-  document.addEventListener(
-    'keydown',
-    handleModalKeyEvents.bind(null, modal, focusedBodyEl),
-    false,
-  );
-  // If mask is clicked we hide the modal
-  document.addEventListener('click', handleMaskEvents.bind(null, modal, focusedBodyEl), false);
-};
-
-// Add click listeners to cancel elements to handle hiding modal
-const setupCancelEl = (modal, modalName, focusedBodyEl) => {
-  // Look for cancel elements
-  getElements(`[data-sprk-modal-cancel="${modalName}"]`, (cancel) => {
-    // Hide the modal when cancel is clicked
-    cancel.addEventListener('click', (e) => {
-      e.preventDefault();
-      hideModal(modal, focusedBodyEl);
-    });
-  });
 };
 
 const modals = () => {
-  getElements('[data-sprk-modal-trigger]', (modalTrigger) => {
-    // Add click listener to each modal trigger found
-    modalTrigger.addEventListener('click', (event) => {
-      // Grab active element to send focus back to when modal closes
-      const focusedBodyEl = document.activeElement;
-      // Grab value of modal data-attr to get the trigger's corresponding modal name
-      const modalName = modalTrigger.getAttribute('data-sprk-modal-trigger');
-      event.preventDefault();
-      // Grab the corresponding modal with same attr value
-      getElements(`[data-sprk-modal="${modalName}"]`, (modal) => {
+  const mask = document.querySelector('[data-sprk-modal-mask="true"]');
+  const main = document.querySelector('[data-sprk-main]');
+  const modalTriggers = document.querySelectorAll('[data-sprk-modal-trigger]');
+  const modalsList = document.querySelectorAll('[data-sprk-modal]');
+  const cancels = document.querySelectorAll('[data-sprk-modal-cancel]');
+
+  // Check if there are triggers
+  if (modalTriggers.length > 0) {
+    // Loop through all triggers
+    modalTriggers.forEach((trigger) => {
+      // Add click listener for each trigger
+      trigger.addEventListener('click', (e) => {
+        // Get value of data-attr to get corresponding modal name
+        const modalName = trigger.getAttribute('data-sprk-modal-trigger');
+        const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
+        e.preventDefault();
         // Show the modal that was clicked
-        showModal(modal, focusedBodyEl);
+        showModal(modal, mask, main);
         focusFirstEl(modal);
-        setupCancelEl(modal, modalName, focusedBodyEl);
       });
     });
-  });
+  }
+
+  // Check if there are cancel elements
+  if (cancels.length > 0) {
+    // Loop through all cancel elements
+    cancels.forEach((cancel) => {
+      // Add click listener for each cancel el
+      cancel.addEventListener('click', (e) => {
+        // Get value of data-attr to get corresponding modal name
+        const modalName = cancel.getAttribute('data-sprk-modal-cancel');
+        const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
+        e.preventDefault();
+        // Hide the modal
+        hideModal(modal, mask, main);
+      });
+    });
+  }
+
+  // Add key listeners to document to check for Esc, Tab, and Shift+Tab events
+  if (modalsList.length > 0) {
+    // Add click handler to mask
+    if (mask.length !== null) {
+      mask.addEventListener('click', handleMaskEvents.bind(null, modalsList, mask, main), false);
+    }
+    document.addEventListener(
+      'keydown',
+      handleModalKeyEvents.bind(null, modalsList, mask, main),
+      false,
+    );
+  }
 };
 
 export {
@@ -152,7 +178,7 @@ export {
   hideModal,
   isMaskClicked,
   isWaitModal,
-  setupCancelEl,
   handleModalKeyEvents,
   handleMaskEvents,
+  currentOpenModal,
 };
