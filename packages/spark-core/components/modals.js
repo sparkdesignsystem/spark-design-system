@@ -37,32 +37,66 @@ const hideModal = (modal, focusedBodyEl) => {
   focusedBodyEl.focus();
 };
 
+const handleMaskEvents = (modal, focusedBodyEl, e) => {
+  if (isMaskClicked(e) && !isWaitModal(modal)) {
+    e.preventDefault();
+    hideModal(modal, focusedBodyEl);
+  }
+};
+
+// When modal is open and key is pressed
+const handleModalKeyEvents = (modal, focusedBodyEl, event) => {
+  const focusableEls = getFocusableEls(modal);
+  const firstFocusableEl = focusableEls[0];
+  const lastFocusableEl = focusableEls[focusableEls.length - 1];
+
+  switch (true) {
+    case isWaitModal(modal):
+      // Prevent wait modal tabbing
+      event.preventDefault();
+      break;
+    case isEscPressed(event):
+      event.preventDefault();
+      hideModal(modal, focusedBodyEl);
+      break;
+    case isTabPressed(event) && event.shiftKey:
+      // Handle backward tabbing if tabbing from first element
+      if (isActiveElement(firstFocusableEl)) {
+        event.preventDefault();
+        lastFocusableEl.focus();
+      }
+      break;
+    case isTabPressed(event):
+      // Handle forward tabbing if tabbing from last element
+      if (isActiveElement(lastFocusableEl)) {
+        event.preventDefault();
+        firstFocusableEl.focus();
+      }
+      break;
+    default:
+      break;
+  }
+};
+
 // Show the modal, mask and set aria-hidden=true on body
-const showModal = (modal) => {
+const showModal = (modal, focusedBodyEl) => {
   const isHidden = modal.classList.contains('sprk-u-Hide');
   const mask = document.querySelector('[data-sprk-modal="mask"]');
   const main = document.querySelector('[data-sprk-main]');
+  const focusableEls = getFocusableEls(modal);
 
   // If the modal is shown already or there are no mask and main els then exit
   if (!isHidden || mask === null || main === null) return;
 
+  // Show modal and mask
   modal.classList.remove('sprk-u-Hide');
   mask.classList.remove('sprk-u-Hide');
+
   // We want to alert assistive devices that main content is hidden
   main.setAttribute('aria-hidden', 'true');
+
   // Prevent background body from scrolling
   document.body.classList.add('sprk-u-OverflowHidden');
-};
-
-// Attach keydown(Esc, Tab, Shift+Tab) and click listeners while modal is open
-const handleModalEvents = (modal, focusedBodyEl) => {
-  const focusableEls = getFocusableEls(modal);
-  const firstFocusableEl = focusableEls[0];
-  const lastFocusableEl = focusableEls[focusableEls.length - 1];
-  const isOpen = document.querySelector('[data-sprk-main]').hasAttribute('aria-hidden');
-  // When modal is open the main content area will have aria-hidden=true
-  // If it doesn't, we want to exit
-  if (!isOpen) return;
 
   // When wait modal opens and has no focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {
@@ -70,43 +104,13 @@ const handleModalEvents = (modal, focusedBodyEl) => {
   }
 
   // Listener for Esc, Tab, Shift+Tab events
-  document.addEventListener('keydown', (e) => {
-    // Handle key events
-    switch (true) {
-      case isWaitModal(modal):
-        // Prevent wait modal tabbing
-        e.preventDefault();
-        break;
-      case isEscPressed(e):
-        e.preventDefault();
-        hideModal(modal, focusedBodyEl);
-        break;
-      case isTabPressed(e) && e.shiftKey:
-        // Handle backward tabbing if tabbing from first element
-        if (isActiveElement(firstFocusableEl)) {
-          e.preventDefault();
-          lastFocusableEl.focus();
-        }
-        break;
-      case isTabPressed(e):
-        // Handle forward tabbing if tabbing from last element
-        if (isActiveElement(lastFocusableEl)) {
-          e.preventDefault();
-          firstFocusableEl.focus();
-        }
-        break;
-      default:
-        break;
-    }
-  });
-
+  document.addEventListener(
+    'keydown',
+    handleModalKeyEvents.bind(null, modal, focusedBodyEl),
+    false,
+  );
   // If mask is clicked we hide the modal
-  document.addEventListener('click', (e) => {
-    if (isMaskClicked(e) && !isWaitModal(modal)) {
-      e.preventDefault();
-      hideModal(modal, focusedBodyEl);
-    }
-  });
+  document.addEventListener('click', handleMaskEvents.bind(null, modal, focusedBodyEl), false);
 };
 
 // Add click listeners to cancel elements to handle hiding modal
@@ -136,7 +140,6 @@ const modals = () => {
         showModal(modal, focusedBodyEl);
         focusFirstEl(modal);
         setupCancelEl(modal, modalName, focusedBodyEl);
-        handleModalEvents(modal, focusedBodyEl);
       });
     });
   });
@@ -154,5 +157,6 @@ export {
   isEscPressed,
   setupCancelEl,
   isActiveElement,
-  handleModalEvents,
+  handleModalKeyEvents,
+  handleMaskEvents,
 };
