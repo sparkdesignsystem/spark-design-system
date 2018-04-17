@@ -1,8 +1,7 @@
 /* global document */
 // Get all focusable elements in a container
 const getFocusableEls = (container) => {
-  let focusEls = container.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-  focusEls = Array.prototype.slice.call(focusEls);
+  const focusEls = container.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
   return focusEls;
 };
 

@@ -133,7 +133,7 @@ const modals = () => {
       trigger.addEventListener('click', (e) => {
         // Get value of data-attr to get corresponding modal name
         const modalName = trigger.getAttribute('data-sprk-modal-trigger');
-        const modal = modalsList.querySelector(`[data-sprk-modal="${modalName}"]`);
+        const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
         e.preventDefault();
         // Show the modal that was clicked
         showModal(modal, mask, main);
@@ -150,7 +150,7 @@ const modals = () => {
       cancel.addEventListener('click', (e) => {
         // Get value of data-attr to get corresponding modal name
         const modalName = cancel.getAttribute('data-sprk-modal-cancel');
-        const modal = modalsList.querySelector(`[data-sprk-modal="${modalName}"]`);
+        const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
         e.preventDefault();
         // Hide the modal
         hideModal(modal, mask, main);
