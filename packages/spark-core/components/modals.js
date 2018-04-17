@@ -3,7 +3,8 @@
  * Modal Functionality
  * Hides Modals, Shows Modals, Sets up Aria
  * Expects:
- * - modal container to have attribute `data-sprk-modal="customID"`
+ * - main body content container to have attribute `data-sprk-main`
+ * - modal container is outside of `data-sprk-main` and has `data-sprk-modal="customID"`
  * - 'Wait' modal type to have `data-sprk-modal-type="wait"` in addition
  * - 'customID' should be unique identifier for each modal
  * - modal mask element to have `data-sprk-modal="mask"`
