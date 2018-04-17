@@ -60,7 +60,7 @@ const handleMaskEvents = (modalsList, mask, main, e) => {
 const handleModalKeyEvents = (modalsList, mask, main, e) => {
   const currentOpenModalEl = currentOpenModal(modalsList);
   if (!currentOpenModalEl) return;
-  const focusableEls = getFocusableEls(currentOpenModal(modalsList));
+  const focusableEls = getFocusableEls(currentOpenModalEl);
   const firstFocusableEl = focusableEls[0];
   const lastFocusableEl = focusableEls[focusableEls.length - 1];
 
