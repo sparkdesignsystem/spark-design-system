@@ -1,0 +1,48 @@
+---
+name: Info
+notes: |
+  Info modals show information to the user that is dismissible.
+  To use the Spark JS modal functionality each modal container needs to have the attribute of 'data-sprk-modal="modalName"'.
+  Where modalName is a unique identifier for that particular modal.
+  Cancel child elements (links, icons or buttons) should have the attribute of 'data-sprk-modal-cancel="modalName"'.
+order: 1
+---
+<button
+  class="sprk-c-Button"
+  data-sprk-modal-trigger="exampleInfoModal"
+  type="button">
+  Open Info Modal
+</button>
+
+<div
+  class="sprk-c-Modal sprk-u-Hide"
+  role="dialog"
+  tabindex="-1"
+  aria-labelledby="modalInfoHeading"
+  aria-modal="true"
+  aria-describedby="modalInfoContent"
+  data-sprk-modal="exampleInfoModal">
+  <header class="sprk-c-Modal__header">
+    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalInfoHeading">
+      Info Modal
+    </h2>
+
+    <button
+      class="sprk-c-Modal__icon"
+      data-sprk-modal-cancel="exampleInfoModal"
+      type="button" aria-label="Close Modal">
+      <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+        <use xlink:href="#times"></use>
+      </svg>
+    </button>
+  </header>
+
+  <div class="sprk-c-Modal__body">
+    <p class="sprk-b-TypeBodyTwo" id="modalInfoContent">
+      This is some content that is in a modal. It explains what the modal is for.
+      There will also be a way to close the modal.
+    </p>
+  </div>
+</div>
+
+<div data-sprk-modal-mask="true" class="sprk-c-ModalMask sprk-u-Hide" tabindex="-1"></div>
