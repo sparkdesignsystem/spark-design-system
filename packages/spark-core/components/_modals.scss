@@ -6,65 +6,72 @@
 // Available Variables
 ///
 $modal-mask-color: rgba(34, 34, 34, 0.35);
+$modal-max-width: 43.75rem;
+$modal-height: 70%;
+$modal-breakpoint-small: 25rem;
+$modal-breakpoint-medium: 37.5rem;
 
-.sprk-c-Modal {
-  background-color: $white;
+.sprk-c-Modal,
+.sprk-c-ModalMask {
   left: 0;
-  padding-bottom: 0.52446rem;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 43.75em;
   position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1006;
-
-  @media all and (min-width: 300px) and (min-height: 300px) {
-    top: 30%;
-  }
-}
-
-.sprk-c-Modal__header {
-  background-color: $blue-medium;
-  display: table;
-  padding-top: 0.52446rem;
-  padding-bottom: 0.52446rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0.52446rem;
-  width: 100%;
-
-  .sprk-b-Heading {
-    color: $white;
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
-
-.sprk-c-Modal__spinner {
-  display: table-cell;
-  text-align: right;
-}
-
-.sprk-c-Modal__body,
-.sprk-c-Modal__footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.sprk-c-Modal__body {
-  padding-bottom: 0;
 }
 
 .sprk-c-ModalMask {
   background-color: $modal-mask-color;
   height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
   z-index: 1005;
+}
+
+.sprk-c-Modal {
+  background-color: $white;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $modal-max-width;
+  max-height: $modal-height;
+  outline: 0;
+  overflow-y: auto;
+  right: 0;
+  top: 5%;
+  width: 95%;
+  z-index: 1006;
+
+  @media all and (min-width: $modal-breakpoint-small) and (min-height: $modal-breakpoint-small) {
+    top: 15%;
+  }
+  @media all and (min-width: $modal-breakpoint-medium) and (min-height: $modal-breakpoint-medium) {
+    height: auto;
+    top: 30%;
+  }
+}
+
+.sprk-c-Modal__header {
+  align-items: center;
+  background-color: $blue-medium;
+  display: flex;
+  padding: $space-inset-m;
+}
+
+.sprk-c-Modal__heading {
+  color: $white;
+  flex: 1 1 auto;
+  margin-right: $space-s;
+}
+
+.sprk-c-Modal__icon {
+  align-self: start;
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  flex: 0 1 auto;
+}
+
+.sprk-c-Modal__body {
+  padding: $space-inset-tall-m;
+}
+
+.sprk-c-Modal__footer {
+  padding: 0 $space-m $space-m;
 }

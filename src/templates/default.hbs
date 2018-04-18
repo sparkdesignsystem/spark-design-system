@@ -10,12 +10,14 @@
   {{/content}}
 
   {{#content "body"}}
-    {{> drizzle.nav}}
-    <div class="drizzle-Layout-main drizzle-u-cf drizzle-copy">
-      <div class="drizzle-u-pad drizzle-u-rhythm">
-        {{#block "main"}}
+    <div data-sprk-main>
+      {{> drizzle.nav}}
+      <div class="drizzle-Layout-main drizzle-u-cf drizzle-copy">
+        <div class="drizzle-u-pad drizzle-u-rhythm">
+          {{#block "main"}}
 
-        {{/block}}
+          {{/block}}
+        </div>
       </div>
     </div>
   {{/content}}

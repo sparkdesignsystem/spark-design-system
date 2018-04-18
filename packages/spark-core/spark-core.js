@@ -5,7 +5,7 @@ import { monetaryInput } from './base/monetaryInput';
 import { phoneInput } from './base/phoneInput';
 import { dateInput } from './base/dateInput';
 import datePicker from './base/datePicker';
-import modals from './components/modals';
+import { modals } from './components/modals';
 import { requiredTextInput } from './base/requiredTextInput';
 import { requiredTick } from './base/requiredTick';
 import { requiredSelect } from './base/requiredSelect';

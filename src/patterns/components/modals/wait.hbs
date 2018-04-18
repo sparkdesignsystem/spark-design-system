@@ -1,0 +1,45 @@
+---
+name: Wait
+notes: |
+  Wait modals contain a spinner to indicate something is happening and can not be closed by the user.
+  To use the Spark JS modal functionality each modal container needs to have the attribute of 'data-sprk-modal="modalName"'.
+  Where modalName is a unique identifier for that particular modal.
+  Wait modal containers need the additional 'data-sprk-modal-type="wait"'
+  attribute to signify they will have different functionality than the other modals.
+order: 1
+---
+<button
+  class="sprk-c-Button"
+  data-sprk-modal-trigger="exampleWaitModal"
+  type="button">
+  Open Wait Modal
+</button>
+
+<div
+  class="sprk-c-Modal sprk-u-Hide"
+  role="dialog"
+  tabindex="-1"
+  aria-labelledby="modalWaitHeading"
+  aria-modal="true"
+  aria-describedby="modalWaitContent"
+  data-sprk-modal="exampleWaitModal"
+  data-sprk-modal-type="wait">
+  <header class="sprk-c-Modal__header">
+    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading">
+      Please Wait...
+    </h2>
+
+    <div class="sprk-c-Modal__icon">
+      <span class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large"></span>
+    </div>
+  </header>
+
+  <div class="sprk-c-Modal__body">
+    <p class="sprk-b-TypeBodyTwo" id="modalWaitContent">
+      This is some content that is in a modal.
+      This type of modal can not be closed by the user.
+    </p>
+  </div>
+</div>
+
+<div data-sprk-modal-mask="true" class="sprk-c-ModalMask sprk-u-Hide" tabindex="-1"></div>
