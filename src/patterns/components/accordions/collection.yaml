@@ -1,0 +1,7 @@
+notes: |
+  An Accordion is a simple way of showing, hiding and breaking down content.
+  It helps to make content easier to find because it allows the content to be broken up.
+info:
+  Content length inside the accordion does not have a limit. Title content
+  of the accordion can wrap, but it is recommended that it is short and to the point.
+sparkPackageCore: true
