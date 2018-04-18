@@ -1,6 +1,6 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import { showModal, hideModal, isMaskClicked } from '../components/modals';
+import { showModal, hideModal, isMaskClicked, currentOpenModal } from '../components/modals';
 import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
 import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
@@ -11,16 +11,19 @@ describe('Modal tests', () => {
   let waitModal;
   let modalMask;
   let cancelDefault;
-  let containerDiv;
+  let main;
   let link;
+  let outsideOfMainDiv;
   const HIDE_CLASS = 'sprk-u-Hide';
 
   before(() => {
-    containerDiv = document.createElement('div');
-    containerDiv.setAttribute('data-sprk-main', 'true');
+    main = document.createElement('div');
+    main.setAttribute('data-sprk-main', 'true');
+
+    outsideOfMainDiv = document.createElement('div');
 
     modalMask = document.createElement('div');
-    modalMask.setAttribute('data-sprk-modal', 'mask');
+    modalMask.setAttribute('data-sprk-modal-mask', 'true');
     modalMask.setAttribute('tabindex', '-1');
     modalMask.classList.add('sprk-c-ModalMask', HIDE_CLASS);
 
@@ -45,7 +48,7 @@ describe('Modal tests', () => {
     cancelDefault.href = '#';
 
     triggerDefaultModal = document.createElement('button');
-    triggerDefaultModal.setAttribute('data-sprk-modal-trigger', 'exampleChoiceModal');
+    triggerDefaultModal.setAttribute('data-sprk-modal-trigger', 'exampleDefaultModal');
     triggerDefaultModal.textContent = 'Launch Default Modal';
 
     triggerWaitModal = document.createElement('button');
@@ -55,17 +58,28 @@ describe('Modal tests', () => {
     defaultModal.append(cancelDefault);
     defaultModal.append(link);
 
-    containerDiv.appendChild(triggerWaitModal);
-    containerDiv.appendChild(triggerDefaultModal);
-    containerDiv.appendChild(defaultModal);
-    containerDiv.appendChild(waitModal);
-    containerDiv.appendChild(modalMask);
+    main.appendChild(triggerWaitModal);
+    main.appendChild(triggerDefaultModal);
 
-    document.body.appendChild(containerDiv);
+    outsideOfMainDiv.appendChild(waitModal);
+    outsideOfMainDiv.appendChild(defaultModal);
+    outsideOfMainDiv.appendChild(modalMask);
+
+    document.body.appendChild(main);
+    document.body.appendChild(outsideOfMainDiv);
+  });
+
+  it('should return the currently open modal DOM element', () => {
+    const modalsList = document.querySelectorAll('[data-sprk-modal]');
+    // Show a modal
+    showModal(defaultModal, modalMask, main);
+    // Grab currently open modal
+    const modalEl = currentOpenModal(modalsList);
+    expect(modalEl).eql(defaultModal);
   });
 
   it('should show the default modal, mask and set aria-hidden=true on main container', () => {
-    showModal(defaultModal);
+    showModal(defaultModal, modalMask, main);
 
     // showModal should remove the hide class from the modal mask
     expect(modalMask.classList.contains(HIDE_CLASS)).eql(false);
@@ -74,11 +88,11 @@ describe('Modal tests', () => {
     expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
 
     // showModal should add the aria-hidden attribute to main container
-    expect(containerDiv.hasAttribute('aria-hidden')).eql(true);
+    expect(main.hasAttribute('aria-hidden')).eql(true);
   });
 
-  it('should show the wait modal, mask and set aria-hidden=true on body', () => {
-    showModal(waitModal);
+  it('should show the wait modal, mask and set aria-hidden=true on main', () => {
+    showModal(waitModal, modalMask, main);
 
     // showModal should remove the hide class from the modal mask
     expect(modalMask.classList.contains(HIDE_CLASS)).eql(false);
@@ -86,38 +100,44 @@ describe('Modal tests', () => {
     // showModal should remove the hide class from the modal
     expect(waitModal.classList.contains(HIDE_CLASS)).eql(false);
 
-    // // showModal should add the aria-hidden attribute to body
-    expect(containerDiv.hasAttribute('aria-hidden')).eql(true);
+    // // showModal should add the aria-hidden attribute to main
+    expect(main.hasAttribute('aria-hidden')).eql(true);
   });
 
-  it('should hide the default modal, mask, remove aria-hidden=true on body, and send focus back to trigger element', () => {
+  it('should hide the default modal, mask, remove aria-hidden=true on main, and send focus back to trigger element', () => {
     // First we show the modal
-    showModal(defaultModal);
-    hideModal(defaultModal, triggerDefaultModal);
+    showModal(defaultModal, modalMask, main);
+    hideModal(defaultModal, modalMask, main);
 
-    // showModal should remove the hide class from the modal mask
+    // hideModal should remove the hide class from the modal mask
     expect(modalMask.classList.contains(HIDE_CLASS)).eql(true);
 
-    // showModal should remove the hide class from the modal
+    // hideModal should remove the hide class from the modal
     expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
 
-    // // showModal should add the aria-hidden attribute to body
-    expect(document.body.hasAttribute('aria-hidden')).eql(false);
+    // hideModal should remove the aria-hidden attribute to main
+    expect(main.hasAttribute('aria-hidden')).eql(false);
+
+    // hideModal should send focus back to trigger element
+    expect(triggerDefaultModal).eql(document.activeElement);
   });
 
-  it('should hide the wait modal, mask, remove aria-hidden=true on body, and send focus back to trigger element', () => {
+  it('should hide the wait modal, mask, remove aria-hidden=true on main, and send focus back to trigger element', () => {
     // First we show the modal
-    showModal(waitModal);
-    hideModal(waitModal, triggerWaitModal);
+    showModal(waitModal, modalMask, main);
+    hideModal(waitModal, modalMask, main);
 
-    // showModal should remove the hide class from the modal mask
+    // hideModal should remove the hide class from the modal mask
     expect(modalMask.classList.contains(HIDE_CLASS)).eql(true);
 
-    // showModal should remove the hide class from the modal
+    // hideModal should remove the hide class from the modal
     expect(waitModal.classList.contains(HIDE_CLASS)).eql(true);
 
-    // // showModal should add the aria-hidden attribute to body
-    expect(document.body.hasAttribute('aria-hidden')).eql(false);
+    // hideModal should remove the aria-hidden attribute to main
+    expect(main.hasAttribute('aria-hidden')).eql(false);
+
+    // hideModal should send focus back to trigger element
+    expect(triggerWaitModal).eql(document.activeElement);
   });
 
   it('should get all focusable elements in a modal', () => {
