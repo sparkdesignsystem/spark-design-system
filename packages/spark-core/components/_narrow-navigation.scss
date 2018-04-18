@@ -33,10 +33,6 @@
   &:hover {
     background-color: $blue-dark;
     color: $white;
-
-    .sprk-c-NarrowNavigation__arrow {
-      fill: $white;
-    }
   }
 }
 
@@ -46,7 +42,6 @@
 }
 
 .sprk-c-NarrowNavigation__arrow {
-  fill: $blue-dark;
   float: right;
 }
 
