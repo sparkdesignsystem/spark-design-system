@@ -2,8 +2,10 @@
 name: Secondary
 order: 2
 ---
-{{#embed "patterns.components.accordions.primary" class=""}}
-  {{#content "content"}}
-    This is important information.
-  {{/content}}
+{{#embed
+  "patterns.components.accordions.base"
+  itemClass="sprk-c-Accordion__item--secondary"
+  iconClass="sprk-c-Accordion__icon--secondary"
+  headingClass="sprk-c-Accordion__heading--secondary"
+  detailsClass="sprk-c-Accordion__details--secondary"}}
 {{/embed}}
