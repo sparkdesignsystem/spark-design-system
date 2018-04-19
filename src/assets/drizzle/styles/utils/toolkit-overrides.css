@@ -5,3 +5,18 @@
 .u-drizzleModalOverride [class~=sprk-c-ModalMask] {
   display: none !important;
 }
+
+/* so that you can see the box */
+.drizzle-u-pad .sprk-o-Box {
+  border: 1px solid #ccc;
+}
+
+.drizzle-u-pad .sprk-o-CenteredColumn {
+  background-color: #ccc;
+  height: 4rem;
+}
+
+.drizzle-u-pad .sprk-o-SideBySide .sprk-o-SideBySide__item {
+  background-color: #ccc;
+  height: 4rem;
+}
