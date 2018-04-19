@@ -1,3 +1,93 @@
 // ==================================================================
-// Alerts
+// Accordions
 // ==================================================================
+
+//
+// Available Variables
+///
+$accordion-max-width: 53.125rem;
+
+.sprk-c-Accordion {
+  margin: 0 auto;
+  max-width: $accordion-max-width;
+  width: 100%;
+}
+
+.sprk-c-Accordion__item {
+  background-color: $blue-medium;
+  margin-bottom: $space-xs;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sprk-c-Accordion__summary {
+  color: $white;
+  display: flex;
+  padding: $space-m;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    background-color: $blue-dark;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.sprk-c-Accordion__summary[aria-expanded='true'] {
+  background-color: $blue-dark;
+}
+
+.sprk-c-Accordion__heading {
+  color: $white;
+  flex: 1;
+}
+
+.sprk-c-Accordion__icon {
+  flex: 0 0 auto;
+}
+
+.sprk-c-Accordion__details {
+  background-color: $white;
+  border: 0.125rem solid $blue-dark;
+  padding: $space-m;
+}
+
+// Secondary style accordion modifiers
+.sprk-c-Accordion__item--secondary {
+  background-color: $white;
+  border-bottom: 0.125rem solid $blue-medium;
+  margin-bottom: 0;
+
+  &:first-child {
+    border-top: 0.125rem solid $blue-medium;
+  }
+}
+
+.sprk-c-Accordion__summary--secondary,
+.sprk-c-Accordion__heading--secondary {
+  color: $blue-medium;
+}
+
+// When secondary is open, hovered, active, or focused
+.sprk-c-Accordion__summary--secondary {
+  &[aria-expanded='true'],
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $blue-medium;
+
+    .sprk-c-Accordion__heading--secondary {
+      color: $white;
+    }
+  }
+}
+
+.sprk-c-Accordion__details--secondary {
+  border-color: $blue-medium;
+  border-bottom: 0;
+}
