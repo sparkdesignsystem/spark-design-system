@@ -38,6 +38,7 @@ $accordion-max-width: 53.125rem;
   }
 }
 
+// When open, add same style as when focused
 .sprk-c-Accordion__summary[aria-expanded='true'] {
   background-color: $blue-dark;
 }
@@ -68,23 +69,26 @@ $accordion-max-width: 53.125rem;
   }
 }
 
-.sprk-c-Accordion__summary--secondary,
-.sprk-c-Accordion__heading--secondary {
-  color: $blue-medium;
-}
-
 // When secondary is open, hovered, active, or focused
 .sprk-c-Accordion__summary--secondary {
+  color: $blue-medium;
+
   &[aria-expanded='true'],
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &:visited {
     background-color: $blue-medium;
+    color: $white;
 
     .sprk-c-Accordion__heading--secondary {
       color: $white;
     }
   }
+}
+
+.sprk-c-Accordion__heading--secondary {
+  color: $blue-medium;
 }
 
 .sprk-c-Accordion__details--secondary {
