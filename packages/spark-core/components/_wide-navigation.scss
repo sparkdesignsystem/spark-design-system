@@ -4,23 +4,22 @@
 .sprk-c-WideNavigation {
   background-color: $white;
   border-bottom: 2px solid $gray-medium;
-  display: table; // Makes each item equal width regardless of number of items
+  display: flex;
   list-style-type: none;
   position: relative;
-  table-layout: fixed;
   width: 100%;
 }
 
 .sprk-c-WideNavigation--sub {
   border: 2px solid $gray-medium;
   border-top: 0;
+  display: block;
   position: absolute;
   z-index: 100;
 }
 
 .sprk-c-WideNavigation__item--sub {
   background-color: $white;
-  float: left;
   line-height: $space-l;
   padding-top: $space-s;
   padding-bottom: $space-s;
@@ -31,7 +30,7 @@
 }
 
 .sprk-c-WideNavigation__item {
-  display: table-cell;
+  flex: auto;
   line-height: $space-l;
   position: relative;
   text-align: center;
