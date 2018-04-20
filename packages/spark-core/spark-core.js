@@ -14,6 +14,7 @@ import { tabs } from './components/tabs';
 import { toggle } from './components/toggle';
 import { spinners } from './components/spinners';
 import { WideNavigation } from './components/wide-navigation';
+import { masthead } from './components/masthead';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -37,3 +38,4 @@ tabs();
 toggle();
 spinners();
 WideNavigation();
+masthead();
