@@ -11,38 +11,39 @@ $masthead-column-width: 64rem !default;
 .sprk-c-Masthead {
   background-color: $white;
   border-bottom: 2px solid #ccc;
-  padding: 1rem;
+  padding: $space-m 0;
   position: fixed;
   width: 100%;
 
   @media all and (min-width: $main-nav-breakpoint) {
     border: none;
     position: static;
-    padding: 1rem 0;
   }
 }
 
 .sprk-c-Masthead__top-row {
-  display: flex;
   align-items: center;
+  display: flex;
   margin: 0 auto;
   max-width: $masthead-column-width;
+  padding: 0 $space-m;
 
   @media all and (min-width: $main-nav-breakpoint) {
     justify-content: space-between;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto $space-l auto;
   }
 }
 
 .sprk-c-Masthead__logo {
   margin: auto;
+
   @media all and (min-width: $main-nav-breakpoint) {
     margin: 0;
   }
 }
 
 .sprk-c-Masthead__hamburger {
-  margin-right: 1rem;
+  margin-right: $space-m;
   @media all and (min-width: $main-nav-breakpoint) {
     display: none;
   }
@@ -50,6 +51,7 @@ $masthead-column-width: 64rem !default;
 
 .sprk-c-Masthead__secondary-nav {
   display: none;
+
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     margin-left: auto;
@@ -61,28 +63,30 @@ $masthead-column-width: 64rem !default;
 
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
-    text-align: right;
     max-width: $masthead-column-width;
-    margin: -2rem auto 1rem auto;
+    margin: -2rem auto $space-m auto;
+    padding: 0 $space-m;
+    text-align: right;
     width: 100%;
   }
 }
 
 .sprk-c-Masthead__search {
   display: none;
+
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
-    margin-left: 1rem;
+    margin-left: $space-m;
   }
 }
 
-//TODO: fix this about inputs?
 .sprk-c-Masthead__search .sprk-b-InputContainer {
   margin-bottom: 0;
 }
 
 .sprk-c-Masthead__wide-navigation-container {
   display: none;
+
   @media (min-width: $main-nav-breakpoint) {
     display: block;
   }
