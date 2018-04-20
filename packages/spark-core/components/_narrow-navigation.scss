@@ -5,12 +5,8 @@
   background-color: $white;
   border-top: 2px solid $gray-medium;
   list-style-type: none;
-  position: absolute;
   width: 100%;
-}
-
-.sprk-c-NarrowNavigation__item:last-child .sprk-c-NarrowNavigation--sub {
-  border-bottom: 0;
+  z-index: 1006;
 }
 
 .sprk-c-NarrowNavigation--sub {

@@ -7,13 +7,20 @@
 ///
 $main-nav-breakpoint: 46rem !default;
 $masthead-column-width: 64rem !default;
+$mobile-masthead-height: 6.7rem !default;
 
 .sprk-c-Masthead {
   background-color: $white;
-  border-bottom: 2px solid #ccc;
+  height: 100%;
+}
+
+.sprk-c-Masthead__content {
+  background-color: $white;
+  border-bottom: 2px solid $gray-medium;
   padding: $space-m 0;
   position: fixed;
   width: 100%;
+  z-index: 1006;
 
   @media all and (min-width: $main-nav-breakpoint) {
     border: none;
@@ -93,5 +100,12 @@ $masthead-column-width: 64rem !default;
 }
 
 .sprk-c-Masthead__narrow-navigation-container {
+  background-color: $white;
   display: none;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  top: $mobile-masthead-height;
+  padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
+  width: 100%;
 }
