@@ -65,6 +65,7 @@ $icon-xxl: 128px;
 //
 // Layout
 //
+$horizontal-list-spacing: $space-m;
 $stack-split-gutter: $space-m;
 $side-by-side-gutter: $space-m;
 $centered-column-width: 64rem;
@@ -221,6 +222,7 @@ $table-padding-small: $space-inset-s;
 $table-padding-medium: $space-inset-m;
 $table-padding-large: $space-inset-l;
 $table-border-width: 2px;
+$table-border-style: solid;
 $table-border-color: $white;
 $table-stripe-color: $blue-light;
 $table-heading-alignment: center;
