@@ -37,6 +37,6 @@ describe('Toggle tests', () => {
   });
   it('should toggle CSS hide class', () => {
     toggleContentCSS(content);
-    expect(content.classList.contains('sprk-u-Hide')).eql(true);
+    expect(content.classList.contains('sprk-u-HideWhenJS')).eql(true);
   });
 });

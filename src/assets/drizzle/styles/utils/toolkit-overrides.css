@@ -6,6 +6,18 @@
   display: none !important;
 }
 
+.drizzle-u-pad .sprk-c-WideNavigation {
+  @media (max-width: 46rem) {
+    display: none;
+  }
+}
+
+.Test-Page .sprk-c-NarrowNavigation,
+.drizzle-u-pad .sprk-c-NarrowNavigation {
+  max-width: 320px;
+  position: static;
+}
+
 /* so that you can see the box */
 .drizzle-u-pad .sprk-o-Box {
   border: 1px solid #ccc;
@@ -16,7 +28,7 @@
   height: 4rem;
 }
 
-.drizzle-u-pad .sprk-o-SideBySide .sprk-o-SideBySide__item {
+.drizzle-u-pad > .sprk-o-SideBySide .sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
 }
