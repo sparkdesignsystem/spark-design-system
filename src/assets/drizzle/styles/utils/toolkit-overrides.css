@@ -13,7 +13,7 @@
 }
 
 .Test-Page .sprk-c-NarrowNavigation,
-.drizzle-u-pad .sprk-c-NarrowNavigation {
+.drizzle-u-pad > nav .sprk-c-NarrowNavigation {
   max-width: 320px;
   position: static;
 }
@@ -31,4 +31,14 @@
 .drizzle-u-pad > .sprk-o-SideBySide .sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
+}
+
+.drizzle-logo-placeholder {
+  background-color: #ccc;
+  height: 75px;
+  width: 175px;
+}
+
+.drizzle-u-pad .sprk-c-Masthead {
+  position: static;
 }
