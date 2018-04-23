@@ -45,7 +45,7 @@ $mobile-masthead-height: 6.7rem !default;
   margin: auto;
 
   @media all and (min-width: $main-nav-breakpoint) {
-    margin: 0;
+    margin: 0 1rem 0 0;
   }
 }
 

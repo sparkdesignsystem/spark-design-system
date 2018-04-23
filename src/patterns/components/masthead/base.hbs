@@ -13,9 +13,14 @@ order: 1
   <div class="sprk-c-Masthead__content">
     <div class="sprk-c-Masthead__top-row">
       <div class="sprk-c-Masthead__hamburger">
-        <button class="sprk-c-Hamburger js-open-nav" type="button" aria-expanded="false" data-sprk-mobile-nav-trigger="mobileNav">
-          <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Hamburger__icon" viewBox="0 0 100 100">
-            <use xlink:href="#bars" />
+        <button class="sprk-c-Hamburger" type="button" aria-expanded="false" data-sprk-mobile-nav-trigger="mobileNav">
+          <span class="sprk-u-VisuallyHidden">Toggle Navigation</span>
+          <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Hamburger__icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+            <g>
+              <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one" d="M5 13h90v14H5z" />
+              <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two" d="M5 43h90v14H5z" />
+              <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--three" d="M5 73h90v14H5z" />
+            </g>
           </svg>
         </button>
       </div>
@@ -41,7 +46,7 @@ order: 1
     <div class="sprk-c-Masthead__wide-navigation-container">
       {{#embed "patterns.components.navigation.wide-navigation" }}{{/embed}}
     </div>
-    <div class="sprk-c-Masthead__narrow-navigation-container" data-sprk-mobile-nav="mobileNav">
+    <div class="sprk-c-Masthead__narrow-navigation-container sprk-u-Hide" data-sprk-mobile-nav="mobileNav">
       {{#embed "patterns.components.navigation.narrow-navigation" }}{{/embed}}
     </div>
   </div>

@@ -1,21 +1,33 @@
-/* global document */
+/* global window document */
 import getElements from '../utilities/getElements';
 
-const showMobileNav = (navId) => {
-  console.log(navId);
+const toggleMobileNav = (iconContainer, navId) => {
+  iconContainer.querySelector('svg').classList.toggle('sprk-c-Hamburger__icon--open');
   const nav = document.querySelector(`[data-sprk-mobile-nav="${navId}"]`);
   nav.classList.toggle('sprk-u-Hide');
 };
 
+const hideMobileNavs = () => {
+  getElements('[data-sprk-mobile-nav]', (item) => {
+    item.classList.add('sprk-u-Hide');
+  });
+  getElements('.sprk-c-Hamburger__icon--open', (item) => {
+    item.classList.remove('sprk-c-Hamburger__icon--open');
+  });
+};
+
 const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', (element) => {
-    element.classList.toggle('sprk-is-Open');
-    showMobileNav(element.getAttribute('data-sprk-mobile-nav-trigger'));
+    element.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMobileNav(element, element.getAttribute('data-sprk-mobile-nav-trigger'));
+    });
   });
 };
 
 const masthead = () => {
   bindUIEvents();
+  window.addEventListener('resize', hideMobileNavs);
 };
 
-export { masthead };
+export { masthead, toggleMobileNav, hideMobileNavs };

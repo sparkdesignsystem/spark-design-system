@@ -30,6 +30,7 @@ module.exports = {
     svg: {
       xmlDeclaration: false,
       doctypeDeclaration: false,
+      namespaceClassnames: false,
     },
   },
   images: {

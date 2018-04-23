@@ -42,3 +42,9 @@
 .drizzle-u-pad .sprk-c-Masthead__content {
   position: static;
 }
+
+.drizzle-u-pad .sprk-c-Masthead__narrow-navigation-container {
+  position: static;
+  margin-top: -2px;
+}
+
