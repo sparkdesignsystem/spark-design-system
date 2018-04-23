@@ -1,13 +1,14 @@
 /* global window document */
 import getElements from '../utilities/getElements';
 
-const toggleMobileNav = (iconContainer, navId) => {
+const toggleMobileNav = (iconContainer, nav) => {
+  document.body.classList.toggle('sprk-u-OverflowHidden');
   iconContainer.querySelector('svg').classList.toggle('sprk-c-Hamburger__icon--open');
-  const nav = document.querySelector(`[data-sprk-mobile-nav="${navId}"]`);
   nav.classList.toggle('sprk-u-Hide');
 };
 
 const hideMobileNavs = () => {
+  document.body.classList.remove('sprk-u-OverflowHidden');
   getElements('[data-sprk-mobile-nav]', (item) => {
     item.classList.add('sprk-u-Hide');
   });
@@ -20,7 +21,8 @@ const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', (element) => {
     element.addEventListener('click', (e) => {
       e.preventDefault();
-      toggleMobileNav(element, element.getAttribute('data-sprk-mobile-nav-trigger'));
+      const nav = document.querySelector(`[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`);
+      toggleMobileNav(element, nav);
     });
   });
 };
