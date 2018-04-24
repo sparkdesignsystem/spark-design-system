@@ -1,0 +1,108 @@
+:root {
+  --Nav-background: var(--color-silver);
+  --Nav-active-background: var(--color-white);
+  --Nav-header-background: var(--color-black);
+  --Nav-header-color: var(--color-white);
+  --Nav-toggle-size: 3em;
+  --Nav-item-padding: calc(var(--space) * 0.75) var(--space);
+  --Nav-item-nested-indent: calc(var(--space) * 2);
+  --Nav-item-nested-font-size: 0.75em;
+}
+
+.drizzle-Nav {
+  background: $nav-background-color;
+  font-family: "urw din";
+}
+
+.drizzle-Nav-header {
+  background: $nav-background-color;
+  color: white;
+  padding: 4rem 2rem 4rem;
+  position: relative;
+}
+
+.drizzle-Nav-header-toggle {
+  position: absolute;
+  width: 1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    display: none;
+  }
+
+  & > svg {
+    color: $white;
+    fill: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.drizzle-Nav a {
+  color: $white;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.drizzle-Nav-main {
+  display: none;
+  padding-bottom: var(--space);
+
+  @media (min-width: $nav-switch-breakpoint) {
+    display: block;
+  }
+}
+
+.drizzle-Nav.is-active .Nav-main {
+  display: block;
+}
+
+.drizzle-Nav-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drizzle-Nav-item {
+  display: block;
+  padding: 0.5rem;
+
+  &:hover,
+  &.is-active {
+    background: $orange-medium;
+  }
+}
+
+.drizzle-Nav-menu .drizzle-Nav-menu .drizzle-Nav-item {
+  font-size: var(--Nav-item-nested-font-size);
+  padding-left: var(--Nav-item-nested-indent);
+}
+
+.drizzle-Nav-item.drizzle-h5 {
+  color: $white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 40px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $black;
+  }
+}
+
+.drizzle-Nav-item {
+  padding: 1rem 0 1rem 71px;
+}
+
+.drizzle-Nav-item a {
+  display: block;
+  font-weight: 100;
+  vertical-align: middle;
+}
+

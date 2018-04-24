@@ -1,25 +1,26 @@
-:root {
-  --Layout-nav-width: 14rem;
-}
-
-.Layout {
+.drizzle-Layout {
   height: 100%;
   margin: 0;
 }
 
-.Layout-nav,
-.Layout-body,
-.Layout-main {
+.drizzle-Layout-nav,
+.drizzle-Layout-body,
+.drizzle-Layout-main {
   margin: 0;
   position: relative;
 }
 
-.Layout-main {
+.drizzle-Layout-main {
   max-width: 70em;
+
+  @media (min-width: 60rem) {
+    margin-left: $layout-nav-width;
+    padding: 2.5vh 5%;
+  }
 }
 
-@media (--lg-viewport) {
-  .Layout-nav {
+.drizzle-Layout-nav {
+  @media (min-width: 60rem) {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -27,14 +28,11 @@
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;
-    width: var(--Layout-nav-width);
+    width: $layout-nav-width;
     height: 100%;
-
     -webkit-overflow-scrolling: touch;
   }
-
-  .Layout-main {
-    margin-left: var(--Layout-nav-width);
-    padding: 2.5vh 5%;
-  }
 }
+
+
+

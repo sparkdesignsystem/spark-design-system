@@ -8,18 +8,21 @@
 <div class="drizzle-Layout-nav drizzle-Nav" id="nav">
   <div class="drizzle-Nav-header">
     <a href="{{@root.baseurl}}/">
-      {{> drizzle.logo}}
+      {{> drizzle.small-logo}}
     </a>
     <a class="drizzle-Nav-header-toggle" href="#nav">
       <svg viewBox="-1 -1 12 7" width="16" height="16">
         <polyline fill="none" stroke="currentColor" stroke-width="2" points="0 0 5 5 10 0"/>
       </svg>
     </a>
+    <label for="filter">Filter</label>
+    <input type="text" placeholder="Filter">
   </div>
   <div class="drizzle-Nav-main" id="nav-menu">
-    {{!-- Top-level pages --}}
+    {{!-- Getting Started --}}
+    <h5 class="drizzle-Nav-item drizzle-h5">Getting Started</h5>
     <ul class="drizzle-Nav-menu">
-      {{#each (pages sortby="order")}}
+      {{#each (pages "gettingstarted")}}
         <li>
           {{> nav-item label=data.title}}
         </li>
