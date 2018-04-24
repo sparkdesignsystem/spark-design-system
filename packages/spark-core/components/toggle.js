@@ -47,23 +47,32 @@ const handleToggleClick = (toggleContent, toggleIcon, e) => {
   toggleAriaExpanded(e.currentTarget);
 };
 
+const bindToggleUIEvents = (element) => {
+  // Get the toggle's trigger and content elems
+  const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
+  const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
+  const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
+  // Set aria-expanded to false initially
+  toggleAriaExpanded(toggleTrigger);
+  // Add click event listener to trigger for each toggle collection we find
+  toggleTrigger.addEventListener(
+    'click',
+    handleToggleClick.bind(null, toggleContent, toggleIcon),
+    false,
+  );
+};
+
 const toggle = () => {
   getElements('[data-sprk-toggle="container"]', (element) => {
-    // Get the toggle's trigger and content elems
-    const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
-    const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
-    const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
-    // Hide the toggle content initially
-    toggleContent.classList.add('sprk-u-HideWhenJS');
-    // Set aria-expanded to false initially
-    toggleAriaExpanded(toggleTrigger);
-    // Add click event listener to trigger for each toggle collection we find
-    toggleTrigger.addEventListener(
-      'click',
-      handleToggleClick.bind(null, toggleContent, toggleIcon),
-      false,
-    );
+    bindToggleUIEvents(element);
   });
 };
 
-export { toggle, toggleContentCSS, toggleIconCSS, toggleAriaExpanded, handleToggleClick };
+export {
+  toggle,
+  toggleContentCSS,
+  toggleIconCSS,
+  toggleAriaExpanded,
+  handleToggleClick,
+  bindToggleUIEvents,
+};

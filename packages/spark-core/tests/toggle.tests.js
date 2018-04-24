@@ -56,7 +56,6 @@ describe('Toggle tests', () => {
 
   it('should toggle aria-expanded attribute', () => {
     toggleAriaExpanded(trigger);
-
     expect(trigger.hasAttribute('aria-expanded')).eql(true);
   });
   it('should toggle CSS hide class', () => {
@@ -74,7 +73,7 @@ describe('Toggle tests', () => {
       handleToggleClick(content, icon, event);
       expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
       expect(trigger.classList.contains('sprk-c-Accordion__summary--open')).eql(false);
-    }, 500);
+    }, 100);
   });
   it('should toggle icon css class', () => {
     toggleIconCSS(icon);
