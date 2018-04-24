@@ -7,6 +7,10 @@ pre {
   font-family: var(--monospace), monospace !important;
 }
 
+.spark-preview {
+  font-family: myriad-pro, arial, sans-serif;
+}
+
 .CodeHighlight {
   background-color: var(--color-silver);
   padding: 6px 10px;
