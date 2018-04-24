@@ -16,7 +16,7 @@ description: |
 restrictions:
   - Modal container HTML should be added right above the closing body tag and must be outside of the main site content area.
   - The main content area should have the attribute of 'data-sprk-main'.
-  - Modals Must be dismissible by tapping outside the modal, clicking a cancel element, or hitting the Escape key (Spark JS provides this functionality).
+  - Modals must be dismissible by tapping outside the modal, clicking a cancel element, or hitting the Escape key (Spark JS provides this functionality).
   - Modals should trap focus inside the modal when a user presses the Tab or Shift+Tab keys inside the modal (Spark JS provides this functionality).
   - The container of the modal should have the attribute of role="dialog".
   - The modal and mask elements must have a tabindex="-1" to prevent them from receiving focus.
