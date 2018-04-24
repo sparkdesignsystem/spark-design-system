@@ -4,4 +4,5 @@ notes: |
 info:
   - Content length inside the accordion does not have a limit.
   - Title content of the accordion can wrap, but it is recommended that it is short and to the point.
+  - Accordions take up 100% width of their parent container until they hit their max width of 850px.
 sparkPackageCore: true
