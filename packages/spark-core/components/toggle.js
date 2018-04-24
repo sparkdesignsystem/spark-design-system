@@ -34,6 +34,19 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
+const handleToggleClick = (toggleContent, toggleIcon, e) => {
+  e.preventDefault();
+  toggleContentCSS(toggleContent);
+  if (toggleIcon) {
+    toggleIconCSS(toggleIcon);
+  }
+  // If toggle type is the accordion then add a class when its open
+  if (e.target.getAttribute('data-sprk-toggle-type') === 'accordion') {
+    e.target.classList.toggle('sprk-c-Accordion__summary--open');
+  }
+  toggleAriaExpanded(e.target);
+};
+
 const toggle = () => {
   getElements('[data-sprk-toggle="container"]', (element) => {
     // Get the toggle's trigger and content elems
@@ -45,18 +58,12 @@ const toggle = () => {
     // Set aria-expanded to false initially
     toggleAriaExpanded(toggleTrigger);
     // Add click event listener to trigger for each toggle collection we find
-    toggleTrigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      toggleContentCSS(toggleContent);
-      if (toggleIcon) {
-        toggleIconCSS(toggleIcon);
-      }
-      if (toggleTrigger.getAttribute('data-sprk-toggle-type') === 'accordion') {
-        toggleTrigger.classList.toggle('sprk-c-Accordion__summary--open');
-      }
-      toggleAriaExpanded(toggleTrigger);
-    });
+    toggleTrigger.addEventListener(
+      'click',
+      handleToggleClick.bind(null, toggleContent, toggleIcon),
+      false,
+    );
   });
 };
 
-export { toggle, toggleContentCSS, toggleIconCSS, toggleAriaExpanded };
+export { toggle, toggleContentCSS, toggleIconCSS, toggleAriaExpanded, handleToggleClick };
