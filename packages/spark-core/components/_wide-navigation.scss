@@ -17,10 +17,6 @@ $masthead-column-width: 64rem !default;
   max-width: $masthead-column-width;
 }
 
-.sprk-c-WideNavigation + .sprk-c-Divider {
-  margin: 0;
-}
-
 .sprk-c-WideNavigation--sub {
   border: 2px solid $gray-medium;
   border-top: 0;

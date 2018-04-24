@@ -20,7 +20,7 @@ $mobile-masthead-height: 6.7rem !default;
   padding: $space-m 0;
   position: fixed;
   width: 100%;
-  z-index: 1006;
+  z-index: 1004;
 
   @media all and (min-width: $main-nav-breakpoint) {
     border: none;
@@ -37,7 +37,7 @@ $mobile-masthead-height: 6.7rem !default;
 
   @media all and (min-width: $main-nav-breakpoint) {
     justify-content: space-between;
-    margin: 0 auto $space-l auto;
+    margin: 0 auto $space-l;
   }
 }
 
@@ -71,7 +71,7 @@ $mobile-masthead-height: 6.7rem !default;
   @media all and (min-width: $main-nav-breakpoint) {
     display: block;
     max-width: $masthead-column-width;
-    margin: -2rem auto $space-m auto;
+    margin: -2rem auto $space-m;
     padding: 0 $space-m;
     text-align: right;
     width: 100%;
@@ -85,10 +85,6 @@ $mobile-masthead-height: 6.7rem !default;
     display: block;
     margin-left: $space-m;
   }
-}
-
-.sprk-c-Masthead__search .sprk-b-InputContainer {
-  margin-bottom: 0;
 }
 
 .sprk-c-Masthead__wide-navigation-container {

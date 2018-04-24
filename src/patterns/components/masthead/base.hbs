@@ -6,6 +6,7 @@ info:
   - The secondary navigation, search field, and additional information sections are optional.
   - You should set the variable $main-nav-breakpoint to the point that your app needs to switch from mobile navigation
     to wide navigation.
+  - You should also set the variable $mobile-masthead-height so that the mobile nav scrolling has enough room.
 order: 1
 ---
 
@@ -34,12 +35,12 @@ order: 1
         {{#embed "patterns.components.navigation.secondary-navigation" }}{{/embed}}
       </div>
       <div class="sprk-c-Masthead__search">
-        {{#embed "patterns.components.inputs.inline-search-input" }}{{/embed}}
+        {{#embed "patterns.components.inputs.inline-search-input" containerClass="sprk-u-mbn"}}{{/embed}}
       </div>
     </div>
     <div class="sprk-c-Masthead__secondary">
-      <p class="sprk-u-mbn">Hello, Fellow Human</p>
-      <p>Loan #1234567890</p>
+      <p class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, Fellow Human</p>
+      <p class="sprk-b-TypeBodyTwo">Loan #1234567890</p>
     </div>
   </div>
   <div class="sprk-c-Masthead__navigation">
