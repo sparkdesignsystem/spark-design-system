@@ -51,6 +51,9 @@ const toggle = () => {
       if (toggleIcon) {
         toggleIconCSS(toggleIcon);
       }
+      if (toggleTrigger.getAttribute('data-sprk-toggle-type') === 'accordion') {
+        toggleTrigger.classList.toggle('sprk-c-Accordion__summary--open');
+      }
       toggleAriaExpanded(toggleTrigger);
     });
   });

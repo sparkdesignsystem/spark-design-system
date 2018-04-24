@@ -111,6 +111,23 @@ h6,
   font-weight: $font-weight-display-seven;
 }
 
+.sprk-b-TypeDisplayOne,
+.sprk-b-TypeDisplayTwo,
+.sprk-b-TypeDisplayThree,
+.sprk-b-TypeDisplayFour,
+.sprk-b-TypeDisplayFive,
+.sprk-b-TypeDisplaySix,
+.sprk-b-TypeDisplaySeven {
+  font-family: $heading-font-stack;
+}
+
+.sprk-b-TypeBodyOne,
+.sprk-b-TypeBodyTwo,
+.sprk-b-TypeBodyThree,
+.sprk-b-TypeBodyFour {
+  font-family: $body-font-stack;
+}
+
 .sprk-b-TypeBodyOne {
   @include TextCrop(
     $line-height: $line-height-body-one,
