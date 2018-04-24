@@ -1,3 +1,20 @@
-.drizzle-text-input {
+.drizzle-body .drizzle-text-input {
+  background-color: $white;
+  border-radius: 3px;
+  color: $black;
+  font-size: 1rem;
+  padding: 0.5rem 0 0 0.5rem;
+  width: 100%;
+}
 
+.drizzle-body .drizzle-text-input::placeholder {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.drizzle-body .drizzle-text-input--filter {
+  box-shadow: inset 0 1px 3px;
 }

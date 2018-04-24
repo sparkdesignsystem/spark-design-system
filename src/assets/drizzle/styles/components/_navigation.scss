@@ -1,14 +1,3 @@
-:root {
-  --Nav-background: var(--color-silver);
-  --Nav-active-background: var(--color-white);
-  --Nav-header-background: var(--color-black);
-  --Nav-header-color: var(--color-white);
-  --Nav-toggle-size: 3em;
-  --Nav-item-padding: calc(var(--space) * 0.75) var(--space);
-  --Nav-item-nested-indent: calc(var(--space) * 2);
-  --Nav-item-nested-font-size: 0.75em;
-}
-
 .drizzle-Nav {
   background: $nav-background-color;
   font-family: "urw din";
@@ -19,6 +8,10 @@
   color: white;
   padding: 4rem 2rem 4rem;
   position: relative;
+}
+
+.drizzle-Nav-header .drizzle-Logo--small {
+  margin: 0 auto 40px auto;
 }
 
 .drizzle-Nav-header-toggle {
@@ -52,7 +45,6 @@
 
 .drizzle-Nav-main {
   display: none;
-  padding-bottom: var(--space);
 
   @media (min-width: $nav-switch-breakpoint) {
     display: block;
@@ -75,13 +67,8 @@
 
   &:hover,
   &.is-active {
-    background: $orange-medium;
+    background: $highlight;
   }
-}
-
-.drizzle-Nav-menu .drizzle-Nav-menu .drizzle-Nav-item {
-  font-size: var(--Nav-item-nested-font-size);
-  padding-left: var(--Nav-item-nested-indent);
 }
 
 .drizzle-Nav-item.drizzle-h5 {
@@ -97,12 +84,12 @@
 }
 
 .drizzle-Nav-item {
-  padding: 1rem 0 1rem 71px;
+  padding: 1.2rem 0 0.8rem 71px;
 }
 
 .drizzle-Nav-item a {
   display: block;
-  font-weight: 100;
-  vertical-align: middle;
+  font-weight: 300;
+  line-height: 0.8;
 }
 

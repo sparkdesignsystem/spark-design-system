@@ -9,6 +9,7 @@ import { paginationDefault } from './pagination/default';
 import setActiveNavItem from './navigation/setActiveNavItem';
 import appendIFrames from './navigation/appendIFrames';
 import { formStateChanger } from './form-state-changer';
+import { filters } from './filter';
 
 const nav = document.getElementById('nav');
 const navMenu = document.getElementById('nav-menu');
@@ -31,3 +32,4 @@ formStateChanger();
 paginationDefault();
 paginationLong();
 bindUIEvents();
+filters();

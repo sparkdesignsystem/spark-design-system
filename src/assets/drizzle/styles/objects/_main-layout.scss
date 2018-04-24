@@ -11,9 +11,8 @@
 }
 
 .drizzle-Layout-main {
-  max-width: 70em;
-
   @media (min-width: 60rem) {
+    margin-top: 100px;
     margin-left: $layout-nav-width;
     padding: 2.5vh 5%;
   }
@@ -34,5 +33,14 @@
   }
 }
 
-
-
+.drizzle-Layout-section-header {
+  background-color: $highlight;
+  color: $white;
+  margin-bottom: 20px;
+  padding: 2rem 0 1.8rem 2rem;
+  position: fixed;
+  left: $layout-nav-width;
+  top: 0;
+  width: 100%;
+  z-index: 3000;
+}
