@@ -1,13 +1,20 @@
 // ==================================================================
 // Navigation
 // ==================================================================
+
+//
+// Available Variables
+///
+$masthead-column-width: 64rem !default;
+
 .sprk-c-WideNavigation {
   background-color: $white;
-  border-bottom: 2px solid $gray-medium;
   display: flex;
   list-style-type: none;
   position: relative;
   width: 100%;
+  margin: 0 auto;
+  max-width: $masthead-column-width;
 }
 
 .sprk-c-WideNavigation--sub {

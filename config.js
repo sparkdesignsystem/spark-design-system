@@ -30,6 +30,7 @@ module.exports = {
     svg: {
       xmlDeclaration: false,
       doctypeDeclaration: false,
+      namespaceClassnames: false,
     },
   },
   images: {
@@ -58,6 +59,7 @@ module.exports = {
             },
           ],
         },
+        devtool: 'source-map',
         externals: {},
       },
     },
