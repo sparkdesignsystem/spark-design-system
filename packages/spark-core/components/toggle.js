@@ -41,10 +41,10 @@ const handleToggleClick = (toggleContent, toggleIcon, e) => {
     toggleIconCSS(toggleIcon);
   }
   // If toggle type is the accordion then add a class when its open
-  if (e.target.getAttribute('data-sprk-toggle-type') === 'accordion') {
-    e.target.classList.toggle('sprk-c-Accordion__summary--open');
+  if (e.currentTarget.getAttribute('data-sprk-toggle-type') === 'accordion') {
+    e.currentTarget.classList.toggle('sprk-c-Accordion__summary--open');
   }
-  toggleAriaExpanded(e.target);
+  toggleAriaExpanded(e.currentTarget);
 };
 
 const toggle = () => {
