@@ -1,0 +1,18 @@
+.drizzle-c-Alert {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.drizzle-c-Alert__icon svg {
+  fill: $red;
+  margin-right: 1rem;
+  height: 35px;
+  width: 35px;
+}
+
+
+.drizzle-c-Alert__message {
+  font-weight: bold;
+  line-height: 1.1;
+}
