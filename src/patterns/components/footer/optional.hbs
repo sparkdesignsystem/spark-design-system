@@ -1,7 +1,72 @@
 ---
-name: Base Footer With Optional Elements
+name: Base With Optional Elements
 notes: |
   The footer can be used with all or some of the optional elements.
+restrictions:
+  - The social links section is resticted to a maximum of 8 links.
+  - The top links section is resticted to a maximum of 56 links in three columns.
 order: 2
 ---
-{{#embed "patterns.components.footer.base"}}{{/embed}}
+<footer class="sprk-o-Box" role="contentinfo">
+  <p class="sprk-b-TypeBodyTwo sprk-u-mbm">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+    non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+  </p>
+
+  <ul class="sprk-o-HorizontalList">
+    <li>
+      <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+        <svg class="sprk-c-Icon" viewBox="0 0 100 100">
+          <use xlink:href="#envelope" />
+        </svg>
+        Feedback Link
+      </a>
+    </li>
+
+    <li>
+      <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+        <svg class="sprk-c-Icon" viewBox="0 0 100 100">
+          <use xlink:href="#envelope" />
+        </svg>
+        Feedback Link 2
+      </a>
+    </li>
+  </ul>
+
+  <div class="sprk-o-StackSplit">
+    <div class="sprk-o-StackSplit__item">
+      <a href="#nogo">
+        <div class="drizzle-logo-placeholder"></div>
+        <span class="sprk-u-VisuallyHidden">Go to the award page</span>
+      </a>
+    </div>
+
+    <div class="sprk-o-StackSplit__item">
+      <a href="#nogo">
+        <div class="drizzle-logo-placeholder"></div>
+        <span class="sprk-u-VisuallyHidden">Go to the award page</span>
+      </a>
+    </div>
+
+    <div class="sprk-o-StackSplit__item">
+      <a href="#nogo">
+        <div class="drizzle-logo-placeholder"></div>
+        <span class="sprk-u-VisuallyHidden">Go to the award page</span>
+      </a>
+    </div>
+  </div>
+
+  <ul class="sprk-o-HorizontalList">
+    <li>
+      <a href="">Link 1</a>
+    </li>
+
+    <li>
+      <a href="">Link 2</a>
+    </li>
+
+    <li>
+      <a href="">Link 3</a>
+    </li>
+  </ul>
+</footer>

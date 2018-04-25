@@ -1,3 +1,6 @@
 notes: |
   The footer has a set of base content that is to be used in addition to the optional content pieces.
+restrictions:
+  - The awards/badges section is resticted to a maximum of 5.
+  - The bottom link section is resticted to a maximum of 8.
 sparkPackageCore: true
