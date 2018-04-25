@@ -2,11 +2,9 @@
      data-template-id="{{toSlug name}}">
   {{!-- Header, labels --}}
     {{#unless data.noHeader}}
-      <div class="drizzle-u-marginEnds">
-        {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
-          {{name}}
-        {{/drizzle.labelheader}}
-      </div>
+      {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
+        {{name}}
+      {{/drizzle.labelheader}}
     {{/unless}}
   {{!-- Notes --}}
   {{#if data.notes}}
@@ -56,13 +54,13 @@
     {{else}}
 
       {{!-- Preview --}}
-      <div class="drizzle-u-border spark-preview sprk-b-TypeBodyTwo">
-        <div class="drizzle-u-pad drizzle-u-cf drizzle-u-posRelative drizzle-c-Preview {{data.previewClass}}">
+      <div class="drizzle-u-border sprk-b-TypeBodyTwo drizzle-c-Preview">
+        <div class="drizzle-u-pad drizzle-u-cf drizzle-u-posRelative drizzle-c-Preview__example {{data.previewClass}}">
           {{{pattern id @root}}}
         </div>
         {{!-- Code sample --}}
         {{#unless data.sourceless}}
-          <pre class="drizzle-u-borderTop drizzle-u-pad"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
+          <pre class="drizzle-c-Preview__code"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
         {{/unless}}
       </div>
   {{/if}}

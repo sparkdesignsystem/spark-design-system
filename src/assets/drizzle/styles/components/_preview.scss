@@ -1,6 +1,14 @@
 .drizzle-c-Preview {
+  margin-bottom: 2rem;
+}
+
+.drizzle-c-Preview__example {
   border: 2px solid $gray;
   padding: $space-inset-xl;
+}
+
+.drizzle-c-Preview__code code {
+  font-size: 1rem;
 }
 
 
