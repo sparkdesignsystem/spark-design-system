@@ -1,0 +1,34 @@
+.drizzle-Tag {
+  background-color: $black;
+  border-radius: 3px;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  width: 125px;
+}
+
+.drizzle-Tag__color-box {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: $orange-light;
+  height: 25px;
+  flex: 25%;
+}
+
+.drizzle-Tag__color-box--extra {
+  background-color: $orange-dark;
+}
+
+.drizzle-Tag__desc {
+  align-self: center;
+  flex: 75%;
+}
+
+.drizzle-Tag__desc a {
+  display: block;
+  color: $white;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+}
