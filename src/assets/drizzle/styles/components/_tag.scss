@@ -13,7 +13,7 @@
   border-bottom-left-radius: 3px;
   background-color: $orange-light;
   height: 25px;
-  flex: 25%;
+  width: 25px;
 }
 
 .drizzle-Tag__color-box--extra {
@@ -22,7 +22,7 @@
 
 .drizzle-Tag__desc {
   align-self: center;
-  flex: 75%;
+  flex: 1;
 }
 
 .drizzle-Tag__desc a {

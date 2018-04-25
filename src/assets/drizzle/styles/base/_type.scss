@@ -15,6 +15,10 @@ p,
   font-family: "urw din";
 }
 
+p {
+  max-width: 640px;
+}
+
 .drizzle-h1 {
   color: $black;
   font-size: 35px;
@@ -30,7 +34,7 @@ p,
 
 .drizzle-h3 {
   color: $black;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;

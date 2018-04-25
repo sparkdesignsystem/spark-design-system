@@ -28,17 +28,20 @@
 
 .drizzle-Layout-content {
   max-width: 1024px;
-  margin: 2rem auto;
   padding: 2rem;
 
   @media (min-width: 60rem) {
-     margin-top: 100px;
      padding: 0;
+     margin: 120px 2rem 2rem 2rem;
   }
 
   & p {
     margin-bottom: 1rem;
   }
+}
+
+.drizzle-Layout-content--centered {
+  margin: 2rem auto;
 }
 
 .drizzle-Layout-nav {
