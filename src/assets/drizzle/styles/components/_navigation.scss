@@ -6,12 +6,15 @@
 .drizzle-Nav-header {
   background: $nav-background-color;
   color: white;
-  padding: 4rem 2rem 4rem;
-  position: relative;
+  padding: 1rem;
+
+  @media ( min-width: 60rem) {
+    padding: 4rem 0 2rem 0;
+  }
 }
 
 .drizzle-Nav-header .drizzle-Logo--small {
-  margin: 0 auto 40px auto;
+  margin: 0 auto;
 }
 
 .drizzle-Nav-header-toggle {
@@ -28,13 +31,13 @@
   & > svg {
     color: $white;
     fill: $white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+    float: right;
+    margin: 1.5rem;
   }
+}
+
+.drizzle-Nav.is-active .drizzle-Nav-header-toggle svg{
+  transform: rotate(180deg);
 }
 
 .drizzle-Nav a {
@@ -51,8 +54,16 @@
   }
 }
 
-.drizzle-Nav.is-active .Nav-main {
+.drizzle-Nav.is-active .drizzle-Nav-main {
+  background-color: $black;
   display: block;
+  height: 100%;
+  width: 100%;
+  top: 75px;
+  left: 0;
+  overflow: auto;
+  padding-top: 1rem;
+  position: fixed;
 }
 
 .drizzle-Nav-menu {

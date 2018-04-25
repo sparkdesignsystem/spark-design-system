@@ -16,6 +16,37 @@ p,
 }
 
 .drizzle-h1 {
-  color: $white;
+  color: $black;
   font-size: 35px;
+}
+
+.drizzle-h2 {
+  color: $black;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.drizzle-h3 {
+  color: $black;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.drizzle-Label {
+  color: $black;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.drizzle-Link,
+.drizzle-Link:visited {
+  color: $black;
+  text-decoration: none;
 }

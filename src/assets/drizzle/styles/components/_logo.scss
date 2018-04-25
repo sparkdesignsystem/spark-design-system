@@ -1,5 +1,8 @@
 .drizzle-Logo {
-
+  max-width: 250px;
+  @media (min-width: 60rem) {
+    max-width: 398px;
+  }
 }
 
 .drizzle-Logo--small {

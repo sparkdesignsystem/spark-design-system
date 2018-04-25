@@ -1,0 +1,10 @@
+.drizzle-Button {
+  background-color: $orange-medium;
+  border-radius: 3px;
+  color: $white;
+  padding: 1rem 2rem;
+}
+
+.drizzle-Button:hover {
+  background-color: $orange-light;
+}
