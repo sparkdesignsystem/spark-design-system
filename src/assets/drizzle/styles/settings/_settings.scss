@@ -1,3 +1,33 @@
 $nav-switch-breakpoint: 60rem;
 $layout-nav-width: 15.9375rem;
 $nav-background-color: $black;
+
+//
+// Spacing
+///
+$space-inset-xs: 4px 4px 4px 4px;
+$space-inset-s: 8px 8px 8px 8px;
+$space-inset-m: 16px 16px 16px 16px;
+$space-inset-l: 32px 32px 32px 32px;
+$space-inset-xl: 64px 64px 64px 64px;
+
+// Inset Short
+$space-inset-short-xs: 2px 4px 2px 4px;
+$space-inset-short-s: 4px 8px 4px 8px;
+$space-inset-short-m: 8px 16px 8px 16px;
+$space-inset-short-l: 16px 32px 16px 32px;
+$space-inset-short-xl: 32px 64px 32px 64px;
+
+// Inset Tall
+$space-inset-tall-xs: 6px 4px 6px 4px;
+$space-inset-tall-s: 12px 8px 12px 8px;
+$space-inset-tall-m: 24px 16px 24px 16px;
+$space-inset-tall-l: 48px 32px 48px 32px;
+$space-inset-tall-xl: 96px 64px 96px 64px;
+
+// Stack
+$space-stack-xs: 0 0 4px 0;
+$space-stack-s: 0 0 8px 0;
+$space-stack-m: 0 0 16px 0;
+$space-stack-l: 0 0 32px 0;
+$space-stack-xl: 0 0 64px 0;
