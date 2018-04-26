@@ -6,6 +6,12 @@ const hideMobileNav = (nav) => {
   nav.classList.remove('is-active');
 };
 
+const focusTrap = (nav, mainNav) => {
+  if (nav.classList.contains('is-active')) {
+    focusFirstEl(mainNav);
+  }
+};
+
 const bindUIEvents = () => {
   const nav = document.querySelector('.drizzle-o-Layout__nav');
   const mainNav = nav.querySelector('.drizzle-c-Navigation__main');
@@ -16,9 +22,7 @@ const bindUIEvents = () => {
   });
 
   mainLayout.addEventListener('focusin', () => {
-    if (nav.classList.contains('is-active')) {
-      focusFirstEl(mainNav);
-    }
+    focusTrap(nav, mainNav);
   });
 };
 
@@ -26,4 +30,4 @@ const mobileNav = () => {
   bindUIEvents();
 };
 
-export { mobileNav, hideMobileNav };
+export { mobileNav, hideMobileNav, focusTrap };
