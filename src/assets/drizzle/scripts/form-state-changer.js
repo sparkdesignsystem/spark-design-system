@@ -17,9 +17,9 @@ const toggleTemplate = (id, value, templates) => {
   // loop through matches and decide whether to show / hide
   templates.forEach((matchingTemplate) => {
     const templateId = matchingTemplate.getAttribute('data-template-id');
-    matchingTemplate.classList.add('hidden');
+    matchingTemplate.classList.add('sprk-u-Hidden');
     if ((templateId === id && value === 'normal') || templateId.includes(value)) {
-      matchingTemplate.classList.remove('hidden');
+      matchingTemplate.classList.remove('sprk-u-Hidden');
     }
   });
 };
