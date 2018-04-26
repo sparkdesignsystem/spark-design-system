@@ -31,6 +31,11 @@
     {{!-- Fundementals --}}
     <h5 class="drizzle-Nav-item drizzle-h5">Fundamentals</h5>
     <ul class="drizzle-Nav-menu">
+      {{#each (pages "fundamentals")}}
+        <li>
+          {{> nav-item label=data.title}}
+        </li>
+      {{/each}}
       {{#each (collections "fundamentals")}}
         <li>
           {{> nav-item label=name}}

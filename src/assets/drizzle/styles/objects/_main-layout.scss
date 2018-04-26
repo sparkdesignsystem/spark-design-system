@@ -34,10 +34,6 @@
      padding: 0;
      margin: 120px 2rem 2rem 2rem;
   }
-
-  & p {
-    margin-bottom: 1rem;
-  }
 }
 
 .drizzle-Layout-content--centered {
@@ -77,4 +73,8 @@
 
 .drizzle-Layout-section-header .drizzle-h1 {
   color: $white;
+}
+
+.drizzle-Layout-content__group {
+
 }
