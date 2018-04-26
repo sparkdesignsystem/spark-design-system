@@ -1,0 +1,14 @@
+.drizzle-c-SiteHeader {
+  background-color: $black;
+  background-image: url('/assets/toolkit/images/wires.jpg');
+  background-size: cover;
+  padding: 5.5rem 0;
+
+  @media (min-width: 60rem) {
+    padding: 10.5rem 0;
+  }
+}
+
+.drizzle-c-SiteHeader .drizzle-c-Logo {
+  margin: 0 auto;
+}

@@ -1,9 +1,9 @@
-.drizzle-Nav {
+.drizzle-c-Navigation {
   background: $nav-background-color;
   font-family: "urw din";
 }
 
-.drizzle-Nav-header {
+.drizzle-c-Navigation__header {
   background: $nav-background-color;
   color: white;
   padding: 1rem;
@@ -13,11 +13,11 @@
   }
 }
 
-.drizzle-Nav-header .drizzle-c-Logo--small {
+.drizzle-c-Navigation__header .drizzle-c-Logo--small {
   margin: 0 auto;
 }
 
-.drizzle-Nav-header-toggle {
+.drizzle-c-Navigation__header-toggle {
   position: absolute;
   width: 1rem;
   top: 0;
@@ -36,17 +36,17 @@
   }
 }
 
-.drizzle-Nav.is-active .drizzle-Nav-header-toggle svg{
+.drizzle-c-Navigation.is-active .drizzle-c-Navigation__header-toggle svg{
   transform: rotate(180deg);
 }
 
-.drizzle-Nav a {
+.drizzle-c-Navigation a {
   color: $white;
   font-weight: 300;
   text-decoration: none;
 }
 
-.drizzle-Nav-main {
+.drizzle-c-Navigation__main {
   display: none;
 
   @media (min-width: $nav-switch-breakpoint) {
@@ -54,7 +54,7 @@
   }
 }
 
-.drizzle-Nav.is-active .drizzle-Nav-main {
+.drizzle-c-Navigation.is-active .drizzle-c-Navigation__main {
   background-color: $black;
   display: block;
   height: 100%;
@@ -66,13 +66,13 @@
   position: fixed;
 }
 
-.drizzle-Nav-menu {
+.drizzle-c-Navigation__menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.drizzle-Nav-item {
+.drizzle-c-Navigation__item {
   display: block;
   padding: 0.5rem;
 
@@ -82,7 +82,7 @@
   }
 }
 
-.drizzle-Nav-item.drizzle-b-h5 {
+.drizzle-c-Navigation__item.drizzle-b-h5 {
   color: $white;
   font-size: 1rem;
   font-weight: bold;
@@ -94,11 +94,11 @@
   }
 }
 
-.drizzle-Nav-item {
+.drizzle-c-Navigation__item {
   padding: 1.2rem 0 0.8rem 32px;
 }
 
-.drizzle-Nav-item a {
+.drizzle-c-Navigation__item a {
   display: block;
   font-weight: 300;
   line-height: 0.8;

@@ -3,28 +3,14 @@
   margin: 0;
 }
 
-.drizzle-o-Layout-main {
+.drizzle-o-Layout__main {
   @media (min-width: 60rem) {
     width: $layout-main-width;
     margin-left: $layout-nav-width;
   }
 }
 
-.drizzle-o-Layout__main-header {
-  background-color: $black;
-  background-image: url('/assets/toolkit/images/wires.jpg');
-  background-size: cover;
-  padding: 5.5rem 0;
 
-
-  @media (min-width: 60rem) {
-    padding: 10.5rem 0;
-  }
-}
-
-.drizzle-o-Layout__main-header .drizzle-c-Logo {
-  margin: 0 auto;
-}
 
 
 .drizzle-o-Layout-content {
