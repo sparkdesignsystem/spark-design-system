@@ -1,14 +1,16 @@
 ---
 title: Color
+sourceless: true
+sparkCore: true
 ---
-<div class="drizzle-Layout-section-header">
-  <h1 class="drizzle-h1">
+<div class=" drizzle-o-Layout__section-header">
+  <h1 class="drizzle-b-h1">
     Color
   </h1>
 </div>
-<div class="drizzle-Layout-content">
+<div class=" drizzle-o-Layout-content">
   {{#each (data "colors")}}
-    <h2 class="drizzle-h2">{{@key}}</h2>
+    <h2 class="drizzle-b-h2">{{@key}}</h2>
     <ul class="drizzle-u-listInline drizzle-u-marginBottom">
       {{#each this}}
         <li>

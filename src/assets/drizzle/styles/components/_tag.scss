@@ -1,4 +1,4 @@
-.drizzle-Tag {
+.drizzle-c-Tag {
   background-color: $black;
   border-radius: 3px;
   display: flex;
@@ -8,7 +8,20 @@
   width: 125px;
 }
 
-.drizzle-Tag__color-box {
+.drizzle-c-Tag--secondary {
+  background-color: $white;
+  border-radius: 3px;
+}
+
+.drizzle-c-Tag--inprogress {
+  background-color: $gray;
+}
+
+.drizzle-c-Tag--secondary .drizzle-c-Tag__desc span {
+  color: $black;
+}
+
+.drizzle-c-Tag__color-box {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   background-color: $orange-light;
@@ -16,16 +29,13 @@
   width: 25px;
 }
 
-.drizzle-Tag__color-box--extra {
-  background-color: $orange-dark;
-}
-
-.drizzle-Tag__desc {
+.drizzle-c-Tag__desc {
   align-self: center;
   flex: 1;
 }
 
-.drizzle-Tag__desc a {
+.drizzle-c-Tag__desc span,
+.drizzle-c-Tag__desc a {
   display: block;
   color: $white;
   text-decoration: none;

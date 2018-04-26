@@ -1,4 +1,4 @@
-.drizzle-body {
+.drizzle-b-Body {
   font-size: 1rem;
   line-height: 1.563;
 }
@@ -6,25 +6,25 @@
 
 body,
 p,
-.drizzle-h1,
-.drizzle-h2,
-.drizzle-h3,
-.drizzle-h4,
-.drizzle-h5,
-.drizzle-h6 {
+.drizzle-b-h1,
+.drizzle-b-h2,
+.drizzle-b-h3,
+.drizzle-b-h4,
+.drizzle-b-h5,
+.drizzle-b-h6 {
   font-family: "urw din";
 }
 
-.drizzle-p {
+.drizzle-b-P {
   max-width: 640px;
 }
 
-.drizzle-h1 {
+.drizzle-b-h1 {
   color: $black;
   font-size: 35px;
 }
 
-.drizzle-h2 {
+.drizzle-b-h2 {
   color: $black;
   font-size: 20px;
   font-weight: bold;
@@ -33,7 +33,7 @@ p,
   margin-bottom: 1rem;
 }
 
-.drizzle-h3 {
+.drizzle-b-h3 {
   color: $black;
   font-size: 16px;
   font-weight: bold;
@@ -42,15 +42,11 @@ p,
   margin-bottom: 1rem;
 }
 
-.drizzle-Label {
+.drizzle-b-Label {
   color: $black;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
-}
-
-.drizzle-ContentGroup {
-  margin-bottom: 2rem;
 }

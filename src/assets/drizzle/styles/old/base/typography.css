@@ -17,12 +17,12 @@ pre {
   line-height: 1.75;
 }
 
-.drizzle-h1,
-.drizzle-h2,
-.drizzle-h3,
-.drizzle-h4,
-.drizzle-h5,
-.drizzle-h6,
+.drizzle-b-h1,
+.drizzle-b-h2,
+.drizzle-b-h3,
+.drizzle-b-h4,
+.drizzle-b-h5,
+.drizzle-b-h6,
 .drizzle-copy {
   color: #000;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -37,31 +37,31 @@ pre {
 
 }
 
-.drizzle-h1 {
+.drizzle-b-h1 {
   font-size: 2.4rem;
   font-weight: bold;
 }
 
-.drizzle-h2 {
+.drizzle-b-h2 {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.drizzle-h3 {
+.drizzle-b-h3 {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.drizzle-h4 {
+.drizzle-b-h4 {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.drizzle-h5 {
+.drizzle-b-h5 {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.drizzle-h6 {
+.drizzle-b-h6 {
   font-size: 1rem;
 }

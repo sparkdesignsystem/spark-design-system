@@ -1,4 +1,4 @@
-.drizzle-body .drizzle-text-input {
+.drizzle-b-Body .drizzle-b-TextInput {
   background-color: $white;
   border-radius: 3px;
   color: $black;
@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.drizzle-body .drizzle-text-input::placeholder {
+.drizzle-b-Body .drizzle-b-TextInput::placeholder {
   color: #ccc;
   font-size: 1rem;
   margin: 0;
@@ -15,7 +15,7 @@
   line-height: 1;
 }
 
-.drizzle-body .drizzle-text-input--filter {
+.drizzle-b-Body .drizzle-b-TextInput--filter {
   box-shadow: inset 0 1px 3px;
   display: block;
   margin: 1rem auto;

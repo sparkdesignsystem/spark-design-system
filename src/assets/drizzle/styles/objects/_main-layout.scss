@@ -1,9 +1,16 @@
-.drizzle-Layout {
+.drizzle-o-Layout {
   height: 100%;
   margin: 0;
 }
 
-.drizzle-Layout-main-header {
+.drizzle-o-Layout-main {
+  @media (min-width: 60rem) {
+    width: $layout-main-width;
+    margin-left: $layout-nav-width;
+  }
+}
+
+.drizzle-o-Layout__main-header {
   background-color: $black;
   background-image: url('/assets/toolkit/images/wires.jpg');
   background-size: cover;
@@ -15,20 +22,14 @@
   }
 }
 
-.drizzle-Layout-main-header .drizzle-Logo {
+.drizzle-o-Layout__main-header .drizzle-c-Logo {
   margin: 0 auto;
 }
 
-.drizzle-Layout-main {
-  @media (min-width: 60rem) {
-    width: $layout-main-width;
-    margin-left: $layout-nav-width;
-  }
-}
 
-.drizzle-Layout-content {
+.drizzle-o-Layout-content {
   max-width: 1024px;
-  padding: 2rem;
+  padding: 0 2rem;
 
   @media (min-width: 60rem) {
      padding: 0;
@@ -36,12 +37,12 @@
   }
 }
 
-.drizzle-Layout-content--centered {
+.drizzle-o-Layout-content--centered {
   margin: 2rem auto;
   max-width: 640px;
 }
 
-.drizzle-Layout-nav {
+.drizzle-o-Layout__nav {
   @media (min-width: 60rem) {
     position: fixed;
     z-index: 1;
@@ -56,7 +57,7 @@
   }
 }
 
-.drizzle-Layout-section-header {
+.drizzle-o-Layout__section-header {
   background-color: $highlight;
   color: $white;
   margin-bottom: 20px;
@@ -71,10 +72,6 @@
   }
 }
 
-.drizzle-Layout-section-header .drizzle-h1 {
+.drizzle-o-Layout__section-header .drizzle-b-h1 {
   color: $white;
-}
-
-.drizzle-Layout-content__group {
-
 }

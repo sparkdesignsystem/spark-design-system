@@ -1,37 +1,37 @@
 {{#extend "default"}}
   {{#content "main"}}
-    <div class="drizzle-Layout-section-header">
-      <h1 class="drizzle-h1">{{name}}</h1>
+    <div class=" drizzle-o-Layout__section-header">
+      <h1 class="drizzle-b-h1">{{name}}</h1>
     </div>
-    <div class="drizzle-Layout-content">
+    <div class=" drizzle-o-Layout-content">
       <section>
       {{#if sparkPackageCore}}
-        <div class="drizzle-Tag">
-          <div class="drizzle-Tag__color-box">
+        <div class="drizzle-c-Tag">
+          <div class="drizzle-c-Tag__color-box">
           </div>
-          <div class="drizzle-Tag__desc">
+          <div class="drizzle-c-Tag__desc">
             <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Core</a>
           </div>
         </div>
       {{/if}}
 
       {{#if sparkPackageExtras}}
-        <div class="drizzle-Tag">
-          <div class="drizzle-Tag__color-box drizzle-Tag__color-box--extra">
+        <div class="drizzle-c-Tag">
+          <div class="drizzle-c-Tag__color-box drizzle-c-Tag__color-box--extra">
           </div>
-          <div class="drizzle-Tag__desc">
+          <div class="drizzle-c-Tag__desc">
             <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Extras</a>
           </div>
         </div>
       {{/if}}
 
       {{#if description}}
-        <p class="drizzle-p">{{description}}</p>
+        <p class="drizzle-b-P">{{description}}</p>
       {{/if}}
 
       {{#if information}}
-        <h2 class="drizzle-h2">Information</h2>
-        <ul class="drizzle-List drizzle-List--nested">
+        <h2 class="drizzle-b-h2">Information</h2>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
           {{#each information}}
             <li>{{.}}</li>
           {{/each}}
@@ -41,11 +41,11 @@
       {{!-- Links --}}
       {{#if links}}
         <div class="drizzle-u-inlineBlock">
-          <h2 class="drizzle-h2">Links</h2>
-          <ul class="drizzle-List drizzle-List--nested">
+          <h2 class="drizzle-b-h2">Links</h2>
+          <ul class="drizzle-b-List drizzle-b-List--nested">
             {{#each links as |details label|}}
-              <li class="drizzle-List__item">
-                <a class="drizzle-Item-control" href="{{details.href}}">
+              <li class="drizzle-b-List__item">
+                <a href="{{details.href}}">
                   {{label}}
                   {{#if details.external }}
                     <svg viewBox="0 0 11 12">
@@ -61,10 +61,10 @@
       {{/if}}
 
       {{#if restrictions}}
-        <h2 class="drizzle-h2">Restrictions</h2>
-        <ul class="drizzle-List drizzle-List--nested">
+        <h2 class="drizzle-b-h2">Restrictions</h2>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
           {{#each restrictions}}
-            <li class="drizzle-List__item">{{.}}</li>
+            <li class="drizzle-b-List__item">{{.}}</li>
           {{/each}}
         </ul>
       {{/if}}
@@ -72,11 +72,11 @@
       {{!-- contents --}}
       {{#if contents}}
         <div>
-          <h2 class="drizzle-h2">Table of Contents</h2>
-          <ul class="drizzle-List drizzle-List--nested">
+          <h2 class="drizzle-b-h2">Table of Contents</h2>
+          <ul class="drizzle-b-List drizzle-b-List--nested">
             {{#each contents as |url label|}}
-              <li class=" drizzle-List__item">
-                <a class="drizzle-Item-control drizzle-Link" href="{{url}}">[{{label}}]</a>
+              <li class="drizzle-b-List__item">
+                <a class="drizzle-b-Link" href="{{url}}">[{{label}}]</a>
               </li>
             {{/each}}
           </ul>

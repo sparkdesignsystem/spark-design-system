@@ -5,7 +5,7 @@
   </a>
 {{/inline}}
 
-<div class="drizzle-Layout-nav drizzle-Nav" id="nav">
+<div class=" drizzle-o-Layout__nav drizzle-Nav" id="nav">
   <div class="drizzle-Nav-header">
     <a href="{{@root.baseurl}}/">
       {{> drizzle.small-logo}}
@@ -17,10 +17,10 @@
     </a>
   </div>
   <div class="drizzle-Nav-main" id="nav-menu" data-filtered="navList">
-    <label class="drizzle-screen-reader-text" for="filter">Filter</label>
-    <input class="drizzle-text-input drizzle-text-input--filter" id="filter" type="text" placeholder="Filter" data-filter="navList">
+    <label class="drizzle-u-ScreenReaderText" for="filter">Filter</label>
+    <input class="drizzle-b-TextInput drizzle-b-TextInput--filter" id="filter" type="text" placeholder="Filter" data-filter="navList">
     {{!-- Getting Started --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Getting Started</h5>
+    <h5 class="drizzle-Nav-item drizzle-b-h5">Getting Started</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (pages "gettingstarted")}}
         <li>
@@ -29,13 +29,8 @@
       {{/each}}
     </ul>
     {{!-- Fundementals --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Fundamentals</h5>
+    <h5 class="drizzle-Nav-item drizzle-b-h5">Fundamentals</h5>
     <ul class="drizzle-Nav-menu">
-      {{#each (pages "fundamentals")}}
-        <li>
-          {{> nav-item label=data.title}}
-        </li>
-      {{/each}}
       {{#each (collections "fundamentals")}}
         <li>
           {{> nav-item label=name}}
@@ -43,7 +38,7 @@
       {{/each}}
     </ul>
     {{!-- Components --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Components</h5>
+    <h5 class="drizzle-Nav-item drizzle-b-h5">Components</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (collections "components")}}
         <li>
@@ -52,7 +47,7 @@
       {{/each}}
     </ul>
     {{!-- Other pages --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Documentation</h5>
+    <h5 class="drizzle-Nav-item drizzle-b-h5">Documentation</h5>
     <ul class="drizzle-Nav-menu">
       {{#each (pages "docs" ignore="index")}}
         <li>

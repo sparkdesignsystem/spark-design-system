@@ -1,10 +1,10 @@
 ---
 title: Developers
 ---
-<div class="drizzle-Layout-section-header">
-  <h1 class="drizzle-h1">Getting Started - Developers</h1>
+<div class=" drizzle-o-Layout__section-header">
+  <h1 class="drizzle-b-h1">Getting Started - Developers</h1>
 </div>
-<div class="drizzle-Layout-content">
+<div class=" drizzle-o-Layout-content">
   <div class="drizzle-c-Alert">
     <div class="drizzle-c-Alert__icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -14,23 +14,23 @@ title: Developers
     <p class="drizzle-c-Alert__message sprk-u-mbn">
       Spark is currently in alpha. It is subject to changes of all
       sizes at any time and not suitable for production use. Please
-      reach out to the <a class="drizzle-Link drizzle-Link--inline" href="mailto:sparkdesignsystem@quickenloans.com">Spark team</a>
+      reach out to the <a class="drizzle-b-Link drizzle-b-Link--inline" href="mailto:sparkdesignsystem@quickenloans.com">Spark team</a>
       for guidance.
     </p>
   </div>
 
 
   <div class="drizzle-ContentGroup">
-    <h2 class="drizzle-h2">Welcome</h2>
-    <p class="drizzle-p">
+    <h2 class="drizzle-b-h2">Welcome</h2>
+    <p class="drizzle-b-P">
       This getting started guide is intended for developers. See below for instructions on how to install Spark
       and bring it into your existing build.
     </p>
   </div>
 
   <div class="drizzle-ContentGroup">
-    <h2 class="drizzle-h2">Requirements</h2>
-    <p class="drizzle-p">
+    <h2 class="drizzle-b-h2">Requirements</h2>
+    <p class="drizzle-b-P">
       Spark assumes your project is using <a href="https://sass-lang.com/">Sass</a> for styling and
       that your project has a Javascript build step that will transpile ES6+ and polyfill appropriately
       for browser support.
@@ -38,35 +38,35 @@ title: Developers
   </div>
 
   <div class="drizzle-ContentGroup">
-    <h3 class="drizzle-h3"> Spark Core </h3>
+    <h3 class="drizzle-b-h3"> Spark Core </h3>
 
-    <ul class="drizzle-List">
+    <ul class="drizzle-b-List">
         <li class="drizzle-ContentGroup">
-            <p class="drizzle-p"> Install the npm package. </p>
+            <p class="drizzle-b-P"> Install the npm package. </p>
             <div class="drizzle-c-Command">
               <code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code>
             </div>
         </li>
         <li class="drizzle-ContentGroup">
-            <p class="drizzle-p"> Import the Sass setup file in your Sass build. </p>
+            <p class="drizzle-b-P"> Import the Sass setup file in your Sass build. </p>
             <div class="drizzle-c-Command sprk-u-mbm">
               <code class="drizzle-CodeHighlight">
                 @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
               </code>
             </div>
-            <p class="drizzle-p">
+            <p class="drizzle-b-P">
               This will bring all Spark-Core Sass patterns into your build. The Spark classes
               are namespaced so they don't affect any existing css.
             </p>
         </li>
         <li class="drizzle-ContentGroup">
-            <p class="drizzle-p"> Import the JS setup file in your JS build. </p>
+            <p class="drizzle-b-P"> Import the JS setup file in your JS build. </p>
             <div class="drizzle-c-Command sprk-u-mbm">
               <code class="drizzle-CodeHighlight">
                 import sparkCore from &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
               </code>
             </div>
-            <p class="drizzle-p">
+            <p class="drizzle-b-P">
               This will bring all Spark-Core JS into your build.
             </p>
         </li>
@@ -74,29 +74,29 @@ title: Developers
   </div>
 
   <div class="drizzle-ContentGroup">
-    <h3 class="drizzle-h3"> Spark Extras </h3>
+    <h3 class="drizzle-b-h3"> Spark Extras </h3>
 
-    <ul class="drizzle-List">
+    <ul class="drizzle-b-List">
       <li class="drizzle-ContentGroup">
-        <p class="drizzle-p"> Install the npm package. </p>
+        <p class="drizzle-b-P"> Install the npm package. </p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-extras</code>
         </div>
       </li>
       <li class="drizzle-ContentGroup">
-        <p class="drizzle-p"> Import the Sass setup file in your Sass build. </p>
+        <p class="drizzle-b-P"> Import the Sass setup file in your Sass build. </p>
         <div class="drizzle-c-Command sprk-u-mbm">
           <code class="drizzle-CodeHighlight">
             @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
           </code>
         </div>
-        <p class="drizzle-p">
+        <p class="drizzle-b-P">
           This will bring all Spark-Core Sass patterns into your build. The Spark classes
           are namespaced so they don't affect any existing css.
         </p>
       </li>
       <li class="drizzle-ContentGroup">
-        <p class="drizzle-p">Import any of the Spark-Extras Sass patterns that you need.</p>
+        <p class="drizzle-b-P">Import any of the Spark-Extras Sass patterns that you need.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
             @import &quot;node_modules/@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
@@ -104,7 +104,7 @@ title: Developers
         </div>
       </li>
       <li class="drizzle-ContentGroup">
-          <p class="drizzle-p"> Import any of the Spark-Extras JS patterns that you need. </p>
+          <p class="drizzle-b-P"> Import any of the Spark-Extras JS patterns that you need. </p>
           <div class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
               import &lt;pattern-name&gt; from &quot;node_modules/@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
@@ -114,11 +114,11 @@ title: Developers
     </ul>
   </div>
 
-  <h2 class="drizzle-h2">
+  <h2 class="drizzle-b-h2">
     Contribution Guide
   </h2>
 
-  <h3 class="drizzle-h3">
+  <h3 class="drizzle-b-h3">
     Code Organization
   </h3>
 
@@ -140,7 +140,7 @@ title: Developers
     that are published to npm.
   </p>
 
-  <h3 class="drizzle-h3">
+  <h3 class="drizzle-b-h3">
     Dev Environment
   </h3>
 
@@ -162,7 +162,7 @@ title: Developers
     </li>
   </ol>
 
-  <h3 class="drizzle-h3">
+  <h3 class="drizzle-b-h3">
     Code Style Standards
   </h3>
 
@@ -177,7 +177,7 @@ title: Developers
     and an additional code formatter, <a href="https://github.com/prettier/prettier">prettier</a>.
   </p>
 
-  <h4 class="drizzle-h4">
+  <h4 class="drizzle-b-h4">
     HTML
   </h4>
 
@@ -192,7 +192,7 @@ title: Developers
     </li>
   </ul>
 
-  <h4 class="drizzle-h4">
+  <h4 class="drizzle-b-h4">
     CSS
   </h4>
 
@@ -216,7 +216,7 @@ title: Developers
     </li>
   </ul>
 
-  <h4 class="drizzle-h4">
+  <h4 class="drizzle-b-h4">
     JavaScript
   </h4>
 
@@ -254,7 +254,7 @@ title: Developers
     </li>
   </ul>
 
-  <h3 class="drizzle-h3">
+  <h3 class="drizzle-b-h3">
     Change Workflow
   </h3>
 
@@ -264,7 +264,7 @@ title: Developers
     </code>
   </p>
 
-  <h2 class="drizzle-h2">
+  <h2 class="drizzle-b-h2">
     Credit
   </h2>
 
