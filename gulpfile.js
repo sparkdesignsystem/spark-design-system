@@ -18,10 +18,6 @@ Object.assign(config.drizzle, { helpers });
 // Register core tasks
 ['clean', 'copy', 'js', 'serve', 'watch'].forEach(name => tasks[name](gulp, config[name]));
 
-// Register special CSS tasks
-// tasks.css(gulp, config['css:drizzle']);
-// gulp.task('css', ['css:drizzle']);
-
 // Sass task
 gulp.task('sass', () => {
   gulp

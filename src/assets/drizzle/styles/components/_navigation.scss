@@ -8,7 +8,7 @@
   color: white;
   padding: 1rem;
 
-  @media ( min-width: 60rem) {
+  @media (min-width: 60rem) {
     padding: 4rem 0 2rem 0;
   }
 }
@@ -48,9 +48,11 @@
 
 .drizzle-c-Navigation__main {
   display: none;
+  padding-bottom: 70px;
 
   @media (min-width: $nav-switch-breakpoint) {
     display: block;
+    padding-bottom: 0;
   }
 }
 
@@ -59,7 +61,7 @@
   display: block;
   height: 100%;
   width: 100%;
-  top: 75px;
+  top: 64px;
   left: 0;
   overflow: auto;
   padding-top: 1rem;
@@ -76,6 +78,7 @@
   display: block;
   padding: 0.5rem;
 
+  &:focus,
   &:hover,
   &.is-active {
     background: $highlight;

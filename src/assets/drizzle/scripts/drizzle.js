@@ -10,6 +10,7 @@ import setActiveNavItem from './navigation/setActiveNavItem';
 import appendIFrames from './navigation/appendIFrames';
 import { formStateChanger } from './form-state-changer';
 import { filters } from './filter';
+import { mobileNav } from './navigation/mobileNav';
 
 const nav = document.getElementById('nav');
 const navMenu = document.getElementById('nav-menu');
@@ -33,3 +34,4 @@ paginationDefault();
 paginationLong();
 bindUIEvents();
 filters();
+mobileNav();
