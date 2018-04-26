@@ -63,20 +63,15 @@ describe('Toggle tests', () => {
     expect(content.classList.contains('sprk-u-HideWhenJS')).eql(true);
   });
   it('should toggle open class on accordion toggle triggers', () => {
-    let event;
-    document.addEventListener('click', (e) => {
-      event = e;
-    });
-    triggerAccordion.click();
-    trigger.click();
-    setTimeout(() => {
-      handleToggleClick(content, icon, event);
-      expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
-      expect(trigger.classList.contains('sprk-c-Accordion__summary--open')).eql(false);
-    }, 100);
+    handleToggleClick(content, icon, triggerAccordion);
+    expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
+    expect(trigger.classList.contains('sprk-c-Accordion__summary--open')).eql(false);
   });
   it('should toggle icon css class', () => {
-    toggleIconCSS(icon);
+    const isOpen = icon.classList.contains('sprk-c-Icon--open');
+    if (!isOpen) {
+      toggleIconCSS(icon);
+    }
     expect(icon.classList.contains('sprk-c-Icon--open')).eql(true);
   });
 });

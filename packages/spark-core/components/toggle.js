@@ -34,17 +34,16 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
-const handleToggleClick = (toggleContent, toggleIcon, e) => {
-  e.preventDefault();
+const handleToggleClick = (toggleContent, toggleIcon, element) => {
   toggleContentCSS(toggleContent);
   if (toggleIcon) {
     toggleIconCSS(toggleIcon);
   }
   // If toggle type is the accordion then add a class when its open
-  if (e.currentTarget.getAttribute('data-sprk-toggle-type') === 'accordion') {
-    e.currentTarget.classList.toggle('sprk-c-Accordion__summary--open');
+  if (element.getAttribute('data-sprk-toggle-type') === 'accordion') {
+    element.classList.toggle('sprk-c-Accordion__summary--open');
   }
-  toggleAriaExpanded(e.currentTarget);
+  toggleAriaExpanded(element);
 };
 
 const bindToggleUIEvents = (element) => {
@@ -55,11 +54,10 @@ const bindToggleUIEvents = (element) => {
   // Set aria-expanded to false initially
   toggleAriaExpanded(toggleTrigger);
   // Add click event listener to trigger for each toggle collection we find
-  toggleTrigger.addEventListener(
-    'click',
-    handleToggleClick.bind(null, toggleContent, toggleIcon),
-    false,
-  );
+  toggleTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    handleToggleClick(toggleContent, toggleIcon, e.currentTarget);
+  });
 };
 
 const toggle = () => {
