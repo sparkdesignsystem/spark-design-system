@@ -36,19 +36,19 @@ describe('toggleTemplate', () => {
   before(() => {
     templates[0] = document.createElement('div');
     templates[0].setAttribute('data-template-id', 'test1');
-    templates[0].classList.add('hidden');
+    templates[0].classList.add('sprk-u-Hidden');
     templates[1] = document.createElement('div');
     templates[1].setAttribute('data-template-id', 'test1-error-state');
-    templates[1].classList.add('hidden');
+    templates[1].classList.add('sprk-u-Hidden');
     templates[2] = document.createElement('div');
     templates[2].setAttribute('data-template-id', 'test1-disabled-state');
-    templates[2].classList.add('hidden');
+    templates[2].classList.add('sprk-u-Hidden');
   });
 
   it('should remove .hidden from the matching template', () => {
     toggleTemplate('test1', 'normal', templates);
-    expect(templates[0].classList.contains('hidden')).eql(false);
-    expect(templates[1].classList.contains('hidden')).eql(true);
-    expect(templates[1].classList.contains('hidden')).eql(true);
+    expect(templates[0].classList.contains('sprk-u-Hidden')).eql(false);
+    expect(templates[1].classList.contains('sprk-u-Hidden')).eql(true);
+    expect(templates[2].classList.contains('sprk-u-Hidden')).eql(true);
   });
 });
