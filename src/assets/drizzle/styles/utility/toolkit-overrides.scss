@@ -1,49 +1,41 @@
-.drizzle-u-drizzleModalOverride [class~=sprk-c-Modal] {
-  position: relative !important;
-}
-
-.drizzle-u-drizzleModalOverride [class~=sprk-c-ModalMask] {
-  display: none !important;
-}
-
-.drizzle-u-pad .sprk-c-WideNavigation {
+.#{$app-namespace}-u-pad .sprk-c-WideNavigation {
   @media (max-width: 46rem) {
     display: none;
   }
 }
 
-.drizzle-Test-Page .sprk-c-NarrowNavigation,
-.drizzle-u-pad > nav .sprk-c-NarrowNavigation {
+.#{$app-namespace}-Test-Page .sprk-c-NarrowNavigation,
+.#{$app-namespace}-u-pad > nav .sprk-c-NarrowNavigation {
   max-width: 320px;
   position: static;
 }
 
 /* so that you can see the box */
-.drizzle-u-pad .sprk-o-Box {
+.#{$app-namespace}-u-pad .sprk-o-Box {
   border: 1px solid #ccc;
 }
 
-.drizzle-u-pad .sprk-o-CenteredColumn {
+.#{$app-namespace}-u-pad .sprk-o-CenteredColumn {
   background-color: #ccc;
   height: 4rem;
 }
 
-.drizzle-u-pad > .sprk-o-SideBySide .sprk-o-SideBySide__item {
+.#{$app-namespace}-u-pad > .sprk-o-SideBySide .sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
 }
 
-.drizzle-c-Logo-placeholder {
+.#{$app-namespace}-c-Logo-placeholder {
   background-color: #ccc;
   height: 75px;
   width: 175px;
 }
 
-.drizzle-u-pad .sprk-c-Masthead__content {
+.#{$app-namespace}-u-pad .sprk-c-Masthead__content {
   position: static;
 }
 
-.drizzle-u-pad .sprk-c-Masthead__narrow-navigation-container {
+.#{$app-namespace}-u-pad .sprk-c-Masthead__narrow-navigation-container {
   position: static;
   margin-top: -2px;
 }

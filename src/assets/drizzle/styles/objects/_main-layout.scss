@@ -1,16 +1,16 @@
-.drizzle-o-Layout {
+.#{$app-namespace}-o-Layout {
   height: 100%;
   margin: 0;
 }
 
-.drizzle-o-Layout__main {
+.#{$app-namespace}-o-Layout__main {
   @media (min-width: 60rem) {
     width: $layout-main-width;
     margin-left: $layout-nav-width;
   }
 }
 
-.drizzle-o-Layout-content {
+.#{$app-namespace}-o-Layout-content {
   max-width: 1024px;
   padding: 0 2rem;
 
@@ -20,17 +20,17 @@
   }
 }
 
-.drizzle-o-ContentGrouping {
+.#{$app-namespace}-o-ContentGrouping {
   margin-bottom: 2.5rem;
 }
 
 
-.drizzle-o-Layout-content--centered {
+.#{$app-namespace}-o-Layout-content--centered {
   margin: 2rem auto;
   max-width: 640px;
 }
 
-.drizzle-o-Layout__nav {
+.#{$app-namespace}-o-Layout__nav {
   @media (min-width: 60rem) {
     position: fixed;
     z-index: 1;
@@ -45,7 +45,7 @@
   }
 }
 
-.drizzle-o-Layout__section-header {
+.#{$app-namespace}-o-Layout__section-header {
   background-color: $highlight;
   color: $white;
   margin-bottom: 20px;
@@ -60,6 +60,6 @@
   }
 }
 
-.drizzle-o-Layout__section-header .drizzle-b-h1 {
+.#{$app-namespace}-o-Layout__section-header .#{$app-namespace}-b-h1 {
   color: $white;
 }

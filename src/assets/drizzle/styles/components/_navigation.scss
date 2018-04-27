@@ -1,9 +1,9 @@
-.drizzle-c-Navigation {
+.#{$app-namespace}-c-Navigation {
   background: $nav-background-color;
   font-family: "urw din";
 }
 
-.drizzle-c-Navigation__header {
+.#{$app-namespace}-c-Navigation__header {
   background: $nav-background-color;
   color: white;
   padding: 1rem;
@@ -13,11 +13,11 @@
   }
 }
 
-.drizzle-c-Navigation__header .drizzle-c-Logo--small {
+.#{$app-namespace}-c-Navigation__header .#{$app-namespace}-c-Logo--small {
   margin: 0 auto;
 }
 
-.drizzle-c-Navigation__header-toggle {
+.#{$app-namespace}-c-Navigation__header-toggle {
   position: absolute;
   width: 1rem;
   top: 0;
@@ -36,17 +36,17 @@
   }
 }
 
-.drizzle-c-Navigation.is-active .drizzle-c-Navigation__header-toggle svg{
+.#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__header-toggle svg{
   transform: rotate(180deg);
 }
 
-.drizzle-c-Navigation a {
+.#{$app-namespace}-c-Navigation a {
   color: $white;
   font-weight: 300;
   text-decoration: none;
 }
 
-.drizzle-c-Navigation__main {
+.#{$app-namespace}-c-Navigation__main {
   display: none;
   padding-bottom: 70px;
 
@@ -56,7 +56,7 @@
   }
 }
 
-.drizzle-c-Navigation.is-active .drizzle-c-Navigation__main {
+.#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__main {
   background-color: $black;
   display: block;
   height: 100%;
@@ -68,13 +68,13 @@
   position: fixed;
 }
 
-.drizzle-c-Navigation__menu {
+.#{$app-namespace}-c-Navigation__menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.drizzle-c-Navigation__item {
+.#{$app-namespace}-c-Navigation__item {
   display: block;
   padding: 0.5rem;
 
@@ -85,7 +85,7 @@
   }
 }
 
-.drizzle-c-Navigation__item.drizzle-b-h5 {
+.#{$app-namespace}-c-Navigation__item.#{$app-namespace}-b-h5 {
   color: $white;
   font-size: 1rem;
   font-weight: bold;
@@ -97,11 +97,11 @@
   }
 }
 
-.drizzle-c-Navigation__item {
+.#{$app-namespace}-c-Navigation__item {
   padding: 1.2rem 0 0.8rem 32px;
 }
 
-.drizzle-c-Navigation__item a {
+.#{$app-namespace}-c-Navigation__item a {
   display: block;
   font-weight: 300;
   line-height: 0.8;

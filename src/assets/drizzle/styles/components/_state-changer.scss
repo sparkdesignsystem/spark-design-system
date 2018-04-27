@@ -1,4 +1,4 @@
-.drizzle-c-StateChanger {
+.#{$app-namespace}-c-StateChanger {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     }
 }
 
-.drizzle-c-StateChanger__state {
+.#{$app-namespace}-c-StateChanger__state {
     align-items: center;
     display: flex;
     flex: 1;
@@ -26,12 +26,12 @@
     }
 }
 
-.drizzle-c-StateChanger__state-item {
+.#{$app-namespace}-c-StateChanger__state-item {
   margin: 0;
   padding-top: 0.3rem;
 }
 
-.drizzle-c-StateChanger__state-item:first-child {
+.#{$app-namespace}-c-StateChanger__state-item:first-child {
     margin-right: 0.5rem;
 }
 

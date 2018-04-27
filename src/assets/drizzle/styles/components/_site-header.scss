@@ -1,4 +1,4 @@
-.drizzle-c-SiteHeader {
+.#{$app-namespace}-c-SiteHeader {
   background-color: $black;
   background-image: url('/assets/toolkit/images/wires.jpg');
   background-size: cover;
@@ -9,6 +9,6 @@
   }
 }
 
-.drizzle-c-SiteHeader .drizzle-c-Logo {
+.#{$app-namespace}-c-SiteHeader .#{$app-namespace}-c-Logo {
   margin: 0 auto;
 }

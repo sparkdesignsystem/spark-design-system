@@ -1,13 +1,17 @@
-.drizzle-c-Preview {
+.#{$app-namespace}-c-Preview {
   margin-bottom: 3rem;
 }
 
-.drizzle-c-Preview__example {
+.#{$app-namespace}-c-Preview__example {
   border: 1px solid $gray-dark;
-  padding: $space-inset-xl;
+  padding: $space-inset-s;
+
+  @media (min-width: 50rem) {
+    padding: $space-inset-xl;
+  }
 }
 
-.drizzle-c-Preview__code code {
+.#{$app-namespace}-c-Preview__code code {
   display: block;
   font-size: 1rem;
   max-width: 100%;

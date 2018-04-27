@@ -1,5 +1,5 @@
 // fighting sprk's specificity here: .sprk-b-TextInput [type=text] {}
-.drizzle-b-Body .drizzle-b-TextInput {
+.#{$app-namespace}-b-Body .#{$app-namespace}-b-TextInput {
   background-color: $white;
   border-radius: 3px;
   color: $black;
@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.drizzle-b-Body .drizzle-b-TextInput::placeholder {
+.#{$app-namespace}-b-Body .#{$app-namespace}-b-TextInput::placeholder {
   color: #ccc;
   font-size: 1rem;
   margin: 0;
@@ -16,7 +16,7 @@
   line-height: 1;
 }
 
-.drizzle-b-Body .drizzle-b-TextInput--filter {
+.#{$app-namespace}-b-Body .#{$app-namespace}-b-TextInput--filter {
   box-shadow: inset 0 1px 3px;
   display: block;
   margin: 1rem auto;

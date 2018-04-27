@@ -1,10 +1,10 @@
-.drizzle-c-Logo {
+.#{$app-namespace}-c-Logo {
   max-width: 250px;
   @media (min-width: 60rem) {
     max-width: 398px;
   }
 }
 
-.drizzle-c-Logo--small {
+.#{$app-namespace}-c-Logo--small {
   width: 35px;
 }

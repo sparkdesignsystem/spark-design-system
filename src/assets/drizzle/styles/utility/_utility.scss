@@ -1,7 +1,7 @@
-.drizzle-u-pad {
+.#{$app-namespace}-u-pad {
   padding: $space-inset-m !important;
 }
 
-.drizzle-u-OverflowHidden {
+.#{$app-namespace}-u-OverflowHidden {
   overflow: hidden !important;
 }

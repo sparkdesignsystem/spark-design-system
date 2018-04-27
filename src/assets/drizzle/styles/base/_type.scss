@@ -1,4 +1,4 @@
-.drizzle-b-Body {
+.#{$app-namespace}-b-Body {
   font-size: 1rem;
   line-height: 1.563;
 }
@@ -6,26 +6,26 @@
 
 body,
 p,
-.drizzle-b-h1,
-.drizzle-b-h2,
-.drizzle-b-h3,
-.drizzle-b-h4,
-.drizzle-b-h5,
-.drizzle-b-h6 {
+.#{$app-namespace}-b-h1,
+.#{$app-namespace}-b-h2,
+.#{$app-namespace}-b-h3,
+.#{$app-namespace}-b-h4,
+.#{$app-namespace}-b-h5,
+.#{$app-namespace}-b-h6 {
   font-family: "urw din";
 }
 
-.drizzle-b-P {
+.#{$app-namespace}-b-P {
   max-width: 640px;
   margin-bottom: 1rem;
 }
 
-.drizzle-b-h1 {
+.#{$app-namespace}-b-h1 {
   color: $black;
   font-size: 35px;
 }
 
-.drizzle-b-h2 {
+.#{$app-namespace}-b-h2 {
   color: $black;
   font-size: 20px;
   font-weight: bold;
@@ -34,7 +34,7 @@ p,
   margin-bottom: 1rem;
 }
 
-.drizzle-b-h3 {
+.#{$app-namespace}-b-h3 {
   color: $black;
   font-size: 16px;
   font-weight: bold;
@@ -43,7 +43,7 @@ p,
   margin-bottom: 0.5rem;
 }
 
-.drizzle-b-Label {
+.#{$app-namespace}-b-Label {
   color: $black;
   font-size: 16px;
   font-weight: bold;

@@ -1,4 +1,4 @@
-.drizzle-b-Button {
+.#{$app-namespace}-b-Button {
   background-color: $orange-medium;
   border-radius: 3px;
   color: $white;
@@ -11,6 +11,6 @@
   max-width: 300px;
 }
 
-.drizzle-b-Button:hover {
+.#{$app-namespace}-b-Button:hover {
   background-color: $orange-light;
 }

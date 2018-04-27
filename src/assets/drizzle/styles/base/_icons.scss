@@ -1,8 +1,8 @@
-.drizzle-b-Icon {
+.#{$app-namespace}-b-Icon {
   width: 1rem;
   margin: 3px;
 }
 
-.drizzle-b-Icon--small {
+.#{$app-namespace}-b-Icon--small {
   width: 0.75rem;
 }

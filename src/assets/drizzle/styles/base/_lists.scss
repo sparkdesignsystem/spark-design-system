@@ -1,10 +1,9 @@
-.drizzle-b-List {
-  list-style-position: inside;
+.#{$app-namespace}-b-List {
   list-style-type: none;
   margin-bottom: 1rem;
 }
 
-.drizzle-b-List--nested {
+.#{$app-namespace}-b-List--nested {
   margin-left: 1rem;
   list-style-type: circle;
 }

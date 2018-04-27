@@ -1,5 +1,5 @@
-.drizzle-b-Link,
-.drizzle-b-Link:visited {
+.#{$app-namespace}-b-Link,
+.#{$app-namespace}-b-Link:visited {
   color: $black;
 }
 
