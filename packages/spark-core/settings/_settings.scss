@@ -245,3 +245,17 @@ $media-gutter-small: $space-s;
 $media-gutter: $space-m;
 $media-gutter-large: $space-l;
 $media-gutter-huge: $space-xl;
+
+//
+// Stack Object
+//
+$stack-spacing-tiny: $space-xs;
+$stack-spacing-small: $space-s;
+$stack-spacing-medium: $space-m;
+$stack-spacing-large: $space-l;
+$stack-spacing-huge: $space-xl;
+$split-breakpoint-xs: 480px;
+$split-breakpoint-s: 680px;
+$split-breakpoint-m: 880px;
+$split-breakpoint-l: 1080px;
+$split-breakpoint-xl: 1280px;
