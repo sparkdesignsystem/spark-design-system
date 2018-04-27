@@ -1,0 +1,19 @@
+.#{$app-namespace}-c-Preview {
+  margin-bottom: 3rem;
+}
+
+.#{$app-namespace}-c-Preview__example {
+  border: 1px solid $gray-dark;
+  padding: $space-inset-s;
+
+  @media (min-width: 50rem) {
+    padding: $space-inset-xl;
+  }
+}
+
+.#{$app-namespace}-c-Preview__code code {
+  display: block;
+  font-size: 1rem;
+  max-width: 100%;
+}
+

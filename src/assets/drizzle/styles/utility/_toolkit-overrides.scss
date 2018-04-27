@@ -1,0 +1,42 @@
+.#{$app-namespace}-c-Preview .sprk-c-WideNavigation {
+  @media (max-width: 46rem) {
+    display: none;
+  }
+}
+
+.#{$app-namespace}-Test-Page .sprk-c-NarrowNavigation,
+.#{$app-namespace}-u-pad > nav .sprk-c-NarrowNavigation {
+  max-width: 320px;
+  position: static;
+}
+
+/* so that you can see the box */
+.#{$app-namespace}-c-Preview .sprk-o-Box {
+  border: 1px solid #ccc;
+}
+
+.#{$app-namespace}-c-Preview .sprk-o-CenteredColumn {
+  background-color: #ccc;
+  height: 4rem;
+}
+
+.#{$app-namespace}-c-Preview > .sprk-o-SideBySide .sprk-o-SideBySide__item {
+  background-color: #ccc;
+  height: 4rem;
+}
+
+.#{$app-namespace}-c-Logo-placeholder {
+  background-color: #ccc;
+  height: 75px;
+  width: 175px;
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__content {
+  position: static;
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-navigation-container {
+  position: static;
+  margin-top: -2px;
+}
+

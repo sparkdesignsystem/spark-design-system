@@ -1,0 +1,8 @@
+.#{$app-namespace}-c-Command {
+  background-color: $gray-light;
+  padding: 0.5rem 1rem;
+}
+
+.#{$app-namespace}-c-Command code {
+  font-size: 0.9rem;
+}

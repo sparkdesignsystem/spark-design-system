@@ -1,0 +1,16 @@
+.#{$app-namespace}-b-Button {
+  background-color: $orange-medium;
+  border-radius: 3px;
+  color: $white;
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  max-width: 300px;
+}
+
+.#{$app-namespace}-b-Button:hover {
+  background-color: $orange-light;
+}

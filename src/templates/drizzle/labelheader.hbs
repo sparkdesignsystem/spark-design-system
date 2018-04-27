@@ -1,23 +1,8 @@
-<{{tag}} {{#if id}}id="{{id}}"{{/if}} class="
-  drizzle-{{tag}}
-  drizzle-u-inlineBlock
-  drizzle-u-alignMiddle
-  drizzle-u-padRight">
+<{{tag}} {{#if id}} id="{{id}}"{{/if}} class="
+  drizzle-b-{{tag}}">
   {{#if id}}
-    <a href="#{{id}}" class="drizzle-u-linkHidden">{{> @partial-block }}</a>
+    <a href="#{{id}}" class="drizzle-u-linkHidden drizzle-b-Link">{{> @partial-block }}</a>
   {{else}}
     {{> @partial-block }}
   {{/if}}
 </{{tag}}>
-{{#if labels}}
-  <ul class="
-    drizzle-u-inlineBlock
-    drizzle-u-alignMiddle
-    drizzle-u-listUnstyled">
-    {{#each labels as |label|}}
-      <li class="drizzle-Label drizzle-Label--{{label}}">
-        {{label}}
-      </li>
-    {{/each}}
-  </ul>
-{{/if}}

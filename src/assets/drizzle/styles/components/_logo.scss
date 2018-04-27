@@ -1,0 +1,10 @@
+.#{$app-namespace}-c-Logo {
+  max-width: 250px;
+  @media (min-width: 60rem) {
+    max-width: 398px;
+  }
+}
+
+.#{$app-namespace}-c-Logo--small {
+  width: 35px;
+}

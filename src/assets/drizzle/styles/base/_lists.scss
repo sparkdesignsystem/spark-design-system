@@ -1,0 +1,9 @@
+.#{$app-namespace}-b-List {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.#{$app-namespace}-b-List--nested {
+  margin-left: 1rem;
+  list-style-type: circle;
+}

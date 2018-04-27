@@ -1,0 +1,53 @@
+.#{$app-namespace}-b-Body {
+  font-size: 1rem;
+  line-height: 1.563;
+}
+
+
+body,
+p,
+.#{$app-namespace}-b-h1,
+.#{$app-namespace}-b-h2,
+.#{$app-namespace}-b-h3,
+.#{$app-namespace}-b-h4,
+.#{$app-namespace}-b-h5,
+.#{$app-namespace}-b-h6 {
+  font-family: "urw din";
+}
+
+.#{$app-namespace}-b-P {
+  max-width: 640px;
+  margin-bottom: 1rem;
+}
+
+.#{$app-namespace}-b-h1 {
+  color: $black;
+  font-size: 35px;
+}
+
+.#{$app-namespace}-b-h2 {
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.#{$app-namespace}-b-h3 {
+  color: $black;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.#{$app-namespace}-b-Label {
+  color: $black;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}

@@ -1,33 +1,38 @@
 {{!-- Nav item partial --}}
 {{#*inline "nav-item"}}
-  <a class="drizzle-Nav-item drizzle-copy" href="{{@root.baseurl}}/{{url}}">
+  <a class="drizzle-c-Navigation__item drizzle-copy" href="{{@root.baseurl}}/{{url}}">
     {{label}}
   </a>
 {{/inline}}
 
-<div class="drizzle-Layout-nav drizzle-Nav" id="nav">
-  <div class="drizzle-Nav-header">
-    <a href="{{@root.baseurl}}/">
-      {{> drizzle.logo}}
-    </a>
-    <a class="drizzle-Nav-header-toggle" href="#nav">
+<div class=" drizzle-o-Layout__nav drizzle-c-Navigation" id="nav">
+  <div class="drizzle-c-Navigation__header">
+    <div class="drizzle-c-Logo drizzle-c-Logo--small">
+      <a href="{{@root.baseurl}}/">
+        {{> drizzle.small-logo}}
+      </a>
+    </div>
+    <a class="drizzle-c-Navigation__header-toggle" href="#nav">
       <svg viewBox="-1 -1 12 7" width="16" height="16">
         <polyline fill="none" stroke="currentColor" stroke-width="2" points="0 0 5 5 10 0"/>
       </svg>
     </a>
   </div>
-  <div class="drizzle-Nav-main" id="nav-menu">
-    {{!-- Top-level pages --}}
-    <ul class="drizzle-Nav-menu">
-      {{#each (pages sortby="order")}}
+  <div class="drizzle-c-Navigation__main" id="nav-menu" data-filtered="navList">
+    <label class="drizzle-u-ScreenReaderText" for="filter">Filter</label>
+    <input class="drizzle-b-TextInput drizzle-b-TextInput--filter" id="filter" type="text" placeholder="Filter" data-filter="navList">
+    {{!-- Getting Started --}}
+    <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Getting Started</h5>
+    <ul class="drizzle-c-Navigation__menu">
+      {{#each (pages "gettingstarted")}}
         <li>
           {{> nav-item label=data.title}}
         </li>
       {{/each}}
     </ul>
     {{!-- Fundementals --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Fundamentals</h5>
-    <ul class="drizzle-Nav-menu">
+    <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Fundamentals</h5>
+    <ul class="drizzle-c-Navigation__menu">
       {{#each (collections "fundamentals")}}
         <li>
           {{> nav-item label=name}}
@@ -35,8 +40,8 @@
       {{/each}}
     </ul>
     {{!-- Components --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Components</h5>
-    <ul class="drizzle-Nav-menu">
+    <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Components</h5>
+    <ul class="drizzle-c-Navigation__menu">
       {{#each (collections "components")}}
         <li>
           {{> nav-item label=name}}
@@ -44,8 +49,8 @@
       {{/each}}
     </ul>
     {{!-- Other pages --}}
-    <h5 class="drizzle-Nav-item drizzle-h5">Documentation</h5>
-    <ul class="drizzle-Nav-menu">
+    <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Documentation</h5>
+    <ul class="drizzle-c-Navigation__menu">
       {{#each (pages "docs" ignore="index")}}
         <li>
           {{> nav-item label=data.title}}

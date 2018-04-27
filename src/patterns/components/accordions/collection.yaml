@@ -1,8 +1,25 @@
-notes: |
+description: |
   An Accordion is a simple way of showing, hiding and breaking down content.
   It helps to make content easier to find because it allows the content to be broken up.
-info:
+information:
   - Content length inside the accordion does not have a limit.
   - Title content of the accordion can wrap, but it is recommended that it is short and to the point.
   - Accordions take up 100% width of their parent container until they hit their max width of 850px.
+links:
+  Example1:
+    external: true
+    href: https://www.google.com
+  Example2:
+    external: false
+    href: https://www.google.com
+restrictions:
+  - This is an example restriction.
+  - This is another example restriction.
+  - This is an example.
+contents:
+  Example1: https://www.google.com
+  Example2: https://www.google.com
+  Example3: https://www.google.com
+  Example4: https://www.google.com
+  Example5: https://www.google.com
 sparkPackageCore: true
