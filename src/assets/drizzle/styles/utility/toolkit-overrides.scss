@@ -1,4 +1,4 @@
-.#{$app-namespace}-u-pad .sprk-c-WideNavigation {
+.#{$app-namespace}-c-Preview .sprk-c-WideNavigation {
   @media (max-width: 46rem) {
     display: none;
   }
@@ -11,16 +11,16 @@
 }
 
 /* so that you can see the box */
-.#{$app-namespace}-u-pad .sprk-o-Box {
+.#{$app-namespace}-c-Preview .sprk-o-Box {
   border: 1px solid #ccc;
 }
 
-.#{$app-namespace}-u-pad .sprk-o-CenteredColumn {
+.#{$app-namespace}-c-Preview .sprk-o-CenteredColumn {
   background-color: #ccc;
   height: 4rem;
 }
 
-.#{$app-namespace}-u-pad > .sprk-o-SideBySide .sprk-o-SideBySide__item {
+.#{$app-namespace}-c-Preview > .sprk-o-SideBySide .sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
 }
@@ -31,11 +31,11 @@
   width: 175px;
 }
 
-.#{$app-namespace}-u-pad .sprk-c-Masthead__content {
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__content {
   position: static;
 }
 
-.#{$app-namespace}-u-pad .sprk-c-Masthead__narrow-navigation-container {
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-navigation-container {
   position: static;
   margin-top: -2px;
 }
