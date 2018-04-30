@@ -1,1 +1,13 @@
 language: node_js
+
+install:
+- npm install
+- npm install --prefix ./packages/spark-core
+
+before_script:
+- npm run test --prefix ./packages/spark-core
+
+cache:
+  directories:
+    - node_modules
+    - packages/spark-core/node_modules
