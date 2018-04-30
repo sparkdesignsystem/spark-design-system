@@ -1,0 +1,53 @@
+---
+name: Base
+notes: |
+  The footer is intended to be used at the bottom of every page.
+info:
+  - Some screen readers do not announce the footer landmark role so we add role="contentinfo" to the footer HTML element.
+order: 1
+---
+<p class="sprk-o-Stack__item sprk-b-TypeBodyThree">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+  non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+</p>
+
+{{!-- Small awards or icons (limit 5) --}}
+<div class="sprk-o-Stack__item">
+  <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+    <div class="sprk-o-Stack__item">
+      <a href="#">
+        <div class="drizzle-c-Logo-placeholder"></div>
+        <span class="sprk-u-VisuallyHidden">Description of image</span>
+      </a>
+    </div>
+
+    <div class="sprk-o-Stack__item">
+      <a href="#">
+        <div class="drizzle-c-Logo-placeholder"></div>
+        <span class="sprk-u-VisuallyHidden">Description of image</span>
+      </a>
+    </div>
+
+    <div class="sprk-o-Stack__item">
+      <a href="#">
+        <div class="drizzle-c-Logo-placeholder"></div>
+        <span class="sprk-u-VisuallyHidden">Description of image</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{{!-- Legal Links limit to 8 --}}
+<ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium">
+  <li>
+    <a class="sprk-b-Link sprk-b-Link--standalone sprk-c-Footer__legal-link" href="#">Link 1</a>
+  </li>
+
+  <li>
+    <a class="sprk-b-Link sprk-b-Link--standalone sprk-c-Footer__legal-link" href="#">Link 2</a>
+  </li>
+
+  <li>
+    <a class="sprk-b-Link sprk-b-Link--standalone sprk-c-Footer__legal-link" href="#">Link 3</a>
+  </li>
+</ul>
