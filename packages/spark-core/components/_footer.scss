@@ -1,0 +1,42 @@
+// ==================================================================
+// Footer
+// ==================================================================
+
+//
+// Available Variables
+///
+$footer-breakpoint: 53.125rem;
+
+.sprk-c-Footer {
+  padding: $space-m;
+}
+
+.sprk-c-Footer__cols {
+  flex-direction: column;
+
+  @media all and (min-width: $footer-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.sprk-c-Footer__col {
+  margin-bottom: $space-m;
+
+  @media all and (min-width: $footer-breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+.sprk-c-Footer__legal-link {
+  color: $gray-dark;
+
+  &:visited {
+    color: $gray-dark;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $gray-dark;
+  }
+}

@@ -7,12 +7,139 @@ restrictions:
   - The top links section is resticted to a maximum of 56 links in three columns.
 order: 2
 ---
-<footer class="sprk-o-Box sprk-o-Stack sprk-o-Stack--medium" role="contentinfo">
-  <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
-    non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
-  </p>
+<footer class="sprk-c-Footer sprk-o-Stack sprk-o-Stack--medium" role="contentinfo">
+  {{!-- Optional Columns of links (max 3) --}}
+  <div class="sprk-o-Stack__item sprk-o-SideBySide sprk-c-Footer__cols">
+    <div class="sprk-o-SideBySide__item sprk-c-Footer__col">
+      <h5>
+        Column One
+      </h5>
 
+      <ul class="sprk-o-VerticalList sprk-o-VerticalList--spacing-medium">
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 1</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 2</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 3</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 4</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 5</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 6</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 7</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 8</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 9</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 10</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sprk-o-SideBySide__item sprk-c-Footer__col">
+      <h5>
+        Column Two
+      </h5>
+
+      <ul class="sprk-o-VerticalList sprk-o-VerticalList--spacing-medium">
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 1</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 2</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 3</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 4</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 5</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 6</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 7</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 8</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 9</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 10</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sprk-o-SideBySide__item sprk-c-Footer__col">
+      <h5>
+        Column Three
+      </h5>
+
+      <ul class="sprk-o-VerticalList sprk-o-VerticalList--spacing-medium">
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 1</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 2</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 3</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 4</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 5</a>
+        </li>
+
+        <li>
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Link 6</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  {{!-- Optional Social links/icons --}}
   <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium">
     <li>
       <a class="sprk-b-TypeBodyTwo" href="#">
@@ -37,64 +164,80 @@ order: 2
         </svg>
       </a>
     </li>
+
+    <li>
+      <a class="sprk-b-TypeBodyTwo" href="#">
+        <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+          <use xlink:href="#youtube" />
+        </svg>
+      </a>
+    </li>
   </ul>
 
+  {{!-- Optional Feedback Links --}}
   <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium">
     <li>
-      <a href="#">
-        <svg class="sprk-c-Icon" viewBox="0 0 512 512">
-          <use xlink:href="#envelope" />
-        </svg>
-        Feedback 1
-      </a>
-    </li>
+      <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+        <div class="sprk-o-Flag">
+          <div class="sprk-o-Flag__figure">
+            <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 512 512">
+              <use xlink:href="#paper-plane" />
+            </svg>
+          </div>
 
-    <li>
-      <a href="#">
-        <svg class="sprk-c-Icon" viewBox="0 0 512 512">
-          <use xlink:href="#envelope" />
-        </svg>
-        Feedback 2
+          <div class="sprk-o-Flag__body sprk-b-TypeBodyThree">
+            <p>Ideas? Opinions? Tell us what you think!</p>
+            <p>We Want Your Feedback</p>
+          </div>
+        </div>
       </a>
     </li>
   </ul>
 
+  {{!-- Content --}}
+  <p class="sprk-o-Stack__item sprk-b-TypeBodyThree">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+    non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+  </p>
+
+  {{!-- Small awards or icons (limit 5) --}}
   <div class="sprk-o-Stack__item">
     <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
       <div class="sprk-o-Stack__item">
         <a href="#">
           <div class="drizzle-c-Logo-placeholder"></div>
-          <span class="sprk-u-VisuallyHidden">Go to the award page</span>
+          <span class="sprk-u-VisuallyHidden">Description of image</span>
         </a>
       </div>
 
       <div class="sprk-o-Stack__item">
         <a href="#">
           <div class="drizzle-c-Logo-placeholder"></div>
-          <span class="sprk-u-VisuallyHidden">Go to the award page</span>
+          <span class="sprk-u-VisuallyHidden">Description of image</span>
         </a>
       </div>
 
       <div class="sprk-o-Stack__item">
         <a href="#">
           <div class="drizzle-c-Logo-placeholder"></div>
-          <span class="sprk-u-VisuallyHidden">Go to the award page</span>
+          <span class="sprk-u-VisuallyHidden">Description of image</span>
         </a>
       </div>
     </div>
   </div>
 
+  {{!-- Legal Links limit to 8 --}}
   <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium">
     <li>
-      <a href="">Link 1</a>
+      <a class="sprk-b-Link sprk-b-Link--standalone sprk-c-Footer__legal-link" href="#">Link 1</a>
     </li>
 
     <li>
-      <a href="">Link 2</a>
+      <a class="sprk-b-Link sprk-b-Link--standalone sprk-c-Footer__legal-link" href="#">Link 2</a>
     </li>
 
     <li>
-      <a href="">Link 3</a>
+      <a class="sprk-b-Link sprk-b-Link--standalone sprk-c-Footer__legal-link" href="#">Link 3</a>
     </li>
   </ul>
 </footer>
