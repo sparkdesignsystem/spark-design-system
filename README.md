@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sparkdesignsystem/spark-design-system.svg?branch=staging)](https://travis-ci.org/sparkdesignsystem/spark-design-system)
+
 # WARNING
 
 ### Spark is currently in `alpha`. It is subject to changes of all sizes at any time and not suitable for production use. Please reach out to the [Spark team](mailto:sparkdesignsystem@quickenloans.com) for guidance.
