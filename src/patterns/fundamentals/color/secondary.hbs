@@ -1,0 +1,15 @@
+---
+sparkCore: true
+doclayout: true
+order: 2
+description: These colors are available to be used, but the balance of color usage should always shift toward primary
+  first.
+---
+
+<div class="drizzle-c-SwatchLayout">
+  {{#each (data "colors")}}
+    {{#each this.Secondary}}
+      {{> drizzle.swatch }}
+    {{/each}}
+  {{/each}}
+</div>

@@ -1,0 +1,14 @@
+---
+sparkCore: true
+doclayout: true
+order: 3
+description: These are the available shades of white, black, and grey.
+---
+
+<div class="drizzle-c-SwatchLayout">
+  {{#each (data "colors")}}
+    {{#each this.Greyscale}}
+      {{> drizzle.swatch }}
+    {{/each}}
+  {{/each}}
+</div>

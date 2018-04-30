@@ -1,31 +1,37 @@
 ---
 name: Stack Object
+doclayout: true
 notes: The Stack object lays items out in a column and can be modified to lay items out in a row at a certain breakpoint.
 order: 6
 ---
-<div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-  <div class="sprk-o-Stack__item">
-    <button class="sprk-c-Button">Button 1</button>
+<div class="drizzle-c-Preview">
+  <div class="drizzle-c-Preview__example">
+    <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
+      <div class="sprk-o-Stack__item">
+        <button class="sprk-c-Button">Button 1</button>
+      </div>
+      <div class="sprk-o-Stack__item">
+        <button class="sprk-c-Button">Button 2</button>
+      </div>
+    </div>
   </div>
-  <div class="sprk-o-Stack__item">
-    <button class="sprk-c-Button">Button 2</button>
+  <div class="drizzle-c-Preview__code">
+    <pre class="drizzle-u-borderTop drizzle-u-pad">
+      <code class="language-markup">
+        // Responsive Modifier Classes
+        .sprk-o-Stack--split@xs
+        .sprk-o-Stack--split@s
+        .sprk-o-Stack--split@m
+        .sprk-o-Stack--split@l
+        .sprk-o-Stack--split@xl
+
+        // Spacing Modifier Classes
+        .sprk-o-Stack--tiny
+        .sprk-o-Stack--small
+        .sprk-o-Stack--medium
+        .sprk-o-Stack--large
+        .sprk-o-Stack--huge
+      </code>
+  </pre>
   </div>
 </div>
-
-<pre class="drizzle-u-borderTop drizzle-u-pad">
-  <code class="language-markup">
-    // Responsive Modifier Classes
-    .sprk-o-Stack--split@xs
-    .sprk-o-Stack--split@s
-    .sprk-o-Stack--split@m
-    .sprk-o-Stack--split@l
-    .sprk-o-Stack--split@xl
-
-    // Spacing Modifier Classes
-    .sprk-o-Stack--tiny
-    .sprk-o-Stack--small
-    .sprk-o-Stack--medium
-    .sprk-o-Stack--large
-    .sprk-o-Stack--huge
-  </code>
-</pre>

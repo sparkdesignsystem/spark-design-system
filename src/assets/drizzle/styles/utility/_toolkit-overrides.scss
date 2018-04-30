@@ -11,7 +11,7 @@
 }
 
 /* so that you can see the box */
-.#{$app-namespace}-c-Preview .sprk-o-Box {
+.#{$app-namespace}-c-Preview__example .sprk-o-Box {
   border: 1px solid #ccc;
 }
 
@@ -20,7 +20,7 @@
   height: 4rem;
 }
 
-.#{$app-namespace}-c-Preview > .sprk-o-SideBySide .sprk-o-SideBySide__item {
+.#{$app-namespace}-c-Preview__example > .sprk-o-SideBySide .sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
 }
