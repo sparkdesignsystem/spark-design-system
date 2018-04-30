@@ -1,4 +1,4 @@
-notes: |
+description: |
   A simple way of showing, hiding and breaking down lengthy content. This component has a clickable or tappable
   link that shows or hides a block of content underneath it.
 info:

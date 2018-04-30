@@ -1,4 +1,4 @@
-notes: |
+description: |
   Pagination provides a way to separate a large portion of content into smaller portions.
   It serves as navigation and informs users where they are currently and where they
   can go in the future.

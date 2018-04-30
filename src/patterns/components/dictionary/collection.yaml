@@ -1,4 +1,4 @@
-notes: |
+description: |
   This spark-extras component is intended for displays of key-value pairs.
 restrictions:
    - Each key must only have one value.

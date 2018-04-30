@@ -1,4 +1,4 @@
-notes:
+description:
   The different button types available in Spark are Primary, Secondary,
   Tertiary, Submission, Diasabled, and Remove. A button should always
   trigger an action or something that changes the current state. For example,

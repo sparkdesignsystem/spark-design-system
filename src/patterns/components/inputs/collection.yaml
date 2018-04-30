@@ -1,5 +1,5 @@
 name: Inputs
-notes: |
+description: |
   Examples of form elements.
 contents:
   Text Input: inputs.html#text-input
