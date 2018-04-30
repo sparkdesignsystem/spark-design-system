@@ -60,3 +60,12 @@ p,
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
+
+.#{$app-namespace}-b-LongFormText p {
+  max-width: 640px;
+  margin-bottom: 1rem;
+}
+
+.#{$app-namespace}-b-LongFormText .drizzle-b-List p {
+  margin: 0;
+}

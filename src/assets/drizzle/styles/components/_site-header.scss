@@ -2,9 +2,9 @@
   background-color: $black;
   background-image: url('/assets/toolkit/images/wires.jpg');
   background-size: cover;
-  padding: 5.5rem 0;
+  padding: 8.5rem 0 5.5rem 0;
 
-  @media (min-width: 60rem) {
+  @media (min-width: $nav-switch-breakpoint) {
     padding: 10.5rem 0;
   }
 }

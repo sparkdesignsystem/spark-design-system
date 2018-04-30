@@ -6,37 +6,42 @@
 .#{$app-namespace}-c-Navigation__header {
   background: $nav-background-color;
   color: white;
+  display: flex;
+  justify-content: space-between;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
 
-  @media (min-width: 60rem) {
+  @media (min-width: $nav-switch-breakpoint) {
     padding: 4rem 0 2rem 0;
+    position: static;
+    width: $layout-nav-width;
   }
 }
 
-.#{$app-namespace}-c-Navigation__header .#{$app-namespace}-c-Logo--small {
-  margin: 0 auto;
+.#{$app-namespace}-c-Navigation__logo {
+  flex: calc(100% - 16px);
+
+  @media (min-width: $nav-switch-breakpoint) {
+    margin: 0;
+    text-align: center;
+  }
 }
 
-.#{$app-namespace}-c-Navigation__header-toggle {
-  position: absolute;
-  width: 1rem;
-  top: 0;
-  right: 0;
-  bottom: 0;
+.#{$app-namespace}-c-Navigation__toggle-icon {
+  text-align: right;
+
+  & a {
+    padding: 1rem;
+  }
 
   @media (min-width: $nav-switch-breakpoint) {
     display: none;
   }
-
-  & > svg {
-    color: $white;
-    fill: $white;
-    float: right;
-    margin: 1.5rem;
-  }
 }
 
-.#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__header-toggle svg{
+
+.#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__toggle-icon svg {
   transform: rotate(180deg);
 }
 
