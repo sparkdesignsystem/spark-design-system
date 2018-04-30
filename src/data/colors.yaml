@@ -1,4 +1,4 @@
-Primary:
+- Primary:
   - label: Blue Dark
     color: "#0C4569"
     property: "$blue-dark"
@@ -9,7 +9,7 @@ Primary:
     color: "#C3D3E3"
     property: "$blue-light"
 
-Secondary:
+- Secondary:
   - label: Red Dark
     color: "#8C181D"
     property: "$red-dark"
@@ -41,7 +41,7 @@ Secondary:
     color: "#D3EF8D"
     property: "$green-light"
 
-Neutral:
+- Greyscale:
   - label: Black
     color: "#222222"
     property: "$black"

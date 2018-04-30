@@ -1,4 +1,4 @@
-notes: |
+description: |
   Modals are displayed over the top of all other content.
   There are three different UI types of modals, Choice, Wait and Info. Spark supplies JS to
   open and close modals that works when certain data attributes are added (identified below).

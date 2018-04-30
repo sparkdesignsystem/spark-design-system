@@ -1,47 +1,59 @@
 ---
 name: Typekit Setup
 order: 11
-sourceless: true
 doclayout: true
 ---
-<div class="drizzle-u-rhythm">
-    <p>In order to implement Spark-Core, you'll need to create a
-        kit on <a href="https://typekit.com">Typekit.com</a> for your application.</p>
+<div class="drizzle-o-ContentGrouping">
+  <p class="drizzle-b-P">In order to implement Spark-Core, you'll need to create a
+        kit on <a class="drizzle-b-Link" href="https://typekit.com">Typekit.com</a> for your application.</p>
 
-    <p>Need access to typekit for your internal Quicken Loans application? Email
-      <a href="mailto:sparkdesignsystem@quickenloans.com">sparkdesignsystem@quickenloans.com</a></p>
+  <p class="drizzle-b-P">Need access to typekit for your internal Quicken Loans application? Email
+    <a class="drizzle-b-Link" href="mailto:sparkdesignsystem@quickenloans.com">sparkdesignsystem@quickenloans.com</a>
+  </p>
 
-    <p>The kit should include two font families, but you should only add the listed weights. We
-      currently do not use italics in our type treatment.</p>
-    <ul class="drizzle-b-List">
-      <li class="drizzle-b-List__item"><a href="https://typekit.com/fonts/myriad">Myriad Pro</a>
-        <ul class="drizzle-b-List drizzle-b-List--nested">
-          <li class="drizzle-b-List__item">Regular (400)</li>
-          <li class="drizzle-b-List__item">Bold (700)</li>
-        </ul>
-      </li>
-      <li class="drizzle-b-List__item"><a href="https://typekit.com/fonts/quatro-slab">Quatro Slab</a>
-        <ul class="drizzle-b-List drizzle-b-List--nested">
-          <li class="drizzle-b-List__item">Regular (400)</li>
-          <li class="drizzle-b-List__item">Bold (700)</li>
-        </ul>
-      </li>
-    </ul>
+  <p class="drizzle-b-P">The kit should include two font families, but you should only add the listed weights. We
+    currently do not use italics in our type treatment.</p>
 
-    <p>Please see <a href="/patterns/elements/typography.html">Typography</a> for font usage.</p>
-    <h3 class="drizzle-b-h3" id="typekit-loader">Loader</h3>
-    <p>You'll need to include the following snippet into your
+  <ul class="drizzle-b-List">
+    <li class="drizzle-b-List__item">
+      <a class="drizzle-b-Link drizzle-b-Label" href="https://typekit.com/fonts/myriad">Myriad Pro</a>
+      <ul class="drizzle-b-List drizzle-b-List--nested">
+        <li class="drizzle-b-List__item">Regular (400)</li>
+        <li class="drizzle-b-List__item">Bold (700)</li>
+      </ul>
+    </li>
+    <li class="drizzle-b-List__item">
+      <a class="drizzle-b-Link drizzle-b-Label" href="https://typekit.com/fonts/quatro-slab">Quatro Slab</a>
+      <ul class="drizzle-b-List drizzle-b-List--nested">
+        <li class="drizzle-b-List__item">Regular (400)</li>
+        <li class="drizzle-b-List__item">Bold (700)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p class="drizzle-b-P">Please see
+    <a class="drizzle-b-Link" href="/patterns/elements/typography.html">Typography</a> for font usage.
+  </p>
+</div>
+
+<div class="drizzle-o-ContentGrouping">
+  <h3 class="drizzle-b-h3" id="typekit-loader">Typekit Loader</h3>
+  <p class="drizzle-b-P">You'll need to include the following snippet into your
         site's code. Spark includes fallback font definitions, so
         it's recommended that you include it before the closing
         tag, in order to avoid render blocking.</p>
-    <p><strong>You'll need to insert your new kit's id into the snippet below.</strong></p>
-    <p>Included in the code below is an event that gets dispatched when the fonts
-        have finished loading ('fonts-active').</p>
-    <pre><code class="language-javascript">(function(d) {
+  <p class="drizzle-b-P"><strong>You'll need to insert your new kit's id into the snippet below.</strong></p>
+  <p class="drizzle-b-P">Included in the code below is an event that gets dispatched when the fonts
+      have finished loading ('fonts-active').</p>
+  <div class="drizzle-c-Preview">
+    <pre class="drizzle-c-Preview__code">
+      <code class="language-javascript">
+  (function(d) {
     var config = {
-        kitId: '&lt;your-kit-id-here&gt;',
-        scriptTimeout: 3000,
+      kitId: '&lt;your-kit-id-here&gt;',
+      scriptTimeout: 3000,
       active: function () {
+
         // Create the event.
         var event = document.createEvent('Event');
         event.initEvent('fonts-active', true, true);
@@ -49,16 +61,20 @@ doclayout: true
       }
     },
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&amp;&amp;a!="complete"&amp;&amp;a!="loaded")return;f=true;clearTimeout(t);try{
-      Typekit.load(config)}catch(e){}};
-  s.parentNode.insertBefore(tk,s)
-})(document);
-</code></pre>
+    Typekit.load(config)}catch(e){}};
+    s.parentNode.insertBefore(tk,s)
+  })(document);
+      </code>
+    </pre>
+  </div>
+</div>
 
+<div class="drizzle-o-ContentGrouping">
   <h3 class="drizzle-b-h3" id="fallback-fonts">Fallback fonts</h3>
-    <p>In the event that a client has issues loading typefaces from typekit, we've defined the
+    <p class="drizzle-b-P">In the event that a client has issues loading typefaces from typekit, we've defined the
         following system and web-safe typefaces that will be used in their place:</p>
     <h4 class="drizzle-b-h4" id="headings">Headings</h4>
-    <ul class="drizzle-b-List">
+    <ul class="drizzle-b-List drizzle-b-List--nested">
         <li class="drizzle-b-List__item">Garamond</li>
         <li class="drizzle-b-List__item">Hoefler Text</li>
         <li class="drizzle-b-List__item">Times New Roman</li>
@@ -66,7 +82,7 @@ doclayout: true
         <li class="drizzle-b-List__item">serif</li>
     </ul>
     <h4 class="drizzle-b-h4" id="body-copy">Body Copy</h4>
-    <ul class="drizzle-b-List">
+    <ul class="drizzle-b-List drizzle-b-List--nested">
         <li class="drizzle-b-List__item">Helvetica</li>
         <li class="drizzle-b-List__item">Helvetica Neue</li>
         <li class="drizzle-b-List__item">Arial</li>

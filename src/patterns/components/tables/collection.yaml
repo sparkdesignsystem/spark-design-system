@@ -1,5 +1,5 @@
 name: Tables
-notes: |
+description: |
   Tables should be used for tabular data that is intended for comparison. If your data is only label value pairs, consider
   the dictionary component instead. The table patterns here will squish the spacing to some degree, but will mostly preserve
   their width on narrow viewports. The tables will become scrollable if the content overflows. If your content does not

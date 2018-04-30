@@ -1,7 +1,7 @@
-notes: |
+description: |
   A simple way of showing, hiding and breaking down lengthy content. This component has a clickable or tappable
   link that shows or hides a block of content underneath it.
-info:
+information:
   - Icon will always appear on the left side of the Toggle followed by the Toggle title
   - The icon and the title of the Toggle will both open and close the content when clicked or tapped
   - Toggles will look and function the same in all viewports

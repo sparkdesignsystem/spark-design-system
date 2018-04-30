@@ -1,4 +1,4 @@
-notes: |
+description: |
   Text links should take the user to a
   new place or change the view the user is on. Links use the medium
   blue brand color for their idle and hover states while using the dark blue brand color for the visited state.
