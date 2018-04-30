@@ -1,2 +1,3 @@
-notes: |
+description: These are layout patterns provided by Spark-Core, for use in constructing custom components. They make use of
+  standard sizing settings.
 sparkPackageCore: true

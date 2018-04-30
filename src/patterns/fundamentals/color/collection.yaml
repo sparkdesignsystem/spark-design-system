@@ -1,1 +1,3 @@
+description: These are the brand colors defined by Spark-Core. Most patterns will make use of them automatically, but in case
+  of custom implementation, see below for usage guidelines.
 sparkPackageCore: true
