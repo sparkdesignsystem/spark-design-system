@@ -4,7 +4,7 @@
 }
 
 .#{$app-namespace}-o-Layout__main {
-  @media (min-width: 60rem) {
+  @media (min-width: $nav-switch-breakpoint) {
     width: $layout-main-width;
     margin-left: $layout-nav-width;
   }
@@ -14,7 +14,7 @@
   max-width: 1024px;
   padding: 0 2rem;
 
-  @media (min-width: 60rem) {
+  @media (min-width: $nav-switch-breakpoint) {
      padding: 0;
      margin: 120px 2rem 2rem 2rem;
   }
@@ -31,7 +31,7 @@
 }
 
 .#{$app-namespace}-o-Layout__nav {
-  @media (min-width: 60rem) {
+  @media (min-width: $nav-switch-breakpoint) {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -49,11 +49,11 @@
   background-color: $highlight;
   color: $white;
   margin-bottom: 20px;
-  padding: 2rem 0 1.8rem 2rem;
-  left: $layout-nav-width;
+  padding: 90px 0 1.8rem 2rem;
   width: 100%;
 
-  @media ( min-width: 60rem) {
+  @media ( min-width: $nav-switch-breakpoint) {
+    padding: 1.8rem 0 1.8rem 2rem;
     position: fixed;
     top: 0;
     z-index: 3000;
