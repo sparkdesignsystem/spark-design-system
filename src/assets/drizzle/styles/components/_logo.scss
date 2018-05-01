@@ -5,6 +5,11 @@
   }
 }
 
+.#{$app-namespace}-c-Logo img {
+  width: 100%;
+}
+
 .#{$app-namespace}-c-Logo--small {
+  height: 35px;
   width: 35px;
 }
