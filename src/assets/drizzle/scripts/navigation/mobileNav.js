@@ -14,6 +14,7 @@ const focusTrap = (nav, mainNav) => {
 
 const bindUIEvents = () => {
   const nav = document.querySelector('.drizzle-o-Layout__nav');
+  if (nav === null) return;
   const mainNav = nav.querySelector('.drizzle-c-Navigation__main');
   const mainLayout = document.querySelector('.drizzle-o-Layout__main');
 
