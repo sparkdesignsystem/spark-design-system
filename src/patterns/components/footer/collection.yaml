@@ -1,6 +1,4 @@
-notes: |
-  The footer has a set of base content that is to be used in addition to the optional content pieces.
-restrictions:
-  - The badges section is resticted to a maximum of 5 badges.
-  - The bottom link section is resticted to a maximum of 8 links.
+description: |
+  The footer has a set of required base items.
+  In addition to the base items there are a few different optional items to choose from.
 sparkPackageCore: true
