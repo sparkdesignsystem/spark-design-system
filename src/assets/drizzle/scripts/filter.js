@@ -2,7 +2,7 @@
 import getElements from '../../../../packages/spark-core/utilities/getElements';
 
 const filterList = (listName, value) => {
-  const list = document.querySelector(`[data-filtered=${listName}`);
+  const list = document.querySelector(`[data-filtered="${listName}"]`);
   const items = list.querySelectorAll('a');
   items.forEach((item) => {
     item.classList.add('sprk-u-Hide');
