@@ -30,17 +30,3 @@ $footer-breakpoint: 53.125rem;
     margin-bottom: 0;
   }
 }
-
-.sprk-c-Footer__muted-link {
-  color: $gray-dark;
-
-  &:visited {
-    color: $gray-dark;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $gray-dark;
-  }
-}
