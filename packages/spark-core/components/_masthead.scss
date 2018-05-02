@@ -51,6 +51,7 @@ $mobile-masthead-height: 6.7rem !default;
 
 .sprk-c-Masthead__hamburger {
   margin-right: $space-m;
+
   @media all and (min-width: $main-nav-breakpoint) {
     display: none;
   }
