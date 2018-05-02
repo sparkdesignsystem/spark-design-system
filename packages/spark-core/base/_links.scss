@@ -32,6 +32,20 @@
   }
 }
 
+.sprk-b-Link--muted {
+  color: $gray-dark;
+
+  &:visited {
+    color: $gray-dark;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $gray-dark;
+  }
+}
+
 .sprk-b-Link--disabled {
   color: $gray-medium;
   pointer-events: none;

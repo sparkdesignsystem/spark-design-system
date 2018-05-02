@@ -184,7 +184,7 @@ $btn-hover-background-color: $green-dark;
 $btn-hover-text-color: $white;
 $btn-padding: $space-inset-short-l;
 $btn-text-color: $white;
-$btn-breakpoint: 30em;
+$btn-breakpoint: 30rem;
 $btn-transition-speed: 0.3s;
 
 //
@@ -245,3 +245,17 @@ $media-gutter-small: $space-s;
 $media-gutter: $space-m;
 $media-gutter-large: $space-l;
 $media-gutter-huge: $space-xl;
+
+//
+// Stack Object
+//
+$stack-spacing-tiny: $space-xs;
+$stack-spacing-small: $space-s;
+$stack-spacing-medium: $space-m;
+$stack-spacing-large: $space-l;
+$stack-spacing-huge: $space-xl;
+$split-breakpoint-xs: 30rem;
+$split-breakpoint-s: 42.5rem;
+$split-breakpoint-m: 55rem;
+$split-breakpoint-l: 67.5rem;
+$split-breakpoint-xl: 80rem;

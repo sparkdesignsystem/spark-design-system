@@ -15,12 +15,14 @@
   border: 1px solid #ccc;
 }
 
-.#{$app-namespace}-c-Preview__example > .sprk-o-CenteredColumn {
+[data-template-id='centered-column'] .sprk-o-CenteredColumn {
   background-color: #ccc;
   height: 4rem;
 }
 
-.#{$app-namespace}-c-Preview__example > .sprk-o-SideBySide .sprk-o-SideBySide__item {
+.#{$app-namespace}-c-Preview__example
+> .sprk-o-SideBySide
+.sprk-o-SideBySide__item {
   background-color: #ccc;
   height: 4rem;
 }
@@ -39,4 +41,3 @@
   position: static;
   margin-top: -2px;
 }
-
