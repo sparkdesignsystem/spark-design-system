@@ -21,6 +21,7 @@ $footer-breakpoint: 53.125rem;
 
 .sprk-c-Footer__col {
   margin-bottom: $space-m;
+  margin-right: 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -28,5 +29,6 @@ $footer-breakpoint: 53.125rem;
 
   @media all and (min-width: $footer-breakpoint) {
     margin-bottom: 0;
+    margin-right: $space-m;
   }
 }
