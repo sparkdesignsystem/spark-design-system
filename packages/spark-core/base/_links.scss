@@ -19,13 +19,6 @@
 }
 
 .sprk-b-Link--standalone {
-  @include TextCrop(
-    $line-height: $line-height-body-two,
-    $top-crop: 7,
-    $bottom-crop: 7,
-    $crop-font-size: (strip-unit($font-size-body-two) * 16),
-    $crop-line-height: $line-height-body-two);
-
   text-decoration: none;
 
   &:visited {

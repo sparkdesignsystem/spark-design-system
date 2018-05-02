@@ -1,19 +1,40 @@
+/* global document */
 import getElements from '../utilities/getElements';
 
 const showDropDown = (container) => {
   const subNav = container.querySelector('.sprk-c-WideNavigation--sub');
   if (subNav) {
     subNav.classList.remove('sprk-u-Hide');
+    container.setAttribute('aria-expanded', 'true');
   }
 };
 
+const hideAllDropDowns = (subNavs, listItems) => {
+  subNavs.forEach((item) => {
+    item.classList.add('sprk-u-Hide');
+  });
+  listItems.forEach((item) => {
+    item.setAttribute('aria-expanded', 'false');
+  });
+};
+
 const bindUIEvents = (element) => {
+  const subNavs = document.querySelectorAll('.sprk-c-WideNavigation--sub');
+  const expandableListItems = document.querySelectorAll('.sprk-c-WideNavigation [aria-expanded]');
+
   element.addEventListener('focusin', (e) => {
-    getElements('.sprk-c-WideNavigation--sub', (nav) => {
-      nav.classList.add('sprk-u-Hide');
-    });
-    showDropDown(element);
     e.stopPropagation();
+    hideAllDropDowns(subNavs, expandableListItems);
+    showDropDown(element);
+  });
+  element.addEventListener('mouseenter', (e) => {
+    e.stopPropagation();
+    hideAllDropDowns(subNavs, expandableListItems);
+    showDropDown(element);
+  });
+  element.addEventListener('mouseleave', (e) => {
+    e.stopPropagation();
+    hideAllDropDowns(subNavs, expandableListItems);
   });
 };
 
@@ -24,4 +45,5 @@ const WideNavigation = () => {
 export {
   WideNavigation,
   showDropDown,
+  hideAllDropDowns,
 };
