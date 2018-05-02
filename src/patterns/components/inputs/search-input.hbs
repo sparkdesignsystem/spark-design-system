@@ -10,6 +10,7 @@ order: 13
          type="search"
          role="search"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container"
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
          {{#if disabled}} disabled{{/if}}>
   <span class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container">{{#if errorMessage}}{{errorMessage}}{{/if}}</span>

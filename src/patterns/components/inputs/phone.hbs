@@ -15,7 +15,8 @@ order: 23
          pattern="(^(\+\d{1,2}\s)?((\(\d{3}\))|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$)|^$"
          placeholder="(000) 000-0000"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container"
-    {{#if disabled}} disabled{{/if}}>
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
+         {{#if disabled}} disabled{{/if}}>
   <span class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container">
     {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
