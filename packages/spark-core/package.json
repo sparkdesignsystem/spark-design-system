@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@scalescss/scalescss": "6.0.0-alpha.a34308b4",
+    "@scalescss/scalescss": "6.0.0-alpha.976c5031",
     "chai": "^4.1.2",
     "jsdom": "^11.6.2",
     "nyc": "^11.6.0",
