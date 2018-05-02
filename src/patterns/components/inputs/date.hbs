@@ -15,7 +15,8 @@ order: 27
          pattern="(^\d{2}((\/)|-)\d{2}((\/)|-)\d{4}$)|(^\d{8}$)|^$"
          placeholder="MM/DD/YYYY"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container"
-    {{#if disabled}} disabled{{/if}}>
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
+         {{#if disabled}} disabled{{/if}}>
   <span class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container">
     {{#if errorMessage}}{{errorMessage}}{{/if}}</span>

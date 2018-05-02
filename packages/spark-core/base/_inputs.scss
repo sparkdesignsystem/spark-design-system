@@ -86,6 +86,11 @@ textarea {
   font-weight: normal;
 }
 
+.sprk-b-SelectionContainer [type="radio"],
+.sprk-b-SelectionContainer [type="checkbox"] {
+  vertical-align: middle;
+}
+
 .sprk-b-InputContainer {
   max-width: 27.5rem;
 }
