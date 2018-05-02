@@ -3,6 +3,8 @@ plugins:
    'stylelint-scss'
 extends:
 - './node_modules/prettier-stylelint/config.js'
+ignoreFiles:
+- './src/assets/drizzle/**/*.css'
 rules:
   #
   # Here are all the rules within stylelint, grouped first by category
@@ -61,7 +63,7 @@ rules:
   'comment-no-empty': true
 
   # General / Sheet
-  'no-descending-specificity': true
+  'no-descending-specificity': null
   'no-duplicate-at-import-rules': true
   'no-duplicate-selectors': true
   'no-empty-source': true
@@ -122,7 +124,7 @@ rules:
   'selector-attribute-operator-blacklist': null
   'selector-attribute-operator-whitelist': null
   'selector-class-pattern':
-  - '^([a-z]+-)?((c|o|b|u|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?((:{1,2}[A-z]+)?(?!\\@[A-z]+))[a-z](\\@[A-z]+)?(:{1,2}[A-z]+)?$'
+  - '^sprk-((c|o|b|u|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?((:{1,2}[A-z]+)?(?!\\@[A-z]+))[a-z](\\@[A-z]+)?(:{1,2}[A-z]+)?$'
   - resolveNestedSelectors:
     - true
   'selector-id-pattern': null
@@ -136,10 +138,7 @@ rules:
   'selector-max-type': null
   'selector-max-universal': 1
   'selector-nested-pattern': null
-  'selector-no-qualifying-type':
-  - true
-  - ignore:
-    - 'attribute'
+  'selector-no-qualifying-type': null
   'selector-no-vendor-prefix': null
   'selector-pseudo-class-blacklist': null
   'selector-pseudo-class-whitelist': null
@@ -161,11 +160,8 @@ rules:
   'comment-word-blacklist': null
 
   # General / Sheet
-  'max-nesting-depth':
-  - 2
-  - ignore:
-    - 'blockless-at-rules'
-  'no-unknown-animations': true
+  'max-nesting-depth': 2
+  'no-unknown-animations': null
 
   #
   # Stylistic issues
@@ -269,7 +265,7 @@ rules:
   'selector-attribute-quotes': 'always'
   'selector-combinator-space-after': 'always'
   'selector-combinator-space-before': 'always'
-  'selector-descendant-combinator-no-non-space': null
+  'selector-descendant-combinator-no-non-space': true
   'selector-pseudo-class-case': 'lower'
   'selector-pseudo-class-parentheses-space-inside': 'never'
   'selector-pseudo-element-case': 'lower'
@@ -347,7 +343,10 @@ rules:
   'scss/at-extend-no-missing-placeholder': true
 
   # At-function
-  'scss/at-function-named-arguments': 'always'
+  'scss/at-function-named-arguments':
+  - 'always'
+  - ignore:
+    - 'single-argument'
   'scss/at-function-parentheses-space-before': 'never'
   'scss/at-function-pattern': null
 
