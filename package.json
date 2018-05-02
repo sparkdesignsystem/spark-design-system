@@ -85,7 +85,7 @@
     ]
   },
   "dependencies": {
-    "@scalescss/scalescss": "6.0.0-alpha.a34308b4",
+   "@scalescss/scalescss": "6.0.0-alpha.976c5031",
     "babel-polyfill": "^6.26.0",
     "marked": "^0.3.19",
     "npm": "^5.8.0",
