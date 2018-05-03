@@ -114,8 +114,8 @@ const showModal = (modal, mask, main) => {
   main.setAttribute('aria-hidden', 'true');
 
   // Prevent background from scrolling
-  document.body.classList.add('sprk-u-OverflowHidden');
   document.documentElement.classList.add('sprk-u-OverflowHidden');
+  document.body.classList.add('sprk-u-OverflowHidden');
   document.body.style.height = '100%';
   document.documentElement.style.height = '100%';
 
