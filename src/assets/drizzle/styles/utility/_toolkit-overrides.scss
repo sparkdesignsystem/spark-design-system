@@ -20,6 +20,10 @@
   height: 4rem;
 }
 
+[data-template-id="flag-object"] p {
+  font-family: 'myriad pro';
+}
+
 .#{$app-namespace}-c-Preview__example
 > .sprk-o-SideBySide
 .sprk-o-SideBySide__item {
