@@ -18,6 +18,10 @@ import { isTabPressed, isEscPressed } from '../utilities/keypress';
 const isMaskClicked = e => e.target.getAttribute('data-sprk-modal-mask') === 'true';
 const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';
 
+const preventTouchScroll = (e) => {
+  e.preventDefault();
+};
+
 // Hide the modal, mask, remove aria-hidden on main and send focus back
 const hideModal = (modal, mask, main) => {
   const isHidden = modal.classList.contains('sprk-u-Hide');
@@ -33,6 +37,8 @@ const hideModal = (modal, mask, main) => {
   main.removeAttribute('aria-hidden');
   // Remove overflow hidden to allow scrolling again
   document.body.classList.remove('sprk-u-OverflowHidden');
+
+  document.removeEventListener('touchmove', preventTouchScroll);
   // Send focus back to last active element before modal was shown
   modalTrigger.focus();
 };
@@ -111,6 +117,8 @@ const showModal = (modal, mask, main) => {
 
   // Prevent background body from scrolling
   document.body.classList.add('sprk-u-OverflowHidden');
+
+  document.addEventListener('touchmove', preventTouchScroll, false);
 
   // When wait modal opens and has no focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {
