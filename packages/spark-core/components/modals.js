@@ -117,7 +117,7 @@ const showModal = (modal, mask, main) => {
   document.documentElement.classList.add('sprk-u-OverflowHidden');
   document.body.classList.add('sprk-u-OverflowHidden');
   document.body.style.minHeight = '100%';
-  document.documentElement.style.minHeight = '100%';
+  document.documentElement.style.height = '100%';
 
   // When wait modal opens and has no focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {
