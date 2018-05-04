@@ -5,3 +5,7 @@
 .#{$app-namespace}-u-OverflowHidden {
   overflow: hidden !important;
 }
+
+.#{$app-namespace}-u-Hidden {
+  display: none;
+}

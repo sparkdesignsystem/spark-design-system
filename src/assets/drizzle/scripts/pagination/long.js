@@ -48,18 +48,18 @@ const paginationLong = () => {
         if (currentItemNum !== currentPageNum) {
           if (currentItemNum === 1) {
             // Hide 1st set of dots, make sure 2nd set is shown
-            updatePageStyles(dots[0], dots[1], 'hidden');
+            updatePageStyles(dots[0], dots[1], 'drizzle-u-Hidden');
             // Hide 1st link and make sure last is shown
-            updatePageStyles(link1.parentElement, link3.parentElement, 'hidden');
+            updatePageStyles(link1.parentElement, link3.parentElement, 'drizzle-u-Hidden');
             // Disable Prev link and show Next link
             updatePageStyles(prev, next, 'sprk-b-Link--disabled');
             // Update link number to new number
             link2.textContent = link1.textContent;
           } else if (currentItemNum === maxPageNum) {
             // Hide last set of dots, make sure 1st set is shown
-            updatePageStyles(dots[1], dots[0], 'hidden');
+            updatePageStyles(dots[1], dots[0], 'drizzle-u-Hidden');
             // Hide last link and make sure first is shown
-            updatePageStyles(link3.parentElement, link1.parentElement, 'hidden');
+            updatePageStyles(link3.parentElement, link1.parentElement, 'drizzle-u-Hidden');
             // Disable Next link since we are on last link
             updatePageStyles(next, prev, 'sprk-b-Link--disabled');
             // Update link number to new number
@@ -81,28 +81,28 @@ const paginationLong = () => {
       if (currentPageNum > 1) {
         if (currentPageNum === 2) {
           // Hide the 1st set of dots
-          dots[0].classList.add('hidden');
+          dots[0].classList.add('drizzle-u-Hidden');
           // Hide the 1st link
-          link1.parentElement.classList.add('hidden');
+          link1.parentElement.classList.add('drizzle-u-Hidden');
           // Update link number with new number
           currentPage.textContent = goBackOne(currentPageNum);
           // Disable prev link since we can't go back any farther than 1st link
           prev.classList.add('sprk-b-Link--disabled');
         } else if (currentPageNum === 3) {
           // We go back to two link layout when number is < 3
-          dots[0].classList.add('hidden');
+          dots[0].classList.add('drizzle-u-Hidden');
           currentPage.textContent = goBackOne(currentPageNum);
         } else if (currentPageNum === maxPageNum) {
           // Show last link number
-          link3.parentElement.classList.remove('hidden');
+          link3.parentElement.classList.remove('drizzle-u-Hidden');
           // Enable the Next link since we are no longer on last link
           next.classList.remove('sprk-b-Link--disabled');
           // Update link number with new number
           currentPage.textContent = goBackOne(currentPageNum);
         } else {
           // Show bot sets of dots
-          dots[0].classList.remove('hidden');
-          dots[1].classList.remove('hidden');
+          dots[0].classList.remove('drizzle-u-Hidden');
+          dots[1].classList.remove('drizzle-u-Hidden');
           currentPage.textContent = goBackOne(currentPageNum);
         }
       }
@@ -118,21 +118,21 @@ const paginationLong = () => {
 
       if (currentPageNum < maxPageNum) {
         if (currentPageNum === maxPageNum - 1) {
-          link3.parentElement.classList.add('hidden');
+          link3.parentElement.classList.add('drizzle-u-Hidden');
           currentPage.textContent = goForwardOne(currentPageNum);
-          dots[1].classList.add('hidden');
+          dots[1].classList.add('drizzle-u-Hidden');
           next.classList.add('sprk-b-Link--disabled');
         } else if (currentPageNum === 1) {
-          link1.parentElement.classList.remove('hidden');
+          link1.parentElement.classList.remove('drizzle-u-Hidden');
           currentPage.textContent = goForwardOne(currentPageNum);
           prev.classList.remove('sprk-b-Link--disabled');
         } else if (currentPageNum === maxPageNum - 2) {
-          dots[1].classList.add('hidden');
+          dots[1].classList.add('drizzle-u-Hidden');
           currentPage.textContent = goForwardOne(currentPageNum);
         } else {
-          dots[0].classList.remove('hidden');
-          dots[1].classList.remove('hidden');
-          link1.parentElement.classList.remove('hidden');
+          dots[0].classList.remove('drizzle-u-Hidden');
+          dots[1].classList.remove('drizzle-u-Hidden');
+          link1.parentElement.classList.remove('drizzle-u-Hidden');
           currentPage.textContent = goForwardOne(currentPageNum);
         }
       }
