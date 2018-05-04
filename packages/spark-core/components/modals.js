@@ -116,8 +116,8 @@ const showModal = (modal, mask, main) => {
   // Prevent background from scrolling
   document.documentElement.classList.add('sprk-u-OverflowHidden');
   document.body.classList.add('sprk-u-OverflowHidden');
-  document.body.style.height = '100vh';
-  document.documentElement.style.height = '100vh';
+  document.body.style.height = '100%';
+  document.documentElement.style.height = '100%';
 
   // When wait modal opens and has no focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {
