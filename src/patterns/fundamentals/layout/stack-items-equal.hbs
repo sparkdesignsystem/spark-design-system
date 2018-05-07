@@ -1,0 +1,65 @@
+---
+name: Stack Object With Equal Width Items At A Breakpoint
+description: The Stack items always use their
+             default width when they are laid out in a column.
+             When a Stack container uses the split modifier a new option then
+             becomes available to make the items
+             divide up the available space in their container equally at a
+             specified breakpoint. This is useful when you would
+             like stacked columns on small viewports but equal
+             width columns on larger viewports.
+order: 8
+---
+<div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs">
+  <div class="sprk-o-Stack__item sprk-o-Stack__item--equal@xs">
+    <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+      Column One
+    </h2>
+
+    <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
+      <li class="sprk-o-Stack__item">
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+          Link 1
+        </a>
+      </li>
+
+      <li class="sprk-o-Stack__item">
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+          Link 2
+        </a>
+      </li>
+
+      <li class="sprk-o-Stack__item">
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+          Link 3
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sprk-o-Stack__item sprk-o-Stack__item--equal@xs">
+    <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+      Column Two
+    </h2>
+
+    <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
+      <li class="sprk-o-Stack__item">
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+          Link 1
+        </a>
+      </li>
+
+      <li class="sprk-o-Stack__item">
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+          Link 2
+        </a>
+      </li>
+
+      <li class="sprk-o-Stack__item">
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+          Link 3
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,306 @@
+// ==========================================================================
+// Stack Object
+// ==========================================================================
+
+//
+// Default Stack
+///
+.sprk-o-Stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+// Stack items retain their original width by default
+.sprk-o-Stack__item {
+  flex: 0 0 auto;
+}
+
+//
+// Stack spacing modifiers
+///
+.sprk-o-Stack--tiny > .sprk-o-Stack__item {
+  margin-bottom: $stack-spacing-tiny;
+}
+
+.sprk-o-Stack--small > .sprk-o-Stack__item {
+  margin-bottom: $stack-spacing-small;
+}
+
+.sprk-o-Stack--medium > .sprk-o-Stack__item {
+  margin-bottom: $stack-spacing-medium;
+}
+
+.sprk-o-Stack--large > .sprk-o-Stack__item {
+  margin-bottom: $stack-spacing-large;
+}
+
+.sprk-o-Stack--huge > .sprk-o-Stack__item {
+  margin-bottom: $stack-spacing-huge;
+}
+
+.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+  margin-bottom: 0;
+}
+
+//
+// Split at extra small breakpoint
+///
+.sprk-o-Stack--split\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    // At extra small breakpoint we switch from column to row
+    flex-direction: row;
+
+    // Remove bottom margin in new row formation
+    > .sprk-o-Stack__item {
+      margin-bottom: 0;
+    }
+
+    // Add spacing between items based on spacing size class
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-tiny;
+    }
+
+    &.sprk-o-Stack--small > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+
+    &.sprk-o-Stack--large > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+
+    // We want the last item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// Split at  small breakpoint
+///
+.sprk-o-Stack--split\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    // At small breakpoint we switch from column to row
+    flex-direction: row;
+
+    // Remove bottom margin in new row formation
+    > .sprk-o-Stack__item {
+      margin-bottom: 0;
+    }
+
+    // Add spacing between items based on spacing size class
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-tiny;
+    }
+
+    &.sprk-o-Stack--small > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+
+    &.sprk-o-Stack--large > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+
+    // We want the last item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// Split at medium breakpoint
+///
+.sprk-o-Stack--split\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    // At medium breakpoint we switch from column to row
+    flex-direction: row;
+
+    // Remove bottom margin in new row formation
+    > .sprk-o-Stack__item {
+      margin-bottom: 0;
+    }
+
+    // Add spacing between items based on spacing size class
+    &.sprk-o-Stack--tin > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-tiny;
+    }
+
+    &.sprk-o-Stack--smal > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+
+    &.sprk-o-Stack--mediu > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+
+    &.sprk-o-Stack--larg > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+
+    &.sprk-o-Stack--hug > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+
+    // We want the last item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// Split at large breakpoint
+///
+.sprk-o-Stack--split\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    // At large breakpoint we switch from column to row
+    flex-direction: row;
+
+    // Remove bottom margin in new row formation
+    > .sprk-o-Stack__item {
+      margin-bottom: 0;
+    }
+
+    // Add spacing between items based on spacing size class
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-tiny;
+    }
+
+    &.sprk-o-Stack--small > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+
+    &.sprk-o-Stack--large > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+
+    // We want the last item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// Split at extra large breakpoint
+///
+.sprk-o-Stack--split\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    // At extra large breakpoint we switch from column to row
+    flex-direction: row;
+
+    // Remove bottom margin in new row formation
+    > .sprk-o-Stack__item {
+      margin-bottom: 0;
+    }
+
+    // Add spacing between items based on spacing size class
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-tiny;
+    }
+
+    &.sprk-o-Stack--small > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+
+    &.sprk-o-Stack--large > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+
+    // We want the last item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+//
+// Stack items equally distribute space at specific breakpoints
+///
+.sprk-o-Stack__item--equal\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    flex: 1;
+  }
+}
+
+.sprk-o-Stack__item--equal\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    flex: 1;
+  }
+}
+
+.sprk-o-Stack__item--equal\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    flex: 1;
+  }
+}
+
+.sprk-o-Stack__item--equal\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    flex: 1;
+  }
+}
+
+.sprk-o-Stack__item--equal\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    flex: 1;
+  }
+}
