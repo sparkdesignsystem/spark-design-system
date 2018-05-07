@@ -20,15 +20,8 @@
   height: 4rem;
 }
 
-[data-template-id="flag-object"] p {
+[data-template-id='flag-object'] p {
   font-family: 'myriad pro';
-}
-
-.#{$app-namespace}-c-Preview__example
-> .sprk-o-SideBySide
-.sprk-o-SideBySide__item {
-  background-color: #ccc;
-  height: 4rem;
 }
 
 .#{$app-namespace}-c-Logo-placeholder {
