@@ -1,10 +1,9 @@
 description: |
   The Pagination component is comprised of a previous link, a next page link, and page number links.
   Use a Pagination component when you need a way to separate a large portion of content into smaller portions.
-  It serves as navigation and informs users where they are currently and where they
+  It serves as navigation and informs users where they currently are and where they
   can go in the future.
-restrictions:
-  - The outer nav element with aria-label="Pagination Navigation" is required for user accessibility.
+information:
   - Spark-Core Pagination JS will take care of adding in the correct aria-label
     to each link on first page load and when the items are tapped or clicked.
 sparkPackageCore: true
