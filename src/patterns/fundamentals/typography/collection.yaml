@@ -1,9 +1,9 @@
-description: |
-   Type in spark consists of eleven settings, documented below. See each setting for intended use.
-   If your application is consuming Spark-Core, the body copy and heading elements are set automatically
-   and don't require you to add classes.
+description: Typography means the style and size of text. Type settings here should be used in the
+  construction of components not defined in Spark. See each setting for intended use.
+information:
+  - The body copy and heading elements are set automatically and don't require you to add classes.
 restrictions:
-   - You must set up a Typekit kit for your application to make use of these settings.
+  - You must set up a Typekit kit for your application to make use of these settings.
 links:
   Typekit Setup:
     external: false

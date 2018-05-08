@@ -1,19 +1,15 @@
-description:
-  The different button types available in Spark are Primary, Secondary,
-  Tertiary, Submission, Diasabled, and Remove. A button should always
-  trigger an action or something that changes the current state. For example,
-  submitting a form or entering into edit mode. Buttons use the large variation of the
-  Inset Short spacing setting which makes them have 16px of vertical padding and 32px of horizontal padding.
+description: Buttons are points of interaction for a website. A user is trained to activate a button in order
+  to perform an action. The Button component consists of a container with descriptive text inside.
 
+information:
+  - Buttons make use of Large Inset Short spacing.
 restrictions:
   - Do not use icons within buttons.
-  - Do not use <input type="submit"> for submit buttons, use <button> instead.
-  - If your button is not a submit button then use the type="button" attribute.
+  - Do not use &lt;input type=&quot;submit&quot;&gt; for submit buttons, use button instead.
+  - If your button is not a submit button then use the type=&quot;button&quot; attribute.
   - Do not exceed 280px in width for a single button.
   - Button content should not wrap to two lines.
   - A button HTML element should be used when doing an action that doesn't have a meaningful URL.
   - An anchor HTML element should be used when you want the look of a button but are linking to a URL.
   - If your button is disabled or becomes disabled then add the disabled attribute.
 sparkPackageCore: true
-links:
-  Scales Buttons: https://github.com/ScalesCSS/patterns-buttons
