@@ -2,19 +2,19 @@ description: |
   A simple way of showing, hiding and breaking down lengthy content. This component has a clickable or tappable
   link that shows or hides a block of content underneath it.
 information:
-  - Icon will always appear on the left side of the Toggle followed by the Toggle title
-  - The icon and the title of the Toggle will both open and close the content when clicked or tapped
-  - Toggles will look and function the same in all viewports
-  - Spark-Core has included Toggle JS that will setup the showing and hiding of the toggle content
-  - Spark-Core's Toggle JS will take care of adding and adjusting the aria-expanded attribute based on
-    if the content is hidden or shown
-  - You can adjust the spacing between the trigger link and the content by adjusting the spacing utility class on the content
+  - Icon will always appear on the left side of the Toggle content followed by the Toggle title.
+  - The icon and the title of the Toggle will both open and close the content when clicked or tapped.
+  - Toggles will look and function the same in all viewports.
+  - Spark-Core has included Toggle JS that will setup the showing and hiding of the toggle content.
+  - Spark-Core's Toggle JS will take care of initially adding and adjusting the aria-expanded HTML attribute based on
+    if the content is hidden or visible.
+  - You can adjust the spacing between the trigger link and the content by changing the spacing utility class on the content to a different size.
 sparkPackageCore: true
 restrictions:
   - Content that requires user interaction or consumption should
-    not be housed within a Toggle
-  - A single Toggle should be used at a time and not several in succession
-  - Sizing should be dependent on type size, but should remain large enough to be tappable on a mobile device
+    not be housed within a Toggle.
+  - A single Toggle should be used at a time and not several in succession.
+  - Overall sizing of the Toggle should be dependent on type size, but should remain large enough to be tappable on a mobile device
   - Content length inside the Toggle does not have a limit, but shouldn't exceed a reasonable
-    length
-  - The title of the Toggle doesn't have a specific length either and can wrap if needed
+    length.
+  - The title of the Toggle doesn't have a specific maximum length and can wrap if needed.
