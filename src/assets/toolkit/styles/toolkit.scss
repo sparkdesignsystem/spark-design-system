@@ -56,8 +56,12 @@
 @import '../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list';
 
 //TODO: remove this when you work on sneak peak
+//
+// Objects
+///
 
 @import 'objects/flex-grid';
+@import '../../../../packages/spark-core/objects/stack';
 
 //
 // Components
@@ -67,9 +71,7 @@
 @import '../../../../packages/spark-core/components/accordions';
 @import '../../../../packages/spark-core/components/icons';
 @import '../../../../packages/spark-core/components/spinners';
-@import '../../../../packages/spark-core/components/footer';
 @import '../../../../packages/spark-core/components/buttons';
-@import '../../../../packages/spark-core/components/narrow-navigation';
 @import '../../../../packages/spark-core/components/wide-navigation';
 @import '../../../../packages/spark-core/components/alerts';
 @import '../../../../packages/spark-core/components/modals';
