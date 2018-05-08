@@ -1,7 +1,14 @@
 name: Tables
-description: |
-  Tables should be used for tabular data that is intended for comparison. If your data is only label value pairs, consider
-  the dictionary component instead. The table patterns here will squish the spacing to some degree, but will mostly preserve
-  their width on narrow viewports. The tables will become scrollable if the content overflows. If your content does not
-  fit well with this component on mobile, you can switch to an alternate component for mobile.
+description:
+  Tables are a set of columns and rows that lay out information.
+  Use Tables for tabular data that is intended for comparison.
+  If your data is only label value pairs, consider
+  the <a class="sprk-b-Link" href="https://sparkdesignsystem.com/patterns/components/dictionary">dictionary</a> component instead.
+information:
+  - The Table patterns will squish the spacing to some degree, but will mostly preserve
+    their width on narrow viewports.
+  - Tables will become scrollable if the content overflows.
+  - If your content does not fit well with this
+    component on mobile, you can switch to an
+    alternate component for mobile.
 sparkPackageCore: true

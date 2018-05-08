@@ -1,6 +1,11 @@
 name: Tabbed Navigation
+description:
+  The Tabbed Navigation component is a set of clickable buttons that each display
+  content related to a specific subject. Use a Tabbed Navigation when you want to organize pieces of related
+  content. When a tab button is clicked it will hide the previously shown tab content
+  and show it's own.
 sparkPackageCore: true
 restrictions:
-  - You should have at least 2 tabs
-  - You should not have more than 7 tabs
-  - Try to limit the content of each tab label so that its not too long
+  - Tabbed Navigation needs to have at least two tabs.
+  - There should not be more than seven tabs in any single Tabbed Navigation.
+  - Tab label content should not exceed a reasonable length.
