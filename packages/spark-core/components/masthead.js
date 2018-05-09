@@ -35,7 +35,7 @@ const bindUIEvents = () => {
     });
 
     mainLayout.addEventListener('focusin', () => {
-      const isOpen = !document.querySelector('.sprk-c-Masthead__narrow-navigation-container').classList.contains('sprk-u-Hide');
+      const isOpen = !document.querySelector('.sprk-c-Masthead__narrow-navigation-container').classList.contains('sprk-u-HiddenWhenJS');
       focusTrap(isOpen, nav);
     });
   });
