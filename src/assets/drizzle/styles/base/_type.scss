@@ -3,7 +3,6 @@
   line-height: 1.563;
 }
 
-
 body,
 p,
 .#{$app-namespace}-b-h1,
@@ -12,7 +11,7 @@ p,
 .#{$app-namespace}-b-h4,
 .#{$app-namespace}-b-h5,
 .#{$app-namespace}-b-h6 {
-  font-family: "urw-din";
+  font-family: urw-din, sans-serif;
 }
 
 .#{$app-namespace}-b-P {
