@@ -15,15 +15,14 @@
   padding: 1rem;
 
   @media (min-width: $nav-switch-breakpoint) {
-     padding: 0;
-     margin: 120px 2rem 2rem 2rem;
+    padding: 0;
+    margin: 120px 2rem 2rem;
   }
 }
 
 .#{$app-namespace}-o-ContentGrouping {
   margin-bottom: 2.5rem;
 }
-
 
 .#{$app-namespace}-o-Layout-content--centered {
   margin: 2rem auto;
@@ -52,7 +51,7 @@
   padding: 90px 0 1.8rem 2rem;
   width: 100%;
 
-  @media ( min-width: $nav-switch-breakpoint) {
+  @media (min-width: $nav-switch-breakpoint) {
     padding: 1.8rem 0 1.8rem 2rem;
     position: fixed;
     top: 0;
