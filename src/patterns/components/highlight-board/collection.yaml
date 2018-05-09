@@ -1,5 +1,5 @@
-description: |
-  Examples of the Highlight Board pattern.
+description: This component is for getting user attention, in order to convery a message or drive a
+  call to action.
 information:
   - Headlines should grab attention and be concise.
   - Subheadlines provide additional context.

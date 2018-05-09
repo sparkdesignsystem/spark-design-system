@@ -1,3 +1,5 @@
-description: These are the brand colors defined by Spark-Core. Most patterns will make use of them automatically, but in case
-  of custom implementation, see below for usage guidelines.
+description:
+  These are the colors that have been chosen to represent the brand. These colors should be used in the correct
+  proportion (see below) in all components of an application that require the use of color. The colors are set as
+  variables in Spark and as document colors in the Design Toolkit.
 sparkPackageCore: true

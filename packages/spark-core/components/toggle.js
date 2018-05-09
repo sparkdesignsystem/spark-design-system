@@ -47,7 +47,7 @@ const handleToggleClick = (toggleContent, toggleIcon, element) => {
 };
 
 const bindToggleUIEvents = (element) => {
-  // Get the toggle's trigger and content elems
+  // Get the toggle's trigger and content elements
   const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
   const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');

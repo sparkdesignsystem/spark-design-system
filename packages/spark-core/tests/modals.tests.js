@@ -142,7 +142,7 @@ describe('Modal tests', () => {
 
   it('should get all focusable elements in a modal', () => {
     // Add a bunch of focusable elements to modal
-    // in addition to the <a> thats already added
+    // in addition to the <a> that's already added
     const input = document.createElement('input');
     const select = document.createElement('select');
     const textarea = document.createElement('textarea');
