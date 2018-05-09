@@ -19,5 +19,5 @@ restrictions:
   - Overall sizing of the Toggle should be dependent on type size,
     but should remain large enough to be tappable on a mobile device
   - Content length inside the Toggle does not have a limit, but shouldn't exceed a reasonable
-    length.
+    amount.
   - The title of the Toggle doesn't have a specific maximum length and can wrap if needed.
