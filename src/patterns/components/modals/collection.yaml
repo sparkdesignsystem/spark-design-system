@@ -1,30 +1,28 @@
 description: |
-  Modals are displayed over the top of all other content.
-  There are three different UI types of modals, Choice, Wait and Info. Spark supplies JS to
-  open and close modals that works when certain data attributes are added (identified below).
-  Spark JS will also take care of the modal accessibility and keyboard events.
-  If you would like to use your own modal JS instead of the Spark JS you should omit the
-  required data attributes. You may also choose to use only certain Spark functions
-  such as showModal() and hideModal() to utilize in your own code.
-  There are two types of JS functionality that the three modal designs use.
-  The two types are "default" and "Wait". The main difference between the two is
-  the "Wait" modals do not allow the user to take an action that will close the modal whereas the default modal
-  allows the user to hit a cancel element, press the "Escape" key, or click the modal background mask to
-  close the modal. Each modal should have a trigger element that has
-  the 'data-sprk-modal-trigger="<modalName>"' attribute. The trigger element should
-  be outside the modal container and will open the modal when clicked or tapped.
+  The Modal component is a dialog box that is displayed on top of all site content. When a Modal is present,
+  the rest of the site is inactive and covered by a mask. Use a Modal
+  when you need the user to make a choice, or you need to present important information based on an action they took,
+  or when you need to indicate something is happening. Modals are triggered by an action, usually, a form submit.
+information:
+  - When a Modal is open, the user can hit the "Escape" key, click the
+    cancel element, the close icon, or click the outside mask to close the Modal (unless the Modal type is "Wait").
+  - If you would like to use your own Modal JS instead of the Spark JS you should omit the
+    required data attributes as seen in the code blocks below.
+  - The Modal and mask elements are hidden by default.
+  - If the content in the Modal is too large for the viewport then the Modal will show a scroll bar.
+  - When the Modal is opened, the first focusable element inside the Modal will receive focus.
+  - When the Modal is closed, focus will be returned to the Modal's trigger button.
+  - When the Modal is open, focus is trapped inside the Modal when a user presses the Tab or Shift+Tab keys.
+  - When the Modal is open we tell assistive devices that everything behind it is
+    inactive by adding aria-hidden="true" on the main site container (data-sprk-main) and removing
+    it once the Modal is closed.
 restrictions:
-  - Modal container HTML should be added right above the closing body tag and must be outside of the main site content area.
-  - The main content area should have the attribute of 'data-sprk-main'.
-  - Modals must be dismissible by tapping outside the modal, clicking a cancel element, or hitting the Escape key (Spark JS provides this functionality).
-  - Modals should trap focus inside the modal when a user presses the Tab or Shift+Tab keys inside the modal (Spark JS provides this functionality).
-  - The container of the modal should have the attribute of role="dialog".
-  - The modal and mask elements must have a tabindex="-1" to prevent them from receiving focus.
-  - When the modal is open we must tell assistive devices that everything behind it is
-    hidden by adding aria-hidden="true" on the main content container and removing it once modal is closed (Spark JS provides this functionality).
-  - If the content in the modal is too large for the viewport then the modal must show a scroll bar (Spark SCSS provides this functionality).
-  - When the modal is open we must capture the document's active element and return focus to this element
-    once the modal is closed (Spark JS provides this functionality).
-  - When the modal opens we must detect the number of focusable elements inside the modal and
-    apply focus to the first one (Spark JS provides this functionality).
+  - Each Modal must have an unique identifier that is used for all data attributes
+    related to that specific Modal. For example, data-sprk-modal="uniqueID" and data-sprk-modal-cancel="uniqueID".
+  - Modal container HTML must be added right above the closing body tag and be outside of the main site content container.
+  - The main content container of your site must have the attribute of 'data-sprk-main'.
+  - The trigger element should always be outside the Modal container.
+  - No more than one Modal should be open at a time.
+  - Content length inside the Modal shouldn't exceed a reasonable
+    amount.
 sparkPackageCore: true
