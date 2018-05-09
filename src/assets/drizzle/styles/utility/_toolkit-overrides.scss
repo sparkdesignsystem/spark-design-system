@@ -20,8 +20,8 @@
   height: 4rem;
 }
 
-[data-template-id='flag-object'] p {
-  font-family: 'myriad pro';
+[data-template-id='flag-object'] .sprk-o-Flag__body p {
+  font-family: 'myriad pro', sans-serif;
 }
 
 .#{$app-namespace}-c-Logo-placeholder {
