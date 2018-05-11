@@ -60,7 +60,7 @@ describe('Toggle tests', () => {
   });
   it('should toggle CSS hide class', () => {
     toggleContentCSS(content);
-    expect(content.classList.contains('sprk-u-HideWhenJS')).eql(true);
+    expect(content.classList.contains('sprk-u-HideWhenJs')).eql(true);
   });
   it('should toggle open class on accordion toggle triggers', () => {
     handleToggleClick(content, icon, triggerAccordion);

@@ -51,6 +51,15 @@
         </li>
       {{/each}}
     </ul>
+    {{!-- Utilities --}}
+    <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Utilities</h5>
+    <ul class="drizzle-c-Navigation__menu">
+      {{#each (collections "utilities")}}
+        <li>
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
     {{!-- Other pages --}}
     <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Documentation</h5>
     <ul class="drizzle-c-Navigation__menu">

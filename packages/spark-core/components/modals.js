@@ -32,7 +32,7 @@ const hideModal = (modal, mask, main) => {
   // Remove the hidden aria attr from main content
   main.removeAttribute('aria-hidden');
   // Remove overflow hidden to allow scrolling again
-  document.body.classList.remove('sprk-u-OverflowHidden');
+  document.body.classList.remove('sprk-u-Overflow--hidden');
   // Send focus back to last active element before modal was shown
   modalTrigger.focus();
 };
@@ -110,7 +110,7 @@ const showModal = (modal, mask, main) => {
   main.setAttribute('aria-hidden', 'true');
 
   // Prevent background body from scrolling
-  document.body.classList.add('sprk-u-OverflowHidden');
+  document.body.classList.add('sprk-u-Overflow--hidden');
 
   // When wait modal opens and has no focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {

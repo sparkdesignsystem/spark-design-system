@@ -2,7 +2,7 @@
 import { focusFirstEl } from '../../../../../packages/spark-core/utilities/elementState';
 
 const hideMobileNav = (nav) => {
-  document.body.classList.remove('sprk-u-OverflowHidden');
+  document.body.classList.remove('sprk-u-Overflow--hidden');
   nav.classList.remove('is-active');
 };
 

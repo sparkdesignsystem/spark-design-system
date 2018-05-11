@@ -25,9 +25,9 @@ describe('toggleMobileNav tests', () => {
     toggleMobileNav(iconContainer, nav);
     expect(nav.classList.contains('sprk-u-Hide')).eql(false);
     expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(true);
-    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-OverflowHidden')).eql(true);
+    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(true);
     toggleMobileNav(iconContainer, nav);
-    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-OverflowHidden')).eql(false);
+    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Hide')).eql(true);
     expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(false);
   });
@@ -48,13 +48,13 @@ describe('hideMobileNavs tests', () => {
     iconContainer.appendChild(icon);
     main.appendChild(nav);
     main.appendChild(iconContainer);
-    document.getElementsByTagName('body')[0].classList.add('sprk-u-OverflowHidden');
+    document.getElementsByTagName('body')[0].classList.add('sprk-u-Overflow--hidden');
     document.getElementsByTagName('body')[0].appendChild(main);
   });
 
   it('should add the hide class to the nav element and remove the open class from the icon', () => {
     hideMobileNavs();
-    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-OverflowHidden')).eql(false);
+    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Hide')).eql(true);
     expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(false);
   });

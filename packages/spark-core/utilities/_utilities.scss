@@ -11,12 +11,16 @@
 // Properties with vendor prefixes count as single properties.
 ///
 
+//
 // Display and Visibility
+///
+// stylelint-disable selector-class-pattern
 .sprk-u-Display--none,
-.js .sprk-u-HideWhenJS {
+.js .sprk-u-HideWhenJs {
   display: none !important;
 }
 
+// stylelint-enable
 .sprk-u-Display--block {
   display: block !important;
 }
@@ -29,9 +33,6 @@
   display: inline-block !important;
 }
 
-//
-// Visibility
-///
 .sprk-u-Visibility--hidden {
   visibility: hidden !important;
 }
@@ -122,8 +123,32 @@
 }
 
 //
-// Text transform
+// Typography
 ///
+.sprk-u-FontWeight--bold {
+  font-weight: bold !important;
+}
+
+.sprk-u-FontWeight--normal {
+  font-weight: normal !important;
+}
+
+.sprk-u-FontStyle--italic {
+  font-style: italic !important;
+}
+
+.sprk-u-FontStyle--normal {
+  font-style: normal !important;
+}
+
+.sprk-u-TextDecoration--underline {
+  text-decoration: underline !important;
+}
+
+.sprk-u-TextDecoration--none {
+  text-decoration: none !important;
+}
+
 .sprk-u-TextTransform--uppercase {
   text-transform: uppercase !important;
 }
@@ -132,10 +157,23 @@
   text-transform: none !important;
 }
 
+//
 // Overflow
-// TODO: Dave is doing utils, add this one
-.sprk-u-OverflowHidden {
-  overflow: hidden;
+///
+.sprk-u-Overflow--visible {
+  overflow: visible !important;
+}
+
+.sprk-u-Overflow--hidden {
+  overflow: hidden !important;
+}
+
+.sprk-u-Overflow--scroll {
+  overflow: scroll !important;
+}
+
+.sprk-u-Overflow--auto {
+  overflow: auto !important;
 }
 
 //
@@ -165,7 +203,7 @@
 }
 
 //
-// Alignment
+// layout
 ///
 .sprk-u-AbsoluteCenter {
   display: flex;
