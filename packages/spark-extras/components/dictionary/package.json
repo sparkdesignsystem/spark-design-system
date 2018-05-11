@@ -13,6 +13,9 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
+  "dependencies": {
+    "@sparkdesignsystem/spark-core": "^1.0.0-alpha.5"
+  },
   "devDependencies": {
     "lerna": "^2.0.0"
   }

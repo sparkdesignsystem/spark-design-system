@@ -1,6 +1,6 @@
 ---
 name: Monetary Input - Error State
-info:
+information:
   - On blur, format the input to include commas and a decimal followed by two zeros (ex. 1,000.00).
 restrictions:
   - Do not use placeholder text.
@@ -10,5 +10,6 @@ order: 18
 
 {{#embed "patterns.components.inputs.monetary"
          idattr="monetary-error"
+         invaliddata="true"
          errorMessage="There is an error on this field."
          class="sprk-b-TextInput--error"}}{{/embed}}

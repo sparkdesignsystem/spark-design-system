@@ -266,7 +266,7 @@ Results in:
 ```
 ---
 name: Basic Button
-notes: This is _just_ a **basic** button.
+description: This is _just_ a **basic** button.
 ---
 
 <button class="Button">

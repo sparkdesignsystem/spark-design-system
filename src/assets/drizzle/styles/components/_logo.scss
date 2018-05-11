@@ -1,0 +1,16 @@
+.#{$app-namespace}-c-Logo {
+  max-width: 250px;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    max-width: 398px;
+  }
+}
+
+.#{$app-namespace}-c-Logo img {
+  width: 100%;
+}
+
+.#{$app-namespace}-c-Logo--small {
+  height: 35px;
+  width: 35px;
+}

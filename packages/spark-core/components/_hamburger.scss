@@ -3,7 +3,7 @@
 // ==================================================================
 .sprk-c-Hamburger {
   border: 0;
-  background: $white;
+  background-color: $white;
   display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
@@ -12,9 +12,7 @@
 }
 
 .sprk-c-Hamburger__icon {
-  height: 1.67583rem;
   fill: $blue-medium;
-  margin-top: -5px;
 }
 
 .sprk-c-Hamburger__line {
@@ -25,21 +23,21 @@
 }
 
 .sprk-c-Hamburger__line--one {
-  transform-origin: 1em 2.5em;
+  transform-origin: 0.7em 1.9em;
 }
 
 .sprk-c-Hamburger__line--three {
-  transform-origin: 0.9em 3.8em;
+  transform-origin: 0.8em 3.4em;
 }
 
-.sprk-is-Open .sprk-c-Hamburger__line--one {
+.sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--one {
   transform: rotate(45deg) translateY(0) translateX(0);
 }
 
-.sprk-is-Open .sprk-c-Hamburger__line--two {
+.sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--two {
   opacity: 0;
 }
 
-.sprk-is-Open .sprk-c-Hamburger__line--three {
+.sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--three {
   transform: rotate(-45deg) translateY(0) translateX(0);
 }

@@ -1,0 +1,95 @@
+// ==================================================================
+// Navigation
+// ==================================================================
+
+//
+// Available Variables
+///
+$masthead-column-width: 64rem !default;
+
+.sprk-c-WideNavigation {
+  background-color: $white;
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $masthead-column-width;
+}
+
+.sprk-c-WideNavigation--sub {
+  border: 2px solid $gray-medium;
+  border-top: 0;
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+
+.sprk-c-WideNavigation__item--sub {
+  background-color: $white;
+  line-height: $space-l;
+  padding-top: $space-s;
+  padding-bottom: $space-s;
+  padding-left: $space-m;
+  padding-right: $space-m;
+  text-align: left;
+  width: 100%;
+}
+
+.sprk-c-WideNavigation__item {
+  flex: auto;
+  line-height: $space-l;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sprk-c-WideNavigation__link {
+  @include HoverLine($color: $white, $width: 85%);
+
+  border: 0;
+  color: $blue-dark;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $blue-medium, $width: 85%);
+
+    color: $blue-medium;
+  }
+}
+
+.sprk-c-WideNavigation__link--sub {
+  @include HoverLine($color: $white, $width: 100%);
+
+  border: 0;
+  color: $blue-dark;
+  text-align: left;
+  text-transform: none;
+
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $blue-medium, $width: 100%);
+
+    color: $blue-medium;
+  }
+}
+
+.sprk-c-WideNavigation__link--sub:last-child {
+  margin-bottom: $space-s;
+}
+
+// Show the sub navigation on hover and focus
+.sprk-c-WideNavigation__item:focus .sprk-c-WideNavigation--sub,
+.sprk-c-WideNavigation__item:hover .sprk-c-WideNavigation--sub {
+  display: block;
+}
+
+.sprk-c-WideNavigation__arrow {
+  fill: $blue-dark;
+  width: $icon-m;
+  margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
+}

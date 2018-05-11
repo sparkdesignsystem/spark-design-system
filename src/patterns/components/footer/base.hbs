@@ -1,0 +1,17 @@
+---
+name: Base
+description: |
+  The base footer is intended to be used at the bottom of every page. The base footer includes legal links,
+  legal icons or small awards, and a paragraph of legal or other type of copy.
+restrictions:
+  - Some screen readers do not announce the footer landmark role so we add
+    role="contentinfo" to the footer HTML element.
+  - The awards/icons section is resticted to a maximum of 5 items.
+  - The legal link section is resticted to a maximum of 8 links.
+order: 1
+---
+<div class="sprk-o-CenteredColumn">
+  <footer class="sprk-o-Box sprk-o-Stack sprk-o-Stack--large" role="contentinfo">
+    {{#embed "patterns.components.footer.base-items"}}{{/embed}}
+  </footer>
+</div>

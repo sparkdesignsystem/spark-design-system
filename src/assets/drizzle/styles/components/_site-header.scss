@@ -1,0 +1,14 @@
+.#{$app-namespace}-c-SiteHeader {
+  background-color: $black;
+  background-image: url('/assets/toolkit/images/wires.jpg');
+  background-size: cover;
+  padding: 8.5rem 0 5.5rem;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    padding: 10.5rem 0;
+  }
+}
+
+.#{$app-namespace}-c-SiteHeader .#{$app-namespace}-c-Logo {
+  margin: 0 auto;
+}

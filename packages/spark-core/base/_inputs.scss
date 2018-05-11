@@ -43,6 +43,7 @@ textarea {
 .sprk-b-TextInput--date-picker,
 .sprk-b-TextInput--monetary {
   position: relative;
+  display: inline-block;
 }
 
 .sprk-b-TextInput--date-picker > .sprk-c-Icon,
@@ -54,7 +55,7 @@ textarea {
 }
 
 .sprk-b-TextInput--date-picker > .sprk-c-Icon {
-  top: 0.75rem;
+  top: 0.85rem;
 }
 
 .sprk-b-TextInput--monetary::before {
@@ -84,6 +85,11 @@ textarea {
 .sprk-b-SelectionContainer .sprk-b-Label,
 .sprk-b-SelectionContainer label {
   font-weight: normal;
+}
+
+.sprk-b-SelectionContainer [type='radio'],
+.sprk-b-SelectionContainer [type='checkbox'] {
+  vertical-align: middle;
 }
 
 .sprk-b-InputContainer {

@@ -1,12 +1,37 @@
-<figure class="drizzle-u-noMarginLeft">
-  <svg class="drizzle-Swatch">
+<figure class="">
+  <svg class="drizzle-c-Swatch sprk-u-mbm">
     <rect fill="{{color}}" width="100%" height="100%"/>
   </svg>
-  <figcaption class="drizzle-u-textSmaller">
-    <ul class="drizzle-u-listUnstyled">
-      {{#if label}}<li><h5 class="drizzle-h5">{{label}}</h5></li>{{/if}}
-      <li><code class="drizzle-CodeHighlight">{{color}}</code></li>
-      {{#if property}}<li><code class="drizzle-CodeHighlight">{{property}}</code></li>{{/if}}
+  <figcaption class="">
+    <ul class="drizzle-b-List">
+      {{#if label}}<li>
+        <p class="drizzle-b-Label">{{label}}</p>
+      </li>{{/if}}
+      <li>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            {{ color }}
+          </code>
+        </div>
+      </li>
+      {{#if property}}
+      <li>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            {{ property }}
+          </code>
+        </div>
+      </li>
+      {{/if}}
+      {{#if rgb }}
+      <li>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            {{ rgb }}
+          </code>
+        </div>
+      </li>
+      {{/if}}
     </ul>
   </figcaption>
 </figure>

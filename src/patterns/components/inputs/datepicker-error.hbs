@@ -1,6 +1,6 @@
 ---
 name: Date Picker - Error State
-info:
+information:
   - Only to be used for future dates (ex. Schedule a future payment).
   - The date picker is hidden by default and becomes visible on focus.
   - 'Selecting a date hides the date picker and puts the value in the input in the MM/DD/YYYY format.'
@@ -13,5 +13,6 @@ invisible: true
 
 {{#embed "patterns.components.inputs.datepicker"
          idattr="datepicker-error"
+         invaliddata="true"
          errorMessage="There is an error on this field."
          class="sprk-b-TextInput--error"}}{{/embed}}

@@ -1,0 +1,64 @@
+.#{$app-namespace}-o-Layout {
+  height: 100%;
+  margin: 0;
+}
+
+.#{$app-namespace}-o-Layout__main {
+  @media (min-width: $nav-switch-breakpoint) {
+    width: $layout-main-width;
+    margin-left: $layout-nav-width;
+  }
+}
+
+.#{$app-namespace}-o-Layout-content {
+  max-width: 1024px;
+  padding: 1rem;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    padding: 0;
+    margin: 120px 2rem 2rem;
+  }
+}
+
+.#{$app-namespace}-o-ContentGrouping {
+  margin-bottom: 2.5rem;
+}
+
+.#{$app-namespace}-o-Layout-content--centered {
+  margin: 2rem auto;
+  max-width: 640px;
+}
+
+.#{$app-namespace}-o-Layout__nav {
+  @media (min-width: $nav-switch-breakpoint) {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    width: $layout-nav-width;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.#{$app-namespace}-o-Layout__section-header {
+  background-color: $highlight;
+  color: $white;
+  margin-bottom: 20px;
+  padding: 90px 0 1.8rem 2rem;
+  width: 100%;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    padding: 1.8rem 0 1.8rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+  }
+}
+
+.#{$app-namespace}-o-Layout__section-header .#{$app-namespace}-b-h1 {
+  color: $white;
+}

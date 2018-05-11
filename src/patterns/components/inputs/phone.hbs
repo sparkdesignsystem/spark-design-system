@@ -1,6 +1,6 @@
 ---
 name: Phone Number Input
-info:
+information:
   - On blur, format the input to wrap the first 3 numbers in parenthases and add a dash before the last 4 numbers (ex. (555) 555-5555)
   - 'Placeholder text should read: (000) 000-0000.'
   - On key press, reveal the placeholder inline with the label.
@@ -9,13 +9,14 @@ order: 23
 
 <div class="sprk-b-InputContainer" data-sprk-input="phone">
   <label for="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}" class="sprk-b-Label">Phone Number</label>
-  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}"
          type="tel"
          pattern="(^(\+\d{1,2}\s)?((\(\d{3}\))|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$)|^$"
          placeholder="(000) 000-0000"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container"
-    {{#if disabled}} disabled{{/if}}>
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
+         {{#if disabled}} disabled{{/if}}>
   <span class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container">
     {{#if errorMessage}}{{errorMessage}}{{/if}}</span>

@@ -18,10 +18,6 @@ Object.assign(config.drizzle, { helpers });
 // Register core tasks
 ['clean', 'copy', 'js', 'serve', 'watch'].forEach(name => tasks[name](gulp, config[name]));
 
-// Register special CSS tasks
-tasks.css(gulp, config['css:drizzle']);
-gulp.task('css', ['css:drizzle']);
-
 // Sass task
 gulp.task('sass', () => {
   gulp
@@ -34,6 +30,17 @@ gulp.task('sass', () => {
     }))
     .pipe(cssnano())
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
+
+  gulp
+    .src('src/assets/drizzle/styles/**/*.scss')
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(autoprefixer({
+      browsers: ['> 1%', 'last 4 versions'],
+      cascade: false,
+    }))
+    .pipe(cssnano())
+    .pipe(gulp.dest('./dist/assets/drizzle/styles'));
 });
 
 // SVG icon task
@@ -61,7 +68,7 @@ gulp.task('drizzle', ['icons'], () => {
 });
 
 // Register frontend composite task
-gulp.task('frontend', ['icons', 'drizzle', 'copy', 'css', 'sass', 'images', 'js']);
+gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', ['clean'], (done) => {

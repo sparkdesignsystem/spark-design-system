@@ -1,6 +1,6 @@
-notes: |
-  Examples of the Highlight Board pattern.
-info:
+description: This component is for getting user attention, in order to convery a message or drive a
+  call to action.
+information:
   - Headlines should grab attention and be concise.
   - Subheadlines provide additional context.
   - Headlines and Subheadlines should not exceed 2 lines.

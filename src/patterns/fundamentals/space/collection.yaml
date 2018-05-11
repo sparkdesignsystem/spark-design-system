@@ -1,7 +1,7 @@
-notes: |
-  Spark has five spacing sizes to select from for creating new components or objects.
-  The sizing options are xs, s, m, l, and xl. Using these sizes will help keep spacing consistent throughout the interface.
-  The main forms of spacing are inset padding, inset with shorter vertical padding,
-  inset with taller vertical padding, stacking, and aligning items inline. See each section below for a description, the variables to use,
-  and examples. The green shows the padding and the the orange shows the margin.
+description: Space is the distance between elements. The space settings here should be used in the construction
+  of components not defined in Spark, or in arranging combinations of existing Spark components. These settings are
+  defined as variables.
+information:
+  - There are five spacing sizes to select from for creating new components or objects (xs, s, m, l, and xl).
+  - In the examples below, the green shows padding and orange shows margin.
 sparkPackageCore: true

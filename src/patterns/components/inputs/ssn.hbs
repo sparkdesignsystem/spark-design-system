@@ -1,6 +1,6 @@
 ---
 name: SSN Input
-info:
+information:
   - Use *'s to mask the value by default.
   - Checking "Show SSN" removes the mask and shows the actual SSN.
   - On blur of the text input, if the "Show SSN" box is checked, add dashes between the 3rd and 4th number and the 5th and 6th number (ex. 000-00-0000).
@@ -13,11 +13,12 @@ order: 11
 
 <div class="sprk-b-InputContainer" data-sprk-input="ssn">
   <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
-  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}"
          type="password"
          pattern="(^(?!666|000|9\d{2})\d{3}[- ]{0,1}(?!00)\d{2}[- ]{0,1}(?!0{4})\d{4}$)|^$"
          placeholder="000-00-0000"
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}>
   <div class="sprk-b-SelectionContainer">

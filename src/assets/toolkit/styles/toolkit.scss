@@ -8,7 +8,6 @@
 
 @import '../../../../packages/spark-core/settings/colors';
 @import '../../../../packages/spark-core/settings/settings';
-@import 'settings/settings';
 
 //
 // Tools
@@ -19,7 +18,7 @@
 @import '../../../../packages/spark-core/tools/animations';
 
 //
-// Generic utility stlyes
+// Generic utility styles
 ///
 
 @import '../../../../node_modules/@scalescss/generic-normalize/normalize';
@@ -39,31 +38,41 @@
 @import '../../../../packages/spark-core/base/inputs';
 @import '../../../../packages/spark-core/base/lists';
 @import '../../../../packages/spark-core/base/links';
-@import 'base/typography';
 
 //
 // Shared objects
 ///
 
 @import '../../../../node_modules/@scalescss/objects-box/box';
+@import '../../../../node_modules/@scalescss/objects-centered-column/centered-column';
 @import '../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list';
+@import '../../../../node_modules/@scalescss/objects-side-by-side/side-by-side';
+@import '../../../../node_modules/@scalescss/objects-stack/stack';
 @import '../../../../node_modules/@scalescss/objects-vertical-list/vertical-list';
 @import '../../../../node_modules/@scalescss/objects-media-object/media-object';
 @import '../../../../node_modules/@scalescss/objects-flag/flag';
 @import '../../../../node_modules/@scalescss/objects-split/split';
 @import '../../../../node_modules/@scalescss/objects-stats/stats';
 @import '../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list';
+
+//TODO: remove this when you work on sneak peak
+//
+// Objects
+///
+
 @import 'objects/flex-grid';
+@import '../../../../packages/spark-core/objects/stack';
 
 //
 // Components
 ///
 
 @import '../../../../node_modules/@scalescss/components-buttons/buttons';
+@import '../../../../packages/spark-core/components/accordions';
 @import '../../../../packages/spark-core/components/icons';
 @import '../../../../packages/spark-core/components/spinners';
 @import '../../../../packages/spark-core/components/buttons';
-@import '../../../../packages/spark-core/components/navigation';
+@import '../../../../packages/spark-core/components/wide-navigation';
 @import '../../../../packages/spark-core/components/alerts';
 @import '../../../../packages/spark-core/components/modals';
 @import '../../../../packages/spark-core/components/pagination';
@@ -86,6 +95,6 @@
 ///
 
 @import '../../../../node_modules/@scalescss/utilities-clearfix/clearfix';
-@import '../../../../node_modules/@scalescss/utilities-size/size';
+@import '../../../../node_modules/@scalescss/utilities-width/width';
 @import '../../../../node_modules/@scalescss/utilities-spacing/spacing';
 @import '../../../../packages/spark-core/utilities/utilities';

@@ -1,0 +1,15 @@
+---
+sparkCore: true
+doclayout: true
+order: 1
+description: The primary colors should make up about 80% of the color in a layout. These colors should be used to
+  create consistency and a strong visual heirarchy throughout the experience.
+---
+
+<div class="drizzle-c-SwatchLayout">
+{{#each (data "colors")}}
+  {{#each this.Primary}}
+    {{> drizzle.swatch }}
+  {{/each}}
+{{/each}}
+</div>

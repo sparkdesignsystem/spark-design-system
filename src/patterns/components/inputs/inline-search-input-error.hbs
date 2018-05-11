@@ -1,11 +1,12 @@
 ---
 name: Inline Search Input - Error State
-notes:
+description:
   This search input is intended for use in the masthead and similar patterns.
 order: 16
 invisible: true
 ---
 {{#embed "patterns.components.inputs.inline-search-input"
+         invaliddata="true"
          idattr="inline-search-error"
          errorMessage="There is an error on this field."
          class="sprk-b-TextInput--error"}}{{/embed}}

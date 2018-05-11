@@ -14,7 +14,7 @@ import getElements from '../utilities/getElements';
 
 // Toggle the hide class on the content
 const toggleContentCSS = (toggleContent) => {
-  toggleContent.classList.toggle('sprk-u-Hide');
+  toggleContent.classList.toggle('sprk-u-HideWhenJs');
 };
 
 // Toggle the open class on the icon
@@ -34,24 +34,43 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
-const toggle = () => {
-  getElements('[data-sprk-toggle="container"]', (element) => {
-    // Get the toggle's trigger and content elems
-    const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
-    const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
-    const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
-    // Hide the toggle content initially
-    toggleContent.classList.add('sprk-u-Hide');
-    // Set aria-expanded to false initially
-    toggleAriaExpanded(toggleTrigger);
-    // Add click event listener to trigger for each toggle collection we find
-    toggleTrigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      toggleContentCSS(toggleContent);
-      toggleIconCSS(toggleIcon);
-      toggleAriaExpanded(toggleTrigger);
-    });
+const handleToggleClick = (toggleContent, toggleIcon, element) => {
+  toggleContentCSS(toggleContent);
+  if (toggleIcon) {
+    toggleIconCSS(toggleIcon);
+  }
+  // If toggle type is the accordion then add a class when its open
+  if (element.getAttribute('data-sprk-toggle-type') === 'accordion') {
+    element.classList.toggle('sprk-c-Accordion__summary--open');
+  }
+  toggleAriaExpanded(element);
+};
+
+const bindToggleUIEvents = (element) => {
+  // Get the toggle's trigger and content elements
+  const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
+  const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
+  const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
+  // Set aria-expanded to false initially
+  toggleAriaExpanded(toggleTrigger);
+  // Add click event listener to trigger for each toggle collection we find
+  toggleTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    handleToggleClick(toggleContent, toggleIcon, e.currentTarget);
   });
 };
 
-export { toggle, toggleContentCSS, toggleIconCSS, toggleAriaExpanded };
+const toggle = () => {
+  getElements('[data-sprk-toggle="container"]', (element) => {
+    bindToggleUIEvents(element);
+  });
+};
+
+export {
+  toggle,
+  toggleContentCSS,
+  toggleIconCSS,
+  toggleAriaExpanded,
+  handleToggleClick,
+  bindToggleUIEvents,
+};

@@ -1,0 +1,45 @@
+---
+name: Wide Navigation
+description: |
+  This component is intended for wider viewports. On narrow viewports, you should use the narrow navigation component.
+order: 1
+---
+
+<nav role="navigation">
+  <ul class="sprk-c-WideNavigation" data-sprk-navigation="wide">
+    <li class="sprk-c-WideNavigation__item">
+      <a class="sprk-c-WideNavigation__link" href="#nogo">Item 1</a>
+    </li>
+    <li class="sprk-c-WideNavigation__item" aria-haspopup="true" aria-expanded="false">
+      <a class="sprk-c-WideNavigation__link" href="#nogo">Item 2
+          <svg class="sprk-c-Icon sprk-c-WideNavigation__arrow" viewBox="0 0 100 100">
+            <use xlink:href="#chevron-down" />
+          </svg>
+      </a>
+      <ul class="sprk-c-WideNavigation sprk-c-WideNavigation--sub sprk-u-Display--none">
+        <li class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub"><a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">Item 1</a></li>
+        <li class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub"><a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">Item 2</a></li>
+        <li class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub"><a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">Item 3</a></li>
+      </ul>
+    </li>
+    <li class="sprk-c-WideNavigation__item">
+      <a class="sprk-c-WideNavigation__link"  href="#nogo">Item 3</a>
+    </li>
+    <li class="sprk-c-WideNavigation__item" aria-haspopup="true" aria-expanded="false">
+      <a class="sprk-c-WideNavigation__link" href="#nogo">Item 4
+        <svg class="sprk-c-Icon sprk-c-WideNavigation__arrow" viewBox="0 0 100 100">
+          <use xlink:href="#chevron-down" />
+        </svg>
+      </a>
+      <ul class="sprk-c-WideNavigation sprk-c-WideNavigation--sub sprk-u-Display--none">
+        <li class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub"><a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">Item 1</a></li>
+        <li class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub"><a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">Item 2</a></li>
+        <li class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub"><a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">Item 3</a></li>
+      </ul>
+    </li>
+    <li class="sprk-c-WideNavigation__item">
+      <a class="sprk-c-WideNavigation__link" href="#nogo">Item 5</a>
+    </li>
+  </ul>
+  <span class="sprk-c-Divider sprk-u-man"></span>
+</nav>

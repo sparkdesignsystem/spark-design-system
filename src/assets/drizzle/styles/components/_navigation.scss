@@ -1,0 +1,116 @@
+.#{$app-namespace}-c-Navigation {
+  background: $nav-background-color;
+  font-family: "urw-din";
+}
+
+.#{$app-namespace}-c-Navigation__header {
+  background: $nav-background-color;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    padding: 4rem 0 2rem 0;
+    position: static;
+    width: $layout-nav-width;
+  }
+}
+
+.#{$app-namespace}-c-Navigation__logo {
+  flex: calc(100% - 16px);
+
+  @media (min-width: $nav-switch-breakpoint) {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.#{$app-namespace}-c-Navigation__toggle-icon {
+  text-align: right;
+
+  & a {
+    padding: 1rem;
+  }
+
+  @media (min-width: $nav-switch-breakpoint) {
+    display: none;
+  }
+}
+
+
+.#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__toggle-icon svg {
+  transform: rotate(180deg);
+}
+
+.#{$app-namespace}-c-Navigation a {
+  color: $white;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.#{$app-namespace}-c-Navigation__main {
+  display: none;
+  padding-bottom: 70px;
+
+  @media (min-width: $nav-switch-breakpoint) {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+
+.#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__main {
+  background-color: $black;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 64px;
+  left: 0;
+  overflow: auto;
+  padding-top: 1rem;
+  position: fixed;
+  z-index: 4;
+}
+
+.#{$app-namespace}-c-Navigation__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.#{$app-namespace}-c-Navigation__item {
+  display: block;
+  padding: 0.5rem;
+
+  &:focus,
+  &:hover,
+  &.is-active {
+    background: $highlight;
+  }
+}
+
+.#{$app-namespace}-c-Navigation__item.#{$app-namespace}-b-h5 {
+  color: $white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 16px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $black;
+  }
+}
+
+.#{$app-namespace}-c-Navigation__item {
+  padding: 1rem;
+}
+
+.#{$app-namespace}-c-Navigation__item a {
+  display: block;
+  font-weight: 300;
+  line-height: 0.8;
+}
+

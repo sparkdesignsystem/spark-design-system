@@ -1,0 +1,8 @@
+description: An Accordion is a simple way of showing, hiding and breaking down content. It should be used when a
+  large group of related content needs to be separated into smaller, digestible chunks. An accordion consists of
+  a series of <a class="drizzle-b-Link" href="/patterns/components/toggle.html">Toggle</a> components.
+information:
+  - Content length inside the accordion does not have a limit.
+  - Title content of the accordion can wrap, but it is recommended that it is short and to the point.
+  - Accordions take up 100% width of their parent container until they hit their max width of 850px.
+sparkPackageCore: true

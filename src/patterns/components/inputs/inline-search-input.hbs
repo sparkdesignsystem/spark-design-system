@@ -1,21 +1,21 @@
 ---
 name: Inline Search Input
-notes:
+description:
   This search input is intended for use in the masthead and similar patterns.
 order: 16
 stateChanger: true
 ---
-<div class="sprk-b-InputContainer">
-  <label for="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}" class="sprk-u-VisuallyHidden">Search</label>
+<div class="sprk-b-InputContainer {{#if containerClass}}{{containerClass}} {{/if}} ">
+  <label for="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}" class="sprk-u-ScreenReaderText">Search</label>
   <input placeholder="Search"
-         class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Size-100"
+         class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}"
          type="search"
          role="search"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container"
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
          {{#if disabled}} disabled{{/if}}>
   <span class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container">
         {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
 </div>
-

@@ -1,6 +1,6 @@
 ---
 name: Date Picker
-info:
+information:
   - Only to be used for future dates (ex. Schedule a future payment).
   - The date picker is hidden by default and becomes visible on focus.
   - 'Selecting a date hides the date picker and puts the value in the input in the MM/DD/YYYY format.'
@@ -16,10 +16,11 @@ order: 25
       <svg class="sprk-c-Icon" viewBox="0 0 100 100">
           <use xlink:href="#calendar" />
       </svg>
-      <input class="sprk-b-TextInput sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Size-100"
+      <input class="sprk-b-TextInput sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
              id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}"
              type="text"
              placeholder="MM/DD/YYYY"
+             {{#if invaliddata}} aria-invalid="true"{{/if}}
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}}>
   </span>
