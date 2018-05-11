@@ -1,6 +1,6 @@
 {
   "name": "spark-design-system",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-beta.1",
   "author": "Quicken Loans",
   "description": "A pattern library authoring environment",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
@@ -24,8 +24,8 @@
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.4.0",
     "@cloudfour/hbs-helpers": "^0.6.1",
-    "@sparkdesignsystem/spark-core": "^1.0.0-alpha.5",
-    "@sparkdesignsystem/spark-extras": "^1.0.0-alpha.4",
+    "@sparkdesignsystem/spark-core": "^1.0.0-beta.1",
+    "@sparkdesignsystem/spark-extras": "^1.0.0-beta.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",
