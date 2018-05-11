@@ -7,14 +7,14 @@ describe('hideMobileNav tests', () => {
   let nav;
 
   before(() => {
-    document.body.classList.add('sprk-u-OverflowHidden');
+    document.body.classList.add('sprk-u-Overflow--hidden');
     nav = document.createElement('div');
     nav.classList.add('is-active');
   });
 
   it('should remove the overflow hidden class and the active class', () => {
     hideMobileNav(nav);
-    expect(document.body.classList.contains('sprk-u-OverflowHidden')).eql(false);
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('is-active')).eql(false);
   });
 });

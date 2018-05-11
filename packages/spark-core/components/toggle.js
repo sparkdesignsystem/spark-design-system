@@ -14,7 +14,7 @@ import getElements from '../utilities/getElements';
 
 // Toggle the hide class on the content
 const toggleContentCSS = (toggleContent) => {
-  toggleContent.classList.toggle('sprk-u-HideWhenJS');
+  toggleContent.classList.toggle('sprk-u-HideWhenJs');
 };
 
 // Toggle the open class on the icon

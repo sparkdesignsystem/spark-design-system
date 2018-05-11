@@ -2,28 +2,190 @@
 // Utilities
 // ==================================================================
 
-// TODO: Dave is doing utils
-.sprk-u-Hide {
-  display: none;
+//
+// Single property utilities
+//
+// These utilities should map directly to a single CSS property and
+// value and should always use !important.
+//
+// Properties with vendor prefixes count as single properties.
+///
+
+//
+// Display and Visibility
+///
+// stylelint-disable selector-class-pattern
+.sprk-u-Display--none,
+.js .sprk-u-HideWhenJs {
+  display: none !important;
 }
 
-.sprk-u-Block {
-  display: block;
+// stylelint-enable
+.sprk-u-Display--block {
+  display: block !important;
 }
 
-// TODO: Dave is doing utils, add this one
-.sprk-u-OverflowHidden {
-  overflow: hidden;
+.sprk-u-Display--inline {
+  display: inline !important;
 }
 
-.js .sprk-u-HideWhenJS {
-  display: none;
+.sprk-u-Display--inline-block {
+  display: inline-block !important;
+}
+
+.sprk-u-Visibility--hidden {
+  visibility: hidden !important;
+}
+
+.sprk-u-Visibility--visible {
+  visibility: visible !important;
 }
 
 //
-// Accessible element hiding
+// Floats
 ///
-.sprk-u-VisuallyHidden {
+.sprk-u-Float--none {
+  float: none !important;
+}
+
+.sprk-u-Float--left {
+  float: left !important;
+}
+
+.sprk-u-Float--right {
+  float: right !important;
+}
+
+//
+// Positioning
+///
+.sprk-u-Position--relative {
+  position: relative !important;
+}
+
+.sprk-u-Position--absolute {
+  position: absolute !important;
+}
+
+.sprk-u-Position--fixed {
+  position: fixed !important;
+}
+
+.sprk-u-Position--static {
+  position: static !important;
+}
+
+.sprk-u-Top--zero {
+  top: 0 !important;
+}
+
+.sprk-u-Bottom--zero {
+  bottom: 0 !important;
+}
+
+.sprk-u-Left--zero {
+  left: 0 !important;
+}
+
+.sprk-u-Right--zero {
+  right: 0 !important;
+}
+
+//
+// Alignment
+///
+.sprk-u-TextAlign--left {
+  text-align: left !important;
+}
+
+.sprk-u-TextAlign--right {
+  text-align: right !important;
+}
+
+.sprk-u-TextAlign--center {
+  text-align: center !important;
+}
+
+.sprk-u-VerticalAlign--top {
+  vertical-align: top !important;
+}
+
+.sprk-u-VerticalAlign--middle {
+  vertical-align: middle !important;
+}
+
+.sprk-u-VerticalAlign--bottom {
+  vertical-align: bottom !important;
+}
+
+.sprk-u-VerticalAlign--baseline {
+  vertical-align: baseline !important;
+}
+
+//
+// Typography
+///
+.sprk-u-FontWeight--bold {
+  font-weight: bold !important;
+}
+
+.sprk-u-FontWeight--normal {
+  font-weight: normal !important;
+}
+
+.sprk-u-FontStyle--italic {
+  font-style: italic !important;
+}
+
+.sprk-u-FontStyle--normal {
+  font-style: normal !important;
+}
+
+.sprk-u-TextDecoration--underline {
+  text-decoration: underline !important;
+}
+
+.sprk-u-TextDecoration--none {
+  text-decoration: none !important;
+}
+
+.sprk-u-TextTransform--uppercase {
+  text-transform: uppercase !important;
+}
+
+.sprk-u-TextTransform--none {
+  text-transform: none !important;
+}
+
+//
+// Overflow
+///
+.sprk-u-Overflow--visible {
+  overflow: visible !important;
+}
+
+.sprk-u-Overflow--hidden {
+  overflow: hidden !important;
+}
+
+.sprk-u-Overflow--scroll {
+  overflow: scroll !important;
+}
+
+.sprk-u-Overflow--auto {
+  overflow: auto !important;
+}
+
+//
+// Multi-property utilities
+///
+
+//
+// Accessibility
+///
+
+// Hides visually but gets read by a screensaver.
+.sprk-u-ScreenReaderText {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -32,145 +194,19 @@
   overflow: hidden;
 }
 
-// TODO: refactor maybe? look at type
-//
-// Text color utilities
-///
-.sprk-u-TextColor--green-light {
-  color: $green-light;
-}
-
-.sprk-u-TextColor--green-medium {
-  color: $green-medium;
-}
-
-.sprk-u-TextColor--green-dark {
-  color: $green-dark;
-}
-
-.sprk-u-TextColor--blue-light {
-  color: $blue-light;
-}
-
-.sprk-u-TextColor--blue-medium {
-  color: $blue-medium;
-}
-
-.sprk-u-TextColor--blue-dark {
-  color: $blue-dark;
-}
-
-.sprk-u-TextColor--purple {
-  color: $purple-medium;
-}
-
-.sprk-u-TextColor--red-light {
-  color: $red-light;
-}
-
-.sprk-u-TextColor--red-medium {
-  color: $red-medium;
-}
-
-.sprk-u-TextColor--red-dark {
-  color: $red-dark;
-}
-
-.sprk-u-TextColor--orange-medium {
-  color: $orange-medium;
-}
-
-.sprk-u-TextColor--orange-dark {
-  color: $orange-dark;
-}
-
-.sprk-u-TextColor--gray-light {
-  color: $gray-light;
-}
-
-.sprk-u-TextColor--gray-medium {
-  color: $gray-medium;
-}
-
-.sprk-u-TextColor--gray-dark {
-  color: $gray-dark;
-}
-
-.sprk-u-TextColor--black {
-  color: $black;
-}
-
-.sprk-u-TextColor--white {
-  color: $white;
+// When combined with `.sprk-u-ScreenReaderText` the element will become
+// visible on focus.
+.sprk-u-ShowOnFocus:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
 
 //
-// Background color utilities
+// layout
 ///
-.sprk-u-BackgroundColor--green-light {
-  background-color: $green-light;
-}
-
-.sprk-u-BackgroundColor--green-medium {
-  background-color: $green-medium;
-}
-
-.sprk-u-BackgroundColor--green-dark {
-  background-color: $green-dark;
-}
-
-.sprk-u-BackgroundColor--blue-light {
-  background-color: $blue-light;
-}
-
-.sprk-u-BackgroundColor--blue-medium {
-  background-color: $blue-medium;
-}
-
-.sprk-u-BackgroundColor--blue-dark {
-  background-color: $blue-dark;
-}
-
-.sprk-u-BackgroundColor--purple {
-  background-color: $purple-medium;
-}
-
-.sprk-u-BackgroundColor--red-light {
-  background-color: $red-light;
-}
-
-.sprk-u-BackgroundColor--red-medium {
-  background-color: $red-medium;
-}
-
-.sprk-u-BackgroundColor--red-dark {
-  background-color: $red-dark;
-}
-
-.sprk-u-BackgroundColor--orange-medium {
-  background-color: $orange-medium;
-}
-
-.sprk-u-BackgroundColor--orange-dark {
-  background-color: $orange-dark;
-}
-
-.sprk-u-BackgroundColor--gray-light {
-  background-color: $gray-light;
-}
-
-.sprk-u-BackgroundColor--gray-medium {
-  background-color: $gray-medium;
-}
-
-.sprk-u-BackgroundColor--gray-dark {
-  background-color: $gray-dark;
-}
-
-.sprk-u-BackgroundColor--black {
-  background-color: $black;
-}
-
-.sprk-u-BackgroundColor--white {
-  background-color: $white;
+.sprk-u-AbsoluteCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

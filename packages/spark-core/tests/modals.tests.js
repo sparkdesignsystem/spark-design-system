@@ -14,7 +14,7 @@ describe('Modal tests', () => {
   let main;
   let link;
   let outsideOfMainDiv;
-  const HIDE_CLASS = 'sprk-u-Hide';
+  const HIDE_CLASS = 'sprk-u-Display--none';
 
   before(() => {
     main = document.createElement('div');
