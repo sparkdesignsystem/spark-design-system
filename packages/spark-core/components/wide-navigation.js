@@ -4,14 +4,14 @@ import getElements from '../utilities/getElements';
 const showDropDown = (container) => {
   const subNav = container.querySelector('.sprk-c-WideNavigation--sub');
   if (subNav) {
-    subNav.classList.remove('sprk-u-Hide');
+    subNav.classList.remove('sprk-u-Display--none');
     container.setAttribute('aria-expanded', 'true');
   }
 };
 
 const hideAllDropDowns = (subNavs, listItems) => {
   subNavs.forEach((item) => {
-    item.classList.add('sprk-u-Hide');
+    item.classList.add('sprk-u-Display--none');
   });
   listItems.forEach((item) => {
     item.setAttribute('aria-expanded', 'false');
@@ -42,8 +42,4 @@ const WideNavigation = () => {
   getElements('[data-sprk-navigation="wide"] > .sprk-c-WideNavigation__item', bindUIEvents);
 };
 
-export {
-  WideNavigation,
-  showDropDown,
-  hideAllDropDowns,
-};
+export { WideNavigation, showDropDown, hideAllDropDowns };

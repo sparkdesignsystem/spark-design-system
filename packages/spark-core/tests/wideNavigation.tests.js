@@ -17,10 +17,10 @@ describe('wide nav tests', () => {
     navItem3 = document.createElement('li');
 
     subNav1 = document.createElement('ul');
-    subNav1.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Hide');
+    subNav1.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Display--none');
 
     subNav2 = document.createElement('ul');
-    subNav2.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Hide');
+    subNav2.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Display--none');
 
     navItem1.appendChild(subNav1);
     navItem3.appendChild(subNav2);
@@ -32,7 +32,7 @@ describe('wide nav tests', () => {
 
   it('should remove the hidden class from the subNav inside', () => {
     showDropDown(navItem1);
-    expect(subNav1.classList.contains('sprk-u-Hide')).eql(false);
+    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(false);
   });
 });
 
@@ -72,8 +72,8 @@ describe('hide all navigation tests', () => {
   });
 
   it('should add the hidden class to the sub navs and set aria-expanded', () => {
-    expect(subNav1.classList.contains('sprk-u-Hide')).eql(true);
-    expect(subNav2.classList.contains('sprk-u-Hide')).eql(true);
+    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(true);
   });
 
   it('should set aria-expanded on nav items to false', () => {

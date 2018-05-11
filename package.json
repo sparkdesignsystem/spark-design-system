@@ -16,7 +16,10 @@
     "node": ">=4.0.0"
   },
   "nyc": {
-    "exclude": ["packages/**/*.js", "tests"]
+    "exclude": [
+      "packages/**/*.js",
+      "tests"
+    ]
   },
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.4.0",
@@ -68,13 +71,18 @@
     "build": "npm run prestart && gulp",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "precommit": "lint-staged",
-    "test":
-      "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
+    "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
     "coverage": "nyc npm test"
   },
   "lint-staged": {
-    "*.scss": ["prettier-stylelint --write", "git add"],
-    "*.js": ["prettier-eslint --write", "git add"]
+    "*.scss": [
+      "prettier-stylelint --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@scalescss/scalescss": "6.0.0-1",
