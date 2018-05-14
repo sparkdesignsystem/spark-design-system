@@ -6,6 +6,7 @@ import {
   isMaskClicked,
   currentOpenModal,
   handleModalKeyEvents,
+  handleMaskEvents,
 } from '../components/modals';
 import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
 import { isTabPressed, isEscPressed } from '../utilities/keypress';
@@ -248,6 +249,28 @@ describe('Modal tests', () => {
     expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
     // Now throw a 'esc' key event
     handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
+    // Check to make sure the modal is closed and that it has the hide class
+    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
+  });
+
+  it('should perform modal mask click event only while a modal is open', () => {
+    const modalsList = document.querySelectorAll('[data-sprk-modal]');
+    const maskDiv = document.createElement('div');
+    maskDiv.setAttribute('data-sprk-modal-mask', 'true');
+    // Check for open modal
+    const modalEl = currentOpenModal(modalsList);
+    const modalClickEv = {
+      target: maskDiv,
+      preventDefault: () => {},
+    };
+    // Check to make sure it is closed
+    expect(modalEl).eql(undefined);
+    // Now open the modal
+    showModal(defaultModal, modalMask, main);
+    // Check to make sure the modal is open
+    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
+    // Now throw a 'esc' key event
+    handleMaskEvents(modalsList, modalMask, main, modalClickEv);
     // Check to make sure the modal is closed and that it has the hide class
     expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
   });
