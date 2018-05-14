@@ -243,6 +243,10 @@ describe('Modal tests', () => {
     const modalEl = currentOpenModal(modalsList);
     // Check to make sure it is closed
     expect(modalEl).eql(undefined);
+    // Now throw a 'esc' key event when no modal is open
+    handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
+    // Check to make sure the modal is closed and that it has the hide class
+    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
     // Now open the modal
     showModal(defaultModal, modalMask, main);
     // Check to make sure the modal is open
