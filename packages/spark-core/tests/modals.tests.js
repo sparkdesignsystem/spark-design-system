@@ -1,6 +1,12 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import { showModal, hideModal, isMaskClicked, currentOpenModal } from '../components/modals';
+import {
+  showModal,
+  hideModal,
+  isMaskClicked,
+  currentOpenModal,
+  handleModalKeyEvents,
+} from '../components/modals';
 import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
 import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
@@ -223,5 +229,26 @@ describe('Modal tests', () => {
     isActiveElement(cancelDefault);
     expect(document.activeElement).eql(cancelDefault);
     expect(document.activeElement).to.not.eql(notActiveLink);
+  });
+
+  it('should perform modal key events only while a modal is open', () => {
+    const modalsList = document.querySelectorAll('[data-sprk-modal]');
+    const escKeyEvent = {
+      key: 'Escape',
+      keyCode: 27,
+      preventDefault: () => {},
+    };
+    // Check for open modal
+    const modalEl = currentOpenModal(modalsList);
+    // Check to make sure it is closed
+    expect(modalEl).eql(undefined);
+    // Now open the modal
+    showModal(defaultModal, modalMask, main);
+    // Check to make sure the modal is open
+    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
+    // Now throw a 'esc' key event
+    handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
+    // Check to make sure the modal is closed and that it has the hide class
+    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
   });
 });
