@@ -59,6 +59,7 @@ const handleMaskEvents = (modalsList, mask, main, e) => {
 // Handle when modal is open and a key is pressed
 const handleModalKeyEvents = (modalsList, mask, main, e) => {
   const currentOpenModalEl = currentOpenModal(modalsList);
+  // Return if there is no open modal
   if (!currentOpenModalEl) return;
   const focusableEls = getFocusableEls(currentOpenModalEl);
   const firstFocusableEl = focusableEls[0];
