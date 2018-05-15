@@ -26,6 +26,9 @@ describe('Pagination tests', () => {
   let prev;
   let nextDiv;
   let prevDiv;
+  let longPag;
+  let dots1;
+  let dots2;
 
   before(() => {
     newPageLink = document.createElement('a');
@@ -33,12 +36,19 @@ describe('Pagination tests', () => {
     addItem = document.createElement('a');
     removeItem = document.createElement('a');
     defaultPag = document.createElement('nav');
+    longPag = document.createElement('nav');
 
     prev = document.createElement('a');
     next = document.createElement('a');
 
     prevDiv = document.createElement('div');
     nextDiv = document.createElement('div');
+
+    dots1 = document.createElement('div');
+    dots2 = document.createElement('div');
+
+    dots1.setAttribute('data-sprk-pagination', 'dots');
+    dots2.setAttribute('data-sprk-pagination', 'dots');
 
     prevDiv.classList.add('sprk-c-Pagination__item');
     nextDiv.classList.add('sprk-c-Pagination__item');
@@ -58,6 +68,8 @@ describe('Pagination tests', () => {
     link1.textContent = '1';
     link2.textContent = '2';
     link3.textContent = '3';
+
+    link2.setAttribute('aria-current', 'true');
 
     link1Div.append(link1);
     link2Div.append(link2);
@@ -79,6 +91,15 @@ describe('Pagination tests', () => {
     defaultPag.append(link2Div);
     defaultPag.append(link3Div);
     defaultPag.append(nextDiv);
+
+    longPag.setAttribute('data-sprk-pagination', 'long');
+    longPag.append(prevDiv);
+    longPag.append(link1Div);
+    longPag.append(dots1);
+    longPag.append(link2Div);
+    longPag.append(dots2);
+    longPag.append(link3Div);
+    longPag.append(nextDiv);
   });
 
   it('should add aria-current attribute to new page link and remove from old', () => {
