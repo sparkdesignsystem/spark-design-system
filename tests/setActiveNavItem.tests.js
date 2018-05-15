@@ -1,7 +1,6 @@
-/* global describe it */
-import { expect } from 'chai';
+/* global describe */
+// import { expect } from 'chai';
 // TODO: Write Tests
-import setActiveNavItem from '../src/assets/drizzle/scripts/navigation/setActiveNavItem';
+// import setActiveNavItem from '../src/assets/drizzle/scripts/navigation/setActiveNavItem';
 
-describe('setActiveNavItem tests', () => {
-});
+describe('setActiveNavItem tests', () => {});
