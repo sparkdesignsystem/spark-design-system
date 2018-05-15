@@ -35,11 +35,6 @@ const updatePageStyles = (addItem, removeItem, classCSS) => {
 };
 
 const handleDefaultPagItemClick = (currentItemNum, item, currentPage, prev, next) => {
-  console.log(currentItemNum.innerHTML);
-  console.log(item.innerHTML);
-  console.log(currentPage.innerHTML);
-  console.log(prev.innerHTML);
-  console.log(next.innerHTML);
   if (currentItemNum === 1) {
     updatePageStyles(
       item.parentElement,
