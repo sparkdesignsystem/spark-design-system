@@ -125,7 +125,7 @@ const paginationDefault = () => {
         // Current page number when the new page was clicked
         const currentPageNum = parseInt(currentPage.textContent, 10);
         event.preventDefault();
-        // If current link is clicked again
+        // If current link is clicked again then do nothing
         if (currentItemNum === currentPageNum) return;
         handleDefaultPagItemClick(currentItemNum, item, currentPage, prev, next);
       });
@@ -139,7 +139,9 @@ const paginationDefault = () => {
     });
 
     next.addEventListener('click', (event) => {
+      // The current page when the new page was clicked
       const currentPage = element.querySelector('[aria-current="true"]');
+      // Current page number when the new page was clicked
       const currentPageNum = parseInt(currentPage.textContent, 10);
       event.preventDefault();
       handleDefaultPagNextClick(currentPageNum, link2, link3, currentPage, prev, next);

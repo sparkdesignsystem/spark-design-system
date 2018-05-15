@@ -4,7 +4,7 @@ import {
   setAriaCurrent,
   updatePageStyles,
   handleDefaultPagItemClick,
-  // handleDefaultPagNextClick,
+  handleDefaultPagNextClick,
   // handleDefaultPagPrevClick,
 } from '../src/assets/drizzle/scripts/pagination/default';
 import { goForwardOne, goBackOne } from '../src/assets/drizzle/scripts/pagination/long';
@@ -19,8 +19,13 @@ describe('Pagination tests', () => {
   let link1;
   let link2;
   let link3;
+  let link1Div;
+  let link2Div;
+  let link3Div;
   let next;
   let prev;
+  let nextDiv;
+  let prevDiv;
 
   before(() => {
     newPageLink = document.createElement('a');
@@ -28,8 +33,24 @@ describe('Pagination tests', () => {
     addItem = document.createElement('a');
     removeItem = document.createElement('a');
     defaultPag = document.createElement('nav');
+
     prev = document.createElement('a');
     next = document.createElement('a');
+
+    prevDiv = document.createElement('div');
+    nextDiv = document.createElement('div');
+
+    prevDiv.classList.add('sprk-c-Pagination__item');
+    nextDiv.classList.add('sprk-c-Pagination__item');
+
+    link1Div = document.createElement('div');
+    link2Div = document.createElement('div');
+    link3Div = document.createElement('div');
+
+    link1Div.classList.add('sprk-c-Pagination__item');
+    link2Div.classList.add('sprk-c-Pagination__item');
+    link3Div.classList.add('sprk-c-Pagination__item');
+
     link1 = document.createElement('a');
     link2 = document.createElement('a');
     link3 = document.createElement('a');
@@ -38,18 +59,26 @@ describe('Pagination tests', () => {
     link2.textContent = '2';
     link3.textContent = '3';
 
+    link1Div.append(link1);
+    link2Div.append(link2);
+    link3Div.append(link3);
+
     prev.setAttribute('data-sprk-pagination', 'prev');
     next.setAttribute('data-sprk-pagination', 'next');
+
+    prevDiv.append(prev);
+    nextDiv.append(next);
+
     link1.setAttribute('data-sprk-pagination', 'item');
     link2.setAttribute('data-sprk-pagination', 'item');
     link3.setAttribute('data-sprk-pagination', 'item');
 
     defaultPag.setAttribute('data-sprk-pagination', 'default');
-    defaultPag.appendChild(prev);
-    defaultPag.appendChild(link1);
-    defaultPag.appendChild(link2);
-    defaultPag.appendChild(link3);
-    defaultPag.appendChild(next);
+    defaultPag.append(prevDiv);
+    defaultPag.append(link1Div);
+    defaultPag.append(link2Div);
+    defaultPag.append(link3Div);
+    defaultPag.append(nextDiv);
   });
 
   it('should add aria-current attribute to new page link and remove from old', () => {
@@ -85,5 +114,13 @@ describe('Pagination tests', () => {
     const currentItemNum = parseInt(link1.textContent, 10);
     handleDefaultPagItemClick(currentItemNum, link1, link2, prev, next);
     expect(prev.classList.contains(classCSS)).eql(true);
+  });
+
+  it('should add the current item css class to the next page when the next link is clicked', () => {
+    classCSS = 'sprk-c-Pagination__item--current';
+    const currentPageNum = parseInt(link1.textContent, 10);
+    handleDefaultPagNextClick(currentPageNum, link2, link3, link1, prev, next);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link1.parentElement.classList.contains(classCSS)).eql(false);
   });
 });
