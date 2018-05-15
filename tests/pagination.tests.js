@@ -1,6 +1,12 @@
 /* global describe it document before */
 import { expect } from 'chai';
-import { setAriaCurrent, updatePageStyles } from '../src/assets/drizzle/scripts/pagination/default';
+import {
+  setAriaCurrent,
+  updatePageStyles,
+  handleDefaultPagItemClick,
+  // handleDefaultPagNextClick,
+  // handleDefaultPagPrevClick,
+} from '../src/assets/drizzle/scripts/pagination/default';
 import { goForwardOne, goBackOne } from '../src/assets/drizzle/scripts/pagination/long';
 
 describe('Pagination tests', () => {
@@ -10,6 +16,11 @@ describe('Pagination tests', () => {
   let removeItem;
   let classCSS;
   let defaultPag;
+  let link1;
+  let link2;
+  let link3;
+  let next;
+  let prev;
 
   before(() => {
     newPageLink = document.createElement('a');
@@ -17,8 +28,28 @@ describe('Pagination tests', () => {
     addItem = document.createElement('a');
     removeItem = document.createElement('a');
     defaultPag = document.createElement('nav');
+    prev = document.createElement('a');
+    next = document.createElement('a');
+    link1 = document.createElement('a');
+    link2 = document.createElement('a');
+    link3 = document.createElement('a');
+
+    link1.textContent = '1';
+    link2.textContent = '2';
+    link3.textContent = '3';
+
+    prev.setAttribute('data-sprk-pagination', 'prev');
+    next.setAttribute('data-sprk-pagination', 'next');
+    link1.setAttribute('data-sprk-pagination', 'item');
+    link2.setAttribute('data-sprk-pagination', 'item');
+    link3.setAttribute('data-sprk-pagination', 'item');
 
     defaultPag.setAttribute('data-sprk-pagination', 'default');
+    defaultPag.appendChild(prev);
+    defaultPag.appendChild(link1);
+    defaultPag.appendChild(link2);
+    defaultPag.appendChild(link3);
+    defaultPag.appendChild(next);
   });
 
   it('should add aria-current attribute to new page link and remove from old', () => {
@@ -40,5 +71,19 @@ describe('Pagination tests', () => {
 
   it('should go forward one page', () => {
     expect(goForwardOne(1)).eql(2);
+  });
+
+  it('should add the disabled link class to the next link when the last page is selected', () => {
+    classCSS = 'sprk-b-Link--disabled';
+    const currentItemNum = parseInt(link3.textContent, 10);
+    handleDefaultPagItemClick(currentItemNum, link3, link2, prev, next);
+    expect(next.classList.contains(classCSS)).eql(true);
+  });
+
+  it('should add the disabled link class to the prev link when the first page is selected', () => {
+    classCSS = 'sprk-b-Link--disabled';
+    const currentItemNum = parseInt(link1.textContent, 10);
+    handleDefaultPagItemClick(currentItemNum, link1, link2, prev, next);
+    expect(prev.classList.contains(classCSS)).eql(true);
   });
 });
