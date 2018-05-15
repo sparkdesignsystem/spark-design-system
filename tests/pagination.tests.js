@@ -5,7 +5,7 @@ import {
   updatePageStyles,
   handleDefaultPagItemClick,
   handleDefaultPagNextClick,
-  // handleDefaultPagPrevClick,
+  handleDefaultPagPrevClick,
 } from '../src/assets/drizzle/scripts/pagination/default';
 import { goForwardOne, goBackOne } from '../src/assets/drizzle/scripts/pagination/long';
 
@@ -122,5 +122,13 @@ describe('Pagination tests', () => {
     handleDefaultPagNextClick(currentPageNum, link2, link3, link1, prev, next);
     expect(link2.parentElement.classList.contains(classCSS)).eql(true);
     expect(link1.parentElement.classList.contains(classCSS)).eql(false);
+  });
+
+  it('should add the current item css class to the previous page when the previous link is clicked', () => {
+    classCSS = 'sprk-c-Pagination__item--current';
+    const currentPageNum = parseInt(link2.textContent, 10);
+    handleDefaultPagPrevClick(currentPageNum, link1, link2, link2, prev, next);
+    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(false);
   });
 });
