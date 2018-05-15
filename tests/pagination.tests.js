@@ -103,22 +103,22 @@ describe('Pagination tests', () => {
   });
 
   it('should add the disabled link class to the next link when the last page is selected', () => {
-    classCSS = 'sprk-b-Link--disabled';
     const currentItemNum = parseInt(link3.textContent, 10);
+    classCSS = 'sprk-b-Link--disabled';
     handleDefaultPagItemClick(currentItemNum, link3, link2, prev, next);
     expect(next.classList.contains(classCSS)).eql(true);
   });
 
   it('should add the disabled link class to the prev link when the first page is selected', () => {
-    classCSS = 'sprk-b-Link--disabled';
     const currentItemNum = parseInt(link1.textContent, 10);
+    classCSS = 'sprk-b-Link--disabled';
     handleDefaultPagItemClick(currentItemNum, link1, link2, prev, next);
     expect(prev.classList.contains(classCSS)).eql(true);
   });
 
   it('should add the current item css class to the next page when the next link is clicked', () => {
-    classCSS = 'sprk-c-Pagination__item--current';
     const currentPageNum = parseInt(link1.textContent, 10);
+    classCSS = 'sprk-c-Pagination__item--current';
     handleDefaultPagNextClick(currentPageNum, link2, link3, link1, prev, next);
     expect(link2.parentElement.classList.contains(classCSS)).eql(true);
     expect(link1.parentElement.classList.contains(classCSS)).eql(false);
@@ -129,6 +129,14 @@ describe('Pagination tests', () => {
     const currentPageNum = parseInt(link2.textContent, 10);
     handleDefaultPagPrevClick(currentPageNum, link1, link2, link2, prev, next);
     expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(false);
+  });
+
+  it('should not do anything if page number clicked is greater than max number of links', () => {
+    let currentPageNum = parseInt(link3.textContent, 10);
+    classCSS = 'sprk-c-Pagination__item--current';
+    currentPageNum += 1;
+    handleDefaultPagItemClick(currentPageNum, link3, link2, prev, next);
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
   });
 });
