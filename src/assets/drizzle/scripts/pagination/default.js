@@ -34,6 +34,85 @@ const updatePageStyles = (addItem, removeItem, classCSS) => {
   }
 };
 
+const handleDefaultPagItemClick = (currentItemNum, item, currentPage, prev, next) => {
+  console.log(currentItemNum.innerHTML);
+  console.log(item.innerHTML);
+  console.log(currentPage.innerHTML);
+  console.log(prev.innerHTML);
+  console.log(next.innerHTML);
+  if (currentItemNum === 1) {
+    updatePageStyles(
+      item.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(item, currentPage);
+    updatePageStyles(prev, next, 'sprk-b-Link--disabled');
+  } else if (currentItemNum === 2) {
+    updatePageStyles(
+      item.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(item, currentPage);
+    // Enable both prev/links since we are on middle link
+    prev.classList.remove('sprk-b-Link--disabled');
+    next.classList.remove('sprk-b-Link--disabled');
+  } else if (currentItemNum === 3) {
+    updatePageStyles(
+      item.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(item, currentPage);
+    updatePageStyles(next, prev, 'sprk-b-Link--disabled');
+  }
+};
+
+const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, prev, next) => {
+  if (currentPageNum > 3) return;
+  // Update DOM CSS and add aria-current to new link
+  if (currentPageNum === 2) {
+    updatePageStyles(
+      link1.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(link1, currentPage);
+    prev.classList.add('sprk-b-Link--disabled');
+  } else if (currentPageNum === 3) {
+    updatePageStyles(
+      link2.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(link2, currentPage);
+    // Disable next link since we are on last link
+    next.classList.remove('sprk-b-Link--disabled');
+  }
+};
+
+const handleDefaultPagNextClick = (currentPageNum, link2, link3, currentPage, prev, next) => {
+  if (currentPageNum > 3) return;
+  if (currentPageNum === 1) {
+    updatePageStyles(
+      link2.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(link2, currentPage);
+    prev.classList.remove('sprk-b-Link--disabled');
+  } else if (currentPageNum === 2) {
+    updatePageStyles(
+      link3.parentElement,
+      currentPage.parentElement,
+      'sprk-c-Pagination__item--current',
+    );
+    setAriaCurrent(link3, currentPage);
+    next.classList.add('sprk-b-Link--disabled');
+  }
+};
+
 const paginationDefault = () => {
   getElements('[data-sprk-pagination="default"]', (element) => {
     const defaultPagItems = element.querySelectorAll('[data-sprk-pagination="item"]');
@@ -44,99 +123,40 @@ const paginationDefault = () => {
     // Listen for page number link clicks
     defaultPagItems.forEach((item) => {
       item.addEventListener('click', (event) => {
-        const currentItemNum = parseInt(item.textContent, 10); // Item that was clicked
+        // Number of the new page that was clicked
+        const currentItemNum = parseInt(item.textContent, 10);
+        // The current page when the new page was clicked
         const currentPage = element.querySelector('[aria-current="true"]');
+        // Current page number when the new page was clicked
         const currentPageNum = parseInt(currentPage.textContent, 10);
         event.preventDefault();
-
-        // If link clicked is not currently selected link
-        if (currentItemNum !== currentPageNum) {
-          if (currentItemNum === 1) {
-            updatePageStyles(
-              item.parentElement,
-              currentPage.parentElement,
-              'sprk-c-Pagination__item--current',
-            );
-            setAriaCurrent(item, currentPage);
-            updatePageStyles(prev, next, 'sprk-b-Link--disabled');
-          } else if (currentItemNum === 2) {
-            updatePageStyles(
-              item.parentElement,
-              currentPage.parentElement,
-              'sprk-c-Pagination__item--current',
-            );
-            setAriaCurrent(item, currentPage);
-            // Enable both prev/links since we are on middle link
-            prev.classList.remove('sprk-b-Link--disabled');
-            next.classList.remove('sprk-b-Link--disabled');
-          } else if (currentItemNum === 3) {
-            updatePageStyles(
-              item.parentElement,
-              currentPage.parentElement,
-              'sprk-c-Pagination__item--current',
-            );
-            setAriaCurrent(item, currentPage);
-            updatePageStyles(next, prev, 'sprk-b-Link--disabled');
-          }
-        }
+        // If current link is clicked again
+        if (currentItemNum === currentPageNum) return;
+        handleDefaultPagItemClick(currentItemNum, item, currentPage, prev, next);
       });
     });
 
     prev.addEventListener('click', (event) => {
       const currentPage = element.querySelector('[aria-current="true"]');
       const currentPageNum = parseInt(currentPage.textContent, 10);
-
       event.preventDefault();
-      if (currentPageNum <= 3) {
-        // Update DOM CSS and add aria-current to new link
-        if (currentPageNum === 2) {
-          updatePageStyles(
-            link1.parentElement,
-            currentPage.parentElement,
-            'sprk-c-Pagination__item--current',
-          );
-          setAriaCurrent(link1, currentPage);
-          prev.classList.add('sprk-b-Link--disabled');
-        } else if (currentPageNum === 3) {
-          updatePageStyles(
-            link2.parentElement,
-            currentPage.parentElement,
-            'sprk-c-Pagination__item--current',
-          );
-          setAriaCurrent(link2, currentPage);
-          // Disable next link since we are on last link
-          next.classList.remove('sprk-b-Link--disabled');
-        }
-      }
+      handleDefaultPagPrevClick(currentPageNum, link1, link2, currentPage, prev, next);
     });
 
     next.addEventListener('click', (event) => {
       const currentPage = element.querySelector('[aria-current="true"]');
       const currentPageNum = parseInt(currentPage.textContent, 10);
-
       event.preventDefault();
-
-      if (currentPageNum <= 3) {
-        if (currentPageNum === 1) {
-          updatePageStyles(
-            link2.parentElement,
-            currentPage.parentElement,
-            'sprk-c-Pagination__item--current',
-          );
-          setAriaCurrent(link2, currentPage);
-          prev.classList.remove('sprk-b-Link--disabled');
-        } else if (currentPageNum === 2) {
-          updatePageStyles(
-            link3.parentElement,
-            currentPage.parentElement,
-            'sprk-c-Pagination__item--current',
-          );
-          setAriaCurrent(link3, currentPage);
-          next.classList.add('sprk-b-Link--disabled');
-        }
-      }
+      handleDefaultPagNextClick(currentPageNum, link2, link3, currentPage, prev, next);
     });
   });
 };
 
-export { setAriaCurrent, updatePageStyles, paginationDefault };
+export {
+  setAriaCurrent,
+  updatePageStyles,
+  paginationDefault,
+  handleDefaultPagItemClick,
+  handleDefaultPagNextClick,
+  handleDefaultPagPrevClick,
+};
