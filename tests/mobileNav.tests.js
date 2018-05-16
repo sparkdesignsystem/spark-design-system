@@ -1,7 +1,11 @@
 /* global describe it document before */
 
 import { expect } from 'chai';
-import { hideMobileNav, focusTrap } from '../src/assets/drizzle/scripts/navigation/mobileNav';
+import {
+  hideMobileNav,
+  focusTrap,
+  mobileNav,
+} from '../src/assets/drizzle/scripts/navigation/mobileNav';
 
 describe('hideMobileNav tests', () => {
   let nav;
@@ -35,5 +39,18 @@ describe('focusTrap tests', () => {
     focusTrap(nav, mainNav);
     const active = document.activeElement;
     expect(input === active).eql(true);
+  });
+});
+
+describe('mobile nav tests', () => {
+  let nav;
+
+  before(() => {
+    nav = document.createElement('nav');
+    nav.classList.add('is-active');
+  });
+  it('should not doing anything if nav is not found with the nav CSS class', () => {
+    mobileNav();
+    expect(nav.classList.contains('is-active')).eql(true);
   });
 });
