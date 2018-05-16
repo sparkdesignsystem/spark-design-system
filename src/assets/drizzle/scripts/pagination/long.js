@@ -79,27 +79,23 @@ const handleLongPagPrevClick = (dots, longPagItems, prev, next, longPag) => {
     dots[0].classList.add('drizzle-u-Display--none');
     // Hide the 1st link
     longPagItems[0].parentElement.classList.add('drizzle-u-Display--none');
-    // Update link number with new number
-    currentPage.textContent = goBackOne(currentPageNum);
     // Disable prev link since we can't go back any farther than 1st link
     prev.classList.add('sprk-b-Link--disabled');
   } else if (currentPageNum === 3) {
     // We go back to two link layout when number is < 3
     dots[0].classList.add('drizzle-u-Display--none');
-    currentPage.textContent = goBackOne(currentPageNum);
   } else if (currentPageNum === maxPageNum) {
     // Show last link number
     longPagItems[2].parentElement.classList.remove('drizzle-u-Display--none');
     // Enable the Next link since we are no longer on last link
     next.classList.remove('sprk-b-Link--disabled');
-    // Update link number with new number
-    currentPage.textContent = goBackOne(currentPageNum);
   } else {
     // Show both sets of dots
     dots[0].classList.remove('drizzle-u-Display--none');
     dots[1].classList.remove('drizzle-u-Display--none');
-    currentPage.textContent = goBackOne(currentPageNum);
   }
+  // Update link number with new number
+  currentPage.textContent = goBackOne(currentPageNum);
 };
 
 const handleLongPagNextClick = (dots, longPagItems, prev, next, longPag) => {
@@ -114,22 +110,19 @@ const handleLongPagNextClick = (dots, longPagItems, prev, next, longPag) => {
 
   if (currentPageNum === maxPageNum - 1) {
     longPagItems[2].parentElement.classList.add('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
     dots[1].classList.add('drizzle-u-Display--none');
     next.classList.add('sprk-b-Link--disabled');
   } else if (currentPageNum === 1) {
     longPagItems[0].parentElement.classList.remove('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
     prev.classList.remove('sprk-b-Link--disabled');
   } else if (currentPageNum === maxPageNum - 2) {
     dots[1].classList.add('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
   } else {
     dots[0].classList.remove('drizzle-u-Display--none');
     dots[1].classList.remove('drizzle-u-Display--none');
     longPagItems[0].parentElement.classList.remove('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
   }
+  currentPage.textContent = goForwardOne(currentPageNum);
 };
 
 const paginationLong = () => {

@@ -34,37 +34,32 @@ const updatePageStyles = (addItem, removeItem, classCSS) => {
   }
 };
 
-const handleDefaultPagItemClick = (currentItemNum, item, currentPage, prev, next) => {
+const handleDefaultPagItemClick = (item, currentPage, prev, next) => {
+  // Number of the new page that was clicked
+  const currentItemNum = parseInt(item.textContent, 10);
+
+  updatePageStyles(
+    item.parentElement,
+    currentPage.parentElement,
+    'sprk-c-Pagination__item--current',
+  );
+
+  setAriaCurrent(item, currentPage);
+
   if (currentItemNum === 1) {
-    updatePageStyles(
-      item.parentElement,
-      currentPage.parentElement,
-      'sprk-c-Pagination__item--current',
-    );
-    setAriaCurrent(item, currentPage);
     updatePageStyles(prev, next, 'sprk-b-Link--disabled');
   } else if (currentItemNum === 2) {
-    updatePageStyles(
-      item.parentElement,
-      currentPage.parentElement,
-      'sprk-c-Pagination__item--current',
-    );
-    setAriaCurrent(item, currentPage);
     // Enable both prev/links since we are on middle link
     prev.classList.remove('sprk-b-Link--disabled');
     next.classList.remove('sprk-b-Link--disabled');
   } else if (currentItemNum === 3) {
-    updatePageStyles(
-      item.parentElement,
-      currentPage.parentElement,
-      'sprk-c-Pagination__item--current',
-    );
-    setAriaCurrent(item, currentPage);
     updatePageStyles(next, prev, 'sprk-b-Link--disabled');
   }
 };
 
-const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, prev, next) => {
+const handleDefaultPagPrevClick = (link1, link2, currentPage, prev, next) => {
+  const currentPageNum = parseInt(currentPage.textContent, 10);
+
   // Prevent ever going to page 0
   if (currentPageNum === 1) return;
   // If we are on page 2 and want to go back to 1
@@ -89,7 +84,9 @@ const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, pr
   }
 };
 
-const handleDefaultPagNextClick = (currentPageNum, link2, link3, currentPage, prev, next) => {
+const handleDefaultPagNextClick = (link2, link3, currentPage, prev, next) => {
+  // Current page number when the new page was clicked
+  const currentPageNum = parseInt(currentPage.textContent, 10);
   // Check if we are on page 3 or more and exit since we cant move forward
   if (currentPageNum >= 3) return;
   // If we are on page 1 and want to go to 2
@@ -123,33 +120,27 @@ const paginationDefault = () => {
     // Listen for page number link clicks
     defaultPagItems.forEach((item) => {
       item.addEventListener('click', (event) => {
-        // Number of the new page that was clicked
-        const currentItemNum = parseInt(item.textContent, 10);
         // The current page when the new page was clicked
         const currentPage = element.querySelector('[aria-current="true"]');
-        // Current page number when the new page was clicked
-        const currentPageNum = parseInt(currentPage.textContent, 10);
+
         event.preventDefault();
         // If current link is clicked again then do nothing
-        if (currentItemNum === currentPageNum) return;
-        handleDefaultPagItemClick(currentItemNum, item, currentPage, prev, next);
+        if (parseInt(item.textContent, 10) === parseInt(currentPage.textContent, 10)) return;
+        handleDefaultPagItemClick(item, currentPage, prev, next);
       });
     });
 
     prev.addEventListener('click', (event) => {
       const currentPage = element.querySelector('[aria-current="true"]');
-      const currentPageNum = parseInt(currentPage.textContent, 10);
       event.preventDefault();
-      handleDefaultPagPrevClick(currentPageNum, link1, link2, currentPage, prev, next);
+      handleDefaultPagPrevClick(link1, link2, currentPage, prev, next);
     });
 
     next.addEventListener('click', (event) => {
       // The current page when the new page was clicked
       const currentPage = element.querySelector('[aria-current="true"]');
-      // Current page number when the new page was clicked
-      const currentPageNum = parseInt(currentPage.textContent, 10);
       event.preventDefault();
-      handleDefaultPagNextClick(currentPageNum, link2, link3, currentPage, prev, next);
+      handleDefaultPagNextClick(link2, link3, currentPage, prev, next);
     });
   });
 };
