@@ -17,7 +17,13 @@ import { updatePageStyles } from './default';
 import { setAriaLabel } from '../../../../../packages/spark-core/components/pagination';
 
 const goBackOne = (currentPageNum) => {
-  const updatedPageNum = currentPageNum - 1;
+  let updatedPageNum;
+  // Prevent having a page 0 scenario
+  if (currentPageNum > 1) {
+    updatedPageNum = currentPageNum - 1;
+  } else {
+    updatedPageNum = currentPageNum;
+  }
   return updatedPageNum;
 };
 

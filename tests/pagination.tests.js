@@ -119,6 +119,10 @@ describe('Pagination tests', () => {
     expect(goBackOne(3)).eql(2);
   });
 
+  it('should not go back one page if page number is 1', () => {
+    expect(goBackOne(1)).eql(1);
+  });
+
   it('should go forward one page', () => {
     expect(goForwardOne(1)).eql(2);
   });
