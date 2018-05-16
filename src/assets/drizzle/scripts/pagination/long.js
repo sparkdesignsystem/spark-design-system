@@ -109,7 +109,8 @@ const handleLongPagNextClick = (dots, longPagItems, prev, next, longPag) => {
   // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
 
-  if (currentPageNum > maxPageNum) return;
+  // Do nothing if we are on the last page
+  if (currentPageNum >= maxPageNum) return;
 
   if (currentPageNum === maxPageNum - 1) {
     longPagItems[2].parentElement.classList.add('drizzle-u-Display--none');

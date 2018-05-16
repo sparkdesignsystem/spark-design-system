@@ -135,21 +135,21 @@ describe('Pagination tests', () => {
     expect(goForwardOne(1)).eql(2);
   });
 
-  it('should add the disabled link class to the next link when the last page is selected', () => {
+  it('should add the disabled link class to the next link when the last page is selected in default pag', () => {
     const currentItemNum = parseInt(link3.textContent, 10);
     classCSS = 'sprk-b-Link--disabled';
     handleDefaultPagItemClick(currentItemNum, link3, link2, prev, next);
     expect(next.classList.contains(classCSS)).eql(true);
   });
 
-  it('should add the disabled link class to the prev link when the first page is selected', () => {
+  it('should add the disabled link class to the prev link when the first page is selected in default pag', () => {
     const currentItemNum = parseInt(link1.textContent, 10);
     classCSS = 'sprk-b-Link--disabled';
     handleDefaultPagItemClick(currentItemNum, link1, link2, prev, next);
     expect(prev.classList.contains(classCSS)).eql(true);
   });
 
-  it('should add the current item css class to the next page when the next link is clicked', () => {
+  it('should add the current item css class to the next page when the next link is clicked in default pag', () => {
     const currentPageNum = parseInt(link1.textContent, 10);
     classCSS = 'sprk-c-Pagination__item--current';
     handleDefaultPagNextClick(currentPageNum, link2, link3, link1, prev, next);
@@ -157,7 +157,7 @@ describe('Pagination tests', () => {
     expect(link1.parentElement.classList.contains(classCSS)).eql(false);
   });
 
-  it('should add the current item css class to the previous page when the previous link is clicked', () => {
+  it('should add the current item css class to the previous page when the previous link is clicked in default pag', () => {
     classCSS = 'sprk-c-Pagination__item--current';
     const currentPageNum = parseInt(link2.textContent, 10);
     handleDefaultPagPrevClick(currentPageNum, link1, link2, link2, prev, next);
@@ -165,7 +165,7 @@ describe('Pagination tests', () => {
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
   });
 
-  it('should not do anything if page number clicked is greater than max number of links', () => {
+  it('should not do anything if page number clicked is greater than max number of links in default pag', () => {
     let currentPageNum = parseInt(link3.textContent, 10);
     classCSS = 'sprk-c-Pagination__item--current';
     currentPageNum += 1;
@@ -173,7 +173,7 @@ describe('Pagination tests', () => {
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
   });
 
-  it('should not increase page number if the current page is clicked again', () => {
+  it('should not increase page number if the current page is clicked again in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     const link2Num = parseInt(link2.textContent, 10);
@@ -181,7 +181,7 @@ describe('Pagination tests', () => {
     expect(parseInt(link2.textContent, 10)).eql(link2Num);
   });
 
-  it('should increase page number if the next link is clicked', () => {
+  it('should increase page number if the next link is clicked in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     link2.setAttribute('aria-current', 'true');
@@ -192,7 +192,7 @@ describe('Pagination tests', () => {
     expect(parseInt(link2.textContent, 10)).eql(3);
   });
 
-  it('should decrease page number if the next link is clicked', () => {
+  it('should decrease page number if the next link is clicked in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     link2.setAttribute('aria-current', 'true');
@@ -203,7 +203,7 @@ describe('Pagination tests', () => {
     expect(parseInt(link2.textContent, 10)).eql(1);
   });
 
-  it('should not decrease page number if the previous link is clicked and page number is 1', () => {
+  it('should not decrease page number if the previous link is clicked and page number is 1 in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     link2.setAttribute('aria-current', 'true');
@@ -212,5 +212,16 @@ describe('Pagination tests', () => {
     link2.textContent = '1';
     handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
     expect(parseInt(link2.textContent, 10)).eql(1);
+  });
+
+  it('should not increase page if the next link is clicked and we are on the last page in long pag', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+    link3.setAttribute('aria-current', 'true');
+    link2.removeAttribute('aria-current');
+    link1.removeAttribute('aria-current');
+    link3.textContent = '22';
+    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+    expect(parseInt(link3.textContent, 10)).eql(22);
   });
 });
