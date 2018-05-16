@@ -67,7 +67,7 @@ const handleDefaultPagItemClick = (currentItemNum, item, currentPage, prev, next
 const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, prev, next) => {
   // Prevent ever going to page 0
   if (currentPageNum === 1) return;
-  // Update DOM CSS and add aria-current to new link
+  // If we are on page 2 and want to go back to 1
   if (currentPageNum === 2) {
     updatePageStyles(
       link1.parentElement,
@@ -76,10 +76,11 @@ const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, pr
     );
     setAriaCurrent(link1, currentPage);
     prev.classList.add('sprk-b-Link--disabled');
-  } else if (currentPageNum === 3) {
+  } else {
+    // If we are on page 3 and want to go back to 2
     updatePageStyles(
-      link2.parentElement,
-      currentPage.parentElement,
+      link2.parentElement, // Add styles to new page 2
+      currentPage.parentElement, // Remove from old page
       'sprk-c-Pagination__item--current',
     );
     setAriaCurrent(link2, currentPage);
@@ -89,7 +90,9 @@ const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, pr
 };
 
 const handleDefaultPagNextClick = (currentPageNum, link2, link3, currentPage, prev, next) => {
-  if (currentPageNum > 3) return;
+  // Check if we are on page 3 or more and exit since we cant move forward
+  if (currentPageNum >= 3) return;
+  // If we are on page 1 and want to go to 2
   if (currentPageNum === 1) {
     updatePageStyles(
       link2.parentElement,
@@ -98,7 +101,8 @@ const handleDefaultPagNextClick = (currentPageNum, link2, link3, currentPage, pr
     );
     setAriaCurrent(link2, currentPage);
     prev.classList.remove('sprk-b-Link--disabled');
-  } else if (currentPageNum === 2) {
+  } else {
+    // If we are on page 2 and want to go to 3
     updatePageStyles(
       link3.parentElement,
       currentPage.parentElement,
