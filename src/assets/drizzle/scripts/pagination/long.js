@@ -33,15 +33,17 @@ const goForwardOne = (currentPageNum) => {
 };
 
 const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, item) => {
-  const currentItemNum = parseInt(item.textContent, 10);
+  // Page number of the new page that was clicked
+  const newPageNum = parseInt(item.textContent, 10);
+  // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
   const [link1, link2, link3] = longPagItems;
   const maxPageNum = parseInt(link3.textContent, 10);
 
-  // Make sure link clicked is not itself
-  if (currentItemNum === currentPageNum) return;
+  // Make sure the new link clicked is not the same as current link
+  if (newPageNum === currentPageNum) return;
 
-  if (currentItemNum === 1) {
+  if (newPageNum === 1) {
     // Hide 1st set of dots, make sure 2nd set is shown
     updatePageStyles(dots[0], dots[1], 'drizzle-u-Display--none');
     // Hide 1st link and make sure last is shown
@@ -50,7 +52,7 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
     updatePageStyles(prev, next, 'sprk-b-Link--disabled');
     // Update link number to new number
     link2.textContent = link1.textContent;
-  } else if (currentItemNum === maxPageNum) {
+  } else if (newPageNum === maxPageNum) {
     // Hide last set of dots, make sure 1st set is shown
     updatePageStyles(dots[1], dots[0], 'drizzle-u-Display--none');
     // Hide last link and make sure first is shown
@@ -64,9 +66,12 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
 
 const handleLongPagPrevClick = (dots, longPagItems, prev, next, longPag) => {
   const maxPageNum = parseInt(longPagItems[2].textContent, 10);
+  // Page container of the current page before new page was clicked
   const currentPage = longPag.querySelector('[aria-current="true"]');
+  // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
 
+  // Simple check for 0 page scenario
   if (currentPageNum < 1) return;
 
   if (currentPageNum === 2) {
@@ -98,8 +103,10 @@ const handleLongPagPrevClick = (dots, longPagItems, prev, next, longPag) => {
 };
 
 const handleLongPagNextClick = (dots, longPagItems, prev, next, longPag) => {
+  // Page container of the current page before new page was clicked
   const currentPage = longPag.querySelector('[aria-current="true"]');
   const maxPageNum = parseInt(longPagItems[2].textContent, 10);
+  // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
 
   if (currentPageNum > maxPageNum) return;
@@ -134,6 +141,7 @@ const paginationLong = () => {
     // Add click listener in case individual links are tapped/clicked
     longPagItems.forEach((item) => {
       item.addEventListener('click', (event) => {
+        // Page container of the current page before new page was clicked
         const currentPage = longPag.querySelector('[aria-current="true"]');
         event.preventDefault();
         handleLongPagItemClick(currentPage, dots, longPagItems, prev, next, item);

@@ -7,7 +7,12 @@ import {
   handleDefaultPagNextClick,
   handleDefaultPagPrevClick,
 } from '../src/assets/drizzle/scripts/pagination/default';
-import { goForwardOne, goBackOne } from '../src/assets/drizzle/scripts/pagination/long';
+import {
+  goForwardOne,
+  goBackOne,
+  handleLongPagItemClick,
+  handleLongPagNextClick,
+} from '../src/assets/drizzle/scripts/pagination/long';
 
 describe('Pagination tests', () => {
   let newPageLink;
@@ -68,6 +73,8 @@ describe('Pagination tests', () => {
     link1.textContent = '1';
     link2.textContent = '2';
     link3.textContent = '3';
+    prev.textContent = 'Prev';
+    next.textContent = 'Next';
 
     link2.setAttribute('aria-current', 'true');
 
@@ -163,5 +170,24 @@ describe('Pagination tests', () => {
     currentPageNum += 1;
     handleDefaultPagItemClick(currentPageNum, link3, link2, prev, next);
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
+  });
+
+  it('should not increase page number if the current page is clicked again', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+    const link2Num = parseInt(link2.textContent, 10);
+    handleLongPagItemClick(link2, dots, longPagItems, prev, next, link2);
+    expect(parseInt(link2.textContent, 10)).eql(link2Num);
+  });
+
+  it('should increase page number if the next link is clicked', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+    link2.setAttribute('aria-current', 'true');
+    link3.removeAttribute('aria-current');
+    link1.removeAttribute('aria-current');
+    link2.textContent = '2';
+    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+    expect(parseInt(link2.textContent, 10)).eql(3);
   });
 });
