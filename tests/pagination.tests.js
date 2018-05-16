@@ -173,6 +173,16 @@ describe('Pagination tests', () => {
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
   });
 
+  it('should not do anything if prev link is clicked when page number is 1 in default pag', () => {
+    const currentPageNum = parseInt(link1.textContent, 10);
+    link1.setAttribute('aria-current', 'true');
+    link3.removeAttribute('aria-current');
+    link2.removeAttribute('aria-current');
+    link1.textContent = '1';
+    handleDefaultPagPrevClick(currentPageNum, link1, link2, link1, prev, next);
+    expect(link1.textContent).eql('1');
+  });
+
   it('should not increase page number if the current page is clicked again in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
@@ -192,7 +202,7 @@ describe('Pagination tests', () => {
     expect(parseInt(link2.textContent, 10)).eql(3);
   });
 
-  it('should decrease page number if the next link is clicked in long pag', () => {
+  it('should decrease page number if the prev link is clicked in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     link2.setAttribute('aria-current', 'true');

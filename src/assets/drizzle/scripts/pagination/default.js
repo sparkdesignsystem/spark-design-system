@@ -65,7 +65,8 @@ const handleDefaultPagItemClick = (currentItemNum, item, currentPage, prev, next
 };
 
 const handleDefaultPagPrevClick = (currentPageNum, link1, link2, currentPage, prev, next) => {
-  if (currentPageNum > 3) return;
+  // Prevent ever going to page 0
+  if (currentPageNum === 1) return;
   // Update DOM CSS and add aria-current to new link
   if (currentPageNum === 2) {
     updatePageStyles(
