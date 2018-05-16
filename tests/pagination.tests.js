@@ -12,6 +12,7 @@ import {
   goBackOne,
   handleLongPagItemClick,
   handleLongPagNextClick,
+  handleLongPagPrevClick,
 } from '../src/assets/drizzle/scripts/pagination/long';
 
 describe('Pagination tests', () => {
@@ -189,5 +190,16 @@ describe('Pagination tests', () => {
     link2.textContent = '2';
     handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
     expect(parseInt(link2.textContent, 10)).eql(3);
+  });
+
+  it('should decrease page number if the next link is clicked', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+    link2.setAttribute('aria-current', 'true');
+    link3.removeAttribute('aria-current');
+    link1.removeAttribute('aria-current');
+    link2.textContent = '2';
+    handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
+    expect(parseInt(link2.textContent, 10)).eql(1);
   });
 });
