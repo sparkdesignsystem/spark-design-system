@@ -183,6 +183,19 @@ describe('Pagination tests', () => {
     expect(link1.textContent).eql('1');
   });
 
+  it('should increse page number 2 to 3 when next is clicked in default pag', () => {
+    const currentPageNum = parseInt(link1.textContent, 10);
+    link2.setAttribute('aria-current', 'true');
+    link3.removeAttribute('aria-current');
+    link1.removeAttribute('aria-current');
+    link2.textContent = '2';
+    classCSS = 'sprk-c-Pagination__item--current';
+    handleDefaultPagPrevClick(currentPageNum, link1, link2, link2, prev, next);
+    expect(link3.textContent).eql('3');
+    expect(link2.parentElement.classList.contains(classCSS)).eql(false);
+    expect(link3.parentElement.classList.contains(classCSS)).eql(true);
+  });
+
   it('should not increase page number if the current page is clicked again in long pag', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
