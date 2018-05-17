@@ -19,7 +19,7 @@ order: 1
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}
          {{#if invaliddata}} aria-invalid="true"{{/if}}>
-  <span class="sprk-b-ErrorText"
+  <div class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
 </div>
