@@ -49,7 +49,7 @@ describe('mobile nav tests', () => {
     nav = document.createElement('nav');
     nav.classList.add('is-active');
   });
-  it('should not doing anything if nav is not found with the nav CSS class', () => {
+  it('should not do anything if nav is not found with the nav CSS class', () => {
     mobileNav();
     expect(nav.classList.contains('is-active')).eql(true);
   });
