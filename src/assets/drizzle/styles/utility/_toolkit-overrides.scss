@@ -38,3 +38,7 @@
   position: static;
   margin-top: -2px;
 }
+
+.drizzle-b-Body.sprk-u-Overflow--hidden {
+  overflow: auto !important; // this is to override a utility class (sprk-u-Overflow--hidden) that is added by JS.
+}
