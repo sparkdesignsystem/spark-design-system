@@ -128,14 +128,6 @@ describe('Default Pagination tests', () => {
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
   });
 
-  // it('should not do anything if page number clicked is greater than max number of links', () => {
-  //   let currentPageNum = parseInt(link3.textContent, 10);
-  //   classCSS = 'sprk-c-Pagination__item--current';
-  //   currentPageNum += 1;
-  //   handleDefaultPagItemClick(link3, link2, prev, next);
-  //   expect(link2.parentElement.classList.contains(classCSS)).eql(false);
-  // });
-
   it('should not do anything if prev link is clicked when page number is 1', () => {
     link1.setAttribute('aria-current', 'true');
     link3.removeAttribute('aria-current');
