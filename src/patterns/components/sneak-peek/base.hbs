@@ -1,12 +1,30 @@
 ---
-description: This is the base Sneak Peek.
+description: The base Sneak Peek includes a headline and a paragraph.
 order: 1
-labels:
-  - inprogress
 ---
+<div class="{{#if stackItem}}{{stackItem}} {{/if}}sprk-o-Stack sprk-o-Stack--medium">
+  {{#if img}}
+  <div class="sprk-o-Stack__item">
+    <img class="sprk-o-Stack__item" alt="Provide useful alternative text" src="../../assets/toolkit/images/flower.jpg" />
+  </div>
+  {{/if}}
 
-<div class="sprk-c-SneakPeek">
-  <img alt="Provide useful alternative text" class="sprk-c-SneakPeek__image sprk-u-mbm" src="../../assets/toolkit/images/flower.jpg" />
-  <h3 class="sprk-b-TypeDisplayThree sprk-u-TextColor--blue-dark sprk-c-SneakPeek__headline sprk-b-Epsilon">Headline Goes Here</h3>
-  <p class="sprk-c-SneakPeek__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <h3 class="sprk-o-Stack__item sprk-b-TypeDisplayThree">
+    Headline Goes Here
+  </h3>
+
+  <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+
+  {{#if cta}}
+  <div class="sprk-o-Stack__item">
+    <a href="#" class="sprk-c-Button">
+      Learn More
+    </a>
+  </div>
+  {{/if}}
 </div>
