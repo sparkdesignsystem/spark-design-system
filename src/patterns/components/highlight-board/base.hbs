@@ -1,8 +1,9 @@
 ---
 name: Base
+hidden: true
 ---
 
-<div class="sprk-c-HighlightBoard {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}} {{#if image}}sprk-c-HighlightBoard--image {{/if}} {{#if flush}}sprk-c-HighlightBoard--flush {{/if}} sprk-u-mbm">
+<div class="sprk-c-HighlightBoard {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}} {{#if image}}sprk-c-HighlightBoard--has-image {{/if}} {{#if flush}}sprk-c-HighlightBoard--flush {{/if}} sprk-u-mbm">
   {{#if image }}
     <img class="sprk-c-HighlightBoard__image" src="{{imagefile}}" />
   {{/if}}

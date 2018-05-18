@@ -15,18 +15,17 @@ $highlight-board-height: 31.25rem;
   position: relative;
 }
 
-.sprk-c-HighlightBoard--flush .sprk-c-HighlightBoard__image {
+.sprk-c-HighlightBoard--flush {
   @media (min-width: $centered-column-width) {
     width: 100vw;
-    position: relative;
-    left: 0;
-    right: 0;
+    left: 50%;
+    right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
   }
 }
 
-.sprk-c-HighlightBoard--image {
+.sprk-c-HighlightBoard--has-image {
   background-color: $white;
 }
 
@@ -34,7 +33,6 @@ $highlight-board-height: 31.25rem;
   object-fit: cover;
   height: $highlight-board-height;
   width: 100%;
-  max-width: none;
 }
 
 .sprk-c-HighlightBoard__content {
@@ -59,7 +57,7 @@ $highlight-board-height: 31.25rem;
   color: $white;
 }
 
-.sprk-c-HighlightBoard--image:not(.sprk-c-HighlightBoard--stacked) .sprk-c-HighlightBoard__content {
+.sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked) .sprk-c-HighlightBoard__content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
