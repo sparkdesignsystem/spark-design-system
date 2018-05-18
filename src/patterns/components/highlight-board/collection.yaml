@@ -3,8 +3,8 @@ description: This component is for getting user attention, in order to convery a
 information:
   - Headlines should grab attention and be concise.
   - Subheadlines provide additional context.
-  - Headlines and Subheadlines should not exceed 2 lines.
-  - The image background is optional.
 restrictions:
+  - The background must either be a color or an image.
+  - Headlines and Subheadlines should not exceed 2 lines.
   - You may have up to 2 call-to-action buttons.
 sparkPackageExtras: true

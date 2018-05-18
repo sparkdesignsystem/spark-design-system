@@ -11,6 +11,7 @@
   padding: 1rem;
   position: fixed;
   width: 100%;
+  z-index: 3000;
 
   @media (min-width: $nav-switch-breakpoint) {
     padding: 4rem 0 2rem 0;
