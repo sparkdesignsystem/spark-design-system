@@ -1,0 +1,17 @@
+// ==================================================================
+// Card
+// ==================================================================
+//
+// Available Variables
+///
+$card-border: 0.125rem solid $gray-medium;
+$card-max-width: 26.5625rem;
+
+.sprk-c-Card {
+  border: $card-border;
+  max-width: $card-max-width;
+}
+
+.sprk-c-Card__content {
+  padding: $space-inset-m;
+}
