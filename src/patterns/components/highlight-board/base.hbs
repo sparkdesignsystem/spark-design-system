@@ -1,23 +1,17 @@
 ---
 name: Base
-description:
-  The basic highlight board has a headline, subheadline, call to action, and a dark gray background.
-order: 1
 ---
 
-<div class="sprk-c-HighlightBoard sprk-c-HighlightBoard--image">
-  <img class="sprk-c-HighlightBoard__image" src="../../assets/toolkit/images/desktop.jpg" />
-  <div class="sprk-c-HighlightBoard__content sprk-c-HighlightBoard__content--light">
+<div class="sprk-c-HighlightBoard {{#if stacked}}sprk-c-HighlightBoard--stacked{{/if}} {{#if image}}sprk-c-HighlightBoard--image{{/if}} sprk-u-mbm">
+  {{#if image }}
+    <img class="sprk-c-HighlightBoard__image" src="../../assets/toolkit/images/desktop.jpg" />
+  {{/if}}
+  <div class="sprk-c-HighlightBoard__content {{#if light}} sprk-c-HighlightBoard__content--light{{/if}}">
     <div class="sprk-u-mbl">
       <h1 class="sprk-b-TypeDisplayThree sprk-u-mbs">Lift the burden of getting a home loan</h1>
       <h4 class="sprk-b-TypeDisplayFour sprk-u-mbm">Fast, Powerful and Completely Online</h4>
     </div>
     <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-c-HighlightBoard__cta-container">
-      <div class="sprk-o-Stack__item">
-        <button class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm">
-          Learn More
-        </button>
-      </div>
       <div class="sprk-o-Stack__item">
         <button class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm">
           Learn More
