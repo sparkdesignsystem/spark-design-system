@@ -12,7 +12,7 @@ order: 25
 
 <div class="sprk-b-InputContainer" data-sprk-input="datepicker">
   <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label">Date</label>
-  <span class="sprk-b-TextInput--date-picker">
+  <div class="sprk-b-TextInput--date-picker">
       <svg class="sprk-c-Icon" viewBox="0 0 100 100">
           <use xlink:href="#calendar" />
       </svg>
@@ -23,8 +23,8 @@ order: 25
              {{#if invaliddata}} aria-invalid="true"{{/if}}
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}}>
-  </span>
-  <span class="sprk-b-ErrorText"
+  </div>
+  <div class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
 </div>

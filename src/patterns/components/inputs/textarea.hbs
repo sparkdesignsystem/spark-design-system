@@ -10,6 +10,6 @@ order: 9
             aria-describedby="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container"
             {{#if disabled}} disabled{{/if}}
             {{#if invaliddata}} aria-invalid="true"{{/if}}></textarea>
-  <span class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container">
-  {{#if errorMessage}}{{errorMessage}}{{/if}}</span>
+  <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container">
+  {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
 </div>

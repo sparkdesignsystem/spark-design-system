@@ -17,7 +17,13 @@ import { updatePageStyles } from './default';
 import { setAriaLabel } from '../../../../../packages/spark-core/components/pagination';
 
 const goBackOne = (currentPageNum) => {
-  const updatedPageNum = currentPageNum - 1;
+  let updatedPageNum;
+  // Prevent having a page 0 scenario
+  if (currentPageNum > 1) {
+    updatedPageNum = currentPageNum - 1;
+  } else {
+    updatedPageNum = currentPageNum;
+  }
   return updatedPageNum;
 };
 
@@ -27,15 +33,17 @@ const goForwardOne = (currentPageNum) => {
 };
 
 const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, item) => {
-  const currentItemNum = parseInt(item.textContent, 10);
+  // Page number of the new page that was clicked
+  const newPageNum = parseInt(item.textContent, 10);
+  // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
   const [link1, link2, link3] = longPagItems;
   const maxPageNum = parseInt(link3.textContent, 10);
 
-  // Make sure link clicked is not itself
-  if (currentItemNum === currentPageNum) return;
+  // Make sure the new link clicked is not the same as current link
+  if (newPageNum === currentPageNum) return;
 
-  if (currentItemNum === 1) {
+  if (newPageNum === 1) {
     // Hide 1st set of dots, make sure 2nd set is shown
     updatePageStyles(dots[0], dots[1], 'drizzle-u-Display--none');
     // Hide 1st link and make sure last is shown
@@ -44,7 +52,7 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
     updatePageStyles(prev, next, 'sprk-b-Link--disabled');
     // Update link number to new number
     link2.textContent = link1.textContent;
-  } else if (currentItemNum === maxPageNum) {
+  } else if (newPageNum === maxPageNum) {
     // Hide last set of dots, make sure 1st set is shown
     updatePageStyles(dots[1], dots[0], 'drizzle-u-Display--none');
     // Hide last link and make sure first is shown
@@ -58,9 +66,12 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
 
 const handleLongPagPrevClick = (dots, longPagItems, prev, next, longPag) => {
   const maxPageNum = parseInt(longPagItems[2].textContent, 10);
+  // Page container of the current page before new page was clicked
   const currentPage = longPag.querySelector('[aria-current="true"]');
+  // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
 
+  // Simple check for 0 page scenario
   if (currentPageNum < 1) return;
 
   if (currentPageNum === 2) {
@@ -68,54 +79,50 @@ const handleLongPagPrevClick = (dots, longPagItems, prev, next, longPag) => {
     dots[0].classList.add('drizzle-u-Display--none');
     // Hide the 1st link
     longPagItems[0].parentElement.classList.add('drizzle-u-Display--none');
-    // Update link number with new number
-    currentPage.textContent = goBackOne(currentPageNum);
     // Disable prev link since we can't go back any farther than 1st link
     prev.classList.add('sprk-b-Link--disabled');
   } else if (currentPageNum === 3) {
     // We go back to two link layout when number is < 3
     dots[0].classList.add('drizzle-u-Display--none');
-    currentPage.textContent = goBackOne(currentPageNum);
   } else if (currentPageNum === maxPageNum) {
     // Show last link number
     longPagItems[2].parentElement.classList.remove('drizzle-u-Display--none');
     // Enable the Next link since we are no longer on last link
     next.classList.remove('sprk-b-Link--disabled');
-    // Update link number with new number
-    currentPage.textContent = goBackOne(currentPageNum);
   } else {
     // Show both sets of dots
     dots[0].classList.remove('drizzle-u-Display--none');
     dots[1].classList.remove('drizzle-u-Display--none');
-    currentPage.textContent = goBackOne(currentPageNum);
   }
+  // Update link number with new number
+  currentPage.textContent = goBackOne(currentPageNum);
 };
 
 const handleLongPagNextClick = (dots, longPagItems, prev, next, longPag) => {
+  // Page container of the current page before new page was clicked
   const currentPage = longPag.querySelector('[aria-current="true"]');
   const maxPageNum = parseInt(longPagItems[2].textContent, 10);
+  // Page number of the current page before new page was clicked
   const currentPageNum = parseInt(currentPage.textContent, 10);
 
-  if (currentPageNum > maxPageNum) return;
+  // Do nothing if we are on the last page
+  if (currentPageNum >= maxPageNum) return;
 
   if (currentPageNum === maxPageNum - 1) {
     longPagItems[2].parentElement.classList.add('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
     dots[1].classList.add('drizzle-u-Display--none');
     next.classList.add('sprk-b-Link--disabled');
   } else if (currentPageNum === 1) {
     longPagItems[0].parentElement.classList.remove('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
     prev.classList.remove('sprk-b-Link--disabled');
   } else if (currentPageNum === maxPageNum - 2) {
     dots[1].classList.add('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
   } else {
     dots[0].classList.remove('drizzle-u-Display--none');
     dots[1].classList.remove('drizzle-u-Display--none');
     longPagItems[0].parentElement.classList.remove('drizzle-u-Display--none');
-    currentPage.textContent = goForwardOne(currentPageNum);
   }
+  currentPage.textContent = goForwardOne(currentPageNum);
 };
 
 const paginationLong = () => {
@@ -128,6 +135,7 @@ const paginationLong = () => {
     // Add click listener in case individual links are tapped/clicked
     longPagItems.forEach((item) => {
       item.addEventListener('click', (event) => {
+        // Page container of the current page before new page was clicked
         const currentPage = longPag.querySelector('[aria-current="true"]');
         event.preventDefault();
         handleLongPagItemClick(currentPage, dots, longPagItems, prev, next, item);
