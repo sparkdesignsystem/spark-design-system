@@ -7,11 +7,23 @@
 ///
 $highlight-board-type-breakpoint: 30rem;
 $highlight-board-type-reduction-percentage: 0.8;
+$highlight-board-height: 31.25rem;
 
 .sprk-c-HighlightBoard {
-  background-color: $gray-medium;
+  background-color: $gray-light;
   text-align: center;
   position: relative;
+}
+
+.sprk-c-HighlightBoard--flush .sprk-c-HighlightBoard__image {
+  @media (min-width: $centered-column-width) {
+    width: 100vw;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }
 
 .sprk-c-HighlightBoard--image {
@@ -19,8 +31,10 @@ $highlight-board-type-reduction-percentage: 0.8;
 }
 
 .sprk-c-HighlightBoard__image {
-  height: 100%;
   object-fit: cover;
+  height: $highlight-board-height;
+  width: 100%;
+  max-width: none;
 }
 
 .sprk-c-HighlightBoard__content {
