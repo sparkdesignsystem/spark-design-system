@@ -45,7 +45,7 @@ $highlight-board-type-reduction-percentage: 0.8;
   color: $white;
 }
 
-.sprk-c-HighlightBoard--image .sprk-c-HighlightBoard__content {
+.sprk-c-HighlightBoard--image:not(.sprk-c-HighlightBoard--stacked) .sprk-c-HighlightBoard__content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
