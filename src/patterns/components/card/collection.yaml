@@ -1,0 +1,15 @@
+description:
+  Cards show a small teaser amount of content to the user. They provide
+  a way for a user to get information quickly.
+  Cards can be used one at a time or combined in groups.
+information:
+  - Cards use the Stack Layout Object.
+  - You may change the breakpoint when the Cards split horizontally by
+    adjusting the Stack--split responsive suffix modifier.
+restictions:
+  - If there are two or more Cards grouped together they need to have the same aspect ratio.
+links:
+  Stack Layout Object:
+    external: true
+    href: /patterns/fundamentals/layout
+sparkPackageExtras: true
