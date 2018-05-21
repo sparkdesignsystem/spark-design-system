@@ -15,7 +15,7 @@ $highlight-board-height: 31.25rem;
   position: relative;
 }
 
-.sprk-c-HighlightBoard--flush {
+.sprk-c-HighlightBoard--full-width {
   @media (min-width: $centered-column-width) {
     width: 100vw;
     left: 50%;
