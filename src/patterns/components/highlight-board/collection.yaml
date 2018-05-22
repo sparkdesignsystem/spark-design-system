@@ -1,5 +1,5 @@
-description: This component is for getting user attention, in order to convery a message or drive a
-  call to action.
+description: The Highlight Board component is used as a lead into an experience as a means to encourage engagement
+  within the experience.
 information:
   - Headlines should grab attention and be concise.
   - Subheadlines provide additional context.
