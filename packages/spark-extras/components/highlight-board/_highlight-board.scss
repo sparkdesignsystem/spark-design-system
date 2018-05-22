@@ -27,7 +27,7 @@ $highlight-board-height: 31.25rem;
 }
 
 .sprk-c-HighlightBoard__content {
-  padding: $space-l $space-m;
+  padding: $space-inset-tall-m;
   width: 100%;
 }
 
@@ -43,8 +43,8 @@ $highlight-board-height: 31.25rem;
   }
 }
 
-.sprk-c-HighlightBoard__content--light .sprk-b-TypeDisplayThree,
-.sprk-c-HighlightBoard__content--light .sprk-b-TypeDisplayFour {
+.sprk-c-HighlightBoard__content--light .sprk-c-HighlightBoard__primary-heading,
+.sprk-c-HighlightBoard__content--light .sprk-c-HighlightBoard__sub-heading{
   color: $white;
 }
 
