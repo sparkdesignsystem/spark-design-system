@@ -2,30 +2,47 @@
 name: Base
 order: 1
 description:
-  Cards include an image or icon and a call to action that can be a button or a link.
+  Base Cards have a maximum width and the standard Card styles.
+  They are meant to be filled with related content such as a heading and paragraph.
 ---
 <div class="{{#if stackItem}}{{stackItem}} {{/if}}sprk-c-Card sprk-o-Stack">
-  <img
-    class="sprk-o-Stack__item"
-    alt="Pierce Stocking Scenic Drive"
-    src="../../assets/toolkit/images/road.jpg" />
+  {{#if cardImg}}
+  <a href="#">
+    <img
+      class="sprk-o-Stack__item"
+      alt="Pierce Stocking Scenic Drive"
+      src="../../assets/toolkit/images/road.jpg" />
+  </a>
+  {{/if}}
 
-  <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+  <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium{{#if cardIcon}} sprk-u-TextAlign--center{{/if}}">
+    {{#if cardIcon}}
+    <a href="#" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+      <svg height="75" viewBox="0 0 220.63 197.62">
+        <use xlink:href="#sparkler" />
+      </svg>
+    </a>
+    {{/if}}
+
+    {{#if cardTitle}}
     <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-      Visit Michigan!
+      {{cardTitle}}
     </h3>
+    {{/if}}
 
+    {{#if cardContent}}
     <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-      Pierce Stocking Scenic Drive is a beautiful 7.4
-      mile drive in Northern Michigan. It runs by rich forests,
-      sand dunes and lakes.
+      {{cardContent}}
     </p>
+    {{/if}}
 
+    {{#if cardBtn}}
     <div class="sprk-o-Stack__item">
       <a href="#" class="sprk-c-Button">
-        Learn More
+      {{cardBtn}}
       </a>
     </div>
+    {{/if}}
 
     {{#if link}}
     <a href="#" class="sprk-o-Stack__item sprk-b-Link">
