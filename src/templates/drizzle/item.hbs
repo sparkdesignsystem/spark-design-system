@@ -93,7 +93,12 @@
         </div>
         {{!-- Code sample --}}
         {{#unless data.sourceless}}
-          <pre class="drizzle-c-Preview__code"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
+        <div class="drizzle-c-Preview__code">
+          <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard-{{toSlug name}}" type="button">
+            Copy
+          </button>
+          <pre><code class="language-markup" id="clipboard-{{toSlug name}}">{{{patternSource id @root}}}</code></pre>
+        </div>
         {{/unless}}
       </div>
     </div>

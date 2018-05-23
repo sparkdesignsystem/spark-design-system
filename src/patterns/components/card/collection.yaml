@@ -1,10 +1,9 @@
 description:
   Cards present related content. They provide
-  an easy way to get information quickly.
-  Cards are typically used in groups.
+  an easy way to get information quickly and are typically used in groups.
 information:
   - Cards use the Stack Layout Object.
-  - You may change the breakpoint when the Cards split horizontally by
+  - The breakpoint when the Cards split horizontally can be changed by
     adjusting the Stack--split responsive suffix modifier.
 restictions:
   - Card images do not have a set width or height
