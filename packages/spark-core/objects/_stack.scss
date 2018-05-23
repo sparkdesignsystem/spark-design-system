@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.sprk-o-Stack--center-row {
+  justify-content: center;
+}
+
 // Stack items retain their original width by default
 .sprk-o-Stack__item {
   flex: 0 0 auto;
