@@ -9,6 +9,7 @@ import { paginationDefault } from './pagination/default';
 import setActiveNavItem from './navigation/setActiveNavItem';
 import { formStateChanger } from './form-state-changer';
 import { filters } from './filter';
+import { clipboardSuccess } from './clipboard';
 import { mobileNav } from './navigation/mobileNav';
 
 const nav = document.getElementById('nav');
@@ -25,4 +26,5 @@ paginationDefault();
 paginationLong();
 bindUIEvents();
 filters();
+clipboardSuccess();
 mobileNav();

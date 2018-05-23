@@ -4,8 +4,7 @@ order: 3
 description:
   Elements inside a card can be reordered.
 ---
-<div class="{{#if stackItem}}{{stackItem}} {{/if}}sprk-c-Card sprk-o-Stack">
-
+<div class="sprk-c-Card sprk-o-Stack">
   <h3 class="sprk-o-Stack__item sprk-c-Card__content sprk-b-TypeDisplayFive">
     Visit Michigan!
   </h3>
@@ -28,11 +27,5 @@ description:
         Learn More
       </a>
     </div>
-
-    {{#if link}}
-    <a href="#" class="sprk-o-Stack__item sprk-b-Link">
-      Learn More
-    </a>
-    {{/if}}
   </div>
 </div>
