@@ -15,6 +15,10 @@
   border: 1px solid #ccc;
 }
 
+.#{$app-namespace}-c-Icon-Sizing {
+  align-items: center;
+}
+
 [data-template-id='centered-column'] .sprk-o-CenteredColumn {
   background-color: #ccc;
   height: 4rem;
