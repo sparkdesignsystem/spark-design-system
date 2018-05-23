@@ -1,7 +1,10 @@
-description: This component is for getting user attention, in order to convery a message or drive a
-  call to action.
+description: The Highlight Board component is used as a lead into an experience as a means to encourage engagement
+  within the experience.
 information:
   - Headlines should grab attention and be concise.
   - Subheadlines provide additional context.
+restrictions:
+  - The background must either be a color or an image.
   - Headlines and Subheadlines should not exceed 2 lines.
+  - You may have up to 2 call-to-action buttons.
 sparkPackageExtras: true

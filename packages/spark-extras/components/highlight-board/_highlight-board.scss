@@ -2,33 +2,58 @@
 // Highlight Board
 // ==================================================================
 
-// TODO: there are z-index issues in chrome on android
-
 //
 // Available Variables
 ///
-$highlight-board-content-padding: 1.949rem 1rem;
+$highlight-board-type-breakpoint: 30rem;
+$highlight-board-type-reduction-percentage: 0.8;
+$highlight-board-height: 31.25rem;
 
 .sprk-c-HighlightBoard {
+  background-color: $gray-light;
   text-align: center;
   position: relative;
 }
 
-.sprk-c-HighlightBoard__image {
-  height: 100%;
-  object-fit: cover;
+.sprk-c-HighlightBoard--has-image {
+  background-color: $white;
 }
 
-.sprk-c-HighlightBoard__content {
-  padding-top: 1.949rem;
-  padding-bottom: 1.949rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.sprk-c-HighlightBoard__image {
+  object-fit: cover;
+  font-family: 'object-fit: cover;'; // required by the polyfill
+  height: $highlight-board-height;
   width: 100%;
 }
 
-.sprk-c-HighlightBoard__content--image {
+.sprk-c-HighlightBoard__content {
+  padding: $space-inset-tall-m;
+  width: 100%;
+}
+
+.sprk-c-HighlightBoard__primary-heading {
+  @media (max-width: $highlight-board-type-breakpoint) {
+    font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
+  }
+}
+
+.sprk-c-HighlightBoard__sub-heading {
+  @media (max-width: $highlight-board-type-breakpoint) {
+    font-size: $font-size-display-four * $highlight-board-type-reduction-percentage;
+  }
+}
+
+.sprk-c-HighlightBoard__content--light .sprk-c-HighlightBoard__primary-heading,
+.sprk-c-HighlightBoard__content--light .sprk-c-HighlightBoard__sub-heading {
+  color: $white;
+}
+
+.sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked) .sprk-c-HighlightBoard__content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.sprk-c-HighlightBoard__cta-container {
+  justify-content: center;
 }

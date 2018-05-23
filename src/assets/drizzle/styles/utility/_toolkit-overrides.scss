@@ -24,6 +24,10 @@
   font-family: 'myriad pro', sans-serif;
 }
 
+[data-template-id='full-width'] .drizzle-c-Preview__example {
+  overflow: hidden;
+}
+
 .#{$app-namespace}-c-Logo-placeholder {
   background-color: #ccc;
   height: 75px;
