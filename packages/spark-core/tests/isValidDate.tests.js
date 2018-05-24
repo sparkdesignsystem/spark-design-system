@@ -9,8 +9,12 @@ import { expect } from 'chai';
 import isValidDate from '../utilities/validation/isValidDate';
 
 describe('isValidDate tests', () => {
-  it('should pass on 8 digits', () => {
-    expect(isValidDate('12345678')).eql(true);
+  it('should pass on 8 digits (plausible date)', () => {
+    expect(isValidDate('12121978')).eql(true);
+  });
+
+  it('should fail on 8 digits (implausible date)', () => {
+    expect(isValidDate('12120978')).eql(false);
   });
 
   it('should pass on empty', () => {
@@ -46,7 +50,7 @@ describe('isValidDate tests', () => {
   });
 
   it('should pass on slashes in the right place', () => {
-    expect(isValidDate('11/11/1111')).eql(true);
+    expect(isValidDate('05/24/2018')).eql(true);
   });
 
   it('should fail on slashes in the wrong place', () => {
@@ -54,14 +58,14 @@ describe('isValidDate tests', () => {
   });
 
   it('should pass on dashes in the right place', () => {
-    expect(isValidDate('11-11-1111')).eql(true);
+    expect(isValidDate('11-11-1999')).eql(true);
   });
 
   it('should fail on dashes in the wrong place', () => {
     expect(isValidDate('1-111-1111')).eql(false);
   });
 
-  it('should pass on mixed slashes/dashes in the right place', () => {
-    expect(isValidDate('11/11-1111')).eql(true);
+  it('should fail on mixed separators', () => {
+    expect(isValidDate('11/11-1999')).eql(false);
   });
 });
