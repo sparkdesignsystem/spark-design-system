@@ -10,6 +10,6 @@ restictions:
     and need to have the same aspect ratio when there is more than one card in a row.
 links:
   Stack Layout Object:
-    external: true
+    external: false
     href: /patterns/fundamentals/layout
 sparkPackageExtras: true
