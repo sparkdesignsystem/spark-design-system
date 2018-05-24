@@ -15,7 +15,7 @@ const runValidation = (element) => {
 };
 
 const formatSSN = (value) => {
-  let val = value.replace(/-/g, '');
+  let val = value.trim().replace(/-/g, '');
   let newVal = '';
   const sizes = [3, 2, 4];
 

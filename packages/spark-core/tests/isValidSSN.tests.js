@@ -44,4 +44,12 @@ describe('isValidSSN tests', () => {
   it('should fail on scientific notation', () => {
     expect(isValidSSN('1.23e10')).eql(false);
   });
+
+  it('should fail on mismatch separators', () => {
+    expect(isValidSSN('333-33 3333')).eql(false);
+  });
+
+  it('should pass on with dashes', () => {
+    expect(isValidSSN('333-33-3333')).eql(true);
+  });
 });
