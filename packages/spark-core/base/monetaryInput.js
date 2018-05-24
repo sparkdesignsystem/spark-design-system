@@ -21,7 +21,7 @@ const formatMonetary = value =>
 const bindUIEvents = (element) => {
   const field = element.querySelector('input');
 
-  field.addEventListener('keyup', () => {
+  field.addEventListener('input', () => {
     runValidation(element);
   });
 

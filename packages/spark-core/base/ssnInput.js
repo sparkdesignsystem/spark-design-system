@@ -40,7 +40,14 @@ const bindUIEvents = (element) => {
   });
 
   // set up the validation and formatter
-  field.addEventListener('keyup', () => {
+  field.addEventListener('input', () => {
+    if (runValidation(element)) {
+      field.value = formatSSN(field.value);
+    }
+  });
+
+  // set up the validation and formatter
+  field.addEventListener('blur', () => {
     if (runValidation(element)) {
       field.value = formatSSN(field.value);
     }

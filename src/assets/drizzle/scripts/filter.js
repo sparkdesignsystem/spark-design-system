@@ -18,7 +18,7 @@ const filterList = (listName, value) => {
 
 const filters = () => {
   getElements('[data-filter]', (element) => {
-    element.addEventListener('keyup', (e) => {
+    element.addEventListener('input', (e) => {
       filterList(element.getAttribute('data-filter'), e.target.value);
     });
   });
