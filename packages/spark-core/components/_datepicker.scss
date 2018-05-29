@@ -67,11 +67,11 @@
 }
 
 .dp-prev {
-  flex: 1;
+  flex: 0.5;
 }
 
 .dp-next {
-  flex: 1;
+  flex: 0.5;
 }
 
 .dp-year,
@@ -135,6 +135,10 @@
 .dp-cal-year {
   font-size: $font-size-display-seven;
   flex: 1;
+}
+
+.dp-cal-month {
+  flex: 1.5;
 }
 
 .dp-next,
