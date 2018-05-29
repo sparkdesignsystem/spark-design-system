@@ -49,7 +49,7 @@ describe('isValidSSN tests', () => {
     expect(isValidSSN('333-33 3333')).eql(false);
   });
 
-  it('should pass on with dashes', () => {
+  it('should pass with dashes', () => {
     expect(isValidSSN('333-33-3333')).eql(true);
   });
 });

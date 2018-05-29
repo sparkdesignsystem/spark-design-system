@@ -15,7 +15,7 @@ const datePicker = () => {
       max: overrideMaxDate || '01/1/2068',
 
       format(date) {
-        return date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+        return date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' }).replace(/[^ -~]/g, '');
       },
 
     });
