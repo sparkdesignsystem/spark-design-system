@@ -23,7 +23,13 @@ const bindUIEvents = (element) => {
   const field = element.querySelector('input');
 
   // set up the validation and formatter
-  field.addEventListener('keyup', () => {
+  field.addEventListener('input', () => {
+    if (runValidation(element)) {
+      field.value = formatPhone(field.value);
+    }
+  });
+
+  field.addEventListener('blur', () => {
     if (runValidation(element)) {
       field.value = formatPhone(field.value);
     }

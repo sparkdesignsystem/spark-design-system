@@ -15,7 +15,7 @@ const runValidation = (element) => {
 };
 
 const formatSSN = (value) => {
-  let val = value.replace(/-/g, '');
+  let val = value.trim().replace(/-/g, '');
   let newVal = '';
   const sizes = [3, 2, 4];
 
@@ -40,7 +40,14 @@ const bindUIEvents = (element) => {
   });
 
   // set up the validation and formatter
-  field.addEventListener('keyup', () => {
+  field.addEventListener('input', () => {
+    if (runValidation(element)) {
+      field.value = formatSSN(field.value);
+    }
+  });
+
+  // set up the validation and formatter
+  field.addEventListener('blur', () => {
     if (runValidation(element)) {
       field.value = formatSSN(field.value);
     }

@@ -29,8 +29,10 @@ const formatDate = (value) => {
 const bindUIEvents = (element) => {
   const field = element.querySelector('input');
 
-  field.addEventListener('keyup', () => {
-    runValidation(element);
+  field.addEventListener('input', () => {
+    if (runValidation(element)) {
+      field.value = formatDate(field.value);
+    }
   });
 
   field.addEventListener('blur', () => {
