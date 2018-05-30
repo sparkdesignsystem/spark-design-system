@@ -8,6 +8,8 @@
   list-style-type: circle;
 }
 
-.#{$app-namespace}-b-List--spacing-m li {
+.#{$app-namespace}-b-List--spacing-m > li {
   margin-bottom: 1rem;
 }
+
+

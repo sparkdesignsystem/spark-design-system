@@ -14,4 +14,4 @@ links:
   Spacing Utilities:
     external: false
     href: /patterns/utilities/single-property
-sparkPackageExtras: true
+sparkPackageCore: true
