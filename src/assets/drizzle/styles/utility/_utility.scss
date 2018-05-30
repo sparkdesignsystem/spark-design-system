@@ -9,3 +9,7 @@
 .#{$app-namespace}-u-Display--none {
   display: none;
 }
+
+.#{$app-namespace}-u-Columned {
+  columns: 12rem;
+}
