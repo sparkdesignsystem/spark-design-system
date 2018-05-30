@@ -12,13 +12,14 @@ $mobile-masthead-height: 6.7rem !default;
 .sprk-c-Masthead {
   background-color: $white;
   height: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .sprk-c-Masthead__content {
   background-color: $white;
   border-bottom: 2px solid $gray-medium;
   padding: $space-m 0;
-  position: fixed;
   width: 100%;
   z-index: 1004;
 
