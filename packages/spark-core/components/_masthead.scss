@@ -14,6 +14,7 @@ $mobile-masthead-height: 6.7rem !default;
   height: 100%;
   position: sticky;
   top: 0;
+  z-index: 1004;
 }
 
 .sprk-c-Masthead__content {
@@ -21,7 +22,6 @@ $mobile-masthead-height: 6.7rem !default;
   border-bottom: 2px solid $gray-medium;
   padding: $space-m 0;
   width: 100%;
-  z-index: 1004;
 
   @media all and (min-width: $main-nav-breakpoint) {
     border: none;
