@@ -11,10 +11,13 @@ $mobile-masthead-height: 6.7rem !default;
 
 .sprk-c-Masthead {
   background-color: $white;
-  height: 100%;
   position: sticky;
   top: 0;
   z-index: 1004;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    position: static;
+  }
 }
 
 .sprk-c-Masthead__content {
@@ -25,7 +28,6 @@ $mobile-masthead-height: 6.7rem !default;
 
   @media all and (min-width: $main-nav-breakpoint) {
     border: none;
-    position: static;
   }
 }
 
@@ -46,7 +48,7 @@ $mobile-masthead-height: 6.7rem !default;
   margin: auto;
 
   @media all and (min-width: $main-nav-breakpoint) {
-    margin: 0 1rem 0 0;
+    margin: 0 $space-m 0 0;
   }
 }
 
