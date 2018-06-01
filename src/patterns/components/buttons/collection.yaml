@@ -12,5 +12,5 @@ restrictions:
   - Button content should not wrap to two lines.
   - A button HTML element should be used when doing an action that doesn't have a meaningful URL.
   - An anchor HTML element should be used when you want the look of a Button but are linking to a URL.
-  - If your Button is disabled or becomes disabled then add the disabled attribute.
+  - If your Button is disabled, or becomes disabled, then add the disabled attribute.
 sparkPackageCore: true
