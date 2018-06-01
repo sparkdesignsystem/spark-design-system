@@ -19,6 +19,11 @@ p,
   margin-bottom: 1rem;
 }
 
+.#{$app-namespace}-b-Lede {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 .#{$app-namespace}-b-h1 {
   color: $black;
   font-size: 35px;
