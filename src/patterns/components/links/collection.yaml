@@ -3,6 +3,6 @@ description: |
   new place or change the view the user is on. Links use the medium
   blue brand color for their idle and hover states while using the dark blue brand color for the visited state.
 restrictions:
-  - Do not use Spark Link classes on links that solely have an images in them.
+  - Do not use Spark Link classes on links that solely have images in them.
   - Link text should be as meaningful as possible so users can understand what the purpose of the link is.
 sparkPackageCore: true
