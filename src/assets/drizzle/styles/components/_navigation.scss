@@ -1,11 +1,11 @@
 .#{$app-namespace}-c-Navigation {
   background: $nav-background-color;
-  font-family: "urw-din";
+  font-family: urw-din, sans-serif;
 }
 
 .#{$app-namespace}-c-Navigation__header {
   background: $nav-background-color;
-  color: white;
+  color: $white;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -14,7 +14,7 @@
   z-index: 3000;
 
   @media (min-width: $nav-switch-breakpoint) {
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 2rem;
     position: static;
     width: $layout-nav-width;
   }
@@ -33,7 +33,7 @@
 .#{$app-namespace}-c-Navigation__toggle-icon {
   text-align: right;
 
-  & a {
+  a {
     padding: 1rem;
   }
 
@@ -41,7 +41,6 @@
     display: none;
   }
 }
-
 
 .#{$app-namespace}-c-Navigation.is-active .#{$app-namespace}-c-Navigation__toggle-icon svg {
   transform: rotate(180deg);
@@ -84,7 +83,7 @@
 
 .#{$app-namespace}-c-Navigation__item {
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
 
   &:focus,
   &:hover,
@@ -103,10 +102,6 @@
   &:hover {
     background: $black;
   }
-}
-
-.#{$app-namespace}-c-Navigation__item {
-  padding: 1rem;
 }
 
 .#{$app-namespace}-c-Navigation__item a {

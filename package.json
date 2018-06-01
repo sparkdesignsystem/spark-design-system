@@ -77,10 +77,12 @@
   "lint-staged": {
     "*.scss": [
       "prettier-stylelint --write",
+      "stylelint --syntax scss",
       "git add"
     ],
     "*.js": [
       "prettier-eslint --write",
+      "eslint",
       "git add"
     ]
   },

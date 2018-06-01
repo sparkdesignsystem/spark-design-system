@@ -1,4 +1,4 @@
-/* global document describe it */
+/* global describe it */
 import { expect } from 'chai';
 
 describe('example tests', () => {
