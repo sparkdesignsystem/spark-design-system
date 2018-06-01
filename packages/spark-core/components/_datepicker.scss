@@ -204,7 +204,7 @@
 .dp-below {
   margin-top: $space-m;
   position: absolute;
-  z-index: 3;
+  z-index: $layer-height-s;
 }
 
 /* stylelint-enable*/

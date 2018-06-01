@@ -22,7 +22,7 @@ $masthead-column-width: 64rem !default;
   border-top: 0;
   display: block;
   position: absolute;
-  z-index: 100;
+  z-index: $layer-height-m;
 }
 
 .sprk-c-WideNavigation__item--sub {

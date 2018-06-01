@@ -22,7 +22,7 @@ $modal-breakpoint-medium: 37.5rem;
   height: 100%;
   width: 100%;
   top: 0;
-  z-index: 1005;
+  z-index: $layer-height-l;
 }
 
 .sprk-c-Modal {
@@ -36,7 +36,7 @@ $modal-breakpoint-medium: 37.5rem;
   right: 0;
   top: 5%;
   width: 95%;
-  z-index: 1006;
+  z-index: $layer-height-xl;
 
   @media all and (min-width: $modal-breakpoint-small) and (min-height: $modal-breakpoint-small) {
     top: 15%;
