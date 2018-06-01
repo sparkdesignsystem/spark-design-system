@@ -1,3 +1,5 @@
-description: These are intended to be used to logically divide content on the same page. Hr elements get this
-   style by default.
+description:
+  A Divider logically divides
+  sections of content. Hr HTML elements will
+  have style by default so no additional CSS class is needed.
 sparkPackageCore: true
