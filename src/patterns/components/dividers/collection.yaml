@@ -1,3 +1,4 @@
-description: These are intended to be used to logically divide content on the same page. Hr elements get this
-   style by default.
+description:
+  These are intended to be used to logically divide content on the same page. Hr elements get this
+  style by default.
 sparkPackageCore: true

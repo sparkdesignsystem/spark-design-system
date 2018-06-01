@@ -7,7 +7,7 @@ information:
     adjusting the Stack--split responsive suffix modifier.
 restictions:
   - Card images do not have a set width or height
-    and need to have the same aspect ratio when there is more than one card in a row.
+    and need to have the same aspect ratio when there is more than one Card in a row.
 links:
   Stack Layout Object:
     external: false
