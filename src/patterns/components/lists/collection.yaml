@@ -1,4 +1,5 @@
 name: Lists
 description: |
-  There are 3 list styles available: default list, bare, and indented.
+  Use a List for a list of items.
+  There are three List styles available: default, bare, and indented.
 sparkPackageCore: true
