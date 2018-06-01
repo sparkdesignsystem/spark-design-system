@@ -1,15 +1,16 @@
-description: Buttons are points of interaction for a website. A user is trained to activate a button in order
-  to perform an action. The Button component consists of a container with descriptive text inside.
+description:
+  Buttons are points of interaction for a website. A user is trained to activate a Button in order
+  to perform an action. The Button component consists of a clickable container with descriptive text inside.
 
 information:
   - Buttons make use of Large Inset Short spacing.
 restrictions:
-  - Do not use icons within buttons.
-  - Do not use &lt;input type=&quot;submit&quot;&gt; for submit buttons, use button instead.
+  - Do not use icons within Buttons.
+  - Do not use &lt;input type=&quot;submit&quot;&gt; for submit Buttons, use &quot;button&quot; instead.
   - If your button is not a submit button then use the type=&quot;button&quot; attribute.
-  - Do not exceed 280px in width for a single button.
+  - Do not exceed 280px in width for a single Button.
   - Button content should not wrap to two lines.
   - A button HTML element should be used when doing an action that doesn't have a meaningful URL.
-  - An anchor HTML element should be used when you want the look of a button but are linking to a URL.
-  - If your button is disabled or becomes disabled then add the disabled attribute.
+  - An anchor HTML element should be used when you want the look of a Button but are linking to a URL.
+  - If your Button is disabled or becomes disabled then add the disabled attribute.
 sparkPackageCore: true
