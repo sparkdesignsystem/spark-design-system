@@ -4,7 +4,9 @@ function setValidTextInput(inputContainer) {
 
   input.classList.remove('sprk-b-TextInput--error');
   input.setAttribute('aria-invalid', 'false');
-  errorContainer.textContent = '';
+  if (errorContainer) {
+    errorContainer.textContent = '';
+  }
 }
 
 export { setValidTextInput as default };
