@@ -1,0 +1,83 @@
+---
+name: Available Layers
+sparkCore: true
+doclayout: true
+---
+<table class="drizzle-c-Table">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>Components</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <p class="sprk-u-FontWeight--bold">Base</p>
+        <p>This is the default layer for all elements.</p>
+      </td>
+      <td>All that are not otherwise listed.</td>
+    </tr>
+    <tr>
+      <td>
+        <p class="sprk-u-FontWeight--bold">$layer-height-xs</p>
+        <p>For elements that are positioned, but not intended to show up above more important elements.</p>
+      </td>
+      <td>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li>Monetary Input (icon)</li>
+          <li>Date Picker Input (icon)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="sprk-u-FontWeight--bold">$layer-height-s</p>
+        <p>Intended for elements that cover content, but are not global site scoped.</p>
+      </td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>
+        <p class="sprk-u-FontWeight--bold">$layer-height-m</p>
+        <p>Intended for elements that cover content, that are globally site scoped.</p>
+      </td>
+      <td>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li>Wide Navigation (sub-menu)</li>
+          <li>Narrow Navigation (open menu)</li>
+          <li>Masthead (narrow)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="sprk-u-FontWeight--bold">$layer-height-l</p>
+        <p>The layer directly beneath the highest layer. Intended for overlays.</p>
+      </td>
+      <td>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li>Choice Modal (Overlay)</li>
+          <li>Wait Modal (Overlay)</li>
+          <li>Info Modal (Overlay)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        <p>$layer-height-xl</p>
+        <p>The uppermost layer. No elements should occupy be positioned above this level.</p>
+      </td>
+      <td>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li>Choice Modal (Modal)</li>
+          <li>Wait Modal (Modal)</li>
+          <li>Info Modal (Modal)</li>
+        </ul>
+    </tr>
+  </tbody>
+</table>
