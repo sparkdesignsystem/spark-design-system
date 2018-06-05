@@ -6,7 +6,7 @@ const setActiveNavItem = (pathname, nav, navMenu) => {
   navToggle.addEventListener('click', (event) => {
     event.preventDefault();
     nav.classList.toggle('is-active');
-    document.body.classList.toggle('sprk-u-Overflow--hidden');
+    document.body.classList.toggle('drizzle-u-Overflow--hidden');
   });
 
   const noIndex = str => str.replace(/index\.html$/, '');

@@ -50,7 +50,7 @@ textarea {
   color: $gray-dark;
   position: absolute;
   left: 0.55rem;
-  z-index: 1;
+  z-index: $layer-height-xs;
 }
 
 .sprk-b-TextInput--date-picker > .sprk-c-Icon {

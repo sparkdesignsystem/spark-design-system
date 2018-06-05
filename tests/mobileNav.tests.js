@@ -18,7 +18,7 @@ describe('hideMobileNav tests', () => {
 
   it('should remove the overflow hidden class and the active class', () => {
     hideMobileNav(nav);
-    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).eql(false);
+    expect(document.body.classList.contains('drizzle-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('is-active')).eql(false);
   });
 });
