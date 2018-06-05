@@ -3,7 +3,10 @@ description: Base Alert
 hidden: true
 ---
 
-<div class="sprk-c-Alert" role="alert">
+<div
+  class="sprk-c-Alert"
+  role="alert"
+  data-sprk-alert="container">
   <div class="sprk-c-Alert__icon sprk-c-Alert__icon--{{type}}">
     <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="{{viewBox}}" aria-hidden="true">
       <use xlink:href="#{{icon}}"></use>
@@ -18,7 +21,11 @@ hidden: true
     </p>
   </div>
 
-  <button class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss">
+  <button
+    class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
+    type="button"
+    title="Dismiss"
+    data-sprk-alert="dismiss">
     <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true">
       <use xlink:href="#times"></use>
     </svg>
