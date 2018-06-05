@@ -1,4 +1,4 @@
-/* global window document describe it beforeEach */
+/* global window document describe it beforeEach afterEach */
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { monetaryInput, formatMonetary, bindUIEvents } from '../base/monetaryInput';
@@ -9,6 +9,10 @@ describe('monetaryInput init', () => {
   beforeEach(() => {
     div = document.createElement('div');
     div.setAttribute('data-sprk-input', 'monetary');
+  });
+
+  afterEach(() => {
+    document.querySelectorAll.restore();
   });
 
   it('should call getElements once with the correct selector', () => {

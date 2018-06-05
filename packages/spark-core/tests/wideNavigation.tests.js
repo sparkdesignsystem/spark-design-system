@@ -1,6 +1,12 @@
-/* global before document describe it */
+/* global before beforeEach window document describe it */
+import sinon from 'sinon';
 import { expect } from 'chai';
-import { showDropDown, hideAllDropDowns } from '../components/wide-navigation';
+import {
+  showDropDown,
+  hideAllDropDowns,
+  bindUIEvents,
+  WideNavigation,
+} from '../components/wide-navigation';
 
 describe('wide nav tests', () => {
   let nav;
@@ -9,12 +15,19 @@ describe('wide nav tests', () => {
   let navItem3;
   let subNav1;
   let subNav2;
+  let event;
 
-  before(() => {
+  beforeEach(() => {
     nav = document.createElement('ul');
+    nav.setAttribute('data-sprk-navigation', 'wide');
+
     navItem1 = document.createElement('li');
     navItem2 = document.createElement('li');
     navItem3 = document.createElement('li');
+
+    sinon.spy(navItem1, 'addEventListener');
+    sinon.spy(navItem2, 'addEventListener');
+    sinon.spy(navItem3, 'addEventListener');
 
     subNav1 = document.createElement('ul');
     subNav1.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Display--none');
@@ -28,11 +41,76 @@ describe('wide nav tests', () => {
     nav.appendChild(navItem1);
     nav.appendChild(navItem2);
     nav.appendChild(navItem3);
+
+    document.body.appendChild(nav);
   });
 
   it('should remove the hidden class from the subNav inside', () => {
     showDropDown(navItem1);
     expect(subNav1.classList.contains('sprk-u-Display--none')).eql(false);
+  });
+
+  it('should do nothing if theres no subnav', () => {
+    showDropDown(navItem2);
+    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(true);
+  });
+
+  it('should bind the focusin event', () => {
+    bindUIEvents(navItem1);
+    expect(navItem1.addEventListener.getCall(0).args[0]).eql('focusin');
+  });
+
+  it('should hide all navs and show one on focusin', () => {
+    bindUIEvents(navItem1);
+    bindUIEvents(navItem2);
+    bindUIEvents(navItem3);
+
+    event = new window.Event('focusin');
+    navItem3.dispatchEvent(event);
+
+    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(false);
+  });
+
+  it('should bind the mouseenter event', () => {
+    bindUIEvents(navItem1);
+    expect(navItem1.addEventListener.getCall(1).args[0]).eql('mouseenter');
+  });
+
+  it('should hide all navs and show one on mouseenter', () => {
+    bindUIEvents(navItem1);
+    bindUIEvents(navItem2);
+    bindUIEvents(navItem3);
+
+    event = new window.Event('mouseenter');
+    navItem3.dispatchEvent(event);
+
+    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(false);
+  });
+
+  it('should bind the mouseleave event', () => {
+    bindUIEvents(navItem1);
+    expect(navItem1.addEventListener.getCall(2).args[0]).eql('mouseleave');
+  });
+
+  it('should hide all navs and show one on mouseleave', () => {
+    bindUIEvents(navItem1);
+    bindUIEvents(navItem2);
+    bindUIEvents(navItem3);
+
+    event = new window.Event('mouseleave');
+    navItem3.dispatchEvent(event);
+
+    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(true);
+  });
+
+  it('should call getElements once with the correct selector', () => {
+    sinon.spy(document, 'querySelectorAll');
+    WideNavigation();
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-navigation="wide"] > .sprk-c-WideNavigation__item');
   });
 });
 
