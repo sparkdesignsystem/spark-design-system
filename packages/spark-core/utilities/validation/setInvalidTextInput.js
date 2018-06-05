@@ -5,8 +5,11 @@ function setInvalidTextInput(inputContainer, defaultErrorMessage) {
 
   input.classList.add('sprk-b-TextInput--error');
   input.setAttribute('aria-invalid', 'true');
-  input.setAttribute('aria-describedby', errorContainer.getAttribute('id'));
-  errorContainer.textContent = overrideErrorMessage || defaultErrorMessage;
+
+  if (errorContainer) {
+    input.setAttribute('aria-describedby', errorContainer.getAttribute('id'));
+    errorContainer.textContent = overrideErrorMessage || defaultErrorMessage;
+  }
 }
 
 export { setInvalidTextInput as default };
