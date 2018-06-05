@@ -24,7 +24,7 @@ const runValidation = (element) => {
 // cant really cause keyup without making a choice, but an app can trigger keyup on submission of a
 // form to test for validity
 const bindUIEvents = (element) => {
-  element.addEventListener('keyup', () => {
+  element.addEventListener('change', () => {
     runValidation(element);
   });
 };
