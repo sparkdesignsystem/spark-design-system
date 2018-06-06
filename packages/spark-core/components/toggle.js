@@ -61,9 +61,7 @@ const bindToggleUIEvents = (element) => {
 };
 
 const toggle = () => {
-  getElements('[data-sprk-toggle="container"]', (element) => {
-    bindToggleUIEvents(element);
-  });
+  getElements('[data-sprk-toggle="container"]', bindToggleUIEvents);
 };
 
 export {
