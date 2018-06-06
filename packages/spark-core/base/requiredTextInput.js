@@ -15,20 +15,23 @@ const runValidation = (element) => {
   return hasValue;
 };
 
-const bindUIEvents = (element) => {
-  const field = element.querySelector('input');
+const bindUIEvents = (field) => {
+  const element = field.parentNode;
 
-  field.addEventListener('blur', () => {
+  field.addEventListener('input', () => {
     runValidation(element);
   });
 
-  field.addEventListener('keyup', () => {
+  field.addEventListener('blur', () => {
     runValidation(element);
   });
 };
 
 const requiredTextInput = () => {
-  getElements('[data-sprk-required="text"]', bindUIEvents);
+  getElements(
+    '.sprk-b-InputContainer:not([data-sprk-input]) input:not([type="radio"]):not([type="checkbox"])[required]',
+    bindUIEvents,
+  );
 };
 
-export { requiredTextInput, runValidation };
+export { requiredTextInput, runValidation, bindUIEvents };

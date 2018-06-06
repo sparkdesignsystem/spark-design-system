@@ -1,17 +1,7 @@
 import getElements from '../utilities/getElements';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
-
-const runValidation = (element) => {
-  const field = element.querySelector('input');
-  const validTest = field.validity.valid;
-  if (validTest) {
-    setValidTextInput(element);
-  } else {
-    setInvalidTextInput(element, 'There is an error on this field.');
-  }
-  return validTest;
-};
+import runValidation from '../utilities/validation/validation-runner';
 
 const formatPhone = (value) => {
   const newValue = `${value}`.replace(/\D/g, '');
@@ -24,13 +14,13 @@ const bindUIEvents = (element) => {
 
   // set up the validation and formatter
   field.addEventListener('input', () => {
-    if (runValidation(element)) {
+    if (runValidation(element, field, setValidTextInput, setInvalidTextInput)) {
       field.value = formatPhone(field.value);
     }
   });
 
   field.addEventListener('blur', () => {
-    if (runValidation(element)) {
+    if (runValidation(element, field, setValidTextInput, setInvalidTextInput)) {
       field.value = formatPhone(field.value);
     }
   });
@@ -40,4 +30,4 @@ const phoneInput = () => {
   getElements('[data-sprk-input="phone"]', bindUIEvents);
 };
 
-export { phoneInput, formatPhone };
+export { phoneInput, formatPhone, bindUIEvents };

@@ -1,4 +1,4 @@
-/* global describe it before require document */
+/* global describe it beforeEach require document */
 import { expect } from 'chai';
 import sinon from 'sinon';
 import runValidation from '../utilities/validation/validation-runner';
@@ -9,7 +9,7 @@ describe('validation runner', () => {
   const validFunction = sinon.stub();
   const inValidFunction = sinon.stub();
 
-  before(() => {
+  beforeEach(() => {
     element = document.createElement('div');
     field = document.createElement('input');
     field.setAttribute('pattern', '');
@@ -21,8 +21,16 @@ describe('validation runner', () => {
     expect(validFunction.calledOnce).eql(true);
   });
 
-  it('should call the inValid function if the field is valid.', () => {
-    field.setAttribute('pattern', '[abc]');
+  it('should call the inValid function if the field is empty but required.', () => {
+    field.setAttribute('pattern', '(abc)?');
+    field.setAttribute('required', null);
+    field.value = '';
+    runValidation(element, field, validFunction, inValidFunction);
+    expect(inValidFunction.calledOnce).eql(true);
+  });
+
+  it('should call the inValid function if the field is invalid.', () => {
+    field.setAttribute('pattern', '(abc)?');
     field.value = '123';
     runValidation(element, field, validFunction, inValidFunction);
     expect(inValidFunction.calledOnce).eql(true);

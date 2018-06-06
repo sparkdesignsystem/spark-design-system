@@ -177,6 +177,12 @@ describe('Modal tests', () => {
     expect(isFocused).eql(true);
   });
 
+  it('should do nothing if focusFirstEl contains no focusable elements', () => {
+    focusFirstEl(defaultModal);
+    focusFirstEl(document.createElement('div'));
+    expect(document.activeElement.outerHTML).eql('<a data-sprk-modal-cancel="exampleDefaultModal" href="#">Link</a>');
+  });
+
   it('should determine if Tab key was pressed', () => {
     const tabKeyEvent = {
       key: 'Tab',
