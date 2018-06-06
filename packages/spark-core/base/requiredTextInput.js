@@ -18,11 +18,11 @@ const runValidation = (element) => {
 const bindUIEvents = (field) => {
   const element = field.parentNode;
 
-  field.addEventListener('blur', () => {
+  field.addEventListener('input', () => {
     runValidation(element);
   });
 
-  field.addEventListener('input', () => {
+  field.addEventListener('blur', () => {
     runValidation(element);
   });
 };
@@ -34,4 +34,4 @@ const requiredTextInput = () => {
   );
 };
 
-export { requiredTextInput, runValidation };
+export { requiredTextInput, runValidation, bindUIEvents };

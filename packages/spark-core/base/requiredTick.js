@@ -33,4 +33,4 @@ const requiredTick = () => {
   getElements('[data-sprk-required="tick"]', bindUIEvents);
 };
 
-export { requiredTick, runValidation };
+export { requiredTick, runValidation, bindUIEvents };
