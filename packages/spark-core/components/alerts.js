@@ -4,18 +4,19 @@ const dismissAlert = (alert) => {
   alert.classList.add('sprk-u-Display--none');
 };
 
-// Add event listeners to alerts
-const alerts = () => {
-  getElements('[data-sprk-alert="container"]', (alert) => {
-    // Search inside alert for dismiss button
-    const dismissElement = alert.querySelector('[data-sprk-alert="dismiss"]');
-    // Add click listener to dismiss button if it exists
-    if (dismissElement !== null) {
-      dismissElement.addEventListener('click', () => {
-        dismissAlert(alert);
-      });
-    }
-  });
+const bindUIEvents = (element) => {
+  // Search inside alert for dismiss button
+  const dismissElement = element.querySelector('[data-sprk-alert="dismiss"]');
+  // Add click listener to dismiss button if it exists
+  if (dismissElement !== null) {
+    dismissElement.addEventListener('click', () => {
+      dismissAlert(element);
+    });
+  }
 };
 
-export { alerts, dismissAlert };
+const alerts = () => {
+  getElements('[data-sprk-alert="container"]', bindUIEvents);
+};
+
+export { alerts, dismissAlert, bindUIEvents };
