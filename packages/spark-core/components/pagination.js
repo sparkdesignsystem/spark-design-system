@@ -25,4 +25,4 @@ const pagination = () => {
   });
 };
 
-export { setAriaLabel, pagination };
+export { setItemLabels, setAriaLabel, pagination };
