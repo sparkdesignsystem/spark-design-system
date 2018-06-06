@@ -119,6 +119,41 @@ const showModal = (modal, mask, main) => {
   }
 };
 
+const bindUIEvents = (mask, main, modalTriggers, modalsList, cancels) => {
+  modalTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      // Get value of data-attr to get corresponding modal name
+      const modalName = trigger.getAttribute('data-sprk-modal-trigger');
+      const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
+      e.preventDefault();
+      showModal(modal, mask, main);
+      focusFirstEl(modal);
+    });
+  });
+
+  cancels.forEach((cancel) => {
+    cancel.addEventListener('click', (e) => {
+      // Get value of data-attr to get corresponding modal name
+      const modalName = cancel.getAttribute('data-sprk-modal-cancel');
+      const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
+      e.preventDefault();
+      hideModal(modal, mask, main);
+    });
+  });
+
+  if (modalsList.length > 0 && mask) {
+    mask.addEventListener('click', (e) => {
+      handleMaskEvents(modalsList, mask, main, e);
+    });
+  }
+
+  document.addEventListener(
+    'keydown',
+    handleModalKeyEvents.bind(null, modalsList, mask, main),
+    false,
+  );
+};
+
 const modals = () => {
   const mask = document.querySelector('[data-sprk-modal-mask="true"]');
   const main = document.querySelector('[data-sprk-main]');
@@ -126,51 +161,7 @@ const modals = () => {
   const modalsList = document.querySelectorAll('[data-sprk-modal]');
   const cancels = document.querySelectorAll('[data-sprk-modal-cancel]');
 
-  // Check if there are triggers
-  if (modalTriggers.length > 0) {
-    // Loop through all triggers
-    modalTriggers.forEach((trigger) => {
-      // Add click listener for each trigger
-      trigger.addEventListener('click', (e) => {
-        // Get value of data-attr to get corresponding modal name
-        const modalName = trigger.getAttribute('data-sprk-modal-trigger');
-        const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
-        e.preventDefault();
-        // Show the modal that was clicked
-        showModal(modal, mask, main);
-        focusFirstEl(modal);
-      });
-    });
-  }
-
-  // Check if there are cancel elements
-  if (cancels.length > 0) {
-    // Loop through all cancel elements
-    cancels.forEach((cancel) => {
-      // Add click listener for each cancel el
-      cancel.addEventListener('click', (e) => {
-        // Get value of data-attr to get corresponding modal name
-        const modalName = cancel.getAttribute('data-sprk-modal-cancel');
-        const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
-        e.preventDefault();
-        // Hide the modal
-        hideModal(modal, mask, main);
-      });
-    });
-  }
-
-  // Add key listeners to document to check for Esc, Tab, and Shift+Tab events
-  if (modalsList.length > 0) {
-    // Add click handler to mask
-    if (mask.length !== null) {
-      mask.addEventListener('click', handleMaskEvents.bind(null, modalsList, mask, main), false);
-    }
-    document.addEventListener(
-      'keydown',
-      handleModalKeyEvents.bind(null, modalsList, mask, main),
-      false,
-    );
-  }
+  bindUIEvents(mask, main, modalTriggers, modalsList, cancels);
 };
 
 export {
@@ -182,4 +173,5 @@ export {
   handleModalKeyEvents,
   handleMaskEvents,
   currentOpenModal,
+  bindUIEvents,
 };
