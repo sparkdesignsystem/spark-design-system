@@ -48,4 +48,4 @@ const masthead = () => {
   window.addEventListener('resize', hideMobileNavs);
 };
 
-export { masthead, toggleMobileNav, hideMobileNavs };
+export { masthead, toggleMobileNav, hideMobileNavs, focusTrap, bindUIEvents };
