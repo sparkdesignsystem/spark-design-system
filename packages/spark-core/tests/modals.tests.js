@@ -401,27 +401,19 @@ describe('Modal tests', () => {
   });
 
   it('should determine if Tab key was pressed', () => {
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-    };
-    const notTabKeyEvent = {
-      key: 'Enter',
-      keyCode: 13,
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
+    const notTabKeyEvent = new window.Event('keydown');
+    notTabKeyEvent.keyCode = 13;
     expect(isTabPressed(tabKeyEvent)).eql(true);
     expect(isTabPressed(notTabKeyEvent)).eql(false);
   });
 
   it('should determine if Escape key was pressed', () => {
-    const escKeyEvent = {
-      key: 'Escape',
-      keyCode: 27,
-    };
-    const notEscKeyEvent = {
-      key: 'Enter',
-      keyCode: 13,
-    };
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 27;
+    const notEscKeyEvent = new window.Event('keydown');
+    notEscKeyEvent.keyCode = 13;
     expect(isEscPressed(escKeyEvent)).eql(true);
     expect(isEscPressed(notEscKeyEvent)).eql(false);
   });
@@ -455,11 +447,8 @@ describe('Modal tests', () => {
 
   it('should perform modal key events only while a modal is open', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const escKeyEvent = {
-      key: 'Escape',
-      keyCode: 27,
-      preventDefault: () => {},
-    };
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 27;
     // Check for open modal
     const modalEl = currentOpenModal(modalsList);
     // Check to make sure it is closed
@@ -480,11 +469,8 @@ describe('Modal tests', () => {
 
   it('should do nothing when a wait modal is open and esc is pressed', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const escKeyEvent = {
-      key: 'Escape',
-      keyCode: 27,
-      preventDefault: () => {},
-    };
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 27;
     // Now throw a 'esc' key event when no modal is open
     handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
     showModal(waitModal, modalMask, main);
@@ -494,11 +480,8 @@ describe('Modal tests', () => {
 
   it('should do nothing on a key thats not tab or esc', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const QKeyEvent = {
-      key: 'Q',
-      keyCode: 81,
-      preventDefault: () => {},
-    };
+    const QKeyEvent = new window.Event('keydown');
+    QKeyEvent.keyCode = 81;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, QKeyEvent);
     expect(document.activeElement).eql(waitModal);
@@ -506,11 +489,8 @@ describe('Modal tests', () => {
 
   it('should return focus to the open wait modal if tab is pressed', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-      preventDefault: () => {},
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
     expect(document.activeElement).eql(waitModal);
@@ -518,12 +498,8 @@ describe('Modal tests', () => {
 
   it('should return focus to the open wait modal if shift + tab is pressed', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-      shiftKey: true,
-      preventDefault: () => {},
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
     expect(document.activeElement).eql(waitModal);
@@ -531,11 +507,8 @@ describe('Modal tests', () => {
 
   it('should return focus to the first element if tab is pressed while the last focusable element is focused', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-      preventDefault: () => {},
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
     showModal(defaultModal, modalMask, main);
     link2.focus();
     expect(document.activeElement).eql(link2);
@@ -545,12 +518,9 @@ describe('Modal tests', () => {
 
   it('should return focus to the first element if tab + shift is pressed while the first focusable element is focused', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-      shiftKey: true,
-      preventDefault: () => {},
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
+    tabKeyEvent.shiftKey = true;
     showModal(defaultModal, modalMask, main);
     cancelDefault.focus();
     expect(document.activeElement).eql(cancelDefault);
@@ -560,12 +530,9 @@ describe('Modal tests', () => {
 
   it('should do nothing if tab + shift is pressed while the focused element is not first', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-      shiftKey: true,
-      preventDefault: () => {},
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
+    tabKeyEvent.shiftKey = true;
     showModal(defaultModal, modalMask, main);
     link2.focus();
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
@@ -574,11 +541,8 @@ describe('Modal tests', () => {
 
   it('should do nothing if tab is pressed while the focused element is not last', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
-    const tabKeyEvent = {
-      key: 'Tab',
-      keyCode: 9,
-      preventDefault: () => {},
-    };
+    const tabKeyEvent = new window.Event('keydown');
+    tabKeyEvent.keyCode = 9;
     showModal(defaultModal, modalMask, main);
     cancelDefault.focus();
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);

@@ -54,7 +54,18 @@ const retreatTab = (tabs, tabpanels) => {
   }
 };
 
+const ariaOrientation = (width, element) => {
+  // switch aria-orientation to vertical on mobile (based on _tabs.scss breakpoint)
+  if (width <= 736) {
+    element.setAttribute('aria-orientation', 'vertical');
+  } else {
+    element.setAttribute('aria-orientation', 'horizontal');
+  }
+};
+
 const bindUIEvents = (element) => {
+  ariaOrientation(window.innerWidth, element);
+
   const tabContainer = element.querySelector('.sprk-c-Tabs__buttons');
   const tabs = element.querySelectorAll('[role="tab"]');
   const tabpanels = element.querySelectorAll('[role="tabpanel"]');
@@ -90,24 +101,13 @@ const bindUIEvents = (element) => {
   });
 };
 
-const ariaOrientation = (width, element) => {
-  // switch aria-orientation to vertical on mobile (based on _tabs.scss breakpoint)
-  if (width <= 736) {
-    element.setAttribute('aria-orientation', 'vertical');
-  } else {
-    element.setAttribute('aria-orientation', 'horizontal');
-  }
-};
-
 const tabs = () => {
-  getElements('[data-sprk-navigation="tabs"]', (element) => {
-    ariaOrientation(window.innerWidth, element);
-    bindUIEvents(element);
-  });
+  getElements('[data-sprk-navigation="tabs"]', bindUIEvents);
 };
 
 export {
   tabs,
+  bindUIEvents,
   ariaOrientation,
   resetTabs,
   setActiveTab,

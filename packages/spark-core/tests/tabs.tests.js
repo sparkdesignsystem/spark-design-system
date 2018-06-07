@@ -1,6 +1,9 @@
-/* global document before describe it */
+/* global window document before beforeEach afterEach describe it */
+import sinon from 'sinon';
 import { expect } from 'chai';
 import {
+  tabs,
+  bindUIEvents,
   ariaOrientation,
   resetTabs,
   setActiveTab,
@@ -8,6 +11,160 @@ import {
   retreatTab,
   getActiveTabIndex,
 } from '../components/tabs';
+
+describe('tabs init', () => {
+  afterEach(() => {
+    document.querySelectorAll.restore();
+  });
+
+  it('should call getElements once with the correct selector', () => {
+    sinon.spy(document, 'querySelectorAll');
+    tabs();
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-navigation="tabs"]');
+  });
+});
+
+describe('tabs UI Events tests', () => {
+  let tabNav;
+  let tabContainer;
+  let tab1;
+  let tab2;
+  let tab3;
+
+  let panel1;
+  let panel2;
+  let panel3;
+  let event;
+
+  beforeEach(() => {
+    tabNav = document.createElement('div');
+    tabNav.classList.add('sprk-c-Tabs');
+    tabNav.setAttribute('role', 'tablist');
+
+    tabContainer = document.createElement('div');
+    tabContainer.classList.add('sprk-c-Tabs__buttons');
+    sinon.spy(tabContainer, 'addEventListener');
+
+    tab1 = document.createElement('button');
+    tab1.classList.add('sprk-c-Tabs__button');
+    tab1.classList.add('sprk-c-Tabs__button--active');
+    tab1.setAttribute('role', 'tab');
+    tab1.setAttribute('aria-selected', 'true');
+    tab1.textContent = 'tab 1';
+    sinon.spy(tab1, 'addEventListener');
+
+    tab2 = document.createElement('button');
+    tab2.classList.add('sprk-c-Tabs__button');
+    tab2.setAttribute('role', 'tab');
+    tab2.setAttribute('aria-selected', 'false');
+    tab2.textContent = 'tab 2';
+    sinon.spy(tab2, 'addEventListener');
+
+    tab3 = document.createElement('button');
+    tab3.classList.add('sprk-c-Tabs__button');
+    tab3.setAttribute('role', 'tab');
+    tab3.setAttribute('aria-selected', 'false');
+    tab3.textContent = 'tab 3';
+    sinon.spy(tab3, 'addEventListener');
+
+    panel1 = document.createElement('div');
+    panel1.classList.add('sprk-c-Tabs__content');
+    panel1.setAttribute('role', 'tabpanel');
+    panel1.setAttribute('tabindex', '0');
+
+    panel2 = document.createElement('div');
+    panel2.classList.add('sprk-c-Tabs__content');
+    panel2.setAttribute('role', 'tabpanel');
+    panel2.setAttribute('tabindex', '0');
+
+    panel3 = document.createElement('div');
+    panel3.classList.add('sprk-c-Tabs__content');
+    panel3.setAttribute('role', 'tabpanel');
+    panel3.setAttribute('tabindex', '0');
+
+    tabContainer.appendChild(tab1);
+    tabContainer.appendChild(tab2);
+    tabContainer.appendChild(tab3);
+
+    tabNav.appendChild(tabContainer);
+    tabNav.appendChild(panel1);
+    tabNav.appendChild(panel2);
+    tabNav.appendChild(panel3);
+
+    bindUIEvents(tabNav);
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+    tab1.addEventListener.restore();
+    tab2.addEventListener.restore();
+    tab3.addEventListener.restore();
+    tabContainer.addEventListener.restore();
+  });
+
+  it('should bind the click event on each tab', () => {
+    expect(tab1.addEventListener.getCall(0).args[0]).eql('click');
+    expect(tab2.addEventListener.getCall(0).args[0]).eql('click');
+    expect(tab3.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind the keydown event to the container', () => {
+    expect(tabContainer.addEventListener.getCall(0).args[0]).eql('keydown');
+  });
+
+  it('should activate the previous tab when left is pressed', () => {
+    event = new window.Event('keydown');
+    event.keyCode = 37;
+    tab2.click();
+    expect(tab2.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+    tabContainer.dispatchEvent(event);
+    expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+  });
+
+  it('should activate the next tab when right is pressed', () => {
+    event = new window.Event('keydown');
+    event.keyCode = 39;
+    tab2.click();
+    expect(tab2.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+    tabContainer.dispatchEvent(event);
+    expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+  });
+
+  it('should activate the first tab when Home is pressed', () => {
+    event = new window.Event('keydown');
+    event.keyCode = 36;
+    tab3.click();
+    expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+    tabContainer.dispatchEvent(event);
+    expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+  });
+
+  it('should activate the last tab when End is pressed', () => {
+    event = new window.Event('keydown');
+    event.keyCode = 35;
+    expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(false);
+    tabContainer.dispatchEvent(event);
+    expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
+  });
+
+  it('should activate the corresponding content when tab is pressed', () => {
+    event = new window.Event('keydown');
+    event.keyCode = 9;
+    tab1.click();
+    expect(document.activeElement).eql(tab1);
+    tabContainer.dispatchEvent(event);
+    expect(document.activeElement).eql(panel1);
+  });
+
+  it('should do nothing when a key is pressed that isnt home, end, or an arrow key', () => {
+    event = new window.Event('keydown');
+    event.keyCode = 8;
+    tab2.click();
+    expect(document.activeElement).eql(tab2);
+    tabContainer.dispatchEvent(event);
+    expect(document.activeElement).eql(tab2);
+  });
+});
 
 describe('aria Orientation tests', () => {
   let tabContainer;
@@ -47,7 +204,7 @@ describe('resetTabs tests', () => {
   let panel2;
   let panel3;
 
-  let tabs;
+  let tabsSet;
   let panels;
 
   before(() => {
@@ -91,16 +248,16 @@ describe('resetTabs tests', () => {
     tabContainer.appendChild(panel2);
     tabContainer.appendChild(panel3);
 
-    tabs = [tab1, tab2, tab3];
+    tabsSet = [tab1, tab2, tab3];
     panels = [panel1, panel2, panel3];
   });
 
   it('should remove the active class from all tabs', () => {
     let hasActiveClassSomeplace = false;
 
-    resetTabs(tabs, panels);
+    resetTabs(tabsSet, panels);
 
-    tabs.forEach((tab) => {
+    tabsSet.forEach((tab) => {
       if (tab.classList.contains('sprk-c-Tabs__button--active')) {
         hasActiveClassSomeplace = true;
       }
@@ -112,7 +269,7 @@ describe('resetTabs tests', () => {
   it('should hide all the panels', () => {
     let allAreHidden = true;
 
-    resetTabs(tabs, panels);
+    resetTabs(tabsSet, panels);
 
     panels.forEach((panel) => {
       if (!panel.classList.contains('sprk-u-Display--none')) {
@@ -174,7 +331,7 @@ describe('advanceTab tests', () => {
   let panel2;
   let panel3;
 
-  let tabs;
+  let tabsSet;
   let panels;
 
   before(() => {
@@ -220,20 +377,20 @@ describe('advanceTab tests', () => {
     tabContainer.appendChild(panel2);
     tabContainer.appendChild(panel3);
 
-    tabs = [tab1, tab2, tab3];
+    tabsSet = [tab1, tab2, tab3];
     panels = [panel1, panel2, panel3];
   });
 
   it('should advance the active tab to the next one, if its not the last in the list', () => {
-    advanceTab(tabs, panels);
+    advanceTab(tabsSet, panels);
     expect(tab2.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
   it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
-    advanceTab(tabs, panels); // set to 3
+    advanceTab(tabsSet, panels); // set to 3
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
 
-    advanceTab(tabs, panels); // should move to 1
+    advanceTab(tabsSet, panels); // should move to 1
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 });
@@ -248,7 +405,7 @@ describe('retreatTab tests', () => {
   let panel2;
   let panel3;
 
-  let tabs;
+  let tabsSet;
   let panels;
 
   before(() => {
@@ -294,17 +451,17 @@ describe('retreatTab tests', () => {
     tabContainer.appendChild(panel2);
     tabContainer.appendChild(panel3);
 
-    tabs = [tab1, tab2, tab3];
+    tabsSet = [tab1, tab2, tab3];
     panels = [panel1, panel2, panel3];
   });
 
   it('should retreat the active tab to the previous one, if its not the first in the list', () => {
-    retreatTab(tabs, panels);
+    retreatTab(tabsSet, panels);
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
   it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
-    retreatTab(tabs, panels);
+    retreatTab(tabsSet, panels);
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 });
@@ -315,7 +472,7 @@ describe('getActiveTabIndex tests', () => {
   let tab2;
   let tab3;
 
-  let tabs;
+  let tabsSet;
 
   before(() => {
     tabContainer = document.createElement('div');
@@ -341,15 +498,15 @@ describe('getActiveTabIndex tests', () => {
     tabContainer.appendChild(tab2);
     tabContainer.appendChild(tab3);
 
-    tabs = [tab1, tab2, tab3];
+    tabsSet = [tab1, tab2, tab3];
   });
 
   it('should return null when there are no tabs active', () => {
-    expect(getActiveTabIndex(tabs)).eql(null);
+    expect(getActiveTabIndex(tabsSet)).eql(null);
   });
 
   it('should return the correct index when a tab is active', () => {
     tab2.classList.add('sprk-c-Tabs__button--active');
-    expect(getActiveTabIndex(tabs)).eql(1);
+    expect(getActiveTabIndex(tabsSet)).eql(1);
   });
 });
