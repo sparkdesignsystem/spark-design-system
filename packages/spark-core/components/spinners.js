@@ -27,7 +27,7 @@ const setSpinning = (element, options) => {
 const cancelSpinning = (element) => {
   const el = element;
   el.innerHTML = '';
-  el.textContent = el.getAttribute('data-sprk-spinner-text') || 'Submit';
+  el.textContent = el.getAttribute('data-sprk-spinner-text') || '';
   el.removeAttribute('data-sprk-has-spinner');
   el.removeAttribute('style');
 };
@@ -39,7 +39,10 @@ const spinners = () => {
     options.lightness = spinnerContainer.getAttribute('data-sprk-spinner-lightness');
 
     spinnerContainer.addEventListener('click', (e) => {
-      if (e.target.getAttribute('data-sprk-spinner') && !e.target.getAttribute('data-sprk-has-spinner')) {
+      if (
+        e.target.getAttribute('data-sprk-spinner') &&
+        !e.target.getAttribute('data-sprk-has-spinner')
+      ) {
         setSpinning(e.target, options);
       }
     });
@@ -51,6 +54,5 @@ window.addEventListener('sprk-cancel-spinners', () => {
     cancelSpinning(element);
   });
 });
-
 
 export { spinners, getSpinnerClasses, setSpinning, cancelSpinning };

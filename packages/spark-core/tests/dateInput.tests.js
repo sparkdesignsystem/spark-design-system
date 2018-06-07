@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import { expect } from 'chai';
 import { dateInput, formatDate, bindUIEvents } from '../base/dateInput';
 
-describe('ssnInput init', () => {
+describe('dateInput init', () => {
   afterEach(() => {
     document.querySelectorAll.restore();
   });
@@ -15,7 +15,7 @@ describe('ssnInput init', () => {
   });
 });
 
-describe('ssnInput UI Events tests', () => {
+describe('dateInput UI Events tests', () => {
   let inputContainer;
   let input;
   let event;
