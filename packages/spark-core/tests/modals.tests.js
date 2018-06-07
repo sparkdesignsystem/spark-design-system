@@ -500,6 +500,7 @@ describe('Modal tests', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     const tabKeyEvent = new window.Event('keydown');
     tabKeyEvent.keyCode = 9;
+    tabKeyEvent.shiftKey = true;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
     expect(document.activeElement).eql(waitModal);
