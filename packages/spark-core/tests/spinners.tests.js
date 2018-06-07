@@ -1,10 +1,19 @@
-/* global document beforeEach describe it */
+/* global window document beforeEach afterEach describe it */
+import sinon from 'sinon';
 import { expect } from 'chai';
-import {
-  getSpinnerClasses,
-  setSpinning,
-  cancelSpinning,
-} from '../components/spinners';
+import { spinners, getSpinnerClasses, setSpinning, cancelSpinning } from '../components/spinners';
+
+describe('spinners init', () => {
+  afterEach(() => {
+    document.querySelectorAll.restore();
+  });
+
+  it('should call getElements once with the correct selector', () => {
+    sinon.spy(document, 'querySelectorAll');
+    spinners();
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-spinner="click"]');
+  });
+});
 
 describe('getSpinnerClasses tests', () => {
   it('should return the two base spinner classes with no options', () => {
@@ -20,6 +29,63 @@ describe('getSpinnerClasses tests', () => {
   it('should add the dark class if the option is set', () => {
     const expected = 'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark';
     expect(getSpinnerClasses({ lightness: 'dark' })).eql(expected);
+  });
+});
+
+describe('spinners UI tests', () => {
+  let spinnerContainer;
+  let event;
+
+  beforeEach(() => {
+    spinnerContainer = document.createElement('button');
+    spinnerContainer.setAttribute('data-sprk-spinner', 'click');
+    spinnerContainer.textContent = 'Submit';
+    sinon.spy(spinnerContainer, 'addEventListener');
+    sinon.spy(spinnerContainer, 'setAttribute');
+    document.body.append(spinnerContainer);
+    spinners();
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+    spinnerContainer.addEventListener.restore();
+    spinnerContainer.setAttribute.restore();
+  });
+
+  it('should attach a click handler to the spinner container', () => {
+    expect(spinnerContainer.addEventListener.calledOnce).eql(true);
+    expect(spinnerContainer.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should start the spinning if its clicked', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+  });
+
+  it('should remove spinners if the sprk-cancel-spinners event is triggered on window', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    event = new window.Event('sprk-cancel-spinners');
+    window.dispatchEvent(event);
+    expect(spinnerContainer.querySelector('span')).eql(null);
+  });
+
+  it('should use no text when removing spinners if the sprk-cancel-spinners event is triggered on window and there was no text saved', () => {
+    spinnerContainer.click();
+    spinnerContainer.removeAttribute('data-sprk-spinner-text');
+    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    event = new window.Event('sprk-cancel-spinners');
+    window.dispatchEvent(event);
+    expect(spinnerContainer.querySelector('span')).eql(null);
+    expect(spinnerContainer.textContent).eql('');
+  });
+
+  it('should not try to start spinning something thats already spinning', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.setAttribute.calledThrice).eql(true);
+    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    spinnerContainer.click();
+    expect(spinnerContainer.setAttribute.getCalls().length).eql(3);
   });
 });
 
