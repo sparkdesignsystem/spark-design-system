@@ -1,7 +1,7 @@
 /* global window beforeEach afterEach document describe it */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { hideWaitModal } from '../src/assets/drizzle/scripts/modals';
+import { hideWaitModal, MODAL_TIMER } from '../src/assets/drizzle/scripts/modals';
 import { modals } from '../packages/spark-core/components/modals';
 
 describe('Modal tests', () => {
@@ -65,7 +65,7 @@ describe('Modal tests', () => {
     hideWaitModal();
     event = new window.Event('click');
     triggerWaitModal.dispatchEvent(event);
-    clock.tick(2500);
+    clock.tick(MODAL_TIMER);
     expect(triggerWaitModal.addEventListener.getCall(0).args[0]).eql('click');
     expect(modalMask.classList.contains(HIDE_CLASS)).eql(true);
     expect(waitModal.classList.contains(HIDE_CLASS)).eql(true);
@@ -77,7 +77,7 @@ describe('Modal tests', () => {
     hideWaitModal();
     event = new window.Event('click');
     triggerDefaultModal.dispatchEvent(event);
-    clock.tick(2500);
+    clock.tick(MODAL_TIMER);
     expect(triggerDefaultModal.addEventListener.getCall(0).args[0]).eql('click');
     expect(modalMask.classList.contains(HIDE_CLASS)).eql(false);
     expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);

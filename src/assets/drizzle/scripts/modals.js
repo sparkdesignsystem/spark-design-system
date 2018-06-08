@@ -7,6 +7,8 @@
 import { hideModal, isWaitModal } from '../../../../packages/spark-core/components/modals';
 import getElements from '../../../../packages/spark-core/utilities/getElements';
 
+const MODAL_TIMER = 3000;
+
 const bindUIEvents = (trigger) => {
   // Add click listener for each trigger
   trigger.addEventListener('click', () => {
@@ -18,14 +20,14 @@ const bindUIEvents = (trigger) => {
 
     // Only proceed if this is a wait modal
     if (!isWaitModal(modal)) return;
-    // Close the wait modal in Spark site after 2.5 seconds
+    // Close the wait modal in Spark site after 3 seconds
     setTimeout(() => {
       hideModal(modal, mask, main);
-    }, 2500);
+    }, MODAL_TIMER);
   });
 };
 
 const hideWaitModal = () => {
   getElements('[data-sprk-modal-trigger]', bindUIEvents);
 };
-export { hideWaitModal, bindUIEvents };
+export { hideWaitModal, MODAL_TIMER, bindUIEvents };
