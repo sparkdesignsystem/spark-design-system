@@ -28,7 +28,7 @@ label,
 }
 
 .sprk-b-TextInput,
-select,
+.sprk-b-Select,
 textarea {
   color: $gray-dark;
   outline: none;
@@ -62,7 +62,8 @@ textarea {
   top: 0.6rem;
 }
 
-.sprk-b-TextInput--error {
+.sprk-b-TextInput--error,
+.sprk-b-Select--error {
   background-color: $red-light;
   border-color: $red-medium;
 

@@ -9,7 +9,7 @@ order: 7
 
 <div class="sprk-b-InputContainer">
   <label for="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}" class="sprk-b-Label">Select Box Label</label>
-  <select id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
+  <select class="sprk-b-Select{{#if class}} {{class}}{{/if}}" id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
           aria-describedby="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container"
           {{#if disabled}} disabled{{/if}}>
     <option value="1">Option 1</option>
