@@ -11,6 +11,7 @@ import { formStateChanger } from './form-state-changer';
 import { filters } from './filter';
 import { clipboardSuccess } from './clipboard';
 import { mobileNav } from './navigation/mobileNav';
+import { hideWaitModal } from './modals';
 
 const nav = document.getElementById('nav');
 const navMenu = document.getElementById('nav-menu');
@@ -28,3 +29,4 @@ bindUIEvents();
 filters();
 clipboardSuccess();
 mobileNav();
+hideWaitModal();
