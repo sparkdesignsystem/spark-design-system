@@ -37,4 +37,4 @@ const formStateChanger = () => {
   getElements('[data-state-changer-id]', bindUIEvents);
 };
 
-export { formStateChanger, mapTemplates, toggleTemplate };
+export { formStateChanger, bindUIEvents, mapTemplates, toggleTemplate };
