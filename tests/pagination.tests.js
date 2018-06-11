@@ -108,6 +108,7 @@ describe('Default Pagination tests', () => {
     link3.addEventListener.restore();
     next.addEventListener.restore();
     prev.addEventListener.restore();
+    document.body.innerHTML = '';
   });
 
   it('should add aria-current attribute to new page link and remove from old', () => {
@@ -146,12 +147,15 @@ describe('Default Pagination tests', () => {
     expect(prev.classList.contains('sprk-b-Link--disabled')).eql(true);
   });
 
-  it('should remove the disabled link class on the prev and next links when the second page is selected', () => {
+  it('should remove the disabled link class on the prev links when the second page is selected', () => {
+    link1.setAttribute('aria-current', 'true');
+    link3.removeAttribute('aria-current');
+    link2.removeAttribute('aria-current');
     paginationDefault();
-    event = new window.Event('click');
-    link2.dispatchEvent(event);
+    prev.classList.add('sprk-b-Link--disabled');
+    link2.click();
     expect(prev.classList.contains('sprk-b-Link--disabled')).eql(false);
-    expect(next.classList.contains('sprk-b-Link--disabled')).eql(false);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
   });
 
   it('should add the current item css class to the next page', () => {
