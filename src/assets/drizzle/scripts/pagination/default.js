@@ -49,10 +49,9 @@ const handleDefaultPagItemClick = (item, currentPage, prev, next) => {
   if (currentItemNum === 1) {
     updatePageStyles(prev, next, 'sprk-b-Link--disabled');
   } else if (currentItemNum === 2) {
-    // Enable both prev/links since we are on middle link
     prev.classList.remove('sprk-b-Link--disabled');
     next.classList.remove('sprk-b-Link--disabled');
-  } else if (currentItemNum === 3) {
+  } else {
     updatePageStyles(next, prev, 'sprk-b-Link--disabled');
   }
 };
@@ -110,39 +109,40 @@ const handleDefaultPagNextClick = (link2, link3, currentPage, prev, next) => {
   }
 };
 
-const paginationDefault = () => {
-  getElements('[data-sprk-pagination="default"]', (element) => {
-    const defaultPagItems = element.querySelectorAll('[data-sprk-pagination="item"]');
-    const [link1, link2, link3] = defaultPagItems;
-    const next = element.querySelector('[data-sprk-pagination="next"]');
-    const prev = element.querySelector('[data-sprk-pagination="prev"]');
-
-    // Listen for page number link clicks
-    defaultPagItems.forEach((item) => {
-      item.addEventListener('click', (event) => {
-        // The current page when the new page was clicked
-        const currentPage = element.querySelector('[aria-current="true"]');
-
-        event.preventDefault();
-        // If current link is clicked again then do nothing
-        if (parseInt(item.textContent, 10) === parseInt(currentPage.textContent, 10)) return;
-        handleDefaultPagItemClick(item, currentPage, prev, next);
-      });
-    });
-
-    prev.addEventListener('click', (event) => {
-      const currentPage = element.querySelector('[aria-current="true"]');
-      event.preventDefault();
-      handleDefaultPagPrevClick(link1, link2, currentPage, prev, next);
-    });
-
-    next.addEventListener('click', (event) => {
+const bindUIElements = (element) => {
+  const defaultPagItems = element.querySelectorAll('[data-sprk-pagination="item"]');
+  const [link1, link2, link3] = defaultPagItems;
+  const next = element.querySelector('[data-sprk-pagination="next"]');
+  const prev = element.querySelector('[data-sprk-pagination="prev"]');
+  // Listen for page number link clicks
+  defaultPagItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
       // The current page when the new page was clicked
       const currentPage = element.querySelector('[aria-current="true"]');
+
       event.preventDefault();
-      handleDefaultPagNextClick(link2, link3, currentPage, prev, next);
+      // If current link is clicked again then do nothing
+      if (parseInt(item.textContent, 10) === parseInt(currentPage.textContent, 10)) return;
+      handleDefaultPagItemClick(item, currentPage, prev, next);
     });
   });
+
+  prev.addEventListener('click', (event) => {
+    const currentPage = element.querySelector('[aria-current="true"]');
+    event.preventDefault();
+    handleDefaultPagPrevClick(link1, link2, currentPage, prev, next);
+  });
+
+  next.addEventListener('click', (event) => {
+    // The current page when the new page was clicked
+    const currentPage = element.querySelector('[aria-current="true"]');
+    event.preventDefault();
+    handleDefaultPagNextClick(link2, link3, currentPage, prev, next);
+  });
+};
+
+const paginationDefault = () => {
+  getElements('[data-sprk-pagination="default"]', bindUIElements);
 };
 
 export {
@@ -152,4 +152,5 @@ export {
   handleDefaultPagItemClick,
   handleDefaultPagNextClick,
   handleDefaultPagPrevClick,
+  bindUIElements,
 };
