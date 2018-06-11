@@ -60,7 +60,7 @@ describe('Modal tests', () => {
     clock.restore();
   });
 
-  it('should hide the wait modal after 2.5 seconds', () => {
+  it(`should hide the wait modal after ${MODAL_TIMER} seconds`, () => {
     modals();
     hideWaitModal();
     event = new window.Event('click');
@@ -72,7 +72,7 @@ describe('Modal tests', () => {
     expect(main.hasAttribute('aria-hidden')).eql(false);
   });
 
-  it('should not hide the default modal after 2.5 seconds', () => {
+  it(`should not hide the default modal after ${MODAL_TIMER} seconds`, () => {
     modals();
     hideWaitModal();
     event = new window.Event('click');

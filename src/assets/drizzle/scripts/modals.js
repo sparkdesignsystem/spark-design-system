@@ -20,7 +20,7 @@ const bindUIEvents = (trigger) => {
 
     // Only proceed if this is a wait modal
     if (!isWaitModal(modal)) return;
-    // Close the wait modal in Spark site after 3 seconds
+
     setTimeout(() => {
       hideModal(modal, mask, main);
     }, MODAL_TIMER);
