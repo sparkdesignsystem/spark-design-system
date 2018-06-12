@@ -8,7 +8,7 @@ before_script:
 - npm run test --prefix ./packages/spark-core
 
 after_success:
-- pecl install imagick
+- apt-get install imagemagick
 - npm install -g phantomjs
 - gem install wraith && npm run visual-regression
 
