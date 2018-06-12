@@ -25,6 +25,13 @@ domains:
 paths:
   home:     /
   design-principles: /gettingstarted/design-principles.html
+  designers: /gettingstarted/designers.html
+  developers: /gettingstarted/developers.html
+  color: /patterns/fundamentals/color.html
+  layers: /patterns/fundamentals/layers.html
+  layout: /patterns/fundamentals/layout.html
+  space: /patterns/fundamentals/space.html
+  typography: /patterns/fundamentals/typography.html
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
@@ -36,7 +43,7 @@ screen_widths:
 #before_capture: 'javascript/disable_javascript--phantom.js'
 
 # (required) The directory that your screenshots will be stored in
-directory: 'shots'
+directory: 'wraith/shots'
 
 # (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
 fuzz: '20%'
