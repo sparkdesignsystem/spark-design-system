@@ -10,3 +10,4 @@ lerna-debug.log
 src/templates/drizzle/spark-core-icons.hbs
 packages/spark-core/.nyc_output
 .nyc_output/
+/wraith/shots
