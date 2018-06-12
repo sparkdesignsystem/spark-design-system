@@ -1,11 +1,13 @@
-/* global describe it document before */
+/* global describe it document beforeEach afterEach window */
 import { expect } from 'chai';
+import sinon from 'sinon';
 import {
   setAriaCurrent,
   updatePageStyles,
   handleDefaultPagItemClick,
   handleDefaultPagNextClick,
   handleDefaultPagPrevClick,
+  paginationDefault,
 } from '../src/assets/drizzle/scripts/pagination/default';
 import {
   goForwardOne,
@@ -32,13 +34,14 @@ describe('Default Pagination tests', () => {
   let prev;
   let nextDiv;
   let prevDiv;
+  let event;
 
-  before(() => {
+  beforeEach(() => {
     newPageLink = document.createElement('a');
     oldPageLink = document.createElement('a');
     addItem = document.createElement('a');
     removeItem = document.createElement('a');
-    defaultPag = document.createElement('nav');
+    defaultPag = document.createElement('div');
     prev = document.createElement('a');
     next = document.createElement('a');
 
@@ -53,6 +56,7 @@ describe('Default Pagination tests', () => {
 
     link1Div.classList.add('sprk-c-Pagination__item');
     link2Div.classList.add('sprk-c-Pagination__item');
+    link2Div.classList.add('sprk-c-Pagination__item--current');
     link3Div.classList.add('sprk-c-Pagination__item');
 
     link1 = document.createElement('a');
@@ -81,12 +85,30 @@ describe('Default Pagination tests', () => {
     link2.setAttribute('data-sprk-pagination', 'item');
     link3.setAttribute('data-sprk-pagination', 'item');
 
+    classCSS = 'sprk-c-Pagination__item--current';
+
     defaultPag.setAttribute('data-sprk-pagination', 'default');
-    defaultPag.append(prevDiv);
-    defaultPag.append(link1Div);
-    defaultPag.append(link2Div);
-    defaultPag.append(link3Div);
-    defaultPag.append(nextDiv);
+    defaultPag.appendChild(prevDiv);
+    defaultPag.appendChild(link1Div);
+    defaultPag.appendChild(link2Div);
+    defaultPag.appendChild(link3Div);
+    defaultPag.appendChild(nextDiv);
+    document.body.appendChild(defaultPag);
+
+    sinon.spy(link1, 'addEventListener');
+    sinon.spy(link2, 'addEventListener');
+    sinon.spy(link3, 'addEventListener');
+    sinon.spy(next, 'addEventListener');
+    sinon.spy(prev, 'addEventListener');
+  });
+
+  afterEach(() => {
+    link1.addEventListener.restore();
+    link2.addEventListener.restore();
+    link3.addEventListener.restore();
+    next.addEventListener.restore();
+    prev.addEventListener.restore();
+    document.body.innerHTML = '';
   });
 
   it('should add aria-current attribute to new page link and remove from old', () => {
@@ -96,33 +118,60 @@ describe('Default Pagination tests', () => {
   });
 
   it('should add the CSS class to new item and remove from old', () => {
-    classCSS = 'sprk-b-Link--disabled';
-    updatePageStyles(addItem, removeItem, classCSS);
-    expect(addItem.classList.contains(classCSS)).eql(true);
-    expect(removeItem.classList.contains(classCSS)).eql(false);
+    updatePageStyles(addItem, removeItem, 'sprk-b-Link--disabled');
+    expect(addItem.classList.contains('sprk-b-Link--disabled')).eql(true);
+    expect(removeItem.classList.contains('sprk-b-Link--disabled')).eql(false);
   });
 
-  it('should add the disabled link class to the next link when the last page is selected', () => {
-    classCSS = 'sprk-b-Link--disabled';
+  it('should not add the CSS class to new item if it already has it', () => {
+    addItem.classList.add('sprk-b-Link--disabled');
+    updatePageStyles(addItem, removeItem, 'sprk-b-Link--disabled');
+    expect(addItem.classList.contains('sprk-b-Link--disabled')).eql(true);
+    expect(removeItem.classList.contains('sprk-b-Link--disabled')).eql(false);
+  });
+
+  it('should not try to remove the CSS class on the old item if it does not have it', () => {
+    removeItem.classList.remove('sprk-b-Link--disabled');
+    updatePageStyles(addItem, removeItem, 'sprk-b-Link--disabled');
+    expect(addItem.classList.contains('sprk-b-Link--disabled')).eql(true);
+    expect(removeItem.classList.contains('sprk-b-Link--disabled')).eql(false);
+  });
+
+  it('should add the disabled link class to the next link when the third page is selected', () => {
     handleDefaultPagItemClick(link3, link2, prev, next);
-    expect(next.classList.contains(classCSS)).eql(true);
+    expect(next.classList.contains('sprk-b-Link--disabled')).eql(true);
   });
 
   it('should add the disabled link class to the prev link when the first page is selected', () => {
-    classCSS = 'sprk-b-Link--disabled';
     handleDefaultPagItemClick(link1, link2, prev, next);
-    expect(prev.classList.contains(classCSS)).eql(true);
+    expect(prev.classList.contains('sprk-b-Link--disabled')).eql(true);
   });
 
-  it('should add the current item css class to the next page when the next link is clicked', () => {
-    classCSS = 'sprk-c-Pagination__item--current';
+  it('should remove the disabled link class on the prev links when the second page is selected', () => {
+    link1.setAttribute('aria-current', 'true');
+    link3.removeAttribute('aria-current');
+    link2.removeAttribute('aria-current');
+    paginationDefault();
+    prev.classList.add('sprk-b-Link--disabled');
+    link2.click();
+    expect(prev.classList.contains('sprk-b-Link--disabled')).eql(false);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+  });
+
+  it('should add the current item css class to the next page', () => {
     handleDefaultPagNextClick(link2, link3, link1, prev, next);
     expect(link2.parentElement.classList.contains(classCSS)).eql(true);
     expect(link1.parentElement.classList.contains(classCSS)).eql(false);
   });
 
+  it('should add the current item css class to the first link when it is clicked', () => {
+    paginationDefault();
+    event = new window.Event('click');
+    link1.dispatchEvent(event);
+    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+  });
+
   it('should add the current item css class to the previous page when the previous link is clicked', () => {
-    classCSS = 'sprk-c-Pagination__item--current';
     handleDefaultPagPrevClick(link1, link2, link2, prev, next);
     expect(link1.parentElement.classList.contains(classCSS)).eql(true);
     expect(link2.parentElement.classList.contains(classCSS)).eql(false);
@@ -130,35 +179,103 @@ describe('Default Pagination tests', () => {
 
   it('should not do anything if prev link is clicked when page number is 1', () => {
     link1.setAttribute('aria-current', 'true');
+    link1.parentElement.classList.add(classCSS);
+    link2.parentElement.classList.remove(classCSS);
     link3.removeAttribute('aria-current');
     link2.removeAttribute('aria-current');
-    link1.textContent = '1';
     handleDefaultPagPrevClick(link1, link2, link1, prev, next);
     expect(link1.textContent).eql('1');
+    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
   });
 
-  it('should increse page number 2 to 3 when next is clicked', () => {
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
+  it('should not do anything if next link is clicked when page number is 3', () => {
+    link3.setAttribute('aria-current', 'true');
+    link3.parentElement.classList.add(classCSS);
+    link2.parentElement.classList.remove(classCSS);
     link1.removeAttribute('aria-current');
-    link2.textContent = '2';
-    classCSS = 'sprk-c-Pagination__item--current';
-    handleDefaultPagPrevClick(link1, link2, link2, prev, next);
-    expect(link3.textContent).eql('3');
-    expect(link2.parentElement.classList.contains(classCSS)).eql(false);
+    link2.removeAttribute('aria-current');
+    paginationDefault();
+    event = new window.Event('click');
+    next.dispatchEvent(event);
     expect(link3.parentElement.classList.contains(classCSS)).eql(true);
   });
 
-  it('should increse page number 1 to 2 when next is clicked', () => {
+  it('should increse page number 2 to 3 when 2 is active and next is clicked', () => {
+    paginationDefault();
+    event = new window.Event('click');
+    next.dispatchEvent(event);
+    expect(link3.parentElement.classList.contains(classCSS)).eql(true);
+    expect(next.classList.contains('sprk-b-Link--disabled')).eql(true);
+  });
+
+  it('should increse page number 1 to 2 when 1 is active and next is clicked', () => {
     link1.setAttribute('aria-current', 'true');
+    link1.parentElement.classList.add(classCSS);
+    link2.parentElement.classList.remove(classCSS);
+    link3.parentElement.classList.remove(classCSS);
     link3.removeAttribute('aria-current');
     link2.removeAttribute('aria-current');
-    link1.textContent = '1';
-    link2.textContent = '2';
-    link3.textContent = '3';
-    classCSS = 'sprk-c-Pagination__item--current';
-    handleDefaultPagNextClick(link2, link3, link1, prev, next);
+    paginationDefault();
+    event = new window.Event('click');
+    next.dispatchEvent(event);
     expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+    expect(prev.classList.contains('sprk-b-Link--disabled')).eql(false);
+    expect(next.classList.contains('sprk-b-Link--disabled')).eql(false);
+  });
+
+  it('should decrese page number 3 to 2 when 3 is active and previous is clicked', () => {
+    link3.setAttribute('aria-current', 'true');
+    link3.parentElement.classList.add(classCSS);
+    link2.parentElement.classList.remove(classCSS);
+    link1.parentElement.classList.remove(classCSS);
+    link1.removeAttribute('aria-current');
+    link2.removeAttribute('aria-current');
+    paginationDefault();
+    event = new window.Event('click');
+    prev.dispatchEvent(event);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+  });
+
+  it('should decrese page number 2 to 1 when 2 is active and previous is clicked', () => {
+    paginationDefault();
+    event = new window.Event('click');
+    prev.dispatchEvent(event);
+    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+    expect(prev.classList.contains('sprk-b-Link--disabled')).eql(true);
+  });
+
+  it('should bind a click listener to link 1', () => {
+    paginationDefault();
+    expect(link1.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to link 2', () => {
+    paginationDefault();
+    expect(link2.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to link 3', () => {
+    paginationDefault();
+    expect(link3.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to prev link', () => {
+    paginationDefault();
+    expect(prev.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to next link', () => {
+    paginationDefault();
+    expect(next.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should not do anything if active link is clicked again', () => {
+    paginationDefault();
+    event = new window.Event('click');
+    link2.dispatchEvent(event);
+    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+    expect(prev.parentElement.classList.contains('sprk-b-Link--disabled')).eql(false);
+    expect(next.parentElement.classList.contains('sprk-b-Link--disabled')).eql(false);
   });
 });
 
@@ -177,7 +294,7 @@ describe('Long Pagination tests', () => {
   let dots1;
   let dots2;
 
-  before(() => {
+  beforeEach(() => {
     longPag = document.createElement('nav');
 
     prev = document.createElement('a');
