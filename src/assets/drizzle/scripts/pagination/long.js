@@ -44,6 +44,7 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
   if (newPageNum === currentPageNum) return;
 
   if (newPageNum === 1) {
+    console.log('link 1 clicked');
     // Hide 1st set of dots, make sure 2nd set is shown
     updatePageStyles(dots[0], dots[1], 'drizzle-u-Display--none');
     // Hide 1st link and make sure last is shown

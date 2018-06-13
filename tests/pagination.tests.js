@@ -511,9 +511,10 @@ describe('Long Pagination tests', () => {
     expect(next.addEventListener.getCall(0).args[0]).eql('click');
   });
 
-  it('should show 1 when it is clicked', () => {
+  it('should show first link if it is clicked', () => {
     paginationLong();
     event = new window.Event('click');
-    link2.dispatchEvent(event);
+    link1.dispatchEvent(event);
+    expect(link2.textContent).eql('1');
   });
 });
