@@ -9,7 +9,7 @@ import { paginationDefault } from './pagination/default';
 import setActiveNavItem from './navigation/setActiveNavItem';
 import { formStateChanger } from './form-state-changer';
 import { filters } from './filter';
-import { clipboardSuccess } from './clipboard';
+import { clipboardSuccess } from './vendor/clipboard';
 import { mobileNav } from './navigation/mobileNav';
 import { hideWaitModal } from './modals';
 
