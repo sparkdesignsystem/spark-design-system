@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@sparkdesignsystem/spark-core": "^1.0.0-beta.1"
+    "@sparkdesignsystem/spark-core": "^1.0.0-beta.1",
+    "object-fit-images": "^3.2.3"
   },
   "devDependencies": {
     "lerna": "^2.0.0"
