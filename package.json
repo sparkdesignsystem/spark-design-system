@@ -73,7 +73,8 @@
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "precommit": "lint-staged",
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
-    "coverage": "nyc npm test"
+    "coverage": "nyc npm test",
+    "visual-regression": "wraith capture wraith/configs/capture.yaml"
   },
   "lint-staged": {
     "*.scss": [
