@@ -554,4 +554,11 @@ describe('Long Pagination tests', () => {
     link2.click();
     expect(link2.textContent).eql('2');
   });
+
+  it('should not update page number if page is zero and previous is clicked', () => {
+    paginationLong();
+    link2.textContent = '0';
+    prev.click();
+    expect(link2.textContent).eql('0');
+  });
 });
