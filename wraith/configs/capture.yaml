@@ -32,6 +32,30 @@ paths:
   layout: /patterns/fundamentals/layout.html
   space: /patterns/fundamentals/space.html
   typography: /patterns/fundamentals/typography.html
+  accordions: /patterns/components/accordions.html
+  alerts: /patterns/components/alerts.html
+  buttons: /patterns/components/buttons.html
+  card: /patterns/components/card.html
+  dictionary: /patterns/components/dictionary.html
+  dividers: /patterns/components/dividers.html
+  footer: /patterns/components/footer.html
+  highlight-board: /patterns/components/highlight-board.html
+  icons: /patterns/components/icons.html
+  inputs: /patterns/components/inputs.html
+  links: /patterns/components/links.html
+  lists: /patterns/components/lists.html
+  masthead: /patterns/components/masthead.html
+  modals: /patterns/components/modals.html
+  navigation: /patterns/components/navigation.html
+  pagination: /patterns/components/pagination.html
+  promo: /patterns/components/promo.html
+  tables: /patterns/components/tables.html
+  tabbed-navigation: /patterns/components/tabs.html
+  toggle: /patterns/components/toggle.html
+  multi-property-utilities: /patterns/utilities/multi-property.html
+  single-property-utilities: http://localhost:3000/patterns/utilities/single-property.html
+  accessibility: /docs/accessibility.html
+  class-naming-convention: /docs/class-naming-convention.html
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
@@ -49,7 +73,7 @@ directory: 'wraith/shots'
 fuzz: '20%'
 
 # (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
-threshold: 5
+threshold: 6
 
 # (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
 gallery:
@@ -63,4 +87,4 @@ gallery:
 #   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
 #   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
 # Note: different screen widths are always grouped together.
-mode: diffs_first
+mode: diffs_only
