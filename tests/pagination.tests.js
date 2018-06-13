@@ -409,10 +409,69 @@ describe('Long Pagination tests', () => {
     expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(true);
   });
 
-  it('should hide the first set of dots when on page 2', () => {
+  it('should show the dots when on the middle page and next clicked', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    paginationLong();
+    link2.textContent = '11';
+    link3.textContent = '19';
+    next.click();
+    expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(false);
+    expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(false);
+  });
+
+  it('should show the dots when on the middle page and previous clicked', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    paginationLong();
+    link2.textContent = '11';
+    prev.click();
+    expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(false);
+    expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(false);
+  });
+
+  it('should show both dots when on page 2 and next is clicked', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    paginationLong();
+    link2.textContent = '6';
+    link3.textContent = '19';
+    next.click();
+    expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(false);
+    expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(false);
+  });
+
+  it('should show the dots when on the middle page and middle page is clicked', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    paginationLong();
+    link2.click();
+    expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(false);
+    expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(false);
+  });
+
+  it('should hide the first set of dots when moving to page 2', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
     paginationLong();
     link2.textContent = '3';
+    prev.click();
+    expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(true);
+  });
+
+  it('should show the first link when on page 1 and next clicked', () => {
+    paginationLong();
+    link2.textContent = '1';
+    next.click();
+    expect(link1.classList.contains('drizzle-u-Display--none')).eql(false);
+  });
+
+  it('should show the last link when on the last page and previous is clicked', () => {
+    paginationLong();
+    link2.textContent = '3';
+    prev.click();
+    expect(link3.classList.contains('drizzle-u-Display--none')).eql(false);
+  });
+
+  it('should hide the first link when previous is clicked and on page 2', () => {
+    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+    paginationLong();
+    link2.textContent = '2';
     prev.click();
     expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(true);
   });
@@ -430,10 +489,12 @@ describe('Long Pagination tests', () => {
     expect(link2.textContent).eql('3');
   });
 
-  it('should decrease page number if the prev link is clicked', () => {
+  it('should decrease page number if the prev link is clicked while on last page', () => {
     paginationLong();
+    link2.textContent = '19';
+    link3.textContent = '19';
     prev.click();
-    expect(link2.textContent).eql('1');
+    expect(link2.textContent).eql('18');
   });
 
   it('should not decrease page number if the previous link is clicked and page number is 1', () => {
@@ -446,6 +507,7 @@ describe('Long Pagination tests', () => {
   it('should not increase page if the next link is clicked and we are on the last page', () => {
     paginationLong();
     link2.textContent = '22';
+    link3.textContent = '22';
     next.click();
     expect(link2.textContent).eql('22');
   });
