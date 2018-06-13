@@ -1,6 +1,81 @@
-/* global document before describe it */
+/* global document before beforeEach afterEach describe it */
+import sinon from 'sinon';
 import { expect } from 'chai';
-import { mapTemplates, toggleTemplate } from '../src/assets/drizzle/scripts/form-state-changer';
+import {
+  formStateChanger,
+  bindUIEvents,
+  mapTemplates,
+  toggleTemplate,
+} from '../src/assets/drizzle/scripts/form-state-changer';
+
+describe('formStateChangeer init', () => {
+  afterEach(() => {
+    document.querySelectorAll.restore();
+  });
+
+  it('should call getElements once with the correct selector', () => {
+    sinon.spy(document, 'querySelectorAll');
+    formStateChanger();
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-state-changer-id]');
+  });
+});
+
+describe('formStateChanger UI tests', () => {
+  const templates = [];
+  let radioGroup;
+  let radio1;
+  let radio2;
+  let radio3;
+
+  beforeEach(() => {
+    radioGroup = document.createElement('div');
+    radioGroup.setAttribute('data-state-changer-id', 'test1');
+    sinon.spy(radioGroup, 'addEventListener');
+    radio1 = document.createElement('input');
+    radio1.type = 'radio';
+    radio1.value = 'normal';
+    radio2 = document.createElement('input');
+    radio2.type = 'radio';
+    radio2.value = 'error';
+    radio3 = document.createElement('input');
+    radio3.type = 'radio';
+    radio3.value = 'disabled';
+
+    radioGroup.appendChild(radio1);
+    radioGroup.appendChild(radio2);
+    radioGroup.appendChild(radio3);
+
+    templates[0] = document.createElement('div');
+    templates[0].setAttribute('data-template-id', 'test1');
+    templates[1] = document.createElement('div');
+    templates[1].setAttribute('data-template-id', 'test1-error-state');
+    templates[2] = document.createElement('div');
+    templates[2].setAttribute('data-template-id', 'test1-disabled-state');
+
+    document.body.appendChild(radioGroup);
+    templates.forEach((item) => {
+      document.body.appendChild(item);
+    });
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+    radioGroup.addEventListener.restore();
+  });
+
+  it('should bind the change event', () => {
+    bindUIEvents(radioGroup);
+    expect(radioGroup.addEventListener.getCall(0).args[0]).eql('change');
+  });
+
+  it('should show the right template when change is triggered', () => {
+    bindUIEvents(radioGroup);
+    radio2.click(); // click triggers change
+    expect(templates[0].classList.contains('sprk-u-Display--none')).eql(true);
+    expect(templates[1].classList.contains('sprk-u-Display--none')).eql(false);
+    expect(templates[2].classList.contains('sprk-u-Display--none')).eql(true);
+  });
+});
 
 describe('mapTemplates ', () => {
   const templates = [];
