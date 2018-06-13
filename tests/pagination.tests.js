@@ -12,9 +12,6 @@ import {
 import {
   goForwardOne,
   goBackOne,
-  handleLongPagItemClick,
-  handleLongPagNextClick,
-  handleLongPagPrevClick,
   paginationLong,
 } from '../src/assets/drizzle/scripts/pagination/long';
 
@@ -294,7 +291,6 @@ describe('Long Pagination tests', () => {
   let longPag;
   let dots1;
   let dots2;
-  let event;
 
   beforeEach(() => {
     longPag = document.createElement('nav');
@@ -388,102 +384,70 @@ describe('Long Pagination tests', () => {
   });
 
   it('should hide the last link container when on the last page', () => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
+    paginationLong();
     link2.textContent = '21';
     link3.textContent = '22';
-    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+    next.click();
     expect(link3.parentElement.classList.contains('drizzle-u-Display--none')).eql(true);
   });
 
   it('should hide the last set of dots when on the page before the last page', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
+    paginationLong();
     link2.textContent = '20';
     link3.textContent = '22';
-    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+    next.click();
     expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(true);
   });
 
   it('should hide the last set of dots when on the last page', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
+    paginationLong();
     link2.textContent = '21';
     link3.textContent = '22';
-    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+    next.click();
     expect(dots[1].classList.contains('drizzle-u-Display--none')).eql(true);
   });
 
   it('should hide the first set of dots when on page 2', () => {
     const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
+    paginationLong();
     link2.textContent = '3';
-    handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
+    prev.click();
     expect(dots[0].classList.contains('drizzle-u-Display--none')).eql(true);
   });
 
   it('should not increase page number if the current page is clicked again', () => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
     const link2Num = parseInt(link2.textContent, 10);
-    handleLongPagItemClick(link2, dots, longPagItems, prev, next, link2);
+    paginationLong();
+    link2.click();
     expect(parseInt(link2.textContent, 10)).eql(link2Num);
   });
 
   it('should increase page number if the next link is clicked', () => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
-    link2.textContent = '2';
-    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
-    expect(parseInt(link2.textContent, 10)).eql(3);
+    paginationLong();
+    next.click();
+    expect(link2.textContent).eql('3');
   });
 
   it('should decrease page number if the prev link is clicked', () => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
-    link2.textContent = '2';
-    handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
-    expect(parseInt(link2.textContent, 10)).eql(1);
+    paginationLong();
+    prev.click();
+    expect(link2.textContent).eql('1');
   });
 
   it('should not decrease page number if the previous link is clicked and page number is 1', () => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link2.setAttribute('aria-current', 'true');
-    link3.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
+    paginationLong();
     link2.textContent = '1';
-    handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
-    expect(parseInt(link2.textContent, 10)).eql(1);
+    prev.click();
+    expect(link2.textContent).eql('1');
   });
 
   it('should not increase page if the next link is clicked and we are on the last page', () => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    link3.setAttribute('aria-current', 'true');
-    link2.removeAttribute('aria-current');
-    link1.removeAttribute('aria-current');
-    link3.textContent = '22';
-    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
-    expect(parseInt(link3.textContent, 10)).eql(22);
+    paginationLong();
+    link2.textContent = '22';
+    next.click();
+    expect(link2.textContent).eql('22');
   });
 
   it('should bind a click listener to link 1', () => {
@@ -511,10 +475,21 @@ describe('Long Pagination tests', () => {
     expect(next.addEventListener.getCall(0).args[0]).eql('click');
   });
 
-  it('should show first link if it is clicked', () => {
+  it('should show first link as number 1 if it is clicked', () => {
     paginationLong();
-    event = new window.Event('click');
-    link1.dispatchEvent(event);
+    link1.click();
     expect(link2.textContent).eql('1');
+  });
+
+  it('should show last link as number 3 if it is clicked', () => {
+    paginationLong();
+    link3.click();
+    expect(link2.textContent).eql('3');
+  });
+
+  it('should show second link as number 2 if it is clicked', () => {
+    paginationLong();
+    link2.click();
+    expect(link2.textContent).eql('2');
   });
 });
