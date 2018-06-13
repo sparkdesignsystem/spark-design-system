@@ -7,13 +7,6 @@ install:
 before_script:
 - npm run test --prefix ./packages/spark-core
 
-after_success:
-- apt-get install imagemagick
-- npm install -g phantomjs
-- gem install wraith
-- chmod +x ./wraith/scripts/set_new_url.sh
-- ./wraith/scripts/set_new_url.sh && npm run visual-regression
-
 cache:
   directories:
     - node_modules
