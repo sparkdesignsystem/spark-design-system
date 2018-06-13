@@ -52,7 +52,7 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
     updatePageStyles(prev, next, 'sprk-b-Link--disabled');
     // Update link number to new number
     link2.textContent = link1.textContent;
-  } else if (newPageNum === maxPageNum) {
+  } else {
     // Hide last set of dots, make sure 1st set is shown
     updatePageStyles(dots[1], dots[0], 'drizzle-u-Display--none');
     // Hide last link and make sure first is shown
