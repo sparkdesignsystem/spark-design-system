@@ -15,6 +15,7 @@ import {
   handleLongPagItemClick,
   handleLongPagNextClick,
   handleLongPagPrevClick,
+  paginationLong,
 } from '../src/assets/drizzle/scripts/pagination/long';
 
 describe('Default Pagination tests', () => {
@@ -293,6 +294,7 @@ describe('Long Pagination tests', () => {
   let longPag;
   let dots1;
   let dots2;
+  let event;
 
   beforeEach(() => {
     longPag = document.createElement('nav');
@@ -330,6 +332,12 @@ describe('Long Pagination tests', () => {
     prev.textContent = 'Prev';
     next.textContent = 'Next';
 
+    sinon.spy(link1, 'addEventListener');
+    sinon.spy(link2, 'addEventListener');
+    sinon.spy(link3, 'addEventListener');
+    sinon.spy(next, 'addEventListener');
+    sinon.spy(prev, 'addEventListener');
+
     link2.setAttribute('aria-current', 'true');
 
     link1Div.append(link1);
@@ -354,6 +362,17 @@ describe('Long Pagination tests', () => {
     longPag.append(dots2);
     longPag.append(link3Div);
     longPag.append(nextDiv);
+
+    document.body.append(longPag);
+  });
+
+  afterEach(() => {
+    link1.addEventListener.restore();
+    link2.addEventListener.restore();
+    link3.addEventListener.restore();
+    next.addEventListener.restore();
+    prev.addEventListener.restore();
+    document.body.innerHTML = '';
   });
 
   it('should go back one page', () => {
@@ -465,5 +484,36 @@ describe('Long Pagination tests', () => {
     link3.textContent = '22';
     handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
     expect(parseInt(link3.textContent, 10)).eql(22);
+  });
+
+  it('should bind a click listener to link 1', () => {
+    paginationLong();
+    expect(link1.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to link 2', () => {
+    paginationLong();
+    expect(link2.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to link 3', () => {
+    paginationLong();
+    expect(link3.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to prev link', () => {
+    paginationLong();
+    expect(prev.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should bind a click listener to next link', () => {
+    paginationLong();
+    expect(next.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should show 1 when it is clicked', () => {
+    paginationLong();
+    event = new window.Event('click');
+    link2.dispatchEvent(event);
   });
 });
