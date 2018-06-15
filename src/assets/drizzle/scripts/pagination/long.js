@@ -52,7 +52,7 @@ const handleLongPagItemClick = (currentPage, dots, longPagItems, prev, next, ite
     updatePageStyles(prev, next, 'sprk-b-Link--disabled');
     // Update link number to new number
     link2.textContent = link1.textContent;
-  } else if (newPageNum === maxPageNum) {
+  } else {
     // Hide last set of dots, make sure 1st set is shown
     updatePageStyles(dots[1], dots[0], 'drizzle-u-Display--none');
     // Hide last link and make sure first is shown
@@ -125,36 +125,36 @@ const handleLongPagNextClick = (dots, longPagItems, prev, next, longPag) => {
   currentPage.textContent = goForwardOne(currentPageNum);
 };
 
-const paginationLong = () => {
-  getElements('[data-sprk-pagination="long"]', (longPag) => {
-    const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
-    const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
-    const next = longPag.querySelector('[data-sprk-pagination="next"]');
-    const prev = longPag.querySelector('[data-sprk-pagination="prev"]');
+const bindUIEvents = (longPag) => {
+  const dots = longPag.querySelectorAll('[data-sprk-pagination="dots"]');
+  const longPagItems = longPag.querySelectorAll('[data-sprk-pagination="item"]');
+  const next = longPag.querySelector('[data-sprk-pagination="next"]');
+  const prev = longPag.querySelector('[data-sprk-pagination="prev"]');
 
-    // Add click listener in case individual links are tapped/clicked
-    longPagItems.forEach((item) => {
-      item.addEventListener('click', (event) => {
-        // Page container of the current page before new page was clicked
-        const currentPage = longPag.querySelector('[aria-current="true"]');
-        event.preventDefault();
-        handleLongPagItemClick(currentPage, dots, longPagItems, prev, next, item);
-        setAriaLabel(currentPage);
-      });
-    });
-
-    // Add click listener to previous link
-    prev.addEventListener('click', (event) => {
+  // Add click listener in case individual links are tapped/clicked
+  longPagItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      // Page container of the current page before new page was clicked
+      const currentPage = longPag.querySelector('[aria-current="true"]');
       event.preventDefault();
-      handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
-    });
-
-    // Add listener to next link
-    next.addEventListener('click', (event) => {
-      event.preventDefault();
-      handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+      handleLongPagItemClick(currentPage, dots, longPagItems, prev, next, item);
+      setAriaLabel(currentPage);
     });
   });
+
+  prev.addEventListener('click', (event) => {
+    event.preventDefault();
+    handleLongPagPrevClick(dots, longPagItems, prev, next, longPag);
+  });
+
+  next.addEventListener('click', (event) => {
+    event.preventDefault();
+    handleLongPagNextClick(dots, longPagItems, prev, next, longPag);
+  });
+};
+
+const paginationLong = () => {
+  getElements('[data-sprk-pagination="long"]', bindUIEvents);
 };
 
 export {
@@ -164,4 +164,5 @@ export {
   handleLongPagItemClick,
   handleLongPagPrevClick,
   handleLongPagNextClick,
+  bindUIEvents,
 };
