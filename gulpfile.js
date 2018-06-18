@@ -12,6 +12,7 @@ const rename = require('gulp-rename');
 const critical = require('critical').stream;
 const config = require('./config');
 const log = require('fancy-log');
+const runSequence = require('run-sequence');
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -73,9 +74,7 @@ gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', ['clean'], (done) => {
-  gulp.start('frontend');
-  gulp.start('critical');
-  done();
+  runSequence('frontend', 'critical', done);
 });
 
 // Generate & Inline Critical-path CSS
