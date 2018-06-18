@@ -1,7 +1,6 @@
 /* global require */
 const drizzle = require('drizzle-builder');
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
 const helpers = require('@cloudfour/hbs-helpers');
 const tasks = require('@cloudfour/gulp-tasks');
 const sass = require('gulp-sass');
@@ -10,7 +9,10 @@ const cssnano = require('gulp-cssnano');
 const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
+const critical = require('critical').stream;
 const config = require('./config');
+const log = require('fancy-log');
+const runSequence = require('run-sequence');
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -71,20 +73,27 @@ gulp.task('drizzle', ['icons'], () => {
 gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build', ['clean'], (done) => {
-  gulp.start('frontend');
-  done();
+gulp.task('build', (done) => {
+  runSequence('clean', 'icons', 'drizzle', 'copy', 'sass', 'images', 'js', 'critical', done);
 });
 
-/**
- * Register demo task (deploy output to GitHub Pages)
- * NOTE: Run this after building.
- */
-gulp.task('demo', () => {
-  const buildDest = `${config.drizzle.dest.pages}/**/*`;
-  return gulp.src(buildDest).pipe(ghPages({
-    cacheDir: 'demo',
-  }));
+// Generate & Inline Critical-path CSS
+gulp.task('critical', () => {
+  const cssFiles = [
+    'dist/assets/toolkit/styles/toolkit.css',
+    'dist/assets/drizzle/styles/main.css',
+  ];
+  return gulp
+    .src('dist/*.html')
+    .pipe(critical({
+      base: 'dist/',
+      inline: true,
+      css: cssFiles,
+    }))
+    .on('error', (err) => {
+      log.error(err.message);
+    })
+    .pipe(gulp.dest('dist'));
 });
 
 // Register default task
