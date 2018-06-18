@@ -73,8 +73,8 @@ gulp.task('drizzle', ['icons'], () => {
 gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build', ['clean'], (done) => {
-  runSequence('frontend', 'critical', done);
+gulp.task('build', (done) => {
+  runSequence('clean', 'icons', 'drizzle', 'copy', 'sass', 'images', 'js', 'critical', done);
 });
 
 // Generate & Inline Critical-path CSS
