@@ -21,7 +21,11 @@ $highlight-board-height: 31.25rem;
 
 .sprk-c-HighlightBoard__image {
   object-fit: cover;
+
+  /* stylelint-disable */
   font-family: 'object-fit: cover;'; // required by the polyfill
+
+  /* stylelint-enable */
   height: $highlight-board-height;
   width: 100%;
 }
@@ -33,12 +37,14 @@ $highlight-board-height: 31.25rem;
 
 .sprk-c-HighlightBoard__primary-heading {
   @media (max-width: $highlight-board-type-breakpoint) {
+    // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
   }
 }
 
 .sprk-c-HighlightBoard__sub-heading {
   @media (max-width: $highlight-board-type-breakpoint) {
+    // prettier-ignore
     font-size: $font-size-display-four * $highlight-board-type-reduction-percentage;
   }
 }
@@ -48,7 +54,8 @@ $highlight-board-height: 31.25rem;
   color: $white;
 }
 
-.sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked) .sprk-c-HighlightBoard__content {
+.sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked)
+.sprk-c-HighlightBoard__content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
