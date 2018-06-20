@@ -58,11 +58,6 @@ gulp.task('icons', (done) => {
     .on('end', done);
 });
 
-// move service worker file
-gulp.task('service-worker', () => {
-  gulp.src('./service-worker.js').pipe(gulp.dest('./dist'));
-});
-
 // copy images
 gulp.task('images', () => {
   gulp.src(config.images.src).pipe(gulp.dest(config.images.dest));
@@ -75,7 +70,7 @@ gulp.task('drizzle', ['icons'], () => {
 });
 
 // Register frontend composite task
-gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'service-worker', 'js']);
+gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
