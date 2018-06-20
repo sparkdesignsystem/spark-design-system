@@ -1,12 +1,6 @@
 // ==================================================================
 // Navigation
 // ==================================================================
-
-//
-// Available Variables
-///
-$masthead-column-width: 64rem !default;
-
 .sprk-c-WideNavigation {
   background-color: $white;
   display: flex;
@@ -27,7 +21,7 @@ $masthead-column-width: 64rem !default;
 
 .sprk-c-WideNavigation__item--sub {
   background-color: $white;
-  line-height: $space-l;
+  line-height: $space-m;
   padding-top: $space-s;
   padding-bottom: $space-s;
   padding-left: $space-m;
@@ -69,6 +63,8 @@ $masthead-column-width: 64rem !default;
   color: $blue-dark;
   text-align: left;
   text-transform: none;
+  line-height: $line-height-body-two;
+  white-space: normal;
 
   &:focus,
   &:hover {

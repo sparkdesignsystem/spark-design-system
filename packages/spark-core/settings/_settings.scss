@@ -14,255 +14,308 @@ $scales-utilities-class-namespace: 'u-';
 //
 // Reset
 ///
-$selection-bg-color: $blue-medium;
+$selection-bg-color: $blue-medium !default;
 
 //
 // Spacing
 ///
-$space-inset-xs: 4px 4px 4px 4px;
-$space-inset-s: 8px 8px 8px 8px;
-$space-inset-m: 16px 16px 16px 16px;
-$space-inset-l: 32px 32px 32px 32px;
-$space-inset-xl: 64px 64px 64px 64px;
+$space-inset-xs: 4px 4px 4px 4px !default;
+$space-inset-s: 8px 8px 8px 8px !default;
+$space-inset-m: 16px 16px 16px 16px !default;
+$space-inset-l: 32px 32px 32px 32px !default;
+$space-inset-xl: 64px 64px 64px 64px !default;
 
 // Inset Short
-$space-inset-short-xs: 2px 4px 2px 4px;
-$space-inset-short-s: 4px 8px 4px 8px;
-$space-inset-short-m: 8px 16px 8px 16px;
-$space-inset-short-l: 16px 32px 16px 32px;
-$space-inset-short-xl: 32px 64px 32px 64px;
+$space-inset-short-xs: 2px 4px 2px 4px !default;
+$space-inset-short-s: 4px 8px 4px 8px !default;
+$space-inset-short-m: 8px 16px 8px 16px !default;
+$space-inset-short-l: 16px 32px 16px 32px !default;
+$space-inset-short-xl: 32px 64px 32px 64px !default;
 
 // Inset Tall
-$space-inset-tall-xs: 6px 4px 6px 4px;
-$space-inset-tall-s: 12px 8px 12px 8px;
-$space-inset-tall-m: 24px 16px 24px 16px;
-$space-inset-tall-l: 48px 32px 48px 32px;
-$space-inset-tall-xl: 96px 64px 96px 64px;
+$space-inset-tall-xs: 6px 4px 6px 4px !default;
+$space-inset-tall-s: 12px 8px 12px 8px !default;
+$space-inset-tall-m: 24px 16px 24px 16px !default;
+$space-inset-tall-l: 48px 32px 48px 32px !default;
+$space-inset-tall-xl: 96px 64px 96px 64px !default;
 
 // Stack
-$space-stack-xs: 0 0 4px 0;
-$space-stack-s: 0 0 8px 0;
-$space-stack-m: 0 0 16px 0;
-$space-stack-l: 0 0 32px 0;
-$space-stack-xl: 0 0 64px 0;
+$space-stack-xs: 0 0 4px 0 !default;
+$space-stack-s: 0 0 8px 0 !default;
+$space-stack-m: 0 0 16px 0 !default;
+$space-stack-l: 0 0 32px 0 !default;
+$space-stack-xl: 0 0 64px 0 !default;
 
 // Global Spacing Utilities
-$space-xs: 4px;
-$space-s: 8px;
-$space-m: 16px;
-$space-l: 32px;
-$space-xl: 64px;
-$space-h: $space-xl;
+$space-xs: 4px !default;
+$space-s: 8px !default;
+$space-m: 16px !default;
+$space-l: 32px !default;
+$space-xl: 64px !default;
+$space-h: $space-xl !default;
 
 //
 // Icons
 //
-$icon-m: 16px;
-$icon-l: 32px;
-$icon-xl: 64px;
-$icon-xxl: 128px;
+$icon-m: 16px !default;
+$icon-l: 32px !default;
+$icon-xl: 64px !default;
+$icon-xxl: 128px !default;
 
 //
 // Layout
 //
-$horizontal-list-spacing: $space-m;
-$centered-column-width: 64rem;
+$horizontal-list-spacing: $space-m !default;
+$centered-column-width: 64rem !default;
 
 //
 // Layers
 //
-$layer-height-xs: 1;
-$layer-height-s: 1000;
-$layer-height-m: 2000;
-$layer-height-l: 3000;
-$layer-height-xl: 99999;
+$layer-height-xs: 1 !default;
+$layer-height-s: 1000 !default;
+$layer-height-m: 2000 !default;
+$layer-height-l: 3000 !default;
+$layer-height-xl: 99999 !default;
 
 //
 // Typography
 ///
 // font-size-steps
-$font-size-display-one: 3.797rem;
-$color-display-one: $black;
-$line-height-display-one: 1.2;
-$font-weight-display-one: bold;
+$font-size-display-one: 3.797rem !default;
+$color-display-one: $black !default;
+$line-height-display-one: 1.2 !default;
+$font-weight-display-one: bold !default;
 // Display Two
-$font-size-display-two: 2.853rem;
-$color-display-two: $blue-dark;
-$line-height-display-two: 1.3;
-$font-weight-display-two: bold;
+$font-size-display-two: 2.853rem !default;
+$color-display-two: $blue-dark !default;
+$line-height-display-two: 1.3 !default;
+$font-weight-display-two: bold !default;
 // Display Three
-$font-size-display-three: 2.594rem;
-$color-display-three: $blue-dark;
-$line-height-display-three: 1.3;
-$font-weight-display-three: bold;
+$font-size-display-three: 2.594rem !default;
+$color-display-three: $blue-dark !default;
+$line-height-display-three: 1.3 !default;
+$font-weight-display-three: bold !default;
 // Display Four
-$font-size-display-four: 2.144rem;
-$color-display-four: $black;
-$line-height-display-four: 1.3;
-$font-weight-display-four: normal;
+$font-size-display-four: 2.144rem !default;
+$color-display-four: $black !default;
+$line-height-display-four: 1.3 !default;
+$font-weight-display-four: normal !default;
 // Display Five
-$font-size-display-five: 1.772rem;
-$color-display-five: $blue-medium;
-$line-height-display-five: 1.3;
-$font-weight-display-five: bold;
+$font-size-display-five: 1.772rem !default;
+$color-display-five: $blue-medium !default;
+$line-height-display-five: 1.3 !default;
+$font-weight-display-five: bold !default;
 // Display Six
-$font-size-display-six: 1.464rem;
-$color-display-six: $black;
-$line-height-display-six: 1.5;
-$font-weight-display-six: bold;
+$font-size-display-six: 1.464rem !default;
+$color-display-six: $black !default;
+$line-height-display-six: 1.5 !default;
+$font-weight-display-six: bold !default;
 // Display Seven
-$font-size-display-seven: 1.464rem;
-$color-display-seven: $blue-dark;
-$line-height-display-seven: 1.5;
-$font-weight-display-seven: bold;
+$font-size-display-seven: 1.464rem !default;
+$color-display-seven: $blue-dark !default;
+$line-height-display-seven: 1.5 !default;
+$font-weight-display-seven: bold !default;
 // Body One
-$font-size-body-one: 1.21rem;
-$color-body-one: $black;
-$line-height-body-one: 1.3;
-$font-weight-body-one: bold;
+$font-size-body-one: 1.21rem !default;
+$color-body-one: $black !default;
+$line-height-body-one: 1.3 !default;
+$font-weight-body-one: bold !default;
 // Body Two
-$font-size-body-two: 1.21rem;
-$color-body-two: $black;
-$line-height-body-two: 1.3;
-$font-weight-body-two: normal;
+$font-size-body-two: 1.21rem !default;
+$color-body-two: $black !default;
+$line-height-body-two: 1.3 !default;
+$font-weight-body-two: normal !default;
 // Body Three
-$font-size-body-three: 1rem;
-$color-body-three: $black;
-$line-height-body-three: 1.3;
-$font-weight-body-three: normal;
+$font-size-body-three: 1rem !default;
+$color-body-three: $black !default;
+$line-height-body-three: 1.3 !default;
+$font-weight-body-three: normal !default;
 // Body Four
-$font-size-body-four: 0.826rem;
-$color-body-four: $black;
-$line-height-body-four: 1.3;
-$font-weight-body-four: normal;
+$font-size-body-four: 0.826rem !default;
+$color-body-four: $black !default;
+$line-height-body-four: 1.3 !default;
+$font-weight-body-four: normal !default;
 // Font Stack
-$system-font-stack: null;
-$system-body-fonts: false;
-$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif;
-$system-heading-fonts: false;
+$system-font-stack: null !default;
+$system-body-fonts: false !default;
+$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$system-heading-fonts: false !default;
 $heading-font-stack: quatro-slab, Garamond, 'Hoefler Text', 'Times New Roman',
-  Times, serif;
+  Times, serif !default;
 // Set Scales vars
-$h1-size: $font-size-display-two;
-$h1-color: $color-display-two;
-$h1-line-height: $line-height-display-two;
-$h1-weight: $font-weight-display-two;
-$h2-size: $font-size-display-three;
-$h2-color: $color-display-three;
-$h2-line-height: $line-height-display-three;
-$h2-weight: $font-weight-display-three;
-$h3-size: $font-size-display-four;
-$h3-color: $color-display-four;
-$h3-line-height: $line-height-display-four;
-$h3-weight: $font-weight-display-four;
-$h4-size: $font-size-display-five;
-$h4-color: $color-display-five;
-$h4-line-height: $line-height-display-five;
-$h4-weight: $font-weight-display-five;
-$h5-size: $font-size-display-six;
-$h5-color: $color-display-six;
-$h5-line-height: $line-height-display-six;
-$h5-weight: $font-weight-display-six;
-$h6-size: $font-size-body-two;
-$h6-color: $color-body-two;
-$h6-line-height: $line-height-body-two;
-$h6-weight: $font-weight-body-two;
-$base-font-size: $font-size-body-two;
-$base-line-height: $line-height-body-two;
-$font-size-unit: rem;
+$h1-size: $font-size-display-two !default;
+$h1-color: $color-display-two !default;
+$h1-line-height: $line-height-display-two !default;
+$h1-weight: $font-weight-display-two !default;
+$h2-size: $font-size-display-three !default;
+$h2-color: $color-display-three !default;
+$h2-line-height: $line-height-display-three !default;
+$h2-weight: $font-weight-display-three !default;
+$h3-size: $font-size-display-four !default;
+$h3-color: $color-display-four !default;
+$h3-line-height: $line-height-display-four !default;
+$h3-weight: $font-weight-display-four !default;
+$h4-size: $font-size-display-five !default;
+$h4-color: $color-display-five !default;
+$h4-line-height: $line-height-display-five !default;
+$h4-weight: $font-weight-display-five !default;
+$h5-size: $font-size-display-six !default;
+$h5-color: $color-display-six !default;
+$h5-line-height: $line-height-display-six !default;
+$h5-weight: $font-weight-display-six !default;
+$h6-size: $font-size-body-two !default;
+$h6-color: $color-body-two !default;
+$h6-line-height: $line-height-body-two !default;
+$h6-weight: $font-weight-body-two !default;
+$base-font-size: $font-size-body-two !default;
+$base-line-height: $line-height-body-two !default;
+$font-size-unit: rem !default;
 
 //
 // Consistent Style Vars
 //
-$border-radius: 5px;
+$border-radius: 5px !default;
 
 //
 // Buttons
 ///
-$btn-background-color: $green-medium;
-$btn-border-style: solid;
-$btn-border-radius: $border-radius;
-$btn-disabled-opacity: 1;
-$btn-disabled-background-color: $gray-medium;
-$btn-disabled-text-color: $white;
-$btn-disabled-border-width: 2px;
-$btn-disabled-border-color: $gray-medium;
-$btn-hover-background-color: $green-dark;
-$btn-hover-text-color: $white;
-$btn-padding: $space-inset-short-l;
-$btn-text-color: $white;
-$btn-breakpoint: 30rem;
-$btn-transition-speed: 0.3s;
+$btn-background-color: $green-medium !default;
+$btn-border-style: solid !default;
+$btn-border-radius: $border-radius !default;
+$btn-disabled-opacity: 1 !default;
+$btn-disabled-background-color: $gray-medium !default;
+$btn-disabled-text-color: $white !default;
+$btn-disabled-border-width: 2px !default;
+$btn-disabled-border-color: $gray-medium !default;
+$btn-hover-background-color: $green-dark !default;
+$btn-hover-text-color: $white !default;
+$btn-padding: $space-inset-short-l !default;
+$btn-text-color: $white !default;
+$btn-breakpoint: 30rem !default;
+$btn-transition-speed: 0.3s !default;
 
 //
 // Links
 ///
-$link-color: $blue-medium;
-$link-visited-color: $blue-dark;
-$link-transition: 0.3s;
+$link-color: $blue-medium !default;
+$link-visited-color: $blue-dark !default;
+$link-transition: 0.3s !default;
 
 //
 // Lists
 ///
-$list-margin-left: $space-m;
+$list-margin-left: $space-m !default;
 
 //
 // Forms
 ///
-$text-input-border-radius: $border-radius;
-$text-input-border-color: $gray-medium;
-$text-input-border-width: 2px;
-$input-container-margin-bottom: $space-m;
-$input-disabled-border-color: $gray-medium;
-$input-disabled-text-color: $white;
-$helper-text-hidden: false;
-$text-input-padding: $space-s;
-$input-readonly-border-color: $gray-medium;
-$input-box-shadow: 0 0 0 3px $blue-medium;
-$input-error-box-shadow: 0 0 0 3px $red-medium;
-$input-disabled-box-shadow: 0 0 0 3px $gray-medium;
+$text-input-border-radius: $border-radius !default;
+$text-input-border-color: $gray-medium !default;
+$text-input-border-width: 2px !default;
+$input-container-margin-bottom: $space-m !default;
+$input-disabled-border-color: $gray-medium !default;
+$input-disabled-text-color: $white !default;
+$helper-text-hidden: false !default;
+$text-input-padding: $space-s !default;
+$input-readonly-border-color: $gray-medium !default;
+$input-box-shadow: 0 0 0 3px $blue-medium !default;
+$input-error-box-shadow: 0 0 0 3px $red-medium !default;
+$input-disabled-box-shadow: 0 0 0 3px $gray-medium !default;
 
 //
 // Tables
 ///
-$table-padding-small: $space-inset-s;
-$table-padding-medium: $space-inset-m;
-$table-padding-large: $space-inset-l;
-$table-border-width: 2px;
-$table-border-style: solid;
-$table-border-color: $white;
-$table-stripe-color: $blue-light;
-$table-heading-alignment: center;
-$table-cell-alignment: center;
+$table-padding-small: $space-inset-s !default;
+$table-padding-medium: $space-inset-m !default;
+$table-padding-large: $space-inset-l !default;
+$table-border-width: 2px !default;
+$table-border-style: solid !default;
+$table-border-color: $white !default;
+$table-stripe-color: $blue-light !default;
+$table-heading-alignment: center !default;
+$table-cell-alignment: center !default;
 
 //
 // Box
 ///
-$box-padding-tiny: $space-inset-xs;
-$box-padding-small: $space-inset-s;
-$box-padding: $space-inset-m;
-$box-padding-large: $space-inset-l;
-$box-padding-huge: $space-inset-xl;
+$box-padding-tiny: $space-inset-xs !default;
+$box-padding-small: $space-inset-s !default;
+$box-padding: $space-inset-m !default;
+$box-padding-large: $space-inset-l !default;
+$box-padding-huge: $space-inset-xl !default;
 
 //
 // Media
 //
-$media-gutter-tiny: $space-xs;
-$media-gutter-small: $space-s;
-$media-gutter: $space-m;
-$media-gutter-large: $space-l;
-$media-gutter-huge: $space-xl;
+$media-gutter-tiny: $space-xs !default;
+$media-gutter-small: $space-s !default;
+$media-gutter: $space-m !default;
+$media-gutter-large: $space-l !default;
+$media-gutter-huge: $space-xl !default;
 
 //
 // Stack Object
 //
-$stack-spacing-tiny: $space-xs;
-$stack-spacing-small: $space-s;
-$stack-spacing-medium: $space-m;
-$stack-spacing-large: $space-l;
-$stack-spacing-huge: $space-xl;
-$split-breakpoint-xs: 30rem;
-$split-breakpoint-s: 42.5rem;
-$split-breakpoint-m: 55rem;
-$split-breakpoint-l: 67.5rem;
-$split-breakpoint-xl: 80rem;
+$stack-spacing-tiny: $space-xs !default;
+$stack-spacing-small: $space-s !default;
+$stack-spacing-medium: $space-m !default;
+$stack-spacing-large: $space-l !default;
+$stack-spacing-huge: $space-xl !default;
+$split-breakpoint-xs: 30rem !default;
+$split-breakpoint-s: 42.5rem !default;
+$split-breakpoint-m: 55rem !default;
+$split-breakpoint-l: 67.5rem !default;
+$split-breakpoint-xl: 80rem !default;
+
+//
+// Accordions
+//
+$accordion-max-width: 53.125rem !default;
+
+//
+// Dividers
+//
+$divider-border: 2px solid $gray-medium;
+
+//
+// Highlight Board
+//
+$highlight-board-type-breakpoint: 30rem !default;
+$highlight-board-type-reduction-percentage: 0.8 !default;
+$highlight-board-height: 31.25rem !default;
+
+//
+// Modals
+//
+$modal-mask-color: rgba(34, 34, 34, 0.35) !default;
+$modal-max-width: 43.75rem !default;
+$modal-height: 70% !default;
+$modal-breakpoint-small: 25rem !default;
+$modal-breakpoint-medium: 37.5rem !default;
+
+//
+// Masthead / Main Nav
+//
+$main-nav-breakpoint: 46rem !default;
+$masthead-column-width: 64rem !default;
+$mobile-masthead-height: 6.7rem !default;
+
+//
+// Pagination
+//
+$pag-breakpoint: 24.25rem !default;
+
+//
+// Spinners
+///
+$spinner-size: 1.5rem !default;
+$spinner-size-large: 3rem !default;
+$spinner-speed: 1s !default;
+$spinner-thickness: 0.25rem !default;
+$spinner-color: $white !default;
+
+//
+// Tabbed Navigation
+///
+$tab-navigation-breakpoint: 46rem !default;
