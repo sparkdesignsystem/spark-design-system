@@ -70,6 +70,33 @@
   color: $blue-dark;
 }
 
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary--open
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:hover
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:active
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:focus
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary--open
+.sprk-c-Accordion__icon,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:hover
+.sprk-c-Accordion__icon,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:active
+.sprk-c-Accordion__icon,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:focus
+.sprk-c-Accordion__icon {
+  color: $white;
+}
+
 .sprk-c-Accordion__details {
   background-color: $white;
   border: 0.125rem solid $blue-dark;
