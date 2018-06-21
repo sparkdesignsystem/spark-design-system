@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'sprk-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.css']
-
+  styleUrls: ['./button.component.css'],
 })
 
-export class SparkButton {
-  text: 'Click here';  
-  constructor() { }
+export class SparkButtonComponent { 
+  @Input() text: string;
 }

@@ -2,13 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { SparkCoreAngularModule } from '../../../../packages/spark-core-angular/spark-core-angular.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SparkCoreAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
