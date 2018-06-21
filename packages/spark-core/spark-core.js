@@ -24,7 +24,11 @@ import './utilities/polyfills/ArrayFind';
 import './utilities/polyfills/NodeListForEach';
 import './utilities/polyfills/classListSVG';
 
+// Utilities
+import detectJS from './utilities/detectJS';
+
 // Init
+detectJS();
 requiredSelect();
 requiredTick();
 requiredTextInput();
