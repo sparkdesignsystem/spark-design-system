@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +31,11 @@
     "@angular/cli": "~6.0.8",
     "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
-    "@storybook/angular": "^3.4.7",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addon-notes": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "@storybook/angular": "^3.4.8",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",

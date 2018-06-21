@@ -8,7 +8,7 @@
   },
   "author": "Quicken Loans",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@angular/common": "^6.0.6",
     "@angular/core": "^6.0.6",
     "@angular/platform-browser": "^6.0.6"

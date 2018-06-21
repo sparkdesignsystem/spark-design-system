@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+//TODO: the direct reference needs to go once publishing
+import { Component, Input } from '../../../../src/angular/node_modules/@angular/core';
 
 @Component({
   selector: 'sprk-button',
