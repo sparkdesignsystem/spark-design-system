@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 
 export class SparkButtonComponent { 
   @Input() text: string;
+  @Input() isSecondary: boolean;
 }
