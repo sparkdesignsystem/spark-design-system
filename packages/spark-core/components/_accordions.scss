@@ -1,12 +1,6 @@
 // ==================================================================
 // Accordions
 // ==================================================================
-
-//
-// Available Variables
-///
-$accordion-max-width: 53.125rem;
-
 .sprk-c-Accordion {
   margin: 0 auto;
   max-width: $accordion-max-width;
@@ -76,14 +70,30 @@ $accordion-max-width: 53.125rem;
   color: $blue-dark;
 }
 
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open .sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary:hover .sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary:active .sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary:focus .sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open .sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary:hover .sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary:active .sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary:focus .sprk-c-Accordion__icon {
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary--open
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:hover
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:active
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:focus
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary--open
+.sprk-c-Accordion__icon,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:hover
+.sprk-c-Accordion__icon,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:active
+.sprk-c-Accordion__icon,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__summary:focus
+.sprk-c-Accordion__icon {
   color: $white;
 }
 

@@ -12,3 +12,4 @@ packages/spark-core/.nyc_output
 .nyc_output/
 /wraith/shots
 launch.json
+.vscode
