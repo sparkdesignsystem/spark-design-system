@@ -4,4 +4,5 @@
     'sprk-c-Button--tertiary': isTertiary,
     'sprk-c-Button--removal': isRemoval,
     'sprk-is-Disabled': isDisabled
-}" [disabled]="isDisabled" [data-analytics]="analyticsTag">{{ text }}</button>
+}" [disabled]="isDisabled"
+   (click)="addSpinner()"><ng-content></ng-content></button>

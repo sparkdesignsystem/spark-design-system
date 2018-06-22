@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
   selector: 'sprk-button',
@@ -7,10 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SparkButtonComponent {
-  @Input() text: string;
   @Input() isSecondary: boolean;
   @Input() isTertiary: boolean;
   @Input() isRemoval: boolean;
   @Input() isDisabled: boolean;
   @Input() analyticsString: string;
+
+  addSpinner(): void {
+    setSpinning(event.target, { });
+  }
 }
