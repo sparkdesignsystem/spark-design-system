@@ -7,9 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "build-storybook": "build-storybook"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
