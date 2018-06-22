@@ -1,9 +1,5 @@
 [![Build Status](https://travis-ci.org/sparkdesignsystem/spark-design-system.svg?branch=staging)](https://travis-ci.org/sparkdesignsystem/spark-design-system)
 
-# WARNING
-
-### Spark is currently in `beta`. Please reach out to the [Spark team](mailto:sparkdesignsystem@quickenloans.com) for guidance.
-
 # Spark Design System
 
 Welcome to the Spark Design System, a product of [Quicken Loans](https://github.com/quickenloans).
@@ -23,8 +19,6 @@ Spark's patterns are separated into two groups:
 * [Spark-Extras](https://www.npmjs.com/package/@sparkdesignsystem/spark-extras) are components that may not be needed by all
   applications, but are consistent with the style of Spark-Core.
   Spark-Extras Sass and JS are imported into an application on an individual basis. You import the components that you need.
-
-
 
 ## Getting Started
 
@@ -63,6 +57,7 @@ also that your project has a Javascript build step that will transpile ES6+ and 
 * Import any of the Spark-Extras JS patterns that you need.
 
   `import <pattern-name> from "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
+
 ## Contribution Guide
 
 ### Code Organization
