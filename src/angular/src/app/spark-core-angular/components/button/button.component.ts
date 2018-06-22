@@ -1,5 +1,4 @@
-//TODO: the direct reference needs to go once publishing
-import { Component, Input } from '../../../../src/angular/node_modules/@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'sprk-button',
@@ -10,4 +9,8 @@ import { Component, Input } from '../../../../src/angular/node_modules/@angular/
 export class SparkButtonComponent {
   @Input() text: string;
   @Input() isSecondary: boolean;
+  @Input() isTertiary: boolean;
+  @Input() isRemoval: boolean;
+  @Input() isDisabled: boolean;
+  @Input() analyticsString: string;
 }

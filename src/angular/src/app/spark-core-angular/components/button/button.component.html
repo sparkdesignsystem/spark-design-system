@@ -1,0 +1,7 @@
+<button [ngClass]="{
+    'sprk-c-Button': true,
+    'sprk-c-Button--secondary': isSecondary,
+    'sprk-c-Button--tertiary': isTertiary,
+    'sprk-c-Button--removal': isRemoval,
+    'sprk-is-Disabled': isDisabled
+}" [disabled]="isDisabled" [data-analytics]="analyticsTag">{{ text }}</button>

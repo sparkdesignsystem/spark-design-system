@@ -1,6 +1,5 @@
-//TODO: remove the direct reference after publishing
-import { NgModule } from '../../src/angular/node_modules/@angular/core';
-import { CommonModule } from '../../src/angular/node_modules/@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { SparkButtonComponent } from './components/button/button.component';
 
 @NgModule({
