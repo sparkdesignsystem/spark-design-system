@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook"
   },
   "private": true,
@@ -22,6 +22,7 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@storybook/angular": "^4.0.0-alpha.7",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
@@ -35,7 +36,6 @@
     "@storybook/addon-links": "^3.4.8",
     "@storybook/addon-notes": "^3.4.8",
     "@storybook/addons": "^3.4.8",
-    "@storybook/angular": "^3.4.8",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
