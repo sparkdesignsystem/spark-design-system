@@ -26,6 +26,6 @@ Substantial changes generally fall into 2 categories: New components and amendme
 
 Coming soon.
 
-Once you have determined that a new component or change is necessary, please [open an issue](https://github.com/sparkdesignsystem/spark-design-system/issue) using the "Contribution Proposal" issue template in Github to start the review process.
+Once you have determined that a new component or change is necessary, please [open an issue](https://github.com/sparkdesignsystem/spark-design-system/issues) using the "Contribution Proposal" issue template in Github to start the review process.
 
 The Spark team will review your proposal and determine if it's a good fit. If it is, we will either add it to our backlog, or work with you on contributing the changes yourself.
