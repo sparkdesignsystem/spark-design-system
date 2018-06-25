@@ -83,11 +83,20 @@ module.exports = {
         tasks: ['copy'],
       },
       {
-        match: ['./src/assets/**/*.scss', './packages/spark-core/**/*.scss', './packages/spark-extras/**/*.scss'],
+        match: [
+          './src/assets/**/*.scss',
+          './packages/spark-core/**/*.scss',
+          './packages/spark-extras/**/*.scss',
+        ],
         tasks: ['sass'],
       },
       {
-        match: ['./src/assets/**/*.js', './packages/spark-core/**/*.js', './packages/spark-extras/**/*.js'],
+        match: [
+          './service-worker.js',
+          './src/assets/**/*.js',
+          './packages/spark-core/**/*.js',
+          './packages/spark-extras/**/*.js',
+        ],
         tasks: ['js'],
       },
       {

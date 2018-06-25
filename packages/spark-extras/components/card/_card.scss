@@ -5,8 +5,8 @@
 //
 // Available Variables
 ///
-$card-border: 0.125rem solid $gray-medium;
-$card-max-width: 26.5625rem;
+$card-border: 2px solid $gray-medium !default;
+$card-max-width: 26.5625rem !default;
 
 .sprk-c-Card {
   border: $card-border;
