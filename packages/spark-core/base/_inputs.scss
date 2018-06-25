@@ -5,8 +5,8 @@ label,
 .sprk-b-Label {
   @include TextCrop(
     $line-height: $line-height-body-one,
-    $top-crop: 6,
-    $bottom-crop: 6,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-body-one) * 16),
     $crop-line-height: $line-height-body-one);
 
@@ -92,6 +92,10 @@ textarea {
   vertical-align: middle;
 }
 
+.sprk-b-SelectionContainer:last-child {
+  margin-bottom: $space-s;
+}
+
 .sprk-b-InputContainer {
   max-width: 27.5rem;
 }
@@ -101,6 +105,7 @@ textarea {
 }
 
 .sprk-b-InputContainer > .sprk-b-Label,
+.sprk-b-InputContainer legend > .sprk-b-Label,
 .sprk-b-InputContainer > label {
   margin-bottom: $space-s;
 }
@@ -116,6 +121,10 @@ textarea {
 .sprk-b-TextArea {
   min-height: 125px;
   margin: $space-stack-m;
+}
+
+fieldset {
+  padding: 0;
 }
 
 // Placeholder colors
