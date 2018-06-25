@@ -17,21 +17,19 @@
 
 .sprk-c-Hamburger__line {
   opacity: 1;
-  transform: rotate(0) translateY(0) translateX(0);
-  transform-origin: 1em 1em;
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 .sprk-c-Hamburger__line--one {
-  transform-origin: 0.7em 1.9em;
+  transform-origin: 0.75rem 2.25rem;
 }
 
 .sprk-c-Hamburger__line--three {
-  transform-origin: 0.8em 3.4em;
+  transform-origin: 1rem 4rem;
 }
 
 .sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--one {
-  transform: rotate(45deg) translateY(0) translateX(0);
+  transform: rotate(45deg);
 }
 
 .sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--two {
@@ -39,5 +37,5 @@
 }
 
 .sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--three {
-  transform: rotate(-45deg) translateY(0) translateX(0);
+  transform: rotate(-45deg);
 }
