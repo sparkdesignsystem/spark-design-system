@@ -82,8 +82,7 @@ textarea {
   }
 }
 
-.sprk-b-SelectionContainer .sprk-b-Label,
-.sprk-b-SelectionContainer label {
+.sprk-b-SelectionContainer .sprk-b-Label {
   font-weight: normal;
 }
 
@@ -104,9 +103,8 @@ textarea {
   max-width: none;
 }
 
-.sprk-b-InputContainer > .sprk-b-Label,
-.sprk-b-InputContainer legend > .sprk-b-Label,
-.sprk-b-InputContainer > label {
+.sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
+.sprk-b-InputContainer > .sprk-b-Label {
   margin-bottom: $space-s;
 }
 
@@ -123,7 +121,7 @@ textarea {
   margin: $space-stack-m;
 }
 
-fieldset {
+.sprk-b-Fieldset {
   padding: 0;
 }
 

@@ -36,7 +36,7 @@ $dictionary-breakpoint: 38.4375rem !default;
   @media all and (min-width: $dictionary-breakpoint) {
     display: table-cell;
     flex: 1;
-    margin-bottom: none;
+    margin-bottom: 0;
   }
 }
 
