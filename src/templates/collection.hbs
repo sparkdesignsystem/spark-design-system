@@ -7,7 +7,7 @@
       <section>
         <div class="drizzle-o-ContentGrouping">
           {{#if sparkPackageCore}}
-            <div class="drizzle-c-Tag">
+            <div class="drizzle-c-Tag sprk-u-mbm">
               <div class="drizzle-c-Tag__color-box">
               </div>
               <div class="drizzle-c-Tag__desc">
@@ -17,7 +17,7 @@
           {{/if}}
 
           {{#if sparkPackageExtras}}
-            <div class="drizzle-c-Tag">
+            <div class="drizzle-c-Tag sprk-u-mbm">
               <div class="drizzle-c-Tag__color-box drizzle-c-Tag__color-box--extra">
               </div>
               <div class="drizzle-c-Tag__desc">
@@ -96,7 +96,7 @@
 
     <div class="drizzle-c-Divider"></div>
 
-    <section>
+    <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewThree}} drizzle-o-Grid--gallery{{/if}}">
       {{#each patterns}}
         {{> drizzle.item}}
       {{/each}}
