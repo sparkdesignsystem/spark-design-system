@@ -19,7 +19,7 @@ const setSpinning = (element, options) => {
   const el = element;
   const width = element.offsetWidth;
   el.setAttribute('data-sprk-spinner-text', el.textContent);
-  el.innerHTML = `<span class="${getSpinnerClasses(options)}"></span>`;
+  el.innerHTML = `<div class="${getSpinnerClasses(options)}"></div>`;
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
 };
