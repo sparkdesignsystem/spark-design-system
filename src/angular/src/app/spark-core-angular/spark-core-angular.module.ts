@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SparkButtonComponent } from './components/button/button.component';
+import { SparkButtonComponent } from './components/sprk-button/sprk-button.component';
 
 @NgModule({
   imports: [

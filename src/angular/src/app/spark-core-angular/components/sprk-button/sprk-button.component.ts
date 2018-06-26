@@ -3,8 +3,8 @@ import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
   selector: 'sprk-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.css'],
+  templateUrl: './sprk-button.component.html',
+  styleUrls: ['./sprk-button.component.css'],
 })
 
 export class SparkButtonComponent {
@@ -14,18 +14,12 @@ export class SparkButtonComponent {
   @Input() isDisabled: boolean;
   @Input() analyticsString: string;
   @Input() spinner: boolean;
-  @Input() spinnerSize: string;
-  @Input() spinnerLightness: string;
 
-  isSpinning: boolean = false;
-  options: Object = {
-    size: this.spinnerSize,
-    lightness: this.spinnerLightness
-  };
+  public isSpinning: boolean = false;
 
   checkSpinner(): void {
     if (this.spinner && !this.isSpinning) {
-      setSpinning(event.target, this.options);
+      setSpinning(event.target, {});
       this.isSpinning = true;
     }
   }
