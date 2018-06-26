@@ -1,4 +1,5 @@
-<div class="{{#if data.noHeader}}sprk-u-mtn{{/if}} {{#if data.invisible}}sprk-u-Display--none{{/if}}"
+<div
+    class="{{#if data.noHeader}}sprk-u-mtn{{/if}} {{#if data.invisible}}sprk-u-Display--none{{/if}}{{#if data.gridItemFullWidth}} drizzle-o-Grid__item-full{{/if}}"
      data-template-id="{{toSlug name}}">
   {{!-- Header, labels --}}
   {{#unless data.noHeader}}
@@ -34,6 +35,10 @@
   </div>
   {{/if}}
 
+  {{!-- There is no logical or --}}
+  {{#if data.information}}
+  {{#if data.links}}
+  {{#if data.restrictions}}
   <div class="drizzle-o-ContentGrouping">
     {{!- Information --}}
     {{#if data.information}}
@@ -77,6 +82,9 @@
       </ul>
     {{/if}}
   </div>
+  {{/if}}
+  {{/if}}
+  {{/if}}
 
   {{!-- Layouts --}}
   {{#if data.doclayout}}

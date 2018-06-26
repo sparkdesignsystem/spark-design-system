@@ -11,12 +11,11 @@
 }
 
 .#{$app-namespace}-o-Layout-content {
-  max-width: 1024px;
-  padding: 1rem;
+  max-width: 1056px;
+  padding: $space-l $space-m;
 
   @media (min-width: $nav-switch-breakpoint) {
-    padding: 0;
-    margin: 120px 2rem 2rem;
+    padding: $space-l;
   }
 }
 
@@ -25,8 +24,8 @@
 }
 
 .#{$app-namespace}-o-Layout-content--centered {
-  margin: 2rem auto;
-  max-width: 640px;
+  margin: 0 auto;
+  max-width: 720px;
 }
 
 .#{$app-namespace}-o-Layout__nav {
@@ -47,13 +46,12 @@
 .#{$app-namespace}-o-Layout__section-header {
   background-color: $highlight;
   color: $white;
-  margin-bottom: 20px;
   padding: 90px 0 1.8rem 2rem;
   width: 100%;
 
   @media (min-width: $nav-switch-breakpoint) {
     padding: 1.8rem 0 1.8rem 2rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: $drizzle-layer-height-m;
   }
