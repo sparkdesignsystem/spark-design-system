@@ -4,8 +4,8 @@
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
     $line-height: $line-height-display-one,
-    $top-crop: 12,
-    $bottom-crop: 13,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-display-one) * 16),
     $crop-line-height: $line-height-display-one);
 
@@ -18,8 +18,8 @@ h1,
 .sprk-b-TypeDisplayTwo {
   @include TextCrop(
     $line-height: $line-height-display-two,
-    $top-crop: 11,
-    $bottom-crop: 11,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-display-two) * 16),
     $crop-line-height: $line-height-display-two);
 }
@@ -34,8 +34,8 @@ h2,
 .sprk-b-TypeDisplayThree {
   @include TextCrop(
     $line-height: $line-height-display-three,
-    $top-crop: 11,
-    $bottom-crop: 11,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-display-three) * 16),
     $crop-line-height: $line-height-display-three);
 }
@@ -50,8 +50,8 @@ h3,
 .sprk-b-TypeDisplayFour {
   @include TextCrop(
     $line-height: $line-height-display-four,
-    $top-crop: 8,
-    $bottom-crop: 8,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-display-four) * 16),
     $crop-line-height: $line-height-display-four);
 }
@@ -66,8 +66,8 @@ h4,
 .sprk-b-TypeDisplayFive {
   @include TextCrop(
     $line-height: $line-height-display-five,
-    $top-crop: 7,
-    $bottom-crop: 7,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-display-five) * 16),
     $crop-line-height: $line-height-display-five);
 }
@@ -79,11 +79,12 @@ h4,
 }
 
 h5,
+h6,
 .sprk-b-TypeDisplaySix {
   @include TextCrop(
     $line-height: $line-height-display-six,
-    $top-crop: 9,
-    $bottom-crop: 9,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-display-six) * 16),
     $crop-line-height: $line-height-display-six);
 }
@@ -95,29 +96,12 @@ h5,
   line-height: $line-height-display-six;
 }
 
-h6,
-.sprk-b-TypeDisplaySeven {
-  @include TextCrop(
-    $line-height: $line-height-display-seven,
-    $top-crop: 8,
-    $bottom-crop: 8,
-    $crop-font-size: (strip-unit($font-size-display-seven) * 16),
-    $crop-line-height: $line-height-display-seven);
-}
-
-.sprk-b-TypeDisplaySeven {
-  font-size: $font-size-display-seven;
-  color: $color-display-seven;
-  font-weight: $font-weight-display-seven;
-}
-
 .sprk-b-TypeDisplayOne,
 .sprk-b-TypeDisplayTwo,
 .sprk-b-TypeDisplayThree,
 .sprk-b-TypeDisplayFour,
 .sprk-b-TypeDisplayFive,
-.sprk-b-TypeDisplaySix,
-.sprk-b-TypeDisplaySeven {
+.sprk-b-TypeDisplaySix {
   font-family: $heading-font-stack;
 }
 
@@ -131,8 +115,8 @@ h6,
 .sprk-b-TypeBodyOne {
   @include TextCrop(
     $line-height: $line-height-body-one,
-    $top-crop: 6,
-    $bottom-crop: 6,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-body-one) * 16),
     $crop-line-height: $line-height-body-one);
 
@@ -144,8 +128,8 @@ h6,
 .sprk-b-TypeBodyTwo {
   @include TextCrop(
     $line-height: $line-height-body-two,
-    $top-crop: 7,
-    $bottom-crop: 7,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-body-two) * 16),
     $crop-line-height: $line-height-body-two);
 
@@ -158,8 +142,8 @@ small,
 .sprk-b-TypeBodyThree {
   @include TextCrop(
     $line-height: $line-height-body-three,
-    $top-crop: 6,
-    $bottom-crop: 6,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-body-three) * 16),
     $crop-line-height: $line-height-body-three);
 
@@ -171,8 +155,8 @@ small,
 .sprk-b-TypeBodyFour {
   @include TextCrop(
     $line-height: $line-height-body-four,
-    $top-crop: 5,
-    $bottom-crop: 5,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (strip-unit($font-size-body-four) * 16),
     $crop-line-height: $line-height-body-four);
 
