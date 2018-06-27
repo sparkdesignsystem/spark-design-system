@@ -1,3 +1,5 @@
-<button class="{{classString}}"
+<button [ngClass]="getClasses()"
         [disabled]="isDisabled"
-   (click)="checkSpinner()"><ng-content></ng-content></button>
+        (click)="checkSpinner()">
+  <ng-content></ng-content>
+</button>

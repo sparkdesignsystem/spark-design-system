@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
@@ -17,7 +17,6 @@ export class SparkButtonComponent {
   public isSpinning: boolean = false;
 
   public classString: string;
-  public attributesString: string;
 
   getClasses(): string {
     let classArray: Array<String> = [
@@ -32,14 +31,14 @@ export class SparkButtonComponent {
         classArray.push('sprk-c-Button--tertiary');
         break;
       case 'removal':
-        classArray.push('sprk-c-Button--tertiary');
+        classArray.push('sprk-c-Button--removal');
         break;
       default:
         break;
     }
 
     if(this.isDisabled) {
-      classArray.push('sprk-c-Button--removal');
+      classArray.push('sprk-is-Disabled');
     }
 
     if(this.additionalClasses) {
@@ -56,9 +55,5 @@ export class SparkButtonComponent {
       setSpinning(event.target, {});
       this.isSpinning = true;
     }
-  }
-
-  ngOnInit() {
-    this.classString = this.getClasses();
   }
 }
