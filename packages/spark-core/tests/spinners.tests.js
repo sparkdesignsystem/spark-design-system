@@ -59,31 +59,31 @@ describe('spinners UI tests', () => {
 
   it('should start the spinning if its clicked', () => {
     spinnerContainer.click();
-    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).eql(true);
   });
 
   it('should remove spinners if the sprk-cancel-spinners event is triggered on window', () => {
     spinnerContainer.click();
-    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).eql(true);
     event = new window.Event('sprk-cancel-spinners');
     window.dispatchEvent(event);
-    expect(spinnerContainer.querySelector('span')).eql(null);
+    expect(spinnerContainer.querySelector('div')).eql(null);
   });
 
   it('should use no text when removing spinners if the sprk-cancel-spinners event is triggered on window and there was no text saved', () => {
     spinnerContainer.click();
     spinnerContainer.removeAttribute('data-sprk-spinner-text');
-    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).eql(true);
     event = new window.Event('sprk-cancel-spinners');
     window.dispatchEvent(event);
-    expect(spinnerContainer.querySelector('span')).eql(null);
+    expect(spinnerContainer.querySelector('div')).eql(null);
     expect(spinnerContainer.textContent).eql('');
   });
 
   it('should not try to start spinning something thats already spinning', () => {
     spinnerContainer.click();
     expect(spinnerContainer.setAttribute.calledThrice).eql(true);
-    expect(spinnerContainer.querySelector('span').classList.contains('sprk-c-Spinner--circle')).eql(true);
+    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).eql(true);
     spinnerContainer.click();
     expect(spinnerContainer.setAttribute.getCalls().length).eql(3);
   });
