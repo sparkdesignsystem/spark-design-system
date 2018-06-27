@@ -3,3 +3,7 @@
   color: $black;
 }
 
+.#{$app-namespace}-b-Link--light,
+.#{$app-namespace}-b-Link--light:visited {
+  color: $white;
+}

@@ -103,3 +103,21 @@
 //
 
 @import '../../../assets/drizzle/styles/main.scss';
+
+//
+// Angular site specific styling
+//
+.#{$app-namespace}-c-AngularHeader {
+  position: static;
+}
+
+.#{$app-namespace}-c-AngularNav {
+  background-color: $black;
+  color: $white;
+  width: 100%;
+}
+
+.#{$app-namespace}-c-AngularNav a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
