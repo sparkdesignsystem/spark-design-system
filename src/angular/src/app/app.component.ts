@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, KeyValueDiffers } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',

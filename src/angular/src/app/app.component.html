@@ -1,28 +1,21 @@
 <header>
-  <h1>
-    Spark Core Angular
-    <img width="75" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-  </h1>
+  <div class=" drizzle-o-Layout__section-header">
+    <h1 class="drizzle-b-h1">Spark Core Angular
+      <img width="50" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    </h1>
+  </div>
 </header>
 
-<h2>Components</h2>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="active">Index</a>
+    </li>
+    <li>
+      <a routerLink="/buttons" routerLinkActive="active">Buttons</a>
+    </li>
+  </ul>
+</nav>
 
-<h3>Buttons</h3>
-<sprk-button>Hello, World.</sprk-button>
-<sprk-button buttonType="secondary">Hello, World.</sprk-button>
-<sprk-button buttonType="tertiary">Hello, World.</sprk-button>
-<sprk-button buttonType="removal">Hello, World.</sprk-button>
-<sprk-button isDisabled="true">Hello, World.</sprk-button>
-<sprk-button data-analytics="Product: Feature: Action 1">Hello, Analytics.</sprk-button>
-
-<h3>Spinner Buttons</h3>
-<sprk-button spinner="true">Spinner Button</sprk-button>
-<sprk-button spinner="true" buttonType="secondary">Spinner Button</sprk-button>
-<sprk-button spinner="true" buttonType="tertiary">Spinner Button</sprk-button>
-<sprk-button spinner="true" buttonType="removal">Spinner Button</sprk-button>
-
-<h3>Additional Classes</h3>
-<sprk-button additionalClasses="sprk-u-mbm">Margin Bottom</sprk-button>
-<sprk-button buttonType="secondary" additionalClasses="sprk-u-pah">Submit</sprk-button>
-
+<router-outlet></router-outlet>
 

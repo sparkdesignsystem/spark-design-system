@@ -13,10 +13,10 @@ export class SparkButtonComponent {
   @Input() analyticsString: string;
   @Input() spinner: boolean;
   @Input() additionalClasses: string;
+  @Input() triggerModal: string;
+  @Input() fireEvent: string;
 
   public isSpinning: boolean = false;
-
-  public classString: string;
 
   getClasses(): string {
     let classArray: Array<String> = [
@@ -54,6 +54,18 @@ export class SparkButtonComponent {
     if (this.spinner && !this.isSpinning) {
       setSpinning(event.target, {});
       this.isSpinning = true;
+    }
+  }
+
+  checkModal(): void {
+    if (this.triggerModal) {
+      //console.log(`trigger a modal called: ${this.triggerModal}.`);
+    }
+  }
+
+  checkFireEvent(): void {
+    if (this.fireEvent) {
+      //console.log(`fire an event called: ${this.fireEvent}`);
     }
   }
 }
