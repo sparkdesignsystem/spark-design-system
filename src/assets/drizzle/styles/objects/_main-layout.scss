@@ -10,8 +10,8 @@
   }
 }
 
-.#{$app-namespace}-o-Layout-content {
-  max-width: 1056px;
+.#{$app-namespace}-o-Layout__content {
+  max-width: 66rem;
   padding: $space-l $space-m;
 
   @media (min-width: $nav-switch-breakpoint) {
@@ -23,9 +23,9 @@
   margin-bottom: 2.5rem;
 }
 
-.#{$app-namespace}-o-Layout-content--centered {
+.#{$app-namespace}-o-Layout__content--centered {
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 45rem;
 }
 
 .#{$app-namespace}-o-Layout__nav {
@@ -36,16 +36,14 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    box-sizing: border-box;
     width: $layout-nav-width;
     height: 100%;
     -webkit-overflow-scrolling: touch;
   }
 }
 
-.#{$app-namespace}-o-Layout__section-header {
+.#{$app-namespace}-o-Layout__header {
   background-color: $highlight;
-  color: $white;
   padding: 90px 0 1.8rem 2rem;
   width: 100%;
 
@@ -57,6 +55,6 @@
   }
 }
 
-.#{$app-namespace}-o-Layout__section-header .#{$app-namespace}-b-h1 {
+.#{$app-namespace}-o-Layout__header .#{$app-namespace}-b-h1 {
   color: $white;
 }
