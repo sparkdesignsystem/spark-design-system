@@ -1,15 +1,18 @@
 {{#extend "default"}}
   {{#content "main"}}
     <div class=" drizzle-o-Layout__section-header">
-      <h1 class="drizzle-b-h1">{{name}}</h1>
+      <h1 class="drizzle-b-h1">
+        {{name}}
+      </h1>
     </div>
-    <div class=" drizzle-o-Layout-content">
+
+    <div class="drizzle-o-Layout-content">
       <section>
         <div class="drizzle-o-ContentGrouping">
           {{#if sparkPackageCore}}
             <div class="drizzle-c-Tag sprk-u-mbm">
-              <div class="drizzle-c-Tag__color-box">
-              </div>
+              <div class="drizzle-c-Tag__color-box"></div>
+
               <div class="drizzle-c-Tag__desc">
                 <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Core</a>
               </div>
@@ -18,8 +21,8 @@
 
           {{#if sparkPackageExtras}}
             <div class="drizzle-c-Tag sprk-u-mbm">
-              <div class="drizzle-c-Tag__color-box drizzle-c-Tag__color-box--extra">
-              </div>
+              <div class="drizzle-c-Tag__color-box drizzle-c-Tag__color-box--extra"></div>
+
               <div class="drizzle-c-Tag__desc">
                 <a href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Extras</a>
               </div>
@@ -27,7 +30,9 @@
           {{/if}}
 
           {{#if description}}
-            <p class="drizzle-b-P">{{{description}}}</p>
+            <p class="drizzle-b-P">
+              {{{description}}}
+            </p>
           {{/if}}
         </div>
 
@@ -96,11 +101,17 @@
 
     <div class="drizzle-c-Divider"></div>
 
-    <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewThree}} drizzle-o-Grid--gallery{{/if}}">
-      {{#each patterns}}
-        {{> drizzle.item}}
-      {{/each}}
-    {{/content}}
+    <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewGallery}} drizzle-o-Grid--gallery{{/if}}">
+      {{#if gridViewGallery}}
+        {{#each patterns}}
+          {{> drizzle.item-gallery}}
+        {{/each}}
+      {{else}}
+        {{#each patterns}}
+          {{> drizzle.item}}
+        {{/each}}
+      {{/if}}
     </section>
+    {{/content}}
   {{/extend}}
 </div>
