@@ -13,7 +13,6 @@ export class SparkButtonComponent {
   @Input() analyticsString: string;
   @Input() spinner: boolean;
   @Input() additionalClasses: string;
-  @Input() additionalAttributes: Object;
 
   public isSpinning: boolean = false;
 
@@ -50,10 +49,6 @@ export class SparkButtonComponent {
     }
 
     return classArray.join(' ');
-  }
-
-  getAttributes(): string {
-    return '';
   }
 
   checkSpinner(): void {
