@@ -14,7 +14,7 @@ Minor changes include, but are not limited to:
 * Unit tests
 * Spelling and grammar fixes
 
-Minor changes should begin with an [issue on Github](https://github.com/sparkdesignsystem/spark-design-system/issue) if you are unable to make the change yourself or are unsure if the change you want to make is needed. If you make the changes yourself, you can [open a pull request](https://github.com/sparkdesignsystem/spark-design-system/pulls) for review.
+Minor changes should begin with an [issue on Github](https://github.com/sparkdesignsystem/spark-design-system/issues) if you are unable to make the change yourself or are unsure if the change you want to make is needed. If you make the changes yourself, you can [open a pull request](https://github.com/sparkdesignsystem/spark-design-system/pulls) for review.
 
 If a minor change turns out to be substantial, the Spark team may ask you to go through the contribution workflow for substantial changes instead.
 
