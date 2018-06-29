@@ -7,9 +7,11 @@ import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.
 import { ButtonDocsComponent } from './button-docs/button-docs.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IntroDocsComponent } from './intro-docs/intro-docs.component';
+import { LinkDocsComponent } from './link-docs/link-docs.component';
 
 const appRoutes: Routes = [
   { path: 'buttons', component: ButtonDocsComponent },
+  { path: 'links', component: LinkDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -20,6 +22,7 @@ const appRoutes: Routes = [
     ButtonDocsComponent,
     PageNotFoundComponent,
     IntroDocsComponent,
+    LinkDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(
