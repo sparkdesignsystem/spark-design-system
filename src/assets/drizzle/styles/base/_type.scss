@@ -20,7 +20,7 @@ p,
 }
 
 .#{$app-namespace}-b-Lede {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
@@ -50,8 +50,7 @@ p,
 .#{$app-namespace}-b-h4 {
   color: $black;
   font-size: 16px;
-  font-weight: normal;
-  text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
 }
