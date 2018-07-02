@@ -1,7 +1,7 @@
 <button [ngClass]="getClasses()"
         [disabled]="isDisabled"
-        (click)="checkSpinner()"
-        (click)="checkModal()"
-        (click)="checkFireEvent()">
+        (click)="checkSpinner($event)"
+        (click)="checkModal($event)"
+        (click)="checkFireEvent($event)">
   <ng-content></ng-content>
 </button>

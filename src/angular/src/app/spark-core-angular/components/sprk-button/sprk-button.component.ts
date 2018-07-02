@@ -50,20 +50,20 @@ export class SparkButtonComponent {
     return classArray.join(' ');
   }
 
-  checkSpinner(): void {
+  checkSpinner(event): void {
     if (this.spinner && !this.isSpinning) {
       setSpinning(event.target, {});
       this.isSpinning = true;
     }
   }
 
-  checkModal(): void {
+  checkModal(event): void {
     if (this.triggerModal) {
       //console.log(`trigger a modal called: ${this.triggerModal}.`);
     }
   }
 
-  checkFireEvent(): void {
+  checkFireEvent(event): void {
     if (this.fireEvent) {
       //console.log(`fire an event called: ${this.fireEvent}`);
     }
