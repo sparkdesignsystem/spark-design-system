@@ -1,5 +1,5 @@
 <div
-    class="{{#if data.noHeader}}sprk-u-mtn{{/if}} {{#if data.invisible}}sprk-u-Display--none{{/if}}"
+    class="sprk-o-Stack{{#if data.noHeader}} sprk-u-mtn{{/if}}{{#if data.invisible}} sprk-u-Display--none{{/if}}{{#if data.gridItemFullWidth}} drizzle-o-Grid__item-full{{/if}}"
     data-template-id="{{toSlug name}}">
   {{!-- Header, labels --}}
   {{#unless data.noHeader}}
@@ -8,27 +8,9 @@
     {{/drizzle.labelheader}}
   {{/unless}}
 
-  {{!-- Progress --}}
-  {{#if data.labels}}
-    <ul class="drizzle-b-List">
-      {{#each data.labels as |label|}}
-        <li>
-          <div class="
-            drizzle-c-Tag
-            drizzle-c-Tag--secondary
-            drizzle-c-Tag--{{label}}">
-            <div class="drizzle-c-Tag__desc">
-              <span>{{label}}</span>
-            </div>
-          </div>
-        </li>
-      {{/each}}
-    </ul>
-  {{/if}}
-
   {{!-- Description --}}
   {{#if data.description}}
-  <div class="drizzle-o-ContentGrouping">
+  <div class="drizzle-o-ContentGrouping sprk-o-Stack__item drizzle-o-Stack__item--grow">
     <p class="drizzle-b-P">
       {{{data.description}}}
     </p>
@@ -39,7 +21,7 @@
   {{#if data.information}}
   {{#if data.links}}
   {{#if data.restrictions}}
-  <div class="drizzle-o-ContentGrouping">
+  <div class="drizzle-o-ContentGrouping sprk-o-Stack__item">
     {{!- Information --}}
     {{#if data.information}}
       <h3 class="drizzle-b-h3">Information</h3>
@@ -52,7 +34,7 @@
 
     {{!-- Links --}}
     {{#if data.links}}
-      <div class="drizzle-u-inlineBlock">
+      <div class="drizzle-u-inlineBlock sprk-o-Stack__item">
         <h3 class="drizzle-b-h3">Links</h3>
         <ul class="drizzle-b-List drizzle-b-List--nested">
           {{#each data.links as |details label|}}
@@ -94,7 +76,7 @@
   {{else}}
 
     {{!-- Preview --}}
-    <div class="drizzle-o-ContentGrouping">
+    <div class="drizzle-o-ContentGrouping sprk-o-Stack__item">
       <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
         <div class="drizzle-c-Preview__example {{data.previewClass}}">
           {{{pattern id @root}}}

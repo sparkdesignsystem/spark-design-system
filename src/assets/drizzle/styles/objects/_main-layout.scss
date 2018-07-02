@@ -10,13 +10,12 @@
   }
 }
 
-.#{$app-namespace}-o-Layout-content {
-  max-width: 1024px;
-  padding: 1rem;
+.#{$app-namespace}-o-Layout__content {
+  max-width: 66rem;
+  padding: $space-l $space-m;
 
   @media (min-width: $nav-switch-breakpoint) {
-    padding: 0;
-    margin: 120px 2rem 2rem;
+    padding: $space-l;
   }
 }
 
@@ -24,9 +23,9 @@
   margin-bottom: 2.5rem;
 }
 
-.#{$app-namespace}-o-Layout-content--centered {
-  margin: 2rem auto;
-  max-width: 640px;
+.#{$app-namespace}-o-Layout__content--centered {
+  margin: 0 auto;
+  max-width: 45rem;
 }
 
 .#{$app-namespace}-o-Layout__nav {
@@ -37,28 +36,25 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    box-sizing: border-box;
     width: $layout-nav-width;
     height: 100%;
     -webkit-overflow-scrolling: touch;
   }
 }
 
-.#{$app-namespace}-o-Layout__section-header {
+.#{$app-namespace}-o-Layout__header {
   background-color: $highlight;
-  color: $white;
-  margin-bottom: 20px;
-  padding: 90px 0 1.8rem 2rem;
+  padding: 6.0625rem 1rem 1rem 2rem;
   width: 100%;
 
   @media (min-width: $nav-switch-breakpoint) {
     padding: 1.8rem 0 1.8rem 2rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: $drizzle-layer-height-m;
   }
 }
 
-.#{$app-namespace}-o-Layout__section-header .#{$app-namespace}-b-h1 {
+.#{$app-namespace}-o-Layout__header .#{$app-namespace}-b-h1 {
   color: $white;
 }
