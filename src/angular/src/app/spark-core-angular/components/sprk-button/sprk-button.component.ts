@@ -3,8 +3,13 @@ import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
   selector: 'sprk-button',
-  templateUrl: './sprk-button.component.html',
-  styleUrls: ['./sprk-button.component.css'],
+  template: `<button [ngClass]="getClasses()"
+                     [disabled]="isDisabled"
+                     (click)="checkSpinner($event)"
+                     (click)="checkModal($event)"
+                     (click)="checkFireEvent($event)">
+               <ng-content></ng-content>
+             </button>`,
 })
 
 export class SparkButtonComponent {
