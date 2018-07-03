@@ -1,0 +1,130 @@
+// ==================================================================
+// Design System Imports
+// ==================================================================
+
+//
+// Settings
+///
+
+@import '../../../../packages/spark-core/settings/colors';
+@import '../../../../packages/spark-core/settings/settings';
+
+//
+// Tools
+///
+
+@import '../../../../packages/spark-core/tools/mixins';
+@import '../../../../packages/spark-core/tools/functions';
+@import '../../../../packages/spark-core/tools/animations';
+
+//
+// Generic utility styles
+///
+
+@import '../../../../node_modules/@scalescss/generic-normalize/normalize';
+@import '../../../../node_modules/@scalescss/generic-reset/reset';
+
+//
+// Base styles for standard HTML elements
+///
+
+@import '../../../../node_modules/@scalescss/base-typography/typography';
+@import '../../../../node_modules/@scalescss/base-images/images';
+@import '../../../../node_modules/@scalescss/base-lists/lists';
+@import '../../../../node_modules/@scalescss/base-blockquotes/blockquotes';
+@import '../../../../node_modules/@scalescss/base-forms/forms';
+@import '../../../../node_modules/@scalescss/base-tables/tables';
+@import '../../../../packages/spark-core/base/typography';
+@import '../../../../packages/spark-core/base/inputs';
+@import '../../../../packages/spark-core/base/lists';
+@import '../../../../packages/spark-core/base/links';
+
+//
+// Shared objects
+///
+
+@import '../../../../node_modules/@scalescss/objects-box/box';
+@import '../../../../node_modules/@scalescss/objects-centered-column/centered-column';
+@import '../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list';
+@import '../../../../node_modules/@scalescss/objects-side-by-side/side-by-side';
+@import '../../../../node_modules/@scalescss/objects-stack/stack';
+@import '../../../../node_modules/@scalescss/objects-vertical-list/vertical-list';
+@import '../../../../node_modules/@scalescss/objects-media-object/media-object';
+@import '../../../../node_modules/@scalescss/objects-flag/flag';
+@import '../../../../node_modules/@scalescss/objects-split/split';
+@import '../../../../node_modules/@scalescss/objects-stats/stats';
+@import '../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list';
+
+//
+// Objects
+///
+
+@import '../../../../packages/spark-core/objects/stack';
+
+//
+// Components
+///
+
+@import '../../../../node_modules/@scalescss/components-buttons/buttons';
+@import '../../../../packages/spark-core/components/accordions';
+@import '../../../../packages/spark-core/components/icons';
+@import '../../../../packages/spark-core/components/spinners';
+@import '../../../../packages/spark-core/components/buttons';
+@import '../../../../packages/spark-core/components/wide-navigation';
+@import '../../../../packages/spark-core/components/alerts';
+@import '../../../../packages/spark-core/components/modals';
+@import '../../../../packages/spark-core/components/pagination';
+@import '../../../../packages/spark-core/components/tabs';
+@import '../../../../packages/spark-core/components/datepicker';
+@import '../../../../packages/spark-core/components/dividers';
+@import '../../../../packages/spark-core/components/tables';
+@import '../../../../packages/spark-core/components/masthead';
+@import '../../../../packages/spark-core/components/hamburger';
+
+//
+// Spark Extras - Components
+///
+
+@import '../../../../packages/spark-extras/components/card/card';
+@import '../../../../packages/spark-extras/components/highlight-board/highlight-board';
+@import '../../../../packages/spark-extras/components/dictionary/dictionary';
+
+//
+// Overrides that need to come later in the cascade
+///
+
+@import '../../../../node_modules/@scalescss/utilities-clearfix/clearfix';
+@import '../../../../node_modules/@scalescss/utilities-width/width';
+@import '../../../../node_modules/@scalescss/utilities-spacing/spacing';
+@import '../../../../packages/spark-core/utilities/utilities';
+
+//
+// Bring in doc site styles
+//
+
+@import '../../../assets/drizzle/styles/main.scss';
+
+//
+// Angular site specific styling
+//
+.#{$app-namespace}-c-AngularHeader {
+  position: static;
+}
+
+.#{$app-namespace}-c-AngularNav {
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  padding: 0;
+}
+
+.#{$app-namespace}-c-AngularNav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: $highlight;
+  }
+}

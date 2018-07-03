@@ -96,6 +96,14 @@ gulp.task('critical', () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('move-angular-package', () => {
+  gulp
+    .src('./src/angular/src/app/spark-core-angular/**/*')
+    .pipe(gulp.dest('./packages/spark-core-angular'));
+});
+
+gulp.task('pre-publish', ['move-angular-package']);
+
 // Register default task
 gulp.task('default', ['frontend'], (done) => {
   gulp.start('serve');
