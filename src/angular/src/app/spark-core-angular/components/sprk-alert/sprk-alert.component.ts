@@ -39,7 +39,7 @@ export class SparkAlertComponent {
     ];
 
     switch (this.alertType) {
-      case 'sucess':
+      case 'success':
         classArray.push('sprk-c-Alert__icon--success');
         this.icon = '#check';
         break;
@@ -47,8 +47,8 @@ export class SparkAlertComponent {
         classArray.push('sprk-c-Alert__icon--info');
           this.icon = '#bell';
         break;
-      case 'removal':
-        classArray.push('sprk-c-Button--fail');
+      case 'fail':
+        classArray.push('sprk-c-Alert__icon--fail');
         this.icon = '#exclamation';
         break;
       default:
