@@ -92,7 +92,6 @@ module.exports = {
       },
       {
         match: [
-          './service-worker.js',
           './src/assets/**/*.js',
           './packages/spark-core/**/*.js',
           './packages/spark-extras/**/*.js',
