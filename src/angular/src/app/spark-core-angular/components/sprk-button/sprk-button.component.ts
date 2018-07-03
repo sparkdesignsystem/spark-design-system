@@ -5,6 +5,7 @@ import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
   selector: 'sprk-button',
   template: `<button [ngClass]="getClasses()"
                      [disabled]="isDisabled"
+                     [attr.data-analytics]="analyticsString"
                      (click)="checkSpinner($event)"
                      (click)="checkModal($event)"
                      (click)="checkFireEvent($event)">
@@ -64,7 +65,8 @@ export class SparkButtonComponent {
 
   checkModal(event): void {
     if (this.triggerModal) {
-      //console.log(`trigger a modal called: ${this.triggerModal}.`);
+      // TODO: need to refactor modals for this to work
+      event.target.setAttribute('data-sprk-modal', this.triggerModal);
     }
   }
 

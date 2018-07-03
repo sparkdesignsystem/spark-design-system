@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
 import { IntroDocsComponent } from './intro-docs.component';
 
 describe('IntroDocsComponent', () => {
@@ -8,6 +8,7 @@ describe('IntroDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [SparkCoreAngularModule],
       declarations: [ IntroDocsComponent ]
     })
     .compileComponents();
@@ -19,7 +20,7 @@ describe('IntroDocsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 });

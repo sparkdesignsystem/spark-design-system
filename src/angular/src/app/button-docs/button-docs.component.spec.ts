@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
 import { ButtonDocsComponent } from './button-docs.component';
 
 describe('ButtonDocsComponent', () => {
@@ -8,6 +8,7 @@ describe('ButtonDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [SparkCoreAngularModule],
       declarations: [ ButtonDocsComponent ]
     })
     .compileComponents();
@@ -19,7 +20,7 @@ describe('ButtonDocsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 });
