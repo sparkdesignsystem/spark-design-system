@@ -68,7 +68,6 @@ export class SparkButtonComponent {
 
   checkModal(event): void {
     if (this.triggerModal) {
-      // TODO: need to refactor modals for this to work
       this.modal.emit(this.triggerModal);
     }
   }
