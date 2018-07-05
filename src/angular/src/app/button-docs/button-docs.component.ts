@@ -20,6 +20,11 @@ import { Component, OnInit } from '@angular/core';
       <sprk-button spinner="true" buttonType="tertiary">Spinner Button</sprk-button>
       <sprk-button spinner="true" buttonType="removal">Spinner Button</sprk-button>
     </div>
+    
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">Fire Custom Event</h2>
+      <sprk-button buttonType="primary" fireEvent="customEventName">Fire Event</sprk-button>
+    </div>
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Additional Classes</h2>
