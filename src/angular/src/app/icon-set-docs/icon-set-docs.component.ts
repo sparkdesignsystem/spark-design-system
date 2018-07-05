@@ -3,8 +3,6 @@ import { Component, OnInit, NgModule } from '@angular/core';
 @Component({
   selector: 'sprk-icon-set-docs',
   template: `
-    <sprk-icon-set></sprk-icon-set>
-
     <div class="drizzle-o-ContentGrouping" *ngFor="let icon of icons">
       <h2 class="drizzle-b-h2">
         {{ icon }}

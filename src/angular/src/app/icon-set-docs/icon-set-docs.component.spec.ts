@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
 import { IconSetDocsComponent } from './icon-set-docs.component';
 
 describe('IconSetDocsComponent', () => {
@@ -8,6 +8,7 @@ describe('IconSetDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [SparkCoreAngularModule],
       declarations: [ IconSetDocsComponent ]
     })
     .compileComponents();
@@ -19,7 +20,7 @@ describe('IconSetDocsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 });

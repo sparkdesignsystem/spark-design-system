@@ -1,25 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
+import { AlertDocsComponent } from './alert-docs.component';
 
-import { ButtonDocsComponent } from './button-docs.component';
-
-describe('ButtonDocsComponent', () => {
-  let component: ButtonDocsComponent;
-  let fixture: ComponentFixture<ButtonDocsComponent>;
+describe('AlertDocsComponent', () => {
+  let component: AlertDocsComponent;
+  let fixture: ComponentFixture<AlertDocsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonDocsComponent ]
+      imports: [SparkCoreAngularModule],
+      declarations: [ AlertDocsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonDocsComponent);
+    fixture = TestBed.createComponent(AlertDocsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 });

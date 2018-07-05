@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SparkIconSetComponent } from './sprk-icon-set.component';
 
-import { SprkIconSetComponent } from './sprk-icon-set.component';
-
-describe('SprkIconSetComponent', () => {
-  let component: SprkIconSetComponent;
-  let fixture: ComponentFixture<SprkIconSetComponent>;
+describe('SparkIconSetComponent', () => {
+  let component: SparkIconSetComponent;
+  let fixture: ComponentFixture<SparkIconSetComponent>;
+  let iconSetElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SprkIconSetComponent ]
+      declarations: [SparkIconSetComponent]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SprkIconSetComponent);
+    fixture = TestBed.createComponent(SparkIconSetComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    iconSetElement = fixture.nativeElement.querySelector('button');
+  })
 
-  it('should create', () => {
+  it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 });
