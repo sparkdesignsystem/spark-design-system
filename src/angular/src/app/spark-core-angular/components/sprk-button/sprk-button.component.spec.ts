@@ -71,4 +71,39 @@ describe('SparkButtonComponent', () => {
     expect(buttonElement.hasAttribute('data-analytics')).toEqual(true);
     expect(buttonElement.getAttribute('data-analytics')).toEqual('Product: Action: Button 1');
   });
+
+  it('should add a spinner if spinner is true and button is clicked', () => {
+    component.spinner = true;
+    fixture.detectChanges();
+    buttonElement.click();
+    expect(component.isSpinning).toEqual(true);
+    expect(buttonElement.children[0].classList.contains('sprk-c-Spinner')).toEqual(true);
+  });
+
+  it('should set the data-sprk-modal attr if triggerModal contains a value', () => {
+    component.triggerModal = "modalName";
+    fixture.detectChanges();
+    expect(buttonElement.hasAttribute('data-sprk-modal')).toEqual(true);
+    expect(buttonElement.getAttribute('data-sprk-modal')).toEqual('modalName');
+  });
+
+  it('should call trigger a modal when clicked and triggerModal has a value', (done) => {
+    component.triggerModal = "modalName";
+    fixture.detectChanges();
+    component.modal.subscribe((g) => {
+      expect(g).toEqual(component.triggerModal);
+      done();
+    })
+    buttonElement.click();
+  });
+
+  it('should omit a custom event when fireEvent has a value', (done) => {
+    component.fireEvent = "customEventName";
+    fixture.detectChanges();
+    component.customEvent.subscribe((g) => {
+      expect(g).toEqual(component.fireEvent);
+      done();
+    })
+    buttonElement.click();
+  });
 });

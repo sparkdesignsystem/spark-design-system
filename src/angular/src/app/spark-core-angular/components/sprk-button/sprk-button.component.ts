@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
   selector: 'sprk-button',
   template: `<button [ngClass]="getClasses()"
                      [disabled]="isDisabled"
+                     [attr.data-sprk-modal]="triggerModal"
                      [attr.data-analytics]="analyticsString"
                      (click)="checkSpinner($event)"
                      (click)="checkModal($event)"
@@ -21,6 +22,8 @@ export class SparkButtonComponent {
   @Input() additionalClasses: string;
   @Input() triggerModal: string;
   @Input() fireEvent: string;
+  @Output() customEvent = new EventEmitter<any>();
+  @Output() modal = new EventEmitter<any>();
 
   public isSpinning: boolean = false;
 
@@ -66,13 +69,13 @@ export class SparkButtonComponent {
   checkModal(event): void {
     if (this.triggerModal) {
       // TODO: need to refactor modals for this to work
-      event.target.setAttribute('data-sprk-modal', this.triggerModal);
+      this.modal.emit(this.triggerModal);
     }
   }
 
   checkFireEvent(event): void {
     if (this.fireEvent) {
-      //console.log(`fire an event called: ${this.fireEvent}`);
+      this.customEvent.emit(this.fireEvent);
     }
   }
 }
