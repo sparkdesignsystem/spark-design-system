@@ -74,7 +74,8 @@
     "precommit": "lint-staged",
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
     "coverage": "nyc npm test",
-    "visual-regression": "wraith capture wraith/configs/capture.yaml"
+    "visual-regression": "wraith capture wraith/configs/capture.yaml",
+    "publish": "gulp pre-publish && lerna bootstrap && lerna publish"
   },
   "lint-staged": {
     "*.scss": [
