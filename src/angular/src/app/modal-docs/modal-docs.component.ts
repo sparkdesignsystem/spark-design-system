@@ -6,15 +6,10 @@ import { Component, OnInit } from '@angular/core';
     <div class="sprk-u-mbm">
       <sprk-button triggerModal="choiceModal">Choice Modal</sprk-button>
     </div>
-    <div class="sprk-u-mbm">
-      <sprk-button triggerModal="infoModal">Info Modal</sprk-button>
-    </div>
-    <div class="sprk-u-mbm">
-      <sprk-button triggerModal="waitModal">Wait Modal</sprk-button>
-    </div>
-    <sprk-modal name="choiceModal"></sprk-modal>
-    <sprk-modal name="infoModal"></sprk-modal>
-    <sprk-modal name="waitModal"></sprk-modal>
+    <sprk-modal 
+      name="choiceModal" 
+      title="Are you sure?" 
+      modalType="choice">This is some modal content.</sprk-modal>
   `
 })
 export class ModalDocsComponent implements OnInit {

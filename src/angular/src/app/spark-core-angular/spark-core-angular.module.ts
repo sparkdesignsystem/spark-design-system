@@ -11,7 +11,7 @@ import { SparkModalComponent } from './components/sprk-modal/sprk-modal.componen
   declarations: [
     SparkButtonComponent,
     SparkLinkComponent,
-    SparkModalComponent,
+    SparkModalComponent
   ],
   exports: [
     SparkButtonComponent,
