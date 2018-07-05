@@ -16,7 +16,8 @@ describe('SparkAlertComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkAlertComponent);
     component = fixture.componentInstance;
-    alertElement = fixture.nativeElement.querySelector('button');
+    alertElement = fixture.nativeElement.querySelector('div');
+    alertElement = alertElement.querySelector('div');
   })
 
   it('should create itself', () => {
@@ -29,39 +30,45 @@ describe('SparkAlertComponent', () => {
   });
 
   it('should add the correct class if alertType is not set', () => {
-    expect(component.getClasses()).toEqual('sprk-c-Button');
+    fixture.detectChanges();
+    expect(alertElement.classList.toString()).toEqual('sprk-c-Alert__icon');
   });
 
   it('should add the correct class if alertType is success', () => {
     component.alertType = 'success';
-    expect(component.getClasses()).toEqual('sprk-c-Alert sprk-c-Alert--success');
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-c-Alert__icon--success');
   });
 
   it('should add the correct class if alertType is fail', () => {
     component.alertType = 'fail';
-    expect(component.getClasses()).toEqual('sprk-c-Alert sprk-c-Alert--fail');
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-c-Alert__icon--fail');
   });
 
   it('should add the correct class if alertType is info', () => {
     component.alertType = 'info';
-    expect(component.getClasses()).toEqual('sprk-c-Alert sprk-c-Alert--info');
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-c-Alert__icon--info');
   });
 
   it('should add the correct classes if alertType has no value, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
-    expect(component.getClasses()).toEqual('sprk-c-Alert sprk-u-pam sprk-u-man');
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-u-pam sprk-u-man');
   });
 
   it('should add the correct classes if alertType and additionalClasses have values', () => {
     component.alertType = 'info';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
-    expect(component.getClasses()).toEqual('sprk-c-Alert sprk-c-Alert--info sprk-u-pam sprk-u-man');
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-c-Alert__icon--info sprk-u-pam sprk-u-man');
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     component.analyticsString='Product: Alert: Alert 1';
     fixture.detectChanges();
-    expect(alertElement.hasAttribute('data-analytics')).toEqual(true);
-    expect(alertElement.getAttribute('data-analytics')).toEqual('Product: Alert: Alert 1');
+    expect(alertElement.parentElement.hasAttribute('data-analytics')).toEqual(true);
+    expect(alertElement.parentElement.getAttribute('data-analytics')).toEqual('Product: Alert: Alert 1');
   });
 });

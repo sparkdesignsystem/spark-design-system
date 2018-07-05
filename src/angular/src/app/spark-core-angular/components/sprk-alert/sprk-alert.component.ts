@@ -3,9 +3,16 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-alert',
   template: `
-    <div class="sprk-c-Alert" role="alert" data-sprk-alert="container">
+    <div
+      class="sprk-c-Alert"
+      role="alert"
+      data-sprk-alert="container"
+      [attr.data-analytics]="analyticsString">
       <div [ngClass]="getClasses()">
-        <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512" aria-hidden="true">
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--l"
+          viewBox="0 0 448 512"
+          aria-hidden="true">
           <use [attr.xlink:href]="icon"></use>
         </svg>
       </div>
@@ -16,8 +23,15 @@ import { Component, Input } from '@angular/core';
         </p>
       </div>
 
-      <button class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss" data-sprk-alert="dismiss">
-        <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true">
+      <button
+        class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
+        type="button"
+        title="Dismiss"
+        data-sprk-alert="dismiss">
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--l"
+          viewBox="0 0 384 512"
+          aria-hidden="true">
           <use xlink:href="#times"></use>
         </svg>
       </button>
@@ -35,7 +49,7 @@ export class SparkAlertComponent {
 
   getClasses(): string {
     let classArray: Array<String> = [
-    'sprk-c-Alert__icon'
+      'sprk-c-Alert__icon'
     ];
 
     switch (this.alertType) {
