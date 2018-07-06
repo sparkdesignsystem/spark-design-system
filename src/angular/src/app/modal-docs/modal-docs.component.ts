@@ -34,15 +34,16 @@ export class ModalDocsComponent {
   waitVisible: boolean = false;
   infoVisible: boolean = false;
 
-  toggleChoiceModal(payload: string) {
+  toggleChoiceModal(event) {
+    event.preventDefault();
     this.choiceVisible = !this.choiceVisible;
   }
 
-  toggleWaitModal(payload: string) {
+  toggleWaitModal(event) {
     this.waitVisible = !this.waitVisible;
   }
 
-  toggleInfoModal(payload: string) {
+  toggleInfoModal(event) {
     this.infoVisible = !this.infoVisible;
   }
 }

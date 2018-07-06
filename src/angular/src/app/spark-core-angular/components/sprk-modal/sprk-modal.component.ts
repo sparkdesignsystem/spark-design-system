@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener, ElementRef, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
   selector: 'sprk-modal',
   template: `
-    <div *ngIf="isVisible" class="sprk-c-Modal" role="dialog" tabindex="-1" [attr.aria-labelledby]="heading_id" aria-modal="true" [attr.aria-describedby]="content_id">
+    <div *ngIf="isVisible" class="sprk-c-Modal" role="dialog" tabindex="1" [attr.aria-labelledby]="heading_id" aria-modal="true" [attr.aria-describedby]="content_id">
       <header class="sprk-c-Modal__header">
         <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" [id]="heading_id">{{ title }}</h2>
  
@@ -19,7 +19,6 @@ import * as _ from 'lodash';
             <div class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large"></div>
           </div>
         </ng-template>
-        
       </header>
 
       <div class="sprk-c-Modal__body">
@@ -29,12 +28,12 @@ import * as _ from 'lodash';
       </div>
 
       <footer *ngIf="modalType === 'choice'" class="sprk-c-Modal__footer">
-        <button class="sprk-c-Button sprk-u-mrm" [attr.data-analytics]="confirmAnalyticsString">
+        <button class="sprk-c-Button sprk-u-mrm" [attr.data-analytics]="confirmAnalyticsString" (click)="emitConfirmClick($event)" #confirmButton>
           {{ confirmText }}
         </button>
 
         <a href="" class="sprk-b-Link sprk-b-Link--standalone" [attr.data-analytics]="cancelAnalyticsString" 
-        (click)="closeModal($event)">
+        (click)="emitCancelClick($event)">
           {{ cancelText }}
         </a>
       </footer>
@@ -43,7 +42,7 @@ import * as _ from 'lodash';
     <div *ngIf="isVisible" class="sprk-c-ModalMask" tabindex="-1" (click)="closeModal($event)"></div>
   `
 })
-export class SparkModalComponent implements OnInit {
+export class SparkModalComponent {
   @Input() title: string;
   @Input() modalType: string;
   @Input() confirmText: string = 'Confirm';
@@ -52,6 +51,10 @@ export class SparkModalComponent implements OnInit {
   @Input() cancelAnalyticsString: string;
   @Input() isVisible: boolean = false;
   @Output() hide = new EventEmitter<any>();
+  @Output() confirmClick= new EventEmitter<any>();
+  @Output() cancelClick= new EventEmitter<any>();
+
+  @ViewChild('confirmButton') confirmButton: ElementRef;
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
@@ -59,19 +62,27 @@ export class SparkModalComponent implements OnInit {
       this.closeModal(event);
     }
   }
+
   componentID = _.uniqueId();
   heading_id = `modalHeading__${this.componentID}`;
   content_id = `modalContent__${this.componentID}`;
 
+  constructor() { }
+
   closeModal(event): void {
     if (this.modalType != 'wait') {
       event.preventDefault();
-      this.hide.emit(null);
+      this.hide.emit(event);
     }
   }
 
-  constructor() { }
+  emitConfirmClick(event): void {
+    this.confirmClick.emit(event);
+  }
 
-  ngOnInit() {
+  emitCancelClick(event): void {
+    event.preventDefault();
+    this.cancelClick.emit(event);
+    this.closeModal(event);
   }
 }
