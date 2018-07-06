@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
@@ -53,8 +53,6 @@ export class SparkModalComponent {
   @Output() hide = new EventEmitter<any>();
   @Output() confirmClick= new EventEmitter<any>();
   @Output() cancelClick= new EventEmitter<any>();
-
-  @ViewChild('confirmButton') confirmButton: ElementRef;
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
