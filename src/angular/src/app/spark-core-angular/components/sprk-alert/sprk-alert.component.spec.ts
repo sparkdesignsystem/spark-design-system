@@ -17,21 +17,22 @@ describe('SparkAlertComponent', () => {
     fixture = TestBed.createComponent(SparkAlertComponent);
     component = fixture.componentInstance;
     alertElement = fixture.nativeElement.querySelector('div');
-    alertElement = alertElement.querySelector('div');
   })
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 
-  it('getClasses should match what gets set on the element', () => {
+  it('getClasses should match what gets set on the icon', () => {
+    let icon = alertElement.querySelector('div');
     fixture.detectChanges();
-    expect(alertElement.classList.toString()).toEqual(component.getClasses());
+    expect(icon.classList.toString()).toEqual(component.getClasses());
   });
 
   it('should add the correct class if alertType is not set', () => {
+    component.alertType = '';
     fixture.detectChanges();
-    expect(alertElement.classList.toString()).toEqual('sprk-c-Alert__icon');
+    expect(component.getClasses()).toEqual('sprk-c-Alert__icon');
   });
 
   it('should add the correct class if alertType is success', () => {
@@ -65,10 +66,15 @@ describe('SparkAlertComponent', () => {
     expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-c-Alert__icon--info sprk-u-pam sprk-u-man');
   });
 
+  it('should add the dismiss button if dismissible is true', () => {
+    component.dismissible = true;
+    fixture.detectChanges();
+    expect(alertElement.querySelector('button')).toBeTruthy();
+  });
+
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     component.analyticsString='Product: Alert: Alert 1';
     fixture.detectChanges();
-    expect(alertElement.parentElement.hasAttribute('data-analytics')).toEqual(true);
-    expect(alertElement.parentElement.getAttribute('data-analytics')).toEqual('Product: Alert: Alert 1');
+    expect(alertElement.getAttribute('data-analytics')).toEqual('Product: Alert: Alert 1');
   });
 });

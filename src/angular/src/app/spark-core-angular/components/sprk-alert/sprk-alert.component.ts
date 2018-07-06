@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
 
 @Component({
   selector: 'sprk-alert',
@@ -24,10 +25,12 @@ import { Component, Input } from '@angular/core';
       </div>
 
       <button
+        *ngIf="dismissible"
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
         type="button"
         title="Dismiss"
-        data-sprk-alert="dismiss">
+        data-sprk-alert="dismiss"
+        (click)="alertDismiss($event)">
         <svg
           class="sprk-c-Icon sprk-c-Icon--l"
           viewBox="0 0 384 512"
@@ -44,6 +47,7 @@ export class SparkAlertComponent {
   @Input() alertType: string;
   @Input() analyticsString: string;
   @Input() additionalClasses: string;
+  @Input() dismissible: boolean;
 
   public icon: string;
 
@@ -78,4 +82,9 @@ export class SparkAlertComponent {
     return classArray.join(' ');
   }
 
+  alertDismiss(event): void {
+    if (this.dismissible) {
+      dismissAlert(event.currentTarget.parentElement);
+    }
+  }
 }
