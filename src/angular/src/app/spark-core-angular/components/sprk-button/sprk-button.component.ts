@@ -5,7 +5,6 @@ import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
   selector: 'sprk-button',
   template: `<button [ngClass]="getClasses()"
                      [disabled]="isDisabled"
-                     [attr.data-sprk-modal]="triggerModal"
                      [attr.data-analytics]="analyticsString"
                      (click)="checkSpinner($event)"
                      (click)="checkEvent($event)">
