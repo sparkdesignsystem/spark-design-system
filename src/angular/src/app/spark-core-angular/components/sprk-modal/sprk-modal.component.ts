@@ -28,7 +28,7 @@ import * as _ from 'lodash';
       </div>
 
       <footer *ngIf="modalType === 'choice'" class="sprk-c-Modal__footer">
-        <button class="sprk-c-Button sprk-u-mrm" [attr.data-analytics]="confirmAnalyticsString" (click)="emitConfirmClick($event)" #confirmButton>
+        <button class="sprk-c-Button sprk-u-mrm" [attr.data-analytics]="confirmAnalyticsString" (click)="emitConfirmClick($event)">
           {{ confirmText }}
         </button>
 

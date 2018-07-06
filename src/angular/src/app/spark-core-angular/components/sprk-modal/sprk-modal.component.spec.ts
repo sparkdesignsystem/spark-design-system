@@ -5,6 +5,8 @@ describe('SparkModalComponent', () => {
   let component: SparkModalComponent;
   let fixture: ComponentFixture<SparkModalComponent>;
   let modalElement: HTMLElement;
+  let confirmButtonElement: HTMLElement;
+  let cancelLinkElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -17,8 +19,11 @@ describe('SparkModalComponent', () => {
     fixture = TestBed.createComponent(SparkModalComponent);
     component = fixture.componentInstance;
     component.isVisible = true;
+    component.modalType = 'choice';
     fixture.detectChanges();
     modalElement = fixture.nativeElement.querySelector('.sprk-c-Modal');
+    confirmButtonElement = fixture.nativeElement.querySelector('footer .sprk-c-Button');
+    cancelLinkElement = fixture.nativeElement.querySelector('footer .sprk-b-Link');
   });
 
   afterEach(() => {
@@ -53,5 +58,38 @@ describe('SparkModalComponent', () => {
     fixture.detectChanges();
     console.log(modalElement);
     expect(modalElement.querySelector('.sprk-c-Modal__heading').textContent).toEqual('This is my title');
+  });
+
+  it('should emit confirmClick when the confirm button is clicked', (done) => {
+   let called = false;
+   component.confirmClick.subscribe((g) => {
+      called = true;
+      done();
+    })
+    confirmButtonElement.click();
+    expect(called).toEqual(true);
+  });
+
+  it('should emit cancelClick when the cancel link is clicked', (done) => {
+    let called = false;
+    component.cancelClick.subscribe((g) => {
+      called = true;
+      done();
+    })
+    cancelLinkElement.click();
+    expect(called).toEqual(true);
+  });
+
+  it('should emit hide when Escape is pressed', (done) => {
+    let called = false;
+    component.hide.subscribe((g) => {
+      called = true;
+      done();
+    })
+    const event = new KeyboardEvent("keydown",{
+      "key": "Escape"
+    });
+    document.dispatchEvent(event);
+    expect(called).toEqual(true);
   });
 });
