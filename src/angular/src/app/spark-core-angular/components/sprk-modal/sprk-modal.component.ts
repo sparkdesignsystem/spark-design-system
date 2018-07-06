@@ -1,14 +1,12 @@
-import { Component, OnInit, Input, Output, ComponentRef } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
   selector: 'sprk-modal',
   template: `
-    <div class="sprk-c-Modal" role="dialog" tabindex="-1" [attr.aria-labelledby]="heading_id" aria-modal="true" [attr.aria-describedby]="content_id">
+    <div *ngIf="isVisible" class="sprk-c-Modal" role="dialog" tabindex="-1" [attr.aria-labelledby]="heading_id" aria-modal="true" [attr.aria-describedby]="content_id">
       <header class="sprk-c-Modal__header">
-        <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" [id]="heading_id">
-          {{ title }}
-        </h2>
+        <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" [id]="heading_id">{{ title }}</h2>
  
         <button *ngIf="modalType != 'wait'; then modalFooter; else waitSpinner;" class="sprk-c-Modal__icon" type="button" aria-label="Close Modal">
           <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
@@ -35,13 +33,14 @@ import * as _ from 'lodash';
           {{ confirmText }}
         </button>
 
-        <a href="" class="sprk-b-Link sprk-b-Link--standalone" [attr.data-analytics]="cancelAnalyticsString">
+        <a href="" class="sprk-b-Link sprk-b-Link--standalone" [attr.data-analytics]="cancelAnalyticsString" 
+        (click)="closeModal($event)">
           {{ cancelText }}
         </a>
       </footer>
     </div>
 
-    <div class="sprk-c-ModalMask" tabindex="-1"></div>
+    <div *ngIf="isVisible" class="sprk-c-ModalMask" tabindex="-1" (click)="closeModal($event)"></div>
   `
 })
 export class SparkModalComponent implements OnInit {
@@ -51,14 +50,28 @@ export class SparkModalComponent implements OnInit {
   @Input() cancelText: string = 'Cancel';
   @Input() confirmAnalyticsString: string;
   @Input() cancelAnalyticsString: string;
+  @Input() isVisible: boolean = false;
+  @Output() hide = new EventEmitter<any>();
 
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if(this.isVisible && event.key === 'Escape') {
+      this.closeModal(event);
+    }
+  }
   componentID = _.uniqueId();
   heading_id = `modalHeading__${this.componentID}`;
   content_id = `modalContent__${this.componentID}`;
+
+  closeModal(event): void {
+    if (this.modalType != 'wait') {
+      event.preventDefault();
+      this.hide.emit(null);
+    }
+  }
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

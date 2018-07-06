@@ -8,8 +8,7 @@ import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
                      [attr.data-sprk-modal]="triggerModal"
                      [attr.data-analytics]="analyticsString"
                      (click)="checkSpinner($event)"
-                     (click)="checkModal($event)"
-                     (click)="checkFireEvent($event)">
+                     (click)="checkEvent($event)">
                <ng-content></ng-content>
              </button>`,
 })
@@ -23,7 +22,6 @@ export class SparkButtonComponent {
   @Input() triggerModal: string;
   @Input() fireEvent: string;
   @Output() customEvent = new EventEmitter<any>();
-  @Output() modal = new EventEmitter<any>();
 
   public isSpinning: boolean = false;
 
@@ -66,13 +64,7 @@ export class SparkButtonComponent {
     }
   }
 
-  checkModal(event): void {
-    if (this.triggerModal) {
-      this.modal.emit(this.triggerModal);
-    }
-  }
-
-  checkFireEvent(event): void {
+  checkEvent(event): void {
     if (this.fireEvent) {
       this.customEvent.emit(this.fireEvent);
     }
