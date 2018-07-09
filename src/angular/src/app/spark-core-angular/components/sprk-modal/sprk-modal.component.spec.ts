@@ -92,4 +92,42 @@ describe('SparkModalComponent', () => {
     document.dispatchEvent(event);
     expect(called).toEqual(true);
   });
+
+  it('should not emit hide when Escape is pressed on a wait type', (done) => {
+    let called = false;
+    component.modalType = "wait";
+    fixture.detectChanges();
+    component.hide.subscribe((g) => {
+      called = true;
+      done();
+    })
+    const event = new KeyboardEvent("keydown",{
+      "key": "Escape"
+    });
+    document.dispatchEvent(event);
+    // wait for 500ms then go, the expected behavior causes a timeout
+    setTimeout(() => {
+      done();
+      expect(called).toEqual(false);
+    }, 500);
+  });
+
+  it('should do nothing when a key is pressed that is not Escape', (done) => {
+    let called = false;
+    component.isVisible = false;
+    fixture.detectChanges();
+    component.hide.subscribe((g) => {
+      called = true;
+      done();
+    })
+    const event = new KeyboardEvent("keydown",{
+      "key": "Control"
+    });
+    document.dispatchEvent(event);
+    // wait for 500ms then go, the expected behavior causes a timeout
+    setTimeout(() => {
+      done();
+      expect(called).toEqual(false);
+    }, 500);
+  });
 });
