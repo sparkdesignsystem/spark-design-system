@@ -3,7 +3,10 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-link',
   template: `
-    <a [ngClass]="getClasses()" [href]="href">
+    <a
+      [ngClass]="getClasses()"
+      [href]="href"
+      [attr.data-analytics]="analyticsString">
       <ng-content></ng-content>
     </a>
   `,

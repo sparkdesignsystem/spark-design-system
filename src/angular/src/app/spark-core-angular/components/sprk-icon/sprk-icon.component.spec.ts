@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkIconComponent } from './sprk-icon.component';
 
-describe('SparkAlertComponent', () => {
+describe('SparkIconComponent', () => {
   let component: SparkIconComponent;
   let fixture: ComponentFixture<SparkIconComponent>;
   let iconElement: HTMLElement;

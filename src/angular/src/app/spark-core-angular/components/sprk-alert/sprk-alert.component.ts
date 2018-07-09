@@ -8,7 +8,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
       class="sprk-c-Alert"
       role="alert"
       [attr.data-analytics]="analyticsString">
-      <div [ngClass]="getClasses()" id="foo">
+      <div [ngClass]="getClasses()">
         <svg
           class="sprk-c-Icon sprk-c-Icon--l"
           viewBox="0 0 448 512"

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkLinkComponent } from './sprk-link.component';
 
-describe('SparkAlertComponent', () => {
+describe('SparkLinkComponent', () => {
   let component: SparkLinkComponent;
   let fixture: ComponentFixture<SparkLinkComponent>;
   let linkElement: HTMLElement;
@@ -16,7 +16,7 @@ describe('SparkAlertComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkLinkComponent);
     component = fixture.componentInstance;
-    linkElement = fixture.nativeElement.querySelector('button');
+    linkElement = fixture.nativeElement.querySelector('a');
   })
 
   it('should create itself', () => {

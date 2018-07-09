@@ -16,7 +16,7 @@ describe('SparkIconSetComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkIconSetComponent);
     component = fixture.componentInstance;
-    iconSetElement = fixture.nativeElement.querySelector('button');
+    iconSetElement = fixture.nativeElement.querySelector('svg');
   })
 
   it('should create itself', () => {
