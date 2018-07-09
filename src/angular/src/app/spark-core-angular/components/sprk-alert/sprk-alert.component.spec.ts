@@ -24,7 +24,8 @@ describe('SparkAlertComponent', () => {
   });
 
   it('getClasses should match what gets set on the icon', () => {
-    let icon = alertElement.querySelector('div');
+    let icon = alertElement.querySelector('#foo');
+    console.log(alertElement.innerHTML);
     fixture.detectChanges();
     expect(icon.classList.toString()).toEqual(component.getClasses());
   });
@@ -73,8 +74,10 @@ describe('SparkAlertComponent', () => {
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
-    component.analyticsString='Product: Alert: Alert 1';
+    const alertStr = 'Alert One';
+    component.analyticsString = alertStr;
     fixture.detectChanges();
-    expect(alertElement.getAttribute('data-analytics')).toEqual('Product: Alert: Alert 1');
+    console.log(alertElement.getAttribute('data-analytics'));
+    expect(alertElement.getAttribute('data-analytics')).toEqual(alertStr);
   });
 });

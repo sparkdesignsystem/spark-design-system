@@ -12,7 +12,6 @@ import { Component, Input } from '@angular/core';
 
 export class SparkIconComponent {
   @Input() iconType: string;
-  @Input() analyticsString: string;
   @Input() additionalClasses: string;
 
   public icon: string;

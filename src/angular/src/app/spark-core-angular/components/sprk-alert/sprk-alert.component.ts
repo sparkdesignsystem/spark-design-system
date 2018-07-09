@@ -7,9 +7,8 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
     <div
       class="sprk-c-Alert"
       role="alert"
-      data-sprk-alert="container"
       [attr.data-analytics]="analyticsString">
-      <div [ngClass]="getClasses()">
+      <div [ngClass]="getClasses()" id="foo">
         <svg
           class="sprk-c-Icon sprk-c-Icon--l"
           viewBox="0 0 448 512"
@@ -29,7 +28,6 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
         type="button"
         title="Dismiss"
-        data-sprk-alert="dismiss"
         (click)="alertDismiss($event)">
         <svg
           class="sprk-c-Icon sprk-c-Icon--l"
