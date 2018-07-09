@@ -15,7 +15,6 @@ import { Component, OnInit, NgModule } from '@angular/core';
 export class IconSetDocsComponent implements OnInit {
   constructor() { }
 
-
    icons = [
      'check',
      'bell',
