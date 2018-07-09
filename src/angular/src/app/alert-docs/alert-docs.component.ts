@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
       </h2>
 
       <sprk-alert alertType="info">
-        This is a info Spark alert!
+        This is an info Spark alert!
       </sprk-alert>
     </div>
 
