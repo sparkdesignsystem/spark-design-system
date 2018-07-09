@@ -7,14 +7,10 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
     <div
       class="sprk-c-Alert"
       role="alert"
-      [attr.data-analytics]="analyticsString">
+      [attr.data-analytics]="analyticsString"
+      [ngClass]="getClassesAlertContainer">
       <div [ngClass]="getClasses()">
-        <svg
-          class="sprk-c-Icon sprk-c-Icon--l"
-          viewBox="0 0 448 512"
-          aria-hidden="true">
-          <use [attr.xlink:href]="icon"></use>
-        </svg>
+        <sprk-icon iconType="icon" additionalClasses="sprk-c-Icon--l"></sprk-icon>
       </div>
 
       <div class="sprk-c-Alert__text">
@@ -57,27 +53,41 @@ export class SparkAlertComponent {
     switch (this.alertType) {
       case 'success':
         classArray.push('sprk-c-Alert__icon--success');
-        this.icon = '#check';
+        this.icon = 'check';
         break;
       case 'info':
         classArray.push('sprk-c-Alert__icon--info');
-          this.icon = '#bell';
+          this.icon = 'bell';
         break;
       case 'fail':
         classArray.push('sprk-c-Alert__icon--fail');
-        this.icon = '#exclamation';
+        this.icon = 'exclamation';
         break;
       default:
         break;
     }
 
-    if(this.additionalClasses) {
+    if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       })
     }
 
     return classArray.join(' ');
+  }
+
+  getClassesAlertContainer(): string {
+    let alertClassArray: Array<String> = [
+      'sprk-c-Alert'
+    ];
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach((className) => {
+        alertClassArray.push(className);
+      })
+    }
+
+    return alertClassArray.join(' ');
   }
 
   alertDismiss(event): void {

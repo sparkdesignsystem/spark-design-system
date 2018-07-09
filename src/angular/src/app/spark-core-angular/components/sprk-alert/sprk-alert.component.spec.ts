@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkAlertComponent } from './sprk-alert.component';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 
 describe('SparkAlertComponent', () => {
   let component: SparkAlertComponent;
@@ -8,7 +9,10 @@ describe('SparkAlertComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkAlertComponent]
+      declarations: [
+        SparkAlertComponent,
+        SparkIconComponent
+      ]
     })
     .compileComponents();
   }));
@@ -27,6 +31,11 @@ describe('SparkAlertComponent', () => {
     let icon = alertElement.querySelector('div');
     fixture.detectChanges();
     expect(icon.classList.toString()).toEqual(component.getClasses());
+  });
+
+  it('getClassesAlertContainer should match what gets set on the container', () => {
+    fixture.detectChanges();
+    expect(alertElement.classList.toString()).toEqual(component.getClassesAlertContainer());
   });
 
   it('should add the correct class if alertType is not set', () => {
