@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 @Component({
   selector: 'sprk-icon-set-docs',
@@ -12,7 +12,8 @@ import { Component, OnInit, NgModule } from '@angular/core';
   `,
   styles: ['']
 })
-export class IconSetDocsComponent implements OnInit {
+
+export class IconSetDocsComponent {
   constructor() { }
 
    icons = [
@@ -54,9 +55,4 @@ export class IconSetDocsComponent implements OnInit {
      'update',
      'youtube',
    ];
-
-   ngOnInit() {
-
-   }
-
 }
