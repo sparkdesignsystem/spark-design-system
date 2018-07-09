@@ -4,13 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-modal-docs',
   template: `
     <div class="sprk-u-mbm">
-      <sprk-button (click)="toggleChoiceModal($event)">Choice Modal</sprk-button>
+      <sprk-button (click)="toggleChoiceModal($event)" additionalClasses="choice-button">Choice Modal</sprk-button>
     </div>
     <div class="sprk-u-mbm">
-      <sprk-button (click)="toggleInfoModal($event)">Info Modal</sprk-button>
+      <sprk-button (click)="toggleInfoModal($event)" additionalClasses="info-button">Info Modal</sprk-button>
     </div>
     <div>
-      <sprk-button (click)="toggleWaitModal($event)">Wait Modal</sprk-button>
+      <sprk-button (click)="toggleWaitModal($event)" additionalClasses="wait-button">Wait Modal</sprk-button>
     </div>
     <sprk-modal 
       [(isVisible)]="choiceVisible"
