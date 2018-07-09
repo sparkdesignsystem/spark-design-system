@@ -10,7 +10,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
       [attr.data-analytics]="analyticsString"
       [ngClass]="getClassesAlertContainer">
       <div [ngClass]="getClasses()">
-        <sprk-icon iconType="icon" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+        <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--l"></sprk-icon>
       </div>
 
       <div class="sprk-c-Alert__text">
@@ -25,12 +25,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
         type="button"
         title="Dismiss"
         (click)="alertDismiss($event)">
-        <svg
-          class="sprk-c-Icon sprk-c-Icon--l"
-          viewBox="0 0 384 512"
-          aria-hidden="true">
-          <use xlink:href="#times"></use>
-        </svg>
+        <sprk-icon iconType="times" additionalClasses="sprk-c-Icon--l"></sprk-icon>
       </button>
     </div>
   `,
@@ -91,8 +86,6 @@ export class SparkAlertComponent {
   }
 
   alertDismiss(event): void {
-    if (this.dismissible) {
-      dismissAlert(event.currentTarget.parentElement);
-    }
+    dismissAlert(event.currentTarget.parentElement);
   }
 }

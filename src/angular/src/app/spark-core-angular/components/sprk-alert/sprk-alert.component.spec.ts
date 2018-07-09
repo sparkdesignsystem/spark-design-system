@@ -75,6 +75,12 @@ describe('SparkAlertComponent', () => {
     expect(component.getClasses()).toEqual('sprk-c-Alert__icon sprk-c-Alert__icon--info sprk-u-pam sprk-u-man');
   });
 
+  it('should add the correct classes if additionalClasses is set on container', () => {
+    component.additionalClasses = 'sprk-u-pam';
+    fixture.detectChanges();
+    expect(component.getClassesAlertContainer()).toEqual('sprk-c-Alert sprk-u-pam');
+  });
+
   it('should add the dismiss button if dismissible is true', () => {
     component.dismissible = true;
     fixture.detectChanges();
@@ -86,5 +92,13 @@ describe('SparkAlertComponent', () => {
     component.analyticsString = alertStr;
     fixture.detectChanges();
     expect(alertElement.getAttribute('data-analytics')).toEqual(alertStr);
+  });
+
+  it('should hide the alert if the dismiss button is clicked', () => {
+    component.dismissible = true;
+    fixture.detectChanges();
+    alertElement.querySelector('button').click()
+    fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-u-Display--none')).toBeTruthy();
   });
 });
