@@ -5,10 +5,9 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
   selector: 'sprk-alert',
   template: `
     <div
-      class="sprk-c-Alert"
       role="alert"
       [attr.data-analytics]="analyticsString"
-      [ngClass]="getClassesAlertContainer">
+      [ngClass]="getClassesAlertContainer()">
       <div [ngClass]="getClasses()">
         <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--l"></sprk-icon>
       </div>
