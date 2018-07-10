@@ -107,6 +107,10 @@
 //
 // Angular site specific styling
 //
+* {
+  font-family: 'myriad pro', sans-serif;
+}
+
 .#{$app-namespace}-c-AngularHeader {
   position: static;
 }
