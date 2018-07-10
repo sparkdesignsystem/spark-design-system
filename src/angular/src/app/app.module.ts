@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     IntroDocsComponent,
     LinkDocsComponent,
-    ModalDocsComponent
+    ModalDocsComponent,
     IconSetDocsComponent,
   ],
   imports: [

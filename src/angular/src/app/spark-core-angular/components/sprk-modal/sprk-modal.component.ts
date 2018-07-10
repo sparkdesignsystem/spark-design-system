@@ -8,11 +8,13 @@ import * as _ from 'lodash';
       <header class="sprk-c-Modal__header">
         <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" [id]="heading_id">{{ title }}</h2>
  
-        <button *ngIf="modalType != 'wait'; then modalFooter; else waitSpinner;" class="sprk-c-Modal__icon" type="button" aria-label="Close Modal">
-          <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
-            <use xlink:href="#times"></use>
-          </svg>
-        </button>
+        <div *ngIf="modalType != 'wait'; then dismissButton; else waitSpinner;"></div>
+        
+        <ng-template #dismissButton>
+          <button class="sprk-c-Modal__icon" type="button" aria-label="Close Modal" (click)="closeModal($event)">
+              <sprk-icon iconType="times" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+          </button>
+        </ng-template>
         
         <ng-template #waitSpinner>
           <div class="sprk-c-Modal__icon">
