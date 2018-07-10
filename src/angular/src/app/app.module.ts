@@ -8,8 +8,12 @@ import { ButtonDocsComponent } from './button-docs/button-docs.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IntroDocsComponent } from './intro-docs/intro-docs.component';
 import { LinkDocsComponent } from './link-docs/link-docs.component';
+import { AlertDocsComponent } from './alert-docs/alert-docs.component';
+import { IconSetDocsComponent } from './icon-set-docs/icon-set-docs.component';
 
 const appRoutes: Routes = [
+  { path: 'alerts', component: AlertDocsComponent },
+  { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
   { path: '', component: IntroDocsComponent },
@@ -19,10 +23,12 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    AlertDocsComponent,
     ButtonDocsComponent,
     PageNotFoundComponent,
     IntroDocsComponent,
     LinkDocsComponent,
+    IconSetDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(

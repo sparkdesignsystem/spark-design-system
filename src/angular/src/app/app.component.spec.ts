@@ -1,13 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import {RouterTestingModule} from '@angular/router/testing'
+import { RouterTestingModule } from '@angular/router/testing';
+import { SparkIconSetComponent } from './spark-core-angular/components/sprk-icon-set/sprk-icon-set.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule ],
       declarations: [
-        AppComponent
+        AppComponent,
+        SparkIconSetComponent
       ],
     }).compileComponents();
   }));

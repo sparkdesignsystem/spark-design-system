@@ -7,8 +7,13 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
+      "prefix": "sprk",
+      "schematics": {
+        "component": {
+         "inlineStyle": true,
+         "inlineTemplate": true
+       }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -19,8 +24,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              { "glob": "**/*", "input": "src/assets/", "output": "/assets/" }
             ],
             "styles": [
               "src/styles.css"

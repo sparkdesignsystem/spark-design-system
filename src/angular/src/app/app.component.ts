@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
 
 @Component({
   selector: 'app-root',
