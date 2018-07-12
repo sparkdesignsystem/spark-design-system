@@ -7,6 +7,8 @@ import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
 import { SparkWideNavigationComponent } from './components/sprk-wide-navigation/sprk-wide-navigation.component';
 import { SparkNarrowNavigationComponent } from './components/sprk-narrow-navigation/sprk-narrow-navigation.component';
+import { SparkAccordionComponent } from './components/sprk-accordion/sprk-accordion.component';
+import { SparkAccordionItemComponent } from './components/sprk-accordion-item/sprk-accordion-item.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -16,6 +18,8 @@ import { RouterModule } from '@angular/router';
   ],
   declarations: [
     SparkAlertComponent,
+    SparkAccordionComponent,
+    SparkAccordionItemComponent,
     SparkButtonComponent,
     SparkLinkComponent,
     SparkIconSetComponent,
@@ -25,6 +29,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     SparkAlertComponent,
+    SparkAccordionComponent,
+    SparkAccordionItemComponent,
     SparkButtonComponent,
     SparkLinkComponent,
     SparkIconSetComponent,

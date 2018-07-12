@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { IntroDocsComponent } from './intro-docs/intro-docs.component';
 import { LinkDocsComponent } from './link-docs/link-docs.component';
 import { AlertDocsComponent } from './alert-docs/alert-docs.component';
+import { AccordionDocsComponent } from './accordion-docs/accordion-docs.component';
 import { IconSetDocsComponent } from './icon-set-docs/icon-set-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
 
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
   { path: 'navigation', component: NavigationDocsComponent },
+  { path: 'accordions', component: AccordionDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AlertDocsComponent,
+    AccordionDocsComponent,
     ButtonDocsComponent,
     PageNotFoundComponent,
     IntroDocsComponent,
