@@ -10,12 +10,14 @@ import { IntroDocsComponent } from './intro-docs/intro-docs.component';
 import { LinkDocsComponent } from './link-docs/link-docs.component';
 import { AlertDocsComponent } from './alert-docs/alert-docs.component';
 import { IconSetDocsComponent } from './icon-set-docs/icon-set-docs.component';
+import { ModalDocsComponent } from './modal-docs/modal-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
   { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
+  { path: 'modals', component: ModalDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     IntroDocsComponent,
     LinkDocsComponent,
+    ModalDocsComponent,
     IconSetDocsComponent,
   ],
   imports: [
