@@ -123,9 +123,10 @@
 }
 
 .#{$app-namespace}-c-AngularNav a {
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   transition: all 0.3s ease-out;
 
   &:hover {

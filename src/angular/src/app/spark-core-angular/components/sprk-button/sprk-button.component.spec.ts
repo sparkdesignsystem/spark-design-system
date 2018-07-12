@@ -34,27 +34,32 @@ describe('SparkButtonComponent', () => {
 
   it('should add the correct class if buttonType is secondary', () => {
     component.buttonType = 'secondary';
+    fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Button sprk-c-Button--secondary');
   });
 
   it('should add the correct class if buttonType is tertiary', () => {
     component.buttonType = 'tertiary';
+    fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Button sprk-c-Button--tertiary');
   });
 
   it('should add the correct class if buttonType is removal', () => {
     component.buttonType = 'removal';
+    fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Button sprk-c-Button--removal');
   });
 
   it('should add the correct classes if buttonType has no value, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
+    fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Button sprk-u-pam sprk-u-man');
   });
 
   it('should add the correct classes if buttonType and additionalClasses have values', () => {
     component.buttonType = 'secondary';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
+    fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Button sprk-c-Button--secondary sprk-u-pam sprk-u-man');
   });
 
@@ -78,23 +83,6 @@ describe('SparkButtonComponent', () => {
     buttonElement.click();
     expect(component.isSpinning).toEqual(true);
     expect(buttonElement.children[0].classList.contains('sprk-c-Spinner')).toEqual(true);
-  });
-
-  it('should set the data-sprk-modal attr if triggerModal contains a value', () => {
-    component.triggerModal = "modalName";
-    fixture.detectChanges();
-    expect(buttonElement.hasAttribute('data-sprk-modal')).toEqual(true);
-    expect(buttonElement.getAttribute('data-sprk-modal')).toEqual('modalName');
-  });
-
-  it('should call trigger a modal when clicked and triggerModal has a value', (done) => {
-    component.triggerModal = "modalName";
-    fixture.detectChanges();
-    component.modal.subscribe((g) => {
-      expect(g).toEqual(component.triggerModal);
-      done();
-    })
-    buttonElement.click();
   });
 
   it('should omit a custom event when fireEvent has a value', (done) => {

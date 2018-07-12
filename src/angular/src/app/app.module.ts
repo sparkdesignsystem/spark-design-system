@@ -11,6 +11,7 @@ import { LinkDocsComponent } from './link-docs/link-docs.component';
 import { AlertDocsComponent } from './alert-docs/alert-docs.component';
 import { AccordionDocsComponent } from './accordion-docs/accordion-docs.component';
 import { IconSetDocsComponent } from './icon-set-docs/icon-set-docs.component';
+import { ModalDocsComponent } from './modal-docs/modal-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
 
 const appRoutes: Routes = [
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'links', component: LinkDocsComponent },
   { path: 'navigation', component: NavigationDocsComponent },
   { path: 'accordions', component: AccordionDocsComponent },
+  { path: 'modals', component: ModalDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     IntroDocsComponent,
     LinkDocsComponent,
+    ModalDocsComponent,
     IconSetDocsComponent,
     NavigationDocsComponent
   ],
