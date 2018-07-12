@@ -23,7 +23,25 @@ export class NavigationDocsComponent {
     {
       text: 'Item 1',
       href: '/alerts',
-      active: false
+      active: false,
+      subNav: [
+        {
+          text: 'Item 1',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 2',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 3',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 4',
+          href: '#nogo'
+        },
+      ]
     },
     {
       text: 'Item 2',

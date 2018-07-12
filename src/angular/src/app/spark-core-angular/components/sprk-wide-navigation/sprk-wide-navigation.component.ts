@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'sprk-wide-navigation',
@@ -34,8 +34,11 @@ import { Component, Input } from '@angular/core';
 export class SparkWideNavigationComponent {
   @Input() links: Array<Object>;
   @Input() additionalClasses: string;
-  subNavVisible: boolean = false;
-  isExpanded: boolean = false;
+
+  @HostListener('document:focusin', ['$event'])
+  handleFocusEvent(event: FocusEvent) {
+    this.hideAllDropDowns(event);
+  }
 
   hideAllDropDowns(event): void {
     event.stopPropagation();
