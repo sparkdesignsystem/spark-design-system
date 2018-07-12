@@ -42,7 +42,6 @@ import { Component, Input, HostListener } from '@angular/core';
   styles: ['']
 })
 
-
 export class SparkWideNavigationComponent {
   @Input() links: Array<Object>;
   @Input() additionalClasses: string;

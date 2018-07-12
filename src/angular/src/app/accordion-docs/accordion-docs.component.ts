@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
       <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">Primary Accordion</h2>
         <sprk-accordion>
-          <sprk-accordion-item title="This is a title">
+          <sprk-accordion-item title="This is a title" additionalClasses="sprk-u-mbs">
             <p>This is some content.</p> 
           </sprk-accordion-item>
           <sprk-accordion-item title="This is another title">
