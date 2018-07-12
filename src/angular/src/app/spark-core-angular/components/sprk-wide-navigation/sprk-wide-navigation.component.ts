@@ -5,12 +5,18 @@ import { Component, Input, HostListener } from '@angular/core';
   template: `
     <nav role="navigation">
       <ul [ngClass]="getClasses()" data-sprk-navigation="wide">
-        <li *ngFor="let link of links" class="sprk-c-WideNavigation__item" [attr.aria-haspopup]="link.subNav ? 'true': null" [attr.aria-expanded]="link.focused ? 'true': 'false'"
+        <li *ngFor="let link of links" 
+            class="sprk-c-WideNavigation__item" 
+            [attr.aria-haspopup]="link.subNav ? 'true': null" 
+            [attr.aria-expanded]="link.subNav && link.focused ? 'true': 'false'"
           (focusin)="hideAllDropDowns($event); link.focused = true"
           (mouseenter)="hideAllDropDowns($event); link.focused = true"
           (mouseleave)="hideAllDropDowns($event)"
         >
-          <a class="sprk-c-WideNavigation__link" [routerLink]="link.href" href="#nogo">{{ link.text }}
+          <a class="sprk-c-WideNavigation__link" 
+             [routerLink]="link.href" 
+             [attr.data-analytics]="link.analyticsString"
+             href="#nogo">{{ link.text }}
           <sprk-icon *ngIf="link.subNav" iconType="chevron-down"></sprk-icon> 
           </a>
           <ul *ngIf="link.subNav" 
@@ -19,8 +25,14 @@ import { Component, Input, HostListener } from '@angular/core';
               'sprk-c-WideNavigation--sub': true,
               'sprk-u-Display--none': !link.focused }"
           >
-            <li *ngFor="let sublink of link.subNav; let last = last" class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub">
-              <a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" href="#nogo">{{ sublink.text }}</a>
+            <li *ngFor="let sublink of link.subNav; let last = last" 
+                class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub">
+              <a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" 
+                 [routerLink]="sublink.href"
+                 [attr.data-analytics]="sublink.analyticsString"
+                 href="#nogo">
+                {{ sublink.text }}
+              </a>
               </li>
           </ul>
         </li>
