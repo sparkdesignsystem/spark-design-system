@@ -4,14 +4,24 @@ import * as _ from 'lodash';
 @Component({
   selector: 'sprk-modal',
   template: `
-    <div *ngIf="isVisible" class="sprk-c-Modal" role="dialog" tabindex="1" [attr.aria-labelledby]="heading_id" aria-modal="true" [attr.aria-describedby]="content_id">
+    <div *ngIf="isVisible" 
+         class="sprk-c-Modal" 
+         role="dialog" 
+         tabindex="1" 
+         [attr.aria-labelledby]="heading_id" 
+         aria-modal="true" 
+         [attr.aria-describedby]="content_id">
       <header class="sprk-c-Modal__header">
-        <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" [id]="heading_id">{{ title }}</h2>
+        <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" 
+            [id]="heading_id">{{ title }}</h2>
  
         <div *ngIf="modalType != 'wait'; then dismissButton; else waitSpinner;"></div>
         
         <ng-template #dismissButton>
-          <button class="sprk-c-Modal__icon" type="button" aria-label="Close Modal" (click)="closeModal($event)">
+          <button class="sprk-c-Modal__icon" 
+                  type="button" 
+                  aria-label="Close Modal" 
+                  (click)="closeModal($event)">
               <sprk-icon iconType="times" additionalClasses="sprk-c-Icon--l"></sprk-icon>
           </button>
         </ng-template>
@@ -30,18 +40,25 @@ import * as _ from 'lodash';
       </div>
 
       <footer *ngIf="modalType === 'choice'" class="sprk-c-Modal__footer">
-        <button class="sprk-c-Button sprk-u-mrm" [attr.data-analytics]="confirmAnalyticsString" (click)="emitConfirmClick($event)">
+        <button class="sprk-c-Button sprk-u-mrm" 
+                [attr.data-analytics]="confirmAnalyticsString" 
+                (click)="emitConfirmClick($event)">
           {{ confirmText }}
         </button>
 
-        <a href="" class="sprk-b-Link sprk-b-Link--standalone" [attr.data-analytics]="cancelAnalyticsString" 
-        (click)="emitCancelClick($event)">
+        <a href="#nogo" 
+           class="sprk-b-Link sprk-b-Link--standalone" 
+           [attr.data-analytics]="cancelAnalyticsString" 
+           (click)="emitCancelClick($event)">
           {{ cancelText }}
         </a>
       </footer>
     </div>
 
-    <div *ngIf="isVisible" class="sprk-c-ModalMask" tabindex="-1" (click)="closeModal($event)"></div>
+    <div *ngIf="isVisible" 
+         class="sprk-c-ModalMask" 
+         tabindex="-1" 
+         (click)="closeModal($event)"></div>
   `
 })
 export class SparkModalComponent {

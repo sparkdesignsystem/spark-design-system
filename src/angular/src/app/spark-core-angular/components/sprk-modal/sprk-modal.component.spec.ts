@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkModalComponent } from './sprk-modal.component';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 
 describe('SparkModalComponent', () => {
   let component: SparkModalComponent;
@@ -10,7 +11,7 @@ describe('SparkModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SparkModalComponent ]
+      declarations: [ SparkModalComponent, SparkIconComponent ]
     })
     .compileComponents();
   }));
