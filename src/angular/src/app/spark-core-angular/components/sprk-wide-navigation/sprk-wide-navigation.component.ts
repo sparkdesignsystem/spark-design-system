@@ -6,12 +6,12 @@ import { Component, Input } from '@angular/core';
     <nav role="navigation">
       <ul [ngClass]="getClasses()" data-sprk-navigation="wide">
         <li *ngFor="let link of links" class="sprk-c-WideNavigation__item">
-          <a class="sprk-c-WideNavigation__link" [attr.href]="link.href">{{ link.text }}
+          <a class="sprk-c-WideNavigation__link" [routerLink]="link.href">{{ link.text }}
           <sprk-icon *ngIf="link.subNav" iconType="chevron-down"></sprk-icon> 
           </a>
           <ul *ngIf="link.subNav" class="sprk-c-WideNavigation sprk-c-WideNavigation--sub sprk-u-Display--none">
             <li *ngFor="let sublink of link.subNav" class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub">
-              <a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub" [attr.href]="sublink.href">{{ sublink.text }}</a>
+              <a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub">{{ sublink.text }}</a>
               </li>
           </ul>
         </li>
@@ -20,6 +20,7 @@ import { Component, Input } from '@angular/core';
     </nav>`,
   styles: ['']
 })
+
 
 export class SparkWideNavigationComponent {
   @Input() links: Array<Object>;

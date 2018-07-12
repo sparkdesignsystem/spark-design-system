@@ -7,10 +7,12 @@ import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
 import { SparkWideNavigationComponent } from './components/sprk-wide-navigation/sprk-wide-navigation.component';
 import { SparkNarrowNavigationComponent } from './components/sprk-narrow-navigation/sprk-narrow-navigation.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule
   ],
   declarations: [
     SparkAlertComponent,

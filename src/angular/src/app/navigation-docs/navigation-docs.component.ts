@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sprk-alert-docs',
+  selector: 'sprk-navigation-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">
@@ -22,63 +22,63 @@ export class NavigationDocsComponent {
   links = [
     {
       text: 'Item 1',
-      href: 'www.google.com',
+      href: '/alerts',
       active: false
     },
     {
       text: 'Item 2',
-      href: 'www.google.com',
+      href: '#nogo',
       active: false,
       subNav: [
         {
           text: 'Item 1',
-          href: 'www.google.com'
+          href: '#nogo'
         },
         {
           text: 'Item 2',
-          href: 'www.google.com'
+          href: '#nogo'
         },
         {
           text: 'Item 3',
-          href: 'www.google.com'
+          href: '#nogo'
         },
         {
           text: 'Item 4',
-          href: 'www.google.com'
+          href: '#nogo'
         },
       ]
     },
     {
       text: 'Item 3',
-      href: 'www.google.com',
+      href: '#nogo',
       active: false
     },
     {
       text: 'Item 4',
-      href: 'www.google.com',
+      href: '#nogo',
       active: false,
       subNav: [
         {
           text: 'Item 1',
-          href: 'www.google.com'
+          href: '#nogo'
         },
         {
           text: 'Item 2',
-          href: 'www.google.com'
+          href: '#nogo'
         },
         {
           text: 'Item 3',
-          href: 'www.google.com'
+          href: '#nogo'
         },
         {
           text: 'Item 4',
-          href: 'www.google.com'
+          href: '#nogo'
         },
       ]
     },
     {
       text: 'Item 5',
-      href: 'www.google.com',
+      href: '#nogo',
       active: false
     },
   ];
