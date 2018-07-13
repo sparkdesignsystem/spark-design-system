@@ -6,6 +6,7 @@ import { SparkLinkComponent } from './components/sprk-link/sprk-link.component';
 import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.component';
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
 import { SparkModalComponent } from './components/sprk-modal/sprk-modal.component';
+import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
 
 @NgModule({
   imports: [
@@ -17,11 +18,13 @@ import { SparkModalComponent } from './components/sprk-modal/sprk-modal.componen
     SparkLinkComponent,
     SparkIconSetComponent,
     SparkIconComponent,
-    SparkModalComponent
+    SparkModalComponent,
+    SparkDividerComponent,
   ],
   exports: [
     SparkAlertComponent,
     SparkButtonComponent,
+    SparkDividerComponent,
     SparkLinkComponent,
     SparkModalComponent,
     SparkLinkComponent,
