@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'divider-docs',
@@ -17,11 +17,6 @@ import { Component, OnInit } from '@angular/core';
     </div>
   `
 })
-export class DividerDocsComponent implements OnInit {
-
+export class DividerDocsComponent {
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
