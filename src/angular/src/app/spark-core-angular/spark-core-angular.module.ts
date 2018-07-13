@@ -7,6 +7,8 @@ import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
 import { SparkModalComponent } from './components/sprk-modal/sprk-modal.component';
 import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
+import { SparkListComponent } from './components/sprk-list/sprk-list.component';
+import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
     SparkIconComponent,
     SparkModalComponent,
     SparkDividerComponent,
+    SparkListComponent,
+    SparkListItemComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -29,7 +33,9 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
     SparkModalComponent,
     SparkLinkComponent,
     SparkIconSetComponent,
-    SparkIconComponent
+    SparkIconComponent,
+    SparkListComponent,
+    SparkListItemComponent
   ],
 })
 export class SparkCoreAngularModule { }
