@@ -5,7 +5,7 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 describe('SparkAccordionComponent', () => {
   let component: SparkAccordionComponent;
   let fixture: ComponentFixture<SparkAccordionComponent>;
-  let alertElement: HTMLElement;
+  let accordionElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -20,10 +20,16 @@ describe('SparkAccordionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkAccordionComponent);
     component = fixture.componentInstance;
-    alertElement = fixture.nativeElement.querySelector('div');
+    accordionElement = fixture.nativeElement.querySelector('ul');
   })
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should add classes when additionalClasses has a value', () => {
+    component.additionalClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(accordionElement.classList.toString()).toEqual('sprk-c-Accordion sprk-o-VerticalList sprk-u-man');
+  })
 });

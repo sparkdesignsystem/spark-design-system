@@ -4,7 +4,7 @@ import { SparkNarrowNavigationComponent } from './sprk-narrow-navigation.compone
 describe('SparkNarrowNavigationComponent', () => {
   let component: SparkNarrowNavigationComponent;
   let fixture: ComponentFixture<SparkNarrowNavigationComponent>;
-  let alertElement: HTMLElement;
+  let narrowNavigationElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,10 +18,16 @@ describe('SparkNarrowNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkNarrowNavigationComponent);
     component = fixture.componentInstance;
-    alertElement = fixture.nativeElement.querySelector('div');
+    narrowNavigationElement = fixture.nativeElement.querySelector('ul');
   })
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add classes if additionalClasses has a value', () => {
+    component.additionalClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(narrowNavigationElement.classList.contains('sprk-u-man')).toEqual(true);
   });
 });

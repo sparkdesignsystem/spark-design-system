@@ -13,7 +13,14 @@ import { Component } from '@angular/core';
         <h2 class="drizzle-b-h2">
           Narrow Navigation  
         </h2>
-        <sprk-narrow-navigation></sprk-narrow-navigation>
+        <sprk-narrow-navigation>
+          <sprk-narrow-navigation-item 
+            *ngFor="let link of links" 
+            [subNav]="link.subNav" 
+            [href]="link.href" 
+            [text]="link.text">
+          </sprk-narrow-navigation-item>
+        </sprk-narrow-navigation>
     </div>
   `,
   styles: ['']

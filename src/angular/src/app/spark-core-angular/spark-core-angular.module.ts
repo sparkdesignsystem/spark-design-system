@@ -7,6 +7,7 @@ import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
 import { SparkWideNavigationComponent } from './components/sprk-wide-navigation/sprk-wide-navigation.component';
 import { SparkNarrowNavigationComponent } from './components/sprk-narrow-navigation/sprk-narrow-navigation.component';
+import { SparkNarrowNavigationItemComponent } from './components/sprk-narrow-navigation-item/sprk-narrow-navigation-item.component';
 import { SparkAccordionComponent } from './components/sprk-accordion/sprk-accordion.component';
 import { SparkAccordionItemComponent } from './components/sprk-accordion-item/sprk-accordion-item.component';
 import { RouterModule } from '@angular/router';
@@ -28,6 +29,7 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
     SparkIconComponent,
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
+    SparkNarrowNavigationItemComponent,
     SparkIconComponent,
     SparkModalComponent,
     SparkDividerComponent,
@@ -44,7 +46,8 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
     SparkIconSetComponent,
     SparkIconComponent,
     SparkWideNavigationComponent,
-    SparkNarrowNavigationComponent
+    SparkNarrowNavigationComponent,
+    SparkNarrowNavigationItemComponent
   ],
 })
 export class SparkCoreAngularModule { }
