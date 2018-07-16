@@ -11,6 +11,7 @@ import { SparkAccordionComponent } from './components/sprk-accordion/sprk-accord
 import { SparkAccordionItemComponent } from './components/sprk-accordion-item/sprk-accordion-item.component';
 import { RouterModule } from '@angular/router';
 import { SparkModalComponent } from './components/sprk-modal/sprk-modal.component';
+import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
 
 @NgModule({
   imports: [
@@ -28,13 +29,15 @@ import { SparkModalComponent } from './components/sprk-modal/sprk-modal.componen
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
     SparkIconComponent,
-    SparkModalComponent
+    SparkModalComponent,
+    SparkDividerComponent,
   ],
   exports: [
     SparkAlertComponent,
     SparkAccordionComponent,
     SparkAccordionItemComponent,
     SparkButtonComponent,
+    SparkDividerComponent,
     SparkLinkComponent,
     SparkModalComponent,
     SparkLinkComponent,

@@ -12,6 +12,7 @@ import { AlertDocsComponent } from './alert-docs/alert-docs.component';
 import { AccordionDocsComponent } from './accordion-docs/accordion-docs.component';
 import { IconSetDocsComponent } from './icon-set-docs/icon-set-docs.component';
 import { ModalDocsComponent } from './modal-docs/modal-docs.component';
+import { DividerDocsComponent } from './divider-docs/divider-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
 
 const appRoutes: Routes = [
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'navigation', component: NavigationDocsComponent },
   { path: 'accordions', component: AccordionDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
+  { path: 'dividers', component: DividerDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     LinkDocsComponent,
     ModalDocsComponent,
     IconSetDocsComponent,
-    NavigationDocsComponent
+    NavigationDocsComponent,
+    DividerDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(
