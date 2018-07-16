@@ -46,8 +46,4 @@ export class SparkListComponent {
     return classArray.join(' ');
   }
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
