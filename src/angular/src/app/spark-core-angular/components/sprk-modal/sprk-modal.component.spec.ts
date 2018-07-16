@@ -57,7 +57,6 @@ describe('SparkModalComponent', () => {
   it('should set the title to the value of the title input', () => {
     component.title = "This is my title";
     fixture.detectChanges();
-    console.log(modalElement);
     expect(modalElement.querySelector('.sprk-c-Modal__heading').textContent).toEqual('This is my title');
   });
 
