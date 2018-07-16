@@ -16,9 +16,11 @@ import { DividerDocsComponent } from './divider-docs/divider-docs.component';
 import { ListDocsComponent } from './list-docs/list-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
 import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
+import { CardDocsComponent } from './card-docs/card-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
+  { path: 'cards', component: CardDocsComponent },
   { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
     AlertDocsComponent,
     AccordionDocsComponent,
     ButtonDocsComponent,
+    CardDocsComponent,
     PageNotFoundComponent,
     IntroDocsComponent,
     LinkDocsComponent,

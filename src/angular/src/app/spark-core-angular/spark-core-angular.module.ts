@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SparkAlertComponent } from './components/sprk-alert/sprk-alert.component';
 import { SparkButtonComponent } from './components/sprk-button/sprk-button.component';
+import { SparkCardComponent } from './components/sprk-card/sprk-card.component';
 import { SparkLinkComponent } from './components/sprk-link/sprk-link.component';
 import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.component';
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
@@ -29,6 +30,7 @@ import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead
     SparkAccordionComponent,
     SparkAccordionItemComponent,
     SparkButtonComponent,
+    SparkCardComponent,
     SparkLinkComponent,
     SparkIconSetComponent,
     SparkIconComponent,
@@ -49,6 +51,7 @@ import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead
     SparkAccordionComponent,
     SparkAccordionItemComponent,
     SparkButtonComponent,
+    SparkCardComponent,
     SparkDividerComponent,
     SparkLinkComponent,
     SparkModalComponent,
