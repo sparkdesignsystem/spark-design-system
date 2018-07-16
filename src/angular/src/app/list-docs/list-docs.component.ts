@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'sprk-list-docs',
@@ -65,11 +65,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: ['']
 })
-export class ListDocsComponent implements OnInit {
+export class ListDocsComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
