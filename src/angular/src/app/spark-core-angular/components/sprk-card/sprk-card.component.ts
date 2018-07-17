@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-card',
   template: `
-    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser' else base">
+    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'">
       <a
         href="#"
         class="sprk-o-Stack__item">
@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
         </h3>
 
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          <ng-content></ng-content>
+          {{ body }}
         </p>
 
         <div class="sprk-o-Stack__item">
@@ -30,18 +30,42 @@ import { Component, Input } from '@angular/core';
       </div>
     </div>
 
-    <ng-template #base>
-      <div class="sprk-c-Card sprk-o-Stack">
-        <ng-content></ng-content>
+    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'base'">
+      <ng-content></ng-content>
+    </div>
+
+    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaserHeading'">
+      <h3 class="sprk-o-Stack__item sprk-c-Card__content sprk-b-TypeDisplayFive">
+        {{ title }}
+      </h3>
+
+      <a
+        href="#"
+        class="sprk-o-Stack__item">
+        <img
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}">
+      </a>
+
+      <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
+          {{ body }}
+        </p>
+
+        <div class="sprk-o-Stack__item">
+          <a href="#" [ngClass]="getClassesCta()">
+            {{ ctaText }}
+          </a>
+        </div>
       </div>
-    </ng-template>
+    </div>
   `,
   styles: ['']
 })
 
 export class SparkCardComponent {
   @Input() cardType: string;
-  @Input() content: string;
+  @Input() body: string;
   @Input() title: string;
   @Input() imgSrc: string;
   @Input() imgAlt: string;
@@ -74,7 +98,7 @@ export class SparkCardComponent {
 
   getClassesCard(): string {
     let classArray: Array<String> = [
-      'sprk-c-Card sprk-o-Stack"'
+      'sprk-c-Card sprk-o-Stack'
     ];
 
     if (this.additionalClasses) {
