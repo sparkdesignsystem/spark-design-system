@@ -12,12 +12,14 @@ import { AlertDocsComponent } from './alert-docs/alert-docs.component';
 import { IconSetDocsComponent } from './icon-set-docs/icon-set-docs.component';
 import { ModalDocsComponent } from './modal-docs/modal-docs.component';
 import { DividerDocsComponent } from './divider-docs/divider-docs.component';
+import { ListDocsComponent } from './list-docs/list-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
   { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
+  { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
   { path: '', component: IntroDocsComponent },
@@ -35,6 +37,7 @@ const appRoutes: Routes = [
     ModalDocsComponent,
     IconSetDocsComponent,
     DividerDocsComponent,
+    ListDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(
