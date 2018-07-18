@@ -53,8 +53,8 @@ import { Component, Input, HostListener } from '@angular/core';
           </div>
         </div>
         <div class="sprk-c-Masthead__secondary">
-          <p class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ clientName }}</p>
-          <p class="sprk-b-TypeBodyTwo">Loan #{{ loanNumber }}</p>
+          <p *ngIf="clientName" class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ clientName }}</p>
+          <p *ngIf="loanNumber" class="sprk-b-TypeBodyTwo">Loan #{{ loanNumber }}</p>
         </div>
       </div>
       <div class="sprk-c-Masthead__navigation">
