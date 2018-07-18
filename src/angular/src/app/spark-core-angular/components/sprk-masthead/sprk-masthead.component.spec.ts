@@ -28,6 +28,6 @@ describe('SparkMastheadComponent', () => {
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(mastheadElement.classList.toString()).toEqual('sprk-c-Accordion sprk-o-VerticalList sprk-u-man');
+    expect(mastheadElement.classList.toString()).toEqual('sprk-c-Masthead');
   })
 });
