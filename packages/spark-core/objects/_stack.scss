@@ -20,6 +20,11 @@
   flex: 0 0 auto;
 }
 
+// Center a specific stack item
+.sprk-o-Stack__item--center {
+  align-self: center;
+}
+
 //
 // Stack spacing modifiers
 ///

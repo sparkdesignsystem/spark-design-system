@@ -13,6 +13,8 @@ import { SparkAccordionItemComponent } from './components/sprk-accordion-item/sp
 import { RouterModule } from '@angular/router';
 import { SparkModalComponent } from './components/sprk-modal/sprk-modal.component';
 import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
+import { SparkListComponent } from './components/sprk-list/sprk-list.component';
+import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
 
 @NgModule({
   imports: [
@@ -33,6 +35,8 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
     SparkIconComponent,
     SparkModalComponent,
     SparkDividerComponent,
+    SparkListComponent,
+    SparkListItemComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -44,6 +48,9 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
     SparkModalComponent,
     SparkLinkComponent,
     SparkIconSetComponent,
+    SparkIconComponent,
+    SparkListComponent,
+    SparkListItemComponent,
     SparkIconComponent,
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
