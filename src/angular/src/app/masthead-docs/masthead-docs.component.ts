@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
           clientName="Rob Copeland"
           [loanNumber]="1234567890"
           [wideNavLinks]="links" 
+          [secondaryNavLinks]="links" 
           [narrowNavLinks]="links"></sprk-masthead>
       </div>
   `,

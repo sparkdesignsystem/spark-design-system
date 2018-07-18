@@ -32,14 +32,13 @@ import { Component, Input, HostListener } from '@angular/core';
             </a>
           </div>
           <div class="sprk-c-Masthead__secondary-nav">
-
-            <nav role="navigation">
-              <ul class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium">
-                <li><a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">Item 1</a></li>
-                <li><a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">Item 2</a></li>
-                <li><a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">Item 3</a></li>
-              </ul>
-            </nav>
+            <sprk-secondary-navigation>
+             <sprk-secondary-navigation-item 
+                *ngFor="let link of secondaryNavLinks" 
+                [href]="link.href" 
+                [text]="link.text">
+              </sprk-secondary-navigation-item> 
+            </sprk-secondary-navigation>
 
           </div>
           <div class="sprk-c-Masthead__search">
@@ -82,6 +81,7 @@ export class SparkMastheadComponent {
   @Input() loanNumber: number;
   @Input() wideNavLinks: Array<Object>;
   @Input() narrowNavLinks: Array<Object>;
+  @Input() secondaryNavLinks: Array<Object>;
   @Input() isNarrowNavOpen: boolean = false;
 
   @HostListener('window:resize', ['$event'])
