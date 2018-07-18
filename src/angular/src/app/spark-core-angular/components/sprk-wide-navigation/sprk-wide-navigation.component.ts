@@ -4,7 +4,7 @@ import { Component, Input, HostListener } from '@angular/core';
   selector: 'sprk-wide-navigation',
   template: `
     <nav role="navigation">
-      <ul [ngClass]="getClasses()" data-sprk-navigation="wide">
+      <ul [ngClass]="getClasses()">
         <li *ngFor="let link of links" 
             class="sprk-c-WideNavigation__item" 
             [attr.aria-haspopup]="link.subNav ? 'true': null" 
@@ -54,7 +54,7 @@ export class SparkWideNavigationComponent {
   hideAllDropDowns(event): void {
     event.stopPropagation();
     this.links.forEach((link: Object) => {
-      if(link.hasOwnProperty('focused')) {
+      if (link.hasOwnProperty('focused')) {
         link['focused'] = false;
       }
     })

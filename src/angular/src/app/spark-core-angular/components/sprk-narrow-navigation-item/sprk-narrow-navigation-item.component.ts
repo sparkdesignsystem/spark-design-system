@@ -21,7 +21,7 @@ import * as _ from 'lodash';
           </span>
           <sprk-icon [iconType]="iconType" additionalClasses="sprk-c-Accordion__icon"></sprk-icon>
         </a>
-        <ul [id]="controls_id" *ngIf="isOpen" class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs" data-sprk-toggle="content">
+        <ul [id]="controls_id" *ngIf="isOpen" class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs">
           <li *ngFor="let navItem of subNav">
             <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" [routerLink]="navItem.href">{{ navItem.text }}</a>
           </li>
