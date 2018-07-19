@@ -28,6 +28,6 @@ describe('SparkSecondaryNavigationComponent', () => {
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(secondaryNavigationElement.classList.toString()).toEqual('sprk-c-Accordion sprk-o-VerticalList sprk-u-man');
+    expect(secondaryNavigationElement.classList.toString()).toEqual('sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-u-man');
   })
 });

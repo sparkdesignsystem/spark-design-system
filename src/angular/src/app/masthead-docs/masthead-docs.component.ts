@@ -8,11 +8,17 @@ import { Component } from '@angular/core';
         <sprk-masthead 
           additionalClasses="angular-docs-u-Masthead-docs"
           clientName="Rob Copeland"
-          [loanNumber]="1234567890"
           [wideNavLinks]="links" 
           [secondaryNavLinks]="links" 
-          secondaryNavSpacing="medium"
-          [narrowNavLinks]="links"></sprk-masthead>
+          [narrowNavLinks]="links">
+          <div class="sprk-b-InputContainer" upper-slot>
+            <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
+            <input placeholder="Search" class="sprk-b-TextInput  sprk-u-Width-100" id="inline-search" type="search" role="search" aria-describedby="inline-search--error-container">
+            <div class="sprk-b-ErrorText" id="inline-search--error-container">
+            </div>
+          </div>
+          <p lower-slot>Loan Number: #1234567890</p>
+        </sprk-masthead>
       </div>
   `,
   styles: [``]
@@ -82,3 +88,5 @@ export class MastheadDocsComponent {
   ];
   constructor() { }
 }
+
+

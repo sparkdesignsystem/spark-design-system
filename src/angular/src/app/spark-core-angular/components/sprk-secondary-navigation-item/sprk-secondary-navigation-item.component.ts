@@ -4,17 +4,19 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-secondary-navigation-item',
   template: `
     <li [ngClass]="getClasses()">
-      <a class="sprk-b-Link sprk-b-Link--standalone" [routerLink]="href">{{ text }}</a>
+      <a class="sprk-b-Link sprk-b-Link--standalone" 
+        [routerLink]="href"
+        [attr.data-analytics]="analyticsString">{{ text }}</a>
     </li>
   `,
   styles: [
-    '.sprkng-spacing-override--tiny { margin-right: 0.25rem;}',
     ':host:last-child li { margin-right: 0 !important;}'
   ]
 })
 
 export class SparkSecondaryNavigationItemComponent {
   @Input() additionalClasses: string;
+  @Input() analyticsString: string;
   @Input() href: string;
   @Input() text: string;
   @Input() spacing: string = 'medium';
@@ -23,9 +25,8 @@ export class SparkSecondaryNavigationItemComponent {
     let classArray: Array<String> = [];
 
     switch (this.spacing) {
-      // TODO: open a pr on scales to add tiny to utils
       case 'tiny':
-        classArray.push('sprkng-spacing-override--tiny');
+        classArray.push('sprk-u-mrt');
         break;
       case 'small':
         classArray.push('sprk-u-mrs');

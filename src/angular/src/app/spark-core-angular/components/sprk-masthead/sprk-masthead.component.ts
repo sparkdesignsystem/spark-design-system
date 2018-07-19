@@ -40,21 +40,14 @@ import { Component, Input, HostListener } from '@angular/core';
                 [text]="link.text">
               </sprk-secondary-navigation-item> 
             </sprk-secondary-navigation>
-
           </div>
           <div class="sprk-c-Masthead__search">
-            <div class="sprk-b-InputContainer sprk-u-mbn  ">
-              <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
-              <input placeholder="Search" class="sprk-b-TextInput  sprk-u-Width-100" id="inline-search" type="search" role="search" aria-describedby="inline-search--error-container">
-              <div class="sprk-b-ErrorText" id="inline-search--error-container">
-              </div>
-            </div>
-
+            <ng-content select="[upper-slot]"></ng-content>
           </div>
         </div>
         <div class="sprk-c-Masthead__secondary">
           <p *ngIf="clientName" class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ clientName }}</p>
-          <p *ngIf="loanNumber" class="sprk-b-TypeBodyTwo">Loan #{{ loanNumber }}</p>
+          <ng-content select="[lower-slot]"></ng-content>
         </div>
       </div>
       <div class="sprk-c-Masthead__navigation">
@@ -79,7 +72,6 @@ import { Component, Input, HostListener } from '@angular/core';
 export class SparkMastheadComponent {
   @Input() additionalClasses: string;
   @Input() clientName: string;
-  @Input() loanNumber: number;
   @Input() wideNavLinks: Array<Object>;
   @Input() narrowNavLinks: Array<Object>;
   @Input() secondaryNavLinks: Array<Object>;
