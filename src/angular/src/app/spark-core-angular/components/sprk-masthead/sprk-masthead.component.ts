@@ -36,6 +36,7 @@ import { Component, Input, HostListener } from '@angular/core';
              <sprk-secondary-navigation-item 
                 *ngFor="let link of secondaryNavLinks" 
                 [href]="link.href" 
+                [spacing]="secondaryNavSpacing"
                 [text]="link.text">
               </sprk-secondary-navigation-item> 
             </sprk-secondary-navigation>
@@ -82,10 +83,11 @@ export class SparkMastheadComponent {
   @Input() wideNavLinks: Array<Object>;
   @Input() narrowNavLinks: Array<Object>;
   @Input() secondaryNavLinks: Array<Object>;
+  @Input() secondaryNavSpacing: string = 'medium';
   @Input() isNarrowNavOpen: boolean = false;
 
   @HostListener('window:resize', ['$event'])
-  handleResizeEvent(event: KeyboardEvent) {
+  handleResizeEvent() {
     this.closeNarrowNav();
   }
 

@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
           [loanNumber]="1234567890"
           [wideNavLinks]="links" 
           [secondaryNavLinks]="links" 
+          secondaryNavSpacing="medium"
           [narrowNavLinks]="links"></sprk-masthead>
       </div>
   `,
@@ -20,7 +21,7 @@ import { Component } from '@angular/core';
 export class MastheadDocsComponent {
   links = [
     {
-      text: 'Item 1',
+      text: 'Chat',
       href: '/alerts',
       analyticsString: 'Link to Item 1',
       active: false,
@@ -41,12 +42,12 @@ export class MastheadDocsComponent {
       ]
     },
     {
-      text: 'Item 2',
+      text: 'Insurance',
       href: '/icons',
       active: false
     },
     {
-      text: 'Item 3',
+      text: 'Loan Information',
       href: '/links',
       active: false
     },

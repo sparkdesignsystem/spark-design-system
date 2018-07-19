@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
         <ng-content></ng-content>
       </ul>
     </nav>`,
-  styles: ['']
+  styles: []
 })
 
 export class SparkSecondaryNavigationComponent {
