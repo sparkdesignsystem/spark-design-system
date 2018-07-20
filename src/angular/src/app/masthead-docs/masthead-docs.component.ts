@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
         <h2 class="drizzle-b-h2">Masthead</h2>
         <sprk-masthead 
           additionalClasses="angular-docs-u-Masthead-docs"
-          clientName="Rob Copeland"
+          greetingName="Rob Copeland"
           [wideNavLinks]="links" 
           [secondaryNavLinks]="links" 
           [narrowNavLinks]="links">
           <div class="sprk-b-InputContainer" upper-slot>
             <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
-            <input placeholder="Search" class="sprk-b-TextInput  sprk-u-Width-100" id="inline-search" type="search" role="search" aria-describedby="inline-search--error-container">
+            <input placeholder="Search" class="sprk-b-TextInput sprk-u-Width-100" id="inline-search" type="search" role="search" aria-describedby="inline-search--error-container">
             <div class="sprk-b-ErrorText" id="inline-search--error-container">
             </div>
           </div>

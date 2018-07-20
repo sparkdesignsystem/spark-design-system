@@ -4,6 +4,7 @@ import { SparkSecondaryNavigationComponent } from './sprk-secondary-navigation.c
 describe('SparkSecondaryNavigationComponent', () => {
   let component: SparkSecondaryNavigationComponent;
   let fixture: ComponentFixture<SparkSecondaryNavigationComponent>;
+  let outerNavElement: HTMLElement;
   let secondaryNavigationElement: HTMLElement;
 
   beforeEach(async(() => {
@@ -18,12 +19,19 @@ describe('SparkSecondaryNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkSecondaryNavigationComponent);
     component = fixture.componentInstance;
+    outerNavElement = fixture.nativeElement.querySelector('nav');
     secondaryNavigationElement = fixture.nativeElement.querySelector('ul');
   })
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should add classes to the nav element when additionalNavClasses has a value', () => {
+    component.additionalNavClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(outerNavElement.classList.toString()).toEqual('sprk-u-man');
+  })
 
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';

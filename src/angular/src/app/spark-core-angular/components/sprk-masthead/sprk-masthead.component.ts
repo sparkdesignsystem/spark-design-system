@@ -26,9 +26,9 @@ import { Component, Input, HostListener } from '@angular/core';
             </button>
           </div>
           <div class="sprk-c-Masthead__logo">
-            <a href="#nogo">
+            <a [routerLink]="logoHref">
               <div class="drizzle-c-Logo-placeholder"></div>
-              <span class="sprk-u-ScreenReaderText">Go to the home page</span>
+              <span class="sprk-u-ScreenReaderText">{{ logoLinkScreenReaderText }}</span>
             </a>
           </div>
           <div class="sprk-c-Masthead__secondary-nav">
@@ -46,7 +46,7 @@ import { Component, Input, HostListener } from '@angular/core';
           </div>
         </div>
         <div class="sprk-c-Masthead__secondary">
-          <p *ngIf="clientName" class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ clientName }}</p>
+          <p *ngIf="greetingName" class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ greetingName }}</p>
           <ng-content select="[lower-slot]"></ng-content>
         </div>
       </div>
@@ -70,8 +70,10 @@ import { Component, Input, HostListener } from '@angular/core';
 })
 
 export class SparkMastheadComponent {
+  @Input() logoHref: string = '/';
+  @Input() logoLinkScreenReaderText: string = 'Go to the homepage';
   @Input() additionalClasses: string;
-  @Input() clientName: string;
+  @Input() greetingName: string;
   @Input() wideNavLinks: Array<Object>;
   @Input() narrowNavLinks: Array<Object>;
   @Input() secondaryNavLinks: Array<Object>;

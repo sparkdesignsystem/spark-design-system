@@ -48,6 +48,15 @@ describe('SparkMastheadComponent', () => {
     expect(mastheadElement.classList.toString()).toEqual('sprk-c-Masthead sprk-u-man');
   });
 
+  it('should set the logo link and text to provided values', () => {
+    component.logoHref = '/alert';
+    component.logoLinkScreenReaderText = 'Go to the alerts page.';
+    fixture.detectChanges();
+    let logoElement: HTMLElement = mastheadElement.querySelector('.sprk-c-Masthead__logo > a');
+    expect(logoElement.getAttribute('href')).toEqual('/alert');
+    expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');
+  });
+
   it('should add the aria-expanded attribute and show the narrow nav when the icon is clicked', () => {
     expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual(null);
     expect(component.isNarrowNavOpen).toEqual(false);
@@ -57,11 +66,11 @@ describe('SparkMastheadComponent', () => {
     expect(component.isNarrowNavOpen).toEqual(true);
   });
 
-  it('should print Hello, Client Name, when a clientName is supplied', () => {
-    component.clientName = "Some Guy";
+  it('should print Hello, Client Name, when a greetingName is supplied', () => {
+    component.greetingName = "Some Person";
     fixture.detectChanges();
     clientGreeting = mastheadElement.querySelector('.sprk-c-Masthead__secondary > p');
-    expect(clientGreeting.textContent).toEqual('Hello, Some Guy');
+    expect(clientGreeting.textContent).toEqual('Hello, Some Person');
   });
 
   it('shouldnt render a greeting if no client name is supplied', () => {
