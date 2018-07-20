@@ -125,38 +125,38 @@ import { Component } from '@angular/core';
         Card Layout - Two Up
       </h2>
 
-      <div class="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
-        <sprk-card
-          cardType="teaserHeading"
-          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--equal@l"
-          title="Teaser Heading On Top of Image"
-          body="
-            Placeholder text that is here in this card!
-          "
-          imgSrc=""
-          imgAlt="Placeholder Image"
-          imgHref="www.sparkdesignsystem.com"
-          ctaType="link"
-          ctaText="Neat!"
-          ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
-        </sprk-card>
+      <div class="sprk-o-CenteredColumn">
+        <sprk-stack splitAt="medium" itemSpacing="medium" additionalClasses="sprk-o-Stack--center-row">
+          <sprk-card
+            sprk-stack-item
+            additionalClasses="sprk-o-Stack__item--equal@m sprk-c-CardLayoutItem"
+            cardType="teaser"
+            title="First Card Out Of Three Cards In Row"
+            body="Placeholder text that is here in this card!"
+            imgSrc=""
+            imgAlt="Placeholder Image"
+            imgHref="www.sparkdesignsystem.com"
+            ctaType="button"
+            ctaText="Neat!"
+            ctaHref="www.sparkdesignsystem.com"
+            ctaAnalytics="Link: Spark">
+          </sprk-card>
 
-        <sprk-card
-          cardType="teaserHeading"
-          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--equal@l"
-          title="Teaser Heading On Top of Image"
-          body="
-            Placeholder text that is here in this card!
-          "
-          imgSrc=""
-          imgAlt="Placeholder Image"
-          imgHref="www.sparkdesignsystem.com"
-          ctaType="link"
-          ctaText="Neat!"
-          ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
-        </sprk-card>
+          <sprk-card
+            sprk-stack-item
+            additionalClasses="sprk-o-Stack__item--equal@m sprk-c-CardLayoutItem"
+            cardType="teaser"
+            title="First Card Out Of Three Cards In Row First Card Out Of Three Cards In Row First Card Out Of Three Cards In Row"
+            body="Placeholder text that is here in this card!"
+            imgSrc=""
+            imgAlt="Placeholder Image"
+            imgHref="www.sparkdesignsystem.com"
+            ctaType="button"
+            ctaText="Neat!"
+            ctaHref="www.sparkdesignsystem.com"
+            ctaAnalytics="Link: Spark">
+          </sprk-card>
+        </sprk-stack>
       </div>
     </div>
 
@@ -164,6 +164,54 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">
         Card Layout - Three Up
       </h2>
+
+      <sprk-stack splitAt="medium" itemSpacing="huge">
+        <div class="sprk-o-Stack__item sprk-o-Stack__item--equal@m">
+          <sprk-card
+            cardType="teaser"
+            title="First Card Out Of Three Cards In Row"
+            body="Placeholder text that is here in this card!"
+            imgSrc=""
+            imgAlt="Placeholder Image"
+            imgHref="www.sparkdesignsystem.com"
+            ctaType="button"
+            ctaText="Neat!"
+            ctaHref="www.sparkdesignsystem.com"
+            ctaAnalytics="Link: Spark">
+          </sprk-card>
+        </div>
+
+        <div class="sprk-o-Stack__item sprk-o-Stack__item--equal@m">
+          <sprk-card
+            cardType="teaser"
+            additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--equal@m"
+            title="Second Card Out Of Three Cards In Row"
+            body="Placeholder text that is here in this card!"
+            imgSrc=""
+            imgAlt="Placeholder Image"
+            imgHref="www.sparkdesignsystem.com"
+            ctaType="button"
+            ctaText="Neat!"
+            ctaHref="www.sparkdesignsystem.com"
+            ctaAnalytics="Link: Spark">
+          </sprk-card>
+        </div>
+
+        <div class="sprk-o-Stack__item sprk-o-Stack__item--equal@m">
+          <sprk-card
+            cardType="teaser"
+            title="Third Card In The Row"
+            body="Placeholder text that is here in this card!"
+            imgSrc=""
+            imgAlt="Placeholder Image"
+            imgHref="www.sparkdesignsystem.com"
+            ctaType="link"
+            ctaText="Neat!"
+            ctaHref="www.sparkdesignsystem.com"
+            ctaAnalytics="Link: Spark">
+          </sprk-card>
+        </div>
+      </sprk-stack>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
