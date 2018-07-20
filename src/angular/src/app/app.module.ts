@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
 import { ButtonDocsComponent } from './button-docs/button-docs.component';
@@ -15,6 +15,7 @@ import { ModalDocsComponent } from './modal-docs/modal-docs.component';
 import { DividerDocsComponent } from './divider-docs/divider-docs.component';
 import { ListDocsComponent } from './list-docs/list-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
+import { InputDocsComponent } from './input-docs/input-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
+  { path: 'inputs', component: InputDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -44,8 +46,10 @@ const appRoutes: Routes = [
     NavigationDocsComponent,
     DividerDocsComponent,
     ListDocsComponent,
+    InputDocsComponent
   ],
   imports: [
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { }
