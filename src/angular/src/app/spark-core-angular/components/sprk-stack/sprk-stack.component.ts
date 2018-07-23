@@ -21,6 +21,7 @@ export class SparkStackComponent {
       'sprk-o-Stack'
     ];
 
+    // Handle the choice of item split breakpoint by adding CSS class
     switch (this.splitAt) {
       case 'tiny':
         classArray.push('sprk-o-Stack--split@xs');
@@ -41,6 +42,7 @@ export class SparkStackComponent {
         break;
     }
 
+    // Handle the choice of item spacing by adding CSS class
     switch (this.itemSpacing) {
       case 'tiny':
         classArray.push('sprk-o-Stack--tiny');

@@ -21,7 +21,6 @@ export class SparkStackItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.additionalClasses);
     this.getClasses().forEach((item)=>{
       this.ref.nativeElement.classList.add(item);
     })
