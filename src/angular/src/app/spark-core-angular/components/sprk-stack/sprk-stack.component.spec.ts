@@ -4,7 +4,7 @@ import { SparkStackComponent } from './sprk-stack.component';
 describe('SparkStackComponent', () => {
   let component: SparkStackComponent;
   let fixture: ComponentFixture<SparkStackComponent>;
-  let alertElement: HTMLElement;
+  let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,10 +18,17 @@ describe('SparkStackComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkStackComponent);
     component = fixture.componentInstance;
-    alertElement = fixture.nativeElement.querySelector('div');
+    element = fixture.nativeElement.querySelector('div');
   })
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should set the correct class for itemSpacing', () => {
+    component.splitAt = 'medium';
+    expect(element.classList.contains('sprk-o-Stack--medium')).toEqual(true);
+  });
+
+
 });

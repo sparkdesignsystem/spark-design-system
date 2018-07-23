@@ -1,16 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCardComponent } from './sprk-card.component';
 
-describe('SparkCardComponent', () => {
+fdescribe('SparkCardComponent', () => {
   let component: SparkCardComponent;
   let fixture: ComponentFixture<SparkCardComponent>;
-  let cardElement: HTMLElement;
+  let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SparkCardComponent
-      ]
+      declarations: [SparkCardComponent]
     })
     .compileComponents();
   }));
@@ -18,85 +16,70 @@ describe('SparkCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkCardComponent);
     component = fixture.componentInstance;
-    cardElement = fixture.nativeElement.querySelector('div');
   })
 
   it('should create itself', () => {
-    expect(component).toBeTruthy();
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    expect(element).toBeTruthy();
   });
 
-  it('getClasses should match what gets set on the icon', () => {
-    let icon = cardElement.querySelector('div');
+  it('getClassesCard should match what gets set on the card', () => {
     fixture.detectChanges();
-    expect(icon.classList.toString()).toEqual(component.getClasses());
-  });
-
-  it('getClassescardContainer should match what gets set on the container', () => {
-    fixture.detectChanges();
-    expect(cardElement.classList.toString()).toEqual(component.getClassescardContainer());
+    element = fixture.nativeElement.querySelector('div');
+    expect(element.classList.toString()).toEqual(component.getClassesCard());
   });
 
   it('should add the correct class if cardType is not set', () => {
-    component.cardType = '';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-c-card__icon');
+    expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack');
   });
 
-  it('should add the correct class if cardType is success', () => {
-    component.cardType = 'success';
+  it('should add the img if cardType is set as teaser', () => {
+    component.cardType = 'teaser';
+    component.ctaType = 'button';
+    component.ctaText = 'teaser';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.imgAlt = 'Alt!';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-c-card__icon sprk-c-card__icon--success');
-  });
-
-  it('should add the correct class if cardType is fail', () => {
-    component.cardType = 'fail';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-c-card__icon sprk-c-card__icon--fail');
-  });
-
-  it('should add the correct class if cardType is info', () => {
-    component.cardType = 'info';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-c-card__icon sprk-c-card__icon--info');
+    element = fixture.nativeElement.querySelector('div');
+    let el = element.querySelector('a img');
+    expect(el).toBeTruthy();
   });
 
   it('should add the correct classes if cardType has no value, but additionalClasses does', () => {
+    component.cardType = 'teaser';
+    component.ctaType = 'button';
+    component.ctaText = 'teaser';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.imgAlt = 'Alt!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-c-card__icon sprk-u-pam sprk-u-man');
+    expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man');
   });
 
   it('should add the correct classes if cardType and additionalClasses have values', () => {
-    component.cardType = 'info';
+    component.cardType = 'teaser';
+    component.ctaType = 'button';
+    component.ctaText = 'Link text';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.imgAlt = 'Alt!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-c-card__icon sprk-c-card__icon--info sprk-u-pam sprk-u-man');
+    expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man');
   });
 
-  it('should add the correct classes if additionalClasses is set on container', () => {
-    component.additionalClasses = 'sprk-u-pam';
+  it('should set the data-analytics attribute given a value in the ctaAnalytics Input', () => {
+    component.cardType = 'teaserHeading';
+    component.ctaText = 'Link text';
+    component.ctaAnalytics = 'One';
     fixture.detectChanges();
-    expect(component.getClassescardContainer()).toEqual('sprk-c-card sprk-u-pam');
-  });
-
-  it('should add the dismiss button if dismissible is true', () => {
-    component.dismissible = true;
-    fixture.detectChanges();
-    expect(cardElement.querySelector('button')).toBeTruthy();
-  });
-
-  it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
-    const cardStr = 'card One';
-    component.analyticsString = cardStr;
-    fixture.detectChanges();
-    expect(cardElement.getAttribute('data-analytics')).toEqual(cardStr);
-  });
-
-  it('should hide the card if the dismiss button is clicked', () => {
-    component.dismissible = true;
-    fixture.detectChanges();
-    cardElement.querySelector('button').click()
-    fixture.detectChanges();
-    expect(cardElement.classList.contains('sprk-u-Display--none')).toBeTruthy();
+    element = fixture.nativeElement.querySelector('div');
+    let el = element.querySelector('div.sprk-c-Card__content a');
+    console.log(el);
+    expect(el.getAttribute('data-analytics')).toEqual('One');
   });
 });

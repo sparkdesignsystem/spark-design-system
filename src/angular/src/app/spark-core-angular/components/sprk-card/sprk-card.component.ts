@@ -23,7 +23,7 @@ import { Component, Input } from '@angular/core';
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#" [ngClass]="getClassesCta()">
+          <a href="#" [ngClass]="getClassesCta()" [attr.data-analytics]="ctaAnalytics">
             {{ ctaText }}
           </a>
         </div>
@@ -60,21 +60,20 @@ import { Component, Input } from '@angular/core';
       </div>
     </div>
   `,
-  styles: ['']
+  styleUrls: ['sprk-card.component.scss']
 })
 
 export class SparkCardComponent {
-  @Input() cardType: string;
+  @Input() cardType: string = 'base';
   @Input() body: string;
   @Input() title: string;
   @Input() imgSrc: string;
   @Input() imgAlt: string;
   @Input() imgHref: string;
-  @Input() ctaType: string;
+  @Input() ctaType: string = 'link';
   @Input() ctaText: string;
   @Input() ctaAnalytics: string;
   @Input() ctaHref: string;
-  @Input() analyticsString: string;
   @Input() additionalClasses: string;
   @Input() additionalCtaClasses: string;
 
