@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 
       <sprk-stack itemSpacing="medium">
         <sprk-button sprk-stack-item>Hello, World.</sprk-button>
-        <sprk-button  sprk-stack-item buttonType="secondary">Hello, World.</sprk-button>
+        <sprk-button sprk-stack-item buttonType="secondary">Hello, World.</sprk-button>
       </sprk-stack>
     </div>
 
@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
 
       <sprk-stack itemSpacing="huge" splitAt="medium">
         <sprk-button sprk-stack-item>Hello, World.</sprk-button>
-        <sprk-button  sprk-stack-item buttonType="secondary">Hello, World.</sprk-button>
+        <sprk-button sprk-stack-item buttonType="secondary">Hello, World.</sprk-button>
       </sprk-stack>
     </div>
 
