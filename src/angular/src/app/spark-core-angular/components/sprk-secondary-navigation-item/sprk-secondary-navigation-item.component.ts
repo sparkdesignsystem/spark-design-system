@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-secondary-navigation-item',
   template: `
     <li [ngClass]="getClasses()">
-      <a class="sprk-b-Link sprk-b-Link--standalone" 
+      <a class="sprk-b-Link sprk-b-Link--standalone"
         [routerLink]="href"
         [attr.data-analytics]="analyticsString">{{ text }}</a>
     </li>

@@ -5,33 +5,33 @@ import { Component } from '@angular/core';
   template: `
     <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">
-          Wide Navigation  
+          Wide Navigation
         </h2>
         <sprk-wide-navigation [links]="links"></sprk-wide-navigation>
     </div>
     <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">
-          Narrow Navigation  
+          Narrow Navigation
         </h2>
         <sprk-narrow-navigation>
-          <sprk-narrow-navigation-item 
-            *ngFor="let link of links" 
-            [subNav]="link.subNav" 
+          <sprk-narrow-navigation-item
+            *ngFor="let link of links"
+            [subNav]="link.subNav"
             [analyticsString]="link.analyticsString"
-            [href]="link.href" 
+            [href]="link.href"
             [text]="link.text">
           </sprk-narrow-navigation-item>
         </sprk-narrow-navigation>
     </div>
     <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">
-          Secondary Navigation 
+          Secondary Navigation
         </h2>
         <sprk-secondary-navigation>
-          <sprk-secondary-navigation-item 
-            *ngFor="let link of links" 
+          <sprk-secondary-navigation-item
+            *ngFor="let link of links"
             [analyticsString]="link.analyticsString"
-            [href]="link.href" 
+            [href]="link.href"
             [text]="link.text">
           </sprk-secondary-navigation-item>
         </sprk-secondary-navigation>
