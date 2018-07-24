@@ -78,7 +78,7 @@ import { Component } from '@angular/core';
         "
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
         imgAlt="Placeholder Image"
-        imgHref="staging.sparkdesignsystem.com"
+        imgHref="www.sparkdesignsystem.com"
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
