@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
   template: `
       <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">Masthead</h2>
-        <sprk-masthead 
+        <sprk-masthead
           additionalClasses="angular-docs-u-Masthead-docs"
           greetingName="Rob Copeland"
-          [wideNavLinks]="links" 
-          [secondaryNavLinks]="links" 
+          [wideNavLinks]="links"
+          [secondaryNavLinks]="links"
           [narrowNavLinks]="links">
           <div class="sprk-b-InputContainer" upper-slot>
             <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
@@ -88,5 +88,3 @@ export class MastheadDocsComponent {
   ];
   constructor() { }
 }
-
-

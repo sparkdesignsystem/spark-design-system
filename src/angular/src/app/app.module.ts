@@ -18,9 +18,12 @@ import { ListDocsComponent } from './list-docs/list-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
 import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
 import { InputDocsComponent } from './input-docs/input-docs.component';
+import { CardDocsComponent } from './card-docs/card-docs.component';
+import { StackDocsComponent } from './stack-docs/stack-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
+  { path: 'cards', component: CardDocsComponent },
   { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
@@ -31,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'dividers', component: DividerDocsComponent },
   { path: 'masthead', component: MastheadDocsComponent },
   { path: 'inputs', component: InputDocsComponent },
+  { path: 'stack', component: StackDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -41,6 +45,7 @@ const appRoutes: Routes = [
     AlertDocsComponent,
     AccordionDocsComponent,
     ButtonDocsComponent,
+    CardDocsComponent,
     PageNotFoundComponent,
     IntroDocsComponent,
     LinkDocsComponent,
@@ -50,7 +55,9 @@ const appRoutes: Routes = [
     DividerDocsComponent,
     MastheadDocsComponent,
     ListDocsComponent,
-    InputDocsComponent
+    InputDocsComponent,
+    ListDocsComponent,
+    StackDocsComponent,
   ],
   imports: [
     FormsModule,

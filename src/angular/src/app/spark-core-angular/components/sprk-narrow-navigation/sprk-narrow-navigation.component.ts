@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <nav role="navigation">
       <ul [ngClass]="getClasses()">
-        <ng-content></ng-content>  
+        <ng-content></ng-content>
       </ul>
     </nav>`,
   styles: ['']
