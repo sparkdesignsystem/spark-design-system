@@ -15,6 +15,7 @@ import { ModalDocsComponent } from './modal-docs/modal-docs.component';
 import { DividerDocsComponent } from './divider-docs/divider-docs.component';
 import { ListDocsComponent } from './list-docs/list-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
+import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
+  { path: 'masthead', component: MastheadDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     IconSetDocsComponent,
     NavigationDocsComponent,
     DividerDocsComponent,
-    ListDocsComponent,
+    MastheadDocsComponent,
+    ListDocsComponent
   ],
   imports: [
     RouterModule.forRoot(

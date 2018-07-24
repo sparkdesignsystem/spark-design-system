@@ -7,6 +7,8 @@ import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
 import { SparkWideNavigationComponent } from './components/sprk-wide-navigation/sprk-wide-navigation.component';
 import { SparkNarrowNavigationComponent } from './components/sprk-narrow-navigation/sprk-narrow-navigation.component';
+import { SparkSecondaryNavigationComponent} from './components/sprk-secondary-navigation/sprk-secondary-navigation.component';
+import { SparkSecondaryNavigationItemComponent} from './components/sprk-secondary-navigation-item/sprk-secondary-navigation-item.component';
 import { SparkNarrowNavigationItemComponent } from './components/sprk-narrow-navigation-item/sprk-narrow-navigation-item.component';
 import { SparkAccordionComponent } from './components/sprk-accordion/sprk-accordion.component';
 import { SparkAccordionItemComponent } from './components/sprk-accordion-item/sprk-accordion-item.component';
@@ -15,6 +17,7 @@ import { SparkModalComponent } from './components/sprk-modal/sprk-modal.componen
 import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
 import { SparkListComponent } from './components/sprk-list/sprk-list.component';
 import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
+import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 
 @NgModule({
   imports: [
@@ -32,11 +35,14 @@ import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-it
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
     SparkNarrowNavigationItemComponent,
+    SparkSecondaryNavigationComponent,
+    SparkSecondaryNavigationItemComponent,
     SparkIconComponent,
     SparkModalComponent,
     SparkDividerComponent,
     SparkListComponent,
-    SparkListItemComponent
+    SparkListItemComponent,
+    SparkMastheadComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -54,7 +60,10 @@ import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-it
     SparkIconComponent,
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
-    SparkNarrowNavigationItemComponent
+    SparkNarrowNavigationItemComponent,
+    SparkSecondaryNavigationComponent,
+    SparkSecondaryNavigationItemComponent,
+    SparkMastheadComponent
   ],
 })
 export class SparkCoreAngularModule { }

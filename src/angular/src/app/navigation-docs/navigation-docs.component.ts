@@ -17,10 +17,24 @@ import { Component } from '@angular/core';
           <sprk-narrow-navigation-item 
             *ngFor="let link of links" 
             [subNav]="link.subNav" 
+            [analyticsString]="link.analyticsString"
             [href]="link.href" 
             [text]="link.text">
           </sprk-narrow-navigation-item>
         </sprk-narrow-navigation>
+    </div>
+    <div class="drizzle-o-ContentGrouping">
+        <h2 class="drizzle-b-h2">
+          Secondary Navigation 
+        </h2>
+        <sprk-secondary-navigation>
+          <sprk-secondary-navigation-item 
+            *ngFor="let link of links" 
+            [analyticsString]="link.analyticsString"
+            [href]="link.href" 
+            [text]="link.text">
+          </sprk-secondary-navigation-item>
+        </sprk-secondary-navigation>
     </div>
   `,
   styles: ['']
