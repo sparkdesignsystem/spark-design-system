@@ -33,12 +33,12 @@ import { Component, Input, HostListener } from '@angular/core';
           </div>
           <div class="sprk-c-Masthead__secondary-nav">
             <sprk-secondary-navigation>
-             <sprk-secondary-navigation-item 
-                *ngFor="let link of secondaryNavLinks" 
-                [href]="link.href" 
+             <sprk-secondary-navigation-item
+                *ngFor="let link of secondaryNavLinks"
+                [href]="link.href"
                 [spacing]="secondaryNavSpacing"
                 [text]="link.text">
-              </sprk-secondary-navigation-item> 
+              </sprk-secondary-navigation-item>
             </sprk-secondary-navigation>
           </div>
           <div class="sprk-c-Masthead__search">
@@ -56,10 +56,10 @@ import { Component, Input, HostListener } from '@angular/core';
         </div>
         <div *ngIf="isNarrowNavOpen" class="sprk-c-Masthead__narrow-navigation-container">
           <sprk-narrow-navigation>
-            <sprk-narrow-navigation-item 
-              *ngFor="let link of narrowNavLinks" 
-              [subNav]="link.subNav" 
-              [href]="link.href" 
+            <sprk-narrow-navigation-item
+              *ngFor="let link of narrowNavLinks"
+              [subNav]="link.subNav"
+              [href]="link.href"
               [text]="link.text">
             </sprk-narrow-navigation-item>
           </sprk-narrow-navigation>

@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'">
       <a
-        href="#"
+        [routerLink]="imgHref"
         class="sprk-o-Stack__item"
         [attr.data-analytics]="imgLinkAnalytics">
         <img
@@ -24,7 +24,7 @@ import { Component, Input } from '@angular/core';
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#" [ngClass]="getClassesCta()" [attr.data-analytics]="ctaAnalytics">
+          <a [routerLink]="ctaHref" [ngClass]="getClassesCta()" [attr.data-analytics]="ctaAnalytics">
             {{ ctaText }}
           </a>
         </div>
