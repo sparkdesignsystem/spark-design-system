@@ -4,7 +4,7 @@ import { Directive, Input, OnInit, ElementRef } from '@angular/core';
   selector: '[sprk-error]'
 })
 
-export class SprkInputErrorDirective implements OnInit {
+export class SprkErrorDirective implements OnInit {
   @Input() additionalClasses: string;
 
   constructor(public ref: ElementRef){};

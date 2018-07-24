@@ -24,7 +24,7 @@ import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead
 
 import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
 import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
-import { SprkInputErrorDirective } from './directives/inputs/sprk-input-error/sprk-input-error.directive';
+import { SprkErrorDirective } from './directives/inputs/sprk-error/sprk-error.directive';
 
 @NgModule({
   imports: [
@@ -56,7 +56,7 @@ import { SprkInputErrorDirective } from './directives/inputs/sprk-input-error/sp
     SparkMastheadComponent,
     SprkInputDirective,
     SprkLabelDirective,
-    SprkInputErrorDirective
+    SprkErrorDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -82,7 +82,7 @@ import { SprkInputErrorDirective } from './directives/inputs/sprk-input-error/sp
     SparkMastheadComponent,
     SprkInputDirective,
     SprkLabelDirective,
-    SprkInputErrorDirective
+    SprkErrorDirective
   ],
 })
 export class SparkCoreAngularModule { }
