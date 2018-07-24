@@ -1,29 +1,25 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'sprk-input-docs',
   template: `
       <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">Inputs</h2>
-        <form>
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
           <sprk-input-container>
-            <label sprk-label>ID</label>
-            <input 
-              name="id" 
-              type="text" 
-              sprk-input>
-            <span sprk-error></span>
-          </sprk-input-container>
-          <sprk-input-container>
-            <label sprk-label>Username</label>
+            <label sprk-label>Text Input</label>
             <input 
               name="username" 
               type="text" 
+              [(ngModel)]="username"
+              required
+              #textInput="ngModel"
               sprk-input>
-            <span sprk-error>{{ this.errorMessage }}</span>
+            <span 
+              [hidden]="textInput.valid || textInput.pristine" 
+              sprk-error>This field is required.</span>
           </sprk-input-container>
-          <sprk-button>Submit</sprk-button>
+          <sprk-button [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
         </form>
       </div>
   `,
@@ -33,12 +29,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class InputDocsComponent {
   constructor() { }
 
-  errorMessage = "Error Message";
-
-  sampleForm = new FormGroup({
-    username: new FormControl(),
-    id: new FormControl()
-  });
+  username: string = '';
 
   onSubmit(): void {
     console.log('Submitted!');

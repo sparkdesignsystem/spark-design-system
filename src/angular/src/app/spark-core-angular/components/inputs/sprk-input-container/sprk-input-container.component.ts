@@ -24,9 +24,9 @@ export class SparkInputContainerComponent implements OnInit {
   @Input() errorMessage: string;
   @Input() model: Object;
 
-  @ContentChild(SprkLabelDirective) label: SprkLabelDirective
-  @ContentChild(SprkInputDirective) input: SprkInputDirective
-  @ContentChild(SprkErrorDirective) error: SprkErrorDirective
+  @ContentChild(SprkLabelDirective) label: SprkLabelDirective;
+  @ContentChild(SprkInputDirective) input: SprkInputDirective;
+  @ContentChild(SprkErrorDirective) error: SprkErrorDirective;
 
   id = _.uniqueId();
   input_id= `input_${this.id}`;
@@ -34,13 +34,13 @@ export class SparkInputContainerComponent implements OnInit {
 
   getClasses(): string {
     let classArray: Array<String> = [
-      'sprk-b-InputContainer',
+      'sprk-b-InputContainer'
     ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
