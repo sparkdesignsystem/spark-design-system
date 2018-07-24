@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
     <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'">
       <a
         href="#"
-        class="sprk-o-Stack__item">
+        class="sprk-o-Stack__item"
+        [attr.data-analytics]="imgLinkAnalytics">
         <img
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}">
@@ -41,7 +42,8 @@ import { Component, Input } from '@angular/core';
 
       <a
         href="#"
-        class="sprk-o-Stack__item">
+        class="sprk-o-Stack__item"
+        [attr.data-analytics]="imgLinkAnalytics">
         <img
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}">
@@ -53,7 +55,7 @@ import { Component, Input } from '@angular/core';
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#" [ngClass]="getClassesCta()">
+          <a href="#" [ngClass]="getClassesCta()" [attr.data-analytics]="ctaAnalytics">
             {{ ctaText }}
           </a>
         </div>
@@ -73,12 +75,13 @@ export class SparkCardComponent {
   @Input() ctaType: string = 'link';
   @Input() ctaText: string;
   @Input() ctaAnalytics: string;
+  @Input() imgLinkAnalytics: string;
   @Input() ctaHref: string;
   @Input() additionalClasses: string;
   @Input() additionalCtaClasses: string;
 
   getClassesCta(): string {
-    let ctaClassArray: Array<String> = [''];
+    let ctaClassArray: Array<String> = [];
 
     if (this.ctaType === 'button') {
       ctaClassArray.push('sprk-c-Button');

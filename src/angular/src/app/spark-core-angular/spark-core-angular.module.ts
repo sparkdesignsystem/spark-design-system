@@ -20,7 +20,7 @@ import { SparkListComponent } from './components/sprk-list/sprk-list.component';
 import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
-import { SparkStackItemComponent } from './components/sprk-stack-item/sprk-stack-item.component';
+import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
 
 @NgModule({
   imports: [
@@ -46,12 +46,9 @@ import { SparkStackItemComponent } from './components/sprk-stack-item/sprk-stack
     SparkDividerComponent,
     SparkListComponent,
     SparkListItemComponent,
-<<<<<<< HEAD
-    SparkMastheadComponent
-=======
+    SparkMastheadComponent,
     SparkStackComponent,
-    SparkStackItemComponent
->>>>>>> stack object
+    SparkStackItemDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -70,16 +67,12 @@ import { SparkStackItemComponent } from './components/sprk-stack-item/sprk-stack
     SparkIconComponent,
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
-<<<<<<< HEAD
     SparkNarrowNavigationItemComponent,
     SparkSecondaryNavigationComponent,
     SparkSecondaryNavigationItemComponent,
-    SparkMastheadComponent
-=======
-    SparkNarrowNavigationItemComponent
+    SparkMastheadComponent,
     SparkStackComponent,
-    SparkStackItemComponent
->>>>>>> stack object
+    SparkStackItemDirective
   ],
 })
 export class SparkCoreAngularModule { }

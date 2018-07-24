@@ -4,7 +4,7 @@ import { Directive, Input, ElementRef, OnInit } from '@angular/core';
   selector: '[sprk-stack-item]',
 })
 
-export class SparkStackItemComponent implements OnInit {
+export class SparkStackItemDirective implements OnInit {
   @Input() analyticsString: string;
   @Input() additionalClasses: string;
 
