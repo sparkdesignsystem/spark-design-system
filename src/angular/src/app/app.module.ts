@@ -48,7 +48,6 @@ const appRoutes: Routes = [
     NavigationDocsComponent,
     DividerDocsComponent,
     MastheadDocsComponent,
-    ListDocsComponent
     ListDocsComponent,
     InputDocsComponent
   ],
