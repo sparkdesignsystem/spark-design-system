@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SparkCardComponent } from './sprk-card.component';
 
 describe('SparkCardComponent', () => {
@@ -8,6 +9,7 @@ describe('SparkCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [SparkCardComponent]
     })
     .compileComponents();
@@ -28,6 +30,15 @@ describe('SparkCardComponent', () => {
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
     expect(element.classList.toString()).toEqual(component.getClassesCard());
+  });
+
+  it('should show routerLink href on img link if set', () => {
+    component.cardType = 'teaser';
+    component.imgHref = "/sparkdesignsystem.com";
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    let el = element.querySelector('a');
+    expect(el.getAttribute('href')).toEqual(component.imgHref);
   });
 
   it('should add the correct classes if additionalClassesCta is set on cta link', () => {

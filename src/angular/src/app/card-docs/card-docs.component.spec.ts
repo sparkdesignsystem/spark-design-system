@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
 import { CardDocsComponent } from './card-docs.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CardDocsComponent', () => {
   let component: CardDocsComponent;
@@ -8,7 +9,7 @@ describe('CardDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkCoreAngularModule, RouterTestingModule],
       declarations: [ CardDocsComponent ]
     })
     .compileComponents();
