@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkTextInputComponent } from './sprk-text-input.component';
+import { SparkInputContainerComponent } from './sprk-input-container.component';
 
-describe('SparkTextInputComponent', () => {
-  let component: SparkTextInputComponent;
-  let fixture: ComponentFixture<SparkTextInputComponent>;
+describe('SparkInputContainerComponent', () => {
+  let component: SparkInputContainerComponent;
+  let fixture: ComponentFixture<SparkInputContainerComponent>;
   let accordionElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        SparkTextInputComponent
+        SparkInputContainerComponent
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SparkTextInputComponent);
+    fixture = TestBed.createComponent(SparkInputContainerComponent);
     component = fixture.componentInstance;
     accordionElement = fixture.nativeElement.querySelector('ul');
   })

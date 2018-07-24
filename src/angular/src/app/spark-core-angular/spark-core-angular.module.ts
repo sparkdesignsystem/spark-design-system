@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { SparkAlertComponent } from './components/sprk-alert/sprk-alert.component';
 import { SparkButtonComponent } from './components/sprk-button/sprk-button.component';
 import { SparkLinkComponent } from './components/sprk-link/sprk-link.component';
@@ -17,11 +19,17 @@ import { SparkModalComponent } from './components/sprk-modal/sprk-modal.componen
 import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
 import { SparkListComponent } from './components/sprk-list/sprk-list.component';
 import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
-import { SparkTextInputComponent } from './components/inputs/sprk-text-input/sprk-text-input.component';
+import { SparkInputContainerComponent } from './components/inputs/sprk-input-container/sprk-input-container.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
+
+import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
+import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
+import { SprkInputErrorDirective } from './directives/inputs/sprk-input-error/sprk-input-error.directive';
 
 @NgModule({
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     RouterModule
   ],
@@ -43,9 +51,12 @@ import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead
     SparkDividerComponent,
     SparkListComponent,
     SparkListItemComponent,
-    SparkTextInputComponent,
+    SparkInputContainerComponent,
     SparkListItemComponent,
-    SparkMastheadComponent
+    SparkMastheadComponent,
+    SprkInputDirective,
+    SprkLabelDirective,
+    SprkInputErrorDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -64,11 +75,14 @@ import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
     SparkNarrowNavigationItemComponent,
-    SparkTextInputComponent,
+    SparkInputContainerComponent,
     SparkNarrowNavigationItemComponent,
     SparkSecondaryNavigationComponent,
     SparkSecondaryNavigationItemComponent,
-    SparkMastheadComponent
+    SparkMastheadComponent,
+    SprkInputDirective,
+    SprkLabelDirective,
+    SprkInputErrorDirective
   ],
 })
 export class SparkCoreAngularModule { }
