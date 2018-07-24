@@ -5,9 +5,9 @@ import * as _ from 'lodash';
   selector: 'sprk-accordion-item',
   template: `
       <li [ngClass]="getClasses()">
-        <a [attr.aria-controls]="accordion_controls_id" 
+        <a [attr.aria-controls]="accordion_controls_id"
            [ngClass]="{
-             'sprk-c-Accordion__summary': true, 
+             'sprk-c-Accordion__summary': true,
              'sprk-c-Accordion__summary--open': isOpen
              }"
            href="#nogo"
