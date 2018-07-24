@@ -5,7 +5,7 @@ import * as _ from 'lodash';
   selector: 'sprk-narrow-navigation-item',
   template: `
     <li [ngClass]="getClasses()">
-      <div *ngIf="subNav != null; then menu; else link;"></div> 
+      <div *ngIf="subNav != null; then menu; else link;"></div>
       <ng-template #link>
         <a [attr.aria-controls]="controls_id" 
            class="sprk-c-Accordion__summary" 
