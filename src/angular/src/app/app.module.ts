@@ -15,6 +15,7 @@ import { ModalDocsComponent } from './modal-docs/modal-docs.component';
 import { DividerDocsComponent } from './divider-docs/divider-docs.component';
 import { ListDocsComponent } from './list-docs/list-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
+import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
 import { InputDocsComponent } from './input-docs/input-docs.component';
 
 const appRoutes: Routes = [
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
+  { path: 'masthead', component: MastheadDocsComponent },
   { path: 'inputs', component: InputDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
@@ -45,6 +47,8 @@ const appRoutes: Routes = [
     IconSetDocsComponent,
     NavigationDocsComponent,
     DividerDocsComponent,
+    MastheadDocsComponent,
+    ListDocsComponent
     ListDocsComponent,
     InputDocsComponent
   ],
