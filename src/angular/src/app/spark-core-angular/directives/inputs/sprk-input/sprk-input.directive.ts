@@ -1,11 +1,12 @@
-import { Directive, Input, OnInit, ElementRef } from '@angular/core';
+import { Directive, Input, OnInit, OnChanges, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[sprk-input]'
 })
 
-export class SprkInputDirective implements OnInit {
+export class SprkInputDirective implements OnInit, OnChanges {
   @Input() additionalClasses: string;
+  @Input() valid: boolean = true;
 
   constructor(public ref: ElementRef){};
 
@@ -14,6 +15,10 @@ export class SprkInputDirective implements OnInit {
       'sprk-b-TextInput',
       'sprk-u-Width-100'
     ];
+
+    if(!this.valid) {
+      classArray.push('sprk-b-TextInput--error');
+    }
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
@@ -25,6 +30,13 @@ export class SprkInputDirective implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getClasses().forEach((item) => {
+      this.ref.nativeElement.classList.add(item);
+    })
+  }
+
+  ngOnChanges(): void {
+    this.ref.nativeElement.classList = "";
     this.getClasses().forEach((item) => {
       this.ref.nativeElement.classList.add(item);
     })
