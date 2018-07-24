@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCardComponent } from './sprk-card.component';
 
-fdescribe('SparkCardComponent', () => {
+describe('SparkCardComponent', () => {
   let component: SparkCardComponent;
   let fixture: ComponentFixture<SparkCardComponent>;
   let element: HTMLElement;
@@ -30,6 +30,12 @@ fdescribe('SparkCardComponent', () => {
     expect(element.classList.toString()).toEqual(component.getClassesCard());
   });
 
+  it('should add the correct classes if additionalClassesCta is set on cta link', () => {
+    component.additionalCtaClasses = 'sprk-u-pam';
+    fixture.detectChanges();
+    expect(component.getClassesCta()).toEqual('sprk-b-Link sprk-u-pam');
+  });
+
   it('should add the correct class if cardType is not set', () => {
     fixture.detectChanges();
     expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack');
@@ -49,12 +55,9 @@ fdescribe('SparkCardComponent', () => {
   });
 
   it('should add the correct classes if cardType has no value, but additionalClasses does', () => {
-    component.cardType = 'teaser';
-    component.ctaType = 'button';
-    component.ctaText = 'teaser';
+    component.cardType = '';
     component.body = 'Some body copy.';
     component.title = 'Title!';
-    component.imgAlt = 'Alt!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man');
@@ -72,14 +75,43 @@ fdescribe('SparkCardComponent', () => {
     expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man');
   });
 
-  it('should set the data-analytics attribute given a value in the ctaAnalytics Input', () => {
-    component.cardType = 'teaserHeading';
+  it('should set the data-analytics attribute given a value in the ctaAnalytics Input on the teaser card', () => {
+    component.cardType = 'teaser';
     component.ctaText = 'Link text';
     component.ctaAnalytics = 'One';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
     let el = element.querySelector('div.sprk-c-Card__content a');
-    console.log(el);
     expect(el.getAttribute('data-analytics')).toEqual('One');
+  });
+
+  it('should set the data-analytics attribute given a value in the ctaAnalytics Input on the teaser heading card', () => {
+    component.cardType = 'teaserHeading';
+    component.ctaText = 'Link text';
+    component.ctaAnalytics = 'Test';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    let el = element.querySelector('div.sprk-c-Card__content a');
+    expect(el.getAttribute('data-analytics')).toEqual('Test');
+  });
+
+  it('should set the data-analytics attribute on the img given a value in the imgLinkAnalytics Input on the teaser heading card', () => {
+    component.cardType = 'teaserHeading';
+    component.ctaText = 'Link text';
+    component.imgLinkAnalytics = 'Test';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    let el = element.querySelector('a');
+    expect(el.getAttribute('data-analytics')).toEqual('Test');
+  });
+
+  it('should set the data-analytics attribute on the img given a value in the imgLinkAnalytics Input on the teaser card', () => {
+    component.cardType = 'teaser';
+    component.ctaText = 'Link text';
+    component.imgLinkAnalytics = 'Test';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    let el = element.querySelector('a');
+    expect(el.getAttribute('data-analytics')).toEqual('Test');
   });
 });

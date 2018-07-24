@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-stack',
   template: `
-    <div [ngClass]="getClasses()">
+    <div [ngClass]="getClasses()" [attr.data-analytics]="analyticsString">
       <ng-content></ng-content>
     </div>
   `,
