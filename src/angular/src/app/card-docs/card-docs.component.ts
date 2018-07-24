@@ -196,7 +196,7 @@ import { Component } from '@angular/core';
           sprk-stack-item
           additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
           cardType="teaser"
-          title="Card heading! Card heading! Card heading! Card heading! Card heading! Card heading! Card heading!"
+          title="Card heading! Card heading! Card heading! Card heading!"
           body="Placeholder text that is here in this card!"
           imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
           imgAlt="Placeholder Image Alt Text"
@@ -228,6 +228,68 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">
         Card Layout - Four Up
       </h2>
+
+      <sprk-stack splitAt="huge" itemSpacing="small" additionalClasses="sprk-o-Stack--center-row">
+        <sprk-card
+          sprk-stack-item
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          cardType="teaserHeading"
+          title="First Card Out Of Three Cards In Row"
+          body="Placeholder text that is here in this card!"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+          imgAlt="Placeholder Image Alt Text"
+          imgHref="www.sparkdesignsystem.com"
+          ctaType="button"
+          ctaText="Neat!"
+          ctaHref="www.sparkdesignsystem.com"
+          ctaAnalytics="Link: Spark">
+        </sprk-card>
+
+        <sprk-card
+          sprk-stack-item
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          cardType="teaserHeading"
+          title="Card heading! Card heading! Card heading!"
+          body="Placeholder text that is here in this card!"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+          imgAlt="Placeholder Image Alt Text"
+          imgHref="www.sparkdesignsystem.com"
+          ctaType="button"
+          ctaText="Neat!"
+          ctaHref="www.sparkdesignsystem.com"
+          ctaAnalytics="Link: Spark">
+        </sprk-card>
+
+        <sprk-card
+          sprk-stack-item
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          cardType="teaserHeading"
+          title="Card heading! Card heading!"
+          body="Placeholder text that is here in this card!"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+          imgAlt="Placeholder Image Alt Text"
+          imgHref="www.sparkdesignsystem.com"
+          ctaType="button"
+          ctaText="Neat!"
+          ctaHref="www.sparkdesignsystem.com"
+          ctaAnalytics="Link: Spark">
+        </sprk-card>
+
+        <sprk-card
+          sprk-stack-item
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          cardType="teaserHeading"
+          title="Card heading! Card heading!"
+          body="Placeholder text that is here in this card!"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+          imgAlt="Placeholder Image Alt Text"
+          imgHref="www.sparkdesignsystem.com"
+          ctaType="button"
+          ctaText="Neat!"
+          ctaHref="www.sparkdesignsystem.com"
+          ctaAnalytics="Link: Spark">
+        </sprk-card>
+      </sprk-stack>
     </div>
   `,
   styles: ['']
