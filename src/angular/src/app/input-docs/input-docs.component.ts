@@ -21,68 +21,6 @@ import { Component } from '@angular/core';
               [hidden]="textInput.valid || textInput.pristine" 
               sprk-field-error>This field is required.</span>
           </sprk-input-container>
-          <sprk-input-container>
-            <label sprk-label>Textarea Input</label>
-            <textarea
-              name="textarea_input" 
-              [(ngModel)]="textarea_input"
-              #textareaInput="ngModel"
-              sprk-input></textarea>
-          </sprk-input-container>
-          <sprk-input-container>
-            <label sprk-label>Search Input</label>
-            <input 
-              name="search_input" 
-              type="search" 
-              [(ngModel)]="search_input"
-              #searchInput="ngModel"
-              sprk-input>
-          </sprk-input-container>
-          <sprk-input-container>
-            <label additionalClasses="sprk-u-ScreenReaderText" sprk-label>Inline Search Input</label>
-            <input 
-              name="inline_search_input" 
-              type="search" 
-              role="search"
-              placeholder="Search"
-              [(ngModel)]="inline_search_input"
-              #inlineSearchInput="ngModel"
-              sprk-input>
-          </sprk-input-container>
-          <sprk-input-container>
-            <label sprk-label>Phone Number</label>
-            <input 
-              name="phone_input" 
-              [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
-              type="text" 
-              pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
-              placeholder="(000) 000-0000"
-              [(ngModel)]="phone_input"
-              required
-              #phoneInput="ngModel"
-              sprk-input>
-            <span 
-              [hidden]="phoneInput.valid || phoneInput.pristine"
-              sprk-field-error>
-              {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
-            </span>  
-          </sprk-input-container>
-          <sprk-input-container>
-            <label sprk-label>Date Input (No Picker)</label>
-            <input 
-              name="date_input" 
-              [additionalClasses]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
-              type="text" 
-              pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
-              placeholder="MM/DD/YYYY"
-              [(ngModel)]="date_input"
-              #dateInput="ngModel"
-              sprk-input>
-            <span 
-              [hidden]="dateInput.valid || dateInput.pristine"
-              sprk-field-error>This field is invalid.</span>  
-          </sprk-input-container>
-          
           <sprk-selection-container>
             <label sprk-label>Checkbox Group Label</label>
             <sprk-selection-item-container>
@@ -146,6 +84,85 @@ import { Component } from '@angular/core';
               <label sprk-selection-label>Item 3</label>
             </sprk-selection-item-container>
           </sprk-selection-container> 
+          <sprk-input-container>
+            <label sprk-label>Textarea Input</label>
+            <textarea
+              name="textarea_input" 
+              [(ngModel)]="textarea_input"
+              #textareaInput="ngModel"
+              sprk-input></textarea>
+          </sprk-input-container>
+          <sprk-input-container>
+            <label sprk-label>Search Input</label>
+            <input 
+              name="search_input" 
+              type="search" 
+              [(ngModel)]="search_input"
+              #searchInput="ngModel"
+              sprk-input>
+          </sprk-input-container>
+          <sprk-input-container>
+            <label additionalClasses="sprk-u-ScreenReaderText" sprk-label>Inline Search Input</label>
+            <input 
+              name="inline_search_input" 
+              type="search" 
+              role="search"
+              placeholder="Search"
+              [(ngModel)]="inline_search_input"
+              #inlineSearchInput="ngModel"
+              sprk-input>
+          </sprk-input-container>
+          <sprk-input-mask-container>
+            <label sprk-label>Password</label>
+            <input
+              [type]="passwordType"
+              name="password_input"
+              sprk-input
+            >
+            <sprk-selection-item-container>
+              <input type="checkbox" sprk-selection-input (click)="togglePassword()">
+              <label sprk-selection-label>Show Password</label>
+            </sprk-selection-item-container>
+            
+            <div class="sprk-b-ErrorText" id="password-normal--error-container">
+            </div>
+          </sprk-input-mask-container>
+          <sprk-input-container>
+            <label sprk-label>Phone Number</label>
+            <input 
+              name="phone_input" 
+              [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
+              type="text" 
+              pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+              placeholder="(000) 000-0000"
+              [(ngModel)]="phone_input"
+              required
+              #phoneInput="ngModel"
+              sprk-input>
+            <span 
+              [hidden]="phoneInput.valid || phoneInput.pristine"
+              sprk-field-error>
+              {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
+            </span>  
+          </sprk-input-container>
+          <sprk-input-container>
+            <label sprk-label>Date Input (No Picker)</label>
+            <input 
+              name="date_input" 
+              [additionalClasses]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
+              type="text" 
+              pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+              placeholder="MM/DD/YYYY"
+              [(ngModel)]="date_input"
+              #dateInput="ngModel"
+              sprk-input>
+            <span 
+              [hidden]="dateInput.valid || dateInput.pristine"
+              sprk-field-error>This field is invalid.</span>  
+          </sprk-input-container>
+          
+          
+          
           <sprk-button [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
         </form>
       </div>`,
@@ -162,6 +179,15 @@ export class InputDocsComponent {
   phone_input: string = '';
   date_input: string = '';
   radio_input: string;
+  passwordType = 'password';
+
+  togglePassword():void {
+    if(this.passwordType === 'password') {
+      this.passwordType = 'text';
+    } else {
+      this.passwordType = 'password';
+    }
+  }
 
   onSubmit(): void {
     console.log('Submitted!');
