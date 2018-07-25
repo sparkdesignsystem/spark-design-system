@@ -6,18 +6,22 @@ import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-i
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 @Component({
-  selector: 'sprk-input-container',
+  selector: 'sprk-selection-container',
   template: `
     <div [ngClass]="getClasses()">
-      <ng-content select="[sprk-label]"></ng-content>
-      <ng-content select="[sprk-input]"></ng-content>
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          <ng-content select="[sprk-label]"></ng-content>
+        </legend>
+        <ng-content select="sprk-selection-item-container"></ng-content>
+      </fieldset> 
       <ng-content select="[sprk-helper-text]"></ng-content>
       <ng-content select="[sprk-field-error]"></ng-content>
     </div>`,
   styles: ['']
 })
 
-export class SparkInputContainerComponent implements OnInit {
+export class SparkSelectionContainerComponent implements OnInit {
   @Input() control: FormControl;
   @Input() controlName: string;
   @Input() additionalClasses: string;

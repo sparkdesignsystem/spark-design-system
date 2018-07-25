@@ -82,17 +82,15 @@ textarea {
   }
 }
 
+.sprk-b-SelectionContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: $space-s;
+}
+
 .sprk-b-SelectionContainer .sprk-b-Label {
   font-weight: normal;
-}
-
-.sprk-b-SelectionContainer [type='radio'],
-.sprk-b-SelectionContainer [type='checkbox'] {
-  vertical-align: middle;
-}
-
-.sprk-b-SelectionContainer:last-child {
-  margin-bottom: $space-s;
+  line-height: 1;
 }
 
 .sprk-b-InputContainer {

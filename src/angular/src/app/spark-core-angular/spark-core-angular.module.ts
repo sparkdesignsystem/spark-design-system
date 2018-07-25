@@ -21,12 +21,16 @@ import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.co
 import { SparkListComponent } from './components/sprk-list/sprk-list.component';
 import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
 import { SparkInputContainerComponent } from './components/inputs/sprk-input-container/sprk-input-container.component';
+import { SparkSelectionContainerComponent } from './components/inputs/sprk-selection-container/sprk-selection-container.component';
+import { SparkSelectionItemContainerComponent } from './components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
 import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
 
 import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
+import { SprkSelectionLabelDirective } from './directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
+import { SprkSelectionInputDirective } from './directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkHelperTextDirective} from './directives/inputs/sprk-helper-text/sprk-helper-text.directive';
 import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sprk-field-error.directive';
 
@@ -60,11 +64,15 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
     SparkStackComponent,
     SparkStackItemDirective,
     SparkInputContainerComponent,
+    SparkSelectionContainerComponent,
+    SparkSelectionItemContainerComponent,
     SparkListItemComponent,
     SparkMastheadComponent,
     SprkInputDirective,
+    SprkSelectionInputDirective,
     SprkHelperTextDirective,
     SprkLabelDirective,
+    SprkSelectionLabelDirective,
     SprkFieldErrorDirective
   ],
   exports: [
@@ -86,6 +94,8 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
     SparkNarrowNavigationComponent,
     SparkNarrowNavigationItemComponent,
     SparkInputContainerComponent,
+    SparkSelectionContainerComponent,
+    SparkSelectionItemContainerComponent,
     SparkNarrowNavigationItemComponent,
     SparkSecondaryNavigationComponent,
     SparkSecondaryNavigationItemComponent,
@@ -94,8 +104,10 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
     SparkStackItemDirective,
     SparkMastheadComponent,
     SprkInputDirective,
+    SprkSelectionInputDirective,
     SprkHelperTextDirective,
     SprkLabelDirective,
+    SprkSelectionLabelDirective,
     SprkFieldErrorDirective
   ],
 })

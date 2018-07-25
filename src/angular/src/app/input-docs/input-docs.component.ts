@@ -22,22 +22,12 @@ import { Component } from '@angular/core';
               sprk-field-error>This field is required.</span>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>Phone Number</label>
-            <input 
-              name="phone_input" 
-              [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
-              type="text" 
-              pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
-              placeholder="(000) 000-0000"
-              [(ngModel)]="phone_input"
-              required
-              #phoneInput="ngModel"
-              sprk-input>
-            <span 
-              [hidden]="phoneInput.valid || phoneInput.pristine"
-              sprk-field-error>
-              {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
-            </span>  
+            <label sprk-label>Textarea Input</label>
+            <textarea
+              name="textarea_input" 
+              [(ngModel)]="textarea_input"
+              #textareaInput="ngModel"
+              sprk-input></textarea>
           </sprk-input-container>
           <sprk-input-container>
             <label sprk-label>Search Input</label>
@@ -60,6 +50,24 @@ import { Component } from '@angular/core';
               sprk-input>
           </sprk-input-container>
           <sprk-input-container>
+            <label sprk-label>Phone Number</label>
+            <input 
+              name="phone_input" 
+              [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
+              type="text" 
+              pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+              placeholder="(000) 000-0000"
+              [(ngModel)]="phone_input"
+              required
+              #phoneInput="ngModel"
+              sprk-input>
+            <span 
+              [hidden]="phoneInput.valid || phoneInput.pristine"
+              sprk-field-error>
+              {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
+            </span>  
+          </sprk-input-container>
+          <sprk-input-container>
             <label sprk-label>Date Input (No Picker)</label>
             <input 
               name="date_input" 
@@ -74,10 +82,73 @@ import { Component } from '@angular/core';
               [hidden]="dateInput.valid || dateInput.pristine"
               sprk-field-error>This field is invalid.</span>  
           </sprk-input-container>
+          
+          <sprk-selection-container>
+            <label sprk-label>Checkbox Group Label</label>
+            <sprk-selection-item-container>
+              <input 
+                type="checkbox" 
+                name="checkbox_input" 
+                [(ngModel)]="checkbox_input1" 
+                sprk-selection-input
+                #checkboxInput1="ngModel"> 
+              <label sprk-selection-label>Item 1</label>
+            </sprk-selection-item-container>
+            <sprk-selection-item-container>
+              <input 
+                type="checkbox" 
+                name="checkbox_input" 
+                [(ngModel)]="checkbox_input2" 
+                sprk-selection-input
+                #checkboxInput2="ngModel"> 
+              <label sprk-selection-label>Item 2</label>
+            </sprk-selection-item-container>
+            <sprk-selection-item-container>
+              <input 
+                type="checkbox" 
+                name="checkbox_input" 
+                [(ngModel)]="checkbox_input3" 
+                sprk-selection-input
+                #checkboxInput3="ngModel"> 
+              <label sprk-selection-label>Item 3</label>
+            </sprk-selection-item-container>
+          </sprk-selection-container> 
+          <sprk-selection-container>
+            <label sprk-label>Radio Group Label</label>
+            <sprk-selection-item-container>
+              <input 
+                type="radio" 
+                value="1"
+                name="radio_input" 
+                [(ngModel)]="radio_input"
+                sprk-selection-input
+                #radioInput="ngModel"> 
+              <label sprk-selection-label>Item 1</label>
+            </sprk-selection-item-container>
+            <sprk-selection-item-container>
+              <input 
+                type="radio" 
+                value="2"
+                name="radio_input" 
+                sprk-selection-input
+                [(ngModel)]="radio_input"
+                #radioInput="ngModel"> 
+              <label sprk-selection-label>Item 2</label>
+            </sprk-selection-item-container>
+            <sprk-selection-item-container>
+              <input 
+                type="radio" 
+                value="3"
+                name="radio_input" 
+                sprk-selection-input
+                [(ngModel)]="radio_input"
+                #radioInput="ngModel"> 
+              <label sprk-selection-label>Item 3</label>
+            </sprk-selection-item-container>
+          </sprk-selection-container> 
           <sprk-button [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
         </form>
-      </div>
-  `,
+      </div>`,
   styles: ['']
 })
 
@@ -85,9 +156,12 @@ export class InputDocsComponent {
   constructor() { }
 
   text_input: string = '';
-  phone_input: string = '';
+  textarea_input: string = '';
   search_input: string = '';
   inline_search_input: string = '';
+  phone_input: string = '';
+  date_input: string = '';
+  radio_input: string;
 
   onSubmit(): void {
     console.log('Submitted!');
