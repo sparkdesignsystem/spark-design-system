@@ -27,6 +27,7 @@ import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack
 
 import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
 import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
+import { SprkHelperTextDirective} from './directives/inputs/sprk-helper-text/sprk-helper-text.directive';
 import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 @NgModule({
@@ -62,6 +63,7 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
     SparkListItemComponent,
     SparkMastheadComponent,
     SprkInputDirective,
+    SprkHelperTextDirective,
     SprkLabelDirective,
     SprkFieldErrorDirective
   ],
@@ -92,6 +94,7 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
     SparkStackItemDirective,
     SparkMastheadComponent,
     SprkInputDirective,
+    SprkHelperTextDirective,
     SprkLabelDirective,
     SprkFieldErrorDirective
   ],

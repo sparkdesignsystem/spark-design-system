@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
               required
               #textInput="ngModel"
               sprk-input>
+            <p sprk-helper-text>Please enter some input.</p>  
             <span 
               [hidden]="textInput.valid || textInput.pristine" 
               sprk-field-error>This field is required.</span>

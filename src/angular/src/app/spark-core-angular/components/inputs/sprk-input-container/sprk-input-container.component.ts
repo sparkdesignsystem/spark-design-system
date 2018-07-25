@@ -11,6 +11,7 @@ import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-e
     <div [ngClass]="getClasses()">
       <ng-content select="[sprk-label]"></ng-content>
       <ng-content select="[sprk-input]"></ng-content>
+      <ng-content select="[sprk-helper-text]"></ng-content>
       <ng-content select="[sprk-error]"></ng-content>
     </div>`,
   styles: ['']
