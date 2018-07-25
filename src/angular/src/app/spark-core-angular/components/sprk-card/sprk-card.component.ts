@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'">
       <a
+        *ngIf="media === 'img'"
         [routerLink]="imgHref"
         class="sprk-o-Stack__item"
         [attr.data-analytics]="imgLinkAnalytics">
@@ -15,6 +16,14 @@ import { Component, Input } from '@angular/core';
 
       <div
         class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+        <a
+          *ngIf="media === 'icon'"
+          [routerLink]="iconHref"
+          class="sprk-o-Stack__item sprk-o-Stack__item--center"
+          [attr.data-analytics]="iconLinkAnalytics">
+          <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
+        </a>
+
         <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
           {{ title }}
         </h3>
@@ -41,12 +50,21 @@ import { Component, Input } from '@angular/core';
       </h3>
 
       <a
+        *ngIf="media === 'img'"
         [routerLink]="imgHref"
         class="sprk-o-Stack__item"
         [attr.data-analytics]="imgLinkAnalytics">
         <img
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}">
+      </a>
+
+      <a
+        *ngIf="media === 'icon'"
+        [routerLink]="iconHref"
+        class="sprk-o-Stack__item sprk-o-Stack__item--center"
+        [attr.data-analytics]="iconLinkAnalytics">
+        <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
       </a>
 
       <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
@@ -68,14 +86,19 @@ import { Component, Input } from '@angular/core';
 export class SparkCardComponent {
   @Input() cardType: string = 'base';
   @Input() body: string;
+  @Input() media: string;
+  @Input() additionalClassesIcon: string;
   @Input() title: string;
   @Input() imgSrc: string;
   @Input() imgAlt: string;
+  @Input() iconType: string;
+  @Input() iconHref: string;
   @Input() imgHref: string;
   @Input() ctaType: string = 'link';
   @Input() ctaText: string;
   @Input() ctaAnalytics: string;
   @Input() imgLinkAnalytics: string;
+  @Input() iconLinkAnalytics: string;
   @Input() ctaHref: string;
   @Input() additionalClasses: string;
   @Input() additionalCtaClasses: string;
