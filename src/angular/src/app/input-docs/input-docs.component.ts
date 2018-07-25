@@ -92,6 +92,23 @@ import { Component } from '@angular/core';
               #textareaInput="ngModel"
               sprk-input></textarea>
           </sprk-input-container>
+          <sprk-input-mask-container>
+            <label sprk-label>SSN Input</label>
+            <input
+              [type]="ssnType"
+              pattern="(^(?!666|000|9\\d{2})\\d{3}([- ]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$" placeholder="000-00-0000"
+              name="ssn_input"
+              [(ngModel)]="ssn_input"
+              #ssnInput="ngModel"
+              sprk-input>
+            <sprk-selection-item-container>
+              <input type="checkbox" sprk-selection-input (click)="toggleSSNType()">
+              <label sprk-selection-label>Show SSN</label>
+            </sprk-selection-item-container>
+            <div 
+            [hidden]="ssnInput.valid || ssnInput.pristine"
+            sprk-field-error>Invalid SSN.</div>
+          </sprk-input-mask-container>
           <sprk-input-container>
             <label sprk-label>Search Input</label>
             <input 
@@ -117,15 +134,11 @@ import { Component } from '@angular/core';
             <input
               [type]="passwordType"
               name="password_input"
-              sprk-input
-            >
+              sprk-input>
             <sprk-selection-item-container>
-              <input type="checkbox" sprk-selection-input (click)="togglePassword()">
+              <input type="checkbox" sprk-selection-input (click)="togglePasswordType()">
               <label sprk-selection-label>Show Password</label>
             </sprk-selection-item-container>
-            
-            <div class="sprk-b-ErrorText" id="password-normal--error-container">
-            </div>
           </sprk-input-mask-container>
           <sprk-input-container>
             <label sprk-label>Phone Number</label>
@@ -180,12 +193,21 @@ export class InputDocsComponent {
   date_input: string = '';
   radio_input: string;
   passwordType = 'password';
+  ssnType = 'password';
 
-  togglePassword():void {
+  togglePasswordType(): void {
     if(this.passwordType === 'password') {
       this.passwordType = 'text';
     } else {
       this.passwordType = 'password';
+    }
+  }
+
+  toggleSSNType(): void {
+    if(this.ssnType === 'password') {
+      this.ssnType = 'text';
+    } else {
+      this.ssnType = 'password';
     }
   }
 
