@@ -1,10 +1,10 @@
 import { Directive, Input, OnInit, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-error]'
+  selector: '[sprk-field-error]'
 })
 
-export class SprkErrorDirective implements OnInit {
+export class SprkFieldErrorDirective implements OnInit {
   @Input() additionalClasses: string;
 
   constructor(public ref: ElementRef){};

@@ -16,10 +16,6 @@ export class SprkInputDirective implements OnInit, OnChanges {
       'sprk-u-Width-100'
     ];
 
-    if(!this.valid) {
-      classArray.push('sprk-b-TextInput--error');
-    }
-
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
