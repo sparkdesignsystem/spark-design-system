@@ -18,6 +18,7 @@ import { NavigationDocsComponent } from './navigation-docs/navigation-docs.compo
 import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
 import { CardDocsComponent } from './card-docs/card-docs.component';
 import { StackDocsComponent } from './stack-docs/stack-docs.component';
+import { PromoDocsComponent } from './promo-docs/promo-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'dividers', component: DividerDocsComponent },
   { path: 'masthead', component: MastheadDocsComponent },
   { path: 'stack', component: StackDocsComponent },
+  { path: 'promo', component: PromoDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -53,6 +55,7 @@ const appRoutes: Routes = [
     MastheadDocsComponent,
     ListDocsComponent,
     StackDocsComponent,
+    PromoDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(
