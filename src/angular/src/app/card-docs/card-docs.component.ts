@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
   selector: 'sprk-card-docs',
