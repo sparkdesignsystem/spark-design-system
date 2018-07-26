@@ -26,8 +26,8 @@ import { SparkSelectionItemContainerComponent } from './components/inputs/sprk-s
 import { SparkInputMaskContainerComponent } from './components/inputs/sprk-input-mask-container/sprk-input-mask-container.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
-import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
 
+import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
 import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectionLabelDirective } from './directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
@@ -38,6 +38,7 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
 import { SprkFormatterPhoneNumberDirective } from './directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.directive';
 import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.directive';
 import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.directive';
+import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
 
 @NgModule({
   imports: [
@@ -82,7 +83,8 @@ import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/s
     SprkFieldErrorDirective,
     SprkFormatterPhoneNumberDirective,
     SprkFormatterDateDirective,
-    SprkFormatterMonetaryDirective
+    SprkFormatterMonetaryDirective,
+    SprkFormatterSsnDirective,
   ],
   exports: [
     SparkAlertComponent,
@@ -121,7 +123,8 @@ import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/s
     SprkFieldErrorDirective,
     SprkFormatterPhoneNumberDirective,
     SprkFormatterDateDirective,
-    SprkFormatterMonetaryDirective
+    SprkFormatterMonetaryDirective,
+    SprkFormatterSsnDirective,
   ],
 })
 export class SparkCoreAngularModule { }

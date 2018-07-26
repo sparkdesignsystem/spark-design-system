@@ -113,10 +113,12 @@ import { Component } from '@angular/core';
             <label sprk-label>SSN Input</label>
             <input
               [type]="ssnType"
-              pattern="(^(?!666|000|9\\d{2})\\d{3}([- ]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$" placeholder="000-00-0000"
+              [additionalClasses]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
+              pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$" placeholder="000-00-0000"
               name="ssn_input"
               [(ngModel)]="ssn_input"
               #ssnInput="ngModel"
+              sprk-formatter-ssn
               sprk-input>
             <sprk-selection-item-container>
               <input type="checkbox" sprk-selection-input (click)="toggleSSNType()">
