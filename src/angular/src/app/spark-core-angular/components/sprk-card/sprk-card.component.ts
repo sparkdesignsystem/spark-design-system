@@ -11,8 +11,8 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
         class="sprk-o-Stack__item"
         [attr.data-analytics]="imgLinkAnalytics">
         <img
-          alt="{{ imgAlt }}"
-          src="{{ imgSrc }}">
+          [attr.alt]="imgAlt"
+          [attr.src]="imgSrc">
       </a>
 
       <div
@@ -56,8 +56,8 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
         class="sprk-o-Stack__item"
         [attr.data-analytics]="imgLinkAnalytics">
         <img
-          alt="{{ imgAlt }}"
-          src="{{ imgSrc }}">
+          [attr.alt]="imgAlt"
+          [attr.src]="imgSrc">
       </a>
 
       <a
