@@ -37,6 +37,7 @@ import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sp
 
 import { SprkFormatterPhoneNumberDirective } from './directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.directive';
 import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.directive';
+import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.directive';
 
 @NgModule({
   imports: [
@@ -80,7 +81,8 @@ import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-
     SprkSelectionLabelDirective,
     SprkFieldErrorDirective,
     SprkFormatterPhoneNumberDirective,
-    SprkFormatterDateDirective
+    SprkFormatterDateDirective,
+    SprkFormatterMonetaryDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -119,6 +121,7 @@ import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-
     SprkFieldErrorDirective,
     SprkFormatterPhoneNumberDirective,
     SprkFormatterDateDirective,
+    SprkFormatterMonetaryDirective
   ],
 })
 export class SparkCoreAngularModule { }

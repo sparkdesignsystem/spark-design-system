@@ -155,6 +155,7 @@ import { Component } from '@angular/core';
               pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
               [(ngModel)]="monetary_input"
               #monetaryInput="ngModel"
+              sprk-formatter-monetary
               sprk-input>
               <div 
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
