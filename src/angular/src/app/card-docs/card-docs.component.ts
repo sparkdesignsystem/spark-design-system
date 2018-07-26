@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
   selector: 'sprk-card-docs',
@@ -95,16 +94,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 
       <sprk-card
         media="icon"
-        iconType="calculator"
+        iconType="chat"
         iconHref="https://sparkdesignsystem.com"
         additionalClassesIcon="sprk-c-Icon--l sprk-b-TypeBodyTwo"
         cardType="teaser"
         title="Spark Card With Button CTA!"
-        body="
-          Content placeholder! Things! Content placeholder!
-          Things! Content placeholder! Things! Content placeholder!
-          Things!
-        "
+        body="Content placeholder! Things! Content placeholder!"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
         imgAlt="Placeholder Image"
         imgHref="www.sparkdesignsystem.com"

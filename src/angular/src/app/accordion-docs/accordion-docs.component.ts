@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
         <h2 class="drizzle-b-h2">Primary Accordion</h2>
         <sprk-accordion>
           <sprk-accordion-item title="This is a title" additionalClasses="sprk-u-mbs">
-            <p>This is some content.</p> 
+            <p>This is some content.</p>
           </sprk-accordion-item>
           <sprk-accordion-item title="This is another title">
-            <p>This is some more content.</p> 
+            <p>This is some more content.</p>
           </sprk-accordion-item>
         </sprk-accordion>
       </div>
