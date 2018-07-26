@@ -64,7 +64,7 @@ export class SparkInputContainerComponent implements OnInit {
       this.input.ref.nativeElement.id = this.input_id;
     }
     if(this.input && this.error) {
-      this.input.ref.nativeElement.setAttribute('aria-descibedby', this.error_id);
+      this.input.ref.nativeElement.setAttribute('aria-describedby', this.error_id);
       this.error.ref.nativeElement.id = this.error_id;
     }
   }
