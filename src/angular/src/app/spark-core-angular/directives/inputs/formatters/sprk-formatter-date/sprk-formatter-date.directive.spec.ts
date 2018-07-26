@@ -1,7 +1,7 @@
 import { Directive, HostListener, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-formatter-phone-number]'
+  selector: '[sprk-formatter-date]'
 })
 
 export class SprkFormatterPhoneNumberDirective {
@@ -10,10 +10,10 @@ export class SprkFormatterPhoneNumberDirective {
 
   @HostListener('input', ["$event.target.value"])
   onFocus(value) {
-    this.ref.nativeElement.value = this.formatPhone(value);
+    this.ref.nativeElement.value = this.formatDate(value);
   }
 
-  formatPhone(value): string {
+  formatDate(value): string {
     const newValue = `${value}`.replace(/\D/g, '');
     const m = newValue.match(/^(\d{3})(\d{3})(\d{4})$/);
 
@@ -22,7 +22,7 @@ export class SprkFormatterPhoneNumberDirective {
     } else {
       return value;
     }
-  };
+};
 
 
 }

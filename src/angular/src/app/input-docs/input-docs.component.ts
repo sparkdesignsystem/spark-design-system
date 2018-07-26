@@ -201,6 +201,7 @@ import { Component } from '@angular/core';
               placeholder="MM/DD/YYYY"
               [(ngModel)]="datepicker_input"
               #datepickerInput="ngModel"
+              sprk-formatter-date
               sprk-input>
               <div 
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
@@ -216,6 +217,7 @@ import { Component } from '@angular/core';
               placeholder="MM/DD/YYYY"
               [(ngModel)]="date_input"
               #dateInput="ngModel"
+              sprk-formatter-date
               sprk-input>
             <span 
               [hidden]="dateInput.valid || dateInput.pristine"
