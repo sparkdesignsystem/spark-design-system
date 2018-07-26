@@ -15,12 +15,9 @@ import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-sel
 })
 
 export class SparkSelectionItemContainerComponent implements OnInit {
-  @Input() control: FormControl;
-  @Input() controlName: string;
   @Input() additionalClasses: string;
   @Input() labelText: string;
-  @Input() errorMessage: string;
-  @Input() model: Object;
+  @Input() errorContainerId: string;
 
   @ContentChild(SprkSelectionLabelDirective) label: SprkSelectionLabelDirective;
   @ContentChild(SprkSelectionInputDirective) input: SprkSelectionInputDirective;
@@ -46,6 +43,10 @@ export class SparkSelectionItemContainerComponent implements OnInit {
     if(this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
       this.input.ref.nativeElement.id = this.input_id;
+    }
+
+    if(this.input && this.errorContainerId) {
+      this.input.ref.nativeElement.setAttribute('aria-describedby', this.errorContainerId);
     }
   }
 }

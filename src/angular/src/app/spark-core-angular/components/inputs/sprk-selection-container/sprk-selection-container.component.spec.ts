@@ -1,5 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkSelectionContainerComponent } from './sprk-selection-container.component';
+import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { By } from '@angular/platform-browser';
 
 describe('SparkSelectionContainerComponent', () => {
   let component: SparkSelectionContainerComponent;
