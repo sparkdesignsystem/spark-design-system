@@ -23,7 +23,6 @@ import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-it
 import { SparkInputContainerComponent } from './components/inputs/sprk-input-container/sprk-input-container.component';
 import { SparkSelectionContainerComponent } from './components/inputs/sprk-selection-container/sprk-selection-container.component';
 import { SparkSelectionItemContainerComponent } from './components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
-import { SparkInputMaskContainerComponent } from './components/inputs/sprk-input-mask-container/sprk-input-mask-container.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
 
@@ -74,8 +73,6 @@ import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-f
     SparkInputContainerComponent,
     SparkSelectionContainerComponent,
     SparkSelectionItemContainerComponent,
-    SparkInputMaskContainerComponent,
-    SparkListItemComponent,
     SparkMastheadComponent,
     SprkInputDirective,
     SprkSelectionInputDirective,
@@ -110,7 +107,6 @@ import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-f
     SparkInputContainerComponent,
     SparkSelectionContainerComponent,
     SparkSelectionItemContainerComponent,
-    SparkInputMaskContainerComponent,
     SparkNarrowNavigationItemComponent,
     SparkSecondaryNavigationComponent,
     SparkSecondaryNavigationItemComponent,

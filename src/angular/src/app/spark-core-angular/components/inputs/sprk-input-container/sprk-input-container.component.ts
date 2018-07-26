@@ -13,6 +13,7 @@ import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-e
         <ng-content select="[sprk-input-icon]"></ng-content>
         <ng-content select="[sprk-input]"></ng-content>
       </div>
+      <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprk-helper-text]"></ng-content>
       <ng-content select="[sprk-field-error]"></ng-content>
     </div>`,

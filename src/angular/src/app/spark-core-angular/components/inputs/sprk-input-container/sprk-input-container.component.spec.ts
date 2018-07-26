@@ -21,7 +21,7 @@ import { By } from '@angular/platform-browser';
 class TestComponent {}
 
 
-fdescribe('SparkInputContainerComponent', () => {
+describe('SparkInputContainerComponent', () => {
   let testFixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
 

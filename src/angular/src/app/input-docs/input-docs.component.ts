@@ -106,7 +106,7 @@ import { Component } from '@angular/core';
               #textareaInput="ngModel"
               sprk-input></textarea>
           </sprk-input-container>
-          <sprk-input-mask-container>
+          <sprk-input-container>
             <label sprk-label>SSN Input</label>
             <input
               [type]="ssnType"
@@ -124,7 +124,7 @@ import { Component } from '@angular/core';
             <div 
             [hidden]="ssnInput.valid || ssnInput.pristine"
             sprk-field-error>Invalid SSN.</div>
-          </sprk-input-mask-container>
+          </sprk-input-container>
           <sprk-input-container>
             <label sprk-label>Search Input</label>
             <input 
@@ -160,7 +160,7 @@ import { Component } from '@angular/core';
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
               sprk-field-error>Invalid amount.</div>
           </sprk-input-container>
-          <sprk-input-mask-container>
+          <sprk-input-container>
             <label sprk-label>Password</label>
             <input
               [type]="passwordType"
@@ -170,7 +170,7 @@ import { Component } from '@angular/core';
               <input type="checkbox" sprk-selection-input (click)="togglePasswordType()">
               <label sprk-selection-label>Show Password</label>
             </sprk-selection-item-container>
-          </sprk-input-mask-container>
+          </sprk-input-container>
           <sprk-input-container>
             <label sprk-label>Phone Number *</label>
             <input 
