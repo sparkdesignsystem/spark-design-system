@@ -182,6 +182,7 @@ import { Component } from '@angular/core';
               [(ngModel)]="phone_input"
               required
               #phoneInput="ngModel"
+              sprk-formatter-phone-number
               sprk-input>
             <span 
               [hidden]="phoneInput.valid || phoneInput.pristine"
