@@ -27,6 +27,7 @@ import { SparkInputMaskContainerComponent } from './components/inputs/sprk-input
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
 
+import { SprkDatepickerDirective } from './directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
 import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectionLabelDirective } from './directives/inputs/sprk-selection-label/sprk-selection-label.directive';
@@ -39,6 +40,7 @@ import { SprkFormatterPhoneNumberDirective } from './directives/inputs/formatter
 import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.directive';
 import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.directive';
 import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
+
 
 @NgModule({
   imports: [
@@ -85,6 +87,7 @@ import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-f
     SprkFormatterDateDirective,
     SprkFormatterMonetaryDirective,
     SprkFormatterSsnDirective,
+    SprkDatepickerDirective,
   ],
   exports: [
     SparkAlertComponent,
@@ -125,6 +128,7 @@ import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-f
     SprkFormatterDateDirective,
     SprkFormatterMonetaryDirective,
     SprkFormatterSsnDirective,
+    SprkDatepickerDirective,
   ],
 })
 export class SparkCoreAngularModule { }

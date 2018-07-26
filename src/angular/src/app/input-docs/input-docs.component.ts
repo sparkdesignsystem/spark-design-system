@@ -205,6 +205,7 @@ import { Component } from '@angular/core';
               [(ngModel)]="datepicker_input"
               #datepickerInput="ngModel"
               sprk-formatter-date
+              sprk-datepicker
               sprk-input>
               <div 
               [hidden]="datepickerInput.valid || datepickerInput.pristine"
