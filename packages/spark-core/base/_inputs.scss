@@ -45,7 +45,7 @@ textarea {
   position: relative;
 }
 
-.sprk-b-TextInput--date-picker > .sprk-c-Icon,
+.sprk-b-TextInput--date-picker .sprk-c-Icon,
 .sprk-b-TextInput--monetary::before {
   color: $gray-dark;
   position: absolute;
@@ -53,7 +53,7 @@ textarea {
   z-index: $layer-height-xs;
 }
 
-.sprk-b-TextInput--date-picker > .sprk-c-Icon {
+.sprk-b-TextInput--date-picker .sprk-c-Icon {
   top: 0.85rem;
 }
 
