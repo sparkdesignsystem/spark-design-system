@@ -207,8 +207,8 @@ import { Component } from '@angular/core';
               sprk-formatter-date
               sprk-input>
               <div 
-              [hidden]="monetaryInput.valid || monetaryInput.pristine"
-              sprk-field-error>Invalid amount.</div>
+              [hidden]="datepickerInput.valid || datepickerInput.pristine"
+              sprk-field-error>Invalid date.</div>
           </sprk-input-container>
           <sprk-input-container>
             <label sprk-label>Date Input (No Picker)</label>
@@ -224,11 +224,8 @@ import { Component } from '@angular/core';
               sprk-input>
             <span 
               [hidden]="dateInput.valid || dateInput.pristine"
-              sprk-field-error>This field is invalid.</span>  
+              sprk-field-error>Invalid date.</span>  
           </sprk-input-container>
-          
-          
-          
           <sprk-button [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
         </form>
       </div>`,
