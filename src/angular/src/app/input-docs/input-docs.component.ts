@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
         <h2 class="drizzle-b-h2">Inputs</h2>
         <form (submit)="onSubmit($event)" #sampleForm="ngForm">
           <sprk-input-container>
-            <label sprk-label>Text Input</label>
+            <label sprk-label>Text Input *</label>
             <input 
               name="text_input" 
               [additionalClasses]="textInput.invalid && textInput.dirty ? 'sprk-b-TextInput--error': ''"
@@ -97,9 +97,6 @@ import { Component } from '@angular/core';
                 <option value="g3">Grouped Option 3</option>
               </optgroup>
             </select>
-            <span 
-              [hidden]="textInput.valid || textInput.pristine" 
-              sprk-field-error>Please make a selection.</span>
           </sprk-input-container>
           <sprk-input-container>
             <label sprk-label>Textarea Input</label>
@@ -175,7 +172,7 @@ import { Component } from '@angular/core';
             </sprk-selection-item-container>
           </sprk-input-mask-container>
           <sprk-input-container>
-            <label sprk-label>Phone Number</label>
+            <label sprk-label>Phone Number *</label>
             <input 
               name="phone_input" 
               [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
@@ -227,7 +224,13 @@ import { Component } from '@angular/core';
               [hidden]="dateInput.valid || dateInput.pristine"
               sprk-field-error>Invalid date.</span>  
           </sprk-input-container>
-          <sprk-button [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
+          <sprk-button additionalClasses="sprk-u-mbl" [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
+          <sprk-alert 
+          [hidden]="sampleForm.valid"
+          alertType="fail">Something's wrong above.</sprk-alert>
+          <sprk-alert 
+          [hidden]="!form_submitted"
+          alertType="success">Form Submitted! (Not really)</sprk-alert>
         </form>
       </div>`,
   styles: ['']
@@ -243,8 +246,9 @@ export class InputDocsComponent {
   phone_input: string = '';
   date_input: string = '';
   radio_input: string;
-  passwordType = 'password';
-  ssnType = 'password';
+  passwordType: string = 'password';
+  ssnType: string = 'password';
+  form_submitted: boolean = false;
 
   togglePasswordType(): void {
     if(this.passwordType === 'password') {
@@ -263,6 +267,6 @@ export class InputDocsComponent {
   }
 
   onSubmit(): void {
-    console.log('Submitted!');
+    this.form_submitted = true;
   }
 }

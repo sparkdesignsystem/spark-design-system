@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
+import { FormsModule } from '@angular/forms';
 import { InputDocsComponent } from './input-docs.component';
 
 describe('InputDocsComponent', () => {
@@ -8,7 +9,7 @@ describe('InputDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkCoreAngularModule, FormsModule],
       declarations: [ InputDocsComponent ]
     })
     .compileComponents();
@@ -22,5 +23,27 @@ describe('InputDocsComponent', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should toggle passwordType when togglePasswordType is called', () => {
+    component.passwordType = 'password';
+    component.togglePasswordType();
+    expect(component.passwordType).toEqual('text');
+    component.togglePasswordType();
+    expect(component.passwordType).toEqual('password');
+  });
+
+  it('should toggle ssnType when toggleSSNType is called', () => {
+    component.ssnType = 'password';
+    component.toggleSSNType();
+    expect(component.ssnType).toEqual('text');
+    component.toggleSSNType();
+    expect(component.ssnType).toEqual('password');
+  });
+
+  it('should set form_submitted when onSubmit is called', () => {
+    component.form_submitted = false;
+    component.onSubmit();
+    expect(component.form_submitted).toEqual(true);
   });
 });

@@ -47,7 +47,7 @@ import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-f
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     SparkAlertComponent,

@@ -18,7 +18,7 @@ describe('SparkInputMaskContainerComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkInputMaskContainerComponent);
     component = fixture.componentInstance;
-    accordionElement = fixture.nativeElement.querySelector('ul');
+    accordionElement = fixture.nativeElement.querySelector('div');
   })
 
   it('should create itself', () => {
@@ -28,6 +28,6 @@ describe('SparkInputMaskContainerComponent', () => {
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(accordionElement.classList.toString()).toEqual('sprk-c-Accordion sprk-o-VerticalList sprk-u-man');
+    expect(accordionElement.classList.toString()).toEqual('sprk-b-InputContainer sprk-u-man');
   })
 });

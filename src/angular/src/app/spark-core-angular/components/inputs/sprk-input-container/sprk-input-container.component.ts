@@ -1,5 +1,4 @@
 import { OnInit, Component, Input, ContentChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import * as _ from 'lodash';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
@@ -21,13 +20,8 @@ import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-e
 })
 
 export class SparkInputContainerComponent implements OnInit {
-  @Input() control: FormControl;
-  @Input() controlName: string;
   @Input() additionalClasses: string;
   @Input() iconContainerClasses: string;
-  @Input() labelText: string;
-  @Input() errorMessage: string;
-  @Input() model: Object;
 
   @ContentChild(SprkLabelDirective) label: SprkLabelDirective;
   @ContentChild(SprkInputDirective) input: SprkInputDirective;
