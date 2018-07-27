@@ -1,28 +1,65 @@
-import { Directive, HostListener, ElementRef } from '@angular/core';
+import { Component, DebugElement } from '@angular/core';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { SprkFormatterDateDirective } from './sprk-formatter-date.directive';
+import { By } from '@angular/platform-browser';
 
-@Directive({
-  selector: '[sprk-formatter-date]'
+@Component({
+  selector: 'test',
+  template: `
+  <input 
+  value="hi"
+  type="text"
+  placeholder="Enter some input."
+  sprk-formatter-date>
+  `
 })
+class TestComponent {};
 
-export class SprkFormatterPhoneNumberDirective {
+fdescribe('SprkFormatterDateDirective', () => {
+  let component: TestComponent;
+  let fixture: ComponentFixture<TestComponent>;
+  let inputElement: DebugElement;
 
-  constructor(public ref: ElementRef){};
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        SprkFormatterDateDirective,
+        TestComponent
+      ]
+    });
+  });
 
-  @HostListener('input', ["$event.target.value"])
-  onFocus(value) {
-    this.ref.nativeElement.value = this.formatDate(value);
-  }
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    inputElement = fixture.debugElement.query(By.css('input'));
+  });
 
-  formatDate(value): string {
-    const newValue = `${value}`.replace(/\D/g, '');
-    const m = newValue.match(/^(\d{3})(\d{3})(\d{4})$/);
+  it('should do nothing if there is no value', () => {
+    inputElement.nativeElement.value = '';
+    inputElement.nativeElement.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    expect(inputElement.nativeElement.value).toEqual('');
+  });
 
-    if(m) {
-      return `(${m[1]}) ${m[2]}-${m[3]}`;
-    } else {
-      return value;
-    }
-};
+  it('should do nothing if the value is not a value that can be formatted', () => {
+    inputElement.nativeElement.value = 'abc';
+    inputElement.nativeElement.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    expect(inputElement.nativeElement.value).toEqual('abc');
+  });
 
+  it('should format into MM/DD/YYYY if the value can be formatted (just numbers)', () => {
+    inputElement.nativeElement.value = '11221234';
+    inputElement.nativeElement.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    expect(inputElement.nativeElement.value).toEqual('11/22/1234');
+  });
 
-}
+  it('should format into MM/DD/YYYY if the value can be formatted (dashes)', () => {
+    inputElement.nativeElement.value = '11-22-1234';
+    inputElement.nativeElement.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    expect(inputElement.nativeElement.value).toEqual('11/22/1234');
+  });
+});
