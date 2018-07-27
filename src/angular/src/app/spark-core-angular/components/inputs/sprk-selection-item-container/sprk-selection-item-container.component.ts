@@ -1,5 +1,4 @@
 import { OnInit, Component, Input, ContentChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import * as _ from 'lodash';
 import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
@@ -17,7 +16,6 @@ import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-sel
 export class SparkSelectionItemContainerComponent implements OnInit {
   @Input() additionalClasses: string;
   @Input() labelText: string;
-  @Input() errorContainerId: string;
 
   @ContentChild(SprkSelectionLabelDirective) label: SprkSelectionLabelDirective;
   @ContentChild(SprkSelectionInputDirective) input: SprkSelectionInputDirective;
@@ -43,10 +41,6 @@ export class SparkSelectionItemContainerComponent implements OnInit {
     if(this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
       this.input.ref.nativeElement.id = this.input_id;
-    }
-
-    if(this.input && this.errorContainerId) {
-      this.input.ref.nativeElement.setAttribute('aria-describedby', this.errorContainerId);
     }
   }
 }
