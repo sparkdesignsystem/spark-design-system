@@ -15,7 +15,6 @@ import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-sel
 
 export class SparkSelectionItemContainerComponent implements OnInit {
   @Input() additionalClasses: string;
-  @Input() labelText: string;
 
   @ContentChild(SprkSelectionLabelDirective) label: SprkSelectionLabelDirective;
   @ContentChild(SprkSelectionInputDirective) input: SprkSelectionInputDirective;
