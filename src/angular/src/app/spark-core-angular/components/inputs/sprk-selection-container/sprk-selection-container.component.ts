@@ -1,9 +1,7 @@
 import { AfterContentInit, Component, Input, ContentChild, ContentChildren, QueryList } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import * as _ from 'lodash';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SparkSelectionItemContainerComponent } from '../sprk-selection-item-container/sprk-selection-item-container.component';
 
 @Component({
@@ -23,12 +21,9 @@ import { SparkSelectionItemContainerComponent } from '../sprk-selection-item-con
 })
 
 export class SparkSelectionContainerComponent implements AfterContentInit {
-  @Input() control: FormControl;
-  @Input() controlName: string;
   @Input() additionalClasses: string;
   @Input() labelText: string;
   @Input() errorMessage: string;
-  @Input() model: Object;
 
   @ContentChild(SprkLabelDirective) label: SprkLabelDirective;
   @ContentChild(SprkFieldErrorDirective) error: SprkFieldErrorDirective;
