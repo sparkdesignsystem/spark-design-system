@@ -18,7 +18,6 @@ export class SprkFormatterMonetaryDirective {
     let number;
     if(m) {
       number = Number(value.replace(/[\$,]/g, ''));
-      console.log(number);
       return number.toLocaleString('en-US', { style: 'currency', currency: 'USD'}).replace(/\$/g,'');
     }
 

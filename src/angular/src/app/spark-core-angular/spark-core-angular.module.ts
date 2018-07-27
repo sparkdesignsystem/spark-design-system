@@ -40,8 +40,13 @@ import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-
 import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.directive';
 import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
 
+import TinyDatePicker from 'tiny-date-picker';
 
 @NgModule({
+  providers: [{
+    provide: 'TinyDatePicker',
+    useValue: TinyDatePicker
+  }],
   imports: [
     FormsModule,
     ReactiveFormsModule,

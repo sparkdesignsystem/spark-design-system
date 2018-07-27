@@ -1,5 +1,4 @@
-import { Directive, Input, OnInit, ElementRef } from '@angular/core';
-import TinyDatePicker from 'tiny-date-picker';
+import { Directive, Input, OnInit, ElementRef, Inject } from '@angular/core';
 import getArrowClass from '@sparkdesignsystem/spark-core/utilities/getArrowClass';
 
 @Directive({
@@ -8,14 +7,18 @@ import getArrowClass from '@sparkdesignsystem/spark-core/utilities/getArrowClass
 
 export class SprkDatepickerDirective implements OnInit {
 
-  constructor(public ref: ElementRef){};
+  constructor(
+    public ref: ElementRef,
+    @Inject('TinyDatePicker') public TinyDatePicker: any
+  ){};
+
   @Input() minDate: string = '01/1/2008';
   @Input() maxDate: string = '01/1/2068';
 
   ngOnInit(): void {
     let input = this.ref.nativeElement;
-    if(TinyDatePicker) {
-      const dp = TinyDatePicker(input, {
+    if(this.TinyDatePicker) {
+      const dp = this.TinyDatePicker(input, {
         mode: 'dp-below',
         min: this.minDate,
         max: this.maxDate,
