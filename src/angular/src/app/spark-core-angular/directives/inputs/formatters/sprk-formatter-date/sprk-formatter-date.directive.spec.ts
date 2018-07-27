@@ -15,7 +15,7 @@ import { By } from '@angular/platform-browser';
 })
 class TestComponent {};
 
-fdescribe('SprkFormatterDateDirective', () => {
+describe('SprkFormatterDateDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let inputElement: DebugElement;

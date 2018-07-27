@@ -17,7 +17,8 @@ export class SprkFormatterMonetaryDirective {
     let m = value.match(/(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$/);
     let number;
     if(m) {
-      number = Number(value.replace(/\$,/g, ''));
+      number = Number(value.replace(/[\$,]/g, ''));
+      console.log(number);
       return number.toLocaleString('en-US', { style: 'currency', currency: 'USD'}).replace(/\$/g,'');
     }
 
