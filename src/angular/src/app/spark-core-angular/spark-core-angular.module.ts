@@ -24,6 +24,7 @@ import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack
 import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.component';
 import { SparkFooterComponent } from './components/sprk-footer/sprk-footer.component';
 import { SparkAwardComponent } from './components/sprk-award/sprk-award.component';
+import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.component';
 
 @NgModule({
   imports: [
@@ -53,7 +54,8 @@ import { SparkAwardComponent } from './components/sprk-award/sprk-award.componen
     SparkStackItemDirective,
     SparkPromoComponent,
     SparkFooterComponent,
-    SparkAwardComponent
+    SparkAwardComponent,
+    SparkToggleComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -79,7 +81,8 @@ import { SparkAwardComponent } from './components/sprk-award/sprk-award.componen
     SparkStackItemDirective,
     SparkPromoComponent,
     SparkFooterComponent,
-    SparkAwardComponent
+    SparkAwardComponent,
+    SparkToggleComponent
   ],
 })
 export class SparkCoreAngularModule { }
