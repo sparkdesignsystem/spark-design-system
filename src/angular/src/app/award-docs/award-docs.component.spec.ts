@@ -1,14 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCoreAngularModule } from '../spark-core-angular/spark-core-angular.module';
 import { AwardDocsComponent } from './award-docs.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
-describe('AlertDocsComponent', () => {
+describe('AwardDocsComponent', () => {
   let component: AwardDocsComponent;
   let fixture: ComponentFixture<AwardDocsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkCoreAngularModule, RouterTestingModule],
       declarations: [ AwardDocsComponent ]
     })
     .compileComponents();

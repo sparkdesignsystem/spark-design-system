@@ -25,49 +25,19 @@ describe('SparkToggleComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('getClasses should match what gets set on the icon', () => {
-    let icon = element.querySelector('div');
-    fixture.detectChanges();
-    expect(icon.classList.toString()).toEqual(component.getClasses());
-  });
-
-  it('getClasses should match what gets set on the container', () => {
+  it('getClasses should match what gets set on the div', () => {
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(component.getClasses());
   });
 
-  it('should add the correct class if toggleType is not set', () => {
-    component.toggleType = '';
+  it('clicking should show body text', () => {
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack');
+
+    element.querySelector('a').click();
+    expect(element.querySelector('p').style.display).toEqual('block');
   });
 
-  it('should add the correct class if toggleType is split', () => {
-    component.toggleType = 'success';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--split@m');
-  });
-
-  it('should add the correct classes if toggleType has no value, but additionalClasses does', () => {
-    component.additionalClasses = 'sprk-u-pam sprk-u-man';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-u-pam sprk-u-man');
-  });
-
-  it('should add the correct classes if toggleType and additionalClasses have values', () => {
-    component.toggleType = 'split';
-    component.additionalClasses = 'sprk-u-pam sprk-u-man';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--split@m sprk-u-pam sprk-u-man');
-  });
-
-  it('should add the correct classes if additionalClasses is set on container', () => {
-    component.additionalClasses = 'sprk-u-pam';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-u-pam');
-  });
-
-  it('should set the data-analytics attribute given a value in the analyticsStringImgOne Input', () => {
+  it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     const str = 'One';
     component.analyticsString= str;
     fixture.detectChanges();

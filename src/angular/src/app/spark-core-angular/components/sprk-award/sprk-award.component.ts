@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-award',
   template: `
-  <div class="sprk-o-Stack sprk-o-Stack--medium">
+  <div [ngClass]="getClasses()">
     <h2 class="sprk-o-Stack__item sprk-o-Stack__item--center sprk-b-TypeDisplayFive sprk-b-Measure sprk-b-Measure--narrow sprk-u-TextAlign--center">
       {{ title }}
     </h2>
@@ -49,7 +49,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SparkAwardComponent {
-  @Input() awardType: string;
+  @Input() splitAt: string;
   @Input() imgOneAlt: string;
   @Input() imgOneHref: string;
   @Input() imgTwoHref: string;
@@ -65,12 +65,25 @@ export class SparkAwardComponent {
 
   getClasses(): string {
     let classArray: Array<String> = [
-      ''
+      'sprk-o-Stack sprk-o-Stack--medium'
     ];
 
-    switch (this.awardType) {
-      case 'split':
-        classArray.push('sprk-o-Stack--splt@m');
+    // Handle the choice of item split breakpoint by adding CSS class
+    switch (this.splitAt) {
+      case 'tiny':
+        classArray.push('sprk-o-Stack--split@xs');
+        break;
+      case 'small':
+        classArray.push('sprk-o-Stack--split@s');
+        break;
+      case 'medium':
+        classArray.push('sprk-o-Stack--split@m');
+        break;
+      case 'large':
+        classArray.push('sprk-o-Stack--split@l');
+        break;
+      case 'huge':
+        classArray.push('sprk-o-Stack--split@xl');
         break;
       default:
         break;

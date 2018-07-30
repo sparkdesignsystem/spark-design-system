@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkAwardComponent } from './sprk-award.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SparkAwardComponent', () => {
   let component: SparkAwardComponent;
@@ -8,6 +9,7 @@ describe('SparkAwardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         SparkAwardComponent
       ]
@@ -25,46 +27,34 @@ describe('SparkAwardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('getClasses should match what gets set on the icon', () => {
-    let icon = element.querySelector('div');
-    fixture.detectChanges();
-    expect(icon.classList.toString()).toEqual(component.getClasses());
-  });
-
-  it('getClasses should match what gets set on the container', () => {
+  it('getClasses should match what gets set', () => {
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(component.getClasses());
   });
 
-  it('should add the correct class if awardType is not set', () => {
-    component.awardType = '';
+  it('should add the correct class if splitAt is not set', () => {
+    component.splitAt = '';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack');
+    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--medium');
   });
 
-  it('should add the correct class if awardType is split', () => {
-    component.awardType = 'success';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--split@m');
-  });
-
-  it('should add the correct classes if awardType has no value, but additionalClasses does', () => {
+  it('should add the correct classes if splitAt has no value, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--medium sprk-u-pam sprk-u-man');
   });
 
-  it('should add the correct classes if awardType and additionalClasses have values', () => {
-    component.awardType = 'split';
+  it('should add the correct classes if splitAt and additionalClasses have values', () => {
+    component.splitAt = 'tiny';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--split@m sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-u-pam sprk-u-man');
   });
 
   it('should add the correct classes if additionalClasses is set on container', () => {
     component.additionalClasses = 'sprk-u-pam';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-u-pam');
+    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-o-Stack--medium sprk-u-pam');
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringImgOne Input', () => {
@@ -75,7 +65,7 @@ describe('SparkAwardComponent', () => {
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringImgTwo Input', () => {
-    const str = 'One';
+    const str = 'Two';
     component.analyticsStringImgTwo = str;
     fixture.detectChanges();
     expect(element.getAttribute('data-analytics')).toEqual(str);

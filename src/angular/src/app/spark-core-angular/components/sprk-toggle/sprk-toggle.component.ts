@@ -3,18 +3,18 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-toggle',
   template: `
-    <div data-sprk-toggle="container" [ngClass]="getClasses()">
+    <div [ngClass]="getClasses()">
       <a
         class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone"
-        data-sprk-toggle="trigger"
-        href="#">
-          <svg class="sprk-c-Icon sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 448 512">
-            <use xlink:href="#chevron-down"></use>
-          </svg>
+        href="#"
+        (click)="toggle($event)"
+        [attr.aria-expanded]="isOpen ? 'true' : 'false'"
+        [attr.data-analytics]="analyticsString">
+        <sprk-icon iconType="chevron-down" additionalClasses="{{ iconClasses }}"></sprk-icon>
           {{ title }}
       </a>
 
-      <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-HideWhenJs" data-sprk-toggle="content">
+      <p class="sprk-b-TypeBodyFour sprk-u-pts" *ngIf="isOpen">
         {{ body }}
       </p>
     </div>
@@ -23,24 +23,18 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SparkToggleComponent {
-  @Input() toggleType: string;
   @Input() analyticsString: string;
   @Input() additionalClasses: string;
   @Input() title: string;
   @Input() body: string;
 
+  private isOpen: boolean = false;
+  private iconClasses: string = 'sprk-u-mrs';
+
   getClasses(): string {
     let classArray: Array<String> = [
       ''
     ];
-
-    switch (this.toggleType) {
-      case 'base':
-        classArray.push('');
-        break;
-      default:
-        break;
-    }
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
@@ -49,5 +43,16 @@ export class SparkToggleComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  toggle(event): void {
+    event.preventDefault();
+    this.isOpen = !this.isOpen;
+
+    if (this.isOpen) {
+      this.iconClasses = 'sprk-u-mrs sprk-c-Icon--open';
+    }  else {
+      this.iconClasses = 'sprk-u-mrs';
+    }
   }
 }
