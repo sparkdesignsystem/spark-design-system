@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
     <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
-        [routerLink]="imgTwoHref"
+        [routerLink]="imgOneHref"
         [attr.data-analytics]="analyticsStringImgOne">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center"
@@ -21,7 +21,7 @@ import { Component, Input } from '@angular/core';
 
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
-        [routerLink]="imgOneHref"
+        [routerLink]="imgTwoHref"
         [attr.data-analytics]="analyticsStringImgTwo">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center"
