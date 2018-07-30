@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-footer>
-        <h4>This is a base Spark card!</h4>
+        <h4>This is a footer!</h4>
       </sprk-footer>
     </div>
 
@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-footer>
-        <h4>This is a base Spark card!</h4>
+        <h4>This is a footer!</h4>
       </sprk-footer>
     </div>
 
@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-footer>
-        <h4>This is a base Spark card!</h4>
+        <h4>This is a footer!</h4>
       </sprk-footer>
     </div>
 
@@ -39,7 +39,7 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-footer>
-        <h4>This is a base Spark card!</h4>
+        <h4>This is a footer!</h4>
       </sprk-footer>
     </div>
   `,
