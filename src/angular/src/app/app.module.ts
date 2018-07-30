@@ -20,6 +20,7 @@ import { CardDocsComponent } from './card-docs/card-docs.component';
 import { StackDocsComponent } from './stack-docs/stack-docs.component';
 import { PromoDocsComponent } from './promo-docs/promo-docs.component';
 import { FooterDocsComponent } from './footer-docs/footer-docs.component';
+import { AwardDocsComponent } from './award-docs/award-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
   { path: 'stack', component: StackDocsComponent },
   { path: 'promo', component: PromoDocsComponent },
   { path: 'footer', component: FooterDocsComponent },
+  { path: 'award', component: AwardDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -59,6 +61,7 @@ const appRoutes: Routes = [
     StackDocsComponent,
     PromoDocsComponent,
     FooterDocsComponent,
+    AwardDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(

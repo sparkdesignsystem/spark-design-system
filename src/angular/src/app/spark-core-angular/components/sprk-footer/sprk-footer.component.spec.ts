@@ -26,9 +26,9 @@ describe('SparkFooterComponent', () => {
     expect(element).toBeTruthy();
   });
 
-  it('getClassesCard should match what gets set on the footer', () => {
+  it('getClasses should match what gets set on the footer', () => {
     fixture.detectChanges();
-    expect(element.classList.toString()).toEqual(component.getClassesCard());
+    expect(element.classList.toString()).toEqual(component.getClasses());
   });
 
   it('should show routerLink href on img link if set', () => {
@@ -41,21 +41,21 @@ describe('SparkFooterComponent', () => {
 
   it('should add the correct class if footerType is not set', () => {
     fixture.detectChanges();
-    expect(component.getClassesCard()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large');
+    expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large');
   });
 
   it('should add the correct classes if footerType has no value, but additionalClasses does', () => {
     component.footerType = 'base';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClassesCard()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
   });
 
   it('should add the correct classes if footerType and additionalClasses have values', () => {
     component.footerType = 'base';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClassesCard()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
   });
 
   it('should set the data-analytics attribute given a value on the images', () => {
@@ -63,6 +63,6 @@ describe('SparkFooterComponent', () => {
     component.ctaAnalytics = 'One';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    expect(el.getAttribute('data-analytics')).toEqual('One');
+    expect(element.getAttribute('data-analytics')).toEqual('One');
   });
 });
