@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
         Awards
       </h2>
 
-      <sprk-award awardType="info">
-        This is an info Spark award!
+      <sprk-award
+        awardType="split"
+        title="This is an info Spark award!"
+        imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+        imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+        imgOneAlt="placeholder!"
+        imgTwoAlt="placeholder!"
+        disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
+        disclaimerTitle="My disclaimer Title">
       </sprk-award>
     </div>
   `,

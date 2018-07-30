@@ -67,9 +67,16 @@ describe('SparkAwardComponent', () => {
     expect(component.getClasses()).toEqual('sprk-o-Stack sprk-u-pam');
   });
 
-  it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
+  it('should set the data-analytics attribute given a value in the analyticsStringImgOne Input', () => {
     const str = 'One';
-    component.analyticsString = str;
+    component.analyticsStringImgOne = str;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-analytics')).toEqual(str);
+  });
+
+  it('should set the data-analytics attribute given a value in the analyticsStringImgTwo Input', () => {
+    const str = 'One';
+    component.analyticsStringImgTwo = str;
     fixture.detectChanges();
     expect(element.getAttribute('data-analytics')).toEqual(str);
   });

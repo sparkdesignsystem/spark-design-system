@@ -4,18 +4,18 @@ import { AwardDocsComponent } from './award-docs.component';
 
 describe('AlertDocsComponent', () => {
   let component: AwardDocsComponent;
-  let fixture: ComponentFixture<AlertDocsComponent>;
+  let fixture: ComponentFixture<AwardDocsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ AlertDocsComponent ]
+      declarations: [ AwardDocsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlertDocsComponent);
+    fixture = TestBed.createComponent(AwardDocsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
