@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkToggleComponent } from './sprk-toggle.component';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 
 describe('SparkToggleComponent', () => {
   let component: SparkToggleComponent;
