@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Alerts
+        Awards
       </h2>
 
       <sprk-award awardType="info">
