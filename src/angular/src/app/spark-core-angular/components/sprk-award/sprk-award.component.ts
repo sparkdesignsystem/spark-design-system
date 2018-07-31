@@ -16,7 +16,7 @@ import { Component, Input } from '@angular/core';
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center"
           alt="{{ imgOneAlt }}"
-          src="{{ imgOneSrc }}" />
+          src="{{ imgOneSrc }}">
       </a>
 
       <a
@@ -26,24 +26,16 @@ import { Component, Input } from '@angular/core';
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center"
           alt="{{ imgTwoAlt }}"
-          src="{{ imgTwoSrc }}" />
+          src="{{ imgTwoSrc }}">
       </a>
     </div>
 
-    <!-- TODO: Make toggle component and include here -->
-    <div class="sprk-o-Stack__item" data-sprk-toggle="container">
-      <a class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone" data-sprk-toggle="trigger" href="#">
-          <svg class="sprk-c-Icon sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 448 512">
-            <use xlink:href="#chevron-down"></use>
-          </svg>
-          {{ disclaimerTitle }}
-      </a>
-
-      <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-HideWhenJs" data-sprk-toggle="content">
-        {{ disclaimerCopy }}
-      </p>
-    </div>
-    </div>
+    <sprk-toggle
+      toggleType="base"
+      title="{{ disclaimerTitle }}"
+      body="{{ disclaimerCopy }}"
+      analyticsString="{{ analyticsStringDisclaimer }}">
+    </sprk-toggle>
   `,
   styles: ['']
 })
@@ -58,6 +50,7 @@ export class SparkAwardComponent {
   @Input() imgTwoSrc: string;
   @Input() analyticsStringImgOne: string;
   @Input() analyticsStringImgTwo: string;
+  @Input() analyticsStringDisclaimer: string;
   @Input() additionalClasses: string;
   @Input() title: string;
   @Input() disclaimerTitle: string;

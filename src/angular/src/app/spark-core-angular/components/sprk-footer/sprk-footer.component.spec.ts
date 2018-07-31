@@ -33,10 +33,10 @@ describe('SparkFooterComponent', () => {
 
   it('should show routerLink href on img link if set', () => {
     component.footerType = 'base';
-    component.imgHref = "/sparkdesignsystem.com";
+    component.imgHref = "www.sparkdesignsystem.com";
     fixture.detectChanges();
     let el = element.querySelector('.sprk-o-Stack__item a');
-    expect(el.getAttribute('href')).toEqual('/sparkdesignsystem.com');
+    expect(el.getAttribute('href')).toEqual('/www.sparkdesignsystem.com');
   });
 
   it('should add the correct class if footerType is not set', () => {
@@ -45,7 +45,7 @@ describe('SparkFooterComponent', () => {
   });
 
   it('should add the correct classes if footerType has no value, but additionalClasses does', () => {
-    component.footerType = 'base';
+    component.footerType = '';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
@@ -60,9 +60,19 @@ describe('SparkFooterComponent', () => {
 
   it('should set the data-analytics attribute given a value on the images', () => {
     component.footerType = 'base';
-    component.ctaAnalytics = 'One';
+    component.imgHref = "www.sparkdesignsystem.com";
+    component.imgAlt = "placeholder";
+    component.imgSrc = "placeholder";
+    component.analyticsImg = 'One';
     fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('div');
-    expect(element.getAttribute('data-analytics')).toEqual('One');
+    expect(element.querySelector('div div a').getAttribute('data-analytics')).toEqual('One');
+  });
+
+  it('should set the data-analytics attribute given a value on the links', () => {
+    component.footerType = 'base';
+    component.linkHref = "www.sparkdesignsystem.com";
+    component.analyticsLink = 'One';
+    fixture.detectChanges();
+    expect(element.querySelector('ul li a').getAttribute('data-analytics')).toEqual('One');
   });
 });

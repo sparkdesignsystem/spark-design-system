@@ -10,7 +10,8 @@ describe('SparkToggleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        SparkToggleComponent
+        SparkToggleComponent,
+        SparkIconComponent
       ]
     })
     .compileComponents();
@@ -32,16 +33,38 @@ describe('SparkToggleComponent', () => {
   });
 
   it('clicking should show body text', () => {
-    fixture.detectChanges();
-
     element.querySelector('a').click();
-    expect(element.querySelector('p').style.display).toEqual('block');
+    fixture.detectChanges();
+    expect(element.querySelector('p')).toBeTruthy();
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     const str = 'One';
     component.analyticsString= str;
     fixture.detectChanges();
-    expect(element.getAttribute('data-analytics')).toEqual(str);
+    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(str);
+  });
+
+  it('should add icon classes to icon when toggle is opened', () => {
+    component.title= 'placeholder';
+    component.body= 'placeholder';
+    element.querySelector('a').click();
+    fixture.detectChanges();
+    expect(element.querySelector('a .sprk-c-Icon').classList.toString()).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--open');
+  });
+
+  it('should add icon classes to icon when toggle is opened and then closed', () => {
+    component.title= 'placeholder';
+    component.body= 'placeholder';
+    element.querySelector('a').click();
+    element.querySelector('a').click();
+    fixture.detectChanges();
+    expect(element.querySelector('a .sprk-c-Icon').classList.toString()).toEqual('sprk-c-Icon sprk-u-mrs');
+  });
+
+  it('should add the correct classes if additionalClasses have values', () => {
+    component.additionalClasses = 'sprk-u-pam sprk-u-man';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(' sprk-u-pam sprk-u-man');
   });
 });
