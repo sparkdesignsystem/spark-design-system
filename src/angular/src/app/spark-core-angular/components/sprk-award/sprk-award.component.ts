@@ -3,12 +3,16 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-award',
   template: `
-  <div [ngClass]="getClasses()">
-    <h2 class="sprk-o-Stack__item sprk-o-Stack__item--center sprk-b-TypeDisplayFive sprk-b-Measure sprk-b-Measure--narrow sprk-u-TextAlign--center">
+  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}">
+    <h2
+      sprk-stack-item
+      class="sprk-o-Stack__item sprk-o-Stack__item--center sprk-b-TypeDisplayFive sprk-b-Measure sprk-b-Measure--narrow sprk-u-TextAlign--center">
       {{ title }}
     </h2>
 
-    <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+    <div
+      sprk-stack-item
+      [ngClass]="getClasses()">
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
         [routerLink]="imgOneHref"
@@ -31,11 +35,13 @@ import { Component, Input } from '@angular/core';
     </div>
 
     <sprk-toggle
+      sprk-stack-item
       toggleType="base"
       title="{{ disclaimerTitle }}"
       body="{{ disclaimerCopy }}"
       analyticsString="{{ analyticsStringDisclaimer }}">
     </sprk-toggle>
+  </sprk-stack>
   `,
   styles: ['']
 })
@@ -58,7 +64,7 @@ export class SparkAwardComponent {
 
   getClasses(): string {
     let classArray: Array<String> = [
-      'sprk-o-Stack sprk-o-Stack--medium'
+      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium'
     ];
 
     // Handle the choice of item split breakpoint by adding CSS class
@@ -80,12 +86,6 @@ export class SparkAwardComponent {
         break;
       default:
         break;
-    }
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      })
     }
 
     return classArray.join(' ');
