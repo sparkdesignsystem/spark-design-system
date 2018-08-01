@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
         Base
       </h2>
 
-      <sprk-footer>
-        <h4>This is a footer!</h4>
+      <sprk-footer [links]="links" [imgs]="imgs" additionalClassesImgs="sprk-u-Width-15">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam in laoreet ante, non feugiat neque. Suspendisse
+        et ipsum leo. Quisque non consectetur justo.
       </sprk-footer>
     </div>
 
@@ -46,6 +48,41 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class FooterDocsComponent {
+  links = [
+    {
+      linkText: 'Item 1',
+      linkHref: '/alerts',
+      linkAnalytics: 'Link to Item 1',
+    },
+    {
+      linkText: 'Item 2',
+      linkHref: '/icons',
+    },
+    {
+      linkText: 'Item 3',
+      linkHref: '/links',
+    },
+  ];
 
+  imgs = [
+    {
+      imgAlt: 'Placeholder Alt Text.',
+      imgSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      imgHref: '/alerts',
+      imgAnalytics: 'Test 1',
+    },
+    {
+      imgAlt: 'Placeholder Alt Text.',
+      imgSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      imgHref: '/icons',
+      imgAnalytics: 'Test 2',
+    },
+    {
+      imgAlt: 'Placeholder Alt Text.',
+      imgSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      imgHref: '/links',
+      imgAnalytics: 'Test 3',
+    },
+  ];
   constructor() { }
 }

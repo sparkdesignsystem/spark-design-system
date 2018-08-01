@@ -5,48 +5,25 @@ import { Component, Input } from '@angular/core';
   template: `
     <footer [ngClass]="getClasses()" role="contentinfo">
       <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
-        {{ footerCopy }}
+        <ng-content></ng-content>
       </p>
 
       <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
-        <div class="sprk-o-Stack__item">
-          <a [routerLink]="imgHref" [attr.data-analytics]="analyticsImg">
-            <img src="{{ imgSrc }}" alt="{{ imgAlt }}">
-          </a>
-        </div>
-
-        <div class="sprk-o-Stack__item">
-          <a [routerLink]="imgHref" [attr.data-analytics]="analyticsImg">
-            <img src="{{ imgSrc }}" alt="{{ imgAlt }}">
-          </a>
-        </div>
-
-        <div class="sprk-o-Stack__item">
-          <a [routerLink]="imgHref" [attr.data-analytics]="analyticsImg">
-            <img src="{{ imgSrc }}" alt="{{ imgAlt }}">
+        <div *ngFor="let img of imgs" [ngClass]="getClassesImgs()">
+          <a [routerLink]="img.imgHref" [attr.data-analytics]="img.imgAnalytics">
+            <img src="{{ img.imgSrc }}" alt="{{ img.imgAlt }}">
           </a>
         </div>
       </div>
 
-      <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-b-List sprk-b-List--bare">
-        <li class="sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted" [attr.data-analytics]="analyticsLink" [routerLink]="linkHref">
-            {{ linkText }}
-          </a>
-        </li>
-
-        <li class="sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted" [attr.data-analytics]="analyticsLink" [routerLink]="linkHref">
-            {{ linkText }}
-          </a>
-        </li>
-
-        <li class="sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted" [attr.data-analytics]="analyticsLink" [routerLink]="linkHref">
-            {{ linkText }}
-          </a>
-        </li>
-      </ul>
+      <sprk-secondary-navigation additionalClasses="sprk-o-Stack__item">
+        <sprk-secondary-navigation-item
+          *ngFor="let link of links"
+          [analyticsString]="link.linkAnalytics"
+          [href]="link.linkHref"
+          [text]="link.linkText">
+        </sprk-secondary-navigation-item>
+      </sprk-secondary-navigation>
     </footer>
   `,
   styles: ['']
@@ -54,15 +31,17 @@ import { Component, Input } from '@angular/core';
 
 export class SparkFooterComponent {
   @Input() footerType: string = 'base';
-  @Input() analyticsLink: string;
-  @Input() analyticsImg: string;
+  @Input() imgAnalytics: string;
+  @Input() linkAnalytics: string;
   @Input() additionalClasses: string;
   @Input() imgHref: string;
   @Input() imgSrc: string;
   @Input() imgAlt: string;
   @Input() linkText: string;
   @Input() linkHref: string;
-  @Input() footerCopy: string;
+  @Input() imgs: Object;
+  @Input() links: Object;
+  @Input() additionalClassesImgs: string;
 
   getClasses(): string {
     let classArray: Array<String> = [
@@ -73,6 +52,20 @@ export class SparkFooterComponent {
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      })
+    }
+
+    return classArray.join(' ');
+  }
+
+  getClassesImgs(): string {
+    let classArray: Array<String> = [
+      'sprk-o-Stack__item'
+    ];
+
+    if (this.additionalClassesImgs) {
+      this.additionalClassesImgs.split(' ').forEach((className) => {
         classArray.push(className);
       })
     }
