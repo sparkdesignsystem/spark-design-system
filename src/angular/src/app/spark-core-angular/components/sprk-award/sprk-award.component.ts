@@ -18,7 +18,7 @@ import { Component, Input } from '@angular/core';
         [routerLink]="imgOneHref"
         [attr.data-analytics]="analyticsStringImgOne">
         <img
-          class="sprk-o-Stack__item sprk-o-Stack__item--center"
+          [ngClass]="getClassesImgOne()"
           alt="{{ imgOneAlt }}"
           src="{{ imgOneSrc }}">
       </a>
@@ -28,13 +28,14 @@ import { Component, Input } from '@angular/core';
         [routerLink]="imgTwoHref"
         [attr.data-analytics]="analyticsStringImgTwo">
         <img
-          class="sprk-o-Stack__item sprk-o-Stack__item--center"
+          [ngClass]="getClassesImgTwo()"
           alt="{{ imgTwoAlt }}"
           src="{{ imgTwoSrc }}">
       </a>
     </div>
 
     <sprk-toggle
+      *ngIf="disclaimer !== 'false'"
       sprk-stack-item
       toggleType="base"
       title="{{ disclaimerTitle }}"
@@ -58,9 +59,12 @@ export class SparkAwardComponent {
   @Input() analyticsStringImgTwo: string;
   @Input() analyticsStringDisclaimer: string;
   @Input() additionalClasses: string;
+  @Input() additionalClassesImgOne: string;
+  @Input() additionalClassesImgTwo: string;
   @Input() title: string;
   @Input() disclaimerTitle: string;
   @Input() disclaimerCopy: string;
+  @Input() disclaimer: string;
 
   getClasses(): string {
     let classArray: Array<String> = [
@@ -88,6 +92,32 @@ export class SparkAwardComponent {
         break;
     }
 
+    return classArray.join(' ');
+  }
+
+  getClassesImgOne(): string {
+    let classArray: Array<String> = [
+      'sprk-o-Stack__item sprk-o-Stack__item--center'
+    ];
+
+    if (this.additionalClassesImgOne) {
+      this.additionalClassesImgOne.split(' ').forEach((className) => {
+        classArray.push(className);
+      })
+    }
+    return classArray.join(' ');
+  }
+
+  getClassesImgTwo(): string {
+    let classArray: Array<String> = [
+      'sprk-o-Stack__item sprk-o-Stack__item--center'
+    ];
+
+    if (this.additionalClassesImgTwo) {
+      this.additionalClassesImgTwo.split(' ').forEach((className) => {
+        classArray.push(className);
+      })
+    }
     return classArray.join(' ');
   }
 }

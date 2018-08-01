@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
         Base
       </h2>
 
-      <sprk-footer [links]="links" [imgs]="imgs" additionalClassesImgs="sprk-u-Width-15">
+      <sprk-footer
+        [links]="links"
+        [imgs]="imgs"
+        additionalClassesBaseImgs="sprk-u-Width-15"
+        disclaimer="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aliquam in laoreet ante, non feugiat neque. Suspendisse
         et ipsum leo. Quisque non consectetur justo.
@@ -17,11 +21,22 @@ import { Component } from '@angular/core';
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Base With Awards
+        Base With Award Component
       </h2>
 
-      <sprk-footer>
-        <h4>This is a footer!</h4>
+      <sprk-footer
+        award="true"
+        [links]="links"
+        [imgs]="imgs"
+        additionalClassesBaseImgs="sprk-u-Width-15"
+        additionalClassesAwardImgOne="sprk-u-Width-25"
+        additionalClassesAwardImgTwo="sprk-u-Width-25"
+        disclaimer="true"
+        disclaimerCopy="this is some copy for the award disclaimer in the footer"
+        disclaimerTitle="Footer Disclaimer">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam in laoreet ante, non feugiat neque. Suspendisse
+        et ipsum leo. Quisque non consectetur justo.
       </sprk-footer>
     </div>
 
@@ -30,8 +45,10 @@ import { Component } from '@angular/core';
         Base With Optional Elements
       </h2>
 
-      <sprk-footer>
-        <h4>This is a footer!</h4>
+      <sprk-footer [links]="links" [imgs]="imgs" additionalClassesBaseImgs="sprk-u-Width-15">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam in laoreet ante, non feugiat neque. Suspendisse
+        et ipsum leo. Quisque non consectetur justo.
       </sprk-footer>
     </div>
 
@@ -40,8 +57,10 @@ import { Component } from '@angular/core';
         Base With Optional Elements And Award Pattern
       </h2>
 
-      <sprk-footer>
-        <h4>This is a footer!</h4>
+      <sprk-footer award="true" [links]="links" [imgs]="imgs" additionalClassesBaseImgs="sprk-u-Width-15">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam in laoreet ante, non feugiat neque. Suspendisse
+        et ipsum leo. Quisque non consectetur justo.
       </sprk-footer>
     </div>
   `,

@@ -117,6 +117,30 @@ import { Component, OnInit } from '@angular/core';
         </sprk-award>
       </div>
     </div>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">
+        Award With Disclaimer set to false
+      </h2>
+
+      <div class="sprk-o-CenteredColumn">
+        <sprk-award
+          disclaimer="false"
+          splitAt="huge"
+          title="Spark Award Component"
+          imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+          imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+          imgOneAlt="placeholder!"
+          imgOneHref="https://www.sparkdesignsystem.com/"
+          imgTwoHref="https://www.sparkdesignsystem.com/"
+          imgTwoAlt="placeholder!"
+          disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
+          disclaimerTitle="My disclaimer title"
+          analyticsStringImgOne="Foo"
+          analyticsStringImgTwo="Test">
+        </sprk-award>
+      </div>
+    </div>
   `,
   styles: ['']
 })
