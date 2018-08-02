@@ -53,6 +53,7 @@ import { Component } from '@angular/core';
       <sprk-footer
         [topLinks]="topLinks"
         [bottomLinks]="bottomLinks"
+        [linkColumns]="linkColumns"
         [socialLinks]="socialLinks"
         [feedbackLinks]="feedbackLinks"
         splitAt="huge"
@@ -78,6 +79,7 @@ import { Component } from '@angular/core';
       <sprk-footer
         award="true"
         [topLinks]="topLinks"
+        [linkColumns]="linkColumns"
         [bottomLinks]="bottomLinks"
         [socialLinks]="socialLinks"
         [feedbackLinks]="feedbackLinks"
@@ -99,6 +101,18 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class FooterDocsComponent {
+  linkColumns = [
+    {
+      heading: 'Column 1',
+    },
+    {
+      heading: 'Column 2',
+    },
+    {
+      heading: 'Column 3',
+    },
+  ];
+
   topLinks = [
     {
       text: 'Item 1',

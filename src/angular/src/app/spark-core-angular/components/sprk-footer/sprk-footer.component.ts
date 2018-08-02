@@ -4,10 +4,13 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-footer',
   template: `
     <footer [ngClass]="getClasses()" role="contentinfo">
-      <sprk-stack itemSpacing="medium" *ngIf="topLinks">
-        <div sprk-stack-item additionalClasses="sprk-o-Stack__item--equal@m">
+      <sprk-stack splitAt="medium" itemSpacing="medium" *ngIf="topLinks" sprk-stack-item>
+        <div
+          *ngFor="let linkColumn of linkColumns"
+          sprk-stack-item
+          additionalClasses="sprk-o-Stack__item--equal@m">
           <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
-            One
+            {{ linkColumn.heading }}
           </h2>
 
           <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
@@ -25,7 +28,7 @@ import { Component, Input } from '@angular/core';
         </div>
       </sprk-stack>
 
-      <sprk-stack splitAt="{{ splitAt }}" itemSpacing="large">
+      <sprk-stack splitAt="{{ splitAt }}" itemSpacing="large" sprk-stack-item>
         <div sprk-stack-item additionalClasses="sprk-o-Stack__item--equal@xl sprk-o-Stack sprk-o-Stack--large">
           <ul
             *ngIf="socialLinks"
@@ -122,6 +125,7 @@ export class SparkFooterComponent {
   @Input() bottomLinks: Object;
   @Input() socialLinks: Object;
   @Input() feedbackLinks: Object;
+  @Input() linkColumns: Object;
   @Input() additionalClassesBaseImgs: string;
   @Input() additionalClassesAwardImgOne: string;
   @Input() additionalClassesAwardImgTwo: string;
