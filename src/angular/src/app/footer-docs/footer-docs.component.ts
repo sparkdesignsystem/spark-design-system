@@ -51,6 +51,7 @@ import { Component } from '@angular/core';
 
       <div class="sprk-o-CenteredColumn">
       <sprk-footer
+        [topLinks]="topLinks"
         [bottomLinks]="bottomLinks"
         [socialLinks]="socialLinks"
         [feedbackLinks]="feedbackLinks"
@@ -76,6 +77,7 @@ import { Component } from '@angular/core';
       <div class="sprk-o-CenteredColumn">
       <sprk-footer
         award="true"
+        [topLinks]="topLinks"
         [bottomLinks]="bottomLinks"
         [socialLinks]="socialLinks"
         [feedbackLinks]="feedbackLinks"
@@ -97,72 +99,94 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class FooterDocsComponent {
-  bottomLinks = [
+  topLinks = [
     {
-      linkText: 'Item 1',
-      linkHref: '/alerts',
+      text: 'Item 1',
+      href: '/alerts',
       linkAnalytics: 'Link to Item 1',
     },
     {
-      linkText: 'Item 2',
-      linkHref: '/icons',
+      text: 'Item 2',
+      href: '/icons',
     },
     {
-      linkText: 'Item 3',
-      linkHref: '/links',
+      text: 'Item 3',
+      href: '/links',
+    },
+  ];
+
+  bottomLinks = [
+    {
+      text: 'Item 1',
+      href: '/alerts',
+      analytics: 'Link to Item 1',
+    },
+    {
+      text: 'Item 2',
+      href: '/icons',
+    },
+    {
+      text: 'Item 3',
+      href: '/links',
     },
   ];
 
   socialLinks = [
     {
-      socialHref: 'https://www.sparkdesignsystem.com/',
-      socialIcon: 'facebook',
+      href: 'https://www.sparkdesignsystem.com/',
+      icon: 'facebook',
+      analytics: 'Link',
     },
     {
-      socialHref: 'https://www.sparkdesignsystem.com/',
-      socialIcon: 'instagram',
+      href: 'https://www.sparkdesignsystem.com/',
+      icon: 'instagram',
+      analytics: 'Link',
     },
     {
-      socialHref: 'https://www.sparkdesignsystem.com/',
-      socialIcon: 'twitter',
+      href: 'https://www.sparkdesignsystem.com/',
+      icon: 'twitter',
+      analytics: 'Link',
     },
     {
-      socialHref: 'https://www.sparkdesignsystem.com/',
-      socialIcon: 'youtube',
+      href: 'https://www.sparkdesignsystem.com/',
+      icon: 'youtube',
+      analytics: 'Link',
     },
   ];
 
   feedbackLinks = [
     {
-      feedbackHref: 'https://www.sparkdesignsystem.com/',
-      feedbackIcon: 'paper-plane',
-      feedbackText: 'Feedback Link 1'
+      href: 'https://www.sparkdesignsystem.com/',
+      icon: 'paper-plane',
+      text: 'Feedback Link 1',
+      analytics: 'Link to Item 1',
     },
     {
-      feedbackHref: 'https://www.sparkdesignsystem.com/',
-      feedbackIcon: 'computer-screen',
-      feedbackText: 'Feedback Link 2'
+      href: 'https://www.sparkdesignsystem.com/',
+      icon: 'computer-screen',
+      text: 'Feedback Link 2',
+      analytics: 'Link to Item 2',
     },
   ];
 
   imgs = [
     {
-      imgAlt: 'Placeholder Alt Text.',
-      imgSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-      imgHref: '/alerts',
-      imgAnalytics: 'Test 1',
+      alt: 'Placeholder Alt Text.',
+      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      href: '/alerts',
+      analytics: 'Test 1',
     },
     {
-      imgAlt: 'Placeholder Alt Text.',
-      imgSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-      imgHref: '/icons',
-      imgAnalytics: 'Test 2',
+      alt: 'Placeholder Alt Text.',
+      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      href: '/icons',
+      analytics: 'Test 2',
     },
     {
-      imgAlt: 'Placeholder Alt Text.',
-      imgSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-      imgHref: '/links',
-      imgAnalytics: 'Test 3',
+      alt: 'Placeholder Alt Text.',
+      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      href: '/links',
+      analytics: 'Test 3',
     },
   ];
   constructor() { }

@@ -4,6 +4,27 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-footer',
   template: `
     <footer [ngClass]="getClasses()" role="contentinfo">
+      <sprk-stack itemSpacing="medium" *ngIf="topLinks">
+        <div sprk-stack-item additionalClasses="sprk-o-Stack__item--equal@m">
+          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+            One
+          </h2>
+
+          <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
+            <li
+              *ngFor="let topLink of topLinks"
+              sprk-stack-item>
+              <a
+                class="sprk-b-Link sprk-b-Link--standalone"
+                [routerLink]="topLink.href"
+                [attr.data-analytics]="topLink.analytics">
+                {{ topLink.text }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </sprk-stack>
+
       <sprk-stack splitAt="{{ splitAt }}" itemSpacing="large">
         <div sprk-stack-item additionalClasses="sprk-o-Stack__item--equal@xl sprk-o-Stack sprk-o-Stack--large">
           <ul
@@ -11,9 +32,12 @@ import { Component, Input } from '@angular/core';
             class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-b-List sprk-b-List--bare">
             <li
               *ngFor="let socialLink of socialLinks"
-              class="sprk-o-Stack__item">
-              <a class="sprk-b-Link--muted" [routerLink]="socialLink.socialHref">
-                <sprk-icon [iconType]="socialLink.socialIcon" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+              sprk-stack-item>
+              <a
+                class="sprk-b-Link--muted"
+                [routerLink]="socialLink.href"
+                [attr.data-analytics]="socialLink.analytics">
+                <sprk-icon [iconType]="socialLink.icon" additionalClasses="sprk-c-Icon--l"></sprk-icon>
               </a>
             </li>
           </ul>
@@ -24,9 +48,12 @@ import { Component, Input } from '@angular/core';
             <li
               *ngFor="let feedbackLink of feedbackLinks"
               class="sprk-o-Stack__item">
-              <a class="sprk-b-Link sprk-b-Link--muted" [routerLink]="feedbackLink.feedbackHref">
-                <sprk-icon [iconType]="feedbackLink.feedbackIcon" additionalClasses="sprk-c-Icon--l sprk-u-mrs"></sprk-icon>
-                {{ feedbackLink.feedbackText }}
+              <a
+                class="sprk-b-Link sprk-b-Link--muted"
+                [routerLink]="feedbackLink.feedbackHref"
+                [attr.data-analytics]="feedbackLink.analytics">
+                <sprk-icon [iconType]="feedbackLink.icon" additionalClasses="sprk-c-Icon--l sprk-u-mrs"></sprk-icon>
+                {{ feedbackLink.text }}
               </a>
             </li>
           </ul>
@@ -46,8 +73,8 @@ import { Component, Input } from '@angular/core';
 
           <div sprk-stack-item additionalClasses="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div *ngFor="let img of imgs" [ngClass]="getClassesImgs()">
-              <a [routerLink]="img.imgHref" [attr.data-analytics]="img.imgAnalytics">
-                <img src="{{ img.imgSrc }}" alt="{{ img.imgAlt }}">
+              <a [routerLink]="img.href" [attr.data-analytics]="img.analytics">
+                <img src="{{ img.src }}" alt="{{ img.alt }}">
               </a>
             </div>
           </div>
@@ -55,9 +82,9 @@ import { Component, Input } from '@angular/core';
           <sprk-secondary-navigation sprk-stack-item>
             <sprk-secondary-navigation-item
               *ngFor="let link of bottomLinks"
-              [analyticsString]="link.linkAnalytics"
-              [href]="link.linkHref"
-              [text]="link.linkText">
+              [analyticsString]="link.analytics"
+              [href]="link.href"
+              [text]="link.text">
             </sprk-secondary-navigation-item>
           </sprk-secondary-navigation>
         </div>
@@ -90,14 +117,8 @@ export class SparkFooterComponent {
   @Input() imgAnalytics: string;
   @Input() linkAnalytics: string;
   @Input() additionalClasses: string;
-  @Input() socialHref: string;
-  @Input() socialIcon: string;
-  @Input() imgHref: string;
-  @Input() imgSrc: string;
-  @Input() imgAlt: string;
-  @Input() linkText: string;
-  @Input() linkHref: string;
   @Input() imgs: Object;
+  @Input() topLinks: Object;
   @Input() bottomLinks: Object;
   @Input() socialLinks: Object;
   @Input() feedbackLinks: Object;
