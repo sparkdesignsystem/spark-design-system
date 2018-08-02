@@ -4,9 +4,35 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-footer',
   template: `
     <footer [ngClass]="getClasses()" role="contentinfo">
-        <div *ngIf="award === 'true'" class="sprk-o-Stack__item sprk-o-Stack__item--equal@xl sprk-o-Stack sprk-o-Stack--medium">
+      <sprk-stack splitAt="{{ splitAt }}" itemSpacing="large">
+        <div sprk-stack-item additionalClasses="sprk-o-Stack__item--equal@xl sprk-o-Stack sprk-o-Stack--large">
+          <ul
+            *ngIf="socialLinks"
+            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-b-List sprk-b-List--bare">
+            <li
+              *ngFor="let socialLink of socialLinks"
+              class="sprk-o-Stack__item">
+              <a class="sprk-b-Link--muted" [routerLink]="socialLink.socialHref">
+                <sprk-icon [iconType]="socialLink.socialIcon" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+              </a>
+            </li>
+          </ul>
+
+          <ul
+            *ngIf="feedbackLinks"
+            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-b-List sprk-b-List--bare">
+            <li
+              *ngFor="let feedbackLink of feedbackLinks"
+              class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted" [routerLink]="feedbackLink.feedbackHref">
+                <sprk-icon [iconType]="feedbackLink.feedbackIcon" additionalClasses="sprk-c-Icon--l sprk-u-mrs"></sprk-icon>
+                {{ feedbackLink.feedbackText }}
+              </a>
+            </li>
+          </ul>
+
           <sprk-toggle
-            *ngIf="disclaimer !== 'false'"
+            *ngIf="disclaimer"
             sprk-stack-item
             toggleType="base"
             title="{{ disclaimerTitle }}"
@@ -14,11 +40,11 @@ import { Component, Input } from '@angular/core';
             analyticsString="{{ analyticsStringDisclaimer }}">
           </sprk-toggle>
 
-          <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
+          <p sprk-stack-item class="sprk-b-TypeBodyTwo">
             <ng-content></ng-content>
           </p>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div sprk-stack-item additionalClasses="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div *ngFor="let img of imgs" [ngClass]="getClassesImgs()">
               <a [routerLink]="img.imgHref" [attr.data-analytics]="img.imgAnalytics">
                 <img src="{{ img.imgSrc }}" alt="{{ img.imgAlt }}">
@@ -26,9 +52,9 @@ import { Component, Input } from '@angular/core';
             </div>
           </div>
 
-          <sprk-secondary-navigation additionalClasses="sprk-o-Stack__item">
+          <sprk-secondary-navigation sprk-stack-item>
             <sprk-secondary-navigation-item
-              *ngFor="let link of links"
+              *ngFor="let link of bottomLinks"
               [analyticsString]="link.linkAnalytics"
               [href]="link.linkHref"
               [text]="link.linkText">
@@ -38,6 +64,7 @@ import { Component, Input } from '@angular/core';
 
         <sprk-award
           *ngIf="award === 'true'"
+          sprk-stack-item
           disclaimer="false"
           title="Spark Award Component"
           additionalClassesImgOne="{{ additionalClassesAwardImgOne }}"
@@ -51,6 +78,7 @@ import { Component, Input } from '@angular/core';
           analyticsStringImgOne="Foo"
           analyticsStringImgTwo="Test">
         </sprk-award>
+      </sprk-stack>
     </footer>
   `,
   styles: ['']
@@ -58,16 +86,21 @@ import { Component, Input } from '@angular/core';
 
 export class SparkFooterComponent {
   @Input() award: string;
+  @Input() splitAt: string;
   @Input() imgAnalytics: string;
   @Input() linkAnalytics: string;
   @Input() additionalClasses: string;
+  @Input() socialHref: string;
+  @Input() socialIcon: string;
   @Input() imgHref: string;
   @Input() imgSrc: string;
   @Input() imgAlt: string;
   @Input() linkText: string;
   @Input() linkHref: string;
   @Input() imgs: Object;
-  @Input() links: Object;
+  @Input() bottomLinks: Object;
+  @Input() socialLinks: Object;
+  @Input() feedbackLinks: Object;
   @Input() additionalClassesBaseImgs: string;
   @Input() additionalClassesAwardImgOne: string;
   @Input() additionalClassesAwardImgTwo: string;
