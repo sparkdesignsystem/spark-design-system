@@ -61,4 +61,9 @@ describe('SparkFooterComponent', () => {
     fixture.detectChanges();
     expect(component.getClassesBadges()).toEqual('sprk-o-Stack__item sprk-u-pam sprk-u-man');
   });
+
+  it('should add the correct classes if additionalClassesBadges does not have a value', () => {
+    fixture.detectChanges();
+    expect(component.getClassesBadges()).toEqual('sprk-o-Stack__item');
+  });
 });
