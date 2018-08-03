@@ -4,11 +4,10 @@ import { Component } from '@angular/core';
   selector: 'sprk-footer-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base
-      </h2>
-
       <div class="sprk-o-CenteredColumn">
+        <h2 class="drizzle-b-h2">
+          Base
+        </h2>
         <sprk-footer
           [navLinks]="navLinks"
           [badges]="badges"
@@ -21,11 +20,10 @@ import { Component } from '@angular/core';
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base With Award Component
-      </h2>
-
       <div class="sprk-o-CenteredColumn">
+        <h2 class="drizzle-b-h2">
+          Base With Award Component
+        </h2>
         <sprk-footer
           splitAt="huge"
           award="true"
@@ -45,36 +43,34 @@ import { Component } from '@angular/core';
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base With Optional Elements
-      </h2>
-
       <div class="sprk-o-CenteredColumn">
-      <sprk-footer
-        [navLinks]="navLinks"
-        [siteLinkCols]="siteLinkCols"
-        [socialLinks]="socialLinks"
-        [feedbackLinks]="feedbackLinks"
-        splitAt="huge"
-        [badges]="badges"
-        additionalClassesBadges="sprk-u-Width-25"
-        additionalClassesAwardImgOne="sprk-u-Width-35"
-        additionalClassesAwardImgTwo="sprk-u-Width-35"
-        disclaimerCopy="this is some copy for the award disclaimer in the footer"
-        disclaimerTitle="Footer Disclaimer">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aliquam in laoreet ante, non feugiat neque. Suspendisse
-        et ipsum leo. Quisque non consectetur justo.
-      </sprk-footer>
+        <h2 class="drizzle-b-h2">
+          Base With Optional Elements
+        </h2>
+        <sprk-footer
+          [navLinks]="navLinks"
+          [siteLinkCols]="siteLinkCols"
+          [socialLinks]="socialLinks"
+          [feedbackLinks]="feedbackLinks"
+          splitAt="huge"
+          [badges]="badges"
+          additionalClassesBadges="sprk-u-Width-25"
+          additionalClassesAwardImgOne="sprk-u-Width-35"
+          additionalClassesAwardImgTwo="sprk-u-Width-35"
+          disclaimerCopy="this is some copy for the award disclaimer in the footer"
+          disclaimerTitle="Footer Disclaimer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aliquam in laoreet ante, non feugiat neque. Suspendisse
+          et ipsum leo. Quisque non consectetur justo.
+        </sprk-footer>
       </div>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base With Optional Elements And Award Pattern
-      </h2>
-
       <div class="sprk-o-CenteredColumn">
+        <h2 class="drizzle-b-h2">
+          Base With Optional Elements And Award Pattern
+        </h2>
         <sprk-footer
           award="true"
           [siteLinkCols]="siteLinkCols"
