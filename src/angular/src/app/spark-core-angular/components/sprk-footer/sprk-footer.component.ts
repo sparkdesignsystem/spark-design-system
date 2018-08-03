@@ -149,8 +149,6 @@ export class SparkFooterComponent {
         classArray.push(className);
       })
     }
-    console.log(this.siteLinkCols);
-
 
     return classArray.join(' ');
   }

@@ -1,16 +1,35 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkFooterComponent } from './sprk-footer.component';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkStackComponent } from '../sprk-stack/sprk-stack.component';
+import { SparkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
+import { SparkSecondaryNavigationComponent } from '../sprk-secondary-navigation/sprk-secondary-navigation.component';
+import { SparkSecondaryNavigationItemComponent } from '../sprk-secondary-navigation-item/sprk-secondary-navigation-item.component';
+import { SparkAwardComponent } from '../sprk-award/sprk-award.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SparkFooterComponent', () => {
   let component: SparkFooterComponent;
   let fixture: ComponentFixture<SparkFooterComponent>;
   let element: HTMLElement;
+  let siteLinkCols: Object = { heading: 'cats', siteLinks: {text: 'Item 1', href: '/alerts', analytics: 'test'}};
+  let feedbackLinks: Object = { icon: 'bell', text: 'Item 1', href: '/alerts', analytics: 'test' };
+  let socialLinks: Object = { icon: 'bell', href: '/alerts', analytics: 'test' };
+  let navLinks: Object = { text: 'Item 1', href: '/alerts', analytics: 'test' };
+  let badges: Object = { href: '/alerts', analytics: 'test', alt: 'test', src: 'test' };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [SparkFooterComponent]
+      declarations: [
+        SparkFooterComponent,
+        SparkStackComponent,
+        SparkIconComponent,
+        SparkToggleComponent,
+        SparkSecondaryNavigationComponent,
+        SparkSecondaryNavigationItemComponent,
+        SparkAwardComponent,
+      ]
     })
     .compileComponents();
   }));
@@ -31,48 +50,15 @@ describe('SparkFooterComponent', () => {
     expect(element.classList.toString()).toEqual(component.getClasses());
   });
 
-  it('should show routerLink href on img link if set', () => {
-    component.footerType = 'base';
-    component.imgHref = "www.sparkdesignsystem.com";
-    fixture.detectChanges();
-    let el = element.querySelector('.sprk-o-Stack__item a');
-    expect(el.getAttribute('href')).toEqual('/www.sparkdesignsystem.com');
-  });
-
-  it('should add the correct class if footerType is not set', () => {
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large');
-  });
-
-  it('should add the correct classes if footerType has no value, but additionalClasses does', () => {
-    component.footerType = '';
+  it('should add the correct classes if additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
   });
 
-  it('should add the correct classes if footerType and additionalClasses have values', () => {
-    component.footerType = 'base';
-    component.additionalClasses = 'sprk-u-pam sprk-u-man';
+  it('should add the correct classes if additionalClassesBadges has a value', () => {
+    component.additionalClassesBadges = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man');
-  });
-
-  it('should set the data-analytics attribute given a value on the images', () => {
-    component.footerType = 'base';
-    component.imgHref = "www.sparkdesignsystem.com";
-    component.imgAlt = "placeholder";
-    component.imgSrc = "placeholder";
-    component.analyticsImg = 'One';
-    fixture.detectChanges();
-    expect(element.querySelector('div div a').getAttribute('data-analytics')).toEqual('One');
-  });
-
-  it('should set the data-analytics attribute given a value on the links', () => {
-    component.footerType = 'base';
-    component.linkHref = "www.sparkdesignsystem.com";
-    component.analyticsLink = 'One';
-    fixture.detectChanges();
-    expect(element.querySelector('ul li a').getAttribute('data-analytics')).toEqual('One');
+    expect(component.getClassesBadges()).toEqual('sprk-o-Stack__item sprk-u-pam sprk-u-man');
   });
 });
