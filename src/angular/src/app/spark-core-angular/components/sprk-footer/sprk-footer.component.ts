@@ -4,24 +4,28 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-footer',
   template: `
     <footer [ngClass]="getClasses()" role="contentinfo">
-      <sprk-stack splitAt="medium" itemSpacing="medium" *ngIf="topLinks" sprk-stack-item>
+      <sprk-stack
+        splitAt="medium"
+        itemSpacing="medium"
+        *ngIf="siteLinkCols"
+        sprk-stack-item>
         <div
-          *ngFor="let linkColumn of linkColumns"
+          *ngFor="let column of siteLinkCols"
           sprk-stack-item
           additionalClasses="sprk-o-Stack__item--equal@m">
           <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
-            {{ linkColumn.heading }}
+            {{ column.heading }}
           </h2>
 
           <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
             <li
-              *ngFor="let topLink of topLinks"
+              *ngFor="let link of column.siteLinks"
               sprk-stack-item>
               <a
                 class="sprk-b-Link sprk-b-Link--standalone"
-                [routerLink]="topLink.href"
-                [attr.data-analytics]="topLink.analytics">
-                {{ topLink.text }}
+                [routerLink]="link.href"
+                [attr.data-analytics]="link.analytics">
+                {{ link.text }}
               </a>
             </li>
           </ul>
@@ -75,7 +79,7 @@ import { Component, Input } from '@angular/core';
           </p>
 
           <div sprk-stack-item additionalClasses="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
-            <div *ngFor="let img of imgs" [ngClass]="getClassesImgs()">
+            <div *ngFor="let img of badges" [ngClass]="getClassesBadges()">
               <a [routerLink]="img.href" [attr.data-analytics]="img.analytics">
                 <img src="{{ img.src }}" alt="{{ img.alt }}">
               </a>
@@ -84,7 +88,7 @@ import { Component, Input } from '@angular/core';
 
           <sprk-secondary-navigation sprk-stack-item>
             <sprk-secondary-navigation-item
-              *ngFor="let link of bottomLinks"
+              *ngFor="let link of navLinks"
               [analyticsString]="link.analytics"
               [href]="link.href"
               [text]="link.text">
@@ -120,13 +124,12 @@ export class SparkFooterComponent {
   @Input() imgAnalytics: string;
   @Input() linkAnalytics: string;
   @Input() additionalClasses: string;
-  @Input() imgs: Object;
-  @Input() topLinks: Object;
-  @Input() bottomLinks: Object;
+  @Input() badges: Object;
+  @Input() navLinks: Object;
   @Input() socialLinks: Object;
   @Input() feedbackLinks: Object;
-  @Input() linkColumns: Object;
-  @Input() additionalClassesBaseImgs: string;
+  @Input() siteLinkCols: Object;
+  @Input() additionalClassesBadges: string;
   @Input() additionalClassesAwardImgOne: string;
   @Input() additionalClassesAwardImgTwo: string;
   @Input() disclaimer: string;
@@ -146,17 +149,19 @@ export class SparkFooterComponent {
         classArray.push(className);
       })
     }
+    console.log(this.siteLinkCols);
+
 
     return classArray.join(' ');
   }
 
-  getClassesImgs(): string {
+  getClassesBadges(): string {
     let classArray: Array<String> = [
       'sprk-o-Stack__item'
     ];
 
-    if (this.additionalClassesBaseImgs) {
-      this.additionalClassesBaseImgs.split(' ').forEach((className) => {
+    if (this.additionalClassesBadges) {
+      this.additionalClassesBadges.split(' ').forEach((className) => {
         classArray.push(className);
       })
     }

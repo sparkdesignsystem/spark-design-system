@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
 
       <div class="sprk-o-CenteredColumn">
         <sprk-footer
-          [bottomLinks]="bottomLinks"
-          [imgs]="imgs"
-          additionalClassesBaseImgs="sprk-u-Width-20">
+          [navLinks]="navLinks"
+          [badges]="badges"
+          additionalClassesBadges="sprk-u-Width-20">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Aliquam in laoreet ante, non feugiat neque. Suspendisse
           et ipsum leo. Quisque non consectetur justo.
@@ -27,11 +27,11 @@ import { Component } from '@angular/core';
 
       <div class="sprk-o-CenteredColumn">
         <sprk-footer
-          award="true"
-          [bottomLinks]="bottomLinks"
           splitAt="huge"
-          [imgs]="imgs"
-          additionalClassesBaseImgs="sprk-u-Width-25"
+          award="true"
+          [navLinks]="navLinks"
+          [badges]="badges"
+          additionalClassesBadges="sprk-u-Width-25"
           additionalClassesAwardImgOne="sprk-u-Width-35"
           additionalClassesAwardImgTwo="sprk-u-Width-35"
           disclaimer="true"
@@ -51,14 +51,13 @@ import { Component } from '@angular/core';
 
       <div class="sprk-o-CenteredColumn">
       <sprk-footer
-        [topLinks]="topLinks"
-        [bottomLinks]="bottomLinks"
-        [linkColumns]="linkColumns"
+        [navLinks]="navLinks"
+        [siteLinkCols]="siteLinkCols"
         [socialLinks]="socialLinks"
         [feedbackLinks]="feedbackLinks"
         splitAt="huge"
-        [imgs]="imgs"
-        additionalClassesBaseImgs="sprk-u-Width-25"
+        [badges]="badges"
+        additionalClassesBadges="sprk-u-Width-25"
         additionalClassesAwardImgOne="sprk-u-Width-35"
         additionalClassesAwardImgTwo="sprk-u-Width-35"
         disclaimerCopy="this is some copy for the award disclaimer in the footer"
@@ -76,60 +75,114 @@ import { Component } from '@angular/core';
       </h2>
 
       <div class="sprk-o-CenteredColumn">
-      <sprk-footer
-        award="true"
-        [topLinks]="topLinks"
-        [linkColumns]="linkColumns"
-        [bottomLinks]="bottomLinks"
-        [socialLinks]="socialLinks"
-        [feedbackLinks]="feedbackLinks"
-        splitAt="huge"
-        [imgs]="imgs"
-        additionalClassesBaseImgs="sprk-u-Width-25"
-        additionalClassesAwardImgOne="sprk-u-Width-35"
-        additionalClassesAwardImgTwo="sprk-u-Width-35"
-        disclaimer="true"
-        disclaimerCopy="this is some copy for the award disclaimer in the footer"
-        disclaimerTitle="Footer Disclaimer">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aliquam in laoreet ante, non feugiat neque. Suspendisse
-        et ipsum leo. Quisque non consectetur justo.
-      </sprk-footer>
+        <sprk-footer
+          award="true"
+          [siteLinkCols]="siteLinkCols"
+          [navLinks]="navLinks"
+          [socialLinks]="socialLinks"
+          [feedbackLinks]="feedbackLinks"
+          splitAt="huge"
+          [badges]="badges"
+          additionalClassesBadges="sprk-u-Width-25"
+          additionalClassesAwardImgOne="sprk-u-Width-35"
+          additionalClassesAwardImgTwo="sprk-u-Width-35"
+          disclaimer="true"
+          disclaimerCopy="this is some copy for the award disclaimer in the footer"
+          disclaimerTitle="Footer Disclaimer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aliquam in laoreet ante, non feugiat neque. Suspendisse
+          et ipsum leo. Quisque non consectetur justo.
+        </sprk-footer>
       </div>
     </div>
   `,
   styles: ['']
 })
 export class FooterDocsComponent {
-  linkColumns = [
+  siteLinkCols = [
     {
       heading: 'Column 1',
+      siteLinks : [
+        {
+          text: 'Column 1 Link 1',
+          href: '/alerts',
+          linkAnalytics: 'Link to Item 1',
+        },
+        {
+          text: 'Column 1 Link 2',
+          href: '/alerts',
+          linkAnalytics: 'Link to Item 2',
+        },
+        {
+          text: 'Column 1 Link 3',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+        {
+          text: 'Column 1 Link 4',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+        {
+          text: 'Column 1 Link 5',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+        {
+          text: 'Column 1 Link 6',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+      ],
     },
     {
       heading: 'Column 2',
+      siteLinks : [
+        {
+          text: 'Column 2 Link 1',
+          href: '/masthead',
+          linkAnalytics: 'Link to Item 1',
+        },
+        {
+          text: 'Column 2 Link 2',
+          href: '/alerts',
+          linkAnalytics: 'Link to Item 2',
+        },
+        {
+          text: 'Column 2 Link 3',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+        {
+          text: 'Column 2 Link 4',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+      ],
     },
     {
       heading: 'Column 3',
+      siteLinks : [
+        {
+          text: 'Column 3 Link 1',
+          href: '/alerts',
+          linkAnalytics: 'Link to Item 1',
+        },
+        {
+          text: 'Column 3 Link 2',
+          href: '/alerts',
+          linkAnalytics: 'Link to Item 2',
+        },
+        {
+          text: 'Column 3 Link 3',
+          href: '/award',
+          linkAnalytics: 'Link to Item 3',
+        },
+      ],
     },
   ];
 
-  topLinks = [
-    {
-      text: 'Item 1',
-      href: '/alerts',
-      linkAnalytics: 'Link to Item 1',
-    },
-    {
-      text: 'Item 2',
-      href: '/icons',
-    },
-    {
-      text: 'Item 3',
-      href: '/links',
-    },
-  ];
-
-  bottomLinks = [
+  navLinks = [
     {
       text: 'Item 1',
       href: '/alerts',
@@ -183,7 +236,7 @@ export class FooterDocsComponent {
     },
   ];
 
-  imgs = [
+  badges = [
     {
       alt: 'Placeholder Alt Text.',
       src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
