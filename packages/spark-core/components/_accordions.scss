@@ -33,8 +33,7 @@
 
   &:hover,
   &:active,
-  &:focus,
-  &:visited {
+  &:focus {
     background-color: $blue-dark;
     color: $white;
     text-decoration: none;
@@ -139,8 +138,7 @@
   &.sprk-c-Accordion__summary--open,
   &:hover,
   &:focus,
-  &:active,
-  &:visited {
+  &:active {
     background-color: $blue-medium;
     color: $white;
 
