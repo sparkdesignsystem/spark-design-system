@@ -18,11 +18,11 @@ describe('SprkDatePickerDirective', () => {
   let fixture: ComponentFixture<TestComponent>;
   let inputElement: HTMLElement;
 
-  beforeEach(() => {
+  it('should stand up, even if TinyDatePicker is not defined', () => {
     TestBed.configureTestingModule({
       providers: [{
         provide: 'TinyDatePicker',
-        useValue: function() { return { on: function() {} }; }
+        useValue: null
       }],
       declarations: [SprkDatepickerDirective, TestComponent]
     }).compileComponents();
@@ -31,11 +31,29 @@ describe('SprkDatePickerDirective', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     inputElement = fixture.nativeElement.querySelector('input');
-  });
-
-  it('should create itself', () => {
     expect(component).toBeTruthy();
-  });
+  })
 
-  it('should pop up on click')
+  it('should create itself and trigger when focused', (done) => {
+    TestBed.configureTestingModule({
+      providers: [{
+        provide: 'TinyDatePicker',
+        useValue: window.TinyDatePicker // loaded in karma.conf.js
+      },],
+      declarations: [SprkDatepickerDirective, TestComponent]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    inputElement = fixture.nativeElement.querySelector('input');
+    expect(component).toBeTruthy();
+    inputElement.dispatchEvent(new Event('focus'));
+    fixture.detectChanges();
+
+    setTimeout(() => {
+      document.querySelector('.dp-day').dispatchEvent(new Event('click'));
+      done();
+    }, 1000);
+  });
 });

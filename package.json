@@ -99,6 +99,6 @@
     "npm": "^5.10.0",
     "prismjs": "^1.15.0",
     "run-sequence": "^2.2.1",
-    "tiny-date-picker": "^3.2.5"
+    "tiny-date-picker": "^3.2.6"
   }
 }
