@@ -19,6 +19,9 @@ import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
 import { CardDocsComponent } from './card-docs/card-docs.component';
 import { StackDocsComponent } from './stack-docs/stack-docs.component';
 import { PromoDocsComponent } from './promo-docs/promo-docs.component';
+import { FooterDocsComponent } from './footer-docs/footer-docs.component';
+import { AwardDocsComponent } from './award-docs/award-docs.component';
+import { ToggleDocsComponent } from './toggle-docs/toggle-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -34,6 +37,9 @@ const appRoutes: Routes = [
   { path: 'masthead', component: MastheadDocsComponent },
   { path: 'stack', component: StackDocsComponent },
   { path: 'promo', component: PromoDocsComponent },
+  { path: 'footer', component: FooterDocsComponent },
+  { path: 'award', component: AwardDocsComponent },
+  { path: 'toggle', component: ToggleDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -56,6 +62,9 @@ const appRoutes: Routes = [
     ListDocsComponent,
     StackDocsComponent,
     PromoDocsComponent,
+    FooterDocsComponent,
+    AwardDocsComponent,
+    ToggleDocsComponent,
   ],
   imports: [
     RouterModule.forRoot(
