@@ -41,6 +41,7 @@ import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/s
 import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
 
 import TinyDatePicker from 'tiny-date-picker';
+import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.component';
 
 @NgModule({
   providers: [{
@@ -67,7 +68,6 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkNarrowNavigationItemComponent,
     SparkSecondaryNavigationComponent,
     SparkSecondaryNavigationItemComponent,
-    SparkIconComponent,
     SparkModalComponent,
     SparkDividerComponent,
     SparkListComponent,
@@ -90,6 +90,8 @@ import TinyDatePicker from 'tiny-date-picker';
     SprkFormatterMonetaryDirective,
     SprkFormatterSsnDirective,
     SprkDatepickerDirective,
+    SparkStackItemDirective,
+    SparkPromoComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -105,7 +107,6 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkIconComponent,
     SparkListComponent,
     SparkListItemComponent,
-    SparkIconComponent,
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
     SparkNarrowNavigationItemComponent,
@@ -117,6 +118,8 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkSecondaryNavigationItemComponent,
     SparkMastheadComponent,
     SparkStackComponent,
+    SparkStackItemDirective,
+    SparkPromoComponent,
     SparkStackItemDirective,
     SparkMastheadComponent,
     SprkInputDirective,
