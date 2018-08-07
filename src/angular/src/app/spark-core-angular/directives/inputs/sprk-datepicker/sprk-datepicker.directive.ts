@@ -17,7 +17,7 @@ export class SprkDatepickerDirective implements OnInit {
   ngOnInit(): void {
     let input = this.ref.nativeElement;
     if(this.TinyDatePicker) {
-      const dp = this.TinyDatePicker(input, {
+      this.TinyDatePicker(input, {
         mode: 'dp-below',
         min: this.minDate,
         max: this.maxDate,
