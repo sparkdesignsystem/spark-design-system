@@ -15,7 +15,7 @@ export class SprkFormatterSsnDirective {
 
   formatSSN(value): string {
     let m = value.match(/(^(?!666|000|9\d{2})\d{3}([-]{0,1})(?!00)\d{2}\1(?!0{4})\2\d{4}$)|^$/);
-    if(m) {
+    if (m) {
       let val = value.trim().replace(/[ -]/g, '');
       let newVal = '';
       const sizes = [3, 2, 4];

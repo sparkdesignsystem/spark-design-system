@@ -13,7 +13,7 @@ export class SprkInputDirective implements OnInit, OnChanges {
   getClasses(): Array<String> {
     let classArray: Array<String> = [];
 
-    if(this.ref.nativeElement.nodeName === 'SELECT') {
+    if (this.ref.nativeElement.nodeName === 'SELECT') {
       classArray.push('sprk-b-Select');
     } else {
       classArray.push('sprk-b-TextInput', 'sprk-u-Width-100');
