@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">
         Tabbed Navigation 
       </h2>
+      
+      <sprk-tabbed-navigation>
+      
+      </sprk-tabbed-navigation>
     </div>
   `,
   styles: ['']
