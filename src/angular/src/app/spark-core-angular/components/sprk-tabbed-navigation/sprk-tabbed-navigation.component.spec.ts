@@ -4,7 +4,7 @@ import { SparkTabbedNavigationComponent } from './sprk-tabbed-navigation.compone
 describe('SparkTabbedNavigationComponent', () => {
   let component: SparkTabbedNavigationComponent;
   let fixture: ComponentFixture<SparkTabbedNavigationComponent>;
-  let element;
+  let element: HTMLElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -16,11 +16,17 @@ describe('SparkTabbedNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkTabbedNavigationComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('ul');
+    element = fixture.nativeElement.querySelector('div');
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add classes if additionalClasses has a value', () => {
+    component.additionalClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(element.classList.toString()).toEqual('sprk-c-Tabs sprk-u-man');
   });
 });
