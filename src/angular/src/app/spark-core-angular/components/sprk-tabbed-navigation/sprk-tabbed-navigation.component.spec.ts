@@ -29,4 +29,10 @@ describe('SparkTabbedNavigationComponent', () => {
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual('sprk-c-Tabs sprk-u-man');
   });
+
+  it('should set aria-orientation to the incoming orientation value', () => {
+    component.orientation = 'vertical';
+    fixture.detectChanges();
+    expect(element.getAttribute('aria-orientation')).toEqual('vertical');
+  });
 });
