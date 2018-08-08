@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
 import { ButtonDocsComponent } from './button-docs/button-docs.component';
@@ -22,6 +21,7 @@ import { PromoDocsComponent } from './promo-docs/promo-docs.component';
 import { FooterDocsComponent } from './footer-docs/footer-docs.component';
 import { AwardDocsComponent } from './award-docs/award-docs.component';
 import { ToggleDocsComponent } from './toggle-docs/toggle-docs.component';
+import { TabbedNavigationDocsComponent } from './tabbed-navigation-docs/tabbed-navigation-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -40,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'footer', component: FooterDocsComponent },
   { path: 'award', component: AwardDocsComponent },
   { path: 'toggle', component: ToggleDocsComponent },
+  { path: 'tabbed-navigation', component: TabbedNavigationDocsComponent},
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -65,6 +66,7 @@ const appRoutes: Routes = [
     FooterDocsComponent,
     AwardDocsComponent,
     ToggleDocsComponent,
+    TabbedNavigationDocsComponent
   ],
   imports: [
     RouterModule.forRoot(
