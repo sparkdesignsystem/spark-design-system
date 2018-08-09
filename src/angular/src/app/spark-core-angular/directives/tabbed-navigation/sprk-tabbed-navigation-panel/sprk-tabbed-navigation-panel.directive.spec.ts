@@ -47,7 +47,7 @@ describe('Spark Tabbed Navigation Panel Directive', () => {
     expect(element.getAttribute('tabindex')).toEqual('0');
   });
 
-  it('should add the hide class if isActive is not set', () => {
+  it('should add the hide class by default', () => {
     expect(element.classList.contains('sprk-u-Display--none')).toEqual(true);
   });
 });

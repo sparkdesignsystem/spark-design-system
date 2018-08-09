@@ -6,12 +6,12 @@ import { Directive, OnInit, Input, ElementRef } from '@angular/core';
 
 export class SprkTabbedNavigationPanelDirective implements OnInit {
   @Input() additionalClasses: string;
-  @Input() isActive: boolean;
+  @Input() defaultActive: boolean;
 
   getClasses(): Array<String> {
     let classArray: Array<String> = ['sprk-c-Tabs__content'];
 
-    if(!this.isActive) {
+    if (!this.defaultActive) {
       classArray.push('sprk-u-Display--none');
     }
 
@@ -31,7 +31,7 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
 
     this.getClasses().forEach((item)=>{
       this.ref.nativeElement.classList.add(item);
-    })
+    });
   }
 
   constructor(public ref: ElementRef) { }

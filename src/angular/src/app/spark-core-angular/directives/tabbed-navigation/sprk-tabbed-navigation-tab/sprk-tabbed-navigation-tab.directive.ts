@@ -6,12 +6,12 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 export class SprkTabbedNavigationTabDirective implements OnInit {
   @Input() additionalClasses: string;
-  @Input() isActive: boolean;
+  @Input() defaultActive: boolean;
 
   getClasses(): Array<String> {
    let classArray: Array<String> = ['sprk-c-Tabs__button'];
 
-   if(this.isActive) {
+   if(this.defaultActive) {
      classArray.push('sprk-c-Tabs__button--active');
    }
 
@@ -30,7 +30,7 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
     })
 
     this.ref.nativeElement.setAttribute('role', 'tab');
-    this.ref.nativeElement.setAttribute('aria-selected', this.isActive ? 'true': 'false');
+    this.ref.nativeElement.setAttribute('aria-selected', this.defaultActive? 'true': 'false');
   }
 
   constructor(public ref: ElementRef) {}
