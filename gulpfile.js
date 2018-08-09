@@ -30,7 +30,9 @@ gulp.task('sass', () => {
       browsers: ['> 1%', 'last 4 versions'],
       cascade: false,
     }))
-    .pipe(cssnano())
+    .pipe(cssnano({
+      zindex: false,
+    }))
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
 
   gulp
@@ -41,7 +43,9 @@ gulp.task('sass', () => {
       browsers: ['> 1%', 'last 4 versions'],
       cascade: false,
     }))
-    .pipe(cssnano())
+    .pipe(cssnano({
+      zindex: false,
+    }))
     .pipe(gulp.dest('./dist/assets/drizzle/styles'));
 });
 
