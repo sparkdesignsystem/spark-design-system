@@ -46,12 +46,4 @@ describe('Spark Tabbed Navigation Tab Directive', () => {
   it('should add role=tab to the element', () => {
     expect(element.getAttribute('role')).toEqual('tab');
   })
-
-  it('should add aria-controls to the incoming id', () => {
-    expect(element.getAttribute('aria-controls')).toEqual('cntrls');
-  });
-
-  it('should set its id to the incoming id', () => {
-    expect(element.getAttribute('id')).toEqual('123');
-  });
 });
