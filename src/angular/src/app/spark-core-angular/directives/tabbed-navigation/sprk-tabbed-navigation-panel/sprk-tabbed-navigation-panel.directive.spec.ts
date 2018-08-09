@@ -11,7 +11,7 @@ import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-pan
 
 class TestComponent {}
 
-fdescribe('Spark Tabbed Navigation Panel Directive', () => {
+describe('Spark Tabbed Navigation Panel Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
   let element: HTMLElement;
