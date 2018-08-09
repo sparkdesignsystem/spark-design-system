@@ -1,12 +1,13 @@
-import { Component, Input, ContentChildren, QueryList, AfterContentInit, HostListener } from '@angular/core';
+import { Component, Input, ContentChildren, QueryList, AfterContentInit, HostListener, ElementRef } from '@angular/core';
 import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import * as _ from 'lodash';
+import { resetTabs, setActiveTab, retreatTab, advanceTab, getActiveTabIndex, ariaOrientation } from '@sparkdesignsystem/spark-core/components/tabs';
 
 @Component({
   selector: 'sprk-tabbed-navigation',
   template: `
-    <div [ngClass]="getClasses()" role="tablist" [attr.aria-orientation]="orientation">
+    <div [ngClass]="getClasses()" role="tablist">
       <div class="sprk-c-Tabs__buttons">
         <ng-content select="[sprk-tabbed-navigation-tab]"></ng-content> 
       </div>
@@ -17,7 +18,6 @@ import * as _ from 'lodash';
 
 export class SparkTabbedNavigationComponent implements AfterContentInit {
   @Input() additionalClasses: string;
-  @Input() orientation: string = 'horizontal';
 
   @HostListener('click', ['$event']) onClick($event){
 
@@ -26,19 +26,40 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
         return panel.ref.nativeElement.id === $event.target.getAttribute('aria-controls');
       });
 
-      this.tabs.forEach((tab) => {
-        tab.ref.nativeElement.classList.remove('sprk-c-Tabs__button--active');
-        tab.ref.nativeElement.setAttribute('aria-selected', 'false');
-      });
+      resetTabs(this.tabs.map((tab) => { return tab.ref.nativeElement; }),
+        this.panels.map((panel) => { return panel.ref.nativeElement; }));
 
-      $event.target.classList.add('sprk-c-Tabs__button--active');
-      $event.target.setAttribute('aria-selected', 'true');
+      setActiveTab($event.target, activePanel.ref.nativeElement);
+    }
+  }
 
-      this.panels.forEach((panel) => {
-        panel.ref.nativeElement.classList.add('sprk-u-Display--none');
-      });
+  @HostListener('window:resize', ['$event']) onResize($event) {
+    ariaOrientation(window.innerWidth, this.ref.nativeElement);
+  };
 
-      activePanel.ref.nativeElement.classList.remove('sprk-u-Display--none');
+  @HostListener('keydown', ['$event']) onKeydown($event){
+    const keys = {
+      end: 35,
+      home: 36,
+      left: 37,
+      right: 39,
+      tab: 9,
+    };
+
+    let tabElements = this.tabs.map((tab) => { return tab.ref.nativeElement; });
+    let panelElements = this.panels.map((panel) => { return panel.ref.nativeElement; });
+
+    if ($event.keyCode === keys.left) {
+      retreatTab(tabElements, panelElements);
+    } else if ($event.keyCode === keys.right) {
+      advanceTab(tabElements, panelElements);
+    } else if ($event.keyCode === keys.tab) {
+      event.preventDefault();
+      panelElements[getActiveTabIndex(tabElements)].focus();
+    } else if ($event.keyCode === keys.home) {
+      setActiveTab(tabElements[0], panelElements[0]);
+    } else if ($event.keyCode === keys.end) {
+      setActiveTab(tabElements[tabElements.length - 1], panelElements[panelElements.length - 1]);
     }
   }
 
@@ -83,4 +104,9 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
       });
     }
   }
+
+  constructor(public ref: ElementRef) {
+    ariaOrientation(window.innerWidth, this.ref.nativeElement);
+  }
+
 }
