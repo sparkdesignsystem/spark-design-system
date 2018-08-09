@@ -6,9 +6,9 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
   template: `
     <div [ngClass]="getClasses()" role="tablist" [attr.aria-orientation]="orientation">
       <div class="sprk-c-Tabs__buttons">
-        <ng-content select="sprk-tabbed-navigation-tab"></ng-content> 
+        <ng-content select="[sprk-tabbed-navigation-tab]"></ng-content> 
       </div>
-      <ng-content></ng-content>
+      <ng-content select="[sprk-tabbed-navigation-panel]"></ng-content>
     </div>`
 })
 

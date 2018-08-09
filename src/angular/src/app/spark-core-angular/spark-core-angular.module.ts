@@ -27,6 +27,7 @@ import { SparkAwardComponent } from './components/sprk-award/sprk-award.componen
 import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.component';
 import { SparkTabbedNavigationComponent } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.component';
 import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 
 @NgModule({
   imports: [
@@ -59,7 +60,8 @@ import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation
     SparkAwardComponent,
     SparkToggleComponent,
     SparkTabbedNavigationComponent,
-    SprkTabbedNavigationTabDirective
+    SprkTabbedNavigationTabDirective,
+    SprkTabbedNavigationPanelDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -88,7 +90,8 @@ import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation
     SparkAwardComponent,
     SparkToggleComponent,
     SparkTabbedNavigationComponent,
-    SprkTabbedNavigationTabDirective
+    SprkTabbedNavigationTabDirective,
+    SprkTabbedNavigationPanelDirective
   ],
 })
 export class SparkCoreAngularModule { }
