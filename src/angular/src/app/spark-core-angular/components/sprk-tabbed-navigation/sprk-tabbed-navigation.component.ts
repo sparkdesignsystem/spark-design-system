@@ -54,8 +54,10 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
     } else if ($event.keyCode === keys.right) {
       advanceTab(tabElements, panelElements);
     } else if ($event.keyCode === keys.tab) {
-      event.preventDefault();
-      panelElements[getActiveTabIndex(tabElements)].focus();
+      if ($event.target.classList.contains('sprk-c-Tabs__button')) {
+        event.preventDefault();
+        panelElements[getActiveTabIndex(tabElements)].focus();
+      }
     } else if ($event.keyCode === keys.home) {
       setActiveTab(tabElements[0], panelElements[0]);
     } else if ($event.keyCode === keys.end) {

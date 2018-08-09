@@ -10,11 +10,8 @@ import { Component } from '@angular/core';
       
       <sprk-tabbed-navigation>
         <button sprk-tabbed-navigation-tab>Tab 1</button>
-        <button
-          [defaultActive]=true
-          sprk-tabbed-navigation-tab>Tab 2</button>
-        <button
-          sprk-tabbed-navigation-tab>Tab 3</button>
+        <button [defaultActive]=true sprk-tabbed-navigation-tab>Tab 2</button>
+        <button sprk-tabbed-navigation-tab>Tab 3</button>
         <div sprk-tabbed-navigation-panel>
           <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla 
             euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh. 

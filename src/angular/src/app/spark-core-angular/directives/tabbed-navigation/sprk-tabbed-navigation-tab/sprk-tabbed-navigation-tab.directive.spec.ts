@@ -38,11 +38,6 @@ describe('Spark Tabbed Navigation Tab Directive', () => {
     expect(element.classList.contains('sprk-u-man')).toEqual(true);
   })
 
-  it('should add the active class and add aria-selected if isActive is set', () => {
-    expect(element.classList.contains('sprk-c-Tabs__button--active')).toEqual(true);
-    expect(element.getAttribute('aria-selected')).toEqual('true');
-  });
-
   it('should add role=tab to the element', () => {
     expect(element.getAttribute('role')).toEqual('tab');
   })
