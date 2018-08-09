@@ -33,7 +33,7 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
-  @HostListener('window:resize', ['$event']) onResize($event) {
+  @HostListener('window:resize', ['$event']) onResize() {
     ariaOrientation(window.innerWidth, this.ref.nativeElement);
   };
 
@@ -98,7 +98,7 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
       tabIDs = tabIDs.reverse();
       panelIDs = panelIDs.reverse();
 
-      this.panels.forEach((panel, index) => {
+      this.panels.forEach((panel) => {
         panel.ref.nativeElement.setAttribute('id', panelIDs.pop());
         panel.ref.nativeElement.setAttribute('aria-labelledby', tabIDs.pop());
       });
