@@ -29,6 +29,7 @@ import { SparkTableComponent } from './components/sprk-table/sprk-table.componen
 import { SprkTableHeadDirective } from './directives/sprk-table-head/sprk-table-head.directive';
 import { SprkTableGroupedColumnDirective } from './directives/sprk-table-grouped-column/sprk-table-grouped-column.directive';
 import { SprkTableEmptyHeadingDirective } from './directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
+import { SprkTableRowHeadingDirective } from './directives/sprk-table-row-heading/sprk-table-row-heading.directive';
 
 @NgModule({
   imports: [
@@ -63,7 +64,8 @@ import { SprkTableEmptyHeadingDirective } from './directives/sprk-table-empty-he
     SparkTableComponent,
     SprkTableHeadDirective,
     SprkTableGroupedColumnDirective,
-    SprkTableEmptyHeadingDirective
+    SprkTableEmptyHeadingDirective,
+    SprkTableRowHeadingDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -94,7 +96,8 @@ import { SprkTableEmptyHeadingDirective } from './directives/sprk-table-empty-he
     SparkTableComponent,
     SprkTableHeadDirective,
     SprkTableGroupedColumnDirective,
-    SprkTableEmptyHeadingDirective
+    SprkTableEmptyHeadingDirective,
+    SprkTableRowHeadingDirective
   ],
 })
 export class SparkCoreAngularModule { }

@@ -106,25 +106,25 @@ import { Component } from '@angular/core';
         </thead>
         <tbody>
           <tr>
-            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <th sprk-table-row-heading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
           </tr>
           <tr>
-            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <th sprk-table-row-heading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
           </tr>
           <tr>
-            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <th sprk-table-row-heading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
           </tr>
           <tr>
-            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <th sprk-table-row-heading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
