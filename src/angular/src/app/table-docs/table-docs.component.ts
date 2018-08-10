@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       
       <h3 class="drizzle-b-h3">Column Comparison</h3>
       <sprk-table>
-        <thead class="sprk-c-Table__head">
+        <thead sprk-table-head>
           <tr>
             <th>Column Heading</th>
             <th>Column Heading</th>
