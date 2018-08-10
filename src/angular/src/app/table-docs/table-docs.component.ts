@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'sprk-tables-docs',
@@ -7,15 +7,41 @@ import { Component, OnInit } from '@angular/core';
       <h2 class="drizzle-b-h2">
         Tables 
       </h2>
-    </div>
-  `,
+      
+      <h3 class="drizzle-b-h3">Column Comparison</h3>
+      <sprk-table>
+        <thead class="sprk-c-Table__head">
+          <tr>
+            <th>Column Heading</th>
+            <th>Column Heading</th>
+            <th>Column Heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+        </tbody>
+      </sprk-table>`,
   styles: ['']
 })
-export class TableDocsComponent implements OnInit {
-
+export class TableDocsComponent {
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
