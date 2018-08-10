@@ -5,10 +5,9 @@ import { Component } from '@angular/core';
   template: `
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Tables 
+        Column Comparison 
       </h2>
       
-      <h3 class="drizzle-b-h3">Column Comparison</h3>
       <sprk-table>
         <thead sprk-table-head>
           <tr>
@@ -39,7 +38,58 @@ import { Component } from '@angular/core';
             <td>Data 3</td>
           </tr>
         </tbody>
-      </sprk-table>`,
+      </sprk-table>
+    </div>
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">
+        Grouped Columns 
+      </h2>
+      
+      <sprk-table>
+        <thead sprk-table-head>
+          <tr>
+            <th rowspan="2">Column Heading</th>
+            <th colspan="3">Column Heading</th>
+            <th rowspan="2">Column Heading</th>
+          </tr>
+          <tr>
+            <th sprk-table-grouped-column>SubHeading</th>
+            <th sprk-table-grouped-column>SubHeading</th>
+            <th sprk-table-grouped-column>SubHeading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+        </tbody>
+      </sprk-table>
+`,
   styles: ['']
 })
 export class TableDocsComponent {
