@@ -28,6 +28,7 @@ import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.compo
 import { SparkTableComponent } from './components/sprk-table/sprk-table.component';
 import { SprkTableHeadDirective } from './directives/sprk-table-head/sprk-table-head.directive';
 import { SprkTableGroupedColumnDirective } from './directives/sprk-table-grouped-column/sprk-table-grouped-column.directive';
+import { SprkTableEmptyHeadingDirective } from './directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import { SprkTableGroupedColumnDirective } from './directives/sprk-table-grouped
     SparkToggleComponent,
     SparkTableComponent,
     SprkTableHeadDirective,
-    SprkTableGroupedColumnDirective
+    SprkTableGroupedColumnDirective,
+    SprkTableEmptyHeadingDirective
   ],
   exports: [
     SparkAlertComponent,
@@ -91,7 +93,8 @@ import { SprkTableGroupedColumnDirective } from './directives/sprk-table-grouped
     SparkToggleComponent,
     SparkTableComponent,
     SprkTableHeadDirective,
-    SprkTableGroupedColumnDirective
+    SprkTableGroupedColumnDirective,
+    SprkTableEmptyHeadingDirective
   ],
 })
 export class SparkCoreAngularModule { }

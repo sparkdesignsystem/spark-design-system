@@ -89,6 +89,49 @@ import { Component } from '@angular/core';
           </tr>
         </tbody>
       </sprk-table>
+    </div>
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">
+        Row Comparison 
+      </h2> 
+    
+      <sprk-table>
+        <thead sprk-table-head>
+          <tr>
+            <th sprk-table-empty-heading></th>
+            <th>Column Heading</th>
+            <th>Column Heading</th>
+            <th>Column Heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <th class="sprk-c-Table__row-heading">Row Heading</th>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+        </tbody>
+      </sprk-table>
+    </div>
 `,
   styles: ['']
 })
