@@ -26,6 +26,7 @@ import { AwardDocsComponent } from './award-docs/award-docs.component';
 import { ToggleDocsComponent } from './toggle-docs/toggle-docs.component';
 import { TabbedNavigationDocsComponent } from './tabbed-navigation-docs/tabbed-navigation-docs.component';
 import { DictionaryDocsComponent } from './dictionary-docs/dictionary-docs.component';
+import { TableDocsComponent } from './table-docs/table-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   { path: 'footer', component: FooterDocsComponent },
   { path: 'award', component: AwardDocsComponent },
   { path: 'toggle', component: ToggleDocsComponent },
+  { path: 'tables', component: TableDocsComponent },
   { path: 'tabbed-navigation', component: TabbedNavigationDocsComponent},
   { path: 'dictionary', component: DictionaryDocsComponent },
   { path: '', component: IntroDocsComponent },
@@ -73,6 +75,7 @@ const appRoutes: Routes = [
     FooterDocsComponent,
     AwardDocsComponent,
     ToggleDocsComponent,
+    TableDocsComponent,
     TabbedNavigationDocsComponent,
     DictionaryDocsComponent
   ],
