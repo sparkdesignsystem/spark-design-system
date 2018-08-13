@@ -25,9 +25,7 @@ import { SparkSelectionContainerComponent } from './components/inputs/sprk-selec
 import { SparkSelectionItemContainerComponent } from './components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
-
 import { SprkDatepickerDirective } from './directives/inputs/sprk-datepicker/sprk-datepicker.directive';
-import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
 import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectionLabelDirective } from './directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
@@ -41,10 +39,15 @@ import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/s
 import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
 
 import TinyDatePicker from 'tiny-date-picker';
+import { SparkStackItemDirective } from './directives/sprk-stack-item/sprk-stack-item.directive';
 import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.component';
 import { SparkFooterComponent } from './components/sprk-footer/sprk-footer.component';
 import { SparkAwardComponent } from './components/sprk-award/sprk-award.component';
 import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.component';
+import { SparkTabbedNavigationComponent } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.component';
+import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
+import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dictionary.component';
 
 @NgModule({
   providers: [{
@@ -97,7 +100,12 @@ import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.compo
     SparkPromoComponent,
     SparkFooterComponent,
     SparkAwardComponent,
-    SparkToggleComponent
+    SparkToggleComponent,
+    SparkTabbedNavigationComponent,
+    SprkTabbedNavigationTabDirective,
+    SprkTabbedNavigationPanelDirective,
+    SparkToggleComponent,
+    SparkDictionaryComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -142,7 +150,12 @@ import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.compo
     SparkPromoComponent,
     SparkFooterComponent,
     SparkAwardComponent,
-    SparkToggleComponent
+    SparkToggleComponent,
+    SparkTabbedNavigationComponent,
+    SprkTabbedNavigationTabDirective,
+    SprkTabbedNavigationPanelDirective,
+    SparkToggleComponent,
+    SparkDictionaryComponent
   ],
 })
 export class SparkCoreAngularModule { }
