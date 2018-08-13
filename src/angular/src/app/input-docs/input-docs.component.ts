@@ -251,7 +251,7 @@ export class InputDocsComponent {
   form_submitted: boolean = false;
 
   togglePasswordType(): void {
-    if(this.passwordType === 'password') {
+    if (this.passwordType === 'password') {
       this.passwordType = 'text';
     } else {
       this.passwordType = 'password';
@@ -259,7 +259,7 @@ export class InputDocsComponent {
   }
 
   toggleSSNType(): void {
-    if(this.ssnType === 'password') {
+    if (this.ssnType === 'password') {
       this.ssnType = 'text';
     } else {
       this.ssnType = 'password';

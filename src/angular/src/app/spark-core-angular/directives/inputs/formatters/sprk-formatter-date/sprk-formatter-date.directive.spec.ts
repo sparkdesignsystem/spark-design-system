@@ -7,10 +7,10 @@ import { By } from '@angular/platform-browser';
   selector: 'test',
   template: `
   <input 
-  value="hi"
-  type="text"
-  placeholder="Enter some input."
-  sprk-formatter-date>
+    value="hi"
+    type="text"
+    placeholder="Enter some input."
+    sprk-formatter-date>
   `
 })
 class TestComponent {};

@@ -60,11 +60,11 @@ export class SparkInputContainerComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    if(this.label && this.input) {
+    if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
       this.input.ref.nativeElement.id = this.input_id;
     }
-    if(this.input && this.error) {
+    if (this.input && this.error) {
       this.input.ref.nativeElement.setAttribute('aria-describedby', this.error_id);
       this.error.ref.nativeElement.id = this.error_id;
     }
