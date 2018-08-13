@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
@@ -15,6 +17,7 @@ import { DividerDocsComponent } from './divider-docs/divider-docs.component';
 import { ListDocsComponent } from './list-docs/list-docs.component';
 import { NavigationDocsComponent } from './navigation-docs/navigation-docs.component';
 import { MastheadDocsComponent } from './masthead-docs/masthead-docs.component';
+import { InputDocsComponent } from './input-docs/input-docs.component';
 import { CardDocsComponent } from './card-docs/card-docs.component';
 import { StackDocsComponent } from './stack-docs/stack-docs.component';
 import { PromoDocsComponent } from './promo-docs/promo-docs.component';
@@ -37,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
   { path: 'masthead', component: MastheadDocsComponent },
+  { path: 'inputs', component: InputDocsComponent },
   { path: 'stack', component: StackDocsComponent },
   { path: 'promo', component: PromoDocsComponent },
   { path: 'footer', component: FooterDocsComponent },
@@ -64,6 +68,7 @@ const appRoutes: Routes = [
     NavigationDocsComponent,
     DividerDocsComponent,
     MastheadDocsComponent,
+    InputDocsComponent,
     ListDocsComponent,
     StackDocsComponent,
     PromoDocsComponent,
@@ -75,6 +80,8 @@ const appRoutes: Routes = [
     DictionaryDocsComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
       { }

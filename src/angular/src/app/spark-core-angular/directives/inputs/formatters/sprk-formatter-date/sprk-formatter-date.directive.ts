@@ -1,0 +1,35 @@
+import { Directive, HostListener, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[sprk-formatter-date]'
+})
+
+export class SprkFormatterDateDirective {
+
+  constructor(public ref: ElementRef){};
+
+  @HostListener('input', ["$event.target.value"])
+  onFocus(value) {
+    this.ref.nativeElement.value = this.formatDate(value);
+  }
+
+  formatDate(value): string {
+    let m = value.match(/^(((0[1358]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02(\/?)((0?\d)|[12]\d))(\4|\7|\9)[12]\d{3})?$/);
+
+    let newValue = '';
+    const cleanValue = value.replace(/[/-]/g, '');
+
+    if(m) {
+      for (let i = 0; i < cleanValue.length; i += 1) {
+        if (i === 1 || i === 3) {
+          newValue += `${cleanValue[i]}/`;
+        } else {
+          newValue += cleanValue[i];
+        }
+      }
+      return newValue;
+    } else {
+      return value;
+    }
+  };
+}

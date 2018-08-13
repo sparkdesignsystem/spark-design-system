@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { SparkAlertComponent } from './components/sprk-alert/sprk-alert.component';
 import { SparkButtonComponent } from './components/sprk-button/sprk-button.component';
 import { SparkCardComponent } from './components/sprk-card/sprk-card.component';
@@ -18,8 +20,25 @@ import { SparkModalComponent } from './components/sprk-modal/sprk-modal.componen
 import { SparkDividerComponent } from './components/sprk-divider/sprk-divider.component';
 import { SparkListComponent } from './components/sprk-list/sprk-list.component';
 import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
+import { SparkInputContainerComponent } from './components/inputs/sprk-input-container/sprk-input-container.component';
+import { SparkSelectionContainerComponent } from './components/inputs/sprk-selection-container/sprk-selection-container.component';
+import { SparkSelectionItemContainerComponent } from './components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
+import { SprkDatepickerDirective } from './directives/inputs/sprk-datepicker/sprk-datepicker.directive';
+import { SprkLabelDirective } from './directives/inputs/sprk-label/sprk-label.directive';
+import { SprkSelectionLabelDirective } from './directives/inputs/sprk-selection-label/sprk-selection-label.directive';
+import { SprkInputDirective } from './directives/inputs/sprk-input/sprk-input.directive';
+import { SprkSelectionInputDirective } from './directives/inputs/sprk-selection-input/sprk-selection-input.directive';
+import { SprkHelperTextDirective} from './directives/inputs/sprk-helper-text/sprk-helper-text.directive';
+import { SprkFieldErrorDirective } from './directives/inputs/sprk-field-error/sprk-field-error.directive';
+
+import { SprkFormatterPhoneNumberDirective } from './directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.directive';
+import { SprkFormatterDateDirective } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.directive';
+import { SprkFormatterMonetaryDirective } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.directive';
+import { SprkFormatterSsnDirective } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
+
+import TinyDatePicker from 'tiny-date-picker';
 import { SparkStackItemDirective } from './directives/sprk-stack-item/sprk-stack-item.directive';
 import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.component';
 import { SparkFooterComponent } from './components/sprk-footer/sprk-footer.component';
@@ -36,9 +55,15 @@ import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigati
 import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dictionary.component';
 
 @NgModule({
+  providers: [{
+    provide: 'TinyDatePicker',
+    useValue: TinyDatePicker
+  }],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [
     SparkAlertComponent,
@@ -60,6 +85,22 @@ import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dict
     SparkListItemComponent,
     SparkMastheadComponent,
     SparkStackComponent,
+    SparkStackItemDirective,
+    SparkInputContainerComponent,
+    SparkSelectionContainerComponent,
+    SparkSelectionItemContainerComponent,
+    SparkMastheadComponent,
+    SprkInputDirective,
+    SprkSelectionInputDirective,
+    SprkHelperTextDirective,
+    SprkLabelDirective,
+    SprkSelectionLabelDirective,
+    SprkFieldErrorDirective,
+    SprkFormatterPhoneNumberDirective,
+    SprkFormatterDateDirective,
+    SprkFormatterMonetaryDirective,
+    SprkFormatterSsnDirective,
+    SprkDatepickerDirective,
     SparkStackItemDirective,
     SparkPromoComponent,
     SparkFooterComponent,
@@ -94,11 +135,29 @@ import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dict
     SparkWideNavigationComponent,
     SparkNarrowNavigationComponent,
     SparkNarrowNavigationItemComponent,
+    SparkInputContainerComponent,
+    SparkSelectionContainerComponent,
+    SparkSelectionItemContainerComponent,
+    SparkNarrowNavigationItemComponent,
     SparkSecondaryNavigationComponent,
     SparkSecondaryNavigationItemComponent,
     SparkMastheadComponent,
     SparkStackComponent,
     SparkStackItemDirective,
+    SparkPromoComponent,
+    SparkStackItemDirective,
+    SparkMastheadComponent,
+    SprkInputDirective,
+    SprkSelectionInputDirective,
+    SprkHelperTextDirective,
+    SprkLabelDirective,
+    SprkSelectionLabelDirective,
+    SprkFieldErrorDirective,
+    SprkFormatterPhoneNumberDirective,
+    SprkFormatterDateDirective,
+    SprkFormatterMonetaryDirective,
+    SprkFormatterSsnDirective,
+    SprkDatepickerDirective,
     SparkPromoComponent,
     SparkFooterComponent,
     SparkAwardComponent,
