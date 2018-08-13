@@ -38,7 +38,7 @@ describe('SprkDatePickerDirective', () => {
     TestBed.configureTestingModule({
       providers: [{
         provide: 'TinyDatePicker',
-        useValue: window.TinyDatePicker // loaded in karma.conf.js
+        useValue: window['TinyDatePicker'] // loaded in karma.conf.js
       },],
       declarations: [SprkDatepickerDirective, TestComponent]
     }).compileComponents();
