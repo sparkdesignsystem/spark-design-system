@@ -20,7 +20,7 @@ import { SparkListComponent } from './components/sprk-list/sprk-list.component';
 import { SparkListItemComponent } from './components/sprk-list-item/sprk-list-item.component';
 import { SparkMastheadComponent } from './components/sprk-masthead/sprk-masthead.component';
 import { SparkStackComponent } from './components/sprk-stack/sprk-stack.component';
-import { SparkStackItemDirective } from './components/sprk-stack-item/sprk-stack-item.directive';
+import { SparkStackItemDirective } from './directives/sprk-stack-item/sprk-stack-item.directive';
 import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.component';
 import { SparkFooterComponent } from './components/sprk-footer/sprk-footer.component';
 import { SparkAwardComponent } from './components/sprk-award/sprk-award.component';
@@ -30,6 +30,10 @@ import { SprkTableHeadDirective } from './directives/sprk-table-head/sprk-table-
 import { SprkTableGroupedColumnDirective } from './directives/sprk-table-grouped-column/sprk-table-grouped-column.directive';
 import { SprkTableEmptyHeadingDirective } from './directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
 import { SprkTableRowHeadingDirective } from './directives/sprk-table-row-heading/sprk-table-row-heading.directive';
+import { SparkTabbedNavigationComponent } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.component';
+import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
+import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dictionary.component';
 
 @NgModule({
   imports: [
@@ -65,7 +69,13 @@ import { SprkTableRowHeadingDirective } from './directives/sprk-table-row-headin
     SprkTableHeadDirective,
     SprkTableGroupedColumnDirective,
     SprkTableEmptyHeadingDirective,
-    SprkTableRowHeadingDirective
+    SprkTableRowHeadingDirective,
+    SparkToggleComponent,
+    SparkTabbedNavigationComponent,
+    SprkTabbedNavigationTabDirective,
+    SprkTabbedNavigationPanelDirective,
+    SparkToggleComponent,
+    SparkDictionaryComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -97,7 +107,13 @@ import { SprkTableRowHeadingDirective } from './directives/sprk-table-row-headin
     SprkTableHeadDirective,
     SprkTableGroupedColumnDirective,
     SprkTableEmptyHeadingDirective,
-    SprkTableRowHeadingDirective
+    SprkTableRowHeadingDirective,
+    SparkToggleComponent,
+    SparkTabbedNavigationComponent,
+    SprkTabbedNavigationTabDirective,
+    SprkTabbedNavigationPanelDirective,
+    SparkToggleComponent,
+    SparkDictionaryComponent
   ],
 })
 export class SparkCoreAngularModule { }
