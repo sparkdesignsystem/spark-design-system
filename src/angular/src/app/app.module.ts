@@ -22,6 +22,7 @@ import { PromoDocsComponent } from './promo-docs/promo-docs.component';
 import { FooterDocsComponent } from './footer-docs/footer-docs.component';
 import { AwardDocsComponent } from './award-docs/award-docs.component';
 import { ToggleDocsComponent } from './toggle-docs/toggle-docs.component';
+import { DictionaryDocsComponent } from './dictionary-docs/dictionary-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   { path: 'footer', component: FooterDocsComponent },
   { path: 'award', component: AwardDocsComponent },
   { path: 'toggle', component: ToggleDocsComponent },
+  { path: 'dictionary', component: DictionaryDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -65,6 +67,7 @@ const appRoutes: Routes = [
     FooterDocsComponent,
     AwardDocsComponent,
     ToggleDocsComponent,
+    DictionaryDocsComponent
   ],
   imports: [
     RouterModule.forRoot(
