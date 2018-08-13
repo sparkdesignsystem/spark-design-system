@@ -7,6 +7,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 export class SprkTabbedNavigationTabDirective implements OnInit {
   @Input() additionalClasses: string;
   @Input() defaultActive: boolean;
+  @Input() analyticsString: string;
 
   getClasses(): Array<String> {
    let classArray: Array<String> = ['sprk-c-Tabs__button'];
@@ -31,6 +32,10 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
 
     this.ref.nativeElement.setAttribute('role', 'tab');
     this.ref.nativeElement.setAttribute('aria-selected', this.defaultActive? 'true': 'false');
+
+    if (this.analyticsString) {
+      this.ref.nativeElement.setAttribute('data-analytics', this.analyticsString);
+    }
   }
 
   constructor(public ref: ElementRef) {}

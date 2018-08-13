@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       </h2>
       
       <sprk-tabbed-navigation>
-        <button sprk-tabbed-navigation-tab>Tab 1</button>
+        <button sprk-tabbed-navigation-tab analyticsString="Tab: 1">Tab 1</button>
         <button [defaultActive]=true sprk-tabbed-navigation-tab>Tab 2</button>
         <button sprk-tabbed-navigation-tab>Tab 3</button>
         <div sprk-tabbed-navigation-panel>

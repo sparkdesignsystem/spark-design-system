@@ -6,6 +6,7 @@ import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.d
   selector: 'test-component',
   template: `
     <button 
+    analyticsString="Tab 1"
     isActive=true
     controlsId="cntrls"
     id="123"
@@ -41,4 +42,8 @@ describe('Spark Tabbed Navigation Tab Directive', () => {
   it('should add role=tab to the element', () => {
     expect(element.getAttribute('role')).toEqual('tab');
   })
+
+  it('should add a value for data-analytics if analyticsString has a value', () => {
+    expect(element.getAttribute('data-analytics')).toEqual('Tab 1');
+  });
 });
