@@ -25,6 +25,11 @@ import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.componen
 import { SparkFooterComponent } from './components/sprk-footer/sprk-footer.component';
 import { SparkAwardComponent } from './components/sprk-award/sprk-award.component';
 import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.component';
+import { SparkTableComponent } from './components/sprk-table/sprk-table.component';
+import { SprkTableHeadDirective } from './directives/sprk-table-head/sprk-table-head.directive';
+import { SprkTableGroupedColumnDirective } from './directives/sprk-table-grouped-column/sprk-table-grouped-column.directive';
+import { SprkTableEmptyHeadingDirective } from './directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
+import { SprkTableRowHeadingDirective } from './directives/sprk-table-row-heading/sprk-table-row-heading.directive';
 import { SparkTabbedNavigationComponent } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.component';
 import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
@@ -60,6 +65,12 @@ import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dict
     SparkFooterComponent,
     SparkAwardComponent,
     SparkToggleComponent,
+    SparkTableComponent,
+    SprkTableHeadDirective,
+    SprkTableGroupedColumnDirective,
+    SprkTableEmptyHeadingDirective,
+    SprkTableRowHeadingDirective,
+    SparkToggleComponent,
     SparkTabbedNavigationComponent,
     SprkTabbedNavigationTabDirective,
     SprkTabbedNavigationPanelDirective,
@@ -91,6 +102,12 @@ import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dict
     SparkPromoComponent,
     SparkFooterComponent,
     SparkAwardComponent,
+    SparkToggleComponent,
+    SparkTableComponent,
+    SprkTableHeadDirective,
+    SprkTableGroupedColumnDirective,
+    SprkTableEmptyHeadingDirective,
+    SprkTableRowHeadingDirective,
     SparkToggleComponent,
     SparkTabbedNavigationComponent,
     SprkTabbedNavigationTabDirective,
