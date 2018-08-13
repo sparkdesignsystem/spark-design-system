@@ -22,6 +22,7 @@ import { FooterDocsComponent } from './footer-docs/footer-docs.component';
 import { AwardDocsComponent } from './award-docs/award-docs.component';
 import { ToggleDocsComponent } from './toggle-docs/toggle-docs.component';
 import { TabbedNavigationDocsComponent } from './tabbed-navigation-docs/tabbed-navigation-docs.component';
+import { DictionaryDocsComponent } from './dictionary-docs/dictionary-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'award', component: AwardDocsComponent },
   { path: 'toggle', component: ToggleDocsComponent },
   { path: 'tabbed-navigation', component: TabbedNavigationDocsComponent},
+  { path: 'dictionary', component: DictionaryDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -66,7 +68,8 @@ const appRoutes: Routes = [
     FooterDocsComponent,
     AwardDocsComponent,
     ToggleDocsComponent,
-    TabbedNavigationDocsComponent
+    TabbedNavigationDocsComponent,
+    DictionaryDocsComponent
   ],
   imports: [
     RouterModule.forRoot(
