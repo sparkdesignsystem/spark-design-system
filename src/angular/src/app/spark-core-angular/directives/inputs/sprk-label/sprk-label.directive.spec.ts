@@ -7,8 +7,8 @@ import { By } from '@angular/platform-browser';
   selector: 'test',
   template: `
   <label
-  additionalClasses="sprk-u-man"
-  sprk-selection-label>Label!</label>`
+    additionalClasses="sprk-u-man"
+    sprk-selection-label>Label!</label>`
 })
 class TestComponent {};
 

@@ -35,7 +35,7 @@ export class SprkInputDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    this.ref.nativeElement.classList = "";
+    this.ref.nativeElement.classList = '';
     this.getClasses().forEach((item) => {
       this.ref.nativeElement.classList.add(item);
     })
