@@ -16,7 +16,7 @@ export class SparkTableComponent {
 
   getClasses(): string {
     let classArray: Array<String> = [
-      'sprk-c-TableContainer'
+      'sprk-b-TableContainer'
     ];
 
     if (this.additionalClasses) {
@@ -30,7 +30,7 @@ export class SparkTableComponent {
 
   getTableClasses(): string {
     let classArray: Array<String> = [
-      'sprk-c-Table',
+      'sprk-b-Table',
       'sprk-b-Table--spacing-medium',
       'sprk-b-Table--striped-even',
       'sprk-b-Table--bordered-columns',

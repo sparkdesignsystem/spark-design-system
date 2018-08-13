@@ -8,7 +8,7 @@ export class SprkTableHeadDirective implements OnInit {
   @Input() additionalClasses: string;
 
   getClasses(): Array<String> {
-   let classArray = ['sprk-c-Table__head'];
+   let classArray = ['sprk-b-Table__head'];
    if (this.additionalClasses) {
      this.additionalClasses.split(' ').forEach((className) => {
        classArray.push(className);

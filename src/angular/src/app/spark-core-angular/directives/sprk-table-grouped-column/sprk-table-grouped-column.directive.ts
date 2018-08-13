@@ -8,7 +8,7 @@ export class SprkTableGroupedColumnDirective implements OnInit {
   @Input() additionalClasses: string;
 
   getClasses(): Array<String> {
-   let classArray = ['sprk-c-Table__grouped-column'];
+   let classArray = ['sprk-b-Table__grouped-column'];
    if (this.additionalClasses) {
      this.additionalClasses.split(' ').forEach((className) => {
        classArray.push(className);
