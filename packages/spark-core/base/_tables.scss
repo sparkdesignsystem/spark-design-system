@@ -1,37 +1,37 @@
 // ==================================================================
 // Tables
 // ==================================================================
-.sprk-c-TableContainer {
+.sprk-b-TableContainer {
   display: block;
   max-width: 100%;
   overflow: auto;
 }
 
-.sprk-c-Table__head,
-.sprk-c-Table__row-heading {
+.sprk-b-Table__head,
+.sprk-b-Table__row-heading {
   background-color: $blue-dark;
   color: $white;
   font-weight: $font-size-body-one;
   font-size: $font-size-body-one;
 }
 
-.sprk-c-Table__grouped-column {
+.sprk-b-Table__grouped-column {
   background-color: $blue-dark;
   border-right: 0;
   font-size: $font-size-body-four;
   font-weight: normal;
 }
 
-.sprk-c-Table--row-comparison .sprk-c-Table__empty-heading,
-.sprk-c-Table__grouped-columns .sprk-c-Table__grouped-column {
+.sprk-b-Table--row-comparison .sprk-b-Table__empty-heading,
+.sprk-b-Table__grouped-columns .sprk-b-Table__grouped-column {
   border: 0;
 }
 
-.sprk-c-Table__empty-heading {
+.sprk-b-Table__empty-heading {
   background-color: $white;
 }
 
-.sprk-c-Table__row-heading {
+.sprk-b-Table__row-heading {
   background-color: $blue-dark;
   border-bottom: $table-border-width $table-border-style $table-border-color;
   color: $white;
