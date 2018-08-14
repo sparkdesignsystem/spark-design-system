@@ -13,12 +13,12 @@
   max-width: 20rem;
 }
 
-.dp-below-top {
+.dp-is-below {
   // for the little arrow above the dp box
   &::after,
   &::before {
     border: solid transparent;
-    bottom: 100%;
+    bottom: 99%;
     content: '';
     left: $space-l;
     position: absolute;
@@ -37,7 +37,7 @@
   }
 }
 
-.dp-above-top {
+.dp-is-above {
   // for the little arrow below the dp box
   &::after,
   &::before {
@@ -45,7 +45,7 @@
     content: '';
     left: $space-l;
     position: absolute;
-    top: 100%;
+    top: 99%;
     transform: rotate(180deg);
   }
 
