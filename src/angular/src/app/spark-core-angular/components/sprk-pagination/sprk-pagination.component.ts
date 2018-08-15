@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'sprk-pagination',
@@ -159,6 +159,7 @@ export class SparkPaginationComponent {
   @Output() previousClick = new EventEmitter();
   @Output() nextClick = new EventEmitter();
   @Output() pageClick = new EventEmitter();
+  @Output() currentPageSelected = new EventEmitter();
 
   // Emit out event when page clicked
   goToPage(event): void {
@@ -166,6 +167,7 @@ export class SparkPaginationComponent {
     pageNum = parseInt(event.target.text);
     this.currentPage = pageNum;
     this.pageClick.emit(event);
+    this.currentPageSelected.emit(this.currentPage);
   }
 
   // Emit out event when previous is clicked
@@ -204,5 +206,5 @@ export class SparkPaginationComponent {
 
     return classArray.join(' ');
   }
-  constructor() { }
+  constructor(public ref: ElementRef) {}
 }
