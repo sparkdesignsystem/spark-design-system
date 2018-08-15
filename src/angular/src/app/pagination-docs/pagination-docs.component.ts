@@ -31,9 +31,9 @@ import { Component } from '@angular/core';
         paginationType="long"
         nextLinkText="Next"
         prevLinkText="Prev"
-        [currentPage]="2"
-        [totalItems]="20"
-        [itemsPerPage]="5"
+        [currentPage]="5"
+        [totalItems]="200"
+        [itemsPerPage]="10"
         (previousClick)="goBack($event)"
         (pageClick)="goToPage($event)"
         (nextClick)="goForward($event)">
@@ -62,8 +62,8 @@ import { Component } from '@angular/core';
         nextLinkText="Next"
         prevLinkText="Prev"
         [currentPage]="1"
-        [totalItems]="20"
-        [itemsPerPage]="5"
+        [totalItems]="2"
+        [itemsPerPage]="1"
         (previousClick)="goBack($event)"
         (pageClick)="goToPage($event)"
         (nextClick)="goForward($event)">
