@@ -13,7 +13,7 @@ import { SparkSelectionItemContainerComponent } from '../sprk-selection-item-con
           <ng-content select="[sprk-label]"></ng-content>
         </legend>
         <ng-content select="sprk-selection-item-container"></ng-content>
-      </fieldset> 
+      </fieldset>
       <ng-content select="[sprk-helper-text]"></ng-content>
       <ng-content select="[sprk-field-error]"></ng-content>
     </div>`,
@@ -47,7 +47,7 @@ export class SparkSelectionContainerComponent implements AfterContentInit {
   }
 
   ngAfterContentInit() : void {
-    if(this.selectionItems && this.error) {
+    if (this.selectionItems && this.error) {
       this.selectionItems.forEach((item) => {
         item.input.ref.nativeElement.setAttribute('aria-describedby', this.error_id);
       })

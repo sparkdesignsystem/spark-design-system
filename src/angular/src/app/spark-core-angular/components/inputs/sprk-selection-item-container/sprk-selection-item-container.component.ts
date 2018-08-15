@@ -37,7 +37,7 @@ export class SparkSelectionItemContainerComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    if(this.label && this.input) {
+    if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
       this.input.ref.nativeElement.id = this.input_id;
     }
