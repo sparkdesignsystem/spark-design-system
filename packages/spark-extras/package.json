@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-extras",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Spark Extras is a supplementary package that adds additional components that are not part of Spark Core. Many sites will use these components, but they aren't necessary for every Quicken Loans Fintech product.",
   "scripts": {
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@sparkdesignsystem/spark-award": "^1.0.0",
-    "@sparkdesignsystem/spark-card": "^1.0.0",
-    "@sparkdesignsystem/spark-description-table": "^1.0.0",
-    "@sparkdesignsystem/spark-highlight-board": "^1.0.0",
+    "@sparkdesignsystem/spark-award": "^2.0.0",
+    "@sparkdesignsystem/spark-card": "^2.0.0",
+    "@sparkdesignsystem/spark-description-table": "^2.0.0",
+    "@sparkdesignsystem/spark-highlight-board": "^2.0.0",
     "chai": "^4.1.2",
     "jsdom": "^11.12.0",
     "nyc": "^11.9.0"
