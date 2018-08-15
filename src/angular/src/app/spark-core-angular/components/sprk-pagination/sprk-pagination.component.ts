@@ -162,15 +162,20 @@ export class SparkPaginationComponent {
 
   // Emit out event when page clicked
   goToPage(event): void {
+    let pageNum: number;
+    pageNum = parseInt(event.target.text);
+    this.currentPage = pageNum;
     this.pageClick.emit(event);
   }
 
   // Emit out event when previous is clicked
   goBack(event): void {
+    if (this.currentPage > 1) this.currentPage = this.currentPage - 1;
     this.previousClick.emit(event);
   }
 
   goForward(event): void {
+    if (this.currentPage < this.totalPages()) this.currentPage = this.currentPage + 1;
     this.nextClick.emit(event);
   }
 
