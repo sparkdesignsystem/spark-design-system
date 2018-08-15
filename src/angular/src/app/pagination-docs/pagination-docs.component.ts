@@ -78,16 +78,13 @@ export class PaginationDocsComponent {
 
   goBack(event) {
     event.preventDefault();
-    console.log('back', event);
   }
 
   goForward(event) {
     event.preventDefault();
-    console.log('next', event);
   }
 
   goToPage(event) {
     event.preventDefault();
-    console.log('page', event);
   }
 }
