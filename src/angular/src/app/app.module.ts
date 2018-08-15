@@ -27,6 +27,7 @@ import { ToggleDocsComponent } from './toggle-docs/toggle-docs.component';
 import { TabbedNavigationDocsComponent } from './tabbed-navigation-docs/tabbed-navigation-docs.component';
 import { DictionaryDocsComponent } from './dictionary-docs/dictionary-docs.component';
 import { TableDocsComponent } from './table-docs/table-docs.component';
+import { PaginationDocsComponent } from './pagination-docs/pagination-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
   { path: 'tables', component: TableDocsComponent },
   { path: 'tabbed-navigation', component: TabbedNavigationDocsComponent},
   { path: 'dictionary', component: DictionaryDocsComponent },
+  { path: 'pagination', component: PaginationDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -77,7 +79,8 @@ const appRoutes: Routes = [
     ToggleDocsComponent,
     TableDocsComponent,
     TabbedNavigationDocsComponent,
-    DictionaryDocsComponent
+    DictionaryDocsComponent,
+    PaginationDocsComponent
   ],
   imports: [
     FormsModule,

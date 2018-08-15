@@ -69,7 +69,7 @@ export class SparkNarrowNavigationItemComponent {
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
-    if(this.iconType === 'chevron-down') {
+    if (this.iconType === 'chevron-down') {
       this.iconType = 'chevron-up';
     } else {
       this.iconType = 'chevron-down';
