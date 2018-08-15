@@ -160,12 +160,12 @@ export class SparkPaginationComponent {
   @Output() nextClick = new EventEmitter();
   @Output() pageClick = new EventEmitter();
 
-  // Emit out page number of page clicked
+  // Emit out event when page clicked
   goToPage(event): void {
     this.pageClick.emit(event);
   }
 
-  // Emit out true when previous is clicked
+  // Emit out event when previous is clicked
   goBack(event): void {
     this.previousClick.emit(event);
   }
