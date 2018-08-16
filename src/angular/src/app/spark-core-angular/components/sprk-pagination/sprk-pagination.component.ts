@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
       <sprk-list listType="bare" additionalClasses="sprk-c-Pagination">
         <li class="sprk-c-Pagination__item">
           <a
-            (click)="goBack($event)"
+            (click)="goBack($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
             href="#">
             {{ prevLinkText }}
@@ -17,7 +17,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li
           [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--current':currentPage === 1}">
           <a
-            (click)="goToPage($event)"
+            (click)="goToPage($event, 1)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
             [attr.aria-current]="currentPage === 1">
@@ -28,7 +28,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li
           [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--current': currentPage === 2}">
           <a
-            (click)="goToPage($event)"
+            (click)="goToPage($event, 2)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
             [attr.aria-current]="currentPage === 2">
@@ -39,7 +39,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li
           [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--current':currentPage === 3}">
           <a
-            (click)="goToPage($event)"
+            (click)="goToPage($event, 3)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
             [attr.aria-current]="currentPage === 3">
@@ -49,7 +49,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
 
         <li class="sprk-c-Pagination__item">
           <a
-            (click)="goForward($event)"
+            (click)="goForward($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
             href="#">
             {{ nextLinkText }}
@@ -62,7 +62,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
       <sprk-list listType="bare" additionalClasses="sprk-c-Pagination">
         <li class="sprk-c-Pagination__item sprk-c-Pagination__item--long">
           <a
-            (click)="goBack($event)"
+            (click)="goBack($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
             href="#">
             {{ prevLinkText }}
@@ -72,7 +72,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li
           [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-u-Display--none': currentPage === 1}">
           <a
-            (click)="goToPage($event)"
+            (click)="goToPage($event, 1)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#">
             1
@@ -87,7 +87,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li
           [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-c-Pagination__item--current': true}">
           <a
-            (click)="goToPage($event)"
+            (click)="goToPage($event, currentPage)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
             aria-current="true">
@@ -103,7 +103,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li
           [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-u-Display--none': currentPage === totalPages()}">
           <a
-            (click)="goToPage($event)"
+            (click)="goToPage($event, totalPages())"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#">
             {{ totalPages() }}
@@ -112,7 +112,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
 
         <li class="sprk-c-Pagination__item sprk-c-Pagination__item--long">
           <a
-            (click)="goForward($event)"
+            (click)="goForward($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
             href="#">
             {{ nextLinkText }}
@@ -125,7 +125,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
       <sprk-list listType="bare" additionalClasses="sprk-c-Pagination">
         <li class="sprk-c-Pagination__item">
           <a
-            (click)="goBack($event)"
+            (click)="goBack($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
             href="#">
             {{ prevLinkText }}
@@ -134,7 +134,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
 
         <li class="sprk-c-Pagination__item">
           <a
-            (click)="goForward($event)"
+            (click)="goForward($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
             href="#">
             {{ nextLinkText }}
@@ -158,34 +158,33 @@ export class SparkPaginationComponent {
   // Will be emitted to the parent component on the click event
   @Output() previousClick = new EventEmitter();
   @Output() nextClick = new EventEmitter();
-  @Output() pageClick = new EventEmitter();
-  @Output() currentPageSelected = new EventEmitter();
+  @Output() pageClick = new EventEmitter<object>();
 
-  // Emit out event when page clicked
-  goToPage(event): void {
-    let pageNum: number;
-    pageNum = parseInt(event.target.text);
-    this.currentPage = pageNum;
-    this.pageClick.emit(event);
-    this.currentPageSelected.emit(this.currentPage);
+  goToPage(event, page): void {
+    event.preventDefault();
+    // Update currentPage to new selected page
+    this.currentPage = page;
+    // Emit out click event and page when clicked
+    this.pageClick.emit({event, page});
   }
 
-  // Emit out event when previous is clicked
-  goBack(event): void {
+  goBack(event, page): void {
+    event.preventDefault();
     if (this.currentPage > 1) this.currentPage = this.currentPage - 1;
-    this.previousClick.emit(event);
+    this.previousClick.emit({event, page});
   }
 
-  goForward(event): void {
+  goForward(event, page): void {
+    event.preventDefault();
     if (this.currentPage < this.totalPages()) this.currentPage = this.currentPage + 1;
-    this.nextClick.emit(event);
+    this.nextClick.emit({event, page});
   }
 
   // Returns total # of
   // pages based on total # of
   // items & desired # of items to show per page
   totalPages(): number {
-    return Math.ceil(this.totalItems / this.itemsPerPage) || 0;
+    return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
   // Returns true if currently on the last page
