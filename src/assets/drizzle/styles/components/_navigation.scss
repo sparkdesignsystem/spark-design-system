@@ -112,3 +112,15 @@ svg {
   font-weight: 300;
   line-height: 0.8;
 }
+
+/* Offset jump links so they don't get hidden by the sticky header */
+:target::before {
+  display: block;
+  height: 7rem;
+  margin-top: -7rem;
+
+  @media (max-width: $nav-switch-breakpoint) {
+    height: 5rem;
+    margin-top: -5rem;
+  }
+}
