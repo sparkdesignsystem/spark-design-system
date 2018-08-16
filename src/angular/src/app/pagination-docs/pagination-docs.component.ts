@@ -8,6 +8,18 @@ import { Component, OnInit } from '@angular/core';
         Default Pagination
       </h2>
 
+      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">
+        Runs
+      </h2>
+
+      <ul class="drizzle-b-List sprk-u-AbsoluteCenter">
+        <li class="sprk-u-mbm" *ngFor="let run of pagedItemsDefault">
+          <h3 class="drizzle-b-h3">Run #: {{ totalRunsDefault.indexOf(run) + 1 }}</h3>
+          <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
+          <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
+        </li>
+      </ul>
+
       <sprk-pagination
         paginationType="default"
         [currentPage]="1"
@@ -15,24 +27,32 @@ import { Component, OnInit } from '@angular/core';
         prevLinkText="Prev"
         [totalItems]="3"
         [itemsPerPage]="1"
-        (previousClick)="goBack($event)"
-        (pageClick)="goToPage($event)"
-        (nextClick)="goForward($event)">
+        (previousClick)="goBack($event, 'default')"
+        (pageClick)="goToPage($event, 'default')"
+        (nextClick)="goForward($event, 'default')">
       </sprk-pagination>
     </div>
+
+    <sprk-divider additionalClasses="sprk-u-mbh"></sprk-divider>
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
         Long Pagination
       </h2>
 
-      <ul class="drizzle-b-List">
-        <li class="sprk-u-mbm" *ngFor="let run of pagedItems">
-          <h3 class="drizzle-b-h3">Run #: {{ totalRuns.indexOf(run) + 1 }}</h3>
-          <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
-          <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
-        </li>
-      </ul>
+      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">
+        Runs
+      </h2>
+
+      <div class="sprk-u-AbsoluteCenter">
+        <ul class="drizzle-b-List">
+          <li class="sprk-u-mbm" *ngFor="let run of pagedItems">
+            <h3 class="drizzle-b-h3">Run #: {{ totalRuns.indexOf(run) + 1 }}</h3>
+            <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
+            <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
+          </li>
+        </ul>
+      </div>
 
       <sprk-pagination
         additionalClasses="sprk-u-mbl"
@@ -42,35 +62,43 @@ import { Component, OnInit } from '@angular/core';
         [currentPage]="longConfig[0].currentPage"
         [totalItems]="longConfig[0].totalItems"
         [itemsPerPage]="longConfig[0].itemsPerPage"
-        (previousClick)="goBack($event)"
-        (pageClick)="goToPage($event)"
-        (nextClick)="goForward($event)">
+        (previousClick)="goBack($event, 'long')"
+        (pageClick)="goToPage($event, 'long')"
+        (nextClick)="goForward($event, 'long')">
       </sprk-pagination>
     </div>
+
+    <sprk-divider additionalClasses="sprk-u-mbh"></sprk-divider>
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
         Pager
       </h2>
 
-      <ul class="drizzle-b-List">
-        <li class="sprk-u-mbm" *ngFor="let run of pagedItems">
-          <h3 class="drizzle-b-h3">Run #: {{ totalRuns.indexOf(run) + 1 }}</h3>
-          <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
-          <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
-        </li>
-      </ul>
+      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">
+        Runs
+      </h2>
+
+      <div class="sprk-u-AbsoluteCenter">
+        <ul class="drizzle-b-List">
+          <li class="sprk-u-mbm" *ngFor="let run of pagedItemsPager">
+            <h3 class="drizzle-b-h3">Run #: {{ totalRunsDefault.indexOf(run) + 1 }}</h3>
+            <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
+            <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
+          </li>
+        </ul>
+      </div>
 
       <sprk-pagination
         paginationType="pager"
         nextLinkText="Next"
         prevLinkText="Prev"
-        [currentPage]="longConfig[0].currentPage"
-        [totalItems]="longConfig[0].totalItems"
-        [itemsPerPage]="longConfig[0].itemsPerPage"
-        (previousClick)="goBack($event)"
-        (pageClick)="goToPage($event)"
-        (nextClick)="goForward($event)">
+        [currentPage]="defaultConfig[0].currentPage"
+        [totalItems]="defaultConfig[0].totalItems"
+        [itemsPerPage]="defaultConfig[0].itemsPerPage"
+        (previousClick)="goBack($event, 'pager')"
+        (pageClick)="goToPage($event, 'pager')"
+        (nextClick)="goForward($event, 'pager')">
       </sprk-pagination>
     </div>
   `,
@@ -79,35 +107,56 @@ import { Component, OnInit } from '@angular/core';
 
 export class PaginationDocsComponent implements OnInit {
   private pagedItems: any[];
+  private pagedItemsDefault: any[];
+  private pagedItemsPager: any[];
 
-  constructor() {
-  }
+  constructor() {}
 
   totalRuns = [
     {
       'distance': 6,
       'unit': 'miles',
-      'time': '60'
+      'time': 60
     },
     {
       'distance': 8,
       'unit': 'miles',
-      'time': '81'
+      'time': 81
     },
     {
       'distance': 4,
       'unit': 'miles',
-      'time': '32'
+      'time': 32
     },
     {
       'distance': 20,
       'unit': 'miles',
-      'time': '180'
+      'time': 180
     },
     {
       'distance': 10,
       'unit': 'miles',
-      'time': '90'
+      'time': 90
+    },
+    {
+      'distance': 9.65,
+      'unit': 'miles',
+      'time': 89
+    },
+    {
+      'distance': 50,
+      'unit': 'miles',
+      'time': 568
+    },
+    {
+      'distance': 26.2,
+      'unit': 'miles',
+      'time': 208
+    },
+    {
+      'distance': 3.1,
+      'unit': 'miles',
+      'time': 21
     }
   ]
 
@@ -115,45 +164,104 @@ export class PaginationDocsComponent implements OnInit {
     {
       'currentPage': 1,
       'totalItems': this.totalRuns.length,
+      'itemsPerPage': 2
+    },
+  ]
+
+  totalRunsDefault = this.totalRuns.slice(2);
+
+  defaultConfig = [
+    {
+      'currentPage': 1,
+      'totalItems': this.totalRunsDefault.length,
       'itemsPerPage': 1
     },
   ]
 
   runTime(time) {
+    time = parseFloat(time);
     if (time > 0 && time / 60 < 1) {
       return time + ' Minutes';
      } else {
-       return time / 60 + ' Hour(s)';
+       time = time / 60;
+       return time.toFixed(2) + ' Hour(s)';
      }
   }
 
-  goBack(event) {
-    event.preventDefault();
-    this.showItemsLong(event);
-  }
-
-  goForward(event) {
-    event.preventDefault();
-    this.showItemsLong(event);
-  }
-
-  goToPage(event) {
-    event.preventDefault();
-    this.showItemsLong(event);
-  }
-
-  showItemsLong(event) {
-    let currentPageNum: number;
-    // If there was no click event
-    if (event == null) {
-      currentPageNum = this.longConfig[0].currentPage;
+  goBack(event, type) {
+    if (type === 'long') {
+      this.showItemsGoBack(event, this.longConfig[0], this.totalRuns, type);
+    } else {
+      this.showItemsGoBack(event, this.defaultConfig[0], this.totalRunsDefault, type);
     }
-    let startIndex = (currentPageNum - 1) * this.longConfig[0].itemsPerPage;
-    let endIndex = Math.min(startIndex + this.longConfig[0].itemsPerPage - 1, this.longConfig[0].totalItems - 1);
-    return this.pagedItems = this.totalRuns.slice(startIndex, endIndex + 1);
+  }
+
+  goForward(event, type) {
+    if (type === 'long') {
+      this.showItemsGoForward(event, this.longConfig[0], this.totalRuns, type);
+    } else {
+      this.showItemsGoForward(event, this.defaultConfig[0], this.totalRunsDefault, type);
+    }
+  }
+
+  goToPage(event, type) {
+    if (type === 'long') {
+      this.showItems(event, this.longConfig[0], this.totalRuns, type);
+    } else {
+      this.showItems(event, this.defaultConfig[0], this.totalRunsDefault, type);
+    }
+  }
+
+  pageNum(event, config) {
+    let currentPageNum: number;
+    if (event === null) {
+      return currentPageNum = config.currentPage;
+    } else {
+      return currentPageNum = event.page;
+    }
+  }
+
+  showItems(event, config, data, type) {
+    let startIndex = (this.pageNum(event, config) - 1) * config.itemsPerPage;
+    let endIndex = Math.min(startIndex + config.itemsPerPage - 1, config.totalItems - 1);
+    // Return new array with data item(s) to show per page
+    if (type === 'long') {
+      return this.pagedItems = data.slice(startIndex, endIndex + 1);
+    } else if (type === 'default') {
+      return this.pagedItemsDefault = data.slice(startIndex, endIndex + 1);
+    } else {
+      return this.pagedItemsPager = data.slice(startIndex, endIndex + 1);
+    }
+  }
+
+  showItemsGoBack(event, config, data, type) {
+    let startIndex = (this.pageNum(event, config) - 2) * config.itemsPerPage;
+    let endIndex = Math.min(startIndex + config.itemsPerPage - 1, config.totalItems - 1);
+    if (type === 'long') {
+      return this.pagedItems = data.slice(startIndex, endIndex + 1);
+    } else if (type === 'default') {
+      return this.pagedItemsDefault = data.slice(startIndex, endIndex + 1);
+    } else {
+      return this.pagedItemsPager = data.slice(startIndex, endIndex + 1);
+    }
+  }
+
+  showItemsGoForward(event, config, data, type) {
+    let startIndex = this.pageNum(event, config) * config.itemsPerPage;
+    let endIndex = Math.min(startIndex + config.itemsPerPage - 1, config.totalItems - 1);
+    if (type === 'long') {
+      return this.pagedItems = data.slice(startIndex, endIndex + 1);
+    } else if (type === 'default') {
+      return this.pagedItemsDefault = data.slice(startIndex, endIndex + 1);
+    } else {
+      return this.pagedItemsPager = data.slice(startIndex, endIndex + 1);
+    }
   }
 
   ngOnInit() {
-    this.showItemsLong(null);
+    // Setup pagination on init
+    this.showItems(null, this.longConfig[0], this.totalRuns, 'long');
+    this.showItems(null, this.defaultConfig[0], this.totalRunsDefault, 'default');
+    this.showItems(null, this.defaultConfig[0], this.totalRunsDefault, 'pager');
   }
 }
