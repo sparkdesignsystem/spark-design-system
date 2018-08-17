@@ -126,6 +126,23 @@ describe('SparkPaginationComponent', () => {
     expect(called).toEqual(true);
   });
 
+  it('should emit previousClick when goBack is ran', (done) => {
+   let called = false;
+   component.currentPage = 2;
+   component.goBack({preventDefault: ()=>{}}, 2);
+   component.goForward({preventDefault: ()=>{}}, 2);
+   fixture.detectChanges();
+   component.previousClick.subscribe((g) => {
+      called = true;
+      done();
+    })
+    let item = element.querySelectorAll('.sprk-b-Link');
+    item = item[0];
+    item.click();
+    expect(called).toEqual(true);
+  });
+
+
   it('should emit nextClick when next link is clicked', (done) => {
    let called = false;
    component.currentPage = 1;
