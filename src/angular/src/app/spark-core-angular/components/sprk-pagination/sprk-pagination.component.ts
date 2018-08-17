@@ -84,7 +84,7 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
             [attr.data-analytics]="analyticsStringFirstLink"
-            attr.aria-label="Page 1">
+            aria-label="Page 1">
             1
           </a>
         </li>
