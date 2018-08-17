@@ -9,7 +9,8 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goBack($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringLinkPrev">
             {{ prevLinkText }}
           </a>
         </li>
@@ -20,7 +21,9 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
             (click)="goToPage($event, 1)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
-            [attr.aria-current]="currentPage === 1">
+            [attr.data-analytics]="analyticsStringFirstLink"
+            [attr.aria-current]="currentPage === 1"
+            aria-label="Page 1">
             1
           </a>
         </li>
@@ -31,7 +34,9 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
             (click)="goToPage($event, 2)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
-            [attr.aria-current]="currentPage === 2">
+            [attr.data-analytics]="analyticsStringSecondLink"
+            [attr.aria-current]="currentPage === 2"
+            aria-label="Page 2">
             2
           </a>
         </li>
@@ -42,7 +47,9 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
             (click)="goToPage($event, 3)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
-            [attr.aria-current]="currentPage === 3">
+            [attr.data-analytics]="analyticsStringThirdLink"
+            [attr.aria-current]="currentPage === 3"
+            aria-label="Page 3">
             3
           </a>
         </li>
@@ -51,7 +58,8 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goForward($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
           </a>
         </li>
@@ -74,7 +82,9 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goToPage($event, 1)"
             class="sprk-b-Link sprk-b-Link--standalone"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringFirstLink"
+            attr.aria-label="Page 1">
             1
           </a>
         </li>
@@ -90,7 +100,9 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
             (click)="goToPage($event, currentPage)"
             class="sprk-b-Link sprk-b-Link--standalone"
             href="#"
-            aria-current="true">
+            aria-current="true"
+            [attr.data-analytics]="analyticsStringSecondLink"
+            attr.aria-label="Page {{ currentPage }}">
             {{ currentPage }}
           </a>
         </li>
@@ -105,7 +117,9 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goToPage($event, totalPages())"
             class="sprk-b-Link sprk-b-Link--standalone"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringThirdLink"
+            attr.aria-label="Page {{ totalPages() }}">
             {{ totalPages() }}
           </a>
         </li>
@@ -114,7 +128,8 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goForward($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
           </a>
         </li>
@@ -127,7 +142,8 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goBack($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringLinkPrev">
             {{ prevLinkText }}
           </a>
         </li>
@@ -136,7 +152,8 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
           <a
             (click)="goForward($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
-            href="#">
+            href="#"
+            [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
           </a>
         </li>
@@ -146,13 +163,17 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
   styles: ['']
 })
 export class SparkPaginationComponent {
-  @Input() paginationType: string; // default, long, pager
-  @Input() nextLinkText: string; // Text to display for next link
-  @Input() prevLinkText: string; // Text to display for previous link
-  @Input() currentPage: number; // The currently active page
+  @Input() paginationType: string = 'default'; // default, long, pager
+  @Input() nextLinkText: string = 'Next'; // Text to display for next link
+  @Input() prevLinkText: string = 'Prev'; // Text to display for previous link
+  @Input() currentPage: number = 1; // The currently active page
   @Input() totalItems: number; // Total number of items
   @Input() itemsPerPage: number; // Total number of items to show per page
-  @Input() analyticsString: string;
+  @Input() analyticsStringFirstLink: string;
+  @Input() analyticsStringSecondLink: string;
+  @Input() analyticsStringThirdLink: string;
+  @Input() analyticsStringLinkNext: string;
+  @Input() analyticsStringLinkPrev: string;
   @Input() additionalClasses: string;
 
   // Will be emitted to the parent component on the click event
