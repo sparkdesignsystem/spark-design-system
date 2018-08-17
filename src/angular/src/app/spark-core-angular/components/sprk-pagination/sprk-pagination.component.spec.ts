@@ -48,6 +48,22 @@ describe('SparkPaginationComponent', () => {
     expect(component.paginationType).toEqual('long');
   });
 
+  it('should add the correct aria-label to links based on page number', () => {
+    component.paginationType = 'long';
+    component.currentPage = 1;
+    component.totalItems = 100;
+    component.itemsPerPage = 25;
+    fixture.detectChanges();
+    let pageItem = element.querySelectorAll('.sprk-b-Link');
+    expect(pageItem[1].hasAttribute('aria-label')).toEqual(true);
+    expect(pageItem[1].getAttribute('aria-label')).toEqual('Page 1');
+    component.currentPage = 3;
+    fixture.detectChanges();
+    expect(pageItem[2].hasAttribute('aria-label')).toEqual(true);
+    expect(pageItem[2].getAttribute('aria-label')).toEqual('Page 3');
+  });
+
+
   it('should add the correct pagination type if paginationType is supplied', () => {
     component.paginationType = 'pager';
     fixture.detectChanges();
@@ -55,6 +71,10 @@ describe('SparkPaginationComponent', () => {
   });
 
   it('should add the correct classes if additionalClasses has a value', () => {
+    component.paginationType = 'long';
+    component.currentPage = 7;
+    component.totalItems = 7;
+    component.itemsPerPage = 1;
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(' sprk-u-pam sprk-u-man');
