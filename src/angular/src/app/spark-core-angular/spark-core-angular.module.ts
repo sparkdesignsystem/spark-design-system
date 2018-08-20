@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { SparkAlertComponent } from './components/sprk-alert/sprk-alert.component';
 import { SparkButtonComponent } from './components/sprk-button/sprk-button.component';
-import { SparkCardComponent } from './components/sprk-card/sprk-card.component';
 import { SparkLinkComponent } from './components/sprk-link/sprk-link.component';
 import { SparkIconSetComponent } from './components/sprk-icon-set/sprk-icon-set.component';
 import { SparkIconComponent } from './components/sprk-icon/sprk-icon.component';
@@ -42,7 +41,6 @@ import TinyDatePicker from 'tiny-date-picker';
 import { SparkStackItemDirective } from './directives/sprk-stack-item/sprk-stack-item.directive';
 import { SparkPromoComponent } from './components/sprk-promo/sprk-promo.component';
 import { SparkFooterComponent } from './components/sprk-footer/sprk-footer.component';
-import { SparkAwardComponent } from './components/sprk-award/sprk-award.component';
 import { SparkToggleComponent } from './components/sprk-toggle/sprk-toggle.component';
 import { SparkTableComponent } from './components/sprk-table/sprk-table.component';
 import { SprkTableHeadDirective } from './directives/sprk-table-head/sprk-table-head.directive';
@@ -52,7 +50,6 @@ import { SprkTableRowHeadingDirective } from './directives/sprk-table-row-headin
 import { SparkTabbedNavigationComponent } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.component';
 import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dictionary.component';
 import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagination.component';
 
 @NgModule({
@@ -71,7 +68,6 @@ import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagi
     SparkAccordionComponent,
     SparkAccordionItemComponent,
     SparkButtonComponent,
-    SparkCardComponent,
     SparkLinkComponent,
     SparkIconSetComponent,
     SparkIconComponent,
@@ -105,8 +101,6 @@ import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagi
     SparkStackItemDirective,
     SparkPromoComponent,
     SparkFooterComponent,
-    SparkAwardComponent,
-    SparkToggleComponent,
     SparkTableComponent,
     SprkTableHeadDirective,
     SprkTableGroupedColumnDirective,
@@ -117,7 +111,6 @@ import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagi
     SprkTabbedNavigationTabDirective,
     SprkTabbedNavigationPanelDirective,
     SparkToggleComponent,
-    SparkDictionaryComponent,
     SparkPaginationComponent
   ],
   exports: [
@@ -125,7 +118,6 @@ import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagi
     SparkAccordionComponent,
     SparkAccordionItemComponent,
     SparkButtonComponent,
-    SparkCardComponent,
     SparkDividerComponent,
     SparkLinkComponent,
     SparkModalComponent,
@@ -162,7 +154,6 @@ import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagi
     SprkDatepickerDirective,
     SparkPromoComponent,
     SparkFooterComponent,
-    SparkAwardComponent,
     SparkToggleComponent,
     SparkTableComponent,
     SprkTableHeadDirective,
@@ -174,7 +165,6 @@ import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagi
     SprkTabbedNavigationTabDirective,
     SprkTabbedNavigationPanelDirective,
     SparkToggleComponent,
-    SparkDictionaryComponent,
     SparkPaginationComponent
   ],
 })

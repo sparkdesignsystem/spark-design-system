@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
-import { TabbedNavigationDocsComponent } from './tabbed-navigation-docs.component';
+import { HighlightBoardDocsComponent } from './highlight-board-docs.component';
 
-describe('TabbedNavigationDocsComponent', () => {
-  let component: TabbedNavigationDocsComponent;
-  let fixture: ComponentFixture<TabbedNavigationDocsComponent>;
+describe('HighlightBoardDocsComponent', () => {
+  let component: HighlightBoardDocsComponent;
+  let fixture: ComponentFixture<HighlightBoardDocsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ TabbedNavigationDocsComponent ]
+      declarations: [ HighlightBoardDocsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TabbedNavigationDocsComponent);
+    fixture = TestBed.createComponent(HighlightBoardDocsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

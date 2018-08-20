@@ -5,7 +5,7 @@ import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 @Component({
   selector: 'test',
   template: `
-  <span 
+  <span
     additionalClasses="sprk-u-man"
     sprk-field-error>Error Message</span>`
 })

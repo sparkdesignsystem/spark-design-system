@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 @Component({
   selector: 'test',
   template: `
-  <input 
+  <input
     value="hi"
     type="text"
     placeholder="Enter some input."
