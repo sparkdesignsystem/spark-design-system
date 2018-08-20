@@ -63,7 +63,6 @@ describe('SparkPaginationComponent', () => {
     expect(pageItem[2].getAttribute('aria-label')).toEqual('Page 3');
   });
 
-
   it('should add the correct pagination type if paginationType is supplied', () => {
     component.paginationType = 'pager';
     fixture.detectChanges();
@@ -141,7 +140,6 @@ describe('SparkPaginationComponent', () => {
     item.click();
     expect(called).toEqual(true);
   });
-
 
   it('should emit nextClick when next link is clicked', (done) => {
    let called = false;
