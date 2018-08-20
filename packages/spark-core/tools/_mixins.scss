@@ -52,10 +52,10 @@
   }
 
   &::before {
-    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment}px);
   }
 
   &::after {
-    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment}px);
   }
 }

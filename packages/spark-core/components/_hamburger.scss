@@ -33,7 +33,9 @@
 }
 
 .sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--two {
-  opacity: 0;
+  opacity: 1;
+  transform-origin: 50% 50%;
+  transform: scale(0.01);
 }
 
 .sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--three {

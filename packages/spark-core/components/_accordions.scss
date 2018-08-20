@@ -32,9 +32,7 @@
   text-decoration: none;
 
   &:hover,
-  &:active,
-  &:focus,
-  &:visited {
+  &:active {
     background-color: $blue-dark;
     color: $white;
     text-decoration: none;
@@ -80,9 +78,6 @@
 .sprk-c-Accordion__summary:active
 .sprk-c-Accordion__heading,
 .sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:focus
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
 .sprk-c-Accordion__summary--open
 .sprk-c-Accordion__icon,
 .sprk-c-Accordion--navigation
@@ -90,9 +85,6 @@
 .sprk-c-Accordion__icon,
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__summary:active
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:focus
 .sprk-c-Accordion__icon {
   color: $white;
 }
@@ -138,9 +130,7 @@
 
   &.sprk-c-Accordion__summary--open,
   &:hover,
-  &:focus,
-  &:active,
-  &:visited {
+  &:active {
     background-color: $blue-medium;
     color: $white;
 
