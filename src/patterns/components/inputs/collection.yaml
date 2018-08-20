@@ -14,8 +14,8 @@ contents:
   Password Input: inputs.html#password-input
   Helper Text: inputs.html#helper-text
   Phone Number: inputs.html#phone-number-input
-  Date Input: inputs.html#date-input
   Date Picker: inputs.html#date-picker
+  Date Input: inputs.html#date-input
 restrictions:
   - You should add the 'novalidate' attribute to your form, since we handle form validation ourselves,
     and don't use the browser's implementation
