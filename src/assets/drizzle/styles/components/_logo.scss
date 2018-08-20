@@ -1,3 +1,5 @@
+$drizzle-logo-size-small: 35px;
+
 .#{$app-namespace}-c-Logo {
   max-width: 250px;
 
@@ -11,6 +13,6 @@
 }
 
 .#{$app-namespace}-c-Logo--small {
-  height: 35px;
-  width: 35px;
+  height: $drizzle-logo-size-small;
+  width: $drizzle-logo-size-small;
 }
