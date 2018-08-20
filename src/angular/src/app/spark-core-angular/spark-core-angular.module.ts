@@ -53,6 +53,7 @@ import { SparkTabbedNavigationComponent } from './components/sprk-tabbed-navigat
 import { SprkTabbedNavigationTabDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationPanelDirective } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dictionary.component';
+import { SparkPaginationComponent } from './components/sprk-pagination/sprk-pagination.component';
 
 @NgModule({
   providers: [{
@@ -116,7 +117,8 @@ import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dict
     SprkTabbedNavigationTabDirective,
     SprkTabbedNavigationPanelDirective,
     SparkToggleComponent,
-    SparkDictionaryComponent
+    SparkDictionaryComponent,
+    SparkPaginationComponent
   ],
   exports: [
     SparkAlertComponent,
@@ -172,7 +174,8 @@ import { SparkDictionaryComponent } from './components/sprk-dictionary/sprk-dict
     SprkTabbedNavigationTabDirective,
     SprkTabbedNavigationPanelDirective,
     SparkToggleComponent,
-    SparkDictionaryComponent
+    SparkDictionaryComponent,
+    SparkPaginationComponent
   ],
 })
 export class SparkCoreAngularModule { }
