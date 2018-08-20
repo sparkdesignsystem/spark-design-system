@@ -1,3 +1,5 @@
+$drizzle-nav-padding: 1rem;
+
 .#{$app-namespace}-c-Navigation {
   background: $nav-background-color;
   font-family: urw-din, sans-serif;
@@ -8,7 +10,7 @@
   color: $white;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: $drizzle-nav-padding;
   position: fixed;
   width: 100%;
   z-index: $drizzle-layer-height-m;
@@ -117,18 +119,18 @@ svg {
 :target::before {
   display: block;
   height: calc(
-    #{$drizzle-h2-font-size} + #{$drizzle-header-padding-vert-wide} * 2
+    #{$drizzle-logo-size-small} + #{$drizzle-nav-padding} + #{$drizzle-nav-padding}
   );
   margin-top: calc(
-    0 - #{$drizzle-h2-font-size} - #{$drizzle-header-padding-vert-wide} * 2
+    0 - #{$drizzle-logo-size-small} - #{$drizzle-nav-padding} - #{$drizzle-nav-padding}
   );
 
-  @media (max-width: $nav-switch-breakpoint) {
+  @media (min-width: $nav-switch-breakpoint) {
     height: calc(
-      #{$drizzle-h2-font-size} + #{$drizzle-header-padding-top-narrow} + #{$drizzle-header-padding-bottom-narrow}
+      #{$drizzle-h1-font-size} + #{$drizzle-header-padding-vert-wide} + #{$drizzle-header-padding-vert-wide}
     );
     margin-top: calc(
-      0 - #{$drizzle-h2-font-size} - #{$drizzle-header-padding-top-narrow} - #{$drizzle-header-padding-bottom-narrow}
+      0 - #{$drizzle-h1-font-size} - #{$drizzle-header-padding-vert-wide} - #{$drizzle-header-padding-vert-wide}
     );
   }
 }
