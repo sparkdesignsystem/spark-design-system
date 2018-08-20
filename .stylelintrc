@@ -185,7 +185,7 @@ rules:
   'function-max-empty-lines': 0
   'function-name-case': 'lower'
   'function-parentheses-newline-inside': null
-  'function-parentheses-space-inside': 'never'
+  'function-parentheses-space-inside': null
   'function-url-quotes': 'always'
   'function-whitespace-after': 'always'
 
@@ -226,7 +226,7 @@ rules:
   # Declaration
   'declaration-bang-space-after': 'never'
   'declaration-bang-space-before': 'always'
-  'declaration-colon-newline-after': 'always-multi-line'
+  'declaration-colon-newline-after': null
   'declaration-colon-space-after': 'always'
   'declaration-colon-space-before': 'never'
   'declaration-empty-line-before':
