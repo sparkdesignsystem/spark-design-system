@@ -117,10 +117,12 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkFooterComponent {
   @Input() award: string;
   @Input() splitAt: string;
+  @Input() additionalClassesBadges: string;
+  @Input() additionalClassesAwardImgOne: string;
+  @Input() additionalClassesAwardImgTwo: string;
   @Input() imgAnalytics: string;
   @Input() linkAnalytics: string;
   @Input() additionalClasses: string;
@@ -129,9 +131,6 @@ export class SparkFooterComponent {
   @Input() socialLinks: Object;
   @Input() feedbackLinks: Object;
   @Input() siteLinkCols: Object;
-  @Input() additionalClassesBadges: string;
-  @Input() additionalClassesAwardImgOne: string;
-  @Input() additionalClassesAwardImgTwo: string;
   @Input() disclaimer: string;
   @Input() disclaimerTitle: string;
   @Input() disclaimerCopy: string;

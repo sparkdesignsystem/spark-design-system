@@ -5,7 +5,7 @@ import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-pan
 @Component({
   selector: 'test-component',
   template: `
-    <div additionalClasses="sprk-u-man" 
+    <div additionalClasses="sprk-u-man"
     sprk-tabbed-navigation-panel>Panel</div>`
 })
 

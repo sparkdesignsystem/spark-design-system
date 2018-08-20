@@ -5,7 +5,7 @@ import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.d
 @Component({
   selector: 'test-component',
   template: `
-    <button 
+    <button
     analyticsString="Tab 1"
     isActive=true
     controlsId="cntrls"
