@@ -1,6 +1,4 @@
 $drizzle-header-padding-vert-wide: 1.8rem;
-$drizzle-header-padding-top-narrow: 6.0625rem;
-$drizzle-header-padding-bottom-narrow: 1rem;
 
 .#{$app-namespace}-o-Layout {
   height: 100%;
@@ -48,8 +46,7 @@ $drizzle-header-padding-bottom-narrow: 1rem;
 
 .#{$app-namespace}-o-Layout__header {
   background-color: $highlight;
-  padding: $drizzle-header-padding-top-narrow 1rem
-    $drizzle-header-padding-bottom-narrow 2rem;
+  padding: 6.0625rem 1rem 1rem 2rem;
   width: 100%;
 
   @media (min-width: $nav-switch-breakpoint) {
