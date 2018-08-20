@@ -9,7 +9,7 @@ import { resetTabs, setActiveTab, retreatTab, advanceTab, getActiveTabIndex, ari
   template: `
     <div [ngClass]="getClasses()" role="tablist">
       <div class="sprk-c-Tabs__buttons">
-        <ng-content select="[sprk-tabbed-navigation-tab]"></ng-content> 
+        <ng-content select="[sprk-tabbed-navigation-tab]"></ng-content>
       </div>
       <ng-content select="[sprk-tabbed-navigation-panel]"></ng-content>
       <ng-content></ng-content>
@@ -86,7 +86,7 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
     let tabIDs = [];
     let panelIDs = [];
 
-    if(this.tabs && this.panels) {
+    if (this.tabs && this.panels) {
       this.tabs.forEach((tab, index) => {
         let tabID = `tabbed-navigation-${this.componentID}-tab-${index}`;
         let panelID = `tabbed-navigation-${this.componentID}-panel-${index}`;

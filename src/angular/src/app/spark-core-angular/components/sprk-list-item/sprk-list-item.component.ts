@@ -18,7 +18,7 @@ export class SparkListItemComponent {
   getClasses(): string {
     let classArray: Array<String> = [''];
 
-    if(this.additionalClasses) {
+    if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       })

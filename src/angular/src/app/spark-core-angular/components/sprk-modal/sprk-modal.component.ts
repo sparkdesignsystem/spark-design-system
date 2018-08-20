@@ -75,7 +75,7 @@ export class SparkModalComponent {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if(this.isVisible && event.key === 'Escape') {
+    if (this.isVisible && event.key === 'Escape') {
       this.closeModal(event);
     }
   }

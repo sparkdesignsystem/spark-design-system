@@ -12,19 +12,19 @@ import { Component } from '@angular/core';
     <div>
       <sprk-button (click)="toggleWaitModal($event)" additionalClasses="wait-button">Wait Modal</sprk-button>
     </div>
-    <sprk-modal 
+    <sprk-modal
       [(isVisible)]="choiceVisible"
-      title="Are you sure?" 
+      title="Are you sure?"
       (hide)="toggleChoiceModal($event)"
       modalType="choice">This is some modal content.</sprk-modal>
-    <sprk-modal 
+    <sprk-modal
       [(isVisible)]="infoVisible"
-      title="For Your Information" 
+      title="For Your Information"
       (hide)="toggleInfoModal($event)"
       modalType="info">This is some modal content.</sprk-modal>
-    <sprk-modal 
+    <sprk-modal
       [(isVisible)]="waitVisible"
-      title="Please wait..." 
+      title="Please wait..."
       (hide)="toggleWaitModal($event)"
       modalType="wait">This is some modal content.</sprk-modal>
   `
