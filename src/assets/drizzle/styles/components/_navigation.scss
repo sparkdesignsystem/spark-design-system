@@ -116,11 +116,19 @@ svg {
 /* Offset jump links so they don't get hidden by the sticky header */
 :target::before {
   display: block;
-  height: 7rem;
-  margin-top: -7rem;
+  height: calc(
+    #{$drizzle-h2-font-size} + #{$drizzle-header-padding-vert-wide} * 2
+  );
+  margin-top: calc(
+    0 - #{$drizzle-h2-font-size} - #{$drizzle-header-padding-vert-wide} * 2
+  );
 
   @media (max-width: $nav-switch-breakpoint) {
-    height: 5rem;
-    margin-top: -5rem;
+    height: calc(
+      #{$drizzle-h2-font-size} + #{$drizzle-header-padding-top-narrow} + #{$drizzle-header-padding-bottom-narrow}
+    );
+    margin-top: calc(
+      0 - #{$drizzle-h2-font-size} - #{$drizzle-header-padding-top-narrow} - #{$drizzle-header-padding-bottom-narrow}
+    );
   }
 }
