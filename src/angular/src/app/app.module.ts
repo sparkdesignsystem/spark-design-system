@@ -3,7 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+
+// Individual Spark Extras Imports
+import { SparkAwardModule } from './spark-extras-angular/components/sprk-award/sprk-award.module';
+import { SparkCardModule } from './spark-extras-angular/components/sprk-card/sprk-card.module';
+import { SparkDictionaryModule } from './spark-extras-angular/components/sprk-dictionary/sprk-dictionary.module';
+import { SparkHighlightBoardModule } from './spark-extras-angular/components/sprk-highlight-board/sprk-highlight-board.module';
+
+// Collected Spark Core Import
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
+
+// Docs Site Component Imports
 import { ButtonDocsComponent } from './spark-docs/button-docs/button-docs.component';
 import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-found.component';
 import { IntroDocsComponent } from './spark-docs/intro-docs/intro-docs.component';
@@ -28,11 +38,6 @@ import { HighlightBoardDocsComponent } from './spark-docs/highlight-board-docs/h
 import { DictionaryDocsComponent } from './spark-docs/dictionary-docs/dictionary-docs.component';
 import { TableDocsComponent } from './spark-docs/table-docs/table-docs.component';
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
-// Spark Extras
-import { SparkAwardComponent } from './spark-extras-angular/components/sprk-award/sprk-award.component';
-import { SparkDictionaryComponent } from './spark-extras-angular/components/sprk-dictionary/sprk-dictionary.component';
-import { SparkCardComponent } from './spark-extras-angular/components/sprk-card/sprk-card.component';
-import { SparkHighlightBoardComponent } from './spark-extras-angular/components/sprk-highlight-board/sprk-highlight-board.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -63,10 +68,6 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    SparkAwardComponent,
-    SparkCardComponent,
-    SparkDictionaryComponent,
-    SparkHighlightBoardComponent,
     AppComponent,
     AlertDocsComponent,
     AccordionDocsComponent,
@@ -101,6 +102,10 @@ const appRoutes: Routes = [
       { }
     ),
     BrowserModule,
+    SparkAwardModule,
+    SparkCardModule,
+    SparkHighlightBoardModule,
+    SparkDictionaryModule,
     SparkCoreAngularModule
   ],
   providers: [],

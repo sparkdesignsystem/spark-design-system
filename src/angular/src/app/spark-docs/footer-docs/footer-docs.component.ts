@@ -26,7 +26,6 @@ import { Component } from '@angular/core';
         </h2>
         <sprk-footer
           splitAt="huge"
-          award="true"
           [navLinks]="navLinks"
           [badges]="badges"
           additionalClassesBadges="sprk-u-Width-25"
@@ -38,6 +37,22 @@ import { Component } from '@angular/core';
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Aliquam in laoreet ante, non feugiat neque. Suspendisse
           et ipsum leo. Quisque non consectetur justo.
+
+          <sprk-award
+            optional-slot
+            disclaimer="false"
+            title="Spark Award Component"
+            additionalClassesImgOne="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
+            additionalClassesImgTwo="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
+            imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+            imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+            imgOneAlt="placeholder!"
+            imgOneHref="https://www.sparkdesignsystem.com/"
+            imgTwoHref="https://www.sparkdesignsystem.com/"
+            imgTwoAlt="placeholder!"
+            analyticsStringImgOne="Foo"
+            analyticsStringImgTwo="Test">
+          </sprk-award>
         </sprk-footer>
       </div>
     </div>
@@ -72,7 +87,6 @@ import { Component } from '@angular/core';
           Base With Optional Elements And Award Pattern
         </h2>
         <sprk-footer
-          award="true"
           [siteLinkCols]="siteLinkCols"
           [navLinks]="navLinks"
           [socialLinks]="socialLinks"
@@ -88,6 +102,22 @@ import { Component } from '@angular/core';
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Aliquam in laoreet ante, non feugiat neque. Suspendisse
           et ipsum leo. Quisque non consectetur justo.
+
+          <sprk-award
+            optional-slot
+            disclaimer="false"
+            title="Spark Award Component"
+            additionalClassesImgOne="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
+            additionalClassesImgTwo="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
+            imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+            imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+            imgOneAlt="placeholder!"
+            imgOneHref="https://www.sparkdesignsystem.com/"
+            imgTwoHref="https://www.sparkdesignsystem.com/"
+            imgTwoAlt="placeholder!"
+            analyticsStringImgOne="Foo"
+            analyticsStringImgTwo="Test">
+          </sprk-award>
         </sprk-footer>
       </div>
     </div>
