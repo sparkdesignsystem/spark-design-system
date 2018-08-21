@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkHighlightBoardModule } from '../../spark-extras-angular/components/sprk-highlight-board/sprk-highlight-board.module';
 import { HighlightBoardDocsComponent } from './highlight-board-docs.component';
 
 describe('HighlightBoardDocsComponent', () => {
@@ -8,7 +9,7 @@ describe('HighlightBoardDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkCoreAngularModule, SparkHighlightBoardModule],
       declarations: [ HighlightBoardDocsComponent ]
     })
     .compileComponents();
