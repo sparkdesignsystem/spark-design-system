@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { SparkIconComponent } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.component';
 
 @Component({
   selector: 'sprk-card',
