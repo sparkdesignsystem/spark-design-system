@@ -1,11 +1,4 @@
 import { NgModule } from '@angular/core';
-
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms'
-import { ReactiveFormsModule } from '@angular/forms';
-
-
 import { SparkAlertModule } from './components/sprk-alert/sprk-alert.module';
 import { SparkButtonModule } from './components/sprk-button/sprk-button.module';
 import { SparkLinkModule } from './components/sprk-link/sprk-link.module';
@@ -61,10 +54,6 @@ import { SparkPaginationModule } from './components/sprk-pagination/sprk-paginat
     useValue: TinyDatePicker
   }],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-    RouterModule,
     SparkStackModule,
     SparkStackItemModule,
     SparkToggleModule,
@@ -112,7 +101,7 @@ import { SparkPaginationModule } from './components/sprk-pagination/sprk-paginat
     SprkTabbedNavigationTabModule,
     SprkTabbedNavigationPanelModule,
     SparkPaginationModule,
-    SparkStackModule, // Start module exports
+    SparkStackModule,
     SparkStackItemModule,
     SparkToggleModule,
     SparkIconModule,
