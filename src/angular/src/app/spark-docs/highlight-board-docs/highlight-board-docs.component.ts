@@ -13,7 +13,8 @@ import { Component } from '@angular/core';
         heading="Highlight Board Heading Example"
         subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
-        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg">
+        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+        imgAlt="placeholder">
       </sprk-highlight-board>
     </div>
   </div>
@@ -44,7 +45,8 @@ import { Component } from '@angular/core';
         subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
         type="stacked"
-        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg">
+        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+        imgAlt="placeholder">
       </sprk-highlight-board>
     </div>
   </div>
@@ -60,7 +62,8 @@ import { Component } from '@angular/core';
       ctaText="Learn More"
       ctaTwoText="CTA Two"
       type="fullWidth"
-      imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg">
+      imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+      imgAlt="placeholder">
     </sprk-highlight-board>
   </div>
   `,
