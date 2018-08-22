@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
     <img
       *ngIf="type !== 'noImage'"
       class="sprk-c-HighlightBoard__image"
-      src="{{ imgSrc }}">
+      src="{{ imgSrc }}"
+      alt="{{ imgAlt }}">
 
     <div
       [ngClass]="{
@@ -58,6 +59,7 @@ export class SparkHighlightBoardComponent {
   @Input() heading: string;
   @Input() subHeading: string;
   @Input() imgSrc: string;
+  @Input() imgAlt: string;
   @Input() ctaText: string;
   @Input() ctaHref: string;
   @Input() ctaTwoText: string;
