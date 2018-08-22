@@ -33,7 +33,7 @@ import { Component, Input } from '@angular/core';
           <a
             [routerLink]="ctaHref"
             class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
-            [attr.data-analytics]="analyticsString">
+            [attr.data-analytics]="analyticsStringCta">
             {{ ctaText }}
           </a>
         </div>
@@ -64,7 +64,7 @@ export class SparkHighlightBoardComponent {
   @Input() ctaHref: string;
   @Input() ctaTwoText: string;
   @Input() ctaTwoHref: string;
-  @Input() analyticsString: string;
+  @Input() analyticsStringCta: string;
   @Input() analyticsStringCta2: string;
   @Input() additionalClasses: string;
   @Input() type: string;
