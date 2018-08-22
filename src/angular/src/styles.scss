@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/@sparkdesignsystem/spark-core/spark-core';
+@import '../../assets/drizzle/styles/main.scss';
+@import '~@sparkdesignsystem/spark-extras/components/card/card';
+@import '~@sparkdesignsystem/spark-extras/components/dictionary/dictionary';
+@import '~@sparkdesignsystem/spark-extras/components/highlight-board/highlight-board';
