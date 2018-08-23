@@ -11,5 +11,5 @@ restictions:
 links:
   Stack Layout Object:
     external: false
-    href: /patterns/fundamentals/layout
+    href: /patterns/fundamentals/layout.html#stack-object
 sparkPackageExtras: true
