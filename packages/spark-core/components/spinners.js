@@ -40,8 +40,8 @@ const spinners = () => {
 
     spinnerContainer.addEventListener('click', (e) => {
       if (
-        e.target.getAttribute('data-sprk-spinner') &&
-        !e.target.getAttribute('data-sprk-has-spinner')
+        e.target.getAttribute('data-sprk-spinner')
+        && !e.target.getAttribute('data-sprk-has-spinner')
       ) {
         setSpinning(e.target, options);
       }
@@ -55,4 +55,6 @@ window.addEventListener('sprk-cancel-spinners', () => {
   });
 });
 
-export { spinners, getSpinnerClasses, setSpinning, cancelSpinning };
+export {
+  spinners, getSpinnerClasses, setSpinning, cancelSpinning,
+};
