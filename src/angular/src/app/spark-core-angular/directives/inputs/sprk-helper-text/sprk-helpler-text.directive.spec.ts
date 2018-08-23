@@ -5,7 +5,7 @@ import { SprkHelperTextDirective } from './sprk-helper-text.directive';
 @Component({
   selector: 'test',
   template: `
-  <span 
+  <span
     additionalClasses="sprk-u-man"
     sprk-helper-text>Helper Text</span>`
 })

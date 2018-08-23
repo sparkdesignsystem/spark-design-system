@@ -14,9 +14,9 @@ import { By } from '@angular/platform-browser';
     <sprk-selection-container>
         <label sprk-label>Label!</label>
         <sprk-selection-item-container>
-          <input 
-            type="checkbox" 
-            sprk-selection-input> 
+          <input
+            type="checkbox"
+            sprk-selection-input>
           <label sprk-selection-label>Item 1</label>
         </sprk-selection-item-container>
         <p sprk-helper-text>Helper Text!</p>

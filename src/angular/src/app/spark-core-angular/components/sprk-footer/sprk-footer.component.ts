@@ -96,31 +96,15 @@ import { Component, Input } from '@angular/core';
           </sprk-secondary-navigation>
         </div>
 
-        <sprk-award
-          *ngIf="award === 'true'"
-          sprk-stack-item
-          disclaimer="false"
-          title="Spark Award Component"
-          additionalClassesImgOne="{{ additionalClassesAwardImgOne }}"
-          additionalClassesImgTwo="{{ additionalClassesAwardImgTwo }}"
-          imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-          imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-          imgOneAlt="placeholder!"
-          imgOneHref="https://www.sparkdesignsystem.com/"
-          imgTwoHref="https://www.sparkdesignsystem.com/"
-          imgTwoAlt="placeholder!"
-          analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
-        </sprk-award>
+        <ng-content select="[optional-slot]" sprk-stack-item></ng-content>
       </sprk-stack>
     </footer>
   `,
   styles: ['']
 })
-
 export class SparkFooterComponent {
-  @Input() award: string;
   @Input() splitAt: string;
+  @Input() additionalClassesBadges: string;
   @Input() imgAnalytics: string;
   @Input() linkAnalytics: string;
   @Input() additionalClasses: string;
@@ -129,9 +113,6 @@ export class SparkFooterComponent {
   @Input() socialLinks: Object;
   @Input() feedbackLinks: Object;
   @Input() siteLinkCols: Object;
-  @Input() additionalClassesBadges: string;
-  @Input() additionalClassesAwardImgOne: string;
-  @Input() additionalClassesAwardImgTwo: string;
   @Input() disclaimer: string;
   @Input() disclaimerTitle: string;
   @Input() disclaimerCopy: string;

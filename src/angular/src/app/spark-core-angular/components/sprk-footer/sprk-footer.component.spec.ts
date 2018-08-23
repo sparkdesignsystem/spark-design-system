@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SparkAwardComponent } from '../../../spark-extras-angular/components/sprk-award/sprk-award.component';
 import { SparkFooterComponent } from './sprk-footer.component';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SparkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SparkSecondaryNavigationComponent } from '../sprk-secondary-navigation/sprk-secondary-navigation.component';
 import { SparkSecondaryNavigationItemComponent } from '../sprk-secondary-navigation-item/sprk-secondary-navigation-item.component';
-import { SparkAwardComponent } from '../sprk-award/sprk-award.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SparkFooterComponent', () => {
@@ -22,13 +22,13 @@ describe('SparkFooterComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [
-        SparkFooterComponent,
+        SparkAwardComponent,
         SparkStackComponent,
         SparkIconComponent,
         SparkToggleComponent,
         SparkSecondaryNavigationComponent,
         SparkSecondaryNavigationItemComponent,
-        SparkAwardComponent,
+        SparkFooterComponent
       ]
     })
     .compileComponents();

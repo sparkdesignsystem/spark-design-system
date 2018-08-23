@@ -5,7 +5,7 @@ import { SprkInputDirective } from './sprk-input.directive';
 @Component({
   selector: 'test',
   template: `
-  <input 
+  <input
     additionalClasses="sprk-u-man"
     sprk-input>`
 })
