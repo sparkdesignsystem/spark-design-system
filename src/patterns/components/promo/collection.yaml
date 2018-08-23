@@ -10,8 +10,8 @@ information:
 links:
   Stack Layout Object:
     external: false
-    href: /patterns/fundamentals/stack
+    href: /patterns/fundamentals/layout.html#stack-object
   Spacing Utilities:
     external: false
-    href: /patterns/utilities/single-property
+    href: /patterns/utilities/single-property.html#spacing
 sparkPackageCore: true
