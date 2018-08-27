@@ -35,16 +35,22 @@
   </div>
   {{/if}}
 
-  {{!-- There is no logical or --}}
-  {{#if data.information}}
-  {{#if data.links}}
-  {{#if data.restrictions}}
   <div class="drizzle-o-ContentGrouping">
     {{!- Information --}}
     {{#if data.information}}
       <h3 class="drizzle-b-h3">Information</h3>
       <ul class="drizzle-b-List drizzle-b-List--nested">
         {{#each data.information}}
+          <li class="drizzle-b-List__item">{{.}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+
+    {{!- Restrictions --}}
+    {{#if data.restrictions}}
+      <h3 class="drizzle-b-h3">Restrictions</h3>
+      <ul class="drizzle-b-List drizzle-b-List--nested">
+        {{#each data.restrictions}}
           <li class="drizzle-b-List__item">{{.}}</li>
         {{/each}}
       </ul>
@@ -71,21 +77,8 @@
         </ul>
       </div>
     {{/if}}
-
-    {{!- Restrictions --}}
-    {{#if data.restrictions}}
-      <h3 class="drizzle-b-h3">Restrictions</h3>
-      <ul class="drizzle-b-List drizzle-b-List--nested">
-        {{#each data.restrictions}}
-          <li class="drizzle-b-List__item">{{.}}</li>
-        {{/each}}
-      </ul>
-    {{/if}}
   </div>
-  {{/if}}
-  {{/if}}
-  {{/if}}
-
+  
   {{!-- Layouts --}}
   {{#if data.doclayout}}
     <div class="drizzle-o-ContentGrouping">
