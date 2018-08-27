@@ -1,28 +1,14 @@
 {{#extend "default"}}
   {{#content "main"}}
-    <div class="drizzle-o-Layout__header drizzle-o-Layout__header--shared">
+    <div class="drizzle-o-Layout__header{{#unless noCodeSwitch }} drizzle-o-Layout__header--shared{{/unless}}">
       <h1 class="drizzle-b-h1">
         {{name}}
       </h1>
-      <div class="drizzle-o-Layout__control">
-        <form class="drizzle-c-CodeExampleSwitch" data-code-example-switch>
-          <p class="drizzle-c-CodeExampleSwitch__group-label">Code Examples</p>
-            <div class="drizzle-c-CodeExampleSwitch__wrapper">
-              <div class="drizzle-c-CodeExampleSwitch__radio-container">
-                <input class="drizzle-c-CodeExampleSwitch__input" value="none" type="radio" id="none" name="code-examples" checked />
-                <label class="drizzle-c-CodeExampleSwitch__label" for="none">None</label>
-              </div>
-              <div class="drizzle-c-CodeExampleSwitch__radio-container">
-                <input class="drizzle-c-CodeExampleSwitch__input" value="html" type="radio" id="html" name="code-examples" />
-                <label class="drizzle-c-CodeExampleSwitch__label" for="html">HTML</label>
-              </div>
-              <div class="drizzle-c-CodeExampleSwitch__radio-container">
-                <input class="drizzle-c-CodeExampleSwitch__input" value="angular" type="radio" id="angular" name="code-examples" />
-                <label class="drizzle-c-CodeExampleSwitch__label" for="angular">Angular</label>
-              </div>
-            </div>
-        </form>
-      </div>
+      {{#unless noCodeSwitch}}
+        <div class="drizzle-o-Layout__control">
+          {{> drizzle.code-example-switch }}
+        </div>
+      {{/unless}}
     </div>
 
     <div class="drizzle-o-Layout__content">
