@@ -13,6 +13,8 @@ import { clipboardSuccess } from './vendor/clipboard';
 import { mobileNav } from './navigation/mobileNav';
 import { hideWaitModal } from './modals';
 
+import { codeExampleSwitch } from './code-example-switch';
+
 const nav = document.getElementById('nav');
 const navMenu = document.getElementById('nav-menu');
 const bindUIEvents = () => {
@@ -30,3 +32,4 @@ filters();
 clipboardSuccess();
 mobileNav();
 hideWaitModal();
+codeExampleSwitch();
