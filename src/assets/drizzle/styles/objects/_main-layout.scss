@@ -1,4 +1,4 @@
-$drizzle-header-padding-vert-wide: 1.8rem;
+$drizzle-header-padding-vert-wide: 1rem;
 
 .#{$app-namespace}-o-Layout {
   height: 100%;
@@ -46,7 +46,7 @@ $drizzle-header-padding-vert-wide: 1.8rem;
 
 .#{$app-namespace}-o-Layout__header {
   background-color: $highlight;
-  padding: 6.0625rem 1rem 1rem 2rem;
+  padding: 5.1875rem 1rem 1rem 2rem;
   width: 100%;
 
   @media (min-width: $nav-switch-breakpoint) {
@@ -55,6 +55,16 @@ $drizzle-header-padding-vert-wide: 1.8rem;
     position: sticky;
     top: 0;
     z-index: $drizzle-layer-height-m;
+  }
+}
+
+.#{$app-namespace}-o-Layout__header--shared {
+  display: block;
+
+  @media (min-width: 34.375rem) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
