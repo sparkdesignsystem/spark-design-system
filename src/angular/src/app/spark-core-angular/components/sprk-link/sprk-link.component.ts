@@ -12,17 +12,18 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkLinkComponent {
-  @Input() linkType: string;
-  @Input() href: string;
-  @Input() analyticsString: string;
-  @Input() additionalClasses: string;
+  @Input()
+  linkType: string;
+  @Input()
+  href: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  additionalClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-    'sprk-b-Link'
-    ];
+    const classArray: string[] = ['sprk-b-Link'];
 
     switch (this.linkType) {
       case 'standalone':
@@ -35,10 +36,10 @@ export class SparkLinkComponent {
         break;
     }
 
-    if(this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
