@@ -125,6 +125,14 @@
               <pre class="sprk-u-ptl"><code class="drizzle-c-Preview__markup language-markup" id="clipboard-{{toSlug (concat name '-angular') }}">{{{patternSource ( alternateIdGen id 'angular' 'code' ) @root }}}</code></pre>
             </div>
           {{/if}}
+
+          {{!-- Code Information (angular) --}}
+          {{#if data.hasAngularCodeInfo }}
+            <div class="drizzle-o-ContentGrouping drizzle-u-Display--none sprk-u-mtl" data-angular-documentation>
+              <h3 class="drizzle-b-h3">Information</h3>
+              {{{ pattern (alternateIdGen id 'angular' 'info') @root }}}
+            </div>
+          {{/if}}
         {{/unless}}
       </div>
     </div>
