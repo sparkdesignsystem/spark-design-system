@@ -1,4 +1,11 @@
+/* global localStorage */
 import getElements from '../../../../packages/spark-core/utilities/getElements';
+
+const saveSwitchSetting = (value) => {
+  if (localStorage) {
+    localStorage.setItem('code-example-switch', value);
+  }
+};
 
 const hideAllSections = (values) => {
   values.forEach((value) => {
@@ -24,11 +31,16 @@ const bindUIEvents = (element) => {
   element.addEventListener('change', (e) => {
     hideAllSections(values);
     showSections([`${e.target.value}`]);
+    saveSwitchSetting(e.target.value);
   });
 };
 
 const codeExampleSwitch = () => {
-  getElements('[data-code-example-switch]', bindUIEvents);
+  getElements('[data-code-example-switch]', (item) => {
+    bindUIEvents(item);
+  });
 };
 
-export { codeExampleSwitch, bindUIEvents, hideAllSections, showSections };
+export {
+  codeExampleSwitch, bindUIEvents, hideAllSections, showSections, saveSwitchSetting,
+};

@@ -1,4 +1,5 @@
-/* global document beforeEach afterEach describe it */
+/* eslint-disable no-global-assign */
+/* global document localStorage beforeEach afterEach describe it */
 import sinon from 'sinon';
 import { expect } from 'chai';
 import {
@@ -6,6 +7,7 @@ import {
   bindUIEvents,
   showSections,
   hideAllSections,
+  saveSwitchSetting,
 } from '../src/assets/drizzle/scripts/code-example-switch';
 
 describe('codeExampleSwtich init', () => {
@@ -56,6 +58,8 @@ describe('codeExampleSwitch UI tests', () => {
     templates.forEach((item) => {
       document.body.appendChild(item);
     });
+
+    localStorage.removeItem('code-example-switch');
   });
 
   afterEach(() => {
@@ -97,5 +101,27 @@ describe('codeExampleSwitch UI tests', () => {
     expect(templates[0].classList.contains('drizzle-u-Display--none')).eql(true);
     expect(templates[1].classList.contains('drizzle-u-Display--none')).eql(false);
     expect(templates[2].classList.contains('drizzle-u-Display--none')).eql(true);
+  });
+
+  it('should save a value to localStorage', () => {
+    saveSwitchSetting('none');
+    expect(localStorage.getItem('code-example-switch')).eql('none');
+  });
+
+  it('should do nothing if localStorage is not defined', () => {
+    const tempLocalStorage = localStorage;
+    localStorage = null;
+    saveSwitchSetting('none');
+    localStorage = tempLocalStorage;
+    expect(localStorage.getItem('code-example-switch')).eql(null);
+  });
+
+  it('should save the switch setting to localStorage on change', () => {
+    codeExampleSwitch();
+    radio2.click(); // click triggers change
+    expect(templates[0].classList.contains('drizzle-u-Display--none')).eql(true);
+    expect(templates[1].classList.contains('drizzle-u-Display--none')).eql(false);
+    expect(templates[2].classList.contains('drizzle-u-Display--none')).eql(true);
+    expect(localStorage.getItem('code-example-switch')).eql('angular');
   });
 });
