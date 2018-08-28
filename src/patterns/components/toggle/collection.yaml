@@ -15,7 +15,7 @@ restrictions:
   - Content that requires user interaction or consumption should
     not be housed within a Toggle.
   - If you need several Toggles in succession use the
-    <a class="drizzle-b-Link" href="https://sparkdesignsystem.com/patterns/components/accordion">Accordion</a> component instead.
+    <a class="drizzle-b-Link" href="https://sparkdesignsystem.com/patterns/components/accordions">Accordion</a> component instead.
   - Overall sizing of the Toggle should be dependent on type size,
     but should remain large enough to be tappable on a mobile device
   - Content length inside the Toggle does not have a limit, but shouldn't exceed a reasonable
