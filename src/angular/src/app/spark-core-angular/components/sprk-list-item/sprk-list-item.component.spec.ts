@@ -4,7 +4,7 @@ import { SparkListItemComponent } from './sprk-list-item.component';
 describe('SparkListItemComponent', () => {
   let component: SparkListItemComponent;
   let fixture: ComponentFixture<SparkListItemComponent>;
-  let element;
+  let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -23,15 +23,10 @@ describe('SparkListItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('getClasses should match what gets set on the element', () => {
-    fixture.detectChanges();
-    expect(element.classList.toString()).toEqual(component.getClasses());
-  });
-
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual(' sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual('sprk-u-pam sprk-u-man');
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
