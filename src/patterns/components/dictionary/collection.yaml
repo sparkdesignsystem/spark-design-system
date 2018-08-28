@@ -8,3 +8,4 @@ restrictions:
    - The length of keys is limited to two lines of wrapped text.
    - The length of values is not limited, but will wrap to the next line if there's no room.
 sparkPackageExtras: true
+noCodeSwitch: true

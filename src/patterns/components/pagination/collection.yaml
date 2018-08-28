@@ -7,3 +7,4 @@ information:
   - Spark-Core Pagination JS will take care of adding in the correct aria-label
     to each link on first page load and when the items are tapped or clicked.
 sparkPackageCore: true
+noCodeSwitch: true

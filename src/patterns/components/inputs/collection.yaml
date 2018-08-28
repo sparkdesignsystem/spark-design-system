@@ -28,3 +28,4 @@ restrictions:
   - You should use helper text, as linked below, when a user needs further clarification beyond the label.
   - Labels and error messages should be short and to the point.
 sparkPackageCore: true
+noCodeSwitch: true

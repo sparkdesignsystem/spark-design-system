@@ -5,3 +5,4 @@ description:
 restrictions:
  - Footer is to be used only at the bottom of the page.
 sparkPackageCore: true
+noCodeSwitch: true

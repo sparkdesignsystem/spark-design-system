@@ -10,3 +10,4 @@ restrictions:
   - The content should be kept short and concise.
   - role="alert" is required so that assistive technology can inform users their attention is needed.
 sparkPackageCore: true
+noCodeSwitch: true
