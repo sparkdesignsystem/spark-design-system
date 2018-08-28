@@ -1,16 +1,12 @@
 ---
 name: Date Input
 description:
-  The date input component is used
-  for collecting date information.
-  Spark recommends that this
-  component be used to collect
-  information for the past.
+  The date input is used for collecting date information. This component does not include a date picker.
 information:
-  - 'On blur, format the input to this format: MM/DD/YYYY.'
-  - 'Placeholder text should read: MM/DD/YYYY.'
-  - On key press, reveal the placeholder inline with the label.
-order: 27
+  - Spark recommends that this component be used when you expect the entered date to be in the past.
+  - Masking is automatically applied when the field contains a valid input.
+  - The field value contains special characters which you may need to parse out before submitting the form.
+order: 25
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="date">
