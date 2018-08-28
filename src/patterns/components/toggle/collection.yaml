@@ -21,3 +21,4 @@ restrictions:
   - Content length inside the Toggle does not have a limit, but shouldn't exceed a reasonable
     amount.
   - The title of the Toggle doesn't have a specific maximum length and can wrap if needed.
+noCodeSwitch: true

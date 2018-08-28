@@ -5,3 +5,4 @@ information:
 gridView: true
 gridViewGallery: true
 sparkPackageCore: true
+noCodeSwitch: true

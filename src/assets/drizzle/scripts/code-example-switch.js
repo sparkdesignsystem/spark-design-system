@@ -24,11 +24,19 @@ const showSections = (values) => {
 };
 
 const bindUIEvents = (element) => {
-  const values = [];
-  element.querySelectorAll('input').forEach((rdio) => {
-    values.push(rdio.value);
+  element.querySelectorAll('label').forEach((label) => {
+    label.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        element.querySelectorAll(`input[id=${label.getAttribute('for')}]`)[0].click();
+      }
+    });
   });
+
   element.addEventListener('change', (e) => {
+    const values = [];
+    element.querySelectorAll('input').forEach((rdio) => {
+      values.push(rdio.value);
+    });
     hideAllSections(values);
     showSections([`${e.target.value}`]);
     saveSwitchSetting(e.target.value);

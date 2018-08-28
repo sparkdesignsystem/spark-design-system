@@ -3,3 +3,4 @@ description: |
   Use a List for a list of items.
   There are three List styles available: default, bare, and indented.
 sparkPackageCore: true
+noCodeSwitch: true

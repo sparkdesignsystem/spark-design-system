@@ -1,5 +1,5 @@
 /* eslint-disable no-global-assign */
-/* global document localStorage beforeEach afterEach describe it */
+/* global window document localStorage beforeEach afterEach describe it */
 import sinon from 'sinon';
 import { expect } from 'chai';
 import {
@@ -26,6 +26,7 @@ describe('codeExampleSwitch UI tests', () => {
   const templates = [];
   let radioGroup;
   let radio1;
+  let label2;
   let radio2;
   let radio3;
 
@@ -36,14 +37,18 @@ describe('codeExampleSwitch UI tests', () => {
     radio1 = document.createElement('input');
     radio1.type = 'radio';
     radio1.value = 'none';
+    label2 = document.createElement('label');
+    label2.setAttribute('for', 'radio2');
     radio2 = document.createElement('input');
     radio2.type = 'radio';
+    radio2.id = 'radio2';
     radio2.value = 'angular';
     radio3 = document.createElement('input');
     radio3.type = 'radio';
     radio3.value = 'react';
 
     radioGroup.appendChild(radio1);
+    radioGroup.appendChild(label2);
     radioGroup.appendChild(radio2);
     radioGroup.appendChild(radio3);
 
@@ -123,5 +128,21 @@ describe('codeExampleSwitch UI tests', () => {
     expect(templates[1].classList.contains('drizzle-u-Display--none')).eql(false);
     expect(templates[2].classList.contains('drizzle-u-Display--none')).eql(true);
     expect(localStorage.getItem('code-example-switch')).eql('angular');
+  });
+
+  it('should active buttons if the enter key is pressed', () => {
+    codeExampleSwitch();
+    const event = new window.Event('keydown');
+    event.keyCode = 13;
+    label2.dispatchEvent(event);
+    expect(radio2.checked).eql(true);
+  });
+
+  it('should do nothing if another key is pressed', () => {
+    codeExampleSwitch();
+    const event = new window.Event('keydown');
+    event.keyCode = 9;
+    label2.dispatchEvent(event);
+    expect(radio2.checked).eql(false);
   });
 });

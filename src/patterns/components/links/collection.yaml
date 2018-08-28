@@ -6,3 +6,4 @@ restrictions:
   - Do not use Spark Link classes on links that solely have images in them.
   - Link text should be as meaningful as possible so users can understand what the purpose of the link is.
 sparkPackageCore: true
+noCodeSwitch: true
