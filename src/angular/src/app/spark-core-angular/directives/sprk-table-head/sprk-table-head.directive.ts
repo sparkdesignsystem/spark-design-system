@@ -1,29 +1,27 @@
-import { Directive, Input, OnInit, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-table-head]'
+  selector: '[sprkTableHead]'
 })
-
 export class SprkTableHeadDirective implements OnInit {
-  @Input() additionalClasses: string;
+  @Input()
+  additionalClasses: string;
 
-  getClasses(): Array<String> {
-   let classArray = ['sprk-b-Table__head'];
-   if (this.additionalClasses) {
-     this.additionalClasses.split(' ').forEach((className) => {
-       classArray.push(className);
-     });
-   }
-   return classArray;
+  getClasses(): string[] {
+    const classArray = ['sprk-b-Table__head'];
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+    return classArray;
   }
 
   ngOnInit(): void {
-    this.getClasses().forEach((className) => {
+    this.getClasses().forEach(className => {
       this.ref.nativeElement.classList.add(className);
     });
   }
 
   constructor(public ref: ElementRef) {}
-
 }
-

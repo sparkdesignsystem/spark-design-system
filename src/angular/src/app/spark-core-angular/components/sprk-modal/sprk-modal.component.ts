@@ -1,4 +1,10 @@
-import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  Output
+} from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
@@ -62,16 +68,30 @@ import * as _ from 'lodash';
   `
 })
 export class SparkModalComponent {
-  @Input() title: string;
-  @Input() modalType: string;
-  @Input() confirmText: string = 'Confirm';
-  @Input() cancelText: string = 'Cancel';
-  @Input() confirmAnalyticsString: string;
-  @Input() cancelAnalyticsString: string;
-  @Input() isVisible: boolean = false;
-  @Output() hide = new EventEmitter<any>();
-  @Output() confirmClick= new EventEmitter<any>();
-  @Output() cancelClick= new EventEmitter<any>();
+  @Input()
+  title: string;
+  @Input()
+  modalType: string;
+  @Input()
+  confirmText = 'Confirm';
+  @Input()
+  cancelText = 'Cancel';
+  @Input()
+  confirmAnalyticsString: string;
+  @Input()
+  cancelAnalyticsString: string;
+  @Input()
+  isVisible = false;
+  @Output()
+  hide = new EventEmitter<any>();
+  @Output()
+  confirmClick = new EventEmitter<any>();
+  @Output()
+  cancelClick = new EventEmitter<any>();
+
+  componentID = _.uniqueId();
+  heading_id = `modalHeading__${this.componentID}`;
+  content_id = `modalContent__${this.componentID}`;
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
@@ -80,14 +100,10 @@ export class SparkModalComponent {
     }
   }
 
-  componentID = _.uniqueId();
-  heading_id = `modalHeading__${this.componentID}`;
-  content_id = `modalContent__${this.componentID}`;
-
-  constructor() { }
+  constructor() {}
 
   closeModal(event): void {
-    if (this.modalType != 'wait') {
+    if (this.modalType !== 'wait') {
       event.preventDefault();
       this.hide.emit(event);
     }

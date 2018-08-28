@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-modal-docs',
+  selector: 'sprk-modal-docs',
   template: `
     <div class="sprk-u-mbm">
       <sprk-button (click)="toggleChoiceModal($event)" additionalClasses="choice-button">Choice Modal</sprk-button>
@@ -30,9 +30,9 @@ import { Component } from '@angular/core';
   `
 })
 export class ModalDocsComponent {
-  choiceVisible: boolean = false;
-  waitVisible: boolean = false;
-  infoVisible: boolean = false;
+  choiceVisible = false;
+  waitVisible = false;
+  infoVisible = false;
 
   toggleChoiceModal(event) {
     event.preventDefault();

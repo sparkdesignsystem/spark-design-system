@@ -9,15 +9,14 @@ describe('SparkIconSetComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SparkIconSetComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkIconSetComponent);
     component = fixture.componentInstance;
     iconSetElement = fixture.nativeElement.querySelector('svg');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

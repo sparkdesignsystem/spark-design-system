@@ -1,4 +1,4 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'sprk-wide-navigation',
@@ -41,10 +41,11 @@ import { Component, Input, HostListener } from '@angular/core';
     </nav>`,
   styles: ['']
 })
-
 export class SparkWideNavigationComponent {
-  @Input() links: Array<Object>;
-  @Input() additionalClasses: string;
+  @Input()
+  links: object[];
+  @Input()
+  additionalClasses: string;
 
   @HostListener('document:focusin', ['$event'])
   handleFocusEvent(event: FocusEvent) {
@@ -53,22 +54,20 @@ export class SparkWideNavigationComponent {
 
   hideAllDropDowns(event): void {
     event.stopPropagation();
-    this.links.forEach((link: Object) => {
+    this.links.forEach((link: object) => {
       if (link.hasOwnProperty('focused')) {
         link['focused'] = false;
       }
-    })
+    });
   }
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-WideNavigation'
-    ];
+    const classArray: string[] = ['sprk-c-WideNavigation'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

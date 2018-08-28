@@ -3,10 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkTableEmptyHeadingDirective } from './sprk-table-empty-heading.directive';
 
 @Component({
-  selector: 'test-component',
-  template: `<th additionalClasses="sprk-u-man" sprk-table-empty-heading></th>`
+  selector: 'sprk-test-component',
+  template: `<th additionalClasses="sprk-u-man" sprkTableEmptyHeading></th>`
 })
-
 class TestComponent {}
 
 describe('SprkTableEmptyHeadingDirective', () => {
@@ -31,5 +30,5 @@ describe('SprkTableEmptyHeadingDirective', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     expect(element.classList.contains('sprk-u-man')).toEqual(true);
-  })
+  });
 });

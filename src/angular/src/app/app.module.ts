@@ -1,7 +1,7 @@
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Individual Spark Extras Imports
@@ -14,30 +14,30 @@ import { SparkHighlightBoardModule } from './spark-extras-angular/components/spr
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
 
 // Docs Site Component Imports
+import { AccordionDocsComponent } from './spark-docs/accordion-docs/accordion-docs.component';
+import { AlertDocsComponent } from './spark-docs/alert-docs/alert-docs.component';
+import { AwardDocsComponent } from './spark-docs/award-docs/award-docs.component';
 import { ButtonDocsComponent } from './spark-docs/button-docs/button-docs.component';
-import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-found.component';
+import { CardDocsComponent } from './spark-docs/card-docs/card-docs.component';
+import { DictionaryDocsComponent } from './spark-docs/dictionary-docs/dictionary-docs.component';
+import { DividerDocsComponent } from './spark-docs/divider-docs/divider-docs.component';
+import { FooterDocsComponent } from './spark-docs/footer-docs/footer-docs.component';
+import { HighlightBoardDocsComponent } from './spark-docs/highlight-board-docs/highlight-board-docs.component';
+import { IconSetDocsComponent } from './spark-docs/icon-set-docs/icon-set-docs.component';
+import { InputDocsComponent } from './spark-docs/input-docs/input-docs.component';
 import { IntroDocsComponent } from './spark-docs/intro-docs/intro-docs.component';
 import { LinkDocsComponent } from './spark-docs/link-docs/link-docs.component';
-import { AlertDocsComponent } from './spark-docs/alert-docs/alert-docs.component';
-import { AccordionDocsComponent } from './spark-docs/accordion-docs/accordion-docs.component';
-import { IconSetDocsComponent } from './spark-docs/icon-set-docs/icon-set-docs.component';
-import { ModalDocsComponent } from './spark-docs/modal-docs/modal-docs.component';
-import { DividerDocsComponent } from './spark-docs/divider-docs/divider-docs.component';
 import { ListDocsComponent } from './spark-docs/list-docs/list-docs.component';
-import { NavigationDocsComponent } from './spark-docs/navigation-docs/navigation-docs.component';
 import { MastheadDocsComponent } from './spark-docs/masthead-docs/masthead-docs.component';
-import { InputDocsComponent } from './spark-docs/input-docs/input-docs.component';
-import { CardDocsComponent } from './spark-docs/card-docs/card-docs.component';
-import { StackDocsComponent } from './spark-docs/stack-docs/stack-docs.component';
-import { PromoDocsComponent } from './spark-docs/promo-docs/promo-docs.component';
-import { AwardDocsComponent } from './spark-docs/award-docs/award-docs.component';
-import { FooterDocsComponent } from './spark-docs/footer-docs/footer-docs.component';
-import { ToggleDocsComponent } from './spark-docs/toggle-docs/toggle-docs.component';
-import { TabbedNavigationDocsComponent } from './spark-docs/tabbed-navigation-docs/tabbed-navigation-docs.component';
-import { HighlightBoardDocsComponent } from './spark-docs/highlight-board-docs/highlight-board-docs.component';
-import { DictionaryDocsComponent } from './spark-docs/dictionary-docs/dictionary-docs.component';
-import { TableDocsComponent } from './spark-docs/table-docs/table-docs.component';
+import { ModalDocsComponent } from './spark-docs/modal-docs/modal-docs.component';
+import { NavigationDocsComponent } from './spark-docs/navigation-docs/navigation-docs.component';
+import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-found.component';
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
+import { PromoDocsComponent } from './spark-docs/promo-docs/promo-docs.component';
+import { StackDocsComponent } from './spark-docs/stack-docs/stack-docs.component';
+import { TabbedNavigationDocsComponent } from './spark-docs/tabbed-navigation-docs/tabbed-navigation-docs.component';
+import { TableDocsComponent } from './spark-docs/table-docs/table-docs.component';
+import { ToggleDocsComponent } from './spark-docs/toggle-docs/toggle-docs.component';
 
 const appRoutes: Routes = [
   { path: 'alerts', component: AlertDocsComponent },
@@ -58,7 +58,7 @@ const appRoutes: Routes = [
   { path: 'award', component: AwardDocsComponent },
   { path: 'toggle', component: ToggleDocsComponent },
   { path: 'tables', component: TableDocsComponent },
-  { path: 'tabbed-navigation', component: TabbedNavigationDocsComponent},
+  { path: 'tabbed-navigation', component: TabbedNavigationDocsComponent },
   { path: 'dictionary', component: DictionaryDocsComponent },
   { path: 'pagination', component: PaginationDocsComponent },
   { path: 'highlight-board', component: HighlightBoardDocsComponent },
@@ -97,10 +97,7 @@ const appRoutes: Routes = [
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { }
-    ),
+    RouterModule.forRoot(appRoutes, {}),
     BrowserModule,
     SparkAwardModule,
     SparkCardModule,
@@ -111,6 +108,4 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule {}

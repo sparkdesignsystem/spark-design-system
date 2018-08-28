@@ -104,7 +104,6 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class PaginationDocsComponent implements OnInit {
   private pagedItems: any[];
   private pagedItemsDefault: any[];
@@ -114,85 +113,90 @@ export class PaginationDocsComponent implements OnInit {
 
   totalRuns = [
     {
-      'distance': 6,
-      'unit': 'miles',
-      'time': 60
+      distance: 6,
+      unit: 'miles',
+      time: 60
     },
     {
-      'distance': 8,
-      'unit': 'miles',
-      'time': 81
+      distance: 8,
+      unit: 'miles',
+      time: 81
     },
     {
-      'distance': 4,
-      'unit': 'miles',
-      'time': 32
+      distance: 4,
+      unit: 'miles',
+      time: 32
     },
     {
-      'distance': 20,
-      'unit': 'miles',
-      'time': 180
+      distance: 20,
+      unit: 'miles',
+      time: 180
     },
     {
-      'distance': 10,
-      'unit': 'miles',
-      'time': 90
+      distance: 10,
+      unit: 'miles',
+      time: 90
     },
     {
-      'distance': 9.65,
-      'unit': 'miles',
-      'time': 89
+      distance: 9.65,
+      unit: 'miles',
+      time: 89
     },
     {
-      'distance': 50,
-      'unit': 'miles',
-      'time': 568
+      distance: 50,
+      unit: 'miles',
+      time: 568
     },
     {
-      'distance': 26.2,
-      'unit': 'miles',
-      'time': 208
+      distance: 26.2,
+      unit: 'miles',
+      time: 208
     },
     {
-      'distance': 3.1,
-      'unit': 'miles',
-      'time': 21
+      distance: 3.1,
+      unit: 'miles',
+      time: 21
     }
-  ]
+  ];
 
   longConfig = [
     {
-      'currentPage': 1,
-      'totalItems': this.totalRuns.length,
-      'itemsPerPage': 2
-    },
-  ]
+      currentPage: 1,
+      totalItems: this.totalRuns.length,
+      itemsPerPage: 2
+    }
+  ];
 
   totalRunsDefault = this.totalRuns.slice(2);
 
   defaultConfig = [
     {
-      'currentPage': 1,
-      'totalItems': this.totalRunsDefault.length,
-      'itemsPerPage': 1
-    },
-  ]
+      currentPage: 1,
+      totalItems: this.totalRunsDefault.length,
+      itemsPerPage: 1
+    }
+  ];
 
   runTime(time) {
     time = parseFloat(time);
     if (time > 0 && time / 60 < 1) {
       return time + ' Minutes';
-     } else {
-       time = time / 60;
-       return time.toFixed(2) + ' Hour(s)';
-     }
+    } else {
+      time = time / 60;
+      return time.toFixed(2) + ' Hour(s)';
+    }
   }
 
   goBack(event, type) {
     if (type === 'long') {
       this.showItemsGoBack(event, this.longConfig[0], this.totalRuns, type);
     } else {
-      this.showItemsGoBack(event, this.defaultConfig[0], this.totalRunsDefault, type);
+      this.showItemsGoBack(
+        event,
+        this.defaultConfig[0],
+        this.totalRunsDefault,
+        type
+      );
     }
   }
 
@@ -200,7 +204,12 @@ export class PaginationDocsComponent implements OnInit {
     if (type === 'long') {
       this.showItemsGoForward(event, this.longConfig[0], this.totalRuns, type);
     } else {
-      this.showItemsGoForward(event, this.defaultConfig[0], this.totalRunsDefault, type);
+      this.showItemsGoForward(
+        event,
+        this.defaultConfig[0],
+        this.totalRunsDefault,
+        type
+      );
     }
   }
 
@@ -215,53 +224,67 @@ export class PaginationDocsComponent implements OnInit {
   pageNum(event, config) {
     let currentPageNum: number;
     if (event === null) {
-      return currentPageNum = config.currentPage;
+      return (currentPageNum = config.currentPage);
     } else {
-      return currentPageNum = event.page;
+      return (currentPageNum = event.page);
     }
   }
 
   showItems(event, config, data, type) {
-    let startIndex = (this.pageNum(event, config) - 1) * config.itemsPerPage;
-    let endIndex = Math.min(startIndex + config.itemsPerPage - 1, config.totalItems - 1);
+    const startIndex = (this.pageNum(event, config) - 1) * config.itemsPerPage;
+    const endIndex = Math.min(
+      startIndex + config.itemsPerPage - 1,
+      config.totalItems - 1
+    );
     // Return new array with data item(s) to show per page
     if (type === 'long') {
-      return this.pagedItems = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItems = data.slice(startIndex, endIndex + 1));
     } else if (type === 'default') {
-      return this.pagedItemsDefault = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItemsDefault = data.slice(startIndex, endIndex + 1));
     } else {
-      return this.pagedItemsPager = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItemsPager = data.slice(startIndex, endIndex + 1));
     }
   }
 
   showItemsGoBack(event, config, data, type) {
-    let startIndex = (this.pageNum(event, config) - 2) * config.itemsPerPage;
-    let endIndex = Math.min(startIndex + config.itemsPerPage - 1, config.totalItems - 1);
+    const startIndex = (this.pageNum(event, config) - 2) * config.itemsPerPage;
+    const endIndex = Math.min(
+      startIndex + config.itemsPerPage - 1,
+      config.totalItems - 1
+    );
     if (type === 'long') {
-      return this.pagedItems = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItems = data.slice(startIndex, endIndex + 1));
     } else if (type === 'default') {
-      return this.pagedItemsDefault = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItemsDefault = data.slice(startIndex, endIndex + 1));
     } else {
-      return this.pagedItemsPager = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItemsPager = data.slice(startIndex, endIndex + 1));
     }
   }
 
   showItemsGoForward(event, config, data, type) {
-    let startIndex = this.pageNum(event, config) * config.itemsPerPage;
-    let endIndex = Math.min(startIndex + config.itemsPerPage - 1, config.totalItems - 1);
+    const startIndex = this.pageNum(event, config) * config.itemsPerPage;
+    const endIndex = Math.min(
+      startIndex + config.itemsPerPage - 1,
+      config.totalItems - 1
+    );
     if (type === 'long') {
-      return this.pagedItems = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItems = data.slice(startIndex, endIndex + 1));
     } else if (type === 'default') {
-      return this.pagedItemsDefault = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItemsDefault = data.slice(startIndex, endIndex + 1));
     } else {
-      return this.pagedItemsPager = data.slice(startIndex, endIndex + 1);
+      return (this.pagedItemsPager = data.slice(startIndex, endIndex + 1));
     }
   }
 
   ngOnInit() {
     // Setup pagination on init
     this.showItems(null, this.longConfig[0], this.totalRuns, 'long');
-    this.showItems(null, this.defaultConfig[0], this.totalRunsDefault, 'default');
+    this.showItems(
+      null,
+      this.defaultConfig[0],
+      this.totalRunsDefault,
+      'default'
+    );
     this.showItems(null, this.defaultConfig[0], this.totalRunsDefault, 'pager');
   }
 }

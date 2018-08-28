@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-intro-docs',
+  selector: 'sprk-intro-docs',
   templateUrl: './intro-docs.component.html',
   styleUrls: ['./intro-docs.component.css']
 })
 export class IntroDocsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -8,22 +8,19 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkDividerComponent {
-  @Input() additionalClasses: string;
+  @Input()
+  additionalClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-Divider'
-    ];
+    const classArray: string[] = ['sprk-c-Divider'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
   }
-
 }

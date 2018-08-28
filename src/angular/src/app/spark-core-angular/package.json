@@ -8,12 +8,18 @@
   },
   "author": "Quicken Loans",
   "license": "MIT",
-  "peerDependencies": {
-    "@angular/common": "^6.0.6",
-    "@angular/core": "^6.0.6",
-    "@angular/platform-browser": "^6.0.6"
-  },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "@angular/animations": "^6.1.4",
+    "@angular/common": "^6.1.4",
+    "@angular/compiler": "^6.1.4",
+    "@angular/core": "^6.1.4",
+    "@angular/forms": "^6.1.4",
+    "@angular/http": "^6.1.4",
+    "@angular/platform-browser": "^6.1.4",
+    "@angular/platform-browser-dynamic": "^6.1.4",
+    "@angular/router": "^6.1.4",
+    "@sparkdesignsystem/spark-core": "2.0.0",
+    "lodash": "^4.17.10",
+    "tiny-date-picker": "^3.2.6"
   }
 }

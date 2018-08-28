@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
 import { SparkAwardModule } from '../../spark-extras-angular/components/sprk-award/sprk-award.module';
 import { AwardDocsComponent } from './award-docs.component';
-import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AwardDocsComponent', () => {
   let component: AwardDocsComponent;
@@ -11,9 +11,8 @@ describe('AwardDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule, RouterTestingModule, SparkAwardModule],
-      declarations: [ AwardDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [AwardDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

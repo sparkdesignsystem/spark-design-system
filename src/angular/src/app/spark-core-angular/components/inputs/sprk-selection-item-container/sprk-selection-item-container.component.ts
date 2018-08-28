@@ -1,34 +1,34 @@
-import { OnInit, Component, Input, ContentChild } from '@angular/core';
+import { Component, ContentChild, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
+import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 
 @Component({
   selector: 'sprk-selection-item-container',
   template: `
     <div [ngClass]="getClasses()">
-      <ng-content select="[sprk-selection-input]"></ng-content>
-      <ng-content select="[sprk-selection-label]"></ng-content>
+      <ng-content select="[sprkSelectionInput]"></ng-content>
+      <ng-content select="[sprkSelectionLabel]"></ng-content>
     </div>`,
   styles: ['']
 })
-
 export class SparkSelectionItemContainerComponent implements OnInit {
-  @Input() additionalClasses: string;
+  @Input()
+  additionalClasses: string;
 
-  @ContentChild(SprkSelectionLabelDirective) label: SprkSelectionLabelDirective;
-  @ContentChild(SprkSelectionInputDirective) input: SprkSelectionInputDirective;
+  @ContentChild(SprkSelectionLabelDirective)
+  label: SprkSelectionLabelDirective;
+  @ContentChild(SprkSelectionInputDirective)
+  input: SprkSelectionInputDirective;
 
   id = _.uniqueId();
-  input_id= `input_${this.id}`;
+  input_id = `input_${this.id}`;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-b-SelectionContainer'
-    ];
+    const classArray: string[] = ['sprk-b-SelectionContainer'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }
@@ -36,7 +36,7 @@ export class SparkSelectionItemContainerComponent implements OnInit {
     return classArray.join(' ');
   }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
     if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
       this.input.ref.nativeElement.id = this.input_id;

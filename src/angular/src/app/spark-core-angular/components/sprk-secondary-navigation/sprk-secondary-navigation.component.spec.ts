@@ -9,11 +9,8 @@ describe('SparkSecondaryNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SparkSecondaryNavigationComponent
-      ]
-    })
-    .compileComponents();
+      declarations: [SparkSecondaryNavigationComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,7 +18,7 @@ describe('SparkSecondaryNavigationComponent', () => {
     component = fixture.componentInstance;
     outerNavElement = fixture.nativeElement.querySelector('nav');
     secondaryNavigationElement = fixture.nativeElement.querySelector('ul');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -31,11 +28,13 @@ describe('SparkSecondaryNavigationComponent', () => {
     component.additionalNavClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(outerNavElement.classList.toString()).toEqual('sprk-u-man');
-  })
+  });
 
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(secondaryNavigationElement.classList.toString()).toEqual('sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-u-man');
-  })
+    expect(secondaryNavigationElement.classList.toString()).toEqual(
+      'sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-u-man'
+    );
+  });
 });

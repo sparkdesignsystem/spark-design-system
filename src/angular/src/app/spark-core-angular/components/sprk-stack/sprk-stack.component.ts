@@ -9,17 +9,18 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkStackComponent {
-  @Input() splitAt: string;
-  @Input() itemSpacing: string;
-  @Input() analyticsString: string;
-  @Input() additionalClasses: string;
+  @Input()
+  splitAt: string;
+  @Input()
+  itemSpacing: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  additionalClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-o-Stack'
-    ];
+    const classArray: string[] = ['sprk-o-Stack'];
 
     // Handle the choice of item split breakpoint by adding CSS class
     switch (this.splitAt) {
@@ -64,12 +65,11 @@ export class SparkStackComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
   }
-
 }

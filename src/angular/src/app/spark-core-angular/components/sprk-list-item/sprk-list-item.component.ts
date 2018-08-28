@@ -12,19 +12,20 @@ import { Component, Input } from '@angular/core';
   styles: ['']
 })
 export class SparkListItemComponent {
-  @Input() analyticsString: string;
-  @Input() additionalClasses: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  additionalClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [''];
+    const classArray: string[] = [''];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
-    }
+      });
 
-    return classArray.join(' ');
+      return classArray.join(' ');
+    }
   }
-  constructor() { }
 }

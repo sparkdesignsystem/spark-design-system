@@ -3,11 +3,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
   <span
     additionalClasses="sprk-u-man"
-    sprk-field-error>Error Message</span>`
+    sprkFieldError>Error Message</span>`
 })
 class TestComponent {}
 
@@ -16,11 +16,10 @@ describe('Spark Field Error Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let spanElement: HTMLElement;
 
-  beforeEach(async(()=>{
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SprkFieldErrorDirective, TestComponent ]
-    })
-      .compileComponents();
+      declarations: [SprkFieldErrorDirective, TestComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
@@ -34,6 +33,8 @@ describe('Spark Field Error Directive', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     fixture.detectChanges();
-    expect(spanElement.classList.toString()).toEqual('sprk-b-ErrorText sprk-u-man');
+    expect(spanElement.classList.toString()).toEqual(
+      'sprk-b-ErrorText sprk-u-man'
+    );
   });
 });

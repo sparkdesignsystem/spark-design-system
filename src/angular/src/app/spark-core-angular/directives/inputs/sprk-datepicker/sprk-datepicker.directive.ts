@@ -1,21 +1,21 @@
-import { Directive, Input, OnInit, ElementRef, Inject } from '@angular/core';
+import { Directive, ElementRef, Inject, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-datepicker]'
+  selector: '[sprkDatepicker]'
 })
-
 export class SprkDatepickerDirective implements OnInit {
-
   constructor(
     public ref: ElementRef,
     @Inject('TinyDatePicker') public TinyDatePicker: any
-  ){};
+  ) {}
 
-  @Input() minDate: string = '01/1/2008';
-  @Input() maxDate: string = '01/1/2068';
+  @Input()
+  minDate = '01/1/2008';
+  @Input()
+  maxDate = '01/1/2068';
 
   ngOnInit(): void {
-    let input = this.ref.nativeElement;
+    const input = this.ref.nativeElement;
     if (this.TinyDatePicker) {
       this.TinyDatePicker(input, {
         mode: 'dp-below',
@@ -23,9 +23,14 @@ export class SprkDatepickerDirective implements OnInit {
         max: this.maxDate,
 
         format(date) {
-          return date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
+          return date
+            .toLocaleDateString('en-US', {
+              month: '2-digit',
+              day: '2-digit',
+              year: 'numeric'
+            })
             .replace(/[^ -~]/g, '');
-        },
+        }
       });
     }
   }

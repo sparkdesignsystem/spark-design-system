@@ -1,19 +1,19 @@
 import { Component, DebugElement } from '@angular/core';
-import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { SprkFormatterMonetaryDirective } from './sprk-formatter-monetary.directive';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { SprkFormatterMonetaryDirective } from './sprk-formatter-monetary.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
   <input
-  value="hi"
-  type="text"
-  placeholder="Enter some input."
-  sprk-formatter-monetary>
+    value="hi"
+    type="text"
+    placeholder="Enter some input."
+    sprkFormatterMonetary>
   `
 })
-class TestComponent {};
+class TestComponent {}
 
 describe('SprkFormatterMonetaryDirective', () => {
   let component: TestComponent;
@@ -22,10 +22,7 @@ describe('SprkFormatterMonetaryDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SprkFormatterMonetaryDirective,
-        TestComponent
-      ]
+      declarations: [SprkFormatterMonetaryDirective, TestComponent]
     });
   });
 

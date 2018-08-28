@@ -5,13 +5,18 @@ import { Component, Input } from '@angular/core';
   template: `
   <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}">
     <h2
-      sprk-stack-item
-      class="sprk-o-Stack__item sprk-o-Stack__item--center sprk-b-TypeDisplayFive sprk-b-Measure sprk-b-Measure--narrow sprk-u-TextAlign--center">
+      sprkStackItem
+      class="
+        sprk-o-Stack__item
+        sprk-o-Stack__item--center
+        sprk-b-TypeDisplayFive
+        sprk-b-Measure sprk-b-Measure--narrow
+        sprk-u-TextAlign--center">
       {{ title }}
     </h2>
 
     <div
-      sprk-stack-item
+      sprkStackItem
       [ngClass]="getClasses()">
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
@@ -36,7 +41,7 @@ import { Component, Input } from '@angular/core';
 
     <sprk-toggle
       *ngIf="disclaimer !== 'false'"
-      sprk-stack-item
+      sprkStackItem
       toggleType="base"
       title="{{ disclaimerTitle }}"
       body="{{ disclaimerCopy }}"
@@ -46,28 +51,44 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkAwardComponent {
-  @Input() splitAt: string;
-  @Input() imgOneAlt: string;
-  @Input() imgOneHref: string;
-  @Input() imgTwoHref: string;
-  @Input() imgTwoAlt: string;
-  @Input() imgOneSrc: string;
-  @Input() imgTwoSrc: string;
-  @Input() analyticsStringImgOne: string;
-  @Input() analyticsStringImgTwo: string;
-  @Input() analyticsStringDisclaimer: string;
-  @Input() additionalClasses: string;
-  @Input() additionalClassesImgOne: string;
-  @Input() additionalClassesImgTwo: string;
-  @Input() title: string;
-  @Input() disclaimerTitle: string;
-  @Input() disclaimerCopy: string;
-  @Input() disclaimer: string;
+  @Input()
+  splitAt: string;
+  @Input()
+  imgOneAlt: string;
+  @Input()
+  imgOneHref: string;
+  @Input()
+  imgTwoHref: string;
+  @Input()
+  imgTwoAlt: string;
+  @Input()
+  imgOneSrc: string;
+  @Input()
+  imgTwoSrc: string;
+  @Input()
+  analyticsStringImgOne: string;
+  @Input()
+  analyticsStringImgTwo: string;
+  @Input()
+  analyticsStringDisclaimer: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  additionalClassesImgOne: string;
+  @Input()
+  additionalClassesImgTwo: string;
+  @Input()
+  title: string;
+  @Input()
+  disclaimerTitle: string;
+  @Input()
+  disclaimerCopy: string;
+  @Input()
+  disclaimer: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium'
     ];
 
@@ -96,27 +117,27 @@ export class SparkAwardComponent {
   }
 
   getClassesImgOne(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-o-Stack__item sprk-o-Stack__item--center'
     ];
 
     if (this.additionalClassesImgOne) {
-      this.additionalClassesImgOne.split(' ').forEach((className) => {
+      this.additionalClassesImgOne.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
     return classArray.join(' ');
   }
 
   getClassesImgTwo(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-o-Stack__item sprk-o-Stack__item--center'
     ];
 
     if (this.additionalClassesImgTwo) {
-      this.additionalClassesImgTwo.split(' ').forEach((className) => {
+      this.additionalClassesImgTwo.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
     return classArray.join(' ');
   }

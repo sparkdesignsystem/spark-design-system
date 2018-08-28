@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Column Comparison 
+        Column Comparison
       </h2>
-      
+
       <sprk-table>
-        <thead sprk-table-head>
+        <thead sprkTableHead>
           <tr>
             <th>Column Heading</th>
             <th>Column Heading</th>
@@ -42,20 +42,20 @@ import { Component } from '@angular/core';
     </div>
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Grouped Columns 
+        Grouped Columns
       </h2>
-      
+
       <sprk-table>
-        <thead sprk-table-head>
+        <thead sprkTableHead>
           <tr>
             <th rowspan="2">Column Heading</th>
             <th colspan="3">Column Heading</th>
             <th rowspan="2">Column Heading</th>
           </tr>
           <tr>
-            <th sprk-table-grouped-column>SubHeading</th>
-            <th sprk-table-grouped-column>SubHeading</th>
-            <th sprk-table-grouped-column>SubHeading</th>
+            <th sprkTableGroupedColumn>SubHeading</th>
+            <th sprkTableGroupedColumn>SubHeading</th>
+            <th sprkTableGroupedColumn>SubHeading</th>
           </tr>
         </thead>
         <tbody>
@@ -92,13 +92,13 @@ import { Component } from '@angular/core';
     </div>
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Row Comparison 
-      </h2> 
-    
+        Row Comparison
+      </h2>
+
       <sprk-table>
-        <thead sprk-table-head>
+        <thead sprkTableHead>
           <tr>
-            <th sprk-table-empty-heading></th>
+            <th sprkTableEmptyHeading></th>
             <th>Column Heading</th>
             <th>Column Heading</th>
             <th>Column Heading</th>
@@ -106,25 +106,25 @@ import { Component } from '@angular/core';
         </thead>
         <tbody>
           <tr>
-            <th sprk-table-row-heading>Row Heading</th>
+            <th sprkTableRowHeading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
           </tr>
           <tr>
-            <th sprk-table-row-heading>Row Heading</th>
+            <th sprkTableRowHeading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
           </tr>
           <tr>
-            <th sprk-table-row-heading>Row Heading</th>
+            <th sprkTableRowHeading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
           </tr>
           <tr>
-            <th sprk-table-row-heading>Row Heading</th>
+            <th sprkTableRowHeading>Row Heading</th>
             <td>Data 1</td>
             <td>Data 2</td>
             <td>Data 3</td>
@@ -136,5 +136,5 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class TableDocsComponent {
-  constructor() { }
+  constructor() {}
 }

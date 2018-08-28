@@ -2,34 +2,32 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'sprk-table',
-  template:
-    `<div [ngClass]="getClasses()">
+  template: `<div [ngClass]="getClasses()">
       <table [ngClass]="getTableClasses()">
         <ng-content></ng-content>
       </table>
     </div>`
 })
-
 export class SparkTableComponent {
-  @Input() additionalClasses: string;
-  @Input() additionalTableClasses: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  additionalTableClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-b-TableContainer'
-    ];
+    const classArray: string[] = ['sprk-b-TableContainer'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
   }
 
   getTableClasses(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-b-Table',
       'sprk-b-Table--spacing-medium',
       'sprk-b-Table--striped-even',
@@ -38,9 +36,9 @@ export class SparkTableComponent {
     ];
 
     if (this.additionalTableClasses) {
-      this.additionalTableClasses.split(' ').forEach((className) => {
+      this.additionalTableClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

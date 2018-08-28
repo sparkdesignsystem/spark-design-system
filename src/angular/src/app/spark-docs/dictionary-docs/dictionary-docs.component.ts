@@ -5,15 +5,15 @@ import { Component } from '@angular/core';
   template: `
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Dictionary 
+        Dictionary
       </h2>
-      
+
       <sprk-dictionary [data]="keyValuePairs"></sprk-dictionary>
-      
+
       <h2 class="drizzle-b-h2">
-        Striped Dictionary 
+        Striped Dictionary
       </h2>
-      
+
       <sprk-dictionary [data]="keyValuePairs" dictionaryType="striped"></sprk-dictionary>
     </div>
   `,
@@ -28,5 +28,5 @@ export class DictionaryDocsComponent {
     'Work Phone': '(555) 555-5555',
     'Work Extension': '55555'
   };
-  constructor() { }
+  constructor() {}
 }
