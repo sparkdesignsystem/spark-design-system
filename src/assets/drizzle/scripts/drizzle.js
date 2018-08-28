@@ -14,6 +14,7 @@ import { mobileNav } from './navigation/mobileNav';
 import { hideWaitModal } from './modals';
 
 import { codeExampleSwitch } from './code-example-switch';
+import loadSwitchSetting from './load-switch-setting';
 
 const nav = document.getElementById('nav');
 const navMenu = document.getElementById('nav-menu');
@@ -33,3 +34,7 @@ clipboardSuccess();
 mobileNav();
 hideWaitModal();
 codeExampleSwitch();
+
+window.addEventListener('load', () => {
+  loadSwitchSetting();
+});
