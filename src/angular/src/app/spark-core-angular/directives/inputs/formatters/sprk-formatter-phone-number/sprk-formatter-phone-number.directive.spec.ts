@@ -1,19 +1,19 @@
 import { Component, DebugElement } from '@angular/core';
-import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { SprkFormatterPhoneNumberDirective } from './sprk-formatter-phone-number.directive';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { SprkFormatterPhoneNumberDirective } from './sprk-formatter-phone-number.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
   <input
-  value="hi"
-  type="text"
-  placeholder="Enter some input."
-  sprk-formatter-phone-number>
+    value="hi"
+    type="text"
+    placeholder="Enter some input."
+    sprkFormatterPhoneNumber>
   `
 })
-class TestComponent {};
+class TestComponent {}
 
 describe('SprkFormatterPhoneNumberDirective', () => {
   let component: TestComponent;
@@ -22,10 +22,7 @@ describe('SprkFormatterPhoneNumberDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SprkFormatterPhoneNumberDirective,
-        TestComponent
-      ]
+      declarations: [SprkFormatterPhoneNumberDirective, TestComponent]
     });
   });
 

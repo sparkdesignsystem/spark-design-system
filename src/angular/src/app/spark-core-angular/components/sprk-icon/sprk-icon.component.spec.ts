@@ -9,15 +9,14 @@ describe('SparkIconComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SparkIconComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkIconComponent);
     component = fixture.componentInstance;
     iconElement = fixture.nativeElement.querySelector('svg');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -35,8 +34,12 @@ describe('SparkIconComponent', () => {
   it('should add the correct icon based on the icon type set', () => {
     component.iconType = 'bell';
     fixture.detectChanges();
-    expect(iconElement.querySelector('use').hasAttribute('xlink:href')).toBeTruthy();
-    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual('#bell');
+    expect(
+      iconElement.querySelector('use').hasAttribute('xlink:href')
+    ).toBeTruthy();
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#bell'
+    );
   });
 
   it('should add the correct classes if iconType has no value, but additionalClasses does', () => {

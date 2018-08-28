@@ -1,6 +1,6 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
 import { SparkAwardComponent } from './spark-extras-angular/components/sprk-award/sprk-award.component';
 import { SparkCardComponent } from './spark-extras-angular/components/sprk-card/sprk-card.component';
@@ -10,17 +10,14 @@ import { SparkHighlightBoardComponent } from './spark-extras-angular/components/
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        SparkCoreAngularModule
-      ],
+      imports: [RouterTestingModule, SparkCoreAngularModule],
       declarations: [
         AppComponent,
         SparkAwardComponent,
         SparkDictionaryComponent,
         SparkCardComponent,
-        SparkHighlightBoardComponent,
-      ],
+        SparkHighlightBoardComponent
+      ]
     }).compileComponents();
   }));
 

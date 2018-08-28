@@ -3,10 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkTableGroupedColumnDirective } from './sprk-table-grouped-column.directive';
 
 @Component({
-  selector: 'test-component',
-  template: `<th additionalClasses="sprk-u-man" sprk-table-grouped-column></th>`
+  selector: 'sprk-test-component',
+  template: `<th additionalClasses="sprk-u-man" sprkTableGroupedColumn></th>`
 })
-
 class TestComponent {}
 
 describe('SprkTableGroupedColumnDirective', () => {
@@ -31,5 +30,5 @@ describe('SprkTableGroupedColumnDirective', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     expect(element.classList.contains('sprk-u-man')).toEqual(true);
-  })
+  });
 });

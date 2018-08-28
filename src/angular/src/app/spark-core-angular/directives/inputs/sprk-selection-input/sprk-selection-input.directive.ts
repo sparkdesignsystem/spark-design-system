@@ -1,37 +1,38 @@
-import { Directive, Input, OnInit, OnChanges, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-selection-input]'
+  selector: '[sprkSelectionInput]'
 })
-
 export class SprkSelectionInputDirective implements OnInit, OnChanges {
-  @Input() additionalClasses: string;
-  @Input() valid: boolean = true;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  valid = true;
 
-  constructor(public ref: ElementRef){};
+  constructor(public ref: ElementRef) {}
 
-  getClasses(): Array<String> {
-    let classArray: Array<String> = [];
+  getClasses(): string[] {
+    const classArray: string[] = [];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray;
   }
 
   ngOnInit(): void {
-    this.getClasses().forEach((item) => {
+    this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
-    })
+    });
   }
 
   ngOnChanges(): void {
     this.ref.nativeElement.classList = '';
-    this.getClasses().forEach((item) => {
+    this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
-    })
+    });
   }
 }

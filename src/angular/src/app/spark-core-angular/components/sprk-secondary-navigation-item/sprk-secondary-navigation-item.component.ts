@@ -9,20 +9,22 @@ import { Component, Input } from '@angular/core';
         [attr.data-analytics]="analyticsString">{{ text }}</a>
     </li>
   `,
-  styles: [
-    ':host:last-child li { margin-right: 0 !important;}'
-  ]
+  styles: [':host:last-child li { margin-right: 0 !important;}']
 })
-
 export class SparkSecondaryNavigationItemComponent {
-  @Input() additionalClasses: string;
-  @Input() analyticsString: string;
-  @Input() href: string;
-  @Input() text: string;
-  @Input() spacing: string = 'medium';
+  @Input()
+  additionalClasses: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  href: string;
+  @Input()
+  text: string;
+  @Input()
+  spacing = 'medium';
 
   getClasses(): string {
-    let classArray: Array<String> = [];
+    const classArray: string[] = [];
 
     switch (this.spacing) {
       case 'tiny':
@@ -43,9 +45,9 @@ export class SparkSecondaryNavigationItemComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

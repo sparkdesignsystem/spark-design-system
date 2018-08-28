@@ -1,25 +1,24 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkInputContainerComponent } from './sprk-input-container.component';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { By } from '@angular/platform-browser';
+import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
+import { SparkInputContainerComponent } from './sprk-input-container.component';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
     <sprk-input-container>
-        <label sprk-label>Label!</label>
-        <input sprk-input>
+        <label sprkLabel>Label!</label>
+        <input sprkInput>
         <div sprk-input-icon>Icon</div>
-        <p sprk-helper-text>Helper Text!</p>
-        <span sprk-field-error>Error Message!</span>
+        <p sprkHelperText>Helper Text!</p>
+        <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
   `
 })
 class TestComponent {}
-
 
 describe('SparkInputContainerComponent', () => {
   let testFixture: ComponentFixture<TestComponent>;
@@ -43,27 +42,32 @@ describe('SparkInputContainerComponent', () => {
         TestComponent,
         SparkInputContainerComponent
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     testFixture = TestBed.createComponent(TestComponent);
     component = testFixture.componentInstance;
 
-    inputContainerFixture = TestBed.createComponent(SparkInputContainerComponent);
+    inputContainerFixture = TestBed.createComponent(
+      SparkInputContainerComponent
+    );
     inputContainerComponent = inputContainerFixture.componentInstance;
 
-    inputContainerElement = inputContainerFixture.nativeElement.querySelector('div');
+    inputContainerElement = inputContainerFixture.nativeElement.querySelector(
+      'div'
+    );
     iconWrapperElement = inputContainerElement.querySelector('div');
 
-    labelElement = testFixture.debugElement.query(By.css('label')).nativeElement;
-    inputElement = testFixture.debugElement.query(By.css('input')).nativeElement;
+    labelElement = testFixture.debugElement.query(By.css('label'))
+      .nativeElement;
+    inputElement = testFixture.debugElement.query(By.css('input'))
+      .nativeElement;
     errorElement = testFixture.debugElement.query(By.css('span')).nativeElement;
 
     inputContainerComponent.ngOnInit();
     testFixture.detectChanges();
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -72,20 +76,24 @@ describe('SparkInputContainerComponent', () => {
   it('should add classes when additionalClasses has a value', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
-    expect(inputContainerElement.classList.toString()).toEqual('sprk-b-InputContainer sprk-u-man');
-  })
+    expect(inputContainerElement.classList.toString()).toEqual(
+      'sprk-b-InputContainer sprk-u-man'
+    );
+  });
 
   it('should add classes to the icon container when iconContainerClasses', () => {
     inputContainerComponent.iconContainerClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(iconWrapperElement.classList.toString()).toEqual('sprk-u-man');
-  })
+  });
 
   it('should set the for on the label to match the id on the input', () => {
     expect(labelElement.getAttribute('for')).toEqual(inputElement.id);
   });
 
   it('should set the aria-describedby attribute on the input to match the id on the error field', () => {
-    expect(inputElement.getAttribute('aria-describedby')).toEqual(errorElement.id);
+    expect(inputElement.getAttribute('aria-describedby')).toEqual(
+      errorElement.id
+    );
   });
 });

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkPaginationComponent } from './sprk-pagination.component';
 import { SparkListComponent } from '../sprk-list/sprk-list.component';
+import { SparkPaginationComponent } from './sprk-pagination.component';
 
 describe('SparkPaginationComponent', () => {
   let component: SparkPaginationComponent;
@@ -9,12 +9,8 @@ describe('SparkPaginationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SparkPaginationComponent,
-        SparkListComponent
-      ]
-    })
-    .compileComponents();
+      declarations: [SparkPaginationComponent, SparkListComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -54,7 +50,7 @@ describe('SparkPaginationComponent', () => {
     component.totalItems = 100;
     component.itemsPerPage = 25;
     fixture.detectChanges();
-    let pageItem = element.querySelectorAll('.sprk-b-Link');
+    const pageItem = element.querySelectorAll('.sprk-b-Link');
     expect(pageItem[1].hasAttribute('aria-label')).toEqual(true);
     expect(pageItem[1].getAttribute('aria-label')).toEqual('Page 1');
     component.currentPage = 3;
@@ -82,8 +78,12 @@ describe('SparkPaginationComponent', () => {
   it('should set the data-analytics attribute given a value in the analyticsStringLinkPrev Input', () => {
     component.analyticsStringLinkPrev = 'previous';
     fixture.detectChanges();
-    expect(element.querySelector('.sprk-b-Link').hasAttribute('data-analytics')).toEqual(true);
-    expect(element.querySelector('.sprk-b-Link').getAttribute('data-analytics')).toEqual('previous');
+    expect(
+      element.querySelector('.sprk-b-Link').hasAttribute('data-analytics')
+    ).toEqual(true);
+    expect(
+      element.querySelector('.sprk-b-Link').getAttribute('data-analytics')
+    ).toEqual('previous');
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringLinkNext Input', () => {
@@ -95,62 +95,62 @@ describe('SparkPaginationComponent', () => {
     expect(item.getAttribute('data-analytics')).toEqual('foo');
   });
 
-  it('should emit pageClick when an individual page is clicked', (done) => {
-   let called = false;
-   component.currentPage = 2;
-   component.totalItems = 3;
-   component.itemsPerPage = 1;
-   fixture.detectChanges();
-   component.pageClick.subscribe((g) => {
+  it('should emit pageClick when an individual page is clicked', done => {
+    let called = false;
+    component.currentPage = 2;
+    component.totalItems = 3;
+    component.itemsPerPage = 1;
+    fixture.detectChanges();
+    component.pageClick.subscribe(g => {
       called = true;
       done();
-    })
+    });
     let pageItem = element.querySelectorAll('.sprk-b-Link');
     pageItem = pageItem[1];
     pageItem.click();
     expect(called).toEqual(true);
   });
 
-  it('should emit previousClick when previous link is clicked', (done) => {
-   let called = false;
-   component.currentPage = 2;
-   fixture.detectChanges();
-   component.previousClick.subscribe((g) => {
+  it('should emit previousClick when previous link is clicked', done => {
+    let called = false;
+    component.currentPage = 2;
+    fixture.detectChanges();
+    component.previousClick.subscribe(g => {
       called = true;
       done();
-    })
+    });
     let item = element.querySelectorAll('.sprk-b-Link');
     item = item[0];
     item.click();
     expect(called).toEqual(true);
   });
 
-  it('should emit previousClick when goBack is ran', (done) => {
-   let called = false;
-   component.currentPage = 2;
-   component.goBack({preventDefault: ()=>{}}, 2);
-   component.goForward({preventDefault: ()=>{}}, 2);
-   fixture.detectChanges();
-   component.previousClick.subscribe((g) => {
+  it('should emit previousClick when goBack is ran', done => {
+    let called = false;
+    component.currentPage = 2;
+    component.goBack({ preventDefault: () => {} }, 2);
+    component.goForward({ preventDefault: () => {} }, 2);
+    fixture.detectChanges();
+    component.previousClick.subscribe(g => {
       called = true;
       done();
-    })
+    });
     let item = element.querySelectorAll('.sprk-b-Link');
     item = item[0];
     item.click();
     expect(called).toEqual(true);
   });
 
-  it('should emit nextClick when next link is clicked', (done) => {
-   let called = false;
-   component.currentPage = 1;
-   component.totalItems = 3;
-   component.itemsPerPage = 1;
-   fixture.detectChanges();
-   component.nextClick.subscribe((g) => {
+  it('should emit nextClick when next link is clicked', done => {
+    let called = false;
+    component.currentPage = 1;
+    component.totalItems = 3;
+    component.itemsPerPage = 1;
+    fixture.detectChanges();
+    component.nextClick.subscribe(g => {
       called = true;
       done();
-    })
+    });
     let item = element.querySelectorAll('.sprk-b-Link');
     item = item[4];
     item.click();

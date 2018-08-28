@@ -1,20 +1,20 @@
 import { Component, DebugElement } from '@angular/core';
-import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { SprkSelectionInputDirective } from './sprk-selection-input.directive';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { SprkSelectionInputDirective } from './sprk-selection-input.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
   <input
-  value="hi"
-  type="text"
-  additionalClasses="sprk-u-man"
-  placeholder="Enter some input."
-  sprk-selection-input>
+    value="hi"
+    type="text"
+    additionalClasses="sprk-u-man"
+    placeholder="Enter some input."
+    sprkSelectionInput>
   `
 })
-class TestComponent {};
+class TestComponent {}
 
 describe('SprkSelectionInputDirective', () => {
   let component: TestComponent;
@@ -23,10 +23,7 @@ describe('SprkSelectionInputDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SprkSelectionInputDirective,
-        TestComponent
-      ]
+      declarations: [SprkSelectionInputDirective, TestComponent]
     });
   });
 
@@ -38,7 +35,8 @@ describe('SprkSelectionInputDirective', () => {
   });
 
   it('should add classes if additionalClasses has a value', () => {
-    expect(inputElement.nativeElement.classList.toString())
-      .toEqual('sprk-u-man');
+    expect(inputElement.nativeElement.classList.toString()).toEqual(
+      'sprk-u-man'
+    );
   });
 });

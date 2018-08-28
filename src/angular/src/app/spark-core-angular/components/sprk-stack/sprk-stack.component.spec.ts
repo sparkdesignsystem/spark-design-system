@@ -9,18 +9,15 @@ describe('SparkStackComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SparkStackComponent
-      ]
-    })
-    .compileComponents();
+      declarations: [SparkStackComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkStackComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -94,7 +91,9 @@ describe('SparkStackComponent', () => {
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Stack sprk-u-pam sprk-u-man'
+    );
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {

@@ -39,28 +39,31 @@ import * as _ from 'lodash';
     </li>`,
   styles: ['']
 })
-
 export class SparkNarrowNavigationItemComponent {
-  @Input() additionalClasses: string;
-  @Input() analyticsString: string;
-  @Input() href: string;
-  @Input() text: string;
-  @Input() subNav: Object;
-  @Input() isOpen: boolean = false;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  href: string;
+  @Input()
+  text: string;
+  @Input()
+  subNav: object;
+  @Input()
+  isOpen = false;
 
-  iconType: string = 'chevron-down';
+  iconType = 'chevron-down';
   componentID = _.uniqueId();
   controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-Accordion__item'
-    ];
+    const classArray: string[] = ['sprk-c-Accordion__item'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
@@ -69,10 +72,8 @@ export class SparkNarrowNavigationItemComponent {
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
-    if (this.iconType === 'chevron-down') {
-      this.iconType = 'chevron-up';
-    } else {
-      this.iconType = 'chevron-down';
-    }
+    this.iconType === 'chevron-down'
+      ? (this.iconType = 'chevron-up')
+      : (this.iconType = 'chevron-down');
   }
 }

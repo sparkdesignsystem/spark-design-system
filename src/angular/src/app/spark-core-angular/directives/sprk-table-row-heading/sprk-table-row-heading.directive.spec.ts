@@ -3,10 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkTableRowHeadingDirective } from './sprk-table-row-heading.directive';
 
 @Component({
-  selector: 'test-component',
-  template: `<th additionalClasses="sprk-u-man" sprk-table-row-heading></th>`
+  selector: 'sprk-test-component',
+  template: `<th additionalClasses="sprk-u-man" sprkTableRowHeading></th>`
 })
-
 class TestComponent {}
 
 describe('SprkTableRowHeadingDirective', () => {
@@ -31,5 +30,5 @@ describe('SprkTableRowHeadingDirective', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     expect(element.classList.contains('sprk-u-man')).toEqual(true);
-  })
+  });
 });

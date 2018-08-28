@@ -12,26 +12,26 @@ import { Component, Input } from '@angular/core';
     </dl>
   </div>`
 })
-
 export class SparkDictionaryComponent {
-  @Input() data: Object = {};
-  @Input() dictionaryType: string = 'base';
-  @Input() additionalClasses: string;
-  objectKeys: Function = Object.keys;
+  @Input()
+  data: object = {};
+  @Input()
+  dictionaryType = 'base';
+  @Input()
+  additionalClasses: string;
+  objectKeys = Object.keys;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-Dictionary'
-    ];
+    const classArray: string[] = ['sprk-c-Dictionary'];
 
     if (this.dictionaryType === 'striped') {
       classArray.push('sprk-c-Dictionary--striped');
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

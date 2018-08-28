@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkAwardComponent } from './sprk-award.component';
-import { SparkIconComponent } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.component';
-import { SparkToggleComponent } from '../../../spark-core-angular/components/sprk-toggle/sprk-toggle.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { SparkIconComponent } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.component';
 import { SparkStackComponent } from '../../../spark-core-angular/components/sprk-stack/sprk-stack.component';
+import { SparkToggleComponent } from '../../../spark-core-angular/components/sprk-toggle/sprk-toggle.component';
+import { SparkAwardComponent } from './sprk-award.component';
 
 describe('SparkAwardComponent', () => {
   let component: SparkAwardComponent;
@@ -19,15 +19,14 @@ describe('SparkAwardComponent', () => {
         SparkIconComponent,
         SparkStackComponent
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkAwardComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -36,25 +35,33 @@ describe('SparkAwardComponent', () => {
   it('getClasses should match what gets set', () => {
     component.splitAt = 'huge';
     fixture.detectChanges();
-    expect(element.querySelector('div').classList.toString()).toEqual(component.getClasses());
+    expect(element.querySelector('div').classList.toString()).toEqual(
+      component.getClasses()
+    );
   });
 
   it('should add the correct class if splitAt is not set', () => {
     component.splitAt = '';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium');
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium'
+    );
   });
 
   it('should add the correct class if splitAt is set', () => {
     component.splitAt = 'tiny';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs');
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs'
+    );
   });
 
   it('should add the correct class if splitAt is set', () => {
     component.splitAt = 'small';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s');
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s'
+    );
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringImgOne Input', () => {
@@ -68,7 +75,9 @@ describe('SparkAwardComponent', () => {
     component.disclaimerCopy = 'placeholder';
     component.analyticsStringImgOne = str;
     fixture.detectChanges();
-    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(str);
+    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
+      str
+    );
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringImgTwo Input', () => {

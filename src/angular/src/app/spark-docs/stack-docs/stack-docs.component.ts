@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-stack itemSpacing="medium">
-        <sprk-button sprk-stack-item>Hello, World.</sprk-button>
-        <sprk-button sprk-stack-item buttonType="secondary">Hello, World.</sprk-button>
+        <sprk-button sprkStackItem>Hello, World.</sprk-button>
+        <sprk-button sprkStackItem buttonType="secondary">Hello, World.</sprk-button>
       </sprk-stack>
     </div>
 
@@ -20,8 +20,8 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-stack itemSpacing="huge" splitAt="medium">
-        <sprk-button sprk-stack-item>Hello, World.</sprk-button>
-        <sprk-button sprk-stack-item buttonType="secondary">Hello, World.</sprk-button>
+        <sprk-button sprkStackItem>Hello, World.</sprk-button>
+        <sprk-button sprkStackItem buttonType="secondary">Hello, World.</sprk-button>
       </sprk-stack>
     </div>
 
@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
 
       <sprk-stack itemSpacing="huge" splitAt="large">
         <sprk-card
-          sprk-stack-item
+          sprkStackItem
           additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
           cardType="teaser"
           title="Test Card for Stack!"
@@ -47,7 +47,7 @@ import { Component } from '@angular/core';
         </sprk-card>
 
         <sprk-card
-          sprk-stack-item
+          sprkStackItem
           additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
           cardType="teaser"
           title="Spark Design System"
@@ -62,7 +62,7 @@ import { Component } from '@angular/core';
         </sprk-card>
 
         <sprk-card
-          sprk-stack-item
+          sprkStackItem
           additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
           cardType="teaser"
           title="Spark Cards in a Stack Component"
@@ -81,6 +81,5 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class StackDocsComponent {
-
-  constructor() { }
+  constructor() {}
 }

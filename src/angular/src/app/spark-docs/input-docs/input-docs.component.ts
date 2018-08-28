@@ -7,86 +7,86 @@ import { Component } from '@angular/core';
         <h2 class="drizzle-b-h2">Inputs</h2>
         <form (submit)="onSubmit($event)" #sampleForm="ngForm">
           <sprk-input-container>
-            <label sprk-label>Text Input *</label>
-            <input 
-              name="text_input" 
+            <label sprkLabel>Text Input *</label>
+            <input
+              name="text_input"
               [additionalClasses]="textInput.invalid && textInput.dirty ? 'sprk-b-TextInput--error': ''"
-              type="text" 
+              type="text"
               [(ngModel)]="text_input"
               required
               #textInput="ngModel"
-              sprk-input>
-            <p sprk-helper-text>Please enter some input.</p>  
-            <span 
-              [hidden]="textInput.valid || textInput.pristine" 
-              sprk-field-error>This field is required.</span>
+              sprkInput>
+            <p sprkHelperText>Please enter some input.</p>
+            <span
+              [hidden]="textInput.valid || textInput.pristine"
+              sprkFieldError>This field is required.</span>
           </sprk-input-container>
           <sprk-selection-container>
-            <label sprk-label>Checkbox Group Label</label>
+            <label sprkLabel>Checkbox Group Label</label>
             <sprk-selection-item-container>
-              <input 
-                type="checkbox" 
-                name="checkbox_input" 
-                [(ngModel)]="checkbox_input1" 
-                sprk-selection-input
-                #checkboxInput1="ngModel"> 
-              <label sprk-selection-label>Item 1</label>
+              <input
+                type="checkbox"
+                name="checkbox_input"
+                [(ngModel)]="checkbox_input1"
+                sprkSelectionInput
+                #checkboxInput1="ngModel">
+              <label sprkSelectionLabel>Item 1</label>
             </sprk-selection-item-container>
             <sprk-selection-item-container>
-              <input 
-                type="checkbox" 
-                name="checkbox_input" 
-                [(ngModel)]="checkbox_input2" 
-                sprk-selection-input
-                #checkboxInput2="ngModel"> 
-              <label sprk-selection-label>Item 2</label>
+              <input
+                type="checkbox"
+                name="checkbox_input"
+                [(ngModel)]="checkbox_input2"
+                sprkSelectionInput
+                #checkboxInput2="ngModel">
+              <label sprkSelectionLabel>Item 2</label>
             </sprk-selection-item-container>
             <sprk-selection-item-container>
-              <input 
-                type="checkbox" 
-                name="checkbox_input" 
-                [(ngModel)]="checkbox_input3" 
-                sprk-selection-input
-                #checkboxInput3="ngModel"> 
-              <label sprk-selection-label>Item 3</label>
+              <input
+                type="checkbox"
+                name="checkbox_input"
+                [(ngModel)]="checkbox_input3"
+                sprkSelectionInput
+                #checkboxInput3="ngModel">
+              <label sprkSelectionLabel>Item 3</label>
             </sprk-selection-item-container>
-          </sprk-selection-container> 
+          </sprk-selection-container>
           <sprk-selection-container>
-            <label sprk-label>Radio Group Label</label>
+            <label sprkLabel>Radio Group Label</label>
             <sprk-selection-item-container>
-              <input 
-                type="radio" 
+              <input
+                type="radio"
                 value="1"
-                name="radio_input" 
+                name="radio_input"
                 [(ngModel)]="radio_input"
-                sprk-selection-input
-                #radioInput="ngModel"> 
-              <label sprk-selection-label>Item 1</label>
+                sprkSelectionInput
+                #radioInput="ngModel">
+              <label sprkSelectionLabel>Item 1</label>
             </sprk-selection-item-container>
             <sprk-selection-item-container>
-              <input 
-                type="radio" 
+              <input
+                type="radio"
                 value="2"
-                name="radio_input" 
-                sprk-selection-input
+                name="radio_input"
+                sprkSelectionInput
                 [(ngModel)]="radio_input"
-                #radioInput="ngModel"> 
-              <label sprk-selection-label>Item 2</label>
+                #radioInput="ngModel">
+              <label sprkSelectionLabel>Item 2</label>
             </sprk-selection-item-container>
             <sprk-selection-item-container>
-              <input 
-                type="radio" 
+              <input
+                type="radio"
                 value="3"
-                name="radio_input" 
-                sprk-selection-input
+                name="radio_input"
+                sprkSelectionInput
                 [(ngModel)]="radio_input"
-                #radioInput="ngModel"> 
-              <label sprk-selection-label>Item 3</label>
+                #radioInput="ngModel">
+              <label sprkSelectionLabel>Item 3</label>
             </sprk-selection-item-container>
-          </sprk-selection-container> 
+          </sprk-selection-container>
           <sprk-input-container>
-            <label sprk-label>Select Box Label</label>
-            <select class="sprk-b-Select" id="select-normal" aria-describedby="select-normal--error-container" sprk-input>
+            <label sprkLabel>Select Box Label</label>
+            <select class="sprk-b-Select" id="select-normal" aria-describedby="select-normal--error-container" sprkInput>
               <option value="none">Please choose...</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
@@ -99,15 +99,15 @@ import { Component } from '@angular/core';
             </select>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>Textarea Input</label>
+            <label sprkLabel>Textarea Input</label>
             <textarea
-              name="textarea_input" 
+              name="textarea_input"
               [(ngModel)]="textarea_input"
               #textareaInput="ngModel"
-              sprk-input></textarea>
+              sprkInput></textarea>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>SSN Input</label>
+            <label sprkLabel>SSN Input</label>
             <input
               [type]="ssnType"
               [additionalClasses]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
@@ -115,155 +115,150 @@ import { Component } from '@angular/core';
               name="ssn_input"
               [(ngModel)]="ssn_input"
               #ssnInput="ngModel"
-              sprk-formatter-ssn
-              sprk-input>
+              sprkFormatterSsn
+              sprkInput>
             <sprk-selection-item-container>
-              <input type="checkbox" sprk-selection-input (click)="toggleSSNType()">
-              <label sprk-selection-label>Show SSN</label>
+              <input type="checkbox" sprkSelectionInput (click)="toggleSSNType()">
+              <label sprkSelectionLabel>Show SSN</label>
             </sprk-selection-item-container>
-            <div 
+            <div
             [hidden]="ssnInput.valid || ssnInput.pristine"
-            sprk-field-error>Invalid SSN.</div>
+            sprkFieldError>Invalid SSN.</div>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>Search Input</label>
-            <input 
-              name="search_input" 
-              type="search" 
+            <label sprkLabel>Search Input</label>
+            <input
+              name="search_input"
+              type="search"
               [(ngModel)]="search_input"
               #searchInput="ngModel"
-              sprk-input>
+              sprkInput>
           </sprk-input-container>
           <sprk-input-container>
-            <label additionalClasses="sprk-u-ScreenReaderText" sprk-label>Inline Search Input</label>
-            <input 
-              name="inline_search_input" 
-              type="search" 
+            <label additionalClasses="sprk-u-ScreenReaderText" sprkLabel>Inline Search Input</label>
+            <input
+              name="inline_search_input"
+              type="search"
               role="search"
               placeholder="Search"
               [(ngModel)]="inline_search_input"
               #inlineSearchInput="ngModel"
-              sprk-input>
+              sprkInput>
           </sprk-input-container>
           <sprk-input-container iconContainerClasses="sprk-b-TextInput--monetary">
-            <label sprk-label>Payment</label>
-            <input 
-              name="monetary_input" 
-              type="text" 
+            <label sprkLabel>Payment</label>
+            <input
+              name="monetary_input"
+              type="text"
               [additionalClasses]="monetaryInput.invalid && monetaryInput.dirty ? 'sprk-b-TextInput--error sprk-u-plm': 'sprk-u-plm'"
               pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
               [(ngModel)]="monetary_input"
               #monetaryInput="ngModel"
-              sprk-formatter-monetary
-              sprk-input>
-              <div 
+              sprkFormatterMonetary
+              sprkInput>
+              <div
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
-              sprk-field-error>Invalid amount.</div>
+              sprkFieldError>Invalid amount.</div>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>Password</label>
+            <label sprkLabel>Password</label>
             <input
               [type]="passwordType"
               name="password_input"
-              sprk-input>
+              sprkInput>
             <sprk-selection-item-container>
-              <input type="checkbox" sprk-selection-input (click)="togglePasswordType()">
-              <label sprk-selection-label>Show Password</label>
+              <input type="checkbox" sprkSelectionInput (click)="togglePasswordType()">
+              <label sprkSelectionLabel>Show Password</label>
             </sprk-selection-item-container>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>Phone Number *</label>
-            <input 
-              name="phone_input" 
+            <label sprkLabel>Phone Number *</label>
+            <input
+              name="phone_input"
               [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
-              type="text" 
+              type="text"
               pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
               placeholder="(000) 000-0000"
               [(ngModel)]="phone_input"
               required
               #phoneInput="ngModel"
-              sprk-formatter-phone-number
-              sprk-input>
-            <span 
+              sprkFormatterPhoneNumber
+              sprkInput>
+            <span
               [hidden]="phoneInput.valid || phoneInput.pristine"
-              sprk-field-error>
+              sprkFieldError>
               {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
-            </span>  
+            </span>
           </sprk-input-container>
           <sprk-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
-            <label sprk-label>Date Input (picker)</label>
+            <label sprkLabel>Date Input (picker)</label>
             <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
-            <input 
-              name="datepicker_input" 
-              type="text" 
+            <input
+              name="datepicker_input"
+              type="text"
               [additionalClasses]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"
               [(ngModel)]="datepicker_input"
               #datepickerInput="ngModel"
-              sprk-formatter-date
-              sprk-datepicker
-              sprk-input>
-              <div 
+              sprkFormatterDate
+              sprkDatepicker
+              sprkInput>
+              <div
               [hidden]="datepickerInput.valid || datepickerInput.pristine"
-              sprk-field-error>Invalid date.</div>
+              sprkFieldError>Invalid date.</div>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprk-label>Date Input (No Picker)</label>
-            <input 
-              name="date_input" 
+            <label sprkLabel>Date Input (No Picker)</label>
+            <input
+              name="date_input"
               [additionalClasses]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
-              type="text" 
+              type="text"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"
               [(ngModel)]="date_input"
               #dateInput="ngModel"
-              sprk-formatter-date
-              sprk-input>
-            <span 
+              sprkFormatterDate
+              sprkInput>
+            <span
               [hidden]="dateInput.valid || dateInput.pristine"
-              sprk-field-error>Invalid date.</span>  
+              sprkFieldError>Invalid date.</span>
           </sprk-input-container>
           <sprk-button additionalClasses="sprk-u-mbl" [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
-          <sprk-alert 
+          <sprk-alert
           [hidden]="sampleForm.valid"
           alertType="fail">Something's wrong above.</sprk-alert>
-          <sprk-alert 
+          <sprk-alert
           [hidden]="!form_submitted"
           alertType="success">Form Submitted! (Not really)</sprk-alert>
         </form>
       </div>`,
   styles: ['']
 })
-
 export class InputDocsComponent {
-  constructor() { }
+  constructor() {}
 
-  text_input: string = '';
-  textarea_input: string = '';
-  search_input: string = '';
-  inline_search_input: string = '';
-  phone_input: string = '';
-  date_input: string = '';
+  text_input = '';
+  textarea_input = '';
+  search_input = '';
+  inline_search_input = '';
+  phone_input = '';
+  date_input = '';
   radio_input: string;
-  passwordType: string = 'password';
-  ssnType: string = 'password';
-  form_submitted: boolean = false;
+  passwordType = 'password';
+  ssnType = 'password';
+  form_submitted = false;
 
   togglePasswordType(): void {
-    if (this.passwordType === 'password') {
-      this.passwordType = 'text';
-    } else {
-      this.passwordType = 'password';
-    }
+    this.passwordType === 'password'
+      ? (this.passwordType = 'text')
+      : (this.passwordType = 'password');
   }
 
   toggleSSNType(): void {
-    if (this.ssnType === 'password') {
-      this.ssnType = 'text';
-    } else {
-      this.ssnType = 'password';
-    }
+    this.ssnType === 'password'
+      ? (this.ssnType = 'text')
+      : (this.ssnType = 'password');
   }
 
   onSubmit(): void {

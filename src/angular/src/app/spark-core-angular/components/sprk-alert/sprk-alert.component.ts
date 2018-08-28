@@ -30,19 +30,20 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
   `,
   styles: ['']
 })
-
 export class SparkAlertComponent {
-  @Input() alertType: string;
-  @Input() analyticsString: string;
-  @Input() additionalClasses: string;
-  @Input() dismissible: boolean;
+  @Input()
+  alertType: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  dismissible: boolean;
 
   public icon: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-Alert__icon'
-    ];
+    const classArray: string[] = ['sprk-c-Alert__icon'];
 
     switch (this.alertType) {
       case 'success':
@@ -51,7 +52,7 @@ export class SparkAlertComponent {
         break;
       case 'info':
         classArray.push('sprk-c-Alert__icon--info');
-          this.icon = 'bell';
+        this.icon = 'bell';
         break;
       case 'fail':
         classArray.push('sprk-c-Alert__icon--fail');
@@ -62,23 +63,21 @@ export class SparkAlertComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
   }
 
   getClassesAlertContainer(): string {
-    let alertClassArray: Array<String> = [
-      'sprk-c-Alert'
-    ];
+    const alertClassArray: string[] = ['sprk-c-Alert'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         alertClassArray.push(className);
-      })
+      });
     }
 
     return alertClassArray.join(' ');

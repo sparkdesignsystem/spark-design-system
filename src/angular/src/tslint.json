@@ -12,6 +12,7 @@
       "element",
       "sprk",
       "kebab-case"
-    ]
+    ],
+    "no-submodule-imports": false
   }
 }

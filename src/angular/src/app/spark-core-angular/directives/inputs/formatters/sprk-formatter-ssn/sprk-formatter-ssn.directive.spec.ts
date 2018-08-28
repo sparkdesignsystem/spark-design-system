@@ -1,19 +1,19 @@
 import { Component, DebugElement } from '@angular/core';
-import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { SprkFormatterSsnDirective } from './sprk-formatter-ssn.directive';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { SprkFormatterSsnDirective } from './sprk-formatter-ssn.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
   <input
-  value="hi"
-  type="text"
-  placeholder="Enter some input."
-  sprk-formatter-ssn>
+    value="hi"
+    type="text"
+    placeholder="Enter some input."
+    sprkFormatterSsn>
   `
 })
-class TestComponent {};
+class TestComponent {}
 
 describe('SprkFormatterSsnDirective', () => {
   let component: TestComponent;
@@ -22,10 +22,7 @@ describe('SprkFormatterSsnDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SprkFormatterSsnDirective,
-        TestComponent
-      ]
+      declarations: [SprkFormatterSsnDirective, TestComponent]
     });
   });
 

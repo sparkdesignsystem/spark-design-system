@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SparkListComponent } from './sprk-list.component';
 
 describe('SparkListComponent', () => {
@@ -9,9 +8,8 @@ describe('SparkListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SparkListComponent ]
-    })
-    .compileComponents();
+      declarations: [SparkListComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -23,14 +23,16 @@ describe('Spark Dictionary', () => {
   it('should mark the dictionary striped if dictionaryType = striped', () => {
     component.dictionaryType = 'striped';
     fixture.detectChanges();
-    expect(dictionaryElement.classList.contains('sprk-c-Dictionary--striped'))
-      .toEqual(true);
-  })
+    expect(
+      dictionaryElement.classList.contains('sprk-c-Dictionary--striped')
+    ).toEqual(true);
+  });
 
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(dictionaryElement.classList.toString()).toEqual('sprk-c-Dictionary sprk-u-man');
-
+    expect(dictionaryElement.classList.toString()).toEqual(
+      'sprk-c-Dictionary sprk-u-man'
+    );
   });
 });

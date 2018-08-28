@@ -82,29 +82,46 @@ import { Component, Input } from '@angular/core';
   `,
   styleUrls: ['sprk-card.component.scss']
 })
-
 export class SparkCardComponent {
-  @Input() cardType: string = 'base';
-  @Input() body: string;
-  @Input() media: string;
-  @Input() additionalClassesIcon: string;
-  @Input() title: string;
-  @Input() imgSrc: string;
-  @Input() imgAlt: string;
-  @Input() iconType: string;
-  @Input() iconHref: string;
-  @Input() imgHref: string;
-  @Input() ctaType: string = 'link';
-  @Input() ctaText: string;
-  @Input() ctaAnalytics: string;
-  @Input() imgLinkAnalytics: string;
-  @Input() iconLinkAnalytics: string;
-  @Input() ctaHref: string;
-  @Input() additionalClasses: string;
-  @Input() additionalCtaClasses: string;
+  @Input()
+  cardType = 'base';
+  @Input()
+  body: string;
+  @Input()
+  media: string;
+  @Input()
+  additionalClassesIcon: string;
+  @Input()
+  title: string;
+  @Input()
+  imgSrc: string;
+  @Input()
+  imgAlt: string;
+  @Input()
+  iconType: string;
+  @Input()
+  iconHref: string;
+  @Input()
+  imgHref: string;
+  @Input()
+  ctaType = 'link';
+  @Input()
+  ctaText: string;
+  @Input()
+  ctaAnalytics: string;
+  @Input()
+  imgLinkAnalytics: string;
+  @Input()
+  iconLinkAnalytics: string;
+  @Input()
+  ctaHref: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  additionalCtaClasses: string;
 
   getClassesCta(): string {
-    let ctaClassArray: Array<String> = [];
+    const ctaClassArray: string[] = [];
 
     if (this.ctaType === 'button') {
       ctaClassArray.push('sprk-c-Button');
@@ -113,23 +130,21 @@ export class SparkCardComponent {
     }
 
     if (this.additionalCtaClasses) {
-      this.additionalCtaClasses.split(' ').forEach((className) => {
+      this.additionalCtaClasses.split(' ').forEach(className => {
         ctaClassArray.push(className);
-      })
+      });
     }
 
     return ctaClassArray.join(' ');
   }
 
   getClassesCard(): string {
-    let classArray: Array<String> = [
-      'sprk-c-Card sprk-o-Stack'
-    ];
+    const classArray: string[] = ['sprk-c-Card sprk-o-Stack'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

@@ -9,15 +9,14 @@ describe('SparkLinkComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SparkLinkComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkLinkComponent);
     component = fixture.componentInstance;
     linkElement = fixture.nativeElement.querySelector('a');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -34,7 +33,9 @@ describe('SparkLinkComponent', () => {
 
   it('should add the correct class if linkType is standalone', () => {
     component.linkType = 'standalone';
-    expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--standalone');
+    expect(component.getClasses()).toEqual(
+      'sprk-b-Link sprk-b-Link--standalone'
+    );
   });
 
   it('should add the correct class if linkType is disabled', () => {
@@ -50,13 +51,17 @@ describe('SparkLinkComponent', () => {
   it('should add the correct classes if linkType and additionalClasses have values', () => {
     component.linkType = 'standalone';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
-    expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--standalone sprk-u-pam sprk-u-man');
+    expect(component.getClasses()).toEqual(
+      'sprk-b-Link sprk-b-Link--standalone sprk-u-pam sprk-u-man'
+    );
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
-    component.analyticsString='Product: Link: Link 1';
+    component.analyticsString = 'Product: Link: Link 1';
     fixture.detectChanges();
     expect(linkElement.hasAttribute('data-analytics')).toEqual(true);
-    expect(linkElement.getAttribute('data-analytics')).toEqual('Product: Link: Link 1');
+    expect(linkElement.getAttribute('data-analytics')).toEqual(
+      'Product: Link: Link 1'
+    );
   });
 });
