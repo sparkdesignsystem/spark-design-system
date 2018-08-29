@@ -9,3 +9,4 @@ restrictions:
   - Tabbed Navigation needs to have at least two tabs.
   - There should not be more than seven tabs in any single Tabbed Navigation.
   - Tab label content should not exceed a reasonable length.
+noCodeSwitch: true

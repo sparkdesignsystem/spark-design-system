@@ -14,6 +14,13 @@ const log = require('fancy-log');
 const runSequence = require('run-sequence');
 const config = require('./config');
 
+const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
+const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
+
+// add helpers
+helpers.concat = concatHelper;
+helpers.alternateIdGen = alternateIdGen;
+
 // Append config
 Object.assign(config.drizzle, { helpers });
 

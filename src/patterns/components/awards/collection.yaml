@@ -14,3 +14,4 @@ requirements:
     when applying a background color behind
     images to ensure accessibility requirements are met.
 sparkPackageExtras: true
+noCodeSwitch: true

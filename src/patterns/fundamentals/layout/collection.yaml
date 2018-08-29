@@ -3,3 +3,4 @@ description:
   developing new components not already defined in Spark or for laying out a combination of Spark components.
   Each layout pattern consists of a containing element with optional modifiers that adjust spacing, orientation, etc.
 sparkPackageCore: true
+noCodeSwitch: true

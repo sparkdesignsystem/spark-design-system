@@ -3,3 +3,4 @@ description:
 restrictions:
   - Elements at the same layer may not occupy the same space.
 sparkPackageCore: true
+noCodeSwitch: true

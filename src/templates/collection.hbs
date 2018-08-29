@@ -1,9 +1,14 @@
 {{#extend "default"}}
   {{#content "main"}}
-    <div class="drizzle-o-Layout__header">
+    <div class="drizzle-o-Layout__header{{#unless noCodeSwitch }} drizzle-o-Layout__header--shared{{/unless}}">
       <h1 class="drizzle-b-h1">
         {{name}}
       </h1>
+      {{#unless noCodeSwitch}}
+        <div class="drizzle-o-Layout__control">
+          {{> drizzle.code-example-switch }}
+        </div>
+      {{/unless}}
     </div>
 
     <div class="drizzle-o-Layout__content">

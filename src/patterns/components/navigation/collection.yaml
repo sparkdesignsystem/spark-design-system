@@ -2,3 +2,4 @@ description: These components represent the types of navigation available. Spark
   We do this because we've found that in practice, a lot of elements need to be added to the narrow navigation and not to the
   wide navigation. For example, chat links, secondary navigation contents, legal links, etc.
 sparkPackageCore: true
+noCodeSwitch: true
