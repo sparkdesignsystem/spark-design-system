@@ -10,9 +10,8 @@ describe('PaginationDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ PaginationDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [PaginationDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -27,13 +26,13 @@ describe('PaginationDocsComponent', () => {
   });
 
   it('pageNum should return page from event object', () => {
-    let event: object = {event: 'event', page: 1}
-    let config: object = [
+    const event: object = { event: 'event', page: 1 };
+    const config: object = [
       {
-        'currentPage': 1,
-        'totalItems': 6,
-        'itemsPerPage': 1
-      },
+        currentPage: 1,
+        totalItems: 6,
+        itemsPerPage: 1
+      }
     ];
 
     component.pageNum(event, config);

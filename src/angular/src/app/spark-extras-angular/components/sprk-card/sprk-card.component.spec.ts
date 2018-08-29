@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SparkCardComponent } from './sprk-card.component';
 import { SparkIconComponent } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.component';
+import { SparkCardComponent } from './sprk-card.component';
 
 describe('SparkCardComponent', () => {
   let component: SparkCardComponent;
@@ -12,14 +12,13 @@ describe('SparkCardComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [SparkCardComponent, SparkIconComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkCardComponent);
     component = fixture.componentInstance;
-  })
+  });
 
   it('should create itself', () => {
     fixture.detectChanges();
@@ -36,10 +35,10 @@ describe('SparkCardComponent', () => {
   it('should show routerLink href on img link if set', () => {
     component.cardType = 'teaser';
     component.media = 'img';
-    component.imgHref = "/sparkdesignsystem.com";
+    component.imgHref = '/sparkdesignsystem.com';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    let el = element.querySelector('a');
+    const el = element.querySelector('a');
     expect(el.getAttribute('href')).toEqual('/sparkdesignsystem.com');
   });
 
@@ -64,7 +63,7 @@ describe('SparkCardComponent', () => {
     component.imgAlt = 'Alt!';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    let el = element.querySelector('a img');
+    const el = element.querySelector('a img');
     expect(el).toBeTruthy();
   });
 
@@ -74,7 +73,9 @@ describe('SparkCardComponent', () => {
     component.title = 'Title!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man');
+    expect(component.getClassesCard()).toEqual(
+      'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man'
+    );
   });
 
   it('should add the correct classes if cardType and additionalClasses have values', () => {
@@ -87,7 +88,9 @@ describe('SparkCardComponent', () => {
     component.imgAlt = 'Alt!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClassesCard()).toEqual('sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man');
+    expect(component.getClassesCard()).toEqual(
+      'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man'
+    );
   });
 
   it('should set the data-analytics attribute given a value in the ctaAnalytics Input on the teaser card', () => {
@@ -97,7 +100,7 @@ describe('SparkCardComponent', () => {
     component.ctaAnalytics = 'One';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    let el = element.querySelector('div.sprk-c-Card__content a');
+    const el = element.querySelector('div.sprk-c-Card__content a');
     expect(el.getAttribute('data-analytics')).toEqual('One');
   });
 
@@ -107,7 +110,7 @@ describe('SparkCardComponent', () => {
     component.ctaAnalytics = 'Test';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    let el = element.querySelector('div.sprk-c-Card__content a');
+    const el = element.querySelector('div.sprk-c-Card__content a');
     expect(el.getAttribute('data-analytics')).toEqual('Test');
   });
 
@@ -118,7 +121,7 @@ describe('SparkCardComponent', () => {
     component.imgLinkAnalytics = 'Test';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    let el = element.querySelector('a');
+    const el = element.querySelector('a');
     expect(el.getAttribute('data-analytics')).toEqual('Test');
   });
 
@@ -129,7 +132,7 @@ describe('SparkCardComponent', () => {
     component.imgLinkAnalytics = 'Test';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
-    let el = element.querySelector('a');
+    const el = element.querySelector('a');
     expect(el.getAttribute('data-analytics')).toEqual('Test');
   });
 });

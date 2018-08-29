@@ -18,7 +18,6 @@ import { Component } from '@angular/core';
   `,
   styles: ['']
 })
-export class ToggleDocsComponent{
-
-  constructor() { }
+export class ToggleDocsComponent {
+  constructor() {}
 }

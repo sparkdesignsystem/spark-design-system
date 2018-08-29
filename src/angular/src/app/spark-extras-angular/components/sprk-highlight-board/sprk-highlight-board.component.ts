@@ -29,7 +29,7 @@ import { Component, Input } from '@angular/core';
         itemSpacing="medium"
         splitAt="small"
         additionalClasses="sprk-c-HighlightBoard__cta-container">
-        <div sprk-stack-item>
+        <div sprkStackItem>
           <a
             [routerLink]="ctaHref"
             class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
@@ -39,7 +39,7 @@ import { Component, Input } from '@angular/core';
         </div>
 
         <div
-          sprk-stack-item
+          sprkStackItem
           *ngIf="ctaTwoText">
           <a
             [routerLink]="ctaTwoHref"
@@ -54,34 +54,47 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkHighlightBoardComponent {
-  @Input() heading: string;
-  @Input() subHeading: string;
-  @Input() imgSrc: string;
-  @Input() imgAlt: string;
-  @Input() ctaText: string;
-  @Input() ctaHref: string;
-  @Input() ctaTwoText: string;
-  @Input() ctaTwoHref: string;
-  @Input() analyticsStringCta: string;
-  @Input() analyticsStringCta2: string;
-  @Input() additionalClasses: string;
-  @Input() type: string;
+  @Input()
+  heading: string;
+  @Input()
+  subHeading: string;
+  @Input()
+  imgSrc: string;
+  @Input()
+  imgAlt: string;
+  @Input()
+  ctaText: string;
+  @Input()
+  ctaHref: string;
+  @Input()
+  ctaTwoText: string;
+  @Input()
+  ctaTwoHref: string;
+  @Input()
+  analyticsStringCta: string;
+  @Input()
+  analyticsStringCta2: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  type: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-HighlightBoard'
-    ];
+    const classArray: string[] = ['sprk-c-HighlightBoard'];
 
     switch (this.type) {
       case 'noImage':
         break;
       case 'stacked':
-        classArray.push('sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked');
+        classArray.push(
+          'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked'
+        );
         break;
       case 'fullWidth':
-        classArray.push('sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--has-image');
+        classArray.push(
+          'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--has-image'
+        );
         break;
       default:
         classArray.push('sprk-c-HighlightBoard--has-image');
@@ -89,9 +102,9 @@ export class SparkHighlightBoardComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

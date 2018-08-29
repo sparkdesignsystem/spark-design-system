@@ -1,33 +1,33 @@
-import { Directive, Input, OnInit, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-selection-label]'
+  selector: '[sprkSelectionLabel]'
 })
-
 export class SprkSelectionLabelDirective implements OnInit {
-  @Input() additionalClasses: string;
+  @Input()
+  additionalClasses: string;
 
-  constructor(public ref: ElementRef){};
+  constructor(public ref: ElementRef) {}
 
-  getClasses(): Array<String> {
-    let classArray: Array<String> = [
+  getClasses(): string[] {
+    const classArray: string[] = [
       'sprk-b-Label',
       'sprk-b-Label--inline',
       'sprk-u-mls'
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray;
   }
 
   ngOnInit(): void {
-    this.getClasses().forEach((item) => {
+    this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
-    })
+    });
   }
 }

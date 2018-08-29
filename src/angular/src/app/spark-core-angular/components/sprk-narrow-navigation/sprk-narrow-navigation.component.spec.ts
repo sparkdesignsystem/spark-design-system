@@ -8,18 +8,15 @@ describe('SparkNarrowNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SparkNarrowNavigationComponent
-      ]
-    })
-    .compileComponents();
+      declarations: [SparkNarrowNavigationComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkNarrowNavigationComponent);
     component = fixture.componentInstance;
     narrowNavigationElement = fixture.nativeElement.querySelector('ul');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -28,6 +25,8 @@ describe('SparkNarrowNavigationComponent', () => {
   it('should add classes if additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(narrowNavigationElement.classList.contains('sprk-u-man')).toEqual(true);
+    expect(narrowNavigationElement.classList.contains('sprk-u-man')).toEqual(
+      true
+    );
   });
 });

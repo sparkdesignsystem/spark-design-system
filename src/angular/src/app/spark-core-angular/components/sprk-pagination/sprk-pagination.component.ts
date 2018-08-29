@@ -1,4 +1,10 @@
-import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'sprk-pagination',
@@ -57,7 +63,10 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li class="sprk-c-Pagination__item">
           <a
             (click)="goForward($event, currentPage)"
-            [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
+            [ngClass]="{
+              'sprk-b-Link': true, 'sprk-b-Link--standalone': true,
+              'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1
+            }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
@@ -90,7 +99,10 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         </li>
 
         <li
-          [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-u-Display--none': currentPage === 1 || currentPage === 2 }">
+          [ngClass]="{
+            'sprk-c-Pagination__item': true,
+            'sprk-c-Pagination__item--long': true,
+            'sprk-u-Display--none': currentPage === 1 || currentPage === 2 }">
           ...
         </li>
 
@@ -108,12 +120,18 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         </li>
 
         <li
-          [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-u-Display--none': currentPage === totalPages() || currentPage === (totalPages() - 1) }">
+          [ngClass]="{
+            'sprk-c-Pagination__item': true,
+            'sprk-c-Pagination__item--long': true,
+            'sprk-u-Display--none': currentPage === totalPages() || currentPage === (totalPages() - 1) }">
           ...
         </li>
 
         <li
-          [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-u-Display--none': currentPage === totalPages()}">
+          [ngClass]="{
+            'sprk-c-Pagination__item': true,
+            'sprk-c-Pagination__item--long': true,
+            'sprk-u-Display--none': currentPage === totalPages()}">
           <a
             (click)="goToPage($event, totalPages())"
             class="sprk-b-Link sprk-b-Link--standalone"
@@ -127,7 +145,10 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li class="sprk-c-Pagination__item sprk-c-Pagination__item--long">
           <a
             (click)="goForward($event, currentPage)"
-            [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
+            [ngClass]="{
+              'sprk-b-Link': true,
+              'sprk-b-Link--standalone': true,
+              'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
@@ -151,7 +172,10 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
         <li class="sprk-c-Pagination__item">
           <a
             (click)="goForward($event, currentPage)"
-            [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
+            [ngClass]="{
+              'sprk-b-Link': true,
+              'sprk-b-Link--standalone': true,
+              'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
@@ -163,42 +187,61 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
   styles: ['']
 })
 export class SparkPaginationComponent {
-  @Input() paginationType: string = 'default'; // default, long, pager
-  @Input() nextLinkText: string = 'Next'; // Text to display for next link
-  @Input() prevLinkText: string = 'Prev'; // Text to display for previous link
-  @Input() currentPage: number = 1; // The currently active page
-  @Input() totalItems: number; // Total number of items
-  @Input() itemsPerPage: number; // Total number of items to show per page
-  @Input() analyticsStringFirstLink: string;
-  @Input() analyticsStringSecondLink: string;
-  @Input() analyticsStringThirdLink: string;
-  @Input() analyticsStringLinkNext: string;
-  @Input() analyticsStringLinkPrev: string;
-  @Input() additionalClasses: string;
+  @Input()
+  paginationType = 'default'; // default, long, pager
+  @Input()
+  nextLinkText = 'Next'; // Text to display for next link
+  @Input()
+  prevLinkText = 'Prev'; // Text to display for previous link
+  @Input()
+  currentPage = 1; // The currently active page
+  @Input()
+  totalItems: number; // Total number of items
+  @Input()
+  itemsPerPage: number; // Total number of items to show per page
+  @Input()
+  analyticsStringFirstLink: string;
+  @Input()
+  analyticsStringSecondLink: string;
+  @Input()
+  analyticsStringThirdLink: string;
+  @Input()
+  analyticsStringLinkNext: string;
+  @Input()
+  analyticsStringLinkPrev: string;
+  @Input()
+  additionalClasses: string;
 
   // Will be emitted to the parent component on the click event
-  @Output() previousClick = new EventEmitter();
-  @Output() nextClick = new EventEmitter();
-  @Output() pageClick = new EventEmitter<object>();
+  @Output()
+  previousClick = new EventEmitter();
+  @Output()
+  nextClick = new EventEmitter();
+  @Output()
+  pageClick = new EventEmitter<object>();
 
   goToPage(event, page): void {
     event.preventDefault();
     // Update currentPage to new selected page
     this.currentPage = page;
     // Emit out click event and page when clicked
-    this.pageClick.emit({event, page});
+    this.pageClick.emit({ event, page });
   }
 
   goBack(event, page): void {
     event.preventDefault();
-    if (this.currentPage > 1) this.currentPage = this.currentPage - 1;
-    this.previousClick.emit({event, page});
+    if (this.currentPage > 1) {
+      this.currentPage = this.currentPage - 1;
+    }
+    this.previousClick.emit({ event, page });
   }
 
   goForward(event, page): void {
     event.preventDefault();
-    if (this.currentPage < this.totalPages()) this.currentPage = this.currentPage + 1;
-    this.nextClick.emit({event, page});
+    if (this.currentPage < this.totalPages()) {
+      this.currentPage = this.currentPage + 1;
+    }
+    this.nextClick.emit({ event, page });
   }
 
   // Returns total # of
@@ -214,14 +257,12 @@ export class SparkPaginationComponent {
   }
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      ''
-    ];
+    const classArray: string[] = [''];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

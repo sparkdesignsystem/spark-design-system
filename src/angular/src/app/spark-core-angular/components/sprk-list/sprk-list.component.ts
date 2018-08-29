@@ -12,14 +12,15 @@ import { Component, Input } from '@angular/core';
   styles: ['']
 })
 export class SparkListComponent {
-  @Input() listType: string;
-  @Input() analyticsString: string;
-  @Input() additionalClasses: string;
+  @Input()
+  listType: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  additionalClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
-    'sprk-b-List'
-    ];
+    const classArray: string[] = ['sprk-b-List'];
 
     switch (this.listType) {
       case 'ordered':
@@ -37,13 +38,13 @@ export class SparkListComponent {
         break;
     }
 
-    if(this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
   }
-  constructor() { }
+  constructor() {}
 }

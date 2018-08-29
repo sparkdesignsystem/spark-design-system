@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkDatepickerDirective } from './sprk-datepicker.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
     <input
       type="text"
       placeholder="MM/DD/YYYY"
-      sprk-datepicker>
+      sprkDatepicker>
     `
 })
 class TestComponent {}
@@ -20,10 +20,12 @@ describe('SprkDatePickerDirective', () => {
 
   it('should stand up, even if TinyDatePicker is not defined', () => {
     TestBed.configureTestingModule({
-      providers: [{
-        provide: 'TinyDatePicker',
-        useValue: null
-      }],
+      providers: [
+        {
+          provide: 'TinyDatePicker',
+          useValue: null
+        }
+      ],
       declarations: [SprkDatepickerDirective, TestComponent]
     }).compileComponents();
 
@@ -32,14 +34,16 @@ describe('SprkDatePickerDirective', () => {
     fixture.detectChanges();
     inputElement = fixture.nativeElement.querySelector('input');
     expect(component).toBeTruthy();
-  })
+  });
 
-  it('should create itself and trigger when focused', (done) => {
+  it('should create itself and trigger when focused', done => {
     TestBed.configureTestingModule({
-      providers: [{
-        provide: 'TinyDatePicker',
-        useValue: window['TinyDatePicker'] // loaded in karma.conf.js
-      },],
+      providers: [
+        {
+          provide: 'TinyDatePicker',
+          useValue: window['TinyDatePicker'] // loaded in karma.conf.js
+        }
+      ],
       declarations: [SprkDatepickerDirective, TestComponent]
     }).compileComponents();
 

@@ -10,12 +10,12 @@ import { Component, Input } from '@angular/core';
     </nav>`,
   styles: ['']
 })
-
 export class SparkNarrowNavigationComponent {
-  @Input() additionalClasses: string;
+  @Input()
+  additionalClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-c-Accordion',
       'sprk-c-Accordion--navigation',
       'sprk-b-List',
@@ -23,9 +23,9 @@ export class SparkNarrowNavigationComponent {
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

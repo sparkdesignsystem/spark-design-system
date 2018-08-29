@@ -1,4 +1,4 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'sprk-masthead',
@@ -11,12 +11,17 @@ import { Component, Input, HostListener } from '@angular/core';
             (click)="toggleNarrowNav()"
             >
               <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
-              <svg [ngClass]="
-                { 'sprk-c-Icon': true,
-                  'sprk-c-Icon--l': true,
-                  'sprk-c-Hamburger__icon': true,
-                  'sprk-c-Hamburger__icon--open': isNarrowNavOpen
-                }" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+              <svg
+                [ngClass]="
+                  { 'sprk-c-Icon': true,
+                    'sprk-c-Icon--l': true,
+                    'sprk-c-Hamburger__icon': true,
+                    'sprk-c-Hamburger__icon--open': isNarrowNavOpen
+                  }"
+                  aria-hidden="true"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
                 <g>
                   <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one" d="M5 13h90v14H5z" />
                   <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two" d="M5 43h90v14H5z" />
@@ -68,17 +73,25 @@ import { Component, Input, HostListener } from '@angular/core';
     </header>`,
   styles: ['']
 })
-
 export class SparkMastheadComponent {
-  @Input() logoHref: string = '/';
-  @Input() logoLinkScreenReaderText: string = 'Go to the homepage';
-  @Input() additionalClasses: string;
-  @Input() greetingName: string;
-  @Input() wideNavLinks: Array<Object>;
-  @Input() narrowNavLinks: Array<Object>;
-  @Input() secondaryNavLinks: Array<Object>;
-  @Input() secondaryNavSpacing: string = 'medium';
-  @Input() isNarrowNavOpen: boolean = false;
+  @Input()
+  logoHref = '/'; // Type inferred
+  @Input()
+  logoLinkScreenReaderText = 'Go to the homepage';
+  @Input()
+  additionalClasses: string;
+  @Input()
+  greetingName: string;
+  @Input()
+  wideNavLinks: object[];
+  @Input()
+  narrowNavLinks: object[];
+  @Input()
+  secondaryNavLinks: object[];
+  @Input()
+  secondaryNavSpacing = 'medium';
+  @Input()
+  isNarrowNavOpen = false;
 
   @HostListener('window:resize', ['$event'])
   handleResizeEvent() {
@@ -86,14 +99,12 @@ export class SparkMastheadComponent {
   }
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      'sprk-c-Masthead'
-    ];
+    const classArray: string[] = ['sprk-c-Masthead'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
@@ -106,5 +117,4 @@ export class SparkMastheadComponent {
   closeNarrowNav(): void {
     this.isNarrowNavOpen = false;
   }
-
 }

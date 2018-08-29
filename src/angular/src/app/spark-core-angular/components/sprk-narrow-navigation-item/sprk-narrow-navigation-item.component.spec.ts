@@ -1,33 +1,30 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SparkNarrowNavigationItemComponent } from './sprk-narrow-navigation-item.component';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkNarrowNavigationItemComponent } from './sprk-narrow-navigation-item.component';
 
 describe('SparkNarrowNavigationItemComponent', () => {
   let component: SparkNarrowNavigationItemComponent;
   let fixture: ComponentFixture<SparkNarrowNavigationItemComponent>;
   let narrowNavigationItemElement: HTMLElement;
-  let narrowNavigationLinkElement: HTMLElement;
-  let subNav: Object = { text: 'Item 1', href: '/alerts', analyticsString: 'Hi there'};
+  const subNav: object = {
+    text: 'Item 1',
+    href: '/alerts',
+    analyticsString: 'Hi there'
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-      ],
-      declarations: [
-        SparkNarrowNavigationItemComponent,
-        SparkIconComponent
-      ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule],
+      declarations: [SparkNarrowNavigationItemComponent, SparkIconComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkNarrowNavigationItemComponent);
     component = fixture.componentInstance;
     narrowNavigationItemElement = fixture.nativeElement.querySelector('li');
-  })
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
@@ -35,32 +32,38 @@ describe('SparkNarrowNavigationItemComponent', () => {
 
   it('should add classes when additionalClasses has a value', () => {
     component.subNav = subNav;
-    component.href = '/alerts'
+    component.href = '/alerts';
     component.text = 'Alerts';
-    component.additionalClasses = "sprk-u-man";
+    component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(narrowNavigationItemElement.classList.contains('sprk-u-man')).toEqual(true);
+    expect(
+      narrowNavigationItemElement.classList.contains('sprk-u-man')
+    ).toEqual(true);
   });
 
   it('should show have a routerLink if theres no subNav', () => {
-    component.href = "/google.com";
-    component.text = "Google";
+    component.href = '/google.com';
+    component.text = 'Google';
     fixture.detectChanges();
-    expect(narrowNavigationItemElement.querySelector('a').getAttribute('href')).toEqual(component.href);
+    expect(
+      narrowNavigationItemElement.querySelector('a').getAttribute('href')
+    ).toEqual(component.href);
   });
 
   it('should have a #nogo on the outer anchor if there is a submenu', () => {
     component.subNav = subNav;
-    component.href = "/google.com";
-    component.text = "Google";
+    component.href = '/google.com';
+    component.text = 'Google';
     fixture.detectChanges();
-    expect(narrowNavigationItemElement.querySelector('a').getAttribute('href')).toEqual('#nogo');
+    expect(
+      narrowNavigationItemElement.querySelector('a').getAttribute('href')
+    ).toEqual('#nogo');
   });
 
   it('clicking should toggle isOpen', () => {
     component.subNav = subNav;
-    component.href = "/google.com";
-    component.text = "Google";
+    component.href = '/google.com';
+    component.text = 'Google';
     fixture.detectChanges();
 
     expect(component.isOpen).toEqual(false);

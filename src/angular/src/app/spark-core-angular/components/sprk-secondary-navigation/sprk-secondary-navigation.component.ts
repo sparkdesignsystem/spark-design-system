@@ -10,33 +10,34 @@ import { Component, Input } from '@angular/core';
     </nav>`,
   styles: []
 })
-
 export class SparkSecondaryNavigationComponent {
-  @Input() additionalClasses: string;
-  @Input() additionalNavClasses: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  additionalNavClasses: string;
 
   getClasses(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-o-HorizontalList',
       'sprk-o-HorizontalList--spacing-medium'
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
   }
 
   getNavClasses(): string {
-    let classArray: Array<String> = [];
+    const classArray: string[] = [];
 
     if (this.additionalNavClasses) {
-      this.additionalNavClasses.split(' ').forEach((className) => {
+      this.additionalNavClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');

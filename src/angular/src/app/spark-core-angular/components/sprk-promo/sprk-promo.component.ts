@@ -72,66 +72,81 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
   `,
   styles: ['']
 })
-
 export class SparkPromoComponent {
-  @Input() additionalClasses: string;
-  @Input() additionalClassesImgLink: string;
-  @Input() additionalClassesIcon: string;
-  @Input() additionalClassesIconLink: string;
-  @Input() cta: string; // 'link' or 'button'
-  @Input() media: string; // 'img' or 'icon'
-  @Input() title: string;
-  @Input() ctaLinkAnalytics: string;
-  @Input() buttonLinkAnalytics: string;
-  @Input() imgLinkAnalytics: string;
-  @Input() iconLinkAnalytics: string;
-  @Input() ctaText: string;
-  @Input() linkHref: string;
-  @Input() imgHref: string;
-  @Input() iconHref: string;
-  @Input() iconType: string;
-  @Input() buttonHref: string;
-  @Input() imgAlt: string;
-  @Input() imgSrc: string;
-  @Input() mediaRev: string; // 'yes' or omitted
+  @Input()
+  additionalClasses: string;
+  @Input()
+  additionalClassesImgLink: string;
+  @Input()
+  additionalClassesIcon: string;
+  @Input()
+  additionalClassesIconLink: string;
+  @Input()
+  cta: string; // 'link' or 'button'
+  @Input()
+  media: string; // 'img' or 'icon'
+  @Input()
+  title: string;
+  @Input()
+  ctaLinkAnalytics: string;
+  @Input()
+  buttonLinkAnalytics: string;
+  @Input()
+  imgLinkAnalytics: string;
+  @Input()
+  iconLinkAnalytics: string;
+  @Input()
+  ctaText: string;
+  @Input()
+  linkHref: string;
+  @Input()
+  imgHref: string;
+  @Input()
+  iconHref: string;
+  @Input()
+  iconType: string;
+  @Input()
+  buttonHref: string;
+  @Input()
+  imgAlt: string;
+  @Input()
+  imgSrc: string;
+  @Input()
+  mediaRev: string; // 'yes' or omitted
 
   getClasses(): string {
-    let classArray: Array<String> = [
+    const classArray: string[] = [
       'sprk-o-Stack',
       'sprk-o-Stack--split@s',
-      'sprk-o-Stack--medium',
+      'sprk-o-Stack--medium'
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
     return classArray.join(' ');
   }
 
   getClassesImg(): string {
-    let classArray: Array<String> = [
-      'sprk-o-Stack__item',
-    ];
+    const classArray: string[] = ['sprk-o-Stack__item'];
 
     if (this.additionalClassesImgLink) {
-      this.additionalClassesImgLink.split(' ').forEach((className) => {
+      this.additionalClassesImgLink.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
     return classArray.join(' ');
   }
 
   getClassesIcon(): string {
-    let classArray: Array<String> = [
-      'sprk-o-Stack__item',
-    ];
+    const classArray: string[] = ['sprk-o-Stack__item'];
 
     if (this.additionalClassesIconLink) {
-      this.additionalClassesIconLink.split(' ').forEach((className) => {
+      this.additionalClassesIconLink.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
     return classArray.join(' ');
   }

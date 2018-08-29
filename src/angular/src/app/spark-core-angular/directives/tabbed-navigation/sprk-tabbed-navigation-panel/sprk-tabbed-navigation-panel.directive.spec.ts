@@ -3,12 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-panel.directive';
 
 @Component({
-  selector: 'test-component',
-  template: `
-    <div additionalClasses="sprk-u-man"
-    sprk-tabbed-navigation-panel>Panel</div>`
+  selector: 'sprk-test-component',
+  template: `<div additionalClasses="sprk-u-man" sprkTabbedNavigationPanel>Panel</div>`
 })
-
 class TestComponent {}
 
 describe('Spark Tabbed Navigation Panel Directive', () => {
@@ -41,7 +38,7 @@ describe('Spark Tabbed Navigation Panel Directive', () => {
 
   it('should add the correct role', () => {
     expect(element.getAttribute('role')).toEqual('tabpanel');
-  })
+  });
 
   it('should add the correct tabindex', () => {
     expect(element.getAttribute('tabindex')).toEqual('0');

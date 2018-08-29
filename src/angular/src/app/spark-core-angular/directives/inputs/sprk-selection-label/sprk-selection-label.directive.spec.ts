@@ -3,11 +3,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkSelectionLabelDirective } from './sprk-selection-label.directive';
 
 @Component({
-  selector: 'test',
+  selector: 'sprk-test',
   template: `
   <label
     additionalClasses="sprk-u-man"
-    sprk-selection-label>Label</label>`
+    sprkSelectionLabel>Label</label>`
 })
 class TestComponent {}
 
@@ -16,11 +16,10 @@ describe('Spark Helper Text Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let labelElement: HTMLElement;
 
-  beforeEach(async(()=>{
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SprkSelectionLabelDirective, TestComponent ]
-    })
-      .compileComponents();
+      declarations: [SprkSelectionLabelDirective, TestComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
@@ -34,6 +33,8 @@ describe('Spark Helper Text Directive', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     fixture.detectChanges();
-    expect(labelElement.classList.toString()).toEqual('sprk-b-Label sprk-b-Label--inline sprk-u-mls sprk-u-man');
+    expect(labelElement.classList.toString()).toEqual(
+      'sprk-b-Label sprk-b-Label--inline sprk-u-mls sprk-u-man'
+    );
   });
 });

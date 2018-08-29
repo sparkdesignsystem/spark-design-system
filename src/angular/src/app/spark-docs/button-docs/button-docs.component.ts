@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-button-docs',
-  template:
-    `<div class="drizzle-o-ContentGrouping">
+  selector: 'sprk-button-docs',
+  template: `<div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Standard Buttons</h2>
       <sprk-button>Hello, World.</sprk-button>
       <sprk-button buttonType="secondary">Hello, World.</sprk-button>
@@ -20,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
       <sprk-button spinner="true" buttonType="tertiary">Spinner Button</sprk-button>
       <sprk-button spinner="true" buttonType="removal">Spinner Button</sprk-button>
     </div>
-    
+
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Fire Custom Event</h2>
       <sprk-button buttonType="primary" fireEvent="customEventName">Fire Event</sprk-button>
@@ -33,10 +32,7 @@ import { Component, OnInit } from '@angular/core';
     </div>`
 })
 export class ButtonDocsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

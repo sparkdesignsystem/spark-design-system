@@ -21,25 +21,26 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class SparkToggleComponent {
-  @Input() analyticsString: string;
-  @Input() additionalClasses: string;
-  @Input() title: string;
-  @Input() body: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  additionalClasses: string;
+  @Input()
+  title: string;
+  @Input()
+  body: string;
 
-  private isOpen: boolean = false;
-  private iconClasses: string = 'sprk-u-mrs';
+  private isOpen = false;
+  private iconClasses = 'sprk-u-mrs';
 
   getClasses(): string {
-    let classArray: Array<String> = [
-      ''
-    ];
+    const classArray: string[] = [''];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
+      this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
-      })
+      });
     }
 
     return classArray.join(' ');
@@ -49,10 +50,8 @@ export class SparkToggleComponent {
     event.preventDefault();
     this.isOpen = !this.isOpen;
 
-    if (this.isOpen) {
-      this.iconClasses = 'sprk-u-mrs sprk-c-Icon--open';
-    }  else {
-      this.iconClasses = 'sprk-u-mrs';
-    }
+    this.isOpen
+      ? (this.iconClasses = 'sprk-u-mrs sprk-c-Icon--open')
+      : (this.iconClasses = 'sprk-u-mrs');
   }
 }

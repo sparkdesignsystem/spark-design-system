@@ -1,14 +1,12 @@
-import { Directive, HostListener, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[sprk-formatter-phone-number]'
+  selector: '[sprkFormatterPhoneNumber]'
 })
-
 export class SprkFormatterPhoneNumberDirective {
+  constructor(public ref: ElementRef) {}
 
-  constructor(public ref: ElementRef){};
-
-  @HostListener('input', ["$event.target.value"])
+  @HostListener('input', ['$event.target.value'])
   onFocus(value) {
     this.ref.nativeElement.value = this.formatPhone(value);
   }
@@ -17,12 +15,10 @@ export class SprkFormatterPhoneNumberDirective {
     const newValue = `${value}`.replace(/\D/g, '');
     const m = newValue.match(/^(\d{3})(\d{3})(\d{4})$/);
 
-    if(m) {
+    if (m) {
       return `(${m[1]}) ${m[2]}-${m[3]}`;
     } else {
       return value;
     }
-  };
-
-
+  }
 }

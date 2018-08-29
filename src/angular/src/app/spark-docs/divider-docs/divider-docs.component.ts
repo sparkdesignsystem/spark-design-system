@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'divider-docs',
-  template:
-  `<div class="drizzle-o-ContentGrouping">
+  selector: 'sprk-divider-docs',
+  template: `<div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
         Dividers
       </h2>
@@ -18,5 +17,5 @@ import { Component } from '@angular/core';
   `
 })
 export class DividerDocsComponent {
-  constructor() { }
+  constructor() {}
 }
