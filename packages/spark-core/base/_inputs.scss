@@ -3,17 +3,9 @@
 // ==================================================================
 label,
 .sprk-b-Label {
-  @include TextCrop(
-    $line-height: $line-height-body-one,
-    $top-crop: $line-height-collision-top-crop,
-    $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-body-one) * 16),
-    $crop-line-height: $line-height-body-one);
-
-  font-size: $font-size-body-one;
-  color: $blue-dark;
-  font-weight: $font-weight-body-one;
-  line-height: $line-height-body-one;
+  font-size: $font-size-body-two;
+  font-weight: $font-weight-body-two;
+  line-height: $line-height-body-two;
 }
 
 .sprk-b-Label--inline {
@@ -27,17 +19,18 @@ label,
   font-weight: $font-weight-body-two;
 }
 
+.sprk-b-TextInput {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
 .sprk-b-TextInput,
 .sprk-b-Select,
 textarea {
   color: $gray-dark;
-  outline: none;
   font-size: $font-size-body-two;
-
-  &:focus {
-    border-color: $blue-medium;
-    box-shadow: $input-box-shadow;
-  }
+  outline: 0;
 }
 
 .sprk-b-TextInput--date-picker,
@@ -65,21 +58,11 @@ textarea {
 .sprk-b-TextInput--error,
 .sprk-b-Select--error {
   background-color: $red-light;
-  border-color: $red-medium;
-
-  &:focus {
-    border-color: $red-medium;
-    box-shadow: $input-error-box-shadow;
-    background-color: $red-light;
-  }
+  border-bottom-color: $red-medium;
 }
 
 .sprk-b-TextInput[readonly] {
   color: $white;
-
-  &:focus {
-    box-shadow: $input-disabled-box-shadow;
-  }
 }
 
 .sprk-b-SelectionContainer .sprk-b-Label {
@@ -131,4 +114,34 @@ textarea {
 :-ms-input-placeholder,
 ::placeholder {
   color: $gray-medium;
+}
+
+// label moving
+.sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
+  margin-top: -33px;
+  position: absolute;
+  transition: all 0.3s;
+  width: auto;
+}
+
+.sprk-b-TextInput ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput:focus ~ .sprk-b-Label {
+  margin-top: -55px;
+  font-size: 0.9rem;
+}
+
+// border animate
+.sprk-b-InputContainer__input-border {
+  display: block;
+  content: ' ';
+  border-bottom: 2px solid $red-medium;
+  width: 0;
+  margin-top: -2px;
+  margin-bottom: 2px;
+  transition: width 0.3s;
+}
+
+.sprk-b-TextInput:focus ~ .sprk-b-InputContainer__input-border {
+  width: 100%;
 }

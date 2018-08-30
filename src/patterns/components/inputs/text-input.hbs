@@ -15,14 +15,16 @@ order: 1
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
          type="text"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}
-         {{#if invaliddata}} aria-invalid="true"{{/if}}>
+         {{#if invaliddata}} aria-invalid="true"{{/if}} data-sprk-input="text">
+  <div class="sprk-b-InputContainer__input-border"></div>
+  <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
   <div class="sprk-b-ErrorText"
         id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
     {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
 </div>
+

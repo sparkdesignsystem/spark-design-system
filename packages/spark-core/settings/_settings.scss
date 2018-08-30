@@ -211,18 +211,18 @@ $list-margin-left: $space-m !default;
 //
 // Forms
 ///
-$text-input-border-radius: $border-radius !default;
-$text-input-border-color: $gray-medium !default;
-$text-input-border-width: 2px !default;
+$text-input-border-radius: 0 !default;
+$text-input-border-color: $black !default;
+$text-input-border-width: 1px !default;
 $input-container-margin-bottom: $space-m !default;
-$input-disabled-border-color: $gray-medium !default;
+$input-disabled-border-color: $black !default;
 $input-disabled-text-color: $white !default;
 $helper-text-hidden: false !default;
-$text-input-padding: $space-s !default;
-$input-readonly-border-color: $gray-medium !default;
-$input-box-shadow: 0 0 0 3px $blue-medium !default;
-$input-error-box-shadow: 0 0 0 3px $red-medium !default;
-$input-disabled-box-shadow: 0 0 0 3px $gray-medium !default;
+$text-input-padding: $space-s 0 !default;
+$input-readonly-border-color: $black !default;
+$input-box-shadow: 0 !default;
+$input-error-box-shadow: 0 !default;
+$input-disabled-box-shadow: 0 !default;
 
 //
 // Tables

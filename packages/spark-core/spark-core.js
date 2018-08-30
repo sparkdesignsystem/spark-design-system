@@ -1,4 +1,5 @@
 // Import all Spark-Core components
+import { textInput } from './base/textInput';
 import { ssnInput } from './base/ssnInput';
 import passwordInput from './base/passwordInput';
 import { monetaryInput } from './base/monetaryInput';
@@ -17,6 +18,7 @@ import { WideNavigation } from './components/wide-navigation';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
 
+
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
 import './utilities/polyfills/StringIncludes';
@@ -29,6 +31,7 @@ import detectJS from './utilities/detectJS';
 
 // Init
 detectJS();
+textInput();
 requiredSelect();
 requiredTick();
 requiredTextInput();
