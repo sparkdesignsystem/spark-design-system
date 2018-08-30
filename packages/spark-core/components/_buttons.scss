@@ -61,21 +61,6 @@
   }
 }
 
-// TODO: need removal btn
-.sprk-c-Button--removal {
-  background-color: transparent;
-  border: $btn-border-width solid $red-mid;
-  color: $red-mid;
-
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $red-light;
-    border: $btn-border-width solid $red-mid;
-    color: $red-mid;
-  }
-}
-
 // TODO: need disabled btn
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
