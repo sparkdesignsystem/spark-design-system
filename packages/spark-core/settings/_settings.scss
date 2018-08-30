@@ -179,6 +179,15 @@ $font-size-unit: rem !default;
 $border-radius: 5px !default;
 
 //
+// Alerts
+///
+$alert-color-bar-width: -10px;
+$alert-color: $white;
+$alert-color-info: $blue;
+$alert-color-success: $green;
+$alert-color-fail: $yellow;
+
+//
 // Buttons
 ///
 // TODO: Fall disable btn

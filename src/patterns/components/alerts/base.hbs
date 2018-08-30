@@ -4,17 +4,15 @@ hidden: true
 ---
 
 <div
-  class="sprk-c-Alert"
+  class="sprk-c-Alert sprk-c-Alert--{{type}}"
   role="alert"
   data-sprk-alert="container">
-  <div class="sprk-c-Alert__icon sprk-c-Alert__icon--{{type}}">
-    <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="{{viewBox}}" aria-hidden="true">
+  <div class="sprk-c-Alert__content">
+    <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l" viewBox="{{viewBox}}" aria-hidden="true">
       <use xlink:href="#{{icon}}"></use>
     </svg>
-  </div>
 
-  <div class="sprk-c-Alert__text">
-    <p class="sprk-b-TypeBodyOne sprk-u-TextColor--gray-dark">
+    <p class="sprk-b-TypeBodyTwo">
       {{#block "content"}}
       This is an Alert
       {{/block}}
