@@ -42,7 +42,7 @@
 
   &::after {
     content: '';
-    border-bottom: ($btn-border-width + 1px) solid $red-real;
+    border-bottom: ($btn-border-width + 1px) solid $btn-border-color;
     display: block;
     width: 100%;
     padding-top: $space-xs;
