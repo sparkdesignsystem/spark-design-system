@@ -57,8 +57,8 @@ textarea {
 
 .sprk-b-TextInput--error,
 .sprk-b-Select--error {
-  background-color: $red-light;
-  border-bottom-color: $red-medium;
+  //background-color: $red-light;
+  border-bottom-color: $red-real;
 }
 
 .sprk-b-TextInput[readonly] {
@@ -92,11 +92,11 @@ textarea {
 }
 
 .sprk-b-HelperText {
-  color: $gray-medium;
+  color: $gray-light;
 }
 
 .sprk-b-ErrorText {
-  color: $red-medium;
+  color: $red-real;
 }
 
 .sprk-b-TextArea {
@@ -113,7 +113,7 @@ textarea {
 ::-moz-placeholder,
 :-ms-input-placeholder,
 ::placeholder {
-  color: $gray-medium;
+  color: $gray-light;
 }
 
 // label moving
@@ -126,7 +126,7 @@ textarea {
 
 .sprk-b-TextInput ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput:focus ~ .sprk-b-Label {
+.sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
   margin-top: -55px;
   font-size: 0.9rem;
 }
@@ -135,13 +135,20 @@ textarea {
 .sprk-b-InputContainer__input-border {
   display: block;
   content: ' ';
-  border-bottom: 2px solid $red-medium;
+  border-bottom: 3px solid $red-real;
   width: 0;
   margin-top: -2px;
   margin-bottom: 2px;
-  transition: width 0.3s;
+  opacity: 1;
 }
 
-.sprk-b-TextInput:focus ~ .sprk-b-InputContainer__input-border {
+.sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
+  animation: width-zero-to-full 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.sprk-b-TextInput--focusout ~ .sprk-b-InputContainer__input-border {
   width: 100%;
+  animation: opacity-one-to-zero 0.3s;
+  animation-fill-mode: forwards;
 }
