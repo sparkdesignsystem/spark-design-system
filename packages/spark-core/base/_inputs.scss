@@ -9,6 +9,7 @@ label,
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
   line-height: $line-height-body-three;
+  padding: 0 $space-s;
 }
 
 .sprk-b-Label--inline {
@@ -65,8 +66,12 @@ textarea {
 
 .sprk-b-TextInput[disabled],
 .sprk-b-Select[disabled] {
-  border-bottom-width: 3px;
+  border-bottom-width: 1px;
   border-bottom-color: $input-gray-medium;
+}
+
+.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
+  color: $input-gray-medium;
 }
 
 .sprk-b-TextInput--error,
@@ -94,6 +99,7 @@ textarea {
 
 .sprk-b-InputContainer {
   max-width: 27.5rem;
+  margin-top: 3rem;
 }
 
 .sprk-b-InputContainer\@sm {
@@ -120,6 +126,7 @@ textarea {
   color: $black;
   font-size: $font-size-body-four;
   font-weight: bold;
+  padding: 0 $space-s;
 }
 
 .sprk-b-TextArea {
@@ -141,7 +148,7 @@ textarea {
 
 // label moving
 .sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: -33px;
+  margin-top: -30px;
   position: absolute;
   transition: all 0.3s;
   width: auto;
@@ -150,7 +157,7 @@ textarea {
 .sprk-b-TextInput ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  margin-top: -55px;
+  margin-top: -50px;
   font-size: 0.9rem;
 }
 
@@ -160,9 +167,13 @@ textarea {
   content: ' ';
   border-bottom: 3px solid $red-real;
   width: 0;
-  margin-top: -2px;
-  margin-bottom: 2px;
+  margin-top: -3px;
+  margin-bottom: 3px;
   opacity: 1;
+}
+
+.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
+  border-bottom: 3px solid $yellow;
 }
 
 .sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
