@@ -9,7 +9,7 @@
   &:focus,
   &:hover {
     background-color: $btn-hover-background-color;
-    border-color: $red-mid;
+    border-color: $btn-hover-background-color;
     color: $btn-text-color;
   }
 }
