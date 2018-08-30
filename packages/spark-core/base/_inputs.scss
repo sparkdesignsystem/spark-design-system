@@ -1,11 +1,14 @@
 // ==================================================================
 // Input Component
 // ==================================================================
+$input-gray-medium: #5a5a5a;
+
 label,
+.sprk-b-TextInput,
 .sprk-b-Label {
-  font-size: $font-size-body-two;
-  font-weight: $font-weight-body-two;
-  line-height: $line-height-body-two;
+  font-size: $font-size-body-three;
+  font-weight: $font-weight-body-three;
+  line-height: $line-height-body-three;
 }
 
 .sprk-b-Label--inline {
@@ -19,7 +22,8 @@ label,
   font-weight: $font-weight-body-two;
 }
 
-.sprk-b-TextInput {
+.sprk-b-TextInput,
+.sprk-b-TextInput[disabled] {
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -28,9 +32,13 @@ label,
 .sprk-b-TextInput,
 .sprk-b-Select,
 textarea {
-  color: $gray-dark;
   font-size: $font-size-body-two;
   outline: 0;
+}
+
+.sprk-b-TextInput[disabled] {
+  background-color: $gray-light;
+  color: $input-gray-medium;
 }
 
 .sprk-b-TextInput--date-picker,
@@ -55,10 +63,16 @@ textarea {
   top: 0.6rem;
 }
 
+.sprk-b-TextInput[disabled],
+.sprk-b-Select[disabled] {
+  border-bottom-width: 3px;
+  border-bottom-color: $input-gray-medium;
+}
+
 .sprk-b-TextInput--error,
 .sprk-b-Select--error {
-  //background-color: $red-light;
-  border-bottom-color: $red-real;
+  border-bottom-width: 3px;
+  border-bottom-color: $yellow;
 }
 
 .sprk-b-TextInput[readonly] {
@@ -92,11 +106,20 @@ textarea {
 }
 
 .sprk-b-HelperText {
-  color: $gray-light;
+  color: $input-gray-medium;
+}
+
+.sprk-b-ErrorIcon {
+  fill: $yellow;
+  margin-right: $space-s;
 }
 
 .sprk-b-ErrorText {
-  color: $red-real;
+  display: flex;
+  align-items: center;
+  color: $black;
+  font-size: $font-size-body-four;
+  font-weight: bold;
 }
 
 .sprk-b-TextArea {
