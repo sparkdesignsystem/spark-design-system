@@ -181,7 +181,7 @@ $border-radius: 5px !default;
 //
 // Buttons
 ///
-// TODO: Fall disable and removal
+// TODO: Fall disable btn
 $btn-background-color: $red-real !default;
 $btn-border-style: solid !default;
 $btn-border-radius: 0 !default;
@@ -189,7 +189,6 @@ $btn-disabled-opacity: 1 !default;
 $btn-disabled-background-color: $gray-light !default;
 $btn-disabled-text-color: $black !default;
 $btn-disabled-border-width: 0 !default;
-// $btn-disabled-border-color: $gray-light !default;
 $btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
