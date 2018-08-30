@@ -181,15 +181,18 @@ $border-radius: 5px !default;
 //
 // Buttons
 ///
-$btn-background-color: $green-medium !default;
+// TODO: Fall disable btn
+$btn-background-color: $red-real !default;
 $btn-border-style: solid !default;
-$btn-border-radius: $border-radius !default;
+$btn-border-color: $btn-background-color;
+$btn-border-width: 2px;
+$btn-border-radius: 0 !default;
 $btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray-medium !default;
-$btn-disabled-text-color: $white !default;
-$btn-disabled-border-width: 2px !default;
-$btn-disabled-border-color: $gray-medium !default;
-$btn-hover-background-color: $green-dark !default;
+$btn-disabled-background-color: $gray-light !default;
+$btn-disabled-text-color: $black !default;
+$btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-border-color: $btn-disabled-background-color !default;
+$btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-text-color: $white !default;
@@ -199,8 +202,8 @@ $btn-transition-speed: 0.3s !default;
 //
 // Links
 ///
-$link-color: $blue-medium !default;
-$link-visited-color: $blue-dark !default;
+$link-color: $red-real !default;
+$link-visited-color: $red-mid !default;
 $link-transition: 0.3s !default;
 
 //

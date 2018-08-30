@@ -2,11 +2,14 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  transition: background-color $btn-transition-speed;
+  transition: border-color $btn-transition-speed,
+    background-color $btn-transition-speed;
 
   &:active,
-  &:focus {
+  &:focus,
+  &:hover {
     background-color: $btn-hover-background-color;
+    border-color: $btn-hover-background-color;
     color: $btn-text-color;
   }
 }
@@ -21,47 +24,54 @@
 
 .sprk-c-Button--secondary {
   background-color: transparent;
-  border: 2px solid $blue-medium;
-  color: $blue-medium;
+  border-color: transparent;
+  color: $black;
+  text-transform: uppercase;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: $blue-medium;
-    border: 2px solid $blue-medium;
-    color: $white;
+    background-color: transparent;
+    border-color: transparent;
+    color: $black;
+  }
+
+  &:hover::after {
+    animation: width-zero-to-full $btn-transition-speed ease-in-out;
+  }
+
+  &::after {
+    content: '';
+    border-bottom: ($btn-border-width + 1px) solid $btn-border-color;
+    display: block;
+    width: 100%;
+    padding-top: $space-xs;
+    margin: 0 auto;
   }
 }
 
 .sprk-c-Button--tertiary {
-  background-color: $blue-medium;
-
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $blue-dark;
-  }
-}
-
-.sprk-c-Button--removal {
   background-color: transparent;
-  border: 2px solid $red-medium;
-  color: $red-medium;
+  border: $btn-border-width solid $black;
+  color: $black;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: $red-light;
-    border: 2px solid $red-medium;
-    color: $red-medium;
+    background-color: $black;
+    border: $btn-border-width solid $black;
+    color: $white;
   }
 }
 
+// TODO: need disabled btn
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
   &:active,
   &:focus,
   &:hover {
     background-color: $btn-disabled-background-color;
+    border-color: transparent;
+    color: $black;
   }
 }
