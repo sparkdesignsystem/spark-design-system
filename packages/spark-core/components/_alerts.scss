@@ -5,22 +5,21 @@
   align-items: center;
   justify-content: center;
   background-color: $white;
-  border: 1px solid $gray-light;
-  box-shadow: 0 4px 5px $gray-light;
+  border: $alert-border;
+  box-shadow: $alert-shadow;
   display: flex;
   transition: box-shadow 0.3s ease-in-out, color 0.4s ease-in-out;
 }
 
 .sprk-c-Alert--info {
-  box-shadow: 0 4px 5px $gray-light,
-    inset $alert-color-bar-width 0 0 $alert-color-info;
+  box-shadow: $alert-shadow, $alert-shadow-info;
 
   .sprk-c-Alert__icon:first-child {
     color: $alert-color-info;
   }
 
   &:hover {
-    box-shadow: 0 4px 5px $gray-light, inset -64px 0 0 $alert-color-info;
+    box-shadow: $alert-shadow, $alert-shadow-hover-info;
 
     .sprk-c-Alert__icon--dismiss {
       color: $white;
@@ -29,15 +28,14 @@
 }
 
 .sprk-c-Alert--success {
-  box-shadow: 0 4px 5px $gray-light,
-    inset $alert-color-bar-width 0 0 $alert-color-success;
+  box-shadow: $alert-shadow, $alert-shadow-success;
 
   .sprk-c-Alert__icon:first-child {
     color: $alert-color-success;
   }
 
   &:hover {
-    box-shadow: 0 4px 5px $gray-light, inset -64px 0 0 $alert-color-success;
+    box-shadow: $alert-shadow, $alert-shadow-hover-success;
 
     .sprk-c-Alert__icon--dismiss {
       color: $white;
@@ -46,15 +44,14 @@
 }
 
 .sprk-c-Alert--fail {
-  box-shadow: 0 4px 5px $gray-light,
-    inset $alert-color-bar-width 0 0 $alert-color-fail;
+  box-shadow: $alert-shadow, $alert-shadow-fail;
 
   .sprk-c-Alert__icon:first-child {
     color: $alert-color-fail;
   }
 
   &:hover {
-    box-shadow: 0 4px 5px $gray-light, inset -64px 0 0 $alert-color-fail;
+    box-shadow: $alert-shadow, $alert-shadow-hover-fail;
 
     .sprk-c-Alert__icon--dismiss {
       color: $white;

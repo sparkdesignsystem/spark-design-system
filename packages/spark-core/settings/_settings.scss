@@ -181,11 +181,19 @@ $border-radius: 5px !default;
 //
 // Alerts
 ///
+$alert-border: 1px solid $gray-light;
 $alert-color-bar-width: -10px;
 $alert-color: $white;
 $alert-color-info: $blue;
 $alert-color-success: $green;
 $alert-color-fail: $yellow;
+$alert-shadow: 0 4px 5px $gray-light;
+$alert-shadow-info: inset $alert-color-bar-width 0 0 $alert-color-info;
+$alert-shadow-hover-info: inset -64px 0 0 $alert-color-info;
+$alert-shadow-success: inset $alert-color-bar-width 0 0 $alert-color-success;
+$alert-shadow-hover-success: inset -64px 0 0 $alert-color-success;
+$alert-shadow-fail: inset $alert-color-bar-width 0 0 $alert-color-fail;
+$alert-shadow-hover-fail: inset -64px 0 0 $alert-color-fail;
 
 //
 // Buttons
