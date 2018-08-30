@@ -2,12 +2,14 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  transition: background-color $btn-transition-speed;
-  border: 0;
+  transition: border-color $btn-transition-speed,
+    background-color $btn-transition-speed;
 
   &:active,
-  &:focus {
+  &:focus,
+  &:hover {
     background-color: $btn-hover-background-color;
+    border-color: $red-mid;
     color: $btn-text-color;
   }
 }
@@ -22,6 +24,7 @@
 
 .sprk-c-Button--secondary {
   background-color: transparent;
+  border-color: transparent;
   color: $black;
   text-transform: uppercase;
 
@@ -29,6 +32,7 @@
   &:focus,
   &:hover {
     background-color: transparent;
+    border-color: transparent;
     color: $black;
   }
 
@@ -38,7 +42,7 @@
 
   &::after {
     content: '';
-    border-bottom: $btn-border-width solid $red-real;
+    border-bottom: ($btn-border-width + 1px) solid $red-real;
     display: block;
     width: 100%;
     padding-top: $space-xs;
@@ -50,7 +54,6 @@
   background-color: transparent;
   border: $btn-border-width solid $black;
   color: $black;
-  padding: ($space-m - $btn-border-width) $space-l;
 
   &:active,
   &:focus,
@@ -68,5 +71,7 @@
   &:focus,
   &:hover {
     background-color: $btn-disabled-background-color;
+    border-color: transparent;
+    color: $black;
   }
 }

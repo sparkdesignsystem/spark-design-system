@@ -184,18 +184,20 @@ $border-radius: 5px !default;
 // TODO: Fall disable btn
 $btn-background-color: $red-real !default;
 $btn-border-style: solid !default;
+$btn-border-color: $btn-background-color;
+$btn-border-width: 2px;
 $btn-border-radius: 0 !default;
 $btn-disabled-opacity: 1 !default;
 $btn-disabled-background-color: $gray-light !default;
 $btn-disabled-text-color: $black !default;
-$btn-disabled-border-width: 0 !default;
+$btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-border-color: $btn-disabled-background-color !default;
 $btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-text-color: $white !default;
 $btn-breakpoint: 30rem !default;
 $btn-transition-speed: 0.3s !default;
-$btn-border-width: 3px;
 
 //
 // Links
