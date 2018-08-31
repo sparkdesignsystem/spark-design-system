@@ -156,7 +156,7 @@ textarea {
 }
 
 .sprk-b-TextInput ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput:not([placeholder*='']) ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
   margin-top: -50px;
