@@ -8,20 +8,18 @@
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  max-width: 26rem;
+  max-width: $pag-max-width;
   width: 100%;
 }
 
 .sprk-c-Pagination__item {
   margin-right: $space-m;
-  padding: $space-inset-short-s;
 
   &:last-child {
     margin-right: 0;
   }
 }
 
-// For items in the long pagination version
 .sprk-c-Pagination__item--long {
   margin-right: $space-xs;
 
@@ -30,11 +28,67 @@
   }
 }
 
-.sprk-c-Pagination__item--current {
-  background-color: $gray-light;
-  border-radius: $border-radius;
+.sprk-c-Pagination__link {
+  color: $black;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-inset-short-s;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $black;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $pag-selection-color;
+  }
 }
 
-.sprk-c-Pagination__item--current .sprk-b-Link {
+.sprk-c-Pagination__item--current .sprk-c-Pagination__link {
+  background-color: $pag-selection-color;
+  color: $white;
   font-weight: bold;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $white;
+  }
+}
+
+.sprk-c-Pagination__icon {
+  color: $black;
+
+  &:visited {
+    color: $black;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $pag-selection-color;
+  }
+}
+
+.sprk-c-Pagination__icon.sprk-b-Link--disabled {
+  color: $gray-medium;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: $gray-medium;
+  }
 }
