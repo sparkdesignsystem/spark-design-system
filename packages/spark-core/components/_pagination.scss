@@ -12,22 +12,6 @@
   width: 100%;
 }
 
-.sprk-c-Pagination__item {
-  margin-right: $space-m;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.sprk-c-Pagination__item--long {
-  margin-right: $space-xs;
-
-  @media all and (min-width: $pag-breakpoint) {
-    margin-right: $space-s;
-  }
-}
-
 .sprk-c-Pagination__link {
   color: $black;
   border: 1px solid transparent;
@@ -55,7 +39,7 @@
   }
 }
 
-.sprk-c-Pagination__item--current .sprk-c-Pagination__link {
+.sprk-c-Pagination__link--current {
   background-color: $pag-selection-color;
   color: $white;
   font-weight: bold;
