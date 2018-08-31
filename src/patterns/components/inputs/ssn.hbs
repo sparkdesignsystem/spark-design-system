@@ -27,10 +27,10 @@ order: 11
          {{#if disabled}} disabled{{/if}} data-sprk-input="text">
   <div class="sprk-b-InputContainer__input-border"></div>
   <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
-  <div class="sprk-b-SelectionContainer">
+  <div class="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle sprk-u-pls">
     <input id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" type="checkbox"
       {{#if disabled}} disabled{{/if}}>
-    <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
+    <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" class="sprk-b-Label--inline">Show SSN</label>
   </div>
   <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container">
     {{#if errorMessage}}{{errorMessage}}{{/if}}</div>

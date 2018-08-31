@@ -1,13 +1,21 @@
 /* global window */
 import getElements from '../utilities/getElements';
 
+const valueTest = (element) => {
+  if (element.value !== '') {
+    element.classList.add('sprk-b-TextInput--has-value');
+  } else {
+    element.classList.remove('sprk-b-TextInput--has-value');
+  }
+};
+
 const bindUIEvents = (element) => {
   element.addEventListener('input', () => {
-    if (element.value !== '') {
-      element.classList.add('sprk-b-TextInput--has-value');
-    } else {
-      element.classList.remove('sprk-b-TextInput--has-value');
-    }
+    valueTest(element);
+  });
+
+  element.addEventListener('blur', () => {
+    valueTest(element);
   });
 
   element.addEventListener('focusin', () => {
@@ -15,12 +23,11 @@ const bindUIEvents = (element) => {
     element.classList.add('sprk-b-TextInput--focusin');
   });
 
-  element.addEventListener('focusout', () => {
+  element.addEventListener('blur', () => {
     element.classList.remove('sprk-b-TextInput--focusin');
     element.classList.add('sprk-b-TextInput--focusout');
   });
 };
-
 
 const textInput = () => {
   window.addEventListener('load', () => {

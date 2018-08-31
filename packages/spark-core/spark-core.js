@@ -31,7 +31,6 @@ import detectJS from './utilities/detectJS';
 
 // Init
 detectJS();
-textInput();
 requiredSelect();
 requiredTick();
 requiredTextInput();
@@ -49,3 +48,4 @@ spinners();
 WideNavigation();
 masthead();
 alerts();
+textInput();

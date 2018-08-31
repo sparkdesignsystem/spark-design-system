@@ -1,0 +1,44 @@
+label,
+.sprk-b-Label {
+  font-size: $font-size-body-three;
+  font-weight: $font-weight-body-three;
+  line-height: $line-height-body-three;
+  padding: 0 $space-s;
+}
+
+.sprk-b-Label--inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
+  color: $input-gray-medium;
+  cursor: not-allowed;
+}
+
+.sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
+  font-size: $font-size-body-four;
+}
+
+.sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
+.sprk-b-InputContainer > .sprk-b-Label {
+  margin-bottom: $space-s;
+}
+
+// label moving
+.sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
+  margin-top: -30px;
+  position: absolute;
+  transition: all 0.3s;
+  width: auto;
+}
+
+.sprk-b-TextInput ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+  margin-top: -50px;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+}
+

@@ -3,24 +3,11 @@
 // ==================================================================
 $input-gray-medium: #5a5a5a;
 
-label,
-.sprk-b-TextInput,
-.sprk-b-Label {
+.sprk-b-TextInput {
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
   line-height: $line-height-body-three;
   padding: 0 $space-s;
-}
-
-.sprk-b-Label--inline {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.sprk-b-SubLabel {
-  color: $color-body-two;
-  font-size: $font-size-body-two;
-  font-weight: $font-weight-body-two;
 }
 
 .sprk-b-TextInput,
@@ -28,11 +15,6 @@ label,
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
-}
-
-.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
-  color: $input-gray-medium;
-  cursor: not-allowed;
 }
 
 .sprk-b-TextInput,
@@ -56,7 +38,8 @@ textarea {
 .sprk-b-TextInput--monetary::before {
   color: $gray-dark;
   position: absolute;
-  left: 0.55rem;
+  left: 2px;
+  margin-top: -8px;
   z-index: $layer-height-xs;
 }
 
@@ -107,9 +90,9 @@ textarea {
   max-width: none;
 }
 
-.sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
-.sprk-b-InputContainer > .sprk-b-Label {
-  margin-bottom: $space-s;
+.sprk-b-HelperText,
+.sprk-b-ErrorText {
+  font-size: $font-size-body-four;
 }
 
 .sprk-b-HelperText {
@@ -145,22 +128,6 @@ textarea {
 :-ms-input-placeholder,
 ::placeholder {
   color: $gray-light;
-}
-
-// label moving
-.sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: -30px;
-  position: absolute;
-  transition: all 0.3s;
-  width: auto;
-}
-
-.sprk-b-TextInput ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  margin-top: -50px;
-  font-size: 0.9rem;
 }
 
 // border animate
