@@ -17,7 +17,6 @@ order: 11
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="ssn">
-  <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}"
          type="password"
@@ -25,7 +24,9 @@ order: 11
          placeholder="000-00-0000"
          {{#if invaliddata}} aria-invalid="true"{{/if}}
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container"
-         {{#if disabled}} disabled{{/if}}>
+         {{#if disabled}} disabled{{/if}} data-sprk-input="text">
+  <div class="sprk-b-InputContainer__input-border"></div>
+  <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
   <div class="sprk-b-SelectionContainer">
     <input id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" type="checkbox"
       {{#if disabled}} disabled{{/if}}>

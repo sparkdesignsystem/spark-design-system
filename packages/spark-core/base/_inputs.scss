@@ -30,6 +30,11 @@ label,
   border-right-color: transparent;
 }
 
+.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
+  color: $input-gray-medium;
+  cursor: not-allowed;
+}
+
 .sprk-b-TextInput,
 .sprk-b-Select,
 textarea {
@@ -68,10 +73,6 @@ textarea {
 .sprk-b-Select[disabled] {
   border-bottom-width: 1px;
   border-bottom-color: $input-gray-medium;
-}
-
-.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
-  color: $input-gray-medium;
 }
 
 .sprk-b-TextInput--error,
@@ -155,6 +156,7 @@ textarea {
 }
 
 .sprk-b-TextInput ~ .sprk-b-Label,
+.sprk-u-Javascript .sprk-b-TextInput:not([placeholder*='']) ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
   margin-top: -50px;
