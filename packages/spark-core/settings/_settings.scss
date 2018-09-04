@@ -65,7 +65,6 @@ $icon-xxl: 128px !default;
 //
 // Layout
 //
-$horizontal-list-spacing: $space-m !default;
 $centered-column-width: 64rem !default;
 
 //
@@ -76,6 +75,16 @@ $layer-height-s: 1000 !default;
 $layer-height-m: 2000 !default;
 $layer-height-l: 3000 !default;
 $layer-height-xl: 99999 !default;
+
+//
+// Horizontal List
+//
+$horizontal-list-spacing: $space-m !default;
+$horizontal-list-spacing-tiny: $space-xs !default;
+$horizontal-list-spacing-small: $space-s !default;
+$horizontal-list-spacing-medium: $space-m !default;
+$horizontal-list-spacing-large: $space-l !default;
+$horizontal-list-spacing-huge: $space-xl !default;
 
 //
 // Pagination
