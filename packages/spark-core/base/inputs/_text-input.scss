@@ -24,18 +24,18 @@
 .sprk-b-DatePicker__icon,
 .sprk-b-TextInput--monetary::before {
   position: absolute;
-  left: $space-s;
-  margin-top: -8px;
   z-index: $layer-height-xs;
 }
 
 .sprk-b-DatePicker__icon {
-  top: 0.75rem;
+  margin-top: $input-icon-offset-y;
+  margin-left: $input-icon-offset-x;
 }
 
 .sprk-b-TextInput--monetary::before {
   content: '$';
-  top: 0.5625rem;
+  margin-top: $input-text-icon-offset-y;
+  margin-left: $input-text-icon-offset-x;
 }
 
 .sprk-b-TextInput[readonly] {
@@ -79,16 +79,16 @@
 }
 
 .sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
-  border-bottom: 3px solid $yellow;
+  border-bottom: 3px solid $text-input-error-color;
 }
 
 .sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full 0.3s;
+  animation: width-zero-to-full $input-animation-speed;
   animation-fill-mode: forwards;
 }
 
 .sprk-b-TextInput--focusout ~ .sprk-b-InputContainer__input-border {
   width: 100%;
-  animation: opacity-one-to-zero 0.3s;
+  animation: opacity-one-to-zero $input-animation-speed;
   animation-fill-mode: forwards;
 }

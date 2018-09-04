@@ -14,8 +14,8 @@
 
 .sprk-b-SelectContainer__icon {
   float: right;
-  margin-top: -22px;
-  margin-right: 8px;
+  margin-top: $select-arrow-offset-y;
+  margin-right: $select-arrow-offset-x;
 }
 
 .sprk-b-Select[disabled] {
@@ -33,16 +33,16 @@
 }
 
 .sprk-b-Select--error ~ .sprk-b-InputContainer__input-border {
-  border-bottom: 3px solid $yellow;
+  border-bottom: 3px solid $text-input-error-color;
 }
 
 .sprk-b-Select--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full 0.3s;
+  animation: width-zero-to-full $input-animation-speed;
   animation-fill-mode: forwards;
 }
 
 .sprk-b-Select--focusout ~ .sprk-b-InputContainer__input-border {
   width: 100%;
-  animation: opacity-one-to-zero 0.3s;
+  animation: opacity-one-to-zero $input-animation-speed;
   animation-fill-mode: forwards;
 }

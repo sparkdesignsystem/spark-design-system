@@ -24,29 +24,29 @@ label,
 .sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
 .sprk-b-InputContainer > .sprk-b-Label {
   margin-bottom: $space-s;
-  transform: scale(0.82); // ratio of body-four to body-three
+  transform: scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
 // label moving
 .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: -50px;
-  margin-bottom: 28px;
+  margin-top: $label-offset-y;
+  margin-bottom: $label-counter-weight;
   position: absolute;
-  transition: all 0.3s;
-  transform: scale(0.82); // ratio of body-four to body-three
+  transition: all $input-animation-speed;
+  transform: scale($label-shrink-scale); // ratio of body-four to body-three
   width: auto;
 }
 
 .sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: -28px;
+  margin-top: $label-offset-y-open;
   transform: scale(1);
 }
 
 .sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  margin-top: -50px;
-  margin-bottom: 28px;
-  transform: scale(0.82); // ratio of body-four to body-three
+  margin-top: $label-offset-y;
+  margin-bottom: $label-counter-weight;
+  transform: scale($label-shrink-scale); // ratio of body-four to body-three
 }
 

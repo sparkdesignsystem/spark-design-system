@@ -227,6 +227,24 @@ $input-readonly-border-color: $black !default;
 $input-box-shadow: 0 2px 0 0 $black !default;
 $input-error-box-shadow: 0 3px 0 0 $yellow !default;
 $input-disabled-box-shadow: 0 1px 0 0 $input-gray-medium !default;
+$date-picker-max-width: 20rem !default;
+$date-picker-button-size: 2.25rem !default;
+$date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
+$date-picker-day-interact-color: $red-real !default;
+$text-input-interact-color: $red-real !default;
+$text-input-error-color: $yellow !default;
+$input-max-width: 27.5rem !default;
+$input-icon-offset-x: 4px !default;
+$input-icon-offset-y: 4px !default;
+$input-text-icon-offset-x: 4px !default;
+$input-text-icon-offset-y: 0 !default;
+$input-animation-speed: 0.3s !default;
+$select-arrow-offset-y: -22px !default;
+$select-arrow-offset-x: 8px !default;
+$label-offset-y: -50px !default;
+$label-offset-y-open: -28px !default;
+$label-counter-weight: 28px !default;
+$label-shrink-scale: 0.82;
 
 //
 // Tables

@@ -5,12 +5,12 @@
 /* stylelint-disable selector-class-pattern */
 .dp {
   background: $white;
-  box-shadow: 0 2px 5px $input-gray-medium;
+  box-shadow: $date-picker-box-shadow;
   font-family: $heading-font-stack;
   font-size: $font-size-body-four;
   padding: $space-inset-m;
   position: relative;
-  max-width: 18rem;
+  max-width: $date-picker-max-width;
 }
 
 .dp::before {
@@ -87,31 +87,39 @@
   padding: 0 0.2rem;
 }
 
-.dp-col-header {
-  border-bottom: 1px solid $gray-light;
-  display: inline-block;
-  font-weight: bold;
-  font-size: $font-size-body-three;
-  margin-bottom: $space-s;
-  margin-top: 0;
-  padding: 0 $space-s $space-s $space-s;
-  text-align: center;
-  width: 36px;
-}
-
 // hiding the footer functionality
 .dp-cal-footer {
   display: none;
+}
+
+.dp-col-header {
+  border-bottom: 1px solid $gray-light;
+  display: inline-block;
+  font-size: $font-size-body-three;
+  font-weight: bold;
+  margin: 2px;
+  padding: 6px;
+  text-align: center;
+  width: $date-picker-button-size;
 }
 
 .dp-day {
   background: none;
   border: 2px solid transparent;
   border-radius: 50%;
+  height: $date-picker-button-size;
   line-height: 1;
-  padding: $space-s;
-  height: 36px;
-  width: 36px;
+  padding: 6px;
+  margin: 0 2px;
+  width: $date-picker-button-size;
+}
+
+.dp-day:first-child {
+  margin-left: 0;
+}
+
+.dp-day:nth-child(7n) {
+  margin-right: 0;
 }
 
 .dp-day::selection {
@@ -121,10 +129,10 @@
 .dp-current,
 .dp-selected,
 .dp-day:hover {
-  background: $red-real;
+  background: $date-picker-day-interact-color;
   color: $white;
   outline: 0;
-  border-color: $red-real;
+  border-color: $date-picker-day-interact-color;
 }
 
 .dp-day:hover {
@@ -138,13 +146,13 @@
 }
 
 .dp-day-today::after {
-  background-color: $red-real;
+  background-color: $date-picker-day-interact-color;
   border-radius: 50%;
   display: block;
   content: '';
   height: 5px;
   width: 5px;
-  margin: 3px auto;
+  margin: 2px auto;
 }
 
 .dp-current.dp-day-today::after {
@@ -152,7 +160,7 @@
 }
 
 .dp-current.dp-day-today:hover::after {
-  background-color: $red-real;
+  background-color: $date-picker-day-interact-color;
 }
 
 .dp-cal-header {
