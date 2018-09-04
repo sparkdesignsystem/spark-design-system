@@ -19,11 +19,14 @@ order: 13
          {{#if disabled}} disabled{{/if}} data-sprk-input="text">
   <div class="sprk-b-InputContainer__input-border"></div>
   <label for="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}" class="sprk-b-Label">Search</label>
-  <div class="sprk-b-ErrorText"
-       id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container">
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container">
     {{#if errorMessage}}
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
         <use xlink:href="#exclamation" />
       </svg>
-      {{errorMessage}}{{/if}}</div>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
 </div>
