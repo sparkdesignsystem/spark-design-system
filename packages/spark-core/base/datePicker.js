@@ -11,6 +11,9 @@ const datePicker = () => {
 
     const dp = TinyDatePicker(input, {
       mode: 'dp-below',
+      lang: {
+        days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      },
       min: overrideMinDate || '01/1/2008',
       max: overrideMaxDate || '01/1/2068',
 

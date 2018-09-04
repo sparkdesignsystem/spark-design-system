@@ -21,16 +21,16 @@
   position: relative;
 }
 
-.sprk-b-TextInput--date-picker > .sprk-c-Icon,
+.sprk-b-DatePicker__icon,
 .sprk-b-TextInput--monetary::before {
   position: absolute;
-  left: 2px;
-  margin-top: -9px;
+  left: $space-s;
+  margin-top: -8px;
   z-index: $layer-height-xs;
 }
 
-.sprk-b-TextInput--date-picker > .sprk-c-Icon {
-  top: 0.85rem;
+.sprk-b-DatePicker__icon {
+  top: 0.75rem;
 }
 
 .sprk-b-TextInput--monetary::before {

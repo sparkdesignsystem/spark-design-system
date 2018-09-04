@@ -2,15 +2,19 @@
 // Date Picker
 // ==================================================================
 
-/* stylelint-disable */
+/* stylelint-disable selector-class-pattern */
 .dp {
   background: $white;
-  border: 2px solid $gray-medium;
-  border-radius: $border-radius;
-  font-size: $font-size-body-three;
+  box-shadow: 0 2px 5px $input-gray-medium;
+  font-family: $heading-font-stack;
+  font-size: $font-size-body-four;
   padding: $space-inset-m;
   position: relative;
-  max-width: 20rem;
+  max-width: 18rem;
+}
+
+.dp::before {
+  position: absolute;
 }
 
 .dp-below-top {
@@ -31,9 +35,9 @@
   }
 
   &::before {
-    border-bottom-color: $gray-medium;
-    border-width: 13px;
-    margin-left: -13px;
+    border-bottom-color: $gray-light;
+    border-width: 12px;
+    margin-left: -12px;
   }
 }
 
@@ -56,9 +60,9 @@
   }
 
   &::before {
-    border-bottom-color: $gray-medium;
-    border-width: 13px;
-    margin-left: -13px;
+    border-bottom-color: $gray-light;
+    border-width: 12px;
+    margin-left: -12px;
   }
 }
 
@@ -78,9 +82,21 @@
 .dp-month,
 .dp-cal-header button {
   background: none;
-  border: none;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  border: 2px solid transparent;
+  margin: 0 0.2rem;
+  padding: 0 0.2rem;
+}
+
+.dp-col-header {
+  border-bottom: 1px solid $gray-light;
+  display: inline-block;
+  font-weight: bold;
+  font-size: $font-size-body-three;
+  margin-bottom: $space-s;
+  margin-top: 0;
+  padding: 0 $space-s $space-s $space-s;
+  text-align: center;
+  width: 36px;
 }
 
 // hiding the footer functionality
@@ -88,36 +104,32 @@
   display: none;
 }
 
-.dp-col-header {
-  font-weight: bold;
-  font-size: $font-size-body-three;
-  padding: $space-s 0;
-}
-
-.dp-col-header,
-.dp-day {
-  display: inline-block;
-  padding: $space-s;
-  text-align: center;
-  width: 14.28571429%;
-}
-
 .dp-day {
   background: none;
-  border: 1px solid $gray-light;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  line-height: 1;
+  padding: $space-s;
+  height: 36px;
+  width: 36px;
 }
 
-.dp-day-today {
-  font-weight: bold;
-  box-shadow: inset $input-box-shadow;
+.dp-day::selection {
+  user-select: none;
 }
 
 .dp-current,
 .dp-selected,
-.dp-year:hover,
-.dp-month:hover,
 .dp-day:hover {
-  background: $blue-light;
+  background: $red-real;
+  color: $white;
+  outline: 0;
+  border-color: $red-real;
+}
+
+.dp-day:hover {
+  background: none;
+  color: $black;
 }
 
 .dp-day-disabled,
@@ -125,8 +137,25 @@
   color: $gray-medium;
 }
 
+.dp-day-today::after {
+  background-color: $red-real;
+  border-radius: 50%;
+  display: block;
+  content: '';
+  height: 5px;
+  width: 5px;
+  margin: 3px auto;
+}
+
+.dp-current.dp-day-today::after {
+  background-color: $white;
+}
+
+.dp-current.dp-day-today:hover::after {
+  background-color: $red-real;
+}
+
 .dp-cal-header {
-  border-bottom: 1px solid $gray-medium;
   display: flex;
   padding-bottom: $space-s;
 }
@@ -147,20 +176,20 @@
   border: 0;
   border-radius: 2px;
   font-size: 0;
-  height: 50px;
+  height: 35px;
   overflow: hidden;
   top: $space-m;
-  width: 50px;
+  width: 35px;
   // to make them look like carets, rather than have text
   &::before {
-    border: 3px solid $blue-medium;
+    border: 2px solid $black;
     content: '';
     display: inline-block;
-    height: 15px;
+    height: 10px;
     margin: 13px 0 40px;
     transform: rotate(-45deg);
     transition: border-color 0.2s;
-    width: 15px;
+    width: 10px;
   }
 }
 
@@ -193,18 +222,10 @@
   width: 100%;
 }
 
-.dp {
-  position: relative;
-
-  &::before {
-    position: absolute;
-  }
-}
-
 .dp-below {
   margin-top: $space-m;
   position: absolute;
   z-index: $layer-height-xs;
 }
 
-/* stylelint-enable*/
+/* stylelint-enable selector-class-pattern */
