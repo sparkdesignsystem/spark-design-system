@@ -25,7 +25,7 @@
 .sprk-b-TextInput--monetary::before {
   position: absolute;
   left: 2px;
-  margin-top: -6px;
+  margin-top: -9px;
   z-index: $layer-height-xs;
 }
 
@@ -45,11 +45,16 @@
 .sprk-b-HelperText,
 .sprk-b-ErrorText {
   font-size: $font-size-body-four;
-  font-weight: bold;
+  font-weight: $font-weight-body-four;
+  line-height: $line-height-body-four;
 }
 
 .sprk-b-HelperText {
   color: $input-gray-medium;
+}
+
+.sprk-b-ErrorText {
+  font-weight: bold;
 }
 
 .sprk-b-TextArea {

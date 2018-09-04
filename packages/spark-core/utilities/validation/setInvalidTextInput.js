@@ -4,6 +4,7 @@ const buildErrorContainer = (errorContainer, iconName, message) => {
   errorIcon.classList.add('sprk-c-Icon', 'sprk-c-Icon--m', 'sprk-b-ErrorIcon');
   const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
   const errorText = document.createElement('span');
+  errorText.classList.add('sprk-b-ErrorText');
   useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', `#${iconName}`);
   errorIcon.appendChild(useElement);
   errorText.textContent = message;
