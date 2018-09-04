@@ -38,11 +38,7 @@ const handleDefaultPagItemClick = (item, currentPage, prev, next) => {
   // Number of the new page that was clicked
   const currentItemNum = parseInt(item.textContent, 10);
 
-  updatePageStyles(
-    item.parentElement,
-    currentPage.parentElement,
-    'sprk-c-Pagination__item--current',
-  );
+  updatePageStyles(item, currentPage, 'sprk-c-Pagination__link--current');
 
   setAriaCurrent(item, currentPage);
 
@@ -63,19 +59,15 @@ const handleDefaultPagPrevClick = (link1, link2, currentPage, prev, next) => {
   if (currentPageNum === 1) return;
   // If we are on page 2 and want to go back to 1
   if (currentPageNum === 2) {
-    updatePageStyles(
-      link1.parentElement,
-      currentPage.parentElement,
-      'sprk-c-Pagination__item--current',
-    );
+    updatePageStyles(link1, currentPage, 'sprk-c-Pagination__link--current');
     setAriaCurrent(link1, currentPage);
     prev.classList.add('sprk-b-Link--disabled');
   } else {
     // If we are on page 3 and want to go back to 2
     updatePageStyles(
-      link2.parentElement, // Add styles to new page 2
-      currentPage.parentElement, // Remove from old page
-      'sprk-c-Pagination__item--current',
+      link2, // Add styles to new page 2
+      currentPage, // Remove from old page
+      'sprk-c-Pagination__link--current',
     );
     setAriaCurrent(link2, currentPage);
     // Disable next link since we are on last link
@@ -90,20 +82,12 @@ const handleDefaultPagNextClick = (link2, link3, currentPage, prev, next) => {
   if (currentPageNum >= 3) return;
   // If we are on page 1 and want to go to 2
   if (currentPageNum === 1) {
-    updatePageStyles(
-      link2.parentElement,
-      currentPage.parentElement,
-      'sprk-c-Pagination__item--current',
-    );
+    updatePageStyles(link2, currentPage, 'sprk-c-Pagination__link--current');
     setAriaCurrent(link2, currentPage);
     prev.classList.remove('sprk-b-Link--disabled');
   } else {
     // If we are on page 2 and want to go to 3
-    updatePageStyles(
-      link3.parentElement,
-      currentPage.parentElement,
-      'sprk-c-Pagination__item--current',
-    );
+    updatePageStyles(link3, currentPage, 'sprk-c-Pagination__link--current');
     setAriaCurrent(link3, currentPage);
     next.classList.add('sprk-b-Link--disabled');
   }
