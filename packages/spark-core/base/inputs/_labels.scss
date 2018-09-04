@@ -27,11 +27,16 @@ label,
 }
 
 // label moving
-.sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: -28px;
+.sprk-b-TextInput ~ .sprk-b-Label {
+  margin-top: -50px;
+  margin-bottom: 28px;
   position: absolute;
   transition: all 0.3s;
   width: auto;
+}
+
+.sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
+  margin-top: -28px;
 }
 
 .sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
