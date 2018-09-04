@@ -12,6 +12,7 @@
   width: 100%;
 }
 
+// Pag links have a border when hovered
 .sprk-c-Pagination__link {
   color: $black;
   border: 2px solid transparent;
@@ -19,8 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2em;
-  height: 2em;
+  width: $pag-circle-size;
+  height: $pag-circle-size;
   text-align: center;
   text-decoration: none;
 
