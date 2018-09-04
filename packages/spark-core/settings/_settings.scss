@@ -214,18 +214,19 @@ $list-margin-left: $space-m !default;
 //
 // Forms
 ///
+$input-gray-medium: #5a5a5a;
 $text-input-border-radius: 0 !default;
 $text-input-border-color: $black !default;
-$text-input-border-width: 1px !default;
+$text-input-border-width: 0 !default;
 $input-container-margin-bottom: $space-m !default;
 $input-disabled-border-color: $black !default;
 $input-disabled-text-color: $white !default;
 $helper-text-hidden: false !default;
 $text-input-padding: $space-s 0 !default;
 $input-readonly-border-color: $black !default;
-$input-box-shadow: 0 !default;
-$input-error-box-shadow: 0 !default;
-$input-disabled-box-shadow: 0 !default;
+$input-box-shadow: 0 2px 0 0 $black !default;
+$input-error-box-shadow: 0 3px 0 0 $yellow !default;
+$input-disabled-box-shadow: 0 1px 0 0 $input-gray-medium !default;
 
 //
 // Tables

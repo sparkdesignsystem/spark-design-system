@@ -23,7 +23,7 @@ order: 5
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}}>
       <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
-             class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
+             class="sprk-b-Label sprk-b-Label--inline">Radio Item 1</label>
     </div>
     <div class="sprk-b-SelectionContainer">
       <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
@@ -32,7 +32,7 @@ order: 5
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}}>
       <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
-             class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
+             class="sprk-b-Label sprk-b-Label--inline">Radio Item 2</label>
     </div>
     <div class="sprk-b-SelectionContainer">
       <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
@@ -41,9 +41,17 @@ order: 5
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}}>
       <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
-             class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
+             class="sprk-b-Label sprk-b-Label--inline">Radio Item 3</label>
     </div>
   </fieldset>
-  <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
+        <use xlink:href="#exclamation" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
 </div>

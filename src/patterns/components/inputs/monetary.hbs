@@ -23,6 +23,10 @@ order: 18
     <label for="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}" class="sprk-b-Label sprk-u-plm">Payment</label>
   </div>
   <div class="sprk-b-ErrorText"
-        id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container">
-        {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+       id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
+        <use xlink:href="#exclamation" />
+      </svg>
+      {{errorMessage}}{{/if}}</div>
 </div>

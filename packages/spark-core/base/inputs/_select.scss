@@ -1,0 +1,44 @@
+.sprk-b-Select {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: none;
+  font-size: $font-size-body-two;
+  font-weight: $font-weight-body-two;
+  line-height: $line-height-body-two;
+  outline: 0;
+  padding: 0 $space-l 0 $space-s;
+  box-shadow: $input-box-shadow;
+  width: 100%;
+}
+
+.sprk-b-SelectContainer__icon {
+  float: right;
+  margin-top: -22px;
+  margin-right: 8px;
+}
+
+.sprk-b-Select[disabled] {
+  background-color: $gray-light;
+  box-shadow: $input-disabled-box-shadow;
+  color: $input-gray-medium;
+}
+
+.sprk-b-Select--error {
+  box-shadow: $input-error-box-shadow;
+}
+
+.sprk-b-Select--error ~ .sprk-b-InputContainer__input-border {
+  border-bottom: 3px solid $yellow;
+}
+
+.sprk-b-Select--focusin ~ .sprk-b-InputContainer__input-border {
+  animation: width-zero-to-full 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.sprk-b-Select--focusout ~ .sprk-b-InputContainer__input-border {
+  width: 100%;
+  animation: opacity-one-to-zero 0.3s;
+  animation-fill-mode: forwards;
+}

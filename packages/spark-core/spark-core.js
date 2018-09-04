@@ -1,5 +1,6 @@
 // Import all Spark-Core components
 import { textInput } from './base/textInput';
+import { selectInput } from './base/selectInput';
 import { ssnInput } from './base/ssnInput';
 import passwordInput from './base/passwordInput';
 import { monetaryInput } from './base/monetaryInput';
@@ -17,7 +18,6 @@ import { spinners } from './components/spinners';
 import { WideNavigation } from './components/wide-navigation';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
-
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -49,3 +49,4 @@ WideNavigation();
 masthead();
 alerts();
 textInput();
+selectInput();

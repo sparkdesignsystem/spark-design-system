@@ -22,6 +22,10 @@ stateChanger: true
   <label for="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}" class="sprk-u-ScreenReaderText">Search</label>
   <div class="sprk-b-InputContainer__input-border"></div>
   <div class="sprk-b-ErrorText"
-        id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container">
-        {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+       id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
+        <use xlink:href="#exclamation" />
+      </svg>
+      {{errorMessage}}{{/if}}</div>
 </div>

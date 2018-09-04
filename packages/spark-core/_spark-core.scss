@@ -46,8 +46,12 @@
 @import './tools/animations';
 @import './tools/functions';
 @import './tools/mixins';
-@import './base/inputs';
-@import './base/labels';
+@import 'base/inputs/error-container';
+@import 'base/inputs/input-container';
+@import 'base/inputs/select';
+@import 'base/inputs/selection-container';
+@import 'base/inputs/text-input';
+@import 'base/inputs/labels';
 @import './base/links';
 @import './base/lists';
 @import './base/tables';

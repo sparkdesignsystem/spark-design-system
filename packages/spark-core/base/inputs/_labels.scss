@@ -4,6 +4,7 @@ label,
   font-weight: $font-weight-body-three;
   line-height: $line-height-body-three;
   padding: 0 $space-s;
+  transform-origin: top left;
 }
 
 .sprk-b-Label--inline {
@@ -27,18 +28,17 @@ label,
 
 // label moving
 .sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: -30px;
+  margin-top: -28px;
   position: absolute;
   transition: all 0.3s;
   width: auto;
 }
 
-.sprk-b-TextInput ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
   margin-top: -50px;
   margin-bottom: 28px;
-  font-size: 0.9rem;
+  transform: scale(0.82); // ratio of body-four to body-three
 }
 

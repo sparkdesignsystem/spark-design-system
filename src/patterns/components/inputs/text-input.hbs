@@ -23,12 +23,15 @@ order: 1
          {{#if invaliddata}} aria-invalid="true"{{/if}} data-sprk-input="text">
   <div class="sprk-b-InputContainer__input-border"></div>
   <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
-  <div class="sprk-b-ErrorText"
-       id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
     {{#if errorMessage}}
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
         <use xlink:href="#exclamation" />
       </svg>
-      {{errorMessage}}{{/if}}</div>
+      <div class="sprk-b-ErrorText">
+          {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
 </div>
 

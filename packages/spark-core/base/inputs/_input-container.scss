@@ -1,0 +1,21 @@
+.sprk-b-InputContainer {
+  max-width: 27.5rem;
+  margin-top: 2.5rem;
+}
+
+.sprk-b-InputContainer\@sm {
+  max-width: none;
+}
+
+.sprk-b-InputContainer__visibility-toggle ~ .sprk-b-ErrorContainer {
+  margin-top: 0;
+}
+
+// border animate
+.sprk-b-InputContainer__input-border {
+  display: block;
+  content: ' ';
+  border-bottom: 3px solid $red-real;
+  width: 0;
+  opacity: 1;
+}

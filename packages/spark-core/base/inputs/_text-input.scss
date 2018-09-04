@@ -1,31 +1,18 @@
 // ==================================================================
 // Input Component
 // ==================================================================
-$input-gray-medium: #5a5a5a;
-
 .sprk-b-TextInput {
-  font-size: $font-size-body-three;
-  font-weight: $font-weight-body-three;
-  line-height: $line-height-body-three;
-  padding: 0 $space-s;
-}
-
-.sprk-b-TextInput,
-.sprk-b-TextInput[disabled] {
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.sprk-b-TextInput,
-.sprk-b-Select,
-textarea {
   font-size: $font-size-body-two;
+  font-weight: $font-weight-body-two;
+  line-height: $line-height-body-two;
   outline: 0;
+  padding: 0 $space-s;
+  box-shadow: $input-box-shadow;
 }
 
 .sprk-b-TextInput[disabled] {
   background-color: $gray-light;
+  box-shadow: $input-disabled-box-shadow;
   color: $input-gray-medium;
 }
 
@@ -36,10 +23,9 @@ textarea {
 
 .sprk-b-TextInput--date-picker > .sprk-c-Icon,
 .sprk-b-TextInput--monetary::before {
-  color: $gray-dark;
   position: absolute;
   left: 2px;
-  margin-top: -8px;
+  margin-top: -6px;
   z-index: $layer-height-xs;
 }
 
@@ -49,68 +35,21 @@ textarea {
 
 .sprk-b-TextInput--monetary::before {
   content: '$';
-  top: 0.6rem;
-}
-
-.sprk-b-TextInput[disabled],
-.sprk-b-Select[disabled] {
-  border-bottom-width: 1px;
-  border-bottom-color: $input-gray-medium;
-}
-
-.sprk-b-TextInput--error,
-.sprk-b-Select--error {
-  border-bottom-width: 3px;
-  border-bottom-color: $yellow;
+  top: 0.5625rem;
 }
 
 .sprk-b-TextInput[readonly] {
   color: $white;
 }
 
-.sprk-b-SelectionContainer .sprk-b-Label {
-  font-weight: normal;
-}
-
-.sprk-b-SelectionContainer [type='radio'],
-.sprk-b-SelectionContainer [type='checkbox'] {
-  vertical-align: middle;
-}
-
-.sprk-b-SelectionContainer:last-child {
-  margin-bottom: $space-s;
-}
-
-.sprk-b-InputContainer {
-  max-width: 27.5rem;
-  margin-top: 2.5rem;
-}
-
-.sprk-b-InputContainer\@sm {
-  max-width: none;
-}
-
 .sprk-b-HelperText,
 .sprk-b-ErrorText {
   font-size: $font-size-body-four;
+  font-weight: bold;
 }
 
 .sprk-b-HelperText {
   color: $input-gray-medium;
-}
-
-.sprk-b-ErrorIcon {
-  fill: $yellow;
-  margin-right: $space-s;
-}
-
-.sprk-b-ErrorText {
-  display: flex;
-  align-items: center;
-  color: $black;
-  font-size: $font-size-body-four;
-  font-weight: bold;
-  padding: 0 $space-s;
 }
 
 .sprk-b-TextArea {
@@ -130,15 +69,8 @@ textarea {
   color: $gray-light;
 }
 
-// border animate
-.sprk-b-InputContainer__input-border {
-  display: block;
-  content: ' ';
-  border-bottom: 3px solid $red-real;
-  width: 0;
-  margin-top: -3px;
-  margin-bottom: 3px;
-  opacity: 1;
+.sprk-b-TextInput--error {
+  box-shadow: $input-error-box-shadow;
 }
 
 .sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
