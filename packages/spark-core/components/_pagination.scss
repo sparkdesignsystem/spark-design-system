@@ -14,12 +14,11 @@
 
 .sprk-c-Pagination__link {
   color: $black;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $space-inset-short-s;
   width: 2em;
   height: 2em;
   text-align: center;
