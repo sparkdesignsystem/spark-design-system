@@ -24,6 +24,7 @@ label,
 .sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
 .sprk-b-InputContainer > .sprk-b-Label {
   margin-bottom: $space-s;
+  transform: scale(0.82); // ratio of body-four to body-three
 }
 
 // label moving
@@ -32,11 +33,13 @@ label,
   margin-bottom: 28px;
   position: absolute;
   transition: all 0.3s;
+  transform: scale(0.82); // ratio of body-four to body-three
   width: auto;
 }
 
 .sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
   margin-top: -28px;
+  transform: scale(1);
 }
 
 .sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,

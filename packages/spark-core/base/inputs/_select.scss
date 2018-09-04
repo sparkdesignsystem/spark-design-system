@@ -19,6 +19,10 @@
 }
 
 .sprk-b-Select[disabled] {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: $input-gray-medium;
   background-color: $gray-light;
   box-shadow: $input-disabled-box-shadow;
   color: $input-gray-medium;
