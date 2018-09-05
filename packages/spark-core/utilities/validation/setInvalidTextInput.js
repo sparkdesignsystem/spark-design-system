@@ -1,7 +1,9 @@
 /* global document */
 const buildErrorContainer = (errorContainer, iconName, message) => {
   const errorIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  errorIcon.classList.add('sprk-c-Icon', 'sprk-c-Icon--m', 'sprk-b-ErrorIcon');
+  errorIcon.classList.add('sprk-c-Icon');
+  errorIcon.classList.add('sprk-c-Icon--m');
+  errorIcon.classList.add('sprk-b-ErrorIcon');
   const useElement = document.createElementNS('http://www.w3.org/2000/svg', 'use');
   const errorText = document.createElement('span');
   errorText.classList.add('sprk-b-ErrorText');

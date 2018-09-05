@@ -12,6 +12,16 @@
   width: 100%;
 }
 
+// IE11
+.sprk-b-Select:focus::-ms-value {
+  color: $black;
+  background: none;
+}
+
+.sprk-b-Select::-ms-expand {
+  display: none;
+}
+
 .sprk-b-SelectContainer__icon {
   float: right;
   margin-top: $select-arrow-offset-y;
@@ -23,6 +33,13 @@
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-color: $input-gray-medium;
+  border-bottom-width: 1px;
+  background-color: $gray-light;
+  box-shadow: none;
+  color: $input-gray-medium;
+}
+
+.sprk-b-TextInput[disabled] {
   background-color: $gray-light;
   box-shadow: $input-disabled-box-shadow;
   color: $input-gray-medium;

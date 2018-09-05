@@ -6,7 +6,7 @@
   font-weight: $font-weight-body-two;
   line-height: $line-height-body-two;
   outline: 0;
-  padding: 0 $space-s;
+  padding: 3px $space-s;
   box-shadow: $input-box-shadow;
 }
 
@@ -34,8 +34,11 @@
 
 .sprk-b-TextInput--monetary::before {
   content: '$';
+  display: block;
+  font-size: 1rem;
   margin-top: $input-text-icon-offset-y;
   margin-left: $input-text-icon-offset-x;
+  line-height: 1;
 }
 
 .sprk-b-TextInput[readonly] {
