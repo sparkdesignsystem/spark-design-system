@@ -1,4 +1,3 @@
-/* global window */
 import getElements from '../utilities/getElements';
 
 const bindUIEvents = (element) => {
@@ -14,10 +13,8 @@ const bindUIEvents = (element) => {
 };
 
 const selectInput = () => {
-  window.addEventListener('load', () => {
-    getElements('[data-sprk-input="select"]', (element) => {
-      bindUIEvents(element);
-    });
+  getElements('[data-sprk-input="select"]', (element) => {
+    bindUIEvents(element);
   });
 };
 
