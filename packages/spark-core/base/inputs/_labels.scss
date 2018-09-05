@@ -1,4 +1,3 @@
-label,
 .sprk-b-Label {
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
@@ -37,14 +36,14 @@ label,
   width: auto;
 }
 
-.sprk-u-Javascript .sprk-b-TextInput ~ .sprk-b-Label {
+.sprk-u-JavaScript .sprk-b-TextInput ~ .sprk-b-Label {
   margin-top: $label-offset-y-open;
   transform: scale(1);
 }
 
-.sprk-u-Javascript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-u-Javascript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+.sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
   margin-top: $label-offset-y;
   margin-bottom: $label-counter-weight;
   transform: scale($label-shrink-scale); // ratio of body-four to body-three
