@@ -4,6 +4,8 @@ description:
 information:
   - Headlines should grab attention and be concise.
   - Subheadlines provide additional context.
+  - To have the Highlight Board take up 100% width of the
+    viewport regardless of it's container, add the class sprk-u-FullWidth.
 restrictions:
   - The background must either be a color or an image.
   - Headlines and Subheadlines should not exceed 2 lines.
