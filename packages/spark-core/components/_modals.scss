@@ -16,7 +16,7 @@
 }
 
 .sprk-c-Modal {
-  background-color: $white;
+  background-color: $modal-color;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
   margin-right: auto;
   margin-left: auto;
@@ -38,15 +38,27 @@
   }
 }
 
+.sprk-c-Modal--wait {
+  text-align: center;
+}
+
 .sprk-c-Modal__header {
-  align-items: center;
   display: flex;
   padding: $space-inset-m;
+}
+
+.sprk-c-Modal--wait .sprk-c-Modal__body,
+.sprk-c-Modal__header {
+  align-items: center;
 }
 
 .sprk-c-Modal__heading {
   flex: 1 1 auto;
   margin-right: $space-s;
+}
+
+.sprk-c-Modal--wait .sprk-c-Modal__body {
+  padding-top: 0;
 }
 
 .sprk-c-Modal__icon {
