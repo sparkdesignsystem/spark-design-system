@@ -17,7 +17,7 @@
 
 .sprk-c-Modal {
   background-color: $modal-color;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: $modal-shadow;
   margin-right: auto;
   margin-left: auto;
   max-width: $modal-max-width;
