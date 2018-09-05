@@ -90,8 +90,12 @@ $horizontal-list-spacing-huge: $space-xl !default;
 // Pagination
 //
 $pag-max-width: 26rem !default;
-$pag-selection-color: $red-real;
-$pag-circle-size: 2em;
+$pag-link-color: $black !default;
+$pag-link-color-hover: $pag-link-color !default;
+$pag-selection-bg-color: $red-real !default;
+$pag-selection-link-color: $white !default;
+$pag-selection-link-color-hover: $white !default;
+$pag-circle-size: 2em !default;
 
 //
 // Typography
