@@ -34,15 +34,9 @@
   border-right-color: transparent;
   border-bottom-color: $input-gray-medium;
   border-bottom-width: 1px;
-  background-color: $gray-light;
+  background-color: $input-disabled-background-color;
   box-shadow: none;
-  color: $input-gray-medium;
-}
-
-.sprk-b-TextInput[disabled] {
-  background-color: $gray-light;
-  box-shadow: $input-disabled-box-shadow;
-  color: $input-gray-medium;
+  color: $input-disabled-text-color;
 }
 
 .sprk-b-Select--error {

@@ -10,8 +10,9 @@
 }
 
 .sprk-b-TextInput[disabled] {
+  background-color: $input-disabled-background-color;
   box-shadow: $input-disabled-box-shadow;
-  color: $input-gray-medium;
+  color: $input-disabled-text-color;
 }
 
 .sprk-b-TextInput--date-picker,
