@@ -9,10 +9,6 @@ $dictionary-border: 1px solid $gray-light !default;
 $dictionary-stripe-color: $gray-light !default;
 $dictionary-breakpoint: 38.4375rem !default;
 
-.sprk-c-Dictionary__title {
-  margin: $space-m / 2;
-}
-
 .sprk-c-Dictionary {
   border: $dictionary-border;
   padding: $space-m;
@@ -27,6 +23,12 @@ $dictionary-breakpoint: 38.4375rem !default;
     display: flex;
     align-items: center;
   }
+}
+
+.sprk-c-Dictionary .sprk-b-Label {
+  font-size: $font-size-body-four;
+  line-height: $font-size-body-four;
+  font-weight: bold;
 }
 
 // prettier-ignore
