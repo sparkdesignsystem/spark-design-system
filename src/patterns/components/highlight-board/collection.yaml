@@ -2,12 +2,11 @@ description:
   The Highlight Board component is used as a lead into an experience as a means to encourage engagement
   within the experience.
 information:
-  - Headlines should grab attention and be concise.
-  - Subheadlines provide additional context.
+  - The headline should grab attention and be concise.
   - To have the Highlight Board take up 100% width of the
     viewport regardless of it's container, add the class sprk-u-FullWidth.
 restrictions:
   - The background must either be a color or an image.
-  - Headlines and Subheadlines should not exceed 2 lines.
-  - You may have up to 2 call-to-action buttons.
+  - The headline should not exceed 2 lines.
+  - You may have up to 2 call-to-action buttons/links.
 sparkPackageExtras: true
