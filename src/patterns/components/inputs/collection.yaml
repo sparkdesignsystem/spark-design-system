@@ -27,4 +27,5 @@ restrictions:
   - You need to make sure that the id referenced in aria-describedby matches the id on the error container.
   - You should use helper text, as linked below, when a user needs further clarification beyond the label.
   - Labels and error messages should be short and to the point.
+  - Labels should not be longer than what will fit on one line at 320px.
 sparkPackageCore: true

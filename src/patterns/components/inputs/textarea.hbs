@@ -15,7 +15,16 @@ order: 9
             id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}"
             aria-describedby="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container"
             {{#if disabled}} disabled{{/if}}
-            {{#if invaliddata}} aria-invalid="true"{{/if}}></textarea>
-  <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container">
-  {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+            {{#if invaliddata}} aria-invalid="true"{{/if}} data-sprk-input="text"></textarea>
+  <div class="sprk-b-InputContainer__input-border"></div>
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
+        <use xlink:href="#exclamation" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
 </div>
