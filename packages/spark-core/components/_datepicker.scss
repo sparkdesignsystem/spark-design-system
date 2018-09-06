@@ -1,6 +1,11 @@
 // ==================================================================
 // Date Picker
 // ==================================================================
+.sprk-b-InputContainer[data-sprk-datepicker] .sprk-b-TextInput[readonly] {
+  color: $black;
+  background-color: $white;
+  box-shadow: $input-box-shadow;
+}
 
 /* stylelint-disable selector-class-pattern */
 .dp {
@@ -8,9 +13,13 @@
   box-shadow: $date-picker-box-shadow;
   font-family: $heading-font-stack;
   font-size: $font-size-body-four;
-  padding: $space-inset-m;
+  padding: $space-inset-s;
   position: relative;
   max-width: $date-picker-max-width;
+
+  @media (min-width: $date-picker-max-width) {
+    padding: $space-inset-m;
+  }
 }
 
 .dp::before {
@@ -97,10 +106,10 @@
   display: inline-block;
   font-size: $font-size-body-three;
   font-weight: bold;
-  margin: 2px;
-  padding: 6px;
+  padding: 10px;
   text-align: center;
-  width: $date-picker-button-size;
+  max-width: $date-picker-button-size + $date-picker-column-adjustment-x;
+  width: 100%;
 }
 
 .dp-day {
@@ -234,6 +243,11 @@
   margin-top: $space-m;
   position: absolute;
   z-index: $layer-height-xs;
+
+  @media (max-width: $date-picker-max-width) {
+    left: 0 !important;
+    margin: 2px !important;
+  }
 }
 
 /* stylelint-enable selector-class-pattern */
