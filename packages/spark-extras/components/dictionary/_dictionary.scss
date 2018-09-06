@@ -16,7 +16,7 @@ $dictionary-breakpoint: 38.4375rem !default;
 
 .sprk-c-Dictionary__keyvaluepair {
   width: 100%;
-  padding: $space-m / 2;
+  padding: $space-l / 2;
 
   @media all and (min-width: $dictionary-breakpoint) {
     display: table;
@@ -54,7 +54,10 @@ $dictionary-breakpoint: 38.4375rem !default;
 }
 
 .sprk-c-Dictionary__key {
+  margin-bottom: $space-xs;
+
   @media all and (min-width: $dictionary-breakpoint) {
+    margin-bottom: 0;
     width: 50%;
   }
 }
