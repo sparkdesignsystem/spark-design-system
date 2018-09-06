@@ -19,37 +19,39 @@ order: 1
   aria-modal="true"
   aria-describedby="modalChoiceContent"
   data-sprk-modal="exampleChoiceModal">
-  <header class="sprk-c-Modal__header">
-    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" id="modalChoiceHeading">
-      Are you sure?
-    </h2>
+  <div class="sprk-o-Stack sprk-o-Stack--medium">
+    <header class="sprk-o-Stack__item sprk-c-Modal__header">
+      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" id="modalChoiceHeading">
+        Are you sure?
+      </h2>
 
-    <button
-      class="sprk-c-Modal__icon"
-      data-sprk-modal-cancel="exampleChoiceModal"
-      type="button" aria-label="Close Modal">
-      <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
-        <use xlink:href="#times"></use>
-      </svg>
-    </button>
-  </header>
+      <button
+        class="sprk-c-Modal__icon"
+        data-sprk-modal-cancel="exampleChoiceModal"
+        type="button" aria-label="Close Modal">
+        <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+          <use xlink:href="#times"></use>
+        </svg>
+      </button>
+    </header>
 
-  <div class="sprk-c-Modal__body">
-    <p class="sprk-b-TypeBodyTwo" id="modalChoiceContent">
-      This is some content that is in a modal. It explains what the modal is for.
-      There will also be a way to close the modal.
-    </p>
+    <div class="sprk-o-Stack__item sprk-c-Modal__body">
+      <p class="sprk-b-TypeBodyTwo" id="modalChoiceContent">
+        This is some content that is in a modal. It explains what the modal is for.
+        There will also be a way to close the modal.
+      </p>
+    </div>
+
+    <footer class="sprk-o-Stack__item">
+      <button class="sprk-c-Button sprk-u-mrm">
+        Confirm
+      </button>
+
+      <a href="" class="sprk-c-Button sprk-c-Button--secondary" data-sprk-modal-cancel="exampleChoiceModal">
+        Cancel
+      </a>
+    </footer>
   </div>
-
-  <footer class="sprk-c-Modal__footer">
-    <button class="sprk-c-Button sprk-u-mrm">
-      Confirm
-    </button>
-
-    <a href="" class="sprk-c-Button sprk-c-Button--secondary" data-sprk-modal-cancel="exampleChoiceModal">
-      Cancel
-    </a>
-  </footer>
 </div>
 
 <div data-sprk-modal-mask="true" class="sprk-c-ModalMask sprk-u-Display--none" tabindex="-1"></div>

@@ -22,6 +22,7 @@
   margin-left: auto;
   max-width: $modal-max-width;
   max-height: $modal-height;
+  padding: $space-l;
   outline: 0;
   overflow-y: auto;
   right: 0;
@@ -44,7 +45,6 @@
 
 .sprk-c-Modal__header {
   display: flex;
-  padding: $space-inset-m;
 }
 
 .sprk-c-Modal--wait .sprk-c-Modal__body,
@@ -54,24 +54,12 @@
 
 .sprk-c-Modal__heading {
   flex: 1 1 auto;
-  margin-right: $space-s;
-}
-
-.sprk-c-Modal--wait .sprk-c-Modal__body {
-  padding-top: 0;
 }
 
 .sprk-c-Modal__icon {
   align-self: start;
   background-color: transparent;
   border: 0;
+  color: $gray-medium;
   flex: 0 1 auto;
-}
-
-.sprk-c-Modal__body {
-  padding: $space-inset-tall-m;
-}
-
-.sprk-c-Modal__footer {
-  padding: 0 $space-m $space-m;
 }

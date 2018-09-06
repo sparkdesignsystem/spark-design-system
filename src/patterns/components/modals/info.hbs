@@ -19,26 +19,28 @@ order: 1
   aria-modal="true"
   aria-describedby="modalInfoContent"
   data-sprk-modal="exampleInfoModal">
-  <header class="sprk-c-Modal__header">
-    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" id="modalInfoHeading">
-      Info Modal
-    </h2>
+  <div class="sprk-o-Stack sprk-o-Stack--medium">
+    <header class="sprk-o-Stack__item sprk-c-Modal__header">
+      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" id="modalInfoHeading">
+        Info Modal
+      </h2>
 
-    <button
-      class="sprk-c-Modal__icon"
-      data-sprk-modal-cancel="exampleInfoModal"
-      type="button" aria-label="Close Modal">
-      <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
-        <use xlink:href="#times"></use>
-      </svg>
-    </button>
-  </header>
+      <button
+        class="sprk-c-Modal__icon"
+        data-sprk-modal-cancel="exampleInfoModal"
+        type="button" aria-label="Close Modal">
+        <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+          <use xlink:href="#times"></use>
+        </svg>
+      </button>
+    </header>
 
-  <div class="sprk-c-Modal__body">
-    <p class="sprk-b-TypeBodyTwo" id="modalInfoContent">
-      This is some content that is in a Modal. It explains what the Modal is for.
-      There will also be a way to close the modal.
-    </p>
+    <div class="sprk-o-Stack__item sprk-c-Modal__body">
+      <p class="sprk-b-TypeBodyTwo" id="modalInfoContent">
+        This is some content that is in a Modal. It explains what the Modal is for.
+        There will also be a way to close the modal.
+      </p>
+    </div>
   </div>
 </div>
 
