@@ -28,7 +28,7 @@
   font-family: 'myriad pro', sans-serif;
 }
 
-[data-template-id='full-width'] .drizzle-c-Preview__example {
+[data-template-id='full-width'] .#{$app-namespace}-c-Preview__example {
   overflow: hidden;
 }
 
@@ -47,6 +47,10 @@
   margin-top: -2px;
 }
 
-.drizzle-b-Body.sprk-u-Overflow--hidden {
+.#{$app-namespace}-b-Body.sprk-u-Overflow--hidden {
   overflow: auto !important; // this is to override a utility class (sprk-u-Overflow--hidden) that is added by JS.
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Modal {
+  z-index: 100003;
 }

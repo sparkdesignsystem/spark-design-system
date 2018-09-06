@@ -1,0 +1,51 @@
+.sprk-b-Label {
+  font-size: $font-size-body-three;
+  font-weight: $font-weight-body-three;
+  line-height: $line-height-body-three;
+  padding: 0 $space-s;
+  transform-origin: top left;
+}
+
+.sprk-b-Label--inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
+  color: $input-gray-medium;
+  cursor: not-allowed;
+}
+
+.sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
+  font-size: $font-size-body-four;
+}
+
+.sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
+.sprk-b-InputContainer > .sprk-b-Label {
+  margin-bottom: $space-s;
+  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+}
+
+// label moving
+.sprk-b-TextInput ~ .sprk-b-Label {
+  margin-top: $label-offset-y;
+  margin-bottom: $label-counter-weight;
+  position: absolute;
+  transition: all $input-animation-speed;
+  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+  width: auto;
+}
+
+.sprk-u-JavaScript .sprk-b-TextInput ~ .sprk-b-Label {
+  margin-top: $label-offset-y-open;
+  transform: scale(1);
+}
+
+.sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+  margin-top: $label-offset-y;
+  margin-bottom: $label-counter-weight;
+  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+}
+
