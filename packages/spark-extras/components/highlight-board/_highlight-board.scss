@@ -30,6 +30,10 @@ $highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
 .sprk-c-HighlightBoard__content {
   background-color: $highlight-board-content-box-color;
   padding: $space-inset-tall-m;
+
+  @media (min-width: $highlight-board-type-breakpoint) {
+    padding: $space-inset-tall-l;
+  }
 }
 
 .sprk-c-HighlightBoard__primary-heading {
@@ -38,6 +42,14 @@ $highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
   @media (max-width: $highlight-board-type-breakpoint) {
     // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
+  }
+}
+
+.sprk-c-HighlightBoard__primary-btn {
+  width: 100%;
+
+  @media (min-width: $highlight-board-type-breakpoint) {
+    width: auto;
   }
 }
 
