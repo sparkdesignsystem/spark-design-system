@@ -251,15 +251,20 @@ $list-margin-left: $space-m !default;
 //
 // Forms
 ///
-$input-gray-medium: #5a5a5a;
+$input-gray-medium: #5a5a5a !default;
+$monetary-symbol: '$' !default;
+$input-placeholder-color: $gray-light !default;
+$input-readonly-text-color: $gray-light !default;
+$fieldset-padding: 0 !default;
 $text-input-border-radius: 0 !default;
 $text-input-border-color: $black !default;
 $text-input-border-width: 0 !default;
 $input-container-margin-bottom: $space-m !default;
+$input-disabled-background-color: $gray-light !default;
 $input-disabled-border-color: $black !default;
 $input-disabled-text-color: $white !default;
 $helper-text-hidden: false !default;
-$text-input-padding: $space-s 0 !default;
+$text-input-padding: 3px $space-s !default;
 $input-readonly-border-color: $black !default;
 $input-box-shadow: 0 1px 0 0 $black !default;
 $input-error-box-shadow: 0 3px 0 0 $yellow !default;
@@ -269,6 +274,7 @@ $date-picker-button-size: 2.25rem !default;
 $date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
 $date-picker-day-interact-color: $red-real !default;
 $text-input-interact-color: $red-real !default;
+$error-text-color: $black !default;
 $text-input-error-color: $yellow !default;
 $input-max-width: 27.5rem !default;
 $input-icon-offset-x: 6px !default;

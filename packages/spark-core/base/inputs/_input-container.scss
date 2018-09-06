@@ -1,10 +1,6 @@
 .sprk-b-InputContainer {
+  margin: 1rem 0;
   max-width: $input-max-width;
-  margin-top: 2.5rem;
-}
-
-.sprk-b-InputContainer\@sm {
-  max-width: none;
 }
 
 .sprk-b-InputContainer__visibility-toggle ~ .sprk-b-ErrorContainer {

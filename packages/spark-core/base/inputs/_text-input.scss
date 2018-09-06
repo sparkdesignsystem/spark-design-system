@@ -6,12 +6,10 @@
   font-weight: $font-weight-body-two;
   line-height: $line-height-body-two;
   outline: 0;
-  padding: 3px $space-s;
   box-shadow: $input-box-shadow;
 }
 
 .sprk-b-TextInput[disabled] {
-  background-color: $gray-light;
   box-shadow: $input-disabled-box-shadow;
   color: $input-gray-medium;
 }
@@ -33,7 +31,7 @@
 }
 
 .sprk-b-TextInput--monetary::before {
-  content: '$';
+  content: $monetary-symbol;
   display: block;
   font-size: 1rem;
   margin-top: $input-text-icon-offset-y;
@@ -42,7 +40,7 @@
 }
 
 .sprk-b-TextInput[readonly] {
-  color: $white;
+  color: $input-readonly-text-color;
 }
 
 .sprk-b-HelperText,
@@ -65,16 +63,12 @@
   margin: $space-stack-m;
 }
 
-.sprk-b-Fieldset {
-  padding: 0;
-}
-
 // Placeholder colors
 ::-webkit-input-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder,
 ::placeholder {
-  color: $gray-light;
+  color: $input-placeholder-color;
 }
 
 .sprk-b-TextInput--error {
