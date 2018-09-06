@@ -9,6 +9,7 @@ $highlight-board-type-breakpoint: 30rem !default;
 $highlight-board-type-reduction-percentage: 0.8 !default;
 $highlight-board-height: 31.25rem !default;
 $highlight-board-color: $white !default;
+$highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
 
 .sprk-c-HighlightBoard {
   background-color: $highlight-board-color;
@@ -27,25 +28,16 @@ $highlight-board-color: $white !default;
 }
 
 .sprk-c-HighlightBoard__content {
-  background-color: $highlight-board-color;
+  background-color: $highlight-board-content-box-color;
   padding: $space-inset-tall-m;
 }
 
-.sprk-c-HighlightBoard__headings {
-  margin-bottom: $space-m;
-}
-
 .sprk-c-HighlightBoard__primary-heading {
+  margin-bottom: $space-l;
+
   @media (max-width: $highlight-board-type-breakpoint) {
     // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
-  }
-}
-
-.sprk-c-HighlightBoard__sub-heading {
-  @media (max-width: $highlight-board-type-breakpoint) {
-    // prettier-ignore
-    font-size: $font-size-display-four * $highlight-board-type-reduction-percentage;
   }
 }
 
