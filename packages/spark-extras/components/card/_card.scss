@@ -10,13 +10,13 @@ $card-max-width: 26.5625rem !default;
 $card-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 
 .sprk-c-Card {
-  max-width: $card-max-width;
   border: $card-border;
   box-shadow: $card-shadow;
+  max-width: $card-max-width;
 }
 
 .sprk-c-Card__content {
-  padding: $space-l;
+  padding: $space-inset-l;
 }
 
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
