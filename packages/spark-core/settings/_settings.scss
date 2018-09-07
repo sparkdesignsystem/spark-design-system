@@ -296,12 +296,37 @@ $label-shrink-scale: 0.82 !default;
 $table-padding-small: $space-inset-s !default;
 $table-padding-medium: $space-inset-m !default;
 $table-padding-large: $space-inset-l !default;
-$table-border-width: 2px !default;
-$table-border-style: solid !default;
-$table-border-color: $white !default;
-$table-stripe-color: $blue-light !default;
-$table-heading-alignment: center !default;
 $table-cell-alignment: center !default;
+
+// Primary
+$table-row-border-width: 1px !default;
+$table-row-border-style: solid !default;
+$table-row-border-color: $gray-light !default;
+$table-header-background-color: $black !default;
+$table-header-font-color: $white !default;
+$table-header-font-size: $font-size-body-one !default;
+$table-header-border-spacing: 2px !default;
+$table-header-border-color: $white !default;
+$table-empty-heading-background-color: $white !default;
+
+// Secondary
+$table-secondary-header-background-color: $white !default;
+$table-secondary-header-font-color: $black !default;
+$table-secondary-header-text-alignment: left !default;
+$table-secondary-cell-text-alignment: left !default;
+$table-secondary-header-border-spacing: 0 !default;
+$table-secondary-header-border-color: $white !default;
+
+// Grouped-Column
+$table-grouped-header-background-color: $black !default;
+$table-grouped-header-font-size: $font-size-body-four !default;
+$table-grouped-header-font-weight: normal !default;
+
+// Secondary Row Comparison
+$table-secondary-row-comp-row-spacing: 15px !default;
+$table-secondary-row-comp-border-width: 1px !default;
+$table-secondary-row-comp-border-style: solid !default;
+$table-secondary-row-comp-border-color: $gray-light !default;
 
 //
 // Box
