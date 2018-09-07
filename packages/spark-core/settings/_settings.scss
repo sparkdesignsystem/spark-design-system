@@ -207,7 +207,7 @@ $alert-color: $white !default;
 $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
-$alert-shadow: 0 4px 5px $gray-light !default;
+$alert-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
 $alert-shadow-hover-info: inset -64px 0 0 $alert-color-info !default;
 $alert-shadow-success: inset $alert-bar-width 0 0 $alert-color-success !default;
