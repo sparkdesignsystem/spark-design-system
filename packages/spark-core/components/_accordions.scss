@@ -12,46 +12,75 @@
 }
 
 .sprk-c-Accordion__item {
-  background-color: $blue-medium;
   margin-bottom: $space-xs;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:first-child {
+    border-top: 1px solid $gray-light;
   }
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item {
   background-color: $white;
   margin: 0;
+
+  &:first-child {
+    border-top: 0;
+  }
 }
 
 .sprk-c-Accordion__summary {
-  color: $white;
+  align-items: center;
+  border-bottom: 1px solid $gray-light;
+  color: $black;
   display: flex;
-  padding: $space-m;
+  padding: $space-m $space-s;
   text-decoration: none;
 
   &:hover,
   &:active {
-    background-color: $blue-dark;
-    color: $white;
+    border-bottom: 1px solid $red-real;
+    color: $red-real;
     text-decoration: none;
+
+    .sprk-c-Accordion__icon {
+      border-color: $red-real;
+    }
   }
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border: 2px solid $gray-medium;
   border-top: 0;
-  align-items: center;
+  padding: $space-m;
+
+  &:hover,
+  &:active {
+    border-bottom: 2px solid $gray-medium;
+    background-color: $blue-dark;
+    color: $white;
+  }
 }
 
 // When open, add same style as when focused
 .sprk-c-Accordion__summary--open {
+  border-bottom: 0;
+  font-weight: bold;
+
+  &:hover {
+    border-bottom: 0;
+    color: $black;
+  }
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
   background-color: $blue-dark;
 }
 
 .sprk-c-Accordion__heading {
-  color: $white;
   flex: 1;
 }
 
@@ -62,6 +91,24 @@
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
+}
+
+.sprk-c-Accordion__summary .sprk-c-Accordion__icon--circle {
+  border: 2px solid $black;
+  border-radius: 50%;
+  height: 1.5rem;
+  padding: 0.25rem 0.156rem;
+  width: 1.5rem;
+}
+
+.sprk-c-Accordion__summary--open .sprk-c-Accordion__icon--circle {
+  background-color: $red-real;
+  border-radius: 50%;
+  border: 0;
+  color: $white;
+  height: 1.5rem;
+  padding: 0.35rem 0.25rem;
+  width: 1.5rem;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
@@ -91,8 +138,8 @@
 
 .sprk-c-Accordion__details {
   background-color: $white;
-  border: 0.125rem solid $blue-dark;
-  padding: $space-m;
+  border-bottom: 1px solid $gray-medium;
+  padding: 0 $space-s $space-m;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
