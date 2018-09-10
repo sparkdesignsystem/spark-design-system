@@ -14,4 +14,3 @@ restrictions:
   - An anchor HTML element should be used when you want the look of a Button but are linking to a URL.
   - If your Button is disabled, or becomes disabled, then add the disabled attribute.
 sparkPackageCore: true
-noCodeSwitch: true
