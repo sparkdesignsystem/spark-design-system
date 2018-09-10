@@ -51,7 +51,9 @@
 }
 
 .sprk-c-Accordion__heading {
+  align-items: center;
   color: $white;
+  display: flex;
   flex: 1;
 }
 
@@ -114,7 +116,7 @@
 }
 
 // Secondary style accordion modifiers
-.sprk-c-Accordion__item--secondary {
+.sprk-c-Accordion--secondary .sprk-c-Accordion__item {
   background-color: $white;
   border-bottom: 0.125rem solid $blue-medium;
   margin-bottom: 0;
@@ -125,7 +127,7 @@
 }
 
 // When secondary is open, hovered, active, or focused
-.sprk-c-Accordion__summary--secondary {
+.sprk-c-Accordion--secondary .sprk-c-Accordion__summary {
   color: $blue-medium;
 
   &.sprk-c-Accordion__summary--open,
@@ -134,17 +136,17 @@
     background-color: $blue-medium;
     color: $white;
 
-    .sprk-c-Accordion__heading--secondary {
+    .sprk-c-Accordion__heading {
       color: $white;
     }
   }
 }
 
-.sprk-c-Accordion__heading--secondary {
+.sprk-c-Accordion--secondary .sprk-c-Accordion__heading {
   color: $blue-medium;
 }
 
-.sprk-c-Accordion__details--secondary {
+.sprk-c-Accordion--secondary .sprk-c-Accordion__details {
   border-color: $blue-medium;
   border-bottom: 0;
 }
