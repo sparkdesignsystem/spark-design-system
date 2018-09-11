@@ -11,9 +11,15 @@ import { Component, Input } from '@angular/core';
 export class SparkAccordionComponent {
   @Input()
   additionalClasses: string;
+  @Input()
+  accordionType: string;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Accordion', 'sprk-o-VerticalList'];
+
+    if (this.accordionType === 'secondary') {
+      classArray.push('sprk-c-Accordion--secondary');
+    }
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
