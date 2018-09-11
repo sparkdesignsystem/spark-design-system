@@ -1,21 +1,18 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'sprk-list',
+  selector: 'sprk-ordered-list',
   template: `
-    <ul
-      [ngClass]="getClasses()"
-      [attr.data-analytics]="analyticsString">
+    <ol
+      [ngClass]="getClasses()">
       <ng-content></ng-content>
-    </ul>
+    </ol>
   `,
   styles: ['']
 })
-export class SparkListComponent {
+export class SparkOrderedListComponent {
   @Input()
   listType: string;
-  @Input()
-  analyticsString: string;
   @Input()
   additionalClasses: string;
 
@@ -23,11 +20,6 @@ export class SparkListComponent {
     const classArray: string[] = ['sprk-b-List'];
 
     switch (this.listType) {
-      case 'ordered':
-        classArray.push('sprk-b-Link--standalone');
-        break;
-      case 'unordered':
-        break;
       case 'indented':
         classArray.push('sprk-b-List--indented');
         break;

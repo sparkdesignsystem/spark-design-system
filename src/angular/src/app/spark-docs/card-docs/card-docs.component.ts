@@ -39,11 +39,11 @@ import { Component } from '@angular/core';
 
         <sprk-icon iconType="bell" additionalClasses="sprk-c-Icon--l"></sprk-icon>
 
-        <sprk-list listType="indented">
+        <sprk-unordered-list listType="indented">
           <sprk-list-item>hi</sprk-list-item>
           <sprk-list-item>ciao</sprk-list-item>
           <sprk-list-item>bonjour</sprk-list-item>
-        </sprk-list>
+        </sprk-unordered-list>
       </sprk-card>
     </div>
 

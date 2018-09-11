@@ -10,7 +10,7 @@ import {
   selector: 'sprk-pagination',
   template: `
     <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'default'">
-      <sprk-list listType="bare" additionalClasses="sprk-c-Pagination">
+      <sprk-unordered-list listType="bare" additionalClasses="sprk-c-Pagination">
         <li class="sprk-c-Pagination__item">
           <a
             (click)="goBack($event, currentPage)"
@@ -72,11 +72,11 @@ import {
             {{ nextLinkText }}
           </a>
         </li>
-      </sprk-list>
+      </sprk-unordered-list>
     </nav>
 
     <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'long'">
-      <sprk-list listType="bare" additionalClasses="sprk-c-Pagination">
+      <sprk-unordered-list listType="bare" additionalClasses="sprk-c-Pagination">
         <li class="sprk-c-Pagination__item sprk-c-Pagination__item--long">
           <a
             (click)="goBack($event, currentPage)"
@@ -154,11 +154,11 @@ import {
             {{ nextLinkText }}
           </a>
         </li>
-      </sprk-list>
+      </sprk-unordered-list>
     </nav>
 
     <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'pager'">
-      <sprk-list listType="bare" additionalClasses="sprk-c-Pagination">
+      <sprk-unordered-list listType="bare" additionalClasses="sprk-c-Pagination">
         <li class="sprk-c-Pagination__item">
           <a
             (click)="goBack($event, currentPage)"
@@ -181,7 +181,7 @@ import {
             {{ nextLinkText }}
           </a>
         </li>
-      </sprk-list>
+      </sprk-unordered-list>
     </nav>
   `,
   styles: ['']
