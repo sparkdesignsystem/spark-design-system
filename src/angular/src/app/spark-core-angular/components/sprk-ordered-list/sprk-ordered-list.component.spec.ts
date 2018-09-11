@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkListComponent } from './sprk-list.component';
+import { SparkOrderedListComponent } from './sprk-ordered-list.component';
 
-describe('SparkListComponent', () => {
-  let component: SparkListComponent;
-  let fixture: ComponentFixture<SparkListComponent>;
+describe('SparkOrderedListComponent', () => {
+  let component: SparkOrderedListComponent;
+  let fixture: ComponentFixture<SparkOrderedListComponent>;
   let element;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkListComponent]
+      declarations: [SparkOrderedListComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SparkListComponent);
+    fixture = TestBed.createComponent(SparkOrderedListComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('ul');
+    element = fixture.nativeElement.querySelector('ol');
     fixture.detectChanges();
   });
 
@@ -32,12 +32,5 @@ describe('SparkListComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-b-List sprk-u-pam sprk-u-man');
-  });
-
-  it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
-    component.analyticsString = 'List 1';
-    fixture.detectChanges();
-    expect(element.hasAttribute('data-analytics')).toEqual(true);
-    expect(element.getAttribute('data-analytics')).toEqual('List 1');
   });
 });
