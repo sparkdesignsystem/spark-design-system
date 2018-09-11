@@ -23,8 +23,6 @@ export class SparkButtonComponent {
   @Input()
   additionalClasses: string;
   @Input()
-  triggerModal: string;
-  @Input()
   fireEvent: string;
   @Output()
   customEvent = new EventEmitter<any>();
