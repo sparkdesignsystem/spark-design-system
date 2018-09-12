@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
         Bare List
       </h2>
 
-      <sprk-list listType="bare">
+      <sprk-unordered-list listType="bare">
         <sprk-list-item>
           cats
         </sprk-list-item>
         <sprk-list-item>
           dogs
         </sprk-list-item>
-      </sprk-list>
+      </sprk-unordered-list>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
@@ -23,14 +23,14 @@ import { Component } from '@angular/core';
         Indented List
       </h2>
 
-      <sprk-list listType="indented">
+      <sprk-unordered-list listType="indented">
         <sprk-list-item>
           fish
         </sprk-list-item>
         <sprk-list-item>
           birds
         </sprk-list-item>
-      </sprk-list>
+      </sprk-unordered-list>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
@@ -38,14 +38,14 @@ import { Component } from '@angular/core';
         Unordered List
       </h2>
 
-      <sprk-list listType="unordered">
+      <sprk-unordered-list>
         <sprk-list-item>
           trails
         </sprk-list-item>
         <sprk-list-item>
           roads
         </sprk-list-item>
-      </sprk-list>
+      </sprk-unordered-list>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
@@ -53,19 +53,18 @@ import { Component } from '@angular/core';
         Ordered List
       </h2>
 
-      <sprk-list listType="ordered">
+      <sprk-ordered-list>
         <sprk-list-item>
           sky
         </sprk-list-item>
         <sprk-list-item>
           sea
         </sprk-list-item>
-      </sprk-list>
+      </sprk-ordered-list>
     </div>
   `,
   styles: ['']
 })
 export class ListDocsComponent {
-
-  constructor() { }
+  constructor() {}
 }

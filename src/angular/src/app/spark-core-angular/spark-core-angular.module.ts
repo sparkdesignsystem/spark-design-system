@@ -32,11 +32,11 @@ import { SparkIconSetModule } from './components/sprk-icon-set/sprk-icon-set.mod
 import { SparkIconModule } from './components/sprk-icon/sprk-icon.module';
 import { SparkLinkModule } from './components/sprk-link/sprk-link.module';
 import { SparkListItemModule } from './components/sprk-list-item/sprk-list-item.module';
-import { SparkListModule } from './components/sprk-list/sprk-list.module';
 import { SparkMastheadModule } from './components/sprk-masthead/sprk-masthead.module';
 import { SparkModalModule } from './components/sprk-modal/sprk-modal.module';
 import { SparkNarrowNavigationItemModule } from './components/sprk-narrow-navigation-item/sprk-narrow-navigation-item.module';
 import { SparkNarrowNavigationModule } from './components/sprk-narrow-navigation/sprk-narrow-navigation.module';
+import { SparkOrderedListModule } from './components/sprk-ordered-list/sprk-ordered-list.module';
 import { SparkPaginationModule } from './components/sprk-pagination/sprk-pagination.module';
 import { SparkPromoModule } from './components/sprk-promo/sprk-promo.module';
 import { SparkSecondaryNavigationItemModule } from './components/sprk-secondary-navigation-item/sprk-secondary-navigation-item.module';
@@ -45,6 +45,7 @@ import { SparkStackModule } from './components/sprk-stack/sprk-stack.module';
 import { SparkTabbedNavigationModule } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.module';
 import { SparkTableModule } from './components/sprk-table/sprk-table.module';
 import { SparkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
+import { SparkUnorderedListModule } from './components/sprk-unordered-list/sprk-unordered-list.module';
 import { SparkWideNavigationModule } from './components/sprk-wide-navigation/sprk-wide-navigation.module';
 
 import TinyDatePicker from 'tiny-date-picker';
@@ -75,7 +76,8 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkDividerModule,
     SparkLinkModule,
     SparkModalModule,
-    SparkListModule,
+    SparkOrderedListModule,
+    SparkUnorderedListModule,
     SparkListItemModule,
     SparkWideNavigationModule,
     SparkNarrowNavigationModule,
