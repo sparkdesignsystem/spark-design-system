@@ -16,10 +16,12 @@ const config = require('./config');
 
 const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
 const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
+const toLowerCase = require('./src/assets/drizzle/scripts/handlebars-helpers/toLowerCase');
 
 // add helpers
 helpers.concat = concatHelper;
 helpers.alternateIdGen = alternateIdGen;
+helpers.toLowerCase = toLowerCase;
 
 // Append config
 Object.assign(config.drizzle, { helpers });

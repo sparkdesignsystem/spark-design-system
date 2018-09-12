@@ -98,6 +98,14 @@
       {{/if}}
     </section>
 
+    {{!- Angular Info (component wide) --}}
+    {{#if hasAngularInfo}}
+        <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-angular-documentation>
+          <h2 class="drizzle-b-h3">Angular Information</h2>
+          {{#embed (concat 'patterns.components.' (toLowerCase name) '.angular.info') }}{{/embed}}
+        </div>
+    {{/if}}
+
     <div class="drizzle-c-Divider"></div>
 
     <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewGallery}} drizzle-o-Grid--gallery{{/if}}">
