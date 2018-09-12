@@ -101,24 +101,51 @@
     {{!- Angular Info (component wide) --}}
     {{#if hasAngularInfo}}
         <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-angular-documentation>
-          <h2 class="drizzle-b-h3">Angular Information</h2>
+          <h2 class="drizzle-b-h2">Angular Information</h2>
           {{#embed (concat 'patterns.components.' (toLowerCase name) '.angular.info') }}{{/embed}}
         </div>
     {{/if}}
 
     <div class="drizzle-c-Divider"></div>
 
-    <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewGallery}} drizzle-o-Grid--gallery{{/if}}">
-      {{#if gridViewGallery}}
-        {{#each patterns}}
-          {{> drizzle.item-gallery}}
-        {{/each}}
-      {{else}}
-        {{#each patterns}}
-          {{> drizzle.item}}
-        {{/each}}
-      {{/if}}
-    </section>
+    {{#if isIconGallery }}
+      <section class="drizzle-o-Grid drizzle-o-Grid--gallery">
+      {{#each (data "icons")}}
+        <div class="sprk-o-Stack{{#if data.noHeader}} sprk-u-mtn{{/if}}{{#if data.invisible}} sprk-u-Display--none{{/if}}{{#if data.gridItemFullWidth}} drizzle-o-Grid__item-full{{/if}}">
+          <div class="drizzle-o-ContentGrouping sprk-o-Stack__item">
+            <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
+              <div class="drizzle-c-Preview__example {{data.previewClass}}">
+                <svg class="sprk-c-Icon sprk-c-Icon--s" viewBox="{{this.viewBox}}">
+                  <use xlink:href="#{{this.name}}" />
+                </svg>
+              </div>
+              {{!-- Code sample --}}
+              <div class="drizzle-c-Preview__code drizzle-u-Display--none" data-html-documentation>
+                <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard-{{toSlug name}}" type="button">
+                  Copy
+                </button>
+                <pre class="sprk-u-ptl"><code class="drizzle-c-Preview__markup language-markup" id="clipboard-{{toSlug name}}">
+&lt;svg class=&quot;sprk-c-Icon sprk-c-Icon--l&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+  &lt;use xlink:href=&quot;#{{name}}&quot; /&gt;
+&lt;/svg&gt;
+                </code></pre>
+              </div>
+              <div class="drizzle-c-Preview__code drizzle-u-Display--none" data-angular-documentation>
+                <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard-{{toSlug name}}" type="button">
+                  Copy
+                </button>
+                <pre class="sprk-u-ptl"><code class="drizzle-c-Preview__markup language-markup" id="clipboard-{{toSlug name}}">
+&lt;sprk-icon iconType=&quot;{{ name }}&quot; additionalClasses=&quot;sprk-c-Icon--l&quot;&gt;&lt;/sprk-icon&gt;
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+      </section>
+    {{/if}}
+
+
     {{/content}}
   {{/extend}}
 </div>
