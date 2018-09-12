@@ -109,6 +109,10 @@
     <div class="drizzle-c-Divider"></div>
 
     {{#if isIconGallery }}
+      {{#each patterns}}
+        {{> drizzle.item}}
+      {{/each}}
+      <h2 class="drizzle-b-h2">Icon Gallery</h2>
       <section class="drizzle-o-Grid drizzle-o-Grid--gallery">
       {{#each (data "icons")}}
         <div class="sprk-o-Stack{{#if data.noHeader}} sprk-u-mtn{{/if}}{{#if data.invisible}} sprk-u-Display--none{{/if}}{{#if data.gridItemFullWidth}} drizzle-o-Grid__item-full{{/if}}">
@@ -143,9 +147,15 @@
         </div>
       {{/each}}
       </section>
+      {{else if gridViewGallery}}
+        {{#each patterns}}
+          {{> drizzle.item-gallery}}
+        {{/each}}
+      {{else}}
+        {{#each patterns}}
+          {{> drizzle.item}}
+        {{/each}}
     {{/if}}
-
-
     {{/content}}
   {{/extend}}
 </div>
