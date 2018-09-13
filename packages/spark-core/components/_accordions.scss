@@ -19,7 +19,7 @@
   }
 
   &:first-child {
-    border-top: 1px solid $gray-light;
+    border-top: $accordion-border;
   }
 }
 
@@ -34,7 +34,7 @@
 
 .sprk-c-Accordion__summary {
   align-items: center;
-  border-bottom: 1px solid $gray-light;
+  border-bottom: $accordion-border;
   color: $black;
   display: flex;
   padding: $space-m $space-s;
@@ -42,7 +42,6 @@
 
   &:hover,
   &:active {
-    border-bottom: 1px solid $red-real;
     color: $red-real;
     text-decoration: none;
 
@@ -76,6 +75,12 @@
   }
 }
 
+.sprk-c-Accordion__summary .sprk-c-SvgChevronCircle {
+  fill: $white;
+  stroke-width: 1.5;
+  stroke: currentColor;
+}
+
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
   background-color: $blue-dark;
 }
@@ -93,22 +98,17 @@
   flex: 0 0 auto;
 }
 
-.sprk-c-Accordion__summary .sprk-c-Accordion__icon--circle {
-  border: 2px solid $black;
-  border-radius: 50%;
-  height: 1.5rem;
-  padding: 0.25rem 0.156rem;
-  width: 1.5rem;
+// When summary is clicked, show a filled circle icon
+.sprk-c-Accordion__icon.sprk-SvgChevronCircleFilled--circle {
+  fill: $red-real;
+  stroke-width: 1.5;
+  stroke: $red-real;
 }
 
-.sprk-c-Accordion__summary--open .sprk-c-Accordion__icon--circle {
-  background-color: $red-real;
-  border-radius: 50%;
-  border: 0;
-  color: $white;
-  height: 1.5rem;
-  padding: 0.35rem 0.25rem;
-  width: 1.5rem;
+.sprk-c-Accordion__icon.sprk-SvgChevronCircleFilled--arrow {
+  stroke-width: 1.5;
+  stroke: $white;
+  fill: $red-real;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {

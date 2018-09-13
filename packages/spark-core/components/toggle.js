@@ -36,6 +36,7 @@ const toggleAriaExpanded = (toggleTrigger) => {
 
 const handleToggleClick = (toggleContent, toggleIcon, element) => {
   toggleContentCSS(toggleContent);
+
   if (toggleIcon) {
     toggleIconCSS(toggleIcon);
   }
@@ -44,6 +45,23 @@ const handleToggleClick = (toggleContent, toggleIcon, element) => {
     element.classList.toggle('sprk-c-Accordion__summary--open');
   }
   toggleAriaExpanded(element);
+};
+
+const handleToggleChevronIcon = (document, element) => {
+  // If the element contains 'sprk-c-Accordion__summary--open',
+  // set xlink:href attribute to be the filled icon and add a class to change
+  // styles.
+  const sprkChevronCircle = element.querySelector('use');
+  if (element.classList.contains('sprk-c-Accordion__summary--open')) {
+    const circle = document.querySelector('.sprk-SvgChevronCircleFilled--circle');
+    const arrow = document.querySelector('.sprk-SvgChevronCircleFilled--arrow');
+
+    sprkChevronCircle.setAttribute('xlink:href', '#chevron-down-circle-filled');
+    circle.classList.add('sprk-c-Accordion__icon');
+    arrow.classList.add('sprk-c-Accordion__icon');
+  } else {
+    sprkChevronCircle.setAttribute('xlink:href', '#chevron-down-circle');
+  }
 };
 
 const bindToggleUIEvents = (element) => {
@@ -70,5 +88,6 @@ export {
   toggleIconCSS,
   toggleAriaExpanded,
   handleToggleClick,
+  handleToggleChevronIcon,
   bindToggleUIEvents,
 };
