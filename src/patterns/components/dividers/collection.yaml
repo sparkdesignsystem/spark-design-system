@@ -3,4 +3,3 @@ description:
   sections of content. Hr HTML elements will
   have style by default so no additional CSS class is needed.
 sparkPackageCore: true
-noCodeSwitch: true
