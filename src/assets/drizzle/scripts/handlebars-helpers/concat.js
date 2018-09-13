@@ -1,7 +1,9 @@
 function concatHelper(...args) {
   let outStr = '';
   args.forEach((arg) => {
-    outStr += arg;
+    if (typeof arg === 'string') {
+      outStr += arg;
+    }
   });
   return outStr;
 }
