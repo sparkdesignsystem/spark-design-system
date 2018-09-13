@@ -108,10 +108,6 @@ export class SparkFooterComponent {
   @Input()
   additionalClassesBadges: string;
   @Input()
-  imgAnalytics: string;
-  @Input()
-  linkAnalytics: string;
-  @Input()
   additionalClasses: string;
   @Input()
   badges: object;
