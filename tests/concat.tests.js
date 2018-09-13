@@ -6,4 +6,8 @@ describe('handlebars concat helper', () => {
   it('should concat all arguments', () => {
     expect(concat('a', 'b', 'c')).eql('abc');
   });
+
+  it('should ignore Objects supplied', () => {
+    expect(concat('a', {}, 'b', 'c')).eql('abc');
+  });
 });
