@@ -1,4 +1,4 @@
-/* global window document */
+/* global document window */
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 
@@ -46,10 +46,16 @@ const bindUIEvents = () => {
 };
 
 const masthead = () => {
+  window.addEventListener('orientationchange', () => {
+    hideMobileNavs();
+  });
   bindUIEvents();
-  window.addEventListener('resize', hideMobileNavs);
 };
 
 export {
-  masthead, toggleMobileNav, hideMobileNavs, focusTrap, bindUIEvents,
+  masthead,
+  toggleMobileNav,
+  hideMobileNavs,
+  focusTrap,
+  bindUIEvents,
 };

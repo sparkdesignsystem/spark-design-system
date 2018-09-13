@@ -37,34 +37,26 @@ gulp.task('sass', () => {
     .src('src/assets/toolkit/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['> 1%', 'last 4 versions'],
-        cascade: false,
-      }),
-    )
-    .pipe(
-      cssnano({
-        zindex: false,
-      }),
-    )
+    .pipe(autoprefixer({
+      browsers: ['> 1%', 'last 4 versions'],
+      cascade: false,
+    }))
+    .pipe(cssnano({
+      zindex: false,
+    }))
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
 
   gulp
     .src('src/assets/drizzle/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['> 1%', 'last 4 versions'],
-        cascade: false,
-      }),
-    )
-    .pipe(
-      cssnano({
-        zindex: false,
-      }),
-    )
+    .pipe(autoprefixer({
+      browsers: ['> 1%', 'last 4 versions'],
+      cascade: false,
+    }))
+    .pipe(cssnano({
+      zindex: false,
+    }))
     .pipe(gulp.dest('./dist/assets/drizzle/styles'));
 });
 
