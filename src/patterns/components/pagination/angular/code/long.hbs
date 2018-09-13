@@ -1,0 +1,20 @@
+<sprk-pagination
+  additionalClasses="sprk-u-mbl"
+  paginationType="long"
+  nextLinkText="Next"
+  prevLinkText="Prev"
+  [currentPage]="longConfig[0].currentPage"
+  [totalItems]="longConfig[0].totalItems"
+  [itemsPerPage]="longConfig[0].itemsPerPage"
+  (previousClick)="yourGoBackFunction($event)"
+  (pageClick)="yourGoToPageFunction($event)"
+  (nextClick)="yourGoForwardFunction($event)">
+</sprk-pagination>
+
+longConfig = [
+  {
+    currentPage: 1,
+    totalItems: this.data.length,
+    itemsPerPage: 2
+  }
+];
