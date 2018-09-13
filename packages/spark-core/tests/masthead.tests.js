@@ -88,6 +88,13 @@ describe('masthead UI Events tests', () => {
     main.dispatchEvent(event);
     expect(document.activeElement).eql(navItem);
   });
+
+  it('should hide the navs if orientationchange is fired', () => {
+    nav.classList.remove('sprk-u-Display--none');
+    event = new window.Event('orientationchange');
+    window.dispatchEvent(event);
+    expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
+  });
 });
 
 describe('toggleMobileNav tests', () => {
