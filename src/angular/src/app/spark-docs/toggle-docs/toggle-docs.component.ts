@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-toggle
-        toggleType="base"
         title="This is a Spark toggle!"
         body="This is some copy for the toggle about toggle things."
         analyticsString="My disclaimer Title">
