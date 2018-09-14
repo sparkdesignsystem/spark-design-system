@@ -43,7 +43,7 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 
       <a
         *ngIf="cta === 'link'"
-        [routerLink]="linkHref"
+        [routerLink]="ctaLinkHref"
         class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--standalone"
         [attr.data-analytics]="ctaLinkAnalytics">
         {{ ctaText }}
@@ -98,7 +98,7 @@ export class SparkPromoComponent {
   @Input()
   ctaText: string;
   @Input()
-  linkHref: string;
+  ctaLinkHref: string;
   @Input()
   imgHref: string;
   @Input()
