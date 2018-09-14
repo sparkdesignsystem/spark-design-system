@@ -9,4 +9,3 @@ restrictions:
   - Headlines and Subheadlines should not exceed 2 lines.
   - You may have up to 2 call-to-action buttons.
 sparkPackageExtras: true
-noCodeSwitch: true
