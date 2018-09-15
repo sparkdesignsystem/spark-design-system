@@ -1,3 +1,5 @@
+$drizzle-nav-padding: 1rem;
+
 .#{$app-namespace}-c-Navigation {
   background: $nav-background-color;
   font-family: urw-din, sans-serif;
@@ -8,7 +10,7 @@
   color: $white;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: $drizzle-nav-padding;
   position: fixed;
   width: 100%;
   z-index: $drizzle-layer-height-m;
@@ -111,4 +113,24 @@ svg {
   display: block;
   font-weight: 300;
   line-height: 0.8;
+}
+
+/* Offset jump links so they don't get hidden by the sticky header */
+:target::before {
+  display: block;
+  height: calc(
+    #{$drizzle-logo-size-small} + #{$drizzle-nav-padding} + #{$drizzle-nav-padding}
+  );
+  margin-top: calc(
+    0 - #{$drizzle-logo-size-small} - #{$drizzle-nav-padding} - #{$drizzle-nav-padding}
+  );
+
+  @media (min-width: $nav-switch-breakpoint) {
+    height: calc(
+      #{$drizzle-h1-font-size} + #{$drizzle-header-padding-vert-wide} + #{$drizzle-header-padding-vert-wide}
+    );
+    margin-top: calc(
+      0 - #{$drizzle-h1-font-size} - #{$drizzle-header-padding-vert-wide} - #{$drizzle-header-padding-vert-wide}
+    );
+  }
 }

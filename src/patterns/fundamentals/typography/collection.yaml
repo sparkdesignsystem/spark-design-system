@@ -11,3 +11,4 @@ links:
     external: false
     href: /patterns/fundamentals/typography.html#typekit-setup
 sparkPackageCore: true
+noCodeSwitch: true

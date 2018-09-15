@@ -42,4 +42,6 @@ const WideNavigation = () => {
   getElements('[data-sprk-navigation="wide"] > .sprk-c-WideNavigation__item', bindUIEvents);
 };
 
-export { WideNavigation, showDropDown, hideAllDropDowns, bindUIEvents };
+export {
+  WideNavigation, showDropDown, hideAllDropDowns, bindUIEvents,
+};

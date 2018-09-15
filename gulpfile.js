@@ -10,9 +10,20 @@ const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const critical = require('critical').stream;
-const config = require('./config');
 const log = require('fancy-log');
 const runSequence = require('run-sequence');
+const config = require('./config');
+
+const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
+const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
+const toLowerCase = require('./src/assets/drizzle/scripts/handlebars-helpers/toLowerCase');
+const htmlEncode = require('./src/assets/drizzle/scripts/handlebars-helpers/htmlEncode');
+
+// add helpers
+helpers.concat = concatHelper;
+helpers.alternateIdGen = alternateIdGen;
+helpers.toLowerCase = toLowerCase;
+helpers.htmlEncode = htmlEncode;
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -55,9 +66,11 @@ gulp.task('icons', (done) => {
     .src(config.icons.src)
     .pipe(svgSprite(config.icons))
     .pipe(gulp.dest(config.icons.dest))
-    .pipe(rename({
-      extname: '.hbs',
-    }))
+    .pipe(
+      rename({
+        extname: '.hbs',
+      }),
+    )
     .pipe(gulp.dest('./src/templates/drizzle'))
     .on('end', done);
 });
@@ -89,16 +102,26 @@ gulp.task('critical', () => {
   ];
   return gulp
     .src('dist/*.html')
-    .pipe(critical({
-      base: 'dist/',
-      inline: true,
-      css: cssFiles,
-    }))
+    .pipe(
+      critical({
+        base: 'dist/',
+        inline: true,
+        css: cssFiles,
+      }),
+    )
     .on('error', (err) => {
       log.error(err.message);
     })
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('move-angular-package', () => {
+  gulp
+    .src('./src/angular/src/app/spark-core-angular/**/*')
+    .pipe(gulp.dest('./packages/spark-core-angular'));
+});
+
+gulp.task('pre-publish', ['move-angular-package']);
 
 // Register default task
 gulp.task('default', ['frontend'], (done) => {

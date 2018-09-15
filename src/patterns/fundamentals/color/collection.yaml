@@ -3,3 +3,4 @@ description:
   proportion (see below) in all components of an application that require the use of color. The colors are set as
   variables in Spark and as document colors in the Design Toolkit.
 sparkPackageCore: true
+noCodeSwitch: true
