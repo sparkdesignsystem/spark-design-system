@@ -1,0 +1,47 @@
+---
+name: Radio Buttons
+description:
+  A radio button allows a user to indicate if a value is true or false. 
+  When grouped together, only one item in a radio group can be true at 
+  any one time.
+restrictions:
+  - Unlike a checkbox, a radio button cannot be clicked again to clear its value.
+order: 5
+---
+
+<div class="sprk-b-InputContainer">
+  <fieldset class="sprk-b-Fieldset">
+    <legend class="sprk-b-Legend">
+      <label class="sprk-b-Label">Radio Group Label</label>
+    </legend>
+    <div class="sprk-b-SelectionContainer">
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Radio Item 1</label>
+    </div>
+    <div class="sprk-b-SelectionContainer">
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Radio Item 2</label>
+    </div>
+    <div class="sprk-b-SelectionContainer">
+      <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             type="radio"
+             name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
+             aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
+        {{#if disabled}} disabled{{/if}}>
+      <label for="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             class="sprk-b-Label sprk-b-Label--inline sprk-u-mls">Radio Item 3</label>
+    </div>
+  </fieldset>
+  <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container">
+    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+</div>
