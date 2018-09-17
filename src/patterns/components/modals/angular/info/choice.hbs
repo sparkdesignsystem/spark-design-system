@@ -60,8 +60,14 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">confirmAnalyticsString</td>
-      <td>string</td>
+      <td class="sprk-u-FontWeight--bold">
+        confirmAnalyticsString
+      </td>
+
+      <td>
+        string
+      </td>
+
       <td>
         The value supplied will be assigned to the
         'data-analytics' attribute on the confirm button.
@@ -71,13 +77,67 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">cancelAnalyticsString</td>
-      <td>string</td>
+      <td class="sprk-u-FontWeight--bold">
+        isVisible
+      </td>
+
       <td>
-        The value supplied will be assigned to the
-        'data-analytics' attribute on the cancel link.
-        Intended for an outside
-        library to capture data.
+        boolean
+      </td>
+
+      <td>
+        If true, the modal will be shown.
+        If false, the modal will
+        not be shown.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        hide
+      </td>
+
+      <td>
+        function
+      </td>
+
+      <td>
+        When the modal is closed
+        the hide event is emitted and
+        a callback function can be triggered
+        if supplied to hide.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        confirmClick
+      </td>
+
+      <td>
+        function
+      </td>
+
+      <td>
+        Available when the modal type is 'choice'. The modal will emit
+        a confirm click event when the confirmation button is clicked.
+        A callback function can be triggered if supplied to confirmClick.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        cancelClick
+      </td>
+
+      <td>
+        function
+      </td>
+
+      <td>
+        Available when the modal type is 'choice'. The modal will emit
+        a cancel click event when the cancel link is clicked.
+        A callback function can be triggered if supplied to cancelClick.
       </td>
     </tr>
   </tbody>

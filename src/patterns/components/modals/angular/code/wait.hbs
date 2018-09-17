@@ -1,7 +1,7 @@
 <sprk-button (click)="toggleWaitModal($event)" additionalClasses="wait-button">Wait Modal</sprk-button>
 
 <sprk-modal
-  [(isVisible)]="waitVisible"
+  [(isVisible)]="false"
   title="Please wait..."
   (hide)="toggleWaitModal($event)"
   modalType="wait">

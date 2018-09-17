@@ -1,7 +1,7 @@
 <sprk-button (click)="toggleInfoModal($event)" additionalClasses="info-button">Info Modal</sprk-button>
 
 <sprk-modal
-  [(isVisible)]="infoVisible"
+  [(isVisible)]="false"
   title="For Your Information"
   (hide)="toggleInfoModal($event)"
   modalType="info">
