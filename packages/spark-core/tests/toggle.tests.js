@@ -21,6 +21,11 @@ describe('Toggle tests', () => {
   let containerAccordion;
   let event;
   let iconAccordion;
+  let iconAccordionUse;
+  let iconAccordionCircle;
+  let iconAccordionArrow;
+
+  // when the user clicks the accordion trigger, the svg should change attribute
 
   before(() => {
     container = document.createElement('div');
@@ -60,6 +65,23 @@ describe('Toggle tests', () => {
     iconAccordion = document.createElement('svg');
     iconAccordion.setAttribute('data-sprk-toggle', 'icon');
 
+    iconAccordionUse = document.createElement('use');
+    iconAccordionUse.setAttribute('xlink:href', '#chevron-down-circle-filled');
+
+    iconAccordionCircle = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    iconAccordionCircle.setAttribute('class', 'sprk-SvgChevronCircleFilled--circle');
+    iconAccordionCircle.setAttribute('cx', '12.46');
+    iconAccordionCircle.setAttribute('cy', '12.54');
+    iconAccordionCircle.setAttribute('r', '11.2');
+
+    iconAccordionArrow = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+    iconAccordionArrow.setAttribute('class', 'sprk-SvgChevronCircleFilled--arrow');
+    iconAccordionArrow.setAttribute('points', '18.36 10.64 12.46 16.54 6.56 10.64');
+
+    iconAccordionUse.appendChild(iconAccordionCircle, iconAccordionArrow);
+
+    iconAccordion.appendChild(iconAccordionUse);
+
     trigger.append(icon);
     container.append(trigger);
     container.append(content);
@@ -86,13 +108,20 @@ describe('Toggle tests', () => {
   });
 
   it('should toggle open class on accordion toggle triggers', () => {
-    handleToggleClick(content, icon, triggerAccordion);
+    handleToggleClick(
+      content,
+      icon,
+      triggerAccordion,
+      iconAccordionUse,
+      iconAccordionCircle,
+      iconAccordionArrow,
+    );
     expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
     expect(trigger.classList.contains('sprk-c-Accordion__summary--open')).eql(false);
   });
 
   it('should try to toggle icon only if its present', () => {
-    handleToggleClick(contentAccordion, null, triggerAccordion);
+    handleToggleClick(contentAccordion, null, triggerAccordion, iconAccordionUse);
     expect(contentAccordion.classList.contains('sprk-u-HideWhenJs')).eql(true);
   });
 

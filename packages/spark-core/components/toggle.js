@@ -34,47 +34,77 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
-const handleToggleClick = (toggleContent, toggleIcon, element) => {
+const handleToggleChevronIcon = (
+  document,
+  element,
+  sprkChevronCircleIcon,
+  sprkChevronCircleArrow,
+  sprkChevronCircleCircle,
+) => {
+  // If the element contains 'sprk-c-Accordion__summary--open',
+  // set xlink:href attribute to be the filled icon and add a class to change
+  // styles.
+  if (element.classList.contains('sprk-c-Accordion__summary--open')) {
+    sprkChevronCircleIcon.setAttribute('xlink:href', '#chevron-down-circle-filled');
+    sprkChevronCircleCircle.classList.add('sprk-c-Accordion__icon');
+    sprkChevronCircleArrow.classList.add('sprk-c-Accordion__icon');
+  } else {
+    sprkChevronCircleIcon.setAttribute('xlink:href', '#chevron-down-circle');
+  }
+};
+
+const handleToggleClick = (
+  toggleContent,
+  toggleIcon,
+  element,
+  sprkChevronCircleIcon,
+  sprkChevronCircleArrow,
+  sprkChevronCircleCircle,
+  document,
+) => {
   toggleContentCSS(toggleContent);
 
   if (toggleIcon) {
     toggleIconCSS(toggleIcon);
   }
+
   // If toggle type is the accordion then add a class when its open
   if (element.getAttribute('data-sprk-toggle-type') === 'accordion') {
     element.classList.toggle('sprk-c-Accordion__summary--open');
+
+    handleToggleChevronIcon(
+      document,
+      element,
+      sprkChevronCircleIcon,
+      sprkChevronCircleArrow,
+      sprkChevronCircleCircle,
+    );
   }
+
   toggleAriaExpanded(element);
 };
 
-const handleToggleChevronIcon = (document, element) => {
-  // If the element contains 'sprk-c-Accordion__summary--open',
-  // set xlink:href attribute to be the filled icon and add a class to change
-  // styles.
-  const sprkChevronCircle = element.querySelector('use');
-  if (element.classList.contains('sprk-c-Accordion__summary--open')) {
-    const circle = document.querySelector('.sprk-SvgChevronCircleFilled--circle');
-    const arrow = document.querySelector('.sprk-SvgChevronCircleFilled--arrow');
-
-    sprkChevronCircle.setAttribute('xlink:href', '#chevron-down-circle-filled');
-    circle.classList.add('sprk-c-Accordion__icon');
-    arrow.classList.add('sprk-c-Accordion__icon');
-  } else {
-    sprkChevronCircle.setAttribute('xlink:href', '#chevron-down-circle');
-  }
-};
-
-const bindToggleUIEvents = (element) => {
+const bindToggleUIEvents = (element, document) => {
   // Get the toggle's trigger and content elements
   const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
   const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
+  const sprkChevronCircleIcon = element.querySelector('use');
+  const sprkChevronCircleArrow = document.querySelector('.sprk-SvgChevronCircleFilled--arrow');
+  const sprkChevronCircleCircle = document.querySelector('.sprk-SvgChevronCircleFilled--circle');
   // Set aria-expanded to false initially
   toggleAriaExpanded(toggleTrigger);
   // Add click event listener to trigger for each toggle collection we find
   toggleTrigger.addEventListener('click', (e) => {
     e.preventDefault();
-    handleToggleClick(toggleContent, toggleIcon, e.currentTarget);
+    handleToggleClick(
+      toggleContent,
+      toggleIcon,
+      e.currentTarget,
+      sprkChevronCircleIcon,
+      sprkChevronCircleArrow,
+      sprkChevronCircleCircle,
+    );
   });
 };
 
@@ -88,6 +118,5 @@ export {
   toggleIconCSS,
   toggleAriaExpanded,
   handleToggleClick,
-  handleToggleChevronIcon,
   bindToggleUIEvents,
 };
