@@ -1,0 +1,22 @@
+<sprk-input-container>
+  <label sprkLabel>
+    Text Input *
+  </label>
+
+  <input
+    name="text_input"
+    [additionalClasses]="textInput.invalid && textInput.dirty ? 'sprk-b-TextInput--error': ''"
+    type="text"
+    [(ngModel)]="text_input"
+    required
+    #textInput="ngModel"
+    sprkInput>
+
+  <p sprkHelperText>
+    Please enter some input.
+  </p>
+
+  <span
+    [hidden]="textInput.valid || textInput.pristine"
+    sprkFieldError>This field is required.</span>
+</sprk-input-container>

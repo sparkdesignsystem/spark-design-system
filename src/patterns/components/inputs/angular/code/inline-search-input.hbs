@@ -1,0 +1,22 @@
+---
+name: Inline Search Input
+description:
+  This input is used for entering search queries. This component uses a 
+  compact layout that is suitable for use in a Masthead component.
+order: 16
+stateChanger: true
+---
+<div class="sprk-b-InputContainer {{#if containerClass}}{{containerClass}} {{/if}} ">
+  <label for="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}" class="sprk-u-ScreenReaderText">Search</label>
+  <input placeholder="Search"
+         class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
+         id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}"
+         type="search"
+         role="search"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container"
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
+         {{#if disabled}} disabled{{/if}}>
+  <div class="sprk-b-ErrorText"
+        id="{{#if idattr}}{{idattr}}{{else}}inline-search{{/if}}--error-container">
+        {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+</div>
