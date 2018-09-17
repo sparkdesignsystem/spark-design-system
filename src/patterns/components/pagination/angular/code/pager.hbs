@@ -1,0 +1,11 @@
+<sprk-pagination
+  paginationType="pager"
+  nextLinkText="Next"
+  prevLinkText="Prev"
+  [currentPage]="1"
+  [totalItems]="40"
+  [itemsPerPage]="10"
+  (previousClick)="yourGoBack($event)"
+  (pageClick)="yourGoToPage($event)"
+  (nextClick)="yourGoForward($event)">
+</sprk-pagination>

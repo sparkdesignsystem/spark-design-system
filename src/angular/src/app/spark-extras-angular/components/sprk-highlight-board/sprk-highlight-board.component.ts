@@ -40,12 +40,12 @@ import { Component, Input } from '@angular/core';
 
         <div
           sprkStackItem
-          *ngIf="ctaTwoText">
+          *ngIf="ctaText2">
           <a
-            [routerLink]="ctaTwoHref"
+            [routerLink]="ctaHref2"
             class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
             [attr.data-analytics]="analyticsStringCta2">
-            {{ ctaTwoText }}
+            {{ ctaText2 }}
           </a>
         </div>
       </sprk-stack>
@@ -68,9 +68,9 @@ export class SparkHighlightBoardComponent {
   @Input()
   ctaHref: string;
   @Input()
-  ctaTwoText: string;
+  ctaText2: string;
   @Input()
-  ctaTwoHref: string;
+  ctaHref2: string;
   @Input()
   analyticsStringCta: string;
   @Input()

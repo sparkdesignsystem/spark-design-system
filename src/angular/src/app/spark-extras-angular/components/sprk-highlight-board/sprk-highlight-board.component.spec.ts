@@ -68,7 +68,7 @@ describe('SparkHighlightBoardComponent', () => {
 
   it('should set the data-analytics attribute given a value in the analyticsStringCta2 Input', () => {
     const str = 'One';
-    component.ctaTwoText = str;
+    component.ctaText2 = str;
     component.analyticsStringCta2 = str;
     fixture.detectChanges();
     const link2 = element.querySelectorAll('a');
