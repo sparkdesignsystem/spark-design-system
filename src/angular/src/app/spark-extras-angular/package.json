@@ -1,7 +1,7 @@
 {
   "name": "spark-extras-angular",
-  "version": "2.0.0",
-  "description": "A collection of Spark Design System components in Angular 2+",
+  "version": "1.0.0",
+  "description": "A collection of Spark Design System components in Angular 6+",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,8 @@
     "@angular/router": "^6.1.4",
     "@sparkdesignsystem/spark-core": "2.0.0",
     "lodash": "^4.17.10"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
