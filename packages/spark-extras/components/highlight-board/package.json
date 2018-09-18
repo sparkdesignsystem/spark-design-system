@@ -16,5 +16,8 @@
   "dependencies": {
     "@sparkdesignsystem/spark-core": "^2.0.0",
     "object-fit-images": "^3.2.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "spark-core-angular",
-  "version": "1.0.0-beta.3",
-  "description": "A collection of Spark Design System components in Angular 2+",
+  "version": "1.0.0",
+  "description": "A collection of Spark Design System components in Angular 6+",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,8 @@
     "@sparkdesignsystem/spark-core": "2.0.0",
     "lodash": "^4.17.10",
     "tiny-date-picker": "^3.2.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
