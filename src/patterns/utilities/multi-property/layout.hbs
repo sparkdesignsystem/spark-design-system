@@ -25,15 +25,24 @@ description: These utilities are related to layout.
       </td>
     </tr>
     <tr>
-      <td class="sprk-u-FontWeight--bold">.sprk-u-ClearFix</td>
+      <td class="sprk-u-FontWeight--bold">
+        <ul class="drizzle-b-List">
+          <li>%ClearFix,</li>
+          <li>.sprk-u-ClearFix</li>
+        </ul>
+      </td>
       <td>
-        Clearfix is a method of float containment. When applied to a
+        <p>Clearfix is a method of float containment. When applied to a
         container with floated children it forces the
         container to span the entire vertical extent of the children
         as if they weren't pulled out of the document flow
         by the floats. Elements that come after the Clearfixed
         element will no longer wrap around the floated
-        children.
+        children.</p>
+        <p>The primary way to use Clearfix in Spark is by extending the
+        placeholder (e.g. `@extend %ClearFix;`). It can also be used by
+        applying the class directly to the parent element. This is typically
+        only used for debugging.</p>
       </td>
     </tr>
     <tr>
