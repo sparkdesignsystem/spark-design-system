@@ -30,8 +30,6 @@ export class SparkSelectionContainerComponent implements AfterContentInit {
   @Input()
   additionalClasses: string;
   @Input()
-  labelText: string;
-  @Input()
   errorMessage: string;
 
   @ContentChild(SprkLabelDirective)
