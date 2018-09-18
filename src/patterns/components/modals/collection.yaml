@@ -26,4 +26,3 @@ restrictions:
   - Content length inside the Modal shouldn't exceed a reasonable
     amount.
 sparkPackageCore: true
-noCodeSwitch: true
