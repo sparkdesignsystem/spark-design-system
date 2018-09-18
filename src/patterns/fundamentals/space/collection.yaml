@@ -5,3 +5,4 @@ information:
   - There are five spacing sizes to select from for creating new components or objects (xs, s, m, l, and xl).
   - In the examples below, the green shows padding and orange shows margin.
 sparkPackageCore: true
+noCodeSwitch: true

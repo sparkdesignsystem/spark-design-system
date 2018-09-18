@@ -21,7 +21,7 @@ order: 11
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}"
          type="password"
-         pattern="(^(?!666|000|9\d{2})\d{3}([- ]{0,1})(?!00)\d{2}\1(?!0{4})\2\d{4}$)|^$"
+         pattern="(^(?!666|000|9\d{2})\d{3}([-]{0,1})(?!00)\d{2}\1(?!0{4})\2\d{4}$)|^$"
          placeholder="000-00-0000"
          {{#if invaliddata}} aria-invalid="true"{{/if}}
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container"
