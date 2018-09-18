@@ -1,5 +1,5 @@
 {
-  "name": "spark-extras-angular",
+  "name": "@sparkdesignsystem/spark-extras-angular",
   "version": "1.0.0",
   "description": "A collection of Spark Design System components in Angular 6+",
   "main": "index.js",
