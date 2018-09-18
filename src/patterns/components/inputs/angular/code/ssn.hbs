@@ -1,29 +1,19 @@
----
-name: SSN Input
-description:
-  This input is used to collect a Social Security Number.
-information:
-  - Checking "Show SSN" removes the mask and shows the entered value.
-  - Masking is automatically applied when the field contains a valid input.
-  - The field value contains special characters (-) which you may need to parse out before submitting the form.
-order: 11
----
-
-<div class="sprk-b-InputContainer" data-sprk-input="ssn">
-  <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
-  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
-         id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}"
-         type="password"
-         pattern="(^(?!666|000|9\d{2})\d{3}([-]{0,1})(?!00)\d{2}\1(?!0{4})\2\d{4}$)|^$"
-         placeholder="000-00-0000"
-         {{#if invaliddata}} aria-invalid="true"{{/if}}
-         aria-describedby="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container"
-         {{#if disabled}} disabled{{/if}}>
-  <div class="sprk-b-SelectionContainer">
-    <input id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" type="checkbox"
-      {{#if disabled}} disabled{{/if}}>
-    <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
-  </div>
-  <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
-</div>
+<sprk-input-container>
+  <label sprkLabel>SSN Input</label>
+  <input
+    [type]="ssnType"
+    [additionalClasses]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
+    pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$" placeholder="000-00-0000"
+    name="ssn_input"
+    [(ngModel)]="ssn_input"
+    #ssnInput="ngModel"
+    sprkFormatterSsn
+    sprkInput>
+  <sprk-selection-item-container>
+    <input type="checkbox" sprkSelectionInput (click)="toggleSSNType()">
+    <label sprkSelectionLabel>Show SSN</label>
+  </sprk-selection-item-container>
+  <div
+  [hidden]="ssnInput.valid || ssnInput.pristine"
+  sprkFieldError>Invalid SSN.</div>
+</sprk-input-container>

@@ -1,30 +1,18 @@
----
-name: Date Picker
-description:
-  The date input is used for collecting date information. This component includes a date picker.
-information:
-  - Spark recommends that this component be used when you expect the entered date to be in the past.
-  - Masking is automatically applied when the field contains a valid input.
-  - The field value contains special characters which you may need to parse out before submitting the form.
-order: 27
----
-
-<div class="sprk-b-InputContainer" data-sprk-input="date" data-sprk-datepicker>
-  <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label">Date</label>
-  <div class="sprk-b-TextInput--date-picker">
-      <svg class="sprk-c-Icon" viewBox="0 0 100 100">
-          <use xlink:href="#calendar" />
-      </svg>
-      <input class="sprk-b-TextInput sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
-             id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}"
-             type="text"
-             pattern="^(((0[1358]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02(\/?)((0?\d)|[12]\d))(\4|\7|\9)[12]\d{3})?$"
-             placeholder="MM/DD/YYYY"
-             {{#if invaliddata}} aria-invalid="true"{{/if}}
-             aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
-        {{#if disabled}} disabled{{/if}}>
-  </div>
-  <div class="sprk-b-ErrorText"
-        id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
-</div>
+<sprk-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
+  <label sprkLabel>Date Input (picker)</label>
+  <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
+  <input
+    name="datepicker_input"
+    type="text"
+    [additionalClasses]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
+    pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+    placeholder="MM/DD/YYYY"
+    [(ngModel)]="datepicker_input"
+    #datepickerInput="ngModel"
+    sprkFormatterDate
+    sprkDatepicker
+    sprkInput>
+    <div
+    [hidden]="datepickerInput.valid || datepickerInput.pristine"
+    sprkFieldError>Invalid date.</div>
+</sprk-input-container>

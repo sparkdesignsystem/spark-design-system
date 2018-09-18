@@ -1,12 +1,11 @@
----
-name: Inline Search Input - Disabled State
-description:
-  This input is used for entering search queries. This component uses a 
-  compact layout that is suitable for use in a Masthead component.
-order: 16
-invisible: true
----
-
-{{#embed "patterns.components.inputs.inline-search-input"
-         idattr="inline-search-disabled"
-         disabled=true}}{{/embed}}
+<sprk-input-container>
+  <label additionalClasses="sprk-u-ScreenReaderText" sprkLabel>Inline Search Input</label>
+  <input
+    name="inline_search_input"
+    type="search"
+    role="search"
+    placeholder="Search"
+    [(ngModel)]="inline_search_input"
+    #inlineSearchInput="ngModel"
+    sprkInput>
+</sprk-input-container>

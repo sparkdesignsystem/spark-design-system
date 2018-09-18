@@ -1,17 +1,14 @@
----
-name: Select Box - Disabled State
-description:
-  This input type should be used when a
-  user needs to select a single option
-  from a list of two or more options.
-information:
-  - Every item in the select input should be a valid option. As a best practice, do not put 
-    "Select an option..." or similar as the first option in the dropdown. If you want to provide
-    further instructions related to this input, use Helper Text.
-invisible: true
-order: 7
----
-
-{{#embed "patterns.components.inputs.select"
-         idattr="select-disabled"
-         disabled=true}}{{/embed}}
+<sprk-input-container>
+  <label sprkLabel>Select Box Label</label>
+  <select class="sprk-b-Select" id="select-normal" aria-describedby="select-normal--error-container" sprkInput>
+    <option value="none">Please choose...</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <optgroup label="Grouped Options">
+      <option value="g1">Grouped Option 1</option>
+      <option value="g2">Grouped Option 2</option>
+      <option value="g3">Grouped Option 3</option>
+    </optgroup>
+  </select>
+</sprk-input-container>
