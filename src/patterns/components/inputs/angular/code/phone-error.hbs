@@ -1,16 +1,19 @@
----
-name: Phone Number Input - Error State
-description:
-  This input is used to collect a phone number.
-information:
-  - Masking is automatically applied when the field contains a valid input.
-  - The field value contains special characters which you may need to parse out before submitting the form.
-order: 23
-invisible: true
----
-
-{{#embed "patterns.components.inputs.phone"
-         idattr="phone-number-error"
-         invaliddata="true"
-         errorMessage="There is an error on this field."
-         class="sprk-b-TextInput--error"}}{{/embed}}
+<sprk-input-container>
+  <label sprkLabel>Phone Number *</label>
+  <input
+    name="phone_input"
+    [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
+    type="text"
+    pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+    placeholder="(000) 000-0000"
+    [(ngModel)]="phone_input"
+    required
+    #phoneInput="ngModel"
+    sprkFormatterPhoneNumber
+    sprkInput>
+  <span
+    [hidden]="phoneInput.valid || phoneInput.pristine"
+    sprkFieldError>
+    {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
+  </span>
+</sprk-input-container>

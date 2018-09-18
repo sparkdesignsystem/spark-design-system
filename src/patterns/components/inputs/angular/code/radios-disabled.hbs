@@ -1,16 +1,33 @@
----
-name: Radio Buttons - Disabled State
-description:
-  A radio button allows a user to indicate if a value is true or false. 
-  When grouped together, only one item in a radio group can be true at 
-  any one time.
-restrictions:
-  - Unlike a checkbox, a radio button cannot be clicked again to clear its value.
-invisible: true
-order: 5
----
-
-{{#embed "patterns.components.inputs.radios"
-         idattr="radio-disabled"
-         disabled=true}}
-{{/embed}}
+<sprk-selection-container>
+  <label sprkLabel>Radio Group Label</label>
+  <sprk-selection-item-container>
+    <input
+      type="radio"
+      value="1"
+      name="radio_input"
+      [(ngModel)]="radio_input"
+      sprkSelectionInput
+      #radioInput="ngModel">
+    <label sprkSelectionLabel>Item 1</label>
+  </sprk-selection-item-container>
+  <sprk-selection-item-container>
+    <input
+      type="radio"
+      value="2"
+      name="radio_input"
+      sprkSelectionInput
+      [(ngModel)]="radio_input"
+      #radioInput="ngModel">
+    <label sprkSelectionLabel>Item 2</label>
+  </sprk-selection-item-container>
+  <sprk-selection-item-container>
+    <input
+      type="radio"
+      value="3"
+      name="radio_input"
+      sprkSelectionInput
+      [(ngModel)]="radio_input"
+      #radioInput="ngModel">
+    <label sprkSelectionLabel>Item 3</label>
+  </sprk-selection-item-container>
+</sprk-selection-container>

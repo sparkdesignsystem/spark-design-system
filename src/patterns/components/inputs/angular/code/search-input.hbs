@@ -1,19 +1,9 @@
----
-name: Search Input
-description:
-  This input is used for entering search queries.
-order: 13
----
-
-<div class="sprk-b-InputContainer">
-  <label for="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}" class="sprk-b-Label">Search</label>
-  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
-         id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}"
-         type="search"
-         role="search"
-         aria-describedby="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container"
-         {{#if invaliddata}} aria-invalid="true"{{/if}}
-         {{#if disabled}} disabled{{/if}}>
-  <div class="sprk-b-ErrorText"
-        id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container">{{#if errorMessage}}{{errorMessage}}{{/if}}</div>
-</div>
+<sprk-input-container>
+  <label sprkLabel>Search Input</label>
+  <input
+    name="search_input"
+    type="search"
+    [(ngModel)]="search_input"
+    #searchInput="ngModel"
+    sprkInput>
+</sprk-input-container>

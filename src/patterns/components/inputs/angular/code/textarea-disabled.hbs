@@ -1,11 +1,8 @@
----
-name: Textarea - Disabled State
-description:
-  This input is for entering multiple lines of freeform text.
-order: 9
-invisible: true
----
-
-{{#embed "patterns.components.inputs.textarea"
-         idattr="textarea-disabled"
-         disabled=true}}{{/embed}}
+<sprk-input-container>
+  <label sprkLabel>Textarea Input</label>
+  <textarea
+    name="textarea_input"
+    [(ngModel)]="textarea_input"
+    #textareaInput="ngModel"
+    sprkInput></textarea>
+</sprk-input-container>
