@@ -15,5 +15,8 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
     "@sparkdesignsystem/spark-core": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

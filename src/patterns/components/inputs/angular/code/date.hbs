@@ -1,0 +1,16 @@
+<sprk-input-container>
+  <label sprkLabel>Date Input (No Picker)</label>
+  <input
+    name="date_input"
+    [additionalClasses]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
+    type="text"
+    pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+    placeholder="MM/DD/YYYY"
+    [(ngModel)]="date_input"
+    #dateInput="ngModel"
+    sprkFormatterDate
+    sprkInput>
+  <span
+    [hidden]="dateInput.valid || dateInput.pristine"
+    sprkFieldError>Invalid date.</span>
+</sprk-input-container>

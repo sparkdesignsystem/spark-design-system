@@ -14,18 +14,21 @@ contents:
   Password Input: inputs.html#password-input
   Helper Text: inputs.html#helper-text
   Phone Number: inputs.html#phone-number-input
-  Date Picker: inputs.html#date-picker
   Date Input: inputs.html#date-input
+  Date Picker: inputs.html#date-picker
+information:
+  - Special characters used in formatting (like the hyphens in the SSN field) are not automatically removed
+    from the field value and may need to be manually removed depending on your implementation details.
+  - You should use <a class="drizzle-b-Link" href="#helper-text">helper text</a> when a user needs further
+    clarification beyond the field label.
 restrictions:
-  - You should add the 'novalidate' attribute to your form, since we handle form validation ourselves,
-    and don't use the browser's implementation
-  - You'll need to strip input values on submission of special characters that we add to the values
-    for certain inputs.
-  - Make sure that each label's 'for' attribute matches the 'id' attribute of the corresponding
-    input element.
-  - Each input element's 'id' should be unique on the page.
-  - You need to make sure that the id referenced in aria-describedby matches the id on the error container.
-  - You should use helper text, as linked below, when a user needs further clarification beyond the label.
-  - Labels and error messages should be short and to the point.
+  - You should always add the <code class='drizzle-c-Command drizzle-c-Command--inline'>novalidate</code> attribute
+    to your form when using Spark elements. Spark handles form validation internally, so we don't want the browser validation
+    to trigger.
+  - Make sure that each label's <code class='drizzle-c-Command drizzle-c-Command--inline'>for</code> attribute matches the
+    <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> attribute of the corresponding input element.
+  - Each input element's <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> should be unique on the page.
+  - You need to make sure that the <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> referenced in
+    <code class='drizzle-c-Command drizzle-c-Command--inline'>aria-describedby</code> matches the
+    <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> on the error container.
 sparkPackageCore: true
-noCodeSwitch: true

@@ -1,6 +1,8 @@
 ---
 name: Text Input - Disabled State
-restrictions:
+description:
+  This is the base form input.
+information:
   - The input's 'type' attribute should be the most appropriate value that semantically matches your
     use case.
 links:
@@ -9,9 +11,11 @@ links:
     href: inputs.html#helper-text
 order: 1
 invisible: true
+hasAngularCode: true
+hasAngularCodeInfo: true
+hasAngularDocs: true
 ---
 
 {{#embed "patterns.components.inputs.text-input"
          idattr="text-input-disabled"
          disabled=true}}{{/embed}}
-

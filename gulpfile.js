@@ -37,26 +37,34 @@ gulp.task('sass', () => {
     .src('src/assets/toolkit/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(autoprefixer({
-      browsers: ['> 1%', 'last 4 versions'],
-      cascade: false,
-    }))
-    .pipe(cssnano({
-      zindex: false,
-    }))
+    .pipe(
+      autoprefixer({
+        browsers: ['> 1%', 'last 4 versions'],
+        cascade: false,
+      }),
+    )
+    .pipe(
+      cssnano({
+        zindex: false,
+      }),
+    )
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
 
   gulp
     .src('src/assets/drizzle/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(autoprefixer({
-      browsers: ['> 1%', 'last 4 versions'],
-      cascade: false,
-    }))
-    .pipe(cssnano({
-      zindex: false,
-    }))
+    .pipe(
+      autoprefixer({
+        browsers: ['> 1%', 'last 4 versions'],
+        cascade: false,
+      }),
+    )
+    .pipe(
+      cssnano({
+        zindex: false,
+      }),
+    )
     .pipe(gulp.dest('./dist/assets/drizzle/styles'));
 });
 
@@ -119,6 +127,9 @@ gulp.task('move-angular-package', () => {
   gulp
     .src('./src/angular/src/app/spark-core-angular/**/*')
     .pipe(gulp.dest('./packages/spark-core-angular'));
+  gulp
+    .src('./src/angular/src/app/spark-extras-angular/**/*')
+    .pipe(gulp.dest('./packages/spark-extras-angular'));
 });
 
 gulp.task('pre-publish', ['move-angular-package']);
