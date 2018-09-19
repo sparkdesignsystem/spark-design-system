@@ -1,31 +1,61 @@
+<p class="sprk-u-mbm">Spark selection components (checkboxes, radios, etc) have a container component,
+  sprk-selection-container, and another component that contains each input / label pair, sprk-selection-item-container.
+</p>
 <p class="sprk-u-mbm">
-  A group of checkboxes have a group label which
-  is marked with the sprkLabel Angular attribute.
-  The sprk-selection-container component will put
-  the sprkLabel and sprk-selection-item-container in the correct places.
+  Similar to the other inputs, the html for the labels and inputs themselves needs to be written into the container.
+  See the table below for customization options.
 </p>
 
-<p>
+<p class="sprk-u-mbm">
   Angular checkboxes
   in spark-core-angular
-  consist of the following
-  Angular components:
+  make use of the following
+  components and directives:
 </p>
 
-<ul class="drizzle-b-List drizzle-b-List--nested">
-  <li>
-    <strong>sprk-selection-container</strong>
-  </li>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
 
-  <li>
-    <strong>sprk-selection-item-container</strong>
-  </li>
+  <thead>
+  <tr>
+    <th>Element</th>
+    <th>Element Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
 
-  <li>
-    <strong>sprkLabel</strong>
-  </li>
-
-  <li>
-    <strong>sprkSelectionLabel</strong>
-  </li>
-</ul>
+  <tbody>
+  <tr>
+    <td><strong>sprk-selection-container</strong></td>
+    <td>Component</td>
+    <td>This is the outermost container for selection items. Expects there to be a number of
+      sprk-selection-item-containers. May optionally contain elements with the sprkLabel and/or the sprkFieldError
+      directives.</td>
+  </tr>
+  <tr>
+    <td><strong>sprk-selection-item-container</strong></td>
+    <td>Component</td>
+    <td>This component expects that the html for a label and an input is written inside. The label html should have
+      the sprkSelectionLabel directive.</td>
+  </tr>
+  <tr>
+    <td><strong>sprkLabel</strong></td>
+    <td>Directive</td>
+    <td>Denotes an element to use as a label for the group. Should be added to a label element.</td>
+  </tr>
+  <tr>
+    <td><strong>sprkSelectionLabel</strong></td>
+    <td>Directive</td>
+    <td>Denotes an element to use as a label for an input in a selection-item-container. Should be added to a label
+      element.</td>
+  </tr>
+  <tr>
+    <td><strong>sprkFieldError</strong></td>
+    <td>Directive</td>
+    <td>Denotes an element to use as an error message for an input.</td>
+  </tr>
+  </tbody>
+</table>
