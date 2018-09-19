@@ -34,7 +34,6 @@
 
 .sprk-c-Accordion__summary {
   align-items: center;
-  border-bottom: $accordion-border;
   color: $black;
   display: flex;
   padding: $space-m $space-s;
@@ -47,8 +46,14 @@
 
     .sprk-c-Accordion__icon {
       border-color: $red-real;
+      transition: transform 0.5s ease;
+      stroke: $red-deep;
     }
   }
+}
+
+.sprk-c-Accordion__summary--closed {
+  border-bottom: $accordion-border;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
@@ -68,17 +73,17 @@
 .sprk-c-Accordion__summary--open {
   border-bottom: 0;
   font-weight: bold;
+  color: $red-real;
 
   &:hover {
     border-bottom: 0;
-    color: $black;
+    color: $red-deep;
   }
 }
 
-.sprk-c-Accordion__summary .sprk-c-SvgChevronCircle {
-  fill: $white;
-  stroke-width: 1.5;
-  stroke: currentColor;
+.sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
+  transform: rotate(180deg);
+  stroke: $red-real;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
@@ -96,19 +101,6 @@
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
-}
-
-// When summary is clicked, show a filled circle icon
-.sprk-c-Accordion__icon.sprk-SvgChevronCircleFilled--circle {
-  fill: $red-real;
-  stroke-width: 1.5;
-  stroke: $red-real;
-}
-
-.sprk-c-Accordion__icon.sprk-SvgChevronCircleFilled--arrow {
-  stroke-width: 1.5;
-  stroke: $white;
-  fill: $red-real;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
@@ -139,7 +131,12 @@
 .sprk-c-Accordion__details {
   background-color: $white;
   border-bottom: 1px solid $gray-medium;
-  padding: 0 $space-s $space-m;
+  transition: height 0.5s ease;
+  overflow: hidden;
+}
+
+.sprk-c-Accordion__details:not(.sprk-c-Accordion__details--open) {
+  display: none;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
@@ -158,40 +155,4 @@
     color: $white;
     text-decoration: none;
   }
-}
-
-// Secondary style accordion modifiers
-.sprk-c-Accordion__item--secondary {
-  background-color: $white;
-  border-bottom: 0.125rem solid $blue-medium;
-  margin-bottom: 0;
-
-  &:first-child {
-    border-top: 0.125rem solid $blue-medium;
-  }
-}
-
-// When secondary is open, hovered, active, or focused
-.sprk-c-Accordion__summary--secondary {
-  color: $blue-medium;
-
-  &.sprk-c-Accordion__summary--open,
-  &:hover,
-  &:active {
-    background-color: $blue-medium;
-    color: $white;
-
-    .sprk-c-Accordion__heading--secondary {
-      color: $white;
-    }
-  }
-}
-
-.sprk-c-Accordion__heading--secondary {
-  color: $blue-medium;
-}
-
-.sprk-c-Accordion__details--secondary {
-  border-color: $blue-medium;
-  border-bottom: 0;
 }

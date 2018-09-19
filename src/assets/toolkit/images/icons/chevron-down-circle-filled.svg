@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle class="sprk-SvgChevronCircleFilled--circle" cx="12.46" cy="12.54" r="11.2"/><polyline class="sprk-SvgChevronCircleFilled--arrow" points="18.36 10.64 12.46 16.54 6.56 10.64"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle fill="currentColor" stroke-width="1.5" class="sprk-SvgChevronCircleFilled--circle" cx="12.46" cy="12.54" r="11.2"/><polyline fill="currentColor" stroke-width="1.5" stroke="#ffffff" points="18.36 10.64 12.46 16.54 6.56 10.64"/></svg>
