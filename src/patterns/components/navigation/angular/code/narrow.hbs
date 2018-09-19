@@ -1,4 +1,12 @@
-<sprk-wide-navigation [links]="links"></sprk-wide-navigation>
+<sprk-narrow-navigation>
+  <sprk-narrow-navigation-item
+    *ngFor="let link of links"
+    [subNav]="link.subNav"
+    [analyticsString]="link.analyticsString"
+    [href]="link.href"
+    [text]="link.text">
+  </sprk-narrow-navigation-item>
+</sprk-narrow-navigation>
 const links = [
   {
     text: 'Item 1',
