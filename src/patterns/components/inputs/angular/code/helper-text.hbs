@@ -1,0 +1,17 @@
+<sprk-input-container>
+  <label sprkLabel>
+    Text Input Label
+  </label>
+
+  <input
+    sprkInput
+    name="text_input"
+    type="text"
+    [(ngModel)]="text_input"
+    required
+    #textInput="ngModel">
+
+  <p sprkHelperText>
+    Optional helper text, used to clarify the field's intent.
+  </p>
+</sprk-input-container>
