@@ -1,5 +1,5 @@
 <sprk-input-container>
-  <label sprkLabel>Date Input (No Picker)</label>
+  <label sprkLabel>Date</label>
   <input
     name="date_input"
     [additionalClasses]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
@@ -10,7 +10,4 @@
     #dateInput="ngModel"
     sprkFormatterDate
     sprkInput>
-  <span
-    [hidden]="dateInput.valid || dateInput.pristine"
-    sprkFieldError>Invalid date.</span>
 </sprk-input-container>

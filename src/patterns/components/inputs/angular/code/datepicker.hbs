@@ -1,5 +1,5 @@
 <sprk-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
-  <label sprkLabel>Date Input (picker)</label>
+  <label sprkLabel>Date</label>
   <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
   <input
     name="datepicker_input"
@@ -12,7 +12,4 @@
     sprkFormatterDate
     sprkDatepicker
     sprkInput>
-    <div
-    [hidden]="datepickerInput.valid || datepickerInput.pristine"
-    sprkFieldError>Invalid date.</div>
 </sprk-input-container>

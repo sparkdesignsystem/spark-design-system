@@ -12,7 +12,5 @@
     sprkFormatterDate
     sprkDatepicker
     sprkInput>
-    <div
-    [hidden]="datepickerInput.valid || datepickerInput.pristine"
-    sprkFieldError>Invalid date.</div>
+    <div [hidden]="isDatePickerValid" sprkFieldError>There is an error on this field.</div>
 </sprk-input-container>
