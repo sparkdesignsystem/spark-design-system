@@ -1,0 +1,81 @@
+<sprk-narrow-navigation>
+  <sprk-narrow-navigation-item
+    *ngFor="let link of links"
+    [subNav]="link.subNav"
+    [analyticsString]="link.analyticsString"
+    [href]="link.href"
+    [text]="link.text">
+  </sprk-narrow-navigation-item>
+</sprk-narrow-navigation>
+const links = [
+  {
+    text: 'Item 1',
+    href: '/alerts',
+    analyticsString: 'Link to Item 1',
+    active: false,
+    subNav: [
+      {
+        text: 'Item 1',
+        href: '/alerts',
+        analyticsString: 'Link to Sub Item 1'
+      },
+      {
+        text: 'Item 2',
+        href: '/alerts'
+      },
+      {
+        text: 'Item 3',
+        href: '/alerts'
+      },
+    ]
+  },
+  {
+    text: 'Item 2',
+    href: '/icons',
+    active: false,
+    subNav: [
+      {
+        text: 'Item 1',
+        href: '#nogo'
+      },
+      {
+        text: 'Item 2',
+        href: '#nogo'
+      },
+      {
+        text: 'Item 3',
+        href: '#nogo'
+      }
+    ]
+  },
+  {
+    text: 'Item 3',
+    href: '/links',
+    active: false
+  },
+  {
+    text: 'Item 4',
+    href: '/buttons',
+    active: false,
+    subNav: [
+      {
+        text: 'Item 1',
+        href: '#nogo'
+      },
+      {
+        text: 'Item 2',
+        href: '#nogo'
+      },
+      {
+        text: 'Item 3',
+        href: '#nogo'
+      }
+    ]
+  },
+  {
+    text: 'Item 5',
+    href: '#nogo',
+    active: false
+  },
+];
+
