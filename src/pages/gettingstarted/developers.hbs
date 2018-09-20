@@ -21,9 +21,10 @@ title: Developers
   </div>
 
   <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2">Spark Core</h2>
+    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
+    <h3 class="drizzle-b-h3">Vanilla</h3>
 
-    <ul class="drizzle-b-List drizzle-b-List--nested">
+    <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
       <li class="sprk-u-mvm">
         <p>Install the npm package.</p>
         <div class="drizzle-c-Command">
@@ -46,20 +47,29 @@ title: Developers
           Spark-Core JS into your build.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            import sparkCore from &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
+            import &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
           </code>
         </div>
       </li>
       <li class="sprk-u-mvm">
         <p>If you plan to use
           <a class="drizzle-b-Link" href="/patterns/components/icons.html">
-            Icons</a>, you'll need to import the svg file that contains the
-            symbols.</p>
+            Icons</a>, you'll need to include the svg sprite file that contains the
+          symbols in your HTML build process. </p>
+
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
             &quot;node_modules/@sparkdesignsystem/spark-core/spark-core-icons.svg&quot;
           </code>
         </div>
+
+        <p>The contents should be placed under the opening
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              &lt;body&gt;
+            </code>
+          </div> tag.
+        </p>
       </li>
       <li class="sprk-u-mvm">
         <p>You will also need to perform a
@@ -75,6 +85,90 @@ title: Developers
         </div>
       </li>
     </ul>
+
+    <h3 class="drizzle-b-h3 sprk-u-mbm">Angular</h3>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h4 class="drizzle-b-h4 sprk-u-mbm">Requirements</h4>
+      <p>Spark's Angular implementation assumes a few things about your project.</p>
+
+      <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
+        <li class="sprk-u-mvm">
+          <p>We assume that your project is processing <a href="https://sass-lang.com/" class="drizzle-b-Link">Sass</a> rather than plain CSS for style information. More information
+          for converting an Angular project to SCSS is available at
+            <a href="https://angular.io/guide/ajs-quick-reference" class="drizzle-b-Link">angular.io</a>.</p>
+        </li>
+        <li>
+          <p>We assume that your Angular project is using at least Angular 6 with Typescript or is an Angular-CLI based
+          project.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h4 class="drizzle-b-h4">Getting Started</h4>
+      <p>In order to get started with
+        <span class="drizzle-c-Command">
+        <code class="drizzle-CodeHighlight">
+          spark-core-angular
+        </code>
+      </span>, you'll need to follow these steps:</p>
+
+      <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
+        <li class="sprk-u-mvm">
+          <p>Install the npm package.</p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              npm install --save-dev @sparkdesignsystem/spark-core-angular</code>
+          </div>
+        </li>
+        <li class="sprk-u-mvm">
+          <p>Import the Sass setup file in your Angular app. This can be done in the scss file specified
+            at the highest level of your app. This will bring all Spark-Core Sass patterns into your build.</p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
+            </code>
+          </div>
+        </li>
+
+        <li class="sprk-u-mvm">
+          <p>You'll need to import the <span class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            spark-core-angular
+          </code>
+        </span> NgModule</p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
+            </code>
+          </div>
+          <p>Alternatively, if you don't wish to install all of spark-core-angular's components, you can install
+          just the ones you need, individually, as NgModules.</p>
+        </li>
+
+        <li class="sprk-u-mvm">
+          <p>If you plan to use
+            <a class="drizzle-b-Link" href="/patterns/components/icons.html">
+              Icons</a>, you'll need to import the <span class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            sprk-icon-set
+          </code>
+        </span> component and render it at the outermost level of your
+            application. (Best under the opening body tag)</p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              &lt;sprk-icon-set&gt;&lt;/sprk-icon-set&gt;
+            </code>
+          </div>
+        </li>
+        <li class="sprk-u-mvm">
+          <p>You will also need to perform a
+            <a href="/patterns/fundamentals/typography.html#typekit-setup"
+            class="drizzle-b-Link">typekit setup</a> for your application.</p>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
@@ -100,11 +194,33 @@ title: Developers
         <p>Import any of the Spark-Extras JS patterns that you need.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            import &lt;pattern-name&gt; from &quot;node_modules/@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
+            import &lt;pattern-name&gt; from &quot;@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
           </code>
         </div>
       </li>
     </ul>
+
+    <h3 class="drizzle-b-h3">Angular</h3>
+
+    <div class="drizzle-o-ContentGrouping">
+      <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
+        <li class="sprk-u-mvm">
+          <p>Install the npm package for the spark extra that you need.</p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              npm install --save-dev @sparkdesignsystem/spark-extra-angular-[package-name]</code>
+          </div>
+        </li>
+        <li class="sprk-u-mvm">
+          <p>You'll need to import the NgModule provided.</p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              import { SparkExtraAngular[PatternName] } from './spark-extra-[pattern-name]/spark-extra-angular-[pattern-name].module';
+            </code>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
