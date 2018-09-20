@@ -29,8 +29,6 @@ import { SparkSelectionItemContainerComponent } from '../sprk-selection-item-con
 export class SparkSelectionContainerComponent implements AfterContentInit {
   @Input()
   additionalClasses: string;
-  @Input()
-  errorMessage: string;
 
   @ContentChild(SprkLabelDirective)
   label: SprkLabelDirective;
