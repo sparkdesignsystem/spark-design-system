@@ -8,7 +8,8 @@
     [(ngModel)]="monetary_input"
     #monetaryInput="ngModel"
     sprkFormatterMonetary
-    sprkInput>
+    sprkInput
+    disabled>
     <div
       [hidden]="monetaryInput.valid || monetaryInput.pristine"
       sprkFieldError>
