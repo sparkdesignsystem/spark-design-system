@@ -2,6 +2,7 @@
   <label sprkLabel>Date Input (picker)</label>
   <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
   <input
+    disabled
     name="datepicker_input"
     type="text"
     [additionalClasses]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
@@ -12,7 +13,4 @@
     sprkFormatterDate
     sprkDatepicker
     sprkInput>
-    <div
-    [hidden]="datepickerInput.valid || datepickerInput.pristine"
-    sprkFieldError>Invalid date.</div>
 </sprk-input-container>
