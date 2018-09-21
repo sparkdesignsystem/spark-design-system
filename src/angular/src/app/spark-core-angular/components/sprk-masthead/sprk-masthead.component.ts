@@ -93,7 +93,7 @@ export class SparkMastheadComponent {
   @Input()
   isNarrowNavOpen = false;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   handleResizeEvent() {
     this.closeNarrowNav();
   }

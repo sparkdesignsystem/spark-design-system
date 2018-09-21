@@ -58,7 +58,7 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }

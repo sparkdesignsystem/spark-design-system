@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "es2015",
+    "target": "es2015",
+    "baseUrl": "./",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "outDir": "./esm2015",
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "lib": ["dom, es2015"]
+  },
+  "files": ["./public_api.ts"],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flateModuleOutFile": "spark-core-angular",
+    "flatModuleId": "spark-core-angular"
+  }
+}

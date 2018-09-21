@@ -65,7 +65,7 @@ import {
             (click)="goForward($event, currentPage)"
             [ngClass]="{
               'sprk-b-Link': true, 'sprk-b-Link--standalone': true,
-              'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1
+              'sprk-b-Link--disabled': isLastPage()
             }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
@@ -148,7 +148,7 @@ import {
             [ngClass]="{
               'sprk-b-Link': true,
               'sprk-b-Link--standalone': true,
-              'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
+              'sprk-b-Link--disabled': isLastPage() }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
@@ -175,7 +175,7 @@ import {
             [ngClass]="{
               'sprk-b-Link': true,
               'sprk-b-Link--standalone': true,
-              'sprk-b-Link--disabled': isLastPage() || currentPage === isLastPage() - 1 }"
+              'sprk-b-Link--disabled': isLastPage() }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
