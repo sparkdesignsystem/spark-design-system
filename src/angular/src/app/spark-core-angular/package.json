@@ -8,7 +8,7 @@
   },
   "author": "Quicken Loans",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "^6.1.4",
     "@angular/common": "^6.1.4",
     "@angular/compiler": "^6.1.4",
@@ -20,9 +20,15 @@
     "@angular/router": "^6.1.4",
     "@sparkdesignsystem/spark-core": "2.0.0",
     "lodash": "^4.17.10",
+    "ng-packagr": "^4.2.0",
     "tiny-date-picker": "^3.2.6"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
   }
 }

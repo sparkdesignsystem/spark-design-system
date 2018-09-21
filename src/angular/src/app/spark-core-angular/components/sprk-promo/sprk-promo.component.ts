@@ -36,7 +36,7 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
         <a
           [routerLink]="buttonHref"
           class="sprk-c-Button"
-          [attr.data-analytics]="ctaButtonAnalytics">
+          [attr.data-analytics]="buttonLinkAnalytics">
           {{ ctaText }}
         </a>
       </div>

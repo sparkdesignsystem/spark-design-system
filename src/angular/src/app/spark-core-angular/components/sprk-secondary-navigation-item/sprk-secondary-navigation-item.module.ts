@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SparkIconModule } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.module';
+import { SparkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SparkSecondaryNavigationItemComponent } from './sprk-secondary-navigation-item.component';
 
 @NgModule({
