@@ -83,7 +83,9 @@
 
 .sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
   transform: rotate(180deg);
+  transform-origin: center;
   stroke: $red-real;
+  stroke-width: 1.5;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
