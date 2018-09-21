@@ -31,8 +31,8 @@ export class SparkToggleComponent {
   @Input()
   body: string;
 
-  private isOpen = false;
-  private iconClasses = 'sprk-u-mrs';
+  public isOpen = false;
+  public iconClasses = 'sprk-u-mrs';
 
   getClasses(): string {
     const classArray: string[] = [''];
