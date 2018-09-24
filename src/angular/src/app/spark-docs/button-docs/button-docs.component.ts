@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
   selector: 'sprk-button-docs',
@@ -13,10 +14,7 @@ import { Component, OnInit } from '@angular/core';
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Spinner Buttons</h2>
-      <!--<sprk-button spinner="true">Spinner Button</sprk-button>-->
-      <!--<sprk-button spinner="true" buttonType="secondary">Spinner Button</sprk-button>-->
-      <!--<sprk-button spinner="true" buttonType="tertiary">Spinner Button</sprk-button>-->
-      <!--<sprk-button spinner="true" buttonType="removal">Spinner Button</sprk-button>-->
+      <button sprkButton (click)="checkSpinner($event)">Spinner Button</button>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
@@ -28,5 +26,14 @@ import { Component, OnInit } from '@angular/core';
 export class ButtonDocsComponent implements OnInit {
   constructor() {}
 
+  submitSpinning = false;
+
   ngOnInit() {}
+
+  checkSpinner(event): void {
+    if (!this.submitSpinning) {
+      setSpinning(event.target, {});
+      this.submitSpinning = true;
+    }
+  }
 }

@@ -23,9 +23,8 @@ describe('Spark Button Directive', () => {
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-
-    fixture.detectChanges();
     buttonElement = fixture.nativeElement.querySelector('button');
+    fixture.detectChanges();
   }));
 
   it('should create itself', () => {
