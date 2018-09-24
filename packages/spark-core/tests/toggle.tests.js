@@ -1,28 +1,29 @@
-/* global document describe before it window */
-import { expect } from 'chai';
+/* global document describe beforeEach afterEach it window */
 import sinon from 'sinon';
-
+import { expect } from 'chai';
 import {
-  toggleAriaExpanded,
+  toggle,
   toggleContentCSS,
+  toggleAccordionContentCSS,
   toggleIconCSS,
+  toggleAccordionIconCSS,
+  toggleAriaExpanded,
   handleToggleClick,
   bindToggleUIEvents,
-  toggle,
 } from '../components/toggle';
 
-describe('Toggle tests', () => {
+describe('toggle tests', () => {
   let container;
+  let containerAccordion;
+  let iconAccordion;
   let trigger;
   let triggerAccordion;
   let content;
   let contentAccordion;
-  let icon;
-  let containerAccordion;
-  let event;
-  let iconAccordion;
+  let triggerIcon;
+  let iconAccordionUseElement;
 
-  before(() => {
+  beforeEach(() => {
     container = document.createElement('div');
     container.setAttribute('data-sprk-toggle', 'container');
 
@@ -30,9 +31,8 @@ describe('Toggle tests', () => {
     containerAccordion.setAttribute('data-sprk-toggle', 'container');
 
     trigger = document.createElement('a');
+    trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('data-sprk-toggle', 'trigger');
-    trigger.textContent = 'My Toggle Link Text';
-    trigger.classList.add('sprk-b-TypeBodyThree', 'sprk-b-Link', 'sprk-b-Link--standalone');
 
     triggerAccordion = document.createElement('a');
     triggerAccordion.setAttribute('data-sprk-toggle', 'trigger');
@@ -53,74 +53,97 @@ describe('Toggle tests', () => {
     contentAccordion.setAttribute('data-sprk-toggle', 'content');
     contentAccordion.textContent = 'This is the toggle content. It is a placeholder.';
     contentAccordion.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
+    contentAccordion.style.height = '0px';
 
-    icon = document.createElement('svg');
-    icon.setAttribute('data-sprk-toggle', 'icon');
+    triggerIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    triggerIcon.classList.add('sprk-c-Icon');
+    triggerIcon.setAttribute('data-sprk-toggle', 'icon');
 
-    iconAccordion = document.createElement('svg');
+    iconAccordion = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    iconAccordion.classList.add('sprk-c-Icon');
     iconAccordion.setAttribute('data-sprk-toggle', 'icon');
 
-    trigger.append(icon);
-    container.append(trigger);
-    container.append(content);
+    iconAccordionUseElement = document.createElement('use');
+    iconAccordionUseElement.setAttribute('xlink:href', '#chevron-down-circle');
+    iconAccordionUseElement.setAttribute('data-sprk-toggle', 'svgUse');
 
-    triggerAccordion.append(iconAccordion);
+    triggerIcon.append(iconAccordionUseElement);
+    sinon.spy(trigger, 'addEventListener');
+    trigger.appendChild(triggerIcon);
+    container.appendChild(trigger);
+    container.appendChild(content);
     containerAccordion.append(triggerAccordion);
     containerAccordion.append(contentAccordion);
+    document.body.appendChild(container);
+  });
+  afterEach(() => {
+    trigger.addEventListener.restore();
+  });
+  it('should set up event handler on trigger', () => {
+    toggle();
+    expect(trigger.addEventListener.calledOnce).eql(true);
   });
 
-  it('should toggle aria-expanded attribute', () => {
-    toggleAriaExpanded(trigger);
-    expect(trigger.hasAttribute('aria-expanded')).eql(true);
-  });
-
-  it('should toggle aria-expanded attribute to false', () => {
-    toggleAriaExpanded(trigger); // Is true, makes it false
-    toggleAriaExpanded(trigger); // Is false, makes it true
-    expect(trigger.hasAttribute('aria-expanded')).eql(true);
-  });
-
-  it('should toggle CSS hide class', () => {
+  it('should remove the correct class', () => {
+    content.classList.add('sprk-u-HideWhenJs');
     toggleContentCSS(content);
-    expect(content.classList.contains('sprk-u-HideWhenJs')).eql(true);
+    expect(content.classList.contains('sprk-u-HideWhenJs')).eql(false);
+  });
+
+  it('should adjust aria-expanded appropriately', () => {
+    toggleAriaExpanded(trigger);
+    expect(trigger.getAttribute('aria-expanded')).eql('true');
+
+    trigger.setAttribute('aria-expanded', 'true');
+    toggleAriaExpanded(trigger);
+    expect(trigger.getAttribute('aria-expanded')).eql('false');
+
+    trigger.removeAttribute('aria-expanded');
+    toggleAriaExpanded(trigger);
+    expect(trigger.getAttribute('aria-expanded')).eql('false');
   });
 
   it('should toggle open class on accordion toggle triggers', () => {
-    handleToggleClick(content, icon, triggerAccordion);
+    handleToggleClick(content, trigger, triggerIcon, iconAccordionUseElement, triggerAccordion);
     expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
     expect(trigger.classList.contains('sprk-c-Accordion__summary--open')).eql(false);
   });
 
-  it('should try to toggle icon only if its present', () => {
-    handleToggleClick(contentAccordion, null, triggerAccordion);
-    expect(contentAccordion.classList.contains('sprk-u-HideWhenJs')).eql(true);
-  });
-
   it('should toggle icon css class', () => {
-    const isOpen = icon.classList.contains('sprk-c-Icon--open');
+    const isOpen = triggerIcon.classList.contains('sprk-c-Icon--open');
+
     if (!isOpen) {
-      toggleIconCSS(icon);
+      toggleIconCSS(triggerIcon);
     }
-    expect(icon.classList.contains('sprk-c-Icon--open')).eql(true);
+    expect(triggerIcon.classList.contains('sprk-c-Icon--open')).eql(true);
   });
 
-  it('should add listener to toggle trigger', () => {
-    sinon.spy(trigger, 'addEventListener');
+  it('should toggle accordion icon attributes', () => {
+    toggleAccordionIconCSS(iconAccordion, iconAccordionUseElement);
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle');
+
+    handleToggleClick(content, trigger, iconAccordion, iconAccordionUseElement, triggerAccordion);
+
+    if (iconAccordion.classList.contains('sprk-c-Icon--open')) {
+      expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-filled');
+    }
+  });
+
+  it('should toggle the accordion content', () => {
+    handleToggleClick(content, trigger, triggerIcon, iconAccordionUseElement, triggerAccordion);
+    toggleAccordionContentCSS(contentAccordion, triggerAccordion);
+
+    handleToggleClick(content, trigger, triggerIcon, iconAccordionUseElement, triggerAccordion);
+    if (!contentAccordion.classList.contains('sprk-c-Accordion__details--open')) {
+      expect(contentAccordion.style.height).eql('0px');
+      expect(contentAccordion.classList.contains('sprk-c-Accordion__details--open')).eql(false);
+    }
+  });
+
+  it('bindToggleUIEvents', () => {
     bindToggleUIEvents(container);
-    expect(trigger.addEventListener.getCall(0).args[0]).eql('click');
-  });
-
-  it('should toggle element when clicked', () => {
-    if (content.classList.contains('sprk-u-HideWhenJs')) {
-      toggle();
-      event = new window.Event('click');
-      trigger.dispatchEvent(event);
-      expect(content.classList.contains('sprk-u-HideWhenJs')).eql(false);
-    } else {
-      toggle();
-      event = new window.Event('click');
-      trigger.dispatchEvent(event);
-      expect(content.classList.contains('sprk-u-HideWhenJs')).eql(true);
-    }
+    expect(trigger.getAttribute('aria-expanded')).eql('true');
+    trigger.dispatchEvent(new window.Event('click'));
+    expect(triggerIcon.classList.contains('sprk-c-Icon--open')).eql(true);
   });
 });

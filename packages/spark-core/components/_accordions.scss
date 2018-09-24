@@ -52,10 +52,6 @@
   }
 }
 
-.sprk-c-Accordion__summary--closed {
-  border-bottom: $accordion-border;
-}
-
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border: 2px solid $gray-medium;
   border-top: 0;
@@ -132,13 +128,17 @@
 
 .sprk-c-Accordion__details {
   background-color: $white;
-  border-bottom: 1px solid $gray-medium;
+  border-bottom: $accordion-border;
   transition: height 0.5s ease;
   overflow: hidden;
 }
 
+.sprk-c-Accordion__details--open {
+  border-bottom: 1px solid $gray-medium;
+}
+
 .sprk-c-Accordion__details:not(.sprk-c-Accordion__details--open) {
-  display: none;
+  height: 0;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {

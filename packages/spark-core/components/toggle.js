@@ -18,13 +18,12 @@ const toggleContentCSS = (toggleContent) => {
 };
 
 // Slide toggle the accordion content
-const toggleAccordionContentCSS = (toggleContent, toggleTrigger) => {
+const toggleAccordionContentCSS = (toggleContent) => {
   const toggleContentHeight = toggleContent;
   toggleContent.classList.remove('sprk-u-HideWhenJs');
 
   if (!toggleContent.classList.contains('sprk-c-Accordion__details--open')) {
     toggleContent.classList.add('sprk-c-Accordion__details--open');
-    toggleTrigger.classList.remove('sprk-c-Accordion__summary--closed');
 
     // Set the content height to auto
     toggleContentHeight.style.height = 'auto';
@@ -41,17 +40,7 @@ const toggleAccordionContentCSS = (toggleContent, toggleTrigger) => {
     }, 0);
   } else {
     toggleContentHeight.style.height = '0px';
-
-    toggleContent.addEventListener(
-      'transitionend',
-      () => {
-        toggleContent.classList.remove('sprk-c-Accordion__details--open');
-        toggleTrigger.classList.add('sprk-c-Accordion__summary--closed');
-      },
-      {
-        once: true,
-      },
-    );
+    toggleContent.classList.remove('sprk-c-Accordion__details--open');
   }
 };
 
@@ -84,7 +73,7 @@ const toggleAriaExpanded = (toggleTrigger) => {
 };
 
 const handleToggleClick = (toggleContent, toggleTrigger, toggleIcon, toggleIconUse, element) => {
-  toggleContentCSS(toggleContent, toggleTrigger);
+  toggleContentCSS(toggleContent);
 
   if (toggleIcon) {
     toggleIconCSS(toggleIcon);
