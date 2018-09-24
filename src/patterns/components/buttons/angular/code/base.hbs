@@ -1,5 +1,4 @@
-<sprk-button
-  {{#if buttonType}} buttonType="{{buttonType}}"{{/if}}
-  {{#if disabled}} [isDisabled]="true"{{/if}}
-  {{#if spinner}} [spinner]="true"{{/if}}
-  {{#if additionalClasses}} additionalClasses="{{additionalClasses}}"{{/if}}>Hello, World.</sprk-button>
+<button
+  {{#if disabled}} disabled{{/if}}
+  {{#if spinner}} (click)="checkSpinner($event)"{{/if}}
+  {{#if additionalClasses}} additionalClasses="{{additionalClasses}}"{{/if}} sprkButton>Button</button>
