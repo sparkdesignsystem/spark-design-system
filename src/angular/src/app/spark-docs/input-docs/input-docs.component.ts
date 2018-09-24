@@ -245,6 +245,12 @@ export class InputDocsComponent {
   phone_input = '';
   date_input = '';
   radio_input: string;
+  checkbox_input1: string;
+  checkbox_input2: string;
+  checkbox_input3: string;
+  ssn_input: string;
+  monetary_input: string;
+  datepicker_input: string;
   passwordType = 'password';
   ssnType = 'password';
   form_submitted = false;
@@ -261,7 +267,7 @@ export class InputDocsComponent {
       : (this.ssnType = 'password');
   }
 
-  onSubmit(): void {
+  onSubmit(event): void {
     this.form_submitted = true;
   }
 }

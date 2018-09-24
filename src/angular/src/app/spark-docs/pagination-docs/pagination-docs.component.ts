@@ -105,9 +105,9 @@ import { Component, OnInit } from '@angular/core';
   styles: ['']
 })
 export class PaginationDocsComponent implements OnInit {
-  private pagedItems: any[];
-  private pagedItemsDefault: any[];
-  private pagedItemsPager: any[];
+  public pagedItems: any[];
+  public pagedItemsDefault: any[];
+  public pagedItemsPager: any[];
 
   constructor() {}
 
