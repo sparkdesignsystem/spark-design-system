@@ -11,7 +11,7 @@ import { SparkDictionaryModule } from './spark-extras-angular/components/spark-e
 import { SparkHighlightBoardModule } from './spark-extras-angular/components/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.module';
 
 // Collected Spark Core Import
-import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
+import { SparkCoreAngularModule } from '@sparkdesignsystem/spark-core-angular';
 
 // Docs Site Component Imports
 import { AccordionDocsComponent } from './spark-docs/accordion-docs/accordion-docs.component';
