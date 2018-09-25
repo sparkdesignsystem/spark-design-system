@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.component';
 import { SparkStackComponent } from '../../../spark-core-angular/components/sprk-stack/sprk-stack.component';
 import { SparkToggleComponent } from '../../../spark-core-angular/components/sprk-toggle/sprk-toggle.component';
-import { SparkAwardComponent } from './sprk-award.component';
+import { SparkAwardComponent } from './spark-extras-angular-award.component';
 
 describe('SparkAwardComponent', () => {
   let component: SparkAwardComponent;

@@ -14,4 +14,7 @@ packages/spark-core/.nyc_output
 launch.json
 .vscode
 /packages/spark-core-angular
-/packages/spark-extras-angular
+/packages/spark-extras-angular-award
+/packages/spark-extras-angular-card
+/packages/spark-extras-angular-dictionary
+/packages/spark-extras-angular-highlight-board

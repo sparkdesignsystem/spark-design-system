@@ -5,10 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 // Individual Spark Extras Imports
-import { SparkAwardModule } from './spark-extras-angular/components/sprk-award/sprk-award.module';
-import { SparkCardModule } from './spark-extras-angular/components/sprk-card/sprk-card.module';
-import { SparkDictionaryModule } from './spark-extras-angular/components/sprk-dictionary/sprk-dictionary.module';
-import { SparkHighlightBoardModule } from './spark-extras-angular/components/sprk-highlight-board/sprk-highlight-board.module';
+import { SparkAwardModule } from './spark-extras-angular/components/spark-extras-angular-award/spark-extras-angular-award.module';
+import { SparkCardModule } from './spark-extras-angular/components/spark-extras-angular-card/spark-extras-angular-card.module';
+import { SparkDictionaryModule } from './spark-extras-angular/components/spark-extras-angular-dictionary/spark-extras-angular-dictionary.module';
+import { SparkHighlightBoardModule } from './spark-extras-angular/components/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.module';
 
 // Collected Spark Core Import
 import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
