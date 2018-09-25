@@ -39,15 +39,13 @@
   padding: $space-m $space-s;
   text-decoration: none;
 
-  &:hover,
-  &:active {
-    color: $red-real;
+  &:hover {
+    color: $accordion-summary-color;
     text-decoration: none;
 
     .sprk-c-Accordion__icon {
-      border-color: $red-real;
       transition: transform 0.5s ease;
-      stroke: $red-deep;
+      stroke: $accordion-summary-color-open;
     }
   }
 }
@@ -67,20 +65,18 @@
 
 // When open, add same style as when focused
 .sprk-c-Accordion__summary--open {
-  border-bottom: 0;
   font-weight: bold;
-  color: $red-real;
+  color: $accordion-summary-color;
 
   &:hover {
-    border-bottom: 0;
-    color: $red-deep;
+    color: $accordion-summary-color-open;
   }
 }
 
 .sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
   transform: rotate(180deg);
   transform-origin: center;
-  stroke: $red-real;
+  stroke: $accordion-summary-color;
   stroke-width: 1.5;
 }
 
@@ -134,7 +130,7 @@
 }
 
 .sprk-c-Accordion__details--open {
-  border-bottom: 1px solid $gray-medium;
+  border-bottom: $accordion-border-open;
 }
 
 .sprk-c-Accordion__details:not(.sprk-c-Accordion__details--open) {

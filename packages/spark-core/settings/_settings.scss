@@ -363,6 +363,9 @@ $split-breakpoint-xl: 80rem !default;
 //
 $accordion-max-width: 53.125rem !default;
 $accordion-border: 1px solid $gray-light !default;
+$accordion-border-open: 1px solid $gray-medium !default;
+$accordion-summary-color: $red-real !default;
+$accordion-summary-color-open: $red-deep !default;
 
 //
 // Dividers
