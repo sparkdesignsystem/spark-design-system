@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkDictionaryComponent } from './sprk-dictionary.component';
+import { SparkDictionaryComponent } from './spark-extras-angular-dictionary.component';
 
 describe('Spark Dictionary', () => {
   let fixture: ComponentFixture<SparkDictionaryComponent>;
