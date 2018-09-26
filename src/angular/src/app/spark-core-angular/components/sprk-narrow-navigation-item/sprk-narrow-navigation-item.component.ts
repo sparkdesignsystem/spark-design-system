@@ -36,8 +36,7 @@ import * as _ from 'lodash';
           </li>
         </ul>
       </ng-template>
-    </li>`,
-  styles: ['']
+    </li>`
 })
 export class SparkNarrowNavigationItemComponent {
   @Input()

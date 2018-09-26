@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
     <svg [ngClass]="getClasses()" viewBox="0 0 100 100">
       <use [attr.xlink:href]="icon" />
     </svg>
-  `,
-  styles: ['']
+  `
 })
 export class SparkIconComponent {
   @Input()

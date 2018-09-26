@@ -36,7 +36,7 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
         <a
           [routerLink]="buttonHref"
           class="sprk-c-Button"
-          [attr.data-analytics]="ctaButtonAnalytics">
+          [attr.data-analytics]="buttonLinkAnalytics">
           {{ ctaText }}
         </a>
       </div>
@@ -69,8 +69,7 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
         <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
     </a>
   </div>
-  `,
-  styles: ['']
+  `
 })
 export class SparkPromoComponent {
   @Input()

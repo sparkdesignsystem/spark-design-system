@@ -8,7 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "build:angular-core": "ng-packagr -p src/app/spark-core-angular/package.json",
+    "build:angular-extras-card": "ng-packagr -p src/app/spark-extras-angular/components/spark-extras-angular-card/package.json",
+    "build:angular-extras-award": "ng-packagr -p src/app/spark-extras-angular/components/spark-extras-angular-award/package.json",
+    "build:angular-extras-dictionary": "ng-packagr -p src/app/spark-extras-angular/components/spark-extras-angular-dictionary/package.json",
+    "build:angular-extras-highlight-board": "ng-packagr -p src/app/spark-extras-angular/components/spark-extras-angular-highlight-board/package.json",
+    "build:angular-package": "npm run build:angular-core && npm run build:angular-extras-card && npm run build:angular-extras-award && npm run build:angular-extras-dictionary && npm run build:angular-extras-highlight-board"
   },
   "lint-staged": {
     "*.scss": [
@@ -38,7 +44,13 @@
     "@storybook/angular": "^4.0.0-alpha.16",
     "core-js": "^2.5.4",
     "rxjs": "^6.2.2",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "protractor": "^5.3.2",
+    "@sparkdesignsystem/spark-core-angular": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-card": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-dictionary": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-award": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-highlight-board": "1.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
@@ -63,6 +75,7 @@
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
     "lint-staged": "^7.2.2",
+    "ng-packagr": "^4.2.0",
     "prettier": "^1.14.2",
     "prettier-stylelint": "^0.4.2",
     "protractor": "^5.3.2",

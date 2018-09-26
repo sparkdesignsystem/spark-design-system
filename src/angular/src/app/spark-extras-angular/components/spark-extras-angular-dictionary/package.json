@@ -1,14 +1,15 @@
 {
-  "name": "@sparkdesignsystem/spark-extras-angular",
+  "name": "@sparkdesignsystem/spark-extras-angular-dictionary",
   "version": "1.0.0",
   "description": "A collection of Spark Design System components in Angular 6+",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "author": "Quicken Loans",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "^6.1.4",
     "@angular/common": "^6.1.4",
     "@angular/compiler": "^6.1.4",
@@ -18,10 +19,14 @@
     "@angular/platform-browser": "^6.1.4",
     "@angular/platform-browser-dynamic": "^6.1.4",
     "@angular/router": "^6.1.4",
-    "@sparkdesignsystem/spark-core": "2.0.0",
-    "lodash": "^4.17.10"
+    "@sparkdesignsystem/spark-core-angular": "1.0.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
   }
 }

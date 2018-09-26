@@ -4,14 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
-// Individual Spark Extras Imports
-import { SparkAwardModule } from './spark-extras-angular/components/sprk-award/sprk-award.module';
-import { SparkCardModule } from './spark-extras-angular/components/sprk-card/sprk-card.module';
-import { SparkDictionaryModule } from './spark-extras-angular/components/sprk-dictionary/sprk-dictionary.module';
-import { SparkHighlightBoardModule } from './spark-extras-angular/components/sprk-highlight-board/sprk-highlight-board.module';
-
 // Collected Spark Core Import
-import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
+import { SparkCoreAngularModule } from '@sparkdesignsystem/spark-core-angular';
+
+// Individual Spark Extras Imports
+import { SparkAwardModule } from '@sparkdesignsystem/spark-extras-angular-award';
+import { SparkCardModule } from '@sparkdesignsystem/spark-extras-angular-card';
+import { SparkDictionaryModule } from '@sparkdesignsystem/spark-extras-angular-dictionary';
+import { SparkHighlightBoardModule } from '@sparkdesignsystem/spark-extras-angular-highlight-board';
 
 // Docs Site Component Imports
 import { AccordionDocsComponent } from './spark-docs/accordion-docs/accordion-docs.component';

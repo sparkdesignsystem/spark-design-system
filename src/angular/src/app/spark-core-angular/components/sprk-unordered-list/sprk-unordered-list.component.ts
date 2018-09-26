@@ -7,8 +7,7 @@ import { Component, Input } from '@angular/core';
       [ngClass]="getClasses()">
       <ng-content></ng-content>
     </ul>
-  `,
-  styles: ['']
+  `
 })
 export class SparkUnorderedListComponent {
   @Input()

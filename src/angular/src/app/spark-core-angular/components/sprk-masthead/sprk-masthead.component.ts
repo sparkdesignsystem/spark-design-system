@@ -70,8 +70,7 @@ import { Component, HostListener, Input } from '@angular/core';
           </sprk-narrow-navigation>
         </div>
       </div>
-    </header>`,
-  styles: ['']
+    </header>`
 })
 export class SparkMastheadComponent {
   @Input()
@@ -93,7 +92,7 @@ export class SparkMastheadComponent {
   @Input()
   isNarrowNavOpen = false;
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   handleResizeEvent() {
     this.closeNarrowNav();
   }

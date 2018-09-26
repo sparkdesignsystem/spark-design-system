@@ -18,8 +18,7 @@ import { Component, Input } from '@angular/core';
         {{ body }}
       </p>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class SparkToggleComponent {
   @Input()

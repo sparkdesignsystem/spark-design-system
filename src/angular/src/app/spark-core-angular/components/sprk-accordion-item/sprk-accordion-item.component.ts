@@ -23,8 +23,7 @@ import * as _ from 'lodash';
         <p *ngIf="isOpen" [id]="accordion_controls_id" class="sprk-c-Accordion__details sprk-b-TypeBodyTwo sprk-u-HideWhenJs">
           <ng-content></ng-content>
         </p>
-      </li>`,
-  styles: ['']
+      </li>`
 })
 export class SparkAccordionItemComponent {
   @Input()

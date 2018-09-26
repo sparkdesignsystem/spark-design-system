@@ -27,8 +27,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/components/alerts';
         <sprk-icon iconType="times" additionalClasses="sprk-c-Icon--l"></sprk-icon>
       </button>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class SparkAlertComponent {
   @Input()

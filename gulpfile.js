@@ -12,6 +12,7 @@ const rename = require('gulp-rename');
 const critical = require('critical').stream;
 const log = require('fancy-log');
 const runSequence = require('run-sequence');
+const { exec } = require('child_process');
 const config = require('./config');
 
 const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
@@ -88,6 +89,33 @@ gulp.task('images', () => {
   gulp.src(config.images.src).pipe(gulp.dest(config.images.dest));
 });
 
+// Create Angular Package Formatted version of Spark Angular Packages
+gulp.task('build-angular-pkg', (cb) => {
+  const cmd = exec('cd src/angular && npm run build:angular-package', {
+    stdio: 'inherit',
+  });
+  return cmd.on('close', cb).on('error', (err) => {
+    log.error(err.message);
+  });
+});
+
+// Move finalized angular packages to /packages
+gulp.task('move-angular', ['build-angular-pkg'], () => {
+  gulp.src(config.angularCore.src).pipe(gulp.dest(config.angularCore.dest));
+  gulp
+    .src(config.angularExtrasCard.src)
+    .pipe(gulp.dest(config.angularExtrasCard.dest));
+  gulp
+    .src(config.angularExtrasAward.src)
+    .pipe(gulp.dest(config.angularExtrasAward.dest));
+  gulp
+    .src(config.angularExtrasDictionary.src)
+    .pipe(gulp.dest(config.angularExtrasDictionary.dest));
+  gulp
+    .src(config.angularExtrasHighlightBoard.src)
+    .pipe(gulp.dest(config.angularExtrasHighlightBoard.dest));
+});
+
 // Register Drizzle builder task
 gulp.task('drizzle', ['icons'], () => {
   const result = drizzle(config.drizzle);
@@ -99,7 +127,17 @@ gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
-  runSequence('clean', 'icons', 'drizzle', 'copy', 'sass', 'images', 'js', 'critical', done);
+  runSequence(
+    'clean',
+    'icons',
+    'drizzle',
+    'copy',
+    'sass',
+    'images',
+    'js',
+    'critical',
+    done,
+  );
 });
 
 // Generate & Inline Critical-path CSS
@@ -123,16 +161,7 @@ gulp.task('critical', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('move-angular-package', () => {
-  gulp
-    .src('./src/angular/src/app/spark-core-angular/**/*')
-    .pipe(gulp.dest('./packages/spark-core-angular'));
-  gulp
-    .src('./src/angular/src/app/spark-extras-angular/**/*')
-    .pipe(gulp.dest('./packages/spark-extras-angular'));
-});
-
-gulp.task('pre-publish', ['move-angular-package']);
+gulp.task('pre-publish', ['move-angular']);
 
 // Register default task
 gulp.task('default', ['frontend'], (done) => {
