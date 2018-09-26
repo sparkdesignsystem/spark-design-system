@@ -45,6 +45,7 @@
     "core-js": "^2.5.4",
     "rxjs": "^6.2.2",
     "zone.js": "^0.8.26",
+    "protractor": "^5.3.2",
     "@sparkdesignsystem/spark-core-angular": "1.0.0",
     "@sparkdesignsystem/spark-extras-angular-card": "1.0.0",
     "@sparkdesignsystem/spark-extras-angular-dictionary": "1.0.0",
