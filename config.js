@@ -38,27 +38,27 @@ module.exports = {
     dest: './dist/assets/toolkit/images'
   },
   angularCore: {
-    src: './src/angular/src/app/spark-core-angular/dist/*.*',
+    src: './src/angular/src/app/spark-core-angular/dist/*',
     dest: './packages/spark-core-angular'
   },
   angularExtrasCard: {
     src:
-      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-card/dist/*.*',
+      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-card/dist/**/*',
     dest: './packages/spark-extras-angular-card'
   },
   angularExtrasAward: {
     src:
-      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-award/dist/*.*',
+      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-award/dist/**/*',
     dest: './packages/spark-extras-angular-award'
   },
   angularExtrasDictionary: {
     src:
-      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-dictionary/dist/*.*',
+      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-dictionary/dist/**/*',
     dest: './packages/spark-extras-angular-dictionary'
   },
   angularExtrasHighlightBoard: {
     src:
-      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-highlight-board/dist/*.*',
+      './src/angular/src/app/spark-extras-angular/components/spark-extras-angular-highlight-board/dist/**/*',
     dest: './packages/spark-extras-angular-highlight-board'
   },
   js: {
