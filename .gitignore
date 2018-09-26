@@ -18,3 +18,4 @@ launch.json
 /packages/spark-extras-angular-card
 /packages/spark-extras-angular-dictionary
 /packages/spark-extras-angular-highlight-board
+src/angular/dist

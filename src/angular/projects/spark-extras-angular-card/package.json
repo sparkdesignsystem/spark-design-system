@@ -1,0 +1,16 @@
+{
+  "name": "spark-extras-angular-card",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/animations": "^6.1.4",
+    "@angular/common": "^6.1.4",
+    "@angular/compiler": "^6.1.4",
+    "@angular/core": "^6.1.4",
+    "@angular/forms": "^6.1.4",
+    "@angular/http": "^6.1.4",
+    "@angular/platform-browser": "^6.1.4",
+    "@angular/platform-browser-dynamic": "^6.1.4",
+    "@angular/router": "^6.1.4",
+    "@sparkdesignsystem/spark-core-angular": "1.0.0"
+  }
+}

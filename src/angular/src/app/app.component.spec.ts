@@ -1,11 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { SparkCoreAngularModule } from './spark-core-angular/spark-core-angular.module';
-import { SparkAwardComponent } from './spark-extras-angular/components/spark-extras-angular-award/spark-extras-angular-award.component';
-import { SparkCardComponent } from './spark-extras-angular/components/spark-extras-angular-card/spark-extras-angular-card.component';
-import { SparkDictionaryComponent } from './spark-extras-angular/components/spark-extras-angular-dictionary/spark-extras-angular-dictionary.component';
-import { SparkHighlightBoardComponent } from './spark-extras-angular/components/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.component';
+
+import { SparkAwardModule } from '@sparkdesignsystem/spark-extras-angular-award';
+import { SparkCardModule } from '@sparkdesignsystem/spark-extras-angular-card';
+import { SparkDictionaryModule } from '@sparkdesignsystem/spark-extras-angular-dictionary';
+import { SparkHighlightBoardModule } from '@sparkdesignsystem/spark-extras-angular-highlight-board';
+
+// Collected Spark Core Import
+import { SparkCoreAngularModule } from '@sparkdesignsystem/spark-core-angular';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,10 +16,10 @@ describe('AppComponent', () => {
       imports: [RouterTestingModule, SparkCoreAngularModule],
       declarations: [
         AppComponent,
-        SparkAwardComponent,
-        SparkDictionaryComponent,
-        SparkCardComponent,
-        SparkHighlightBoardComponent
+        SparkAwardModule,
+        SparkDictionaryModule,
+        SparkCardModule,
+        SparkHighlightBoardModule
       ]
     }).compileComponents();
   }));
