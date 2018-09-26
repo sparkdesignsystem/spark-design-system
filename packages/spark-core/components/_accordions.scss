@@ -42,11 +42,6 @@
   &:hover {
     color: $accordion-summary-color;
     text-decoration: none;
-
-    .sprk-c-Accordion__icon {
-      transition: transform 0.5s ease;
-      stroke: $accordion-summary-color-open;
-    }
   }
 }
 
@@ -67,10 +62,6 @@
 .sprk-c-Accordion__summary--open {
   font-weight: bold;
   color: $accordion-summary-color;
-
-  &:hover {
-    color: $accordion-summary-color-open;
-  }
 }
 
 .sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
@@ -95,6 +86,7 @@
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
+  transition: transform 0.3s ease;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
@@ -125,7 +117,7 @@
 .sprk-c-Accordion__details {
   background-color: $white;
   border-bottom: $accordion-border;
-  transition: height 0.5s ease;
+  transition: height 0.3s ease;
   overflow: hidden;
 }
 
