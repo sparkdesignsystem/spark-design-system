@@ -19,3 +19,8 @@ launch.json
 /packages/spark-extras-angular-dictionary
 /packages/spark-extras-angular-highlight-board
 src/angular/dist
+/src/angular/projects/spark-core-angular/coverage
+/src/angular/projects/spark-extras-angular-award/coverage
+/src/angular/projects/spark-extras-angular-card/coverage
+/src/angular/projects/spark-extras-angular-dictionary/coverage
+/src/angular/projects/spark-extras-angular-highlight-board/coverage

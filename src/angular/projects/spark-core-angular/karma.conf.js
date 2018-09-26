@@ -17,7 +17,7 @@ module.exports = function (config) {
     },
     files: [ 'node_modules/tiny-date-picker/dist/tiny-date-picker.js' ],
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../../coverage'),
+      dir: require('path').join(__dirname, '/coverage'),
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
