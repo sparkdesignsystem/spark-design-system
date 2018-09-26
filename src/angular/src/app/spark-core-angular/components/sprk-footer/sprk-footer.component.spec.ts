@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SparkAwardComponent } from '../../../spark-extras-angular/components/sprk-award/sprk-award.component';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkFooterComponent } from './sprk-footer.component';
 
@@ -44,7 +43,6 @@ describe('SparkFooterComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [
-        SparkAwardComponent,
         SparkStackComponent,
         SparkIconComponent,
         SparkToggleComponent,

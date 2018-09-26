@@ -42,7 +42,7 @@ describe('InputDocsComponent', () => {
 
   it('should set form_submitted when onSubmit is called', () => {
     component.form_submitted = false;
-    component.onSubmit();
+    component.onSubmit(event);
     expect(component.form_submitted).toEqual(true);
   });
 });

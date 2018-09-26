@@ -44,7 +44,12 @@
     "@storybook/angular": "^4.0.0-alpha.16",
     "core-js": "^2.5.4",
     "rxjs": "^6.2.2",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@sparkdesignsystem/spark-core-angular": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-card": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-dictionary": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-award": "1.0.0",
+    "@sparkdesignsystem/spark-extras-angular-highlight-board": "1.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
