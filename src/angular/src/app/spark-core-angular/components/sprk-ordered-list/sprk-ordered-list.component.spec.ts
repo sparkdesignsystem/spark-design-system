@@ -28,6 +28,18 @@ describe('SparkOrderedListComponent', () => {
     expect(element.classList.toString()).toEqual(component.getClasses());
   });
 
+  it('should add the correct classes if bare is set as listType', () => {
+    component.listType = 'bare';
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-b-List--bare')).toEqual(true);
+  });
+
+  it('should add the correct classes if indented is set as listType', () => {
+    component.listType = 'indented';
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-b-List--indented')).toEqual(true);
+  });
+
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();

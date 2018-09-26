@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { SparkButtonComponent } from './sprk-button.component';
+import { SprkButtonDirective } from './sprk-button.directive';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [SparkButtonComponent],
-  exports: [SparkButtonComponent]
+  declarations: [SprkButtonDirective],
+  exports: [SprkButtonDirective]
 })
-export class SparkButtonModule {}
+export class SprkButtonModule {}
