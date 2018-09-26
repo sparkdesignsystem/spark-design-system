@@ -99,8 +99,7 @@ import { Component, Input } from '@angular/core';
         <ng-content select="[optional-slot]" sprkStackItem></ng-content>
       </sprk-stack>
     </footer>
-  `,
-  styles: ['']
+  `
 })
 export class SparkFooterComponent {
   @Input()

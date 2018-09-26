@@ -8,8 +8,7 @@ import { Component, Input } from '@angular/core';
       [attr.data-analytics]="analyticsString">
       <ng-content></ng-content>
     </li>
-  `,
-  styles: ['']
+  `
 })
 export class SparkListItemComponent {
   @Input()

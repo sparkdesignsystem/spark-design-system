@@ -25,7 +25,6 @@ import { SparkSelectionItemContainerModule } from './components/inputs/sprk-sele
 import { SparkAccordionItemModule } from './components/sprk-accordion-item/sprk-accordion-item.module';
 import { SparkAccordionModule } from './components/sprk-accordion/sprk-accordion.module';
 import { SparkAlertModule } from './components/sprk-alert/sprk-alert.module';
-import { SparkButtonModule } from './components/sprk-button/sprk-button.module';
 import { SparkDividerModule } from './components/sprk-divider/sprk-divider.module';
 import { SparkFooterModule } from './components/sprk-footer/sprk-footer.module';
 import { SparkIconSetModule } from './components/sprk-icon-set/sprk-icon-set.module';
@@ -47,6 +46,7 @@ import { SparkTableModule } from './components/sprk-table/sprk-table.module';
 import { SparkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
 import { SparkUnorderedListModule } from './components/sprk-unordered-list/sprk-unordered-list.module';
 import { SparkWideNavigationModule } from './components/sprk-wide-navigation/sprk-wide-navigation.module';
+import { SprkButtonModule } from './directives/inputs/sprk-button/sprk-button.module';
 
 import TinyDatePicker from 'tiny-date-picker';
 
@@ -72,7 +72,7 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkAlertModule,
     SparkAccordionModule,
     SparkAccordionItemModule,
-    SparkButtonModule,
+    SprkButtonModule,
     SparkDividerModule,
     SparkLinkModule,
     SparkModalModule,

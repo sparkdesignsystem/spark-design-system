@@ -30,9 +30,7 @@ helpers.htmlEncode = htmlEncode;
 Object.assign(config.drizzle, { helpers });
 
 // Register core tasks
-['clean', 'copy', 'js', 'serve', 'watch'].forEach(name =>
-  tasks[name](gulp, config[name])
-);
+['clean', 'copy', 'js', 'serve', 'watch'].forEach(name => tasks[name](gulp, config[name]));
 
 // Sass task
 gulp.task('sass', () => {
@@ -43,13 +41,13 @@ gulp.task('sass', () => {
     .pipe(
       autoprefixer({
         browsers: ['> 1%', 'last 4 versions'],
-        cascade: false
-      })
+        cascade: false,
+      }),
     )
     .pipe(
       cssnano({
-        zindex: false
-      })
+        zindex: false,
+      }),
     )
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
 
@@ -60,27 +58,27 @@ gulp.task('sass', () => {
     .pipe(
       autoprefixer({
         browsers: ['> 1%', 'last 4 versions'],
-        cascade: false
-      })
+        cascade: false,
+      }),
     )
     .pipe(
       cssnano({
-        zindex: false
-      })
+        zindex: false,
+      }),
     )
     .pipe(gulp.dest('./dist/assets/drizzle/styles'));
 });
 
 // SVG icon task
-gulp.task('icons', done => {
+gulp.task('icons', (done) => {
   gulp
     .src(config.icons.src)
     .pipe(svgSprite(config.icons))
     .pipe(gulp.dest(config.icons.dest))
     .pipe(
       rename({
-        extname: '.hbs'
-      })
+        extname: '.hbs',
+      }),
     )
     .pipe(gulp.dest('./src/templates/drizzle'))
     .on('end', done);
@@ -92,11 +90,11 @@ gulp.task('images', () => {
 });
 
 // Create Angular Package Formatted version of Spark Angular Packages
-gulp.task('build-angular-pkg', cb => {
+gulp.task('build-angular-pkg', (cb) => {
   const cmd = exec('cd src/angular && npm run build:angular-package', {
-    stdio: 'inherit'
+    stdio: 'inherit',
   });
-  return cmd.on('close', cb).on('error', err => {
+  return cmd.on('close', cb).on('error', (err) => {
     log.error(err.message);
   });
 });
@@ -128,7 +126,7 @@ gulp.task('drizzle', ['icons'], () => {
 gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build', done => {
+gulp.task('build', (done) => {
   runSequence(
     'clean',
     'icons',
@@ -138,7 +136,7 @@ gulp.task('build', done => {
     'images',
     'js',
     'critical',
-    done
+    done,
   );
 });
 
@@ -146,7 +144,7 @@ gulp.task('build', done => {
 gulp.task('critical', () => {
   const cssFiles = [
     'dist/assets/toolkit/styles/toolkit.css',
-    'dist/assets/drizzle/styles/main.css'
+    'dist/assets/drizzle/styles/main.css',
   ];
   return gulp
     .src('dist/*.html')
@@ -154,10 +152,10 @@ gulp.task('critical', () => {
       critical({
         base: 'dist/',
         inline: true,
-        css: cssFiles
-      })
+        css: cssFiles,
+      }),
     )
-    .on('error', err => {
+    .on('error', (err) => {
       log.error(err.message);
     })
     .pipe(gulp.dest('dist'));
@@ -166,7 +164,7 @@ gulp.task('critical', () => {
 gulp.task('pre-publish', ['move-angular']);
 
 // Register default task
-gulp.task('default', ['frontend'], done => {
+gulp.task('default', ['frontend'], (done) => {
   gulp.start('serve');
   gulp.start('watch');
   done();

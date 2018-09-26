@@ -38,8 +38,7 @@ import { Component, HostListener, Input } from '@angular/core';
         </li>
       </ul>
       <span class="sprk-c-Divider sprk-u-man"></span>
-    </nav>`,
-  styles: ['']
+    </nav>`
 })
 export class SparkWideNavigationComponent {
   @Input()

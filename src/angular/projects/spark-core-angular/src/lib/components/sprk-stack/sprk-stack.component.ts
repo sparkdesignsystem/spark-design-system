@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
     <div [ngClass]="getClasses()" [attr.data-analytics]="analyticsString">
       <ng-content></ng-content>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class SparkStackComponent {
   @Input()

@@ -224,7 +224,7 @@ import { Component } from '@angular/core';
               [hidden]="dateInput.valid || dateInput.pristine"
               sprkFieldError>Invalid date.</span>
           </sprk-input-container>
-          <sprk-button additionalClasses="sprk-u-mbl" [isDisabled]="!sampleForm.form.valid">Submit</sprk-button>
+          <button additionalClasses="sprk-u-mbl" [disabled]="!sampleForm.form.valid" sprkButton>Submit</button>
           <sprk-alert
           [hidden]="sampleForm.valid"
           alertType="fail">Something's wrong above.</sprk-alert>

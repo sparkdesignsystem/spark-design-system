@@ -183,8 +183,7 @@ import {
         </li>
       </sprk-unordered-list>
     </nav>
-  `,
-  styles: ['']
+  `
 })
 export class SparkPaginationComponent {
   @Input()

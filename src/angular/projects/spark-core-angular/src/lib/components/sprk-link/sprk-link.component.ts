@@ -9,8 +9,7 @@ import { Component, Input } from '@angular/core';
       [attr.data-analytics]="analyticsString">
       <ng-content></ng-content>
     </a>
-  `,
-  styles: ['']
+  `
 })
 export class SparkLinkComponent {
   @Input()

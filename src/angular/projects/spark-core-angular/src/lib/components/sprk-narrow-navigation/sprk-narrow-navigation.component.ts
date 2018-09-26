@@ -7,8 +7,7 @@ import { Component, Input } from '@angular/core';
       <ul [ngClass]="getClasses()">
         <ng-content></ng-content>
       </ul>
-    </nav>`,
-  styles: ['']
+    </nav>`
 })
 export class SparkNarrowNavigationComponent {
   @Input()

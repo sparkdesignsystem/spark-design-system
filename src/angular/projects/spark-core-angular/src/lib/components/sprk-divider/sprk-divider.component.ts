@@ -5,8 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <span [ngClass]="getClasses()">
     </span>
-  `,
-  styles: ['']
+  `
 })
 export class SparkDividerComponent {
   @Input()
