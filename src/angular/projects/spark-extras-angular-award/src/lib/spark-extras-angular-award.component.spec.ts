@@ -1,8 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SparkIconComponent } from '../../../spark-core-angular/components/sprk-icon/sprk-icon.component';
-import { SparkStackComponent } from '../../../spark-core-angular/components/sprk-stack/sprk-stack.component';
-import { SparkToggleComponent } from '../../../spark-core-angular/components/sprk-toggle/sprk-toggle.component';
+import { SparkCoreAngularModule } from '@sparkdesignsystem/spark-core-angular';
 import { SparkAwardComponent } from './spark-extras-angular-award.component';
 
 describe('SparkAwardComponent', () => {
@@ -12,13 +10,8 @@ describe('SparkAwardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [
-        SparkAwardComponent,
-        SparkToggleComponent,
-        SparkIconComponent,
-        SparkStackComponent
-      ]
+      imports: [RouterTestingModule, SparkCoreAngularModule],
+      declarations: [SparkAwardComponent]
     }).compileComponents();
   }));
 
