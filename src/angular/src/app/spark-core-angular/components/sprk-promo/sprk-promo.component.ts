@@ -69,8 +69,7 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
         <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
     </a>
   </div>
-  `,
-  styles: ['']
+  `
 })
 export class SparkPromoComponent {
   @Input()

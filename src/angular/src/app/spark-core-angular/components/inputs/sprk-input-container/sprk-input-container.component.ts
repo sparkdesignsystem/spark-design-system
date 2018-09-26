@@ -16,8 +16,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
-    </div>`,
-  styles: ['']
+    </div>`
 })
 export class SparkInputContainerComponent implements OnInit {
   @Input()

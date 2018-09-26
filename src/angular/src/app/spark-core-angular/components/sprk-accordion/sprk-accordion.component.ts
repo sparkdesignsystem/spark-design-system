@@ -5,8 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <ul [ngClass]="getClasses()">
       <ng-content></ng-content>
-    </ul>`,
-  styles: ['']
+    </ul>`
 })
 export class SparkAccordionComponent {
   @Input()

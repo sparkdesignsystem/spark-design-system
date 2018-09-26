@@ -9,8 +9,7 @@ import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-sel
     <div [ngClass]="getClasses()">
       <ng-content select="[sprkSelectionInput]"></ng-content>
       <ng-content select="[sprkSelectionLabel]"></ng-content>
-    </div>`,
-  styles: ['']
+    </div>`
 })
 export class SparkSelectionItemContainerComponent implements OnInit {
   @Input()

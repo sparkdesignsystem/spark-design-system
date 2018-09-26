@@ -23,8 +23,7 @@ import { SparkSelectionItemContainerComponent } from '../sprk-selection-item-con
       </fieldset>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
-    </div>`,
-  styles: ['']
+    </div>`
 })
 export class SparkSelectionContainerComponent implements AfterContentInit {
   @Input()
