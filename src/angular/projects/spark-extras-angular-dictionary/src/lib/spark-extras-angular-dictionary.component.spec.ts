@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SparkExtrasAngularDictionaryComponent } from './spark-extras-angular-dictionary.component';
+import { SparkDictionaryComponent } from './spark-extras-angular-dictionary.component';
 
 describe('SparkExtrasAngularDictionaryComponent', () => {
-  let component: SparkExtrasAngularDictionaryComponent;
-  let fixture: ComponentFixture<SparkExtrasAngularDictionaryComponent>;
+  let component: SparkDictionaryComponent;
+  let fixture: ComponentFixture<SparkDictionaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkExtrasAngularDictionaryComponent]
+      declarations: [SparkDictionaryComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SparkExtrasAngularDictionaryComponent);
+    fixture = TestBed.createComponent(SparkDictionaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
