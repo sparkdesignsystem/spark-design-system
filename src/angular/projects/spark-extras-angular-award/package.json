@@ -1,6 +1,7 @@
 {
-  "name": "spark-extras-angular-award",
-  "version": "0.0.1",
+  "name": "@sparkdesignsystem/spark-extras-angular-award",
+  "description": "The Award component showcases awards in a vertically stacked layout that switches to side by side on larger screens.",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/animations": "^6.1.4",
     "@angular/common": "^6.1.4",

@@ -1,6 +1,12 @@
 {
-  "name": "spark-core-angular",
+  "name": "@sparkdesignsystem/spark-core-angular",
+  "description": "A collection of Spark Design System components in Angular 6+",
   "version": "1.0.0",
+  "scripts": {
+    "lint": "ng lint spark-core-angular",
+    "test": "ng test spark-core-angular",
+    "build": "ng build spark-core-angular"
+  },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",
     "@angular/common": "^6.1.4",
@@ -14,12 +20,12 @@
     "@angular/router": "^6.1.4",
     "@sparkdesignsystem/spark-core": "2.0.0",
     "lodash": "^4.17.10",
-    "ng-packagr": "^4.2.0",
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {
     "core-js": "^2.5.7",
     "tiny-date-picker": "^3.2.6",
     "zone.js": "^0.8.26"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,6 +1,7 @@
 {
-  "name": "spark-extras-angular-card",
-  "version": "0.0.1",
+  "name": "@sparkdesignsystem/spark-extras-angular-card",
+  "description": "Cards present related content. They provide an easy way to get information quickly and are typically used in groups.",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/animations": "^6.1.4",
     "@angular/common": "^6.1.4",

@@ -12,7 +12,6 @@ const rename = require('gulp-rename');
 const critical = require('critical').stream;
 const log = require('fancy-log');
 const runSequence = require('run-sequence');
-const { exec } = require('child_process');
 const config = require('./config');
 
 const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
@@ -89,33 +88,6 @@ gulp.task('images', () => {
   gulp.src(config.images.src).pipe(gulp.dest(config.images.dest));
 });
 
-// Create Angular Package Formatted version of Spark Angular Packages
-gulp.task('build-angular-pkg', (cb) => {
-  const cmd = exec('cd src/angular && npm run build:angular-package', {
-    stdio: 'inherit',
-  });
-  return cmd.on('close', cb).on('error', (err) => {
-    log.error(err.message);
-  });
-});
-
-// Move finalized angular packages to /packages
-gulp.task('move-angular', ['build-angular-pkg'], () => {
-  gulp.src(config.angularCore.src).pipe(gulp.dest(config.angularCore.dest));
-  gulp
-    .src(config.angularExtrasCard.src)
-    .pipe(gulp.dest(config.angularExtrasCard.dest));
-  gulp
-    .src(config.angularExtrasAward.src)
-    .pipe(gulp.dest(config.angularExtrasAward.dest));
-  gulp
-    .src(config.angularExtrasDictionary.src)
-    .pipe(gulp.dest(config.angularExtrasDictionary.dest));
-  gulp
-    .src(config.angularExtrasHighlightBoard.src)
-    .pipe(gulp.dest(config.angularExtrasHighlightBoard.dest));
-});
-
 // Register Drizzle builder task
 gulp.task('drizzle', ['icons'], () => {
   const result = drizzle(config.drizzle);
@@ -160,8 +132,6 @@ gulp.task('critical', () => {
     })
     .pipe(gulp.dest('dist'));
 });
-
-gulp.task('pre-publish', ['move-angular']);
 
 // Register default task
 gulp.task('default', ['frontend'], (done) => {
