@@ -34,13 +34,14 @@
 
 .sprk-c-Accordion__summary {
   align-items: center;
-  color: $black;
+  background-color: $accordion-background-color;
+  color: $accordion-summary-color;
   display: flex;
   padding: $space-m $space-s;
   text-decoration: none;
 
   &:hover {
-    color: $accordion-summary-color;
+    color: $accordion-summary-active-color;
     text-decoration: none;
   }
 }
@@ -60,14 +61,13 @@
 
 // When open, add same style as when focused
 .sprk-c-Accordion__summary--open {
-  font-weight: bold;
-  color: $accordion-summary-color;
+  color: $accordion-summary-active-color;
 }
 
 .sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
   transform: rotate(180deg);
   transform-origin: center;
-  stroke: $accordion-summary-color;
+  stroke: $accordion-summary-active-color;
   stroke-width: 1.5;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .sprk-c-Accordion__details {
-  background-color: $white;
+  background-color: $accordion-background-color;
   border-bottom: $accordion-border;
   transition: height 0.3s ease;
   overflow: hidden;

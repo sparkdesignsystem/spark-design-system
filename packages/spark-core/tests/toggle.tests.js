@@ -126,6 +126,12 @@ describe('Toggle tests', () => {
       toggleIconCSS(icon);
     }
     expect(icon.classList.contains('sprk-c-Icon--open')).eql(true);
+
+    icon.removeAttribute('data-sprk-toggle');
+    if (icon) {
+      toggleIconCSS(icon);
+    }
+    expect(icon.classList.contains('sprk-c-Icon--open')).eql(false);
   });
 
   it('should add listener to toggle trigger', () => {
