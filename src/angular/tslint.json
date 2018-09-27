@@ -65,6 +65,7 @@
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-string-throw": true,
+    "no-submodule-imports": [true, "rxjs", "@angular/platform-browser", "@angular/core/testing"],
     "no-switch-case-fall-through": true,
     "no-trailing-whitespace": true,
     "no-unnecessary-initializer": true,

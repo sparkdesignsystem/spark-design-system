@@ -1,0 +1,7 @@
+@import '~@sparkdesignsystem/spark-core/settings/colors';
+@import '~@sparkdesignsystem/spark-core/settings/settings';
+@import '~@sparkdesignsystem/spark-extras/components/card/card';
+
+:host {
+  max-width: $card-max-width;
+}

@@ -99,7 +99,17 @@ gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
-  runSequence('clean', 'icons', 'drizzle', 'copy', 'sass', 'images', 'js', 'critical', done);
+  runSequence(
+    'clean',
+    'icons',
+    'drizzle',
+    'copy',
+    'sass',
+    'images',
+    'js',
+    'critical',
+    done,
+  );
 });
 
 // Generate & Inline Critical-path CSS
@@ -122,17 +132,6 @@ gulp.task('critical', () => {
     })
     .pipe(gulp.dest('dist'));
 });
-
-gulp.task('move-angular-package', () => {
-  gulp
-    .src('./src/angular/src/app/spark-core-angular/**/*')
-    .pipe(gulp.dest('./packages/spark-core-angular'));
-  gulp
-    .src('./src/angular/src/app/spark-extras-angular/**/*')
-    .pipe(gulp.dest('./packages/spark-extras-angular'));
-});
-
-gulp.task('pre-publish', ['move-angular-package']);
 
 // Register default task
 gulp.task('default', ['frontend'], (done) => {
