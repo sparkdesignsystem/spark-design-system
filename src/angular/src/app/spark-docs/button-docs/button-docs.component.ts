@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
+// import { setSpinning } from '@sparkdesignsystem/spark-core/components/spinners';
 
 @Component({
   selector: 'sprk-button-docs',
@@ -32,7 +32,7 @@ export class ButtonDocsComponent implements OnInit {
 
   checkSpinner(event): void {
     if (!this.submitSpinning) {
-      setSpinning(event.target, {});
+      // setSpinning(event.target, {});
       this.submitSpinning = true;
     }
   }

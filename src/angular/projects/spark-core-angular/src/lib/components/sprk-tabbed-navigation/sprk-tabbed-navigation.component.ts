@@ -7,14 +7,14 @@ import {
   Input,
   QueryList
 } from '@angular/core';
-import {
-  advanceTab,
-  ariaOrientation,
-  getActiveTabIndex,
-  resetTabs,
-  retreatTab,
-  setActiveTab
-} from '@sparkdesignsystem/spark-core/components/tabs';
+// import {
+//   advanceTab,
+//   ariaOrientation,
+//   getActiveTabIndex,
+//   resetTabs,
+//   retreatTab,
+//   setActiveTab
+// } from '@sparkdesignsystem/spark-core/components/tabs';
 import * as _ from 'lodash';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
@@ -49,18 +49,18 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
         );
       });
 
-      resetTabs(
-        this.tabs.map(tab => tab.ref.nativeElement),
-        this.panels.map(panel => panel.ref.nativeElement)
-      );
-
-      setActiveTab($event.target, activePanel.ref.nativeElement);
+      // // resetTabs(
+      // //   this.tabs.map(tab => tab.ref.nativeElement),
+      // //   this.panels.map(panel => panel.ref.nativeElement)
+      // // );
+      //
+      // setActiveTab($event.target, activePanel.ref.nativeElement);
     }
   }
 
   @HostListener('window:resize')
   onResize() {
-    ariaOrientation(window.innerWidth, this.ref.nativeElement);
+    // ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 
   @HostListener('keydown', ['$event'])
@@ -77,21 +77,21 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
     const panelElements = this.panels.map(panel => panel.ref.nativeElement);
 
     if ($event.keyCode === keys.left) {
-      retreatTab(tabElements, panelElements);
+      // retreatTab(tabElements, panelElements);
     } else if ($event.keyCode === keys.right) {
-      advanceTab(tabElements, panelElements);
+      // advanceTab(tabElements, panelElements);
     } else if ($event.keyCode === keys.tab) {
       if ($event.target.classList.contains('sprk-c-Tabs__button')) {
         event.preventDefault();
-        panelElements[getActiveTabIndex(tabElements)].focus();
+        // panelElements[getActiveTabIndex(tabElements)].focus();
       }
     } else if ($event.keyCode === keys.home) {
-      setActiveTab(tabElements[0], panelElements[0]);
+      // setActiveTab(tabElements[0], panelElements[0]);
     } else if ($event.keyCode === keys.end) {
-      setActiveTab(
-        tabElements[tabElements.length - 1],
-        panelElements[panelElements.length - 1]
-      );
+      // setActiveTab(
+      // //   tabElements[tabElements.length - 1],
+      // //   panelElements[panelElements.length - 1]
+      // );
     }
   }
 
@@ -133,6 +133,6 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
   }
 
   constructor(public ref: ElementRef) {
-    ariaOrientation(window.innerWidth, this.ref.nativeElement);
+    // ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 }
