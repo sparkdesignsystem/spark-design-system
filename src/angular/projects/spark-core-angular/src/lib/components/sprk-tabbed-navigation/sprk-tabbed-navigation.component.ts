@@ -14,7 +14,7 @@ import {
   resetTabs,
   retreatTab,
   setActiveTab
-} from '@sparkdesignsystem/spark-core/components/tabs';
+} from '@sparkdesignsystem/spark-core/es5/tabs';
 import * as _ from 'lodash';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
