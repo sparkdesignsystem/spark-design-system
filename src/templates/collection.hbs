@@ -113,6 +113,15 @@
       {{/if}}
     </section>
 
+    {{!-- Properties --}}
+    {{#if hasProperties }}
+      <div class="drizzle-o-ContentGrouping ">
+        <h3 class="drizzle-b-h3">Optional Properties</h3>
+        {{!-- inject the template at /properties/collection.hbs --}}
+        {{> (patternIdGen (concat id '.properties.collection')) }}
+      </div>
+    {{/if}}
+
     <div class="drizzle-c-Divider"></div>
 
     <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewGallery}} drizzle-o-Grid--gallery{{/if}}">
