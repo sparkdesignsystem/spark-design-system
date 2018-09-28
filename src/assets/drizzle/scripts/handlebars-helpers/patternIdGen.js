@@ -1,4 +1,4 @@
-/* alters an id to start with 'pattern' */
+/* alters an id to start with 'patterns' */
 function patternIdGen(initialID) {
   const splitID = initialID.split('.');
   splitID.shift();
