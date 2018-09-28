@@ -17,6 +17,12 @@
       "dom"
     ],
     "paths": {
+      "@sparkdesignsystem/spark-core": [
+        "../../packages/spark-core"
+      ],
+      "@sparkdesignsystem/spark-extras": [
+        "../../packages/spark-extras"
+      ],
       "@sparkdesignsystem/spark-core-angular": [
         "dist/spark-core-angular"
       ],
