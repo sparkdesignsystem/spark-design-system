@@ -2,13 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    sparkCore: './spark-core.js',
-    alerts: './components/alerts.js',
-    spinners: './components/spinners.js',
-    tabs: './components/tabs.js',
-    modals: './components/modals.js',
-    getElements: './utilities/getElements.js',
-    pagination: './components/pagination.js',
+    highlightBoard: './highlight-board.js',
   },
   module: {
     rules: [
