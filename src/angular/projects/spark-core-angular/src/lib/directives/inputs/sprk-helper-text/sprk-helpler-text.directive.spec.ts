@@ -7,6 +7,8 @@ import { SprkHelperTextDirective } from './sprk-helper-text.directive';
   template: `
   <span
     additionalClasses="sprk-u-man"
+    sprkHelperText>Helper Text</span>
+  <span
     sprkHelperText>Helper Text</span>`
 })
 class TestComponent {}
@@ -14,7 +16,8 @@ class TestComponent {}
 describe('Spark Helper Text Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let spanElement: HTMLElement;
+  let spanElement1: HTMLElement;
+  let spanElement2: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,7 +27,8 @@ describe('Spark Helper Text Directive', () => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    spanElement = fixture.nativeElement.querySelector('span');
+    spanElement1 = fixture.nativeElement.querySelectorAll('span')[0];
+    spanElement2 = fixture.nativeElement.querySelectorAll('span')[1];
   }));
 
   it('should create itself', () => {
@@ -33,8 +37,9 @@ describe('Spark Helper Text Directive', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     fixture.detectChanges();
-    expect(spanElement.classList.toString()).toEqual(
+    expect(spanElement1.classList.toString()).toEqual(
       'sprk-b-HelperText sprk-u-man'
     );
+    expect(spanElement2.classList.toString()).toEqual('sprk-b-HelperText');
   });
 });
