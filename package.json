@@ -73,7 +73,9 @@
     "build": "npm run prestart && gulp",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "precommit": "lint-staged",
-    "test": "mocha --require babel-core/register --require mock-local-storage --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
+    "test": "npm run test-spark-core && npm run test-spark-extras-highlight-board",
+    "test-spark-core": "cd packages/spark-core && npm test",
+    "test-spark-extras-highlight-board": "cd packages/spark-extras/components/highlight-board && npm test",
     "coverage": "nyc npm test",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
     "lerna": "gulp pre-publish && lerna bootstrap && lerna publish"
