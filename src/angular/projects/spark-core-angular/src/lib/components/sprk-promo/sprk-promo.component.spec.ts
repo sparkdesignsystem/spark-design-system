@@ -42,6 +42,14 @@ describe('SparkPromoComponent', () => {
     );
   });
 
+  it('should not add additional classes to img link when additionalClassesImgLink has no value', () => {
+    component.media = 'img';
+    fixture.detectChanges();
+    expect(element.querySelector('a').classList.toString()).toEqual(
+      'sprk-o-Stack__item'
+    );
+  });
+
   it('should add additional classes to icon link when additionalClassesIconLink has a value', () => {
     component.media = 'icon';
     component.additionalClassesIconLink = 'sprk-u-man';
