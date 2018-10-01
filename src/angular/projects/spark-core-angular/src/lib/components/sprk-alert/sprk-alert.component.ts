@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
 
 @Component({
