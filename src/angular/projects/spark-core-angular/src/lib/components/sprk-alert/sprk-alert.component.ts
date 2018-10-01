@@ -4,7 +4,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
 @Component({
   selector: 'sprk-alert',
   template: `
-    <div
+    <div *ngIf="visible"
       role="alert"
       [attr.data-analytics]="analyticsString"
       [ngClass]="getClassesAlertContainer()">
@@ -40,6 +40,7 @@ export class SparkAlertComponent {
   dismissible: boolean;
 
   public icon: string;
+  public visible = true;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Alert__icon'];

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkAlertComponent } from './sprk-alert.component';
 
-describe('SparkAlertComponent', () => {
+fdescribe('SparkAlertComponent', () => {
   let component: SparkAlertComponent;
   let fixture: ComponentFixture<SparkAlertComponent>;
   let alertElement: HTMLElement;
@@ -16,6 +16,8 @@ describe('SparkAlertComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkAlertComponent);
     component = fixture.componentInstance;
+    component.visible = true;
+    fixture.detectChanges();
     alertElement = fixture.nativeElement.querySelector('div');
   });
 
@@ -26,6 +28,7 @@ describe('SparkAlertComponent', () => {
   it('getClasses should match what gets set on the icon', () => {
     const icon = alertElement.querySelector('div');
     fixture.detectChanges();
+
     expect(icon.classList.toString()).toEqual(component.getClasses());
   });
 
