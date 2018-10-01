@@ -154,10 +154,8 @@ $font-weight-body-four: normal !default;
 // Font Stack
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
-$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$heading-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
+$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$heading-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
@@ -364,6 +362,11 @@ $split-breakpoint-xl: 80rem !default;
 // Accordions
 //
 $accordion-max-width: 53.125rem !default;
+$accordion-background-color: $white !default;
+$accordion-border: 1px solid $gray-light !default;
+$accordion-border-open: 1px solid $gray-medium !default;
+$accordion-summary-color: $black !default;
+$accordion-summary-active-color: $red-real !default;
 
 //
 // Dividers
