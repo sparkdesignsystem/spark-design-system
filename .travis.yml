@@ -1,27 +1,60 @@
 sudo: required
 addons:
-  chrome: stable
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
 
 language: node_js
 node_js:
   - "8.10.0"
 
+before_install:
+  - export CHROME_BIN=/usr/bin/google-chrome
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+
 install:
 - npm install
 - npm install --prefix ./packages/spark-core
 - npm install --prefix ./packages/spark-extras/components/highlight-board
-- npm install -g @angular/cli
+- npm install --prefix ./src/angular
+- npm install --prefix ./src/angular/projects/spark-core-angular
+- npm install --prefix ./src/angular/projects/spark-extras-angular-award
+- npm install --prefix ./src/angular/projects/spark-extras-angular-card
+- npm install --prefix ./src/angular/projects/spark-extras-angular-dictionary
+- npm install --prefix ./src/angular/projects/spark-extras-angular-highlight-board
+- npm install -g @angular/cli @angular-devkit/build-angular
 
 before_script:
+- cd packages/spark-core && npm link
+- cd ../../src/angular && npm link @sparkdesignsystem/spark-core
+- cd ../..
+- cd src/angular/projects/spark-core-angular && npm link
+- cd ../../projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular
+- cd ../../projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular
+- cd ../../projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular
+- cd ../../projects/spark-extras-angular-highlight-board && npm link @sparkdesignsystem/spark-core-angular
+- cd ../../../..
 - npm run test --prefix ./packages/spark-core
 - npm run test --prefix ./packages/spark-extras/components/highlight-board
 - npm run test --prefix ./src/angular/projects/spark-core-angular
-- npm run test --prefix ./src/angular/projects/spark-core-extras-award
-- npm run test --prefix ./src/angular/projects/spark-core-extras-card
-- npm run test --prefix ./src/angular/projects/spark-core-extras-dictionary
-- npm run test --prefix ./src/angular/projects/spark-core-extras-highlight-board
+- npm run test --prefix ./src/angular/projects/spark-extras-angular-award
+- npm run test --prefix ./src/angular/projects/spark-extras-angular-card
+- npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary
+- npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board
+
 
 cache:
   directories:
-    - node_modules
-    - packages/spark-core/node_modules
+  - node_modules
+  - packages/spark-core/node_modules
+  - packages/spark-extras/components/node_modules
+  - src/angular/node_modules
+  - src/angular/projects/spark-core-angular/node_modules
+  - src/angular/projects/spark-extras-angular-award/node_modules
+  - src/angular/projects/spark-extras-angular-card/node_modules
+  - src/angular/projects/spark-extras-angular-dictionary/node_modules
+  - src/angular/projects/spark-extras-angular-highlight-board/node_modules

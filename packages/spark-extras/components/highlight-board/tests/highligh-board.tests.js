@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 const proxyquire = require('proxyquire');
 
-describe('Alert tests', () => {
+describe('Highlight Board tests', () => {
   let element;
   let highlightBoard;
   let objectFitImagesStub;
