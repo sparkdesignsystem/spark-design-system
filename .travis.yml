@@ -1,12 +1,25 @@
+sudo: required
+addons:
+  chrome: stable
+
 language: node_js
+node_js:
+  - "8"
 
 install:
 - npm install
 - npm install --prefix ./packages/spark-core
 - npm install --prefix ./packages/spark-extras/components/highlight-board
+- npm install -g @angular/cli
 
 before_script:
 - npm run test --prefix ./packages/spark-core
+- npm run test --prefix ./packages/spark-extras/components/highlight-board
+- npm run test --prefix ./src/angular/projects/spark-core-angular
+- npm run test --prefix ./src/angular/projects/spark-core-extras-award
+- npm run test --prefix ./src/angular/projects/spark-core-extras-card
+- npm run test --prefix ./src/angular/projects/spark-core-extras-dictionary
+- npm run test --prefix ./src/angular/projects/spark-core-extras-highlight-board
 
 cache:
   directories:
