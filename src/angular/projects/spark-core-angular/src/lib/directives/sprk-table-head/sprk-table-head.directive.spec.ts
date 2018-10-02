@@ -4,14 +4,17 @@ import { SprkTableHeadDirective } from './sprk-table-head.directive';
 
 @Component({
   selector: 'sprk-test-component',
-  template: `<thead additionalClasses="sprk-u-man" sprkTableHead></thead>`
+  template: `
+    <thead additionalClasses="sprk-u-man" sprkTableHead></thead>
+    <thead sprkTableHead></thead>`
 })
 class TestComponent {}
 
 describe('SprkTableHeadDirective', () => {
   let fixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
-  let element: HTMLElement;
+  let element1: HTMLElement;
+  let element2: HTMLElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -20,7 +23,8 @@ describe('SprkTableHeadDirective', () => {
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('thead');
+    element1 = fixture.nativeElement.querySelectorAll('thead')[0];
+    element2 = fixture.nativeElement.querySelectorAll('thead')[1];
     fixture.detectChanges();
   });
 
@@ -29,6 +33,7 @@ describe('SprkTableHeadDirective', () => {
   });
 
   it('should add classes if additionalClasses has a value', () => {
-    expect(element.classList.contains('sprk-u-man')).toEqual(true);
+    expect(element1.classList.contains('sprk-u-man')).toEqual(true);
+    expect(element2.classList.toString()).toEqual('sprk-b-Table__head');
   });
 });

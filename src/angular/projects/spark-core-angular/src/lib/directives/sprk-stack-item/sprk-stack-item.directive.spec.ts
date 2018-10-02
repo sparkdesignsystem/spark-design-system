@@ -3,28 +3,48 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkStackItemDirective } from './sprk-stack-item.directive';
 
 @Component({
-  template: `<div sprkStackItem></div>`
+  selector: 'sprk-test',
+  template: `
+  <div
+    additionalClasses="sprk-u-man"
+  sprkStackItem></div>
+  <div
+  sprkStackItem></div>`
 })
-class TestSparkItemComponent {}
+class TestComponent {}
 
-describe('SprkStackItemDirective', () => {
-  let component: TestSparkItemComponent;
-  let fixture: ComponentFixture<TestSparkItemComponent>;
-  let element: HTMLLIElement;
+describe('Spark Stack Item Directive', () => {
+  let component: TestComponent;
+  let fixture: ComponentFixture<TestComponent>;
+  let item1Element: HTMLElement;
+  let item2Element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkStackItemDirective, TestSparkItemComponent]
+      declarations: [SprkStackItemDirective, TestComponent]
     }).compileComponents();
-  }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TestSparkItemComponent);
+    fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('div');
-  });
+
+    fixture.detectChanges();
+    item1Element = fixture.nativeElement.querySelectorAll('div')[0];
+    item2Element = fixture.nativeElement.querySelectorAll('div')[1];
+  }));
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add classes if additionalClasses has a value', () => {
+    fixture.detectChanges();
+    expect(item1Element.classList.toString()).toEqual(
+      'sprk-o-Stack__item sprk-u-man'
+    );
+  });
+
+  it('should not add classes if additionalClasses has no value', () => {
+    fixture.detectChanges();
+    expect(item2Element.classList.toString()).toEqual('sprk-o-Stack__item');
   });
 });
