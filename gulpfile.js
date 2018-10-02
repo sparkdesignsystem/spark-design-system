@@ -11,6 +11,7 @@ const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const critical = require('critical').stream;
 const log = require('fancy-log');
+const { exec } = require('child_process');
 const runSequence = require('run-sequence');
 const config = require('./config');
 
@@ -132,6 +133,24 @@ gulp.task('critical', () => {
     })
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('build-angular', (cb) => {
+  const cmd = exec(`
+    cd src/angular &&
+    ng build spark-core-angular &&
+    ng build spark-extras-angular-award &&
+    ng build spark-extras-angular-card &&
+    ng build spark-extras-angular-dictionary &&
+    ng build spark-extras-angular-highlight-board
+    `, {
+    stdio: 'inherit',
+  });
+  return cmd.on('close', cb).on('error', (err) => {
+    log.error(err.message);
+  });
+});
+
+gulp.task('pre-publish', ['build-angular'], () => {});
 
 // Register default task
 gulp.task('default', ['frontend'], (done) => {

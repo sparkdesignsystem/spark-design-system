@@ -1,5 +1,5 @@
 /* global localStorage */
-import getElements from '../../../../packages/spark-core/utilities/getElements';
+import getElements from '../../../../packages/spark-core/es5/getElements';
 
 const saveSwitchSetting = (value) => {
   if (localStorage) {

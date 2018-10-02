@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "gulp pre-publish && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -36,10 +36,11 @@
     "@sparkdesignsystem/spark-core": "^2.0.0",
     "@sparkdesignsystem/spark-extras": "^2.0.0",
     "@storybook/angular": "^4.0.0-alpha.16",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
+    "protractor": "^5.3.2",
     "rxjs": "^6.2.2",
-    "zone.js": "^0.8.26",
-    "protractor": "^5.3.2"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
