@@ -3,8 +3,11 @@
 // ==================================================================
 .sprk-c-Button {
   transition: background-color $btn-transition-speed;
+    
+  &:visited {
+    color: $btn-text-color;
+  }
   
-  &:visited,
   &:active,
   &:focus {
     background-color: $btn-hover-background-color;
@@ -24,8 +27,11 @@
   background-color: transparent;
   border: 2px solid $blue-medium;
   color: $blue-medium;
+  
+  &:visited {
+    color: $blue-medium;
+  }
 
-  &:visited,
   &:active,
   &:focus,
   &:hover {
@@ -38,7 +44,10 @@
 .sprk-c-Button--tertiary {
   background-color: $blue-medium;
 
-  &:visited,
+  &:visited {
+    color: $btn-text-color;
+  }
+  
   &:active,
   &:focus,
   &:hover {
@@ -50,8 +59,11 @@
   background-color: transparent;
   border: 2px solid $red-medium;
   color: $red-medium;
+
+  &:visited {
+    color: $red-medium;;
+  }
   
-  &:visited,
   &:active,
   &:focus,
   &:hover {
@@ -64,7 +76,10 @@
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
   
-  &:visited,
+  &:visited {
+    color: $btn-text-color;
+  }
+  
   &:active,
   &:focus,
   &:hover {
