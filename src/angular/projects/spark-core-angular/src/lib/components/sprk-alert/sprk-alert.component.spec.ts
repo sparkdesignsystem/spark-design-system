@@ -16,6 +16,8 @@ describe('SparkAlertComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkAlertComponent);
     component = fixture.componentInstance;
+    component.visible = true;
+    fixture.detectChanges();
     alertElement = fixture.nativeElement.querySelector('div');
   });
 
@@ -26,6 +28,7 @@ describe('SparkAlertComponent', () => {
   it('getClasses should match what gets set on the icon', () => {
     const icon = alertElement.querySelector('div');
     fixture.detectChanges();
+
     expect(icon.classList.toString()).toEqual(component.getClasses());
   });
 

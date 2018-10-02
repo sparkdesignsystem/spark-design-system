@@ -7,14 +7,17 @@ import { SprkButtonDirective } from './sprk-button.directive';
   template: `
   <button
     additionalClasses="sprk-u-man"
-    sprkButton></button>`
+  sprkButton>
+  <button
+  sprkButton>`
 })
 class TestComponent {}
 
 describe('Spark Button Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let buttonElement: HTMLElement;
+  let button1Element: HTMLElement;
+  let button2Element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -23,8 +26,10 @@ describe('Spark Button Directive', () => {
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    buttonElement = fixture.nativeElement.querySelector('button');
+
     fixture.detectChanges();
+    button1Element = fixture.nativeElement.querySelectorAll('button')[0];
+    button2Element = fixture.nativeElement.querySelectorAll('button')[1];
   }));
 
   it('should create itself', () => {
@@ -33,8 +38,13 @@ describe('Spark Button Directive', () => {
 
   it('should add classes if additionalClasses has a value', () => {
     fixture.detectChanges();
-    expect(buttonElement.classList.toString()).toEqual(
+    expect(button1Element.classList.toString()).toEqual(
       'sprk-c-Button sprk-u-man'
     );
+  });
+
+  it('should not add classes if additionalClasses has no value', () => {
+    fixture.detectChanges();
+    expect(button2Element.classList.toString()).toEqual('sprk-c-Button');
   });
 });
