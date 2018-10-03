@@ -27,7 +27,9 @@ const hideMobileNavs = () => {
 const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', (element) => {
     const mainLayout = document.querySelector('[data-sprk-main]');
-    const nav = document.querySelector(`[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`);
+    const nav = document.querySelector(
+      `[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`,
+    );
 
     element.addEventListener('click', (e) => {
       e.preventDefault();

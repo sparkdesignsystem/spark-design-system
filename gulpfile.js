@@ -10,9 +10,21 @@ const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const critical = require('critical').stream;
-const config = require('./config');
 const log = require('fancy-log');
+const { exec } = require('child_process');
 const runSequence = require('run-sequence');
+const config = require('./config');
+
+const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
+const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
+const toLowerCase = require('./src/assets/drizzle/scripts/handlebars-helpers/toLowerCase');
+const htmlEncode = require('./src/assets/drizzle/scripts/handlebars-helpers/htmlEncode');
+
+// add helpers
+helpers.concat = concatHelper;
+helpers.alternateIdGen = alternateIdGen;
+helpers.toLowerCase = toLowerCase;
+helpers.htmlEncode = htmlEncode;
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -26,26 +38,34 @@ gulp.task('sass', () => {
     .src('src/assets/toolkit/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(autoprefixer({
-      browsers: ['> 1%', 'last 4 versions'],
-      cascade: false,
-    }))
-    .pipe(cssnano({
-      zindex: false,
-    }))
+    .pipe(
+      autoprefixer({
+        browsers: ['> 1%', 'last 4 versions'],
+        cascade: false,
+      }),
+    )
+    .pipe(
+      cssnano({
+        zindex: false,
+      }),
+    )
     .pipe(gulp.dest('./dist/assets/toolkit/styles'));
 
   gulp
     .src('src/assets/drizzle/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(autoprefixer({
-      browsers: ['> 1%', 'last 4 versions'],
-      cascade: false,
-    }))
-    .pipe(cssnano({
-      zindex: false,
-    }))
+    .pipe(
+      autoprefixer({
+        browsers: ['> 1%', 'last 4 versions'],
+        cascade: false,
+      }),
+    )
+    .pipe(
+      cssnano({
+        zindex: false,
+      }),
+    )
     .pipe(gulp.dest('./dist/assets/drizzle/styles'));
 });
 
@@ -55,9 +75,11 @@ gulp.task('icons', (done) => {
     .src(config.icons.src)
     .pipe(svgSprite(config.icons))
     .pipe(gulp.dest(config.icons.dest))
-    .pipe(rename({
-      extname: '.hbs',
-    }))
+    .pipe(
+      rename({
+        extname: '.hbs',
+      }),
+    )
     .pipe(gulp.dest('./src/templates/drizzle'))
     .on('end', done);
 });
@@ -78,7 +100,17 @@ gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
-  runSequence('clean', 'icons', 'drizzle', 'copy', 'sass', 'images', 'js', 'critical', done);
+  runSequence(
+    'clean',
+    'icons',
+    'drizzle',
+    'copy',
+    'sass',
+    'images',
+    'js',
+    'critical',
+    done,
+  );
 });
 
 // Generate & Inline Critical-path CSS
@@ -89,16 +121,36 @@ gulp.task('critical', () => {
   ];
   return gulp
     .src('dist/*.html')
-    .pipe(critical({
-      base: 'dist/',
-      inline: true,
-      css: cssFiles,
-    }))
+    .pipe(
+      critical({
+        base: 'dist/',
+        inline: true,
+        css: cssFiles,
+      }),
+    )
     .on('error', (err) => {
       log.error(err.message);
     })
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('build-angular', (cb) => {
+  const cmd = exec(`
+    cd src/angular &&
+    ng build spark-core-angular &&
+    ng build spark-extras-angular-award &&
+    ng build spark-extras-angular-card &&
+    ng build spark-extras-angular-dictionary &&
+    ng build spark-extras-angular-highlight-board
+    `, {
+    stdio: 'inherit',
+  });
+  return cmd.on('close', cb).on('error', (err) => {
+    log.error(err.message);
+  });
+});
+
+gulp.task('pre-publish', ['build-angular'], () => {});
 
 // Register default task
 gulp.task('default', ['frontend'], (done) => {

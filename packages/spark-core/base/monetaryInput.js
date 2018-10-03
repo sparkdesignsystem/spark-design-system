@@ -3,10 +3,9 @@ import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 import runValidation from '../utilities/validation/validation-runner';
 
-const formatMonetary = value =>
-  Number(value.replace(/,/g, ''))
-    .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-    .replace(/\$/g, '');
+const formatMonetary = value => Number(value.replace(/,/g, ''))
+  .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+  .replace(/\$/g, '');
 
 const bindUIEvents = (element) => {
   const field = element.querySelector('input');

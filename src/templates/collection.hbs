@@ -1,9 +1,14 @@
 {{#extend "default"}}
   {{#content "main"}}
-    <div class="drizzle-o-Layout__header">
+    <div class="drizzle-o-Layout__header{{#unless noCodeSwitch }} drizzle-o-Layout__header--shared{{/unless}}">
       <h1 class="drizzle-b-h1">
         {{name}}
       </h1>
+      {{#unless noCodeSwitch}}
+        <div class="drizzle-o-Layout__control">
+          {{> drizzle.code-example-switch }}
+        </div>
+      {{/unless}}
     </div>
 
     <div class="drizzle-o-Layout__content">
@@ -93,10 +98,22 @@
       {{/if}}
     </section>
 
+    {{!- Angular Info (component wide) --}}
+    {{#if hasAngularInfo}}
+        <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-angular-documentation>
+          <h2 class="drizzle-b-h2">Angular Information</h2>
+          {{#embed (concat 'patterns.components.' (toLowerCase name) '.angular.global-info') }}{{/embed}}
+        </div>
+    {{/if}}
+
     <div class="drizzle-c-Divider"></div>
 
-    <section class="{{#if gridView}}drizzle-o-Grid{{/if}}{{#if gridViewGallery}} drizzle-o-Grid--gallery{{/if}}">
-      {{#if gridViewGallery}}
+    {{#if isIconGallery }}
+      {{#each patterns}}
+        {{> drizzle.item}}
+      {{/each}}
+      {{> drizzle.icon-gallery }}
+      {{else if gridViewGallery}}
         {{#each patterns}}
           {{> drizzle.item-gallery}}
         {{/each}}
@@ -104,8 +121,7 @@
         {{#each patterns}}
           {{> drizzle.item}}
         {{/each}}
-      {{/if}}
-    </section>
+    {{/if}}
     {{/content}}
   {{/extend}}
 </div>

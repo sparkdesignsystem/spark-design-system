@@ -17,3 +17,7 @@
     padding: 1rem 2rem 1rem 0;
   }
 }
+
+.#{$app-namespace}-c-Table--wide {
+  max-width: none;
+}

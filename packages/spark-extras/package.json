@@ -21,7 +21,7 @@
     "@sparkdesignsystem/spark-description-table": "^2.0.1",
     "@sparkdesignsystem/spark-highlight-board": "^2.0.1",
     "chai": "^4.1.2",
-    "jsdom": "^11.11.0",
+    "jsdom": "^11.12.0",
     "nyc": "^11.9.0"
   },
   "devDependencies": {

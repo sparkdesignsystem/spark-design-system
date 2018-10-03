@@ -1,6 +1,5 @@
 name: Tables
-description:
-  Tables are a set of columns and rows that lay out information.
+description: Tables are a set of columns and rows that lay out information.
   Use Tables for tabular data that is intended for comparison.
   If your data is only label value pairs, consider
   the <a class="drizzle-b-Link" href="https://sparkdesignsystem.com/patterns/components/dictionary">Dictionary</a> component instead.

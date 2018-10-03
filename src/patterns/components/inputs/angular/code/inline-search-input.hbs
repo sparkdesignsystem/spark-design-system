@@ -1,0 +1,14 @@
+<sprk-input-container>
+  <label additionalClasses="sprk-u-ScreenReaderText" sprkLabel>
+    Inline Search Input
+  </label>
+
+  <input
+    name="inline_search_input"
+    type="search"
+    role="search"
+    placeholder="Search"
+    [(ngModel)]="inline_search_input"
+    #inlineSearchInput="ngModel"
+    sprkInput>
+</sprk-input-container>

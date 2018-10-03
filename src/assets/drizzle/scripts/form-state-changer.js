@@ -1,13 +1,13 @@
 /* global document */
-import getElements from '../../../../packages/spark-core/utilities/getElements';
+import getElements from '../../../../packages/spark-core/es5/getElements';
 
 const mapTemplates = (id, templates) => {
   const matchingTemplates = Array.from(templates).filter((template) => {
     const templateId = template.getAttribute('data-template-id');
     return (
-      templateId === id ||
-      templateId === `${id}-error-state` ||
-      templateId === `${id}-disabled-state`
+      templateId === id
+      || templateId === `${id}-error-state`
+      || templateId === `${id}-disabled-state`
     );
   });
   return matchingTemplates;
@@ -37,4 +37,6 @@ const formStateChanger = () => {
   getElements('[data-state-changer-id]', bindUIEvents);
 };
 
-export { formStateChanger, bindUIEvents, mapTemplates, toggleTemplate };
+export {
+  formStateChanger, bindUIEvents, mapTemplates, toggleTemplate,
+};

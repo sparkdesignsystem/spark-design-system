@@ -1,13 +1,14 @@
 ---
 name: SSN Input - Error State
+description:
+  This input is used to collect a Social Security Number.
 information:
-  - Use *'s to mask the value by default.
-  - Checking "Show SSN" removes the mask and shows the actual SSN.
-  - On blur of the text input, if the "Show SSN" box is checked, add dashes between the 3rd and 4th number and the 5th and 6th number (ex. 000-00-0000).
-  - 'Placeholder text should read: 000-00-0000.'
-  - On key press, reveal the placeholder inline with the label.
+  - Checking "Show SSN" removes the mask and shows the entered value.
+  - Masking is automatically applied when the field contains a valid input.
+  - The field value contains special characters (-) which you may need to parse out before submitting the form.
 invisible: true
 order: 11
+hasAngularCode: true
 ---
 
 {{#embed "patterns.components.inputs.ssn"

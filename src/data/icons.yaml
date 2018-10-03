@@ -1,77 +1,119 @@
 - name: bars
   viewBox: 0 0 448 512
+  description: This icon should be used to indicate when there is a menu present, especially on mobile.
 - name: bell
   viewBox: 0 0 448 512
+  description: The bell icon is used to highlight an important action that needs to be taken.
 - name: calculator
   viewBox: 0 0 448 512
+  description: The calculator icon is used to illustrate that a calculator is behind the click.
 - name: calendar
   viewBox: 0 0 448 512
+  description: The calendar icon is used to show that the user can choose a date to schedule an event.
 - name: chat
   viewBox: 0 0 576 512
+  description: The chat icon is used to show when a chat feature is available.
 - name: check
   viewBox: 0 0 512 512
+  description: The check mark is used to illustrate success.
 - name: chevron-down
   viewBox: 0 0 448 512
+  description: Used to illustrate the direction an action can be taken or where the user will
+    be taken after the action is taken.
 - name: chevron-left
   viewBox: 0 0 320 512
+  description: Used to illustrate the direction an action can be taken or where the user will
+    be taken after the action is taken.
 - name: chevron-right
   viewBox: 0 0 320 512
+  description: Used to illustrate the direction an action can be taken or where the user will
+    be taken after the action is taken.
 - name: chevron-up
   viewBox: 0 0 448 512
+  description: Used to illustrate the direction an action can be taken or where the user will
+    be taken after the action is taken.
 - name: clock
   viewBox: 0 0 512 512
+  description: The clock icon should be used to indicate when something is time sensitive.
 - name: cloud-download
   viewBox: 0 0 640 512
+  description: This icon should be used when something is available to be downloaded from the cloud.
 - name: cog
   viewBox: 0 0 512 512
+  description: The cog icon typically is used to illustrate where settings can be found.
 - name: computer-screen
   viewBox: 0 0 576 512
+  description: The computer screen icon is used to show when a client can share their screen.
 - name: document
   viewBox: 0 0 384 512
+  description: The document icon shows when a document is available to the user.
 - name: download
   viewBox: 0 0 512 512
+  description: The download icon is used to show when something is available to be downloaded.
 - name: envelope
   viewBox: 0 0 512 512
+  description: The envelope icon is used to indicate when there is a message available.
 - name: exclamation
   viewBox: 0 0 576 512
+  description: This icon is used to illustrate an error or when something goes wrong.
 - name: facebook
   viewBox: 0 0 448 512
+  description: The Facebook icon is used to link to that specific social media account for a given site.
 - name: home
   viewBox: 0 0 576 512
+  description: This icon should be used to indicate when a user can return home in the context of their experience.
 - name: info
   viewBox: 0 0 512 512
+  description: The info icon should be used to indicate that there is extra information provided to aid in the experience.
 - name: instagram
   viewBox: 0 0 448 512
+  description: The Instagram icon is used to link to that specific social media account for a given site.
 - name: lock
   viewBox: 0 0 448 512
+  description: This icon should be used to indicate security and safety.
 - name: paper-plane
   viewBox: 0 0 512 512
+  description: Typically the paper place icon should be used to indicate the ability to provide feedback.
 - name: payment
   viewBox: 0 0 640 512
+  description: The payment icon should be used to indicate some monetary transaction.
 - name: pencil
   viewBox: 0 0 576 512
+  description: This icons should be used to indicate when something is editable.
 - name: phone
   viewBox: 0 0 512 512
+  description: The phone icon is used to show that a phone call can be made.
 - name: play
   viewBox: 0 0 512 512
+  description: The play icon is usually used to show when a video can be initiated.
 - name: plus
   viewBox: 0 0 512 512
+  description: This icon usually indicates when there is an expandable action or when something can be added.
 - name: print
   viewBox: 0 0 512 512
+  description: When something is printable.
 - name: question
   viewBox: 0 0 512 512
+  description: This icon should be used to indicate that there is extra information provided to aid in the experience.
 - name: rocket
   viewBox: 0 0 512 512
+  description: Only use this in an illustrative manner.
 - name: search
   viewBox: 0 0 512 512
+  description: This icon is used in search fields.
 - name: times
   viewBox: 0 0 384 512
+  description: The times icon is used to show that a close/dismiss action be taken.
 - name: twitter
   viewBox: 0 0 448 512
+  description: The Twitter icon is used to link to that specific social media account for a given site.
 - name: update
   viewBox: 0 0 512 512
+  description: The update icon typically shows when a refresh action can be taken.
 - name: upload
   viewBox: 0 0 512 512
+  description: The upload icon is used to show when an upload action can be taken.
 - name: youtube
   viewBox: 0 0 448 512
+  description: The Youtube icon is used to link to that specific social media account for a given site.
 
