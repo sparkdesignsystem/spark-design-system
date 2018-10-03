@@ -108,6 +108,7 @@ gulp.task('build', (done) => {
     'sass',
     'images',
     'js',
+    'build-es5',
     'critical',
     done,
   );
