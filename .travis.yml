@@ -17,7 +17,7 @@ before_install:
   - sleep 3 # give xvfb some time to start
 
 install:
-#- npm install
+- npm install
 #- npm install --prefix ./packages/spark-core
 #- npm install --prefix ./packages/spark-extras/components/highlight-board
 #- npm install --prefix ./src/angular
@@ -26,7 +26,7 @@ install:
 #- npm install --prefix ./src/angular/projects/spark-extras-angular-card
 #- npm install --prefix ./src/angular/projects/spark-extras-angular-dictionary
 #- npm install --prefix ./src/angular/projects/spark-extras-angular-highlight-board
-- npm install -g @angular/core rxjs @angular/cli @angular-devkit/build-angular @angular-devkit/build-ng-packagr
+#- npm install -g @angular/core rxjs @angular/cli @angular-devkit/build-angular @angular-devkit/build-ng-packagr
 - npm install -g babel-core babel-preset-es2015 mocha
 
 before_script:
