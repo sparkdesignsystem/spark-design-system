@@ -107,8 +107,8 @@ gulp.task('build', (done) => {
     'copy',
     'sass',
     'images',
-    'js',
     'build-es5',
+    'js',
     'critical',
     done,
   );
