@@ -18,7 +18,7 @@ before_install:
 
 install:
 - npm install
-#- npm install --prefix ./packages/spark-core
+- npm install --prefix ./packages/spark-core
 - npm install --prefix ./packages/spark-extras/components/highlight-board
 - npm install --prefix ./src/angular
 #- npm install --prefix ./src/angular/projects/spark-core-angular
