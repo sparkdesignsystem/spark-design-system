@@ -1,14 +1,14 @@
 ---
 name: Date Picker - Error State
+description:
+  The date input is used for collecting date information. This component includes a date picker.
 information:
-  - Only to be used for future dates (ex. Schedule a future payment).
-  - The date picker is hidden by default and becomes visible on focus.
-  - 'Selecting a date hides the date picker and puts the value in the input in the MM/DD/YYYY format.'
-  - 'On blur, format the input to this format: MM/DD/YYYY.'
-  - 'Placeholder text should read: MM/DD/YYYY.'
-  - On key press, reveal the placeholder inline with the label.
-order: 25
+  - Spark recommends that this component be used when you expect the entered date to be in the past.
+  - Masking is automatically applied when the field contains a valid input.
+  - The field value contains special characters which you may need to parse out before submitting the form.
+order: 27
 invisible: true
+hasAngularCode: true
 ---
 
 {{#embed "patterns.components.inputs.datepicker"

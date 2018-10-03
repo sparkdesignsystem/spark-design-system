@@ -45,7 +45,7 @@ textarea {
   position: relative;
 }
 
-.sprk-b-TextInput--date-picker > .sprk-c-Icon,
+.sprk-b-TextInput--date-picker .sprk-c-Icon,
 .sprk-b-TextInput--monetary::before {
   color: $gray-dark;
   position: absolute;
@@ -53,7 +53,7 @@ textarea {
   z-index: $layer-height-xs;
 }
 
-.sprk-b-TextInput--date-picker > .sprk-c-Icon {
+.sprk-b-TextInput--date-picker .sprk-c-Icon {
   top: 0.85rem;
 }
 
@@ -82,17 +82,15 @@ textarea {
   }
 }
 
+.sprk-b-SelectionContainer {
+  display: flex;
+  align-items: center;
+  margin: $space-s 0;
+}
+
 .sprk-b-SelectionContainer .sprk-b-Label {
   font-weight: normal;
-}
-
-.sprk-b-SelectionContainer [type='radio'],
-.sprk-b-SelectionContainer [type='checkbox'] {
-  vertical-align: middle;
-}
-
-.sprk-b-SelectionContainer:last-child {
-  margin-bottom: $space-s;
+  line-height: 1.2;
 }
 
 .sprk-b-InputContainer {

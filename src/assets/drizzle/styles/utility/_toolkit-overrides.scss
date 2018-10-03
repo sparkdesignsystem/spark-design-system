@@ -28,7 +28,7 @@
   font-family: 'myriad pro', sans-serif;
 }
 
-[data-template-id='full-width'] .drizzle-c-Preview__example {
+[data-template-id='full-width'] .#{$app-namespace}-c-Preview__example {
   overflow: hidden;
 }
 
@@ -36,6 +36,15 @@
   background-color: #ccc;
   height: 75px;
   width: 175px;
+}
+
+.#{$app-namespace}-c-Logo-placeholder--small {
+  width: 3.75rem;
+}
+
+.#{$app-namespace}-c-Logo-placeholder--large {
+  width: 18.75rem;
+  height: 11rem;
 }
 
 .#{$app-namespace}-c-Preview .sprk-c-Masthead__content {
@@ -47,6 +56,6 @@
   margin-top: -2px;
 }
 
-.drizzle-b-Body.sprk-u-Overflow--hidden {
+.#{$app-namespace}-b-Body.sprk-u-Overflow--hidden {
   overflow: auto !important; // this is to override a utility class (sprk-u-Overflow--hidden) that is added by JS.
 }

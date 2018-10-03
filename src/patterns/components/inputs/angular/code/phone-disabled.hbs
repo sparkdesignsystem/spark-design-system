@@ -1,0 +1,19 @@
+<sprk-input-container>
+  <label sprkLabel>Phone Number *</label>
+  <input
+    name="phone_input"
+    [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
+    type="text"
+    pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+    placeholder="(000) 000-0000"
+    [(ngModel)]="phone_input"
+    required
+    #phoneInput="ngModel"
+    sprkFormatterPhoneNumber
+    sprkInput
+    disabled>
+  <span
+    [hidden]="phoneInput.valid || phoneInput.pristine"
+    sprkFieldError>
+  </span>
+</sprk-input-container>
