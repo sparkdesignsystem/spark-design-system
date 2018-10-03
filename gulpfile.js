@@ -150,6 +150,20 @@ gulp.task('build-angular', (cb) => {
   });
 });
 
+gulp.task('build-es5', (cb) => {
+  const cmd = exec(`
+    cd packages/spark-core &&
+    npm install && npm build && cd .. &&
+    cd spark-extras/components/highlight-board && npm install && npm build
+    `, {
+    stdio: 'inherit',
+  });
+  return cmd.on('close', cb).on('error', (err) => {
+    log.error(err.message);
+  });
+});
+
+
 gulp.task('pre-publish', ['build-angular'], () => {});
 
 // Register default task
