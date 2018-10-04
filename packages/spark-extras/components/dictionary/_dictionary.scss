@@ -5,23 +5,30 @@
 //
 // Available Variables
 ///
-$dictionary-border: 1px solid $gray-medium !default;
+$dictionary-border: 1px solid $gray-light !default;
 $dictionary-stripe-color: $gray-light !default;
 $dictionary-breakpoint: 38.4375rem !default;
 
-.sprk-c-Dictionary--striped {
+.sprk-c-Dictionary {
   border: $dictionary-border;
+  padding: $space-m;
 }
 
 .sprk-c-Dictionary__keyvaluepair {
   width: 100%;
-  padding: $space-inset-m;
+  padding: $space-l / 2;
 
   @media all and (min-width: $dictionary-breakpoint) {
     display: table;
     display: flex;
     align-items: center;
   }
+}
+
+.sprk-c-Dictionary .sprk-b-Label {
+  font-size: $font-size-body-four;
+  line-height: $font-size-body-four;
+  font-weight: bold;
 }
 
 // prettier-ignore
@@ -31,8 +38,6 @@ $dictionary-breakpoint: 38.4375rem !default;
 
 .sprk-c-Dictionary__key,
 .sprk-c-Dictionary__value {
-  margin-bottom: $space-s;
-
   @media all and (min-width: $dictionary-breakpoint) {
     display: table-cell;
     flex: 1;
@@ -40,8 +45,19 @@ $dictionary-breakpoint: 38.4375rem !default;
   }
 }
 
-.sprk-c-Dictionary__key {
+.sprk-c-Dictionary__value {
+  text-align: left;
+
   @media all and (min-width: $dictionary-breakpoint) {
+    text-align: right;
+  }
+}
+
+.sprk-c-Dictionary__key {
+  margin-bottom: $space-xs;
+
+  @media all and (min-width: $dictionary-breakpoint) {
+    margin-bottom: 0;
     width: 50%;
   }
 }

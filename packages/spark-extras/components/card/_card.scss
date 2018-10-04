@@ -5,16 +5,18 @@
 //
 // Available Variables
 ///
-$card-border: 2px solid $gray-medium !default;
+$card-border: 1px solid $gray-light !default;
 $card-max-width: 26.5625rem !default;
+$card-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 
 .sprk-c-Card {
   border: $card-border;
+  box-shadow: $card-shadow;
   max-width: $card-max-width;
 }
 
 .sprk-c-Card__content {
-  padding: $space-inset-m;
+  padding: $space-inset-l;
 }
 
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17

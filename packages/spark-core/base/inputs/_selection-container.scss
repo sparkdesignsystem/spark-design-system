@@ -1,0 +1,16 @@
+.sprk-b-SelectionContainer {
+  margin-left: $space-s;
+}
+
+.sprk-b-SelectionContainer .sprk-b-Label {
+  font-weight: normal;
+}
+
+.sprk-b-SelectionContainer [type='radio'],
+.sprk-b-SelectionContainer [type='checkbox'] {
+  vertical-align: middle;
+}
+
+.sprk-b-SelectionContainer:last-child {
+  margin-bottom: $space-s;
+}

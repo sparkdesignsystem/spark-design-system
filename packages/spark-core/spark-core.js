@@ -1,4 +1,6 @@
 // Import all Spark-Core components
+import { textInput } from './base/textInput';
+import { selectInput } from './base/selectInput';
 import { ssnInput } from './base/ssnInput';
 import passwordInput from './base/passwordInput';
 import { monetaryInput } from './base/monetaryInput';
@@ -46,3 +48,5 @@ spinners();
 WideNavigation();
 masthead();
 alerts();
+textInput();
+selectInput();

@@ -16,7 +16,7 @@ hasAngularDocs: true
 </button>
 
 <div
-  class="sprk-c-Modal sprk-u-Display--none"
+  class="sprk-c-Modal sprk-c-Modal--wait sprk-u-Display--none"
   role="dialog"
   tabindex="-1"
   aria-labelledby="modalWaitHeading"
@@ -24,21 +24,19 @@ hasAngularDocs: true
   aria-describedby="modalWaitContent"
   data-sprk-modal="exampleWaitModal"
   data-sprk-modal-type="wait">
-  <header class="sprk-c-Modal__header">
-    <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" id="modalWaitHeading">
-      Please Wait...
-    </h2>
+  <div class="sprk-o-Stack sprk-o-Stack--large">
+    <header class="sprk-o-Stack__item sprk-c-Modal__header">
+      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive" id="modalWaitHeading">
+        Please Wait...
+      </h2>
+    </header>
 
-    <div class="sprk-c-Modal__icon">
-      <div class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large"></div>
+    <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
+      <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
+      <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
+        This modal will close shortly for demonstration purposes.
+      </p>
     </div>
-  </header>
-
-  <div class="sprk-c-Modal__body">
-    <p class="sprk-b-TypeBodyTwo" id="modalWaitContent">
-      This type of modal can't be closed by the
-      user but will close shortly for demonstration purposes.
-    </p>
   </div>
 </div>
 

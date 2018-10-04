@@ -12,7 +12,6 @@ hasAngularCodeInfo: true
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="ssn">
-  <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}"
          type="password"
@@ -20,12 +19,22 @@ hasAngularCodeInfo: true
          placeholder="000-00-0000"
          {{#if invaliddata}} aria-invalid="true"{{/if}}
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container"
-         {{#if disabled}} disabled{{/if}}>
-  <div class="sprk-b-SelectionContainer">
+         {{#if disabled}} disabled{{/if}} data-sprk-input="text">
+  <div class="sprk-b-InputContainer__input-border"></div>
+  <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}" class="sprk-b-Label">Social Security #</label>
+  <div class="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle">
     <input id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" type="checkbox"
       {{#if disabled}} disabled{{/if}}>
-    <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" class="sprk-b-Label--inline sprk-u-mls">Show SSN</label>
+    <label for="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" class="sprk-b-Label--inline">Show SSN</label>
   </div>
-  <div class="sprk-b-ErrorText" id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
+        <use xlink:href="#exclamation" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
 </div>

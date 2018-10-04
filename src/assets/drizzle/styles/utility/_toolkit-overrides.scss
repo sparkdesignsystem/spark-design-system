@@ -59,3 +59,7 @@
 .#{$app-namespace}-b-Body.sprk-u-Overflow--hidden {
   overflow: auto !important; // this is to override a utility class (sprk-u-Overflow--hidden) that is added by JS.
 }
+
+.#{$app-namespace}-c-Preview .sprk-c-Modal {
+  z-index: 100003;
+}

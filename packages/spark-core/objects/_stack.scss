@@ -11,8 +11,14 @@
   width: 100%;
 }
 
+// Centers items when in flex-direction row
 .sprk-o-Stack--center-row {
   justify-content: center;
+}
+
+// Centers items when in flex flex-direction column
+.sprk-o-Stack--center-column {
+  align-items: center;
 }
 
 // Stack items retain their original width by default
