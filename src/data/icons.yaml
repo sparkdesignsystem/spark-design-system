@@ -32,6 +32,10 @@
   viewBox: 0 0 448 512
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name:  chevron-down-circle
+  viewBox: 0 0 25 25
+  description: Used to illustrate the direction an action can be taken or where the user will be taken after the
+    action is taken.
 - name: clock
   viewBox: 0 0 512 512
   description: The clock icon should be used to indicate when something is time sensitive.

@@ -19,18 +19,13 @@ const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/co
 const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
 const toLowerCase = require('./src/assets/drizzle/scripts/handlebars-helpers/toLowerCase');
 const htmlEncode = require('./src/assets/drizzle/scripts/handlebars-helpers/htmlEncode');
+const patternIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/patternIdGen');
 
 // add helpers
 helpers.concat = concatHelper;
 helpers.alternateIdGen = alternateIdGen;
 helpers.toLowerCase = toLowerCase;
 helpers.htmlEncode = htmlEncode;
-
-const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
-const patternIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/patternIdGen');
-
-// add helpers
-helpers.concat = concatHelper;
 helpers.patternIdGen = patternIdGen;
 
 // Append config
