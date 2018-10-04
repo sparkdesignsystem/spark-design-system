@@ -11,3 +11,4 @@ information:
     component on narrow viewports, you can switch to an
     alternate component.
 sparkPackageCore: true
+hasProperties: true

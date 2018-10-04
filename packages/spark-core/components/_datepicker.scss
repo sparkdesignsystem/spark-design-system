@@ -1,16 +1,29 @@
 // ==================================================================
 // Date Picker
 // ==================================================================
+.sprk-b-InputContainer[data-sprk-datepicker] .sprk-b-TextInput[readonly] {
+  color: $black;
+  background-color: $white;
+  box-shadow: $input-box-shadow;
+}
 
-/* stylelint-disable */
+/* stylelint-disable selector-class-pattern */
 .dp {
   background: $white;
-  border: 2px solid $gray-medium;
-  border-radius: $border-radius;
-  font-size: $font-size-body-three;
-  padding: $space-inset-m;
+  box-shadow: $date-picker-box-shadow;
+  font-family: $heading-font-stack;
+  font-size: $font-size-body-four;
+  padding: $space-inset-s;
   position: relative;
-  max-width: 20rem;
+  max-width: $date-picker-max-width;
+
+  @media (min-width: $date-picker-max-width) {
+    padding: $space-inset-m;
+  }
+}
+
+.dp::before {
+  position: absolute;
 }
 
 .dp-is-below {
@@ -31,9 +44,9 @@
   }
 
   &::before {
-    border-bottom-color: $gray-medium;
-    border-width: 13px;
-    margin-left: -13px;
+    border-bottom-color: $gray-light;
+    border-width: 12px;
+    margin-left: -12px;
   }
 }
 
@@ -56,9 +69,9 @@
   }
 
   &::before {
-    border-bottom-color: $gray-medium;
-    border-width: 13px;
-    margin-left: -13px;
+    border-bottom-color: $gray-light;
+    border-width: 12px;
+    margin-left: -12px;
   }
 }
 
@@ -78,9 +91,9 @@
 .dp-month,
 .dp-cal-header button {
   background: none;
-  border: none;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  border: 2px solid transparent;
+  margin: 0 0.2rem;
+  padding: 0 0.2rem;
 }
 
 // hiding the footer functionality
@@ -89,35 +102,51 @@
 }
 
 .dp-col-header {
-  font-weight: bold;
-  font-size: $font-size-body-three;
-  padding: $space-s 0;
-}
-
-.dp-col-header,
-.dp-day {
+  border-bottom: 1px solid $gray-light;
   display: inline-block;
-  padding: $space-s;
+  font-size: $font-size-body-three;
+  font-weight: bold;
+  padding: 10px;
   text-align: center;
-  width: 14.28571429%;
+  max-width: $date-picker-button-size + $date-picker-column-adjustment-x;
+  width: 100%;
 }
 
 .dp-day {
   background: none;
-  border: 1px solid $gray-light;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  height: $date-picker-button-size;
+  line-height: 1;
+  padding: 6px;
+  margin: 0 2px;
+  width: $date-picker-button-size;
 }
 
-.dp-day-today {
-  font-weight: bold;
-  box-shadow: inset $input-box-shadow;
+.dp-day:first-child {
+  margin-left: 0;
+}
+
+.dp-day:nth-child(7n) {
+  margin-right: 0;
+}
+
+.dp-day::selection {
+  user-select: none;
 }
 
 .dp-current,
 .dp-selected,
-.dp-year:hover,
-.dp-month:hover,
 .dp-day:hover {
-  background: $blue-light;
+  background: $date-picker-day-interact-color;
+  color: $white;
+  outline: 0;
+  border-color: $date-picker-day-interact-color;
+}
+
+.dp-day:hover {
+  background: none;
+  color: $black;
 }
 
 .dp-day-disabled,
@@ -125,8 +154,25 @@
   color: $gray-medium;
 }
 
+.dp-day-today::after {
+  background-color: $date-picker-day-interact-color;
+  border-radius: 50%;
+  display: block;
+  content: '';
+  height: 5px;
+  width: 5px;
+  margin: 2px auto;
+}
+
+.dp-current.dp-day-today::after {
+  background-color: $white;
+}
+
+.dp-current.dp-day-today:hover::after {
+  background-color: $date-picker-day-interact-color;
+}
+
 .dp-cal-header {
-  border-bottom: 1px solid $gray-medium;
   display: flex;
   padding-bottom: $space-s;
 }
@@ -147,20 +193,20 @@
   border: 0;
   border-radius: 2px;
   font-size: 0;
-  height: 50px;
+  height: 35px;
   overflow: hidden;
   top: $space-m;
-  width: 50px;
+  width: 35px;
   // to make them look like carets, rather than have text
   &::before {
-    border: 3px solid $blue-medium;
+    border: 2px solid $black;
     content: '';
     display: inline-block;
-    height: 15px;
+    height: 10px;
     margin: 13px 0 40px;
     transform: rotate(-45deg);
     transition: border-color 0.2s;
-    width: 15px;
+    width: 10px;
   }
 }
 
@@ -193,18 +239,15 @@
   width: 100%;
 }
 
-.dp {
-  position: relative;
-
-  &::before {
-    position: absolute;
-  }
-}
-
 .dp-below {
   margin-top: $space-m;
   position: absolute;
   z-index: $layer-height-xs;
+
+  @media (max-width: $date-picker-max-width) {
+    left: 0 !important;
+    margin: 2px !important;
+  }
 }
 
-/* stylelint-enable*/
+/* stylelint-enable selector-class-pattern */

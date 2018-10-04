@@ -8,15 +8,12 @@
 $highlight-board-type-breakpoint: 30rem !default;
 $highlight-board-type-reduction-percentage: 0.8 !default;
 $highlight-board-height: 31.25rem !default;
+$highlight-board-color: $white !default;
+$highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
 
 .sprk-c-HighlightBoard {
-  background-color: $gray-light;
-  text-align: center;
+  background-color: $highlight-board-color;
   position: relative;
-}
-
-.sprk-c-HighlightBoard--has-image {
-  background-color: $white;
 }
 
 .sprk-c-HighlightBoard__image {
@@ -31,36 +28,39 @@ $highlight-board-height: 31.25rem !default;
 }
 
 .sprk-c-HighlightBoard__content {
+  background-color: $highlight-board-content-box-color;
   padding: $space-inset-tall-m;
-  width: 100%;
+
+  @media (min-width: $highlight-board-type-breakpoint) {
+    padding: $space-inset-tall-l;
+  }
 }
 
 .sprk-c-HighlightBoard__primary-heading {
+  margin-bottom: $space-l;
+
   @media (max-width: $highlight-board-type-breakpoint) {
     // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
   }
 }
 
-.sprk-c-HighlightBoard__sub-heading {
-  @media (max-width: $highlight-board-type-breakpoint) {
-    // prettier-ignore
-    font-size: $font-size-display-four * $highlight-board-type-reduction-percentage;
-  }
-}
+.sprk-c-HighlightBoard__primary-btn {
+  width: 100%;
 
-.sprk-c-HighlightBoard__content--light .sprk-c-HighlightBoard__primary-heading,
-.sprk-c-HighlightBoard__content--light .sprk-c-HighlightBoard__sub-heading {
-  color: $white;
+  @media (min-width: $highlight-board-type-breakpoint) {
+    width: auto;
+  }
 }
 
 .sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked)
 .sprk-c-HighlightBoard__content {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: $space-l;
+  left: $space-l;
+  right: $space-l;
 }
 
-.sprk-c-HighlightBoard__cta-container {
-  justify-content: center;
+.sprk-c-HighlightBoard--stacked {
+  text-align: center;
 }

@@ -23,13 +23,16 @@ information:
     clarification beyond the field label.
 restrictions:
   - You should always add the <code class='drizzle-c-Command drizzle-c-Command--inline'>novalidate</code> attribute
-    to your form when using Spark elements. Spark handles form validation internally, so we don't want the browser validation
-    to trigger.
+    to your form, since we handle form validation ourselves,
+    and don't use the browser's implementation
   - Make sure that each label's <code class='drizzle-c-Command drizzle-c-Command--inline'>for</code> attribute matches the
     <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> attribute of the corresponding input element.
   - Each input element's <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> should be unique on the page.
   - You need to make sure that the <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> referenced in
     <code class='drizzle-c-Command drizzle-c-Command--inline'>aria-describedby</code> matches the
     <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> on the error container.
+  - You should use helper text, as linked below, when a user needs further clarification beyond the label.
+  - Labels and error messages should be short and to the point.
+  - Labels should not be longer than what will fit on one line at 320px.
 sparkPackageCore: true
 hasAngularInfo: true

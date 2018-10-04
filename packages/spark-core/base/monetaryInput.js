@@ -1,3 +1,4 @@
+/* global Number */
 import getElements from '../utilities/getElements';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
