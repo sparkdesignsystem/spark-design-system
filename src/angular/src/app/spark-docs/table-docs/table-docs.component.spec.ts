@@ -9,9 +9,8 @@ describe('TableDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ TableDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [TableDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

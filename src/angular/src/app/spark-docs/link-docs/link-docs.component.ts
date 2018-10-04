@@ -46,10 +46,7 @@ import { Component, OnInit } from '@angular/core';
   styles: ['']
 })
 export class LinkDocsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

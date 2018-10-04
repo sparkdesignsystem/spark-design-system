@@ -69,7 +69,6 @@ import { Component } from '@angular/core';
   `,
   styles: ['']
 })
-
 export class HighlightBoardDocsComponent {
-  constructor() { }
+  constructor() {}
 }

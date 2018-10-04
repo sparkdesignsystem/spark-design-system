@@ -9,9 +9,8 @@ describe('AlertDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ AlertDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [AlertDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

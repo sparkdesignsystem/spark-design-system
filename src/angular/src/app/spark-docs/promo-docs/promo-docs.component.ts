@@ -80,7 +80,6 @@ import { RouterTestingModule } from '@angular/router/testing';
   `,
   styles: ['']
 })
-
 export class PromoDocsComponent {
-  constructor() { }
+  constructor() {}
 }

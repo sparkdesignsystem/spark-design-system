@@ -61,7 +61,7 @@
   color: $red-medium;
 
   &:visited {
-    color: $red-medium;;
+    color: $red-medium;
   }
   
   &:active,
@@ -75,7 +75,6 @@
 
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
-  
   &:visited {
     color: $btn-text-color;
   }

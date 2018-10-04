@@ -12,9 +12,8 @@ describe('ModalDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ ModalDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [ModalDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

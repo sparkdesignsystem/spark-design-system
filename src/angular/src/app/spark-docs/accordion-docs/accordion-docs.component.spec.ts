@@ -9,9 +9,8 @@ describe('AccordionDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ AccordionDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [AccordionDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
