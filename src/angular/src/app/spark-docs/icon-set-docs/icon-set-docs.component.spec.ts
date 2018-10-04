@@ -9,9 +9,8 @@ describe('IconSetDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ IconSetDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [IconSetDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -9,9 +9,8 @@ describe('IntroDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ IntroDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [IntroDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

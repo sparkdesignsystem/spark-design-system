@@ -9,9 +9,8 @@ describe('LinkDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ LinkDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [LinkDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

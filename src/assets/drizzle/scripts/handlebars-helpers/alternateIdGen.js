@@ -1,4 +1,3 @@
-/* global arguments */
 function alternateIdGen(initialID, alternateDir, subDir) {
   const splitID = initialID.split('.');
   const dir = splitID.slice(0, -1);

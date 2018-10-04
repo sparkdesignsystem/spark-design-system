@@ -9,9 +9,8 @@ describe('ToggleDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ ToggleDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [ToggleDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

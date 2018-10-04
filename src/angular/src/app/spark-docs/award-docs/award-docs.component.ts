@@ -145,10 +145,7 @@ import { Component, OnInit } from '@angular/core';
   styles: ['']
 })
 export class AwardDocsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

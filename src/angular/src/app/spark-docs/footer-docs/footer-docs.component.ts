@@ -128,123 +128,123 @@ export class FooterDocsComponent {
   siteLinkCols = [
     {
       heading: 'Column 1',
-      siteLinks : [
+      siteLinks: [
         {
           text: 'Column 1 Link 1',
           href: '/alerts',
-          linkAnalytics: 'Link to Item 1',
+          linkAnalytics: 'Link to Item 1'
         },
         {
           text: 'Column 1 Link 2',
           href: '/alerts',
-          linkAnalytics: 'Link to Item 2',
+          linkAnalytics: 'Link to Item 2'
         },
         {
           text: 'Column 1 Link 3',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
+          linkAnalytics: 'Link to Item 3'
         },
         {
           text: 'Column 1 Link 4',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
+          linkAnalytics: 'Link to Item 3'
         },
         {
           text: 'Column 1 Link 5',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
+          linkAnalytics: 'Link to Item 3'
         },
         {
           text: 'Column 1 Link 6',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
-        },
-      ],
+          linkAnalytics: 'Link to Item 3'
+        }
+      ]
     },
     {
       heading: 'Column 2',
-      siteLinks : [
+      siteLinks: [
         {
           text: 'Column 2 Link 1',
           href: '/masthead',
-          linkAnalytics: 'Link to Item 1',
+          linkAnalytics: 'Link to Item 1'
         },
         {
           text: 'Column 2 Link 2',
           href: '/alerts',
-          linkAnalytics: 'Link to Item 2',
+          linkAnalytics: 'Link to Item 2'
         },
         {
           text: 'Column 2 Link 3',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
+          linkAnalytics: 'Link to Item 3'
         },
         {
           text: 'Column 2 Link 4',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
-        },
-      ],
+          linkAnalytics: 'Link to Item 3'
+        }
+      ]
     },
     {
       heading: 'Column 3',
-      siteLinks : [
+      siteLinks: [
         {
           text: 'Column 3 Link 1',
           href: '/alerts',
-          linkAnalytics: 'Link to Item 1',
+          linkAnalytics: 'Link to Item 1'
         },
         {
           text: 'Column 3 Link 2',
           href: '/alerts',
-          linkAnalytics: 'Link to Item 2',
+          linkAnalytics: 'Link to Item 2'
         },
         {
           text: 'Column 3 Link 3',
           href: '/award',
-          linkAnalytics: 'Link to Item 3',
-        },
-      ],
-    },
+          linkAnalytics: 'Link to Item 3'
+        }
+      ]
+    }
   ];
 
   navLinks = [
     {
       text: 'Item 1',
       href: '/alerts',
-      analytics: 'Link to Item 1',
+      analytics: 'Link to Item 1'
     },
     {
       text: 'Item 2',
-      href: '/icons',
+      href: '/icons'
     },
     {
       text: 'Item 3',
-      href: '/links',
-    },
+      href: '/links'
+    }
   ];
 
   socialLinks = [
     {
       href: 'https://www.sparkdesignsystem.com/',
       icon: 'facebook',
-      analytics: 'Link',
+      analytics: 'Link'
     },
     {
       href: 'https://www.sparkdesignsystem.com/',
       icon: 'instagram',
-      analytics: 'Link',
+      analytics: 'Link'
     },
     {
       href: 'https://www.sparkdesignsystem.com/',
       icon: 'twitter',
-      analytics: 'Link',
+      analytics: 'Link'
     },
     {
       href: 'https://www.sparkdesignsystem.com/',
       icon: 'youtube',
-      analytics: 'Link',
-    },
+      analytics: 'Link'
+    }
   ];
 
   feedbackLinks = [
@@ -252,35 +252,38 @@ export class FooterDocsComponent {
       href: 'https://www.sparkdesignsystem.com/',
       icon: 'paper-plane',
       text: 'Feedback Link 1',
-      analytics: 'Link to Item 1',
+      analytics: 'Link to Item 1'
     },
     {
       href: 'https://www.sparkdesignsystem.com/',
       icon: 'computer-screen',
       text: 'Feedback Link 2',
-      analytics: 'Link to Item 2',
-    },
+      analytics: 'Link to Item 2'
+    }
   ];
 
   badges = [
     {
       alt: 'Placeholder Alt Text.',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
       href: '/alerts',
-      analytics: 'Test 1',
+      analytics: 'Test 1'
     },
     {
       alt: 'Placeholder Alt Text.',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
       href: '/icons',
-      analytics: 'Test 2',
+      analytics: 'Test 2'
     },
     {
       alt: 'Placeholder Alt Text.',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
       href: '/links',
-      analytics: 'Test 3',
-    },
+      analytics: 'Test 3'
+    }
   ];
-  constructor() { }
+  constructor() {}
 }

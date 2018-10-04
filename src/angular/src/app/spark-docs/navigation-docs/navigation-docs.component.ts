@@ -59,7 +59,7 @@ export class NavigationDocsComponent {
         {
           text: 'Item 3',
           href: '/alerts'
-        },
+        }
       ]
     },
     {
@@ -97,10 +97,10 @@ export class NavigationDocsComponent {
         {
           text: 'Item 4',
           href: '#nogo'
-        },
+        }
       ]
-    },
+    }
   ];
 
-  constructor() { }
+  constructor() {}
 }

@@ -9,9 +9,8 @@ describe('DividerDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ DividerDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [DividerDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

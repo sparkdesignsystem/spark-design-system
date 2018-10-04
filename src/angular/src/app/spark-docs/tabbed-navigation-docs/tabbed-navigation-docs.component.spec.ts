@@ -9,9 +9,8 @@ describe('TabbedNavigationDocsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SparkCoreAngularModule],
-      declarations: [ TabbedNavigationDocsComponent ]
-    })
-    .compileComponents();
+      declarations: [TabbedNavigationDocsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
