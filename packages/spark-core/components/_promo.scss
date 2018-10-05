@@ -1,10 +1,35 @@
 // ==================================================================
 // Promo
 // ==================================================================
+.sprk-c-Promo {
+  position: relative;
+  padding: $space-inset-l;
+}
+
 .sprk-c-Promo__title {
   color: $red-real;
 }
 
 .sprk-c-Promo__subtitle {
   font-weight: $font-weight-body-one;
+}
+
+.sprk-c-Promo__image--reversed {
+  position: absolute;
+  right: 0;
+}
+
+.sprk-c-Promo__container {
+  box-shadow: $promo-shadow; //TODO set up promo variables
+  padding: $space-inset-l;
+  background-color: $white;
+  position: absolute;
+  left: $promo-image-offset-horizontal;
+  bottom: $promo-image-offset-bottom;
+  width: 66%;
+}
+
+.sprk-c-Promo__container--reversed {
+  left: auto;
+  right: $promo-image-offset-horizontal;
 }

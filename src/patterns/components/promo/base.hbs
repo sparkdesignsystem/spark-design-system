@@ -1,31 +1,54 @@
 ---
 name: Base
-order: 1
 description:
   Base Promos include a heading and a description.
-hasAngularCode: true
-hasAngularDocs: true
-hasAngularCodeInfo: true
+restrictions:
+ - Illustration/icon must have a descriptive alt tag if it's an image or a descriptive title tag if the format is SVG.
+hidden: true
 ---
-<div class="sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
-  {{#if promoImg}}
-  <a href="#" class="sprk-o-Stack__item">
-    <img alt="A white and yellow flower." src="../../assets/toolkit/images/flower.jpg">
-  </a>
+<div class="sprk-c-Promo sprk-o-Stack sprk-o-Stack--split@s">
+
+  {{#if hasIcon }}
+    {{#unless mediaRev}}
+    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-c-Promo__icon">
+      <svg class="sprk-c-Icon sprk-c-Icon--xxl" viewBox="0 0 100 100">
+        <use xlink:href="#home" />
+      </svg>
+    </a>
+    {{/unless}}
   {{/if}}
 
-  {{#if promoIcon}}
-  <a href="#" class="sprk-o-Stack__item">
-    <svg height="150" width="167" viewBox="0 0 220.63 197.62">
-      <use xlink:href="#bell" />
-    </svg>
-  </a>
+  {{#if hasImage }}
+    {{#unless mediaRev}}
+    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
+      <img class="sprk-c-Promo__image " src="../../assets/toolkit/images/blue-house.jpg" />
+    </a>
+    {{/unless}}
   {{/if}}
 
-  <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack sprk-o-Stack--medium">
-    <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
+  {{#if hasIcon }}
+  <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">
+  {{else}}
+    {{#if hasImage }}
+      <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">
+    {{/if}}
+  {{/if}}
+
+    {{#unless hasIcon }}
+      {{#unless hasImage }}
+        <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
+      {{/unless}}
+    {{/unless}}
+  
+    <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
       Title
     </h3>
+
+    {{#if hasSubTitle }}
+    <p class="sprk-c-Promo__subtitle sprk-o-Stack__item">
+      Subtitle subtitle subtitle
+    </p>
+    {{/if}}
 
     <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse
@@ -33,18 +56,30 @@ hasAngularCodeInfo: true
       per lacus neque egestas. Diam quod curabitur.
     </p>
 
-    {{#if promoBtnLink}}
+    {{#if hasCta}}
     <div class="sprk-o-Stack__item">
       <a href="#" class="sprk-c-Button">
         Learn More
       </a>
     </div>
     {{/if}}
+  </div>
 
-    {{#if promoLink}}
-    <a href="#" class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--standalone">
-      Learn More
+  {{#if hasIcon}}
+    {{#if mediaRev}}
+    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-c-Promo__icon">
+      <svg class="sprk-c-Icon sprk-c-Icon--xxl" viewBox="0 0 100 100">
+        <use xlink:href="#home" />
+      </svg>
     </a>
     {{/if}}
-  </div>
+  {{/if}}
+
+  {{#if hasImage }}
+    {{#if mediaRev}}
+    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
+      <img class="sprk-c-Promo__image " src="../../assets/toolkit/images/blue-house.jpg" />
+    </a>
+    {{/if}}
+  {{/if}}
 </div>
