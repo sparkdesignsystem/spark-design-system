@@ -25,7 +25,7 @@
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
-  transition: transform 0.3s ease;
+  transition: transform $accordion-toggle-transistion-timing;
 }
 
 .sprk-c-Accordion__summary {
@@ -55,7 +55,7 @@
 .sprk-c-Accordion__details {
   border-bottom: $accordion-border;
   overflow: hidden;
-  transition: $accordion-toggle-transistion;
+  transition: height $accordion-toggle-transistion-timing;
 }
 
 .sprk-c-Accordion__content {
