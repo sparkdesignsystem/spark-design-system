@@ -12,7 +12,7 @@
 }
 
 .sprk-c-WideNavigation--sub {
-  border: 2px solid $gray-medium;
+  border: 2px solid $black-50;
   border-top: 0;
   display: block;
   position: absolute;
@@ -42,7 +42,7 @@
   @include HoverLine($color: $white, $width: 85%);
 
   border: 0;
-  color: $blue-dark;
+  color: $red-real;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -50,9 +50,9 @@
 
   &:focus,
   &:hover {
-    @include HoverLine($color: $blue-medium, $width: 85%);
+    @include HoverLine($color: $red-real, $width: 85%);
 
-    color: $blue-medium;
+    color: $red-real;
   }
 }
 
@@ -60,7 +60,7 @@
   @include HoverLine($color: $white, $width: 100%);
 
   border: 0;
-  color: $blue-dark;
+  color: $red-real;
   text-align: left;
   text-transform: none;
   line-height: $line-height-body-two;
@@ -68,9 +68,9 @@
 
   &:focus,
   &:hover {
-    @include HoverLine($color: $blue-medium, $width: 100%);
+    @include HoverLine($color: $red-real, $width: 100%);
 
-    color: $blue-medium;
+    color: $red-real;
   }
 }
 
@@ -85,7 +85,7 @@
 }
 
 .sprk-c-WideNavigation__arrow {
-  fill: $blue-dark;
+  fill: $red-real;
   width: $icon-m;
   margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
 }

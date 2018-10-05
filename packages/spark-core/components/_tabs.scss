@@ -17,12 +17,12 @@
   -webkit-appearance: none;
   background: $white;
   display: block;
-  color: $green-medium;
+  color: $green;
   text-align: center;
   text-decoration: none;
-  border-bottom: 2px solid $green-medium;
-  border-left: 2px solid $green-medium;
-  border-right: 2px solid $green-medium;
+  border-bottom: 2px solid $green;
+  border-left: 2px solid $green;
+  border-right: 2px solid $green;
   border-top: 0;
   width: 100%;
   padding: $space-inset-short-s;
@@ -30,7 +30,7 @@
   padding-bottom: $space-xs;
 
   &:first-of-type {
-    border-top: 2px solid $green-medium;
+    border-top: 2px solid $green;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -42,8 +42,8 @@
 
   @media all and (min-width: $tab-navigation-breakpoint) {
     flex: 1 1 100%;
-    border-top: 2px solid $green-medium;
-    border-left: 2px solid $green-medium;
+    border-top: 2px solid $green;
+    border-left: 2px solid $green;
     border-right: 0;
 
     &:first-of-type {
@@ -56,7 +56,7 @@
       border-top-right-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
       border-bottom-left-radius: 0;
-      border-right: 2px solid $green-medium;
+      border-right: 2px solid $green;
     }
   }
 }
@@ -64,6 +64,6 @@
 .sprk-c-Tabs__button--active,
 .sprk-c-Tabs__button:focus,
 .sprk-c-Tabs__button:hover {
-  background-color: $green-medium;
+  background-color: $green;
   color: $white;
 }
