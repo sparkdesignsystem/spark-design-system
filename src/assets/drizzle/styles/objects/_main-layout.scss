@@ -12,6 +12,17 @@ $drizzle-header-padding-vert-wide: 1rem;
   }
 }
 
+.#{$app-namespace}-o-Layout__footer{
+  background-color: $purp;
+  padding: $space-inset-short-m;
+  @media (min-width: $nav-switch-breakpoint) {
+    width: $layout-main-width;
+    margin-left: $layout-nav-width;
+  }
+}
+
+
+
 .#{$app-namespace}-o-Layout__content {
   max-width: 66rem;
   padding: $space-l $space-m;
