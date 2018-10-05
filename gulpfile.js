@@ -97,9 +97,6 @@ gulp.task('drizzle', ['icons'], () => {
   return result.done(); // makes sure that the icons are finished before the templates are processed
 });
 
-// Register frontend composite task
-gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'build-es5']);
-
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
   runSequence(
@@ -110,6 +107,7 @@ gulp.task('build', (done) => {
     'sass',
     'images',
     'build-es5',
+    'js',
     'critical',
     done,
   );
@@ -152,7 +150,7 @@ gulp.task('build-angular', (cb) => {
   });
 });
 
-gulp.task('build-es5', ['js'], (cb) => {
+gulp.task('build-es5', (cb) => {
   const cmd = exec(`
     cd packages/spark-core &&
     npm install && npm build && cd .. &&
@@ -169,7 +167,7 @@ gulp.task('build-es5', ['js'], (cb) => {
 gulp.task('pre-publish', ['build-angular'], () => {});
 
 // Register default task
-gulp.task('default', ['frontend'], (done) => {
+gulp.task('default', ['build'], (done) => {
   gulp.start('serve');
   gulp.start('watch');
   done();
