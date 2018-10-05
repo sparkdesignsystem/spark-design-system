@@ -2,20 +2,30 @@
 name: Base Accordion
 hidden: true
 ---
-<ul class="sprk-c-Accordion sprk-o-VerticalList {{#if additionalClasses}} {{additionalClasses}}{{/if}}">
-  <li class="sprk-c-Accordion__item {{item}}" data-sprk-toggle="container">
-    <a aria-controls="details1" class="sprk-c-Accordion__summary {{summary}}" data-sprk-toggle="trigger" data-sprk-toggle-type="accordion" href="#">
-        <h3 class="sprk-b-TypeBodyOne sprk-c-Accordion__heading {{heading}}">
+<ul class="sprk-c-Accordion sprk-o-VerticalList">
+  <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
+    <a
+      aria-controls="details-one"
+      class="sprk-c-Accordion__summary"
+      data-sprk-toggle="trigger"
+      data-sprk-toggle-type="accordion"
+      href="#">
+        <h3 class="sprk-c-Accordion__heading sprk-b-TypeBodyTwo">
           This is an accordion heading
         </h3>
-        
-        <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon sprk-c-SvgChevronCircle" data-sprk-toggle="icon" viewBox="0 0 448 512">
-          <use xlink:href="#chevron-down-circle" data-sprk-toggle="accordionIconUseElement"></use>
+
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon"
+          data-sprk-toggle="icon"
+          viewBox="0 0 448 512">
+          <use
+            xlink:href="#chevron-down-circle"
+            data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </a>
 
-    <div data-sprk-toggle="content" class="sprk-c-Accordion__details {{details}}">
-      <p id="details1" class="sprk-b-TypeBodyTwo sprk-u-phs sprk-u-mbm">
+    <div data-sprk-toggle="content" class="sprk-c-Accordion__details">
+      <p class="sprk-c-Accordion__content sprk-b-TypeBodyTwo" id="details-one">
         This is an example of accordion content.
         This is an example of accordion content.
         This is an example of accordion content.
@@ -24,19 +34,31 @@ hidden: true
     </div>
   </li>
 
-  <li class="sprk-c-Accordion__item {{item}}" data-sprk-toggle="container">
-    <a aria-controls="details1" class="sprk-c-Accordion__summary {{summary}}" data-sprk-toggle="trigger" data-sprk-toggle-type="accordion" href="#">
-        <h3 class="sprk-b-TypeBodyOne sprk-c-Accordion__heading {{heading}}">
+  <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
+    <a
+      aria-controls="details-two"
+      class="sprk-c-Accordion__summary"
+      data-sprk-toggle="trigger"
+      data-sprk-toggle-type="accordion"
+      href="#">
+        <h3 class="sprk-c-Accordion__heading sprk-b-TypeBodyTwo">
           This is an accordion heading
         </h3>
 
-        <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon sprk-c-SvgChevronCircle" data-sprk-toggle="icon" viewBox="0 0 448 512">
-          <use xlink:href="#chevron-down-circle" data-sprk-toggle="accordionIconUseElement"></use>
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon"
+          data-sprk-toggle="icon"
+          viewBox="0 0 448 512">
+          <use
+            xlink:href="#chevron-down-circle"
+            data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </a>
 
-    <div data-sprk-toggle="content" class="sprk-c-Accordion__details {{details}}">
-      <p id="details1" class="sprk-b-TypeBodyTwo sprk-u-phs sprk-u-mbm">
+    <div
+      data-sprk-toggle="content"
+      class="sprk-c-Accordion__details">
+      <p class="sprk-c-Accordion__content sprk-b-TypeBodyTwo" id="details-two">
         This is an example of accordion content.
         This is an example of accordion content.
         This is an example of accordion content.
@@ -45,19 +67,31 @@ hidden: true
     </div>
   </li>
 
-  <li class="sprk-c-Accordion__item {{item}}" data-sprk-toggle="container">
-    <a aria-controls="details1" class="sprk-c-Accordion__summary {{summary}}" data-sprk-toggle="trigger" data-sprk-toggle-type="accordion" href="#">
-        <h3 class="sprk-b-TypeBodyOne sprk-c-Accordion__heading {{heading}}">
+  <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
+    <a
+      aria-controls="details-three"
+      class="sprk-c-Accordion__summary"
+      data-sprk-toggle="trigger"
+      data-sprk-toggle-type="accordion"
+      href="#">
+        <h3 class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading">
           This is an accordion heading
         </h3>
 
-        <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon sprk-c-SvgChevronCircle" data-sprk-toggle="icon" viewBox="0 0 448 512">
-          <use xlink:href="#chevron-down-circle" data-sprk-toggle="accordionIconUseElement"></use>
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon"
+          data-sprk-toggle="icon"
+          viewBox="0 0 448 512">
+          <use
+            xlink:href="#chevron-down-circle"
+            data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </a>
 
-    <div data-sprk-toggle="content" class="sprk-c-Accordion__details {{details}}">
-      <p id="details1" class="sprk-b-TypeBodyTwo sprk-u-phs sprk-u-mbm">
+    <div
+      data-sprk-toggle="content"
+      class="sprk-c-Accordion__details">
+      <p class="sprk-c-Accordion__content sprk-b-TypeBodyTwo" id="details-three">
         This is an example of accordion content.
         This is an example of accordion content.
         This is an example of accordion content.
