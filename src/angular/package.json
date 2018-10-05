@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "gulp pre-publish && ng serve",
-    "build": "ng build",
+    "start": "ng serve",
+    "build": "gulp pre-publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
