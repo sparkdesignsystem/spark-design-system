@@ -96,7 +96,7 @@ module.exports = {
           './packages/spark-core/**/*.js',
           './packages/spark-extras/**/*.js',
         ],
-        tasks: ['js'],
+        tasks: ['build-es5'],
       },
       {
         match: [
