@@ -364,11 +364,11 @@ $split-breakpoint-xl: 80rem !default;
 // Accordions
 //
 $accordion-max-width: 53.125rem !default;
-$accordion-background-color: $white !default;
-$accordion-border: 1px solid $gray-light !default;
-$accordion-border-open: 1px solid $gray-medium !default;
+$accordion-border: 1px solid $black-25 !default;
+$accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red-real !default;
+$accordion-toggle-transistion: height 0.3s ease;
 
 //
 // Dividers
