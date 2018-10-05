@@ -98,7 +98,7 @@ gulp.task('drizzle', ['icons'], () => {
 });
 
 // Register frontend composite task
-gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
+gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'build-es5']);
 
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
@@ -110,7 +110,6 @@ gulp.task('build', (done) => {
     'sass',
     'images',
     'build-es5',
-    'js',
     'critical',
     done,
   );
@@ -153,7 +152,7 @@ gulp.task('build-angular', (cb) => {
   });
 });
 
-gulp.task('build-es5', (cb) => {
+gulp.task('build-es5', ['js'], (cb) => {
   const cmd = exec(`
     cd packages/spark-core &&
     npm install && npm build && cd .. &&
