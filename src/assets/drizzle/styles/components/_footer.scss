@@ -1,0 +1,18 @@
+.#{$app-namespace}-c-footer {
+  background-color: $purp;
+  padding: $space-inset-short-l;
+}
+
+.#{$app-namespace}-c-footer__icons {
+  @media (max-width: $footer-collapse-breakpoint) {
+    margin-top: $space-s;
+  }
+}
+
+.#{$app-namespace}-c-footer__link {
+  display: inline-block;
+}
+
+.#{$app-namespace}-c-footer__link:hover {
+  color: $highlight;
+}

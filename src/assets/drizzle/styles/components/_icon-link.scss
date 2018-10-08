@@ -1,0 +1,12 @@
+.#{$app-namespace}-c-icon-link {
+  fill: $white;
+  display: inline-block;
+}
+
+.#{$app-namespace}-c-icon-link:hover {
+  fill: $highlight;
+}
+
+.#{$app-namespace}-c-icon-link--first {
+  margin-right: $space-s;
+}

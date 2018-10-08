@@ -12,16 +12,20 @@ $drizzle-header-padding-vert-wide: 1rem;
   }
 }
 
-.#{$app-namespace}-o-Layout__footer{
-  background-color: $purp;
-  padding: $space-inset-short-m;
+.#{$app-namespace}-o-Layout__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
   @media (min-width: $nav-switch-breakpoint) {
     width: $layout-main-width;
     margin-left: $layout-nav-width;
   }
+  @media (max-width: $footer-collapse-breakpoint) {
+    justify-content: center;
+  }
 }
-
-
 
 .#{$app-namespace}-o-Layout__content {
   max-width: 66rem;
