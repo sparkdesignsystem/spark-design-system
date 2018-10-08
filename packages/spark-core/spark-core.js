@@ -6,7 +6,7 @@ import passwordInput from './base/passwordInput';
 import { monetaryInput } from './base/monetaryInput';
 import { phoneInput } from './base/phoneInput';
 import { dateInput } from './base/dateInput';
-import datePicker from './base/datePicker';
+import { datePicker } from './base/datePicker';
 import { modals } from './components/modals';
 import { requiredTextInput } from './base/requiredTextInput';
 import { requiredTick } from './base/requiredTick';
@@ -29,24 +29,27 @@ import './utilities/polyfills/classListSVG';
 // Utilities
 import detectJS from './utilities/detectJS';
 
-// Init
-detectJS();
-requiredSelect();
-requiredTick();
-requiredTextInput();
-ssnInput();
-passwordInput();
-monetaryInput();
-phoneInput();
-dateInput();
-datePicker();
-modals();
-pagination();
-tabs();
-toggle();
-spinners();
-WideNavigation();
-masthead();
-alerts();
-textInput();
-selectInput();
+const SparkCore = ({ datePickerConfig = {} } = {}) => {
+  detectJS();
+  requiredSelect();
+  requiredTick();
+  requiredTextInput();
+  ssnInput();
+  passwordInput();
+  monetaryInput();
+  phoneInput();
+  dateInput();
+  datePicker(datePickerConfig);
+  modals();
+  pagination();
+  tabs();
+  toggle();
+  spinners();
+  WideNavigation();
+  masthead();
+  alerts();
+  textInput();
+  selectInput();
+};
+
+export { SparkCore as default };

@@ -71,8 +71,39 @@ title: Developers
         </p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            import &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+            import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
           </code>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Init the Spark Core JS, passing in a config object (optional).</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            sparkCore({ //config, see below });
+          </code>
+        </div>
+        <div class="sprk-u-mvs">
+          <p class="sprk-u-mbm">See below for available configuration options:</p>
+          <table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="sprk-u-FontWeight--bold">datePickerConfig</td>
+              <td>Exposes configuration provided by tiny-date-picker, see
+                <a href="https://github.com/chrisdavies/tiny-date-picker" class="drizzle-b-Link">github</a> for
+                documentation.</td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </li>
       <li class="sprk-u-mvm">

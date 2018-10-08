@@ -10,27 +10,23 @@ const testWidthForReadOnly = (element) => {
   }
 };
 
-const bindUIEvents = (element) => {
+const bindUIEvents = (element, config) => {
   const input = element.querySelector('input');
-  const overrideMinDate = element.getAttribute('data-sprk-min-date');
-  const overrideMaxDate = element.getAttribute('data-sprk-max-date');
-
   testWidthForReadOnly(input);
 
-  const dp = TinyDatePicker(input, {
+  const tdpConfig = {
     mode: 'dp-below',
     lang: {
       days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     },
-    min: overrideMinDate || '01/1/2008',
-    max: overrideMaxDate || '01/1/2068',
+    min: '01/1/2008',
+    max: '01/1/2068',
+    format: date => date.toLocaleDateString('en-US',
+      { month: '2-digit', day: '2-digit', year: 'numeric' })
+      .replace(/[^ -~]/g, ''),
+  };
 
-    format(date) {
-      // TODO: this likely doesnt work right in safari
-      return date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' }).replace(/[^ -~]/g, '');
-    },
-
-  });
+  const dp = TinyDatePicker(input, Object.assign(tdpConfig, config));
 
   dp.on('open', () => {
     const rect = input.getBoundingClientRect();
@@ -42,9 +38,9 @@ const bindUIEvents = (element) => {
   });
 };
 
-const datePicker = () => {
+const datePicker = (config) => {
   getElements('[data-sprk-datepicker]', (element) => {
-    bindUIEvents(element);
+    bindUIEvents(element, config);
   });
 
   window.addEventListener('resize', () => {
@@ -54,4 +50,4 @@ const datePicker = () => {
   });
 };
 
-export { datePicker as default };
+export { datePicker, testWidthForReadOnly, bindUIEvents };
