@@ -199,7 +199,7 @@ $border-radius: 5px !default;
 //
 // Alerts
 ///
-$alert-border: 1px solid $gray-light !default;
+$alert-border: 1px solid $gray !default;
 $alert-bar-width: -10px !default;
 $alert-color: $white !default;
 $alert-color-info: $blue !default;
@@ -223,7 +223,7 @@ $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
 $btn-border-radius: 0 !default;
 $btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray-light !default;
+$btn-disabled-background-color: $gray !default;
 $btn-disabled-text-color: $black !default;
 $btn-disabled-border-width: $btn-border-width !default;
 $btn-disabled-border-color: $btn-disabled-background-color !default;
@@ -251,14 +251,14 @@ $list-margin-left: $space-m !default;
 ///
 $input-gray-medium: #5a5a5a !default;
 $monetary-symbol: '$' !default;
-$input-placeholder-color: $gray-light !default;
-$input-readonly-text-color: $gray-light !default;
+$input-placeholder-color: $gray !default;
+$input-readonly-text-color: $gray !default;
 $fieldset-padding: 0 !default;
 $text-input-border-radius: 0 !default;
 $text-input-border-color: $black !default;
 $text-input-border-width: 0 !default;
 $input-container-margin-bottom: $space-m !default;
-$input-disabled-background-color: $gray-light !default;
+$input-disabled-background-color: $gray !default;
 $input-disabled-border-color: $black !default;
 $input-disabled-text-color: $input-gray-medium !default;
 $helper-text-hidden: false !default;
@@ -296,12 +296,12 @@ $table-padding-small: $space-inset-s !default;
 $table-padding-medium: $space-inset-m !default;
 $table-padding-large: $space-inset-l !default;
 $table-cell-alignment: center !default;
-$table-stripe-color: $gray-light !default;
+$table-stripe-color: $gray !default;
 
 // Primary
 $table-row-border-width: 1px !default;
 $table-row-border-style: solid !default;
-$table-row-border-color: $gray-light !default;
+$table-row-border-color: $gray !default;
 $table-header-background-color: $black !default;
 $table-header-font-color: $white !default;
 $table-header-font-size: $font-size-body-one !default;
@@ -326,7 +326,7 @@ $table-grouped-header-font-weight: normal !default;
 $table-secondary-row-comp-row-spacing: 15px !default;
 $table-secondary-row-comp-border-width: 1px !default;
 $table-secondary-row-comp-border-style: solid !default;
-$table-secondary-row-comp-border-color: $gray-light !default;
+$table-secondary-row-comp-border-color: $gray !default;
 
 //
 // Box
