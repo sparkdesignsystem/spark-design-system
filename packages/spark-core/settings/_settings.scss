@@ -223,7 +223,7 @@ $btn-border-width: 2px;
 $btn-border-radius: 0 !default;
 $btn-disabled-opacity: 1 !default;
 $btn-disabled-background-color: $gray !default;
-$btn-disabled-text-color: $black-mid !default;
+$btn-disabled-text-color: $black-tint-50 !default;
 $btn-disabled-border-width: $btn-border-width !default;
 $btn-disabled-border-color: $btn-disabled-background-color !default;
 $btn-hover-background-color: $red-mid !default;
@@ -363,7 +363,7 @@ $split-breakpoint-xl: 80rem !default;
 // Accordions
 //
 $accordion-max-width: 53.125rem !default;
-$accordion-border: 1px solid $black-light !default;
+$accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red-real !default;
@@ -372,7 +372,7 @@ $accordion-toggle-transistion-timing: 0.3s ease;
 //
 // Dividers
 //
-$divider-border: 1px solid $black-light !default;
+$divider-border: 1px solid $black-tint-25 !default;
 
 //
 // Modals
