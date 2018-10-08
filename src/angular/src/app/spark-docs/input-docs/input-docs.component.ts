@@ -202,6 +202,7 @@ import { Component } from '@angular/core';
               [(ngModel)]="datepicker_input"
               #datepickerInput="ngModel"
               sprkFormatterDate
+              [sprkDatePickerConfig]="dpConfig"
               sprkDatepicker
               sprkInput>
               <div
@@ -254,6 +255,10 @@ export class InputDocsComponent {
   passwordType = 'password';
   ssnType = 'password';
   form_submitted = false;
+
+  dpConfig = {
+    mode: 'dp-below'
+  };
 
   togglePasswordType(): void {
     this.passwordType === 'password'
