@@ -59,6 +59,14 @@
   }
 }
 
+.sprk-c-Alert--no-dismiss {
+  box-shadow: $alert-shadow;
+
+  &:hover {
+    box-shadow: $alert-shadow;
+  }
+}
+
 .sprk-c-Alert__content {
   display: flex;
   align-items: center;
