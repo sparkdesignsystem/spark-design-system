@@ -1,6 +1,118 @@
 // ==================================================================
 // Typography
 // ==================================================================
+$body-font-stack-stage-zero: sans-serif;
+$body-font-stack-stage-one: 'FallSans-subset', sans-serif;
+$body-font-stack-stage-two: 'FallSans', sans-serif;
+$heading-font-stack-stage-zero: sans-serif;
+$heading-font-stack-stage-one: 'FallSans-subset', sans-serif;
+$heading-font-stack-stage-two: 'FallSans', sans-serif;
+//
+$body-subset-font-name: FallSans-subset;
+$body-full-font-name: FallSans;
+
+// body subset
+
+@font-face {
+  font-family: $body-subset-font-name;
+  src: url('./fonts/FallSans-Regular.woff') format('woff');
+  font-weight: normal;
+  unicode-range: U+65-U+90, U+97-122;
+}
+
+// body full
+
+@font-face {
+  font-family: $body-full-font-name;
+  src: url('./fonts/FallSans-Regular.woff2') format('woff2'),
+    url('./fonts/FallSans-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+// body full bold
+
+@font-face {
+  font-family: FallSansBold;
+  src: url('./fonts/FallSans-Bold.woff2') format('woff2'),
+    url('./fonts/FallSans-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+// heading subset
+
+@font-face {
+  font-family: $body-subset-font-name;
+  src: url('./fonts/FallSans-Regular.woff') format('woff');
+  font-weight: normal;
+  unicode-range: U+65-U+90, U+97-122;
+}
+
+// heading full
+
+@font-face {
+  font-family: $body-full-font-name;
+  src: url('./fonts/FallSans-Regular.woff2') format('woff2'),
+    url('./fonts/FallSans-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+// heading full bold
+
+@font-face {
+  font-family: FallSansBold;
+  src: url('./fonts/FallSans-Bold.woff2') format('woff2'),
+    url('./fonts/FallSans-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+.sprk-b-TypeDisplayOne,
+.sprk-b-TypeDisplayTwo,
+.sprk-b-TypeDisplayThree,
+.sprk-b-TypeDisplayFour,
+.sprk-b-TypeDisplayFive,
+.sprk-b-TypeDisplaySix {
+  font-family: sans-serif;
+}
+
+.sprk-b-TypeBodyOne,
+.sprk-b-TypeBodyTwo,
+.sprk-b-TypeBodyThree,
+.sprk-b-TypeBodyFour {
+  font-family: sans-serif;
+}
+
+.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayOne,
+.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayTwo,
+.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayThree,
+.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayFour,
+.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayFive,
+.sprk-b-Fonts--stage-one .sprk-b-TypeDisplaySix {
+  font-family: FallSans-subset, sans-serif;
+}
+
+.sprk-b-Fonts--stage-one .sprk-b-TypeBodyOne,
+.sprk-b-Fonts--stage-one .sprk-b-TypeBodyTwo,
+.sprk-b-Fonts--stage-one .sprk-b-TypeBodyThree,
+.sprk-b-Fonts--stage-one .sprk-b-TypeBodyFour {
+  font-family: FallSans-subset, sans-serif;
+}
+
+.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayOne,
+.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayTwo,
+.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayThree,
+.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayFour,
+.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayFive,
+.sprk-b-Fonts--stage-two .sprk-b-TypeDisplaySix {
+  font-family: FallSans, sans-serif;
+}
+
+.sprk-b-Fonts--stage-two .sprk-b-TypeBodyOne,
+.sprk-b-Fonts--stage-two .sprk-b-TypeBodyTwo,
+.sprk-b-Fonts--stage-two .sprk-b-TypeBodyThree,
+.sprk-b-Fonts--stage-two .sprk-b-TypeBodyFour {
+  font-family: FallSans, sans-serif;
+}
+
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
     $line-height: $line-height-display-one,
@@ -94,22 +206,6 @@ h6,
   color: $color-display-six;
   font-weight: $font-weight-display-six;
   line-height: $line-height-display-six;
-}
-
-.sprk-b-TypeDisplayOne,
-.sprk-b-TypeDisplayTwo,
-.sprk-b-TypeDisplayThree,
-.sprk-b-TypeDisplayFour,
-.sprk-b-TypeDisplayFive,
-.sprk-b-TypeDisplaySix {
-  font-family: $heading-font-stack;
-}
-
-.sprk-b-TypeBodyOne,
-.sprk-b-TypeBodyTwo,
-.sprk-b-TypeBodyThree,
-.sprk-b-TypeBodyFour {
-  font-family: $body-font-stack;
 }
 
 .sprk-b-TypeBodyOne {
