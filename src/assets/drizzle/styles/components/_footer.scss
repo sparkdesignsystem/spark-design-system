@@ -5,14 +5,20 @@
 
 .#{$app-namespace}-c-footer__icons {
   @media (max-width: $footer-collapse-breakpoint) {
-    margin-top: $space-s;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
 .#{$app-namespace}-c-footer__link {
   display: inline-block;
+
+  @media (max-width: $footer-collapse-breakpoint) {
+    margin: 0 auto $space-m;
+    text-align: center;
+  }
 }
 
 .#{$app-namespace}-c-footer__link:hover {
-  color: $highlight;
+  color: $red-light;
 }

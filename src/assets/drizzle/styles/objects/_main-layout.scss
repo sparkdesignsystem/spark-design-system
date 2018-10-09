@@ -23,6 +23,7 @@ $drizzle-header-padding-vert-wide: 1rem;
     margin-left: $layout-nav-width;
   }
   @media (max-width: $footer-collapse-breakpoint) {
+    display: block;
     justify-content: center;
   }
 }
