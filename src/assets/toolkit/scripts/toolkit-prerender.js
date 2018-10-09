@@ -2,9 +2,7 @@ import sparkCorePrerender from '../../../../packages/spark-core/es5/sparkCorePre
 
 sparkCorePrerender({
   typeConfig: {
-    bodySubsetName: 'FallSans-subset',
-    bodyFullName: 'FallSans',
-    headingSubsetName: 'FallSans-subset',
-    headingFullName: 'FallSans',
+    bodyFontName: 'FallSans',
+    headingFontName: 'FallSans',
   },
 });

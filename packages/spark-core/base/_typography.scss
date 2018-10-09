@@ -1,55 +1,30 @@
 // ==================================================================
 // Typography
 // ==================================================================
-$body-subset-font-name: FallSans-subset;
-$body-full-font-name: FallSans;
-$body-bold-font-name: FallSansBold;
-$heading-subset-font-name: FallSans-subset;
-$heading-full-font-name: FallSansBold;
-$heading-bold-font-name: FallSansBold;
-//
-$body-font-stack-stage-zero: sans-serif;
-$body-font-stack-stage-one: $body-subset-font-name, sans-serif;
-$body-font-stack-stage-two: $body-full-font-name, sans-serif;
-$heading-font-stack-stage-zero: sans-serif;
-$heading-font-stack-stage-one: $heading-subset-font-name, sans-serif;
-$heading-font-stack-stage-two: $heading-full-font-name, sans-serif;
 
-@font-face {
-  font-family: $body-subset-font-name;
-  src: url('./fonts/FallSans-Regular.woff') format('woff');
-  font-weight: normal;
-  unicode-range: U+65-U+90, U+97-122;
+@if $using-webfont-body {
+  @font-face {
+    font-family: $body-font-name;
+    src: $body-font-src;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: $body-font-name;
+    src: $body-bold-font-src;
+    font-weight: bold;
+  }
 }
-@font-face {
-  font-family: $body-full-font-name;
-  src: url('./fonts/FallSans-Regular.woff2') format('woff2'),
-    url('./fonts/FallSans-Regular.woff') format('woff');
-  font-weight: normal;
-}
-@font-face {
-  font-family: $body-bold-font-name;
-  src: url('./fonts/FallSans-Bold.woff2') format('woff2'),
-    url('./fonts/FallSans-Bold.woff') format('woff');
-  font-weight: bold;
-}
-@font-face {
-  font-family: $heading-subset-font-name;
-  src: url('./fonts/FallSans-Regular.woff') format('woff');
-  font-weight: normal;
-  unicode-range: U+65-U+90, U+97-122;
-}
-@font-face {
-  font-family: $heading-full-font-name;
-  src: url('./fonts/FallSans-Regular.woff2') format('woff2'),
-    url('./fonts/FallSans-Regular.woff') format('woff');
-  font-weight: normal;
-}
-@font-face {
-  font-family: $heading-bold-font-name;
-  src: url('./fonts/FallSans-Bold.woff2') format('woff2'),
-    url('./fonts/FallSans-Bold.woff') format('woff');
-  font-weight: bold;
+@if $using-webfont-heading {
+  @font-face {
+    font-family: $heading-font-name;
+    src: $heading-font-src;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: $heading-font-name;
+    src: $heading-bold-font-src;
+    font-weight: bold;
+  }
 }
 
 .sprk-b-TypeDisplayOne,
@@ -58,46 +33,14 @@ $heading-font-stack-stage-two: $heading-full-font-name, sans-serif;
 .sprk-b-TypeDisplayFour,
 .sprk-b-TypeDisplayFive,
 .sprk-b-TypeDisplaySix {
-  font-family: $heading-font-stack-stage-zero;
+  font-family: $heading-font-stack;
 }
 
 .sprk-b-TypeBodyOne,
 .sprk-b-TypeBodyTwo,
 .sprk-b-TypeBodyThree,
 .sprk-b-TypeBodyFour {
-  font-family: $body-font-stack-stage-zero;
-}
-
-.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayOne,
-.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayTwo,
-.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayThree,
-.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayFour,
-.sprk-b-Fonts--stage-one .sprk-b-TypeDisplayFive,
-.sprk-b-Fonts--stage-one .sprk-b-TypeDisplaySix {
-  font-family: $heading-font-stack-stage-one;
-}
-
-.sprk-b-Fonts--stage-one .sprk-b-TypeBodyOne,
-.sprk-b-Fonts--stage-one .sprk-b-TypeBodyTwo,
-.sprk-b-Fonts--stage-one .sprk-b-TypeBodyThree,
-.sprk-b-Fonts--stage-one .sprk-b-TypeBodyFour {
-  font-family: $body-font-stack-stage-one;
-}
-
-.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayOne,
-.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayTwo,
-.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayThree,
-.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayFour,
-.sprk-b-Fonts--stage-two .sprk-b-TypeDisplayFive,
-.sprk-b-Fonts--stage-two .sprk-b-TypeDisplaySix {
-  font-family: $heading-font-stack-stage-two;
-}
-
-.sprk-b-Fonts--stage-two .sprk-b-TypeBodyOne,
-.sprk-b-Fonts--stage-two .sprk-b-TypeBodyTwo,
-.sprk-b-Fonts--stage-two .sprk-b-TypeBodyThree,
-.sprk-b-Fonts--stage-two .sprk-b-TypeBodyFour {
-  font-family: $body-font-stack-stage-two;
+  font-family: $body-font-stack;
 }
 
 .sprk-b-TypeDisplayOne {

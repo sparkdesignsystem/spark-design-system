@@ -152,10 +152,18 @@ $color-body-four: $black !default;
 $line-height-body-four: 1.3 !default;
 $font-weight-body-four: normal !default;
 // Font Stack
+$using-webfont-body: true;
+$using-webfont-heading: true;
+$body-font-name: FallSans;
+$body-font-src: url('./fonts/FallSans-Regular.woff2') format('woff2'), url('./fonts/FallSans-Regular.woff') format('woff');
+$body-bold-font-src: url('./fonts/FallSans-Bold.woff2') format('woff2'), url('./fonts/FallSans-Bold.woff') format('woff');
+$heading-font-name: FallSans;
+$heading-font-src: url('./fonts/FallSans-Regular.woff2') format('woff2'), url('./fonts/FallSans-Regular.woff') format('woff');
+$heading-bold-font-src: url('./fonts/FallSans-Bold.woff2') format('woff2'), url('./fonts/FallSans-Bold.woff') format('woff');
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
-$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-$heading-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
