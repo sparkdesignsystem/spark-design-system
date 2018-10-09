@@ -30,11 +30,12 @@ install:
 
 before_script:
 - cd packages/spark-core && npm link
-- cd ../../src/angular && npm link @sparkdesignsystem/spark-core
+- cd ../spark-extras && npm link
+- cd ../../src/angular && npm link @sparkdesignsystem/spark-core && npm link @sparkdesignsystem/spark-extras
 - cd projects/spark-core-angular && ng build spark-core-angular
 - cd ../../dist/spark-core-angular && npm link
 - cd ../../projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular
-- cd ../../projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular && npm link @sparkdesignsystem/spark-core
+- cd ../../projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular
 - cd ../../projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular
 - cd ../../projects/spark-extras-angular-highlight-board && npm link @sparkdesignsystem/spark-core-angular
 - cd ../../../..
