@@ -4,11 +4,5 @@ information:
   - The heading elements are set automatically and don't require you to add classes.
   - The body copy will automatically get style and size from Spark, but in order to get the line height collision fix, you'll
     need to apply a setting class.
-restrictions:
-  - You must set up a Typekit kit for your application to make use of these settings.
-links:
-  Typekit Setup:
-    external: false
-    href: /patterns/fundamentals/typography.html#typekit-setup
 sparkPackageCore: true
 noCodeSwitch: true
