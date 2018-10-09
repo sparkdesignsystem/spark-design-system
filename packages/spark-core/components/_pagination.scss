@@ -67,12 +67,12 @@
 }
 
 .sprk-c-Pagination__icon.sprk-b-Link--disabled {
-  color: $gray-medium;
+  color: $black-tint-50;
 
   &:hover,
   &:active,
   &:focus,
   &:visited {
-    color: $gray-medium;
+    color: $black-tint-50;
   }
 }

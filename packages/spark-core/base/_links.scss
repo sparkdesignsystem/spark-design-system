@@ -33,30 +33,30 @@
 }
 
 .sprk-b-Link--muted {
-  color: $gray-dark;
+  color: $black-tint-75;
 
   &:visited {
-    color: $gray-dark;
+    color: $black-tint-75;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $gray-dark;
+    color: $black-tint-75;
   }
 }
 
 .sprk-b-Link--disabled {
-  color: $gray-medium;
+  color: $black-tint-50;
   pointer-events: none;
 
   &:visited {
-    color: $gray-medium;
+    color: $black-tint-50;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $gray-medium;
+    color: $black-tint-50;
   }
 }

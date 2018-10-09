@@ -7,10 +7,10 @@
     color: "#000000"
     property: "$black"
     rgb: "rgb(0,0,0)"
-  - label: Light Gray
+  - label: Gray
     color: "#EBEBEB"
     rgb: "rgb(0,0,8)"
-    property: "$gray-light"
+    property: "$gray"
   - label: White
     color: "#FFFFFF"
     rgb: "rgb(255,255,255)"
