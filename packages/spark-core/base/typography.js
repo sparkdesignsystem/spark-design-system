@@ -12,15 +12,15 @@ const typeLoader = (
   const headingFullFont = new FontFaceObserver(headingFullName);
   const headingSubsetFont = new FontFaceObserver(headingSubsetName);
   Promise.all([
-    bodySubsetFont.load(null, 3000),
-    headingSubsetFont.load(null, 3000),
+    bodySubsetFont.load(null, 10000),
+    headingSubsetFont.load(null, 10000),
   ]).then(() => {
     document.documentElement.className += ' sprk-b-Fonts--stage-one';
   });
 
   Promise.all([
-    bodyFullFont.load(null, 3000),
-    headingFullFont.load(null, 3000),
+    bodyFullFont.load(null, 10000),
+    headingFullFont.load(null, 10000),
   ]).then(() => {
     document.documentElement.className += ' sprk-b-Fonts--stage-two';
   });
