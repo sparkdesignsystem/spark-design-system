@@ -34,7 +34,7 @@ before_script:
 - cd projects/spark-core-angular && ng build spark-core-angular
 - cd ../../dist/spark-core-angular && npm link
 - cd ../../projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular
-- cd ../../projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular
+- cd ../../projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular && npm link @sparkdesignsystem/spark-core
 - cd ../../projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular
 - cd ../../projects/spark-extras-angular-highlight-board && npm link @sparkdesignsystem/spark-core-angular
 - cd ../../../..
