@@ -2,46 +2,40 @@
 // Colors
 // ==================================================================
 
-// TODO: fall
-// Greens
-$green-light: rgb(211, 239, 141);
-$green-medium: rgb(108, 159, 46);
-$green-dark: rgb(60, 120, 20);
-
-// Blues
-$blue-light: rgb(195, 211, 227);
-$blue-medium: rgb(32, 129, 191);
-$blue-dark: rgb(12, 69, 105);
-
-// Purples
-$purple-medium: rgb(85, 19, 135);
-$purple-dark: rgb(68, 35, 93);
-
-// Reds
-$red-light: rgb(250, 204, 196);
-$red-medium: rgb(181, 18, 27);
-$red-dark: rgb(140, 24, 29);
-
-// Oranges
-$orange-medium: rgb(255, 155, 0);
-$orange-dark: rgb(230, 120, 0);
-
-// Neutrals
-$gray-light: rgb(229, 229, 229);
-$gray-medium: rgb(170, 170, 170);
-$gray-dark: rgb(90, 90, 90);
-$black: rgb(34, 34, 34);
-$white: rgb(255, 255, 255);
-
-//TODO: fall colors
-$green: rgb(0, 179, 152);
-$red-deep: rgb(118, 35, 47);
-$red-mid: rgb(157, 34, 53);
-$yellow: rgb(242, 169, 0);
-$blue: rgb(0, 125, 186);
+// Primary
 $red-real: rgb(200, 16, 46);
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
-$gray-light: rgb(235, 235, 235);
-//TODO: add other tints
-$black-25: rgb(191,191,191);
+$gray: rgb(235, 235, 235);
+
+// Secondary
+$red-mid: rgb(157, 34, 53);
+$red-deep: rgb(118, 35, 47);
+$green: rgb(0, 179, 152);
+$yellow: rgb(242, 169, 0);
+$blue: rgb(0, 125, 186);
+
+// Black Tints
+$black-tint-75: rgb(64,64,64);
+$black-tint-50: rgb(128,128,128);
+$black-tint-25: rgb(191,191,191);
+
+// Blue Tints
+$blue-tint-75: rgb(64,157,203);
+$blue-tint-50: rgb(128,190,220);
+$blue-tint-25: rgb(191,222,238);
+
+// Green Tints
+$green-tint-75: rgb(64,198,178);
+$green-tint-50: rgb(128,217,203);
+$green-tint-25: rgb(191,236,229);
+
+// Red Tints
+$red-real-tint-75: rgb(214,76,98);
+$red-real-tint-50: rgb(227,135,150);
+$red-real-tint-25: rgb(241,195,203);
+
+// Yellow Tints
+$yellow-tint-75: rgb(245,190,64);
+$yellow-tint-50: rgb(248,212,128);
+$yellow-tint-25: rgb(252,233,191);
