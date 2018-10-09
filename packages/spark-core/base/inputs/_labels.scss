@@ -52,3 +52,11 @@
   transform: scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
+.sprk-b-InputContainer .sprk-b-TextInput--monetary .sprk-b-Label {
+  padding-left: 16px;
+}
+
+.sprk-b-TextInput--monetary .sprk-b-TextInput--focusin ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput--has-value ~ .sprk-b-Label {
+  padding-left: 0;
+}
