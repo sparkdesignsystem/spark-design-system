@@ -72,7 +72,7 @@
 
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation {
-  border-top: 2px solid $gray-medium;
+  border-top: 2px solid $black-tint-50;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item {
@@ -84,29 +84,29 @@
 }
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
-  background-color: $blue-dark;
+  background-color: $red-real;
 }
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
-  border: 2px solid $gray-medium;
+  border: 2px solid $black-tint-50;
   border-top: 0;
   padding: $space-m;
 
   &:hover,
   &:active {
-    border-bottom: 2px solid $gray-medium;
-    background-color: $blue-dark;
+    border-bottom: 2px solid $black-tint-50;
+    background-color: $red-real;
     color: $white;
   }
 }
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
-  color: $blue-dark;
+  color: $red-real;
   text-transform: uppercase;
 }
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
-  color: $blue-dark;
+  color: $red-real;
 }
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation
@@ -132,7 +132,7 @@
 // Accordion Navigation Styles TODO: FALL
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
   border: 0;
-  border-bottom: 2px solid $gray-medium;
+  border-bottom: 2px solid $black-tint-50;
   padding: 0;
 }
 // Accordion Navigation Styles TODO: FALL
@@ -142,7 +142,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $blue-dark;
+    background-color: $red-real;
     color: $white;
     text-decoration: none;
   }
