@@ -2,6 +2,7 @@
 // Accordions
 // ==================================================================
 .sprk-c-Accordion {
+  border-top: $accordion-border;
   margin: 0 auto;
   max-width: $accordion-max-width;
   width: 100%;
@@ -9,10 +10,6 @@
 
 .sprk-c-Accordion__item {
   border-bottom: $accordion-border;
-
-  &:first-child {
-    border-top: $accordion-border;
-  }
 }
 
 .sprk-c-Accordion__item--open {
