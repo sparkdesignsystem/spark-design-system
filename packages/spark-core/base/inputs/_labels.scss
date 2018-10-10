@@ -9,6 +9,10 @@
   transform-origin: top left;
 }
 
+.sprk-b-InputContainer .sprk-b-Label.sprk-b-Label--inline {
+  padding: 0 $space-m;
+}
+
 .sprk-b-Label--inline {
   display: inline-block;
   vertical-align: middle;
@@ -44,6 +48,7 @@
   transform: scale(1);
 }
 
+.sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
