@@ -29,15 +29,18 @@ install:
 - npm install -g @angular/cli @angular-devkit/build-angular
 
 before_script:
-- cd packages/spark-core && npm link
-- cd ../../src/angular && npm link @sparkdesignsystem/spark-core
-- cd projects/spark-core-angular && ng build spark-core-angular
-- cd ../../dist/spark-core-angular && npm link
-- cd ../../projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular
-- cd ../../projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular
-- cd ../../projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular
-- cd ../../projects/spark-extras-angular-highlight-board && npm link @sparkdesignsystem/spark-core-angular
-- cd ../../../..
+- npm link --prefix ./packages/spark-core
+- npm link --prefix ./packages/spark-extras
+- npm link @sparkdesignsystem/spark-core --prefix ./src/angular
+- npm link @sparkdesignsystem/spark-extras --prefix ./src/angular
+- cd src/angular
+- ng build spark-core-angular
+- cd ../..
+- npm link --prefix ./src/angular/dist/spark-core-angular
+- npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-award
+- npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-card
+- npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-dictionary
+- npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-highlight-board
 - npm run test --prefix ./packages/spark-core
 - npm run test --prefix ./packages/spark-extras/components/highlight-board
 - npm run test --prefix ./src/angular/projects/spark-core-angular

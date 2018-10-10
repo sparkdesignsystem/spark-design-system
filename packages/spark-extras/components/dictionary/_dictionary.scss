@@ -5,13 +5,12 @@
 //
 // Available Variables
 ///
-$dictionary-border: 1px solid $gray-light !default;
-$dictionary-stripe-color: $gray-light !default;
+$dictionary-border: 1px solid $gray !default;
+$dictionary-stripe-color: $gray !default;
 $dictionary-breakpoint: 38.4375rem !default;
 
 .sprk-c-Dictionary {
   border: $dictionary-border;
-  padding: $space-m;
 }
 
 .sprk-c-Dictionary__keyvaluepair {
