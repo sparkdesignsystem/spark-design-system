@@ -79,7 +79,7 @@ export class SparkAccordionItemComponent {
       : (this.animState = 'open');
 
     this.iconType === 'chevron-down'
-      ? (this.iconType = 'chevron-up')
+      ? (this.iconType = 'chevron-down') // todo: add fall icons "chevron-down-circle"
       : (this.iconType = 'chevron-down');
 
     this.isOpen === true
