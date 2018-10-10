@@ -134,10 +134,8 @@ $font-weight-body-four: normal !default;
 // Font Stack
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
-$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$heading-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
+$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$heading-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
@@ -193,7 +191,8 @@ $btn-hover-background-color: $green-dark !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-text-color: $white !default;
-$btn-breakpoint: 30rem !default;
+$btn-breakpoint-xs: 30rem !default;
+$btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
 
 //

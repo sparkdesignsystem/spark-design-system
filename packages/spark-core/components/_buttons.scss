@@ -3,11 +3,11 @@
 // ==================================================================
 .sprk-c-Button {
   transition: background-color $btn-transition-speed;
-    
+
   &:visited {
     color: $btn-text-color;
   }
-  
+
   &:active,
   &:focus {
     background-color: $btn-hover-background-color;
@@ -15,10 +15,18 @@
   }
 }
 
+.sprk-c-Button--full\@xs {
+  width: 100%;
+
+  @media screen and (min-width: $btn-breakpoint-xs) {
+    width: auto;
+  }
+}
+
 .sprk-c-Button--full\@sm {
   width: 100%;
 
-  @media screen and (min-width: $btn-breakpoint) {
+  @media screen and (min-width: $btn-breakpoint-s) {
     width: auto;
   }
 }
@@ -27,7 +35,7 @@
   background-color: transparent;
   border: 2px solid $blue-medium;
   color: $blue-medium;
-  
+
   &:visited {
     color: $blue-medium;
   }
@@ -47,7 +55,7 @@
   &:visited {
     color: $btn-text-color;
   }
-  
+
   &:active,
   &:focus,
   &:hover {
@@ -63,7 +71,7 @@
   &:visited {
     color: $red-medium;
   }
-  
+
   &:active,
   &:focus,
   &:hover {
@@ -78,7 +86,7 @@
   &:visited {
     color: $btn-text-color;
   }
-  
+
   &:active,
   &:focus,
   &:hover {
