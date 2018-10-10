@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 import {
   trigger,
@@ -54,7 +54,7 @@ import {
     ])
   ]
 })
-export class SparkAccordionItemComponent {
+export class SparkAccordionItemComponent implements OnInit {
   @Input()
   title: string;
   @Input()
@@ -70,10 +70,7 @@ export class SparkAccordionItemComponent {
   public iconStateClass = '';
   public animState = 'closed';
 
-  toggleAccordion(event): void {
-    event.preventDefault();
-    this.isOpen = !this.isOpen;
-
+  accordionState(): void {
     this.isOpen === false
       ? (this.animState = 'closed')
       : (this.animState = 'open');
@@ -85,6 +82,12 @@ export class SparkAccordionItemComponent {
     this.isOpen === true
       ? (this.iconStateClass = 'sprk-c-Icon--open')
       : (this.iconStateClass = '');
+  }
+
+  toggleAccordion(event): void {
+    event.preventDefault();
+    this.isOpen = !this.isOpen;
+    this.accordionState();
   }
 
   getClasses(): string {
@@ -101,5 +104,9 @@ export class SparkAccordionItemComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  ngOnInit() {
+    this.accordionState();
   }
 }
