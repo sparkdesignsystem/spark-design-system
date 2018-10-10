@@ -6,7 +6,6 @@ import {
   style,
   animate,
   transition
-  // ...
 } from '@angular/animations';
 
 @Component({
@@ -27,14 +26,32 @@ import {
           <sprk-icon additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}" [iconType]="iconType"></sprk-icon>
       </a>
 
-      <div *ngIf="isOpen">
+      <div [@toggleContent]="animState">
         <p [id]="accordion_controls_id" class="sprk-c-Accordion__content sprk-b-TypeBodyTwo">
           <ng-content></ng-content>
         </p>
       </div>
     </li>`,
   animations: [
-    // animation triggers go here
+    trigger('toggleContent', [
+      state(
+        'closed',
+        style({
+          height: '0',
+          display: 'none',
+          overflow: 'hidden'
+        })
+      ),
+      state(
+        'open',
+        style({
+          height: '*',
+          display: 'block'
+        })
+      ),
+      transition('closed => open', animate('300ms ease-in')),
+      transition('open => closed', animate('300ms ease-out'))
+    ])
   ]
 })
 export class SparkAccordionItemComponent {
@@ -51,10 +68,16 @@ export class SparkAccordionItemComponent {
   accordion_controls_id = `accordionHeading__${this.componentID}`;
   public iconType = 'chevron-down';
   public iconStateClass = '';
+  public animState = 'closed';
 
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+
+    this.isOpen === false
+      ? (this.animState = 'closed')
+      : (this.animState = 'open');
+
     this.iconType === 'chevron-down'
       ? (this.iconType = 'chevron-up')
       : (this.iconType = 'chevron-down');
