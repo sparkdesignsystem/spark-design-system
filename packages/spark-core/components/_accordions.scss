@@ -8,15 +8,10 @@
 }
 
 .sprk-c-Accordion__item {
-  margin-bottom: $space-xs;
   border-bottom: $accordion-border;
 
   &:first-child {
     border-top: $accordion-border;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 
