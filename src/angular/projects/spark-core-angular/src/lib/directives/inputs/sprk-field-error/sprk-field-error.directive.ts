@@ -10,7 +10,7 @@ export class SprkFieldErrorDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
   getClasses(): string[] {
-    const classArray: string[] = ['sprk-b-ErrorText'];
+    const classArray: string[] = ['sprk-b-ErrorContainer'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {

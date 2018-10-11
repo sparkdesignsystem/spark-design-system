@@ -24,6 +24,11 @@ hasAngularCode: true
   <div class="sprk-b-InputContainer__input-border"></div>
   <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
+    {{#if helperText }}
+      <div class="sprk-b-HelperText">
+        {{ helperText }}
+      </div>
+    {{/if}}
     {{#if errorMessage}}
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
         <use xlink:href="#exclamation" />

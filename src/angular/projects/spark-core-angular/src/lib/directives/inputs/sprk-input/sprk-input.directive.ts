@@ -1,44 +1,49 @@
-import { Directive, ElementRef, Input, OnChanges, OnInit } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnInit,
+  HostListener
+} from '@angular/core';
 
 @Directive({
   selector: '[sprkInput]'
 })
-export class SprkInputDirective implements OnInit, OnChanges {
+export class SprkInputDirective implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
   valid = true;
 
+  @HostListener('focusin')
+  onFocusIn() {
+    this.ref.nativeElement.classList.add('sprk-b-TextInput--focusin');
+    this.ref.nativeElement.classList.remove('sprk-b-TextInput--focusout');
+  }
+
+  @HostListener('input')
+  onInput() {
+    if (this.ref.nativeElement.value) {
+      this.ref.nativeElement.classList.add('sprk-b-TextInput--has-value');
+    } else {
+      this.ref.nativeElement.classList.remove('sprk-b-TextInput--has-value');
+    }
+  }
+
+  @HostListener('focusout')
+  onFocusOut() {
+    this.ref.nativeElement.classList.add('sprk-b-TextInput--focusout');
+    this.ref.nativeElement.classList.remove('sprk-b-TextInput--focusin');
+  }
+
   constructor(public ref: ElementRef) {}
 
-  getClasses(): string[] {
-    const classArray: string[] = [];
-
-    if (this.ref.nativeElement.nodeName === 'SELECT') {
-      classArray.push('sprk-b-Select');
-    } else {
-      classArray.push('sprk-b-TextInput', 'sprk-u-Width-100');
-    }
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray;
-  }
-
   ngOnInit(): void {
-    this.getClasses().forEach(item => {
-      this.ref.nativeElement.classList.add(item);
-    });
-  }
-
-  ngOnChanges(): void {
-    this.ref.nativeElement.setAttribute('class', '');
-    this.getClasses().forEach(item => {
-      this.ref.nativeElement.classList.add(item);
-    });
+    if (this.ref.nativeElement.nodeName === 'SELECT') {
+      this.ref.nativeElement.classList.add('sprk-b-Select');
+    } else {
+      this.ref.nativeElement.classList.add('sprk-b-TextInput');
+      this.ref.nativeElement.classList.add('sprk-u-Width-100');
+    }
   }
 }

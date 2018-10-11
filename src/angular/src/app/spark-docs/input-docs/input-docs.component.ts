@@ -10,16 +10,18 @@ import { Component } from '@angular/core';
             <label sprkLabel>Text Input *</label>
             <input
               name="text_input"
-              [additionalClasses]="textInput.invalid && textInput.dirty ? 'sprk-b-TextInput--error': ''"
               type="text"
               [(ngModel)]="text_input"
               required
               #textInput="ngModel"
               sprkInput>
             <p sprkHelperText>Please enter some input.</p>
-            <span
-              [hidden]="textInput.valid || textInput.pristine"
-              sprkFieldError>This field is required.</span>
+            <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+              <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
+                <use xlink:href="#exclamation" />
+              </svg>
+              <div class="sprk-b-ErrorText">This field is required.</div>
+            </span>
           </sprk-input-container>
           <sprk-selection-container>
             <label sprkLabel>Checkbox Group Label</label>
@@ -85,7 +87,6 @@ import { Component } from '@angular/core';
             </sprk-selection-item-container>
           </sprk-selection-container>
           <sprk-input-container>
-            <label sprkLabel>Select Box Label</label>
             <select class="sprk-b-Select" id="select-normal" aria-describedby="select-normal--error-container" sprkInput>
               <option value="none">Please choose...</option>
               <option value="1">Option 1</option>
@@ -97,6 +98,8 @@ import { Component } from '@angular/core';
                 <option value="g3">Grouped Option 3</option>
               </optgroup>
             </select>
+            <sprk-icon iconType="chevron-down" additionalClasses="sprk-b-SelectContainer__icon" sprk-select-icon></sprk-icon>
+            <label sprkLabel>Select Box Label</label>
           </sprk-input-container>
           <sprk-input-container>
             <label sprkLabel>Textarea Input</label>

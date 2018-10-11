@@ -72,10 +72,6 @@
   color: $input-placeholder-color;
 }
 
-.sprk-b-TextInput--error {
-  box-shadow: $input-error-box-shadow;
-}
-
 .sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
   border-bottom: 3px solid $text-input-error-color;
 }

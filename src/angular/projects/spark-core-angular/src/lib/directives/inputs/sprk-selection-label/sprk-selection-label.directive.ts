@@ -10,11 +10,7 @@ export class SprkSelectionLabelDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
   getClasses(): string[] {
-    const classArray: string[] = [
-      'sprk-b-Label',
-      'sprk-b-Label--inline',
-      'sprk-u-mls'
-    ];
+    const classArray: string[] = ['sprk-b-Label', 'sprk-b-Label--inline'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {

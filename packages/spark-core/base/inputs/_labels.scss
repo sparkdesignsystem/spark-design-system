@@ -44,17 +44,25 @@
 }
 
 .sprk-u-JavaScript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: $label-offset-y-open;
-  transform: scale(1);
+  transform: scale(1) translateY(20px);
+}
+
+.sprk-b-TextInput,
+.sprk-b-TextInput[placeholder],
+.sprk-b-TextInput--has-value,
+.sprk-b-TextInput--focusin,
+.sprk-b-Select {
+  padding-top: 1rem;
 }
 
 .sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  margin-top: $label-offset-y;
-  margin-bottom: $label-counter-weight;
-  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+  height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: translateY($label-offset-y) scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
 .sprk-b-InputContainer .sprk-b-TextInput--monetary .sprk-b-Label {
