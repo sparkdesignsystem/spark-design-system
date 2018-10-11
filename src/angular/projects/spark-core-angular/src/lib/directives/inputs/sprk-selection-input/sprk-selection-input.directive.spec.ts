@@ -9,7 +9,6 @@ import { SprkSelectionInputDirective } from './sprk-selection-input.directive';
   <input
     value="hi"
     type="text"
-    additionalClasses="sprk-u-man"
     placeholder="Enter some input."
     sprkSelectionInput>
   `
@@ -34,9 +33,7 @@ describe('SprkSelectionInputDirective', () => {
     fixture.detectChanges();
   });
 
-  it('should add classes if additionalClasses has a value', () => {
-    expect(inputElement.nativeElement.classList.toString()).toEqual(
-      'sprk-u-man'
-    );
+  it('should add the correct classes to the applied element', () => {
+    expect(inputElement.nativeElement.classList.toString()).toEqual('');
   });
 });

@@ -1,20 +1,9 @@
-import {
-  Directive,
-  ElementRef,
-  Input,
-  OnInit,
-  HostListener
-} from '@angular/core';
+import { Directive, ElementRef, OnInit, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
-  @Input()
-  additionalClasses: string;
-  @Input()
-  valid = true;
-
   @HostListener('focusin')
   onFocusIn() {
     this.ref.nativeElement.classList.add('sprk-b-TextInput--focusin');
