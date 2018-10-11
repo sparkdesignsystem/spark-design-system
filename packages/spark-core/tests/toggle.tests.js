@@ -1,4 +1,4 @@
-/* global document beforeEach afterEach describe it */
+/* global document beforeEach afterEach describe it event window */
 import { expect } from 'chai';
 import sinon from 'sinon';
 
@@ -6,7 +6,6 @@ const proxyquireStrict = require('proxyquire').noCallThru();
 
 describe('Toggle init', () => {
   const domSliderStub = {};
-
   domSliderStub.slideToggle = () => {};
 
   const {
@@ -130,22 +129,35 @@ describe('Toggle tests', () => {
     expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-filled');
   });
 
-
   it('should add listener to toggle trigger', () => {
     sinon.spy(trigger, 'addEventListener');
     bindToggleUIEvents(container);
     expect(trigger.addEventListener.getCall(0).args[0]).eql('click');
   });
 
+  it('should add listener to Accordion toggle trigger', () => {
+    sinon.spy(triggerAccordion, 'addEventListener');
+    bindToggleUIEvents(containerAccordion);
+    expect(triggerAccordion.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should show details when clicked', () => {
+    bindToggleUIEvents(containerAccordion);
+    const event = new window.Event('click');
+    triggerAccordion.dispatchEvent(event);
+    expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
+  });
+
   it('should disable clicks until after slide toggle animation runs', () => {
-    trigger.click();
+    bindToggleUIEvents(container);
     setTimeout(() => {
       expect(trigger.style.pointerEvents).eql('none');
     }, 100);
   });
 
   it('should enable clicks after slide toggle animation runs', () => {
-    trigger.click();
+    const event = new window.Event('click');
+    trigger.dispatchEvent(event);
     setTimeout(() => {
       expect(trigger.style.pointerEvents).eql('auto');
     }, 300);
