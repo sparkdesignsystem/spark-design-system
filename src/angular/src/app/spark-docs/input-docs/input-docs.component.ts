@@ -102,12 +102,13 @@ import { Component } from '@angular/core';
             <label sprkLabel>Select Box Label</label>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprkLabel>Textarea Input</label>
             <textarea
+              rows="3"
               name="textarea_input"
               [(ngModel)]="textarea_input"
               #textareaInput="ngModel"
               sprkInput></textarea>
+            <label sprkLabel>Textarea Input</label>
           </sprk-input-container>
           <sprk-input-container>
             <label sprkLabel>SSN Input</label>
