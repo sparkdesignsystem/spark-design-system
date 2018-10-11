@@ -5,9 +5,7 @@ import { SprkInputDirective } from './sprk-input.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-  <input
-    additionalClasses="sprk-u-man"
-    sprkInput>`
+  <input sprkInput>`
 })
 class TestComponent {}
 
@@ -30,12 +28,5 @@ describe('Spark Input Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should add classes if additionalClasses has a value', () => {
-    fixture.detectChanges();
-    expect(inputElement.classList.toString()).toEqual(
-      'sprk-b-TextInput sprk-u-Width-100 sprk-u-man'
-    );
   });
 });

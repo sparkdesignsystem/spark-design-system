@@ -34,7 +34,7 @@ describe('Spark Field Error Directive', () => {
   it('should add classes if additionalClasses has a value', () => {
     fixture.detectChanges();
     expect(spanElement.classList.toString()).toEqual(
-      'sprk-b-ErrorText sprk-u-man'
+      'sprk-b-ErrorContainer sprk-u-man'
     );
   });
 });

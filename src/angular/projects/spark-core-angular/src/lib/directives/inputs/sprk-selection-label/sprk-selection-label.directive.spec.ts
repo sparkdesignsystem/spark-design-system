@@ -34,7 +34,7 @@ describe('Spark Helper Text Directive', () => {
   it('should add classes if additionalClasses has a value', () => {
     fixture.detectChanges();
     expect(labelElement.classList.toString()).toEqual(
-      'sprk-b-Label sprk-b-Label--inline sprk-u-mls sprk-u-man'
+      'sprk-b-Label sprk-b-Label--inline sprk-u-man'
     );
   });
 });

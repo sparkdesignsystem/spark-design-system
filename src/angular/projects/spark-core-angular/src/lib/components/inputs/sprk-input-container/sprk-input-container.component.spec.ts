@@ -81,11 +81,11 @@ describe('SparkInputContainerComponent', () => {
     );
   });
 
-  it('should add classes to the icon container when iconContainerClasses', () => {
-    inputContainerComponent.iconContainerClasses = 'sprk-u-man';
-    inputContainerFixture.detectChanges();
-    expect(iconWrapperElement.classList.toString()).toEqual('sprk-u-man');
-  });
+  // it('should add classes to the icon container when iconContainerClasses', () => {
+  //   inputContainerComponent.iconContainerClasses = 'sprk-u-man';
+  //   inputContainerFixture.detectChanges();
+  //   expect(iconWrapperElement.classList.toString()).toEqual('sprk-u-man');
+  // });
 
   it('should set the for on the label to match the id on the input', () => {
     expect(labelElement.getAttribute('for')).toEqual(inputElement.id);
