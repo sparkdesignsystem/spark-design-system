@@ -1,8 +1,28 @@
-/* global document describe before it */
+/* global document beforeEach afterEach describe it */
 import { expect } from 'chai';
 import sinon from 'sinon';
 
 const proxyquireStrict = require('proxyquire').noCallThru();
+
+describe('Toggle init', () => {
+  const domSliderStub = {};
+
+  domSliderStub.slideToggle = () => {};
+
+  const {
+    toggle,
+  } = proxyquireStrict('../components/toggle', { 'dom-slider': domSliderStub });
+
+  afterEach(() => {
+    document.querySelectorAll.restore();
+  });
+
+  it('should call getElements once with the correct selector', () => {
+    sinon.spy(document, 'querySelectorAll');
+    toggle();
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-toggle="container"]');
+  });
+});
 
 describe('Toggle tests', () => {
   let container;
@@ -16,29 +36,31 @@ describe('Toggle tests', () => {
   let iconAccordionUseElement;
   const domSliderStub = {};
 
-  domSliderStub.slideToggle = () => {};
-
   const {
+    toggleIconType,
     toggleAriaExpanded,
     handleToggleClick,
     bindToggleUIEvents,
   } = proxyquireStrict('../components/toggle', { 'dom-slider': domSliderStub });
 
-  before(() => {
+  beforeEach(() => {
     container = document.createElement('div');
     container.setAttribute('data-sprk-toggle', 'container');
 
-    containerAccordion = document.createElement('div');
+    containerAccordion = document.createElement('li');
     containerAccordion.setAttribute('data-sprk-toggle', 'container');
+    containerAccordion.classList.add('sprk-c-Accordion__item');
 
     trigger = document.createElement('a');
     trigger.setAttribute('data-sprk-toggle', 'trigger');
+    trigger.setAttribute('aria-expanded', 'false');
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add('sprk-b-TypeBodyThree', 'sprk-b-Link', 'sprk-b-Link--standalone');
 
     triggerAccordion = document.createElement('a');
     triggerAccordion.setAttribute('data-sprk-toggle', 'trigger');
     triggerAccordion.setAttribute('data-sprk-toggle-type', 'accordion');
+    triggerAccordion.setAttribute('aria-expanded', 'false');
     triggerAccordion.textContent = 'My Toggle Accordion Link Text';
     triggerAccordion.classList.add(
       'sprk-b-TypeBodyThree',
@@ -48,14 +70,15 @@ describe('Toggle tests', () => {
 
     content = document.createElement('div');
     content.setAttribute('data-sprk-toggle', 'content');
-    content.textContent = 'This is the toggle content. It is a placeholder.';
+    content.textContent = 'This is the toggle content..';
     content.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
 
     contentAccordion = document.createElement('p');
     contentAccordion.setAttribute('data-sprk-toggle', 'content');
-    contentAccordion.textContent = 'This is the toggle content. It is a placeholder.';
+    contentAccordion.textContent = 'This is the toggle accordion content.';
     contentAccordion.classList.add('sprk-b-TypeBodyTwo', 'sprk-c-Accordion__content');
     contentAccordion.style.display = 'none';
+    contentAccordion.slideToggle = () => {};
 
     icon = document.createElement('svg');
     icon.setAttribute('data-sprk-toggle', 'icon');
@@ -78,9 +101,15 @@ describe('Toggle tests', () => {
     containerAccordion.append(contentAccordion);
   });
 
-  it('should toggle aria-expanded attribute', () => {
+  it('should toggle aria-expanded attribute for toggles', () => {
     toggleAriaExpanded(trigger);
     expect(trigger.hasAttribute('aria-expanded')).eql(true);
+  });
+
+  it('should add aria-expanded attribute set to false if not found on trigger', () => {
+    triggerAccordion.removeAttribute('aria-expanded');
+    toggleAriaExpanded(triggerAccordion);
+    expect(triggerAccordion.getAttribute('aria-expanded')).eql('false');
   });
 
   it('should toggle aria-expanded attribute to false', () => {
@@ -90,22 +119,35 @@ describe('Toggle tests', () => {
   });
 
   it('should toggle accordion item open', () => {
+    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('cats'); });
     handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
-    expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
-    expect(iconAccordion.classList.contains('sprk-c-Icon--open').eql(true));
+    expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
     expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-filled');
   });
 
-  it('should toggle accordion item closed', () => {
-    handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
-    expect(triggerAccordion.classList.contains('sprk-c-Accordion__summary--open')).eql(true);
-    expect(iconAccordion.classList.contains('sprk-c-Icon--open').eql(true));
-    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle');
+  it('should toggle accordion icon open', () => {
+    toggleIconType(iconAccordion, iconAccordionUseElement, 'chevron-down-circle', 'chevron-down-circle-filled');
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-filled');
   });
+
 
   it('should add listener to toggle trigger', () => {
     sinon.spy(trigger, 'addEventListener');
     bindToggleUIEvents(container);
     expect(trigger.addEventListener.getCall(0).args[0]).eql('click');
+  });
+
+  it('should disable clicks until after slide toggle animation runs', () => {
+    trigger.click();
+    setTimeout(() => {
+      expect(trigger.style.pointerEvents).eql('none');
+    }, 100);
+  });
+
+  it('should enable clicks after slide toggle animation runs', () => {
+    trigger.click();
+    setTimeout(() => {
+      expect(trigger.style.pointerEvents).eql('auto');
+    }, 300);
   });
 });
