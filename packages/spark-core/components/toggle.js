@@ -1,14 +1,15 @@
 import 'dom-slider';
+import getElements from '../utilities/getElements';
+
 /**
  *  Toggle JS
  *  If `data-sprk-toggle="container"`
  *  elements are available in the DOM
- *  we listen for clicks on the trigger and remove
+ *  we listen for clicks on the trigger and
  *  call slideToggle to slide the content up or down.
  *  To support non JS scenarios we only hide the content
  *  if JS is detected.
  */
-import getElements from '../utilities/getElements';
 
 // Toggle the icon type
 const toggleIconType = (toggleIcon, toggleIconUse, openIcon, closeIcon) => {
@@ -32,8 +33,9 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
-const handleToggleClick = (toggleContent, toggleTrigger, toggleIcon, toggleIconUse, element) => {
-  const isAccordion = element.getAttribute('data-sprk-toggle-type') === 'accordion';
+const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) => {
+  const trigger = element;
+  const isAccordion = trigger.getAttribute('data-sprk-toggle-type') === 'accordion';
 
   // Rotate the Icon
   if (toggleIcon) toggleIcon.classList.toggle('sprk-c-Icon--open');
@@ -41,8 +43,11 @@ const handleToggleClick = (toggleContent, toggleTrigger, toggleIcon, toggleIconU
   // Swap icon name based on if open or closed
   if (isAccordion && toggleIconUse) toggleIconType(toggleIcon, toggleIconUse, 'chevron-down-circle-filled', 'chevron-down-circle');
 
+  if (isAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
+
   toggleContent.slideToggle(300).then(() => {
-    if (isAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
+    // Enable clicks after animation runs
+    trigger.style.pointerEvents = 'auto';
   });
 
   // Set aria expanded to true
@@ -65,7 +70,9 @@ const bindToggleUIEvents = (element) => {
   // Add click event listener to trigger for each toggle collection we find
   toggleTrigger.addEventListener('click', (e) => {
     e.preventDefault();
-    handleToggleClick(toggleContent, toggleTrigger, toggleIcon, toggleIconUse, e.currentTarget);
+    // Disable clicks till animation runs
+    e.currentTarget.style.pointerEvents = 'none';
+    handleToggleClick(toggleContent, toggleIcon, toggleIconUse, e.currentTarget);
   });
 };
 
