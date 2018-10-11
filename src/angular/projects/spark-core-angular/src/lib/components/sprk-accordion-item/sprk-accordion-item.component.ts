@@ -79,9 +79,9 @@ export class SparkAccordionItemComponent implements OnInit {
       ? (this.iconType = 'chevron-down') // todo: add fall icons "chevron-down-circle"
       : (this.iconType = 'chevron-down');
 
-    this.isOpen === true
-      ? (this.iconStateClass = 'sprk-c-Icon--open')
-      : (this.iconStateClass = '');
+    this.isOpen === false
+      ? (this.iconStateClass = '')
+      : (this.iconStateClass = 'sprk-c-Icon--open');
   }
 
   toggleAccordion(event): void {
