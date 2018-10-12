@@ -114,7 +114,7 @@ import { Component } from '@angular/core';
             <label sprkLabel>SSN Input</label>
             <input
               [type]="ssnType"
-              [additionalClasses]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
+              [ngClass]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
               pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$" placeholder="000-00-0000"
               name="ssn_input"
               [(ngModel)]="ssn_input"
@@ -154,7 +154,7 @@ import { Component } from '@angular/core';
             <input
               name="monetary_input"
               type="text"
-              [additionalClasses]="monetaryInput.invalid && monetaryInput.dirty ? 'sprk-b-TextInput--error sprk-u-plm': 'sprk-u-plm'"
+              [ngClass]="monetaryInput.invalid && monetaryInput.dirty ? 'sprk-b-TextInput--error sprk-u-plm': 'sprk-u-plm'"
               pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
               [(ngModel)]="monetary_input"
               #monetaryInput="ngModel"
@@ -179,7 +179,7 @@ import { Component } from '@angular/core';
             <label sprkLabel>Phone Number *</label>
             <input
               name="phone_input"
-              [additionalClasses]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
+              [ngClass]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
               type="text"
               pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
               placeholder="(000) 000-0000"
@@ -200,7 +200,7 @@ import { Component } from '@angular/core';
             <input
               name="datepicker_input"
               type="text"
-              [additionalClasses]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
+              [ngClass]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"
               [(ngModel)]="datepicker_input"
@@ -217,7 +217,7 @@ import { Component } from '@angular/core';
             <label sprkLabel>Date Input (No Picker)</label>
             <input
               name="date_input"
-              [additionalClasses]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
+              [ngClass]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
               type="text"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"
