@@ -101,15 +101,14 @@ import { Component } from '@angular/core';
             <sprk-icon iconType="chevron-down" additionalClasses="sprk-b-SelectContainer__icon" sprk-select-icon></sprk-icon>
             <label sprkLabel>Select Box Label</label>
           </sprk-input-container>
-          <sprk-input-container>
+          <sprk-textarea-container>
+            <label sprkLabel>Textarea Input</label>
             <textarea
-              rows="3"
               name="textarea_input"
               [(ngModel)]="textarea_input"
               #textareaInput="ngModel"
               sprkInput></textarea>
-            <label sprkLabel>Textarea Input</label>
-          </sprk-input-container>
+          </sprk-textarea-container>
           <sprk-input-container>
             <label sprkLabel>SSN Input</label>
             <input
@@ -139,7 +138,6 @@ import { Component } from '@angular/core';
               sprkInput>
           </sprk-input-container>
           <sprk-input-container>
-            <label additionalClasses="sprk-u-ScreenReaderText" sprkLabel>Inline Search Input</label>
             <input
               name="inline_search_input"
               type="search"
@@ -214,7 +212,7 @@ import { Component } from '@angular/core';
               sprkFieldError>Invalid date.</div>
           </sprk-input-container>
           <sprk-input-container>
-            <label sprkLabel>Date Input (No Picker)</label>
+            <label sprkLabel>Closing Date</label>
             <input
               name="date_input"
               [ngClass]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"

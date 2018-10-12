@@ -33,6 +33,10 @@
   transform: scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
+.sprk-b-InputContainer--textarea > .sprk-b-Label {
+  margin-bottom: 0;
+}
+
 // label moving
 .sprk-b-TextInput ~ .sprk-b-Label {
   margin-top: $label-offset-y;
@@ -53,6 +57,10 @@
 .sprk-b-TextInput--focusin,
 .sprk-b-Select {
   padding-top: 1rem;
+}
+
+.sprk-b-InputContainer--textarea .sprk-b-TextInput {
+  padding-top: 0;
 }
 
 .sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
