@@ -59,10 +59,6 @@
   padding-top: 1rem;
 }
 
-.sprk-b-InputContainer--textarea .sprk-b-TextInput {
-  padding-top: 0;
-}
-
 .sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
@@ -73,11 +69,19 @@
   transform: translateY($label-offset-y) scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
-.sprk-b-InputContainer .sprk-b-TextInput--monetary .sprk-b-Label {
-  padding-left: 16px;
+.sprk-b-TextInput--date-picker .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-b-TextInput--date-picker .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-b-TextInput--date-picker .sprk-b-TextInput--focusin ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+  padding-left: $space-s;
 }
 
-.sprk-b-TextInput--monetary .sprk-b-TextInput--focusin ~ .sprk-b-Label,
-.sprk-b-TextInput--monetary .sprk-b-TextInput--has-value ~ .sprk-b-Label {
-  padding-left: 0;
+.sprk-b-TextInput--date-picker .sprk-b-Label {
+  padding-left: $space-l;
+}
+
+.sprk-b-TextInput--monetary .sprk-b-Label {
+  padding-left: 24px;
 }

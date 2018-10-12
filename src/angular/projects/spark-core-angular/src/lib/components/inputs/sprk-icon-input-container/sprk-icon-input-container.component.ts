@@ -5,19 +5,21 @@ import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-i
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 
 @Component({
-  selector: 'sprk-input-container',
+  selector: 'sprk-icon-input-container',
   template: `
     <div [ngClass]="getClasses()">
-      <ng-content select="[sprkInput]"></ng-content>
-      <div class="sprk-b-InputContainer__input-border"></div>
-      <ng-content select="[sprk-select-icon]"></ng-content>
-      <ng-content select="[sprkLabel]"></ng-content>
+      <div [ngClass]="getIconContainerClasses()">
+        <ng-content select="[sprk-input-icon]"></ng-content>
+        <ng-content select="[sprkInput]"></ng-content>
+        <div class="sprk-b-InputContainer__input-border"></div>
+        <ng-content select="[sprkLabel]"></ng-content>
+      </div>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
     </div>`
 })
-export class SparkInputContainerComponent implements OnInit {
+export class SparkIconInputContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
@@ -47,7 +49,10 @@ export class SparkInputContainerComponent implements OnInit {
   }
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-b-InputContainer'];
+    const classArray: string[] = [
+      'sprk-b-InputContainer',
+      'sprk-b-InputContainer--icon'
+    ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {

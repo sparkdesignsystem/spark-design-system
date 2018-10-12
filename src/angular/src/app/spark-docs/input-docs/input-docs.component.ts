@@ -113,7 +113,6 @@ import { Component } from '@angular/core';
             <label sprkLabel>SSN Input</label>
             <input
               [type]="ssnType"
-              [ngClass]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
               pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$" placeholder="000-00-0000"
               name="ssn_input"
               [(ngModel)]="ssn_input"
@@ -147,12 +146,11 @@ import { Component } from '@angular/core';
               #inlineSearchInput="ngModel"
               sprkInput>
           </sprk-input-container>
-          <sprk-input-container iconContainerClasses="sprk-b-TextInput--monetary">
+          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--monetary">
             <label sprkLabel>Payment</label>
             <input
               name="monetary_input"
               type="text"
-              [ngClass]="monetaryInput.invalid && monetaryInput.dirty ? 'sprk-b-TextInput--error sprk-u-plm': 'sprk-u-plm'"
               pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
               [(ngModel)]="monetary_input"
               #monetaryInput="ngModel"
@@ -161,7 +159,7 @@ import { Component } from '@angular/core';
               <div
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
               sprkFieldError>Invalid amount.</div>
-          </sprk-input-container>
+          </sprk-icon-input-container>
           <sprk-input-container>
             <label sprkLabel>Password</label>
             <input
@@ -177,7 +175,6 @@ import { Component } from '@angular/core';
             <label sprkLabel>Phone Number *</label>
             <input
               name="phone_input"
-              [ngClass]="phoneInput.invalid && phoneInput.dirty ? 'sprk-b-TextInput--error': ''"
               type="text"
               pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
               placeholder="(000) 000-0000"
@@ -192,13 +189,12 @@ import { Component } from '@angular/core';
               {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
             </span>
           </sprk-input-container>
-          <sprk-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
+          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
             <label sprkLabel>Date Input (picker)</label>
-            <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
+            <sprk-icon iconType="calendar" additionalClasses="sprk-b-DatePicker__icon" sprk-input-icon></sprk-icon>
             <input
               name="datepicker_input"
               type="text"
-              [ngClass]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"
               [(ngModel)]="datepicker_input"
@@ -210,12 +206,11 @@ import { Component } from '@angular/core';
               <div
               [hidden]="datepickerInput.valid || datepickerInput.pristine"
               sprkFieldError>Invalid date.</div>
-          </sprk-input-container>
+          </sprk-icon-input-container>
           <sprk-input-container>
-            <label sprkLabel>Closing Date</label>
+            <label sprkLabel>Date Input (No Picker)</label>
             <input
               name="date_input"
-              [ngClass]="dateInput.invalid && dateInput.dirty ? 'sprk-b-TextInput--error': ''"
               type="text"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"

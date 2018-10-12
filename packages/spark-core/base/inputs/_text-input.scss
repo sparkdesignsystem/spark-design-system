@@ -20,6 +20,14 @@
   position: relative;
 }
 
+.sprk-b-TextInput--date-picker .sprk-b-TextInput {
+  padding-left: $space-l;
+}
+
+.sprk-b-TextInput--monetary .sprk-b-TextInput {
+  padding-left: 24px;
+}
+
 .sprk-b-DatePicker__icon,
 .sprk-b-TextInput--monetary::before {
   position: absolute;
