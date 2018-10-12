@@ -1,4 +1,4 @@
-/* global document window */
+/* global document window Event */
 import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../utilities/getElements';
 import getArrowClass from '../utilities/getArrowClass';
@@ -28,13 +28,19 @@ const bindUIEvents = (element, config) => {
 
   const dp = TinyDatePicker(input, Object.assign(tdpConfig, config));
 
-  dp.on('open', () => {
-    const rect = input.getBoundingClientRect();
-    const cal = document.querySelector('.dp');
+  dp.on({
+    open: () => {
+      const rect = input.getBoundingClientRect();
+      const cal = document.querySelector('.dp');
 
-    cal.classList.remove('dp-above-top');
-    cal.classList.remove('dp-below-top');
-    cal.classList.add(getArrowClass(rect, window.pageYOffset, window.innerHeight));
+      cal.classList.remove('dp-above-top');
+      cal.classList.remove('dp-below-top');
+      cal.classList.add(getArrowClass(rect, window.pageYOffset, window.innerHeight));
+    },
+    select: () => {
+      input.dispatchEvent(new Event('input'));
+      input.focus();
+    },
   });
 };
 
