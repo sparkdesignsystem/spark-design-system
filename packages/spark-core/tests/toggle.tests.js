@@ -118,7 +118,7 @@ describe('Toggle tests', () => {
   });
 
   it('should toggle accordion item open', () => {
-    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('cats'); });
+    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('tests'); });
     handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
     expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
     expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-filled');
@@ -161,5 +161,17 @@ describe('Toggle tests', () => {
     setTimeout(() => {
       expect(trigger.style.pointerEvents).eql('auto');
     }, 300);
+  });
+
+  it('should still toggle content if icon is not present', () => {
+    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('test'); });
+    handleToggleClick(contentAccordion, null, null, triggerAccordion);
+    expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
+  });
+
+  it('should not add Accordion__item class if toggle is not an accordion', () => {
+    content.slideToggle = () => new Promise((resolve) => { resolve('test'); });
+    handleToggleClick(content, null, null, trigger);
+    expect(container.classList.contains('sprk-c-Accordion__item--open')).eql(false);
   });
 });
