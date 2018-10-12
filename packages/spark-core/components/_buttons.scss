@@ -30,16 +30,16 @@
   border: $btn-border-width $btn-border-style $btn-secondary-border-color;
   color: $btn-secondary-text-color;
 
+  &:visited {
+    color: $btn-secondary-text-color;
+  }
+
   &:active,
   &:focus,
   &:hover {
     background-color: $btn-secondary-hover-background-color;
     border: $btn-border-width $btn-border-style $btn-secondary-border-color;
     color: $btn-secondary-hover-text-color;
-  }
-
-  &:visited {
-    color: $btn-secondary-text-color;
   }
 }
 
