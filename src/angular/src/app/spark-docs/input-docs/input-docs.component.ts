@@ -17,9 +17,7 @@ import { Component } from '@angular/core';
               sprkInput>
             <p sprkHelperText>Please enter some input.</p>
             <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
-              <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
-                <use xlink:href="#exclamation" />
-              </svg>
+              <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
               <div class="sprk-b-ErrorText">This field is required.</div>
             </span>
           </sprk-input-container>
@@ -125,7 +123,10 @@ import { Component } from '@angular/core';
             </sprk-selection-item-container>
             <div
             [hidden]="ssnInput.valid || ssnInput.pristine"
-            sprkFieldError>Invalid SSN.</div>
+            sprkFieldError>
+              <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+              <div class="sprk-b-ErrorText">Invalid SSN.</div>
+            </div>
           </sprk-input-container>
           <sprk-input-container>
             <label sprkLabel>Search Input</label>
@@ -158,7 +159,10 @@ import { Component } from '@angular/core';
               sprkInput>
               <div
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
-              sprkFieldError>Invalid amount.</div>
+              sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">Invalid amount.</div>
+              </div>
           </sprk-icon-input-container>
           <sprk-input-container>
             <label sprkLabel>Password</label>
@@ -186,7 +190,10 @@ import { Component } from '@angular/core';
             <span
               [hidden]="phoneInput.valid || phoneInput.pristine"
               sprkFieldError>
-              {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
+              <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+              <div class="sprk-b-ErrorText">
+                {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
+              </div>
             </span>
           </sprk-input-container>
           <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
@@ -205,7 +212,10 @@ import { Component } from '@angular/core';
               sprkInput>
               <div
               [hidden]="datepickerInput.valid || datepickerInput.pristine"
-              sprkFieldError>Invalid date.</div>
+              sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">Invalid date.</div>
+              </div>
           </sprk-icon-input-container>
           <sprk-input-container>
             <label sprkLabel>Date Input (No Picker)</label>
@@ -220,7 +230,10 @@ import { Component } from '@angular/core';
               sprkInput>
             <span
               [hidden]="dateInput.valid || dateInput.pristine"
-              sprkFieldError>Invalid date.</span>
+              sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">Invalid date.</div>
+            </span>
           </sprk-input-container>
           <button additionalClasses="sprk-u-mbl" [disabled]="!sampleForm.form.valid" sprkButton>Submit</button>
           <sprk-alert

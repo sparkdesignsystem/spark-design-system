@@ -21,15 +21,14 @@ export class SprkDatepickerDirective implements OnInit {
       },
       min: '01/1/2008',
       max: '01/1/2068',
-      format: date => {
+      format: date =>
         date
           .toLocaleDateString('en-US', {
             month: '2-digit',
             day: '2-digit',
             year: 'numeric'
           })
-          .replace(/[^ -~]/g, '');
-      }
+          .replace(/[^ -~]/g, '')
     };
 
     if (this.TinyDatePicker) {
