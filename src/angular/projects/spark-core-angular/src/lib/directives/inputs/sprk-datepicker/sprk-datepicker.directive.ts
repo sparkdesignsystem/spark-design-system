@@ -35,6 +35,9 @@ export class SprkDatepickerDirective implements OnInit {
       this.TinyDatePicker(input, {
         ...tdpConfig,
         ...this.sprkDatePickerConfig
+      }).on('select', () => {
+        this.ref.nativeElement.dispatchEvent(new Event('input'));
+        this.ref.nativeElement.focus();
       });
     }
   }
