@@ -1,4 +1,4 @@
-/* global document beforeEach afterEach describe it event window */
+/* global document beforeEach afterEach describe it window */
 import { expect } from 'chai';
 import sinon from 'sinon';
 
