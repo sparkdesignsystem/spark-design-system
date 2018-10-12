@@ -47,6 +47,7 @@
   background-color: $btn-tertiary-background-color;
   border-color: $btn-tertiary-border-color;
   color: $btn-tertiary-text-color;
+  font-weight: bold;
   text-transform: uppercase;
 
   &:active,
@@ -62,12 +63,13 @@
   }
 
   &:hover::after {
+    border-color: $btn-tertiary-hover-line-color;
     animation: width-zero-to-full $btn-transition-speed ease-in-out;
   }
 
   &::after {
     content: '';
-    border-bottom: ($btn-border-width + 1px) solid $btn-border-color;
+    border-bottom: ($btn-border-width + 1px) solid $btn-tertiary-text-color;
     display: block;
     width: 100%;
     padding-top: $space-xs;
@@ -75,7 +77,6 @@
   }
 }
 
-// TODO: need disabled btn
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
   &:active,
@@ -83,10 +84,10 @@
   &:hover {
     background-color: $btn-disabled-background-color;
     border-color: transparent;
-    color: $black;
+    color: $btn-disabled-text-color;
   }
 
   &:visited {
-    color: $btn-text-color;
+    color: $btn-disabled-text-color;
   }
 }
