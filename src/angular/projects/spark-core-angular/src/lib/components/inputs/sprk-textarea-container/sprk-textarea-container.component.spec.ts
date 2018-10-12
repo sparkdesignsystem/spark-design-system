@@ -19,7 +19,7 @@ import { SparkTextareaContainerComponent } from './sprk-textarea-container.compo
 })
 class TestComponent {}
 
-describe('SparkInputContainerComponent', () => {
+describe('SparkTextareaContainerComponent', () => {
   let testFixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
 
@@ -58,7 +58,7 @@ describe('SparkInputContainerComponent', () => {
 
     labelElement = testFixture.debugElement.query(By.css('label'))
       .nativeElement;
-    inputElement = testFixture.debugElement.query(By.css('input'))
+    inputElement = testFixture.debugElement.query(By.css('textarea'))
       .nativeElement;
     errorElement = testFixture.debugElement.query(By.css('span')).nativeElement;
 
@@ -74,7 +74,7 @@ describe('SparkInputContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-u-man'
+      'sprk-b-InputContainer sprk-b-InputContainer--textarea sprk-u-man'
     );
   });
 

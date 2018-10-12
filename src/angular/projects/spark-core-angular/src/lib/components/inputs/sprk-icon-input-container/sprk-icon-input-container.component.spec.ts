@@ -11,16 +11,18 @@ import { SparkIconInputContainerComponent } from './sprk-icon-input-container.co
   template: `
     <sprk-icon-input-container>
         <label sprkLabel>Label!</label>
-        <input sprkInput>
         <div sprk-input-icon>Icon</div>
+        <input sprkInput>
         <p sprkHelperText>Helper Text!</p>
-        <span sprkFieldError>Error Message!</span>
+        <span sprkFieldError>
+          <div class="sprk-b-ErrorText">Error</div>
+        </span>
     </sprk-icon-input-container>
   `
 })
 class TestComponent {}
 
-describe('SparkInputContainerComponent', () => {
+describe('SparkIconInputContainerComponent', () => {
   let testFixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
 
@@ -77,7 +79,7 @@ describe('SparkInputContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-u-man'
+      'sprk-b-InputContainer sprk-b-InputContainer--icon sprk-u-man'
     );
   });
 
