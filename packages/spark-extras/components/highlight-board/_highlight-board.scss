@@ -38,7 +38,7 @@ $highlight-board-content-box-color: $white !default;
   }
 }
 
-.sprk-c-HighlightBoard__primary-heading {
+.sprk-c-HighlightBoard__heading {
   margin-bottom: $space-l;
 
   @media (max-width: $highlight-board-type-breakpoint) {
@@ -47,7 +47,7 @@ $highlight-board-content-box-color: $white !default;
   }
 }
 
-.sprk-c-HighlightBoard__btn {
+.sprk-c-HighlightBoard__cta {
   width: 100%;
 
   @media (min-width: $highlight-board-type-breakpoint) {
