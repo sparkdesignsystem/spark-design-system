@@ -6,10 +6,11 @@
 // Available Variables
 ///
 $highlight-board-type-breakpoint: 30rem !default;
+$highlight-board-content-width: 30rem !default;
 $highlight-board-type-reduction-percentage: 0.8 !default;
 $highlight-board-height: 31.25rem !default;
 $highlight-board-color: $white !default;
-$highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
+$highlight-board-content-box-color: $white !default;
 
 .sprk-c-HighlightBoard {
   background-color: $highlight-board-color;
@@ -30,6 +31,7 @@ $highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
 .sprk-c-HighlightBoard__content {
   background-color: $highlight-board-content-box-color;
   padding: $space-inset-tall-m;
+  text-align: center;
 
   @media (min-width: $highlight-board-type-breakpoint) {
     padding: $space-inset-tall-l;
@@ -45,7 +47,7 @@ $highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
   }
 }
 
-.sprk-c-HighlightBoard__primary-btn {
+.sprk-c-HighlightBoard__btn {
   width: 100%;
 
   @media (min-width: $highlight-board-type-breakpoint) {
@@ -58,9 +60,7 @@ $highlight-board-content-box-color: rgba(255, 255, 255, 0.9) !default;
   position: absolute;
   bottom: $space-l;
   left: $space-l;
+  max-width: $highlight-board-content-width;
   right: $space-l;
-}
-
-.sprk-c-HighlightBoard--stacked {
-  text-align: center;
+  text-align: left;
 }
