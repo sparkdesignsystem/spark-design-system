@@ -6,9 +6,7 @@
 // Available Variables
 ///
 $highlight-board-type-breakpoint: 30rem !default;
-$highlight-board-stacked-breakpoint: 40rem !default;
 $highlight-board-content-width: $highlight-board-type-breakpoint;
-$highlight-board-stacked-content-width: $highlight-board-stacked-breakpoint;
 $highlight-board-type-reduction-percentage: 0.8 !default;
 $highlight-board-height: 31.25rem !default;
 $highlight-board-color: $white !default;
@@ -49,7 +47,7 @@ $highlight-board-content-box-color: $white !default;
   }
 }
 
-.sprk-c-HighlightBoard__primary-btn {
+.sprk-c-HighlightBoard__btn {
   width: 100%;
 
   @media (min-width: $highlight-board-type-breakpoint) {
@@ -65,16 +63,4 @@ $highlight-board-content-box-color: $white !default;
   position: absolute;
   right: $space-l;
   text-align: left;
-}
-
-.sprk-c-HighlightBoard--stacked
-.sprk-c-HighlightBoard__content {
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-
-  @media (min-width: $highlight-board-stacked-breakpoint) {
-    margin-top: -($space-l * 2);
-  }
 }
