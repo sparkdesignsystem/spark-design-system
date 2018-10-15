@@ -42,7 +42,7 @@
 .sprk-b-TextInput--monetary::before {
   content: $monetary-symbol;
   display: block;
-  font-size: 1rem;
+  font-size: $space-m;
   margin-top: $input-text-icon-offset-y;
   margin-left: $input-text-icon-offset-x;
   line-height: 1;
