@@ -12,7 +12,7 @@ class TestComponent {}
 describe('Spark Input Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let inputElement: HTMLElement;
+  let inputElement: HTMLInputElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -28,5 +28,34 @@ describe('Spark Input Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add a class to the element when focusin is triggered', () => {
+    inputElement.dispatchEvent(new Event('focusin'));
+    expect(inputElement.classList.contains('sprk-b-TextInput--focusin')).toBe(
+      true
+    );
+  });
+
+  it('should add a class to the element when focusout is triggered', () => {
+    inputElement.dispatchEvent(new Event('focusout'));
+    expect(inputElement.classList.contains('sprk-b-TextInput--focusout')).toBe(
+      true
+    );
+  });
+
+  it('should add a class to the element when input is triggered and has a value', () => {
+    inputElement.value = 'test';
+    inputElement.dispatchEvent(new Event('input'));
+    expect(inputElement.classList.contains('sprk-b-TextInput--has-value')).toBe(
+      true
+    );
+  });
+
+  it('should add a class to the element when input is triggered and has no value', () => {
+    inputElement.dispatchEvent(new Event('input'));
+    expect(inputElement.classList.contains('sprk-b-TextInput--has-value')).toBe(
+      false
+    );
   });
 });

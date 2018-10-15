@@ -34,18 +34,6 @@ export class SparkInputContainerComponent implements OnInit {
   input_id = `input_${this.id}`;
   error_id = `error_${this.id}`;
 
-  getIconContainerClasses(): string {
-    const classArray: string[] = [];
-
-    if (this.iconContainerClasses) {
-      this.iconContainerClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
-
   getClasses(): string {
     const classArray: string[] = ['sprk-b-InputContainer'];
 

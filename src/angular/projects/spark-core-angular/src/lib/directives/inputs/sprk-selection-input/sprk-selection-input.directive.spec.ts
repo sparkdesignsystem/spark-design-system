@@ -34,6 +34,8 @@ describe('SprkSelectionInputDirective', () => {
   });
 
   it('should add the correct classes to the applied element', () => {
-    expect(inputElement.nativeElement.classList.toString()).toEqual('');
+    expect(inputElement.nativeElement.classList.toString()).toEqual(
+      'sprk-b-SelectionInput'
+    );
   });
 });

@@ -9,7 +9,7 @@ import { SparkIconInputContainerComponent } from './sprk-icon-input-container.co
 @Component({
   selector: 'sprk-test',
   template: `
-    <sprk-icon-input-container>
+    <sprk-icon-input-container iconContainerClasses="sprk-u-man">
         <label sprkLabel>Label!</label>
         <div sprk-input-icon>Icon</div>
         <input sprkInput>
