@@ -3,16 +3,16 @@ import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../utilities/getElements';
 import getArrowClass from '../utilities/getArrowClass';
 
-const testWidthForReadOnly = (element) => {
-  element.removeAttribute('readonly');
-  if (window.innerWidth && window.innerWidth < 768) {
-    element.setAttribute('readonly', '');
-  }
-};
+// const testWidthForReadOnly = (element) => {
+//   element.removeAttribute('readonly');
+//   if (window.innerWidth && window.innerWidth < 768) {
+//     element.setAttribute('readonly', '');
+//   }
+// };
 
 const bindUIEvents = (element, config) => {
   const input = element.querySelector('input');
-  testWidthForReadOnly(input);
+  // testWidthForReadOnly(input);
 
   const tdpConfig = {
     mode: 'dp-below',
@@ -49,11 +49,11 @@ const datePicker = (config) => {
     bindUIEvents(element, config);
   });
 
-  window.addEventListener('resize', () => {
-    getElements('[data-sprk-datepicker] input', (element) => {
-      testWidthForReadOnly(element);
-    });
-  });
+  // window.addEventListener('resize', () => {
+  //   getElements('[data-sprk-datepicker] input', (element) => {
+  //     testWidthForReadOnly(element);
+  //   });
+  // });
 };
 
-export { datePicker, testWidthForReadOnly, bindUIEvents };
+export { datePicker, bindUIEvents };
