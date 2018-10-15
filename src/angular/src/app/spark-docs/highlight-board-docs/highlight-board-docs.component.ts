@@ -22,6 +22,20 @@ import { Component } from '@angular/core';
   <div class="drizzle-o-ContentGrouping">
     <div class="sprk-o-CenteredColumn">
       <h2 class="drizzle-b-h2">
+        Highlight Board Default 2
+      </h2>
+
+      <sprk-highlight-board
+        heading="Highlight Board Heading Example"
+        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+        imgAlt="placeholder">
+      </sprk-highlight-board>
+    </div>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <div class="sprk-o-CenteredColumn">
+      <h2 class="drizzle-b-h2">
         Highlight Board With No Image
       </h2>
 

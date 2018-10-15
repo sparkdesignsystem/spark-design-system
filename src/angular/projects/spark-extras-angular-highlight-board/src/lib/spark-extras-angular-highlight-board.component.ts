@@ -16,6 +16,7 @@ import { Component, Input } from '@angular/core';
       </h1>
 
       <sprk-stack
+        *ngIf="ctaText"
         itemSpacing="medium"
         splitAt="tiny"
         additionalClasses="sprk-o-Stack--center-column {{centerBtns}}">
