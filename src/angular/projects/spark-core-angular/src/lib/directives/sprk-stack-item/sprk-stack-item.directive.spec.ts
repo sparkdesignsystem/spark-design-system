@@ -6,10 +6,10 @@ import { SprkStackItemDirective } from './sprk-stack-item.directive';
   selector: 'sprk-test',
   template: `
   <div
-    additionalClasses="sprk-u-man"
-  sprkStackItem></div>
-  <div
-  sprkStackItem></div>`
+    class="sprk-u-man"
+    sprkStackItem>
+  </div>
+  <div sprkStackItem></div>`
 })
 class TestComponent {}
 
@@ -34,17 +34,5 @@ describe('Spark Stack Item Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should add classes if additionalClasses has a value', () => {
-    fixture.detectChanges();
-    expect(item1Element.classList.toString()).toEqual(
-      'sprk-o-Stack__item sprk-u-man'
-    );
-  });
-
-  it('should not add classes if additionalClasses has no value', () => {
-    fixture.detectChanges();
-    expect(item2Element.classList.toString()).toEqual('sprk-o-Stack__item');
   });
 });

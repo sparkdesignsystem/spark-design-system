@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
+        ctaText2="Learn More"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
         imgAlt="placeholder">
       </sprk-highlight-board>
@@ -27,8 +27,8 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
+        ctaText2="Learn More"
         type="noImage">
       </sprk-highlight-board>
     </div>
@@ -42,7 +42,6 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
         type="stacked"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
@@ -58,7 +57,6 @@ import { Component } from '@angular/core';
 
     <sprk-highlight-board
       heading="Highlight Board Heading Example"
-      subHeading="Sub heading example for the Highlight Board component."
       ctaText="Learn More"
       ctaTwoText="CTA Two"
       type="fullWidth"

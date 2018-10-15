@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
         <div
           *ngFor="let column of siteLinkCols"
           sprkStackItem
-          additionalClasses="sprk-o-Stack__item--equal@m">
+          class="sprk-o-Stack__item--equal@m">
           <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
             {{ column.heading }}
           </h2>
@@ -33,7 +33,7 @@ import { Component, Input } from '@angular/core';
       </sprk-stack>
 
       <sprk-stack splitAt="{{ splitAt }}" itemSpacing="large" sprkStackItem>
-        <div sprkStackItem additionalClasses="sprk-o-Stack__item--equal@xl sprk-o-Stack sprk-o-Stack--large">
+        <div sprkStackItem class="sprk-o-Stack__item--equal@xl sprk-o-Stack sprk-o-Stack--large">
           <ul
             *ngIf="socialLinks"
             class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-b-List sprk-b-List--bare">
@@ -78,7 +78,7 @@ import { Component, Input } from '@angular/core';
             <ng-content></ng-content>
           </p>
 
-          <div sprkStackItem additionalClasses="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div sprkStackItem class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div *ngFor="let img of badges" [ngClass]="getClassesBadges()">
               <a [routerLink]="img.href" [attr.data-analytics]="img.analytics">
                 <img src="{{ img.src }}" alt="{{ img.alt }}">
