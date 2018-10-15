@@ -10,29 +10,21 @@ import { Component, Input } from '@angular/core';
       src="{{ imgSrc }}"
       alt="{{ imgAlt }}">
 
-    <div
-      [ngClass]="{
-        'sprk-c-HighlightBoard__content': true,
-        'sprk-c-HighlightBoard__content--light': type === 'default' || !type || type === 'fullWidth'
-      }">
-      <div class="sprk-u-mbl">
-        <h1 class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__primary-heading sprk-u-mbs">
-          {{ heading }}
-        </h1>
-
-        <h4 class="sprk-b-TypeDisplayFour sprk-c-HighlightBoard__sub-heading sprk-u-mbm">
-          {{ subHeading }}
-        </h4>
-      </div>
+    <div class="sprk-c-HighlightBoard__content">
+      <h1 class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__heading">
+        {{ heading }}
+      </h1>
 
       <sprk-stack
         itemSpacing="medium"
-        splitAt="small"
-        additionalClasses="sprk-c-HighlightBoard__cta-container">
-        <div sprkStackItem>
+        splitAt="tiny"
+        additionalClasses="sprk-o-Stack--center-column {{centerBtns}}">
+        <div
+          sprkStackItem
+          class="sprk-c-HighlightBoard__cta">
           <a
             [routerLink]="ctaHref"
-            class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+            class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
             [attr.data-analytics]="analyticsStringCta">
             {{ ctaText }}
           </a>
@@ -40,10 +32,11 @@ import { Component, Input } from '@angular/core';
 
         <div
           sprkStackItem
-          *ngIf="ctaText2">
+          *ngIf="ctaText2"
+          class="sprk-c-HighlightBoard__cta">
           <a
             [routerLink]="ctaHref2"
-            class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
             [attr.data-analytics]="analyticsStringCta2">
             {{ ctaText2 }}
           </a>
@@ -57,8 +50,6 @@ import { Component, Input } from '@angular/core';
 export class SparkHighlightBoardComponent {
   @Input()
   heading: string;
-  @Input()
-  subHeading: string;
   @Input()
   imgSrc: string;
   @Input()
@@ -80,13 +71,17 @@ export class SparkHighlightBoardComponent {
   @Input()
   type: string;
 
+  public centerBtns = '';
+
   getClasses(): string {
     const classArray: string[] = ['sprk-c-HighlightBoard'];
 
     switch (this.type) {
       case 'noImage':
+        this.centerBtns = 'sprk-o-Stack--center-row';
         break;
       case 'stacked':
+        this.centerBtns = 'sprk-o-Stack--center-row';
         classArray.push(
           'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked'
         );
