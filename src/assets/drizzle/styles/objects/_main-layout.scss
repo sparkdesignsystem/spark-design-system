@@ -1,5 +1,9 @@
 $drizzle-header-padding-vert-wide: 1rem;
 
+.#{$app-namespace}-o-layout__wrapper {
+  flex: 1 0 auto;
+}
+
 .#{$app-namespace}-o-Layout {
   height: 100%;
   margin: 0;
@@ -13,6 +17,7 @@ $drizzle-header-padding-vert-wide: 1rem;
 }
 
 .#{$app-namespace}-o-Layout__footer {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
