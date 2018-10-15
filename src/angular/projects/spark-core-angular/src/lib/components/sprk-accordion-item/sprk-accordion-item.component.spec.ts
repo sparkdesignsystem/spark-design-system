@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkAccordionItemComponent } from './sprk-accordion-item.component';
 
@@ -12,6 +13,7 @@ describe('SparkAccordionItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [SparkAccordionItemComponent, SparkIconComponent]
     }).compileComponents();
   }));
@@ -24,9 +26,7 @@ describe('SparkAccordionItemComponent', () => {
     accordionHeadingElement = fixture.nativeElement.querySelector(
       '.sprk-c-Accordion__heading'
     );
-    accordionDetailsElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Accordion__details'
-    );
+    accordionDetailsElement = fixture.nativeElement.querySelector('div');
   });
 
   it('should create itself', () => {
@@ -36,7 +36,7 @@ describe('SparkAccordionItemComponent', () => {
   it('should add classes if additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(accordionItemElement.classList.toString()).toEqual(
+    expect(accordionItemElement.classList.toString()).toContain(
       'sprk-c-Accordion__item sprk-u-man'
     );
   });
@@ -53,9 +53,7 @@ describe('SparkAccordionItemComponent', () => {
     component.isOpen = false;
     fixture.detectChanges();
     expect(
-      accordionItemLinkElement.classList.contains(
-        'sprk-c-Accordion__summary--open'
-      )
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--open')
     ).toEqual(false);
   });
 
@@ -63,9 +61,7 @@ describe('SparkAccordionItemComponent', () => {
     component.isOpen = true;
     fixture.detectChanges();
     expect(
-      accordionItemLinkElement.classList.contains(
-        'sprk-c-Accordion__summary--open'
-      )
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--open')
     ).toEqual(true);
   });
 
@@ -84,9 +80,9 @@ describe('SparkAccordionItemComponent', () => {
     );
   });
 
-  it('details should not be present is isOpen is false', () => {
+  it('details should not be present if isOpen is false', () => {
     component.isOpen = false;
     fixture.detectChanges();
-    expect(accordionDetailsElement).toEqual(null);
+    expect(accordionDetailsElement.style.display).toEqual('none');
   });
 });

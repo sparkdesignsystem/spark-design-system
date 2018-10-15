@@ -2,21 +2,18 @@
 // Accordions
 // ==================================================================
 .sprk-c-Accordion {
+  border-top: $accordion-border;
   margin: 0 auto;
   max-width: $accordion-max-width;
   width: 100%;
 }
 
 .sprk-c-Accordion__item {
-  margin-bottom: $space-xs;
+  border-bottom: $accordion-border;
+}
 
-  &:first-child {
-    border-top: $accordion-border;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+.sprk-c-Accordion__item--open {
+  border-bottom: $accordion-border-open;
 }
 
 .sprk-c-Accordion__heading {
@@ -25,7 +22,6 @@
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
-  transition: transform $accordion-toggle-transistion-timing;
 }
 
 .sprk-c-Accordion__summary {
@@ -42,32 +38,16 @@
   }
 }
 
-.sprk-c-Accordion__summary--open .sprk-c-Accordion__heading {
+.sprk-c-Accordion__item--open .sprk-c-Accordion__heading {
   font-weight: bold;
 }
 
-.sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
+.sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
   color: $accordion-summary-active-color;
-  transform: rotate(180deg);
-  transform-origin: center;
-}
-
-.sprk-c-Accordion__details {
-  border-bottom: $accordion-border;
-  overflow: hidden;
-  transition: height $accordion-toggle-transistion-timing;
 }
 
 .sprk-c-Accordion__content {
   padding-bottom: $space-l;
-}
-
-.sprk-c-Accordion__details--open {
-  border-bottom: $accordion-border-open;
-}
-
-.sprk-c-Accordion__details:not(.sprk-c-Accordion__details--open) {
-  height: 0;
 }
 
 // Accordion Navigation Styles TODO: FALL
