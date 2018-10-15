@@ -1,6 +1,10 @@
 .#{$app-namespace}-c-Footer {
   background-color: $purple;
   padding: $space-inset-short-l;
+
+  @media (max-width: 21.5625rem) {
+    padding: $space-inset-short-m;
+  }
 }
 
 .#{$app-namespace}-c-Footer__icons {
