@@ -6,7 +6,7 @@
 // Available Variables
 ///
 $highlight-board-type-breakpoint: 30rem !default;
-$highlight-board-content-width: $highlight-board-type-breakpoint;
+$highlight-board-content-width: 30rem !default;
 $highlight-board-type-reduction-percentage: 0.8 !default;
 $highlight-board-height: 31.25rem !default;
 $highlight-board-color: $white !default;
@@ -57,10 +57,10 @@ $highlight-board-content-box-color: $white !default;
 
 .sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked)
 .sprk-c-HighlightBoard__content {
+  position: absolute;
   bottom: $space-l;
   left: $space-l;
   max-width: $highlight-board-content-width;
-  position: absolute;
   right: $space-l;
   text-align: left;
 }
