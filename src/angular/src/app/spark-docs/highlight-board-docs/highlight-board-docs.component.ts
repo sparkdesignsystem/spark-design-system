@@ -72,9 +72,11 @@ import { Component } from '@angular/core';
     </h2>
 
     <sprk-highlight-board
-      heading="Highlight Board Heading Example"
-      ctaText="Learn More"
-      ctaTwoText="CTA Two"
+      heading="Hello, Welcome To Spark Design System"
+      ctaText="Designers"
+      ctaHref="https://sparkdesignsystem.com/"
+      ctaText2="Developers"
+      ctaHref2="https://sparkdesignsystem.com/"
       type="fullWidth"
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
       imgAlt="placeholder">
