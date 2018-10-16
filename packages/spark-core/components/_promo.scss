@@ -14,22 +14,32 @@
   font-weight: $font-weight-body-one;
 }
 
-.sprk-c-Promo__image--reversed {
-  position: absolute;
-  right: 0;
+.sprk-c-Promo__image {
+  object-fit: contain;
 }
 
-.sprk-c-Promo__container {
-  box-shadow: $promo-shadow; //TODO set up promo variables
+.sprk-c-Promo--image-reversed {
+  text-align: right;
+}
+
+.sprk-c-Promo--image-reversed .sprk-c-Promo__content {
+  left: 0;
+}
+
+.sprk-c-Promo__content {
+  text-align: left;
+  border: $promo-border;
+  box-shadow: $promo-shadow;
   padding: $space-inset-l;
   background-color: $white;
   position: absolute;
   left: $promo-image-offset-horizontal;
   bottom: $promo-image-offset-bottom;
-  width: 66%;
-}
+  width: $promo-content-width;
 
-.sprk-c-Promo__container--reversed {
-  left: auto;
-  right: $promo-image-offset-horizontal;
+  @media (max-width: $promo-breakpoint) {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
 }
