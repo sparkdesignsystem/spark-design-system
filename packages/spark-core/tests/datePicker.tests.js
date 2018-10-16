@@ -11,8 +11,8 @@ describe('datePicker tests', () => {
   const tinyDatePickerStub = (element, config) => {
     config.format(new Date('10/31/1999'));
     const stub = {
-      on: () => {},
-      select: () => {},
+      on: (eventName, cb) => { cb(); },
+      select: (eventName, cb) => { cb(); },
     };
 
     window.addEventListener('dpOpen', stub.on);

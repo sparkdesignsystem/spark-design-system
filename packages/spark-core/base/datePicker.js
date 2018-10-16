@@ -1,7 +1,6 @@
 /* global window */
 import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../utilities/getElements';
-import { open, select } from '../utilities/datePickerFunctions';
 
 const setupTDP = (input, config) => {
   const tdpConfig = {
@@ -18,9 +17,9 @@ const setupTDP = (input, config) => {
 
   const dp = TinyDatePicker(input, Object.assign(tdpConfig, config));
 
-  dp.on({
-    open,
-    select,
+  dp.on('select', () => {
+    input.dispatchEvent(new window.Event('input'));
+    input.focus();
   });
 };
 
