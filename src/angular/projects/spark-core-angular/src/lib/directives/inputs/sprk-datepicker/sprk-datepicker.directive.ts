@@ -31,7 +31,7 @@ export class SprkDatepickerDirective implements OnInit {
           .replace(/[^ -~]/g, '')
     };
 
-    if (this.TinyDatePicker) {
+    if (this.TinyDatePicker && window.innerWidth > 768) {
       this.TinyDatePicker(input, {
         ...tdpConfig,
         ...this.sprkDatePickerConfig
@@ -39,6 +39,8 @@ export class SprkDatepickerDirective implements OnInit {
         this.ref.nativeElement.dispatchEvent(new Event('input'));
         this.ref.nativeElement.focus();
       });
+    } else {
+      this.ref.nativeElement.setAttribute('type', 'date');
     }
   }
 }
