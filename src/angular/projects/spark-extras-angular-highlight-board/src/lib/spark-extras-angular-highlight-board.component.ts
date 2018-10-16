@@ -10,12 +10,18 @@ import { Component, Input } from '@angular/core';
       src="{{ imgSrc }}"
       alt="{{ imgAlt }}">
 
-    <div class="sprk-c-HighlightBoard__content">
-      <h1 class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__heading">
+    <sprk-stack
+      sprkStackItem
+      itemSpacing="large"
+      additionalClasses="sprk-c-HighlightBoard__content">
+      <h1
+        sprkStackItem
+        class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__heading">
         {{ heading }}
       </h1>
 
       <sprk-stack
+        sprkStackItem
         *ngIf="ctaText"
         itemSpacing="medium"
         splitAt="tiny"
@@ -43,7 +49,7 @@ import { Component, Input } from '@angular/core';
           </a>
         </div>
       </sprk-stack>
-    </div>
+    </sprk-stack>
   </div>
   `,
   styles: ['']

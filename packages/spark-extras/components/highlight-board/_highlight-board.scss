@@ -32,6 +32,7 @@ $highlight-board-content-box-color: $white !default;
   background-color: $highlight-board-content-box-color;
   padding: $space-inset-tall-m;
   text-align: center;
+  width: auto;
 
   @media (min-width: $highlight-board-type-breakpoint) {
     padding: $space-inset-tall-l;
@@ -39,8 +40,6 @@ $highlight-board-content-box-color: $white !default;
 }
 
 .sprk-c-HighlightBoard__heading {
-  margin-bottom: $space-l;
-
   @media (max-width: $highlight-board-type-breakpoint) {
     // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
