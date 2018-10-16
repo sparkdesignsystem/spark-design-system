@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkToggleComponent } from './sprk-toggle.component';
 
@@ -9,6 +10,7 @@ describe('SparkToggleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [SparkToggleComponent, SparkIconComponent]
     }).compileComponents();
   }));
@@ -21,11 +23,6 @@ describe('SparkToggleComponent', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('getClasses should match what gets set on the div', () => {
-    fixture.detectChanges();
-    expect(element.classList.toString()).toEqual(component.getClasses());
   });
 
   it('clicking should show body text', () => {
@@ -50,7 +47,7 @@ describe('SparkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('a .sprk-c-Icon').classList.toString()
-    ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--open');
+    ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open');
   });
 
   it('should add icon classes to icon when toggle is opened and then closed', () => {
@@ -61,12 +58,12 @@ describe('SparkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('a .sprk-c-Icon').classList.toString()
-    ).toEqual('sprk-c-Icon sprk-u-mrs');
+    ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle');
   });
 
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual(' sprk-u-pam sprk-u-man');
+    expect(element.classList.toString()).toEqual('sprk-u-pam sprk-u-man');
   });
 });
