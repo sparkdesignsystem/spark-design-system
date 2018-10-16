@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
           [wideNavLinks]="links"
           [secondaryNavLinks]="links"
           [narrowNavLinks]="links">
+          <img alt="Provide useful alternative text" src="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg" logo-slot>
           <div class="sprk-b-InputContainer" upper-slot>
             <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
             <input
