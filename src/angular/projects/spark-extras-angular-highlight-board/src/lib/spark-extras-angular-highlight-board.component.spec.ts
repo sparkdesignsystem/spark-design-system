@@ -53,21 +53,24 @@ describe('SparkHighlightBoardComponent', () => {
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringCta Input', () => {
-    const str = 'One';
+    const str = 'Cats';
+    component.ctaText = str;
     component.analyticsStringCta = str;
     fixture.detectChanges();
-    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
-      str
-    );
+    const link = element.querySelectorAll('[data-analytics]');
+    expect(link[0].getAttribute('data-analytics')).toEqual(str);
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringCta2 Input', () => {
-    const str = 'One';
-    component.ctaText2 = str;
-    component.analyticsStringCta2 = str;
+    const cats = 'Cats';
+    component.ctaText = cats;
+    component.analyticsStringCta = cats;
+    const dogs = 'Dogs';
+    component.ctaText2 = dogs;
+    component.analyticsStringCta2 = dogs;
     fixture.detectChanges();
-    const link2 = element.querySelectorAll('a');
-    expect(link2[1].getAttribute('data-analytics')).toEqual(str);
+    const link2 = element.querySelectorAll('[data-analytics]');
+    expect(link2[1].getAttribute('data-analytics')).toEqual(dogs);
   });
 
   it('should add the correct classes if type and additionalClasses have values', () => {
