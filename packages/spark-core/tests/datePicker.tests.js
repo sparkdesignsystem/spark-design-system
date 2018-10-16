@@ -10,16 +10,19 @@ describe('datePicker tests', () => {
   let input;
   const tinyDatePickerStub = (element, config) => {
     config.format(new Date('10/31/1999'));
-    return {
-      on: (eventName, cb) => {
-        window.addEventListener('dpOpen', cb);
-      },
+    const stub = {
+      on: () => {},
+      select: () => {},
     };
+
+    window.addEventListener('dpOpen', stub.on);
+    window.addEventListener('dpSelect', stub.select);
+    return stub;
   };
 
   const tdpSpy = sinon.spy(tinyDatePickerStub);
 
-  const { datePicker, testWidthForReadOnly } = proxyquire('../base/datePicker',
+  const { datePicker } = proxyquire('../base/datePicker',
     { 'tiny-date-picker': tdpSpy });
 
 
@@ -29,7 +32,6 @@ describe('datePicker tests', () => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-datepicker', '');
     input = document.createElement('input');
-    input.click();
     input.type = 'text';
     input.setAttribute(
       'pattern',
@@ -40,6 +42,7 @@ describe('datePicker tests', () => {
     document.body.appendChild(dp);
     document.body.appendChild(inputContainer);
     window.dispatchEvent(new window.Event('dpOpen'));
+    window.dispatchEvent(new window.Event('dpSelect'));
   });
 
   afterEach(() => {
@@ -62,20 +65,33 @@ describe('datePicker tests', () => {
     expect(tdpSpy.getCalls()[2].args[1].mode).eql('dp-modal');
   });
 
-  it('testWidthForReadOnly should remove readonly and add it back '
-    + 'if window.innerWidth < 768', () => {
-    input.setAttribute('readonly', '');
-    testWidthForReadOnly(input);
-    expect(input.getAttribute('readonly')).eql(null);
-
+  it('if window is < 768, should switch type to date', () => {
+    input.setAttribute('type', 'text');
     window.innerWidth = 767;
-    testWidthForReadOnly(input);
-    expect(input.getAttribute('readonly')).not.eql(null);
+    datePicker(input);
+    expect(input.getAttribute('type')).eql('date');
   });
 
-  it('should call testWidthForReadOnly if resize is triggered', () => {
+  it('if window is >= 768, should switch type to text', () => {
+    input.setAttribute('type', 'date');
+    window.innerWidth = 769;
+    datePicker(input);
+    expect(input.getAttribute('type')).eql('text');
+  });
+
+  it('if resize is triggered and window < 768, should set type to date', () => {
+    input.setAttribute('type', 'text');
     window.innerWidth = 767;
+    datePicker(input);
     window.dispatchEvent(new window.Event('resize'));
-    expect(input.getAttribute('readonly')).not.eql(null);
+    expect(input.getAttribute('type')).eql('date');
+  });
+
+  it('if resize is triggered and window >= 768, should set type to text', () => {
+    input.setAttribute('type', 'date');
+    window.innerWidth = 769;
+    datePicker(input);
+    window.dispatchEvent(new window.Event('resize'));
+    expect(input.getAttribute('type')).eql('text');
   });
 });

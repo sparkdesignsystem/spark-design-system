@@ -1,19 +1,9 @@
-/* global document window Event */
+/* global window */
 import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../utilities/getElements';
-import getArrowClass from '../utilities/getArrowClass';
+import { open, select } from '../utilities/datePickerFunctions';
 
-// const testWidthForReadOnly = (element) => {
-//   element.removeAttribute('readonly');
-//   if (window.innerWidth && window.innerWidth < 768) {
-//     element.setAttribute('readonly', '');
-//   }
-// };
-
-const bindUIEvents = (element, config) => {
-  const input = element.querySelector('input');
-  // testWidthForReadOnly(input);
-
+const setupTDP = (input, config) => {
   const tdpConfig = {
     mode: 'dp-below',
     lang: {
@@ -29,18 +19,27 @@ const bindUIEvents = (element, config) => {
   const dp = TinyDatePicker(input, Object.assign(tdpConfig, config));
 
   dp.on({
-    open: () => {
-      const rect = input.getBoundingClientRect();
-      const cal = document.querySelector('.dp');
+    open,
+    select,
+  });
+};
 
-      cal.classList.remove('dp-above-top');
-      cal.classList.remove('dp-below-top');
-      cal.classList.add(getArrowClass(rect, window.pageYOffset, window.innerHeight));
-    },
-    select: () => {
-      input.dispatchEvent(new Event('input'));
-      input.focus();
-    },
+const bindUIEvents = (element, config) => {
+  const input = element.querySelector('input');
+
+  if (window.innerWidth && window.innerWidth < 768) {
+    input.setAttribute('type', 'date');
+  } else {
+    setupTDP(input, config);
+    input.setAttribute('type', 'text');
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth && window.innerWidth < 768) {
+      input.setAttribute('type', 'date');
+    } else {
+      input.setAttribute('type', 'text');
+    }
   });
 };
 
@@ -48,12 +47,6 @@ const datePicker = (config) => {
   getElements('[data-sprk-datepicker]', (element) => {
     bindUIEvents(element, config);
   });
-
-  // window.addEventListener('resize', () => {
-  //   getElements('[data-sprk-datepicker] input', (element) => {
-  //     testWidthForReadOnly(element);
-  //   });
-  // });
 };
 
 export { datePicker, bindUIEvents };
