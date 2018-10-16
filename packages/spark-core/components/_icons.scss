@@ -22,7 +22,12 @@
   width: $icon-xxl;
 }
 
+// Initial state for icons that will be toggled
+.sprk-c-Icon--toggle {
+  transform-origin: center;
+  transition: transform $toggle-transistion-timing;
+}
+
 .sprk-c-Icon--open {
-  transform: rotate(180deg);
-  transform-origin: 50% 45%;
+  transform: rotate(-180deg);
 }

@@ -229,17 +229,31 @@ $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
 $btn-border-radius: 0 !default;
-$btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray !default;
-$btn-disabled-text-color: $black-tint-50 !default;
-$btn-disabled-border-width: $btn-border-width !default;
-$btn-disabled-border-color: $btn-disabled-background-color !default;
 $btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-text-color: $white !default;
 $btn-breakpoint: 30rem !default;
 $btn-transition-speed: 0.3s !default;
+// Disabled
+$btn-disabled-opacity: 1 !default;
+$btn-disabled-background-color: $gray !default;
+$btn-disabled-text-color: $black-tint-50 !default;
+$btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-border-color: $btn-disabled-background-color !default;
+// Secondary
+$btn-secondary-background-color: transparent !default;
+$btn-secondary-border-color: $black !default;
+$btn-secondary-hover-text-color: $white !default;
+$btn-secondary-hover-background-color: $black !default;
+$btn-secondary-text-color: $black !default;
+// Tertiary
+$btn-tertiary-background-color: transparent !default;
+$btn-tertiary-border-color: transparent !default;
+$btn-tertiary-hover-text-color: $black !default;
+$btn-tertiary-hover-line-color: $red-real !default;
+$btn-tertiary-hover-background-color: transparent !default;
+$btn-tertiary-text-color: $black !default;
 
 //
 // Links
@@ -375,7 +389,11 @@ $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red-real !default;
-$accordion-toggle-transistion-timing: 0.3s ease;
+
+//
+// Toggle
+//
+$toggle-transistion-timing: 0.3s ease;
 
 //
 // Dividers
