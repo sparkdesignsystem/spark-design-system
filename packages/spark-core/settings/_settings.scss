@@ -245,10 +245,7 @@ $alert-shadow-hover-fail: inset -64px 0 0 $alert-color-fail !default;
 // Promos
 ///
 $promo-border: 1px solid $gray-light !default;
-$promo-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
-$promo-image-offset-horizontal: 33%;
-$promo-image-offset-bottom: 25%;
-$promo-content-width: 66% !default;
+$promo-max-width: 42.5rem !default;
 $promo-breakpoint: 42.5rem !default;
 
 //

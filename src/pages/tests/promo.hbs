@@ -2,21 +2,23 @@
 title: Promo Tests
 layout: blank
 ---
-<h1 class="drizzle-b-h1">
-  Promo
-</h1>
-<div class="drizzle-c-Space-inset-m">
-  {{#embed "patterns.components.promo.base" hasIcon=false hasSubTitle=true hasCta=true hasImg=false}}{{/embed}}
-</div>
+<div class="sprk-o-CenteredColumn">
+  <h1 class="drizzle-b-h1">
+    Promo
+  </h1>
+  <div class="drizzle-c-Space-inset-m">
+    {{#embed "patterns.components.promo.default" hasSubTitle=true hasCta=true}}{{/embed}}
+  </div>
 
-<div class="drizzle-c-Space-inset-m">
-  {{#embed "patterns.components.promo.base" hasIcon=true hasSubTitle=true hasCta=true hasImg=false}}{{/embed}}
-</div>
+  <div class="drizzle-c-Space-inset-m">
+    {{#embed "patterns.components.promo.has-icon" hasSubTitle=true hasCta=true}}{{/embed}}
+  </div>
 
-<div class="drizzle-c-Space-inset-m">
-  {{#embed "patterns.components.promo.base" hasImg=true}}{{/embed}}
-</div>
+  <div class="drizzle-c-Space-inset-m">
+    {{#embed "patterns.components.promo.has-image"}}{{/embed}}
+  </div>
 
-<div class="drizzle-c-Space-inset-m">
-  {{#embed "patterns.components.promo.base" hasImg=true isReversed=true}}{{/embed}}
+  <div class="drizzle-c-Space-inset-m">
+    {{#embed "patterns.components.promo.is-reversed"}}{{/embed}}
+  </div>
 </div>

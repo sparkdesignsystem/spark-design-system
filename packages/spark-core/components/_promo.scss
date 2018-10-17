@@ -2,49 +2,35 @@
 // Promo
 // ==================================================================
 .sprk-c-Promo {
-  position: relative;
-  padding: $space-inset-l;
+  max-width: $promo-max-width;
+  margin: 0 auto;
+  border: $promo-border;
 }
 
 .sprk-c-Promo__title {
-  color: $red-real;
+  font-weight: $font-weight-display-four;
 }
 
 .sprk-c-Promo__subtitle {
   font-weight: $font-weight-body-one;
 }
 
+.sprk-c-Promo__icon {
+  text-align: center;
+  align-self: center;
+}
+
 .sprk-c-Promo__image {
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   @media (max-width: $promo-breakpoint) {
-    min-width: 100%;
-    height: auto;
+    width: 100%;
   }
-}
-
-.sprk-c-Promo--image-reversed {
-  text-align: right;
-}
-
-.sprk-c-Promo--image-reversed .sprk-c-Promo__content {
-  left: 0;
 }
 
 .sprk-c-Promo__content {
   background-color: $white;
-  border: $promo-border;
-  box-shadow: $promo-shadow;
   padding: $space-inset-l;
-  left: $promo-image-offset-horizontal;
-  bottom: $promo-image-offset-bottom;
-  width: $promo-content-width;
-  text-align: left;
-  position: absolute;
-
-  @media (max-width: $promo-breakpoint) {
-    left: 0;
-    width: 100%;
-    position: relative;
-  }
 }
