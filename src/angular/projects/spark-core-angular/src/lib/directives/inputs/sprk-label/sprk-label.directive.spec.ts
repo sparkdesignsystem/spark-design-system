@@ -6,9 +6,7 @@ import { SprkLabelDirective } from './sprk-label.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-  <label
-    additionalClasses="sprk-u-man"
-    sprkLabel>
+  <label sprkLabel>
     Label!
   </label>`
 })
@@ -36,11 +34,5 @@ describe('SprkLabelDirective', () => {
     expect(
       inputElement.nativeElement.classList.contains('sprk-b-Label')
     ).toEqual(true);
-  });
-
-  it('should add classes if additionalClasses has a value', () => {
-    expect(inputElement.nativeElement.classList.contains('sprk-u-man')).toEqual(
-      true
-    );
   });
 });

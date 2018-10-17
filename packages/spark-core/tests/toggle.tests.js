@@ -142,6 +142,7 @@ describe('Toggle tests', () => {
   });
 
   it('should show details when clicked', () => {
+    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('test'); });
     bindToggleUIEvents(containerAccordion);
     const event = new window.Event('click');
     triggerAccordion.dispatchEvent(event);

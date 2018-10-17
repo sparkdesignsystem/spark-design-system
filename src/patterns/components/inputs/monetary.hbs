@@ -11,7 +11,7 @@ hasAngularCodeInfo: true
 
 <div class="sprk-b-InputContainer" data-sprk-input="monetary">
   <div class="sprk-b-TextInput--monetary">
-    <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Width-100 sprk-u-plm"
+    <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
            pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$"
            id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}"
            type="tel"
@@ -20,7 +20,7 @@ hasAngularCodeInfo: true
            {{#if disabled}} disabled{{/if}}
            data-sprk-input="text">
     <div class="sprk-b-InputContainer__input-border"></div>
-    <label for="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}" class="sprk-b-Label sprk-u-plm">Payment</label>
+    <label for="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}" class="sprk-b-Label">Payment</label>
   </div>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container">
     {{#if errorMessage}}

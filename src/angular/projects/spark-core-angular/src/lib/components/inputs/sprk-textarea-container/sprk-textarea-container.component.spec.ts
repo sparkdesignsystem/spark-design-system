@@ -4,27 +4,27 @@ import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SparkInputContainerComponent } from './sprk-input-container.component';
+import { SparkTextareaContainerComponent } from './sprk-textarea-container.component';
 
 @Component({
   selector: 'sprk-test',
   template: `
-    <sprk-input-container>
+    <sprk-textarea-container>
         <label sprkLabel>Label!</label>
-        <input sprkInput>
+        <textarea sprkInput></textarea>
         <p sprkHelperText>Helper Text!</p>
         <span sprkFieldError>Error Message!</span>
-    </sprk-input-container>
+    </sprk-textarea-container>
   `
 })
 class TestComponent {}
 
-describe('SparkInputContainerComponent', () => {
+describe('SparkTextareaContainerComponent', () => {
   let testFixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
 
-  let inputContainerFixture: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerComponent: SparkInputContainerComponent;
+  let inputContainerFixture: ComponentFixture<SparkTextareaContainerComponent>;
+  let inputContainerComponent: SparkTextareaContainerComponent;
   let inputContainerElement: HTMLElement;
 
   let labelElement: HTMLElement;
@@ -38,7 +38,7 @@ describe('SparkInputContainerComponent', () => {
         SprkInputDirective,
         SprkFieldErrorDirective,
         TestComponent,
-        SparkInputContainerComponent
+        SparkTextareaContainerComponent
       ]
     }).compileComponents();
   }));
@@ -48,7 +48,7 @@ describe('SparkInputContainerComponent', () => {
     component = testFixture.componentInstance;
 
     inputContainerFixture = TestBed.createComponent(
-      SparkInputContainerComponent
+      SparkTextareaContainerComponent
     );
     inputContainerComponent = inputContainerFixture.componentInstance;
 
@@ -58,7 +58,7 @@ describe('SparkInputContainerComponent', () => {
 
     labelElement = testFixture.debugElement.query(By.css('label'))
       .nativeElement;
-    inputElement = testFixture.debugElement.query(By.css('input'))
+    inputElement = testFixture.debugElement.query(By.css('textarea'))
       .nativeElement;
     errorElement = testFixture.debugElement.query(By.css('span')).nativeElement;
 
@@ -74,7 +74,7 @@ describe('SparkInputContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-u-man'
+      'sprk-b-InputContainer sprk-b-InputContainer--textarea sprk-u-man'
     );
   });
 

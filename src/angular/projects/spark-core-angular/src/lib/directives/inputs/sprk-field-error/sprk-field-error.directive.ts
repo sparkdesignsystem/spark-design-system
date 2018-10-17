@@ -4,20 +4,10 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkFieldError]'
 })
 export class SprkFieldErrorDirective implements OnInit {
-  @Input()
-  additionalClasses: string;
-
   constructor(public ref: ElementRef) {}
 
   getClasses(): string[] {
-    const classArray: string[] = ['sprk-b-ErrorText'];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
+    const classArray: string[] = ['sprk-b-ErrorContainer'];
     return classArray;
   }
 

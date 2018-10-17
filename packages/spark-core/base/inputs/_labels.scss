@@ -9,6 +9,10 @@
   transform-origin: top left;
 }
 
+.sprk-b-InputContainer .sprk-b-Label.sprk-b-Label--inline {
+  padding: 0 $space-m;
+}
+
 .sprk-b-Label--inline {
   display: inline-block;
   vertical-align: middle;
@@ -29,26 +33,51 @@
   transform: scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
+.sprk-b-InputContainer--textarea > .sprk-b-Label {
+  margin-bottom: 0;
+}
+
 // label moving
 .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: $label-offset-y;
-  margin-bottom: $label-counter-weight;
   position: absolute;
   transition: all $input-animation-speed;
-  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+  transform: scale($label-shrink-scale) translateY($label-offset-y); // ratio of body-four to body-three
   width: auto;
 }
 
 .sprk-u-JavaScript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: $label-offset-y-open;
-  transform: scale(1);
+  transform: scale(1) translateY($label-offset-y + 19px); // visually centering with icon
 }
 
+.sprk-b-TextInput,
+.sprk-b-TextInput[placeholder],
+.sprk-b-TextInput--has-value,
+.sprk-b-TextInput--focusin,
+.sprk-b-Select {
+  padding-top: $space-m;
+}
+
+.sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  margin-top: $label-offset-y;
-  margin-bottom: $label-counter-weight;
-  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+  height: 0;
+  transform: translateY($label-offset-y) scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
+.sprk-b-TextInput--date-picker .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-b-TextInput--date-picker .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-b-TextInput--date-picker .sprk-b-TextInput--focusin ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-b-TextInput--monetary .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+  padding-left: $space-s;
+}
+
+.sprk-b-TextInput--date-picker .sprk-b-Label {
+  padding-left: $space-l;
+}
+
+.sprk-b-TextInput--monetary .sprk-b-Label {
+  padding-left: 24px;
+}
