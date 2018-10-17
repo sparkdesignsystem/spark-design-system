@@ -235,14 +235,16 @@ $alert-shadow-hover-fail: inset -64px 0 0 $alert-color-fail !default;
 // Buttons
 ///
 $btn-background-color: $red-real !default;
+$btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
-$btn-border-radius: 0 !default;
+$btn-font-weight: bold;
+$btn-text-color: $white !default;
+$btn-border-radius: 1px !default;
 $btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
-$btn-text-color: $white !default;
 $btn-breakpoint: 30rem !default;
 $btn-transition-speed: 0.3s !default;
 // Disabled
@@ -250,7 +252,7 @@ $btn-disabled-opacity: 1 !default;
 $btn-disabled-background-color: $gray !default;
 $btn-disabled-text-color: $black-tint-50 !default;
 $btn-disabled-border-width: $btn-border-width !default;
-$btn-disabled-border-color: $btn-disabled-background-color !default;
+$btn-disabled-border-color: transparent !default;
 // Secondary
 $btn-secondary-background-color: transparent !default;
 $btn-secondary-border-color: $black !default;
@@ -307,16 +309,15 @@ $text-input-interact-color: $red-real !default;
 $error-text-color: $black !default;
 $text-input-error-color: $yellow !default;
 $input-max-width: 27.5rem !default;
-$input-icon-offset-x: 6px !default;
-$input-icon-offset-y: 7px !default;
-$input-text-icon-offset-x: 4px !default;
-$input-text-icon-offset-y: 8px !default;
+$input-icon-offset-x: 7px !default;
+$input-icon-offset-y: 20px !default;
+$input-text-icon-offset-x: 6px !default;
+$input-text-icon-offset-y: 20px !default;
 $input-animation-speed: 0.3s !default;
 $select-arrow-offset-y: -23px !default;
 $select-arrow-offset-x: 8px !default;
 $label-offset-y: -50px !default;
 $label-offset-y-open: -31px !default;
-$label-counter-weight: 28px !default;
 $label-shrink-scale: 0.82 !default;
 $fieldset-padding: 0 !default;
 

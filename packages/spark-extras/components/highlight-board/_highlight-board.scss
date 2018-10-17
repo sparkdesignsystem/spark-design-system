@@ -32,22 +32,21 @@ $highlight-board-content-box-color: $white !default;
   background-color: $highlight-board-content-box-color;
   padding: $space-inset-tall-m;
   text-align: center;
+  width: auto;
 
   @media (min-width: $highlight-board-type-breakpoint) {
     padding: $space-inset-tall-l;
   }
 }
 
-.sprk-c-HighlightBoard__primary-heading {
-  margin-bottom: $space-l;
-
+.sprk-c-HighlightBoard__heading {
   @media (max-width: $highlight-board-type-breakpoint) {
     // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
   }
 }
 
-.sprk-c-HighlightBoard__btn {
+.sprk-c-HighlightBoard__cta {
   width: 100%;
 
   @media (min-width: $highlight-board-type-breakpoint) {
