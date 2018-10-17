@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
         <h2 class="drizzle-b-h2">Masthead</h2>
         <sprk-masthead
           additionalClasses="angular-docs-u-Masthead-docs"
-          greetingName="Rob Copeland"
+          greetingName="Hello, Fellow Human"
           [wideNavLinks]="links"
-          [secondaryNavLinks]="links"
+          [secondaryNavLinks]="linksSecondary"
           [narrowNavLinks]="links">
+          <img alt="Provide useful alternative text" src="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg" logo-slot>
           <div class="sprk-b-InputContainer" upper-slot>
             <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
             <input
@@ -30,45 +31,60 @@ import { Component } from '@angular/core';
   styles: [``]
 })
 export class MastheadDocsComponent {
-  links = [
+  linksSecondary = [
     {
-      text: 'Chat',
-      href: '/alerts',
-      analyticsString: 'Link to Item 1',
-      active: false,
-      subNav: [
-        {
-          text: 'Item 1',
-          href: '/alerts',
-          analyticsString: 'Link to Sub Item 1'
-        },
-        {
-          text: 'Item 2',
-          href: '/alerts'
-        },
-        {
-          text: 'Item 3',
-          href: '/alerts'
-        }
-      ]
-    },
-    {
-      text: 'Insurance',
+      text: 'Item 1',
       href: '/icons',
       active: false
     },
     {
-      text: 'Loan Information',
+      text: 'Item 2',
       href: '/links',
       active: false
     },
     {
-      text: 'Item 4',
+      text: 'Item 3',
+      href: '/buttons',
+      active: false
+    }
+  ];
+
+  links = [
+    {
+      text: 'Item 1',
+      href: '/icons',
+      active: false
+    },
+    {
+      text: 'Item 2',
+      href: '/links',
+      active: false,
+      subNav: [
+        {
+          text: 'Item 1',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 2',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 3',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 4',
+          href: '#nogo'
+        }
+      ]
+    },
+    {
+      text: 'Item 3',
       href: '/buttons',
       active: false
     },
     {
-      text: 'Item 5',
+      text: 'Item 4',
       href: '#nogo',
       active: false,
       subNav: [
@@ -89,6 +105,11 @@ export class MastheadDocsComponent {
           href: '#nogo'
         }
       ]
+    },
+    {
+      text: 'Item 5',
+      href: '/buttons',
+      active: false
     }
   ];
   constructor() {}

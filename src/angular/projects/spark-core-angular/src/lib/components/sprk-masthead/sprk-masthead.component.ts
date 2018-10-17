@@ -32,7 +32,7 @@ import { Component, HostListener, Input } from '@angular/core';
           </div>
           <div class="sprk-c-Masthead__logo">
             <a [routerLink]="logoHref">
-              <div class="drizzle-c-Logo-placeholder"></div>
+              <ng-content select="[logo-slot]"></ng-content>
               <span class="sprk-u-ScreenReaderText">{{ logoLinkScreenReaderText }}</span>
             </a>
           </div>
