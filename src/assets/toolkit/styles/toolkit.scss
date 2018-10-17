@@ -6,6 +6,16 @@
 // Settings
 ///
 
+// font urls
+$using-webfont-body: true;
+$using-webfont-heading: true;
+$body-font-name: FallSans;
+$body-font-src: url('https://gracious-wilson-8ab370.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://gracious-wilson-8ab370.netlify.com/FallSans-Regular.woff') format('woff');
+$body-bold-font-src: url('https://gracious-wilson-8ab370.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://gracious-wilson-8ab370.netlify.com/FallSans-Bold.woff') format('woff');
+$heading-font-name: FallSans;
+$heading-font-src: url('https://gracious-wilson-8ab370.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://gracious-wilson-8ab370.netlify.com/FallSans-Regular.woff') format('woff');
+$heading-bold-font-src: url('https://gracious-wilson-8ab370.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://gracious-wilson-8ab370.netlify.com/FallSans-Bold.woff') format('woff');
+
 @import '../../../../packages/spark-core/settings/colors';
 @import '../../../../packages/spark-core/settings/settings';
 @import '../../../../packages/spark-core/components/icons';
