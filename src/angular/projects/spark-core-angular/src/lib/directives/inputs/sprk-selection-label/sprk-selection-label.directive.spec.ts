@@ -5,9 +5,7 @@ import { SprkSelectionLabelDirective } from './sprk-selection-label.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-  <label
-    additionalClasses="sprk-u-man"
-    sprkSelectionLabel>Label</label>`
+  <label sprkSelectionLabel>Label</label>`
 })
 class TestComponent {}
 
@@ -29,12 +27,5 @@ describe('Spark Helper Text Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should add classes if additionalClasses has a value', () => {
-    fixture.detectChanges();
-    expect(labelElement.classList.toString()).toEqual(
-      'sprk-b-Label sprk-b-Label--inline sprk-u-mls sprk-u-man'
-    );
   });
 });

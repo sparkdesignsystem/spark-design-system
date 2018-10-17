@@ -5,6 +5,10 @@
   margin-top: $space-s;
 }
 
+[hidden].sprk-b-ErrorContainer {
+  display: none;
+}
+
 .sprk-b-ErrorIcon {
   fill: $text-input-error-color;
   margin-right: $space-s;

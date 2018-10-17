@@ -20,6 +20,8 @@ import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 
 import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
+import { SparkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
+import { SparkIconInputContainerModule } from './components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkSelectionContainerModule } from './components/inputs/sprk-selection-container/sprk-selection-container.module';
 import { SparkSelectionItemContainerModule } from './components/inputs/sprk-selection-item-container/sprk-selection-item-container.module';
 import { SparkAccordionItemModule } from './components/sprk-accordion-item/sprk-accordion-item.module';
@@ -83,6 +85,8 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkNarrowNavigationModule,
     SparkNarrowNavigationItemModule,
     SparkInputContainerModule,
+    SparkTextareaContainerModule,
+    SparkIconInputContainerModule,
     SparkSelectionContainerModule,
     SparkSelectionItemContainerModule,
     SparkMastheadModule,
