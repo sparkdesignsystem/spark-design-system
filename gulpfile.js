@@ -95,9 +95,6 @@ gulp.task('drizzle', ['icons'], () => {
   return result.done(); // makes sure that the icons are finished before the templates are processed
 });
 
-// Register frontend composite task
-gulp.task('frontend', ['icons', 'drizzle', 'copy', 'sass', 'images', 'js']);
-
 // Register build task (for continuous deployment via Netflify)
 gulp.task('build', (done) => {
   runSequence(
@@ -168,7 +165,7 @@ gulp.task('build-es5', (cb) => {
 gulp.task('pre-publish', ['build-angular'], () => {});
 
 // Register default task
-gulp.task('default', ['frontend'], (done) => {
+gulp.task('default', ['build'], (done) => {
   gulp.start('serve');
   gulp.start('watch');
   done();
