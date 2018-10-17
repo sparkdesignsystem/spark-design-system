@@ -24,7 +24,7 @@ information:
 restrictions:
   - You should always add the <code class='drizzle-c-Command drizzle-c-Command--inline'>novalidate</code> attribute
     to your form, since we handle form validation ourselves,
-    and don't use the browser's implementation
+    and don't use the browser's implementation.
   - Make sure that each label's <code class='drizzle-c-Command drizzle-c-Command--inline'>for</code> attribute matches the
     <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> attribute of the corresponding input element.
   - Each input element's <code class='drizzle-c-Command drizzle-c-Command--inline'>id</code> should be unique on the page.
