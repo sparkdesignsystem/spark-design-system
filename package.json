@@ -1,6 +1,6 @@
 {
   "name": "spark-design-system",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Quicken Loans",
   "description": "A pattern library authoring environment",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
@@ -73,12 +73,14 @@
     "build": "npm run prestart && gulp",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "precommit": "lint-staged",
-    "test": "npm run test-spark-core && npm run test-spark-extras-highlight-board",
-    "test-spark-core": "cd packages/spark-core && npm test",
-    "test-spark-extras-highlight-board": "cd packages/spark-extras/components/highlight-board && npm test",
-    "coverage": "nyc npm test",
+    "test": "npm run build-spark && npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
-    "lerna": "gulp pre-publish && lerna bootstrap && lerna publish"
+    "build-spark": "npm run install-dependencies && npm run link-dependencies && npm run build-angular && npm run build-angular && npm run link-spark-core-angular",
+    "lerna": "npm run build-spark && lerna bootstrap && lerna publish",
+    "install-dependencies": "npm install && npm install --prefix ./packages/spark-core && npm install --prefix ./packages/spark-extras/components/highlight-board && npm install --prefix ./src/angular && npm install --prefix ./src/angular/projects/spark-core-angular && npm install --prefix ./src/angular/projects/spark-extras-angular-award && npm install --prefix ./src/angular/projects/spark-extras-angular-card && npm install --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm install --prefix ./src/angular/projects/spark-extras-angular-highlight-board && npm install -g @angular/cli @angular-devkit/build-angular",
+    "link-dependencies": "npm link --prefix ./packages/spark-core && npm link --prefix ./packages/spark-extras && npm link @sparkdesignsystem/spark-core --prefix ./src/angular && npm link @sparkdesignsystem/spark-extras --prefix ./src/angular",
+    "build-angular": "cd src/angular && ng build spark-core-angular && cd ../..",
+    "link-spark-core-angular": "npm link --prefix ./src/angular/dist/spark-core-angular && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-highlight-board"
   },
   "lint-staged": {
     "*.scss": [
