@@ -13,8 +13,7 @@
 
 .sprk-b-SelectionContainer [disabled][type='radio'],
 .sprk-b-SelectionContainer [disabled][type='checkbox'] {
-  -webkit-appearance: none;
-  appearance: none;
+  border: 1px solid $gray;
 }
 
 .sprk-b-SelectionContainer:last-child {
