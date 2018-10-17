@@ -5,4 +5,3 @@ information:
   - The body copy will automatically get style and size from Spark, but in order to get the line height collision fix, you'll
     need to apply a setting class.
 sparkPackageCore: true
-noCodeSwitch: true
