@@ -64,34 +64,4 @@ describe('datePicker tests', () => {
     datePicker({ mode: 'dp-modal' });
     expect(tdpSpy.getCalls()[2].args[1].mode).eql('dp-modal');
   });
-
-  it('if window is < 768, should switch type to date', () => {
-    input.setAttribute('type', 'text');
-    window.innerWidth = 767;
-    datePicker(input);
-    expect(input.getAttribute('type')).eql('date');
-  });
-
-  it('if window is >= 768, should switch type to text', () => {
-    input.setAttribute('type', 'date');
-    window.innerWidth = 769;
-    datePicker(input);
-    expect(input.getAttribute('type')).eql('text');
-  });
-
-  it('if resize is triggered and window < 768, should set type to date', () => {
-    input.setAttribute('type', 'text');
-    window.innerWidth = 767;
-    datePicker(input);
-    window.dispatchEvent(new window.Event('resize'));
-    expect(input.getAttribute('type')).eql('date');
-  });
-
-  it('if resize is triggered and window >= 768, should set type to text', () => {
-    input.setAttribute('type', 'date');
-    window.innerWidth = 769;
-    datePicker(input);
-    window.dispatchEvent(new window.Event('resize'));
-    expect(input.getAttribute('type')).eql('text');
-  });
 });

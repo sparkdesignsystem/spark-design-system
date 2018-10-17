@@ -25,21 +25,7 @@ const setupTDP = (input, config) => {
 
 const bindUIEvents = (element, config) => {
   const input = element.querySelector('input');
-
-  if (window.innerWidth && window.innerWidth < 768) {
-    input.setAttribute('type', 'date');
-  } else {
-    setupTDP(input, config);
-    input.setAttribute('type', 'text');
-  }
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth && window.innerWidth < 768) {
-      input.setAttribute('type', 'date');
-    } else {
-      input.setAttribute('type', 'text');
-    }
-  });
+  setupTDP(input, config);
 };
 
 const datePicker = (config) => {
