@@ -64,16 +64,28 @@ title: Developers
         </div>
       </li>
       <li class="sprk-u-mvm">
-        <p>
-          Import the pre-render ES6 setup file in your JS build. This must be done in the head tag.
-          This will bring all the Spark-Core JS into your build. There is also an ES5 version if
-          preferred. It's located in @sparkdesignsystem/spark-core/es5.
-        </p>
-        <div class="drizzle-c-Command">
-          <code class="drizzle-CodeHighlight">
-            import sparkCorePrerender from  &quot;@sparkdesignsystem/spark-core/spark-core-prerender&quot;;
-          </code>
-        </div>
+        <p>Spark has two js files that need to be incorporated into your build in order for Spark's behavior to
+        work.</p>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li><p><strong>spark-core-prerender</strong> - This file detects if JavaScript is loaded and also sets up the type loader.
+            It needs to execute its code before the page is rendered and therefore needs to be imported in the head of
+            the document.</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                import sparkCorePrerender from  &quot;@sparkdesignsystem/spark-core/spark-core-prerender&quot;;
+              </code>
+            </div>
+          </li>
+          <li><p><strong>spark-core</strong> - This file contains the bulk of Spark's behavior and can be loaded after the
+            page is rendered, best done before the closing body tag.</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+              </code>
+            </div>
+          </li>
+        </ul>
+        <p>There are also ES5 versions if preferred. They're located in @sparkdesignsystem/spark-core/es5.</p>
       </li>
       <li class="sprk-u-mvm">
         <p>Init the Spark Core JS, passing in a config object (optional).</p>
