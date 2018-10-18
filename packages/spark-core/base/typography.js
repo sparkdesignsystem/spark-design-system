@@ -17,10 +17,9 @@ const typeLoader = ({ bodyFontName, headingFontName } = {}) => {
   if (headingFontName) {
     headingFont = new FontFaceObserver(headingFontName);
     Promise.all([
-      bodyFont.load(null, 10000),
       headingFont.load(null, 10000),
     ]).then(() => {
-      document.documentElement.className += ' sprk-u-Fonts--loaded';
+      document.documentElement.className += ' sprk-u-Fonts__heading--loaded';
     });
   }
 };
