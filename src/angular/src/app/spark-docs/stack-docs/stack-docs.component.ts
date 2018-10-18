@@ -33,7 +33,7 @@ import { Component } from '@angular/core';
       <sprk-stack itemSpacing="huge" splitAt="large">
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
           cardType="teaser"
           title="Test Card for Stack!"
           body="Placeholder text that is here in this card!"
@@ -48,7 +48,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
           cardType="teaser"
           title="Spark Design System"
           body="Placeholder text that is here in this card!"
@@ -63,7 +63,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
           cardType="teaser"
           title="Spark Cards in a Stack Component"
           body="Placeholder text that is here in this card!"
@@ -84,7 +84,7 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-stack itemSpacing="medium" splitAt="tiny">
-        <div sprkStackItem class="sprk-o-Stack__item--equal@xs">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@xs">
           <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
              Column One
            </h2>
@@ -110,7 +110,7 @@ import { Component } from '@angular/core';
           </sprk-stack>
         </div>
 
-        <div sprkStackItem class="sprk-o-Stack__item--equal@xs">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@xs">
           <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
              Column Two
            </h2>
