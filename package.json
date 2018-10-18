@@ -69,10 +69,9 @@
   },
   "scripts": {
     "start": "gulp --dev",
-    "build": "npm run prestart && gulp",
-    "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
+    "build": "npm install && gulp",
     "precommit": "lint-staged",
-    "test": "npm run build-spark && npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
+    "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
     "build-spark": "npm run install-dependencies && npm run unlink-dependencies && npm run link-dependencies && npm run build-angular && npm run link-spark-core-angular",
     "lerna": "npm run build-spark && lerna bootstrap && lerna publish",
