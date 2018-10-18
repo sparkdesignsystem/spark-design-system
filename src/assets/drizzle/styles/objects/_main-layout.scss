@@ -1,6 +1,9 @@
 $drizzle-header-padding-vert-wide: 1rem;
 
 .#{$app-namespace}-o-layout__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1 0 auto;
 }
 
