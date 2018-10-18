@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
       sprkStackItem
       [ngClass]="getClasses()">
       <a
-        class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
+        class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
         [routerLink]="imgOneHref"
         [attr.data-analytics]="analyticsStringImgOne">
         <img
@@ -29,7 +29,7 @@ import { Component, Input } from '@angular/core';
       </a>
 
       <a
-        class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
+        class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
         [routerLink]="imgTwoHref"
         [attr.data-analytics]="analyticsStringImgTwo">
         <img

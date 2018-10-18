@@ -96,6 +96,38 @@
       margin-right: $stack-spacing-huge;
     }
 
+    > .sprk-o-Stack__item--sixth\@xs {
+      flex-basis: 16.666666667%;
+    }
+
+    > .sprk-o-Stack__item--fifth\@xs {
+      flex-basis: 20%;
+    }
+
+    > .sprk-o-Stack__item--fourth\@xs {
+      flex-basis: 25%;
+    }
+
+    > .sprk-o-Stack__item--third\@xs {
+      flex-basis: 33.333333333%;
+    }
+
+    > .sprk-o-Stack__item--half\@xs {
+      flex-basis: 50%;
+    }
+
+    > .sprk-o-Stack__item--three-forths\@xs {
+      flex-basis: 75%;
+    }
+
+    > .sprk-o-Stack__item--three-fifths\@xs {
+      flex-basis: 60%;
+    }
+
+    > .sprk-o-Stack__item--two-fifths\@xs {
+      flex-basis: 40%;
+    }
+
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -141,6 +173,38 @@
       margin-right: $stack-spacing-huge;
     }
 
+    > .sprk-o-Stack__item--sixth\@s {
+      flex-basis: 16.666666667%;
+    }
+
+    > .sprk-o-Stack__item--fifth\@s {
+      flex-basis: 20%;
+    }
+
+    > .sprk-o-Stack__item--fourth\@s {
+      flex-basis: 25%;
+    }
+
+    > .sprk-o-Stack__item--third\@s {
+      flex-basis: 33.333333333%;
+    }
+
+    > .sprk-o-Stack__item--half\@s {
+      flex-basis: 50%;
+    }
+
+    > .sprk-o-Stack__item--three-forths\@s {
+      flex-basis: 75%;
+    }
+
+    > .sprk-o-Stack__item--three-fifths\@s {
+      flex-basis: 60%;
+    }
+
+    > .sprk-o-Stack__item--two-fifths\@s {
+      flex-basis: 40%;
+    }
+
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -166,24 +230,56 @@
     }
 
     // Add spacing between items based on spacing size class
-    &.sprk-o-Stack--tin > .sprk-o-Stack__item {
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
       margin-right: $stack-spacing-tiny;
     }
 
-    &.sprk-o-Stack--smal > .sprk-o-Stack__item {
+    &.sprk-o-Stack--small > .sprk-o-Stack__item {
       margin-right: $stack-spacing-small;
     }
 
-    &.sprk-o-Stack--mediu > .sprk-o-Stack__item {
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item {
       margin-right: $stack-spacing-medium;
     }
 
-    &.sprk-o-Stack--larg > .sprk-o-Stack__item {
+    &.sprk-o-Stack--large > .sprk-o-Stack__item {
       margin-right: $stack-spacing-large;
     }
 
-    &.sprk-o-Stack--hug > .sprk-o-Stack__item {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item {
       margin-right: $stack-spacing-huge;
+    }
+
+    > .sprk-o-Stack__item--sixth\@m {
+      flex-basis: 16.666666667%;
+    }
+
+    > .sprk-o-Stack__item--fifth\@m {
+      flex-basis: 20%;
+    }
+
+    > .sprk-o-Stack__item--fourth\@m {
+      flex-basis: 25%;
+    }
+
+    > .sprk-o-Stack__item--third\@m {
+      flex-basis: 33.333333333%;
+    }
+
+    > .sprk-o-Stack__item--half\@m {
+      flex-basis: 50%;
+    }
+
+    > .sprk-o-Stack__item--three-forths\@m {
+      flex-basis: 75%;
+    }
+
+    > .sprk-o-Stack__item--three-fifths\@m {
+      flex-basis: 60%;
+    }
+
+    > .sprk-o-Stack__item--two-fifths\@m {
+      flex-basis: 40%;
     }
 
     // We want the last item to have zero margin on the right
@@ -231,6 +327,38 @@
       margin-right: $stack-spacing-huge;
     }
 
+    > .sprk-o-Stack__item--sixth\@l {
+      flex-basis: 16.666666667%;
+    }
+
+    > .sprk-o-Stack__item--fifth\@l {
+      flex-basis: 20%;
+    }
+
+    > .sprk-o-Stack__item--fourth\@l {
+      flex-basis: 25%;
+    }
+
+    > .sprk-o-Stack__item--third\@l {
+      flex-basis: 33.333333333%;
+    }
+
+    > .sprk-o-Stack__item--half\@l {
+      flex-basis: 50%;
+    }
+
+    > .sprk-o-Stack__item--three-forths\@l {
+      flex-basis: 75%;
+    }
+
+    > .sprk-o-Stack__item--three-fifths\@l {
+      flex-basis: 60%;
+    }
+
+    > .sprk-o-Stack__item--two-fifths\@l {
+      flex-basis: 40%;
+    }
+
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -276,6 +404,38 @@
       margin-right: $stack-spacing-huge;
     }
 
+    > .sprk-o-Stack__item--sixth\@xl {
+      flex-basis: 16.666666667%;
+    }
+
+    > .sprk-o-Stack__item--fifth\@xl {
+      flex-basis: 20%;
+    }
+
+    > .sprk-o-Stack__item--fourth\@xl {
+      flex-basis: 25%;
+    }
+
+    > .sprk-o-Stack__item--third\@xl {
+      flex-basis: 33.333333333%;
+    }
+
+    > .sprk-o-Stack__item--half\@xl {
+      flex-basis: 50%;
+    }
+
+    > .sprk-o-Stack__item--three-forths\@xl {
+      flex-basis: 75%;
+    }
+
+    > .sprk-o-Stack__item--three-fifths\@xl {
+      flex-basis: 60%;
+    }
+
+    > .sprk-o-Stack__item--two-fifths\@xl {
+      flex-basis: 40%;
+    }
+
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -288,33 +448,33 @@
 }
 
 //
-// Stack items equally distribute space at specific breakpoints
+// Stack items take up leftover space at specific breakpoints
 ///
-.sprk-o-Stack__item--equal\@xs {
+.sprk-o-Stack__item--flex\@xs {
   @media all and (min-width: $split-breakpoint-xs) {
     flex: 1;
   }
 }
 
-.sprk-o-Stack__item--equal\@s {
+.sprk-o-Stack__item--flex\@s {
   @media all and (min-width: $split-breakpoint-s) {
     flex: 1;
   }
 }
 
-.sprk-o-Stack__item--equal\@m {
+.sprk-o-Stack__item--flex\@m {
   @media all and (min-width: $split-breakpoint-m) {
     flex: 1;
   }
 }
 
-.sprk-o-Stack__item--equal\@l {
+.sprk-o-Stack__item--flex\@l {
   @media all and (min-width: $split-breakpoint-l) {
     flex: 1;
   }
 }
 
-.sprk-o-Stack__item--equal\@xl {
+.sprk-o-Stack__item--flex\@xl {
   @media all and (min-width: $split-breakpoint-xl) {
     flex: 1;
   }
