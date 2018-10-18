@@ -6,24 +6,24 @@
   @font-face {
     font-family: $body-font-name;
     src: $body-font-src;
-    font-weight: normal;
+    font-weight: $body-font-weight;
   }
   @font-face {
     font-family: $body-font-name;
     src: $body-bold-font-src;
-    font-weight: bold;
+    font-weight: $body-bold-font-weight;
   }
 }
 @if $using-webfont-heading {
   @font-face {
     font-family: $heading-font-name;
     src: $heading-font-src;
-    font-weight: normal;
+    font-weight: $heading-font-weight;
   }
   @font-face {
     font-family: $heading-font-name;
     src: $heading-bold-font-src;
-    font-weight: bold;
+    font-weight: $heading-bold-font-weight;
   }
 }
 
