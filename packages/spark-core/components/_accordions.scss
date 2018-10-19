@@ -126,4 +126,8 @@
     color: $white;
     text-decoration: none;
   }
+
+  &::after {
+    content: none;
+  }
 }
