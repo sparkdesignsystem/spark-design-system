@@ -15,7 +15,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $red-real;
+    color: $link-underline-color;
     text-decoration: none;
   }
 
@@ -31,7 +31,7 @@
 }
 
 .sprk-b-Link--standalone {
-  color: $red-real;
+  color: $link-standalone-color;
 
   &:hover,
   &:active,
@@ -43,39 +43,39 @@
   }
 
   &::after {
-    opacity: 0;
+    content: none;
   }
 }
 
 .sprk-b-Link--muted {
-  color: $black-tint-75;
+  color: $link-muted-color;
 
   &:visited {
-    color: $black-tint-75;
+    color: $link-muted-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $black-tint-75;
+    color: $link-muted-color;
   }
 }
 
 .sprk-b-Link--disabled {
-  color: $black-tint-50;
+  color: $link-disabled-color;
   pointer-events: none;
 
   &:visited {
-    color: $black-tint-50;
+    color: $link-disabled-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $black-tint-50;
+    color: $link-disabled-color;
   }
 
   &::after {
-    opacity: 0;
+    content: none;
   }
 }

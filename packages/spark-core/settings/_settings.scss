@@ -282,9 +282,12 @@ $btn-tertiary-text-color: $black !default;
 // Links
 ///
 $link-color: $black !default;
+$link-disabled-color: $black-tint-50;
+$link-muted-color: $black-tint-75;
+$link-standalone-color: $red-real !default;
+$link-transition: 0.3s !default;
 $link-underline-color: $red-real !default;
 $link-visited-color: $red-mid !default;
-$link-transition: 0.3s !default;
 
 //
 // Lists
