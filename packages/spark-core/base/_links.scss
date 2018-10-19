@@ -43,7 +43,7 @@
   }
 
   &::after {
-    content: none;
+    opacity: 0;
   }
 }
 
@@ -76,6 +76,6 @@
   }
 
   &::after {
-    content: none;
+    background: $link-disabled-color;
   }
 }
