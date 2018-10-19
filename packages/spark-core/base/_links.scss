@@ -4,7 +4,8 @@
 //
 .sprk-b-Link {
   color: $link-color;
-  text-decoration: underline;
+  text-decoration: none;
+  position: relative;
   transition: $link-transition;
 
   &:visited {
@@ -14,21 +15,35 @@
   &:hover,
   &:active,
   &:focus {
+    color: $red-real;
     text-decoration: none;
+  }
+
+  &::after {
+    content: '';
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: $link-underline-color;
   }
 }
 
 .sprk-b-Link--standalone {
-  text-decoration: none;
-
-  &:visited {
-    text-decoration: none;
-  }
+  color: $red-real;
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration: underline;
+    &::after {
+      opacity: 1;
+      transition: $link-transition;
+    }
+  }
+
+  &::after {
+    opacity: 0;
   }
 }
 
@@ -58,5 +73,9 @@
   &:active,
   &:focus {
     color: $black-tint-50;
+  }
+
+  &::after {
+    opacity: 0;
   }
 }
