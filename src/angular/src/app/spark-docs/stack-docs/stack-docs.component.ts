@@ -3,19 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sprk-card-docs',
   template: `
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbl">
         Stack With Buttons
       </h2>
 
       <sprk-stack itemSpacing="medium">
         <button sprkButton sprkStackItem>Hello, World.</button>
-        <button sprkButton sprkStackItem additionalClasses="sprk-c-Button--secondary">Hello, World.</button>
+        <button sprkButton sprkStackItem class="sprk-c-Button--secondary">Hello, World.</button>
       </sprk-stack>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbl">
         Stack With Buttons, Side by Side at Medium breakpoint, Huge size spacing
       </h2>
 
@@ -25,8 +25,8 @@ import { Component } from '@angular/core';
       </sprk-stack>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbl">
         Stack With Three Cards
       </h2>
 
@@ -78,62 +78,237 @@ import { Component } from '@angular/core';
       </sprk-stack>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbl">
+        Stack With Four Cols at Tiny Breakpoint
+      </h2>
+      <sprk-stack splitAt="tiny">
+        <div sprkStackItem class="sprk-o-Stack__item--fourth@xs">Tests</div>
+        <div sprkStackItem class="sprk-o-Stack__item--fourth@xs">Tests</div>
+        <div sprkStackItem class="sprk-o-Stack__item--fourth@xs">Tests</div>
+        <div sprkStackItem class="sprk-o-Stack__item--fourth@xs">Tests</div>
+      </sprk-stack>
+    </div>
+
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
       <h2 class="drizzle-b-h2">
-        Stack With Two Equal Width Cols, Split At Tiny
+        Stack With Two Cols at Large Breakpoint
+      </h2>
+      <sprk-stack splitAt="large">
+        <div sprkStackItem class="sprk-o-Stack__item--half@l">Tests</div>
+        <div sprkStackItem class="sprk-o-Stack__item--half@l">Tests</div>
+      </sprk-stack>
+    </div>
+
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Stack With Three Cols at Medium Breakpoint
       </h2>
 
-      <sprk-stack itemSpacing="medium" splitAt="tiny">
-        <div sprkStackItem class="sprk-o-Stack__item--flex@xs">
-          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
-             Column One
-           </h2>
-
-          <sprk-stack itemSpacing="small">
-            <div sprkStackItem>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
-                Link 1
-              </a>
-            </div>
-
-            <div sprkStackItem>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
-                Link 2
-              </a>
-            </div>
-
-           <div sprkStackItem>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
-                Link 3
-              </a>
-            </div>
-          </sprk-stack>
+      <sprk-stack splitAt="medium">
+        <div sprkStackItem class="sprk-o-Stack__item--third@m sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <button sprkButton>Hello, World.</button>
         </div>
 
-        <div sprkStackItem class="sprk-o-Stack__item--flex@xs">
-          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
-             Column Two
-           </h2>
+        <div sprkStackItem class="sprk-o-Stack__item--third@m sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <button sprkButton>Hello, World.</button>
+        </div>
 
-          <sprk-stack itemSpacing="small">
-            <div sprkStackItem>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
-                Link 1
-              </a>
-            </div>
+        <div sprkStackItem class="sprk-o-Stack__item--third@m sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <button sprkButton>Hello, World.</button>
+        </div>
+      </sprk-stack>
+    </div>
 
-            <div sprkStackItem>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
-                Link 2
-              </a>
-            </div>
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Stack With Six Cols at Extra Large Breakpoint
+      </h2>
 
-           <div sprkStackItem>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
-                Link 3
-              </a>
-            </div>
-          </sprk-stack>
+      <sprk-stack splitAt="huge">
+        <div sprkStackItem class="sprk-o-Stack__item--sixth@xl sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <form>
+            <sprk-input-container>
+              <label sprkLabel>Name</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+
+            <sprk-input-container>
+              <label sprkLabel>Last Name</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+
+            <sprk-input-container>
+              <label sprkLabel>Address</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+            </form>
+          <button sprkButton>Hello, World.</button>
+        </div>
+
+        <div sprkStackItem class="sprk-o-Stack__item--sixth@xl sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <form>
+            <sprk-input-container>
+              <label sprkLabel>Text Input *</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+            </form>
+          <button sprkButton>Hello, World.</button>
+        </div>
+
+        <div sprkStackItem class="sprk-o-Stack__item--sixth@xl sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <form>
+            <sprk-input-container>
+              <label sprkLabel>Text Input *</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+            </form>
+          <button sprkButton>Hello, World.</button>
+        </div>
+
+        <div sprkStackItem class="sprk-o-Stack__item--sixth@xl sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <form>
+            <sprk-input-container>
+              <label sprkLabel>Text Input *</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+            </form>
+          <button sprkButton>Hello, World.</button>
+        </div>
+
+        <div sprkStackItem class="sprk-o-Stack__item--sixth@xl sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <form>
+            <sprk-input-container>
+              <label sprkLabel>Text Input *</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+            </form>
+          <button sprkButton>Hello, World.</button>
+        </div>
+
+        <div sprkStackItem class="sprk-o-Stack__item--sixth@xl sprk-u-pam">
+          <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbm">
+            Heading Example
+          </h2>
+          <form>
+            <sprk-input-container>
+              <label sprkLabel>Text Input *</label>
+              <input
+                name="text_input"
+                type="text"
+                [(ngModel)]="text_input"
+                required
+                #textInput="ngModel"
+                sprkInput>
+              <p sprkHelperText>Please enter some input.</p>
+              <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <div class="sprk-b-ErrorText">This field is required.</div>
+              </span>
+            </sprk-input-container>
+            </form>
+          <button sprkButton>Hello, World.</button>
         </div>
       </sprk-stack>
     </div>
