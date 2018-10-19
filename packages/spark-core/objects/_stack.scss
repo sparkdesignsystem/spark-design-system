@@ -62,6 +62,17 @@
   margin-bottom: 0;
 }
 
+[class*='sprk-o-Stack__item--sixth\@'],
+[class*='sprk-o-Stack__item--fifth\@'],
+[class*='sprk-o-Stack__item--fourth\@'],
+[class*='sprk-o-Stack__item--third\@'],
+[class*='sprk-o-Stack__item--half\@'],
+[class*='sprk-o-Stack__item--three-fifths\@'],
+[class*='sprk-o-Stack__item--three-forths\@'],
+[class*='sprk-o-Stack__item--two-fifths\@'] {
+  margin: 0 !important;
+}
+
 //
 // Split at extra small breakpoint
 ///
