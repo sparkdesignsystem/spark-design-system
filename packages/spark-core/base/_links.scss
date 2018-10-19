@@ -10,6 +10,10 @@
 
   &:visited {
     color: $link-visited-color;
+
+    &::after {
+      background: $link-visited-color;
+    }
   }
 
   &:hover,
