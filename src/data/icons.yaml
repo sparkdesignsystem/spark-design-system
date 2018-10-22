@@ -1,25 +1,65 @@
+- name: access
+  viewBox: 0 0 64 64
+  description: ...
+- name: amount-money
+  viewBox: 0 0 64 64
+  description: ...
+- name: application
+  viewBox: 0 0 64 64
+  description: ...
+- name: auto-loans
+  viewBox: 0 0 64 64
+  description: ...
 - name: bars
   viewBox: 0 0 448 512
   description: This icon should be used to indicate when there is a menu present, especially on mobile.
+- name: baths
+  viewBox: 0 0 64 64
+  description: ...
+- name: beds
+  viewBox: 0 0 64 64
+  description: ...
 - name: bell
   viewBox: 0 0 448 512
   description: The bell icon is used to highlight an important action that needs to be taken.
+- name: blog
+  viewBox: 0 0 64 64
+  description: ...
 - name: calculator
   viewBox: 0 0 448 512
   description: The calculator icon is used to illustrate that a calculator is behind the click.
 - name: calendar
   viewBox: 0 0 448 512
   description: The calendar icon is used to show that the user can choose a date to schedule an event.
+- name: call-team-member
+  viewBox: 0 0 64 64
+  description: ...
+- name: cash-back
+  viewBox: 0 0 64 64
+  description: ...
 - name: chat
   viewBox: 0 0 576 512
   description: The chat icon is used to show when a chat feature is available.
+- name: chat-online
+  viewBox: 0 0 64 64
+  description: ...
 - name: check
   viewBox: 0 0 512 512
   description: The check mark is used to illustrate success.
+- name: check-mark
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-down
   viewBox: 0 0 448 512
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-down-circle
+  viewBox: 0 0 64 64
+  description: Used to illustrate the direction an action can be taken or where the user will be taken after the
+    action is taken.
+- name: chevron-down-circle-filled
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-left
   viewBox: 0 0 320 512
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -32,28 +72,66 @@
   viewBox: 0 0 448 512
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
-- name:  chevron-down-circle
-  viewBox: 0 0 25 25
-  description: Used to illustrate the direction an action can be taken or where the user will be taken after the
-    action is taken.
 - name: clock
   viewBox: 0 0 512 512
   description: The clock icon should be used to indicate when something is time sensitive.
+- name: close-circle
+  viewBox: 0 0 64 64
+  description: ...
+- name: cloud
+  viewBox: 0 0 64 64
+  description: ...
 - name: cloud-download
   viewBox: 0 0 640 512
   description: This icon should be used when something is available to be downloaded from the cloud.
 - name: cog
   viewBox: 0 0 512 512
   description: The cog icon typically is used to illustrate where settings can be found.
+- name: communication
+  viewBox: 0 0 64 64
+  description: ...
 - name: computer-screen
   viewBox: 0 0 576 512
   description: The computer screen icon is used to show when a client can share their screen.
+- name: condo
+  viewBox: 0 0 64 64
+  description: ...
+- name: cooling
+  viewBox: 0 0 64 64
+  description: ...
+- name: credit
+  viewBox: 0 0 64 64
+  description: ...
+- name: credit-card-payoff
+  viewBox: 0 0 64 64
+  description: ...
+- name: dedicated-team
+  viewBox: 0 0 64 64
+  description: ...
+- name: desktop-computer
+  viewBox: 0 0 64 64
+  description: ...
 - name: document
   viewBox: 0 0 384 512
   description: The document icon shows when a document is available to the user.
+- name: document-review
+  viewBox: 0 0 64 64
+  description: ...
+- name: documents
+  viewBox: 0 0 64 64
+  description: ...
 - name: download
   viewBox: 0 0 512 512
   description: The download icon is used to show when something is available to be downloaded.
+- name: editable
+  viewBox: 0 0 64 64
+  description: ...
+- name: educational-resources
+  viewBox: 0 0 64 64
+  description: ...
+- name: email
+  viewBox: 0 0 64 64
+  description: ...
 - name: envelope
   viewBox: 0 0 512 512
   description: The envelope icon is used to indicate when there is a message available.
@@ -63,60 +141,205 @@
 - name: facebook
   viewBox: 0 0 448 512
   description: The Facebook icon is used to link to that specific social media account for a given site.
+- name: feedback
+  viewBox: 0 0 64 64
+  description: ...
+- name: find-agent
+  viewBox: 0 0 64 64
+  description: ...
+- name: free
+  viewBox: 0 0 64 64
+  description: ...
+- name: heat
+  viewBox: 0 0 64 64
+  description: ...
 - name: home
   viewBox: 0 0 576 512
   description: This icon should be used to indicate when a user can return home in the context of their experience.
+- name: home-improvement
+  viewBox: 0 0 64 64
+  description: ...
+- name: home-shopping
+  viewBox: 0 0 64 64
+  description: ...
+- name: home-size
+  viewBox: 0 0 64 64
+  description: ...
 - name: info
   viewBox: 0 0 512 512
-  description: The info icon should be used to indicate that there is extra information provided to aid in the experience.
+  description: The info icon should be used to indicate that there is extra information provided to aid in
+    the experience.
+- name: information
+  viewBox: 0 0 64 64
+  description: ...
 - name: instagram
   viewBox: 0 0 448 512
   description: The Instagram icon is used to link to that specific social media account for a given site.
+- name: land
+  viewBox: 0 0 64 64
+  description: ...
+- name: landline
+  viewBox: 0 0 64 64
+  description: ...
+- name: laptop
+  viewBox: 0 0 64 64
+  description: ...
+- name: large-purchase
+  viewBox: 0 0 64 64
+  description: ...
 - name: lock
   viewBox: 0 0 448 512
   description: This icon should be used to indicate security and safety.
+- name: medical-expenses
+  viewBox: 0 0 64 64
+  description: ...
+- name: menu
+  viewBox: 0 0 64 64
+  description: ...
+- name: mls
+  viewBox: 0 0 64 64
+  description: ...
+- name: mobile
+  viewBox: 0 0 64 64
+  description: ...
+- name: mortgage
+  viewBox: 0 0 64 64
+  description: ...
+- name: multi-family
+  viewBox: 0 0 64 64
+  description: ...
+- name: one-time-update
+  viewBox: 0 0 64 64
+  description: ...
+- name: organize
+  viewBox: 0 0 64 64
+  description: ...
+- name: our-family
+  viewBox: 0 0 64 64
+  description: ...
 - name: paper-plane
   viewBox: 0 0 512 512
   description: Typically the paper place icon should be used to indicate the ability to provide feedback.
+- name: parking
+  viewBox: 0 0 64 64
+  description: ...
 - name: payment
   viewBox: 0 0 640 512
   description: The payment icon should be used to indicate some monetary transaction.
+- name: payment-center
+  viewBox: 0 0 64 64
+  description: ...
 - name: pencil
   viewBox: 0 0 576 512
   description: This icons should be used to indicate when something is editable.
 - name: phone
   viewBox: 0 0 512 512
   description: The phone icon is used to show that a phone call can be made.
+- name: pinterest
+  viewBox: 0 0 64 64
+  description: ...
 - name: play
   viewBox: 0 0 512 512
   description: The play icon is usually used to show when a video can be initiated.
 - name: plus
   viewBox: 0 0 512 512
   description: This icon usually indicates when there is an expandable action or when something can be added.
+- name: prequalified
+  viewBox: 0 0 64 64
+  description: ...
 - name: print
   viewBox: 0 0 512 512
   description: When something is printable.
 - name: question
   viewBox: 0 0 512 512
   description: This icon should be used to indicate that there is extra information provided to aid in the experience.
+- name: rate-shield
+  viewBox: 0 0 64 64
+  description: ...
+- name: rates
+  viewBox: 0 0 64 64
+  description: ...
+- name: recurring-update
+  viewBox: 0 0 64 64
+  description: ...
+- name: refinance
+  viewBox: 0 0 64 64
+  description: ...
+- name: reviews
+  viewBox: 0 0 64 64
+  description: ...
 - name: rocket
   viewBox: 0 0 512 512
   description: Only use this in an illustrative manner.
+- name: same-day
+  viewBox: 0 0 64 64
+  description: ...
+- name: savings
+  viewBox: 0 0 64 64
+  description: ...
+- name: schools
+  viewBox: 0 0 64 64
+  description: ...
 - name: search
   viewBox: 0 0 512 512
   description: This icon is used in search fields.
+- name: secure-process
+  viewBox: 0 0 64 64
+  description: ...
+- name: settings
+  viewBox: 0 0 64 64
+  description: ...
+- name: single
+  viewBox: 0 0 64 64
+  description: ...
+- name: small-business
+  viewBox: 0 0 64 64
+  description: ...
+- name: snapchat
+  viewBox: 0 0 64 64
+  description: ...
+- name: technology
+  viewBox: 0 0 64 64
+  description: ...
+- name: thumbs-up
+  viewBox: 0 0 64 64
+  description: ...
 - name: times
   viewBox: 0 0 384 512
   description: The times icon is used to show that a close/dismiss action be taken.
+- name: townhouse
+  viewBox: 0 0 64 64
+  description: ...
+- name: trash
+  viewBox: 0 0 64 64
+  description: ...
 - name: twitter
   viewBox: 0 0 448 512
   description: The Twitter icon is used to link to that specific social media account for a given site.
+- name: unlock
+  viewBox: 0 0 64 64
+  description: ...
 - name: update
   viewBox: 0 0 512 512
   description: The update icon typically shows when a refresh action can be taken.
 - name: upload
   viewBox: 0 0 512 512
   description: The upload icon is used to show when an upload action can be taken.
+- name: verified-approval
+  viewBox: 0 0 64 64
+  description: ...
+- name: vip
+  viewBox: 0 0 64 64
+  description: ...
+- name: wifi
+  viewBox: 0 0 64 64
+  description: ...
+- name: written-check
+  viewBox: 0 0 64 64
+  description: ...
+- name: year-built
+  viewBox: 0 0 64 64
+  description: ...
 - name: youtube
   viewBox: 0 0 448 512
   description: The Youtube icon is used to link to that specific social media account for a given site.
