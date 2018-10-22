@@ -1,7 +1,7 @@
 description:
-  These are the icons provided by Spark-Core. See below for use guidelines.
-information:
-  - You must import spark-core-icons.svg from spark-core in order to use the icon code below.
+  Spark does not provide icons directly. What you see below are proprietary icons in use by Quicken Loans. To supply
+  your own icon set, you need to import an svg that contains symbols for the ids referenced below. This symbol file
+  should occur in the DOM before the first use element.
 sparkPackageCore: true
 hasAngularInfo: true
 isIconGallery: true
