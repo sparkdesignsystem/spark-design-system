@@ -147,8 +147,12 @@ import { Component } from '@angular/core';
               #inlineSearchInput="ngModel"
               sprkInput>
           </sprk-input-container>
-          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--monetary">
-            <label sprkLabel>Payment</label>
+          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--monetary">
+            <label
+              additionalClasses="sprk-b-Label--monetary"
+              sprkLabel>
+              Payment
+            </label>
             <input
               name="monetary_input"
               type="text"
@@ -196,8 +200,12 @@ import { Component } from '@angular/core';
               </div>
             </span>
           </sprk-input-container>
-          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
-            <label sprkLabel>Date Input (picker)</label>
+          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInputIconContainer">
+            <label
+              additionalClasses="sprk-b-Label--with-icon"
+              sprkLabel>
+              Date Input (picker)
+            </label>
             <sprk-icon iconType="calendar" additionalClasses="sprk-b-DatePicker__icon" sprk-input-icon></sprk-icon>
             <input
               name="datepicker_input"
