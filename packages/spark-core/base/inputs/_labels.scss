@@ -2,11 +2,13 @@
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
   line-height: $line-height-body-three;
-}
-
-.sprk-b-InputContainer .sprk-b-Label {
   padding: 0 $space-s;
   transform-origin: top left;
+}
+
+.sprk-b-Label--no-input {
+  padding: 0;
+  transform: none;
 }
 
 .sprk-b-InputContainer .sprk-b-Label.sprk-b-Label--inline {
