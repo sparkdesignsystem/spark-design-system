@@ -2,11 +2,13 @@
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
   line-height: $line-height-body-three;
-}
-
-.sprk-b-InputContainer .sprk-b-Label {
   padding: 0 $space-s;
   transform-origin: top left;
+}
+
+.sprk-b-Label--no-input {
+  padding: 0;
+  transform: none;
 }
 
 .sprk-b-InputContainer .sprk-b-Label.sprk-b-Label--inline {
@@ -65,19 +67,17 @@
   transform: translateY($label-offset-y) scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
-.sprk-b-TextInput--date-picker .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-b-TextInput--date-picker .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
-.sprk-b-TextInput--date-picker .sprk-b-TextInput--focusin ~ .sprk-b-Label,
-.sprk-b-TextInput--monetary .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-b-TextInput--monetary .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
-.sprk-b-TextInput--monetary .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+// We need to abstract this so a label is not dependent on being adjacent to a text input
+.sprk-b-TextInputIconContainer .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-b-TextInputIconContainer .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-b-TextInputIconContainer .sprk-b-TextInput--focusin ~ .sprk-b-Label {
   padding-left: $space-s;
 }
 
-.sprk-b-TextInput--date-picker .sprk-b-Label {
+.sprk-b-Label--with-icon {
   padding-left: $space-l;
 }
 
-.sprk-b-TextInput--monetary .sprk-b-Label {
+.sprk-b-Label--monetary {
   padding-left: 24px;
 }
