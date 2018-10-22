@@ -10,8 +10,7 @@
   position: static;
 }
 
-/* so that you can see the box */
-.#{$app-namespace}-c-Preview__example .sprk-o-Box {
+[data-template-id^='box-object'] .sprk-o-Box {
   border: 1px solid #ccc;
 }
 
