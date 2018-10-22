@@ -200,9 +200,6 @@
 - name: payment-center
   viewBox: 0 0 64 64
   description: ...
-- name: pencil
-  viewBox: 0 0 576 512
-  description: This icons should be used to indicate when something is editable.
 - name: pinterest
   viewBox: 0 0 64 64
   description: ...
