@@ -16,6 +16,11 @@
   justify-content: center;
 }
 
+// Aligns items to end of container when in flex-direction row
+.sprk-o-Stack--end-row {
+  justify-content: flex-end;
+}
+
 // Centers items when in flex flex-direction column
 .sprk-o-Stack--center-column {
   align-items: center;
