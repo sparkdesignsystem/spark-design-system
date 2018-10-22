@@ -10,6 +10,13 @@
   position: static;
 }
 
+[data-template-id^='base-footer'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='base-footer-with-awards'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='base-footer-with-optional-items'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='base-footer-with-optional-items-and-awards'] .#{$app-namespace}-c-Preview__example {
+  padding: 0;
+}
+
 [data-template-id^='box-object'] .sprk-o-Box {
   border: 1px solid #ccc;
 }
