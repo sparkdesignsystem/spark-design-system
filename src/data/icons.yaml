@@ -279,7 +279,7 @@
   viewBox: 0 0 64 64
   description: ...
 - name: twitter
-  viewBox: 0 0 448 512
+  viewBox: 0 0 64 64
   description: The Twitter icon is used to link to that specific social media account for a given site.
 - name: unlock
   viewBox: 0 0 64 64
@@ -288,7 +288,7 @@
   viewBox: 0 0 512 512
   description: The update icon typically shows when a refresh action can be taken.
 - name: upload
-  viewBox: 0 0 512 512
+  viewBox: 0 0 64 64
   description: The upload icon is used to show when an upload action can be taken.
 - name: verified-approval
   viewBox: 0 0 64 64
@@ -306,6 +306,6 @@
   viewBox: 0 0 64 64
   description: ...
 - name: youtube
-  viewBox: 0 0 448 512
+  viewBox: 0 0 64 64
   description: The Youtube icon is used to link to that specific social media account for a given site.
 
