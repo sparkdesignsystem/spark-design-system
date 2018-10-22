@@ -34,43 +34,33 @@
 - name: cash-back
   viewBox: 0 0 64 64
   description: ...
-- name: chat
-  viewBox: 0 0 576 512
-  description: The chat icon is used to show when a chat feature is available.
 - name: chat-online
   viewBox: 0 0 64 64
   description: ...
-- name: check
-  viewBox: 0 0 512 512
-  description: The check mark is used to illustrate success.
 - name: check-mark
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-down
-  viewBox: 0 0 448 512
+  viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
-- name: chevron-down-circle
-  viewBox: 0 0 64 64
-  description: Used to illustrate the direction an action can be taken or where the user will be taken after the
-    action is taken.
 - name: chevron-down-circle-filled
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-left
-  viewBox: 0 0 320 512
+  viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
 - name: chevron-right
-  viewBox: 0 0 320 512
+  viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
 - name: chevron-up
-  viewBox: 0 0 448 512
+  viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
 - name: clock
-  viewBox: 0 0 512 512
+  viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
 - name: close-circle
   viewBox: 0 0 64 64
@@ -78,18 +68,9 @@
 - name: cloud
   viewBox: 0 0 64 64
   description: ...
-- name: cloud-download
-  viewBox: 0 0 640 512
-  description: This icon should be used when something is available to be downloaded from the cloud.
-- name: cog
-  viewBox: 0 0 512 512
-  description: The cog icon typically is used to illustrate where settings can be found.
 - name: communication
   viewBox: 0 0 64 64
   description: ...
-- name: computer-screen
-  viewBox: 0 0 576 512
-  description: The computer screen icon is used to show when a client can share their screen.
 - name: condo
   viewBox: 0 0 64 64
   description: ...
