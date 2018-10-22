@@ -10,9 +10,6 @@
 - name: auto-loans
   viewBox: 0 0 64 64
   description: ...
-- name: bars
-  viewBox: 0 0 448 512
-  description: This icon should be used to indicate when there is a menu present, especially on mobile.
 - name: baths
   viewBox: 0 0 64 64
   description: ...
