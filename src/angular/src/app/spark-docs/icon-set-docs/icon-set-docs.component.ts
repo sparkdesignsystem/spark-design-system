@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'sprk-icon-set-docs',
@@ -16,13 +16,25 @@ export class IconSetDocsComponent {
   constructor() {}
 
   icons = [
-    'check',
+    'access',
+    'amount-money',
+    'application',
+    'auto-loans',
+    'baths',
+    'beds',
     'bell',
+    'blog',
+    'calculator',
+    'calendar',
+    'check-mark',
     'facebook',
     'twitter',
     'calculator',
     'calendar',
-    'chat',
+    'call-team-member',
+    'cash-back',
+    'chat-online',
+    'check-mark',
     'chevron-down',
     'chevron-left',
     'chevron-right',
