@@ -89,9 +89,6 @@
 - name: desktop-computer
   viewBox: 0 0 64 64
   description: ...
-- name: document
-  viewBox: 0 0 384 512
-  description: The document icon shows when a document is available to the user.
 - name: document-review
   viewBox: 0 0 64 64
   description: ...
@@ -143,10 +140,6 @@
 - name: home-size
   viewBox: 0 0 64 64
   description: ...
-- name: info
-  viewBox: 0 0 512 512
-  description: The info icon should be used to indicate that there is extra information provided to aid in
-    the experience.
 - name: information
   viewBox: 0 0 64 64
   description: ...
@@ -210,9 +203,6 @@
 - name: pencil
   viewBox: 0 0 576 512
   description: This icons should be used to indicate when something is editable.
-- name: phone
-  viewBox: 0 0 512 512
-  description: The phone icon is used to show that a phone call can be made.
 - name: pinterest
   viewBox: 0 0 64 64
   description: ...
@@ -282,9 +272,6 @@
 - name: thumbs-up
   viewBox: 0 0 64 64
   description: ...
-- name: times
-  viewBox: 0 0 384 512
-  description: The times icon is used to show that a close/dismiss action be taken.
 - name: townhouse
   viewBox: 0 0 64 64
   description: ...
