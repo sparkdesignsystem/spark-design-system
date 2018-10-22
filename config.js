@@ -29,6 +29,7 @@ module.exports = {
           'drizzle/scripts/drizzle': './src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
           'toolkit/scripts/toolkit': './src/assets/toolkit/scripts/toolkit.js',
+          'toolkit/scripts/toolkit-prerender': './src/assets/toolkit/scripts/toolkit-prerender.js',
         },
         output: {
           path: './dist/assets',

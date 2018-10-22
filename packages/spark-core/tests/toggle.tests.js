@@ -6,7 +6,6 @@ const proxyquireStrict = require('proxyquire').noCallThru();
 
 describe('Toggle init', () => {
   const domSliderStub = {};
-  domSliderStub.slideToggle = () => {};
 
   const {
     toggle,
@@ -71,13 +70,14 @@ describe('Toggle tests', () => {
     content.setAttribute('data-sprk-toggle', 'content');
     content.textContent = 'This is the toggle content..';
     content.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
+    content.slideToggle = () => new Promise((resolve) => { resolve(); });
 
     contentAccordion = document.createElement('p');
     contentAccordion.setAttribute('data-sprk-toggle', 'content');
     contentAccordion.textContent = 'This is the toggle accordion content.';
     contentAccordion.classList.add('sprk-b-TypeBodyTwo', 'sprk-c-Accordion__content');
     contentAccordion.style.display = 'none';
-    contentAccordion.slideToggle = () => {};
+    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve(); });
 
     icon = document.createElement('svg');
     icon.setAttribute('data-sprk-toggle', 'icon');
@@ -118,7 +118,6 @@ describe('Toggle tests', () => {
   });
 
   it('should toggle accordion item open', () => {
-    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('tests'); });
     handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
     expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
     expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-filled');
@@ -142,7 +141,6 @@ describe('Toggle tests', () => {
   });
 
   it('should show details when clicked', () => {
-    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('test'); });
     bindToggleUIEvents(containerAccordion);
     const event = new window.Event('click');
     triggerAccordion.dispatchEvent(event);
@@ -151,27 +149,27 @@ describe('Toggle tests', () => {
 
   it('should disable clicks until after slide toggle animation runs', () => {
     bindToggleUIEvents(container);
-    setTimeout(() => {
-      expect(trigger.style.pointerEvents).eql('none');
-    }, 100);
+    trigger.dispatchEvent(new window.Event('click'));
+    expect(trigger.style.pointerEvents).eql('none');
   });
 
-  it('should enable clicks after slide toggle animation runs', () => {
+  it('should enable clicks after slide toggle animation runs', (cb) => {
+    bindToggleUIEvents(container);
     const event = new window.Event('click');
+    trigger.dispatchEvent(event);
     trigger.dispatchEvent(event);
     setTimeout(() => {
       expect(trigger.style.pointerEvents).eql('auto');
-    }, 300);
+      cb();
+    }, 100);
   });
 
   it('should still toggle content if icon is not present', () => {
-    contentAccordion.slideToggle = () => new Promise((resolve) => { resolve('test'); });
     handleToggleClick(contentAccordion, null, null, triggerAccordion);
     expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
   });
 
   it('should not add Accordion__item class if toggle is not an accordion', () => {
-    content.slideToggle = () => new Promise((resolve) => { resolve('test'); });
     handleToggleClick(content, null, null, trigger);
     expect(container.classList.contains('sprk-c-Accordion__item--open')).eql(false);
   });
