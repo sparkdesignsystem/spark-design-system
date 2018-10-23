@@ -1,7 +1,10 @@
 ---
 name: Base Footer With Link Columns And Award Pattern
-description: |
-  The Base footer with the optional elements can also include the Award pattern.
+description:
+  The Footer can also include the Award pattern and columns of links.
+  You can adjust, based on your content needs, the points at which the different
+  pieces in the footer change from a stacked to a split layout. To do so, change
+  the Stack object container's responsive suffixes.
 restrictions:
   - The social links section is resticted to a maximum of 8 links.
   - The site links section is resticted to a maximum of 56 links in the three columns.
@@ -252,26 +255,62 @@ hasAngularDocs: true
         non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
       </p>
 
-      <div class="sprk-o-Stack__item">
-        <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
-          <li class="sprk-o-Stack__item">
-            <a href="#">
-              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
-            </a>
-          </li>
+      <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
+        <h2 class="sprk-o-Stack__item sprk-b-TypeDisplaySix">
+          Award Pattern Inside Footer
+        </h2>
 
-          <li class="sprk-o-Stack__item">
-            <a href="#">
-              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
-            </a>
-          </li>
+        <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xl sprk-o-Stack--medium">
+          <a class="sprk-o-Stack__item" href="#">
+            <img
+              class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
+              alt="Spark placeholder image"
+              src="../../assets/toolkit/images/spark-placeholder.jpg" />
+          </a>
 
-          <li class="sprk-o-Stack__item">
-            <a href="#">
-              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
-            </a>
-          </li>
-        </ul>
+          <a class="sprk-o-Stack__item" href="#">
+            <img
+              class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
+              alt="Spark placeholder image"
+              src="../../assets/toolkit/images/spark-placeholder.jpg" />
+          </a>
+
+          <ul class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
+            <li class="sprk-o-Stack__item">
+              <a href="#">
+                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a href="#">
+                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a href="#">
+                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sprk-o-Stack__item" data-sprk-toggle="container">
+        <a class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" data-sprk-toggle="trigger" href="#">
+          <svg class="sprk-c-Icon sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 448 512">
+            <use xlink:href="#chevron-down"></use>
+          </svg>
+          My Disclaimer
+        </a>
+
+        <div data-sprk-toggle="content">
+          <p class="sprk-b-TypeBodyFour sprk-u-pts">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+            non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+          </p>
+        </div>
       </div>
     </div>
   </footer>

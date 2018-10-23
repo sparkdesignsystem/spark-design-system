@@ -1,8 +1,11 @@
 ---
 name: Base Footer
 description:
-  The Base Footer is intended to be used at the bottom of every page. The base Footer includes legal links,
+  The Base Footer is intended to be used at the bottom of every page. The Footer includes legal links,
   legal icons or small awards, and a paragraph of legal or other type of copy.
+  You can adjust, based on your content needs, the points at which the different
+  pieces in the footer change from a stacked to a split layout. To do so, change
+  the Stack object container's responsive suffixes.
 restrictions:
   - Some screen readers do not announce the Footer landmark role so we add
     role="contentinfo" to the footer HTML element.
@@ -29,21 +32,19 @@ hasAngularCodeInfo: true
       <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--three-fifths@xs">
         <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
           <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
               <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
                 <use xlink:href="#paper-plane" />
               </svg>
-
               Provide Feedback
             </a>
           </li>
 
           <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
               <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
                 <use xlink:href="#computer-screen" />
               </svg>
-
               Share Your Screen
             </a>
           </li>
