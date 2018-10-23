@@ -171,14 +171,14 @@ $font-weight-body-four: normal !default;
 $using-webfont-body: true !default;
 $using-webfont-heading: true !default;
 $body-font-name: FallSans !default;
-$body-font-src: url('') !default;
+// $body-font-src: url('') !default;
 $body-font-weight: normal !default;
-$body-bold-font-src: url('') !default;
+// $body-bold-font-src: url('') !default;
 $body-bold-font-weight: bold !default;
 $heading-font-name: FallSans !default;
-$heading-font-src: url('') !default;
+// $heading-font-src: url('') !default;
 $heading-font-weight: normal !default;
-$heading-bold-font-src: url('') !default;
+// $heading-bold-font-src: url('') !default;
 $heading-bold-font-weight: bold !default;
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
@@ -244,9 +244,16 @@ $alert-shadow-hover-fail: inset -64px 0 0 $alert-color-fail !default;
 //
 // Promos
 ///
-$promo-border: 1px solid $gray-light !default;
+$promo-background-color: $white !default;
+$promo-border: 1px solid $gray !default;
 $promo-max-width: 42.5rem !default;
 $promo-breakpoint: 42.5rem !default;
+$promo-image-narrow-max-height: 20rem !default;
+$promo-icon-color: $black !default;
+$promo-title-font-color: $black !default;
+$promo-title-font-weight: $font-weight-display-four !default;
+$promo-subtitle-font-color: $black !default;
+$promo-subtitle-font-weight: $font-weight-body-one !default;
 
 //
 // Buttons
