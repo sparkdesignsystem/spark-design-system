@@ -43,10 +43,12 @@
 }
 
 .sprk-b-DatePicker__icon {
-  position: absolute;
-  z-index: $layer-height-xs;
-  margin-top: $input-icon-offset-y;
+  fill: $red-real;
   margin-left: $input-icon-offset-x;
+  margin-top: $input-icon-offset-y;
+  position: absolute;
+  stroke: $red-real;
+  z-index: $layer-height-xs;
 }
 
 .sprk-b-TextInput[readonly] {
