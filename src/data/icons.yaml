@@ -107,9 +107,6 @@
 - name: email
   viewBox: 0 0 64 64
   description: ...
-- name: envelope
-  viewBox: 0 0 512 512
-  description: The envelope icon is used to indicate when there is a message available.
 - name: exclamation
   viewBox: 0 0 576 512
   description: This icon is used to illustrate an error or when something goes wrong.
@@ -188,9 +185,6 @@
 - name: our-family
   viewBox: 0 0 64 64
   description: ...
-- name: paper-plane
-  viewBox: 0 0 512 512
-  description: Typically the paper place icon should be used to indicate the ability to provide feedback.
 - name: parking
   viewBox: 0 0 64 64
   description: ...

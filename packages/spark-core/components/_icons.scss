@@ -4,22 +4,33 @@
 .sprk-c-Icon {
   height: $icon-m;
   fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 4px;
   width: $icon-m;
+}
+
+/* required for css to override svg presentational attributes */
+svg g {
+  stroke: inherit;
+  stroke-width: inherit;
 }
 
 .sprk-c-Icon--l {
   height: $icon-l;
   width: $icon-l;
+  stroke-width: 2px;
 }
 
 .sprk-c-Icon--xl {
   height: $icon-xl;
   width: $icon-xl;
+  stroke-width: 1px;
 }
 
 .sprk-c-Icon--xxl {
   height: $icon-xxl;
   width: $icon-xxl;
+  stroke-width: 0.5px;
 }
 
 // Initial state for icons that will be toggled
