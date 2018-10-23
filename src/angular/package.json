@@ -44,6 +44,7 @@
     "core-js": "^2.5.4",
     "protractor": "^5.3.2",
     "rxjs": "^6.2.2",
+    "whatwg-fetch": "^3.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
