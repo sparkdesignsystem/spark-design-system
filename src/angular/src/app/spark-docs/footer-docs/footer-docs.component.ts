@@ -250,13 +250,13 @@ export class FooterDocsComponent {
   feedbackLinks = [
     {
       href: 'https://www.sparkdesignsystem.com/',
-      icon: 'paper-plane',
+      icon: 'feedback',
       text: 'Feedback Link 1',
       analytics: 'Link to Item 1'
     },
     {
       href: 'https://www.sparkdesignsystem.com/',
-      icon: 'computer-screen',
+      icon: 'desktop-computer',
       text: 'Feedback Link 2',
       analytics: 'Link to Item 2'
     }
