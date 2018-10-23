@@ -212,6 +212,9 @@
 - name: prequalified
   viewBox: 0 0 64 64
   description: ...
+- name: price-per-sq-ft
+  viewBox: 0 0 64 64
+  description: ...
 - name: print
   viewBox: 0 0 64 64
   description: When something is printable.
