@@ -15,37 +15,38 @@
   color: $input-disabled-text-color;
 }
 
-.sprk-b-TextInput--date-picker,
-.sprk-b-TextInput--monetary {
-  position: relative;
-}
-
-.sprk-b-TextInput--date-picker .sprk-b-TextInput {
+.sprk-b-TextInput--with-icon {
   padding-left: $space-l;
 }
 
-.sprk-b-TextInput--monetary .sprk-b-TextInput {
+.sprk-b-TextInput--monetary {
   padding-left: 24px;
 }
 
-.sprk-b-DatePicker__icon,
-.sprk-b-TextInput--monetary::before {
-  position: absolute;
-  z-index: $layer-height-xs;
+.sprk-b-TextInputIconContainer {
+  position: relative;
+}
+
+.sprk-b-TextInputIconContainer--monetary {
+  position: relative;
+
+  &::before {
+    content: $monetary-symbol;
+    display: block;
+    font-size: $space-m;
+    line-height: 1;
+    margin-left: $input-text-icon-offset-x;
+    margin-top: $input-text-icon-offset-y;
+    position: absolute;
+    z-index: $layer-height-xs;
+  }
 }
 
 .sprk-b-DatePicker__icon {
+  position: absolute;
+  z-index: $layer-height-xs;
   margin-top: $input-icon-offset-y;
   margin-left: $input-icon-offset-x;
-}
-
-.sprk-b-TextInput--monetary::before {
-  content: $monetary-symbol;
-  display: block;
-  font-size: $space-m;
-  margin-top: $input-text-icon-offset-y;
-  margin-left: $input-text-icon-offset-x;
-  line-height: 1;
 }
 
 .sprk-b-TextInput[readonly] {
