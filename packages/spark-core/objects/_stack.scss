@@ -63,7 +63,41 @@
   align-items: flex-end;
 }
 
-// Centers items when in flex flex-direction column
+//
+// Aligns items to end of container when in flex-direction column
+// at specific breakpoints
+///
+.sprk-o-Stack--end-column\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    align-items: flex-end;
+  }
+}
+
+.sprk-o-Stack--end-column\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    align-items: flex-end;
+  }
+}
+
+.sprk-o-Stack--end-column\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    align-items: flex-end;
+  }
+}
+
+.sprk-o-Stack--end-column\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    align-items: flex-end;
+  }
+}
+
+.sprk-o-Stack--end-column\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    align-items: flex-end;
+  }
+}
+
+// Centers items when in flex-direction column
 .sprk-o-Stack--center-column {
   align-items: center;
 }
@@ -71,42 +105,6 @@
 // Stack items retain their original width by default
 .sprk-o-Stack__item {
   flex: 0 0 auto;
-}
-
-// Center a specific stack item
-.sprk-o-Stack__item--center-column {
-  align-self: center;
-}
-
-// Aligns item to end of container when in flex-direction column
-.sprk-o-Stack__item--end-column\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
-    align-self: flex-end;
-  }
-}
-
-.sprk-o-Stack__item--end-column\@s {
-  @media all and (min-width: $split-breakpoint-s) {
-    align-self: flex-end;
-  }
-}
-
-.sprk-o-Stack__item--end-column\@m {
-  @media all and (min-width: $split-breakpoint-m) {
-    align-self: flex-end;
-  }
-}
-
-.sprk-o-Stack__item--end-column\@l {
-  @media all and (min-width: $split-breakpoint-l) {
-    align-self: flex-end;
-  }
-}
-
-.sprk-o-Stack__item--end-column\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
-    align-self: flex-end;
-  }
 }
 
 //
@@ -606,5 +604,35 @@
 .sprk-o-Stack__item--flex\@xl {
   @media all and (min-width: $split-breakpoint-xl) {
     flex: 1;
+  }
+}
+
+.sprk-o-Stack__item--end-column\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    align-self: flex-end;
+  }
+}
+
+.sprk-o-Stack__item--end-column\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    align-self: flex-end;
+  }
+}
+
+.sprk-o-Stack__item--end-column\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    align-self: flex-end;
+  }
+}
+
+.sprk-o-Stack__item--end-column\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    align-self: flex-end;
+  }
+}
+
+.sprk-o-Stack__item--end-column\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    align-self: flex-end;
   }
 }
