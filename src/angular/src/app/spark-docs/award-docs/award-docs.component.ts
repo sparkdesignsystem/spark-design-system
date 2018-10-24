@@ -4,28 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'sprk-award-docs',
   template: `
     <div class="drizzle-o-ContentGrouping sprk-u-mbh">
-      <h2 class="drizzle-b-h2 sprk-u-mbm">
-        Award split at tiny breakpoint
-      </h2>
-
-      <div class="sprk-o-CenteredColumn">
-        <sprk-award
-          splitAt="tiny"
-          title="Spark Award Component"
-          imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-          imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-          imgOneAlt="placeholder!"
-          imgOneHref="https://www.sparkdesignsystem.com/"
-          imgTwoHref="https://www.sparkdesignsystem.com/"
-          imgTwoAlt="placeholder!"
-          disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
-          disclaimerTitle="My disclaimer title"
-          analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
-        </sprk-award>
-      </div>
-    </div>
-
     <div class="drizzle-o-ContentGrouping sprk-u-mbh">
       <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award split at small breakpoint
