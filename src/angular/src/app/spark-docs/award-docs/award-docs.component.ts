@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'sprk-award-docs',
   template: `
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award split at tiny breakpoint
       </h2>
 
@@ -26,8 +26,8 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award split at small breakpoint
       </h2>
 
@@ -49,8 +49,8 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award split at medium breakpoint
       </h2>
 
@@ -72,8 +72,8 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award split at large breakpoint
       </h2>
 
@@ -95,8 +95,8 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award split at huge breakpoint
       </h2>
 
@@ -118,8 +118,8 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <h2 class="drizzle-b-h2 sprk-u-mbm">
         Award With Disclaimer set to false
       </h2>
 

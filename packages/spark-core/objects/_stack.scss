@@ -607,6 +607,11 @@
   }
 }
 
+// Item end modifiers
+.sprk-o-Stack__item--end-column {
+  align-self: flex-end;
+}
+
 .sprk-o-Stack__item--end-column\@xs {
   @media all and (min-width: $split-breakpoint-xs) {
     align-self: flex-end;
@@ -634,5 +639,75 @@
 .sprk-o-Stack__item--end-column\@xl {
   @media all and (min-width: $split-breakpoint-xl) {
     align-self: flex-end;
+  }
+}
+
+// Item start modifiers
+.sprk-o-Stack__item--start-column {
+  align-self: flex-start;
+}
+
+.sprk-o-Stack__item--start-column\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    align-self: flex-start;
+  }
+}
+
+.sprk-o-Stack__item--start-column\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    align-self: flex-start;
+  }
+}
+
+.sprk-o-Stack__item--start-column\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    align-self: flex-start;
+  }
+}
+
+.sprk-o-Stack__item--start-column\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    align-self: flex-start;
+  }
+}
+
+.sprk-o-Stack__item--start-column\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    align-self: flex-start;
+  }
+}
+
+// Item center modifiers
+.sprk-o-Stack__item--center-column {
+  align-self: center;
+}
+
+.sprk-o-Stack__item--center-column\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    align-self: center;
+  }
+}
+
+.sprk-o-Stack__item--center-column\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    align-self: center;
+  }
+}
+
+.sprk-o-Stack__item--center-column\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    align-self: center;
+  }
+}
+
+.sprk-o-Stack__item--center-column\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    align-self: center;
+  }
+}
+
+.sprk-o-Stack__item--center-column\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    align-self: center;
   }
 }
