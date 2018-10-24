@@ -90,7 +90,7 @@ export class SparkAwardComponent {
 
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item--center-column '
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     // Handle the choice of item split breakpoint by adding CSS class
