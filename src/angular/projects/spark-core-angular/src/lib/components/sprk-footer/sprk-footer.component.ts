@@ -4,100 +4,116 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-footer',
   template: `
     <footer [ngClass]="getClasses()" role="contentinfo">
-      <sprk-stack
-        splitAt="medium"
-        itemSpacing="medium"
-        *ngIf="siteLinkCols"
-        sprkStackItem>
-        <div
-          *ngFor="let column of siteLinkCols"
-          sprkStackItem
-          class="sprk-o-Stack__item--flex@m">
-          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
-            {{ column.heading }}
-          </h2>
+      <div class="sprk-o-Stack__item sprk-o-Box">
+        <ul class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-HorizontalList--delimited-split-distribution">
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 1</a></li>
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 2</a></li>
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 3</a></li>
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 4</a></li>
+          <li><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 5</a></li>
+        </ul>
+      </div>
 
-          <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
-            <li
-              *ngFor="let link of column.siteLinks"
-              sprkStackItem>
-              <a
-                class="sprk-b-Link sprk-b-Link--standalone"
-                [routerLink]="link.href"
-                [attr.data-analytics]="link.analytics">
-                {{ link.text }}
+      <div class="sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack__item">
+        <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--three-fifths@xs">
+          <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                  <use xlink:href="#paper-plane" />
+                </svg>
+                Provide Feedback
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                  <use xlink:href="#computer-screen" />
+                </svg>
+                Share Your Screen
               </a>
             </li>
           </ul>
         </div>
-      </sprk-stack>
 
-      <sprk-stack splitAt="{{ splitAt }}" itemSpacing="large" sprkStackItem>
-        <div sprkStackItem class="sprk-o-Stack__item--flex@xl sprk-o-Stack sprk-o-Stack--large">
-          <ul
-            *ngIf="socialLinks"
-            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-b-List sprk-b-List--bare">
-            <li
-              *ngFor="let socialLink of socialLinks"
-              sprkStackItem>
-              <a
-                class="sprk-b-Link--muted"
-                [routerLink]="socialLink.href"
-                [attr.data-analytics]="socialLink.analytics">
-                <sprk-icon [iconType]="socialLink.icon" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+        <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--two-fifths@xs">
+          <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-o-Stack--end-row">
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                  <use xlink:href="#facebook" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                  <use xlink:href="#instagram" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                  <use xlink:href="#twitter" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                  <use xlink:href="#youtube" />
+                </svg>
               </a>
             </li>
           </ul>
+        </div>
+      </div>
 
-          <ul
-            *ngIf="feedbackLinks"
-            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-b-List sprk-b-List--bare">
-            <li
-              *ngFor="let feedbackLink of feedbackLinks"
-              class="sprk-o-Stack__item">
-              <a
-                class="sprk-b-Link sprk-b-Link--muted"
-                [routerLink]="feedbackLink.feedbackHref"
-                [attr.data-analytics]="feedbackLink.analytics">
-                <sprk-icon [iconType]="feedbackLink.icon" additionalClasses="sprk-c-Icon--l sprk-u-mrs"></sprk-icon>
-                {{ feedbackLink.text }}
-              </a>
-            </li>
-          </ul>
+      <div class="sprk-u-mlm sprk-u-mrm sprk-c-Divider"></div>
 
-          <sprk-toggle
-            *ngIf="disclaimer"
-            sprkStackItem
-            toggleType="base"
-            title="{{ disclaimerTitle }}"
-            body="{{ disclaimerCopy }}"
-            analyticsString="{{ analyticsStringDisclaimer }}">
-          </sprk-toggle>
-
-          <p sprkStackItem class="sprk-b-TypeBodyTwo">
-            <ng-content></ng-content>
+      <div class="sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack__item">
+        <div class="sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-o-Stack__item sprk-o-Stack__item--three-fifths@s">
+          <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+            non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
           </p>
 
-          <div sprkStackItem class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
-            <div *ngFor="let img of badges" [ngClass]="getClassesBadges()">
-              <a [routerLink]="img.href" [attr.data-analytics]="img.analytics">
-                <img src="{{ img.src }}" alt="{{ img.alt }}">
-              </a>
-            </div>
-          </div>
-
-          <sprk-secondary-navigation sprkStackItem>
-            <sprk-secondary-navigation-item
-              *ngFor="let link of navLinks"
-              [analyticsString]="link.analytics"
-              [href]="link.href"
-              [text]="link.text">
-            </sprk-secondary-navigation-item>
-          </sprk-secondary-navigation>
+          <sprk-toggle
+            title="My Disclaimer"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+              non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo."
+            analyticsString="My disclaimer Title"
+            sprkStackItem>
+          </sprk-toggle>
         </div>
 
-        <ng-content select="[optional-slot]" sprkStackItem></ng-content>
-      </sprk-stack>
+        <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--two-fifths@s">
+          <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium sprk-o-Stack--end-row">
+            <li class="sprk-o-Stack__item">
+              <a href="#">
+                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a href="#">
+                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a href="#">
+                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   `
 })
@@ -128,11 +144,7 @@ export class SparkFooterComponent {
   analyticsStringDisclaimer: string;
 
   getClasses(): string {
-    const classArray: string[] = [
-      'sprk-o-Box',
-      'sprk-o-Stack',
-      'sprk-o-Stack--large'
-    ];
+    const classArray: string[] = ['sprk-o-Stack'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
