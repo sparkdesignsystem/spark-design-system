@@ -20,35 +20,35 @@ $card-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) !default;
 }
 
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
-.sprk-o-Stack__item.sprk-o-Stack__item--equal\@xs.sprk-c-Card {
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@xs.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-xs) {
     flex: 0 1 $card-max-width;
     min-width: 0%;
   }
 }
 
-.sprk-o-Stack__item.sprk-o-Stack__item--equal\@s.sprk-c-Card {
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@s.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-s) {
     flex: 0 1 $card-max-width;
     min-width: 0%;
   }
 }
 
-.sprk-o-Stack__item.sprk-o-Stack__item--equal\@m.sprk-c-Card {
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@m.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-m) {
     flex: 0 1 $card-max-width;
     min-width: 0%;
   }
 }
 
-.sprk-o-Stack__item.sprk-o-Stack__item--equal\@l.sprk-c-Card {
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@l.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-l) {
     flex: 0 1 $card-max-width;
     min-width: 0%;
   }
 }
 
-.sprk-o-Stack__item.sprk-o-Stack__item--equal\@xl.sprk-c-Card {
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@xl.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-xl) {
     flex: 0 1 $card-max-width;
     min-width: 0%;

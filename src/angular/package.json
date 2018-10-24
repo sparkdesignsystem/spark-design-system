@@ -34,7 +34,6 @@
     "@angular/platform-browser-dynamic": "^6.1.9",
     "@angular/router": "^6.1.9",
     "@sparkdesignsystem/spark-core-angular": "^1.0.0",
-    "@sparkdesignsystem/spark-extras": "^2.0.1",
     "@sparkdesignsystem/spark-extras-angular-award": "^1.0.0",
     "@sparkdesignsystem/spark-extras-angular-card": "^1.0.0",
     "@sparkdesignsystem/spark-extras-angular-dictionary": "^1.0.0",
