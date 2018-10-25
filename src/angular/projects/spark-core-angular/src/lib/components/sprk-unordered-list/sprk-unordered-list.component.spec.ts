@@ -40,9 +40,18 @@ describe('SparkUnorderedListComponent', () => {
     expect(element.classList.contains('sprk-b-List--bare')).toEqual(true);
   });
 
+  it('classes should get set if listType is horizontal', () => {
+    component.listType = 'horizontal';
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-o-HorizontalList')).toEqual(true);
+  });
+
   it('should add the correct classes if additionalClasses have values', () => {
+    component.listType = 'bare';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(component.getClasses()).toEqual('sprk-b-List sprk-u-pam sprk-u-man');
+    expect(element.classList.toString()).toEqual(
+      'sprk-b-List sprk-b-List--bare sprk-u-pam sprk-u-man'
+    );
   });
 });
