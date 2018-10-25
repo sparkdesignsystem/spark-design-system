@@ -88,21 +88,28 @@ import {
     </nav>
 
     <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'long'">
-      <sprk-unordered-list listType="bare" additionalClasses="sprk-c-Pagination">
-        <li class="sprk-c-Pagination__item sprk-c-Pagination__item--long">
+      <sprk-unordered-list listType="horizontal" additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-small">
+        <li>
           <a
             (click)="goBack($event, currentPage)"
-            [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
+            [ngClass]="{
+              'sprk-c-Pagination__icon': true,
+              'sprk-b-Link': true,
+              'sprk-b-Link--disabled': currentPage === 1 }"
             href="#">
-            {{ prevLinkText }}
+            <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
+            <sprk-icon iconType="chevron-left"></sprk-icon>
           </a>
         </li>
 
-        <li
-          [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-u-Display--none': currentPage === 1}">
+        <li>
           <a
             (click)="goToPage($event, 1)"
-            class="sprk-b-Link sprk-b-Link--standalone"
+            [ngClass]="{
+              'sprk-c-Pagination__link': true,
+              'sprk-b-Link': true,
+              'sprk-c-Pagination__link--current': currentPage === 1
+            }"
             href="#"
             [attr.data-analytics]="analyticsStringFirstLink"
             aria-label="Page 1">
@@ -110,19 +117,18 @@ import {
           </a>
         </li>
 
-        <li
-          [ngClass]="{
-            'sprk-c-Pagination__item': true,
-            'sprk-c-Pagination__item--long': true,
-            'sprk-u-Display--none': currentPage === 1 || currentPage === 2 }">
+        <li [ngClass]="{ 'sprk-u-Display--none': currentPage === 1 || currentPage === 2 }">
           ...
         </li>
 
-        <li
-          [ngClass]="{'sprk-c-Pagination__item': true, 'sprk-c-Pagination__item--long': true, 'sprk-c-Pagination__item--current': true}">
+        <li [ngClass]="{ 'sprk-u-Display--none': currentPage === 1 || currentPage === totalPages() }">
           <a
             (click)="goToPage($event, currentPage)"
-            class="sprk-b-Link sprk-b-Link--standalone"
+            [ngClass]="{
+              'sprk-c-Pagination__link': true,
+              'sprk-b-Link': true,
+              'sprk-c-Pagination__link--current': true
+            }"
             href="#"
             aria-current="true"
             [attr.data-analytics]="analyticsStringSecondLink"
@@ -131,22 +137,18 @@ import {
           </a>
         </li>
 
-        <li
-          [ngClass]="{
-            'sprk-c-Pagination__item': true,
-            'sprk-c-Pagination__item--long': true,
-            'sprk-u-Display--none': currentPage === totalPages() || currentPage === (totalPages() - 1) }">
+        <li [ngClass]="{ 'sprk-u-Display--none': currentPage === totalPages() || currentPage === (totalPages() - 1) }">
           ...
         </li>
 
-        <li
-          [ngClass]="{
-            'sprk-c-Pagination__item': true,
-            'sprk-c-Pagination__item--long': true,
-            'sprk-u-Display--none': currentPage === totalPages()}">
+        <li>
           <a
             (click)="goToPage($event, totalPages())"
-            class="sprk-b-Link sprk-b-Link--standalone"
+            [ngClass]="{
+              'sprk-c-Pagination__link': true,
+              'sprk-b-Link': true,
+              'sprk-c-Pagination__link--current': currentPage === totalPages()
+            }"
             href="#"
             [attr.data-analytics]="analyticsStringThirdLink"
             attr.aria-label="Page {{ totalPages() }}">
@@ -154,13 +156,14 @@ import {
           </a>
         </li>
 
-        <li class="sprk-c-Pagination__item sprk-c-Pagination__item--long">
+        <li>
           <a
             (click)="goForward($event, currentPage)"
             [ngClass]="{
+              'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-b-Link--standalone': true,
-              'sprk-b-Link--disabled': isLastPage() }"
+              'sprk-b-Link--disabled': isLastPage()
+            }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
             {{ nextLinkText }}
