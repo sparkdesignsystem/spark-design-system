@@ -157,7 +157,6 @@ export class SparkPromoComponent {
 
   getContentClasses(): string {
     const classArray: string[] = [
-      // 'sprk-o-Stack__item--half@s',
       'sprk-o-Stack__item',
       'sprk-c-Promo__content',
       'sprk-o-Stack',
