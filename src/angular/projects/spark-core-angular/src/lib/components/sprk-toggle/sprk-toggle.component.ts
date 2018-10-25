@@ -12,7 +12,7 @@ import {
   template: `
     <div class="{{ additionalClasses }}">
       <a
-        class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone"
+        class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"

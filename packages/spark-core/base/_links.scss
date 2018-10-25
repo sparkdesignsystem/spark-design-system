@@ -21,6 +21,10 @@
   &:focus {
     color: $link-underline-color;
     text-decoration: none;
+
+    &::after {
+      background-color: $link-underline-color;
+    }
   }
 
   &::after {
@@ -31,6 +35,14 @@
     width: 100%;
     position: absolute;
     background-color: $link-underline-color;
+  }
+}
+
+.sprk-b-Link--plain {
+  text-decoration: none;
+
+  &::after {
+    content: none;
   }
 }
 

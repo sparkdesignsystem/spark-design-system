@@ -36,10 +36,6 @@
   &:active {
     border-color: $pag-selection-color;
   }
-
-  &::after {
-    content: none;
-  }
 }
 
 .sprk-c-Pagination__link--current {
@@ -66,10 +62,6 @@
   &:focus,
   &:active {
     color: $pag-selection-color;
-  }
-
-  &::after {
-    content: none;
   }
 }
 
