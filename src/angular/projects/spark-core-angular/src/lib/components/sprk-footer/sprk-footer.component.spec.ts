@@ -12,32 +12,6 @@ describe('SparkFooterComponent', () => {
   let component: SparkFooterComponent;
   let fixture: ComponentFixture<SparkFooterComponent>;
   let element: HTMLElement;
-  const siteLinkCols: object = {
-    heading: 'cats',
-    siteLinks: { text: 'Item 1', href: '/alerts', analytics: 'test' }
-  };
-  const feedbackLinks: object = {
-    icon: 'bell',
-    text: 'Item 1',
-    href: '/alerts',
-    analytics: 'test'
-  };
-  const socialLinks: object = {
-    icon: 'bell',
-    href: '/alerts',
-    analytics: 'test'
-  };
-  const navLinks: object = {
-    text: 'Item 1',
-    href: '/alerts',
-    analytics: 'test'
-  };
-  const badges: object = {
-    href: '/alerts',
-    analytics: 'test',
-    alt: 'test',
-    src: 'test'
-  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -73,20 +47,7 @@ describe('SparkFooterComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-u-pam sprk-u-man'
+      'sprk-o-Stack sprk-u-pam sprk-u-man'
     );
-  });
-
-  it('should add the correct classes if additionalClassesBadges has a value', () => {
-    component.additionalClassesBadges = 'sprk-u-pam sprk-u-man';
-    fixture.detectChanges();
-    expect(component.getClassesBadges()).toEqual(
-      'sprk-o-Stack__item sprk-u-pam sprk-u-man'
-    );
-  });
-
-  it('should add the correct classes if additionalClassesBadges does not have a value', () => {
-    fixture.detectChanges();
-    expect(component.getClassesBadges()).toEqual('sprk-o-Stack__item');
   });
 });
