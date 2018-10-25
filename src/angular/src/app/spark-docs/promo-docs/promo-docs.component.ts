@@ -11,7 +11,7 @@ import { RouterTestingModule } from '@angular/router/testing';
         </h2>
 
         <sprk-promo title="Title"
-          subtitle="Subtitle subtitle subtitle"
+          subtitle="Subtitle"
           cta="button"
           ctaText="Learn More">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
@@ -26,7 +26,7 @@ import { RouterTestingModule } from '@angular/router/testing';
       </h2>
 
       <sprk-promo title="Title"
-        subtitle="Subtitle subtitle subtitle"
+        subtitle="Subtitle"
         media="icon"
         iconType="bell"
         iconHref="sparkdesignsystem.com"
@@ -64,7 +64,7 @@ import { RouterTestingModule } from '@angular/router/testing';
       </h2>
 
       <sprk-promo
-        title="Placeholder title text"
+        title="Title"
         subtitle="Subtitle"
         mediaRev="yes"
         media="img"

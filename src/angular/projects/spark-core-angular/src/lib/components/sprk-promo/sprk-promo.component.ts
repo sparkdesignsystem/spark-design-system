@@ -157,12 +157,16 @@ export class SparkPromoComponent {
 
   getContentClasses(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item--half@s',
+      // 'sprk-o-Stack__item--half@s',
       'sprk-o-Stack__item',
       'sprk-c-Promo__content',
       'sprk-o-Stack',
       'sprk-o-Stack--large'
     ];
+
+    if (this.media === 'img' || this.media === 'icon') {
+      classArray.push('sprk-o-Stack__item--half@s');
+    }
 
     if (this.additionalClassesIconLink) {
       this.additionalClassesIconLink.split(' ').forEach(className => {
