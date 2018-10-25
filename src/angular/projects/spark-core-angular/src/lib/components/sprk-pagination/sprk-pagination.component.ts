@@ -160,27 +160,29 @@ import {
           <a
             (click)="goForward($event, currentPage)"
             [ngClass]="{
-              'sprk-c-Pagination__link': true,
+              'sprk-c-Pagination__icon': true,
               'sprk-b-Link': true,
               'sprk-b-Link--disabled': isLastPage()
             }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
-            {{ nextLinkText }}
+            <span class="sprk-u-ScreenReaderText">Next</span>
+            <sprk-icon iconType="chevron-right"></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
     </nav>
 
     <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'pager'">
-      <sprk-unordered-list listType="bare" additionalClasses="sprk-c-Pagination">
+      <sprk-unordered-list listType="horizontal" additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-large">
         <li class="sprk-c-Pagination__item">
           <a
             (click)="goBack($event, currentPage)"
             [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkPrev">
-            {{ prevLinkText }}
+            <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
+            <sprk-icon iconType="chevron-left"></sprk-icon>
           </a>
         </li>
 
@@ -193,7 +195,8 @@ import {
               'sprk-b-Link--disabled': isLastPage() }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkNext">
-            {{ nextLinkText }}
+            <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
+            <sprk-icon iconType="chevron-right"></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
