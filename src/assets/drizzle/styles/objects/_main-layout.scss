@@ -4,7 +4,7 @@ $drizzle-header-padding-vert-wide: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 0 auto;
+  flex: 1 0 auto;
 }
 
 .#{$app-namespace}-o-Layout {
