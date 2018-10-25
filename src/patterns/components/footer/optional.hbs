@@ -1,29 +1,280 @@
 ---
-name: Base With Optional Elements
+name: Base Footer With Columns of Links
 description: |
-  The Base Footer can be used with all or some of the optional elements.
-  The optional items are feedback links,
-  social links and three columns of site links.
+  The Footer can include columns of links.
+  You can adjust, based on your content needs, the points at which the different
+  pieces in the footer change from a stacked to a split layout. To do so, change
+  the Stack object container's responsive suffixes.
 restrictions:
   - The social links section is resticted to a maximum of 8 links.
   - The site links section is resticted to a maximum of 56 links in the three columns.
   - The feedback links have an icon, a line of explanation copy and a link.
 order: 3
 hasAngularCode: true
-hasAngularDocs: true
-hasAngularCodeInfo: true
 ---
 <div class="sprk-o-CenteredColumn">
-  <footer class="sprk-o-Box sprk-o-Stack sprk-o-Stack--large" role="contentinfo">
-    {{!-- Optional Columns of links (max 3) --}}
-    {{#embed "patterns.components.footer.nav-link-columns"}}{{/embed}}
+  <footer class="sprk-o-Stack" role="contentinfo">
+    <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
+      <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--split@s">
+        <div class="sprk-o-Stack__item sprk-o-Stack__item--third@s sprk-o-Box">
+          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+            One
+          </h2>
 
-    {{!-- Optional Social links/icons --}}
-    {{#embed "patterns.components.footer.social-links"}}{{/embed}}
+          <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 1</a>
+            </li>
 
-    {{!-- Optional Feedback Links --}}
-    {{#embed "patterns.components.footer.feedback-links"}}{{/embed}}
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 2</a>
+            </li>
 
-    {{#embed "patterns.components.footer.base-items"}}{{/embed}}
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 3</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 4</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 5</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 6</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 7</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 8</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 9</a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">Link Text 10</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sprk-o-Stack__item sprk-o-Stack__item--third@s sprk-o-Box">
+          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+            Two
+          </h2>
+
+          <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 1
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 2
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 3
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 4
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 5
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 6
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 7
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 8
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 9
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 10
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sprk-o-Stack__item sprk-o-Stack__item--third@s sprk-o-Box">
+          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+            Three
+          </h2>
+
+          <ul class="sprk-o-Stack sprk-o-Stack--small sprk-b-List sprk-b-List--bare">
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 1
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 2
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 3
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 4
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 5
+              </a>
+            </li>
+
+            <li class="sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
+                Link 6
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--medium sprk-o-Box">
+        <ul class="sprk-o-Stack__item sprk-o-Stack--end-row@m sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                <use xlink:href="#facebook" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                <use xlink:href="#instagram" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                <use xlink:href="#twitter" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 448 512">
+                <use xlink:href="#youtube" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+          <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
+            <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <use xlink:href="#paper-plane" />
+              </svg>
+
+              Provide Feedback
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
+            <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <use xlink:href="#computer-screen" />
+              </svg>
+
+              Share Your Screen
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sprk-u-mlm sprk-u-mrm sprk-c-Divider"></div>
+
+    <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
+      <div class="sprk-o-Stack__item">
+        <ul class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-HorizontalList--delimited-split-distribution">
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 1</a></li>
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 2</a></li>
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 3</a></li>
+          <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 4</a></li>
+          <li><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 5</a></li>
+        </ul>
+      </div>
+
+      <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+        non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+      </p>
+
+      <div class="sprk-o-Stack__item">
+        <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
+          <li class="sprk-o-Stack__item">
+            <a href="#">
+              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a href="#">
+              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a href="#">
+              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </div>

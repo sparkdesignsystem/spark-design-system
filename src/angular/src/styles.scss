@@ -16,8 +16,8 @@ $heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff
   format('woff2'),
   url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
 
-@import '~@sparkdesignsystem/spark-core/spark-core';
-@import '~@sparkdesignsystem/spark-core/spark-core-angular';
+@import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
+@import 'node_modules/@sparkdesignsystem/spark-core/spark-core-angular.scss';
 
 //
 // Bring in doc site styles

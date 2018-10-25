@@ -8,10 +8,10 @@ import { Component, Input } from '@angular/core';
       sprkStackItem
       class="
         sprk-o-Stack__item
-        sprk-o-Stack__item--center
         sprk-b-TypeDisplayFive
         sprk-b-Measure sprk-b-Measure--narrow
-        sprk-u-TextAlign--center">
+        sprk-u-TextAlign--center
+        sprk-o-Stack__item--center-column">
       {{ title }}
     </h2>
 
@@ -42,6 +42,7 @@ import { Component, Input } from '@angular/core';
     <sprk-toggle
       *ngIf="disclaimer !== 'false'"
       sprkStackItem
+      additionalClasses="sprk-o-Stack__item--start-column"
       toggleType="base"
       title="{{ disclaimerTitle }}"
       body="{{ disclaimerCopy }}"
@@ -89,7 +90,7 @@ export class SparkAwardComponent {
 
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     // Handle the choice of item split breakpoint by adding CSS class
@@ -118,7 +119,7 @@ export class SparkAwardComponent {
 
   getClassesImgOne(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack__item--center'
+      'sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     if (this.additionalClassesImgOne) {
@@ -131,7 +132,7 @@ export class SparkAwardComponent {
 
   getClassesImgTwo(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack__item--center'
+      'sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     if (this.additionalClassesImgTwo) {

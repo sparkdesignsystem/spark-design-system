@@ -37,7 +37,7 @@ describe('SparkAwardComponent', () => {
     component.splitAt = '';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
     );
   });
 
@@ -45,7 +45,7 @@ describe('SparkAwardComponent', () => {
     component.splitAt = 'tiny';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@xs'
     );
   });
 
@@ -53,7 +53,7 @@ describe('SparkAwardComponent', () => {
     component.splitAt = 'small';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@s'
     );
   });
 
