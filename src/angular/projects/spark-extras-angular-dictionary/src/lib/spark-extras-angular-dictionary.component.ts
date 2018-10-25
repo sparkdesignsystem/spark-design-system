@@ -10,7 +10,8 @@ import { Component, Input } from '@angular/core';
         <dd class="sprk-c-Dictionary__value">{{ data[key] }}</dd>
       </div>
     </dl>
-  </div>`
+  </div>`,
+  styleUrls: ['spark-extras-angular-dictionary.component.scss']
 })
 export class SparkDictionaryComponent {
   @Input()
