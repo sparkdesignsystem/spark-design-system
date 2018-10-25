@@ -25,6 +25,7 @@ import { DividerDocsComponent } from './spark-docs/divider-docs/divider-docs.com
 import { FooterDocsComponent } from './spark-docs/footer-docs/footer-docs.component';
 import { HighlightBoardDocsComponent } from './spark-docs/highlight-board-docs/highlight-board-docs.component';
 import { IconSetDocsComponent } from './spark-docs/icon-set-docs/icon-set-docs.component';
+import { IconSetComponent } from './spark-docs/icon-set/icon-set.component';
 import { InputDocsComponent } from './spark-docs/input-docs/input-docs.component';
 import { IntroDocsComponent } from './spark-docs/intro-docs/intro-docs.component';
 import { LinkDocsComponent } from './spark-docs/link-docs/link-docs.component';
@@ -78,6 +79,7 @@ const appRoutes: Routes = [
     IntroDocsComponent,
     LinkDocsComponent,
     ModalDocsComponent,
+    IconSetComponent,
     IconSetDocsComponent,
     NavigationDocsComponent,
     DividerDocsComponent,

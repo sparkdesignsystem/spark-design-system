@@ -37,7 +37,7 @@ export class SparkIconInputContainerComponent implements OnInit {
   error_id = `error_${this.id}`;
 
   getIconContainerClasses(): string {
-    const classArray: string[] = [];
+    const classArray: string[] = ['sprk-b-TextInputIconContainer'];
 
     if (this.iconContainerClasses) {
       this.iconContainerClasses.split(' ').forEach(className => {

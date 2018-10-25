@@ -16,23 +16,6 @@ module.exports = {
     src: './src/static/**/*',
     dest: './dist',
   },
-
-  icons: {
-    src: './src/assets/toolkit/images/icons/**/*.svg',
-    dest: './packages/spark-core',
-    mode: {
-      symbol: {
-        inline: true,
-        sprite: 'spark-core-icons.svg',
-        dest: '.',
-      },
-    },
-    svg: {
-      xmlDeclaration: false,
-      doctypeDeclaration: false,
-      namespaceClassnames: false,
-    },
-  },
   images: {
     src: './src/assets/toolkit/images/*.*',
     dest: './dist/assets/toolkit/images',

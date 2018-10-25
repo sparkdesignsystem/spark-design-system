@@ -1,2 +1,65 @@
+// font urls
+$using-webfont-body: true;
+$using-webfont-heading: true;
+$body-font-name: FallSans;
+$body-font-src: url('https://spark-assets.netlify.com/FallSans-Regular.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff');
+$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+$heading-font-name: FallSans;
+$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Regular.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff');
+$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core-angular.scss';
+
+//
+// Bring in doc site styles
+//
+
+@import '../assets/drizzle/styles/main.scss';
+
+//
+// Angular site specific styling
+//
+* {
+  font-family: $body-font-name, sans-serif;
+}
+
+.#{$app-namespace}-c-AngularHeader {
+  position: static;
+}
+
+.#{$app-namespace}-c-AngularNav {
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  padding: 0;
+}
+
+.#{$app-namespace}-c-AngularNav a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: $highlight;
+  }
+}
+
+$override-namespace: 'angular-docs';
+
+// angular doc specific overrides
+.#{$override-namespace}-u-Masthead-docs
+.sprk-c-Masthead__narrow-navigation-container {
+  position: static;
+  margin-top: -2px;
+}

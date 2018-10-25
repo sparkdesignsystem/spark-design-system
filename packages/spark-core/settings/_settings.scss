@@ -61,6 +61,12 @@ $icon-m: 16px !default;
 $icon-l: 32px !default;
 $icon-xl: 64px !default;
 $icon-xxl: 128px !default;
+$icon-using-custom-fill: true !default;
+$icon-using-custom-stroke: true !default;
+$icon-custom-stroke-width-s: 0.5px !default;
+$icon-custom-stroke-width-m: 1px !default;
+$icon-custom-stroke-width-l: 2px !default;
+$icon-custom-stroke-width-xl: 4px !default;
 
 //
 // Layout
@@ -314,7 +320,7 @@ $error-text-color: $black !default;
 $text-input-error-color: $yellow !default;
 $input-max-width: 27.5rem !default;
 $input-icon-offset-x: 7px !default;
-$input-icon-offset-y: 20px !default;
+$input-icon-offset-y: 21px !default;
 $input-text-icon-offset-x: 6px !default;
 $input-text-icon-offset-y: 21px !default;
 $input-animation-speed: 0.3s !default;

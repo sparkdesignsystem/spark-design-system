@@ -17,6 +17,7 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
+import 'whatwg-fetch';
 
 /**
  * IE9, IE10 and IE11 requires all of the following polyfills.
