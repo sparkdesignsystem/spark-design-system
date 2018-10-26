@@ -48,7 +48,7 @@ import { Component, Input } from '@angular/core';
         </a>
       </div>
       <a
-        *ngIf="media === 'img' && mediaRev'"
+        *ngIf="media === 'img' && mediaRev"
         [routerLink]="imgHref"
         [attr.data-analytics]="imgLinkAnalytics"
         [ngClass]="getClassesImg()">
