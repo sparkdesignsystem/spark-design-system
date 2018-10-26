@@ -48,7 +48,7 @@ import { Component, Input } from '@angular/core';
         </a>
       </div>
       <a
-        *ngIf="media === 'img' && mediaRev === 'yes'"
+        *ngIf="media === 'img' && mediaRev'"
         [routerLink]="imgHref"
         [attr.data-analytics]="imgLinkAnalytics"
         [ngClass]="getClassesImg()">
@@ -58,7 +58,7 @@ import { Component, Input } from '@angular/core';
       </a>
 
       <a
-        *ngIf="media === 'icon' && mediaRev == 'yes'"
+        *ngIf="media === 'icon' && mediaRev"
         [routerLink]="iconHref"
         [ngClass]="getClassesIcon()"
         [attr.data-analytics]="iconLinkAnalytics">
@@ -109,7 +109,7 @@ export class SparkPromoComponent {
   @Input()
   imgSrc: string;
   @Input()
-  mediaRev: string; // 'yes' or omitted
+  mediaRev: boolean; // 'yes' or omitted
 
   getClasses(): string {
     const classArray: string[] = [

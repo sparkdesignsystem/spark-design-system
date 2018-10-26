@@ -66,7 +66,7 @@ import { RouterTestingModule } from '@angular/router/testing';
       <sprk-promo
         title="Title"
         subtitle="Subtitle"
-        mediaRev="yes"
+        mediaRev=true
         media="img"
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
