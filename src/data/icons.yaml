@@ -279,7 +279,7 @@
   viewBox: 0 0 64 64
   description: ...
 - name: update
-  viewBox: 0 0 512 512
+  viewBox: 0 0 64 64
   description: The update icon typically shows when a refresh action can be taken.
 - name: upload
   viewBox: 0 0 64 64
