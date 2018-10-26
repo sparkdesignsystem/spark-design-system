@@ -44,6 +44,9 @@
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-down-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-down-circle-filled
   viewBox: 0 0 64 64
   description: ...
@@ -51,14 +54,23 @@
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-left-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-right
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-right-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-up
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-up-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: clock
   viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
