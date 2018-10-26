@@ -24,12 +24,12 @@ import { Component, Input } from '@angular/core';
         <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
           {{ title }}
         </h3>
-        <p class="sprk-c-Promo__subtitle sprk-o-Stack__item">
+        <div class="sprk-c-Promo__subtitle sprk-o-Stack__item">
           {{ subtitle }}
-        </p>
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
+        </div>
+        <div class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
           <ng-content></ng-content>
-        </p>
+        </div>
         <div *ngIf="cta === 'button'" class="sprk-o-Stack__item">
           <a
             [routerLink]="buttonHref"
