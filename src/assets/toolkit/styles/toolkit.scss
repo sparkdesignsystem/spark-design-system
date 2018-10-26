@@ -10,11 +10,19 @@
 $using-webfont-body: true;
 $using-webfont-heading: true;
 $body-font-name: FallSans;
-$body-font-src: url('https://spark-assets.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff');
-$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+$body-font-src: url('https://spark-assets.netlify.com/FallSans-Regular.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff');
+$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
 $heading-font-name: FallSans;
-$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff');
-$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Regular.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff');
+$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
 
 @import '../../../../packages/spark-core/settings/colors';
 @import '../../../../packages/spark-core/settings/settings';
@@ -58,7 +66,6 @@ $heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff
 @import '../../../../node_modules/@scalescss/objects-box/box';
 @import '../../../../node_modules/@scalescss/objects-centered-column/centered-column';
 @import '../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list';
-@import '../../../../node_modules/@scalescss/objects-side-by-side/side-by-side';
 @import '../../../../node_modules/@scalescss/objects-stack/stack';
 @import '../../../../node_modules/@scalescss/objects-vertical-list/vertical-list';
 @import '../../../../node_modules/@scalescss/objects-media-object/media-object';
