@@ -6,7 +6,10 @@ import { Component, HostListener, Input } from '@angular/core';
     <nav role="navigation">
       <ul [ngClass]="getClasses()">
         <li *ngFor="let link of links"
-            class="sprk-c-WideNavigation__item"
+            [ngClass]="{
+              'sprk-c-WideNavigation__item': true,
+              'sprk-c-WideNavigation__item--active': link.focused
+            }"
             [attr.aria-haspopup]="link.subNav ? 'true': null"
             [attr.aria-expanded]="link.subNav && link.focused ? 'true': 'false'"
           (focusin)="hideAllDropDowns($event); link.focused = true"
@@ -19,22 +22,24 @@ import { Component, HostListener, Input } from '@angular/core';
              href="#nogo">{{ link.text }}
           <sprk-icon *ngIf="link.subNav" iconType="chevron-down"></sprk-icon>
           </a>
-          <ul *ngIf="link.subNav"
-            [ngClass]="{
-              'sprk-c-WideNavigation': true,
-              'sprk-c-WideNavigation--sub': true,
-              'sprk-u-Display--none': !link.focused }"
-          >
-            <li *ngFor="let sublink of link.subNav; let last = last"
-                class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub">
-              <a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub"
-                 [routerLink]="sublink.href"
-                 [attr.data-analytics]="sublink.analyticsString"
-                 href="#nogo">
-                {{ sublink.text }}
-              </a>
-              </li>
-          </ul>
+          <div *ngIf="link.subNav" class="sprk-c-WideNavigation__sub-menu-container">
+            <ul
+              [ngClass]="{
+                'sprk-c-WideNavigation': true,
+                'sprk-c-WideNavigation--sub': true,
+                'sprk-u-Display--none': !link.focused }"
+            >
+              <li *ngFor="let sublink of link.subNav; let last = last"
+                  class="sprk-c-WideNavigation__item sprk-c-WideNavigation__item--sub">
+                <a class="sprk-c-WideNavigation__link sprk-c-WideNavigation__link--sub"
+                   [routerLink]="sublink.href"
+                   [attr.data-analytics]="sublink.analyticsString"
+                   href="#nogo">
+                  {{ sublink.text }}
+                </a>
+                </li>
+            </ul>
+          </div>
         </li>
       </ul>
       <span class="sprk-c-Divider sprk-u-man"></span>
