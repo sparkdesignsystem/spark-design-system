@@ -3,7 +3,6 @@ import getElements from '../utilities/getElements';
 
 const showDropDown = (container) => {
   const subNavContainer = container.querySelector('.sprk-c-WideNavigation__sub-menu-container');
-  console.log(subNavContainer);
   if (subNavContainer) {
     subNavContainer.classList.remove('sprk-u-Display--none');
     container.setAttribute('aria-expanded', 'true');
@@ -28,11 +27,6 @@ const bindUIEvents = (element) => {
     e.target.classList.add('sprk-c-WideNavigation__item--active');
     hideAllDropDowns(subNavContainers, expandableListItems);
     showDropDown(element);
-  });
-  element.addEventListener('focusout', (e) => {
-    e.stopPropagation();
-    // e.target.classList.remove('sprk-c-WideNavigation__item--active');
-    // hideAllDropDowns(subNavs, expandableListItems);
   });
   element.addEventListener('mouseenter', (e) => {
     e.stopPropagation();
