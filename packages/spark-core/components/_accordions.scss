@@ -64,21 +64,33 @@
   }
 }
 
-// Accordion Navigation Styles
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
-  background-color: $red-real;
-}
-
-// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border-top: 0;
+  min-height: $icon-l;
   padding: $space-m;
 
   &:hover,
   &:active {
-    background-color: $gray;
-    border-left: $narrow-nav-left-border;
+    background-color: $gray-tint-50;
   }
+}
+
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item--open .sprk-c-Accordion__summary {
+  background-color: $gray-tint-50;
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item--open .sprk-c-Accordion__heading {
+  font-weight: normal;
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item--active .sprk-c-Accordion__summary {
+  background-color: $gray-tint-50;
+  border-left: $narrow-nav-left-border;
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item--active .sprk-c-Accordion__heading {
+  font-weight: bold;
 }
 
 // Accordion Navigation Styles
@@ -92,42 +104,29 @@
 }
 
 // Accordion Navigation Styles
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary--open
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:hover
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:active
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary--open
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:hover
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:active
-.sprk-c-Accordion__icon {
-  font-weight: bold;
-}
-
-// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
   border: 0;
-  border-bottom: 2px solid $black-tint-50;
   padding: 0;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black-tint-25;
+    width: 100%;
+  }
 }
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
+  color: $black;
   display: block;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $red-real;
-    color: $white;
+    background-color: $gray-tint-50;
     text-decoration: none;
   }
 

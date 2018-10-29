@@ -17,6 +17,7 @@ export class SparkSecondaryNavigationComponent {
 
   getClasses(): string {
     const classArray: string[] = [
+      'sprk-c-SecondaryNavigation',
       'sprk-o-HorizontalList',
       'sprk-o-HorizontalList--spacing-medium'
     ];
