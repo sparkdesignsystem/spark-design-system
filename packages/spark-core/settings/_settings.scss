@@ -61,7 +61,8 @@ $icon-m: 16px !default;
 $icon-l: 32px !default;
 $icon-xl: 64px !default;
 $icon-xxl: 128px !default;
-$icon-using-custom-fill: true !default;
+$icon-fill-color: $red-real !default;
+$icon-stroke-color: $red-real !default;
 $icon-using-custom-stroke: true !default;
 $icon-custom-stroke-width-s: 0.5px !default;
 $icon-custom-stroke-width-m: 1px !default;
@@ -294,9 +295,13 @@ $btn-tertiary-text-color: $black !default;
 //
 // Links
 ///
-$link-color: $red-real !default;
-$link-visited-color: $red-mid !default;
+$link-color: $black !default;
+$link-disabled-color: $black-tint-50;
+$link-muted-color: $black-tint-75;
+$link-standalone-color: $red-real !default;
 $link-transition: 0.3s !default;
+$link-underline-color: $red-real !default;
+$link-visited-color: $red-mid !default;
 
 //
 // Lists

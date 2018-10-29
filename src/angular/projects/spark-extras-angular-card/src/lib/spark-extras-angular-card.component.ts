@@ -79,8 +79,7 @@ import { Component, Input } from '@angular/core';
         </div>
       </div>
     </div>
-  `,
-  styleUrls: ['spark-extras-angular-card.component.scss']
+  `
 })
 export class SparkCardComponent {
   @Input()

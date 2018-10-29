@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sprk-card-docs',
+  selector: 'sprk-stack-docs',
   template: `
     <div class="drizzle-o-ContentGrouping sprk-u-mbh">
       <h2 class="drizzle-b-h2 sprk-u-mbl">
