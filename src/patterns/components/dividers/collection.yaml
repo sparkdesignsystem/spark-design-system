@@ -1,5 +1,25 @@
 description:
-  A Divider logically divides
-  sections of content. Hr HTML elements will
-  have style by default so no additional CSS class is needed.
+Using <hr/> to break up sections:  
+<hr /> stands for Horizontal Rule. 
+This is used primarily when you want to separate a page into sections. 
+It represents a thematic break between paragraph-level elements.
+
+In HTML4, the <hr /> tag was used to display as a horizontal rule or line. 
+In HTML5, the <hr /> tag defines a thematic break. 
+It WILL still display a horizontal line in visual browsers, but is now defined in semantic terms. 
+The attributes previously available to <hr> in HTML4 has been deprecated. You can style <hr /> elements in CSS instead. 
+
+Think of it as a way to distinguish topics within HTML. It’s a way to visually distinguish between
+2 different topics, sections, paragraphs, etc. 
+
+
+
+Example Usage:
+
+<p> The first rule of Fight Club is: You do not talk about Fight Club. </p>
+<hr />
+<p> The second rule of Fight Club is: You do not talk about Fight Club. </p>
+<hr />
+<p> The third rule of Fight Club is: No touching of the hair or face. </p>
+
 sparkPackageCore: true
