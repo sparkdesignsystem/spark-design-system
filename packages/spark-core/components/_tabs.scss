@@ -16,15 +16,16 @@
 
 .sprk-c-Tabs__button {
   -webkit-appearance: none;
+  background: none;
+  border: 0;
+  border-top: 3px solid $gray;
   display: block;
   text-align: center;
   text-decoration: none;
-  background: none;
-  border: 0;
-  width: 100%;
   padding: $space-inset-short-s;
   padding-top: $space-s;
   padding-bottom: $space-s;
+  width: 100%;
 
   @media all and (min-width: $tab-navigation-breakpoint) {
     flex: 1 1 100%;
@@ -32,9 +33,12 @@
 }
 
 .sprk-c-Tabs__button--active,
-.sprk-c-Tabs__button:focus,
-.sprk-c-Tabs__button:hover {
+.sprk-c-Tabs__button:focus {
   background-color: $white;
   border-top: 3px solid $red-real;
   color: $red-real;
+}
+
+.sprk-c-Tabs__button:hover {
+  border-top: 3px solid $red-real;
 }
