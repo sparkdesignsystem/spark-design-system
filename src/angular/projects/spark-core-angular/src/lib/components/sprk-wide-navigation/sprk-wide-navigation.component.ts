@@ -8,8 +8,9 @@ import { Component, HostListener, Input } from '@angular/core';
         <li *ngFor="let link of links"
             [ngClass]="{
               'sprk-c-WideNavigation__item': true,
-              'sprk-c-WideNavigation__item--active': link.focused
+              'sprk-c-WideNavigation__item--open': link.focused && link.subNav
             }"
+            routerLinkActive="sprk-c-WideNavigation__item--active"
             [attr.aria-haspopup]="link.subNav ? 'true': null"
             [attr.aria-expanded]="link.subNav && link.focused ? 'true': 'false'"
           (focusin)="hideAllDropDowns($event); link.focused = true"
@@ -20,7 +21,6 @@ import { Component, HostListener, Input } from '@angular/core';
              [routerLink]="link.href"
              [attr.data-analytics]="link.analyticsString"
              href="#nogo">{{ link.text }}
-          <sprk-icon *ngIf="link.subNav" iconType="chevron-down"></sprk-icon>
           </a>
           <div *ngIf="link.subNav" class="sprk-c-WideNavigation__sub-menu-container">
             <ul

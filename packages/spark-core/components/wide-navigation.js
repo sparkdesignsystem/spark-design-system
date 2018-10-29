@@ -24,20 +24,26 @@ const bindUIEvents = (element) => {
 
   element.addEventListener('focusin', (e) => {
     e.stopPropagation();
-    e.target.classList.add('sprk-c-WideNavigation__item--active');
-    hideAllDropDowns(subNavContainers, expandableListItems);
-    showDropDown(element);
+    if (e.target.querySelector('.sprk-c-WideNavigation--sub')) {
+      e.target.classList.add('sprk-c-WideNavigation__item--open');
+      hideAllDropDowns(subNavContainers, expandableListItems);
+      showDropDown(element);
+    }
   });
   element.addEventListener('mouseenter', (e) => {
     e.stopPropagation();
-    e.target.classList.add('sprk-c-WideNavigation__item--active');
-    hideAllDropDowns(subNavContainers, expandableListItems);
-    showDropDown(element);
+    if (e.target.querySelector('.sprk-c-WideNavigation--sub')) {
+      e.target.classList.add('sprk-c-WideNavigation__item--open');
+      hideAllDropDowns(subNavContainers, expandableListItems);
+      showDropDown(element);
+    }
   });
   element.addEventListener('mouseleave', (e) => {
     e.stopPropagation();
-    e.target.classList.remove('sprk-c-WideNavigation__item--active');
-    hideAllDropDowns(subNavContainers, expandableListItems);
+    if (e.target.querySelector('.sprk-c-WideNavigation--sub')) {
+      e.target.classList.remove('sprk-c-WideNavigation__item--open');
+      hideAllDropDowns(subNavContainers, expandableListItems);
+    }
   });
 };
 

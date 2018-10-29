@@ -86,9 +86,25 @@ describe('wide nav tests', () => {
     expect(subNavContainer2.classList.contains('sprk-u-Display--none')).eql(false);
   });
 
+  it('should do nothing if theres no sub nav on focusin', () => {
+    bindUIEvents(navItem2);
+
+    event = new window.Event('focusin');
+    navItem2.dispatchEvent(event);
+    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
+  });
+
   it('should bind the mouseenter event', () => {
     bindUIEvents(navItem1);
     expect(navItem1.addEventListener.getCall(1).args[0]).eql('mouseenter');
+  });
+
+  it('should do nothing if theres no sub nav on mouseenter', () => {
+    bindUIEvents(navItem2);
+
+    event = new window.Event('mouseenter');
+    navItem2.dispatchEvent(event);
+    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
   });
 
   it('should hide all navs and show one on mouseenter', () => {
@@ -106,6 +122,14 @@ describe('wide nav tests', () => {
   it('should bind the mouseleave event', () => {
     bindUIEvents(navItem1);
     expect(navItem1.addEventListener.getCall(2).args[0]).eql('mouseleave');
+  });
+
+  it('should do nothing if theres no sub nav on mouseleave', () => {
+    bindUIEvents(navItem2);
+
+    event = new window.Event('mouseleave');
+    navItem2.dispatchEvent(event);
+    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
   });
 
   it('should hide all navs and show one on mouseleave', () => {
