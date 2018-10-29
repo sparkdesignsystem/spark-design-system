@@ -2,7 +2,6 @@
 // Tabbed Navigation
 // ==================================================================
 .sprk-c-Tabs__buttons {
-  background-color: $gray;
   color: $black;
   display: block;
   border-bottom: 0;
@@ -16,7 +15,7 @@
 
 .sprk-c-Tabs__button {
   -webkit-appearance: none;
-  background: none;
+  background-color: $gray;
   border: 0;
   border-top: 3px solid $gray;
   display: block;
