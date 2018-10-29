@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">
         {{ icon }}
       </h2>
+      <sprk-icon iconType="{{ icon }}" additionalClasses=""></sprk-icon>
       <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+      <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--xl"></sprk-icon>
+      <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--xxl"></sprk-icon>
     </div>
   `,
   styles: ['']
@@ -31,10 +34,14 @@ export class IconSetDocsComponent {
     'chat-online',
     'check-mark',
     'chevron-down',
+    'chevron-down-circle',
     'chevron-down-circle-filled',
     'chevron-left',
+    'chevron-left-circle',
     'chevron-right',
+    'chevron-right-circle',
     'chevron-up',
+    'chevron-up-circle',
     'clock',
     'close-circle',
     'cloud',

@@ -66,7 +66,7 @@ export class SparkAccordionItemComponent implements OnInit {
 
   componentID = _.uniqueId();
   accordion_controls_id = `accordionHeading__${this.componentID}`;
-  public iconType = 'chevron-down';
+  public iconType = 'chevron-down-circle';
   public iconStateClass = '';
   public animState = 'closed';
 
@@ -75,9 +75,9 @@ export class SparkAccordionItemComponent implements OnInit {
       ? (this.animState = 'closed')
       : (this.animState = 'open');
 
-    this.iconType === 'chevron-down'
-      ? (this.iconType = 'chevron-down') // todo: add fall icons "chevron-down-circle"
-      : (this.iconType = 'chevron-down');
+    this.isOpen === false
+      ? (this.iconType = 'chevron-down-circle')
+      : (this.iconType = 'chevron-down-circle-filled');
 
     this.isOpen === false
       ? (this.iconStateClass = '')

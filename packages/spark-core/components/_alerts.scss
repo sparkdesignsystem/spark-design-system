@@ -93,3 +93,8 @@
   color: $black-tint-50;
   padding: $space-m;
 }
+
+.sprk-c-Alert__icon,
+.sprk-c-Alert__icon--dismiss .sprk-c-Icon {
+  stroke: currentColor;
+}
