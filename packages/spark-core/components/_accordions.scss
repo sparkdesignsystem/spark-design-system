@@ -8,12 +8,27 @@
   width: 100%;
 }
 
-.sprk-c-Accordion__item {
-  border-bottom: $accordion-border;
-}
-
 .sprk-c-Accordion__item--open {
   border-bottom: $accordion-border-open;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black-tint-25;
+    width: 100%;
+  }
+}
+
+.sprk-c-Accordion__item--open + .sprk-c-Accordion__item--open {
+  &::before {
+    display: none;
+  }
+}
+
+.sprk-c-Accordion__item {
+  border-bottom: $accordion-border;
 }
 
 .sprk-c-Accordion__heading {
@@ -66,7 +81,7 @@
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border-top: 0;
-  min-height: $icon-l;
+  min-height: $icon-xl;
   padding: $space-m;
 
   &:hover,
@@ -76,14 +91,6 @@
 }
 
 // Accordion Navigation Styles
-.sprk-c-Accordion--navigation .sprk-c-Accordion__item--open .sprk-c-Accordion__summary {
-  background-color: $gray-tint-50;
-}
-
-.sprk-c-Accordion--navigation .sprk-c-Accordion__item--open .sprk-c-Accordion__heading {
-  font-weight: normal;
-}
-
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item--active .sprk-c-Accordion__summary {
   background-color: $gray-tint-50;
   border-left: $narrow-nav-left-border;
@@ -108,7 +115,6 @@
   border: 0;
   padding: 0;
 
-  &::before,
   &::after {
     content: '';
     display: block;
