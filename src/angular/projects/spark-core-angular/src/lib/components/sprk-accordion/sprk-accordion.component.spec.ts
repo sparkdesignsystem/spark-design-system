@@ -23,6 +23,13 @@ describe('SparkAccordionComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should do nothing when additionalClasses has no value', () => {
+    fixture.detectChanges();
+    expect(accordionElement.classList.toString()).toEqual(
+      'sprk-c-Accordion sprk-o-VerticalList'
+    );
+  });
+
   it('should add classes when additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();

@@ -105,6 +105,10 @@ export class SparkNarrowNavigationItemComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Accordion__item'];
 
+    if (this.isOpen) {
+      classArray.push('sprk-c-Accordion__item--open');
+    }
+
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
