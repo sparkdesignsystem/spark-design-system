@@ -43,9 +43,12 @@ export class NavigationDocsComponent {
   links = [
     {
       text: 'Item 1',
-      href: '/alerts',
-      analyticsString: 'Link to Item 1',
-      active: false,
+      href: '/navigation',
+      analyticsString: 'Link to Item 1'
+    },
+    {
+      text: 'Item 2',
+      href: '/icons',
       subNav: [
         {
           text: 'Item 1',
@@ -63,24 +66,16 @@ export class NavigationDocsComponent {
       ]
     },
     {
-      text: 'Item 2',
-      href: '/icons',
-      active: false
-    },
-    {
       text: 'Item 3',
-      href: '/links',
-      active: false
+      href: '/links'
     },
     {
       text: 'Item 4',
-      href: '/buttons',
-      active: false
+      href: '/buttons'
     },
     {
       text: 'Item 5',
       href: '#nogo',
-      active: false,
       subNav: [
         {
           text: 'Item 1',
