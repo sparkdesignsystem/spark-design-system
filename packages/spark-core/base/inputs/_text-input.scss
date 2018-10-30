@@ -42,6 +42,7 @@
   }
 }
 
+.sprk-b-InlineSearch__icon,
 .sprk-b-DatePicker__icon {
   fill: $red-real;
   margin-left: $input-icon-offset-x;
@@ -49,6 +50,10 @@
   position: absolute;
   stroke: $red-real;
   z-index: $layer-height-xs;
+}
+
+.sprk-b-InlineSearch__icon {
+  stroke: $black;
 }
 
 .sprk-b-TextInput[readonly] {
