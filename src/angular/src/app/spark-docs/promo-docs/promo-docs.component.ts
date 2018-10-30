@@ -10,8 +10,11 @@ import { RouterTestingModule } from '@angular/router/testing';
           Promo Base
         </h2>
 
-        <sprk-promo title="Placeholder title text">
-          Text in the body of the promo.
+        <sprk-promo title="Title"
+          subtitle="Subtitle"
+          cta="button"
+          ctaText="Learn More">
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
         </sprk-promo>
       </div>
     </div>
@@ -22,14 +25,15 @@ import { RouterTestingModule } from '@angular/router/testing';
         Promo With Icon
       </h2>
 
-      <sprk-promo title="Placeholder title text"
+      <sprk-promo title="Title"
+        subtitle="Subtitle"
         media="icon"
         iconType="bell"
         iconHref="sparkdesignsystem.com"
-        additionalClassesIcon="sprk-c-Icon--l sprk-b-TypeBodyTwo"
-        cta="link"
+        additionalClassesIcon="sprk-c-Icon--xxl sprk-b-TypeBodyTwo"
+        cta="button"
         ctaText="Learn More">
-          Text in the body of the promo.
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
   </div>
@@ -41,13 +45,14 @@ import { RouterTestingModule } from '@angular/router/testing';
       </h2>
 
       <sprk-promo
-        title="Placeholder title text"
+        title="Title"
+        subtitle="Subtitle"
         media="img"
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         cta="button"
         ctaText="Learn More">
-          Text in the body of the promo.
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
   </div>
@@ -59,21 +64,16 @@ import { RouterTestingModule } from '@angular/router/testing';
       </h2>
 
       <sprk-promo
-        title="Placeholder title text"
-        mediaRev="yes"
+        title="Title"
+        subtitle="Subtitle"
+        mediaRev=true
         media="img"
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         imgHref="https://sparkdesignsystem.com"
         cta="button"
         ctaText="Learn More">
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
   </div>
