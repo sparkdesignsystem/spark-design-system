@@ -34,7 +34,7 @@ describe('SparkSecondaryNavigationComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(secondaryNavigationElement.classList.toString()).toEqual(
-      'sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-u-man'
+      'sprk-c-SecondaryNavigation sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-u-man'
     );
   });
 });
