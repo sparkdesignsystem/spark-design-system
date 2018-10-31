@@ -2,8 +2,8 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  transition: all $btn-transition-speed;
   box-shadow: $btn-shadow;
+  transition: all $btn-transition-speed;
 
   &:hover,
   &:active,

@@ -171,6 +171,7 @@ $font-weight-body-four: normal !default;
 // Font Stack
 $using-webfont-body: true !default;
 $using-webfont-heading: true !default;
+$using-webfont-alternate: false !default;
 $body-font-name: FallSans !default;
 $body-font-src: url('') !default;
 $body-font-weight: normal !default;
@@ -181,10 +182,14 @@ $heading-font-src: url('') !default;
 $heading-font-weight: normal !default;
 $heading-bold-font-src: url('') !default;
 $heading-bold-font-weight: bold !default;
+$alternate-font-name: FallSans-Regular !default;
+$alternate-font-src: url('') !default;
+$alternate-font-weight: normal !default;
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
 $body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$alternate-font-stack: $alternate-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
@@ -302,6 +307,7 @@ $link-standalone-color: $red-real !default;
 $link-transition: 0.3s !default;
 $link-underline-color: $red-real !default;
 $link-visited-color: $red-mid !default;
+$link-font-weight: bold !default;
 
 //
 // Lists

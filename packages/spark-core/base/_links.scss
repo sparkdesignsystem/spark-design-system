@@ -4,8 +4,9 @@
 //
 .sprk-b-Link {
   color: $link-color;
-  text-decoration: none;
+  font-weight: $link-font-weight;
   position: relative;
+  text-decoration: none;
   transition: $link-transition;
 
   &:visited {
