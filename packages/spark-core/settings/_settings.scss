@@ -64,10 +64,10 @@ $icon-xxl: 128px !default;
 $icon-fill-color: $red !default;
 $icon-stroke-color: $red !default;
 $icon-using-custom-stroke: true !default;
-$icon-custom-stroke-width-s: 0.5px !default;
-$icon-custom-stroke-width-m: 1px !default;
+$icon-custom-stroke-width-s: 1px !default;
+$icon-custom-stroke-width-m: 1.5px !default;
 $icon-custom-stroke-width-l: 2px !default;
-$icon-custom-stroke-width-xl: 4px !default;
+$icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layout
@@ -242,13 +242,14 @@ $alert-color: $white !default;
 $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
+$alert-icon-size: 40px !default;
 $alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
-$alert-shadow-hover-info: inset -64px 0 0 $alert-color-info !default;
+$alert-shadow-hover-info: inset -80px 0 0 $alert-color-info !default;
 $alert-shadow-success: inset $alert-bar-width 0 0 $alert-color-success !default;
-$alert-shadow-hover-success: inset -64px 0 0 $alert-color-success !default;
+$alert-shadow-hover-success: inset -80px 0 0 $alert-color-success !default;
 $alert-shadow-fail: inset $alert-bar-width 0 0 $alert-color-fail !default;
-$alert-shadow-hover-fail: inset -64px 0 0 $alert-color-fail !default;
+$alert-shadow-hover-fail: inset -80px 0 0 $alert-color-fail !default;
 
 //
 // Promos
