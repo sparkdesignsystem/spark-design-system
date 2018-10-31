@@ -65,12 +65,11 @@
   display: none;
 
   @media all and (min-width: $main-nav-breakpoint) {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     max-width: $masthead-column-width;
     margin: -2rem auto $space-m;
     padding: 0 $space-m;
-    text-align: right;
-    width: 100%;
   }
 }
 
@@ -81,6 +80,10 @@
     display: block;
     margin-left: $space-m;
   }
+}
+
+.sprk-c-Masthead__search .sprk-b-InputContainer {
+  margin: 0;
 }
 
 .sprk-c-Masthead__wide-navigation-container {
