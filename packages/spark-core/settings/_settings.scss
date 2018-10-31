@@ -61,8 +61,8 @@ $icon-m: 16px !default;
 $icon-l: 32px !default;
 $icon-xl: 64px !default;
 $icon-xxl: 128px !default;
-$icon-fill-color: $red-real !default;
-$icon-stroke-color: $red-real !default;
+$icon-fill-color: $red !default;
+$icon-stroke-color: $red !default;
 $icon-using-custom-stroke: true !default;
 $icon-custom-stroke-width-s: 0.5px !default;
 $icon-custom-stroke-width-m: 1px !default;
@@ -99,7 +99,7 @@ $horizontal-list-spacing-huge: $space-xl !default;
 $pag-max-width: 26rem !default;
 $pag-link-color: $black !default;
 $pag-link-color-hover: $pag-link-color !default;
-$pag-selection-color: $red-real !default;
+$pag-selection-color: $red !default;
 $pag-selection-link-color: $white !default;
 $pag-selection-link-color-hover: $white !default;
 $pag-circle-size: 2em !default;
@@ -183,8 +183,10 @@ $heading-bold-font-src: url('') !default;
 $heading-bold-font-weight: bold !default;
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
-$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
@@ -259,7 +261,7 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 //
 // Buttons
 ///
-$btn-background-color: $red-real !default;
+$btn-background-color: $red !default;
 $btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
@@ -288,7 +290,7 @@ $btn-secondary-text-color: $black !default;
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border-color: transparent !default;
 $btn-tertiary-hover-text-color: $black !default;
-$btn-tertiary-hover-line-color: $red-real !default;
+$btn-tertiary-hover-line-color: $red !default;
 $btn-tertiary-hover-background-color: transparent !default;
 $btn-tertiary-text-color: $black !default;
 
@@ -298,9 +300,9 @@ $btn-tertiary-text-color: $black !default;
 $link-color: $black !default;
 $link-disabled-color: $black-tint-50;
 $link-muted-color: $black-tint-75;
-$link-standalone-color: $red-real !default;
+$link-standalone-color: $red !default;
 $link-transition: 0.3s !default;
-$link-underline-color: $red-real !default;
+$link-underline-color: $red !default;
 $link-visited-color: $red-mid !default;
 
 //
@@ -333,8 +335,8 @@ $date-picker-max-width: 20rem !default;
 $date-picker-button-size: 2.25rem !default;
 $date-picker-column-adjustment-x: 0.25rem !default;
 $date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
-$date-picker-day-interact-color: $red-real !default;
-$text-input-interact-color: $red-real !default;
+$date-picker-day-interact-color: $red !default;
+$text-input-interact-color: $red !default;
 $error-text-color: $black !default;
 $text-input-error-color: $yellow !default;
 $input-max-width: 27.5rem !default;
@@ -428,7 +430,7 @@ $accordion-max-width: 53.125rem !default;
 $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
-$accordion-summary-active-color: $red-real !default;
+$accordion-summary-active-color: $red !default;
 
 //
 // Toggle
@@ -458,7 +460,7 @@ $main-nav-breakpoint: 46rem !default;
 $masthead-column-width: 64rem !default;
 $mobile-masthead-height: 6.7rem !default;
 $sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
-$narrow-nav-left-border: 5px solid $red-real;
+$narrow-nav-left-border: 5px solid $red;
 
 //
 // Pagination

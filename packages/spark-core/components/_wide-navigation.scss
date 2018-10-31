@@ -46,7 +46,7 @@
 .sprk-c-WideNavigation__item--open > .sprk-c-WideNavigation__link,
 .sprk-c-WideNavigation__item--active > .sprk-c-WideNavigation__link {
   &::after {
-    background-color: $red-real;
+    background-color: $red;
     content: ' ';
     height: 3px;
     display: block;
@@ -68,7 +68,7 @@
   &:active,
   &:focus,
   &:hover {
-    @include HoverLine($color: $red-real, $width: 85%);
+    @include HoverLine($color: $red, $width: 85%);
   }
 }
 
@@ -98,7 +98,7 @@
 }
 
 .sprk-c-WideNavigation__arrow {
-  fill: $red-real;
+  fill: $red;
   width: $icon-m;
   margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
 }
