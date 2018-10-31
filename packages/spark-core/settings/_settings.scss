@@ -444,7 +444,7 @@ $accordion-summary-active-color: $red !default;
 //
 // Toggle
 //
-$toggle-transistion-timing: 0.3s ease;
+$toggle-transistion-timing: 0.3s ease !default;
 
 //
 // Dividers
@@ -467,9 +467,11 @@ $modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 //
 $main-nav-breakpoint: 46rem !default;
 $masthead-column-width: 64rem !default;
-$mobile-masthead-height: 6.7rem !default;
+$mobile-masthead-height: 5.5625rem !default;
 $sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
-$narrow-nav-left-border: 5px solid $red;
+$narrow-nav-left-border: 5px solid $red !default;
+$narrow-nav-link-font-weight: normal !default;
+$masthead-wide-navigation-font-size: 1.125rem !default;
 
 //
 // Pagination
