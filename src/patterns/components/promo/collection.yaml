@@ -1,16 +1,10 @@
 description:
-  Promos are groups of related promotional
-  content that are meant to be displayed at full width. Use
-  the Promo component when you would like to promote something new
-  or existing. If necessary, you may add background colors, padding and/or a border.
+  Promos are blocks of content that may include text, form elements, icons, or images. 
+  Promos are useful for drawing attention to a promotion or feature.
 information:
-  - Promos use the Stack Layout Object and the items are stacked by default and will split side by side at larger viewports.
-  - You may change the breakpoint at which the items split by adjusting the Stack split responsive suffix class.
+  - Promo styling can be adjusted by overriding the SCSS settings.
   - Spark has built in spacing classes for padding that you can add to the container.
 links:
-  Stack Layout Object:
-    external: false
-    href: /patterns/fundamentals/layout.html#stack-object
   Spacing Utilities:
     external: false
     href: /patterns/utilities/single-property.html#spacing

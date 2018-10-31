@@ -14,7 +14,9 @@ describe('wide nav tests', () => {
   let navItem2;
   let navItem3;
   let subNav1;
+  let subNavContainer1;
   let subNav2;
+  let subNavContainer2;
   let event;
 
   beforeEach(() => {
@@ -29,14 +31,25 @@ describe('wide nav tests', () => {
     sinon.spy(navItem2, 'addEventListener');
     sinon.spy(navItem3, 'addEventListener');
 
+    subNavContainer1 = document.createElement('div');
+    subNavContainer1.classList.add('sprk-c-WideNavigation__sub-menu-container');
+    subNavContainer1.classList.add('sprk-u-Display--none');
+
+    subNavContainer2 = document.createElement('div');
+    subNavContainer2.classList.add('sprk-c-WideNavigation__sub-menu-container');
+    subNavContainer2.classList.add('sprk-u-Display--none');
+
     subNav1 = document.createElement('ul');
-    subNav1.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Display--none');
+    subNav1.classList.add('sprk-c-WideNavigation--sub');
 
     subNav2 = document.createElement('ul');
     subNav2.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Display--none');
 
-    navItem1.appendChild(subNav1);
-    navItem3.appendChild(subNav2);
+    subNavContainer1.appendChild(subNav1);
+    subNavContainer2.appendChild(subNav2);
+
+    navItem1.appendChild(subNavContainer1);
+    navItem3.appendChild(subNavContainer2);
 
     nav.appendChild(navItem1);
     nav.appendChild(navItem2);
@@ -52,8 +65,8 @@ describe('wide nav tests', () => {
 
   it('should do nothing if theres no subnav', () => {
     showDropDown(navItem2);
-    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNavContainer1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNavContainer2.classList.contains('sprk-u-Display--none')).eql(true);
   });
 
   it('should bind the focusin event', () => {
@@ -69,13 +82,29 @@ describe('wide nav tests', () => {
     event = new window.Event('focusin');
     navItem3.dispatchEvent(event);
 
-    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(subNavContainer1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNavContainer2.classList.contains('sprk-u-Display--none')).eql(false);
+  });
+
+  it('should do nothing if theres no sub nav on focusin', () => {
+    bindUIEvents(navItem2);
+
+    event = new window.Event('focusin');
+    navItem2.dispatchEvent(event);
+    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
   });
 
   it('should bind the mouseenter event', () => {
     bindUIEvents(navItem1);
     expect(navItem1.addEventListener.getCall(1).args[0]).eql('mouseenter');
+  });
+
+  it('should do nothing if theres no sub nav on mouseenter', () => {
+    bindUIEvents(navItem2);
+
+    event = new window.Event('mouseenter');
+    navItem2.dispatchEvent(event);
+    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
   });
 
   it('should hide all navs and show one on mouseenter', () => {
@@ -86,13 +115,21 @@ describe('wide nav tests', () => {
     event = new window.Event('mouseenter');
     navItem3.dispatchEvent(event);
 
-    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(subNavContainer1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNavContainer2.classList.contains('sprk-u-Display--none')).eql(false);
   });
 
   it('should bind the mouseleave event', () => {
     bindUIEvents(navItem1);
     expect(navItem1.addEventListener.getCall(2).args[0]).eql('mouseleave');
+  });
+
+  it('should do nothing if theres no sub nav on mouseleave', () => {
+    bindUIEvents(navItem2);
+
+    event = new window.Event('mouseleave');
+    navItem2.dispatchEvent(event);
+    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
   });
 
   it('should hide all navs and show one on mouseleave', () => {
@@ -103,8 +140,8 @@ describe('wide nav tests', () => {
     event = new window.Event('mouseleave');
     navItem3.dispatchEvent(event);
 
-    expect(subNav1.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(subNav2.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNavContainer1.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(subNavContainer2.classList.contains('sprk-u-Display--none')).eql(true);
   });
 
   it('should call getElements once with the correct selector', () => {

@@ -4,12 +4,10 @@
 .sprk-c-Icon {
   height: $icon-m;
   width: $icon-m;
+  stroke: $icon-stroke-color;
+  fill: $icon-fill-color;
 
-  @if ($icon-using-custom-fill) {
-    fill: currentColor;
-  }
   @if ($icon-using-custom-stroke) {
-    stroke: currentColor;
     stroke-width: $icon-custom-stroke-width-xl;
   }
 }

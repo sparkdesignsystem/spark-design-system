@@ -29,7 +29,7 @@ describe('SparkPromoComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(
-      'sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium sprk-u-man'
+      'sprk-c-Promo sprk-o-Stack sprk-o-Stack--split@s sprk-u-man'
     );
   });
 
@@ -38,7 +38,7 @@ describe('SparkPromoComponent', () => {
     component.additionalClassesImgLink = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item sprk-u-man'
+      'sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-u-man'
     );
   });
 
@@ -46,7 +46,7 @@ describe('SparkPromoComponent', () => {
     component.media = 'img';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item'
+      'sprk-o-Stack__item sprk-o-Stack__item--half@s'
     );
   });
 
@@ -55,7 +55,7 @@ describe('SparkPromoComponent', () => {
     component.additionalClassesIconLink = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item sprk-u-man'
+      'sprk-o-Stack__item--half@s sprk-o-Stack__item sprk-c-Promo__icon sprk-u-man'
     );
   });
 

@@ -13,7 +13,6 @@ describe('SparkMastheadComponent', () => {
   let fixture: ComponentFixture<SparkMastheadComponent>;
   let mastheadElement: HTMLElement;
   let hamburgerIcon: HTMLElement;
-  let clientGreeting: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -67,22 +66,6 @@ describe('SparkMastheadComponent', () => {
     fixture.detectChanges();
     expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual('true');
     expect(component.isNarrowNavOpen).toEqual(true);
-  });
-
-  it('should print Hello, Client Name, when a greetingName is supplied', () => {
-    component.greetingName = 'Some Person';
-    fixture.detectChanges();
-    clientGreeting = mastheadElement.querySelector(
-      '.sprk-c-Masthead__secondary > p'
-    );
-    expect(clientGreeting.textContent).toEqual('Hello, Some Person');
-  });
-
-  it('shouldnt render a greeting if no client name is supplied', () => {
-    clientGreeting = mastheadElement.querySelector(
-      '.sprk-c-Masthead__secondary > p'
-    );
-    expect(clientGreeting).toEqual(null);
   });
 
   it('should close the narrow nav on resize', () => {

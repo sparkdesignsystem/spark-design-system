@@ -44,6 +44,9 @@
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-down-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-down-circle-filled
   viewBox: 0 0 64 64
   description: ...
@@ -51,14 +54,23 @@
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-left-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-right
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-right-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-up
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
+- name: chevron-up-circle
+  viewBox: 0 0 64 64
+  description: ...
 - name: clock
   viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
@@ -108,8 +120,11 @@
   viewBox: 0 0 64 64
   description: ...
 - name: exclamation
-  viewBox: 0 0 576 512
+  viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
+- name: exclamation-filled
+  viewBox: 0 0 64 64
+  description: ...
 - name: facebook
   viewBox: 0 0 64 64
   description: The Facebook icon is used to link to that specific social media account for a given site.
@@ -279,11 +294,14 @@
   viewBox: 0 0 64 64
   description: ...
 - name: update
-  viewBox: 0 0 512 512
+  viewBox: 0 0 64 64
   description: The update icon typically shows when a refresh action can be taken.
 - name: upload
   viewBox: 0 0 64 64
   description: The upload icon is used to show when an upload action can be taken.
+- name: user
+  viewBox: 0 0 64 64
+  description: ...
 - name: verified-approval
   viewBox: 0 0 64 64
   description: ...

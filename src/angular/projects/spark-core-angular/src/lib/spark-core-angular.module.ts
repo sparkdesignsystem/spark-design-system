@@ -58,16 +58,6 @@ import TinyDatePicker from 'tiny-date-picker';
       useValue: TinyDatePicker
     }
   ],
-  imports: [
-    SparkStackModule,
-    SprkStackItemModule,
-    SparkToggleModule,
-    SparkIconModule,
-    SparkFooterModule,
-    SparkSecondaryNavigationModule,
-    SparkSecondaryNavigationItemModule,
-    SparkTabbedNavigationModule
-  ],
   exports: [
     SparkAlertModule,
     SparkAccordionModule,

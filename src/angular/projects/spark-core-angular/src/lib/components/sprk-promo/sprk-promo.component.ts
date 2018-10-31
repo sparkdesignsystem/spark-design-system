@@ -3,70 +3,67 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-promo',
   template: `
-  <div [ngClass]="getClasses()">
-    <a
-      *ngIf="media === 'img' && !mediaRev"
-      [routerLink]="imgHref"
-      [attr.data-analytics]="imgLinkAnalytics"
-      [ngClass]="getClassesImg()">
-      <img
-        alt="{{ imgAlt }}"
-        src="{{ imgSrc }}">
-    </a>
+    <div [ngClass]="getClasses()">
+      <a
+        *ngIf="media === 'icon' && !mediaRev"
+        [routerLink]="iconHref"
+        [ngClass]="getClassesIcon()"
+        [attr.data-analytics]="iconLinkAnalytics">
+          <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
+      </a>
+      <a
+        *ngIf="media === 'img' && !mediaRev"
+        [routerLink]="imgHref"
+        [attr.data-analytics]="imgLinkAnalytics"
+        [ngClass]="getClassesImg()">
+        <img class="sprk-c-Promo__image"
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}">
+      </a>
+      <div [ngClass]="getContentClasses()">
+        <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
+          {{ title }}
+        </h3>
+        <div class="sprk-c-Promo__subtitle sprk-o-Stack__item">
+          {{ subtitle }}
+        </div>
+        <div class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
+          <ng-content></ng-content>
+        </div>
+        <div *ngIf="cta === 'button'" class="sprk-o-Stack__item">
+          <a
+            [routerLink]="buttonHref"
+            class="sprk-c-Button"
+            [attr.data-analytics]="buttonLinkAnalytics">
+            {{ ctaText }}
+          </a>
+        </div>
 
-    <a
-      *ngIf="media === 'icon' && !mediaRev"
-      [routerLink]="iconHref"
-      [ngClass]="getClassesIcon()"
-      [attr.data-analytics]="iconLinkAnalytics">
-        <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
-    </a>
-
-    <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack sprk-o-Stack--medium">
-      <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-        {{ title }}
-      </h3>
-
-      <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-        <ng-content></ng-content>
-      </p>
-
-      <div *ngIf="cta === 'button'" class="sprk-o-Stack__item">
         <a
-          [routerLink]="buttonHref"
-          class="sprk-c-Button"
-          [attr.data-analytics]="buttonLinkAnalytics">
+          *ngIf="cta === 'link'"
+          [routerLink]="ctaLinkHref"
+          class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--standalone"
+          [attr.data-analytics]="ctaLinkAnalytics">
           {{ ctaText }}
         </a>
       </div>
+      <a
+        *ngIf="media === 'img' && mediaRev"
+        [routerLink]="imgHref"
+        [attr.data-analytics]="imgLinkAnalytics"
+        [ngClass]="getClassesImg()">
+        <img class="sprk-c-Promo__image"
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}">
+      </a>
 
       <a
-        *ngIf="cta === 'link'"
-        [routerLink]="ctaLinkHref"
-        class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--standalone"
-        [attr.data-analytics]="ctaLinkAnalytics">
-        {{ ctaText }}
+        *ngIf="media === 'icon' && mediaRev"
+        [routerLink]="iconHref"
+        [ngClass]="getClassesIcon()"
+        [attr.data-analytics]="iconLinkAnalytics">
+          <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
       </a>
-    </div>
-
-    <a
-      *ngIf="media === 'img' && mediaRev === 'yes'"
-      [routerLink]="imgHref"
-      class="sprk-o-Stack__item"
-      [attr.data-analytics]="imgLinkAnalytics"
-      [ngClass]="getClassesImg()">
-      <img
-        alt="{{ imgAlt }}"
-        src="{{ imgSrc }}">
-    </a>
-
-    <a
-      *ngIf="media === 'icon' && mediaRev === 'yes'"
-      [routerLink]="iconHref"
-      class="sprk-o-Stack__item"
-      [attr.data-analytics]="iconLinkAnalytics">
-        <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
-    </a>
   </div>
   `
 })
@@ -85,6 +82,8 @@ export class SparkPromoComponent {
   media: string; // 'img' or 'icon'
   @Input()
   title: string;
+  @Input()
+  subtitle: string;
   @Input()
   ctaLinkAnalytics: string;
   @Input()
@@ -110,13 +109,13 @@ export class SparkPromoComponent {
   @Input()
   imgSrc: string;
   @Input()
-  mediaRev: string; // 'yes' or omitted
+  mediaRev: boolean; // 'yes' or omitted
 
   getClasses(): string {
     const classArray: string[] = [
+      'sprk-c-Promo',
       'sprk-o-Stack',
-      'sprk-o-Stack--split@s',
-      'sprk-o-Stack--medium'
+      'sprk-o-Stack--split@s'
     ];
 
     if (this.additionalClasses) {
@@ -128,7 +127,10 @@ export class SparkPromoComponent {
   }
 
   getClassesImg(): string {
-    const classArray: string[] = ['sprk-o-Stack__item'];
+    const classArray: string[] = [
+      'sprk-o-Stack__item',
+      'sprk-o-Stack__item--half@s'
+    ];
 
     if (this.additionalClassesImgLink) {
       this.additionalClassesImgLink.split(' ').forEach(className => {
@@ -139,7 +141,31 @@ export class SparkPromoComponent {
   }
 
   getClassesIcon(): string {
-    const classArray: string[] = ['sprk-o-Stack__item'];
+    const classArray: string[] = [
+      'sprk-o-Stack__item--half@s',
+      'sprk-o-Stack__item',
+      'sprk-c-Promo__icon'
+    ];
+
+    if (this.additionalClassesIconLink) {
+      this.additionalClassesIconLink.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+    return classArray.join(' ');
+  }
+
+  getContentClasses(): string {
+    const classArray: string[] = [
+      'sprk-o-Stack__item',
+      'sprk-c-Promo__content',
+      'sprk-o-Stack',
+      'sprk-o-Stack--large'
+    ];
+
+    if (this.media === 'img' || this.media === 'icon') {
+      classArray.push('sprk-o-Stack__item--half@s');
+    }
 
     if (this.additionalClassesIconLink) {
       this.additionalClassesIconLink.split(' ').forEach(className => {

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
 import { SparkPaginationComponent } from './sprk-pagination.component';
 
@@ -9,7 +10,11 @@ describe('SparkPaginationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkPaginationComponent, SparkUnorderedListComponent]
+      declarations: [
+        SparkPaginationComponent,
+        SparkUnorderedListComponent,
+        SparkIconComponent
+      ]
     }).compileComponents();
   }));
 

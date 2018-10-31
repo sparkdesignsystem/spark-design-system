@@ -26,7 +26,6 @@
 @import 'node_modules/@scalescss/objects-box/box';
 @import 'node_modules/@scalescss/objects-centered-column/centered-column';
 @import 'node_modules/@scalescss/objects-horizontal-list/horizontal-list';
-@import 'node_modules/@scalescss/objects-side-by-side/side-by-side';
 @import 'node_modules/@scalescss/objects-stack/stack';
 @import 'node_modules/@scalescss/objects-vertical-list/vertical-list';
 @import 'node_modules/@scalescss/objects-media-object/media-object';
@@ -59,9 +58,11 @@
 @import './components/dividers';
 @import './components/hamburger';
 @import './components/masthead';
+@import './components/promo';
 @import './components/modals';
 @import './components/wide-navigation';
 @import './components/pagination';
+@import './components/secondary-navigation';
 @import './components/spinners';
 @import './components/tabs';
 @import './utilities/utilities';

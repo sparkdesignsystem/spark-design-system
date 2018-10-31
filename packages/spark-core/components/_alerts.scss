@@ -12,6 +12,7 @@
 }
 
 .sprk-c-Alert--info {
+  border-color: $alert-color-info;
   box-shadow: $alert-shadow, $alert-shadow-info;
 
   .sprk-c-Alert__icon:first-child {
@@ -28,6 +29,7 @@
 }
 
 .sprk-c-Alert--success {
+  border-color: $alert-color-success;
   box-shadow: $alert-shadow, $alert-shadow-success;
 
   .sprk-c-Alert__icon:first-child {
@@ -44,6 +46,7 @@
 }
 
 .sprk-c-Alert--fail {
+  border-color: $alert-color-fail;
   box-shadow: $alert-shadow, $alert-shadow-fail;
 
   .sprk-c-Alert__icon:first-child {
@@ -92,4 +95,14 @@
   border: 0;
   color: $black-tint-50;
   padding: $space-m;
+}
+
+.sprk-c-Alert__icon,
+.sprk-c-Alert__icon--dismiss .sprk-c-Icon {
+  stroke: currentColor;
+}
+
+.sprk-c-Alert .sprk-c-Icon {
+  height: $alert-icon-size;
+  width: $alert-icon-size;
 }
