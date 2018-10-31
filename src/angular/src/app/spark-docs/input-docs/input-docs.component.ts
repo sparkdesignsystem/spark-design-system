@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
               sprkInput>
             <p sprkHelperText>Please enter some input.</p>
             <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
-              <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+              <sprk-icon iconType="exclamation-filled" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
               <div class="sprk-b-ErrorText">This field is required.</div>
             </span>
           </sprk-input-container>
@@ -124,7 +124,7 @@ import { Component } from '@angular/core';
             <div
             [hidden]="ssnInput.valid || ssnInput.pristine"
             sprkFieldError>
-              <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+              <sprk-icon iconType="exclamation-filled" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
               <div class="sprk-b-ErrorText">Invalid SSN.</div>
             </div>
           </sprk-input-container>
@@ -171,7 +171,7 @@ import { Component } from '@angular/core';
               <div
               [hidden]="monetaryInput.valid || monetaryInput.pristine"
               sprkFieldError>
-                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <sprk-icon iconType="exclamation-filled" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
                 <div class="sprk-b-ErrorText">Invalid amount.</div>
               </div>
           </sprk-icon-input-container>
@@ -201,7 +201,7 @@ import { Component } from '@angular/core';
             <span
               [hidden]="phoneInput.valid || phoneInput.pristine"
               sprkFieldError>
-              <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+              <sprk-icon iconType="exclamation-filled" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
               <div class="sprk-b-ErrorText">
                 {{ phoneInput.invalid && phoneInput.value === '' ? 'This field is required.' : 'This field is invalid.'}}
               </div>
@@ -229,7 +229,7 @@ import { Component } from '@angular/core';
               <div
               [hidden]="datepickerInput.valid || datepickerInput.pristine"
               sprkFieldError>
-                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <sprk-icon iconType="exclamation-filled" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
                 <div class="sprk-b-ErrorText">Invalid date.</div>
               </div>
           </sprk-icon-input-container>
@@ -247,7 +247,7 @@ import { Component } from '@angular/core';
             <span
               [hidden]="dateInput.valid || dateInput.pristine"
               sprkFieldError>
-                <sprk-icon iconType="exclamation" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
+                <sprk-icon iconType="exclamation-filled" additionalClasses="sprk-b-ErrorIcon"></sprk-icon>
                 <div class="sprk-b-ErrorText">Invalid date.</div>
             </span>
           </sprk-input-container>
