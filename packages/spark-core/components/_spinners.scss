@@ -15,7 +15,7 @@
 .sprk-c-Button--removal:hover .sprk-c-Spinner,
 .sprk-c-Button--removal:active .sprk-c-Spinner,
 .sprk-c-Button--removal:focus .sprk-c-Spinner {
-  border-color: $red-real;
+  border-color: $red;
   border-right-color: transparent;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .sprk-c-Spinner--dark {
-  border-top-color: $red-real;
-  border-left-color: $red-real;
-  border-bottom-color: $red-real;
+  border-top-color: $red;
+  border-left-color: $red;
+  border-bottom-color: $red;
 }
