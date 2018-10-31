@@ -5,6 +5,10 @@ description: A Primary Accordion should be used when content needs to be broken 
   used to give it some visual weight within the design and make it apparent that the content
   is important.
 order: 1
+restrictions: 
+  - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property. ("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc)
 hasAngularCode: true
 hasAngularDocs: true
 hasAngularCodeInfo: true
