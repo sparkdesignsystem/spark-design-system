@@ -141,3 +141,10 @@
     content: none;
   }
 }
+
+/* stylelint-disable selector-class-pattern */
+.DOM-slider-hidden {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */
