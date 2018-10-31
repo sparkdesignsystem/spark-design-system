@@ -1,9 +1,10 @@
 /* global document Promise */
 const FontFaceObserver = require('fontfaceobserver');
 
-const typeLoader = ({ bodyFontName, headingFontName } = {}) => {
+const typeLoader = ({ bodyFontName, headingFontName, alternateFontName } = {}) => {
   let bodyFont;
   let headingFont;
+  let alternateFont;
 
   if (bodyFontName) {
     bodyFont = new FontFaceObserver(bodyFontName);
@@ -20,6 +21,15 @@ const typeLoader = ({ bodyFontName, headingFontName } = {}) => {
       headingFont.load(null, 10000),
     ]).then(() => {
       document.documentElement.className += ' sprk-u-Fonts__heading--loaded';
+    });
+  }
+
+  if (alternateFontName) {
+    alternateFont = new FontFaceObserver(alternateFontName);
+    Promise.all([
+      alternateFont.load(null, 10000),
+    ]).then(() => {
+      document.documentElement.className += ' sprk-u-Fonts__alternate--loaded';
     });
   }
 };
