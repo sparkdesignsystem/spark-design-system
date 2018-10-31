@@ -88,6 +88,7 @@
 
 .sprk-c-Masthead__wide-navigation-container {
   display: none;
+  font-size: $masthead-wide-navigation-font-size;
 
   @media (min-width: $main-nav-breakpoint) {
     display: block;
