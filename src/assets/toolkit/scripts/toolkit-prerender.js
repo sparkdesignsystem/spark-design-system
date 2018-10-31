@@ -4,5 +4,6 @@ sparkCorePrerender({
   typeConfig: {
     bodyFontName: 'FallSans',
     headingFontName: 'FallSans',
+    alternateFontName: 'FallSans-Bold',
   },
 });
