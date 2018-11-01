@@ -5,4 +5,7 @@ description: |
 restrictions:
   - Do not use Spark Link classes on links that solely have images in them.
   - Link text should be as meaningful as possible so users can understand what the purpose of the link is.
+  - The data-id property is provided as a hook for automated tools. If you have multiple instances of the same 
+    variant of a component on the same page, make sure each instance has a unique data-id property. 
+    ("link-1", "link-2", "link-3", etc)
 sparkPackageCore: true
