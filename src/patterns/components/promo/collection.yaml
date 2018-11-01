@@ -2,8 +2,7 @@ description:
   Promos are blocks of content that may include text, form elements, icons, or images. 
   Promos are useful for drawing attention to a promotion or feature.
 information:
-  - Promo styling can be adjusted by overriding the SCSS settings.
-  - Spark has built in spacing classes for padding that you can add to the container.
+  - Use the sprk-c-Promo--bordered class to include a border on the Promo.
 links:
   Spacing Utilities:
     external: false

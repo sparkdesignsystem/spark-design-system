@@ -13,7 +13,8 @@ import { RouterTestingModule } from '@angular/router/testing';
         <sprk-promo title="Title"
           subtitle="Subtitle"
           cta="button"
-          ctaText="Learn More">
+          ctaText="Learn More"
+          hasBorder="true">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
         </sprk-promo>
       </div>
@@ -22,17 +23,13 @@ import { RouterTestingModule } from '@angular/router/testing';
   <div class="drizzle-o-ContentGrouping sprk-u-mbh">
     <div class="sprk-o-CenteredColumn">
       <h2 class="drizzle-b-h2">
-        Promo With Icon
+        Flag Promo
       </h2>
 
-      <sprk-promo title="Title"
-        subtitle="Subtitle"
-        media="icon"
-        iconType="bell"
-        iconHref="sparkdesignsystem.com"
-        additionalClassesIcon="sprk-c-Icon--xxl sprk-b-TypeBodyTwo"
-        cta="button"
-        ctaText="Learn More">
+      <sprk-promo
+        isFlag=true
+        imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+        imgAlt="Spark Design System Logo">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
@@ -67,7 +64,6 @@ import { RouterTestingModule } from '@angular/router/testing';
         title="Title"
         subtitle="Subtitle"
         mediaRev=true
-        media="img"
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         imgHref="https://sparkdesignsystem.com"
