@@ -178,7 +178,12 @@ import {
         <li class="sprk-c-Pagination__item">
           <a
             (click)="goBack($event, currentPage)"
-            [ngClass]="{ 'sprk-b-Link': true, 'sprk-b-Link--standalone': true, 'sprk-b-Link--disabled': currentPage === 1 }"
+            [ngClass]="{
+              'sprk-c-Pagination__icon': true,
+              'sprk-b-Link': true,
+              'sprk-b-Link--standalone': true,
+              'sprk-b-Link--disabled': currentPage === 1
+            }"
             href="#"
             [attr.data-analytics]="analyticsStringLinkPrev">
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
@@ -190,6 +195,7 @@ import {
           <a
             (click)="goForward($event, currentPage)"
             [ngClass]="{
+              'sprk-c-Pagination__icon': true,
               'sprk-b-Link': true,
               'sprk-b-Link--standalone': true,
               'sprk-b-Link--disabled': isLastPage() }"

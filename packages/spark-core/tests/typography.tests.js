@@ -31,6 +31,11 @@ describe('Type loader tests', () => {
     expect(ffoStub.calledOnce).eql(true);
   });
 
+  it('should call FontFaceObserver if the config object contains an alternate font name', () => {
+    typeLoader.default({ alternateFontName: 'HelloSans' });
+    expect(ffoStub.calledOnce).eql(true);
+  });
+
   it('should call FontFaceObserver twice if the config object contains a body and a heading font name', () => {
     typeLoader.default({ bodyFontName: 'HelloSansBody', headingFontName: 'HelloSansHeading' });
     expect(ffoStub.calledTwice).eql(true);
