@@ -34,7 +34,7 @@ describe('SparkPromoComponent', () => {
   });
 
   it('should add additional classes to img link when additionalClassesImgLink has a value', () => {
-    component.media = 'img';
+    component.imgSrc = 'www.example.com/image.jpg';
     component.additionalClassesImgLink = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
@@ -43,31 +43,48 @@ describe('SparkPromoComponent', () => {
   });
 
   it('should not add additional classes to img link when additionalClassesImgLink has no value', () => {
-    component.media = 'img';
+    component.imgSrc = 'www.example.com/image.jpg';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
       'sprk-o-Stack__item sprk-o-Stack__item--half@s'
     );
   });
 
-  it('should add additional classes to icon link when additionalClassesIconLink has a value', () => {
-    component.media = 'icon';
-    component.additionalClassesIconLink = 'sprk-u-man';
+  it('should add additional classes to the flag link when additionalClassesFlagLink has a value', () => {
+    component.imgSrc = 'www.example.com/image.jpg';
+    component.isFlag = true;
+    component.additionalClassesFlagLink = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item--half@s sprk-o-Stack__item sprk-c-Promo__icon sprk-u-man'
+      'sprk-o-Stack__item--fourth@s sprk-o-Stack__item sprk-u-man'
     );
   });
 
-  it('should it show the correct icon when icon is chosen as media type and iconType input has a value', () => {
-    component.media = 'icon';
-    component.iconType = 'bell';
+  it('should not add additional classes to the flag link when additionalClassesFlagLink has no value', () => {
+    component.imgSrc = 'www.example.com/image.jpg';
+    component.isFlag = true;
+    fixture.detectChanges();
+    expect(element.querySelector('a').classList.toString()).toEqual(
+      'sprk-o-Stack__item--fourth@s sprk-o-Stack__item'
+    );
+  });
+
+  it('should add additional classes to content div when additionalClassesContent has a value', () => {
+    component.additionalClassesContent = 'sprk-u-man';
     fixture.detectChanges();
     expect(
-      element
-        .querySelector('a svg use')
-        .getAttribute('xlink:href')
-        .toString()
-    ).toEqual('#' + 'bell');
+      element.querySelector('.sprk-c-Promo__content').classList.toString()
+    ).toEqual(
+      'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-u-man'
+    );
+  });
+
+  it('should not add additional classes to content div when additionalClassesContent has no value', () => {
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Promo__content').classList.toString()
+    ).toEqual(
+      'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large'
+    );
   });
 });

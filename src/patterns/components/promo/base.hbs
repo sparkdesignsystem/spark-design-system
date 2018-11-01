@@ -3,17 +3,15 @@ name: Base
 description:
   Base Promos include a heading and a description.
 restrictions:
- - Illustration/icon must have a descriptive alt tag if it's an image or a descriptive title tag if the format is SVG.
+ - Images should have a descriptive alt tag.
 hidden: true
 ---
-<div class="sprk-c-Promo sprk-o-Stack sprk-o-Stack--split@s">
+<div class="sprk-c-Promo {{#if hasFlag }}sprk-c-Promo--flag {{/if}} {{#if hasBorder}}sprk-c-Promo--bordered {{/if}}sprk-o-Stack sprk-o-Stack--split@s">
 
-  {{#if hasIcon }}
+  {{#if hasFlag }}
     {{#unless mediaRev}}
-    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-c-Promo__icon">
-      <svg class="sprk-c-Icon sprk-c-Icon--xxl" viewBox="0 0 100 100">
-        <use xlink:href="#home" />
-      </svg>
+    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
+      <img class="sprk-c-Promo__image--flag" alt="Spark placeholder image." src="../../assets/toolkit/images/spark-placeholder.jpg">
     </a>
     {{/unless}}
   {{/if}}
@@ -26,27 +24,29 @@ hidden: true
     {{/unless}}
   {{/if}}
 
-  {{#if hasIcon }}
-  <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">
+  {{#if hasFlag }}
+  <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--three-fourths@s sprk-o-Stack sprk-o-Stack--large">
   {{else}}
     {{#if hasImage }}
       <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">
     {{/if}}
   {{/if}}
 
-    {{#unless hasIcon }}
+    {{#unless hasFlag }}
       {{#unless hasImage }}
         <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
       {{/unless}}
     {{/unless}}
   
+    {{#if hasTitle}}
     <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
       Title
     </h3>
+    {{/if}}
 
     {{#if hasSubTitle }}
     <div class="sprk-c-Promo__subtitle sprk-o-Stack__item">
-      Subtitle subtitle subtitle
+      Subtitle
     </div>
     {{/if}}
 
@@ -65,12 +65,10 @@ hidden: true
     {{/if}}
   </div>
 
-  {{#if hasIcon}}
+  {{#if hasFlag}}
     {{#if mediaRev}}
-    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-c-Promo__icon">
-      <svg class="sprk-c-Icon sprk-c-Icon--xxl" viewBox="0 0 100 100">
-        <use xlink:href="#home" />
-      </svg>
+    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
+      <img class="sprk-c-Promo__image--flag" alt="Spark placeholder image." src="../../assets/toolkit/images/spark-placeholder.jpg">  
     </a>
     {{/if}}
   {{/if}}
