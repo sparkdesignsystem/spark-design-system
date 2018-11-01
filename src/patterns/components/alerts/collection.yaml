@@ -9,4 +9,7 @@ restrictions:
   - Should fill the width of the viewport.
   - The content should be kept short and concise.
   - role="alert" is required so that assistive technology can inform users their attention is needed.
+  - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property. ("alert-info-1", "alert-info-2", "alert-info-1", etc)
 sparkPackageCore: true
