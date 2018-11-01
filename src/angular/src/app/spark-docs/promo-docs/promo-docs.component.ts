@@ -14,7 +14,8 @@ import { RouterTestingModule } from '@angular/router/testing';
           subtitle="Subtitle"
           cta="button"
           ctaText="Learn More"
-          hasBorder="true">
+          hasBorder="true"
+          idString="promo-1">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
         </sprk-promo>
       </div>
@@ -29,7 +30,8 @@ import { RouterTestingModule } from '@angular/router/testing';
       <sprk-promo
         isFlag=true
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-        imgAlt="Spark Design System Logo">
+        imgAlt="Spark Design System Logo"
+        idString="promo-2">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
@@ -48,7 +50,8 @@ import { RouterTestingModule } from '@angular/router/testing';
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         cta="button"
-        ctaText="Learn More">
+        ctaText="Learn More"
+        idString="promo-3">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
@@ -68,7 +71,8 @@ import { RouterTestingModule } from '@angular/router/testing';
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         imgHref="https://sparkdesignsystem.com"
         cta="button"
-        ctaText="Learn More">
+        ctaText="Learn More"
+        idString="promo-4">
           Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
