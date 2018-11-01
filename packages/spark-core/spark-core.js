@@ -25,6 +25,7 @@ import './utilities/polyfills/StringIncludes';
 import './utilities/polyfills/ArrayFind';
 import './utilities/polyfills/NodeListForEach';
 import './utilities/polyfills/classListSVG';
+import './utilities/polyfills/focusWithin';
 
 const SparkCore = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
