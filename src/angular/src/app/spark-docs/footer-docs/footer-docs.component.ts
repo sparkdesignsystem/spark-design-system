@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         Base
       </h2>
 
-      <sprk-footer>
+      <sprk-footer idString="footer-1">
         <div class="sprk-o-Stack__item sprk-o-Box">
           <ul class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-HorizontalList--delimited-split-distribution">
             <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 1</a></li>
@@ -127,7 +127,7 @@ import { Component } from '@angular/core';
         Base With Award Component
       </h2>
 
-      <sprk-footer>
+      <sprk-footer idString="footer-2">
         <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fifths@s">
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@s">
             <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Box">
@@ -277,7 +277,7 @@ import { Component } from '@angular/core';
         Base With Columns of Links
       </h2>
 
-      <sprk-footer>
+      <sprk-footer idString="footer-3">
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--split@s">
             <div class="sprk-o-Stack__item sprk-o-Stack__item--third@s sprk-o-Box">
@@ -548,7 +548,7 @@ import { Component } from '@angular/core';
         Base Footer With Link Columns And Award Pattern
       </h2>
 
-      <sprk-footer>
+      <sprk-footer idString="footer-4">
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--split@s">
             <div class="sprk-o-Stack__item sprk-o-Stack__item--third@s sprk-o-Box">
@@ -847,7 +847,7 @@ import { Component } from '@angular/core';
         Base Footer With Award Pattern And Products
       </h2>
 
-      <sprk-footer>
+      <sprk-footer idString="footer-5">
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Box">
             <h2 class="sprk-b-TypeDisplaySix sprk-u-mbm">
