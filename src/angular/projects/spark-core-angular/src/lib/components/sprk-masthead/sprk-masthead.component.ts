@@ -48,7 +48,6 @@ import { Component, HostListener, Input } from '@angular/core';
           </div>
         </div>
         <div class="sprk-c-Masthead__secondary">
-          <p *ngIf="greetingName" class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ greetingName }}</p>
           <ng-content select="[lower-slot]"></ng-content>
         </div>
       </div>
@@ -76,8 +75,6 @@ export class SparkMastheadComponent {
   logoLinkScreenReaderText = 'Go to the homepage';
   @Input()
   additionalClasses: string;
-  @Input()
-  greetingName: string;
   @Input()
   wideNavLinks: object[];
   @Input()

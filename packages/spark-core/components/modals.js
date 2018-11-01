@@ -125,7 +125,9 @@ const bindUIEvents = (mask, main, modalTriggers, modalsList, cancels) => {
       // Get value of data-attr to get corresponding modal name
       const modalName = trigger.getAttribute('data-sprk-modal-trigger');
       const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
-      e.preventDefault();
+      if (trigger.getAttribute('data-sprk-modal-trigger-prevent-default') === 'true') {
+        e.preventDefault();
+      }
       showModal(modal, mask, main);
       focusFirstEl(modal);
     });

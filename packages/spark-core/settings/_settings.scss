@@ -61,13 +61,13 @@ $icon-m: 16px !default;
 $icon-l: 32px !default;
 $icon-xl: 64px !default;
 $icon-xxl: 128px !default;
-$icon-fill-color: $red-real !default;
-$icon-stroke-color: $red-real !default;
+$icon-fill-color: $red !default;
+$icon-stroke-color: $red !default;
 $icon-using-custom-stroke: true !default;
-$icon-custom-stroke-width-s: 0.5px !default;
-$icon-custom-stroke-width-m: 1px !default;
+$icon-custom-stroke-width-s: 1px !default;
+$icon-custom-stroke-width-m: 1.5px !default;
 $icon-custom-stroke-width-l: 2px !default;
-$icon-custom-stroke-width-xl: 4px !default;
+$icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layout
@@ -99,7 +99,7 @@ $horizontal-list-spacing-huge: $space-xl !default;
 $pag-max-width: 26rem !default;
 $pag-link-color: $black !default;
 $pag-link-color-hover: $pag-link-color !default;
-$pag-selection-color: $red-real !default;
+$pag-selection-color: $red !default;
 $pag-selection-link-color: $white !default;
 $pag-selection-link-color-hover: $white !default;
 $pag-circle-size: 2em !default;
@@ -171,6 +171,7 @@ $font-weight-body-four: normal !default;
 // Font Stack
 $using-webfont-body: true !default;
 $using-webfont-heading: true !default;
+$using-webfont-alternate: false !default;
 $body-font-name: FallSans !default;
 $body-font-src: url('') !default;
 $body-font-weight: normal !default;
@@ -181,10 +182,17 @@ $heading-font-src: url('') !default;
 $heading-font-weight: normal !default;
 $heading-bold-font-src: url('') !default;
 $heading-bold-font-weight: bold !default;
+$alternate-font-name: FallSans-Regular !default;
+$alternate-font-src: url('') !default;
+$alternate-font-weight: normal !default;
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
-$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$alternate-font-stack: $alternate-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
@@ -234,18 +242,34 @@ $alert-color: $white !default;
 $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
+$alert-icon-size: 40px !default;
 $alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
-$alert-shadow-hover-info: inset -64px 0 0 $alert-color-info !default;
+$alert-shadow-hover-info: inset -80px 0 0 $alert-color-info !default;
 $alert-shadow-success: inset $alert-bar-width 0 0 $alert-color-success !default;
-$alert-shadow-hover-success: inset -64px 0 0 $alert-color-success !default;
+$alert-shadow-hover-success: inset -80px 0 0 $alert-color-success !default;
 $alert-shadow-fail: inset $alert-bar-width 0 0 $alert-color-fail !default;
-$alert-shadow-hover-fail: inset -64px 0 0 $alert-color-fail !default;
+$alert-shadow-hover-fail: inset -80px 0 0 $alert-color-fail !default;
+
+//
+// Promos
+///
+$promo-background-color: $white !default;
+$promo-border: 1px solid $gray !default;
+$promo-max-width: 42.5rem !default;
+$promo-breakpoint: 42.5rem !default;
+$promo-image-narrow-max-height: 20rem !default;
+$promo-image-narrow-max-width: 50% !default;
+$promo-icon-color: $black !default;
+$promo-title-font-color: $black !default;
+$promo-title-font-weight: $font-weight-display-four !default;
+$promo-subtitle-font-color: $black !default;
+$promo-subtitle-font-weight: $font-weight-body-one !default;
 
 //
 // Buttons
 ///
-$btn-background-color: $red-real !default;
+$btn-background-color: $red !default;
 $btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
@@ -274,7 +298,7 @@ $btn-secondary-text-color: $black !default;
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border-color: transparent !default;
 $btn-tertiary-hover-text-color: $black !default;
-$btn-tertiary-hover-line-color: $red-real !default;
+$btn-tertiary-hover-line-color: $red !default;
 $btn-tertiary-hover-background-color: transparent !default;
 $btn-tertiary-text-color: $black !default;
 
@@ -284,10 +308,11 @@ $btn-tertiary-text-color: $black !default;
 $link-color: $black !default;
 $link-disabled-color: $black-tint-50;
 $link-muted-color: $black-tint-75;
-$link-standalone-color: $red-real !default;
+$link-standalone-color: $red !default;
 $link-transition: 0.3s !default;
-$link-underline-color: $red-real !default;
+$link-underline-color: $red !default;
 $link-visited-color: $red-mid !default;
+$link-font-weight: bold !default;
 
 //
 // Lists
@@ -314,13 +339,14 @@ $text-input-padding: 3px $space-s !default;
 $input-readonly-border-color: $black !default;
 $input-box-shadow: 0 1px 0 0 $black !default;
 $input-error-box-shadow: 0 3px 0 0 $yellow !default;
+$error-icon-size: 1.25rem !default;
 $input-disabled-box-shadow: 0 1px 0 0 $input-gray-medium !default;
 $date-picker-max-width: 20rem !default;
 $date-picker-button-size: 2.25rem !default;
 $date-picker-column-adjustment-x: 0.25rem !default;
 $date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
-$date-picker-day-interact-color: $red-real !default;
-$text-input-interact-color: $red-real !default;
+$date-picker-day-interact-color: $red !default;
+$text-input-interact-color: $red !default;
 $error-text-color: $black !default;
 $text-input-error-color: $yellow !default;
 $input-max-width: 27.5rem !default;
@@ -414,12 +440,12 @@ $accordion-max-width: 53.125rem !default;
 $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
-$accordion-summary-active-color: $red-real !default;
+$accordion-summary-active-color: $red !default;
 
 //
 // Toggle
 //
-$toggle-transistion-timing: 0.3s ease;
+$toggle-transistion-timing: 0.3s ease !default;
 
 //
 // Dividers
@@ -442,7 +468,11 @@ $modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 //
 $main-nav-breakpoint: 46rem !default;
 $masthead-column-width: 64rem !default;
-$mobile-masthead-height: 6.7rem !default;
+$mobile-masthead-height: 5.5625rem !default;
+$sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$narrow-nav-left-border: 5px solid $red !default;
+$narrow-nav-link-font-weight: normal !default;
+$masthead-wide-navigation-font-size: 1.125rem !default;
 
 //
 // Pagination

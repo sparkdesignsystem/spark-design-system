@@ -11,20 +11,25 @@ import { Component } from '@angular/core';
           [wideNavLinks]="links"
           [secondaryNavLinks]="linksSecondary"
           [narrowNavLinks]="links">
-          <img alt="Provide useful alternative text" src="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg" logo-slot>
-          <div class="sprk-b-InputContainer" upper-slot>
-            <label for="inline-search" class="sprk-u-ScreenReaderText">Search</label>
-            <input
-              placeholder="Search"
-              class="sprk-b-TextInput sprk-u-Width-100"
-              id="inline-search"
-              type="search"
-              role="search"
-              aria-describedby="inline-search--error-container">
-            <div class="sprk-b-ErrorText" id="inline-search--error-container">
-            </div>
+          <div class="drizzle-c-Logo-placeholder" logo-slot></div>
+          <div class="sprk-c-Masthead__search" lower-slot>
+            <sprk-icon-input-container iconContainerClasses="">
+              <label
+                class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+                sprkLabel>
+                Search
+              </label>
+              <sprk-icon iconType="search" additionalClasses="sprk-b-InlineSearch__icon" sprk-input-icon></sprk-icon>
+              <input
+                name="inline_search_input"
+                class="sprk-b-TextInput--with-icon"
+                type="text"
+                placeholder="Search"
+                [(ngModel)]="inline_search_input"
+                #inlineSearchInput="ngModel"
+                sprkInput>
+            </sprk-icon-input-container>
           </div>
-          <p lower-slot>Loan Number: #1234567890</p>
         </sprk-masthead>
       </div>
   `,
@@ -52,13 +57,11 @@ export class MastheadDocsComponent {
   links = [
     {
       text: 'Item 1',
-      href: '/icons',
-      active: false
+      href: '/masthead'
     },
     {
       text: 'Item 2',
       href: '/links',
-      active: false,
       subNav: [
         {
           text: 'Item 1',
@@ -80,13 +83,11 @@ export class MastheadDocsComponent {
     },
     {
       text: 'Item 3',
-      href: '/buttons',
-      active: false
+      href: '/buttons'
     },
     {
       text: 'Item 4',
       href: '#nogo',
-      active: false,
       subNav: [
         {
           text: 'Item 1',

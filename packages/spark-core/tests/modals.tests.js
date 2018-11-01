@@ -81,6 +81,7 @@ describe('modal UI tests', () => {
     triggerDefaultModal = document.createElement('button');
     sinon.spy(triggerDefaultModal, 'addEventListener');
     triggerDefaultModal.setAttribute('data-sprk-modal-trigger', 'exampleDefaultModal');
+    triggerDefaultModal.setAttribute('data-sprk-modal-trigger-prevent-default', 'true');
     triggerDefaultModal.textContent = 'Launch Default Modal';
 
     triggerWaitModal = document.createElement('button');
@@ -123,6 +124,22 @@ describe('modal UI tests', () => {
   });
 
   it('should hide the correct modal when cancel is triggered', () => {
+    bindUIEvents(
+      modalMask,
+      main,
+      [triggerDefaultModal, triggerWaitModal],
+      [defaultModal, waitModal],
+      [cancelDefault],
+    );
+    event = new window.Event('click');
+    triggerDefaultModal.dispatchEvent(event);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(false);
+    cancelDefault.dispatchEvent(event);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(true);
+  });
+
+  it('should hide the correct modal when cancel is triggered if preventDefault is not set', () => {
+    triggerDefaultModal.removeAttribute('data-sprk-modal-trigger-prevent-default');
     bindUIEvents(
       modalMask,
       main,

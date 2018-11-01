@@ -120,8 +120,11 @@
   viewBox: 0 0 64 64
   description: ...
 - name: exclamation
-  viewBox: 0 0 576 512
+  viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
+- name: exclamation-filled
+  viewBox: 0 0 64 64
+  description: ...
 - name: facebook
   viewBox: 0 0 64 64
   description: The Facebook icon is used to link to that specific social media account for a given site.
@@ -296,6 +299,9 @@
 - name: upload
   viewBox: 0 0 64 64
   description: The upload icon is used to show when an upload action can be taken.
+- name: user
+  viewBox: 0 0 64 64
+  description: ...
 - name: verified-approval
   viewBox: 0 0 64 64
   description: ...

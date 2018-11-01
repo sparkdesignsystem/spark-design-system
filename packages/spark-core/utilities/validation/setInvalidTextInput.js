@@ -26,7 +26,7 @@ const setInvalidTextInput = (inputContainer, defaultErrorMessage) => {
   if (errorContainer) {
     input.setAttribute('aria-describedby', errorContainer.getAttribute('id'));
     errorContainer.innerHTML = '';
-    buildErrorContainer(errorContainer, 'exclamation', overrideErrorMessage || defaultErrorMessage);
+    buildErrorContainer(errorContainer, 'exclamation-filled', overrideErrorMessage || defaultErrorMessage);
   }
 };
 
