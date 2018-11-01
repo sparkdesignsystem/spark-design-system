@@ -4,10 +4,14 @@ Using <hr/> to break up sections:
 This is used primarily when you want to separate a page into sections. 
 It represents a thematic break between paragraph-level elements.
 
-In HTML4, the <hr /> tag was used to display as a horizontal rule or line. 
-In HTML5, the <hr /> tag defines a thematic break. 
-It WILL still display a horizontal line in visual browsers, but is now defined in semantic terms. 
-The attributes previously available to <hr> in HTML4 has been deprecated. You can style <hr /> elements in CSS instead. 
+If a user needs a line that's not necessarily a semantic <hr /> but more of as a divider/separator, then use:
+
+<span class="sprk-c-Divider">
+</span>
+
+But if it's an actual semantic use of <hr />, then use an <hr /> tag.
+
+Because not all horizontal lines are semantically hrs –– sometimes they're just dividers
 
 Think of it as a way to distinguish topics within HTML. It’s a way to visually distinguish between
 2 different topics, sections, paragraphs, etc. 
