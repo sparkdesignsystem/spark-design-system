@@ -94,8 +94,10 @@ const bindUIEvents = (element) => {
       event.preventDefault();
       tabpanels[getActiveTabIndex(tabs)].focus();
     } else if (event.keyCode === keys.home) {
+      resetTabs(tabs, tabpanels);
       setActiveTab(tabs[0], tabpanels[0]);
     } else if (event.keyCode === keys.end) {
+      resetTabs(tabs, tabpanels);
       setActiveTab(tabs[tabs.length - 1], tabpanels[tabpanels.length - 1]);
     }
   });
