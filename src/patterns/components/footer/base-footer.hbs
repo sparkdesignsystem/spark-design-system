@@ -1,0 +1,143 @@
+---
+name: Base Footer
+description:
+  The Base Footer is intended to be used at the bottom of every page. The Footer includes legal links,
+  legal icons or small awards, and a paragraph of legal or other type of copy.
+  You can adjust, based on your content needs, the points at which the different
+  pieces in the footer change from a stacked to a split layout. To do so, change
+  the Stack object container's responsive suffixes.
+restrictions:
+  - Some screen readers do not announce the Footer landmark role so we add
+    role="contentinfo" to the footer HTML element.
+  - The awards/icons section is restricted to a maximum of 5 items.
+  - The legal link section is restricted to a maximum of 8 links.
+order: 1
+hasAngularCode: true
+hasAngularCodeInfo: true
+---
+<div class="sprk-o-CenteredColumn">
+  <footer class="sprk-o-Stack" role="contentinfo">
+    <div class="sprk-o-Stack__item sprk-o-Box">
+      <ul class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-HorizontalList--delimited-split-distribution">
+        <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 1</a></li>
+        <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 2</a></li>
+        <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 3</a></li>
+        <li data-delimiter="|"><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 4</a></li>
+        <li><a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 5</a></li>
+      </ul>
+    </div>
+
+    <div class="sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack__item">
+      <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--three-fifths@xs">
+        <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
+                <use xlink:href="#feedback" />
+              </svg>
+              Provide Feedback
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
+                <use xlink:href="#desktop-computer" />
+              </svg>
+              Share Your Screen
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--two-fifths@xs">
+        <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-o-Stack--end-row">
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
+                <use xlink:href="#facebook" />
+              </svg>
+              <span class="sprk-u-ScreenReaderText">Facebook</span>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
+                <use xlink:href="#instagram" />
+              </svg>
+              <span class="sprk-u-ScreenReaderText">Instagram</span>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
+                <use xlink:href="#twitter" />
+              </svg>
+              <span class="sprk-u-ScreenReaderText">Twitter</span>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
+                <use xlink:href="#youtube" />
+              </svg>
+              <span class="sprk-u-ScreenReaderText">Youtube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sprk-u-mlm sprk-u-mrm sprk-c-Divider"></div>
+
+    <div class="sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack__item">
+      <div class="sprk-o-Box sprk-o-Stack sprk-o-Stack--large sprk-o-Stack__item sprk-o-Stack__item--three-fifths@s">
+        <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+          non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+        </p>
+
+        <div class="sprk-o-Stack__item" data-sprk-toggle="container">
+          <a class="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--plain" data-sprk-toggle="trigger" href="#">
+              <svg class="sprk-c-Icon sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
+                <use xlink:href="#chevron-down"></use>
+              </svg>
+              My Disclaimer
+          </a>
+
+          <div data-sprk-toggle="content">
+            <p class="sprk-b-TypeBodyFour sprk-u-pts">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
+              non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--two-fifths@s">
+        <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium sprk-o-Stack--end-row">
+          <li class="sprk-o-Stack__item">
+            <a href="#">
+              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a href="#">
+              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+            </a>
+          </li>
+
+          <li class="sprk-o-Stack__item">
+            <a href="#">
+              <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>

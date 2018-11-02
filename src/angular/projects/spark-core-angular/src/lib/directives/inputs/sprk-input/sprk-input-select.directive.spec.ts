@@ -5,9 +5,7 @@ import { SprkInputDirective } from './sprk-input.directive';
 @Component({
   selector: 'sprk-test-select',
   template: `
-  <select
-    additionalClasses="sprk-u-man"
-    sprkInput></select>`
+  <select sprkInput></select>`
 })
 class TestSelectComponent {}
 
@@ -38,8 +36,6 @@ describe('Spark Input Directive', () => {
 
   it('should add the correct class if a select element is used', () => {
     selectFixture.detectChanges();
-    expect(selectElement.classList.toString()).toEqual(
-      'sprk-b-Select sprk-u-man'
-    );
+    expect(selectElement.classList.toString()).toEqual('sprk-b-Select');
   });
 });

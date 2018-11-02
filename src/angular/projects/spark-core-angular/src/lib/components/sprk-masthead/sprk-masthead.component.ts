@@ -13,19 +13,16 @@ import { Component, HostListener, Input } from '@angular/core';
               <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
               <svg
                 [ngClass]="
-                  { 'sprk-c-Icon': true,
-                    'sprk-c-Icon--l': true,
-                    'sprk-c-Hamburger__icon': true,
-                    'sprk-c-Hamburger__icon--open': isNarrowNavOpen
-                  }"
-                  aria-hidden="true"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+                    { 'sprk-c-Icon': true,
+                      'sprk-c-Icon--l': true,
+                      'sprk-c-Hamburger__icon': true,
+                      'sprk-c-Hamburger__icon--open': isNarrowNavOpen
+                    }"
+                    aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <g>
-                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one" d="M5 13h90v14H5z" />
-                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two" d="M5 43h90v14H5z" />
-                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--three" d="M5 73h90v14H5z" />
+                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two" d="m8 32h48"/>
+                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one" d="m8 18.68h48"/>
+                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--three" d="m8 45.32h48"/>
                 </g>
               </svg>
             </button>
@@ -51,7 +48,6 @@ import { Component, HostListener, Input } from '@angular/core';
           </div>
         </div>
         <div class="sprk-c-Masthead__secondary">
-          <p *ngIf="greetingName" class="sprk-u-mbn sprk-b-TypeBodyTwo">Hello, {{ greetingName }}</p>
           <ng-content select="[lower-slot]"></ng-content>
         </div>
       </div>
@@ -79,8 +75,6 @@ export class SparkMastheadComponent {
   logoLinkScreenReaderText = 'Go to the homepage';
   @Input()
   additionalClasses: string;
-  @Input()
-  greetingName: string;
   @Input()
   wideNavLinks: object[];
   @Input()

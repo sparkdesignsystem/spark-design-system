@@ -2,152 +2,153 @@
 // Accordions
 // ==================================================================
 .sprk-c-Accordion {
+  border-top: $accordion-border;
   margin: 0 auto;
   max-width: $accordion-max-width;
   width: 100%;
 }
 
-.sprk-c-Accordion--navigation {
-  border-top: 2px solid $gray-medium;
+.sprk-c-Accordion__item--open + .sprk-c-Accordion__item--open {
+  &::before {
+    display: none;
+  }
 }
 
 .sprk-c-Accordion__item {
-  background-color: $blue-medium;
-  margin-bottom: $space-xs;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.sprk-c-Accordion--navigation .sprk-c-Accordion__item {
-  background-color: $white;
-  margin: 0;
-}
-
-.sprk-c-Accordion__summary {
-  align-items: center;
-  color: $white;
-  display: flex;
-  padding: $space-m;
-  text-decoration: none;
-
-  &:hover,
-  &:active {
-    background-color: $blue-dark;
-    color: $white;
-    text-decoration: none;
-  }
-}
-
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
-  border: 2px solid $gray-medium;
-  border-top: 0;
-  align-items: center;
-}
-
-// When open, add same style as when focused
-.sprk-c-Accordion__summary--open {
-  background-color: $blue-dark;
+  border-bottom: $accordion-border;
 }
 
 .sprk-c-Accordion__heading {
-  align-items: center;
-  color: $white;
-  display: flex;
   flex: 1;
-}
-
-.sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
-  color: $blue-dark;
-  text-transform: uppercase;
 }
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
 }
 
-.sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
-  color: $blue-dark;
-}
+.sprk-c-Accordion__summary {
+  align-items: center;
+  color: $accordion-summary-color;
+  display: flex;
+  padding-bottom: $space-m;
+  padding-top: $space-m;
+  text-decoration: none;
 
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary--open
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:hover
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:active
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary--open
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:hover
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:active
-.sprk-c-Accordion__icon {
-  color: $white;
-}
-
-.sprk-c-Accordion__details {
-  background-color: $white;
-  border: 0.125rem solid $blue-dark;
-  padding: $space-m;
-}
-
-.sprk-c-Accordion--navigation .sprk-c-Accordion__details {
-  border: 0;
-  border-bottom: 2px solid $gray-medium;
-  padding: 0;
-}
-
-.sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
-  display: block;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $blue-dark;
-    color: $white;
+  &:hover {
+    color: $accordion-summary-active-color;
     text-decoration: none;
   }
 }
 
-// Secondary style accordion modifiers
-.sprk-c-Accordion--secondary .sprk-c-Accordion__item {
-  background-color: $white;
-  border-bottom: 0.125rem solid $blue-medium;
-  margin-bottom: 0;
+.sprk-c-Accordion__item--open .sprk-c-Accordion__heading {
+  font-weight: bold;
+}
+
+.sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
+  color: $accordion-summary-active-color;
+}
+
+.sprk-c-Accordion__content {
+  padding-bottom: $space-l;
+}
+
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation {
+  border: 0;
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
+  border-bottom: $accordion-border-open;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black-tint-25;
+    width: 100%;
+  }
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item {
+  border: 0;
+  margin: 0;
 
   &:first-child {
-    border-top: 0.125rem solid $blue-medium;
+    border-top: 0;
   }
 }
 
-// When secondary is open, hovered, active, or focused
-.sprk-c-Accordion--secondary .sprk-c-Accordion__summary {
-  color: $blue-medium;
+.sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
+  border-top: 0;
+  min-height: $icon-xl;
+  padding: $space-m;
 
-  &.sprk-c-Accordion__summary--open,
   &:hover,
   &:active {
-    background-color: $blue-medium;
-    color: $white;
-
-    .sprk-c-Accordion__heading {
-      color: $white;
-    }
+    background-color: $gray-tint-50;
   }
 }
 
-.sprk-c-Accordion--secondary .sprk-c-Accordion__heading {
-  color: $blue-medium;
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--active
+.sprk-c-Accordion__summary {
+  background-color: $gray-tint-50;
+  border-left: $narrow-nav-left-border;
 }
 
-.sprk-c-Accordion--secondary .sprk-c-Accordion__details {
-  border-color: $blue-medium;
-  border-bottom: 0;
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--active
+.sprk-c-Accordion__heading {
+  font-weight: bold;
 }
+
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
+  color: $black;
+}
+
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
+  stroke: $black;
+}
+
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation .sprk-c-Accordion__details {
+  border: 0;
+  padding: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black-tint-25;
+    width: 100%;
+  }
+}
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
+  color: $black;
+  display: block;
+  font-weight: $narrow-nav-link-font-weight;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gray-tint-50;
+    text-decoration: none;
+  }
+
+  &::after {
+    content: none;
+  }
+}
+
+/* stylelint-disable selector-class-pattern */
+.DOM-slider-hidden {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */

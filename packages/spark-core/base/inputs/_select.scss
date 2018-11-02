@@ -1,0 +1,59 @@
+.sprk-b-Select {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: none;
+  font-size: $font-size-body-two;
+  font-weight: $font-weight-body-two;
+  line-height: $line-height-body-two;
+  outline: 0;
+  padding: 0 $space-l 0 $space-s;
+  box-shadow: $input-box-shadow;
+  width: 100%;
+}
+
+// IE11
+.sprk-b-Select:focus::-ms-value {
+  color: $black;
+  background: none;
+}
+
+.sprk-b-Select::-ms-expand {
+  display: none;
+}
+
+.sprk-b-SelectContainer__icon {
+  float: right;
+  margin-top: $select-arrow-offset-y;
+  margin-right: $select-arrow-offset-x;
+}
+
+.sprk-b-Select[disabled] {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: $input-gray-medium;
+  border-bottom-width: 1px;
+  background-color: $input-disabled-background-color;
+  box-shadow: none;
+  color: $input-disabled-text-color;
+}
+
+.sprk-b-Select--error {
+  box-shadow: $input-error-box-shadow;
+}
+
+.sprk-b-Select--error ~ .sprk-b-InputContainer__input-border {
+  border-bottom: 3px solid $text-input-error-color;
+}
+
+.sprk-b-Select--focusin ~ .sprk-b-InputContainer__input-border {
+  animation: width-zero-to-full $input-animation-speed;
+  animation-fill-mode: forwards;
+}
+
+.sprk-b-Select--focusout ~ .sprk-b-InputContainer__input-border {
+  width: 100%;
+  animation: opacity-one-to-zero $input-animation-speed;
+  animation-fill-mode: forwards;
+}

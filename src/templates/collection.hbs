@@ -10,7 +10,6 @@
         </div>
       {{/unless}}
     </div>
-
     <div class="drizzle-o-Layout__content">
       <section>
         <div class="drizzle-o-ContentGrouping">
@@ -97,6 +96,15 @@
         </div>
       {{/if}}
     </section>
+
+    {{!-- Properties --}}
+    {{#if hasProperties }}
+      <div class="drizzle-o-ContentGrouping ">
+        <h2 class="drizzle-b-h2">Optional Properties</h2>
+        {{!-- inject the template at /properties/collection.hbs --}}
+        {{> (patternIdGen (concat id '.properties.collection')) }}
+      </div>
+    {{/if}}
 
     {{!- Angular Info (component wide) --}}
     {{#if hasAngularInfo}}

@@ -20,6 +20,8 @@ import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 
 import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
+import { SparkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
+import { SparkIconInputContainerModule } from './components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkSelectionContainerModule } from './components/inputs/sprk-selection-container/sprk-selection-container.module';
 import { SparkSelectionItemContainerModule } from './components/inputs/sprk-selection-item-container/sprk-selection-item-container.module';
 import { SparkAccordionItemModule } from './components/sprk-accordion-item/sprk-accordion-item.module';
@@ -27,7 +29,6 @@ import { SparkAccordionModule } from './components/sprk-accordion/sprk-accordion
 import { SparkAlertModule } from './components/sprk-alert/sprk-alert.module';
 import { SparkDividerModule } from './components/sprk-divider/sprk-divider.module';
 import { SparkFooterModule } from './components/sprk-footer/sprk-footer.module';
-import { SparkIconSetModule } from './components/sprk-icon-set/sprk-icon-set.module';
 import { SparkIconModule } from './components/sprk-icon/sprk-icon.module';
 import { SparkLinkModule } from './components/sprk-link/sprk-link.module';
 import { SparkListItemModule } from './components/sprk-list-item/sprk-list-item.module';
@@ -57,17 +58,6 @@ import TinyDatePicker from 'tiny-date-picker';
       useValue: TinyDatePicker
     }
   ],
-  imports: [
-    SparkStackModule,
-    SprkStackItemModule,
-    SparkToggleModule,
-    SparkIconModule,
-    SparkIconSetModule,
-    SparkFooterModule,
-    SparkSecondaryNavigationModule,
-    SparkSecondaryNavigationItemModule,
-    SparkTabbedNavigationModule
-  ],
   exports: [
     SparkAlertModule,
     SparkAccordionModule,
@@ -83,6 +73,8 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkNarrowNavigationModule,
     SparkNarrowNavigationItemModule,
     SparkInputContainerModule,
+    SparkTextareaContainerModule,
+    SparkIconInputContainerModule,
     SparkSelectionContainerModule,
     SparkSelectionItemContainerModule,
     SparkMastheadModule,
@@ -110,7 +102,6 @@ import TinyDatePicker from 'tiny-date-picker';
     SprkStackItemModule,
     SparkToggleModule,
     SparkIconModule,
-    SparkIconSetModule,
     SparkFooterModule,
     SparkSecondaryNavigationModule,
     SparkSecondaryNavigationItemModule,

@@ -10,9 +10,25 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-highlight-board
+        heading="Hello, Welcome To Spark Design System"
+        ctaText="Designers"
+        ctaHref="https://sparkdesignsystem.com/"
+        ctaText2="Developers"
+        ctaHref2="https://sparkdesignsystem.com/"
+        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+        imgAlt="placeholder">
+      </sprk-highlight-board>
+    </div>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <div class="sprk-o-CenteredColumn">
+      <h2 class="drizzle-b-h2">
+        Highlight Board Default 2
+      </h2>
+
+      <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
-        ctaText="Learn More"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
         imgAlt="placeholder">
       </sprk-highlight-board>
@@ -27,8 +43,8 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
+        ctaText2="Learn More"
         type="noImage">
       </sprk-highlight-board>
     </div>
@@ -42,7 +58,6 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
         type="stacked"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
@@ -57,10 +72,11 @@ import { Component } from '@angular/core';
     </h2>
 
     <sprk-highlight-board
-      heading="Highlight Board Heading Example"
-      subHeading="Sub heading example for the Highlight Board component."
-      ctaText="Learn More"
-      ctaTwoText="CTA Two"
+      heading="Hello, Welcome To Spark Design System"
+      ctaText="Designers"
+      ctaHref="https://sparkdesignsystem.com/"
+      ctaText2="Developers"
+      ctaHref2="https://sparkdesignsystem.com/"
       type="fullWidth"
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
       imgAlt="placeholder">

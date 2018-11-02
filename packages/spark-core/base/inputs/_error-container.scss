@@ -1,0 +1,23 @@
+.sprk-b-ErrorContainer {
+  align-items: center;
+  display: flex;
+  margin-left: $space-s;
+  margin-top: $space-s;
+}
+
+[hidden].sprk-b-ErrorContainer {
+  display: none;
+}
+
+.sprk-b-ErrorIcon {
+  fill: $text-input-error-color;
+  margin-right: $space-s;
+  height: $error-icon-size;
+  width: $error-icon-size;
+}
+
+.sprk-b-ErrorText {
+  color: $error-text-color;
+  font-size: $font-size-body-four;
+  font-weight: bold;
+}

@@ -2,15 +2,18 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  transition: background-color $btn-transition-speed;
-    
-  &:visited {
-    color: $btn-text-color;
-  }
-  
+  box-shadow: $btn-shadow;
+  transition: all $btn-transition-speed;
+
+  &:hover,
   &:active,
   &:focus {
     background-color: $btn-hover-background-color;
+    border-color: $btn-hover-background-color;
+    color: $btn-hover-text-color;
+  }
+
+  &:visited {
     color: $btn-text-color;
   }
 }
@@ -24,64 +27,73 @@
 }
 
 .sprk-c-Button--secondary {
-  background-color: transparent;
-  border: 2px solid $blue-medium;
-  color: $blue-medium;
-  
+  background-color: $btn-secondary-background-color;
+  box-shadow: none;
+  border: $btn-border-width $btn-border-style $btn-secondary-border-color;
+  color: $btn-secondary-text-color;
+
   &:visited {
-    color: $blue-medium;
+    color: $btn-secondary-text-color;
   }
 
+  &:hover,
   &:active,
-  &:focus,
-  &:hover {
-    background-color: $blue-medium;
-    border: 2px solid $blue-medium;
-    color: $white;
+  &:focus {
+    background-color: $btn-secondary-hover-background-color;
+    border: $btn-border-width $btn-border-style $btn-secondary-border-color;
+    color: $btn-secondary-hover-text-color;
   }
 }
 
 .sprk-c-Button--tertiary {
-  background-color: $blue-medium;
+  background-color: $btn-tertiary-background-color;
+  box-shadow: none;
+  border-color: $btn-tertiary-border-color;
+  color: $btn-tertiary-text-color;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $btn-tertiary-hover-background-color;
+    border-color: $btn-tertiary-border-color;
+    color: $btn-tertiary-hover-text-color;
+  }
 
   &:visited {
-    color: $btn-text-color;
+    color: $btn-tertiary-text-color;
   }
-  
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $blue-dark;
-  }
-}
 
-.sprk-c-Button--removal {
-  background-color: transparent;
-  border: 2px solid $red-medium;
-  color: $red-medium;
-
-  &:visited {
-    color: $red-medium;
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+    border-color: $btn-tertiary-hover-line-color;
+    animation: width-zero-to-full $btn-transition-speed ease-in-out;
   }
-  
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $red-light;
-    border: 2px solid $red-medium;
-    color: $red-medium;
+
+  &::after {
+    content: '';
+    border-bottom: ($btn-border-width + 1px) solid $btn-tertiary-text-color;
+    display: block;
+    width: 100%;
+    padding-top: $space-xs;
+    margin: 0 auto;
   }
 }
 
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
-  &:visited {
-    color: $btn-text-color;
-  }
-  
+  box-shadow: none;
+
+  &:hover,
   &:active,
-  &:focus,
-  &:hover {
+  &:focus {
     background-color: $btn-disabled-background-color;
+    border-color: $btn-disabled-border-color;
+    color: $btn-disabled-text-color;
+  }
+
+  &:visited {
+    color: $btn-disabled-text-color;
   }
 }

@@ -10,8 +10,14 @@
   position: static;
 }
 
-/* so that you can see the box */
-.#{$app-namespace}-c-Preview__example .sprk-o-Box {
+[data-template-id^='base-footer'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='base-footer-with-awards'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='base-footer-with-optional-items'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='base-footer-with-optional-items-and-awards'] .#{$app-namespace}-c-Preview__example {
+  padding: 0;
+}
+
+[data-template-id^='box-object'] .sprk-o-Box {
   border: 1px solid #ccc;
 }
 
@@ -24,8 +30,14 @@
   height: 4rem;
 }
 
+[data-template-id^='stack-object'] .sprk-o-Stack__item {
+  background-color: rgba(253, 108, 69, 0.4);
+  border: 2px solid rgb(253, 108, 69);
+  padding: 2rem;
+}
+
 [data-template-id='flag-object'] .sprk-o-Flag__body p {
-  font-family: 'myriad pro', sans-serif;
+  font-family: FallSans, sans-serif;
 }
 
 [data-template-id='full-width'] .#{$app-namespace}-c-Preview__example {
@@ -34,8 +46,8 @@
 
 .#{$app-namespace}-c-Logo-placeholder {
   background-color: #ccc;
-  height: 75px;
-  width: 175px;
+  height: 55px;
+  width: 262px;
 }
 
 .#{$app-namespace}-c-Logo-placeholder--small {
@@ -58,4 +70,8 @@
 
 .#{$app-namespace}-b-Body.sprk-u-Overflow--hidden {
   overflow: auto !important; // this is to override a utility class (sprk-u-Overflow--hidden) that is added by JS.
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Modal {
+  z-index: 100003;
 }

@@ -49,14 +49,17 @@ hasAngularCode: true
     {{#if cardBtn}}
     <div class="sprk-o-Stack__item">
       <a href="#" class="sprk-c-Button">
-      {{cardBtn}}
+        {{cardBtn}}
       </a>
     </div>
     {{/if}}
 
     {{#if cardLink}}
-    <a href="#" class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--standalone">
+    <a href="#" class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--plain">
       Learn More
+      <svg class="sprk-c-Icon" viewBox="0 0 64 64">
+        <use xlink:href="#chevron-right" />
+      </svg>
     </a>
     {{/if}}
   </div>

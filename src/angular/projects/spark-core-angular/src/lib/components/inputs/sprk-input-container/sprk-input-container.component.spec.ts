@@ -12,7 +12,6 @@ import { SparkInputContainerComponent } from './sprk-input-container.component';
     <sprk-input-container>
         <label sprkLabel>Label!</label>
         <input sprkInput>
-        <div sprk-input-icon>Icon</div>
         <p sprkHelperText>Helper Text!</p>
         <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
@@ -27,7 +26,6 @@ describe('SparkInputContainerComponent', () => {
   let inputContainerFixture: ComponentFixture<SparkInputContainerComponent>;
   let inputContainerComponent: SparkInputContainerComponent;
   let inputContainerElement: HTMLElement;
-  let iconWrapperElement: HTMLElement;
 
   let labelElement: HTMLElement;
   let inputElement: HTMLElement;
@@ -57,7 +55,6 @@ describe('SparkInputContainerComponent', () => {
     inputContainerElement = inputContainerFixture.nativeElement.querySelector(
       'div'
     );
-    iconWrapperElement = inputContainerElement.querySelector('div');
 
     labelElement = testFixture.debugElement.query(By.css('label'))
       .nativeElement;
@@ -79,12 +76,6 @@ describe('SparkInputContainerComponent', () => {
     expect(inputContainerElement.classList.toString()).toEqual(
       'sprk-b-InputContainer sprk-u-man'
     );
-  });
-
-  it('should add classes to the icon container when iconContainerClasses', () => {
-    inputContainerComponent.iconContainerClasses = 'sprk-u-man';
-    inputContainerFixture.detectChanges();
-    expect(iconWrapperElement.classList.toString()).toEqual('sprk-u-man');
   });
 
   it('should set the for on the label to match the id on the input', () => {

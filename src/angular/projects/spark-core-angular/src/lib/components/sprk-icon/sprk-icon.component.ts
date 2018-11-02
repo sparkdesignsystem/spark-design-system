@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-icon',
   template: `
-    <svg [ngClass]="getClasses()" viewBox="0 0 100 100">
+    <svg [ngClass]="getClasses()" viewBox="0 0 64 64">
       <use [attr.xlink:href]="icon" />
     </svg>
   `

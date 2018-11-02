@@ -192,7 +192,7 @@ import { Component } from '@angular/core';
         <sprk-stack splitAt="medium" itemSpacing="medium" additionalClasses="sprk-o-Stack--center-row">
           <sprk-card
             sprkStackItem
-            additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+            additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
             cardType="teaser"
             title="First Card Out Of Three Cards In Row"
             body="Placeholder text that is here in this card!"
@@ -207,7 +207,7 @@ import { Component } from '@angular/core';
 
           <sprk-card
             sprkStackItem
-            additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+            additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
             cardType="teaser"
             title="Card Out Of Three Cards In Row Card Out Of Three Cards In Row"
             body="
@@ -234,7 +234,7 @@ import { Component } from '@angular/core';
       <sprk-stack splitAt="medium" itemSpacing="huge" additionalClasses="sprk-o-Stack--center-row">
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
           cardType="teaser"
           title="First Card Out Of Three Cards In Row"
           body="Placeholder text that is here in this card!"
@@ -249,7 +249,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
           cardType="teaser"
           title="Card heading! Card heading! Card heading! Card heading!"
           body="Placeholder text that is here in this card!"
@@ -264,7 +264,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@m"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
           cardType="teaser"
           title="Card heading!"
           body="Placeholder text that is here in this card!"
@@ -287,7 +287,7 @@ import { Component } from '@angular/core';
       <sprk-stack splitAt="huge" itemSpacing="small" additionalClasses="sprk-o-Stack--center-row">
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@xl"
           cardType="teaserHeading"
           title="First Card Out Of Three Cards In Row"
           body="Placeholder text that is here in this card!"
@@ -302,7 +302,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@xl"
           cardType="teaserHeading"
           title="Card heading! Card heading! Card heading!"
           body="Placeholder text that is here in this card!"
@@ -317,7 +317,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@xl"
           cardType="teaserHeading"
           title="Card heading! Card heading!"
           body="Placeholder text that is here in this card!"
@@ -332,7 +332,7 @@ import { Component } from '@angular/core';
 
         <sprk-card
           sprkStackItem
-          additionalClasses="sprk-o-Stack sprk-o-Stack__item--equal@xl"
+          additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@xl"
           cardType="teaserHeading"
           title="Card heading! Card heading!"
           body="Placeholder text that is here in this card!"

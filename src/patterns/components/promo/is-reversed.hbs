@@ -1,32 +1,9 @@
 ---
 name: Promo With Reversed Image
 description:
-  The default position for media in Promos is on the left side.
-  You may choose to have the media be on the right instead.
+  Promo with clickable image in reverse order.
 order: 4
 hasAngularCode: true
 hasAngularDocs: true
 ---
-<div class="sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
-  <div class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack sprk-o-Stack--medium">
-    <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-      Title
-    </h3>
-
-    <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-      Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse
-      id inventore integer eum non enim diam habitant. Maecenas nunc
-      per lacus neque egestas. Diam quod curabitur.
-    </p>
-
-    <div class="sprk-o-Stack__item">
-      <a href="#" class="sprk-c-Button">
-        Learn More
-      </a>
-    </div>
-  </div>
-
-  <a href="#" class="sprk-o-Stack__item">
-    <img alt="A white and yellow flower." src="../../assets/toolkit/images/flower.jpg">
-  </a>
-</div>
+{{#embed "patterns.components.promo.base" hasTitle=true hasSubTitle=true hasCta=true hasImage=true hasBorder=true mediaRev=true}}{{/embed}}

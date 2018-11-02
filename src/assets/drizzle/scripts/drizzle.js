@@ -24,6 +24,10 @@ const bindUIEvents = () => {
   }
 };
 
+document.querySelectorAll('a[href="#nogo"]').forEach((element) => {
+  element.addEventListener('click', (e) => { e.preventDefault(); });
+});
+
 // init
 formStateChanger();
 paginationDefault();

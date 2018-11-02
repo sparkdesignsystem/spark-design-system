@@ -1,6 +1,60 @@
 // ==================================================================
 // Typography
 // ==================================================================
+
+@if $using-webfont-body {
+  @font-face {
+    font-family: $body-font-name;
+    src: $body-font-src;
+    font-weight: $body-font-weight;
+  }
+  @font-face {
+    font-family: $body-font-name;
+    src: $body-bold-font-src;
+    font-weight: $body-bold-font-weight;
+  }
+}
+@if $using-webfont-heading {
+  @font-face {
+    font-family: $heading-font-name;
+    src: $heading-font-src;
+    font-weight: $heading-font-weight;
+  }
+  @font-face {
+    font-family: $heading-font-name;
+    src: $heading-bold-font-src;
+    font-weight: $heading-bold-font-weight;
+  }
+}
+@if $using-webfont-alternate {
+  @font-face {
+    font-family: $alternate-font-name;
+    src: $alternate-font-src;
+    font-weight: $alternate-font-weight;
+  }
+}
+
+.sprk-b-TypeDisplayOne,
+.sprk-b-TypeDisplayTwo {
+  font-family: $alternate-font-stack;
+}
+
+.sprk-b-TypeDisplayThree,
+.sprk-b-TypeDisplayFour,
+.sprk-b-TypeDisplayFive,
+.sprk-b-TypeDisplaySix,
+.sprk-b-TypeDisplaySeven,
+.sprk-b-TypeDisplayEight {
+  font-family: $heading-font-stack;
+}
+
+.sprk-b-TypeBodyOne,
+.sprk-b-TypeBodyTwo,
+.sprk-b-TypeBodyThree,
+.sprk-b-TypeBodyFour {
+  font-family: $body-font-stack;
+}
+
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
     $line-height: $line-height-display-one,
@@ -96,20 +150,32 @@ h6,
   line-height: $line-height-display-six;
 }
 
-.sprk-b-TypeDisplayOne,
-.sprk-b-TypeDisplayTwo,
-.sprk-b-TypeDisplayThree,
-.sprk-b-TypeDisplayFour,
-.sprk-b-TypeDisplayFive,
-.sprk-b-TypeDisplaySix {
-  font-family: $heading-font-stack;
+.sprk-b-TypeDisplaySeven {
+  @include TextCrop(
+    $line-height: $line-height-display-seven,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($font-size-display-seven) * 16),
+    $crop-line-height: $line-height-display-seven);
+
+  font-size: $font-size-display-seven;
+  color: $color-display-seven;
+  font-weight: $font-weight-display-seven;
+  line-height: $line-height-display-seven;
 }
 
-.sprk-b-TypeBodyOne,
-.sprk-b-TypeBodyTwo,
-.sprk-b-TypeBodyThree,
-.sprk-b-TypeBodyFour {
-  font-family: $body-font-stack;
+.sprk-b-TypeDisplayEight {
+  @include TextCrop(
+    $line-height: $line-height-display-eight,
+    $top-crop: $line-height-collision-top-crop,
+    $bottom-crop: $line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($font-size-display-eight) * 16),
+    $crop-line-height: $line-height-display-eight);
+
+  font-size: $font-size-display-eight;
+  color: $color-display-eight;
+  font-weight: $font-weight-display-eight;
+  line-height: $line-height-display-eight;
 }
 
 .sprk-b-TypeBodyOne {

@@ -9,6 +9,7 @@ export class SprkFormatterMonetaryDirective {
   @HostListener('blur', ['$event.target.value'])
   onFocus(value) {
     this.ref.nativeElement.value = this.formatMonetary(value);
+    this.ref.nativeElement.classList.add('sprk-b-TextInput--has-value');
   }
 
   formatMonetary(value): void {

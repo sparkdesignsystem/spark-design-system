@@ -6,25 +6,26 @@ const tasks = require('@cloudfour/gulp-tasks');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-const svgSprite = require('gulp-svg-sprite');
 const plumber = require('gulp-plumber');
-const rename = require('gulp-rename');
 const critical = require('critical').stream;
 const log = require('fancy-log');
 const { exec } = require('child_process');
+const request = require('request');
+const fs = require('fs');
 const runSequence = require('run-sequence');
 const config = require('./config');
-
 const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
 const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
 const toLowerCase = require('./src/assets/drizzle/scripts/handlebars-helpers/toLowerCase');
 const htmlEncode = require('./src/assets/drizzle/scripts/handlebars-helpers/htmlEncode');
+const patternIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/patternIdGen');
 
 // add helpers
 helpers.concat = concatHelper;
 helpers.alternateIdGen = alternateIdGen;
 helpers.toLowerCase = toLowerCase;
 helpers.htmlEncode = htmlEncode;
+helpers.patternIdGen = patternIdGen;
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -71,17 +72,10 @@ gulp.task('sass', () => {
 
 // SVG icon task
 gulp.task('icons', (done) => {
-  gulp
-    .src(config.icons.src)
-    .pipe(svgSprite(config.icons))
-    .pipe(gulp.dest(config.icons.dest))
-    .pipe(
-      rename({
-        extname: '.hbs',
-      }),
-    )
-    .pipe(gulp.dest('./src/templates/drizzle'))
-    .on('end', done);
+  const fileStream = fs.createWriteStream('./src/templates/drizzle/spark-core-icons.hbs');
+  request.get({ uri: 'https://spark-assets.netlify.com/spark-core-icons.svg', rejectUnauthorized: false })
+    .pipe(fileStream)
+    .on('finish', done);
 });
 
 // copy images
