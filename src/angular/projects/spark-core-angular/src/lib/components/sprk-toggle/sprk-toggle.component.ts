@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'sprk-toggle',
   template: `
-    <div class="{{ additionalClasses }}">
+    <div class="{{ additionalClasses }}" [attr.data-id]="idString">
       <a
         class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
         href="#"
@@ -59,6 +59,8 @@ export class SparkToggleComponent implements OnInit {
   title: string;
   @Input()
   body: string;
+  @Input()
+  idString: string;
 
   public isOpen = false;
   public iconStateClass = '';
