@@ -10,5 +10,9 @@ information:
   - If your content does not fit well with this
     component on narrow viewports, you can switch to an
     alternate component.
+restrictions:
+  - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property. ("table-primary-1", "table-primary-2", "table-secondary-1", etc)
 sparkPackageCore: true
 hasProperties: true
