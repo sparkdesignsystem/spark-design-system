@@ -7,4 +7,7 @@ restrictions:
    - Tooltips or additional text is not supported.
    - The length of keys is limited to two lines of wrapped text.
    - The length of values is not limited, but will wrap to the next line if there's no room.
+   - The data-id property is provided as a hook for automated tools. If you have multiple 
+      instances of the same variant of a component on the same page, make sure each instance 
+      has a unique data-id property. ("dictionary-1", "dictionary-2", "dictionary-1", etc)
 sparkPackageExtras: true
