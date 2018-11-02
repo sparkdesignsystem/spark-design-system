@@ -711,3 +711,38 @@
     align-self: center;
   }
 }
+
+// Item stertch modifiers
+.sprk-o-Stack__item--stretch-column {
+  align-self: stretch;
+}
+
+.sprk-o-Stack__item--stretch-column\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    align-self: stretch;
+  }
+}
+
+.sprk-o-Stack__item--stretch-column\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    align-self: stretch;
+  }
+}
+
+.sprk-o-Stack__item--stretch-column\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    align-self: stretch;
+  }
+}
+
+.sprk-o-Stack__item--stretch-column\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    align-self: stretch;
+  }
+}
+
+.sprk-o-Stack__item--stretch-column\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    align-self: stretch;
+  }
+}
