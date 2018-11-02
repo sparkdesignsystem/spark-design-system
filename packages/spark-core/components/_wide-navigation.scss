@@ -43,10 +43,11 @@
   font-weight: bold;
 }
 
+.sprk-c-WideNavigation__item:focus-within:not(.sprk-c-WideNavigation__item--sub) > .sprk-c-WideNavigation__link,
 .sprk-c-WideNavigation__item--open > .sprk-c-WideNavigation__link,
 .sprk-c-WideNavigation__item--active > .sprk-c-WideNavigation__link {
   &::after {
-    background-color: $red;
+    background-color: $black;
     content: ' ';
     height: 3px;
     display: block;
@@ -68,7 +69,7 @@
   &:active,
   &:focus,
   &:hover {
-    @include HoverLine($color: $red, $width: 85%);
+    @include HoverLine($color: $black, $width: 85%);
   }
 }
 
@@ -98,7 +99,7 @@
 }
 
 .sprk-c-WideNavigation__arrow {
-  fill: $red;
+  fill: $black;
   width: $icon-m;
   margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
 }
