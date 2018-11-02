@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'sprk-narrow-navigation-item',
   template: `
-    <li [ngClass]="getClasses()" routerLinkActive="sprk-c-Accordion__item--active">
+    <li [ngClass]="getClasses()" routerLinkActive="sprk-c-Accordion__item--active" [attr.data-id]="idString">
       <div *ngIf="subNav != null; then menu; else link;"></div>
       <ng-template #link>
         <a [attr.aria-controls]="controls_id"
@@ -81,6 +81,8 @@ export class SparkNarrowNavigationItemComponent implements OnInit {
   subNav: object;
   @Input()
   isOpen = false;
+  @Input()
+  idString: string;
 
   iconType = 'chevron-down';
   componentID = _.uniqueId();
