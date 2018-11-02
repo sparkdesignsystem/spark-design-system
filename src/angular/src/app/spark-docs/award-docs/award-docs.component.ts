@@ -22,7 +22,8 @@ import { Component, OnInit } from '@angular/core';
           disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
           disclaimerTitle="My disclaimer title"
           analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
+          analyticsStringImgTwo="Test"
+          idString="award-1">
         </sprk-award>
       </div>
     </div>
@@ -45,7 +46,8 @@ import { Component, OnInit } from '@angular/core';
           disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
           disclaimerTitle="My disclaimer title"
           analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
+          analyticsStringImgTwo="Test"
+          idString="award-2">
         </sprk-award>
       </div>
     </div>
@@ -68,7 +70,8 @@ import { Component, OnInit } from '@angular/core';
           disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
           disclaimerTitle="My disclaimer title"
           analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
+          analyticsStringImgTwo="Test"
+          idString="award-3">
         </sprk-award>
       </div>
     </div>
@@ -91,7 +94,8 @@ import { Component, OnInit } from '@angular/core';
           disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
           disclaimerTitle="My disclaimer title"
           analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
+          analyticsStringImgTwo="Test"
+          idString="award-4">
         </sprk-award>
       </div>
     </div>
@@ -115,7 +119,8 @@ import { Component, OnInit } from '@angular/core';
           disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
           disclaimerTitle="My disclaimer title"
           analyticsStringImgOne="Foo"
-          analyticsStringImgTwo="Test">
+          analyticsStringImgTwo="Test"
+          idString="award-5">
         </sprk-award>
       </div>
     </div>
