@@ -91,12 +91,16 @@
 }
 
 // Accordion Navigation Styles
-.sprk-c-Accordion--navigation .sprk-c-Accordion__item--active .sprk-c-Accordion__summary {
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--active
+.sprk-c-Accordion__summary {
   background-color: $gray-tint-50;
   border-left: $narrow-nav-left-border;
 }
 
-.sprk-c-Accordion--navigation .sprk-c-Accordion__item--active .sprk-c-Accordion__heading {
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--active
+.sprk-c-Accordion__heading {
   font-weight: bold;
 }
 
