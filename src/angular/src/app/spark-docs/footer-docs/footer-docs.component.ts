@@ -23,8 +23,8 @@ import { Component } from '@angular/core';
           <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--three-fifths@xs">
             <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#feedback" />
                   </svg>
                   Provide Feedback
@@ -32,8 +32,8 @@ import { Component } from '@angular/core';
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#desktop-computer" />
                   </svg>
                   Share Your Screen
@@ -45,34 +45,38 @@ import { Component } from '@angular/core';
           <div class="sprk-o-Box sprk-o-Stack__item sprk-o-Stack__item--two-fifths@xs">
             <ul class="sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-o-Stack--end-row">
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#facebook" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Facebook</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#instagram" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Instagram</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#twitter" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Twitter</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#youtube" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Youtube</span>
                 </a>
               </li>
             </ul>
@@ -153,42 +157,46 @@ import { Component } from '@angular/core';
             <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack sprk-o-Stack--medium sprk-o-Box">
               <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
                 <li class="sprk-o-Stack__item">
-                  <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                  <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                     <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                       <use xlink:href="#facebook" />
                     </svg>
+                    <span class="sprk-u-ScreenReaderText">Facebook</span>
                   </a>
                 </li>
 
                 <li class="sprk-o-Stack__item">
-                  <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                  <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                     <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                       <use xlink:href="#instagram" />
                     </svg>
+                    <span class="sprk-u-ScreenReaderText">Instagram</span>
                   </a>
                 </li>
 
                 <li class="sprk-o-Stack__item">
-                  <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                  <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                     <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                       <use xlink:href="#twitter" />
                     </svg>
+                    <span class="sprk-u-ScreenReaderText">Twitter</span>
                   </a>
                 </li>
 
                 <li class="sprk-o-Stack__item">
-                  <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                  <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                     <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                       <use xlink:href="#youtube" />
                     </svg>
+                    <span class="sprk-u-ScreenReaderText">Youtube</span>
                   </a>
                 </li>
               </ul>
 
               <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
                 <li class="sprk-o-Stack__item">
-                  <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                    <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                  <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                    <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                       <use xlink:href="#feedback" />
                     </svg>
 
@@ -197,8 +205,8 @@ import { Component } from '@angular/core';
                 </li>
 
                 <li class="sprk-o-Stack__item">
-                  <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                    <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                  <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                    <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                       <use xlink:href="#desktop-computer" />
                     </svg>
 
@@ -444,42 +452,46 @@ import { Component } from '@angular/core';
           <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--medium sprk-o-Box">
             <ul class="sprk-o-Stack__item sprk-o-Stack--end-row@m sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#facebook" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Facebook</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#instagram" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Instagram</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#twitter" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Twitter</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#youtube" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Youtube</span>
                 </a>
               </li>
             </ul>
 
             <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-                <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#feedback" />
                   </svg>
 
@@ -488,8 +500,8 @@ import { Component } from '@angular/core';
               </li>
 
               <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-                <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#desktop-computer" />
                   </svg>
 
@@ -715,42 +727,46 @@ import { Component } from '@angular/core';
           <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--medium sprk-o-Box">
             <ul class="sprk-o-Stack__item sprk-o-Stack--end-row@m sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#facebook" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Facebook</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#instagram" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Instagram</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#twitter" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Twitter</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#youtube" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Youtube</span>
                 </a>
               </li>
             </ul>
 
             <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-                <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#feedback" />
                   </svg>
 
@@ -759,8 +775,8 @@ import { Component } from '@angular/core';
               </li>
 
               <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-                <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#desktop-computer" />
                   </svg>
 
@@ -922,8 +938,8 @@ import { Component } from '@angular/core';
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
             <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-                <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#feedback" />
                   </svg>
 
@@ -932,8 +948,8 @@ import { Component } from '@angular/core';
               </li>
 
               <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-                <a class="sprk-b-Link sprk-b-Link--standalone sprk-b-Link--muted sprk-u-WhiteSpace--nowrap" href="#">
-                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 512 512">
+                <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
+                  <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                     <use xlink:href="#desktop-computer" />
                   </svg>
 
@@ -944,34 +960,38 @@ import { Component } from '@angular/core';
 
             <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack--end-row@m sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#facebook" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Facebook</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#instagram" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Instagram</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#twitter" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Twitter</span>
                 </a>
               </li>
 
               <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
                     <use xlink:href="#youtube" />
                   </svg>
+                  <span class="sprk-u-ScreenReaderText">Youtube</span>
                 </a>
               </li>
             </ul>
