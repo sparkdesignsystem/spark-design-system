@@ -24,10 +24,6 @@ const bindUIEvents = (element) => {
 
   element.addEventListener('focusin', (e) => {
     e.stopPropagation();
-    if (e.target.parentNode.classList.contains('sprk-c-WideNavigation__item')
-      && !e.target.parentNode.classList.contains('sprk-c-WideNavigation__item--sub')) {
-      e.target.parentNode.classList.add('sprk-c-WideNavigation__item--open');
-    }
     hideAllDropDowns(subNavContainers, expandableListItems);
     showDropDown(element);
   });
