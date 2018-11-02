@@ -9,4 +9,7 @@ restrictions:
   - The background must either be a color or an image.
   - The headline should not exceed 2 lines.
   - You may have up to 2 call-to-action buttons/links.
+  - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property. ("highlightboard-1", "highlightboard-2", "highlightboard-3", etc)
 sparkPackageExtras: true
