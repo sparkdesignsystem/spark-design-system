@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
           greetingName="Hello, Fellow Human"
           [wideNavLinks]="links"
           [secondaryNavLinks]="linksSecondary"
-          [narrowNavLinks]="links">
+          [narrowNavLinks]="links"
+          idString="masthead-1">
           <div class="drizzle-c-Logo-placeholder" logo-slot></div>
           <div class="sprk-c-Masthead__search" lower-slot>
             <sprk-icon-input-container iconContainerClasses="">
