@@ -97,7 +97,6 @@
   padding: $space-m;
 }
 
-// Todo: remove this in favor of reusable sprk-c-Icon--current-color class (breaking html change)
 .sprk-c-Alert__icon,
 .sprk-c-Alert__icon--dismiss .sprk-c-Icon {
   stroke: currentColor;
