@@ -11,7 +11,7 @@
   "nyc": {
     "exclude": "tests/*.js"
   },
-  "main": "_highlight-board.scss",
+  "main": "highlight-board.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
