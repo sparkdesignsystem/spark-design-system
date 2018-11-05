@@ -1,5 +1,5 @@
 {
-  "name": "@sparkdesignsystem/spark-highlight-board",
+  "name": "@sparkdesignsystem/spark-extras-highlight-board",
   "version": "2.1.0",
   "description": "Spark Highlight Board is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
   "scripts": {
@@ -22,22 +22,23 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
+  "peerDependencies": {
+    "@sparkdesignsystem/spark-core": "^2.1.0"
+  },
   "dependencies": {
-    "@sparkdesignsystem/spark-core": "^2.1.0",
-    "chai": "^4.2.0",
-    "jsdom": "^12.0.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.0.1",
-    "object-fit-images": "^3.2.3",
-    "proxyquire": "^2.1.0",
-    "sinon": "^6.3.4"
+    "object-fit-images": "^3.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "jsdom": "^12.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
     "proxyquire": "^2.1.0",
+    "sinon": "^6.3.4",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   },

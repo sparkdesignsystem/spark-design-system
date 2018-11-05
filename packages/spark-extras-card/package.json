@@ -17,7 +17,6 @@
     "@sparkdesignsystem/spark-core": "^2.1.0"
   },
   "publishConfig": {
-    "access": "public",
-    "@sparkdesignsystem/spark-core": "^2.0.1"
+    "access": "public"
   }
 }
