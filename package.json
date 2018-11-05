@@ -70,8 +70,8 @@
     "suitcss-utils": "^1.0.0"
   },
   "scripts": {
-    "local-build": "npm run setup-spark-core && npm run setup-spark-extras-highlight-board && npm run setup-spark-extras-card && npm run setup-spark-extras-dictionary && gulp --dev",
-    "netlify-build": "npm run setup-spark-core && npm run setup-spark-extras-highlight-board && npm run setup-spark-extras-card && npm run setup-spark-extras-dictionary && gulp build",
+    "local-build": "npm install && npm run setup-spark-core && npm run setup-spark-extras-highlight-board && npm run setup-spark-extras-card && npm run setup-spark-extras-dictionary && gulp --dev",
+    "netlify-build": "npm install && npm run setup-spark-core && npm run setup-spark-extras-highlight-board && npm run setup-spark-extras-card && npm run setup-spark-extras-dictionary && gulp build",
     "precommit": "lint-staged",
     "setup-spark-core": "npm install --prefix ./packages/spark-core && npm build --prefix ./packages/spark-core && npm unlink --prefix ./packages/spark-core && npm link --prefix ./packages/spark-core",
     "setup-spark-extras-highlight-board": "npm install --prefix ./packages/spark-extras-highlight-board && npm build --prefix ./packages/spark-extras-highlight-board && npm unlink --prefix ./packages/spark-extras-highlight-board && npm link --prefix ./packages/spark-extras-highlight-board ",
