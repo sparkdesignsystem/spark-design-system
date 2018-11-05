@@ -78,9 +78,8 @@ that are published to npm.
 
 If you want to run a copy of Drizzle locally:
 
-1. Run `npm install`.
-2. Run `gulp --dev`.
-3. Open your browser to `http://localhost:3000/`.
+1. Run `npm run local-build`.
+2. Open your browser to `http://localhost:3000/`.
 
 ### Unit Tests
 

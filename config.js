@@ -76,14 +76,6 @@ module.exports = {
       },
       {
         match: [
-          './src/assets/**/*.js',
-          './packages/spark-core/**/*.js',
-          './packages/spark-extras/**/*.js',
-        ],
-        tasks: ['build-es5', 'js'],
-      },
-      {
-        match: [
           './src/**/*.hbs',
           '!./src/templates/drizzle/spark-core-icons.hbs',
           './src/data/**/*',
