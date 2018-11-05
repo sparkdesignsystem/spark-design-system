@@ -6,6 +6,8 @@ import { Directive, ElementRef, Input, OnChanges, OnInit } from '@angular/core';
 export class SprkButtonDirective implements OnInit, OnChanges {
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   constructor(public ref: ElementRef) {}
 
@@ -26,6 +28,10 @@ export class SprkButtonDirective implements OnInit, OnChanges {
     this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
     });
+
+    if (this.idString) {
+      this.ref.nativeElement.setAttribute('data-id', this.idString);
+    }
   }
 
   ngOnChanges(): void {
