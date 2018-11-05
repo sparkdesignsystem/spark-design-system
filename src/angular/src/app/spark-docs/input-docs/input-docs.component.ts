@@ -14,6 +14,7 @@ import { Component } from '@angular/core';
               [(ngModel)]="text_input"
               required
               #textInput="ngModel"
+              idString="input-1"
               sprkInput>
             <p sprkHelperText>Please enter some input.</p>
             <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
@@ -29,7 +30,8 @@ import { Component } from '@angular/core';
                 name="checkbox_input"
                 [(ngModel)]="checkbox_input1"
                 sprkSelectionInput
-                #checkboxInput1="ngModel">
+                #checkboxInput1="ngModel"
+                idString="checkbox-1">
               <label sprkSelectionLabel>Item 1</label>
             </sprk-selection-item-container>
             <sprk-selection-item-container>
@@ -60,7 +62,8 @@ import { Component } from '@angular/core';
                 name="radio_input"
                 [(ngModel)]="radio_input"
                 sprkSelectionInput
-                #radioInput="ngModel">
+                #radioInput="ngModel"
+                idString="radio-1">
               <label sprkSelectionLabel>Item 1</label>
             </sprk-selection-item-container>
             <sprk-selection-item-container>
@@ -85,7 +88,7 @@ import { Component } from '@angular/core';
             </sprk-selection-item-container>
           </sprk-selection-container>
           <sprk-input-container>
-            <select class="sprk-b-Select" id="select-normal" aria-describedby="select-normal--error-container" sprkInput>
+            <select class="sprk-b-Select" id="select-normal" aria-describedby="select-normal--error-container" idString="select-1" sprkInput>
               <option value="none">Please choose...</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
@@ -105,6 +108,7 @@ import { Component } from '@angular/core';
               name="textarea_input"
               [(ngModel)]="textarea_input"
               #textareaInput="ngModel"
+              idString="textarea-1"
               sprkInput></textarea>
           </sprk-textarea-container>
           <sprk-input-container>
@@ -116,6 +120,7 @@ import { Component } from '@angular/core';
               [(ngModel)]="ssn_input"
               #ssnInput="ngModel"
               sprkFormatterSsn
+              idString="ssn-1"
               sprkInput>
             <sprk-selection-item-container>
               <input type="checkbox" sprkSelectionInput (click)="toggleSSNType()">
@@ -225,6 +230,7 @@ import { Component } from '@angular/core';
               sprkFormatterDate
               [sprkDatePickerConfig]="dpConfig"
               sprkDatepicker
+              idString="datepicker-1"
               sprkInput>
               <div
               [hidden]="datepickerInput.valid || datepickerInput.pristine"

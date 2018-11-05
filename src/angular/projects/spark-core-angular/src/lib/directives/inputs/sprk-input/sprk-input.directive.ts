@@ -1,9 +1,18 @@
-import { Directive, ElementRef, OnInit, HostListener } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnInit,
+  HostListener
+} from '@angular/core';
 
 @Directive({
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
+  @Input()
+  idString: string;
+
   @HostListener('focusin')
   onFocusIn() {
     this.ref.nativeElement.classList.add('sprk-b-TextInput--focusin');
@@ -33,6 +42,10 @@ export class SprkInputDirective implements OnInit {
     } else {
       this.ref.nativeElement.classList.add('sprk-b-TextInput');
       this.ref.nativeElement.classList.add('sprk-u-Width-100');
+    }
+
+    if (this.idString) {
+      this.ref.nativeElement.setAttribute('data-id', this.idString);
     }
   }
 }
