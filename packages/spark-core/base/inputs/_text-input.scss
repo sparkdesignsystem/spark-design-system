@@ -88,10 +88,6 @@
   color: $input-placeholder-color;
 }
 
-.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
-  border-bottom: 3px solid $text-input-error-color;
-}
-
 .sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
   animation: width-zero-to-full $input-animation-speed;
   animation-fill-mode: forwards;
@@ -101,4 +97,10 @@
   width: 100%;
   animation: opacity-one-to-zero $input-animation-speed;
   animation-fill-mode: forwards;
+}
+
+.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
+  animation: none;
+  border-bottom: 3px solid $text-input-error-color;
+  width: 100%;
 }
