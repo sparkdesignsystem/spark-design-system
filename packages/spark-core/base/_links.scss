@@ -13,7 +13,7 @@
     color: $link-visited-color;
 
     &::after {
-      background-color: $link-visited-color;
+      background-color: $link-underline-visited-color;
     }
   }
 
@@ -84,6 +84,10 @@
 
   &:visited {
     color: $link-disabled-color;
+
+    &::after {
+      background: $link-disabled-color;
+    }
   }
 
   &:hover,

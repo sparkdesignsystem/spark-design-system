@@ -78,6 +78,66 @@ import { Component } from '@angular/core';
       </sprk-stack>
     </div>
 
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">
+        Stack With Two Equal Width Cols, Split At Tiny
+      </h2>
+
+      <sprk-stack itemSpacing="medium" splitAt="tiny">
+        <div sprkStackItem class="sprk-o-Stack__item--equal@xs">
+          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+             Column One
+           </h2>
+
+          <sprk-stack itemSpacing="small">
+            <div sprkStackItem>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+                Link 1
+              </a>
+            </div>
+
+            <div sprkStackItem>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+                Link 2
+              </a>
+            </div>
+
+           <div sprkStackItem>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+                Link 3
+              </a>
+            </div>
+          </sprk-stack>
+        </div>
+
+        <div sprkStackItem class="sprk-o-Stack__item--equal@xs">
+          <h2 class="sprk-b-TypeDisplaySix sprk-u-mbs">
+             Column Two
+           </h2>
+
+          <sprk-stack itemSpacing="small">
+            <div sprkStackItem>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+                Link 1
+              </a>
+            </div>
+
+            <div sprkStackItem>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+                Link 2
+              </a>
+            </div>
+
+           <div sprkStackItem>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#">
+                Link 3
+              </a>
+            </div>
+          </sprk-stack>
+        </div>
+      </sprk-stack>
+    </div>
+
     <div class="drizzle-o-ContentGrouping sprk-u-mbh">
       <h2 class="drizzle-b-h2 sprk-u-mbl">
         Stack With Four Cols at Tiny Breakpoint

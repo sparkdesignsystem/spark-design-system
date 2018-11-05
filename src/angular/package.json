@@ -38,6 +38,8 @@
     "@sparkdesignsystem/spark-extras-angular-card": "^1.0.0",
     "@sparkdesignsystem/spark-extras-angular-dictionary": "^1.0.0",
     "@sparkdesignsystem/spark-extras-angular-highlight-board": "^1.0.0",
+    "@sparkdesignsystem/spark-core": "^2.1.0",
+    "@sparkdesignsystem/spark-extras": "^2.1.0",
     "@storybook/angular": "^4.0.0-alpha.16",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",

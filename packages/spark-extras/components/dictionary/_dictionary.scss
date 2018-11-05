@@ -38,7 +38,6 @@ $dictionary-breakpoint: 38.4375rem !default;
 .sprk-c-Dictionary__key,
 .sprk-c-Dictionary__value {
   @media all and (min-width: $dictionary-breakpoint) {
-    display: table-cell;
     flex: 1;
     margin-bottom: 0;
   }
@@ -57,6 +56,5 @@ $dictionary-breakpoint: 38.4375rem !default;
 
   @media all and (min-width: $dictionary-breakpoint) {
     margin-bottom: 0;
-    width: 50%;
   }
 }

@@ -58,11 +58,13 @@ export class MastheadDocsComponent {
   links = [
     {
       text: 'Item 1',
-      href: '/masthead'
+      href: '/icons',
+      active: false
     },
     {
       text: 'Item 2',
       href: '/links',
+      active: false,
       subNav: [
         {
           text: 'Item 1',
@@ -84,7 +86,8 @@ export class MastheadDocsComponent {
     },
     {
       text: 'Item 3',
-      href: '/buttons'
+      href: '#nogo',
+      active: false
     },
     {
       text: 'Item 4',
@@ -110,9 +113,10 @@ export class MastheadDocsComponent {
     },
     {
       text: 'Item 5',
-      href: '/buttons',
+      href: '#nogo',
       active: false
     }
   ];
+
   constructor() {}
 }
