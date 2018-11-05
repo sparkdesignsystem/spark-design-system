@@ -9,7 +9,6 @@ const cssnano = require('gulp-cssnano');
 const plumber = require('gulp-plumber');
 const critical = require('critical').stream;
 const log = require('fancy-log');
-const { exec } = require('child_process');
 const request = require('request');
 const fs = require('fs');
 const runSequence = require('run-sequence');
@@ -83,7 +82,7 @@ gulp.task('images', () => {
   gulp.src(config.images.src).pipe(gulp.dest(config.images.dest));
 });
 
-// Register Drizzle builder task
+// Register Drizzle builder task (Used by netlify)
 gulp.task('drizzle', ['icons'], () => {
   const result = drizzle(config.drizzle);
   return result.done(); // makes sure that the icons are finished before the templates are processed
@@ -98,7 +97,6 @@ gulp.task('build', (done) => {
     'copy',
     'sass',
     'images',
-    'build-es5',
     'js',
     'critical',
     done,
@@ -125,38 +123,6 @@ gulp.task('critical', () => {
     })
     .pipe(gulp.dest('dist'));
 });
-
-gulp.task('build-angular', (cb) => {
-  const cmd = exec(`
-    cd src/angular &&
-    ng build spark-core-angular &&
-    ng build spark-extras-angular-award &&
-    ng build spark-extras-angular-card &&
-    ng build spark-extras-angular-dictionary &&
-    ng build spark-extras-angular-highlight-board
-    `, {
-    stdio: 'inherit',
-  });
-  return cmd.on('close', cb).on('error', (err) => {
-    log.error(err.message);
-  });
-});
-
-gulp.task('build-es5', (cb) => {
-  const cmd = exec(`
-    cd packages/spark-core &&
-    npm install && npm build && cd .. &&
-    cd spark-extras/components/highlight-board && npm install && npm build
-    `, {
-    stdio: 'inherit',
-  });
-  return cmd.on('close', cb).on('error', (err) => {
-    log.error(err.message);
-  });
-});
-
-
-gulp.task('pre-publish', ['build-angular'], () => {});
 
 // Register default task
 gulp.task('default', ['build'], (done) => {
