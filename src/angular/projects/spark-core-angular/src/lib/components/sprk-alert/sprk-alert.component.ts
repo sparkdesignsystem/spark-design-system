@@ -10,7 +10,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
       role="alert"
       [attr.data-analytics]="analyticsString">
       <div class="sprk-c-Alert__content">
-        <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l" aria-hidden="true"></sprk-icon>
+        <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
 
         <p class="sprk-b-TypeBodyTwo">
           <ng-content></ng-content>
@@ -23,7 +23,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
         type="button"
         title="Dismiss"
         (click)="alertDismiss($event)">
-        <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l" aria-hidden="true"></sprk-icon>
+        <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
       </button>
     </div>
   `
