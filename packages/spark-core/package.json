@@ -6,7 +6,7 @@
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
     "coverage": "nyc npm test",
     "build": "webpack",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "nyc": {
     "exclude": "tests/*.js"
@@ -23,13 +23,8 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
     "@scalescss/scalescss": "6.0.0-1",
-    "chai": "^4.1.2",
     "fontfaceobserver": "^2.0.13",
     "dom-slider": "1.5.1",
-    "jsdom": "^11.12.0",
-    "nyc": "^11.9.0",
-    "proxyquire": "^2.1.0",
-    "sinon": "^5.1.1",
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {
@@ -37,8 +32,12 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "chai": "^4.1.2",
+    "jsdom": "^11.12.0",
     "mocha": "^5.2.0",
+    "nyc": "^11.9.0",
     "proxyquire": "^2.1.0",
+    "sinon": "^5.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   },
