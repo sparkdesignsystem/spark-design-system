@@ -12,19 +12,9 @@
   }
 }
 
-@if ($icon-using-custom-stroke) {
-  /* required for css to override svg presentational attributes */
-  svg text {
-    stroke-width: 0;
-  }
-
-  svg circle,
-  svg rect,
-  svg path,
-  svg g {
-    stroke: inherit;
-    stroke-width: inherit;
-  }
+.sprk-c-Icon--current-color {
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 .sprk-c-Icon--l {
