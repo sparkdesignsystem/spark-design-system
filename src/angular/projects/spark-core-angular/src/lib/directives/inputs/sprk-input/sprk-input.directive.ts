@@ -1,10 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  Input,
-  OnInit,
-  HostListener
-} from '@angular/core';
+import { Directive, ElementRef, OnInit, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[sprkInput]'
