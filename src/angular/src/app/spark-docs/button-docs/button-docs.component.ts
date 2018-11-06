@@ -6,9 +6,9 @@ import { setSpinning } from '@sparkdesignsystem/spark-core/es5/spinners';
   template: `<div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Standard Buttons</h2>
       <button sprkButton>Hello, Spark Button</button>
-      <button additionalClasses="sprk-c-Button--secondary" idString="button-1"  sprkButton>Hello, World.</button>
-      <button additionalClasses="sprk-c-Button--tertiary" idString="button-2"  sprkButton>Hello, World.</button>
-      <button additionalClasses="sprk-c-Button--removal" idString="button-3" sprkButton>Hello, World.</button>
+      <button additionalClasses="sprk-c-Button--secondary" sprkButton>Hello, World.</button>
+      <button additionalClasses="sprk-c-Button--tertiary" sprkButton>Hello, World.</button>
+      <button additionalClasses="sprk-c-Button--removal" sprkButton>Hello, World.</button>
       <button disabled sprkButton>Hello, World.</button>
     </div>
 

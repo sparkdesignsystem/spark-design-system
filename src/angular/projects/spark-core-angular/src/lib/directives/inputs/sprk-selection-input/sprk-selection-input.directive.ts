@@ -4,9 +4,6 @@ import { Directive, Input, ElementRef, OnInit } from '@angular/core';
   selector: '[sprkSelectionInput]'
 })
 export class SprkSelectionInputDirective implements OnInit {
-  @Input()
-  idString: string;
-
   constructor(public ref: ElementRef) {}
 
   getClasses(): string[] {
@@ -18,9 +15,5 @@ export class SprkSelectionInputDirective implements OnInit {
     this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
     });
-
-    if (this.idString) {
-      this.ref.nativeElement.setAttribute('data-id', this.idString);
-    }
   }
 }
