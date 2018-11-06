@@ -21,11 +21,5 @@
     "@sparkdesignsystem/spark-core": "^2.1.0",
     "lodash": "^4.17.10",
     "tiny-date-picker": "^3.2.6"
-  },
-  "devDependencies": {
-    "core-js": "^2.5.7",
-    "tiny-date-picker": "^3.2.6",
-    "zone.js": "^0.8.26"
-  },
-  "dependencies": {}
+  }
 }
