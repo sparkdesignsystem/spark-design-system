@@ -9,7 +9,7 @@
       rgb: 'rgb(0,0,0)'
     - label: Gray
       color: '#EBEBEB'
-      rgb: 'gb(235,235,235)'
+      rgb: 'rgb(235,235,235)'
       property: '$gray'
     - label: White
       color: '#FFFFFF'
