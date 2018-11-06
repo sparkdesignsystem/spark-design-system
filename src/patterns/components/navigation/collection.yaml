@@ -4,6 +4,6 @@ description: These components represent the types of navigation available. Spark
 restrictions: 
   - The data-id property is provided as a hook for automated tools. If you have multiple 
     instances of the same variant of a component on the same page, make sure each instance 
-    has a unique data-id property. ("navigation-narrow-1", "navigation-narrow-2", "navigation-wide-1", etc)
+    has a unique data-id property ("navigation-narrow-1", "navigation-narrow-2", "navigation-wide-1", etc).
 sparkPackageCore: true
 hasAngularInfo: true

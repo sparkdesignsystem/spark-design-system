@@ -23,4 +23,4 @@ restrictions:
   - The title of the Toggle doesn't have a specific maximum length and can wrap if needed.
   - The data-id property is provided as a hook for automated tools. If you have multiple 
     instances of the same variant of a component on the same page, make sure each instance 
-    has a unique data-id property. ("toggle-1", "toggle-2", "toggle-3", etc)
+    has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).

@@ -10,7 +10,7 @@ restictions:
     and need to have the same aspect ratio when there is more than one Card in a row.
   - The data-id property is provided as a hook for automated tools. If you have multiple 
     instances of the same variant of a component on the same page, make sure each instance 
-    has a unique data-id property. ("card-1", "card-2", "card-3", etc)
+    has a unique data-id property ("card-1", "card-2", "card-3", etc).
 links:
   Stack Layout Object:
     external: false

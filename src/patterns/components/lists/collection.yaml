@@ -5,5 +5,5 @@ description: |
 restrictions: 
   - The data-id property is provided as a hook for automated tools. If you have multiple 
     instances of the same variant of a component on the same page, make sure each instance 
-    has a unique data-id property. ("ordered-list-1", "ordered-list-2", "unordered-list-1", etc)
+    has a unique data-id property ("ordered-list-1", "ordered-list-2", "unordered-list-1", etc).
 sparkPackageCore: true

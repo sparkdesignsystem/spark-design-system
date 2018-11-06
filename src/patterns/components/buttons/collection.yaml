@@ -15,5 +15,5 @@ restrictions:
   - If your Button is disabled, or becomes disabled, then add the disabled attribute.
   - The data-id property is provided as a hook for automated tools. If you have multiple 
     instances of the same variant of a component on the same page, make sure each instance 
-    has a unique data-id property. ("button-primary-1", "button-primary-2", "button-tertiary-1", etc)
+    has a unique data-id property ("button-primary-1", "button-primary-2", "button-tertiary-1", etc).
 sparkPackageCore: true
