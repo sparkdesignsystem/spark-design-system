@@ -71,16 +71,24 @@ module.exports = {
           './src/assets/**/*.scss',
           './packages/spark-core/**/*.scss',
           './packages/spark-extras/**/*.scss',
+          '!./src/angular',
         ],
         tasks: ['sass'],
       },
       {
         match: [
+          './src/assets/drizzle/**/*.js',
+          '!./src/angular',
+        ],
+        tasks: ['js'],
+      },
+      {
+        match: [
           './src/**/*.hbs',
-          '!./src/templates/drizzle/spark-core-icons.hbs',
           './src/data/**/*',
           './src/**/*.yaml',
           './src/**/*.md',
+          '!./src/angular',
         ],
         tasks: ['drizzle'],
       },
