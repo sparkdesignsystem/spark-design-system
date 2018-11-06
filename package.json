@@ -55,6 +55,7 @@
     "lint-staged": "^6.1.1",
     "mocha": "^5.2.0",
     "mock-local-storage": "^1.0.5",
+    "nswatch": "^0.2.0",
     "nyc": "^12.0.2",
     "postcss-cssnext": "^2.5.2",
     "prettier-eslint-cli": "^4.7.1",
@@ -69,16 +70,28 @@
     "suitcss-components-grid": "^3.0.2",
     "suitcss-utils": "^1.0.0"
   },
+  "watch": {
+    "./packages/spark-core/spark-core.js": [
+      "build-spark-core"
+    ],
+    "./packages/spark-core/{base,components,objects,settings,tools,utilities}/**/*.js": [
+      "build-spark-core"
+    ],
+    "./packages/spark-extras-highlight-board/highlight-board.js": [
+      "build-spark-extras-highlight-board"
+    ]
+  },
   "scripts": {
+    "watch": "nswatch",
     "local-build": "npm install && npm run setup-spark-core && npm run setup-spark-extras-highlight-board && npm run setup-spark-extras-card && npm run setup-spark-extras-dictionary && gulp --dev",
     "netlify-build": "npm install && npm run setup-spark-core && npm run setup-spark-extras-highlight-board && npm run setup-spark-extras-card && npm run setup-spark-extras-dictionary && gulp build",
     "precommit": "lint-staged",
     "setup-spark-core": "npm run install-spark-core && npm run build-spark-core",
     "install-spark-core": "npm install --prefix ./packages/spark-core",
-    "build-spark-core": "npm build --prefix ./packages/spark-core && npm unlink --prefix ./packages/spark-core && npm link --prefix ./packages/spark-core",
+    "build-spark-core": "npm run build --prefix ./packages/spark-core && npm unlink --prefix ./packages/spark-core && npm link --prefix ./packages/spark-core",
     "setup-spark-extras-highlight-board": "npm run install-spark-extras-highlight-board && npm run build-spark-extras-highlight-board",
     "install-spark-extras-highlight-board": "npm install --prefix ./packages/spark-extras-highlight-board",
-    "build-spark-extras-highlight-board": "npm build --prefix ./packages/spark-extras-highlight-board && npm unlink --prefix ./packages/spark-extras-highlight-board && npm link --prefix ./packages/spark-extras-highlight-board ",
+    "build-spark-extras-highlight-board": "npm run build --prefix ./packages/spark-extras-highlight-board && npm unlink --prefix ./packages/spark-extras-highlight-board && npm link --prefix ./packages/spark-extras-highlight-board ",
     "setup-spark-extras-card": "npm unlink --prefix ./packages/spark-extras-card && npm link --prefix ./packages/spark-extras-card",
     "setup-spark-extras-dictionary": "npm unlink --prefix ./packages/spark-extras-dictionary && npm link --prefix ./packages/spark-extras-dictionary",
     "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
