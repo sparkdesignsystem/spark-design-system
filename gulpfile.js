@@ -50,3 +50,7 @@ gulp.task('watch-spark', () => {
     './packages/spark-extras-highlight-board/*.js',
   ], ['build-spark-extras-highlight-board']);
 });
+
+gulp.task('build', (cb) => {
+  runSequence('pre-publish', 'build', cb);
+});

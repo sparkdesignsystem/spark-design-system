@@ -89,7 +89,7 @@ gulp.task('drizzle', ['icons'], () => {
 });
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build', (done) => {
+gulp.task('build-drizzle', (done) => {
   runSequence(
     'clean',
     'icons',
@@ -125,7 +125,7 @@ gulp.task('critical', () => {
 });
 
 // Register default task
-gulp.task('default', ['build'], (done) => {
+gulp.task('default', ['build-drizzle'], (done) => {
   gulp.start('serve');
   gulp.start('watch');
   done();
