@@ -1,38 +1,38 @@
 module.exports = {
   'css:toolkit': {
-    src: './src/assets/toolkit/styles/*.css',
-    dest: './dist/assets/toolkit/styles',
+    src: '../../src/assets/toolkit/styles/*.css',
+    dest: '../../dist/assets/toolkit/styles',
     name: 'css:toolkit',
   },
 
   'css:drizzle': {
-    src: './src/assets/**/drizzle.css',
-    dest: './dist/assets',
+    src: '../../src/assets/**/drizzle.css',
+    dest: '../../dist/assets',
     prefix: 'drizzle-',
     name: 'css:drizzle',
   },
 
   copy: {
-    src: './src/static/**/*',
-    dest: './dist',
+    src: '../../src/static/**/*',
+    dest: '../../dist',
   },
   images: {
-    src: './src/assets/toolkit/images/*.*',
-    dest: './dist/assets/toolkit/images',
+    src: '../../src/assets/toolkit/images/*.*',
+    dest: '../../dist/assets/toolkit/images',
   },
   js: {
     plugins: {
       webpack: {
         entry: {
-          'babel-polyfill': './src/assets/drizzle/scripts/drizzle.js',
+          'babel-polyfill': '../../src/assets/drizzle/scripts/drizzle.js',
           // Drizzle UI scripts
-          'drizzle/scripts/drizzle': './src/assets/drizzle/scripts/drizzle.js',
+          'drizzle/scripts/drizzle': '../../src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
-          'toolkit/scripts/toolkit': './src/assets/toolkit/scripts/toolkit.js',
-          'toolkit/scripts/toolkit-prerender': './src/assets/toolkit/scripts/toolkit-prerender.js',
+          'toolkit/scripts/toolkit': '../../src/assets/toolkit/scripts/toolkit.js',
+          'toolkit/scripts/toolkit-prerender': '../../src/assets/toolkit/scripts/toolkit-prerender.js',
         },
         output: {
-          path: './dist/assets',
+          path: '../../dist/assets',
           filename: '[name].js',
         },
         module: {
@@ -54,8 +54,8 @@ module.exports = {
       browserSync: {
         open: false,
         notify: false,
-        files: ['./dist/**/*'],
-        server: { baseDir: './dist' },
+        files: ['../../dist/**/*'],
+        server: { baseDir: '../../dist' },
       },
     },
   },
@@ -63,32 +63,32 @@ module.exports = {
   watch: {
     watchers: [
       {
-        match: ['./src/static/**/*'],
+        match: ['../../src/static/**/*'],
         tasks: ['copy'],
       },
       {
         match: [
-          './src/assets/**/*.scss',
-          './packages/spark-core/**/*.scss',
-          './packages/spark-extras/**/*.scss',
-          '!./src/angular',
+          '../../src/assets/**/*.scss',
+          '../../packages/spark-core/**/*.scss',
+          '../../packages/spark-extras/**/*.scss',
+          '!../../src/angular',
         ],
         tasks: ['sass'],
       },
       {
         match: [
-          './src/assets/drizzle/**/*.js',
-          '!./src/angular',
+          '../../src/assets/drizzle/**/*.js',
+          '!../../src/angular',
         ],
         tasks: ['js'],
       },
       {
         match: [
-          './src/**/*.hbs',
-          './src/data/**/*',
-          './src/**/*.yaml',
-          './src/**/*.md',
-          '!./src/angular',
+          '../../src/**/*.hbs',
+          '../../src/data/**/*',
+          '../../src/**/*.yaml',
+          '../../src/**/*.md',
+          '!../../src/angular',
         ],
         tasks: ['drizzle'],
       },
@@ -110,17 +110,17 @@ module.exports = {
     },
     src: {
       patterns: {
-        basedir: './src/patterns',
-        glob: './src/patterns/**/*.hbs',
+        basedir: '../../src/patterns',
+        glob: '../../src/patterns/**/*.hbs',
       },
       templates: {
-        basedir: './src/templates',
-        glob: './src/templates/**/*.hbs',
+        basedir: '../../src/templates',
+        glob: '../../src/templates/**/*.hbs',
       },
     },
     dest: {
-      pages: './dist',
-      patterns: './dist/patterns',
+      pages: '../../dist',
+      patterns: '../../dist/patterns',
     },
     fieldParsers: {
       notes: 'markdown',

@@ -49,7 +49,7 @@ gulp.task('sass', () => {
         zindex: false,
       }),
     )
-    .pipe(gulp.dest('./dist/assets/toolkit/styles'));
+    .pipe(gulp.dest('../../dist/assets/toolkit/styles'));
 
   gulp
     .src('src/assets/drizzle/styles/**/*.scss')
@@ -66,7 +66,7 @@ gulp.task('sass', () => {
         zindex: false,
       }),
     )
-    .pipe(gulp.dest('./dist/assets/drizzle/styles'));
+    .pipe(gulp.dest('../../dist/assets/drizzle/styles'));
 });
 
 // SVG icon task
@@ -106,14 +106,14 @@ gulp.task('build-drizzle', (done) => {
 // Generate & Inline Critical-path CSS
 gulp.task('critical', () => {
   const cssFiles = [
-    'dist/assets/toolkit/styles/toolkit.css',
-    'dist/assets/drizzle/styles/main.css',
+    '../../dist/assets/toolkit/styles/toolkit.css',
+    '../../dist/assets/drizzle/styles/main.css',
   ];
   return gulp
-    .src('dist/*.html')
+    .src('../../dist/*.html')
     .pipe(
       critical({
-        base: 'dist/',
+        base: '../../dist/',
         inline: true,
         css: cssFiles,
       }),
@@ -121,7 +121,7 @@ gulp.task('critical', () => {
     .on('error', (err) => {
       log.error(err.message);
     })
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('../../dist'));
 });
 
 // Register default task
