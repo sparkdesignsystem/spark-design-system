@@ -10,7 +10,7 @@ gulp.task('build-spark-core', (cb) => {
   });
 });
 
-gulp.task('clean-spark-core', () => gulp.src(['./packages/spark-core/node_modules'], { read: false })
+gulp.task('clean-spark-core', () => gulp.src(['./packages/spark-core/node_modules', './packages/spark-core/es5'], { read: false })
   .pipe(clean()));
 
 gulp.task('install-spark-core', (cb) => {
