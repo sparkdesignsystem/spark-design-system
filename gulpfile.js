@@ -38,7 +38,7 @@ gulp.task('setup-spark-extras-highlight-board', (cb) => {
 });
 
 gulp.task('dev-spark-core', (cb) => {
-  runSequence('build', ['watch-spark', 'watch', 'serve'], cb);
+  runSequence('pre-publish', 'build', ['watch-spark', 'watch', 'serve'], cb);
 });
 
 gulp.task('watch-spark', () => {
