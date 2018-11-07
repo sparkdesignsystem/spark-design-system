@@ -85,13 +85,7 @@
     ]
   },
   "scripts": {
-    "clean": "npm run clean-spark-core && npm run clean-spark-extras-highlight-board",
-    "install-all": "",
-    "clean-spark-core": "rm -rf packages/spark-core/node_modules",
-    "install-spark-core": "npm install --prefix ./packages/spark-core",
     "precommit": "lint-staged",
-    "setup-spark-core": "npm run install-spark-core && npm run build-spark-core && npm run link-spark-core",
-    "link-spark-core": "cd packages/spark-core && npm unlink && npm link && cd ../..",
     "setup-spark-extras-highlight-board": "npm run install-spark-extras-highlight-board && npm run build-spark-extras-highlight-board && npm run link-spark-extras-highlight-board",
     "install-spark-extras-highlight-board": "npm install --prefix ./packages/spark-extras-highlight-board",
     "build-spark-extras-highlight-board": "npm run build --prefix ./packages/spark-extras-highlight-board",
