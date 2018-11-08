@@ -75,9 +75,9 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "test": "npm run test-spark",
+    "test": "npm run test-spark && npm run test-angular",
     "test-spark": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras-highlight-board/",
-    "test-angular": "cd src/angular/projects/spark-core-angular && ng test spark-core-angular --watch=false",
+    "test-angular": "npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-card",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
     "lerna": "npm run build-spark && lerna bootstrap && lerna publish"
   },

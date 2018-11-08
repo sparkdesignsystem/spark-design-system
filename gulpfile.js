@@ -12,6 +12,7 @@ require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
 gulp.task('pre-publish', (cb) => {
   runSequence(
     'setup-spark-packages',
+    'setup-spark-angular-projects',
     cb,
   );
 });
