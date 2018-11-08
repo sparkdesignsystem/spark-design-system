@@ -8,6 +8,7 @@ require('./gulp/spark-extras-highlight-board/spark-extras-highlight-board.gulpfi
 require('./gulp/drizzle/drizzle.gulpfile.js');
 require('./gulp/angular/dev-app/angulardevapp.gulpfile.js');
 require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
+require('./gulp/angular/spark-extras-angular-award/spark-extras-angular-award.gulpfile.js');
 
 gulp.task('pre-publish', (cb) => {
   runSequence(
@@ -33,6 +34,7 @@ gulp.task('setup-spark-packages', (cb) => {
 gulp.task('setup-spark-angular-projects', (cb) => {
   runSequence(
     'setup-spark-core-angular',
+    'setup-spark-extras-angular-award',
     cb,
   );
 });
@@ -64,6 +66,14 @@ gulp.task('setup-spark-core-angular', (cb) => {
     'build-spark-core-angular',
     'link-spark-core-angular',
     'link-spark-core-angular-to-angular-dir',
+    cb,
+  );
+});
+
+gulp.task('setup-spark-extras-angular-award', (cb) => {
+  runSequence(
+    'build-spark-extras-angular-award',
+    'link-spark-extras-angular-award',
     cb,
   );
 });
