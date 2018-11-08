@@ -22,7 +22,7 @@ import {
       </a>
 
       <div [@toggleContent]="animState" data-sprk-toggle="content">
-        <p class="sprk-b-TypeBodyFour sprk-u-pts">
+        <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
           {{ body }}
         </p>
       </div>
