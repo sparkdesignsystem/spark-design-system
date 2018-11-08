@@ -73,17 +73,6 @@
     "suitcss-components-grid": "^3.0.2",
     "suitcss-utils": "^1.0.0"
   },
-  "watch": {
-    "./packages/spark-core/spark-core.js": [
-      "build-spark-core"
-    ],
-    "./packages/spark-core/{base,components,objects,settings,tools,utilities}/**/*.js": [
-      "build-spark-core"
-    ],
-    "./packages/spark-extras-highlight-board/highlight-board.js": [
-      "build-spark-extras-highlight-board"
-    ]
-  },
   "scripts": {
     "precommit": "lint-staged",
     "setup-angular-dev-app": "npm run install-angular-dev-app && npm run link-angular-dev-app && npm run build-angular-dev-app",
@@ -96,7 +85,7 @@
     "build-spark-core-angular": "cd src/angular/projects/spark-core-angular && ng build spark-core-angular && cd ../../../..",
     "link-spark-core-angular": "cd src/angular/projects/spark-core-angular && npm unlink && npm link",
     "clean-spark-core-angular": "rm -rf src/angular/projects/spark-core-angular/node_modules",
-    "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
+    "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras-highlight-board/",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
     "lerna": "npm run build-spark && lerna bootstrap && lerna publish"
   },
