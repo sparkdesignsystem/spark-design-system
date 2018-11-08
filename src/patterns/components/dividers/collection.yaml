@@ -1,29 +1,12 @@
-description:
-Using <hr/> to break up sections:  
-<hr /> stands for Horizontal Rule. 
-This is used primarily when you want to separate a page into sections. 
-It represents a thematic break between paragraph-level elements.
+name: Using Horizontal Rule (<hr />)
+description: |
+  This is used primarily when you want to separate a page into sections. It represents a thematic break between paragraph-level elements.
+  Think of it as a way to distinguish topics within HTML. It’s a way to visually distinguish between 2 different topics, sections, paragraphs, etc.
 
-If a user needs a line that's not necessarily a semantic <hr /> but more of as a divider/separator, then use:
-
-<span class="sprk-c-Divider">
-</span>
-
-But if it's an actual semantic use of <hr />, then use an <hr /> tag.
-
-Because not all horizontal lines are semantically hrs –– sometimes they're just dividers
-
-Think of it as a way to distinguish topics within HTML. It’s a way to visually distinguish between
-2 different topics, sections, paragraphs, etc. 
-
-
-
-Example Usage:
-
-<p> The first rule of Fight Club is: You do not talk about Fight Club. </p>
-<hr />
-<p> The second rule of Fight Club is: You do not talk about Fight Club. </p>
-<hr />
-<p> The third rule of Fight Club is: No touching of the hair or face. </p>
-
+  Paragraph section 1.
+  <hr>
+  Paragraph section 2.
+  <hr>
+  Paragraph section 3.
+  <hr>
 sparkPackageCore: true
