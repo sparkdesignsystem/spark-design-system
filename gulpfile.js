@@ -11,7 +11,9 @@ require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
 
 gulp.task('pre-publish', (cb) => {
   runSequence(
+    'clean-all',
     'setup-spark-packages',
+    'build-drizzle',
     'setup-spark-angular-projects',
     cb,
   );
@@ -36,7 +38,7 @@ gulp.task('setup-spark-angular-projects', (cb) => {
 });
 
 gulp.task('clean-all', (cb) => {
-  runSequence(['clean-spark-core', 'clean-spark-extras-highlight-board', 'clean-angular-dev-app'], cb);
+  runSequence(['clean', 'clean-spark-core', 'clean-spark-extras-highlight-board', 'clean-angular-dev-app'], cb);
 });
 
 gulp.task('setup-spark-core', (cb) => {
@@ -75,5 +77,5 @@ gulp.task('dev-spark-angular', (cb) => {
 });
 
 gulp.task('build', (cb) => {
-  runSequence('pre-publish', 'build-drizzle', cb);
+  runSequence('pre-publish', cb);
 });
