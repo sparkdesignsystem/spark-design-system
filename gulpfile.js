@@ -36,7 +36,7 @@ gulp.task('setup-spark-angular-projects', (cb) => {
 });
 
 gulp.task('clean-all', (cb) => {
-  runSequence('clean-spark-core', 'clean-spark-extras-highlight-board', cb);
+  runSequence(['clean-spark-core', 'clean-spark-extras-highlight-board', 'clean-angular-dev-app'], cb);
 });
 
 gulp.task('setup-spark-core', (cb) => {
