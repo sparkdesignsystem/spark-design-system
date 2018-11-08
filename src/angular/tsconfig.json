@@ -15,6 +15,29 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@sparkdesignsystem/spark-core": [
+        "../../packages/spark-core"
+      ],
+      "@sparkdesignsystem/spark-extras": [
+        "../../packages/spark-extras"
+      ],
+      "@sparkdesignsystem/spark-core-angular": [
+        "dist/spark-core-angular"
+      ],
+      "@sparkdesignsystem/spark-extras-angular-award": [
+        "dist/spark-extras-angular-award"
+      ],
+      "@sparkdesignsystem/spark-extras-angular-card": [
+        "dist/spark-extras-angular-card"
+      ],
+      "@sparkdesignsystem/spark-extras-angular-dictionary": [
+        "dist/spark-extras-angular-dictionary"
+      ],
+      "@sparkdesignsystem/spark-extras-angular-highlight-board": [
+        "dist/spark-extras-angular-highlight-board"
+      ]
+    }
   }
 }
