@@ -18,6 +18,7 @@ import {
            }"
          href="#nogo"
          [attr.data-analytics]="analyticsString"
+         [attr.data-id]="idString"
          (click)="toggleAccordion($event)">
           <h3 class="sprk-c-Accordion__heading sprk-b-TypeBodyTwo">
             {{ title }}
@@ -59,6 +60,8 @@ export class SparkAccordionItemComponent implements OnInit {
   title: string;
   @Input()
   analyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   additionalClasses: string;
   @Input()

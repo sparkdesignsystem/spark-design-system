@@ -11,7 +11,8 @@ import { Component } from '@angular/core';
       <sprk-toggle
         title="This is a Spark toggle!"
         body="This is some copy for the toggle about toggle things."
-        analyticsString="My disclaimer Title">
+        analyticsString="My disclaimer Title"
+        idString="toggle-1">
       </sprk-toggle>
     </div>
 
@@ -24,7 +25,8 @@ import { Component } from '@angular/core';
         title="This is a Spark toggle with width set at 10%"
         body="This is some copy for the toggle about toggle things."
         analyticsString="My disclaimer Title"
-        additionalClasses="sprk-u-Width-10">
+        additionalClasses="sprk-u-Width-10"
+        idString="toggle-2">
       </sprk-toggle>
     </div>
   `,

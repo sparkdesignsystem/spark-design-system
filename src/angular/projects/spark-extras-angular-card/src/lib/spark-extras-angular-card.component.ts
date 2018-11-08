@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-card',
   template: `
-    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'">
+    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'" [attr.data-id]="idString">
       <a
         *ngIf="media === 'img'"
         [routerLink]="imgHref"
@@ -118,6 +118,8 @@ export class SparkCardComponent {
   additionalClasses: string;
   @Input()
   additionalCtaClasses: string;
+  @Input()
+  idString: string;
 
   getClassesCta(): string {
     const ctaClassArray: string[] = [];

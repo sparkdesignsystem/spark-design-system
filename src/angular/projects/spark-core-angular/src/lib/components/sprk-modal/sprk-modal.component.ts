@@ -16,22 +16,23 @@ import * as _ from 'lodash';
          tabindex="1"
          [attr.aria-labelledby]="heading_id"
          aria-modal="true"
-         [attr.aria-describedby]="content_id">
+         [attr.aria-describedby]="content_id"
+         [attr.data-id]="idString">
       <div class="sprk-o-Stack sprk-o-Stack--large">
         <header class="sprk-o-Stack__item sprk-c-Modal__header">
           <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive"
               [id]="heading_id">{{ title }}</h2>
 
-          <button *ngIf="modalType != 'wait'"  class="sprk-c-Modal__icon"
+          <button *ngIf="modalType != 'wait'" class="sprk-c-Modal__icon"
                   type="button"
                   aria-label="Close Modal"
                   (click)="closeModal($event)">
-              <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+              <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"></sprk-icon>
           </button>
         </header>
 
-        <div *ngIf="modalType == 'wait'" class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
+        <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
+          <div *ngIf="modalType == 'wait'" class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
           <ng-content></ng-content>
         </div>
 
@@ -42,12 +43,11 @@ import * as _ from 'lodash';
             {{ confirmText }}
           </button>
 
-          <a href="#nogo"
-             class="sprk-b-Link sprk-b-Link--standalone"
-             [attr.data-analytics]="cancelAnalyticsString"
-             (click)="emitCancelClick($event)">
+          <button class="sprk-c-Button sprk-c-Button--tertiary"
+            [attr.data-analytics]="cancelAnalyticsString"
+            (click)="emitCancelClick($event)">
             {{ cancelText }}
-          </a>
+          </button>
         </footer>
       </div>
     </div>
@@ -71,6 +71,8 @@ export class SparkModalComponent {
   confirmAnalyticsString: string;
   @Input()
   cancelAnalyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   isVisible = false;
   @Output()

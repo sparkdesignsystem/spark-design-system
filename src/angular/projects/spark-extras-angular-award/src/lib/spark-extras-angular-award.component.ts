@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-award',
   template: `
-  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}">
+  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}" [attr.data-id]="idString">
     <h2
       sprkStackItem
       class="
@@ -87,6 +87,8 @@ export class SparkAwardComponent {
   disclaimerCopy: string;
   @Input()
   disclaimer: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [

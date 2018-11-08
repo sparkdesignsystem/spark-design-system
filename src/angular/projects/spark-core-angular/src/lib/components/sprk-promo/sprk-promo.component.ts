@@ -3,7 +3,8 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-promo',
   template: `
-    <div [ngClass]="getClasses()">
+    <div [ngClass]="getClasses()"
+    [attr.data-id]="idString">
       <a
         *ngIf="isFlag && !mediaRev"
         [routerLink]="imgHref"
@@ -118,6 +119,8 @@ export class SparkPromoComponent {
   mediaRev: boolean;
   @Input()
   hasBorder: boolean;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [

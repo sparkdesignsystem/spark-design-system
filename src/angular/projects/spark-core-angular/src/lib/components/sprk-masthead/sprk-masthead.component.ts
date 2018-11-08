@@ -3,7 +3,9 @@ import { Component, HostListener, Input } from '@angular/core';
 @Component({
   selector: 'sprk-masthead',
   template: `
-    <header [ngClass]="getClasses()" role="banner">
+    <header [ngClass]="getClasses()"
+    role="banner"
+    [attr.data-id]="idString">
       <div class="sprk-c-Masthead__content">
         <div class="sprk-c-Masthead__top-row">
           <div class="sprk-c-Masthead__hamburger">
@@ -85,6 +87,8 @@ export class SparkMastheadComponent {
   secondaryNavSpacing = 'medium';
   @Input()
   isNarrowNavOpen = false;
+  @Input()
+  idString: string;
 
   @HostListener('window:resize')
   handleResizeEvent() {

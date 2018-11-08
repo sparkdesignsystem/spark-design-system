@@ -6,7 +6,7 @@ restrictions:
  - Images should have a descriptive alt tag.
 hidden: true
 ---
-<div class="sprk-c-Promo {{#if hasFlag }}sprk-c-Promo--flag {{/if}} {{#if hasBorder}}sprk-c-Promo--bordered {{/if}}sprk-o-Stack sprk-o-Stack--split@s">
+<div class="sprk-c-Promo {{#if hasFlag }}sprk-c-Promo--flag {{/if}} {{#if hasBorder}}sprk-c-Promo--bordered {{/if}}sprk-o-Stack sprk-o-Stack--split@s" {{#if idString }} data-id="{{idString}}"{{/if}}>
 
   {{#if hasFlag }}
     {{#unless mediaRev}}

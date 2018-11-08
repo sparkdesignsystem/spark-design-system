@@ -9,7 +9,11 @@ import {
 @Component({
   selector: 'sprk-pagination',
   template: `
-    <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'default'">
+    <nav
+      aria-label="Pagination Navigation"
+      [ngClass]="getClasses()"
+      *ngIf="paginationType === 'default'"
+      [attr.data-id]="idString">
       <sprk-unordered-list listType="horizontal" additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-medium">
         <li>
           <a
@@ -87,7 +91,11 @@ import {
       </sprk-unordered-list>
     </nav>
 
-    <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'long'">
+    <nav
+      aria-label="Pagination Navigation"
+      [ngClass]="getClasses()"
+      *ngIf="paginationType === 'long'"
+      [attr.data-id]="idString">
       <sprk-unordered-list listType="horizontal" additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-small">
         <li>
           <a
@@ -173,7 +181,11 @@ import {
       </sprk-unordered-list>
     </nav>
 
-    <nav aria-label="Pagination Navigation" [ngClass]="getClasses()" *ngIf="paginationType === 'pager'">
+    <nav
+      aria-label="Pagination Navigation"
+      [ngClass]="getClasses()"
+      *ngIf="paginationType === 'pager'"
+      [attr.data-id]="idString">
       <sprk-unordered-list listType="horizontal" additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-large">
         <li class="sprk-c-Pagination__item">
           <a
@@ -232,6 +244,8 @@ export class SparkPaginationComponent {
   analyticsStringLinkNext: string;
   @Input()
   analyticsStringLinkPrev: string;
+  @Input()
+  idString: string;
   @Input()
   additionalClasses: string;
 

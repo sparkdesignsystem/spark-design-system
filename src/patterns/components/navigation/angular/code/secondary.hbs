@@ -1,9 +1,10 @@
-<sprk-secondary-navigation>
+<sprk-secondary-navigation idString="navigation-secondary-1">
   <sprk-secondary-navigation-item
     *ngFor="let link of links"
     [analyticsString]="link.analyticsString"
     [href]="link.href"
-    [text]="link.text">
+    [text]="link.text"
+    idString="navigation-item-2">
   </sprk-secondary-navigation-item>
 </sprk-secondary-navigation>
 const links = [

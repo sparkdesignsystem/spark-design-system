@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
         Dividers
       </h2>
 
-      <sprk-divider></sprk-divider>
+      <sprk-divider idString="divider-1"></sprk-divider>
 
       <h2 class="drizzle-b-h2">
         Divider With Additional Class sprk-u-mbm

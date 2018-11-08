@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-highlight-board',
   template: `
-  <div [ngClass]="getClasses()">
+  <div [ngClass]="getClasses()" [attr.data-id]="idString">
     <img
       *ngIf="type !== 'noImage'"
       class="sprk-c-HighlightBoard__image"
@@ -77,6 +77,8 @@ export class SparkHighlightBoardComponent {
   additionalClasses: string;
   @Input()
   type: string;
+  @Input()
+  idString: string;
 
   public centerBtns = '';
 

@@ -4,7 +4,8 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-ordered-list',
   template: `
     <ol
-      [ngClass]="getClasses()">
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString">
       <ng-content></ng-content>
     </ol>
   `
@@ -14,6 +15,8 @@ export class SparkOrderedListComponent {
   listType: string;
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-b-List'];
