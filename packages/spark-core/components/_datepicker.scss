@@ -238,7 +238,7 @@
 .dp-below {
   margin-top: $space-m;
   position: absolute;
-  z-index: $layer-height-xs;
+  z-index: $layer-height-m;
 
   @media (max-width: $date-picker-max-width) {
     left: 0 !important;
