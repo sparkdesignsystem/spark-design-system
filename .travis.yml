@@ -19,7 +19,6 @@ before_install:
 
 install:
   - gulp pre-publish
-  - npm test
 
 cache:
   directories:
