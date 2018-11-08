@@ -7,7 +7,7 @@ describe('SparkModalComponent', () => {
   let fixture: ComponentFixture<SparkModalComponent>;
   let modalElement: HTMLElement;
   let confirmButtonElement: HTMLElement;
-  let cancelLinkElement: HTMLElement;
+  let cancelElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -25,8 +25,8 @@ describe('SparkModalComponent', () => {
     confirmButtonElement = fixture.nativeElement.querySelector(
       'footer .sprk-c-Button'
     );
-    cancelLinkElement = fixture.nativeElement.querySelector(
-      'footer .sprk-b-Link'
+    cancelElement = fixture.nativeElement.querySelector(
+      'footer .sprk-c-Button.sprk-c-Button--tertiary'
     );
   });
 
@@ -75,13 +75,14 @@ describe('SparkModalComponent', () => {
     expect(called).toEqual(true);
   });
 
-  it('should emit cancelClick when the cancel link is clicked', done => {
+  it('should emit cancelClick when cancel is clicked', done => {
     let called = false;
+    fixture.detectChanges();
     component.cancelClick.subscribe(g => {
       called = true;
       done();
     });
-    cancelLinkElement.click();
+    cancelElement.click();
     expect(called).toEqual(true);
   });
 
