@@ -11,6 +11,8 @@ node_js:
   - "8.10.0"
 
 before_install:
+  - npm install -g @angular/cli
+  - npm install -g @angular-devkit/angular-builder
   - npm install
   - export CHROME_BIN=/usr/bin/google-chrome
   - "export DISPLAY=:99.0"
