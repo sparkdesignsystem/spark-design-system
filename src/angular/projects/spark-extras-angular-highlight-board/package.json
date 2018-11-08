@@ -17,7 +17,7 @@
     "@angular/platform-browser": "^6.1.4",
     "@angular/platform-browser-dynamic": "^6.1.4",
     "@angular/router": "^6.1.4",
-    "@sparkdesignsystem/spark-core-angular": "^1.0.1",
+    "@sparkdesignsystem/spark-core-angular": "^2.0.0",
     "@sparkdesignsystem/spark-highlight-board": "^2.1.0"
   }
 }
