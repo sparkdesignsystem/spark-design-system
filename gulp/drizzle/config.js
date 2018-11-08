@@ -88,9 +88,23 @@ module.exports = {
           './src/data/**/*',
           './src/**/*.yaml',
           './src/**/*.md',
+          '!./src/templates/drizzle/spark-core-icons.hbs',
           '!./src/angular',
         ],
         tasks: ['drizzle'],
+      },
+      {
+        match: [
+          './packages/spark-core/{base,components,objects,settings,tools,utilities}/**/*.js',
+          './packages/spark-core/*.js',
+        ],
+        tasks: ['build-spark-core'],
+      },
+      {
+        match: [
+          './packages/spark-extras-highlight-board/*.js',
+        ],
+        tasks: ['build-spark-extras-highlight-board'],
       },
     ],
   },

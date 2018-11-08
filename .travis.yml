@@ -12,6 +12,7 @@ node_js:
 
 before_script:
 - npm install -g gulp-cli
+- npm install -g mocha@5.2.0
 
 script: gulp pre-publish
 
