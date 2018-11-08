@@ -169,11 +169,19 @@ title: Developers
             <a href="https://angular.io/guide/ajs-quick-reference" class="drizzle-b-Link">angular.io</a>.
           </p>
         </li>
-        <li>
+        <li class="sprk-u-mvm">
           <p>
             We assume that your Angular project is using at
             least Angular 6 with Typescript or is an Angular-CLI based
             project.
+          </p>
+        </li>
+        <li>
+          <p>
+            We assume that you have already installed
+            @sparkdesignsystem/spark-core in your Angular project.
+            Vanilla spark-core is a peer dependency of
+            the Spark Angular packages.
           </p>
         </li>
       </ul>
@@ -198,6 +206,31 @@ title: Developers
         </li>
         <li class="sprk-u-mvm">
           <p>
+            Install the needed peer dependencies for our
+            npm package. When you use the Angular CLI it
+            should automatically install our peer
+            dependencies besides the packages listed below. If your application
+            does not have one of our peer dependencies
+            then your console should show a warning for that missing
+            dependency when you install spark-core-angular.
+          </p>
+          <ul class="drizzle-b-List sprk-u-mbm">
+            <li class="sprk-u-mvm">
+              <div class="drizzle-c-Command">
+                <code class="drizzle-CodeHighlight">
+                  npm install --save-dev tiny-date-picker</code>
+              </div>
+            </li>
+            <li class="sprk-u-mvm">
+              <div class="drizzle-c-Command">
+                <code class="drizzle-CodeHighlight">
+                  npm install --save-dev lodash</code>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="sprk-u-mvm">
+          <p>
             Import the Sass setup file in your Angular application's global styles Sass file.
             This can be done in the scss file specified
             at the highest level of your app.
@@ -210,7 +243,7 @@ title: Developers
             </code>
           </div>
         </li>
-        <li>Your html element needs to have the following class:
+        <li>Your HTML element needs to have the following class:
           <div class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
               sprk-u-JavaScript
