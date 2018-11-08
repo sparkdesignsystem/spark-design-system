@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-secondary-navigation-item',
   template: `
-    <li [ngClass]="getClasses()">
+    <li [ngClass]="getClasses()" [attr.data-id]="idString">
       <a class="sprk-b-Link sprk-b-Link--standalone"
         [routerLink]="href"
         [attr.data-analytics]="analyticsString">{{ text }}</a>
@@ -22,6 +22,8 @@ export class SparkSecondaryNavigationItemComponent {
   text: string;
   @Input()
   spacing = 'medium';
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [];

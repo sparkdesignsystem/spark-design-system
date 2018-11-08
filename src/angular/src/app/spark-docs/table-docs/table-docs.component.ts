@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         Column Comparison
       </h2>
 
-      <sprk-table>
+      <sprk-table idString="table-1">
         <thead sprkTableHead>
           <tr>
             <th>Column Heading</th>
@@ -45,7 +45,7 @@ import { Component } from '@angular/core';
         Grouped Columns
       </h2>
 
-      <sprk-table>
+      <sprk-table idString="table-2">
         <thead sprkTableHead>
           <tr>
             <th rowspan="2">Column Heading</th>
@@ -95,7 +95,7 @@ import { Component } from '@angular/core';
         Row Comparison
       </h2>
 
-      <sprk-table>
+      <sprk-table idString="table-3">
         <thead sprkTableHead>
           <tr>
             <th sprkTableEmptyHeading></th>

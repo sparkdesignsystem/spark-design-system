@@ -5,7 +5,8 @@ import { Component, Input } from '@angular/core';
   template: `
     <li
       [ngClass]="getClasses()"
-      [attr.data-analytics]="analyticsString">
+      [attr.data-analytics]="analyticsString"
+      [attr.data-id]="idString">
       <ng-content></ng-content>
     </li>
   `
@@ -13,6 +14,8 @@ import { Component, Input } from '@angular/core';
 export class SparkListItemComponent {
   @Input()
   analyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   additionalClasses: string;
 

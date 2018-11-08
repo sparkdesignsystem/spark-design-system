@@ -14,6 +14,7 @@ hasAngularCode: true
 
 <div class="sprk-b-InputContainer">
   <select class="sprk-b-Select{{#if class}} {{class}}{{/if}}" id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
+          data-id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
           aria-describedby="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container"
           {{#if disabled}} disabled{{/if}} data-sprk-input="select">
     <option value="1">Option 1</option>

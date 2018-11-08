@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         Link
       </h2>
 
-      <sprk-link href="/links">
+      <sprk-link href="/links" idString="link-1" analyticsString="object.action.event">
         This is a standard Spark Link!
       </sprk-link>
     </div>
@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
         Standalone Link
       </h2>
 
-      <sprk-link linkType="standalone" href="/links">
+      <sprk-link linkType="standalone" href="/links" idString="link-2" analyticsString="object.action.event">
         Hello, World.
       </sprk-link>
     </div>
@@ -28,7 +28,7 @@ import { Component, OnInit } from '@angular/core';
         Additional Classes
       </h2>
 
-      <sprk-link additionalClasses="sprk-u-mbm" href="/links">
+      <sprk-link additionalClasses="sprk-u-mbm" href="/links" idString="link-3" analyticsString="object.action.event">
         Link with Margin Bottom class
       </sprk-link>
     </div>
@@ -38,7 +38,7 @@ import { Component, OnInit } from '@angular/core';
         Disabled Link
       </h2>
 
-      <sprk-link linkType="disabled" href="/links">
+      <sprk-link linkType="disabled" href="/links" idString="link-4" analyticsString="object.action.event">
         This is a Spark Disabled Link
       </sprk-link>
     </div>
