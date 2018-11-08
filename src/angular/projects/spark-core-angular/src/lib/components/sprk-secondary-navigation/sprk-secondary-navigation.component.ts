@@ -3,17 +3,24 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-secondary-navigation',
   template: `
-    <nav role="navigation" [ngClass]="getNavClasses()">
+    <nav
+      role="navigation"
+      [ngClass]="getNavClasses()"
+      [attr.data-id]="idString"
+    >
       <ul [ngClass]="getClasses()">
         <ng-content></ng-content>
       </ul>
-    </nav>`
+    </nav>
+  `
 })
 export class SparkSecondaryNavigationComponent {
   @Input()
   additionalClasses: string;
   @Input()
   additionalNavClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [

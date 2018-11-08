@@ -3,37 +3,45 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-card',
   template: `
-    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaser'">
+    <div
+      [ngClass]="getClassesCard()"
+      *ngIf="cardType === 'teaser'"
+      [attr.data-id]="idString"
+    >
       <a
         *ngIf="media === 'img'"
         [routerLink]="imgHref"
         class="sprk-o-Stack__item"
-        [attr.data-analytics]="imgLinkAnalytics">
-        <img
-          [attr.alt]="imgAlt"
-          [attr.src]="imgSrc">
+        [attr.data-analytics]="imgLinkAnalytics"
+      >
+        <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
       </a>
 
       <div
-        class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+        class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium"
+      >
         <a
           *ngIf="media === 'icon'"
           [routerLink]="iconHref"
           class="sprk-o-Stack__item sprk-o-Stack__item--center"
-          [attr.data-analytics]="iconLinkAnalytics">
-          <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
+          [attr.data-analytics]="iconLinkAnalytics"
+        >
+          <sprk-icon
+            [iconType]="iconType"
+            [additionalClasses]="additionalClassesIcon"
+          ></sprk-icon>
         </a>
 
-        <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-          {{ title }}
-        </h3>
+        <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">{{ title }}</h3>
 
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          {{ body }}
-        </p>
+        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
 
         <div class="sprk-o-Stack__item">
-          <a [routerLink]="ctaHref" [ngClass]="getClassesCta()" [attr.data-analytics]="ctaAnalytics">
+          <a
+            [routerLink]="ctaHref"
+            [ngClass]="getClassesCta()"
+            [attr.data-analytics]="ctaAnalytics"
+          >
             {{ ctaText }}
           </a>
         </div>
@@ -45,7 +53,9 @@ import { Component, Input } from '@angular/core';
     </div>
 
     <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaserHeading'">
-      <h3 class="sprk-o-Stack__item sprk-c-Card__content sprk-b-TypeDisplayFive">
+      <h3
+        class="sprk-o-Stack__item sprk-c-Card__content sprk-b-TypeDisplayFive"
+      >
         {{ title }}
       </h3>
 
@@ -53,27 +63,34 @@ import { Component, Input } from '@angular/core';
         *ngIf="media === 'img'"
         [routerLink]="imgHref"
         class="sprk-o-Stack__item"
-        [attr.data-analytics]="imgLinkAnalytics">
-        <img
-          [attr.alt]="imgAlt"
-          [attr.src]="imgSrc">
+        [attr.data-analytics]="imgLinkAnalytics"
+      >
+        <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
       </a>
 
       <a
         *ngIf="media === 'icon'"
         [routerLink]="iconHref"
         class="sprk-o-Stack__item sprk-o-Stack__item--center"
-        [attr.data-analytics]="iconLinkAnalytics">
-        <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
+        [attr.data-analytics]="iconLinkAnalytics"
+      >
+        <sprk-icon
+          [iconType]="iconType"
+          [additionalClasses]="additionalClassesIcon"
+        ></sprk-icon>
       </a>
 
-      <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          {{ body }}
-        </p>
+      <div
+        class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium"
+      >
+        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
 
         <div class="sprk-o-Stack__item">
-          <a [routerLink]="ctaHref" [ngClass]="getClassesCta()" [attr.data-analytics]="ctaAnalytics">
+          <a
+            [routerLink]="ctaHref"
+            [ngClass]="getClassesCta()"
+            [attr.data-analytics]="ctaAnalytics"
+          >
             {{ ctaText }}
           </a>
         </div>
@@ -118,6 +135,8 @@ export class SparkCardComponent {
   additionalClasses: string;
   @Input()
   additionalCtaClasses: string;
+  @Input()
+  idString: string;
 
   getClassesCta(): string {
     const ctaClassArray: string[] = [];

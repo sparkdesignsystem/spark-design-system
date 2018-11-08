@@ -3,26 +3,41 @@ import { Component, HostListener, Input } from '@angular/core';
 @Component({
   selector: 'sprk-masthead',
   template: `
-    <header [ngClass]="getClasses()" role="banner">
+    <header [ngClass]="getClasses()" role="banner" [attr.data-id]="idString">
       <div class="sprk-c-Masthead__content">
         <div class="sprk-c-Masthead__top-row">
           <div class="sprk-c-Masthead__hamburger">
-            <button class="sprk-c-Hamburger" type="button" [attr.aria-expanded]="isNarrowNavOpen ? true : false"
-            (click)="toggleNarrowNav()"
+            <button
+              class="sprk-c-Hamburger"
+              type="button"
+              [attr.aria-expanded]="isNarrowNavOpen ? true : false"
+              (click)="toggleNarrowNav()"
             >
               <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
               <svg
-                [ngClass]="
-                    { 'sprk-c-Icon': true,
-                      'sprk-c-Icon--l': true,
-                      'sprk-c-Hamburger__icon': true,
-                      'sprk-c-Hamburger__icon--open': isNarrowNavOpen
-                    }"
-                    aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                [ngClass]="{
+                  'sprk-c-Icon': true,
+                  'sprk-c-Icon--l': true,
+                  'sprk-c-Hamburger__icon': true,
+                  'sprk-c-Hamburger__icon--open': isNarrowNavOpen
+                }"
+                aria-hidden="true"
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g>
-                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two" d="m8 32h48"/>
-                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one" d="m8 18.68h48"/>
-                  <path class="sprk-c-Hamburger__line sprk-c-Hamburger__line--three" d="m8 45.32h48"/>
+                  <path
+                    class="sprk-c-Hamburger__line sprk-c-Hamburger__line--two"
+                    d="m8 32h48"
+                  />
+                  <path
+                    class="sprk-c-Hamburger__line sprk-c-Hamburger__line--one"
+                    d="m8 18.68h48"
+                  />
+                  <path
+                    class="sprk-c-Hamburger__line sprk-c-Hamburger__line--three"
+                    d="m8 45.32h48"
+                  />
                 </g>
               </svg>
             </button>
@@ -30,16 +45,19 @@ import { Component, HostListener, Input } from '@angular/core';
           <div class="sprk-c-Masthead__logo">
             <a [routerLink]="logoHref">
               <ng-content select="[logo-slot]"></ng-content>
-              <span class="sprk-u-ScreenReaderText">{{ logoLinkScreenReaderText }}</span>
+              <span class="sprk-u-ScreenReaderText">{{
+                logoLinkScreenReaderText
+              }}</span>
             </a>
           </div>
           <div class="sprk-c-Masthead__secondary-nav">
             <sprk-secondary-navigation>
-             <sprk-secondary-navigation-item
+              <sprk-secondary-navigation-item
                 *ngFor="let link of secondaryNavLinks"
                 [href]="link.href"
                 [spacing]="secondaryNavSpacing"
-                [text]="link.text">
+                [text]="link.text"
+              >
               </sprk-secondary-navigation-item>
             </sprk-secondary-navigation>
           </div>
@@ -55,18 +73,23 @@ import { Component, HostListener, Input } from '@angular/core';
         <div class="sprk-c-Masthead__wide-navigation-container">
           <sprk-wide-navigation [links]="wideNavLinks"></sprk-wide-navigation>
         </div>
-        <div *ngIf="isNarrowNavOpen" class="sprk-c-Masthead__narrow-navigation-container">
+        <div
+          *ngIf="isNarrowNavOpen"
+          class="sprk-c-Masthead__narrow-navigation-container"
+        >
           <sprk-narrow-navigation>
             <sprk-narrow-navigation-item
               *ngFor="let link of narrowNavLinks"
               [subNav]="link.subNav"
               [href]="link.href"
-              [text]="link.text">
+              [text]="link.text"
+            >
             </sprk-narrow-navigation-item>
           </sprk-narrow-navigation>
         </div>
       </div>
-    </header>`
+    </header>
+  `
 })
 export class SparkMastheadComponent {
   @Input()
@@ -85,6 +108,8 @@ export class SparkMastheadComponent {
   secondaryNavSpacing = 'medium';
   @Input()
   isNarrowNavOpen = false;
+  @Input()
+  idString: string;
 
   @HostListener('window:resize')
   handleResizeEvent() {

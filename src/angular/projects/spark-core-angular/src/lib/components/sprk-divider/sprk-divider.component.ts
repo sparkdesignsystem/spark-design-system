@@ -3,13 +3,14 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-divider',
   template: `
-    <span [ngClass]="getClasses()">
-    </span>
+    <span [ngClass]="getClasses()" [attr.data-id]="idString"> </span>
   `
 })
 export class SparkDividerComponent {
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Divider'];

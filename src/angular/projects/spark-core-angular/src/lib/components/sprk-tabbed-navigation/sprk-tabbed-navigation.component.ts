@@ -22,17 +22,20 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
 @Component({
   selector: 'sprk-tabbed-navigation',
   template: `
-    <div [ngClass]="getClasses()" role="tablist">
+    <div [ngClass]="getClasses()" role="tablist" [attr.data-id]="idString">
       <div class="sprk-c-Tabs__buttons">
         <ng-content select="[sprkTabbedNavigationTab]"></ng-content>
       </div>
       <ng-content select="[sprkTabbedNavigationPane]"></ng-content>
       <ng-content></ng-content>
-    </div>`
+    </div>
+  `
 })
 export class SparkTabbedNavigationComponent implements AfterContentInit {
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
   @ContentChildren(SprkTabbedNavigationTabDirective)
   tabs: QueryList<SprkTabbedNavigationTabDirective>;
   @ContentChildren(SprkTabbedNavigationPanelDirective)

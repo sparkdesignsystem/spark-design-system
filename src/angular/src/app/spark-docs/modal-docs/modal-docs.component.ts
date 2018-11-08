@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
       <button
         (click)="toggleChoiceModal($event)"
         additionalClasses="choice-button"
-        sprkButton>
+        sprkButton
+      >
         Choice Modal
       </button>
     </div>
@@ -15,7 +16,8 @@ import { Component } from '@angular/core';
       <button
         (click)="toggleInfoModal($event)"
         additionalClasses="info-button"
-        sprkButton>
+        sprkButton
+      >
         Info Modal
       </button>
     </div>
@@ -23,7 +25,8 @@ import { Component } from '@angular/core';
       <button
         (click)="toggleWaitModal($event)"
         additionalClasses="wait-button"
-        sprkButton>
+        sprkButton
+      >
         Wait Modal
       </button>
     </div>
@@ -31,17 +34,26 @@ import { Component } from '@angular/core';
       [(isVisible)]="choiceVisible"
       title="Are you sure?"
       (hide)="toggleChoiceModal($event)"
-      modalType="choice">This is some modal content.</sprk-modal>
+      modalType="choice"
+      idString="modal-choice-1"
+      >This is some modal content.</sprk-modal
+    >
     <sprk-modal
       [(isVisible)]="infoVisible"
       title="For Your Information"
       (hide)="toggleInfoModal($event)"
-      modalType="info">This is some modal content.</sprk-modal>
+      modalType="info"
+      idString="modal-info-1"
+      >This is some modal content.</sprk-modal
+    >
     <sprk-modal
       [(isVisible)]="waitVisible"
       title="Please wait..."
       (hide)="toggleWaitModal($event)"
-      modalType="wait">This is some modal content.</sprk-modal>
+      modalType="wait"
+      idString="modal-wait-1"
+      >This is some modal content.</sprk-modal
+    >
   `
 })
 export class ModalDocsComponent {

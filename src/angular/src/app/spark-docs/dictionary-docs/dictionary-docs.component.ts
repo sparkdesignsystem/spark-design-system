@@ -4,17 +4,20 @@ import { Component } from '@angular/core';
   selector: 'sprk-dictionary-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Dictionary
-      </h2>
+      <h2 class="drizzle-b-h2">Dictionary</h2>
 
-      <sprk-dictionary [data]="keyValuePairs"></sprk-dictionary>
+      <sprk-dictionary
+        [data]="keyValuePairs"
+        idString="dictionary-1"
+      ></sprk-dictionary>
 
-      <h2 class="drizzle-b-h2">
-        Striped Dictionary
-      </h2>
+      <h2 class="drizzle-b-h2">Striped Dictionary</h2>
 
-      <sprk-dictionary [data]="keyValuePairs" dictionaryType="striped"></sprk-dictionary>
+      <sprk-dictionary
+        [data]="keyValuePairs"
+        dictionaryType="striped"
+        idString="dictionary-2"
+      ></sprk-dictionary>
     </div>
   `,
   styles: ['']

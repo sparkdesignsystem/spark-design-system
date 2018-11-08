@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
     <a
       [ngClass]="getClasses()"
       [href]="href"
-      [attr.data-analytics]="analyticsString">
+      [attr.data-analytics]="analyticsString"
+      [attr.data-id]="idString"
+    >
       <ng-content></ng-content>
     </a>
   `
@@ -16,6 +18,8 @@ export class SparkLinkComponent {
   linkType: string;
   @Input()
   href: string;
+  @Input()
+  idString: string;
   @Input()
   analyticsString: string;
   @Input()

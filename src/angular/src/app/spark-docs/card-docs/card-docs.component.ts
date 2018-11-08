@@ -4,40 +4,33 @@ import { Component } from '@angular/core';
   selector: 'sprk-card-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base
-      </h2>
+      <h2 class="drizzle-b-h2">Base</h2>
 
-      <sprk-card cardType="base">
+      <sprk-card cardType="base" idString="card-1">
         <h4>This is a base Spark card!</h4>
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base Card: Omitted cardType
-      </h2>
+      <h2 class="drizzle-b-h2">Base Card: Omitted cardType</h2>
 
-      <sprk-card>
+      <sprk-card idString="card-2">
         <h4>This is a base Spark card!</h4>
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base With Random Things
-      </h2>
+      <h2 class="drizzle-b-h2">Base With Random Things</h2>
 
-      <sprk-card cardType="base">
-        <h4>
-          This is a base Spark card!
-        </h4>
+      <sprk-card cardType="base" idString="card-3">
+        <h4>This is a base Spark card!</h4>
 
-        <p>
-          You can put anything in here, really.
-        </p>
+        <p>You can put anything in here, really.</p>
 
-        <sprk-icon iconType="bell" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+        <sprk-icon
+          iconType="bell"
+          additionalClasses="sprk-c-Icon--l"
+        ></sprk-icon>
 
         <sprk-unordered-list listType="indented">
           <sprk-list-item>hi</sprk-list-item>
@@ -48,25 +41,21 @@ import { Component } from '@angular/core';
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Base With Additoinal Classes
-      </h2>
+      <h2 class="drizzle-b-h2">Base With Additional Classes</h2>
 
-      <sprk-card cardType="base" additionalClasses="sprk-u-mbl">
-        <h4>
-          This is a base Spark card!
-        </h4>
+      <sprk-card
+        cardType="base"
+        additionalClasses="sprk-u-mbl"
+        idString="card-4"
+      >
+        <h4>This is a base Spark card!</h4>
 
-        <p>
-          You can put anything in here, really.
-        </p>
+        <p>You can put anything in here, really.</p>
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Teaser With Button CTA
-      </h2>
+      <h2 class="drizzle-b-h2">Teaser With Button CTA</h2>
 
       <sprk-card
         media="img"
@@ -83,14 +72,14 @@ import { Component } from '@angular/core';
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark">
+        ctaAnalytics="Button: Spark"
+        idString="card-5"
+      >
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Teaser With Icon
-      </h2>
+      <h2 class="drizzle-b-h2">Teaser With Icon</h2>
 
       <sprk-card
         media="icon"
@@ -106,14 +95,14 @@ import { Component } from '@angular/core';
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark">
+        ctaAnalytics="Button: Spark"
+        idString="card-6"
+      >
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Teaser With Link CTA
-      </h2>
+      <h2 class="drizzle-b-h2">Teaser With Link CTA</h2>
 
       <sprk-card
         cardType="teaser"
@@ -130,14 +119,14 @@ import { Component } from '@angular/core';
         ctaType="link"
         ctaText="Neat!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Link: Spark">
+        ctaAnalytics="Link: Spark"
+        idString="card-6"
+      >
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Teaser With Heading On Top
-      </h2>
+      <h2 class="drizzle-b-h2">Teaser With Heading On Top</h2>
 
       <sprk-card
         cardType="teaserHeading"
@@ -152,14 +141,14 @@ import { Component } from '@angular/core';
         ctaType="link"
         ctaText="Neat!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Link: Spark">
+        ctaAnalytics="Link: Spark"
+        idString="card-7"
+      >
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Teaser With Icon And Heading On Top
-      </h2>
+      <h2 class="drizzle-b-h2">Teaser With Icon And Heading On Top</h2>
 
       <sprk-card
         media="icon"
@@ -179,17 +168,21 @@ import { Component } from '@angular/core';
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark">
+        ctaAnalytics="Button: Spark"
+        idString="card-8"
+      >
       </sprk-card>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Card Layout - Two Up
-      </h2>
+      <h2 class="drizzle-b-h2">Card Layout - Two Up</h2>
 
       <div class="sprk-o-CenteredColumn">
-        <sprk-stack splitAt="medium" itemSpacing="medium" additionalClasses="sprk-o-Stack--center-row">
+        <sprk-stack
+          splitAt="medium"
+          itemSpacing="medium"
+          additionalClasses="sprk-o-Stack--center-row"
+        >
           <sprk-card
             sprkStackItem
             additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
@@ -202,7 +195,9 @@ import { Component } from '@angular/core';
             ctaType="button"
             ctaText="Neat!"
             ctaHref="www.sparkdesignsystem.com"
-            ctaAnalytics="Link: Spark">
+            ctaAnalytics="Link: Spark"
+            idString="card-9"
+          >
           </sprk-card>
 
           <sprk-card
@@ -219,19 +214,22 @@ import { Component } from '@angular/core';
             ctaType="button"
             ctaText="Neat!"
             ctaHref="www.sparkdesignsystem.com"
-            ctaAnalytics="Link: Spark">
+            ctaAnalytics="Link: Spark"
+            idString="card-10"
+          >
           </sprk-card>
-
         </sprk-stack>
       </div>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Card Layout - Three Up
-      </h2>
+      <h2 class="drizzle-b-h2">Card Layout - Three Up</h2>
 
-      <sprk-stack splitAt="medium" itemSpacing="huge" additionalClasses="sprk-o-Stack--center-row">
+      <sprk-stack
+        splitAt="medium"
+        itemSpacing="huge"
+        additionalClasses="sprk-o-Stack--center-row"
+      >
         <sprk-card
           sprkStackItem
           additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@m"
@@ -244,7 +242,9 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-11"
+        >
         </sprk-card>
 
         <sprk-card
@@ -259,7 +259,9 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-12"
+        >
         </sprk-card>
 
         <sprk-card
@@ -274,17 +276,21 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-13"
+        >
         </sprk-card>
       </sprk-stack>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Card Layout - Four Up
-      </h2>
+      <h2 class="drizzle-b-h2">Card Layout - Four Up</h2>
 
-      <sprk-stack splitAt="huge" itemSpacing="small" additionalClasses="sprk-o-Stack--center-row">
+      <sprk-stack
+        splitAt="huge"
+        itemSpacing="small"
+        additionalClasses="sprk-o-Stack--center-row"
+      >
         <sprk-card
           sprkStackItem
           additionalClasses="sprk-o-Stack sprk-o-Stack__item--flex@xl"
@@ -297,7 +303,9 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-14"
+        >
         </sprk-card>
 
         <sprk-card
@@ -312,7 +320,9 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-15"
+        >
         </sprk-card>
 
         <sprk-card
@@ -327,7 +337,9 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-16"
+        >
         </sprk-card>
 
         <sprk-card
@@ -342,7 +354,9 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-17"
+        >
         </sprk-card>
       </sprk-stack>
     </div>

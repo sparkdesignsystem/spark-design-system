@@ -4,11 +4,9 @@ import { Component } from '@angular/core';
   selector: 'sprk-tables-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Column Comparison
-      </h2>
+      <h2 class="drizzle-b-h2">Column Comparison</h2>
 
-      <sprk-table>
+      <sprk-table idString="table-1">
         <thead sprkTableHead>
           <tr>
             <th>Column Heading</th>
@@ -41,11 +39,9 @@ import { Component } from '@angular/core';
       </sprk-table>
     </div>
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Grouped Columns
-      </h2>
+      <h2 class="drizzle-b-h2">Grouped Columns</h2>
 
-      <sprk-table>
+      <sprk-table idString="table-2">
         <thead sprkTableHead>
           <tr>
             <th rowspan="2">Column Heading</th>
@@ -91,11 +87,9 @@ import { Component } from '@angular/core';
       </sprk-table>
     </div>
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Row Comparison
-      </h2>
+      <h2 class="drizzle-b-h2">Row Comparison</h2>
 
-      <sprk-table>
+      <sprk-table idString="table-3">
         <thead sprkTableHead>
           <tr>
             <th sprkTableEmptyHeading></th>
@@ -132,7 +126,7 @@ import { Component } from '@angular/core';
         </tbody>
       </sprk-table>
     </div>
-`,
+  `,
   styles: ['']
 })
 export class TableDocsComponent {

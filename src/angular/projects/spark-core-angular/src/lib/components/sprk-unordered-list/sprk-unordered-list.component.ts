@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-unordered-list',
   template: `
-    <ul
-      [ngClass]="getClasses()">
+    <ul [ngClass]="getClasses()" [attr.data-id]="idString">
       <ng-content></ng-content>
     </ul>
   `
@@ -14,6 +13,8 @@ export class SparkUnorderedListComponent {
   listType: string;
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [''];

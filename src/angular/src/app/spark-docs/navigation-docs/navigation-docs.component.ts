@@ -4,37 +4,38 @@ import { Component } from '@angular/core';
   selector: 'sprk-navigation-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-        <h2 class="drizzle-b-h2">
-          Wide Navigation
-        </h2>
-        <sprk-wide-navigation [links]="links"></sprk-wide-navigation>
+      <h2 class="drizzle-b-h2">Wide Navigation</h2>
+      <sprk-wide-navigation
+        [links]="links"
+        idString="navigation-wide-1"
+      ></sprk-wide-navigation>
     </div>
     <div class="drizzle-o-ContentGrouping">
-        <h2 class="drizzle-b-h2">
-          Narrow Navigation
-        </h2>
-        <sprk-narrow-navigation>
-          <sprk-narrow-navigation-item
-            *ngFor="let link of links"
-            [subNav]="link.subNav"
-            [analyticsString]="link.analyticsString"
-            [href]="link.href"
-            [text]="link.text">
-          </sprk-narrow-navigation-item>
-        </sprk-narrow-navigation>
+      <h2 class="drizzle-b-h2">Narrow Navigation</h2>
+      <sprk-narrow-navigation idString="navigation-narrow-1">
+        <sprk-narrow-navigation-item
+          *ngFor="let link of links"
+          [subNav]="link.subNav"
+          [analyticsString]="link.analyticsString"
+          [href]="link.href"
+          [text]="link.text"
+          idString="navigation-item-1"
+        >
+        </sprk-narrow-navigation-item>
+      </sprk-narrow-navigation>
     </div>
     <div class="drizzle-o-ContentGrouping">
-        <h2 class="drizzle-b-h2">
-          Secondary Navigation
-        </h2>
-        <sprk-secondary-navigation>
-          <sprk-secondary-navigation-item
-            *ngFor="let link of links"
-            [analyticsString]="link.analyticsString"
-            [href]="link.href"
-            [text]="link.text">
-          </sprk-secondary-navigation-item>
-        </sprk-secondary-navigation>
+      <h2 class="drizzle-b-h2">Secondary Navigation</h2>
+      <sprk-secondary-navigation idString="navigation-secondary-1">
+        <sprk-secondary-navigation-item
+          *ngFor="let link of links"
+          [analyticsString]="link.analyticsString"
+          [href]="link.href"
+          [text]="link.text"
+          idString="navigation-item-2"
+        >
+        </sprk-secondary-navigation-item>
+      </sprk-secondary-navigation>
     </div>
   `,
   styles: ['']

@@ -6,73 +6,82 @@ import { RouterTestingModule } from '@angular/router/testing';
   template: `
     <div class="drizzle-o-ContentGrouping sprk-u-mbh">
       <div class="sprk-o-CenteredColumn">
-        <h2 class="drizzle-b-h2">
-          Promo Base
-        </h2>
+        <h2 class="drizzle-b-h2">Promo Base</h2>
 
-        <sprk-promo title="Title"
+        <sprk-promo
+          title="Title"
           subtitle="Subtitle"
           cta="button"
           ctaText="Learn More"
-          hasBorder="true">
-          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          hasBorder="true"
+          idString="promo-1"
+        >
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+          inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+          neque egestas. Diam quod curabitur.
         </sprk-promo>
       </div>
     </div>
 
-  <div class="drizzle-o-ContentGrouping sprk-u-mbh">
-    <div class="sprk-o-CenteredColumn">
-      <h2 class="drizzle-b-h2">
-        Flag Promo
-      </h2>
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <div class="sprk-o-CenteredColumn">
+        <h2 class="drizzle-b-h2">Flag Promo</h2>
 
-      <sprk-promo
-        isFlag=true
-        imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-        imgAlt="Spark Design System Logo">
-          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
-      </sprk-promo>
+        <sprk-promo
+          isFlag="true"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+          imgAlt="Spark Design System Logo"
+          idString="promo-2"
+        >
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+          inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+          neque egestas. Diam quod curabitur.
+        </sprk-promo>
+      </div>
     </div>
-  </div>
 
-  <div class="drizzle-o-ContentGrouping sprk-u-mbh">
-    <div class="sprk-o-CenteredColumn">
-      <h2 class="drizzle-b-h2">
-        Promo With Image
-      </h2>
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <div class="sprk-o-CenteredColumn">
+        <h2 class="drizzle-b-h2">Promo With Image</h2>
 
-      <sprk-promo
-        title="Title"
-        subtitle="Subtitle"
-        media="img"
-        imgAlt="placeholder"
-        imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
-        cta="button"
-        ctaText="Learn More">
-          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
-      </sprk-promo>
+        <sprk-promo
+          title="Title"
+          subtitle="Subtitle"
+          media="img"
+          imgAlt="placeholder"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+          cta="button"
+          ctaText="Learn More"
+          idString="promo-3"
+        >
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+          inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+          neque egestas. Diam quod curabitur.
+        </sprk-promo>
+      </div>
     </div>
-  </div>
 
-  <div class="drizzle-o-ContentGrouping sprk-u-mbh">
-    <div class="sprk-o-CenteredColumn">
-      <h2 class="drizzle-b-h2">
-        Promo With Reversed Image
-      </h2>
+    <div class="drizzle-o-ContentGrouping sprk-u-mbh">
+      <div class="sprk-o-CenteredColumn">
+        <h2 class="drizzle-b-h2">Promo With Reversed Image</h2>
 
-      <sprk-promo
-        title="Title"
-        subtitle="Subtitle"
-        mediaRev=true
-        imgAlt="placeholder"
-        imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
-        imgHref="https://sparkdesignsystem.com"
-        cta="button"
-        ctaText="Learn More">
-          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
-      </sprk-promo>
+        <sprk-promo
+          title="Title"
+          subtitle="Subtitle"
+          mediaRev="true"
+          imgAlt="placeholder"
+          imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+          imgHref="https://sparkdesignsystem.com"
+          cta="button"
+          ctaText="Learn More"
+          idString="promo-4"
+        >
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+          inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+          neque egestas. Diam quod curabitur.
+        </sprk-promo>
+      </div>
     </div>
-  </div>
   `,
   styles: ['']
 })

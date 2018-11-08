@@ -3,6 +3,10 @@ description:
   Promos are useful for drawing attention to a promotion or feature.
 information:
   - Use the sprk-c-Promo--bordered class to include a border on the Promo.
+restrictions:
+ - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property ("promo-1", "promo-2", "promo-1", etc).
 links:
   Spacing Utilities:
     external: false

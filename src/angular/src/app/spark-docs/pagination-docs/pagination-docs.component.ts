@@ -4,18 +4,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'sprk-pagination-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Default Pagination
-      </h2>
+      <h2 class="drizzle-b-h2">Default Pagination</h2>
 
-      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">
-        Runs
-      </h2>
+      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">Runs</h2>
 
       <ul class="drizzle-b-List sprk-u-AbsoluteCenter">
         <li class="sprk-u-mbm" *ngFor="let run of pagedItemsDefault">
-          <h3 class="drizzle-b-h3">Run #: {{ totalRunsDefault.indexOf(run) + 1 }}</h3>
-          <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
+          <h3 class="drizzle-b-h3">
+            Run #: {{ totalRunsDefault.indexOf(run) + 1 }}
+          </h3>
+          <h3 class="drizzle-b-h3">
+            Distance: {{ run.distance }} {{ run.unit }}
+          </h3>
           <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
         </li>
       </ul>
@@ -29,26 +29,28 @@ import { Component, OnInit } from '@angular/core';
         [itemsPerPage]="1"
         (previousClick)="goBack($event, 'default')"
         (pageClick)="goToPage($event, 'default')"
-        (nextClick)="goForward($event, 'default')">
+        (nextClick)="goForward($event, 'default')"
+        idString="pagination-1"
+      >
       </sprk-pagination>
     </div>
 
     <sprk-divider additionalClasses="sprk-u-mbh"></sprk-divider>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Long Pagination
-      </h2>
+      <h2 class="drizzle-b-h2">Long Pagination</h2>
 
-      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">
-        Runs
-      </h2>
+      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">Runs</h2>
 
       <div class="sprk-u-AbsoluteCenter">
         <ul class="drizzle-b-List">
           <li class="sprk-u-mbm" *ngFor="let run of pagedItems">
-            <h3 class="drizzle-b-h3">Run #: {{ totalRuns.indexOf(run) + 1 }}</h3>
-            <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
+            <h3 class="drizzle-b-h3">
+              Run #: {{ totalRuns.indexOf(run) + 1 }}
+            </h3>
+            <h3 class="drizzle-b-h3">
+              Distance: {{ run.distance }} {{ run.unit }}
+            </h3>
             <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
           </li>
         </ul>
@@ -64,26 +66,28 @@ import { Component, OnInit } from '@angular/core';
         [itemsPerPage]="longConfig[0].itemsPerPage"
         (previousClick)="goBack($event, 'long')"
         (pageClick)="goToPage($event, 'long')"
-        (nextClick)="goForward($event, 'long')">
+        (nextClick)="goForward($event, 'long')"
+        idString="pagination-2"
+      >
       </sprk-pagination>
     </div>
 
     <sprk-divider additionalClasses="sprk-u-mbh"></sprk-divider>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Pager
-      </h2>
+      <h2 class="drizzle-b-h2">Pager</h2>
 
-      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">
-        Runs
-      </h2>
+      <h2 class="drizzle-b-h2 sprk-u-AbsoluteCenter">Runs</h2>
 
       <div class="sprk-u-AbsoluteCenter">
         <ul class="drizzle-b-List">
           <li class="sprk-u-mbm" *ngFor="let run of pagedItemsPager">
-            <h3 class="drizzle-b-h3">Run #: {{ totalRunsDefault.indexOf(run) + 1 }}</h3>
-            <h3 class="drizzle-b-h3">Distance: {{ run.distance }} {{ run.unit }}</h3>
+            <h3 class="drizzle-b-h3">
+              Run #: {{ totalRunsDefault.indexOf(run) + 1 }}
+            </h3>
+            <h3 class="drizzle-b-h3">
+              Distance: {{ run.distance }} {{ run.unit }}
+            </h3>
             <h3 class="drizzle-b-h3">Time: {{ runTime(run.time) }}</h3>
           </li>
         </ul>
@@ -98,7 +102,9 @@ import { Component, OnInit } from '@angular/core';
         [itemsPerPage]="defaultConfig[0].itemsPerPage"
         (previousClick)="goBack($event, 'pager')"
         (pageClick)="goToPage($event, 'pager')"
-        (nextClick)="goForward($event, 'pager')">
+        (nextClick)="goForward($event, 'pager')"
+        idString="pagination-3"
+      >
       </sprk-pagination>
     </div>
   `,

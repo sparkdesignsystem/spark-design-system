@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-icon',
   template: `
-    <svg [ngClass]="getClasses()" viewBox="0 0 64 64">
+    <svg [ngClass]="getClasses()" viewBox="0 0 64 64" [attr.data-id]="idString">
       <use [attr.xlink:href]="icon" />
     </svg>
   `
@@ -13,6 +13,8 @@ export class SparkIconComponent {
   iconType: string;
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   public icon: string;
 

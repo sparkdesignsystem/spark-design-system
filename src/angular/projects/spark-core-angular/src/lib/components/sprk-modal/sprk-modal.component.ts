@@ -21,6 +21,7 @@ import * as _ from 'lodash';
       [attr.aria-labelledby]="heading_id"
       aria-modal="true"
       [attr.aria-describedby]="content_id"
+      [attr.data-id]="idString"
     >
       <div class="sprk-o-Stack sprk-o-Stack--large">
         <header class="sprk-o-Stack__item sprk-c-Modal__header">
@@ -99,6 +100,8 @@ export class SparkModalComponent {
   confirmAnalyticsString: string;
   @Input()
   cancelAnalyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   isVisible = false;
   @Output()

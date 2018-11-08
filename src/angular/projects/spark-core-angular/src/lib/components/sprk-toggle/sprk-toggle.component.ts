@@ -10,21 +10,23 @@ import {
 @Component({
   selector: 'sprk-toggle',
   template: `
-    <div class="{{ additionalClasses }}">
+    <div class="{{ additionalClasses }}" [attr.data-id]="idString">
       <a
         class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-        [attr.data-analytics]="analyticsString">
-        <sprk-icon iconType="chevron-down" additionalClasses="sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
-          {{ title }}
+        [attr.data-analytics]="analyticsString"
+      >
+        <sprk-icon
+          iconType="chevron-down"
+          additionalClasses="sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
+        ></sprk-icon>
+        {{ title }}
       </a>
 
       <div [@toggleContent]="animState" data-sprk-toggle="content">
-        <p class="sprk-b-TypeBodyFour sprk-u-pts">
-          {{ body }}
-        </p>
+        <p class="sprk-b-TypeBodyFour sprk-u-pts">{{ body }}</p>
       </div>
     </div>
   `,
@@ -59,6 +61,8 @@ export class SparkToggleComponent implements OnInit {
   title: string;
   @Input()
   body: string;
+  @Input()
+  idString: string;
 
   public isOpen = false;
   public iconStateClass = '';
