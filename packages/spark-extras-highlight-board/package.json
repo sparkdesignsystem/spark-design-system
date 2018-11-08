@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDependencies": {
-    "@sparkdesignsystem/spark-core": "^2.1.0"
+    "@sparkdesignsystem/spark-core": "^3.0.0"
   },
   "dependencies": {
     "object-fit-images": "^3.2.3"
