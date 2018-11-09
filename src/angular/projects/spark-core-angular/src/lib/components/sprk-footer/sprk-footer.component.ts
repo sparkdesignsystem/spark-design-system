@@ -130,7 +130,7 @@ import { Component, Input, OnInit } from '@angular/core';
           </h3>
 
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-            <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+            <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <sprk-icon iconType="facebook" additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" idString="icon-facebook-1"></sprk-icon>
@@ -163,7 +163,7 @@ import { Component, Input, OnInit } from '@angular/core';
               </li>
             </ul>
 
-            <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--end-row@m sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+            <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--end-row@m sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
               <li class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#">
                   <sprk-icon iconType="townhouse" additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" idString="icon-townhouse-1"></sprk-icon>
