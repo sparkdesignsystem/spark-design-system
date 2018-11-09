@@ -11,6 +11,7 @@ require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-award/spark-extras-angular-award.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-card/spark-extras-angular-card.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-dictionary/spark-extras-angular-dictionary.gulpfile.js');
+require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.gulpfile.js');
 
 gulp.task('pre-publish', (cb) => {
   runSequence(
@@ -39,13 +40,24 @@ gulp.task('setup-spark-angular-projects', (cb) => {
     ['setup-spark-extras-angular-award',
       'setup-spark-extras-angular-card',
       'setup-spark-extras-angular-dictionary',
+      'setup-spark-extras-angular-highlight-board',
     ],
     cb,
   );
 });
 
 gulp.task('clean-all', (cb) => {
-  runSequence(['clean', 'clean-spark-core', 'clean-spark-extras-highlight-board', 'clean-angular-dev-app'], cb);
+  runSequence([
+    'clean',
+    'clean-spark-core',
+    'clean-spark-extras-highlight-board',
+    'clean-angular-dev-app',
+    'clean-spark-core-angular',
+    'clean-spark-extras-angular-award',
+    'clean-spark-extras-angular-card',
+    'clean-spark-extras-angular-dictionary',
+    'clean-spark-extras-angular-highlight-board',
+  ], cb);
 });
 
 gulp.task('setup-spark-core', (cb) => {
@@ -95,6 +107,14 @@ gulp.task('setup-spark-extras-angular-dictionary', (cb) => {
   runSequence(
     'build-spark-extras-angular-dictionary',
     'link-spark-extras-angular-dictionary',
+    cb,
+  );
+});
+
+gulp.task('setup-spark-extras-angular-highlight-board', (cb) => {
+  runSequence(
+    'build-spark-extras-angular-highlight-board',
+    'link-spark-extras-angular-highlight-board',
     cb,
   );
 });
