@@ -20,6 +20,11 @@ before_install:
 install:
   - gulp pre-publish
 
+before_cache:
+- sudo chown -R travis:travis node_modules
+- sudo chown -R travis:travis packages/spark-core/node_modules
+- sudo chown -R travis:travis packages/spark-extras-highlight-board/node_modules
+
 cache:
   directories:
   - node_modules
