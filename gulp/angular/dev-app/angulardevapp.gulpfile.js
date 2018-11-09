@@ -11,6 +11,14 @@ gulp.task('build-angular-dev-app', (cb) => {
   });
 });
 
+gulp.task('build-angular-dev-app-netlify', (cb) => {
+  exec('cd src/angular && node_modules/.bin/ng build --base-href angular', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
 gulp.task('clean-angular-dev-app', () => gulp.src(['src/angular/node_modules'], { read: false })
   .pipe(clean()));
 

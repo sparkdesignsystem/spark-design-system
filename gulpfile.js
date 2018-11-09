@@ -100,5 +100,5 @@ gulp.task('test-angular', (cb) => {
 
 // netlify
 gulp.task('build', (cb) => {
-  runSequence('pre-publish', 'build-angular-dev-app', 'transfer-angular-dev-app', cb);
+  runSequence('pre-publish', 'build-angular-dev-app-netlify', 'transfer-angular-dev-app', cb);
 });
