@@ -194,6 +194,22 @@ import { Component, Input, OnInit } from '@angular/core';
     </div>
 
     <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
+      <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium" data-id="award-1">
+        <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
+          Awards
+        </h3>
+
+        <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <a class="sprk-o-Stack__item" href="">
+            <div class="drizzle-c-Logo-placeholder"></div>
+          </a>
+
+          <a class="sprk-o-Stack__item" href="">
+            <div class="drizzle-c-Logo-placeholder"></div>
+          </a>
+        </div>
+      </div>
+
       <div class="sprk-o-Stack__item">
         <sprk-toggle
           title="My Disclaimer"
@@ -249,7 +265,7 @@ export class SparkFooterComponent implements OnInit {
   badgeIcons: object[];
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-o-Stack'];
+    const classArray: string[] = ['sprk-o-Stack sprk-o-Stack--medium'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
