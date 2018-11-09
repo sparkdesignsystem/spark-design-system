@@ -55,3 +55,8 @@ gulp.task('serve-angular-dev-app', (cb) => {
     console.log(data.toString());
   })
 });
+
+gulp.task('transfer-angular-dev-app', (cb) => {
+  gulp.src('src/angular/dist/angular/**/*')
+    .pipe(gulp.dest('dist/angular'));
+});

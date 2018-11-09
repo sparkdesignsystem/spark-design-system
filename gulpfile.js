@@ -89,16 +89,16 @@ gulp.task('dev-all', (cb) => {
 
 gulp.task('test-angular', (cb) => {
   runSequence(
-    ['test-spark-core-angular',
-      'test-spark-extras-angular-award',
-      'test-spark-extras-angular-card',
-      'test-spark-extras-angular-dictionary',
-      'test-spark-extras-angular-highlight-board'],
+    'test-spark-core-angular',
+    'test-spark-extras-angular-award',
+    'test-spark-extras-angular-card',
+    'test-spark-extras-angular-dictionary',
+    'test-spark-extras-angular-highlight-board',
     cb,
   );
 });
 
 // netlify
 gulp.task('build', (cb) => {
-  runSequence('pre-publish', cb);
+  runSequence('pre-publish', 'build-angular-dev-app', 'transfer-angular-dev-app', cb);
 });
