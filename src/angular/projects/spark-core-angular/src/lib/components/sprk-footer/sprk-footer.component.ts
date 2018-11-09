@@ -23,9 +23,9 @@ import { Component, Input, OnInit } from '@angular/core';
         </div>
       </div>
 
-      <div *ngIf="localLinks" class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--medium">
-        <div *ngFor="let item of localLinks" class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
+      <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--medium">
+        <div *ngIf="localLinks" class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
+          <div *ngFor="let item of localLinks" class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
             <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
               {{ item.heading }}
             </h3>
