@@ -138,15 +138,69 @@
   margin-bottom: 0;
 }
 
-[class*='sprk-o-Stack__item--sixth\@'],
-[class*='sprk-o-Stack__item--fifth\@'],
-[class*='sprk-o-Stack__item--fourth\@'],
-[class*='sprk-o-Stack__item--third\@'],
-[class*='sprk-o-Stack__item--half\@'],
-[class*='sprk-o-Stack__item--three-fifths\@'],
-[class*='sprk-o-Stack__item--three-fourths\@'],
-[class*='sprk-o-Stack__item--two-fifths\@'] {
-  margin: 0 !important;
+[class*='sprk-o-Stack__item--sixth\@xs'],
+[class*='sprk-o-Stack__item--fifth\@xs'],
+[class*='sprk-o-Stack__item--fourth\@xs'],
+[class*='sprk-o-Stack__item--third\@xs'],
+[class*='sprk-o-Stack__item--half\@xs'],
+[class*='sprk-o-Stack__item--three-fifths\@xs'],
+[class*='sprk-o-Stack__item--three-fourths\@xs'],
+[class*='sprk-o-Stack__item--two-fifths\@xs'] {
+  @media all and (min-width: $split-breakpoint-xs) {
+    margin: 0 !important;
+  }
+}
+
+[class*='sprk-o-Stack__item--sixth\@s'],
+[class*='sprk-o-Stack__item--fifth\@s'],
+[class*='sprk-o-Stack__item--fourth\@s'],
+[class*='sprk-o-Stack__item--third\@s'],
+[class*='sprk-o-Stack__item--half\@s'],
+[class*='sprk-o-Stack__item--three-fifths\@s'],
+[class*='sprk-o-Stack__item--three-fourths\@s'],
+[class*='sprk-o-Stack__item--two-fifths\@s'] {
+  @media all and (min-width: $split-breakpoint-s) {
+    margin: 0 !important;
+  }
+}
+
+[class*='sprk-o-Stack__item--sixth\@m'],
+[class*='sprk-o-Stack__item--fifth\@m'],
+[class*='sprk-o-Stack__item--fourth\@m'],
+[class*='sprk-o-Stack__item--third\@m'],
+[class*='sprk-o-Stack__item--half\@m'],
+[class*='sprk-o-Stack__item--three-fifths\@m'],
+[class*='sprk-o-Stack__item--three-fourths\@m'],
+[class*='sprk-o-Stack__item--two-fifths\@m'] {
+  @media all and (min-width: $split-breakpoint-m) {
+    margin: 0 !important;
+  }
+}
+
+[class*='sprk-o-Stack__item--sixth\@l'],
+[class*='sprk-o-Stack__item--fifth\@l'],
+[class*='sprk-o-Stack__item--fourth\@l'],
+[class*='sprk-o-Stack__item--third\@l'],
+[class*='sprk-o-Stack__item--half\@l'],
+[class*='sprk-o-Stack__item--three-fifths\@l'],
+[class*='sprk-o-Stack__item--three-fourths\@l'],
+[class*='sprk-o-Stack__item--two-fifths\@l'] {
+  @media all and (min-width: $split-breakpoint-l) {
+    margin: 0 !important;
+  }
+}
+
+[class*='sprk-o-Stack__item--sixth\@xl'],
+[class*='sprk-o-Stack__item--fifth\@xl'],
+[class*='sprk-o-Stack__item--fourth\@xl'],
+[class*='sprk-o-Stack__item--third\@xl'],
+[class*='sprk-o-Stack__item--half\@xl'],
+[class*='sprk-o-Stack__item--three-fifths\@xl'],
+[class*='sprk-o-Stack__item--three-fourths\@xl'],
+[class*='sprk-o-Stack__item--two-fifths\@xl'] {
+  @media all and (min-width: $split-breakpoint-xl) {
+    margin: 0 !important;
+  }
 }
 
 //
