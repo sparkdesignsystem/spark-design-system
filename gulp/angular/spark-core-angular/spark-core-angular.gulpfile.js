@@ -10,6 +10,13 @@ gulp.task('build-spark-core-angular', (cb) => {
   });
 });
 
+gulp.task('build-spark-core-angular-silent', (cb) => {
+  exec('cd src/angular/projects/spark-core-angular && ng build spark-core-angular', (err, stdout, stderr) => {
+    console.log(stderr);
+    cb(err);
+  });
+});
+
 gulp.task('clean-spark-core-angular', () => gulp.src(['src/angular/dist/spark-core-angular'], { read: false })
   .pipe(clean()));
 

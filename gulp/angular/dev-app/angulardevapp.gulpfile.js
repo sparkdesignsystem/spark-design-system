@@ -44,3 +44,10 @@ gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
     cb(err);
   });
 });
+
+gulp.task('serve-angular-dev-app', (cb) => {
+  exec(`cd src/angular && ng serve`, (err, stdout, stderr) => {
+    console.log(stderr);
+    cb(err);
+  });
+});

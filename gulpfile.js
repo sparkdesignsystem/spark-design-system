@@ -124,7 +124,27 @@ gulp.task('dev-spark-packages', (cb) => {
 });
 
 gulp.task('dev-spark-angular', (cb) => {
-  runSequence('setup-spark-packages', 'setup-spark-angular-projects', cb);
+  runSequence(
+    'setup-spark-packages',
+    'setup-spark-angular-projects',
+    [
+      'serve-angular-dev-app',
+      'watch',
+    ], cb,
+  );
+});
+
+gulp.task('dev-all', (cb) => {
+  runSequence(
+    'setup-spark-packages',
+    'setup-spark-angular-projects',
+    'build',
+    [
+      'serve-angular-dev-app',
+      'serve',
+      'watch',
+    ], cb,
+  );
 });
 
 gulp.task('build', (cb) => {

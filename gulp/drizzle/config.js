@@ -106,6 +106,12 @@ module.exports = {
         ],
         tasks: ['build-spark-extras-highlight-board'],
       },
+      {
+        match: [
+          './src/angular/projects/spark-core-angular/src/lib/**/*.ts',
+        ],
+        tasks: ['build-spark-core-angular-silent'],
+      },
     ],
   },
 
