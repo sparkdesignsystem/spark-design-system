@@ -1,245 +1,28 @@
 ---
 name: Footer
 description: |
-  The Footer is shown here with a section about global site products. If you choose
-  to not include the global site products then you can remove that element.
+  The Footer is shown here with a section about global site options. If you choose
+  to not include the global site options then you can remove that element.
   You can adjust, based on your content needs, the points at which the different
   pieces in the footer change from a stacked to a split layout. To do so, change
   the Stack object container's responsive suffixes.
 order: 5
 hasAngularCode: true
 ---
-{{!-- <div class="sprk-o-CenteredColumn">
-  <footer class="sprk-o-Stack" role="contentinfo">
-    <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Box">
-        <h2 class="sprk-b-TypeDisplaySix sprk-u-mbm">
-          Site Links
-        </h2>
-        <ul class="sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 1</a>
-          </li>
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 2</a>
-          </li>
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 3</a>
-          </li>
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 4</a>
-          </li>
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 5</a>
-          </li>
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone" href="#nogo">Item 6</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack">
-        <h2 class="sprk-o-Stack__item sprk-b-TypeDisplaySix sprk-o-Box">
-          Our Products
-        </h2>
-
-        <div class="sprk-o-Stack sprk-o-Stack--split@m">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--half@m sprk-o-Stack">
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--small sprk-o-Box">
-              <div class="sprk-o-Stack__item drizzle-c-Logo-placeholder"></div>
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Some information about this.
-              </p>
-            </div>
-
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--small sprk-o-Box">
-              <div class="sprk-o-Stack__item drizzle-c-Logo-placeholder"></div>
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Some information about this specific product offering.
-              </p>
-            </div>
-          </div>
-
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--half@m sprk-o-Stack">
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--small sprk-o-Box">
-              <div class="sprk-o-Stack__item drizzle-c-Logo-placeholder"></div>
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Some information about this.
-              </p>
-            </div>
-
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--small sprk-o-Box">
-              <div class="sprk-o-Stack__item drizzle-c-Logo-placeholder"></div>
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Some information about this specific product offering.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sprk-u-mlm sprk-u-mrm sprk-c-Divider"></div>
-
-    <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-      <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
-        <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-          <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-            <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
-              <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
-                <use xlink:href="#feedback" />
-              </svg>
-
-              Provide Feedback
-            </a>
-          </li>
-
-          <li class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m">
-            <a class="sprk-b-Link sprk-b-Link--plain sprk-u-WhiteSpace--nowrap" href="#">
-              <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
-                <use xlink:href="#desktop-computer" />
-              </svg>
-
-              Share Your Screen
-            </a>
-          </li>
-        </ul>
-
-        <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack--end-row@m sprk-o-Stack sprk-o-Stack--split@xs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
-                <use xlink:href="#facebook" />
-              </svg>
-              <span class="sprk-u-ScreenReaderText">Facebook</span>
-            </a>
-          </li>
-
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
-                <use xlink:href="#instagram" />
-              </svg>
-              <span class="sprk-u-ScreenReaderText">Instagram</span>
-            </a>
-          </li>
-
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
-                <use xlink:href="#twitter" />
-              </svg>
-              <span class="sprk-u-ScreenReaderText">Twitter</span>
-            </a>
-          </li>
-
-          <li class="sprk-o-Stack__item">
-            <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-              <svg class="sprk-c-Icon sprk-c-Icon--l" viewBox="0 0 64 64">
-                <use xlink:href="#youtube" />
-              </svg>
-              <span class="sprk-u-ScreenReaderText">Youtube</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
-        non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
-      </p>
-
-      <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-        <h2 class="sprk-o-Stack__item sprk-b-TypeDisplaySix">
-          Award Pattern Inside Footer
-        </h2>
-
-        <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xl sprk-o-Stack--medium">
-          <a class="sprk-o-Stack__item" href="#">
-            <img
-              class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
-              alt="Spark placeholder image"
-              src="../../assets/toolkit/images/spark-placeholder.jpg" />
-          </a>
-
-          <a class="sprk-o-Stack__item" href="#">
-            <img
-              class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
-              alt="Spark placeholder image"
-              src="../../assets/toolkit/images/spark-placeholder.jpg" />
-          </a>
-
-          <ul class="sprk-o-Stack__item sprk-o-Stack__item--end-column@m sprk-b-List sprk-b-List--bare sprk-o-Stack sprk-o-Stack--split@s sprk-o-Stack--medium">
-            <li class="sprk-o-Stack__item">
-              <a href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
-              </a>
-            </li>
-
-            <li class="sprk-o-Stack__item">
-              <a href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
-              </a>
-            </li>
-
-            <li class="sprk-o-Stack__item">
-              <a href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--small"></div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="sprk-o-Stack__item" data-sprk-toggle="container">
-        <a class="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--plain" data-sprk-toggle="trigger" href="#">
-          <svg class="sprk-c-Icon sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
-            <use xlink:href="#chevron-down"></use>
-          </svg>
-          My Disclaimer
-        </a>
-
-        <div data-sprk-toggle="content">
-          <p class="sprk-b-TypeBodyFour sprk-u-pts">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
-            non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
-          </p>
-        </div>
-      </div>
-
-      <div class="sprk-o-Stack__item" data-sprk-toggle="container">
-        <a class="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--plain" data-sprk-toggle="trigger" href="#">
-          <svg class="sprk-c-Icon sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
-            <use xlink:href="#chevron-down"></use>
-          </svg>
-          My Disclaimer Two
-        </a>
-
-        <div data-sprk-toggle="content">
-          <p class="sprk-b-TypeBodyFour sprk-u-pts">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
-            non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-</div> --}}
-
 <div class="sprk-o-CenteredColumn">
   <footer class="sprk-o-Stack" role="contentinfo">
     <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-        <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
-          OUR PRODUCTS
+        <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
+          Our Options
         </h3>
 
         <div class="sprk-o-Stack__item">
           <a class="sprk-b-Link sprk-b-Link--plain sprk-u-Display--block" href="#">
             <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
-              <use xlink:href="#large-purchase" />
+              <use xlink:href="#auto-loans" />
             </svg>
-            <span class="sprk-u-ScreenReaderText">large purchase</span>
+            <span class="sprk-u-ScreenReaderText">auto loans</span>
           </a>
 
           <p class="sprk-b-TypeBodyTwo" href="#">
@@ -290,7 +73,7 @@ hasAngularCode: true
       <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--large">
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
               SITE LINKS
             </h3>
 
@@ -328,7 +111,7 @@ hasAngularCode: true
           </div>
 
           <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
               LEARN MORE
             </h3>
 
@@ -360,7 +143,7 @@ hasAngularCode: true
           </div>
 
           <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
               SUPPORT
             </h3>
 
