@@ -5,119 +5,35 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
   <footer [ngClass]="getClasses()" role="contentinfo" [attr.data-id]="idString">
     <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-      <div *ngIf="globalSection" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
+      <div *ngIf="globalLinks" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
         <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
           {{ globalHeading }}
         </h3>
 
-        <div *ngFor="let item in globalLinks" class="sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-u-Display--block" href="{{ item.href }}" [attr.data-analytics]="{{ item.analytics }}">
-            <sprk-icon iconType="{{ item.icon }}" additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--xl" idString="icon-{{ item.icon }}-1"></sprk-icon>
-            <span class="sprk-u-ScreenReaderText">{{ item.icon }}</span>
+        <div *ngFor="let item of globalLinks" class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
+          <a class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--plain" href="{{ item.href }}" attr.data-analytics="{{ item.analytics }}">
+            <sprk-icon *ngIf="item.icon" iconType="{{ item.icon }}" additionalClasses="{{ item.iconCSS }}" idString="icon-{{ item.icon }}-1"></sprk-icon>
+            <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{ item.iconScreenReaderText }}</span>
+            <img *ngIf="item.imgSrc" src="{{ item.imgSrc }}" alt="{{ item.imgAlt }}" class="{{ item.imgCSS }}">
           </a>
 
-          <p class="sprk-b-TypeBodyTwo">
+          <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
             {{ item.text }}
           </p>
         </div>
       </div>
 
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--medium">
-        <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
+      <div *ngIf="localLinks" class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--medium">
+        <div *ngFor="let item of localLinks" class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
             <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
-              SITE LINKS
+              {{ item.heading }}
             </h3>
 
             <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  About This
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  About This Other Thing
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  About That
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  Link Item
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  This Link Item
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
-              LEARN MORE
-            </h3>
-
-            <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  About This Other Thing
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  About This
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  About That
-                </a>
-              </li>
-
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  Link Item
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase">
-              SUPPORT
-            </h3>
-
-            <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  Share Your Screen
-                </a>
-              </li>
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  Opt Out
-                </a>
-              </li>
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  Disclosures and Other Things
-                </a>
-              </li>
-              <li class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="#nogo">
-                  We Want Your Feedback
+              <li class="sprk-o-Stack__item" *ngFor="let link of item.links">
+                <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone sprk-u-FontWeight--normal" href="{{ link.href }}">
+                  {{ link.text }}
                 </a>
               </li>
             </ul>
@@ -252,8 +168,6 @@ export class SparkFooterComponent implements OnInit {
   @Input()
   idString: string;
   @Input()
-  globalSection: boolean;
-  @Input()
   globalHeading: string;
   @Input()
   globalLinks: object[];
@@ -277,6 +191,6 @@ export class SparkFooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(`Boolean attribute is ${this.globalSection}`);
+    // console.log(`Boolean attribute is ${this.globalSection}`);
   }
 }
