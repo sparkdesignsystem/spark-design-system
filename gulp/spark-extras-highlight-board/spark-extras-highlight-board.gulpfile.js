@@ -1,6 +1,11 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const runSequence = require('run-sequence');
 const clean = require('gulp-clean');
+
+gulp.task('setup-spark-extras-highlight-board', (cb) => {
+  runSequence('clean-spark-extras-highlight-board', 'install-spark-extras-highlight-board', 'build-spark-extras-highlight-board', 'link-spark-extras-highlight-board', cb);
+});
 
 gulp.task('build-spark-extras-highlight-board', (cb) => {
   exec('cd packages/spark-extras-highlight-board && $(npm bin)/webpack', (err, stdout, stderr) => {

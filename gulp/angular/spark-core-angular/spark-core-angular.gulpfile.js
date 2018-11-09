@@ -1,6 +1,18 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const runSequence = require('run-sequence');
 const clean = require('gulp-clean');
+
+// assumes previous run of setup-spark-packages
+gulp.task('setup-spark-core-angular', (cb) => {
+  runSequence(
+    'link-spark-to-angular-dir',
+    'build-spark-core-angular',
+    'link-spark-core-angular',
+    'link-spark-core-angular-to-angular-dir',
+    cb,
+  );
+});
 
 gulp.task('build-spark-core-angular', (cb) => {
   exec('cd src/angular/projects/spark-core-angular && ng build spark-core-angular', (err, stdout, stderr) => {

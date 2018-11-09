@@ -1,6 +1,15 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const runSequence = require('run-sequence');
 const clean = require('gulp-clean');
+
+gulp.task('setup-spark-extras-angular-card', (cb) => {
+  runSequence(
+    'build-spark-extras-angular-card',
+    'link-spark-extras-angular-card',
+    cb,
+  );
+});
 
 gulp.task('build-spark-extras-angular-card', (cb) => {
   exec('cd src/angular/projects/spark-extras-angular-card && ng build spark-extras-angular-card', (err, stdout, stderr) => {

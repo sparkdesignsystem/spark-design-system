@@ -1,6 +1,15 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const runSequence = require('run-sequence');
 const clean = require('gulp-clean');
+
+gulp.task('setup-spark-extras-angular-dictionary', (cb) => {
+  runSequence(
+    'build-spark-extras-angular-dictionary',
+    'link-spark-extras-angular-dictionary',
+    cb,
+  );
+});
 
 gulp.task('build-spark-extras-angular-dictionary', (cb) => {
   exec('cd src/angular/projects/spark-extras-angular-dictionary && ng build spark-extras-angular-dictionary', (err, stdout, stderr) => {

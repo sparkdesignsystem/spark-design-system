@@ -1,6 +1,15 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const runSequence = require('run-sequence');
 const clean = require('gulp-clean');
+
+gulp.task('setup-spark-extras-angular-highlight-board', (cb) => {
+  runSequence(
+    'build-spark-extras-angular-highlight-board',
+    'link-spark-extras-angular-highlight-board',
+    cb,
+  );
+});
 
 gulp.task('build-spark-extras-angular-highlight-board', (cb) => {
   exec('cd src/angular/projects/spark-extras-angular-highlight-board && ng build spark-extras-angular-highlight-board', (err, stdout, stderr) => {

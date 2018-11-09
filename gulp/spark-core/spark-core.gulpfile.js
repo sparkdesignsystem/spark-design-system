@@ -1,6 +1,11 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const runSequence = require('run-sequence');
 const clean = require('gulp-clean');
+
+gulp.task('setup-spark-core', (cb) => {
+  runSequence('clean-spark-core', 'install-spark-core', 'build-spark-core', 'link-spark-core', cb);
+});
 
 gulp.task('build-spark-core', (cb) => {
   exec('cd packages/spark-core && $(npm bin)/webpack', (err, stdout, stderr) => {

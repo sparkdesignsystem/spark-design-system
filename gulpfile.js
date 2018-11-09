@@ -15,7 +15,6 @@ require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angula
 
 gulp.task('pre-publish', (cb) => {
   runSequence(
-    'clean-all',
     'setup-spark-packages',
     'build-drizzle',
     'setup-spark-angular-projects',
@@ -60,67 +59,8 @@ gulp.task('clean-all', (cb) => {
   ], cb);
 });
 
-gulp.task('setup-spark-core', (cb) => {
-  runSequence('clean-spark-core', 'install-spark-core', 'build-spark-core', 'link-spark-core', cb);
-});
-
-gulp.task('setup-spark-extras-card', (cb) => {
-  runSequence('link-spark-extras-card', cb);
-});
-
-gulp.task('setup-spark-extras-dictionary', (cb) => {
-  runSequence('link-spark-extras-dictionary', cb);
-});
-
-gulp.task('setup-spark-extras-highlight-board', (cb) => {
-  runSequence('clean-spark-extras-highlight-board', 'install-spark-extras-highlight-board', 'build-spark-extras-highlight-board', 'link-spark-extras-highlight-board', cb);
-});
-
-// assumes previous run of setup-spark-packages
-gulp.task('setup-spark-core-angular', (cb) => {
-  runSequence(
-    'link-spark-to-angular-dir',
-    'build-spark-core-angular',
-    'link-spark-core-angular',
-    'link-spark-core-angular-to-angular-dir',
-    cb,
-  );
-});
-
-gulp.task('setup-spark-extras-angular-award', (cb) => {
-  runSequence(
-    'build-spark-extras-angular-award',
-    'link-spark-extras-angular-award',
-    cb,
-  );
-});
-
-gulp.task('setup-spark-extras-angular-card', (cb) => {
-  runSequence(
-    'build-spark-extras-angular-card',
-    'link-spark-extras-angular-card',
-    cb,
-  );
-});
-
-gulp.task('setup-spark-extras-angular-dictionary', (cb) => {
-  runSequence(
-    'build-spark-extras-angular-dictionary',
-    'link-spark-extras-angular-dictionary',
-    cb,
-  );
-});
-
-gulp.task('setup-spark-extras-angular-highlight-board', (cb) => {
-  runSequence(
-    'build-spark-extras-angular-highlight-board',
-    'link-spark-extras-angular-highlight-board',
-    cb,
-  );
-});
-
 gulp.task('dev-spark-packages', (cb) => {
-  runSequence('setup-spark-packages', 'build', ['watch', 'serve'], cb);
+  runSequence('setup-spark-packages', 'build-drizzle', ['watch', 'serve'], cb);
 });
 
 gulp.task('dev-spark-angular', (cb) => {
@@ -138,7 +78,7 @@ gulp.task('dev-all', (cb) => {
   runSequence(
     'setup-spark-packages',
     'setup-spark-angular-projects',
-    'build',
+    'build-drizzle',
     [
       'serve-angular-dev-app',
       'serve',
@@ -147,6 +87,7 @@ gulp.task('dev-all', (cb) => {
   );
 });
 
+// netlify
 gulp.task('build', (cb) => {
   runSequence('pre-publish', cb);
 });
