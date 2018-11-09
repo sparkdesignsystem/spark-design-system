@@ -4,7 +4,7 @@ const spawn = require('child_process').spawn;
 const clean = require('gulp-clean');
 
 gulp.task('build-angular-dev-app', (cb) => {
-  exec('cd src/angular && ng build', (err, stdout, stderr) => {
+  exec('cd src/angular && node_modules/.bin/ng build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

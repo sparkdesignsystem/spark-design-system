@@ -15,7 +15,15 @@ gulp.task('setup-spark-core-angular', (cb) => {
 });
 
 gulp.task('build-spark-core-angular', (cb) => {
-  exec('cd src/angular/projects/spark-core-angular && ng build spark-core-angular', (err, stdout, stderr) => {
+  exec('cd src/angular/projects/spark-core-angular && ../../node_modules/.bin/ng build spark-core-angular', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('test-spark-core-angular', (cb) => {
+  exec('cd src/angular/projects/spark-core-angular && ../../node_modules/.bin/ng test spark-core-angular --watch=false', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

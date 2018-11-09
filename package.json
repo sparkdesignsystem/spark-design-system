@@ -23,8 +23,6 @@
     ]
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.10.5",
-    "@angular/cli": "^7.0.5",
     "@cloudfour/gulp-tasks": "^2.4.0",
     "@cloudfour/hbs-helpers": "^0.9.0",
     "@sparkdesignsystem/spark-core": "^2.0.1",
@@ -78,7 +76,7 @@
     "precommit": "lint-staged",
     "test": "npm run test-spark && npm run test-angular",
     "test-spark": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras-highlight-board/",
-    "test-angular": "npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award  && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
+    "test-angular": "gulp test-angular",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
     "lerna": "npm run build-spark && lerna bootstrap && lerna publish"
   },

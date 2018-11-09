@@ -12,7 +12,15 @@ gulp.task('setup-spark-extras-angular-card', (cb) => {
 });
 
 gulp.task('build-spark-extras-angular-card', (cb) => {
-  exec('cd src/angular/projects/spark-extras-angular-card && ng build spark-extras-angular-card', (err, stdout, stderr) => {
+  exec('cd src/angular/projects/spark-extras-angular-card && ../../node_modules/.bin/ng build spark-extras-angular-card', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('test-spark-extras-angular-card', (cb) => {
+  exec('cd src/angular/projects/spark-extras-angular-card && ../../node_modules/.bin/ng test spark-extras-angular-card --watch=false', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

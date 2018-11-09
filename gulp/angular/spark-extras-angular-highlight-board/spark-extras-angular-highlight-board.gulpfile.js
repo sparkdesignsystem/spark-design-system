@@ -12,7 +12,15 @@ gulp.task('setup-spark-extras-angular-highlight-board', (cb) => {
 });
 
 gulp.task('build-spark-extras-angular-highlight-board', (cb) => {
-  exec('cd src/angular/projects/spark-extras-angular-highlight-board && ng build spark-extras-angular-highlight-board', (err, stdout, stderr) => {
+  exec('cd src/angular/projects/spark-extras-angular-highlight-board && ../../node_modules/.bin/ng build spark-extras-angular-highlight-board', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('test-spark-extras-angular-highlight-board', (cb) => {
+  exec('cd src/angular/projects/spark-extras-angular-highlight-board && ../../node_modules/.bin/ng test spark-extras-angular-highlight-board --watch=false', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

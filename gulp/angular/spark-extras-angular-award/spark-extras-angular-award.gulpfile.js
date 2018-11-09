@@ -12,7 +12,15 @@ gulp.task('setup-spark-extras-angular-award', (cb) => {
 });
 
 gulp.task('build-spark-extras-angular-award', (cb) => {
-  exec('cd src/angular/projects/spark-extras-angular-award && ng build spark-extras-angular-award', (err, stdout, stderr) => {
+  exec('cd src/angular/projects/spark-extras-angular-award && ../../node_modules/.bin/ng build spark-extras-angular-award', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('test-spark-extras-angular-award', (cb) => {
+  exec('cd src/angular/projects/spark-extras-angular-award && ../../node_modules/.bin/ng test spark-extras-angular-award --watch=false', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
