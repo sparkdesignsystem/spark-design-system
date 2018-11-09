@@ -4,7 +4,7 @@ description:
   page of an application. The elements in the Footer are grouped by type or relevance.
 restrictions:
  - Footer is to be used only at the bottom of the page.
- - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+ - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("footer-1", "footer-2", "footer-1", etc).
 sparkPackageCore: true
