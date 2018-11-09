@@ -110,7 +110,31 @@ module.exports = {
         match: [
           './src/angular/projects/spark-core-angular/src/lib/**/*.ts',
         ],
-        tasks: ['build-spark-core-angular-silent'],
+        tasks: ['build-spark-core-angular'],
+      },
+      {
+        match: [
+          './src/angular/projects/spark-extras-angular-award/src/lib/**/*.ts',
+        ],
+        tasks: ['build-spark-extras-angular-award'],
+      },
+      {
+        match: [
+          './src/angular/projects/spark-extras-angular-card/src/lib/**/*.ts',
+        ],
+        tasks: ['build-spark-extras-angular-card'],
+      },
+      {
+        match: [
+          './src/angular/projects/spark-extras-angular-dictionary/src/lib/**/*.ts',
+        ],
+        tasks: ['build-spark-extras-angular-dictionary'],
+      },
+      {
+        match: [
+          './src/angular/projects/spark-extras-angular-highlight-board/src/lib/**/*.ts',
+        ],
+        tasks: ['build-spark-extras-angular-highlight-board'],
       },
     ],
   },

@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
+const spawn = require('child_process').spawn;
 const clean = require('gulp-clean');
 
 gulp.task('build-angular-dev-app', (cb) => {
@@ -38,7 +39,7 @@ gulp.task('link-spark-to-angular-dir', (cb) => {
 gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
   gulp.src(['./src/angular/node_modules/@sparkdesignsystem/spark-core-angular'], { read: false })
     .pipe(clean());
-  exec(`cd src/angular && npm link @sparkdesignsystem/spark-core-angular`, (err, stdout, stderr) => {
+  exec(`cd src/angular p& npm link @sparkdesignsystem/spark-core-angular`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -46,8 +47,11 @@ gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
 });
 
 gulp.task('serve-angular-dev-app', (cb) => {
-  exec(`cd src/angular && ng serve`, (err, stdout, stderr) => {
-    console.log(stderr);
-    cb(err);
-  });
+  const ls = spawn(`ng`, ['serve'], { cwd: "src/angular"});
+  ls.stdout.on('data', (data) => {
+    console.log(data.toString());
+  })
+  ls.stderr.on('data', (data) => {
+    console.log(data.toString());
+  })
 });
