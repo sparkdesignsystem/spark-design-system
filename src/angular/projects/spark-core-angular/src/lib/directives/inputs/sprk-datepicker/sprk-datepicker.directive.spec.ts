@@ -5,11 +5,8 @@ import { SprkDatepickerDirective } from './sprk-datepicker.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <input
-      type="text"
-      placeholder="MM/DD/YYYY"
-      sprkDatepicker>
-    `
+    <input type="text" placeholder="MM/DD/YYYY" sprkDatepicker />
+  `
 })
 class TestComponent {}
 
@@ -58,6 +55,6 @@ describe('SprkDatePickerDirective', () => {
     setTimeout(() => {
       document.querySelector('.dp-day').dispatchEvent(new Event('click'));
       done();
-    }, 1000);
+    }, 500);
   });
 });
