@@ -12,7 +12,7 @@ import {
   template: `
     <div class="{{ additionalClasses }}" [attr.data-id]="idString">
       <a
-        class="{{ toggleTitleFontClass }} sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
+        class="{{ titleFontClass }} sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
@@ -62,7 +62,7 @@ export class SparkToggleComponent implements OnInit {
   @Input()
   iconClass: string;
   @Input()
-  toggleTitleFontClass = 'sprk-b-TypeBodyThree';
+  titleFontClass = 'sprk-b-TypeBodyThree';
   @Input()
   idString: string;
 
