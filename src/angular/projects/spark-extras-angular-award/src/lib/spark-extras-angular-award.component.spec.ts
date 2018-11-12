@@ -92,4 +92,20 @@ describe('SparkAwardComponent', () => {
     const el = element.getElementsByTagName('a')[1];
     expect(el.getAttribute('data-analytics')).toEqual(str);
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('h2');
+    expect(element.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    const testString = null;
+    component.idString = testString;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('h2');
+    expect(element.getAttribute('data-id')).toBeNull();
+  });
 });
