@@ -17,7 +17,7 @@ import {
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString">
-        <sprk-icon iconType="chevron-down" additionalClasses="sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
+        <sprk-icon iconType="chevron-down" additionalClasses="{{ iconCssClass }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
           {{ title }}
       </a>
 
@@ -59,6 +59,8 @@ export class SparkToggleComponent implements OnInit {
   title: string;
   @Input()
   body: string;
+  @Input()
+  iconCssClass: string;
   @Input()
   idString: string;
 

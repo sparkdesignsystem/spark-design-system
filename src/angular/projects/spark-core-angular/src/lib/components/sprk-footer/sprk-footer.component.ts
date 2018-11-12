@@ -136,7 +136,9 @@ import { Component, Input } from '@angular/core';
         <sprk-toggle
           title="{{ toggle.title }}"
           body="{{ toggle.body }}"
-          analyticsString="{{ toggle.analytics }}">
+          analyticsString="{{ toggle.analytics }}"
+          iconCssClass="sprk-c-Icon--current-color"
+          additionalClasses="sprk-b-TypeBodyFour">
         </sprk-toggle>
       </div>
 
