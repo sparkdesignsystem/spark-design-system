@@ -47,7 +47,7 @@ gulp.task('link-spark-to-angular-dir', (cb) => {
 gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
   gulp.src(['./src/angular/node_modules/@sparkdesignsystem/spark-core-angular'], { read: false })
     .pipe(clean());
-  exec(`cd src/angular p& npm link @sparkdesignsystem/spark-core-angular`, (err, stdout, stderr) => {
+  exec(`cd src/angular && npm link @sparkdesignsystem/spark-core-angular`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -65,6 +65,8 @@ gulp.task('serve-angular-dev-app', (cb) => {
 });
 
 gulp.task('transfer-angular-dev-app', (cb) => {
+  gulp.src('dist/angular', { read: false })
+    .pipe(clean())
   gulp.src('src/angular/dist/angular/**/*')
     .pipe(gulp.dest('dist/angular'));
 });
