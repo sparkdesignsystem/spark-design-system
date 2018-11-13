@@ -49,7 +49,7 @@ describe('SparkToggleComponent', () => {
     ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open');
   });
 
-  it('should add icon classes to icon when toggle is opened and then closed', () => {
+  it('should add icon classes to icon when the toggle is opened and then closed', () => {
     component.title = 'placeholder';
     element.querySelector('a').click();
     element.querySelector('a').click();
