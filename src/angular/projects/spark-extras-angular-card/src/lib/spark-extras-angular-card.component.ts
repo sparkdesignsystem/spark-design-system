@@ -49,25 +49,25 @@ import { Component, Input } from '@angular/core';
         {{ title }}
       </h3>
 
-      <a
-        *ngIf="media === 'img'"
-        [routerLink]="imgHref"
-        class="sprk-o-Stack__item"
-        [attr.data-analytics]="imgLinkAnalytics">
-        <img
-          [attr.alt]="imgAlt"
-          [attr.src]="imgSrc">
-      </a>
-
-      <a
-        *ngIf="media === 'icon'"
-        [routerLink]="iconHref"
-        class="sprk-o-Stack__item sprk-o-Stack__item--center"
-        [attr.data-analytics]="iconLinkAnalytics">
-        <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
-      </a>
-
       <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+        <a
+          *ngIf="media === 'img'"
+          [routerLink]="imgHref"
+          class="sprk-o-Stack__item"
+          [attr.data-analytics]="imgLinkAnalytics">
+          <img
+            [attr.alt]="imgAlt"
+            [attr.src]="imgSrc">
+        </a>
+
+        <a
+          *ngIf="media === 'icon'"
+          [routerLink]="iconHref"
+          class="sprk-o-Stack__item sprk-o-Stack__item--center"
+          [attr.data-analytics]="iconLinkAnalytics">
+          <sprk-icon [iconType]="iconType" [additionalClasses]="additionalClassesIcon"></sprk-icon>
+        </a>
+
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
           {{ body }}
         </p>

@@ -95,7 +95,7 @@ import { Component } from '@angular/core';
 
       <sprk-card
         media="icon"
-        iconType="chat"
+        iconType="chat-online"
         iconHref="https://sparkdesignsystem.com"
         additionalClassesIcon="sprk-c-Icon--l sprk-b-TypeBodyTwo"
         cardType="teaser"
