@@ -42,6 +42,18 @@ import { Component, OnInit } from '@angular/core';
         This is a Spark Disabled Link
       </sprk-link>
     </div>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">
+        Icon With Text Link
+      </h2>
+
+      <sprk-link linkType="plain" href="/links" idString="link-5" analyticsString="object.action.event">
+        <sprk-icon iconType="communication" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-u-mrs"></sprk-icon>
+
+        Message Us
+      </sprk-link>
+    </div>
   `,
   styles: ['']
 })
