@@ -45,8 +45,8 @@ import { Component, Input } from '@angular/core';
       additionalClasses="sprk-o-Stack__item--start-column"
       toggleType="base"
       title="{{ disclaimerTitle }}"
-      body="{{ disclaimerCopy }}"
       analyticsString="{{ analyticsStringDisclaimer }}">
+      <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
     </sprk-toggle>
   </sprk-stack>
   `,
