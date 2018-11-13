@@ -8,7 +8,7 @@ gulp.task('setup-spark-core', (cb) => {
 });
 
 gulp.task('build-spark-core', (cb) => {
-  exec('cd packages/spark-core && $(npm bin)/webpack', (err, stdout, stderr) => {
+  exec('cd packages/spark-core && npm run webpack', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -18,8 +18,8 @@ gulp.task('build-spark-core', (cb) => {
 gulp.task('clean-spark-core', () => gulp.src(['./packages/spark-core/node_modules', './packages/spark-core/es5'], { read: false })
   .pipe(clean()));
 
-gulp.task('install-spark-core', (cb) => {
-  exec('cd packages/spark-core && rm -rf node_modules && npm install', (err, stdout, stderr) => {
+gulp.task('install-spark-core', ['clean-spark-core'], (cb) => {
+  exec('cd packages/spark-core && npm install', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

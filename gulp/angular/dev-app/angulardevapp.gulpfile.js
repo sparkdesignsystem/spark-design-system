@@ -31,13 +31,7 @@ gulp.task('install-angular-dev-app', (cb) => {
 });
 
 gulp.task('link-spark-to-angular-dir', (cb) => {
-  exec(
-    `cd src/angular &&
-     npm unlink @sparkdesignsystem &&
-     npm link @sparkdesignsystem/spark-core &&
-     npm link @sparkdesignsystem/spark-card && 
-     npm link @sparkdesignsystem/spark-description-table && 
-     npm link @sparkdesignsystem/spark-highlight-board`, (err, stdout, stderr) => {
+  exec( `cd src/angular && npm unlink @sparkdesignsystem && npm link @sparkdesignsystem/spark-core && npm link @sparkdesignsystem/spark-card && npm link @sparkdesignsystem/spark-description-table && npm link @sparkdesignsystem/spark-highlight-board`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
