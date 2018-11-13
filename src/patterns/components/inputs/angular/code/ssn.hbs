@@ -2,7 +2,7 @@
   <label sprkLabel>SSN Input</label>
   <input
     [type]="ssnType"
-    [additionalClasses]="ssnInput.invalid && ssnInput.dirty ? 'sprk-b-TextInput--error': ''"
+    [ngClass]="{ 'sprk-b-TextInput--error': ssnInput.invalid && ssnInput.dirty }"
     pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$"
     placeholder="000-00-0000"
     name="ssn_input"
