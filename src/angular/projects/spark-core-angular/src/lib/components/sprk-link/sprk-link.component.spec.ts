@@ -64,4 +64,10 @@ describe('SparkLinkComponent', () => {
       'Product: Link: Link 1'
     );
   });
+
+  it('should set the target attr if supplied', () => {
+    component.target = '_blank';
+    fixture.detectChanges();
+    expect(linkElement.getAttribute('target')).toEqual('_blank');
+  });
 });
