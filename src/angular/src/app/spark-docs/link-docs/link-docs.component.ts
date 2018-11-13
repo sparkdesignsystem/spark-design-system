@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         Link
       </h2>
 
-      <sprk-link href="/links" idString="link-1" analyticsString="object.action.event">
+      <sprk-link href="/links" idString="link-1" analyticsString="object.action.event" target="_blank">
         This is a standard Spark Link!
       </sprk-link>
     </div>
