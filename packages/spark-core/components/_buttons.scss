@@ -4,9 +4,6 @@
 .sprk-c-Button {
   box-shadow: $btn-shadow;
   transition: all $btn-transition-speed;
-  &:visited {
-    color: $btn-text-color;
-  }
   
   &:hover,
   &:active,
