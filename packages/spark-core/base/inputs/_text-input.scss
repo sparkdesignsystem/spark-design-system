@@ -44,16 +44,10 @@
 
 .sprk-b-InlineSearch__icon,
 .sprk-b-DatePicker__icon {
-  fill: $red;
   margin-left: $input-icon-offset-x;
   margin-top: $input-icon-offset-y;
   position: absolute;
-  stroke: $red;
   z-index: $layer-height-xs;
-}
-
-.sprk-b-InlineSearch__icon {
-  stroke: $black;
 }
 
 .sprk-b-TextInput[readonly] {
