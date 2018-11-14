@@ -62,6 +62,7 @@ gulp.task('dev-spark-packages', (cb) => {
 
 gulp.task('dev-spark-angular', (cb) => {
   runSequence(
+    'install-angular-dev-app',
     'setup-spark-packages',
     'setup-spark-angular-projects',
     ['serve-angular-dev-app', 'watch'],
@@ -72,6 +73,7 @@ gulp.task('dev-spark-angular', (cb) => {
 gulp.task('dev-all', (cb) => {
   runSequence(
     'setup-spark-packages',
+    'install-angular-dev-app',
     'setup-spark-angular-projects',
     'build-drizzle',
     ['serve-angular-dev-app', 'serve', 'watch'],
