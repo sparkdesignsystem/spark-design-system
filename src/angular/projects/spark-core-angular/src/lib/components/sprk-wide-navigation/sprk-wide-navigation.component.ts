@@ -3,7 +3,7 @@ import { Component, HostListener, Input } from '@angular/core';
 @Component({
   selector: 'sprk-wide-navigation',
   template: `
-    <nav role="navigation">
+    <nav role="navigation" [attr.data-id]="idString">
       <ul [ngClass]="getClasses()">
         <li *ngFor="let link of links"
             [ngClass]="{
@@ -50,6 +50,8 @@ export class SparkWideNavigationComponent {
   links: object[];
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   @HostListener('document:focusin', ['$event'])
   handleFocusEvent(event: FocusEvent) {

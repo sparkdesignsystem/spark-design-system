@@ -2,7 +2,7 @@
 name: Base
 hidden: true
 ---
-<div class="sprk-c-HighlightBoard {{#if image}}sprk-c-HighlightBoard--has-image {{/if}} {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}}sprk-u-mbm {{#if fullwidth}}sprk-u-FullWidth{{/if}}">
+<div class="sprk-c-HighlightBoard {{#if image}}sprk-c-HighlightBoard--has-image {{/if}} {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}}sprk-u-mbm {{#if fullwidth}}sprk-u-FullWidth{{/if}}" {{#if idString}}data-id="{{idString}}"{{/if}}>
   {{#if image }}
     <img class="sprk-c-HighlightBoard__image" src="{{imagefile}}" alt="placeholder">
   {{/if}}

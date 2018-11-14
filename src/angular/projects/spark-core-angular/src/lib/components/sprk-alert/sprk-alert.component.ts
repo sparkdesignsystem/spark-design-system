@@ -8,7 +8,8 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
       *ngIf="visible"
       [ngClass]="getClassesAlertContainer()"
       role="alert"
-      [attr.data-analytics]="analyticsString">
+      [attr.data-analytics]="analyticsString"
+      [attr.data-id]="idString">
       <div class="sprk-c-Alert__content">
         <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
 
@@ -33,6 +34,8 @@ export class SparkAlertComponent {
   alertType: string;
   @Input()
   analyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   additionalClasses: string;
   @Input()

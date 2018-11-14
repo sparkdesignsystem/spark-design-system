@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         Tabbed Navigation
       </h2>
 
-      <sprk-tabbed-navigation>
+      <sprk-tabbed-navigation idString="navigation-tabbed-1">
         <button sprkTabbedNavigationTab analyticsString="Tab: 1">Tab 1</button>
         <button [defaultActive]=true sprkTabbedNavigationTab>Tab 2</button>
         <button sprkTabbedNavigationTab>Tab 3</button>

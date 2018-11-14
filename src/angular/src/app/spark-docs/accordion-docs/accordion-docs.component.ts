@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
       <div class="drizzle-o-ContentGrouping">
         <h2 class="drizzle-b-h2">Primary Accordion</h2>
         <sprk-accordion>
-          <sprk-accordion-item isOpen="true" title="This is a longer title than all the other accordion titles here. But, it works!">
+          <sprk-accordion-item idString="accordion-item-1" analyticsString="object.action.event" isOpen="true" title="This is a longer title than all the other accordion titles here. But, it works!">
             <p>
               This is some content This is some content.
               This is some content. This is some content

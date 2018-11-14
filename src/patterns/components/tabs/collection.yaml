@@ -9,3 +9,6 @@ restrictions:
   - Tabbed Navigation needs to have at least two tabs.
   - There should not be more than seven tabs in any single Tabbed Navigation.
   - Tab label content should not exceed a reasonable length.
+  - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).

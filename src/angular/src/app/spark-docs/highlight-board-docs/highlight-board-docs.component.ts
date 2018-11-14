@@ -16,7 +16,8 @@ import { Component } from '@angular/core';
         ctaText2="Developers"
         ctaHref2="https://sparkdesignsystem.com/"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-        imgAlt="placeholder">
+        imgAlt="placeholder"
+        idString="highlightboard-1">
       </sprk-highlight-board>
     </div>
   </div>
@@ -30,7 +31,8 @@ import { Component } from '@angular/core';
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-        imgAlt="placeholder">
+        imgAlt="placeholder"
+        idString="highlightboard-2">
       </sprk-highlight-board>
     </div>
   </div>
@@ -45,7 +47,8 @@ import { Component } from '@angular/core';
         heading="Highlight Board Heading Example"
         ctaText="Learn More"
         ctaText2="Learn More"
-        type="noImage">
+        type="noImage"
+        idString="highlightboard-3">
       </sprk-highlight-board>
     </div>
   </div>
@@ -61,7 +64,8 @@ import { Component } from '@angular/core';
         ctaText="Learn More"
         type="stacked"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-        imgAlt="placeholder">
+        imgAlt="placeholder"
+        idString="highlightboard-4">
       </sprk-highlight-board>
     </div>
   </div>
@@ -79,7 +83,8 @@ import { Component } from '@angular/core';
       ctaHref2="https://sparkdesignsystem.com/"
       type="fullWidth"
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-      imgAlt="placeholder">
+      imgAlt="placeholder"
+      idString="highlightboard-5">
     </sprk-highlight-board>
   </div>
   `,

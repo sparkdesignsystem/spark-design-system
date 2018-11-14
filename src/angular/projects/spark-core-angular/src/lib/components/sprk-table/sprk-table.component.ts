@@ -2,7 +2,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'sprk-table',
-  template: `<div [ngClass]="getClasses()">
+  template: `
+    <div
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString">
       <table [ngClass]="getTableClasses()">
         <ng-content></ng-content>
       </table>
@@ -13,6 +16,8 @@ export class SparkTableComponent {
   additionalClasses: string;
   @Input()
   additionalTableClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-b-TableContainer'];

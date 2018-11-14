@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         Base
       </h2>
 
-      <sprk-card cardType="base">
+      <sprk-card cardType="base" idString="card-1">
         <h4>This is a base Spark card!</h4>
       </sprk-card>
     </div>
@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
         Base Card: Omitted cardType
       </h2>
 
-      <sprk-card>
+      <sprk-card idString="card-2">
         <h4>This is a base Spark card!</h4>
       </sprk-card>
     </div>
@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
         Base With Random Things
       </h2>
 
-      <sprk-card cardType="base">
+      <sprk-card cardType="base" idString="card-3">
         <h4>
           This is a base Spark card!
         </h4>
@@ -49,10 +49,10 @@ import { Component } from '@angular/core';
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">
-        Base With Additoinal Classes
+        Base With Additional Classes
       </h2>
 
-      <sprk-card cardType="base" additionalClasses="sprk-u-mbl">
+      <sprk-card cardType="base" additionalClasses="sprk-u-mbl" idString="card-4">
         <h4>
           This is a base Spark card!
         </h4>
@@ -83,7 +83,8 @@ import { Component } from '@angular/core';
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark">
+        ctaAnalytics="Button: Spark"
+        idString="card-5">
       </sprk-card>
     </div>
 
@@ -106,7 +107,8 @@ import { Component } from '@angular/core';
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark">
+        ctaAnalytics="Button: Spark"
+        idString="card-6">
       </sprk-card>
     </div>
 
@@ -130,7 +132,8 @@ import { Component } from '@angular/core';
         ctaType="link"
         ctaText="Neat!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Link: Spark">
+        ctaAnalytics="Link: Spark"
+        idString="card-6">
       </sprk-card>
     </div>
 
@@ -152,7 +155,8 @@ import { Component } from '@angular/core';
         ctaType="link"
         ctaText="Neat!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Link: Spark">
+        ctaAnalytics="Link: Spark"
+        idString="card-7">
       </sprk-card>
     </div>
 
@@ -179,7 +183,8 @@ import { Component } from '@angular/core';
         ctaType="button"
         ctaText="Learn!"
         ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark">
+        ctaAnalytics="Button: Spark"
+        idString="card-8">
       </sprk-card>
     </div>
 
@@ -202,7 +207,8 @@ import { Component } from '@angular/core';
             ctaType="button"
             ctaText="Neat!"
             ctaHref="www.sparkdesignsystem.com"
-            ctaAnalytics="Link: Spark">
+            ctaAnalytics="Link: Spark"
+            idString="card-9">
           </sprk-card>
 
           <sprk-card
@@ -219,7 +225,8 @@ import { Component } from '@angular/core';
             ctaType="button"
             ctaText="Neat!"
             ctaHref="www.sparkdesignsystem.com"
-            ctaAnalytics="Link: Spark">
+            ctaAnalytics="Link: Spark"
+            idString="card-10">
           </sprk-card>
 
         </sprk-stack>
@@ -244,7 +251,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-11">
         </sprk-card>
 
         <sprk-card
@@ -259,7 +267,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-12">
         </sprk-card>
 
         <sprk-card
@@ -274,7 +283,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-13">
         </sprk-card>
       </sprk-stack>
     </div>
@@ -297,7 +307,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-14">
         </sprk-card>
 
         <sprk-card
@@ -312,7 +323,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-15">
         </sprk-card>
 
         <sprk-card
@@ -327,7 +339,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-16">
         </sprk-card>
 
         <sprk-card
@@ -342,7 +355,8 @@ import { Component } from '@angular/core';
           ctaType="button"
           ctaText="Neat!"
           ctaHref="www.sparkdesignsystem.com"
-          ctaAnalytics="Link: Spark">
+          ctaAnalytics="Link: Spark"
+          idString="card-17">
         </sprk-card>
       </sprk-stack>
     </div>
