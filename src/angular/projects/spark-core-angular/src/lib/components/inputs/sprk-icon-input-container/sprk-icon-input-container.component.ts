@@ -49,10 +49,7 @@ export class SparkIconInputContainerComponent implements OnInit {
   }
 
   getClasses(): string {
-    const classArray: string[] = [
-      'sprk-b-InputContainer',
-      'sprk-b-InputContainer--icon'
-    ];
+    const classArray: string[] = ['sprk-b-InputContainer'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {

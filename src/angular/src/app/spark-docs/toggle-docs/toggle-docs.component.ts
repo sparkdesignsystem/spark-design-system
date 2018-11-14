@@ -23,14 +23,15 @@ import { Component } from '@angular/core';
 
       <sprk-toggle
         title="This is a Spark toggle with width set at 10%"
-        body="This is some copy for the toggle about toggle things."
         analyticsString="My disclaimer Title"
         additionalClasses="sprk-u-Width-10"
         idString="toggle-2">
+        <p class="sprk-b-TypeBodyFour">
+          This is some copy for the toggle about toggle things.
+        </p>
       </sprk-toggle>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class ToggleDocsComponent {
   constructor() {}
