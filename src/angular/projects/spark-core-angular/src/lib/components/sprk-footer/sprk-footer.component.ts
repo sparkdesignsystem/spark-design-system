@@ -135,10 +135,12 @@ import { Component, Input } from '@angular/core';
       <div *ngFor="let toggle of disclaimerToggle" class="sprk-o-Stack__item">
         <sprk-toggle
           title="{{ toggle.title }}"
-          body="{{ toggle.body }}"
           analyticsString="{{ toggle.analytics }}"
           iconClass="sprk-c-Icon--current-color"
           titleFontClass="sprk-b-TypeBodyFour">
+            <p class="sprk-b-TypeBodyFour">
+              {{ toggle.body }}
+            </p>
         </sprk-toggle>
       </div>
 

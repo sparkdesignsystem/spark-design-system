@@ -96,7 +96,7 @@ import { Component } from '@angular/core';
                 <option value="g3">Grouped Option 3</option>
               </optgroup>
             </select>
-            <sprk-icon iconType="chevron-down" additionalClasses="sprk-b-SelectContainer__icon" sprk-select-icon></sprk-icon>
+            <sprk-icon iconType="chevron-down" additionalClasses="sprk-c-Icon--current-color sprk-b-SelectContainer__icon" sprk-select-icon></sprk-icon>
             <label sprkLabel>Select Box Label</label>
           </sprk-input-container>
           <sprk-textarea-container>
@@ -143,7 +143,7 @@ import { Component } from '@angular/core';
               sprkLabel>
               Search
             </label>
-            <sprk-icon iconType="search" additionalClasses="sprk-b-InlineSearch__icon" sprk-input-icon></sprk-icon>
+            <sprk-icon iconType="search" additionalClasses="sprk-c-Icon--current-color sprk-b-InlineSearch__icon" sprk-input-icon></sprk-icon>
             <input
               name="inline_search_input"
               class="sprk-b-TextInput--with-icon"
@@ -213,7 +213,7 @@ import { Component } from '@angular/core';
               sprkLabel>
               Date Input (picker)
             </label>
-            <sprk-icon iconType="calendar" additionalClasses="sprk-b-DatePicker__icon" sprk-input-icon></sprk-icon>
+            <sprk-icon iconType="calendar" additionalClasses="sprk-c-Icon--current-color sprk-b-DatePicker__icon" sprk-input-icon></sprk-icon>
             <input
               name="datepicker_input"
               class="sprk-b-TextInput--with-icon"
