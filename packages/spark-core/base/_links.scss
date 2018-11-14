@@ -8,7 +8,7 @@
   position: relative;
   text-decoration: none;
   transition: $link-transition;
-  border-bottom: 0.0625em solid $link-underline-color;
+  box-shadow: inset 0 -0.125em $white, inset 0 -0.2em $link-underline-color;
 
   &:visited {
     color: $link-visited-color;
@@ -24,19 +24,19 @@
 
 .sprk-b-Link--plain {
   text-decoration: none;
-  border-bottom: none;
+  box-shadow: none;
 }
 
 .sprk-b-Link--standalone {
   color: $link-standalone-color;
   text-decoration: none;
-  border: none;
+  box-shadow: none;
 
   &:hover,
   &:active,
   &:focus {
     transition: $link-transition;
-    border-bottom: 0.0625em solid $link-underline-color;
+    box-shadow: inset 0 -0.125em $white, inset 0 -0.2em $link-underline-color;
   }
 }
 
@@ -44,7 +44,7 @@
   color: $link-disabled-color;
   pointer-events: none;
   text-decoration: none;
-  border-bottom: 0.0625em solid $link-disabled-color;
+  box-shadow: inset 0 -0.125em $white, inset 0 -0.2em $link-disabled-color;
 
   &:visited {
     color: $link-disabled-color;
