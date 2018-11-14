@@ -24,8 +24,6 @@
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.4.0",
     "@cloudfour/hbs-helpers": "^0.9.0",
-    "@sparkdesignsystem/spark-core": "^2.0.1",
-    "@sparkdesignsystem/spark-extras": "^2.0.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",

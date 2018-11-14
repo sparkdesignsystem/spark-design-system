@@ -19,7 +19,7 @@ gulp.task('build-angular-dev-app-netlify', (cb) => {
   });
 });
 
-gulp.task('clean-angular-dev-app', () => gulp.src(['src/angular/node_modules'], { read: false })
+gulp.task('clean-angular-dev-app', () => gulp.src(['src/angular/node_modules', 'src/angular/dist/angular'], { read: false })
   .pipe(clean()));
 
 gulp.task('install-angular-dev-app', (cb) => {
@@ -31,9 +31,10 @@ gulp.task('install-angular-dev-app', (cb) => {
 });
 
 gulp.task('link-spark-to-angular-dir', (cb) => {
+  gulp.src(['src/angular/node_modules/@sparkdesignsystem/spark-core', 'src/angular/node_modules/@sparkdesignsystem/spark-extras'], { read: false })
+    .pipe(clean())
   exec(
     `cd src/angular &&
-     npm unlink @sparkdesignsystem &&
      npm link @sparkdesignsystem/spark-core &&
      npm link @sparkdesignsystem/spark-card && 
      npm link @sparkdesignsystem/spark-description-table && 
