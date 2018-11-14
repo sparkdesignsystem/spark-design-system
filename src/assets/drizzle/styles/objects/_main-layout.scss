@@ -1,11 +1,20 @@
 $drizzle-header-padding-vert-wide: 1rem;
 
+.#{$app-namespace}-o-Layout__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
 .#{$app-namespace}-o-Layout {
   height: 100%;
   margin: 0;
 }
 
 .#{$app-namespace}-o-Layout__main {
+  flex: 1 0 auto;
+
   @media (min-width: $nav-switch-breakpoint) {
     width: $layout-main-width;
     margin-left: $layout-nav-width;
@@ -13,6 +22,7 @@ $drizzle-header-padding-vert-wide: 1rem;
 }
 
 .#{$app-namespace}-o-Layout__footer {
+  flex: 0 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

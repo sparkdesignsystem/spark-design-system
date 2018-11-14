@@ -1,6 +1,13 @@
 .#{$app-namespace}-b-Body {
   font-size: 1rem;
   line-height: 1.563;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body,

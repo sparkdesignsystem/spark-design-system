@@ -4,7 +4,8 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-unordered-list',
   template: `
     <ul
-      [ngClass]="getClasses()">
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString">
       <ng-content></ng-content>
     </ul>
   `
@@ -14,16 +15,23 @@ export class SparkUnorderedListComponent {
   listType: string;
   @Input()
   additionalClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-b-List'];
+    const classArray: string[] = [''];
 
     switch (this.listType) {
       case 'indented':
+        classArray.push('sprk-b-List');
         classArray.push('sprk-b-List--indented');
         break;
       case 'bare':
+        classArray.push('sprk-b-List');
         classArray.push('sprk-b-List--bare');
+        break;
+      case 'horizontal':
+        classArray.push('sprk-o-HorizontalList');
         break;
       default:
         break;

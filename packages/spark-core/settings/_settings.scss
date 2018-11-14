@@ -14,7 +14,7 @@ $scales-utilities-class-namespace: 'u-';
 //
 // Reset
 ///
-$selection-bg-color: $blue-medium !default;
+$selection-bg-color: $blue !default;
 
 //
 // Spacing
@@ -61,11 +61,17 @@ $icon-m: 16px !default;
 $icon-l: 32px !default;
 $icon-xl: 64px !default;
 $icon-xxl: 128px !default;
+$icon-fill-color: $red !default;
+$icon-stroke-color: $red !default;
+$icon-using-custom-stroke: true !default;
+$icon-custom-stroke-width-s: 1px !default;
+$icon-custom-stroke-width-m: 1.5px !default;
+$icon-custom-stroke-width-l: 2px !default;
+$icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layout
 //
-$horizontal-list-spacing: $space-m !default;
 $centered-column-width: 64rem !default;
 
 //
@@ -76,6 +82,27 @@ $layer-height-s: 1000 !default;
 $layer-height-m: 2000 !default;
 $layer-height-l: 3000 !default;
 $layer-height-xl: 99999 !default;
+
+//
+// Horizontal List
+//
+$horizontal-list-spacing: $space-m !default;
+$horizontal-list-spacing-tiny: $space-xs !default;
+$horizontal-list-spacing-small: $space-s !default;
+$horizontal-list-spacing-medium: $space-m !default;
+$horizontal-list-spacing-large: $space-l !default;
+$horizontal-list-spacing-huge: $space-xl !default;
+
+//
+// Pagination
+//
+$pag-max-width: 26rem !default;
+$pag-link-color: $black !default;
+$pag-link-color-hover: $pag-link-color !default;
+$pag-selection-color: $red !default;
+$pag-selection-link-color: $white !default;
+$pag-selection-link-color-hover: $white !default;
+$pag-circle-size: 2em !default;
 
 //
 // Typography
@@ -111,31 +138,61 @@ $font-size-display-six: 1.464rem !default;
 $color-display-six: $black !default;
 $line-height-display-six: 1.28 !default;
 $font-weight-display-six: bold !default;
+// Display Seven
+$font-size-display-seven: 1.464rem !default;
+$color-display-seven: $black !default;
+$line-height-display-seven: 1.16 !default;
+$font-weight-display-seven: normal !default;
+// Display Eight
+$font-size-display-eight: 1.2rem !default;
+$color-display-eight: $black !default;
+$line-height-display-eight: 1.41 !default;
+$font-weight-display-eight: normal !default;
 // Body One
 $font-size-body-one: 1rem !default;
 $color-body-one: $black !default;
-$line-height-body-one: 1.5 !default;
+$line-height-body-one: 1.57 !default;
 $font-weight-body-one: bold !default;
 // Body Two
 $font-size-body-two: 1rem !default;
 $color-body-two: $black !default;
-$line-height-body-two: 1.5 !default;
+$line-height-body-two: 1.57 !default;
 $font-weight-body-two: normal !default;
 // Body Three
 $font-size-body-three: 1rem !default;
 $color-body-three: $black !default;
-$line-height-body-three: 1.65 !default;
+$line-height-body-three: 1.82 !default;
 $font-weight-body-three: normal !default;
 // Body Four
 $font-size-body-four: 0.826rem !default;
 $color-body-four: $black !default;
-$line-height-body-four: 1.3 !default;
+$line-height-body-four: 1.6 !default;
 $font-weight-body-four: normal !default;
 // Font Stack
+$using-webfont-body: true !default;
+$using-webfont-heading: true !default;
+$using-webfont-alternate: false !default;
+$body-font-name: FallSans !default;
+$body-font-src: url('') !default;
+$body-font-weight: normal !default;
+$body-bold-font-src: url('') !default;
+$body-bold-font-weight: bold !default;
+$heading-font-name: FallSans !default;
+$heading-font-src: url('') !default;
+$heading-font-weight: normal !default;
+$heading-bold-font-src: url('') !default;
+$heading-bold-font-weight: bold !default;
+$alternate-font-name: FallSans-Regular !default;
+$alternate-font-src: url('') !default;
+$alternate-font-weight: normal !default;
 $system-font-stack: null !default;
 $system-body-fonts: false !default;
-$body-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-$heading-font-stack: myriad-pro, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$alternate-font-stack: $alternate-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $system-heading-fonts: false !default;
 
 // Line-height Collision
@@ -177,30 +234,89 @@ $font-size-unit: rem !default;
 $border-radius: 5px !default;
 
 //
+// Alerts
+///
+$alert-border: 1px solid $gray !default;
+$alert-bar-width: -10px !default;
+$alert-color: $white !default;
+$alert-color-info: $blue !default;
+$alert-color-success: $green !default;
+$alert-color-fail: $yellow !default;
+$alert-icon-size: 40px !default;
+$alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
+$alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
+$alert-shadow-hover-info: inset -80px 0 0 $alert-color-info !default;
+$alert-shadow-success: inset $alert-bar-width 0 0 $alert-color-success !default;
+$alert-shadow-hover-success: inset -80px 0 0 $alert-color-success !default;
+$alert-shadow-fail: inset $alert-bar-width 0 0 $alert-color-fail !default;
+$alert-shadow-hover-fail: inset -80px 0 0 $alert-color-fail !default;
+
+//
+// Promos
+///
+$promo-background-color: $white !default;
+$promo-border: 1px solid $gray !default;
+$promo-max-width: 42.5rem !default;
+$promo-breakpoint: 42.5rem !default;
+$promo-image-narrow-max-height: 20rem !default;
+$promo-image-narrow-max-width: 50% !default;
+$promo-icon-color: $black !default;
+$promo-title-font-color: $black !default;
+$promo-title-font-weight: $font-weight-display-four !default;
+$promo-subtitle-font-color: $black !default;
+$promo-subtitle-font-weight: $font-weight-body-one !default;
+
+//
 // Buttons
 ///
-$btn-background-color: $green-medium !default;
+$btn-background-color: $red !default;
+$btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $btn-border-style: solid !default;
-$btn-border-radius: $border-radius !default;
-$btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray-medium !default;
-$btn-disabled-text-color: $white !default;
-$btn-disabled-border-width: 2px !default;
-$btn-disabled-border-color: $gray-medium !default;
-$btn-hover-background-color: $green-dark !default;
+$btn-border-color: $btn-background-color;
+$btn-border-width: 2px;
+$btn-font-weight: bold;
+$btn-text-color: $white !default;
+$btn-border-radius: 1px !default;
+$btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-text-color: $white !default;
 $btn-breakpoint-xs: 30rem !default;
 $btn-breakpoint-s: 42.5rem !default;
+$btn-breakpoint: 30rem !default;
 $btn-transition-speed: 0.3s !default;
+// Disabled
+$btn-disabled-opacity: 1 !default;
+$btn-disabled-background-color: $gray !default;
+$btn-disabled-text-color: $black-tint-50 !default;
+$btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-border-color: transparent !default;
+// Secondary
+$btn-secondary-background-color: transparent !default;
+$btn-secondary-border-color: $black !default;
+$btn-secondary-hover-text-color: $white !default;
+$btn-secondary-hover-background-color: $black !default;
+$btn-secondary-text-color: $black !default;
+// Tertiary
+$btn-tertiary-background-color: transparent !default;
+$btn-tertiary-border-color: transparent !default;
+$btn-tertiary-hover-text-color: $black !default;
+$btn-tertiary-hover-line-color: $red !default;
+$btn-tertiary-hover-background-color: transparent !default;
+$btn-tertiary-text-color: $black !default;
 
 //
 // Links
 ///
-$link-color: $blue-medium !default;
-$link-visited-color: $blue-dark !default;
+$link-color: $black !default;
+$link-disabled-color: $black-tint-50;
+$link-muted-color: $black-tint-75;
+$link-standalone-color: $red !default;
 $link-transition: 0.3s !default;
+$link-underline-color: $red !default;
+$link-underline-visited-color: $red !default;
+$link-visited-color: $black !default;
+$link-font-weight: bold !default;
 
 //
 // Lists
@@ -210,18 +326,44 @@ $list-margin-left: $space-m !default;
 //
 // Forms
 ///
-$text-input-border-radius: $border-radius !default;
-$text-input-border-color: $gray-medium !default;
-$text-input-border-width: 2px !default;
+$input-gray-medium: #5a5a5a !default;
+$monetary-symbol: '$' !default;
+$input-placeholder-color: $gray !default;
+$input-readonly-text-color: $gray !default;
+$fieldset-padding: 0 !default;
+$text-input-border-radius: 0 !default;
+$text-input-border-color: $black !default;
+$text-input-border-width: 0 !default;
 $input-container-margin-bottom: $space-m !default;
-$input-disabled-border-color: $gray-medium !default;
-$input-disabled-text-color: $white !default;
+$input-disabled-background-color: $gray !default;
+$input-disabled-border-color: $black !default;
+$input-disabled-text-color: $input-gray-medium !default;
 $helper-text-hidden: false !default;
-$text-input-padding: $space-s !default;
-$input-readonly-border-color: $gray-medium !default;
-$input-box-shadow: 0 0 0 3px $blue-medium !default;
-$input-error-box-shadow: 0 0 0 3px $red-medium !default;
-$input-disabled-box-shadow: 0 0 0 3px $gray-medium !default;
+$text-input-padding: 3px $space-s !default;
+$input-readonly-border-color: $black !default;
+$input-box-shadow: 0 1px 0 0 $black !default;
+$input-error-box-shadow: 0 3px 0 0 $yellow !default;
+$error-icon-size: 1.25rem !default;
+$input-disabled-box-shadow: 0 1px 0 0 $input-gray-medium !default;
+$date-picker-max-width: 20rem !default;
+$date-picker-button-size: 2.25rem !default;
+$date-picker-column-adjustment-x: 0.25rem !default;
+$date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
+$date-picker-day-interact-color: $red !default;
+$text-input-interact-color: $red !default;
+$error-text-color: $black !default;
+$text-input-error-color: $yellow !default;
+$input-max-width: 27.5rem !default;
+$input-icon-offset-x: 7px !default;
+$input-icon-offset-y: 21px !default;
+$input-text-icon-offset-x: 6px !default;
+$input-text-icon-offset-y: 21px !default;
+$input-animation-speed: 0.3s !default;
+$select-arrow-offset-y: -23px !default;
+$select-arrow-offset-x: 8px !default;
+$label-offset-y: -53px !default;
+$label-offset-y-open: -31px !default;
+$label-shrink-scale: 0.82 !default;
 $fieldset-padding: 0 !default;
 
 //
@@ -230,12 +372,38 @@ $fieldset-padding: 0 !default;
 $table-padding-small: $space-inset-s !default;
 $table-padding-medium: $space-inset-m !default;
 $table-padding-large: $space-inset-l !default;
-$table-border-width: 2px !default;
-$table-border-style: solid !default;
-$table-border-color: $white !default;
-$table-stripe-color: $blue-light !default;
-$table-heading-alignment: center !default;
 $table-cell-alignment: center !default;
+$table-stripe-color: $gray !default;
+
+// Primary
+$table-row-border-width: 1px !default;
+$table-row-border-style: solid !default;
+$table-row-border-color: $gray !default;
+$table-header-background-color: $black !default;
+$table-header-font-color: $white !default;
+$table-header-font-size: $font-size-body-one !default;
+$table-header-border-spacing: 2px !default;
+$table-header-border-color: $white !default;
+$table-empty-heading-background-color: $white !default;
+
+// Secondary
+$table-secondary-header-background-color: $white !default;
+$table-secondary-header-font-color: $black !default;
+$table-secondary-header-text-alignment: left !default;
+$table-secondary-cell-text-alignment: left !default;
+$table-secondary-header-border-spacing: 0 !default;
+$table-secondary-header-border-color: $white !default;
+
+// Grouped-Column
+$table-grouped-header-background-color: $black !default;
+$table-grouped-header-font-size: $font-size-body-four !default;
+$table-grouped-header-font-weight: normal !default;
+
+// Secondary Row Comparison
+$table-secondary-row-comp-row-spacing: 15px !default;
+$table-secondary-row-comp-border-width: 1px !default;
+$table-secondary-row-comp-border-style: solid !default;
+$table-secondary-row-comp-border-color: $gray !default;
 
 //
 // Box
@@ -263,6 +431,7 @@ $stack-spacing-small: $space-s !default;
 $stack-spacing-medium: $space-m !default;
 $stack-spacing-large: $space-l !default;
 $stack-spacing-huge: $space-xl !default;
+$split-breakpoint-xxs: 20rem !default;
 $split-breakpoint-xs: 30rem !default;
 $split-breakpoint-s: 42.5rem !default;
 $split-breakpoint-m: 55rem !default;
@@ -273,27 +442,42 @@ $split-breakpoint-xl: 80rem !default;
 // Accordions
 //
 $accordion-max-width: 53.125rem !default;
+$accordion-border: 1px solid $black-tint-25 !default;
+$accordion-border-open: 1px solid $black !default;
+$accordion-summary-color: $black !default;
+$accordion-summary-active-color: $red !default;
+
+//
+// Toggle
+//
+$toggle-transistion-timing: 0.3s ease !default;
 
 //
 // Dividers
 //
-$divider-border: 2px solid $gray-medium !default;
+$divider-border: 1px solid $black-tint-25 !default;
 
 //
 // Modals
 //
 $modal-mask-color: rgba(34, 34, 34, 0.35) !default;
+$modal-color: $white !default;
 $modal-max-width: 43.75rem !default;
 $modal-height: 70% !default;
 $modal-breakpoint-small: 25rem !default;
 $modal-breakpoint-medium: 37.5rem !default;
+$modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
 // Masthead / Main Nav
 //
 $main-nav-breakpoint: 46rem !default;
 $masthead-column-width: 64rem !default;
-$mobile-masthead-height: 6.7rem !default;
+$mobile-masthead-height: 5.5625rem !default;
+$sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$narrow-nav-left-border: 5px solid $red !default;
+$narrow-nav-link-font-weight: normal !default;
+$masthead-wide-navigation-font-size: 1.125rem !default;
 
 //
 // Pagination

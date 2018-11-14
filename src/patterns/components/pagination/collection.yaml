@@ -6,4 +6,8 @@ description: |
 information:
   - Spark-Core Pagination JS will take care of adding in the correct aria-label
     to each link on first page load and when the items are tapped or clicked.
+restrictions: 
+  - The data-id property is provided as a hook for automated tools. If you have multiple 
+    instances of the same variant of a component on the same page, make sure each instance 
+    has a unique data-id property ("pagination-1", "pagination-2", "pagination-3", etc).
 sparkPackageCore: true

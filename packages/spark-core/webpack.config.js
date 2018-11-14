@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     sparkCore: './spark-core.js',
+    sparkCorePrerender: './spark-core-prerender.js',
     alerts: './components/alerts.js',
     spinners: './components/spinners.js',
     tabs: './components/tabs.js',

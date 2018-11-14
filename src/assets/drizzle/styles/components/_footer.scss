@@ -1,16 +1,20 @@
-.#{$app-namespace}-c-footer {
+.#{$app-namespace}-c-Footer {
   background-color: $purple;
   padding: $space-inset-short-l;
+
+  @media (max-width: 21.5625rem) {
+    padding: $space-inset-short-m;
+  }
 }
 
-.#{$app-namespace}-c-footer__icons {
+.#{$app-namespace}-c-Footer__icons {
   @media (max-width: $footer-collapse-breakpoint) {
     margin: 0 auto;
     text-align: center;
   }
 }
 
-.#{$app-namespace}-c-footer__link {
+.#{$app-namespace}-c-Footer__link {
   display: inline-block;
 
   @media (max-width: $footer-collapse-breakpoint) {
@@ -19,6 +23,6 @@
   }
 }
 
-.#{$app-namespace}-c-footer__link:hover {
+.#{$app-namespace}-c-Footer__link:hover {
   color: $red-light;
 }

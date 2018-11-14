@@ -15,14 +15,30 @@ hasAngularCode: true
 ---
 
 <div class="sprk-b-InputContainer">
-  <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
+         data-id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
+         data-id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
          type="text"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}
-         {{#if invaliddata}} aria-invalid="true"{{/if}}>
-  <div class="sprk-b-ErrorText"
-        id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
-    {{#if errorMessage}}{{errorMessage}}{{/if}}</div>
+         {{#if invaliddata}} aria-invalid="true"{{/if}} data-sprk-input="text">
+  <div class="sprk-b-InputContainer__input-border"></div>
+  <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
+    {{#if helperText }}
+      <div class="sprk-b-HelperText">
+        {{ helperText }}
+      </div>
+    {{/if}}
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+          {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
 </div>
+

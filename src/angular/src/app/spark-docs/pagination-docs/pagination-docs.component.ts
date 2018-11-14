@@ -29,7 +29,8 @@ import { Component, OnInit } from '@angular/core';
         [itemsPerPage]="1"
         (previousClick)="goBack($event, 'default')"
         (pageClick)="goToPage($event, 'default')"
-        (nextClick)="goForward($event, 'default')">
+        (nextClick)="goForward($event, 'default')"
+        idString="pagination-1">
       </sprk-pagination>
     </div>
 
@@ -64,7 +65,8 @@ import { Component, OnInit } from '@angular/core';
         [itemsPerPage]="longConfig[0].itemsPerPage"
         (previousClick)="goBack($event, 'long')"
         (pageClick)="goToPage($event, 'long')"
-        (nextClick)="goForward($event, 'long')">
+        (nextClick)="goForward($event, 'long')"
+        idString="pagination-2">
       </sprk-pagination>
     </div>
 
@@ -98,7 +100,8 @@ import { Component, OnInit } from '@angular/core';
         [itemsPerPage]="defaultConfig[0].itemsPerPage"
         (previousClick)="goBack($event, 'pager')"
         (pageClick)="goToPage($event, 'pager')"
-        (nextClick)="goForward($event, 'pager')">
+        (nextClick)="goForward($event, 'pager')"
+        idString="pagination-3">
       </sprk-pagination>
     </div>
   `,

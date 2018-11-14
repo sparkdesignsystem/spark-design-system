@@ -3,26 +3,44 @@
 // ==================================================================
 .sprk-c-Icon {
   height: $icon-m;
-  fill: currentColor;
   width: $icon-m;
+  stroke: $icon-stroke-color;
+  fill: $icon-fill-color;
+
+  @if ($icon-using-custom-stroke) {
+    stroke-width: $icon-custom-stroke-width-xl;
+  }
+}
+
+.sprk-c-Icon--current-color {
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 .sprk-c-Icon--l {
   height: $icon-l;
   width: $icon-l;
+  stroke-width: $icon-custom-stroke-width-l;
 }
 
 .sprk-c-Icon--xl {
   height: $icon-xl;
   width: $icon-xl;
+  stroke-width: $icon-custom-stroke-width-m;
 }
 
 .sprk-c-Icon--xxl {
   height: $icon-xxl;
   width: $icon-xxl;
+  stroke-width: $icon-custom-stroke-width-s;
+}
+
+// Initial state for icons that will be toggled
+.sprk-c-Icon--toggle {
+  transform-origin: center;
+  transition: transform $toggle-transistion-timing;
 }
 
 .sprk-c-Icon--open {
-  transform: rotate(180deg);
-  transform-origin: 50% 45%;
+  transform: rotate(-180deg);
 }

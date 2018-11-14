@@ -14,7 +14,7 @@
 
 .sprk-c-Masthead__content {
   background-color: $white;
-  border-bottom: 2px solid $gray-medium;
+  border-bottom: 2px solid $black-tint-50;
   padding: $space-m 0;
   width: 100%;
 
@@ -65,12 +65,11 @@
   display: none;
 
   @media all and (min-width: $main-nav-breakpoint) {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     max-width: $masthead-column-width;
     margin: -2rem auto $space-m;
     padding: 0 $space-m;
-    text-align: right;
-    width: 100%;
   }
 }
 
@@ -83,8 +82,13 @@
   }
 }
 
+.sprk-c-Masthead__search .sprk-b-InputContainer {
+  margin: 0;
+}
+
 .sprk-c-Masthead__wide-navigation-container {
   display: none;
+  font-size: $masthead-wide-navigation-font-size;
 
   @media (min-width: $main-nav-breakpoint) {
     display: block;

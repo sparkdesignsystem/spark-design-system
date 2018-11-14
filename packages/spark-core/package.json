@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-core",
-  "version": "2.1.0",
+  "version": "4.0.0",
   "description": "Spark Core is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "scripts": {
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
@@ -24,8 +24,11 @@
   "dependencies": {
     "@scalescss/scalescss": "6.0.0-1",
     "chai": "^4.1.2",
+    "dom-slider": "1.5.1",
+    "fontfaceobserver": "^2.0.13",
     "jsdom": "^11.12.0",
     "nyc": "^11.9.0",
+    "proxyquire": "^2.1.0",
     "sinon": "^5.1.1",
     "tiny-date-picker": "^3.2.6"
   },
@@ -35,6 +38,7 @@
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
     "mocha": "^5.2.0",
+    "proxyquire": "^2.1.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   },

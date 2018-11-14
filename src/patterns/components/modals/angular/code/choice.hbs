@@ -1,12 +1,13 @@
-<sprk-button (click)="toggleChoiceModal($event)" additionalClasses="choice-button">
+<button (click)="toggleChoiceModal($event)" additionalClasses="choice-button" sprkButton>
   Choice Modal
-</sprk-button>
+</button>
 
 <sprk-modal
   [(isVisible)]="false"
   title="Are you sure?"
   (hide)="toggleChoiceModal($event)"
-  modalType="choice">
+  modalType="choice"
+  idString="modal-choice-1">
   This is some content that is in a modal.
   It explains what the modal is for.
   There will also be a way to close the modal.

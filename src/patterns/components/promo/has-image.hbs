@@ -1,11 +1,12 @@
 ---
 name: Promo With Image
-order: 3
 description:
-  Promos can be used with an optional clickable image.
+  Promo with clickable image. Useful for adding an image to a promo
+  where the image is of equal importance to the text.
 restrictions:
  - Image must have a descriptive alt tag.
+order: 3
 hasAngularCode: true
 hasAngularDocs: true
 ---
-{{#embed "patterns.components.promo.base" promoIcon=false promoBtnLink=true promoLink=false promoImg=true}}{{/embed}}
+{{#embed "patterns.components.promo.base" hasTitle=true hasSubTitle=true hasCta=true hasImage=true hasBorder=true mediaRev=false idString="promo-3"}}{{/embed}}

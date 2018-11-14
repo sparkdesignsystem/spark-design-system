@@ -1,24 +1,37 @@
+/* global window */
 import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../utilities/getElements';
 
-const datePicker = () => {
-  getElements('[data-sprk-datepicker]', (element) => {
-    const input = element.querySelector('input');
-    const overrideMinDate = element.getAttribute('data-sprk-min-date');
-    const overrideMaxDate = element.getAttribute('data-sprk-max-date');
+const setupTDP = (input, config) => {
+  const tdpConfig = {
+    mode: 'dp-below',
+    lang: {
+      days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    },
+    min: '01/1/2008',
+    max: '01/1/2068',
+    format: date => date.toLocaleDateString('en-US',
+      { month: '2-digit', day: '2-digit', year: 'numeric' })
+      .replace(/[^ -~]/g, ''),
+  };
 
-    TinyDatePicker(input, {
-      mode: 'dp-below',
-      min: overrideMinDate || '01/1/2008',
-      max: overrideMaxDate || '01/1/2068',
+  const dp = TinyDatePicker(input, Object.assign(tdpConfig, config));
 
-      format(date) {
-        return date
-          .toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
-          .replace(/[^ -~]/g, '');
-      },
-    });
+  dp.on('select', () => {
+    input.dispatchEvent(new window.Event('input'));
+    input.focus();
   });
 };
 
-export { datePicker as default };
+const bindUIEvents = (element, config) => {
+  const input = element.querySelector('input');
+  setupTDP(input, config);
+};
+
+const datePicker = (config) => {
+  getElements('[data-sprk-datepicker]', (element) => {
+    bindUIEvents(element, config);
+  });
+};
+
+export { datePicker, bindUIEvents };

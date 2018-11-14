@@ -1,5 +1,9 @@
-<sprk-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
-  <label sprkLabel>Date</label>
+<sprk-input-container iconContainerClasses="sprk-b-TextInputIconContainer">
+  <label
+    [additionalClasses]="sprk-b-Label--with-icon"
+    sprkLabel>
+    Date
+  </label>
   <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
   <input
     name="datepicker_input"
@@ -9,6 +13,7 @@
     placeholder="MM/DD/YYYY"
     [(ngModel)]="datepicker_input"
     #datepickerInput="ngModel"
+    data-id="datepicker-1"
     sprkFormatterDate
     sprkDatepicker
     sprkInput>

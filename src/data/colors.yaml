@@ -1,77 +1,39 @@
 - Primary:
-  - label: Blue Dark
-    color: "#0C4569"
-    rgb: "rgb(12,69,105)"
-    property: "$blue-dark"
-  - label: Blue Medium
-    color: "#2081BF"
-    property: "$blue-medium"
-    rgb: "rgb(32,129,191)"
-  - label: Blue Light
-    color: "#C3D3E3"
-    rgb: "rgb(195,211,227)"
-    property: "$blue-light"
+    - label: Red
+      color: '#C8102E'
+      rgb: 'rgb(200,16,46)'
+      property: '$red'
+    - label: Black
+      color: '#000000'
+      property: '$black'
+      rgb: 'rgb(0,0,0)'
+    - label: Gray
+      color: '#EBEBEB'
+      rgb: 'rgb(235,235,235)'
+      property: '$gray'
+    - label: White
+      color: '#FFFFFF'
+      rgb: 'rgb(255,255,255)'
+      property: '$white'
 
 - Secondary:
-  - label: Red Dark
-    color: "#8C181D"
-    rgb: "rgb(140,24,29)"
-    property: "$red-dark"
-  - label: Red Medium
-    color: "#B5121B"
-    rgb: "rgb(181,18,27)"
-    property: "$red-medium"
-  - label: Red-light
-    color: "#FACCC4"
-    rgb: "rgb(250,204,196)"
-    property: "$red-light"
-  - label: Purple Dark
-    color: "#44235D"
-    rgb: "rgb(68,35,93)"
-    property: "$purple-dark"
-  - label: Purple Medium
-    color: "#551387"
-    rgb: "rgb(85,19,135)"
-    property: "$purple-medium"
-  - label: Orange Dark
-    color: "#E67800"
-    rgb: "rgb(230,120,0)"
-    property: "$orange-dark"
-  - label: Orange Medium
-    color: "#FF9B00"
-    rgb: "rgb(255,155,0)"
-    property: "$orange-medium"
-  - label: Green Dark
-    color: "#3C7814"
-    rgb: "rgb(60,120,20)"
-    property: "$green-dark"
-  - label: Green Medium
-    color: "#6C9F2E"
-    rgb: "rgb(108,159,46)"
-    property: "$green-medium"
-  - label: Green Light
-    color: "#D3EF8D"
-    rgb: "rgb(211,239,141)"
-    property: "$green-light"
-
-- Greyscale:
-  - label: Black
-    color: "#222222"
-    rgb: "rgb(34,34,34)"
-    property: "$black"
-  - label: Gray Dark
-    color: "#5A5A5A"
-    rgb: "rgb(90,90,90)"
-    property: "$gray-dark"
-  - label: Gray Medium
-    color: "#AAAAAA"
-    rgb: "rgb(170,170,170)"
-    property: "$gray-medium"
-  - label: Gray Light
-    color: "#E5E5E5"
-    rgb: "rgb(229,229,229)"
-    property: "$gray-light"
-  - label: White
-    color: "#FFFFFF"
-    rgb: "rgb(255,255,255)"
-    property: "$white"
+    - label: Deep-Red
+      color: '#76232F'
+      rgb: 'rgb(118,35,47)'
+      property: '$red-deep'
+    - label: Mid-Red
+      color: '#9D2235'
+      rgb: 'rgb(157,34,53)'
+      property: '$red-mid'
+    - label: Green
+      color: '#00B398'
+      rgb: 'rgb(0,179,152)'
+      property: '$green'
+    - label: Yellow
+      color: '#F2A900'
+      rgb: 'rgb(242,169,0)'
+      property: '$yellow'
+    - label: Blue
+      color: '#007DBA'
+      rgb: 'rgb(0,125,186)'
+      property: '$blue'

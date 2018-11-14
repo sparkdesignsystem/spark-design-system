@@ -10,8 +10,13 @@ import { RouterTestingModule } from '@angular/router/testing';
           Promo Base
         </h2>
 
-        <sprk-promo title="Placeholder title text">
-          Text in the body of the promo.
+        <sprk-promo title="Title"
+          subtitle="Subtitle"
+          cta="button"
+          ctaText="Learn More"
+          hasBorder="true"
+          idString="promo-1">
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
         </sprk-promo>
       </div>
     </div>
@@ -19,17 +24,15 @@ import { RouterTestingModule } from '@angular/router/testing';
   <div class="drizzle-o-ContentGrouping sprk-u-mbh">
     <div class="sprk-o-CenteredColumn">
       <h2 class="drizzle-b-h2">
-        Promo With Icon
+        Flag Promo
       </h2>
 
-      <sprk-promo title="Placeholder title text"
-        media="icon"
-        iconType="bell"
-        iconHref="sparkdesignsystem.com"
-        additionalClassesIcon="sprk-c-Icon--l sprk-b-TypeBodyTwo"
-        cta="link"
-        ctaText="Learn More">
-          Text in the body of the promo.
+      <sprk-promo
+        isFlag=true
+        imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+        imgAlt="Spark Design System Logo"
+        idString="promo-2">
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
   </div>
@@ -41,13 +44,15 @@ import { RouterTestingModule } from '@angular/router/testing';
       </h2>
 
       <sprk-promo
-        title="Placeholder title text"
+        title="Title"
+        subtitle="Subtitle"
         media="img"
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         cta="button"
-        ctaText="Learn More">
-          Text in the body of the promo.
+        ctaText="Learn More"
+        idString="promo-3">
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
   </div>
@@ -59,21 +64,16 @@ import { RouterTestingModule } from '@angular/router/testing';
       </h2>
 
       <sprk-promo
-        title="Placeholder title text"
-        mediaRev="yes"
-        media="img"
+        title="Title"
+        subtitle="Subtitle"
+        mediaRev=true
         imgAlt="placeholder"
         imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
         imgHref="https://sparkdesignsystem.com"
         cta="button"
-        ctaText="Learn More">
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
-          Text in the body of the promo.
+        ctaText="Learn More"
+        idString="promo-4">
+          Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
       </sprk-promo>
     </div>
   </div>

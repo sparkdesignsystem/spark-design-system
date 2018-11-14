@@ -45,21 +45,18 @@ describe('Default Pagination tests', () => {
 
     prevDiv = document.createElement('div');
     nextDiv = document.createElement('div');
-    prevDiv.classList.add('sprk-c-Pagination__item');
-    nextDiv.classList.add('sprk-c-Pagination__item');
 
     link1Div = document.createElement('div');
     link2Div = document.createElement('div');
     link3Div = document.createElement('div');
 
-    link1Div.classList.add('sprk-c-Pagination__item');
-    link2Div.classList.add('sprk-c-Pagination__item');
-    link2Div.classList.add('sprk-c-Pagination__item--current');
-    link3Div.classList.add('sprk-c-Pagination__item');
-
     link1 = document.createElement('a');
     link2 = document.createElement('a');
     link3 = document.createElement('a');
+
+    link1.classList.add('sprk-c-Pagination__link');
+    link2.classList.add('sprk-c-Pagination__link');
+    link3.classList.add('sprk-c-Pagination__link--current');
 
     link1.textContent = '1';
     link2.textContent = '2';
@@ -83,7 +80,7 @@ describe('Default Pagination tests', () => {
     link2.setAttribute('data-sprk-pagination', 'item');
     link3.setAttribute('data-sprk-pagination', 'item');
 
-    classCSS = 'sprk-c-Pagination__item--current';
+    classCSS = 'sprk-c-Pagination__link--current';
 
     defaultPag.setAttribute('data-sprk-pagination', 'default');
     defaultPag.appendChild(prevDiv);
@@ -153,92 +150,92 @@ describe('Default Pagination tests', () => {
     prev.classList.add('sprk-b-Link--disabled');
     link2.click();
     expect(prev.classList.contains('sprk-b-Link--disabled')).eql(false);
-    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link2.classList.contains(classCSS)).eql(true);
   });
 
   it('should add the current item css class to the next page', () => {
     handleDefaultPagNextClick(link2, link3, link1, prev, next);
-    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
-    expect(link1.parentElement.classList.contains(classCSS)).eql(false);
+    expect(link2.classList.contains(classCSS)).eql(true);
+    expect(link1.classList.contains(classCSS)).eql(false);
   });
 
   it('should add the current item css class to the first link when it is clicked', () => {
     paginationDefault();
     event = new window.Event('click');
     link1.dispatchEvent(event);
-    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link1.classList.contains(classCSS)).eql(true);
   });
 
   it('should add the current item css class to the previous page when the previous link is clicked', () => {
     handleDefaultPagPrevClick(link1, link2, link2, prev, next);
-    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
-    expect(link2.parentElement.classList.contains(classCSS)).eql(false);
+    expect(link1.classList.contains(classCSS)).eql(true);
+    expect(link2.classList.contains(classCSS)).eql(false);
   });
 
   it('should not do anything if prev link is clicked when page number is 1', () => {
     link1.setAttribute('aria-current', 'true');
-    link1.parentElement.classList.add(classCSS);
-    link2.parentElement.classList.remove(classCSS);
+    link1.classList.add(classCSS);
+    link2.classList.remove(classCSS);
     link3.removeAttribute('aria-current');
     link2.removeAttribute('aria-current');
     handleDefaultPagPrevClick(link1, link2, link1, prev, next);
     expect(link1.textContent).eql('1');
-    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link1.classList.contains(classCSS)).eql(true);
   });
 
   it('should not do anything if next link is clicked when page number is 3', () => {
     link3.setAttribute('aria-current', 'true');
-    link3.parentElement.classList.add(classCSS);
-    link2.parentElement.classList.remove(classCSS);
+    link3.classList.add(classCSS);
+    link2.classList.remove(classCSS);
     link1.removeAttribute('aria-current');
     link2.removeAttribute('aria-current');
     paginationDefault();
     event = new window.Event('click');
     next.dispatchEvent(event);
-    expect(link3.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link3.classList.contains(classCSS)).eql(true);
   });
 
   it('should increse page number 2 to 3 when 2 is active and next is clicked', () => {
     paginationDefault();
     event = new window.Event('click');
     next.dispatchEvent(event);
-    expect(link3.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link3.classList.contains(classCSS)).eql(true);
     expect(next.classList.contains('sprk-b-Link--disabled')).eql(true);
   });
 
   it('should increse page number 1 to 2 when 1 is active and next is clicked', () => {
     link1.setAttribute('aria-current', 'true');
-    link1.parentElement.classList.add(classCSS);
-    link2.parentElement.classList.remove(classCSS);
-    link3.parentElement.classList.remove(classCSS);
+    link1.classList.add(classCSS);
+    link2.classList.remove(classCSS);
+    link3.classList.remove(classCSS);
     link3.removeAttribute('aria-current');
     link2.removeAttribute('aria-current');
     paginationDefault();
     event = new window.Event('click');
     next.dispatchEvent(event);
-    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link2.classList.contains(classCSS)).eql(true);
     expect(prev.classList.contains('sprk-b-Link--disabled')).eql(false);
     expect(next.classList.contains('sprk-b-Link--disabled')).eql(false);
   });
 
   it('should decrese page number 3 to 2 when 3 is active and previous is clicked', () => {
     link3.setAttribute('aria-current', 'true');
-    link3.parentElement.classList.add(classCSS);
-    link2.parentElement.classList.remove(classCSS);
-    link1.parentElement.classList.remove(classCSS);
+    link3.classList.add(classCSS);
+    link2.classList.remove(classCSS);
+    link1.classList.remove(classCSS);
     link1.removeAttribute('aria-current');
     link2.removeAttribute('aria-current');
     paginationDefault();
     event = new window.Event('click');
     prev.dispatchEvent(event);
-    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link2.classList.contains(classCSS)).eql(true);
   });
 
   it('should decrese page number 2 to 1 when 2 is active and previous is clicked', () => {
     paginationDefault();
     event = new window.Event('click');
     prev.dispatchEvent(event);
-    expect(link1.parentElement.classList.contains(classCSS)).eql(true);
+    expect(link1.classList.contains(classCSS)).eql(true);
     expect(prev.classList.contains('sprk-b-Link--disabled')).eql(true);
   });
 
@@ -268,12 +265,14 @@ describe('Default Pagination tests', () => {
   });
 
   it('should not do anything if active link is clicked again', () => {
+    link2.setAttribute('aria-current', 'true');
+    link2.classList.add(classCSS);
     paginationDefault();
     event = new window.Event('click');
     link2.dispatchEvent(event);
-    expect(link2.parentElement.classList.contains(classCSS)).eql(true);
-    expect(prev.parentElement.classList.contains('sprk-b-Link--disabled')).eql(false);
-    expect(next.parentElement.classList.contains('sprk-b-Link--disabled')).eql(false);
+    expect(link2.classList.contains(classCSS)).eql(true);
+    expect(prev.classList.contains('sprk-b-Link--disabled')).eql(false);
+    expect(next.classList.contains('sprk-b-Link--disabled')).eql(false);
   });
 });
 
@@ -307,20 +306,17 @@ describe('Long Pagination tests', () => {
     dots1.setAttribute('data-sprk-pagination', 'dots');
     dots2.setAttribute('data-sprk-pagination', 'dots');
 
-    prevDiv.classList.add('sprk-c-Pagination__item');
-    nextDiv.classList.add('sprk-c-Pagination__item');
-
     link1Div = document.createElement('div');
     link2Div = document.createElement('div');
     link3Div = document.createElement('div');
 
-    link1Div.classList.add('sprk-c-Pagination__item');
-    link2Div.classList.add('sprk-c-Pagination__item');
-    link3Div.classList.add('sprk-c-Pagination__item');
-
     link1 = document.createElement('a');
     link2 = document.createElement('a');
     link3 = document.createElement('a');
+
+    link1.classList.add('sprk-c-Pagination__link');
+    link2.classList.add('sprk-c-Pagination__link');
+    link3.classList.add('sprk-c-Pagination__link');
 
     link1.textContent = '1';
     link2.textContent = '2';

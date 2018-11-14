@@ -1,25 +1,24 @@
+import 'dom-slider';
+import getElements from '../utilities/getElements';
+
 /**
  *  Toggle JS
  *  If `data-sprk-toggle="container"`
  *  elements are available in the DOM
- *  we listen for clicks on the trigger and remove
- *  the hide class on content if its there.
- *  Inversely, if the trigger is clicked and the content
- *  is currently shown we now add a hide class to it so
- *  the content will now be hidden.
- *  To support non JS scenarios we hide the content
- *  on load if we detect the toggle container.
+ *  we listen for clicks on the trigger and
+ *  call slideToggle to slide the content up or down.
+ *  To support non JS scenarios we only hide the content
+ *  if JS is detected.
  */
-import getElements from '../utilities/getElements';
 
-// Toggle the hide class on the content
-const toggleContentCSS = (toggleContent) => {
-  toggleContent.classList.toggle('sprk-u-HideWhenJs');
-};
-
-// Toggle the open class on the icon
-const toggleIconCSS = (toggleIcon) => {
-  toggleIcon.classList.toggle('sprk-c-Icon--open');
+// Toggle the icon type
+const toggleIconType = (toggleIcon, toggleIconUse, openIcon, closeIcon) => {
+  // set xlink:href attribute to be the filled icon.
+  if (toggleIcon.classList.contains('sprk-c-Icon--open')) {
+    toggleIconUse.setAttribute('xlink:href', `#${openIcon}`);
+  } else {
+    toggleIconUse.setAttribute('xlink:href', `#${closeIcon}`);
+  }
 };
 
 // Toggle the aria expanded attribute
@@ -34,15 +33,24 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
-const handleToggleClick = (toggleContent, toggleIcon, element) => {
-  toggleContentCSS(toggleContent);
-  if (toggleIcon) {
-    toggleIconCSS(toggleIcon);
-  }
-  // If toggle type is the accordion then add a class when its open
-  if (element.getAttribute('data-sprk-toggle-type') === 'accordion') {
-    element.classList.toggle('sprk-c-Accordion__summary--open');
-  }
+const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) => {
+  const trigger = element;
+  const isAccordion = trigger.getAttribute('data-sprk-toggle-type') === 'accordion';
+
+  // Rotate the Icon
+  if (toggleIcon) toggleIcon.classList.toggle('sprk-c-Icon--open');
+
+  // Swap icon name based on if open or closed
+  if (isAccordion && toggleIconUse) toggleIconType(toggleIcon, toggleIconUse, 'chevron-down-circle-filled', 'chevron-down-circle');
+
+  if (isAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
+
+  toggleContent.slideToggle(300).then(() => {
+    // Enable clicks after animation runs
+    trigger.style.pointerEvents = 'auto';
+  });
+
+  // Set aria expanded to true
   toggleAriaExpanded(element);
 };
 
@@ -51,12 +59,20 @@ const bindToggleUIEvents = (element) => {
   const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
   const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
+  const toggleIconUse = element.querySelector('[data-sprk-toggle="accordionIconUseElement"]');
+
+  // Hide details content, initially shown for no-JS scenarios
+  toggleContent.style.display = 'none';
+
   // Set aria-expanded to false initially
   toggleAriaExpanded(toggleTrigger);
+
   // Add click event listener to trigger for each toggle collection we find
   toggleTrigger.addEventListener('click', (e) => {
     e.preventDefault();
-    handleToggleClick(toggleContent, toggleIcon, e.currentTarget);
+    // Disable clicks till animation runs
+    e.currentTarget.style.pointerEvents = 'none';
+    handleToggleClick(toggleContent, toggleIcon, toggleIconUse, e.currentTarget);
   });
 };
 
@@ -66,8 +82,7 @@ const toggle = () => {
 
 export {
   toggle,
-  toggleContentCSS,
-  toggleIconCSS,
+  toggleIconType,
   toggleAriaExpanded,
   handleToggleClick,
   bindToggleUIEvents,

@@ -43,41 +43,105 @@ title: Developers
         </div>
       </li>
       <li class="sprk-u-mvm">
+        <p>Spark has two JavaScript files that need to be incorporated into your build in order for Spark's behavior to
+        work.</p>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li><p><strong>spark-core-prerender.js</strong> - This file detects if JavaScript is loaded and also sets up
+            the type loader. It needs to execute it's code before the page is rendered and therefore needs to be
+            imported in the head of the document.</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                import sparkCorePrerender from  &quot;@sparkdesignsystem/spark-core/spark-core-prerender&quot;;
+              </code>
+            </div>
+          </li>
+          <li><p><strong>spark-core.js</strong> - This file contains the bulk of Spark's behavior and can be loaded
+            after the page is rendered, this is best done before the closing body tag.</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+              </code>
+            </div>
+          </li>
+        </ul>
+        <p>There are also ES5 versions if preferred. They're located in @sparkdesignsystem/spark-core/es5.</p>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Init the Spark Core JS, passing in a config object (optional).</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            sparkCorePrerender({ //config, see below });
+          </code>
+        </div>
+        <div class="sprk-u-mvs">
+          <p class="sprk-u-mbm">See below for available configuration options:</p>
+          <table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="sprk-u-FontWeight--bold">typeConfig</td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
         <p>
-          Import the ES6 setup file in your JS build. This will bring all the
-          Spark-Core JS into your build. There is also an ES5 version if preferred.
-          It's located in @sparkdesignsystem/spark-core/es5.
+          Import the post-render ES6 setup file in your JS build. This is best done before the
+          closing body tag. This will bring all the Spark-Core JS into your build. There is
+          also an ES5 version if preferred. It's located in @sparkdesignsystem/spark-core/es5.
         </p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            import &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+            import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
           </code>
         </div>
       </li>
       <li class="sprk-u-mvm">
-        <p>If you plan to use
-          <a class="drizzle-b-Link" href="/patterns/components/icons.html">
-            Icons</a>, you'll need to include the svg sprite file that contains the
-          symbols in your HTML build process. </p>
-
+        <p>Init the Spark Core JS, passing in a config object (optional).</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            &quot;node_modules/@sparkdesignsystem/spark-core/spark-core-icons.svg&quot;
+            sparkCore({ //config, see below });
           </code>
         </div>
-
-        <p>The contents should be placed under the opening
-          <div class="drizzle-c-Command">
-            <code class="drizzle-CodeHighlight">
-              &lt;body&gt;
-            </code>
-          </div> tag.
-        </p>
+        <div class="sprk-u-mvs">
+          <p class="sprk-u-mbm">See below for available configuration options:</p>
+          <table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="sprk-u-FontWeight--bold">datePickerConfig</td>
+              <td>Exposes configuration provided by tiny-date-picker, see
+                <a href="https://github.com/chrisdavies/tiny-date-picker" class="drizzle-b-Link">github</a> for
+                documentation.</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </li>
       <li class="sprk-u-mvm">
-        <p>You will also need to perform a
-          <a href="/patterns/fundamentals/typography.html#typekit-setup"
-          class="drizzle-b-Link">typekit setup</a> for your application.</p>
+        <p>Spark does not provide icons directly. What you see below are proprietary icons in use by Quicken Loans. To supply
+          your own icon set, you need to import an svg that contains symbols for the ids referenced on the icon page. This symbol file
+          should occur in the DOM before the first use element.</p>
       </li>
       <li class="sprk-u-mvm">
         <p>The main content area of your site will also need to have a data attribute set:</p>
@@ -105,11 +169,19 @@ title: Developers
             <a href="https://angular.io/guide/ajs-quick-reference" class="drizzle-b-Link">angular.io</a>.
           </p>
         </li>
-        <li>
+        <li class="sprk-u-mvm">
           <p>
             We assume that your Angular project is using at
             least Angular 6 with Typescript or is an Angular-CLI based
             project.
+          </p>
+        </li>
+        <li>
+          <p>
+            We assume that you have already installed
+            @sparkdesignsystem/spark-core in your Angular project.
+            Vanilla spark-core is a peer dependency of
+            the Spark Angular packages.
           </p>
         </li>
       </ul>
@@ -134,6 +206,31 @@ title: Developers
         </li>
         <li class="sprk-u-mvm">
           <p>
+            Install the needed peer dependencies for our
+            npm package. When you use the Angular CLI it
+            should automatically install our peer
+            dependencies besides the packages listed below. If your application
+            does not have one of our peer dependencies
+            then your console should show a warning for that missing
+            dependency when you install spark-core-angular.
+          </p>
+          <ul class="drizzle-b-List sprk-u-mbm">
+            <li class="sprk-u-mvm">
+              <div class="drizzle-c-Command">
+                <code class="drizzle-CodeHighlight">
+                  npm install --save-dev tiny-date-picker</code>
+              </div>
+            </li>
+            <li class="sprk-u-mvm">
+              <div class="drizzle-c-Command">
+                <code class="drizzle-CodeHighlight">
+                  npm install --save-dev lodash</code>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="sprk-u-mvm">
+          <p>
             Import the Sass setup file in your Angular application's global styles Sass file.
             This can be done in the scss file specified
             at the highest level of your app.
@@ -146,7 +243,13 @@ title: Developers
             </code>
           </div>
         </li>
-
+        <li>Your HTML element needs to have the following class:
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              sprk-u-JavaScript
+            </code>
+          </div>
+        </li>
         <li class="sprk-u-mvm">
           <p>
             You'll need to
@@ -160,25 +263,23 @@ title: Developers
             </code>
           </div>
         </li>
-
         <li class="sprk-u-mvm">
           <p>
-            If you plan to use
-            <a class="drizzle-b-Link" href="/patterns/components/icons.html">Icons</a>,
-            you'll need to render the icon set at the outermost level of your
-            application, underneath the opening HTML body tag. This is typically
-            done in a global layout file.
+            You'll need to
+            import the
+            <span class="drizzle-c-Command"><code class="drizzle-CodeHighlight">BrowserAnimationsModule</code></span>
+            in your main app.module.ts file and add it to the NgModule imports array.
           </p>
           <div class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              &lt;sprk-icon-set&gt;&lt;/sprk-icon-set&gt;
+              import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             </code>
           </div>
         </li>
         <li class="sprk-u-mvm">
-          <p>You will also need to perform a
-            <a href="/patterns/fundamentals/typography.html#typekit-setup"
-            class="drizzle-b-Link">typekit setup</a> for your application.</p>
+          <p>Spark does not provide icons directly. What you see below are proprietary icons in use by Quicken Loans. To supply
+            your own icon set, you need to import an svg that contains symbols for the ids referenced on the icon page. This symbol file
+            should occur in the DOM before the first use element.</p>
         </li>
       </ul>
     </div>

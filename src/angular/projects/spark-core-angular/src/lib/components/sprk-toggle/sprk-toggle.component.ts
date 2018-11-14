@@ -1,26 +1,56 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'sprk-toggle',
   template: `
-    <div [ngClass]="getClasses()">
+    <div class="{{ additionalClasses }}" [attr.data-id]="idString">
       <a
-        class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone"
+        class="{{ titleFontClass }} sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString">
-        <sprk-icon iconType="chevron-down" additionalClasses="{{ iconClasses }}"></sprk-icon>
+        <sprk-icon iconType="chevron-down" additionalClasses="{{ iconClass }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
           {{ title }}
       </a>
 
-      <p class="sprk-b-TypeBodyFour sprk-u-pts" *ngIf="isOpen">
-        {{ body }}
-      </p>
+      <div [@toggleContent]="animState" data-sprk-toggle="content">
+        <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+          {{ body }}
+        </p>
+      </div>
     </div>
-  `
+  `,
+  animations: [
+    trigger('toggleContent', [
+      state(
+        'closed',
+        style({
+          height: '0',
+          display: 'none',
+          overflow: 'hidden'
+        })
+      ),
+      state(
+        'open',
+        style({
+          height: '*',
+          display: 'block'
+        })
+      ),
+      transition('closed => open', animate('300ms ease-in')),
+      transition('open => closed', animate('300ms ease-out'))
+    ])
+  ]
 })
-export class SparkToggleComponent {
+export class SparkToggleComponent implements OnInit {
   @Input()
   analyticsString: string;
   @Input()
@@ -29,28 +59,34 @@ export class SparkToggleComponent {
   title: string;
   @Input()
   body: string;
+  @Input()
+  iconClass: string;
+  @Input()
+  titleFontClass = 'sprk-b-TypeBodyThree';
+  @Input()
+  idString: string;
 
   public isOpen = false;
-  public iconClasses = 'sprk-u-mrs';
+  public iconStateClass = '';
+  public animState = 'closed';
 
-  getClasses(): string {
-    const classArray: string[] = [''];
+  toggleState(): void {
+    this.isOpen === false
+      ? (this.animState = 'closed')
+      : (this.animState = 'open');
 
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
+    this.isOpen === false
+      ? (this.iconStateClass = '')
+      : (this.iconStateClass = 'sprk-c-Icon--open');
   }
 
   toggle(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+    this.toggleState();
+  }
 
-    this.isOpen
-      ? (this.iconClasses = 'sprk-u-mrs sprk-c-Icon--open')
-      : (this.iconClasses = 'sprk-u-mrs');
+  ngOnInit() {
+    this.toggleState();
   }
 }

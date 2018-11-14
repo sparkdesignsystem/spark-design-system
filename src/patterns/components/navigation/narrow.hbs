@@ -2,13 +2,13 @@
 description:
   This component is intended for narrow viewports.
   On wide viewports, you should use the Wide Navigation component.
-order: 2
+order: 3
 hasAngularCode: true
 hasAngularDocs: true
 hasAngularCodeInfo: true
 ---
 
-<nav role="navigation">
+<nav role="navigation" data-id="navigation-narrow-1">
   <ul class="sprk-c-Accordion sprk-c-Accordion--navigation sprk-b-List sprk-b-List--bare">
     <li class="sprk-c-Accordion__item {{item}}" data-sprk-toggle="container">
       <a aria-controls="details1" class="sprk-c-Accordion__summary {{summary}}" data-sprk-toggle="trigger" data-sprk-toggle-type="accordion" href="#">
@@ -16,11 +16,11 @@ hasAngularCodeInfo: true
           Item 1
         </span>
 
-        <svg class="sprk-c-Icon sprk-c-Accordion__icon" data-sprk-toggle="icon" viewBox="0 0 448 512">
+        <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon" data-sprk-toggle="icon" viewBox="0 0 64 64">
           <use xlink:href="#chevron-down"></use>
         </svg>
       </a>
-      <ul class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs" data-sprk-toggle="content">
+      <ul class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details" data-sprk-toggle="content">
         <li>
           <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="">Item 1</a>
         </li>
@@ -33,7 +33,7 @@ hasAngularCodeInfo: true
       </ul>
     </li>
 
-    <li class="sprk-c-Accordion__item {{item}}">
+    <li class="sprk-c-Accordion__item sprk-c-Accordion__item--active {{item}}">
       <a aria-controls="details1" class="sprk-c-Accordion__summary {{summary}}" href="#">
         <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading {{heading}}">
           Item 2
@@ -47,11 +47,11 @@ hasAngularCodeInfo: true
           Item 3
         </span>
 
-        <svg class="sprk-c-Icon sprk-c-Accordion__icon" data-sprk-toggle="icon" viewBox="0 0 448 512">
+        <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon" data-sprk-toggle="icon" viewBox="0 0 64 64">
           <use xlink:href="#chevron-down"></use>
         </svg>
       </a>
-      <ul class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs" data-sprk-toggle="content">
+      <ul class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details" data-sprk-toggle="content">
         <li>
           <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="">Item 1</a>
         </li>

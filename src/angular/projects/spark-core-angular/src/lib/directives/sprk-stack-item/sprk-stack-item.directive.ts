@@ -4,27 +4,8 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkStackItem]'
 })
 export class SprkStackItemDirective implements OnInit {
-  @Input()
-  analyticsString: string;
-  @Input()
-  additionalClasses: string;
-
-  getClasses(): string[] {
-    const classArray: string[] = ['sprk-o-Stack__item'];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray;
-  }
-
   ngOnInit(): void {
-    this.getClasses().forEach(item => {
-      this.ref.nativeElement.classList.add(item);
-    });
+    this.ref.nativeElement.classList.add('sprk-o-Stack__item');
   }
 
   constructor(public ref: ElementRef) {}

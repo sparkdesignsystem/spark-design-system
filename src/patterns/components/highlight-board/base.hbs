@@ -2,21 +2,27 @@
 name: Base
 hidden: true
 ---
-
-<div class="sprk-c-HighlightBoard {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}}{{#if image}}sprk-c-HighlightBoard--has-image {{/if}}{{#if fullwidth}}sprk-u-FullWidth {{/if}}sprk-u-mbm">
+<div class="sprk-c-HighlightBoard {{#if image}}sprk-c-HighlightBoard--has-image {{/if}} {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}}sprk-u-mbm {{#if fullwidth}}sprk-u-FullWidth{{/if}}" {{#if idString}}data-id="{{idString}}"{{/if}}>
   {{#if image }}
-    <img class="sprk-c-HighlightBoard__image" src="{{imagefile}}" alt="">
+    <img class="sprk-c-HighlightBoard__image" src="{{imagefile}}" alt="placeholder">
   {{/if}}
-  <div class="sprk-c-HighlightBoard__content {{#if light}} sprk-c-HighlightBoard__content--light{{/if}}">
-    <div class="sprk-u-mbl">
-      <h1 class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__primary-heading sprk-u-mbs">Lift the burden of getting a home loan</h1>
-      <h4 class="sprk-b-TypeDisplayFour sprk-c-HighlightBoard__sub-heading sprk-u-mbm">Fast, Powerful and Completely Online</h4>
-    </div>
-    <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-c-HighlightBoard__cta-container">
-      <div class="sprk-o-Stack__item">
-        <button class="sprk-c-HighlightBoard__cta sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm">
-          Learn More
-        </button>
+
+  <div class="sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large">
+    <h1 class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__heading sprk-o-Stack__item">
+      Hello, Welcome To Spark Design System
+    </h1>
+
+    <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-o-Stack--center-column {{#if stacked}}sprk-o-Stack--center-row{{/if}}">
+      <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
+        <a class="sprk-c-Button sprk-c-Button--full@sm" href="/gettingstarted/designers.html">
+          Designers
+        </a>
+      </div>
+
+      <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
+        <a class="sprk-c-Button sprk-c-Button--full@sm sprk-c-Button--secondary" href="/gettingstarted/developers.html">
+          Developers
+        </a>
       </div>
     </div>
   </div>

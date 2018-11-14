@@ -11,54 +11,45 @@ import * as _ from 'lodash';
   selector: 'sprk-modal',
   template: `
     <div *ngIf="isVisible"
-         class="sprk-c-Modal"
+         [ngClass]="{'sprk-c-Modal': true, 'sprk-c-Modal--wait': modalType === 'wait'}"
          role="dialog"
          tabindex="1"
          [attr.aria-labelledby]="heading_id"
          aria-modal="true"
-         [attr.aria-describedby]="content_id">
-      <header class="sprk-c-Modal__header">
-        <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive"
-            [id]="heading_id">{{ title }}</h2>
+         [attr.aria-describedby]="content_id"
+         [attr.data-id]="idString">
+      <div class="sprk-o-Stack sprk-o-Stack--large">
+        <header class="sprk-o-Stack__item sprk-c-Modal__header">
+          <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFive"
+              [id]="heading_id">{{ title }}</h2>
 
-        <div *ngIf="modalType != 'wait'; then dismissButton; else waitSpinner;"></div>
-
-        <ng-template #dismissButton>
-          <button class="sprk-c-Modal__icon"
+          <button *ngIf="modalType != 'wait'" class="sprk-c-Modal__icon"
                   type="button"
                   aria-label="Close Modal"
                   (click)="closeModal($event)">
-              <sprk-icon iconType="times" additionalClasses="sprk-c-Icon--l"></sprk-icon>
+              <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"></sprk-icon>
           </button>
-        </ng-template>
+        </header>
 
-        <ng-template #waitSpinner>
-          <div class="sprk-c-Modal__icon">
-            <div class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large"></div>
-          </div>
-        </ng-template>
-      </header>
-
-      <div class="sprk-c-Modal__body">
-        <p class="sprk-b-TypeBodyTwo" [id]="content_id">
+        <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
+          <div *ngIf="modalType == 'wait'" class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
           <ng-content></ng-content>
-        </p>
+        </div>
+
+        <footer *ngIf="modalType === 'choice'" class="sprk-o-Stack__item sprk-c-Modal__footer">
+          <button class="sprk-c-Button sprk-u-mrm"
+                  [attr.data-analytics]="confirmAnalyticsString"
+                  (click)="emitConfirmClick($event)">
+            {{ confirmText }}
+          </button>
+
+          <button class="sprk-c-Button sprk-c-Button--tertiary"
+            [attr.data-analytics]="cancelAnalyticsString"
+            (click)="emitCancelClick($event)">
+            {{ cancelText }}
+          </button>
+        </footer>
       </div>
-
-      <footer *ngIf="modalType === 'choice'" class="sprk-c-Modal__footer">
-        <button class="sprk-c-Button sprk-u-mrm"
-                [attr.data-analytics]="confirmAnalyticsString"
-                (click)="emitConfirmClick($event)">
-          {{ confirmText }}
-        </button>
-
-        <a href="#nogo"
-           class="sprk-b-Link sprk-b-Link--standalone"
-           [attr.data-analytics]="cancelAnalyticsString"
-           (click)="emitCancelClick($event)">
-          {{ cancelText }}
-        </a>
-      </footer>
     </div>
 
     <div *ngIf="isVisible"
@@ -80,6 +71,8 @@ export class SparkModalComponent {
   confirmAnalyticsString: string;
   @Input()
   cancelAnalyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   isVisible = false;
   @Output()

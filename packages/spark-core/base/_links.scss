@@ -4,59 +4,99 @@
 //
 .sprk-b-Link {
   color: $link-color;
-  text-decoration: underline;
+  font-weight: $link-font-weight;
+  position: relative;
+  text-decoration: none;
   transition: $link-transition;
 
   &:visited {
     color: $link-visited-color;
+
+    &::after {
+      background-color: $link-underline-visited-color;
+    }
   }
 
   &:hover,
   &:active,
   &:focus {
+    color: $link-underline-color;
     text-decoration: none;
+
+    &::after {
+      background-color: $link-underline-color;
+    }
+  }
+
+  &::after {
+    content: '';
+    top: 100%;
+    left: 0;
+    height: 0.125em;
+    width: 100%;
+    position: absolute;
+    background-color: $link-underline-color;
+  }
+}
+
+.sprk-b-Link--plain {
+  text-decoration: none;
+
+  &::after {
+    content: none;
   }
 }
 
 .sprk-b-Link--standalone {
-  text-decoration: none;
-
-  &:visited {
-    text-decoration: none;
-  }
+  color: $link-standalone-color;
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration: underline;
+    &::after {
+      opacity: 1;
+      transition: $link-transition;
+    }
+  }
+
+  &::after {
+    opacity: 0;
   }
 }
 
 .sprk-b-Link--muted {
-  color: $gray-dark;
+  color: $link-muted-color;
 
   &:visited {
-    color: $gray-dark;
+    color: $link-muted-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $gray-dark;
+    color: $link-muted-color;
   }
 }
 
 .sprk-b-Link--disabled {
-  color: $gray-medium;
+  color: $link-disabled-color;
   pointer-events: none;
 
   &:visited {
-    color: $gray-medium;
+    color: $link-disabled-color;
+
+    &::after {
+      background: $link-disabled-color;
+    }
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $gray-medium;
+    color: $link-disabled-color;
+  }
+
+  &::after {
+    background: $link-disabled-color;
   }
 }
