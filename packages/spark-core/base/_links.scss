@@ -8,13 +8,10 @@
   position: relative;
   text-decoration: none;
   transition: $link-transition;
+  border-bottom: 0.0625em solid $link-underline-color;
 
   &:visited {
     color: $link-visited-color;
-
-    &::after {
-      background-color: $link-underline-visited-color;
-    }
   }
 
   &:hover,
@@ -22,45 +19,41 @@
   &:focus {
     color: $link-underline-color;
     text-decoration: none;
-
-    &::after {
-      background-color: $link-underline-color;
-    }
-  }
-
-  &::after {
-    content: '';
-    top: 100%;
-    left: 0;
-    height: 0.125em;
-    width: 100%;
-    position: absolute;
-    background-color: $link-underline-color;
   }
 }
 
 .sprk-b-Link--plain {
   text-decoration: none;
-
-  &::after {
-    content: none;
-  }
+  border-bottom: none;
 }
 
 .sprk-b-Link--standalone {
   color: $link-standalone-color;
+  text-decoration: none;
+  border: none;
 
   &:hover,
   &:active,
   &:focus {
-    &::after {
-      opacity: 1;
-      transition: $link-transition;
-    }
+    transition: $link-transition;
+    border-bottom: 0.0625em solid $link-underline-color;
+  }
+}
+
+.sprk-b-Link--disabled {
+  color: $link-disabled-color;
+  pointer-events: none;
+  text-decoration: none;
+  border-bottom: 0.0625em solid $link-disabled-color;
+
+  &:visited {
+    color: $link-disabled-color;
   }
 
-  &::after {
-    opacity: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link-disabled-color;
   }
 }
 
@@ -75,28 +68,5 @@
   &:active,
   &:focus {
     color: $link-muted-color;
-  }
-}
-
-.sprk-b-Link--disabled {
-  color: $link-disabled-color;
-  pointer-events: none;
-
-  &:visited {
-    color: $link-disabled-color;
-
-    &::after {
-      background: $link-disabled-color;
-    }
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $link-disabled-color;
-  }
-
-  &::after {
-    background: $link-disabled-color;
   }
 }
