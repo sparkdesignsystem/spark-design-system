@@ -37,6 +37,9 @@ export class SparkLinkComponent {
       case 'disabled':
         classArray.push('sprk-b-Link--disabled');
         break;
+      case 'plain':
+        classArray.push('sprk-b-Link--plain');
+        break;
       default:
         break;
     }
