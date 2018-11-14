@@ -8,7 +8,7 @@ gulp.task('setup-spark-extras', (cb) => {
 });
 
 gulp.task('build-spark-extras', (cb) => {
-  exec('cd packages/spark-extras/components/highlight-board && npm run webpack', (err, stdout, stderr) => {
+  exec('cd packages/spark-extras/components/highlight-board && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

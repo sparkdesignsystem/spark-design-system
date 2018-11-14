@@ -8,7 +8,7 @@ gulp.task('setup-spark-core', (cb) => {
 });
 
 gulp.task('build-spark-core', (cb) => {
-  exec('cd packages/spark-core && npm run webpack', (err, stdout, stderr) => {
+  exec('cd packages/spark-core && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
