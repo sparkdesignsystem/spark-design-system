@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-secondary-navigation',
   template: `
-    <nav role="navigation" [ngClass]="getNavClasses()">
+    <nav role="navigation" [ngClass]="getNavClasses()" [attr.data-id]="idString">
       <ul [ngClass]="getClasses()">
         <ng-content></ng-content>
       </ul>
@@ -14,9 +14,12 @@ export class SparkSecondaryNavigationComponent {
   additionalClasses: string;
   @Input()
   additionalNavClasses: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [
+      'sprk-c-SecondaryNavigation',
       'sprk-o-HorizontalList',
       'sprk-o-HorizontalList--spacing-medium'
     ];

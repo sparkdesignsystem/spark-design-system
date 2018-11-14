@@ -1,6 +1,6 @@
 {
   "name": "spark-design-system",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Quicken Loans",
   "description": "A pattern library authoring environment",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
@@ -24,8 +24,6 @@
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.4.0",
     "@cloudfour/hbs-helpers": "^0.9.0",
-    "@sparkdesignsystem/spark-core": "^2.0.1",
-    "@sparkdesignsystem/spark-extras": "^2.0.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",
@@ -41,6 +39,7 @@
     "eslint-plugin-react": "^7.11.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-cssnano": "^2.1.3",
     "gulp-gh-pages": "^0.5.4",
     "gulp-plumber": "^1.2.0",
@@ -58,6 +57,7 @@
     "postcss-cssnext": "^2.5.2",
     "prettier-eslint-cli": "^4.7.1",
     "prettier-stylelint": "^0.4.2",
+    "request": "^2.88.0",
     "sinon": "^6.3.4",
     "stylelint": "^9.6.0",
     "stylelint-scss": "^3.3.1",
@@ -68,16 +68,15 @@
     "suitcss-utils": "^1.0.0"
   },
   "scripts": {
-    "prestart": "npm install",
     "start": "gulp --dev",
-    "build": "npm run prestart && gulp",
-    "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
+    "build": "npm install && gulp",
     "precommit": "lint-staged",
-    "test": "npm run build-spark && npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
+    "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-extras/components/highlight-board && npm run test --prefix ./src/angular/projects/spark-core-angular && npm run test --prefix ./src/angular/projects/spark-extras-angular-award && npm run test --prefix ./src/angular/projects/spark-extras-angular-card && npm run test --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm run test --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
-    "build-spark": "npm run install-dependencies && npm run link-dependencies && npm run build-angular && npm run build-angular && npm run link-spark-core-angular",
+    "build-spark": "npm run install-dependencies && npm run unlink-dependencies && npm run link-dependencies && npm run build-angular && npm run link-spark-core-angular",
     "lerna": "npm run build-spark && lerna bootstrap && lerna publish",
     "install-dependencies": "npm install && npm install --prefix ./packages/spark-core && npm install --prefix ./packages/spark-extras/components/highlight-board && npm install --prefix ./src/angular && npm install --prefix ./src/angular/projects/spark-core-angular && npm install --prefix ./src/angular/projects/spark-extras-angular-award && npm install --prefix ./src/angular/projects/spark-extras-angular-card && npm install --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm install --prefix ./src/angular/projects/spark-extras-angular-highlight-board && npm install -g @angular/cli @angular-devkit/build-angular",
+    "unlink-dependencies": "npm unlink --prefix ./packages/spark-core && npm unlink --prefix ./packages/spark-extras && npm unlink @sparkdesignsystem/spark-core --prefix ./src/angular && npm unlink @sparkdesignsystem/spark-extras --prefix ./src/angular",
     "link-dependencies": "npm link --prefix ./packages/spark-core && npm link --prefix ./packages/spark-extras && npm link @sparkdesignsystem/spark-core --prefix ./src/angular && npm link @sparkdesignsystem/spark-extras --prefix ./src/angular",
     "build-angular": "cd src/angular && ng build spark-core-angular && cd ../..",
     "link-spark-core-angular": "npm link --prefix ./src/angular/dist/spark-core-angular && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-highlight-board"

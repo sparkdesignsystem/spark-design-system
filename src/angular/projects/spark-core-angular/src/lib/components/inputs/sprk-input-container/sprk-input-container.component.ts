@@ -8,11 +8,10 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
   selector: 'sprk-input-container',
   template: `
     <div [ngClass]="getClasses()">
+      <ng-content select="[sprkInput]"></ng-content>
+      <div class="sprk-b-InputContainer__input-border"></div>
+      <ng-content select="[sprk-select-icon]"></ng-content>
       <ng-content select="[sprkLabel]"></ng-content>
-      <div [ngClass]="getIconContainerClasses()">
-        <ng-content select="[sprk-input-icon]"></ng-content>
-        <ng-content select="[sprkInput]"></ng-content>
-      </div>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
@@ -34,18 +33,6 @@ export class SparkInputContainerComponent implements OnInit {
   id = _.uniqueId();
   input_id = `input_${this.id}`;
   error_id = `error_${this.id}`;
-
-  getIconContainerClasses(): string {
-    const classArray: string[] = [];
-
-    if (this.iconContainerClasses) {
-      this.iconContainerClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
 
   getClasses(): string {
     const classArray: string[] = ['sprk-b-InputContainer'];

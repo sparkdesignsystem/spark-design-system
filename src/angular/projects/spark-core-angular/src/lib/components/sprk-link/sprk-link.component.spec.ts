@@ -43,6 +43,11 @@ describe('SparkLinkComponent', () => {
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--disabled');
   });
 
+  it('should add the correct class if linkType is disabled', () => {
+    component.linkType = 'plain';
+    expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--plain');
+  });
+
   it('should add the correct classes if linkType has no value, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-u-pam sprk-u-man');
@@ -63,5 +68,11 @@ describe('SparkLinkComponent', () => {
     expect(linkElement.getAttribute('data-analytics')).toEqual(
       'Product: Link: Link 1'
     );
+  });
+
+  it('should set the target attr if supplied', () => {
+    component.target = '_blank';
+    fixture.detectChanges();
+    expect(linkElement.getAttribute('target')).toEqual('_blank');
   });
 });

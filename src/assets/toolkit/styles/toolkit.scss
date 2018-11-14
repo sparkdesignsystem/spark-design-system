@@ -6,6 +6,30 @@
 // Settings
 ///
 
+// font urls
+$using-webfont-body: true;
+$using-webfont-heading: true;
+$using-webfont-alternate: true;
+$body-font-name: FallSans;
+$body-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
+$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
+$heading-font-name: FallSans;
+$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
+$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
+$alternate-font-weight: bold;
+$alternate-font-name: FallSans-Bold;
+$alternate-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+  format('woff2'),
+  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+
 @import '../../../../packages/spark-core/settings/colors';
 @import '../../../../packages/spark-core/settings/settings';
 @import '../../../../packages/spark-core/components/icons';
@@ -48,7 +72,6 @@
 @import '../../../../node_modules/@scalescss/objects-box/box';
 @import '../../../../node_modules/@scalescss/objects-centered-column/centered-column';
 @import '../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list';
-@import '../../../../node_modules/@scalescss/objects-side-by-side/side-by-side';
 @import '../../../../node_modules/@scalescss/objects-stack/stack';
 @import '../../../../node_modules/@scalescss/objects-vertical-list/vertical-list';
 @import '../../../../node_modules/@scalescss/objects-media-object/media-object';
@@ -71,6 +94,7 @@
 @import '../../../../packages/spark-core/components/accordions';
 @import '../../../../packages/spark-core/components/spinners';
 @import '../../../../packages/spark-core/components/buttons';
+@import '../../../../packages/spark-core/components/secondary-navigation';
 @import '../../../../packages/spark-core/components/wide-navigation';
 @import '../../../../packages/spark-core/components/alerts';
 @import '../../../../packages/spark-core/components/modals';
@@ -79,6 +103,7 @@
 @import '../../../../packages/spark-core/components/datepicker';
 @import '../../../../packages/spark-core/components/dividers';
 @import '../../../../packages/spark-core/components/masthead';
+@import '../../../../packages/spark-core/components/promo';
 @import '../../../../packages/spark-core/components/hamburger';
 
 //

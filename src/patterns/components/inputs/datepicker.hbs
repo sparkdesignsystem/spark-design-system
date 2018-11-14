@@ -13,12 +13,13 @@ hasAngularDocs: true
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="date" data-sprk-datepicker>
-  <div class="sprk-b-TextInput--date-picker">
-      <svg class="sprk-c-Icon sprk-b-DatePicker__icon" viewBox="0 0 100 100">
+  <div class="sprk-b-TextInputIconContainer">
+      <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-b-DatePicker__icon" viewBox="0 0 64 64">
           <use xlink:href="#calendar" />
       </svg>
-      <input class="sprk-b-TextInput sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
+      <input class="sprk-b-TextInput sprk-b-TextInput--with-icon sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
              id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}"
+             data-id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}"
              type="text"
              pattern="^(((0[1358]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02(\/?)((0?\d)|[12]\d))(\4|\7|\9)[12]\d{3})?$"
              placeholder="MM/DD/YYYY"
@@ -26,12 +27,12 @@ hasAngularDocs: true
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}} data-sprk-input="text">
     <div class="sprk-b-InputContainer__input-border"></div>
-    <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label">Date</label>
+    <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label sprk-b-Label--with-icon">Date</label>
   </div>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
     {{#if errorMessage}}
-      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
-        <use xlink:href="#exclamation" />
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled" />
       </svg>
       <div class="sprk-b-ErrorText">
         {{errorMessage}}

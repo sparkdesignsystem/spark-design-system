@@ -16,23 +16,6 @@ module.exports = {
     src: './src/static/**/*',
     dest: './dist',
   },
-
-  icons: {
-    src: './src/assets/toolkit/images/icons/**/*.svg',
-    dest: './packages/spark-core',
-    mode: {
-      symbol: {
-        inline: true,
-        sprite: 'spark-core-icons.svg',
-        dest: '.',
-      },
-    },
-    svg: {
-      xmlDeclaration: false,
-      doctypeDeclaration: false,
-      namespaceClassnames: false,
-    },
-  },
   images: {
     src: './src/assets/toolkit/images/*.*',
     dest: './dist/assets/toolkit/images',
@@ -46,6 +29,7 @@ module.exports = {
           'drizzle/scripts/drizzle': './src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
           'toolkit/scripts/toolkit': './src/assets/toolkit/scripts/toolkit.js',
+          'toolkit/scripts/toolkit-prerender': './src/assets/toolkit/scripts/toolkit-prerender.js',
         },
         output: {
           path: './dist/assets',
@@ -96,7 +80,7 @@ module.exports = {
           './packages/spark-core/**/*.js',
           './packages/spark-extras/**/*.js',
         ],
-        tasks: ['build-es5'],
+        tasks: ['build-es5', 'js'],
       },
       {
         match: [

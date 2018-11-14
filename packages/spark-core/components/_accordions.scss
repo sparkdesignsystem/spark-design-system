@@ -2,21 +2,20 @@
 // Accordions
 // ==================================================================
 .sprk-c-Accordion {
+  border-top: $accordion-border;
   margin: 0 auto;
   max-width: $accordion-max-width;
   width: 100%;
 }
 
+.sprk-c-Accordion__item--open + .sprk-c-Accordion__item--open {
+  &::before {
+    display: none;
+  }
+}
+
 .sprk-c-Accordion__item {
-  margin-bottom: $space-xs;
-
-  &:first-child {
-    border-top: $accordion-border;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  border-bottom: $accordion-border;
 }
 
 .sprk-c-Accordion__heading {
@@ -25,7 +24,6 @@
 
 .sprk-c-Accordion__icon {
   flex: 0 0 auto;
-  transition: transform $accordion-toggle-transistion-timing;
 }
 
 .sprk-c-Accordion__summary {
@@ -42,108 +40,115 @@
   }
 }
 
-.sprk-c-Accordion__summary--open .sprk-c-Accordion__heading {
+.sprk-c-Accordion__item--open .sprk-c-Accordion__heading {
   font-weight: bold;
 }
 
-.sprk-c-Accordion__summary--open .sprk-c-Accordion__icon {
+.sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
   color: $accordion-summary-active-color;
-  transform: rotate(180deg);
-  transform-origin: center;
-}
-
-.sprk-c-Accordion__details {
-  border-bottom: $accordion-border;
-  overflow: hidden;
-  transition: height $accordion-toggle-transistion-timing;
 }
 
 .sprk-c-Accordion__content {
   padding-bottom: $space-l;
 }
 
-.sprk-c-Accordion__details--open {
-  border-bottom: $accordion-border-open;
-}
-
-.sprk-c-Accordion__details:not(.sprk-c-Accordion__details--open) {
-  height: 0;
-}
-
-// Accordion Navigation Styles TODO: FALL
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation {
-  border-top: 2px solid $black-tint-50;
+  border: 0;
+}
+
+.sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
+  border-bottom: $accordion-border-open;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black-tint-25;
+    width: 100%;
+  }
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item {
+  border: 0;
   margin: 0;
 
   &:first-child {
     border-top: 0;
   }
 }
-// Accordion Navigation Styles TODO: FALL
-.sprk-c-Accordion--navigation .sprk-c-Accordion__summary--open {
-  background-color: $red-real;
-}
-// Accordion Navigation Styles TODO: FALL
+
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
-  border: 2px solid $black-tint-50;
   border-top: 0;
+  min-height: $icon-xl;
   padding: $space-m;
 
   &:hover,
   &:active {
-    border-bottom: 2px solid $black-tint-50;
-    background-color: $red-real;
-    color: $white;
+    background-color: $gray-tint-50;
   }
 }
-// Accordion Navigation Styles TODO: FALL
+
+// Accordion Navigation Styles
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--active
+.sprk-c-Accordion__summary {
+  background-color: $gray-tint-50;
+  border-left: $narrow-nav-left-border;
+}
+
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--active
+.sprk-c-Accordion__heading {
+  font-weight: bold;
+}
+
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
-  color: $red-real;
-  text-transform: uppercase;
+  color: $black;
 }
-// Accordion Navigation Styles TODO: FALL
+
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
-  color: $red-real;
+  stroke: $black;
 }
-// Accordion Navigation Styles TODO: FALL
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary--open
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:hover
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:active
-.sprk-c-Accordion__heading,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary--open
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:hover
-.sprk-c-Accordion__icon,
-.sprk-c-Accordion--navigation
-.sprk-c-Accordion__summary:active
-.sprk-c-Accordion__icon {
-  color: $white;
-}
-// Accordion Navigation Styles TODO: FALL
+
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
   border: 0;
-  border-bottom: 2px solid $black-tint-50;
   padding: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $black-tint-25;
+    width: 100%;
+  }
 }
-// Accordion Navigation Styles TODO: FALL
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
+  color: $black;
   display: block;
+  font-weight: $narrow-nav-link-font-weight;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $red-real;
-    color: $white;
+    background-color: $gray-tint-50;
     text-decoration: none;
   }
+
+  &::after {
+    content: none;
+  }
 }
+
+/* stylelint-disable selector-class-pattern */
+.DOM-slider-hidden {
+  display: none;
+}
+
+/* stylelint-enable selector-class-pattern */

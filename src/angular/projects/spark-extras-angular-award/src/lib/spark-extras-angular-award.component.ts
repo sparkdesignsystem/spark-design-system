@@ -3,15 +3,15 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-award',
   template: `
-  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}">
+  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}" [attr.data-id]="idString">
     <h2
       sprkStackItem
       class="
         sprk-o-Stack__item
-        sprk-o-Stack__item--center
         sprk-b-TypeDisplayFive
         sprk-b-Measure sprk-b-Measure--narrow
-        sprk-u-TextAlign--center">
+        sprk-u-TextAlign--center
+        sprk-o-Stack__item--center-column">
       {{ title }}
     </h2>
 
@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
       sprkStackItem
       [ngClass]="getClasses()">
       <a
-        class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
+        class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
         [routerLink]="imgOneHref"
         [attr.data-analytics]="analyticsStringImgOne">
         <img
@@ -29,7 +29,7 @@ import { Component, Input } from '@angular/core';
       </a>
 
       <a
-        class="sprk-o-Stack__item sprk-o-Stack__item--equal@s sprk-o-Stack"
+        class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
         [routerLink]="imgTwoHref"
         [attr.data-analytics]="analyticsStringImgTwo">
         <img
@@ -42,10 +42,11 @@ import { Component, Input } from '@angular/core';
     <sprk-toggle
       *ngIf="disclaimer !== 'false'"
       sprkStackItem
+      additionalClasses="sprk-o-Stack__item--start-column"
       toggleType="base"
       title="{{ disclaimerTitle }}"
-      body="{{ disclaimerCopy }}"
       analyticsString="{{ analyticsStringDisclaimer }}">
+      <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
     </sprk-toggle>
   </sprk-stack>
   `,
@@ -86,10 +87,12 @@ export class SparkAwardComponent {
   disclaimerCopy: string;
   @Input()
   disclaimer: string;
+  @Input()
+  idString: string;
 
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     // Handle the choice of item split breakpoint by adding CSS class
@@ -118,7 +121,7 @@ export class SparkAwardComponent {
 
   getClassesImgOne(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack__item--center'
+      'sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     if (this.additionalClassesImgOne) {
@@ -131,7 +134,7 @@ export class SparkAwardComponent {
 
   getClassesImgTwo(): string {
     const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack__item--center'
+      'sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
     if (this.additionalClassesImgTwo) {

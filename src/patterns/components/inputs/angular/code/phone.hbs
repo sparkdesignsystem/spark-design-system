@@ -1,4 +1,4 @@
-<sprk-input-container>
+<sprk-icon-input-container>
   <label sprkLabel>Phone Number *</label>
   <input
     name="phone_input"
@@ -9,10 +9,11 @@
     [(ngModel)]="phone_input"
     required
     #phoneInput="ngModel"
+    data-id="input-phone-1"
     sprkFormatterPhoneNumber
     sprkInput>
   <span
     [hidden]="phoneInput.valid || phoneInput.pristine"
     sprkFieldError>
   </span>
-</sprk-input-container>
+</sprk-icon-input-container>

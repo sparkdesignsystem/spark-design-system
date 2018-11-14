@@ -116,6 +116,7 @@
   background: none;
   border: 2px solid transparent;
   border-radius: 50%;
+  font-size: 1rem;
   height: $date-picker-button-size;
   line-height: 1;
   padding: 6px;
@@ -180,11 +181,6 @@
 .dp-cal-month,
 .dp-cal-year {
   font-size: $font-size-display-six;
-  flex: 1;
-}
-
-.dp-cal-month {
-  flex: 1.5;
 }
 
 .dp-next,
@@ -242,7 +238,7 @@
 .dp-below {
   margin-top: $space-m;
   position: absolute;
-  z-index: $layer-height-xs;
+  z-index: $layer-height-m;
 
   @media (max-width: $date-picker-max-width) {
     left: 0 !important;

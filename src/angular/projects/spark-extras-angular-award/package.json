@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-extras-angular-award",
   "description": "The Award component showcases awards in a vertically stacked layout that switches to side by side on larger screens.",
-  "version": "1.0.0",
+  "version": "3.0.1",
   "scripts": {
     "lint": "ng lint spark-extras-angular-award",
     "test": "ng test spark-extras-angular-award --watch=false",
@@ -17,6 +17,6 @@
     "@angular/platform-browser": "^6.1.4",
     "@angular/platform-browser-dynamic": "^6.1.4",
     "@angular/router": "^6.1.4",
-    "@sparkdesignsystem/spark-core-angular": "1.0.0"
+    "@sparkdesignsystem/spark-core-angular": "^4.0.0"
   }
 }

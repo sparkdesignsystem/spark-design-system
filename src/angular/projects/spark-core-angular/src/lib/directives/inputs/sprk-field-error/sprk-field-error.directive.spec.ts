@@ -5,9 +5,7 @@ import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-  <span
-    additionalClasses="sprk-u-man"
-    sprkFieldError>Error Message</span>`
+  <span sprkFieldError>Error Message</span>`
 })
 class TestComponent {}
 
@@ -29,12 +27,5 @@ describe('Spark Field Error Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should add classes if additionalClasses has a value', () => {
-    fixture.detectChanges();
-    expect(spanElement.classList.toString()).toEqual(
-      'sprk-b-ErrorText sprk-u-man'
-    );
   });
 });

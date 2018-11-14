@@ -2,11 +2,17 @@
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
   line-height: $line-height-body-three;
-}
-
-.sprk-b-InputContainer .sprk-b-Label {
   padding: 0 $space-s;
   transform-origin: top left;
+}
+
+.sprk-b-Label--no-input {
+  padding: 0;
+  transform: none;
+}
+
+.sprk-b-InputContainer .sprk-b-Label.sprk-b-Label--inline {
+  padding: 0 $space-m;
 }
 
 .sprk-b-Label--inline {
@@ -29,26 +35,49 @@
   transform: scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
+.sprk-b-InputContainer--textarea > .sprk-b-Label {
+  margin-bottom: 0;
+}
+
 // label moving
 .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: $label-offset-y;
-  margin-bottom: $label-counter-weight;
   position: absolute;
   transition: all $input-animation-speed;
-  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+  transform: scale($label-shrink-scale) translateY($label-offset-y); // ratio of body-four to body-three
   width: auto;
 }
 
 .sprk-u-JavaScript .sprk-b-TextInput ~ .sprk-b-Label {
-  margin-top: $label-offset-y-open;
-  transform: scale(1);
+  transform: scale(1) translateY($label-offset-y + 19px); // visually centering with icon
 }
 
+.sprk-b-TextInput,
+.sprk-b-TextInput[placeholder],
+.sprk-b-TextInput--has-value,
+.sprk-b-TextInput--focusin,
+.sprk-b-Select {
+  padding-top: $space-m;
+}
+
+.sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  margin-top: $label-offset-y;
-  margin-bottom: $label-counter-weight;
-  transform: scale($label-shrink-scale); // ratio of body-four to body-three
+  height: 0;
+  transform: translateY($label-offset-y) scale($label-shrink-scale); // ratio of body-four to body-three
 }
 
+// We need to abstract this so a label is not dependent on being adjacent to a text input
+.sprk-b-TextInputIconContainer .sprk-b-TextInput--has-value ~ .sprk-b-Label,
+.sprk-b-TextInputIconContainer .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
+.sprk-b-TextInputIconContainer .sprk-b-TextInput--focusin ~ .sprk-b-Label {
+  padding-left: $space-s;
+}
+
+.sprk-b-Label--with-icon {
+  padding-left: $space-l;
+}
+
+.sprk-b-Label--monetary {
+  padding-left: 24px;
+}

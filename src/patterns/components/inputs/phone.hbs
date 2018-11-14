@@ -13,6 +13,7 @@ hasAngularCodeInfo: true
 <div class="sprk-b-InputContainer" data-sprk-input="phone">
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}"
+         data-id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}"
          type="tel"
          pattern="(^(\+\d{1,2}\s)?((\(\d{3}\))|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$)|^$"
          placeholder="(000) 000-0000"
@@ -23,8 +24,8 @@ hasAngularCodeInfo: true
   <label for="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}" class="sprk-b-Label">Phone Number</label>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container">
     {{#if errorMessage}}
-      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
-        <use xlink:href="#exclamation" />
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled" />
       </svg>
       <div class="sprk-b-ErrorText">
         {{errorMessage}}

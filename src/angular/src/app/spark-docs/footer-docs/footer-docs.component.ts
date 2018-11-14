@@ -3,287 +3,414 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sprk-footer-docs',
   template: `
-    <div class="drizzle-o-ContentGrouping">
-      <div class="sprk-o-CenteredColumn">
-        <h2 class="drizzle-b-h2">
-          Base
-        </h2>
-        <sprk-footer
-          [navLinks]="navLinks"
-          [badges]="badges"
-          additionalClassesBadges="sprk-u-Width-20">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam in laoreet ante, non feugiat neque. Suspendisse
-          et ipsum leo. Quisque non consectetur justo.
-        </sprk-footer>
-      </div>
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer Without Global Section
+      </h2>
+
+      <sprk-footer
+        idString="footer-1"
+        [localLinks]="localLinks"
+        [socialLinks]="socialLinks"
+        [badgeLinks]="badgeLinks"
+        [awards]="awards"
+        awardsHeading="Awards Heading"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"></sprk-footer>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <div class="sprk-o-CenteredColumn">
-        <h2 class="drizzle-b-h2">
-          Base With Award Component
-        </h2>
-        <sprk-footer
-          splitAt="huge"
-          [navLinks]="navLinks"
-          [badges]="badges"
-          additionalClassesBadges="sprk-u-Width-25"
-          additionalClassesAwardImgOne="sprk-u-Width-35"
-          additionalClassesAwardImgTwo="sprk-u-Width-35"
-          disclaimer="true"
-          disclaimerCopy="this is some copy for the award disclaimer in the footer"
-          disclaimerTitle="Footer Disclaimer">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam in laoreet ante, non feugiat neque. Suspendisse
-          et ipsum leo. Quisque non consectetur justo.
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer With Global Section
+      </h2>
 
-          <sprk-award
-            optional-slot
-            disclaimer="false"
-            title="Spark Award Component"
-            additionalClassesImgOne="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
-            additionalClassesImgTwo="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
-            imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-            imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-            imgOneAlt="placeholder!"
-            imgOneHref="https://www.sparkdesignsystem.com/"
-            imgTwoHref="https://www.sparkdesignsystem.com/"
-            imgTwoAlt="placeholder!"
-            analyticsStringImgOne="Foo"
-            analyticsStringImgTwo="Test">
-          </sprk-award>
-        </sprk-footer>
-      </div>
+      <sprk-footer
+        idString="footer-2"
+        [localLinks]="localLinks"
+        [globalLinks]="globalLinks"
+        [socialLinks]="socialLinks"
+        [badgeLinks]="badgeLinks"
+        [awards]="awards"
+        awardsHeading="Awards Heading"
+        globalHeading="Global Site Links"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"
+        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <div class="sprk-o-CenteredColumn">
-        <h2 class="drizzle-b-h2">
-          Base With Optional Elements
-        </h2>
-        <sprk-footer
-          [navLinks]="navLinks"
-          [siteLinkCols]="siteLinkCols"
-          [socialLinks]="socialLinks"
-          [feedbackLinks]="feedbackLinks"
-          splitAt="huge"
-          [badges]="badges"
-          additionalClassesBadges="sprk-u-Width-25"
-          additionalClassesAwardImgOne="sprk-u-Width-35"
-          additionalClassesAwardImgTwo="sprk-u-Width-35"
-          disclaimerCopy="this is some copy for the award disclaimer in the footer"
-          disclaimerTitle="Footer Disclaimer">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam in laoreet ante, non feugiat neque. Suspendisse
-          et ipsum leo. Quisque non consectetur justo.
-        </sprk-footer>
-      </div>
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer Without Social Links
+      </h2>
+
+      <sprk-footer
+        idString="footer-3"
+        [localLinks]="localLinks"
+        [globalLinks]="globalLinks"
+        [badgeLinks]="badgeLinks"
+        [awards]="awards"
+        awardsHeading="Awards Heading"
+        globalHeading="Global Site Links"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"
+        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
     </div>
 
-    <div class="drizzle-o-ContentGrouping">
-      <div class="sprk-o-CenteredColumn">
-        <h2 class="drizzle-b-h2">
-          Base With Optional Elements And Award Pattern
-        </h2>
-        <sprk-footer
-          [siteLinkCols]="siteLinkCols"
-          [navLinks]="navLinks"
-          [socialLinks]="socialLinks"
-          [feedbackLinks]="feedbackLinks"
-          splitAt="huge"
-          [badges]="badges"
-          additionalClassesBadges="sprk-u-Width-25"
-          additionalClassesAwardImgOne="sprk-u-Width-35"
-          additionalClassesAwardImgTwo="sprk-u-Width-35"
-          disclaimer="true"
-          disclaimerCopy="this is some copy for the award disclaimer in the footer"
-          disclaimerTitle="Footer Disclaimer">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam in laoreet ante, non feugiat neque. Suspendisse
-          et ipsum leo. Quisque non consectetur justo.
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer Without Badge Links
+      </h2>
 
-          <sprk-award
-            optional-slot
-            disclaimer="false"
-            title="Spark Award Component"
-            additionalClassesImgOne="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
-            additionalClassesImgTwo="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large"
-            imgOneSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-            imgTwoSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-            imgOneAlt="placeholder!"
-            imgOneHref="https://www.sparkdesignsystem.com/"
-            imgTwoHref="https://www.sparkdesignsystem.com/"
-            imgTwoAlt="placeholder!"
-            analyticsStringImgOne="Foo"
-            analyticsStringImgTwo="Test">
-          </sprk-award>
-        </sprk-footer>
-      </div>
+      <sprk-footer
+        idString="footer-4"
+        [localLinks]="localLinks"
+        [globalLinks]="globalLinks"
+        [socialLinks]="socialLinks"
+        [awards]="awards"
+        awardsHeading="Awards Heading"
+        globalHeading="Global Site Links"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"
+        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
     </div>
-  `,
-  styles: ['']
+
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer Without Awards
+      </h2>
+
+      <sprk-footer
+        idString="footer-5"
+        [localLinks]="localLinks"
+        [globalLinks]="globalLinks"
+        [badgeLinks]="badgeLinks"
+        globalHeading="Global Site Links"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"
+        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+    </div>
+
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer Without Disclaimer Toggle And Award
+      </h2>
+
+      <sprk-footer
+        idString="footer-6"
+        [localLinks]="localLinks"
+        [globalLinks]="globalLinks"
+        [badgeLinks]="badgeLinks"
+        globalHeading="Global Site Links"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"></sprk-footer>
+    </div>
+
+    <div class="sprk-o-CenteredColumn sprk-u-mbh">
+      <h2 class="drizzle-b-h2">
+        Footer With Two Columns of Local Links
+      </h2>
+
+      <sprk-footer
+        idString="footer-7"
+        [localLinks]="localLinksTwoCol"
+        [globalLinks]="globalLinks"
+        [socialLinks]="socialLinks"
+        [badgeLinks]="badgeLinks"
+        [awards]="awards"
+        awardsHeading="Awards Heading"
+        globalHeading="Global Site Links"
+        connectHeading="Connect With Us"
+        [disclaimerText]="disclaimerText"
+        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+    </div>
+  `
 })
 export class FooterDocsComponent {
-  siteLinkCols = [
+  constructor() {}
+
+  globalLinks = [
     {
-      heading: 'Column 1',
-      siteLinks: [
+      text: 'Lorem ipsum dolor sit amet, consectetur.',
+      href: '/global-1',
+      icon: 'auto-loans',
+      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'cats'
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur.',
+      href: '/global-2',
+      imgSrc:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      imgCSS: 'sprk-u-Width-20',
+      imgAlt: 'Foo',
+      analytics: 'link-2'
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur.',
+      href: '/global-3',
+      imgSrc:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+      imgCSS: 'sprk-u-Width-20',
+      imgAlt: 'Foo',
+      analytics: 'link-2'
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur.',
+      href: '/global-4',
+      icon: 'auto-loans',
+      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'cats'
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur.',
+      href: '/global-5',
+      icon: 'payment-center',
+      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'cats'
+    }
+  ];
+
+  localLinks = [
+    {
+      heading: 'Site Links',
+      links: [
         {
-          text: 'Column 1 Link 1',
-          href: '/alerts',
-          linkAnalytics: 'Link to Item 1'
+          text: 'About This',
+          href: '/about-this',
+          analyticsString: 'Link to Sub Item 1'
         },
         {
-          text: 'Column 1 Link 2',
-          href: '/alerts',
-          linkAnalytics: 'Link to Item 2'
+          text: 'About This Other Thing',
+          href: '/about-this-other-thing'
         },
         {
-          text: 'Column 1 Link 3',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
+          text: 'About That',
+          href: '/about-that'
         },
         {
-          text: 'Column 1 Link 4',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
+          text: 'Link Item',
+          href: '/link-item',
+          analyticsString: 'Link to Sub Item 1'
         },
         {
-          text: 'Column 1 Link 5',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
-        },
-        {
-          text: 'Column 1 Link 6',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
+          text: 'This Link Item',
+          href: '/this-link-item',
+          analyticsString: 'Link to Sub Item 1'
         }
       ]
     },
     {
-      heading: 'Column 2',
-      siteLinks: [
+      heading: 'Learn More',
+      links: [
         {
-          text: 'Column 2 Link 1',
-          href: '/masthead',
-          linkAnalytics: 'Link to Item 1'
+          text: 'About This Other Thing',
+          href: '/learn-more-1'
         },
         {
-          text: 'Column 2 Link 2',
-          href: '/alerts',
-          linkAnalytics: 'Link to Item 2'
+          text: 'About This',
+          href: '/learn-more-2'
         },
         {
-          text: 'Column 2 Link 3',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
+          text: 'About That',
+          href: '/learn-more-3'
         },
         {
-          text: 'Column 2 Link 4',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
+          text: 'Link Item',
+          href: '/learn-more-4',
+          analyticsString: 'Link to Sub Item 1'
         }
       ]
     },
     {
-      heading: 'Column 3',
-      siteLinks: [
+      heading: 'Support',
+      links: [
         {
-          text: 'Column 3 Link 1',
-          href: '/alerts',
-          linkAnalytics: 'Link to Item 1'
+          text: 'Share Your Screen',
+          href: '/share-screen',
+          analyticsString: 'Link to Sub Item 1'
         },
         {
-          text: 'Column 3 Link 2',
-          href: '/alerts',
-          linkAnalytics: 'Link to Item 2'
+          text: 'Opt Out',
+          href: '/opt-out'
         },
         {
-          text: 'Column 3 Link 3',
-          href: '/award',
-          linkAnalytics: 'Link to Item 3'
+          text: 'About That',
+          href: '/about-that'
+        },
+        {
+          text: 'Disclosures and Other Things',
+          href: '/things',
+          analyticsString: 'Link to Sub Item 1'
+        },
+        {
+          text: 'We Want Your Feedback',
+          href: '/feedback',
+          analyticsString: 'Link to Sub Item 1'
         }
       ]
     }
   ];
 
-  navLinks = [
+  localLinksTwoCol = [
     {
-      text: 'Item 1',
-      href: '/alerts',
-      analytics: 'Link to Item 1'
+      heading: 'Site Links',
+      links: [
+        {
+          text: 'About This',
+          href: '/alerts',
+          analyticsString: 'Link to Sub Item 1'
+        },
+        {
+          text: 'About This Other Thing',
+          href: '/alerts'
+        },
+        {
+          text: 'About That',
+          href: '/alerts'
+        },
+        {
+          text: 'Link Item',
+          href: '/alerts',
+          analyticsString: 'Link to Sub Item 1'
+        },
+        {
+          text: 'This Link Item',
+          href: '/alerts',
+          analyticsString: 'Link to Sub Item 1'
+        }
+      ]
     },
     {
-      text: 'Item 2',
-      href: '/icons'
-    },
-    {
-      text: 'Item 3',
-      href: '/links'
+      heading: 'Support',
+      links: [
+        {
+          text: 'Share Your Screen',
+          href: '/alerts',
+          analyticsString: 'Link to Sub Item 1'
+        },
+        {
+          text: 'Opt Out',
+          href: '/alerts'
+        },
+        {
+          text: 'About That',
+          href: '/alerts'
+        },
+        {
+          text: 'Disclosures and Other Things',
+          href: '/alerts',
+          analyticsString: 'Link to Sub Item 1'
+        },
+        {
+          text: 'We Want Your Feedback',
+          href: '/alerts',
+          analyticsString: 'Link to Sub Item 1'
+        }
+      ]
     }
   ];
 
   socialLinks = [
     {
-      href: 'https://www.sparkdesignsystem.com/',
+      href: '/icons-1',
       icon: 'facebook',
-      analytics: 'Link'
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'facebook'
     },
     {
-      href: 'https://www.sparkdesignsystem.com/',
-      icon: 'instagram',
-      analytics: 'Link'
-    },
-    {
-      href: 'https://www.sparkdesignsystem.com/',
+      href: '/icons-2',
       icon: 'twitter',
-      analytics: 'Link'
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'twitter'
     },
     {
-      href: 'https://www.sparkdesignsystem.com/',
-      icon: 'youtube',
-      analytics: 'Link'
+      href: '/icons-3',
+      icon: 'instagram',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'instagram'
     }
   ];
 
-  feedbackLinks = [
+  badgeLinks = [
     {
-      href: 'https://www.sparkdesignsystem.com/',
-      icon: 'paper-plane',
-      text: 'Feedback Link 1',
-      analytics: 'Link to Item 1'
+      href: '/badge-1',
+      icon: 'townhouse',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'townhouse'
     },
     {
-      href: 'https://www.sparkdesignsystem.com/',
-      icon: 'computer-screen',
-      text: 'Feedback Link 2',
-      analytics: 'Link to Item 2'
+      href: '/badge-2',
+      icon: 'townhouse',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'townhouse'
+    },
+    {
+      href: '/badge-3',
+      icon: 'townhouse',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      analytics: 'link-1',
+      iconScreenReaderText: 'townhouse'
     }
   ];
 
-  badges = [
+  awards = [
     {
-      alt: 'Placeholder Alt Text.',
-      src:
+      href: '/awards-1',
+      imgSrc:
         'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-      href: '/alerts',
-      analytics: 'Test 1'
+      imgCSS: 'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
+      imgAlt: 'Foo',
+      analytics: 'link-1'
     },
     {
-      alt: 'Placeholder Alt Text.',
-      src:
+      href: '/awards-2',
+      imgSrc:
         'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-      href: '/icons',
-      analytics: 'Test 2'
-    },
-    {
-      alt: 'Placeholder Alt Text.',
-      src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-      href: '/links',
-      analytics: 'Test 3'
+      imgCSS: 'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
+      imgAlt: 'Foo',
+      analytics: 'link-2'
     }
   ];
-  constructor() {}
+
+  disclaimerToggle = [
+    {
+      title: 'Super Award Disclaimer',
+      body: 'Body text for my super award!',
+      analytics: 'disclaimer'
+    },
+    {
+      title: 'Super Award Disclaimer',
+      body: 'Body text for my second super amazing award!',
+      analytics: 'disclaimer-two'
+    }
+  ];
+
+  disclaimerText = [
+    {
+      text: 'Consectetur. Lorem ipsum dolor sit amet.'
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur'
+    },
+    {
+      text: 'Lorem ipsum dolor sit amet, consectetur'
+    },
+    {
+      text: 'asdf aksldjf Lorem ipsum dolor sit amet, consectetur'
+    },
+    {
+      text: 'sdf sdf Disclaimer aosdf jsdaf'
+    },
+    {
+      text: 'asdf sdf Disclaimer'
+    }
+  ];
 }

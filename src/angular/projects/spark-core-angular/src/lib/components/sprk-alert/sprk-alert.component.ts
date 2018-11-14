@@ -8,9 +8,10 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
       *ngIf="visible"
       [ngClass]="getClassesAlertContainer()"
       role="alert"
-      [attr.data-analytics]="analyticsString">
+      [attr.data-analytics]="analyticsString"
+      [attr.data-id]="idString">
       <div class="sprk-c-Alert__content">
-        <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l" aria-hidden="true"></sprk-icon>
+        <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
 
         <p class="sprk-b-TypeBodyTwo">
           <ng-content></ng-content>
@@ -23,7 +24,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
         type="button"
         title="Dismiss"
         (click)="alertDismiss($event)">
-        <sprk-icon iconType="times" additionalClasses="sprk-c-Icon--l" aria-hidden="true"></sprk-icon>
+        <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
       </button>
     </div>
   `
@@ -33,6 +34,8 @@ export class SparkAlertComponent {
   alertType: string;
   @Input()
   analyticsString: string;
+  @Input()
+  idString: string;
   @Input()
   additionalClasses: string;
   @Input()
@@ -47,7 +50,7 @@ export class SparkAlertComponent {
     switch (this.alertType) {
       case 'success':
         alertClassArray.push('sprk-c-Alert--success');
-        this.icon = 'check';
+        this.icon = 'check-mark';
         break;
       case 'info':
         alertClassArray.push('sprk-c-Alert--info');

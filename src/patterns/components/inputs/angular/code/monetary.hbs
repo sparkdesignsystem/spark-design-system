@@ -1,5 +1,9 @@
-<sprk-input-container iconContainerClasses="sprk-b-TextInput--monetary">
-  <label sprkLabel>Payment</label>
+<sprk-icon-input-container iconContainerClasses="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--monetary">
+  <label
+    [additionalClasses]="sprk-b-Label--monetary"
+    sprkLabel>
+    Payment
+  </label>
   <input
     name="monetary_input"
     type="text"
@@ -7,6 +11,7 @@
     pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
     [(ngModel)]="monetary_input"
     #monetaryInput="ngModel"
+    data-id="input-monetary-1"
     sprkFormatterMonetary
     sprkInput>
     <div
@@ -14,4 +19,4 @@
       sprkFieldError>
       Invalid amount.
     </div>
-</sprk-input-container>
+</sprk-icon-input-container>

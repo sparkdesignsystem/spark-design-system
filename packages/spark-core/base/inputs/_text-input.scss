@@ -15,29 +15,39 @@
   color: $input-disabled-text-color;
 }
 
-.sprk-b-TextInput--date-picker,
+.sprk-b-TextInput--with-icon {
+  padding-left: $space-l;
+}
+
 .sprk-b-TextInput--monetary {
+  padding-left: 24px;
+}
+
+.sprk-b-TextInputIconContainer {
   position: relative;
 }
 
-.sprk-b-DatePicker__icon,
-.sprk-b-TextInput--monetary::before {
+.sprk-b-TextInputIconContainer--monetary {
+  position: relative;
+
+  &::before {
+    content: $monetary-symbol;
+    display: block;
+    font-size: $space-m;
+    line-height: 1;
+    margin-left: $input-text-icon-offset-x;
+    margin-top: $input-text-icon-offset-y;
+    position: absolute;
+    z-index: $layer-height-xs;
+  }
+}
+
+.sprk-b-InlineSearch__icon,
+.sprk-b-DatePicker__icon {
+  margin-left: $input-icon-offset-x;
+  margin-top: $input-icon-offset-y;
   position: absolute;
   z-index: $layer-height-xs;
-}
-
-.sprk-b-DatePicker__icon {
-  margin-top: $input-icon-offset-y;
-  margin-left: $input-icon-offset-x;
-}
-
-.sprk-b-TextInput--monetary::before {
-  content: $monetary-symbol;
-  display: block;
-  font-size: 1rem;
-  margin-top: $input-text-icon-offset-y;
-  margin-left: $input-text-icon-offset-x;
-  line-height: 1;
 }
 
 .sprk-b-TextInput[readonly] {
@@ -72,14 +82,6 @@
   color: $input-placeholder-color;
 }
 
-.sprk-b-TextInput--error {
-  box-shadow: $input-error-box-shadow;
-}
-
-.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
-  border-bottom: 3px solid $text-input-error-color;
-}
-
 .sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
   animation: width-zero-to-full $input-animation-speed;
   animation-fill-mode: forwards;
@@ -89,4 +91,10 @@
   width: 100%;
   animation: opacity-one-to-zero $input-animation-speed;
   animation-fill-mode: forwards;
+}
+
+.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
+  animation: none;
+  border-bottom: 3px solid $text-input-error-color;
+  width: 100%;
 }

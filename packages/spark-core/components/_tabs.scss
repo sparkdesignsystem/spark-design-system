@@ -2,10 +2,10 @@
 // Tabbed Navigation
 // ==================================================================
 .sprk-c-Tabs__buttons {
+  color: $black;
   display: block;
   border-bottom: 0;
   margin-bottom: $space-m;
-  background-color: $white;
 
   @media all and (min-width: $tab-navigation-breakpoint) {
     display: flex;
@@ -15,55 +15,29 @@
 
 .sprk-c-Tabs__button {
   -webkit-appearance: none;
-  background: $white;
+  background-color: $gray;
+  border: 0;
+  border-top: 3px solid $gray;
   display: block;
-  color: $green;
   text-align: center;
   text-decoration: none;
-  border-bottom: 2px solid $green;
-  border-left: 2px solid $green;
-  border-right: 2px solid $green;
-  border-top: 0;
-  width: 100%;
   padding: $space-inset-short-s;
-  padding-top: $space-xs;
-  padding-bottom: $space-xs;
-
-  &:first-of-type {
-    border-top: 2px solid $green;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-  }
-
-  &:last-of-type {
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-  }
+  padding-top: $space-s;
+  padding-bottom: $space-s;
+  width: 100%;
 
   @media all and (min-width: $tab-navigation-breakpoint) {
     flex: 1 1 100%;
-    border-top: 2px solid $green;
-    border-left: 2px solid $green;
-    border-right: 0;
-
-    &:first-of-type {
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
-      border-top-right-radius: 0;
-    }
-
-    &:last-of-type {
-      border-top-right-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
-      border-bottom-left-radius: 0;
-      border-right: 2px solid $green;
-    }
   }
 }
 
 .sprk-c-Tabs__button--active,
-.sprk-c-Tabs__button:focus,
+.sprk-c-Tabs__button:focus {
+  background-color: $white;
+  border-top: 3px solid $red;
+  color: $red;
+}
+
 .sprk-c-Tabs__button:hover {
-  background-color: $green;
-  color: $white;
+  border-top: 3px solid $red;
 }

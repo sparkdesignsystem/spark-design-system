@@ -12,7 +12,7 @@
 }
 
 .sprk-c-Hamburger__icon {
-  fill: $red-real;
+  stroke: $black;
 }
 
 .sprk-c-Hamburger__line {
@@ -21,11 +21,11 @@
 }
 
 .sprk-c-Hamburger__line--one {
-  transform-origin: 0.75rem 2.25rem;
+  transform-origin: 1rem 1.5rem;
 }
 
 .sprk-c-Hamburger__line--three {
-  transform-origin: 1rem 4rem;
+  transform-origin: 1rem 2.5rem;
 }
 
 .sprk-c-Hamburger__icon--open .sprk-c-Hamburger__line--one {

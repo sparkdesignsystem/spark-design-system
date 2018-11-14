@@ -23,7 +23,6 @@
   width: $pag-circle-size;
   height: $pag-circle-size;
   text-align: center;
-  text-decoration: none;
 
   &:hover,
   &:focus,
@@ -36,6 +35,10 @@
   &:focus,
   &:active {
     border-color: $pag-selection-color;
+  }
+
+  &::after {
+    display: none;
   }
 }
 
@@ -63,6 +66,10 @@
   &:focus,
   &:active {
     color: $pag-selection-color;
+  }
+
+  &::after {
+    display: none;
   }
 }
 

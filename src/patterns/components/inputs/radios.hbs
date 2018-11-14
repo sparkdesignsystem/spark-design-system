@@ -18,6 +18,7 @@ hasAngularDocs: true
     </legend>
     <div class="sprk-b-SelectionContainer">
       <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
+             data-id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-1"
              type="radio"
              name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
@@ -27,6 +28,7 @@ hasAngularDocs: true
     </div>
     <div class="sprk-b-SelectionContainer">
       <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
+             data-id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-2"
              type="radio"
              name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
@@ -36,6 +38,7 @@ hasAngularDocs: true
     </div>
     <div class="sprk-b-SelectionContainer">
       <input id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
+             data-id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}-3"
              type="radio"
              name="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}"
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container"
@@ -46,8 +49,8 @@ hasAngularDocs: true
   </fieldset>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}radio-normal{{/if}}--error-container">
     {{#if errorMessage}}
-      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 100 100">
-        <use xlink:href="#exclamation" />
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled" />
       </svg>
       <div class="sprk-b-ErrorText">
         {{errorMessage}}

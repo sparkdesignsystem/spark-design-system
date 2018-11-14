@@ -2,4 +2,8 @@ description:
   A Divider logically divides
   sections of content. Hr HTML elements will
   have style by default so no additional CSS class is needed.
+restrictions:
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
+    has a unique data-id property ("divider-1", "divider-2", etc).
 sparkPackageCore: true

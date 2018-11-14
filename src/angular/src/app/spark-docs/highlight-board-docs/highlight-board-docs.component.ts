@@ -10,11 +10,29 @@ import { Component } from '@angular/core';
       </h2>
 
       <sprk-highlight-board
-        heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
-        ctaText="Learn More"
+        heading="Hello, Welcome To Spark Design System"
+        ctaText="Designers"
+        ctaHref="https://sparkdesignsystem.com/"
+        ctaText2="Developers"
+        ctaHref2="https://sparkdesignsystem.com/"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-        imgAlt="placeholder">
+        imgAlt="placeholder"
+        idString="highlightboard-1">
+      </sprk-highlight-board>
+    </div>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <div class="sprk-o-CenteredColumn">
+      <h2 class="drizzle-b-h2">
+        Highlight Board Default 2
+      </h2>
+
+      <sprk-highlight-board
+        heading="Highlight Board Heading Example"
+        imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+        imgAlt="placeholder"
+        idString="highlightboard-2">
       </sprk-highlight-board>
     </div>
   </div>
@@ -27,9 +45,10 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
-        type="noImage">
+        ctaText2="Learn More"
+        type="noImage"
+        idString="highlightboard-3">
       </sprk-highlight-board>
     </div>
   </div>
@@ -42,11 +61,11 @@ import { Component } from '@angular/core';
 
       <sprk-highlight-board
         heading="Highlight Board Heading Example"
-        subHeading="Sub heading example for the Highlight Board component."
         ctaText="Learn More"
         type="stacked"
         imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-        imgAlt="placeholder">
+        imgAlt="placeholder"
+        idString="highlightboard-4">
       </sprk-highlight-board>
     </div>
   </div>
@@ -57,13 +76,15 @@ import { Component } from '@angular/core';
     </h2>
 
     <sprk-highlight-board
-      heading="Highlight Board Heading Example"
-      subHeading="Sub heading example for the Highlight Board component."
-      ctaText="Learn More"
-      ctaTwoText="CTA Two"
+      heading="Hello, Welcome To Spark Design System"
+      ctaText="Designers"
+      ctaHref="https://sparkdesignsystem.com/"
+      ctaText2="Developers"
+      ctaHref2="https://sparkdesignsystem.com/"
       type="fullWidth"
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
-      imgAlt="placeholder">
+      imgAlt="placeholder"
+      idString="highlightboard-5">
     </sprk-highlight-board>
   </div>
   `,
