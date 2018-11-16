@@ -4,11 +4,11 @@
 //
 .sprk-b-Link {
   color: $link-color;
-  font-weight: $link-font-weight;
+  font-weight: $link-inline-font-weight;
   position: relative;
   text-decoration: none;
   transition: $link-transition;
-  box-shadow: inset 0 -0.125em $white, inset 0 -0.2em $link-underline-color;
+  box-shadow: inset 0 $link-underline-width $link-underline-color;
 
   &:visited {
     color: $link-visited-color;
@@ -18,33 +18,27 @@
   &:active,
   &:focus {
     color: $link-underline-color;
-    text-decoration: none;
   }
-}
-
-.sprk-b-Link--plain {
-  text-decoration: none;
-  box-shadow: none;
 }
 
 .sprk-b-Link--standalone {
   color: $link-standalone-color;
-  text-decoration: none;
   box-shadow: none;
+  font-weight: $link-standalone-font-weight;
 
   &:hover,
   &:active,
   &:focus {
     transition: $link-transition;
-    box-shadow: inset 0 -0.125em $white, inset 0 -0.2em $link-underline-color;
+    box-shadow: inset 0 $link-underline-width $link-underline-color;
   }
 }
 
 .sprk-b-Link--disabled {
   color: $link-disabled-color;
   pointer-events: none;
-  text-decoration: none;
-  box-shadow: inset 0 -0.125em $white, inset 0 -0.2em $link-disabled-color;
+  box-shadow: inset 0 $link-underline-width $link-disabled-color;
+  font-weight: $link-disabled-font-weight;
 
   &:visited {
     color: $link-disabled-color;
@@ -68,5 +62,15 @@
   &:active,
   &:focus {
     color: $link-muted-color;
+  }
+}
+
+.sprk-b-Link--plain {
+  box-shadow: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
   }
 }
