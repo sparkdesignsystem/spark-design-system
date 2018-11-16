@@ -1,14 +1,14 @@
 <sprk-input-container iconContainerClasses="sprk-b-TextInputIconContainer">
   <label
-    [additionalClasses]="sprk-b-Label--with-icon"
+    class="sprk-b-Label--with-icon"
     sprkLabel>
     Date Input (picker)
   </label>
-  <sprk-icon iconType="calendar" sprk-input-icon></sprk-icon>
+  <sprk-icon iconType="calendar" additionalClasses="sprk-c-Icon--current-color" sprk-input-icon></sprk-icon>
   <input
     name="datepicker_input"
     type="text"
-    [additionalClasses]="datepickerInput.invalid && datepickerInput.dirty ? 'sprk-b-TextInput--error sprk-u-pll': 'sprk-u-pll'"
+    [ngClass]="{ 'sprk-b-TextInput--error': datepickerInput.invalid && datepickerInput.dirty, 'sprk-u-pll': true }"
     pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
     placeholder="MM/DD/YYYY"
     [(ngModel)]="datepicker_input"

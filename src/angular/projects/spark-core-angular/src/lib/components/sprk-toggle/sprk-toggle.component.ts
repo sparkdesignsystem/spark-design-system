@@ -12,19 +12,21 @@ import {
   template: `
     <div class="{{ additionalClasses }}" [attr.data-id]="idString">
       <a
-        class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
+        class="{{ titleFontClass }} sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString">
-        <sprk-icon iconType="chevron-down" additionalClasses="sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
+        <sprk-icon
+          iconType="chevron-down"
+          additionalClasses="{{ iconClass }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
           {{ title }}
       </a>
 
       <div [@toggleContent]="animState" data-sprk-toggle="content">
-        <p class="sprk-b-TypeBodyFour sprk-u-pts">
-          {{ body }}
-        </p>
+        <div class="sprk-u-pts sprk-u-pbs">
+          <ng-content></ng-content>
+        </div>
       </div>
     </div>
   `,
@@ -58,7 +60,9 @@ export class SparkToggleComponent implements OnInit {
   @Input()
   title: string;
   @Input()
-  body: string;
+  iconClass: string;
+  @Input()
+  titleFontClass = 'sprk-b-TypeBodyThree';
   @Input()
   idString: string;
 

@@ -1,166 +1,98 @@
-/* global require */
-const drizzle = require('drizzle-builder');
 const gulp = require('gulp');
-const helpers = require('@cloudfour/hbs-helpers');
-const tasks = require('@cloudfour/gulp-tasks');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
-const plumber = require('gulp-plumber');
-const critical = require('critical').stream;
-const log = require('fancy-log');
-const { exec } = require('child_process');
-const request = require('request');
-const fs = require('fs');
 const runSequence = require('run-sequence');
-const config = require('./config');
-const concatHelper = require('./src/assets/drizzle/scripts/handlebars-helpers/concat');
-const alternateIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/alternateIdGen');
-const toLowerCase = require('./src/assets/drizzle/scripts/handlebars-helpers/toLowerCase');
-const htmlEncode = require('./src/assets/drizzle/scripts/handlebars-helpers/htmlEncode');
-const patternIdGen = require('./src/assets/drizzle/scripts/handlebars-helpers/patternIdGen');
 
-// add helpers
-helpers.concat = concatHelper;
-helpers.alternateIdGen = alternateIdGen;
-helpers.toLowerCase = toLowerCase;
-helpers.htmlEncode = htmlEncode;
-helpers.patternIdGen = patternIdGen;
+require('./gulp/spark-core/spark-core.gulpfile.js');
+require('./gulp/spark-extras/spark-extras.gulpfile.js');
+require('./gulp/drizzle/drizzle.gulpfile.js');
+require('./gulp/angular/dev-app/angulardevapp.gulpfile.js');
+require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
+require('./gulp/angular/spark-extras-angular-award/spark-extras-angular-award.gulpfile.js');
+require('./gulp/angular/spark-extras-angular-card/spark-extras-angular-card.gulpfile.js');
+require('./gulp/angular/spark-extras-angular-dictionary/spark-extras-angular-dictionary.gulpfile.js');
+require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.gulpfile.js');
 
-// Append config
-Object.assign(config.drizzle, { helpers });
-
-// Register core tasks
-['clean', 'copy', 'js', 'serve', 'watch'].forEach(name => tasks[name](gulp, config[name]));
-
-// Sass task
-gulp.task('sass', () => {
-  gulp
-    .src('src/assets/toolkit/styles/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['> 1%', 'last 4 versions'],
-        cascade: false,
-      }),
-    )
-    .pipe(
-      cssnano({
-        zindex: false,
-      }),
-    )
-    .pipe(gulp.dest('./dist/assets/toolkit/styles'));
-
-  gulp
-    .src('src/assets/drizzle/styles/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['> 1%', 'last 4 versions'],
-        cascade: false,
-      }),
-    )
-    .pipe(
-      cssnano({
-        zindex: false,
-      }),
-    )
-    .pipe(gulp.dest('./dist/assets/drizzle/styles'));
-});
-
-// SVG icon task
-gulp.task('icons', (done) => {
-  const fileStream = fs.createWriteStream('./src/templates/drizzle/spark-core-icons.hbs');
-  request.get({ uri: 'https://spark-assets.netlify.com/spark-core-icons.svg', rejectUnauthorized: false })
-    .pipe(fileStream)
-    .on('finish', done);
-});
-
-// copy images
-gulp.task('images', () => {
-  gulp.src(config.images.src).pipe(gulp.dest(config.images.dest));
-});
-
-// Register Drizzle builder task
-gulp.task('drizzle', ['icons'], () => {
-  const result = drizzle(config.drizzle);
-  return result.done(); // makes sure that the icons are finished before the templates are processed
-});
-
-// Register build task (for continuous deployment via Netflify)
-gulp.task('build', (done) => {
+gulp.task('pre-publish', (cb) => {
   runSequence(
-    'clean',
-    'icons',
-    'drizzle',
-    'copy',
-    'sass',
-    'images',
-    'build-es5',
-    'js',
-    'critical',
-    done,
+    'setup-spark-packages',
+    'build-drizzle',
+    'install-angular-dev-app',
+    'setup-spark-angular-projects',
+    cb,
   );
 });
 
-// Generate & Inline Critical-path CSS
-gulp.task('critical', () => {
-  const cssFiles = [
-    'dist/assets/toolkit/styles/toolkit.css',
-    'dist/assets/drizzle/styles/main.css',
-  ];
-  return gulp
-    .src('dist/*.html')
-    .pipe(
-      critical({
-        base: 'dist/',
-        inline: true,
-        css: cssFiles,
-      }),
-    )
-    .on('error', (err) => {
-      log.error(err.message);
-    })
-    .pipe(gulp.dest('dist'));
+gulp.task('setup-spark-packages', (cb) => {
+  runSequence('setup-spark-core', 'setup-spark-extras', cb);
 });
 
-gulp.task('build-angular', (cb) => {
-  const cmd = exec(`
-    cd src/angular &&
-    ng build spark-core-angular &&
-    ng build spark-extras-angular-award &&
-    ng build spark-extras-angular-card &&
-    ng build spark-extras-angular-dictionary &&
-    ng build spark-extras-angular-highlight-board
-    `, {
-    stdio: 'inherit',
-  });
-  return cmd.on('close', cb).on('error', (err) => {
-    log.error(err.message);
-  });
+// assumes that setup-spark-packages has been run
+gulp.task('setup-spark-angular-projects', (cb) => {
+  runSequence(
+    'setup-spark-core-angular',
+    [
+      'setup-spark-extras-angular-award',
+      'setup-spark-extras-angular-card',
+      'setup-spark-extras-angular-dictionary',
+      'setup-spark-extras-angular-highlight-board',
+    ],
+    cb,
+  );
 });
 
-gulp.task('build-es5', (cb) => {
-  const cmd = exec(`
-    cd packages/spark-core &&
-    npm install && npm build && cd .. &&
-    cd spark-extras/components/highlight-board && npm install && npm build
-    `, {
-    stdio: 'inherit',
-  });
-  return cmd.on('close', cb).on('error', (err) => {
-    log.error(err.message);
-  });
+gulp.task('clean-all', (cb) => {
+  runSequence(
+    [
+      'clean',
+      'clean-spark-core',
+      'clean-spark-extras',
+      'clean-angular-dev-app',
+      'clean-spark-core-angular',
+      'clean-spark-extras-angular-award',
+      'clean-spark-extras-angular-card',
+      'clean-spark-extras-angular-dictionary',
+      'clean-spark-extras-angular-highlight-board',
+    ],
+    cb,
+  );
 });
 
+gulp.task('dev-spark-packages', (cb) => {
+  runSequence('setup-spark-packages', 'build-drizzle', ['watch', 'serve'], cb);
+});
 
-gulp.task('pre-publish', ['build-angular'], () => {});
+gulp.task('dev-spark-angular', (cb) => {
+  runSequence(
+    'install-angular-dev-app',
+    'setup-spark-packages',
+    'setup-spark-angular-projects',
+    ['serve-angular-dev-app', 'watch'],
+    cb,
+  );
+});
 
-// Register default task
-gulp.task('default', ['build'], (done) => {
-  gulp.start('serve');
-  gulp.start('watch');
-  done();
+gulp.task('dev-all', (cb) => {
+  runSequence(
+    'setup-spark-packages',
+    'install-angular-dev-app',
+    'setup-spark-angular-projects',
+    'build-drizzle',
+    ['serve-angular-dev-app', 'serve', 'watch'],
+    cb,
+  );
+});
+
+gulp.task('test-angular', (cb) => {
+  runSequence(
+    'test-spark-core-angular',
+    'test-spark-extras-angular-award',
+    'test-spark-extras-angular-card',
+    'test-spark-extras-angular-dictionary',
+    'test-spark-extras-angular-highlight-board',
+    cb,
+  );
+});
+
+// netlify
+gulp.task('build', (cb) => {
+  runSequence('pre-publish', 'build-angular-dev-app-netlify', 'transfer-angular-dev-app', cb);
 });
