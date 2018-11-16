@@ -16,6 +16,14 @@ import { Component } from '@angular/core';
             #textInput="ngModel"
             sprkInput
           />
+          <p sprkHelperText>Please enter some input.</p>
+          <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+            <sprk-icon
+              iconType="exclamation-filled"
+              additionalClasses="sprk-b-ErrorIcon"
+            ></sprk-icon>
+            <div class="sprk-b-ErrorText">This field is required.</div>
+          </span>
         </sprk-input-container>
         <sprk-selection-container>
           <label sprkLabel>Checkbox Group Label</label>
