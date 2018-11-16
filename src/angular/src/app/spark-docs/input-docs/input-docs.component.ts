@@ -113,7 +113,7 @@ import { Component } from '@angular/core';
           </select>
           <sprk-icon
             iconType="chevron-down"
-            additionalClasses="sprk-b-SelectContainer__icon"
+            additionalClasses="sprk-c-Icon--current-color sprk-b-SelectContainer__icon"
             sprk-select-icon
           ></sprk-icon>
           <label sprkLabel>Select Box Label</label>
@@ -174,7 +174,7 @@ import { Component } from '@angular/core';
           </label>
           <sprk-icon
             iconType="search"
-            additionalClasses="sprk-b-InlineSearch__icon"
+            additionalClasses="sprk-c-Icon--current-color sprk-b-InlineSearch__icon"
             sprk-input-icon
           ></sprk-icon>
           <input
@@ -260,7 +260,7 @@ import { Component } from '@angular/core';
           </label>
           <sprk-icon
             iconType="calendar"
-            additionalClasses="sprk-b-DatePicker__icon"
+            additionalClasses="sprk-c-Icon--current-color sprk-b-DatePicker__icon"
             sprk-input-icon
           ></sprk-icon>
           <input
@@ -322,7 +322,8 @@ import { Component } from '@angular/core';
         >
       </form>
     </div>
-  `
+  `,
+  styles: ['']
 })
 export class InputDocsComponent {
   constructor() {}
