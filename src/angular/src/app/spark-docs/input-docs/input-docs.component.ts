@@ -322,8 +322,7 @@ import { Component } from '@angular/core';
         >
       </form>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class InputDocsComponent {
   constructor() {}
