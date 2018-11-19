@@ -4,63 +4,35 @@
 //
 .sprk-b-Link {
   color: $link-color;
-  font-weight: $link-font-weight;
+  border-bottom: $link-underline-width solid $link-underline-color;
+  font-weight: $link-inline-font-weight;
   position: relative;
   text-decoration: none;
   transition: $link-transition;
 
   &:visited {
     color: $link-visited-color;
-
-    &::after {
-      background-color: $link-underline-visited-color;
-    }
+    border-bottom: $link-underline-width solid $link-visited-color;
   }
 
   &:hover,
   &:active,
   &:focus {
     color: $link-underline-color;
-    text-decoration: none;
-
-    &::after {
-      background-color: $link-underline-color;
-    }
-  }
-
-  &::after {
-    content: '';
-    top: 100%;
-    left: 0;
-    height: 0.125em;
-    width: 100%;
-    position: absolute;
-    background-color: $link-underline-color;
-  }
-}
-
-.sprk-b-Link--plain {
-  text-decoration: none;
-
-  &::after {
-    content: none;
+    border-bottom: $link-underline-width solid $link-underline-color;
   }
 }
 
 .sprk-b-Link--standalone {
   color: $link-standalone-color;
+  border: $link-underline-width solid transparent;
+  font-weight: $link-standalone-font-weight;
 
   &:hover,
   &:active,
   &:focus {
-    &::after {
-      opacity: 1;
-      transition: $link-transition;
-    }
-  }
-
-  &::after {
-    opacity: 0;
+    transition: $link-transition;
+    border-bottom: $link-underline-width solid $link-underline-color;
   }
 }
 
@@ -78,25 +50,31 @@
   }
 }
 
+.sprk-b-Link--plain {
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border: none;
+  }
+}
+
 .sprk-b-Link--disabled {
   color: $link-disabled-color;
   pointer-events: none;
+  border-bottom: $link-underline-width solid $link-disabled-color;
+  font-weight: $link-disabled-font-weight;
 
   &:visited {
     color: $link-disabled-color;
-
-    &::after {
-      background: $link-disabled-color;
-    }
+    border-bottom: $link-underline-width solid $link-disabled-color;
   }
 
   &:hover,
   &:active,
   &:focus {
     color: $link-disabled-color;
-  }
-
-  &::after {
-    background: $link-disabled-color;
   }
 }
