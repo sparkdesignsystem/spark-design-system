@@ -70,6 +70,19 @@ describe('SparkLinkComponent', () => {
     );
   });
 
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(linkElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(linkElement.getAttribute('data-id')).toBeNull();
+  });
+  
   it('should set the target attr if supplied', () => {
     component.target = '_blank';
     fixture.detectChanges();

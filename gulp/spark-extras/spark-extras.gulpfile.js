@@ -8,7 +8,7 @@ gulp.task('setup-spark-extras', (cb) => {
 });
 
 gulp.task('build-spark-extras', (cb) => {
-  exec('cd packages/spark-extras/components/highlight-board && $(npm bin)/webpack', (err, stdout, stderr) => {
+  exec('cd packages/spark-extras/components/highlight-board && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -18,8 +18,8 @@ gulp.task('build-spark-extras', (cb) => {
 gulp.task('clean-spark-extras', () => gulp.src(['./packages/spark-extras/components/highlight-board/node_modules', './packages/spark-extras/components/highight-board/es5'], { read: false })
   .pipe(clean()));
 
-gulp.task('install-spark-extras', (cb) => {
-  exec('cd packages/spark-extras/components/highlight-board && rm -rf node_modules && npm install', (err, stdout, stderr) => {
+gulp.task('install-spark-extras', ['clean-spark-extras'], (cb) => {
+  exec('cd packages/spark-extras/components/highlight-board && npm install', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

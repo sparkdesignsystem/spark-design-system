@@ -75,4 +75,17 @@ describe('SparkMastheadComponent', () => {
     fixture.detectChanges();
     expect(component.isNarrowNavOpen).toEqual(false);
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(mastheadElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(mastheadElement.getAttribute('data-id')).toBeNull();
+  });
 });
