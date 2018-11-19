@@ -3,10 +3,9 @@ description:
   to the content of the page. The Footer component is typically used on every
   page of an application. The elements in the Footer are grouped by type or relevance.
   If your app requires the Footer
-  to have a background color then you can check our our background color utilities page and
-  add one background color CSS class to a container HTML element that wraps the Footer markup.
+  to have a specific background color then you can check our background color utilities page.
   Optionally, there are font color utilities available if you need to adjust the font colors
-  after the background color change to ensure accessibility.
+  after the background color change.
 restrictions:
  - Footer is to be used only at the bottom of the page.
  - The data-id property is provided as a hook for automated tools. If you have multiple
