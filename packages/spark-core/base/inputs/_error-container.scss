@@ -11,6 +11,8 @@
 
 .sprk-b-ErrorIcon {
   fill: $text-input-error-color;
+  flex: 0 0 auto;
+  align-self: flex-start;
   margin-right: $space-s;
   height: $error-icon-size;
   width: $error-icon-size;
