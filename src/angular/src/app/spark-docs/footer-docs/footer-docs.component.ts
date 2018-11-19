@@ -3,10 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sprk-footer-docs',
   template: `
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer Without Global Section
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer Without Global Section</h2>
 
       <sprk-footer
         idString="footer-1"
@@ -16,13 +14,12 @@ import { Component } from '@angular/core';
         [awards]="awards"
         awardsHeading="Awards Heading"
         connectHeading="Connect With Us"
-        [disclaimerText]="disclaimerText"></sprk-footer>
+        [disclaimerText]="disclaimerText"
+      ></sprk-footer>
     </div>
 
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer With Global Section
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer With Global Section</h2>
 
       <sprk-footer
         idString="footer-2"
@@ -35,13 +32,12 @@ import { Component } from '@angular/core';
         globalHeading="Global Site Links"
         connectHeading="Connect With Us"
         [disclaimerText]="disclaimerText"
-        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+        [disclaimerToggle]="disclaimerToggle"
+      ></sprk-footer>
     </div>
 
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer Without Social Links
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer Without Social Links</h2>
 
       <sprk-footer
         idString="footer-3"
@@ -53,13 +49,12 @@ import { Component } from '@angular/core';
         globalHeading="Global Site Links"
         connectHeading="Connect With Us"
         [disclaimerText]="disclaimerText"
-        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+        [disclaimerToggle]="disclaimerToggle"
+      ></sprk-footer>
     </div>
 
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer Without Badge Links
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer Without Badge Links</h2>
 
       <sprk-footer
         idString="footer-4"
@@ -71,13 +66,12 @@ import { Component } from '@angular/core';
         globalHeading="Global Site Links"
         connectHeading="Connect With Us"
         [disclaimerText]="disclaimerText"
-        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+        [disclaimerToggle]="disclaimerToggle"
+      ></sprk-footer>
     </div>
 
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer Without Awards
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer Without Awards</h2>
 
       <sprk-footer
         idString="footer-5"
@@ -87,13 +81,12 @@ import { Component } from '@angular/core';
         globalHeading="Global Site Links"
         connectHeading="Connect With Us"
         [disclaimerText]="disclaimerText"
-        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+        [disclaimerToggle]="disclaimerToggle"
+      ></sprk-footer>
     </div>
 
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer Without Disclaimer Toggle And Award
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer Without Disclaimer Toggle And Award</h2>
 
       <sprk-footer
         idString="footer-6"
@@ -102,13 +95,12 @@ import { Component } from '@angular/core';
         [badgeLinks]="badgeLinks"
         globalHeading="Global Site Links"
         connectHeading="Connect With Us"
-        [disclaimerText]="disclaimerText"></sprk-footer>
+        [disclaimerText]="disclaimerText"
+      ></sprk-footer>
     </div>
 
-    <div class="sprk-o-CenteredColumn sprk-u-mbh">
-      <h2 class="drizzle-b-h2">
-        Footer With Two Columns of Local Links
-      </h2>
+    <div class="sprk-u-mbh">
+      <h2 class="drizzle-b-h2">Footer With Two Columns of Local Links</h2>
 
       <sprk-footer
         idString="footer-7"
@@ -121,7 +113,8 @@ import { Component } from '@angular/core';
         globalHeading="Global Site Links"
         connectHeading="Connect With Us"
         [disclaimerText]="disclaimerText"
-        [disclaimerToggle]="disclaimerToggle"></sprk-footer>
+        [disclaimerToggle]="disclaimerToggle"
+      ></sprk-footer>
     </div>
   `
 })

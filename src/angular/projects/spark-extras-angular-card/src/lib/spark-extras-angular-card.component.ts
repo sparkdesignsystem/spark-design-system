@@ -40,11 +40,11 @@ import { Component, Input } from '@angular/core';
       </div>
     </div>
 
-    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'base'">
+    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'base'" [attr.data-id]="idString">
       <ng-content></ng-content>
     </div>
 
-    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaserHeading'">
+    <div [ngClass]="getClassesCard()" *ngIf="cardType === 'teaserHeading'" [attr.data-id]="idString">
       <h3 class="sprk-o-Stack__item sprk-c-Card__content sprk-b-TypeDisplayFive">
         {{ title }}
       </h3>
