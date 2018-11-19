@@ -54,4 +54,17 @@ describe('SparkIconComponent', () => {
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Icon sprk-u-pam sprk-u-man');
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(iconElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(iconElement.getAttribute('data-id')).toBeNull();
+  });
 });

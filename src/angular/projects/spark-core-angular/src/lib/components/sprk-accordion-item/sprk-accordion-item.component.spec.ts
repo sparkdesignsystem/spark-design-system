@@ -85,4 +85,19 @@ describe('SparkAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(accordionDetailsElement.style.display).toEqual('none');
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(accordionItemLinkElement.getAttribute('data-id')).toEqual(
+      testString
+    );
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(accordionItemElement.getAttribute('data-id')).toBeNull();
+  });
 });
