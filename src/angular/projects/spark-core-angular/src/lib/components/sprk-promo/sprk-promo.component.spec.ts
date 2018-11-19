@@ -33,6 +33,12 @@ describe('SparkPromoComponent', () => {
     );
   });
 
+  it('should add class when hasBorder is true', () => {
+    component.hasBorder = true;
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-c-Promo--bordered')).toEqual(true);
+  });
+
   it('should add additional classes to img link when additionalClassesImgLink has a value', () => {
     component.imgSrc = 'www.example.com/image.jpg';
     component.additionalClassesImgLink = 'sprk-u-man';
