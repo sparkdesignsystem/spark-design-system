@@ -88,4 +88,23 @@ describe('SparkNarrowNavigationItemComponent', () => {
       )
     ).toEqual(true);
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+
+    component.subNav = subNav;
+    component.href = '/alerts';
+    component.text = 'Alerts';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(narrowNavigationItemElement.getAttribute('data-id')).toEqual(
+      testString
+    );
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(narrowNavigationItemElement.getAttribute('data-id')).toBeNull();
+  });
 });

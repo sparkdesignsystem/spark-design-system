@@ -112,4 +112,17 @@ describe('SparkAlertComponent', () => {
       alertElement.classList.contains('sprk-u-Display--none')
     ).toBeTruthy();
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(alertElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(alertElement.getAttribute('data-id')).toBeNull();
+  });
 });
