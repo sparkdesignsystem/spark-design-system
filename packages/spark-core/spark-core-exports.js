@@ -55,6 +55,29 @@ import {
   hideAllDropDowns,
   bindUIEvents as bindWideNavigationUIEvents,
 } from './components/wide-navigation';
+import isValidDate from './utilities/validation/isValidDate';
+import isValidMonetary from './utilities/validation/isValidMonetary';
+import isValidPhone from './utilities/validation/isValidPhone';
+import isValidSSN from './utilities/validation/isValidSSN';
+import setInvalidSelect from './utilities/validation/setInvalidSelect';
+import setInvalidTextInput from './utilities/validation/setInvalidTextInput';
+import setInvalidTick from './utilities/validation/setInvalidTick';
+import setValidSelect from './utilities/validation/setValidSelect';
+import setValidTextInput from './utilities/validation/setValidTextInput';
+import setValidTick from './utilities/validation/setValidTick';
+import runValidation from './utilities/validation/validation-runner';
+import detectJS from './utilities/detectJS';
+import {
+  getFocusableEls,
+  focusFirstEl,
+  isActiveElement,
+} from './utilities/elementState';
+import getElements from './utilities/getElements';
+import {
+  isTabPressed,
+  isEscPressed,
+} from './utilities/keypress';
+import toggleValue from './utilities/toggleValue';
 
 export {
   alerts,
@@ -98,4 +121,23 @@ export {
   showDropDown,
   hideAllDropDowns,
   bindWideNavigationUIEvents,
+  isValidDate,
+  isValidMonetary,
+  isValidPhone,
+  isValidSSN,
+  setInvalidSelect,
+  setInvalidTextInput,
+  setInvalidTick,
+  setValidSelect,
+  setValidTextInput,
+  setValidTick,
+  runValidation,
+  detectJS,
+  getFocusableEls,
+  focusFirstEl,
+  isActiveElement,
+  getElements,
+  isTabPressed,
+  isEscPressed,
+  toggleValue,
 };
