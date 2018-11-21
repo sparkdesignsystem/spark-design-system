@@ -4,17 +4,17 @@
   max-width: $dropdown-max-width;
   position: absolute;
   margin-top: $space-xs;
-  width: 100%;
+  width: auto;
   z-index: $layer-height-m;
 }
 
 .sprk-c-Dropdown__header {
   border-bottom: $dropdown-border;
-  padding: $dropdown-padding;
+  padding: $dropdown-header-padding;
 }
 
 .sprk-c-Dropdown__footer {
-  padding: $dropdown-padding;
+  padding: $dropdown-footer-padding;
 }
 
 .sprk-c-Dropdown__links {
