@@ -1,8 +1,11 @@
-$dropdown-padding: $space-inset-short-l;
+$dropdown-padding: $space-l;
 
 .sprk-c-Dropdown {
+  background-color: $white;
   border: 1px solid $black-tint-25;
   max-width: 320px;
+  position: absolute;
+  z-index: $layer-height-m;
 }
 
 .sprk-c-Dropdown__header {
@@ -27,4 +30,10 @@ $dropdown-padding: $space-inset-short-l;
   &:hover {
     background-color: $gray;
   }
+}
+
+.sprk-c-Dropdown__link--active {
+  box-shadow: -2px 0 0 0 $red;
+  border-left: 1.5px solid $red;
+  background-color: $gray;
 }

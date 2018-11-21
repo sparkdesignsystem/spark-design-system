@@ -18,6 +18,7 @@ import { spinners } from './components/spinners';
 import { WideNavigation } from './components/wide-navigation';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
+import { dropdowns } from './components/dropdown';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -46,6 +47,7 @@ const SparkCore = ({ datePickerConfig = {} } = {}) => {
   alerts();
   textInput();
   selectInput();
+  dropdowns();
 };
 
 export { SparkCore as default };
