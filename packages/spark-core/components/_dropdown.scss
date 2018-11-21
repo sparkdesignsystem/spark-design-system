@@ -1,0 +1,30 @@
+$dropdown-padding: $space-inset-short-l;
+
+.sprk-c-Dropdown {
+  border: 1px solid $black-tint-25;
+  max-width: 320px;
+}
+
+.sprk-c-Dropdown__header {
+  border-bottom: 1px solid $black-tint-25;
+  padding: $dropdown-padding;
+}
+
+.sprk-c-Dropdown__footer {
+  padding: $dropdown-padding;
+}
+
+.sprk-c-Dropdown__links {
+  list-style-type: none;
+}
+
+.sprk-c-Dropdown__link {
+  color: $black;
+  display: block;
+  padding: $dropdown-padding;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
