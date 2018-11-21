@@ -10,8 +10,7 @@
   position: static;
 }
 
-[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example,
-[data-template-id^='masthead'] .#{$app-namespace}-c-Preview__example {
+[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example {
   padding: 0;
 }
 
