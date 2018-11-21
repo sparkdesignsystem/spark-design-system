@@ -458,6 +458,17 @@ $toggle-transistion-timing: 0.3s ease !default;
 //
 $divider-border: 1px solid $black-tint-25 !default;
 
+
+//
+// Dropdown
+//
+$dropdown-padding: $space-l !default;
+$dropdown-border: 1px solid $black-tint-25 !default;
+$dropdown-active-background-color: $gray !default;
+$dropdown-active-border: 1.5px solid $red !default;
+$dropdown-active-box-shadow: -2px 0 0 0 $red !default;
+$dropdown-max-width: 24rem !default;
+
 //
 // Modals
 //
