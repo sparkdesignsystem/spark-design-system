@@ -2,100 +2,48 @@
 // Masthead
 // ==================================================================
 .sprk-c-Masthead {
-  background-color: $white;
+  background-color: $masthead-bg-color;
+  margin: 0 auto;
+  max-width: $masthead-column-width;
   position: sticky;
   top: 0;
   z-index: $layer-height-m;
 
   @media all and (min-width: $main-nav-breakpoint) {
-    position: static;
-  }
-}
-
-.sprk-c-Masthead__content {
-  background-color: $white;
-  border-bottom: 2px solid $black-tint-50;
-  padding: $space-m 0;
-  width: 100%;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    border: none;
-  }
-}
-
-.sprk-c-Masthead__top-row {
-  align-items: center;
-  display: flex;
-  margin: 0 auto;
-  max-width: $masthead-column-width;
-  padding: 0 $space-m;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    justify-content: space-between;
-    margin: 0 auto $space-l;
-  }
-}
-
-.sprk-c-Masthead__logo {
-  margin: auto;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    margin: 0 $space-m 0 0;
+    border-bottom: 1px solid $gray;
   }
 }
 
 .sprk-c-Masthead__hamburger {
-  margin-right: $space-m;
-
   @media all and (min-width: $main-nav-breakpoint) {
     display: none;
   }
 }
 
-.sprk-c-Masthead__secondary-nav {
-  display: none;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: block;
-    margin-left: auto;
-  }
+.sprk-c-Masthead__logo {
+  margin: 0 auto;
+  max-width: $masthead-logo-max-width;
 }
 
-.sprk-c-Masthead__secondary {
+.sprk-c-Masthead__secondary-nav,
+.sprk-c-Masthead__site-nav {
   display: none;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: flex;
-    justify-content: flex-end;
-    max-width: $masthead-column-width;
-    margin: -2rem auto $space-m;
-    padding: 0 $space-m;
-  }
-}
-
-.sprk-c-Masthead__search {
-  display: none;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: block;
-    margin-left: $space-m;
-  }
-}
-
-.sprk-c-Masthead__search .sprk-b-InputContainer {
-  margin: 0;
-}
-
-.sprk-c-Masthead__wide-navigation-container {
-  display: none;
-  font-size: $masthead-wide-navigation-font-size;
 
   @media (min-width: $main-nav-breakpoint) {
-    display: block;
+    display: inherit;
   }
 }
 
-.sprk-c-Masthead__narrow-navigation-container {
+.sprk-c-Masthead__secondary-nav {
+  background-color: $secondary-nav-bg;
+}
+
+.sprk-c-Masthead__site-links {
+  padding-right: $space-m;
+  border-right: 1px solid $black-tint-25;
+}
+
+.sprk-c-Masthead__narrow-nav {
   background-color: $white;
   height: 100%;
   overflow: auto;
@@ -103,4 +51,8 @@
   top: $mobile-masthead-height;
   padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
   width: 100%;
+
+  @media (min-width: $main-nav-breakpoint) {
+    display: none;
+  }
 }

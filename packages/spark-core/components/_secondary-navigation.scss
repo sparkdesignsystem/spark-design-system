@@ -1,13 +1,107 @@
-.sprk-c-SecondaryNavigation .sprk-b-Link--standalone {
+// ==================================================================
+// Navigation
+// ==================================================================
+.sprk-c-SecondaryNavigation {
+  display: flex;
+  list-style-type: none;
+  padding-top: $space-s;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $secondary-nav-column-width;
+}
+
+.sprk-c-SecondaryNavigation__sub-menu-container {
+  position: absolute;
+  z-index: $layer-height-m;
+  width: 100%;
+}
+
+.sprk-c-SecondaryNavigation--sub {
+  border: 2px solid $gray;
+  box-shadow: $btn-shadow;
+  display: block;
+  margin-top: $space-s;
+}
+
+.sprk-c-SecondaryNavigation__item--sub {
+  background-color: $white;
+  line-height: $space-m;
+  text-align: left;
+  width: 100%;
+}
+
+.sprk-c-SecondaryNavigation__item {
+  flex: auto;
+  line-height: $space-l;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sprk-c-SecondaryNavigation__item--active > .sprk-c-SecondaryNavigation__link {
+  color: $red;
+  font-weight: bold;
+}
+
+.sprk-c-SecondaryNavigation__item:focus-within:not(.sprk-c-SecondaryNavigation__item--sub) > .sprk-c-SecondaryNavigation__link,
+.sprk-c-SecondaryNavigation__item--open > .sprk-c-SecondaryNavigation__link,
+.sprk-c-SecondaryNavigation__item--active > .sprk-c-SecondaryNavigation__link {
+  &::after {
+    background-color: $red;
+    content: ' ';
+    height: 3px;
+    display: block;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.sprk-c-SecondaryNavigation__link {
+  @include HoverLine($color: transparent, $width: 85%);
+
+  border: 0;
   color: $black;
+  display: block;
+  font-weight: $font-weight-body-one;
+  text-decoration: none;
+  width: 100%;
 
-  &:visited {
-    color: $black;
-  }
-
-  &:hover,
   &:active,
-  &:focus {
-    color: $red;
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $red, $width: 85%);
   }
+}
+
+.sprk-c-SecondaryNavigation__link--sub {
+  border: 0;
+  font-weight: normal;
+  line-height: $line-height-body-two;
+  padding: $space-m;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+
+  &::after {
+    display: none;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $gray;
+    font-weight: normal;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.sprk-c-SecondaryNavigation__arrow {
+  fill: $black;
+  width: $icon-m;
+  margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
 }

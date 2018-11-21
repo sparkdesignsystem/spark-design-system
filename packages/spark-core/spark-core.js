@@ -15,7 +15,7 @@ import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
 import { toggle } from './components/toggle';
 import { spinners } from './components/spinners';
-import { WideNavigation } from './components/wide-navigation';
+import { SecondaryNavigation } from './components/secondary-navigation';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
 
@@ -41,7 +41,7 @@ const SparkCore = ({ datePickerConfig = {} } = {}) => {
   tabs();
   toggle();
   spinners();
-  WideNavigation();
+  SecondaryNavigation();
   masthead();
   alerts();
   textInput();
