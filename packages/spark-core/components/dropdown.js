@@ -1,5 +1,6 @@
 /* global document */
 import getElements from '../utilities/getElements';
+import { isEscPressed } from '../utilities/keypress';
 
 const hideDropDown = (dropdown) => {
   dropdown.classList.remove('sprk-c-Dropdown--open');
@@ -37,6 +38,18 @@ const bindUIEvents = (dropdownTrigger) => {
 
   document.addEventListener('click', (e) => {
     if (!(dropdownElement.contains(e.target) || dropdownTrigger.contains(e.target))) {
+      hideDropDown(dropdownElement);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (isEscPressed(e)) {
+      hideDropDown(dropdownElement);
+    }
+  });
+
+  document.addEventListener('focusin', (e) => {
+    if (!dropdownElement.contains(e.target)) {
       hideDropDown(dropdownElement);
     }
   });
