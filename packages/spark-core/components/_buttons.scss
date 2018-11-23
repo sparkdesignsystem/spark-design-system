@@ -40,7 +40,7 @@
   &:active,
   &:focus {
     background-color: $btn-secondary-hover-background-color;
-    border: $btn-border-width $btn-border-style $btn-secondary-border-color;
+    border: $btn-border-width $btn-border-style $btn-secondary-hover-border-color;
     color: $btn-secondary-hover-text-color;
   }
 }

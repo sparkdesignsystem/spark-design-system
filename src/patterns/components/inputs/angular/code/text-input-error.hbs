@@ -2,7 +2,7 @@
   <label sprkLabel>Text Input Label</label>
   <input
     name="text_input"
-    [additionalClasses]="textInput.invalid && textInput.dirty ? 'sprk-b-TextInput--error': ''"
+    [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
     type="text"
     [(ngModel)]="text_input"
     required

@@ -28,7 +28,7 @@ describe('SparkToggleComponent', () => {
   it('clicking should show body text', () => {
     element.querySelector('a').click();
     fixture.detectChanges();
-    expect(element.querySelector('p')).toBeTruthy();
+    expect(element.querySelector('div.sprk-u-pts.sprk-u-pbs')).toBeTruthy();
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
@@ -42,7 +42,6 @@ describe('SparkToggleComponent', () => {
 
   it('should add icon classes to icon when toggle is opened', () => {
     component.title = 'placeholder';
-    component.body = 'placeholder';
     element.querySelector('a').click();
     fixture.detectChanges();
     expect(
@@ -50,9 +49,8 @@ describe('SparkToggleComponent', () => {
     ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open');
   });
 
-  it('should add icon classes to icon when toggle is opened and then closed', () => {
+  it('should add icon classes to icon when the toggle is opened and then closed', () => {
     component.title = 'placeholder';
-    component.body = 'placeholder';
     element.querySelector('a').click();
     element.querySelector('a').click();
     fixture.detectChanges();
@@ -65,5 +63,18 @@ describe('SparkToggleComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual('sprk-u-pam sprk-u-man');
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-id')).toBeNull();
   });
 });

@@ -135,4 +135,20 @@ describe('SparkCardComponent', () => {
     const el = element.querySelector('a');
     expect(el.getAttribute('data-analytics')).toEqual('Test');
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.cardType = 'base';
+    component.idString = testString;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('.sprk-c-Card');
+    expect(element.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    expect(element.getAttribute('data-id')).toBeNull();
+  });
 });

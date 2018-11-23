@@ -291,9 +291,10 @@ $btn-disabled-border-color: transparent !default;
 // Secondary
 $btn-secondary-background-color: transparent !default;
 $btn-secondary-border-color: $black !default;
-$btn-secondary-hover-text-color: $white !default;
-$btn-secondary-hover-background-color: $black !default;
 $btn-secondary-text-color: $black !default;
+$btn-secondary-hover-text-color: $red !default;
+$btn-secondary-hover-background-color: transparent !default;
+$btn-secondary-hover-border-color: $red !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border-color: transparent !default;
@@ -312,8 +313,11 @@ $link-standalone-color: $red !default;
 $link-transition: 0.3s !default;
 $link-underline-color: $red !default;
 $link-underline-visited-color: $red !default;
-$link-visited-color: $black !default;
-$link-font-weight: bold !default;
+$link-underline-width: 0.0625em !default;
+$link-visited-color: $red-mid !default;
+$link-standalone-font-weight: bold !default;
+$link-inline-font-weight: normal !default;
+$link-disabled-font-weight: bold !default;
 
 //
 // Lists
