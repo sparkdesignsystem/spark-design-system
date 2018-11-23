@@ -11,6 +11,12 @@ const showDropDown = (dropdown) => {
   dropdown.classList.remove('sprk-u-Display--none');
 };
 
+const removeActiveStatus = (choices) => {
+  choices.forEach((choice) => {
+    choice.classList.remove('sprk-c-Dropdown__link--active');
+  });
+};
+
 const toggleDropDown = (dropdown) => {
   if (dropdown.classList.contains('sprk-c-Dropdown--open')) {
     hideDropDown(dropdown);
@@ -21,7 +27,10 @@ const toggleDropDown = (dropdown) => {
 
 const bindUIEvents = (dropdownTrigger) => {
   const id = dropdownTrigger.getAttribute('data-sprk-dropdown-trigger');
+  const triggerText = dropdownTrigger.querySelector('[data-sprk-dropdown-trigger-text-container]');
   const dropdownElement = document.querySelector(`[data-sprk-dropdown="${id}"]`);
+  const dropdownChoices = dropdownElement.querySelectorAll('[data-sprk-dropdown-choice]');
+
   dropdownTrigger.addEventListener('click', () => {
     toggleDropDown(dropdownElement);
   });
@@ -30,6 +39,19 @@ const bindUIEvents = (dropdownTrigger) => {
     if (!(dropdownElement.contains(e.target) || dropdownTrigger.contains(e.target))) {
       hideDropDown(dropdownElement);
     }
+  });
+
+  dropdownChoices.forEach((choice) => {
+    const value = choice.getAttribute('data-sprk-dropdown-choice');
+    choice.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (triggerText) {
+        triggerText.textContent = value;
+      }
+      removeActiveStatus(dropdownChoices);
+      choice.classList.add('sprk-c-Dropdown__link--active');
+      hideDropDown(dropdownElement);
+    });
   });
 };
 
@@ -43,4 +65,5 @@ export {
   toggleDropDown,
   hideDropDown,
   showDropDown,
+  removeActiveStatus,
 };
