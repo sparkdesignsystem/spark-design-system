@@ -1,25 +1,33 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'sprk-dropdown',
   template: `
     <a
       class="sprk-b-Link sprk-b-Link--plain"
-      href="#nogo"
-      data-sprk-dropdown-trigger="dropdown01"
       aria-haspopup="true"
+      href=""
+      (click)="toggle($event)"
       >Trigger Dropdown</a
     >
-    <div
-      class="sprk-c-Dropdown sprk-u-Display--none"
-      data-sprk-dropdown="dropdown01"
-    >
-      <div class="sprk-c-Dropdown__header">
+    <div class="sprk-c-Dropdown" *ngIf="isOpen">
+      <div class="sprk-c-Dropdown__header" *ngIf="title">
         <h2 class="sprk-c-Dropdown__title sprk-b-TypeDisplayEight">
-          My Choices
+          {{ title }}
         </h2>
       </div>
       <ul class="sprk-c-Dropdown__links">
+        <li *ngFor="let choice of choices">
+          <a
+            [attr.data-sprk-dropdown-value]="choice.value"
+            href=""
+            [ngClass]="{
+              'sprk-c-Dropdown__link': true,
+              'sprk-c-Dropdown__link--active': choice.active
+            }"
+            >{{ choice.text }}</a
+          >
+        </li>
         <li class="sprk-c-Dropdown__item">
           <a class="sprk-c-Dropdown__link" href="#nogo">
             <p class="sprk-b-TypeBodyOne">Choice Title</p>
@@ -38,11 +46,7 @@ import { Component, Input } from '@angular/core';
           </a>
         </li>
       </ul>
-      <div class="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
-        <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
-          Go Elsewhere
-        </a>
-      </div>
+      <ng-content select="[sprkDropdownFooter]"></ng-content>
     </div>
   `
 })
@@ -51,9 +55,33 @@ export class SparkDropdownComponent {
   additionalClasses: string;
   @Input()
   idString: string;
+  @Input()
+  isOpen = false;
+  @Input()
+  title: string;
+  @Input()
+  choices: object;
+
+  constructor(public ref: ElementRef) {}
+
+  toggle(event): void {
+    event.preventDefault();
+    this.isOpen = !this.isOpen;
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  onClick(event): void {
+    if (!this.ref.nativeElement.contains(event.target)) {
+      this.hideDropdown();
+    }
+  }
+
+  hideDropdown(): void {
+    this.isOpen = false;
+  }
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-c-Divider'];
+    const classArray: string[] = [''];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
