@@ -49,6 +49,7 @@ const bindUIEvents = (dropdownTrigger) => {
   });
 
   document.addEventListener('focusin', (e) => {
+    /* istanbul ignore else: jsdom cant fire focusin on an element */
     if (!dropdownElement.contains(e.target)) {
       hideDropDown(dropdownElement);
     }
