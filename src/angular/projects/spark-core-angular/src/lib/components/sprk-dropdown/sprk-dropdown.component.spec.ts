@@ -1,14 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkDropdownComponent } from './sprk-dropdown.component';
 
 describe('SparkDropdownComponent', () => {
   let component: SparkDropdownComponent;
   let fixture: ComponentFixture<SparkDropdownComponent>;
-  let dividerElement: HTMLElement;
+  let dropdownElement: HTMLElement;
+  let dropdownTriggerElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkDropdownComponent]
+      declarations: [SparkDropdownComponent, SparkIconComponent]
     }).compileComponents();
   }));
 
@@ -16,7 +18,8 @@ describe('SparkDropdownComponent', () => {
     fixture = TestBed.createComponent(SparkDropdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    dividerElement = fixture.nativeElement.querySelector('span');
+    dropdownTriggerElement = fixture.nativeElement.querySelector('a');
+    dropdownElement = fixture.nativeElement.querySelector('div');
   });
 
   it('should create', () => {
@@ -34,12 +37,12 @@ describe('SparkDropdownComponent', () => {
     const testString = 'element-id';
     component.idString = testString;
     fixture.detectChanges();
-    expect(dividerElement.getAttribute('data-id')).toEqual(testString);
+    expect(dropdownTriggerElement.getAttribute('data-id')).toEqual(testString);
   });
 
   it('should not add data-id when idString has no value', () => {
     component.idString = null;
     fixture.detectChanges();
-    expect(dividerElement.getAttribute('data-id')).toBeNull();
+    expect(dropdownTriggerElement.getAttribute('data-id')).toBeNull();
   });
 });

@@ -15,6 +15,8 @@ import {
       aria-haspopup="true"
       href="#nogo"
       (click)="toggle($event)"
+      [attr.data-id]="idString"
+      [attr.data-analytics]="analyticsString"
       role="combobox"
     >
       {{ triggerText }}
@@ -75,6 +77,8 @@ export class SparkDropdownComponent {
   additionalTriggerClasses: string;
   @Input()
   idString: string;
+  @Input()
+  analyticsString: string;
   @Input()
   isOpen = false;
   @Input()
