@@ -7,6 +7,7 @@ describe('SparkWideNavigationComponent', () => {
   let component: SparkWideNavigationComponent;
   let fixture: ComponentFixture<SparkWideNavigationComponent>;
   let wideNavigationElement: HTMLElement;
+  let navElement: HTMLElement;
 
   const links = [
     {
@@ -49,6 +50,7 @@ describe('SparkWideNavigationComponent', () => {
     fixture = TestBed.createComponent(SparkWideNavigationComponent);
     component = fixture.componentInstance;
     wideNavigationElement = fixture.nativeElement.querySelector('ul');
+    navElement = fixture.nativeElement.querySelector('nav');
   });
 
   it('should create itself', () => {
@@ -110,5 +112,18 @@ describe('SparkWideNavigationComponent', () => {
     expect(
       wideNavigationElement.querySelector('li').getAttribute('aria-expanded')
     ).toEqual('false');
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(navElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(navElement.getAttribute('data-id')).toBeNull();
   });
 });

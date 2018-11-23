@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         Link
       </h2>
 
-      <sprk-link href="/links" idString="link-1" analyticsString="object.action.event">
+      <sprk-link href="/links" idString="link-1" analyticsString="object.action.event" target="_blank">
         This is a standard Spark Link!
       </sprk-link>
     </div>
@@ -40,6 +40,18 @@ import { Component, OnInit } from '@angular/core';
 
       <sprk-link linkType="disabled" href="/links" idString="link-4" analyticsString="object.action.event">
         This is a Spark Disabled Link
+      </sprk-link>
+    </div>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">
+        Icon With Text Link
+      </h2>
+
+      <sprk-link linkType="plain" href="/links" idString="link-5" analyticsString="object.action.event">
+        <sprk-icon iconType="communication" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-u-mrs"></sprk-icon>
+
+        Message Us
       </sprk-link>
     </div>
   `,

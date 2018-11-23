@@ -77,4 +77,19 @@ describe('SparkSecondaryNavigationItemComponent', () => {
       secondaryNavigationItemElement.classList.contains('sprk-u-mrm')
     ).toEqual(true);
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(secondaryNavigationItemElement.getAttribute('data-id')).toEqual(
+      testString
+    );
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(secondaryNavigationItemElement.getAttribute('data-id')).toBeNull();
+  });
 });

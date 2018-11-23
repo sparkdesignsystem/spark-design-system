@@ -3,9 +3,10 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-award',
   template: `
-  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}" [attr.data-id]="idString">
+  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}">
     <h2
       sprkStackItem
+      [attr.data-id]="idString"
       class="
         sprk-o-Stack__item
         sprk-b-TypeDisplayFive
@@ -45,8 +46,8 @@ import { Component, Input } from '@angular/core';
       additionalClasses="sprk-o-Stack__item--start-column"
       toggleType="base"
       title="{{ disclaimerTitle }}"
-      body="{{ disclaimerCopy }}"
       analyticsString="{{ analyticsStringDisclaimer }}">
+      <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
     </sprk-toggle>
   </sprk-stack>
   `,
