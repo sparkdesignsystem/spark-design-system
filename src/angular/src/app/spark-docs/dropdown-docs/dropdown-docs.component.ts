@@ -18,7 +18,10 @@ import { Component } from '@angular/core';
     </div>
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Simple</h2>
-      <sprk-dropdown title="My Choices"></sprk-dropdown>
+      <sprk-dropdown
+        title="My Choices"
+        [choices]="simpleChoices"
+      ></sprk-dropdown>
     </div>
   `
 })
@@ -26,14 +29,33 @@ export class DropdownDocsComponent {
   constructor() {}
   choices = [
     {
-      text: 'text',
-      value: 'value',
+      content: {
+        title: 'Choice Title',
+        infoLine1: 'Information about this choice',
+        infoLine2: 'More Information'
+      },
+      value: '1',
       active: false
     },
     {
-      text: 'text',
+      content: {
+        title: 'Choice Title',
+        infoLine1: 'Information about this choice',
+        infoLine2: 'More Information'
+      },
       value: 'value',
       active: true
+    }
+  ];
+
+  simpleChoices = [
+    {
+      text: 'Option 1',
+      value: '1'
+    },
+    {
+      text: 'Option 2',
+      value: '2'
     }
   ];
 }

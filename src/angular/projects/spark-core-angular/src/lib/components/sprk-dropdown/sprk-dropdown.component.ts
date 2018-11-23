@@ -18,32 +18,32 @@ import { Component, Input, ElementRef, HostListener } from '@angular/core';
       </div>
       <ul class="sprk-c-Dropdown__links">
         <li *ngFor="let choice of choices">
-          <a
-            [attr.data-sprk-dropdown-value]="choice.value"
-            href=""
-            [ngClass]="{
-              'sprk-c-Dropdown__link': true,
-              'sprk-c-Dropdown__link--active': choice.active
-            }"
-            >{{ choice.text }}</a
-          >
-        </li>
-        <li class="sprk-c-Dropdown__item">
-          <a class="sprk-c-Dropdown__link" href="#nogo">
-            <p class="sprk-b-TypeBodyOne">Choice Title</p>
-            <p>Information about this choice</p>
-            <p>More information</p>
-          </a>
-        </li>
-        <li class="sprk-c-Dropdown__item">
-          <a
-            class="sprk-c-Dropdown__link sprk-c-Dropdown__link--active"
-            href="#nogo"
-          >
-            <p class="sprk-b-TypeBodyOne">Choice Title</p>
-            <p>Information about this choice</p>
-            <p>More information</p>
-          </a>
+          <div *ngIf="choice.content; then: content; else: link"></div>
+          <ng-template #link>
+            <a
+              [attr.data-sprk-dropdown-value]="choice.value"
+              href=""
+              [ngClass]="{
+                'sprk-c-Dropdown__link': true,
+                'sprk-c-Dropdown__link--active': choice.active
+              }"
+              >{{ choice.text }}
+            </a>
+          </ng-template>
+          <ng-template #content>
+            <a
+              [attr.data-sprk-dropdown-value]="choice.value"
+              href=""
+              [ngClass]="{
+                'sprk-c-Dropdown__link': true,
+                'sprk-c-Dropdown__link--active': choice.active
+              }"
+            >
+              <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+              <p>{{ choice.content.infoLine1 }}</p>
+              <p>{{ choice.content.infoLine2 }}</p>
+            </a>
+          </ng-template>
         </li>
       </ul>
       <ng-content select="[sprkDropdownFooter]"></ng-content>
