@@ -5,7 +5,13 @@ import { Component } from '@angular/core';
   template: `
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Base</h2>
-      <sprk-dropdown title="My Choices" [choices]="choices">
+      <sprk-dropdown
+        triggerText="Make a Selection..."
+        title="My Choices"
+        triggerIconType="chevron-down"
+        (choiceMade)="choiceHandler($event)"
+        [choices]="choices"
+      >
         <div
           class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
           sprkDropdownFooter
@@ -19,8 +25,11 @@ import { Component } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Simple</h2>
       <sprk-dropdown
+        dropdownType="simple"
         title="My Choices"
+        triggerIconType="settings"
         [choices]="simpleChoices"
+        (choiceMade)="choiceHandler($event)"
       ></sprk-dropdown>
     </div>
   `
@@ -34,7 +43,7 @@ export class DropdownDocsComponent {
         infoLine1: 'Information about this choice',
         infoLine2: 'More Information'
       },
-      value: '1',
+      value: 'Choice Title 1',
       active: false
     },
     {
@@ -43,7 +52,7 @@ export class DropdownDocsComponent {
         infoLine1: 'Information about this choice',
         infoLine2: 'More Information'
       },
-      value: 'value',
+      value: 'Choice Title 2',
       active: true
     }
   ];
@@ -51,11 +60,15 @@ export class DropdownDocsComponent {
   simpleChoices = [
     {
       text: 'Option 1',
-      value: '1'
+      value: 'Option 1'
     },
     {
       text: 'Option 2',
-      value: '2'
+      value: 'Option 2'
     }
   ];
+
+  choiceHandler(event): void {
+    console.log(event);
+  }
 }

@@ -1,23 +1,37 @@
-import { Component, Input, ElementRef, HostListener } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  ElementRef,
+  HostListener,
+  EventEmitter
+} from '@angular/core';
 
 @Component({
   selector: 'sprk-dropdown',
   template: `
     <a
-      class="sprk-b-Link sprk-b-Link--plain"
+      [ngClass]="getTriggerClasses()"
       aria-haspopup="true"
-      href=""
+      href="#nogo"
       (click)="toggle($event)"
-      >Trigger Dropdown</a
+      role="combobox"
     >
-    <div class="sprk-c-Dropdown" *ngIf="isOpen">
+      {{ triggerText }}
+      <sprk-icon [iconType]="triggerIconType"></sprk-icon>
+    </a>
+    <div [ngClass]="getClasses()" *ngIf="isOpen">
       <div class="sprk-c-Dropdown__header" *ngIf="title">
         <h2 class="sprk-c-Dropdown__title sprk-b-TypeDisplayEight">
           {{ title }}
         </h2>
       </div>
       <ul class="sprk-c-Dropdown__links">
-        <li *ngFor="let choice of choices">
+        <li
+          *ngFor="let choice of choices; let i = index"
+          [attr.data-sprk-dropdown-choice-index]="i"
+          (click)="choiceClick($event)"
+        >
           <div *ngIf="choice.content; then: content; else: link"></div>
           <ng-template #link>
             <a
@@ -27,6 +41,7 @@ import { Component, Input, ElementRef, HostListener } from '@angular/core';
                 'sprk-c-Dropdown__link': true,
                 'sprk-c-Dropdown__link--active': choice.active
               }"
+              role="option"
               >{{ choice.text }}
             </a>
           </ng-template>
@@ -38,6 +53,7 @@ import { Component, Input, ElementRef, HostListener } from '@angular/core';
                 'sprk-c-Dropdown__link': true,
                 'sprk-c-Dropdown__link--active': choice.active
               }"
+              role="option"
             >
               <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
               <p>{{ choice.content.infoLine1 }}</p>
@@ -52,7 +68,11 @@ import { Component, Input, ElementRef, HostListener } from '@angular/core';
 })
 export class SparkDropdownComponent {
   @Input()
+  dropdownType = 'base';
+  @Input()
   additionalClasses: string;
+  @Input()
+  additionalTriggerClasses: string;
   @Input()
   idString: string;
   @Input()
@@ -60,7 +80,13 @@ export class SparkDropdownComponent {
   @Input()
   title: string;
   @Input()
-  choices: object;
+  choices: object[];
+  @Input()
+  triggerIconType: string;
+  @Input()
+  triggerText: string;
+  @Output()
+  choiceMade: EventEmitter<string> = new EventEmitter();
 
   constructor(public ref: ElementRef) {}
 
@@ -69,10 +95,56 @@ export class SparkDropdownComponent {
     this.isOpen = !this.isOpen;
   }
 
-  @HostListener('document:click', ['$event.target'])
+  @HostListener('document:click', ['$event'])
   onClick(event): void {
     if (!this.ref.nativeElement.contains(event.target)) {
       this.hideDropdown();
+    }
+  }
+
+  @HostListener('document:focusin', ['$event'])
+  onFocusin(event): void {
+    if (!this.ref.nativeElement.contains(event.target)) {
+      this.hideDropdown();
+    }
+  }
+
+  choiceClick(event) {
+    event.preventDefault();
+    this.clearActiveChoices();
+    const choiceIndex = event.currentTarget.getAttribute(
+      'data-sprk-dropdown-choice-index'
+    );
+    const clickedChoice = this.choices[choiceIndex];
+    if (this.dropdownType !== 'simple') {
+      this.setActiveChoice(event);
+      this.updateTriggerText(event);
+    }
+    this.hideDropdown();
+    this.choiceMade.emit(clickedChoice['value']);
+  }
+
+  setActiveChoice(event): void {
+    const choiceIndex = event.currentTarget.getAttribute(
+      'data-sprk-dropdown-choice-index'
+    );
+    this.choices[choiceIndex]['active'] = true;
+  }
+
+  updateTriggerText(event): void {
+    const choiceIndex = event.currentTarget.getAttribute(
+      'data-sprk-dropdown-choice-index'
+    );
+    this.triggerText = this.choices[choiceIndex]['value'];
+  }
+
+  clearActiveChoices(): void {
+    if (this.choices.length !== 0) {
+      this.choices.forEach((choice: object) => {
+        if (choice['active']) {
+          choice['active'] = false;
+        }
+      });
     }
   }
 
@@ -81,10 +153,22 @@ export class SparkDropdownComponent {
   }
 
   getClasses(): string {
-    const classArray: string[] = [''];
+    const classArray: string[] = ['sprk-c-Dropdown'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  getTriggerClasses(): string {
+    const classArray: string[] = ['sprk-b-Link', 'sprk-b-Link--plain'];
+
+    if (this.additionalTriggerClasses) {
+      this.additionalTriggerClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }
