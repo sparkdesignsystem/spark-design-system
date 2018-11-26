@@ -78,6 +78,7 @@ module.exports = {
       {
         match: [
           './src/assets/drizzle/**/*.js',
+          './src/assets/toolkit/**/*.js',
           '!./src/angular',
         ],
         tasks: ['js'],
