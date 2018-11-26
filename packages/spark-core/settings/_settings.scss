@@ -280,7 +280,8 @@ $btn-border-radius: 1px !default;
 $btn-hover-background-color: $red-mid !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
-$btn-breakpoint: 30rem !default;
+$btn-breakpoint-xs: 30rem !default;
+$btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
 // Disabled
 $btn-disabled-opacity: 1 !default;

@@ -19,6 +19,11 @@ $card-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) !default;
   padding: $space-inset-l;
 }
 
+.sprk-c-Card__container {
+  flex: 0 1 $card-max-width;
+  min-width: 0;
+}
+
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@xs.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-xs) {
