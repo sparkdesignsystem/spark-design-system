@@ -5,10 +5,10 @@ import {
   showDropDown,
   hideAllDropDowns,
   bindUIEvents,
-  WideNavigation,
-} from '../components/wide-navigation';
+  SecondaryNavigation,
+} from '../components/secondary-navigation';
 
-describe('wide nav tests', () => {
+describe('secondary nav tests', () => {
   let nav;
   let navItem1;
   let navItem2;
@@ -21,7 +21,7 @@ describe('wide nav tests', () => {
 
   beforeEach(() => {
     nav = document.createElement('ul');
-    nav.setAttribute('data-sprk-navigation', 'wide');
+    nav.setAttribute('data-sprk-navigation', 'secondary');
 
     navItem1 = document.createElement('li');
     navItem2 = document.createElement('li');
@@ -32,18 +32,18 @@ describe('wide nav tests', () => {
     sinon.spy(navItem3, 'addEventListener');
 
     subNavContainer1 = document.createElement('div');
-    subNavContainer1.classList.add('sprk-c-WideNavigation__sub-menu-container');
+    subNavContainer1.classList.add('sprk-c-SecondaryNavigation__sub-menu-container');
     subNavContainer1.classList.add('sprk-u-Display--none');
 
     subNavContainer2 = document.createElement('div');
-    subNavContainer2.classList.add('sprk-c-WideNavigation__sub-menu-container');
+    subNavContainer2.classList.add('sprk-c-SecondaryNavigation__sub-menu-container');
     subNavContainer2.classList.add('sprk-u-Display--none');
 
     subNav1 = document.createElement('ul');
-    subNav1.classList.add('sprk-c-WideNavigation--sub');
+    subNav1.classList.add('sprk-c-SecondaryNavigation--sub');
 
     subNav2 = document.createElement('ul');
-    subNav2.classList.add('sprk-c-WideNavigation--sub', 'sprk-u-Display--none');
+    subNav2.classList.add('sprk-c-SecondaryNavigation--sub', 'sprk-u-Display--none');
 
     subNavContainer1.appendChild(subNav1);
     subNavContainer2.appendChild(subNav2);
@@ -91,7 +91,7 @@ describe('wide nav tests', () => {
 
     event = new window.Event('focusin');
     navItem2.dispatchEvent(event);
-    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
+    expect(navItem2.classList.contains('sprk-c-SecondaryNavigation__item--open')).eql(false);
   });
 
   it('should bind the mouseenter event', () => {
@@ -104,7 +104,7 @@ describe('wide nav tests', () => {
 
     event = new window.Event('mouseenter');
     navItem2.dispatchEvent(event);
-    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
+    expect(navItem2.classList.contains('sprk-c-SecondaryNavigation__item--open')).eql(false);
   });
 
   it('should hide all navs and show one on mouseenter', () => {
@@ -129,7 +129,7 @@ describe('wide nav tests', () => {
 
     event = new window.Event('mouseleave');
     navItem2.dispatchEvent(event);
-    expect(navItem2.classList.contains('sprk-c-WideNavigation__item--open')).eql(false);
+    expect(navItem2.classList.contains('sprk-c-SecondaryNavigation__item--open')).eql(false);
   });
 
   it('should hide all navs and show one on mouseleave', () => {
@@ -146,8 +146,8 @@ describe('wide nav tests', () => {
 
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
-    WideNavigation();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-navigation="wide"] > .sprk-c-WideNavigation__item');
+    SecondaryNavigation();
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-navigation="secondary"] > .sprk-c-SecondaryNavigation__item');
   });
 });
 
@@ -168,10 +168,10 @@ describe('hide all navigation tests', () => {
     navItem3 = document.createElement('li');
 
     subNav1 = document.createElement('ul');
-    subNav1.classList.add('sprk-c-WideNavigation--sub');
+    subNav1.classList.add('sprk-c-SecondaryNavigation--sub');
 
     subNav2 = document.createElement('ul');
-    subNav2.classList.add('sprk-c-WideNavigation--sub');
+    subNav2.classList.add('sprk-c-SecondaryNavigation--sub');
 
     navItem1.appendChild(subNav1);
     navItem3.appendChild(subNav2);
@@ -181,7 +181,7 @@ describe('hide all navigation tests', () => {
     nav.appendChild(navItem3);
 
     hideAllDropDowns(
-      nav.querySelectorAll('.sprk-c-WideNavigation--sub'),
+      nav.querySelectorAll('.sprk-c-SecondaryNavigation--sub'),
       nav.querySelectorAll('[aria-expanded]'),
     );
   });

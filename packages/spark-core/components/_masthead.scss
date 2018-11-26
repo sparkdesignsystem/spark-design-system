@@ -14,7 +14,8 @@
   }
 }
 
-.sprk-c-Masthead__hamburger {
+// Hide menu on larger views
+.sprk-c-Masthead__menu {
   @media all and (min-width: $main-nav-breakpoint) {
     display: none;
   }
@@ -25,8 +26,9 @@
   max-width: $masthead-logo-max-width;
 }
 
+// Hide secondary and site options until larger view
 .sprk-c-Masthead__secondary-nav,
-.sprk-c-Masthead__site-nav {
+.sprk-c-Masthead__site-options {
   display: none;
 
   @media (min-width: $main-nav-breakpoint) {
@@ -34,21 +36,23 @@
   }
 }
 
+.sprk-c-Masthead__nav {
+  border-right: 1px solid $black-tint-25;
+  padding-right: $space-l;
+}
+
 .sprk-c-Masthead__secondary-nav {
   background-color: $secondary-nav-bg;
 }
 
-.sprk-c-Masthead__site-links {
-  padding-right: $space-m;
-  border-right: 1px solid $black-tint-25;
-}
-
+// Hide narrow nav on larger views
 .sprk-c-Masthead__narrow-nav {
   background-color: $white;
   height: 100%;
   overflow: auto;
   position: fixed;
   top: $mobile-masthead-height;
+  left: 0;
   padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
   width: 100%;
 

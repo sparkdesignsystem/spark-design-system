@@ -45,7 +45,7 @@ const bindUIEvents = (element) => {
 };
 
 const SecondaryNavigation = () => {
-  getElements('[data-sprk-navigation="wide"] > .sprk-c-SecondaryNavigation__item', bindUIEvents);
+  getElements('[data-sprk-navigation="secondary"] > .sprk-c-SecondaryNavigation__item', bindUIEvents);
 };
 
 export {
