@@ -4,7 +4,7 @@ import { focusFirstEl } from '../utilities/elementState';
 
 const toggleMobileNav = (iconContainer, nav) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
-  iconContainer.querySelector('svg').classList.toggle('sprk-c-Hamburger__icon--open');
+  iconContainer.querySelector('svg').classList.toggle('sprk-c-Menu__icon--open');
   nav.classList.toggle('sprk-u-Display--none');
 };
 
@@ -19,8 +19,8 @@ const hideMobileNavs = () => {
   getElements('[data-sprk-mobile-nav]', (item) => {
     item.classList.add('sprk-u-Display--none');
   });
-  getElements('.sprk-c-Hamburger__icon--open', (item) => {
-    item.classList.remove('sprk-c-Hamburger__icon--open');
+  getElements('.sprk-c-Menu__icon--open', (item) => {
+    item.classList.remove('sprk-c-Menu__icon--open');
   });
 };
 
