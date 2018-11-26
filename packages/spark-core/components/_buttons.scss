@@ -4,7 +4,7 @@
 .sprk-c-Button {
   box-shadow: $btn-shadow;
   transition: all $btn-transition-speed;
-
+  
   &:hover,
   &:active,
   &:focus {
@@ -18,10 +18,18 @@
   }
 }
 
+.sprk-c-Button--full\@xs {
+  width: 100%;
+
+  @media screen and (min-width: $btn-breakpoint-xs) {
+    width: auto;
+  }
+}
+
 .sprk-c-Button--full\@sm {
   width: 100%;
 
-  @media screen and (min-width: $btn-breakpoint) {
+  @media screen and (min-width: $btn-breakpoint-s) {
     width: auto;
   }
 }
@@ -51,7 +59,7 @@
   border-color: $btn-tertiary-border-color;
   color: $btn-tertiary-text-color;
   text-transform: uppercase;
-
+  
   &:hover,
   &:active,
   &:focus {
