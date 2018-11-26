@@ -78,6 +78,7 @@ module.exports = {
       {
         match: [
           './src/assets/drizzle/**/*.js',
+          './packages/spark-core/es5/*.js',
           '!./src/angular',
         ],
         tasks: ['js'],

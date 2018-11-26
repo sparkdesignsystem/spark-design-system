@@ -22,6 +22,7 @@ import { ButtonDocsComponent } from './spark-docs/button-docs/button-docs.compon
 import { CardDocsComponent } from './spark-docs/card-docs/card-docs.component';
 import { DictionaryDocsComponent } from './spark-docs/dictionary-docs/dictionary-docs.component';
 import { DividerDocsComponent } from './spark-docs/divider-docs/divider-docs.component';
+import { DropdownDocsComponent } from './spark-docs/dropdown-docs/dropdown-docs.component';
 import { FooterDocsComponent } from './spark-docs/footer-docs/footer-docs.component';
 import { HighlightBoardDocsComponent } from './spark-docs/highlight-board-docs/highlight-board-docs.component';
 import { IconSetDocsComponent } from './spark-docs/icon-set-docs/icon-set-docs.component';
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
   { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
+  { path: 'dropdowns', component: DropdownDocsComponent },
   { path: 'masthead', component: MastheadDocsComponent },
   { path: 'inputs', component: InputDocsComponent },
   { path: 'stack', component: StackDocsComponent },
@@ -83,6 +85,7 @@ const appRoutes: Routes = [
     IconSetDocsComponent,
     NavigationDocsComponent,
     DividerDocsComponent,
+    DropdownDocsComponent,
     MastheadDocsComponent,
     InputDocsComponent,
     ListDocsComponent,

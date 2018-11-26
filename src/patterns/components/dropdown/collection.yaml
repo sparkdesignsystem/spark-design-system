@@ -1,0 +1,3 @@
+description: Used to make a selection. Intended for navigation or application state change. The Dropdown component
+  can be triggered from any element, but a link is suggested.
+sparkPackageCore: true
