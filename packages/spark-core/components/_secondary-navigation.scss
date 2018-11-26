@@ -1,13 +1,105 @@
-.sprk-c-SecondaryNavigation .sprk-b-Link--standalone {
-  color: $black;
+// ==================================================================
+// Secondary Navigation
+// ==================================================================
+.sprk-c-SecondaryNavigation {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $secondary-nav-column-width;
+}
 
-  &:visited {
-    color: $black;
+.sprk-c-SecondaryNavigation--sub {
+  border: 2px solid $gray;
+  box-shadow: $secondary-nav-dropdown-shadow;
+  display: block;
+  margin-top: $space-s;
+}
+
+.sprk-c-SecondaryNavigation__sub-menu-container {
+  position: absolute;
+  z-index: $layer-height-m;
+  width: 100%;
+}
+
+.sprk-c-SecondaryNavigation__item {
+  line-height: $space-l;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sprk-c-SecondaryNavigation--sub .sprk-c-SecondaryNavigation__item {
+  background-color: $white;
+  line-height: $space-m;
+  text-align: left;
+  width: 100%;
+}
+
+.sprk-c-SecondaryNavigation__item--active > .sprk-c-SecondaryNavigation__link {
+  color: $secondary-nav-active-color;
+  font-weight: bold;
+}
+
+.sprk-c-SecondaryNavigation__item:focus-within > .sprk-c-SecondaryNavigation__link,
+.sprk-c-SecondaryNavigation__item--open > .sprk-c-SecondaryNavigation__link,
+.sprk-c-SecondaryNavigation__item--active > .sprk-c-SecondaryNavigation__link {
+  &::after {
+    background-color: $secondary-nav-active-color;
+    content: ' ';
+    height: 3px;
+    display: block;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// Override focus underline on sub nav
+.sprk-c-SecondaryNavigation--sub .sprk-c-SecondaryNavigation__item:focus-within > .sprk-c-SecondaryNavigation__link {
+  &::after {
+    display: none;
+  }
+}
+
+.sprk-c-SecondaryNavigation__link {
+  @include HoverLine($color: transparent, $width: 85%);
+
+  border: 0;
+  color: $black;
+  display: block;
+  font-weight: $font-weight-body-one;
+  text-decoration: none;
+  width: 100%;
+
+  &:active,
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $secondary-nav-active-color, $width: 85%);
+  }
+}
+
+.sprk-c-SecondaryNavigation--sub .sprk-c-SecondaryNavigation__link {
+  border: 0;
+  font-weight: normal;
+  line-height: $line-height-body-two;
+  padding: $space-m;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+
+  &::after {
+    display: none;
   }
 
-  &:hover,
   &:active,
-  &:focus {
-    color: $red;
+  &:focus,
+  &:hover {
+    background-color: $gray;
+    font-weight: normal;
+
+    &::after {
+      display: none;
+    }
   }
 }

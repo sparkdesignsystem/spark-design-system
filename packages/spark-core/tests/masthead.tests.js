@@ -74,7 +74,7 @@ describe('masthead UI Events tests', () => {
 
   it('should do nothing when focusin is triggered on a narrow viewport when the nav is closed', () => {
     iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-navigation-container');
+    nav.classList.add('sprk-c-Masthead__narrow-nav');
     nav.classList.add('sprk-u-HideWhenJs');
     event = new window.Event('focusin');
     main.dispatchEvent(event);
@@ -83,7 +83,7 @@ describe('masthead UI Events tests', () => {
 
   it('should focus on the first nav item when focusin is triggered on a narrow viewport when the nav is open', () => {
     iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-navigation-container');
+    nav.classList.add('sprk-c-Masthead__narrow-nav');
     event = new window.Event('focusin');
     main.dispatchEvent(event);
     expect(document.activeElement).eql(navItem);
@@ -119,12 +119,12 @@ describe('toggleMobileNav tests', () => {
   it('should toggle the class sprk-u-Display--none on the nav element and the open class on the icon', () => {
     toggleMobileNav(iconContainer, nav);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
-    expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(true);
+    expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(true);
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(true);
     toggleMobileNav(iconContainer, nav);
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(false);
+    expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
   });
 });
 
@@ -140,7 +140,7 @@ describe('hideMobileNavs tests', () => {
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
     iconContainer = document.createElement('div');
     icon = document.createElement('svg');
-    icon.classList.add('sprk-c-Hamburger__icon--open');
+    icon.classList.add('sprk-c-Menu__icon--open');
     iconContainer.appendChild(icon);
     main.appendChild(nav);
     main.appendChild(iconContainer);
@@ -152,7 +152,7 @@ describe('hideMobileNavs tests', () => {
     hideMobileNavs();
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(false);
+    expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
   });
 });
 

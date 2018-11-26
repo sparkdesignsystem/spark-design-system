@@ -485,13 +485,18 @@ $modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 //
 // Masthead / Main Nav
 //
-$main-nav-breakpoint: 46rem !default;
-$masthead-column-width: 64rem !default;
-$mobile-masthead-height: 5.5625rem !default;
+$masthead-bg-color: $white !default;
+$main-nav-breakpoint: 50rem !default;
+$masthead-column-width: 89rem !default;
+$secondary-nav-dropdown-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$secondary-nav-column-width: 64rem !default;
+$secondary-nav-bg: $gray-tint-50 !default;
+$secondary-nav-active-color: $red !default;
+$masthead-logo-max-width: 238px !default;
+$mobile-masthead-height: 9.125rem !default;
 $sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $narrow-nav-left-border: 5px solid $red !default;
 $narrow-nav-link-font-weight: normal !default;
-$masthead-wide-navigation-font-size: 1.125rem !default;
 
 //
 // Pagination

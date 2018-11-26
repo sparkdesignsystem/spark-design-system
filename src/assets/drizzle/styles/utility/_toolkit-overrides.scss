@@ -10,7 +10,9 @@
   position: static;
 }
 
-[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example {
+[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='signed-in'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='signed-out'] .#{$app-namespace}-c-Preview__example {
   padding: 0;
 }
 
