@@ -1,14 +1,19 @@
 // ==================================================================
-// Navigation
+// Secondary Navigation
 // ==================================================================
 .sprk-c-SecondaryNavigation {
-  display: flex;
   list-style-type: none;
-  padding-top: $space-s;
   position: relative;
   width: 100%;
   margin: 0 auto;
   max-width: $secondary-nav-column-width;
+}
+
+.sprk-c-SecondaryNavigation--sub {
+  border: 2px solid $gray;
+  box-shadow: $secondary-nav-dropdown-shadow;
+  display: block;
+  margin-top: $space-s;
 }
 
 .sprk-c-SecondaryNavigation__sub-menu-container {
@@ -17,44 +22,43 @@
   width: 100%;
 }
 
-.sprk-c-SecondaryNavigation--sub {
-  border: 2px solid $gray;
-  box-shadow: $btn-shadow;
-  display: block;
-  margin-top: $space-s;
-}
-
-.sprk-c-SecondaryNavigation__item--sub {
-  background-color: $white;
-  line-height: $space-m;
-  text-align: left;
-  width: 100%;
-}
-
 .sprk-c-SecondaryNavigation__item {
-  flex: auto;
   line-height: $space-l;
   position: relative;
   text-align: center;
   white-space: nowrap;
 }
 
+.sprk-c-SecondaryNavigation--sub .sprk-c-SecondaryNavigation__item {
+  background-color: $white;
+  line-height: $space-m;
+  text-align: left;
+  width: 100%;
+}
+
 .sprk-c-SecondaryNavigation__item--active > .sprk-c-SecondaryNavigation__link {
-  color: $red;
+  color: $secondary-nav-active-color;
   font-weight: bold;
 }
 
-.sprk-c-SecondaryNavigation__item:focus-within:not(.sprk-c-SecondaryNavigation__item--sub) > .sprk-c-SecondaryNavigation__link,
+.sprk-c-SecondaryNavigation__item:focus-within > .sprk-c-SecondaryNavigation__link,
 .sprk-c-SecondaryNavigation__item--open > .sprk-c-SecondaryNavigation__link,
 .sprk-c-SecondaryNavigation__item--active > .sprk-c-SecondaryNavigation__link {
   &::after {
-    background-color: $red;
+    background-color: $secondary-nav-active-color;
     content: ' ';
     height: 3px;
     display: block;
     width: 85%;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+// Override focus underline on sub nav
+.sprk-c-SecondaryNavigation--sub .sprk-c-SecondaryNavigation__item:focus-within > .sprk-c-SecondaryNavigation__link {
+  &::after {
+    display: none;
   }
 }
 
@@ -71,11 +75,11 @@
   &:active,
   &:focus,
   &:hover {
-    @include HoverLine($color: $red, $width: 85%);
+    @include HoverLine($color: $secondary-nav-active-color, $width: 85%);
   }
 }
 
-.sprk-c-SecondaryNavigation__link--sub {
+.sprk-c-SecondaryNavigation--sub .sprk-c-SecondaryNavigation__link {
   border: 0;
   font-weight: normal;
   line-height: $line-height-body-two;
@@ -98,10 +102,4 @@
       display: none;
     }
   }
-}
-
-.sprk-c-SecondaryNavigation__arrow {
-  fill: $black;
-  width: $icon-m;
-  margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
 }

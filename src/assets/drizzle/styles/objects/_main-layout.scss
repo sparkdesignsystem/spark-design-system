@@ -14,6 +14,7 @@ $drizzle-header-padding-vert-wide: 1rem;
 
 .#{$app-namespace}-o-Layout__main {
   flex: 1 0 auto;
+  padding-bottom: 4rem;
 
   @media (min-width: $nav-switch-breakpoint) {
     width: $layout-main-width;
