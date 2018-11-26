@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     sparkCore: './spark-core.js',
     sparkCorePrerender: './spark-core-prerender.js',
+    sparkCoreExports: './spark-core-exports.js',
     alerts: './components/alerts.js',
     spinners: './components/spinners.js',
     tabs: './components/tabs.js',
