@@ -49,12 +49,6 @@ import {
   handleToggleClick,
   bindToggleUIEvents,
 } from './components/toggle';
-import {
-  WideNavigation,
-  showDropDown,
-  hideAllDropDowns,
-  bindUIEvents as bindWideNavigationUIEvents,
-} from './components/wide-navigation';
 import isValidDate from './utilities/validation/isValidDate';
 import isValidMonetary from './utilities/validation/isValidMonetary';
 import isValidPhone from './utilities/validation/isValidPhone';
@@ -78,6 +72,14 @@ import {
   isEscPressed,
 } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
+import {
+  dropdowns,
+  bindUIEvents as bindDropdownUIEvents,
+  toggleDropDown,
+  hideDropDown,
+  showDropDown,
+  removeActiveStatus,
+} from './components/dropdown';
 
 export {
   alerts,
@@ -117,10 +119,6 @@ export {
   toggleAriaExpanded,
   handleToggleClick,
   bindToggleUIEvents,
-  WideNavigation,
-  showDropDown,
-  hideAllDropDowns,
-  bindWideNavigationUIEvents,
   isValidDate,
   isValidMonetary,
   isValidPhone,
@@ -140,4 +138,10 @@ export {
   isTabPressed,
   isEscPressed,
   toggleValue,
+  dropdowns,
+  bindDropdownUIEvents,
+  toggleDropDown,
+  hideDropDown,
+  showDropDown,
+  removeActiveStatus,
 };
