@@ -1,6 +1,7 @@
 .sprk-c-Dropdown {
   background-color: $white;
   border: $dropdown-border;
+  box-shadow: $dropdown-shadow;
   max-width: $dropdown-max-width;
   position: absolute;
   margin-top: $space-xs;

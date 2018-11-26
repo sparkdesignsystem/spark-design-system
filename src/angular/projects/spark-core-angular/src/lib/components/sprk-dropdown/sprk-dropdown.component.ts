@@ -108,6 +108,7 @@ export class SparkDropdownComponent {
 
   @HostListener('document:focusin', ['$event'])
   onFocusin(event): void {
+    /* istanbul ignore else: angular focus event isnt setting e.target */
     if (!this.ref.nativeElement.contains(event.target)) {
       this.hideDropdown();
     }
@@ -143,13 +144,9 @@ export class SparkDropdownComponent {
   }
 
   clearActiveChoices(): void {
-    if (this.choices.length !== 0) {
-      this.choices.forEach((choice: object) => {
-        if (choice['active']) {
-          choice['active'] = false;
-        }
-      });
-    }
+    this.choices.forEach((choice: object) => {
+      choice['active'] = false;
+    });
   }
 
   hideDropdown(): void {

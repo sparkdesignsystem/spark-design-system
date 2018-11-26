@@ -45,4 +45,98 @@ describe('SparkDropdownComponent', () => {
     fixture.detectChanges();
     expect(dropdownTriggerElement.getAttribute('data-id')).toBeNull();
   });
+
+  it('should open the dropdown on click', () => {
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('div');
+    expect(dropdownElement).not.toBeNull();
+  });
+
+  it('should close the dropdown on click outside the element', () => {
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('div');
+    expect(dropdownElement).not.toBeNull();
+    dropdownElement.ownerDocument.dispatchEvent(new Event('click'));
+    expect(component.isOpen).toEqual(false);
+  });
+
+  it('should close the dropdown on focusin outside the element', () => {
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('div');
+    expect(component.isOpen).toEqual(true);
+    dropdownElement.ownerDocument.dispatchEvent(new Event('focusin'));
+    expect(component.isOpen).toEqual(false);
+  });
+
+  it('should set active on click of a choice on a base dropdown', () => {
+    fixture.autoDetectChanges();
+    component.dropdownType = 'base';
+    component.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 1',
+        active: false
+      }
+    ];
+    dropdownTriggerElement.click();
+    expect(component.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
+    listElement.dispatchEvent(new Event('click'));
+    expect(component.choices[0]['active']).toEqual(true);
+  });
+
+  it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
+    fixture.autoDetectChanges();
+    component.dropdownType = 'base';
+    component.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 1'
+      }
+    ];
+    dropdownTriggerElement.click();
+    expect(component.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
+    listElement.dispatchEvent(new Event('click'));
+    expect(component.choices[0]['active']).toEqual(true);
+  });
+
+  it('should not set active on click of a choice on a simple dropdown', () => {
+    fixture.autoDetectChanges();
+    component.dropdownType = 'simple';
+    component.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1'
+      },
+      {
+        text: 'Option 2',
+        value: 'Option 2'
+      }
+    ];
+    dropdownTriggerElement.click();
+    expect(component.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
+    listElement.dispatchEvent(new Event('click'));
+    expect(component.choices[0]['active']).toEqual(false);
+  });
+
+  it('should set a value if additionalTriggerClasses has a value', () => {
+    component.additionalTriggerClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
+      true
+    );
+  });
 });
