@@ -1,4 +1,4 @@
-/* global before beforeEach window document describe it */
+/* global before beforeEach window document describe it afterEach */
 import sinon from 'sinon';
 import { expect } from 'chai';
 import {
@@ -30,6 +30,7 @@ describe('secondary nav tests', () => {
     sinon.spy(navItem1, 'addEventListener');
     sinon.spy(navItem2, 'addEventListener');
     sinon.spy(navItem3, 'addEventListener');
+    sinon.spy(document, 'querySelectorAll');
 
     subNavContainer1 = document.createElement('div');
     subNavContainer1.classList.add('sprk-c-SecondaryNavigation__sub-menu-container');
@@ -56,6 +57,10 @@ describe('secondary nav tests', () => {
     nav.appendChild(navItem3);
 
     document.body.appendChild(nav);
+  });
+
+  afterEach(() => {
+    document.querySelectorAll.restore();
   });
 
   it('should remove the hidden class from the subNav inside', () => {
@@ -145,7 +150,6 @@ describe('secondary nav tests', () => {
   });
 
   it('should call getElements once with the correct selector', () => {
-    sinon.spy(document, 'querySelectorAll');
     SecondaryNavigation();
     expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-navigation="secondary"] > .sprk-c-SecondaryNavigation__item');
   });
