@@ -8,13 +8,13 @@
   top: 0;
   z-index: $layer-height-m;
 
-  @media all and (min-width: $main-nav-breakpoint) {
+  @media all and (min-width: $big-nav-breakpoint) {
     border-bottom: 1px solid $gray;
   }
 }
 
 .sprk-c-Masthead__content {
-  @media all and (min-width: $main-nav-breakpoint) {
+  @media all and (min-width: $big-nav-breakpoint) {
     margin: 0 auto;
     max-width: $masthead-column-width;
   }
@@ -22,7 +22,7 @@
 
 // Hide menu on larger views
 .sprk-c-Masthead__menu {
-  @media all and (min-width: $main-nav-breakpoint) {
+  @media all and (min-width: $big-nav-breakpoint) {
     display: none;
   }
 }
@@ -37,7 +37,7 @@
 .sprk-c-Masthead__little-nav {
   display: none;
 
-  @media (min-width: $main-nav-breakpoint) {
+  @media (min-width: $big-nav-breakpoint) {
     display: inherit;
   }
 }
@@ -47,7 +47,7 @@
 }
 
 .sprk-c-Masthead__site-links {
-  @media all and (min-width: $main-nav-breakpoint) {
+  @media all and (min-width: $big-nav-breakpoint) {
     border-right: 1px solid $black-tint-25;
     padding-right: $space-l;
   }
@@ -121,7 +121,7 @@
   padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
   width: 100%;
 
-  @media (min-width: $main-nav-breakpoint) {
+  @media (min-width: $big-nav-breakpoint) {
     display: none;
   }
 }
