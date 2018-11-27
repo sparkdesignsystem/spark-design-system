@@ -4,14 +4,20 @@
 .sprk-c-Masthead {
   background-color: $masthead-bg-color;
   box-shadow: $dropdown-shadow;
-  margin: 0 auto;
-  max-width: $masthead-column-width;
   position: sticky;
   top: 0;
   z-index: $layer-height-m;
 
   @media all and (min-width: $main-nav-breakpoint) {
     border-bottom: 1px solid $gray;
+  }
+}
+
+.sprk-c-Masthead__content {
+  margin: 0 auto;
+
+  @media all and (min-width: $main-nav-breakpoint) {
+    max-width: $masthead-column-width;
   }
 }
 
