@@ -16,6 +16,11 @@
   padding: 0;
 }
 
+[data-template-id^='signed-in'] .sprk-c-Masthead,
+[data-template-id^='signed-out'] .sprk-c-Masthead {
+  z-index: 1000000;
+}
+
 [data-template-id^='box-object'] .sprk-o-Box {
   border: 1px solid #ccc;
 }

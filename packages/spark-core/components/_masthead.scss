@@ -36,9 +36,15 @@
   }
 }
 
+.sprk-c-Masthead__little-nav {
+  flex-wrap: wrap;
+}
+
 .sprk-c-Masthead__site-links {
-  border-right: 1px solid $black-tint-25;
-  padding-right: $space-l;
+  @media all and (min-width: $main-nav-breakpoint) {
+    border-right: 1px solid $black-tint-25;
+    padding-right: $space-l;
+  }
 }
 
 .sprk-c-Masthead__big-nav {
