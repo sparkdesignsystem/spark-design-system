@@ -15,12 +15,17 @@ import * as _ from 'lodash';
             class="sprk-c-Menu"
             type="button"
             [attr.aria-expanded]="isNarrowNavOpen ? true : false"
-            (click)="toggleNarrowNav()"
+            (click)="toggleNarrowNav($event)"
             data-sprk-mobile-nav-trigger="mobileNav"
           >
             <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
             <svg
-              class="sprk-c-Icon sprk-c-Icon--l sprk-c-Menu__icon"
+              [ngClass]="{
+                'sprk-c-Icon': true,
+                'sprk-c-Icon--l': true,
+                'sprk-c-Menu__icon': true,
+                'sprk-c-Menu__icon--open': isNarrowNavOpen
+              }"
               aria-hidden="true"
               viewBox="0 0 64 64"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +58,7 @@ import * as _ from 'lodash';
 
         <nav
           class="
-          sprk-c-Masthead__site-options
+          sprk-c-Masthead__little-nav
           sprk-o-Stack__item
           sprk-o-Stack__item--flex@xxs
           sprk-o-Stack
@@ -64,7 +69,7 @@ import * as _ from 'lodash';
           role="navigation"
         >
           <div
-            class="sprk-c-Masthead__nav sprk-o-Stack__item sprk-o-Stack__item--center-column"
+            class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-Stack__item--center-column"
           >
             <ng-content select="[site-slot]"></ng-content>
           </div>
@@ -126,65 +131,43 @@ import * as _ from 'lodash';
 
         <div
           *ngIf="isNarrowNavOpen"
-          class="sprk-c-Masthead__narrow-nav sprk-u-Display--none"
+          class="sprk-c-Masthead__narrow-nav"
           data-sprk-mobile-nav="mobileNav"
         >
-          <nav role="navigation" data-id="navigation-narrow-1">
-            <ul [class]="getNarrowNavClasses()">
-              <li
-                *ngFor="let narrowNavLink of narrowNavLinks"
-                [ngClass]="getClasses()"
-                routerLinkActive="sprk-c-Accordion__item--active"
-              >
-                <div
-                  *ngIf="narrowNavLink.subNav != null; then: menu; else: link"
-                ></div>
-                <ng-template #link>
-                  <a
-                    [attr.aria-controls]="narrowNavLink.controls_id"
-                    class="sprk-c-Accordion__summary"
-                    [routerLink]="narrowNavLink.href"
-                    [attr.data-analytics]="narrowNavLink.analyticsString"
-                  >
-                    <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
-                      {{ narrowNavLink.text }}
-                    </span>
-                  </a>
-                </ng-template>
-                <ng-template #menu>
-                  <a
-                    [attr.aria-controls]="narrowNavLink.controls_id"
-                    class="sprk-c-Accordion__summary"
-                    href="#nogo"
-                    [attr.data-analytics]="narrowNavLink.analyticsString"
-                    (click)="toggleAccordion($event)"
-                  >
-                    <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
-                      {{ narrowNavLink.text }}
-                    </span>
-                    <sprk-icon
-                      [iconType]="iconType"
-                      additionalClasses="sprk-c-Icon--l sprk-c-Accordion__icon"
-                    ></sprk-icon>
-                  </a>
-                  <div [@toggleContent]="animState">
-                    <ul
-                      [id]="controls_id"
-                      class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs"
+          <nav role="navigation">
+            <sprk-accordion
+              additionalClasses="sprk-c-Accordion--navigation sprk-b-List sprk-b-List--bare"
+            >
+              <div *ngFor="let narrowLink of narrowNavLinks">
+                <div *ngIf="narrowLink.subNav">
+                  <sprk-accordion-item [title]="narrowLink.text">
+                    <li
+                      class="sprk-c-Accordion__item"
+                      *ngFor="let subNavLink of narrowLink.subNav"
                     >
-                      <li *ngFor="let navItem of narrowNavLink.subNav">
-                        <a
-                          class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                          [routerLink]="navItem.href"
-                          [attr.data-analytics]="navItem.analyticsString"
-                          >{{ navItem.text }}</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </ng-template>
-              </li>
-            </ul>
+                      <a
+                        class="sprk-c-Accordion__summary"
+                        [routerLink]="subNavLink.href"
+                        href="#nogo"
+                      >
+                        {{ subNavLink.text }}
+                      </a>
+                    </li>
+                  </sprk-accordion-item>
+                </div>
+                <div *ngIf="!narrowLink.subNav">
+                  <li class="sprk-c-Accordion__item">
+                    <a
+                      class="sprk-c-Accordion__summary"
+                      [routerLink]="narrowLink.href"
+                      href="#nogo"
+                    >
+                      {{ narrowLink.text }}
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </sprk-accordion>
           </nav>
         </div>
       </div>
@@ -289,7 +272,8 @@ export class SparkMastheadComponent {
     return classArray.join(' ');
   }
 
-  toggleNarrowNav(): void {
+  toggleNarrowNav(event): void {
+    event.preventDefault();
     this.isNarrowNavOpen = !this.isNarrowNavOpen;
   }
 

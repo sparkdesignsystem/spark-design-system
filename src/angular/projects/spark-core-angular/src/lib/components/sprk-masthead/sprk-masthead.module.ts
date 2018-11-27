@@ -6,6 +6,8 @@ import { SparkNarrowNavigationItemModule } from '../sprk-narrow-navigation-item/
 import { SparkNarrowNavigationModule } from '../sprk-narrow-navigation/sprk-narrow-navigation.module';
 import { SparkMastheadComponent } from './sprk-masthead.component';
 import { SparkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
+import { SparkAccordionModule } from '../sprk-accordion/sprk-accordion.module';
+import { SparkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import { SparkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
     SparkIconModule,
     SparkNarrowNavigationModule,
     SparkNarrowNavigationItemModule,
-    SparkDropdownModule
+    SparkDropdownModule,
+    SparkAccordionModule,
+    SparkAccordionItemModule
   ],
   declarations: [SparkMastheadComponent],
   exports: [SparkMastheadComponent]
