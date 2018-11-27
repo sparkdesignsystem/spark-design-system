@@ -33,7 +33,6 @@ import { LinkDocsComponent } from './spark-docs/link-docs/link-docs.component';
 import { ListDocsComponent } from './spark-docs/list-docs/list-docs.component';
 import { MastheadDocsComponent } from './spark-docs/masthead-docs/masthead-docs.component';
 import { ModalDocsComponent } from './spark-docs/modal-docs/modal-docs.component';
-import { NavigationDocsComponent } from './spark-docs/navigation-docs/navigation-docs.component';
 import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-found.component';
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
 import { PromoDocsComponent } from './spark-docs/promo-docs/promo-docs.component';
@@ -48,7 +47,6 @@ const appRoutes: Routes = [
   { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
-  { path: 'navigation', component: NavigationDocsComponent },
   { path: 'accordions', component: AccordionDocsComponent },
   { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
@@ -83,7 +81,6 @@ const appRoutes: Routes = [
     ModalDocsComponent,
     IconSetComponent,
     IconSetDocsComponent,
-    NavigationDocsComponent,
     DividerDocsComponent,
     DropdownDocsComponent,
     MastheadDocsComponent,
