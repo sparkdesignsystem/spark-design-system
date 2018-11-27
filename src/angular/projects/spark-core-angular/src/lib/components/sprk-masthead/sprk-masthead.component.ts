@@ -212,13 +212,13 @@ export class SparkMastheadComponent {
   @Input()
   additionalNarrowNavClasses: string;
   @Input()
-  narrowNavLinks: object[];
+  narrowNavLinks: any[];
   @Input()
   isNarrowNavOpen = false;
   @Input()
   idString: string;
   @Input()
-  secondaryNavLinks: object[];
+  secondaryNavLinks: any[];
   @Input()
   narrowNavOpen: boolean;
 
