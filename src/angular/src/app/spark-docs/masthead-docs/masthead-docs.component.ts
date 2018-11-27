@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
         greetingName="Hello, Fellow Human"
-        [links]="links"
-        [secondaryNavLinks]="linksSecondary"
+        [secondaryNavLinks]="links"
         [narrowNavLinks]="links"
         idString="masthead-1"
       >

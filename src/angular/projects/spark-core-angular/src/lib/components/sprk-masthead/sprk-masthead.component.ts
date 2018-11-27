@@ -1,4 +1,5 @@
 import { Component, HostListener, Input } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'sprk-masthead',
@@ -13,7 +14,8 @@ import { Component, HostListener, Input } from '@angular/core';
           <button
             class="sprk-c-Menu"
             type="button"
-            aria-expanded="false"
+            [attr.aria-expanded]="isNarrowNavOpen ? true : false"
+            (click)="toggleNarrowNav()"
             data-sprk-mobile-nav-trigger="mobileNav"
           >
             <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
@@ -76,7 +78,7 @@ import { Component, HostListener, Input } from '@angular/core';
           <nav role="navigation" [attr.data-id]="idString">
             <ul [ngClass]="getSecondaryNavClasses()">
               <li
-                *ngFor="let link of links"
+                *ngFor="let link of secondaryNavLinks"
                 [ngClass]="{
                   'sprk-c-SecondaryNavigation__item': true,
                   'sprk-o-Stack__item--flex@xxs': true,
@@ -132,213 +134,64 @@ import { Component, HostListener, Input } from '@angular/core';
         </div>
 
         <div
+          *ngIf="isNarrowNavOpen"
           class="sprk-c-Masthead__narrow-nav sprk-u-Display--none"
           data-sprk-mobile-nav="mobileNav"
         >
           <nav role="navigation" data-id="navigation-narrow-1">
-            <ul
-              class="sprk-c-Accordion sprk-c-Accordion--navigation sprk-b-List sprk-b-List--bare"
-            >
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    My Selector - Current Item
-                  </span>
-
-                  <svg
-                    class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon"
-                    data-sprk-toggle="icon"
-                    viewBox="0 0 64 64"
+            <ul [class]="getNarrowNavClasses()">
+              <li
+                *ngFor="let narrowNavLink of narrowNavLinks"
+                [ngClass]="getClasses()"
+                routerLinkActive="sprk-c-Accordion__item--active"
+              >
+                <div
+                  *ngIf="narrowNavLink.subNav != null; then: menu; else: link"
+                ></div>
+                <ng-template #link>
+                  <a
+                    [attr.aria-controls]="narrowNavLink.controls_id"
+                    class="sprk-c-Accordion__summary"
+                    [routerLink]="narrowNavLink.href"
+                    [attr.data-analytics]="narrowNavLink.analyticsString"
                   >
-                    <use xlink:href="#chevron-down"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-                <a
-                  aria-controls="details1"
-                  class="sprk-c-Accordion__summary"
-                  data-sprk-toggle="trigger"
-                  data-sprk-toggle-type="accordion"
-                  href="#"
-                >
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    Item 1
-                  </span>
-
-                  <svg
-                    class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon"
-                    data-sprk-toggle="icon"
-                    viewBox="0 0 64 64"
+                    <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
+                      {{ narrowNavLink.text }}
+                    </span>
+                  </a>
+                </ng-template>
+                <ng-template #menu>
+                  <a
+                    [attr.aria-controls]="narrowNavLink.controls_id"
+                    class="sprk-c-Accordion__summary"
+                    href="#nogo"
+                    [attr.data-analytics]="narrowNavLink.analyticsString"
+                    (click)="toggleAccordion($event)"
                   >
-                    <use xlink:href="#chevron-down"></use>
-                  </svg>
-                </a>
-
-                <ul
-                  id="details1"
-                  class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details"
-                  data-sprk-toggle="content"
-                >
-                  <li>
-                    <a
-                      class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                      href="#"
+                    <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
+                      {{ narrowNavLink.text }}
+                    </span>
+                    <sprk-icon
+                      [iconType]="iconType"
+                      additionalClasses="sprk-c-Icon--l sprk-c-Accordion__icon"
+                    ></sprk-icon>
+                  </a>
+                  <div [@toggleContent]="animState">
+                    <ul
+                      [id]="controls_id"
+                      class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs"
                     >
-                      Item 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                      href="#"
-                    >
-                      Item 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                      href="#"
-                    >
-                      Item 3
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="sprk-c-Accordion__item sprk-c-Accordion__item--active">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    Item 2
-                  </span>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-                <a
-                  aria-controls="details3"
-                  class="sprk-c-Accordion__summary"
-                  data-sprk-toggle="trigger"
-                  data-sprk-toggle-type="accordion"
-                  href="#"
-                >
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    Item 3
-                  </span>
-
-                  <svg
-                    class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon"
-                    data-sprk-toggle="icon"
-                    viewBox="0 0 64 64"
-                  >
-                    <use xlink:href="#chevron-down"></use>
-                  </svg>
-                </a>
-
-                <ul
-                  id="details3"
-                  class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details"
-                  data-sprk-toggle="content"
-                >
-                  <li>
-                    <a
-                      class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                      href="#"
-                    >
-                      Item 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                      href="#"
-                    >
-                      Item 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                      href="#"
-                    >
-                      Item 3
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    Item 4
-                  </span>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    Item 5
-                  </span>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    <svg
-                      class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l"
-                      viewBox="0 0 64 64"
-                    >
-                      <use xlink:href="#landline" />
-                    </svg>
-                    (586) 123-4567
-                  </span>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    <svg
-                      class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
-                      viewBox="0 0 64 64"
-                    >
-                      <use xlink:href="#call-team-member" />
-                    </svg>
-                    Talk To Us
-                  </span>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    <svg
-                      class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
-                      viewBox="0 0 64 64"
-                    >
-                      <use xlink:href="#settings" />
-                    </svg>
-                    Settings
-                  </span>
-                </a>
-              </li>
-
-              <li class="sprk-c-Accordion__item">
-                <a class="sprk-c-Accordion__summary" href="#">
-                  <span class="prk-b-TypeBodyOne sprk-c-Accordion__heading">
-                    <svg
-                      class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
-                      viewBox="0 0 64 64"
-                    >
-                      <use xlink:href="#user" />
-                    </svg>
-                    My Account
-                  </span>
-                </a>
+                      <li *ngFor="let navItem of narrowNavLink.subNav">
+                        <a
+                          class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
+                          [routerLink]="navItem.href"
+                          [attr.data-analytics]="navItem.analyticsString"
+                          >{{ navItem.text }}</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </ng-template>
               </li>
             </ul>
           </nav>
@@ -357,17 +210,23 @@ export class SparkMastheadComponent {
   @Input()
   additionalSecondaryNavClasses: string;
   @Input()
+  additionalNarrowNavClasses: string;
+  @Input()
   narrowNavLinks: object[];
-  @Input()
-  secondaryNavLinks: object[];
-  @Input()
-  secondaryNavSpacing = 'medium';
   @Input()
   isNarrowNavOpen = false;
   @Input()
   idString: string;
   @Input()
-  links: object[]; // secondary nav
+  secondaryNavLinks: object[];
+  @Input()
+  narrowNavOpen: boolean;
+
+  iconType = 'chevron-down';
+  componentID = _.uniqueId();
+  controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
+  public iconStateClass = '';
+  public animState = 'closed';
 
   @HostListener('window:resize')
   handleResizeEvent() {
@@ -379,9 +238,13 @@ export class SparkMastheadComponent {
     this.hideAllDropDowns(event);
   }
 
+  toggleAccordion(event): void {}
+
+  accordionState(): void {}
+
   hideAllDropDowns(event): void {
     event.stopPropagation();
-    this.links.forEach((link: object) => {
+    this.secondaryNavLinks.forEach((link: object) => {
       if (link.hasOwnProperty('focused')) {
         link['focused'] = false;
       }
@@ -393,6 +256,23 @@ export class SparkMastheadComponent {
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  getNarrowNavClasses(): string {
+    const classArray: string[] = [
+      'sprk-c-Accordion',
+      'sprk-c-Accordion--navigation',
+      'sprk-b-List',
+      'sprk-b-List--bare'
+    ];
+
+    if (this.additionalNarrowNavClasses) {
+      this.additionalNarrowNavClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }
