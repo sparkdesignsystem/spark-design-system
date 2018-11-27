@@ -19,6 +19,8 @@ import { Component } from '@angular/core';
         />
         <div site-slot>
           <sprk-dropdown
+            [choices]="siteDropdownChoices"
+            additionalTriggerClasses="sprk-b-Link--standalone sprk-b-Link--muted"
             triggerText="Make a Selection..."
             title="My Choices"
             triggerIconType="chevron-down"
@@ -46,22 +48,21 @@ import { Component } from '@angular/core';
             <li>
               <a
                 class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--plain"
-                href="#"
+                routerLink="/cards"
+                href="#nogo"
               >
-                <svg
-                  class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l"
-                  viewBox="0 0 64 64"
-                >
-                  <use xlink:href="#settings" />
-                </svg>
+                <sprk-icon
+                  iconType="settings"
+                  additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l"
+                ></sprk-icon>
                 <span class="sprk-u-ScreenReaderText">Settings</span>
               </a>
             </li>
 
             <li>
               <sprk-dropdown
+                [choices]="simpleChoices"
                 dropdownType="simple"
-                title="My Choices"
                 triggerIconType="user"
                 additionalTriggerClasses="sprk-b-Link--plain"
                 additionalClasses="sprk-u-Right--zero"
@@ -76,24 +77,6 @@ import { Component } from '@angular/core';
   styles: [``]
 })
 export class MastheadDocsComponent {
-  linksSecondary = [
-    {
-      text: 'Item 1',
-      href: '/icons',
-      active: false
-    },
-    {
-      text: 'Item 2',
-      href: '/links',
-      active: false
-    },
-    {
-      text: 'Item 3',
-      href: '/buttons',
-      active: false
-    }
-  ];
-
   links = [
     {
       text: 'Item 1',
@@ -102,12 +85,11 @@ export class MastheadDocsComponent {
     },
     {
       text: 'Item 2',
-      href: '/links',
       active: false,
       subNav: [
         {
           text: 'Item 1',
-          href: '#nogo'
+          href: '/links'
         },
         {
           text: 'Item 2',
@@ -154,6 +136,38 @@ export class MastheadDocsComponent {
       text: 'Item 5',
       href: '#nogo',
       active: false
+    }
+  ];
+
+  siteDropdownChoices = [
+    {
+      content: {
+        title: 'Choice Title',
+        infoLine1: 'Information about this choice',
+        infoLine2: 'More Information'
+      },
+      value: 'Choice Title 1',
+      active: false
+    },
+    {
+      content: {
+        title: 'Choice Title',
+        infoLine1: 'Information about this choice',
+        infoLine2: 'More Information'
+      },
+      value: 'Choice Title 2',
+      active: true
+    }
+  ];
+
+  simpleChoices = [
+    {
+      text: 'Option 1',
+      value: 'Option 1'
+    },
+    {
+      text: 'Option 2',
+      value: 'Option 2'
     }
   ];
 

@@ -3,9 +3,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkNarrowNavigationItemComponent } from '../sprk-narrow-navigation-item/sprk-narrow-navigation-item.component';
 import { SparkNarrowNavigationComponent } from '../sprk-narrow-navigation/sprk-narrow-navigation.component';
-import { SparkSecondaryNavigationItemComponent } from '../sprk-secondary-navigation-item/sprk-secondary-navigation-item.component';
-import { SparkSecondaryNavigationComponent } from '../sprk-secondary-navigation/sprk-secondary-navigation.component';
-import { SparkWideNavigationComponent } from '../sprk-wide-navigation/sprk-wide-navigation.component';
 import { SparkMastheadComponent } from './sprk-masthead.component';
 
 describe('SparkMastheadComponent', () => {
@@ -19,11 +16,8 @@ describe('SparkMastheadComponent', () => {
       imports: [RouterTestingModule],
       declarations: [
         SparkMastheadComponent,
-        SparkWideNavigationComponent,
         SparkNarrowNavigationComponent,
         SparkNarrowNavigationItemComponent,
-        SparkSecondaryNavigationComponent,
-        SparkSecondaryNavigationItemComponent,
         SparkIconComponent
       ]
     }).compileComponents();

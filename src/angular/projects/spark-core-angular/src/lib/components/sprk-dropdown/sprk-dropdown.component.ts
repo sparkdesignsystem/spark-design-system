@@ -41,8 +41,9 @@ import {
           <div *ngIf="choice.content; then: content; else: link"></div>
           <ng-template #link>
             <a
+              [routerLink]="choice.href"
               [attr.data-sprk-dropdown-value]="choice.value"
-              href=""
+              [attr.href]="choice.href || '#nogo'"
               [ngClass]="{
                 'sprk-c-Dropdown__link': true,
                 'sprk-c-Dropdown__link--active': choice.active
@@ -54,7 +55,7 @@ import {
           <ng-template #content>
             <a
               [attr.data-sprk-dropdown-value]="choice.value"
-              href=""
+              href="#nogo"
               [ngClass]="{
                 'sprk-c-Dropdown__link': true,
                 'sprk-c-Dropdown__link--active': choice.active
@@ -88,7 +89,7 @@ export class SparkDropdownComponent {
   @Input()
   title: string;
   @Input()
-  choices: object[];
+  choices: any[];
   @Input()
   triggerIconType: string;
   @Input()
@@ -172,11 +173,7 @@ export class SparkDropdownComponent {
   }
 
   getTriggerClasses(): string {
-    const classArray: string[] = [
-      'sprk-b-Link',
-      'sprk-b-Link--standalone',
-      'sprk-b-Link--muted'
-    ];
+    const classArray: string[] = ['sprk-b-Link'];
 
     if (this.additionalTriggerClasses) {
       this.additionalTriggerClasses.split(' ').forEach(className => {

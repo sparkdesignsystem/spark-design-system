@@ -46,7 +46,9 @@ import * as _ from 'lodash';
         <div
           class="sprk-c-Masthead__logo sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs sprk-o-Box"
         >
-          <a href="#"> <ng-content select="[logo-slot]"></ng-content> </a>
+          <a [routerLink]="logoHref" href="#nogo">
+            <ng-content select="[logo-slot]"></ng-content>
+          </a>
         </div>
 
         <nav
@@ -74,64 +76,53 @@ import * as _ from 'lodash';
       </div>
 
       <div class="sprk-o-Stack__item">
-        <div class="sprk-c-Masthead__secondary-nav">
-          <nav role="navigation" [attr.data-id]="idString">
-            <ul [ngClass]="getSecondaryNavClasses()">
-              <li
-                *ngFor="let link of secondaryNavLinks"
-                [ngClass]="{
-                  'sprk-c-SecondaryNavigation__item': true,
-                  'sprk-o-Stack__item--flex@xxs': true,
-                  'sprk-c-SecondaryNavigation__item--open':
-                    link.focused && link.subNav
-                }"
-                routerLinkActive="sprk-c-SecondaryNavigation__item--active"
-                [attr.aria-haspopup]="link.subNav ? 'true' : null"
-                [attr.aria-expanded]="
-                  link.subNav && link.focused ? 'true' : 'false'
-                "
-                (focusin)="hideAllDropDowns($event); link.focused = true"
-                (mouseenter)="hideAllDropDowns($event); link.focused = true"
-                (mouseleave)="hideAllDropDowns($event)"
-              >
+        <nav
+          class="sprk-c-Masthead__big-nav"
+          role="navigation"
+          [attr.data-id]="idString"
+        >
+          <ul [ngClass]="getSecondaryNavClasses()">
+            <li
+              *ngFor="let link of secondaryNavLinks"
+              [ngClass]="{
+                'sprk-c-Masthead__big-nav-item': true,
+                'sprk-c-Stack__item': true,
+                'sprk-o-Stack__item--flex@xxs': true,
+                'sprk-c-Masthead__big-nav-item--open':
+                  link.focused && link.subNav
+              }"
+              routerLinkActive="sprk-c-Masthead__big-nav-item--active"
+              [attr.aria-haspopup]="link.subNav ? 'true' : null"
+              [attr.aria-expanded]="
+                link.subNav && link.focused ? 'true' : 'false'
+              "
+              (focusin)="hideAllDropDowns($event); link.focused = true"
+              (mouseenter)="hideAllDropDowns($event); link.focused = true"
+              (mouseleave)="hideAllDropDowns($event)"
+            >
+              <div *ngIf="link.subNav">
+                <sprk-dropdown
+                  dropdownType="simple"
+                  [choices]="link.subNav"
+                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__big-nav-link"
+                  additionalClasses="sprk-u-Width-100 sprk-u-TextAlign--left"
+                  triggerIconType="chevron-down"
+                  [triggerText]="link.text"
+                ></sprk-dropdown>
+              </div>
+              <div *ngIf="!link.subNav">
                 <a
-                  class="sprk-c-SecondaryNavigation__link"
+                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__big-nav-link"
                   [routerLink]="link.href"
-                  [attr.data-analytics]="link.analyticsString"
                   href="#nogo"
-                  >{{ link.text }}
-                </a>
-                <div
-                  *ngIf="link.subNav"
-                  class="sprk-c-SecondaryNavigation__sub-menu-container"
                 >
-                  <ul
-                    [ngClass]="{
-                      'sprk-c-SecondaryNavigation': true,
-                      'sprk-c-SecondaryNavigation--sub': true,
-                      'sprk-u-Display--none': !link.focused
-                    }"
-                  >
-                    <li
-                      *ngFor="let sublink of link.subNav; let last = last"
-                      class="sprk-c-SecondaryNavigation__item sprk-c-SecondaryNavigation__item--sub"
-                    >
-                      <a
-                        class="sprk-c-SecondaryNavigation__link sprk-c-SecondaryNavigation__link--sub"
-                        [routerLink]="sublink.href"
-                        [attr.data-analytics]="sublink.analyticsString"
-                        href="#nogo"
-                      >
-                        {{ sublink.text }}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <span class="sprk-c-Divider sprk-u-man"></span>
-          </nav>
-        </div>
+                  {{ link.text }}
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <span class="sprk-c-Divider sprk-u-man"></span>
 
         <div
           *ngIf="isNarrowNavOpen"
@@ -282,9 +273,11 @@ export class SparkMastheadComponent {
 
   getSecondaryNavClasses(): string {
     const classArray: string[] = [
-      'sprk-c-SecondaryNavigation',
+      'sprk-c-Masthead__big-nav-items',
       'sprk-o-Stack',
-      'sprk-o-Stack--split@xxs'
+      'sprk-o-Stack--split@xxs',
+      'sprk-b-List',
+      'sprk-b-List--bare'
     ];
 
     if (this.additionalSecondaryNavClasses) {
