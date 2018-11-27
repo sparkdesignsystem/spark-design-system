@@ -26,9 +26,9 @@
   max-width: $masthead-logo-max-width;
 }
 
-// Hide secondary and site options until larger view
-.sprk-c-Masthead__secondary-nav,
-.sprk-c-Masthead__site-options {
+// Hide big and little navs until larger view
+.sprk-c-Masthead__big-nav,
+.sprk-c-Masthead__little-nav {
   display: none;
 
   @media (min-width: $main-nav-breakpoint) {
@@ -36,14 +36,59 @@
   }
 }
 
-.sprk-c-Masthead__nav {
+.sprk-c-Masthead__site-links {
   border-right: 1px solid $black-tint-25;
   padding-right: $space-l;
 }
 
-.sprk-c-Masthead__secondary-nav {
-  background-color: $secondary-nav-bg;
+.sprk-c-Masthead__big-nav {
+  background-color: $big-nav-bg;
   padding-top: $space-s;
+}
+
+.sprk-c-Masthead__big-nav-items {
+  position: relative;
+  margin: 0 auto;
+  max-width: $big-nav-column-width;
+}
+
+.sprk-c-Masthead__big-nav-item {
+  line-height: $space-l;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sprk-c-Masthead__big-nav-link {
+  @include HoverLine($color: transparent, $width: 85%);
+
+  display: block;
+  font-weight: $font-weight-body-one;
+
+  &:active,
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $big-nav-active-color, $width: 85%);
+  }
+}
+
+.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__big-nav-link {
+  color: $big-nav-active-color;
+  font-weight: bold;
+}
+
+.sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__big-nav-link,
+.sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__big-nav-link,
+.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__big-nav-link {
+  &::after {
+    background-color: $big-nav-active-color;
+    content: ' ';
+    height: 3px;
+    display: block;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 // Hide narrow nav on larger views
