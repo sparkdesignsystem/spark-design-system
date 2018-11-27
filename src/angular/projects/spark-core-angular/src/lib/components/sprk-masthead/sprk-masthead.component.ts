@@ -44,72 +44,30 @@ import { Component, HostListener, Input } from '@angular/core';
         <div
           class="sprk-c-Masthead__logo sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs sprk-o-Box"
         >
-          <a href="#">
-            <img
-              src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-              alt="Spark Design System"
-            />
-          </a>
+          <a href="#"> <ng-content select="[logo-slot]"></ng-content> </a>
         </div>
 
         <nav
-          class="sprk-c-Masthead__site-options sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@s sprk-o-Stack--end-row sprk-o-Box"
+          class="
+          sprk-c-Masthead__site-options
+          sprk-o-Stack__item
+          sprk-o-Stack__item--flex@xxs
+          sprk-o-Stack
+          sprk-o-Stack--large
+          sprk-o-Stack--split@s
+          sprk-o-Stack--end-row
+          sprk-o-Box"
           role="navigation"
         >
           <div
             class="sprk-c-Masthead__nav sprk-o-Stack__item sprk-o-Stack__item--center-column"
           >
-            <sprk-dropdown
-              triggerText="Make a Selection..."
-              title="My Choices"
-              triggerIconType="chevron-down"
-            ></sprk-dropdown>
+            <ng-content select="[site-slot]"></ng-content>
           </div>
 
-          <ul
-            class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
-          >
-            <li>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">
-                (586) 123-4567
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone"
-                href="#nogo"
-              >
-                Talk To Us
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--plain"
-                href="#"
-              >
-                <svg
-                  class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l"
-                  viewBox="0 0 64 64"
-                >
-                  <use xlink:href="#settings" />
-                </svg>
-                <span class="sprk-u-ScreenReaderText">Settings</span>
-              </a>
-            </li>
-
-            <li>
-              <sprk-dropdown
-                dropdownType="simple"
-                title="My Choices"
-                triggerIconType="user"
-                additionalTriggerClasses="sprk-b-Link--plain"
-                additionalClasses="sprk-u-Right--zero"
-                screenReaderText="User Account"
-              ></sprk-dropdown>
-            </li>
-          </ul>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--center-column">
+            <ng-content select="[utility-slot]"></ng-content>
+          </div>
         </nav>
       </div>
 

@@ -13,28 +13,63 @@ import { Component } from '@angular/core';
         [narrowNavLinks]="links"
         idString="masthead-1"
       >
-        <div class="drizzle-c-Logo-placeholder" logo-slot></div>
-        <div class="sprk-c-Masthead__search" lower-slot>
-          <sprk-icon-input-container iconContainerClasses="">
-            <label
-              class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
-              sprkLabel
-            >
-              Search
-            </label>
-            <sprk-icon
-              iconType="search"
-              additionalClasses="sprk-b-InlineSearch__icon"
-              sprk-input-icon
-            ></sprk-icon>
-            <input
-              name="inline_search_input"
-              class="sprk-b-TextInput--with-icon"
-              type="text"
-              placeholder="Search"
-              sprkInput
-            />
-          </sprk-icon-input-container>
+        <img
+          logo-slot
+          src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+          alt="Spark Design System"
+        />
+        <div site-slot>
+          <sprk-dropdown
+            triggerText="Make a Selection..."
+            title="My Choices"
+            triggerIconType="chevron-down"
+          ></sprk-dropdown>
+        </div>
+        <div utility-slot>
+          <ul
+            class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+          >
+            <li>
+              <a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">
+                (586) 123-4567
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone"
+                href="#nogo"
+              >
+                Talk To Us
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--plain"
+                href="#"
+              >
+                <svg
+                  class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l"
+                  viewBox="0 0 64 64"
+                >
+                  <use xlink:href="#settings" />
+                </svg>
+                <span class="sprk-u-ScreenReaderText">Settings</span>
+              </a>
+            </li>
+
+            <li>
+              <sprk-dropdown
+                dropdownType="simple"
+                title="My Choices"
+                triggerIconType="user"
+                additionalTriggerClasses="sprk-b-Link--plain"
+                additionalClasses="sprk-u-Right--zero"
+                screenReaderText="User Account"
+              ></sprk-dropdown>
+            </li>
+          </ul>
         </div>
       </sprk-masthead>
     </div>
