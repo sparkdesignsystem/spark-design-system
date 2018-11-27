@@ -1,15 +1,3 @@
-.#{$app-namespace}-c-Preview .sprk-c-WideNavigation {
-  @media (max-width: 46rem) {
-    display: none;
-  }
-}
-
-.#{$app-namespace}-Test-Page .sprk-c-NarrowNavigation,
-.#{$app-namespace}-u-pad > nav .sprk-c-NarrowNavigation {
-  max-width: 320px;
-  position: static;
-}
-
 [data-template-id^='footer'] .#{$app-namespace}-c-Preview__example,
 [data-template-id^='signed-in'] .#{$app-namespace}-c-Preview__example,
 [data-template-id^='signed-out'] .#{$app-namespace}-c-Preview__example {
@@ -19,6 +7,11 @@
 [data-template-id^='signed-in'] .sprk-c-Masthead,
 [data-template-id^='signed-out'] .sprk-c-Masthead {
   z-index: 1000000;
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-nav {
+  position: static;
+  margin-top: -2px;
 }
 
 [data-template-id^='box-object'] .sprk-o-Box {
@@ -65,15 +58,6 @@
 .#{$app-namespace}-c-Logo-placeholder--large {
   width: 18.75rem;
   height: 11rem;
-}
-
-.#{$app-namespace}-c-Preview .sprk-c-Masthead__content {
-  position: static;
-}
-
-.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-navigation-container {
-  position: static;
-  margin-top: -2px;
 }
 
 .#{$app-namespace}-b-Body.sprk-u-Overflow--hidden {
