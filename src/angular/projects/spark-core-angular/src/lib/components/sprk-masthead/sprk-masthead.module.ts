@@ -5,8 +5,8 @@ import { SparkNarrowNavigationItemModule } from '../sprk-narrow-navigation-item/
 import { SparkNarrowNavigationModule } from '../sprk-narrow-navigation/sprk-narrow-navigation.module';
 import { SparkSecondaryNavigationItemModule } from '../sprk-secondary-navigation-item/sprk-secondary-navigation-item.module';
 import { SparkSecondaryNavigationModule } from '../sprk-secondary-navigation/sprk-secondary-navigation.module';
-import { SparkWideNavigationModule } from '../sprk-wide-navigation/sprk-wide-navigation.module';
 import { SparkMastheadComponent } from './sprk-masthead.component';
+import { SparkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 
 @NgModule({
   imports: [
@@ -14,9 +14,9 @@ import { SparkMastheadComponent } from './sprk-masthead.component';
     RouterModule,
     SparkSecondaryNavigationItemModule,
     SparkSecondaryNavigationModule,
-    SparkWideNavigationModule,
     SparkNarrowNavigationModule,
-    SparkNarrowNavigationItemModule
+    SparkNarrowNavigationItemModule,
+    SparkDropdownModule
   ],
   declarations: [SparkMastheadComponent],
   exports: [SparkMastheadComponent]

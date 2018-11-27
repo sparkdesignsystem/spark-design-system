@@ -20,7 +20,11 @@ import {
       role="combobox"
     >
       {{ triggerText }}
-      <sprk-icon [iconType]="triggerIconType"></sprk-icon>
+      <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
+      <sprk-icon
+        [iconType]="triggerIconType"
+        additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l"
+      ></sprk-icon>
     </a>
     <div [ngClass]="getClasses()" *ngIf="isOpen">
       <div class="sprk-c-Dropdown__header" *ngIf="title">
@@ -89,6 +93,8 @@ export class SparkDropdownComponent {
   triggerIconType: string;
   @Input()
   triggerText: string;
+  @Input()
+  screenReaderText: string;
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
 
@@ -166,7 +172,11 @@ export class SparkDropdownComponent {
   }
 
   getTriggerClasses(): string {
-    const classArray: string[] = ['sprk-b-Link', 'sprk-b-Link--plain'];
+    const classArray: string[] = [
+      'sprk-b-Link',
+      'sprk-b-Link--standalone',
+      'sprk-b-Link--muted'
+    ];
 
     if (this.additionalTriggerClasses) {
       this.additionalTriggerClasses.split(' ').forEach(className => {
