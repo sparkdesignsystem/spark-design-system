@@ -14,9 +14,8 @@
 }
 
 .sprk-c-Masthead__content {
-  margin: 0 auto;
-
   @media all and (min-width: $main-nav-breakpoint) {
+    margin: 0 auto;
     max-width: $masthead-column-width;
   }
 }
