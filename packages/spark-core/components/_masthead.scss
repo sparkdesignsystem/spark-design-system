@@ -3,6 +3,7 @@
 // ==================================================================
 .sprk-c-Masthead {
   background-color: $masthead-bg-color;
+  box-shadow: $dropdown-shadow;
   margin: 0 auto;
   max-width: $masthead-column-width;
   position: sticky;

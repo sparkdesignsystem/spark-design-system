@@ -1,1 +1,11 @@
+description:
+    The Masthead is the first component on a page and includes navigation elements.
+information:
+  - The Masthead is "sticky" and content will flow under it.
+  - All content used here is placeholder content. Please use your own logo, content, and hrefs.
+restrictions:
+  - You must configure the size of your own logo asset.
+  - You must set (in your own SCSS file) the SCSS variable $mobile-masthead-height so that the navigation displays properly on small screens.
+    You should put your logo in the Masthead and then grab the height of the Masthead (on a narrow viewport) with your logo in it. Set
+    $mobile-masthead-height to that height.
 sparkPackageCore: true

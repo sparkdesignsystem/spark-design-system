@@ -1,13 +1,21 @@
 ---
 name: Signed In
 description:
-  The Masthead is the first component on a page and includes navigation elements.
+  This version of the Masthead is for when the user is signed in to their account.
+  There is an additional big navigation for items that a signed in user would have.
+  There is also additional user account navigation items.
 information:
-  - The secondary navigation, search field, and additional information sections are optional.
-  - You should set the variable $main-nav-breakpoint to the point that your app needs to switch from mobile navigation
-    to wide navigation.
-  - You should also set the variable $mobile-masthead-height so that the mobile nav scrolling has enough room.
-  - In Internet Explorer 11, the narrow masthead will not be fixed in place.
+  - All content used here is placeholder content. Please use your own logo and content.
+  - The settings and user account icons are optional.
+  - You should set the variable $main-nav-breakpoint to the point that your app needs to switch from narrow viewport navigation
+    to wide viewport navigation.
+  - In Internet Explorer 11, the Masthead will not be fixed in place.
+restrictions:
+ - The maximum number of items in the big navigation (wide gray navigation bar) is 6.
+ - The minimum number of items in the big navigation (wide gray navigation bar) is 3.
+ - You must set the variable $mobile-masthead-height so that the navigation displays properly on small screens.
+   You should put your logo in the Masthead and then grab the height of the Masthead with your logo in it. Set
+   $mobile-masthead-height to that height.
 order: 2
 ---
 <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idString="masthead-1">
@@ -80,8 +88,8 @@ order: 2
 
       <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column">
         <li>
-          <a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">
-            (586) 123-4567
+          <a class="sprk-b-Link sprk-b-Link--standalone" href="tel:555-555-5555">
+            (555) 555-5555
           </a>
         </li>
 
@@ -92,7 +100,7 @@ order: 2
         </li>
 
         <li>
-          <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--plain" href="#">
+          <a class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--plain" href="#nogo">
             <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l" viewBox="0 0 64 64">
               <use xlink:href="#settings" />
             </svg>
@@ -116,20 +124,26 @@ order: 2
           <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-Right--zero sprk-u-mrs" data-sprk-dropdown="dropdown02">
             <div class="sprk-c-Dropdown__header">
               <h2 class="sprk-c-Dropdown__title sprk-b-TypeDisplayEight">
-                My Choices
+                My Account
               </h2>
             </div>
 
             <ul class="sprk-c-Dropdown__links">
               <li class="sprk-c-Dropdown__item" role="option">
                 <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Choice 1
+                  Change Username
                 </a>
               </li>
 
               <li class="sprk-c-Dropdown__item" role="option">
                 <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Choice 2
+                  Change Password
+                </a>
+              </li>
+
+              <li class="sprk-c-Dropdown__item" role="option">
+                <a class="sprk-c-Dropdown__link" href="#nogo">
+                  Sign Out
                 </a>
               </li>
             </ul>
@@ -260,12 +274,12 @@ order: 2
         </li>
 
         <li class="sprk-c-Accordion__item">
-          <a class="sprk-c-Accordion__summary" href="#">
+          <a class="sprk-c-Accordion__summary" href="tel:555-555-5555">
             <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
               <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                 <use xlink:href="#landline" />
               </svg>
-              (586) 123-4567
+              (555) 555-555
             </span>
           </a>
         </li>

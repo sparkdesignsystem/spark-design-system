@@ -1,13 +1,18 @@
 ---
 name: Signed Out
 description:
-  The Masthead is the first component on a page and includes navigation elements.
+  This version of the Masthead is for when the user is signed out or
+  the site has no user accounts.
+  The big navigation (wide gray navigation bar) is not included in this version.
 information:
-  - The secondary navigation, search field, and additional information sections are optional.
-  - You should set the variable $main-nav-breakpoint to the point that your app needs to switch from mobile navigation
-    to the wide secondary navigation.
-  - You should also set the variable $mobile-masthead-height so that the mobile nav scrolling has enough room.
-  - In Internet Explorer 11, the narrow masthead will not be fixed in place.
+  - All content used here is placeholder content. Please use your own logo and content.
+  - You should set the variable $main-nav-breakpoint to the point that your app needs to switch from narrow viewport navigation
+    to wide viewport navigation.
+  - In Internet Explorer 11, the Masthead will not be fixed in place.
+restrictions:
+- You must set the variable $mobile-masthead-height so that the navigation displays properly on small screens.
+  You should put your logo in the Masthead and then grab the height of the Masthead with your logo in it. Set
+  $mobile-masthead-height to that height.
 order: 1
 ---
 <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idString="masthead-1">
@@ -48,8 +53,8 @@ order: 1
 
     <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-Stack--center-column">
       <li>
-        <a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">
-          (000) 123-4567
+        <a class="sprk-b-Link sprk-b-Link--standalone" href="tel:555-555-5555">
+          (555) 555-5555
         </a>
       </li>
 
@@ -112,12 +117,12 @@ order: 1
           </li>
 
           <li class="sprk-c-Accordion__item">
-            <a class="sprk-c-Accordion__summary" href="#">
+            <a class="sprk-c-Accordion__summary" href="tel:555-555-5555">
               <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
                 <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                   <use xlink:href="#landline" />
                 </svg>
-                (586) 123-4567
+                (555) 555-5555
               </span>
             </a>
           </li>
