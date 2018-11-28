@@ -140,7 +140,13 @@ import * as _ from 'lodash';
             >
               <div *ngFor="let narrowLink of narrowNavLinks">
                 <div *ngIf="narrowLink.subNav">
-                  <sprk-accordion-item [title]="narrowLink.text">
+                  <sprk-accordion-item
+                    iconTypeOpen="chevron-down"
+                    iconTypeClosed="chevron-down"
+                    [leadingIcon]="narrowLink.leadingIcon"
+                    [isActive]="narrowLink.active"
+                    [title]="narrowLink.text"
+                  >
                     <li
                       class="sprk-c-Accordion__item"
                       *ngFor="let subNavLink of narrowLink.subNav"
@@ -150,18 +156,33 @@ import * as _ from 'lodash';
                         [routerLink]="subNavLink.href"
                         href="#nogo"
                       >
+                        <sprk-icon
+                          [iconType]="subNavLink.leadingIcon"
+                          additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+                          *ngIf="subNavLink.leadingIcon"
+                        ></sprk-icon>
                         {{ subNavLink.text }}
                       </a>
                     </li>
                   </sprk-accordion-item>
                 </div>
                 <div *ngIf="!narrowLink.subNav">
-                  <li class="sprk-c-Accordion__item">
+                  <li
+                    [ngClass]="{
+                      'sprk-c-Accordion__item': true,
+                      'sprk-c-Accordion__item--active': narrowLink.active
+                    }"
+                  >
                     <a
                       class="sprk-c-Accordion__summary"
                       [routerLink]="narrowLink.href"
                       href="#nogo"
                     >
+                      <sprk-icon
+                        [iconType]="narrowLink.leadingIcon"
+                        additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+                        *ngIf="narrowLink.leadingIcon"
+                      ></sprk-icon>
                       {{ narrowLink.text }}
                     </a>
                   </li>
@@ -169,6 +190,7 @@ import * as _ from 'lodash';
               </div>
             </sprk-accordion>
           </nav>
+          <ng-content select="[narrowNavFooter]"></ng-content>
         </div>
       </div>
     </header>

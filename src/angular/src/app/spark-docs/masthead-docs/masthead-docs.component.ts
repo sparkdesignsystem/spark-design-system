@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
         additionalClasses="angular-docs-u-Masthead-docs"
         greetingName="Hello, Fellow Human"
         [secondaryNavLinks]="links"
-        [narrowNavLinks]="links"
+        [narrowNavLinks]="narrowLinks"
         idString="masthead-1"
       >
         <img
@@ -71,6 +71,13 @@ import { Component } from '@angular/core';
             </li>
           </ul>
         </div>
+        <div class="sprk-u-mas" narrowNavFooter>
+          <a
+            class="sprk-c-Button sprk-c-Button--secondary sprk-u-Width-100"
+            href="#nogo"
+            >Sign In</a
+          >
+        </div>
       </sprk-masthead>
     </div>
   `,
@@ -108,11 +115,13 @@ export class MastheadDocsComponent {
     {
       text: 'Item 3',
       href: '#nogo',
-      active: false
+      active: false,
+      leadingIcon: 'settings'
     },
     {
       text: 'Item 4',
       href: '#nogo',
+      leadingIcon: 'chat-online',
       subNav: [
         {
           text: 'Item 1',
@@ -135,7 +144,50 @@ export class MastheadDocsComponent {
     {
       text: 'Item 5',
       href: '#nogo',
-      active: false
+      active: false,
+      leadingIcon: 'chat-online'
+    }
+  ];
+
+  narrowLinks = [
+    {
+      text: 'Item 1',
+      active: false,
+      subNav: [
+        {
+          text: 'Item 1',
+          href: '/links'
+        },
+        {
+          text: 'Item 2',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 3',
+          href: '#nogo'
+        },
+        {
+          text: 'Item 4',
+          href: '#nogo'
+        }
+      ]
+    },
+    {
+      text: 'Item 2',
+      href: '#nogo',
+      active: true
+    },
+    {
+      text: '(586) 123-4567',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'landline'
+    },
+    {
+      text: 'Talk To Us',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'call-team-member'
     }
   ];
 
