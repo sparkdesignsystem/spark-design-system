@@ -100,4 +100,12 @@ describe('SparkAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(accordionItemElement.getAttribute('data-id')).toBeNull();
   });
+
+  it('should set the active class if isActive is true', () => {
+    component.isActive = true;
+    fixture.detectChanges();
+    expect(
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--active')
+    ).toEqual(true);
+  });
 });
