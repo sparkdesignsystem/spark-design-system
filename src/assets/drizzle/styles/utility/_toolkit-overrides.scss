@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-[data-template-id^='signed-in'] .sprk-c-Masthead,
-[data-template-id^='signed-out'] .sprk-c-Masthead {
-  z-index: 1000000;
-}
-
 .#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-nav {
   position: static;
   margin-top: -2px;
