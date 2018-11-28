@@ -4,6 +4,9 @@ import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkNarrowNavigationItemComponent } from '../sprk-narrow-navigation-item/sprk-narrow-navigation-item.component';
 import { SparkNarrowNavigationComponent } from '../sprk-narrow-navigation/sprk-narrow-navigation.component';
 import { SparkMastheadComponent } from './sprk-masthead.component';
+import { SparkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
+import { SparkAccordionComponent } from '../sprk-accordion/sprk-accordion.component';
+import { SparkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
 
 describe('SparkMastheadComponent', () => {
   let component: SparkMastheadComponent;
@@ -18,7 +21,10 @@ describe('SparkMastheadComponent', () => {
         SparkMastheadComponent,
         SparkNarrowNavigationComponent,
         SparkNarrowNavigationItemComponent,
-        SparkIconComponent
+        SparkIconComponent,
+        SparkDropdownComponent,
+        SparkAccordionComponent,
+        SparkAccordionItemComponent
       ]
     }).compileComponents();
   }));
@@ -27,7 +33,7 @@ describe('SparkMastheadComponent', () => {
     fixture = TestBed.createComponent(SparkMastheadComponent);
     component = fixture.componentInstance;
     mastheadElement = fixture.nativeElement.querySelector('header');
-    hamburgerIcon = mastheadElement.querySelector('.sprk-c-Hamburger');
+    hamburgerIcon = mastheadElement.querySelector('.sprk-c-Menu');
   });
 
   it('should create itself', () => {
@@ -38,7 +44,7 @@ describe('SparkMastheadComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(mastheadElement.classList.toString()).toEqual(
-      'sprk-c-Masthead sprk-u-man'
+      'sprk-c-Masthead sprk-o-Stack sprk-u-man'
     );
   });
 

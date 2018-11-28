@@ -5,9 +5,10 @@ import * as _ from 'lodash';
   selector: 'sprk-masthead',
   template: `
     <header
-      class="sprk-c-Masthead sprk-o-Stack"
+      [ngClass]="getClasses()"
       role="banner"
       idString="masthead-1"
+      [attr.data-id]="idString"
     >
       <div
         class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs"
@@ -57,6 +58,9 @@ import * as _ from 'lodash';
         >
           <a [routerLink]="logoHref" href="#nogo">
             <ng-content select="[logo-slot]"></ng-content>
+            <span class="sprk-u-ScreenReaderText">{{
+              logoLinkScreenReaderText
+            }}</span>
           </a>
         </div>
 
@@ -251,7 +255,7 @@ export class SparkMastheadComponent {
   }
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-c-Masthead'];
+    const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
