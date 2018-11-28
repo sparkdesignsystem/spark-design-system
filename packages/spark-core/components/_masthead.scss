@@ -3,20 +3,26 @@
 // ==================================================================
 .sprk-c-Masthead {
   background-color: $masthead-bg-color;
-  margin: 0 auto;
-  max-width: $masthead-column-width;
+  box-shadow: $dropdown-shadow;
   position: sticky;
   top: 0;
   z-index: $layer-height-m;
 
-  @media all and (min-width: $main-nav-breakpoint) {
+  @media all and (min-width: $big-nav-breakpoint) {
     border-bottom: 1px solid $gray;
+  }
+}
+
+.sprk-c-Masthead__content {
+  @media all and (min-width: $big-nav-breakpoint) {
+    margin: 0 auto;
+    max-width: $masthead-column-width;
   }
 }
 
 // Hide menu on larger views
 .sprk-c-Masthead__menu {
-  @media all and (min-width: $main-nav-breakpoint) {
+  @media all and (min-width: $big-nav-breakpoint) {
     display: none;
   }
 }
@@ -31,14 +37,40 @@
 .sprk-c-Masthead__little-nav {
   display: none;
 
-  @media (min-width: $main-nav-breakpoint) {
+  @media (min-width: $big-nav-breakpoint) {
     display: inherit;
   }
 }
 
+.sprk-c-Masthead__little-nav {
+  flex-wrap: wrap;
+}
+
 .sprk-c-Masthead__site-links {
-  border-right: 1px solid $black-tint-25;
-  padding-right: $space-l;
+  @media all and (min-width: $big-nav-breakpoint) {
+    border-right: 1px solid $black-tint-25;
+    padding-right: $space-l;
+  }
+}
+
+.sprk-c-Masthead__link {
+  font-weight: $font-weight-body-one;
+
+  &:visited {
+    color: $black;
+  }
+}
+
+.sprk-c-Masthead__link--big-nav {
+  @include HoverLine($color: transparent, $width: 85%);
+
+  display: block;
+
+  &:active,
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $big-nav-active-color, $width: 85%);
+  }
 }
 
 .sprk-c-Masthead__big-nav {
@@ -59,36 +91,15 @@
   white-space: nowrap;
 }
 
-.sprk-c-Masthead__big-nav-link {
-  @include HoverLine($color: transparent, $width: 85%);
-
-  display: block;
-  font-weight: $font-weight-body-one;
-
-  &:active,
-  &:focus,
-  &:hover {
-    @include HoverLine($color: $big-nav-active-color, $width: 85%);
-  }
-}
-
-.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__big-nav-link {
+.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
   color: $big-nav-active-color;
   font-weight: bold;
 }
 
-.sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__big-nav-link,
-.sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__big-nav-link,
-.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__big-nav-link {
-  &::after {
-    background-color: $big-nav-active-color;
-    content: ' ';
-    height: 3px;
-    display: block;
-    width: 85%;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__link--big-nav,
+.sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__link--big-nav,
+.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
+  @include HoverLine($color: $big-nav-active-color, $width: 85%);
 }
 
 // Hide narrow nav on larger views
@@ -102,7 +113,7 @@
   padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
   width: 100%;
 
-  @media (min-width: $main-nav-breakpoint) {
+  @media (min-width: $big-nav-breakpoint) {
     display: none;
   }
 }
