@@ -13,6 +13,8 @@ describe('SparkMastheadComponent', () => {
   let fixture: ComponentFixture<SparkMastheadComponent>;
   let mastheadElement: HTMLElement;
   let hamburgerIcon: HTMLElement;
+  let narrowNavElement: HTMLElement;
+  let secondaryNavElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -68,10 +70,10 @@ describe('SparkMastheadComponent', () => {
     expect(component.isNarrowNavOpen).toEqual(true);
   });
 
-  it('should close the narrow nav on resize', () => {
+  it('should close the narrow nav on orientationchange', () => {
     component.isNarrowNavOpen = true;
     fixture.detectChanges();
-    window.dispatchEvent(new Event('resize'));
+    window.dispatchEvent(new Event('orientationchange'));
     fixture.detectChanges();
     expect(component.isNarrowNavOpen).toEqual(false);
   });
@@ -87,5 +89,24 @@ describe('SparkMastheadComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(mastheadElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add classes if additionalNarrowNavClasses has a value', () => {
+    component.additionalNarrowNavClasses = 'sprk-u-man';
+    component.isNarrowNavOpen = true;
+    fixture.detectChanges();
+    narrowNavElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__narrow-nav .sprk-c-Accordion'
+    );
+    expect(narrowNavElement.classList.contains('sprk-u-man')).toEqual(true);
+  });
+
+  it('should add classes if additionalBigNavClasses has a value', () => {
+    component.additionalBigNavClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    secondaryNavElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__big-nav-items'
+    );
+    expect(secondaryNavElement.classList.contains('sprk-u-man')).toEqual(true);
   });
 });

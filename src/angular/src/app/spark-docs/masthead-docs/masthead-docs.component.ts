@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">Masthead</h2>
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
-        greetingName="Hello, Fellow Human"
         [secondaryNavLinks]="links"
         [narrowNavLinks]="narrowLinks"
         idString="masthead-1"
@@ -17,7 +16,7 @@ import { Component } from '@angular/core';
           src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
           alt="Spark Design System"
         />
-        <div site-slot>
+        <div little-nav-slot>
           <sprk-dropdown
             [choices]="siteDropdownChoices"
             additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"

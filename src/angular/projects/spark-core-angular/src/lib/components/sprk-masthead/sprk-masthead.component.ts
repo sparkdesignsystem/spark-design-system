@@ -79,7 +79,7 @@ import * as _ from 'lodash';
           <div
             class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-Stack__item--center-column"
           >
-            <ng-content select="[site-slot]"></ng-content>
+            <ng-content select="[little-nav-slot]"></ng-content>
           </div>
 
           <div class="sprk-o-Stack__item sprk-o-Stack__item--center-column">
@@ -106,12 +106,6 @@ import * as _ from 'lodash';
               }"
               routerLinkActive="sprk-c-Masthead__big-nav-item--active"
               [attr.aria-haspopup]="link.subNav ? 'true' : null"
-              [attr.aria-expanded]="
-                link.subNav && link.focused ? 'true' : 'false'
-              "
-              (focusin)="hideAllDropDowns($event); link.focused = true"
-              (mouseenter)="hideAllDropDowns($event); link.focused = true"
-              (mouseleave)="hideAllDropDowns($event)"
             >
               <div *ngIf="link.subNav">
                 <sprk-dropdown
@@ -142,9 +136,7 @@ import * as _ from 'lodash';
           data-sprk-mobile-nav="mobileNav"
         >
           <nav role="navigation">
-            <sprk-accordion
-              additionalClasses="sprk-c-Accordion--navigation sprk-b-List sprk-b-List--bare"
-            >
+            <sprk-accordion [additionalClasses]="getNarrowNavClasses()">
               <div *ngFor="let narrowLink of narrowNavLinks">
                 <div *ngIf="narrowLink.subNav">
                   <sprk-accordion-item
@@ -211,7 +203,7 @@ export class SparkMastheadComponent {
   @Input()
   additionalClasses: string;
   @Input()
-  additionalSecondaryNavClasses: string;
+  additionalBigNavClasses: string;
   @Input()
   additionalNarrowNavClasses: string;
   @Input()
@@ -228,30 +220,10 @@ export class SparkMastheadComponent {
   iconType = 'chevron-down';
   componentID = _.uniqueId();
   controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
-  public iconStateClass = '';
-  public animState = 'closed';
 
-  @HostListener('window:resize')
+  @HostListener('window:orientationchange')
   handleResizeEvent() {
     this.closeNarrowNav();
-  }
-
-  @HostListener('document:focusin', ['$event'])
-  handleFocusEvent(event: FocusEvent) {
-    this.hideAllDropDowns(event);
-  }
-
-  toggleAccordion(event): void {}
-
-  accordionState(): void {}
-
-  hideAllDropDowns(event): void {
-    event.stopPropagation();
-    this.secondaryNavLinks.forEach((link: object) => {
-      if (link.hasOwnProperty('focused')) {
-        link['focused'] = false;
-      }
-    });
   }
 
   getClasses(): string {
@@ -268,7 +240,6 @@ export class SparkMastheadComponent {
 
   getNarrowNavClasses(): string {
     const classArray: string[] = [
-      'sprk-c-Accordion',
       'sprk-c-Accordion--navigation',
       'sprk-b-List',
       'sprk-b-List--bare'
@@ -292,8 +263,8 @@ export class SparkMastheadComponent {
       'sprk-b-List--bare'
     ];
 
-    if (this.additionalSecondaryNavClasses) {
-      this.additionalSecondaryNavClasses.split(' ').forEach(className => {
+    if (this.additionalBigNavClasses) {
+      this.additionalBigNavClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }
