@@ -23,7 +23,16 @@ import { Component } from '@angular/core';
             triggerText="Make a Selection..."
             title="My Choices"
             triggerIconType="chevron-down"
-          ></sprk-dropdown>
+          >
+            <div
+              class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+              sprkDropdownFooter
+            >
+              <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
+                Go Elsewhere
+              </a>
+            </div>
+          </sprk-dropdown>
         </div>
         <div utility-slot>
           <ul
@@ -49,7 +58,7 @@ import { Component } from '@angular/core';
 
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--plain"
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                 routerLink="/cards"
                 href="#nogo"
               >
@@ -108,10 +117,6 @@ export class MastheadDocsComponent {
         {
           text: 'Item 3',
           href: '#nogo'
-        },
-        {
-          text: 'Item 4',
-          href: '#nogo'
         }
       ]
     },
@@ -136,10 +141,6 @@ export class MastheadDocsComponent {
         },
         {
           text: 'Item 3',
-          href: '#nogo'
-        },
-        {
-          text: 'Item 4',
           href: '#nogo'
         }
       ]

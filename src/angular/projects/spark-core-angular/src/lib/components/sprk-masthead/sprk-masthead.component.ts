@@ -111,7 +111,7 @@ import * as _ from 'lodash';
                 <sprk-dropdown
                   dropdownType="simple"
                   [choices]="link.subNav"
-                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link--big-nav"
+                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-Width-100 sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
                   [triggerText]="link.text"
@@ -119,7 +119,7 @@ import * as _ from 'lodash';
               </div>
               <div *ngIf="!link.subNav">
                 <a
-                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link--big-nav"
+                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   [routerLink]="link.href"
                   href="#nogo"
                 >

@@ -59,6 +59,10 @@
   &:visited {
     color: $black;
   }
+
+  &:hover {
+    color: $red;
+  }
 }
 
 .sprk-c-Masthead__link--big-nav {
