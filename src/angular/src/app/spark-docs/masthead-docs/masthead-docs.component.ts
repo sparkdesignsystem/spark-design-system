@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
         <div site-slot>
           <sprk-dropdown
             [choices]="siteDropdownChoices"
-            additionalTriggerClasses="sprk-b-Link--standalone sprk-b-Link--muted"
+            additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
             triggerText="Make a Selection..."
             title="My Choices"
             triggerIconType="chevron-down"
@@ -31,14 +31,17 @@ import { Component } from '@angular/core';
             class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
           >
             <li>
-              <a class="sprk-b-Link sprk-b-Link--standalone" href="#nogo">
-                (586) 123-4567
+              <a
+                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--standalone"
+                href="tel:555-555-5555"
+              >
+                (555) 555-5555
               </a>
             </li>
 
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--standalone"
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                 href="#nogo"
               >
                 Talk To Us
@@ -63,8 +66,9 @@ import { Component } from '@angular/core';
               <sprk-dropdown
                 [choices]="simpleChoices"
                 dropdownType="simple"
+                title="My Account"
                 triggerIconType="user"
-                additionalTriggerClasses="sprk-b-Link--plain"
+                additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
                 additionalClasses="sprk-u-Right--zero"
                 screenReaderText="User Account"
               ></sprk-dropdown>
@@ -214,12 +218,16 @@ export class MastheadDocsComponent {
 
   simpleChoices = [
     {
-      text: 'Option 1',
-      value: 'Option 1'
+      text: 'Change Username',
+      value: 'change-username'
     },
     {
-      text: 'Option 2',
-      value: 'Option 2'
+      text: 'Change Password',
+      value: 'change-password'
+    },
+    {
+      text: 'Sign Out',
+      value: 'sign-out'
     }
   ];
 

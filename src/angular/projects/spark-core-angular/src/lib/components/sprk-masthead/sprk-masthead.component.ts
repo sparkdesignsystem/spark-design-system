@@ -9,8 +9,12 @@ import * as _ from 'lodash';
       role="banner"
       idString="masthead-1"
     >
-      <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs">
-        <div class="sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Box">
+      <div
+        class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs"
+      >
+        <div
+          class="sprk-c-Masthead__menu sprk-o-Stack__item o-Stack__item--center-column@xxs sprk-o-Box"
+        >
           <button
             class="sprk-c-Menu"
             type="button"
@@ -109,7 +113,7 @@ import * as _ from 'lodash';
                 <sprk-dropdown
                   dropdownType="simple"
                   [choices]="link.subNav"
-                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__big-nav-link"
+                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-Width-100 sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
                   [triggerText]="link.text"
@@ -117,7 +121,7 @@ import * as _ from 'lodash';
               </div>
               <div *ngIf="!link.subNav">
                 <a
-                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__big-nav-link"
+                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link--big-nav"
                   [routerLink]="link.href"
                   href="#nogo"
                 >
@@ -127,7 +131,6 @@ import * as _ from 'lodash';
             </li>
           </ul>
         </nav>
-        <span class="sprk-c-Divider sprk-u-man"></span>
 
         <div
           *ngIf="isNarrowNavOpen"
