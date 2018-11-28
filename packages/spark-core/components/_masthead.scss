@@ -99,15 +99,7 @@
 .sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__link--big-nav,
 .sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__link--big-nav,
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
-  &::after {
-    background-color: $big-nav-active-color;
-    content: ' ';
-    height: 3px;
-    display: block;
-    width: 85%;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  @include HoverLine($color: $big-nav-active-color, $width: 85%);
 }
 
 // Hide narrow nav on larger views
