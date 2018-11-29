@@ -22,14 +22,14 @@ import {
         [attr.data-id]="idString"
         (click)="toggleAccordion($event)"
       >
-        <h3 class="sprk-c-Accordion__heading sprk-b-TypeBodyTwo">
+        <span [ngClass]="getHeadingClasses()">
           <sprk-icon
             [iconType]="leadingIcon"
             additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
             *ngIf="leadingIcon"
           ></sprk-icon>
           {{ title }}
-        </h3>
+        </span>
 
         <sprk-icon
           additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}"
@@ -78,6 +78,8 @@ export class SparkAccordionItemComponent implements OnInit {
   idString: string;
   @Input()
   additionalClasses: string;
+  @Input()
+  additionalHeadingClasses: string;
   @Input()
   isOpen = false;
   @Input()
@@ -128,6 +130,18 @@ export class SparkAccordionItemComponent implements OnInit {
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  getHeadingClasses(): string {
+    const classArray: string[] = ['sprk-c-Accordion__heading'];
+
+    if (this.additionalHeadingClasses) {
+      this.additionalHeadingClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }

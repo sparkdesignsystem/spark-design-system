@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sprk-masthead-docs',
   template: `
-    <div class="drizzle-o-ContentGrouping">
+    <div class="drizzle-o-ContentGrouping drizzle-c-Preview">
       <h2 class="drizzle-b-h2">Masthead</h2>
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
@@ -155,8 +155,22 @@ export class MastheadDocsComponent {
 
   narrowLinks = [
     {
-      text: 'Item 1',
+      text: 'My Selector',
       active: false,
+      subNav: [
+        {
+          text: 'Choice 1',
+          href: '/links'
+        },
+        {
+          text: 'Choice 2',
+          href: '#nogo'
+        }
+      ]
+    },
+    {
+      text: 'Item 1',
+      href: '#nogo',
       subNav: [
         {
           text: 'Item 1',
@@ -164,15 +178,11 @@ export class MastheadDocsComponent {
         },
         {
           text: 'Item 2',
-          href: '#nogo'
+          href: '/links'
         },
         {
           text: 'Item 3',
-          href: '#nogo'
-        },
-        {
-          text: 'Item 4',
-          href: '#nogo'
+          href: '/links'
         }
       ]
     },
@@ -180,6 +190,32 @@ export class MastheadDocsComponent {
       text: 'Item 2',
       href: '#nogo',
       active: true
+    },
+    {
+      text: 'Item 3',
+      href: '#nogo',
+      subNav: [
+        {
+          text: 'Item 1',
+          href: '/links'
+        },
+        {
+          text: 'Item 2',
+          href: '/links'
+        },
+        {
+          text: 'Item 3',
+          href: '/links'
+        }
+      ]
+    },
+    {
+      text: 'Item 4',
+      href: '#nogo'
+    },
+    {
+      text: 'Item 5',
+      href: '#nogo'
     },
     {
       text: '(586) 123-4567',
@@ -192,6 +228,18 @@ export class MastheadDocsComponent {
       href: '#nogo',
       active: false,
       leadingIcon: 'call-team-member'
+    },
+    {
+      text: 'Settings',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'settings'
+    },
+    {
+      text: 'My Account',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'user'
     }
   ];
 

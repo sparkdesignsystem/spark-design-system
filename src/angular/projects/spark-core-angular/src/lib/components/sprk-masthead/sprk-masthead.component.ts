@@ -143,6 +143,7 @@ import * as _ from 'lodash';
                     iconTypeOpen="chevron-down"
                     iconTypeClosed="chevron-down"
                     [leadingIcon]="narrowLink.leadingIcon"
+                    additionalHeadingClasses="sprk-b-TypeBodyOne"
                     [isActive]="narrowLink.active"
                     [title]="narrowLink.text"
                   >
@@ -177,12 +178,16 @@ import * as _ from 'lodash';
                       [routerLink]="narrowLink.href"
                       href="#nogo"
                     >
-                      <sprk-icon
-                        [iconType]="narrowLink.leadingIcon"
-                        additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
-                        *ngIf="narrowLink.leadingIcon"
-                      ></sprk-icon>
-                      {{ narrowLink.text }}
+                      <span
+                        class="sprk-b-TypeBodyOne sprk-c-Accordion__heading"
+                      >
+                        <sprk-icon
+                          [iconType]="narrowLink.leadingIcon"
+                          additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+                          *ngIf="narrowLink.leadingIcon"
+                        ></sprk-icon>
+                        {{ narrowLink.text }}
+                      </span>
                     </a>
                   </li>
                 </div>
