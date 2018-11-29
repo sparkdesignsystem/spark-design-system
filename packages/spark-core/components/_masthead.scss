@@ -8,13 +8,13 @@
   top: 0;
   z-index: $layer-height-m;
 
-  @media all and (min-width: $big-nav-breakpoint) {
+  @media all and (min-width: $masthead-breakpoint) {
     border-bottom: 1px solid $gray;
   }
 }
 
 .sprk-c-Masthead__content {
-  @media all and (min-width: $big-nav-breakpoint) {
+  @media all and (min-width: $masthead-breakpoint) {
     margin: 0 auto;
     max-width: $masthead-column-width;
   }
@@ -22,14 +22,18 @@
 
 // Hide menu on larger views
 .sprk-c-Masthead__menu {
-  @media all and (min-width: $big-nav-breakpoint) {
+  @media all and (min-width: $masthead-breakpoint) {
     display: none;
   }
 }
 
-.sprk-c-Masthead__logo {
+.sprk-c-Masthead__branding {
   margin: 0 auto;
+}
+
+.sprk-c-Masthead__logo {
   max-width: $masthead-logo-max-width;
+  min-width: $masthead-logo-min-width;
 }
 
 // Hide big and little navs until larger view
@@ -37,7 +41,7 @@
 .sprk-c-Masthead__little-nav {
   display: none;
 
-  @media (min-width: $big-nav-breakpoint) {
+  @media (min-width: $masthead-breakpoint) {
     display: inherit;
   }
 }
@@ -47,7 +51,7 @@
 }
 
 .sprk-c-Masthead__site-links {
-  @media all and (min-width: $big-nav-breakpoint) {
+  @media all and (min-width: $masthead-breakpoint) {
     border-right: 1px solid $black-tint-25;
     padding-right: $space-l;
   }
@@ -108,11 +112,15 @@
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: $mobile-masthead-height;
-  padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
+  top: $mobile-masthead-height + 4rem;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: $mobile-masthead-height + 4rem; // So the scroll has enough room to reach the bottom item
   width: 100%;
 
-  @media (min-width: $big-nav-breakpoint) {
+  @media (min-width: $split-breakpoint-xxs) {
+    top: $mobile-masthead-height;
+    padding-bottom: $mobile-masthead-height;
+  }
+  @media (min-width: $masthead-breakpoint) {
     display: none;
   }
 }
