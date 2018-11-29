@@ -1,12 +1,12 @@
 [data-template-id^='footer'] .#{$app-namespace}-c-Preview__example,
-[data-template-id^='signed-in'] .#{$app-namespace}-c-Preview__example,
-[data-template-id^='signed-out'] .#{$app-namespace}-c-Preview__example {
+[data-template-id^='masthead-default'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='masthead-with-extended-navigation'] .#{$app-namespace}-c-Preview__example {
   padding: 0;
 }
 
-[data-template-id^='signed-in'] .sprk-c-Masthead,
-[data-template-id^='signed-out'] .sprk-c-Masthead {
-  z-index: 1000000;
+[data-template-id^='masthead-default'] .sprk-c-Masthead,
+[data-template-id^='masthead-with-extended-navigation'] .sprk-c-Masthead {
+  z-index: 100001;
 }
 
 .#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-nav {
