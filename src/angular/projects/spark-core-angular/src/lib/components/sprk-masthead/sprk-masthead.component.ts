@@ -11,10 +11,10 @@ import * as _ from 'lodash';
       [attr.data-id]="idString"
     >
       <div
-        class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs"
+        class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Box"
       >
         <div
-          class="sprk-c-Masthead__menu sprk-o-Stack__item o-Stack__item--center-column@xxs sprk-o-Box"
+          class="sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs sprk-o-Box"
         >
           <button
             class="sprk-c-Menu"
@@ -54,7 +54,7 @@ import * as _ from 'lodash';
         </div>
 
         <div
-          class="sprk-c-Masthead__logo sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs sprk-o-Box"
+          class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs sprk-o-Box"
         >
           <a [routerLink]="logoHref" href="#nogo">
             <ng-content select="[logo-slot]"></ng-content>

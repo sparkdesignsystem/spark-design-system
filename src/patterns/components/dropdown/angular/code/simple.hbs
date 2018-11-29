@@ -1,0 +1,17 @@
+<sprk-dropdown
+    dropdownType="simple"
+    title="My Choices"
+    triggerIconType="settings"
+    [choices]="simpleChoices"
+    (choiceMade)="choiceHandler($event)"
+></sprk-dropdown>
+simpleChoices = [
+    {
+      text: 'Option 1',
+      value: 'Option 1'
+    },
+    {
+      text: 'Option 2',
+      value: 'Option 2'
+    }
+  ];
