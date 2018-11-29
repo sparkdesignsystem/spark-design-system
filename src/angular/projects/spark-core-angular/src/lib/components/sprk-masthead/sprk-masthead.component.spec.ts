@@ -102,6 +102,7 @@ describe('SparkMastheadComponent', () => {
   });
 
   it('should add classes if additionalBigNavClasses has a value', () => {
+    component.bigNavLinks = [{ text: 'Item 1', href: '#nogo' }];
     component.additionalBigNavClasses = 'sprk-u-man';
     fixture.detectChanges();
     secondaryNavElement = fixture.nativeElement.querySelector(

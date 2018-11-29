@@ -4,10 +4,10 @@ import { Component } from '@angular/core';
   selector: 'sprk-masthead-docs',
   template: `
     <div class="drizzle-o-ContentGrouping drizzle-c-Preview">
-      <h2 class="drizzle-b-h2">Masthead</h2>
+      <h2 class="drizzle-b-h2">Masthead (Signed In)</h2>
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
-        [secondaryNavLinks]="links"
+        [bigNavLinks]="links"
         [narrowNavLinks]="narrowLinks"
         idString="masthead-1"
       >
@@ -80,6 +80,78 @@ import { Component } from '@angular/core';
                 additionalClasses="sprk-u-Right--zero"
                 screenReaderText="User Account"
               ></sprk-dropdown>
+            </li>
+          </ul>
+        </div>
+        <div class="sprk-u-mas" narrowNavFooter>
+          <a
+            class="sprk-c-Button sprk-c-Button--secondary sprk-u-Width-100"
+            href="#nogo"
+            >Sign In</a
+          >
+        </div>
+      </sprk-masthead>
+    </div>
+    <div class="drizzle-o-ContentGrouping drizzle-c-Preview">
+      <h2 class="drizzle-b-h2">Masthead (Signed Out)</h2>
+      <sprk-masthead
+        additionalClasses="angular-docs-u-Masthead-docs"
+        [narrowNavLinks]="signedOutNarrowLinks"
+        idString="masthead-1"
+      >
+        <img
+          logo-slot
+          src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+          alt="Spark Design System"
+        />
+        <div little-nav-slot>
+          <ul
+            class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+          >
+            <li>
+              <a
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                href="#nogo"
+              >
+                Item 1
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                href="#nogo"
+              >
+                Item 2
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div utility-slot>
+          <ul
+            class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+          >
+            <li>
+              <a
+                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--standalone"
+                href="tel:555-555-5555"
+              >
+                (555) 555-5555
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                href="#nogo"
+              >
+                Talk To Us
+              </a>
+            </li>
+            <li>
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary"
+                >Sign In</a
+              >
             </li>
           </ul>
         </div>
@@ -240,6 +312,44 @@ export class MastheadDocsComponent {
       href: '#nogo',
       active: false,
       leadingIcon: 'user'
+    }
+  ];
+
+  signedOutNarrowLinks = [
+    {
+      text: 'Item 1',
+      href: '#nogo',
+      subNav: [
+        {
+          text: 'Item 1',
+          href: '/links'
+        },
+        {
+          text: 'Item 2',
+          href: '/links'
+        },
+        {
+          text: 'Item 3',
+          href: '/links'
+        }
+      ]
+    },
+    {
+      text: 'Item 2',
+      href: '#nogo',
+      active: true
+    },
+    {
+      text: '(555) 555-5555',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'landline'
+    },
+    {
+      text: 'Talk To Us',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'call-team-member'
     }
   ];
 

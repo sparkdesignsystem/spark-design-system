@@ -93,10 +93,11 @@ import * as _ from 'lodash';
           class="sprk-c-Masthead__big-nav"
           role="navigation"
           [attr.data-id]="idString"
+          *ngIf="bigNavLinks"
         >
           <ul [ngClass]="getSecondaryNavClasses()">
             <li
-              *ngFor="let link of secondaryNavLinks"
+              *ngFor="let link of bigNavLinks"
               [ngClass]="{
                 'sprk-c-Masthead__big-nav-item': true,
                 'sprk-c-Stack__item': true,
@@ -218,7 +219,7 @@ export class SparkMastheadComponent {
   @Input()
   idString: string;
   @Input()
-  secondaryNavLinks: any[];
+  bigNavLinks: any[];
   @Input()
   narrowNavOpen: boolean;
 
