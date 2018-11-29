@@ -23,9 +23,7 @@ describe('SparkAccordionItemComponent', () => {
     component = fixture.componentInstance;
     accordionItemElement = fixture.nativeElement.querySelector('li');
     accordionItemLinkElement = fixture.nativeElement.querySelector('a');
-    accordionHeadingElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Accordion__heading'
-    );
+    accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
   });
 
@@ -38,6 +36,14 @@ describe('SparkAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
       'sprk-c-Accordion__item sprk-u-man'
+    );
+  });
+
+  it('should add classes if additionalHeadingClasses has a value', () => {
+    component.additionalHeadingClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
+      true
     );
   });
 
