@@ -9,3 +9,4 @@ restrictions:
     You should put your logo in the Masthead and then grab the height of the Masthead (on a narrow viewport) with your logo in it. Set
     $mobile-masthead-height to that height.
 sparkPackageCore: true
+hasAngularInfo: true

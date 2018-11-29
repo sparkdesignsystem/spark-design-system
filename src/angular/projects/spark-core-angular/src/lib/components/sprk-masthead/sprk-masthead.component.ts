@@ -220,8 +220,6 @@ export class SparkMastheadComponent {
   idString: string;
   @Input()
   bigNavLinks: any[];
-  @Input()
-  narrowNavOpen: boolean;
 
   iconType = 'chevron-down';
   componentID = _.uniqueId();
