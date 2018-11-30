@@ -44,8 +44,20 @@
   }
 }
 
+.sprk-c-Masthead__menu .sprk-c-Menu__icon {
+  width: $masthead-menu-icon-width;
+  height: $masthead-menu-icon-height;
+}
+
 .sprk-c-Masthead__branding {
   margin: 0 auto;
+
+  @media (min-width: $split-breakpoint-xxs) {
+    padding-right: (($masthead-content-padding * 2) + $masthead-menu-icon-width); // Centers logo on narrow by adding space on right to balance menu space on left
+  }
+  @media (min-width: $masthead-breakpoint) {
+    padding-right: $masthead-content-padding;
+  }
 }
 
 .sprk-c-Masthead__logo {
