@@ -4,9 +4,14 @@ import { focusFirstEl } from '../utilities/elementState';
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
-  document.body.classList.toggle('sprk-u-Height--100');
+  // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
   document.documentElement.classList.toggle('sprk-u-Overflow--hidden');
-  document.documentElement.classList.toggle('sprk-u-Height--100');
+  if (!document.documentElement.style.height === '100%') {
+    document.documentElement.classList.toggle('sprk-u-Height--100');
+  }
+  if (!document.body.style.height === '100%') {
+    document.body.classList.toggle('sprk-u-Height--100');
+  }
   masthead.classList.toggle('sprk-c-Masthead--open');
   iconContainer.querySelector('svg').classList.toggle('sprk-c-Menu__icon--open');
   nav.classList.toggle('sprk-u-Display--none');
