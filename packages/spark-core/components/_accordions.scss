@@ -55,6 +55,7 @@
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation {
   border: 0;
+  max-width: 100%; // We want mobile nav items not to be capped at $accordion-max-width
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
