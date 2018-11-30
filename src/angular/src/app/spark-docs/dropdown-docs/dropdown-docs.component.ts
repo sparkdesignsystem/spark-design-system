@@ -6,11 +6,24 @@ import { Component } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Base</h2>
       <sprk-dropdown
+        dropdownType="base"
+        title="My Choices"
+        additionalTriggerClasses="sprk-b-Link--plain"
+        triggerIconType="settings"
+        [choices]="choices"
+        (choiceMade)="choiceHandler($event)"
+      ></sprk-dropdown>
+    </div>
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">Informational</h2>
+      <sprk-dropdown
+        dropdownType="informational"
+        additionalTriggerClasses="sprk-b-Link--plain"
         triggerText="Make a Selection..."
         title="My Choices"
         triggerIconType="chevron-down"
         (choiceMade)="choiceHandler($event)"
-        [choices]="choices"
+        [choices]="informationalChoices"
       >
         <div
           class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
@@ -22,21 +35,11 @@ import { Component } from '@angular/core';
         </div>
       </sprk-dropdown>
     </div>
-    <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">Simple</h2>
-      <sprk-dropdown
-        dropdownType="simple"
-        title="My Choices"
-        triggerIconType="settings"
-        [choices]="simpleChoices"
-        (choiceMade)="choiceHandler($event)"
-      ></sprk-dropdown>
-    </div>
   `
 })
 export class DropdownDocsComponent {
   constructor() {}
-  choices = [
+  informationalChoices = [
     {
       content: {
         title: 'Choice Title',
@@ -57,7 +60,7 @@ export class DropdownDocsComponent {
     }
   ];
 
-  simpleChoices = [
+  choices = [
     {
       text: 'Option 1',
       value: 'Option 1'

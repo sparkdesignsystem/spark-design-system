@@ -15,3 +15,4 @@ restrictions:
   - You must duplicate your navigational items in Masthead navigation HTML and in the Masthead narrow
     navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
 sparkPackageCore: true
+hasAngularInfo: true
