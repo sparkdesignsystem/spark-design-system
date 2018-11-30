@@ -2,8 +2,12 @@
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 
-const toggleMobileNav = (iconContainer, nav) => {
+const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
+  document.body.classList.toggle('sprk-u-Height--100');
+  document.documentElement.classList.toggle('sprk-u-Overflow--hidden');
+  document.documentElement.classList.toggle('sprk-u-Height--100');
+  masthead.classList.toggle('sprk-c-Masthead--open');
   iconContainer.querySelector('svg').classList.toggle('sprk-c-Menu__icon--open');
   nav.classList.toggle('sprk-u-Display--none');
 };
@@ -16,24 +20,31 @@ const focusTrap = (isOpen, nav) => {
 
 const hideMobileNavs = () => {
   document.body.classList.remove('sprk-u-Overflow--hidden');
+  document.documentElement.classList.remove('sprk-u-Overflow--hidden');
+  document.body.classList.remove('sprk-u-Height--100');
+  document.documentElement.classList.remove('sprk-u-Height--100');
   getElements('[data-sprk-mobile-nav]', (item) => {
     item.classList.add('sprk-u-Display--none');
   });
   getElements('.sprk-c-Menu__icon--open', (item) => {
     item.classList.remove('sprk-c-Menu__icon--open');
   });
+  getElements('.sprk-c-Masthead--open', (item) => {
+    item.classList.remove('sprk-c-Masthead--open');
+  });
 };
 
 const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', (element) => {
     const mainLayout = document.querySelector('[data-sprk-main]');
+    const masthead = document.querySelector('[data-sprk-masthead]');
     const nav = document.querySelector(
       `[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`,
     );
 
     element.addEventListener('click', (e) => {
       e.preventDefault();
-      toggleMobileNav(element, nav);
+      toggleMobileNav(element, nav, masthead);
     });
 
     mainLayout.addEventListener('focusin', () => {

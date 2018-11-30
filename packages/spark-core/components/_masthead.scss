@@ -13,6 +13,13 @@
   }
 }
 
+.sprk-c-Masthead--open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
 .sprk-c-Masthead__content {
   @media all and (min-width: $masthead-breakpoint) {
     margin: 0 auto;
