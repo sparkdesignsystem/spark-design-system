@@ -9,7 +9,7 @@
   z-index: $layer-height-m;
 
   @media all and (min-width: $masthead-breakpoint) {
-    border-bottom: 1px solid $gray;
+    border-bottom: $masthead-border-bottom;
   }
 }
 
@@ -20,6 +20,12 @@
   height: 100%;
 }
 
+.sprk-c-Masthead__content,
+.sprk-c-Masthead__menu,
+.sprk-c-Masthead__branding {
+  padding: $masthead-content-padding;
+}
+
 .sprk-c-Masthead__content {
   @media all and (min-width: $masthead-breakpoint) {
     margin: 0 auto;
@@ -27,6 +33,10 @@
   }
 }
 
+.sprk-c-Masthead--open .sprk-c-Masthead__content {
+  border-bottom: $masthead-border-bottom;
+  box-shadow: none;
+}
 // Hide menu on larger views
 .sprk-c-Masthead__menu {
   @media all and (min-width: $masthead-breakpoint) {
@@ -119,13 +129,13 @@
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: $mobile-masthead-height + 4rem;   // Adds extra space to account for logo dropping under menu<320px
-  padding-bottom: $mobile-masthead-height + 4rem; // So the scroll has enough room to reach the bottom item
+  top: ($mobile-masthead-height + ($masthead-content-padding * 4)) + $masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: ($mobile-masthead-height + ($masthead-content-padding * 4)) + $masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
   width: 100%;
 
   @media (min-width: $split-breakpoint-xxs) {
-    top: $mobile-masthead-height;
-    padding-bottom: $mobile-masthead-height;
+    top: $mobile-masthead-height + $masthead-border-bottom-size; // Extra space for border
+    padding-bottom: $mobile-masthead-height + $masthead-border-bottom-size; // Extra space for border
   }
   @media (min-width: $masthead-breakpoint) {
     display: none;
