@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, Renderer2 } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
@@ -201,6 +201,8 @@ import * as _ from 'lodash';
   `
 })
 export class SparkMastheadComponent {
+  constructor(private renderer: Renderer2) {}
+
   @Input()
   logoHref = '/'; // Type inferred
   @Input()
@@ -236,6 +238,10 @@ export class SparkMastheadComponent {
       this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
+    }
+
+    if (this.isNarrowNavOpen) {
+      classArray.push('sprk-c-Masthead--open');
     }
 
     return classArray.join(' ');
@@ -277,7 +283,28 @@ export class SparkMastheadComponent {
 
   toggleNarrowNav(event): void {
     event.preventDefault();
-    this.isNarrowNavOpen = !this.isNarrowNavOpen;
+    if (this.isNarrowNavOpen) {
+      this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
+      this.renderer.removeClass(
+        document.body.parentElement,
+        'sprk-u-Overflow--hidden'
+      );
+      this.renderer.removeClass(document.body, 'sprk-u-Height--100');
+      this.renderer.removeClass(
+        document.body.parentElement,
+        'sprk-u-Height--100'
+      );
+      this.isNarrowNavOpen = false;
+    } else {
+      this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
+      this.renderer.addClass(
+        document.body.parentElement,
+        'sprk-u-Overflow--hidden'
+      );
+      this.renderer.addClass(document.body, 'sprk-u-Height--100');
+      this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
+      this.isNarrowNavOpen = true;
+    }
   }
 
   closeNarrowNav(): void {
