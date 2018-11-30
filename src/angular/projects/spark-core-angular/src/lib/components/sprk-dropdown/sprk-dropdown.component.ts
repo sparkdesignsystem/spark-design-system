@@ -128,7 +128,7 @@ export class SparkDropdownComponent {
       'data-sprk-dropdown-choice-index'
     );
     const clickedChoice = this.choices[choiceIndex];
-    if (this.dropdownType !== 'simple') {
+    if (this.dropdownType === 'informational') {
       this.setActiveChoice(event);
       this.updateTriggerText(event);
     }

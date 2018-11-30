@@ -73,9 +73,9 @@ describe('SparkDropdownComponent', () => {
     expect(component.isOpen).toEqual(false);
   });
 
-  it('should set active on click of a choice on a base dropdown', () => {
+  it('should set active on click of a choice on an informational dropdown', () => {
     fixture.autoDetectChanges();
-    component.dropdownType = 'base';
+    component.dropdownType = 'informational';
     component.choices = [
       {
         content: {
@@ -96,7 +96,7 @@ describe('SparkDropdownComponent', () => {
 
   it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
     fixture.autoDetectChanges();
-    component.dropdownType = 'base';
+    component.dropdownType = 'informational';
     component.choices = [
       {
         content: {
@@ -114,9 +114,8 @@ describe('SparkDropdownComponent', () => {
     expect(component.choices[0]['active']).toEqual(true);
   });
 
-  it('should not set active on click of a choice on a simple dropdown', () => {
+  it('should not set active on click of a choice on a base dropdown', () => {
     fixture.autoDetectChanges();
-    component.dropdownType = 'simple';
     component.choices = [
       {
         text: 'Option 1',

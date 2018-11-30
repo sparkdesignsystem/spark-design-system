@@ -110,7 +110,6 @@ import * as _ from 'lodash';
             >
               <div *ngIf="link.subNav">
                 <sprk-dropdown
-                  dropdownType="simple"
                   [choices]="link.subNav"
                   additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-Width-100 sprk-u-TextAlign--left"

@@ -124,6 +124,7 @@ import { Component } from '@angular/core';
         </svg>
         <div little-nav-slot>
           <sprk-dropdown
+            dropdownType="informational"
             [choices]="siteDropdownChoices"
             additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
             triggerText="Make a Selection..."
