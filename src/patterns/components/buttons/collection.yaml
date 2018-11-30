@@ -3,7 +3,7 @@ description:
   to perform an action. The Button component consists of a clickable container with descriptive text inside.
 
 information:
-  - Buttons make use of Large Inset Short spacing.
+  - Buttons make use of the Large Inset Short spacing but there is a modifier available to reduce the spacing (.sprk-c-Button--compact).
 restrictions:
   - Do not use icons within Buttons.
   - Do not use &lt;input type=&quot;submit&quot;&gt; for submit Buttons, use &quot;button&quot; instead.
@@ -13,7 +13,7 @@ restrictions:
   - A button HTML element should be used when doing an action that doesn't have a meaningful URL.
   - An anchor HTML element should be used when you want the look of a Button but are linking to a URL.
   - If your Button is disabled, or becomes disabled, then add the disabled attribute.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("button-primary-1", "button-primary-2", "button-tertiary-1", etc).
 sparkPackageCore: true

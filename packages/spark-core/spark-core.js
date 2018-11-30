@@ -15,9 +15,9 @@ import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
 import { toggle } from './components/toggle';
 import { spinners } from './components/spinners';
-import { WideNavigation } from './components/wide-navigation';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
+import { dropdowns } from './components/dropdown';
 
 // Polyfills
 import './utilities/polyfills/ArrayFrom';
@@ -41,11 +41,11 @@ const SparkCore = ({ datePickerConfig = {} } = {}) => {
   tabs();
   toggle();
   spinners();
-  WideNavigation();
   masthead();
   alerts();
   textInput();
   selectInput();
+  dropdowns();
 };
 
 export { SparkCore as default };

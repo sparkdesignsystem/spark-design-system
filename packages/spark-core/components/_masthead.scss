@@ -2,105 +2,158 @@
 // Masthead
 // ==================================================================
 .sprk-c-Masthead {
-  background-color: $white;
+  background-color: $masthead-bg-color;
+  box-shadow: $dropdown-shadow;
   position: sticky;
   top: 0;
   z-index: $layer-height-m;
 
-  @media all and (min-width: $main-nav-breakpoint) {
-    position: static;
+  @media all and (min-width: $masthead-breakpoint) {
+    border-bottom: $masthead-border-bottom;
   }
+}
+
+.sprk-c-Masthead--open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.sprk-c-Masthead__content,
+.sprk-c-Masthead__menu,
+.sprk-c-Masthead__branding {
+  padding: $masthead-content-padding;
 }
 
 .sprk-c-Masthead__content {
-  background-color: $white;
-  border-bottom: 2px solid $black-tint-50;
-  padding: $space-m 0;
-  width: 100%;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    border: none;
+  @media all and (min-width: $masthead-breakpoint) {
+    margin: 0 auto;
+    max-width: $masthead-column-width;
   }
 }
 
-.sprk-c-Masthead__top-row {
-  align-items: center;
-  display: flex;
-  margin: 0 auto;
-  max-width: $masthead-column-width;
-  padding: 0 $space-m;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    justify-content: space-between;
-    margin: 0 auto $space-l;
-  }
+.sprk-c-Masthead--open .sprk-c-Masthead__content {
+  border-bottom: $masthead-border-bottom;
+  box-shadow: none;
 }
-
-.sprk-c-Masthead__logo {
-  margin: auto;
-
-  @media all and (min-width: $main-nav-breakpoint) {
-    margin: 0 $space-m 0 0;
-  }
-}
-
-.sprk-c-Masthead__hamburger {
-  margin-right: $space-m;
-
-  @media all and (min-width: $main-nav-breakpoint) {
+// Hide menu on larger views
+.sprk-c-Masthead__menu {
+  @media all and (min-width: $masthead-breakpoint) {
     display: none;
   }
 }
 
-.sprk-c-Masthead__secondary-nav {
-  display: none;
+.sprk-c-Masthead__menu .sprk-c-Menu__icon {
+  width: $masthead-menu-icon-width;
+  height: $masthead-menu-icon-height;
+}
 
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: block;
-    margin-left: auto;
+.sprk-c-Masthead__branding {
+  margin: 0 auto;
+
+  @media (min-width: $split-breakpoint-xxs) {
+    padding-right: (($masthead-content-padding * 2) + $masthead-menu-icon-width); // Centers logo on narrow by adding space on right to balance menu space on left
+  }
+  @media (min-width: $masthead-breakpoint) {
+    padding-right: $masthead-content-padding;
   }
 }
 
-.sprk-c-Masthead__secondary {
+.sprk-c-Masthead__logo {
+  max-width: $masthead-logo-max-width;
+  min-width: $masthead-logo-min-width;
+}
+
+// Hide big and little navs until larger view
+.sprk-c-Masthead__big-nav,
+.sprk-c-Masthead__little-nav {
   display: none;
 
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: flex;
-    justify-content: flex-end;
-    max-width: $masthead-column-width;
-    margin: -2rem auto $space-m;
-    padding: 0 $space-m;
+  @media (min-width: $masthead-breakpoint) {
+    display: inherit;
   }
 }
 
-.sprk-c-Masthead__search {
-  display: none;
+.sprk-c-Masthead__little-nav {
+  flex-wrap: wrap;
+}
 
-  @media all and (min-width: $main-nav-breakpoint) {
-    display: block;
-    margin-left: $space-m;
+.sprk-c-Masthead__site-links {
+  @media all and (min-width: $masthead-breakpoint) {
+    border-right: 1px solid $black-tint-25;
+    padding-right: $space-l;
   }
 }
 
-.sprk-c-Masthead__search .sprk-b-InputContainer {
-  margin: 0;
-}
+.sprk-c-Masthead__link {
+  font-weight: $font-weight-body-one;
 
-.sprk-c-Masthead__wide-navigation-container {
-  display: none;
-  font-size: $masthead-wide-navigation-font-size;
+  &:visited {
+    color: $black;
+  }
 
-  @media (min-width: $main-nav-breakpoint) {
-    display: block;
+  &:hover {
+    color: $red;
   }
 }
 
-.sprk-c-Masthead__narrow-navigation-container {
+.sprk-c-Masthead__link--big-nav {
+  @include HoverLine($color: transparent, $width: 85%);
+
+  display: block;
+
+  &:active,
+  &:focus,
+  &:hover {
+    @include HoverLine($color: $big-nav-active-color, $width: 85%);
+  }
+}
+
+.sprk-c-Masthead__big-nav {
+  background-color: $big-nav-bg;
+  padding-top: $space-s;
+}
+
+.sprk-c-Masthead__big-nav-items {
+  position: relative;
+  margin: 0 auto;
+  max-width: $big-nav-column-width;
+}
+
+.sprk-c-Masthead__big-nav-item {
+  line-height: $space-l;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
+  color: $big-nav-active-color;
+  font-weight: bold;
+}
+
+.sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__link--big-nav,
+.sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__link--big-nav,
+.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
+  @include HoverLine($color: $big-nav-active-color, $width: 85%);
+}
+
+// Hide narrow nav on larger views
+.sprk-c-Masthead__narrow-nav {
   background-color: $white;
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: $mobile-masthead-height;
-  padding-bottom: $mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
+  top: ($mobile-masthead-height + ($masthead-content-padding * 4)) + $masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: ($mobile-masthead-height + ($masthead-content-padding * 4)) + $masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
   width: 100%;
+
+  @media (min-width: $split-breakpoint-xxs) {
+    top: $mobile-masthead-height + $masthead-border-bottom-size; // Extra space for border
+    padding-bottom: $mobile-masthead-height + $masthead-border-bottom-size; // Extra space for border
+  }
+  @media (min-width: $masthead-breakpoint) {
+    display: none;
+  }
 }

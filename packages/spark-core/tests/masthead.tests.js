@@ -26,11 +26,14 @@ describe('masthead UI Events tests', () => {
   let nav;
   let navItem;
   let icon;
+  let mastheadDiv;
   let iconContainer;
   let event;
 
   beforeEach(() => {
     main = document.createElement('div');
+    mastheadDiv = document.createElement('div');
+    mastheadDiv.setAttribute('data-sprk-masthead', null);
     main.setAttribute('data-sprk-main', null);
     nav = document.createElement('div');
     navItem = document.createElement('button');
@@ -43,8 +46,9 @@ describe('masthead UI Events tests', () => {
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
     icon = document.createElement('svg');
     iconContainer.appendChild(icon);
-    main.appendChild(nav);
-    main.appendChild(iconContainer);
+    main.appendChild(mastheadDiv);
+    mastheadDiv.appendChild(nav);
+    mastheadDiv.appendChild(iconContainer);
     document.body.appendChild(main);
     bindUIEvents();
   });
@@ -62,6 +66,8 @@ describe('masthead UI Events tests', () => {
   it('should open the nav when clicked', () => {
     event = new window.Event('click');
     iconContainer.dispatchEvent(event);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).eql(true);
+    console.log(mastheadDiv.innerHTML, 'cats');
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
   });
 
@@ -74,7 +80,7 @@ describe('masthead UI Events tests', () => {
 
   it('should do nothing when focusin is triggered on a narrow viewport when the nav is closed', () => {
     iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-navigation-container');
+    nav.classList.add('sprk-c-Masthead__narrow-nav');
     nav.classList.add('sprk-u-HideWhenJs');
     event = new window.Event('focusin');
     main.dispatchEvent(event);
@@ -83,7 +89,7 @@ describe('masthead UI Events tests', () => {
 
   it('should focus on the first nav item when focusin is triggered on a narrow viewport when the nav is open', () => {
     iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-navigation-container');
+    nav.classList.add('sprk-c-Masthead__narrow-nav');
     event = new window.Event('focusin');
     main.dispatchEvent(event);
     expect(document.activeElement).eql(navItem);
@@ -102,29 +108,34 @@ describe('toggleMobileNav tests', () => {
   let nav;
   let icon;
   let iconContainer;
+  let mastheadDiv;
 
   before(() => {
+    mastheadDiv = document.createElement('div');
+    mastheadDiv.setAttribute('data-sprk-masthead', null);
     main = document.createElement('div');
     nav = document.createElement('div');
+    main.setAttribute('data-sprk-masthead', null);
     nav.classList.add('sprk-u-Display--none');
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
     iconContainer = document.createElement('div');
     icon = document.createElement('svg');
     iconContainer.appendChild(icon);
+    mastheadDiv.appendChild(main);
     main.appendChild(nav);
     main.appendChild(iconContainer);
     document.getElementsByTagName('body')[0].appendChild(main);
   });
 
   it('should toggle the class sprk-u-Display--none on the nav element and the open class on the icon', () => {
-    toggleMobileNav(iconContainer, nav);
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
-    expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(true);
+    expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(true);
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(true);
-    toggleMobileNav(iconContainer, nav);
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(false);
+    expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
   });
 });
 
@@ -140,7 +151,7 @@ describe('hideMobileNavs tests', () => {
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
     iconContainer = document.createElement('div');
     icon = document.createElement('svg');
-    icon.classList.add('sprk-c-Hamburger__icon--open');
+    icon.classList.add('sprk-c-Menu__icon--open');
     iconContainer.appendChild(icon);
     main.appendChild(nav);
     main.appendChild(iconContainer);
@@ -152,7 +163,7 @@ describe('hideMobileNavs tests', () => {
     hideMobileNavs();
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(icon.classList.contains('sprk-c-Hamburger__icon--open')).eql(false);
+    expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
   });
 });
 
