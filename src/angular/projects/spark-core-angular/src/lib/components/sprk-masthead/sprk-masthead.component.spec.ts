@@ -55,7 +55,7 @@ describe('SparkMastheadComponent', () => {
     component.logoLinkScreenReaderText = 'Go to the alerts page.';
     fixture.detectChanges();
     const logoElement: HTMLElement = mastheadElement.querySelector(
-      '.sprk-c-Masthead__logo > a'
+      '.sprk-c-Masthead__branding > a'
     );
     expect(logoElement.getAttribute('href')).toEqual('/alert');
     expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');
@@ -109,5 +109,17 @@ describe('SparkMastheadComponent', () => {
       '.sprk-c-Masthead__big-nav-items'
     );
     expect(secondaryNavElement.classList.contains('sprk-u-man')).toEqual(true);
+  });
+
+  it('should not add classes if additionalBigNavClasses has no value', () => {
+    component.bigNavLinks = [{ text: 'Item 1', href: '#nogo' }];
+    component.additionalBigNavClasses = '';
+    fixture.detectChanges();
+    secondaryNavElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__big-nav-items'
+    );
+    expect(secondaryNavElement.classList.toString()).toEqual(
+      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare'
+    );
   });
 });
