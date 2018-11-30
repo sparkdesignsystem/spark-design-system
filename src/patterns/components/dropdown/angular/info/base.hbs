@@ -15,7 +15,7 @@
   <tr>
     <td class="sprk-u-FontWeight--bold">dropdownType</td>
     <td>string</td>
-    <td>Can be 'base' or 'simple'. Will cause the appropriate variant type to render.</td>
+    <td>Can be 'base' or 'informational'. Will cause the appropriate variant type to render.</td>
   </tr>
   <tr>
     <td class="sprk-u-FontWeight--bold">additionalClasses</td>
@@ -60,7 +60,7 @@
   <tr>
     <td class="sprk-u-FontWeight--bold">triggerText</td>
     <td>string</td>
-    <td>The text that is initially rendered to the trigger. If dropdownType is not 'simple', clicking on a choice will change the trigger text.</td>
+    <td>The text that is initially rendered to the trigger. If dropdownType is 'informational', clicking on a choice will change the trigger text.</td>
   </tr>
   <tr>
     <td class="sprk-u-FontWeight--bold">screenReaderText</td>
@@ -70,7 +70,7 @@
   <tr>
     <td class="sprk-u-FontWeight--bold">choiceMade (@Output)</td>
     <td>string</td>
-    <td>When the dropdownType is not 'simple' and a user clicks on a choice from the menu, the choiceMade event is emitted from the dropdown and contains the value of the clicked choice.</td>
+    <td>When the dropdownType is 'informational' and a user clicks on a choice from the menu, the choiceMade event is emitted from the dropdown and contains the value of the clicked choice.</td>
   </tr>
   </tbody>
 </table>
@@ -101,12 +101,12 @@
   <tr>
     <td class="sprk-u-FontWeight--bold">value</td>
     <td>string</td>
-    <td>If the dropdownType is not 'simple', the value will be set to the trigger text and also emitted on the click of a choice.</td>
+    <td>If the dropdownType is 'informational', the value will be set to the trigger text and also emitted on the click of a choice.</td>
   </tr>
   <tr>
     <td class="sprk-u-FontWeight--bold">active</td>
     <td>string</td>
-    <td>If the dropdownType is not 'simple', if true, the choice will be rendered initially in the active state. This is overridden by user action.</td>
+    <td>If the dropdownType is 'informational', if true, the choice will be rendered initially in the active state. This is overridden by user action.</td>
   </tr>
   </tbody>
 </table>
