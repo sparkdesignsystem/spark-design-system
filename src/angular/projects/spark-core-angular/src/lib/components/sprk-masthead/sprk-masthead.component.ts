@@ -4,12 +4,7 @@ import * as _ from 'lodash';
 @Component({
   selector: 'sprk-masthead',
   template: `
-    <header
-      [ngClass]="getClasses()"
-      role="banner"
-      idString="masthead-1"
-      [attr.data-id]="idString"
-    >
+    <header [ngClass]="getClasses()" role="banner" [attr.data-id]="idString">
       <div
         class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs"
       >
