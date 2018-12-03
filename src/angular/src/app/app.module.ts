@@ -22,6 +22,7 @@ import { ButtonDocsComponent } from './spark-docs/button-docs/button-docs.compon
 import { CardDocsComponent } from './spark-docs/card-docs/card-docs.component';
 import { DictionaryDocsComponent } from './spark-docs/dictionary-docs/dictionary-docs.component';
 import { DividerDocsComponent } from './spark-docs/divider-docs/divider-docs.component';
+import { DropdownDocsComponent } from './spark-docs/dropdown-docs/dropdown-docs.component';
 import { FooterDocsComponent } from './spark-docs/footer-docs/footer-docs.component';
 import { HighlightBoardDocsComponent } from './spark-docs/highlight-board-docs/highlight-board-docs.component';
 import { IconSetDocsComponent } from './spark-docs/icon-set-docs/icon-set-docs.component';
@@ -32,7 +33,6 @@ import { LinkDocsComponent } from './spark-docs/link-docs/link-docs.component';
 import { ListDocsComponent } from './spark-docs/list-docs/list-docs.component';
 import { MastheadDocsComponent } from './spark-docs/masthead-docs/masthead-docs.component';
 import { ModalDocsComponent } from './spark-docs/modal-docs/modal-docs.component';
-import { NavigationDocsComponent } from './spark-docs/navigation-docs/navigation-docs.component';
 import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-found.component';
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
 import { PromoDocsComponent } from './spark-docs/promo-docs/promo-docs.component';
@@ -47,11 +47,11 @@ const appRoutes: Routes = [
   { path: 'icons', component: IconSetDocsComponent },
   { path: 'buttons', component: ButtonDocsComponent },
   { path: 'links', component: LinkDocsComponent },
-  { path: 'navigation', component: NavigationDocsComponent },
   { path: 'accordions', component: AccordionDocsComponent },
   { path: 'lists', component: ListDocsComponent },
   { path: 'modals', component: ModalDocsComponent },
   { path: 'dividers', component: DividerDocsComponent },
+  { path: 'dropdowns', component: DropdownDocsComponent },
   { path: 'masthead', component: MastheadDocsComponent },
   { path: 'inputs', component: InputDocsComponent },
   { path: 'stack', component: StackDocsComponent },
@@ -81,8 +81,8 @@ const appRoutes: Routes = [
     ModalDocsComponent,
     IconSetComponent,
     IconSetDocsComponent,
-    NavigationDocsComponent,
     DividerDocsComponent,
+    DropdownDocsComponent,
     MastheadDocsComponent,
     InputDocsComponent,
     ListDocsComponent,
