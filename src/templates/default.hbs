@@ -10,15 +10,15 @@
   {{/content}}
 
   {{#content "body"}}
+    Hello Default!
     <div class="drizzle-o-Layout__wrapper" data-sprk-main>
       {{> drizzle.nav}}
       <div class="drizzle-o-Layout__main">
-        {{#block "main"}}
-
-        {{/block}}
+        {{#block "main"}}{{/block}}
       </div>
-      
     </div>
-    
+    {{#block "foot"}}
+      {{> drizzle.footer}}
+    {{/block}}
   {{/content}}
 {{/extend}}
