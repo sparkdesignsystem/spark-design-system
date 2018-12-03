@@ -5,7 +5,8 @@
 }
 
 [data-template-id^='masthead-default'] .sprk-c-Masthead,
-[data-template-id^='masthead-with-extended-navigation'] .sprk-c-Masthead {
+[data-template-id^='masthead-with-extended-navigation'] .sprk-c-Masthead,
+.#{$app-namespace}-c-Preview .sprk-c-Dropdown {
   z-index: 100001;
 }
 

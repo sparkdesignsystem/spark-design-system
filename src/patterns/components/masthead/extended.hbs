@@ -65,30 +65,28 @@ hasAngularCodeInfo: true
           <ul class="sprk-c-Dropdown__links">
             <li class="sprk-c-Dropdown__item">
               <a class="sprk-c-Dropdown__link" href="#nogo" data-sprk-dropdown-choice="Choice Title 1" role="option">
-                <p class="sprk-b-TypeBodyOne">Choice Title</p>
-                <p>Information about this choice</p>
-                <p>More information</p>
+                <p class="sprk-b-TypeBodyOne">Choice Title 1</p>
+                <p>Info here.</p>
               </a>
             </li>
 
             <li class="sprk-c-Dropdown__item" data-sprk-dropdown-choice="Choice Title 2">
               <a class="sprk-c-Dropdown__link" href="#nogo" role="option">
-                <p class="sprk-b-TypeBodyOne">Choice Title</p>
-                <p>Information about this choice</p>
-                <p>More information</p>
+                <p class="sprk-b-TypeBodyOne">Choice Title 2</p>
+                <p>Info here.</p>
               </a>
             </li>
           </ul>
 
           <div class="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
             <a class="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary" href="#nogo">
-              Go Elsewhere
+              Placeholder
             </a>
           </div>
         </div>
       </div>
 
-      <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column">
+      <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column sprk-u-Position--relative">
         <li>
           <a class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--standalone" href="tel:555-555-5555">
             (555) 555-5555
@@ -123,7 +121,7 @@ hasAngularCodeInfo: true
             <span class="sprk-u-ScreenReaderText">User Account</span>
           </a>
 
-          <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-Right--zero sprk-u-mrs" data-sprk-dropdown="dropdown02">
+          <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-Right--zero" data-sprk-dropdown="dropdown02">
             <div class="sprk-c-Dropdown__header">
               <h2 class="sprk-c-Dropdown__title sprk-b-TypeDisplayEight">
                 My Account
@@ -285,7 +283,7 @@ hasAngularCodeInfo: true
             <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l" viewBox="0 0 64 64">
               <use xlink:href="#landline" />
             </svg>
-            (555) 555-555
+            (555) 555-5555
           </span>
         </a>
       </li>
@@ -312,15 +310,44 @@ hasAngularCodeInfo: true
         </a>
       </li>
 
-      <li class="sprk-c-Accordion__item">
-        <a class="sprk-c-Accordion__summary" href="#">
+      <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
+        <a
+          aria-controls="details4"
+          class="sprk-c-Accordion__summary"
+          data-sprk-toggle="trigger"
+          data-sprk-toggle-type="accordion"
+          href="#">
           <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
             <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
               <use xlink:href="#user" />
             </svg>
             My Account
           </span>
+
+          <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon" data-sprk-toggle="icon" viewBox="0 0 64 64">
+            <use xlink:href="#chevron-down"></use>
+          </svg>
         </a>
+
+        <ul id="details4" class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details" data-sprk-toggle="content">
+          <li>
+            <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="#">
+              Change Username
+            </a>
+          </li>
+
+          <li>
+            <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="#">
+              Change Password
+            </a>
+          </li>
+
+          <li>
+            <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="#">
+              Sign Out
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>
