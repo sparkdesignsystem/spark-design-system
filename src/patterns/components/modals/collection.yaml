@@ -25,7 +25,7 @@ restrictions:
   - No more than one Modal should be open at a time.
   - Content length inside the Modal shouldn't exceed a reasonable
     amount.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("modal-choice-1", "modal-choice-2", "modal-info-1", etc).
 sparkPackageCore: true

@@ -460,6 +460,19 @@ $toggle-transistion-timing: 0.3s ease !default;
 $divider-border: 1px solid $black-tint-25 !default;
 
 //
+// Dropdown
+//
+$dropdown-padding: $space-inset-short-l !default;
+$dropdown-header-padding: $space-inset-short-l !default;
+$dropdown-footer-padding: $space-inset-short-l !default;
+$dropdown-border: 1px solid $gray !default;
+$dropdown-active-background-color: $gray-tint-75 !default;
+$dropdown-active-border: 2.5px solid $red !default;
+$dropdown-active-box-shadow: -1px 0 0 0 $red !default;
+$dropdown-max-width: 24rem !default;
+$dropdown-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !default;
+
+//
 // Modals
 //
 $modal-mask-color: rgba(34, 34, 34, 0.35) !default;
@@ -471,15 +484,25 @@ $modal-breakpoint-medium: 37.5rem !default;
 $modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
-// Masthead / Main Nav
+// Masthead
 //
-$main-nav-breakpoint: 46rem !default;
-$masthead-column-width: 64rem !default;
-$mobile-masthead-height: 5.5625rem !default;
-$sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$masthead-menu-icon-width: $icon-l;
+$masthead-menu-icon-height: $icon-l;
+$masthead-bg-color: $white !default;
+$masthead-content-padding: $space-m !default;
+$masthead-border-bottom-size: 1px !default;
+$masthead-border-bottom: $masthead-border-bottom-size solid $gray !default;
+$masthead-breakpoint: 54rem !default;
+$masthead-column-width: 89rem !default;
+$big-nav-dropdown-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2) !default;
+$big-nav-column-width: 64rem !default;
+$big-nav-bg: $gray-tint-25 !default;
+$big-nav-active-color: $red !default;
+$masthead-logo-max-width: 192px !default;
+$masthead-logo-min-width: 174px !default;
+$mobile-masthead-height: 113px !default;
 $narrow-nav-left-border: 5px solid $red !default;
 $narrow-nav-link-font-weight: normal !default;
-$masthead-wide-navigation-font-size: 1.125rem !default;
 
 //
 // Pagination

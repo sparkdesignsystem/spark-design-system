@@ -1,7 +1,12 @@
 /* global window document beforeEach afterEach describe it */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { spinners, getSpinnerClasses, setSpinning, cancelSpinning } from '../components/spinners';
+import {
+  spinners,
+  getSpinnerClasses,
+  setSpinning,
+  cancelSpinning,
+} from '../components/spinners';
 
 describe('spinners init', () => {
   afterEach(() => {

@@ -1,9 +1,0 @@
-description: These components represent the types of navigation available. Spark separates Wide and Narrow Navigation patterns.
-  We do this because we've found that in practice, a lot of elements need to be added to the narrow navigation and not to the
-  wide navigation. For example, chat links, secondary navigation contents, legal links, etc.
-restrictions: 
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
-    has a unique data-id property ("navigation-narrow-1", "navigation-narrow-2", "navigation-wide-1", etc).
-sparkPackageCore: true
-hasAngularInfo: true

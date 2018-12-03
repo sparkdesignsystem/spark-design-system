@@ -12,27 +12,41 @@ import {
   selector: 'sprk-accordion-item',
   template: `
     <li [ngClass]="getClasses()">
-      <a [attr.aria-controls]="accordion_controls_id"
-         [ngClass]="{
-           'sprk-c-Accordion__summary': true
-           }"
-         href="#nogo"
-         [attr.data-analytics]="analyticsString"
-         [attr.data-id]="idString"
-         (click)="toggleAccordion($event)">
-          <h3 class="sprk-c-Accordion__heading sprk-b-TypeBodyTwo">
-            {{ title }}
-          </h3>
+      <a
+        [attr.aria-controls]="accordion_controls_id"
+        [ngClass]="{
+          'sprk-c-Accordion__summary': true
+        }"
+        href="#nogo"
+        [attr.data-analytics]="analyticsString"
+        [attr.data-id]="idString"
+        (click)="toggleAccordion($event)"
+      >
+        <span [ngClass]="getHeadingClasses()">
+          <sprk-icon
+            [iconType]="leadingIcon"
+            additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+            *ngIf="leadingIcon"
+          ></sprk-icon>
+          {{ title }}
+        </span>
 
-          <sprk-icon additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}" [iconType]="iconType"></sprk-icon>
+        <sprk-icon
+          additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}"
+          [iconType]="currentIconType"
+        ></sprk-icon>
       </a>
 
       <div [@toggleContent]="animState">
-        <p [id]="accordion_controls_id" class="sprk-c-Accordion__content sprk-b-TypeBodyTwo">
+        <div
+          [id]="accordion_controls_id"
+          class="sprk-c-Accordion__content sprk-b-TypeBodyTwo"
+        >
           <ng-content></ng-content>
-        </p>
+        </div>
       </div>
-    </li>`,
+    </li>
+  `,
   animations: [
     trigger('toggleContent', [
       state(
@@ -65,11 +79,21 @@ export class SparkAccordionItemComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
+  additionalHeadingClasses: string;
+  @Input()
   isOpen = false;
+  @Input()
+  isActive: boolean;
+  @Input()
+  iconTypeClosed = 'chevron-down-circle';
+  @Input()
+  iconTypeOpen = 'chevron-down-circle-filled';
+  @Input()
+  leadingIcon: string;
 
   componentID = _.uniqueId();
   accordion_controls_id = `accordionHeading__${this.componentID}`;
-  public iconType = 'chevron-down-circle';
+  public currentIconType = this.iconTypeClosed;
   public iconStateClass = '';
   public animState = 'closed';
 
@@ -79,8 +103,8 @@ export class SparkAccordionItemComponent implements OnInit {
       : (this.animState = 'open');
 
     this.isOpen === false
-      ? (this.iconType = 'chevron-down-circle')
-      : (this.iconType = 'chevron-down-circle-filled');
+      ? (this.currentIconType = this.iconTypeClosed)
+      : (this.currentIconType = this.iconTypeOpen);
 
     this.isOpen === false
       ? (this.iconStateClass = '')
@@ -100,8 +124,24 @@ export class SparkAccordionItemComponent implements OnInit {
       classArray.push('sprk-c-Accordion__item--open');
     }
 
+    if (this.isActive) {
+      classArray.push('sprk-c-Accordion__item--active');
+    }
+
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  getHeadingClasses(): string {
+    const classArray: string[] = ['sprk-c-Accordion__heading'];
+
+    if (this.additionalHeadingClasses) {
+      this.additionalHeadingClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }
