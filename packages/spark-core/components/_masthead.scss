@@ -18,6 +18,11 @@
   left: 0;
   right: 0;
   height: 100%;
+
+  @media all and (min-width: $masthead-breakpoint) {
+    position: sticky;
+    height: auto;
+  }
 }
 
 .sprk-c-Masthead__content,
