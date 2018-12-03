@@ -136,14 +136,17 @@ import { Component } from '@angular/core';
               sprkDropdownFooter
             >
               <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
-                Go Elsewhere
+                Placeholder
               </a>
             </div>
           </sprk-dropdown>
         </div>
         <div utility-slot>
           <ul
-            class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+            class="sprk-o-HorizontalList
+            sprk-o-HorizontalList--spacing-large
+            sprk-o-Stack--center-column
+            sprk-u-Position--relative"
           >
             <li>
               <a
@@ -192,7 +195,7 @@ import { Component } from '@angular/core';
         </div>
         <div class="sprk-u-mas" narrowNavFooter>
           <a
-            class="sprk-c-Button sprk-c-Button--secondary sprk-u-Width-100"
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
             href="#nogo"
             >Sign In</a
           >
@@ -370,7 +373,7 @@ import { Component } from '@angular/core';
         </div>
         <div class="sprk-u-mas" narrowNavFooter>
           <a
-            class="sprk-c-Button sprk-c-Button--secondary sprk-u-Width-100"
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
             href="#nogo"
             >Sign In</a
           >
@@ -438,7 +441,7 @@ export class MastheadDocsComponent {
     }
   ];
 
-  narrowLinks = [
+  defaultNarrowLinks = [
     {
       text: 'My Selector',
       active: false,
@@ -524,11 +527,25 @@ export class MastheadDocsComponent {
       text: 'My Account',
       href: '#nogo',
       active: false,
-      leadingIcon: 'user'
+      leadingIcon: 'user',
+      subNav: [
+        {
+          text: 'Change Username',
+          href: '/links'
+        },
+        {
+          text: 'Change Password',
+          href: '#nogo'
+        },
+        {
+          text: 'Sign Out',
+          href: '#nogo'
+        }
+      ]
     }
   ];
 
-  defaultNarrowLinks = [
+  narrowLinks = [
     {
       text: 'Item 1',
       href: '#nogo',
