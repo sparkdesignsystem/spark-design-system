@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-description-table",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "Spark Description Table is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
   "main": "_description-table.scss",
   "repository": {
