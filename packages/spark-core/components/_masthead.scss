@@ -85,6 +85,8 @@
 }
 
 .sprk-c-Masthead__site-links {
+  position: relative;
+
   @media all and (min-width: $masthead-breakpoint) {
     border-right: 1px solid $black-tint-25;
     padding-right: $space-l;
