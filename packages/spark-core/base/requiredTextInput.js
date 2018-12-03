@@ -15,8 +15,8 @@ const runValidation = (element) => {
   return hasValue;
 };
 
-const bindUIEvents = (field) => {
-  const element = field.parentNode;
+const bindUIEvents = (element) => {
+  const field = element.querySelector('input');
 
   field.addEventListener('input', () => {
     runValidation(element);
@@ -29,7 +29,7 @@ const bindUIEvents = (field) => {
 
 const requiredTextInput = () => {
   getElements(
-    '.sprk-b-InputContainer:not([data-sprk-input]) input:not([type="radio"]):not([type="checkbox"])[required]',
+    '[data-sprk-required="input"]',
     bindUIEvents,
   );
 };

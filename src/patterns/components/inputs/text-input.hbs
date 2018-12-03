@@ -21,7 +21,9 @@ hasAngularCode: true
          type="text"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}
-         {{#if invaliddata}} aria-invalid="true"{{/if}} data-sprk-input="text">
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
+         data-sprk-input="text"
+         {{#if required}}required{{/if}}>
   <div class="sprk-b-InputContainer__input-border"></div>
   <label for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}" class="sprk-b-Label">Text Input Label</label>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
