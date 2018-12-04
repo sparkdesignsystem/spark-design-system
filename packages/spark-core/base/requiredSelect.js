@@ -24,9 +24,10 @@ const runValidation = (element) => {
 const bindUIEvents = (element) => {
   const field = element.querySelector('select');
 
-  field.addEventListener('keyup', () => {
+  field.addEventListener('focusout', () => {
     runValidation(element);
   });
+
   field.addEventListener('change', () => {
     runValidation(element);
   });
