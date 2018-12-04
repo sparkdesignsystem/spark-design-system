@@ -1,17 +1,18 @@
-.#{$app-namespace}-c-Preview .sprk-c-WideNavigation {
-  @media (max-width: 46rem) {
-    display: none;
-  }
-}
-
-.#{$app-namespace}-Test-Page .sprk-c-NarrowNavigation,
-.#{$app-namespace}-u-pad > nav .sprk-c-NarrowNavigation {
-  max-width: 320px;
-  position: static;
-}
-
-[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example {
+[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='masthead-default'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='masthead-with-extended-navigation'] .#{$app-namespace}-c-Preview__example {
   padding: 0;
+}
+
+[data-template-id^='masthead-default'] .sprk-c-Masthead,
+[data-template-id^='masthead-with-extended-navigation'] .sprk-c-Masthead,
+.#{$app-namespace}-c-Preview .sprk-c-Dropdown {
+  z-index: 100001;
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-nav,
+.#{$app-namespace}-c-Preview .sprk-c-Masthead {
+  position: static;
 }
 
 [data-template-id^='box-object'] .sprk-o-Box {
@@ -60,17 +61,9 @@
   height: 11rem;
 }
 
-.#{$app-namespace}-c-Preview .sprk-c-Masthead__content {
-  position: static;
-}
-
-.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-navigation-container {
-  position: static;
-  margin-top: -2px;
-}
-
-.#{$app-namespace}-b-Body.sprk-u-Overflow--hidden {
-  overflow: auto !important; // this is to override a utility class (sprk-u-Overflow--hidden) that is added by JS.
+.#{$app-namespace}-b-Body.sprk-u-Overflow--hidden,
+.#{$app-namespace}-o-Layout.sprk-u-Overflow--hidden {
+  overflow: visible !important; // Overrides a utility class (sprk-u-Overflow--hidden) that is added by JS.
 }
 
 .#{$app-namespace}-c-Preview .sprk-c-Modal {
