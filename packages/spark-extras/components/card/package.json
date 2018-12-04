@@ -13,11 +13,11 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
-  "dependencies": {
+  "peerDendencies": {
     "@sparkdesignsystem/spark-core": "^6.0.1"
   },
   "publishConfig": {
     "access": "public",
-    "@sparkdesignsystem/spark-core": "^2.0.1"
+    "@sparkdesignsystem/spark-core": "^6.0.1"
   }
 }
