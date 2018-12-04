@@ -29,7 +29,7 @@ const bindUIEvents = (element) => {
 
 const requiredTextInput = () => {
   getElements(
-    '[data-sprk-required="input"]',
+    '[data-sprk-required-only="text"]',
     bindUIEvents,
   );
 };

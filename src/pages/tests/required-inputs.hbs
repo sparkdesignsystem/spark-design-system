@@ -5,11 +5,11 @@ layout: blank
 <form action="/#nogo" novalidate class="sprk-b-TypeBodyTwo">
   <div class="sprk-o-CenteredColumn sprk-u-pam">
     <div class="drizzle-o-ContentGrouping">
-      {{#embed "patterns.components.inputs.text-input" required=true}}{{/embed}}
+      {{#embed "patterns.components.inputs.text-input" required=true requiredOnly=true}}{{/embed}}
 
       {{#embed "patterns.components.inputs.phone" required=true}}{{/embed}}
 
-      {{#embed "patterns.components.inputs.select"}}{{/embed}}
+      {{#embed "patterns.components.inputs.select" requiredOnly=true}}{{/embed}}
 
       {{#embed "patterns.components.inputs.radios"}}{{/embed}}
 

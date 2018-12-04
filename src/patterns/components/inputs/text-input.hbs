@@ -14,7 +14,7 @@ order: 1
 hasAngularCode: true
 ---
 
-<div class="sprk-b-InputContainer">
+<div class="sprk-b-InputContainer" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
          data-id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"

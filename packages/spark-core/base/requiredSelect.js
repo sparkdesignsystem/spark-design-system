@@ -21,8 +21,8 @@ const runValidation = (element) => {
 
 // cant really cause keyup without making a choice, but an app can trigger keyup on submission of a
 // form to test for validity
-const bindUIEvents = (field) => {
-  const element = field.parentNode;
+const bindUIEvents = (element) => {
+  const field = element.querySelector('select');
 
   field.addEventListener('keyup', () => {
     runValidation(element);
@@ -33,7 +33,7 @@ const bindUIEvents = (field) => {
 };
 
 const requiredSelect = () => {
-  getElements('.sprk-b-InputContainer select[required]', bindUIEvents);
+  getElements('[data-sprk-required-only="select"]', bindUIEvents);
 };
 
 export { requiredSelect, runValidation };
