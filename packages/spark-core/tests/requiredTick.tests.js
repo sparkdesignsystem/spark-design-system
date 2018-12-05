@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import { expect } from 'chai';
 import { requiredTick, runValidation, bindUIEvents } from '../base/requiredTick';
 
-describe('requiredTextInput init', () => {
+describe('requiredTick init', () => {
   afterEach(() => {
     document.querySelectorAll.restore();
   });
@@ -11,7 +11,7 @@ describe('requiredTextInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     requiredTick();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-required="tick"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-required-only="tick"]');
   });
 });
 
@@ -24,9 +24,9 @@ describe('requiredTick runValidation tests', () => {
 
   before(() => {
     inputContainer = document.createElement('div');
-    inputContainer.setAttribute('data-sprk-required', 'tick');
+    inputContainer.setAttribute('data-sprk-required-only', 'tick');
     const errorContainer = document.createElement('span');
-    errorContainer.classList.add('sprk-b-ErrorText');
+    errorContainer.classList.add('sprk-b-ErrorContainer');
 
     selectionContainer1 = document.createElement('div');
     selectionContainer1.classList.add('sprk-b-SelectionContainer');
@@ -73,7 +73,7 @@ describe('requiredTextInput UI Events tests', () => {
     inputContainer.setAttribute('data-sprk-required', 'tick');
     sinon.spy(inputContainer, 'addEventListener');
     errorContainer = document.createElement('span');
-    errorContainer.classList.add('sprk-b-ErrorText');
+    errorContainer.classList.add('sprk-b-ErrorContainer');
 
     selectionContainer1 = document.createElement('div');
     selectionContainer1.classList.add('sprk-b-SelectionContainer');

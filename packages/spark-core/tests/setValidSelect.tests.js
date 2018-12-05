@@ -13,7 +13,7 @@ describe('setValidSelect tests', () => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required', 'select');
     errorContainer = document.createElement('span');
-    errorContainer.classList.add('sprk-b-ErrorText');
+    errorContainer.classList.add('sprk-b-ErrorContainer');
     errorContainer.textContent = 'This is an error.';
 
     select = document.createElement('select');

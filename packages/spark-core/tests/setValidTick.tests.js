@@ -14,7 +14,7 @@ describe('setValidTick tests', () => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required', 'tick');
     errorContainer = document.createElement('span');
-    errorContainer.classList.add('sprk-b-ErrorText');
+    errorContainer.classList.add('sprk-b-ErrorContainer');
     errorContainer.textContent = 'This is an error.';
 
     selectionContainer1 = document.createElement('div');
