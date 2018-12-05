@@ -110,7 +110,7 @@ describe('toggleMobileNav tests', () => {
   let iconContainer;
   let mastheadDiv;
 
-  before(() => {
+  beforeEach(() => {
     mastheadDiv = document.createElement('div');
     mastheadDiv.setAttribute('data-sprk-masthead', null);
     main = document.createElement('div');
@@ -124,7 +124,15 @@ describe('toggleMobileNav tests', () => {
     mastheadDiv.appendChild(main);
     main.appendChild(nav);
     main.appendChild(iconContainer);
-    document.getElementsByTagName('body')[0].appendChild(main);
+    document.body.appendChild(mastheadDiv);
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+    document.documentElement.style.height = '';
+    document.documentElement.classList.remove('sprk-u-Height--100');
+    document.body.style.height = '';
+    document.body.classList.remove('sprk-u-Height--100');
   });
 
   it('should toggle the class sprk-u-Display--none on the nav element and the open class on the icon', () => {
@@ -136,6 +144,35 @@ describe('toggleMobileNav tests', () => {
     expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
+  });
+
+  it('should add sprk-u-Height--100 to the html element', () => {
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(document.documentElement.classList.contains('sprk-u-Height--100')).eql(true);
+  });
+
+  it('should not add sprk-u-Height--100 to the html element if its already set to 100%', () => {
+    document.documentElement.style.height = '100%';
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(document.documentElement.classList.contains('sprk-u-Height--100')).eql(false);
+  });
+
+  it('should add sprk-u-Height--100 to the body element', () => {
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(document.body.classList.contains('sprk-u-Height--100')).eql(true);
+  });
+
+  it('should not add sprk-u-Height--100 to the body element if its already set to 100%', () => {
+    document.body.style.height = '100%';
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(document.body.classList.contains('sprk-u-Height--100')).eql(false);
+  });
+
+  it('should remove open class from masthead when hideMobileNavs is called', () => {
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).eql(true);
+    hideMobileNavs();
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).eql(false);
   });
 });
 
