@@ -112,6 +112,12 @@ describe('requiredTextInput UI Events tests', () => {
     expect(errorContainer.textContent).eql('This field is required.');
   });
 
+  it('should run validation on focusout', () => {
+    event = new window.Event('focusout');
+    inputContainer.dispatchEvent(event);
+    expect(errorContainer.textContent).eql('This field is required.');
+  });
+
   it('should mark valid when input is triggered with a value', () => {
     radio1.checked = true;
     event = new window.Event('change');

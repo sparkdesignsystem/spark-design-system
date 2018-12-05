@@ -1,4 +1,4 @@
-/* global document describe before it */
+/* global document describe beforeEach it */
 import { expect } from 'chai';
 import setValidTick from '../utilities/validation/setValidTick';
 
@@ -10,7 +10,7 @@ describe('setValidTick tests', () => {
   let radio2;
   let errorContainer;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required', 'tick');
     errorContainer = document.createElement('span');
@@ -34,11 +34,16 @@ describe('setValidTick tests', () => {
 
     inputContainer.appendChild(selectionContainer1);
     inputContainer.appendChild(selectionContainer2);
-    inputContainer.appendChild(errorContainer);
   });
 
   it('should empty the error container', () => {
+    inputContainer.appendChild(errorContainer);
     setValidTick(inputContainer);
     expect(errorContainer.textContent).eql('');
+  });
+
+  it('should not error if there is no error container', () => {
+    setValidTick(inputContainer);
+    expect(inputContainer.querySelector('.sprk-b-ErrorContainer')).eql(null);
   });
 });
