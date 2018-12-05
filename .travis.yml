@@ -19,4 +19,4 @@ before_install:
 install: npm run build-spark
 
 after_script:
-  - cd packages/spark-core && npm run coverage-coveralls
+  - cd packages/spark-core && npm test && npm run coverage-coveralls
