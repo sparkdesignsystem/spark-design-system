@@ -67,7 +67,6 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('click');
     iconContainer.dispatchEvent(event);
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).eql(true);
-    console.log(mastheadDiv.innerHTML, 'cats');
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
   });
 
