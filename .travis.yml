@@ -18,5 +18,5 @@ before_install:
 
 install: npm run build-spark
 
-after_success:
-  - npm run coverage-coveralls --prefix packages/spark-core
+after_script:
+  - cd packages/spark-core && npm run coverage-coveralls
