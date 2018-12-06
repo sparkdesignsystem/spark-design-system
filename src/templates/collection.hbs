@@ -95,6 +95,57 @@
           </div>
         </div>
       {{/if}}
+
+      {{#if variableTable}}
+        <h2 class="drizzle-b-h2">Configurable Variables</h2>
+        <table class="drizzle-c-Table sprk-u-mbl" data-html-documentation>
+          <colgroup>
+            <col class="sprk-u-Width-40">
+            <col class="sprk-u-Width-25">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each variableTable as |var varName|}}
+              <tr>
+                <td class="sprk-u-FontWeight--bold">{{varName}}</td>
+                <td>{{var.default}}</td>
+                <td>{{var.description}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      {{/if}}
+
+      {{#if classTable}}
+        <h2 class="drizzle-b-h2">Class Modifiers</h2>
+        <table class="drizzle-c-Table" data-html-documentation>
+          <colgroup>
+            <col class="sprk-u-Width-40">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each classTable as |class selector|}}
+              <tr>
+                <td class="sprk-u-FontWeight--bold">{{selector}}</td>
+                <td>{{class.description}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      {{/if}}
     </section>
 
     {{!-- Properties --}}
