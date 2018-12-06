@@ -2,8 +2,18 @@ name: Lists
 description: |
   Use a List for a list of items.
   There are three List styles available: default, bare, and indented.
-restrictions: 
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+restrictions:
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("ordered-list-1", "ordered-list-2", "unordered-list-1", etc).
 sparkPackageCore: true
+variableTable:
+  $list-margin-left:
+    default: $space-m
+    description: Sets the default margin left indentation on .sprk-b-List.
+  $list-indented-margin-left:
+    default: $space-l
+    description: Sets extended indentation (margin left) on the indented list variant.
+classTable:
+  .sprk-b-List--indented:
+    description: Sets extended indentation on the list.
