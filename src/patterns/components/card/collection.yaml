@@ -8,11 +8,21 @@ information:
 restictions:
   - Card images do not have a set width or height
     and need to have the same aspect ratio when there is more than one Card in a row.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("card-1", "card-2", "card-3", etc).
 links:
   Stack Layout Object:
     external: false
     href: /patterns/fundamentals/layout.html#stack-object
 sparkPackageExtras: true
+variableTable:
+  $card-border:
+    default: 1px solid rgba(0, 0, 0, 0.15)
+    description: Sets the border surrounding the card.
+  $card-max-width:
+    default: 26.5625rem
+    description: Sets the maximum width of the card.
+  $card-shadow:
+    default: 0 2px 2px rgba(0, 0, 0, 0.1)
+    description: Sets the box-shadow of the card.
