@@ -5,7 +5,53 @@ description: |
 restrictions:
   - Do not use Spark Link classes on links that solely have images in them.
   - Link text should be as meaningful as possible so users can understand what the purpose of the link is.
-  - The data-id property is provided as a hook for automated tools. If you have multiple instances of the same 
-    variant of a component on the same page, make sure each instance has a unique data-id property 
+  - The data-id property is provided as a hook for automated tools. If you have multiple instances of the same
+    variant of a component on the same page, make sure each instance has a unique data-id property
     ("link-1", "link-2", "link-3", etc).
 sparkPackageCore: true
+variableTable:
+  $link-color:
+    default: $black
+    description: The default link color.
+  $link-disabled-color:
+    default: $black-tint-50
+    description: The disabled link color.
+  $link-muted-color:
+    default: $black-tint-75
+    description: The muted link color.
+  $link-standalone-color:
+    default: $red
+    description: The standalone link color.
+  $link-transition:
+    default: 0.3s
+    description: The transition timing for hover, active and focus style application.
+  $link-underline-color:
+    default: $red
+    description: Sets the color of the link underline.
+  $link-underline-visited-color:
+    default: $red
+    description: Sets the color of the link underline on visited links.
+  $link-underline-width:
+    default: 0.0625em
+    description: Sets the size of the link underline.
+  $link-visited-color:
+    default: $red-mid
+    description: Sets the color of visited links.
+  $link-standalone-font-weight:
+    default: bold
+    description: The font weight for standalone links.
+  $link-inline-font-weight:
+    default: normal
+    description: The font weight for inline links.
+  $link-disabled-font-weight:
+    default: bold
+    description: The font weight for disabled links.
+classTable:
+  .sprk-b-Link--standalone:
+    description: Sets the styles for the standalone link variant.
+  .sprk-b-Link--muted:
+    description: Sets the color styles for the muted link variant.
+  .sprk-b-Link--plain:
+    description: Removes the underline from links on initial state and on hover, active, focus, and visited states.
+  .sprk-b-Link--disabled:
+    description: Sets the styles for disabled links.
