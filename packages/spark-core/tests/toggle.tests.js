@@ -3,13 +3,14 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 
 const proxyquireStrict = require('proxyquire').noCallThru();
+// TODO: put the dom-slider stub back to replacing just 'dom-slider', once the dist is updated
 
 describe('Toggle init', () => {
   const domSliderStub = {};
 
   const {
     toggle,
-  } = proxyquireStrict('../components/toggle', { 'dom-slider': domSliderStub });
+  } = proxyquireStrict('../components/toggle', { '../node_modules/dom-slider/src/dom-slider': domSliderStub });
 
   afterEach(() => {
     document.querySelectorAll.restore();
@@ -39,7 +40,7 @@ describe('Toggle tests', () => {
     toggleAriaExpanded,
     handleToggleClick,
     bindToggleUIEvents,
-  } = proxyquireStrict('../components/toggle', { 'dom-slider': domSliderStub });
+  } = proxyquireStrict('../components/toggle', { '../node_modules/dom-slider/src/dom-slider': domSliderStub });
 
   beforeEach(() => {
     container = document.createElement('div');
