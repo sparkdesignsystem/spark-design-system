@@ -376,6 +376,8 @@ $table-padding-medium: $space-inset-m !default;
 $table-padding-large: $space-inset-l !default;
 $table-cell-alignment: center !default;
 $table-stripe-color: $gray !default;
+$table-highlight-color: $red !default;
+$table-highlight-text-color: $white !default;
 
 // Primary
 $table-row-border-width: 1px !default;
@@ -402,7 +404,7 @@ $table-grouped-header-font-size: $font-size-body-four !default;
 $table-grouped-header-font-weight: normal !default;
 
 // Secondary Row Comparison
-$table-secondary-row-comp-row-spacing: 15px !default;
+$table-secondary-row-comp-row-spacing: 0 15px !default;
 $table-secondary-row-comp-border-width: 1px !default;
 $table-secondary-row-comp-border-style: solid !default;
 $table-secondary-row-comp-border-color: $gray !default;
