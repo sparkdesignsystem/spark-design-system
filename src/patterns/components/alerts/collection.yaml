@@ -9,7 +9,61 @@ restrictions:
   - Should fill the width of the viewport.
   - The content should be kept short and concise.
   - role="alert" is required so that assistive technology can inform users their attention is needed.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("alert-info-1", "alert-info-2", "alert-info-1", etc).
 sparkPackageCore: true
+variableTable:
+  $alert-border:
+    default: 1px solid $gray
+    description: Sets the border surrounding the alert.
+  $alert-bar-width:
+    default: -10px
+    description: Sets the width of the inset box-shadow X offset value to create the color bar on the right side of the alert.
+  $alert-bg-color:
+    default: $white
+    description: Sets the background color of the alert.
+  $alert-color-info:
+    default: $blue
+    description: Sets the border color, icon color, and bar color of the information alert.
+  $alert-color-success:
+    default: $green
+    description: Sets the border color, icon color, and bar color of the success alert.
+  $alert-color-fail:
+    default: $yellow
+    description: Sets the border color, icon color, and bar color of the failure alert.
+  $alert-icon-size:
+    default: 40px
+    description: Sets the height and width of the two icons used in the alert.
+  $alert-shadow:
+    default: 0 2px 5px rgba(0, 0, 0, 0.2)
+    description: Sets the box shadow of the alert.
+  $alert-shadow-info:
+    default: inset $alert-bar-width 0 0 $alert-color-info
+    description: Sets the box shadow of the information alert.
+  $alert-shadow-hover-info:
+    default: inset -80px 0 0 $alert-color-info
+    description: Sets the hover state box shadow of the information alert.
+  $alert-shadow-success:
+    default: inset $alert-bar-width 0 0 $alert-color-success
+    description: Sets the box shadow of the success alert.
+  $alert-shadow-hover-success:
+    default: inset -80px 0 0 $alert-color-info
+    description: Sets the hover state box shadow of the information alert.
+  $alert-shadow-fail:
+    default: inset $alert-bar-width 0 0 $alert-color-fail
+    description: Sets the box shadow of the failure alert.
+  $alert-shadow-hover-fail:
+    default: inset -80px 0 0 $alert-color-info
+    description: Sets the hover state box shadow of the information alert.
+classTable:
+  .sprk-c-Alert--info:
+    description: Styles the alert as an information alert.
+  .sprk-c-Alert--success:
+    description: Styles the alert as a success alert.
+  .sprk-c-Alert--fail:
+    description: Styles the alert as a failure alert.
+  .sprk-c-Alert--no-dismiss:
+    description: Adds styles for alerts that are not dismissable.
+  .sprk-c-Alert__icon--dismiss:
+    description: Adds specific styles to the icon that is used for closing the alert.
