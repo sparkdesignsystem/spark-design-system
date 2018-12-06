@@ -97,8 +97,9 @@
       {{/if}}
 
       {{#if variableTable}}
+      <div data-html-documentation>
         <h2 class="drizzle-b-h2">Configurable Variables</h2>
-        <table class="drizzle-c-Table sprk-u-mbl" data-html-documentation>
+        <table class="drizzle-c-Table sprk-u-mbl">
           <colgroup>
             <col class="sprk-u-Width-40">
             <col class="sprk-u-Width-25">
@@ -121,30 +122,33 @@
             {{/each}}
           </tbody>
         </table>
+      </div>
       {{/if}}
 
       {{#if classTable}}
-        <h2 class="drizzle-b-h2">Class Modifiers</h2>
-        <table class="drizzle-c-Table" data-html-documentation>
-          <colgroup>
-            <col class="sprk-u-Width-40">
-            <col>
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each classTable as |class selector|}}
+        <div data-html-documentation>
+          <h2 class="drizzle-b-h2">Class Modifiers</h2>
+          <table class="drizzle-c-Table">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
               <tr>
-                <td class="sprk-u-FontWeight--bold">{{selector}}</td>
-                <td>{{class.description}}</td>
+                <th>Class</th>
+                <th>Description</th>
               </tr>
-            {{/each}}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {{#each classTable as |class selector|}}
+                <tr>
+                  <td class="sprk-u-FontWeight--bold">{{selector}}</td>
+                  <td>{{class.description}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
       {{/if}}
     </section>
 
