@@ -1,4 +1,5 @@
 // Polyfills
+import 'promise-polyfill/src/polyfill';
 import './utilities/polyfills/ArrayFrom';
 import './utilities/polyfills/StringIncludes';
 import './utilities/polyfills/ArrayFind';
