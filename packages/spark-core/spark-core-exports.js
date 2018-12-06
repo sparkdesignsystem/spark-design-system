@@ -1,4 +1,40 @@
 import {
+  dateInput,
+  formatDate,
+  bindUIEvents as bindDateInputUIEvents,
+} from './base/dateInput';
+import {
+  datePicker,
+  bindUIEvents as bindDatePickerUIEvents,
+} from './base/datePicker';
+import {
+  monetaryInput,
+  formatMonetary,
+  bindUIEvents as bindMonetaryUIEvents,
+} from './base/monetaryInput';
+import passwordInput from './base/passwordInput';
+import {
+  phoneInput,
+  formatPhone,
+  bindUIEvents as bindPhoneInputUIEvents,
+} from './base/phoneInput';
+import {
+  requiredSelect,
+  runValidation as runRequiredSelectValidation,
+} from './base/requiredSelect';
+import {
+  requiredTextInput,
+  runValidation as runRequiredTextInputValidation,
+  bindUIEvents as bindRequiredTextInputUIEvents,
+} from './base/requiredTextInput';
+import {
+  requiredTick,
+  runValidation as runRequiredTickValidation,
+  bindUIEvents as bindRequiredTickUIEvents
+} from './base/requiredTick';
+
+
+import {
   alerts,
   dismissAlert,
   bindUIEvents as bindAlertUIEvents,
@@ -82,6 +118,28 @@ import {
 } from './components/dropdown';
 
 export {
+  dateInput,
+  formatDate,
+  bindDateInputUIEvents,
+  datePicker,
+  bindDatePickerUIEvents,
+  monetaryInput,
+  formatMonetary,
+  bindMonetaryUIEvents,
+  passwordInput,
+  phoneInput,
+  formatPhone,
+  bindPhoneInputUIEvents,
+  requiredSelect,
+  runRequiredSelectValidation,
+  requiredTextInput,
+  runRequiredTextInputValidation,
+  bindRequiredTextInputUIEvents,
+  requiredTick,
+  runRequiredTickValidation,
+  bindRequiredTickUIEvents,
+
+
   alerts,
   dismissAlert,
   bindAlertUIEvents,
