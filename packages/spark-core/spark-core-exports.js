@@ -30,10 +30,22 @@ import {
 import {
   requiredTick,
   runValidation as runRequiredTickValidation,
-  bindUIEvents as bindRequiredTickUIEvents
+  bindUIEvents as bindRequiredTickUIEvents,
 } from './base/requiredTick';
-
-
+import {
+  selectInput,
+  bindUIEvents as bindSelectInputUIEvents,
+} from './base/selectInput';
+import {
+  ssnInput,
+  formatSSN,
+  bindUIEvents as bindSSNInputUIEvents,
+} from './base/ssnInput';
+import {
+  textInput,
+  bindUIEvents as bindTextInputUIEvents,
+  valueTest as textInputValueTest,
+} from './base/textInput';
 import {
   alerts,
   dismissAlert,
@@ -138,8 +150,14 @@ export {
   requiredTick,
   runRequiredTickValidation,
   bindRequiredTickUIEvents,
-
-
+  selectInput,
+  bindSelectInputUIEvents,
+  ssnInput,
+  formatSSN,
+  bindSSNInputUIEvents,
+  textInput,
+  bindTextInputUIEvents,
+  textInputValueTest,
   alerts,
   dismissAlert,
   bindAlertUIEvents,
