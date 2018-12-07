@@ -18,19 +18,19 @@ sparkPackageCore: true
 variableTable:
   $table-padding-small:
     default: $space-inset-s
-    description: The background color of the promo.
+    description: The small table padding.
   $table-padding-medium:
     default: $space-inset-m
-    description: The border style of the border promo variant.
+    description: The medium table padding.
   $table-padding-large:
     default: $space-inset-l
-    description: The maximum width of the promo.
+    description: The large table padding.
   $table-cell-alignment:
     default: center
-    description: The breakpoint for large viewport styles.
+    description: The table cell alignment.
   $table-stripe-color:
     default: $gray
-    description: The maximum height of the image on narrow viewports.
+    description: The table stripe color.
   $table-row-border-width:
     default: 1px
     description: The width of the bottom border on table rows.
