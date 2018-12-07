@@ -24,7 +24,7 @@
   "dependencies": {
     "@scalescss/scalescss": "6.0.0-1",
     "chai": "^4.1.2",
-    "dom-slider": "1.5.2",
+    "dom-slider": "1.5.3",
     "fontfaceobserver": "^2.0.13",
     "jsdom": "^11.12.0",
     "nyc": "^11.9.0",
