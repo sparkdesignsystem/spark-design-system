@@ -1,21 +1,24 @@
 import { Component, Input } from '@angular/core';
-import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
+import { dismissAlert } from '@sparkdesignsystem/spark-core';
 
 @Component({
   selector: 'sprk-alert',
   template: `
-  <div
+    <div
       *ngIf="visible"
       [ngClass]="getClassesAlertContainer()"
       role="alert"
       [attr.data-analytics]="analyticsString"
-      [attr.data-id]="idString">
+      [attr.data-id]="idString"
+    >
       <div class="sprk-c-Alert__content">
-        <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
+        <sprk-icon
+          iconType="{{ icon }}"
+          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--current-color"
+          aria-hidden="true"
+        ></sprk-icon>
 
-        <p class="sprk-b-TypeBodyTwo">
-          <ng-content></ng-content>
-        </p>
+        <p class="sprk-b-TypeBodyTwo"><ng-content></ng-content></p>
       </div>
 
       <button
@@ -23,8 +26,13 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core/es5/alerts';
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
         type="button"
         title="Dismiss"
-        (click)="alertDismiss($event)">
-        <sprk-icon iconType="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color" aria-hidden="true"></sprk-icon>
+        (click)="alertDismiss($event)"
+      >
+        <sprk-icon
+          iconType="close-circle"
+          additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"
+          aria-hidden="true"
+        ></sprk-icon>
       </button>
     </div>
   `
