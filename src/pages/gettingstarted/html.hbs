@@ -8,22 +8,210 @@ order: 1
 <div class="drizzle-o-Layout__content drizzle-b-LongFormText">
   <div class="drizzle-o-ContentGrouping">
     <h2 class="drizzle-b-h2">Welcome</h2>
-    <p>This getting started guide is intended for developers. See below for
-      instructions on how to install Spark and bring it into your existing
-      build.</p>
+    <p>This guide is intended for applications that are not using a JS front-end framework, such as Angular or React.
+    Follow the instructions below to incorporate Spark into your project.</p>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2">Requirements</h2>
-    <p>Spark assumes your project is using <a class="drizzle-b-Link"
-      href="https://sass-lang.com/">Sass</a> for styling and
-      that your project has a JavaScript build step that will transpile ES6+
-      and polyfill appropriately for browser support.</p>
+    <h2 class="drizzle-b-h2 sprk-u-mbm">Quick Start (Spark-Core only)</h2>
+    <div class="drizzle-o-ContentGrouping drizzle-u-pll">
+      <p>These instructions are for quickly getting Spark set up. Details around each step are omitted and they
+      assume that you won't be using any Spark Extras packages. See below for more detailed instructions.</p>
+
+      <ol>
+        <li class="sprk-u-mbm">
+          <p class="sprk-u-mbn"><strong>Install Spark Core</strong></p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code>
+          </div>
+        </li>
+
+        <li class="sprk-u-mbm">
+          <p class="sprk-u-mbn"><strong>Import Spark Core SCSS</strong></p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">@import "node_modules/@sparkdesignsystem/spark-core/spark-core"</code>
+          </div>
+        </li>
+
+        <li class="sprk-u-mbm">
+          <p class="sprk-u-mbn"><strong>Import Spark Core Prerender JS</strong></p>
+          <p>You'll need to create another file that will import sparkCorePrerender and call it with your
+            configuration options. The output of building this file will need to be loaded in the application's
+            &lt;head&gt; element.</p>
+          <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
+            <div class="drizzle-c-Preview__code">
+              <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard" type="button">
+                Copy
+              </button>
+              <pre class="sprk-u-ptl">
+                <code class="drizzle-c-Preview__markup language-js" id="clipboard">
+  import sparkCorePrerender from &#x27;../../../../packages/spark-core/es5/sparkCorePrerender&#x27;;
+
+  sparkCorePrerender({
+    typeConfig: {
+      bodyFontName: &#x27;Your Font Name&#x27;,
+      headingFontName: &#x27;Your Font Name&#x27;,
+      alternateFontName: &#x27;Your Font Name&#x27;,
+    },
+  });
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
+            <div class="drizzle-c-Preview__code">
+              <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard" type="button">
+                Copy
+              </button>
+              <pre class="sprk-u-ptl">
+                <code class="drizzle-c-Preview__markup language-markup" id="clipboard">
+&#x3C;head&#x3E;
+  &#x3C;script src=&#x22;dist/my-application-prerender.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/head&#x3E;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="sprk-u-mbm">
+          <p class="sprk-u-mbn"><strong>Import Spark Core JS</strong></p>
+          <p>Your application will need to import the JS in it's build step. The output of which will need to be linked
+            to in the DOM. This is typically done just before the closing &lt;body&gt; tag.</p>
+          <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
+            <div class="drizzle-c-Preview__code">
+              <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard" type="button">
+                Copy
+              </button>
+              <pre class="sprk-u-ptl">
+                <code class="drizzle-c-Preview__markup language-js" id="clipboard">
+@import sparkCore from '@sparkdesignsystem/spark-core/spark-core'
+sparkCore();
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
+            <div class="drizzle-c-Preview__code">
+              <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard" type="button">
+                Copy
+              </button>
+              <pre class="sprk-u-ptl">
+                <code class="drizzle-c-Preview__markup language-markup" id="clipboard">
+&#x3C;body&#x3E;
+  &#x3C;script src=&#x22;dist/my-application-bundle.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/body&#x3E;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </li>
+
+        <li class="sprk-u-mbm">
+          <p class="sprk-u-mbn"><strong>Denote main layout container</strong></p>
+          <p>You'll need to apply a data attribute
+            <span class="drizzle-c-Command sprk-u-mhs">
+              <code class="drizzle-CodeHighlight sprk-u-VerticalAlign--middle">data-sprk-main</code>
+            </span> to your applications main content container. This is typically done on
+          the application's &lt;main&gt; element.</p>
+
+          <div class="sprk-b-TypeBodyTwo drizzle-c-Preview">
+            <div class="drizzle-c-Preview__code">
+              <button class="drizzle-b-Button drizzle-c-Preview__btn" data-clipboard-target="#clipboard-2" type="button">
+                Copy
+              </button>
+              <pre class="sprk-u-ptl">
+                <code class="drizzle-c-Preview__markup language-markup" id="clipboard-2">
+  &#x3C;html&#x3E;
+    &#x3C;head&#x3E;&#x3C;/head&#x3E;
+    &#x3C;body&#x3E;
+      &#x3C;main data-sprk-main&#x3E;
+        &#x3C;header&#x3E;
+          &#x3C;h1&#x3E;My Heading&#x3C;/h1&#x3E;
+        &#x3C;/header&#x3E;
+        &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias at commodi cum eos error harum
+          aiores mollitia natus nulla, porro possimus quidem quos sapiente sequi sint vel vitae?&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias at commodi cum eos error harum
+          aiores mollitia natus nulla, porro possimus quidem quos sapiente sequi sint vel vitae?&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias at commodi cum eos error harum
+          aiores mollitia natus nulla, porro possimus quidem quos sapiente sequi sint vel vitae?&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/body&#x3E;
+  &#x3C;/html&#x3E;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <h2 class="drizzle-b-h2 sprk-u-mbl">Detailed Instructions</h2>
+  <div class="drizzle-o-ContentGrouping">
+    <h3 class="drizzle-b-h3">Installing from NPM</h3>
+      <div class="drizzle-o-ContentGrouping">
+        <p>Spark is divided into one core package and several 'extras' packages. The core package contains components that
+        most projects will need, whereas extras contain components that are less common.</p>
+      </div>
+      <div class="drizzle-o-ContentGrouping drizzle-u-pll">
+        <h4 class="drizzle-b-h4">Core</h4>
+        <p>To install Spark-Core, run the following command:</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">npm install --save-dev @sparkdesignsystem/spark-core</code>
+        </div>
+      </div>
+    <div class="drizzle-o-ContentGrouping drizzle-u-pll">
+      <h4 class="drizzle-b-h4">Extras</h4>
+      <p>For installing Spark's extras patterns, see the installation information on the extra's component page. The available
+      extras components are:</p>
+      <ul class="drizzle-b-List drizzle-b-List--spacing-s drizzle-b-List--nested">
+        <li>
+          <a class="drizzle-b-Link" href="{{@root.baseurl}}/patterns/components/awards.html">
+            Award
+          </a>
+        </li>
+        <li>
+          <a class="drizzle-b-Link" href="{{@root.baseurl}}/patterns/components/card.html">
+            Card
+          </a>
+        </li>
+        <li>
+          <a class="drizzle-b-Link" href="{{@root.baseurl}}/patterns/components/dictionary.html">
+            Dictionary
+          </a>
+        </li>
+        <li>
+          <a class="drizzle-b-Link" href="{{@root.baseurl}}/patterns/components/highlight-board.html">
+            Highlight Board
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <h3 class="drizzle-b-h3">Styles</h3>
+    <p>Spark assumes your project is using
+      <a class="drizzle-b-Link" href="https://sass-lang.com/">Sass</a> for styling. You'll need to incorporate the
+    spark-core scss file into your sass build, before any of your application's scss is imported.</p>
+    <div class="drizzle-c-Command sprk-u-mbm">
+      <code class="drizzle-CodeHighlight">
+        @import "node_modules/@sparkdesignsystem/spark-core/spark-core</code>
+    </div>
+    <p>Spark's style values are mostly overridable. See the variable section on each component's documentation page for
+      available options.</p>
+    <p>Any component variables that you want to override need to be placed <strong>before</strong>
+      the spark-core import statement.</p>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <h3 class="drizzle-b-h3">Denoting Main Layout</h3>
+    <p>data-sprk-main</p>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
     <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
-    <h3 class="drizzle-b-h3">Vanilla</h3>
 
     <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
       <li class="sprk-u-mvm">

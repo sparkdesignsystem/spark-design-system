@@ -169,8 +169,8 @@ $color-body-four: $black !default;
 $line-height-body-four: 1.6 !default;
 $font-weight-body-four: normal !default;
 // Font Stack
-$using-webfont-body: true !default;
-$using-webfont-heading: true !default;
+$using-webfont-body: false !default;
+$using-webfont-heading: false !default;
 $using-webfont-alternate: false !default;
 $body-font-name: FallSans !default;
 $body-font-src: url('') !default;

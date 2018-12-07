@@ -2,6 +2,10 @@
   padding: $space-inset-m !important;
 }
 
+.#{$app-namespace}-u-pll {
+  padding-left: $space-l !important;
+}
+
 .#{$app-namespace}-u-Overflow--hidden {
   overflow: hidden !important;
 }
