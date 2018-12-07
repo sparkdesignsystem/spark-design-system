@@ -1,4 +1,4 @@
-import '../node_modules/dom-slider/src/dom-slider'; // TODO: put it back to just dom-slider after its dist is updated to 1.5.2
+import 'dom-slider';
 import getElements from '../utilities/getElements';
 
 /**
