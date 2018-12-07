@@ -518,3 +518,10 @@ $spinner-color: $white !default;
 // Tabbed Navigation
 ///
 $tab-navigation-breakpoint: 46rem !default;
+$tab-navigation-btn-color: $black !default;
+$tab-navigation-btn-bg-color: $gray !default;
+$tab-navigation-btn-border-top: 3px solid $gray !default;
+$tab-navigation-btn-hover-border-top: 3px solid $red !default;
+$tab-navigation-btn-active-color: $red !default;
+$tab-navigation-btn-active-border-top: 3px solid $red !default;
+$tab-navigation-btn-active-bg-color: $white !default;
