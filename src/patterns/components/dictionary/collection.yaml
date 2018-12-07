@@ -23,4 +23,4 @@ variableTable:
     description: Sets the breakpoint for the dictionary.
 classTable:
   .sprk-c-Dictionary--striped:
-    description: Adds a background color to every other key value pair (even).
+    description: Adds a background color to every even-numbered row in the dictionary.
