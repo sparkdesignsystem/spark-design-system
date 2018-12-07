@@ -1,0 +1,187 @@
+---
+title: HTML
+order: 1
+---
+<div class=" drizzle-o-Layout__header">
+  <h1 class="drizzle-b-h1">Getting Started</h1>
+</div>
+<div class="drizzle-o-Layout__content drizzle-b-LongFormText">
+  <div class="drizzle-o-ContentGrouping">
+    <h2 class="drizzle-b-h2">Welcome</h2>
+    <p>This getting started guide is intended for developers. See below for
+      instructions on how to install Spark and bring it into your existing
+      build.</p>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <h2 class="drizzle-b-h2">Requirements</h2>
+    <p>Spark assumes your project is using <a class="drizzle-b-Link"
+      href="https://sass-lang.com/">Sass</a> for styling and
+      that your project has a JavaScript build step that will transpile ES6+
+      and polyfill appropriately for browser support.</p>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
+    <h3 class="drizzle-b-h3">Vanilla</h3>
+
+    <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
+      <li class="sprk-u-mvm">
+        <p>Install the npm package.</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            npm install --save-dev @sparkdesignsystem/spark-core</code>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Import the Sass setup file in your Sass build. This will bring all
+          Spark-Core Sass patterns into your build. The Spark classes are
+          namespaced so that they don't affect any existing css.</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
+          </code>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Spark has two JavaScript files that need to be incorporated into your build in order for Spark's behavior to
+        work.</p>
+        <ul class="drizzle-b-List drizzle-b-List--nested">
+          <li><p><strong>spark-core-prerender.js</strong> - This file detects if JavaScript is loaded and also sets up
+            the type loader. It needs to execute it's code before the page is rendered and therefore needs to be
+            imported in the head of the document.</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                import sparkCorePrerender from  &quot;@sparkdesignsystem/spark-core/spark-core-prerender&quot;;
+              </code>
+            </div>
+          </li>
+          <li><p><strong>spark-core.js</strong> - This file contains the bulk of Spark's behavior and can be loaded
+            after the page is rendered, this is best done before the closing body tag.</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+              </code>
+            </div>
+          </li>
+        </ul>
+        <p>There are also ES5 versions if preferred. They're located in @sparkdesignsystem/spark-core/es5.</p>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Init the Spark Core JS, passing in a config object (optional).</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            sparkCorePrerender({ //config, see below });
+          </code>
+        </div>
+        <div class="sprk-u-mvs">
+          <p class="sprk-u-mbm">See below for available configuration options:</p>
+          <table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="sprk-u-FontWeight--bold">typeConfig</td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>
+          Import the post-render ES6 setup file in your JS build. This is best done before the
+          closing body tag. This will bring all the Spark-Core JS into your build. There is
+          also an ES5 version if preferred. It's located in @sparkdesignsystem/spark-core/es5.
+        </p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+          </code>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Init the Spark Core JS, passing in a config object (optional).</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            sparkCore({ //config, see below });
+          </code>
+        </div>
+        <div class="sprk-u-mvs">
+          <p class="sprk-u-mbm">See below for available configuration options:</p>
+          <table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="sprk-u-FontWeight--bold">datePickerConfig</td>
+              <td>Exposes configuration provided by tiny-date-picker, see
+                <a href="https://github.com/chrisdavies/tiny-date-picker" class="drizzle-b-Link">github</a> for
+                documentation.</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Spark does not provide icons directly. What you see below are proprietary icons in use by Quicken Loans. To supply
+          your own icon set, you need to import an svg that contains symbols for the ids referenced on the icon page. This symbol file
+          should occur in the DOM before the first use element.</p>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>The main content area of your site will also need to have a data attribute set:</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            data-sprk-main
+          </code>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <h2 class="drizzle-b-h2">Spark Extras</h2>
+
+    <ul class="drizzle-b-List drizzle-b-List--spacing-m drizzle-b-List--nested">
+      <li>
+        <p>Install the npm package.</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">npm install --save-dev
+            @sparkdesignsystem/spark-extras</code>
+        </div>
+      </li>
+      <li>
+        <p>Import any of the Spark-Extras Sass patterns that you need.</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            @import &quot;node_modules/@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
+          </code>
+        </div>
+      </li>
+      <li>
+        <p>Import any of the Spark-Extras JS patterns that you need.</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            import &lt;pattern-name&gt; from &quot;@sparkdesignsystem/spark-extras/components/&lt;pattern-name&gt;/&lt;pattern-name&gt;&quot;;
+          </code>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

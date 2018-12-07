@@ -28,9 +28,9 @@
     {{!-- Getting Started --}}
     <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Getting Started</h5>
     <ul class="drizzle-c-Navigation__menu">
-      {{#each (pages "gettingstarted")}}
+      {{#each (pages "gettingstarted" sortby="order")}}
         <li>
-          {{> nav-item label=data.title}}
+          {{> nav-item label=data.title }}
         </li>
       {{/each}}
     </ul>
