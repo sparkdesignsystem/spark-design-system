@@ -6,7 +6,26 @@ information:
   - Title content of the Accordion can wrap, but it is recommended that it is short and to the point.
   - Accordions take up 100% width of their parent container until they hit their max width of 850px.
 restrictions:
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc).
 sparkPackageCore: true
+variableTable:
+  $accordion-max-width:
+    default: 53.125rem
+    description: Sets the maximum width of the accordion element.
+  $accordion-border:
+    default: 1px solid $black-tint-25
+    description: Sets the border used in the accordion.
+  $accordion-border-open:
+    default: 1px solid $black
+    description: Sets the border used in the accordion items when they are open.
+  $accordion-summary-color:
+    default: $black
+    description: Sets the font color of the item summary.
+  $accordion-summary-active-color:
+    default: $red
+    description: Sets the color of the icon in the summary when the accordion item is open or hovered.
+classTable:
+  .sprk-c-Accordion__item--open:
+    description: Needed for items to be open. It adds style to opened accordion items.

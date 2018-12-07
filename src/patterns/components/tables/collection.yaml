@@ -11,8 +11,110 @@ information:
     component on narrow viewports, you can switch to an
     alternate component.
 restrictions:
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("table-primary-1", "table-primary-2", "table-secondary-1", etc).
 sparkPackageCore: true
-hasProperties: true
+variableTable:
+  $table-padding-small:
+    default: $space-inset-s
+    description: The background color of the promo.
+  $table-padding-medium:
+    default: $space-inset-m
+    description: The border style of the border promo variant.
+  $table-padding-large:
+    default: $space-inset-l
+    description: The maximum width of the promo.
+  $table-cell-alignment:
+    default: center
+    description: The breakpoint for large viewport styles.
+  $table-stripe-color:
+    default: $gray
+    description: The maximum height of the image on narrow viewports.
+  $table-row-border-width:
+    default: 1px
+    description: The width of the bottom border on table rows.
+  $table-row-border-style:
+    default: solid
+    description: The style of the bottom border on table rows.
+  $table-row-border-color:
+    default: $gray
+    description: The color of the bottom border on table rows.
+  $table-header-background-color:
+    default: $black
+    description: The background color of the table header.
+  $table-header-font-color:
+    default: $white
+    description: The font color of the table header.
+  $table-header-font-size:
+    default: $font-size-body-one
+    description: The font size of the table header.
+  $table-header-border-spacing:
+    default: 2px
+    description: The width of the right border on the table header.
+  $table-header-border-color:
+    default: $white
+    description: The color of the right border on the table header.
+  $table-empty-heading-background-color:
+    default: $white
+    description: The background color of empty table headers.
+  $table-secondary-header-background-color:
+    default: $white
+    description: The background color of secondary table headers.
+  $table-secondary-header-font-color:
+    default: $black
+    description: The font color of secondary table headers.
+  $table-secondary-header-text-alignment:
+    default: left
+    description: The text alignment of secondary table headers.
+  $table-secondary-cell-text-alignment:
+    default: left
+    description: The text alignment of secondary table cells.
+  $table-secondary-header-border-spacing:
+    default: 0
+    description: The width of the right border on the secondary table header.
+  $table-secondary-header-border-color:
+    default: 0
+    description: The color of the right border on the secondary table header.
+  $table-grouped-header-background-color:
+    default: $black
+    description: The background color of the header in the grouped columns table variant.
+  $table-grouped-header-font-size:
+    default: $font-size-body-four
+    description: The font size of the header in the grouped columns table variant.
+  $table-grouped-header-font-weight:
+    default: normal
+    description: The font weight of the header in the grouped columns table variant.
+  $table-secondary-row-comp-row-spacing:
+    default: 0 15px
+    description: Sets the distance between the borders of adjacent cells in the secondary row comparison table (horizontal | vertical).
+  $table-secondary-row-comp-border-width:
+    default: 1px
+    description: The width of the borders in the secondary row comparison table cells.
+  $table-secondary-row-comp-border-style:
+    default: solid
+    description: The style of the borders in the secondary row comparison table cells.
+  $table-secondary-row-comp-border-color:
+    default: $gray
+    description: The color of the borders in the secondary row comparison table cells.
+classTable:
+  .sprk-b-Table--secondary:
+    description: Sets styles for the secondary table variant.
+  .sprk-b-Table--grouped-columns:
+    description: Sets styles for the grouped column table variant.
+  .sprk-b-Table--row-comparison:
+    description: Sets styles for the row comparison table variant.
+  .sprk-b-Table--secondary-row-comparison:
+    description: Sets styles for the secondary row comparison table variant.
+  .sprk-b-Table--spacing-small:
+    description: Sets the spacing of the table to the small table spacing variable.
+  .sprk-b-Table--spacing-medium:
+    description: Sets the spacing of the table to the medium table spacing variable.
+  .sprk-b-Table--spacing-large:
+    description: Sets the spacing of the table to the large table spacing variable.
+  .sprk-b-TableHighlight:
+    description: Sets a highlight style on a specific table cell.
+  .sprk-b-Numerical:
+    description: To be used on a specific cell. Sets the text alignment to the right.
+  .sprk-b-Table--striped:
+    description: Adds a background color to alternating rows. This can improve the readability of wide tables.

@@ -60,7 +60,7 @@
   border-collapse: separate;
   border-top: 0;
   border-bottom: 0;
-  border-spacing: 0 $table-secondary-row-comp-row-spacing;
+  border-spacing: $table-secondary-row-comp-row-spacing;
   margin-top: -$table-secondary-row-comp-row-spacing;
   margin-bottom: -$table-secondary-row-comp-row-spacing;
 }

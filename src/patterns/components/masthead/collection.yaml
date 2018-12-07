@@ -13,7 +13,65 @@ restrictions:
     To get the correct setting for your needs, put your logo in the Masthead and then grab the total height of the
     Masthead (on a narrow viewport) with your logo in it. Set
     $mobile-masthead-height to that height.
-  - You must duplicate your navigational items in Masthead navigation HTML and in the Masthead narrow
+  - You must duplicate your navigational items in the Masthead navigation HTML and in the Masthead narrow
     navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
 sparkPackageCore: true
 hasAngularInfo: true
+variableTable:
+  $masthead-menu-icon-width:
+    default: $icon-l
+    description: Sets the narrow viewport menu icon width.
+  $masthead-menu-icon-height:
+    default: $icon-l
+    description: Sets the narrow viewport menu icon height.
+  $masthead-bg-color:
+    default: $white
+    description: Sets the background color of the masthead.
+  $masthead-content-padding:
+    default: $space-m
+    description: Sets the padding of the masthead content, menu, and branding sections.
+  $masthead-border-bottom-size:
+    default: 1px
+    description: Sets the size of the bottom border on the masthead.
+  $masthead-border-bottom:
+    default: $masthead-border-bottom-size solid $gray
+    description: Sets the border on the masthead.
+  $masthead-breakpoint:
+    default: 54rem
+    description: Sets the point at which the masthead navigation switches from narrow viewport style (shown on menu tap/click) to large viewport style (shown all the time).
+  $masthead-column-width:
+    default: 89rem
+    description: Sets the maximum width of the masthead.
+  $big-nav-column-width:
+    default: 64rem
+    description: Sets the maximum width of the big navigation items in the navigation bar.
+  $big-nav-bg:
+    default: $gray-tint-25
+    description: Sets the background color of the big navigation bar.
+  $big-nav-active-color:
+    default: $red
+    description: Sets the text and underline color of the active big navigation item.
+  $masthead-logo-max-width:
+    default: 192px
+    description: Sets the maximum width of the logo.
+  $masthead-logo-min-width:
+    default: 174px
+    description: Sets the minimum width of the logo.
+  $mobile-masthead-height:
+    default: 174px
+    description: This is the height of the masthead on small viewports and is used to calculate how far from the top the narrow navigation items should be displayed.
+  $narrow-nav-left-border:
+    default: 5px solid $red
+    description: Sets the left border of narrow navigation items that are active.
+  $narrow-nav-link-font-weight:
+    default: normal
+    description: Sets the font weight of narrow navigation items.
+classTable:
+  .sprk-c-Masthead--open:
+    description: Sets styles for the masthead when it is open.
+  .sprk-c-Masthead__link--big-nav:
+    description: Adds an underline on links used in the big navigation bar.
+  .sprk-c-Masthead__big-nav-item--active:
+    description: Adds an active state color and bold font weight to active big navigation items.
+  .sprk-c-Masthead__big-nav-item--open:
+    description: Add open styles to open big navigation items.

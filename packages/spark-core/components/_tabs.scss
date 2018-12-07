@@ -2,7 +2,7 @@
 // Tabbed Navigation
 // ==================================================================
 .sprk-c-Tabs__buttons {
-  color: $black;
+  color: $tab-navigation-btn-color;
   display: block;
   border-bottom: 0;
   margin-bottom: $space-m;
@@ -15,9 +15,9 @@
 
 .sprk-c-Tabs__button {
   -webkit-appearance: none;
-  background-color: $gray;
+  background-color: $tab-navigation-btn-bg-color;
   border: 0;
-  border-top: 3px solid $gray;
+  border-top: $tab-navigation-btn-border-top;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -34,10 +34,10 @@
 .sprk-c-Tabs__button--active,
 .sprk-c-Tabs__button:focus {
   background-color: $white;
-  border-top: 3px solid $red;
-  color: $red;
+  border-top: $tab-navigation-btn-active-border-top;
+  color: $tab-navigation-btn-active-color;
 }
 
 .sprk-c-Tabs__button:hover {
-  border-top: 3px solid $red;
+  border-top: $tab-navigation-btn-hover-border-top;
 }

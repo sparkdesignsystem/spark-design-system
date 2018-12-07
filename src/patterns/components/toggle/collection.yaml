@@ -21,6 +21,10 @@ restrictions:
   - Content length inside the Toggle does not have a limit, but shouldn't exceed a reasonable
     amount.
   - The title of the Toggle doesn't have a specific maximum length and can wrap if needed.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).
+variableTable:
+  $toggle-transistion-timing:
+    default: 0.3s ease
+    description: The transition timing for the rotation of the icon when the toggle is opened.

@@ -7,7 +7,20 @@ restrictions:
    - Tooltips or additional text is not supported.
    - The length of keys is limited to two lines of wrapped text.
    - The length of values is not limited, but will wrap to the next line if there's no room.
-   - The data-id property is provided as a hook for automated tools. If you have multiple 
-      instances of the same variant of a component on the same page, make sure each instance 
+   - The data-id property is provided as a hook for automated tools. If you have multiple
+      instances of the same variant of a component on the same page, make sure each instance
       has a unique data-id property ("dictionary-1", "dictionary-2", "dictionary-1", etc).
 sparkPackageExtras: true
+variableTable:
+  $dictionary-border:
+    default: 1px solid $gray
+    description: Sets the border surrounding the dictionary.
+  $dictionary-stripe-color:
+    default: $gray
+    description: Sets the background color of the key value pairs in the striped variant.
+  $dictionary-breakpoint:
+    default: 38.4375rem
+    description: Sets the breakpoint for the dictionary.
+classTable:
+  .sprk-c-Dictionary--striped:
+    description: Adds a background color to every other key value pair (even).
