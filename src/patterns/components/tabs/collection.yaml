@@ -9,6 +9,34 @@ restrictions:
   - Tabbed Navigation needs to have at least two tabs.
   - There should not be more than seven tabs in any single Tabbed Navigation.
   - Tab label content should not exceed a reasonable length.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).
+variableTable:
+  $tab-navigation-breakpoint:
+    default: 46rem
+    description: The breakpoint at which the tabs go from stacked layout to side by side.
+  $tab-navigation-btn-color:
+    default: $black
+    description: The tab button text color.
+  $tab-navigation-btn-bg-color:
+    default: $gray
+    description: The background color of the tab buttons.
+  $tab-navigation-btn-border-top:
+    default: 3px solid $gray
+    description: The border on the top of the button tabs.
+  $tab-navigation-btn-hover-border-top:
+    default: 3px solid $red
+    description: The border on the top of the button tabs on hover.
+  $tab-navigation-btn-active-color:
+    default: $red
+    description: The button tab text color of the currently active tab.
+  $tab-navigation-btn-active-border-top:
+    default: 3px solid $red
+    description: The button tab top border of the currently active tab.
+  $tab-navigation-btn-active-bg-color:
+    default: $gray
+    description: The button tab background color of the currently active tab.
+classTable:
+  sprk-c-Tabs__button--active:
+    description: Apply to the currently active tab to set active state styles.
