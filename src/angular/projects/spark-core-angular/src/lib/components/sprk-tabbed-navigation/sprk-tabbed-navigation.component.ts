@@ -14,7 +14,7 @@ import {
   resetTabs,
   retreatTab,
   setActiveTab
-} from '@sparkdesignsystem/spark-core/es5/tabs';
+} from '@sparkdesignsystem/spark-core';
 import * as _ from 'lodash';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
@@ -28,7 +28,8 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
       </div>
       <ng-content select="[sprkTabbedNavigationPane]"></ng-content>
       <ng-content></ng-content>
-    </div>`
+    </div>
+  `
 })
 export class SparkTabbedNavigationComponent implements AfterContentInit {
   @Input()
