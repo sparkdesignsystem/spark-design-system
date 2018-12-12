@@ -3,20 +3,6 @@
 // ==================================================================
 
 //
-// Namespaces
-///
-$scales-namespace: 'sprk-';
-$scales-base-class-namespace: 'b-';
-$scales-components-class-namespace: 'c-';
-$scales-objects-class-namespace: 'o-';
-$scales-utilities-class-namespace: 'u-';
-
-//
-// Reset
-///
-$selection-bg-color: $blue !default;
-
-//
 // Spacing
 ///
 $space-inset-xs: 4px 4px 4px 4px !default;
@@ -48,11 +34,7 @@ $space-stack-xl: 0 0 64px 0 !default;
 
 // Global Spacing Utilities
 $space-xs: 4px !default;
-$space-s: 8px !default;
-$space-m: 16px !default;
-$space-l: 32px !default;
 $space-xl: 64px !default;
-$space-h: $space-xl !default;
 
 //
 // Icons
@@ -70,11 +52,6 @@ $icon-custom-stroke-width-l: 2px !default;
 $icon-custom-stroke-width-xl: 3px !default;
 
 //
-// Layout
-//
-$centered-column-width: 64rem !default;
-
-//
 // Layers
 //
 $layer-height-xs: 1 !default;
@@ -82,16 +59,6 @@ $layer-height-s: 1000 !default;
 $layer-height-m: 2000 !default;
 $layer-height-l: 3000 !default;
 $layer-height-xl: 99999 !default;
-
-//
-// Horizontal List
-//
-$horizontal-list-spacing: $space-m !default;
-$horizontal-list-spacing-tiny: $space-xs !default;
-$horizontal-list-spacing-small: $space-s !default;
-$horizontal-list-spacing-medium: $space-m !default;
-$horizontal-list-spacing-large: $space-l !default;
-$horizontal-list-spacing-huge: $space-xl !default;
 
 //
 // Pagination
@@ -179,54 +146,17 @@ $body-bold-font-src: url('') !default;
 $body-bold-font-weight: bold !default;
 $heading-font-name: FallSans !default;
 $heading-font-src: url('') !default;
-$heading-font-weight: normal !default;
 $heading-bold-font-src: url('') !default;
 $heading-bold-font-weight: bold !default;
 $alternate-font-name: FallSans-Regular !default;
 $alternate-font-src: url('') !default;
 $alternate-font-weight: normal !default;
-$system-font-stack: null !default;
-$system-body-fonts: false !default;
-$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
 $alternate-font-stack: $alternate-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$system-heading-fonts: false !default;
+sans-serif !default;
 
 // Line-height Collision
 $line-height-collision-top-crop: 5;
 $line-height-collision-bottom-crop: 5;
-
-// Set Scales vars
-$h1-size: $font-size-display-two !default;
-$h1-color: $color-display-two !default;
-$h1-line-height: $line-height-display-two !default;
-$h1-weight: $font-weight-display-two !default;
-$h2-size: $font-size-display-three !default;
-$h2-color: $color-display-three !default;
-$h2-line-height: $line-height-display-three !default;
-$h2-weight: $font-weight-display-three !default;
-$h3-size: $font-size-display-four !default;
-$h3-color: $color-display-four !default;
-$h3-line-height: $line-height-display-four !default;
-$h3-weight: $font-weight-display-four !default;
-$h4-size: $font-size-display-five !default;
-$h4-color: $color-display-five !default;
-$h4-line-height: $line-height-display-five !default;
-$h4-weight: $font-weight-display-five !default;
-$h5-size: $font-size-display-six !default;
-$h5-color: $color-display-six !default;
-$h5-line-height: $line-height-display-six !default;
-$h5-weight: $font-weight-display-six !default;
-$h6-size: $font-size-body-two !default;
-$h6-color: $color-body-two !default;
-$h6-line-height: $line-height-body-two !default;
-$h6-weight: $font-weight-body-two !default;
-$base-font-size: $font-size-body-two !default;
-$base-line-height: $line-height-body-two !default;
-$font-size-unit: rem !default;
 
 //
 // Consistent Style Vars
@@ -269,25 +199,9 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 //
 // Buttons
 ///
-$btn-background-color: $red !default;
 $btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
-$btn-border-style: solid !default;
-$btn-border-color: $btn-background-color;
-$btn-border-width: 2px;
-$btn-font-weight: bold;
-$btn-text-color: $white !default;
-$btn-border-radius: 1px !default;
-$btn-hover-background-color: $red-mid !default;
-$btn-hover-text-color: $white !default;
-$btn-padding: $space-inset-short-l !default;
 $btn-breakpoint: 30rem !default;
 $btn-transition-speed: 0.3s !default;
-// Disabled
-$btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray !default;
-$btn-disabled-text-color: $black-tint-50 !default;
-$btn-disabled-border-width: $btn-border-width !default;
-$btn-disabled-border-color: transparent !default;
 // Secondary
 $btn-secondary-background-color: transparent !default;
 $btn-secondary-border-color: $black !default;
@@ -316,28 +230,11 @@ $link-visited-color: $black !default;
 $link-font-weight: bold !default;
 
 //
-// Lists
-///
-$list-margin-left: $space-m !default;
-
-//
 // Forms
 ///
 $input-gray-medium: #5a5a5a !default;
 $monetary-symbol: '$' !default;
 $input-placeholder-color: $gray !default;
-$input-readonly-text-color: $gray !default;
-$fieldset-padding: 0 !default;
-$text-input-border-radius: 0 !default;
-$text-input-border-color: $black !default;
-$text-input-border-width: 0 !default;
-$input-container-margin-bottom: $space-m !default;
-$input-disabled-background-color: $gray !default;
-$input-disabled-border-color: $black !default;
-$input-disabled-text-color: $input-gray-medium !default;
-$helper-text-hidden: false !default;
-$text-input-padding: 3px $space-s !default;
-$input-readonly-border-color: $black !default;
 $input-box-shadow: 0 1px 0 0 $black !default;
 $input-error-box-shadow: 0 3px 0 0 $yellow !default;
 $error-icon-size: 1.25rem !default;
@@ -362,15 +259,6 @@ $label-offset-y: -53px !default;
 $label-offset-y-open: -31px !default;
 $label-shrink-scale: 0.82 !default;
 $fieldset-padding: 0 !default;
-
-//
-// Tables
-///
-$table-padding-small: $space-inset-s !default;
-$table-padding-medium: $space-inset-m !default;
-$table-padding-large: $space-inset-l !default;
-$table-cell-alignment: center !default;
-$table-stripe-color: $gray !default;
 
 // Primary
 $table-row-border-width: 1px !default;
@@ -403,37 +291,9 @@ $table-secondary-row-comp-border-style: solid !default;
 $table-secondary-row-comp-border-color: $gray !default;
 
 //
-// Box
-///
-$box-padding-tiny: $space-inset-xs !default;
-$box-padding-small: $space-inset-s !default;
-$box-padding: $space-inset-m !default;
-$box-padding-large: $space-inset-l !default;
-$box-padding-huge: $space-inset-xl !default;
-
-//
-// Media
-//
-$media-gutter-tiny: $space-xs !default;
-$media-gutter-small: $space-s !default;
-$media-gutter: $space-m !default;
-$media-gutter-large: $space-l !default;
-$media-gutter-huge: $space-xl !default;
-
-//
 // Stack Object
 //
-$stack-spacing-tiny: $space-xs !default;
-$stack-spacing-small: $space-s !default;
-$stack-spacing-medium: $space-m !default;
-$stack-spacing-large: $space-l !default;
-$stack-spacing-huge: $space-xl !default;
 $split-breakpoint-xxs: 20rem !default;
-$split-breakpoint-xs: 30rem !default;
-$split-breakpoint-s: 42.5rem !default;
-$split-breakpoint-m: 55rem !default;
-$split-breakpoint-l: 67.5rem !default;
-$split-breakpoint-xl: 80rem !default;
 
 //
 // Accordions
@@ -494,3 +354,158 @@ $spinner-color: $white !default;
 // Tabbed Navigation
 ///
 $tab-navigation-breakpoint: 46rem !default;
+
+//
+//
+//
+// Override Scales vars
+//
+//
+//
+// Namespaces
+///
+$scales-namespace: 'sprk-';
+$scales-base-class-namespace: 'b-';
+$scales-components-class-namespace: 'c-';
+$scales-objects-class-namespace: 'o-';
+$scales-utilities-class-namespace: 'u-';
+
+//
+// Spacing
+$space-s: 8px !default;
+$space-m: 16px !default;
+$space-l: 32px !default;
+$space-h: $space-xl !default;
+
+// Typography
+$h1-size: $font-size-display-two !default;
+$h1-color: $color-display-two !default;
+$h1-line-height: $line-height-display-two !default;
+$h1-weight: $font-weight-display-two !default;
+$h2-size: $font-size-display-three !default;
+$h2-color: $color-display-three !default;
+$h2-line-height: $line-height-display-three !default;
+$h2-weight: $font-weight-display-three !default;
+$h3-size: $font-size-display-four !default;
+$h3-color: $color-display-four !default;
+$h3-line-height: $line-height-display-four !default;
+$h3-weight: $font-weight-display-four !default;
+$h4-size: $font-size-display-five !default;
+$h4-color: $color-display-five !default;
+$h4-line-height: $line-height-display-five !default;
+$h4-weight: $font-weight-display-five !default;
+$h5-size: $font-size-display-six !default;
+$h5-color: $color-display-six !default;
+$h5-line-height: $line-height-display-six !default;
+$h5-weight: $font-weight-display-six !default;
+$h6-size: $font-size-body-two !default;
+$h6-color: $color-body-two !default;
+$h6-line-height: $line-height-body-two !default;
+$h6-weight: $font-weight-body-two !default;
+$base-font-size: $font-size-body-two !default;
+$base-line-height: $line-height-body-two !default;
+$font-size-unit: rem !default;
+$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$heading-font-weight: normal !default;
+$helper-text-hidden: false !default;
+$system-body-fonts: false !default;
+$system-font-stack: null !default;
+$system-heading-fonts: false !default;
+
+//
+// Box
+///
+$box-padding-tiny: $space-inset-xs !default;
+$box-padding-small: $space-inset-s !default;
+$box-padding: $space-inset-m !default;
+$box-padding-large: $space-inset-l !default;
+$box-padding-huge: $space-inset-xl !default;
+
+// Buttons
+$btn-background-color: $red !default;
+$btn-border-color: $btn-background-color;
+$btn-border-radius: 1px !default;
+$btn-border-style: solid !default;
+$btn-border-width: 2px;
+$btn-font-weight: bold;
+$btn-hover-background-color: $red-mid !default;
+$btn-hover-text-color: $white !default;
+$btn-padding: $space-inset-short-l !default;
+$btn-text-color: $white !default;
+// Disabled
+$btn-disabled-opacity: 1 !default;
+$btn-disabled-background-color: $gray !default;
+$btn-disabled-text-color: $black-tint-50 !default;
+$btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-border-color: transparent !default;
+
+//
+// Layout
+//
+$centered-column-width: 64rem !default;
+$fieldset-padding: 0 !default;
+
+//
+// Lists
+///
+$list-margin-left: $space-m !default;
+
+//
+// Horizontal List
+//
+$horizontal-list-spacing: $space-m !default;
+$horizontal-list-spacing-tiny: $space-xs !default;
+$horizontal-list-spacing-small: $space-s !default;
+$horizontal-list-spacing-medium: $space-m !default;
+$horizontal-list-spacing-large: $space-l !default;
+$horizontal-list-spacing-huge: $space-xl !default;
+
+// Inputs
+$input-container-margin-bottom: $space-m !default;
+$input-disabled-background-color: $gray !default;
+$input-disabled-border-color: $black !default;
+$input-disabled-text-color: $input-gray-medium !default;
+$input-readonly-border-color: $black !default;
+$input-readonly-text-color: $gray !default;
+$text-input-border-radius: 0 !default;
+$text-input-border-color: $black !default;
+$text-input-border-width: 0 !default;
+$text-input-padding: 3px $space-s !default;
+
+//
+// Media
+//
+$media-gutter-tiny: $space-xs !default;
+$media-gutter-small: $space-s !default;
+$media-gutter: $space-m !default;
+$media-gutter-large: $space-l !default;
+$media-gutter-huge: $space-xl !default;
+
+//
+// Reset
+///
+$selection-bg-color: $blue !default;
+
+// Stack
+$split-breakpoint-xs: 30rem !default;
+$split-breakpoint-s: 42.5rem !default;
+$split-breakpoint-m: 55rem !default;
+$split-breakpoint-l: 67.5rem !default;
+$split-breakpoint-xl: 80rem !default;
+$stack-spacing-tiny: $space-xs !default;
+$stack-spacing-small: $space-s !default;
+$stack-spacing-medium: $space-m !default;
+$stack-spacing-large: $space-l !default;
+$stack-spacing-huge: $space-xl !default;
+
+//
+// Tables
+///
+$table-cell-alignment: center !default;
+$table-padding-small: $space-inset-s !default;
+$table-padding-medium: $space-inset-m !default;
+$table-padding-large: $space-inset-l !default;
+$table-stripe-color: $gray !default;
