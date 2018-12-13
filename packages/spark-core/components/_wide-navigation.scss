@@ -2,38 +2,38 @@
 // Navigation
 // ==================================================================
 .sprk-c-WideNavigation {
-  background-color: $white;
+  background-color: $spark-white;
   display: flex;
   list-style-type: none;
   position: relative;
   width: 100%;
   margin: 0 auto;
-  max-width: $masthead-column-width;
+  max-width: $spark-masthead-column-width;
 }
 
 .sprk-c-WideNavigation__sub-menu-container {
   position: absolute;
-  z-index: $layer-height-m;
+  z-index: $spark-layer-height-m;
   width: 100%;
 }
 
 .sprk-c-WideNavigation--sub {
-  border: 2px solid $gray;
-  box-shadow: $btn-shadow;
+  border: 2px solid $spark-gray;
+  box-shadow: $spark-btn-shadow;
   display: block;
-  margin-top: $space-s;
+  margin-top: $spark-space-s;
 }
 
 .sprk-c-WideNavigation__item--sub {
-  background-color: $white;
-  line-height: $space-m;
+  background-color: $spark-white;
+  line-height: $spark-space-m;
   text-align: left;
   width: 100%;
 }
 
 .sprk-c-WideNavigation__item {
   flex: auto;
-  line-height: $space-l;
+  line-height: $spark-space-l;
   position: relative;
   text-align: center;
   white-space: nowrap;
@@ -47,7 +47,7 @@
 .sprk-c-WideNavigation__item--open > .sprk-c-WideNavigation__link,
 .sprk-c-WideNavigation__item--active > .sprk-c-WideNavigation__link {
   &::after {
-    background-color: $black;
+    background-color: $spark-black;
     content: ' ';
     height: 3px;
     display: block;
@@ -58,10 +58,10 @@
 }
 
 .sprk-c-WideNavigation__link {
-  @include HoverLine($color: $white, $width: 85%);
+  @include HoverLine($color: $spark-white, $width: 85%);
 
   border: 0;
-  color: $black;
+  color: $spark-black;
   display: block;
   text-decoration: none;
   width: 100%;
@@ -69,15 +69,15 @@
   &:active,
   &:focus,
   &:hover {
-    @include HoverLine($color: $black, $width: 85%);
+    @include HoverLine($color: $spark-black, $width: 85%);
   }
 }
 
 .sprk-c-WideNavigation__link--sub {
   border: 0;
   font-weight: normal;
-  line-height: $line-height-body-two;
-  padding: $space-m;
+  line-height: $spark-line-height-body-two;
+  padding: $spark-space-m;
   text-align: left;
   text-transform: none;
   white-space: normal;
@@ -89,7 +89,7 @@
   &:active,
   &:focus,
   &:hover {
-    background-color: $gray;
+    background-color: $spark-gray;
     font-weight: normal;
 
     &::after {
@@ -99,7 +99,7 @@
 }
 
 .sprk-c-WideNavigation__arrow {
-  fill: $black;
-  width: $icon-m;
-  margin: -3px $space-s 0 $space-s; // negative margin to visually align the arrow
+  fill: $spark-black;
+  width: $spark-icon-m;
+  margin: -3px $spark-space-s 0 $spark-space-s; // negative margin to visually align the arrow
 }

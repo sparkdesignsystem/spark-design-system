@@ -8,17 +8,17 @@
 }
 
 .sprk-b-Table tbody tr {
-  border-bottom-width: $table-row-border-width;
-  border-bottom-style: $table-row-border-style;
-  border-bottom-color: $table-row-border-color;
+  border-bottom-width: $spark-table-row-border-width;
+  border-bottom-style: $spark-table-row-border-style;
+  border-bottom-color: $spark-table-row-border-color;
 }
 
 .sprk-b-Table th {
-  background-color: $table-header-background-color;
-  color: $table-header-font-color;
-  font-size: $table-header-font-size;
-  border-right-width: $table-header-border-spacing;
-  border-right-color: $table-header-border-color;
+  background-color: $spark-table-header-background-color;
+  color: $spark-table-header-font-color;
+  font-size: $spark-table-header-font-size;
+  border-right-width: $spark-table-header-border-spacing;
+  border-right-color: $spark-table-header-border-color;
   border-right-style: solid;
 }
 
@@ -27,55 +27,55 @@
 }
 
 .sprk-b-Table--secondary td {
-  text-align: $table-secondary-cell-text-alignment;
+  text-align: $spark-table-secondary-cell-text-alignment;
 }
 
 .sprk-b-Table--secondary thead tr {
-  border-bottom-width: $table-row-border-width;
-  border-bottom-style: $table-row-border-style;
-  border-bottom-color: $table-row-border-color;
+  border-bottom-width: $spark-table-row-border-width;
+  border-bottom-style: $spark-table-row-border-style;
+  border-bottom-color: $spark-table-row-border-color;
 }
 
 .sprk-b-Table--secondary th {
-  background-color: $table-secondary-header-background-color;
-  color: $table-secondary-header-font-color;
-  text-align: $table-secondary-header-text-alignment;
-  border-right-width: $table-secondary-header-border-spacing;
-  border-right-color: $table-secondary-header-border-color;
+  background-color: $spark-table-secondary-header-background-color;
+  color: $spark-table-secondary-header-font-color;
+  text-align: $spark-table-secondary-header-text-alignment;
+  border-right-width: $spark-table-secondary-header-border-spacing;
+  border-right-color: $spark-table-secondary-header-border-color;
   border-right-style: solid;
 }
 
 .sprk-b-Table--grouped-columns .sprk-b-Table--grouped-column {
   border: 0;
-  background-color: $table-grouped-header-background-color;
-  font-size: $table-grouped-header-font-size;
-  font-weight: $table-grouped-header-font-weight;
+  background-color: $spark-table-grouped-header-background-color;
+  font-size: $spark-table-grouped-header-font-size;
+  font-weight: $spark-table-grouped-header-font-weight;
 }
 
 .sprk-b-Table--row-comparison .sprk-b-Table__empty-heading {
-  background-color: $table-empty-heading-background-color;
+  background-color: $spark-table-empty-heading-background-color;
 }
 
 .sprk-b-Table--secondary-row-comparison {
   border-collapse: separate;
   border-top: 0;
   border-bottom: 0;
-  border-spacing: 0 $table-secondary-row-comp-row-spacing;
-  margin-top: -$table-secondary-row-comp-row-spacing;
-  margin-bottom: -$table-secondary-row-comp-row-spacing;
+  border-spacing: 0 $spark-table-secondary-row-comp-row-spacing;
+  margin-top: -$spark-table-secondary-row-comp-row-spacing;
+  margin-bottom: -$spark-table-secondary-row-comp-row-spacing;
 }
 
 .sprk-b-Table--secondary-row-comparison td {
-  border-top-width: $table-secondary-row-comp-border-width;
-  border-top-style: $table-secondary-row-comp-border-style;
-  border-top-color: $table-secondary-row-comp-border-color;
-  border-bottom-width: $table-secondary-row-comp-border-width;
-  border-bottom-style: $table-secondary-row-comp-border-style;
-  border-bottom-color: $table-secondary-row-comp-border-color;
+  border-top-width: $spark-table-secondary-row-comp-border-width;
+  border-top-style: $spark-table-secondary-row-comp-border-style;
+  border-top-color: $spark-table-secondary-row-comp-border-color;
+  border-bottom-width: $spark-table-secondary-row-comp-border-width;
+  border-bottom-style: $spark-table-secondary-row-comp-border-style;
+  border-bottom-color: $spark-table-secondary-row-comp-border-color;
 }
 
 .sprk-b-Table--secondary-row-comparison tr > td:last-of-type {
-  border-right-width: $table-secondary-row-comp-border-width;
-  border-right-style: $table-secondary-row-comp-border-style;
-  border-right-color: $table-secondary-row-comp-border-color;
+  border-right-width: $spark-table-secondary-row-comp-border-width;
+  border-right-style: $spark-table-secondary-row-comp-border-style;
+  border-right-color: $spark-table-secondary-row-comp-border-color;
 }

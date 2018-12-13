@@ -2,9 +2,9 @@
 // Accordions
 // ==================================================================
 .sprk-c-Accordion {
-  border-top: $accordion-border;
+  border-top: $spark-accordion-border;
   margin: 0 auto;
-  max-width: $accordion-max-width;
+  max-width: $spark-accordion-max-width;
   width: 100%;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .sprk-c-Accordion__item {
-  border-bottom: $accordion-border;
+  border-bottom: $spark-accordion-border;
 }
 
 .sprk-c-Accordion__heading {
@@ -28,14 +28,14 @@
 
 .sprk-c-Accordion__summary {
   align-items: center;
-  color: $accordion-summary-color;
+  color: $spark-accordion-summary-color;
   display: flex;
-  padding-bottom: $space-m;
-  padding-top: $space-m;
+  padding-bottom: $spark-space-m;
+  padding-top: $spark-space-m;
   text-decoration: none;
 
   &:hover {
-    color: $accordion-summary-active-color;
+    color: $spark-accordion-summary-active-color;
     text-decoration: none;
   }
 }
@@ -45,11 +45,11 @@
 }
 
 .sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
-  color: $accordion-summary-active-color;
+  color: $spark-accordion-summary-active-color;
 }
 
 .sprk-c-Accordion__content {
-  padding-bottom: $space-l;
+  padding-bottom: $spark-space-l;
 }
 
 // Accordion Navigation Styles
@@ -58,14 +58,14 @@
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
-  border-bottom: $accordion-border-open;
+  border-bottom: $spark-accordion-border-open;
 
   &::before {
     content: '';
     display: block;
     height: 1px;
     margin: 0 auto;
-    background-color: $black-tint-25;
+    background-color: $spark-black-tint-25;
     width: 100%;
   }
 }
@@ -81,12 +81,12 @@
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border-top: 0;
-  min-height: $icon-xl;
-  padding: $space-m;
+  min-height: $spark-icon-xl;
+  padding: $spark-space-m;
 
   &:hover,
   &:active {
-    background-color: $gray-tint-50;
+    background-color: $spark-gray-tint-50;
   }
 }
 
@@ -94,8 +94,8 @@
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
-  background-color: $gray-tint-50;
-  border-left: $narrow-nav-left-border;
+  background-color: $spark-gray-tint-50;
+  border-left: $spark-narrow-nav-left-border;
 }
 
 .sprk-c-Accordion--navigation
@@ -106,12 +106,12 @@
 
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
-  color: $black;
+  color: $spark-black;
 }
 
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
-  stroke: $black;
+  stroke: $spark-black;
 }
 
 // Accordion Navigation Styles
@@ -124,20 +124,20 @@
     display: block;
     height: 1px;
     margin: 0 auto;
-    background-color: $black-tint-25;
+    background-color: $spark-black-tint-25;
     width: 100%;
   }
 }
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
-  color: $black;
+  color: $spark-black;
   display: block;
-  font-weight: $narrow-nav-link-font-weight;
+  font-weight: $spark-narrow-nav-link-font-weight;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $gray-tint-50;
+    background-color: $spark-gray-tint-50;
     text-decoration: none;
   }
 

@@ -2,32 +2,32 @@
 // Promo
 // ==================================================================
 .sprk-c-Promo {
-  background-color: $promo-background-color;
-  max-width: $promo-max-width;
+  background-color: $spark-promo-background-color;
+  max-width: $spark-promo-max-width;
   margin: 0 auto;
 }
 
 .sprk-c-Promo--bordered {
-  border: $promo-border;
+  border: $spark-promo-border;
 }
 
 .sprk-c-Promo__title {
-  font-weight: $promo-title-font-weight;
-  color: $promo-title-font-color;
+  font-weight: $spark-promo-title-font-weight;
+  color: $spark-promo-title-font-color;
 }
 
 .sprk-c-Promo__subtitle {
-  font-weight: $promo-subtitle-font-weight;
-  color: $promo-subtitle-font-color;
+  font-weight: $spark-promo-subtitle-font-weight;
+  color: $spark-promo-subtitle-font-color;
 }
 
 .sprk-c-Promo__image--flag {
   object-fit: cover;
-  padding: $space-inset-m;
+  padding: $spark-space-inset-m;
 
-  @media (max-width: $promo-breakpoint) {
-    max-width: $promo-image-narrow-max-width;
-    max-height: $promo-image-narrow-max-height;
+  @media (max-width: $spark-promo-breakpoint) {
+    max-width: $spark-promo-image-narrow-max-width;
+    max-height: $spark-promo-image-narrow-max-height;
   }
 }
 
@@ -36,15 +36,15 @@
   height: 100%;
   object-fit: cover;
 
-  @media (max-width: $promo-breakpoint) {
-    max-height: $promo-image-narrow-max-height;
+  @media (max-width: $spark-promo-breakpoint) {
+    max-height: $spark-promo-image-narrow-max-height;
   }
 }
 
 .sprk-c-Promo__content {
-  padding: $space-inset-l;
+  padding: $spark-space-inset-l;
 }
 
 .sprk-c-Promo--flag .sprk-c-Promo__content {
-  padding: $space-inset-m;
+  padding: $spark-space-inset-m;
 }

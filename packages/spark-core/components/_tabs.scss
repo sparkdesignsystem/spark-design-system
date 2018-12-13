@@ -2,12 +2,12 @@
 // Tabbed Navigation
 // ==================================================================
 .sprk-c-Tabs__buttons {
-  color: $black;
+  color: $spark-black;
   display: block;
   border-bottom: 0;
-  margin-bottom: $space-m;
+  margin-bottom: $spark-space-m;
 
-  @media all and (min-width: $tab-navigation-breakpoint) {
+  @media all and (min-width: $spark-tab-navigation-breakpoint) {
     display: flex;
     border: 0;
   }
@@ -15,29 +15,29 @@
 
 .sprk-c-Tabs__button {
   -webkit-appearance: none;
-  background-color: $gray;
+  background-color: $spark-gray;
   border: 0;
-  border-top: 3px solid $gray;
+  border-top: 3px solid $spark-gray;
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: $space-inset-short-s;
-  padding-top: $space-s;
-  padding-bottom: $space-s;
+  padding: $spark-space-inset-short-s;
+  padding-top: $spark-space-s;
+  padding-bottom: $spark-space-s;
   width: 100%;
 
-  @media all and (min-width: $tab-navigation-breakpoint) {
+  @media all and (min-width: $spark-tab-navigation-breakpoint) {
     flex: 1 1 100%;
   }
 }
 
 .sprk-c-Tabs__button--active,
 .sprk-c-Tabs__button:focus {
-  background-color: $white;
-  border-top: 3px solid $red;
-  color: $red;
+  background-color: $spark-white;
+  border-top: 3px solid $spark-red;
+  color: $spark-red;
 }
 
 .sprk-c-Tabs__button:hover {
-  border-top: 3px solid $red;
+  border-top: 3px solid $spark-red;
 }

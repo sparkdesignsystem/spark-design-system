@@ -3,28 +3,28 @@
 // ==================================================================
 //
 .sprk-b-Link {
-  color: $link-color;
-  font-weight: $link-font-weight;
+  color: $spark-link-color;
+  font-weight: $spark-link-font-weight;
   position: relative;
   text-decoration: none;
-  transition: $link-transition;
+  transition: $spark-link-transition;
 
   &:visited {
-    color: $link-visited-color;
+    color: $spark-link-visited-color;
 
     &::after {
-      background-color: $link-underline-visited-color;
+      background-color: $spark-link-underline-visited-color;
     }
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-underline-color;
+    color: $spark-link-underline-color;
     text-decoration: none;
 
     &::after {
-      background-color: $link-underline-color;
+      background-color: $spark-link-underline-color;
     }
   }
 
@@ -35,7 +35,7 @@
     height: 0.125em;
     width: 100%;
     position: absolute;
-    background-color: $link-underline-color;
+    background-color: $spark-link-underline-color;
   }
 }
 
@@ -48,14 +48,14 @@
 }
 
 .sprk-b-Link--standalone {
-  color: $link-standalone-color;
+  color: $spark-link-standalone-color;
 
   &:hover,
   &:active,
   &:focus {
     &::after {
       opacity: 1;
-      transition: $link-transition;
+      transition: $spark-link-transition;
     }
   }
 
@@ -65,38 +65,38 @@
 }
 
 .sprk-b-Link--muted {
-  color: $link-muted-color;
+  color: $spark-link-muted-color;
 
   &:visited {
-    color: $link-muted-color;
+    color: $spark-link-muted-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-muted-color;
+    color: $spark-link-muted-color;
   }
 }
 
 .sprk-b-Link--disabled {
-  color: $link-disabled-color;
+  color: $spark-link-disabled-color;
   pointer-events: none;
 
   &:visited {
-    color: $link-disabled-color;
+    color: $spark-link-disabled-color;
 
     &::after {
-      background: $link-disabled-color;
+      background: $spark-link-disabled-color;
     }
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-disabled-color;
+    color: $spark-link-disabled-color;
   }
 
   &::after {
-    background: $link-disabled-color;
+    background: $spark-link-disabled-color;
   }
 }
