@@ -93,7 +93,7 @@
       color: '#BEBEBE'
       rgb: 'rgb(190,190,190)'
       property: '$black-tint-25'
-    - label: Light Gray
+    - label: Dark Gray
       color: '#E6E6E6'
       rgb: 'rgb(230,230,230)'
-      property: '$gray-light'
+      property: '$gray-dark'
