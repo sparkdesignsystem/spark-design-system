@@ -29,7 +29,7 @@ $space-inset-xl: 64px 64px 64px 64px !default;
 $space-inset-short-xs: 2px 4px 2px 4px !default;
 $space-inset-short-s: 4px 8px 4px 8px !default;
 $space-inset-short-m: 8px 16px 8px 16px !default;
-$space-inset-short-l: 16px 32px 16px 32px !default;
+$space-inset-short-l: 16px 24px 16px 24px !default;
 $space-inset-short-xl: 32px 64px 32px 64px !default;
 
 // Inset Tall
@@ -269,15 +269,15 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 //
 // Buttons
 ///
-$btn-background-color: $red !default;
+$btn-background-color: $green !default;
 $btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
 $btn-font-weight: bold;
 $btn-text-color: $white !default;
-$btn-border-radius: 1px !default;
-$btn-hover-background-color: $red !default;
+$btn-border-radius: 4px !default;
+$btn-hover-background-color: $green-dark !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-breakpoint-xs: 30rem !default;
@@ -285,24 +285,29 @@ $btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
 // Disabled
 $btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray !default;
-$btn-disabled-text-color: $black-tint-50 !default;
 $btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-background-color: $gray-dark !default;//$gray !default;
+$btn-disabled-text-color: $white !default;
 $btn-disabled-border-color: transparent !default;
+$btn-secondary-disabled-background-color: transparent !default;//$gray !default;
+$btn-secondary-disabled-text-color: $gray-dark !default;
+$btn-secondary-disabled-border-color: $gray-dark !default;
 // Secondary
 $btn-secondary-background-color: transparent !default;
-$btn-secondary-border-color: $black !default;
+$btn-secondary-border-color: $gray-dark !default;
 $btn-secondary-text-color: $black !default;
-$btn-secondary-hover-text-color: $red !default;
+$btn-secondary-hover-text-color: $black !default;
 $btn-secondary-hover-background-color: transparent !default;
-$btn-secondary-hover-border-color: $red !default;
+$btn-secondary-hover-border-color: $black !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
-$btn-tertiary-border-color: transparent !default;
+$btn-tertiary-border-color: $gray-dark !default;
 $btn-tertiary-hover-text-color: $black !default;
-$btn-tertiary-hover-line-color: $red !default;
+$btn-tertiary-hover-line-color: $black !default;
 $btn-tertiary-hover-background-color: transparent !default;
 $btn-tertiary-text-color: $black !default;
+$btn-tertiary-disabled-background-color: transparent !default;
+$btn-tertiary-disabled-text-color: $gray-dark !default;
 
 //
 // Links

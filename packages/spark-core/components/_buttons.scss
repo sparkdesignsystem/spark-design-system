@@ -4,6 +4,7 @@
 .sprk-c-Button {
   box-shadow: $btn-shadow;
   transition: all $btn-transition-speed;
+  border-radius: $btn-border-radius;
 
   &:hover,
   &:active,
@@ -60,9 +61,8 @@
 .sprk-c-Button--tertiary {
   background-color: $btn-tertiary-background-color;
   box-shadow: none;
-  border-color: $btn-tertiary-border-color;
+  border: none;
   color: $btn-tertiary-text-color;
-  text-transform: uppercase;
 
   &:hover,
   &:active,
@@ -85,7 +85,7 @@
 
   &::after {
     content: '';
-    border-bottom: ($btn-border-width + 1px) solid $btn-tertiary-text-color;
+    border-bottom: ($btn-border-width + 1px) solid $btn-tertiary-border-color;
     display: block;
     width: 100%;
     padding-top: $space-xs;
@@ -108,4 +108,22 @@
   &:visited {
     color: $btn-disabled-text-color;
   }
+}
+
+.sprk-c-Button--secondary.sprk-is-Disabled,
+.sprk-c-Button--secondary[disabled] {
+  box-shadow: none;
+
+  background-color: $btn-secondary-disabled-background-color;
+  border-color: $btn-secondary-disabled-border-color;
+  color: $btn-secondary-disabled-text-color;
+}
+
+.sprk-c-Button--tertiary.sprk-is-Disabled,
+.sprk-c-Button--tertiary[disabled] {
+  box-shadow: none;
+  border: none;
+
+  color: $btn-tertiary-disabled-text-color;
+  background-color: $btn-tertiary-disabled-background-color;
 }
