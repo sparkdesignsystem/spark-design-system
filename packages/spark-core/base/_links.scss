@@ -18,8 +18,8 @@
   &:hover,
   &:active,
   &:focus {
-    color: $link-underline-color;
-    border-bottom: $link-underline-width solid $link-underline-color;
+    color: $link-hover-color;
+    border-bottom: $link-underline-width solid $link-hover-color;
   }
 }
 
@@ -32,7 +32,7 @@
   &:active,
   &:focus {
     transition: $link-transition;
-    border-bottom: $link-underline-width solid $link-underline-color;
+    border-bottom: $link-underline-width solid $link-standalone-underline-color;
   }
 }
 

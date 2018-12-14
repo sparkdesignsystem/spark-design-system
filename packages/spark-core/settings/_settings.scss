@@ -308,16 +308,18 @@ $btn-tertiary-text-color: $black !default;
 // Links
 ///
 $link-color: $black !default;
-$link-disabled-color: $black-tint-50;
-$link-muted-color: $black-tint-75;
-$link-standalone-color: $red !default;
+$link-disabled-color: $black-tint-50 !default;
+$link-muted-color: $gray-dark !default;
+$link-hover-color: $blue !default;
+$link-standalone-color: $blue !default;
+$link-standalone-underline-color: $blue !default;
 $link-transition: 0.3s !default;
-$link-underline-color: $red !default;
-$link-underline-visited-color: $red !default;
+$link-underline-color: $gray-dark !default;
+$link-underline-visited-color: darken($blue, 10%) !default;
 $link-underline-width: 0.0625em !default;
-$link-visited-color: $red !default;
+$link-visited-color: darken($blue, 10%) !default;
 $link-standalone-font-weight: bold !default;
-$link-inline-font-weight: normal !default;
+$link-inline-font-weight: bold !default;
 $link-disabled-font-weight: bold !default;
 
 //
