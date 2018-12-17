@@ -4,76 +4,76 @@
 .sprk-c-Alert {
   align-items: center;
   justify-content: center;
-  background-color: $spark-white;
-  border: $spark-alert-border;
-  box-shadow: $spark-alert-shadow;
+  background-color: $sprk-white;
+  border: $sprk-alert-border;
+  box-shadow: $sprk-alert-shadow;
   display: flex;
   transition: box-shadow 0.3s ease-in-out, color 0.4s ease-in-out;
 }
 
 .sprk-c-Alert--info {
-  border-color: $spark-alert-color-info;
-  box-shadow: $spark-alert-shadow, $spark-alert-shadow-info;
+  border-color: $sprk-alert-color-info;
+  box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-info;
 
   .sprk-c-Alert__icon:first-child {
-    color: $spark-alert-color-info;
+    color: $sprk-alert-color-info;
   }
 
   &:hover {
-    box-shadow: $spark-alert-shadow, $spark-alert-shadow-hover-info;
+    box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-hover-info;
 
     .sprk-c-Alert__icon--dismiss {
-      color: $spark-white;
+      color: $sprk-white;
     }
   }
 }
 
 .sprk-c-Alert--success {
-  border-color: $spark-alert-color-success;
-  box-shadow: $spark-alert-shadow, $spark-alert-shadow-success;
+  border-color: $sprk-alert-color-success;
+  box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-success;
 
   .sprk-c-Alert__icon:first-child {
-    color: $spark-alert-color-success;
+    color: $sprk-alert-color-success;
   }
 
   &:hover {
-    box-shadow: $spark-alert-shadow, $spark-alert-shadow-hover-success;
+    box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-hover-success;
 
     .sprk-c-Alert__icon--dismiss {
-      color: $spark-white;
+      color: $sprk-white;
     }
   }
 }
 
 .sprk-c-Alert--fail {
-  border-color: $spark-alert-color-fail;
-  box-shadow: $spark-alert-shadow, $spark-alert-shadow-fail;
+  border-color: $sprk-alert-color-fail;
+  box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-fail;
 
   .sprk-c-Alert__icon:first-child {
-    color: $spark-alert-color-fail;
+    color: $sprk-alert-color-fail;
   }
 
   &:hover {
-    box-shadow: $spark-alert-shadow, $spark-alert-shadow-hover-fail;
+    box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-hover-fail;
 
     .sprk-c-Alert__icon--dismiss {
-      color: $spark-white;
+      color: $sprk-white;
     }
   }
 }
 
 .sprk-c-Alert--no-dismiss {
-  box-shadow: $spark-alert-shadow;
+  box-shadow: $sprk-alert-shadow;
 
   &:hover {
-    box-shadow: $spark-alert-shadow;
+    box-shadow: $sprk-alert-shadow;
   }
 }
 
 .sprk-c-Alert__content {
   display: flex;
   align-items: center;
-  padding: $spark-space-m;
+  padding: $sprk-space-m;
 }
 
 .sprk-c-Alert__content,
@@ -85,7 +85,7 @@
   flex: 0 0 auto;
 
   &:first-child {
-    margin-right: $spark-space-m;
+    margin-right: $sprk-space-m;
   }
 }
 
@@ -93,8 +93,8 @@
   align-self: flex-start;
   background-color: transparent;
   border: 0;
-  color: $spark-black-tint-50;
-  padding: $spark-space-m;
+  color: $sprk-black-tint-50;
+  padding: $sprk-space-m;
 }
 
 .sprk-c-Alert__icon,
@@ -104,6 +104,6 @@
 }
 
 .sprk-c-Alert .sprk-c-Icon {
-  height: $spark-alert-icon-size;
-  width: $spark-alert-icon-size;
+  height: $sprk-alert-icon-size;
+  width: $sprk-alert-icon-size;
 }

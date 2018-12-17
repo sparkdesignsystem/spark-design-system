@@ -2,9 +2,9 @@
 // Accordions
 // ==================================================================
 .sprk-c-Accordion {
-  border-top: $spark-accordion-border;
+  border-top: $sprk-accordion-border;
   margin: 0 auto;
-  max-width: $spark-accordion-max-width;
+  max-width: $sprk-accordion-max-width;
   width: 100%;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .sprk-c-Accordion__item {
-  border-bottom: $spark-accordion-border;
+  border-bottom: $sprk-accordion-border;
 }
 
 .sprk-c-Accordion__heading {
@@ -28,14 +28,14 @@
 
 .sprk-c-Accordion__summary {
   align-items: center;
-  color: $spark-accordion-summary-color;
+  color: $sprk-accordion-summary-color;
   display: flex;
-  padding-bottom: $spark-space-m;
-  padding-top: $spark-space-m;
+  padding-bottom: $sprk-space-m;
+  padding-top: $sprk-space-m;
   text-decoration: none;
 
   &:hover {
-    color: $spark-accordion-summary-active-color;
+    color: $sprk-accordion-summary-active-color;
     text-decoration: none;
   }
 }
@@ -45,11 +45,11 @@
 }
 
 .sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
-  color: $spark-accordion-summary-active-color;
+  color: $sprk-accordion-summary-active-color;
 }
 
 .sprk-c-Accordion__content {
-  padding-bottom: $spark-space-l;
+  padding-bottom: $sprk-space-l;
 }
 
 // Accordion Navigation Styles
@@ -58,14 +58,14 @@
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
-  border-bottom: $spark-accordion-border-open;
+  border-bottom: $sprk-accordion-border-open;
 
   &::before {
     content: '';
     display: block;
     height: 1px;
     margin: 0 auto;
-    background-color: $spark-black-tint-25;
+    background-color: $sprk-black-tint-25;
     width: 100%;
   }
 }
@@ -81,12 +81,12 @@
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border-top: 0;
-  min-height: $spark-icon-xl;
-  padding: $spark-space-m;
+  min-height: $sprk-icon-xl;
+  padding: $sprk-space-m;
 
   &:hover,
   &:active {
-    background-color: $spark-gray-tint-50;
+    background-color: $sprk-gray-tint-50;
   }
 }
 
@@ -94,8 +94,8 @@
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
-  background-color: $spark-gray-tint-50;
-  border-left: $spark-narrow-nav-left-border;
+  background-color: $sprk-gray-tint-50;
+  border-left: $sprk-narrow-nav-left-border;
 }
 
 .sprk-c-Accordion--navigation
@@ -106,12 +106,12 @@
 
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
-  color: $spark-black;
+  color: $sprk-black;
 }
 
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
-  stroke: $spark-black;
+  stroke: $sprk-black;
 }
 
 // Accordion Navigation Styles
@@ -124,20 +124,20 @@
     display: block;
     height: 1px;
     margin: 0 auto;
-    background-color: $spark-black-tint-25;
+    background-color: $sprk-black-tint-25;
     width: 100%;
   }
 }
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
-  color: $spark-black;
+  color: $sprk-black;
   display: block;
-  font-weight: $spark-narrow-nav-link-font-weight;
+  font-weight: $sprk-narrow-nav-link-font-weight;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $spark-gray-tint-50;
+    background-color: $sprk-gray-tint-50;
     text-decoration: none;
   }
 

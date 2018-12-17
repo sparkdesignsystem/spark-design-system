@@ -5,52 +5,52 @@
 //
 // Available Variables
 ///
-$spark-card-border: 1px solid $spark-gray !default;
-$spark-card-max-width: 26.5625rem !default;
-$spark-card-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-card-border: 1px solid $sprk-gray !default;
+$sprk-card-max-width: 26.5625rem !default;
+$sprk-card-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) !default;
 
 .sprk-c-Card {
-  border: $spark-card-border;
-  box-shadow: $spark-card-shadow;
-  max-width: $spark-card-max-width;
+  border: $sprk-card-border;
+  box-shadow: $sprk-card-shadow;
+  max-width: $sprk-card-max-width;
 }
 
 .sprk-c-Card__content {
-  padding: $spark-space-inset-l;
+  padding: $sprk-space-inset-l;
 }
 
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@xs.sprk-c-Card {
-  @media all and (min-width: $spark-split-breakpoint-xs) {
-    flex: 0 1 $spark-card-max-width;
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@s.sprk-c-Card {
-  @media all and (min-width: $spark-split-breakpoint-s) {
-    flex: 0 1 $spark-card-max-width;
+  @media all and (min-width: $sprk-split-breakpoint-s) {
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@m.sprk-c-Card {
-  @media all and (min-width: $spark-split-breakpoint-m) {
-    flex: 0 1 $spark-card-max-width;
+  @media all and (min-width: $sprk-split-breakpoint-m) {
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@l.sprk-c-Card {
-  @media all and (min-width: $spark-split-breakpoint-l) {
-    flex: 0 1 $spark-card-max-width;
+  @media all and (min-width: $sprk-split-breakpoint-l) {
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@xl.sprk-c-Card {
-  @media all and (min-width: $spark-split-breakpoint-xl) {
-    flex: 0 1 $spark-card-max-width;
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }

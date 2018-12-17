@@ -2,41 +2,41 @@
 // Typography
 // ==================================================================
 
-@if $spark-using-webfont-body {
+@if $sprk-using-webfont-body {
   @font-face {
-    font-family: $spark-body-font-name;
-    src: $spark-body-font-src;
-    font-weight: $spark-body-font-weight;
+    font-family: $sprk-body-font-name;
+    src: $sprk-body-font-src;
+    font-weight: $sprk-body-font-weight;
   }
   @font-face {
-    font-family: $spark-body-font-name;
-    src: $spark-body-bold-font-src;
-    font-weight: $spark-body-bold-font-weight;
-  }
-}
-@if $spark-using-webfont-heading {
-  @font-face {
-    font-family: $spark-heading-font-name;
-    src: $spark-heading-font-src;
-    font-weight: $spark-heading-font-weight;
-  }
-  @font-face {
-    font-family: $spark-heading-font-name;
-    src: $spark-heading-bold-font-src;
-    font-weight: $spark-heading-bold-font-weight;
+    font-family: $sprk-body-font-name;
+    src: $sprk-body-bold-font-src;
+    font-weight: $sprk-body-bold-font-weight;
   }
 }
-@if $spark-using-webfont-alternate {
+@if $sprk-using-webfont-heading {
   @font-face {
-    font-family: $spark-alternate-font-name;
-    src: $spark-alternate-font-src;
-    font-weight: $spark-alternate-font-weight;
+    font-family: $sprk-heading-font-name;
+    src: $sprk-heading-font-src;
+    font-weight: $sprk-heading-font-weight;
+  }
+  @font-face {
+    font-family: $sprk-heading-font-name;
+    src: $sprk-heading-bold-font-src;
+    font-weight: $sprk-heading-bold-font-weight;
+  }
+}
+@if $sprk-using-webfont-alternate {
+  @font-face {
+    font-family: $sprk-alternate-font-name;
+    src: $sprk-alternate-font-src;
+    font-weight: $sprk-alternate-font-weight;
   }
 }
 
 .sprk-b-TypeDisplayOne,
 .sprk-b-TypeDisplayTwo {
-  font-family: $spark-alternate-font-stack;
+  font-family: $sprk-alternate-font-stack;
 }
 
 .sprk-b-TypeDisplayThree,
@@ -45,188 +45,188 @@
 .sprk-b-TypeDisplaySix,
 .sprk-b-TypeDisplaySeven,
 .sprk-b-TypeDisplayEight {
-  font-family: $spark-heading-font-stack;
+  font-family: $sprk-heading-font-stack;
 }
 
 .sprk-b-TypeBodyOne,
 .sprk-b-TypeBodyTwo,
 .sprk-b-TypeBodyThree,
 .sprk-b-TypeBodyFour {
-  font-family: $spark-body-font-stack;
+  font-family: $sprk-body-font-stack;
 }
 
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
-    $line-height: $spark-line-height-display-one,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-one) * 16),
-    $crop-line-height: $spark-line-height-display-one);
+    $line-height: $sprk-line-height-display-one,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-one) * 16),
+    $crop-line-height: $sprk-line-height-display-one);
 
-  color: $spark-color-display-one;
-  font-size: $spark-font-size-display-one;
-  font-weight: $spark-font-weight-display-one;
+  color: $sprk-color-display-one;
+  font-size: $sprk-font-size-display-one;
+  font-weight: $sprk-font-weight-display-one;
 }
 
 h1,
 .sprk-b-TypeDisplayTwo {
   @include TextCrop(
-    $line-height: $spark-line-height-display-two,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-two) * 16),
-    $crop-line-height: $spark-line-height-display-two);
+    $line-height: $sprk-line-height-display-two,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-two) * 16),
+    $crop-line-height: $sprk-line-height-display-two);
 }
 
 .sprk-b-TypeDisplayTwo {
-  color: $spark-color-display-two;
-  font-size: $spark-font-size-display-two;
-  font-weight: $spark-font-weight-display-two;
+  color: $sprk-color-display-two;
+  font-size: $sprk-font-size-display-two;
+  font-weight: $sprk-font-weight-display-two;
 }
 
 h2,
 .sprk-b-TypeDisplayThree {
   @include TextCrop(
-    $line-height: $spark-line-height-display-three,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-three) * 16),
-    $crop-line-height: $spark-line-height-display-three);
+    $line-height: $sprk-line-height-display-three,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-three) * 16),
+    $crop-line-height: $sprk-line-height-display-three);
 }
 
 .sprk-b-TypeDisplayThree {
-  color: $spark-color-display-three;
-  font-size: $spark-font-size-display-three;
-  font-weight: $spark-font-weight-display-three;
+  color: $sprk-color-display-three;
+  font-size: $sprk-font-size-display-three;
+  font-weight: $sprk-font-weight-display-three;
 }
 
 h3,
 .sprk-b-TypeDisplayFour {
   @include TextCrop(
-    $line-height: $spark-line-height-display-four,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-four) * 16),
-    $crop-line-height: $spark-line-height-display-four);
+    $line-height: $sprk-line-height-display-four,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-four) * 16),
+    $crop-line-height: $sprk-line-height-display-four);
 }
 
 .sprk-b-TypeDisplayFour {
-  font-size: $spark-font-size-display-four;
-  color: $spark-color-display-four;
-  font-weight: $spark-font-weight-display-four;
+  font-size: $sprk-font-size-display-four;
+  color: $sprk-color-display-four;
+  font-weight: $sprk-font-weight-display-four;
 }
 
 h4,
 .sprk-b-TypeDisplayFive {
   @include TextCrop(
-    $line-height: $spark-line-height-display-five,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-five) * 16),
-    $crop-line-height: $spark-line-height-display-five);
+    $line-height: $sprk-line-height-display-five,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-five) * 16),
+    $crop-line-height: $sprk-line-height-display-five);
 }
 
 .sprk-b-TypeDisplayFive {
-  font-size: $spark-font-size-display-five;
-  color: $spark-color-display-five;
-  font-weight: $spark-font-weight-display-five;
+  font-size: $sprk-font-size-display-five;
+  color: $sprk-color-display-five;
+  font-weight: $sprk-font-weight-display-five;
 }
 
 h5,
 h6,
 .sprk-b-TypeDisplaySix {
   @include TextCrop(
-    $line-height: $spark-line-height-display-six,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-six) * 16),
-    $crop-line-height: $spark-line-height-display-six);
+    $line-height: $sprk-line-height-display-six,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-six) * 16),
+    $crop-line-height: $sprk-line-height-display-six);
 }
 
 .sprk-b-TypeDisplaySix {
-  font-size: $spark-font-size-display-six;
-  color: $spark-color-display-six;
-  font-weight: $spark-font-weight-display-six;
-  line-height: $spark-line-height-display-six;
+  font-size: $sprk-font-size-display-six;
+  color: $sprk-color-display-six;
+  font-weight: $sprk-font-weight-display-six;
+  line-height: $sprk-line-height-display-six;
 }
 
 .sprk-b-TypeDisplaySeven {
   @include TextCrop(
-    $line-height: $spark-line-height-display-seven,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-seven) * 16),
-    $crop-line-height: $spark-line-height-display-seven);
+    $line-height: $sprk-line-height-display-seven,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-seven) * 16),
+    $crop-line-height: $sprk-line-height-display-seven);
 
-  font-size: $spark-font-size-display-seven;
-  color: $spark-color-display-seven;
-  font-weight: $spark-font-weight-display-seven;
-  line-height: $spark-line-height-display-seven;
+  font-size: $sprk-font-size-display-seven;
+  color: $sprk-color-display-seven;
+  font-weight: $sprk-font-weight-display-seven;
+  line-height: $sprk-line-height-display-seven;
 }
 
 .sprk-b-TypeDisplayEight {
   @include TextCrop(
-    $line-height: $spark-line-height-display-eight,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-display-eight) * 16),
-    $crop-line-height: $spark-line-height-display-eight);
+    $line-height: $sprk-line-height-display-eight,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-display-eight) * 16),
+    $crop-line-height: $sprk-line-height-display-eight);
 
-  font-size: $spark-font-size-display-eight;
-  color: $spark-color-display-eight;
-  font-weight: $spark-font-weight-display-eight;
-  line-height: $spark-line-height-display-eight;
+  font-size: $sprk-font-size-display-eight;
+  color: $sprk-color-display-eight;
+  font-weight: $sprk-font-weight-display-eight;
+  line-height: $sprk-line-height-display-eight;
 }
 
 .sprk-b-TypeBodyOne {
   @include TextCrop(
-    $line-height: $spark-line-height-body-one,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-body-one) * 16),
-    $crop-line-height: $spark-line-height-body-one);
+    $line-height: $sprk-line-height-body-one,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-body-one) * 16),
+    $crop-line-height: $sprk-line-height-body-one);
 
-  font-size: $spark-font-size-body-one;
-  color: $spark-color-body-one;
-  font-weight: $spark-font-weight-body-one;
+  font-size: $sprk-font-size-body-one;
+  color: $sprk-color-body-one;
+  font-weight: $sprk-font-weight-body-one;
 }
 
 .sprk-b-TypeBodyTwo {
   @include TextCrop(
-    $line-height: $spark-line-height-body-two,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-body-two) * 16),
-    $crop-line-height: $spark-line-height-body-two);
+    $line-height: $sprk-line-height-body-two,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-body-two) * 16),
+    $crop-line-height: $sprk-line-height-body-two);
 
-  font-size: $spark-font-size-body-two;
-  color: $spark-color-body-two;
-  font-weight: $spark-font-weight-body-two;
+  font-size: $sprk-font-size-body-two;
+  color: $sprk-color-body-two;
+  font-weight: $sprk-font-weight-body-two;
 }
 
 small,
 .sprk-b-TypeBodyThree {
   @include TextCrop(
-    $line-height: $spark-line-height-body-three,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-body-three) * 16),
-    $crop-line-height: $spark-line-height-body-three);
+    $line-height: $sprk-line-height-body-three,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-body-three) * 16),
+    $crop-line-height: $sprk-line-height-body-three);
 
-  font-size: $spark-font-size-body-three;
-  color: $spark-color-body-three;
-  font-weight: $spark-font-weight-body-three;
+  font-size: $sprk-font-size-body-three;
+  color: $sprk-color-body-three;
+  font-weight: $sprk-font-weight-body-three;
 }
 
 .sprk-b-TypeBodyFour {
   @include TextCrop(
-    $line-height: $spark-line-height-body-four,
-    $top-crop: $spark-line-height-collision-top-crop,
-    $bottom-crop: $spark-line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($spark-font-size-body-four) * 16),
-    $crop-line-height: $spark-line-height-body-four);
+    $line-height: $sprk-line-height-body-four,
+    $top-crop: $sprk-line-height-collision-top-crop,
+    $bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $crop-font-size: (strip-unit($sprk-font-size-body-four) * 16),
+    $crop-line-height: $sprk-line-height-body-four);
 
-  font-size: $spark-font-size-body-four;
-  color: $spark-color-body-four;
-  font-weight: $spark-font-weight-body-four;
+  font-size: $sprk-font-size-body-four;
+  color: $sprk-color-body-four;
+  font-weight: $sprk-font-weight-body-four;
 }

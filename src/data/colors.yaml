@@ -2,38 +2,38 @@
     - label: Red
       color: '#C8102E'
       rgb: 'rgb(200,16,46)'
-      property: '$spark-red'
+      property: '$sprk-red'
     - label: Black
       color: '#000000'
-      property: '$spark-black'
+      property: '$sprk-black'
       rgb: 'rgb(0,0,0)'
     - label: Gray
       color: '#EBEBEB'
       rgb: 'rgb(235,235,235)'
-      property: '$spark-gray'
+      property: '$sprk-gray'
     - label: White
       color: '#FFFFFF'
       rgb: 'rgb(255,255,255)'
-      property: '$spark-white'
+      property: '$sprk-white'
 
 - Secondary:
     - label: Deep-Red
       color: '#76232F'
       rgb: 'rgb(118,35,47)'
-      property: '$spark-red-deep'
+      property: '$sprk-red-deep'
     - label: Mid-Red
       color: '#9D2235'
       rgb: 'rgb(157,34,53)'
-      property: '$spark-red-mid'
+      property: '$sprk-red-mid'
     - label: Green
       color: '#00B398'
       rgb: 'rgb(0,179,152)'
-      property: '$spark-green'
+      property: '$sprk-green'
     - label: Yellow
       color: '#F2A900'
       rgb: 'rgb(242,169,0)'
-      property: '$spark-yellow'
+      property: '$sprk-yellow'
     - label: Blue
       color: '#007DBA'
       rgb: 'rgb(0,125,186)'
-      property: '$spark-blue'
+      property: '$sprk-blue'

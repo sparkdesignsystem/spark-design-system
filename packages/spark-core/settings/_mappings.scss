@@ -18,52 +18,52 @@ $scales-utilities-class-namespace: 'u-';
 $space-s: 8px !default;
 $space-m: 16px !default;
 $space-l: 32px !default;
-$space-h: $spark-space-xl !default;
+$space-h: $sprk-space-xl !default;
 //
-$spark-space-s: $space-s;
-$spark-space-m: $space-m;
-$spark-space-l: $space-l;
-$spark-space-h: $space-h;
+$sprk-space-s: $space-s;
+$sprk-space-m: $space-m;
+$sprk-space-l: $space-l;
+$sprk-space-h: $space-h;
 
 // Typography
-$h1-size: $spark-font-size-display-two !default;
-$h1-color: $spark-color-display-two !default;
-$h1-line-height: $spark-line-height-display-two !default;
-$h1-weight: $spark-font-weight-display-two !default;
-$h2-size: $spark-font-size-display-three !default;
-$h2-color: $spark-color-display-three !default;
-$h2-line-height: $spark-line-height-display-three !default;
-$h2-weight: $spark-font-weight-display-three !default;
-$h3-size: $spark-font-size-display-four !default;
-$h3-color: $spark-color-display-four !default;
-$h3-line-height: $spark-line-height-display-four !default;
-$h3-weight: $spark-font-weight-display-four !default;
-$h4-size: $spark-font-size-display-five !default;
-$h4-color: $spark-color-display-five !default;
-$h4-line-height: $spark-line-height-display-five !default;
-$h4-weight: $spark-font-weight-display-five !default;
-$h5-size: $spark-font-size-display-six !default;
-$h5-color: $spark-color-display-six !default;
-$h5-line-height: $spark-line-height-display-six !default;
-$h5-weight: $spark-font-weight-display-six !default;
-$h6-size: $spark-font-size-body-two !default;
-$h6-color: $spark-color-body-two !default;
-$h6-line-height: $spark-line-height-body-two !default;
-$h6-weight: $spark-font-weight-body-two !default;
+$h1-size: $sprk-font-size-display-two !default;
+$h1-color: $sprk-color-display-two !default;
+$h1-line-height: $sprk-line-height-display-two !default;
+$h1-weight: $sprk-font-weight-display-two !default;
+$h2-size: $sprk-font-size-display-three !default;
+$h2-color: $sprk-color-display-three !default;
+$h2-line-height: $sprk-line-height-display-three !default;
+$h2-weight: $sprk-font-weight-display-three !default;
+$h3-size: $sprk-font-size-display-four !default;
+$h3-color: $sprk-color-display-four !default;
+$h3-line-height: $sprk-line-height-display-four !default;
+$h3-weight: $sprk-font-weight-display-four !default;
+$h4-size: $sprk-font-size-display-five !default;
+$h4-color: $sprk-color-display-five !default;
+$h4-line-height: $sprk-line-height-display-five !default;
+$h4-weight: $sprk-font-weight-display-five !default;
+$h5-size: $sprk-font-size-display-six !default;
+$h5-color: $sprk-color-display-six !default;
+$h5-line-height: $sprk-line-height-display-six !default;
+$h5-weight: $sprk-font-weight-display-six !default;
+$h6-size: $sprk-font-size-body-two !default;
+$h6-color: $sprk-color-body-two !default;
+$h6-line-height: $sprk-line-height-body-two !default;
+$h6-weight: $sprk-font-weight-body-two !default;
 //
-$base-font-size: $spark-font-size-body-two !default;
-$base-line-height: $spark-line-height-body-two !default;
+$base-font-size: $sprk-font-size-body-two !default;
+$base-line-height: $sprk-line-height-body-two !default;
 $font-size-unit: rem !default;
 //
-$body-font-stack: $spark-body-font-name, Helvetica, 'Helvetica Neue', Arial,
+$body-font-stack: $sprk-body-font-name, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$heading-font-stack: $spark-body-font-name, Helvetica, 'Helvetica Neue', Arial,
+$heading-font-stack: $sprk-body-font-name, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
 $heading-font-weight: normal !default;
 //
-$spark-body-font-stack: $body-font-stack;
-$spark-heading-font-stack: $heading-font-stack;
-$spark-heading-font-weight: $heading-font-weight;
+$sprk-body-font-stack: $body-font-stack;
+$sprk-heading-font-stack: $heading-font-stack;
+$sprk-heading-font-weight: $heading-font-weight;
 //
 $system-body-fonts: false !default;
 $system-font-stack: null !default;
@@ -73,39 +73,39 @@ $helper-text-hidden: false !default;
 //
 // Box
 ///
-$box-padding-tiny: $spark-space-inset-xs !default;
-$box-padding-small: $spark-space-inset-s !default;
-$box-padding: $spark-space-inset-m !default;
-$box-padding-large: $spark-space-inset-l !default;
-$box-padding-huge: $spark-space-inset-xl !default;
+$box-padding-tiny: $sprk-space-inset-xs !default;
+$box-padding-small: $sprk-space-inset-s !default;
+$box-padding: $sprk-space-inset-m !default;
+$box-padding-large: $sprk-space-inset-l !default;
+$box-padding-huge: $sprk-space-inset-xl !default;
 
 // Buttons
-$btn-background-color: $spark-red !default;
+$btn-background-color: $sprk-red !default;
 $btn-border-color: $btn-background-color;
 $btn-border-radius: 1px !default;
 $btn-border-style: solid !default;
 $btn-border-width: 2px;
 $btn-font-weight: bold;
-$btn-hover-background-color: $spark-red-mid !default;
-$btn-hover-text-color: $spark-white !default;
-$btn-padding: $spark-space-inset-short-l !default;
-$btn-text-color: $spark-white !default;
+$btn-hover-background-color: $sprk-red-mid !default;
+$btn-hover-text-color: $sprk-white !default;
+$btn-padding: $sprk-space-inset-short-l !default;
+$btn-text-color: $sprk-white !default;
 //
-$spark-btn-border-width: $btn-border-width;
-$spark-btn-hover-background-color: $btn-hover-background-color;
-$spark-btn-text-color: $btn-text-color;
-$spark-btn-hover-text-color: $btn-hover-text-color;
-$spark-btn-border-style: $btn-border-style;
+$sprk-btn-border-width: $btn-border-width;
+$sprk-btn-hover-background-color: $btn-hover-background-color;
+$sprk-btn-text-color: $btn-text-color;
+$sprk-btn-hover-text-color: $btn-hover-text-color;
+$sprk-btn-border-style: $btn-border-style;
 // Disabled
 $btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $spark-gray !default;
-$btn-disabled-text-color: $spark-black-tint-50 !default;
-$btn-disabled-border-width: $spark-btn-border-width !default;
+$btn-disabled-background-color: $sprk-gray !default;
+$btn-disabled-text-color: $sprk-black-tint-50 !default;
+$btn-disabled-border-width: $sprk-btn-border-width !default;
 $btn-disabled-border-color: transparent !default;
 //
-$spark-btn-disabled-background-color: $btn-disabled-background-color;
-$spark-btn-disabled-border-color: $btn-disabled-border-color;
-$spark-btn-disabled-text-color: $btn-disabled-text-color;
+$sprk-btn-disabled-background-color: $btn-disabled-background-color;
+$sprk-btn-disabled-border-color: $btn-disabled-border-color;
+$sprk-btn-disabled-text-color: $btn-disabled-text-color;
 //
 // Layout
 //
@@ -115,51 +115,51 @@ $fieldset-padding: 0 !default;
 //
 // Lists
 ///
-$list-margin-left: $spark-space-m !default;
+$list-margin-left: $sprk-space-m !default;
 
 //
 // Horizontal List
 //
-$horizontal-list-spacing: $spark-space-m !default;
-$horizontal-list-spacing-tiny: $spark-space-xs !default;
-$horizontal-list-spacing-small: $spark-space-s !default;
-$horizontal-list-spacing-medium: $spark-space-m !default;
-$horizontal-list-spacing-large: $spark-space-l !default;
-$horizontal-list-spacing-huge: $spark-space-xl !default;
+$horizontal-list-spacing: $sprk-space-m !default;
+$horizontal-list-spacing-tiny: $sprk-space-xs !default;
+$horizontal-list-spacing-small: $sprk-space-s !default;
+$horizontal-list-spacing-medium: $sprk-space-m !default;
+$horizontal-list-spacing-large: $sprk-space-l !default;
+$horizontal-list-spacing-huge: $sprk-space-xl !default;
 
 // Inputs
-$input-container-margin-bottom: $spark-space-m !default;
-$input-disabled-background-color: $spark-gray !default;
-$input-disabled-border-color: $spark-black !default;
-$input-disabled-text-color: $spark-input-gray-medium !default;
-$input-readonly-border-color: $spark-black !default;
-$input-readonly-text-color: $spark-gray !default;
+$input-container-margin-bottom: $sprk-space-m !default;
+$input-disabled-background-color: $sprk-gray !default;
+$input-disabled-border-color: $sprk-black !default;
+$input-disabled-text-color: $sprk-input-gray-medium !default;
+$input-readonly-border-color: $sprk-black !default;
+$input-readonly-text-color: $sprk-gray !default;
 //
-$spark-input-container-margin-bottom: $input-container-margin-bottom;
-$spark-input-disabled-background-color: $input-disabled-background-color;
-$spark-input-disabled-border-color: $input-disabled-border-color;
-$spark-input-disabled-text-color: $input-disabled-text-color;
-$spark-input-readonly-border-color: $input-readonly-border-color;
-$spark-input-readonly-text-color: $input-readonly-text-color;
+$sprk-input-container-margin-bottom: $input-container-margin-bottom;
+$sprk-input-disabled-background-color: $input-disabled-background-color;
+$sprk-input-disabled-border-color: $input-disabled-border-color;
+$sprk-input-disabled-text-color: $input-disabled-text-color;
+$sprk-input-readonly-border-color: $input-readonly-border-color;
+$sprk-input-readonly-text-color: $input-readonly-text-color;
 //
 $text-input-border-radius: 0 !default;
-$text-input-border-color: $spark-black !default;
+$text-input-border-color: $sprk-black !default;
 $text-input-border-width: 0 !default;
 $text-input-padding: 3px $space-s !default;
 
 //
 // Media
 //
-$media-gutter-tiny: $spark-space-xs !default;
-$media-gutter-small: $spark-space-s !default;
-$media-gutter: $spark-space-m !default;
-$media-gutter-large: $spark-space-l !default;
-$media-gutter-huge: $spark-space-xl !default;
+$media-gutter-tiny: $sprk-space-xs !default;
+$media-gutter-small: $sprk-space-s !default;
+$media-gutter: $sprk-space-m !default;
+$media-gutter-large: $sprk-space-l !default;
+$media-gutter-huge: $sprk-space-xl !default;
 
 //
 // Reset
 ///
-$selection-bg-color: $spark-blue !default;
+$selection-bg-color: $sprk-blue !default;
 
 // Stack
 $split-breakpoint-xs: 30rem !default;
@@ -168,24 +168,24 @@ $split-breakpoint-m: 55rem !default;
 $split-breakpoint-l: 67.5rem !default;
 $split-breakpoint-xl: 80rem !default;
 //
-$spark-split-breakpoint-xxs: 20rem !default;
-$spark-split-breakpoint-xs: $split-breakpoint-xs;
-$spark-split-breakpoint-s: $split-breakpoint-s;
-$spark-split-breakpoint-m: $split-breakpoint-m;
-$spark-split-breakpoint-l: $split-breakpoint-l;
-$spark-split-breakpoint-xl: $split-breakpoint-xl;
+$sprk-split-breakpoint-xxs: 20rem !default;
+$sprk-split-breakpoint-xs: $split-breakpoint-xs;
+$sprk-split-breakpoint-s: $split-breakpoint-s;
+$sprk-split-breakpoint-m: $split-breakpoint-m;
+$sprk-split-breakpoint-l: $split-breakpoint-l;
+$sprk-split-breakpoint-xl: $split-breakpoint-xl;
 //
-$spark-stack-spacing-tiny: $spark-space-xs !default;
-$spark-stack-spacing-small: $spark-space-s !default;
-$spark-stack-spacing-medium: $spark-space-m !default;
-$spark-stack-spacing-large: $spark-space-l !default;
-$spark-stack-spacing-huge: $spark-space-xl !default;
+$sprk-stack-spacing-tiny: $sprk-space-xs !default;
+$sprk-stack-spacing-small: $sprk-space-s !default;
+$sprk-stack-spacing-medium: $sprk-space-m !default;
+$sprk-stack-spacing-large: $sprk-space-l !default;
+$sprk-stack-spacing-huge: $sprk-space-xl !default;
 
 //
 // Tables
 ///
 $table-cell-alignment: center !default;
-$table-padding-small: $spark-space-inset-s !default;
-$table-padding-medium: $spark-space-inset-m !default;
-$table-padding-large: $spark-space-inset-l !default;
-$table-stripe-color: $spark-gray !default;
+$table-padding-small: $sprk-space-inset-s !default;
+$table-padding-medium: $sprk-space-inset-m !default;
+$table-padding-large: $sprk-space-inset-l !default;
+$table-stripe-color: $sprk-gray !default;

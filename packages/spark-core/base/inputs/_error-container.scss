@@ -1,8 +1,8 @@
 .sprk-b-ErrorContainer {
   align-items: center;
   display: flex;
-  margin-left: $spark-space-s;
-  margin-top: $spark-space-s;
+  margin-left: $sprk-space-s;
+  margin-top: $sprk-space-s;
 }
 
 [hidden].sprk-b-ErrorContainer {
@@ -10,14 +10,14 @@
 }
 
 .sprk-b-ErrorIcon {
-  fill: $spark-text-input-error-color;
-  margin-right: $spark-space-s;
-  height: $spark-error-icon-size;
-  width: $spark-error-icon-size;
+  fill: $sprk-text-input-error-color;
+  margin-right: $sprk-space-s;
+  height: $sprk-error-icon-size;
+  width: $sprk-error-icon-size;
 }
 
 .sprk-b-ErrorText {
-  color: $spark-error-text-color;
-  font-size: $spark-font-size-body-four;
+  color: $sprk-error-text-color;
+  font-size: $sprk-font-size-body-four;
   font-weight: bold;
 }

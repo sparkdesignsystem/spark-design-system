@@ -3,28 +3,28 @@
 // ==================================================================
 //
 .sprk-b-Link {
-  color: $spark-link-color;
-  font-weight: $spark-link-font-weight;
+  color: $sprk-link-color;
+  font-weight: $sprk-link-font-weight;
   position: relative;
   text-decoration: none;
-  transition: $spark-link-transition;
+  transition: $sprk-link-transition;
 
   &:visited {
-    color: $spark-link-visited-color;
+    color: $sprk-link-visited-color;
 
     &::after {
-      background-color: $spark-link-underline-visited-color;
+      background-color: $sprk-link-underline-visited-color;
     }
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $spark-link-underline-color;
+    color: $sprk-link-underline-color;
     text-decoration: none;
 
     &::after {
-      background-color: $spark-link-underline-color;
+      background-color: $sprk-link-underline-color;
     }
   }
 
@@ -35,7 +35,7 @@
     height: 0.125em;
     width: 100%;
     position: absolute;
-    background-color: $spark-link-underline-color;
+    background-color: $sprk-link-underline-color;
   }
 }
 
@@ -48,14 +48,14 @@
 }
 
 .sprk-b-Link--standalone {
-  color: $spark-link-standalone-color;
+  color: $sprk-link-standalone-color;
 
   &:hover,
   &:active,
   &:focus {
     &::after {
       opacity: 1;
-      transition: $spark-link-transition;
+      transition: $sprk-link-transition;
     }
   }
 
@@ -65,38 +65,38 @@
 }
 
 .sprk-b-Link--muted {
-  color: $spark-link-muted-color;
+  color: $sprk-link-muted-color;
 
   &:visited {
-    color: $spark-link-muted-color;
+    color: $sprk-link-muted-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $spark-link-muted-color;
+    color: $sprk-link-muted-color;
   }
 }
 
 .sprk-b-Link--disabled {
-  color: $spark-link-disabled-color;
+  color: $sprk-link-disabled-color;
   pointer-events: none;
 
   &:visited {
-    color: $spark-link-disabled-color;
+    color: $sprk-link-disabled-color;
 
     &::after {
-      background: $spark-link-disabled-color;
+      background: $sprk-link-disabled-color;
     }
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $spark-link-disabled-color;
+    color: $sprk-link-disabled-color;
   }
 
   &::after {
-    background: $spark-link-disabled-color;
+    background: $sprk-link-disabled-color;
   }
 }

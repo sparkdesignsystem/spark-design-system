@@ -2,23 +2,23 @@
 // Masthead
 // ==================================================================
 .sprk-c-Masthead {
-  background-color: $spark-white;
+  background-color: $sprk-white;
   position: sticky;
   top: 0;
-  z-index: $spark-layer-height-m;
+  z-index: $sprk-layer-height-m;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     position: static;
   }
 }
 
 .sprk-c-Masthead__content {
-  background-color: $spark-white;
-  border-bottom: 2px solid $spark-black-tint-50;
-  padding: $spark-space-m 0;
+  background-color: $sprk-white;
+  border-bottom: 2px solid $sprk-black-tint-50;
+  padding: $sprk-space-m 0;
   width: 100%;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     border: none;
   }
 }
@@ -27,27 +27,27 @@
   align-items: center;
   display: flex;
   margin: 0 auto;
-  max-width: $spark-masthead-column-width;
-  padding: 0 $spark-space-m;
+  max-width: $sprk-masthead-column-width;
+  padding: 0 $sprk-space-m;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     justify-content: space-between;
-    margin: 0 auto $spark-space-l;
+    margin: 0 auto $sprk-space-l;
   }
 }
 
 .sprk-c-Masthead__logo {
   margin: auto;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
-    margin: 0 $spark-space-m 0 0;
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
+    margin: 0 $sprk-space-m 0 0;
   }
 }
 
 .sprk-c-Masthead__hamburger {
-  margin-right: $spark-space-m;
+  margin-right: $sprk-space-m;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     display: none;
   }
 }
@@ -55,7 +55,7 @@
 .sprk-c-Masthead__secondary-nav {
   display: none;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     display: block;
     margin-left: auto;
   }
@@ -64,21 +64,21 @@
 .sprk-c-Masthead__secondary {
   display: none;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     display: flex;
     justify-content: flex-end;
-    max-width: $spark-masthead-column-width;
-    margin: -2rem auto $spark-space-m;
-    padding: 0 $spark-space-m;
+    max-width: $sprk-masthead-column-width;
+    margin: -2rem auto $sprk-space-m;
+    padding: 0 $sprk-space-m;
   }
 }
 
 .sprk-c-Masthead__search {
   display: none;
 
-  @media all and (min-width: $spark-main-nav-breakpoint) {
+  @media all and (min-width: $sprk-main-nav-breakpoint) {
     display: block;
-    margin-left: $spark-space-m;
+    margin-left: $sprk-space-m;
   }
 }
 
@@ -88,19 +88,19 @@
 
 .sprk-c-Masthead__wide-navigation-container {
   display: none;
-  font-size: $spark-masthead-wide-navigation-font-size;
+  font-size: $sprk-masthead-wide-navigation-font-size;
 
-  @media (min-width: $spark-main-nav-breakpoint) {
+  @media (min-width: $sprk-main-nav-breakpoint) {
     display: block;
   }
 }
 
 .sprk-c-Masthead__narrow-navigation-container {
-  background-color: $spark-white;
+  background-color: $sprk-white;
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: $spark-mobile-masthead-height;
-  padding-bottom: $spark-mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
+  top: $sprk-mobile-masthead-height;
+  padding-bottom: $sprk-mobile-masthead-height; // so that the scroll has enough room to reach the bottom item
   width: 100%;
 }

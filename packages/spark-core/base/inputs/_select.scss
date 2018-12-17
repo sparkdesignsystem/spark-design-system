@@ -3,18 +3,18 @@
   border: 1px solid transparent;
   border-radius: 0;
   background: none;
-  font-size: $spark-font-size-body-two;
-  font-weight: $spark-font-weight-body-two;
-  line-height: $spark-line-height-body-two;
+  font-size: $sprk-font-size-body-two;
+  font-weight: $sprk-font-weight-body-two;
+  line-height: $sprk-line-height-body-two;
   outline: 0;
-  padding: 0 $spark-space-l 0 $spark-space-s;
-  box-shadow: $spark-input-box-shadow;
+  padding: 0 $sprk-space-l 0 $sprk-space-s;
+  box-shadow: $sprk-input-box-shadow;
   width: 100%;
 }
 
 // IE11
 .sprk-b-Select:focus::-ms-value {
-  color: $spark-black;
+  color: $sprk-black;
   background: none;
 }
 
@@ -24,36 +24,36 @@
 
 .sprk-b-SelectContainer__icon {
   float: right;
-  margin-top: $spark-select-arrow-offset-y;
-  margin-right: $spark-select-arrow-offset-x;
+  margin-top: $sprk-select-arrow-offset-y;
+  margin-right: $sprk-select-arrow-offset-x;
 }
 
 .sprk-b-Select[disabled] {
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
-  border-bottom-color: $spark-input-gray-medium;
+  border-bottom-color: $sprk-input-gray-medium;
   border-bottom-width: 1px;
-  background-color: $spark-input-disabled-background-color;
+  background-color: $sprk-input-disabled-background-color;
   box-shadow: none;
-  color: $spark-input-disabled-text-color;
+  color: $sprk-input-disabled-text-color;
 }
 
 .sprk-b-Select--error {
-  box-shadow: $spark-input-error-box-shadow;
+  box-shadow: $sprk-input-error-box-shadow;
 }
 
 .sprk-b-Select--error ~ .sprk-b-InputContainer__input-border {
-  border-bottom: 3px solid $spark-text-input-error-color;
+  border-bottom: 3px solid $sprk-text-input-error-color;
 }
 
 .sprk-b-Select--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full $spark-input-animation-speed;
+  animation: width-zero-to-full $sprk-input-animation-speed;
   animation-fill-mode: forwards;
 }
 
 .sprk-b-Select--focusout ~ .sprk-b-InputContainer__input-border {
   width: 100%;
-  animation: opacity-one-to-zero $spark-input-animation-speed;
+  animation: opacity-one-to-zero $sprk-input-animation-speed;
   animation-fill-mode: forwards;
 }

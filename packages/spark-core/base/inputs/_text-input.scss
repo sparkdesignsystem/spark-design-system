@@ -2,21 +2,21 @@
 // Input Component
 // ==================================================================
 .sprk-b-TextInput {
-  font-size: $spark-font-size-body-two;
-  font-weight: $spark-font-weight-body-two;
-  line-height: $spark-line-height-body-two;
+  font-size: $sprk-font-size-body-two;
+  font-weight: $sprk-font-weight-body-two;
+  line-height: $sprk-line-height-body-two;
   outline: 0;
-  box-shadow: $spark-input-box-shadow;
+  box-shadow: $sprk-input-box-shadow;
 }
 
 .sprk-b-TextInput[disabled] {
-  background-color: $spark-input-disabled-background-color;
-  box-shadow: $spark-input-disabled-box-shadow;
-  color: $spark-input-disabled-text-color;
+  background-color: $sprk-input-disabled-background-color;
+  box-shadow: $sprk-input-disabled-box-shadow;
+  color: $sprk-input-disabled-text-color;
 }
 
 .sprk-b-TextInput--with-icon {
-  padding-left: $spark-space-l;
+  padding-left: $sprk-space-l;
 }
 
 .sprk-b-TextInput--monetary {
@@ -31,44 +31,44 @@
   position: relative;
 
   &::before {
-    content: $spark-monetary-symbol;
+    content: $sprk-monetary-symbol;
     display: block;
-    font-size: $spark-space-m;
+    font-size: $sprk-space-m;
     line-height: 1;
-    margin-left: $spark-input-text-icon-offset-x;
-    margin-top: $spark-input-text-icon-offset-y;
+    margin-left: $sprk-input-text-icon-offset-x;
+    margin-top: $sprk-input-text-icon-offset-y;
     position: absolute;
-    z-index: $spark-layer-height-xs;
+    z-index: $sprk-layer-height-xs;
   }
 }
 
 .sprk-b-InlineSearch__icon,
 .sprk-b-DatePicker__icon {
-  fill: $spark-red;
-  margin-left: $spark-input-icon-offset-x;
-  margin-top: $spark-input-icon-offset-y;
+  fill: $sprk-red;
+  margin-left: $sprk-input-icon-offset-x;
+  margin-top: $sprk-input-icon-offset-y;
   position: absolute;
-  stroke: $spark-red;
-  z-index: $spark-layer-height-xs;
+  stroke: $sprk-red;
+  z-index: $sprk-layer-height-xs;
 }
 
 .sprk-b-InlineSearch__icon {
-  stroke: $spark-black;
+  stroke: $sprk-black;
 }
 
 .sprk-b-TextInput[readonly] {
-  color: $spark-input-readonly-text-color;
+  color: $sprk-input-readonly-text-color;
 }
 
 .sprk-b-HelperText,
 .sprk-b-ErrorText {
-  font-size: $spark-font-size-body-four;
-  font-weight: $spark-font-weight-body-four;
-  line-height: $spark-line-height-body-four;
+  font-size: $sprk-font-size-body-four;
+  font-weight: $sprk-font-weight-body-four;
+  line-height: $sprk-line-height-body-four;
 }
 
 .sprk-b-HelperText {
-  color: $spark-input-gray-medium;
+  color: $sprk-input-gray-medium;
 }
 
 .sprk-b-ErrorText {
@@ -77,7 +77,7 @@
 
 .sprk-b-TextArea {
   min-height: 125px;
-  margin: $spark-space-stack-m;
+  margin: $sprk-space-stack-m;
 }
 
 // Placeholder colors
@@ -85,22 +85,22 @@
 ::-moz-placeholder,
 :-ms-input-placeholder,
 ::placeholder {
-  color: $spark-input-placeholder-color;
+  color: $sprk-input-placeholder-color;
 }
 
 .sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full $spark-input-animation-speed;
+  animation: width-zero-to-full $sprk-input-animation-speed;
   animation-fill-mode: forwards;
 }
 
 .sprk-b-TextInput--focusout ~ .sprk-b-InputContainer__input-border {
   width: 100%;
-  animation: opacity-one-to-zero $spark-input-animation-speed;
+  animation: opacity-one-to-zero $sprk-input-animation-speed;
   animation-fill-mode: forwards;
 }
 
 .sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
   animation: none;
-  border-bottom: 3px solid $spark-text-input-error-color;
+  border-bottom: 3px solid $sprk-text-input-error-color;
   width: 100%;
 }

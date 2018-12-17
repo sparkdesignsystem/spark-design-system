@@ -5,15 +5,15 @@
 //
 // Available Variables
 ///
-$spark-highlight-board-type-breakpoint: 30rem !default;
-$spark-highlight-board-content-width: 30rem !default;
-$spark-highlight-board-type-reduction-percentage: 0.8 !default;
-$spark-highlight-board-height: 31.25rem !default;
-$spark-highlight-board-color: $spark-white !default;
-$spark-highlight-board-content-box-color: $spark-white !default;
+$sprk-highlight-board-type-breakpoint: 30rem !default;
+$sprk-highlight-board-content-width: 30rem !default;
+$sprk-highlight-board-type-reduction-percentage: 0.8 !default;
+$sprk-highlight-board-height: 31.25rem !default;
+$sprk-highlight-board-color: $sprk-white !default;
+$sprk-highlight-board-content-box-color: $sprk-white !default;
 
 .sprk-c-HighlightBoard {
-  background-color: $spark-highlight-board-color;
+  background-color: $sprk-highlight-board-color;
   position: relative;
 }
 
@@ -24,32 +24,32 @@ $spark-highlight-board-content-box-color: $spark-white !default;
   font-family: 'object-fit: cover;'; // required by the polyfill
 
   /* stylelint-enable */
-  height: $spark-highlight-board-height;
+  height: $sprk-highlight-board-height;
   width: 100%;
 }
 
 .sprk-c-HighlightBoard__content {
-  background-color: $spark-highlight-board-content-box-color;
-  padding: $spark-space-inset-tall-m;
+  background-color: $sprk-highlight-board-content-box-color;
+  padding: $sprk-space-inset-tall-m;
   text-align: center;
   width: auto;
 
-  @media (min-width: $spark-highlight-board-type-breakpoint) {
-    padding: $spark-space-inset-tall-l;
+  @media (min-width: $sprk-highlight-board-type-breakpoint) {
+    padding: $sprk-space-inset-tall-l;
   }
 }
 
 .sprk-c-HighlightBoard__heading {
-  @media (max-width: $spark-highlight-board-type-breakpoint) {
+  @media (max-width: $sprk-highlight-board-type-breakpoint) {
     // prettier-ignore
-    font-size: $spark-font-size-display-three * $spark-highlight-board-type-reduction-percentage;
+    font-size: $sprk-font-size-display-three * $sprk-highlight-board-type-reduction-percentage;
   }
 }
 
 .sprk-c-HighlightBoard__cta {
   width: 100%;
 
-  @media (min-width: $spark-highlight-board-type-breakpoint) {
+  @media (min-width: $sprk-highlight-board-type-breakpoint) {
     width: auto;
   }
 }
@@ -57,9 +57,9 @@ $spark-highlight-board-content-box-color: $spark-white !default;
 .sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked)
 .sprk-c-HighlightBoard__content {
   position: absolute;
-  bottom: $spark-space-l;
-  left: $spark-space-l;
-  max-width: $spark-highlight-board-content-width;
-  right: $spark-space-l;
+  bottom: $sprk-space-l;
+  left: $sprk-space-l;
+  max-width: $sprk-highlight-board-content-width;
+  right: $sprk-space-l;
   text-align: left;
 }

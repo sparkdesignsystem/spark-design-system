@@ -5,351 +5,351 @@
 //
 // Spacing
 ///
-$spark-space-inset-xs: 4px 4px 4px 4px !default;
-$spark-space-inset-s: 8px 8px 8px 8px !default;
-$spark-space-inset-m: 16px 16px 16px 16px !default;
-$spark-space-inset-l: 32px 32px 32px 32px !default;
-$spark-space-inset-xl: 64px 64px 64px 64px !default;
+$sprk-space-inset-xs: 4px 4px 4px 4px !default;
+$sprk-space-inset-s: 8px 8px 8px 8px !default;
+$sprk-space-inset-m: 16px 16px 16px 16px !default;
+$sprk-space-inset-l: 32px 32px 32px 32px !default;
+$sprk-space-inset-xl: 64px 64px 64px 64px !default;
 
 // Inset Short
-$spark-space-inset-short-xs: 2px 4px 2px 4px !default;
-$spark-space-inset-short-s: 4px 8px 4px 8px !default;
-$spark-space-inset-short-m: 8px 16px 8px 16px !default;
-$spark-space-inset-short-l: 16px 32px 16px 32px !default;
-$spark-space-inset-short-xl: 32px 64px 32px 64px !default;
+$sprk-space-inset-short-xs: 2px 4px 2px 4px !default;
+$sprk-space-inset-short-s: 4px 8px 4px 8px !default;
+$sprk-space-inset-short-m: 8px 16px 8px 16px !default;
+$sprk-space-inset-short-l: 16px 32px 16px 32px !default;
+$sprk-space-inset-short-xl: 32px 64px 32px 64px !default;
 
 // Inset Tall
-$spark-space-inset-tall-xs: 6px 4px 6px 4px !default;
-$spark-space-inset-tall-s: 12px 8px 12px 8px !default;
-$spark-space-inset-tall-m: 24px 16px 24px 16px !default;
-$spark-space-inset-tall-l: 48px 32px 48px 32px !default;
-$spark-space-inset-tall-xl: 96px 64px 96px 64px !default;
+$sprk-space-inset-tall-xs: 6px 4px 6px 4px !default;
+$sprk-space-inset-tall-s: 12px 8px 12px 8px !default;
+$sprk-space-inset-tall-m: 24px 16px 24px 16px !default;
+$sprk-space-inset-tall-l: 48px 32px 48px 32px !default;
+$sprk-space-inset-tall-xl: 96px 64px 96px 64px !default;
 
 // Stack
-$spark-space-stack-xs: 0 0 4px 0 !default;
-$spark-space-stack-s: 0 0 8px 0 !default;
-$spark-space-stack-m: 0 0 16px 0 !default;
-$spark-space-stack-l: 0 0 32px 0 !default;
-$spark-space-stack-xl: 0 0 64px 0 !default;
+$sprk-space-stack-xs: 0 0 4px 0 !default;
+$sprk-space-stack-s: 0 0 8px 0 !default;
+$sprk-space-stack-m: 0 0 16px 0 !default;
+$sprk-space-stack-l: 0 0 32px 0 !default;
+$sprk-space-stack-xl: 0 0 64px 0 !default;
 
 // Global Spacing Utilities
-$spark-space-xs: 4px !default;
-$spark-space-xl: 64px !default;
+$sprk-space-xs: 4px !default;
+$sprk-space-xl: 64px !default;
 
 //
 // Icons
 //
-$spark-icon-m: 16px !default;
-$spark-icon-l: 32px !default;
-$spark-icon-xl: 64px !default;
-$spark-icon-xxl: 128px !default;
-$spark-icon-fill-color: $spark-red !default;
-$spark-icon-stroke-color: $spark-red !default;
-$spark-icon-using-custom-stroke: true !default;
-$spark-icon-custom-stroke-width-s: 1px !default;
-$spark-icon-custom-stroke-width-m: 1.5px !default;
-$spark-icon-custom-stroke-width-l: 2px !default;
-$spark-icon-custom-stroke-width-xl: 3px !default;
+$sprk-icon-m: 16px !default;
+$sprk-icon-l: 32px !default;
+$sprk-icon-xl: 64px !default;
+$sprk-icon-xxl: 128px !default;
+$sprk-icon-fill-color: $sprk-red !default;
+$sprk-icon-stroke-color: $sprk-red !default;
+$sprk-icon-using-custom-stroke: true !default;
+$sprk-icon-custom-stroke-width-s: 1px !default;
+$sprk-icon-custom-stroke-width-m: 1.5px !default;
+$sprk-icon-custom-stroke-width-l: 2px !default;
+$sprk-icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layers
 //
-$spark-layer-height-xs: 1 !default;
-$spark-layer-height-s: 1000 !default;
-$spark-layer-height-m: 2000 !default;
-$spark-layer-height-l: 3000 !default;
-$spark-layer-height-xl: 99999 !default;
+$sprk-layer-height-xs: 1 !default;
+$sprk-layer-height-s: 1000 !default;
+$sprk-layer-height-m: 2000 !default;
+$sprk-layer-height-l: 3000 !default;
+$sprk-layer-height-xl: 99999 !default;
 
 //
 // Pagination
 //
-$spark-pag-max-width: 26rem !default;
-$spark-pag-link-color: $spark-black !default;
-$spark-pag-link-color-hover: $spark-pag-link-color !default;
-$spark-pag-selection-color: $spark-red !default;
-$spark-pag-selection-link-color: $spark-white !default;
-$spark-pag-selection-link-color-hover: $spark-white !default;
-$spark-pag-circle-size: 2em !default;
+$sprk-pag-max-width: 26rem !default;
+$sprk-pag-link-color: $sprk-black !default;
+$sprk-pag-link-color-hover: $sprk-pag-link-color !default;
+$sprk-pag-selection-color: $sprk-red !default;
+$sprk-pag-selection-link-color: $sprk-white !default;
+$sprk-pag-selection-link-color-hover: $sprk-white !default;
+$sprk-pag-circle-size: 2em !default;
 
 //
 // Typography
 ///
 
 // Display One
-$spark-font-size-display-one: 3.797rem !default;
-$spark-color-display-one: $spark-black !default;
-$spark-line-height-display-one: 1.13 !default;
-$spark-font-weight-display-one: bold !default;
+$sprk-font-size-display-one: 3.797rem !default;
+$sprk-color-display-one: $sprk-black !default;
+$sprk-line-height-display-one: 1.13 !default;
+$sprk-font-weight-display-one: bold !default;
 // Display Two
-$spark-font-size-display-two: 2.853rem !default;
-$spark-color-display-two: $spark-black !default;
-$spark-line-height-display-two: 1.19 !default;
-$spark-font-weight-display-two: bold !default;
+$sprk-font-size-display-two: 2.853rem !default;
+$sprk-color-display-two: $sprk-black !default;
+$sprk-line-height-display-two: 1.19 !default;
+$sprk-font-weight-display-two: bold !default;
 // Display Three
-$spark-font-size-display-three: 2.594rem !default;
-$spark-color-display-three: $spark-black !default;
-$spark-line-height-display-three: 1.15 !default;
-$spark-font-weight-display-three: bold !default;
+$sprk-font-size-display-three: 2.594rem !default;
+$sprk-color-display-three: $sprk-black !default;
+$sprk-line-height-display-three: 1.15 !default;
+$sprk-font-weight-display-three: bold !default;
 // Display Four
-$spark-font-size-display-four: 2.144rem !default;
-$spark-color-display-four: $spark-black !default;
-$spark-line-height-display-four: 1.3 !default;
-$spark-font-weight-display-four: normal !default;
+$sprk-font-size-display-four: 2.144rem !default;
+$sprk-color-display-four: $sprk-black !default;
+$sprk-line-height-display-four: 1.3 !default;
+$sprk-font-weight-display-four: normal !default;
 // Display Five
-$spark-font-size-display-five: 1.772rem !default;
-$spark-color-display-five: $spark-black !default;
-$spark-line-height-display-five: 1.19 !default;
-$spark-font-weight-display-five: bold !default;
+$sprk-font-size-display-five: 1.772rem !default;
+$sprk-color-display-five: $sprk-black !default;
+$sprk-line-height-display-five: 1.19 !default;
+$sprk-font-weight-display-five: bold !default;
 // Display Six
-$spark-font-size-display-six: 1.464rem !default;
-$spark-color-display-six: $spark-black !default;
-$spark-line-height-display-six: 1.28 !default;
-$spark-font-weight-display-six: bold !default;
+$sprk-font-size-display-six: 1.464rem !default;
+$sprk-color-display-six: $sprk-black !default;
+$sprk-line-height-display-six: 1.28 !default;
+$sprk-font-weight-display-six: bold !default;
 // Display Seven
-$spark-font-size-display-seven: 1.464rem !default;
-$spark-color-display-seven: $spark-black !default;
-$spark-line-height-display-seven: 1.16 !default;
-$spark-font-weight-display-seven: normal !default;
+$sprk-font-size-display-seven: 1.464rem !default;
+$sprk-color-display-seven: $sprk-black !default;
+$sprk-line-height-display-seven: 1.16 !default;
+$sprk-font-weight-display-seven: normal !default;
 // Display Eight
-$spark-font-size-display-eight: 1.2rem !default;
-$spark-color-display-eight: $spark-black !default;
-$spark-line-height-display-eight: 1.41 !default;
-$spark-font-weight-display-eight: normal !default;
+$sprk-font-size-display-eight: 1.2rem !default;
+$sprk-color-display-eight: $sprk-black !default;
+$sprk-line-height-display-eight: 1.41 !default;
+$sprk-font-weight-display-eight: normal !default;
 // Body One
-$spark-font-size-body-one: 1rem !default;
-$spark-color-body-one: $spark-black !default;
-$spark-line-height-body-one: 1.57 !default;
-$spark-font-weight-body-one: bold !default;
+$sprk-font-size-body-one: 1rem !default;
+$sprk-color-body-one: $sprk-black !default;
+$sprk-line-height-body-one: 1.57 !default;
+$sprk-font-weight-body-one: bold !default;
 // Body Two
-$spark-font-size-body-two: 1rem !default;
-$spark-color-body-two: $spark-black !default;
-$spark-line-height-body-two: 1.57 !default;
-$spark-font-weight-body-two: normal !default;
+$sprk-font-size-body-two: 1rem !default;
+$sprk-color-body-two: $sprk-black !default;
+$sprk-line-height-body-two: 1.57 !default;
+$sprk-font-weight-body-two: normal !default;
 // Body Three
-$spark-font-size-body-three: 1rem !default;
-$spark-color-body-three: $spark-black !default;
-$spark-line-height-body-three: 1.82 !default;
-$spark-font-weight-body-three: normal !default;
+$sprk-font-size-body-three: 1rem !default;
+$sprk-color-body-three: $sprk-black !default;
+$sprk-line-height-body-three: 1.82 !default;
+$sprk-font-weight-body-three: normal !default;
 // Body Four
-$spark-font-size-body-four: 0.826rem !default;
-$spark-color-body-four: $spark-black !default;
-$spark-line-height-body-four: 1.6 !default;
-$spark-font-weight-body-four: normal !default;
+$sprk-font-size-body-four: 0.826rem !default;
+$sprk-color-body-four: $sprk-black !default;
+$sprk-line-height-body-four: 1.6 !default;
+$sprk-font-weight-body-four: normal !default;
 // Font Stack
-$spark-using-webfont-body: true !default;
-$spark-using-webfont-heading: true !default;
-$spark-using-webfont-alternate: false !default;
-$spark-body-font-name: FallSans !default;
-$spark-body-font-src: url('') !default;
-$spark-body-font-weight: normal !default;
-$spark-body-bold-font-src: url('') !default;
-$spark-body-bold-font-weight: bold !default;
-$spark-heading-font-name: FallSans !default;
-$spark-heading-font-src: url('') !default;
-$spark-heading-bold-font-src: url('') !default;
-$spark-heading-bold-font-weight: bold !default;
-$spark-alternate-font-name: FallSans-Regular !default;
-$spark-alternate-font-src: url('') !default;
-$spark-alternate-font-weight: normal !default;
-$spark-alternate-font-stack: $spark-alternate-font-name, Helvetica, 'Helvetica Neue', Arial,
+$sprk-using-webfont-body: true !default;
+$sprk-using-webfont-heading: true !default;
+$sprk-using-webfont-alternate: false !default;
+$sprk-body-font-name: FallSans !default;
+$sprk-body-font-src: url('') !default;
+$sprk-body-font-weight: normal !default;
+$sprk-body-bold-font-src: url('') !default;
+$sprk-body-bold-font-weight: bold !default;
+$sprk-heading-font-name: FallSans !default;
+$sprk-heading-font-src: url('') !default;
+$sprk-heading-bold-font-src: url('') !default;
+$sprk-heading-bold-font-weight: bold !default;
+$sprk-alternate-font-name: FallSans-Regular !default;
+$sprk-alternate-font-src: url('') !default;
+$sprk-alternate-font-weight: normal !default;
+$sprk-alternate-font-stack: $sprk-alternate-font-name, Helvetica, 'Helvetica Neue', Arial,
 sans-serif !default;
 
 // Line-height Collision
-$spark-line-height-collision-top-crop: 5;
-$spark-line-height-collision-bottom-crop: 5;
+$sprk-line-height-collision-top-crop: 5;
+$sprk-line-height-collision-bottom-crop: 5;
 
 //
 // Consistent Style Vars
 //
-$spark-border-radius: 5px !default;
+$sprk-border-radius: 5px !default;
 
 //
 // Alerts
 ///
-$spark-alert-border: 1px solid $spark-gray !default;
-$spark-alert-bar-width: -10px !default;
-$spark-alert-color: $spark-white !default;
-$spark-alert-color-info: $spark-blue !default;
-$spark-alert-color-success: $spark-green !default;
-$spark-alert-color-fail: $spark-yellow !default;
-$spark-alert-icon-size: 40px !default;
-$spark-alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
-$spark-alert-shadow-info: inset $spark-alert-bar-width 0 0 $spark-alert-color-info !default;
-$spark-alert-shadow-hover-info: inset -80px 0 0 $spark-alert-color-info !default;
-$spark-alert-shadow-success: inset $spark-alert-bar-width 0 0 $spark-alert-color-success !default;
-$spark-alert-shadow-hover-success: inset -80px 0 0 $spark-alert-color-success !default;
-$spark-alert-shadow-fail: inset $spark-alert-bar-width 0 0 $spark-alert-color-fail !default;
-$spark-alert-shadow-hover-fail: inset -80px 0 0 $spark-alert-color-fail !default;
+$sprk-alert-border: 1px solid $sprk-gray !default;
+$sprk-alert-bar-width: -10px !default;
+$sprk-alert-color: $sprk-white !default;
+$sprk-alert-color-info: $sprk-blue !default;
+$sprk-alert-color-success: $sprk-green !default;
+$sprk-alert-color-fail: $sprk-yellow !default;
+$sprk-alert-icon-size: 40px !default;
+$sprk-alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
+$sprk-alert-shadow-info: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-info !default;
+$sprk-alert-shadow-hover-info: inset -80px 0 0 $sprk-alert-color-info !default;
+$sprk-alert-shadow-success: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-success !default;
+$sprk-alert-shadow-hover-success: inset -80px 0 0 $sprk-alert-color-success !default;
+$sprk-alert-shadow-fail: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-fail !default;
+$sprk-alert-shadow-hover-fail: inset -80px 0 0 $sprk-alert-color-fail !default;
 
 //
 // Promos
 ///
-$spark-promo-background-color: $spark-white !default;
-$spark-promo-border: 1px solid $spark-gray !default;
-$spark-promo-max-width: 42.5rem !default;
-$spark-promo-breakpoint: 42.5rem !default;
-$spark-promo-image-narrow-max-height: 20rem !default;
-$spark-promo-image-narrow-max-width: 50% !default;
-$spark-promo-icon-color: $spark-black !default;
-$spark-promo-title-font-color: $spark-black !default;
-$spark-promo-title-font-weight: $spark-font-weight-display-four !default;
-$spark-promo-subtitle-font-color: $spark-black !default;
-$spark-promo-subtitle-font-weight: $spark-font-weight-body-one !default;
+$sprk-promo-background-color: $sprk-white !default;
+$sprk-promo-border: 1px solid $sprk-gray !default;
+$sprk-promo-max-width: 42.5rem !default;
+$sprk-promo-breakpoint: 42.5rem !default;
+$sprk-promo-image-narrow-max-height: 20rem !default;
+$sprk-promo-image-narrow-max-width: 50% !default;
+$sprk-promo-icon-color: $sprk-black !default;
+$sprk-promo-title-font-color: $sprk-black !default;
+$sprk-promo-title-font-weight: $sprk-font-weight-display-four !default;
+$sprk-promo-subtitle-font-color: $sprk-black !default;
+$sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 
 //
 // Buttons
 ///
-$spark-btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
-$spark-btn-breakpoint: 30rem !default;
-$spark-btn-transition-speed: 0.3s !default;
+$sprk-btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$sprk-btn-breakpoint: 30rem !default;
+$sprk-btn-transition-speed: 0.3s !default;
 // Secondary
-$spark-btn-secondary-background-color: transparent !default;
-$spark-btn-secondary-border-color: $spark-black !default;
-$spark-btn-secondary-hover-text-color: $spark-white !default;
-$spark-btn-secondary-hover-background-color: $spark-black !default;
-$spark-btn-secondary-text-color: $spark-black !default;
+$sprk-btn-secondary-background-color: transparent !default;
+$sprk-btn-secondary-border-color: $sprk-black !default;
+$sprk-btn-secondary-hover-text-color: $sprk-white !default;
+$sprk-btn-secondary-hover-background-color: $sprk-black !default;
+$sprk-btn-secondary-text-color: $sprk-black !default;
 // Tertiary
-$spark-btn-tertiary-background-color: transparent !default;
-$spark-btn-tertiary-border-color: transparent !default;
-$spark-btn-tertiary-hover-text-color: $spark-black !default;
-$spark-btn-tertiary-hover-line-color: $spark-red !default;
-$spark-btn-tertiary-hover-background-color: transparent !default;
-$spark-btn-tertiary-text-color: $spark-black !default;
+$sprk-btn-tertiary-background-color: transparent !default;
+$sprk-btn-tertiary-border-color: transparent !default;
+$sprk-btn-tertiary-hover-text-color: $sprk-black !default;
+$sprk-btn-tertiary-hover-line-color: $sprk-red !default;
+$sprk-btn-tertiary-hover-background-color: transparent !default;
+$sprk-btn-tertiary-text-color: $sprk-black !default;
 
 //
 // Links
 ///
-$spark-link-color: $spark-black !default;
-$spark-link-disabled-color: $spark-black-tint-50;
-$spark-link-muted-color: $spark-black-tint-75;
-$spark-link-standalone-color: $spark-red !default;
-$spark-link-transition: 0.3s !default;
-$spark-link-underline-color: $spark-red !default;
-$spark-link-underline-visited-color: $spark-red !default;
-$spark-link-visited-color: $spark-black !default;
-$spark-link-font-weight: bold !default;
+$sprk-link-color: $sprk-black !default;
+$sprk-link-disabled-color: $sprk-black-tint-50;
+$sprk-link-muted-color: $sprk-black-tint-75;
+$sprk-link-standalone-color: $sprk-red !default;
+$sprk-link-transition: 0.3s !default;
+$sprk-link-underline-color: $sprk-red !default;
+$sprk-link-underline-visited-color: $sprk-red !default;
+$sprk-link-visited-color: $sprk-black !default;
+$sprk-link-font-weight: bold !default;
 
 //
 // Forms
 ///
-$spark-input-gray-medium: #5a5a5a !default;
-$spark-monetary-symbol: '$' !default;
-$spark-input-placeholder-color: $spark-gray !default;
-$spark-input-box-shadow: 0 1px 0 0 $spark-black !default;
-$spark-input-error-box-shadow: 0 3px 0 0 $spark-yellow !default;
-$spark-error-icon-size: 1.25rem !default;
-$spark-input-disabled-box-shadow: 0 1px 0 0 $spark-input-gray-medium !default;
-$spark-date-picker-max-width: 20rem !default;
-$spark-date-picker-button-size: 2.25rem !default;
-$spark-date-picker-column-adjustment-x: 0.25rem !default;
-$spark-date-picker-box-shadow: 0 2px 5px $spark-input-gray-medium !default;
-$spark-date-picker-day-interact-color: $spark-red !default;
-$spark-text-input-interact-color: $spark-red !default;
-$spark-error-text-color: $spark-black !default;
-$spark-text-input-error-color: $spark-yellow !default;
-$spark-input-max-width: 27.5rem !default;
-$spark-input-icon-offset-x: 7px !default;
-$spark-input-icon-offset-y: 21px !default;
-$spark-input-text-icon-offset-x: 6px !default;
-$spark-input-text-icon-offset-y: 21px !default;
-$spark-input-animation-speed: 0.3s !default;
-$spark-select-arrow-offset-y: -23px !default;
-$spark-select-arrow-offset-x: 8px !default;
-$spark-label-offset-y: -53px !default;
-$spark-label-offset-y-open: -31px !default;
-$spark-label-shrink-scale: 0.82 !default;
-$spark-fieldset-padding: 0 !default;
+$sprk-input-gray-medium: #5a5a5a !default;
+$sprk-monetary-symbol: '$' !default;
+$sprk-input-placeholder-color: $sprk-gray !default;
+$sprk-input-box-shadow: 0 1px 0 0 $sprk-black !default;
+$sprk-input-error-box-shadow: 0 3px 0 0 $sprk-yellow !default;
+$sprk-error-icon-size: 1.25rem !default;
+$sprk-input-disabled-box-shadow: 0 1px 0 0 $sprk-input-gray-medium !default;
+$sprk-date-picker-max-width: 20rem !default;
+$sprk-date-picker-button-size: 2.25rem !default;
+$sprk-date-picker-column-adjustment-x: 0.25rem !default;
+$sprk-date-picker-box-shadow: 0 2px 5px $sprk-input-gray-medium !default;
+$sprk-date-picker-day-interact-color: $sprk-red !default;
+$sprk-text-input-interact-color: $sprk-red !default;
+$sprk-error-text-color: $sprk-black !default;
+$sprk-text-input-error-color: $sprk-yellow !default;
+$sprk-input-max-width: 27.5rem !default;
+$sprk-input-icon-offset-x: 7px !default;
+$sprk-input-icon-offset-y: 21px !default;
+$sprk-input-text-icon-offset-x: 6px !default;
+$sprk-input-text-icon-offset-y: 21px !default;
+$sprk-input-animation-speed: 0.3s !default;
+$sprk-select-arrow-offset-y: -23px !default;
+$sprk-select-arrow-offset-x: 8px !default;
+$sprk-label-offset-y: -53px !default;
+$sprk-label-offset-y-open: -31px !default;
+$sprk-label-shrink-scale: 0.82 !default;
+$sprk-fieldset-padding: 0 !default;
 
 //
 // Tables
 //
 
 // Primary
-$spark-table-row-border-width: 1px !default;
-$spark-table-row-border-style: solid !default;
-$spark-table-row-border-color: $spark-gray !default;
-$spark-table-header-background-color: $spark-black !default;
-$spark-table-header-font-color: $spark-white !default;
-$spark-table-header-font-size: $spark-font-size-body-one !default;
-$spark-table-header-border-spacing: 2px !default;
-$spark-table-header-border-color: $spark-white !default;
-$spark-table-empty-heading-background-color: $spark-white !default;
+$sprk-table-row-border-width: 1px !default;
+$sprk-table-row-border-style: solid !default;
+$sprk-table-row-border-color: $sprk-gray !default;
+$sprk-table-header-background-color: $sprk-black !default;
+$sprk-table-header-font-color: $sprk-white !default;
+$sprk-table-header-font-size: $sprk-font-size-body-one !default;
+$sprk-table-header-border-spacing: 2px !default;
+$sprk-table-header-border-color: $sprk-white !default;
+$sprk-table-empty-heading-background-color: $sprk-white !default;
 
 // Secondary
-$spark-table-secondary-header-background-color: $spark-white !default;
-$spark-table-secondary-header-font-color: $spark-black !default;
-$spark-table-secondary-header-text-alignment: left !default;
-$spark-table-secondary-cell-text-alignment: left !default;
-$spark-table-secondary-header-border-spacing: 0 !default;
-$spark-table-secondary-header-border-color: $spark-white !default;
+$sprk-table-secondary-header-background-color: $sprk-white !default;
+$sprk-table-secondary-header-font-color: $sprk-black !default;
+$sprk-table-secondary-header-text-alignment: left !default;
+$sprk-table-secondary-cell-text-alignment: left !default;
+$sprk-table-secondary-header-border-spacing: 0 !default;
+$sprk-table-secondary-header-border-color: $sprk-white !default;
 
 // Grouped-Column
-$spark-table-grouped-header-background-color: $spark-black !default;
-$spark-table-grouped-header-font-size: $spark-font-size-body-four !default;
-$spark-table-grouped-header-font-weight: normal !default;
+$sprk-table-grouped-header-background-color: $sprk-black !default;
+$sprk-table-grouped-header-font-size: $sprk-font-size-body-four !default;
+$sprk-table-grouped-header-font-weight: normal !default;
 
 // Secondary Row Comparison
-$spark-table-secondary-row-comp-row-spacing: 15px !default;
-$spark-table-secondary-row-comp-border-width: 1px !default;
-$spark-table-secondary-row-comp-border-style: solid !default;
-$spark-table-secondary-row-comp-border-color: $spark-gray !default;
+$sprk-table-secondary-row-comp-row-spacing: 15px !default;
+$sprk-table-secondary-row-comp-border-width: 1px !default;
+$sprk-table-secondary-row-comp-border-style: solid !default;
+$sprk-table-secondary-row-comp-border-color: $sprk-gray !default;
 
 //
 // Accordions
 //
-$spark-accordion-max-width: 53.125rem !default;
-$spark-accordion-border: 1px solid $spark-black-tint-25 !default;
-$spark-accordion-border-open: 1px solid $spark-black !default;
-$spark-accordion-summary-color: $spark-black !default;
-$spark-accordion-summary-active-color: $spark-red !default;
+$sprk-accordion-max-width: 53.125rem !default;
+$sprk-accordion-border: 1px solid $sprk-black-tint-25 !default;
+$sprk-accordion-border-open: 1px solid $sprk-black !default;
+$sprk-accordion-summary-color: $sprk-black !default;
+$sprk-accordion-summary-active-color: $sprk-red !default;
 
 //
 // Toggle
 //
-$spark-toggle-transistion-timing: 0.3s ease !default;
+$sprk-toggle-transistion-timing: 0.3s ease !default;
 
 //
 // Dividers
 //
-$spark-divider-border: 1px solid $spark-black-tint-25 !default;
+$sprk-divider-border: 1px solid $sprk-black-tint-25 !default;
 
 //
 // Modals
 //
-$spark-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
-$spark-modal-color: $spark-white !default;
-$spark-modal-max-width: 43.75rem !default;
-$spark-modal-height: 70% !default;
-$spark-modal-breakpoint-small: 25rem !default;
-$spark-modal-breakpoint-medium: 37.5rem !default;
-$spark-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
+$sprk-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
+$sprk-modal-color: $sprk-white !default;
+$sprk-modal-max-width: 43.75rem !default;
+$sprk-modal-height: 70% !default;
+$sprk-modal-breakpoint-small: 25rem !default;
+$sprk-modal-breakpoint-medium: 37.5rem !default;
+$sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
 // Masthead / Main Nav
 //
-$spark-main-nav-breakpoint: 46rem !default;
-$spark-masthead-column-width: 64rem !default;
-$spark-mobile-masthead-height: 5.5625rem !default;
-$spark-sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
-$spark-narrow-nav-left-border: 5px solid $spark-red !default;
-$spark-narrow-nav-link-font-weight: normal !default;
-$spark-masthead-wide-navigation-font-size: 1.125rem !default;
+$sprk-main-nav-breakpoint: 46rem !default;
+$sprk-masthead-column-width: 64rem !default;
+$sprk-mobile-masthead-height: 5.5625rem !default;
+$sprk-sub-nav-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$sprk-narrow-nav-left-border: 5px solid $sprk-red !default;
+$sprk-narrow-nav-link-font-weight: normal !default;
+$sprk-masthead-wide-navigation-font-size: 1.125rem !default;
 
 //
 // Pagination
 //
-$spark-pag-breakpoint: 24.25rem !default;
+$sprk-pag-breakpoint: 24.25rem !default;
 
 //
 // Spinners
 ///
-$spark-spinner-size: 1.1rem !default;
-$spark-spinner-size-large: 3rem !default;
-$spark-spinner-speed: 1s !default;
-$spark-spinner-thickness: 0.18rem !default;
-$spark-spinner-color: $spark-white !default;
+$sprk-spinner-size: 1.1rem !default;
+$sprk-spinner-size-large: 3rem !default;
+$sprk-spinner-speed: 1s !default;
+$sprk-spinner-thickness: 0.18rem !default;
+$sprk-spinner-color: $sprk-white !default;
 
 //
 // Tabbed Navigation
 ///
-$spark-tab-navigation-breakpoint: 46rem !default;
+$sprk-tab-navigation-breakpoint: 46rem !default;

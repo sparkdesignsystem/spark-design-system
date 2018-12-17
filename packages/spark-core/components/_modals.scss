@@ -8,32 +8,32 @@
 }
 
 .sprk-c-ModalMask {
-  background-color: $spark-modal-mask-color;
+  background-color: $sprk-modal-mask-color;
   height: 100%;
   width: 100%;
   top: 0;
-  z-index: $spark-layer-height-l;
+  z-index: $sprk-layer-height-l;
 }
 
 .sprk-c-Modal {
-  background-color: $spark-modal-color;
-  box-shadow: $spark-modal-shadow;
+  background-color: $sprk-modal-color;
+  box-shadow: $sprk-modal-shadow;
   margin-right: auto;
   margin-left: auto;
-  max-width: $spark-modal-max-width;
-  max-height: $spark-modal-height;
-  padding: $spark-space-l;
+  max-width: $sprk-modal-max-width;
+  max-height: $sprk-modal-height;
+  padding: $sprk-space-l;
   outline: 0;
   overflow-y: auto;
   right: 0;
   top: 5%;
   width: 95%;
-  z-index: $spark-layer-height-xl;
+  z-index: $sprk-layer-height-xl;
 
-  @media all and (min-width: $spark-modal-breakpoint-small) and (min-height: $spark-modal-breakpoint-small) {
+  @media all and (min-width: $sprk-modal-breakpoint-small) and (min-height: $sprk-modal-breakpoint-small) {
     top: 15%;
   }
-  @media all and (min-width: $spark-modal-breakpoint-medium) and (min-height: $spark-modal-breakpoint-medium) {
+  @media all and (min-width: $sprk-modal-breakpoint-medium) and (min-height: $sprk-modal-breakpoint-medium) {
     height: auto;
     top: 30%;
   }
@@ -60,6 +60,6 @@
   align-self: start;
   background-color: transparent;
   border: 0;
-  color: $spark-black-tint-50;
+  color: $sprk-black-tint-50;
   flex: 0 1 auto;
 }

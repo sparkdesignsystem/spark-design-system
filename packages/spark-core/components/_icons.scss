@@ -2,13 +2,13 @@
 // Icons
 // ==================================================================
 .sprk-c-Icon {
-  height: $spark-icon-m;
-  width: $spark-icon-m;
-  stroke: $spark-icon-stroke-color;
-  fill: $spark-icon-fill-color;
+  height: $sprk-icon-m;
+  width: $sprk-icon-m;
+  stroke: $sprk-icon-stroke-color;
+  fill: $sprk-icon-fill-color;
 
-  @if ($spark-icon-using-custom-stroke) {
-    stroke-width: $spark-icon-custom-stroke-width-xl;
+  @if ($sprk-icon-using-custom-stroke) {
+    stroke-width: $sprk-icon-custom-stroke-width-xl;
   }
 }
 
@@ -18,27 +18,27 @@
 }
 
 .sprk-c-Icon--l {
-  height: $spark-icon-l;
-  width: $spark-icon-l;
-  stroke-width: $spark-icon-custom-stroke-width-l;
+  height: $sprk-icon-l;
+  width: $sprk-icon-l;
+  stroke-width: $sprk-icon-custom-stroke-width-l;
 }
 
 .sprk-c-Icon--xl {
-  height: $spark-icon-xl;
-  width: $spark-icon-xl;
-  stroke-width: $spark-icon-custom-stroke-width-m;
+  height: $sprk-icon-xl;
+  width: $sprk-icon-xl;
+  stroke-width: $sprk-icon-custom-stroke-width-m;
 }
 
 .sprk-c-Icon--xxl {
-  height: $spark-icon-xxl;
-  width: $spark-icon-xxl;
-  stroke-width: $spark-icon-custom-stroke-width-s;
+  height: $sprk-icon-xxl;
+  width: $sprk-icon-xxl;
+  stroke-width: $sprk-icon-custom-stroke-width-s;
 }
 
 // Initial state for icons that will be toggled
 .sprk-c-Icon--toggle {
   transform-origin: center;
-  transition: transform $spark-toggle-transistion-timing;
+  transition: transform $sprk-toggle-transistion-timing;
 }
 
 .sprk-c-Icon--open {
