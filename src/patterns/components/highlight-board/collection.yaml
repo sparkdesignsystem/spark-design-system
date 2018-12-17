@@ -9,7 +9,33 @@ restrictions:
   - The background must either be a color or an image.
   - The headline should not exceed 2 lines.
   - You may have up to 2 call-to-action buttons/links.
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("highlightboard-1", "highlightboard-2", "highlightboard-3", etc).
 sparkPackageExtras: true
+variableTable:
+  $highlight-board-type-breakpoint:
+    default: 30rem
+    description: The breakpoint at which styles change for padding, font size and CTA width.
+  $highlight-board-content-width:
+    default: 30rem
+    description: Sets the maximum width of the content for the highlight board when it has an image.
+  $highlight-board-type-reduction-percentage:
+    default: 0.8
+    description: Sets the percentage to reduce the font size by for narrow viewports.
+  $highlight-board-height:
+    default: 31.25rem
+    description: Sets the height of the highlight board image.
+  $highlight-board-color:
+    default: $white
+    description: Sets the background color of the highlight board.
+  $highlight-board-content-box-color:
+    default: $white
+    description: Sets the background color of the content box.
+classTable:
+  .sprk-c-HighlightBoard--has-image:
+    description: Sets up the styles for highlight boards with an image.
+  .sprk-c-HighlightBoard--stacked:
+    description: Sets up the styles for the stacked highlight board variant.
+  .sprk-u-FullWidth:
+    description: A Spark utility class that can be used on the highlight board to make it become 100% width.

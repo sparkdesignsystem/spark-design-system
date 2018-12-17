@@ -6,8 +6,33 @@ description: |
 information:
   - Spark-Core Pagination JS will take care of adding in the correct aria-label
     to each link on first page load and when the items are tapped or clicked.
-restrictions: 
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+restrictions:
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("pagination-1", "pagination-2", "pagination-3", etc).
 sparkPackageCore: true
+variableTable:
+  $pag-max-width:
+    default: 26rem
+    description: The maximum width of the pagination element.
+  $pag-link-color:
+    default: $black
+    description: The color of the pagination links.
+  $pag-link-color-hover:
+    default: $pag-link-color
+    description: The color of the pagination links on hover.
+  $pag-selection-color:
+    default: $red
+    description: The accent color for selected pagination links.
+  $pag-selection-link-color:
+    default: $white
+    description: The text color of the currently selected pagination link.
+  $pag-selection-link-color-hover:
+    default: $white
+    description: The text color of the currently selected pagination link on hover.
+  $pag-circle-size:
+    default: 2em
+    description: The width and height setting of the circle around the currently selected pagination link.
+classTable:
+  .sprk-c-Pagination__link--current:
+    description: Sets styles for the currently selected pagination link.

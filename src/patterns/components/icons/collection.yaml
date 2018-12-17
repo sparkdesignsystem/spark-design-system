@@ -3,9 +3,56 @@ description:
   your own icon set, you need to import an svg that contains symbols for the ids referenced below. This symbol file
   should occur in the DOM before the first use element.
 restrictions:
- - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+ - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("icon-1", "icon-2", "icon-1", etc).
 sparkPackageCore: true
 hasAngularInfo: true
 isIconGallery: true
+variableTable:
+  $icon-m:
+    default: 16px
+    description: The default icon height and width.
+  $icon-l:
+    default: 32px
+    description: The large icon height and width.
+  $icon-xl:
+    default: 64px
+    description: The extra large icon height and width.
+  $icon-xxl:
+    default: 128px
+    description: The extra extra large icon height and width.
+  $icon-fill-color:
+    default: $red
+    description: Sets the fill color of the icons.
+  $icon-stroke-color:
+    default: $red
+    description: Sets the stroke color of the icons.
+  $icon-using-custom-stroke:
+    default: true
+    description: Boolean value for if you want to use a custom stroke-width setting on the icons.
+  $icon-custom-stroke-width-s:
+    default: 1px
+    description: The stroke width setting for small.
+  $icon-custom-stroke-width-m:
+    default: 1.5px
+    description: The stroke width setting for medium.
+  $icon-custom-stroke-width-l:
+    default: 2px
+    description: The stroke width setting for large.
+  $icon-custom-stroke-width-xl:
+    default: 3px
+    description: The stroke width setting for extra large.
+classTable:
+  .sprk-c-Icon--current-color:
+    description: Sets the fill and stroke properties to the current color of its container.
+  .sprk-c-Icon--l:
+    description: Sets the icon height and width to $icon-l and stroke-width to $icon-custom-stroke-width-l.
+  .sprk-c-Icon--xl:
+    description: Sets the icon height and width to $icon-xl and stroke-width to $icon-custom-stroke-width-m.
+  .sprk-c-Icon--xxl:
+    description: Sets the icon height and width to $icon-xxl and stroke-width to $icon-custom-stroke-width-s.
+  .sprk-c-Icon--toggle:
+    description: Sets up the intial state for icons that serve as toggle controls.
+  .sprk-c-Icon--open:
+    description: Rotates icons -180 degrees. Should be used in conjunction with .sprk-c-Icon--toggle.

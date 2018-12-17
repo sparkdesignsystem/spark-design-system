@@ -12,9 +12,8 @@
  * data-sprk-pagination="next" and data-sprk-pagination="prev"
  * These identify the previous and next links in the pagination components.
  */
-import getElements from '../../../../../packages/spark-core/es5/getElements';
+import { setAriaLabel, getElements } from '../../../../../packages/spark-core';
 import { updatePageStyles } from './default';
-import { setAriaLabel } from '../../../../../packages/spark-core/es5/pagination';
 
 const goBackOne = (currentPageNum) => {
   let updatedPageNum;
