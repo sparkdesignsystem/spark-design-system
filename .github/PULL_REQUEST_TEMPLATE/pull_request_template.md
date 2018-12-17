@@ -1,6 +1,6 @@
 ---
 name: Pull Request
-about: Create a pull request to change code.
+about: Create a pull request to make changes to Spark.
 
 ---
 
