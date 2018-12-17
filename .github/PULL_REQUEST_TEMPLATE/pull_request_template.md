@@ -8,10 +8,9 @@ about: Create a pull request to make changes to Spark.
 A clear and concise description of what this PR does.
 
 ## Please check off completed items as you work.
-If a checklist item does not apply to your PR
+If a checklist item or section does not apply to your PR
 then please remove it.
 ### Documentation
-
  - [ ] Update Spark Docs Angular
  - [ ] Update Spark Docs Vanilla
  - [ ] Update Component Sass Var/Class Modifier table
