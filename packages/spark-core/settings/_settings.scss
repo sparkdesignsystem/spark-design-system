@@ -270,7 +270,7 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 // Buttons
 ///
 $btn-background-color: $green !default;
-$btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$btn-shadow: none !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
@@ -293,12 +293,13 @@ $btn-secondary-disabled-background-color: transparent !default;//$gray !default;
 $btn-secondary-disabled-text-color: $gray-dark !default;
 $btn-secondary-disabled-border-color: $gray-dark !default;
 // Secondary
-$btn-secondary-background-color: transparent !default;
+$btn-secondary-background-color: $white !default;
 $btn-secondary-border-color: $gray-dark !default;
 $btn-secondary-text-color: $black !default;
 $btn-secondary-hover-text-color: $black !default;
 $btn-secondary-hover-background-color: transparent !default;
 $btn-secondary-hover-border-color: $black !default;
+$btn-secondary-shadow: 2px 4px 0 rgba(20,20,20,0.05) !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border-color: $gray-dark !default;

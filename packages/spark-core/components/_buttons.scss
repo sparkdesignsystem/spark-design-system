@@ -41,7 +41,6 @@
 
 .sprk-c-Button--secondary {
   background-color: $btn-secondary-background-color;
-  box-shadow: none;
   border: $btn-border-width $btn-border-style $btn-secondary-border-color;
   color: $btn-secondary-text-color;
 
@@ -52,6 +51,7 @@
   &:hover,
   &:active,
   &:focus {
+    box-shadow: $btn-secondary-shadow;
     background-color: $btn-secondary-hover-background-color;
     border: $btn-border-width $btn-border-style $btn-secondary-hover-border-color;
     color: $btn-secondary-hover-text-color;
@@ -80,7 +80,7 @@
   &:active::after,
   &:focus::after {
     border-color: $btn-tertiary-hover-line-color;
-    animation: width-zero-to-full $btn-transition-speed ease-in-out;
+    transition: border $btn-transition-speed ease-in-out;
   }
 
   &::after {
