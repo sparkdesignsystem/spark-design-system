@@ -3,7 +3,7 @@ description:
   to perform an action. The Button component consists of a clickable container with descriptive text inside.
 
 information:
-  - Buttons make use of the Large Inset Short spacing but there is a modifier available to reduce the spacing (.sprk-c-Button--compact).
+  - Buttons make use of the Large Inset Short spacing.
 restrictions:
   - Do not use icons within Buttons.
   - Do not use &lt;input type=&quot;submit&quot;&gt; for submit Buttons, use &quot;button&quot; instead.
@@ -17,3 +17,109 @@ restrictions:
     instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("button-primary-1", "button-primary-2", "button-tertiary-1", etc).
 sparkPackageCore: true
+variableTable:
+  $btn-background-color:
+    default: $red
+    description: Sets the background color of the button.
+  $btn-shadow:
+    default: 0 2px 2px rgba(0, 0, 0, 0.2)
+    description: Sets the box-shadow of the button.
+  $btn-border-style:
+    default: solid
+    description: Sets the style of the border.
+  $btn-border-color:
+    default: $btn-background-color
+    description: Sets the border color. Default is set to match the background color.
+  $btn-border-width:
+    default: 2px
+    description: Sets the width of the border.
+  $$btn-font-weight:
+    default: bold
+    description: Sets the weight of the font.
+  $btn-text-color:
+    default: $white
+    description: Sets the font color.
+  $btn-border-radius:
+    default: 1px
+    description: Sets the border radius.
+  $btn-hover-background-color:
+    default: $red-mid
+    description: Sets the background color on hover.
+  $btn-hover-text-color:
+    default: $white
+    description: Sets the color of button text on hover.
+  $btn-padding:
+    default: $space-inset-short-l
+    description: Sets the padding value.
+  $btn-breakpoint-xs:
+    default:  30rem
+    description: Sets the extra small breakpoint used for full width buttons to become normal width.
+  $btn-breakpoint-s:
+    default: 42.5rem
+    description: Sets the small breakpoint used for full width buttons to become normal width.
+  $btn-transition-speed:
+    default: 0.3s
+    description: Sets the CSS transition speed.
+  $btn-disabled-opacity:
+    default: 1
+    description: Sets the opacity of the disabled button.
+  $btn-disabled-background-color:
+    default: $gray
+    description: Sets the background color of the disabled button.
+  $btn-disabled-text-color:
+    default: $black-tint-50
+    description: Sets the font color of the disabled button.
+  $btn-disabled-border-width:
+    default: $btn-border-width
+    description: Sets the border width of the disabled button.
+  $btn-disabled-border-color:
+    default: transparent
+    description: Sets the border color of the disabled button.
+  $btn-secondary-background-color:
+    default: transparent
+    description: Sets the background color of the secondary button.
+  $btn-secondary-border-color:
+    default: $black
+    description: Sets the border color of the secondary button.
+  $btn-secondary-text-color:
+    default: $black
+    description: Sets the font color of the secondary button.
+  $btn-secondary-hover-text-color:
+    default: $red
+    description: Sets the hover state font color of the secondary button.
+  $btn-secondary-hover-background-color:
+    default: transparent
+    description: Sets the hover state background color of the secondary button.
+  $btn-secondary-hover-border-color:
+    default: $red
+    description: Sets the hover state border color of the secondary button.
+  $btn-tertiary-background-color:
+    default: transparent
+    description: Sets the background color of the tertiary button.
+  $btn-tertiary-border-color:
+    default: transparent
+    description: Sets the border color of the tertiary button.
+  $btn-tertiary-hover-text-color:
+    default: $black
+    description: Sets the hover state font color of the tertiary button.
+  $btn-tertiary-hover-line-color:
+    default: $red
+    description: Sets the hover state background color of the underline of the tertiary button.
+  $btn-tertiary-hover-background-color:
+    default: transparent
+    description: Sets the hover state background color of the tertiary button.
+  $btn-tertiary-text-color:
+    default: $black
+    description: Sets the font color, visited state font color, and underline color of the tertiary button.
+
+classTable:
+  .sprk-c-Button--compact:
+    description: Reduces the padding of the normal button to $space-inset-short-m.
+  .sprk-c-Button--full@xs:
+    description: Makes the button full width of its parent container until it flips to normal width at the $btn-breakpoint-xs breakpoint.
+  .sprk-c-Button--full@sm:
+    description: Makes the button full width of its parent container until it flips to normal width at the $btn-breakpoint-s breakpoint.
+  .sprk-c-Button--secondary:
+    description: Styles the button as the secondary variant.
+  .sprk-c-Button--tertiary:
+    description: Styles the button as the tertiary variant.
