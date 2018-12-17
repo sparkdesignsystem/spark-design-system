@@ -32,7 +32,7 @@
     - label: Dark Green
       color: '#01947E'
       rgb: 'rgb(1, 148, 126)'
-      property: '$green-tint-75'
+      property: '$green-dark'
     - label: Green 75%
       color: '#40C6B2'
       rgb: 'rgb(64,198,178)'
