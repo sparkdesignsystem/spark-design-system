@@ -1,0 +1,13 @@
+.sprk-c-SecondaryNavigation .sprk-b-Link--standalone {
+  color: $sprk-black;
+
+  &:visited {
+    color: $sprk-black;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-red;
+  }
+}
