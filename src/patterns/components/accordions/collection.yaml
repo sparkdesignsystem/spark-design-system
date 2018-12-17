@@ -28,4 +28,4 @@ variableTable:
     description: Sets the color of the icon in the summary when the accordion item is open or hovered.
 classTable:
   .sprk-c-Accordion__item--open:
-    description: Needed for items to be open. It adds style to opened accordion items.
+    description: Adds style to accordion items that have been toggled open by Spark JS.
