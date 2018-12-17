@@ -2,7 +2,6 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  box-shadow: $btn-shadow;
   transition: all $btn-transition-speed;
   border-radius: $btn-border-radius;
 
@@ -12,6 +11,7 @@
     background-color: $btn-hover-background-color;
     border-color: $btn-hover-background-color;
     color: $btn-hover-text-color;
+    box-shadow: $btn-shadow;
   }
 
   &:visited {
