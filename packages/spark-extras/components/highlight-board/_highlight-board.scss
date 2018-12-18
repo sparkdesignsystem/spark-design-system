@@ -5,7 +5,7 @@
 //
 // Available Variables
 ///
-$highlight-board-type-breakpoint: 30rem !default;
+$highlight-board-breakpoint: 30rem !default;
 $highlight-board-content-width: 30rem !default;
 $highlight-board-type-reduction-percentage: 0.8 !default;
 $highlight-board-height: 31.25rem !default;
@@ -34,13 +34,13 @@ $highlight-board-content-box-color: $white !default;
   text-align: center;
   width: auto;
 
-  @media (min-width: $highlight-board-type-breakpoint) {
+  @media (min-width: $highlight-board-breakpoint) {
     padding: $space-inset-tall-l;
   }
 }
 
 .sprk-c-HighlightBoard__heading {
-  @media (max-width: $highlight-board-type-breakpoint) {
+  @media (max-width: $highlight-board-breakpoint) {
     // prettier-ignore
     font-size: $font-size-display-three * $highlight-board-type-reduction-percentage;
   }
@@ -49,7 +49,7 @@ $highlight-board-content-box-color: $white !default;
 .sprk-c-HighlightBoard__cta {
   width: 100%;
 
-  @media (min-width: $highlight-board-type-breakpoint) {
+  @media (min-width: $highlight-board-breakpoint) {
     width: auto;
   }
 }
