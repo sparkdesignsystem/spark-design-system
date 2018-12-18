@@ -21,16 +21,18 @@ const runValidation = (element) => {
   return selectionMade;
 };
 
-// cant really cause keyup without making a choice, but an app can trigger keyup on submission of a
-// form to test for validity
 const bindUIEvents = (element) => {
   element.addEventListener('change', () => {
+    runValidation(element);
+  });
+
+  element.addEventListener('focusout', () => {
     runValidation(element);
   });
 };
 
 const requiredTick = () => {
-  getElements('[data-sprk-required="tick"]', bindUIEvents);
+  getElements('[data-sprk-required-only="tick"]', bindUIEvents);
 };
 
 export { requiredTick, runValidation, bindUIEvents };

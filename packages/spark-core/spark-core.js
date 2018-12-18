@@ -19,13 +19,6 @@ import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
 import { dropdowns } from './components/dropdown';
 
-// Polyfills
-import './utilities/polyfills/ArrayFrom';
-import './utilities/polyfills/StringIncludes';
-import './utilities/polyfills/ArrayFind';
-import './utilities/polyfills/NodeListForEach';
-import './utilities/polyfills/classListSVG';
-
 const SparkCore = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
   requiredTick();
