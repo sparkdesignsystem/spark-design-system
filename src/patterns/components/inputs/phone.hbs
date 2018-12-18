@@ -18,6 +18,7 @@ hasAngularCodeInfo: true
          pattern="(^(\+\d{1,2}\s)?((\(\d{3}\))|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$)|^$"
          placeholder="(000) 000-0000"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container"
+         {{#if required}}required{{/if}}
          {{#if invaliddata}} aria-invalid="true"{{/if}}
          {{#if disabled}} disabled{{/if}} data-sprk-input="text">
   <div class="sprk-b-InputContainer__input-border"></div>

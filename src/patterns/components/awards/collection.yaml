@@ -14,7 +14,7 @@ requirements:
     when applying a background color behind
     images to ensure accessibility requirements are met.
 restrictions:
-  - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("award-1", "award-2", "award-3", etc).
 sparkPackageExtras: true
