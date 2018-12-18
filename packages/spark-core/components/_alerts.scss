@@ -73,7 +73,7 @@
 .sprk-c-Alert__content {
   display: flex;
   align-items: center;
-  padding: $space-m;
+  padding: $alert-content-padding;
 }
 
 .sprk-c-Alert__content,
@@ -94,7 +94,7 @@
   background-color: transparent;
   border: 0;
   color: $black-tint-50;
-  padding: $space-m;
+  padding: $alert-dismiss-padding;
 }
 
 .sprk-c-Alert__icon,

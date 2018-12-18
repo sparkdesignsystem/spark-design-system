@@ -56,6 +56,12 @@ variableTable:
   $alert-shadow-hover-fail:
     default: inset -80px 0 0 $alert-color-info
     description: Sets the hover state box shadow of the failure alert.
+  $alert-content-padding:
+    default: $space-m $space-m $space-m $space-misc-a
+    description: Sets the padding around the main content icon and message.
+  $alert-dismiss-padding:
+    default: $space-m
+    description: Sets the padding around the dismiss icon.
 classTable:
   .sprk-c-Alert--info:
     description: Styles the alert as an information alert.
