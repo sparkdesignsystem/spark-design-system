@@ -94,9 +94,13 @@
 //
 // Height (Scales has Widths)
 ///
+
+/* stylelint-disable selector-class-pattern */
 .sprk-u-Height--100 {
   height: 100% !important;
 }
+
+/* stylelint-enable selector-class-pattern */
 
 //
 // Alignment
@@ -237,6 +241,7 @@
   background-color: $black !important;
 }
 
+/* stylelint-disable selector-class-pattern */
 .sprk-u-BackgroundColor--black-tint-75 {
   background-color: $black-tint-75 !important;
 }
@@ -328,6 +333,8 @@
 .sprk-u-BackgroundColor--yellow-tint-25 {
   background-color: $yellow-tint-25 !important;
 }
+
+/* stylelint-enable selector-class-pattern */
 
 //
 // Spacing
