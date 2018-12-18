@@ -18,8 +18,11 @@
     $line-height: $line-height-display-one,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-one) * 16),
-    $crop-line-height: $line-height-display-one);
+    $crop-font-size: (
+      strip-unit($font-size-display-one) * 16
+    ),
+    $crop-line-height: $line-height-display-one
+  );
 
   color: $color-display-one;
   font-family: $font-family-display-one;
@@ -33,8 +36,11 @@ h1,
     $line-height: $line-height-display-two,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-two) * 16),
-    $crop-line-height: $line-height-display-two);
+    $crop-font-size: (
+      strip-unit($font-size-display-two) * 16
+    ),
+    $crop-line-height: $line-height-display-two
+  );
 }
 
 .sprk-b-TypeDisplayTwo {
@@ -50,8 +56,11 @@ h2,
     $line-height: $line-height-display-three,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-three) * 16),
-    $crop-line-height: $line-height-display-three);
+    $crop-font-size: (
+      strip-unit($font-size-display-three) * 16
+    ),
+    $crop-line-height: $line-height-display-three
+  );
 }
 
 .sprk-b-TypeDisplayThree {
@@ -67,8 +76,11 @@ h3,
     $line-height: $line-height-display-four,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-four) * 16),
-    $crop-line-height: $line-height-display-four);
+    $crop-font-size: (
+      strip-unit($font-size-display-four) * 16
+    ),
+    $crop-line-height: $line-height-display-four
+  );
 }
 
 .sprk-b-TypeDisplayFour {
@@ -84,8 +96,11 @@ h4,
     $line-height: $line-height-display-five,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-five) * 16),
-    $crop-line-height: $line-height-display-five);
+    $crop-font-size: (
+      strip-unit($font-size-display-five) * 16
+    ),
+    $crop-line-height: $line-height-display-five
+  );
 }
 
 .sprk-b-TypeDisplayFive {
@@ -102,8 +117,11 @@ h6,
     $line-height: $line-height-display-six,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-six) * 16),
-    $crop-line-height: $line-height-display-six);
+    $crop-font-size: (
+      strip-unit($font-size-display-six) * 16
+    ),
+    $crop-line-height: $line-height-display-six
+  );
 }
 
 .sprk-b-TypeDisplaySix {
@@ -119,8 +137,11 @@ h6,
     $line-height: $line-height-display-seven,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-seven) * 16),
-    $crop-line-height: $line-height-display-seven);
+    $crop-font-size: (
+      strip-unit($font-size-display-seven) * 16
+    ),
+    $crop-line-height: $line-height-display-seven
+  );
 
   color: $color-display-seven;
   font-family: $font-family-display-seven;
@@ -134,8 +155,11 @@ h6,
     $line-height: $line-height-display-eight,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-display-eight) * 16),
-    $crop-line-height: $line-height-display-eight);
+    $crop-font-size: (
+      strip-unit($font-size-display-eight) * 16
+    ),
+    $crop-line-height: $line-height-display-eight
+  );
 
   color: $color-display-eight;
   font-family: $font-family-display-eight;
@@ -149,8 +173,11 @@ h6,
     $line-height: $line-height-body-one,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-body-one) * 16),
-    $crop-line-height: $line-height-body-one);
+    $crop-font-size: (
+      strip-unit($font-size-body-one) * 16
+    ),
+    $crop-line-height: $line-height-body-one
+  );
 
   color: $color-body-one;
   font-family: $font-family-body-one;
@@ -165,8 +192,11 @@ body,
     $line-height: $line-height-body-two,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-body-two) * 16),
-    $crop-line-height: $line-height-body-two);
+    $crop-font-size: (
+      strip-unit($font-size-body-two) * 16
+    ),
+    $crop-line-height: $line-height-body-two
+  );
 
   color: $color-body-two;
   font-family: $font-family-body-two;
@@ -180,8 +210,11 @@ small,
     $line-height: $line-height-body-three,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-body-three) * 16),
-    $crop-line-height: $line-height-body-three);
+    $crop-font-size: (
+      strip-unit($font-size-body-three) * 16
+    ),
+    $crop-line-height: $line-height-body-three
+  );
 
   color: $color-body-three;
   font-family: $font-family-body-three;
@@ -194,11 +227,31 @@ small,
     $line-height: $line-height-body-four,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (strip-unit($font-size-body-four) * 16),
-    $crop-line-height: $line-height-body-four);
+    $crop-font-size: (
+      strip-unit($font-size-body-four) * 16
+    ),
+    $crop-line-height: $line-height-body-four
+  );
 
   color: $color-body-four;
   font-family: $font-family-body-four;
   font-size: $font-size-body-four;
   font-weight: $font-weight-body-four;
+}
+
+// TODO: replace values with new spacing variables
+.sprk-b-PageTitle {
+  &::before {
+    content: '';
+    width: 32px;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: $page-title-mark-color;
+    padding-bottom: 24px;
+
+    @media all and (min-width: $typography-breakpoint) {
+      border-top-width: 6px;
+      padding-bottom: 16px;
+    }
+  }
 }

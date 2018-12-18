@@ -4,33 +4,26 @@
 
 // Primary
 $red: rgb(200, 16, 46);
-$black: rgb(0, 0, 0);
+$black: rgb(51, 51, 51); //#333
 $white: rgb(255, 255, 255);
-$gray: rgb(235, 235, 235);
-
-// Secondary
-$red-mid: rgb(157, 34, 53);
-$red-deep: rgb(118, 35, 47);
+$gray: rgb(247, 247, 247); //#F7F7F7
 $green: rgb(0, 179, 152);
-$yellow: rgb(242, 169, 0);
+$yellow: rgb(245, 190, 64); //#F5BE40
 $blue: rgb(0, 125, 186);
-
-// Gray Tints
-$gray-tint-75: rgb(240, 240, 240);
-$gray-tint-50: rgb(245, 245, 245);
-$gray-tint-25: rgb(250, 250, 250);
 
 // Black Tints
 $black-tint-75: rgb(64, 64, 64);
 $black-tint-50: rgb(128, 128, 128);
-$black-tint-25: rgb(191, 191, 191);
+$black-tint-25: rgb(190, 190, 190);
+$gray-dark: rgb(230, 230, 230);
 
 // Blue Tints
-$blue-tint-75: rgb(64, 157, 203);
-$blue-tint-50: rgb(128, 190, 220);
-$blue-tint-25: rgb(191, 222, 238);
+$blue-tint-75: rgb(73, 144, 195);
+$blue-tint-50: rgb(118, 172, 210);
+$blue-tint-25: rgb(164, 199, 225);
 
 // Green Tints
+$green-dark: rgb(1, 148, 126);
 $green-tint-75: rgb(64, 198, 178);
 $green-tint-50: rgb(128, 217, 203);
 $green-tint-25: rgb(191, 236, 229);
@@ -41,6 +34,6 @@ $red-tint-50: rgb(227, 135, 150);
 $red-tint-25: rgb(241, 195, 203);
 
 // Yellow Tints
-$yellow-tint-75: rgb(245, 190, 64);
-$yellow-tint-50: rgb(248, 212, 128);
-$yellow-tint-25: rgb(252, 233, 191);
+$yellow-tint-75: rgb(237, 163, 2);
+$yellow-tint-50: rgb(244, 199, 102);
+$yellow-tint-25: rgb(247, 218, 154);
