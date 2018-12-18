@@ -2,8 +2,8 @@
 // Typography
 // ==================================================================
 
-@if $using-webfonts {
-  @each $src, $name, $weight in $webfonts {
+@if $sprk-using-webfonts {
+  @each $src, $name, $weight in $sprk-webfonts {
     @font-face {
       font-display: $sprk-font-display;
       font-family: $name;
@@ -13,6 +13,7 @@
   }
 }
 
+h1,
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
     $line-height: $line-height-display-one,
@@ -25,12 +26,12 @@
   );
 
   color: $color-display-one;
-  font-family: $font-family-display-one;
+  font-family: $sprk-font-family-display-one;
   font-size: $font-size-display-one;
   font-weight: $font-weight-display-one;
 }
 
-h1,
+h2,
 .sprk-b-TypeDisplayTwo {
   @include TextCrop(
     $line-height: $line-height-display-two,
@@ -41,16 +42,14 @@ h1,
     ),
     $crop-line-height: $line-height-display-two
   );
-}
 
-.sprk-b-TypeDisplayTwo {
   color: $color-display-two;
-  font-family: $font-family-display-two;
+  font-family: $sprk-font-family-display-two;
   font-size: $font-size-display-two;
   font-weight: $font-weight-display-two;
 }
 
-h2,
+h3,
 .sprk-b-TypeDisplayThree {
   @include TextCrop(
     $line-height: $line-height-display-three,
@@ -61,16 +60,14 @@ h2,
     ),
     $crop-line-height: $line-height-display-three
   );
-}
 
-.sprk-b-TypeDisplayThree {
   color: $color-display-three;
-  font-family: $font-family-display-three;
+  font-family: $sprk-font-family-display-three;
   font-size: $font-size-display-three;
   font-weight: $font-weight-display-three;
 }
 
-h3,
+h4,
 .sprk-b-TypeDisplayFour {
   @include TextCrop(
     $line-height: $line-height-display-four,
@@ -81,16 +78,14 @@ h3,
     ),
     $crop-line-height: $line-height-display-four
   );
-}
 
-.sprk-b-TypeDisplayFour {
   color: $color-display-four;
-  font-family: $font-family-display-four;
+  font-family: $sprk-font-family-display-four;
   font-size: $font-size-display-four;
   font-weight: $font-weight-display-four;
 }
 
-h4,
+h5,
 .sprk-b-TypeDisplayFive {
   @include TextCrop(
     $line-height: $line-height-display-five,
@@ -101,16 +96,13 @@ h4,
     ),
     $crop-line-height: $line-height-display-five
   );
-}
 
-.sprk-b-TypeDisplayFive {
   color: $color-display-five;
-  font-family: $font-family-display-five;
+  font-family: $sprk-font-family-display-five;
   font-size: $font-size-display-five;
   font-weight: $font-weight-display-five;
 }
 
-h5,
 h6,
 .sprk-b-TypeDisplaySix {
   @include TextCrop(
@@ -122,11 +114,9 @@ h6,
     ),
     $crop-line-height: $line-height-display-six
   );
-}
 
-.sprk-b-TypeDisplaySix {
   color: $color-display-six;
-  font-family: $font-family-display-six;
+  font-family: $sprk-font-family-display-six;
   font-size: $font-size-display-six;
   font-weight: $font-weight-display-six;
   line-height: $line-height-display-six;
@@ -144,12 +134,13 @@ h6,
   );
 
   color: $color-display-seven;
-  font-family: $font-family-display-seven;
+  font-family: $sprk-font-family-display-seven;
   font-size: $font-size-display-seven;
   font-weight: $font-weight-display-seven;
   line-height: $line-height-display-seven;
 }
 
+strong,
 .sprk-b-TypeBodyOne {
   @include TextCrop(
     $line-height: $line-height-body-one,
@@ -162,7 +153,7 @@ h6,
   );
 
   color: $color-body-one;
-  font-family: $font-family-body-one;
+  font-family: $sprk-font-family-body-one;
   font-size: $font-size-body-one;
   font-weight: $font-weight-body-one;
 }
@@ -181,7 +172,7 @@ body,
   );
 
   color: $color-body-two;
-  font-family: $font-family-body-two;
+  font-family: $sprk-font-family-body-two;
   font-size: $font-size-body-two;
   font-weight: $font-weight-body-two;
 }
@@ -199,7 +190,7 @@ small,
   );
 
   color: $color-body-three;
-  font-family: $font-family-body-three;
+  font-family: $sprk-font-family-body-three;
   font-size: $font-size-body-three;
   font-weight: $font-weight-body-three;
 }
@@ -216,7 +207,7 @@ small,
   );
 
   color: $color-body-four;
-  font-family: $font-family-body-four;
+  font-family: $sprk-font-family-body-four;
   font-size: $font-size-body-four;
   font-weight: $font-weight-body-four;
 }
