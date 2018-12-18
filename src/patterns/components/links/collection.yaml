@@ -13,39 +13,48 @@ variableTable:
   $link-color:
     default: $black
     description: The default link color.
-  $link-disabled-color:
-    default: $black-tint-50
-    description: The disabled link color.
-  $link-muted-color:
-    default: $black-tint-75
-    description: The muted link color.
-  $link-standalone-color:
-    default: $red
-    description: The standalone link color.
-  $link-transition:
-    default: 0.3s
-    description: The transition timing for hover, active and focus style application.
+  $link-hover-color:
+    default: $black
+    description: Sets the color of the link text on the hover state.
   $link-underline-color:
-    default: $red
+    default: $gray-dark
     description: Sets the color of the link underline.
-  $link-underline-visited-color:
-    default: $red
-    description: Sets the color of the link underline on visited links.
   $link-underline-width:
-    default: 0.0625em
+    default: 0.09375em
     description: Sets the size of the link underline.
+  $link-font-weight:
+    default: bold
+    description: The default font weight for links.
   $link-visited-color:
-    default: $red-mid
+    default: $black
     description: Sets the color of visited links.
+  $link-underline-visited-color:
+    default: $black
+    description: Sets the color of the link underline on visited links.
+  $link-standalone-color:
+    default: $black
+    description: The standalone link color.
+  $link-standalone-underline-color:
+    default: $black
+    description: Sets the color of the standalone link underline.
   $link-standalone-font-weight:
     default: bold
     description: The font weight for standalone links.
-  $link-inline-font-weight:
-    default: normal
-    description: The font weight for inline links.
+  $link-muted-color:
+    default: $gray-dark
+    description: The muted link color.
   $link-disabled-font-weight:
     default: bold
     description: The font weight for disabled links.
+  $link-disabled-underline-width:
+    default: 0
+    description: The width of the underline for disabled links.
+  $link-disabled-color:
+    default: $gray-dark
+    description: The disabled link color.
+  $link-transition:
+    default: 0.3s
+    description: The transiti`on timing for hover, active and focus style application.
 classTable:
   .sprk-b-Link--standalone:
     description: Sets the styles for the standalone link variant.
