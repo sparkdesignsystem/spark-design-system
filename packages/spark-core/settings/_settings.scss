@@ -299,7 +299,7 @@ $btn-secondary-text-color: $black !default;
 $btn-secondary-hover-text-color: $black !default;
 $btn-secondary-hover-background-color: transparent !default;
 $btn-secondary-hover-border-color: $gray-dark !default;
-$btn-secondary-shadow: 0px 3px 10px rgba(20,20,20,0.08) !default;
+$btn-secondary-hover-shadow: 0px 3px 10px rgba(20,20,20,0.08) !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border-color: $gray-dark !default;
@@ -309,6 +309,9 @@ $btn-tertiary-hover-background-color: transparent !default;
 $btn-tertiary-text-color: $black !default;
 $btn-tertiary-disabled-background-color: transparent !default;
 $btn-tertiary-disabled-text-color: $gray-dark !default;
+$btn-tertiary-hover-shadow: none !default;
+$btn-tertiary-border-width: 2px !default;
+$btn-tertiary-underline-padding-top: 0.09375em !default;
 
 //
 // Links

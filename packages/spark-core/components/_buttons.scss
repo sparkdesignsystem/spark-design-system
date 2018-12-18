@@ -51,7 +51,7 @@
   &:hover,
   &:active,
   &:focus {
-    box-shadow: $btn-secondary-shadow;
+    box-shadow: $btn-secondary-hover-shadow;
     background-color: $btn-secondary-hover-background-color;
     border: $btn-border-width $btn-border-style $btn-secondary-hover-border-color;
     color: $btn-secondary-hover-text-color;
@@ -70,6 +70,7 @@
     background-color: $btn-tertiary-hover-background-color;
     border-color: $btn-tertiary-border-color;
     color: $btn-tertiary-hover-text-color;
+    box-shadow: $btn-tertiary-hover-shadow;
   }
 
   &:visited {
@@ -85,10 +86,10 @@
 
   &::after {
     content: '';
-    border-bottom: ($btn-border-width + 1px) solid $btn-tertiary-border-color;
+    border-bottom: $btn-tertiary-border-width solid $btn-tertiary-border-color;
     display: block;
     width: 100%;
-    padding-top: $space-xs;
+    padding-top: $btn-tertiary-underline-padding-top;
     margin: 0 auto;
   }
 }
