@@ -150,24 +150,6 @@ h6,
   line-height: $line-height-display-seven;
 }
 
-.sprk-b-TypeDisplayEight {
-  @include TextCrop(
-    $line-height: $line-height-display-eight,
-    $top-crop: $line-height-collision-top-crop,
-    $bottom-crop: $line-height-collision-bottom-crop,
-    $crop-font-size: (
-      strip-unit($font-size-display-eight) * 16
-    ),
-    $crop-line-height: $line-height-display-eight
-  );
-
-  color: $color-display-eight;
-  font-family: $font-family-display-eight;
-  font-size: $font-size-display-eight;
-  font-weight: $font-weight-display-eight;
-  line-height: $line-height-display-eight;
-}
-
 .sprk-b-TypeBodyOne {
   @include TextCrop(
     $line-height: $line-height-body-one,
