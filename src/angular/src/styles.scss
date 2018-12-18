@@ -8,7 +8,7 @@ $webfonts: (
     format('woff')
   ),
   FallSans,
-  Regular
+  400
 ),
   (
   (
@@ -17,7 +17,7 @@ $webfonts: (
     url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff')
   ),
   FallSans,
-  Bold
+  700
 ),
   (
   (
@@ -27,7 +27,7 @@ $webfonts: (
     format('woff')
   ),
   FallSans,
-  Medium
+  500
 ),
   (
   (
@@ -36,7 +36,7 @@ $webfonts: (
     url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff')
   ),
   FallSans,
-  Light
+  300
 );
 
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';

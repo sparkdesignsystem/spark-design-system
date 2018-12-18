@@ -156,36 +156,42 @@ $line-height-display-six: 1.28 !default;
 $font-weight-display-six: bold !default;
 
 // Display Seven
+$font-family-display-seven: FallSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-display-seven: 1.464rem !default;
 $color-display-seven: $black !default;
 $line-height-display-seven: 1.16 !default;
 $font-weight-display-seven: normal !default;
 
 // Display Eight
+$font-family-display-eight: FallSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-display-eight: 1.2rem !default;
 $color-display-eight: $black !default;
 $line-height-display-eight: 1.41 !default;
 $font-weight-display-eight: normal !default;
 
 // Body One
+$font-family-body-one: FallSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-body-one: 1rem !default;
 $color-body-one: $black !default;
 $line-height-body-one: 1.57 !default;
 $font-weight-body-one: bold !default;
 
 // Body Two
+$font-family-body-two: FallSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-body-two: 1rem !default;
 $color-body-two: $black !default;
 $line-height-body-two: 1.57 !default;
 $font-weight-body-two: normal !default;
 
 // Body Three
+$font-family-body-three: FallSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-body-three: 1rem !default;
 $color-body-three: $black !default;
 $line-height-body-three: 1.82 !default;
 $font-weight-body-three: normal !default;
 
 // Body Four
+$font-family-body-four: FallSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-body-four: 0.826rem !default;
 $color-body-four: $black !default;
 $line-height-body-four: 1.6 !default;
@@ -194,35 +200,6 @@ $font-weight-body-four: normal !default;
 // Line-height Collision
 $line-height-collision-top-crop: 5;
 $line-height-collision-bottom-crop: 5;
-
-// Set Scales vars
-$h1-size: $font-size-display-two !default;
-$h1-color: $color-display-two !default;
-$h1-line-height: $line-height-display-two !default;
-$h1-weight: $font-weight-display-two !default;
-$h2-size: $font-size-display-three !default;
-$h2-color: $color-display-three !default;
-$h2-line-height: $line-height-display-three !default;
-$h2-weight: $font-weight-display-three !default;
-$h3-size: $font-size-display-four !default;
-$h3-color: $color-display-four !default;
-$h3-line-height: $line-height-display-four !default;
-$h3-weight: $font-weight-display-four !default;
-$h4-size: $font-size-display-five !default;
-$h4-color: $color-display-five !default;
-$h4-line-height: $line-height-display-five !default;
-$h4-weight: $font-weight-display-five !default;
-$h5-size: $font-size-display-six !default;
-$h5-color: $color-display-six !default;
-$h5-line-height: $line-height-display-six !default;
-$h5-weight: $font-weight-display-six !default;
-$h6-size: $font-size-body-two !default;
-$h6-color: $color-body-two !default;
-$h6-line-height: $line-height-body-two !default;
-$h6-weight: $font-weight-body-two !default;
-$base-font-size: $font-size-body-two !default;
-$base-line-height: $line-height-body-two !default;
-$font-size-unit: rem !default;
 
 //
 // Consistent Style Vars

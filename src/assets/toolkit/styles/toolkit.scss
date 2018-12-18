@@ -9,10 +9,10 @@
 // font urls
 $using-webfonts: true;
 $webfonts:
-  ((url('https://spark-assets.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff')), FallSans, Regular),
-  ((url('https://spark-assets.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff')), FallSans, Bold),
-  ((url('https://spark-assets.netlify.com/FallSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff')), FallSans, Medium),
-  ((url('https://spark-assets.netlify.com/FallSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff')), FallSans, Light);
+  ((url('https://spark-assets.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff')), FallSans, 400),
+  ((url('https://spark-assets.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff')), FallSans, 700),
+  ((url('https://spark-assets.netlify.com/FallSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff')), FallSans, 500),
+  ((url('https://spark-assets.netlify.com/FallSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff')), FallSans, 300);
 
 // Override breakpoint for masthead because of Drizzle layout containment
 $masthead-breakpoint: 74rem;
