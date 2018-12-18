@@ -9,9 +9,9 @@
 // font urls
 $using-webfonts: true;
 $webfonts:
-  ((url('https://spark-assets.netlify.com/RocketSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Regular.woff') format('woff')), RocketSans, 400),
   ((url('https://spark-assets.netlify.com/RocketSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Bold.woff') format('woff')), RocketSans, 700),
   ((url('https://spark-assets.netlify.com/RocketSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Medium.woff') format('woff')), RocketSans, 500),
+  ((url('https://spark-assets.netlify.com/RocketSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Regular.woff') format('woff')), RocketSans, 400),
   ((url('https://spark-assets.netlify.com/RocketSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Light.woff') format('woff')), RocketSans, 300);
 
 // Override breakpoint for masthead because of Drizzle layout containment
