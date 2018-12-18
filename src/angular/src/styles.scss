@@ -2,40 +2,42 @@
 $using-webfonts: true;
 $webfonts: (
   (
-    url('https://spark-assets.netlify.com/FallSans-Regular.woff2')
+    url('https://spark-assets.netlify.com/RocketSans-Regular.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/FallSans-Regular.woff')
+    url('https://spark-assets.netlify.com/RocketSans-Regular.woff')
     format('woff')
   ),
-  FallSans,
+  RocketSans,
   400
 ),
   (
   (
-    url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+    url('https://spark-assets.netlify.com/RocketSans-Bold.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff')
+    url('https://spark-assets.netlify.com/RocketSans-Bold.woff')
+    format('woff')
   ),
-  FallSans,
+  RocketSans,
   700
 ),
   (
   (
-    url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
+    url('https://spark-assets.netlify.com/RocketSans-Medium.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/FallSans-Medium.woff')
+    url('https://spark-assets.netlify.com/RocketSans-Medium.woff')
     format('woff')
   ),
-  FallSans,
+  RocketSans,
   500
 ),
   (
   (
-    url('https://spark-assets.netlify.com/FallSans-Light.woff2')
+    url('https://spark-assets.netlify.com/RocketSans-Light.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff')
+    url('https://spark-assets.netlify.com/RocketSans-Light.woff')
+    format('woff')
   ),
-  FallSans,
+  RocketSans,
   300
 );
 
