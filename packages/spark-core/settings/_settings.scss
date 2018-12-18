@@ -55,10 +55,10 @@ $space-xl: 64px !default;
 $space-h: $space-xl !default;
 
 // Misc  Spacing Utilities
-$space-misc-a: 24px !default;
-$space-misc-b: 40px !default;
-$space-misc-c: 48px !default;
-$space-misc-d: 80px !default;
+$sprk-space-misc-a: 24px !default;
+$sprk-space-misc-b: 40px !default;
+$sprk-space-misc-c: 48px !default;
+$sprk-space-misc-d: 80px !default;
 
 //
 // Icons
@@ -263,8 +263,8 @@ $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
 $alert-icon-size: 40px !default;
-$alert-content-padding: $space-m $space-m $space-m $space-misc-a;
-$alert-dismiss-padding: $space-m;
+$sprk-alert-content-padding: $space-m $space-m $space-m $sprk-space-misc-a;
+$sprk-alert-dismiss-padding: $space-m;
 $alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
 $alert-shadow-hover-info: inset -80px 0 0 $alert-color-info !default;
@@ -473,8 +473,8 @@ $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red !default;
-$accordion-summary-padding: $space-misc-a 0;
-$accordion-content-padding: 0 0 $space-l;
+$sprk-accordion-summary-padding: $sprk-space-misc-a 0;
+$sprk-accordion-content-padding: 0 0 $space-l;
 
 //
 // Toggle
