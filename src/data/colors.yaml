@@ -12,27 +12,27 @@
       rgb: 'rgb(0,125,186)'
       property: '$blue'
     - label: Yellow
-      color: '#F2A900'
-      rgb: 'rgb(242,169,0)'
+      color: '#F5BE40'
+      rgb: 'rgb(245,190,64)'
       property: '$yellow'
     - label: White
       color: '#FFFFFF'
       rgb: 'rgb(255,255,255)'
       property: '$white'
     - label: Gray
-      color: '#EBEBEB'
+      color: '#F7F7F7'
       rgb: 'rgb(235,235,235)'
       property: '$gray'
     - label: Black
-      color: '#000000'
+      color: '#333'
       property: '$black'
-      rgb: 'rgb(0,0,0)'
+      rgb: 'rgb(51,51,51)'
 
 - Secondary:
     - label: Dark Green
       color: '#01947E'
       rgb: 'rgb(1, 148, 126)'
-      property: '$green-tint-75'
+      property: '$green-dark'
     - label: Green 75%
       color: '#40C6B2'
       rgb: 'rgb(64,198,178)'
