@@ -69,7 +69,7 @@
 
   &:visited {
     color: $link-disabled-color;
-    border-bottom: $link-underline-width solid $link-disabled-color;
+    border-bottom: $link-disabled-underline-width solid $link-disabled-color;
   }
 
   &:hover,

@@ -307,20 +307,21 @@ $btn-tertiary-text-color: $black !default;
 //
 // Links
 ///
-$link-color: $black !default;
-$link-disabled-color: $black-tint-50 !default;
-$link-muted-color: $gray-dark !default;
-$link-hover-color: $blue !default;
-$link-standalone-color: $blue !default;
-$link-standalone-underline-color: $blue !default;
 $link-transition: 0.3s !default;
+$link-color: $black !default;
+$link-underline-width: 0.09375em !default;
+$link-hover-color: $black !default;
 $link-underline-color: $gray-dark !default;
-$link-underline-visited-color: darken($blue, 10%) !default;
-$link-underline-width: 0.125em !default;
-$link-visited-color: darken($blue, 10%) !default;
+$link-visited-color: $black !default;
+$link-underline-visited-color: $black !default;
+$link-muted-color: $gray-dark !default;
+$link-standalone-color: $black !default;
+$link-standalone-underline-color: $black !default;
 $link-standalone-font-weight: bold !default;
 $link-inline-font-weight: bold !default;
+$link-disabled-color: $gray-dark !default;
 $link-disabled-font-weight: bold !default;
+$link-disabled-underline-width: 0 !default;
 
 //
 // Lists
