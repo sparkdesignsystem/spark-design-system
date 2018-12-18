@@ -471,6 +471,8 @@ $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red !default;
+$accordion-summary-padding: $space-misc-a 0;
+$accordion-content-padding: 0 0 $space-l;
 
 //
 // Toggle

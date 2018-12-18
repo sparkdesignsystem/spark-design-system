@@ -26,6 +26,12 @@ variableTable:
   $accordion-summary-active-color:
     default: $red
     description: Sets the color of the icon in the summary when the accordion item is open or hovered.
+  $accordion-summary-padding:
+    default: $space-misc-a 0
+    description: Sets the padding of the accordion summary.
+  $accordion-content-padding:
+    default: 0 0 $space-l
+    description: Sets the padding of the accordion content.
 classTable:
   .sprk-c-Accordion__item--open:
     description: Adds style to accordion items that have been toggled open by Spark JS.

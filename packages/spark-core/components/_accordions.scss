@@ -30,8 +30,7 @@
   align-items: center;
   color: $accordion-summary-color;
   display: flex;
-  padding-bottom: $space-m;
-  padding-top: $space-m;
+  padding: $accordion-summary-padding;
   text-decoration: none;
 
   &:hover {
@@ -49,7 +48,7 @@
 }
 
 .sprk-c-Accordion__content {
-  padding-bottom: $space-l;
+  padding: $accordion-content-padding;
 }
 
 // Accordion Navigation Styles
