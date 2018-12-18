@@ -1,5 +1,5 @@
 description:
   These are the colors that have been chosen to represent the brand. The colors are set as
-  variables in Spark and as document colors in the Design Toolkit.
+  variables in Spark.
 sparkPackageCore: true
 noCodeSwitch: true
