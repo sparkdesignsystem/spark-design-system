@@ -115,6 +115,11 @@ $pag-circle-size: 2em !default;
 ///
 $typography-breakpoint: 54rem !default;
 $page-title-mark-color: $red;
+$sprk-page-title-mark-width: 32px;
+$sprk-page-title-mark-height: 5px;
+$sprk-page-title-mark-height-wide-viewport: 6px;
+$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a;
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $space-m;
 
 // Display One
 $font-size-display-one: 3.797rem !default;
