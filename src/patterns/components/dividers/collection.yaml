@@ -13,3 +13,7 @@ restrictions:
     instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("divider-1", "divider-2", etc).
 sparkPackageCore: true
+variableTable:
+  $divider-border:
+    default: 1px solid $black-tint-25
+    description: Sets the divider border.

@@ -10,7 +10,7 @@ order: 3
 hasAngularCode: true
 ---
 
-<div class="sprk-b-InputContainer">
+<div class="sprk-b-InputContainer" {{#if requiredOnly}}data-sprk-required-only="tick"{{/if}}>
   <fieldset class="sprk-b-Fieldset">
     <legend class="sprk-b-Legend">
       <label class="sprk-b-Label">Checkbox Group Label</label>
