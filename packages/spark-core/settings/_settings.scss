@@ -238,7 +238,7 @@ $border-radius: 5px !default;
 ///
 $alert-border: 1px solid $gray !default;
 $alert-bar-width: -10px !default;
-$alert-color: $white !default;
+$alert-bg-color: $white !default;
 $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
@@ -260,7 +260,6 @@ $promo-max-width: 42.5rem !default;
 $promo-breakpoint: 42.5rem !default;
 $promo-image-narrow-max-height: 20rem !default;
 $promo-image-narrow-max-width: 50% !default;
-$promo-icon-color: $black !default;
 $promo-title-font-color: $black !default;
 $promo-title-font-weight: $font-weight-display-four !default;
 $promo-subtitle-font-color: $black !default;
@@ -333,6 +332,7 @@ $link-disabled-font-weight: bold !default;
 // Lists
 ///
 $list-margin-left: $space-m !default;
+$list-indented-margin-left: $space-l !default;
 
 //
 // Forms
@@ -373,9 +373,7 @@ $input-animation-speed: 0.3s !default;
 $select-arrow-offset-y: -23px !default;
 $select-arrow-offset-x: 8px !default;
 $label-offset-y: -53px !default;
-$label-offset-y-open: -31px !default;
 $label-shrink-scale: 0.82 !default;
-$fieldset-padding: 0 !default;
 
 //
 // Tables
@@ -385,6 +383,8 @@ $table-padding-medium: $space-inset-m !default;
 $table-padding-large: $space-inset-l !default;
 $table-cell-alignment: center !default;
 $table-stripe-color: $gray !default;
+$table-highlight-color: $red !default;
+$table-highlight-text-color: $white !default;
 
 // Primary
 $table-row-border-width: 1px !default;
@@ -411,7 +411,7 @@ $table-grouped-header-font-size: $font-size-body-four !default;
 $table-grouped-header-font-weight: normal !default;
 
 // Secondary Row Comparison
-$table-secondary-row-comp-row-spacing: 15px !default;
+$table-secondary-row-comp-row-spacing: 0 15px !default;
 $table-secondary-row-comp-border-width: 1px !default;
 $table-secondary-row-comp-border-style: solid !default;
 $table-secondary-row-comp-border-color: $gray !default;
@@ -503,7 +503,6 @@ $masthead-border-bottom-size: 1px !default;
 $masthead-border-bottom: $masthead-border-bottom-size solid $gray !default;
 $masthead-breakpoint: 54rem !default;
 $masthead-column-width: 89rem !default;
-$big-nav-dropdown-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2) !default;
 $big-nav-column-width: 64rem !default;
 $big-nav-bg: $gray !default;
 $big-nav-active-color: $red !default;
@@ -512,11 +511,6 @@ $masthead-logo-min-width: 174px !default;
 $mobile-masthead-height: 113px !default;
 $narrow-nav-left-border: 5px solid $red !default;
 $narrow-nav-link-font-weight: normal !default;
-
-//
-// Pagination
-//
-$pag-breakpoint: 24.25rem !default;
 
 //
 // Spinners
@@ -531,3 +525,10 @@ $spinner-color: $white !default;
 // Tabbed Navigation
 ///
 $tab-navigation-breakpoint: 46rem !default;
+$tab-navigation-btn-color: $black !default;
+$tab-navigation-btn-bg-color: $gray !default;
+$tab-navigation-btn-border-top: 3px solid $gray !default;
+$tab-navigation-btn-hover-border-top: 3px solid $red !default;
+$tab-navigation-btn-active-color: $red !default;
+$tab-navigation-btn-active-border-top: 3px solid $red !default;
+$tab-navigation-btn-active-bg-color: $white !default;

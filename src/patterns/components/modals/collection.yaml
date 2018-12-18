@@ -29,3 +29,28 @@ restrictions:
     instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("modal-choice-1", "modal-choice-2", "modal-info-1", etc).
 sparkPackageCore: true
+variableTable:
+  $modal-mask-color:
+    default: rgba(34, 34, 34, 0.35)
+    description: Sets the background color of the site covering mask that is shown behind the modal.
+  $modal-color:
+    default: $white
+    description: The background color of the modal.
+  $modal-max-width:
+    default: 43.75rem
+    description: The maximum width of the modal.
+  $modal-height:
+    default: 70%
+    description: The maximum height the modal can grow to be.
+  $modal-breakpoint-small:
+    default: 25rem
+    description: The point at which the modal moves farther down the viewport from the top.
+  $modal-breakpoint-medium:
+    default: 37.5rem
+    description: The point at which the modal moves even farther down the viewport from the top.
+  $modal-shadow:
+    default: 0 4px 5px rgba(0, 0, 0, 0.6)
+    description: The box-shadow on the modal.
+classTable:
+  .sprk-c-Modal--wait:
+    description: Sets styles for the wait modal variant. Aligns items to the center.

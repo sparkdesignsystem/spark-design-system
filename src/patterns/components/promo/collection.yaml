@@ -1,14 +1,52 @@
 description:
-  Promos are blocks of content that may include text, form elements, icons, or images. 
+  Promos are blocks of content that may include text, form elements, icons, or images.
   Promos are useful for drawing attention to a promotion or feature.
 information:
   - Use the sprk-c-Promo--bordered class to include a border on the Promo.
 restrictions:
- - The data-id property is provided as a hook for automated tools. If you have multiple 
-    instances of the same variant of a component on the same page, make sure each instance 
+ - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("promo-1", "promo-2", "promo-1", etc).
 links:
   Spacing Utilities:
     external: false
     href: /patterns/utilities/single-property.html#spacing
 sparkPackageCore: true
+variableTable:
+  $promo-background-color:
+    default: $white
+    description: The background color of the promo.
+  $promo-border:
+    default: 1px solid $gray
+    description: The border style of the border promo variant.
+  $promo-max-width:
+    default: 42.5rem
+    description: The maximum width of the promo.
+  $promo-breakpoint:
+    default: 42.5rem
+    description: The breakpoint for large viewport styles.
+  $promo-image-narrow-max-height:
+    default: 20rem
+    description: The maximum height of the image on narrow viewports.
+  $promo-image-narrow-max-width:
+    default: 50%
+    description: The maximum width of the image on narrow viewports.
+  $promo-title-font-color:
+    default: $black
+    description: The color of the title.
+  $promo-title-font-weight:
+    default: $font-weight-display-four
+    description: The font weight of the title.
+  $promo-subtitle-font-color:
+    default: $black
+    description: The color of the subtitle.
+  $promo-subtitle-font-weight:
+    default: $font-weight-body-one
+    description: The font weight of the subtitle.
+classTable:
+  .sprk-c-Promo--flag:
+    description: Sets styles for the flag promo variant.
+  .sprk-c-Promo__image--flag:
+    description: Sets styles for the image in the flag promo variant.
+  .sprk-c-Promo--bordered:
+    description: Sets a border around the promo.

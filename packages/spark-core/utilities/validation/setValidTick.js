@@ -1,7 +1,9 @@
 function setValidTick(inputContainer) {
-  const errorContainer = inputContainer.querySelector('.sprk-b-ErrorText');
+  const errorContainer = inputContainer.querySelector('.sprk-b-ErrorContainer');
 
-  errorContainer.textContent = '';
+  if (errorContainer) {
+    errorContainer.innerHTML = '';
+  }
 }
 
 export { setValidTick as default };
