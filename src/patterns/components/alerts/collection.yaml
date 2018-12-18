@@ -62,6 +62,9 @@ variableTable:
   $sprk-alert-dismiss-padding:
     default: $space-m
     description: Sets the padding around the dismiss icon.
+  $sprk-alert-icon-margin:
+    default: 0 $sprk-space-misc-a 0 0
+    description: Sets the margin for the icon in the alert.
 classTable:
   .sprk-c-Alert--info:
     description: Styles the alert as an information alert.

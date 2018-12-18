@@ -265,6 +265,7 @@ $alert-color-fail: $yellow !default;
 $alert-icon-size: 40px !default;
 $sprk-alert-content-padding: $space-m $space-m $space-m $sprk-space-misc-a;
 $sprk-alert-dismiss-padding: $space-m;
+$sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0;
 $alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
 $alert-shadow-hover-info: inset -80px 0 0 $alert-color-info !default;
