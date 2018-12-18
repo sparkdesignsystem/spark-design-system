@@ -1,0 +1,66 @@
+---
+doclayout: true
+order: 7
+name: Miscellaneous Spacing
+description:
+  These utilities override the padding and margin on
+  an element and are supplemental spacing sizes. The class name format is
+  <span class="sprk-u-FontWeight--bold">.sprk-u-&lt;type&gt;&lt;location&gt;--&lt;size&gt;</span>
+---
+<h3 class="drizzle-b-h3">Options</h3>
+
+<ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbl">
+  <li>
+    <span class="sprk-u-FontWeight--bold">type</span>: Padding, Margin
+  </li>
+
+  <li>
+    <span class="sprk-u-FontWeight--bold">location</span>
+    : All, Top, Right, Bottom, Left, Horizontal, Vertical
+  </li>
+
+  <li>
+    <span class="sprk-u-FontWeight--bold">size</span>
+    : a ($space-misc-a: 24px), b ($space-misc-b: 40px), c ($space-misc-c: 48px), d ($space-misc-d: 80px)
+  </li>
+</ul>
+
+<h3 class="drizzle-b-h3 sprk-u-mbl">
+  Examples
+</h3>
+
+<table class="drizzle-c-Table">
+  <colgroup>
+    <col class="sprk-u-Width-35">
+    <col class="sprk-u-Width-35">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">.sprk-u-MarginBottom--a</td>
+      <td>margin-bottom: $space-misc-a;</td>
+      <td>Sets the bottom margin to the current value of $space-misc-a (24px).</td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">.sprk-u-PaddingHorizontal--b</td>
+      <td>padding-left: $space-misc-b;<br>padding-right: $space-misc-b;</td>
+      <td>Sets the padding on the left and right (horizontal) to $space-misc-b (40px).</td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">.sprk-u-MarginAll--d</td>
+      <td>margin: $space-misc-d;</td>
+      <td>Sets the margin on all sides to the current value of $space-misc-d (80px).</td>
+    </tr>
+  </tbody>
+</table>

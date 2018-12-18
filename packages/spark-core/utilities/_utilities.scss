@@ -330,6 +330,213 @@
 }
 
 //
+// Spacing
+///
+
+/* stylelint-disable  selector-class-pattern */
+// Misc Padding Spacing A
+.sprk-u-PaddingTop--a,
+.sprk-u-PaddingVertical--a,
+.sprk-u-PaddingAll--a {
+  padding-top: $space-misc-a !important;
+}
+
+.sprk-u-PaddingRight--a,
+.sprk-u-PaddingHorizontal--a,
+.sprk-u-PaddingAll--a {
+  padding-right: $space-misc-a !important;
+}
+
+.sprk-u-PaddingBottom--a,
+.sprk-u-PaddingVertical--a,
+.sprk-u-PaddingAll--a {
+  padding-bottom: $space-misc-a !important;
+}
+
+.sprk-u-PaddingLeft--a,
+.sprk-u-PaddingHorizontal--a,
+.sprk-u-PaddingAll--a {
+  padding-left: $space-misc-a !important;
+}
+
+// Misc Padding Spacing B
+.sprk-u-PaddingTop--b,
+.sprk-u-PaddingVertical--b,
+.sprk-u-PaddingAll--b {
+  padding-top: $space-misc-b !important;
+}
+
+.sprk-u-PaddingRight--b,
+.sprk-u-PaddingHorizontal--b,
+.sprk-u-PaddingAll--b {
+  padding-right: $space-misc-b !important;
+}
+
+.sprk-u-PaddingBottom--b,
+.sprk-u-PaddingVertical--b,
+.sprk-u-PaddingAll--b {
+  padding-bottom: $space-misc-b !important;
+}
+
+.sprk-u-PaddingLeft--b,
+.sprk-u-PaddingHorizontal--b,
+.sprk-u-PaddingAll--b {
+  padding-left: $space-misc-b !important;
+}
+
+// Misc Padding Spacing C
+.sprk-u-PaddingTop--c,
+.sprk-u-PaddingVertical--c,
+.sprk-u-PaddingAll--c {
+  padding-top: $space-misc-c !important;
+}
+
+.sprk-u-PaddingRight--c,
+.sprk-u-PaddingHorizontal--c,
+.sprk-u-PaddingAll--c {
+  padding-right: $space-misc-c !important;
+}
+
+.sprk-u-PaddingBottom--c,
+.sprk-u-PaddingVertical--c,
+.sprk-u-PaddingAll--c {
+  padding-bottom: $space-misc-c !important;
+}
+
+.sprk-u-PaddingLeft--c,
+.sprk-u-PaddingHorizontal--c,
+.sprk-u-PaddingAll--c {
+  padding-left: $space-misc-c !important;
+}
+
+// Misc Padding Spacing D
+.sprk-u-PaddingTop--d,
+.sprk-u-PaddingVertical--d,
+.sprk-u-PaddingAll--d {
+  padding-top: $space-misc-d !important;
+}
+
+.sprk-u-PaddingRight--d,
+.sprk-u-PaddingHorizontal--d,
+.sprk-u-PaddingAll--d {
+  padding-right: $space-misc-d !important;
+}
+
+.sprk-u-PaddingBottom--d,
+.sprk-u-PaddingVertical--d,
+.sprk-u-PaddingAll--d {
+  padding-bottom: $space-misc-d !important;
+}
+
+.sprk-u-PaddingLeft--d,
+.sprk-u-PaddingHorizontal--d,
+.sprk-u-PaddingAll--d {
+  padding-left: $space-misc-d !important;
+}
+
+// Misc Margin Spacing A
+.sprk-u-MarginTop--a,
+.sprk-u-MarginVertical--a,
+.sprk-u-MarginAll--a {
+  margin-top: $space-misc-a !important;
+}
+
+.sprk-u-MarginRight--a,
+.sprk-u-MarginHorizontal--a,
+.sprk-u-MarginAll--a {
+  margin-right: $space-misc-a !important;
+}
+
+.sprk-u-MarginBottom--a,
+.sprk-u-MarginVertical--a,
+.sprk-u-MarginAll--a {
+  margin-bottom: $space-misc-a !important;
+}
+
+.sprk-u-MarginLeft--a,
+.sprk-u-MarginHorizontal--a,
+.sprk-u-MarginAll--a {
+  margin-left: $space-misc-a !important;
+}
+
+// Misc Margin Spacing B
+.sprk-u-MarginTop--b,
+.sprk-u-MarginVertical--b,
+.sprk-u-MarginAll--b {
+  margin-top: $space-misc-b !important;
+}
+
+.sprk-u-MarginRight--b,
+.sprk-u-MarginHorizontal--b,
+.sprk-u-MarginAll--b {
+  margin-right: $space-misc-b !important;
+}
+
+.sprk-u-MarginBottom--b,
+.sprk-u-MarginVertical--b,
+.sprk-u-MarginAll--b {
+  margin-bottom: $space-misc-b !important;
+}
+
+.sprk-u-MarginLeft--b,
+.sprk-u-MarginHorizontal--b,
+.sprk-u-MarginAll--b {
+  margin-left: $space-misc-b !important;
+}
+
+// Misc Margin Spacing C
+.sprk-u-MarginTop--c,
+.sprk-u-MarginVertical--c,
+.sprk-u-MarginAll--c {
+  margin-top: $space-misc-c !important;
+}
+
+.sprk-u-MarginRight--c,
+.sprk-u-MarginHorizontal--c,
+.sprk-u-MarginAll--c {
+  margin-right: $space-misc-c !important;
+}
+
+.sprk-u-MarginBottom--c,
+.sprk-u-MarginVertical--c,
+.sprk-u-MarginAll--c {
+  margin-bottom: $space-misc-c !important;
+}
+
+.sprk-u-MarginLeft--c,
+.sprk-u-MarginHorizontal--c,
+.sprk-u-MarginAll--c {
+  margin-left: $space-misc-c !important;
+}
+
+// Misc Margin Spacing D
+.sprk-u-MarginTop--d,
+.sprk-u-MarginVertical--d,
+.sprk-u-MarginAll--d {
+  margin-top: $space-misc-d !important;
+}
+
+.sprk-u-MarginRight--d,
+.sprk-u-MarginHorizontal--d,
+.sprk-u-MarginAll--d {
+  margin-right: $space-misc-d !important;
+}
+
+.sprk-u-MarginBottom--d,
+.sprk-u-MarginVertical--d,
+.sprk-u-MarginAll--d {
+  margin-bottom: $space-misc-d !important;
+}
+
+.sprk-u-MarginLeft--d,
+.sprk-u-MarginHorizontal--d,
+.sprk-u-MarginAll--d {
+  margin-left: $space-misc-d !important;
+}
+
+/* stylelint-enable  selector-class-pattern */
+
+//
 // Multi-property utilities
 ///
 
