@@ -19,10 +19,10 @@ restrictions:
 sparkPackageCore: true
 variableTable:
   $btn-background-color:
-    default: $red
+    default: $green
     description: Sets the background color of the button.
   $btn-shadow:
-    default: 0 2px 2px rgba(0, 0, 0, 0.2)
+    default: 0 3px 10px rgba(20,20,20,0.08)
     description: Sets the box-shadow of the button.
   $btn-border-style:
     default: solid
@@ -40,10 +40,10 @@ variableTable:
     default: $white
     description: Sets the font color.
   $btn-border-radius:
-    default: 1px
+    default: 4px
     description: Sets the border radius.
   $btn-hover-background-color:
-    default: $red-mid
+    default: $green-dark
     description: Sets the background color on hover.
   $btn-hover-text-color:
     default: $white
@@ -63,54 +63,96 @@ variableTable:
   $btn-disabled-opacity:
     default: 1
     description: Sets the opacity of the disabled button.
-  $btn-disabled-background-color:
-    default: $gray
-    description: Sets the background color of the disabled button.
-  $btn-disabled-text-color:
-    default: $black-tint-50
-    description: Sets the font color of the disabled button.
   $btn-disabled-border-width:
     default: $btn-border-width
     description: Sets the border width of the disabled button.
+  $btn-disabled-background-color:
+    default: $gray-dark
+    description: Sets the background color of the disabled button.
+  $btn-disabled-text-color:
+    default: $white
+    description: Sets the font color of the disabled button.
   $btn-disabled-border-color:
     default: transparent
     description: Sets the border color of the disabled button.
-  $btn-secondary-background-color:
+  $btn-disabled-shadow:
+    default: none
+    description: Sets the shadow of the disabled button.
+  $btn-secondary-disabled-background-color:
     default: transparent
+    description: Sets the background color of disabled secondary buttons.
+  $btn-secondary-disabled-text-color:
+    default: $gray-dark
+    description: Sets the text color of disabled secondary buttons.
+  $btn-secondary-disabled-border-color:
+    default: $gray-dark
+    description: Sets the border color of disabled secondary buttons.
+  $btn-secondary-disabled-shadow:
+    default: none
+    description: Sets the shadow of disabled secondary buttons.
+  $btn-secondary-background-color:
+    default: $white
     description: Sets the background color of the secondary button.
   $btn-secondary-border-color:
-    default: $black
+    default: $gray-dark
     description: Sets the border color of the secondary button.
   $btn-secondary-text-color:
     default: $black
     description: Sets the font color of the secondary button.
   $btn-secondary-hover-text-color:
-    default: $red
+    default: $black
     description: Sets the hover state font color of the secondary button.
   $btn-secondary-hover-background-color:
     default: transparent
     description: Sets the hover state background color of the secondary button.
   $btn-secondary-hover-border-color:
-    default: $red
+    default: $gray-dark
     description: Sets the hover state border color of the secondary button.
+  $btn-secondary-hover-shadow:
+    default: 0 3px 10px rgba(20, 20, 20, 0.08)
+    description: Sets the hover state shadow for secondary buttons.
   $btn-tertiary-background-color:
     default: transparent
     description: Sets the background color of the tertiary button.
   $btn-tertiary-border-color:
-    default: transparent
+    default: none
     description: Sets the border color of the tertiary button.
+  $btn-tertiary-text-color:
+    default: $black
+    description: Sets the font color and visited state font color of the tertiary button.
+  $btn-tertiary-underline-width:
+    default: 0.09375em
+    description: Sets the width of the underline for tertiary buttons.
+  $btn-tertiary-underline-padding-top:
+    default: 0.09375em
+    description: Sets the vertical distance between the underline and the text for tertiary buttons.
+  $btn-tertiary-underline-color:
+    default: $gray-dark
+    description: Sets the color of the underline for tertiary buttons.
   $btn-tertiary-hover-text-color:
     default: $black
     description: Sets the hover state font color of the tertiary button.
-  $btn-tertiary-hover-line-color:
-    default: $red
+  $btn-tertiary-hover-underline-color:
+    default: $black
     description: Sets the hover state background color of the underline of the tertiary button.
   $btn-tertiary-hover-background-color:
     default: transparent
     description: Sets the hover state background color of the tertiary button.
-  $btn-tertiary-text-color:
-    default: $black
-    description: Sets the font color, visited state font color, and underline color of the tertiary button.
+  $btn-tertiary-hover-shadow:
+    default: none
+    description: Sets the hover state shadow of the tertiary button.
+  $btn-tertiary-disabled-shadow:
+    default: none
+    description: Sets the shadow of disabled tertiary buttons.
+  $btn-tertiary-disabled-border:
+    default: none
+    description: Sets the border of disabled tertiary buttons.
+  $btn-tertiary-disabled-background-color:
+    default: transparent
+    description: Sets the background color of disabled tertiary buttons.
+  $btn-tertiary-disabled-text-color:
+    default: $gray-dark
+    description: Sets the text color of disabled tertiary buttons.
 
 classTable:
   .sprk-c-Button--compact:

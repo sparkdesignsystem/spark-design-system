@@ -61,14 +61,13 @@
 .sprk-c-Button--tertiary {
   background-color: $btn-tertiary-background-color;
   box-shadow: none;
-  border: none;
+  border: $btn-tertiary-border;
   color: $btn-tertiary-text-color;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $btn-tertiary-hover-background-color;
-    border-color: $btn-tertiary-border-color;
     color: $btn-tertiary-hover-text-color;
     box-shadow: $btn-tertiary-hover-shadow;
   }
@@ -77,26 +76,26 @@
     color: $btn-tertiary-text-color;
   }
 
-  &:hover::after,
-  &:active::after,
-  &:focus::after {
-    border-color: $btn-tertiary-hover-line-color;
-    transition: border $btn-transition-speed ease-in-out;
-  }
-
   &::after {
     content: '';
-    border-bottom: $btn-tertiary-border-width solid $btn-tertiary-border-color;
+    border-bottom: $btn-tertiary-underline-width solid $btn-tertiary-underline-color;
     display: block;
     width: 100%;
     padding-top: $btn-tertiary-underline-padding-top;
     margin: 0 auto;
   }
+
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+    border-color: $btn-tertiary-hover-underline-color;
+    transition: border $btn-transition-speed ease-in-out;
+  }
 }
 
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
-  box-shadow: none;
+  box-shadow: $btn-disabled-shadow;
 
   &:hover,
   &:active,
@@ -113,8 +112,7 @@
 
 .sprk-c-Button--secondary.sprk-is-Disabled,
 .sprk-c-Button--secondary[disabled] {
-  box-shadow: none;
-
+  box-shadow: $btn-secondary-disabled-shadow;
   background-color: $btn-secondary-disabled-background-color;
   border-color: $btn-secondary-disabled-border-color;
   color: $btn-secondary-disabled-text-color;
@@ -122,9 +120,8 @@
 
 .sprk-c-Button--tertiary.sprk-is-Disabled,
 .sprk-c-Button--tertiary[disabled] {
-  box-shadow: none;
-  border: none;
-
+  box-shadow: $btn-tertiary-disabled-shadow;
+  border: $btn-tertiary-disabled-border;
   color: $btn-tertiary-disabled-text-color;
   background-color: $btn-tertiary-disabled-background-color;
 }
