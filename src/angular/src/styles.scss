@@ -1,26 +1,43 @@
 // font urls
-$using-webfont-body: true;
-$using-webfont-heading: true;
-$using-webfont-alternate: true;
-$body-font-name: FallSans;
-$body-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
-$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
-$heading-font-name: FallSans;
-$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
-$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
-$alternate-font-weight: bold;
-$alternate-font-name: FallSans-Bold;
-$alternate-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+$using-webfonts: true;
+$webfonts: (
+  (
+    url('https://spark-assets.netlify.com/FallSans-Regular.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/FallSans-Regular.woff')
+    format('woff')
+  ),
+  FallSans,
+  Regular
+),
+  (
+  (
+    url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff')
+  ),
+  FallSans,
+  Bold
+),
+  (
+  (
+    url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/FallSans-Medium.woff')
+    format('woff')
+  ),
+  FallSans,
+  Medium
+),
+  (
+  (
+    url('https://spark-assets.netlify.com/FallSans-Light.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff')
+  ),
+  FallSans,
+  Light
+);
 
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core-angular.scss';

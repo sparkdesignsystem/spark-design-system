@@ -2,57 +2,15 @@
 // Typography
 // ==================================================================
 
-@if $using-webfont-body {
-  @font-face {
-    font-family: $body-font-name;
-    src: $body-font-src;
-    font-weight: $body-font-weight;
+@if $using-webfonts {
+  @each $src, $name, $weight in $webfonts {
+    @font-face {
+      font-display: $sprk-font-display;
+      font-family: $name;
+      src: $src;
+      font-weight: $weight;
+    }
   }
-  @font-face {
-    font-family: $body-font-name;
-    src: $body-bold-font-src;
-    font-weight: $body-bold-font-weight;
-  }
-}
-@if $using-webfont-heading {
-  @font-face {
-    font-family: $heading-font-name;
-    src: $heading-font-src;
-    font-weight: $heading-font-weight;
-  }
-  @font-face {
-    font-family: $heading-font-name;
-    src: $heading-bold-font-src;
-    font-weight: $heading-bold-font-weight;
-  }
-}
-@if $using-webfont-alternate {
-  @font-face {
-    font-family: $alternate-font-name;
-    src: $alternate-font-src;
-    font-weight: $alternate-font-weight;
-  }
-}
-
-.sprk-b-TypeDisplayOne,
-.sprk-b-TypeDisplayTwo {
-  font-family: $alternate-font-stack;
-}
-
-.sprk-b-TypeDisplayThree,
-.sprk-b-TypeDisplayFour,
-.sprk-b-TypeDisplayFive,
-.sprk-b-TypeDisplaySix,
-.sprk-b-TypeDisplaySeven,
-.sprk-b-TypeDisplayEight {
-  font-family: $heading-font-stack;
-}
-
-.sprk-b-TypeBodyOne,
-.sprk-b-TypeBodyTwo,
-.sprk-b-TypeBodyThree,
-.sprk-b-TypeBodyFour {
-  font-family: $body-font-stack;
 }
 
 .sprk-b-TypeDisplayOne {
@@ -64,6 +22,7 @@
     $crop-line-height: $line-height-display-one);
 
   color: $color-display-one;
+  font-family: $font-family-display-one;
   font-size: $font-size-display-one;
   font-weight: $font-weight-display-one;
 }

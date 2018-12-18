@@ -7,119 +7,23 @@
 ///
 
 // font urls
-$using-webfont-body: true;
-$using-webfont-heading: true;
-$using-webfont-alternate: true;
-$body-font-name: FallSans;
-$body-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
-$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
-$heading-font-name: FallSans;
-$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
-$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
-$alternate-font-weight: bold;
-$alternate-font-name: FallSans-Bold;
-$alternate-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+$using-webfonts: true;
+$webfonts:
+  ((url('https://spark-assets.netlify.com/FallSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Regular.woff') format('woff')), FallSans, Regular),
+  ((url('https://spark-assets.netlify.com/FallSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff')), FallSans, Bold),
+  ((url('https://spark-assets.netlify.com/FallSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff')), FallSans, Medium),
+  ((url('https://spark-assets.netlify.com/FallSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff')), FallSans, Light);
+
 // Override breakpoint for masthead because of Drizzle layout containment
 $masthead-breakpoint: 74rem;
 
-@import '../../../../packages/spark-core/settings/colors';
-@import '../../../../packages/spark-core/settings/settings';
-@import '../../../../packages/spark-core/components/icons';
-
-//
-// Tools
-///
-
-@import '../../../../packages/spark-core/tools/mixins';
-@import '../../../../packages/spark-core/tools/functions';
-@import '../../../../packages/spark-core/tools/animations';
-
-//
-// Generic utility styles
-///
-
-@import '../../../../node_modules/@scalescss/generic-normalize/normalize';
-@import '../../../../node_modules/@scalescss/generic-reset/reset';
-
-//
-// Base styles for standard HTML elements
-///
-
-@import '../../../../node_modules/@scalescss/base-typography/typography';
-@import '../../../../node_modules/@scalescss/base-images/images';
-@import '../../../../node_modules/@scalescss/base-lists/lists';
-@import '../../../../node_modules/@scalescss/base-blockquotes/blockquotes';
-@import '../../../../node_modules/@scalescss/base-forms/forms';
-@import '../../../../node_modules/@scalescss/base-tables/tables';
-@import '../../../../packages/spark-core/base/tables';
-@import '../../../../packages/spark-core/base/typography';
-@import '../../../../packages/spark-core/base/inputs';
-@import '../../../../packages/spark-core/base/lists';
-@import '../../../../packages/spark-core/base/links';
-
-//
-// Shared objects
-///
-
-@import '../../../../node_modules/@scalescss/objects-box/box';
-@import '../../../../node_modules/@scalescss/objects-centered-column/centered-column';
-@import '../../../../node_modules/@scalescss/objects-horizontal-list/horizontal-list';
-@import '../../../../node_modules/@scalescss/objects-stack/stack';
-@import '../../../../node_modules/@scalescss/objects-vertical-list/vertical-list';
-@import '../../../../node_modules/@scalescss/objects-media-object/media-object';
-@import '../../../../node_modules/@scalescss/objects-flag/flag';
-@import '../../../../node_modules/@scalescss/objects-split/split';
-@import '../../../../node_modules/@scalescss/objects-stats/stats';
-@import '../../../../node_modules/@scalescss/objects-multi-col-list/multi-col-list';
-
-//
-// Objects
-///
-
-@import '../../../../packages/spark-core/objects/stack';
-
-//
-// Components
-///
-
-@import '../../../../node_modules/@scalescss/components-buttons/buttons';
-@import '../../../../packages/spark-core/components/accordions';
-@import '../../../../packages/spark-core/components/spinners';
-@import '../../../../packages/spark-core/components/buttons';
-@import '../../../../packages/spark-core/components/alerts';
-@import '../../../../packages/spark-core/components/modals';
-@import '../../../../packages/spark-core/components/pagination';
-@import '../../../../packages/spark-core/components/tabs';
-@import '../../../../packages/spark-core/components/datepicker';
-@import '../../../../packages/spark-core/components/dividers';
-@import '../../../../packages/spark-core/components/dropdown';
-@import '../../../../packages/spark-core/components/masthead';
-@import '../../../../packages/spark-core/components/promo';
-@import '../../../../packages/spark-core/components/menu';
-
-//
-// Spark Extras - Components
-///
-
+@import '../../../../packages/spark-core/spark-core.scss';
 @import '../../../../packages/spark-extras/components/card/card';
-@import '../../../../packages/spark-extras/components/highlight-board/highlight-board';
-@import '../../../../packages/spark-extras/components/dictionary/dictionary';
+@import '../../../../packages/spark-extras/components/dictionary/dictionary.scss';
+@import '../../../../packages/spark-extras/components/highlight-board/highlight-board.scss';
 
 //
-// Overrides that need to come later in the cascade
-///
+// Bring in doc site styles
+//
 
-@import '../../../../node_modules/@scalescss/utilities-clearfix/clearfix';
-@import '../../../../node_modules/@scalescss/utilities-width/width';
-@import '../../../../node_modules/@scalescss/utilities-spacing/spacing';
-@import '../../../../packages/spark-core/utilities/utilities';
+@import '../../../assets/drizzle/styles/main.scss';
