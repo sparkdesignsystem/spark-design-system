@@ -172,6 +172,20 @@
   white-space: nowrap !important;
 }
 
+.sprk-u-Measure {
+  max-width: $sprk-measure;
+}
+
+.sprk-u-Measure--narrow {
+  max-width: $sprk-narrow-measure;
+}
+
+.sprk-u-Truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 //
 // Overflow
 ///
