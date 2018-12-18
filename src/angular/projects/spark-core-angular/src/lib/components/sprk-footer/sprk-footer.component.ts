@@ -3,9 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-footer',
   template: `
-    <div
-      class="sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray-tint-50"
-    >
+    <div class="sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray">
       <footer
         [ngClass]="getClasses()"
         role="contentinfo"
