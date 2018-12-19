@@ -94,14 +94,14 @@
 }
 
 .sprk-c-Masthead__link {
-  font-weight: $font-weight-body-one;
+  font-weight: $masthead-link-font-weight;
 
   &:visited {
-    color: $black;
+    color: $masthead-link-visited-color;
   }
 
   &:hover {
-    color: $red;
+    color: $masthead-link-hover-color;
   }
 }
 
