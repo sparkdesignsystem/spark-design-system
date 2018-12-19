@@ -20,8 +20,8 @@
       rgb: 'rgb(255,255,255)'
       property: '$white'
     - label: Gray
-      color: '#CFCFCF'
-      rgb: 'rgb(207,207,207)'
+      color: '#F7F7F7'
+      rgb: 'rgb(247,247,247)'
       property: '$gray'
     - label: Black
       color: '#333333'
@@ -94,6 +94,6 @@
       rgb: 'rgb(190,190,190)'
       property: '$black-tint-25'
     - label: Dark Gray
-      color: '#E6E6E6'
-      rgb: 'rgb(230,230,230)'
+      color: '#CFCFCF'
+      rgb: 'rgb(207,207,207)'
       property: '$gray-dark'
