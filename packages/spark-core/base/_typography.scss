@@ -140,7 +140,6 @@ h6,
   line-height: $line-height-display-seven;
 }
 
-strong,
 .sprk-b-TypeBodyOne {
   @include TextCrop(
     $line-height: $line-height-body-one,
@@ -151,7 +150,10 @@ strong,
     ),
     $crop-line-height: $line-height-body-one
   );
+}
 
+strong,
+.sprk-b-TypeBodyOne {
   color: $color-body-one;
   font-family: $sprk-font-family-body-one;
   font-size: $font-size-body-one;
@@ -177,7 +179,6 @@ body,
   font-weight: $font-weight-body-two;
 }
 
-small,
 .sprk-b-TypeBodyThree {
   @include TextCrop(
     $line-height: $line-height-body-three,
@@ -188,7 +189,10 @@ small,
     ),
     $crop-line-height: $line-height-body-three
   );
+}
 
+small,
+.sprk-b-TypeBodyThree {
   color: $color-body-three;
   font-family: $sprk-font-family-body-three;
   font-size: $font-size-body-three;
