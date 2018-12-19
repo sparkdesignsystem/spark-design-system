@@ -25,14 +25,14 @@
 
 .sprk-b-Link--standalone {
   color: $link-standalone-color;
-  border-bottom: $link-underline-width solid transparent;
+  border-bottom: $link-underline-width solid $link-standalone-underline-color;
   font-weight: $link-standalone-font-weight;
 
   &:hover,
   &:active,
   &:focus {
     transition: $link-transition;
-    border-bottom: $link-underline-width solid $link-standalone-underline-color;
+    border-bottom: $link-underline-width solid $link-standalone-hover-underline-color;
   }
 }
 
