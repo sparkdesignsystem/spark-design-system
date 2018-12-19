@@ -1,7 +1,7 @@
 - Primary:
     - label: Green
       color: '#00B398'
-      rgb: 'rgb(0,179,152)'
+      rgb: 'rgb(19, 164, 142)'
       property: '$green'
     - label: Red
       color: '#C8102E'
@@ -12,27 +12,27 @@
       rgb: 'rgb(0,125,186)'
       property: '$blue'
     - label: Yellow
-      color: '#F2A900'
-      rgb: 'rgb(242,169,0)'
+      color: '#F5BE40'
+      rgb: 'rgb(245,190,64)'
       property: '$yellow'
     - label: White
       color: '#FFFFFF'
       rgb: 'rgb(255,255,255)'
       property: '$white'
     - label: Gray
-      color: '#EBEBEB'
-      rgb: 'rgb(235,235,235)'
+      color: '#F7F7F7'
+      rgb: 'rgb(247,247,247)'
       property: '$gray'
     - label: Black
-      color: '#000000'
+      color: '#333333'
       property: '$black'
-      rgb: 'rgb(0,0,0)'
+      rgb: 'rgb(51,51,51)'
 
 - Secondary:
     - label: Dark Green
       color: '#01947E'
       rgb: 'rgb(1, 148, 126)'
-      property: '$green-tint-75'
+      property: '$green-dark'
     - label: Green 75%
       color: '#40C6B2'
       rgb: 'rgb(64,198,178)'
@@ -94,6 +94,6 @@
       rgb: 'rgb(190,190,190)'
       property: '$black-tint-25'
     - label: Dark Gray
-      color: '#E6E6E6'
-      rgb: 'rgb(230,230,230)'
+      color: '#CFCFCF'
+      rgb: 'rgb(207,207,207)'
       property: '$gray-dark'
