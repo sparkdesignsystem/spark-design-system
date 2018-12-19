@@ -29,7 +29,7 @@ $space-inset-xl: 64px 64px 64px 64px !default;
 $space-inset-short-xs: 2px 4px 2px 4px !default;
 $space-inset-short-s: 4px 8px 4px 8px !default;
 $space-inset-short-m: 8px 16px 8px 16px !default;
-$space-inset-short-l: 16px 24px 16px 24px !default;
+$space-inset-short-l: 16px 32px 16px 32px !default;
 $space-inset-short-xl: 32px 64px 32px 64px !default;
 
 // Inset Tall
@@ -278,7 +278,7 @@ $btn-text-color: $white !default;
 $btn-border-radius: 4px !default;
 $btn-hover-background-color: $green-dark !default;
 $btn-hover-text-color: $white !default;
-$btn-padding: $space-inset-short-l !default;
+$btn-padding: $space-m 24px !default;
 $btn-breakpoint-xs: 30rem !default;
 $btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
@@ -301,7 +301,7 @@ $btn-secondary-border-color: $gray-dark !default;
 $btn-secondary-text-color: $black !default;
 $btn-secondary-hover-text-color: $black !default;
 $btn-secondary-hover-background-color: $white !default;
-$btn-secondary-hover-border-color: $gray-dark !default;
+$btn-secondary-hover-border-color: $black !default;
 $btn-secondary-hover-shadow: 0 3px 10px rgba(20,20,20,0.08) !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
