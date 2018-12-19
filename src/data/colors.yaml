@@ -1,7 +1,7 @@
 - Primary:
     - label: Green
       color: '#00B398'
-      rgb: 'rgb(0,179,152)'
+      rgb: 'rgb(19, 164, 142)'
       property: '$green'
     - label: Red
       color: '#C8102E'
@@ -21,10 +21,10 @@
       property: '$white'
     - label: Gray
       color: '#F7F7F7'
-      rgb: 'rgb(235,235,235)'
+      rgb: 'rgb(247,247,247)'
       property: '$gray'
     - label: Black
-      color: '#333'
+      color: '#333333'
       property: '$black'
       rgb: 'rgb(51,51,51)'
 
@@ -94,6 +94,6 @@
       rgb: 'rgb(190,190,190)'
       property: '$black-tint-25'
     - label: Dark Gray
-      color: '#E6E6E6'
-      rgb: 'rgb(230,230,230)'
+      color: '#CFCFCF'
+      rgb: 'rgb(207,207,207)'
       property: '$gray-dark'
