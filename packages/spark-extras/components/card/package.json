@@ -14,10 +14,10 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDendencies": {
-    "@sparkdesignsystem/spark-core": "^6.0.1"
+    "@sparkdesignsystem/spark-core": "^7.0.0"
   },
   "publishConfig": {
     "access": "public",
-    "@sparkdesignsystem/spark-core": "^6.0.1"
+    "@sparkdesignsystem/spark-core": "^7.0.0"
   }
 }
