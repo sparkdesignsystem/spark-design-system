@@ -50,17 +50,6 @@
   }
 }
 
-.sprk-b-Link--plain {
-  border: none;
-
-  &:hover,
-  &:active,
-  &:focus,
-  &:visited {
-    border: none;
-  }
-}
-
 .sprk-b-Link--disabled {
   color: $link-disabled-color;
   pointer-events: none;
@@ -77,5 +66,16 @@
   &:focus {
     color: $link-disabled-color;
     border-color: $link-disabled-color;
+  }
+}
+
+.sprk-b-Link--plain {
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border: none;
   }
 }
