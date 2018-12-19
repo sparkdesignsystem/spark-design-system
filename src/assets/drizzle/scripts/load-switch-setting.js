@@ -1,5 +1,5 @@
 /* global localStorage */
-import getElements from '../../../../packages/spark-core/es5/getElements';
+import { getElements } from '../../../../packages/spark-core';
 
 const loadSwitchSetting = () => {
   if (localStorage) {

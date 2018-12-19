@@ -56,7 +56,7 @@ $space-h: $space-xl !default;
 
 //
 // Icons
-//
+///
 $icon-m: 16px !default;
 $icon-l: 32px !default;
 $icon-xl: 64px !default;
@@ -71,12 +71,12 @@ $icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layout
-//
+///
 $centered-column-width: 64rem !default;
 
 //
 // Layers
-//
+///
 $layer-height-xs: 1 !default;
 $layer-height-s: 1000 !default;
 $layer-height-m: 2000 !default;
@@ -85,7 +85,7 @@ $layer-height-xl: 99999 !default;
 
 //
 // Horizontal List
-//
+///
 $horizontal-list-spacing: $space-m !default;
 $horizontal-list-spacing-tiny: $space-xs !default;
 $horizontal-list-spacing-small: $space-s !default;
@@ -95,7 +95,7 @@ $horizontal-list-spacing-huge: $space-xl !default;
 
 //
 // Pagination
-//
+///
 $pag-max-width: 26rem !default;
 $pag-link-color: $black !default;
 $pag-link-color-hover: $pag-link-color !default;
@@ -107,67 +107,81 @@ $pag-circle-size: 2em !default;
 //
 // Typography
 ///
+$typography-breakpoint: 54rem !default;
+$page-title-mark-color: $red;
 
 // Display One
 $font-size-display-one: 3.797rem !default;
 $color-display-one: $black !default;
 $line-height-display-one: 1.13 !default;
 $font-weight-display-one: bold !default;
+
 // Display Two
 $font-size-display-two: 2.853rem !default;
 $color-display-two: $black !default;
 $line-height-display-two: 1.19 !default;
 $font-weight-display-two: bold !default;
+
 // Display Three
 $font-size-display-three: 2.594rem !default;
 $color-display-three: $black !default;
 $line-height-display-three: 1.15 !default;
 $font-weight-display-three: bold !default;
+
 // Display Four
 $font-size-display-four: 2.144rem !default;
 $color-display-four: $black !default;
 $line-height-display-four: 1.3 !default;
 $font-weight-display-four: normal !default;
+
 // Display Five
 $font-size-display-five: 1.772rem !default;
 $color-display-five: $black !default;
 $line-height-display-five: 1.19 !default;
 $font-weight-display-five: bold !default;
+
 // Display Six
 $font-size-display-six: 1.464rem !default;
 $color-display-six: $black !default;
 $line-height-display-six: 1.28 !default;
 $font-weight-display-six: bold !default;
+
 // Display Seven
 $font-size-display-seven: 1.464rem !default;
 $color-display-seven: $black !default;
 $line-height-display-seven: 1.16 !default;
 $font-weight-display-seven: normal !default;
+
 // Display Eight
 $font-size-display-eight: 1.2rem !default;
 $color-display-eight: $black !default;
 $line-height-display-eight: 1.41 !default;
 $font-weight-display-eight: normal !default;
+
 // Body One
 $font-size-body-one: 1rem !default;
 $color-body-one: $black !default;
 $line-height-body-one: 1.57 !default;
 $font-weight-body-one: bold !default;
+
 // Body Two
 $font-size-body-two: 1rem !default;
 $color-body-two: $black !default;
 $line-height-body-two: 1.57 !default;
 $font-weight-body-two: normal !default;
+
 // Body Three
 $font-size-body-three: 1rem !default;
 $color-body-three: $black !default;
 $line-height-body-three: 1.82 !default;
 $font-weight-body-three: normal !default;
+
 // Body Four
 $font-size-body-four: 0.826rem !default;
 $color-body-four: $black !default;
 $line-height-body-four: 1.6 !default;
 $font-weight-body-four: normal !default;
+
 // Font Stack
 $using-webfont-body: true !default;
 $using-webfont-heading: true !default;
@@ -199,7 +213,7 @@ $system-heading-fonts: false !default;
 $line-height-collision-top-crop: 5;
 $line-height-collision-bottom-crop: 5;
 
-// Set Scales vars
+// Set Scales Typography vars
 $h1-size: $font-size-display-two !default;
 $h1-color: $color-display-two !default;
 $h1-line-height: $line-height-display-two !default;
@@ -230,7 +244,7 @@ $font-size-unit: rem !default;
 
 //
 // Consistent Style Vars
-//
+///
 $border-radius: 5px !default;
 
 //
@@ -238,7 +252,7 @@ $border-radius: 5px !default;
 ///
 $alert-border: 1px solid $gray !default;
 $alert-bar-width: -10px !default;
-$alert-color: $white !default;
+$alert-bg-color: $white !default;
 $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
@@ -260,7 +274,6 @@ $promo-max-width: 42.5rem !default;
 $promo-breakpoint: 42.5rem !default;
 $promo-image-narrow-max-height: 20rem !default;
 $promo-image-narrow-max-width: 50% !default;
-$promo-icon-color: $black !default;
 $promo-title-font-color: $black !default;
 $promo-title-font-weight: $font-weight-display-four !default;
 $promo-subtitle-font-color: $black !default;
@@ -277,18 +290,20 @@ $btn-border-width: 2px;
 $btn-font-weight: bold;
 $btn-text-color: $white !default;
 $btn-border-radius: 1px !default;
-$btn-hover-background-color: $red-mid !default;
+$btn-hover-background-color: $red !default;
 $btn-hover-text-color: $white !default;
 $btn-padding: $space-inset-short-l !default;
 $btn-breakpoint-xs: 30rem !default;
 $btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
+
 // Disabled
 $btn-disabled-opacity: 1 !default;
 $btn-disabled-background-color: $gray !default;
 $btn-disabled-text-color: $black-tint-50 !default;
 $btn-disabled-border-width: $btn-border-width !default;
 $btn-disabled-border-color: transparent !default;
+
 // Secondary
 $btn-secondary-background-color: transparent !default;
 $btn-secondary-border-color: $black !default;
@@ -296,6 +311,7 @@ $btn-secondary-text-color: $black !default;
 $btn-secondary-hover-text-color: $red !default;
 $btn-secondary-hover-background-color: transparent !default;
 $btn-secondary-hover-border-color: $red !default;
+
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border-color: transparent !default;
@@ -315,7 +331,7 @@ $link-transition: 0.3s !default;
 $link-underline-color: $red !default;
 $link-underline-visited-color: $red !default;
 $link-underline-width: 0.0625em !default;
-$link-visited-color: $red-mid !default;
+$link-visited-color: $red !default;
 $link-standalone-font-weight: bold !default;
 $link-inline-font-weight: normal !default;
 $link-disabled-font-weight: bold !default;
@@ -324,6 +340,7 @@ $link-disabled-font-weight: bold !default;
 // Lists
 ///
 $list-margin-left: $space-m !default;
+$list-indented-margin-left: $space-l !default;
 
 //
 // Forms
@@ -364,9 +381,7 @@ $input-animation-speed: 0.3s !default;
 $select-arrow-offset-y: -23px !default;
 $select-arrow-offset-x: 8px !default;
 $label-offset-y: -53px !default;
-$label-offset-y-open: -31px !default;
 $label-shrink-scale: 0.82 !default;
-$fieldset-padding: 0 !default;
 
 //
 // Tables
@@ -376,6 +391,8 @@ $table-padding-medium: $space-inset-m !default;
 $table-padding-large: $space-inset-l !default;
 $table-cell-alignment: center !default;
 $table-stripe-color: $gray !default;
+$table-highlight-color: $red !default;
+$table-highlight-text-color: $white !default;
 
 // Primary
 $table-row-border-width: 1px !default;
@@ -402,7 +419,7 @@ $table-grouped-header-font-size: $font-size-body-four !default;
 $table-grouped-header-font-weight: normal !default;
 
 // Secondary Row Comparison
-$table-secondary-row-comp-row-spacing: 15px !default;
+$table-secondary-row-comp-row-spacing: 0 15px !default;
 $table-secondary-row-comp-border-width: 1px !default;
 $table-secondary-row-comp-border-style: solid !default;
 $table-secondary-row-comp-border-color: $gray !default;
@@ -418,7 +435,7 @@ $box-padding-huge: $space-inset-xl !default;
 
 //
 // Media
-//
+///
 $media-gutter-tiny: $space-xs !default;
 $media-gutter-small: $space-s !default;
 $media-gutter: $space-m !default;
@@ -427,7 +444,7 @@ $media-gutter-huge: $space-xl !default;
 
 //
 // Stack Object
-//
+///
 $stack-spacing-tiny: $space-xs !default;
 $stack-spacing-small: $space-s !default;
 $stack-spacing-medium: $space-m !default;
@@ -442,7 +459,7 @@ $split-breakpoint-xl: 80rem !default;
 
 //
 // Accordions
-//
+///
 $accordion-max-width: 53.125rem !default;
 $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
@@ -451,22 +468,22 @@ $accordion-summary-active-color: $red !default;
 
 //
 // Toggle
-//
+///
 $toggle-transistion-timing: 0.3s ease !default;
 
 //
 // Dividers
-//
+///
 $divider-border: 1px solid $black-tint-25 !default;
 
 //
 // Dropdown
-//
+///
 $dropdown-padding: $space-inset-short-l !default;
 $dropdown-header-padding: $space-inset-short-l !default;
 $dropdown-footer-padding: $space-inset-short-l !default;
 $dropdown-border: 1px solid $gray !default;
-$dropdown-active-background-color: $gray-tint-75 !default;
+$dropdown-active-background-color: $gray !default;
 $dropdown-active-border: 2.5px solid $red !default;
 $dropdown-active-box-shadow: -1px 0 0 0 $red !default;
 $dropdown-max-width: 24rem !default;
@@ -474,7 +491,7 @@ $dropdown-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !default;
 
 //
 // Modals
-//
+///
 $modal-mask-color: rgba(34, 34, 34, 0.35) !default;
 $modal-color: $white !default;
 $modal-max-width: 43.75rem !default;
@@ -485,7 +502,7 @@ $modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
 // Masthead
-//
+///
 $masthead-menu-icon-width: $icon-l;
 $masthead-menu-icon-height: $icon-l;
 $masthead-bg-color: $white !default;
@@ -494,9 +511,8 @@ $masthead-border-bottom-size: 1px !default;
 $masthead-border-bottom: $masthead-border-bottom-size solid $gray !default;
 $masthead-breakpoint: 54rem !default;
 $masthead-column-width: 89rem !default;
-$big-nav-dropdown-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2) !default;
 $big-nav-column-width: 64rem !default;
-$big-nav-bg: $gray-tint-25 !default;
+$big-nav-bg: $gray !default;
 $big-nav-active-color: $red !default;
 $masthead-logo-max-width: 192px !default;
 $masthead-logo-min-width: 174px !default;
@@ -506,10 +522,9 @@ $narrow-nav-link-font-weight: normal !default;
 
 //
 // Pagination
-//
+///
 $pag-breakpoint: 24.25rem !default;
 
-//
 // Spinners
 ///
 $spinner-size: 1.1rem !default;
@@ -522,3 +537,10 @@ $spinner-color: $white !default;
 // Tabbed Navigation
 ///
 $tab-navigation-breakpoint: 46rem !default;
+$tab-navigation-btn-color: $black !default;
+$tab-navigation-btn-bg-color: $gray !default;
+$tab-navigation-btn-border-top: 3px solid $gray !default;
+$tab-navigation-btn-hover-border-top: 3px solid $red !default;
+$tab-navigation-btn-active-color: $red !default;
+$tab-navigation-btn-active-border-top: 3px solid $red !default;
+$tab-navigation-btn-active-bg-color: $white !default;

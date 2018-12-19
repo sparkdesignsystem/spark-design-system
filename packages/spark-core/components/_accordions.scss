@@ -87,7 +87,7 @@
 
   &:hover,
   &:active {
-    background-color: $gray-tint-50;
+    background-color: $black-tint-50;
   }
 }
 
@@ -95,7 +95,7 @@
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
-  background-color: $gray-tint-50;
+  background-color: $black-tint-50;
   border-left: $narrow-nav-left-border;
 }
 
@@ -140,7 +140,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $gray-tint-50;
+    background-color: $black-tint-50;
     text-decoration: none;
   }
 

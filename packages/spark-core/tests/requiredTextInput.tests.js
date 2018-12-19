@@ -11,7 +11,7 @@ describe('requiredTextInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     requiredTextInput();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('.sprk-b-InputContainer:not([data-sprk-input]) input:not([type="radio"]):not([type="checkbox"])[required]');
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-required-only="text"]');
   });
 });
 
@@ -21,7 +21,7 @@ describe('required runValidation tests', () => {
 
   before(() => {
     inputContainer = document.createElement('div');
-    inputContainer.setAttribute('data-sprk-required', 'true');
+    inputContainer.setAttribute('data-sprk-required-only', 'text');
     const errorContainer = document.createElement('span');
     errorContainer.classList.add('sprk-b-ErrorText');
     input = document.createElement('input');
@@ -48,6 +48,7 @@ describe('requiredTextInput UI Events tests', () => {
 
   beforeEach(() => {
     inputContainer = document.createElement('div');
+    inputContainer.setAttribute('data-sprk-required-only', 'text');
     input = document.createElement('input');
     input.type = 'text';
     input.setAttribute('required', null);
@@ -58,7 +59,7 @@ describe('requiredTextInput UI Events tests', () => {
     sinon.spy(input, 'addEventListener');
     inputContainer.appendChild(input);
     document.body.appendChild(inputContainer);
-    bindUIEvents(input);
+    bindUIEvents(inputContainer);
   });
 
   afterEach(() => {

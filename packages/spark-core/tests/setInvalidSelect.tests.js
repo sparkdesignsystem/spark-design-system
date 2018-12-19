@@ -1,4 +1,4 @@
-/* global document describe before it */
+/* global document describe beforeEach it */
 import { expect } from 'chai';
 import setInvalidSelect from '../utilities/validation/setInvalidSelect';
 
@@ -9,11 +9,11 @@ describe('setInvalidSelect tests', () => {
   let option2;
   let errorContainer;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required', 'select');
     errorContainer = document.createElement('span');
-    errorContainer.classList.add('sprk-b-ErrorText');
+    errorContainer.classList.add('sprk-b-ErrorContainer');
 
     select = document.createElement('select');
     option1 = document.createElement('option');
@@ -25,15 +25,22 @@ describe('setInvalidSelect tests', () => {
     select.appendChild(option2);
 
     inputContainer.appendChild(select);
-    inputContainer.appendChild(errorContainer);
   });
 
   it('should set the errorContainer text', () => {
+    inputContainer.appendChild(errorContainer);
     const error = 'This is an error message';
     setInvalidSelect(inputContainer, error);
     expect(errorContainer.textContent).eql(error);
   });
+
+  it('should not error if there is no errorContainer', () => {
+    setInvalidSelect(inputContainer, 'oops.');
+    expect(select.getAttribute('aria-invalid')).eql('true');
+  });
+
   it('should support overriding the error message', () => {
+    inputContainer.appendChild(errorContainer);
     const defaultError = 'This is an error message';
     const newError = 'This is my custom error.';
     inputContainer.setAttribute('data-sprk-input-invalid-content', newError);
