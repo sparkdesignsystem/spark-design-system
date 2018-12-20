@@ -3,6 +3,32 @@ name: Display Three
 description: |
     This display size is intended to be used for secondary headings.
 order: 5
+variableTable:
+  $color-display-three:
+    description: The color of the text.
+    default: $black
+  $sprk-font-family-display-three:
+    description: The font-family, including fallbacks.
+    default: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif
+  $font-size-display-three:
+    description: The size of the font when the viewport is wider than $sprk-font-size-display-three-breakpoint.
+    default: 2.125rem
+  $sprk-font-size-display-three-narrow:
+    description: The size of the font when the viewport is narrower than $sprk-font-size-display-three-breakpoint.
+    default: 1.75rem
+  $sprk-type-display-three-breakpoint:
+    description: The width of the viewport at which to switch the font size from $sprk-font-size-display-three-narrow to
+      $font-size-display-three.
+    default: 43.75rem
+  $font-weight-display-three:
+    description: The weight of the font.
+    default: 300
+  $line-height-display-three:
+    description: The line height of the font when the viewport is wider than $sprk-font-size-display-three-breakpoint.
+    default: 1.32
+  $sprk-line-height-display-three-narrow:
+    description: The line height of the font when the viewport is narrower than $sprk-font-size-display-three-breakpoint.
+    default: 1.6
 ---
 
 <h2 class="sprk-b-TypeDisplayThree">The Quick Brown Fox Jumps Over the Lazy Dog</h2>
