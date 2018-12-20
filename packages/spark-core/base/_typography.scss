@@ -16,13 +16,13 @@
 h1,
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
-    $line-height: $line-height-display-one,
+    $line-height: $sprk-line-height-display-one-narrow,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
       strip-unit($sprk-font-size-display-one-narrow) * 16
     ),
-    $crop-line-height: $line-height-display-one
+    $crop-line-height: $sprk-line-height-display-one-narrow
   );
 
   color: $color-display-one;
@@ -48,13 +48,13 @@ h1,
 h2,
 .sprk-b-TypeDisplayTwo {
   @include TextCrop(
-    $line-height: $line-height-display-two,
+    $line-height: $sprk-line-height-display-two-narrow,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
       strip-unit($sprk-font-size-display-two-narrow) * 16
     ),
-    $crop-line-height: $line-height-display-two
+    $crop-line-height: $sprk-line-height-display-two-narrow
   );
 
   color: $color-display-two;
@@ -80,13 +80,13 @@ h2,
 h3,
 .sprk-b-TypeDisplayThree {
   @include TextCrop(
-    $line-height: $line-height-display-three,
+    $line-height: $sprk-line-height-display-three-narrow,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
       strip-unit($sprk-font-size-display-three-narrow) * 16
     ),
-    $crop-line-height: $line-height-display-three
+    $crop-line-height: $sprk-line-height-display-three-narrow
   );
 
   color: $color-display-three;

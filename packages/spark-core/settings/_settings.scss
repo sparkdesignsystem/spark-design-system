@@ -136,6 +136,7 @@ $sprk-font-size-display-one-narrow: 2.75rem !default;
 $sprk-type-display-one-breakpoint: 43.75rem !default;
 $font-weight-display-one: bold !default;
 $line-height-display-one: 1.03 !default;
+$sprk-line-height-display-one-narrow: 1.27;
 
 // Display Two
 $color-display-two: $black !default;
@@ -145,15 +146,17 @@ $sprk-font-size-display-two-narrow: 2rem !default;
 $sprk-type-display-two-breakpoint: 43.75rem !default;
 $font-weight-display-two: bold !default;
 $line-height-display-two: 1 !default;
+$sprk-line-height-display-two-narrow: 1 !default;
 
 // Display Three
 $color-display-three: $black !default;
 $sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $font-size-display-three: 2.125rem !default;
-$sprk-font-size-display-three-narrow: 1rem !default;
+$sprk-font-size-display-three-narrow: 1.75rem !default;
 $sprk-type-display-three-breakpoint: 43.75rem !default;
 $font-weight-display-three: 300 !default;
 $line-height-display-three: 1.32 !default;
+$sprk-line-height-display-three-narrow: 1.6 !default;
 
 // Display Four
 $color-display-four: $black !default;
