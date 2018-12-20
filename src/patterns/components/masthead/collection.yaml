@@ -66,6 +66,15 @@ variableTable:
   $narrow-nav-link-font-weight:
     default: normal
     description: Sets the font weight of narrow navigation items.
+  $sprk-masthead-link-visited-color:
+    default: $black
+    description: Sets the visited state color of masthead links.
+  $sprk-masthead-link-hover-color:
+    default: $red
+    description: Sets the hover state color of masthead links.
+  $sprk-masthead-link-font-weight:
+    default: $font-weight-body-one
+    description: Sets the font weight of masthead links.
 classTable:
   .sprk-c-Masthead--open:
     description: Sets styles for the masthead when it is open.

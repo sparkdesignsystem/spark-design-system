@@ -258,19 +258,18 @@ small,
   font-weight: $font-weight-body-four;
 }
 
-// TODO: replace values with new spacing variables
 .sprk-b-PageTitle {
   &::before {
     content: '';
-    width: 32px;
-    border-top-width: 5px;
+    width: $sprk-page-title-mark-width;
+    border-top-width: $sprk-page-title-mark-height;
     border-top-style: solid;
     border-top-color: $page-title-mark-color;
-    padding-bottom: 24px;
+    padding: $sprk-page-title-mark-padding;
 
     @media all and (min-width: $typography-breakpoint) {
-      border-top-width: 6px;
-      padding-bottom: 16px;
+      border-top-width: $sprk-page-title-mark-height-wide-viewport;
+      padding: $sprk-page-title-mark-padding-wide-viewport;
     }
   }
 }
