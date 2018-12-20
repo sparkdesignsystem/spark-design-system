@@ -56,10 +56,6 @@ $sprk-webfonts: (
 //
 // Angular site specific styling
 //
-* {
-  font-family: $body-font-name, sans-serif;
-}
-
 .#{$app-namespace}-c-AngularHeader {
   position: static;
 }
