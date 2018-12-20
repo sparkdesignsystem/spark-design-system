@@ -87,7 +87,7 @@
 
   &:hover,
   &:active {
-    background-color: $black-tint-50;
+    background-color: $sprk-accordion-active-background-color;
   }
 }
 
@@ -95,7 +95,7 @@
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
-  background-color: $black-tint-50;
+  background-color: $sprk-accordion-active-background-color;
   border-left: $narrow-nav-left-border;
 }
 
@@ -133,6 +133,7 @@
 }
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
+  border-bottom: none;
   color: $black;
   display: block;
   font-weight: $narrow-nav-link-font-weight;
@@ -140,7 +141,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $black-tint-50;
+    background-color: $sprk-accordion-active-background-color;
     text-decoration: none;
   }
 
