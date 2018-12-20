@@ -52,7 +52,7 @@ variableTable:
     default: $space-inset-short-l
     description: Sets the padding value.
   $btn-breakpoint-xs:
-    default:  30rem
+    default: 30rem
     description: Sets the extra small breakpoint used for full width buttons to become normal width.
   $btn-breakpoint-s:
     default: 42.5rem
@@ -60,6 +60,9 @@ variableTable:
   $btn-transition-speed:
     default: 0.3s
     description: Sets the CSS transition speed.
+  $btn-letter-spacing:
+    default: 0.62px
+    description: Sets the letter spacing.
   $btn-disabled-opacity:
     default: 1
     description: Sets the opacity of the disabled button.
@@ -111,6 +114,9 @@ variableTable:
   $btn-secondary-hover-shadow:
     default: 0 3px 10px rgba(20, 20, 20, 0.08)
     description: Sets the hover state shadow for secondary buttons.
+  $btn-secondary-letter-spacing:
+    default: 0.62px
+    description: Sets the letter spacing of the secondary button.
   $btn-tertiary-background-color:
     default: transparent
     description: Sets the background color of the tertiary button.
@@ -153,6 +159,9 @@ variableTable:
   $btn-tertiary-disabled-text-color:
     default: $gray-dark
     description: Sets the text color of disabled tertiary buttons.
+  $btn-tertiary-letter-spacing:
+    default: normal
+    description: Sets the letter spacing of the tertiary button.
 
 classTable:
   .sprk-c-Button--compact:

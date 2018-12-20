@@ -4,6 +4,7 @@
 .sprk-c-Button {
   transition: all $btn-transition-speed;
   border-radius: $btn-border-radius;
+  letter-spacing: $btn-letter-spacing;
 
   &:hover,
   &:active,
@@ -43,6 +44,7 @@
   background-color: $btn-secondary-background-color;
   border: $btn-border-width $btn-border-style $btn-secondary-border-color;
   color: $btn-secondary-text-color;
+  letter-spacing: $btn-secondary-letter-spacing;
 
   &:visited {
     color: $btn-secondary-text-color;
@@ -53,7 +55,8 @@
   &:focus {
     box-shadow: $btn-secondary-hover-shadow;
     background-color: $btn-secondary-hover-background-color;
-    border: $btn-border-width $btn-border-style $btn-secondary-hover-border-color;
+    border: $btn-border-width $btn-border-style
+      $btn-secondary-hover-border-color;
     color: $btn-secondary-hover-text-color;
   }
 }
@@ -63,6 +66,7 @@
   box-shadow: none;
   border: $btn-tertiary-border;
   color: $btn-tertiary-text-color;
+  letter-spacing: $btn-tertiary-letter-spacing;
 
   &:hover,
   &:active,
@@ -78,7 +82,8 @@
 
   &::after {
     content: '';
-    border-bottom: $btn-tertiary-underline-width solid $btn-tertiary-underline-color;
+    border-bottom: $btn-tertiary-underline-width solid
+      $btn-tertiary-underline-color;
     display: block;
     width: 100%;
     padding-top: $btn-tertiary-underline-padding-top;

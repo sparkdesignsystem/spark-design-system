@@ -297,7 +297,7 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 // Buttons
 ///
 $btn-background-color: $green !default;
-$btn-shadow: 0 3px 10px rgba(20,20,20,0.08) !default;
+$btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
@@ -310,6 +310,7 @@ $btn-padding: $space-m 24px !default;
 $btn-breakpoint-xs: 30rem !default;
 $btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
+$btn-letter-spacing: 0.62px !default;
 
 // Disabled
 $btn-disabled-opacity: 1 !default;
@@ -331,7 +332,8 @@ $btn-secondary-text-color: $black !default;
 $btn-secondary-hover-text-color: $black !default;
 $btn-secondary-hover-background-color: $white !default;
 $btn-secondary-hover-border-color: $black !default;
-$btn-secondary-hover-shadow: 0 3px 10px rgba(20,20,20,0.08) !default;
+$btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$btn-secondary-letter-spacing: 0.62px !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
 $btn-tertiary-border: none !default;
@@ -345,6 +347,7 @@ $btn-tertiary-hover-background-color: transparent !default;
 $btn-tertiary-hover-shadow: none !default;
 $btn-tertiary-disabled-background-color: transparent !default;
 $btn-tertiary-disabled-text-color: $gray-dark !default;
+$btn-tertiary-letter-spacing: normal !default;
 
 //
 // Links
