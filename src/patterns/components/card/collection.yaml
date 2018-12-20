@@ -39,7 +39,7 @@ variableTable:
     default: 0 4px 40px 2px rgba(0, 0, 0, 0.1)
     description: The shadow on the standout variant on wide viewports.
   $card-content-padding:
-    default: $space-inset-l
+    default: $sprk-space-misc-a
     description: Sets the padding of the card content.
   $card-header-bg-color:
     default: $green
