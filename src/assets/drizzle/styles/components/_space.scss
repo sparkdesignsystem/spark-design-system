@@ -5,7 +5,10 @@ $space-s: 8px;
 $space-m: 16px;
 $space-l: 32px;
 $space-xl: 64px;
-
+$space-misc-a: 24px;
+$space-misc-b: 40px;
+$space-misc-c: 48px;
+$space-misc-d: 80px;
 // Inset tall
 .#{$app-namespace}-c-Space-inset-tall-xs {
   box-shadow: inset 0 (-1 * ($space-xs * 1.5)) 0 $space-padding-color,
@@ -154,4 +157,21 @@ $space-xl: 64px;
 
 .#{$app-namespace}-c-Space-inline-right-xl {
   border-right: $space-xl solid $space-margin-color;
+}
+
+/* Inline Misc Spacing Doc Displays */
+.#{$app-namespace}-c-Space-inline-right-misc-a {
+  border-right: $space-misc-a solid $space-margin-color;
+}
+
+.#{$app-namespace}-c-Space-inline-right-misc-b {
+  border-right: $space-misc-b solid $space-margin-color;
+}
+
+.#{$app-namespace}-c-Space-inline-right-misc-c {
+  border-right: $space-misc-c solid $space-margin-color;
+}
+
+.#{$app-namespace}-c-Space-inline-right-misc-d {
+  border-right: $space-misc-d solid $space-margin-color;
 }
