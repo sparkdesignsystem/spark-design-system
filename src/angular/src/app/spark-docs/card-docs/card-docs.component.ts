@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
       <sprk-card cardType="base">
         <a href="#" class="sprk-o-Stack__item">
           <img
+            class="sprk-c-Card__media"
             alt="Spark placeholder image."
             src="https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
           />
@@ -216,6 +217,19 @@ import { Component } from '@angular/core';
           ></sprk-card>
         </div>
       </sprk-stack>
+    </div>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">Standout Card</h2>
+      <sprk-card
+        cardType="base"
+        idString="card-20"
+        additionalClasses="sprk-c-Card--standout"
+      >
+        <div
+          class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium"
+        ></div>
+      </sprk-card>
     </div>
   `,
   styles: ['']
