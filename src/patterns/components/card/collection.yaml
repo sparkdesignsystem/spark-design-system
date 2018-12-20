@@ -26,3 +26,9 @@ variableTable:
   $card-shadow:
     default: 0 2px 2px rgba(0, 0, 0, 0.1)
     description: Sets the box-shadow of the card.
+  $card-shadow-standout:
+    default: 0 4px 40px 2px rgba(0, 0, 0, 0.1)
+    description: Sets the box-shadow of the standout card variant.
+classTable:
+  .sprk-c-Card__media:
+    description: Use on your media element (img, svg, etc) when it is at top of the card to have the border-radius match the card container.
