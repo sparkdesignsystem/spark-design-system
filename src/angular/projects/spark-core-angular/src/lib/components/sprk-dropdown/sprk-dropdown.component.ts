@@ -28,9 +28,7 @@ import {
     </a>
     <div [ngClass]="getClasses()" *ngIf="isOpen">
       <div class="sprk-c-Dropdown__header" *ngIf="title">
-        <h2 class="sprk-c-Dropdown__title sprk-b-TypeDisplayEight">
-          {{ title }}
-        </h2>
+        <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo">{{ title }}</h2>
       </div>
       <ul class="sprk-c-Dropdown__links">
         <li
