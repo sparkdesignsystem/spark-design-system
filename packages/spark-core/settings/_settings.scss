@@ -296,43 +296,58 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 //
 // Buttons
 ///
-$btn-background-color: $red !default;
-$btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$btn-background-color: $green !default;
+$btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
 $btn-font-weight: bold;
 $btn-text-color: $white !default;
-$btn-border-radius: 1px !default;
-$btn-hover-background-color: $red !default;
+$btn-border-radius: 4px !default;
+$btn-hover-background-color: $green-dark !default;
 $btn-hover-text-color: $white !default;
-$btn-padding: $space-inset-short-l !default;
+$btn-padding: $space-m 24px !default;
 $btn-breakpoint-xs: 30rem !default;
 $btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
+$btn-letter-spacing: 0.62px !default;
 
 // Disabled
 $btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray !default;
-$btn-disabled-text-color: $black-tint-50 !default;
 $btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-background-color: $gray-dark !default;
+$btn-disabled-text-color: $white !default;
 $btn-disabled-border-color: transparent !default;
-
+$btn-disabled-shadow: none !default;
+$btn-secondary-disabled-background-color: transparent !default;
+$btn-secondary-disabled-text-color: $gray-dark !default;
+$btn-secondary-disabled-border-color: $gray-dark !default;
+$btn-secondary-disabled-shadow: none !default;
+$btn-tertiary-disabled-shadow: none !default;
+$btn-tertiary-disabled-border: none !default;
 // Secondary
-$btn-secondary-background-color: transparent !default;
-$btn-secondary-border-color: $black !default;
+$btn-secondary-background-color: $white !default;
+$btn-secondary-border-color: $gray-dark !default;
 $btn-secondary-text-color: $black !default;
-$btn-secondary-hover-text-color: $red !default;
-$btn-secondary-hover-background-color: transparent !default;
-$btn-secondary-hover-border-color: $red !default;
-
+$btn-secondary-hover-text-color: $black !default;
+$btn-secondary-hover-background-color: $white !default;
+$btn-secondary-hover-border-color: $black !default;
+$btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$btn-secondary-letter-spacing: 0.62px !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
-$btn-tertiary-border-color: transparent !default;
-$btn-tertiary-hover-text-color: $black !default;
-$btn-tertiary-hover-line-color: $red !default;
-$btn-tertiary-hover-background-color: transparent !default;
+$btn-tertiary-border: none !default;
 $btn-tertiary-text-color: $black !default;
+$btn-tertiary-underline-width: 0.09375em !default;
+$btn-tertiary-underline-padding-top: 0.09375em !default;
+$btn-tertiary-underline-color: $gray-dark !default;
+$btn-tertiary-hover-text-color: $black !default;
+$btn-tertiary-hover-underline-color: $black !default;
+$btn-tertiary-hover-background-color: transparent !default;
+$btn-tertiary-hover-shadow: none !default;
+$btn-tertiary-disabled-background-color: transparent !default;
+$btn-tertiary-disabled-text-color: $gray-dark !default;
+$btn-tertiary-letter-spacing: normal !default;
 
 //
 // Links

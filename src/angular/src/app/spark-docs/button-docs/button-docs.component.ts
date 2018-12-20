@@ -5,12 +5,23 @@ import { setSpinning } from '@sparkdesignsystem/spark-core';
   selector: 'sprk-button-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">Standard Buttons</h2>
+      <h2 class="drizzle-b-h2">Primary Buttons</h2>
       <button sprkButton>Hello, Spark Button</button>
-      <button class="sprk-c-Button--secondary" sprkButton>Hello, World.</button>
-      <button class="sprk-c-Button--tertiary" sprkButton>Hello, World.</button>
-      <button class="sprk-c-Button--removal" sprkButton>Hello, World.</button>
       <button disabled sprkButton>Hello, World.</button>
+    </div>
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">Secondary Buttons</h2>
+      <button class="sprk-c-Button--secondary" sprkButton>Hello, World.</button>
+      <button disabled class="sprk-c-Button--secondary" sprkButton>
+        Hello, World.
+      </button>
+    </div>
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">Tertiary Buttons</h2>
+      <button class="sprk-c-Button--tertiary" sprkButton>Hello, World.</button>
+      <button disabled class="sprk-c-Button--tertiary" sprkButton>
+        Hello, World.
+      </button>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
