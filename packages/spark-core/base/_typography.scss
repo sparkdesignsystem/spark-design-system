@@ -20,15 +20,29 @@ h1,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
-      strip-unit($font-size-display-one) * 16
+      strip-unit($sprk-font-size-display-one-narrow) * 16
     ),
     $crop-line-height: $line-height-display-one
   );
 
   color: $color-display-one;
   font-family: $sprk-font-family-display-one;
-  font-size: $font-size-display-one;
+  font-size: $sprk-font-size-display-one-narrow;
   font-weight: $font-weight-display-one;
+
+  @media screen and (min-width: $sprk-type-display-one-breakpoint) {
+    @include TextCrop(
+      $line-height: $line-height-display-one,
+      $top-crop: $line-height-collision-top-crop,
+      $bottom-crop: $line-height-collision-bottom-crop,
+      $crop-font-size: (
+        strip-unit($font-size-display-one) * 16
+      ),
+      $crop-line-height: $line-height-display-one
+    );
+
+    font-size: $font-size-display-one;
+  }
 }
 
 h2,
@@ -38,15 +52,29 @@ h2,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
-      strip-unit($font-size-display-two) * 16
+      strip-unit($sprk-font-size-display-two-narrow) * 16
     ),
     $crop-line-height: $line-height-display-two
   );
 
   color: $color-display-two;
   font-family: $sprk-font-family-display-two;
-  font-size: $font-size-display-two;
+  font-size: $sprk-font-size-display-two-narrow;
   font-weight: $font-weight-display-two;
+
+  @media screen and (min-width: $sprk-type-display-two-breakpoint) {
+    @include TextCrop(
+      $line-height: $line-height-display-two,
+      $top-crop: $line-height-collision-top-crop,
+      $bottom-crop: $line-height-collision-bottom-crop,
+      $crop-font-size: (
+        strip-unit($font-size-display-two) * 16
+      ),
+      $crop-line-height: $line-height-display-two
+    );
+
+    font-size: $font-size-display-two;
+  }
 }
 
 h3,
@@ -56,15 +84,29 @@ h3,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
-      strip-unit($font-size-display-three) * 16
+      strip-unit($sprk-font-size-display-three-narrow) * 16
     ),
     $crop-line-height: $line-height-display-three
   );
 
   color: $color-display-three;
   font-family: $sprk-font-family-display-three;
-  font-size: $font-size-display-three;
+  font-size: $sprk-font-size-display-three-narrow;
   font-weight: $font-weight-display-three;
+
+  @media screen and (min-width: $sprk-type-display-three-breakpoint) {
+    @include TextCrop(
+      $line-height: $line-height-display-three,
+      $top-crop: $line-height-collision-top-crop,
+      $bottom-crop: $line-height-collision-bottom-crop,
+      $crop-font-size: (
+        strip-unit($font-size-display-three) * 16
+      ),
+      $crop-line-height: $line-height-display-three
+    );
+
+    font-size: $font-size-display-three;
+  }
 }
 
 h4,
