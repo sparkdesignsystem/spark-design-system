@@ -5,43 +5,43 @@
 //
 // Available Variables
 ///
-$card-max-width: 26.5625rem !default;
-$card-breakpoint: $split-breakpoint-s !default;
-$card-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
-$card-shadow-wide-viewport: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
-$card-shadow-standout: 0 4px 20px 2px rgba(0, 0, 0, 0.1) !default;
-$card-shadow-standout-wide-viewport: 0 4px 40px 2px rgba(0, 0, 0, 0.1) !default;
-$card-border-radius: 8px !default;
-$card-content-padding: $sprk-space-misc-a !default;
-$card-header-bg-color: $green !default;
-$card-header-text-color: $white !default;
+$sprk-card-max-width: 26.5625rem !default;
+$sprk-card-breakpoint: $split-breakpoint-s !default;
+$sprk-card-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-card-shadow-wide-viewport: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-card-shadow-standout: 0 4px 20px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-card-shadow-standout-wide-viewport: 0 4px 40px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-card-border-radius: 8px !default;
+$sprk-card-content-padding: $sprk-space-misc-a !default;
+$sprk-card-header-bg-color: $green !default;
+$sprk-card-header-text-color: $white !default;
 
 .sprk-c-Card {
-  box-shadow: $card-shadow;
-  border-radius: $card-border-radius;
-  max-width: $card-max-width;
+  box-shadow: $sprk-card-shadow;
+  border-radius: $sprk-card-border-radius;
+  max-width: $sprk-card-max-width;
 
-  @media all and (min-width: $card-breakpoint) {
-    box-shadow: $card-shadow-wide-viewport;
+  @media all and (min-width: $sprk-card-breakpoint) {
+    box-shadow: $sprk-card-shadow-wide-viewport;
   }
 }
 
 .sprk-c-Card--standout {
-  box-shadow: $card-shadow-standout;
+  box-shadow: $sprk-card-shadow-standout;
 
-  @media all and (min-width: $card-breakpoint) {
-    box-shadow: $card-shadow-standout-wide-viewport;
+  @media all and (min-width: $sprk-card-breakpoint) {
+    box-shadow: $sprk-card-shadow-standout-wide-viewport;
   }
 }
 
 .sprk-c-Card__content,
 .sprk-c-Card__header {
-  padding: $card-content-padding;
+  padding: $sprk-card-content-padding;
 }
 
 .sprk-c-Card__header {
-  background-color: $card-header-bg-color;
-  color: $card-header-text-color;
+  background-color: $sprk-card-header-bg-color;
+  color: $sprk-card-header-text-color;
 }
 
 // Use when you have an img, svg or header element
@@ -50,46 +50,46 @@ $card-header-text-color: $white !default;
 // have border-radius match the card container
 .sprk-c-Card__media,
 .sprk-c-Card__header {
-  border-radius: $card-border-radius $card-border-radius 0 0;
+  border-radius: $sprk-card-border-radius $sprk-card-border-radius 0 0;
 }
 
 .sprk-c-Card__container {
-  flex: 0 1 $card-max-width;
+  flex: 0 1 $sprk-card-max-width;
   min-width: 0;
 }
 
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@xs.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-xs) {
-    flex: 0 1 $card-max-width;
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@s.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-s) {
-    flex: 0 1 $card-max-width;
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@m.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-m) {
-    flex: 0 1 $card-max-width;
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@l.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-l) {
-    flex: 0 1 $card-max-width;
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
 
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@xl.sprk-c-Card {
   @media all and (min-width: $split-breakpoint-xl) {
-    flex: 0 1 $card-max-width;
+    flex: 0 1 $sprk-card-max-width;
     min-width: 0%;
   }
 }
