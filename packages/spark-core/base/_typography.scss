@@ -16,29 +16,29 @@
 h1,
 .sprk-b-TypeDisplayOne {
   @include TextCrop(
-    $line-height: $sprk-line-height-display-one-narrow,
+    $line-height: $line-height-display-one,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
-      strip-unit($sprk-font-size-display-one-narrow) * 16
+      strip-unit($font-size-display-one) * 16
     ),
-    $crop-line-height: $sprk-line-height-display-one-narrow
+    $crop-line-height: $line-height-display-one
   );
 
   color: $color-display-one;
   font-family: $sprk-font-family-display-one;
-  font-size: $sprk-font-size-display-one-narrow;
+  font-size: $font-size-display-one;
   font-weight: $font-weight-display-one;
 
   @media screen and (min-width: $sprk-type-display-one-breakpoint) {
     @include TextCrop(
-      $line-height: $line-height-display-one,
+      $line-height: $sprk-line-height-display-one-wide,
       $top-crop: $line-height-collision-top-crop,
       $bottom-crop: $line-height-collision-bottom-crop,
       $crop-font-size: (
-        strip-unit($font-size-display-one) * 16
+        strip-unit($sprk-font-size-display-one-wide) * 16
       ),
-      $crop-line-height: $line-height-display-one
+      $crop-line-height: $sprk-line-height-display-one-wide
     );
 
     font-size: $font-size-display-one;
@@ -48,64 +48,64 @@ h1,
 h2,
 .sprk-b-TypeDisplayTwo {
   @include TextCrop(
-    $line-height: $sprk-line-height-display-two-narrow,
+    $line-height: $line-height-display-two,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
-      strip-unit($sprk-font-size-display-two-narrow) * 16
+      strip-unit($font-size-display-two) * 16
     ),
-    $crop-line-height: $sprk-line-height-display-two-narrow
+    $crop-line-height: $line-height-display-two
   );
 
   color: $color-display-two;
   font-family: $sprk-font-family-display-two;
-  font-size: $sprk-font-size-display-two-narrow;
+  font-size: $font-size-display-two;
   font-weight: $font-weight-display-two;
 
   @media screen and (min-width: $sprk-type-display-two-breakpoint) {
     @include TextCrop(
-      $line-height: $line-height-display-two,
+      $line-height: $sprk-line-height-display-two-wide,
       $top-crop: $line-height-collision-top-crop,
       $bottom-crop: $line-height-collision-bottom-crop,
       $crop-font-size: (
-        strip-unit($font-size-display-two) * 16
+        strip-unit($sprk-font-size-display-two-wide) * 16
       ),
-      $crop-line-height: $line-height-display-two
+      $crop-line-height: $sprk-line-height-display-two-wide
     );
 
-    font-size: $font-size-display-two;
+    font-size: $sprk-font-size-display-two-wide;
   }
 }
 
 h3,
 .sprk-b-TypeDisplayThree {
   @include TextCrop(
-    $line-height: $sprk-line-height-display-three-narrow,
+    $line-height: $line-height-display-three,
     $top-crop: $line-height-collision-top-crop,
     $bottom-crop: $line-height-collision-bottom-crop,
     $crop-font-size: (
-      strip-unit($sprk-font-size-display-three-narrow) * 16
+      strip-unit($font-size-display-three) * 16
     ),
-    $crop-line-height: $sprk-line-height-display-three-narrow
+    $crop-line-height: $line-height-display-three
   );
 
   color: $color-display-three;
   font-family: $sprk-font-family-display-three;
-  font-size: $sprk-font-size-display-three-narrow;
+  font-size: $font-size-display-three;
   font-weight: $font-weight-display-three;
 
   @media screen and (min-width: $sprk-type-display-three-breakpoint) {
     @include TextCrop(
-      $line-height: $line-height-display-three,
+      $line-height: $sprk-line-height-display-three-wide,
       $top-crop: $line-height-collision-top-crop,
       $bottom-crop: $line-height-collision-bottom-crop,
       $crop-font-size: (
-        strip-unit($font-size-display-three) * 16
+        strip-unit($sprk-font-size-display-three-wide) * 16
       ),
       $crop-line-height: $line-height-display-three
     );
 
-    font-size: $font-size-display-three;
+    font-size: $sprk-font-size-display-three-wide;
   }
 }
 
