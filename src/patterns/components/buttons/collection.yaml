@@ -127,10 +127,10 @@ variableTable:
     default: $black
     description: Sets the font color and visited state font color of the tertiary button.
   $btn-tertiary-underline-width:
-    default: 0.09375em
+    default: 0.125em
     description: Sets the width of the underline for tertiary buttons.
   $btn-tertiary-underline-padding-top:
-    default: 0.09375em
+    default: 0.125em
     description: Sets the vertical distance between the underline and the text for tertiary buttons.
   $btn-tertiary-underline-color:
     default: $gray-dark
