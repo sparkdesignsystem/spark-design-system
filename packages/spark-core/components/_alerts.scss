@@ -76,6 +76,12 @@
   padding: $sprk-alert-content-padding;
 }
 
+.sprk-c-Alert__text {
+  font-size: $sprk-alert-font-size;
+  line-height: $sprk-alert-line-height;
+  font-weight: $sprk-alert-font-weight;
+}
+
 .sprk-c-Alert__content,
 .sprk-c-Alert__icon .sprk-c-Icon {
   flex: 1;

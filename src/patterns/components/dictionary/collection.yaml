@@ -21,6 +21,16 @@ variableTable:
   $dictionary-breakpoint:
     default: 38.4375rem
     description: Sets the breakpoint for the dictionary.
+  $sprk-dictionary-label-font-size:
+    default: $font-size-body-one;
+    description: The size of the text of the labels.
+  $sprk-dictionary-label-font-weight:
+    default: $font-weight-body-one;
+    description: The weight of the text of the labels.
+  $sprk-dictionary-label-line-height:
+    default: $line-height-body-one;
+    description: The line height of the text of the labels.
+
 classTable:
   .sprk-c-Dictionary--striped:
     description: Adds a background color to every even-numbered row in the dictionary.

@@ -3,7 +3,7 @@ name: Setting Up
 order: 1
 doclayout: true
 ---
-<p>In order to use a webfont with Spark, several variables will need to be set in your app's Sass build. These should be
+<p class="sprk-u-mbm">In order to use a webfont with Spark, a few variables will need to be set in your app's Sass build. These should be
   set as follows, before importing Spark's SCSS.</p>
 
 <table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
@@ -20,66 +20,20 @@ doclayout: true
   </thead>
   <tbody>
   <tr>
-    <td class="sprk-u-FontWeight--bold">$using-webfont-body</td>
+    <td class="sprk-u-FontWeight--bold">$sprk-using-webfonts</td>
     <td>boolean</td>
-    <td>This tells Spark that a webfont will be used for the body level of type settings.</td>
+    <td>This tells Spark that a webfonts will be used. The default setting is false.</td>
   </tr>
   <tr>
-    <td class="sprk-u-FontWeight--bold">$using-webfont-heading</td>
-    <td>boolean</td>
-    <td>This tells Spark that a webfont will be used for the display level of type settings.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$body-font-name</td>
+    <td class="sprk-u-FontWeight--bold">$sprk-font-display</td>
     <td>string</td>
-    <td>This tells Spark the name of the font that will be loaded for body level type and is the name that will be
-    placed first in the body font stack.</td>
+    <td>The supplied value will be set on all generated Font-face calls, as font-display. The default is 'swap.'</td>
   </tr>
   <tr>
-    <td class="sprk-u-FontWeight--bold">$heading-font-name</td>
-    <td>string</td>
-    <td>This tells Spark the name of the font that will be loaded for display level type and is the name that will be
-    placed first in the heading font stack.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$body-font-src</td>
-    <td>string, url property</td>
-    <td>This tells Spark the url stack to use in downloading the webfont for body level type.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$body-font-weight</td>
-    <td>string, url property</td>
-    <td>The font-weight of the webfont to use for body level type settings.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$body-bold-font-weight</td>
-    <td>string, url property</td>
-    <td>The font-weight of the webfont to use for bold body level type settings.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$body-bold-font-src</td>
-    <td>string, url property</td>
-    <td>This tells Spark the url stack to use in downloading the webfont for bold of body level type.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$heading-font-src</td>
-    <td>string, url property</td>
-    <td>This tells Spark the url stack to use in downloading the webfont for display level type.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$heading-bold-font-src</td>
-    <td>string, url property</td>
-    <td>This tells Spark the url stack to use in downloading the webfont for bold of heading level type.</td>
-  </tr>
-    <tr>
-    <td class="sprk-u-FontWeight--bold">$heading-font-weight</td>
-    <td>string, url property</td>
-    <td>The font-weight of the webfont to use for heading level type settings.</td>
-  </tr>
-  <tr>
-    <td class="sprk-u-FontWeight--bold">$heading-bold-font-weight</td>
-    <td>string, url property</td>
-    <td>The font-weight of the webfont to use for bold heading level type settings.</td>
+    <td class="sprk-u-FontWeight--bold">$sprk-webfonts</td>
+    <td>Sass List</td>
+    <td>Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font,
+    the name of the font and the weight of the font.</td>
   </tr>
   </tbody>
 </table>

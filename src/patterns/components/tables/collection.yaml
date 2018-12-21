@@ -49,6 +49,9 @@ variableTable:
   $table-header-font-size:
     default: $font-size-body-one
     description: The font size of the table header.
+  $sprk-table-header-font-weight:
+    default: $font-weight-body-one
+    description: The font weight of the table header.
   $table-header-border-spacing:
     default: 2px
     description: The width of the right border on the table header.
