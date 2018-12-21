@@ -177,17 +177,11 @@
 }
 
 .sprk-u-Measure {
-  max-width: $sprk-measure;
+  max-width: $sprk-measure !important;
 }
 
 .sprk-u-Measure--narrow {
-  max-width: $sprk-narrow-measure;
-}
-
-.sprk-u-Truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: $sprk-narrow-measure !important;
 }
 
 //
@@ -598,4 +592,10 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.sprk-u-Truncate {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
