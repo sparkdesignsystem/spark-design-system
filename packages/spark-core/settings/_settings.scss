@@ -365,7 +365,7 @@ $date-picker-max-width: 20rem !default;
 $date-picker-button-size: 2.25rem !default;
 $date-picker-column-adjustment-x: 0.25rem !default;
 $date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
-$date-picker-font-family: $sprk-font-family-body-two;
+$sprk-date-picker-font-family: $sprk-font-family-body-two !default;
 $date-picker-day-interact-color: $red !default;
 $text-input-interact-color: $red !default;
 $error-text-color: $black !default;
