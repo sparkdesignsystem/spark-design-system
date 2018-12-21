@@ -14,7 +14,11 @@ import { Component, Input } from '@angular/core';
         class="sprk-o-Stack__item"
         [attr.data-analytics]="imgLinkAnalytics"
       >
-        <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
+        <img
+          class="sprk-c-Card__media"
+          [attr.alt]="imgAlt"
+          [attr.src]="imgSrc"
+        />
       </a>
 
       <div

@@ -1,9 +1,7 @@
 import detectJS from './utilities/detectJS';
-import typeLoader from './base/typography';
 
-const SparkCorePrerender = ({ typeConfig = {} } = {}) => {
+const SparkCorePrerender = () => {
   detectJS();
-  typeLoader(typeConfig);
 };
 
 export { SparkCorePrerender as default };

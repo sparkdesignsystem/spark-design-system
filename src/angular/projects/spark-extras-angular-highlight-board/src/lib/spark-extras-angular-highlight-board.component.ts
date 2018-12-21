@@ -3,54 +3,63 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-highlight-board',
   template: `
-  <div [ngClass]="getClasses()" [attr.data-id]="idString">
-    <img
-      *ngIf="type !== 'noImage'"
-      class="sprk-c-HighlightBoard__image"
-      src="{{ imgSrc }}"
-      alt="{{ imgAlt }}">
-
-    <sprk-stack
-      sprkStackItem
-      itemSpacing="large"
-      additionalClasses="sprk-c-HighlightBoard__content">
-      <h1
-        sprkStackItem
-        class="sprk-b-TypeDisplayThree sprk-c-HighlightBoard__heading">
-        {{ heading }}
-      </h1>
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
+      <img
+        *ngIf="type !== 'noImage'"
+        class="sprk-c-HighlightBoard__image"
+        src="{{ imgSrc }}"
+        alt="{{ imgAlt }}"
+      />
 
       <sprk-stack
         sprkStackItem
-        *ngIf="ctaText"
-        itemSpacing="medium"
-        splitAt="tiny"
-        additionalClasses="sprk-o-Stack--center-column {{centerBtns}}">
-        <div
+        itemSpacing="large"
+        additionalClasses="sprk-c-HighlightBoard__content"
+      >
+        <h1
           sprkStackItem
-          class="sprk-c-HighlightBoard__cta">
-          <a
-            [routerLink]="ctaHref"
-            class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
-            [attr.data-analytics]="analyticsStringCta">
-            {{ ctaText }}
-          </a>
-        </div>
+          [ngClass]="{
+            'sprk-b-TypeDisplayTwo': type === 'noImage',
+            'sprk-b-TypeDisplayOne': type !== 'noImage',
+            'sprk-c-HighlightBoard__heading': true
+          }"
+        >
+          {{ heading }}
+        </h1>
 
-        <div
+        <sprk-stack
           sprkStackItem
-          *ngIf="ctaText2"
-          class="sprk-c-HighlightBoard__cta">
-          <a
-            [routerLink]="ctaHref2"
-            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
-            [attr.data-analytics]="analyticsStringCta2">
-            {{ ctaText2 }}
-          </a>
-        </div>
+          *ngIf="ctaText"
+          itemSpacing="medium"
+          splitAt="tiny"
+          additionalClasses="sprk-o-Stack--center-column {{centerBtns}}"
+        >
+          <div sprkStackItem class="sprk-c-HighlightBoard__cta">
+            <a
+              [routerLink]="ctaHref"
+              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              [attr.data-analytics]="analyticsStringCta"
+            >
+              {{ ctaText }}
+            </a>
+          </div>
+
+          <div
+            sprkStackItem
+            *ngIf="ctaText2"
+            class="sprk-c-HighlightBoard__cta"
+          >
+            <a
+              [routerLink]="ctaHref2"
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              [attr.data-analytics]="analyticsStringCta2"
+            >
+              {{ ctaText2 }}
+            </a>
+          </div>
+        </sprk-stack>
       </sprk-stack>
-    </sprk-stack>
-  </div>
+    </div>
   `,
   styles: ['']
 })
