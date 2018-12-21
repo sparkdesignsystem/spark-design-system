@@ -49,7 +49,7 @@ variableTable:
     default: $white
     description: Sets the color of button text on hover.
   $btn-padding:
-    default: $space-inset-short-l
+    default: $space-m 24px
     description: Sets the padding value.
   $btn-breakpoint-xs:
     default: 30rem
