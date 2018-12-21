@@ -243,7 +243,7 @@ import { Component } from '@angular/core';
           class="sprk-o-Stack__item sprk-c-Card__header sprk-o-Stack sprk-o-Stack--medium"
         >
           <h3
-            class="sprk-b-TypeDisplayEight sprk-o-Stack__item sprk-u-Color--white"
+            class="sprk-b-TypeDisplaySeven sprk-o-Stack__item sprk-u-Color--white"
           >
             Description
           </h3>
