@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-card",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "Spark Card is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
   "main": "_card.scss",
   "repository": {
@@ -14,10 +14,10 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDendencies": {
-    "@sparkdesignsystem/spark-core": "^6.0.1"
+    "@sparkdesignsystem/spark-core": "^7.0.0"
   },
   "publishConfig": {
     "access": "public",
-    "@sparkdesignsystem/spark-core": "^6.0.1"
+    "@sparkdesignsystem/spark-core": "^7.0.0"
   }
 }
