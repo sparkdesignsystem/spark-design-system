@@ -18,7 +18,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core';
           aria-hidden="true"
         ></sprk-icon>
 
-        <p class="sprk-b-TypeBodyTwo"><ng-content></ng-content></p>
+        <p class="sprk-c-Alert__text"><ng-content></ng-content></p>
       </div>
 
       <button

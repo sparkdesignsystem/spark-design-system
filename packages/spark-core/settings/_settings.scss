@@ -54,6 +54,12 @@ $space-l: 32px !default;
 $space-xl: 64px !default;
 $space-h: $space-xl !default;
 
+// Misc  Spacing Utilities
+$sprk-space-misc-a: 24px !default;
+$sprk-space-misc-b: 40px !default;
+$sprk-space-misc-c: 48px !default;
+$sprk-space-misc-d: 80px !default;
+
 //
 // Icons
 ///
@@ -107,140 +113,110 @@ $pag-circle-size: 2em !default;
 //
 // Typography
 ///
+$sprk-measure: 40rem !default;
+$sprk-narrow-measure: 25rem !default;
+
+// Webfonts
+$sprk-using-webfonts: false !default;
+$sprk-font-display: swap !default;
+$sprk-webfonts: '' !default;
 $typography-breakpoint: 54rem !default;
 $page-title-mark-color: $red;
+$sprk-page-title-mark-width: 32px;
+$sprk-page-title-mark-height: 5px;
+$sprk-page-title-mark-height-wide-viewport: 6px;
+$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a;
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $space-m;
 
 // Display One
-$font-size-display-one: 3.797rem !default;
 $color-display-one: $black !default;
-$line-height-display-one: 1.13 !default;
+$sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-one: 2.75rem !default;
+$sprk-font-size-display-one-wide: 3.375rem !default;
+$sprk-type-display-one-breakpoint: 43.75rem !default;
 $font-weight-display-one: bold !default;
+$line-height-display-one: 1.27 !default;
+$sprk-line-height-display-one-wide: 1.03 !default;
 
 // Display Two
-$font-size-display-two: 2.853rem !default;
 $color-display-two: $black !default;
-$line-height-display-two: 1.19 !default;
+$sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-two: 2rem !default;
+$sprk-font-size-display-two-wide: 2.5rem !default;
+$sprk-type-display-two-breakpoint: 43.75rem !default;
 $font-weight-display-two: bold !default;
+$line-height-display-two: 1 !default;
+$sprk-line-height-display-two-wide: 1 !default;
 
 // Display Three
-$font-size-display-three: 2.594rem !default;
 $color-display-three: $black !default;
-$line-height-display-three: 1.15 !default;
-$font-weight-display-three: bold !default;
+$sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-three: 1.75rem !default;
+$sprk-font-size-display-three-wide: 2.125rem !default;
+$sprk-type-display-three-breakpoint: 43.75rem !default;
+$font-weight-display-three: 300 !default;
+$line-height-display-three: 1.6 !default;
+$sprk-line-height-display-three-wide: 1.32 !default;
 
 // Display Four
-$font-size-display-four: 2.144rem !default;
 $color-display-four: $black !default;
-$line-height-display-four: 1.3 !default;
-$font-weight-display-four: normal !default;
+$sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-four: 1.625rem !default;
+$font-weight-display-four: bold !default;
+$line-height-display-four: 1.23 !default;
 
 // Display Five
-$font-size-display-five: 1.772rem !default;
 $color-display-five: $black !default;
-$line-height-display-five: 1.19 !default;
-$font-weight-display-five: bold !default;
+$sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-five: 1.25rem !default;
+$font-weight-display-five: 500 !default;
+$line-height-display-five: 1.2 !default;
 
 // Display Six
-$font-size-display-six: 1.464rem !default;
 $color-display-six: $black !default;
-$line-height-display-six: 1.28 !default;
-$font-weight-display-six: bold !default;
+$sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-six: 1.25rem !default;
+$font-weight-display-six: 300 !default;
+$line-height-display-six: 1.2 !default;
 
 // Display Seven
-$font-size-display-seven: 1.464rem !default;
+$sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-display-seven: 1rem !default;
 $color-display-seven: $black !default;
-$line-height-display-seven: 1.16 !default;
-$font-weight-display-seven: normal !default;
-
-// Display Eight
-$font-size-display-eight: 1.2rem !default;
-$color-display-eight: $black !default;
-$line-height-display-eight: 1.41 !default;
-$font-weight-display-eight: normal !default;
+$line-height-display-seven: 1 !default;
+$font-weight-display-seven: 500 !default;
 
 // Body One
-$font-size-body-one: 1rem !default;
+$sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-body-one: 0.9375rem !default;
 $color-body-one: $black !default;
-$line-height-body-one: 1.57 !default;
-$font-weight-body-one: bold !default;
+$line-height-body-one: 1.6 !default;
+$font-weight-body-one: 500 !default;
 
 // Body Two
-$font-size-body-two: 1rem !default;
+$sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-body-two: 0.9375rem !default;
 $color-body-two: $black !default;
-$line-height-body-two: 1.57 !default;
-$font-weight-body-two: normal !default;
+$line-height-body-two: 1.6 !default;
+$font-weight-body-two: 300 !default;
 
 // Body Three
-$font-size-body-three: 1rem !default;
+$sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-body-three: 0.9375rem !default;
 $color-body-three: $black !default;
-$line-height-body-three: 1.82 !default;
-$font-weight-body-three: normal !default;
+$line-height-body-three: 2 !default;
+$font-weight-body-three: 300 !default;
 
 // Body Four
-$font-size-body-four: 0.826rem !default;
+$sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-body-four: 0.8125rem !default;
 $color-body-four: $black !default;
-$line-height-body-four: 1.6 !default;
-$font-weight-body-four: normal !default;
-
-// Font Stack
-$using-webfont-body: true !default;
-$using-webfont-heading: true !default;
-$using-webfont-alternate: false !default;
-$body-font-name: FallSans !default;
-$body-font-src: url('') !default;
-$body-font-weight: normal !default;
-$body-bold-font-src: url('') !default;
-$body-bold-font-weight: bold !default;
-$heading-font-name: FallSans !default;
-$heading-font-src: url('') !default;
-$heading-font-weight: normal !default;
-$heading-bold-font-src: url('') !default;
-$heading-bold-font-weight: bold !default;
-$alternate-font-name: FallSans-Regular !default;
-$alternate-font-src: url('') !default;
-$alternate-font-weight: normal !default;
-$system-font-stack: null !default;
-$system-body-fonts: false !default;
-$body-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$heading-font-stack: $body-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$alternate-font-stack: $alternate-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$system-heading-fonts: false !default;
+$line-height-body-four: 1.84 !default;
+$font-weight-body-four: 300 !default;
 
 // Line-height Collision
 $line-height-collision-top-crop: 5;
 $line-height-collision-bottom-crop: 5;
-
-// Set Scales Typography vars
-$h1-size: $font-size-display-two !default;
-$h1-color: $color-display-two !default;
-$h1-line-height: $line-height-display-two !default;
-$h1-weight: $font-weight-display-two !default;
-$h2-size: $font-size-display-three !default;
-$h2-color: $color-display-three !default;
-$h2-line-height: $line-height-display-three !default;
-$h2-weight: $font-weight-display-three !default;
-$h3-size: $font-size-display-four !default;
-$h3-color: $color-display-four !default;
-$h3-line-height: $line-height-display-four !default;
-$h3-weight: $font-weight-display-four !default;
-$h4-size: $font-size-display-five !default;
-$h4-color: $color-display-five !default;
-$h4-line-height: $line-height-display-five !default;
-$h4-weight: $font-weight-display-five !default;
-$h5-size: $font-size-display-six !default;
-$h5-color: $color-display-six !default;
-$h5-line-height: $line-height-display-six !default;
-$h5-weight: $font-weight-display-six !default;
-$h6-size: $font-size-body-two !default;
-$h6-color: $color-body-two !default;
-$h6-line-height: $line-height-body-two !default;
-$h6-weight: $font-weight-body-two !default;
-$base-font-size: $font-size-body-two !default;
-$base-line-height: $line-height-body-two !default;
-$font-size-unit: rem !default;
 
 //
 // Consistent Style Vars
@@ -257,6 +233,12 @@ $alert-color-info: $blue !default;
 $alert-color-success: $green !default;
 $alert-color-fail: $yellow !default;
 $alert-icon-size: 40px !default;
+$sprk-alert-font-size: 1rem;
+$sprk-alert-font-weight: 400;
+$sprk-alert-line-height: 1.5;
+$sprk-alert-content-padding: $space-m $space-m $space-m $sprk-space-misc-a;
+$sprk-alert-dismiss-padding: $space-m;
+$sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0;
 $alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $alert-shadow-info: inset $alert-bar-width 0 0 $alert-color-info !default;
 $alert-shadow-hover-info: inset -80px 0 0 $alert-color-info !default;
@@ -282,43 +264,58 @@ $promo-subtitle-font-weight: $font-weight-body-one !default;
 //
 // Buttons
 ///
-$btn-background-color: $red !default;
-$btn-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) !default;
+$btn-background-color: $green !default;
+$btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $btn-border-style: solid !default;
 $btn-border-color: $btn-background-color;
 $btn-border-width: 2px;
-$btn-font-weight: bold;
+$btn-font-weight: 500;
 $btn-text-color: $white !default;
-$btn-border-radius: 1px !default;
-$btn-hover-background-color: $red !default;
+$btn-border-radius: 4px !default;
+$btn-hover-background-color: $green-dark !default;
 $btn-hover-text-color: $white !default;
-$btn-padding: $space-inset-short-l !default;
+$btn-padding: $space-m 24px !default;
 $btn-breakpoint-xs: 30rem !default;
 $btn-breakpoint-s: 42.5rem !default;
 $btn-transition-speed: 0.3s !default;
+$btn-letter-spacing: 0.62px !default;
 
 // Disabled
 $btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $gray !default;
-$btn-disabled-text-color: $black-tint-50 !default;
 $btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-background-color: $gray-dark !default;
+$btn-disabled-text-color: $white !default;
 $btn-disabled-border-color: transparent !default;
-
+$btn-disabled-shadow: none !default;
+$btn-secondary-disabled-background-color: transparent !default;
+$btn-secondary-disabled-text-color: $gray-dark !default;
+$btn-secondary-disabled-border-color: $gray-dark !default;
+$btn-secondary-disabled-shadow: none !default;
+$btn-tertiary-disabled-shadow: none !default;
+$btn-tertiary-disabled-border: none !default;
 // Secondary
-$btn-secondary-background-color: transparent !default;
-$btn-secondary-border-color: $black !default;
+$btn-secondary-background-color: $white !default;
+$btn-secondary-border-color: $gray-dark !default;
 $btn-secondary-text-color: $black !default;
-$btn-secondary-hover-text-color: $red !default;
-$btn-secondary-hover-background-color: transparent !default;
-$btn-secondary-hover-border-color: $red !default;
-
+$btn-secondary-hover-text-color: $black !default;
+$btn-secondary-hover-background-color: $white !default;
+$btn-secondary-hover-border-color: $black !default;
+$btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$btn-secondary-letter-spacing: 0.62px !default;
 // Tertiary
 $btn-tertiary-background-color: transparent !default;
-$btn-tertiary-border-color: transparent !default;
-$btn-tertiary-hover-text-color: $black !default;
-$btn-tertiary-hover-line-color: $red !default;
-$btn-tertiary-hover-background-color: transparent !default;
+$btn-tertiary-border: none !default;
 $btn-tertiary-text-color: $black !default;
+$btn-tertiary-underline-width: 0.125em !default;
+$btn-tertiary-underline-padding-top: 0.125em !default;
+$btn-tertiary-underline-color: $gray-dark !default;
+$btn-tertiary-hover-text-color: $black !default;
+$btn-tertiary-hover-underline-color: $black !default;
+$btn-tertiary-hover-background-color: transparent !default;
+$btn-tertiary-hover-shadow: none !default;
+$btn-tertiary-disabled-background-color: transparent !default;
+$btn-tertiary-disabled-text-color: $gray-dark !default;
+$btn-tertiary-letter-spacing: normal !default;
 
 //
 // Links
@@ -368,6 +365,7 @@ $date-picker-max-width: 20rem !default;
 $date-picker-button-size: 2.25rem !default;
 $date-picker-column-adjustment-x: 0.25rem !default;
 $date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
+$sprk-date-picker-font-family: $sprk-font-family-body-two !default;
 $date-picker-day-interact-color: $red !default;
 $text-input-interact-color: $red !default;
 $error-text-color: $black !default;
@@ -401,6 +399,7 @@ $table-row-border-color: $gray !default;
 $table-header-background-color: $black !default;
 $table-header-font-color: $white !default;
 $table-header-font-size: $font-size-body-one !default;
+$sprk-table-header-font-weight: $font-weight-body-one !default;
 $table-header-border-spacing: 2px !default;
 $table-header-border-color: $white !default;
 $table-empty-heading-background-color: $white !default;
@@ -465,6 +464,9 @@ $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red !default;
+$sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
+$sprk-accordion-content-padding: 0 0 $space-l !default;
+$sprk-accordion-active-background-color: $gray !default;
 
 //
 // Toggle
@@ -491,7 +493,7 @@ $dropdown-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !default;
 
 //
 // Modals
-///
+//
 $modal-mask-color: rgba(34, 34, 34, 0.35) !default;
 $modal-color: $white !default;
 $modal-max-width: 43.75rem !default;
@@ -502,17 +504,20 @@ $modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
 // Masthead
-///
+//
 $masthead-menu-icon-width: $icon-l;
 $masthead-menu-icon-height: $icon-l;
 $masthead-bg-color: $white !default;
 $masthead-content-padding: $space-m !default;
+$sprk-masthead-link-visited-color: $black !default;
+$sprk-masthead-link-hover-color: $red !default;
+$sprk-masthead-link-font-weight: $font-weight-body-one !default;
 $masthead-border-bottom-size: 1px !default;
 $masthead-border-bottom: $masthead-border-bottom-size solid $gray !default;
 $masthead-breakpoint: 54rem !default;
 $masthead-column-width: 89rem !default;
 $big-nav-column-width: 64rem !default;
-$big-nav-bg: $gray !default;
+$big-nav-bg: $white !default;
 $big-nav-active-color: $red !default;
 $masthead-logo-max-width: 192px !default;
 $masthead-logo-min-width: 174px !default;
@@ -521,10 +526,6 @@ $narrow-nav-left-border: 5px solid $red !default;
 $narrow-nav-link-font-weight: normal !default;
 
 //
-// Pagination
-///
-$pag-breakpoint: 24.25rem !default;
-
 // Spinners
 ///
 $spinner-size: 1.1rem !default;
@@ -544,3 +545,5 @@ $tab-navigation-btn-hover-border-top: 3px solid $red !default;
 $tab-navigation-btn-active-color: $red !default;
 $tab-navigation-btn-active-border-top: 3px solid $red !default;
 $tab-navigation-btn-active-bg-color: $white !default;
+$sprk-tab-navigation-btn-font-size: $font-size-body-one !default;
+$sprk-tab-navigation-btn-font-weight: $font-weight-body-one !default;
