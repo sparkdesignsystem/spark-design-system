@@ -32,6 +32,15 @@ variableTable:
   $alert-color-fail:
     default: $yellow
     description: Sets the border color, icon color, and bar color of the failure alert.
+  $sprk-alert-font-size:
+    default: 1rem;
+    description: The size of the text in the content area.
+  $sprk-alert-font-weight:
+    default: 400;
+    description: The weight of the text in the content area.
+  $sprk-alert-line-height:
+    default: 1.5
+    description: The line height of the text in the content area.
   $alert-icon-size:
     default: 40px
     description: Sets the height and width of the two icons used in the alert.

@@ -33,8 +33,8 @@ variableTable:
   $btn-border-width:
     default: 2px
     description: Sets the width of the border.
-  $$btn-font-weight:
-    default: bold
+  $btn-font-weight:
+    default: 500
     description: Sets the weight of the font.
   $btn-text-color:
     default: $white

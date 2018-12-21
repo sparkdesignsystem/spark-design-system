@@ -61,7 +61,7 @@ describe('SparkModalComponent', () => {
     component.title = 'This is my title';
     fixture.detectChanges();
     expect(
-      modalElement.querySelector('.sprk-c-Modal__heading').textContent
+      modalElement.querySelector('.sprk-c-Modal__heading').textContent.trim()
     ).toEqual('This is my title');
   });
 
