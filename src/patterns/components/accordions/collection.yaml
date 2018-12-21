@@ -32,6 +32,9 @@ variableTable:
   $sprk-accordion-content-padding:
     default: 0 0 $space-l
     description: Sets the padding of the accordion content.
+  $sprk-accordion-active-background-color:
+    default: $gray
+    description: The background color used for hover and active on items in the accordion.
 classTable:
   .sprk-c-Accordion__item--open:
     description: Adds style to accordion items that have been toggled open by Spark JS.

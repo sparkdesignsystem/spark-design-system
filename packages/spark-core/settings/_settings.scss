@@ -464,8 +464,9 @@ $accordion-border: 1px solid $black-tint-25 !default;
 $accordion-border-open: 1px solid $black !default;
 $accordion-summary-color: $black !default;
 $accordion-summary-active-color: $red !default;
-$sprk-accordion-summary-padding: $sprk-space-misc-a 0;
-$sprk-accordion-content-padding: 0 0 $space-l;
+$sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
+$sprk-accordion-content-padding: 0 0 $space-l !default;
+$sprk-accordion-active-background-color: $gray !default;
 
 //
 // Toggle
@@ -516,7 +517,7 @@ $masthead-border-bottom: $masthead-border-bottom-size solid $gray !default;
 $masthead-breakpoint: 54rem !default;
 $masthead-column-width: 89rem !default;
 $big-nav-column-width: 64rem !default;
-$big-nav-bg: $black-tint-25 !default;
+$big-nav-bg: $white !default;
 $big-nav-active-color: $red !default;
 $masthead-logo-max-width: 192px !default;
 $masthead-logo-min-width: 174px !default;
