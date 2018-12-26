@@ -7,7 +7,9 @@ import { Component, Input } from '@angular/core';
       [ngClass]="getClasses()"
       [href]="href"
       [attr.data-analytics]="analyticsString"
-      [attr.data-id]="idString">
+      [attr.target]="target"
+      [attr.data-id]="idString"
+    >
       <ng-content></ng-content>
     </a>
   `
@@ -22,6 +24,8 @@ export class SparkLinkComponent {
   @Input()
   analyticsString: string;
   @Input()
+  target: string;
+  @Input()
   additionalClasses: string;
 
   getClasses(): string {
@@ -33,6 +37,9 @@ export class SparkLinkComponent {
         break;
       case 'disabled':
         classArray.push('sprk-b-Link--disabled');
+        break;
+      case 'plain':
+        classArray.push('sprk-b-Link--plain');
         break;
       default:
         break;

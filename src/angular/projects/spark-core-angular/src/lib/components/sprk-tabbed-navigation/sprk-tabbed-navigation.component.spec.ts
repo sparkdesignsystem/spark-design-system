@@ -12,7 +12,8 @@ import { SparkTabbedNavigationComponent } from './sprk-tabbed-navigation.compone
       <button sprkTabbedNavigationTab [defaultActive]="true">Tab 2</button>
       <div sprkTabbedNavigationPanel>Tab1 Content</div>
       <div sprkTabbedNavigationPanel [defaultActive]="true">Tab2 Content</div>
-    </sprk-tabbed-navigation>`
+    </sprk-tabbed-navigation>
+  `
 })
 export class TestComponent {}
 
@@ -195,5 +196,18 @@ describe('SparkTabbedNavigationComponent', () => {
     event['keyCode'] = 8;
     testElement.dispatchEvent(event);
     expect(testPanel2.focus).not.toHaveBeenCalled();
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-id')).toBeNull();
   });
 });

@@ -4,63 +4,35 @@
 //
 .sprk-b-Link {
   color: $sprk-link-color;
-  font-weight: $sprk-link-font-weight;
+  border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
+  font-weight: $sprk-link-inline-font-weight;
   position: relative;
   text-decoration: none;
   transition: $sprk-link-transition;
 
   &:visited {
     color: $sprk-link-visited-color;
-
-    &::after {
-      background-color: $sprk-link-underline-visited-color;
-    }
+    border-bottom: $sprk-link-underline-width solid $sprk-link-visited-color;
   }
 
   &:hover,
   &:active,
   &:focus {
     color: $sprk-link-underline-color;
-    text-decoration: none;
-
-    &::after {
-      background-color: $sprk-link-underline-color;
-    }
-  }
-
-  &::after {
-    content: '';
-    top: 100%;
-    left: 0;
-    height: 0.125em;
-    width: 100%;
-    position: absolute;
-    background-color: $sprk-link-underline-color;
-  }
-}
-
-.sprk-b-Link--plain {
-  text-decoration: none;
-
-  &::after {
-    content: none;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
   }
 }
 
 .sprk-b-Link--standalone {
   color: $sprk-link-standalone-color;
+  border: $sprk-link-underline-width solid transparent;
+  font-weight: $sprk-link-standalone-font-weight;
 
   &:hover,
   &:active,
   &:focus {
-    &::after {
-      opacity: 1;
-      transition: $sprk-link-transition;
-    }
-  }
-
-  &::after {
-    opacity: 0;
+    transition: $sprk-link-transition;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
   }
 }
 
@@ -78,16 +50,26 @@
   }
 }
 
+.sprk-b-Link--plain {
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border: none;
+  }
+}
+
 .sprk-b-Link--disabled {
   color: $sprk-link-disabled-color;
   pointer-events: none;
+  border-bottom: $link-underline-width solid $link-disabled-color;
+  font-weight: $link-disabled-font-weight;
 
   &:visited {
     color: $sprk-link-disabled-color;
-
-    &::after {
-      background: $sprk-link-disabled-color;
-    }
+    border-bottom: $link-underline-width solid $sprk-link-disabled-color;
   }
 
   &:hover,

@@ -61,7 +61,7 @@ describe('SparkModalComponent', () => {
     component.title = 'This is my title';
     fixture.detectChanges();
     expect(
-      modalElement.querySelector('.sprk-c-Modal__heading').textContent
+      modalElement.querySelector('.sprk-c-Modal__heading').textContent.trim()
     ).toEqual('This is my title');
   });
 
@@ -135,5 +135,18 @@ describe('SparkModalComponent', () => {
       done();
       expect(called).toEqual(false);
     }, 500);
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(modalElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(modalElement.getAttribute('data-id')).toBeNull();
   });
 });

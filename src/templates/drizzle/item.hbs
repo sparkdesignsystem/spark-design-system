@@ -123,6 +123,35 @@
             </div>
           {{/if}}
 
+          {{#if data.variableTable}}
+            <div class="drizzle-o-ContentGrouping drizzle-u-Display--none sprk-u-mtl" data-html-documentation>
+              <h3 class="drizzle-b-h3">Configurable Variables</h3>
+              <table class="drizzle-c-Table sprk-u-mbl">
+                <colgroup>
+                  <col class="sprk-u-Width-35">
+                  <col class="sprk-u-Width-25">
+                  <col>
+                </colgroup>
+                <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each data.variableTable as |var varName|}}
+                  <tr>
+                    <td class="sprk-u-FontWeight--bold">{{varName}}</td>
+                    <td>{{var.default}}</td>
+                    <td>{{var.description}}</td>
+                  </tr>
+                {{/each}}
+                </tbody>
+              </table>
+            </div>
+          {{/if}}
+
           {{!-- Code Information (angular) --}}
           {{#if data.hasAngularCodeInfo }}
             <div class="drizzle-o-ContentGrouping drizzle-u-Display--none sprk-u-mtl" data-angular-documentation>

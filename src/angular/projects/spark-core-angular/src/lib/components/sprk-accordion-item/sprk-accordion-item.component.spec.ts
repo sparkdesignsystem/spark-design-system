@@ -23,9 +23,7 @@ describe('SparkAccordionItemComponent', () => {
     component = fixture.componentInstance;
     accordionItemElement = fixture.nativeElement.querySelector('li');
     accordionItemLinkElement = fixture.nativeElement.querySelector('a');
-    accordionHeadingElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Accordion__heading'
-    );
+    accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
   });
 
@@ -38,6 +36,14 @@ describe('SparkAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
       'sprk-c-Accordion__item sprk-u-man'
+    );
+  });
+
+  it('should add classes if additionalHeadingClasses has a value', () => {
+    component.additionalHeadingClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
+      true
     );
   });
 
@@ -84,5 +90,28 @@ describe('SparkAccordionItemComponent', () => {
     component.isOpen = false;
     fixture.detectChanges();
     expect(accordionDetailsElement.style.display).toEqual('none');
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(accordionItemLinkElement.getAttribute('data-id')).toEqual(
+      testString
+    );
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(accordionItemElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should set the active class if isActive is true', () => {
+    component.isActive = true;
+    fixture.detectChanges();
+    expect(
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--active')
+    ).toEqual(true);
   });
 });

@@ -30,8 +30,7 @@
   align-items: center;
   color: $sprk-accordion-summary-color;
   display: flex;
-  padding-bottom: $sprk-space-m;
-  padding-top: $sprk-space-m;
+  padding: $sprk-accordion-summary-padding;
   text-decoration: none;
 
   &:hover {
@@ -49,12 +48,13 @@
 }
 
 .sprk-c-Accordion__content {
-  padding-bottom: $sprk-space-l;
+  padding: $sprk-accordion-content-padding;
 }
 
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation {
   border: 0;
+  max-width: 100%; // We want mobile nav items not to be capped at $accordion-max-width
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
@@ -86,7 +86,7 @@
 
   &:hover,
   &:active {
-    background-color: $sprk-gray-tint-50;
+    background-color: $sprk-accordion-active-background-color;
   }
 }
 
@@ -94,13 +94,15 @@
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
-  background-color: $sprk-gray-tint-50;
+  background-color: $sprk-accordion-active-background-color;
+  border-left: $narrow-nav-left-border;
   border-left: $sprk-narrow-nav-left-border;
 }
 
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__heading {
+  color: $red;
   font-weight: bold;
 }
 
@@ -115,6 +117,7 @@
 }
 
 // Accordion Navigation Styles
+.sprk-c-Accordion--navigation .sprk-c-Accordion__content,
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
   border: 0;
   padding: 0;
@@ -130,6 +133,7 @@
 }
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
+  border-bottom: none;
   color: $sprk-black;
   display: block;
   font-weight: $sprk-narrow-nav-link-font-weight;
@@ -137,7 +141,7 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $sprk-gray-tint-50;
+    background-color: $sprk-accordion-active-background-color;
     text-decoration: none;
   }
 

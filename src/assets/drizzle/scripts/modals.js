@@ -4,8 +4,7 @@
 * This makes it so the user doesn't have to reload the page.
  */
 
-import { hideModal, isWaitModal } from '../../../../packages/spark-core/es5/modals';
-import getElements from '../../../../packages/spark-core/es5/getElements';
+import { hideModal, isWaitModal, getElements } from '../../../../packages/spark-core';
 
 const MODAL_TIMER = 3000;
 

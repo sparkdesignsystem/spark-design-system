@@ -33,6 +33,12 @@ describe('SparkPromoComponent', () => {
     );
   });
 
+  it('should add class when hasBorder is true', () => {
+    component.hasBorder = true;
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-c-Promo--bordered')).toEqual(true);
+  });
+
   it('should add additional classes to img link when additionalClassesImgLink has a value', () => {
     component.imgSrc = 'www.example.com/image.jpg';
     component.additionalClassesImgLink = 'sprk-u-man';
@@ -86,5 +92,18 @@ describe('SparkPromoComponent', () => {
     ).toEqual(
       'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large'
     );
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-id')).toBeNull();
   });
 });

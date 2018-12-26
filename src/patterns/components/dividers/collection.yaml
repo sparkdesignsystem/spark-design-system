@@ -1,9 +1,19 @@
-description:
-  A Divider logically divides
-  sections of content. Hr HTML elements will
-  have style by default so no additional CSS class is needed.
+description: |
+  This is used primarily when you want to separate a page into sections. It represents a thematic break between paragraph-level elements.
+  Think of it as a way to distinguish topics within HTML. It’s a way to visually distinguish between 2 different topics, sections, paragraphs, etc.
+
+  Paragraph section 1.
+  <hr>
+  Paragraph section 2.
+  <hr>
+  Paragraph section 3.
+  <hr>
 restrictions:
   - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("divider-1", "divider-2", etc).
 sparkPackageCore: true
+variableTable:
+  $divider-border:
+    default: 1px solid $black-tint-25
+    description: Sets the divider border.

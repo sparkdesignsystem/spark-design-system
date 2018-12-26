@@ -161,4 +161,19 @@ describe('SparkPaginationComponent', () => {
     item.click();
     expect(called).toEqual(true);
   });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('nav').getAttribute('data-id')).toEqual(
+      testString
+    );
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(element.querySelector('nav').getAttribute('data-id')).toBeNull();
+  });
 });

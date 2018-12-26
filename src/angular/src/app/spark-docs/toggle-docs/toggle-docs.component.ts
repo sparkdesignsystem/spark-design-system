@@ -4,33 +4,32 @@ import { Component } from '@angular/core';
   selector: 'sprk-toggle-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Toggle
-      </h2>
+      <h2 class="drizzle-b-h2">Toggle</h2>
 
       <sprk-toggle
         title="This is a Spark toggle!"
-        body="This is some copy for the toggle about toggle things."
         analyticsString="My disclaimer Title"
-        idString="toggle-1">
+        idString="toggle-1"
+      >
+        <p>This is some copy for the toggle about toggle things.</p>
       </sprk-toggle>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">
-        Toggle With Additional Classes
-      </h2>
+      <h2 class="drizzle-b-h2">Toggle With Additional Classes</h2>
 
       <sprk-toggle
         title="This is a Spark toggle with width set at 10%"
-        body="This is some copy for the toggle about toggle things."
         analyticsString="My disclaimer Title"
         additionalClasses="sprk-u-Width-10"
-        idString="toggle-2">
+        idString="toggle-2"
+      >
+        <p class="sprk-b-TypeBodyFour">
+          This is some copy for the toggle about toggle things.
+        </p>
       </sprk-toggle>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class ToggleDocsComponent {
   constructor() {}

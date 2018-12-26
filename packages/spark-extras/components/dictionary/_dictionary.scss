@@ -8,6 +8,9 @@
 $sprk-dictionary-border: 1px solid $sprk-gray !default;
 $sprk-dictionary-stripe-color: $sprk-gray !default;
 $sprk-dictionary-breakpoint: 38.4375rem !default;
+$sprk-dictionary-label-font-size: $font-size-body-one !default;
+$sprk-dictionary-label-font-weight: $font-weight-body-one !default;
+$sprk-dictionary-label-line-height: $line-height-body-one !default;
 
 .sprk-c-Dictionary {
   border: $sprk-dictionary-border;
@@ -25,9 +28,9 @@ $sprk-dictionary-breakpoint: 38.4375rem !default;
 }
 
 .sprk-c-Dictionary .sprk-b-Label {
-  font-size: $sprk-font-size-body-four;
-  line-height: $sprk-font-size-body-four;
-  font-weight: bold;
+  font-size: $sprk-dictionary-label-font-size;
+  line-height: $sprk-dictionary-label-line-height;
+  font-weight: $sprk-dictionary-label-font-weight;
 }
 
 // prettier-ignore

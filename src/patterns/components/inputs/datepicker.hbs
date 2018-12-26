@@ -3,7 +3,7 @@ name: Date Picker
 description:
   The date input is used for collecting date information. This component includes a date picker.
 information:
-  - Spark recommends that this component be used when you expect the entered date to be in the past.
+  - Spark recommends that this component be used when you expect the entered date to be roughly one year before or after the current date.
   - Masking is automatically applied when the field contains a valid input.
   - The field value contains special characters which you may need to parse out before submitting the form.
 order: 27
@@ -14,7 +14,7 @@ hasAngularDocs: true
 
 <div class="sprk-b-InputContainer" data-sprk-input="date" data-sprk-datepicker>
   <div class="sprk-b-TextInputIconContainer">
-      <svg class="sprk-c-Icon sprk-b-DatePicker__icon" viewBox="0 0 64 64">
+      <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-b-DatePicker__icon" viewBox="0 0 64 64">
           <use xlink:href="#calendar" />
       </svg>
       <input class="sprk-b-TextInput sprk-b-TextInput--with-icon sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Width-100"

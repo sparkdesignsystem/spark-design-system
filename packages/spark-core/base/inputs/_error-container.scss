@@ -1,5 +1,4 @@
 .sprk-b-ErrorContainer {
-  align-items: center;
   display: flex;
   margin-left: $sprk-space-s;
   margin-top: $sprk-space-s;
@@ -11,6 +10,7 @@
 
 .sprk-b-ErrorIcon {
   fill: $sprk-text-input-error-color;
+  flex: 0 0 auto;
   margin-right: $sprk-space-s;
   height: $sprk-error-icon-size;
   width: $sprk-error-icon-size;

@@ -9,21 +9,21 @@ hasAngularCode: true
 ---
 <div class="sprk-b-InputContainer">
   <div class="sprk-b-TextInputIconContainer">
-    <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-InlineSearch__icon" viewBox="0 0 64 64">
+    <svg class="sprk-c-Icon sprk-c-Icon--m sprk-c-Icon--current-color sprk-b-InlineSearch__icon" viewBox="0 0 64 64">
       <use xlink:href="#search" />
     </svg>
     <input class="sprk-b-TextInput sprk-b-TextInput--with-icon sprk-u-pll {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
-           id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}"
-           data-id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}"
+           id="{{#if idattr}}{{idattr}}{{else}}search-normal-inline{{/if}}"
+           data-id="{{#if idattr}}{{idattr}}{{else}}search-normal-inline{{/if}}"
            type="text"
            placeholder="Search"
       {{#if invaliddata}} aria-invalid="true"{{/if}}
-           aria-describedby="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container"
+           aria-describedby="{{#if idattr}}{{idattr}}{{else}}search-normal-inline{{/if}}--error-container"
       {{#if disabled}} disabled{{/if}} data-sprk-input="text">
     <div class="sprk-b-InputContainer__input-border"></div>
-    <label for="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}" class="sprk-b-Label sprk-b-Label--with-icon sprk-u-ScreenReaderText">Search</label>
+    <label for="{{#if idattr}}{{idattr}}{{else}}search-normal-inline{{/if}}" class="sprk-b-Label sprk-b-Label--with-icon sprk-u-ScreenReaderText">Search</label>
   </div>
-  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}search-normal{{/if}}--error-container">
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}search-normal-inline{{/if}}--error-container">
     {{#if errorMessage}}
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
         <use xlink:href="#exclamation-filled" />

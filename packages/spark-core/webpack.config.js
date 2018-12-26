@@ -4,12 +4,8 @@ module.exports = {
   entry: {
     sparkCore: './spark-core.js',
     sparkCorePrerender: './spark-core-prerender.js',
-    alerts: './components/alerts.js',
-    spinners: './components/spinners.js',
-    tabs: './components/tabs.js',
-    modals: './components/modals.js',
-    getElements: './utilities/getElements.js',
-    pagination: './components/pagination.js',
+    sparkCoreExports: './spark-core-exports.js',
+    sparkCorePolyfills: './spark-core-polyfills.js',
   },
   module: {
     rules: [

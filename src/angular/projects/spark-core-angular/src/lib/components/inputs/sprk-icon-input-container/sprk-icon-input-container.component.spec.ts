@@ -10,13 +10,11 @@ import { SparkIconInputContainerComponent } from './sprk-icon-input-container.co
   selector: 'sprk-test',
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-u-man">
-        <label sprkLabel>Label!</label>
-        <div sprk-input-icon>Icon</div>
-        <input sprkInput>
-        <p sprkHelperText>Helper Text!</p>
-        <span sprkFieldError>
-          <div class="sprk-b-ErrorText">Error</div>
-        </span>
+      <label sprkLabel>Label!</label>
+      <div sprk-input-icon>Icon</div>
+      <input sprkInput />
+      <p sprkHelperText>Helper Text!</p>
+      <span sprkFieldError> <div class="sprk-b-ErrorText">Error</div> </span>
     </sprk-icon-input-container>
   `
 })
@@ -79,7 +77,7 @@ describe('SparkIconInputContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-b-InputContainer--icon sprk-u-man'
+      'sprk-b-InputContainer sprk-u-man'
     );
   });
 

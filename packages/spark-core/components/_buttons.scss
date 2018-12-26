@@ -2,14 +2,16 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  box-shadow: $sprk-btn-shadow;
   transition: all $sprk-btn-transition-speed;
+  border-radius: $sprk-btn-border-radius;
+  letter-spacing: $sprk-btn-letter-spacing;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $sprk-btn-hover-background-color;
     border-color: $sprk-btn-hover-background-color;
+    box-shadow: $sprk-btn-shadow;
     color: $sprk-btn-hover-text-color;
   }
 
@@ -18,19 +20,31 @@
   }
 }
 
+.sprk-c-Button--compact {
+  padding: $space-inset-short-m;
+}
+
+.sprk-c-Button--full\@xs {
+  width: 100%;
+
+  @media screen and (min-width: $btn-breakpoint-xs) {
+    width: auto;
+  }
+}
+
 .sprk-c-Button--full\@sm {
   width: 100%;
 
-  @media screen and (min-width: $sprk-btn-breakpoint) {
+  @media screen and (min-width: $sprk-btn-breakpoint-s) {
     width: auto;
   }
 }
 
 .sprk-c-Button--secondary {
   background-color: $sprk-btn-secondary-background-color;
-  box-shadow: none;
   border: $sprk-btn-border-width $sprk-btn-border-style $sprk-btn-secondary-border-color;
   color: $sprk-btn-secondary-text-color;
+  letter-spacing: $sprk-btn-secondary-letter-spacing;
 
   &:visited {
     color: $sprk-btn-secondary-text-color;
@@ -39,8 +53,10 @@
   &:hover,
   &:active,
   &:focus {
+    box-shadow: $sprk-btn-secondary-hover-shadow;
     background-color: $sprk-btn-secondary-hover-background-color;
-    border: $sprk-btn-border-width $sprk-btn-border-style $sprk-btn-secondary-border-color;
+    border: $sprk-btn-border-width $sprk-btn-border-style
+      $sprk-btn-secondary-hover-border-color;
     color: $sprk-btn-secondary-hover-text-color;
   }
 }
@@ -48,42 +64,43 @@
 .sprk-c-Button--tertiary {
   background-color: $sprk-btn-tertiary-background-color;
   box-shadow: none;
-  border-color: $sprk-btn-tertiary-border-color;
+  border: $sprk-btn-tertiary-border;
   color: $sprk-btn-tertiary-text-color;
-  text-transform: uppercase;
+  letter-spacing: $sprk-btn-tertiary-letter-spacing;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $sprk-btn-tertiary-hover-background-color;
-    border-color: $sprk-btn-tertiary-border-color;
     color: $sprk-btn-tertiary-hover-text-color;
+    box-shadow: $sprk-btn-tertiary-hover-shadow;
   }
 
   &:visited {
     color: $sprk-btn-tertiary-text-color;
   }
 
+  &::after {
+    content: '';
+    border-bottom: $sprk-btn-tertiary-underline-width solid
+      $sprk-btn-tertiary-underline-color;
+    display: block;
+    width: 100%;
+    padding-top: $sprk-btn-tertiary-underline-padding-top;
+    margin: 0 auto;
+  }
+
   &:hover::after,
   &:active::after,
   &:focus::after {
-    border-color: $sprk-btn-tertiary-hover-line-color;
-    animation: width-zero-to-full $sprk-btn-transition-speed ease-in-out;
-  }
-
-  &::after {
-    content: '';
-    border-bottom: ($sprk-btn-border-width + 1px) solid $sprk-btn-tertiary-text-color;
-    display: block;
-    width: 100%;
-    padding-top: $sprk-space-xs;
-    margin: 0 auto;
+    border-color: $sprk-btn-tertiary-hover-underline-color;
+    transition: border $sprk-btn-transition-speed ease-in-out;
   }
 }
 
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
-  box-shadow: none;
+  box-shadow: $btn-disabled-shadow;
 
   &:hover,
   &:active,
@@ -96,4 +113,20 @@
   &:visited {
     color: $sprk-btn-disabled-text-color;
   }
+}
+
+.sprk-c-Button--secondary.sprk-is-Disabled,
+.sprk-c-Button--secondary[disabled] {
+  box-shadow: $btn-secondary-disabled-shadow;
+  background-color: $btn-secondary-disabled-background-color;
+  border-color: $btn-secondary-disabled-border-color;
+  color: $btn-secondary-disabled-text-color;
+}
+
+.sprk-c-Button--tertiary.sprk-is-Disabled,
+.sprk-c-Button--tertiary[disabled] {
+  box-shadow: $btn-tertiary-disabled-shadow;
+  border: $btn-tertiary-disabled-border;
+  color: $btn-tertiary-disabled-text-color;
+  background-color: $btn-tertiary-disabled-background-color;
 }

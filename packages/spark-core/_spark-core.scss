@@ -18,7 +18,6 @@
 // ScalesCss
 ///
 
-@import 'node_modules/@scalescss/base-typography/typography';
 @import 'node_modules/@scalescss/base-images/images';
 @import 'node_modules/@scalescss/base-lists/lists';
 @import 'node_modules/@scalescss/base-blockquotes/blockquotes';
@@ -57,13 +56,12 @@
 @import './components/buttons';
 @import './components/datepicker';
 @import './components/dividers';
-@import './components/hamburger';
+@import './components/dropdown';
+@import './components/menu';
 @import './components/masthead';
 @import './components/promo';
 @import './components/modals';
-@import './components/wide-navigation';
 @import './components/pagination';
-@import './components/secondary-navigation';
 @import './components/spinners';
 @import './components/tabs';
 @import './utilities/utilities';
