@@ -7,7 +7,7 @@ $drizzle-nav-padding: 1rem;
 
 .#{$app-namespace}-c-Navigation__header {
   background: $nav-background-color;
-  color: $white;
+  color: $sprk-white;
   display: flex;
   justify-content: space-between;
   padding: $drizzle-nav-padding;
@@ -51,7 +51,7 @@ svg {
 }
 
 .#{$app-namespace}-c-Navigation a {
-  color: $white;
+  color: $sprk-white;
   font-weight: 300;
   text-decoration: none;
 }
@@ -68,7 +68,7 @@ svg {
 
 .#{$app-namespace}-c-Navigation.is-active
 .#{$app-namespace}-c-Navigation__main {
-  background-color: $black;
+  background-color: $sprk-black;
   display: block;
   height: 100%;
   width: 100%;
@@ -104,7 +104,7 @@ svg {
   padding-left: 16px;
 
   &:hover {
-    background: $black;
+    background: $sprk-black;
   }
 }
 

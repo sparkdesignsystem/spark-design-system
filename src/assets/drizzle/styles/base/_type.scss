@@ -33,12 +33,12 @@ p,
 }
 
 .#{$app-namespace}-b-h1 {
-  color: $black;
+  color: $sprk-black;
   font-size: $drizzle-h1-font-size;
 }
 
 .#{$app-namespace}-b-h2 {
-  color: $black;
+  color: $sprk-black;
   font-size: $drizzle-h2-font-size;
   font-weight: bold;
   text-transform: uppercase;
@@ -47,7 +47,7 @@ p,
 }
 
 .#{$app-namespace}-b-h3 {
-  color: $black;
+  color: $sprk-black;
   font-size: $drizzle-h3-font-size;
   font-weight: bold;
   text-transform: uppercase;
@@ -56,7 +56,7 @@ p,
 }
 
 .#{$app-namespace}-b-h4 {
-  color: $black;
+  color: $sprk-black;
   font-size: $drizzle-h4-font-size;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -64,7 +64,7 @@ p,
 }
 
 .#{$app-namespace}-b-Label {
-  color: $black;
+  color: $sprk-black;
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;

@@ -64,12 +64,12 @@
 .sprk-b-Link--disabled {
   color: $sprk-link-disabled-color;
   pointer-events: none;
-  border-bottom: $link-underline-width solid $link-disabled-color;
-  font-weight: $link-disabled-font-weight;
+  border-bottom: $sprk-link-underline-width solid $sprk-link-disabled-color;
+  font-weight: $sprk-link-disabled-font-weight;
 
   &:visited {
     color: $sprk-link-disabled-color;
-    border-bottom: $link-underline-width solid $sprk-link-disabled-color;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-disabled-color;
   }
 
   &:hover,

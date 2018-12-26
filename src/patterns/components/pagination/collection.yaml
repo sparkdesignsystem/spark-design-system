@@ -16,7 +16,7 @@ variableTable:
     default: 26rem
     description: The maximum width of the pagination element.
   $pag-link-color:
-    default: $black
+    default: $sprk-black
     description: The color of the pagination links.
   $pag-link-color-hover:
     default: $pag-link-color
@@ -25,10 +25,10 @@ variableTable:
     default: $red
     description: The accent color for selected pagination links.
   $pag-selection-link-color:
-    default: $white
+    default: $sprk-white
     description: The text color of the currently selected pagination link.
   $pag-selection-link-color-hover:
-    default: $white
+    default: $sprk-white
     description: The text color of the currently selected pagination link on hover.
   $pag-circle-size:
     default: 2em

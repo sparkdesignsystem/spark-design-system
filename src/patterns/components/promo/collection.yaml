@@ -14,10 +14,10 @@ links:
 sparkPackageCore: true
 variableTable:
   $promo-background-color:
-    default: $white
+    default: $sprk-white
     description: The background color of the promo.
   $promo-border:
-    default: 1px solid $gray
+    default: 1px solid $sprk-gray
     description: The border style of the border promo variant.
   $promo-max-width:
     default: 42.5rem
@@ -32,16 +32,16 @@ variableTable:
     default: 50%
     description: The maximum width of the image on narrow viewports.
   $promo-title-font-color:
-    default: $black
+    default: $sprk-black
     description: The color of the title.
   $promo-title-font-weight:
     default: $font-weight-display-four
     description: The font weight of the title.
   $promo-subtitle-font-color:
-    default: $black
+    default: $sprk-black
     description: The color of the subtitle.
   $promo-subtitle-font-weight:
-    default: $font-weight-body-one
+    default: $sprk-font-weight-body-one
     description: The font weight of the subtitle.
 classTable:
   .sprk-c-Promo--flag:

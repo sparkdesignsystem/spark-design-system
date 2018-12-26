@@ -3,6 +3,11 @@
 // ==================================================================
 
 //
+// Reset
+///
+$sprk-selection-bg-color: $sprk-green;
+
+//
 // Spacing
 ///
 $sprk-space-inset-xs: 4px 4px 4px 4px !default;
@@ -34,7 +39,11 @@ $sprk-space-stack-xl: 0 0 64px 0 !default;
 
 // Global Spacing Utilities
 $sprk-space-xs: 4px !default;
+$sprk-space-s: 8px !default;
+$sprk-space-m: 16px !default;
+$sprk-space-l: 32px !default;
 $sprk-space-xl: 64px !default;
+$sprk-space-h: $sprk-space-xl !default;
 
 // Misc  Spacing Utilities
 $sprk-space-misc-a: 24px !default;
@@ -49,8 +58,8 @@ $sprk-icon-m: 16px !default;
 $sprk-icon-l: 32px !default;
 $sprk-icon-xl: 64px !default;
 $sprk-icon-xxl: 128px !default;
-$sprk-icon-fill-color: $red !default;
-$sprk-icon-stroke-color: $red !default;
+$sprk-icon-fill-color: $sprk-red !default;
+$sprk-icon-stroke-color: $sprk-red !default;
 $sprk-icon-using-custom-stroke: true !default;
 $sprk-icon-custom-stroke-width-s: 1px !default;
 $sprk-icon-custom-stroke-width-m: 1.5px !default;
@@ -74,12 +83,12 @@ $sprk-layer-height-xl: 99999 !default;
 //
 // Horizontal List
 ///
-$horizontal-list-spacing: $space-m !default;
-$horizontal-list-spacing-tiny: $space-xs !default;
-$horizontal-list-spacing-small: $space-s !default;
-$horizontal-list-spacing-medium: $space-m !default;
-$horizontal-list-spacing-large: $space-l !default;
-$horizontal-list-spacing-huge: $space-xl !default;
+$sprk-horizontal-list-spacing: $sprk-space-m !default;
+$sprk-horizontal-list-spacing-tiny: $sprk-space-xs !default;
+$sprk-horizontal-list-spacing-small: $sprk-space-s !default;
+$sprk-horizontal-list-spacing-medium: $sprk-space-m !default;
+$sprk-horizontal-list-spacing-large: $sprk-space-l !default;
+$sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
 
 //
 // Pagination
@@ -103,15 +112,15 @@ $sprk-using-webfonts: false !default;
 $sprk-font-display: swap !default;
 $sprk-webfonts: '' !default;
 $sprk-typography-breakpoint: 54rem !default;
-$sprk-page-title-mark-color: $red;
+$sprk-page-title-mark-color: $sprk-red;
 $sprk-page-title-mark-width: 32px;
 $sprk-page-title-mark-height: 5px;
 $sprk-page-title-mark-height-wide-viewport: 6px;
 $sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a;
-$sprk-page-title-mark-padding-wide-viewport: 0 0 $space-m;
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m;
 
 // Display One
-$sprk-color-display-one: $black !default;
+$sprk-color-display-one: $sprk-black !default;
 $sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-one: 2.75rem !default;
 $sprk-font-size-display-one-wide: 3.375rem !default;
@@ -121,7 +130,7 @@ $sprk-line-height-display-one: 1.27 !default;
 $sprk-line-height-display-one-wide: 1.03 !default;
 
 // Display Two
-$sprk-color-display-two: $black !default;
+$sprk-color-display-two: $sprk-black !default;
 $sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-two: 2rem !default;
 $sprk-font-size-display-two-wide: 2.5rem !default;
@@ -131,7 +140,7 @@ $sprk-line-height-display-two: 1 !default;
 $sprk-line-height-display-two-wide: 1 !default;
 
 // Display Three
-$sprk-color-display-three: $black !default;
+$sprk-color-display-three: $sprk-black !default;
 $sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-three: 1.75rem !default;
 $sprk-font-size-display-three-wide: 2.125rem !default;
@@ -141,21 +150,21 @@ $sprk-line-height-display-three: 1.6 !default;
 $sprk-line-height-display-three-wide: 1.32 !default;
 
 // Display Four
-$sprk-color-display-four: $black !default;
+$sprk-color-display-four: $sprk-black !default;
 $sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-four: 1.625rem !default;
 $sprk-font-weight-display-four: bold !default;
 $sprk-line-height-display-four: 1.23 !default;
 
 // Display Five
-$sprk-color-display-five: $black !default;
+$sprk-color-display-five: $sprk-black !default;
 $sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-five: 1.25rem !default;
 $sprk-font-weight-display-five: 500 !default;
 $sprk-line-height-display-five: 1.2 !default;
 
 // Display Six
-$sprk-color-display-six: $black !default;
+$sprk-color-display-six: $sprk-black !default;
 $sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-six: 1.25rem !default;
 $sprk-font-weight-display-six: 300 !default;
@@ -164,35 +173,35 @@ $sprk-line-height-display-six: 1.2 !default;
 // Display Seven
 $sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-display-seven: 1rem !default;
-$sprk-color-display-seven: $black !default;
+$sprk-color-display-seven: $sprk-black !default;
 $sprk-line-height-display-seven: 1 !default;
 $sprk-font-weight-display-seven: 500 !default;
 
 // Body One
 $sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-body-one: 0.9375rem !default;
-$sprk-color-body-one: $black !default;
+$sprk-color-body-one: $sprk-black !default;
 $sprk-line-height-body-one: 1.6 !default;
 $sprk-font-weight-body-one: 500 !default;
 
 // Body Two
 $sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-body-two: 0.9375rem !default;
-$sprk-color-body-two: $black !default;
+$sprk-color-body-two: $sprk-black !default;
 $sprk-line-height-body-two: 1.6 !default;
 $sprk-font-weight-body-two: 300 !default;
 
 // Body Three
 $sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-body-three: 0.9375rem !default;
-$sprk-color-body-three: $black !default;
+$sprk-color-body-three: $sprk-black !default;
 $sprk-line-height-body-three: 2 !default;
 $sprk-font-weight-body-three: 300 !default;
 
 // Body Four
 $sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $sprk-font-size-body-four: 0.8125rem !default;
-$sprk-color-body-four: $black !default;
+$sprk-color-body-four: $sprk-black !default;
 $sprk-line-height-body-four: 1.84 !default;
 $sprk-font-weight-body-four: 300 !default;
 
@@ -218,8 +227,8 @@ $sprk-alert-icon-size: 40px !default;
 $sprk-alert-font-size: 1rem;
 $sprk-alert-font-weight: 400;
 $sprk-alert-line-height: 1.5;
-$sprk-alert-content-padding: $space-m $space-m $space-m $sprk-space-misc-a;
-$sprk-alert-dismiss-padding: $space-m;
+$sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a;
+$sprk-alert-dismiss-padding: $sprk-space-m;
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0;
 $sprk-alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $sprk-alert-shadow-info: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-info !default;
@@ -232,31 +241,31 @@ $sprk-alert-shadow-hover-fail: inset -80px 0 0 $sprk-alert-color-fail !default;
 //
 // Promos
 ///
-$sprk-promo-background-color: $white !default;
-$sprk-promo-border: 1px solid $gray !default;
+$sprk-promo-background-color: $sprk-white !default;
+$sprk-promo-border: 1px solid $sprk-gray !default;
 $sprk-promo-max-width: 42.5rem !default;
 $sprk-promo-breakpoint: 42.5rem !default;
 $sprk-promo-image-narrow-max-height: 20rem !default;
 $sprk-promo-image-narrow-max-width: 50% !default;
-$sprk-promo-title-font-color: $black !default;
-$sprk-promo-title-font-weight: $font-weight-display-four !default;
-$sprk-promo-subtitle-font-color: $black !default;
-$sprk-promo-subtitle-font-weight: $font-weight-body-one !default;
+$sprk-promo-title-font-color: $sprk-black !default;
+$sprk-promo-title-font-weight: $sprk-font-weight-display-four !default;
+$sprk-promo-subtitle-font-color: $sprk-black !default;
+$sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 
 //
 // Buttons
 ///
-$sprk-btn-background-color: $green !default;
+$sprk-btn-background-color: $sprk-green !default;
 $sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $sprk-btn-border-style: solid !default;
-$sprk-btn-border-color: $btn-background-color;
+$sprk-btn-border-color: $sprk-btn-background-color;
 $sprk-btn-border-width: 2px;
 $sprk-btn-font-weight: 500;
-$sprk-btn-text-color: $white !default;
+$sprk-btn-text-color: $sprk-white !default;
 $sprk-btn-border-radius: 4px !default;
-$sprk-btn-hover-background-color: $green-dark !default;
-$sprk-btn-hover-text-color: $white !default;
-$sprk-btn-padding: $space-m 24px !default;
+$sprk-btn-hover-background-color: $sprk-green-dark !default;
+$sprk-btn-hover-text-color: $sprk-white !default;
+$sprk-btn-padding: $sprk-space-m 24px !default;
 $sprk-btn-breakpoint-xs: 30rem !default;
 $sprk-btn-breakpoint-s: 42.5rem !default;
 $sprk-btn-transition-speed: 0.3s !default;
@@ -264,53 +273,53 @@ $sprk-btn-letter-spacing: 0.62px !default;
 
 // Disabled
 $sprk-btn-disabled-opacity: 1 !default;
-$sprk-btn-disabled-border-width: $btn-border-width !default;
-$sprk-btn-disabled-background-color: $gray-dark !default;
-$sprk-btn-disabled-text-color: $white !default;
+$sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
+$sprk-btn-disabled-background-color: $sprk-gray-dark !default;
+$sprk-btn-disabled-text-color: $sprk-white !default;
 $sprk-btn-disabled-border-color: transparent !default;
 $sprk-btn-disabled-shadow: none !default;
 $sprk-btn-secondary-disabled-background-color: transparent !default;
-$sprk-btn-secondary-disabled-text-color: $gray-dark !default;
-$sprk-btn-secondary-disabled-border-color: $gray-dark !default;
+$sprk-btn-secondary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
 $sprk-btn-secondary-disabled-shadow: none !default;
 $sprk-btn-tertiary-disabled-shadow: none !default;
 $sprk-btn-tertiary-disabled-border: none !default;
 // Secondary
-$sprk-btn-secondary-background-color: $white !default;
-$sprk-btn-secondary-border-color: $gray-dark !default;
-$sprk-btn-secondary-text-color: $black !default;
-$sprk-btn-secondary-hover-text-color: $black !default;
-$sprk-btn-secondary-hover-background-color: $white !default;
-$sprk-btn-secondary-hover-border-color: $black !default;
+$sprk-btn-secondary-background-color: $sprk-white !default;
+$sprk-btn-secondary-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-text-color: $sprk-black !default;
+$sprk-btn-secondary-hover-text-color: $sprk-black !default;
+$sprk-btn-secondary-hover-background-color: $sprk-white !default;
+$sprk-btn-secondary-hover-border-color: $sprk-black !default;
 $sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $sprk-btn-secondary-letter-spacing: 0.62px !default;
 // Tertiary
 $sprk-btn-tertiary-background-color: transparent !default;
 $sprk-btn-tertiary-border: none !default;
-$sprk-btn-tertiary-text-color: $black !default;
+$sprk-btn-tertiary-text-color: $sprk-black !default;
 $sprk-btn-tertiary-underline-width: 0.125em !default;
 $sprk-btn-tertiary-underline-padding-top: 0.125em !default;
-$sprk-btn-tertiary-underline-color: $gray-dark !default;
-$sprk-btn-tertiary-hover-text-color: $black !default;
-$sprk-btn-tertiary-hover-underline-color: $black !default;
+$sprk-btn-tertiary-underline-color: $sprk-gray-dark !default;
+$sprk-btn-tertiary-hover-text-color: $sprk-black !default;
+$sprk-btn-tertiary-hover-underline-color: $sprk-black !default;
 $sprk-btn-tertiary-hover-background-color: transparent !default;
 $sprk-btn-tertiary-hover-shadow: none !default;
 $sprk-btn-tertiary-disabled-background-color: transparent !default;
-$sprk-btn-tertiary-disabled-text-color: $gray-dark !default;
+$sprk-btn-tertiary-disabled-text-color: $sprk-gray-dark !default;
 $sprk-btn-tertiary-letter-spacing: normal !default;
 
 //
 // Links
 ///
-$sprk-link-color: $black !default;
-$sprk-link-disabled-color: $black-tint-50;
-$sprk-link-muted-color: $black-tint-75;
-$sprk-link-standalone-color: $red !default;
+$sprk-link-color: $sprk-black !default;
+$sprk-link-disabled-color: $sprk-black-tint-50;
+$sprk-link-muted-color: $sprk-black-tint-75;
+$sprk-link-standalone-color: $sprk-red !default;
 $sprk-link-transition: 0.3s !default;
-$sprk-link-underline-color: $red !default;
-$sprk-link-underline-visited-color: $red !default;
+$sprk-link-underline-color: $sprk-red !default;
+$sprk-link-underline-visited-color: $sprk-red !default;
 $sprk-link-underline-width: 0.0625em !default;
-$sprk-link-visited-color: $red !default;
+$sprk-link-visited-color: $sprk-red !default;
 $sprk-link-standalone-font-weight: bold !default;
 $sprk-link-inline-font-weight: normal !default;
 $sprk-link-disabled-font-weight: bold !default;
@@ -318,40 +327,40 @@ $sprk-link-disabled-font-weight: bold !default;
 //
 // Lists
 ///
-$sprk-list-margin-left: $space-m !default;
-$sprk-list-indented-margin-left: $space-l !default;
+$sprk-list-margin-left: $sprk-space-m !default;
+$sprk-list-indented-margin-left: $sprk-space-l !default;
 
 //
 // Forms
 ///
 $sprk-input-gray-medium: #5a5a5a !default;
 $sprk-monetary-symbol: '$' !default;
-$sprk-input-placeholder-color: $gray !default;
-$sprk-input-readonly-text-color: $gray !default;
+$sprk-input-placeholder-color: $sprk-gray !default;
+$sprk-input-readonly-text-color: $sprk-gray !default;
 $sprk-fieldset-padding: 0 !default;
 $sprk-text-input-border-radius: 0 !default;
-$sprk-text-input-border-color: $black !default;
+$sprk-text-input-border-color: $sprk-black !default;
 $sprk-text-input-border-width: 0 !default;
-$sprk-input-container-margin-bottom: $space-m !default;
-$sprk-input-disabled-background-color: $gray !default;
-$sprk-input-disabled-border-color: $black !default;
-$sprk-input-disabled-text-color: $input-gray-medium !default;
+$sprk-input-container-margin-bottom: $sprk-space-m !default;
+$sprk-input-disabled-background-color: $sprk-gray !default;
+$sprk-input-disabled-border-color: $sprk-black !default;
+$sprk-input-disabled-text-color: $sprk-input-gray-medium !default;
 $sprk-helper-text-hidden: false !default;
-$sprk-text-input-padding: 3px $space-s !default;
-$sprk-input-readonly-border-color: $black !default;
-$sprk-input-box-shadow: 0 1px 0 0 $black !default;
-$sprk-input-error-box-shadow: 0 3px 0 0 $yellow !default;
+$sprk-text-input-padding: 3px $sprk-space-s !default;
+$sprk-input-readonly-border-color: $sprk-black !default;
+$sprk-input-box-shadow: 0 1px 0 0 $sprk-black !default;
+$sprk-input-error-box-shadow: 0 3px 0 0 $sprk-yellow !default;
 $sprk-error-icon-size: 1.25rem !default;
-$sprk-input-disabled-box-shadow: 0 1px 0 0 $input-gray-medium !default;
+$sprk-input-disabled-box-shadow: 0 1px 0 0 $sprk-input-gray-medium !default;
 $sprk-date-picker-max-width: 20rem !default;
 $sprk-date-picker-button-size: 2.25rem !default;
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
-$sprk-date-picker-box-shadow: 0 2px 5px $input-gray-medium !default;
-$sprk-sprk-date-picker-font-family: $sprk-font-family-body-two !default;
-$sprk-date-picker-day-interact-color: $red !default;
-$sprk-text-input-interact-color: $red !default;
-$sprk-error-text-color: $black !default;
-$sprk-text-input-error-color: $yellow !default;
+$sprk-date-picker-box-shadow: 0 2px 5px $sprk-input-gray-medium !default;
+$sprk-date-picker-font-family: $sprk-font-family-body-two !default;
+$sprk-date-picker-day-interact-color: $sprk-red !default;
+$sprk-text-input-interact-color: $sprk-red !default;
+$sprk-error-text-color: $sprk-black !default;
+$sprk-text-input-error-color: $sprk-yellow !default;
 $sprk-input-max-width: 27.5rem !default;
 $sprk-input-icon-offset-x: 7px !default;
 $sprk-input-icon-offset-y: 21px !default;
@@ -367,25 +376,25 @@ $sprk-label-shrink-scale: 0.82 !default;
 // Tables
 //
 ///
-$sprk-table-padding-small: $space-inset-s !default;
-$sprk-table-padding-medium: $space-inset-m !default;
-$sprk-table-padding-large: $space-inset-l !default;
+$sprk-table-padding-small: $sprk-space-inset-s !default;
+$sprk-table-padding-medium: $sprk-space-inset-m !default;
+$sprk-table-padding-large: $sprk-space-inset-l !default;
 $sprk-table-cell-alignment: center !default;
-$sprk-table-stripe-color: $gray !default;
-$sprk-table-highlight-color: $red !default;
-$sprk-table-highlight-text-color: $white !default;
+$sprk-table-stripe-color: $sprk-gray !default;
+$sprk-table-highlight-color: $sprk-red !default;
+$sprk-table-highlight-text-color: $sprk-white !default;
 
 // Primary
 $sprk-table-row-border-width: 1px !default;
 $sprk-table-row-border-style: solid !default;
-$sprk-table-row-border-color: $gray !default;
-$sprk-table-header-background-color: $black !default;
-$sprk-table-header-font-color: $white !default;
-$sprk-table-header-font-size: $font-size-body-one !default;
-$sprk-table-header-font-weight: $font-weight-body-one !default;
+$sprk-table-row-border-color: $sprk-gray !default;
+$sprk-table-header-background-color: $sprk-black !default;
+$sprk-table-header-font-color: $sprk-white !default;
+$sprk-table-header-font-size: $sprk-font-size-body-one !default;
+$sprk-table-header-font-weight: $sprk-font-weight-body-one !default;
 $sprk-table-header-border-spacing: 2px !default;
-$sprk-table-header-border-color: $white !default;
-$sprk-table-empty-heading-background-color: $white !default;
+$sprk-table-header-border-color: $sprk-white !default;
+$sprk-table-empty-heading-background-color: $sprk-white !default;
 
 // Secondary
 $sprk-table-secondary-header-background-color: $sprk-white !default;
@@ -404,34 +413,34 @@ $sprk-table-grouped-header-font-weight: normal !default;
 $sprk-table-secondary-row-comp-row-spacing: 0 15px !default;
 $sprk-table-secondary-row-comp-border-width: 1px !default;
 $sprk-table-secondary-row-comp-border-style: solid !default;
-$sprk-table-secondary-row-comp-border-color: $gray !default;
+$sprk-table-secondary-row-comp-border-color: $sprk-gray !default;
 
 //
 // Box
 ///
-$sprk-box-padding-tiny: $space-inset-xs !default;
-$sprk-box-padding-small: $space-inset-s !default;
-$sprk-box-padding: $space-inset-m !default;
-$sprk-box-padding-large: $space-inset-l !default;
-$sprk-box-padding-huge: $space-inset-xl !default;
+$sprk-box-padding-tiny: $sprk-space-inset-xs !default;
+$sprk-box-padding-small: $sprk-space-inset-s !default;
+$sprk-box-padding: $sprk-space-inset-m !default;
+$sprk-box-padding-large: $sprk-space-inset-l !default;
+$sprk-box-padding-huge: $sprk-space-inset-xl !default;
 
 //
 // Media
 ///
-$sprk-media-gutter-tiny: $space-xs !default;
-$sprk-media-gutter-small: $space-s !default;
-$sprk-media-gutter: $space-m !default;
-$sprk-media-gutter-large: $space-l !default;
-$sprk-media-gutter-huge: $space-xl !default;
+$sprk-media-gutter-tiny: $sprk-space-xs !default;
+$sprk-media-gutter-small: $sprk-space-s !default;
+$sprk-media-gutter: $sprk-space-m !default;
+$sprk-media-gutter-large: $sprk-space-l !default;
+$sprk-media-gutter-huge: $sprk-space-xl !default;
 
 //
 // Stack Object
 ///
-$sprk-stack-spacing-tiny: $space-xs !default;
-$sprk-stack-spacing-small: $space-s !default;
-$sprk-stack-spacing-medium: $space-m !default;
-$sprk-stack-spacing-large: $space-l !default;
-$sprk-stack-spacing-huge: $space-xl !default;
+$sprk-stack-spacing-tiny: $sprk-space-xs !default;
+$sprk-stack-spacing-small: $sprk-space-s !default;
+$sprk-stack-spacing-medium: $sprk-space-m !default;
+$sprk-stack-spacing-large: $sprk-space-l !default;
+$sprk-stack-spacing-huge: $sprk-space-xl !default;
 $sprk-split-breakpoint-xxs: 20rem !default;
 $sprk-split-breakpoint-xs: 30rem !default;
 $sprk-split-breakpoint-s: 42.5rem !default;
@@ -443,13 +452,13 @@ $sprk-split-breakpoint-xl: 80rem !default;
 // Accordions
 ///
 $sprk-accordion-max-width: 53.125rem !default;
-$sprk-accordion-border: 1px solid $black-tint-25 !default;
-$sprk-accordion-border-open: 1px solid $black !default;
-$sprk-accordion-summary-color: $black !default;
-$sprk-accordion-summary-active-color: $red !default;
+$sprk-accordion-border: 1px solid $sprk-black-tint-25 !default;
+$sprk-accordion-border-open: 1px solid $sprk-black !default;
+$sprk-accordion-summary-color: $sprk-black !default;
+$sprk-accordion-summary-active-color: $sprk-red !default;
 $sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
-$sprk-accordion-content-padding: 0 0 $space-l !default;
-$sprk-accordion-active-background-color: $gray !default;
+$sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
+$sprk-accordion-active-background-color: $sprk-gray !default;
 
 //
 // Toggle
@@ -459,18 +468,18 @@ $sprk-toggle-transistion-timing: 0.3s ease !default;
 //
 // Dividers
 ///
-$sprk-divider-border: 1px solid $black-tint-25 !default;
+$sprk-divider-border: 1px solid $sprk-black-tint-25 !default;
 
 //
 // Dropdown
 ///
-$sprk-dropdown-padding: $space-inset-short-l !default;
-$sprk-dropdown-header-padding: $space-inset-short-l !default;
-$sprk-dropdown-footer-padding: $space-inset-short-l !default;
-$sprk-dropdown-border: 1px solid $gray !default;
-$sprk-dropdown-active-background-color: $gray !default;
-$sprk-dropdown-active-border: 2.5px solid $red !default;
-$sprk-dropdown-active-box-shadow: -1px 0 0 0 $red !default;
+$sprk-dropdown-padding: $sprk-space-inset-short-l !default;
+$sprk-dropdown-header-padding: $sprk-space-inset-short-l !default;
+$sprk-dropdown-footer-padding: $sprk-space-inset-short-l !default;
+$sprk-dropdown-border: 1px solid $sprk-gray !default;
+$sprk-dropdown-active-background-color: $sprk-gray !default;
+$sprk-dropdown-active-border: 2.5px solid $sprk-red !default;
+$sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-red !default;
 $sprk-dropdown-max-width: 24rem !default;
 $sprk-dropdown-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !default;
 
@@ -488,24 +497,24 @@ $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 //
 // Masthead
 //
-$sprk-masthead-menu-icon-width: $icon-l;
-$sprk-masthead-menu-icon-height: $icon-l;
-$sprk-masthead-bg-color: $white !default;
-$sprk-masthead-content-padding: $space-m !default;
-$sprk-masthead-link-visited-color: $black !default;
-$sprk-masthead-link-hover-color: $red !default;
-$sprk-masthead-link-font-weight: $font-weight-body-one !default;
+$sprk-masthead-menu-icon-width: $sprk-icon-l;
+$sprk-masthead-menu-icon-height: $sprk-icon-l;
+$sprk-masthead-bg-color: $sprk-white !default;
+$sprk-masthead-content-padding: $sprk-space-m !default;
+$sprk-masthead-link-visited-color: $sprk-black !default;
+$sprk-masthead-link-hover-color: $sprk-red !default;
+$sprk-masthead-link-font-weight: $sprk-font-weight-body-one !default;
 $sprk-masthead-border-bottom-size: 1px !default;
-$sprk-masthead-border-bottom: $masthead-border-bottom-size solid $gray !default;
+$sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray !default;
 $sprk-masthead-breakpoint: 54rem !default;
 $sprk-masthead-column-width: 89rem !default;
 $sprk-big-nav-column-width: 64rem !default;
-$sprk-big-nav-bg: $white !default;
-$sprk-big-nav-active-color: $red !default;
+$sprk-big-nav-bg: $sprk-white !default;
+$sprk-big-nav-active-color: $sprk-red !default;
 $sprk-masthead-logo-max-width: 192px !default;
 $sprk-masthead-logo-min-width: 174px !default;
 $sprk-mobile-masthead-height: 113px !default;
-$sprk-narrow-nav-left-border: 5px solid $red !default;
+$sprk-narrow-nav-left-border: 5px solid $sprk-red !default;
 $sprk-narrow-nav-link-font-weight: normal !default;
 
 //
@@ -521,12 +530,12 @@ $sprk-spinner-color: $sprk-white !default;
 // Tabbed Navigation
 ///
 $sprk-tab-navigation-breakpoint: 46rem !default;
-$tab-navigation-btn-color: $black !default;
-$tab-navigation-btn-bg-color: $gray !default;
-$tab-navigation-btn-border-top: 3px solid $gray !default;
-$tab-navigation-btn-hover-border-top: 3px solid $red !default;
-$tab-navigation-btn-active-color: $red !default;
-$tab-navigation-btn-active-border-top: 3px solid $red !default;
-$tab-navigation-btn-active-bg-color: $white !default;
-$sprk-tab-navigation-btn-font-size: $font-size-body-one !default;
-$sprk-tab-navigation-btn-font-weight: $font-weight-body-one !default;
+$sprk-tab-navigation-btn-color: $sprk-black !default;
+$sprk-tab-navigation-btn-bg-color: $sprk-gray !default;
+$sprk-tab-navigation-btn-border-top: 3px solid $sprk-gray !default;
+$sprk-tab-navigation-btn-hover-border-top: 3px solid $sprk-red !default;
+$sprk-tab-navigation-btn-active-color: $sprk-red !default;
+$sprk-tab-navigation-btn-active-border-top: 3px solid $sprk-red !default;
+$sprk-tab-navigation-btn-active-bg-color: $sprk-white !default;
+$sprk-tab-navigation-btn-font-size: $sprk-font-size-body-one !default;
+$sprk-tab-navigation-btn-font-weight: $sprk-font-weight-body-one !default;

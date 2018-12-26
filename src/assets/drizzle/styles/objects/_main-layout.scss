@@ -41,10 +41,10 @@ $drizzle-header-padding-vert-wide: 1rem;
 
 .#{$app-namespace}-o-Layout__content {
   max-width: 66rem;
-  padding: $space-l $space-m;
+  padding: $sprk-space-l $sprk-space-m;
 
   @media (min-width: $nav-switch-breakpoint) {
-    padding: $space-l;
+    padding: $sprk-space-l;
   }
 }
 
@@ -96,5 +96,5 @@ $drizzle-header-padding-vert-wide: 1rem;
 }
 
 .#{$app-namespace}-o-Layout__header .#{$app-namespace}-b-h1 {
-  color: $white;
+  color: $sprk-white;
 }

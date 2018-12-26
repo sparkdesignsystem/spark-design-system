@@ -18,7 +18,7 @@
   display: inline-block;
 
   @media (max-width: $footer-collapse-breakpoint) {
-    margin: 0 auto $space-m;
+    margin: 0 auto $sprk-space-m;
     text-align: center;
   }
 }

@@ -29,7 +29,7 @@ variableTable:
     default: center
     description: The table cell alignment.
   $table-stripe-color:
-    default: $gray
+    default: $sprk-gray
     description: The table stripe color.
   $table-row-border-width:
     default: 1px
@@ -38,34 +38,34 @@ variableTable:
     default: solid
     description: The style of the bottom border on table rows.
   $table-row-border-color:
-    default: $gray
+    default: $sprk-gray
     description: The color of the bottom border on table rows.
   $table-header-background-color:
-    default: $black
+    default: $sprk-black
     description: The background color of the table header.
   $table-header-font-color:
-    default: $white
+    default: $sprk-white
     description: The font color of the table header.
   $table-header-font-size:
-    default: $font-size-body-one
+    default: $sprk-font-size-body-one
     description: The font size of the table header.
   $sprk-table-header-font-weight:
-    default: $font-weight-body-one
+    default: $sprk-font-weight-body-one
     description: The font weight of the table header.
   $table-header-border-spacing:
     default: 2px
     description: The width of the right border on the table header.
   $table-header-border-color:
-    default: $white
+    default: $sprk-white
     description: The color of the right border on the table header.
   $table-empty-heading-background-color:
-    default: $white
+    default: $sprk-white
     description: The background color of empty table headers.
   $table-secondary-header-background-color:
-    default: $white
+    default: $sprk-white
     description: The background color of secondary table headers.
   $table-secondary-header-font-color:
-    default: $black
+    default: $sprk-black
     description: The font color of secondary table headers.
   $table-secondary-header-text-alignment:
     default: left
@@ -80,7 +80,7 @@ variableTable:
     default: 0
     description: The color of the right border on the secondary table header.
   $table-grouped-header-background-color:
-    default: $black
+    default: $sprk-black
     description: The background color of the header in the grouped columns table variant.
   $table-grouped-header-font-size:
     default: $font-size-body-four
@@ -98,7 +98,7 @@ variableTable:
     default: solid
     description: The style of the borders in the secondary row comparison table cells.
   $table-secondary-row-comp-border-color:
-    default: $gray
+    default: $sprk-gray
     description: The color of the borders in the secondary row comparison table cells.
 classTable:
   .sprk-b-Table--secondary:

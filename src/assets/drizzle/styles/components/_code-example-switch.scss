@@ -1,27 +1,27 @@
 .#{$app-namespace}-c-CodeExampleSwitch {
   padding: 0;
-  margin: $space-m 0;
+  margin: $sprk-space-m 0;
 
   @media (min-width: 34.375rem) {
-    margin: 0 $space-l;
+    margin: 0 $sprk-space-l;
   }
 }
 
 .#{$app-namespace}-c-CodeExampleSwitch__wrapper {
   align-items: center;
   justify-content: space-between;
-  background-color: $white;
+  background-color: $sprk-white;
   border-radius: 5px;
-  color: $black;
+  color: $sprk-black;
   display: flex;
   margin: 0;
 }
 
 .#{$app-namespace}-c-CodeExampleSwitch__group-label {
-  color: $white;
+  color: $sprk-white;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: $space-s;
+  margin-bottom: $sprk-space-s;
 }
 
 .#{$app-namespace}-c-CodeExampleSwitch__radio-container {
@@ -35,7 +35,7 @@
 
 .#{$app-namespace}-c-CodeExampleSwitch__label {
   border-radius: 5px;
-  color: $black-light;
+  color: $sprk-black-light;
   font-size: 0.9rem;
   text-transform: uppercase;
   padding: 0.75rem 1.2rem;
@@ -45,8 +45,8 @@
 
 .#{$app-namespace}-c-CodeExampleSwitch__input:checked {
   + .#{$app-namespace}-c-CodeExampleSwitch__label {
-    color: $white;
-    background-color: $black;
+    color: $sprk-white;
+    background-color: $sprk-black;
     transform: scale(1.1);
   }
 }

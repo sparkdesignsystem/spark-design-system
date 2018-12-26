@@ -1,5 +1,5 @@
 .#{$app-namespace}-c-Tag {
-  background-color: $black;
+  background-color: $sprk-black;
   border-radius: 3px;
   display: flex;
   text-transform: uppercase;
@@ -9,16 +9,16 @@
 }
 
 .#{$app-namespace}-c-Tag--secondary {
-  background-color: $white;
+  background-color: $sprk-white;
   border-radius: 3px;
 }
 
 .#{$app-namespace}-c-Tag--inprogress {
-  background-color: $gray;
+  background-color: $sprk-gray;
 }
 
 .#{$app-namespace}-c-Tag--secondary .#{$app-namespace}-c-Tag__desc span {
-  color: $black;
+  color: $sprk-black;
 }
 
 .#{$app-namespace}-c-Tag__color-box {
@@ -36,7 +36,7 @@
 .#{$app-namespace}-c-Tag__desc {
   align-self: center;
   display: block;
-  color: $white;
+  color: $sprk-white;
   text-decoration: none;
   text-align: center;
 }

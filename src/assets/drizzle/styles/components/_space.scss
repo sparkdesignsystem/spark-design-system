@@ -13,33 +13,33 @@ $space-misc-d: 80px;
 .#{$app-namespace}-c-Space-inset-tall-xs {
   box-shadow: inset 0 (-1 * ($space-xs * 1.5)) 0 $space-padding-color,
     inset 0 ($space-xs * 1.5) 0 $space-padding-color,
-    inset $space-xs 0 0 0 $space-padding-color,
-    inset (-1 * $space-xs) 0 0 0 $space-padding-color;
-  padding: ($space-xs * 1.5) $space-xs ($space-xs * 1.5) $space-xs;
+    inset $sprk-space-xs 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-xs) 0 0 0 $space-padding-color;
+  padding: ($space-xs * 1.5) $sprk-space-xs ($space-xs * 1.5) $sprk-space-xs;
 }
 
 .#{$app-namespace}-c-Space-inset-tall-s {
   box-shadow: inset 0 (-1 * ($space-s * 1.5)) 0 $space-padding-color,
     inset 0 ($space-s * 1.5) 0 $space-padding-color,
-    inset $space-s 0 0 0 $space-padding-color,
-    inset (-1 * $space-s) 0 0 0 $space-padding-color;
-  padding: ($space-s * 1.5) $space-s ($space-s * 1.5) $space-s;
+    inset $sprk-space-s 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-s) 0 0 0 $space-padding-color;
+  padding: ($space-s * 1.5) $sprk-space-s ($space-s * 1.5) $sprk-space-s;
 }
 
 .#{$app-namespace}-c-Space-inset-tall-m {
   box-shadow: inset 0 (-1 * ($space-m * 1.5)) 0 $space-padding-color,
     inset 0 ($space-m * 1.5) 0 $space-padding-color,
-    inset $space-m 0 0 0 $space-padding-color,
-    inset (-1 * $space-m) 0 0 0 $space-padding-color;
-  padding: ($space-m * 1.5) $space-m ($space-m * 1.5) $space-m;
+    inset $sprk-space-m 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-m) 0 0 0 $space-padding-color;
+  padding: ($space-m * 1.5) $sprk-space-m ($space-m * 1.5) $sprk-space-m;
 }
 
 .#{$app-namespace}-c-Space-inset-tall-l {
   box-shadow: inset 0 (-1 * ($space-l * 1.5)) 0 $space-padding-color,
     inset 0 ($space-l * 1.5) 0 $space-padding-color,
-    inset $space-l 0 0 0 $space-padding-color,
-    inset (-1 * $space-l) 0 0 0 $space-padding-color;
-  padding: ($space-l * 1.5) $space-l ($space-l * 1.5) $space-l;
+    inset $sprk-space-l 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-l) 0 0 0 $space-padding-color;
+  padding: ($space-l * 1.5) $sprk-space-l ($space-l * 1.5) $sprk-space-l;
 }
 
 .#{$app-namespace}-c-Space-inset-tall-xl {
@@ -54,62 +54,62 @@ $space-misc-d: 80px;
 .#{$app-namespace}-c-Space-inset-short-xs {
   box-shadow: inset 0 (-1 * ($space-xs / 2)) 0 $space-padding-color,
     inset 0 ($space-xs / 2) 0 $space-padding-color,
-    inset $space-xs 0 0 0 $space-padding-color,
-    inset (-1 * $space-xs) 0 0 0 $space-padding-color;
-  padding: ($space-xs / 2) $space-xs ($space-xs / 2) $space-xs;
+    inset $sprk-space-xs 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-xs) 0 0 0 $space-padding-color;
+  padding: ($space-xs / 2) $sprk-space-xs ($space-xs / 2) $sprk-space-xs;
 }
 
 .#{$app-namespace}-c-Space-inset-short-s {
-  box-shadow: inset 0 (-1 * $space-xs) 0 $space-padding-color,
-    inset 0 $space-xs 0 $space-padding-color,
-    inset $space-s 0 0 0 $space-padding-color,
-    inset (-1 * $space-s) 0 0 0 $space-padding-color;
-  padding: $space-xs $space-s $space-xs $space-s;
+  box-shadow: inset 0 (-1 * $sprk-space-xs) 0 $space-padding-color,
+    inset 0 $sprk-space-xs 0 $space-padding-color,
+    inset $sprk-space-s 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-s) 0 0 0 $space-padding-color;
+  padding: $sprk-space-xs $sprk-space-s $sprk-space-xs $sprk-space-s;
 }
 
 .#{$app-namespace}-c-Space-inset-short-m {
-  box-shadow: inset 0 (-1 * $space-s) 0 $space-padding-color,
-    inset 0 $space-s 0 $space-padding-color,
-    inset $space-m 0 0 0 $space-padding-color,
-    inset (-1 * $space-m) 0 0 0 $space-padding-color;
-  padding: $space-s $space-m $space-s $space-m;
+  box-shadow: inset 0 (-1 * $sprk-space-s) 0 $space-padding-color,
+    inset 0 $sprk-space-s 0 $space-padding-color,
+    inset $sprk-space-m 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-m) 0 0 0 $space-padding-color;
+  padding: $sprk-space-s $sprk-space-m $sprk-space-s $sprk-space-m;
 }
 
 .#{$app-namespace}-c-Space-inset-short-l {
-  box-shadow: inset 0 (-1 * $space-m) 0 $space-padding-color,
-    inset 0 $space-m 0 $space-padding-color,
-    inset $space-l 0 0 0 $space-padding-color,
-    inset (-1 * $space-l) 0 0 0 $space-padding-color;
-  padding: $space-m $space-l $space-m $space-l;
+  box-shadow: inset 0 (-1 * $sprk-space-m) 0 $space-padding-color,
+    inset 0 $sprk-space-m 0 $space-padding-color,
+    inset $sprk-space-l 0 0 0 $space-padding-color,
+    inset (-1 * $sprk-space-l) 0 0 0 $space-padding-color;
+  padding: $sprk-space-m $sprk-space-l $sprk-space-m $sprk-space-l;
 }
 
 .#{$app-namespace}-c-Space-inset-short-xl {
-  box-shadow: inset 0 (-1 * $space-l) 0 $space-padding-color,
-    inset 0 $space-l 0 $space-padding-color,
+  box-shadow: inset 0 (-1 * $sprk-space-l) 0 $space-padding-color,
+    inset 0 $sprk-space-l 0 $space-padding-color,
     inset $space-xl 0 0 0 $space-padding-color,
     inset (-1 * $space-xl) 0 0 0 $space-padding-color;
-  padding: $space-l $space-xl $space-l $space-xl;
+  padding: $sprk-space-l $space-xl $sprk-space-l $space-xl;
 }
 
 // Global Spacing
 .#{$app-namespace}-c-Space-inset-xs {
-  box-shadow: inset 0 0 0 $space-xs $space-padding-color;
-  padding: $space-xs;
+  box-shadow: inset 0 0 0 $sprk-space-xs $space-padding-color;
+  padding: $sprk-space-xs;
 }
 
 .#{$app-namespace}-c-Space-inset-s {
-  box-shadow: inset 0 0 0 $space-s $space-padding-color;
-  padding: $space-s;
+  box-shadow: inset 0 0 0 $sprk-space-s $space-padding-color;
+  padding: $sprk-space-s;
 }
 
 .#{$app-namespace}-c-Space-inset-m {
-  box-shadow: inset 0 0 0 $space-m $space-padding-color;
-  padding: $space-m;
+  box-shadow: inset 0 0 0 $sprk-space-m $space-padding-color;
+  padding: $sprk-space-m;
 }
 
 .#{$app-namespace}-c-Space-inset-l {
-  box-shadow: inset 0 0 0 $space-l $space-padding-color;
-  padding: $space-l;
+  box-shadow: inset 0 0 0 $sprk-space-l $space-padding-color;
+  padding: $sprk-space-l;
 }
 
 .#{$app-namespace}-c-Space-inset-xl {
@@ -119,59 +119,59 @@ $space-misc-d: 80px;
 
 // Stack
 .#{$app-namespace}-c-Space-stack-xs {
-  border-bottom: $space-xs solid $space-margin-color;
+  border-bottom: $sprk-space-xs solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-stack-s {
-  border-bottom: $space-s solid $space-margin-color;
+  border-bottom: $sprk-space-s solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-stack-m {
-  border-bottom: $space-m solid $space-margin-color;
+  border-bottom: $sprk-space-m solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-stack-l {
-  border-bottom: $space-l solid $space-margin-color;
+  border-bottom: $sprk-space-l solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-stack-xl {
-  border-bottom: $space-xl solid $space-margin-color;
+  border-bottom: $space-xl solid $sprk-space-margin-color;
 }
 
 /* Inline Doc Displays */
 .#{$app-namespace}-c-Space-inline-right-xs {
-  border-right: $space-xs solid $space-margin-color;
+  border-right: $sprk-space-xs solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-s {
-  border-right: $space-s solid $space-margin-color;
+  border-right: $sprk-space-s solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-m {
-  border-right: $space-m solid $space-margin-color;
+  border-right: $sprk-space-m solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-l {
-  border-right: $space-l solid $space-margin-color;
+  border-right: $sprk-space-l solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-xl {
-  border-right: $space-xl solid $space-margin-color;
+  border-right: $space-xl solid $sprk-space-margin-color;
 }
 
 /* Inline Misc Spacing Doc Displays */
 .#{$app-namespace}-c-Space-inline-right-misc-a {
-  border-right: $space-misc-a solid $space-margin-color;
+  border-right: $sprk-space-misc-a solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-misc-b {
-  border-right: $space-misc-b solid $space-margin-color;
+  border-right: $sprk-space-misc-b solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-misc-c {
-  border-right: $space-misc-c solid $space-margin-color;
+  border-right: $sprk-space-misc-c solid $sprk-space-margin-color;
 }
 
 .#{$app-namespace}-c-Space-inline-right-misc-d {
-  border-right: $space-misc-d solid $space-margin-color;
+  border-right: $sprk-space-misc-d solid $sprk-space-margin-color;
 }

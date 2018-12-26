@@ -1,8 +1,8 @@
 // fighting sprk's specificity here: .sprk-b-TextInput [type=text] {}
 .#{$app-namespace}-b-Body .#{$app-namespace}-b-TextInput {
-  background-color: $white;
+  background-color: $sprk-white;
   border-radius: 3px;
-  color: $black;
+  color: $sprk-black;
   font-size: 1rem;
   padding: 0.25rem;
   width: 100%;

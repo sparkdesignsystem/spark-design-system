@@ -1,9 +1,7 @@
 //
-//
-//
-// Override Scales vars
-//
-//
+// Map Spark Vars to ScalesCSS Vars
+///
+
 //
 // Namespaces
 ///
@@ -15,177 +13,132 @@ $scales-utilities-class-namespace: 'u-';
 
 //
 // Spacing
-$space-s: 8px !default;
-$space-m: 16px !default;
-$space-l: 32px !default;
-$space-h: $sprk-space-xl !default;
-//
-$sprk-space-s: $space-s;
-$sprk-space-m: $space-m;
-$sprk-space-l: $space-l;
-$sprk-space-h: $space-h;
-
-// Typography
-$h1-size: $sprk-font-size-display-two !default;
-$h1-color: $sprk-color-display-two !default;
-$h1-line-height: $sprk-line-height-display-two !default;
-$h1-weight: $sprk-font-weight-display-two !default;
-$h2-size: $sprk-font-size-display-three !default;
-$h2-color: $sprk-color-display-three !default;
-$h2-line-height: $sprk-line-height-display-three !default;
-$h2-weight: $sprk-font-weight-display-three !default;
-$h3-size: $sprk-font-size-display-four !default;
-$h3-color: $sprk-color-display-four !default;
-$h3-line-height: $sprk-line-height-display-four !default;
-$h3-weight: $sprk-font-weight-display-four !default;
-$h4-size: $sprk-font-size-display-five !default;
-$h4-color: $sprk-color-display-five !default;
-$h4-line-height: $sprk-line-height-display-five !default;
-$h4-weight: $sprk-font-weight-display-five !default;
-$h5-size: $sprk-font-size-display-six !default;
-$h5-color: $sprk-color-display-six !default;
-$h5-line-height: $sprk-line-height-display-six !default;
-$h5-weight: $sprk-font-weight-display-six !default;
-$h6-size: $sprk-font-size-body-two !default;
-$h6-color: $sprk-color-body-two !default;
-$h6-line-height: $sprk-line-height-body-two !default;
-$h6-weight: $sprk-font-weight-body-two !default;
-//
-$base-font-size: $sprk-font-size-body-two !default;
-$base-line-height: $sprk-line-height-body-two !default;
-$font-size-unit: rem !default;
-//
-$body-font-stack: $sprk-body-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$heading-font-stack: $sprk-body-font-name, Helvetica, 'Helvetica Neue', Arial,
-  sans-serif !default;
-$heading-font-weight: normal !default;
-//
-$sprk-body-font-stack: $body-font-stack;
-$sprk-heading-font-stack: $heading-font-stack;
-$sprk-heading-font-weight: $heading-font-weight;
-//
-$system-body-fonts: false !default;
-$system-font-stack: null !default;
-$system-heading-fonts: false !default;
-$helper-text-hidden: false !default;
+///
+$space-s: $sprk-space-s;
+$space-m: $sprk-space-m;
+$space-l: $sprk-space-l;
+$space-h: $sprk-space-h;
 
 //
 // Box
 ///
-$box-padding-tiny: $sprk-space-inset-xs !default;
-$box-padding-small: $sprk-space-inset-s !default;
-$box-padding: $sprk-space-inset-m !default;
-$box-padding-large: $sprk-space-inset-l !default;
-$box-padding-huge: $sprk-space-inset-xl !default;
+$box-padding-tiny: $sprk-box-padding-tiny;
+$box-padding-small: $sprk-box-padding-small;
+$box-padding: $sprk-box-padding;
+$box-padding-large: $sprk-box-padding-large;
+$box-padding-huge: $sprk-box-padding-huge;
 
+//
 // Buttons
-$btn-background-color: $sprk-red !default;
-$btn-border-color: $btn-background-color;
-$btn-border-radius: 1px !default;
-$btn-border-style: solid !default;
-$btn-border-width: 2px;
-$btn-font-weight: bold;
-$btn-hover-background-color: $sprk-red-mid !default;
-$btn-hover-text-color: $sprk-white !default;
-$btn-padding: $sprk-space-inset-short-l !default;
-$btn-text-color: $sprk-white !default;
+///
+$btn-background-color: $sprk-btn-background-color;
+$btn-border-color: $sprk-btn-border-color;
+$btn-border-radius: $sprk-btn-border-radius;
+$btn-border-style: $sprk-btn-border-style;
+$btn-border-width: $sprk-btn-border-width;
+$btn-font-weight: $sprk-btn-font-weight;
+$btn-hover-background-color: $sprk-btn-hover-background-color;
+$btn-hover-text-color: $sprk-btn-hover-text-color;
+$btn-padding: $sprk-btn-padding;
+$btn-text-color: $sprk-btn-text-color;
+$btn-border-width: $sprk-btn-border-width;
+$btn-hover-background-color: $sprk-btn-hover-background-color;
+$btn-text-color: $sprk-btn-text-color;
+$btn-hover-text-color: $sprk-btn-hover-text-color;
+$btn-border-style: $sprk-btn-border-style;
+
 //
-$sprk-btn-border-width: $btn-border-width;
-$sprk-btn-hover-background-color: $btn-hover-background-color;
-$sprk-btn-text-color: $btn-text-color;
-$sprk-btn-hover-text-color: $btn-hover-text-color;
-$sprk-btn-border-style: $btn-border-style;
 // Disabled
-$btn-disabled-opacity: 1 !default;
-$btn-disabled-background-color: $sprk-gray !default;
-$btn-disabled-text-color: $sprk-black-tint-50 !default;
-$btn-disabled-border-width: $sprk-btn-border-width !default;
-$btn-disabled-border-color: transparent !default;
-//
-$sprk-btn-disabled-background-color: $btn-disabled-background-color;
-$sprk-btn-disabled-border-color: $btn-disabled-border-color;
-$sprk-btn-disabled-text-color: $btn-disabled-text-color;
+///
+$btn-disabled-opacity: $sprk-btn-disabled-opacity;
+$btn-disabled-background-color: $sprk-btn-disabled-background-color;
+$btn-disabled-text-color: $sprk-btn-disabled-text-color;
+$btn-disabled-border-width: $sprk-btn-disabled-border-width;
+$btn-disabled-border-color: $sprk-btn-disabled-border-color;
+$btn-disabled-background-color: $sprk-btn-disabled-background-color;
+$btn-disabled-border-color: $sprk-btn-disabled-border-color;
+$btn-disabled-text-color: $sprk-btn-disabled-text-color;
+
 //
 // Layout
-//
-$centered-column-width: 64rem !default;
-$fieldset-padding: 0 !default;
+///
+$centered-column-width: $sprk-centered-column-width;
+$fieldset-padding: $sprk-fieldset-padding;
 
 //
 // Lists
 ///
-$list-margin-left: $sprk-space-m !default;
+$list-margin-left: $sprk-list-margin-left;
 
 //
 // Horizontal List
-//
-$horizontal-list-spacing: $sprk-space-m !default;
-$horizontal-list-spacing-tiny: $sprk-space-xs !default;
-$horizontal-list-spacing-small: $sprk-space-s !default;
-$horizontal-list-spacing-medium: $sprk-space-m !default;
-$horizontal-list-spacing-large: $sprk-space-l !default;
-$horizontal-list-spacing-huge: $sprk-space-xl !default;
+///
+$horizontal-list-spacing: $sprk-horizontal-list-spacing;
+$horizontal-list-spacing-tiny: $sprk-horizontal-list-spacing-tiny;
+$horizontal-list-spacing-small: $sprk-horizontal-list-spacing-small;
+$horizontal-list-spacing-medium: $sprk-horizontal-list-spacing-medium;
+$horizontal-list-spacing-large: $sprk-horizontal-list-spacing-large;
+$horizontal-list-spacing-huge: $sprk-horizontal-list-spacing-huge;
 
+//
 // Inputs
-$input-container-margin-bottom: $sprk-space-m !default;
-$input-disabled-background-color: $sprk-gray !default;
-$input-disabled-border-color: $sprk-black !default;
-$input-disabled-text-color: $sprk-input-gray-medium !default;
-$input-readonly-border-color: $sprk-black !default;
-$input-readonly-text-color: $sprk-gray !default;
-//
-$sprk-input-container-margin-bottom: $input-container-margin-bottom;
-$sprk-input-disabled-background-color: $input-disabled-background-color;
-$sprk-input-disabled-border-color: $input-disabled-border-color;
-$sprk-input-disabled-text-color: $input-disabled-text-color;
-$sprk-input-readonly-border-color: $input-readonly-border-color;
-$sprk-input-readonly-text-color: $input-readonly-text-color;
-//
-$text-input-border-radius: 0 !default;
-$text-input-border-color: $sprk-black !default;
-$text-input-border-width: 0 !default;
-$text-input-padding: 3px $space-s !default;
+///
+$input-container-margin-bottom: $sprk-input-container-margin-bottom;
+$input-disabled-background-color: $sprk-input-disabled-background-color;
+$input-disabled-border-color: $sprk-input-disabled-border-color;
+$input-disabled-text-color: $sprk-input-disabled-text-color;
+$input-readonly-border-color: $sprk-input-readonly-border-color;
+$input-readonly-text-color: $sprk-input-readonly-text-color;
+$input-container-margin-bottom: $sprk-input-container-margin-bottom;
+$input-disabled-background-color: $sprk-input-disabled-background-color;
+$input-disabled-border-color: $sprk-input-disabled-border-color;
+$input-disabled-text-color: $sprk-input-disabled-text-color;
+$input-readonly-border-color: $sprk-input-readonly-border-color;
+$input-readonly-text-color: $sprk-input-readonly-text-color;
+$text-input-border-radius: $sprk-text-input-border-radius;
+$text-input-border-color: $sprk-text-input-border-color;
+$text-input-border-width: $sprk-text-input-border-width;
+$text-input-padding: $sprk-text-input-padding;
 
 //
 // Media
-//
-$media-gutter-tiny: $sprk-space-xs !default;
-$media-gutter-small: $sprk-space-s !default;
-$media-gutter: $sprk-space-m !default;
-$media-gutter-large: $sprk-space-l !default;
-$media-gutter-huge: $sprk-space-xl !default;
+///
+$media-gutter-tiny: $sprk-media-gutter-tiny;
+$media-gutter-small: $sprk-media-gutter-small;
+$media-gutter: $sprk-media-gutter;
+$media-gutter-large: $sprk-media-gutter-large;
+$media-gutter-huge: $sprk-media-gutter-huge;
 
 //
 // Reset
 ///
-$selection-bg-color: $sprk-blue !default;
+$selection-bg-color: $sprk-selection-bg-color;
 
+//
 // Stack
-$split-breakpoint-xs: 30rem !default;
-$split-breakpoint-s: 42.5rem !default;
-$split-breakpoint-m: 55rem !default;
-$split-breakpoint-l: 67.5rem !default;
-$split-breakpoint-xl: 80rem !default;
-//
-$sprk-split-breakpoint-xxs: 20rem !default;
-$sprk-split-breakpoint-xs: $split-breakpoint-xs;
-$sprk-split-breakpoint-s: $split-breakpoint-s;
-$sprk-split-breakpoint-m: $split-breakpoint-m;
-$sprk-split-breakpoint-l: $split-breakpoint-l;
-$sprk-split-breakpoint-xl: $split-breakpoint-xl;
-//
-$sprk-stack-spacing-tiny: $sprk-space-xs !default;
-$sprk-stack-spacing-small: $sprk-space-s !default;
-$sprk-stack-spacing-medium: $sprk-space-m !default;
-$sprk-stack-spacing-large: $sprk-space-l !default;
-$sprk-stack-spacing-huge: $sprk-space-xl !default;
+///
+$split-breakpoint-xs: $sprk-split-breakpoint-xs;
+$split-breakpoint-s: $sprk-split-breakpoint-s;
+$split-breakpoint-m: $sprk-split-breakpoint-m;
+$split-breakpoint-l: $sprk-split-breakpoint-l;
+$split-breakpoint-xl: $sprk-split-breakpoint-xl;
+$split-breakpoint-xxs: $sprk-split-breakpoint-xxs;
+$split-breakpoint-xs: $sprk-split-breakpoint-xs;
+$split-breakpoint-s: $sprk-split-breakpoint-s;
+$split-breakpoint-m: $sprk-split-breakpoint-m;
+$split-breakpoint-l: $sprk-split-breakpoint-l;
+$split-breakpoint-xl: $sprk-split-breakpoint-xl;
+$stack-spacing-tiny: $sprk-stack-spacing-tiny;
+$stack-spacing-small: $sprk-stack-spacing-small;
+$stack-spacing-medium: $sprk-stack-spacing-medium;
+$stack-spacing-large: $sprk-stack-spacing-large;
+$stack-spacing-huge: $sprk-stack-spacing-huge;
 
 //
 // Tables
 ///
-$table-cell-alignment: center !default;
-$table-padding-small: $sprk-space-inset-s !default;
-$table-padding-medium: $sprk-space-inset-m !default;
-$table-padding-large: $sprk-space-inset-l !default;
-$table-stripe-color: $sprk-gray !default;
+$table-cell-alignment: $sprk-table-cell-alignment;
+$table-padding-small: $sprk-table-padding-small;
+$table-padding-medium: $sprk-table-padding-medium;
+$table-padding-large: $sprk-table-padding-large;
+$table-stripe-color: $sprk-table-stripe-color;

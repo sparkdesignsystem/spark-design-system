@@ -9,10 +9,10 @@ restrictions:
 sparkPackageCore: true
 variableTable:
   $list-margin-left:
-    default: $space-m
+    default: $sprk-space-m
     description: Sets the default margin left indentation on .sprk-b-List.
   $list-indented-margin-left:
-    default: $space-l
+    default: $sprk-space-l
     description: Sets extended indentation (margin left) on the indented list variant.
 classTable:
   .sprk-b-List--indented:

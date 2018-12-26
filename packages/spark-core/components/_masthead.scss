@@ -75,7 +75,7 @@
 .sprk-c-Masthead__little-nav {
   display: none;
 
-  @media (min-width: $masthead-breakpoint) {
+  @media (min-width: $sprk-masthead-breakpoint) {
     display: inherit;
   }
 }
@@ -87,9 +87,9 @@
 .sprk-c-Masthead__site-links {
   position: relative;
 
-  @media all and (min-width: $masthead-breakpoint) {
-    border-right: 1px solid $black-tint-25;
-    padding-right: $space-l;
+  @media all and (min-width: $sprk-masthead-breakpoint) {
+    border-right: 1px solid $sprk-black-tint-25;
+    padding-right: $sprk-space-l;
   }
 }
 
@@ -106,14 +106,14 @@
 }
 
 .sprk-c-Masthead__link--big-nav {
-  @include HoverLine($color: transparent, $width: 85%);
+  @include HoverLine($sprk-hoverline-color: transparent, $sprk-hoverline-width: 85%);
 
   display: block;
 
   &:active,
   &:focus,
   &:hover {
-    @include HoverLine($color: $sprk-big-nav-active-color, $width: 85%);
+    @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 85%);
   }
 }
 
@@ -143,7 +143,7 @@
 .sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__link--big-nav,
 .sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__link--big-nav,
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
-  @include HoverLine($color: $sprk-big-nav-active-color, $width: 85%);
+  @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 85%);
 }
 
 // Hide narrow nav on larger views

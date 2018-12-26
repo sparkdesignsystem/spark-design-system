@@ -11,13 +11,13 @@ restrictions:
 sparkPackageCore: true
 variableTable:
   $link-color:
-    default: $black
+    default: $sprk-black
     description: The default link color.
   $link-disabled-color:
-    default: $black-tint-50
+    default: $sprk-black-tint-50
     description: The disabled link color.
   $link-muted-color:
-    default: $black-tint-75
+    default: $sprk-black-tint-75
     description: The muted link color.
   $link-standalone-color:
     default: $red

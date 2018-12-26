@@ -95,14 +95,13 @@
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
   background-color: $sprk-accordion-active-background-color;
-  border-left: $narrow-nav-left-border;
   border-left: $sprk-narrow-nav-left-border;
 }
 
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__heading {
-  color: $red;
+  color: $sprk-red;
   font-weight: bold;
 }
 

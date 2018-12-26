@@ -15,5 +15,5 @@ restrictions:
 sparkPackageCore: true
 variableTable:
   $divider-border:
-    default: 1px solid $black-tint-25
+    default: 1px solid $sprk-black-tint-25
     description: Sets the divider border.

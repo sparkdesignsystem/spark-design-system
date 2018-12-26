@@ -12,10 +12,10 @@ variableTable:
     default: $space-inset-short-l
     description: Sets the padding around the dropdown footer in the informational variant.
   $dropdown-border:
-    default: 1px solid $gray
+    default: 1px solid $sprk-gray
     description: Sets the border of the dropdown.
   $dropdown-active-background-color:
-    default: $gray-tint-75
+    default: $sprk-gray-tint-75
     description: Sets the background color of the dropdown items that are active or hovered.
   $dropdown-active-border:
     default: 2.5px solid $red

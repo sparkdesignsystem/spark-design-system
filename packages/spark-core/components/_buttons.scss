@@ -21,13 +21,13 @@
 }
 
 .sprk-c-Button--compact {
-  padding: $space-inset-short-m;
+  padding: $sprk-space-inset-short-m;
 }
 
 .sprk-c-Button--full\@xs {
   width: 100%;
 
-  @media screen and (min-width: $btn-breakpoint-xs) {
+  @media screen and (min-width: $sprk-btn-breakpoint-xs) {
     width: auto;
   }
 }
@@ -100,7 +100,7 @@
 
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
-  box-shadow: $btn-disabled-shadow;
+  box-shadow: $sprk-btn-disabled-shadow;
 
   &:hover,
   &:active,
@@ -117,16 +117,16 @@
 
 .sprk-c-Button--secondary.sprk-is-Disabled,
 .sprk-c-Button--secondary[disabled] {
-  box-shadow: $btn-secondary-disabled-shadow;
-  background-color: $btn-secondary-disabled-background-color;
-  border-color: $btn-secondary-disabled-border-color;
-  color: $btn-secondary-disabled-text-color;
+  box-shadow: $sprk-btn-secondary-disabled-shadow;
+  background-color: $sprk-btn-secondary-disabled-background-color;
+  border-color: $sprk-btn-secondary-disabled-border-color;
+  color: $sprk-btn-secondary-disabled-text-color;
 }
 
 .sprk-c-Button--tertiary.sprk-is-Disabled,
 .sprk-c-Button--tertiary[disabled] {
-  box-shadow: $btn-tertiary-disabled-shadow;
-  border: $btn-tertiary-disabled-border;
-  color: $btn-tertiary-disabled-text-color;
-  background-color: $btn-tertiary-disabled-background-color;
+  box-shadow: $sprk-btn-tertiary-disabled-shadow;
+  border: $sprk-btn-tertiary-disabled-border;
+  color: $sprk-btn-tertiary-disabled-text-color;
+  background-color: $sprk-btn-tertiary-disabled-background-color;
 }

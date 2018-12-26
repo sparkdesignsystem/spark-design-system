@@ -14,7 +14,7 @@
     - label: Yellow
       color: '#F5BE40'
       rgb: 'rgb(245,190,64)'
-      property: '$yellow'
+      property: ' $sprk-yellow'
     - label: White
       color: '#FFFFFF'
       rgb: 'rgb(255,255,255)'
@@ -36,15 +36,15 @@
     - label: Green 75%
       color: '#40C6B2'
       rgb: 'rgb(64,198,178)'
-      property: '$green-tint-75'
+      property: '$sprk-green-tint-75'
     - label: Green 50%
       color: '#80D9CB'
       rgb: 'rgb(128,217,203)'
-      property: '$green-tint-50'
+      property: '$sprk-green-tint-50'
     - label: Green 25%
       color: '#BFECE5'
       rgb: 'rgb(191,236,229)'
-      property: '$green-tint-25'
+      property: '$sprk-green-tint-25'
     - label: Red 75%
       color: '#D64C62'
       rgb: 'rgb(214,76,98)'
@@ -72,15 +72,15 @@
     - label: Yellow 75%
       color: '#EDA302'
       rgb: 'rgb(237,163,2)'
-      property: '$yellow-tint-75'
+      property: ' $sprk-yellow-tint-75'
     - label: Yellow 50%
       color: '#F4C766'
       rgb: 'rgb(244,199,102)'
-      property: '$yellow-tint-50'
+      property: ' $sprk-yellow-tint-50'
     - label: Yellow 25%
       color: '#F7DA9A'
       rgb: 'rgb(247,218,154)'
-      property: '$yellow-tint-25'
+      property: ' $sprk-yellow-tint-25'
     - label: Black 75%
       color: '#404040'
       rgb: 'rgb(64,64,64)'

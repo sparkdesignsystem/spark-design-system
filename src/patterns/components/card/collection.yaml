@@ -45,7 +45,7 @@ variableTable:
     default: $green
     description: The background color of the header area for the highlighted header card variant.
   $sprk-card-header-text-color:
-    default: $white
+    default: $sprk-white
     description: The color of the text in the highlighted header card variant.
 classTable:
   .sprk-c-Card--standout:

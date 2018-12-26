@@ -27,10 +27,10 @@ variableTable:
     default: 31.25rem
     description: Sets the height of the highlight board image.
   $highlight-board-color:
-    default: $white
+    default: $sprk-white
     description: Sets the background color of the highlight board.
   $highlight-board-content-box-color:
-    default: $white
+    default: $sprk-white
     description: Sets the background color of the content box.
 classTable:
   .sprk-c-HighlightBoard--has-image:

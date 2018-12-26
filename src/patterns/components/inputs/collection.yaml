@@ -52,10 +52,10 @@ variableTable:
     default: '$'
     description: The symbol used in the before pseudo-element for monetary inputs.
   $input-placeholder-color:
-    default: $gray
+    default: $sprk-gray
     description: The color of the input placeholder text.
   $input-readonly-text-color:
-    default: $gray
+    default: $sprk-gray
     description: The input text color of inputs with the readonly attribute.
   $fieldset-padding:
     default: 0
@@ -64,19 +64,19 @@ variableTable:
     default: 0
     description: The border radius on text inputs.
   $text-input-border-color:
-    default: $black
+    default: $sprk-black
     description: The border color on text inputs.
   $text-input-border-width:
     default: 0
     description: The border width on text inputs.
   $input-container-margin-bottom:
-    default: $space-m
+    default: $sprk-space-m
     description: The bottom margin on input containers.
   $input-disabled-background-color:
-    default: $gray
+    default: $sprk-gray
     description: The background color of disabled inputs.
   $input-disabled-border-color:
-    default: $black
+    default: $sprk-black
     description: The border color of disabled inputs.
   $input-disabled-text-color:
     default: $input-gray-medium
@@ -85,16 +85,16 @@ variableTable:
     default: false
     description: Shows helper text after a field when that field is in focus. A 'true' value will not show helper text.
   $text-input-padding:
-    default: 3px $space-s
+    default: 3px $sprk-space-s
     description: The padding around text inputs.
   $input-readonly-border-color:
-    default: $black
+    default: $sprk-black
     description: The border color of readonly inputs.
   $input-box-shadow:
-    default: 0 1px 0 0 $black
+    default: 0 1px 0 0 $sprk-black
     description: The box-shadow on inputs.
   $input-error-box-shadow:
-    default: 0 3px 0 0 $yellow
+    default: 0 3px 0 0  $sprk-yellow
     description: The box-shadow on inputs with an error.
   $error-icon-size:
     default: 1.25rem
@@ -124,10 +124,10 @@ variableTable:
     default: $red
     description: The interaction color of text inputs.
   $error-text-color:
-    default: $black
+    default: $sprk-black
     description: The text color of error messages.
   $text-input-error-color:
-    default: $yellow
+    default:  $sprk-yellow
     description: The text input error color used for icons, borders and error state styles.
   $input-max-width:
     default: 27.5rem
