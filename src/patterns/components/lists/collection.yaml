@@ -8,10 +8,10 @@ restrictions:
     has a unique data-id property ("ordered-list-1", "ordered-list-2", "unordered-list-1", etc).
 sparkPackageCore: true
 variableTable:
-  $list-margin-left:
+  $sprk-list-margin-left:
     default: $sprk-space-m
     description: Sets the default margin left indentation on .sprk-b-List.
-  $list-indented-margin-left:
+  $sprk-list-indented-margin-left:
     default: $sprk-space-l
     description: Sets extended indentation (margin left) on the indented list variant.
 classTable:

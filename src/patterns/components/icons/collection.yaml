@@ -15,37 +15,37 @@ sparkPackageCore: true
 hasAngularInfo: true
 isIconGallery: true
 variableTable:
-  $icon-m:
+  $sprk-icon-m:
     default: 16px
     description: The default icon height and width.
-  $icon-l:
+  $sprk-icon-l:
     default: 32px
     description: The large icon height and width.
-  $icon-xl:
+  $sprk-icon-xl:
     default: 64px
     description: The extra large icon height and width.
-  $icon-xxl:
+  $sprk-icon-xxl:
     default: 128px
     description: The extra extra large icon height and width.
-  $icon-fill-color:
+  $sprk-icon-fill-color:
     default: $red
     description: Sets the fill color of the icons.
-  $icon-stroke-color:
+  $sprk-icon-stroke-color:
     default: $red
     description: Sets the stroke color of the icons.
-  $icon-using-custom-stroke:
+  $sprk-icon-using-custom-stroke:
     default: true
     description: Boolean value for if you want to use a custom stroke-width setting on the icons.
-  $icon-custom-stroke-width-s:
+  $sprk-icon-custom-stroke-width-s:
     default: 1px
     description: The stroke width setting for small.
-  $icon-custom-stroke-width-m:
+  $sprk-icon-custom-stroke-width-m:
     default: 1.5px
     description: The stroke width setting for medium.
-  $icon-custom-stroke-width-l:
+  $sprk-icon-custom-stroke-width-l:
     default: 2px
     description: The stroke width setting for large.
-  $icon-custom-stroke-width-xl:
+  $sprk-icon-custom-stroke-width-xl:
     default: 3px
     description: The stroke width setting for extra large.
 classTable:

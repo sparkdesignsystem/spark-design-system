@@ -11,19 +11,19 @@ restrictions:
     has a unique data-id property ("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc).
 sparkPackageCore: true
 variableTable:
-  $accordion-max-width:
+  $sprk-accordion-max-width:
     default: 53.125rem
     description: Sets the maximum width of the accordion element.
-  $accordion-border:
+  $sprk-accordion-border:
     default: 1px solid $sprk-black-tint-25
     description: Sets the border used in the accordion.
-  $accordion-border-open:
+  $sprk-accordion-border-open:
     default: 1px solid $sprk-black
     description: Sets the border used in the accordion items when they are open.
-  $accordion-summary-color:
+  $sprk-accordion-summary-color:
     default: $sprk-black
     description: Sets the font color of the item summary.
-  $accordion-summary-active-color:
+  $sprk-accordion-summary-active-color:
     default: $red
     description: Sets the color of the icon in the summary when the accordion item is open or hovered.
   $sprk-accordion-summary-padding:

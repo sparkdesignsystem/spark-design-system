@@ -45,118 +45,118 @@ restrictions:
 sparkPackageCore: true
 hasAngularInfo: true
 variableTable:
-  $input-gray-medium:
+  $sprk-input-gray-medium:
     default: #5a5a5a
     description: The primary color used for inputs.
-  $monetary-symbol:
+  $sprk-monetary-symbol:
     default: '$'
     description: The symbol used in the before pseudo-element for monetary inputs.
-  $input-placeholder-color:
+  $sprk-input-placeholder-color:
     default: $sprk-gray
     description: The color of the input placeholder text.
-  $input-readonly-text-color:
+  $sprk-input-readonly-text-color:
     default: $sprk-gray
     description: The input text color of inputs with the readonly attribute.
-  $fieldset-padding:
+  $sprk-fieldset-padding:
     default: 0
     description: The padding around fieldset elements.
-  $text-input-border-radius:
+  $sprk-text-input-border-radius:
     default: 0
     description: The border radius on text inputs.
-  $text-input-border-color:
+  $sprk-text-input-border-color:
     default: $sprk-black
     description: The border color on text inputs.
-  $text-input-border-width:
+  $sprk-text-input-border-width:
     default: 0
     description: The border width on text inputs.
-  $input-container-margin-bottom:
+  $sprk-input-container-margin-bottom:
     default: $sprk-space-m
     description: The bottom margin on input containers.
-  $input-disabled-background-color:
+  $sprk-input-disabled-background-color:
     default: $sprk-gray
     description: The background color of disabled inputs.
-  $input-disabled-border-color:
+  $sprk-input-disabled-border-color:
     default: $sprk-black
     description: The border color of disabled inputs.
-  $input-disabled-text-color:
+  $sprk-input-disabled-text-color:
     default: $input-gray-medium
     description: The text color of disabled inputs.
-  $helper-text-hidden:
+  $sprk-helper-text-hidden:
     default: false
     description: Shows helper text after a field when that field is in focus. A 'true' value will not show helper text.
-  $text-input-padding:
+  $sprk-text-input-padding:
     default: 3px $sprk-space-s
     description: The padding around text inputs.
-  $input-readonly-border-color:
+  $sprk-input-readonly-border-color:
     default: $sprk-black
     description: The border color of readonly inputs.
-  $input-box-shadow:
+  $sprk-input-box-shadow:
     default: 0 1px 0 0 $sprk-black
     description: The box-shadow on inputs.
-  $input-error-box-shadow:
+  $sprk-input-error-box-shadow:
     default: 0 3px 0 0  $sprk-yellow
     description: The box-shadow on inputs with an error.
-  $error-icon-size:
+  $sprk-error-icon-size:
     default: 1.25rem
     description: The height and width size of the icon that displays when inputs have an error.
-  $input-disabled-box-shadow:
+  $sprk-input-disabled-box-shadow:
     default: 0 1px 0 0 $input-gray-medium
     description: The box-shadow on disabled inputs.
-  $date-picker-max-width:
+  $sprk-date-picker-max-width:
     default: 20rem
     description: The maximum width of the date picker.
-  $date-picker-button-size:
+  $sprk-date-picker-button-size:
     default: 2.25rem
     description: The height and width of the clickable "day" buttons in the date picker.
-  $date-picker-column-adjustment-x:
+  $sprk-date-picker-column-adjustment-x:
     default: 0.25rem
     description: This value is added to the value of the $date-picker-button-size to get the maximum width of the days of the week header.
-  $date-picker-box-shadow:
+  $sprk-date-picker-box-shadow:
     default: 0 2px 5px $input-gray-medium
     description: The box shadow of the date picker.
-  $date-picker-day-interact-color:
+  $sprk-date-picker-day-interact-color:
     default: $red
     description: The interaction color of the days in the date picker.
   $sprk-date-picker-font-family:
     default: $sprk-font-family-body-two
     description: The font family used by the date picker.
-  $text-input-interact-color:
+  $sprk-text-input-interact-color:
     default: $red
     description: The interaction color of text inputs.
-  $error-text-color:
+  $sprk-error-text-color:
     default: $sprk-black
     description: The text color of error messages.
-  $text-input-error-color:
+  $sprk-text-input-error-color:
     default:  $sprk-yellow
     description: The text input error color used for icons, borders and error state styles.
-  $input-max-width:
+  $sprk-input-max-width:
     default: 27.5rem
     description: The maximum width of the input container.
-  $input-icon-offset-x:
+  $sprk-input-icon-offset-x:
     default: 7px
     description: The x offset value of input icons.
-  $input-icon-offset-y:
+  $sprk-input-icon-offset-y:
     default: 21px
     description: The y offset value of input icons.
-  $input-text-icon-offset-x:
+  $sprk-input-text-icon-offset-x:
     default: 6px
     description: The x offset value of icons inside the inputs.
-  $input-text-icon-offset-y:
+  $sprk-input-text-icon-offset-y:
     default: 21px
     description: The y offset value of icons inside the inputs.
-  $input-animation-speed:
+  $sprk-input-animation-speed:
     default: 0.3s
     description: The animation speed of input animations.
-  $select-arrow-offset-y:
+  $sprk-select-arrow-offset-y:
     default: -23px
     description: The vertical offset of the select container icon.
-  $select-arrow-offset-x:
+  $sprk-select-arrow-offset-x:
     default: 8px
     description: The horizontal offset of the select container icon.
-  $label-offset-y:
+  $sprk-label-offset-y:
     default: -53px
     description: The vertical offset value of labels.
-  $label-shrink-scale:
+  $sprk-label-shrink-scale:
     default: 0.82
     description: The value to scale to the labels by.
 classTable:

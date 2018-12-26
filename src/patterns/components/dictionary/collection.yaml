@@ -12,13 +12,13 @@ restrictions:
       has a unique data-id property ("dictionary-1", "dictionary-2", "dictionary-1", etc).
 sparkPackageExtras: true
 variableTable:
-  $dictionary-border:
+  $sprk-dictionary-border:
     default: 1px solid $sprk-gray
     description: Sets the border surrounding the dictionary.
-  $dictionary-stripe-color:
+  $sprk-dictionary-stripe-color:
     default: $sprk-gray
     description: Sets the background color of the key value pairs in the striped variant.
-  $dictionary-breakpoint:
+  $sprk-dictionary-breakpoint:
     default: 38.4375rem
     description: Sets the breakpoint for the dictionary.
   $sprk-dictionary-label-font-size:

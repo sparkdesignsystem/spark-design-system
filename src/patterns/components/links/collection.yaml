@@ -10,40 +10,40 @@ restrictions:
     ("link-1", "link-2", "link-3", etc).
 sparkPackageCore: true
 variableTable:
-  $link-color:
+  $sprk-link-color:
     default: $sprk-black
     description: The default link color.
-  $link-disabled-color:
+  $sprk-link-disabled-color:
     default: $sprk-black-tint-50
     description: The disabled link color.
-  $link-muted-color:
+  $sprk-link-muted-color:
     default: $sprk-black-tint-75
     description: The muted link color.
-  $link-standalone-color:
+  $sprk-link-standalone-color:
     default: $red
     description: The standalone link color.
-  $link-transition:
+  $sprk-link-transition:
     default: 0.3s
     description: The transition timing for hover, active and focus style application.
-  $link-underline-color:
+  $sprk-link-underline-color:
     default: $red
     description: Sets the color of the link underline.
-  $link-underline-visited-color:
+  $sprk-link-underline-visited-color:
     default: $red
     description: Sets the color of the link underline on visited links.
-  $link-underline-width:
+  $sprk-link-underline-width:
     default: 0.0625em
     description: Sets the size of the link underline.
-  $link-visited-color:
+  $sprk-link-visited-color:
     default: $red-mid
     description: Sets the color of visited links.
-  $link-standalone-font-weight:
+  $sprk-link-standalone-font-weight:
     default: bold
     description: The font weight for standalone links.
-  $link-inline-font-weight:
+  $sprk-link-inline-font-weight:
     default: normal
     description: The font weight for inline links.
-  $link-disabled-font-weight:
+  $sprk-link-disabled-font-weight:
     default: bold
     description: The font weight for disabled links.
 classTable:

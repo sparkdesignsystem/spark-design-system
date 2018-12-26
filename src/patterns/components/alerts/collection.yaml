@@ -14,13 +14,13 @@ restrictions:
     has a unique data-id property ("alert-info-1", "alert-info-2", "alert-info-1", etc).
 sparkPackageCore: true
 variableTable:
-  $alert-border:
+  $sprk-alert-border:
     default: 1px solid $sprk-gray
     description: Sets the border surrounding the alert.
-  $alert-bar-width:
+  $sprk-alert-bar-width:
     default: -10px
     description: Sets the width of the inset box-shadow X offset value to create the color bar on the right side of the alert.
-  $alert-bg-color:
+  $sprk-alert-bg-color:
     default: $sprk-white
     description: Sets the background color of the alert.
   $alert-color-info:
@@ -41,28 +41,28 @@ variableTable:
   $sprk-alert-line-height:
     default: 1.5
     description: The line height of the text in the content area.
-  $alert-icon-size:
+  $sprk-alert-icon-size:
     default: 40px
     description: Sets the height and width of the two icons used in the alert.
-  $alert-shadow:
+  $sprk-alert-shadow:
     default: 0 2px 5px rgba(0, 0, 0, 0.2)
     description: Sets the box shadow of the alert.
-  $alert-shadow-info:
+  $sprk-alert-shadow-info:
     default: inset $alert-bar-width 0 0 $alert-color-info
     description: Sets the box shadow of the information alert.
-  $alert-shadow-hover-info:
+  $sprk-alert-shadow-hover-info:
     default: inset -80px 0 0 $alert-color-info
     description: Sets the hover state box shadow of the information alert.
-  $alert-shadow-success:
+  $sprk-alert-shadow-success:
     default: inset $alert-bar-width 0 0 $alert-color-success
     description: Sets the box shadow of the success alert.
-  $alert-shadow-hover-success:
+  $sprk-alert-shadow-hover-success:
     default: inset -80px 0 0 $alert-color-info
     description: Sets the hover state box shadow of the success alert.
-  $alert-shadow-fail:
+  $sprk-alert-shadow-fail:
     default: inset $alert-bar-width 0 0 $alert-color-fail
     description: Sets the box shadow of the failure alert.
-  $alert-shadow-hover-fail:
+  $sprk-alert-shadow-hover-fail:
     default: inset -80px 0 0 $alert-color-info
     description: Sets the hover state box shadow of the failure alert.
   $sprk-alert-content-padding:
