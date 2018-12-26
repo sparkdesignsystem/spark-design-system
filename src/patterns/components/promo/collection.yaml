@@ -13,34 +13,34 @@ links:
     href: /patterns/utilities/single-property.html#spacing
 sparkPackageCore: true
 variableTable:
-  $promo-background-color:
+  $sprk-promo-background-color:
     default: $sprk-white
     description: The background color of the promo.
-  $promo-border:
+  $sprk-promo-border:
     default: 1px solid $sprk-gray
     description: The border style of the border promo variant.
-  $promo-max-width:
+  $sprk-promo-max-width:
     default: 42.5rem
     description: The maximum width of the promo.
-  $promo-breakpoint:
+  $sprk-promo-breakpoint:
     default: 42.5rem
     description: The breakpoint for large viewport styles.
-  $promo-image-narrow-max-height:
+  $sprk-promo-image-narrow-max-height:
     default: 20rem
     description: The maximum height of the image on narrow viewports.
-  $promo-image-narrow-max-width:
+  $sprk-promo-image-narrow-max-width:
     default: 50%
     description: The maximum width of the image on narrow viewports.
-  $promo-title-font-color:
+  $sprk-promo-title-font-color:
     default: $sprk-black
     description: The color of the title.
-  $promo-title-font-weight:
-    default: $font-weight-display-four
+  $sprk-promo-title-font-weight:
+    default: $sprk-font-weight-display-four
     description: The font weight of the title.
-  $promo-subtitle-font-color:
+  $sprk-promo-subtitle-font-color:
     default: $sprk-black
     description: The color of the subtitle.
-  $promo-subtitle-font-weight:
+  $sprk-promo-subtitle-font-weight:
     default: $sprk-font-weight-body-one
     description: The font weight of the subtitle.
 classTable:

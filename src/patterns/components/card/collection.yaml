@@ -21,7 +21,7 @@ variableTable:
     default: 1px solid rgba(0, 0, 0, 0.15)
     description: Sets the border surrounding the card.
   $sprk-card-breakpoint:
-    default: $split-breakpoint-s
+    default: $sprk-split-breakpoint-s
     description: The breakpoint at which the card styles change.
   $sprk-card-max-width:
     default: 26.5625rem
@@ -42,7 +42,7 @@ variableTable:
     default: $sprk-space-misc-a
     description: Sets the padding of the card content.
   $sprk-card-header-bg-color:
-    default: $green
+    default: $sprk-green
     description: The background color of the header area for the highlighted header card variant.
   $sprk-card-header-text-color:
     default: $sprk-white

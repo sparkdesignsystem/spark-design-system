@@ -19,7 +19,7 @@ restrictions:
 sparkPackageCore: true
 variableTable:
   $sprk-btn-background-color:
-    default: $green
+    default: $sprk-green
     description: Sets the background color of the button.
   $sprk-btn-shadow:
     default: 0 3px 10px rgba(20,20,20,0.08)

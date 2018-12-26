@@ -3,13 +3,13 @@ description: Used to make a selection. Intended for navigation or application st
 sparkPackageCore: true
 variableTable:
   $sprk-dropdown-padding:
-    default: $space-inset-short-l
+    default: $sprk-space-inset-short-l
     description: Sets the padding around the dropdown items.
   $sprk-dropdown-header-padding:
-    default: $space-inset-short-l
+    default: $sprk-space-inset-short-l
     description: Sets the padding around the dropdown header.
   $sprk-dropdown-footer-padding:
-    default: $space-inset-short-l
+    default: $sprk-space-inset-short-l
     description: Sets the padding around the dropdown footer in the informational variant.
   $sprk-dropdown-border:
     default: 1px solid $sprk-gray
@@ -18,10 +18,10 @@ variableTable:
     default: $sprk-gray-tint-75
     description: Sets the background color of the dropdown items that are active or hovered.
   $sprk-dropdown-active-border:
-    default: 2.5px solid $red
+    default: 2.5px solid $sprk-red
     description: Sets the left border of the dropdown item that is active.
   $sprk-dropdown-active-box-shadow:
-    default: -1px 0 0 0 $red
+    default: -1px 0 0 0 $sprk-red
     description: Sets the box-shadow of the dropdown item that is active.
   $sprk-dropdown-max-width:
     default: 24rem

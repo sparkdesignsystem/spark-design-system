@@ -79,7 +79,7 @@ variableTable:
     default: $sprk-black
     description: The border color of disabled inputs.
   $sprk-input-disabled-text-color:
-    default: $input-gray-medium
+    default: $sprk-input-gray-medium
     description: The text color of disabled inputs.
   $sprk-helper-text-hidden:
     default: false
@@ -100,7 +100,7 @@ variableTable:
     default: 1.25rem
     description: The height and width size of the icon that displays when inputs have an error.
   $sprk-input-disabled-box-shadow:
-    default: 0 1px 0 0 $input-gray-medium
+    default: 0 1px 0 0 $sprk-input-gray-medium
     description: The box-shadow on disabled inputs.
   $sprk-date-picker-max-width:
     default: 20rem
@@ -112,16 +112,16 @@ variableTable:
     default: 0.25rem
     description: This value is added to the value of the $date-picker-button-size to get the maximum width of the days of the week header.
   $sprk-date-picker-box-shadow:
-    default: 0 2px 5px $input-gray-medium
+    default: 0 2px 5px $sprk-input-gray-medium
     description: The box shadow of the date picker.
   $sprk-date-picker-day-interact-color:
-    default: $red
+    default: $sprk-red
     description: The interaction color of the days in the date picker.
   $sprk-date-picker-font-family:
     default: $sprk-font-family-body-two
     description: The font family used by the date picker.
   $sprk-text-input-interact-color:
-    default: $red
+    default: $sprk-red
     description: The interaction color of text inputs.
   $sprk-error-text-color:
     default: $sprk-black

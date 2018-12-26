@@ -28,10 +28,10 @@ variableTable:
     default: 128px
     description: The extra extra large icon height and width.
   $sprk-icon-fill-color:
-    default: $red
+    default: $sprk-red
     description: Sets the fill color of the icons.
   $sprk-icon-stroke-color:
-    default: $red
+    default: $sprk-red
     description: Sets the stroke color of the icons.
   $sprk-icon-using-custom-stroke:
     default: true
@@ -52,7 +52,7 @@ classTable:
   .sprk-c-Icon--current-color:
     description: Sets the fill and stroke properties to the current color of its container.
   .sprk-c-Icon--l:
-    description: Sets the icon height and width to $icon-l and stroke-width to $icon-custom-stroke-width-l.
+    description: Sets the icon height and width to $sprk-icon-l and stroke-width to $icon-custom-stroke-width-l.
   .sprk-c-Icon--xl:
     description: Sets the icon height and width to $icon-xl and stroke-width to $icon-custom-stroke-width-m.
   .sprk-c-Icon--xxl:

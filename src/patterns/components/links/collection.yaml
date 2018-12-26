@@ -20,22 +20,22 @@ variableTable:
     default: $sprk-black-tint-75
     description: The muted link color.
   $sprk-link-standalone-color:
-    default: $red
+    default: $sprk-red
     description: The standalone link color.
   $sprk-link-transition:
     default: 0.3s
     description: The transition timing for hover, active and focus style application.
   $sprk-link-underline-color:
-    default: $red
+    default: $sprk-red
     description: Sets the color of the link underline.
   $sprk-link-underline-visited-color:
-    default: $red
+    default: $sprk-red
     description: Sets the color of the link underline on visited links.
   $sprk-link-underline-width:
     default: 0.0625em
     description: Sets the size of the link underline.
   $sprk-link-visited-color:
-    default: $red-mid
+    default: $sprk-red
     description: Sets the color of visited links.
   $sprk-link-standalone-font-weight:
     default: bold

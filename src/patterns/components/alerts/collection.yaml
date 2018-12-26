@@ -23,13 +23,13 @@ variableTable:
   $sprk-alert-bg-color:
     default: $sprk-white
     description: Sets the background color of the alert.
-  $alert-color-info:
-    default: $blue
+  $sprk-alert-color-info:
+    default: $sprk-blue
     description: Sets the border color, icon color, and bar color of the information alert.
-  $alert-color-success:
-    default: $green
+  $sprk-alert-color-success:
+    default: $sprk-green
     description: Sets the border color, icon color, and bar color of the success alert.
-  $alert-color-fail:
+  $sprk-alert-color-fail:
     default:  $sprk-yellow
     description: Sets the border color, icon color, and bar color of the failure alert.
   $sprk-alert-font-size:
@@ -48,22 +48,22 @@ variableTable:
     default: 0 2px 5px rgba(0, 0, 0, 0.2)
     description: Sets the box shadow of the alert.
   $sprk-alert-shadow-info:
-    default: inset $alert-bar-width 0 0 $alert-color-info
+    default: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-info
     description: Sets the box shadow of the information alert.
   $sprk-alert-shadow-hover-info:
-    default: inset -80px 0 0 $alert-color-info
+    default: inset -80px 0 0 $sprk-alert-color-info
     description: Sets the hover state box shadow of the information alert.
   $sprk-alert-shadow-success:
-    default: inset $alert-bar-width 0 0 $alert-color-success
+    default: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-success
     description: Sets the box shadow of the success alert.
   $sprk-alert-shadow-hover-success:
-    default: inset -80px 0 0 $alert-color-info
+    default: inset -80px 0 0 $sprk-alert-color-info
     description: Sets the hover state box shadow of the success alert.
   $sprk-alert-shadow-fail:
-    default: inset $alert-bar-width 0 0 $alert-color-fail
+    default: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-fail
     description: Sets the box shadow of the failure alert.
   $sprk-alert-shadow-hover-fail:
-    default: inset -80px 0 0 $alert-color-info
+    default: inset -80px 0 0 $sprk-alert-color-info
     description: Sets the hover state box shadow of the failure alert.
   $sprk-alert-content-padding:
     default: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a
