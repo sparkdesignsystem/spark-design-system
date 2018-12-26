@@ -19,7 +19,7 @@ variableTable:
     default: $sprk-black
     description: The color of the pagination links.
   $sprk-pag-link-color-hover:
-    default: $pag-link-color
+    default: $sprk-pag-link-color
     description: The color of the pagination links on hover.
   $sprk-pag-selection-color:
     default: $sprk-red
