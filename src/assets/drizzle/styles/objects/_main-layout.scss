@@ -16,9 +16,9 @@ $drizzle-header-padding-vert-wide: 1rem;
   flex: 1 0 auto;
   padding-bottom: 4rem;
 
-  @media (min-width: $nav-switch-breakpoint) {
-    width: $layout-main-width;
-    margin-left: $layout-nav-width;
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    width: $drizzle-layout-main-width;
+    margin-left: $drizzle-layout-nav-width;
   }
 }
 
@@ -29,11 +29,11 @@ $drizzle-header-padding-vert-wide: 1rem;
   flex-wrap: wrap;
   align-items: center;
 
-  @media (min-width: $nav-switch-breakpoint) {
-    width: $layout-main-width;
-    margin-left: $layout-nav-width;
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    width: $drizzle-layout-main-width;
+    margin-left: $drizzle-layout-nav-width;
   }
-  @media (max-width: $footer-collapse-breakpoint) {
+  @media (max-width: $drizzle-footer-collapse-breakpoint) {
     display: block;
     justify-content: center;
   }
@@ -41,10 +41,10 @@ $drizzle-header-padding-vert-wide: 1rem;
 
 .#{$app-namespace}-o-Layout__content {
   max-width: 66rem;
-  padding: $sprk-space-l $sprk-space-m;
+  padding: $drizzle-space-l $drizzle-space-m;
 
-  @media (min-width: $nav-switch-breakpoint) {
-    padding: $sprk-space-l;
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    padding: $drizzle-space-l;
   }
 }
 
@@ -58,25 +58,25 @@ $drizzle-header-padding-vert-wide: 1rem;
 }
 
 .#{$app-namespace}-o-Layout__nav {
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     position: fixed;
     z-index: $drizzle-layer-height-xs;
     top: 0;
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    width: $layout-nav-width;
+    width: $drizzle-layout-nav-width;
     height: 100%;
     -webkit-overflow-scrolling: touch;
   }
 }
 
 .#{$app-namespace}-o-Layout__header {
-  background-color: $highlight;
+  background-color: $drizzle-highlight;
   padding: 5.1875rem 1rem 1rem 2rem;
   width: 100%;
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     padding: $drizzle-header-padding-vert-wide 0
       $drizzle-header-padding-vert-wide 2rem;
     position: sticky;
@@ -96,5 +96,5 @@ $drizzle-header-padding-vert-wide: 1rem;
 }
 
 .#{$app-namespace}-o-Layout__header .#{$app-namespace}-b-h1 {
-  color: $sprk-white;
+  color: $drizzle-white;
 }

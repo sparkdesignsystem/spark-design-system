@@ -1,14 +1,14 @@
 .#{$app-namespace}-c-Footer {
-  background-color: $purple;
-  padding: $space-inset-short-l;
+  background-color: $drizzle-purple;
+  padding: $drizzle-space-inset-short-l;
 
   @media (max-width: 21.5625rem) {
-    padding: $space-inset-short-m;
+    padding: $drizzle-space-inset-short-m;
   }
 }
 
 .#{$app-namespace}-c-Footer__icons {
-  @media (max-width: $footer-collapse-breakpoint) {
+  @media (max-width: $drizzle-footer-collapse-breakpoint) {
     margin: 0 auto;
     text-align: center;
   }
@@ -17,12 +17,12 @@
 .#{$app-namespace}-c-Footer__link {
   display: inline-block;
 
-  @media (max-width: $footer-collapse-breakpoint) {
-    margin: 0 auto $sprk-space-m;
+  @media (max-width: $drizzle-footer-collapse-breakpoint) {
+    margin: 0 auto $drizzle-space-m;
     text-align: center;
   }
 }
 
 .#{$app-namespace}-c-Footer__link:hover {
-  color: $red-light;
+  color: $drizzle-red-light;
 }
