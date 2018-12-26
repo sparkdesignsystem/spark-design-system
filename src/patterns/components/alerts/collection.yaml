@@ -65,10 +65,10 @@ variableTable:
     description: Sets the background color of the fail alert.
 >>>>>>> Update alerts design
   $sprk-alert-font-size:
-    default: 1rem;
+    default: 1rem
     description: The size of the text in the content area.
   $sprk-alert-font-weight:
-    default: 400;
+    default: 400
     description: The weight of the text in the content area.
   $sprk-alert-line-height:
     default: 1.5
