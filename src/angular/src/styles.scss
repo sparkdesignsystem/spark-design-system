@@ -1,26 +1,45 @@
 // font urls
-$using-webfont-body: true;
-$using-webfont-heading: true;
-$using-webfont-alternate: true;
-$body-font-name: FallSans;
-$body-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
-$body-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
-$heading-font-name: FallSans;
-$heading-font-src: url('https://spark-assets.netlify.com/FallSans-Light.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Light.woff') format('woff');
-$heading-bold-font-src: url('https://spark-assets.netlify.com/FallSans-Medium.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Medium.woff') format('woff');
-$alternate-font-weight: bold;
-$alternate-font-name: FallSans-Bold;
-$alternate-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
-  format('woff2'),
-  url('https://spark-assets.netlify.com/FallSans-Bold.woff') format('woff');
+$sprk-using-webfonts: true;
+$sprk-webfonts: (
+  (
+    url('https://spark-assets.netlify.com/RocketSans-Regular.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/RocketSans-Regular.woff')
+    format('woff')
+  ),
+  RocketSans,
+  400
+),
+  (
+  (
+    url('https://spark-assets.netlify.com/RocketSans-Bold.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/RocketSans-Bold.woff')
+    format('woff')
+  ),
+  RocketSans,
+  700
+),
+  (
+  (
+    url('https://spark-assets.netlify.com/RocketSans-Medium.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/RocketSans-Medium.woff')
+    format('woff')
+  ),
+  RocketSans,
+  500
+),
+  (
+  (
+    url('https://spark-assets.netlify.com/RocketSans-Light.woff2')
+    format('woff2'),
+    url('https://spark-assets.netlify.com/RocketSans-Light.woff')
+    format('woff')
+  ),
+  RocketSans,
+  300
+);
 
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core-angular.scss';
@@ -37,10 +56,6 @@ $alternate-font-src: url('https://spark-assets.netlify.com/FallSans-Bold.woff2')
 //
 // Angular site specific styling
 //
-* {
-  font-family: $body-font-name, sans-serif;
-}
-
 .#{$app-namespace}-c-AngularHeader {
   position: static;
 }

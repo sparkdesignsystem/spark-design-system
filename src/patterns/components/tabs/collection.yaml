@@ -37,6 +37,12 @@ variableTable:
   $tab-navigation-btn-active-bg-color:
     default: $gray
     description: The button tab background color of the currently active tab.
+  $sprk-tab-navigation-font-size:
+    default: $font-size-body-one
+    description: The font size of the tab text.
+  $sprk-tab-navigation-font-weight:
+    default: $font-weight-body-one
+    description: The font weight of the tab text.
 classTable:
   sprk-c-Tabs__button--active:
     description: Apply to the currently active tab to set active state styles.
