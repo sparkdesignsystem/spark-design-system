@@ -230,28 +230,24 @@ $sprk-border-radius: 5px !default;
 //
 // Alerts
 ///
+$sprk-alert-border-radius: 3px !default;
 $sprk-alert-border: 1px solid $sprk-gray !default;
-$sprk-alert-bar-width: -10px !default;
+$sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-alert-color: $sprk-black !default;
 $sprk-alert-bg-color: $sprk-white !default;
-$sprk-alert-color-info: $sprk-blue !default;
-$sprk-alert-color-success: $sprk-green !default;
-$sprk-alert-color-fail: $sprk-yellow !default;
+$sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
+$sprk-alert-color-info: $sprk-black !default;
+$sprk-alert-color-success: $sprk-black !default;
+$sprk-alert-bg-color-success: rgb(236, 253, 251) !default;
+$sprk-alert-color-fail: $sprk-black !default;
+$sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
 $sprk-alert-icon-size: 40px !default;
-$sprk-alert-font-size: 1rem;
-$sprk-alert-font-weight: 400;
-$sprk-alert-line-height: 1.5;
-$sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
-  $sprk-space-misc-a;
-$sprk-alert-dismiss-padding: $sprk-space-m;
-$sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0;
-$sprk-alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
-$sprk-alert-shadow-info: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-info !default;
-$sprk-alert-shadow-hover-info: inset -80px 0 0 $sprk-alert-color-info !default;
-$sprk-alert-shadow-success: inset $sprk-alert-bar-width 0 0
-  $sprk-alert-color-success !default;
-$sprk-alert-shadow-hover-success: inset -80px 0 0 $sprk-alert-color-success !default;
-$sprk-alert-shadow-fail: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-fail !default;
-$sprk-alert-shadow-hover-fail: inset -80px 0 0 $sprk-alert-color-fail !default;
+$sprk-alert-font-size: 1rem !default;
+$sprk-alert-font-weight: 400 !default;
+$sprk-alert-line-height: 1.5 !default;
+$sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a !default;
+$sprk-alert-dismiss-padding: $sprk-space-m !default;
+$sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
 
 //
 // Promos
