@@ -12,7 +12,8 @@ import { SparkTabbedNavigationComponent } from './sprk-tabbed-navigation.compone
       <button sprkTabbedNavigationTab [defaultActive]="true">Tab 2</button>
       <div sprkTabbedNavigationPanel>Tab1 Content</div>
       <div sprkTabbedNavigationPanel [defaultActive]="true">Tab2 Content</div>
-    </sprk-tabbed-navigation>`
+    </sprk-tabbed-navigation>
+  `
 })
 export class TestComponent {}
 

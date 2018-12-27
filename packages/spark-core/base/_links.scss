@@ -3,50 +3,50 @@
 // ==================================================================
 //
 .sprk-b-Link {
-  color: $link-color;
-  border-bottom: $link-underline-width solid $link-underline-color;
-  font-weight: $link-inline-font-weight;
+  color: $sprk-link-color;
+  border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
+  font-weight: $sprk-link-inline-font-weight;
   position: relative;
   text-decoration: none;
-  transition: $link-transition;
+  transition: $sprk-link-transition;
 
   &:visited {
-    color: $link-visited-color;
-    border-bottom: $link-underline-width solid $link-visited-color;
+    color: $sprk-link-visited-color;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-visited-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-underline-color;
-    border-bottom: $link-underline-width solid $link-underline-color;
+    color: $sprk-link-underline-color;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
   }
 }
 
 .sprk-b-Link--standalone {
-  color: $link-standalone-color;
-  border: $link-underline-width solid transparent;
-  font-weight: $link-standalone-font-weight;
+  color: $sprk-link-standalone-color;
+  border: $sprk-link-underline-width solid transparent;
+  font-weight: $sprk-link-standalone-font-weight;
 
   &:hover,
   &:active,
   &:focus {
-    transition: $link-transition;
-    border-bottom: $link-underline-width solid $link-underline-color;
+    transition: $sprk-link-transition;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
   }
 }
 
 .sprk-b-Link--muted {
-  color: $link-muted-color;
+  color: $sprk-link-muted-color;
 
   &:visited {
-    color: $link-muted-color;
+    color: $sprk-link-muted-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-muted-color;
+    color: $sprk-link-muted-color;
   }
 }
 
@@ -62,19 +62,23 @@
 }
 
 .sprk-b-Link--disabled {
-  color: $link-disabled-color;
+  color: $sprk-link-disabled-color;
   pointer-events: none;
-  border-bottom: $link-underline-width solid $link-disabled-color;
-  font-weight: $link-disabled-font-weight;
+  border-bottom: $sprk-link-underline-width solid $sprk-link-disabled-color;
+  font-weight: $sprk-link-disabled-font-weight;
 
   &:visited {
-    color: $link-disabled-color;
-    border-bottom: $link-underline-width solid $link-disabled-color;
+    color: $sprk-link-disabled-color;
+    border-bottom: $sprk-link-underline-width solid $sprk-link-disabled-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-disabled-color;
+    color: $sprk-link-disabled-color;
+  }
+
+  &::after {
+    background: $sprk-link-disabled-color;
   }
 }

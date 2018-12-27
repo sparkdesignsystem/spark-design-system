@@ -2,32 +2,32 @@
 // Buttons
 // ==================================================================
 .sprk-c-Button {
-  transition: all $btn-transition-speed;
-  border-radius: $btn-border-radius;
-  letter-spacing: $btn-letter-spacing;
+  transition: all $sprk-btn-transition-speed;
+  border-radius: $sprk-btn-border-radius;
+  letter-spacing: $sprk-btn-letter-spacing;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $btn-hover-background-color;
-    border-color: $btn-hover-background-color;
-    color: $btn-hover-text-color;
-    box-shadow: $btn-shadow;
+    background-color: $sprk-btn-hover-background-color;
+    border-color: $sprk-btn-hover-background-color;
+    box-shadow: $sprk-btn-shadow;
+    color: $sprk-btn-hover-text-color;
   }
 
   &:visited {
-    color: $btn-text-color;
+    color: $sprk-btn-text-color;
   }
 }
 
 .sprk-c-Button--compact {
-  padding: $space-inset-short-m;
+  padding: $sprk-space-inset-short-m;
 }
 
 .sprk-c-Button--full\@xs {
   width: 100%;
 
-  @media screen and (min-width: $btn-breakpoint-xs) {
+  @media screen and (min-width: $sprk-btn-breakpoint-xs) {
     width: auto;
   }
 }
@@ -35,98 +35,98 @@
 .sprk-c-Button--full\@sm {
   width: 100%;
 
-  @media screen and (min-width: $btn-breakpoint-s) {
+  @media screen and (min-width: $sprk-btn-breakpoint-s) {
     width: auto;
   }
 }
 
 .sprk-c-Button--secondary {
-  background-color: $btn-secondary-background-color;
-  border: $btn-border-width $btn-border-style $btn-secondary-border-color;
-  color: $btn-secondary-text-color;
-  letter-spacing: $btn-secondary-letter-spacing;
+  background-color: $sprk-btn-secondary-background-color;
+  border: $sprk-btn-border-width $sprk-btn-border-style $sprk-btn-secondary-border-color;
+  color: $sprk-btn-secondary-text-color;
+  letter-spacing: $sprk-btn-secondary-letter-spacing;
 
   &:visited {
-    color: $btn-secondary-text-color;
+    color: $sprk-btn-secondary-text-color;
   }
 
   &:hover,
   &:active,
   &:focus {
-    box-shadow: $btn-secondary-hover-shadow;
-    background-color: $btn-secondary-hover-background-color;
-    border: $btn-border-width $btn-border-style
-      $btn-secondary-hover-border-color;
-    color: $btn-secondary-hover-text-color;
+    box-shadow: $sprk-btn-secondary-hover-shadow;
+    background-color: $sprk-btn-secondary-hover-background-color;
+    border: $sprk-btn-border-width $sprk-btn-border-style
+      $sprk-btn-secondary-hover-border-color;
+    color: $sprk-btn-secondary-hover-text-color;
   }
 }
 
 .sprk-c-Button--tertiary {
-  background-color: $btn-tertiary-background-color;
+  background-color: $sprk-btn-tertiary-background-color;
   box-shadow: none;
-  border: $btn-tertiary-border;
-  color: $btn-tertiary-text-color;
-  letter-spacing: $btn-tertiary-letter-spacing;
+  border: $sprk-btn-tertiary-border;
+  color: $sprk-btn-tertiary-text-color;
+  letter-spacing: $sprk-btn-tertiary-letter-spacing;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $btn-tertiary-hover-background-color;
-    color: $btn-tertiary-hover-text-color;
-    box-shadow: $btn-tertiary-hover-shadow;
+    background-color: $sprk-btn-tertiary-hover-background-color;
+    color: $sprk-btn-tertiary-hover-text-color;
+    box-shadow: $sprk-btn-tertiary-hover-shadow;
   }
 
   &:visited {
-    color: $btn-tertiary-text-color;
+    color: $sprk-btn-tertiary-text-color;
   }
 
   &::after {
     content: '';
-    border-bottom: $btn-tertiary-underline-width solid
-      $btn-tertiary-underline-color;
+    border-bottom: $sprk-btn-tertiary-underline-width solid
+      $sprk-btn-tertiary-underline-color;
     display: block;
     width: 100%;
-    padding-top: $btn-tertiary-underline-padding-top;
+    padding-top: $sprk-btn-tertiary-underline-padding-top;
     margin: 0 auto;
   }
 
   &:hover::after,
   &:active::after,
   &:focus::after {
-    border-color: $btn-tertiary-hover-underline-color;
-    transition: border $btn-transition-speed ease-in-out;
+    border-color: $sprk-btn-tertiary-hover-underline-color;
+    transition: border $sprk-btn-transition-speed ease-in-out;
   }
 }
 
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
-  box-shadow: $btn-disabled-shadow;
+  box-shadow: $sprk-btn-disabled-shadow;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $btn-disabled-background-color;
-    border-color: $btn-disabled-border-color;
-    color: $btn-disabled-text-color;
+    background-color: $sprk-btn-disabled-background-color;
+    border-color: $sprk-btn-disabled-border-color;
+    color: $sprk-btn-disabled-text-color;
   }
 
   &:visited {
-    color: $btn-disabled-text-color;
+    color: $sprk-btn-disabled-text-color;
   }
 }
 
 .sprk-c-Button--secondary.sprk-is-Disabled,
 .sprk-c-Button--secondary[disabled] {
-  box-shadow: $btn-secondary-disabled-shadow;
-  background-color: $btn-secondary-disabled-background-color;
-  border-color: $btn-secondary-disabled-border-color;
-  color: $btn-secondary-disabled-text-color;
+  box-shadow: $sprk-btn-secondary-disabled-shadow;
+  background-color: $sprk-btn-secondary-disabled-background-color;
+  border-color: $sprk-btn-secondary-disabled-border-color;
+  color: $sprk-btn-secondary-disabled-text-color;
 }
 
 .sprk-c-Button--tertiary.sprk-is-Disabled,
 .sprk-c-Button--tertiary[disabled] {
-  box-shadow: $btn-tertiary-disabled-shadow;
-  border: $btn-tertiary-disabled-border;
-  color: $btn-tertiary-disabled-text-color;
-  background-color: $btn-tertiary-disabled-background-color;
+  box-shadow: $sprk-btn-tertiary-disabled-shadow;
+  border: $sprk-btn-tertiary-disabled-border;
+  color: $sprk-btn-tertiary-disabled-text-color;
+  background-color: $sprk-btn-tertiary-disabled-background-color;
 }

@@ -6,7 +6,7 @@
 .#{$app-namespace}-o-Grid--gallery {
   /*! autoprefixer: off */
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: $space-l;
+  grid-gap: $drizzle-space-l;
 }
 
 // Spans all cols

@@ -16,17 +16,17 @@ import {
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-        [attr.data-analytics]="analyticsString">
+        [attr.data-analytics]="analyticsString"
+      >
         <sprk-icon
           iconType="chevron-down"
-          additionalClasses="{{ iconClass }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"></sprk-icon>
-          {{ title }}
+          additionalClasses="{{ iconClass }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
+        ></sprk-icon>
+        {{ title }}
       </a>
 
       <div [@toggleContent]="animState" data-sprk-toggle="content">
-        <div class="sprk-u-pts sprk-u-pbs">
-          <ng-content></ng-content>
-        </div>
+        <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
       </div>
     </div>
   `,

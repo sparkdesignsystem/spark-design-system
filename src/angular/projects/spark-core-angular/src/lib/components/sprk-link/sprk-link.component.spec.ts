@@ -82,7 +82,7 @@ describe('SparkLinkComponent', () => {
     fixture.detectChanges();
     expect(linkElement.getAttribute('data-id')).toBeNull();
   });
-  
+
   it('should set the target attr if supplied', () => {
     component.target = '_blank';
     fixture.detectChanges();

@@ -18,148 +18,148 @@ restrictions:
     has a unique data-id property ("button-primary-1", "button-primary-2", "button-tertiary-1", etc).
 sparkPackageCore: true
 variableTable:
-  $btn-background-color:
-    default: $green
+  $sprk-btn-background-color:
+    default: $sprk-green
     description: Sets the background color of the button.
-  $btn-shadow:
+  $sprk-btn-shadow:
     default: 0 3px 10px rgba(20,20,20,0.08)
     description: Sets the box-shadow of the button.
-  $btn-border-style:
+  $sprk-btn-border-style:
     default: solid
     description: Sets the style of the border.
-  $btn-border-color:
-    default: $btn-background-color
+  $sprk-btn-border-color:
+    default: $sprk-btn-background-color
     description: Sets the border color. Default is set to match the background color.
-  $btn-border-width:
+  $sprk-btn-border-width:
     default: 2px
     description: Sets the width of the border.
-  $btn-font-weight:
+  $sprk-btn-font-weight:
     default: 500
     description: Sets the weight of the font.
-  $btn-text-color:
-    default: $white
+  $sprk-btn-text-color:
+    default: $sprk-white
     description: Sets the font color.
-  $btn-border-radius:
+  $sprk-btn-border-radius:
     default: 4px
     description: Sets the border radius.
-  $btn-hover-background-color:
-    default: $green-dark
+  $sprk-btn-hover-background-color:
+    default: $sprk-green-dark
     description: Sets the background color on hover.
-  $btn-hover-text-color:
-    default: $white
+  $sprk-btn-hover-text-color:
+    default: $sprk-white
     description: Sets the color of button text on hover.
-  $btn-padding:
-    default: $space-m 24px
+  $sprk-btn-padding:
+    default: $sprk-space-m 24px
     description: Sets the padding value.
-  $btn-breakpoint-xs:
+  $sprk-btn-breakpoint-xs:
     default: 30rem
     description: Sets the extra small breakpoint used for full width buttons to become normal width.
-  $btn-breakpoint-s:
+  $sprk-btn-breakpoint-s:
     default: 42.5rem
     description: Sets the small breakpoint used for full width buttons to become normal width.
-  $btn-transition-speed:
+  $sprk-btn-transition-speed:
     default: 0.3s
     description: Sets the CSS transition speed.
-  $btn-letter-spacing:
+  $sprk-btn-letter-spacing:
     default: 0.62px
     description: Sets the letter spacing.
-  $btn-disabled-opacity:
+  $sprk-btn-disabled-opacity:
     default: 1
     description: Sets the opacity of the disabled button.
-  $btn-disabled-border-width:
-    default: $btn-border-width
+  $sprk-btn-disabled-border-width:
+    default: $sprk-btn-border-width
     description: Sets the border width of the disabled button.
-  $btn-disabled-background-color:
-    default: $gray-dark
+  $sprk-btn-disabled-background-color:
+    default: $sprk-gray-dark
     description: Sets the background color of the disabled button.
-  $btn-disabled-text-color:
-    default: $white
+  $sprk-btn-disabled-text-color:
+    default: $sprk-white
     description: Sets the font color of the disabled button.
-  $btn-disabled-border-color:
+  $sprk-btn-disabled-border-color:
     default: transparent
     description: Sets the border color of the disabled button.
-  $btn-disabled-shadow:
+  $sprk-btn-disabled-shadow:
     default: none
     description: Sets the shadow of the disabled button.
-  $btn-secondary-disabled-background-color:
+  $sprk-btn-secondary-disabled-background-color:
     default: transparent
     description: Sets the background color of disabled secondary buttons.
-  $btn-secondary-disabled-text-color:
-    default: $gray-dark
+  $sprk-btn-secondary-disabled-text-color:
+    default: $sprk-gray-dark
     description: Sets the text color of disabled secondary buttons.
-  $btn-secondary-disabled-border-color:
-    default: $gray-dark
+  $sprk-btn-secondary-disabled-border-color:
+    default: $sprk-gray-dark
     description: Sets the border color of disabled secondary buttons.
-  $btn-secondary-disabled-shadow:
+  $sprk-btn-secondary-disabled-shadow:
     default: none
     description: Sets the shadow of disabled secondary buttons.
-  $btn-secondary-background-color:
-    default: $white
+  $sprk-btn-secondary-background-color:
+    default: $sprk-white
     description: Sets the background color of the secondary button.
-  $btn-secondary-border-color:
-    default: $gray-dark
+  $sprk-btn-secondary-border-color:
+    default: $sprk-gray-dark
     description: Sets the border color of the secondary button.
-  $btn-secondary-text-color:
-    default: $black
+  $sprk-btn-secondary-text-color:
+    default: $sprk-black
     description: Sets the font color of the secondary button.
-  $btn-secondary-hover-text-color:
-    default: $black
+  $sprk-btn-secondary-hover-text-color:
+    default: $sprk-black
     description: Sets the hover state font color of the secondary button.
-  $btn-secondary-hover-background-color:
+  $sprk-btn-secondary-hover-background-color:
     default: transparent
     description: Sets the hover state background color of the secondary button.
-  $btn-secondary-hover-border-color:
-    default: $gray-dark
+  $sprk-btn-secondary-hover-border-color:
+    default: $sprk-gray-dark
     description: Sets the hover state border color of the secondary button.
-  $btn-secondary-hover-shadow:
+  $sprk-btn-secondary-hover-shadow:
     default: 0 3px 10px rgba(20, 20, 20, 0.08)
     description: Sets the hover state shadow for secondary buttons.
-  $btn-secondary-letter-spacing:
+  $sprk-btn-secondary-letter-spacing:
     default: 0.62px
     description: Sets the letter spacing of the secondary button.
-  $btn-tertiary-background-color:
+  $sprk-btn-tertiary-background-color:
     default: transparent
     description: Sets the background color of the tertiary button.
-  $btn-tertiary-border-color:
+  $sprk-btn-tertiary-border-color:
     default: none
     description: Sets the border color of the tertiary button.
-  $btn-tertiary-text-color:
-    default: $black
+  $sprk-btn-tertiary-text-color:
+    default: $sprk-black
     description: Sets the font color and visited state font color of the tertiary button.
-  $btn-tertiary-underline-width:
+  $sprk-btn-tertiary-underline-width:
     default: 0.125em
     description: Sets the width of the underline for tertiary buttons.
-  $btn-tertiary-underline-padding-top:
+  $sprk-btn-tertiary-underline-padding-top:
     default: 0.125em
     description: Sets the vertical distance between the underline and the text for tertiary buttons.
-  $btn-tertiary-underline-color:
-    default: $gray-dark
+  $sprk-btn-tertiary-underline-color:
+    default: $sprk-gray-dark
     description: Sets the color of the underline for tertiary buttons.
-  $btn-tertiary-hover-text-color:
-    default: $black
+  $sprk-btn-tertiary-hover-text-color:
+    default: $sprk-black
     description: Sets the hover state font color of the tertiary button.
-  $btn-tertiary-hover-underline-color:
-    default: $black
+  $sprk-btn-tertiary-hover-underline-color:
+    default: $sprk-black
     description: Sets the hover state background color of the underline of the tertiary button.
-  $btn-tertiary-hover-background-color:
+  $sprk-btn-tertiary-hover-background-color:
     default: transparent
     description: Sets the hover state background color of the tertiary button.
-  $btn-tertiary-hover-shadow:
+  $sprk-btn-tertiary-hover-shadow:
     default: none
     description: Sets the hover state shadow of the tertiary button.
-  $btn-tertiary-disabled-shadow:
+  $sprk-btn-tertiary-disabled-shadow:
     default: none
     description: Sets the shadow of disabled tertiary buttons.
-  $btn-tertiary-disabled-border:
+  $sprk-btn-tertiary-disabled-border:
     default: none
     description: Sets the border of disabled tertiary buttons.
-  $btn-tertiary-disabled-background-color:
+  $sprk-btn-tertiary-disabled-background-color:
     default: transparent
     description: Sets the background color of disabled tertiary buttons.
-  $btn-tertiary-disabled-text-color:
-    default: $gray-dark
+  $sprk-btn-tertiary-disabled-text-color:
+    default: $sprk-gray-dark
     description: Sets the text color of disabled tertiary buttons.
-  $btn-tertiary-letter-spacing:
+  $sprk-btn-tertiary-letter-spacing:
     default: normal
     description: Sets the letter spacing of the tertiary button.
 
@@ -167,9 +167,9 @@ classTable:
   .sprk-c-Button--compact:
     description: Reduces the padding of the normal button to $space-inset-short-m.
   .sprk-c-Button--full@xs:
-    description: Makes the button full width of its parent container until it flips to normal width at the $btn-breakpoint-xs breakpoint.
+    description: Makes the button full width of its parent container until it flips to normal width at the $sprk-btn-breakpoint-xs breakpoint.
   .sprk-c-Button--full@sm:
-    description: Makes the button full width of its parent container until it flips to normal width at the $btn-breakpoint-s breakpoint.
+    description: Makes the button full width of its parent container until it flips to normal width at the $sprk-btn-breakpoint-s breakpoint.
   .sprk-c-Button--secondary:
     description: Styles the button as the secondary variant.
   .sprk-c-Button--tertiary:

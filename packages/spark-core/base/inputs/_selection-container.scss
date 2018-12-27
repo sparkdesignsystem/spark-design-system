@@ -1,5 +1,5 @@
 .sprk-b-SelectionContainer {
-  margin: $space-s;
+  margin: $sprk-space-s;
 }
 
 .sprk-b-SelectionContainer .sprk-b-Label {
@@ -13,9 +13,9 @@
 
 .sprk-b-SelectionContainer [disabled][type='radio'],
 .sprk-b-SelectionContainer [disabled][type='checkbox'] {
-  border: 1px solid $gray;
+  border: 1px solid $sprk-gray;
 }
 
 .sprk-b-SelectionContainer:last-child {
-  margin-bottom: $space-s;
+  margin-bottom: $sprk-space-s;
 }

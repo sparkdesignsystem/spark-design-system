@@ -52,7 +52,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: $code-preview;
+  background: $drizzle-code-preview;
 }
 
 /* Inline code */

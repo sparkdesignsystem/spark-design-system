@@ -1,6 +1,6 @@
 .sprk-b-InputContainer {
   margin: 3rem 0;
-  max-width: $input-max-width;
+  max-width: $sprk-input-max-width;
 }
 
 .sprk-b-InputContainer__visibility-toggle ~ .sprk-b-ErrorContainer {
@@ -11,7 +11,7 @@
 .sprk-b-InputContainer__input-border {
   display: block;
   content: ' ';
-  border-bottom: 3px solid $text-input-interact-color;
+  border-bottom: 3px solid $sprk-text-input-interact-color;
   width: 0;
   opacity: 1;
 }

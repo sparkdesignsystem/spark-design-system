@@ -1,7 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 .sprk-b-TextInput.ng-invalid:not(.ng-pristine) ~ .sprk-b-InputContainer__input-border {
   animation: none;
-  border-bottom: 3px solid $text-input-error-color;
+  border-bottom: 3px solid $sprk-text-input-error-color;
   width: 100%;
 }
 
