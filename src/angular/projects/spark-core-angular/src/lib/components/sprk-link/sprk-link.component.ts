@@ -41,6 +41,9 @@ export class SparkLinkComponent {
       case 'plain':
         classArray.push('sprk-b-Link--plain');
         break;
+      case 'icon':
+        classArray.push('sprk-b-Link--standalone sprk-b-Link--icon');
+        break;
       default:
         break;
     }

@@ -12,7 +12,7 @@ import {
   template: `
     <div class="{{ additionalClasses }}" [attr.data-id]="idString">
       <a
-        class="{{ titleFontClass }} sprk-b-Link sprk-b-Link--standalone sprk-b-Link--plain"
+        class="{{ titleFontClass }} sprk-b-Link sprk-b-Link--standalone sprk-b-Link--icon"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"

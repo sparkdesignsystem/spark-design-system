@@ -10,45 +10,77 @@ restrictions:
     ("link-1", "link-2", "link-3", etc).
 sparkPackageCore: true
 variableTable:
-  $sprk-link-color:
-    default: $sprk-black
-    description: The default link color.
-  $sprk-link-disabled-color:
-    default: $sprk-black-tint-50
-    description: The disabled link color.
-  $sprk-link-muted-color:
-    default: $sprk-black-tint-75
-    description: The muted link color.
-  $sprk-link-standalone-color:
-    default: $sprk-red
-    description: The standalone link color.
   $sprk-link-transition:
     default: 0.3s
     description: The transition timing for hover, active and focus style application.
+  $sprk-link-color:
+    default: $sprk-black
+    description: The default link color.
+  $sprk-link-hover-color:
+    default: $sprk-black
+    description: Sets the color of the link text on the hover state.
   $sprk-link-underline-color:
-    default: $sprk-red
+    default: $sprk-gray-dark
     description: Sets the color of the link underline.
-  $sprk-link-underline-visited-color:
-    default: $sprk-red
-    description: Sets the color of the link underline on visited links.
   $sprk-link-underline-width:
-    default: 0.0625em
+    default: 0.09375em
     description: Sets the size of the link underline.
+  $sprk-link-font-weight:
+    default: bold
+    description: The default font weight for links.
   $sprk-link-visited-color:
-    default: $sprk-red
+    default: $sprk-black-tint-75
     description: Sets the color of visited links.
+  $sprk-link-underline-visited-color:
+    default: $sprk-black-tint-75
+    description: Sets the color of the link underline on visited links.
+  $sprk-link-standalone-color:
+    default: $sprk-black
+    description: The standalone link color.
+  $sprk-link-standalone-underline-color:
+    default: transparent
+    description: Sets the color of the standalone link underline.
   $sprk-link-standalone-font-weight:
     default: bold
     description: The font weight for standalone links.
-  $sprk-link-inline-font-weight:
-    default: normal
-    description: The font weight for inline links.
+  $sprk-link-standalone-hover-color:
+    default: $sprk-green
+    description: Sets the color of the standalone link in the hover state.
+  $sprk-link-standalone-hover-underline-color:
+    default: $sprk-green
+    description: Sets the color of the standalone link underline in the hover state.
+  $sprk-link-icon-underline-width:
+    default: 0
+    description: Sets the underline width for links containing icons.
+  $sprk-link-icon-underline-color:
+    default: transparent
+    description: Sets the underline color for links containing icons.
+  $sprk-link-icon-color:
+    default: $sprk-green
+    description: Sets the color of text and icons in links containing colors.
+  $sprk-link-muted-color:
+    default: $sprk-gray-dark
+    description: The muted link color.
+  $sprk-link-muted-underline-width:
+    default: 0
+    description: asdf
+  $sprk-link-muted-hover-underline-color:
+    default: $sprk-gray-dark
+    description: asdf
+  $sprk-link-disabled-color:
+    default: $sprk-gray-dark
+    description: The disabled link color.
   $sprk-link-disabled-font-weight:
     default: bold
     description: The font weight for disabled links.
+  $sprk-link-disabled-underline-width:
+    default: 0
+    description: The width of the underline for disabled links.
 classTable:
   .sprk-b-Link--standalone:
     description: Sets the styles for the standalone link variant.
+  .sprk-b-Link--icon:
+    description: Sets the styles for the variant containing an icon.
   .sprk-b-Link--muted:
     description: Sets the color styles for the muted link variant.
   .sprk-b-Link--plain:
