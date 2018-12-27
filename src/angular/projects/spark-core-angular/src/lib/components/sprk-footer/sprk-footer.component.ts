@@ -85,12 +85,10 @@ import { Component, Input } from '@angular/core';
             </div>
 
             <div
+              *ngIf="socialLinks"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Box"
             >
-              <h3
-                *ngIf="socialLinks"
-                class="sprk-o-Stack__item sprk-b-TypeBodyOne"
-              >
+              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
                 {{ connectHeading }}
               </h3>
 
