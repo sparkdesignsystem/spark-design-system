@@ -15,44 +15,25 @@ restrictions:
 sparkPackageCore: true
 variableTable:
   $sprk-alert-border:
-<<<<<<< HEAD
     default: 1px solid $sprk-gray
-    description: Sets the border surrounding the alert.
-  $sprk-alert-bar-width:
-    default: -10px
-    description: Sets the width of the inset box-shadow X offset value to create the color bar on the right side of the alert.
-  $sprk-alert-bg-color:
-    default: $sprk-white
-    description: Sets the background color of the alert.
-  $sprk-alert-color-info:
-    default: $sprk-blue
-    description: Sets the border color, icon color, and bar color of the information alert.
-  $sprk-alert-color-success:
-    default: $sprk-green
-    description: Sets the border color, icon color, and bar color of the success alert.
-  $sprk-alert-color-fail:
-    default:  $sprk-yellow
-    description: Sets the border color, icon color, and bar color of the failure alert.
-=======
-    default: 1px solid $gray
     description: Sets the border surrounding the alert.
   $sprk-alert-border-radius:
     default: 3px
     description: Sets the width of the inset box-shadow X offset value to create the color bar on the right side of the alert.
   $sprk-alert-color:
-    default: $black
+    default: $sprk-black
     description: Sets the color property of the alert.
   $sprk-alert-color-info:
-    default: $black
+    default: $sprk-black
     description: Sets the color property of the information alert.
   $sprk-alert-color-success:
-    default: $black
+    default: $sprk-black
     description: Sets the color property of the success alert.
   $sprk-alert-color-fail:
-    default: $black
+    default: $sprk-black
     description: Sets the color property of the failure alert.
   $sprk-alert-bg-color:
-    default: $white
+    default: $sprk-white
     description: Sets the background color of the base alert.
   $sprk-alert-bg-color-success:
     default: rgb(236, 253, 251)
@@ -63,12 +44,11 @@ variableTable:
   $sprk-alert-bg-color-fail:
     default: rgb(255, 248, 232)
     description: Sets the background color of the fail alert.
->>>>>>> Update alerts design
   $sprk-alert-font-size:
-    default: 1rem
+    default: 1rem;
     description: The size of the text in the content area.
   $sprk-alert-font-weight:
-    default: 400
+    default: 400;
     description: The weight of the text in the content area.
   $sprk-alert-line-height:
     default: 1.5
@@ -77,31 +57,8 @@ variableTable:
     default: 40px
     description: Sets the height and width of the two icons used in the alert.
   $sprk-alert-shadow:
-<<<<<<< HEAD
-    default: 0 2px 5px rgba(0, 0, 0, 0.2)
-    description: Sets the box shadow of the alert.
-  $sprk-alert-shadow-info:
-    default: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-info
-    description: Sets the box shadow of the information alert.
-  $sprk-alert-shadow-hover-info:
-    default: inset -80px 0 0 $sprk-alert-color-info
-    description: Sets the hover state box shadow of the information alert.
-  $sprk-alert-shadow-success:
-    default: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-success
-    description: Sets the box shadow of the success alert.
-  $sprk-alert-shadow-hover-success:
-    default: inset -80px 0 0 $sprk-alert-color-info
-    description: Sets the hover state box shadow of the success alert.
-  $sprk-alert-shadow-fail:
-    default: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-fail
-    description: Sets the box shadow of the failure alert.
-  $sprk-alert-shadow-hover-fail:
-    default: inset -80px 0 0 $sprk-alert-color-info
-    description: Sets the hover state box shadow of the failure alert.
-=======
     default: 0 3px 10px 1px rgba(0, 0, 0, 0.08)
     description: Sets the box shadow of the alert.
->>>>>>> Update alerts design
   $sprk-alert-content-padding:
     default: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a
     description: Sets the padding around the main content icon and message.
