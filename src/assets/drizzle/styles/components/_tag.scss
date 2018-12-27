@@ -1,5 +1,5 @@
 .#{$app-namespace}-c-Tag {
-  background-color: $black;
+  background-color: $drizzle-black;
   border-radius: 3px;
   display: flex;
   text-transform: uppercase;
@@ -9,22 +9,22 @@
 }
 
 .#{$app-namespace}-c-Tag--secondary {
-  background-color: $white;
+  background-color: $drizzle-white;
   border-radius: 3px;
 }
 
 .#{$app-namespace}-c-Tag--inprogress {
-  background-color: $gray;
+  background-color: $drizzle-gray;
 }
 
 .#{$app-namespace}-c-Tag--secondary .#{$app-namespace}-c-Tag__desc span {
-  color: $black;
+  color: $drizzle-black;
 }
 
 .#{$app-namespace}-c-Tag__color-box {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  background-color: $orange-light;
+  background-color: $drizzle-orange-light;
   width: 1.5625rem;
 }
 
@@ -36,7 +36,7 @@
 .#{$app-namespace}-c-Tag__desc {
   align-self: center;
   display: block;
-  color: $white;
+  color: $drizzle-white;
   text-decoration: none;
   text-align: center;
 }

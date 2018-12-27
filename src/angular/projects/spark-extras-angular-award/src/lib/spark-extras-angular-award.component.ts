@@ -3,53 +3,60 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-award',
   template: `
-  <sprk-stack itemSpacing="medium" additionalClasses="{{ additionalClasses }}">
-    <h2
-      sprkStackItem
-      [attr.data-id]="idString"
-      class="
+    <sprk-stack
+      itemSpacing="medium"
+      additionalClasses="{{ additionalClasses }}"
+    >
+      <h2
+        sprkStackItem
+        [attr.data-id]="idString"
+        class="
         sprk-o-Stack__item
         sprk-b-TypeDisplayFive
         sprk-b-Measure sprk-b-Measure--narrow
         sprk-u-TextAlign--center
-        sprk-o-Stack__item--center-column">
-      {{ title }}
-    </h2>
+        sprk-o-Stack__item--center-column"
+      >
+        {{ title }}
+      </h2>
 
-    <div
-      sprkStackItem
-      [ngClass]="getClasses()">
-      <a
-        class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-        [routerLink]="imgOneHref"
-        [attr.data-analytics]="analyticsStringImgOne">
-        <img
-          [ngClass]="getClassesImgOne()"
-          alt="{{ imgOneAlt }}"
-          src="{{ imgOneSrc }}">
-      </a>
+      <div sprkStackItem [ngClass]="getClasses()">
+        <a
+          class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
+          [routerLink]="imgOneHref"
+          [attr.data-analytics]="analyticsStringImgOne"
+        >
+          <img
+            [ngClass]="getClassesImgOne()"
+            alt="{{ imgOneAlt }}"
+            src="{{ imgOneSrc }}"
+          />
+        </a>
 
-      <a
-        class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-        [routerLink]="imgTwoHref"
-        [attr.data-analytics]="analyticsStringImgTwo">
-        <img
-          [ngClass]="getClassesImgTwo()"
-          alt="{{ imgTwoAlt }}"
-          src="{{ imgTwoSrc }}">
-      </a>
-    </div>
+        <a
+          class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
+          [routerLink]="imgTwoHref"
+          [attr.data-analytics]="analyticsStringImgTwo"
+        >
+          <img
+            [ngClass]="getClassesImgTwo()"
+            alt="{{ imgTwoAlt }}"
+            src="{{ imgTwoSrc }}"
+          />
+        </a>
+      </div>
 
-    <sprk-toggle
-      *ngIf="disclaimer !== 'false'"
-      sprkStackItem
-      additionalClasses="sprk-o-Stack__item--start-column"
-      toggleType="base"
-      title="{{ disclaimerTitle }}"
-      analyticsString="{{ analyticsStringDisclaimer }}">
-      <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
-    </sprk-toggle>
-  </sprk-stack>
+      <sprk-toggle
+        *ngIf="disclaimer !== 'false'"
+        sprkStackItem
+        additionalClasses="sprk-o-Stack__item--start-column"
+        toggleType="base"
+        title="{{ disclaimerTitle }}"
+        analyticsString="{{ analyticsStringDisclaimer }}"
+      >
+        <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
+      </sprk-toggle>
+    </sprk-stack>
   `,
   styles: ['']
 })

@@ -8,7 +8,8 @@ import { Component, Input } from '@angular/core';
       [href]="href"
       [attr.data-analytics]="analyticsString"
       [attr.target]="target"
-      [attr.data-id]="idString">
+      [attr.data-id]="idString"
+    >
       <ng-content></ng-content>
     </a>
   `

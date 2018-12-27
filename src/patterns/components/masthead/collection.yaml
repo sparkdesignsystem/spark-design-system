@@ -7,7 +7,7 @@ information:
   - Make sure you leave the 'data-sprk-masthead' attribute on the main Masthead element as it functions as a Spark JS hook. It's already included in the provided code.
 restrictions:
   - You must configure the size of your own logo asset. If you don't then the logo will be automatically sized
-    between the $masthead-logo-max-width (192px) and $masthead-logo-min-width (174px). You can additionally override those
+    between the $sprk-masthead-logo-max-width (192px) and $sprk-masthead-logo-min-width (174px). You can additionally override those
     min and max settings by resetting those variables in your own SCSS file.
   - You must set (in your own SCSS file) the SCSS variable $mobile-masthead-height so that the navigation displays properly on small screens.
     To get the correct setting for your needs, put your logo in the Masthead and then grab the total height of the
@@ -18,62 +18,62 @@ restrictions:
 sparkPackageCore: true
 hasAngularInfo: true
 variableTable:
-  $masthead-menu-icon-width:
-    default: $icon-l
+  $sprk-masthead-menu-icon-width:
+    default: $sprk-icon-l
     description: Sets the narrow viewport menu icon width.
-  $masthead-menu-icon-height:
-    default: $icon-l
+  $sprk-masthead-menu-icon-height:
+    default: $sprk-icon-l
     description: Sets the narrow viewport menu icon height.
-  $masthead-bg-color:
-    default: $white
+  $sprk-masthead-bg-color:
+    default: $sprk-white
     description: Sets the background color of the masthead.
-  $masthead-content-padding:
-    default: $space-m
+  $sprk-masthead-content-padding:
+    default: $sprk-space-m
     description: Sets the padding of the masthead content, menu, and branding sections.
-  $masthead-border-bottom-size:
+  $sprk-masthead-border-bottom-size:
     default: 1px
     description: Sets the size of the bottom border on the masthead.
-  $masthead-border-bottom:
-    default: $masthead-border-bottom-size solid $gray
+  $sprk-masthead-border-bottom:
+    default: $sprk-masthead-border-bottom-size solid $sprk-gray
     description: Sets the border on the masthead.
-  $masthead-breakpoint:
+  $sprk-masthead-breakpoint:
     default: 54rem
     description: Sets the point at which the masthead navigation switches from narrow viewport style (shown on menu tap/click) to large viewport style (shown all the time).
-  $masthead-column-width:
+  $sprk-masthead-column-width:
     default: 89rem
     description: Sets the maximum width of the masthead.
-  $big-nav-column-width:
+  $sprk-big-nav-column-width:
     default: 64rem
     description: Sets the maximum width of the big navigation items in the navigation bar.
-  $big-nav-bg:
-    default: $white
+  $sprk-big-nav-bg:
+    default: $sprk-white
     description: Sets the background color of the big navigation bar.
-  $big-nav-active-color:
-    default: $red
+  $sprk-big-nav-active-color:
+    default: $sprk-red
     description: Sets the text and underline color of the active big navigation item.
-  $masthead-logo-max-width:
+  $sprk-masthead-logo-max-width:
     default: 192px
     description: Sets the maximum width of the logo.
-  $masthead-logo-min-width:
+  $sprk-masthead-logo-min-width:
     default: 174px
     description: Sets the minimum width of the logo.
-  $mobile-masthead-height:
+  $sprk-mobile-masthead-height:
     default: 174px
     description: This is the height of the masthead on small viewports and is used to calculate how far from the top the narrow navigation items should be displayed.
-  $narrow-nav-left-border:
-    default: 5px solid $red
+  $sprk-narrow-nav-left-border:
+    default: 5px solid $sprk-red
     description: Sets the left border of narrow navigation items that are active.
-  $narrow-nav-link-font-weight:
+  $sprk-narrow-nav-link-font-weight:
     default: normal
     description: Sets the font weight of narrow navigation items.
   $sprk-masthead-link-visited-color:
-    default: $black
+    default: $sprk-black
     description: Sets the visited state color of masthead links.
   $sprk-masthead-link-hover-color:
-    default: $red
+    default: $sprk-red
     description: Sets the hover state color of masthead links.
   $sprk-masthead-link-font-weight:
-    default: $font-weight-body-one
+    default: $sprk-font-weight-body-one
     description: Sets the font weight of masthead links.
 classTable:
   .sprk-c-Masthead--open:

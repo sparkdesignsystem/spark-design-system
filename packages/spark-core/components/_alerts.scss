@@ -4,69 +4,69 @@
 .sprk-c-Alert {
   align-items: center;
   justify-content: center;
-  background-color: $alert-bg-color;
-  border: $alert-border;
-  box-shadow: $alert-shadow;
+  background-color: $sprk-alert-bg-color;
+  border: $sprk-alert-border;
+  box-shadow: $sprk-alert-shadow;
   display: flex;
   transition: box-shadow 0.3s ease-in-out, color 0.4s ease-in-out;
 }
 
 .sprk-c-Alert--info {
-  border-color: $alert-color-info;
-  box-shadow: $alert-shadow, $alert-shadow-info;
+  border-color: $sprk-alert-color-info;
+  box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-info;
 
   .sprk-c-Alert__icon:first-child {
-    color: $alert-color-info;
+    color: $sprk-alert-color-info;
   }
 
   &:hover {
-    box-shadow: $alert-shadow, $alert-shadow-hover-info;
+    box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-hover-info;
 
     .sprk-c-Alert__icon--dismiss {
-      color: $white;
+      color: $sprk-white;
     }
   }
 }
 
 .sprk-c-Alert--success {
-  border-color: $alert-color-success;
-  box-shadow: $alert-shadow, $alert-shadow-success;
+  border-color: $sprk-alert-color-success;
+  box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-success;
 
   .sprk-c-Alert__icon:first-child {
-    color: $alert-color-success;
+    color: $sprk-alert-color-success;
   }
 
   &:hover {
-    box-shadow: $alert-shadow, $alert-shadow-hover-success;
+    box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-hover-success;
 
     .sprk-c-Alert__icon--dismiss {
-      color: $white;
+      color: $sprk-white;
     }
   }
 }
 
 .sprk-c-Alert--fail {
-  border-color: $alert-color-fail;
-  box-shadow: $alert-shadow, $alert-shadow-fail;
+  border-color: $sprk-alert-color-fail;
+  box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-fail;
 
   .sprk-c-Alert__icon:first-child {
-    color: $alert-color-fail;
+    color: $sprk-alert-color-fail;
   }
 
   &:hover {
-    box-shadow: $alert-shadow, $alert-shadow-hover-fail;
+    box-shadow: $sprk-alert-shadow, $sprk-alert-shadow-hover-fail;
 
     .sprk-c-Alert__icon--dismiss {
-      color: $white;
+      color: $sprk-white;
     }
   }
 }
 
 .sprk-c-Alert--no-dismiss {
-  box-shadow: $alert-shadow;
+  box-shadow: $sprk-alert-shadow;
 
   &:hover {
-    box-shadow: $alert-shadow;
+    box-shadow: $sprk-alert-shadow;
   }
 }
 
@@ -99,7 +99,7 @@
   align-self: flex-start;
   background-color: transparent;
   border: 0;
-  color: $black-tint-50;
+  color: $sprk-black-tint-50;
   padding: $sprk-alert-dismiss-padding;
 }
 
@@ -110,6 +110,6 @@
 }
 
 .sprk-c-Alert .sprk-c-Icon {
-  height: $alert-icon-size;
-  width: $alert-icon-size;
+  height: $sprk-alert-icon-size;
+  width: $sprk-alert-icon-size;
 }
