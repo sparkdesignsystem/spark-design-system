@@ -13,7 +13,7 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
-  "peerDendencies": {
+  "peerDependencies": {
     "@sparkdesignsystem/spark-core": "^7.0.0"
   },
   "publishConfig": {
