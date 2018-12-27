@@ -142,11 +142,33 @@
   margin-bottom: $sprk-stack-spacing-huge;
 }
 
+/* stylelint-disable selector-class-pattern */
+.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-a;
+}
+
+.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-b;
+}
+
+.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-c;
+}
+
+.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-d;
+}
+
+/* stylelint-enable selector-class-pattern */
 .sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
 .sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
 .sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
 .sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
   margin-bottom: 0;
 }
 
@@ -156,6 +178,8 @@
 [class*='sprk-o-Stack__item--third\@xxs'],
 [class*='sprk-o-Stack__item--half\@xxs'],
 [class*='sprk-o-Stack__item--three-fifths\@xxs'],
+[class*='sprk-o-Stack__item--three-tenths\@xxs'],
+[class*='sprk-o-Stack__item--seven-tenths\@xxs'],
 [class*='sprk-o-Stack__item--three-fourths\@xxs'],
 [class*='sprk-o-Stack__item--two-fifths\@xxs'] {
   @media all and (min-width: $sprk-split-breakpoint-xxs) {
@@ -169,6 +193,8 @@
 [class*='sprk-o-Stack__item--third\@xs'],
 [class*='sprk-o-Stack__item--half\@xs'],
 [class*='sprk-o-Stack__item--three-fifths\@xs'],
+[class*='sprk-o-Stack__item--three-tenths\@xs'],
+[class*='sprk-o-Stack__item--seven-tenths\@xs'],
 [class*='sprk-o-Stack__item--three-fourths\@xs'],
 [class*='sprk-o-Stack__item--two-fifths\@xs'] {
   @media all and (min-width: $sprk-split-breakpoint-xs) {
@@ -182,6 +208,8 @@
 [class*='sprk-o-Stack__item--third\@s'],
 [class*='sprk-o-Stack__item--half\@s'],
 [class*='sprk-o-Stack__item--three-fifths\@s'],
+[class*='sprk-o-Stack__item--three-tenths\@s'],
+[class*='sprk-o-Stack__item--seven-tenths\@s'],
 [class*='sprk-o-Stack__item--three-fourths\@s'],
 [class*='sprk-o-Stack__item--two-fifths\@s'] {
   @media all and (min-width: $sprk-split-breakpoint-s) {
@@ -195,6 +223,8 @@
 [class*='sprk-o-Stack__item--third\@m'],
 [class*='sprk-o-Stack__item--half\@m'],
 [class*='sprk-o-Stack__item--three-fifths\@m'],
+[class*='sprk-o-Stack__item--three-tenths\@m'],
+[class*='sprk-o-Stack__item--seven-tenths\@m'],
 [class*='sprk-o-Stack__item--three-fourths\@m'],
 [class*='sprk-o-Stack__item--two-fifths\@m'] {
   @media all and (min-width: $sprk-split-breakpoint-m) {
@@ -208,6 +238,8 @@
 [class*='sprk-o-Stack__item--third\@l'],
 [class*='sprk-o-Stack__item--half\@l'],
 [class*='sprk-o-Stack__item--three-fifths\@l'],
+[class*='sprk-o-Stack__item--three-tenths\@l'],
+[class*='sprk-o-Stack__item--seven-tenths\@l'],
 [class*='sprk-o-Stack__item--three-fourths\@l'],
 [class*='sprk-o-Stack__item--two-fifths\@l'] {
   @media all and (min-width: $sprk-split-breakpoint-l) {
@@ -221,6 +253,8 @@
 [class*='sprk-o-Stack__item--third\@xl'],
 [class*='sprk-o-Stack__item--half\@xl'],
 [class*='sprk-o-Stack__item--three-fifths\@xl'],
+[class*='sprk-o-Stack__item--three-tenths\@xl'],
+[class*='sprk-o-Stack__item--seven-tenths\@xl'],
 [class*='sprk-o-Stack__item--three-fourths\@xl'],
 [class*='sprk-o-Stack__item--two-fifths\@xl'] {
   @media all and (min-width: $sprk-split-breakpoint-xl) {
@@ -262,6 +296,24 @@
       margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xxs {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -297,6 +349,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@xxs {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@xxs {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@xxs {
       flex: 0 0 40%;
       max-width: 40%;
@@ -307,7 +369,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -347,6 +413,24 @@
       margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xs {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -382,6 +466,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@xs {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@xs {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@xs {
       flex: 0 0 40%;
       max-width: 40%;
@@ -392,7 +486,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -432,6 +530,24 @@
       margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@s {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -467,6 +583,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@s {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@s {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@s {
       flex: 0 0 40%;
       max-width: 40%;
@@ -477,7 +603,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -517,6 +647,24 @@
       margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@m {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -552,6 +700,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@m {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@m {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@m {
       flex: 0 0 40%;
       max-width: 40%;
@@ -562,7 +720,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -602,6 +764,24 @@
       margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@l {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -637,6 +817,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@l {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@l {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@l {
       flex: 0 0 40%;
       max-width: 40%;
@@ -647,7 +837,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -687,6 +881,24 @@
       margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xl {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -722,6 +934,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@xl {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@xl {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@xl {
       flex: 0 0 40%;
       max-width: 40%;
@@ -732,7 +954,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
