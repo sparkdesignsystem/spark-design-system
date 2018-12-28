@@ -30,10 +30,10 @@ import { Component, OnInit } from '@angular/core';
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">Standalone Link</h2>
+      <h2 class="drizzle-b-h2">Simple Link</h2>
 
       <sprk-link
-        linkType="standalone"
+        linkType="simple"
         href="/links"
         idString="link-2"
         analyticsString="object.action.event"

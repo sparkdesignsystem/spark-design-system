@@ -23,21 +23,21 @@
   }
 }
 
-.sprk-b-Link--standalone {
-  color: $sprk-link-standalone-color;
-  border-bottom: $sprk-link-standalone-border-bottom;
-  font-weight: $sprk-link-standalone-font-weight;
+.sprk-b-Link--simple {
+  color: $sprk-link-simple-color;
+  border-bottom: $sprk-link-simple-border-bottom;
+  font-weight: $sprk-link-simple-font-weight;
 
   &:visited {
-    border-bottom: $sprk-link-standalone-visited-border-bottom;
+    border-bottom: $sprk-link-simple-visited-border-bottom;
   }
 
   &:hover,
   &:active,
   &:focus {
     transition: $sprk-link-transition;
-    color: $sprk-link-standalone-hover-color;
-    border-bottom: $sprk-link-standalone-hover-border-bottom;
+    color: $sprk-link-simple-hover-color;
+    border-bottom: $sprk-link-simple-hover-border-bottom;
   }
 }
 

@@ -53,7 +53,7 @@ describe('Toggle tests', () => {
     trigger.setAttribute('data-sprk-toggle', 'trigger');
     trigger.setAttribute('aria-expanded', 'false');
     trigger.textContent = 'My Toggle Link Text';
-    trigger.classList.add('sprk-b-TypeBodyThree', 'sprk-b-Link', 'sprk-b-Link--standalone');
+    trigger.classList.add('sprk-b-TypeBodyThree', 'sprk-b-Link', 'sprk-b-Link--simple');
 
     triggerAccordion = document.createElement('a');
     triggerAccordion.setAttribute('data-sprk-toggle', 'trigger');
@@ -63,7 +63,7 @@ describe('Toggle tests', () => {
     triggerAccordion.classList.add(
       'sprk-b-TypeBodyThree',
       'sprk-b-Link',
-      'sprk-b-Link--standalone',
+      'sprk-b-Link--simple',
     );
 
     content = document.createElement('div');

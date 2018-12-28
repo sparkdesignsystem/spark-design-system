@@ -244,7 +244,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__icon': true,
               'sprk-b-Link': true,
-              'sprk-b-Link--standalone': true,
+              'sprk-b-Link--simple': true,
               'sprk-b-Link--disabled': currentPage === 1,
               'sprk-b-Link--plain': true
             }"
@@ -262,7 +262,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__icon': true,
               'sprk-b-Link': true,
-              'sprk-b-Link--standalone': true,
+              'sprk-b-Link--simple': true,
               'sprk-b-Link--disabled': isLastPage(),
               'sprk-b-Link--plain': true
             }"
