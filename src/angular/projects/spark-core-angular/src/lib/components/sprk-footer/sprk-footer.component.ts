@@ -124,7 +124,10 @@ import { Component, Input } from '@angular/core';
           </div>
         </div>
 
-        <span class="sprk-c-Divider sprk-u-mvn" data-id="divider-1"></span>
+        <span
+          class="sprk-c-Divider sprk-u-mvn sprk-u-mhm"
+          data-id="divider-1"
+        ></span>
 
         <div
           class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b"
