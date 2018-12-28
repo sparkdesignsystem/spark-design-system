@@ -484,7 +484,8 @@ $sprk-toggle-transistion-timing: 0.3s ease !default;
 //
 // Dividers
 ///
-$sprk-divider-border: 1px solid $sprk-black-tint-25 !default;
+$sprk-divider-color: rgb(230, 230, 230) !default;
+$sprk-divider-border: 2px solid $sprk-divider-color !default;
 
 //
 // Dropdown
