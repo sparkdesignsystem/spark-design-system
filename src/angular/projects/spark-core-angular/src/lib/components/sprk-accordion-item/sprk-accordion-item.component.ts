@@ -85,9 +85,9 @@ export class SparkAccordionItemComponent implements OnInit {
   @Input()
   isActive: boolean;
   @Input()
-  iconTypeClosed = 'chevron-down-circle';
+  iconTypeClosed = 'chevron-up-circle-toggle';
   @Input()
-  iconTypeOpen = 'chevron-down-circle-filled';
+  iconTypeOpen = 'chevron-down-circle-toggle';
   @Input()
   leadingIcon: string;
 

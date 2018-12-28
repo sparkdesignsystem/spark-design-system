@@ -39,10 +39,6 @@
   }
 }
 
-.sprk-c-Accordion__item--open .sprk-c-Accordion__heading {
-  font-weight: bold;
-}
-
 .sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
   color: $sprk-accordion-summary-active-color;
 }
@@ -51,7 +47,9 @@
   padding: $sprk-accordion-content-padding;
 }
 
-// Accordion Navigation Styles
+//
+// Navigation specific styles
+///
 .sprk-c-Accordion--navigation {
   border: 0;
   max-width: 100%; // We want mobile nav items not to be capped at $accordion-max-width
@@ -90,7 +88,6 @@
   }
 }
 
-// Accordion Navigation Styles
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__summary {
@@ -105,17 +102,14 @@
   font-weight: bold;
 }
 
-// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
   color: $sprk-black;
 }
 
-// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
   stroke: $sprk-black;
 }
 
-// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__content,
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details {
   border: 0;
@@ -130,7 +124,7 @@
     width: 100%;
   }
 }
-// Accordion Navigation Styles
+
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
   border-bottom: none;
   color: $sprk-black;
