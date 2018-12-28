@@ -62,6 +62,9 @@ variableTable:
   $sprk-alert-bg-color-fail:
     default: rgb(255, 248, 232)
     description: Sets the background color of the fail alert.
+  $sprk-alert-dismiss-icon-color:
+    default: $sprk-black
+    description: The color of the dismiss icon.
   $sprk-alert-font-size:
     default: 1rem
     description: The size of the text in the content area.
