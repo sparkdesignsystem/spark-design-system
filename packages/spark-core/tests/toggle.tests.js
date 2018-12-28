@@ -132,9 +132,7 @@ describe('Toggle tests', () => {
       'chevron-up-circle-toggle',
       'chevron-down-circle-toggle',
     );
-    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql(
-      '#chevron-up-circle-toggle-toggle',
-    );
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-toggle');
   });
 
   it('should add listener to toggle trigger', () => {
