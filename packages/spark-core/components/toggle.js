@@ -41,7 +41,14 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
   if (toggleIcon) toggleIcon.classList.toggle('sprk-c-Icon--open');
 
   // Swap icon name based on if open or closed
-  if (isAccordion && toggleIconUse) toggleIconType(toggleIcon, toggleIconUse, 'chevron-down-circle-filled', 'chevron-down-circle');
+  if (isAccordion && toggleIconUse) {
+    toggleIconType(
+      toggleIcon,
+      toggleIconUse,
+      'chevron-down-circle-toggle',
+      'chevron-up-circle-toggle',
+    );
+  }
 
   if (isAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
 
@@ -81,9 +88,5 @@ const toggle = () => {
 };
 
 export {
-  toggle,
-  toggleIconType,
-  toggleAriaExpanded,
-  handleToggleClick,
-  bindToggleUIEvents,
+  toggle, toggleIconType, toggleAriaExpanded, handleToggleClick, bindToggleUIEvents,
 };
