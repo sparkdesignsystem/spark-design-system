@@ -16,7 +16,7 @@
   border: $sprk-alert-border-info;
   color: $sprk-alert-text-color-info;
 
-  .sprk-c-Alert__icon {
+  .sprk-c-Alert__icon:first-child {
     color: $sprk-alert-icon-color-info;
   }
 
@@ -30,7 +30,7 @@
   border: $sprk-alert-border-success;
   color: $sprk-alert-text-color-success;
 
-  .sprk-c-Alert__icon {
+  .sprk-c-Alert__icon:first-child {
     color: $sprk-alert-icon-color-success;
   }
 
@@ -44,7 +44,7 @@
   border: $sprk-alert-border-fail;
   color: $sprk-alert-text-color-fail;
 
-  .sprk-c-Alert__icon {
+  .sprk-c-Alert__icon:first-child {
     color: $sprk-alert-icon-color-fail;
   }
 
