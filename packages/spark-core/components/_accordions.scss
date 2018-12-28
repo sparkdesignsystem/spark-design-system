@@ -57,6 +57,7 @@
   max-width: 100%; // We want mobile nav items not to be capped at $accordion-max-width
 }
 
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item--open {
   border-bottom: $sprk-accordion-border-open;
 
@@ -70,6 +71,7 @@
   }
 }
 
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__item {
   border: 0;
   margin: 0;
@@ -79,6 +81,7 @@
   }
 }
 
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__summary {
   border-top: 0;
   min-height: $sprk-icon-xl;
@@ -98,6 +101,7 @@
   border-left: $sprk-narrow-nav-left-border;
 }
 
+// Accordion Navigation Styles
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
 .sprk-c-Accordion__heading {
@@ -130,6 +134,7 @@
     width: 100%;
   }
 }
+
 // Accordion Navigation Styles
 .sprk-c-Accordion--navigation .sprk-c-Accordion__details .sprk-b-Link {
   border-bottom: none;
