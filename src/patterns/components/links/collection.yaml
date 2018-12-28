@@ -55,23 +55,29 @@ variableTable:
   $sprk-link-standalone-underline-color:
     default: transparent
     description: Sets the color of the standalone link underline.
+  $sprk-link-standalone-underline-width:
+    default: 0.0625rem
+    description: Sets the width of the standalone link underline.
   $sprk-link-standalone-font-weight:
-    default: bold
+    default: $sprk-font-weight-body-two
     description: The font weight for standalone links.
   $sprk-link-standalone-hover-color:
-    default: $sprk-green
+    default: $sprk-black
     description: Sets the color of the standalone link in the hover state.
+  $sprk-link-standalone-hover-underline-width:
+    default: 0.0625rem
+    description: Sets the width of the standalone link underline in the hover state.
   $sprk-link-standalone-hover-underline-color:
-    default: $sprk-green
+    default: $sprk-black
     description: Sets the color of the standalone link underline in the hover state.
   $sprk-link-standalone-border-bottom:
-    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-underline-color
+    default: $sprk-link-standalone-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-underline-color
     description: Sets the border settings for standalone links
   $sprk-link-standalone-visited-border-bottom:
-    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-underline-color
+    default: $sprk-link-standalone-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-underline-color
     description: Sets the border settings for standalone links in the visited state.
   $sprk-link-standalone-hover-border-bottom:
-    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-hover-underline-color
+    default: $sprk-link-standalone-hover-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-hover-underline-color
     description: Sets the border settings for standalone links in the hover state.
   $sprk-link-has-icon-color:
     default: $sprk-green
