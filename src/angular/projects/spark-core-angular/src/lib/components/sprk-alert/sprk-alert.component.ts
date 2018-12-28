@@ -47,7 +47,7 @@ export class SparkAlertComponent {
   @Input()
   additionalClasses: string;
   @Input()
-  dismissible: boolean;
+  dismissible: boolean; // Shows/hides dismiss button based on value
 
   public icon: string;
   public visible = true;
@@ -70,10 +70,6 @@ export class SparkAlertComponent {
         break;
       default:
         break;
-    }
-
-    if (this.dismissible === false) {
-      alertClassArray.push('sprk-c-Alert--no-dismiss');
     }
 
     if (this.additionalClasses) {

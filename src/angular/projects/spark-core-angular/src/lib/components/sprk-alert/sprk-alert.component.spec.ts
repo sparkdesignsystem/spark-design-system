@@ -84,7 +84,7 @@ describe('SparkAlertComponent', () => {
     component.dismissible = false;
     fixture.detectChanges();
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-c-Alert--info sprk-c-Alert--no-dismiss'
+      'sprk-c-Alert sprk-c-Alert--info'
     );
   });
 
