@@ -16,21 +16,36 @@ variableTable:
   $sprk-link-color:
     default: $sprk-black
     description: The default link color.
-  $sprk-link-hover-color:
-    default: $sprk-black
-    description: Sets the color of the link text on the hover state.
+  $sprk-link-font-weight:
+    default: bold
+    description: The default font weight for links.
+  $sprk-link-text-decoration:
+    default: none
+    description: The default text decoration.
   $sprk-link-underline-color:
     default: $sprk-gray-dark
     description: Sets the color of the link underline.
   $sprk-link-underline-width:
     default: 0.09375em
     description: Sets the size of the link underline.
-  $sprk-link-font-weight:
-    default: bold
-    description: The default font weight for links.
+  $sprk-link-border-bottom-style:
+    default: solid
+    description: Sets the style for the link underline.
+  $sprk-link-border-bottom:
+    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-underline-color
+    description: Sets the border settings for links
+  $sprk-link-hover-border-bottom:
+    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-hover-color
+    description: Sets the style for the link underline on the hover state.
+  $sprk-link-hover-color:
+    default: $sprk-black
+    description: Sets the color of the link text on the hover state.
   $sprk-link-visited-color:
     default: $sprk-black-tint-75
     description: Sets the color of visited links.
+  $sprk-link-visited-border-bottom:
+    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-underline-visited-color
+    description: Sets the border settings for visited links.
   $sprk-link-underline-visited-color:
     default: $sprk-black-tint-75
     description: Sets the color of the link underline on visited links.
@@ -49,24 +64,48 @@ variableTable:
   $sprk-link-standalone-hover-underline-color:
     default: $sprk-green
     description: Sets the color of the standalone link underline in the hover state.
+  $sprk-link-standalone-border-bottom:
+    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-underline-color
+    description: Sets the border settings for standalone links
+  $sprk-link-standalone-visited-border-bottom:
+    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-underline-color
+    description: Sets the border settings for standalone links in the visited state.
+  $sprk-link-standalone-hover-border-bottom:
+    default: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-standalone-hover-underline-color
+    description: Sets the border settings for standalone links in the hover state.
+  $sprk-link-has-icon-color:
+    default: $sprk-green
+    description: Sets the color of text and icons in links containing colors.
   $sprk-link-has-icon-underline-width:
     default: 0
     description: Sets the underline width for links containing icons.
   $sprk-link-has-icon-underline-color:
     default: transparent
     description: Sets the underline color for links containing icons.
-  $sprk-link-has-icon-color:
-    default: $sprk-green
-    description: Sets the color of text and icons in links containing colors.
+  $sprk-link-has-icon-border-bottom:
+    default: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color
+    description: Sets the border settings for links with icons
+  $sprk-link-has-icon-hover-border-bottom:
+    default: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color
+    description: Sets the border settings for links with icons in the hover state.
   $sprk-link-muted-color:
     default: $sprk-gray-dark
     description: The muted link color.
   $sprk-link-muted-underline-width:
     default: 0
-    description: asdf
+    description: Sets the underline width for muted links
   $sprk-link-muted-hover-underline-color:
     default: $sprk-gray-dark
-    description: asdf
+    description: Sets the underline color for muted links in the hover state
+  $sprk-link-muted-hover-border-bottom:
+    default: $sprk-link-muted-underline-width $sprk-link-border-bottom-style $sprk-link-muted-hover-underline-color
+    description: Sets the border settings for muted links in the hover state
+  $sprk-link-plain-border:
+    default: none
+    description: Sets the border settings for plain links
+  $sprk-link-plain-visited-border:
+    default: none
+    description: Sets the border settings for plain links in the visited state
   $sprk-link-disabled-color:
     default: $sprk-gray-dark
     description: The disabled link color.
@@ -76,6 +115,12 @@ variableTable:
   $sprk-link-disabled-underline-width:
     default: 0
     description: The width of the underline for disabled links.
+  $sprk-link-disabled-border-bottom:
+    default: $sprk-link-disabled-underline-width $sprk-link-border-bottom-style $sprk-link-disabled-color
+    description: Sets the border settings for disabled links.
+  $sprk-link-disabled-hover-border-bottom:
+    default: $sprk-link-disabled-underline-width $sprk-link-border-bottom-style $sprk-link-disabled-color
+    description: Sets the border settings for disabled links in the hover state.
 classTable:
   .sprk-b-Link--standalone:
     description: Sets the styles for the standalone link variant.
