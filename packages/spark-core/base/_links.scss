@@ -92,12 +92,12 @@
 }
 
 .sprk-b-Link--plain {
-  border: none;
+  border: $sprk-link-plain-border;
 
   &:hover,
   &:active,
   &:focus,
   &:visited {
-    border: none;
+    border: $sprk-link-plain-visited-border;
   }
 }
