@@ -28,6 +28,10 @@
   border-bottom: $sprk-link-underline-width solid $sprk-link-standalone-underline-color;
   font-weight: $sprk-link-standalone-font-weight;
 
+  &:visited {
+    border-bottom: $sprk-link-underline-width solid $sprk-link-standalone-underline-color;
+  }
+
   &:hover,
   &:active,
   &:focus {
@@ -72,6 +76,8 @@
 .sprk-b-Link--disabled,
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
+  stroke: $sprk-link-disabled-color;
+  fill: $sprk-link-disabled-color;
   pointer-events: none;
   border-bottom: $sprk-link-disabled-underline-width solid $sprk-link-disabled-color;
   font-weight: $sprk-link-disabled-font-weight;
