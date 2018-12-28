@@ -475,10 +475,16 @@ $sprk-split-breakpoint-l: 67.5rem !default;
 $sprk-split-breakpoint-xl: 80rem !default;
 
 //
+// Dividers
+///
+$sprk-divider-color: rgb(230, 230, 230) !default;
+$sprk-divider-border: 2px solid $sprk-divider-color !default;
+
+//
 // Accordions
 ///
 $sprk-accordion-max-width: 53.125rem !default;
-$sprk-accordion-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-accordion-border: $sprk-divider-border;
 $sprk-accordion-border-open: 2px solid $sprk-black !default;
 $sprk-accordion-summary-color: $sprk-black !default;
 $sprk-accordion-summary-active-color: $sprk-red !default;
@@ -490,12 +496,6 @@ $sprk-accordion-active-background-color: $sprk-gray !default;
 // Toggle
 ///
 $sprk-toggle-transistion-timing: 0.3s ease !default;
-
-//
-// Dividers
-///
-$sprk-divider-color: rgb(230, 230, 230) !default;
-$sprk-divider-border: 2px solid $sprk-divider-color !default;
 
 //
 // Dropdown
