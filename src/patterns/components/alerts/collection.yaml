@@ -29,9 +29,6 @@ variableTable:
   $sprk-alert-border-fail:
     default: 1px solid $sprk-yellow
     description: Sets the border surrounding the failure alert.
-  $sprk-alert-border-radius:
-    default: 3px
-    description: Sets the width of the inset box-shadow X offset value to create the color bar on the right side of the alert.
   $sprk-alert-color:
     default: $sprk-black
     description: Sets the color property of the alert.
