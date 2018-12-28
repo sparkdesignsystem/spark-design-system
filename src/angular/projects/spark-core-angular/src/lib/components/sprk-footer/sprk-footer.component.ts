@@ -14,11 +14,9 @@ import { Component, Input } from '@angular/core';
         >
           <div
             *ngIf="globalLinks"
-            class="sprk-o-Stack__item sprk-o-Stack__item--fourth@m sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
+            class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh"
           >
-            <h3
-              class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase"
-            >
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
               {{ globalHeading }}
             </h3>
 
@@ -26,52 +24,52 @@ import { Component, Input } from '@angular/core';
               *ngFor="let item of globalLinks"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"
             >
-              <a
-                class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--plain"
-                href="{{ item.href }}"
-                attr.data-analytics="{{ item.analytics }}"
-              >
-                <sprk-icon
-                  *ngIf="item.icon"
-                  iconType="{{ item.icon }}"
-                  additionalClasses="{{ item.iconCSS }}"
-                ></sprk-icon>
-                <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
-                  item.iconScreenReaderText
-                }}</span>
-                <img
-                  *ngIf="item.imgSrc"
-                  src="{{ item.imgSrc }}"
-                  alt="{{ item.imgAlt }}"
-                  class="{{ item.imgCSS }}"
-                />
-              </a>
+              <div class="sprk-o-Stack__item">
+                <a
+                  class="sprk-b-Link sprk-b-Link--plain"
+                  href="{{ item.href }}"
+                  attr.data-analytics="{{ item.analytics }}"
+                >
+                  <sprk-icon
+                    *ngIf="item.icon"
+                    iconType="{{ item.icon }}"
+                    additionalClasses="{{ item.iconCSS }}"
+                  ></sprk-icon>
+                  <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
+                    item.iconScreenReaderText
+                  }}</span>
+                  <img
+                    *ngIf="item.imgSrc"
+                    src="{{ item.imgSrc }}"
+                    alt="{{ item.imgAlt }}"
+                    class="{{ item.imgCSS }}"
+                  />
+                </a>
+              </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo">
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
                 {{ item.text }}
               </p>
             </div>
           </div>
 
           <div
-            class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@m sprk-o-Stack sprk-o-Stack--medium"
+            class="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium"
           >
             <div
               *ngIf="localLinks"
-              class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@m"
+              class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m"
             >
               <div
                 *ngFor="let item of localLinks"
-                class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large"
+                class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
               >
-                <h3
-                  class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase"
-                >
+                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
                   {{ item.heading }}
                 </h3>
 
                 <ul
-                  class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-b-List sprk-b-List--bare"
+                  class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare"
                 >
                   <li
                     class="sprk-o-Stack__item"
@@ -89,12 +87,10 @@ import { Component, Input } from '@angular/core';
             </div>
 
             <div
+              *ngIf="socialLinks"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
             >
-              <h3
-                *ngIf="socialLinks"
-                class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase"
-              >
+              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
                 {{ connectHeading }}
               </h3>
 
@@ -125,80 +121,59 @@ import { Component, Input } from '@angular/core';
                     </a>
                   </li>
                 </ul>
-
-                <ul
-                  *ngIf="badgeLinks"
-                  class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--end-row@m sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare"
-                >
-                  <li
-                    *ngFor="let item of badgeLinks"
-                    class="sprk-o-Stack__item"
-                  >
-                    <a
-                      class="sprk-b-Link sprk-b-Link--plain"
-                      href="{{ item.href }}"
-                      attr.data-analytics="{{ item.analytics }}"
-                    >
-                      <sprk-icon
-                        *ngIf="item.icon"
-                        iconType="{{ item.icon }}"
-                        additionalClasses="{{ item.iconCSS }}"
-                      ></sprk-icon>
-                      <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
-                        item.iconScreenReaderText
-                      }}</span>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
 
+        <span
+          class="sprk-c-Divider sprk-u-mvn sprk-u-mhm"
+          data-id="divider-1"
+        ></span>
+
         <div
-          class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
+          class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b"
         >
           <div
             *ngIf="awards"
-            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"
+            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large"
           >
-            <h3
-              class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-u-TextTransform--uppercase"
-            >
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
               {{ awardsHeading }}
             </h3>
 
             <div
-              class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s"
+              class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
             >
-              <a
-                *ngFor="let award of awards"
-                class="sprk-o-Stack__item"
-                href="{{ award.href }}"
-                attr.data-analytics="{{ award.analytics }}"
-              >
-                <img
-                  *ngIf="award.imgSrc"
-                  src="{{ award.imgSrc }}"
-                  alt="{{ award.imgAlt }}"
-                  class="{{ award.imgCSS }}"
-                />
-              </a>
+              <div class="sprk-o-Stack__item" *ngFor="let award of awards">
+                <a
+                  class="sprk-o-Stack__item"
+                  href="{{ award.href }}"
+                  attr.data-analytics="{{ award.analytics }}"
+                >
+                  <img
+                    *ngIf="award.imgSrc"
+                    src="{{ award.imgSrc }}"
+                    alt="{{ award.imgAlt }}"
+                    class="{{ award.imgCSS }}"
+                  />
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div
-            *ngFor="let toggle of disclaimerToggle"
-            class="sprk-o-Stack__item"
-          >
-            <sprk-toggle
-              title="{{ toggle.title }}"
-              analyticsString="{{ toggle.analytics }}"
-              iconClass="sprk-c-Icon--current-color"
-              titleFontClass="sprk-b-TypeBodyFour"
+            <div
+              *ngFor="let toggle of disclaimerToggle"
+              class="sprk-o-Stack__item"
             >
-              <p class="sprk-b-TypeBodyFour">{{ toggle.body }}</p>
-            </sprk-toggle>
+              <sprk-toggle
+                title="{{ toggle.title }}"
+                analyticsString="{{ toggle.analytics }}"
+                iconClass="sprk-c-Icon--current-color"
+                titleFontClass="sprk-b-TypeBodyFour"
+              >
+                <p class="sprk-b-TypeBodyFour">{{ toggle.body }}</p>
+              </sprk-toggle>
+            </div>
           </div>
 
           <div
@@ -212,6 +187,28 @@ import { Component, Input } from '@angular/core';
               {{ disclaimer.text }}
             </p>
           </div>
+
+          <ul
+            *ngIf="badgeLinks"
+            class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare"
+          >
+            <li *ngFor="let item of badgeLinks" class="sprk-o-Stack__item">
+              <a
+                class="sprk-b-Link sprk-b-Link--plain"
+                href="{{ item.href }}"
+                attr.data-analytics="{{ item.analytics }}"
+              >
+                <sprk-icon
+                  *ngIf="item.icon"
+                  iconType="{{ item.icon }}"
+                  additionalClasses="{{ item.iconCSS }}"
+                ></sprk-icon>
+                <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
+                  item.iconScreenReaderText
+                }}</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>
@@ -245,7 +242,7 @@ export class SparkFooterComponent {
 
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium'
+      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b'
     ];
 
     if (this.additionalClasses) {

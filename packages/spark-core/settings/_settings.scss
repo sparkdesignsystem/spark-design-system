@@ -106,22 +106,25 @@ $sprk-pag-circle-size: 2em !default;
 ///
 $sprk-measure: 40rem !default;
 $sprk-narrow-measure: 25rem !default;
+$sprk-typography-breakpoint: 54rem !default;
 
 // Webfonts
 $sprk-using-webfonts: false !default;
 $sprk-font-display: swap !default;
 $sprk-webfonts: '' !default;
-$sprk-typography-breakpoint: 54rem !default;
-$sprk-page-title-mark-color: $sprk-red;
-$sprk-page-title-mark-width: 32px;
-$sprk-page-title-mark-height: 5px;
-$sprk-page-title-mark-height-wide-viewport: 6px;
-$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a;
-$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m;
+
+// Page Title
+$sprk-page-title-mark-color: $sprk-red !default;
+$sprk-page-title-mark-width: 32px !default;
+$sprk-page-title-mark-height: 5px !default;
+$sprk-page-title-mark-height-wide-viewport: 6px !default;
+$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
 
 // Display One
 $sprk-color-display-one: $sprk-black !default;
-$sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-one: 2.75rem !default;
 $sprk-font-size-display-one-wide: 3.375rem !default;
 $sprk-type-display-one-breakpoint: 43.75rem !default;
@@ -131,7 +134,8 @@ $sprk-line-height-display-one-wide: 1.03 !default;
 
 // Display Two
 $sprk-color-display-two: $sprk-black !default;
-$sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-two: 2rem !default;
 $sprk-font-size-display-two-wide: 2.5rem !default;
 $sprk-type-display-two-breakpoint: 43.75rem !default;
@@ -141,7 +145,8 @@ $sprk-line-height-display-two-wide: 1 !default;
 
 // Display Three
 $sprk-color-display-three: $sprk-black !default;
-$sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-three: 1.75rem !default;
 $sprk-font-size-display-three-wide: 2.125rem !default;
 $sprk-type-display-three-breakpoint: 43.75rem !default;
@@ -151,55 +156,63 @@ $sprk-line-height-display-three-wide: 1.32 !default;
 
 // Display Four
 $sprk-color-display-four: $sprk-black !default;
-$sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-four: 1.625rem !default;
 $sprk-font-weight-display-four: bold !default;
 $sprk-line-height-display-four: 1.23 !default;
 
 // Display Five
 $sprk-color-display-five: $sprk-black !default;
-$sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-five: 1.25rem !default;
 $sprk-font-weight-display-five: 500 !default;
 $sprk-line-height-display-five: 1.2 !default;
 
 // Display Six
 $sprk-color-display-six: $sprk-black !default;
-$sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-six: 1.25rem !default;
 $sprk-font-weight-display-six: 300 !default;
 $sprk-line-height-display-six: 1.2 !default;
 
 // Display Seven
-$sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-display-seven: 1rem !default;
 $sprk-color-display-seven: $sprk-black !default;
 $sprk-line-height-display-seven: 1 !default;
 $sprk-font-weight-display-seven: 500 !default;
 
 // Body One
-$sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-body-one: 0.9375rem !default;
 $sprk-color-body-one: $sprk-black !default;
 $sprk-line-height-body-one: 1.6 !default;
 $sprk-font-weight-body-one: 500 !default;
 
 // Body Two
-$sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-body-two: 0.9375rem !default;
 $sprk-color-body-two: $sprk-black !default;
 $sprk-line-height-body-two: 1.6 !default;
 $sprk-font-weight-body-two: 300 !default;
 
 // Body Three
-$sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-body-three: 0.9375rem !default;
 $sprk-color-body-three: $sprk-black !default;
 $sprk-line-height-body-three: 2 !default;
 $sprk-font-weight-body-three: 300 !default;
 
 // Body Four
-$sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+$sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
 $sprk-font-size-body-four: 0.8125rem !default;
 $sprk-color-body-four: $sprk-black !default;
 $sprk-line-height-body-four: 1.84 !default;
@@ -227,13 +240,15 @@ $sprk-alert-icon-size: 40px !default;
 $sprk-alert-font-size: 1rem;
 $sprk-alert-font-weight: 400;
 $sprk-alert-line-height: 1.5;
-$sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a;
+$sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
+  $sprk-space-misc-a;
 $sprk-alert-dismiss-padding: $sprk-space-m;
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0;
 $sprk-alert-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !default;
 $sprk-alert-shadow-info: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-info !default;
 $sprk-alert-shadow-hover-info: inset -80px 0 0 $sprk-alert-color-info !default;
-$sprk-alert-shadow-success: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-success !default;
+$sprk-alert-shadow-success: inset $sprk-alert-bar-width 0 0
+  $sprk-alert-color-success !default;
 $sprk-alert-shadow-hover-success: inset -80px 0 0 $sprk-alert-color-success !default;
 $sprk-alert-shadow-fail: inset $sprk-alert-bar-width 0 0 $sprk-alert-color-fail !default;
 $sprk-alert-shadow-hover-fail: inset -80px 0 0 $sprk-alert-color-fail !default;
@@ -284,6 +299,7 @@ $sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
 $sprk-btn-secondary-disabled-shadow: none !default;
 $sprk-btn-tertiary-disabled-shadow: none !default;
 $sprk-btn-tertiary-disabled-border: none !default;
+
 // Secondary
 $sprk-btn-secondary-background-color: $sprk-white !default;
 $sprk-btn-secondary-border-color: $sprk-gray-dark !default;
@@ -293,6 +309,7 @@ $sprk-btn-secondary-hover-background-color: $sprk-white !default;
 $sprk-btn-secondary-hover-border-color: $sprk-black !default;
 $sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $sprk-btn-secondary-letter-spacing: 0.62px !default;
+
 // Tertiary
 $sprk-btn-tertiary-background-color: transparent !default;
 $sprk-btn-tertiary-border: none !default;
@@ -397,7 +414,6 @@ $sprk-label-shrink-scale: 0.82 !default;
 
 //
 // Tables
-//
 ///
 $sprk-table-padding-small: $sprk-space-inset-s !default;
 $sprk-table-padding-medium: $sprk-space-inset-m !default;
@@ -464,6 +480,10 @@ $sprk-stack-spacing-small: $sprk-space-s !default;
 $sprk-stack-spacing-medium: $sprk-space-m !default;
 $sprk-stack-spacing-large: $sprk-space-l !default;
 $sprk-stack-spacing-huge: $sprk-space-xl !default;
+$sprk-stack-spacing-misc-a: $sprk-space-misc-a !default;
+$sprk-stack-spacing-misc-b: $sprk-space-misc-b !default;
+$sprk-stack-spacing-misc-c: $sprk-space-misc-c !default;
+$sprk-stack-spacing-misc-d: $sprk-space-misc-d !default;
 $sprk-split-breakpoint-xxs: 20rem !default;
 $sprk-split-breakpoint-xs: 30rem !default;
 $sprk-split-breakpoint-s: 42.5rem !default;
@@ -491,7 +511,8 @@ $sprk-toggle-transistion-timing: 0.3s ease !default;
 //
 // Dividers
 ///
-$sprk-divider-border: 1px solid $sprk-black-tint-25 !default;
+$sprk-divider-color: rgb(230, 230, 230) !default;
+$sprk-divider-border: 2px solid $sprk-divider-color !default;
 
 //
 // Dropdown
@@ -508,7 +529,7 @@ $sprk-dropdown-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !default;
 
 //
 // Modals
-//
+///
 $sprk-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
 $sprk-modal-color: $sprk-white !default;
 $sprk-modal-max-width: 43.75rem !default;
@@ -519,7 +540,7 @@ $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
 // Masthead
-//
+///
 $sprk-masthead-menu-icon-width: $sprk-icon-l;
 $sprk-masthead-menu-icon-height: $sprk-icon-l;
 $sprk-masthead-bg-color: $sprk-white !default;
