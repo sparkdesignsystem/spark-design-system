@@ -81,7 +81,10 @@ variableTable:
     description: Sets the border settings for simple links in the hover state.
   $sprk-link-has-icon-color:
     default: $sprk-green
-    description: Sets the color of text and icons in links containing colors.
+    description: Sets the color of text and icons in links containing icons.
+  $sprk-link-has-icon-font-weight:
+    default: $sprk-font-weight-body-one
+    description: Sets the font weight for links containing icons.
   $sprk-link-has-icon-underline-width:
     default: 0
     description: Sets the underline width for links containing icons.
