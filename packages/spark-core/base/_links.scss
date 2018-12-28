@@ -79,14 +79,14 @@
   stroke: $sprk-link-disabled-color;
   fill: $sprk-link-disabled-color;
   pointer-events: none;
-  border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-type $sprk-link-disabled-color;
+  border-bottom: $sprk-link-disabled-border-bottom;
   font-weight: $sprk-link-disabled-font-weight;
 
   &:visited,
   &:hover,
   &:active,
   &:focus {
-    border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-type $sprk-link-disabled-color;
+    border-bottom: $sprk-link-disabled-hover-border-bottom;
     color: $sprk-link-disabled-color;
   }
 }
