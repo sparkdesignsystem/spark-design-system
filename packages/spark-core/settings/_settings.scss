@@ -106,18 +106,20 @@ $sprk-pag-circle-size: 2em !default;
 ///
 $sprk-measure: 40rem !default;
 $sprk-narrow-measure: 25rem !default;
+$sprk-typography-breakpoint: 54rem !default;
 
 // Webfonts
 $sprk-using-webfonts: false !default;
 $sprk-font-display: swap !default;
 $sprk-webfonts: '' !default;
-$sprk-typography-breakpoint: 54rem !default;
-$sprk-page-title-mark-color: $sprk-red;
-$sprk-page-title-mark-width: 32px;
-$sprk-page-title-mark-height: 5px;
-$sprk-page-title-mark-height-wide-viewport: 6px;
-$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a;
-$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m;
+
+// Page Title
+$sprk-page-title-mark-color: $sprk-red !default;
+$sprk-page-title-mark-width: 32px !default;
+$sprk-page-title-mark-height: 5px !default;
+$sprk-page-title-mark-height-wide-viewport: 6px !default;
+$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
 
 // Display One
 $sprk-color-display-one: $sprk-black !default;
@@ -297,6 +299,7 @@ $sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
 $sprk-btn-secondary-disabled-shadow: none !default;
 $sprk-btn-tertiary-disabled-shadow: none !default;
 $sprk-btn-tertiary-disabled-border: none !default;
+
 // Secondary
 $sprk-btn-secondary-background-color: $sprk-white !default;
 $sprk-btn-secondary-border-color: $sprk-gray-dark !default;
@@ -306,6 +309,7 @@ $sprk-btn-secondary-hover-background-color: $sprk-white !default;
 $sprk-btn-secondary-hover-border-color: $sprk-black !default;
 $sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $sprk-btn-secondary-letter-spacing: 0.62px !default;
+
 // Tertiary
 $sprk-btn-tertiary-background-color: transparent !default;
 $sprk-btn-tertiary-border: none !default;
@@ -387,7 +391,6 @@ $sprk-label-shrink-scale: 0.82 !default;
 
 //
 // Tables
-//
 ///
 $sprk-table-padding-small: $sprk-space-inset-s !default;
 $sprk-table-padding-medium: $sprk-space-inset-m !default;
@@ -499,7 +502,7 @@ $sprk-dropdown-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !default;
 
 //
 // Modals
-//
+///
 $sprk-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
 $sprk-modal-color: $sprk-white !default;
 $sprk-modal-max-width: 43.75rem !default;
@@ -510,7 +513,7 @@ $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 
 //
 // Masthead
-//
+///
 $sprk-masthead-menu-icon-width: $sprk-icon-l;
 $sprk-masthead-menu-icon-height: $sprk-icon-l;
 $sprk-masthead-bg-color: $sprk-white !default;
