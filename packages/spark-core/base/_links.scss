@@ -4,7 +4,7 @@
 //
 .sprk-b-Link {
   color: $sprk-link-color;
-  border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
+  border-bottom: $sprk-link-border-bottom;
   font-weight: $sprk-link-font-weight;
   position: relative;
   text-decoration: $sprk-link-text-decoration;
@@ -12,24 +12,24 @@
 
   &:visited {
     color: $sprk-link-visited-color;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-visited-color;
+    border-bottom: $sprk-link-visited-border-bottom;
   }
 
   &:hover,
   &:active,
   &:focus {
     color: $sprk-link-hover-color;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-hover-color;
+    border-bottom: $sprk-link-hover-border-bottom;
   }
 }
 
 .sprk-b-Link--standalone {
   color: $sprk-link-standalone-color;
-  border-bottom: $sprk-link-underline-width solid $sprk-link-standalone-underline-color;
+  border-bottom: $sprk-link-standalone-border-bottom;
   font-weight: $sprk-link-standalone-font-weight;
 
   &:visited {
-    border-bottom: $sprk-link-underline-width solid $sprk-link-standalone-underline-color;
+    border-bottom: $sprk-link-standalone-visited-border-bottom;
   }
 
   &:hover,
@@ -37,7 +37,7 @@
   &:focus {
     transition: $sprk-link-transition;
     color: $sprk-link-standalone-hover-color;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-standalone-hover-underline-color;
+    border-bottom: $sprk-link-standalone-hover-border-bottom;
   }
 }
 
@@ -52,18 +52,18 @@
   &:active,
   &:focus {
     color: $sprk-link-muted-color;
-    border-bottom: $sprk-link-muted-underline-width solid $sprk-link-muted-hover-underline-color;
+    border-bottom: $sprk-link-muted-hover-border-bottom;
   }
 }
 
 .sprk-b-Link--icon {
-  border: $sprk-link-icon-underline-width solid $sprk-link-icon-underline-color;
+  border-bottom: $sprk-link-icon-border-bottom;
 
   &:hover,
   &:active,
   &:focus,
   &:visited {
-    border: $sprk-link-icon-underline-width solid $sprk-link-icon-underline-color;
+    border-bottom: $sprk-link-icon-hover-border-bottom;
   }
 }
 
@@ -79,14 +79,14 @@
   stroke: $sprk-link-disabled-color;
   fill: $sprk-link-disabled-color;
   pointer-events: none;
-  border-bottom: $sprk-link-disabled-underline-width solid $sprk-link-disabled-color;
+  border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-type $sprk-link-disabled-color;
   font-weight: $sprk-link-disabled-font-weight;
 
   &:visited,
   &:hover,
   &:active,
   &:focus {
-    border-bottom: $sprk-link-disabled-underline-width solid $sprk-link-disabled-color;
+    border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-type $sprk-link-disabled-color;
     color: $sprk-link-disabled-color;
   }
 }
