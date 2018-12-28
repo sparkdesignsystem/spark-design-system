@@ -14,24 +14,45 @@ restrictions:
     has a unique data-id property ("alert-info-1", "alert-info-2", "alert-info-1", etc).
 sparkPackageCore: true
 variableTable:
+  $sprk-alert-border-radius:
+    default: 4px
+    description: Sets the border-radius.
   $sprk-alert-border:
     default: 1px solid $sprk-gray
     description: Sets the border surrounding the alert.
+  $sprk-alert-border-info:
+    default: 1px solid $sprk-blue
+    description: Sets the border surrounding the information alert.
+  $sprk-alert-border-success:
+    default: 1px solid $sprk-green
+    description: Sets the border surrounding the success alert.
+  $sprk-alert-border-fail:
+    default: 1px solid $sprk-yellow
+    description: Sets the border surrounding the failure alert.
   $sprk-alert-border-radius:
     default: 3px
     description: Sets the width of the inset box-shadow X offset value to create the color bar on the right side of the alert.
   $sprk-alert-color:
     default: $sprk-black
     description: Sets the color property of the alert.
-  $sprk-alert-color-info:
+  $sprk-alert-text-color-info:
     default: $sprk-black
     description: Sets the color property of the information alert.
-  $sprk-alert-color-success:
+  $sprk-alert-icon-color-info:
+    default: $sprk-blue
+    description: Sets the icon color of the information alert.
+  $sprk-alert-text-color-success:
     default: $sprk-black
     description: Sets the color property of the success alert.
-  $sprk-alert-color-fail:
+  $sprk-alert-icon-color-success:
+    default: $sprk-green
+    description: Sets the icon color of the success alert.
+  $sprk-alert-text-color-fail:
     default: $sprk-black
     description: Sets the color property of the failure alert.
+  $sprk-alert-icon-color-fail:
+    default: $sprk-yellow
+    description: Sets the icon color of the failure alert.
   $sprk-alert-bg-color:
     default: $sprk-white
     description: Sets the background color of the base alert.
