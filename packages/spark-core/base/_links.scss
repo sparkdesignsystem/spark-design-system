@@ -7,7 +7,7 @@
   border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
   font-weight: $sprk-link-font-weight;
   position: relative;
-  text-decoration: none;
+  text-decoration: $sprk-link-text-decoration;
   transition: $sprk-link-transition;
 
   &:visited {
