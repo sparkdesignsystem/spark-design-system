@@ -13,34 +13,43 @@
 
 .sprk-c-Alert--info {
   background-color: $sprk-alert-bg-color-info;
-  border-color: $sprk-alert-color-info;
-  color: $sprk-alert-color-info;
+  border: $sprk-alert-border-info;
+  color: $sprk-alert-text-color-info;
 
-  .sprk-c-Alert__icon,
+  .sprk-c-Alert__icon {
+    color: $sprk-alert-icon-color-info;
+  }
+
   .sprk-c-Alert__text {
-    color: $sprk-alert-color-info;
+    color: $sprk-alert-text-color-info;
   }
 }
 
 .sprk-c-Alert--success {
   background-color: $sprk-alert-bg-color-success;
-  border-color: $sprk-alert-color-success;
-  color: $sprk-alert-color-success;
+  border: $sprk-alert-border-success;
+  color: $sprk-alert-text-color-success;
 
-  .sprk-c-Alert__icon,
+  .sprk-c-Alert__icon {
+    color: $sprk-alert-icon-color-success;
+  }
+
   .sprk-c-Alert__text {
-    color: $sprk-alert-color-success;
+    color: $sprk-alert-text-color-success;
   }
 }
 
 .sprk-c-Alert--fail {
   background-color: $sprk-alert-bg-color-fail;
-  border-color: $sprk-alert-color-fail;
-  color: $sprk-alert-color-fail;
+  border: $sprk-alert-border-fail;
+  color: $sprk-alert-text-color-fail;
 
-  .sprk-c-Alert__icon,
+  .sprk-c-Alert__icon {
+    color: $sprk-alert-icon-color-fail;
+  }
+
   .sprk-c-Alert__text {
-    color: $sprk-alert-color-fail;
+    color: $sprk-alert-text-color-fail;
   }
 }
 

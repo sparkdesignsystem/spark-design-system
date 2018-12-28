@@ -230,17 +230,11 @@ $sprk-border-radius: 5px !default;
 //
 // Alerts
 ///
-$sprk-alert-border-radius: 3px !default;
+$sprk-alert-border-radius: 4px !default;
 $sprk-alert-border: 1px solid $sprk-gray !default;
 $sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-alert-color: $sprk-black !default;
 $sprk-alert-bg-color: $sprk-white !default;
-$sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
-$sprk-alert-color-info: $sprk-black !default;
-$sprk-alert-color-success: $sprk-black !default;
-$sprk-alert-bg-color-success: rgb(236, 253, 251) !default;
-$sprk-alert-color-fail: $sprk-black !default;
-$sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
 $sprk-alert-icon-size: 40px !default;
 $sprk-alert-font-size: 1rem !default;
 $sprk-alert-font-weight: 400 !default;
@@ -248,6 +242,21 @@ $sprk-alert-line-height: 1.5 !default;
 $sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a !default;
 $sprk-alert-dismiss-padding: $sprk-space-m !default;
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
+// Info
+$sprk-alert-icon-color-info: $sprk-blue !default;
+$sprk-alert-border-info: 1px solid $sprk-blue !default;
+$sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
+$sprk-alert-text-color-info: $sprk-black !default;
+// Success
+$sprk-alert-icon-color-success: $sprk-green !default;
+$sprk-alert-border-success: 1px solid $sprk-green !default;
+$sprk-alert-bg-color-success: rgb(237, 253, 251) !default;
+$sprk-alert-text-color-success: $sprk-black !default;
+// Fail
+$sprk-alert-icon-color-fail: $sprk-yellow !default;
+$sprk-alert-border-fail: 1px solid $sprk-yellow !default;
+$sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
+$sprk-alert-text-color-fail: $sprk-black !default;
 
 //
 // Promos
