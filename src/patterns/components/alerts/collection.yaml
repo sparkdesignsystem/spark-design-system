@@ -57,7 +57,7 @@ variableTable:
     default: $sprk-white
     description: Sets the background color of the base alert.
   $sprk-alert-bg-color-success:
-    default: rgb(236, 253, 251)
+    default: rgb(237, 253, 251)
     description: Sets the background color of the success alert.
   $sprk-alert-bg-color-info:
     default: rgb(241, 250, 255)
@@ -66,10 +66,10 @@ variableTable:
     default: rgb(255, 248, 232)
     description: Sets the background color of the fail alert.
   $sprk-alert-font-size:
-    default: 1rem;
+    default: 1rem
     description: The size of the text in the content area.
   $sprk-alert-font-weight:
-    default: 400;
+    default: 400
     description: The weight of the text in the content area.
   $sprk-alert-line-height:
     default: 1.5
