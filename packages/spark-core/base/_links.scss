@@ -56,21 +56,21 @@
   }
 }
 
-.sprk-b-Link--icon {
-  border-bottom: $sprk-link-icon-border-bottom;
+.sprk-b-Link--has-icon {
+  border-bottom: $sprk-link-has-icon-border-bottom;
 
   &:hover,
   &:active,
   &:focus,
   &:visited {
-    border-bottom: $sprk-link-icon-hover-border-bottom;
+    border-bottom: $sprk-link-has-icon-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--icon .sprk-c-Icon {
-  color: $sprk-link-icon-color;
-  stroke: $sprk-link-icon-color;
-  fill: $sprk-link-icon-color;
+.sprk-b-Link--has-icon .sprk-c-Icon {
+  color: $sprk-link-has-icon-color;
+  stroke: $sprk-link-has-icon-color;
+  fill: $sprk-link-has-icon-color;
 }
 
 .sprk-b-Link--disabled,

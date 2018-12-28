@@ -49,13 +49,13 @@ variableTable:
   $sprk-link-standalone-hover-underline-color:
     default: $sprk-green
     description: Sets the color of the standalone link underline in the hover state.
-  $sprk-link-icon-underline-width:
+  $sprk-link-has-icon-underline-width:
     default: 0
     description: Sets the underline width for links containing icons.
-  $sprk-link-icon-underline-color:
+  $sprk-link-has-icon-underline-color:
     default: transparent
     description: Sets the underline color for links containing icons.
-  $sprk-link-icon-color:
+  $sprk-link-has-icon-color:
     default: $sprk-green
     description: Sets the color of text and icons in links containing colors.
   $sprk-link-muted-color:
@@ -79,7 +79,7 @@ variableTable:
 classTable:
   .sprk-b-Link--standalone:
     description: Sets the styles for the standalone link variant.
-  .sprk-b-Link--icon:
+  .sprk-b-Link--has-icon:
     description: Sets the styles for the variant containing an icon.
   .sprk-b-Link--muted:
     description: Sets the color styles for the muted link variant.
