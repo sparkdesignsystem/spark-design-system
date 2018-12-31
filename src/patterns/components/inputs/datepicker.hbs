@@ -13,6 +13,7 @@ hasAngularDocs: true
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="date" data-sprk-datepicker>
+  <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label sprk-b-Label--with-icon">Date</label>
   <div class="sprk-b-TextInputIconContainer">
       <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-b-DatePicker__icon" viewBox="0 0 64 64">
           <use xlink:href="#calendar" />
@@ -26,8 +27,6 @@ hasAngularDocs: true
              {{#if invaliddata}} aria-invalid="true"{{/if}}
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
         {{#if disabled}} disabled{{/if}} data-sprk-input="text">
-    <div class="sprk-b-InputContainer__input-border"></div>
-    <label for="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}" class="sprk-b-Label sprk-b-Label--with-icon">Date</label>
   </div>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
     {{#if errorMessage}}
