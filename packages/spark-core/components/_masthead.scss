@@ -112,7 +112,7 @@
   position: relative;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
-    border-right: 2px solid $sprk-black-tint-25;
+    border-right: $sprk-masthead-site-links-border-right;
     padding-right: $sprk-space-l;
   }
 }
