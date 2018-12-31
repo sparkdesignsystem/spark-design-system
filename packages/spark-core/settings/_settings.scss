@@ -356,6 +356,7 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 //
 // Inputs
 ///
+$sprk-input-gray-medium: #5a5a5a !default;
 
 //
 // Text Input
@@ -370,13 +371,38 @@ $sprk-text-input-outline: 0 !default;
 $sprk-text-input-color: $sprk-black !default;
 $sprk-text-input-border: 2px solid $sprk-black-tint-25 !default;
 $sprk-text-input-border-radius: 4px !default;
+$sprk-text-input-box-shadow: none !default;
 $sprk-text-input-padding: 12px 13px !default;
 $sprk-text-input-focus-border-color: $sprk-green !default;
 $sprk-text-input-error-border-color: $sprk-yellow !default;
+$sprk-text-input-disabled-border-color: $sprk-black !default;
+$sprk-text-input-disabled-background-color: $sprk-gray !default;
+$sprk-text-input-disabled-color: $sprk-input-gray-medium !default;
+$sprk-text-input-placeholder-color: $sprk-gray !default;
+$sprk-text-input-readonly-color: $sprk-gray !default;
 
-$sprk-input-gray-medium: #5a5a5a !default;
-$sprk-input-placeholder-color: $sprk-gray !default;
-$sprk-input-readonly-text-color: $sprk-gray !default;
+//
+// Select
+///
+$sprk-select-appearance: none !default;
+$sprk-select-background: none !default;
+$sprk-select-border: $sprk-text-input-border !default;
+$sprk-select-focus-border-color: $sprk-text-input-focus-border-color !default;
+$sprk-select-error-border-color: $sprk-text-input-error-border-color !default;
+$sprk-select-border-radius: $sprk-text-input-border-radius !default;
+$sprk-select-box-shadow: $sprk-text-input-box-shadow !default;
+$sprk-select-color: $sprk-text-input-color !default;
+$sprk-select-font-size: $sprk-text-input-font-size !default;
+$sprk-select-font-family: $sprk-text-input-font-family !default;
+$sprk-select-font-weight: $sprk-text-input-font-weight !default;
+$sprk-select-line-height: $sprk-text-input-line-height !default;
+$sprk-select-outline: $sprk-text-input-outline !default;
+$sprk-select-padding: 12px 45px 12px 13px !default;
+$sprk-select-arrow-offset-y: -39px !default;
+$sprk-select-arrow-offset-x: 8px !default;
+$sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
+$sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
+$sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
 
 //
 // Input Errors
@@ -402,12 +428,9 @@ $sprk-selection-container-input-margin: 0 4px 0 0 !default;
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: 0 !default;
 $sprk-input-container-margin-bottom: 0 !default;
-$sprk-input-disabled-background-color: $sprk-gray !default;
-$sprk-input-disabled-border-color: $sprk-black !default;
-$sprk-input-disabled-text-color: $sprk-input-gray-medium !default;
+
 $sprk-helper-text-hidden: false !default;
 $sprk-input-readonly-border-color: $sprk-black !default;
-$sprk-input-box-shadow: none !default;
 $sprk-input-error-box-shadow: 0 3px 0 0 $sprk-yellow !default;
 $sprk-error-icon-size: 1.25rem !default;
 $sprk-input-disabled-box-shadow: 0 1px 0 0 $sprk-input-gray-medium !default;
@@ -425,8 +448,7 @@ $sprk-input-icon-offset-y: 21px !default;
 $sprk-input-text-icon-offset-x: 6px !default;
 $sprk-input-text-icon-offset-y: 21px !default;
 $sprk-input-animation-speed: 0.3s !default;
-$sprk-select-arrow-offset-y: -23px !default;
-$sprk-select-arrow-offset-x: 8px !default;
+
 
 //
 // Labels

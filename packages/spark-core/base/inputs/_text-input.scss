@@ -2,7 +2,7 @@
 // Input Component
 // ==================================================================
 .sprk-b-TextInput {
-  box-shadow: $sprk-input-box-shadow;
+  box-shadow: $sprk-text-input-box-shadow;
   border: $sprk-text-input-border;
   border-radius: $sprk-text-input-border-radius;
   color: $sprk-text-input-color;
@@ -24,8 +24,8 @@
 }
 
 .sprk-b-TextInput[disabled] {
-  background-color: $sprk-input-disabled-background-color;
-  color: $sprk-input-disabled-text-color;
+  background-color: $sprk-text-input-disabled-background-color;
+  color: $sprk-text-input-disabled-color;
 }
 
 .sprk-b-TextInput--with-icon {
@@ -64,7 +64,7 @@
 }
 
 .sprk-b-TextInput[readonly] {
-  color: $sprk-input-readonly-text-color;
+  color: $sprk-text-input-readonly-color;
 }
 
 .sprk-b-HelperText {
@@ -84,7 +84,7 @@
 ::-moz-placeholder,
 :-ms-input-placeholder,
 ::placeholder {
-  color: $sprk-input-placeholder-color;
+  color: $sprk-text-input-placeholder-color;
 }
 
 .sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
