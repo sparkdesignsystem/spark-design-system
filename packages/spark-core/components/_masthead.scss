@@ -3,13 +3,15 @@
 // ==================================================================
 .sprk-c-Masthead {
   background-color: $sprk-masthead-bg-color;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  border-bottom: $sprk-masthead-border-bottom;
+  box-shadow: $sprk-masthead-shadow;
   position: sticky;
   top: 0;
   z-index: $sprk-layer-height-m;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
-    border-bottom: $sprk-masthead-border-bottom;
+    border-bottom: $sprk-masthead-border-bottom-wide;
+    box-shadow: $sprk-masthead-shadow-wide;
   }
 }
 
@@ -26,29 +28,42 @@
 }
 
 .sprk-c-Masthead__menu,
-.sprk-c-Masthead__branding {
-  padding: $sprk-masthead-content-padding;
+.sprk-c-Masthead__branding,
+.sprk-c-Masthead__little-nav {
+  padding-top: $sprk-masthead-content-item-padding-top;
+  padding-left: $sprk-masthead-content-item-padding-left;
+  padding-right: $sprk-masthead-content-item-padding-right;
+  padding-bottom: $sprk-masthead-content-item-padding-bottom;
+
+  @media all and (min-width: $sprk-masthead-breakpoint) {
+    padding-top: $sprk-masthead-content-item-padding-top-wide;
+    padding-left: $sprk-masthead-content-item-padding-left-wide;
+    padding-right: $sprk-masthead-content-item-padding-right-wide;
+    padding-bottom: $sprk-masthead-content-item-padding-bottom-wide;
+  }
 }
 
 .sprk-c-Masthead__content {
+  padding: $sprk-masthead-content-padding;
+
   @media all and (min-width: $sprk-masthead-breakpoint) {
     margin: 0 auto;
     max-width: $sprk-masthead-column-width;
-    padding: $sprk-masthead-content-padding;
+    padding: $sprk-masthead-content-padding-wide;
   }
 }
 
 .sprk-c-Masthead--open .sprk-c-Masthead__content {
   border-bottom: $sprk-masthead-border-bottom;
-  box-shadow: none;
+  box-shadow: $sprk-masthead-shadow;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
     // Prevents narrow nav box-shadow and
     // border styles from showing on large viewports
-    // in case where nav is left open and viewport
+    // in scenario where nav is open and viewport
     // is expanded
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-    border-bottom: $sprk-masthead-border-bottom;
+    box-shadow: $sprk-masthead-shadow-wide;
+    border-bottom: $sprk-masthead-border-bottom-wide;
   }
 }
 // Hide menu on larger views
@@ -67,10 +82,10 @@
   margin: 0 auto;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {
-    padding-right: (($sprk-masthead-content-padding * 2) + $sprk-masthead-menu-icon-width); // Centers logo on narrow by adding space on right to balance menu space on left
+    padding-right: (($sprk-masthead-content-padding + $sprk-masthead-content-item-padding-left + $sprk-masthead-content-item-padding-right) + $sprk-masthead-menu-icon-width); // Centers logo on narrow by adding space on right to balance menu space on left
   }
   @media (min-width: $sprk-masthead-breakpoint) {
-    padding-right: $sprk-masthead-content-padding;
+    padding-right: $sprk-masthead-content-item-padding-right-wide;
   }
 }
 
@@ -165,8 +180,8 @@
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: ($sprk-mobile-masthead-height + ($sprk-masthead-content-padding * 2)) + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
-  padding-bottom: ($sprk-mobile-masthead-height + ($sprk-masthead-content-padding * 2)) + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
+  top: $sprk-mobile-masthead-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: $sprk-mobile-masthead-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
   width: 100%;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {

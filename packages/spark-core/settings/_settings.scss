@@ -691,12 +691,22 @@ $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 $sprk-masthead-menu-icon-width: $sprk-icon-l;
 $sprk-masthead-menu-icon-height: $sprk-icon-l;
 $sprk-masthead-bg-color: $sprk-white !default;
-$sprk-masthead-content-padding: $sprk-space-m !default;
+$sprk-masthead-content-padding: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-top: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-bottom: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-right: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-left: $sprk-space-s !default;
+$sprk-masthead-content-padding-wide: $sprk-space-m !default;
+$sprk-masthead-content-item-padding-top-wide: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-bottom-wide: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
+$sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
 $sprk-masthead-link-visited-color: $sprk-black !default;
 $sprk-masthead-link-hover-color: $sprk-green !default;
 $sprk-masthead-link-font-weight: $sprk-font-weight-body-one !default;
 $sprk-masthead-border-bottom-size: 1px !default;
 $sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray !default;
+$sprk-masthead-border-bottom-wide: 0 !default;
 $sprk-masthead-breakpoint: 54rem !default;
 $sprk-masthead-column-width: 89rem !default;
 $sprk-big-nav-column-width: 64rem !default;
@@ -712,6 +722,8 @@ $sprk-narrow-nav-link-font-weight: 300 !default;
 $sprk-narrow-nav-active-link-color: $sprk-font-weight-body-one !default;
 $sprk-narrow-nav-heading-color: $sprk-black !default;
 $sprk-narrow-nav-icon-stroke: $sprk-black !default;
+$sprk-masthead-shadow: none !default;
+$sprk-masthead-shadow-wide: 0 0 40px rgba(0, 0, 0, 0.1) !default;
 
 //
 // Spinners
