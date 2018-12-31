@@ -97,17 +97,20 @@
 
 .sprk-c-Accordion--navigation
 .sprk-c-Accordion__item--active
+.sprk-c-Accordion__heading,
+.sprk-c-Accordion--navigation
+.sprk-c-Accordion__item--open
 .sprk-c-Accordion__heading {
-  color: $sprk-red;
-  font-weight: bold;
+  color: $sprk-narrow-nav-active-link-color;
+  font-weight: $sprk-narrow-nav-active-link-font-weight;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__heading {
-  color: $sprk-black;
+  color: $sprk-narrow-nav-heading-color;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__icon {
-  stroke: $sprk-black;
+  stroke: $sprk-narrow-nav-icon-stroke;
 }
 
 .sprk-c-Accordion--navigation .sprk-c-Accordion__content,

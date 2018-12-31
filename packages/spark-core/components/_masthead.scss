@@ -3,7 +3,7 @@
 // ==================================================================
 .sprk-c-Masthead {
   background-color: $sprk-masthead-bg-color;
-  box-shadow: $sprk-dropdown-shadow;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: $sprk-layer-height-m;
@@ -88,7 +88,7 @@
   position: relative;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
-    border-right: 1px solid $sprk-black-tint-25;
+    border-right: 2px solid $sprk-black-tint-25;
     padding-right: $sprk-space-l;
   }
 }
@@ -100,21 +100,15 @@
     color: $sprk-masthead-link-visited-color;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $sprk-masthead-link-hover-color;
   }
 }
 
 .sprk-c-Masthead__link--big-nav {
-  @include HoverLine($sprk-hoverline-color: transparent, $sprk-hoverline-width: 85%);
-
-  display: block;
-
-  &:active,
-  &:focus,
-  &:hover {
-    @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 85%);
-  }
+  padding: 0 $sprk-space-m;
 }
 
 .sprk-c-Masthead__big-nav {

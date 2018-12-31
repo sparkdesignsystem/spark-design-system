@@ -692,7 +692,7 @@ $sprk-masthead-menu-icon-height: $sprk-icon-l;
 $sprk-masthead-bg-color: $sprk-white !default;
 $sprk-masthead-content-padding: $sprk-space-m !default;
 $sprk-masthead-link-visited-color: $sprk-black !default;
-$sprk-masthead-link-hover-color: $sprk-red !default;
+$sprk-masthead-link-hover-color: $sprk-green !default;
 $sprk-masthead-link-font-weight: $sprk-font-weight-body-one !default;
 $sprk-masthead-border-bottom-size: 1px !default;
 $sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray !default;
@@ -700,11 +700,12 @@ $sprk-masthead-breakpoint: 54rem !default;
 $sprk-masthead-column-width: 89rem !default;
 $sprk-big-nav-column-width: 64rem !default;
 $sprk-big-nav-bg: $sprk-white !default;
-$sprk-big-nav-active-color: $sprk-red !default;
+$sprk-big-nav-link-font-weight: 300;
+$sprk-big-nav-active-color: $sprk-black !default;
 $sprk-masthead-logo-max-width: 192px !default;
 $sprk-masthead-logo-min-width: 174px !default;
 $sprk-mobile-masthead-height: 113px !default;
-$sprk-narrow-nav-left-border: 5px solid $sprk-red !default;
+$sprk-narrow-nav-left-border: 5px solid $sprk-black !default;
 $sprk-narrow-nav-link-font-weight: normal !default;
 
 //
