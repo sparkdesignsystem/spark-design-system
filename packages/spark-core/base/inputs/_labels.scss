@@ -17,11 +17,6 @@
   display: inline-block;
 }
 
-.sprk-b-TextInput[disabled] ~ .sprk-b-Label {
-  color: $sprk-input-gray-medium;
-  cursor: not-allowed;
-}
-
 .sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
   font-size: $sprk-font-size-body-four;
 }
