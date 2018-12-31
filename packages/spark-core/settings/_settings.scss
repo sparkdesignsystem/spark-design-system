@@ -430,7 +430,7 @@ $sprk-error-icon-size: 1.25rem !default;
 // Helper Text
 ///
 $sprk-helper-color: $sprk-black-tint-50 !default;
-$sprk-helper-font-size: $sprk-text-input-font-size !default;
+$sprk-helper-font-size: 0.8125rem !default;
 $sprk-helper-font-family: $sprk-text-input-font-family !default;
 $sprk-helper-font-weight: $sprk-text-input-font-weight !default;
 $sprk-helper-line-height: $sprk-text-input-line-height !default;
@@ -469,8 +469,11 @@ $sprk-date-picker-day-interact-color: $sprk-red !default;
 $sprk-input-icon-offset-x: 8px !default;
 $sprk-input-icon-offset-y: 16px !default;
 $sprk-text-input-with-icon-padding: 12px 13px 12px 38px !default;
-$sprk-input-text-icon-offset-x: 6px !default;
-$sprk-input-text-icon-offset-y: 21px !default;
+$sprk-input-text-icon-offset-x: 8px !default;
+$sprk-input-text-icon-offset-y: 40.5px !default;
+$sprk-input-text-icon-font-size: 1rem !default;
+$sprk-input-text-icon-font-weight: 700 !default;
+$sprk-text-input-with-text-icon-padding: 12px 13px 12px 29px !default;
 
 //
 // Labels
@@ -481,6 +484,8 @@ $sprk-label-font-size: 0.875rem !default;
 $sprk-label-font-weight: 400 !default;
 $sprk-label-line-height: 1.2 !default;
 $sprk-label-margin: 0 0 $sprk-space-s 0 !default;
+$sprk-visibility-control-margin: 6px 0 0 0 !default;
+$sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
 
 //
 // Tables

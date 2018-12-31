@@ -34,7 +34,7 @@
 }
 
 .sprk-b-TextInput--monetary {
-  padding-left: 24px;
+  padding: $sprk-text-input-with-text-icon-padding;
 }
 
 .sprk-b-TextInputIconContainer {
@@ -47,7 +47,8 @@
   &::before {
     content: $sprk-monetary-symbol;
     display: block;
-    font-size: $sprk-space-m;
+    font-size: $sprk-input-text-icon-font-size;
+    font-weight: $sprk-input-text-icon-font-weight;
     line-height: 1;
     margin-left: $sprk-input-text-icon-offset-x;
     margin-top: $sprk-input-text-icon-offset-y;

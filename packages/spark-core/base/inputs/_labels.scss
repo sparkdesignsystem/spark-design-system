@@ -18,24 +18,5 @@
 }
 
 .sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
-  font-size: $sprk-font-size-body-four;
-}
-
-.sprk-b-InputContainer--textarea > .sprk-b-Label {
-  margin-bottom: 0;
-}
-
-// TODO: We need to abstract this so a label is not dependent on being adjacent to a text input
-.sprk-b-TextInputIconContainer .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-b-TextInputIconContainer .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
-.sprk-b-TextInputIconContainer .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  padding-left: $sprk-space-s;
-}
-
-.sprk-b-Label--with-icon {
-  padding-left: $sprk-space-l;
-}
-
-.sprk-b-Label--monetary {
-  padding-left: 24px;
+  font-size: $sprk-visibility-control-label-font-size;
 }

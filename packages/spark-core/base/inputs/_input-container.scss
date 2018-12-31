@@ -3,6 +3,6 @@
   max-width: $sprk-input-max-width;
 }
 
-.sprk-b-InputContainer__visibility-toggle ~ .sprk-b-ErrorContainer {
-  margin-top: 0;
+.sprk-b-InputContainer__visibility-toggle {
+  margin: $sprk-visibility-control-margin;
 }
