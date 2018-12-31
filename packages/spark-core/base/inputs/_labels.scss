@@ -13,13 +13,8 @@
   transform: none;
 }
 
-.sprk-b-InputContainer .sprk-b-Label.sprk-b-Label--inline {
-  padding: 0 $sprk-space-m;
-}
-
 .sprk-b-Label--inline {
   display: inline-block;
-  vertical-align: middle;
 }
 
 .sprk-b-TextInput[disabled] ~ .sprk-b-Label {

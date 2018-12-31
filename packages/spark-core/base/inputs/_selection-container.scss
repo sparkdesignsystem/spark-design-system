@@ -1,21 +1,15 @@
 .sprk-b-SelectionContainer {
-  margin: $sprk-space-s;
+  display: flex;
+  margin: 0.5rem 0;
 }
 
 .sprk-b-SelectionContainer .sprk-b-Label {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .sprk-b-SelectionContainer [type='radio'],
 .sprk-b-SelectionContainer [type='checkbox'] {
-  vertical-align: middle;
-}
-
-.sprk-b-SelectionContainer [disabled][type='radio'],
-.sprk-b-SelectionContainer [disabled][type='checkbox'] {
-  border: 1px solid $sprk-gray;
-}
-
-.sprk-b-SelectionContainer:last-child {
-  margin-bottom: $sprk-space-s;
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
 }
