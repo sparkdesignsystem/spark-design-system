@@ -1,7 +1,6 @@
 .sprk-b-ErrorContainer {
   display: flex;
-  margin-left: $sprk-space-s;
-  margin-top: $sprk-space-s;
+  margin: $sprk-error-container-margin;
 }
 
 [hidden].sprk-b-ErrorContainer {
@@ -10,14 +9,15 @@
 
 .sprk-b-ErrorIcon {
   fill: $sprk-text-input-error-color;
-  flex: 0 0 auto;
-  margin-right: $sprk-space-s;
   height: $sprk-error-icon-size;
   width: $sprk-error-icon-size;
 }
 
 .sprk-b-ErrorText {
-  color: $sprk-error-text-color;
-  font-size: $sprk-font-size-body-four;
-  font-weight: bold;
+  color: $sprk-input-error-color;
+  font-family: $sprk-input-error-font-family;
+  font-size: $sprk-input-error-font-size;
+  font-weight: $sprk-input-error-font-weight;
+  line-height: $sprk-input-error-line-height;
+  margin: $sprk-input-error-margin;
 }

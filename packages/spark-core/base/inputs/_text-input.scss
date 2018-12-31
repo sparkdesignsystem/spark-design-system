@@ -67,19 +67,11 @@
   color: $sprk-input-readonly-text-color;
 }
 
-.sprk-b-HelperText,
-.sprk-b-ErrorText {
+.sprk-b-HelperText {
+  color: $sprk-input-gray-medium;
   font-size: $sprk-font-size-body-four;
   font-weight: $sprk-font-weight-body-four;
   line-height: $sprk-line-height-body-four;
-}
-
-.sprk-b-HelperText {
-  color: $sprk-input-gray-medium;
-}
-
-.sprk-b-ErrorText {
-  font-weight: bold;
 }
 
 .sprk-b-TextArea {

@@ -378,6 +378,18 @@ $sprk-input-gray-medium: #5a5a5a !default;
 $sprk-input-placeholder-color: $sprk-gray !default;
 $sprk-input-readonly-text-color: $sprk-gray !default;
 
+//
+// Input Errors
+///
+// TODO: validate var table against input vars
+$sprk-input-error-color: $sprk-black !default;
+$sprk-input-error-font-family: $sprk-font-family-body-two !default;
+$sprk-input-error-font-weight: 400 !default;
+$sprk-input-error-font-size: 0.8125rem !default;
+$sprk-input-error-line-height: 1.2 !default;
+$sprk-input-error-margin: 0 0 0 6px !default;
+$sprk-error-container-margin: 6px 0 0 0;
+
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: 0 !default;
 $sprk-input-container-margin-bottom: 0 !default;
@@ -397,7 +409,6 @@ $sprk-date-picker-box-shadow: 0 2px 5px $sprk-input-gray-medium !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
 $sprk-date-picker-day-interact-color: $sprk-red !default;
 $sprk-text-input-interact-color: $sprk-red !default;
-$sprk-error-text-color: $sprk-black !default;
 $sprk-text-input-error-color: $sprk-yellow !default;
 $sprk-input-max-width: 27.5rem !default;
 $sprk-input-icon-offset-x: 7px !default;
