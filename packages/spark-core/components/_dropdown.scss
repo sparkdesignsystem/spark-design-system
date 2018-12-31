@@ -1,6 +1,7 @@
 .sprk-c-Dropdown {
   background-color: $sprk-white;
   border: $sprk-dropdown-border;
+  border-radius: $sprk-border-radius;
   box-shadow: $sprk-dropdown-shadow;
   max-width: $sprk-dropdown-max-width;
   position: absolute;
@@ -10,8 +11,11 @@
 }
 
 .sprk-c-Dropdown__header {
-  border-bottom: $sprk-dropdown-border;
   padding: $sprk-dropdown-header-padding;
+}
+
+.sprk-c-Dropdown__title {
+  color: $sprk-dropdown-header-color;
 }
 
 .sprk-c-Dropdown__footer {
