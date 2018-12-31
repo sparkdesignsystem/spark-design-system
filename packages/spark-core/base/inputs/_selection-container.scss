@@ -1,15 +1,15 @@
 .sprk-b-SelectionContainer {
   display: flex;
-  margin: 0.5rem 0;
+  margin: $sprk-selection-container-margin;
 }
 
 .sprk-b-SelectionContainer .sprk-b-Label {
-  font-weight: 300;
+  font-weight: $sprk-selection-container-label-font-weight;
 }
 
 .sprk-b-SelectionContainer [type='radio'],
 .sprk-b-SelectionContainer [type='checkbox'] {
-  height: 20px;
-  width: 20px;
-  margin-right: 4px;
+  height: $sprk-selection-container-input-height;
+  width: $sprk-selection-container-input-width;
+  margin: $sprk-selection-container-input-margin;
 }
