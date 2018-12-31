@@ -25,7 +25,6 @@
   }
 }
 
-.sprk-c-Masthead__content,
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding {
   padding: $sprk-masthead-content-padding;
@@ -35,12 +34,22 @@
   @media all and (min-width: $sprk-masthead-breakpoint) {
     margin: 0 auto;
     max-width: $sprk-masthead-column-width;
+    padding: $sprk-masthead-content-padding;
   }
 }
 
 .sprk-c-Masthead--open .sprk-c-Masthead__content {
   border-bottom: $sprk-masthead-border-bottom;
   box-shadow: none;
+
+  @media all and (min-width: $sprk-masthead-breakpoint) {
+    // Prevents narrow nav box-shadow and
+    // border styles from showing on large viewports
+    // in case where nav is left open and viewport
+    // is expanded
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border-bottom: $sprk-masthead-border-bottom;
+  }
 }
 // Hide menu on larger views
 .sprk-c-Masthead__menu {
@@ -123,21 +132,31 @@
 }
 
 .sprk-c-Masthead__big-nav-item {
-  line-height: $sprk-space-l;
+  line-height: $sprk-space-misc-c;
   position: relative;
   text-align: center;
   white-space: nowrap;
+
+  @include HoverLine($sprk-hoverline-color: transparent, $sprk-hoverline-width: 100%);
+
+  display: block;
+
+  &:active,
+  &:focus,
+  &:hover {
+    @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%);
+  }
 }
 
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
   color: $sprk-big-nav-active-color;
-  font-weight: bold;
+  font-weight: $sprk-big-nav-link-font-weight;
 }
 
-.sprk-c-Masthead__big-nav-item:focus-within > .sprk-c-Masthead__link--big-nav,
-.sprk-c-Masthead__big-nav-item--open > .sprk-c-Masthead__link--big-nav,
-.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
-  @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 85%);
+.sprk-c-Masthead__big-nav-item:focus-within,
+.sprk-c-Masthead__big-nav-item--open,
+.sprk-c-Masthead__big-nav-item--active {
+  @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%);
 }
 
 // Hide narrow nav on larger views
@@ -146,8 +165,8 @@
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: ($sprk-mobile-masthead-height + ($sprk-masthead-content-padding * 4)) + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
-  padding-bottom: ($sprk-mobile-masthead-height + ($sprk-masthead-content-padding * 4)) + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
+  top: ($sprk-mobile-masthead-height + ($sprk-masthead-content-padding * 2)) + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: ($sprk-mobile-masthead-height + ($sprk-masthead-content-padding * 2)) + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
   width: 100%;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {
