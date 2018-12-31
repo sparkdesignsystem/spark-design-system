@@ -2,16 +2,29 @@
 // Input Component
 // ==================================================================
 .sprk-b-TextInput {
-  font-size: $sprk-font-size-body-two;
-  font-weight: $sprk-font-weight-body-two;
-  line-height: $sprk-line-height-body-two;
-  outline: 0;
   box-shadow: $sprk-input-box-shadow;
+  border: $sprk-text-input-border;
+  border-radius: $sprk-text-input-border-radius;
+  color: $sprk-text-input-color;
+  font-family: $sprk-text-input-font-family;
+  font-size: $sprk-text-input-font-size;
+  font-weight: $sprk-text-input-font-weight;
+  line-height: $sprk-text-input-line-height;
+  outline: $sprk-text-input-outline;
+  padding: $sprk-text-input-padding;
+
+  &:focus {
+    border-color: $sprk-text-input-focus-border-color;
+  }
+}
+
+.sprk-b-TextInput--error,
+.sprk-b-TextInput--error:focus {
+  border-color: $sprk-text-input-error-border-color;
 }
 
 .sprk-b-TextInput[disabled] {
   background-color: $sprk-input-disabled-background-color;
-  box-shadow: $sprk-input-disabled-box-shadow;
   color: $sprk-input-disabled-text-color;
 }
 

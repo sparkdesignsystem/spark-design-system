@@ -1,9 +1,11 @@
 .sprk-b-Label {
-  font-size: $sprk-font-size-body-three;
-  font-weight: $sprk-font-weight-body-three;
-  line-height: $sprk-line-height-body-three;
-  padding: 0 $sprk-space-s;
-  transform-origin: top left;
+  display: block;
+  font-family: $sprk-label-font-family;
+  font-size: $sprk-label-font-size;
+  font-weight: $sprk-label-font-weight;
+  line-height: $sprk-label-line-height;
+  padding: $sprk-label-padding;
+  margin: $sprk-label-margin;
 }
 
 .sprk-b-Label--no-input {
@@ -29,45 +31,11 @@
   font-size: $sprk-font-size-body-four;
 }
 
-.sprk-b-InputContainer .sprk-b-Legend > .sprk-b-Label,
-.sprk-b-InputContainer > .sprk-b-Label {
-  margin-bottom: $sprk-space-s;
-  transform: scale($sprk-label-shrink-scale); // ratio of body-four to body-three
-}
-
 .sprk-b-InputContainer--textarea > .sprk-b-Label {
   margin-bottom: 0;
 }
 
-// label moving
-.sprk-b-TextInput ~ .sprk-b-Label {
-  position: absolute;
-  transition: all $sprk-input-animation-speed;
-  transform: scale($sprk-label-shrink-scale) translateY($sprk-label-offset-y); // ratio of body-four to body-three
-  width: auto;
-}
-
-.sprk-u-JavaScript .sprk-b-TextInput ~ .sprk-b-Label {
-  transform: scale(1) translateY($sprk-label-offset-y + 19px); // visually centering with icon
-}
-
-.sprk-b-TextInput,
-.sprk-b-TextInput[placeholder],
-.sprk-b-TextInput--has-value,
-.sprk-b-TextInput--focusin,
-.sprk-b-Select {
-  padding-top: $sprk-space-m;
-}
-
-.sprk-u-JavaScript .sprk-b-Select ~ .sprk-b-Label,
-.sprk-u-JavaScript .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
-.sprk-u-JavaScript .sprk-b-TextInput--has-value ~ .sprk-b-Label,
-.sprk-u-JavaScript .sprk-b-TextInput--focusin ~ .sprk-b-Label {
-  height: 0;
-  transform: translateY($sprk-label-offset-y) scale($sprk-label-shrink-scale); // ratio of body-four to body-three
-}
-
-// We need to abstract this so a label is not dependent on being adjacent to a text input
+// TODO: We need to abstract this so a label is not dependent on being adjacent to a text input
 .sprk-b-TextInputIconContainer .sprk-b-TextInput--has-value ~ .sprk-b-Label,
 .sprk-b-TextInputIconContainer .sprk-b-TextInput[placeholder] ~ .sprk-b-Label,
 .sprk-b-TextInputIconContainer .sprk-b-TextInput--focusin ~ .sprk-b-Label {

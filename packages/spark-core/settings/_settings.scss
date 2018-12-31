@@ -354,24 +354,39 @@ $sprk-list-margin-left: $sprk-space-m !default;
 $sprk-list-indented-margin-left: $sprk-space-l !default;
 
 //
-// Forms
+// Inputs
 ///
+
+//
+// Text Input
+///
+
+// TODO: add to variable table
+$sprk-text-input-font-family: $sprk-font-family-body-two !default;
+$sprk-text-input-font-size: 1rem !default;
+$sprk-text-input-font-weight: 300 !default;
+$sprk-text-input-line-height: 1.2 !default;
+$sprk-text-input-outline: 0 !default;
+$sprk-text-input-color: $sprk-black !default;
+$sprk-text-input-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-text-input-border-radius: 4px !default;
+$sprk-text-input-padding: 12px 13px !default;
+$sprk-text-input-focus-border-color: $sprk-green !default;
+$sprk-text-input-error-border-color: $sprk-yellow !default;
+
 $sprk-input-gray-medium: #5a5a5a !default;
-$sprk-monetary-symbol: '$' !default;
 $sprk-input-placeholder-color: $sprk-gray !default;
 $sprk-input-readonly-text-color: $sprk-gray !default;
+
+$sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: 0 !default;
-$sprk-text-input-border-radius: 0 !default;
-$sprk-text-input-border-color: $sprk-black !default;
-$sprk-text-input-border-width: 0 !default;
-$sprk-input-container-margin-bottom: $sprk-space-m !default;
+$sprk-input-container-margin-bottom: 0 !default;
 $sprk-input-disabled-background-color: $sprk-gray !default;
 $sprk-input-disabled-border-color: $sprk-black !default;
 $sprk-input-disabled-text-color: $sprk-input-gray-medium !default;
 $sprk-helper-text-hidden: false !default;
-$sprk-text-input-padding: 3px $sprk-space-s !default;
 $sprk-input-readonly-border-color: $sprk-black !default;
-$sprk-input-box-shadow: 0 1px 0 0 $sprk-black !default;
+$sprk-input-box-shadow: none !default;
 $sprk-input-error-box-shadow: 0 3px 0 0 $sprk-yellow !default;
 $sprk-error-icon-size: 1.25rem !default;
 $sprk-input-disabled-box-shadow: 0 1px 0 0 $sprk-input-gray-medium !default;
@@ -392,8 +407,17 @@ $sprk-input-text-icon-offset-y: 21px !default;
 $sprk-input-animation-speed: 0.3s !default;
 $sprk-select-arrow-offset-y: -23px !default;
 $sprk-select-arrow-offset-x: 8px !default;
-$sprk-label-offset-y: -53px !default;
-$sprk-label-shrink-scale: 0.82 !default;
+
+//
+// Labels
+///
+$sprk-label-padding: 0 !default;
+// TODO: add to var table
+$sprk-label-font-family: $sprk-font-family-body-two !default;
+$sprk-label-font-size: 0.875rem !default;
+$sprk-label-font-weight: 400 !default;
+$sprk-label-line-height: 1.2 !default;
+$sprk-label-margin: 0 0 $sprk-space-s 0 !default;
 
 //
 // Tables

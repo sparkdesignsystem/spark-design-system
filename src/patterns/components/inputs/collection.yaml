@@ -159,6 +159,9 @@ variableTable:
   $sprk-label-shrink-scale:
     default: 0.82
     description: The value to scale to the labels by.
+  $sprk-label-padding:
+    default: 0
+    description: The padding applied to labels.
 classTable:
   .sprk-b-Label--no-input:
     description: Apply when a label is used without an input.
