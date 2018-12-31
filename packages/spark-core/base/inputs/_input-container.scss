@@ -1,17 +1,8 @@
 .sprk-b-InputContainer {
-  margin: 3rem 0;
+  margin: $sprk-input-container-margin;
   max-width: $sprk-input-max-width;
 }
 
 .sprk-b-InputContainer__visibility-toggle ~ .sprk-b-ErrorContainer {
   margin-top: 0;
-}
-
-// border animate
-.sprk-b-InputContainer__input-border {
-  display: block;
-  content: ' ';
-  border-bottom: 3px solid $sprk-text-input-interact-color;
-  width: 0;
-  opacity: 1;
 }

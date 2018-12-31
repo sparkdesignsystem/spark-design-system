@@ -75,8 +75,8 @@
 }
 
 .sprk-b-TextArea {
-  min-height: 125px;
-  margin: $sprk-space-stack-m;
+  min-height: $sprk-textarea-min-height;
+  margin: $sprk-textarea-margin;
 }
 
 // Placeholder colors
@@ -85,21 +85,4 @@
 :-ms-input-placeholder,
 ::placeholder {
   color: $sprk-text-input-placeholder-color;
-}
-
-.sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full $sprk-input-animation-speed;
-  animation-fill-mode: forwards;
-}
-
-.sprk-b-TextInput--focusout ~ .sprk-b-InputContainer__input-border {
-  width: 100%;
-  animation: opacity-one-to-zero $sprk-input-animation-speed;
-  animation-fill-mode: forwards;
-}
-
-.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
-  animation: none;
-  border-bottom: 3px solid $sprk-text-input-error-color;
-  width: 100%;
 }

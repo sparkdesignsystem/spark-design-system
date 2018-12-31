@@ -357,12 +357,14 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 // Inputs
 ///
 $sprk-input-gray-medium: #5a5a5a !default;
+$sprk-monetary-symbol: '$' !default;
+$sprk-fieldset-padding: 0 !default;
+$sprk-input-container-margin: 0 0 3rem 0 !default;
+$sprk-input-max-width: 27.5rem !default;
 
 //
 // Text Input
 ///
-
-// TODO: add to variable table
 $sprk-text-input-font-family: $sprk-font-family-body-two !default;
 $sprk-text-input-font-size: 1rem !default;
 $sprk-text-input-font-weight: 300 !default;
@@ -377,8 +379,10 @@ $sprk-text-input-focus-border-color: $sprk-green !default;
 $sprk-text-input-error-border-color: $sprk-yellow !default;
 $sprk-text-input-disabled-border-color: $sprk-black !default;
 $sprk-text-input-disabled-background-color: $sprk-gray !default;
+$sprk-text-input-disabled-box-shadow: none !default;
 $sprk-text-input-disabled-color: $sprk-input-gray-medium !default;
 $sprk-text-input-placeholder-color: $sprk-gray !default;
+$sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
 $sprk-text-input-readonly-color: $sprk-gray !default;
 
 //
@@ -405,16 +409,23 @@ $sprk-select-disabled-background-color: $sprk-text-input-disabled-background-col
 $sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
 
 //
+// Textarea
+///
+$sprk-textarea-min-height: 125px !default;
+$sprk-textarea-margin: $sprk-space-stack-m !default;
+
+//
 // Input Errors
 ///
-// TODO: validate var table against input vars
-$sprk-input-error-color: $sprk-black !default;
-$sprk-input-error-font-family: $sprk-font-family-body-two !default;
-$sprk-input-error-font-weight: 400 !default;
-$sprk-input-error-font-size: 0.8125rem !default;
-$sprk-input-error-line-height: 1.2 !default;
-$sprk-input-error-margin: 0 0 0 6px !default;
-$sprk-error-container-margin: 6px 0 0 0;
+$sprk-text-input-error-color: $sprk-yellow !default;
+$sprk-input-error-text-color: $sprk-black !default;
+$sprk-input-error-text-font-family: $sprk-font-family-body-two !default;
+$sprk-input-error-text-font-weight: 400 !default;
+$sprk-input-error-text-font-size: 0.8125rem !default;
+$sprk-input-error-text-line-height: 1.2 !default;
+$sprk-input-error-text-margin: 0 0 0 6px !default;
+$sprk-error-container-margin: 8px 0 0 0 !default;
+$sprk-error-icon-size: 1.25rem !default;
 
 //
 // Selection Container
@@ -425,36 +436,28 @@ $sprk-selection-container-input-height: 20px !default;
 $sprk-selection-container-input-width: 20px !default;
 $sprk-selection-container-input-margin: 0 4px 0 0 !default;
 
-$sprk-monetary-symbol: '$' !default;
-$sprk-fieldset-padding: 0 !default;
-$sprk-input-container-margin-bottom: 0 !default;
-
-$sprk-helper-text-hidden: false !default;
-$sprk-input-readonly-border-color: $sprk-black !default;
-$sprk-input-error-box-shadow: 0 3px 0 0 $sprk-yellow !default;
-$sprk-error-icon-size: 1.25rem !default;
-$sprk-input-disabled-box-shadow: 0 1px 0 0 $sprk-input-gray-medium !default;
+//
+// DatePicker
+///
 $sprk-date-picker-max-width: 20rem !default;
 $sprk-date-picker-button-size: 2.25rem !default;
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
 $sprk-date-picker-box-shadow: 0 2px 5px $sprk-input-gray-medium !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
 $sprk-date-picker-day-interact-color: $sprk-red !default;
-$sprk-text-input-interact-color: $sprk-red !default;
-$sprk-text-input-error-color: $sprk-yellow !default;
-$sprk-input-max-width: 27.5rem !default;
+
+//
+// Icon Inputs
+///
 $sprk-input-icon-offset-x: 7px !default;
 $sprk-input-icon-offset-y: 21px !default;
 $sprk-input-text-icon-offset-x: 6px !default;
 $sprk-input-text-icon-offset-y: 21px !default;
-$sprk-input-animation-speed: 0.3s !default;
-
 
 //
 // Labels
 ///
 $sprk-label-padding: 0 !default;
-// TODO: add to var table
 $sprk-label-font-family: $sprk-font-family-body-two !default;
 $sprk-label-font-size: 0.875rem !default;
 $sprk-label-font-weight: 400 !default;
