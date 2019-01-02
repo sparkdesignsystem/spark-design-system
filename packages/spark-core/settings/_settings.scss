@@ -720,6 +720,7 @@ $sprk-masthead-selector-border-radius: 5px !default;
 $sprk-masthead-selector-font-color: $sprk-black !default;
 $sprk-masthead-selector-padding: $sprk-space-inset-short-m !default;
 $sprk-masthead-selector-min-width: 17rem !default;
+$sprk-masthead-narrow-height: 81px !default;
 // Big Nav
 $sprk-big-nav-column-width: 64rem !default;
 $sprk-big-nav-bg: $sprk-white !default;
@@ -728,16 +729,20 @@ $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
 $sprk-big-nav-link-color: $sprk-black !default;
 $sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
 $sprk-big-nav-item-line-height: 53px !default;
-
-// Narrow
-$sprk-narrow-nav-left-border: 5px solid $sprk-black !default;
-$sprk-narrow-nav-active-link-font-weight: 500 !default;
-$sprk-narrow-nav-link-font-weight: 500 !default;
-$sprk-narrow-nav-active-link-color: $sprk-black !default;
-$sprk-narrow-nav-heading-color: $sprk-black !default;
-$sprk-narrow-nav-icon-stroke: $sprk-black !default;
-$sprk-mobile-masthead-height: 81px !default;
-
+// Masthead Accordion
+$sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
+$sprk-masthead-accordion-active-heading-font-weight: 400 !default;
+$sprk-masthead-accordion-active-heading-color: $sprk-black !default;
+$sprk-masthead-accordion-heading-color: $sprk-black !default;
+$sprk-masthead-accordion-heading-font-weight: 400 !default;
+$sprk-masthead-accordion-details-font-weight: 300 !default;
+$sprk-masthead-accordion-details-font-color: $sprk-black !default;
+$sprk-masthead-accordion-active-background-color: $sprk-gray !default;
+$sprk-masthead-accordion-active-font-color: $sprk-black !default;
+$sprk-masthead-accordion-font-color: $sprk-black !default;
+$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
+$sprk-masthead-accordion-item-open-line-height: 2px !default;
+$sprk-masthead-accordion-item-padding: $sprk-space-m !default;
 //
 // Spinners
 ///
