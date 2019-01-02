@@ -32,40 +32,12 @@
   cursor: not-allowed;
 }
 
-.sprk-b-TextInput--with-icon {
+.sprk-b-TextInput--with-svg-icon {
   padding: $sprk-text-input-with-icon-padding;
 }
 
-.sprk-b-TextInput--monetary {
+.sprk-b-TextInput--with-text-icon {
   padding: $sprk-text-input-with-text-icon-padding;
-}
-
-.sprk-b-TextInputIconContainer {
-  position: relative;
-}
-
-.sprk-b-TextInputIconContainer--monetary {
-  position: relative;
-
-  &::before {
-    content: $sprk-monetary-symbol;
-    display: block;
-    font-size: $sprk-input-text-icon-font-size;
-    font-weight: $sprk-input-text-icon-font-weight;
-    line-height: 1;
-    margin-left: $sprk-input-text-icon-offset-x;
-    margin-top: $sprk-input-text-icon-offset-y;
-    position: absolute;
-    z-index: $sprk-layer-height-xs;
-  }
-}
-
-.sprk-b-InlineSearch__icon,
-.sprk-b-DatePicker__icon {
-  margin-left: $sprk-input-icon-offset-x;
-  margin-top: $sprk-input-icon-offset-y;
-  position: absolute;
-  z-index: $sprk-layer-height-xs;
 }
 
 .sprk-b-TextInput[readonly] {

@@ -501,19 +501,25 @@ $sprk-date-picker-column-adjustment-x: 0.25rem !default;
 $sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
 $sprk-date-picker-font-size: 0.9375rem !default;
+$sprk-date-picker-font-weight: 300 !default;
 $sprk-date-picker-day-interact-color: $sprk-green !default;
+$sprk-date-picker-selected-day-font-weight: 500 !default;
 
 //
-// Icon Inputs
+// Text Icon Inputs
 ///
-$sprk-input-icon-offset-x: 8px !default;
-$sprk-input-icon-offset-y: 16px !default;
-$sprk-text-input-with-icon-padding: 12px 13px 12px 38px !default;
-$sprk-input-text-icon-offset-x: 8px !default;
-$sprk-input-text-icon-offset-y: 39px !default;
+$sprk-input-text-icon-offset-x: $sprk-space-m !default;
+$sprk-input-text-icon-offset-y: 38px !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
-$sprk-text-input-with-text-icon-padding: 12px 13px 12px 29px !default;
+$sprk-text-input-with-text-icon-padding: 12px 13px 12px 37px !default;
+
+//
+// SVG Icon Inputs
+///
+$sprk-input-icon-offset-x: $sprk-space-m !default;
+$sprk-input-icon-offset-y: $sprk-space-m !default;
+$sprk-text-input-with-icon-padding: 12px 0 12px 40px !default;
 
 //
 // Labels
