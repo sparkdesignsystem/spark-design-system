@@ -115,7 +115,7 @@ variableTable:
     default: $sprk-gray
     description: The text color when a text input is readonly.
   $sprk-text-input-transition:
-    default: border-color 0.3s ease
+    default: border-color 0.15s ease
     description: The transition applied to text input elements.
   $sprk-select-appearance:
     default: none

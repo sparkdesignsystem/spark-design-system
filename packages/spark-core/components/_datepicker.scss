@@ -142,9 +142,9 @@
 .dp-selected,
 .dp-day:hover {
   background: $sprk-date-picker-day-interact-color;
+  border-color: $sprk-date-picker-day-interact-color;
   color: $sprk-white;
   outline: 0;
-  border-color: $sprk-date-picker-day-interact-color;
 }
 
 .dp-current {
