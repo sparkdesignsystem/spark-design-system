@@ -141,11 +141,14 @@ variableTable:
   $sprk-select-font-family:
     default: $sprk-text-input-font-family
     description: The font family for text in select elements.
-  $sprk-select-font-weight: $sprk-text-input-font-weight
+  $sprk-select-font-weight:
+    default: $sprk-text-input-font-weight
     description: The font weight for text in select elements.
-  $sprk-select-line-height: $sprk-text-input-line-height
+  $sprk-select-line-height:
+    default: $sprk-text-input-line-height
     description: The line height for text in select elements.
-  $sprk-select-outline: $sprk-text-input-outline
+  $sprk-select-outline:
+    default: $sprk-text-input-outline
     description: The outline applied to select elements.
   $sprk-select-padding:
     default: 12px 45px 12px 13px
@@ -229,85 +232,85 @@ variableTable:
     default: $sprk-text-input-line-height
     description: The line height used for placeholder text.
   $sprk-selection-container-margin:
-    default: 0.5rem 0 !default;
+    default: 0.5rem 0
     description: The margin surrounding selection containers.
   $sprk-selection-container-label-font-weight:
-    default: 300 !default;
+    default: 300
     description: The font weight used for selection container labels.
   $sprk-selection-container-input-height:
-    default: 20px !default;
+    default: 20px
     description: The height of inputs inside selection containers.
   $sprk-selection-container-input-width:
-    default: 20px !default;
+    default: 20px
     description: The width of inputs inside selection containers.
   $sprk-selection-container-input-margin:
-    default: 0 4px 0 0 !default;
+    default: 0 4px 0 0
     description: The margin surrounding inputs inside selection containers.
   $sprk-date-picker-max-width:
-    default: 20rem !default;
+    default: 20rem
     description: The maximum width of the datepicker modal.
   $sprk-date-picker-button-size:
-    default: 2.25rem !default;
+    default: 2.25rem
     description: The size of the buttons used internally by datepicker.
   $sprk-date-picker-column-adjustment-x:
-    default: 0.25rem !default;
+    default: 0.25rem
     description: The offset applied to columns used internally by datepicker.
   $sprk-date-picker-box-shadow:
-    default: 0 2px 5px $sprk-black-tint-50 !default;
+    default: 0 2px 5px $sprk-black-tint-50
     description: The box shadow applied to the datepicker modal.
   $sprk-date-picker-font-family:
-    $default: sprk-font-family-body-two !default;
+    $default: sprk-font-family-body-two
     description: The font family used by the datepicker modal.
   $sprk-date-picker-day-interact-color:
-    $default: sprk-red !default;
+    $default: sprk-red
     description: The color used internally by datepicker to highlight elements.
   $sprk-input-icon-offset-x:
-    default: 8px !default;
+    default: 8px
     description: The X offset of icons inside input elements.
   $sprk-input-icon-offset-y:
-    default: 16px !default;
+    default: 16px
     description: The Y offset of icons inside input elements.
   $sprk-text-input-with-icon-padding:
-    default: 12px 13px 12px 38px !default;
+    default: 12px 13px 12px 38px
     description: The padding inside input elements that contain icons.
   $sprk-input-text-icon-offset-x:
-    default: 8px !default;
+    default: 8px
     description: The X offset of text icons inside input elements.
   $sprk-input-text-icon-offset-y:
-    default: 40.5px !default;
+    default: 40.5px
     description: The Y offset of text icons inside input elements.
   $sprk-input-text-icon-font-size:
-    default: 1rem !default;
+    default: 1rem
     description: The font size of text icons inside input elements.
   $sprk-input-text-icon-font-weight:
-    default: 700 !default;
+    default: 700
     description: The font weight of text icons inside input elements.
   $sprk-text-input-with-text-icon-padding:
-    default: 12px 13px 12px 29px !default;
+    default: 12px 13px 12px 29px
     description: The padding inside input elements that contain text icons.
   $sprk-label-padding:
-    default: 0 !default;
+    default: 0
     description: The padding applied to labels.
   $sprk-label-font-family:
     default: $sprk-font-family-body-two !default;
     description: The font family used for labels.
   $sprk-label-font-size:
-    default: 0.875rem !default;
+    default: 0.875rem
     description: The font size used for labels.
   $sprk-label-font-weight:
-    default: 400 !default;
+    default: 400
     description: The font weight used for labels.
   $sprk-label-line-height:
-    default: 1.2 !default;
+    default: 1.2
     description: The line height used for labels.
   $sprk-label-margin:
-    default: 0 0 $sprk-space-s 0 !default;
+    default: 0 0 $sprk-space-s 0
     description: The margin surrounding labels.
   $sprk-visibility-control-margin:
-    default: 6px 0 0 0 !default;
+    default: 6px 0 0 0
     description: The margin surrounding visibility controls (i.e. 'Show SSN').
   $sprk-visibility-control-label-font-size:
-    default: $sprk-label-font-size !default;
+    default: $sprk-label-font-size
     description: The font size used for visibility controls.
 classTable:
   .sprk-b-Label--no-input:
