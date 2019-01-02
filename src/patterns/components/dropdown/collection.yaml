@@ -4,13 +4,10 @@ sparkPackageCore: true
 variableTable:
   $sprk-dropdown-padding:
     default: $sprk-space-misc-a
-    description: Sets the padding around the dropdown items.
-  $sprk-dropdown-font-weigh:
+    description: Sets the padding around the dropdown items. Calculations will be done to make sure it apprioriately spaced.
+  $sprk-dropdown-font-weight:
     default: 400
     description: Sets the font weight of the dropdown.
-  $sprk-dropdown-header-padding:
-    default: $sprk-space-misc-a
-    description: Sets the padding around the dropdown header.
   $sprk-dropdown-header-color:
     default: $sprk-black-tint-25
     description: Sets the color of the dropdown title.
