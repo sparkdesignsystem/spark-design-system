@@ -26,7 +26,7 @@ hasAngularDocs: true
              placeholder="MM/DD/YYYY"
              {{#if invaliddata}} aria-invalid="true"{{/if}}
              aria-describedby="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container"
-        {{#if disabled}} disabled{{/if}} data-sprk-input="text">
+        {{#if disabled}} disabled{{/if}} >
   </div>
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}datepicker-normal{{/if}}--error-container">
     {{#if errorMessage}}

@@ -21,7 +21,7 @@ hasAngularCodeInfo: true
          placeholder="000-00-0000"
          {{#if invaliddata}} aria-invalid="true"{{/if}}
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}--error-container"
-         {{#if disabled}} disabled{{/if}} data-sprk-input="text">
+         {{#if disabled}} disabled{{/if}} >
   <div class="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle">
     <input id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn" type="checkbox"
            data-id="{{#if idattr}}{{idattr}}{{else}}ssn-normal{{/if}}-show-ssn"
