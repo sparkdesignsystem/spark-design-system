@@ -33,23 +33,54 @@ layout: blank
 </div>
 
 <div class="drizzle-c-Space-inset-m">
-  <h2>Standalone Link</h2>
+  <h2>Simple Link</h2>
 </div>
 
 <div class="drizzle-c-Space-inset-m">
-  <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Standalone Link</a>
+  <a class="sprk-b-Link sprk-b-Link--simple" href="#">Simple Link</a>
 </div>
 
 <div class="drizzle-c-Space-inset-m">
   <p class="sprk-b-TypeBodyTwo">
-    A paragraph with a <a class="sprk-b-Link sprk-b-Link--standalone" href="#">Standalone Link</a>
+    A paragraph with a <a class="sprk-b-Link sprk-b-Link--simple" href="#">Simple Link</a>
   </p>
 </div>
 
 <div class="drizzle-c-Space-inset-m">
   <p class="sprk-b-TypeBodyTwo">
-    <a class="sprk-b-Link sprk-b-Link--standalone" href="#">This is a standalone link spanning multiple lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+    <a class="sprk-b-Link sprk-b-Link--simple" href="#">This is a simple link spanning multiple lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
   </p>
+</div>
+
+<div class="drizzle-c-Space-inset-m">
+  <h2>Link with Icon</h2>
+</div>
+
+<div class="drizzle-c-Space-inset-m">
+  <a
+    class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--simple"
+    href="#nogo"
+    data-id="link-1"
+    data-analytics="object.action.event">
+    <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--current-color" viewBox="0 0 100 100">
+      <use xlink:href="#communication" />
+    </svg>
+
+    This is text
+  </a>
+</div>
+<div class="drizzle-c-Space-inset-m">
+  <a
+    class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--simple sprk-b-Link--disabled"
+    href="#nogo"
+    data-id="link-1"
+    data-analytics="object.action.event">
+    <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--current-color" viewBox="0 0 100 100">
+      <use xlink:href="#communication" />
+    </svg>
+
+    I'm disabled
+  </a>
 </div>
 
 <div class="drizzle-c-Space-inset-m">
@@ -76,7 +107,7 @@ layout: blank
   <div style="background-color:rgb(191, 191, 191)">
     <p>These are links on a non-white background.</p>
     <p><a class="sprk-b-Link" href="#">Inline Link</a></p>
-    <p><a class="sprk-b-Link sprk-b-Link--standalone" href="#">Standalone Link</a></p>
+    <p><a class="sprk-b-Link sprk-b-Link--simple" href="#">Simple Link</a></p>
     <p><a class="sprk-b-Link sprk-b-Link--disabled" href="">Disabled Link</a></p>
   </div>
 </div>

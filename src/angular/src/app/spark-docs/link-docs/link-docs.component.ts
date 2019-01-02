@@ -14,13 +14,26 @@ import { Component, OnInit } from '@angular/core';
       >
         This is a standard Spark Link!
       </sprk-link>
+
+      <p>
+        Here is a
+        <sprk-link
+          href="/links"
+          idString="link-1"
+          analyticsString="object.action.event"
+          target="_blank"
+        >
+          link
+        </sprk-link>
+        in the middle of a line
+      </p>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
-      <h2 class="drizzle-b-h2">Standalone Link</h2>
+      <h2 class="drizzle-b-h2">Simple Link</h2>
 
       <sprk-link
-        linkType="standalone"
+        linkType="simple"
         href="/links"
         idString="link-2"
         analyticsString="object.action.event"
@@ -59,7 +72,7 @@ import { Component, OnInit } from '@angular/core';
       <h2 class="drizzle-b-h2">Icon With Text Link</h2>
 
       <sprk-link
-        linkType="plain"
+        linkType="icon"
         href="/links"
         idString="link-5"
         analyticsString="object.action.event"
