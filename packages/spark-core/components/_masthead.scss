@@ -11,7 +11,6 @@
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
     border-bottom: $sprk-masthead-border-bottom-wide;
-    box-shadow: $sprk-masthead-shadow-wide;
   }
 }
 
@@ -26,6 +25,11 @@
     position: sticky;
     height: auto;
   }
+}
+
+// Added via JS when page is scolled past masthead
+.sprk-c-Masthead--scroll {
+  box-shadow: $sprk-masthead-shadow-wide;
 }
 
 // Keep padding settings consistent for menu, logo branding, and little nav

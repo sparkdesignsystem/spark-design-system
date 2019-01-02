@@ -67,8 +67,13 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('click');
     iconContainer.dispatchEvent(event);
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).eql(true);
-    console.log(mastheadDiv.innerHTML, 'cats');
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
+  });
+
+  it('should add class to masthead when the window is scrolled', () => {
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(true);
   });
 
   it('should close the nav when clicked and the nav is already open', () => {
