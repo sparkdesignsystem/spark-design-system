@@ -13,7 +13,8 @@ hasAngularCode: true
 ---
 
 <div class="sprk-b-InputContainer" {{#if requiredOnly}}data-sprk-required-only="select"{{/if}}>
-  <label for="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}" class="sprk-b-Label">Select Box Label</label>
+  <label for="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
+         class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}}">Select Box Label</label>
   <select class="sprk-b-Select{{#if class}} {{class}}{{/if}}" id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
           data-id="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}"
           aria-describedby="{{#if idattr}}{{idattr}}{{else}}select-normal{{/if}}--error-container"

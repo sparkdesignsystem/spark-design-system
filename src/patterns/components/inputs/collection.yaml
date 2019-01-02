@@ -94,10 +94,10 @@ variableTable:
     default: $sprk-yellow
     description: The border color when input elements are in an error state.
   $sprk-text-input-disabled-border-color:
-    default: $sprk-black
+    default: $sprk-gray-dark
     description: The border color when an input element is disabled.
   $sprk-text-input-disabled-background-color:
-    default: $sprk-gray
+    default: $sprk-gray-dark
     description: The background color when an input element is disabled.
   $sprk-text-input-disabled-box-shadow:
     default: none
@@ -111,6 +111,9 @@ variableTable:
   $sprk-text-input-readonly-color:
     default: $sprk-gray
     description: The text color when a text input is readonly.
+  $sprk-text-input-transition:
+    default: border-color 0.3s ease
+    description: The transition applied to text input elements.
   $sprk-select-appearance:
     default: none
     description: The value set to the appearance property of select elements.
@@ -154,11 +157,14 @@ variableTable:
     default: 12px 45px 12px 13px
     description: The padding applied to select elements.
   $sprk-select-arrow-offset-y:
-    default: -39px
+    default: -37px
     description: The offset that is applied to the y-axis of the chevron icon on select elements.
   $sprk-select-arrow-offset-x:
     default: 8px
     description: The offset that is applied to the x-axis of the chevron icon on select elements.
+  $sprk-select-arrow-stroke-width:
+    default: 6px
+    description: The stroke-width applied to the chevron icon of select elements.
   $sprk-select-disabled-border-color:
     default: $sprk-text-input-disabled-border-color
     description: The border color when select elements are disabled.
@@ -252,6 +258,9 @@ variableTable:
   $sprk-date-picker-max-width:
     default: 20rem
     description: The maximum width of the datepicker modal.
+  $sprk-date-picker-border-radius:
+    default: 4px
+    description: The border radius applied to the datepicker modal.
   $sprk-date-picker-button-size:
     default: 2.25rem
     description: The size of the buttons used internally by datepicker.
@@ -259,8 +268,11 @@ variableTable:
     default: 0.25rem
     description: The offset applied to columns used internally by datepicker.
   $sprk-date-picker-box-shadow:
-    default: 0 2px 5px $sprk-black-tint-50
+    default: 0 4px 16px rgba(51, 51, 51, 0.1)
     description: The box shadow applied to the datepicker modal.
+  $sprk-date-picker-font-size:
+    default: 0.9375rem
+    description: The font size used for the datepicker modal.
   $sprk-date-picker-font-family:
     $default: sprk-font-family-body-two
     description: The font family used by the datepicker modal.
@@ -280,7 +292,7 @@ variableTable:
     default: 8px
     description: The X offset of text icons inside input elements.
   $sprk-input-text-icon-offset-y:
-    default: 40.5px
+    default: 39.75px
     description: The Y offset of text icons inside input elements.
   $sprk-input-text-icon-font-size:
     default: 1rem
@@ -315,6 +327,9 @@ variableTable:
   $sprk-visibility-control-label-font-size:
     default: $sprk-label-font-size
     description: The font size used for visibility controls.
+  $sprk-label-disabled-color:
+    default: $sprk-gray-dark
+    description: The color of the label when it is disabled.
 classTable:
   .sprk-b-Label--no-input:
     description: Apply when a label is used without an input.

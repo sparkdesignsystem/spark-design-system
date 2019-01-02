@@ -10,9 +10,10 @@
 /* stylelint-disable selector-class-pattern */
 .dp {
   background: $sprk-white;
+  border-radius: $sprk-date-picker-border-radius;
   box-shadow: $sprk-date-picker-box-shadow;
   font-family: $sprk-date-picker-font-family;
-  font-size: $sprk-font-size-body-four;
+  font-size: $sprk-date-picker-font-size;
   padding: $sprk-space-inset-s;
   position: relative;
   max-width: $sprk-date-picker-max-width;

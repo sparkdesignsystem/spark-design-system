@@ -12,6 +12,7 @@
   line-height: $sprk-text-input-line-height;
   outline: $sprk-text-input-outline;
   padding: $sprk-text-input-padding;
+  transition: $sprk-text-input-transition;
 
   &:focus {
     border-color: $sprk-text-input-focus-border-color;
@@ -25,6 +26,7 @@
 
 .sprk-b-TextInput[disabled] {
   background-color: $sprk-text-input-disabled-background-color;
+  border-color: $sprk-text-input-disabled-border-color;
   color: $sprk-text-input-disabled-color;
   cursor: not-allowed;
 }

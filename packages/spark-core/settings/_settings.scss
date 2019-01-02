@@ -358,7 +358,7 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 ///
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: 0 !default;
-$sprk-input-container-margin: 0 0 3rem 0 !default;
+$sprk-input-container-margin: 0 0 2rem 0 !default;
 $sprk-input-max-width: 27.5rem !default;
 
 //
@@ -367,7 +367,7 @@ $sprk-input-max-width: 27.5rem !default;
 $sprk-text-input-font-family: $sprk-font-family-body-two !default;
 $sprk-text-input-font-size: 1rem !default;
 $sprk-text-input-font-weight: 300 !default;
-$sprk-text-input-line-height: 1.2 !default;
+$sprk-text-input-line-height: 1 !default;
 $sprk-text-input-outline: 0 !default;
 $sprk-text-input-color: $sprk-black !default;
 $sprk-text-input-border: 2px solid $sprk-black-tint-25 !default;
@@ -376,12 +376,13 @@ $sprk-text-input-box-shadow: none !default;
 $sprk-text-input-padding: 12px 13px !default;
 $sprk-text-input-focus-border-color: $sprk-green !default;
 $sprk-text-input-error-border-color: $sprk-yellow !default;
-$sprk-text-input-disabled-border-color: $sprk-black !default;
-$sprk-text-input-disabled-background-color: $sprk-gray !default;
+$sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
 $sprk-text-input-disabled-box-shadow: none !default;
 $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 $sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
 $sprk-text-input-readonly-color: $sprk-gray !default;
+$sprk-text-input-transition: border-color 0.3s ease !default;
 
 //
 // Select
@@ -400,8 +401,9 @@ $sprk-select-font-weight: $sprk-text-input-font-weight !default;
 $sprk-select-line-height: $sprk-text-input-line-height !default;
 $sprk-select-outline: $sprk-text-input-outline !default;
 $sprk-select-padding: 12px 45px 12px 13px !default;
-$sprk-select-arrow-offset-y: -39px !default;
+$sprk-select-arrow-offset-y: -37px !default;
 $sprk-select-arrow-offset-x: 8px !default;
+$sprk-select-arrow-stroke-width: 6px !default;
 $sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
 $sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
 $sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
@@ -420,7 +422,7 @@ $sprk-input-error-text-color: $sprk-black !default;
 $sprk-input-error-text-font-family: $sprk-font-family-body-two !default;
 $sprk-input-error-text-font-weight: 400 !default;
 $sprk-input-error-text-font-size: 0.8125rem !default;
-$sprk-input-error-text-line-height: 1.2 !default;
+$sprk-input-error-text-line-height: 1 !default;
 $sprk-input-error-text-margin: 0 0 0 6px !default;
 $sprk-error-container-margin: 8px 0 0 0 !default;
 $sprk-error-icon-size: 1.25rem !default;
@@ -457,11 +459,13 @@ $sprk-selection-container-input-margin: 0 4px 0 0 !default;
 // DatePicker
 ///
 $sprk-date-picker-max-width: 20rem !default;
+$sprk-date-picker-border-radius: 4px !default;
 $sprk-date-picker-button-size: 2.25rem !default;
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
-$sprk-date-picker-box-shadow: 0 2px 5px $sprk-black-tint-50 !default;
+$sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
-$sprk-date-picker-day-interact-color: $sprk-red !default;
+$sprk-date-picker-font-size: 0.9375rem !default;
+$sprk-date-picker-day-interact-color: $sprk-green !default;
 
 //
 // Icon Inputs
@@ -470,7 +474,7 @@ $sprk-input-icon-offset-x: 8px !default;
 $sprk-input-icon-offset-y: 16px !default;
 $sprk-text-input-with-icon-padding: 12px 13px 12px 38px !default;
 $sprk-input-text-icon-offset-x: 8px !default;
-$sprk-input-text-icon-offset-y: 40.5px !default;
+$sprk-input-text-icon-offset-y: 39.75px !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
 $sprk-text-input-with-text-icon-padding: 12px 13px 12px 29px !default;
@@ -482,10 +486,11 @@ $sprk-label-padding: 0 !default;
 $sprk-label-font-family: $sprk-font-family-body-two !default;
 $sprk-label-font-size: 0.875rem !default;
 $sprk-label-font-weight: 400 !default;
-$sprk-label-line-height: 1.2 !default;
+$sprk-label-line-height: 1 !default;
 $sprk-label-margin: 0 0 $sprk-space-s 0 !default;
 $sprk-visibility-control-margin: 6px 0 0 0 !default;
 $sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
+$sprk-label-disabled-color: $sprk-gray-dark !default;
 
 //
 // Tables

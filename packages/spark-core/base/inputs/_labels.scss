@@ -8,6 +8,10 @@
   margin: $sprk-label-margin;
 }
 
+.sprk-b-Label--disabled {
+  color: $sprk-label-disabled-color;
+}
+
 .sprk-b-Label--no-input {
   padding: 0;
   transform: none;
