@@ -7,11 +7,11 @@
 // Use within a :hover selector
 ///
 
-@mixin HoverLine($sprk-hoverline-color, $sprk-hoverline-width) {
+@mixin HoverLine($sprk-hoverline-color, $sprk-hoverline-width, $sprk-hoverline-height) {
   &::after {
     background-color: $sprk-hoverline-color;
     content: ' ';
-    height: 3px;
+    height: $sprk-hoverline-height;
     display: block;
     width: $sprk-hoverline-width;
     margin-right: auto;
