@@ -15,6 +15,7 @@
   }
 }
 
+// Fixed masthead on narrow, sticky position on larger views
 .sprk-c-Masthead--open {
   position: fixed;
   left: 0;
@@ -27,6 +28,7 @@
   }
 }
 
+// Keep padding settings consistent for menu, logo branding, and little nav
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding,
 .sprk-c-Masthead__little-nav {
@@ -43,6 +45,7 @@
   }
 }
 
+// Content includes menu, logo, little nav
 .sprk-c-Masthead__content {
   padding: $sprk-masthead-content-padding;
 
@@ -53,6 +56,7 @@
   }
 }
 
+// When open, adjust box shadown and border styles
 .sprk-c-Masthead--open .sprk-c-Masthead__content {
   border-bottom: $sprk-masthead-border-bottom;
   box-shadow: $sprk-masthead-shadow;
@@ -66,7 +70,8 @@
     border-bottom: $sprk-masthead-border-bottom-wide;
   }
 }
-// Hide menu on larger views
+
+// Hide menu element on larger views
 .sprk-c-Masthead__menu {
   @media all and (min-width: $sprk-masthead-breakpoint) {
     display: none;
@@ -78,17 +83,20 @@
   height: $sprk-masthead-menu-icon-height;
 }
 
+// Center logo branding
 .sprk-c-Masthead__branding {
   margin: 0 auto;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {
-    padding-right: (($sprk-masthead-content-padding + $sprk-masthead-content-item-padding-left + $sprk-masthead-content-item-padding-right) + $sprk-masthead-menu-icon-width); // Centers logo on narrow by adding space on right to balance menu space on left
+    // Centers logo on narrow by adding space on right to balance menu space on left
+    padding-right: (($sprk-masthead-content-padding + $sprk-masthead-content-item-padding-left + $sprk-masthead-content-item-padding-right) + $sprk-masthead-menu-icon-width);
   }
   @media (min-width: $sprk-masthead-breakpoint) {
     padding-right: $sprk-masthead-content-item-padding-right-wide;
   }
 }
 
+// Add sizing range for logo
 .sprk-c-Masthead__logo {
   max-width: $sprk-masthead-logo-max-width;
   min-width: $sprk-masthead-logo-min-width;
@@ -104,11 +112,13 @@
   }
 }
 
+// If thre are too many little nav links they'll wrap
 .sprk-c-Masthead__little-nav {
   flex-wrap: wrap;
 }
 
 .sprk-c-Masthead__site-links {
+  // Relative pos for child dropdowns
   position: relative;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
@@ -131,12 +141,15 @@
   }
 }
 
+// Selector has 100% default width
+// then grows to size of content on larger views
 .sprk-c-Masthead__selector {
   border: $sprk-masthead-selector-border;
   border-radius: $sprk-masthead-selector-border-radius;
   color: $sprk-masthead-selector-font-color;
   font-weight: $sprk-masthead-selector-font-weight;
   padding: $sprk-masthead-selector-padding;
+  width: 100%;
   min-width: $sprk-masthead-selector-min-width;
 
   &:visited {
@@ -149,6 +162,10 @@
   &:focus {
     color: $sprk-masthead-selector-font-color;
     border: $sprk-masthead-selector-border;
+  }
+
+  @media all and (min-width: $sprk-masthead-breakpoint) {
+    width: auto;
   }
 }
 
@@ -167,7 +184,9 @@
   background-color: $sprk-big-nav-bg;
 }
 
+// Big nav bar has a max width for child items
 .sprk-c-Masthead__big-nav-items {
+  // Relative pos for child dropdowns
   position: relative;
   margin: 0 auto;
   max-width: $sprk-big-nav-column-width;
@@ -190,6 +209,7 @@
   }
 }
 
+// Active Big Nav link styles
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
   color: $sprk-big-nav-active-color;
   font-weight: $sprk-big-nav-link-font-weight;
@@ -201,21 +221,117 @@
   @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
 }
 
-// Hide narrow nav on larger views
+// Fixed container that covers entire page
+// that contains the Masthead Accordion
+// Starts below the main content (logo branding, menu)
 .sprk-c-Masthead__narrow-nav {
   background-color: $sprk-white;
   height: 100%;
   overflow: auto;
   position: fixed;
-  top: $sprk-mobile-masthead-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
-  padding-bottom: $sprk-mobile-masthead-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
+  top: $sprk-masthead-narrow-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: $sprk-masthead-narrow-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
   width: 100%;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {
-    top: $sprk-mobile-masthead-height + $sprk-masthead-border-bottom-size; // Extra space for border
-    padding-bottom: $sprk-mobile-masthead-height + $sprk-masthead-border-bottom-size; // Extra space for border
+    // Extra space for border included
+    top: $sprk-masthead-narrow-height + $sprk-masthead-border-bottom-size;
+    // Extra space for border included
+    padding-bottom: $sprk-masthead-narrow-height + $sprk-masthead-border-bottom-size;
   }
   @media (min-width: $sprk-masthead-breakpoint) {
+    // Hide narrow nav on larger views
     display: none;
+  }
+}
+
+// ==================================================================
+// Masthead Accordion
+// ==================================================================
+.sprk-c-MastheadAccordion {
+  width: 100%;
+}
+
+// Override the dropdown max-width
+.sprk-c-MastheadAccordion
+.sprk-c-Dropdown {
+  max-width: 100%;
+}
+
+.sprk-c-MastheadAccordion__heading {
+  color: $sprk-masthead-accordion-heading-color;
+  flex: 1;
+  font-weight: $sprk-masthead-accordion-heading-font-weight;
+}
+
+.sprk-c-MastheadAccordion__icon {
+  flex: 0 0 auto;
+}
+
+.sprk-c-MastheadAccordion__summary {
+  align-items: center;
+  color: $sprk-masthead-accordion-font-color;
+  display: flex;
+  min-height: $sprk-icon-xl;
+  padding: $sprk-masthead-accordion-item-padding;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    background-color: $sprk-masthead-accordion-active-background-color;
+    color: $sprk-masthead-accordion-active-font-color;
+    text-decoration: none;
+  }
+}
+
+// Add top divider when open
+.sprk-c-MastheadAccordion__item--open::before {
+  background-color: $sprk-masthead-accordion-item-open-line-background-color;
+  content: '';
+  display: block;
+  height: $sprk-masthead-accordion-item-open-line-height;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Add selected item background highlight and left color bar
+.sprk-c-MastheadAccordion__item--active
+.sprk-c-MastheadAccordion__summary {
+  background-color: $sprk-masthead-accordion-active-background-color;
+  border-left: $sprk-masthead-accordion-active-left-border;
+}
+
+// Set colors/font weight for heading when item is open or selected
+.sprk-c-MastheadAccordion__item--active
+.sprk-c-MastheadAccordion__heading,
+.sprk-c-MastheadAccordion__item--open
+.sprk-c-MastheadAccordion__heading {
+  color: $sprk-masthead-accordion-active-heading-color;
+  font-weight: $sprk-masthead-accordion-active-heading-font-weight;
+}
+
+// When item is open, add bottom divider
+.sprk-c-MastheadAccordion__details {
+  &::after {
+    background-color: $sprk-masthead-accordion-item-open-line-background-color;
+    content: '';
+    display: block;
+    height: $sprk-masthead-accordion-item-open-line-height;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.sprk-c-MastheadAccordion__details
+.sprk-c-Masthead__link {
+  color: $sprk-masthead-accordion-details-font-color;
+  display: block;
+  font-weight: $sprk-masthead-accordion-details-font-weight;
+  padding: $sprk-masthead-accordion-item-padding;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $sprk-accordion-active-background-color;
   }
 }
