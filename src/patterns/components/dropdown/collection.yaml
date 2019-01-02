@@ -8,6 +8,9 @@ variableTable:
   $sprk-dropdown-header-padding:
     default: $sprk-space-inset-short-l
     description: Sets the padding around the dropdown header.
+  $sprk-dropdown-header-color:
+    default: $sprk-black-tint-25
+    description: Sets the color of the dropdown title.
   $sprk-dropdown-footer-padding:
     default: $sprk-space-inset-short-l
     description: Sets the padding around the dropdown footer in the informational variant.
@@ -18,16 +21,16 @@ variableTable:
     default: $sprk-gray-tint-75
     description: Sets the background color of the dropdown items that are active or hovered.
   $sprk-dropdown-active-border:
-    default: 2.5px solid $sprk-red
+    default: 2.5px solid $sprk-green
     description: Sets the left border of the dropdown item that is active.
   $sprk-dropdown-active-box-shadow:
-    default: -1px 0 0 0 $sprk-red
+    default: -1px 0 0 0 $sprk-green
     description: Sets the box-shadow of the dropdown item that is active.
   $sprk-dropdown-max-width:
     default: 24rem
     description: Sets the maximum width of the dropdown component.
   $sprk-dropdown-shadow:
-    default: 0 5px 10px rgba(0, 0, 0, 0.05)
+    default: 0 0 40px 2px rgba(0, 0, 0, 0.1)
     description: Sets the box-shadow of the dropdown.
 classTable:
   .sprk-c-Dropdown__link--active:
