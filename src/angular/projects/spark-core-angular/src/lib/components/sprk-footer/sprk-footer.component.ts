@@ -76,7 +76,7 @@ import { Component, Input } from '@angular/core';
                     *ngFor="let link of item.links"
                   >
                     <a
-                      class="sprk-b-Link sprk-b-Link--muted sprk-b-Link--simple sprk-u-FontWeight--normal"
+                      class="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
                       href="{{ link.href }}"
                     >
                       {{ link.text }}
