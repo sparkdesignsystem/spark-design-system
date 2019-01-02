@@ -165,6 +165,150 @@ variableTable:
   $sprk-select-disabled-color:
     default: $sprk-text-input-disabled-color
     description: The color of the text of disabled select elements.
+  $sprk-textarea-min-height:
+    default: 125px
+    description: The minimum height of textarea elements.
+  $sprk-textarea-margin:
+    default: $sprk-space-stack-m
+    description: The margin surrounding textarea elements.
+  $sprk-text-input-error-color:
+    default: $sprk-yellow
+    description: The color used generally by input errors.
+  $sprk-input-error-text-color:
+    default: $sprk-black
+    description: The color of the text in input errors.
+  $sprk-input-error-text-font-family:
+    default: $sprk-font-family-body-two
+    description: The font family used for input error text.
+  $sprk-input-error-text-font-weight:
+    default: 400
+    description: The font weight used for input error text.
+  $sprk-input-error-text-font-size:
+    default: 0.8125rem
+    description: The font size used for input error text.
+  $sprk-input-error-text-line-height:
+    default: 1.2
+    description: The line-height used for input error text.
+  $sprk-input-error-text-margin:
+    default: 0 0 0 6px
+    description: The margin surrounding input error text.
+  $sprk-error-container-margin:
+    default: 8px 0 0 0
+    description: The margin surrounding input error containers.
+  $sprk-error-icon-size:
+    default: 1.25rem
+    description: The input error icon size.
+  $sprk-helper-color:
+    default: $sprk-black-tint-50
+    description: The color of the helper text.
+  $sprk-helper-font-size:
+    default: 0.8125rem
+    description: The font size of the helper text.
+  $sprk-helper-font-family:
+    default: $sprk-text-input-font-family
+    description: The font family used for helper text.
+  $sprk-helper-font-weight:
+    default: $sprk-text-input-font-weight
+    description: The font weight used for helper text.
+  $sprk-helper-line-height:
+    default: $sprk-text-input-line-height
+    description: The line height used for helper text.
+  $sprk-placeholder-color:
+    default: $sprk-black-tint-50
+    description: The color of placeholder text.
+  $sprk-placeholder-font-size:
+    default: $sprk-text-input-font-size
+    description: The font size of placeholder text.
+  $sprk-placeholder-font-family:
+    default: $sprk-text-input-font-family
+    description: The font family used for placeholder text.
+  $sprk-placeholder-font-weight:
+    default: $sprk-text-input-font-weight
+    description: The font weight used for placeholder text.
+  $sprk-placeholder-line-height:
+    default: $sprk-text-input-line-height
+    description: The line height used for placeholder text.
+  $sprk-selection-container-margin:
+    default: 0.5rem 0 !default;
+    description: The margin surrounding selection containers.
+  $sprk-selection-container-label-font-weight:
+    default: 300 !default;
+    description: The font weight used for selection container labels.
+  $sprk-selection-container-input-height:
+    default: 20px !default;
+    description: The height of inputs inside selection containers.
+  $sprk-selection-container-input-width:
+    default: 20px !default;
+    description: The width of inputs inside selection containers.
+  $sprk-selection-container-input-margin:
+    default: 0 4px 0 0 !default;
+    description: The margin surrounding inputs inside selection containers.
+  $sprk-date-picker-max-width:
+    default: 20rem !default;
+    description: The maximum width of the datepicker modal.
+  $sprk-date-picker-button-size:
+    default: 2.25rem !default;
+    description: The size of the buttons used internally by datepicker.
+  $sprk-date-picker-column-adjustment-x:
+    default: 0.25rem !default;
+    description: The offset applied to columns used internally by datepicker.
+  $sprk-date-picker-box-shadow:
+    default: 0 2px 5px $sprk-black-tint-50 !default;
+    description: The box shadow applied to the datepicker modal.
+  $sprk-date-picker-font-family:
+    $default: sprk-font-family-body-two !default;
+    description: The font family used by the datepicker modal.
+  $sprk-date-picker-day-interact-color:
+    $default: sprk-red !default;
+    description: The color used internally by datepicker to highlight elements.
+  $sprk-input-icon-offset-x:
+    default: 8px !default;
+    description: The X offset of icons inside input elements.
+  $sprk-input-icon-offset-y:
+    default: 16px !default;
+    description: The Y offset of icons inside input elements.
+  $sprk-text-input-with-icon-padding:
+    default: 12px 13px 12px 38px !default;
+    description: The padding inside input elements that contain icons.
+  $sprk-input-text-icon-offset-x:
+    default: 8px !default;
+    description: The X offset of text icons inside input elements.
+  $sprk-input-text-icon-offset-y:
+    default: 40.5px !default;
+    description: The Y offset of text icons inside input elements.
+  $sprk-input-text-icon-font-size:
+    default: 1rem !default;
+    description: The font size of text icons inside input elements.
+  $sprk-input-text-icon-font-weight:
+    default: 700 !default;
+    description: The font weight of text icons inside input elements.
+  $sprk-text-input-with-text-icon-padding:
+    default: 12px 13px 12px 29px !default;
+    description: The padding inside input elements that contain text icons.
+  $sprk-label-padding:
+    default: 0 !default;
+    description: The padding applied to labels.
+  $sprk-label-font-family:
+    default: $sprk-font-family-body-two !default;
+    description: The font family used for labels.
+  $sprk-label-font-size:
+    default: 0.875rem !default;
+    description: The font size used for labels.
+  $sprk-label-font-weight:
+    default: 400 !default;
+    description: The font weight used for labels.
+  $sprk-label-line-height:
+    default: 1.2 !default;
+    description: The line height used for labels.
+  $sprk-label-margin:
+    default: 0 0 $sprk-space-s 0 !default;
+    description: The margin surrounding labels.
+  $sprk-visibility-control-margin:
+    default: 6px 0 0 0 !default;
+    description: The margin surrounding visibility controls (i.e. 'Show SSN').
+  $sprk-visibility-control-label-font-size:
+    default: $sprk-label-font-size !default;
+    description: The font size used for visibility controls.
 classTable:
   .sprk-b-Label--no-input:
     description: Apply when a label is used without an input.
