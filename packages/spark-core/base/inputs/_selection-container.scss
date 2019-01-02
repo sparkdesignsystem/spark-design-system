@@ -1,4 +1,5 @@
 .sprk-b-SelectionContainer {
+  align-items: center;
   display: flex;
   margin: $sprk-selection-container-margin;
 }
@@ -7,9 +8,21 @@
   font-weight: $sprk-selection-container-label-font-weight;
 }
 
+.sprk-b-SelectionContainer .sprk-b-Label--inline {
+  margin: 0;
+}
+
 .sprk-b-SelectionContainer [type='radio'],
 .sprk-b-SelectionContainer [type='checkbox'] {
   height: $sprk-selection-container-input-height;
   width: $sprk-selection-container-input-width;
   margin: $sprk-selection-container-input-margin;
+}
+
+.sprk-b-Fieldset {
+  padding: $sprk-fieldset-padding;
+}
+
+.sprk-b-Fieldset .sprk-b-Label {
+  margin: 0;
 }

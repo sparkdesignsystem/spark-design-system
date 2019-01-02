@@ -85,13 +85,38 @@
 }
 
 // Placeholder colors
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
-::placeholder {
-  color: $sprk-placeholder-color;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: $sprk-placeholder-font-size;
   font-weight: $sprk-placeholder-font-weight;
   font-family: $sprk-placeholder-font-family;
+  height: $sprk-placeholder-line-height;
   line-height: $sprk-placeholder-line-height;
+  color: $sprk-placeholder-color;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  height: $sprk-placeholder-line-height;
+  line-height: $sprk-placeholder-line-height;
+  color: $sprk-placeholder-color;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  height: $sprk-placeholder-line-height;
+  line-height: $sprk-placeholder-line-height;
+  color: $sprk-placeholder-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  height: $sprk-placeholder-line-height;
+  line-height: $sprk-placeholder-line-height;
+  color: $sprk-placeholder-color;
 }

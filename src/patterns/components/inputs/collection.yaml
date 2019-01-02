@@ -49,7 +49,7 @@ variableTable:
     default: '$'
     description: The symbol used to denote currency.
   $sprk-fieldset-padding:
-    default: 0
+    default: $sprk-space-m 0 0 0
     description: The value for padding applied to the fieldset element.
   $sprk-input-container-margin:
     default: 0 0 2rem 0
