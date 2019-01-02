@@ -10,6 +10,7 @@
   font-size: $sprk-text-input-font-size;
   font-weight: $sprk-text-input-font-weight;
   line-height: $sprk-text-input-line-height;
+  height: $sprk-text-input-height;
   outline: $sprk-text-input-outline;
   padding: $sprk-text-input-padding;
   transition: $sprk-text-input-transition;
@@ -80,8 +81,10 @@
 }
 
 .sprk-b-TextArea {
+  height: auto;
   min-height: $sprk-textarea-min-height;
   margin: $sprk-textarea-margin;
+  padding: $sprk-textarea-padding;
 }
 
 // Placeholder colors
@@ -89,8 +92,7 @@
   font-size: $sprk-placeholder-font-size;
   font-weight: $sprk-placeholder-font-weight;
   font-family: $sprk-placeholder-font-family;
-  height: $sprk-placeholder-line-height;
-  line-height: $sprk-placeholder-line-height;
+  line-height: normal;
   color: $sprk-placeholder-color;
 }
 
@@ -98,8 +100,6 @@
   font-size: $sprk-placeholder-font-size;
   font-weight: $sprk-placeholder-font-weight;
   font-family: $sprk-placeholder-font-family;
-  height: $sprk-placeholder-line-height;
-  line-height: $sprk-placeholder-line-height;
   color: $sprk-placeholder-color;
 }
 
@@ -107,8 +107,6 @@
   font-size: $sprk-placeholder-font-size;
   font-weight: $sprk-placeholder-font-weight;
   font-family: $sprk-placeholder-font-family;
-  height: $sprk-placeholder-line-height;
-  line-height: $sprk-placeholder-line-height;
   color: $sprk-placeholder-color;
 }
 
@@ -116,7 +114,5 @@
   font-size: $sprk-placeholder-font-size;
   font-weight: $sprk-placeholder-font-weight;
   font-family: $sprk-placeholder-font-family;
-  height: $sprk-placeholder-line-height;
-  line-height: $sprk-placeholder-line-height;
   color: $sprk-placeholder-color;
 }

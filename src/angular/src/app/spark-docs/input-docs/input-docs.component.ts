@@ -139,7 +139,9 @@ import { Component } from '@angular/core';
             sprkFormatterSsn
             sprkInput
           />
-          <sprk-selection-item-container>
+          <sprk-selection-item-container
+            additionalClasses="sprk-b-InputContainer__visibility-toggle"
+          >
             <input
               type="checkbox"
               sprkSelectionInput
@@ -215,7 +217,9 @@ import { Component } from '@angular/core';
         <sprk-input-container>
           <label sprkLabel>Password</label>
           <input [type]="passwordType" name="password_input" sprkInput />
-          <sprk-selection-item-container>
+          <sprk-selection-item-container
+            additionalClasses="sprk-b-InputContainer__visibility-toggle"
+          >
             <input
               type="checkbox"
               sprkSelectionInput

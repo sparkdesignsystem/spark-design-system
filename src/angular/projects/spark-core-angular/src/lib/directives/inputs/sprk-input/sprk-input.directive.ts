@@ -9,9 +9,13 @@ export class SprkInputDirective implements OnInit {
   ngOnInit(): void {
     if (this.ref.nativeElement.nodeName === 'SELECT') {
       this.ref.nativeElement.classList.add('sprk-b-Select');
+    } else if (this.ref.nativeElement.nodeName === 'TEXTAREA') {
+      this.ref.nativeElement.classList.add('sprk-b-TextInput');
+      this.ref.nativeElement.classList.add('sprk-b-TextArea');
     } else {
       this.ref.nativeElement.classList.add('sprk-b-TextInput');
-      this.ref.nativeElement.classList.add('sprk-u-Width-100');
     }
+
+    this.ref.nativeElement.classList.add('sprk-u-Width-100');
   }
 }
