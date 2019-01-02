@@ -3,11 +3,11 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-icon',
   template: `
-    <svg [ngClass]="getClasses()" viewBox="0 0 64 64"
-    [attr.data-id]="idString">
+    <svg [ngClass]="getClasses()" viewBox="0 0 64 64" [attr.data-id]="idString">
       <use [attr.xlink:href]="icon" />
     </svg>
-  `
+  `,
+  styles: [':host { line-height: 1; }']
 })
 export class SparkIconComponent {
   @Input()

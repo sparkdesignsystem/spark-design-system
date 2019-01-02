@@ -4,27 +4,6 @@ import { Directive, ElementRef, OnInit, HostListener } from '@angular/core';
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
-  @HostListener('focusin')
-  onFocusIn() {
-    this.ref.nativeElement.classList.add('sprk-b-TextInput--focusin');
-    this.ref.nativeElement.classList.remove('sprk-b-TextInput--focusout');
-  }
-
-  @HostListener('input')
-  onInput() {
-    if (this.ref.nativeElement.value) {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput--has-value');
-    } else {
-      this.ref.nativeElement.classList.remove('sprk-b-TextInput--has-value');
-    }
-  }
-
-  @HostListener('focusout')
-  onFocusOut() {
-    this.ref.nativeElement.classList.add('sprk-b-TextInput--focusout');
-    this.ref.nativeElement.classList.remove('sprk-b-TextInput--focusin');
-  }
-
   constructor(public ref: ElementRef) {}
 
   ngOnInit(): void {

@@ -113,7 +113,7 @@ import { Component } from '@angular/core';
           </select>
           <sprk-icon
             iconType="chevron-down"
-            additionalClasses="sprk-c-Icon--current-color sprk-b-SelectContainer__icon"
+            additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-b-SelectContainer__icon"
             sprk-select-icon
           ></sprk-icon>
           <label sprkLabel>Select Box Label</label>

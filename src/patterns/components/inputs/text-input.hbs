@@ -25,20 +25,20 @@ hasAngularCode: true
          {{#if invaliddata}} aria-invalid="true"{{/if}}
 
          {{#if required}}required{{/if}}>
-  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
-    {{#if helperText }}
-      <div class="sprk-b-HelperText">
-        {{ helperText }}
-      </div>
-    {{/if}}
-    {{#if errorMessage}}
+  {{#if errorMessage}}
+    <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
         <use xlink:href="#exclamation-filled" />
       </svg>
       <div class="sprk-b-ErrorText">
           {{errorMessage}}
       </div>
-    {{/if}}
-  </div>
+    </div>
+  {{/if}}
+  {{#if helperText }}
+    <div class="sprk-b-HelperText">
+      {{ helperText }}
+    </div>
+  {{/if}}
 </div>
 

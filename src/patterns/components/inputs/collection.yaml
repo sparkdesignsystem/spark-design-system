@@ -216,6 +216,9 @@ variableTable:
   $sprk-helper-line-height:
     default: $sprk-text-input-line-height
     description: The line height used for helper text.
+  $sprk-helper-margin:
+    default: $sprk-error-container-margin
+    description: The margin surrounding helper text.
   $sprk-placeholder-color:
     default: $sprk-black-tint-50
     description: The color of placeholder text.
