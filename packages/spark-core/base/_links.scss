@@ -41,21 +41,6 @@
   }
 }
 
-.sprk-b-Link--muted {
-  color: $sprk-link-muted-color;
-
-  &:visited {
-    color: $sprk-link-muted-color;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $sprk-link-muted-color;
-    border-bottom: $sprk-link-muted-hover-border-bottom;
-  }
-}
-
 .sprk-b-Link--has-icon {
   border-bottom: $sprk-link-has-icon-border-bottom;
   font-weight: $sprk-link-has-icon-font-weight;
