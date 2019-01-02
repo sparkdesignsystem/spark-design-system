@@ -76,6 +76,14 @@ describe('masthead UI Events tests', () => {
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(true);
   });
 
+  // TODO: fix test
+  it('should remove class from masthead when the window is scrolled to the top', () => {
+    window.scrollY(0);
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(false);
+  });
+
   it('should close the nav when clicked and the nav is already open', () => {
     nav.classList.remove('sprk-u-Display--none');
     event = new window.Event('click');

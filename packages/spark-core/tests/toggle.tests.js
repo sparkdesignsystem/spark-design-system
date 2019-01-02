@@ -125,6 +125,13 @@ describe('Toggle tests', () => {
     expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-toggle');
   });
 
+  it('should toggle accordion item open', () => {
+    triggerAccordion.setAttribute('data-sprk-toggle-type', 'masthead-accordion');
+    handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
+    expect(containerAccordion.classList.contains('sprk-c-MastheadAccordion__item--open')).eql(true);
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-toggle');
+  });
+
   it('should toggle accordion icon open', () => {
     toggleIconType(
       iconAccordion,
