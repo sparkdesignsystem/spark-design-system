@@ -3,10 +3,13 @@ description: Used to make a selection. Intended for navigation or application st
 sparkPackageCore: true
 variableTable:
   $sprk-dropdown-padding:
-    default: $sprk-space-inset-short-l
+    default: $sprk-space-misc-a
     description: Sets the padding around the dropdown items.
+  $sprk-dropdown-font-weigh:
+    default: 400
+    description: Sets the font weight of the dropdown.
   $sprk-dropdown-header-padding:
-    default: $sprk-space-inset-short-l
+    default: $sprk-space-misc-a
     description: Sets the padding around the dropdown header.
   $sprk-dropdown-header-color:
     default: $sprk-black-tint-25

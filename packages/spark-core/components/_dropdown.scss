@@ -14,6 +14,10 @@
   padding: $sprk-dropdown-header-padding;
 }
 
+.sprk-c-Dropdown__item {
+  font-weight: $sprk-dropdown-font-weight;
+}
+
 .sprk-c-Dropdown__title {
   color: $sprk-dropdown-header-color;
 }
