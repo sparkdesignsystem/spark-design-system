@@ -4,35 +4,40 @@
 //
 .sprk-b-Link {
   color: $sprk-link-color;
-  border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
-  font-weight: $sprk-link-inline-font-weight;
+  border-bottom: $sprk-link-border-bottom;
+  font-weight: $sprk-link-font-weight;
   position: relative;
-  text-decoration: none;
+  text-decoration: $sprk-link-text-decoration;
   transition: $sprk-link-transition;
 
   &:visited {
     color: $sprk-link-visited-color;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-visited-color;
+    border-bottom: $sprk-link-visited-border-bottom;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $sprk-link-underline-color;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
+    color: $sprk-link-hover-color;
+    border-bottom: $sprk-link-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--standalone {
-  color: $sprk-link-standalone-color;
-  border: $sprk-link-underline-width solid transparent;
-  font-weight: $sprk-link-standalone-font-weight;
+.sprk-b-Link--simple {
+  color: $sprk-link-simple-color;
+  border-bottom: $sprk-link-simple-border-bottom;
+  font-weight: $sprk-link-simple-font-weight;
+
+  &:visited {
+    border-bottom: $sprk-link-simple-visited-border-bottom;
+  }
 
   &:hover,
   &:active,
   &:focus {
     transition: $sprk-link-transition;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-underline-color;
+    color: $sprk-link-simple-hover-color;
+    border-bottom: $sprk-link-simple-hover-border-bottom;
   }
 }
 
@@ -47,38 +52,53 @@
   &:active,
   &:focus {
     color: $sprk-link-muted-color;
+    border-bottom: $sprk-link-muted-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--plain {
-  border: none;
+.sprk-b-Link--has-icon {
+  border-bottom: $sprk-link-has-icon-border-bottom;
+  font-weight: $sprk-link-has-icon-font-weight;
 
   &:hover,
   &:active,
   &:focus,
   &:visited {
-    border: none;
+    border-bottom: $sprk-link-has-icon-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--disabled {
+.sprk-b-Link--has-icon .sprk-c-Icon {
+  color: $sprk-link-has-icon-color;
+  stroke: $sprk-link-has-icon-color;
+  fill: $sprk-link-has-icon-color;
+}
+
+.sprk-b-Link--disabled,
+.sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
+  stroke: $sprk-link-disabled-color;
+  fill: $sprk-link-disabled-color;
   pointer-events: none;
-  border-bottom: $sprk-link-underline-width solid $sprk-link-disabled-color;
+  border-bottom: $sprk-link-disabled-border-bottom;
   font-weight: $sprk-link-disabled-font-weight;
 
-  &:visited {
-    color: $sprk-link-disabled-color;
-    border-bottom: $sprk-link-underline-width solid $sprk-link-disabled-color;
-  }
-
+  &:visited,
   &:hover,
   &:active,
   &:focus {
+    border-bottom: $sprk-link-disabled-hover-border-bottom;
     color: $sprk-link-disabled-color;
   }
+}
 
-  &::after {
-    background: $sprk-link-disabled-color;
+.sprk-b-Link--plain {
+  border: $sprk-link-plain-border;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border: $sprk-link-plain-visited-border;
   }
 }

@@ -31,11 +31,9 @@ describe('SparkLinkComponent', () => {
     expect(component.getClasses()).toEqual('sprk-b-Link');
   });
 
-  it('should add the correct class if linkType is standalone', () => {
-    component.linkType = 'standalone';
-    expect(component.getClasses()).toEqual(
-      'sprk-b-Link sprk-b-Link--standalone'
-    );
+  it('should add the correct class if linkType is simple', () => {
+    component.linkType = 'simple';
+    expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--simple');
   });
 
   it('should add the correct class if linkType is disabled', () => {
@@ -54,10 +52,10 @@ describe('SparkLinkComponent', () => {
   });
 
   it('should add the correct classes if linkType and additionalClasses have values', () => {
-    component.linkType = 'standalone';
+    component.linkType = 'simple';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual(
-      'sprk-b-Link sprk-b-Link--standalone sprk-u-pam sprk-u-man'
+      'sprk-b-Link sprk-b-Link--simple sprk-u-pam sprk-u-man'
     );
   });
 

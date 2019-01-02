@@ -150,7 +150,7 @@ import { Component } from '@angular/core';
           >
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--standalone"
+                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--simple"
                 href="tel:555-555-5555"
               >
                 (555) 555-5555
@@ -349,7 +349,7 @@ import { Component } from '@angular/core';
           >
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--standalone"
+                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--simple"
                 href="tel:555-555-5555"
               >
                 (555) 555-5555

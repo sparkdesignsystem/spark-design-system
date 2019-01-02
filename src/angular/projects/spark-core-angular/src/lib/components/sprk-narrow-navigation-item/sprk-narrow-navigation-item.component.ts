@@ -11,41 +11,58 @@ import {
 @Component({
   selector: 'sprk-narrow-navigation-item',
   template: `
-    <li [ngClass]="getClasses()" routerLinkActive="sprk-c-Accordion__item--active" [attr.data-id]="idString">
-      <div *ngIf="subNav != null; then menu; else link;"></div>
+    <li
+      [ngClass]="getClasses()"
+      routerLinkActive="sprk-c-Accordion__item--active"
+      [attr.data-id]="idString"
+    >
+      <div *ngIf="subNav != null; then: menu; else: link"></div>
       <ng-template #link>
-        <a [attr.aria-controls]="controls_id"
-           class="sprk-c-Accordion__summary"
-           [routerLink]="href"
-           [attr.data-analytics]="analyticsString">
+        <a
+          [attr.aria-controls]="controls_id"
+          class="sprk-c-Accordion__summary"
+          [routerLink]="href"
+          [attr.data-analytics]="analyticsString"
+        >
           <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
             {{ text }}
           </span>
         </a>
       </ng-template>
       <ng-template #menu>
-        <a [attr.aria-controls]="controls_id"
-           class="sprk-c-Accordion__summary"
-           href="#nogo"
-           [attr.data-analytics]="analyticsString"
-           (click)="toggleAccordion($event)">
+        <a
+          [attr.aria-controls]="controls_id"
+          class="sprk-c-Accordion__summary"
+          href="#nogo"
+          [attr.data-analytics]="analyticsString"
+          (click)="toggleAccordion($event)"
+        >
           <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
             {{ text }}
           </span>
-          <sprk-icon [iconType]="iconType" additionalClasses="sprk-c-Icon--l sprk-c-Accordion__icon"></sprk-icon>
+          <sprk-icon
+            [iconType]="iconType"
+            additionalClasses="sprk-c-Icon--l sprk-c-Accordion__icon"
+          ></sprk-icon>
         </a>
         <div [@toggleContent]="animState">
-          <ul [id]="controls_id" class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs">
+          <ul
+            [id]="controls_id"
+            class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs"
+          >
             <li *ngFor="let navItem of subNav">
-              <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam"
-                 [routerLink]="navItem.href"
-                 [attr.data-analytics]="navItem.analyticsString"
-                 >{{ navItem.text }}</a>
+              <a
+                class="sprk-b-Link sprk-b-Link--simple sprk-u-pam"
+                [routerLink]="navItem.href"
+                [attr.data-analytics]="navItem.analyticsString"
+                >{{ navItem.text }}</a
+              >
             </li>
           </ul>
         </div>
       </ng-template>
-    </li>`,
+    </li>
+  `,
   animations: [
     trigger('toggleContent', [
       state(

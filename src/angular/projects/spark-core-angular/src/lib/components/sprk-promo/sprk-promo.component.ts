@@ -3,30 +3,37 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-promo',
   template: `
-    <div [ngClass]="getClasses()"
-    [attr.data-id]="idString">
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <a
         *ngIf="isFlag && !mediaRev"
         [routerLink]="imgHref"
         [ngClass]="getClassesFlag()"
-        [attr.data-analytics]="flagLinkAnalytics">
-        <img class="sprk-c-Promo__image--flag"
+        [attr.data-analytics]="flagLinkAnalytics"
+      >
+        <img
+          class="sprk-c-Promo__image--flag"
           alt="{{ imgAlt }}"
-          src="{{ imgSrc }}">
+          src="{{ imgSrc }}"
+        />
       </a>
       <a
         *ngIf="imgSrc && !mediaRev && !isFlag"
         [routerLink]="imgHref"
         [attr.data-analytics]="imgLinkAnalytics"
-        [ngClass]="getClassesImg()">
-        <img class="sprk-c-Promo__image"
+        [ngClass]="getClassesImg()"
+      >
+        <img
+          class="sprk-c-Promo__image"
           alt="{{ imgAlt }}"
-          src="{{ imgSrc }}">
+          src="{{ imgSrc }}"
+        />
       </a>
 
       <div [ngClass]="getClassesContent()">
-
-        <h3 *ngIf="title" class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
+        <h3
+          *ngIf="title"
+          class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title"
+        >
           {{ title }}
         </h3>
 
@@ -42,7 +49,8 @@ import { Component, Input } from '@angular/core';
           <a
             [routerLink]="buttonHref"
             class="sprk-c-Button"
-            [attr.data-analytics]="buttonLinkAnalytics">
+            [attr.data-analytics]="buttonLinkAnalytics"
+          >
             {{ ctaText }}
           </a>
         </div>
@@ -50,8 +58,9 @@ import { Component, Input } from '@angular/core';
         <a
           *ngIf="cta === 'link'"
           [routerLink]="ctaLinkHref"
-          class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--standalone"
-          [attr.data-analytics]="ctaLinkAnalytics">
+          class="sprk-o-Stack__item sprk-b-Link sprk-b-Link--simple"
+          [attr.data-analytics]="ctaLinkAnalytics"
+        >
           {{ ctaText }}
         </a>
       </div>
@@ -60,22 +69,28 @@ import { Component, Input } from '@angular/core';
         *ngIf="isFlag && mediaRev"
         [routerLink]="imgHref"
         [ngClass]="getClassesFlag()"
-        [attr.data-analytics]="flagLinkAnalytics">
-        <img class="sprk-c-Promo__image--flag"
+        [attr.data-analytics]="flagLinkAnalytics"
+      >
+        <img
+          class="sprk-c-Promo__image--flag"
           alt="{{ imgAlt }}"
-          src="{{ imgSrc }}">
+          src="{{ imgSrc }}"
+        />
       </a>
 
       <a
         *ngIf="imgSrc && mediaRev && !isFlag"
         [routerLink]="imgHref"
         [attr.data-analytics]="imgLinkAnalytics"
-        [ngClass]="getClassesImg()">
-        <img class="sprk-c-Promo__image"
+        [ngClass]="getClassesImg()"
+      >
+        <img
+          class="sprk-c-Promo__image"
           alt="{{ imgAlt }}"
-          src="{{ imgSrc }}">
+          src="{{ imgSrc }}"
+        />
       </a>
-  </div>
+    </div>
   `
 })
 export class SparkPromoComponent {
