@@ -714,6 +714,12 @@ $sprk-masthead-logo-max-width: 192px !default;
 $sprk-masthead-logo-min-width: 174px !default;
 $sprk-masthead-shadow: none !default;
 $sprk-masthead-shadow-wide: 0 0 40px rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-selector-border: 2px solid $sprk-black-tint-25;
+$sprk-masthead-selector-font-weight: 300;
+$sprk-masthead-selector-border-radius: 5px;
+$sprk-masthead-selector-font-color: $sprk-black;
+$sprk-masthead-selector-padding: $sprk-space-inset-short-m;
+$sprk-masthead-selector-min-width: 17rem;
 // Big Nav
 $sprk-big-nav-column-width: 64rem !default;
 $sprk-big-nav-bg: $sprk-white !default;

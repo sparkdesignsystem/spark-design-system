@@ -131,6 +131,27 @@
   }
 }
 
+.sprk-c-Masthead__selector {
+  border: $sprk-masthead-selector-border;
+  border-radius: $sprk-masthead-selector-border-radius;
+  color: $sprk-masthead-selector-font-color;
+  font-weight: $sprk-masthead-selector-font-weight;
+  padding: $sprk-masthead-selector-padding;
+  min-width: $sprk-masthead-selector-min-width;
+
+  &:visited {
+    color: $sprk-masthead-selector-font-color;
+    border: $sprk-masthead-selector-border;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-masthead-selector-font-color;
+    border: $sprk-masthead-selector-border;
+  }
+}
+
 .sprk-c-Masthead__link--big-nav {
   font-weight: $sprk-big-nav-link-font-weight;
   padding: $sprk-big-nav-link-padding;
