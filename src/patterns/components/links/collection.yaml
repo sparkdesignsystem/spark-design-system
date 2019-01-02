@@ -97,18 +97,6 @@ variableTable:
   $sprk-link-has-icon-hover-border-bottom:
     default: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color
     description: Sets the border settings for links with icons in the hover state.
-  $sprk-link-muted-color:
-    default: $sprk-gray-dark
-    description: The muted link color.
-  $sprk-link-muted-underline-width:
-    default: 0
-    description: Sets the underline width for muted links
-  $sprk-link-muted-hover-underline-color:
-    default: $sprk-gray-dark
-    description: Sets the underline color for muted links in the hover state
-  $sprk-link-muted-hover-border-bottom:
-    default: $sprk-link-muted-underline-width $sprk-link-border-bottom-style $sprk-link-muted-hover-underline-color
-    description: Sets the border settings for muted links in the hover state
   $sprk-link-plain-border:
     default: none
     description: Sets the border settings for plain links
@@ -132,12 +120,10 @@ variableTable:
     description: Sets the border settings for disabled links in the hover state.
 classTable:
   .sprk-b-Link--simple:
-    description: Sets the styles for the simple link variant.
+    description: Simple links have no underline until hovered.
   .sprk-b-Link--has-icon:
-    description: Sets the styles for the variant containing an icon.
-  .sprk-b-Link--muted:
-    description: Sets the color styles for the muted link variant.
+    description: Used when a link is next to an icon. There will not be an underline.
   .sprk-b-Link--plain:
     description: Removes the underline from links on initial state and on hover, active, focus, and visited states.
   .sprk-b-Link--disabled:
-    description: Sets the styles for disabled links.
+    description: Disabled links have a muted color and cannot be interacted with.
