@@ -148,7 +148,7 @@ variableTable:
     default: $sprk-black
     description: The heading color of the active item in the narrow viewport accordion.
   $sprk-masthead-accordion-heading-font-weight:
-     default: 400
+    default: 400
     description: The font weight of the headings in the narrow viewport accordion.
   $sprk-masthead-accordion-details-font-weight:
     default: 300

@@ -13,46 +13,42 @@ import {
   template: `
     <li
       [ngClass]="getClasses()"
-      routerLinkActive="sprk-c-Accordion__item--active"
+      routerLinkActive="sprk-c-MastheadAccordion__item--active"
       [attr.data-id]="idString"
     >
       <div *ngIf="subNav != null; then: menu; else: link"></div>
       <ng-template #link>
         <a
           [attr.aria-controls]="controls_id"
-          class="sprk-c-Accordion__summary"
+          class="sprk-c-MastheadAccordion__summary"
           [routerLink]="href"
           [attr.data-analytics]="analyticsString"
         >
-          <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
-            {{ text }}
-          </span>
+          <span class="sprk-c-MastheadAccordion__heading "> {{ text }} </span>
         </a>
       </ng-template>
       <ng-template #menu>
         <a
           [attr.aria-controls]="controls_id"
-          class="sprk-c-Accordion__summary"
+          class="sprk-c-MastheadAccordion__summary"
           href="#nogo"
           [attr.data-analytics]="analyticsString"
           (click)="toggleAccordion($event)"
         >
-          <span class="sprk-b-TypeBodyTwo sprk-c-Accordion__heading ">
-            {{ text }}
-          </span>
+          <span class="sprk-c-MastheadAccordion__heading "> {{ text }} </span>
           <sprk-icon
             [iconType]="iconType"
-            additionalClasses="sprk-c-Icon--l sprk-c-Accordion__icon"
+            additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-c-MastheadAccordion__icon"
           ></sprk-icon>
         </a>
         <div [@toggleContent]="animState">
           <ul
             [id]="controls_id"
-            class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details sprk-u-HideWhenJs"
+            class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details sprk-u-HideWhenJs"
           >
             <li *ngFor="let navItem of subNav">
               <a
-                class="sprk-b-Link sprk-b-Link--simple sprk-u-pam"
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                 [routerLink]="navItem.href"
                 [attr.data-analytics]="navItem.analyticsString"
                 >{{ navItem.text }}</a
@@ -122,10 +118,10 @@ export class SparkNarrowNavigationItemComponent implements OnInit {
   }
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-c-Accordion__item'];
+    const classArray: string[] = ['sprk-c-MastheadAccordion__item'];
 
     if (this.isOpen) {
-      classArray.push('sprk-c-Accordion__item--open');
+      classArray.push('sprk-c-MastheadAccordion__item--open');
     }
 
     if (this.additionalClasses) {

@@ -3,12 +3,12 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-narrow-navigation',
   template: `
-    <nav role="navigation"
-    [attr.data-id]="idString">
+    <nav role="navigation" [attr.data-id]="idString">
       <ul [ngClass]="getClasses()">
         <ng-content></ng-content>
       </ul>
-    </nav>`
+    </nav>
+  `
 })
 export class SparkNarrowNavigationComponent {
   @Input()
@@ -18,8 +18,7 @@ export class SparkNarrowNavigationComponent {
 
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-c-Accordion',
-      'sprk-c-Accordion--navigation',
+      'sprk-c-MastheadAccordion',
       'sprk-b-List',
       'sprk-b-List--bare'
     ];
