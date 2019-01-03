@@ -122,77 +122,78 @@ import { Component } from '@angular/core';
             />
           </g>
         </svg>
-        <div little-nav-slot>
-          <sprk-dropdown
-            dropdownType="informational"
-            [choices]="siteDropdownChoices"
-            additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
-            triggerText="Make a Selection..."
-            title="My Choices"
-            triggerIconType="chevron-down"
-          >
-            <div
-              class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
-              sprkDropdownFooter
+
+        <div
+          little-nav-slot
+          class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row"
+        >
+          <div class="sprk-o-Stack__item sprk-u-Position--relative">
+            <sprk-dropdown
+              dropdownType="informational"
+              additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
+              triggerText="My Selector"
+              additionalClasses="sprk-u-Width-100"
+              title="My Choices"
+              triggerIconType="chevron-down"
+              [choices]="siteDropdownChoices"
+              additionalIconClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-Stack__item"
+              additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
             >
-              <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
-                Placeholder
-              </a>
-            </div>
-          </sprk-dropdown>
+              <div
+                class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+                sprkDropdownFooter
+              >
+                <a
+                  class="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
+                  href="#nogo"
+                >
+                  Placeholder
+                </a>
+              </div>
+            </sprk-dropdown>
+          </div>
         </div>
-        <div utility-slot>
-          <ul
-            class="sprk-o-HorizontalList
-            sprk-o-HorizontalList--spacing-large
-            sprk-o-Stack--center-column
-            sprk-u-Position--relative"
-          >
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--simple"
-                href="tel:555-555-5555"
-              >
-                (555) 555-5555
-              </a>
-            </li>
 
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="#nogo"
-              >
-                Talk To Us
-              </a>
-            </li>
+        <ul
+          utility-slot
+          class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-Stack--center-column"
+        >
+          <li>
+            <a
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              href="#nogo"
+            >
+              Talk To Us
+            </a>
+          </li>
 
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                routerLink="/cards"
-                href="#nogo"
-              >
-                <sprk-icon
-                  iconType="settings"
-                  additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l"
-                ></sprk-icon>
-                <span class="sprk-u-ScreenReaderText">Settings</span>
-              </a>
-            </li>
+          <li>
+            <a
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              routerLink="/cards"
+              href="#nogo"
+            >
+              <sprk-icon
+                iconType="settings"
+                additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l"
+              ></sprk-icon>
+              <span class="sprk-u-ScreenReaderText">Settings</span>
+            </a>
+          </li>
 
-            <li>
-              <sprk-dropdown
-                [choices]="simpleChoices"
-                dropdownType="simple"
-                title="My Account"
-                triggerIconType="user"
-                additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
-                additionalClasses="sprk-u-Right--zero"
-                screenReaderText="User Account"
-              ></sprk-dropdown>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <sprk-dropdown
+              [choices]="simpleChoices"
+              dropdownType="simple"
+              title="My Account"
+              triggerIconType="user"
+              additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              additionalClasses="sprk-u-Right--zero"
+              screenReaderText="User Account"
+            ></sprk-dropdown>
+          </li>
+        </ul>
+
         <div class="sprk-u-mas" narrowNavFooter>
           <a
             class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
@@ -202,6 +203,7 @@ import { Component } from '@angular/core';
         </div>
       </sprk-masthead>
     </div>
+
     <div class="drizzle-o-ContentGrouping drizzle-c-Preview">
       <h2 class="drizzle-b-h2">Masthead (default)</h2>
       <sprk-masthead
@@ -320,9 +322,10 @@ import { Component } from '@angular/core';
             />
           </g>
         </svg>
+
         <div little-nav-slot>
           <ul
-            class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+            class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column"
           >
             <li>
               <a
@@ -345,11 +348,11 @@ import { Component } from '@angular/core';
         </div>
         <div utility-slot>
           <ul
-            class="sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+            class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
           >
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--simple"
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                 href="tel:555-555-5555"
               >
                 (555) 555-5555
@@ -364,10 +367,14 @@ import { Component } from '@angular/core';
                 Talk To Us
               </a>
             </li>
+
             <li>
-              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary"
-                >Sign In</a
+              <a
+                class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                href="#nogo"
               >
+                Sign In
+              </a>
             </li>
           </ul>
         </div>
