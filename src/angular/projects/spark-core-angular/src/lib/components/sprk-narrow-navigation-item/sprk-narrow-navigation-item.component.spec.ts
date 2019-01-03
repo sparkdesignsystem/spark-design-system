@@ -84,7 +84,7 @@ describe('SparkNarrowNavigationItemComponent', () => {
 
     expect(
       narrowNavigationItemElement.classList.contains(
-        'sprk-c-Accordion__item--open'
+        'sprk-c-MastheadAccordion__item--open'
       )
     ).toEqual(true);
   });
