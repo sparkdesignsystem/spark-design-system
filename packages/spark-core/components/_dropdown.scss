@@ -11,8 +11,8 @@
 }
 
 .sprk-c-Dropdown__header {
-  padding: $sprk-dropdown-padding $sprk-dropdown-padding $sprk-dropdown-padding /
-    2 $sprk-dropdown-padding;
+  padding: $sprk-dropdown-padding $sprk-dropdown-padding
+    ($sprk-dropdown-padding / 2) $sprk-dropdown-padding;
 
   // When the dropdown has a header, this adjust its padding because the header takes over as the "first item"
   + .sprk-c-Dropdown__links {
@@ -49,7 +49,7 @@
 .sprk-c-Dropdown__link {
   color: $sprk-black;
   display: block;
-  padding: $sprk-dropdown-padding / 2 $sprk-dropdown-padding;
+  padding: ($sprk-dropdown-padding / 2) $sprk-dropdown-padding;
   text-decoration: none;
 
   &:hover {
