@@ -504,7 +504,6 @@ $sprk-date-picker-font-size: 0.9375rem !default;
 $sprk-date-picker-font-weight: 300 !default;
 $sprk-date-picker-day-interact-color: $sprk-green !default;
 $sprk-date-picker-selected-day-font-weight: 500 !default;
-
 $sprk-date-picker-background: $sprk-white !default;
 $sprk-date-picker-padding: $sprk-space-inset-s !default;
 $sprk-date-picker-padding-wide: $sprk-space-inset-m !default;
@@ -661,18 +660,20 @@ $sprk-toggle-transistion-timing: 0.3s ease !default;
 //
 // Dropdown
 ///
-$sprk-dropdown-padding: $sprk-space-misc-a !default;
-$sprk-dropdown-font-weight: 400 !default;
-$sprk-dropdown-title-font-weight: $sprk-dropdown-font-weight !default;
-$sprk-dropdown-header-color: $sprk-black-tint-25 !default;
-$sprk-dropdown-footer-padding: $sprk-space-inset-short-l !default;
-$sprk-dropdown-border: 1px solid $sprk-gray !default;
 $sprk-dropdown-active-background-color: $sprk-gray !default;
 $sprk-dropdown-active-border: 2.5px solid $sprk-green !default;
 $sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-green !default;
-$sprk-dropdown-max-width: 24rem !default;
-$sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-dropdown-border: 1px solid $sprk-gray !default;
+$sprk-dropdown-font-size: $sprk-font-size-body-one !default;
+$sprk-dropdown-font-weight: 400 !default;
+$sprk-dropdown-footer-padding: $sprk-space-inset-short-l !default;
 $sprk-dropdown-line-height: 1;
+$sprk-dropdown-max-width: 24rem !default;
+$sprk-dropdown-padding: $sprk-space-misc-a !default;
+$sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-dropdown-title-color: $sprk-black-tint-25 !default;
+$sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
+$sprk-dropdown-title-font-weight: $sprk-dropdown-font-weight !default;
 
 //
 // Modals
