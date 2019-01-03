@@ -119,6 +119,7 @@
 // If thre are too many little nav links they'll wrap
 .sprk-c-Masthead__little-nav {
   flex-wrap: wrap;
+  position: relative;
 }
 
 .sprk-c-Masthead__site-links {
