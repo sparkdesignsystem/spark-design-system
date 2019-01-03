@@ -290,7 +290,7 @@ $sprk-btn-hover-text-color: $sprk-white !default;
 $sprk-btn-padding: $sprk-space-m 24px !default;
 $sprk-btn-breakpoint-xs: 30rem !default;
 $sprk-btn-breakpoint-s: 42.5rem !default;
-$sprk-btn-transition-speed: 0.15s !default;
+$sprk-btn-transition-speed: 0.3s !default;
 $sprk-btn-letter-spacing: 0.62px !default;
 
 // Disabled
@@ -393,7 +393,7 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 ///
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
-$sprk-input-container-margin: 0 0 2rem 0 !default;
+$sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
 $sprk-input-max-width: 27.5rem !default;
 
 //
@@ -418,7 +418,7 @@ $sprk-text-input-disabled-box-shadow: none !default;
 $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 $sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
 $sprk-text-input-readonly-color: $sprk-gray !default;
-$sprk-text-input-transition: border-color 0.3s ease !default;
+$sprk-text-input-transition: border-color 0.15s ease !default;
 
 //
 // Select
@@ -461,7 +461,7 @@ $sprk-input-error-text-font-weight: 400 !default;
 $sprk-input-error-text-font-size: 0.8125rem !default;
 $sprk-input-error-text-line-height: 1 !default;
 $sprk-input-error-text-margin: 0 0 0 6px !default;
-$sprk-error-container-margin: 8px 0 0 0 !default;
+$sprk-error-container-margin: $sprk-space-s 0 0 0 !default;
 $sprk-error-icon-size: 1.25rem !default;
 
 //
@@ -513,6 +513,7 @@ $sprk-input-text-icon-offset-y: 38px !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
 $sprk-text-input-with-text-icon-padding: 12px 13px 12px 37px !default;
+$sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 
 //
 // SVG Icon Inputs

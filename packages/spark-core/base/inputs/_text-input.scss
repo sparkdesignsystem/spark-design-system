@@ -52,13 +52,6 @@
   margin: $sprk-helper-margin;
 }
 
-.sprk-b-TextArea {
-  height: auto;
-  min-height: $sprk-textarea-min-height;
-  margin: $sprk-textarea-margin;
-  padding: $sprk-textarea-padding;
-}
-
 // Placeholder colors
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: $sprk-placeholder-font-size;
