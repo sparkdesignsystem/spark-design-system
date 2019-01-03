@@ -35,7 +35,13 @@ const toggleAriaExpanded = (toggleTrigger) => {
 
 const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) => {
   const trigger = element;
-  const isAccordion = trigger.getAttribute('data-sprk-toggle-type') === 'accordion';
+  let isAccordion;
+  let isMastheadAccordion;
+
+  if (trigger.hasAttribute('data-sprk-toggle-type')) {
+    isAccordion = trigger.getAttribute('data-sprk-toggle-type').includes('accordion');
+    isMastheadAccordion = trigger.getAttribute('data-sprk-toggle-type') === 'masthead-accordion';
+  }
 
   // Rotate the Icon
   if (toggleIcon) toggleIcon.classList.toggle('sprk-c-Icon--open');
@@ -50,7 +56,8 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
     );
   }
 
-  if (isAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
+  if (isAccordion && !isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
+  if (isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-MastheadAccordion__item--open');
 
   toggleContent.slideToggle(300).then(() => {
     // Enable clicks after animation runs

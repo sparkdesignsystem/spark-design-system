@@ -2,6 +2,15 @@
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 
+const addClassOnScroll = (element, scrollPos, elementHeight, classToToggle) => {
+  // If user scrolls past the element then add class
+  if (scrollPos >= elementHeight) {
+    element.classList.add(classToToggle);
+  } else {
+    element.classList.remove(classToToggle);
+  }
+};
+
 const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
   // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
@@ -52,6 +61,10 @@ const bindUIEvents = () => {
       toggleMobileNav(element, nav, masthead);
     });
 
+    window.addEventListener('scroll', () => {
+      addClassOnScroll(masthead, window.scrollY, masthead.offsetHeight, 'sprk-c-Masthead--scroll');
+    });
+
     mainLayout.addEventListener('focusin', () => {
       const isOpen = !document
         .querySelector('.sprk-c-Masthead__narrow-nav')
@@ -74,4 +87,5 @@ export {
   hideMobileNavs,
   focusTrap,
   bindUIEvents,
+  addClassOnScroll,
 };

@@ -672,6 +672,7 @@ $sprk-dropdown-active-border: 2.5px solid $sprk-green !default;
 $sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-green !default;
 $sprk-dropdown-max-width: 24rem !default;
 $sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-dropdown-line-height: 1;
 
 //
 // Modals
@@ -687,26 +688,61 @@ $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
 //
 // Masthead
 ///
-$sprk-masthead-menu-icon-width: $sprk-icon-l;
-$sprk-masthead-menu-icon-height: $sprk-icon-l;
+$sprk-masthead-menu-icon-width: $sprk-icon-l !default;
+$sprk-masthead-menu-icon-height: $sprk-icon-l !default;
 $sprk-masthead-bg-color: $sprk-white !default;
-$sprk-masthead-content-padding: $sprk-space-m !default;
+$sprk-masthead-content-padding: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-top: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-bottom: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-right: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-left: $sprk-space-s !default;
+$sprk-masthead-content-padding-wide: $sprk-space-m !default;
+$sprk-masthead-content-item-padding-top-wide: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-bottom-wide: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
+$sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
 $sprk-masthead-link-visited-color: $sprk-black !default;
-$sprk-masthead-link-hover-color: $sprk-red !default;
-$sprk-masthead-link-font-weight: $sprk-font-weight-body-one !default;
+$sprk-masthead-link-hover-color: $sprk-green !default;
+$sprk-masthead-link-font-weight: 500 !default;
 $sprk-masthead-border-bottom-size: 1px !default;
 $sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray !default;
+$sprk-masthead-border-bottom-wide: 0 !default;
+$sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-25 !default;
 $sprk-masthead-breakpoint: 54rem !default;
 $sprk-masthead-column-width: 89rem !default;
-$sprk-big-nav-column-width: 64rem !default;
-$sprk-big-nav-bg: $sprk-white !default;
-$sprk-big-nav-active-color: $sprk-red !default;
 $sprk-masthead-logo-max-width: 192px !default;
 $sprk-masthead-logo-min-width: 174px !default;
-$sprk-mobile-masthead-height: 113px !default;
-$sprk-narrow-nav-left-border: 5px solid $sprk-red !default;
-$sprk-narrow-nav-link-font-weight: normal !default;
-
+$sprk-masthead-shadow: none !default;
+$sprk-masthead-shadow-wide: 0 0 40px rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-selector-font-weight: 300 !default;
+$sprk-masthead-selector-border-radius: 5px !default;
+$sprk-masthead-selector-font-color: $sprk-black !default;
+$sprk-masthead-selector-padding: $sprk-space-inset-short-m !default;
+$sprk-masthead-selector-min-width: 17rem !default;
+$sprk-masthead-narrow-height: 81px !default;
+// Big Nav
+$sprk-big-nav-column-width: 64rem !default;
+$sprk-big-nav-bg: $sprk-white !default;
+$sprk-big-nav-link-font-weight: 400;
+$sprk-big-nav-link-padding: 0 $sprk-space-s !default;
+$sprk-big-nav-link-color: $sprk-black !default;
+$sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
+$sprk-big-nav-item-line-height: 53px !default;
+// Masthead Accordion
+$sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
+$sprk-masthead-accordion-active-heading-font-weight: 400 !default;
+$sprk-masthead-accordion-active-heading-color: $sprk-black !default;
+$sprk-masthead-accordion-heading-color: $sprk-black !default;
+$sprk-masthead-accordion-heading-font-weight: 400 !default;
+$sprk-masthead-accordion-details-font-weight: 300 !default;
+$sprk-masthead-accordion-details-font-color: $sprk-black !default;
+$sprk-masthead-accordion-active-background-color: $sprk-gray !default;
+$sprk-masthead-accordion-active-font-color: $sprk-black !default;
+$sprk-masthead-accordion-font-color: $sprk-black !default;
+$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
+$sprk-masthead-accordion-item-open-line-height: 2px !default;
+$sprk-masthead-accordion-item-padding: $sprk-space-m !default;
 //
 // Spinners
 ///

@@ -209,7 +209,7 @@
 }
 
 .sprk-u-Color--blue {
-  color:$sprk-blue !important;
+  color: $sprk-blue !important;
 }
 
 .sprk-u-Color--gray {
@@ -217,13 +217,14 @@
 }
 
 .sprk-u-Color--green {
-  color:$sprk-green !important;
+  color: $sprk-green !important;
 }
 
 .sprk-u-Color--red {
   color: $sprk-red !important;
 }
 
+/* stylelint-disable selector-class-pattern */
 .sprk-u-Color--red-tint-75 {
   color: $sprk-red-tint-75 !important;
 }
@@ -241,7 +242,7 @@
 }
 
 .sprk-u-Color--yellow {
-  color:  $sprk-yellow !important;
+  color: $sprk-yellow !important;
 }
 
 // Background color
@@ -249,7 +250,6 @@
   background-color: $sprk-black !important;
 }
 
-/* stylelint-disable selector-class-pattern */
 .sprk-u-BackgroundColor--black-tint-75 {
   background-color: $sprk-black-tint-75 !important;
 }
@@ -267,19 +267,19 @@
 }
 
 .sprk-u-BackgroundColor--blue {
-  background-color:$sprk-blue !important;
+  background-color: $sprk-blue !important;
 }
 
 .sprk-u-BackgroundColor--blue-tint-75 {
-  background-color:$sprk-blue-tint-75 !important;
+  background-color: $sprk-blue-tint-75 !important;
 }
 
 .sprk-u-BackgroundColor--blue-tint-50 {
-  background-color:$sprk-blue-tint-50 !important;
+  background-color: $sprk-blue-tint-50 !important;
 }
 
 .sprk-u-BackgroundColor--blue-tint-25 {
-  background-color:$sprk-blue-tint-25 !important;
+  background-color: $sprk-blue-tint-25 !important;
 }
 
 .sprk-u-BackgroundColor--gray {
@@ -303,7 +303,7 @@
 }
 
 .sprk-u-BackgroundColor--green {
-  background-color:$sprk-green !important;
+  background-color: $sprk-green !important;
 }
 
 .sprk-u-BackgroundColor--green-dark {
@@ -327,19 +327,19 @@
 }
 
 .sprk-u-BackgroundColor--yellow {
-  background-color:  $sprk-yellow !important;
+  background-color: $sprk-yellow !important;
 }
 
 .sprk-u-BackgroundColor--yellow-tint-75 {
-  background-color:  $sprk-yellow-tint-75 !important;
+  background-color: $sprk-yellow-tint-75 !important;
 }
 
 .sprk-u-BackgroundColor--yellow-tint-50 {
-  background-color:  $sprk-yellow-tint-50 !important;
+  background-color: $sprk-yellow-tint-50 !important;
 }
 
 .sprk-u-BackgroundColor--yellow-tint-25 {
-  background-color:  $sprk-yellow-tint-25 !important;
+  background-color: $sprk-yellow-tint-25 !important;
 }
 
 /* stylelint-enable selector-class-pattern */

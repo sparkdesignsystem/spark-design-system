@@ -52,6 +52,7 @@
   display: block;
   padding: ($sprk-dropdown-padding / 2) $sprk-dropdown-padding;
   text-decoration: none;
+  line-height: $sprk-dropdown-line-height;
 
   &:hover {
     background-color: $sprk-dropdown-active-background-color;
