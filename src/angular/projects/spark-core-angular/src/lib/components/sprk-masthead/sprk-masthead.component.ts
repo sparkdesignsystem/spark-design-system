@@ -71,15 +71,9 @@ import * as _ from 'lodash';
           sprk-o-Box"
           role="navigation"
         >
-          <div
-            class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-Stack__item--center-column"
-          >
-            <ng-content select="[little-nav-slot]"></ng-content>
-          </div>
+          <ng-content select="[little-nav-slot]"></ng-content>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--center-column">
-            <ng-content select="[utility-slot]"></ng-content>
-          </div>
+          <ng-content select="[utility-slot]"></ng-content>
         </nav>
       </div>
 
