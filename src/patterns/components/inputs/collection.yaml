@@ -294,7 +294,7 @@ variableTable:
   $sprk-input-icon-offset-y:
     default: $sprk-space-m
     description: The Y offset of icons inside input elements.
-  $sprk-text-input-with-icon-padding:
+  $sprk-text-input-has-icon-padding:
     default: 12px 13px 12px 40px
     description: The padding inside input elements that contain icons.
   $sprk-input-icon-z-index:
@@ -312,7 +312,7 @@ variableTable:
   $sprk-input-text-icon-font-weight:
     default: 700
     description: The font weight of text icons inside input elements.
-  $sprk-text-input-with-text-icon-padding:
+  $sprk-text-input-has-text-icon-padding:
     default: 12px 13px 12px 37px
     description: The padding inside input elements that contain text icons.
   $sprk-input-text-icon-z-index:
