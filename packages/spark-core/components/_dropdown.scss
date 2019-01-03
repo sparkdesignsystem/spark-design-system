@@ -3,7 +3,9 @@
   border: $sprk-dropdown-border;
   border-radius: $sprk-border-radius;
   box-shadow: $sprk-dropdown-shadow;
+  font-size: $sprk-dropdown-font-size;
   max-width: $sprk-dropdown-max-width;
+  padding: ($sprk-dropdown-padding / 2) 0;
   position: absolute;
   margin-top: $sprk-space-xs;
   width: auto;
@@ -35,8 +37,9 @@
 }
 
 .sprk-c-Dropdown__title {
-  color: $sprk-dropdown-header-color;
+  color: $sprk-dropdown-title-color;
   font-weight: $sprk-dropdown-title-font-weight;
+  font-size: $sprk-dropdown-title-font-size;
 }
 
 .sprk-c-Dropdown__footer {
