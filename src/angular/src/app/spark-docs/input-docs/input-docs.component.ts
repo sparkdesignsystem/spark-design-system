@@ -181,7 +181,7 @@ import { Component } from '@angular/core';
           ></sprk-icon>
           <input
             name="inline_search_input"
-            class="sprk-b-TextInput--with-icon"
+            class="sprk-b-TextInput--has-svg-icon"
             type="text"
             placeholder="Search"
             [(ngModel)]="inline_search_input"
@@ -269,7 +269,7 @@ import { Component } from '@angular/core';
           ></sprk-icon>
           <input
             name="datepicker_input"
-            class="sprk-b-TextInput--with-icon"
+            class="sprk-b-TextInput--has-svg-icon"
             type="text"
             pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
             placeholder="MM/DD/YYYY"
