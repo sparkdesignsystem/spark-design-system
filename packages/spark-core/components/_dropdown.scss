@@ -26,11 +26,11 @@
   font-weight: $sprk-dropdown-font-weight;
 
   &:first-child .sprk-c-Dropdown__link {
-    padding-top: $sprk-dropdown-padding;
+    padding-top: $sprk-dropdown-padding / 2;
   }
 
   &:last-child .sprk-c-Dropdown__link {
-    padding-bottom: $sprk-dropdown-padding;
+    padding-bottom: $sprk-dropdown-padding / 2;
   }
 }
 
