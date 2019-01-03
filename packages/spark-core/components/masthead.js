@@ -2,17 +2,12 @@
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 
-const addClassOnScroll = (masthead) => {
-  // Get scroll position
-  const scrollPos = window.scrollY;
-  // Get height of the masthead
-  const mastheadHeight = masthead.offsetHeight;
-
-  // If user scrolls past the masthead then add class
-  if (scrollPos >= mastheadHeight) {
-    masthead.classList.add('sprk-c-Masthead--scroll');
+const addClassOnScroll = (element, scrollPos, elementHeight, classToToggle) => {
+  // If user scrolls past the element then add class
+  if (scrollPos >= elementHeight) {
+    element.classList.add(classToToggle);
   } else {
-    masthead.classList.remove('sprk-c-Masthead--scroll');
+    element.classList.remove(classToToggle);
   }
 };
 
@@ -67,7 +62,7 @@ const bindUIEvents = () => {
     });
 
     window.addEventListener('scroll', () => {
-      addClassOnScroll(masthead);
+      addClassOnScroll(masthead, window.scrollY, masthead.offsetHeight, 'sprk-c-Masthead--scroll');
     });
 
     mainLayout.addEventListener('focusin', () => {
@@ -92,4 +87,5 @@ export {
   hideMobileNavs,
   focusTrap,
   bindUIEvents,
+  addClassOnScroll,
 };
