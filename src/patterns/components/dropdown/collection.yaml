@@ -8,6 +8,9 @@ variableTable:
   $sprk-dropdown-font-weight:
     default: 400
     description: Sets the font weight of the dropdown.
+  $sprk-dropdown-title-font-weight:
+    default: $sprk-dropdown-font-weight
+    description: Sets the font weight of the dropdown title.
   $sprk-dropdown-header-color:
     default: $sprk-black-tint-25
     description: Sets the color of the dropdown title.
