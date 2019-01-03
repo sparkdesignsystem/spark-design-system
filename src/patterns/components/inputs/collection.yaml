@@ -45,120 +45,363 @@ restrictions:
 sparkPackageCore: true
 hasAngularInfo: true
 variableTable:
-  $sprk-input-gray-medium:
-    default: #5a5a5a
-    description: The primary color used for inputs.
   $sprk-monetary-symbol:
     default: '$'
-    description: The symbol used in the before pseudo-element for monetary inputs.
-  $sprk-input-placeholder-color:
-    default: $sprk-gray
-    description: The color of the input placeholder text.
-  $sprk-input-readonly-text-color:
-    default: $sprk-gray
-    description: The input text color of inputs with the readonly attribute.
+    description: The symbol used to denote currency.
   $sprk-fieldset-padding:
-    default: 0
-    description: The padding around fieldset elements.
-  $sprk-text-input-border-radius:
-    default: 0
-    description: The border radius on text inputs.
-  $sprk-text-input-border-color:
-    default: $sprk-black
-    description: The border color on text inputs.
-  $sprk-text-input-border-width:
-    default: 0
-    description: The border width on text inputs.
-  $sprk-input-container-margin-bottom:
-    default: $sprk-space-m
-    description: The bottom margin on input containers.
-  $sprk-input-disabled-background-color:
-    default: $sprk-gray
-    description: The background color of disabled inputs.
-  $sprk-input-disabled-border-color:
-    default: $sprk-black
-    description: The border color of disabled inputs.
-  $sprk-input-disabled-text-color:
-    default: $sprk-input-gray-medium
-    description: The text color of disabled inputs.
-  $sprk-helper-text-hidden:
-    default: false
-    description: Shows helper text after a field when that field is in focus. A 'true' value will not show helper text.
-  $sprk-text-input-padding:
-    default: 3px $sprk-space-s
-    description: The padding around text inputs.
-  $sprk-input-readonly-border-color:
-    default: $sprk-black
-    description: The border color of readonly inputs.
-  $sprk-input-box-shadow:
-    default: 0 1px 0 0 $sprk-black
-    description: The box-shadow on inputs.
-  $sprk-input-error-box-shadow:
-    default: 0 3px 0 0  $sprk-yellow
-    description: The box-shadow on inputs with an error.
-  $sprk-error-icon-size:
-    default: 1.25rem
-    description: The height and width size of the icon that displays when inputs have an error.
-  $sprk-input-disabled-box-shadow:
-    default: 0 1px 0 0 $sprk-input-gray-medium
-    description: The box-shadow on disabled inputs.
-  $sprk-date-picker-max-width:
-    default: 20rem
-    description: The maximum width of the date picker.
-  $sprk-date-picker-button-size:
-    default: 2.25rem
-    description: The height and width of the clickable "day" buttons in the date picker.
-  $sprk-date-picker-column-adjustment-x:
-    default: 0.25rem
-    description: This value is added to the value of the $date-picker-button-size to get the maximum width of the days of the week header.
-  $sprk-date-picker-box-shadow:
-    default: 0 2px 5px $sprk-input-gray-medium
-    description: The box shadow of the date picker.
-  $sprk-date-picker-day-interact-color:
-    default: $sprk-red
-    description: The interaction color of the days in the date picker.
-  $sprk-date-picker-font-family:
-    default: $sprk-font-family-body-two
-    description: The font family used by the date picker.
-  $sprk-text-input-interact-color:
-    default: $sprk-red
-    description: The interaction color of text inputs.
-  $sprk-error-text-color:
-    default: $sprk-black
-    description: The text color of error messages.
-  $sprk-text-input-error-color:
-    default:  $sprk-yellow
-    description: The text input error color used for icons, borders and error state styles.
+    default: $sprk-space-m 0 0 0
+    description: The value for padding applied to the fieldset element.
+  $sprk-input-container-margin:
+    default: 0 0 2rem 0
+    description: The value used for margin around input containers.
   $sprk-input-max-width:
     default: 27.5rem
-    description: The maximum width of the input container.
-  $sprk-input-icon-offset-x:
-    default: 7px
-    description: The x offset value of input icons.
-  $sprk-input-icon-offset-y:
-    default: 21px
-    description: The y offset value of input icons.
-  $sprk-input-text-icon-offset-x:
-    default: 6px
-    description: The x offset value of icons inside the inputs.
-  $sprk-input-text-icon-offset-y:
-    default: 21px
-    description: The y offset value of icons inside the inputs.
-  $sprk-input-animation-speed:
-    default: 0.3s
-    description: The animation speed of input animations.
+    description: The value used as a maximum width for input containers.
+  $sprk-text-input-font-family:
+    default: $sprk-font-family-body-two
+    description: The font family to use for inputs.
+  $sprk-text-input-font-size:
+    default: 1rem
+    description: The font size to use for inputs.
+  $sprk-text-input-font-weight:
+    default: 300
+    description: The font weight to use for inputs.
+  $sprk-text-input-height:
+    default: 48px
+    description: The height of text input elements.
+  $sprk-text-input-line-height:
+    default: 1.2
+    description: The line height to use for inputs.
+  $sprk-text-input-outline:
+    default: 0
+    description: The value to use for outline on text inputs.
+  $sprk-text-input-color:
+    default: $sprk-black
+    description: The color of the text inside input elements.
+  $sprk-text-input-border:
+    default: 2px solid $sprk-black-tint-25
+    description: The border around text input elements.
+  $sprk-text-input-border-radius:
+    default: 4px
+    description: The border radius to use for text input elements.
+  $sprk-text-input-box-shadow:
+    default: none
+    description: The box shadow to use for text input elements.
+  $sprk-text-input-padding:
+    default: 12px 13px
+    description: The padding inside of text input elements.
+  $sprk-text-input-focus-border-color:
+    default: $sprk-green
+    description: The border color when input elements receive focus.
+  $sprk-text-input-error-border-color:
+    default: $sprk-yellow
+    description: The border color when input elements are in an error state.
+  $sprk-text-input-disabled-border-color:
+    default: $sprk-gray-dark
+    description: The border color when an input element is disabled.
+  $sprk-text-input-disabled-background-color:
+    default: $sprk-gray-dark
+    description: The background color when an input element is disabled.
+  $sprk-text-input-disabled-box-shadow:
+    default: none
+    description: The box shadow when an input element is disabled.
+  $sprk-text-input-disabled-color:
+    default: $sprk-black-tint-50
+    description: The color of the text when an input element is disabled.
+  $sprk-text-input-readonly-border-color:
+    default: $sprk-black-tint-25
+    description: The border color when a text input is readonly.
+  $sprk-text-input-readonly-color:
+    default: $sprk-gray
+    description: The text color when a text input is readonly.
+  $sprk-text-input-transition:
+    default: border-color 0.15s ease
+    description: The transition applied to text input elements.
+  $sprk-select-appearance:
+    default: none
+    description: The value set to the appearance property of select elements.
+  $sprk-select-background:
+    default: none
+    description: The value set to the background property of select elements.
+  $sprk-select-border:
+    default: $sprk-text-input-border
+    description: The border style applied to select elements.
+  $sprk-select-focus-border-color:
+    default: $sprk-text-input-focus-border-color
+    description: The border color when select elements receive focus.
+  $sprk-select-error-border-color:
+    default: $sprk-text-input-error-border-color
+    description: The border color when select elements are in an error state.
+  $sprk-select-border-radius:
+    default: $sprk-text-input-border-radius
+    description: The border radius applied to select elements.
+  $sprk-select-box-shadow:
+    default: $sprk-text-input-box-shadow
+    description: The box shadow applied to select elements.
+  $sprk-select-color:
+    default: $sprk-text-input-color
+    description: The color of the text in select elements.
+  $sprk-select-font-size:
+    default: $sprk-text-input-font-size
+    description: The font size for text in select elements.
+  $sprk-select-font-family:
+    default: $sprk-text-input-font-family
+    description: The font family for text in select elements.
+  $sprk-select-font-weight:
+    default: $sprk-text-input-font-weight
+    description: The font weight for text in select elements.
+  $sprk-select-line-height:
+    default: $sprk-text-input-line-height
+    description: The line height for text in select elements.
+  $sprk-select-outline:
+    default: $sprk-text-input-outline
+    description: The outline applied to select elements.
+  $sprk-select-padding:
+    default: 12px 45px 12px 13px
+    description: The padding applied to select elements.
   $sprk-select-arrow-offset-y:
-    default: -23px
-    description: The vertical offset of the select container icon.
+    default: -37px
+    description: The offset that is applied to the y-axis of the chevron icon on select elements.
   $sprk-select-arrow-offset-x:
     default: 8px
-    description: The horizontal offset of the select container icon.
-  $sprk-label-offset-y:
-    default: -53px
-    description: The vertical offset value of labels.
-  $sprk-label-shrink-scale:
-    default: 0.82
-    description: The value to scale to the labels by.
+    description: The offset that is applied to the x-axis of the chevron icon on select elements.
+  $sprk-select-arrow-stroke-width:
+    default: 6px
+    description: The stroke-width applied to the chevron icon of select elements.
+  $sprk-select-disabled-border-color:
+    default: $sprk-text-input-disabled-border-color
+    description: The border color when select elements are disabled.
+  $sprk-select-disabled-background-color:
+    default: $sprk-text-input-disabled-background-color
+    description: The background-color applied to disabled select elements.
+  $sprk-select-disabled-color:
+    default: $sprk-text-input-disabled-color
+    description: The color of the text of disabled select elements.
+  $sprk-textarea-min-height:
+    default: 125px
+    description: The minimum height of textarea elements.
+  $sprk-textarea-margin:
+    default: $sprk-space-stack-m
+    description: The margin surrounding textarea elements.
+  $sprk-textarea-padding:
+    default: $sprk-space-stack-m
+    description: The padding inside textarea elements.
+  $sprk-text-input-error-color:
+    default: $sprk-yellow
+    description: The color used generally by input errors.
+  $sprk-input-error-text-color:
+    default: $sprk-black
+    description: The color of the text in input errors.
+  $sprk-input-error-text-font-family:
+    default: $sprk-font-family-body-two
+    description: The font family used for input error text.
+  $sprk-input-error-text-font-weight:
+    default: 400
+    description: The font weight used for input error text.
+  $sprk-input-error-text-font-size:
+    default: 0.8125rem
+    description: The font size used for input error text.
+  $sprk-input-error-text-line-height:
+    default: 1.2
+    description: The line-height used for input error text.
+  $sprk-input-error-text-margin:
+    default: 0 0 0 6px
+    description: The margin surrounding input error text.
+  $sprk-error-container-margin:
+    default: 8px 0 0 0
+    description: The margin surrounding input error containers.
+  $sprk-error-icon-size:
+    default: 1.25rem
+    description: The input error icon size.
+  $sprk-helper-color:
+    default: $sprk-black-tint-50
+    description: The color of the helper text.
+  $sprk-helper-font-size:
+    default: 0.8125rem
+    description: The font size of the helper text.
+  $sprk-helper-font-family:
+    default: $sprk-text-input-font-family
+    description: The font family used for helper text.
+  $sprk-helper-font-weight:
+    default: $sprk-text-input-font-weight
+    description: The font weight used for helper text.
+  $sprk-helper-line-height:
+    default: $sprk-text-input-line-height
+    description: The line height used for helper text.
+  $sprk-helper-margin:
+    default: $sprk-error-container-margin
+    description: The margin surrounding helper text.
+  $sprk-placeholder-color:
+    default: $sprk-black-tint-50
+    description: The color of placeholder text.
+  $sprk-placeholder-font-size:
+    default: $sprk-text-input-font-size
+    description: The font size of placeholder text.
+  $sprk-placeholder-font-family:
+    default: $sprk-text-input-font-family
+    description: The font family used for placeholder text.
+  $sprk-placeholder-font-weight:
+    default: $sprk-text-input-font-weight
+    description: The font weight used for placeholder text.
+  $sprk-selection-container-margin:
+    default: 0.5rem 0
+    description: The margin surrounding selection containers.
+  $sprk-selection-container-label-font-weight:
+    default: 300
+    description: The font weight used for selection container labels.
+  $sprk-selection-container-input-height:
+    default: 20px
+    description: The height of inputs inside selection containers.
+  $sprk-selection-container-input-width:
+    default: 20px
+    description: The width of inputs inside selection containers.
+  $sprk-selection-container-input-margin:
+    default: 0 4px 0 0
+    description: The margin surrounding inputs inside selection containers.
+  $sprk-date-picker-max-width:
+    default: 20rem
+    description: The maximum width of the datepicker modal.
+  $sprk-date-picker-border-radius:
+    default: 4px
+    description: The border radius applied to the datepicker modal.
+  $sprk-date-picker-button-size:
+    default: 2.25rem
+    description: The size of the buttons used internally by datepicker.
+  $sprk-date-picker-column-adjustment-x:
+    default: 0.25rem
+    description: The offset applied to columns used internally by datepicker.
+  $sprk-date-picker-box-shadow:
+    default: 0 4px 16px rgba(51, 51, 51, 0.1)
+    description: The box shadow applied to the datepicker modal.
+  $sprk-date-picker-font-size:
+    default: 0.9375rem
+    description: The font size used for the datepicker modal.
+  $sprk-date-picker-font-family:
+    default: sprk-font-family-body-two
+    description: The font family used by the datepicker modal.
+  $sprk-date-picker-font-weight:
+    default: 300
+    description: The font weight used by the datepicker modal.
+  $sprk-date-picker-selected-day-font-weight:
+    default: 500
+    description: The font weight used by the currently selected day in the datepicker modal.
+  $sprk-date-picker-day-interact-color:
+    $default: sprk-red
+    description: The color used internally by datepicker to highlight elements.
+  $sprk-date-picker-background:
+    default: $sprk-white
+    description:
+  $sprk-date-picker-padding:
+    default: $sprk-space-inset-s
+    description:
+  $sprk-date-picker-padding-wide:
+    default: $sprk-space-inset-m
+    description:
+  $sprk-date-picker-header-border:
+    default: 1px solid $sprk-gray
+    description:
+  $sprk-date-picker-header-font-size:
+    default: $sprk-font-size-body-three
+    description:
+  $sprk-date-picker-header-font-weight:
+    default: 700
+    description:
+  $sprk-date-picker-header-padding:
+    default: 0 0 $sprk-space-s 0
+    description:
+  $sprk-date-picker-col-header-padding:
+    default: 10px
+    description:
+  $sprk-date-picker-day-padding:
+    default: 6px
+    description:
+  $sprk-date-picker-day-margin:
+    default: 0 2px
+    description:
+  $sprk-date-picker-day-color:
+    default: $sprk-white
+    description:
+  $sprk-date-picker-day-hover-color:
+    default: $sprk-black
+    description:
+  $sprk-date-picker-day-edge-day-color:
+    default: $sprk-black-tint-50
+    description:
+  $sprk-date-picker-month-year-font-size:
+    default: $sprk-font-size-display-six
+    description:
+  $sprk-date-picker-arrow-color:
+    default: $sprk-black
+    description:
+  $sprk-date-picker-modal-margin:
+    default: $sprk-space-m 0 0 0
+    description:
+  $sprk-date-picker-modal-margin-wide:
+    default: 2px
+    description:
+  $sprk-date-picker-modal-z-index:
+    default: $sprk-layer-height-m
+    description:
+  $sprk-date-picker-years-modal-max-height:
+    default: 500px
+    description:
+  $sprk-input-icon-offset-x:
+    default: $sprk-space-m
+    description: The X offset of icons inside input elements.
+  $sprk-input-icon-offset-y:
+    default: $sprk-space-m
+    description: The Y offset of icons inside input elements.
+  $sprk-text-input-has-icon-padding:
+    default: 12px 13px 12px 40px
+    description: The padding inside input elements that contain icons.
+  $sprk-input-icon-z-index:
+    default: $sprk-layer-height-xs
+    description: The z-index applied to the icon inside input elements.
+  $sprk-input-text-icon-offset-x:
+    default: $sprk-space-m
+    description: The X offset of text icons inside input elements.
+  $sprk-input-text-icon-offset-y:
+    default: 38px
+    description: The Y offset of text icons inside input elements.
+  $sprk-input-text-icon-font-size:
+    default: 1rem
+    description: The font size of text icons inside input elements.
+  $sprk-input-text-icon-font-weight:
+    default: 700
+    description: The font weight of text icons inside input elements.
+  $sprk-text-input-has-text-icon-padding:
+    default: 12px 13px 12px 37px
+    description: The padding inside input elements that contain text icons.
+  $sprk-input-text-icon-z-index:
+    default: $sprk-layer-height-xs
+    description: The z-index applied to the text icon.
+  $sprk-label-padding:
+    default: 0
+    description: The padding applied to labels.
+  $sprk-label-font-family:
+    default: $sprk-font-family-body-two !default;
+    description: The font family used for labels.
+  $sprk-label-font-size:
+    default: 0.875rem
+    description: The font size used for labels.
+  $sprk-label-font-weight:
+    default: 400
+    description: The font weight used for labels.
+  $sprk-label-line-height:
+    default: 1.2
+    description: The line height used for labels.
+  $sprk-label-margin:
+    default: 0 0 $sprk-space-s 0
+    description: The margin surrounding labels.
+  $sprk-visibility-control-margin:
+    default: 6px 0 0 0
+    description: The margin surrounding visibility controls (i.e. 'Show SSN').
+  $sprk-visibility-control-label-font-size:
+    default: $sprk-label-font-size
+    description: The font size used for visibility controls.
+  $sprk-label-disabled-color:
+    default: $sprk-gray-dark
+    description: The color of the label when it is disabled.
 classTable:
   .sprk-b-Label--no-input:
     description: Apply when a label is used without an input.

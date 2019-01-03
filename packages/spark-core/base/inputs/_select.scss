@@ -1,21 +1,27 @@
 .sprk-b-Select {
-  appearance: none;
-  border: 1px solid transparent;
-  border-radius: 0;
-  background: none;
-  font-size: $sprk-font-size-body-two;
-  font-weight: $sprk-font-weight-body-two;
-  line-height: $sprk-line-height-body-two;
-  outline: 0;
-  padding: 0 $sprk-space-l 0 $sprk-space-s;
-  box-shadow: $sprk-input-box-shadow;
+  appearance: $sprk-select-appearance;
+  border: $sprk-select-border;
+  border-radius: $sprk-select-border-radius;
+  box-shadow: $sprk-select-box-shadow;
+  background: $sprk-select-background;
+  color: $sprk-select-color;
+  font-size: $sprk-select-font-size;
+  font-weight: $sprk-select-font-weight;
+  line-height: $sprk-select-line-height;
+  outline: $sprk-select-outline;
+  padding: $sprk-select-padding;
   width: 100%;
+
+  &:focus {
+    border-color: $sprk-select-focus-border-color;
+  }
 }
 
 // IE11
 .sprk-b-Select:focus::-ms-value {
-  color: $sprk-black;
-  background: none;
+  color: $sprk-select-color;
+  background: $sprk-select-background;
+  border-color: $sprk-select-focus-border-color;
 }
 
 .sprk-b-Select::-ms-expand {
@@ -26,34 +32,16 @@
   float: right;
   margin-top: $sprk-select-arrow-offset-y;
   margin-right: $sprk-select-arrow-offset-x;
+  stroke-width: $sprk-select-arrow-stroke-width;
 }
 
 .sprk-b-Select[disabled] {
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: $sprk-input-gray-medium;
-  border-bottom-width: 1px;
-  background-color: $sprk-input-disabled-background-color;
-  box-shadow: none;
-  color: $sprk-input-disabled-text-color;
+  border-color: $sprk-select-disabled-border-color;
+  background-color: $sprk-select-disabled-background-color;
+  color: $sprk-select-disabled-color;
 }
 
-.sprk-b-Select--error {
-  box-shadow: $sprk-input-error-box-shadow;
-}
-
-.sprk-b-Select--error ~ .sprk-b-InputContainer__input-border {
-  border-bottom: 3px solid $sprk-text-input-error-color;
-}
-
-.sprk-b-Select--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full $sprk-input-animation-speed;
-  animation-fill-mode: forwards;
-}
-
-.sprk-b-Select--focusout ~ .sprk-b-InputContainer__input-border {
-  width: 100%;
-  animation: opacity-one-to-zero $sprk-input-animation-speed;
-  animation-fill-mode: forwards;
+.sprk-b-Select--error,
+.sprk-b-Select--error:focus {
+  border-color: $sprk-select-error-border-color;
 }

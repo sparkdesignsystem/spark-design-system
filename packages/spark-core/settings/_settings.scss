@@ -389,46 +389,172 @@ $sprk-list-margin-left: $sprk-space-m !default;
 $sprk-list-indented-margin-left: $sprk-space-l !default;
 
 //
-// Forms
+// Inputs
 ///
-$sprk-input-gray-medium: #5a5a5a !default;
 $sprk-monetary-symbol: '$' !default;
-$sprk-input-placeholder-color: $sprk-gray !default;
-$sprk-input-readonly-text-color: $sprk-gray !default;
-$sprk-fieldset-padding: 0 !default;
-$sprk-text-input-border-radius: 0 !default;
-$sprk-text-input-border-color: $sprk-black !default;
-$sprk-text-input-border-width: 0 !default;
-$sprk-input-container-margin-bottom: $sprk-space-m !default;
-$sprk-input-disabled-background-color: $sprk-gray !default;
-$sprk-input-disabled-border-color: $sprk-black !default;
-$sprk-input-disabled-text-color: $sprk-input-gray-medium !default;
-$sprk-helper-text-hidden: false !default;
-$sprk-text-input-padding: 3px $sprk-space-s !default;
-$sprk-input-readonly-border-color: $sprk-black !default;
-$sprk-input-box-shadow: 0 1px 0 0 $sprk-black !default;
-$sprk-input-error-box-shadow: 0 3px 0 0 $sprk-yellow !default;
+$sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
+$sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
+$sprk-input-max-width: 27.5rem !default;
+
+//
+// Text Input
+///
+$sprk-text-input-font-family: $sprk-font-family-body-two !default;
+$sprk-text-input-font-size: 1rem !default;
+$sprk-text-input-font-weight: 300 !default;
+$sprk-text-input-height: 48px !default;
+$sprk-text-input-line-height: 1 !default;
+$sprk-text-input-outline: 0 !default;
+$sprk-text-input-color: $sprk-black !default;
+$sprk-text-input-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-text-input-border-radius: 4px !default;
+$sprk-text-input-box-shadow: none !default;
+$sprk-text-input-padding: 0 $sprk-space-m !default;
+$sprk-text-input-focus-border-color: $sprk-green !default;
+$sprk-text-input-error-border-color: $sprk-yellow !default;
+$sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-box-shadow: none !default;
+$sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
+$sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
+$sprk-text-input-readonly-color: $sprk-gray !default;
+$sprk-text-input-transition: border-color 0.15s ease !default;
+
+//
+// Select
+///
+$sprk-select-appearance: none !default;
+$sprk-select-background: none !default;
+$sprk-select-border: $sprk-text-input-border !default;
+$sprk-select-focus-border-color: $sprk-text-input-focus-border-color !default;
+$sprk-select-error-border-color: $sprk-text-input-error-border-color !default;
+$sprk-select-border-radius: $sprk-text-input-border-radius !default;
+$sprk-select-box-shadow: $sprk-text-input-box-shadow !default;
+$sprk-select-color: $sprk-text-input-color !default;
+$sprk-select-font-size: $sprk-text-input-font-size !default;
+$sprk-select-font-family: $sprk-text-input-font-family !default;
+$sprk-select-font-weight: $sprk-text-input-font-weight !default;
+$sprk-select-line-height: $sprk-text-input-line-height !default;
+$sprk-select-outline: $sprk-text-input-outline !default;
+$sprk-select-padding: 12px 45px 12px 13px !default;
+$sprk-select-arrow-offset-y: -37px !default;
+$sprk-select-arrow-offset-x: 8px !default;
+$sprk-select-arrow-stroke-width: 6px !default;
+$sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
+$sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
+$sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
+
+//
+// Textarea
+///
+$sprk-textarea-min-height: 125px !default;
+$sprk-textarea-margin: $sprk-space-stack-m !default;
+$sprk-textarea-padding: $sprk-space-m !default;
+
+//
+// Input Errors
+///
+$sprk-text-input-error-color: $sprk-yellow !default;
+$sprk-input-error-text-color: $sprk-black !default;
+$sprk-input-error-text-font-family: $sprk-font-family-body-two !default;
+$sprk-input-error-text-font-weight: 400 !default;
+$sprk-input-error-text-font-size: 0.8125rem !default;
+$sprk-input-error-text-line-height: 1 !default;
+$sprk-input-error-text-margin: 0 0 0 6px !default;
+$sprk-error-container-margin: $sprk-space-s 0 0 0 !default;
 $sprk-error-icon-size: 1.25rem !default;
-$sprk-input-disabled-box-shadow: 0 1px 0 0 $sprk-input-gray-medium !default;
+
+//
+// Helper Text
+///
+$sprk-helper-color: $sprk-black-tint-50 !default;
+$sprk-helper-font-size: 0.8125rem !default;
+$sprk-helper-font-family: $sprk-text-input-font-family !default;
+$sprk-helper-font-weight: $sprk-text-input-font-weight !default;
+$sprk-helper-line-height: $sprk-text-input-line-height !default;
+$sprk-helper-margin: $sprk-error-container-margin !default;
+
+//
+// Placeholder
+///
+$sprk-placeholder-color: $sprk-black-tint-50 !default;
+$sprk-placeholder-font-size: $sprk-text-input-font-size !default;
+$sprk-placeholder-font-family: $sprk-text-input-font-family !default;
+$sprk-placeholder-font-weight: $sprk-text-input-font-weight !default;
+
+//
+// Selection Container
+///
+$sprk-selection-container-margin: 0 0 $sprk-space-m 0 !default;
+$sprk-selection-container-label-font-weight: 300 !default;
+$sprk-selection-container-input-height: auto !default;
+$sprk-selection-container-input-width: auto !default;
+$sprk-selection-container-input-margin: 0 $sprk-space-s 0 0 !default;
+
+//
+// DatePicker
+///
 $sprk-date-picker-max-width: 20rem !default;
+$sprk-date-picker-border-radius: 4px !default;
 $sprk-date-picker-button-size: 2.25rem !default;
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
-$sprk-date-picker-box-shadow: 0 2px 5px $sprk-input-gray-medium !default;
+$sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
-$sprk-date-picker-day-interact-color: $sprk-red !default;
-$sprk-text-input-interact-color: $sprk-red !default;
-$sprk-error-text-color: $sprk-black !default;
-$sprk-text-input-error-color: $sprk-yellow !default;
-$sprk-input-max-width: 27.5rem !default;
-$sprk-input-icon-offset-x: 7px !default;
-$sprk-input-icon-offset-y: 21px !default;
-$sprk-input-text-icon-offset-x: 6px !default;
-$sprk-input-text-icon-offset-y: 21px !default;
-$sprk-input-animation-speed: 0.3s !default;
-$sprk-select-arrow-offset-y: -23px !default;
-$sprk-select-arrow-offset-x: 8px !default;
-$sprk-label-offset-y: -53px !default;
-$sprk-label-shrink-scale: 0.82 !default;
+$sprk-date-picker-font-size: 0.9375rem !default;
+$sprk-date-picker-font-weight: 300 !default;
+$sprk-date-picker-day-interact-color: $sprk-green !default;
+$sprk-date-picker-selected-day-font-weight: 500 !default;
+
+$sprk-date-picker-background: $sprk-white !default;
+$sprk-date-picker-padding: $sprk-space-inset-s !default;
+$sprk-date-picker-padding-wide: $sprk-space-inset-m !default;
+$sprk-date-picker-header-border: 1px solid $sprk-gray !default;
+$sprk-date-picker-header-font-size: $sprk-font-size-body-three !default;
+$sprk-date-picker-header-font-weight: 700 !default;
+$sprk-date-picker-header-padding: 0 0 $sprk-space-s 0 !default;
+$sprk-date-picker-col-header-padding: 10px !default;
+$sprk-date-picker-day-padding: 6px !default;
+$sprk-date-picker-day-margin: 0 2px !default;
+$sprk-date-picker-day-color: $sprk-white !default;
+$sprk-date-picker-day-hover-color: $sprk-black !default;
+$sprk-date-picker-day-edge-day-color: $sprk-black-tint-50 !default;
+$sprk-date-picker-month-year-font-size: $sprk-font-size-display-six !default;
+$sprk-date-picker-arrow-color: $sprk-black !default;
+$sprk-date-picker-modal-margin: $sprk-space-m 0 0 0 !default;
+$sprk-date-picker-modal-margin-wide: 2px !default;
+$sprk-date-picker-modal-z-index: $sprk-layer-height-m !default;
+$sprk-date-picker-years-modal-max-height: 500px !default;
+
+//
+// Text Icon Inputs
+///
+$sprk-input-text-icon-offset-x: $sprk-space-m !default;
+$sprk-input-text-icon-offset-y: 38px !default;
+$sprk-input-text-icon-font-size: 1rem !default;
+$sprk-input-text-icon-font-weight: 700 !default;
+$sprk-text-input-has-text-icon-padding: 12px 13px 12px 37px !default;
+$sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
+
+//
+// SVG Icon Inputs
+///
+$sprk-input-icon-offset-x: $sprk-space-m !default;
+$sprk-input-icon-offset-y: $sprk-space-m !default;
+$sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
+$sprk-input-icon-z-index: $sprk-layer-height-xs !default;
+
+//
+// Labels
+///
+$sprk-label-padding: 0 !default;
+$sprk-label-font-family: $sprk-font-family-body-two !default;
+$sprk-label-font-size: 0.875rem !default;
+$sprk-label-font-weight: 400 !default;
+$sprk-label-line-height: 1 !default;
+$sprk-label-margin: 0 0 $sprk-space-s 0 !default;
+$sprk-visibility-control-margin: 6px 0 0 0 !default;
+$sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
+$sprk-label-disabled-color: $sprk-gray-dark !default;
 
 //
 // Tables
