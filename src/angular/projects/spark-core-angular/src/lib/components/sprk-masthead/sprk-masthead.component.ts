@@ -65,10 +65,9 @@ import * as _ from 'lodash';
           sprk-o-Stack__item
           sprk-o-Stack__item--flex@xxs
           sprk-o-Stack
-          sprk-o-Stack--large
-          sprk-o-Stack--split@s
-          sprk-o-Stack--end-row
-          sprk-o-Box"
+          sprk-o-Stack--misc-a
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
           role="navigation"
         >
           <ng-content select="[little-nav-slot]"></ng-content>
@@ -89,8 +88,7 @@ import * as _ from 'lodash';
               *ngFor="let link of bigNavLinks"
               [ngClass]="{
                 'sprk-c-Masthead__big-nav-item': true,
-                'sprk-c-Stack__item': true,
-                'sprk-o-Stack__item--flex@xxs': true,
+                'sprk-o-Stack__item': true,
                 'sprk-c-Masthead__big-nav-item--open':
                   link.focused && link.subNav
               }"
@@ -151,7 +149,7 @@ import * as _ from 'lodash';
                         >
                           <sprk-icon
                             [iconType]="subNavLink.leadingIcon"
-                            additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+                            additionalClasses="sprk-c-Icon--current-color sprk-u-mrs"
                             *ngIf="subNavLink.leadingIcon"
                           ></sprk-icon>
                           {{ subNavLink.text }}
@@ -176,7 +174,7 @@ import * as _ from 'lodash';
                       <span class="sprk-c-MastheadAccordion__heading">
                         <sprk-icon
                           [iconType]="narrowLink.leadingIcon"
-                          additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+                          additionalClasses="sprk-c-Icon--current-color sprk-u-mrs"
                           *ngIf="narrowLink.leadingIcon"
                         ></sprk-icon>
                         {{ narrowLink.text }}
@@ -256,6 +254,8 @@ export class SparkMastheadComponent {
     const classArray: string[] = [
       'sprk-c-Masthead__big-nav-items',
       'sprk-o-Stack',
+      'sprk-o-Stack--misc-a',
+      'sprk-o-Stack--center-row',
       'sprk-o-Stack--split@xxs',
       'sprk-b-List',
       'sprk-b-List--bare'

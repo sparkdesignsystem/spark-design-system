@@ -175,7 +175,7 @@ import { Component } from '@angular/core';
             >
               <sprk-icon
                 iconType="settings"
-                additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l"
+                additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"
               ></sprk-icon>
               <span class="sprk-u-ScreenReaderText">Settings</span>
             </a>
@@ -188,6 +188,7 @@ import { Component } from '@angular/core';
               title="My Account"
               triggerIconType="user"
               additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              additionalIconClasses="sprk-c-Icon--l"
               additionalClasses="sprk-u-Right--zero"
               screenReaderText="User Account"
             ></sprk-dropdown>
@@ -393,12 +394,12 @@ import { Component } from '@angular/core';
 export class MastheadDocsComponent {
   links = [
     {
-      text: 'Item 1',
+      text: 'Navigation Item',
       href: '/icons',
       active: false
     },
     {
-      text: 'Item 2',
+      text: 'Your Item',
       active: false,
       subNav: [
         {
@@ -416,13 +417,13 @@ export class MastheadDocsComponent {
       ]
     },
     {
-      text: 'Item 3',
+      text: 'Nav Item',
       href: '#nogo',
       active: false,
       leadingIcon: 'settings'
     },
     {
-      text: 'Item 4',
+      text: 'Navigation Item',
       href: '#nogo',
       leadingIcon: 'chat-online',
       subNav: [
@@ -441,7 +442,7 @@ export class MastheadDocsComponent {
       ]
     },
     {
-      text: 'Item 5',
+      text: 'Item',
       href: '#nogo',
       active: false,
       leadingIcon: 'chat-online'
@@ -449,20 +450,6 @@ export class MastheadDocsComponent {
   ];
 
   defaultNarrowLinks = [
-    {
-      text: 'My Selector',
-      active: false,
-      subNav: [
-        {
-          text: 'Choice 1',
-          href: '/links'
-        },
-        {
-          text: 'Choice 2',
-          href: '#nogo'
-        }
-      ]
-    },
     {
       text: 'Item 1',
       href: '#nogo',

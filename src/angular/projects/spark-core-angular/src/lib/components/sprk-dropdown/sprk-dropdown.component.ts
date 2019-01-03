@@ -23,7 +23,7 @@ import {
       <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
       <sprk-icon
         [iconType]="triggerIconType"
-        additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l {{ additionalIconClasses }}"
+        additionalClasses="sprk-c-Icon--current-color {{ additionalIconClasses }}"
       ></sprk-icon>
     </a>
     <div [ngClass]="getClasses()" *ngIf="isOpen">
