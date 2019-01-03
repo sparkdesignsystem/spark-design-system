@@ -1,12 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SparkNarrowNavigationItemComponent } from '../sprk-narrow-navigation-item/sprk-narrow-navigation-item.component';
-import { SparkNarrowNavigationComponent } from '../sprk-narrow-navigation/sprk-narrow-navigation.component';
+import { SparkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
+import { SparkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 import { SparkMastheadComponent } from './sprk-masthead.component';
 import { SparkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
-import { SparkAccordionComponent } from '../sprk-accordion/sprk-accordion.component';
-import { SparkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
 
 describe('SparkMastheadComponent', () => {
   let component: SparkMastheadComponent;
@@ -21,12 +19,10 @@ describe('SparkMastheadComponent', () => {
       imports: [RouterTestingModule],
       declarations: [
         SparkMastheadComponent,
-        SparkNarrowNavigationComponent,
-        SparkNarrowNavigationItemComponent,
         SparkIconComponent,
         SparkDropdownComponent,
-        SparkAccordionComponent,
-        SparkAccordionItemComponent
+        SparkMastheadAccordionComponent,
+        SparkMastheadAccordionItemComponent
       ]
     }).compileComponents();
   }));
@@ -96,7 +92,7 @@ describe('SparkMastheadComponent', () => {
     component.isNarrowNavOpen = true;
     fixture.detectChanges();
     narrowNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__narrow-nav .sprk-c-Accordion'
+      '.sprk-c-Masthead__narrow-nav .sprk-c-MastheadAccordion'
     );
     expect(narrowNavElement.classList.contains('sprk-u-man')).toEqual(true);
   });

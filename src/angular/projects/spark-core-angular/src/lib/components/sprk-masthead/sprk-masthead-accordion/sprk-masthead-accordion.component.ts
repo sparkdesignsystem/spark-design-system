@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'sprk-narrow-navigation',
+  selector: 'sprk-masthead-accordion',
   template: `
     <nav role="navigation" [attr.data-id]="idString">
       <ul [ngClass]="getClasses()">
@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
     </nav>
   `
 })
-export class SparkNarrowNavigationComponent {
+export class SparkMastheadAccordionComponent {
   @Input()
   additionalClasses: string;
   @Input()

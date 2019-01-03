@@ -131,51 +131,55 @@ import * as _ from 'lodash';
           data-sprk-mobile-nav="mobileNav"
         >
           <nav role="navigation">
-            <sprk-accordion [additionalClasses]="getNarrowNavClasses()">
+            <sprk-masthead-accordion
+              [additionalClasses]="getNarrowNavClasses()"
+            >
               <div *ngFor="let narrowLink of narrowNavLinks">
                 <div *ngIf="narrowLink.subNav">
-                  <sprk-accordion-item
+                  <sprk-masthead-accordion-item
                     iconTypeOpen="chevron-down"
                     iconTypeClosed="chevron-down"
                     [leadingIcon]="narrowLink.leadingIcon"
-                    additionalHeadingClasses="sprk-b-TypeBodyOne"
                     [isActive]="narrowLink.active"
                     [title]="narrowLink.text"
                   >
-                    <li
-                      class="sprk-c-Accordion__item"
-                      *ngFor="let subNavLink of narrowLink.subNav"
+                    <ul
+                      class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
                     >
-                      <a
-                        class="sprk-c-Accordion__summary"
-                        [routerLink]="subNavLink.href"
-                        href="#nogo"
+                      <li
+                        class="sprk-c-MastheadAccordion__item"
+                        *ngFor="let subNavLink of narrowLink.subNav"
                       >
-                        <sprk-icon
-                          [iconType]="subNavLink.leadingIcon"
-                          additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
-                          *ngIf="subNavLink.leadingIcon"
-                        ></sprk-icon>
-                        {{ subNavLink.text }}
-                      </a>
-                    </li>
-                  </sprk-accordion-item>
+                        <a
+                          class="sprk-c-MastheadAccordion__summary"
+                          [routerLink]="subNavLink.href"
+                          href="#nogo"
+                        >
+                          <sprk-icon
+                            [iconType]="subNavLink.leadingIcon"
+                            additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+                            *ngIf="subNavLink.leadingIcon"
+                          ></sprk-icon>
+                          {{ subNavLink.text }}
+                        </a>
+                      </li>
+                    </ul>
+                  </sprk-masthead-accordion-item>
                 </div>
                 <div *ngIf="!narrowLink.subNav">
                   <li
                     [ngClass]="{
-                      'sprk-c-Accordion__item': true,
-                      'sprk-c-Accordion__item--active': narrowLink.active
+                      'sprk-c-MastheadAccordion__item': true,
+                      'sprk-c-MastheadAccordion__item--active':
+                        narrowLink.active
                     }"
                   >
                     <a
-                      class="sprk-c-Accordion__summary"
+                      class="sprk-c-MastheadAccordion__summary"
                       [routerLink]="narrowLink.href"
                       href="#nogo"
                     >
-                      <span
-                        class="sprk-b-TypeBodyOne sprk-c-Accordion__heading"
-                      >
+                      <span class="sprk-c-MastheadAccordion__heading">
                         <sprk-icon
                           [iconType]="narrowLink.leadingIcon"
                           additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
@@ -187,7 +191,7 @@ import * as _ from 'lodash';
                   </li>
                 </div>
               </div>
-            </sprk-accordion>
+            </sprk-masthead-accordion>
           </nav>
           <ng-content select="[narrowNavFooter]"></ng-content>
         </div>
@@ -243,11 +247,7 @@ export class SparkMastheadComponent {
   }
 
   getNarrowNavClasses(): string {
-    const classArray: string[] = [
-      'sprk-c-Accordion--navigation',
-      'sprk-b-List',
-      'sprk-b-List--bare'
-    ];
+    const classArray: string[] = [];
 
     if (this.additionalNarrowNavClasses) {
       this.additionalNarrowNavClasses.split(' ').forEach(className => {
