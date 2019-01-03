@@ -288,6 +288,63 @@ variableTable:
   $sprk-date-picker-day-interact-color:
     $default: sprk-red
     description: The color used internally by datepicker to highlight elements.
+  $sprk-date-picker-background:
+    default: $sprk-white
+    description:
+  $sprk-date-picker-padding:
+    default: $sprk-space-inset-s
+    description:
+  $sprk-date-picker-padding-wide:
+    default: $sprk-space-inset-m
+    description:
+  $sprk-date-picker-header-border:
+    default: 1px solid $sprk-gray
+    description:
+  $sprk-date-picker-header-font-size:
+    default: $sprk-font-size-body-three
+    description:
+  $sprk-date-picker-header-font-weight:
+    default: 700
+    description:
+  $sprk-date-picker-header-padding:
+    default: 0 0 $sprk-space-s 0
+    description:
+  $sprk-date-picker-col-header-padding:
+    default: 10px
+    description:
+  $sprk-date-picker-day-padding:
+    default: 6px
+    description:
+  $sprk-date-picker-day-margin:
+    default: 0 2px
+    description:
+  $sprk-date-picker-day-color:
+    default: $sprk-white
+    description:
+  $sprk-date-picker-day-hover-color:
+    default: $sprk-black
+    description:
+  $sprk-date-picker-day-edge-day-color:
+    default: $sprk-black-tint-50
+    description:
+  $sprk-date-picker-month-year-font-size:
+    default: $sprk-font-size-display-six
+    description:
+  $sprk-date-picker-arrow-color:
+    default: $sprk-black
+    description:
+  $sprk-date-picker-modal-margin:
+    default: $sprk-space-m 0 0 0
+    description:
+  $sprk-date-picker-modal-margin-wide:
+    default: 2px
+    description:
+  $sprk-date-picker-modal-z-index:
+    default: $sprk-layer-height-m
+    description:
+  $sprk-date-picker-years-modal-max-height:
+    default: 500px
+    description:
   $sprk-input-icon-offset-x:
     default: $sprk-space-m
     description: The X offset of icons inside input elements.
