@@ -41,12 +41,7 @@ import {
       </div>
 
       <div [@toggleContent]="animState">
-        <div
-          [id]="accordion_controls_id"
-          class="sprk-c-MastheadAccordion__details"
-        >
-          <ng-content></ng-content>
-        </div>
+        <div [id]="accordion_controls_id"><ng-content></ng-content></div>
       </div>
     </li>
   `,

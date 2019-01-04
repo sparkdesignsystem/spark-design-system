@@ -324,7 +324,10 @@ import { Component } from '@angular/core';
           </g>
         </svg>
 
-        <div little-nav-slot>
+        <div
+          class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+          little-nav-slot
+        >
           <ul
             class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column"
           >
@@ -347,38 +350,37 @@ import { Component } from '@angular/core';
             </li>
           </ul>
         </div>
-        <div utility-slot>
-          <ul
-            class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
-          >
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="tel:555-555-5555"
-              >
-                (555) 555-5555
-              </a>
-            </li>
+        <ul
+          class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+          utility-slot
+        >
+          <li>
+            <a
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              href="tel:555-555-5555"
+            >
+              (555) 555-5555
+            </a>
+          </li>
 
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="#nogo"
-              >
-                Talk To Us
-              </a>
-            </li>
+          <li>
+            <a
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              href="#nogo"
+            >
+              Talk To Us
+            </a>
+          </li>
 
-            <li>
-              <a
-                class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
-                href="#nogo"
-              >
-                Sign In
-              </a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <a
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+              href="#nogo"
+            >
+              Sign In
+            </a>
+          </li>
+        </ul>
         <div class="sprk-u-mas" narrowNavFooter>
           <a
             class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
