@@ -85,7 +85,7 @@ export class SparkMastheadAccordionItemComponent implements OnInit {
   @Input()
   iconTypeClosed = 'chevron-up-circle-two-color';
   @Input()
-  iconTypeOpen = 'chevron-down-circle-two-color';
+  iconTypeOpen = 'chevron-up-circle-two-color';
   @Input()
   leadingIcon: string;
 

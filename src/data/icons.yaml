@@ -50,9 +50,6 @@
 - name: chevron-down-circle-filled
   viewBox: 0 0 64 64
   description: ...
-- name: chevron-down-circle-two-color
-  viewBox: 0 0 64 64
-  description: ...
 - name: chevron-left
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
