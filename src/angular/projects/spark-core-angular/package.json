@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-core-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "6.0.3",
+  "version": "7.0.0",
   "scripts": {
     "lint": "ng lint spark-core-angular",
     "test": "ng test spark-core-angular --watch=false",
@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^6.1.4",
     "@angular/platform-browser-dynamic": "^6.1.4",
     "@angular/router": "^6.1.4",
-    "@sparkdesignsystem/spark-core": "^8.0.0",
+    "@sparkdesignsystem/spark-core": "^9.0.0",
     "lodash": "^4.17.10",
     "tiny-date-picker": "^3.2.6"
   },
