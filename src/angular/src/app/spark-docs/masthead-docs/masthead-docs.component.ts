@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
         additionalClasses="angular-docs-u-Masthead-docs"
         [bigNavLinks]="links"
         [narrowNavLinks]="narrowLinks"
+        [narrowSelector]="mySelector"
         idString="masthead-1"
       >
         <svg
@@ -175,7 +176,7 @@ import { Component } from '@angular/core';
             >
               <sprk-icon
                 iconType="settings"
-                additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l"
+                additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"
               ></sprk-icon>
               <span class="sprk-u-ScreenReaderText">Settings</span>
             </a>
@@ -188,6 +189,7 @@ import { Component } from '@angular/core';
               title="My Account"
               triggerIconType="user"
               additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              additionalIconClasses="sprk-c-Icon--l"
               additionalClasses="sprk-u-Right--zero"
               screenReaderText="User Account"
             ></sprk-dropdown>
@@ -323,7 +325,10 @@ import { Component } from '@angular/core';
           </g>
         </svg>
 
-        <div little-nav-slot>
+        <div
+          class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+          little-nav-slot
+        >
           <ul
             class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column"
           >
@@ -346,38 +351,37 @@ import { Component } from '@angular/core';
             </li>
           </ul>
         </div>
-        <div utility-slot>
-          <ul
-            class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
-          >
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="tel:555-555-5555"
-              >
-                (555) 555-5555
-              </a>
-            </li>
+        <ul
+          class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
+          utility-slot
+        >
+          <li>
+            <a
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              href="tel:555-555-5555"
+            >
+              (555) 555-5555
+            </a>
+          </li>
 
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="#nogo"
-              >
-                Talk To Us
-              </a>
-            </li>
+          <li>
+            <a
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              href="#nogo"
+            >
+              Talk To Us
+            </a>
+          </li>
 
-            <li>
-              <a
-                class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
-                href="#nogo"
-              >
-                Sign In
-              </a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <a
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+              href="#nogo"
+            >
+              Sign In
+            </a>
+          </li>
+        </ul>
         <div class="sprk-u-mas" narrowNavFooter>
           <a
             class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
@@ -393,12 +397,12 @@ import { Component } from '@angular/core';
 export class MastheadDocsComponent {
   links = [
     {
-      text: 'Item 1',
+      text: 'Navigation Item',
       href: '/icons',
       active: false
     },
     {
-      text: 'Item 2',
+      text: 'Your Item',
       active: false,
       subNav: [
         {
@@ -416,13 +420,13 @@ export class MastheadDocsComponent {
       ]
     },
     {
-      text: 'Item 3',
+      text: 'Nav Item',
       href: '#nogo',
       active: false,
       leadingIcon: 'settings'
     },
     {
-      text: 'Item 4',
+      text: 'Navigation Item',
       href: '#nogo',
       leadingIcon: 'chat-online',
       subNav: [
@@ -441,7 +445,7 @@ export class MastheadDocsComponent {
       ]
     },
     {
-      text: 'Item 5',
+      text: 'Item',
       href: '#nogo',
       active: false,
       leadingIcon: 'chat-online'
@@ -449,20 +453,6 @@ export class MastheadDocsComponent {
   ];
 
   defaultNarrowLinks = [
-    {
-      text: 'My Selector',
-      active: false,
-      subNav: [
-        {
-          text: 'Choice 1',
-          href: '/links'
-        },
-        {
-          text: 'Choice 2',
-          href: '#nogo'
-        }
-      ]
-    },
     {
       text: 'Item 1',
       href: '#nogo',
@@ -625,6 +615,32 @@ export class MastheadDocsComponent {
       value: 'sign-out'
     }
   ];
+
+  mySelector = {
+    trigger: {
+      text: 'My Selector'
+    },
+    choices: [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 1',
+        active: false
+      },
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 2',
+        active: true
+      }
+    ]
+  };
 
   constructor() {}
 }
