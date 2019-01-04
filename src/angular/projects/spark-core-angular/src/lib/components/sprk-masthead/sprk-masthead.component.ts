@@ -126,6 +126,38 @@ import * as _ from 'lodash';
             <sprk-masthead-accordion
               [additionalClasses]="getNarrowNavClasses()"
             >
+              <li
+                *ngIf="narrowSelector"
+                class="sprk-c-MastheaddAccordion__item sprk-o-Box sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row sprk-o-Stack--center-column"
+              >
+                <div
+                  class="sprk-u-Position--relative sprk-o-Stack__item sprk-u-Width-100"
+                >
+                  <sprk-dropdown
+                    dropdownType="informational"
+                    additionalClasses="sprk-u-Width-100"
+                    additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
+                    additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+                    additionalIconClasses="sprk-c-Icon--l sprk-Stack__item"
+                    [triggerText]="narrowSelector['trigger'].text"
+                    title="My Choices"
+                    triggerIconType="chevron-down"
+                    [choices]="narrowSelector['choices']"
+                  >
+                    <div
+                      class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+                      sprkDropdownFooter
+                    >
+                      <a
+                        class="sprk-c-Button sprk-c-Button--tertiary"
+                        href="#nogo"
+                      >
+                        Go Elsewhere
+                      </a>
+                    </div>
+                  </sprk-dropdown>
+                </div>
+              </li>
               <div *ngFor="let narrowLink of narrowNavLinks">
                 <div *ngIf="narrowLink.subNav">
                   <sprk-masthead-accordion-item
@@ -195,7 +227,7 @@ export class SparkMastheadComponent {
   constructor(private renderer: Renderer2) {}
 
   @Input()
-  logoHref = '/'; // Type inferred
+  logoHref = '/';
   @Input()
   logoLinkScreenReaderText = 'Go to the homepage';
   @Input()
@@ -212,6 +244,8 @@ export class SparkMastheadComponent {
   idString: string;
   @Input()
   bigNavLinks: any[];
+  @Input()
+  narrowSelector: object;
 
   iconType = 'chevron-down';
   componentID = _.uniqueId();

@@ -66,6 +66,22 @@ describe('SparkMastheadComponent', () => {
     expect(component.isNarrowNavOpen).toEqual(true);
   });
 
+  it('should add a class to body and show the narrow nav when the icon is clicked', () => {
+    expect(component.isNarrowNavOpen).toEqual(false);
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      true
+    );
+    expect(component.isNarrowNavOpen).toEqual(true);
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      false
+    );
+    expect(component.isNarrowNavOpen).toEqual(false);
+  });
+
   it('should close the narrow nav on orientationchange', () => {
     component.isNarrowNavOpen = true;
     fixture.detectChanges();
@@ -115,7 +131,7 @@ describe('SparkMastheadComponent', () => {
       '.sprk-c-Masthead__big-nav-items'
     );
     expect(secondaryNavElement.classList.toString()).toEqual(
-      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare'
+      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare'
     );
   });
 });

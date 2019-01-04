@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
         additionalClasses="angular-docs-u-Masthead-docs"
         [bigNavLinks]="links"
         [narrowNavLinks]="narrowLinks"
+        [narrowSelector]="mySelector"
         idString="masthead-1"
       >
         <svg
@@ -614,6 +615,32 @@ export class MastheadDocsComponent {
       value: 'sign-out'
     }
   ];
+
+  mySelector = {
+    trigger: {
+      text: 'My Selector'
+    },
+    choices: [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 1',
+        active: false
+      },
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 2',
+        active: true
+      }
+    ]
+  };
 
   constructor() {}
 }
