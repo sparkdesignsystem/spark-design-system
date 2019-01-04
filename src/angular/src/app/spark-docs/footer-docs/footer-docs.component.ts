@@ -309,21 +309,21 @@ export class FooterDocsComponent {
   socialLinks = [
     {
       href: '/icons-1',
-      icon: 'facebook',
+      icon: 'facebook-two-color',
       iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'facebook'
     },
     {
       href: '/icons-2',
-      icon: 'twitter',
+      icon: 'twitter-two-color',
       iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'twitter'
     },
     {
       href: '/icons-3',
-      icon: 'instagram',
+      icon: 'instagram-two-color',
       iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'instagram'
