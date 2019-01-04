@@ -8,6 +8,7 @@ describe('SparkDropdownComponent', () => {
   let fixture: ComponentFixture<SparkDropdownComponent>;
   let dropdownElement: HTMLElement;
   let dropdownTriggerElement: HTMLElement;
+  let dropdownTriggerTextElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,6 +22,7 @@ describe('SparkDropdownComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     dropdownTriggerElement = fixture.nativeElement.querySelector('a');
+    dropdownTriggerTextElement = fixture.nativeElement.querySelector('span');
     dropdownElement = fixture.nativeElement.querySelector('div');
   });
 
@@ -137,6 +139,14 @@ describe('SparkDropdownComponent', () => {
     component.additionalTriggerClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
+      true
+    );
+  });
+
+  it('should set a value if additionalTriggerTextClasses has a value', () => {
+    component.additionalTriggerTextClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(dropdownTriggerTextElement.classList.contains('sprk-u-man')).toEqual(
       true
     );
   });
