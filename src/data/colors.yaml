@@ -1,6 +1,6 @@
 - Primary:
     - label: Green
-      color: '#00B398'
+      color: '#13A48E'
       rgb: 'rgb(19, 164, 142)'
       property: '$sprk-green'
     - label: Red
