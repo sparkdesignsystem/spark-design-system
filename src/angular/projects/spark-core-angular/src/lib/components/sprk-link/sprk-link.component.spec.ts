@@ -36,6 +36,13 @@ describe('SparkLinkComponent', () => {
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--simple');
   });
 
+  it('should add the correct class if linkType is icon', () => {
+    component.linkType = 'icon';
+    expect(component.getClasses()).toEqual(
+      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
+    );
+  });
+
   it('should add the correct class if linkType is disabled', () => {
     component.linkType = 'disabled';
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--disabled');
