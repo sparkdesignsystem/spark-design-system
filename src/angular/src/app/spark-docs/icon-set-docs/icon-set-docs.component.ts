@@ -3,14 +3,31 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'sprk-icon-set-docs',
   template: `
-    <div class="drizzle-o-ContentGrouping" *ngFor="let icon of icons; index as i">
-      <h2 class="drizzle-b-h2">
-        {{ icon }}
-      </h2>
-      <sprk-icon iconType="{{ icon }}" additionalClasses="" idString="icon-{{ i }}-1"></sprk-icon>
-      <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--l" idString="icon-{{ i }}-2"></sprk-icon>
-      <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--xl" idString="icon-{{ i }}-3"></sprk-icon>
-      <sprk-icon iconType="{{ icon }}" additionalClasses="sprk-c-Icon--xxl" idString="icon-{{ i }}-4"></sprk-icon>
+    <div
+      class="drizzle-o-ContentGrouping"
+      *ngFor="let icon of icons; index as i"
+    >
+      <h2 class="drizzle-b-h2">{{ icon }}</h2>
+      <sprk-icon
+        iconType="{{ icon }}"
+        additionalClasses=""
+        idString="icon-{{ i }}-1"
+      ></sprk-icon>
+      <sprk-icon
+        iconType="{{ icon }}"
+        additionalClasses="sprk-c-Icon--l"
+        idString="icon-{{ i }}-2"
+      ></sprk-icon>
+      <sprk-icon
+        iconType="{{ icon }}"
+        additionalClasses="sprk-c-Icon--xl"
+        idString="icon-{{ i }}-3"
+      ></sprk-icon>
+      <sprk-icon
+        iconType="{{ icon }}"
+        additionalClasses="sprk-c-Icon--xxl"
+        idString="icon-{{ i }}-4"
+      ></sprk-icon>
     </div>
   `,
   styles: ['']
@@ -35,15 +52,15 @@ export class IconSetDocsComponent {
     'check-mark',
     'chevron-down',
     'chevron-down-circle',
-    'chevron-down-circle-filled',
-    'chevron-down-circle-toggle',
+    'chevron-down-circle-two-color',
+    'chevron-down-circle-two-color',
     'chevron-left',
     'chevron-left-circle',
     'chevron-right',
     'chevron-right-circle',
     'chevron-up',
     'chevron-up-circle',
-    'chevron-up-circle-toggle',
+    'chevron-up-circle-two-color',
     'clock',
     'close-circle',
     'cloud',

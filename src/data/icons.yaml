@@ -47,7 +47,7 @@
 - name: chevron-down-circle
   viewBox: 0 0 64 64
   description: ...
-- name: chevron-down-circle-filled
+- name: chevron-down-circle-two-color
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-left
