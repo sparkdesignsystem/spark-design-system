@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-highlight-board",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Spark Highlight Board is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
   "scripts": {
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
