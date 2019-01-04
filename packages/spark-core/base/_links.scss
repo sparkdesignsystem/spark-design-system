@@ -3,78 +3,87 @@
 // ==================================================================
 //
 .sprk-b-Link {
-  color: $link-color;
-  border-bottom: $link-underline-width solid $link-underline-color;
-  font-weight: $link-inline-font-weight;
+  color: $sprk-link-color;
+  border-bottom: $sprk-link-border-bottom;
+  font-weight: $sprk-link-font-weight;
   position: relative;
-  text-decoration: none;
-  transition: $link-transition;
+  text-decoration: $sprk-link-text-decoration;
+  transition: $sprk-link-transition;
 
   &:visited {
-    color: $link-visited-color;
-    border-bottom: $link-underline-width solid $link-visited-color;
+    color: $sprk-link-visited-color;
+    border-bottom: $sprk-link-visited-border-bottom;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-underline-color;
-    border-bottom: $link-underline-width solid $link-underline-color;
+    color: $sprk-link-hover-color;
+    border-bottom: $sprk-link-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--standalone {
-  color: $link-standalone-color;
-  border: $link-underline-width solid transparent;
-  font-weight: $link-standalone-font-weight;
-
-  &:hover,
-  &:active,
-  &:focus {
-    transition: $link-transition;
-    border-bottom: $link-underline-width solid $link-underline-color;
-  }
-}
-
-.sprk-b-Link--muted {
-  color: $link-muted-color;
+.sprk-b-Link--simple {
+  color: $sprk-link-simple-color;
+  border-bottom: $sprk-link-simple-border-bottom;
+  font-weight: $sprk-link-simple-font-weight;
 
   &:visited {
-    color: $link-muted-color;
+    border-bottom: $sprk-link-simple-visited-border-bottom;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $link-muted-color;
+    transition: $sprk-link-transition;
+    color: $sprk-link-simple-hover-color;
+    border-bottom: $sprk-link-simple-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--plain {
-  border: none;
+.sprk-b-Link--has-icon {
+  border-bottom: $sprk-link-has-icon-border-bottom;
+  font-weight: $sprk-link-has-icon-font-weight;
 
   &:hover,
   &:active,
   &:focus,
   &:visited {
-    border: none;
+    border-bottom: $sprk-link-has-icon-hover-border-bottom;
   }
 }
 
-.sprk-b-Link--disabled {
-  color: $link-disabled-color;
+.sprk-b-Link--has-icon .sprk-c-Icon {
+  color: $sprk-link-has-icon-color;
+  stroke: $sprk-link-has-icon-color;
+  fill: $sprk-link-has-icon-color;
+}
+
+.sprk-b-Link--disabled,
+.sprk-b-Link--disabled .sprk-c-Icon {
+  color: $sprk-link-disabled-color;
+  stroke: $sprk-link-disabled-color;
+  fill: $sprk-link-disabled-color;
   pointer-events: none;
-  border-bottom: $link-underline-width solid $link-disabled-color;
-  font-weight: $link-disabled-font-weight;
+  border-bottom: $sprk-link-disabled-border-bottom;
+  font-weight: $sprk-link-disabled-font-weight;
 
-  &:visited {
-    color: $link-disabled-color;
-    border-bottom: $link-underline-width solid $link-disabled-color;
-  }
-
+  &:visited,
   &:hover,
   &:active,
   &:focus {
-    color: $link-disabled-color;
+    border-bottom: $sprk-link-disabled-hover-border-bottom;
+    color: $sprk-link-disabled-color;
+  }
+}
+
+.sprk-b-Link--plain {
+  border: $sprk-link-plain-border;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border: $sprk-link-plain-visited-border;
   }
 }

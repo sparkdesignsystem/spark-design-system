@@ -32,7 +32,7 @@ const bindUIEvents = (element) => {
     });
   });
 
-  element.addEventListener('change', (e) => {
+  element.addEventListener('click', (e) => {
     const values = [];
     element.querySelectorAll('input').forEach((rdio) => {
       values.push(rdio.value);

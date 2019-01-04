@@ -1,13 +1,13 @@
 $drizzle-nav-padding: 1rem;
 
 .#{$app-namespace}-c-Navigation {
-  background: $nav-background-color;
+  background: $drizzle-nav-background-color;
   font-family: urw-din, sans-serif;
 }
 
 .#{$app-namespace}-c-Navigation__header {
-  background: $nav-background-color;
-  color: $white;
+  background: $drizzle-nav-background-color;
+  color: $drizzle-white;
   display: flex;
   justify-content: space-between;
   padding: $drizzle-nav-padding;
@@ -15,17 +15,17 @@ $drizzle-nav-padding: 1rem;
   width: 100%;
   z-index: $drizzle-layer-height-m;
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     padding: 4rem 0 2rem;
     position: static;
-    width: $layout-nav-width;
+    width: $drizzle-layout-nav-width;
   }
 }
 
 .#{$app-namespace}-c-Navigation__logo {
   flex: calc(100% - 16px);
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     margin: 0;
     text-align: center;
     width: 100%;
@@ -39,7 +39,7 @@ $drizzle-nav-padding: 1rem;
     padding: 1rem;
   }
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     display: none;
   }
 }
@@ -51,7 +51,7 @@ svg {
 }
 
 .#{$app-namespace}-c-Navigation a {
-  color: $white;
+  color: $drizzle-white;
   font-weight: 300;
   text-decoration: none;
 }
@@ -60,7 +60,7 @@ svg {
   display: none;
   padding-bottom: 70px;
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     display: block;
     padding-bottom: 0;
   }
@@ -68,7 +68,7 @@ svg {
 
 .#{$app-namespace}-c-Navigation.is-active
 .#{$app-namespace}-c-Navigation__main {
-  background-color: $black;
+  background-color: $drizzle-black;
   display: block;
   height: 100%;
   width: 100%;
@@ -93,18 +93,18 @@ svg {
   &:focus,
   &:hover,
   &.is-active {
-    background: $highlight;
+    background: $drizzle-highlight;
   }
 }
 
 .#{$app-namespace}-c-Navigation__item.#{$app-namespace}-b-h5 {
-  color: $highlight;
+  color: $drizzle-highlight;
   font-size: 1rem;
   font-weight: bold;
   padding-left: 16px;
 
   &:hover {
-    background: $black;
+    background: $drizzle-black;
   }
 }
 
@@ -124,7 +124,7 @@ svg {
     0 - #{$drizzle-logo-size-small} - #{$drizzle-nav-padding} - #{$drizzle-nav-padding}
   );
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     height: calc(
       #{$drizzle-h1-font-size} + #{$drizzle-header-padding-vert-wide} + #{$drizzle-header-padding-vert-wide}
     );

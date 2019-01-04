@@ -2,99 +2,86 @@
 // Input Component
 // ==================================================================
 .sprk-b-TextInput {
-  font-size: $font-size-body-two;
-  font-weight: $font-weight-body-two;
-  line-height: $line-height-body-two;
-  outline: 0;
-  box-shadow: $input-box-shadow;
-}
+  box-shadow: $sprk-text-input-box-shadow;
+  border: $sprk-text-input-border;
+  border-radius: $sprk-text-input-border-radius;
+  color: $sprk-text-input-color;
+  font-family: $sprk-text-input-font-family;
+  font-size: $sprk-text-input-font-size;
+  font-weight: $sprk-text-input-font-weight;
+  line-height: $sprk-text-input-line-height;
+  height: $sprk-text-input-height;
+  outline: $sprk-text-input-outline;
+  padding: $sprk-text-input-padding;
+  transition: $sprk-text-input-transition;
 
-.sprk-b-TextInput[disabled] {
-  background-color: $input-disabled-background-color;
-  box-shadow: $input-disabled-box-shadow;
-  color: $input-disabled-text-color;
-}
-
-.sprk-b-TextInput--with-icon {
-  padding-left: $space-l;
-}
-
-.sprk-b-TextInput--monetary {
-  padding-left: 24px;
-}
-
-.sprk-b-TextInputIconContainer {
-  position: relative;
-}
-
-.sprk-b-TextInputIconContainer--monetary {
-  position: relative;
-
-  &::before {
-    content: $monetary-symbol;
-    display: block;
-    font-size: $space-m;
-    line-height: 1;
-    margin-left: $input-text-icon-offset-x;
-    margin-top: $input-text-icon-offset-y;
-    position: absolute;
-    z-index: $layer-height-xs;
+  &:focus {
+    border-color: $sprk-text-input-focus-border-color;
   }
 }
 
-.sprk-b-InlineSearch__icon,
-.sprk-b-DatePicker__icon {
-  margin-left: $input-icon-offset-x;
-  margin-top: $input-icon-offset-y;
-  position: absolute;
-  z-index: $layer-height-xs;
+.sprk-b-TextInput--error,
+.sprk-b-TextInput--error:focus {
+  border-color: $sprk-text-input-error-border-color;
+}
+
+.sprk-b-TextInput[disabled] {
+  background-color: $sprk-text-input-disabled-background-color;
+  border-color: $sprk-text-input-disabled-border-color;
+  color: $sprk-text-input-disabled-color;
+  cursor: not-allowed;
+}
+
+.sprk-b-TextInput--has-svg-icon {
+  padding: $sprk-text-input-has-icon-padding;
+}
+
+.sprk-b-TextInput--has-text-icon {
+  padding: $sprk-text-input-has-text-icon-padding;
 }
 
 .sprk-b-TextInput[readonly] {
-  color: $input-readonly-text-color;
-}
-
-.sprk-b-HelperText,
-.sprk-b-ErrorText {
-  font-size: $font-size-body-four;
-  font-weight: $font-weight-body-four;
-  line-height: $line-height-body-four;
+  color: $sprk-text-input-readonly-color;
 }
 
 .sprk-b-HelperText {
-  color: $input-gray-medium;
-}
-
-.sprk-b-ErrorText {
-  font-weight: bold;
-}
-
-.sprk-b-TextArea {
-  min-height: 125px;
-  margin: $space-stack-m;
+  color: $sprk-helper-color;
+  font-size: $sprk-helper-font-size;
+  font-weight: $sprk-helper-font-weight;
+  line-height: $sprk-helper-line-height;
+  margin: $sprk-helper-margin;
 }
 
 // Placeholder colors
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
-::placeholder {
-  color: $input-placeholder-color;
+// Chrome/Opera/Safari
+::-webkit-input-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  line-height: normal;
+  color: $sprk-placeholder-color;
 }
 
-.sprk-b-TextInput--focusin ~ .sprk-b-InputContainer__input-border {
-  animation: width-zero-to-full $input-animation-speed;
-  animation-fill-mode: forwards;
+// Firefox 19+
+::-moz-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  color: $sprk-placeholder-color;
 }
 
-.sprk-b-TextInput--focusout ~ .sprk-b-InputContainer__input-border {
-  width: 100%;
-  animation: opacity-one-to-zero $input-animation-speed;
-  animation-fill-mode: forwards;
+// IE 10+
+:-ms-input-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  color: $sprk-placeholder-color;
 }
 
-.sprk-b-TextInput--error ~ .sprk-b-InputContainer__input-border {
-  animation: none;
-  border-bottom: 3px solid $text-input-error-color;
-  width: 100%;
+// Firefox 18-
+:-moz-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  color: $sprk-placeholder-color;
 }

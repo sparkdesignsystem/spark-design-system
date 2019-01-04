@@ -48,6 +48,12 @@
       <td>Expects an array of link objects, to be represented in the narrow nav element of the masthead component. See below for link object details.</td>
     </tr>
     <tr>
+      <td class="sprk-u-FontWeight--bold">narrowSelector</td>
+      <td>object</td>
+      <td>Expects a narrowSelector object that represents choices to be supplied to the dropdown above the narrow
+        navigation of link objects. See below for narrowSelector object details.</td>
+    </tr>
+    <tr>
       <td class="sprk-u-FontWeight--bold">bigNavLinks</td>
       <td>object[]</td>
       <td>Expects an array of link objects, to be represented in the big nav element of the masthead component. See below for link object details.</td>
@@ -105,5 +111,33 @@ with big nav or narrow nav.</p>
       <td>landline</td>
       <td>When the link is rendered to a compatible element (narrowNav), will draw the specified icon to the left of the link text.</td>
     </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">The narrowSelector object represents a set of data that can be supplied to the masthead, for use
+  with the selector in the narrow nav.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Sample Value</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="sprk-u-FontWeight--bold">trigger</td>
+    <td>{ text: 'My Selector' }</td>
+    <td>An object that contains text to be passed to the dropdown component.</td>
+  </tr>
+  <tr>
+    <td class="sprk-u-FontWeight--bold">choices</td>
+    <td>dropdown-choices-object</td>
+    <td>See the dropdown component for details regarding a choices object.</td>
+  </tr>
   </tbody>
 </table>

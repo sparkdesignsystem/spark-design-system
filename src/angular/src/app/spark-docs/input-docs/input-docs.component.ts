@@ -113,7 +113,7 @@ import { Component } from '@angular/core';
           </select>
           <sprk-icon
             iconType="chevron-down"
-            additionalClasses="sprk-c-Icon--current-color sprk-b-SelectContainer__icon"
+            additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-b-SelectContainer__icon"
             sprk-select-icon
           ></sprk-icon>
           <label sprkLabel>Select Box Label</label>
@@ -139,7 +139,9 @@ import { Component } from '@angular/core';
             sprkFormatterSsn
             sprkInput
           />
-          <sprk-selection-item-container>
+          <sprk-selection-item-container
+            additionalClasses="sprk-b-InputContainer__visibility-toggle"
+          >
             <input
               type="checkbox"
               sprkSelectionInput
@@ -179,7 +181,7 @@ import { Component } from '@angular/core';
           ></sprk-icon>
           <input
             name="inline_search_input"
-            class="sprk-b-TextInput--with-icon"
+            class="sprk-b-TextInput--has-svg-icon"
             type="text"
             placeholder="Search"
             [(ngModel)]="inline_search_input"
@@ -215,7 +217,9 @@ import { Component } from '@angular/core';
         <sprk-input-container>
           <label sprkLabel>Password</label>
           <input [type]="passwordType" name="password_input" sprkInput />
-          <sprk-selection-item-container>
+          <sprk-selection-item-container
+            additionalClasses="sprk-b-InputContainer__visibility-toggle"
+          >
             <input
               type="checkbox"
               sprkSelectionInput
@@ -265,7 +269,7 @@ import { Component } from '@angular/core';
           ></sprk-icon>
           <input
             name="datepicker_input"
-            class="sprk-b-TextInput--with-icon"
+            class="sprk-b-TextInput--has-svg-icon"
             type="text"
             pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
             placeholder="MM/DD/YYYY"

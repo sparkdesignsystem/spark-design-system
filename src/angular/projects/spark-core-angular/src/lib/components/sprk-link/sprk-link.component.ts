@@ -8,7 +8,8 @@ import { Component, Input } from '@angular/core';
       [href]="href"
       [attr.data-analytics]="analyticsString"
       [attr.target]="target"
-      [attr.data-id]="idString">
+      [attr.data-id]="idString"
+    >
       <ng-content></ng-content>
     </a>
   `
@@ -31,14 +32,17 @@ export class SparkLinkComponent {
     const classArray: string[] = ['sprk-b-Link'];
 
     switch (this.linkType) {
-      case 'standalone':
-        classArray.push('sprk-b-Link--standalone');
+      case 'simple':
+        classArray.push('sprk-b-Link--simple');
         break;
       case 'disabled':
         classArray.push('sprk-b-Link--disabled');
         break;
       case 'plain':
         classArray.push('sprk-b-Link--plain');
+        break;
+      case 'icon':
+        classArray.push('sprk-b-Link--simple sprk-b-Link--has-icon');
         break;
       default:
         break;

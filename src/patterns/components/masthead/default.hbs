@@ -6,7 +6,7 @@ description:
   The big navigation (wide gray navigation bar) is not included in this version.
 information:
   - All content used here is placeholder content. Please use your own logo and content.
-  - You should set the variable $masthead-breakpoint to the point that your app needs to switch from narrow viewport navigation
+  - You should set the variable $sprk-masthead-breakpoint to the point that your app needs to switch from narrow viewport navigation
     to wide viewport navigation.
   - In Internet Explorer 11, the Masthead will not be fixed in place.
 restrictions:
@@ -38,7 +38,7 @@ hasAngularCodeInfo: true
       </a>
     </div>
 
-    <nav role="navigation" class="sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@xxs sprk-o-Stack--end-row sprk-o-Box">
+    <nav role="navigation" class="sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
       <ul class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column">
         <li>
           <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="#nogo">
@@ -55,7 +55,7 @@ hasAngularCodeInfo: true
 
       <ul class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column">
         <li>
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-b-Link--standalone" href="tel:555-555-5555">
+          <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="tel:555-555-5555">
             (555) 555-5555
           </a>
         </li>
@@ -80,50 +80,50 @@ hasAngularCodeInfo: true
       data-sprk-mobile-nav="mobileNav"
       role="navigation"
       data-id="navigation-narrow-1">
-      <ul class="sprk-c-Accordion sprk-c-Accordion--navigation sprk-b-List sprk-b-List--bare">
-        <li class="sprk-c-Accordion__item " data-sprk-toggle="container">
-          <a aria-controls="details1" class="sprk-c-Accordion__summary" data-sprk-toggle="trigger" data-sprk-toggle-type="accordion" href="#">
-            <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
+      <ul class="sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare">
+        <li class="sprk-c-MastheadAccordion__item" data-sprk-toggle="container">
+          <a aria-controls="details1" class="sprk-c-MastheadAccordion__summary" data-sprk-toggle="trigger" data-sprk-toggle-type="masthead-accordion" href="#">
+            <span class="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
               Item 1
             </span>
 
-            <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Accordion__icon" data-sprk-toggle="icon" viewBox="0 0 64 64">
+            <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--current-color sprk-c-MastheadAccordion__icon" data-sprk-toggle="icon" viewBox="0 0 64 64">
               <use xlink:href="#chevron-down"></use>
             </svg>
           </a>
 
-          <ul id="details1" class="sprk-b-List sprk-b-List--bare sprk-c-Accordion__details" data-sprk-toggle="content">
+          <ul id="details1" class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details" data-sprk-toggle="content">
             <li>
-              <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="#">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="#">
                 Item 1
               </a>
             </li>
 
             <li>
-              <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="#">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="#">
                 Item 2
               </a>
             </li>
 
             <li>
-              <a class="sprk-b-Link sprk-b-Link--standalone sprk-u-pam" href="#">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="#">
                 Item 3
               </a>
             </li>
           </ul>
         </li>
 
-        <li class="sprk-c-Accordion__item sprk-c-Accordion__item--active">
-          <a class="sprk-c-Accordion__summary" href="#">
-            <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
+        <li class="sprk-c-MastheadAccordion__item sprk-c-MastheadAccordion__item--active">
+          <a class="sprk-c-MastheadAccordion__summary" href="#">
+            <span class="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
               Item 2
             </span>
           </a>
         </li>
 
-        <li class="sprk-c-Accordion__item">
-          <a class="sprk-c-Accordion__summary" href="tel:555-555-5555">
-            <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
+        <li class="sprk-c-MastheadAccordion__item">
+          <a class="sprk-c-MastheadAccordion__summary" href="tel:555-555-5555">
+            <span class="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
               <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                 <use xlink:href="#landline" />
               </svg>
@@ -132,9 +132,9 @@ hasAngularCodeInfo: true
           </a>
         </li>
 
-        <li class="sprk-c-Accordion__item">
-          <a class="sprk-c-Accordion__summary" href="#">
-            <span class="sprk-b-TypeBodyOne sprk-c-Accordion__heading">
+        <li class="sprk-c-MastheadAccordion__item">
+          <a class="sprk-c-MastheadAccordion__summary" href="#">
+            <span class="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
               <svg class="sprk-c-Icon sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs" viewBox="0 0 64 64">
                 <use xlink:href="#call-team-member" />
               </svg>
@@ -143,7 +143,7 @@ hasAngularCodeInfo: true
           </a>
         </li>
 
-        <li class="sprk-c-Accordion__item sprk-o-Box">
+        <li class="sprk-c-MastheadAccordion__item sprk-o-Box">
           <a class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm" href="#nogo">
             Sign In
           </a>

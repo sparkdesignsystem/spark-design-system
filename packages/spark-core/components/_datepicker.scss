@@ -1,24 +1,20 @@
 // ==================================================================
 // Date Picker
 // ==================================================================
-.sprk-b-InputContainer[data-sprk-datepicker] .sprk-b-TextInput[readonly] {
-  color: $black;
-  background-color: $white;
-  box-shadow: $input-box-shadow;
-}
 
 /* stylelint-disable selector-class-pattern */
 .dp {
-  background: $white;
-  box-shadow: $date-picker-box-shadow;
+  background: $sprk-date-picker-background;
+  border-radius: $sprk-date-picker-border-radius;
+  box-shadow: $sprk-date-picker-box-shadow;
   font-family: $sprk-date-picker-font-family;
-  font-size: $font-size-body-four;
-  padding: $space-inset-s;
+  font-size: $sprk-date-picker-font-size;
+  padding: $sprk-date-picker-padding;
   position: relative;
-  max-width: $date-picker-max-width;
+  max-width: $sprk-date-picker-max-width;
 
-  @media (min-width: $date-picker-max-width) {
-    padding: $space-inset-m;
+  @media (min-width: $sprk-date-picker-max-width) {
+    padding: $sprk-date-picker-padding-wide;
   }
 }
 
@@ -26,65 +22,41 @@
   position: absolute;
 }
 
+// for the little arrows above / below the dp box
+.dp-is-above,
 .dp-is-below {
-  // for the little arrow above the dp box
   &::after,
   &::before {
     border: solid transparent;
     bottom: 99%;
     content: '';
-    left: $space-l;
+    left: $sprk-space-l;
     position: absolute;
   }
 
   &::after {
-    border-bottom-color: $white;
+    border-bottom-color: $sprk-white;
     border-width: 10px;
     margin-left: -10px;
   }
 
   &::before {
-    border-bottom-color: $gray;
+    border-bottom-color: $sprk-gray;
     border-width: 12px;
     margin-left: -12px;
   }
 }
 
 .dp-is-above {
-  // for the little arrow below the dp box
   &::after,
   &::before {
-    border: solid transparent;
-    content: '';
-    left: $space-l;
-    position: absolute;
     top: 99%;
     transform: rotate(180deg);
-  }
-
-  &::after {
-    border-bottom-color: $white;
-    border-width: 10px;
-    margin-left: -10px;
-  }
-
-  &::before {
-    border-bottom-color: $gray;
-    border-width: 12px;
-    margin-left: -12px;
   }
 }
 
 .dp-header {
   display: flex;
-}
-
-.dp-prev {
-  flex: 0.5;
-}
-
-.dp-next {
-  flex: 0.5;
 }
 
 .dp-year,
@@ -96,19 +68,18 @@
   padding: 0 0.2rem;
 }
 
-// hiding the footer functionality
 .dp-cal-footer {
   display: none;
 }
 
 .dp-col-header {
-  border-bottom: 1px solid $gray;
+  border-bottom: $sprk-date-picker-header-border;
   display: inline-block;
-  font-size: $font-size-body-three;
-  font-weight: bold;
-  padding: 10px;
+  font-size: $sprk-date-picker-header-font-size;
+  font-weight: $sprk-date-picker-header-font-weight;
+  padding: $sprk-date-picker-col-header-padding;
   text-align: center;
-  max-width: $date-picker-button-size + $date-picker-column-adjustment-x;
+  max-width: $sprk-date-picker-button-size + $sprk-date-picker-column-adjustment-x;
   width: 100%;
 }
 
@@ -116,18 +87,16 @@
   background: none;
   border: 2px solid transparent;
   border-radius: 50%;
-  font-size: 1rem;
-  height: $date-picker-button-size;
+  font-size: $sprk-date-picker-font-size;
+  font-weight: $sprk-date-picker-font-weight;
+  height: $sprk-date-picker-button-size;
   line-height: 1;
-  padding: 6px;
-  margin: 0 2px;
-  width: $date-picker-button-size;
+  padding: $sprk-date-picker-day-padding;
+  margin: $sprk-date-picker-day-margin;
+  width: $sprk-date-picker-button-size;
 }
 
-.dp-day:first-child {
-  margin-left: 0;
-}
-
+.dp-day:first-child,
 .dp-day:nth-child(7n) {
   margin-right: 0;
 }
@@ -139,24 +108,28 @@
 .dp-current,
 .dp-selected,
 .dp-day:hover {
-  background: $date-picker-day-interact-color;
-  color: $white;
+  background: $sprk-date-picker-day-interact-color;
+  border-color: $sprk-date-picker-day-interact-color;
+  color: $sprk-date-picker-day-color;
   outline: 0;
-  border-color: $date-picker-day-interact-color;
+}
+
+.dp-current {
+  font-weight: $sprk-date-picker-selected-day-font-weight;
 }
 
 .dp-day:hover {
   background: none;
-  color: $black;
+  color: $sprk-date-picker-day-hover-color;
 }
 
 .dp-day-disabled,
 .dp-edge-day {
-  color: $black-tint-50;
+  color: $sprk-date-picker-day-edge-day-color;
 }
 
 .dp-day-today::after {
-  background-color: $date-picker-day-interact-color;
+  background-color: $sprk-date-picker-day-interact-color;
   border-radius: 50%;
   display: block;
   content: '';
@@ -166,21 +139,21 @@
 }
 
 .dp-current.dp-day-today::after {
-  background-color: $white;
+  background: $sprk-date-picker-background;
 }
 
 .dp-current.dp-day-today:hover::after {
-  background-color: $date-picker-day-interact-color;
+  background-color: $sprk-date-picker-day-interact-color;
 }
 
 .dp-cal-header {
   display: flex;
-  padding-bottom: $space-s;
+  padding: $sprk-date-picker-header-padding;
 }
 
 .dp-cal-month,
 .dp-cal-year {
-  font-size: $font-size-display-six;
+  font-size: $sprk-date-picker-month-year-font-size;
 }
 
 .dp-next,
@@ -189,13 +162,14 @@
   border: 0;
   border-radius: 2px;
   font-size: 0;
+  flex: 0.5;
   height: 35px;
   overflow: hidden;
-  top: $space-m;
+  top: $sprk-space-m;
   width: 35px;
   // to make them look like carets, rather than have text
   &::before {
-    border: 2px solid $black;
+    border: 2px solid $sprk-date-picker-arrow-color;
     content: '';
     display: inline-block;
     height: 10px;
@@ -224,9 +198,9 @@
 }
 
 .dp-years {
-  max-height: 500px;
+  max-height: $sprk-date-picker-years-modal-max-height;
   overflow: scroll;
-  padding: $space-m;
+  padding: $sprk-space-m;
 }
 
 .dp-year {
@@ -236,13 +210,13 @@
 }
 
 .dp-below {
-  margin-top: $space-m;
+  margin: $sprk-date-picker-modal-margin;
   position: absolute;
-  z-index: $layer-height-m;
+  z-index: $sprk-date-picker-modal-z-index;
 
-  @media (max-width: $date-picker-max-width) {
+  @media (max-width: $sprk-date-picker-max-width) {
     left: 0 !important;
-    margin: 2px !important;
+    margin: $sprk-date-picker-modal-margin-wide !important;
   }
 }
 

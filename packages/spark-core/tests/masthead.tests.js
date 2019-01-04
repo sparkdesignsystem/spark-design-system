@@ -7,6 +7,7 @@ import {
   focusTrap,
   toggleMobileNav,
   hideMobileNavs,
+  addClassOnScroll,
 } from '../components/masthead';
 
 describe('masthead init', () => {
@@ -34,6 +35,7 @@ describe('masthead UI Events tests', () => {
     main = document.createElement('div');
     mastheadDiv = document.createElement('div');
     mastheadDiv.setAttribute('data-sprk-masthead', null);
+    mastheadDiv.classList.add('sprk-c-Masthead');
     main.setAttribute('data-sprk-main', null);
     nav = document.createElement('div');
     navItem = document.createElement('button');
@@ -67,8 +69,21 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('click');
     iconContainer.dispatchEvent(event);
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).eql(true);
-    console.log(mastheadDiv.innerHTML, 'cats');
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
+  });
+
+  it('should add class to masthead', () => {
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    addClassOnScroll(mastheadDiv, 200, 150, 'sprk-c-Masthead--scroll');
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(true);
+  });
+
+  it('should remove class from masthead', () => {
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    addClassOnScroll(mastheadDiv, 0, 150, 'sprk-c-Masthead--scroll');
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(false);
   });
 
   it('should close the nav when clicked and the nav is already open', () => {

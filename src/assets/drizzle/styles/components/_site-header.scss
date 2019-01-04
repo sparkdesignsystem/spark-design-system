@@ -1,10 +1,10 @@
 .#{$app-namespace}-c-SiteHeader {
-  background-color: $black;
+  background-color: $drizzle-black;
   background-image: url('/assets/toolkit/images/wires.jpg');
   background-size: cover;
   padding: 8.5rem 0 5.5rem;
 
-  @media (min-width: $nav-switch-breakpoint) {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
     padding: 10.5rem 0;
   }
 }

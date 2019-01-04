@@ -10,11 +10,11 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
     <div [ngClass]="getClasses()">
       <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprkInput]"></ng-content>
-      <div class="sprk-b-InputContainer__input-border"></div>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
-    </div>`
+    </div>
+  `
 })
 export class SparkTextareaContainerComponent implements OnInit {
   @Input()

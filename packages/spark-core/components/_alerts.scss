@@ -3,83 +3,67 @@
 // ==================================================================
 .sprk-c-Alert {
   align-items: center;
-  justify-content: center;
-  background-color: $alert-bg-color;
-  border: $alert-border;
-  box-shadow: $alert-shadow;
+  background-color: $sprk-alert-bg-color;
+  border: $sprk-alert-border;
+  box-shadow: $sprk-alert-shadow;
+  border-radius: $sprk-alert-border-radius;
   display: flex;
-  transition: box-shadow 0.3s ease-in-out, color 0.4s ease-in-out;
+  justify-content: center;
 }
 
 .sprk-c-Alert--info {
-  border-color: $alert-color-info;
-  box-shadow: $alert-shadow, $alert-shadow-info;
+  background-color: $sprk-alert-bg-color-info;
+  border: $sprk-alert-border-info;
+  color: $sprk-alert-text-color-info;
 
   .sprk-c-Alert__icon:first-child {
-    color: $alert-color-info;
+    color: $sprk-alert-icon-color-info;
   }
 
-  &:hover {
-    box-shadow: $alert-shadow, $alert-shadow-hover-info;
-
-    .sprk-c-Alert__icon--dismiss {
-      color: $white;
-    }
+  .sprk-c-Alert__text {
+    color: $sprk-alert-text-color-info;
   }
 }
 
 .sprk-c-Alert--success {
-  border-color: $alert-color-success;
-  box-shadow: $alert-shadow, $alert-shadow-success;
+  background-color: $sprk-alert-bg-color-success;
+  border: $sprk-alert-border-success;
+  color: $sprk-alert-text-color-success;
 
   .sprk-c-Alert__icon:first-child {
-    color: $alert-color-success;
+    color: $sprk-alert-icon-color-success;
   }
 
-  &:hover {
-    box-shadow: $alert-shadow, $alert-shadow-hover-success;
-
-    .sprk-c-Alert__icon--dismiss {
-      color: $white;
-    }
+  .sprk-c-Alert__text {
+    color: $sprk-alert-text-color-success;
   }
 }
 
 .sprk-c-Alert--fail {
-  border-color: $alert-color-fail;
-  box-shadow: $alert-shadow, $alert-shadow-fail;
+  background-color: $sprk-alert-bg-color-fail;
+  border: $sprk-alert-border-fail;
+  color: $sprk-alert-text-color-fail;
 
   .sprk-c-Alert__icon:first-child {
-    color: $alert-color-fail;
+    color: $sprk-alert-icon-color-fail;
   }
 
-  &:hover {
-    box-shadow: $alert-shadow, $alert-shadow-hover-fail;
-
-    .sprk-c-Alert__icon--dismiss {
-      color: $white;
-    }
-  }
-}
-
-.sprk-c-Alert--no-dismiss {
-  box-shadow: $alert-shadow;
-
-  &:hover {
-    box-shadow: $alert-shadow;
+  .sprk-c-Alert__text {
+    color: $sprk-alert-text-color-fail;
   }
 }
 
 .sprk-c-Alert__content {
-  display: flex;
   align-items: center;
+  display: flex;
   padding: $sprk-alert-content-padding;
 }
 
 .sprk-c-Alert__text {
+  color: $sprk-alert-color;
   font-size: $sprk-alert-font-size;
-  line-height: $sprk-alert-line-height;
   font-weight: $sprk-alert-font-weight;
+  line-height: $sprk-alert-line-height;
 }
 
 .sprk-c-Alert__content,
@@ -99,17 +83,17 @@
   align-self: flex-start;
   background-color: transparent;
   border: 0;
-  color: $black-tint-50;
+  color: $sprk-alert-dismiss-icon-color;
   padding: $sprk-alert-dismiss-padding;
 }
 
 .sprk-c-Alert__icon,
 .sprk-c-Alert__icon--dismiss .sprk-c-Icon {
-  stroke: currentColor;
   fill: currentColor;
+  stroke: currentColor;
 }
 
 .sprk-c-Alert .sprk-c-Icon {
-  height: $alert-icon-size;
-  width: $alert-icon-size;
+  height: $sprk-alert-icon-size;
+  width: $sprk-alert-icon-size;
 }

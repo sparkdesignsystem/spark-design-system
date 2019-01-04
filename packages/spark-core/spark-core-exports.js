@@ -33,19 +33,10 @@ import {
   bindUIEvents as bindRequiredTickUIEvents,
 } from './base/requiredTick';
 import {
-  selectInput,
-  bindUIEvents as bindSelectInputUIEvents,
-} from './base/selectInput';
-import {
   ssnInput,
   formatSSN,
   bindUIEvents as bindSSNInputUIEvents,
 } from './base/ssnInput';
-import {
-  textInput,
-  bindUIEvents as bindTextInputUIEvents,
-  valueTest as textInputValueTest,
-} from './base/textInput';
 import {
   alerts,
   dismissAlert,
@@ -56,6 +47,7 @@ import {
   toggleMobileNav,
   hideMobileNavs,
   focusTrap,
+  addClassOnScroll,
   bindUIEvents as bindMastheadUIEvents,
 } from './components/masthead';
 import {
@@ -150,14 +142,9 @@ export {
   requiredTick,
   runRequiredTickValidation,
   bindRequiredTickUIEvents,
-  selectInput,
-  bindSelectInputUIEvents,
   ssnInput,
   formatSSN,
   bindSSNInputUIEvents,
-  textInput,
-  bindTextInputUIEvents,
-  textInputValueTest,
   alerts,
   dismissAlert,
   bindAlertUIEvents,
@@ -165,6 +152,7 @@ export {
   toggleMobileNav,
   hideMobileNavs,
   focusTrap,
+  addClassOnScroll,
   bindMastheadUIEvents,
   modals,
   showModal,

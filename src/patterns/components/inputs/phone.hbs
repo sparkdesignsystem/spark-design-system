@@ -11,6 +11,7 @@ hasAngularCodeInfo: true
 ---
 
 <div class="sprk-b-InputContainer" data-sprk-input="phone">
+  <label for="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}" class="sprk-b-Label">Phone Number</label>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}"
          data-id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}"
@@ -20,9 +21,7 @@ hasAngularCodeInfo: true
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container"
          {{#if required}}required{{/if}}
          {{#if invaliddata}} aria-invalid="true"{{/if}}
-         {{#if disabled}} disabled{{/if}} data-sprk-input="text">
-  <div class="sprk-b-InputContainer__input-border"></div>
-  <label for="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}" class="sprk-b-Label">Phone Number</label>
+         {{#if disabled}} disabled{{/if}} >
   <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}phone-input-normal{{/if}}--error-container">
     {{#if errorMessage}}
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">

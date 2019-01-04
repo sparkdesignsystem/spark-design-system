@@ -33,8 +33,6 @@ import { SparkLinkModule } from './components/sprk-link/sprk-link.module';
 import { SparkListItemModule } from './components/sprk-list-item/sprk-list-item.module';
 import { SparkMastheadModule } from './components/sprk-masthead/sprk-masthead.module';
 import { SparkModalModule } from './components/sprk-modal/sprk-modal.module';
-import { SparkNarrowNavigationItemModule } from './components/sprk-narrow-navigation-item/sprk-narrow-navigation-item.module';
-import { SparkNarrowNavigationModule } from './components/sprk-narrow-navigation/sprk-narrow-navigation.module';
 import { SparkOrderedListModule } from './components/sprk-ordered-list/sprk-ordered-list.module';
 import { SparkPaginationModule } from './components/sprk-pagination/sprk-pagination.module';
 import { SparkPromoModule } from './components/sprk-promo/sprk-promo.module';
@@ -66,8 +64,6 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkOrderedListModule,
     SparkUnorderedListModule,
     SparkListItemModule,
-    SparkNarrowNavigationModule,
-    SparkNarrowNavigationItemModule,
     SparkInputContainerModule,
     SparkTextareaContainerModule,
     SparkIconInputContainerModule,

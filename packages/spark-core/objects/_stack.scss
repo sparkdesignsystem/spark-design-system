@@ -29,37 +29,37 @@
 // at specific breakpoints
 ///
 .sprk-o-Stack--end-row\@xxs {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     justify-content: flex-end;
   }
 }
 
 .sprk-o-Stack--end-row\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     justify-content: flex-end;
   }
 }
 
 .sprk-o-Stack--end-row\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     justify-content: flex-end;
   }
 }
 
 .sprk-o-Stack--end-row\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     justify-content: flex-end;
   }
 }
 
 .sprk-o-Stack--end-row\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     justify-content: flex-end;
   }
 }
 
 .sprk-o-Stack--end-row\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     justify-content: flex-end;
   }
 }
@@ -74,37 +74,37 @@
 // at specific breakpoints
 ///
 .sprk-o-Stack--end-column\@xxs {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     align-items: flex-end;
   }
 }
 
 .sprk-o-Stack--end-column\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     align-items: flex-end;
   }
 }
 
 .sprk-o-Stack--end-column\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     align-items: flex-end;
   }
 }
 
 .sprk-o-Stack--end-column\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     align-items: flex-end;
   }
 }
 
 .sprk-o-Stack--end-column\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     align-items: flex-end;
   }
 }
 
 .sprk-o-Stack--end-column\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     align-items: flex-end;
   }
 }
@@ -123,30 +123,52 @@
 // Stack spacing modifiers
 ///
 .sprk-o-Stack--tiny > .sprk-o-Stack__item {
-  margin-bottom: $stack-spacing-tiny;
+  margin-bottom: $sprk-stack-spacing-tiny;
 }
 
 .sprk-o-Stack--small > .sprk-o-Stack__item {
-  margin-bottom: $stack-spacing-small;
+  margin-bottom: $sprk-stack-spacing-small;
 }
 
 .sprk-o-Stack--medium > .sprk-o-Stack__item {
-  margin-bottom: $stack-spacing-medium;
+  margin-bottom: $sprk-stack-spacing-medium;
 }
 
 .sprk-o-Stack--large > .sprk-o-Stack__item {
-  margin-bottom: $stack-spacing-large;
+  margin-bottom: $sprk-stack-spacing-large;
 }
 
 .sprk-o-Stack--huge > .sprk-o-Stack__item {
-  margin-bottom: $stack-spacing-huge;
+  margin-bottom: $sprk-stack-spacing-huge;
 }
 
+/* stylelint-disable selector-class-pattern */
+.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-a;
+}
+
+.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-b;
+}
+
+.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-c;
+}
+
+.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+  margin-bottom: $sprk-stack-spacing-misc-d;
+}
+
+/* stylelint-enable selector-class-pattern */
 .sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
 .sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
 .sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
 .sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
   margin-bottom: 0;
 }
 
@@ -156,9 +178,11 @@
 [class*='sprk-o-Stack__item--third\@xxs'],
 [class*='sprk-o-Stack__item--half\@xxs'],
 [class*='sprk-o-Stack__item--three-fifths\@xxs'],
+[class*='sprk-o-Stack__item--three-tenths\@xxs'],
+[class*='sprk-o-Stack__item--seven-tenths\@xxs'],
 [class*='sprk-o-Stack__item--three-fourths\@xxs'],
 [class*='sprk-o-Stack__item--two-fifths\@xxs'] {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     margin: 0 !important;
   }
 }
@@ -169,9 +193,11 @@
 [class*='sprk-o-Stack__item--third\@xs'],
 [class*='sprk-o-Stack__item--half\@xs'],
 [class*='sprk-o-Stack__item--three-fifths\@xs'],
+[class*='sprk-o-Stack__item--three-tenths\@xs'],
+[class*='sprk-o-Stack__item--seven-tenths\@xs'],
 [class*='sprk-o-Stack__item--three-fourths\@xs'],
 [class*='sprk-o-Stack__item--two-fifths\@xs'] {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     margin: 0 !important;
   }
 }
@@ -182,9 +208,11 @@
 [class*='sprk-o-Stack__item--third\@s'],
 [class*='sprk-o-Stack__item--half\@s'],
 [class*='sprk-o-Stack__item--three-fifths\@s'],
+[class*='sprk-o-Stack__item--three-tenths\@s'],
+[class*='sprk-o-Stack__item--seven-tenths\@s'],
 [class*='sprk-o-Stack__item--three-fourths\@s'],
 [class*='sprk-o-Stack__item--two-fifths\@s'] {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     margin: 0 !important;
   }
 }
@@ -195,9 +223,11 @@
 [class*='sprk-o-Stack__item--third\@m'],
 [class*='sprk-o-Stack__item--half\@m'],
 [class*='sprk-o-Stack__item--three-fifths\@m'],
+[class*='sprk-o-Stack__item--three-tenths\@m'],
+[class*='sprk-o-Stack__item--seven-tenths\@m'],
 [class*='sprk-o-Stack__item--three-fourths\@m'],
 [class*='sprk-o-Stack__item--two-fifths\@m'] {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     margin: 0 !important;
   }
 }
@@ -208,9 +238,11 @@
 [class*='sprk-o-Stack__item--third\@l'],
 [class*='sprk-o-Stack__item--half\@l'],
 [class*='sprk-o-Stack__item--three-fifths\@l'],
+[class*='sprk-o-Stack__item--three-tenths\@l'],
+[class*='sprk-o-Stack__item--seven-tenths\@l'],
 [class*='sprk-o-Stack__item--three-fourths\@l'],
 [class*='sprk-o-Stack__item--two-fifths\@l'] {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     margin: 0 !important;
   }
 }
@@ -221,9 +253,11 @@
 [class*='sprk-o-Stack__item--third\@xl'],
 [class*='sprk-o-Stack__item--half\@xl'],
 [class*='sprk-o-Stack__item--three-fifths\@xl'],
+[class*='sprk-o-Stack__item--three-tenths\@xl'],
+[class*='sprk-o-Stack__item--seven-tenths\@xl'],
 [class*='sprk-o-Stack__item--three-fourths\@xl'],
 [class*='sprk-o-Stack__item--two-fifths\@xl'] {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     margin: 0 !important;
   }
 }
@@ -232,7 +266,7 @@
 // Split at extra extra small breakpoint
 ///
 .sprk-o-Stack--split\@xxs {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     // At extra small breakpoint we switch from column to row
     flex-direction: row;
 
@@ -243,25 +277,43 @@
 
     // Add spacing between items based on spacing size class
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-tiny;
+      margin-right: $sprk-stack-spacing-tiny;
     }
 
     &.sprk-o-Stack--small > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-small;
+      margin-right: $sprk-stack-spacing-small;
     }
 
     &.sprk-o-Stack--medium > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-medium;
+      margin-right: $sprk-stack-spacing-medium;
     }
 
     &.sprk-o-Stack--large > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-large;
+      margin-right: $sprk-stack-spacing-large;
     }
 
     &.sprk-o-Stack--huge > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-huge;
+      margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xxs {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -297,6 +349,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@xxs {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@xxs {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@xxs {
       flex: 0 0 40%;
       max-width: 40%;
@@ -307,7 +369,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -317,7 +383,7 @@
 // Split at extra small breakpoint
 ///
 .sprk-o-Stack--split\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     // At extra small breakpoint we switch from column to row
     flex-direction: row;
 
@@ -328,25 +394,43 @@
 
     // Add spacing between items based on spacing size class
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-tiny;
+      margin-right: $sprk-stack-spacing-tiny;
     }
 
     &.sprk-o-Stack--small > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-small;
+      margin-right: $sprk-stack-spacing-small;
     }
 
     &.sprk-o-Stack--medium > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-medium;
+      margin-right: $sprk-stack-spacing-medium;
     }
 
     &.sprk-o-Stack--large > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-large;
+      margin-right: $sprk-stack-spacing-large;
     }
 
     &.sprk-o-Stack--huge > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-huge;
+      margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xs {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -382,6 +466,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@xs {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@xs {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@xs {
       flex: 0 0 40%;
       max-width: 40%;
@@ -392,7 +486,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -402,7 +500,7 @@
 // Split at  small breakpoint
 ///
 .sprk-o-Stack--split\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     // At small breakpoint we switch from column to row
     flex-direction: row;
 
@@ -413,25 +511,43 @@
 
     // Add spacing between items based on spacing size class
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-tiny;
+      margin-right: $sprk-stack-spacing-tiny;
     }
 
     &.sprk-o-Stack--small > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-small;
+      margin-right: $sprk-stack-spacing-small;
     }
 
     &.sprk-o-Stack--medium > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-medium;
+      margin-right: $sprk-stack-spacing-medium;
     }
 
     &.sprk-o-Stack--large > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-large;
+      margin-right: $sprk-stack-spacing-large;
     }
 
     &.sprk-o-Stack--huge > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-huge;
+      margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@s {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -467,6 +583,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@s {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@s {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@s {
       flex: 0 0 40%;
       max-width: 40%;
@@ -477,7 +603,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -487,7 +617,7 @@
 // Split at medium breakpoint
 ///
 .sprk-o-Stack--split\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     // At medium breakpoint we switch from column to row
     flex-direction: row;
 
@@ -498,25 +628,43 @@
 
     // Add spacing between items based on spacing size class
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-tiny;
+      margin-right: $sprk-stack-spacing-tiny;
     }
 
     &.sprk-o-Stack--small > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-small;
+      margin-right: $sprk-stack-spacing-small;
     }
 
     &.sprk-o-Stack--medium > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-medium;
+      margin-right: $sprk-stack-spacing-medium;
     }
 
     &.sprk-o-Stack--large > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-large;
+      margin-right: $sprk-stack-spacing-large;
     }
 
     &.sprk-o-Stack--huge > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-huge;
+      margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@m {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -552,6 +700,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@m {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@m {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@m {
       flex: 0 0 40%;
       max-width: 40%;
@@ -562,7 +720,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -572,7 +734,7 @@
 // Split at large breakpoint
 ///
 .sprk-o-Stack--split\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     // At large breakpoint we switch from column to row
     flex-direction: row;
 
@@ -583,25 +745,43 @@
 
     // Add spacing between items based on spacing size class
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-tiny;
+      margin-right: $sprk-stack-spacing-tiny;
     }
 
     &.sprk-o-Stack--small > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-small;
+      margin-right: $sprk-stack-spacing-small;
     }
 
     &.sprk-o-Stack--medium > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-medium;
+      margin-right: $sprk-stack-spacing-medium;
     }
 
     &.sprk-o-Stack--large > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-large;
+      margin-right: $sprk-stack-spacing-large;
     }
 
     &.sprk-o-Stack--huge > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-huge;
+      margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@l {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -637,6 +817,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@l {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@l {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@l {
       flex: 0 0 40%;
       max-width: 40%;
@@ -647,7 +837,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -657,7 +851,7 @@
 // Split at extra large breakpoint
 ///
 .sprk-o-Stack--split\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     // At extra large breakpoint we switch from column to row
     flex-direction: row;
 
@@ -668,25 +862,43 @@
 
     // Add spacing between items based on spacing size class
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-tiny;
+      margin-right: $sprk-stack-spacing-tiny;
     }
 
     &.sprk-o-Stack--small > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-small;
+      margin-right: $sprk-stack-spacing-small;
     }
 
     &.sprk-o-Stack--medium > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-medium;
+      margin-right: $sprk-stack-spacing-medium;
     }
 
     &.sprk-o-Stack--large > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-large;
+      margin-right: $sprk-stack-spacing-large;
     }
 
     &.sprk-o-Stack--huge > .sprk-o-Stack__item {
-      margin-right: $stack-spacing-huge;
+      margin-right: $sprk-stack-spacing-huge;
     }
 
+    /* stylelint-disable selector-class-pattern */
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-a;
+    }
+
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-b;
+    }
+
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-c;
+    }
+
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
+      margin-right: $sprk-stack-spacing-misc-d;
+    }
+
+    /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xl {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -722,6 +934,16 @@
       max-width: 60%;
     }
 
+    > .sprk-o-Stack__item--three-tenths\@xl {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    > .sprk-o-Stack__item--seven-tenths\@xl {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
     > .sprk-o-Stack__item--two-fifths\@xl {
       flex: 0 0 40%;
       max-width: 40%;
@@ -732,7 +954,11 @@
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,
-    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child {
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {
       margin-right: 0;
     }
   }
@@ -742,37 +968,37 @@
 // Stack items take up leftover space at specific breakpoints
 ///
 .sprk-o-Stack__item--flex\@xxs {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     flex: 1;
   }
 }
 
 .sprk-o-Stack__item--flex\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     flex: 1;
   }
 }
 
 .sprk-o-Stack__item--flex\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     flex: 1;
   }
 }
 
 .sprk-o-Stack__item--flex\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     flex: 1;
   }
 }
 
 .sprk-o-Stack__item--flex\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     flex: 1;
   }
 }
 
 .sprk-o-Stack__item--flex\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     flex: 1;
   }
 }
@@ -783,37 +1009,37 @@
 }
 
 .sprk-o-Stack__item--end-column\@xxs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     align-self: flex-end;
   }
 }
 
 .sprk-o-Stack__item--end-column\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     align-self: flex-end;
   }
 }
 
 .sprk-o-Stack__item--end-column\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     align-self: flex-end;
   }
 }
 
 .sprk-o-Stack__item--end-column\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     align-self: flex-end;
   }
 }
 
 .sprk-o-Stack__item--end-column\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     align-self: flex-end;
   }
 }
 
 .sprk-o-Stack__item--end-column\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     align-self: flex-end;
   }
 }
@@ -824,37 +1050,37 @@
 }
 
 .sprk-o-Stack__item--start-column\@xxs {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     align-self: flex-start;
   }
 }
 
 .sprk-o-Stack__item--start-column\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     align-self: flex-start;
   }
 }
 
 .sprk-o-Stack__item--start-column\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     align-self: flex-start;
   }
 }
 
 .sprk-o-Stack__item--start-column\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     align-self: flex-start;
   }
 }
 
 .sprk-o-Stack__item--start-column\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     align-self: flex-start;
   }
 }
 
 .sprk-o-Stack__item--start-column\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     align-self: flex-start;
   }
 }
@@ -865,37 +1091,37 @@
 }
 
 .sprk-o-Stack__item--center-column\@xxs {
-  @media all and (min-width: $split-breakpoint-xxs) {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     align-self: center;
   }
 }
 
 .sprk-o-Stack__item--center-column\@xs {
-  @media all and (min-width: $split-breakpoint-xs) {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     align-self: center;
   }
 }
 
 .sprk-o-Stack__item--center-column\@s {
-  @media all and (min-width: $split-breakpoint-s) {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     align-self: center;
   }
 }
 
 .sprk-o-Stack__item--center-column\@m {
-  @media all and (min-width: $split-breakpoint-m) {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     align-self: center;
   }
 }
 
 .sprk-o-Stack__item--center-column\@l {
-  @media all and (min-width: $split-breakpoint-l) {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     align-self: center;
   }
 }
 
 .sprk-o-Stack__item--center-column\@xl {
-  @media all and (min-width: $split-breakpoint-xl) {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     align-self: center;
   }
 }

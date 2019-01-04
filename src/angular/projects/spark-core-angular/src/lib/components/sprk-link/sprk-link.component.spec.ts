@@ -31,10 +31,15 @@ describe('SparkLinkComponent', () => {
     expect(component.getClasses()).toEqual('sprk-b-Link');
   });
 
-  it('should add the correct class if linkType is standalone', () => {
-    component.linkType = 'standalone';
+  it('should add the correct class if linkType is simple', () => {
+    component.linkType = 'simple';
+    expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--simple');
+  });
+
+  it('should add the correct class if linkType is icon', () => {
+    component.linkType = 'icon';
     expect(component.getClasses()).toEqual(
-      'sprk-b-Link sprk-b-Link--standalone'
+      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
     );
   });
 
@@ -54,10 +59,10 @@ describe('SparkLinkComponent', () => {
   });
 
   it('should add the correct classes if linkType and additionalClasses have values', () => {
-    component.linkType = 'standalone';
+    component.linkType = 'simple';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual(
-      'sprk-b-Link sprk-b-Link--standalone sprk-u-pam sprk-u-man'
+      'sprk-b-Link sprk-b-Link--simple sprk-u-pam sprk-u-man'
     );
   });
 
@@ -82,7 +87,7 @@ describe('SparkLinkComponent', () => {
     fixture.detectChanges();
     expect(linkElement.getAttribute('data-id')).toBeNull();
   });
-  
+
   it('should set the target attr if supplied', () => {
     component.target = '_blank';
     fixture.detectChanges();
