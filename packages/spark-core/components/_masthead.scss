@@ -230,7 +230,8 @@
 // Fixed container that covers entire page
 // that contains the Masthead Accordion
 // Starts below the main content (logo branding, menu)
-.sprk-c-Masthead__narrow-nav {
+.sprk-c-Masthead__narrow-nav,
+.sprk-c-MastheadMask {
   background-color: $sprk-white;
   height: 100%;
   overflow: auto;
@@ -249,6 +250,18 @@
     // Hide narrow nav on larger views
     display: none;
   }
+}
+
+.sprk-c-MastheadMask {
+  background-color: $sprk-masthead-mask-color;
+  padding: 0;
+  z-index: $sprk-layer-height-l;
+}
+
+.sprk-c-MastheadMask
+.sprk-c-Masthead__selector {
+  background-color: $sprk-masthead-bg-color;
+  border: 0;
 }
 
 // ==================================================================

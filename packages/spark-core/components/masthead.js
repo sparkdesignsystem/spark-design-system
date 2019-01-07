@@ -1,6 +1,7 @@
 /* global document window */
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
+import { isEscPressed } from '../utilities/keypress';
 
 const addClassOnScroll = (element, scrollPos, elementHeight, classToToggle) => {
   // If user scrolls past the element then add class
@@ -52,6 +53,11 @@ const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', (element) => {
     const mainLayout = document.querySelector('[data-sprk-main]');
     const masthead = document.querySelector('[data-sprk-masthead]');
+    const selectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector"]');
+    const selectorTrigger = document.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
+    const mastheadSelectorMask = document.querySelector('[data-sprk-masthead-mask]');
+    const selectorDropdownChoices = selectorDropdown.querySelectorAll('[data-sprk-dropdown-choice]');
+
     const nav = document.querySelector(
       `[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`,
     );
@@ -70,6 +76,34 @@ const bindUIEvents = () => {
         .querySelector('.sprk-c-Masthead__narrow-nav')
         .classList.contains('sprk-u-HideWhenJs');
       focusTrap(isOpen, nav);
+    });
+
+    selectorTrigger.addEventListener('click', () => {
+      const dropdownIsOpen = selectorDropdown.classList.contains('sprk-c-Dropdown--open');
+
+      if (dropdownIsOpen) {
+        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+      } else {
+        mastheadSelectorMask.classList.add('sprk-c-MastheadMask');
+      }
+    });
+
+    selectorDropdownChoices.forEach((choice) => {
+      choice.addEventListener('click', () => {
+        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!(selectorTrigger.contains(e.target) || selectorDropdown.contains(e.target))) {
+        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (isEscPressed(e)) {
+        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+      }
     });
   });
 };
