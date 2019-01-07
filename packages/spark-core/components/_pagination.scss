@@ -15,8 +15,6 @@
 // Pag links have a border when hovered
 .sprk-c-Pagination__link {
   color: $sprk-pag-link-color;
-  border: 2px solid transparent;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,12 +29,6 @@
     color: $sprk-pag-link-color-hover;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: $sprk-pag-selection-color;
-  }
-
   &::after {
     display: none;
   }
@@ -44,6 +36,8 @@
 
 .sprk-c-Pagination__link--current {
   background-color: $sprk-pag-selection-color;
+  border-radius: 50%;
+  border: 2px solid transparent;
   color: $sprk-pag-selection-link-color;
   font-weight: bold;
 
