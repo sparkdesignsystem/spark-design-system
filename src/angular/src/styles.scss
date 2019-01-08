@@ -41,11 +41,11 @@ $sprk-webfonts: (
   300
 );
 
-@import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
-@import 'node_modules/@sparkdesignsystem/spark-core/spark-core-angular.scss';
-@import 'node_modules/@sparkdesignsystem/spark-card/card';
-@import 'node_modules/@sparkdesignsystem/spark-description-table/dictionary.scss';
-@import 'node_modules/@sparkdesignsystem/spark-highlight-board/highlight-board.scss';
+@import '@sparkdesignsystem/spark-core/spark-core.scss';
+@import '@sparkdesignsystem/spark-core/spark-core-angular.scss';
+@import '@sparkdesignsystem/spark-card/card';
+@import '@sparkdesignsystem/spark-description-table/dictionary.scss';
+@import '@sparkdesignsystem/spark-highlight-board/highlight-board.scss';
 
 //
 // Bring in doc site styles
