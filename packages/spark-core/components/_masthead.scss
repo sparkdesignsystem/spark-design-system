@@ -263,7 +263,6 @@
   border-color: $sprk-masthead-selector-border-color-mask-open;
 }
 
-.sprk-c-MastheadMask
 .sprk-c-Masthead__selector-dropdown {
   border-bottom: $sprk-masthead-selector-dropdown-border-bottom-mask-open;
   border-top: 0;
@@ -272,6 +271,15 @@
   border-radius: 0;
   box-shadow: $sprk-masthead-selector-dropdown-box-shadow-mask-open;
   max-width: 100%;
+  margin: 0;
+  width: 100%;
+  top: 0;
+  padding: $sprk-masthead-selector-dropdown-padding;
+}
+
+.sprk-c-Masthead__selector-dropdown
+.sprk-c-Dropdown__header {
+  padding: $sprk-space-m;
 }
 
 // ==================================================================

@@ -2,6 +2,7 @@
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
+import { hideDropDown, showDropDown } from './dropdown';
 
 const addClassOnScroll = (element, scrollPos, elementHeight, classToToggle) => {
   // If user scrolls past the element then add class
@@ -49,14 +50,12 @@ const hideMobileNavs = () => {
   });
 };
 
-const hideSelectorMask = (mastheadSelectorMask, selectorIcon) => {
+const hideSelectorMask = (mastheadSelectorMask) => {
   mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
-  selectorIcon.classList.remove('sprk-c-Icon--open');
 };
 
-const showSelectorMask = (mastheadSelectorMask, selectorIcon) => {
+const showSelectorMask = (mastheadSelectorMask) => {
   mastheadSelectorMask.classList.add('sprk-c-MastheadMask');
-  selectorIcon.classList.add('sprk-c-Icon--open');
 };
 
 const bindUIEvents = () => {
@@ -65,7 +64,9 @@ const bindUIEvents = () => {
     const masthead = document.querySelector('[data-sprk-masthead]');
     const selectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector"]');
     const selectorTrigger = document.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
-    const selectorIcon = selectorTrigger.querySelector('svg');
+    const selectorTriggerInDropdown = document.querySelector('[data-sprk-selector-dropdown-trigger="dropdown-selector"]');
+    const wideSelectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector-wide"]');
+    const wideSelectorTriggerInDropdown = document.querySelector('[data-sprk-selector-dropdown-trigger="dropdown-selector-wide"]');
     const mastheadSelectorMask = document.querySelector('[data-sprk-masthead-mask]');
     const selectorDropdownChoices = selectorDropdown.querySelectorAll('[data-sprk-dropdown-choice]');
 
@@ -91,29 +92,56 @@ const bindUIEvents = () => {
 
     selectorTrigger.addEventListener('click', () => {
       const dropdownIsOpen = selectorDropdown.classList.contains('sprk-c-Dropdown--open');
-
       if (dropdownIsOpen) {
-        hideSelectorMask(mastheadSelectorMask, selectorIcon);
+        hideSelectorMask(mastheadSelectorMask);
       } else {
-        showSelectorMask(mastheadSelectorMask, selectorIcon);
+        showSelectorMask(mastheadSelectorMask);
+      }
+    });
+
+    selectorTriggerInDropdown.addEventListener('click', () => {
+      const dropdownIsOpen = selectorDropdown.classList.contains('sprk-c-Dropdown--open');
+      if (dropdownIsOpen) {
+        hideSelectorMask(mastheadSelectorMask);
+        hideDropDown(selectorDropdown);
+      } else {
+        showSelectorMask(mastheadSelectorMask);
+        showDropDown(selectorDropdown);
       }
     });
 
     selectorDropdownChoices.forEach((choice) => {
       choice.addEventListener('click', () => {
-        hideSelectorMask(mastheadSelectorMask, selectorIcon);
+        hideSelectorMask(mastheadSelectorMask);
       });
+    });
+
+    wideSelectorTriggerInDropdown.addEventListener('click', () => {
+      const dropdownIsOpen = wideSelectorDropdown.classList.contains('sprk-c-Dropdown--open');
+      if (dropdownIsOpen) {
+        hideDropDown(wideSelectorDropdown);
+      } else {
+        showDropDown(wideSelectorDropdown);
+      }
     });
 
     document.addEventListener('click', (e) => {
       if (!(selectorTrigger.contains(e.target) || selectorDropdown.contains(e.target))) {
-        hideSelectorMask(mastheadSelectorMask, selectorIcon);
+        hideSelectorMask(mastheadSelectorMask);
+      }
+    });
+
+    document.addEventListener('focusin', (e) => {
+      /* istanbul ignore else: jsdom cant fire focusin on an element */
+      if (!selectorDropdown.contains(e.target)) {
+        hideSelectorMask(mastheadSelectorMask);
+        hideDropDown(selectorDropdown);
       }
     });
 
     document.addEventListener('keydown', (e) => {
       if (isEscPressed(e)) {
-        hideSelectorMask(mastheadSelectorMask, selectorIcon);
+        hideSelectorMask(mastheadSelectorMask);
       }
     });
   });
