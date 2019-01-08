@@ -6,6 +6,7 @@
     "lint": "ng lint spark-extras-angular-highlight-board",
     "test": "ng test spark-extras-angular-highlight-board --watch=false",
     "build": "ng build spark-extras-angular-highlight-board",
+    "prepare": "npm run build",
     "lerna-publish": "cd ../../dist/spark-extras-angular-highlight-board && npm publish"
   },
   "peerDependencies": {

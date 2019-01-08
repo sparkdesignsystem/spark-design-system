@@ -6,6 +6,7 @@
     "lint": "ng lint spark-extras-angular-card",
     "test": "ng test spark-extras-angular-card --watch=false",
     "build": "ng build spark-extras-angular-card",
+    "prepare": "npm run build",
     "lerna-publish": "cd ../../dist/spark-extras-angular-card && npm publish"
   },
   "peerDependencies": {
