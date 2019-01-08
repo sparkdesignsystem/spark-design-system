@@ -15,7 +15,7 @@ gulp.task('build-spark-highlight-board', (cb) => {
   });
 });
 
-gulp.task('clean-spark-extras', () => gulp.src(['./packages/spark-highlight-board/node_modules', './packages/spark-highight-board/es5'], { read: false })
+gulp.task('clean-spark-highlight-board', () => gulp.src(['./packages/spark-highlight-board/node_modules', './packages/spark-highight-board/es5'], { read: false })
   .pipe(clean()));
 
 gulp.task('install-spark-highlight-board', ['clean-spark-extras'], (cb) => {

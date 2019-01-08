@@ -52,8 +52,6 @@ gulp.task('clean-all', (cb) => {
     [
       'clean',
       'clean-spark-core',
-      'clean-spark-card',
-      'clean-spark-dictionary',
       'clean-spark-highlight-board',
       'clean-angular-dev-app',
       'clean-spark-core-angular',
