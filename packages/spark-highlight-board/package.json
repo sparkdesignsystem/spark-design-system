@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-highlight-board",
   "version": "4.0.2-alpha.0",
-  "description": "Spark Highlight Board is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
+  "description": "The Highlight Board component is used as a lead into an experience as a means to encourage engagement within the experience.",
   "scripts": {
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
     "coverage": "nyc npm test",
@@ -12,7 +12,7 @@
   "nyc": {
     "exclude": "tests/*.js"
   },
-  "main": "_highlight-board.scss",
+  "main": "es5/highlightBoard.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDependencies": {
-    "@sparkdesignsystem/spark-core": "^7.0.0"
+    "@sparkdesignsystem/spark-core": "^9.0.0"
   },
   "dependencies": {
     "chai": "^4.2.0",
