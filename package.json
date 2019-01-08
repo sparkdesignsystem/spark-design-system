@@ -79,7 +79,8 @@
     "unlink-dependencies": "npm unlink --prefix ./packages/spark-core && npm unlink --prefix ./packages/spark-extras && npm unlink @sparkdesignsystem/spark-core --prefix ./src/angular && npm unlink @sparkdesignsystem/spark-extras --prefix ./src/angular",
     "link-dependencies": "npm link --prefix ./packages/spark-core && npm link --prefix ./packages/spark-extras && npm link @sparkdesignsystem/spark-core --prefix ./src/angular && npm link @sparkdesignsystem/spark-extras --prefix ./src/angular",
     "build-angular": "cd src/angular && ng build spark-core-angular && cd ../..",
-    "link-spark-core-angular": "npm link --prefix ./src/angular/dist/spark-core-angular && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-highlight-board"
+    "link-spark-core-angular": "npm link --prefix ./src/angular/dist/spark-core-angular && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-award && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-card && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-dictionary && npm link @sparkdesignsystem/spark-core-angular --prefix ./src/angular/projects/spark-extras-angular-highlight-board",
+    "lerna-publish": "lerna bootstrap && lerna version"
   },
   "lint-staged": {
     "*.scss": [

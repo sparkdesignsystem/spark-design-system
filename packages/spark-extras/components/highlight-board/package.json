@@ -6,7 +6,8 @@
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
     "coverage": "nyc npm test",
     "build": "webpack",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "lerna-publish": "npm publish"
   },
   "nyc": {
     "exclude": "tests/*.js"

@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "ng lint spark-extras-angular-highlight-board",
     "test": "ng test spark-extras-angular-highlight-board --watch=false",
-    "build": "ng build spark-extras-angular-highlight-board"
+    "build": "ng build spark-extras-angular-highlight-board",
+    "lerna-publish": "cd ../../dist/spark-extras-angular-highlight-board && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",

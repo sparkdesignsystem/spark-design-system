@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "ng lint spark-extras-angular-dictionary",
     "test": "ng test spark-extras-angular-dictionary --watch=false",
-    "build": "ng build spark-extras-angular-dictionary"
+    "build": "ng build spark-extras-angular-dictionary",
+    "lerna-publish": "cd ../../dist/spark-extras-angular-dictionary && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",

@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "ng lint spark-extras-angular-award",
     "test": "ng test spark-extras-angular-award --watch=false",
-    "build": "ng build spark-extras-angular-award"
+    "build": "ng build spark-extras-angular-award",
+    "lerna-publish": "cd ../../dist/spark-extras-angular-award && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",

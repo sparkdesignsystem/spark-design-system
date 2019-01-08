@@ -4,7 +4,8 @@
   "description": "Spark Extras is a supplementary package that adds additional components that are not part of Spark Core. Many sites will use these components, but they aren't necessary for every Quicken Loans Fintech product.",
   "scripts": {
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
-    "coverage": "nyc npm test"
+    "coverage": "nyc npm test",
+    "lerna-publish": "npm publish"
   },
   "repository": {
     "type": "git",

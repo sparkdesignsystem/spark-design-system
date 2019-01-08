@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "ng lint spark-core-angular",
     "test": "ng test spark-core-angular --watch=false",
-    "build": "ng build spark-core-angular"
+    "build": "ng build spark-core-angular",
+    "lerna-publish": "cd ../../dist/spark-core-angular && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",

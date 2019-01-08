@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "ng lint spark-extras-angular-card",
     "test": "ng test spark-extras-angular-card --watch=false",
-    "build": "ng build spark-extras-angular-card"
+    "build": "ng build spark-extras-angular-card",
+    "lerna-publish": "cd ../../dist/spark-extras-angular-card && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",
