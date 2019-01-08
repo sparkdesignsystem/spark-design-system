@@ -263,6 +263,9 @@
   border-color: $sprk-masthead-selector-border-color-mask-open;
 }
 
+// ==================================================================
+// Selector Dropdown
+// ==================================================================
 .sprk-c-Masthead__selector-dropdown {
   border-bottom: $sprk-masthead-selector-dropdown-border-bottom-mask-open;
   border-top: 0;
@@ -275,6 +278,11 @@
   width: 100%;
   top: 0;
   padding: $sprk-masthead-selector-dropdown-padding;
+}
+
+.sprk-c-Masthead__selector-dropdown
+.sprk-c-Dropdown__link {
+  padding: $sprk-space-m $sprk-space-misc-a;
 }
 
 // ==================================================================
