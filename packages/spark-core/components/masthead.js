@@ -49,12 +49,23 @@ const hideMobileNavs = () => {
   });
 };
 
+const hideSelectorMask = (mastheadSelectorMask, selectorIcon) => {
+  mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+  selectorIcon.classList.remove('sprk-c-Icon--open');
+};
+
+const showSelectorMask = (mastheadSelectorMask, selectorIcon) => {
+  mastheadSelectorMask.classList.add('sprk-c-MastheadMask');
+  selectorIcon.classList.add('sprk-c-Icon--open');
+};
+
 const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', (element) => {
     const mainLayout = document.querySelector('[data-sprk-main]');
     const masthead = document.querySelector('[data-sprk-masthead]');
     const selectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector"]');
     const selectorTrigger = document.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
+    const selectorIcon = selectorTrigger.querySelector('svg');
     const mastheadSelectorMask = document.querySelector('[data-sprk-masthead-mask]');
     const selectorDropdownChoices = selectorDropdown.querySelectorAll('[data-sprk-dropdown-choice]');
 
@@ -82,27 +93,27 @@ const bindUIEvents = () => {
       const dropdownIsOpen = selectorDropdown.classList.contains('sprk-c-Dropdown--open');
 
       if (dropdownIsOpen) {
-        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+        hideSelectorMask(mastheadSelectorMask, selectorIcon);
       } else {
-        mastheadSelectorMask.classList.add('sprk-c-MastheadMask');
+        showSelectorMask(mastheadSelectorMask, selectorIcon);
       }
     });
 
     selectorDropdownChoices.forEach((choice) => {
       choice.addEventListener('click', () => {
-        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+        hideSelectorMask(mastheadSelectorMask, selectorIcon);
       });
     });
 
     document.addEventListener('click', (e) => {
       if (!(selectorTrigger.contains(e.target) || selectorDropdown.contains(e.target))) {
-        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+        hideSelectorMask(mastheadSelectorMask, selectorIcon);
       }
     });
 
     document.addEventListener('keydown', (e) => {
       if (isEscPressed(e)) {
-        mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
+        hideSelectorMask(mastheadSelectorMask, selectorIcon);
       }
     });
   });
@@ -122,4 +133,6 @@ export {
   focusTrap,
   bindUIEvents,
   addClassOnScroll,
+  hideSelectorMask,
+  showSelectorMask
 };
