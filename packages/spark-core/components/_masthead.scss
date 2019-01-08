@@ -149,6 +149,7 @@
 // Selector has 100% default width
 // then grows to size of content on larger views
 .sprk-c-Masthead__selector {
+  background-color: $sprk-masthead-selector-bg-color;
   border: $sprk-masthead-selector-border;
   border-radius: $sprk-masthead-selector-border-radius;
   color: $sprk-masthead-selector-font-color;
@@ -254,14 +255,23 @@
 
 .sprk-c-MastheadMask {
   background-color: $sprk-masthead-mask-color;
-  padding: 0;
   z-index: $sprk-layer-height-l;
 }
 
 .sprk-c-MastheadMask
 .sprk-c-Masthead__selector {
-  background-color: $sprk-masthead-bg-color;
-  border: 0;
+  border-color: $sprk-masthead-selector-border-color-mask-open;
+}
+
+.sprk-c-MastheadMask
+.sprk-c-Masthead__selector-dropdown {
+  border-bottom: $sprk-masthead-selector-dropdown-border-bottom-mask-open;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%;
 }
 
 // ==================================================================
