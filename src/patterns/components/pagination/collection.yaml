@@ -21,6 +21,9 @@ variableTable:
   $sprk-pag-link-color-hover:
     default: $sprk-pag-link-color
     description: The color of the pagination links on hover.
+  $sprk-pag-link-font-weight:
+    default: 400
+    description: The font weight of the pagination links.
   $sprk-pag-selection-color:
     default: $sprk-red
     description: The accent color for selected pagination links.
