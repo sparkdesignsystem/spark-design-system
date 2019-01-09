@@ -12,6 +12,9 @@ restrictions:
     has a unique data-id property ("pagination-1", "pagination-2", "pagination-3", etc).
 sparkPackageCore: true
 variableTable:
+  $sprk-pag-current-link-font-weight:
+    default: 500
+    description: The font weight of the curren pagination link.
   $sprk-pag-max-width:
     default: 26rem
     description: The maximum width of the pagination element.

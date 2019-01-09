@@ -46,7 +46,7 @@
 .sprk-c-Pagination__link--current {
   background-color: $sprk-pag-selection-color;
   color: $sprk-pag-selection-link-color;
-  font-weight: bold;
+  font-weight: $sprk-pag-current-link-font-weight;
 
   &:hover,
   &:focus,

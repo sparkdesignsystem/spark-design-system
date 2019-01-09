@@ -42,8 +42,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-c-Pagination__link--current': currentPage === 1,
-              'sprk-b-Link': true,
-              'sprk-b-Link--plain': true
+              'sprk-b-Link': true
             }"
             href="#"
             [attr.data-analytics]="analyticsStringFirstLink"
@@ -60,8 +59,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-c-Pagination__link--current': currentPage === 2,
-              'sprk-b-Link': true,
-              'sprk-b-Link--plain': true
+              'sprk-b-Link': true
             }"
             href="#"
             [attr.data-analytics]="analyticsStringSecondLink"
@@ -78,8 +76,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-c-Pagination__link--current': currentPage === 3,
-              'sprk-b-Link': true,
-              'sprk-b-Link--plain': true
+              'sprk-b-Link': true
             }"
             href="#"
             [attr.data-analytics]="analyticsStringThirdLink"
@@ -141,8 +138,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': currentPage === 1,
-              'sprk-b-Link--plain': true
+              'sprk-c-Pagination__link--current': currentPage === 1
             }"
             href="#"
             [attr.data-analytics]="analyticsStringFirstLink"
@@ -171,8 +167,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': true,
-              'sprk-b-Link--plain': true
+              'sprk-c-Pagination__link--current': true
             }"
             href="#"
             aria-current="true"
@@ -198,8 +193,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': currentPage === totalPages(),
-              'sprk-b-Link--plain': true
+              'sprk-c-Pagination__link--current': currentPage === totalPages()
             }"
             href="#"
             [attr.data-analytics]="analyticsStringThirdLink"
