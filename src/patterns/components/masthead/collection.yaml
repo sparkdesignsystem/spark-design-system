@@ -9,10 +9,10 @@ restrictions:
   - You must configure the size of your own logo asset. If you don't then the logo will be automatically sized
     between the $sprk-masthead-logo-max-width (192px) and $sprk-masthead-logo-min-width (174px). You can additionally override those
     min and max settings by resetting those variables in your own SCSS file.
-  - You must set (in your own SCSS file) the SCSS variable $mobile-masthead-height so that the navigation displays properly on small screens.
+  - You must set (in your own SCSS file) the SCSS variable $sprk-masthead-narrow-height so that the navigation displays properly on small screens.
     To get the correct setting for your needs, put your logo in the Masthead and then grab the total height of the
     Masthead (on a narrow viewport) with your logo in it. Set
-    $mobile-masthead-height to that height.
+    $sprk-masthead-narrow-height to that height.
   - You must duplicate your navigational items in the Masthead navigation HTML and in the Masthead narrow
     navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
 sparkPackageCore: true
