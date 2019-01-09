@@ -19,7 +19,7 @@ before_install:
   - npm install -g @angular/cli @angular-devkit/build-angular
   - npm install
   - npm install --prefix ./packages/spark-core
-  - npm install --prefix ./packages/spark-extras/components/highlight-board
+  - npm install --prefix ./packages/spark-highlight-board
   - npm install --prefix ./src/angular
   - npm install --prefix ./src/angular/projects/spark-core-angular
   - npm install --prefix ./src/angular/projects/spark-extras-angular-award
