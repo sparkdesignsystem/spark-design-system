@@ -130,13 +130,13 @@ import { Component } from '@angular/core';
         >
           <div class="sprk-o-Stack__item sprk-u-Position--relative">
             <sprk-dropdown
-              dropdownType="informational"
+              dropdownType="mastheadSelector"
               additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
               triggerText="My Selector"
-              additionalClasses="sprk-u-Width-100"
-              title="My Choices"
+              additionalClasses="sprk-c-Masthead__selector-dropdown sprk-u-Width-100"
               triggerIconType="chevron-down"
               [choices]="siteDropdownChoices"
+              selector="Select One"
               additionalIconClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-Stack__item"
               additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
             >
