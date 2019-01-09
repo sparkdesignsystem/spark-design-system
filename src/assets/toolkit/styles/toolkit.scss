@@ -18,9 +18,9 @@ $sprk-webfonts:
 $masthead-breakpoint: 74rem;
 
 @import '../../../../packages/spark-core/spark-core.scss';
-@import '../../../../packages/spark-extras/components/spark-card';
-@import '../../../../packages/spark-extras/components/spark-dictionary/dictionary.scss';
-@import '../../../../packages/spark-extras/components/spark-highlight-board';
+@import '../../../../packages/spark-card/card.scss';
+@import '../../../../packages/spark-dictionary/dictionary.scss';
+@import '../../../../packages/spark-highlight-board/highlight-board.scss';
 
 //
 // Bring in doc site styles

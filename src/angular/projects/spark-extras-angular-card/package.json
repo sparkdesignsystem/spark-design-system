@@ -1,12 +1,12 @@
 {
   "name": "@sparkdesignsystem/spark-extras-angular-card",
   "description": "Cards present related content. They provide an easy way to get information quickly and are typically used in groups.",
-  "version": "3.0.8-alpha.0",
+  "version": "3.0.8",
   "scripts": {
     "lint": "ng lint spark-extras-angular-card",
     "test": "ng test spark-extras-angular-card --watch=false",
     "build": "ng build spark-extras-angular-card",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "lerna-publish": "cd ../../dist/spark-extras-angular-card && npm publish"
   },
   "peerDependencies": {

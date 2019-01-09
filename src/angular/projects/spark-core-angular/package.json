@@ -1,12 +1,12 @@
 {
   "name": "@sparkdesignsystem/spark-core-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "7.0.1-alpha.0",
+  "version": "7.0.1",
   "scripts": {
     "lint": "ng lint spark-core-angular",
     "test": "ng test spark-core-angular --watch=false",
     "build": "ng build spark-core-angular",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "lerna-publish": "cd ../../dist/spark-core-angular && npm publish"
   },
   "peerDependencies": {
