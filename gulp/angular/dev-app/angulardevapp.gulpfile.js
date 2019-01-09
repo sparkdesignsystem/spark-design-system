@@ -52,7 +52,7 @@ gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
 });
 
 gulp.task('serve-angular-dev-app', (cb) => {
-  const ls = spawn(`ng`, ['serve'], { cwd: "src/angular"});
+  const ls = spawn(`node_modules/.bin/ng`, ['serve'], { cwd: "src/angular"});
   ls.stdout.on('data', (data) => {
     console.log(data.toString());
   })
