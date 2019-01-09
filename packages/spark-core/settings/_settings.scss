@@ -730,7 +730,8 @@ $sprk-masthead-selector-padding: $sprk-space-inset-short-m !default;
 $sprk-masthead-selector-dropdown-padding: 0 !default;
 $sprk-masthead-selector-min-width: 17rem !default;
 $sprk-masthead-narrow-height: 81px !default;
-$sprk-masthead-mask-color: rgba(255, 255, 255, 0.9) !default;
+$sprk-masthead-mask-color: rgba(0, 0, 0, 0.5) !default;
+$sprk-masthead-transition: box-shadow 0.3s ease-in !default;
 
 // Big Nav
 $sprk-big-nav-column-width: 64rem !default;

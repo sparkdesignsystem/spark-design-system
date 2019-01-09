@@ -7,6 +7,7 @@
   box-shadow: $sprk-masthead-shadow;
   position: sticky;
   top: 0;
+  transition: $sprk-masthead-transition;
   z-index: $sprk-layer-height-m;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
