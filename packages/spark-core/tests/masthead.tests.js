@@ -9,6 +9,9 @@ import {
   hideMobileNavs,
   addClassOnScroll,
 } from '../components/masthead';
+import {
+  dropdowns,
+} from '../components/dropdown';
 
 describe('masthead init', () => {
   afterEach(() => {
@@ -30,29 +33,98 @@ describe('masthead UI Events tests', () => {
   let mastheadDiv;
   let iconContainer;
   let event;
+  let maskDiv;
+  let selector;
+  let selectorWide;
+  let selectorDropdown;
+  let selectorDropdownWide;
+  let selectorTriggerInDropdown;
+  let selectorTriggerInDropdownWide;
+  let choice1;
 
   beforeEach(() => {
     main = document.createElement('div');
-    mastheadDiv = document.createElement('div');
-    mastheadDiv.setAttribute('data-sprk-masthead', null);
-    mastheadDiv.classList.add('sprk-c-Masthead');
     main.setAttribute('data-sprk-main', null);
+
+    // Create the main Masthead element
+    mastheadDiv = document.createElement('div');
+    mastheadDiv.classList.add('sprk-c-Masthead');
+    mastheadDiv.setAttribute('data-sprk-masthead', null);
+
+    // Create the narrow selector
+    selector = document.createElement('a');
+    selector.setAttribute('data-sprk-dropdown-trigger', 'dropdown-selector');
+
+    // Create the narrow selector
+    selectorWide = document.createElement('a');
+    selectorWide.setAttribute('data-sprk-dropdown-trigger', 'dropdown-selector-wide');
+
+    // Create the narrow selector's dropdown
+    selectorDropdown = document.createElement('div');
+    selectorDropdown.setAttribute('data-sprk-dropdown', 'dropdown-selector');
+    selectorDropdown.classList.add('sprk-c-Dropdown');
+
+    // Create the narrow selector's dropdown trigger element inside the dropdown
+    selectorTriggerInDropdown = document.createElement('a');
+    selectorTriggerInDropdown.setAttribute('data-sprk-selector-dropdown-trigger', 'dropdown-selector');
+
+    // Create a selector trigger for wide
+    selectorDropdownWide = document.createElement('div');
+    selectorDropdownWide.setAttribute('data-sprk-dropdown', 'dropdown-selector-wide');
+    selectorDropdownWide.classList.add('sprk-c-Dropdown');
+
+    // Create the narrow selector's dropdown trigger element inside the dropdown
+    selectorTriggerInDropdownWide = document.createElement('a');
+    selectorTriggerInDropdownWide.setAttribute('data-sprk-selector-dropdown-trigger', 'dropdown-selector-wide');
+
+    // Create choice in dropdown
+    choice1 = document.createElement('a');
+    choice1.setAttribute('data-sprk-dropdown-choice', 'choice1');
+
+    // Create div for the selector dropdown mask
+    maskDiv = document.createElement('div');
+    maskDiv.setAttribute('data-sprk-masthead-mask', null);
+
+    // Create narrow nav
     nav = document.createElement('div');
+    // Create nav item
     navItem = document.createElement('button');
+    // Add navItem to nav
     nav.appendChild(navItem);
-    sinon.spy(nav, 'addEventListener');
     nav.classList.add('sprk-u-Display--none');
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
-    iconContainer = document.createElement('button');
-    sinon.spy(iconContainer, 'addEventListener');
-    iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
-    icon = document.createElement('svg');
-    iconContainer.appendChild(icon);
-    main.appendChild(mastheadDiv);
+
+    // Add nav to masthead
     mastheadDiv.appendChild(nav);
+
+    // Create an svg icon
+    icon = document.createElement('svg');
+
+    // Create a menu button container for icon
+    iconContainer = document.createElement('button');
+    iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
+
+    // Add mobile menu icon to container
+    iconContainer.appendChild(icon);
+
+    // Add iconContainer to mastheadDiv
     mastheadDiv.appendChild(iconContainer);
+
+    sinon.spy(nav, 'addEventListener');
+    sinon.spy(iconContainer, 'addEventListener');
+
+    mastheadDiv.appendChild(selector);
+    mastheadDiv.appendChild(selectorWide);
+    selectorDropdown.appendChild(selectorTriggerInDropdown);
+    selectorDropdown.appendChild(choice1);
+    mastheadDiv.appendChild(selectorDropdown);
+    selectorDropdownWide.appendChild(selectorTriggerInDropdownWide);
+    mastheadDiv.appendChild(selectorDropdownWide);
+    mastheadDiv.appendChild(maskDiv);
+    main.appendChild(mastheadDiv);
     document.body.appendChild(main);
     bindUIEvents();
+    dropdowns();
   });
 
   afterEach(() => {
@@ -72,14 +144,72 @@ describe('masthead UI Events tests', () => {
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
   });
 
-  it('should add class to masthead', () => {
+  it('should close the dropdown box when selector is clicked and its opened already', () => {
+    selectorDropdown.classList.add('sprk-c-Dropdown--open');
+    selector.dispatchEvent(new window.Event('click'));
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+  });
+
+  it('should open the dropdown box when selector is clicked', () => {
+    selector.dispatchEvent(new window.Event('click'));
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+  });
+
+  it('should open the wide dropdown box when selector is clicked', () => {
+    selectorTriggerInDropdownWide.dispatchEvent(new window.Event('click'));
+    expect(selectorDropdownWide.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    selectorTriggerInDropdownWide.dispatchEvent(new window.Event('click'));
+    expect(selectorDropdownWide.classList.contains('sprk-c-Dropdown--open')).eql(false);
+  });
+
+  it('should open the dropdown box when selector in dropdown is clicked', () => {
+    selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+  });
+
+  it('should hide the masthead mask when esc is pressed', () => {
+    selector.click();
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 27;
+    document.dispatchEvent(escKeyEvent);
+    expect(maskDiv.classList.contains('sprk-c-MastheadMask')).eql(false);
+  });
+
+  it('should hide the masthead mask when a choice is pressed', () => {
+    choice1.click();
+    expect(maskDiv.classList.contains('sprk-c-MastheadMask')).eql(false);
+  });
+
+  it('should add class to masthead when page scrolled', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     addClassOnScroll(mastheadDiv, 200, 150, 'sprk-c-Masthead--scroll');
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(true);
   });
 
-  it('should remove class from masthead', () => {
+  it('should not close the dropdown if a key that is not esc is pressed', () => {
+    selector.click();
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 26;
+    document.dispatchEvent(escKeyEvent);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+  });
+
+  it('should close the dropdown if an element outside the dropdown is focused', () => {
+    selectorWide.click();
+    document.dispatchEvent(new window.Event('focusin'));
+    expect(selectorDropdownWide.classList.contains('sprk-c-Dropdown--open')).eql(false);
+  });
+
+  it('should not close the dropdown if an element inside the dropdown is focused', () => {
+    selector.click();
+    nav.focus();
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+  });
+
+  it('should remove class from masthead when scrolled to the top', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     addClassOnScroll(mastheadDiv, 0, 150, 'sprk-c-Masthead--scroll');

@@ -63,9 +63,29 @@ const bindUIEvents = () => {
     const mainLayout = document.querySelector('[data-sprk-main]');
     const masthead = document.querySelector('[data-sprk-masthead]');
     const selectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector"]');
+    const selectorTrigger = document.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
 
-    if (selectorDropdown) {
-      const selectorTrigger = document.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
+    const nav = document.querySelector(
+      `[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`,
+    );
+
+    element.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMobileNav(element, nav, masthead);
+    });
+
+    window.addEventListener('scroll', () => {
+      addClassOnScroll(masthead, window.scrollY, 10, 'sprk-c-Masthead--scroll');
+    });
+
+    mainLayout.addEventListener('focusin', () => {
+      const isOpen = !document
+        .querySelector('.sprk-c-Masthead__narrow-nav')
+        .classList.contains('sprk-u-HideWhenJs');
+      focusTrap(isOpen, nav);
+    });
+
+    if (selectorTrigger && selectorDropdown) {
       const selectorTriggerInDropdown = document.querySelector('[data-sprk-selector-dropdown-trigger="dropdown-selector"]');
       const wideSelectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector-wide"]');
       const wideSelectorTriggerInDropdown = document.querySelector('[data-sprk-selector-dropdown-trigger="dropdown-selector-wide"]');
@@ -127,26 +147,6 @@ const bindUIEvents = () => {
         }
       });
     }
-
-    const nav = document.querySelector(
-      `[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`,
-    );
-
-    element.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleMobileNav(element, nav, masthead);
-    });
-
-    window.addEventListener('scroll', () => {
-      addClassOnScroll(masthead, window.scrollY, 10, 'sprk-c-Masthead--scroll');
-    });
-
-    mainLayout.addEventListener('focusin', () => {
-      const isOpen = !document
-        .querySelector('.sprk-c-Masthead__narrow-nav')
-        .classList.contains('sprk-u-HideWhenJs');
-      focusTrap(isOpen, nav);
-    });
   });
 };
 
