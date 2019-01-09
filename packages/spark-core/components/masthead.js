@@ -4,9 +4,9 @@ import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
 import { hideDropDown, showDropDown } from './dropdown';
 
-const addClassOnScroll = (element, scrollPos, elementHeight, classToToggle) => {
-  // If user scrolls past the element then add class
-  if (scrollPos >= elementHeight) {
+const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
+  // If user scrolls past the scrollPoint then add class
+  if (scrollPos >= scrollPoint) {
     element.classList.add(classToToggle);
   } else {
     element.classList.remove(classToToggle);
@@ -138,7 +138,7 @@ const bindUIEvents = () => {
     });
 
     window.addEventListener('scroll', () => {
-      addClassOnScroll(masthead, window.scrollY, masthead.offsetHeight, 'sprk-c-Masthead--scroll');
+      addClassOnScroll(masthead, window.scrollY, 10, 'sprk-c-Masthead--scroll');
     });
 
     mainLayout.addEventListener('focusin', () => {
