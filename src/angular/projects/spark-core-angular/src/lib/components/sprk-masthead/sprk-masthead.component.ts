@@ -204,8 +204,8 @@ import * as _ from 'lodash';
               </div>
             </div>
           </sprk-masthead-accordion>
+          <ng-content select="[narrowNavFooter]"></ng-content>
         </nav>
-        <ng-content select="[narrowNavFooter]"></ng-content>
       </div>
     </header>
   `
