@@ -50,13 +50,13 @@
   &:focus,
   &:visited {
     border-bottom: $sprk-link-has-icon-hover-border-bottom;
-    color: $sprk-link-has-icon-color;
+    color: $sprk-link-has-icon-hover-color-text;
   }
 }
 
 .sprk-b-Link--has-icon .sprk-c-Icon {
-  color: $sprk-link-has-icon-color;
-  stroke: $sprk-link-has-icon-color;
+  color: $sprk-link-has-icon-color-icon;
+  stroke: $sprk-link-has-icon-color-icon;
   fill: $sprk-link-has-icon-fill;
 }
 

@@ -366,7 +366,7 @@ $sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
 $sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
-$sprk-link-has-icon-color: $sprk-green !default;
+$sprk-link-has-icon-color-icon: $sprk-green !default;
 $sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
 $sprk-link-has-icon-underline-width: 0 !default;
 $sprk-link-has-icon-underline-color: transparent !default;
@@ -375,6 +375,7 @@ $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+$sprk-link-has-icon-hover-color-text: $sprk-green !default;
 $sprk-link-plain-border: none !default;
 $sprk-link-plain-visited-border: none !default;
 $sprk-link-disabled-color: $sprk-gray-dark !default;
