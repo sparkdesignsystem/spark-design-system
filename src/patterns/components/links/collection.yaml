@@ -91,6 +91,9 @@ variableTable:
   $sprk-link-has-icon-underline-color:
     default: transparent
     description: Sets the underline color for links containing icons.
+  $sprk-link-has-icon-fill:
+    default: transparent
+    description: Sets the fill color for icons contained in links.
   $sprk-link-has-icon-border-bottom:
     default: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color
     description: Sets the border settings for links with icons
