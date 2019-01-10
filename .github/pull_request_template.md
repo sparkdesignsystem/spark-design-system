@@ -21,6 +21,7 @@ then please remove it.
 ### Browser Testing (current version and 1 prior)
   - [ ] Google Chrome
   - [ ] Google Chrome (Mobile)
+  - [ ] Mozilla Firefox
   - [ ] Mozilla Firefox (Mobile)
   - [ ] Microsoft Internet Explorer 11 (only this specific version of IE)
   - [ ] Microsoft Edge
