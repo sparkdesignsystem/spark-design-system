@@ -95,6 +95,6 @@
 <div [ngClass]="{
   'drizzle-o-Layout-content': path!=='/masthead' && path!=='/masthead-extended',
   'sprk-u-mal': path!=='/masthead' && path!=='/masthead-extended',
-  'sprk-b-TypeBodyTwo': true}">
+  'sprk-b-TypeBodyTwo': path!=='/masthead' && path!=='/masthead-extended'}">
   <router-outlet></router-outlet>
 </div>

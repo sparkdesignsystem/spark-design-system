@@ -63,6 +63,7 @@ import {
 
         <ul class="sprk-c-Dropdown__links">
           <li
+            class="sprk-c-Dropdown__item"
             *ngFor="let choice of choices; let i = index"
             [attr.data-sprk-dropdown-choice-index]="i"
             (click)="choiceClick($event)"

@@ -237,10 +237,16 @@ export class SparkMastheadComponent {
   iconType = 'chevron-down';
   componentID = _.uniqueId();
   controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
+  isScrolled = false;
 
   @HostListener('window:orientationchange')
   handleResizeEvent() {
     this.closeNarrowNav();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event): void {
+    window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
   }
 
   getClasses(): string {
@@ -254,6 +260,10 @@ export class SparkMastheadComponent {
 
     if (this.isNarrowNavOpen) {
       classArray.push('sprk-c-Masthead--open');
+    }
+
+    if (this.isScrolled) {
+      classArray.push('sprk-c-Masthead--scroll');
     }
 
     return classArray.join(' ');
