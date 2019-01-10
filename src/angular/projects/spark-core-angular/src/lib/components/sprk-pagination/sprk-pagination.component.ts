@@ -32,7 +32,7 @@ import {
             [attr.data-analytics]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon iconType="chevron-left"></sprk-icon>
+            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-left"></sprk-icon>
           </a>
         </li>
 
@@ -42,8 +42,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-c-Pagination__link--current': currentPage === 1,
-              'sprk-b-Link': true,
-              'sprk-b-Link--plain': true
+              'sprk-b-Link': true
             }"
             href="#"
             [attr.data-analytics]="analyticsStringFirstLink"
@@ -60,8 +59,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-c-Pagination__link--current': currentPage === 2,
-              'sprk-b-Link': true,
-              'sprk-b-Link--plain': true
+              'sprk-b-Link': true
             }"
             href="#"
             [attr.data-analytics]="analyticsStringSecondLink"
@@ -78,8 +76,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-c-Pagination__link--current': currentPage === 3,
-              'sprk-b-Link': true,
-              'sprk-b-Link--plain': true
+              'sprk-b-Link': true
             }"
             href="#"
             [attr.data-analytics]="analyticsStringThirdLink"
@@ -103,7 +100,7 @@ import {
             [attr.data-analytics]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
-            <sprk-icon iconType="chevron-right"></sprk-icon>
+            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-right"></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
@@ -131,7 +128,7 @@ import {
             href="#"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon iconType="chevron-left"></sprk-icon>
+            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-left"></sprk-icon>
           </a>
         </li>
 
@@ -141,8 +138,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': currentPage === 1,
-              'sprk-b-Link--plain': true
+              'sprk-c-Pagination__link--current': currentPage === 1
             }"
             href="#"
             [attr.data-analytics]="analyticsStringFirstLink"
@@ -171,8 +167,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': true,
-              'sprk-b-Link--plain': true
+              'sprk-c-Pagination__link--current': true
             }"
             href="#"
             aria-current="true"
@@ -198,8 +193,7 @@ import {
             [ngClass]="{
               'sprk-c-Pagination__link': true,
               'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': currentPage === totalPages(),
-              'sprk-b-Link--plain': true
+              'sprk-c-Pagination__link--current': currentPage === totalPages()
             }"
             href="#"
             [attr.data-analytics]="analyticsStringThirdLink"
@@ -222,7 +216,7 @@ import {
             [attr.data-analytics]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">Next</span>
-            <sprk-icon iconType="chevron-right"></sprk-icon>
+            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-right"></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
@@ -252,7 +246,7 @@ import {
             [attr.data-analytics]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon iconType="chevron-left"></sprk-icon>
+            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-left"></sprk-icon>
           </a>
         </li>
 
@@ -270,7 +264,7 @@ import {
             [attr.data-analytics]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
-            <sprk-icon iconType="chevron-right"></sprk-icon>
+            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-right"></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
