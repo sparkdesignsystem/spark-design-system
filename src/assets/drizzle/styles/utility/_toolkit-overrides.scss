@@ -15,6 +15,14 @@
   position: static;
 }
 
+[data-template-id^='masthead-with-extended-navigation'] .#{$app-namespace}-c-Preview__example {
+  position: relative;
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-MastheadMask {
+  position: absolute;
+}
+
 [data-template-id^='box-object'] .sprk-o-Box {
   border: 1px solid #ccc;
 }

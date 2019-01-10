@@ -9,10 +9,10 @@ restrictions:
   - You must configure the size of your own logo asset. If you don't then the logo will be automatically sized
     between the $sprk-masthead-logo-max-width (192px) and $sprk-masthead-logo-min-width (174px). You can additionally override those
     min and max settings by resetting those variables in your own SCSS file.
-  - You must set (in your own SCSS file) the SCSS variable $mobile-masthead-height so that the navigation displays properly on small screens.
+  - You must set (in your own SCSS file) the SCSS variable $sprk-masthead-narrow-height so that the navigation displays properly on small screens.
     To get the correct setting for your needs, put your logo in the Masthead and then grab the total height of the
     Masthead (on a narrow viewport) with your logo in it. Set
-    $mobile-masthead-height to that height.
+    $sprk-masthead-narrow-height to that height.
   - You must duplicate your navigational items in the Masthead navigation HTML and in the Masthead narrow
     navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
 sparkPackageCore: true
@@ -103,8 +103,32 @@ variableTable:
     default: none
     description: The default masthead shadow.
   $sprk-masthead-shadow-wide:
-    default:  0 0 40px rgba(0, 0, 0, 0.1)
+    default:  none
     description: The masthead shadow on wide viewports.
+  $sprk-masthead-shadow-scroll:
+    default:  0 0 40px rgba(0, 0, 0, 0.1)
+    description: The masthead shadow that gets applied when the page is scrolled.
+  $sprk-masthead-selector-dropdown-border-bottom-mask-open:
+    default: 2px solid $sprk-gray
+    description: The bottom border that gets applied to the selector dropdown when open.
+  $sprk-masthead-selector-bg-color:
+    default: $sprk-white
+    description: The background color of the selector.
+  $sprk-masthead-mask-color:
+    default: rgba(0, 0, 0, 0.5)
+    description: The color of the mask that gets applied when the selector dropdown is open on narrow screens.
+  $sprk-masthead-transition:
+    default: box-shadow 0.3s ease-in
+    description: The transition applied to the masthead.
+  $sprk-masthead-selector-dropdown-padding:
+    default: 0
+    description: The padding for the selector dropdown.
+  $sprk-masthead-selector-border-color-mask-open:
+    default: $sprk-white
+    description: The border color of the selector when the dropdown is open.
+  $sprk-masthead-selector-dropdown-box-shadow-mask-open:
+    default: 0 5px 10px rgba(0, 0, 0, 0.1)
+    description: The bottom border that gets applied to the selector dropdown when open.
   $sprk-masthead-selector-border:
     default: 2px solid $sprk-black-tint-25
     description: Sets the border of the masthead selector.

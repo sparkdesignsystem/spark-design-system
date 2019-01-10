@@ -32,6 +32,7 @@ import { IntroDocsComponent } from './spark-docs/intro-docs/intro-docs.component
 import { LinkDocsComponent } from './spark-docs/link-docs/link-docs.component';
 import { ListDocsComponent } from './spark-docs/list-docs/list-docs.component';
 import { MastheadDocsComponent } from './spark-docs/masthead-docs/masthead-docs.component';
+import { MastheadExtendedDocsComponent } from './spark-docs/masthead-extended-docs/masthead-extended-docs.component';
 import { ModalDocsComponent } from './spark-docs/modal-docs/modal-docs.component';
 import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-found.component';
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
   { path: 'dividers', component: DividerDocsComponent },
   { path: 'dropdowns', component: DropdownDocsComponent },
   { path: 'masthead', component: MastheadDocsComponent },
+  { path: 'masthead-extended', component: MastheadExtendedDocsComponent },
   { path: 'inputs', component: InputDocsComponent },
   { path: 'stack', component: StackDocsComponent },
   { path: 'promo', component: PromoDocsComponent },
@@ -84,6 +86,7 @@ const appRoutes: Routes = [
     DividerDocsComponent,
     DropdownDocsComponent,
     MastheadDocsComponent,
+    MastheadExtendedDocsComponent,
     InputDocsComponent,
     ListDocsComponent,
     StackDocsComponent,
