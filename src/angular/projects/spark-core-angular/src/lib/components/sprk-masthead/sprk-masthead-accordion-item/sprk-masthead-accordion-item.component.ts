@@ -28,13 +28,13 @@ import {
           <span [ngClass]="getHeadingClasses()">
             <sprk-icon
               [iconType]="leadingIcon"
-              additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+              additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-c-Icon--toggle sprk-u-mrs"
               *ngIf="leadingIcon"
             ></sprk-icon>
             {{ title }}
           </span>
           <sprk-icon
-            additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--current-color sprk-c-Icon--l {{ iconStateClass }}"
+            additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--current-color sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}"
             [iconType]="currentIconType"
           ></sprk-icon>
         </a>
