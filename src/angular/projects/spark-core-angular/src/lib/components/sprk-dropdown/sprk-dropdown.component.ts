@@ -15,32 +15,40 @@ import {
         'sprk-c-MastheadMask': isOpen && dropdownType === 'mastheadSelector'
       }"
     >
-      <a
-        [ngClass]="getTriggerClasses()"
-        aria-haspopup="true"
-        href="#nogo"
-        (click)="toggle($event)"
-        [attr.data-id]="idString"
-        [attr.data-analytics]="analyticsString"
-        role="combobox"
-      >
-        <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
-        <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
-        <sprk-icon
-          [iconType]="triggerIconType"
-          additionalClasses="sprk-c-Icon--current-color {{ additionalIconClasses }}"
-        ></sprk-icon>
-      </a>
+      <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
+        <a
+          [ngClass]="getTriggerClasses()"
+          aria-haspopup="true"
+          href="#nogo"
+          (click)="toggle($event)"
+          [attr.data-id]="idString"
+          [attr.data-analytics]="analyticsString"
+          role="combobox"
+        >
+          <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
+          <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
+          <sprk-icon
+            [iconType]="triggerIconType"
+            additionalClasses="sprk-c-Icon--current-color {{ additionalIconClasses }}"
+          ></sprk-icon>
+        </a>
+      </div>
+
       <div [ngClass]="getClasses()" *ngIf="isOpen">
-        <div class="sprk-c-Dropdown__header">
+        <div
+          class="sprk-c-Dropdown__header"
+          *ngIf="dropdownType === 'mastheadSelector' || title || selector"
+        >
           <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo" *ngIf="title">
             {{ title }}
           </h2>
+
           <a
-            *ngIf="dropdownType === 'mastheadSelector'"
+            *ngIf="selector && !title"
             class="sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             href="#nogo"
             aria-haspopup="true"
+            (click)="toggle($event)"
           >
             <span
               class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
@@ -52,6 +60,7 @@ import {
             ></sprk-icon>
           </a>
         </div>
+
         <ul class="sprk-c-Dropdown__links">
           <li
             *ngFor="let choice of choices; let i = index"

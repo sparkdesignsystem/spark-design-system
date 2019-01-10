@@ -130,7 +130,7 @@ import { Component } from '@angular/core';
         >
           <div class="sprk-o-Stack__item sprk-u-Position--relative">
             <sprk-dropdown
-              dropdownType="mastheadSelector"
+              dropdownType="informational"
               additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
               triggerText="My Selector"
               additionalClasses="sprk-c-Masthead__selector-dropdown sprk-u-Width-100"
@@ -190,7 +190,7 @@ import { Component } from '@angular/core';
               triggerIconType="user"
               additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               additionalIconClasses="sprk-c-Icon--l"
-              additionalClasses="sprk-u-Right--zero"
+              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
               screenReaderText="User Account"
             ></sprk-dropdown>
           </li>
