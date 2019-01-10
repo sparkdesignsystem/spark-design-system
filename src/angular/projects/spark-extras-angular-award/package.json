@@ -1,11 +1,13 @@
 {
   "name": "@sparkdesignsystem/spark-extras-angular-award",
   "description": "The Award component showcases awards in a vertically stacked layout that switches to side by side on larger screens.",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "scripts": {
     "lint": "ng lint spark-extras-angular-award",
     "test": "ng test spark-extras-angular-award --watch=false",
-    "build": "ng build spark-extras-angular-award"
+    "build": "ng build spark-extras-angular-award",
+    "prepublishOnly": "npm run build",
+    "lerna-publish": "cd ../../dist/spark-extras-angular-award && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",
