@@ -441,6 +441,5 @@ describe('masthead no selector test', () => {
   it('should not add event listener to selector if it does not exist', () => {
     const selectorTrigger = mastheadDiv.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
     expect(selectorTrigger).eql(null);
-    // expect(iconContainer.addEventListener.getCall(0).args[0]).eql('click');
   });
 });
