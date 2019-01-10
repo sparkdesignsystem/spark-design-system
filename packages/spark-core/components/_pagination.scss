@@ -18,6 +18,7 @@
   border: 2px solid transparent;
   border-radius: 50%;
   display: flex;
+  font-weight: $sprk-pag-link-font-weight;
   align-items: center;
   justify-content: center;
   width: $sprk-pag-circle-size;
@@ -45,7 +46,7 @@
 .sprk-c-Pagination__link--current {
   background-color: $sprk-pag-selection-color;
   color: $sprk-pag-selection-link-color;
-  font-weight: bold;
+  font-weight: $sprk-pag-current-link-font-weight;
 
   &:hover,
   &:focus,
