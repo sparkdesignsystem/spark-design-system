@@ -7,6 +7,9 @@
 - name: application
   viewBox: 0 0 64 64
   description: ...
+- name: apply-now
+  viewBox: 0 0 64 64
+  description: ...
 - name: auto-loans
   viewBox: 0 0 64 64
   description: ...
@@ -31,6 +34,9 @@
 - name: call-team-member
   viewBox: 0 0 64 64
   description: ...
+- name: camera
+  viewBox: 0 0 64 64
+  description: ...
 - name: cash-back
   viewBox: 0 0 64 64
   description: ...
@@ -50,11 +56,17 @@
 - name: chevron-down-circle-filled
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-down-circle-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-left
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
 - name: chevron-left-circle
+  viewBox: 0 0 64 64
+  description: ...
+- name: chevron-left-circle-two-color
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-right
@@ -64,6 +76,9 @@
 - name: chevron-right-circle
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-right-circle-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-up
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -71,10 +86,16 @@
 - name: chevron-up-circle
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-up-circle-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: clock
   viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
 - name: close-circle
+  viewBox: 0 0 64 64
+  description: ...
+- name: close
   viewBox: 0 0 64 64
   description: ...
 - name: cloud
@@ -122,10 +143,16 @@
 - name: exclamation
   viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
+- name: exclamation-credit
+  viewBox: 0 0 64 64
+  description: ...
 - name: exclamation-filled
   viewBox: 0 0 64 64
   description: ...
 - name: facebook
+  viewBox: 0 0 64 64
+  description: The Facebook icon is used to link to that specific social media account for a given site.
+- name: facebook-two-color
   viewBox: 0 0 64 64
   description: The Facebook icon is used to link to that specific social media account for a given site.
 - name: feedback
@@ -158,6 +185,9 @@
 - name: instagram
   viewBox: 0 0 64 64
   description: The Instagram icon is used to link to that specific social media account for a given site.
+- name: instagram-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: land
   viewBox: 0 0 64 64
   description: ...
@@ -168,6 +198,12 @@
   viewBox: 0 0 64 64
   description: ...
 - name: large-purchase
+  viewBox: 0 0 64 64
+  description: ...
+- name: linkedin
+  viewBox: 0 0 64 64
+  description: ...
+- name: linkedin-two-color
   viewBox: 0 0 64 64
   description: ...
 - name: lock
@@ -212,6 +248,9 @@
 - name: pinterest
   viewBox: 0 0 64 64
   description: ...
+- name: pinterest-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: play
   viewBox: 0 0 64 64
   description: The play icon is usually used to show when a video can be initiated.
@@ -248,6 +287,9 @@
 - name: rocket
   viewBox: 0 0 512 512
   description: Only use this in an illustrative manner.
+- name: rocket-doc-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: same-day
   viewBox: 0 0 64 64
   description: ...
@@ -275,6 +317,9 @@
 - name: snapchat
   viewBox: 0 0 64 64
   description: ...
+- name: snapchat-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: technology
   viewBox: 0 0 64 64
   description: ...
@@ -290,6 +335,9 @@
 - name: twitter
   viewBox: 0 0 64 64
   description: The Twitter icon is used to link to that specific social media account for a given site.
+- name: twitter-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: unlock
   viewBox: 0 0 64 64
   description: ...
@@ -320,4 +368,6 @@
 - name: youtube
   viewBox: 0 0 64 64
   description: The Youtube icon is used to link to that specific social media account for a given site.
-
+- name: youtube-two-color
+  viewBox: 0 0 64 64
+  description: ...

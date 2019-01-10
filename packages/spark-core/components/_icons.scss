@@ -1,6 +1,23 @@
 // ==================================================================
 // Icons
 // ==================================================================
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) circle,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) ellipse,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) line,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) path,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) path,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) g,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) polygon,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) polyline,
+.sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) rect {
+  fill: inherit;
+  stroke: inherit;
+
+  @if ($sprk-icon-using-custom-stroke) {
+    stroke-width: inherit;
+  }
+}
+
 .sprk-c-Icon {
   height: $sprk-icon-m;
   width: $sprk-icon-m;
