@@ -7,6 +7,7 @@
   box-shadow: $sprk-masthead-shadow;
   position: sticky;
   top: 0;
+  transition: $sprk-masthead-transition;
   z-index: $sprk-layer-height-m;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
@@ -29,7 +30,7 @@
 
 // Added via JS when page is scolled past masthead
 .sprk-c-Masthead--scroll {
-  box-shadow: $sprk-masthead-shadow-wide;
+  box-shadow: $sprk-masthead-shadow-scroll;
 }
 
 // Keep padding settings consistent for menu, logo branding, and little nav
@@ -149,6 +150,7 @@
 // Selector has 100% default width
 // then grows to size of content on larger views
 .sprk-c-Masthead__selector {
+  background-color: $sprk-masthead-selector-bg-color;
   border: $sprk-masthead-selector-border;
   border-radius: $sprk-masthead-selector-border-radius;
   color: $sprk-masthead-selector-font-color;
@@ -230,7 +232,8 @@
 // Fixed container that covers entire page
 // that contains the Masthead Accordion
 // Starts below the main content (logo branding, menu)
-.sprk-c-Masthead__narrow-nav {
+.sprk-c-Masthead__narrow-nav,
+.sprk-c-MastheadMask {
   background-color: $sprk-white;
   height: 100%;
   overflow: auto;
@@ -249,6 +252,39 @@
     // Hide narrow nav on larger views
     display: none;
   }
+}
+
+.sprk-c-MastheadMask {
+  background-color: $sprk-masthead-mask-color;
+  cursor: pointer;
+  z-index: $sprk-layer-height-l;
+}
+
+.sprk-c-MastheadMask
+.sprk-c-Masthead__selector {
+  border-color: $sprk-masthead-selector-border-color-mask-open;
+}
+
+// ==================================================================
+// Selector Dropdown
+// ==================================================================
+.sprk-c-Masthead__selector-dropdown {
+  border-bottom: $sprk-masthead-selector-dropdown-border-bottom-mask-open;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  box-shadow: $sprk-masthead-selector-dropdown-box-shadow-mask-open;
+  max-width: 100%;
+  margin: 0;
+  width: 100%;
+  top: 0;
+  padding: $sprk-masthead-selector-dropdown-padding;
+}
+
+.sprk-c-Masthead__selector-dropdown
+.sprk-c-Dropdown__link {
+  padding: $sprk-space-m $sprk-space-misc-a;
 }
 
 // ==================================================================

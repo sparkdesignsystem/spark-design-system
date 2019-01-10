@@ -10,64 +10,97 @@ import {
 @Component({
   selector: 'sprk-dropdown',
   template: `
-    <a
-      [ngClass]="getTriggerClasses()"
-      aria-haspopup="true"
-      href="#nogo"
-      (click)="toggle($event)"
-      [attr.data-id]="idString"
-      [attr.data-analytics]="analyticsString"
-      role="combobox"
+    <div
+      [ngClass]="{
+        'sprk-c-MastheadMask': isOpen && dropdownType === 'mastheadSelector'
+      }"
     >
-      <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
-      <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
-      <sprk-icon
-        [iconType]="triggerIconType"
-        additionalClasses="sprk-c-Icon--current-color {{ additionalIconClasses }}"
-      ></sprk-icon>
-    </a>
-    <div [ngClass]="getClasses()" *ngIf="isOpen">
-      <div class="sprk-c-Dropdown__header" *ngIf="title">
-        <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo">{{ title }}</h2>
-      </div>
-      <ul class="sprk-c-Dropdown__links">
-        <li
-          *ngFor="let choice of choices; let i = index"
-          [attr.data-sprk-dropdown-choice-index]="i"
-          (click)="choiceClick($event)"
+      <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
+        <a
+          [ngClass]="getTriggerClasses()"
+          aria-haspopup="true"
+          href="#nogo"
+          (click)="toggle($event)"
+          [attr.data-id]="idString"
+          [attr.data-analytics]="analyticsString"
+          role="combobox"
         >
-          <div *ngIf="choice.content; then: content; else: link"></div>
-          <ng-template #link>
-            <a
-              [routerLink]="choice.href"
-              [attr.data-sprk-dropdown-value]="choice.value"
-              [attr.href]="choice.href || '#nogo'"
-              [ngClass]="{
-                'sprk-c-Dropdown__link': true,
-                'sprk-c-Dropdown__link--active': choice.active
-              }"
-              role="option"
-              >{{ choice.text }}
-            </a>
-          </ng-template>
-          <ng-template #content>
-            <a
-              [attr.data-sprk-dropdown-value]="choice.value"
-              href="#nogo"
-              [ngClass]="{
-                'sprk-c-Dropdown__link': true,
-                'sprk-c-Dropdown__link--active': choice.active
-              }"
-              role="option"
+          <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
+          <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
+          <sprk-icon
+            [iconType]="triggerIconType"
+            additionalClasses="sprk-c-Icon--current-color {{ additionalIconClasses }}"
+          ></sprk-icon>
+        </a>
+      </div>
+
+      <div [ngClass]="getClasses()" *ngIf="isOpen">
+        <div
+          class="sprk-c-Dropdown__header"
+          *ngIf="dropdownType === 'mastheadSelector' || title || selector"
+        >
+          <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo" *ngIf="title">
+            {{ title }}
+          </h2>
+
+          <a
+            *ngIf="selector && !title"
+            class="sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+            href="#nogo"
+            aria-haspopup="true"
+            (click)="toggle($event)"
+          >
+            <span
+              class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+              >{{ selector }}</span
             >
-              <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
-              <p>{{ choice.content.infoLine1 }}</p>
-              <p>{{ choice.content.infoLine2 }}</p>
-            </a>
-          </ng-template>
-        </li>
-      </ul>
-      <ng-content select="[sprkDropdownFooter]"></ng-content>
+            <sprk-icon
+              [iconType]="triggerIconType"
+              additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-c-Icon--toggle sprk-Stack__item {{ additionalIconClasses }}"
+            ></sprk-icon>
+          </a>
+        </div>
+
+        <ul class="sprk-c-Dropdown__links">
+          <li
+            class="sprk-c-Dropdown__item"
+            *ngFor="let choice of choices; let i = index"
+            [attr.data-sprk-dropdown-choice-index]="i"
+            (click)="choiceClick($event)"
+          >
+            <div *ngIf="choice.content; then: content; else: link"></div>
+            <ng-template #link>
+              <a
+                [routerLink]="choice.href"
+                [attr.data-sprk-dropdown-value]="choice.value"
+                [attr.href]="choice.href || '#nogo'"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                role="option"
+                >{{ choice.text }}
+              </a>
+            </ng-template>
+            <ng-template #content>
+              <a
+                [attr.data-sprk-dropdown-value]="choice.value"
+                href="#nogo"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                role="option"
+              >
+                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p>{{ choice.content.infoLine1 }}</p>
+                <p>{{ choice.content.infoLine2 }}</p>
+              </a>
+            </ng-template>
+          </li>
+        </ul>
+        <ng-content select="[sprkDropdownFooter]"></ng-content>
+      </div>
     </div>
   `
 })
@@ -91,6 +124,8 @@ export class SparkDropdownComponent {
   @Input()
   title: string;
   @Input()
+  selector: string;
+  @Input()
   choices: any[];
   @Input()
   triggerIconType: string;
@@ -110,7 +145,10 @@ export class SparkDropdownComponent {
 
   @HostListener('document:click', ['$event'])
   onClick(event): void {
-    if (!this.ref.nativeElement.contains(event.target)) {
+    if (
+      !this.ref.nativeElement.contains(event.target) ||
+      event.target.classList.contains('sprk-c-MastheadMask')
+    ) {
       this.hideDropdown();
     }
   }
@@ -118,7 +156,10 @@ export class SparkDropdownComponent {
   @HostListener('document:focusin', ['$event'])
   onFocusin(event): void {
     /* istanbul ignore else: angular focus event isnt setting e.target */
-    if (!this.ref.nativeElement.contains(event.target)) {
+    if (
+      !this.ref.nativeElement.contains(event.target) ||
+      event.target.classList.contains('sprk-c-MastheadMask')
+    ) {
       this.hideDropdown();
     }
   }
@@ -130,7 +171,10 @@ export class SparkDropdownComponent {
       'data-sprk-dropdown-choice-index'
     );
     const clickedChoice = this.choices[choiceIndex];
-    if (this.dropdownType === 'informational') {
+    if (
+      this.dropdownType === 'informational' ||
+      this.dropdownType === 'mastheadSelector'
+    ) {
       this.setActiveChoice(event);
       this.updateTriggerText(event);
     }
