@@ -144,7 +144,10 @@ export class SparkDropdownComponent {
 
   @HostListener('document:click', ['$event'])
   onClick(event): void {
-    if (!this.ref.nativeElement.contains(event.target)) {
+    if (
+      !this.ref.nativeElement.contains(event.target) ||
+      event.target.classList.contains('sprk-c-MastheadMask')
+    ) {
       this.hideDropdown();
     }
   }
@@ -152,7 +155,10 @@ export class SparkDropdownComponent {
   @HostListener('document:focusin', ['$event'])
   onFocusin(event): void {
     /* istanbul ignore else: angular focus event isnt setting e.target */
-    if (!this.ref.nativeElement.contains(event.target)) {
+    if (
+      !this.ref.nativeElement.contains(event.target) ||
+      event.target.classList.contains('sprk-c-MastheadMask')
+    ) {
       this.hideDropdown();
     }
   }

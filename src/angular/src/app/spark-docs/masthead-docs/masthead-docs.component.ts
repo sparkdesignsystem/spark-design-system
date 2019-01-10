@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'sprk-masthead-docs',
   template: `
     <div class="drizzle-o-ContentGrouping drizzle-c-Preview">
-      <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
         [bigNavLinks]="links"
@@ -196,10 +195,10 @@ import { Component } from '@angular/core';
           </li>
         </ul>
       </sprk-masthead>
+      <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
     </div>
 
     <div class="drizzle-o-ContentGrouping drizzle-c-Preview">
-      <h2 class="drizzle-b-h2">Masthead (default)</h2>
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
         [narrowNavLinks]="defaultNarrowLinks"
@@ -382,11 +381,14 @@ import { Component } from '@angular/core';
           >
         </div>
       </sprk-masthead>
+      <h2 class="drizzle-b-h2">Masthead (default)</h2>
     </div>
   `,
   styles: [``]
 })
 export class MastheadDocsComponent {
+  currentRoute = 'masthead';
+
   links = [
     {
       text: 'Navigation Item',
