@@ -28,7 +28,7 @@ variableTable:
     default: 400
     description: The font weight of the pagination links.
   $sprk-pag-selection-color:
-    default: $sprk-red
+    default: $sprk-green
     description: The accent color for selected pagination links.
   $sprk-pag-selection-link-color:
     default: $sprk-white
