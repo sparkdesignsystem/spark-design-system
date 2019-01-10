@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
         [bigNavLinks]="links"
-        [narrowNavLinks]="narrowLinks"
+        [narrowNavLinks]="extendedNarrowLinks"
         [narrowSelector]="mySelector"
         idString="masthead-1"
       >
@@ -195,14 +195,6 @@ import { Component } from '@angular/core';
             ></sprk-dropdown>
           </li>
         </ul>
-
-        <div class="sprk-u-mas" narrowNavFooter>
-          <a
-            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
-            href="#nogo"
-            >Sign In</a
-          >
-        </div>
       </sprk-masthead>
     </div>
 
@@ -452,7 +444,7 @@ export class MastheadDocsComponent {
     }
   ];
 
-  defaultNarrowLinks = [
+  extendedNarrowLinks = [
     {
       text: 'Item 1',
       href: '#nogo',
@@ -542,7 +534,7 @@ export class MastheadDocsComponent {
     }
   ];
 
-  narrowLinks = [
+  defaultNarrowLinks = [
     {
       text: 'Item 1',
       href: '#nogo',
