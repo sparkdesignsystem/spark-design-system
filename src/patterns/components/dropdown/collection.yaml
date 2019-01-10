@@ -42,7 +42,7 @@ variableTable:
     default: $sprk-dropdown-font-size
     description: Sets the font-size of the dropdown title.
   $sprk-dropdown-title-font-weight:
-    default: $sprk-dropdown-font-weight
+    default: 300
     description: Sets the font weight of the dropdown title.
 classTable:
   .sprk-c-Dropdown__link--active:

@@ -366,14 +366,16 @@ $sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
 $sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
-$sprk-link-has-icon-color: $sprk-green !default;
+$sprk-link-has-icon-color-icon: $sprk-green !default;
 $sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
 $sprk-link-has-icon-underline-width: 0 !default;
 $sprk-link-has-icon-underline-color: transparent !default;
+$sprk-link-has-icon-fill: transparent !default;
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+$sprk-link-has-icon-hover-color-text: $sprk-green !default;
 $sprk-link-plain-border: none !default;
 $sprk-link-plain-visited-border: none !default;
 $sprk-link-disabled-color: $sprk-gray-dark !default;
@@ -438,7 +440,7 @@ $sprk-select-font-family: $sprk-text-input-font-family !default;
 $sprk-select-font-weight: $sprk-text-input-font-weight !default;
 $sprk-select-line-height: $sprk-text-input-line-height !default;
 $sprk-select-outline: $sprk-text-input-outline !default;
-$sprk-select-padding: 12px 45px 12px 13px !default;
+$sprk-select-padding: 14px 45px 14px 13px !default;
 $sprk-select-arrow-offset-y: -37px !default;
 $sprk-select-arrow-offset-x: 8px !default;
 $sprk-select-arrow-stroke-width: 6px !default;
@@ -675,7 +677,7 @@ $sprk-dropdown-padding: $sprk-space-misc-a !default;
 $sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
 $sprk-dropdown-title-color: $sprk-black-tint-25 !default;
 $sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
-$sprk-dropdown-title-font-weight: $sprk-dropdown-font-weight !default;
+$sprk-dropdown-title-font-weight: 300 !default;
 
 //
 // Modals
@@ -716,14 +718,23 @@ $sprk-masthead-column-width: 89rem !default;
 $sprk-masthead-logo-max-width: 192px !default;
 $sprk-masthead-logo-min-width: 174px !default;
 $sprk-masthead-shadow: none !default;
-$sprk-masthead-shadow-wide: 0 0 40px rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-shadow-wide: none;
+$sprk-masthead-shadow-scroll: 0 0 40px rgba(0, 0, 0, 0.1) !default;
 $sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
 $sprk-masthead-selector-font-weight: 300 !default;
 $sprk-masthead-selector-border-radius: 5px !default;
+$sprk-masthead-selector-dropdown-border-bottom-mask-open: 2px solid $sprk-gray !default;
+$sprk-masthead-selector-dropdown-box-shadow-mask-open: 0 5px 10px rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-selector-border-color-mask-open: $sprk-white !default;
 $sprk-masthead-selector-font-color: $sprk-black !default;
+$sprk-masthead-selector-bg-color: $sprk-white !default;
 $sprk-masthead-selector-padding: $sprk-space-inset-short-m !default;
+$sprk-masthead-selector-dropdown-padding: 0 !default;
 $sprk-masthead-selector-min-width: 17rem !default;
 $sprk-masthead-narrow-height: 81px !default;
+$sprk-masthead-mask-color: rgba(0, 0, 0, 0.5) !default;
+$sprk-masthead-transition: box-shadow 0.3s ease-in !default;
+
 // Big Nav
 $sprk-big-nav-column-width: 64rem !default;
 $sprk-big-nav-bg: $sprk-white !default;

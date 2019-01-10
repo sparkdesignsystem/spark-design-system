@@ -157,7 +157,7 @@ variableTable:
     default: $sprk-text-input-outline
     description: The outline applied to select elements.
   $sprk-select-padding:
-    default: 12px 45px 12px 13px
+    default: 14px 45px 14px 13px
     description: The padding applied to select elements.
   $sprk-select-arrow-offset-y:
     default: -37px
