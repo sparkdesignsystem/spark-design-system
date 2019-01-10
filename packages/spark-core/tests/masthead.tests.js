@@ -381,3 +381,66 @@ describe('focus trap tests', () => {
     expect(document.activeElement.textContent).eql('Button2');
   });
 });
+
+describe('masthead no selector test', () => {
+  let main;
+  let nav;
+  let navItem;
+  let icon;
+  let mastheadDiv;
+  let iconContainer;
+
+  beforeEach(() => {
+    main = document.createElement('div');
+    main.setAttribute('data-sprk-main', null);
+
+    // Create the main Masthead element
+    mastheadDiv = document.createElement('div');
+    mastheadDiv.classList.add('sprk-c-Masthead');
+    mastheadDiv.setAttribute('data-sprk-masthead', null);
+
+    // Create narrow nav
+    nav = document.createElement('div');
+    // Create nav item
+    navItem = document.createElement('button');
+    // Add navItem to nav
+    nav.appendChild(navItem);
+    nav.classList.add('sprk-u-Display--none');
+    nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
+
+    // Add nav to masthead
+    mastheadDiv.appendChild(nav);
+
+    // Create an svg icon
+    icon = document.createElement('svg');
+
+    // Create a menu button container for icon
+    iconContainer = document.createElement('button');
+    iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
+
+    // Add mobile menu icon to container
+    iconContainer.appendChild(icon);
+
+    // Add iconContainer to mastheadDiv
+    mastheadDiv.appendChild(iconContainer);
+
+    sinon.spy(nav, 'addEventListener');
+    sinon.spy(iconContainer, 'addEventListener');
+    main.appendChild(mastheadDiv);
+    document.body.appendChild(main);
+    bindUIEvents();
+    dropdowns();
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+    nav.addEventListener.restore();
+    iconContainer.addEventListener.restore();
+  });
+
+  it('should not add event listener to selector if it does not exist', () => {
+    const selectorTrigger = mastheadDiv.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
+    expect(selectorTrigger).eql(null);
+    // expect(iconContainer.addEventListener.getCall(0).args[0]).eql('click');
+  });
+});
