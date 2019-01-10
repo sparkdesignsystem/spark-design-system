@@ -50,20 +50,21 @@
   &:focus,
   &:visited {
     border-bottom: $sprk-link-has-icon-hover-border-bottom;
+    color: $sprk-link-has-icon-color;
   }
 }
 
 .sprk-b-Link--has-icon .sprk-c-Icon {
   color: $sprk-link-has-icon-color;
   stroke: $sprk-link-has-icon-color;
-  fill: $sprk-link-has-icon-color;
+  fill: $sprk-link-has-icon-fill;
 }
 
 .sprk-b-Link--disabled,
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
   stroke: $sprk-link-disabled-color;
-  fill: $sprk-link-disabled-color;
+  fill: $sprk-link-has-icon-fill;
   pointer-events: none;
   border-bottom: $sprk-link-disabled-border-bottom;
   font-weight: $sprk-link-disabled-font-weight;
