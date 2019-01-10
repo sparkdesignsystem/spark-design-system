@@ -94,9 +94,11 @@ $sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
 // Pagination
 ///
 $sprk-pag-max-width: 26rem !default;
+$sprk-pag-current-link-font-weight: 500;
 $sprk-pag-link-color: $sprk-black !default;
 $sprk-pag-link-color-hover: $sprk-pag-link-color !default;
-$sprk-pag-selection-color: $sprk-red !default;
+$sprk-pag-link-font-weight: 400;
+$sprk-pag-selection-color: $sprk-green !default;
 $sprk-pag-selection-link-color: $sprk-white !default;
 $sprk-pag-selection-link-color-hover: $sprk-white !default;
 $sprk-pag-circle-size: 2em !default;
@@ -437,7 +439,7 @@ $sprk-select-font-family: $sprk-text-input-font-family !default;
 $sprk-select-font-weight: $sprk-text-input-font-weight !default;
 $sprk-select-line-height: $sprk-text-input-line-height !default;
 $sprk-select-outline: $sprk-text-input-outline !default;
-$sprk-select-padding: 12px 45px 12px 13px !default;
+$sprk-select-padding: 14px 45px 14px 13px !default;
 $sprk-select-arrow-offset-y: -37px !default;
 $sprk-select-arrow-offset-x: 8px !default;
 $sprk-select-arrow-stroke-width: 6px !default;
