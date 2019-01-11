@@ -137,7 +137,7 @@ import { Component } from '@angular/core';
               triggerIconType="chevron-down"
               [choices]="siteDropdownChoices"
               selector="Select One"
-              additionalIconClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-Stack__item"
+              additionalIconClasses="sprk-c-Icon--current-color sprk-Stack__item"
               additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
             >
               <div

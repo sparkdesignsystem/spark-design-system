@@ -17,6 +17,38 @@
   }
 }
 
+.sprk-o-FilledIconSymbol circle,
+.sprk-o-FilledIconSymbol ellipse,
+.sprk-o-FilledIconSymbol line,
+.sprk-o-FilledIconSymbol path,
+.sprk-o-FilledIconSymbol g,
+.sprk-o-FilledIconSymbol polygon,
+.sprk-o-FilledIconSymbol polyline,
+.sprk-o-FilledIconSymbol rect {
+  fill: inherit;
+  stroke: inherit;
+
+  @if ($sprk-icon-using-custom-stroke) {
+    stroke-width: inherit;
+  }
+}
+
+.sprk-o-FilledSmallIconSymbol circle,
+.sprk-o-FilledSmallIconSymbol ellipse,
+.sprk-o-FilledSmallIconSymbol line,
+.sprk-o-FilledSmallIconSymbol path,
+.sprk-o-FilledSmallIconSymbol g,
+.sprk-o-FilledSmallIconSymbol polygon,
+.sprk-o-FilledSmallIconSymbol polyline,
+.sprk-o-FilledSmallIconSymbol rect {
+  fill: inherit;
+  stroke: inherit;
+
+  @if ($sprk-icon-using-custom-stroke) {
+    stroke-width: inherit;
+  }
+}
+
 .sprk-c-Icon {
   height: $sprk-icon-m;
   width: $sprk-icon-m;

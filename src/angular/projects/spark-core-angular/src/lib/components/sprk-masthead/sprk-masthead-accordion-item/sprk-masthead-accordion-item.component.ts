@@ -34,7 +34,7 @@ import {
             {{ title }}
           </span>
           <sprk-icon
-            additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--current-color sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}"
+            additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--current-color sprk-c-Icon--toggle {{ iconStateClass }}"
             [iconType]="currentIconType"
           ></sprk-icon>
         </a>
