@@ -66,9 +66,14 @@
   fill: $sprk-icon-filled-fill-color;
 }
 
-.sprk-c-Icon--current-color {
+.sprk-c-Icon--stroke-current-color {
   fill: none;
   stroke: currentColor;
+}
+
+.sprk-c-Icon--filled-current-color {
+  fill: currentColor;
+  stroke: none;
 }
 
 .sprk-c-Icon--l {

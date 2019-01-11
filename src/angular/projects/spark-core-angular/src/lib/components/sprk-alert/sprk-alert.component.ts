@@ -14,7 +14,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core';
       <div class="sprk-c-Alert__content">
         <sprk-icon
           iconType="{{ icon }}"
-          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--current-color"
+          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
           aria-hidden="true"
         ></sprk-icon>
 
@@ -30,7 +30,7 @@ import { dismissAlert } from '@sparkdesignsystem/spark-core';
       >
         <sprk-icon
           iconType="close"
-          additionalClasses="sprk-c-Icon--current-color"
+          additionalClasses="sprk-c-Icon--stroke-current-color"
           aria-hidden="true"
         ></sprk-icon>
       </button>

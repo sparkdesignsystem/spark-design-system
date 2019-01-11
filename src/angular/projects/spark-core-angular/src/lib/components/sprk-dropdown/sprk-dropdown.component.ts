@@ -29,7 +29,7 @@ import {
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconType]="triggerIconType"
-            additionalClasses="sprk-u-mls sprk-c-Icon--current-color {{ additionalIconClasses }}"
+            additionalClasses="sprk-u-mls sprk-c-Icon--stroke-current-color {{ additionalIconClasses }}"
           ></sprk-icon>
         </a>
       </div>
@@ -56,7 +56,7 @@ import {
             >
             <sprk-icon
               [iconType]="triggerIconType"
-              additionalClasses="sprk-c-Icon--current-color sprk-u-mls sprk-c-Icon--toggle sprk-Stack__item {{ additionalIconClasses }}"
+              additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls sprk-c-Icon--toggle sprk-Stack__item {{ additionalIconClasses }}"
             ></sprk-icon>
           </a>
         </div>

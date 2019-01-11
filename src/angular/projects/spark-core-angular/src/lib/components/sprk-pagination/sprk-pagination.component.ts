@@ -33,7 +33,7 @@ import {
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--current-color"
+              additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-left"
             ></sprk-icon>
           </a>
@@ -104,7 +104,7 @@ import {
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--current-color"
+              additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-right"
             ></sprk-icon>
           </a>
@@ -135,7 +135,7 @@ import {
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--current-color"
+              additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-left"
             ></sprk-icon>
           </a>
@@ -226,7 +226,7 @@ import {
           >
             <span class="sprk-u-ScreenReaderText">Next</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--current-color"
+              additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-right"
             ></sprk-icon>
           </a>
@@ -259,7 +259,7 @@ import {
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--current-color"
+              additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-left"
             ></sprk-icon>
           </a>
@@ -280,7 +280,7 @@ import {
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--current-color"
+              additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-right"
             ></sprk-icon>
           </a>

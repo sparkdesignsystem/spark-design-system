@@ -75,7 +75,7 @@ variableTable:
     default: 1.5
     description: The line height of the text in the content area.
   $sprk-alert-icon-size:
-    default: 40px
+    default: 32px
     description: Sets the height and width of the two icons used in the alert.
   $sprk-alert-shadow:
     default: 0 3px 10px 1px rgba(0, 0, 0, 0.08)
