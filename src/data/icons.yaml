@@ -28,6 +28,7 @@
 - name: bell-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: blog
   viewBox: 0 0 64 64
   description: ...
@@ -55,6 +56,7 @@
 - name: chat-online-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: check-mark
   viewBox: 0 0 64 64
   description: ...
@@ -64,17 +66,12 @@
 - name: check-mark-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: chevron-down
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
     be taken after the action is taken.
 - name: chevron-down-circle
-  viewBox: 0 0 64 64
-  description: ...
-- name: chevron-down-circle-filled
-  viewBox: 0 0 64 64
-  description: ...
-- name: chevron-down-circle-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-down-circle-two-color
@@ -86,6 +83,7 @@
 - name: chevron-down-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: chevron-left
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -102,6 +100,7 @@
 - name: chevron-left-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: chevron-right
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -118,6 +117,7 @@
 - name: chevron-right-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: chevron-up
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -134,6 +134,7 @@
 - name: chevron-up-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: clock
   viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
@@ -143,6 +144,7 @@
 - name: clock-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: close-circle
   viewBox: 0 0 64 64
   description: ...
@@ -155,6 +157,7 @@
 - name: close-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: cloud
   viewBox: 0 0 64 64
   description: ...
@@ -164,6 +167,7 @@
 - name: cloud-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: communication
   viewBox: 0 0 64 64
   description: ...
@@ -173,6 +177,7 @@
 - name: communication-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: condo
   viewBox: 0 0 64 64
   description: ...
@@ -200,6 +205,7 @@
 - name: document-review-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: documents
   viewBox: 0 0 64 64
   description: ...
@@ -212,6 +218,7 @@
 - name: download-filled-small
   viewBox: 0 0 64 64
   description: The download icon is used to show when something is available to be downloaded.
+  small: true
 - name: editable
   viewBox: 0 0 64 64
   description: ...
@@ -227,6 +234,7 @@
 - name: email-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: exclamation
   viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
@@ -239,6 +247,7 @@
 - name: exclamation-filled-small
   viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
+  small: true
 - name: facebook
   viewBox: 0 0 64 64
   description: The Facebook icon is used to link to that specific social media account for a given site.
@@ -254,6 +263,7 @@
 - name: feedback-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: find-agent
   viewBox: 0 0 64 64
   description: ...
@@ -284,6 +294,7 @@
 - name: information-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: instagram
   viewBox: 0 0 64 64
   description: The Instagram icon is used to link to that specific social media account for a given site.
@@ -302,6 +313,7 @@
 - name: landline-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: laptop
   viewBox: 0 0 64 64
   description: ...
@@ -347,6 +359,7 @@
 - name: organize-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: our-family
   viewBox: 0 0 64 64
   description: ...
@@ -377,6 +390,7 @@
 - name: plus-filled-small
   viewBox: 0 0 64 64
   description: This icon usually indicates when there is an expandable action or when something can be added.
+  small: true
 - name: prequalified
   viewBox: 0 0 64 64
   description: ...
@@ -386,6 +400,7 @@
 - name: prequalified-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: price-per-sq-ft
   viewBox: 0 0 64 64
   description: ...
@@ -401,6 +416,7 @@
 - name: question-filled-small
   viewBox: 0 0 64 64
   description: This icon should be used to indicate that there is extra information provided to aid in the experience.
+  small: true
 - name: rate-shield
   viewBox: 0 0 64 64
   description: ...
@@ -410,6 +426,7 @@
 - name: rate-shield-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: rates
   viewBox: 0 0 64 64
   description: ...
@@ -452,6 +469,7 @@
 - name: settings-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: single
   viewBox: 0 0 64 64
   description: ...
@@ -482,6 +500,7 @@
 - name: trash-filled-small
   viewBox: 0 0 64 64
   description: ...
+  small: true
 - name: twitter
   viewBox: 0 0 64 64
   description: The Twitter icon is used to link to that specific social media account for a given site.

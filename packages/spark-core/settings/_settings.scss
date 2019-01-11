@@ -237,15 +237,16 @@ $sprk-alert-border: 1px solid $sprk-gray !default;
 $sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-alert-color: $sprk-black !default;
 $sprk-alert-bg-color: $sprk-white !default;
-$sprk-alert-icon-size: 30px !default;
+$sprk-alert-icon-size: 32px !default;
 $sprk-alert-font-size: 1rem !default;
 $sprk-alert-font-weight: 400 !default;
 $sprk-alert-line-height: 1.5 !default;
 $sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
   $sprk-space-misc-a !default;
-$sprk-alert-dismiss-padding: $sprk-space-m !default;
+$sprk-alert-dismiss-padding: $sprk-space-m 24px $sprk-space-m $sprk-space-m !default;
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
-$sprk-alert-dismiss-icon-color: $sprk-black;
+$sprk-alert-dismiss-icon-color: $sprk-black !default;
+$sprk-alert-dismiss-icon-size: $sprk-space-m !default;
 // Info
 $sprk-alert-icon-color-info: $sprk-blue !default;
 $sprk-alert-border-info: 1px solid $sprk-blue !default;
@@ -689,6 +690,7 @@ $sprk-modal-height: 70% !default;
 $sprk-modal-breakpoint-small: 25rem !default;
 $sprk-modal-breakpoint-medium: 37.5rem !default;
 $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
+$sprk-modal-border-radius: 8px !default;
 
 //
 // Masthead

@@ -59,8 +59,6 @@ export class IconSetDocsComponent {
     'check-mark-filled-small',
     'chevron-down',
     'chevron-down-circle',
-    'chevron-down-circle-filled',
-    'chevron-down-circle-filled-small',
     'chevron-down-circle-two-color',
     'chevron-down-filled',
     'chevron-down-filled-small',
