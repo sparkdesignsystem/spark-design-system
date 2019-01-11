@@ -25,6 +25,9 @@
 - name: bell-filled
   viewBox: 0 0 64 64
   description: ...
+- name: bell-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: blog
   viewBox: 0 0 64 64
   description: ...
@@ -49,10 +52,16 @@
 - name: chat-online-filled
   viewBox: 0 0 64 64
   description: ...
+- name: chat-online-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: check-mark
   viewBox: 0 0 64 64
   description: ...
 - name: check-mark-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: check-mark-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-down
@@ -65,10 +74,16 @@
 - name: chevron-down-circle-filled
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-down-circle-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-down-circle-two-color
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-down-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: chevron-down-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-left
@@ -84,6 +99,9 @@
 - name: chevron-left-filled
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-left-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: chevron-right
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -95,6 +113,9 @@
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-right-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: chevron-right-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: chevron-up
@@ -110,10 +131,16 @@
 - name: chevron-up-filled
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-up-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: clock
   viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
 - name: clock-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: clock-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: close-circle
@@ -125,16 +152,25 @@
 - name: close-filled
   viewBox: 0 0 64 64
   description: ...
+- name: close-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: cloud
   viewBox: 0 0 64 64
   description: ...
 - name: cloud-filled
   viewBox: 0 0 64 64
   description: ...
+- name: cloud-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: communication
   viewBox: 0 0 64 64
   description: ...
 - name: communication-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: communication-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: condo
@@ -161,6 +197,9 @@
 - name: document-review-filled
   viewBox: 0 0 64 64
   description: ...
+- name: document-review-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: documents
   viewBox: 0 0 64 64
   description: ...
@@ -168,6 +207,9 @@
   viewBox: 0 0 64 64
   description: The download icon is used to show when something is available to be downloaded.
 - name: download-filled
+  viewBox: 0 0 64 64
+  description: The download icon is used to show when something is available to be downloaded.
+- name: download-filled-small
   viewBox: 0 0 64 64
   description: The download icon is used to show when something is available to be downloaded.
 - name: editable
@@ -182,10 +224,10 @@
 - name: email-filled
   viewBox: 0 0 64 64
   description: ...
-- name: exclamation
+- name: email-filled-small
   viewBox: 0 0 64 64
-  description: This icon is used to illustrate an error or when something goes wrong.
-- name: exclamation-filled
+  description: ...
+- name: exclamation
   viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
 - name: exclamation-credit
@@ -193,7 +235,10 @@
   description: ...
 - name: exclamation-filled
   viewBox: 0 0 64 64
-  description: ...
+  description: This icon is used to illustrate an error or when something goes wrong.
+- name: exclamation-filled-small
+  viewBox: 0 0 64 64
+  description: This icon is used to illustrate an error or when something goes wrong.
 - name: facebook
   viewBox: 0 0 64 64
   description: The Facebook icon is used to link to that specific social media account for a given site.
@@ -204,6 +249,9 @@
   viewBox: 0 0 64 64
   description: ...
 - name: feedback-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: feedback-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: find-agent
@@ -233,6 +281,9 @@
 - name: information-filled
   viewBox: 0 0 64 64
   description: ...
+- name: information-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: instagram
   viewBox: 0 0 64 64
   description: The Instagram icon is used to link to that specific social media account for a given site.
@@ -246,6 +297,9 @@
   viewBox: 0 0 64 64
   description: ...
 - name: landline-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: landline-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: laptop
@@ -290,6 +344,9 @@
 - name: organize-filled
   viewBox: 0 0 64 64
   description: ...
+- name: organize-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: our-family
   viewBox: 0 0 64 64
   description: ...
@@ -317,10 +374,16 @@
 - name: plus-filled
   viewBox: 0 0 64 64
   description: This icon usually indicates when there is an expandable action or when something can be added.
+- name: plus-filled-small
+  viewBox: 0 0 64 64
+  description: This icon usually indicates when there is an expandable action or when something can be added.
 - name: prequalified
   viewBox: 0 0 64 64
   description: ...
 - name: prequalified-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: prequalified-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: price-per-sq-ft
@@ -335,10 +398,16 @@
 - name: question-filled
   viewBox: 0 0 64 64
   description: This icon should be used to indicate that there is extra information provided to aid in the experience.
+- name: question-filled-small
+  viewBox: 0 0 64 64
+  description: This icon should be used to indicate that there is extra information provided to aid in the experience.
 - name: rate-shield
   viewBox: 0 0 64 64
   description: ...
 - name: rate-shield-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: rate-shield-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: rates
@@ -380,6 +449,9 @@
 - name: settings-filled
   viewBox: 0 0 64 64
   description: ...
+- name: settings-filled-small
+  viewBox: 0 0 64 64
+  description: ...
 - name: single
   viewBox: 0 0 64 64
   description: ...
@@ -405,6 +477,9 @@
   viewBox: 0 0 64 64
   description: ...
 - name: trash-filled
+  viewBox: 0 0 64 64
+  description: ...
+- name: trash-filled-small
   viewBox: 0 0 64 64
   description: ...
 - name: twitter
