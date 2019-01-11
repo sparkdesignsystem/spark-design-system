@@ -40,8 +40,8 @@ import * as _ from 'lodash';
             (click)="closeModal($event)"
           >
             <sprk-icon
-              iconType="close-circle"
-              additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"
+              iconType="close"
+              additionalClasses="sprk-c-Icon--current-color"
             ></sprk-icon>
           </button>
         </header>
