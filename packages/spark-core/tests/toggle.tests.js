@@ -122,14 +122,14 @@ describe('Toggle tests', () => {
   it('should toggle accordion item open', () => {
     handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
     expect(containerAccordion.classList.contains('sprk-c-Accordion__item--open')).eql(true);
-    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-two-color');
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-up-circle-two-color');
   });
 
   it('should toggle accordion item open', () => {
     triggerAccordion.setAttribute('data-sprk-toggle-type', 'masthead-accordion');
     handleToggleClick(contentAccordion, iconAccordion, iconAccordionUseElement, triggerAccordion);
     expect(containerAccordion.classList.contains('sprk-c-MastheadAccordion__item--open')).eql(true);
-    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-down-circle-two-color');
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).eql('#chevron-up-circle-two-color');
   });
 
   it('should toggle accordion icon open', () => {
