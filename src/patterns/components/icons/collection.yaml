@@ -33,6 +33,12 @@ variableTable:
   $sprk-icon-stroke-color:
     default: $sprk-red
     description: Sets the stroke color of the icons.
+  $sprk-icon-filled-stroke-color:
+    default: none
+    description: Sets the stroke color of filled icons.
+  $sprk-icon-filled-fill-color:
+    default: $sprk-black
+    description: Sets the fill color of filled icons.
   $sprk-icon-using-custom-stroke:
     default: true
     description: Boolean value for if you want to use a custom stroke-width setting on the icons.

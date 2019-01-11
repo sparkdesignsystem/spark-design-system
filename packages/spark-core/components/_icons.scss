@@ -60,6 +60,12 @@
   }
 }
 
+.sprk-c-Icon--filled,
+.sprk-c-Icon--filled-small {
+  stroke: $sprk-icon-filled-stroke-color;
+  fill: $sprk-icon-filled-fill-color;
+}
+
 .sprk-c-Icon--current-color {
   fill: none;
   stroke: currentColor;
