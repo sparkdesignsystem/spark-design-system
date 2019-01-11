@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-highlight-board",
-  "version": "4.0.2",
+  "version": "4.0.1",
   "description": "The Highlight Board component is used as a lead into an experience as a means to encourage engagement within the experience.",
   "scripts": {
     "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDependencies": {
-    "@sparkdesignsystem/spark-core": "^9.0.0"
+    "@sparkdesignsystem/spark-core": "^10.0.0"
   },
   "dependencies": {
     "chai": "^4.2.0",

@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-card",
-  "version": "4.0.2",
+  "version": "4.0.1",
   "description": "Cards present related content. They provide an easy way to get information quickly and are typically used in groups.",
   "main": "_card.scss",
   "scripts": {
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDependencies": {
-    "@sparkdesignsystem/spark-core": "^9.0.0"
+    "@sparkdesignsystem/spark-core": "^10.0.0"
   },
   "publishConfig": {
     "access": "public",
-    "@sparkdesignsystem/spark-core": "^9.0.0"
+    "@sparkdesignsystem/spark-core": "^10.0.0"
   }
 }

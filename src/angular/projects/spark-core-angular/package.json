@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^6.1.4",
     "@angular/platform-browser-dynamic": "^6.1.4",
     "@angular/router": "^6.1.4",
-    "@sparkdesignsystem/spark-core": "^9.0.0",
+    "@sparkdesignsystem/spark-core": "^10.0.0",
     "lodash": "^4.17.10",
     "tiny-date-picker": "^3.2.6"
   },
