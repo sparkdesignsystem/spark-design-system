@@ -7,6 +7,9 @@
 - name: application
   viewBox: 0 0 64 64
   description: ...
+- name: apply-now
+  viewBox: 0 0 64 64
+  description: ...
 - name: auto-loans
   viewBox: 0 0 64 64
   description: ...
@@ -19,6 +22,15 @@
 - name: bell
   viewBox: 0 0 64 64
   description: The bell icon is used to highlight an important action that needs to be taken.
+- name: bell-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: bell-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: blog
   viewBox: 0 0 64 64
   description: ...
@@ -31,15 +43,36 @@
 - name: call-team-member
   viewBox: 0 0 64 64
   description: ...
+- name: camera
+  viewBox: 0 0 64 64
+  description: ...
 - name: cash-back
   viewBox: 0 0 64 64
   description: ...
 - name: chat-online
   viewBox: 0 0 64 64
   description: ...
+- name: chat-online-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: chat-online-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: check-mark
   viewBox: 0 0 64 64
   description: ...
+- name: check-mark-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: check-mark-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: chevron-down
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -47,9 +80,18 @@
 - name: chevron-down-circle
   viewBox: 0 0 64 64
   description: ...
-- name: chevron-down-circle-filled
+- name: chevron-down-circle-two-color
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-down-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: chevron-down-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: chevron-left
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -57,6 +99,18 @@
 - name: chevron-left-circle
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-left-circle-two-color
+  viewBox: 0 0 64 64
+  description: ...
+- name: chevron-left-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: chevron-left-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: chevron-right
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -64,6 +118,18 @@
 - name: chevron-right-circle
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-right-circle-two-color
+  viewBox: 0 0 64 64
+  description: ...
+- name: chevron-right-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: chevron-right-filled-small
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+  small: true
 - name: chevron-up
   viewBox: 0 0 64 64
   description: Used to illustrate the direction an action can be taken or where the user will
@@ -71,18 +137,69 @@
 - name: chevron-up-circle
   viewBox: 0 0 64 64
   description: ...
+- name: chevron-up-circle-two-color
+  viewBox: 0 0 64 64
+  description: ...
+- name: chevron-up-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: chevron-up-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: clock
   viewBox: 0 0 64 64
   description: The clock icon should be used to indicate when something is time sensitive.
+- name: clock-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: clock-filled-small
+  viewBox: 0 0 64 64
+  filled: true
+  small: true
+  description: ...
 - name: close-circle
   viewBox: 0 0 64 64
   description: ...
+- name: close
+  viewBox: 0 0 64 64
+  description: ...
+- name: close-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: close-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: cloud
   viewBox: 0 0 64 64
   description: ...
+- name: cloud-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: cloud-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: communication
   viewBox: 0 0 64 64
   description: ...
+- name: communication-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: communication-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: condo
   viewBox: 0 0 64 64
   description: ...
@@ -104,12 +221,30 @@
 - name: document-review
   viewBox: 0 0 64 64
   description: ...
+- name: document-review-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: document-review-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: documents
   viewBox: 0 0 64 64
   description: ...
 - name: download
   viewBox: 0 0 64 64
   description: The download icon is used to show when something is available to be downloaded.
+- name: download-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: The download icon is used to show when something is available to be downloaded.
+- name: download-filled-small
+  viewBox: 0 0 64 64
+  description: The download icon is used to show when something is available to be downloaded.
+  filled: true
+  small: true
 - name: editable
   viewBox: 0 0 64 64
   description: ...
@@ -119,18 +254,48 @@
 - name: email
   viewBox: 0 0 64 64
   description: ...
+- name: email-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: email-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: exclamation
   viewBox: 0 0 64 64
   description: This icon is used to illustrate an error or when something goes wrong.
-- name: exclamation-filled
+- name: exclamation-credit
   viewBox: 0 0 64 64
   description: ...
+- name: exclamation-filled
+  viewBox: 0 0 64 64
+  description: This icon is used to illustrate an error or when something goes wrong.
+  filled: true
+- name: exclamation-filled-small
+  viewBox: 0 0 64 64
+  description: This icon is used to illustrate an error or when something goes wrong.
+  filled: true
+  small: true
 - name: facebook
+  viewBox: 0 0 64 64
+  description: The Facebook icon is used to link to that specific social media account for a given site.
+- name: facebook-two-color
   viewBox: 0 0 64 64
   description: The Facebook icon is used to link to that specific social media account for a given site.
 - name: feedback
   viewBox: 0 0 64 64
   description: ...
+- name: feedback-filled
+  viewBox: 0 0 64 64
+  filled: true
+  description: ...
+- name: feedback-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  small: true
+  filled: true
 - name: find-agent
   viewBox: 0 0 64 64
   description: ...
@@ -155,19 +320,46 @@
 - name: information
   viewBox: 0 0 64 64
   description: ...
+- name: information-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: information-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  small: true
+  filled: true
 - name: instagram
   viewBox: 0 0 64 64
   description: The Instagram icon is used to link to that specific social media account for a given site.
+- name: instagram-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: land
   viewBox: 0 0 64 64
   description: ...
 - name: landline
   viewBox: 0 0 64 64
   description: ...
+- name: landline-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: landline-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  small: true
+  filled: true
 - name: laptop
   viewBox: 0 0 64 64
   description: ...
 - name: large-purchase
+  viewBox: 0 0 64 64
+  description: ...
+- name: linkedin
+  viewBox: 0 0 64 64
+  description: ...
+- name: linkedin-two-color
   viewBox: 0 0 64 64
   description: ...
 - name: lock
@@ -197,6 +389,15 @@
 - name: organize
   viewBox: 0 0 64 64
   description: ...
+- name: organize-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: organize-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: our-family
   viewBox: 0 0 64 64
   description: ...
@@ -212,15 +413,36 @@
 - name: pinterest
   viewBox: 0 0 64 64
   description: ...
+- name: pinterest-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: play
   viewBox: 0 0 64 64
   description: The play icon is usually used to show when a video can be initiated.
 - name: plus
   viewBox: 0 0 64 64
   description: This icon usually indicates when there is an expandable action or when something can be added.
+- name: plus-filled
+  viewBox: 0 0 64 64
+  description: This icon usually indicates when there is an expandable action or when something can be added.
+  filled: true
+- name: plus-filled-small
+  viewBox: 0 0 64 64
+  description: This icon usually indicates when there is an expandable action or when something can be added.
+  filled: true
+  small: true
 - name: prequalified
   viewBox: 0 0 64 64
   description: ...
+- name: prequalified-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: prequalified-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: price-per-sq-ft
   viewBox: 0 0 64 64
   description: ...
@@ -230,9 +452,27 @@
 - name: question
   viewBox: 0 0 64 64
   description: This icon should be used to indicate that there is extra information provided to aid in the experience.
+- name: question-filled
+  viewBox: 0 0 64 64
+  description: This icon should be used to indicate that there is extra information provided to aid in the experience.
+  filled: true
+- name: question-filled-small
+  viewBox: 0 0 64 64
+  description: This icon should be used to indicate that there is extra information provided to aid in the experience.
+  small: true
+  filled: true
 - name: rate-shield
   viewBox: 0 0 64 64
   description: ...
+- name: rate-shield-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: rate-shield-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  small: true
+  filled: true
 - name: rates
   viewBox: 0 0 64 64
   description: ...
@@ -248,6 +488,9 @@
 - name: rocket
   viewBox: 0 0 512 512
   description: Only use this in an illustrative manner.
+- name: rocket-doc-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: same-day
   viewBox: 0 0 64 64
   description: ...
@@ -266,6 +509,15 @@
 - name: settings
   viewBox: 0 0 64 64
   description: ...
+- name: settings-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: settings-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+  small: true
 - name: single
   viewBox: 0 0 64 64
   description: ...
@@ -273,6 +525,9 @@
   viewBox: 0 0 64 64
   description: ...
 - name: snapchat
+  viewBox: 0 0 64 64
+  description: ...
+- name: snapchat-two-color
   viewBox: 0 0 64 64
   description: ...
 - name: technology
@@ -287,9 +542,21 @@
 - name: trash
   viewBox: 0 0 64 64
   description: ...
+- name: trash-filled
+  viewBox: 0 0 64 64
+  description: ...
+  filled: true
+- name: trash-filled-small
+  viewBox: 0 0 64 64
+  description: ...
+  small: true
+  filled: true
 - name: twitter
   viewBox: 0 0 64 64
   description: The Twitter icon is used to link to that specific social media account for a given site.
+- name: twitter-two-color
+  viewBox: 0 0 64 64
+  description: ...
 - name: unlock
   viewBox: 0 0 64 64
   description: ...
@@ -320,4 +587,6 @@
 - name: youtube
   viewBox: 0 0 64 64
   description: The Youtube icon is used to link to that specific social media account for a given site.
-
+- name: youtube-two-color
+  viewBox: 0 0 64 64
+  description: ...

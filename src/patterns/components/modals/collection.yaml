@@ -51,6 +51,9 @@ variableTable:
   $sprk-modal-shadow:
     default: 0 4px 5px rgba(0, 0, 0, 0.6)
     description: The box-shadow on the modal.
+  $sprk-modal-border-radius:
+    default: 8px
+    description: The border-radius on the modal.
 classTable:
   .sprk-c-Modal--wait:
     description: Sets styles for the wait modal variant. Aligns items to the center.

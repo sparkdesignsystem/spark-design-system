@@ -32,7 +32,10 @@ import {
             [attr.data-analytics]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-left"></sprk-icon>
+            <sprk-icon
+              additionalClasses="sprk-c-Icon--stroke-current-color"
+              iconType="chevron-left"
+            ></sprk-icon>
           </a>
         </li>
 
@@ -100,7 +103,10 @@ import {
             [attr.data-analytics]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
-            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-right"></sprk-icon>
+            <sprk-icon
+              additionalClasses="sprk-c-Icon--stroke-current-color"
+              iconType="chevron-right"
+            ></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
@@ -128,7 +134,10 @@ import {
             href="#"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-left"></sprk-icon>
+            <sprk-icon
+              additionalClasses="sprk-c-Icon--stroke-current-color"
+              iconType="chevron-left"
+            ></sprk-icon>
           </a>
         </li>
 
@@ -216,7 +225,10 @@ import {
             [attr.data-analytics]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">Next</span>
-            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-right"></sprk-icon>
+            <sprk-icon
+              additionalClasses="sprk-c-Icon--stroke-current-color"
+              iconType="chevron-right"
+            ></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>
@@ -246,7 +258,10 @@ import {
             [attr.data-analytics]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-left"></sprk-icon>
+            <sprk-icon
+              additionalClasses="sprk-c-Icon--stroke-current-color"
+              iconType="chevron-left"
+            ></sprk-icon>
           </a>
         </li>
 
@@ -264,7 +279,10 @@ import {
             [attr.data-analytics]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
-            <sprk-icon additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l" iconType="chevron-right"></sprk-icon>
+            <sprk-icon
+              additionalClasses="sprk-c-Icon--stroke-current-color"
+              iconType="chevron-right"
+            ></sprk-icon>
           </a>
         </li>
       </sprk-unordered-list>

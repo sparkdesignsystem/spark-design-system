@@ -6,7 +6,7 @@ information:
   - The icon fill and stroke colors can be changed by setting the $icon-fill-color and $icon-stroke-color
     variables to something other than the default that Spark provides. Additionally, if
     you need to have the icon's fill/stroke use the color of its parent container you can apply the
-    .sprk-c-Icon--current-color modifier to the icon.
+    .sprk-c-Icon--stroke-current-color modifier to the icon.
 restrictions:
  - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance
@@ -28,11 +28,17 @@ variableTable:
     default: 128px
     description: The extra extra large icon height and width.
   $sprk-icon-fill-color:
-    default: $sprk-red
+    default: none
     description: Sets the fill color of the icons.
   $sprk-icon-stroke-color:
-    default: $sprk-red
+    default: $sprk-black
     description: Sets the stroke color of the icons.
+  $sprk-icon-filled-stroke-color:
+    default: none
+    description: Sets the stroke color of filled icons.
+  $sprk-icon-filled-fill-color:
+    default: $sprk-black
+    description: Sets the fill color of filled icons.
   $sprk-icon-using-custom-stroke:
     default: true
     description: Boolean value for if you want to use a custom stroke-width setting on the icons.
@@ -49,7 +55,7 @@ variableTable:
     default: 3px
     description: The stroke width setting for extra large.
 classTable:
-  .sprk-c-Icon--current-color:
+  .sprk-c-Icon--stroke-current-color:
     description: Sets the fill and stroke properties to the current color of its container.
   .sprk-c-Icon--l:
     description: Sets the icon height and width to $sprk-icon-l and stroke-width to $icon-custom-stroke-width-l.

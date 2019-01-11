@@ -58,8 +58,10 @@ $sprk-icon-m: 16px !default;
 $sprk-icon-l: 32px !default;
 $sprk-icon-xl: 64px !default;
 $sprk-icon-xxl: 128px !default;
-$sprk-icon-fill-color: $sprk-red !default;
-$sprk-icon-stroke-color: $sprk-red !default;
+$sprk-icon-fill-color: none !default;
+$sprk-icon-stroke-color: $sprk-black !default;
+$sprk-icon-filled-fill-color: $sprk-black !default;
+$sprk-icon-filled-stroke-color: none !default;
 $sprk-icon-using-custom-stroke: true !default;
 $sprk-icon-custom-stroke-width-s: 1px !default;
 $sprk-icon-custom-stroke-width-m: 1.5px !default;
@@ -237,15 +239,16 @@ $sprk-alert-border: 1px solid $sprk-gray !default;
 $sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-alert-color: $sprk-black !default;
 $sprk-alert-bg-color: $sprk-white !default;
-$sprk-alert-icon-size: 40px !default;
+$sprk-alert-icon-size: 32px !default;
 $sprk-alert-font-size: 1rem !default;
 $sprk-alert-font-weight: 400 !default;
 $sprk-alert-line-height: 1.5 !default;
 $sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
   $sprk-space-misc-a !default;
-$sprk-alert-dismiss-padding: $sprk-space-m !default;
+$sprk-alert-dismiss-padding: $sprk-space-m 24px $sprk-space-m $sprk-space-m !default;
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
-$sprk-alert-dismiss-icon-color: $sprk-black;
+$sprk-alert-dismiss-icon-color: $sprk-black !default;
+$sprk-alert-dismiss-icon-size: $sprk-space-m !default;
 // Info
 $sprk-alert-icon-color-info: $sprk-blue !default;
 $sprk-alert-border-info: 1px solid $sprk-blue !default;
@@ -441,8 +444,8 @@ $sprk-select-font-weight: $sprk-text-input-font-weight !default;
 $sprk-select-line-height: $sprk-text-input-line-height !default;
 $sprk-select-outline: $sprk-text-input-outline !default;
 $sprk-select-padding: 14px 45px 14px 13px !default;
-$sprk-select-arrow-offset-y: -37px !default;
-$sprk-select-arrow-offset-x: 8px !default;
+$sprk-select-arrow-offset-y: -31px !default;
+$sprk-select-arrow-offset-x: 19px !default;
 $sprk-select-arrow-stroke-width: 6px !default;
 $sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
 $sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
@@ -689,6 +692,7 @@ $sprk-modal-height: 70% !default;
 $sprk-modal-breakpoint-small: 25rem !default;
 $sprk-modal-breakpoint-medium: 37.5rem !default;
 $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
+$sprk-modal-border-radius: 8px !default;
 
 //
 // Masthead
