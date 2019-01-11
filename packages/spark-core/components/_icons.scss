@@ -3,20 +3,28 @@
 // ==================================================================
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) circle,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) circle,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) circle,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) ellipse,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) ellipse,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) ellipse,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) line,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) line,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) line,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) path,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) path,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) path,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) g,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) g,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) g,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) polygon,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) polygon,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) polygon,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) polyline,
 .sprk-o-IconSymbolContainer symbol:not([id*='-filled']) polyline,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) polyline,
 .sprk-o-IconSymbolContainer symbol:not([id*='-two-color']) rect,
-.sprk-o-IconSymbolContainer symbol:not([id*='-filled']) rect {
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled']) rect,
+.sprk-o-IconSymbolContainer symbol:not([id*='-filled-small']) rect {
   fill: inherit;
   stroke: inherit;
 
