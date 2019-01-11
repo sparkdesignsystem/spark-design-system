@@ -165,5 +165,5 @@ export {
   bindUIEvents,
   addClassOnScroll,
   hideSelectorMask,
-  showSelectorMask
+  showSelectorMask,
 };
