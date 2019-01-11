@@ -79,9 +79,9 @@ variableTable:
   $sprk-link-simple-hover-border-bottom:
     default: $sprk-link-simple-hover-underline-width $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color
     description: Sets the border settings for simple links in the hover state.
-  $sprk-link-has-icon-color:
+  $sprk-link-has-icon-color-icon:
     default: $sprk-green
-    description: Sets the color of text and icons in links containing icons.
+    description: Sets the color of icons in links containing icons.
   $sprk-link-has-icon-font-weight:
     default: $sprk-font-weight-body-one
     description: Sets the font weight for links containing icons.
@@ -91,12 +91,18 @@ variableTable:
   $sprk-link-has-icon-underline-color:
     default: transparent
     description: Sets the underline color for links containing icons.
+  $sprk-link-has-icon-fill:
+    default: transparent
+    description: Sets the fill color for icons contained in links.
   $sprk-link-has-icon-border-bottom:
     default: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color
     description: Sets the border settings for links with icons
   $sprk-link-has-icon-hover-border-bottom:
     default: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color
     description: Sets the border settings for links with icons in the hover state.
+  $sprk-link-has-icon-hover-color-text:
+    default: $sprk-green
+    description: Sets the color of text in links containing icons in the hover state.
   $sprk-link-plain-border:
     default: none
     description: Sets the border settings for plain links

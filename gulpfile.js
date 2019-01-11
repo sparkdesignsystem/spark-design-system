@@ -2,7 +2,9 @@ const gulp = require('gulp');
 const runSequence = require('run-sequence');
 
 require('./gulp/spark-core/spark-core.gulpfile.js');
-require('./gulp/spark-extras/spark-extras.gulpfile.js');
+require('./gulp/spark-extras/spark-card.gulpfile.js');
+require('./gulp/spark-extras/spark-dictionary.gulpfile.js');
+require('./gulp/spark-extras/spark-highlight-board.gulpfile.js');
 require('./gulp/drizzle/drizzle.gulpfile.js');
 require('./gulp/angular/dev-app/angulardevapp.gulpfile.js');
 require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
@@ -22,7 +24,13 @@ gulp.task('pre-publish', (cb) => {
 });
 
 gulp.task('setup-spark-packages', (cb) => {
-  runSequence('setup-spark-core', 'setup-spark-extras', cb);
+  runSequence(
+    'setup-spark-core',
+    'setup-spark-card',
+    'setup-spark-dictionary',
+    'setup-spark-highlight-board',
+    cb,
+  );
 });
 
 // assumes that setup-spark-packages has been run
@@ -44,7 +52,7 @@ gulp.task('clean-all', (cb) => {
     [
       'clean',
       'clean-spark-core',
-      'clean-spark-extras',
+      'clean-spark-highlight-board',
       'clean-angular-dev-app',
       'clean-spark-core-angular',
       'clean-spark-extras-angular-award',

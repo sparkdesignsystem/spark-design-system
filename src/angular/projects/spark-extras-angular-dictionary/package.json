@@ -1,11 +1,13 @@
 {
   "name": "@sparkdesignsystem/spark-extras-angular-dictionary",
   "description": "This component is intended for displays of key-value pairs.",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "scripts": {
     "lint": "ng lint spark-extras-angular-dictionary",
     "test": "ng test spark-extras-angular-dictionary --watch=false",
-    "build": "ng build spark-extras-angular-dictionary"
+    "build": "ng build spark-extras-angular-dictionary",
+    "prepublishOnly": "npm run build",
+    "lerna-publish": "cd ../../dist/spark-extras-angular-dictionary && npm publish"
   },
   "peerDependencies": {
     "@angular/animations": "^6.1.4",
@@ -18,6 +20,6 @@
     "@angular/platform-browser-dynamic": "^6.1.4",
     "@angular/router": "^6.1.4",
     "@sparkdesignsystem/spark-core-angular": "^7.0.0",
-    "@sparkdesignsystem/spark-description-table": "^3.1.8"
+    "@sparkdesignsystem/spark-dictionary": "^1.0.0"
   }
 }

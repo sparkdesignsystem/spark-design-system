@@ -48,6 +48,8 @@ import {
   hideMobileNavs,
   focusTrap,
   addClassOnScroll,
+  hideSelectorMask,
+  showSelectorMask,
   bindUIEvents as bindMastheadUIEvents,
 } from './components/masthead';
 import {
@@ -153,6 +155,8 @@ export {
   hideMobileNavs,
   focusTrap,
   addClassOnScroll,
+  showSelectorMask,
+  hideSelectorMask,
   bindMastheadUIEvents,
   modals,
   showModal,

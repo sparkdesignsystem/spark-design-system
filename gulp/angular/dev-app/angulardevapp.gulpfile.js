@@ -34,7 +34,7 @@ gulp.task('link-spark-to-angular-dir', (cb) => {
   gulp.src(['src/angular/node_modules/@sparkdesignsystem/spark-core', 'src/angular/node_modules/@sparkdesignsystem/spark-extras'], { read: false })
     .pipe(clean())
   exec(
-    `cd src/angular && npm link @sparkdesignsystem/spark-core && npm link @sparkdesignsystem/spark-card && npm link @sparkdesignsystem/spark-description-table && npm link @sparkdesignsystem/spark-highlight-board`, (err, stdout, stderr) => {
+    `cd src/angular && npm link @sparkdesignsystem/spark-core && npm link @sparkdesignsystem/spark-card && npm link @sparkdesignsystem/spark-dictionary && npm link @sparkdesignsystem/spark-highlight-board`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -52,7 +52,7 @@ gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
 });
 
 gulp.task('serve-angular-dev-app', (cb) => {
-  const ls = spawn(`ng`, ['serve'], { cwd: "src/angular"});
+  const ls = spawn(`node_modules/.bin/ng`, ['serve'], { cwd: "src/angular"});
   ls.stdout.on('data', (data) => {
     console.log(data.toString());
   })

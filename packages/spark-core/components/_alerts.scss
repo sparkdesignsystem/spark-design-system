@@ -79,6 +79,11 @@
   }
 }
 
+.sprk-c-Alert .sprk-c-Icon {
+  height: $sprk-alert-icon-size;
+  width: $sprk-alert-icon-size;
+}
+
 .sprk-c-Alert__icon--dismiss {
   align-self: flex-start;
   background-color: transparent;
@@ -87,13 +92,8 @@
   padding: $sprk-alert-dismiss-padding;
 }
 
-.sprk-c-Alert__icon,
 .sprk-c-Alert__icon--dismiss .sprk-c-Icon {
-  fill: currentColor;
-  stroke: currentColor;
+  height: $sprk-alert-dismiss-icon-size;
+  width: $sprk-alert-dismiss-icon-size;
 }
 
-.sprk-c-Alert .sprk-c-Icon {
-  height: $sprk-alert-icon-size;
-  width: $sprk-alert-icon-size;
-}

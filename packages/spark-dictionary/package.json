@@ -1,8 +1,11 @@
 {
-  "name": "@sparkdesignsystem/spark-description-table",
-  "version": "3.1.8",
-  "description": "Spark Description Table is a package that is part of Spark Extras, a supplementary package that adds additional components that are not part of Spark Core.",
-  "main": "_description-table.scss",
+  "name": "@sparkdesignsystem/spark-dictionary",
+  "version": "1.0.1",
+  "description": "Spark Dictionary is a component for displaying key value pairs.",
+  "main": "_dictionary.scss",
+  "scripts": {
+    "lerna-publish": "npm publish"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
@@ -14,10 +17,10 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "peerDependencies": {
-    "@sparkdesignsystem/spark-core": "^7.0.0"
+    "@sparkdesignsystem/spark-core": "^10.0.0"
   },
   "publishConfig": {
     "access": "public",
-    "@sparkdesignsystem/spark-core": "^7.0.0"
+    "@sparkdesignsystem/spark-core": "^10.0.0"
   }
 }

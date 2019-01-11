@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sprk-masthead-docs',
+  selector: 'sprk-masthead-extended-docs',
   template: `
     <div class="drizzle-o-ContentGrouping">
       <sprk-masthead
         additionalClasses="angular-docs-u-Masthead-docs"
-        [narrowNavLinks]="defaultNarrowLinks"
+        [bigNavLinks]="links"
+        [narrowNavLinks]="extendedNarrowLinks"
+        [narrowSelector]="mySelector"
         idString="masthead-1"
       >
         <svg
@@ -123,44 +125,40 @@ import { Component } from '@angular/core';
         </svg>
 
         <div
-          class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
           little-nav-slot
+          class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row"
         >
-          <ul
-            class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column"
-          >
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="#nogo"
-              >
-                Item 1
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-                href="#nogo"
-              >
-                Item 2
-              </a>
-            </li>
-          </ul>
-        </div>
-        <ul
-          class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
-          utility-slot
-        >
-          <li>
-            <a
-              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-              href="tel:555-555-5555"
+          <div class="sprk-o-Stack__item sprk-u-Position--relative">
+            <sprk-dropdown
+              dropdownType="informational"
+              additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
+              triggerText="My Selector"
+              additionalClasses="sprk-c-Masthead__selector-dropdown sprk-u-Width-100"
+              triggerIconType="chevron-down"
+              [choices]="siteDropdownChoices"
+              selector="Select One"
+              additionalIconClasses="sprk-c-Icon--stroke-current-color sprk-Stack__item"
+              additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
             >
-              (555) 555-5555
-            </a>
-          </li>
+              <div
+                class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+                sprkDropdownFooter
+              >
+                <a
+                  class="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
+                  href="#nogo"
+                >
+                  Placeholder
+                </a>
+              </div>
+            </sprk-dropdown>
+          </div>
+        </div>
 
+        <ul
+          utility-slot
+          class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-Stack--center-column"
+        >
           <li>
             <a
               class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
@@ -172,24 +170,35 @@ import { Component } from '@angular/core';
 
           <li>
             <a
-              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+              routerLink="/cards"
               href="#nogo"
             >
-              Sign In
+              <sprk-icon
+                iconType="settings"
+                additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+              ></sprk-icon>
+              <span class="sprk-u-ScreenReaderText">Settings</span>
             </a>
           </li>
+
+          <li>
+            <sprk-dropdown
+              [choices]="simpleChoices"
+              dropdownType="simple"
+              title="My Account"
+              triggerIconType="user"
+              additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              additionalIconClasses="sprk-c-Icon--l"
+              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              screenReaderText="User Account"
+            ></sprk-dropdown>
+          </li>
         </ul>
-        <div class="sprk-u-mas" narrowNavFooter>
-          <a
-            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm"
-            href="#nogo"
-            >Sign In</a
-          >
-        </div>
       </sprk-masthead>
 
       <div class="sprk-o-CenteredColumn">
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -208,7 +217,7 @@ import { Component } from '@angular/core';
         >
           This is an info Spark alert!
         </sprk-alert>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -220,7 +229,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -232,7 +241,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -244,7 +253,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -256,7 +265,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -268,7 +277,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -280,7 +289,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -292,7 +301,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -304,7 +313,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -316,7 +325,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -328,7 +337,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -340,7 +349,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -352,7 +361,7 @@ import { Component } from '@angular/core';
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <h2 class="drizzle-b-h2">Masthead</h2>
+        <h2 class="drizzle-b-h2">Masthead (Extended)</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -369,7 +378,7 @@ import { Component } from '@angular/core';
   `,
   styles: [``]
 })
-export class MastheadDocsComponent {
+export class MastheadExtendedDocsComponent {
   links = [
     {
       text: 'Navigation Item',
@@ -427,7 +436,7 @@ export class MastheadDocsComponent {
     }
   ];
 
-  defaultNarrowLinks = [
+  extendedNarrowLinks = [
     {
       text: 'Item 1',
       href: '#nogo',
@@ -452,7 +461,33 @@ export class MastheadDocsComponent {
       active: true
     },
     {
-      text: '(555) 555-5555',
+      text: 'Item 3',
+      href: '#nogo',
+      subNav: [
+        {
+          text: 'Item 1',
+          href: '/links'
+        },
+        {
+          text: 'Item 2',
+          href: '/links'
+        },
+        {
+          text: 'Item 3',
+          href: '/links'
+        }
+      ]
+    },
+    {
+      text: 'Item 4',
+      href: '#nogo'
+    },
+    {
+      text: 'Item 5',
+      href: '#nogo'
+    },
+    {
+      text: '(586) 123-4567',
       href: '#nogo',
       active: false,
       leadingIcon: 'landline'
@@ -462,6 +497,32 @@ export class MastheadDocsComponent {
       href: '#nogo',
       active: false,
       leadingIcon: 'call-team-member'
+    },
+    {
+      text: 'Settings',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'settings'
+    },
+    {
+      text: 'My Account',
+      href: '#nogo',
+      active: false,
+      leadingIcon: 'user',
+      subNav: [
+        {
+          text: 'Change Username',
+          href: '/links'
+        },
+        {
+          text: 'Change Password',
+          href: '#nogo'
+        },
+        {
+          text: 'Sign Out',
+          href: '#nogo'
+        }
+      ]
     }
   ];
 
@@ -500,6 +561,32 @@ export class MastheadDocsComponent {
       value: 'sign-out'
     }
   ];
+
+  mySelector = {
+    trigger: {
+      text: 'Select One'
+    },
+    choices: [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 1',
+        active: false
+      },
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information'
+        },
+        value: 'Choice Title 2',
+        active: true
+      }
+    ]
+  };
 
   constructor() {}
 }
