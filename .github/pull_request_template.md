@@ -12,7 +12,7 @@ then please remove it.
 ### Code
  - [ ] Build Component in Spark Vanilla (Sass, HTML, JS)
  - [ ] Build Component in Spark Angular
- - [ ] Unit Testing in Spark Vanilla with `npm run test --prefix ./packages/spark-core` (100% coverage, 100% passing)
+ - [ ] Unit Testing in Spark Vanilla with `npm run test` (100% coverage, 100% passing)
  - [ ] Unit Testing in Spark Angular with `gulp test-angular` (100% coverage, 100% passing)
 
 ### Accessibility

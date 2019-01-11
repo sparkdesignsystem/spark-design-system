@@ -75,7 +75,7 @@ variableTable:
     default: 1.5
     description: The line height of the text in the content area.
   $sprk-alert-icon-size:
-    default: 40px
+    default: 32px
     description: Sets the height and width of the two icons used in the alert.
   $sprk-alert-shadow:
     default: 0 3px 10px 1px rgba(0, 0, 0, 0.08)
@@ -84,11 +84,14 @@ variableTable:
     default: $sprk-space-m $sprk-space-m $sprk-space-m $sprk-space-misc-a
     description: Sets the padding around the main content icon and message.
   $sprk-alert-dismiss-padding:
-    default: $sprk-space-m
+    default: $sprk-space-m 24px $sprk-space-m $sprk-space-m
     description: Sets the padding around the dismiss icon.
   $sprk-alert-icon-margin:
     default: 0 $sprk-space-misc-a 0 0
     description: Sets the margin for the icon in the alert.
+  $sprk-alert-dismiss-icon-size:
+    default: 25px
+    description: The size of the dismiss icon.
 classTable:
   .sprk-c-Alert--info:
     description: Styles the alert as an information alert.

@@ -137,7 +137,7 @@ import { Component } from '@angular/core';
               triggerIconType="chevron-down"
               [choices]="siteDropdownChoices"
               selector="Select One"
-              additionalIconClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-Stack__item"
+              additionalIconClasses="sprk-c-Icon--stroke-current-color sprk-Stack__item"
               additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
             >
               <div
@@ -176,7 +176,7 @@ import { Component } from '@angular/core';
             >
               <sprk-icon
                 iconType="settings"
-                additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color"
+                additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
               ></sprk-icon>
               <span class="sprk-u-ScreenReaderText">Settings</span>
             </a>

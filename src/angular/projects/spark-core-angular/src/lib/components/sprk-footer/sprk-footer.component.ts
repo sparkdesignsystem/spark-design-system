@@ -168,7 +168,7 @@ import { Component, Input } from '@angular/core';
               <sprk-toggle
                 title="{{ toggle.title }}"
                 analyticsString="{{ toggle.analytics }}"
-                iconClass="sprk-c-Icon--current-color"
+                iconClass="sprk-c-Icon--stroke-current-color"
                 titleFontClass="sprk-b-TypeBodyFour"
               >
                 <p class="sprk-b-TypeBodyFour">{{ toggle.body }}</p>

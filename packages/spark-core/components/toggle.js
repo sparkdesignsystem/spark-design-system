@@ -51,7 +51,7 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
     toggleIconType(
       toggleIcon,
       toggleIconUse,
-      'chevron-down-circle-two-color',
+      'chevron-up-circle-two-color',
       'chevron-up-circle-two-color',
     );
   }

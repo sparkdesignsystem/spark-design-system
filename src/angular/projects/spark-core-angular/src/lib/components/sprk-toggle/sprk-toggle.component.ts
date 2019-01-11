@@ -19,8 +19,8 @@ import {
         [attr.data-analytics]="analyticsString"
       >
         <sprk-icon
-          iconType="chevron-down"
-          additionalClasses="{{ iconClass }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
+          iconType="chevron-down-circle-two-color"
+          additionalClasses="{{ iconClass }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
       </a>

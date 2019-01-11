@@ -130,7 +130,7 @@ import * as _ from 'lodash';
             additionalClasses="sprk-c-Masthead__selector-dropdown"
             additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
             additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
-            additionalIconClasses="sprk-c-Icon--l sprk-Stack__item"
+            additionalIconClasses="sprk-Stack__item sprk-u-mrs"
             [triggerText]="narrowSelector['trigger'].text"
             selector="Select One"
             triggerIconType="chevron-down"
@@ -170,7 +170,7 @@ import * as _ from 'lodash';
                       >
                         <sprk-icon
                           [iconType]="subNavLink.leadingIcon"
-                          additionalClasses="sprk-c-Icon--current-color sprk-u-mrs"
+                          additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
                           *ngIf="subNavLink.leadingIcon"
                         ></sprk-icon>
                         {{ subNavLink.text }}
@@ -194,7 +194,7 @@ import * as _ from 'lodash';
                     <span class="sprk-c-MastheadAccordion__heading">
                       <sprk-icon
                         [iconType]="narrowLink.leadingIcon"
-                        additionalClasses="sprk-c-Icon--current-color sprk-u-mrs"
+                        additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
                         *ngIf="narrowLink.leadingIcon"
                       ></sprk-icon>
                       {{ narrowLink.text }}

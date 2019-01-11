@@ -46,17 +46,11 @@ also that your project has a Javascript build step that will transpile ES6+ and 
 
 ### Spark Extras
 
-* Install the npm package.
-
-  `npm install --save-dev @sparkdesignsystem/spark-extras`
-
 * Import any of the Spark-Extras Sass patterns that you need.
 
-  `@import "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
-
-* Import any of the Spark-Extras JS patterns that you need.
-
-  `import <pattern-name> from "node_modules/@sparkdesignsystem/spark-extras/components/<pattern-name>/<pattern-name>";`
+  * `@sparkdesignsystem/spark-card`
+  * `@sparkdesignsystem/spark-dictionary`
+  * `@sparkdesignsystem/spark-highlight-board`
 
 ## Contribution Guide
 
