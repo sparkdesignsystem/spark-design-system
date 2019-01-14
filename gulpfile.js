@@ -12,6 +12,7 @@ require('./gulp/angular/spark-extras-angular-award/spark-extras-angular-award.gu
 require('./gulp/angular/spark-extras-angular-card/spark-extras-angular-card.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-dictionary/spark-extras-angular-dictionary.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.gulpfile.js');
+require('./gulp/react/dev-app/reactdevapp.gulpfile.js');
 
 gulp.task('pre-publish', (cb) => {
   runSequence(
@@ -31,6 +32,10 @@ gulp.task('setup-spark-packages', (cb) => {
     'setup-spark-highlight-board',
     cb,
   );
+});
+
+gulp.task('setup-spark-react-projects', (cb) => {
+  runSequence('setup-spark-core-react', cb);
 });
 
 // assumes that setup-spark-packages has been run
@@ -54,6 +59,7 @@ gulp.task('clean-all', (cb) => {
       'clean-spark-core',
       'clean-spark-highlight-board',
       'clean-angular-dev-app',
+      'clean-spark-core-react',
       'clean-spark-core-angular',
       'clean-spark-extras-angular-award',
       'clean-spark-extras-angular-card',
@@ -82,9 +88,10 @@ gulp.task('dev-all', (cb) => {
   runSequence(
     'setup-spark-packages',
     'install-angular-dev-app',
+    'install-react-dev-app',
     'setup-spark-angular-projects',
     'build-drizzle',
-    ['serve-angular-dev-app', 'serve', 'watch'],
+    ['serve-angular-dev-app', 'serve-react-dev-app', 'serve', 'watch'],
     cb,
   );
 });
