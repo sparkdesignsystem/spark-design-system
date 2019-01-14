@@ -54,12 +54,14 @@ $sprk-webfonts: (
 @import '../assets/drizzle/styles/main.scss';
 
 //
-// Angular site specific styling
+// Angular / React site specific styling
 //
+.#{$app-namespace}-c-ReactHeader,
 .#{$app-namespace}-c-AngularHeader {
   position: static;
 }
 
+.#{$app-namespace}-c-ReactNav,
 .#{$app-namespace}-c-AngularNav {
   background-color: $sprk-black;
   color: $sprk-white;
@@ -67,6 +69,7 @@ $sprk-webfonts: (
   padding: 0;
 }
 
+.#{$app-namespace}-c-ReactNav a,
 .#{$app-namespace}-c-AngularNav a {
   display: block;
   text-transform: uppercase;
