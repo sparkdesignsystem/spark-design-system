@@ -42,7 +42,6 @@ $sprk-webfonts: (
 );
 
 @import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
-@import 'node_modules/@sparkdesignsystem/spark-core/spark-core-angular.scss';
 @import 'node_modules/@sparkdesignsystem/spark-card/card';
 @import 'node_modules/@sparkdesignsystem/spark-dictionary/dictionary.scss';
 @import 'node_modules/@sparkdesignsystem/spark-highlight-board/highlight-board.scss';
@@ -54,20 +53,20 @@ $sprk-webfonts: (
 @import '../assets/drizzle/styles/main.scss';
 
 //
-// Angular site specific styling
+// React site specific styling
 //
-.#{$app-namespace}-c-AngularHeader {
+.#{$app-namespace}-c-ReactHeader {
   position: static;
 }
 
-.#{$app-namespace}-c-AngularNav {
+.#{$app-namespace}-c-ReactNav {
   background-color: $sprk-black;
   color: $sprk-white;
   width: 100%;
   padding: 0;
 }
 
-.#{$app-namespace}-c-AngularNav a {
+.#{$app-namespace}-c-ReactNav a {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
@@ -79,7 +78,7 @@ $sprk-webfonts: (
   }
 }
 
-$override-namespace: 'angular-docs';
+$override-namespace: 'react-docs';
 
 // angular doc specific overrides
 .#{$override-namespace}-u-Masthead-docs
