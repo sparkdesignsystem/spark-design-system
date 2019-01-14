@@ -2,14 +2,6 @@ const clean = require('gulp-clean');
 const gulp = require('gulp');
 const { exec } = require('child_process');
 
-gulp.task('build-react-dev-app', (cb) => {
-  exec('cd src/react && npm run build', (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-});
-
 gulp.task('build-react-dev-app-netlify', (cb) => {
   exec('cd src/react && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
@@ -28,12 +20,27 @@ gulp.task('install-react-dev-app', (cb) => {
   });
 });
 
+gulp.task('serve-react-dev-app', (cb) => {
+  exec('cd src/react && npm start', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('transfer-react-dev-app', () => {
+  gulp.src('dist/react/build', { read: false }).pipe(clean());
+  gulp.src('src/react/build/react/**/*').pipe(gulp.dest('dist/react'));
+});
+
 gulp.task('link-spark-to-react-dir', (cb) => {
   gulp
     .src(
       [
         'src/react/node_modules/@sparkdesignsystem/spark-core',
-        'src/react/node_modules/@sparkdesignsystem/spark-extras',
+        'src/react/node_modules/@sparkdesignsystem/spark-card',
+        'src/react/node_modules/@sparkdesignsystem/spark-dictionary',
+        'src/react/node_modules/@sparkdesignsystem/spark-highlight-board',
       ],
       { read: false },
     )
@@ -46,28 +53,4 @@ gulp.task('link-spark-to-react-dir', (cb) => {
       cb(err);
     },
   );
-});
-
-gulp.task('link-spark-core-react-to-react-dir', (cb) => {
-  gulp
-    .src(['./src/react/node_modules/@sparkdesignsystem/spark-core-react'], { read: false })
-    .pipe(clean());
-  exec('cd src/react && npm link @sparkdesignsystem/spark-core-react', (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-});
-
-gulp.task('serve-react-dev-app', (cb) => {
-  exec('cd src/react && npm start', (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-});
-
-gulp.task('transfer-react-dev-app', () => {
-  gulp.src('dist/react/build', { read: false }).pipe(clean());
-  gulp.src('src/react/build/react/**/*').pipe(gulp.dest('dist/react'));
 });

@@ -19,6 +19,7 @@ gulp.task('pre-publish', (cb) => {
     'setup-spark-packages',
     'build-drizzle',
     'install-angular-dev-app',
+    'install-react-dev-app',
     'setup-spark-angular-projects',
     cb,
   );
@@ -32,10 +33,6 @@ gulp.task('setup-spark-packages', (cb) => {
     'setup-spark-highlight-board',
     cb,
   );
-});
-
-gulp.task('setup-spark-react-projects', (cb) => {
-  runSequence('setup-spark-core-react', cb);
 });
 
 // assumes that setup-spark-packages has been run
@@ -59,7 +56,7 @@ gulp.task('clean-all', (cb) => {
       'clean-spark-core',
       'clean-spark-highlight-board',
       'clean-angular-dev-app',
-      'clean-spark-core-react',
+      'clean-react-dev-app',
       'clean-spark-core-angular',
       'clean-spark-extras-angular-award',
       'clean-spark-extras-angular-card',
@@ -84,12 +81,23 @@ gulp.task('dev-spark-angular', (cb) => {
   );
 });
 
+gulp.task('dev-spark-react', (cb) => {
+  runSequence(
+    'setup-spark-packages',
+    'install-react-dev-app',
+    'link-spark-to-react-dir',
+    ['serve-react-dev-app', 'watch'],
+    cb,
+  );
+});
+
 gulp.task('dev-all', (cb) => {
   runSequence(
     'setup-spark-packages',
     'install-angular-dev-app',
     'install-react-dev-app',
     'setup-spark-angular-projects',
+    'link-spark-to-react-dir',
     'build-drizzle',
     ['serve-angular-dev-app', 'serve-react-dev-app', 'serve', 'watch'],
     cb,
