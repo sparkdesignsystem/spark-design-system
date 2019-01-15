@@ -6,6 +6,7 @@ const clean = require('gulp-clean');
 // assumes previous run of setup-spark-packages
 gulp.task('setup-spark-core-react', (cb) => {
   runSequence(
+    'install-spark-core-react',
     'build-spark-core-react',
     'link-spark-core-react',
     'link-spark-core-react-to-react-dir',
@@ -15,6 +16,14 @@ gulp.task('setup-spark-core-react', (cb) => {
 
 gulp.task('build-spark-core-react', (cb) => {
   exec('cd src/react/projects/spark-core-react && npm run build', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+gulp.task('install-spark-core-react', (cb) => {
+  exec('cd src/react/projects/spark-core-angular && npm install', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

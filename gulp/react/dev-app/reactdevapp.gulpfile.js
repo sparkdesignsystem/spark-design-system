@@ -2,7 +2,7 @@ const clean = require('gulp-clean');
 const gulp = require('gulp');
 const { exec } = require('child_process');
 
-gulp.task('build-react-dev-app-netlify', (cb) => {
+gulp.task('build-react-dev-app-netlify', ['setup-spark-core-react'], (cb) => {
   exec('cd src/react && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
