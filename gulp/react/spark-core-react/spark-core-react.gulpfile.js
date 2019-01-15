@@ -23,7 +23,7 @@ gulp.task('build-spark-core-react', (cb) => {
 });
 
 gulp.task('install-spark-core-react', (cb) => {
-  exec('cd src/react/projects/spark-core-angular && npm install', (err, stdout, stderr) => {
+  exec('cd src/react/projects/spark-core-react && npm install', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
