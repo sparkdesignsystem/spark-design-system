@@ -1,11 +1,14 @@
 import React from 'react';
 import CentralColumnLayout from '../../container/CentralColumnLayout/CentralColumnLayout';
 
+import { SparkButton } from '@sparkdesignsystem/spark-core-react';
+
 const SparkButtonDocs = () => {
   return (
     <CentralColumnLayout>
-      <div>Hello, Button!</div>
+      <SparkButton/>
     </CentralColumnLayout>
   );
 };
+
 export default SparkButtonDocs;

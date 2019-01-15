@@ -13,6 +13,7 @@ require('./gulp/angular/spark-extras-angular-card/spark-extras-angular-card.gulp
 require('./gulp/angular/spark-extras-angular-dictionary/spark-extras-angular-dictionary.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.gulpfile.js');
 require('./gulp/react/dev-app/reactdevapp.gulpfile.js');
+require('./gulp/react/spark-core-react/spark-core-react.gulpfile.js');
 
 gulp.task('pre-publish', (cb) => {
   runSequence(
@@ -21,6 +22,7 @@ gulp.task('pre-publish', (cb) => {
     'install-angular-dev-app',
     'install-react-dev-app',
     'setup-spark-angular-projects',
+    'setup-spark-core-react',
     cb,
   );
 });
@@ -57,6 +59,7 @@ gulp.task('clean-all', (cb) => {
       'clean-spark-highlight-board',
       'clean-angular-dev-app',
       'clean-react-dev-app',
+      'clean-spark-core-react',
       'clean-spark-core-angular',
       'clean-spark-extras-angular-award',
       'clean-spark-extras-angular-card',
@@ -86,6 +89,7 @@ gulp.task('dev-spark-react', (cb) => {
     'setup-spark-packages',
     'install-react-dev-app',
     'link-spark-to-react-dir',
+    'setup-spark-core-react',
     ['serve-react-dev-app', 'watch'],
     cb,
   );
@@ -98,6 +102,7 @@ gulp.task('dev-all', (cb) => {
     'install-react-dev-app',
     'setup-spark-angular-projects',
     'link-spark-to-react-dir',
+    'setup-spark-core-react',
     'build-drizzle',
     ['serve-angular-dev-app', 'serve-react-dev-app', 'serve', 'watch'],
     cb,
@@ -117,5 +122,12 @@ gulp.task('test-angular', (cb) => {
 
 // netlify
 gulp.task('build', (cb) => {
-  runSequence('pre-publish', 'build-angular-dev-app-netlify', 'transfer-angular-dev-app', cb);
+  runSequence(
+    'pre-publish',
+    'build-angular-dev-app-netlify',
+    'transfer-angular-dev-app',
+    'build-react-dev-app-netlify',
+    'transfer-react-dev-app',
+    cb,
+  );
 });
