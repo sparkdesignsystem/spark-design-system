@@ -7,7 +7,7 @@ restrictions:
     If you are simply creating a visual separation, use a divider.
   - The data-id property is provided as a hook for automated tools. If you have
     multiple instances of the same variant of a component on the same page, make
-    sure each instance has a unique data-id property ("divider-1", "divider-2",
+    sure each instance has a unique data-id property ("divider-1", "divider-2", "divider-3",
     etc).
 sparkPackageCore: true
 variableTable:
