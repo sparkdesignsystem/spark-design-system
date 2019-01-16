@@ -18,7 +18,7 @@ const SparkButtonDocs = () => {
         <SprkButton buttonType="tertiary">Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Submission Button">
-        <SprkButton spinner>Button Text</SprkButton>
+        <SprkButton spinner width="250px">Button Text</SprkButton>
       </ExampleContainer>
     </CentralColumnLayout>
   );
