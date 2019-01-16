@@ -12,13 +12,13 @@ const SparkButtonDocs = () => {
         <SprkButton disabled>Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Secondary Buttons">
-        <SprkButton additionalClasses="sprk-c-Button--secondary">Button Text</SprkButton>
+        <SprkButton buttonType="secondary">Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Tertiary Buttons">
-        <SprkButton additionalClasses="sprk-c-Button--tertiary">Button Text</SprkButton>
+        <SprkButton buttonType="tertiary">Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Submission Button">
-        <SprkButton>Button Text</SprkButton>
+        <SprkButton spinner>Button Text</SprkButton>
       </ExampleContainer>
     </CentralColumnLayout>
   );
