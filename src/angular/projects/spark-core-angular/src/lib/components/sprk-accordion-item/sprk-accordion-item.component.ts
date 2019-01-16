@@ -25,7 +25,7 @@ import {
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
             [iconType]="leadingIcon"
-            additionalClasses="sprk-c-Icon--current-color sprk-c-Icon--l sprk-u-mrs"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs"
             *ngIf="leadingIcon"
           ></sprk-icon>
           {{ title }}

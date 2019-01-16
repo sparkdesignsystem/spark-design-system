@@ -1,4 +1,4 @@
-/* global localStorage */
+/* global localStorage window */
 import { getElements } from '../../../../packages/spark-core';
 
 const saveSwitchSetting = (value) => {
@@ -23,7 +23,29 @@ const showSections = (values) => {
   });
 };
 
+// TODO: Remove once React is published
+// If query string present bool:true
+// then show code button
+// else clear localStorage that could include reat
+const toggleCodeButton = (hasQueryString, codeButton) => {
+  const isSetToReact = localStorage.getItem('code-example-switch') === 'react';
+  if (hasQueryString) {
+    codeButton.classList.remove('sprk-u-Display--none');
+  } else {
+    codeButton.classList.add('sprk-u-Display--none');
+    if (isSetToReact) {
+      localStorage.setItem('code-example-switch', 'none');
+    }
+  }
+};
+
 const bindUIEvents = (element) => {
+  // TODO: Remove once React is published
+  const reactButton = element.querySelector('[data-code-example-switch-react]');
+  const hasReactQueryString = window.location.search.indexOf('react') > -1;
+  toggleCodeButton(hasReactQueryString, reactButton);
+  // END TODO
+
   element.querySelectorAll('label').forEach((label) => {
     label.addEventListener('keydown', (e) => {
       if (e.keyCode === 13) {
@@ -37,6 +59,7 @@ const bindUIEvents = (element) => {
     element.querySelectorAll('input').forEach((rdio) => {
       values.push(rdio.value);
     });
+
     hideAllSections(values);
     showSections([`${e.target.value}`]);
     saveSwitchSetting(e.target.value);

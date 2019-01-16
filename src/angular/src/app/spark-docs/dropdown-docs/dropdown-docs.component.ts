@@ -51,7 +51,7 @@ import { Component } from '@angular/core';
             triggerIconType="chevron-down"
             (choiceMade)="choiceHandler($event)"
             [choices]="informationalChoices"
-            additionalIconClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-Stack__item"
+            additionalIconClasses="sprk-c-Icon--stroke-current-color sprk-Stack__item"
             additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
           >
             <div

@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
           <p sprkHelperText>Please enter some input.</p>
           <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
             <sprk-icon
-              iconType="exclamation-filled"
+              iconType="exclamation-filled-small"
               additionalClasses="sprk-b-ErrorIcon"
             ></sprk-icon>
             <div class="sprk-b-ErrorText">This field is required.</div>
@@ -113,7 +113,7 @@ import { Component } from '@angular/core';
           </select>
           <sprk-icon
             iconType="chevron-down"
-            additionalClasses="sprk-c-Icon--l sprk-c-Icon--current-color sprk-b-SelectContainer__icon"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
             sprk-select-icon
           ></sprk-icon>
           <label sprkLabel>Select Box Label</label>
@@ -151,7 +151,7 @@ import { Component } from '@angular/core';
           </sprk-selection-item-container>
           <div [hidden]="ssnInput.valid || ssnInput.pristine" sprkFieldError>
             <sprk-icon
-              iconType="exclamation-filled"
+              iconType="exclamation-filled-small"
               additionalClasses="sprk-b-ErrorIcon"
             ></sprk-icon>
             <div class="sprk-b-ErrorText">Invalid SSN.</div>
@@ -176,7 +176,7 @@ import { Component } from '@angular/core';
           </label>
           <sprk-icon
             iconType="search"
-            additionalClasses="sprk-c-Icon--current-color sprk-b-InlineSearch__icon"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-InlineSearch__icon"
             sprk-input-icon
           ></sprk-icon>
           <input
@@ -208,7 +208,7 @@ import { Component } from '@angular/core';
             sprkFieldError
           >
             <sprk-icon
-              iconType="exclamation-filled"
+              iconType="exclamation-filled-small"
               additionalClasses="sprk-b-ErrorIcon"
             ></sprk-icon>
             <div class="sprk-b-ErrorText">Invalid amount.</div>
@@ -246,7 +246,7 @@ import { Component } from '@angular/core';
             sprkFieldError
           >
             <sprk-icon
-              iconType="exclamation-filled"
+              iconType="exclamation-filled-small"
               additionalClasses="sprk-b-ErrorIcon"
             ></sprk-icon>
             <div class="sprk-b-ErrorText">
@@ -264,7 +264,7 @@ import { Component } from '@angular/core';
           </label>
           <sprk-icon
             iconType="calendar"
-            additionalClasses="sprk-c-Icon--current-color sprk-b-DatePicker__icon"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
             sprk-input-icon
           ></sprk-icon>
           <input
@@ -285,7 +285,7 @@ import { Component } from '@angular/core';
             sprkFieldError
           >
             <sprk-icon
-              iconType="exclamation-filled"
+              iconType="exclamation-filled-small"
               additionalClasses="sprk-b-ErrorIcon"
             ></sprk-icon>
             <div class="sprk-b-ErrorText">Invalid date.</div>
@@ -305,7 +305,7 @@ import { Component } from '@angular/core';
           />
           <span [hidden]="dateInput.valid || dateInput.pristine" sprkFieldError>
             <sprk-icon
-              iconType="exclamation-filled"
+              iconType="exclamation-filled-small"
               additionalClasses="sprk-b-ErrorIcon"
             ></sprk-icon>
             <div class="sprk-b-ErrorText">Invalid date.</div>

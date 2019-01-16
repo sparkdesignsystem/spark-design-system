@@ -126,7 +126,7 @@ export class FooterDocsComponent {
       text: 'Lorem ipsum dolor sit amet, consectetur.',
       href: '/global-1',
       icon: 'auto-loans',
-      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'cats'
     },
@@ -152,7 +152,7 @@ export class FooterDocsComponent {
       text: 'Lorem ipsum dolor sit amet, consectetur.',
       href: '/global-4',
       icon: 'auto-loans',
-      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'cats'
     },
@@ -160,7 +160,7 @@ export class FooterDocsComponent {
       text: 'Lorem ipsum dolor sit amet, consectetur.',
       href: '/global-5',
       icon: 'payment-center',
-      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'cats'
     }
@@ -310,21 +310,21 @@ export class FooterDocsComponent {
     {
       href: '/icons-1',
       icon: 'facebook-two-color',
-      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'facebook'
     },
     {
       href: '/icons-2',
       icon: 'twitter-two-color',
-      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'twitter'
     },
     {
       href: '/icons-3',
       icon: 'instagram-two-color',
-      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'instagram'
     }
@@ -334,21 +334,21 @@ export class FooterDocsComponent {
     {
       href: '/badge-1',
       icon: 'townhouse',
-      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'townhouse'
     },
     {
       href: '/badge-2',
       icon: 'townhouse',
-      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'townhouse'
     },
     {
       href: '/badge-3',
       icon: 'townhouse',
-      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--current-color',
+      iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
       analytics: 'link-1',
       iconScreenReaderText: 'townhouse'
     }

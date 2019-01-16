@@ -46,7 +46,9 @@ describe('SparkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('a .sprk-c-Icon').classList.toString()
-    ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open');
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open'
+    );
   });
 
   it('should add icon classes to icon when the toggle is opened and then closed', () => {
@@ -56,7 +58,7 @@ describe('SparkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('a .sprk-c-Icon').classList.toString()
-    ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle');
+    ).toEqual('sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle');
   });
 
   it('should add the correct classes if additionalClasses have values', () => {
