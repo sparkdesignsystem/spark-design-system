@@ -1,9 +1,14 @@
 import React from 'react';
+import classnames from 'classnames';
 
 function SprkButton(props) {
   return (
-    <button className="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-1">
-      Button
+    <button
+      className={classnames('sprk-c-Button', props.additionalClasses)}
+      type="button"
+      data-id={props.dataId}
+      disabled={props.disabled}>
+      {props.children}
     </button>
   );
 }
