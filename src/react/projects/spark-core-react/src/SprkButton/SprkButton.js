@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SparkButton(props) {
+function SprkButton(props) {
   return (
     <button className="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-1">
       Button
@@ -8,4 +8,4 @@ function SparkButton(props) {
   );
 }
 
-export default SparkButton;
+export default SprkButton;

@@ -1,1 +1,1 @@
-export { default as SparkButton } from './SparkButton/SparkButton';
+export { default as SprkButton } from './SprkButton/SparkButton';
