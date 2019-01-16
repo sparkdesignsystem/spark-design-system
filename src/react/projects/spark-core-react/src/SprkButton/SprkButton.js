@@ -26,7 +26,7 @@ class SprkButton extends React.Component {
             {'sprk-c-Button--tertiary': this.props.buttonType === 'tertiary'},
             this.props.additionalClasses
           )}
-        type="button"
+        type={this.props.type}
         onClick={this.handleClick}
         data-id={this.props.idString}
         disabled={this.props.disabled}
@@ -38,6 +38,7 @@ class SprkButton extends React.Component {
 }
 
 SprkButton.propTypes = {
+  type: PropTypes.string,
   buttonType: PropTypes.string,
   disabled: PropTypes.bool,
   idString: PropTypes.string,
