@@ -41,17 +41,14 @@ title: Angular
         </li>
         <li class="sprk-u-mvm">
           <p>
-            We assume that your Angular project is using at
-            least Angular 6 with Typescript or is an Angular-CLI based
-            project.
-          </p>
-        </li>
-        <li>
-          <p>
-            We assume that you have already installed
-            @sparkdesignsystem/spark-core in your Angular project.
-            Vanilla spark-core is a peer dependency of
-            the Spark Angular packages.
+            We assume that your Angular project is using Angular 6 with Typescript or is an Angular-CLI based
+            project. Currently,
+            <span class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                spark-core-angular
+              </code>
+            </span>
+            is dependent on Angular 6 and has not been fully tested using Angular 7. 
           </p>
         </li>
       </ul>
@@ -70,7 +67,26 @@ title: Angular
 
     <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
       <li class="sprk-u-mvm">
-        <p>Install the npm package.</p>
+        <p>Install the 
+          <span class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              spark-core
+            </code>
+          </span>  
+        npm package.</p>
+        <div class="drizzle-c-Command">
+          <code class="drizzle-CodeHighlight">
+            npm install --save-dev @sparkdesignsystem/spark-core</code>
+        </div>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>Install the
+          <span class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              spark-core-angular
+            </code>
+          </span>  
+        npm package.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
             npm install --save-dev @sparkdesignsystem/spark-core-angular</code>
@@ -84,7 +100,18 @@ title: Angular
           dependencies besides the packages listed below. If your application
           does not have one of our peer dependencies
           then your console should show a warning for that missing
-          dependency when you install spark-core-angular.
+          dependency when you install 
+          <span class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              spark-core-angular
+            </code>
+          </span>
+          .
+        </p>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>
+          Install additional peer dependencies:
         </p>
         <ul class="drizzle-b-List sprk-u-mbm">
           <li class="sprk-u-mvm">
@@ -124,29 +151,42 @@ title: Angular
       </li>
       <li class="sprk-u-mvm">
         <p>
-          You'll need to
-          import the
-          <span class="drizzle-c-Command"><code class="drizzle-CodeHighlight">spark-core-angular</code></span> NgModule
-          in your main app.module.ts file and add it to the NgModule imports array.
+          Add the following in your main app.module.ts file:
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              import { SparkCoreAngularModule } from "@sparkdesignsystem/spark-core-angular";
+            </code>
+          </div>
         </p>
-        <div class="drizzle-c-Command">
-          <code class="drizzle-CodeHighlight">
-            import { SparkCoreAngularModule } from "@sparkdesignsystem/spark-core-angular";
-          </code>
-        </div>
+        <p>
+          Add the 
+          <span class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              SparkCoreAngularModule
+            </code>
+          </span> 
+          to the NgModule imports array.
+        </p>
+
       </li>
       <li class="sprk-u-mvm">
         <p>
-          You'll need to
-          import the
-          <span class="drizzle-c-Command"><code class="drizzle-CodeHighlight">BrowserAnimationsModule</code></span>
-          in your main app.module.ts file and add it to the NgModule imports array.
+          Add the following in your main app.module.ts file:
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+            </code>
+          </div>
         </p>
-        <div class="drizzle-c-Command">
-          <code class="drizzle-CodeHighlight">
-            import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-          </code>
-        </div>
+        <p>
+          Add the 
+            <span class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                BrowserAnimationsModule
+              </code>
+            </span>
+          to the NgModule imports array.
+        </p>
       </li>
       <li class="sprk-u-mvm">
         <p>Spark does not provide icons directly. What you see below are proprietary icons in use by Quicken Loans. To supply
@@ -324,7 +364,7 @@ title: Angular
         <li>
           <div class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              gulp --dev
+              gulp dev-all
             </code>
           </div>
         </li>
