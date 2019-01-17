@@ -5,8 +5,8 @@ import classnames from 'classnames';
 const SprkLink = (props) => {
   const { children, variant, href, target, additionalClasses } = props;
   const classNames = classnames(
-    'sprk-b-Link',
     additionalClasses, {
+      'sprk-b-Link': (variant === 'base' || variant === 'simple' || variant === 'plain' || variant === 'disabled' || variant === 'has-icon'),
       'sprk-b-Link--simple': variant === 'simple',
       'sprk-b-Link--plain': variant === 'plain',
       'sprk-b-Link--disabled': variant === 'disabled',
@@ -25,7 +25,7 @@ SprkLink.propTypes = {
   // The children that will be rendered inside the link
   children: PropTypes.node,
   // The link variant that determines the class names
-  variant: PropTypes.oneOf(['simple', 'has-icon', 'plain', 'disabled']),
+  variant: PropTypes.oneOf(['base', 'simple', 'has-icon', 'plain', 'disabled']),
   // The string to use for the href attribute
   href: PropTypes.string,
   // Determines where to display the linked URL ex. _blank
