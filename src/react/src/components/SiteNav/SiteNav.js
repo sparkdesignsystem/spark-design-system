@@ -10,6 +10,11 @@ function SiteNav(props) {
             Buttons
           </Link>
         </li>
+        <li>
+          <Link to="/promos" className="drizzle-b-Link drizzle-b-Link--light">
+            Promos
+          </Link>
+        </li>
       </ul>
     </nav>
   );
