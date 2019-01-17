@@ -12,7 +12,7 @@ it('should display a button element with the correct base class', () => {
 
 it('should render the element as an anchor when the href prop is present', () => {
   const wrapper = shallow(<SprkButton href="#nogo" />);
-  expect(wrapper.find('a.sprk-c-Button').length).toBe(1);
+  expect(wrapper.find('a[href].sprk-c-Button').length).toBe(1);
 });
 
 it('should display a button element with correct classes when variant is secondary', () => {
@@ -33,6 +33,11 @@ it('if loading is not set, should not render the spinner', () => {
 it('if loading is set, should render the spinner', () => {
   const wrapper = mount(<SprkButton loading />);
   expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
+});
+
+it('should add role=button if an anchor is rendered', () => {
+  const wrapper = mount(<SprkButton href="#nogo" />);
+  expect(wrapper.find('[role="button"]').length).toBe(1);
 });
 
 it('should apply any unknown props as attributes on the element', () => {

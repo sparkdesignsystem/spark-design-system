@@ -16,6 +16,9 @@ const SprkButton = ({ additionalClasses, children, href, idString, loading, vari
           additionalClasses
         )}
       data-id={idString}
+      href={href}
+      role={href ? 'button' : undefined }
+      data-id={idString}
       {...rest}>
       { (loading && <SprkSpinner />) || children }
     </TagName>
