@@ -6,14 +6,14 @@ import { SprkSpinner } from '@sparkdesignsystem/spark-core-react';
 class SprkButton extends React.Component {
   constructor(){
     super();
-    this.state = { spinner: false };
+    this.state = { hasSpinner: false };
     this.handleClick = this.handleClick.bind(this);
     this.getTagName = this.getTagName.bind(this);
   }
 
   handleClick() {
-    if (this.props.spinner) {
-      this.setState({ spinner: true });
+    if (this.props.spinnerOnClick) {
+      this.setState({ hasSpinner: true });
     }
   };
 
@@ -21,30 +21,29 @@ class SprkButton extends React.Component {
     return (this.props.href ? 'a' : 'button');
   }
 
-  componentDidUpdate() {
-    if (this.props.spinner) {
-      this.setState({ spinner : true });
+  componentDidUpdate(prevProps) {
+    if (this.props.spinnerOnClick !== prevProps.spinnerOnClick) {
+      this.setState({ hasSpinner : this.props.spinnerOnClick });
     }
   }
 
   render() {
     let TagName = this.getTagName();
+    const {additionalClasses, children, spinnerOnClick, variant, idString, ...rest } = this.props;
+    const {hasSpinner} = this.state;
     return (
       <TagName
         className={
           classnames(
             'sprk-c-Button',
-            {'sprk-c-Button--secondary': this.props.variant === 'secondary'},
-            {'sprk-c-Button--tertiary': this.props.variant === 'tertiary'},
-            this.props.additionalClasses
+            {'sprk-c-Button--secondary': variant === 'secondary'},
+            {'sprk-c-Button--tertiary': variant === 'tertiary'},
+            additionalClasses
           )}
-        href={this.props.href}
-        type={this.props.type}
         onClick={this.handleClick}
-        data-id={this.props.idString}
-        disabled={this.props.disabled}
-        style={{ width: this.props.width }}>
-        { (this.state.spinner && <SprkSpinner />) || this.props.children }
+        data-id={idString}
+        {...rest}>
+        { (hasSpinner && <SprkSpinner />) || children }
       </TagName>
     );
   }
@@ -52,20 +51,15 @@ class SprkButton extends React.Component {
 
 SprkButton.propTypes = {
   disabled: PropTypes.bool,
-  href: PropTypes.string,
   idString: PropTypes.string,
-  spinner: PropTypes.bool,
-  type: PropTypes.string,
-  variant: PropTypes.string,
-  width: PropTypes.string
+  spinnerOnClick: PropTypes.bool,
+  variant: PropTypes.string
 }
 
 SprkButton.defaultProps = {
-  variant: 'primary',
   disabled: false,
-  spinner: false,
-  type: 'button',
-  width: 'auto'
+  variant: 'primary',
+  spinnerOnClick: false
 }
 
 export default SprkButton;
