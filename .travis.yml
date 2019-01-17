@@ -22,3 +22,4 @@ install:
   - $(npm bin)/gulp pre-publish
   - npm test
   - $(npm bin)/gulp test-angular
+  - $(npm bin)/gulp test-react
