@@ -12,7 +12,7 @@ class SprkButton extends React.Component {
   }
 
   handleClick() {
-    if (this.props.spinnerOnClick) {
+    if (this.props.spinner) {
       this.setState({ hasSpinner: true });
     }
   };
@@ -22,14 +22,14 @@ class SprkButton extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.spinnerOnClick !== prevProps.spinnerOnClick) {
-      this.setState({ hasSpinner : this.props.spinnerOnClick });
+    if (this.props.spinner !== prevProps.spinner) {
+      this.setState({ hasSpinner : this.props.spinner });
     }
   }
 
   render() {
     let TagName = this.getTagName();
-    const {additionalClasses, children, spinnerOnClick, variant, idString, ...rest } = this.props;
+    const {additionalClasses, children, spinner, variant, idString, ...rest } = this.props;
     const {hasSpinner} = this.state;
     return (
       <TagName
@@ -52,14 +52,14 @@ class SprkButton extends React.Component {
 SprkButton.propTypes = {
   disabled: PropTypes.bool,
   idString: PropTypes.string,
-  spinnerOnClick: PropTypes.bool,
-  variant: PropTypes.string
+  spinner: PropTypes.bool,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
 }
 
 SprkButton.defaultProps = {
   disabled: false,
   variant: 'primary',
-  spinnerOnClick: false
+  spinner: false
 }
 
 export default SprkButton;

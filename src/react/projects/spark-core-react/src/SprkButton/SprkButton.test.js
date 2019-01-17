@@ -25,23 +25,23 @@ it('should display a button element with correct classes when variant is tertiar
   expect(wrapper.find('button').hasClass('sprk-c-Button--tertiary')).toBe(true);
 });
 
-it('if spinnerOnClick is not set, should not update state.hasSpinner on click', () => {
+it('if spinner is not set, should not update state.hasSpinner on click', () => {
   const wrapper = shallow(<SprkButton />);
   wrapper.find('button').simulate('click');
   expect(wrapper.state().hasSpinner).toBe(false);
 });
 
-it('if spinnerOnClick is set, should update state.hasSpinner on click', () => {
-  const wrapper = shallow(<SprkButton spinnerOnClick />);
+it('if spinner is set, should update state.hasSpinner on click', () => {
+  const wrapper = shallow(<SprkButton spinner />);
   wrapper.find('button').simulate('click');
   expect(wrapper.state().hasSpinner).toBe(true);
 });
 
-it('if hasSpinner is true, setting the spinnerOnClick prop to false should set hasSpinner back to false', () => {
-  const wrapper = shallow(<SprkButton spinnerOnClick />);
+it('if hasSpinner is true, setting the spinner prop to false should set hasSpinner back to false', () => {
+  const wrapper = shallow(<SprkButton spinner />);
   wrapper.find('button').simulate('click');
   expect(wrapper.state().hasSpinner).toBe(true);
-  wrapper.setProps({ spinnerOnClick: false});
+  wrapper.setProps({ spinner: false});
   expect(wrapper.state().hasSpinner).toBe(false);
 });
 
