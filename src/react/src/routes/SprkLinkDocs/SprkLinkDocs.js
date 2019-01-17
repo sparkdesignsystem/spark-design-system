@@ -7,13 +7,13 @@ const SprkLinkDocs = () => {
   return (
     <CentralColumnLayout>
       <div className="sprk-u-mbm">
-        <SprkLink>
+        <SprkLink href="/buttons">
           Base Link
         </SprkLink>
       </div>
 
       <div className="sprk-u-mbm">
-        <SprkLink variant="simple">
+        <SprkLink variant="simple" idString="simple-link">
           Simple Link
         </SprkLink>
       </div>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const SprkLink = (props) => {
-  const { children, variant, href, target, additionalClasses } = props;
+  const { children, variant, href, target, additionalClasses, idString } = props;
   const classNames = classnames(
     'sprk-b-Link',
     additionalClasses, {
@@ -15,7 +15,7 @@ const SprkLink = (props) => {
   );
 
   return (
-    <a className={classNames} href={href} target={target}>
+    <a className={classNames} href={href} target={target} data-id={idString}>
       {children}
     </a>
   );
@@ -28,6 +28,8 @@ SprkLink.propTypes = {
   variant: PropTypes.oneOf(['base', 'simple', 'has-icon', 'plain', 'disabled']),
   // The string to use for the href attribute
   href: PropTypes.string,
+  // The string to use for the data-id attribute ex.
+  idString: PropTypes.string,
   // Determines where to display the linked URL ex. _blank
   target: PropTypes.string,
   // Any additional classes to add to the link
