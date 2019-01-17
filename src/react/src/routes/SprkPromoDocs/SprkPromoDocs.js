@@ -1,14 +1,14 @@
 import React from 'react';
 import CentralColumnLayout from '../../container/CentralColumnLayout/CentralColumnLayout';
 
-import { SparkPromo } from '@sparkdesignsystem/spark-core-react';
+import { SprkPromo } from '@sparkdesignsystem/spark-core-react';
 
-const SparkPromoDocs = () => {
+const SprkPromoDocs = () => {
   return (
     <CentralColumnLayout>
-      <SparkPromo/>
+      <SprkPromo/>
     </CentralColumnLayout>
   );
 };
 
-export default SparkPromoDocs;
+export default SprkPromoDocs;
