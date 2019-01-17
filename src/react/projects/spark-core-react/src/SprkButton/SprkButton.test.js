@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkButton from './SprkButton';
 
@@ -25,24 +25,14 @@ it('should display a button element with correct classes when variant is tertiar
   expect(wrapper.find('button').hasClass('sprk-c-Button--tertiary')).toBe(true);
 });
 
-it('if spinner is not set, should not update state.hasSpinner on click', () => {
-  const wrapper = shallow(<SprkButton />);
-  wrapper.find('button').simulate('click');
-  expect(wrapper.state().hasSpinner).toBe(false);
+it('if loading is not set, should not render the spinner', () => {
+  const wrapper = mount(<SprkButton />);
+  expect(wrapper.find('.sprk-c-Spinner').length).toBe(0);
 });
 
-it('if spinner is set, should update state.hasSpinner on click', () => {
-  const wrapper = shallow(<SprkButton spinner />);
-  wrapper.find('button').simulate('click');
-  expect(wrapper.state().hasSpinner).toBe(true);
-});
-
-it('if hasSpinner is true, setting the spinner prop to false should set hasSpinner back to false', () => {
-  const wrapper = shallow(<SprkButton spinner />);
-  wrapper.find('button').simulate('click');
-  expect(wrapper.state().hasSpinner).toBe(true);
-  wrapper.setProps({ spinner: false});
-  expect(wrapper.state().hasSpinner).toBe(false);
+it('if loading is set, should render the spinner', () => {
+  const wrapper = mount(<SprkButton loading />);
+  expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
 });
 
 it('should apply any unknown props as attributes on the element', () => {

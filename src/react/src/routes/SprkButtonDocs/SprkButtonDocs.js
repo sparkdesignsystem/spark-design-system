@@ -4,7 +4,7 @@ import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralCol
 import { SprkButton } from '@sparkdesignsystem/spark-core-react';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
-const SparkButtonDocs = () => {
+const SprkButtonDocs = () => {
   return (
     <CentralColumnLayout>
       <ExampleContainer heading="Primary Buttons">
@@ -18,11 +18,11 @@ const SparkButtonDocs = () => {
       <ExampleContainer heading="Tertiary Buttons">
         <SprkButton variant="tertiary">Button Text</SprkButton>
       </ExampleContainer>
-      <ExampleContainer heading="Submission Button">
-        <SprkButton spinner>Button Text</SprkButton>
+      <ExampleContainer heading="Loading Button">
+        <SprkButton loading>Button Text</SprkButton>
       </ExampleContainer>
     </CentralColumnLayout>
   );
 };
 
-export default SparkButtonDocs;
+export default SprkButtonDocs;

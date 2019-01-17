@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import SprkButton from '../SprkButton/SprkButton';
 
 function SprkSpinner({size, lightness, ...rest}) {
   return (
