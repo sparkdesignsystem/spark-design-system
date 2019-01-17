@@ -15,47 +15,34 @@ title: Angular
 
   <div class="drizzle-o-ContentGrouping">
     <h2 class="drizzle-b-h2">Requirements</h2>
-    <p>Spark assumes your project is using <a class="drizzle-b-Link"
-    href="https://sass-lang.com/">Sass</a> for styling and
-    that your project has a JavaScript build step that will transpile ES6+
-    and polyfill appropriately for browser support.</p>
+    <p>Spark's Angular implementation assumes a few things about your project.</p>
+    <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
+      <li class="sprk-u-mvm">
+        <p>
+          We assume that your project is processing
+          <a href="https://sass-lang.com/" class="drizzle-b-Link">Sass</a> rather
+          than plain CSS for style information. More information
+          for converting an Angular project to SCSS is available at
+          <a href="https://angular.io/guide/ajs-quick-reference" class="drizzle-b-Link">angular.io</a>.
+        </p>
+      </li>
+      <li class="sprk-u-mvm">
+        <p>
+          We assume that your Angular project is using Angular 6 with Typescript or is an Angular-CLI based
+          project. Currently,
+          <span class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              spark-core-angular
+            </code>
+          </span>
+          is dependent on Angular 6 and has not been fully tested using Angular 7. 
+        </p>
+      </li>
+    </ul>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
     <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
-    <h3 class="drizzle-b-h3 sprk-u-mbm">Angular</h3>
-
-    <div class="drizzle-o-ContentGrouping">
-      <h4 class="drizzle-b-h4 sprk-u-mbm">Requirements</h4>
-      <p>Spark's Angular implementation assumes a few things about your project.</p>
-
-      <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
-        <li class="sprk-u-mvm">
-          <p>
-            We assume that your project is processing
-            <a href="https://sass-lang.com/" class="drizzle-b-Link">Sass</a> rather
-            than plain CSS for style information. More information
-            for converting an Angular project to SCSS is available at
-            <a href="https://angular.io/guide/ajs-quick-reference" class="drizzle-b-Link">angular.io</a>.
-          </p>
-        </li>
-        <li class="sprk-u-mvm">
-          <p>
-            We assume that your Angular project is using Angular 6 with Typescript or is an Angular-CLI based
-            project. Currently,
-            <span class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                spark-core-angular
-              </code>
-            </span>
-            is dependent on Angular 6 and has not been fully tested using Angular 7. 
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="drizzle-o-ContentGrouping">
     <h4 class="drizzle-b-h4">Getting Started</h4>
     <p>In order to get started with
       <span class="drizzle-c-Command">
@@ -198,7 +185,6 @@ title: Angular
 
   <div class="drizzle-o-ContentGrouping">
     <h2 class="drizzle-b-h2">Spark Extras</h2>
-    <h3 class="drizzle-b-h3">Angular</h3>
 
     <div class="drizzle-o-ContentGrouping">
       <p>
