@@ -21,7 +21,7 @@ const SprkLinkDocs = () => {
       <div className="sprk-u-mbm">
         <SprkLink variant="has-icon">
           {/* TODO: SVG Component*/}
-          <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
+          <svg className="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
             <use xlinkHref="#communication" />
           </svg>
           Icon With Text Link
