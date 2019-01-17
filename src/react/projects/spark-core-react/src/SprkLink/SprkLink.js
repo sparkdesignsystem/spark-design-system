@@ -5,8 +5,8 @@ import classnames from 'classnames';
 const SprkLink = (props) => {
   const { children, variant, href, target, additionalClasses } = props;
   const classNames = classnames(
+    'sprk-b-Link',
     additionalClasses, {
-      'sprk-b-Link': (variant === 'base' || variant === 'simple' || variant === 'plain' || variant === 'disabled' || variant === 'has-icon'),
       'sprk-b-Link--simple': variant === 'simple',
       'sprk-b-Link--plain': variant === 'plain',
       'sprk-b-Link--disabled': variant === 'disabled',
