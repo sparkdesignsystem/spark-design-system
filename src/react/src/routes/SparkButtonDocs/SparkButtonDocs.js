@@ -9,6 +9,7 @@ const SparkButtonDocs = () => {
     <CentralColumnLayout>
       <ExampleContainer heading="Primary Buttons">
         <SprkButton>Button Text</SprkButton>
+        <SprkButton href="#nogo">Link Button</SprkButton>
         <SprkButton disabled>Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Secondary Buttons">
