@@ -3,36 +3,23 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SprkSpinner } from '@sparkdesignsystem/spark-core-react';
 
-class SprkButton extends React.Component {
-  constructor(){
-    super();
-    this.getTagName = this.getTagName.bind(this);
-  }
+const SprkButton = ({ additionalClasses, children, href, idString, loading, variant, ...rest}) => {
+  const TagName = href ? 'a' : 'button';
 
-  getTagName() {
-    return (this.props.href ? 'a' : 'button');
-  }
-
-  render() {
-    let TagName = this.getTagName();
-    const {additionalClasses, children, loading, variant, idString, ...rest } = this.props;
-
-    return (
-      <TagName
-        className={
-          classnames(
-            'sprk-c-Button',
-            {'sprk-c-Button--secondary': variant === 'secondary'},
-            {'sprk-c-Button--tertiary': variant === 'tertiary'},
-            additionalClasses
-          )}
-        onClick={this.handleClick}
-        data-id={idString}
-        {...rest}>
-        { (loading && <SprkSpinner />) || children }
-      </TagName>
-    );
-  }
+  return (
+    <TagName
+      className={
+        classnames(
+          'sprk-c-Button',
+          {'sprk-c-Button--secondary': variant === 'secondary'},
+          {'sprk-c-Button--tertiary': variant === 'tertiary'},
+          additionalClasses
+        )}
+      data-id={idString}
+      {...rest}>
+      { (loading && <SprkSpinner />) || children }
+    </TagName>
+  );
 }
 
 SprkButton.propTypes = {
