@@ -41,6 +41,14 @@ gulp.task('link-spark-core-react', (cb) => {
   });
 });
 
+gulp.task('test-spark-core-react', (cb) => {
+  exec('cd src/react/projects/spark-core-react && ../../node_modules/.bin/jest spark-core-react', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
 gulp.task('link-spark-core-react-to-react-dir', (cb) => {
   gulp.src(['./src/react/node_modules/@sparkdesignsystem/spark-core-react'], { read: false })
     .pipe(clean());
