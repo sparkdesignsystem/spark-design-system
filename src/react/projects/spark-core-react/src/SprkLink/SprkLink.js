@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const SprkLink = (props) => {
-  const { children, variant, href, target, additionalClasses, idString } = props;
+  const { children, variant, href, target, additionalClasses, idString, ...other } = props;
   const classNames = classnames(
     'sprk-b-Link',
     additionalClasses, {
@@ -15,7 +15,7 @@ const SprkLink = (props) => {
   );
 
   return (
-    <a className={classNames} href={href} target={target} data-id={idString}>
+    <a className={classNames} href={href} target={target} data-id={idString} {...other}>
       {children}
     </a>
   );

@@ -7,7 +7,7 @@ const SprkLinkDocs = () => {
   return (
     <CentralColumnLayout>
       <div className="sprk-u-mbm">
-        <SprkLink href="/buttons">
+        <SprkLink href="/buttons" id="foo">
           Base Link
         </SprkLink>
       </div>
