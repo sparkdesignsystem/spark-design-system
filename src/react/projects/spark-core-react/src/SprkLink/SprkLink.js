@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const SprkLink = (props) => {
+  const { children, variant, href, target, additionalClasses } = props;
   const classNames = classnames(
     'sprk-b-Link',
-    props.additionalClasses, {
-      'sprk-b-Link--simple': props.variant === 'simple',
-      'sprk-b-Link--plain': props.variant === 'plain',
-      'sprk-b-Link--disabled': props.variant === 'disabled',
-      'sprk-b-Link--simple sprk-b-Link--has-icon': props.variant === 'has-icon',
+    additionalClasses, {
+      'sprk-b-Link--simple': variant === 'simple',
+      'sprk-b-Link--plain': variant === 'plain',
+      'sprk-b-Link--disabled': variant === 'disabled',
+      'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
     },
   );
 
   return (
-    <a className={classNames} href={props.href} target={props.target}>
-      {props.children}
+    <a className={classNames} href={href} target={target}>
+      {children}
     </a>
   );
 }
