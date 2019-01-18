@@ -535,7 +535,7 @@ $sprk-date-picker-years-modal-max-height: 500px !default;
 // Text Icon Inputs
 ///
 $sprk-input-text-icon-offset-x: $sprk-space-m !default;
-$sprk-input-text-icon-offset-y: 38px !default;
+$sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
 $sprk-text-input-has-text-icon-padding: 12px 13px 12px 37px !default;
@@ -728,7 +728,8 @@ $sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
 $sprk-masthead-selector-font-weight: 300 !default;
 $sprk-masthead-selector-border-radius: 5px !default;
 $sprk-masthead-selector-dropdown-border-bottom-mask-open: 2px solid $sprk-gray !default;
-$sprk-masthead-selector-dropdown-box-shadow-mask-open: 0 5px 10px rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-selector-dropdown-box-shadow-mask-open: 0 5px 10px
+  rgba(0, 0, 0, 0.1) !default;
 $sprk-masthead-selector-border-color-mask-open: $sprk-white !default;
 $sprk-masthead-selector-font-color: $sprk-black !default;
 $sprk-masthead-selector-bg-color: $sprk-white !default;
