@@ -26,7 +26,9 @@ const SprkButton = ({ additionalClasses, children, href, idString, loading, vari
 }
 
 SprkButton.propTypes = {
+  additionalClasses: PropTypes.string,
   disabled: PropTypes.bool,
+  href: PropTypes.string,
   idString: PropTypes.string,
   loading: PropTypes.bool,
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
