@@ -80,26 +80,27 @@ const SprkPromo = (props) => {
           {children}
         </div>
 
-        {cta === 'button' && 
-          <a
-            href={buttonHref}
-            className="sprk-c-Button"
-            data-analytics={buttonLinkAnalytics}
-            >
-            {ctaText}  
-          </a>      
-        }
+          {cta === 'button' && 
+            <div className='sprk-o-Stack__item'>
+              <a
+                href={buttonHref}
+                className="sprk-c-Button"
+                data-analytics={buttonLinkAnalytics}
+                >
+                {ctaText}  
+              </a>
+            </div>
+          }
 
-        {cta === 'link' &&
-          <a
-            href={ctaLinkHref}
-            className="sprk-o-Stack__item sprk-b-Link sprk-b-Link--simple"
-            data-analytics={ctaLinkAnalytics}
-            >
-            {ctaText}
-          </a>
-        }
-
+          {cta === 'link' &&
+            <a
+              href={ctaLinkHref}
+              className="sprk-o-Stack__item sprk-b-Link sprk-b-Link--simple"
+              data-analytics={ctaLinkAnalytics}
+              >
+              {ctaText}
+            </a>
+          }
       </div>
 
       {isFlag && mediaRev && 
