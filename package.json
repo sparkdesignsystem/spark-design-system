@@ -63,7 +63,7 @@
     "precommit": "lint-staged",
     "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-highlight-board",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
-    "lerna-publish": "lerna bootstrap && lerna version && lerna run lerna-publish"
+    "spark-publish": "lerna bootstrap && lerna version && gulp pre-publish && lerna run lerna-publish"
   },
   "lint-staged": {
     "*.scss": [
