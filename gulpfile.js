@@ -136,6 +136,7 @@ gulp.task('build', (cb) => {
   );
 });
 
+// netlify
 gulp.task('build-angular', (cb) => {
   runSequence(
     'install-angular-dev-app',
@@ -146,6 +147,7 @@ gulp.task('build-angular', (cb) => {
   );
 });
 
+// netlify
 gulp.task('build-react', (cb) => {
   runSequence(
     'setup-spark-packages',
