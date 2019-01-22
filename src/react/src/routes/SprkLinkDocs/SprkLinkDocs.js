@@ -7,19 +7,19 @@ const SprkLinkDocs = () => {
   return (
     <CentralColumnLayout>
       <div className="sprk-u-mbm">
-        <SprkLink href="/buttons" id="foo">
+        <SprkLink href="#nogo" id="foo">
           Base Link
         </SprkLink>
       </div>
 
       <div className="sprk-u-mbm">
-        <SprkLink variant="simple" idString="simple-link">
+        <SprkLink variant="simple" href="/buttons" idString="simple-link">
           Simple Link
         </SprkLink>
       </div>
 
       <div className="sprk-u-mbm">
-        <SprkLink variant="has-icon">
+        <SprkLink variant="has-icon" target="_blank" href="#nogo" analyticsString="foo">
           {/* TODO: SVG Component*/}
           <svg className="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
             <use xlinkHref="#communication" />
@@ -29,8 +29,14 @@ const SprkLinkDocs = () => {
       </div>
 
       <div className="sprk-u-mbm">
-        <SprkLink variant="disabled">
+        <SprkLink variant="disabled" href="#nogo">
           Disabled Link
+        </SprkLink>
+      </div>
+
+      <div className="sprk-u-mbm">
+        <SprkLink variant="plain" additionalClasses="foo" href="#nogo">
+          Plain Link
         </SprkLink>
       </div>
     </CentralColumnLayout>
