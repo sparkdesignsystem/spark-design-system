@@ -141,6 +141,7 @@ gulp.task('build-angular', (cb) => {
     'install-angular-dev-app',
     'setup-spark-packages',
     'setup-spark-angular-projects',
+    'build-angular-dev-app-netlify',
     cb,
   );
 });
@@ -151,6 +152,7 @@ gulp.task('build-react', (cb) => {
     'install-react-dev-app',
     'link-spark-to-react-dir',
     'setup-spark-core-react',
+    'build-react-dev-app-netlify',
     cb,
   );
 });
