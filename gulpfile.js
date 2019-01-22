@@ -147,7 +147,7 @@ gulp.task('build-angular', (cb) => {
   );
 });
 
-// netlify
+// netlify react
 gulp.task('build-react', (cb) => {
   runSequence(
     'setup-spark-packages',
