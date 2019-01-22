@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import SparkButtonDocs from './SparkButtonDocs/SparkButtonDocs';
+import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import SprkPromoDocs from './SprkPromoDocs/SprkPromoDocs';
 
 class Router extends React.Component {
@@ -11,6 +12,7 @@ class Router extends React.Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/buttons" component={SparkButtonDocs} />
+          <Route exact path="/links" component={SprkLinkDocs} />
           <Route exact path="/promos" component={SprkPromoDocs} />
         </Switch>
       </BrowserRouter>
