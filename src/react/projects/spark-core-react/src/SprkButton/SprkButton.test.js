@@ -10,8 +10,8 @@ it('should display a button element with the correct base class', () => {
   expect(wrapper.find('button.sprk-c-Button').length).toBe(1);
 });
 
-it('should render the element as an anchor when the href prop is present', () => {
-  const wrapper = shallow(<SprkButton href="#nogo" />);
+it('should render the element as an anchor when the element prop is a', () => {
+  const wrapper = shallow(<SprkButton element="a" href="#nogo" />);
   expect(wrapper.find('a[href].sprk-c-Button').length).toBe(1);
 });
 
@@ -36,7 +36,7 @@ it('if loading is set, should render the spinner', () => {
 });
 
 it('should add role=button if an anchor is rendered', () => {
-  const wrapper = mount(<SprkButton href="#nogo" />);
+  const wrapper = mount(<SprkButton element="a" href="#nogo" />);
   expect(wrapper.find('[role="button"]').length).toBe(1);
 });
 

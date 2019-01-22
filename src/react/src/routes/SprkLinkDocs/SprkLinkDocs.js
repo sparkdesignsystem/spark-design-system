@@ -1,24 +1,25 @@
 import React from 'react';
-import CentralColumnLayout from '../../container/CentralColumnLayout/CentralColumnLayout';
+import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
 import { SprkLink } from '@sparkdesignsystem/spark-core-react';
+import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
 const SprkLinkDocs = () => {
   return (
     <CentralColumnLayout>
-      <div className="sprk-u-mbm">
+      <ExampleContainer>
         <SprkLink href="#nogo" id="foo">
           Base Link
         </SprkLink>
-      </div>
+      </ExampleContainer>
 
-      <div className="sprk-u-mbm">
+      <ExampleContainer>
         <SprkLink variant="simple" href="/buttons" idString="simple-link">
           Simple Link
         </SprkLink>
-      </div>
+      </ExampleContainer>
 
-      <div className="sprk-u-mbm">
+      <ExampleContainer>
         <SprkLink variant="has-icon" target="_blank" href="#nogo" analyticsString="foo">
           {/* TODO: SVG Component*/}
           <svg className="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
@@ -26,19 +27,19 @@ const SprkLinkDocs = () => {
           </svg>
           Icon With Text Link
         </SprkLink>
-      </div>
+      </ExampleContainer>
 
-      <div className="sprk-u-mbm">
+      <ExampleContainer>
         <SprkLink variant="disabled" href="#nogo">
           Disabled Link
         </SprkLink>
-      </div>
+      </ExampleContainer>
 
-      <div className="sprk-u-mbm">
+      <ExampleContainer>
         <SprkLink variant="plain" additionalClasses="foo" href="#nogo">
           Plain Link
         </SprkLink>
-      </div>
+      </ExampleContainer>
     </CentralColumnLayout>
   );
 };
