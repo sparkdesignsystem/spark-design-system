@@ -136,7 +136,7 @@ gulp.task('build', (cb) => {
   );
 });
 
-// netlify angular
+// netlify
 gulp.task('build-angular', (cb) => {
   runSequence(
     'install-angular-dev-app',
