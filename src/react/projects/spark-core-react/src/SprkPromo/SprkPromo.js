@@ -11,6 +11,8 @@ const SprkPromo = (props) => {
       className={
         classnames(
           'sprk-b-Promo',
+          'sprk-o-Stack',
+          'sprk-o-Stack--split@s',
           {'sprk-c-Promo--flag': isFlag},
           {'sprk-c-Promo--bordered': hasBorder},
           additionalClasses
