@@ -4,6 +4,7 @@ import Homepage from './Homepage/Homepage';
 import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import NotFound from './NotFound/NotFound';
+import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
 
 class Router extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class Router extends React.Component {
           <Route exact path="/buttons" component={SprkButtonDocs} />
           <Route exact path="/links" component={SprkLinkDocs} />
           <Route component={NotFound} />
+          <Route exact path="/alerts" component={SprkAlertDocs} />
         </Switch>
       </BrowserRouter>
     );
