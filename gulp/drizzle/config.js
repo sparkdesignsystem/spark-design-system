@@ -138,6 +138,12 @@ module.exports = {
         ],
         tasks: ['build-spark-extras-angular-highlight-board'],
       },
+      {
+        match: [
+          './src/react/projects/spark-core-react/src/**/*',
+        ],
+        tasks: ['build-spark-core-react'],
+      },
     ],
   },
 
