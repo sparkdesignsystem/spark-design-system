@@ -121,6 +121,13 @@ gulp.task('test-angular', (cb) => {
   );
 });
 
+gulp.task('test-react', (cb) => {
+  runSequence(
+    'test-spark-core-react',
+    cb,
+  );
+});
+
 // netlify
 gulp.task('build', (cb) => {
   runSequence(
