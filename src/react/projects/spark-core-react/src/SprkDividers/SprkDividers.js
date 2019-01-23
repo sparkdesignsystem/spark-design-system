@@ -10,13 +10,13 @@ const SprkDividers = (props) => {
   )
   const TagName = element;
   return (
-    <TagName className={classNames} data-id={idString} {...other}></TagName>
+    <TagName  data-id={idString} {...other}></TagName>
   );
 }
 
 SprkDividers.propTypes = {
   // The element that will be rendered - required
-  element: PropTypes.oneOf(['span', 'div']).isRequired,
+  element: PropTypes.oneOf(['span', 'hr']).isRequired,
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the element

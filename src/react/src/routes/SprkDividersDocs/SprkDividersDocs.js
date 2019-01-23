@@ -12,8 +12,8 @@ const SprkDividersDocs = () => {
       </div>
 
       <div className="sprk-u-mbm">
-        <h2 className="drizzle-b-h2">Divider as div</h2>
-        <SprkDividers idString="divider-1" element="div"></SprkDividers>
+        <h2 className="drizzle-b-h2">Divider as hr</h2>
+        <SprkDividers idString="divider-1" element="hr"></SprkDividers>
       </div>
     </CentralColumnLayout>
   )
