@@ -84,7 +84,7 @@ class SprkAlert extends Component {
 
 SprkAlert.propTypes = {
   // The alert message that will be rendered inside the paragraph tab
-  message: PropTypes.string,
+  message: PropTypes.string.isRequired,
   // The link variant that determines the class names
   variant: PropTypes.oneOf(['info', 'success', 'fail']),
   // The string to use for the data-id attribute
