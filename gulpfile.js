@@ -91,7 +91,7 @@ gulp.task('dev-spark-react', (cb) => {
     'install-react-dev-app',
     'link-spark-to-react-dir',
     'setup-spark-core-react',
-    ['serve-react-dev-app', 'watch'],
+    'serve-react-dev-app',
     cb,
   );
 });

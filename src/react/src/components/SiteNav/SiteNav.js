@@ -15,6 +15,11 @@ function SiteNav(props) {
             Links
           </Link>
         </li>
+        <li>
+          <Link to="/masthead" className="drizzle-b-Link drizzle-b-Link--light">
+            Masthead
+          </Link>
+        </li>
       </ul>
     </nav>
   );

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import SparkButtonDocs from './SparkButtonDocs/SparkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
+import SprkMastheadDocs from './SprkMastheadDocs/SprkMastheadDocs';
 
 class Router extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Router extends React.Component {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/buttons" component={SparkButtonDocs} />
           <Route exact path="/links" component={SprkLinkDocs} />
+          <Route exact path="/masthead" component={SprkMastheadDocs} />
         </Switch>
       </BrowserRouter>
     );
