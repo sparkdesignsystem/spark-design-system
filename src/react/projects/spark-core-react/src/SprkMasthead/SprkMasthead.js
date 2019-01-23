@@ -7,7 +7,7 @@ import SprkMastheadUtilitySection from './components/SprkMastheadUtilitySection/
 
 class SprkMasthead extends Component {
   render() {
-    const { additionalClasses, analyticsString, idString, siteLogo } = this.props;
+    const { additionalClasses, analyticsString, idString, littleNavLinks, siteLogo, utilityContents } = this.props;
 
     return (
       <header className={classNames("sprk-c-Masthead", "sprk-o-Stack", additionalClasses)}
@@ -22,8 +22,8 @@ class SprkMasthead extends Component {
             </a>
           </div>
 
-          <SprkMastheadLittleNav/>
-          <SprkMastheadUtilitySection/>
+          <SprkMastheadLittleNav links={littleNavLinks} utilityContents={utilityContents} />
+
         </div>
       </header>
     );
@@ -31,5 +31,8 @@ class SprkMasthead extends Component {
 }
 
 SprkMasthead.propTypes = {};
+SprkMasthead.defaultProps = {
+  utilityContents: ''
+};
 
 export default SprkMasthead;
