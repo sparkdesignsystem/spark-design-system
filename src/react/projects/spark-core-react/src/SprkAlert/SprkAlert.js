@@ -28,18 +28,20 @@ class SprkAlert extends Component {
       ...other
     } = this.props;
 
+    const { isVisible  } = this.state;
+
     const classNames = classnames(
       'sprk-c-Alert',
       additionalClasses, {
         'sprk-c-Alert--info': variant === 'info',
         'sprk-c-Alert--success': variant === 'success',
         'sprk-c-Alert--fail': variant === 'fail',
-        'sprk-u-Display--none': this.state.isVisible === false,
+        'sprk-u-Display--none': isVisible === false,
       },
     );
 
     return (
-      <div className={classNames} role="alert" data-id={idString} data-analytics={analyticsString} {...other}>
+      <div className={classNames} role="alert" data-id={idString} {...other}>
         <div className="sprk-c-Alert__content">
           {/* TODO: Icon Component*/}
           <svg className="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
@@ -50,9 +52,9 @@ class SprkAlert extends Component {
             {message}
           </p>
         </div>
-        {/* TODO: Button Component*/}
         {isDismissible &&
-          <button className="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss" onClick={this.handleDismiss}>
+          <button className="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss" onClick={this.handleDismiss} data-analytics={analyticsString}>
+            {/* TODO: Icon Component*/}
             <svg className="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
               <use xlinkHref="#close"></use>
             </svg>
@@ -73,7 +75,7 @@ SprkAlert.propTypes = {
   idString: PropTypes.string,
   // Determines if the dismiss button is added
   isDismissible: PropTypes.bool,
-  // The string to use for the data-analytics attribute
+  // The string to use for the data-analytics attribute on the close button
   analyticsString: PropTypes.string,
   // Any additional classes to add to the link
   additionalClasses: PropTypes.string

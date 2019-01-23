@@ -1,5 +1,5 @@
 import React from 'react';
-import CentralColumnLayout from '../../container/CentralColumnLayout/CentralColumnLayout';
+import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
 import { SprkAlert } from '@sparkdesignsystem/spark-core-react';
 
