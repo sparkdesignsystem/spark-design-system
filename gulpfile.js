@@ -19,11 +19,9 @@ gulp.task('pre-publish', (cb) => {
   runSequence(
     'setup-spark-packages',
     'build-drizzle',
-    'install-angular-dev-app',
-    'install-react-dev-app',
+    ['install-angular-dev-app', 'install-react-dev-app'],
     'link-spark-to-react-dir',
-    'setup-spark-angular-projects',
-    'setup-spark-core-react',
+    ['setup-spark-angular-projects', 'setup-spark-core-react'],
     cb,
   );
 });
