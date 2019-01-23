@@ -29,7 +29,6 @@ class SprkMasthead extends Component {
           </div>
         </div>
         <SprkMastheadLittleNav/>
-        <SprkMastheadNarrowNav/>
       </header>
     );
   }

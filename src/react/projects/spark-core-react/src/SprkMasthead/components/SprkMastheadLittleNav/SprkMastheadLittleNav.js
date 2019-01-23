@@ -13,33 +13,6 @@ class SprkMastheadLittleNav extends Component {
               Item 1
             </a>
           </li>
-
-          <li>
-            <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="#nogo">
-              Item 2
-            </a>
-          </li>
-        </ul>
-
-        <ul
-          className="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column">
-          <li>
-            <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="tel:555-555-5555">
-              (555) 555-5555
-            </a>
-          </li>
-
-          <li>
-            <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href="#nogo">
-              Talk To Us
-            </a>
-          </li>
-
-          <li>
-            <a className="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact" href="#nogo">
-              Sign In
-            </a>
-          </li>
         </ul>
       </nav>
     );

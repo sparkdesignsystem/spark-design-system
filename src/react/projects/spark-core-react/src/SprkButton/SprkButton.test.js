@@ -40,6 +40,16 @@ it('should add role=button if an anchor is rendered', () => {
   expect(wrapper.find('[role="button"]').length).toBe(1);
 });
 
+it('should add data-id if idString is supplied', () => {
+  const wrapper = mount(<SprkButton idString="button-1" />);
+  expect(wrapper.find('[data-id="button-1"]').length).toBe(1);
+})
+
+it('should add data-analytics if analyticsString is supplied', () => {
+  const wrapper = mount(<SprkButton analyticsString="button-1" />);
+  expect(wrapper.find('[data-analytics="button-1"]').length).toBe(1);
+})
+
 it('should apply any unknown props as attributes on the element', () => {
   const wrapper = shallow(<SprkButton aria-labelledby="label-1" />);
   expect(wrapper.find('button[aria-labelledby="label-1"]').length).toBe(1);
