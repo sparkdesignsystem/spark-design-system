@@ -1,17 +1,19 @@
 import React from 'react';
-import CentralColumnLayout from '../../container/CentralColumnLayout/CentralColumnLayout';
-
+import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
+import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 import { SprkPromo } from '@sparkdesignsystem/spark-core-react';
 
 const SprkPromoDocs = () => {
   return (
     <CentralColumnLayout>
+      <ExampleContainer heading="Base Promo">
         <div className="sprk-u-mbm">
           <SprkPromo
             title="Title"
             subtitle="Subtitle"
             cta="button"
             ctaText="Learn More"
+            buttonHref="https://www.sparkdesignsystem.com"
             hasBorder
             idString="promo-1"
             additionalClasses="sprk-o-Stack--split@s"
@@ -19,7 +21,9 @@ const SprkPromoDocs = () => {
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
+      </ExampleContainer>
 
+      <ExampleContainer heading="Flag Promo">
         <div className="sprk-u-mbm">
           <SprkPromo
             isFlag
@@ -27,11 +31,14 @@ const SprkPromoDocs = () => {
             imgAlt="Spark Design System Logo"
             idString="promo-2"
             additionalClasses="sprk-o-Stack--split@s"
+            hasBorder
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
+      </ExampleContainer>
 
+      <ExampleContainer heading="Promo with Image">
         <div className="sprk-u-mbm">
           <SprkPromo
             title="Title"
@@ -40,14 +47,18 @@ const SprkPromoDocs = () => {
             imgAlt="placeholder"
             imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
             cta="button"
+            buttonHref="https://www.sparkdesignsystem.com"
             ctaText="Learn More"
             idString="promo-3"
             additionalClasses="sprk-o-Stack--split@s"
+            hasBorder
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
+      </ExampleContainer>
 
+      <ExampleContainer heading="Promo with Image (Reversed)">
         <div className="sprk-u-mbm">
           <SprkPromo
             title="Title"
@@ -57,14 +68,16 @@ const SprkPromoDocs = () => {
             imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
             imgHref="https://sparkdesignsystem.com"
             cta="button"
+            buttonHref="https://www.sparkdesignsystem.com"
             ctaText="Learn More"
             idString="promo-4"
             additionalClasses="sprk-o-Stack--split@s"
+            hasBorder
             >
               Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
-
+      </ExampleContainer>
     </CentralColumnLayout>
   );
 };

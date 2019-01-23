@@ -1,10 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
+import { SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
 
 const SprkPromo = (props) => {
-  const { title, subtitle, children, cta, ctaText, buttonHref, buttonLinkAnalytics, ctaLinkHref, ctaLinkAnalytics, additionalClasses, additionalClassesContent, isFlag, additionalClassesFlagLink, flagLinkAnalytics, imgSrc, imgAlt, imgHref, imgLinkAnalytics, additionalClassesImgLink, mediaRev, hasBorder, idString } = props;
+  const { 
+    title,
+    subtitle,
+    children,
+    cta,
+    ctaText,
+    buttonHref,
+    buttonLinkAnalytics,
+    ctaLinkHref,
+    ctaLinkAnalytics,
+    additionalClasses,
+    additionalClassesContent,
+    isFlag,
+    additionalClassesFlagLink,
+    flagLinkAnalytics,
+    imgSrc,
+    imgAlt,
+    imgHref,
+    imgLinkAnalytics,
+    additionalClassesImgLink,
+    mediaRev,
+    hasBorder,
+    idString,
+    ...other
+  } = props;
   
   return (
     <div
@@ -12,47 +36,51 @@ const SprkPromo = (props) => {
         classnames(
           'sprk-b-Promo',
           'sprk-o-Stack',
-          'sprk-o-Stack--split@s',
           {'sprk-c-Promo--flag': isFlag},
           {'sprk-c-Promo--bordered': hasBorder},
           additionalClasses
         )}
-      data-id={idString}>
-      
+      data-id={idString}
+      {...other} >
       {isFlag && !mediaRev && 
-        <a
+
+        <SprkLink 
+          variant="plain"
           href={imgHref}
-          className={
+          additionalClasses={
             classnames(
               'sprk-o-Stack__item--fourth@s',
               'sprk-o-Stack__item',
               additionalClassesFlagLink
             )}
-          data-analytics={flagLinkAnalytics}>
-            <img
+          analyticsString={flagLinkAnalytics}
+        >
+          <img
               className="sprk-c-Promo__image--flag"
               alt={imgAlt}
               src={imgSrc}
             />
-        </a>
+        </SprkLink>
       }
 
       {imgSrc && !mediaRev && !isFlag && 
-        <a
+
+        <SprkLink
+          variant="plain"
           href={imgHref}
-          className={
+          additionalClasses={
             classnames(
               'sprk-o-Stack__item',
               'sprk-o-Stack__item--half@s',
               additionalClassesImgLink
             )}
-          data-analytics={imgLinkAnalytics}>
+          analyticsString={imgLinkAnalytics}>
             <img
               className="sprk-c-Promo__image"
               alt={imgAlt}
               src={imgSrc}
             />
-        </a>
+        </SprkLink>
       }
 
       <div className={
@@ -84,61 +112,70 @@ const SprkPromo = (props) => {
 
           {cta === 'button' && 
             <div className='sprk-o-Stack__item'>
-              <a
+              <SprkButton
+                element="a"
                 href={buttonHref}
-                className="sprk-c-Button"
-                data-analytics={buttonLinkAnalytics}
+                analyticsString={buttonLinkAnalytics}
                 >
-                {ctaText}  
-              </a>
+                {ctaText}
+              </SprkButton>
             </div>
           }
 
           {cta === 'link' &&
-            <a
+            <SprkLink
+              variant="plain"
               href={ctaLinkHref}
-              className="sprk-o-Stack__item sprk-b-Link sprk-b-Link--simple"
-              data-analytics={ctaLinkAnalytics}
-              >
-              {ctaText}
-            </a>
+              additionalClasses={
+                classnames(
+                  'sprk-o-Stack__item',
+                  'sprk-b-Link',
+                  'sprk-b-Link--simple'
+                )}
+              analyticsString={ctaLinkAnalytics}>
+                {ctaText}  
+            </SprkLink>
           }
       </div>
 
       {isFlag && mediaRev && 
-        <a
+
+        <SprkLink 
+          variant="plain"
           href={imgHref}
-          className={
+          additionalClasses={
             classnames(
               'sprk-o-Stack__item--fourth@s',
               'sprk-o-Stack__item',
               additionalClassesFlagLink
             )}
-          data-analytics={flagLinkAnalytics}>
-            <img
+          analyticsString={flagLinkAnalytics}
+          >
+          <img
               className="sprk-c-Promo__image--flag"
               alt={imgAlt}
               src={imgSrc}
             />
-        </a>
+        </SprkLink>
       }
 
       {imgSrc && mediaRev && !isFlag && 
-        <a
+        <SprkLink
+          variant="plain"
           href={imgHref}
-          className={
+          additionalClasses={
             classnames(
               'sprk-o-Stack__item',
               'sprk-o-Stack__item--half@s',
               additionalClassesImgLink
             )}
-          data-analytics={imgLinkAnalytics}>
+          analyticsString={imgLinkAnalytics}>
             <img
               className="sprk-c-Promo__image"
               alt={imgAlt}
               src={imgSrc}
             />
-        </a>
+        </SprkLink>
       }
     </div>
   );
