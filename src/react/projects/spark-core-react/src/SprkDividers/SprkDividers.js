@@ -10,7 +10,7 @@ const SprkDividers = (props) => {
   )
   const TagName = element;
   return (
-    <TagName  data-id={idString} {...other}></TagName>
+    <TagName className={classNames} data-id={idString} {...other}></TagName>
   );
 }
 
