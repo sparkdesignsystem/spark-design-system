@@ -11,12 +11,14 @@ const SprkPromoDocs = () => {
           <SprkPromo
             title="Title"
             subtitle="Subtitle"
+            additionalClasses="sprk-o-Stack--split@s"
             cta="button"
             ctaText="Learn More"
-            buttonHref="https://www.sparkdesignsystem.com"
+            ctaHref="https://www.sparkdesignsystem.com"
+            ctaAnalytics="promo-cta-1-analytics"
+            ctaIdString="promo-cta-1"
             hasBorder
             idString="promo-1"
-            additionalClasses="sprk-o-Stack--split@s"
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
@@ -28,12 +30,14 @@ const SprkPromoDocs = () => {
           <SprkPromo
             title="Title"
             subtitle="Subtitle"
+            additionalClasses="sprk-o-Stack--split@s"
             cta="link"
             ctaText="Learn More"
-            ctaLinkHref="https://www.sparkdesignsystem.com"
+            ctaHref="https://www.sparkdesignsystem.com"
+            ctaAnalytics="promo-cta-2-analytics"
+            ctaIdString="promo-cta-2"
+            idString="promo-2"
             hasBorder
-            idString="promo-1"
-            additionalClasses="sprk-o-Stack--split@s"
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
@@ -43,11 +47,14 @@ const SprkPromoDocs = () => {
       <ExampleContainer heading="Flag Promo">
         <div className="sprk-u-mbm">
           <SprkPromo
-            isFlag
+            additionalClasses="sprk-o-Stack--split@s"
             imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
             imgAlt="Spark Design System Logo"
-            idString="promo-2"
-            additionalClasses="sprk-o-Stack--split@s"
+            imgLinkHref="https://sparkdesignsystem.com"
+            imgLinkAnalytics="promo-3-img-link-analytics"
+            imgLinkIdString="promo-3-img-link"
+            idString="promo-3"
+            isFlag
             hasBorder
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
@@ -58,16 +65,20 @@ const SprkPromoDocs = () => {
       <ExampleContainer heading="Flag Promo (Reversed)">
         <div className="sprk-u-mbm">
           <SprkPromo
-            isFlag
-            imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
-            imgAlt="Spark Design System Logo"
-            idString="promo-2"
             additionalClasses="sprk-o-Stack--split@s"
             cta="link"
             ctaText="Learn More"
             ctaLinkHref="https://www.sparkdesignsystem.com"
-            hasBorder
+            ctaAnalytics="promo-cta-4-analytics"
+            ctaIdString="promo-cta-4"
+            imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+            imgAlt="Spark Design System Logo"
+            imgLinkAnalytics="promo-4-img-link-analytics"
+            imgLinkIdString="promo-4-img-link"
+            idString="promo-4"
+            isFlag
             mediaRev
+            hasBorder
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
@@ -79,14 +90,17 @@ const SprkPromoDocs = () => {
           <SprkPromo
             title="Title"
             subtitle="Subtitle"
-            media="img"
+            additionalClasses="sprk-o-Stack--split@s"
+            cta="button"
+            ctaText="Learn More"
+            ctaHref="https://www.sparkdesignsystem.com"
+            ctaAnalytics="promo-cta-5-analytics"
+            ctaIdString="promo-cta-5"
             imgAlt="placeholder"
             imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
-            cta="button"
-            buttonHref="https://www.sparkdesignsystem.com"
-            ctaText="Learn More"
-            idString="promo-3"
-            additionalClasses="sprk-o-Stack--split@s"
+            imgLinkAnalytics="promo-5-img-link-analytics"
+            imgLinkIdString="promo-5-img-link"
+            idString="promo-5"
             hasBorder
             >
             Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
@@ -99,16 +113,48 @@ const SprkPromoDocs = () => {
           <SprkPromo
             title="Title"
             subtitle="Subtitle"
-            mediaRev
+            additionalClasses="sprk-o-Stack--split@s"
+            cta="button"
+            ctaText="Learn More"
+            ctaHref="https://www.sparkdesignsystem.com"
+            ctaAnalytics="promo-cta-6-analytics"
+            ctaIdString="promo-cta-6"
             imgAlt="placeholder"
             imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
-            imgHref="https://sparkdesignsystem.com"
-            cta="button"
-            buttonHref="https://www.sparkdesignsystem.com"
-            ctaText="Learn More"
-            idString="promo-4"
-            additionalClasses="sprk-o-Stack--split@s"
+            imgLinkHref="https://sparkdesignsystem.com"
+            imgLinkAnalytics="promo-6-img-link-analytics"
+            imgLinkIdString="promo-6-img-link"
+            idString="promo-6"
+            mediaRev
             hasBorder
+            >
+              Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          </SprkPromo>
+        </div>
+      </ExampleContainer>
+
+      <ExampleContainer heading="Promo with All Properties">
+        <div className="sprk-u-mbm">
+          <SprkPromo
+            title="Title"
+            subtitle="Subtitle"
+            additionalClasses="sprk-o-Stack--split@s additionalClassRoot"
+            additionalClassesContent="additionalClassContent"
+            cta="link"
+            ctaText="I'm a Button"
+            ctaHref="https://www.sparkdesignsystem.com"
+            ctaAnalytics="cta-analytics-string"
+            ctaIdString="cta-id-string"
+            imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+            imgAlt="placeholder"
+            imgLinkHref="https://sparkdesignsystem.com"
+            imgLinkAnalytics="img-link-analytics-string"
+            imgLinkIdString="img-link-id-string"
+            additionalClassesImageLink="additionalClassImageLink"
+            idString="promo-7"
+            hasBorder
+            isFlag
+            mediaRev
             >
               Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
