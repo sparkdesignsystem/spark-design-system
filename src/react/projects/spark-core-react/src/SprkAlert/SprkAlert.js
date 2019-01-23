@@ -28,6 +28,8 @@ class SprkAlert extends Component {
       ...other
     } = this.props;
 
+    let icon;
+
     const { isVisible  } = this.state;
 
     const classNames = classnames(
@@ -40,12 +42,26 @@ class SprkAlert extends Component {
       },
     );
 
+    switch (variant) {
+      case 'success':
+        icon = 'check-mark';
+        break;
+      case 'info':
+        icon = 'bell';
+        break;
+      case 'fail':
+        icon = 'exclamation';
+        break;
+      default:
+        break;
+    }
+
     return (
       <div className={classNames} role="alert" data-id={idString} {...other}>
         <div className="sprk-c-Alert__content">
           {/* TODO: Icon Component*/}
           <svg className="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
-            <use xlinkHref="#bell"></use>
+            <use xlinkHref={icon}></use>
           </svg>
 
           <p className="sprk-c-Alert__text">
