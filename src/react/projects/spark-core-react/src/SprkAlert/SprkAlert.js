@@ -1,54 +1,67 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const SprkAlert = (props) => {
-  const {
-    message,
-    variant,
-    additionalClasses,
-    dismissible,
-    idString,
-    analyticsString,
-    ...other
-  } = props;
-  const classNames = classnames(
-    'sprk-c-Alert',
-    additionalClasses, {
-      'sprk-c-Alert--info': variant === 'info',
-      'sprk-c-Alert--success': variant === 'success',
-      'sprk-c-Alert--fail': variant === 'fail',
-    },
-  );
+class SprkAlert extends Component {
+  constructor(props) {
+    super(props);
+    this.handleDismiss = this.handleDismiss.bind(this);
+    this.state = {
+      isVisible: true
+    };
+  }
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    // TODO
-  };
+  handleDismiss() {
+    this.setState({
+      isVisible: false
+    })
+  }
 
-  return (
-    <div className={classNames} role="alert" data-id={idString} data-analytics={analyticsString} {...other}>
-      <div className="sprk-c-Alert__content">
-        {/* TODO: Icon Component*/}
-        <svg className="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
-          <use xlinkHref="#bell"></use>
-        </svg>
+  render() {
+    const {
+      message,
+      variant,
+      additionalClasses,
+      isDismissible,
+      idString,
+      analyticsString,
+      ...other
+    } = this.props;
 
-        <p className="sprk-c-Alert__text">
-          {message}
-        </p>
-      </div>
+    const classNames = classnames(
+      'sprk-c-Alert',
+      additionalClasses, {
+        'sprk-c-Alert--info': variant === 'info',
+        'sprk-c-Alert--success': variant === 'success',
+        'sprk-c-Alert--fail': variant === 'fail',
+        'sprk-u-Display--none': this.state.isVisible === false,
+      },
+    );
 
-      {dismissible &&
-        <button className="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss" onClick={handleClick}>
-          <svg className="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
-            <use xlinkHref="#close"></use>
+    return (
+      <div className={classNames} role="alert" data-id={idString} data-analytics={analyticsString} {...other}>
+        <div className="sprk-c-Alert__content">
+          {/* TODO: Icon Component*/}
+          <svg className="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
+            <use xlinkHref="#bell"></use>
           </svg>
-          close placeholder
-        </button>
-      }
-    </div>
-  );
+
+          <p className="sprk-c-Alert__text">
+            {message}
+          </p>
+        </div>
+        {/* TODO: Button Component*/}
+        {isDismissible &&
+          <button className="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss" onClick={this.handleDismiss}>
+            <svg className="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
+              <use xlinkHref="#close"></use>
+            </svg>
+            close placeholder
+          </button>
+        }
+      </div>
+    );
+  }
 }
 
 SprkAlert.propTypes = {
@@ -59,7 +72,7 @@ SprkAlert.propTypes = {
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Determines if the dismiss button is added
-  dismissible: PropTypes.bool,
+  isDismissible: PropTypes.bool,
   // The string to use for the data-analytics attribute
   analyticsString: PropTypes.string,
   // Any additional classes to add to the link
@@ -67,7 +80,7 @@ SprkAlert.propTypes = {
 };
 
 SprkAlert.defaultProps = {
-  dismissible: true,
+  isDismissible: true
 };
 
 export default SprkAlert;

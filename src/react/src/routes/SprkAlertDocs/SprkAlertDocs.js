@@ -23,7 +23,7 @@ const SprkAlertDocs = () => {
       </div>
 
       <div className="sprk-u-mbm">
-        <SprkAlert message="Fail alert message that is not dismissible." variant="fail" idString="alert-4" dismissible={false}/>
+        <SprkAlert message="Fail alert message that is not dismissible." variant="fail" idString="alert-4" isDismissible={false}/>
       </div>
     </CentralColumnLayout>
   );
