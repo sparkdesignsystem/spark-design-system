@@ -25,7 +25,6 @@ const SprkButton = ({
           {'sprk-is-Disabled': disabled },
           additionalClasses
         )}
-      data-id={idString}
       role={element !== 'button' ? 'button' : undefined }
       data-id={idString}
       disabled={disabled}
