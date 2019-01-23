@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const SprkDividers = (props) => {
+const SprkDivider = (props) => {
   const { element, additionalClasses, idString, ...other } = props;
   const classNames = classnames(
     'sprk-c-Divider',
@@ -14,7 +14,7 @@ const SprkDividers = (props) => {
   );
 }
 
-SprkDividers.propTypes = {
+SprkDivider.propTypes = {
   // The element that will be rendered - required
   element: PropTypes.oneOf(['span', 'hr']).isRequired,
   // The string to use for the data-id attribute
@@ -23,4 +23,4 @@ SprkDividers.propTypes = {
   additionalClasses: PropTypes.string
 };
 
-export default SprkDividers;
+export default SprkDivider;
