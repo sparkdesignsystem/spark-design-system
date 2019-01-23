@@ -123,18 +123,14 @@ const SprkPromo = (props) => {
           }
 
           {cta === 'link' &&
-            <SprkLink
-              variant="plain"
-              href={ctaLinkHref}
-              additionalClasses={
-                classnames(
-                  'sprk-o-Stack__item',
-                  'sprk-b-Link',
-                  'sprk-b-Link--simple'
-                )}
-              analyticsString={ctaLinkAnalytics}>
-                {ctaText}  
-            </SprkLink>
+            <div class="sprk-o-Stack__item">
+              <SprkLink
+                variant="base"
+                href={ctaLinkHref}
+                analyticsString={ctaLinkAnalytics}>
+                  {ctaText}  
+              </SprkLink>
+            </div>
           }
       </div>
 
