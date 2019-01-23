@@ -22,9 +22,9 @@ class SprkMastheadLittleNav extends Component {
         <ul
           className="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack--center-column"
         >
-          {utilityContents.map((item) => {
+          {utilityContents.map((item, id) => {
             return(
-              <li>
+              <li key={id}>
                 {item}
               </li>
             )
@@ -39,16 +39,7 @@ SprkMastheadLittleNav.propTypes = {
   links: PropTypes.array
 };
 SprkMastheadLittleNav.defaultProps = {
-  links: [
-    {
-    text: 'Item 1',
-    href: '#nogo'
-    },
-    {
-      text: 'Item 2',
-      href: '#nogo'
-    }
-  ]
+  links: []
 };
 
 export default SprkMastheadLittleNav;

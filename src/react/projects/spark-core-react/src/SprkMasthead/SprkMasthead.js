@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMastheadMenuIcon';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
-import SprkMastheadUtilitySection from './components/SprkMastheadUtilitySection/SprkMastheadUtilitySection';
+import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 
 class SprkMasthead extends Component {
   render() {
-    const { additionalClasses, analyticsString, idString, littleNavLinks, siteLogo, utilityContents } = this.props;
+    const { additionalClasses, analyticsString, idString, littleNavLinks, narrowNavLinks, siteLogo, utilityContents } = this.props;
 
     return (
       <header className={classNames("sprk-c-Masthead", "sprk-o-Stack", additionalClasses)}
@@ -25,6 +25,7 @@ class SprkMasthead extends Component {
           <SprkMastheadLittleNav links={littleNavLinks} utilityContents={utilityContents} />
 
         </div>
+        <SprkMastheadNarrowNav links={narrowNavLinks}/>
       </header>
     );
   }

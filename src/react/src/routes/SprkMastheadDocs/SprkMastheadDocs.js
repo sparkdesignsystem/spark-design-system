@@ -11,9 +11,47 @@ function SprkMastheadDocs(props) {
     utilityItems.push(<SprkButton variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>);
     return utilityItems;
   };
+
+  const littleNavLinks = [
+    {
+      text: 'Item 1',
+      href: '#nogo'
+    },
+    {
+      text: 'Item 2',
+      href: '#nogo'
+    }
+  ];
+
+  const narrowNavLinks = [
+    {
+      text: 'Item 1',
+      href: '#nogo',
+      subnav:
+        [
+          {
+            text: 'Item 1',
+            href: '#nogo'
+          },
+          {
+            text: 'Item 2',
+            href: '#nogo'
+          }
+        ]
+    },
+    {
+      text: 'Item 2',
+      href: '#nogo'
+    }
+  ];
+
   return (
     <EmptyLayout>
-      <SprkMasthead siteLogo={<SiteLogo />} utilityContents={getUtilityContents()}/>
+      <SprkMasthead
+        littleNavLinks={littleNavLinks}
+        narrowNavLinks={narrowNavLinks}
+        siteLogo={<SiteLogo />}
+        utilityContents={getUtilityContents()}/>
     </EmptyLayout>
   );
 }
