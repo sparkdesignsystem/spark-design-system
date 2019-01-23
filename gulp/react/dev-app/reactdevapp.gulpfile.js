@@ -1,13 +1,20 @@
 const clean = require('gulp-clean');
 const gulp = require('gulp');
+const request = require('request');
 const { exec } = require('child_process');
+const fs = require('fs');
 
-gulp.task('build-react-dev-app-netlify', (cb) => {
+gulp.task('build-react-dev-app-netlify', ['fetch-icons'], (cb) => {
   exec('cd src/react && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
   });
+});
+
+gulp.task('fetch-icons', () => {
+  const iconset = request('https://spark-assets.netlify.com/spark-core-icons.svg', {strictSSL:false})
+    .pipe(fs.createWriteStream('src/react/src/assets/sprk-icons.svg'));
 });
 
 gulp.task('clean-react-dev-app', () => gulp.src(['src/react/node_modules', './dist/react'], { read: false }).pipe(clean()));
