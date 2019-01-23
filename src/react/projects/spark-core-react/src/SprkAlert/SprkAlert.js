@@ -59,7 +59,7 @@ class SprkAlert extends Component {
     return (
       <div className={classNames} role="alert" data-id={idString} {...other}>
         <div className="sprk-c-Alert__content">
-          {/* TODO: Icon Component*/}
+          {/* TODO: Add Icon Component*/}
           <svg className="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
             <use xlinkHref={icon}></use>
           </svg>
@@ -70,7 +70,7 @@ class SprkAlert extends Component {
         </div>
         {isDismissible &&
           <button className="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss" type="button" title="Dismiss" onClick={this.handleDismiss} data-analytics={analyticsString}>
-            {/* TODO: Icon Component*/}
+            {/* TODO: Add Icon Component*/}
             <svg className="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true">
               <use xlinkHref="#close"></use>
             </svg>
