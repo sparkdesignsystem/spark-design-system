@@ -132,10 +132,29 @@ gulp.task('test-react', (cb) => {
 gulp.task('build', (cb) => {
   runSequence(
     'pre-publish',
+    cb,
+  );
+});
+
+// netlify
+gulp.task('build-angular', (cb) => {
+  runSequence(
+    'install-angular-dev-app',
+    'setup-spark-packages',
+    'setup-spark-angular-projects',
     'build-angular-dev-app-netlify',
-    'transfer-angular-dev-app',
+    cb,
+  );
+});
+
+// netlify react
+gulp.task('build-react', (cb) => {
+  runSequence(
+    'setup-spark-packages',
+    'install-react-dev-app',
+    'link-spark-to-react-dir',
+    'setup-spark-core-react',
     'build-react-dev-app-netlify',
-    'transfer-react-dev-app',
     cb,
   );
 });
