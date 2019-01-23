@@ -7,7 +7,7 @@ const SprkAlertDocs = () => {
   return (
     <CentralColumnLayout>
       <div className="sprk-u-mbm">
-        <SprkAlert message="Information alert message placeholder." variant="info" idString="alert-1"/>
+        <SprkAlert message="Information alert message placeholder." variant="info" idString="alert-1" additionalClasses="sprk-u-mbh"/>
       </div>
 
       <div className="sprk-u-mbm">
