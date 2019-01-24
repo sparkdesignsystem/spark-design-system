@@ -14,7 +14,7 @@ gulp.task('build-react-dev-app-netlify', ['fetch-icons'], (cb) => {
 
 gulp.task('fetch-icons', () => {
   const iconset = request('https://spark-assets.netlify.com/spark-core-icons.svg', {strictSSL:false})
-    .pipe(fs.createWriteStream('src/react/src/assets/sprk-icons.svg'));
+    .pipe(fs.createWriteStream('src/react/public/sprk-icons.svg'));
 });
 
 gulp.task('clean-react-dev-app', () => gulp.src(['src/react/node_modules', './dist/react'], { read: false }).pipe(clean()));

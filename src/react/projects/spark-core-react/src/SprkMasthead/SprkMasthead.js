@@ -30,7 +30,7 @@ class SprkMasthead extends Component {
           <SprkMastheadMenuIcon toggleNarrowNav={this.toggleNarrowNav} isOpen={narrowNavOpen} />
 
           <div className="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
-            <a href="#">
+            <a href="/">
               {siteLogo}
             </a>
           </div>
