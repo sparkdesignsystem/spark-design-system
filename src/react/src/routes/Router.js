@@ -1,9 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
-import SparkButtonDocs from './SparkButtonDocs/SparkButtonDocs';
+import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
+import NotFound from './NotFound/NotFound';
+import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
 
 class Router extends React.Component {
   render() {
@@ -11,10 +13,12 @@ class Router extends React.Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/buttons" component={SparkButtonDocs} />
+          <Route exact path="/buttons" component={SprkButtonDocs} />
           <Route exact path="/links" component={SprkLinkDocs} />
           <Route exact path="/dividers" component={SprkDividerDocs} />
-        </Switch>
+          <Route exact path="/alerts" component={SprkAlertDocs} />
+          <Route component={NotFound} />
+      </Switch>
       </BrowserRouter>
     );
   }
