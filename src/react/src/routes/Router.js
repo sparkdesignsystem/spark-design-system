@@ -14,9 +14,9 @@ class Router extends React.Component {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/buttons" component={SprkButtonDocs} />
           <Route exact path="/links" component={SprkLinkDocs} />
-          <Route component={NotFound} />
           <Route exact path="/alerts" component={SprkAlertDocs} />
-        </Switch>
+          <Route component={NotFound} />
+      </Switch>
       </BrowserRouter>
     );
   }

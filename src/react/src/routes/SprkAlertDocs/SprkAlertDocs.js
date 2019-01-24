@@ -27,7 +27,7 @@ const SprkAlertDocs = () => {
       </div>
 
       <div className="sprk-u-mbm">
-        <SprkAlert message="ALERT ALERT!" variant="success" idString="alert-5" isDismissible={true} analyticsString="dismiss-button"/>
+        <SprkAlert message="ALERT ALERT!" variant="success" idString="alert-5" isDismissible analyticsString="dismiss-button"/>
       </div>
     </CentralColumnLayout>
   );
