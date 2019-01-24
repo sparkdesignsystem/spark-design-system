@@ -25,6 +25,7 @@ class SprkMasthead extends Component {
     return (
       <header className={classNames("sprk-c-Masthead", "sprk-o-Stack", additionalClasses)}
               role="banner"
+              data-analytics={analyticsString}
               data-id={idString}>
         <div className="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs">
           <SprkMastheadMenuIcon toggleNarrowNav={this.toggleNarrowNav} isOpen={narrowNavOpen} />
@@ -44,8 +45,22 @@ class SprkMasthead extends Component {
   }
 }
 
-SprkMasthead.propTypes = {};
+SprkMasthead.propTypes = {
+  additionalClasses: PropTypes.string,
+  analyticsString: PropTypes.string,
+  idString: PropTypes.string,
+  littleNavLinks: PropTypes.array,
+  narrowNavLinks: PropTypes.array,
+  siteLogo: PropTypes.node,
+};
+
 SprkMasthead.defaultProps = {
+  additionalClasses: '',
+  analyticsString: '',
+  idString: '',
+  littleNavLinks: [],
+  narrowNavLinks: [],
+  siteLogo: {},
   utilityContents: ''
 };
 
