@@ -14,7 +14,7 @@ class SprkAlert extends Component {
   handleDismiss() {
     this.setState({
       isVisible: false
-    })
+    });
   }
 
   render() {
