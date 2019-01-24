@@ -29,6 +29,10 @@ const SprkDictionary = (props) => {
     );
 }
 
+SprkDictionary.defaultProps = {
+    keyValuePairs: []
+}
+
 SprkDictionary.propTypes = {
     // The string to use for the data-id attribute
     keyValuePairs: PropTypes.object.isRequired,
