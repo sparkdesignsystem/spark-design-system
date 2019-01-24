@@ -6,7 +6,7 @@ import SprkAlert from './SprkAlert';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should display a div element with the correct base class', () => {
-  const wrapper = shallow(<SprkAlert/>);
+  const wrapper = shallow(<SprkAlert message="test"/>);
   expect(wrapper.find('div.sprk-c-Alert').length).toBe(1);
 });
 
