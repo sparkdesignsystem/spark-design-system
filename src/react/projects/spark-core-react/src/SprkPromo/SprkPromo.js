@@ -32,7 +32,7 @@ const SprkPromo = (props) => {
     <div
       className={
         classnames(
-          'sprk-b-Promo',
+          'sprk-c-Promo',
           'sprk-o-Stack',
           {'sprk-c-Promo--flag': isFlag},
           {'sprk-c-Promo--bordered': hasBorder},
