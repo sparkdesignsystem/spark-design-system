@@ -41,7 +41,8 @@ function SprkMastheadDocs(props) {
     },
     {
       text: 'Item 2',
-      href: '#nogo'
+      href: '#nogo',
+      isActive: true
     }
   ];
 

@@ -24,37 +24,46 @@ class SprkMastheadAccordionItem extends Component {
     const {link, ...rest} = this.props;
     const {isOpen, height} = this.state;
     return (
-      <li className="sprk-c-MastheadAccordion__item" {...rest}>
-        <a className="sprk-c-MastheadAccordion__summary" href={link.href} onClick={this.toggleAccordionOpen}>
-          <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
-            {link.text}
-          </span>
-          {link.subnav &&
-          <SprkIcon
-            additionalClasses={classNames("sprk-c-Icon--stroke-current-color",
-              "sprk-c-MastheadAccordion__icon",
-              {"sprk-c-Icon--open": isOpen})}
-            iconType="chevron-down"/>
-          }
-        </a>
-        { (link.subnav) &&
-        <AnimateHeight
-          duration={ 500 }
-          height={ height }>
-          <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-            {link.subnav.map((subnavlink, id) => {
-              return (
-                <li key={id}>
-                  <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href={subnavlink.href}>
-                    {subnavlink.text}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </AnimateHeight>
+        <li
+          className={classNames(
+            "sprk-c-MastheadAccordion__item",
+            { "sprk-c-MastheadAccordion__item--open": isOpen },
+            { "sprk-c-MastheadAccordion__item--active": link.isActive } )} {...rest}>
+          { link.subnav &&
+          <React.Fragment>
+            <a className="sprk-c-MastheadAccordion__summary" href={link.href} onClick={this.toggleAccordionOpen}>
+              <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
+                {link.text}
+              </span>
+              <SprkIcon
+                additionalClasses={classNames("sprk-c-Icon--stroke-current-color",
+                  "sprk-c-MastheadAccordion__icon",
+                  { "sprk-c-Icon--open": isOpen })}
+                iconType="chevron-down"/>
+            </a>
+            <AnimateHeight duration={300} height={height}>
+              <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
+                {link.subnav.map((subnavlink, id) => {
+                  return (
+                    <li key={id}>
+                      <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href={subnavlink.href}>
+                        {subnavlink.text}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </AnimateHeight>
+          </React.Fragment>
         }
-      </li>
+        { !link.subnav &&
+          <a className="sprk-c-MastheadAccordion__summary" href={link.href}>
+            <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
+              {link.text}
+            </span>
+          </a>
+        }
+        </li>
     );
   }
 }
