@@ -8,7 +8,10 @@ import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMasthe
 class SprkMasthead extends Component {
   constructor(){
     super();
-    this.state = { narrowNavOpen: false };
+    this.state = {
+      narrowNavOpen: false,
+      isScrolled: false
+    };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
   }
 
@@ -18,12 +21,37 @@ class SprkMasthead extends Component {
     }));
   }
 
+  componentDidMount(){
+    window.addEventListener('scroll', (event) => {
+      window.scrollY >= 10 ? this.setState({isScrolled: true}) : this.setState({isScrolled: false});
+    });
+    window.addEventListener('orientationchange', () => {
+      this.setState({narrowNavOpen: false});
+    });
+  }
+
+  componentDidUpdate() {
+
+  }
+
   render() {
-    const { additionalClasses, analyticsString, idString, littleNavLinks, narrowNavLinks, siteLogo, utilityContents } = this.props;
+    const {
+      additionalClasses,
+      analyticsString,
+      idString,
+      littleNavLinks,
+      narrowNavLinks,
+      siteLogo,
+      utilityContents
+    } = this.props;
     const { narrowNavOpen } = this.state;
 
     return (
-      <header className={classNames("sprk-c-Masthead", "sprk-o-Stack", additionalClasses)}
+      <header className={classNames(
+        "sprk-c-Masthead",
+        "sprk-o-Stack",
+        {"sprk-c-Masthead--scroll": this.state.isScrolled},
+        additionalClasses)}
               role="banner"
               data-analytics={analyticsString}
               data-id={idString}>
