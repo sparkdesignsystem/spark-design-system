@@ -89,7 +89,6 @@ SprkMasthead.propTypes = {
   idString: PropTypes.string,
   littleNavLinks: PropTypes.array,
   narrowNavLinks: PropTypes.array,
-  siteLogo: PropTypes.node,
 };
 
 SprkMasthead.defaultProps = {
