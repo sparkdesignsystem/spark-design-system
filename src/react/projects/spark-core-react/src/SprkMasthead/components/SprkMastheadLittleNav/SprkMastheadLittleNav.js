@@ -9,14 +9,13 @@ class SprkMastheadLittleNav extends Component {
     return (
       <nav role="navigation"
            className="sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
-        <div
-          className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
-          {selector &&
+        {selector &&
+          <div className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div className="sprk-o-Stack__item sprk-u-Position--relative">
               <SprkMastheadDropdown choiceFunction={selectorChoiceFunction} selector={selector}/>
             </div>
-          }
-        </div>
+          </div>
+        }
         <ul
           className={classNames(
             "sprk-c-Masthead__site-links",
@@ -41,7 +40,7 @@ class SprkMastheadLittleNav extends Component {
             "sprk-o-HorizontalList",
             {"sprk-o-HorizontalList--spacing-large": spacing === 'large'},
             {"sprk-o-HorizontalList--spacing-medium": spacing === 'medium'},
-            "sprk-o-Stack__item--center-column")}>
+            "sprk-o-Stack--center-column")}>
           {utilityContents.map((item, id) => {
             return(
               <li key={id}>
