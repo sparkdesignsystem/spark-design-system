@@ -41,7 +41,7 @@ const SprkPromo = (props) => {
       data-id={idString}
       {...other} >
 
-      {isFlag && !mediaRev && 
+      {imgSrc && isFlag && !mediaRev && 
         <SprkLink 
           variant="plain"
           href={imgLinkHref}
@@ -104,7 +104,7 @@ const SprkPromo = (props) => {
           </div>
         }
 
-        <div className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
+        <div className="sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-c-Promo__childrenContainer">
           {children}
         </div>
 
@@ -135,7 +135,7 @@ const SprkPromo = (props) => {
         }
       </div>
 
-      {isFlag && mediaRev && 
+      {isFlag && imgSrc && mediaRev && 
 
         <SprkLink 
           variant="plain"
@@ -157,7 +157,7 @@ const SprkPromo = (props) => {
         </SprkLink>
       }
 
-      {imgSrc && mediaRev && !isFlag && 
+      {!isFlag && imgSrc && mediaRev && 
       
         <SprkLink
           variant="plain"
