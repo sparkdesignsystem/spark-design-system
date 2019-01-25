@@ -16,7 +16,7 @@ class SprkMastheadNarrowNav extends Component {
           {...rest}>
 
           {narrowSelector &&
-            <SprkMastheadDropdown choiceFunction={selectorChoiceFunction} selector={narrowSelector}/>
+            <SprkMastheadDropdown choiceFunction={selectorChoiceFunction} isFlush selector={narrowSelector}/>
           }
           <SprkMastheadAccordion links={links}/>
         </nav>}

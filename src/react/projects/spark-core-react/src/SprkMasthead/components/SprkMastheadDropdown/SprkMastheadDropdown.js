@@ -50,16 +50,18 @@ class SprkMastheadDropdown extends Component {
   }
 
   runChoiceFunction(text) {
-    this.props.choiceFunction(text);
+    if (this.props.selector.choiceFunction) {
+      this.props.selector.choiceFunction(text);
+    }
   }
 
   render() {
-    const { choiceFunction, defaultTriggerText, selector, ...rest} = this.props;
+    const { defaultTriggerText, isFlush, selector, ...rest} = this.props;
     const { isOpen, triggerText } = this.state;
 
     return (
-      <div className={classNames({"sprk-c-MastheadMask": isOpen})} onClick={() => { if(isOpen) { this.closeDropdown() }}}>
-        <div className="sprk-o-Box">
+      <div className={classNames({"sprk-c-MastheadMask": isOpen && isFlush})} onClick={() => { if(isOpen) { this.closeDropdown() }}}>
+        <div className={classNames({"sprk-o-Box": isFlush})}>
           <a
             className="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
             onClick={this.openDropdown}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkMasthead, SprkMastheadLink, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkMasthead, SprkMastheadLink, SprkLink, SprkButton, SprkIcon } from '@sparkdesignsystem/spark-core-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 import { Link } from 'react-router-dom';
@@ -7,22 +7,11 @@ import { Link } from 'react-router-dom';
 function SprkMastheadExtendedDocs(props) {
   const getUtilityContents = () => {
     let utilityItems = [];
-    utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>);
     utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>);
-    utilityItems.push(<SprkButton variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>);
+    utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link"><SprkIcon iconType="settings" additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l" /></SprkLink>);
+    utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link"><SprkIcon iconType="user" additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l" /></SprkLink>);
     return utilityItems;
   };
-
-  const littleNavLinks = [
-    {
-      text: 'Item 1',
-      href: '#nogo'
-    },
-    {
-      text: 'Item 2',
-      href: '#nogo'
-    }
-  ];
 
   const narrowNavLinks = [
     {
@@ -50,14 +39,15 @@ function SprkMastheadExtendedDocs(props) {
   ];
 
   const narrowSelector = {
+    choiceFunction: (choiceText) => {console.log(choiceText);},
     items: [
       {
-        title: 'Selection Choice 1',
+        title: 'Selection Choice Title 1',
         information: 'Additional Information',
         value: 'selection-choice-1'
       },
       {
-        title: 'Selection Choice 2',
+        title: 'Selection Choice Title 2',
         information: 'Additional Information',
         value: 'selection-choice-2'
       }
@@ -68,12 +58,13 @@ function SprkMastheadExtendedDocs(props) {
   return (
     <EmptyLayout>
       <SprkMasthead
+        littleNavSelector={narrowSelector}
         narrowSelector={narrowSelector}
-        selectorChoiceFunction={(choiceText) => { console.log(choiceText); }}
-        littleNavLinks={littleNavLinks}
         narrowNavLinks={narrowNavLinks}
         siteLogo={<SiteLogo />}
-        utilityContents={getUtilityContents()}/>
+        utilityContents={getUtilityContents()}
+        variant="extended"
+      />
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
           laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
