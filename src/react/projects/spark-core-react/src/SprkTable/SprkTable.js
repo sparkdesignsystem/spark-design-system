@@ -3,16 +3,19 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const SprkTable = (props) => {
-  const { children, variant, additionalClasses, idString, ...other } = props;
-  const classNames = classnames(
-    additionalClasses, {
-
-    }
+  const { children, additionalClasses, additionalTableClasses, idString, ...other } = props;
+  const wrapperClassNames = classnames(
+    'sprk-b-TableContainer',
+    additionalClasses
+  );
+  const tableClassNames = classnames(
+    'sprk-b-Table',
+    additionalTableClasses
   );
 
   return (
-    <div className="sprk-b-TableContainer" data-id={idString}>
-      <table className={classNames} {...other}>
+    <div className={wrapperClassNames} data-id={idString}>
+      <table className={tableClassNames} {...other}>
         {children}
       </table>
     </div>
@@ -26,8 +29,10 @@ SprkTable.propTypes = {
   variant: PropTypes.oneOf([]),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
+  // Any additional classes to add to the table wrapper
+  additionalClasses: PropTypes.string,
   // Any additional classes to add to the table
-  additionalClasses: PropTypes.string
+  additionalTableClasses: PropTypes.string,
 };
 
 export default SprkTable;
