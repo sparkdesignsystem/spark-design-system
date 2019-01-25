@@ -5,7 +5,8 @@ import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import NotFound from './NotFound/NotFound';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
-import SprkMastheadDocs from './SprkMastheadDocs/SprkMastheadDocs';
+import SprkMastheadDefaultDocs from './SprkMastheadDefaultDocs/SprkMastheadDefaultDocs';
+import SprkMastheadExtendedDocs from './SprkMastheadExtendedDocs/SprkMastheadExtendedDocs';
 
 class Router extends React.Component {
   render() {
@@ -16,7 +17,8 @@ class Router extends React.Component {
           <Route exact path="/alerts" component={SprkAlertDocs} />
           <Route exact path="/buttons" component={SprkButtonDocs} />
           <Route exact path="/links" component={SprkLinkDocs} />
-          <Route exact path="/masthead" component={SprkMastheadDocs} />
+          <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
+          <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
           <Route component={NotFound} />
       </Switch>
       </BrowserRouter>

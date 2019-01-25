@@ -16,8 +16,13 @@ function SiteNav(props) {
           </Link>
         </li>
         <li>
-          <Link to="/masthead" className="drizzle-b-Link drizzle-b-Link--light">
-            Masthead
+          <Link to="/masthead-default" className="drizzle-b-Link drizzle-b-Link--light">
+            Masthead (Default)
+          </Link>
+        </li>
+        <li>
+          <Link to="/masthead-extended" className="drizzle-b-Link drizzle-b-Link--light">
+            Masthead (Extended)
           </Link>
         </li>
         <li>

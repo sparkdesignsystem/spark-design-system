@@ -4,7 +4,7 @@ import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 import { Link } from 'react-router-dom';
 
-function SprkMastheadDocs(props) {
+function SprkMastheadDefaultDocs(props) {
   const getUtilityContents = () => {
     let utilityItems = [];
     utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>);
@@ -35,14 +35,10 @@ function SprkMastheadDocs(props) {
           <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 1</SprkMastheadLink>,
           <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 2</SprkMastheadLink>,
           <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 3</SprkMastheadLink>,
-          <SprkMastheadLink element='a' target="_blank" href="https:///www.google.com">Google</SprkMastheadLink>,
         ]
     },
     {
-      link: <SprkMastheadLink element='a' target="_blank" href="https:///www.google.com">Google</SprkMastheadLink>,
-    },
-    {
-      link: <SprkMastheadLink element={Link} leadingIcon="landline" to="/buttons">(555) 555-5555</SprkMastheadLink>,
+      link: <SprkMastheadLink element='a' href="https://www.google.com" target="_blank" leadingIcon="landline" to="/buttons">(555) 555-5555</SprkMastheadLink>,
     },
     {
       link: <SprkMastheadLink element={Link} leadingIcon="call-team-member" to="/buttons">Talk to Us</SprkMastheadLink>,
@@ -88,4 +84,4 @@ function SprkMastheadDocs(props) {
   );
 }
 
-export default SprkMastheadDocs;
+export default SprkMastheadDefaultDocs;
