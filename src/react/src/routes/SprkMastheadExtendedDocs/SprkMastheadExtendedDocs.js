@@ -49,9 +49,27 @@ function SprkMastheadExtendedDocs(props) {
     }
   ];
 
+  const narrowSelector = {
+    items: [
+      {
+        title: 'Selection Choice 1',
+        information: 'Additional Information',
+        value: 'selection-choice-1'
+      },
+      {
+        title: 'Selection Choice 2',
+        information: 'Additional Information',
+        value: 'selection-choice-2'
+      }
+    ],
+    footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact">Placeholder</SprkButton>
+  };
+
   return (
     <EmptyLayout>
       <SprkMasthead
+        narrowSelector={narrowSelector}
+        selectorChoiceFunction={(choiceText) => { console.log(choiceText); }}
         littleNavLinks={littleNavLinks}
         narrowNavLinks={narrowNavLinks}
         siteLogo={<SiteLogo />}

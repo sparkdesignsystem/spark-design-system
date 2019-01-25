@@ -5,6 +5,7 @@ import SiteLogo from '../../components/SiteLogo/SiteLogo';
 import { Link } from 'react-router-dom';
 
 function SprkMastheadDefaultDocs(props) {
+
   const getUtilityContents = () => {
     let utilityItems = [];
     utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>);

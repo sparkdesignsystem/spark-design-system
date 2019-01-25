@@ -51,6 +51,8 @@ class SprkMasthead extends Component {
       idString,
       littleNavLinks,
       narrowNavLinks,
+      narrowSelector,
+      selectorChoiceFunction,
       siteLogo,
       utilityContents
     } = this.props;
@@ -77,7 +79,7 @@ class SprkMasthead extends Component {
           <SprkMastheadLittleNav links={littleNavLinks} utilityContents={utilityContents} />
 
         </div>
-        <SprkMastheadNarrowNav links={narrowNavLinks} isOpen={narrowNavOpen} />
+        <SprkMastheadNarrowNav narrowSelector={narrowSelector} selectorChoiceFunction={selectorChoiceFunction} links={narrowNavLinks} isOpen={narrowNavOpen} />
       </header>
     );
   }
