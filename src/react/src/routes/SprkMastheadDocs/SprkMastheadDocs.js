@@ -1,7 +1,8 @@
 import React from 'react';
-import { SprkMasthead, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkMasthead, SprkMastheadLink, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
+import { Link } from 'react-router-dom';
 
 function SprkMastheadDocs(props) {
   const getUtilityContents = () => {
@@ -25,24 +26,30 @@ function SprkMastheadDocs(props) {
 
   const narrowNavLinks = [
     {
-      text: 'Item 1',
-      href: '#nogo',
-      subnav:
+      link: <SprkMastheadLink element={Link} to="/links">Item 1</SprkMastheadLink>
+    },
+    {
+      containerText: 'Item 2',
+      subNavLinks:
         [
-          {
-            text: 'Item 1',
-            href: '#nogo'
-          },
-          {
-            text: 'Item 2',
-            href: '#nogo'
-          }
+          <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 1</SprkMastheadLink>,
+          <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 2</SprkMastheadLink>,
+          <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 3</SprkMastheadLink>,
+          <SprkMastheadLink element='a' target="_blank" href="https:///www.google.com">Google</SprkMastheadLink>,
         ]
     },
     {
-      text: 'Item 2',
-      href: '#nogo',
-      isActive: true
+      link: <SprkMastheadLink element='a' target="_blank" href="https:///www.google.com">Google</SprkMastheadLink>,
+    },
+    {
+      link: <SprkMastheadLink element={Link} leadingIcon="landline" to="/buttons">(555) 555-5555</SprkMastheadLink>,
+    },
+    {
+      link: <SprkMastheadLink element={Link} leadingIcon="call-team-member" to="/buttons">Talk to Us</SprkMastheadLink>,
+    },
+    {
+      link: <SprkButton additionalClasses="sprk-c-Button--compact sprk-c-Button--full@sm" element={Link} to="/buttons" variant="secondary">Sign In</SprkButton>,
+      additionalClasses: 'sprk-u-pam',
     }
   ];
 

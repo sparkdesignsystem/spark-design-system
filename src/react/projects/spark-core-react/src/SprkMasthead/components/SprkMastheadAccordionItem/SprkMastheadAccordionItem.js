@@ -28,27 +28,23 @@ class SprkMastheadAccordionItem extends Component {
           className={classNames(
             "sprk-c-MastheadAccordion__item",
             { "sprk-c-MastheadAccordion__item--open": isOpen },
-            { "sprk-c-MastheadAccordion__item--active": link.isActive } )} {...rest}>
-          { link.subnav &&
+            { "sprk-c-MastheadAccordion__item--active": link.isActive },
+            link.additionalClasses,
+            )} {...rest}>
+          { (link.subNavLinks && link.containerText) &&
           <React.Fragment>
-            <a className="sprk-c-MastheadAccordion__summary" href={link.href} onClick={this.toggleAccordionOpen}>
+            <a href="#nogo" className="sprk-c-MastheadAccordion__summary" onClick={this.toggleAccordionOpen}>
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
-                {link.text}
+                {link.containerText}
               </span>
-              <SprkIcon
-                additionalClasses={classNames("sprk-c-Icon--stroke-current-color",
-                  "sprk-c-MastheadAccordion__icon",
-                  { "sprk-c-Icon--open": isOpen })}
-                iconType="chevron-down"/>
+              <SprkIcon additionalClasses={classNames({'sprk-c-Icon--open': isOpen})} iconType="chevron-down" />
             </a>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-                {link.subnav.map((subnavlink, id) => {
+                {link.subNavLinks.map((subnavlink, id) => {
                   return (
                     <li key={id}>
-                      <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href={subnavlink.href}>
-                        {subnavlink.text}
-                      </a>
+                      {subnavlink}
                     </li>
                   );
                 })}
@@ -56,13 +52,7 @@ class SprkMastheadAccordionItem extends Component {
             </AnimateHeight>
           </React.Fragment>
         }
-        { !link.subnav &&
-          <a className="sprk-c-MastheadAccordion__summary" href={link.href}>
-            <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
-              {link.text}
-            </span>
-          </a>
-        }
+        { !link.subNavLinks && link.link }
         </li>
     );
   }
