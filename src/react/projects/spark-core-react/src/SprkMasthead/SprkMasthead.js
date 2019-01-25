@@ -40,11 +40,7 @@ class SprkMasthead extends Component {
     });
   }
 
-  componentDidUpdate() {
-
-  }
-
-  render() {
+ render() {
     const {
       additionalClasses,
       analyticsString,

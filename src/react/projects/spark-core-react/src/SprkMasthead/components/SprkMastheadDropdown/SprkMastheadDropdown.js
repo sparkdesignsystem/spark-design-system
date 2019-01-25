@@ -14,6 +14,21 @@ class SprkMastheadDropdown extends Component {
     this.closeDropdown = this.closeDropdown.bind(this);
     this.updateTriggerText = this.updateTriggerText.bind(this);
     this.runChoiceFunction = this.runChoiceFunction.bind(this);
+    this.closeOnEsc = this.closeOnEsc.bind(this);
+  }
+
+  closeOnEsc(e) {
+    if (e.key === 'Escape') {
+      this.closeDropdown();
+    }
+  }
+
+  componentWillMount() {
+    window.addEventListener('keydown', this.closeOnEsc)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.closeOnEsc);
   }
 
   openDropdown() {
@@ -43,7 +58,7 @@ class SprkMastheadDropdown extends Component {
     const { isOpen, triggerText } = this.state;
 
     return (
-      <div className={classNames({"sprk-c-MastheadMask": isOpen})}>
+      <div className={classNames({"sprk-c-MastheadMask": isOpen})} onClick={() => { if(isOpen) { this.closeDropdown() }}}>
         <div className="sprk-o-Box">
           <a
             className="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
@@ -74,10 +89,10 @@ class SprkMastheadDropdown extends Component {
               return (
                 <li className="sprk-c-Dropdown__item" key={id}>
                   <a className="sprk-c-Dropdown__link sprk-u-ptm" href="#nogo"
-                     onClick={({ text = item.value }) => {
-                       this.updateTriggerText(text);
+                     onClick={() => {
+                       this.updateTriggerText(item.title);
                        this.closeDropdown()
-                       this.runChoiceFunction(text)
+                       this.runChoiceFunction(item.value)
                      }} role="option">
                     <p className="sprk-b-TypeBodyOne">{item.title}</p>
                     <p>{item.information}</p>
