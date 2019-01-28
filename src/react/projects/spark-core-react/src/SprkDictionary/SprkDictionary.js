@@ -11,7 +11,7 @@ const SprkDictionary = (props) => {
         }
     );
 
-    const keyValuePairsMap = Object.keys(keyValuePairs).map(function (term) {
+    const keyValuePairsMap = Object.keys(keyValuePairs).map(term => {
         return (
             <div className="sprk-c-Dictionary__keyvaluepair">
                 <dt className="sprk-c-Dictionary__key sprk-b-Label sprk-b-Label--no-input">{term}</dt>
