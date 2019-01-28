@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMastheadMenuIcon';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
+import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 
 class SprkMasthead extends Component {
   constructor(){
@@ -45,6 +46,7 @@ class SprkMasthead extends Component {
       additionalClasses,
       analyticsString,
       idString,
+      bigNavLinks,
       littleNavLinks,
       littleNavSelector,
       narrowNavLinks,
@@ -77,6 +79,7 @@ class SprkMasthead extends Component {
           <SprkMastheadLittleNav selector={littleNavSelector} spacing={variant === 'extended' ? 'medium' : 'large'} links={littleNavLinks} utilityContents={utilityContents} />
 
         </div>
+        <SprkMastheadBigNav links={bigNavLinks} />
         <SprkMastheadNarrowNav narrowSelector={narrowSelector} selectorChoiceFunction={selectorChoiceFunction} links={narrowNavLinks} isOpen={narrowNavOpen} />
       </header>
     );

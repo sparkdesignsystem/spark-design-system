@@ -24,7 +24,7 @@ function SprkMastheadExtendedDocs(props) {
     }
   ];
 
-  const narrowNavLinks = [
+  const links = [
     {
       link: <SprkMastheadLink element={Link} to="/links">Item 1</SprkMastheadLink>
     },
@@ -69,9 +69,10 @@ function SprkMastheadExtendedDocs(props) {
   return (
     <EmptyLayout>
       <SprkMasthead
+        bigNavLinks={links}
         littleNavSelector={narrowSelector}
         narrowSelector={narrowSelector}
-        narrowNavLinks={narrowNavLinks}
+        narrowNavLinks={links}
         siteLogo={<SiteLogo />}
         utilityContents={getUtilityContents()}
         variant="extended"
