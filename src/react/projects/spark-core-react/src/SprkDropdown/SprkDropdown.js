@@ -68,7 +68,7 @@ class SprkDropdown extends Component {
   }
 
   render() {
-    const {choices, choiceFunction, defaultTriggerText, iconType, title, variant} = this.props;
+    const {additionalClasses, additionalIconClasses, choices, choiceFunction, defaultTriggerText, iconType, title, variant} = this.props;
     const { triggerText, isOpen } = this.state;
     return (
       <div ref={this.myRef}>
@@ -84,11 +84,11 @@ class SprkDropdown extends Component {
             </React.Fragment>
           }
           { variant === 'base' &&
-            <SprkIcon iconType={iconType} />
+            <SprkIcon iconType={iconType} additionalClasses={additionalIconClasses} />
           }
         </a>
         {isOpen &&
-          <div className="sprk-c-Dropdown">
+          <div className={classNames("sprk-c-Dropdown", additionalClasses)}>
             {title &&
             <div className="sprk-c-Dropdown__header">
               <h2 className="sprk-c-Dropdown__title">{title}</h2>

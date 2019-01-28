@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkMasthead, SprkMastheadLink, SprkLink, SprkButton, SprkIcon } from '@sparkdesignsystem/spark-core-react';
+import { SprkMasthead, SprkMastheadLink, SprkLink, SprkButton, SprkIcon, SprkDropdown } from '@sparkdesignsystem/spark-core-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 import { Link } from 'react-router-dom';
@@ -9,9 +9,20 @@ function SprkMastheadExtendedDocs(props) {
     let utilityItems = [];
     utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>);
     utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link"><SprkIcon iconType="settings" additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l" /></SprkLink>);
-    utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link"><SprkIcon iconType="user" additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l" /></SprkLink>);
+    utilityItems.push(<SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconType="user" choices={dropdownChoices} title="My Choices" />);
     return utilityItems;
   };
+
+  const dropdownChoices = [
+    {
+      text: 'Option 1',
+      value: 'option-1'
+    },
+    {
+      text: 'Option 2',
+      value: 'option-2'
+    }
+  ];
 
   const narrowNavLinks = [
     {
