@@ -34,7 +34,7 @@ SprkDictionary.defaultProps = {
 }
 
 SprkDictionary.propTypes = {
-    // The string to use for the data-id attribute
+    // The data that this component will use to populate itself
     keyValuePairs: PropTypes.object.isRequired,
     // The link variant that determines the class names
     variant: PropTypes.oneOf(['striped']),
