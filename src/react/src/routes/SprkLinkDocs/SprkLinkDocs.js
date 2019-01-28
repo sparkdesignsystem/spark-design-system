@@ -14,7 +14,7 @@ const SprkLinkDocs = () => {
       </ExampleContainer>
 
       <ExampleContainer>
-        <SprkLink variant="simple" href="/buttons" idString="simple-link">
+        <SprkLink variant="simple" href="/button" idString="simple-link">
           Simple Link
         </SprkLink>
       </ExampleContainer>

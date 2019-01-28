@@ -33,19 +33,19 @@ function SprkMastheadDefaultDocs(props) {
       containerText: 'Item 2',
       subNavLinks:
         [
-          <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 1</SprkMastheadLink>,
-          <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 2</SprkMastheadLink>,
-          <SprkMastheadLink element={Link} isSubNavLink to="/buttons">Item 3</SprkMastheadLink>,
+          <SprkMastheadLink element={Link} isSubNavLink to="/button">Item 1</SprkMastheadLink>,
+          <SprkMastheadLink element={Link} isSubNavLink to="/button">Item 2</SprkMastheadLink>,
+          <SprkMastheadLink element={Link} isSubNavLink to="/button">Item 3</SprkMastheadLink>,
         ]
     },
     {
-      link: <SprkMastheadLink element='a' href="https://www.google.com" target="_blank" leadingIcon="landline" to="/buttons">(555) 555-5555</SprkMastheadLink>,
+      link: <SprkMastheadLink element='a' href="https://www.google.com" target="_blank" leadingIcon="landline" to="/button">(555) 555-5555</SprkMastheadLink>,
     },
     {
-      link: <SprkMastheadLink element={Link} leadingIcon="call-team-member" to="/buttons">Talk to Us</SprkMastheadLink>,
+      link: <SprkMastheadLink element={Link} leadingIcon="call-team-member" to="/button">Talk to Us</SprkMastheadLink>,
     },
     {
-      link: <SprkButton additionalClasses="sprk-c-Button--compact sprk-c-Button--full@sm" element={Link} to="/buttons" variant="secondary">Sign In</SprkButton>,
+      link: <SprkButton additionalClasses="sprk-c-Button--compact sprk-c-Button--full@sm" element={Link} to="/button" variant="secondary">Sign In</SprkButton>,
       additionalClasses: 'sprk-u-pam',
     }
   ];
