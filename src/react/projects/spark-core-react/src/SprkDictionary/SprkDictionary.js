@@ -30,7 +30,7 @@ const SprkDictionary = (props) => {
 }
 
 SprkDictionary.defaultProps = {
-    keyValuePairs: []
+    keyValuePairs: {}
 }
 
 SprkDictionary.propTypes = {

@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 it('should display a div with the correct base class', () => {
   const wrapper = shallow(<SprkDictionary/>);
-  expect(wrapper.find('sprk-c-Dictionary').length).toBe(true);
+  expect(wrapper.find('div').hasClass('sprk-c-Dictionary')).toBe(true);
 });
 
 it('should display a striped dictionary with correct classes when variant is striped', () => {
