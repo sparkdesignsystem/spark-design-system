@@ -8,7 +8,7 @@ const SprkDictionary = (props) => {
         'sprk-c-Dictionary',
         additionalClasses, {
             'sprk-c-Dictionary--striped': variant === 'striped'
-        },
+        }
     );
 
     const keyValuePairsMap = Object.keys(keyValuePairs).map(function (term) {
