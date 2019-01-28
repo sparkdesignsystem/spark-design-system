@@ -21,7 +21,7 @@ const SprkLinkDocs = () => {
 
       <ExampleContainer>
         <SprkLink variant="has-icon" target="_blank" href="#nogo" analyticsString="foo">
-          {/* TODO: SVG Component*/}
+          {/* TODO: Icon Component*/}
           <svg className="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
             <use xlinkHref="#communication" />
           </svg>
