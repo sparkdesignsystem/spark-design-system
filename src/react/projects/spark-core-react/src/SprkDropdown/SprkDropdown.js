@@ -12,7 +12,10 @@ class SprkDropdown extends Component {
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
+    this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
+    this.updateTriggerText = this.updateTriggerText.bind(this);
+    this.runChoiceFunction = this.runChoiceFunction.bind(this);
     this.myRef = React.createRef();
   }
 
@@ -23,26 +26,39 @@ class SprkDropdown extends Component {
   }
 
   closeOnClickOutside(e) {
-
+    if (!this.myRef.current.contains(e.target)) {
+      this.closeDropdown();
+    }
   }
 
   componentWillMount() {
     window.addEventListener('keydown', this.closeOnEsc)
-    window.addEventListener('focusin', (e) => {
-      if (!this.myRef.current.contains(e.target)) {
-        this.closeDropdown();
-      }
-    });
+    window.addEventListener('focusin', this.closeOnClickOutside)
+    window.addEventListener('click', this.closeOnClickOutside)
   }
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
+    window.removeEventListener('focusin', this.closeOnClickOutside)
+    window.removeEventListener('click', this.closeOnClickOutside)
   }
 
   closeDropdown() {
     this.setState(prevState => ({
       isOpen: false
     }));
+  }
+
+  updateTriggerText(text) {
+    this.setState({
+      triggerText: text
+    })
+  }
+
+  runChoiceFunction(text) {
+    if (this.props.choiceFunction) {
+      this.props.choiceFunction(text);
+    }
   }
 
   toggleDropdownOpen() {
@@ -52,7 +68,7 @@ class SprkDropdown extends Component {
   }
 
   render() {
-    const {choices, defaultTriggerText, iconType, title, variant} = this.props;
+    const {choices, choiceFunction, defaultTriggerText, iconType, title, variant} = this.props;
     const { triggerText, isOpen } = this.state;
     return (
       <div ref={this.myRef}>
@@ -82,16 +98,33 @@ class SprkDropdown extends Component {
               {choices.map((choice, id) => {
                 return(
                   <li className="sprk-c-Dropdown__item" role="option" key={id}>
-                    <a className="sprk-c-Dropdown__link" href={choice.href || '#nogo'} data-sprk-dropdown-choice={choice.value}>
-                    {variant === 'base' && choice.text }
+
+                    {variant === 'base' &&
+                      <a
+                        className="sprk-c-Dropdown__link"
+                        href={choice.href || '#nogo'}
+                        onClick={() => {
+                          this.updateTriggerText(choice.text);
+                          this.closeDropdown()
+                          this.runChoiceFunction(choice.value)
+                        }}>{choice.text}</a>
+                    }
                     {variant === 'informational' &&
                       <React.Fragment>
-                        <p className="sprk-b-TypeBodyOne">{choice.content.title}</p>
-                        <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine1}</p>
-                        <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine2}</p>
+                        <a
+                          className="sprk-c-Dropdown__link"
+                          href={choice.href || '#nogo'}
+                          onClick={() => {
+                            this.updateTriggerText(choice.content.title);
+                            this.closeDropdown()
+                            this.runChoiceFunction(choice.value)
+                          }}>
+                          <p className="sprk-b-TypeBodyOne">{choice.content.title}</p>
+                          <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine1}</p>
+                          <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine2}</p>
+                        </a>
                       </React.Fragment>
                     }
-                    </a>
                   </li>);
               })
             }
