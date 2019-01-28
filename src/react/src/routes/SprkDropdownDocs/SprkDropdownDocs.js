@@ -7,10 +7,10 @@ const SprkDropdownDocs = () => {
   return (
     <CentralColumnLayout>
       <ExampleContainer heading="Base">
-        <SprkDropdown iconType="settings" />
+        <SprkDropdown choices={choices} iconType="settings" />
       </ExampleContainer>
       <ExampleContainer heading="Informational">
-        <SprkDropdown variant="informational" defaultTriggerText="Make a selection..." />
+        <SprkDropdown variant="informational" title="My Choices" choices={informationalChoices} defaultTriggerText="Make a selection..." />
       </ExampleContainer>
     </CentralColumnLayout>
   );

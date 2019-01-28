@@ -11,6 +11,38 @@ class SprkDropdown extends Component {
       isOpen: false
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
+    this.closeOnEsc = this.closeOnEsc.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.myRef = React.createRef();
+  }
+
+  closeOnEsc(e) {
+    if (e.key === 'Escape') {
+      this.closeDropdown();
+    }
+  }
+
+  closeOnClickOutside(e) {
+
+  }
+
+  componentWillMount() {
+    window.addEventListener('keydown', this.closeOnEsc)
+    window.addEventListener('focusin', (e) => {
+      if (!this.myRef.current.contains(e.target)) {
+        this.closeDropdown();
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.closeOnEsc);
+  }
+
+  closeDropdown() {
+    this.setState(prevState => ({
+      isOpen: false
+    }));
   }
 
   toggleDropdownOpen() {
@@ -20,10 +52,10 @@ class SprkDropdown extends Component {
   }
 
   render() {
-    const {iconType, defaultTriggerText, variant} = this.props;
+    const {choices, defaultTriggerText, iconType, title, variant} = this.props;
     const { triggerText, isOpen } = this.state;
     return (
-      <React.Fragment>
+      <div ref={this.myRef}>
         <a className={classNames(
           "sprk-b-Link",
           "sprk-b-Link--plain",
@@ -41,24 +73,32 @@ class SprkDropdown extends Component {
         </a>
         {isOpen &&
           <div className="sprk-c-Dropdown">
+            {title &&
             <div className="sprk-c-Dropdown__header">
-              <h2 className="sprk-c-Dropdown__title">My Choices</h2>
+              <h2 className="sprk-c-Dropdown__title">{title}</h2>
             </div>
+            }
             <ul className="sprk-c-Dropdown__links">
-              <li className="sprk-c-Dropdown__item" role="option">
-                <a className="sprk-c-Dropdown__link" href="#nogo">
-                  Choice 1
-                </a>
-              </li>
-              <li className="sprk-c-Dropdown__item" role="option">
-                <a className="sprk-c-Dropdown__link" href="#nogo">
-                  Choice 2
-                </a>
-              </li>
+              {choices.map((choice, id) => {
+                return(
+                  <li className="sprk-c-Dropdown__item" role="option" key={id}>
+                    <a className="sprk-c-Dropdown__link" href={choice.href || '#nogo'} data-sprk-dropdown-choice={choice.value}>
+                    {variant === 'base' && choice.text }
+                    {variant === 'informational' &&
+                      <React.Fragment>
+                        <p className="sprk-b-TypeBodyOne">{choice.content.title}</p>
+                        <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine1}</p>
+                        <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine2}</p>
+                      </React.Fragment>
+                    }
+                    </a>
+                  </li>);
+              })
+            }
             </ul>
           </div>
         }
-      </React.Fragment>
+      </div>
     );
   }
 }
