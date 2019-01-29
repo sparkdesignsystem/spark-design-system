@@ -14,7 +14,9 @@ const SprkHighlightBoardDocs = () => {
           ctaText='Button 1'
           ctaHref='#'
           ctaText2='Button 2'
-          ctaHref2='#'/>
+          ctaHref2='#'>
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+        </SprkHighlightBoard>
       </ExampleContainer>
       <ExampleContainer heading="No Image">
         <SprkHighlightBoard

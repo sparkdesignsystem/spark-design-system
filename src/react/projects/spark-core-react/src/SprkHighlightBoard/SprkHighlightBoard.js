@@ -49,6 +49,10 @@ const SprkHighlightBoard = (props) => {
             </h1>
           }
 
+          <div className='sprk-o-Stack__item'>
+            { children }
+          </div>
+
           { (ctaText || ctaText2) && 
           <div className= {
             classnames(
