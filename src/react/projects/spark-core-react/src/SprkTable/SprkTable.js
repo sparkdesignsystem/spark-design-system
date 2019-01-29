@@ -23,10 +23,8 @@ const SprkTable = (props) => {
 }
 
 SprkTable.propTypes = {
-  // The children that will be rendered inside the link
+  // The children that will be rendered inside the table
   children: PropTypes.node,
-  // The table variant that determines the class names
-  variant: PropTypes.oneOf([]),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the table wrapper
