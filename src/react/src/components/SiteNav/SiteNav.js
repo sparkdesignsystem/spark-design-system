@@ -20,6 +20,11 @@ function SiteNav(props) {
             Alerts
           </Link>
         </li>
+        <li>
+          <Link to="/highlightboard" className="drizzle-b-Link drizzle-b-Link--light">
+            Highlight Board
+          </Link>
+        </li>
       </ul>
     </nav>
   );
