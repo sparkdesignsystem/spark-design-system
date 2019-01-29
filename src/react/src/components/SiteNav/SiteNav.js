@@ -19,7 +19,12 @@ function SiteNav(props) {
           <Link to="/lists" className="drizzle-b-Link drizzle-b-Link--light">
             Lists
           </Link>
-      </li>
+        </li>
+        <li>
+          <Link to="/alerts" className="drizzle-b-Link drizzle-b-Link--light">
+            Alerts
+          </Link>
+        </li>
       </ul>
     </nav>
   );
