@@ -21,3 +21,14 @@ it('should display a ul element with correct classes when listType is bare', () 
   expect(wrapper.find('ul').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ul').hasClass('sprk-b-List--bare')).toBe(true);
 });
+
+it('should add classes to ul element if additionalClasses has a value', () => {
+  const wrapper = shallow(<SprkUnorderedList additionalClasses="additionalClass" />);
+  expect(wrapper.find('ul').hasClass('sprk-b-List')).toBe(true);
+  expect(wrapper.find('ul').hasClass('additionalClass')).toBe(true);
+});
+
+it('should add data-id to ul element if idString has a value', () => {
+  const wrapper = shallow(<SprkUnorderedList idString="unorderedlist-1"/>);
+  expect(wrapper.find('ul[data-id="unorderedlist-1"]').length).toBe(1);
+});
