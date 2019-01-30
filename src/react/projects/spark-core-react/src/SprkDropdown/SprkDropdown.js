@@ -108,7 +108,10 @@ class SprkDropdown extends Component {
           }
           { variant === 'base' &&
             <React.Fragment>
-              <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
+              <span
+                className={
+                  classNames("sprk-u-ScreenReaderText", additionalTriggerTextClasses)
+                }>{screenReaderText}</span>
               <SprkIcon iconType={iconType} additionalClasses={additionalIconClasses} />
             </React.Fragment>
           }
@@ -198,7 +201,9 @@ SprkDropdown.propTypes = {
 };
 
 SprkDropdown.defaultProps = {
-  choices: {},
+  choices: {
+    items: []
+  },
   defaultTriggerText: 'Choose One...',
   iconType: 'chevron-down',
   idString: '',
