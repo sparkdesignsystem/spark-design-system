@@ -12,7 +12,9 @@ class SprkTabs extends Component {
   constructor(props) {
     super(props);
     this.handleTabClick = this.handleTabClick.bind(this);
+    this.updateAriaOrientation = this.updateAriaOrientation.bind(this);
     this.setDefaultActive = this.setDefaultActive.bind(this);
+    this.tabsContainerRef = React.createRef();
     this.state = {};
   }
 
@@ -29,13 +31,27 @@ class SprkTabs extends Component {
     });
   };
 
+  updateAriaOrientation(width, element) {
+    // Switch aria-orientation to vertical on mobile (based on _tabs.scss breakpoint)
+    if (width <= 736) {
+      element.current.setAttribute('aria-orientation', 'vertical');
+    } else {
+      element.current.setAttribute('aria-orientation', 'horizontal');
+    }
+  };
+
   /**
   * Immediately invole setDefaultActive()
   * when component is inserted into the tree
   * and update state with the default active tab's ID.
+  * Update aria-orientation and listen for resizes for future updating.
   */
   componentDidMount(){
     this.setDefaultActive();
+    this.updateAriaOrientation(window.innerWidth, this.tabsContainerRef);
+    window.addEventListener('resize', () => {
+      this.updateAriaOrientation(window.innerWidth, this.tabsContainerRef);
+    });
   }
 
   /**
@@ -56,12 +72,13 @@ class SprkTabs extends Component {
          role="tablist"
          aria-orientation="horizontal"
          data-id={idString}
+         ref={this.tabsContainerRef}
          {...other}>
          <div className="sprk-c-Tabs__buttons">
           {
             children.map((tab, index) => {
               const { buttonChildren, tabBtnIdString, tabBtnId, additionalClassesBtn } = tab.props;
-              {/* Dont render a tab button for an element that is not a tab */}
+              {/* Don't render a tab button for an element that is not a tab */}
               if (tab.type.name !== SprkTabsPanel.name) return;
               return (
                 <button
