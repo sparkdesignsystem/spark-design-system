@@ -5,11 +5,11 @@ import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import SprkPromoDocs from './SprkPromoDocs/SprkPromoDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
-import NotFound from './NotFound/NotFound';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
 import SprkHighlightBoardDocs from './SprkHighlightBoardDocs/SprkHighlightBoardDocs';
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
-import SprkTabbedNavDocs from './SprkTabbedNavDocs/SprkTabbedNavDocs';
+import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
+import NotFound from './NotFound/NotFound';
 
 class Router extends React.Component {
   render() {
@@ -24,7 +24,7 @@ class Router extends React.Component {
           <Route exact path="/alerts" component={SprkAlertDocs} />
           <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
           <Route exact path="/dictionary" component={SprkDictionaryDocs} />
-          <Route exact path="/tabbed-navs" component={SprkTabbedNavDocs} />
+          <Route exact path="/tabs" component={SprkTabsDocs} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

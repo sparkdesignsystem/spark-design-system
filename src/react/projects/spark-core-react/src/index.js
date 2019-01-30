@@ -7,3 +7,5 @@ export { default as SprkAlert } from './SprkAlert/SprkAlert';
 export { default as SprkHighlightBoard } from './SprkHighlightBoard/SprkHighlightBoard';
 export { default as SprkDictionary } from './SprkDictionary/SprkDictionary';
 export { default as SprkTabbedNav } from './SprkTabbedNav/SprkTabbedNav';
+export { default as SprkTabs } from './SprkTabs/SprkTabs';
+export { default as SprkTabPanel } from './SprkTabs/components/SprkTabPanel/SprkTabPanel';

@@ -41,8 +41,8 @@ function SiteNav(props) {
           </Link>
         </li>
         <li>
-          <Link to="/tabbed-navs" className="drizzle-b-Link drizzle-b-Link--light">
-            Tabbed Navs
+          <Link to="/tabs" className="drizzle-b-Link drizzle-b-Link--light">
+            Tabs
           </Link>
         </li>
       </ul>
