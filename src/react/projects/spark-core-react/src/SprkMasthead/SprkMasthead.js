@@ -48,7 +48,7 @@ class SprkMasthead extends Component {
       idString,
       bigNavLinks,
       littleNavLinks,
-      littleNavSelector,
+      selector,
       narrowNavLinks,
       narrowSelector,
       selectorChoiceFunction,
@@ -76,11 +76,15 @@ class SprkMasthead extends Component {
             </a>
           </div>
 
-          <SprkMastheadLittleNav selector={littleNavSelector} spacing={variant === 'extended' ? 'medium' : 'large'} links={littleNavLinks} utilityContents={utilityContents} />
+          <SprkMastheadLittleNav
+            selector={selector}
+            spacing={variant=== 'extended' ? 'medium' : 'large'}
+            links={littleNavLinks}
+            utilityContents={utilityContents} />
 
         </div>
         <SprkMastheadBigNav links={bigNavLinks} />
-        <SprkMastheadNarrowNav narrowSelector={narrowSelector} selectorChoiceFunction={selectorChoiceFunction} links={narrowNavLinks} isOpen={narrowNavOpen} />
+        <SprkMastheadNarrowNav selector={narrowSelector} links={narrowNavLinks} isOpen={narrowNavOpen} />
       </header>
     );
   }

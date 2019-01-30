@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SprkIcon from '../../../SprkIcon/SprkIcon';
 import classNames from 'classnames';
+import SprkIcon from '../../../SprkIcon/SprkIcon';
 
 class SprkMastheadDropdown extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      isOpen: false,
-      triggerText: props.defaultTriggerText || 'Select One'
+      isOpen: false
     };
-    this.openDropdown = this.openDropdown.bind(this);
-    this.closeDropdown = this.closeDropdown.bind(this);
-    this.updateTriggerText = this.updateTriggerText.bind(this);
-    this.runChoiceFunction = this.runChoiceFunction.bind(this);
+    this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
+    this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.myRef = React.createRef();
   }
 
   closeOnEsc(e) {
@@ -23,18 +22,22 @@ class SprkMastheadDropdown extends Component {
     }
   }
 
+  closeOnClickOutside(e) {
+    if (!this.myRef.current.contains(e.target)) {
+      this.closeDropdown();
+    }
+  }
+
   componentWillMount() {
     window.addEventListener('keydown', this.closeOnEsc)
+    window.addEventListener('focusin', this.closeOnClickOutside)
+    window.addEventListener('click', this.closeOnClickOutside)
   }
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
-  }
-
-  openDropdown() {
-    this.setState(prevState => ({
-      isOpen: true
-    }));
+    window.removeEventListener('focusin', this.closeOnClickOutside)
+    window.removeEventListener('click', this.closeOnClickOutside)
   }
 
   closeDropdown() {
@@ -43,73 +46,46 @@ class SprkMastheadDropdown extends Component {
     }));
   }
 
-  updateTriggerText(text) {
-    this.setState({
-      triggerText: text
-    })
-  }
-
-  runChoiceFunction(text) {
-    if (this.props.selector.choiceFunction) {
-      this.props.selector.choiceFunction(text);
-    }
+  toggleDropdownOpen() {
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen,
+    }));
   }
 
   render() {
-    const { defaultTriggerText, isFlush, selector, ...rest} = this.props;
-    const { isOpen, triggerText } = this.state;
-
+    const {additionalClasses, additionalIconClasses, choices, choiceFunction, triggerText, iconType, title, variant} = this.props;
+    const { isOpen } = this.state;
     return (
-      <div className={classNames({"sprk-c-MastheadMask": isOpen && isFlush})} onClick={() => { if(isOpen) { this.closeDropdown() }}}>
-        <div className={classNames({"sprk-o-Box": isFlush})}>
-          <a
-            className="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
-            onClick={this.openDropdown}
-            href="#nogo" data-sprk-dropdown-trigger="dropdown-selector" aria-haspopup="true">
-            <span className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs" role="combobox">{triggerText}</span>
-            <SprkIcon iconType="chevron-down" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
-          </a>
-        </div>
-
-        { isOpen &&
-        <div className="sprk-c-Masthead__selector-dropdown sprk-c-Dropdown"
-             data-sprk-dropdown="dropdown-selector">
+      <div ref={this.myRef}>
+        <a className={classNames(
+          "sprk-b-Link",
+          "sprk-b-Link--plain",
+          {"sprk-u-mrs": variant === 'informational'}
+        )} href="#nogo" aria-haspopup="true" role="combobox" onClick={this.toggleDropdownOpen}>
+          <span data-sprk-dropdown-trigger-text-container="" role="combobox">{triggerText}</span>
+          <SprkIcon additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls" iconType="chevron-down" />
+        </a>
+        {isOpen &&
+        <div className={classNames("sprk-c-Dropdown sprk-u-TextAlign--left", additionalClasses)}>
+          {title &&
           <div className="sprk-c-Dropdown__header">
-            <a
-              className="sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
-              onClick={this.closeDropdown}
-              href="#nogo" aria-haspopup="true">
-              <span
-                className="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">{triggerText}</span>
-              <SprkIcon iconType="chevron-up" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
-            </a>
+            <h2 className="sprk-c-Dropdown__title">{title}</h2>
           </div>
-
-          <ul className="sprk-c-Dropdown__links">
-
-            {selector.items && selector.items.map((item, id) => {
-              return (
-                <li className="sprk-c-Dropdown__item" key={id}>
-                  <a className="sprk-c-Dropdown__link sprk-u-ptm" href="#nogo"
-                     onClick={() => {
-                       this.updateTriggerText(item.title);
-                       this.closeDropdown()
-                       this.runChoiceFunction(item.value)
-                     }} role="option">
-                    <p className="sprk-b-TypeBodyOne">{item.title}</p>
-                    <p>{item.information}</p>
-                  </a>
-                </li>
-              );
-            })}
-
-          </ul>
-
-          {selector.footer &&
-            <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
-              {selector.footer}
-            </div>
           }
+          <ul className="sprk-c-Dropdown__links">
+            {choices.map((choice, id) => {
+              const TagName = choice.element || 'a';
+              const {element, href, text, value, ...rest} = choice;
+              return(
+                <li className="sprk-c-Dropdown__item" role="option" key={id}>
+                  <TagName
+                    href={TagName === 'a' ? choice.href || '#nogo': undefined}
+                    className="sprk-c-Dropdown__link"
+                    {...rest}>{choice.text}</TagName>
+                </li>);
+              })
+            }
+          </ul>
         </div>
         }
       </div>
@@ -118,5 +94,8 @@ class SprkMastheadDropdown extends Component {
 }
 
 SprkMastheadDropdown.propTypes = {};
+
+SprkMastheadDropdown.defaultProps = {
+};
 
 export default SprkMastheadDropdown;

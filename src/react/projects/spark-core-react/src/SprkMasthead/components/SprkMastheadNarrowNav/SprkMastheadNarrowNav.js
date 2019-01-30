@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SprkMastheadAccordion from '../SprkMastheadAccordion/SprkMastheadAccordion';
-import SprkMastheadDropdown from '../SprkMastheadDropdown/SprkMastheadDropdown';
+import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 class SprkMastheadNarrowNav extends Component {
   render() {
-    const {idString, isOpen, links, narrowSelector, selectorChoiceFunction, ...rest} = this.props;
+    const {idString, isOpen, links, selector, ...rest} = this.props;
     return (
       <React.Fragment>
       { isOpen &&
@@ -15,8 +15,8 @@ class SprkMastheadNarrowNav extends Component {
           data-id={idString}
           {...rest}>
 
-          {narrowSelector &&
-            <SprkMastheadDropdown choiceFunction={selectorChoiceFunction} isFlush selector={narrowSelector}/>
+          {selector &&
+            <SprkMastheadSelector isFlush selector={selector}/>
           }
           <SprkMastheadAccordion links={links}/>
         </nav>}

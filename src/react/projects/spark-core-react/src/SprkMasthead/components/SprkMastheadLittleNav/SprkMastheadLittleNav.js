@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SprkMastheadDropdown from '../SprkMastheadDropdown/SprkMastheadDropdown';
+import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 class SprkMastheadLittleNav extends Component {
   render() {
-    const {links, selector, selectorChoiceFunction, spacing, utilityContents, ...rest} = this.props;
+    const {links, selector, spacing, utilityContents} = this.props;
     return (
       <nav role="navigation"
            className="sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
         {selector &&
           <div className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div className="sprk-o-Stack__item sprk-u-Position--relative">
-              <SprkMastheadDropdown choiceFunction={selectorChoiceFunction} selector={selector}/>
+              <SprkMastheadSelector selector={selector}/>
             </div>
           </div>
         }
@@ -25,11 +25,16 @@ class SprkMastheadLittleNav extends Component {
             {"sprk-o-HorizontalList--spacing-medium": spacing === 'medium'},
             "sprk-o-Stack__item--center-column")}>
           {links.map((link, id) => {
+            const {element, href, text, ...rest} = link;
+            const TagName = element || 'a';
             return(
               <li key={id}>
-                <a className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link" href={link.href}>
-                  {link.text}
-                </a>
+                <TagName
+                  className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                  href={TagName === 'a' ? href: undefined}
+                  {...rest}>
+                  {text}
+                </TagName>
               </li>
             )
           })}

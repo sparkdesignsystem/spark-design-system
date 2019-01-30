@@ -2,6 +2,7 @@ import React from 'react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 import { SprkDropdown } from '@sparkdesignsystem/spark-core-react';
+import { Link } from 'react-router-dom';
 
 const SprkDropdownDocs = () => {
   return (
@@ -48,11 +49,20 @@ const informationalChoices = [
 const choices = [
   {
     text: 'Option 1',
-    value: 'option-1'
+    value: 'option-1',
+    element: 'a',
+    href: '/link',
+    target: '_blank'
   },
   {
     text: 'Option 2',
-    value: 'option-2'
+    value: 'option-2',
+    element: Link,
+    to: '/link'
+  },
+  {
+    text: 'Option 3',
+    value: 'option-3'
   }
 ];
 

@@ -96,24 +96,25 @@ class SprkDropdown extends Component {
             }
             <ul className="sprk-c-Dropdown__links">
               {choices.map((choice, id) => {
+                const TagName = choice.element || 'a';
+                const {element, text, value, ...rest} = choice;
                 return(
                   <li className="sprk-c-Dropdown__item" role="option" key={id}>
 
                     {variant === 'base' &&
-                      <a
+                      <TagName
                         className="sprk-c-Dropdown__link"
-                        href={choice.href || '#nogo'}
                         onClick={() => {
                           this.updateTriggerText(choice.text);
                           this.closeDropdown()
                           this.runChoiceFunction(choice.value)
-                        }}>{choice.text}</a>
+                        }}
+                        {...rest}>{choice.text}</TagName>
                     }
                     {variant === 'informational' &&
                       <React.Fragment>
-                        <a
+                        <TagName
                           className="sprk-c-Dropdown__link"
-                          href={choice.href || '#nogo'}
                           onClick={() => {
                             this.updateTriggerText(choice.content.title);
                             this.closeDropdown()
@@ -122,7 +123,7 @@ class SprkDropdown extends Component {
                           <p className="sprk-b-TypeBodyOne">{choice.content.title}</p>
                           <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine1}</p>
                           <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine2}</p>
-                        </a>
+                        </TagName>
                       </React.Fragment>
                     }
                   </li>);

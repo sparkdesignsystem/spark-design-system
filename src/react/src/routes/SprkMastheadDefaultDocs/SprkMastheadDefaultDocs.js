@@ -1,62 +1,58 @@
 import React from 'react';
-import { SprkMasthead, SprkMastheadLink, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkMasthead, SprkDropdown, SprkIcon, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 import { Link } from 'react-router-dom';
 
 function SprkMastheadDefaultDocs(props) {
 
-  const getUtilityContents = () => {
-    let utilityItems = [];
-    utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>);
-    utilityItems.push(<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>);
-    utilityItems.push(<SprkButton variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>);
-    return utilityItems;
-  };
-
-  const littleNavLinks = [
+  const links = [
     {
+      element: Link,
       text: 'Item 1',
-      href: '#nogo'
+      to: '/link'
     },
     {
       text: 'Item 2',
-      href: '#nogo'
+      href: 'https://www.google.com',
+      target: '_blank'
     }
   ];
 
-  const narrowNavLinks = [
+  const addedNarrowNavLinks = [
     {
-      link: <SprkMastheadLink element={Link} to="/links">Item 1</SprkMastheadLink>
+      element: Link,
+      leadingIcon: 'landline',
+      text: '(555) 555-5555',
+      to: '/button'
     },
     {
-      containerText: 'Item 2',
-      subNavLinks:
-        [
-          <SprkMastheadLink element={Link} isSubNavLink to="/button">Item 1</SprkMastheadLink>,
-          <SprkMastheadLink element={Link} isSubNavLink to="/button">Item 2</SprkMastheadLink>,
-          <SprkMastheadLink element={Link} isSubNavLink to="/button">Item 3</SprkMastheadLink>,
-        ]
+      element: Link,
+      leadingIcon: 'call-team-member',
+      text: 'Talk To Us',
+      to: '/link'
     },
     {
-      link: <SprkMastheadLink element='a' href="https://www.google.com" target="_blank" leadingIcon="landline" to="/button">(555) 555-5555</SprkMastheadLink>,
+      element: Link,
+      text: 'Sign In',
+      to: '/button',
+      isButton: true
     },
-    {
-      link: <SprkMastheadLink element={Link} leadingIcon="call-team-member" to="/button">Talk to Us</SprkMastheadLink>,
-    },
-    {
-      link: <SprkButton additionalClasses="sprk-c-Button--compact sprk-c-Button--full@sm" element={Link} to="/button" variant="secondary">Sign In</SprkButton>,
-      additionalClasses: 'sprk-u-pam',
-    }
+  ];
+
+  const utilityItems = [
+    <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
+    <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
+    <SprkButton element={Link} to="/button" variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>
   ];
 
   return (
     <EmptyLayout>
       <SprkMasthead
-        littleNavLinks={littleNavLinks}
-        narrowNavLinks={narrowNavLinks}
+        littleNavLinks={links}
+        narrowNavLinks={links.concat(addedNarrowNavLinks)}
         siteLogo={<SiteLogo />}
-        utilityContents={getUtilityContents()}/>
+        utilityContents={utilityItems}/>
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
           laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
