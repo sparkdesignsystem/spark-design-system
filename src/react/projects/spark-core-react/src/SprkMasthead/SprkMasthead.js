@@ -105,7 +105,7 @@ SprkMasthead.defaultProps = {
   littleNavLinks: [],
   narrowNavLinks: [],
   siteLogo: {},
-  utilityContents: '',
+  utilityContents: [],
   variant: 'default'
 };
 

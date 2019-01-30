@@ -60,10 +60,14 @@ class SprkMastheadLittleNav extends Component {
 }
 
 SprkMastheadLittleNav.propTypes = {
-  links: PropTypes.array
+  // An array of links to use to build the nav
+  links: PropTypes.array,
+  // An array of components to fill the utility area with
+  utilityContents: PropTypes.array
 };
 SprkMastheadLittleNav.defaultProps = {
   links: [],
+  utilityContents: [],
   spacing: 'medium'
 };
 

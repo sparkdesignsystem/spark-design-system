@@ -56,8 +56,8 @@ class SprkDropdown extends Component {
   }
 
   runChoiceFunction(text) {
-    if (this.props.choiceFunction) {
-      this.props.choiceFunction(text);
+    if (this.props.choices.choiceFunction) {
+      this.props.choices.choiceFunction(text);
     }
   }
 
@@ -68,23 +68,49 @@ class SprkDropdown extends Component {
   }
 
   render() {
-    const {additionalClasses, additionalIconClasses, choices, choiceFunction, defaultTriggerText, iconType, title, variant} = this.props;
+    const {
+      additionalClasses,
+      additionalIconClasses,
+      additionalTriggerClasses,
+      additionalTriggerTextClasses,
+      analyticsString,
+      children,
+      choices,
+      defaultTriggerText,
+      iconType,
+      idString,
+      screenReaderText,
+      title,
+      variant
+    } = this.props;
     const { triggerText, isOpen } = this.state;
     return (
       <div ref={this.myRef}>
         <a className={classNames(
           "sprk-b-Link",
           "sprk-b-Link--plain",
-          {"sprk-u-mrs": variant === 'informational'}
-        )} href="#nogo" aria-haspopup="true" role="combobox" onClick={this.toggleDropdownOpen}>
+          {"sprk-u-mrs": variant === 'informational'},
+          additionalTriggerClasses,
+        )}
+           href="#nogo"
+           aria-haspopup="true"
+           role="combobox"
+           data-analytics={analyticsString ? analyticsString : 'undefined'}
+           data-id={idString ? idString : 'undefined'}
+           onClick={this.toggleDropdownOpen}>
           { variant === 'informational' &&
             <React.Fragment>
-              <span data-sprk-dropdown-trigger-text-container="" role="combobox">{triggerText}</span>
+              <span
+                className={classNames(additionalTriggerTextClasses)}
+                role="combobox">{triggerText}</span>
               <SprkIcon additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls" iconType="chevron-down" />
             </React.Fragment>
           }
           { variant === 'base' &&
-            <SprkIcon iconType={iconType} additionalClasses={additionalIconClasses} />
+            <React.Fragment>
+              <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
+              <SprkIcon iconType={iconType} additionalClasses={additionalIconClasses} />
+            </React.Fragment>
           }
         </a>
         {isOpen &&
@@ -95,9 +121,9 @@ class SprkDropdown extends Component {
             </div>
             }
             <ul className="sprk-c-Dropdown__links">
-              {choices.map((choice, id) => {
-                const TagName = choice.element || 'a';
-                const {element, text, value, ...rest} = choice;
+              {choices.items.map((choice, id) => {
+                const {content, element, href, isActive, text, value, ...rest} = choice;
+                const TagName = element || 'a';
                 return(
                   <li className="sprk-c-Dropdown__item" role="option" key={id}>
 
@@ -105,24 +131,29 @@ class SprkDropdown extends Component {
                       <TagName
                         className="sprk-c-Dropdown__link"
                         onClick={() => {
-                          this.updateTriggerText(choice.text);
+                          this.updateTriggerText(text);
                           this.closeDropdown()
-                          this.runChoiceFunction(choice.value)
+                          this.runChoiceFunction(value)
                         }}
-                        {...rest}>{choice.text}</TagName>
+                        {...rest}>{text}</TagName>
                     }
                     {variant === 'informational' &&
                       <React.Fragment>
                         <TagName
-                          className="sprk-c-Dropdown__link"
+                          className={classNames(
+                            "sprk-c-Dropdown__link",
+                            {"sprk-c-Dropdown__link--active": isActive}
+                            )}
+                          href={TagName === 'a' ? href || '#nogo' : undefined}
                           onClick={() => {
-                            this.updateTriggerText(choice.content.title);
+                            this.updateTriggerText(content.title);
                             this.closeDropdown()
-                            this.runChoiceFunction(choice.value)
-                          }}>
-                          <p className="sprk-b-TypeBodyOne">{choice.content.title}</p>
-                          <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine1}</p>
-                          <p className="sprk-b-TypeBodyTwo">{choice.content.infoLine2}</p>
+                            this.runChoiceFunction(value)
+                          }}
+                          {...rest}>
+                          <p className="sprk-b-TypeBodyOne">{content.title}</p>
+                          <p className="sprk-b-TypeBodyTwo">{content.infoLine1}</p>
+                          <p className="sprk-b-TypeBodyTwo">{content.infoLine2}</p>
                         </TagName>
                       </React.Fragment>
                     }
@@ -137,9 +168,40 @@ class SprkDropdown extends Component {
   }
 }
 
-SprkDropdown.propTypes = {};
+SprkDropdown.propTypes = {
+  // Classes applied to the dropdown
+  additionalClasses: PropTypes.string,
+  // Classes applied to the icon
+  additionalIconClasses: PropTypes.string,
+  // Classes applied to the link that triggers the dropdown to open
+  additionalTriggerClasses: PropTypes.string,
+  // Classes applied to the text in the trigger link
+  additionalTriggerTextClasses: PropTypes.string,
+  // Assigned to data-analytics
+  analyticsString: PropTypes.string,
+  // Incoming children
+  children: PropTypes.node,
+  // Choices object that builds the dropdown contents
+  choices: PropTypes.object,
+  // The text set as the default of the trigger link
+  defaultTriggerText: PropTypes.string,
+  // The icon type of the trigger icon
+  iconType: PropTypes.string,
+  // Assigned to data-id
+  idString: PropTypes.string,
+  // Text that is visually hidden when the trigger is just an icon
+  screenReaderText: PropTypes.string,
+  // The text of the optional header above the choices in the dropdown
+  title: PropTypes.string,
+  // The variant name
+  variant: PropTypes.oneOf(['base', 'informational'])
+};
 
 SprkDropdown.defaultProps = {
+  choices: {},
+  defaultTriggerText: 'Choose One...',
+  iconType: 'chevron-down',
+  idString: '',
   variant: 'base'
 };
 

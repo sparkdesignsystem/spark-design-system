@@ -80,6 +80,16 @@ class SprkMastheadAccordionItem extends Component {
   }
 }
 
-SprkMastheadAccordionItem.propTypes = {};
+SprkMastheadAccordionItem.propTypes = {
+  // Decides whether the accordion should render open by default
+  defaultOpen: PropTypes.bool,
+  // The link object that builds the contents of the accordion item
+  link: PropTypes.object
+};
+
+SprkMastheadAccordionItem.defaultProps = {
+  defaultOpen: false,
+  link: {}
+};
 
 export default SprkMastheadAccordionItem;

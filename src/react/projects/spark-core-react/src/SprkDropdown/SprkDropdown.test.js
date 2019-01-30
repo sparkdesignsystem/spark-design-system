@@ -1,11 +1,11 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import SprkIcon from './SprkIcon';
+import SprkDropdown from './SprkDropdown';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display an svg element with the correct base class', () => {
-  const wrapper = shallow(<SprkIcon iconType="settings" />);
-  expect(wrapper.find('svg.sprk-c-Icon').length).toBe(1);
+it('should render a trigger with the correct classes', () => {
+  const wrapper = mount(<SprkDropdown />);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
 });

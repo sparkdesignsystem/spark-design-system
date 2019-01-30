@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkMasthead, SprkDropdown, SprkIcon, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkMasthead, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 import { Link } from 'react-router-dom';
