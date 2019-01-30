@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import SprkTabPanel from './components/SprkTab/SprkTab';
 
 /**
-* This component expects SprkTab children.
-* It loops through each provided SprkTab
+* This component expects SprkTabPanel children.
+* It loops through each provided SprkTabPanel
 * and creates a tab button for each tab.
 */
 class SprkTabs extends Component {
@@ -17,8 +17,8 @@ class SprkTabs extends Component {
   }
 
   /**
-  * Find the tab set to be active by default
-  * and update state with that tab's id.
+  * Find the tab that we want set by default
+  * and update state with that tab's ID.
   */
   setDefaultActive() {
     const { children } = this.props;
@@ -32,7 +32,7 @@ class SprkTabs extends Component {
   /**
   * Immediately invole setDefaultActive()
   * when component is inserted into the tree
-  * and update state with default active tab ID.
+  * and update state with the default active tab's ID.
   */
   componentDidMount(){
     this.setDefaultActive();
