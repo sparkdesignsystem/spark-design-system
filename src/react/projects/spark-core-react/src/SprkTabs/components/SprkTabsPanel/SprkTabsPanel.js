@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const SprkTabPanel = (props) => {
-  const { children, activeTabBtnId, tabBtnId, additionalClasses } = props;
+const SprkTabsPanel = (props) => {
+  const { children, activeTabBtnId, tabBtnId, tabAriaId, additionalClasses } = props;
   const classNames = classnames(
     'sprk-c-Tabs_content',
     {
@@ -16,14 +16,14 @@ const SprkTabPanel = (props) => {
       className={classNames}
       role="tabpanel"
       tabIndex="0"
-      id={`target-${index + 1}`}
+      id={`target-${tabAriaId + 1}`}
       aria-labelledby={tabBtnId}>
       {children}
     </div>
   );
 }
 
-SprkTabPanel.propTypes = {
+SprkTabsPanel.propTypes = {
   // The tab's panel content
   children: PropTypes.node,
   /*
@@ -33,8 +33,10 @@ SprkTabPanel.propTypes = {
   activeTabBtnId: PropTypes.string,
   // A unique id for each tab button
   tabBtnId: PropTypes.string.isRequired,
+  // The id to use for each tab panel so it corresponds to the button
+  tabAriaId: PropTypes.number,
   // A string of additional classes to be applied to the Tab
   additionalClasses: PropTypes.string
 }
 
-export default SprkTabPanel;
+export default SprkTabsPanel;

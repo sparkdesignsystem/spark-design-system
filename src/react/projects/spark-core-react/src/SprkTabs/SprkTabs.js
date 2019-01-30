@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkTabPanel from './components/SprkTab/SprkTab';
+import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 
 /**
-* This component expects SprkTabPanel children.
-* It loops through each provided SprkTabPanel
+* This component expects SprkTabsPanel children.
+* It loops through each provided SprkTabsPanel
 * and creates a tab button for each tab.
 */
 class SprkTabs extends Component {
@@ -24,7 +24,7 @@ class SprkTabs extends Component {
     const { children } = this.props;
     children.forEach(child => {
       if (child.props.isDefaultActive) {
-        this.setState({isActive: child.props.id});
+        this.setState({isActive: child.props.tabBtnId});
       }
     });
   };
@@ -49,7 +49,7 @@ class SprkTabs extends Component {
   }
 
   render() {
-     const { children, idString, button, additionalClasses, ...other } = this.props;
+     const { children, idString, buttonChildren, additionalClasses, ...other } = this.props;
      return (
        <div
          className={classnames('sprk-c-Tabs', additionalClasses)}
@@ -60,9 +60,9 @@ class SprkTabs extends Component {
          <div className="sprk-c-Tabs__buttons">
           {
             children.map((tab, index) => {
-              const { button, tabBtnIdString, tabBtnId, additionalClassesBtn } = tab.props;
+              const { buttonChildren, tabBtnIdString, tabBtnId, additionalClassesBtn } = tab.props;
               {/* Dont render a tab button for an element that is not a tab */}
-              if (tab.type.name !== 'SprkTabPanel') return;
+              if (tab.type.name !== SprkTabsPanel.name) return;
               return (
                 <button
                   className={classnames('sprk-c-Tabs__button', additionalClassesBtn, {'sprk-c-Tabs__button--active': this.state.isActive === tabBtnId})}
@@ -74,7 +74,7 @@ class SprkTabs extends Component {
                   type="button"
                   data-id={tabBtnIdString}
                   onClick={this.handleTabClick}>
-                  {button}
+                  {buttonChildren}
                 </button>
               )
             })
@@ -85,9 +85,9 @@ class SprkTabs extends Component {
           children.map((tab, index) => {
             const { tabBtnId, children, ...other } = tab.props;
             return (
-              <SprkTabPanel tabBtnId={tabBtnId} key={index} activeTabBtnId={this.state.isActive} {...other}>
+              <SprkTabsPanel tabBtnId={tabBtnId} key={index} tabAriaId={index} activeTabBtnId={this.state.isActive} {...other}>
                 {children}
-              </SprkTabPanel>
+              </SprkTabsPanel>
             )
           })
         }
@@ -98,7 +98,7 @@ class SprkTabs extends Component {
 }
 
 SprkTabs.propTypes = {
-  // The tab components
+  // The children of the tabs panel
   children: PropTypes.node,
   // The data-id value for UI testing purposes
   idString: PropTypes.string,
