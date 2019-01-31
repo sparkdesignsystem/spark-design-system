@@ -21,10 +21,10 @@ class SprkMasthead extends Component {
     // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
     document.documentElement.classList.toggle('sprk-u-Overflow--hidden');
     if (document.documentElement.style.height !== '100%') {
-      document.documentElement.classList.add('sprk-u-Height--100');
+      document.documentElement.classList.toggle('sprk-u-Height--100');
     }
     if (document.body.style.height !== '100%') {
-      document.body.classList.add('sprk-u-Height--100');
+      document.body.classList.toggle('sprk-u-Height--100');
     }
 
     this.setState(prevState => ({
@@ -45,13 +45,12 @@ class SprkMasthead extends Component {
     const {
       additionalClasses,
       analyticsString,
-      idString,
       bigNavLinks,
+      idString,
       littleNavLinks,
-      selector,
       narrowNavLinks,
       narrowSelector,
-      selectorChoiceFunction,
+      selector,
       siteLogo,
       utilityContents,
       variant
@@ -91,20 +90,39 @@ class SprkMasthead extends Component {
 }
 
 SprkMasthead.propTypes = {
+  // classes to be added to the masthead
   additionalClasses: PropTypes.string,
+  // assigned to data-analytics
   analyticsString: PropTypes.string,
+  // array of link objects to use in building the big nav
+  bigNavLinks: PropTypes.array,
+  // assigned to data-id
   idString: PropTypes.string,
+  // array of link objects to use in building the little nav
   littleNavLinks: PropTypes.array,
+  // array of link objects to use in building the narrow nav
   narrowNavLinks: PropTypes.array,
+  // object containing an array of objects to use in building the narrow selector
+  narrowSelector: PropTypes.object,
+  // object containing an array of objects to use in building the selector
+  selector: PropTypes.object,
+  // expects a component to render the logo
+  siteLogo: PropTypes.node,
+  // an array containing components to render into the utility area
+  utilityContents: PropTypes.array,
+  // the variant name to render
+  variant: PropTypes.oneOf(['default', 'extended'])
 };
 
 SprkMasthead.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
+  bigNavLinks: [],
   idString: '',
   littleNavLinks: [],
   narrowNavLinks: [],
-  siteLogo: {},
+  narrowSelector: {},
+  selector: {},
   utilityContents: [],
   variant: 'default'
 };

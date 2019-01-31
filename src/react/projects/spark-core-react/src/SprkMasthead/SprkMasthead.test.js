@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMasthead from './SprkMasthead';
 
@@ -27,4 +27,10 @@ it('should add data-id if idString has a value', () => {
 
 it('should add classes to body and html when the mobile nav is opened', () => {
   const wrapper = shallow(<SprkMasthead idString="masthead-1" />);
+});
+
+it('should toggle classes on html and body and update its own state when the narrow nav is toggled', () => {
+  const wrapper = mount(<SprkMasthead idString="masthead-1" />);
+  wrapper.find('.sprk-c-Menu').simulate('click');
+  expect(wrapper.state().narrowNavOpen).toBe(true);
 });
