@@ -61,7 +61,7 @@ const SprkHighlightBoard = (props) => {
               'sprk-o-Stack--medium',
               'sprk-o-Stack--split@xs',
               'sprk-o-Stack--center-column',
-              {'sprk-o-Stack--center-row' : variant === 'noimage' || variant === 'stacked'}
+              {'sprk-o-Stack--center-row' : variant === 'noImage' || variant === 'stacked'}
             )
           } >
             
@@ -102,6 +102,8 @@ const SprkHighlightBoard = (props) => {
 }
 
 SprkHighlightBoard.propTypes = {
+  // Child elements are rendered in the content section of the component.
+  children: PropTypes.node,
   // The source for the image
   imgSrc: PropTypes.string,
   // The alt text for the image
@@ -125,7 +127,7 @@ SprkHighlightBoard.propTypes = {
   // The data-id for the second CTA
   ctaIdString2: PropTypes.string,
   // The variant that determines the class names
-  variant: PropTypes.oneOf(['noimage', 'stacked']),
+  variant: PropTypes.oneOf(['noImage', 'stacked']),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the highlight board
