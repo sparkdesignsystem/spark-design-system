@@ -113,3 +113,17 @@ it('should unmount without error', () => {
   wrapper.unmount();
   expect(wrapper.find('.sprk-b-Link').length).toBe(0);
 });
+
+it('should render the choices with the element specified', () => {
+  const wrapper = mount(<SprkDropdown choices={{items : [{element: 'p', text: 'Item 1'}]}} />);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('p.sprk-c-Dropdown__link').length).toBe(1);
+})
+
+it('should pass unused keys on choice items through to the dom', () => {
+  const wrapper = mount(<SprkDropdown choices={{items : [{element: 'p', text: 'Item 1', 'aria-hidden': 'true'}]}} />);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('.sprk-c-Dropdown__link[aria-hidden="true"]').length).toBe(1);
+})

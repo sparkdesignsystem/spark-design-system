@@ -84,16 +84,22 @@ function SprkMastheadExtendedDocs(props) {
     }
   ];
 
-  const dropdownChoices = [
-    {
-      text: 'Option 1',
-      value: 'option-1'
-    },
-    {
-      text: 'Option 2',
-      value: 'option-2'
-    }
-  ];
+  const dropdownChoices = {
+    choiceFunction: (text) => {console.log(text);},
+    items: [
+      {
+        text: 'Option 1',
+        value: 'option-1'
+      },
+      {
+        element: Link,
+        text: 'Option 2',
+        value: 'option-2',
+        to: '/button'
+      }
+    ]
+  };
+
 
   const selector = {
     choiceFunction: (text) => {console.log(text);},
