@@ -4,7 +4,9 @@ description:
 information:
   - The headline should grab attention and be concise.
   - To have the Highlight Board take up 100% width of the
-    viewport regardless of it's container, add the class sprk-u-FullWidth.
+    viewport regardless of it's container, add the class sprk-u-FullWidth to 
+    the highlight board. For React and Angular components, you can use the 
+    additionalClasses property.
 restrictions:
   - The background must either be a color or an image.
   - The headline should not exceed 2 lines.
