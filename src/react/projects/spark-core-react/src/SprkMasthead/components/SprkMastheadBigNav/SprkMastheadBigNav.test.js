@@ -52,7 +52,7 @@ it('should render the correct number of links', () => {
   expect(wrapper.find('.sprk-c-Masthead__big-nav-item').length).toBe(3);
 });
 
-it('should render the correct number of links', () => {
+it('should add a class to the link if its active', () => {
   const links = [
     {
       text: 'Navigation Item',

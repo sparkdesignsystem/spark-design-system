@@ -185,7 +185,17 @@ SprkDropdown.propTypes = {
   // Incoming children
   children: PropTypes.node,
   // Choices object that builds the dropdown contents
-  choices: PropTypes.object,
+  choices: PropTypes.shape({
+    // An array of objects that describe the items in the menu
+    items: PropTypes.arrayOf(PropTypes.shape({
+      // The element to render for each menu item
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      // Assigned to href of the element is 'a'
+      href: PropTypes.string,
+      // The text inside the item
+      text: PropTypes.string,
+    }))
+  }),
   // The text set as the default of the trigger link
   defaultTriggerText: PropTypes.string,
   // The icon type of the trigger icon

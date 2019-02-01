@@ -5,10 +5,21 @@ import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 class SprkMastheadLittleNav extends Component {
   render() {
-    const {links, selector, spacing, utilityContents} = this.props;
+    const {
+      additionalClasses,
+      analyticsString,
+      idString,
+      links,
+      selector,
+      spacing,
+      utilityContents
+    } = this.props;
     return (
       <nav role="navigation"
-           className="sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+           data-analytics={analyticsString}
+           data-id={idString}
+           className={
+             classNames("sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row", additionalClasses)}>
         {selector &&
           <div className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div className="sprk-o-Stack__item sprk-u-Position--relative">
@@ -23,7 +34,8 @@ class SprkMastheadLittleNav extends Component {
             "sprk-o-HorizontalList",
             {"sprk-o-HorizontalList--spacing-large": spacing === 'large'},
             {"sprk-o-HorizontalList--spacing-medium": spacing === 'medium'},
-            "sprk-o-Stack__item--center-column")}>
+            "sprk-o-Stack__item--center-column"
+            )}>
           {links.map((link, id) => {
             const {element, href, text, ...rest} = link;
             const TagName = element || 'a';
@@ -60,12 +72,36 @@ class SprkMastheadLittleNav extends Component {
 }
 
 SprkMastheadLittleNav.propTypes = {
-  // An array of links to use to build the nav
-  links: PropTypes.array,
+  // classes to be added to the masthead
+  additionalClasses: PropTypes.string,
+  // assigned to data-analytics
+  analyticsString: PropTypes.string,
+  // assigned to data-id
+  idString: PropTypes.string,
+  // used to render navigation inside
+  links: PropTypes.arrayOf(PropTypes.shape({
+  // Choices object that builds the dropdown contents
+  selector: PropTypes.shape({
+    // An array of objects that describe the items in the menu
+    items: PropTypes.arrayOf(PropTypes.shape({
+      // The element to render for each menu item
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      // Assigned to href of the element is 'a'
+      href: PropTypes.string,
+      // The text inside the item
+      text: PropTypes.string,
+    }))
+  }),
+  // Determines the spacing between little nav items
+  spacing: PropTypes.oneOf(['medium', 'large']),
   // An array of components to fill the utility area with
-  utilityContents: PropTypes.array
+  utilityContents: PropTypes.arrayOf(PropTypes.node)
+}))
 };
 SprkMastheadLittleNav.defaultProps = {
+  selector: {
+    items: []
+  },
   links: [],
   utilityContents: [],
   spacing: 'medium'

@@ -33,7 +33,7 @@ class SprkMastheadBigNav extends Component {
                         <TagName className={classNames("sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav")}{...rest}>{text}</TagName>
                       }
                       { link.subNavLinks &&
-                        <SprkMastheadDropdown choices={link.subNavLinks} triggerText={link.text}/>
+                        <SprkMastheadDropdown choices={{items: link.subNavLinks}} triggerText={link.text}/>
                       }
                     </li>
                   );
