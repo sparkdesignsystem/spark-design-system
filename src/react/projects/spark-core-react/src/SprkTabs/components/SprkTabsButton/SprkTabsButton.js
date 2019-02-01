@@ -2,10 +2,10 @@ import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-class SprkTabsPanel extends Component {
+class SprkTabsButton extends Component {
   constructor(props) {
     super(props);
-    this.tabPanelRef = createRef();
+    this.tabBtnRef = createRef();
   }
 
   componentDidUpdate () {
@@ -15,43 +15,48 @@ class SprkTabsPanel extends Component {
     * panel that should be focused. If no panel should be focused
     * isFocusedPanel will return undefined.
     */
-     if (this.props.isFocusedPanel === this.props.tabBtnId) {
-      this.tabPanelRef.current.focus();
+     if (this.props.isFocusedBtn === this.props.tabBtnId) {
+      this.tabBtnRef.current.focus();
     } else {
-      console.log(this.props.isFocusedPanel, 'focused panel');
+      console.log(this.props.isFocusedBtn, 'focused btn');
     }
   }
 
   render() {
     const {
-      children,
-      activeTabBtnId,
+      tabBtnChildren,
       tabBtnId,
-      tabAriaId,
-      additionalClasses
+      tabBtnAdditionalClasses,
+      ariaControls,
+      ariaSelected,
+      isActive
     } = this.props;
+
     const classNames = classnames(
-      'sprk-c-Tabs_content',
-      {
-        'sprk-u-Display--none': activeTabBtnId !== tabBtnId,
-      },
-      additionalClasses
+      'sprk-c-Tabs__button',
+      tabBtnAdditionalClasses,
+      {'sprk-c-Tabs__button--active': isActive}
     );
+
+    {/* Don't render a tab button for an element that is not a SprkTabsPanel */}
+    if (tab.type.name !== SprkTabsPanel.name) return;
     return (
-      <div
+      <button
         className={classNames}
-        role="tabpanel"
-        tabIndex="0"
-        ref={this.tabPanelRef}
-        id={`target-${tabAriaId + 1}`}
-        aria-labelledby={tabBtnId}>
-        {children}
-      </div>
+        role="tab"
+        aria-controls={ariaControls}
+        aria-selected={ariaSelected}
+        id={tabBtnId}
+        type="button"
+        ref={this.tabBtnRef}
+        data-id={tabBtnId}>
+        {tabBtnChildren}
+      </button>
     );
   }
 }
 
-SprkTabsPanel.propTypes = {
+SprkTabsButton.propTypes = {
   // The tab panel content
   children: PropTypes.node,
   /*
@@ -70,4 +75,4 @@ SprkTabsPanel.propTypes = {
   additionalClasses: PropTypes.string
 }
 
-export default SprkTabsPanel;
+export default SprkTabsButton;
