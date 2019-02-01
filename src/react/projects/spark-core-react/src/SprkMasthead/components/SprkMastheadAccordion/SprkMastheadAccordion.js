@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
 
-function SprkMastheadAccordion({links}) {
+function SprkMastheadAccordion({additionalClasses, analyticsString, idString, links}) {
     return (
-      <ul className="sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare">
+      <ul
+        data-analytics={analyticsString}
+        data-id={idString}
+        className={classNames("sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare", additionalClasses)}>
         {links.map((link, id) => {
           return (
-            <SprkMastheadAccordionItem link={link} key={id} />
+            <SprkMastheadAccordionItem
+              {...link}
+              key={id} />
           );
         })}
       </ul>
@@ -15,10 +21,20 @@ function SprkMastheadAccordion({links}) {
 }
 
 SprkMastheadAccordion.propTypes = {
+  // classes to be added to the masthead
+  additionalClasses: PropTypes.string,
+  // assigned to data-analytics
+  analyticsString: PropTypes.string,
+  // assigned to data-id
+  idString: PropTypes.string,
+  // used to render SprkMastheadAccordionItems inside
   links: PropTypes.array
 };
 
 SprkMastheadAccordion.defaultProps = {
+  additionalClasses: '',
+  analyticsString: '',
+  idString: '',
   links: []
 };
 

@@ -34,3 +34,18 @@ it('should toggle classes on html and body and update its own state when the nar
   wrapper.find('.sprk-c-Menu').simulate('click');
   expect(wrapper.state().narrowNavOpen).toBe(true);
 });
+
+it('should update state on scroll', () => {
+  const wrapper = mount(<SprkMasthead />);
+  window.scrollY = '11';
+  window.dispatchEvent(new Event('scroll'));
+  expect(wrapper.state().isScrolled).toBe(true);
+});
+
+it('should update state on orientationchange', () => {
+  const wrapper = mount(<SprkMasthead />);
+  wrapper.find('.sprk-c-Menu').simulate('click');
+  expect(wrapper.state().narrowNavOpen).toBe(true);
+  window.dispatchEvent(new Event('orientationchange'));
+  expect(wrapper.state().narrowNavOpen).toBe(false);
+});

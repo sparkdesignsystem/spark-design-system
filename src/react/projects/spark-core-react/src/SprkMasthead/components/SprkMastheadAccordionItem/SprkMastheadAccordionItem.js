@@ -8,8 +8,8 @@ class SprkMastheadAccordionItem extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isOpen: this.props.link.defaultOpen || false,
-      height: this.props.link.defaultOpen ? 'auto': 0};
+      isOpen: this.props.defaultOpen || false,
+      height: this.props.defaultOpen ? 'auto': 0};
     this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
   }
 
@@ -21,7 +21,7 @@ class SprkMastheadAccordionItem extends Component {
   }
 
   render() {
-    const {text, element, href, isActive, isButton, leadingIcon, subNavLinks, ...rest} = this.props.link;
+    const {text, defaultOpen, element, href, isActive, isButton, leadingIcon, subNavLinks, ...rest} = this.props;
     const {isOpen, height} = this.state;
     const TagName = element || 'a';
     return (
@@ -83,8 +83,27 @@ class SprkMastheadAccordionItem extends Component {
 SprkMastheadAccordionItem.propTypes = {
   // Decides whether the accordion should render open by default
   defaultOpen: PropTypes.bool,
-  // The link object that builds the contents of the accordion item
-  link: PropTypes.object
+  // The element to render, could be 'a' or a Component like Link
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.node ]),
+  // Assigned to the href attribute if element is 'a'
+  href: PropTypes.string,
+  // Decides if the outer link is the active link
+  isActive: PropTypes.bool,
+  // Will render the element as a button with correct style
+  isButton: PropTypes.bool,
+  // The name of the icon to render before the text
+  leadingIcon: PropTypes.string,
+  // An array of link objects that builds the sub nav
+  subNavLinks: PropTypes.arrayOf(PropTypes.shape({
+    // The element to render, could be 'a' or a Component like Link
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.node ]),
+    // Assigned to the href attribute if element is 'a'
+    href: PropTypes.string,
+    // The element to render, could be 'a' or a Component like Link
+    text: PropTypes.string,
+  })),
+  // The text inside the element
+  text: PropTypes.string,
 };
 
 SprkMastheadAccordionItem.defaultProps = {
