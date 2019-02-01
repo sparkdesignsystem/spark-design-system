@@ -5,11 +5,16 @@ import SprkMastheadDropdown from '../SprkMastheadDropdown/SprkMastheadDropdown';
 
 class SprkMastheadBigNav extends Component {
   render() {
-    const {links} = this.props
+    const {additionalClasses, analyticsString, idString, links, ...rest} = this.props
     return (
       <React.Fragment>
         <div className="sprk-o-Stack__item">
-          <nav className="sprk-c-Masthead__big-nav" role="navigation">
+          <nav
+            className={classNames("sprk-c-Masthead__big-nav", additionalClasses)}
+            data-analytics={analyticsString}
+            data-id={idString}
+            role="navigation"
+            {...rest}>
             <ul
               className="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
                 { links.map((link, id) => {
@@ -41,8 +46,30 @@ class SprkMastheadBigNav extends Component {
   }
 }
 
-SprkMastheadBigNav.propTypes = {};
+SprkMastheadBigNav.propTypes = {
+  // classes to be added to the masthead
+  additionalClasses: PropTypes.string,
+  // assigned to data-analytics
+  analyticsString: PropTypes.string,
+  // assigned to data-id
+  idString: PropTypes.string,
+  // used to render navigation inside
+  links: PropTypes.arrayOf(PropTypes.shape({
+    // The element to render, can be 'a' or a Component like Link
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    // Classes to apply to the container of the link
+    additionalContainerClasses: PropTypes.string,
+    // Adds a class if the link is active
+    isActive: PropTypes.bool,
+    // The link text
+    text: PropTypes.string
+  }))
+};
+
 SprkMastheadBigNav.defaultProps = {
+  additionalClasses: '',
+  analyticsString: '',
+  idString: '',
   links: []
 };
 
