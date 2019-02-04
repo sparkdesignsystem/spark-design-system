@@ -1,3 +1,4 @@
+/* global window */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -15,9 +16,33 @@ class SprkTabs extends Component {
     this.handleTabClick = this.handleTabClick.bind(this);
     this.handleKeyboardEvent = this.handleKeyboardEvent.bind(this);
     this.updateAriaOrientation = this.updateAriaOrientation.bind(this);
-    this.setDefaultActive = this.setDefaultActive.bind(this);
+    this.setDefaultActiveTab = this.setDefaultActiveTab.bind(this);
+    this.getActiveTabIndex = this.getActiveTabIndex.bind(this);
+    this.retreatTab = this.retreatTab.bind(this);
+    this.advanceTab = this.advanceTab.bind(this);
     this.tabsContainerRef = React.createRef();
     this.state = {};
+  }
+
+  /*
+  * Immediately invole setDefaultActiveTab()
+  * when component is inserted into the tree
+  * and update state with the ID of the tab that's active by default.
+  * Update aria-orientation and listen for resizes for future updates.
+  */
+  componentDidMount() {
+    const tabsBreakpoint = 736;
+    const tabsContainer = this.tabsContainerRef;
+    const { children } = this.props;
+    const btnIds = children.map((btn, index) => `tab-${index + 1}`);
+
+    this.setDefaultActiveTab();
+    this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
+    window.addEventListener('resize', () => {
+      this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
+    });
+
+    this.setState({ btnIds });
   }
 
   /*
@@ -25,81 +50,113 @@ class SprkTabs extends Component {
   * active by default (isDefaultActive would be set on tab panel)
   * and update state with that tab button ID.
   */
-  setDefaultActive() {
+  setDefaultActiveTab() {
     const { children } = this.props;
-    children.forEach(child => {
+    children.forEach((child, index) => {
       if (child.props.isDefaultActive) {
-        this.setState({isActive: child.props.tabBtnId});
+        this.setState({ isActive: `tab-${index + 1}` });
       }
     });
-  };
+  }
+
+  /*
+  * Get the index of the active tab
+  * by finding it from our state array of btn ids
+  */
+  getActiveTabIndex() {
+    const { isActive, btnIds } = this.state;
+    let tabIndex;
+    btnIds.forEach((id, index) => {
+      if (id === isActive) {
+        tabIndex = index;
+      }
+    });
+    return tabIndex;
+  }
+
+  retreatTab() {
+    const { btnIds } = this.state;
+    if (this.getActiveTabIndex() - 1 === -1) {
+      this.setState({
+        isActive: btnIds[btnIds.length - 1],
+        isFocused: btnIds[btnIds.length - 1],
+      });
+    } else {
+      const newActiveTabIndex = this.getActiveTabIndex() - 1;
+      this.setState({
+        isActive: btnIds[newActiveTabIndex],
+        isFocused: btnIds[newActiveTabIndex],
+      });
+    }
+  }
+
+  advanceTab() {
+    const { btnIds } = this.state;
+    if ((this.getActiveTabIndex() + 1) < btnIds.length) {
+      const newActiveTabIndex = this.getActiveTabIndex() + 1;
+      this.setState({
+        isActive: btnIds[newActiveTabIndex],
+        isFocused: btnIds[newActiveTabIndex],
+      });
+    } else {
+      this.setState({
+        isActive: btnIds[0],
+        isFocused: btnIds[0],
+      });
+    }
+  }
 
   /*
   * Tabs uses arrow keys to move from tab to tab.
   * Depending on the key pressed we need to
   * set a new active tab.
   */
- handleKeyboardEvent(e) {
-  const keys = {
-    end: 35,
-    home: 36,
-    left: 37,
-    right: 39,
-    tab: 9,
-  };
-  // get currently active tab
-  const activeTab = this.state.isActive;
-  const { children } = this.props;
+  handleKeyboardEvent(e) {
+    const { btnIds } = this.state;
+    const keys = {
+      end: 35,
+      home: 36,
+      left: 37,
+      right: 39,
+    };
 
-  if (e.keyCode === keys.left) {
-    console.log('need to go back');
-  } else if (e.keyCode === keys.right) {
-    console.log('need to go forward');
-    this.setState({
-      isActive: activeTab,
-      isFocusedBtn: activeTab
-    })
-  } else if (e.keyCode === keys.tab) {
-    // Prevent default tabbing
-    e.preventDefault();
-    console.log(this.tabBtnRef);
-    // Update isFocusedPanel state with the id of the active tab btn
-    // so child panel component can check if it should be
-    // focused and focus when tab key is hit
-    this.setState({isFocusedPanel: activeTab})
-  } else if (e.keyCode === keys.home) {
-    console.log('need to something for home');
-  } else if (e.keyCode === keys.end) {
-    console.log('need some for end');
+    switch (e.keyCode) {
+      case keys.left:
+        this.retreatTab();
+        break;
+      case keys.right:
+        this.advanceTab();
+        break;
+      case keys.home:
+        this.setState({
+          isActive: btnIds[0],
+          isFocused: btnIds[0],
+        });
+        break;
+      case keys.end:
+        this.setState({
+          isActive: btnIds[btnIds.length - 1],
+          isFocused: btnIds[btnIds.length - 1],
+        });
+        break;
+      default:
+        break;
+    }
   }
-};
 
   /*
-  * Switch aria-orientation to vertical on narrow viewports (based on _tabs.scss breakpoint)
+  * Switch aria-orientation to vertical on
+  * narrow viewports (based on _tabs.scss breakpoint)
   */
   updateAriaOrientation(width, element, breakpoint) {
-    if (width <= breakpoint) {
+    this.width = width;
+    this.element = element;
+    this.breakpoint = breakpoint;
+    if (this.width <= this.breakpoint) {
       element.current.setAttribute('aria-orientation', 'vertical');
     } else {
       element.current.setAttribute('aria-orientation', 'horizontal');
     }
-  };
-
-  /*
-  * Immediately invole setDefaultActive()
-  * when component is inserted into the tree
-  * and update state with the ID of the tab that's active by default.
-  * Update aria-orientation and listen for resizes for future updating.
-  */
-  componentDidMount() {
-    const tabsBreakpoint = 736;
-    const tabsContainer = this.tabsContainerRef;
-
-    this.setDefaultActive();
-    this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
-    window.addEventListener('resize', () => {
-      this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
-    });
   }
 
   /*
@@ -109,77 +166,108 @@ class SprkTabs extends Component {
   */
   handleTabClick(e) {
     const btnTabId = e.currentTarget.id;
-    this.setState({isActive: btnTabId});
+    this.setState({ isActive: btnTabId });
   }
 
   render() {
-     const { children, idString, tabBtnChildren, additionalClasses, ...other } = this.props;
-     return (
-       <div
-         className={classnames('sprk-c-Tabs', additionalClasses)}
-         role="tablist"
-         aria-orientation="horizontal"
-         data-id={idString}
-         ref={this.tabsContainerRef}
-         onKeyDown={this.handleKeyboardEvent}
-         {...other}>
-         <div className="sprk-c-Tabs__buttons">
-          {
-            children.map((tabPanel, index) => {
-              console.log(tabPanel);
-              const { tabBtnChildren, tabBtnId, tabBtnAdditionalClasses } = tabPanel.props;
-              {/* Only render a SprkTabsButton for SprkTabsPanel (ex. Don't render for a <p>) */}
-              if (tabPanel.type.name !== SprkTabsPanel.name) return;
-              return (
-                <SprkTabsButton
-                  key={index}
-                  isFocusedBtn={this.state.isFocusedBtn}
-                  isActive={this.state.isActive === tabBtnId}
-                  ariaControls={`target-${index + 1}`}
-                  ariaSelected={this.state.isActive === tabBtnId ? true : false}
-                  tabBtnId={tabBtnId}
-                  onClick={this.handleTabClick}
-                  tabBtnAdditionalClasses={tabBtnAdditionalClasses}>
-                  {tabBtnChildren}
-                </SprkTabsButton>
-              )
-            })
-          }
+    const {
+      children,
+      idString,
+      additionalClasses,
+      ...other
+    } = this.props;
+
+    /*
+    * Loop through all the Tab Panels and
+    * generate a Tab Button for each one.
+    * Don't render a Tab Button
+    * for an element that is not a SprkTabsPanel.
+    */
+    const buttons = children.map((tabPanel, index) => {
+      const { tabBtnChildren, tabBtnAdditionalClasses } = tabPanel.props;
+      const { isFocused, isActive } = this.state;
+      const tabBtnId = `tab-${index + 1}`;
+
+      if (tabPanel.type.name !== SprkTabsPanel.name) return;
+
+      return (
+        <SprkTabsButton
+          key={index}
+          isFocused={isFocused}
+          isActive={isActive === tabBtnId}
+          ariaControls={`target-${index + 1}`}
+          ariaSelected={isActive === tabBtnId}
+          tabBtnId={tabBtnId}
+          onTabClick={this.handleTabClick}
+          tabBtnAdditionalClasses={tabBtnAdditionalClasses}
+          tabBtnChildren={tabBtnChildren}
+        />
+      );
+    });
+
+    /*
+    * Loop through all the Tab Panels and return
+    * new SprkTabsPanels for each one with
+    * their respective props. Don't render a Tab Panel
+    * for an element that is not a SprkTabsPanel.
+    */
+    const panels = children.map((tabPanel, index) => {
+      const {
+        children,
+        tabPanelAdditionalClasses,
+        ...rest
+      } = tabPanel.props;
+      const { isActive, isFocused } = this.state;
+      const tabBtnId = `tab-${index + 1}`;
+
+      if (tabPanel.type.name !== SprkTabsPanel.name) return;
+
+      return (
+        <SprkTabsPanel
+          tabBtnId={tabBtnId}
+          key={index}
+          tabAriaId={index}
+          activeTabBtnId={isActive}
+          isFocused={isFocused}
+          additionalClasses={tabPanelAdditionalClasses}
+          {...rest}
+        >
+          {children}
+        </SprkTabsPanel>
+      );
+    });
+
+    return (
+      <div
+        className={classnames('sprk-c-Tabs', additionalClasses)}
+        role="tablist"
+        aria-orientation="horizontal"
+        data-id={idString}
+        ref={this.tabsContainerRef}
+        onKeyDown={this.handleKeyboardEvent}
+        {...other}
+      >
+        <div className="sprk-c-Tabs__buttons">
+          { buttons }
         </div>
-
-        {
-          children.map((tabPanel, index) => {
-            const { tabBtnId, children, additionalClasses, ...other } = tabPanel.props;
-            // console.log(this.children.ref);
-            {/* Don't render a tab panel for an element that is not a SprkTabsPanel */}
-            if (tabPanel.type.name !== SprkTabsPanel.name) return;
-            return (
-              <SprkTabsPanel
-                tabBtnId={tabBtnId}
-                key={index}
-                tabAriaId={index}
-                activeTabBtnId={this.state.isActive}
-                isFocusedPanel={this.state.isFocusedPanel}
-                additionalClasses={additionalClasses}
-                {...other}>
-                {children}
-              </SprkTabsPanel>
-            )
-          })
-        }
-       </div>
-     )
-    }
-
+        { panels }
+      </div>
+    );
+  }
 }
 
 SprkTabs.propTypes = {
   // The children of the tabs component (SprkTabsPanel)
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   // The data-id value for UI testing purposes
   idString: PropTypes.string,
   // A string of additional classes for the Tabs component
   additionalClasses: PropTypes.string,
-}
+};
+
+SprkTabs.defaultProps = {
+  idString: undefined,
+  additionalClasses: undefined,
+};
 
 export default SprkTabs;

@@ -9,16 +9,9 @@ class SprkTabsButton extends Component {
   }
 
   componentDidUpdate () {
-    /*
-    * If the user hits the tab key inside the parent Tabs component
-    * isFocusedPanel state will be updated with the btn id of the
-    * panel that should be focused. If no panel should be focused
-    * isFocusedPanel will return undefined.
-    */
-     if (this.props.isFocusedBtn === this.props.tabBtnId) {
+    if ((this.props.isFocused !== undefined) && (this.props.isFocused === this.props.tabBtnId)) {
       this.tabBtnRef.current.focus();
-    } else {
-      console.log(this.props.isFocusedBtn, 'focused btn');
+      console.log('if ran!!!!');
     }
   }
 
@@ -29,25 +22,24 @@ class SprkTabsButton extends Component {
       tabBtnAdditionalClasses,
       ariaControls,
       ariaSelected,
-      isActive
+      isActive,
+      onTabClick
     } = this.props;
 
-    const classNames = classnames(
-      'sprk-c-Tabs__button',
-      tabBtnAdditionalClasses,
-      {'sprk-c-Tabs__button--active': isActive}
-    );
-
-    {/* Don't render a tab button for an element that is not a SprkTabsPanel */}
-    if (tab.type.name !== SprkTabsPanel.name) return;
     return (
       <button
-        className={classNames}
+        className={classnames(
+          'sprk-c-Tabs__button',
+          tabBtnAdditionalClasses,
+          {'sprk-c-Tabs__button--active': isActive}
+        )}
         role="tab"
+        onClick={onTabClick}
         aria-controls={ariaControls}
         aria-selected={ariaSelected}
         id={tabBtnId}
         type="button"
+        tabIndex={isActive ? undefined : '-1'}
         ref={this.tabBtnRef}
         data-id={tabBtnId}>
         {tabBtnChildren}
@@ -68,7 +60,7 @@ SprkTabsButton.propTypes = {
   tabBtnId: PropTypes.string.isRequired,
   // State passed from parent that contains an id of a btn tab
   // when the corresponding panel should be focused
-  isFocusedPanel: PropTypes.string,
+  isFocused: PropTypes.string,
   // The ID to use for each tab panel so it corresponds to the button
   tabAriaId: PropTypes.number,
   // A string of additional classes to be applied to the tab panel

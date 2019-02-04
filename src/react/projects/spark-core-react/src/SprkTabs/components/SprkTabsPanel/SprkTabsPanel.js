@@ -9,16 +9,8 @@ class SprkTabsPanel extends Component {
   }
 
   componentDidUpdate () {
-    /*
-    * If the user hits the tab key inside the parent Tabs component
-    * isFocusedPanel state will be updated with the btn id of the
-    * panel that should be focused. If no panel should be focused
-    * isFocusedPanel will return undefined.
-    */
-     if (this.props.isFocusedPanel === this.props.tabBtnId) {
+     if ((this.props.isFocused !== undefined) && (this.props.isFocused === this.tabPanelRef.current.id)) {
       this.tabPanelRef.current.focus();
-    } else {
-      console.log(this.props.isFocusedPanel, 'focused panel');
     }
   }
 
@@ -60,10 +52,10 @@ SprkTabsPanel.propTypes = {
   */
   activeTabBtnId: PropTypes.string,
   // A unique ID for each tab button
-  tabBtnId: PropTypes.string.isRequired,
+  tabBtnId: PropTypes.string,
   // State passed from parent that contains an id of a btn tab
   // when the corresponding panel should be focused
-  isFocusedPanel: PropTypes.string,
+  isFocused: PropTypes.string,
   // The ID to use for each tab panel so it corresponds to the button
   tabAriaId: PropTypes.number,
   // A string of additional classes to be applied to the tab panel
