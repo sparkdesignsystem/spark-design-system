@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
+import addIdsToArray from '../../../utility/addIdsToArray';
 
 class SprkMastheadLittleNav extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillMount() {
+    this.setState({
+      utilityContents: this.props.utilityContents ? addIdsToArray(this.props.utilityContents): undefined,
+      links: this.props.links ? addIdsToArray(this.props.links) : undefined
+    });
+  }
+
   render() {
     const {
       additionalClasses,
@@ -23,7 +35,7 @@ class SprkMastheadLittleNav extends Component {
         {selector &&
           <div className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div className="sprk-o-Stack__item sprk-u-Position--relative">
-              <SprkMastheadSelector selector={selector}/>
+              <SprkMastheadSelector choices={selector}/>
             </div>
           </div>
         }
@@ -36,11 +48,11 @@ class SprkMastheadLittleNav extends Component {
             {"sprk-o-HorizontalList--spacing-medium": spacing === 'medium'},
             "sprk-o-Stack__item--center-column"
             )}>
-          {links.map((link, id) => {
+          {this.props.links && this.state.links.map((link) => {
             const {element, href, text, ...rest} = link;
             const TagName = element || 'a';
             return(
-              <li key={id}>
+              <li key={link.id}>
                 <TagName
                   className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                   href={TagName === 'a' ? href: undefined}
@@ -58,9 +70,9 @@ class SprkMastheadLittleNav extends Component {
             {"sprk-o-HorizontalList--spacing-large": spacing === 'large'},
             {"sprk-o-HorizontalList--spacing-medium": spacing === 'medium'},
             "sprk-o-Stack--center-column")}>
-          {utilityContents.map((item, id) => {
+          {this.props.utilityContents && this.state.utilityContents.map((item) => {
             return(
-              <li key={id}>
+              <li key={item.id}>
                 {item}
               </li>
             )
@@ -85,7 +97,7 @@ SprkMastheadLittleNav.propTypes = {
     // An array of objects that describe the items in the menu
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // Assigned to href of the element is 'a'
       href: PropTypes.string,
       // The text inside the item
@@ -98,12 +110,8 @@ SprkMastheadLittleNav.propTypes = {
   utilityContents: PropTypes.arrayOf(PropTypes.node)
 }))
 };
+
 SprkMastheadLittleNav.defaultProps = {
-  selector: {
-    items: []
-  },
-  links: [],
-  utilityContents: [],
   spacing: 'medium'
 };
 

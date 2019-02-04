@@ -3,6 +3,7 @@ import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import addIdsToArray from '../../../utility/addIdsToArray';
 
 class SprkMastheadAccordionItem extends Component {
   constructor(props){
@@ -18,6 +19,12 @@ class SprkMastheadAccordionItem extends Component {
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0
     }));
+  }
+
+  componentWillMount() {
+    this.setState({
+      subNavLinks: this.props.subNavLinks ? addIdsToArray(this.props.subNavLinks) : undefined
+    });
   }
 
   render() {
@@ -43,8 +50,8 @@ class SprkMastheadAccordionItem extends Component {
             </a>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-                {subNavLinks.map((subnavlink, id) => {
-                  const {element, href, text, ...rest} = subnavlink;
+                {subNavLinks && this.state.subNavLinks.map((subnavlink) => {
+                  const {element, href, id, text, ...rest} = subnavlink;
                   const TagName = element || 'a';
                   return (
                     <li key={id}>
@@ -84,7 +91,7 @@ SprkMastheadAccordionItem.propTypes = {
   // Decides whether the accordion should render open by default
   defaultOpen: PropTypes.bool,
   // The element to render, could be 'a' or a Component like Link
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.node ]),
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   // Assigned to the href attribute if element is 'a'
   href: PropTypes.string,
   // Decides if the outer link is the active link
@@ -96,7 +103,7 @@ SprkMastheadAccordionItem.propTypes = {
   // An array of link objects that builds the sub nav
   subNavLinks: PropTypes.arrayOf(PropTypes.shape({
     // The element to render, could be 'a' or a Component like Link
-    element: PropTypes.oneOfType([PropTypes.string, PropTypes.node ]),
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     // Assigned to the href attribute if element is 'a'
     href: PropTypes.string,
     // The element to render, could be 'a' or a Component like Link

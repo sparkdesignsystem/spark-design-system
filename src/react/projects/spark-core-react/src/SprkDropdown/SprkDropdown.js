@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkIcon from '../SprkIcon/SprkIcon';
+import addIdsToArray from '../utility/addIdsToArray';
 
 class SprkDropdown extends Component {
   constructor(props) {
@@ -32,6 +33,9 @@ class SprkDropdown extends Component {
   }
 
   componentWillMount() {
+    this.setState({
+      choiceItems: this.props.choices.items ? addIdsToArray(this.props.choices.items) : undefined
+    });
     window.addEventListener('keydown', this.closeOnEsc)
     window.addEventListener('focusin', this.closeOnClickOutside)
     window.addEventListener('click', this.closeOnClickOutside)
@@ -124,15 +128,16 @@ class SprkDropdown extends Component {
             </div>
             }
             <ul className="sprk-c-Dropdown__links">
-              {choices.items.map((choice, id) => {
+              {choices.items && this.state.choiceItems.map((choice) => {
                 const {content, element, href, isActive, text, value, ...rest} = choice;
                 const TagName = element || 'a';
                 return(
-                  <li className="sprk-c-Dropdown__item" role="option" key={id}>
+                  <li className="sprk-c-Dropdown__item" role="option" key={choice.id}>
 
                     {variant === 'base' &&
                       <TagName
                         className="sprk-c-Dropdown__link"
+                        href={TagName === 'a' ? href || '#nogo' : undefined}
                         onClick={() => {
                           this.updateTriggerText(text);
                           this.closeDropdown()
@@ -189,7 +194,7 @@ SprkDropdown.propTypes = {
     // An array of objects that describe the items in the menu
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // Assigned to href of the element is 'a'
       href: PropTypes.string,
       // The text inside the item
@@ -211,12 +216,8 @@ SprkDropdown.propTypes = {
 };
 
 SprkDropdown.defaultProps = {
-  choices: {
-    items: []
-  },
   defaultTriggerText: 'Choose One...',
   iconType: 'chevron-down',
-  idString: '',
   variant: 'base'
 };
 

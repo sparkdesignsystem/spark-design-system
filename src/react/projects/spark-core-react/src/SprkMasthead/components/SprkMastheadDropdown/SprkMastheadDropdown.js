@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import addIdsToArray from '../../../utility/addIdsToArray';
 
 class SprkMastheadDropdown extends Component {
   constructor(props) {
@@ -29,6 +30,10 @@ class SprkMastheadDropdown extends Component {
   }
 
   componentWillMount() {
+    this.setState({
+      choiceItems: this.props.choices.items ? addIdsToArray(this.props.choices.items) : undefined
+    });
+
     window.addEventListener('keydown', this.closeOnEsc)
     window.addEventListener('focusin', this.closeOnClickOutside)
     window.addEventListener('click', this.closeOnClickOutside)
@@ -93,11 +98,11 @@ class SprkMastheadDropdown extends Component {
           </div>
           }
           <ul className="sprk-c-Dropdown__links">
-            {choices.items.map((choice, id) => {
+            {choices.items && this.state.choiceItems.map((choice) => {
               const {element, href, text, ...rest} = choice;
               const TagName = element || 'a';
               return(
-                <li className="sprk-c-Dropdown__item" role="option" key={id}>
+                <li className="sprk-c-Dropdown__item" role="option" key={choice.id}>
                   <TagName
                     href={TagName === 'a' ? href || '#nogo': undefined}
                     className="sprk-c-Dropdown__link"

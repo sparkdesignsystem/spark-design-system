@@ -115,15 +115,6 @@ SprkMasthead.propTypes = {
 };
 
 SprkMasthead.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  bigNavLinks: [],
-  idString: '',
-  littleNavLinks: [],
-  narrowNavLinks: [],
-  narrowSelector: {},
-  selector: {},
-  utilityContents: [],
   variant: 'default'
 };
 

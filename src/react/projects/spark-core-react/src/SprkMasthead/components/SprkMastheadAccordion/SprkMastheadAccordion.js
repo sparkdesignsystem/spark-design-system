@@ -2,22 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
+import addIdsToArray from '../../../utility/addIdsToArray';
 
-function SprkMastheadAccordion({additionalClasses, analyticsString, idString, links}) {
+class SprkMastheadAccordion extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  componentWillMount() {
+    this.setState({
+      links: this.props.links ? addIdsToArray(this.props.links) : undefined
+    })
+  }
+  render(){
+    const {additionalClasses, analyticsString, idString, links} = this.props;
     return (
       <ul
         data-analytics={analyticsString}
         data-id={idString}
         className={classNames("sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare", additionalClasses)}>
-        {links.map((link, id) => {
+        {links && this.state.links.map((link) => {
           return (
             <SprkMastheadAccordionItem
               {...link}
-              key={id} />
+              key={link.id} />
           );
         })}
       </ul>
     );
+  }
 }
 
 SprkMastheadAccordion.propTypes = {

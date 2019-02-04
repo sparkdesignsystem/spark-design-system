@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
 import classNames from 'classnames';
+import addIdsToArray from '../../../utility/addIdsToArray';
 
 class SprkMastheadSelector extends Component {
   constructor(props) {
@@ -32,6 +33,10 @@ class SprkMastheadSelector extends Component {
   }
 
   componentWillMount() {
+    this.setState({
+      choiceItems: this.props.choices.items ? addIdsToArray(this.props.choices.items) : undefined
+    });
+
     window.addEventListener('keydown', this.closeOnEsc)
     window.addEventListener('focusin', this.closeOnClickOutside)
     window.addEventListener('click', this.closeOnClickOutside)
@@ -120,13 +125,13 @@ class SprkMastheadSelector extends Component {
           </div>
 
           <ul className="sprk-c-Dropdown__links">
-            {choices.items.map((item, id) => {
+            {choices.items && this.state.choiceItems.map((item) => {
               const {element, href, title, information, value, ...rest} = item;
               const TagName = element || 'a';
               return (
-                <li className="sprk-c-Dropdown__item" key={id}>
+                <li className="sprk-c-Dropdown__item" key={item.id}>
                   <TagName className="sprk-c-Dropdown__link sprk-u-ptm"
-                     href={TagName === 'a' ? href : '#nogo'}
+                     href={TagName === 'a' ? href || '#nogo' : undefined}
                      onClick={() => {
                        this.updateTriggerText(title);
                        this.closeDropdown()
@@ -169,7 +174,7 @@ SprkMastheadSelector.propTypes = {
     // An array of objects that describe the items in the menu
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // Assigned to href of the element is 'a'
       href: PropTypes.string,
       // The text inside the item
