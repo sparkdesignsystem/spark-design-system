@@ -15,6 +15,8 @@ class SprkMastheadSelector extends Component {
     this.updateTriggerText = this.updateTriggerText.bind(this);
     this.runChoiceFunction = this.runChoiceFunction.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
+    this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
+    this.myRef = React.createRef();
   }
 
   closeOnEsc(e) {
@@ -23,12 +25,22 @@ class SprkMastheadSelector extends Component {
     }
   }
 
+  closeOnClickOutside(e) {
+    if (!this.myRef.current.contains(e.target)) {
+      this.closeDropdown();
+    }
+  }
+
   componentWillMount() {
     window.addEventListener('keydown', this.closeOnEsc)
+    window.addEventListener('focusin', this.closeOnClickOutside)
+    window.addEventListener('click', this.closeOnClickOutside)
   }
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
+    window.removeEventListener('focusin', this.closeOnClickOutside)
+    window.removeEventListener('click', this.closeOnClickOutside)
   }
 
   openDropdown() {
@@ -50,29 +62,51 @@ class SprkMastheadSelector extends Component {
   }
 
   runChoiceFunction(text) {
-    if (this.props.selector.choiceFunction) {
-      this.props.selector.choiceFunction(text);
+    if (this.props.choices.choiceFunction) {
+      this.props.choices.choiceFunction(text);
     }
   }
 
   render() {
-    const { defaultTriggerText, isFlush, selector, ...rest} = this.props;
+    const {
+      additionalClasses,
+      additionalIconClasses,
+      additionalTriggerClasses,
+      additionalTriggerTextClasses,
+      analyticsString,
+      children,
+      choices,
+      defaultTriggerText,
+      iconType,
+      idString,
+      isFlush
+    } = this.props;
     const { isOpen, triggerText } = this.state;
 
     return (
-      <div className={classNames({"sprk-c-MastheadMask": isOpen && isFlush})} onClick={() => { if(isOpen) { this.closeDropdown() }}}>
+      <div
+        ref={this.myRef}
+        className={classNames({"sprk-c-MastheadMask": isOpen && isFlush})}
+        onClick={() => { if(isOpen) { this.closeDropdown() }}}>
         <div className={classNames({"sprk-o-Box": isFlush})}>
           <a
-            className="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
+            className={classNames(
+              "sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column",
+              additionalTriggerClasses)}
+            data-analytics={analyticsString ? analyticsString : 'undefined'}
+            data-id={idString ? idString : 'undefined'}
             onClick={this.openDropdown}
             href="#nogo" data-sprk-dropdown-trigger="dropdown-selector" aria-haspopup="true">
-            <span className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs" role="combobox">{triggerText}</span>
-            <SprkIcon iconType="chevron-down" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
+            <span
+              className={classNames("sprk-o-Stack__item sprk-o-Stack__item--flex@xxs", additionalTriggerTextClasses)}
+              role="combobox">{triggerText}</span>
+            <SprkIcon iconType={iconType} additionalClasses={
+              classNames("sprk-c-Icon--toggle sprk-Stack__item", additionalIconClasses)} />
           </a>
         </div>
 
         { isOpen &&
-        <div className="sprk-c-Masthead__selector-dropdown sprk-c-Dropdown"
+        <div className={classNames("sprk-c-Masthead__selector-dropdown sprk-c-Dropdown", additionalClasses)}
              data-sprk-dropdown="dropdown-selector">
           <div className="sprk-c-Dropdown__header">
             <a
@@ -81,12 +115,12 @@ class SprkMastheadSelector extends Component {
               href="#nogo" aria-haspopup="true">
               <span
                 className="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">{triggerText}</span>
-              <SprkIcon iconType="chevron-up" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
+              <SprkIcon iconType="chevron-up" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item"/>
             </a>
           </div>
 
           <ul className="sprk-c-Dropdown__links">
-            {selector.links.map((item, id) => {
+            {choices.items.map((item, id) => {
               const {element, href, title, information, value, ...rest} = item;
               const TagName = element || 'a';
               return (
@@ -107,9 +141,9 @@ class SprkMastheadSelector extends Component {
 
           </ul>
 
-          {selector.footer &&
+          {choices.footer &&
             <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
-              {selector.footer}
+              {choices.footer}
             </div>
           }
         </div>
@@ -119,6 +153,48 @@ class SprkMastheadSelector extends Component {
   }
 }
 
-SprkMastheadSelector.propTypes = {};
+SprkMastheadSelector.propTypes = {
+  // Classes applied to the dropdown
+  additionalClasses: PropTypes.string,
+  // Classes applied to the icon
+  additionalIconClasses: PropTypes.string,
+  // Classes applied to the link that triggers the dropdown to open
+  additionalTriggerClasses: PropTypes.string,
+  // Classes applied to the text in the trigger link
+  additionalTriggerTextClasses: PropTypes.string,
+  // Assigned to data-analytics
+  analyticsString: PropTypes.string,
+  // Choices object that builds the dropdown contents
+  choices: PropTypes.shape({
+    // An array of objects that describe the items in the menu
+    items: PropTypes.arrayOf(PropTypes.shape({
+      // The element to render for each menu item
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      // Assigned to href of the element is 'a'
+      href: PropTypes.string,
+      // The text inside the item
+      text: PropTypes.string,
+  })),
+  // Incoming children
+  children: PropTypes.node,
+  // The text set as the default of the trigger link
+  defaultTriggerText: PropTypes.string,
+  // The icon type of the trigger icon
+  iconType: PropTypes.string,
+  // Assigned to data-id
+  idString: PropTypes.string,
+  // Applies styles if the selector is flush with the sides of the viewport
+  isFlush: PropTypes.bool
+  }),
+};
+
+SprkMastheadSelector.defaultProps = {
+  defaultTriggerText: 'Choose One...',
+  iconType: 'chevron-down',
+  isFlush: false,
+  choices: {
+    items: []
+  },
+};
 
 export default SprkMastheadSelector;

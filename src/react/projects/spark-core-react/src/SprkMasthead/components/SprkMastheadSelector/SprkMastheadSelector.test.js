@@ -1,11 +1,118 @@
 import React from 'react';
-import Enzyme, { shallow, mount } from 'enzyme';
+import Enzyme, { mount, unmount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMastheadSelector from './SprkMastheadSelector';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display an svg element with the correct base class', () => {
+it('should render a trigger with the correct classes', () => {
   const wrapper = mount(<SprkMastheadSelector />);
-  expect(wrapper.find('svg.sprk-c-Icon').length).toBe(1);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
 });
+
+it('should add classes to the selector when additionalClasses has a value', () => {
+  const wrapper = mount(<SprkMastheadSelector additionalClasses="sprk-u-man" />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('.sprk-c-Dropdown.sprk-u-man').length).toBe(1);
+});
+
+it('should add classes to the icon when additionalIconClasses has a value', () => {
+  const wrapper = mount(<SprkMastheadSelector additionalIconClasses="sprk-c-Icon--l" />);
+  expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
+});
+
+it('should add classes to the trigger when additionalTriggerClasses has a value', () => {
+  const wrapper = mount(<SprkMastheadSelector additionalTriggerClasses="sprk-u-man" />);
+  expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
+});
+
+it('should add classes to the trigger text when additionalTriggerTextClasses has a value', () => {
+  const wrapper = mount(<SprkMastheadSelector additionalTriggerTextClasses="sprk-u-man" />);
+  expect(wrapper.find('span.sprk-u-man').length).toBe(1);
+});
+
+it('should assign data-analytics when analyticsString has a value', () => {
+  const wrapper = mount(<SprkMastheadSelector analyticsString="321" />);
+  expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
+});
+
+it('should assign data-id when idString has a value', () => {
+  const wrapper = mount(<SprkMastheadSelector idString="321" />);
+  expect(wrapper.find('[data-id="321"]').length).toBe(1);
+});
+
+it('should build the correct number of choices from a choices object', () => {
+  const choices = {items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('.sprk-c-Dropdown__link').length).toBe(2);
+});
+
+it('should run the choiceFunction supplied with the list of choices (base)', () => {
+  const spyFunc = jest.fn();
+  const choices = {choiceFunction: spyFunc, items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+  expect(spyFunc.mock.calls.length).toBe(1);
+});
+
+it('should run the choiceFunction supplied with the list of choices (informational)', () => {
+  const spyFunc = jest.fn();
+  const choices = {choiceFunction: spyFunc, items: [{text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }]};
+  const wrapper = mount(<SprkMastheadSelector choices={choices} variant="informational" />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+  expect(spyFunc.mock.calls.length).toBe(1);
+});
+
+it('should close the selector on click outside', () => {
+  const map = {};
+  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
+    map[event] = cb;
+  });
+
+  const choices = {items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />)
+
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.state().isOpen).toBe(true);
+  map.click({});
+  expect(wrapper.state().isOpen).toBe(false);
+})
+
+it('should close the selector on keydown (Escape)', () => {
+  const map = {};
+  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
+    map[event] = cb;
+  });
+
+  const choices = {items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />)
+
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.state().isOpen).toBe(true);
+  map.keydown({key: 'Escape'});
+  expect(wrapper.state().isOpen).toBe(false);
+})
+
+it('should unmount without error', () => {
+  const wrapper = mount(<SprkMastheadSelector />);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+  wrapper.unmount();
+  expect(wrapper.find('.sprk-b-Link').length).toBe(0);
+});
+
+it('should render the choices with the element specified', () => {
+  const wrapper = mount(<SprkMastheadSelector choices={{items : [{element: 'span', text: 'Item 1'}]}} />);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('span.sprk-c-Dropdown__link').length).toBe(1);
+})
+
+it('should pass unused keys on choice items through to the dom', () => {
+  const wrapper = mount(<SprkMastheadSelector choices={{items : [{element: 'span', text: 'Item 1', 'aria-hidden': 'true'}]}} />);
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('.sprk-c-Dropdown__link[aria-hidden="true"]').length).toBe(1);
+})
