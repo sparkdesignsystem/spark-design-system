@@ -23,7 +23,8 @@ class SprkTabsButton extends Component {
       ariaControls,
       ariaSelected,
       isActive,
-      onTabClick
+      onTabClick,
+      tabBtnIdString,
     } = this.props;
 
     return (
@@ -41,7 +42,7 @@ class SprkTabsButton extends Component {
         type="button"
         tabIndex={isActive ? undefined : '-1'}
         ref={this.tabBtnRef}
-        data-id={tabBtnId}>
+        data-id={tabBtnIdString}>
         {tabBtnChildren}
       </button>
     );

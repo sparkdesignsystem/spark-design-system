@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { uniqueId } from 'lodash';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
@@ -21,7 +22,9 @@ class SprkTabs extends Component {
     this.retreatTab = this.retreatTab.bind(this);
     this.advanceTab = this.advanceTab.bind(this);
     this.tabsContainerRef = React.createRef();
-    this.state = {};
+    const { children } = this.props;
+    const btnIds = children.map(() => uniqueId('tab-'));
+    this.state = { btnIds };
   }
 
   /*
@@ -33,16 +36,12 @@ class SprkTabs extends Component {
   componentDidMount() {
     const tabsBreakpoint = 736;
     const tabsContainer = this.tabsContainerRef;
-    const { children } = this.props;
-    const btnIds = children.map((btn, index) => `tab-${index + 1}`);
 
     this.setDefaultActiveTab();
     this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
     window.addEventListener('resize', () => {
       this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
     });
-
-    this.setState({ btnIds });
   }
 
   /*
@@ -185,19 +184,18 @@ class SprkTabs extends Component {
     */
     const buttons = children.map((tabPanel, index) => {
       const { tabBtnChildren, tabBtnAdditionalClasses } = tabPanel.props;
-      const { isFocused, isActive } = this.state;
-      const tabBtnId = `tab-${index + 1}`;
+      const { isFocused, isActive, btnIds } = this.state;
 
       if (tabPanel.type.name !== SprkTabsPanel.name) return;
 
       return (
         <SprkTabsButton
-          key={index}
+          key={btnIds[index]}
           isFocused={isFocused}
-          isActive={isActive === tabBtnId}
-          ariaControls={`target-${index + 1}`}
-          ariaSelected={isActive === tabBtnId}
-          tabBtnId={tabBtnId}
+          isActive={isActive === btnIds[index]}
+          ariaControls={`target-${btnIds[index]}`}
+          ariaSelected={isActive === btnIds[index]}
+          tabBtnId={btnIds[index]}
           onTabClick={this.handleTabClick}
           tabBtnAdditionalClasses={tabBtnAdditionalClasses}
           tabBtnChildren={tabBtnChildren}
@@ -217,16 +215,15 @@ class SprkTabs extends Component {
         tabPanelAdditionalClasses,
         ...rest
       } = tabPanel.props;
-      const { isActive, isFocused } = this.state;
-      const tabBtnId = `tab-${index + 1}`;
+      const { isActive, isFocused, btnIds } = this.state;
 
       if (tabPanel.type.name !== SprkTabsPanel.name) return;
 
       return (
         <SprkTabsPanel
-          tabBtnId={tabBtnId}
-          key={index}
-          tabAriaId={index}
+          tabBtnId={btnIds[index]}
+          key={btnIds[index]}
+          tabAriaId={btnIds[index]}
           activeTabBtnId={isActive}
           isFocused={isFocused}
           additionalClasses={tabPanelAdditionalClasses}

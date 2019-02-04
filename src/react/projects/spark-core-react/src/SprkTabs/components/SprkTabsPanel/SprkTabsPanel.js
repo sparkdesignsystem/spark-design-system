@@ -35,7 +35,7 @@ class SprkTabsPanel extends Component {
         role="tabpanel"
         tabIndex="0"
         ref={this.tabPanelRef}
-        id={`target-${tabAriaId + 1}`}
+        id={`target-${tabAriaId}`}
         aria-labelledby={tabBtnId}>
         {children}
       </div>
@@ -57,7 +57,7 @@ SprkTabsPanel.propTypes = {
   // when the corresponding panel should be focused
   isFocused: PropTypes.string,
   // The ID to use for each tab panel so it corresponds to the button
-  tabAriaId: PropTypes.number,
+  tabAriaId: PropTypes.string,
   // A string of additional classes to be applied to the tab panel
   additionalClasses: PropTypes.string
 }
