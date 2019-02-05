@@ -25,6 +25,11 @@ function SiteNav(props) {
             Tables
           </Link>
         </li>
+        <li>
+          <Link to="/dictionary" className="drizzle-b-Link drizzle-b-Link--light">
+            Dictionary
+          </Link>
+        </li>
       </ul>
     </nav>
   );
