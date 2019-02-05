@@ -2,8 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const SprkUnorderedList = (props) => {
-  const { children, listType, additionalClasses, idString, ...other  } = props;
+const SprkList = (props) => {
+  const { element, children, listType, additionalClasses, idString, ...other  } = props;
   const classNames = classnames(
     'sprk-b-List',
     additionalClasses, {
@@ -11,15 +11,17 @@ const SprkUnorderedList = (props) => {
       'sprk-b-List--bare': listType === 'bare',
     },
   )
-
+  const TagName = element;
   return (
-    <ul className={classNames} data-id={idString} {...other}>
+    <TagName className={classNames} data-id={idString} {...other}>
       {children}
-    </ul>
+    </TagName>
   );
 }
 
-SprkUnorderedList.propTypes = {
+SprkList.propTypes = {
+  // The element that will be rendered - Required
+  element: PropTypes.oneOf(['ol', 'ul']).isRequired,
   // The children that will be rendered inside the list
   children: PropTypes.node,
   // The list variant that determines the class names
@@ -30,4 +32,4 @@ SprkUnorderedList.propTypes = {
   additionalClasses: PropTypes.string
 }
 
-export default SprkUnorderedList;
+export default SprkList;
