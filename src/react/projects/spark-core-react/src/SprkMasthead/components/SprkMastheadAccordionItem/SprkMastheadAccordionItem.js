@@ -11,7 +11,7 @@ class SprkMastheadAccordionItem extends Component {
     this.state = {
       isOpen: this.props.defaultOpen || false,
       height: this.props.defaultOpen ? 'auto': 0,
-      subNavLinks: this.props.subNavLinks ? { id: uniqueId(), ...this.props.subNavLinks} : undefined
+      subNavLinks: this.props.subNavLinks.map(link => { return { id: uniqueId(), ...link}; })
     };
     this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
   }
@@ -36,7 +36,7 @@ class SprkMastheadAccordionItem extends Component {
             {"sprk-o-Box": isButton},
             )}>
 
-          { subNavLinks &&
+          { subNavLinks.length > 0 &&
           <React.Fragment>
             <a href="#nogo" className="sprk-c-MastheadAccordion__summary" onClick={this.toggleAccordionOpen}>
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
@@ -62,7 +62,7 @@ class SprkMastheadAccordionItem extends Component {
             </AnimateHeight>
           </React.Fragment>
           }
-        { !subNavLinks &&
+          { subNavLinks.length <= 0 &&
           <TagName
             className={classNames(
               {"sprk-c-MastheadAccordion__summary": !isButton},
@@ -111,7 +111,8 @@ SprkMastheadAccordionItem.propTypes = {
 
 SprkMastheadAccordionItem.defaultProps = {
   defaultOpen: false,
-  link: {}
+  link: {},
+  subNavLinks: []
 };
 
 export default SprkMastheadAccordionItem;

@@ -10,7 +10,7 @@ class SprkDropdown extends Component {
     this.state = {
       triggerText: props.defaultTriggerText,
       isOpen: false,
-      choiceItems: this.props.choices.items ? { id: uniqueId(), ...this.props.choices.items} : undefined
+      choiceItems: props.choices.items.map(item => { return { id: uniqueId(), ...item}; })
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -39,7 +39,7 @@ class SprkDropdown extends Component {
     window.addEventListener('click', this.closeOnClickOutside)
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
     window.removeEventListener('focusin', this.closeOnClickOutside)
     window.removeEventListener('click', this.closeOnClickOutside)

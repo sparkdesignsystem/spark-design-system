@@ -7,9 +7,9 @@ import { uniqueId } from 'lodash';
 class SprkMastheadBigNav extends Component {
   constructor(props) {
     super(props);
-    this.setState({
-      links: this.props.links ? { id: uniqueId(), ...this.props.links} : undefined
-    });
+    this.state = {
+      links: props.links.map(link => { return { id: uniqueId(), ...link};})
+    };
   }
 
   render() {

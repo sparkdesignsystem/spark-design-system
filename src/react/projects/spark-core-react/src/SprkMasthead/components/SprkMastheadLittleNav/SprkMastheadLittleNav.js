@@ -7,10 +7,10 @@ import { uniqueId } from 'lodash';
 class SprkMastheadLittleNav extends Component {
   constructor(props) {
     super(props);
-    this.setState({
-      utilityContents: this.props.utilityContents ? { id: uniqueId(), ...this.props.utilityContents} : undefined,
-      links: this.props.links ? { id: uniqueId(), ...this.props.links} : undefined
-    });
+    this.state = {
+      utilityContents: this.props.utilityContents.map(item => { return { id: uniqueId(), ...item} }),
+      links: this.props.links.map(link => { return { id: uniqueId(), ...link} })
+    };
   }
 
   render() {
@@ -109,7 +109,9 @@ SprkMastheadLittleNav.propTypes = {
 };
 
 SprkMastheadLittleNav.defaultProps = {
-  spacing: 'medium'
+  spacing: 'medium',
+  links: [],
+  utilityContents: []
 };
 
 export default SprkMastheadLittleNav;

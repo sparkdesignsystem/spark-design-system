@@ -10,7 +10,7 @@ class SprkMastheadSelector extends Component {
     this.state = {
       isOpen: false,
       triggerText: props.defaultTriggerText || 'Select One',
-      choiceItems: this.props.choices.items ? { id: uniqueId(), ...this.props.choices.items} : undefined
+      choiceItems: props.choices.items.map(item => { return { id: uniqueId(), ...item}})
     };
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -39,7 +39,7 @@ class SprkMastheadSelector extends Component {
     window.addEventListener('click', this.closeOnClickOutside)
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
     window.removeEventListener('focusin', this.closeOnClickOutside)
     window.removeEventListener('click', this.closeOnClickOutside)
