@@ -39,6 +39,7 @@ function SiteNav(props) {
           <Link to="/dividers" className="drizzle-b-Link drizzle-b-Link--light">
             Dividers
           </Link>
+        </li>
         <li>
           <Link to="/dictionary" className="drizzle-b-Link drizzle-b-Link--light">
             Dictionary

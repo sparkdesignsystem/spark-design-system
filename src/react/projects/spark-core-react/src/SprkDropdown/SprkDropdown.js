@@ -214,6 +214,9 @@ SprkDropdown.propTypes = {
 };
 
 SprkDropdown.defaultProps = {
+  choices: {
+    items: []
+  },
   defaultTriggerText: 'Choose One...',
   iconType: 'chevron-down',
   variant: 'base'
