@@ -1,11 +1,12 @@
 import React from 'react';
-import { SprkMasthead, SprkLink, SprkButton, SprkIcon, SprkDropdown } from '@sparkdesignsystem/spark-core-react';
+import { Link } from 'react-router-dom';
+import {
+  SprkMasthead, SprkLink, SprkButton, SprkIcon, SprkDropdown,
+} from '@sparkdesignsystem/spark-core-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
-import { Link } from 'react-router-dom';
 
-function SprkMastheadExtendedDocs(props) {
-
+function SprkMastheadExtendedDocs() {
   const links = [
     {
       text: 'Navigation Item',
@@ -18,18 +19,18 @@ function SprkMastheadExtendedDocs(props) {
         },
         {
           text: 'Sub Menu Item',
-        }
+        },
       ],
     },
     {
       element: Link,
       text: 'Your Item',
-      to: '/link'
+      to: '/link',
     },
     {
       element: Link,
       text: 'Nav Item',
-      to: '/button'
+      to: '/button',
     },
     {
       text: 'Navigation Item',
@@ -42,7 +43,7 @@ function SprkMastheadExtendedDocs(props) {
         },
         {
           text: 'Item 3',
-        }
+        },
       ],
     },
     {
@@ -57,13 +58,13 @@ function SprkMastheadExtendedDocs(props) {
       element: Link,
       leadingIcon: 'call-team-member',
       text: 'Talk To Us',
-      to: '/link'
+      to: '/link',
     },
     {
       element: Link,
       leadingIcon: 'settings',
       text: 'Settings',
-      to: '/button'
+      to: '/button',
     },
     {
       leadingIcon: 'user',
@@ -75,62 +76,62 @@ function SprkMastheadExtendedDocs(props) {
         {
           element: Link,
           text: 'Change Password',
-          to: '/link'
+          to: '/link',
         },
         {
           text: 'Sign Out',
-        }
+        },
       ],
-    }
+    },
   ];
 
   const dropdownChoices = {
-    choiceFunction: (choiceText) => {console.log(choiceText);},
+    choiceFunction: (choiceText) => { console.log(choiceText); },
     items: [
       {
         text: 'Option 1',
         value: 'option-1',
         element: 'a',
         href: '/link',
-        target: '_blank'
+        target: '_blank',
       },
       {
         text: 'Option 2',
         value: 'option-2',
         element: Link,
-        to: '/link'
+        to: '/link',
       },
       {
         text: 'Option 3',
-        value: 'option-3'
-      }
-    ]
+        value: 'option-3',
+      },
+    ],
   };
 
 
   const selector = {
-    choiceFunction: (text) => {console.log(text);},
+    choiceFunction: (text) => { console.log(text); },
     items: [
       {
         title: 'Selection Choice Title 1',
         information: 'Additional Information',
-        value: 'choice-1'
+        value: 'choice-1',
       },
       {
         element: Link,
         title: 'Selection Choice Title 2',
         information: 'Additional Information',
         to: '/button',
-        value: 'choice-2'
-      }
+        value: 'choice-2',
+      },
     ],
-    footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => {console.log('Clicked!')}}>Placeholder</SprkButton>
+    footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
   };
 
   const utilityItems = [
     <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
     <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link"><SprkIcon iconType="settings" additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l" /></SprkLink>,
-    <SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconType="user" choices={dropdownChoices} title="My Choices" />
+    <SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconType="user" choices={dropdownChoices} title="My Choices" />,
   ];
 
   return (
@@ -144,29 +145,14 @@ function SprkMastheadExtendedDocs(props) {
         utilityContents={utilityItems}
         variant="extended"
       />
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus deleniti eos, fugit harum, iste
-          laudantium minus nemo nobis porro quis quos, similique suscipit voluptates? Beatae ipsum maiores sequi.</p>
+      <div className="sprk-u-mal">
+        <p>Lorem Ipsum</p>
+        <p>Lorem Ipsum</p>
+        <p>Lorem Ipsum</p>
+        <p>Lorem Ipsum</p>
+        <p>Lorem Ipsum</p>
+        <p>Lorem Ipsum</p>
+        <p>Lorem Ipsum</p>
       </div>
     </EmptyLayout>
   );
