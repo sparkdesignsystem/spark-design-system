@@ -1,8 +1,9 @@
+/* global window */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SprkIcon from '../SprkIcon/SprkIcon';
 import { uniqueId } from 'lodash';
+import SprkIcon from '../SprkIcon/SprkIcon';
 
 class SprkDropdown extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class SprkDropdown extends Component {
     this.state = {
       triggerText: props.defaultTriggerText,
       isOpen: false,
-      choiceItems: props.choices.items.map(item => { return { id: uniqueId(), ...item}; })
+      choiceItems: props.choices.items.map(item => ({ id: uniqueId(), ...item })),
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -19,6 +20,18 @@ class SprkDropdown extends Component {
     this.updateTriggerText = this.updateTriggerText.bind(this);
     this.runChoiceFunction = this.runChoiceFunction.bind(this);
     this.myRef = React.createRef();
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.closeOnEsc);
+    window.addEventListener('focusin', this.closeOnClickOutside);
+    window.addEventListener('click', this.closeOnClickOutside);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.closeOnEsc);
+    window.removeEventListener('focusin', this.closeOnClickOutside);
+    window.removeEventListener('click', this.closeOnClickOutside);
   }
 
   closeOnEsc(e) {
@@ -33,28 +46,16 @@ class SprkDropdown extends Component {
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('keydown', this.closeOnEsc)
-    window.addEventListener('focusin', this.closeOnClickOutside)
-    window.addEventListener('click', this.closeOnClickOutside)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.closeOnEsc);
-    window.removeEventListener('focusin', this.closeOnClickOutside)
-    window.removeEventListener('click', this.closeOnClickOutside)
-  }
-
   closeDropdown() {
-    this.setState(prevState => ({
-      isOpen: false
-    }));
+    this.setState({
+      isOpen: false,
+    });
   }
 
   updateTriggerText(text) {
     this.setState({
-      triggerText: text
-    })
+      triggerText: text,
+    });
   }
 
   runChoiceFunction(text) {
@@ -83,92 +84,100 @@ class SprkDropdown extends Component {
       idString,
       screenReaderText,
       title,
-      variant
+      variant,
     } = this.props;
     const { triggerText, isOpen } = this.state;
     return (
       <div ref={this.myRef}>
-        <a className={classNames(
-          "sprk-b-Link",
-          "sprk-b-Link--plain",
-          {"sprk-u-mrs": variant === 'informational'},
-          additionalTriggerClasses,
-        )}
-           href="#nogo"
-           aria-haspopup="true"
-           role="combobox"
-           data-analytics={analyticsString ? analyticsString : 'undefined'}
-           data-id={idString ? idString : 'undefined'}
-           onClick={this.toggleDropdownOpen}>
-          { variant === 'informational' &&
+        <a
+          className={classNames(
+            'sprk-b-Link',
+            'sprk-b-Link--plain',
+            { 'sprk-u-mrs': variant === 'informational' },
+            additionalTriggerClasses,
+          )}
+          href="#nogo"
+          aria-haspopup="true"
+          role="combobox"
+          data-analytics={analyticsString || 'undefined'}
+          data-id={idString || 'undefined'}
+          onClick={this.toggleDropdownOpen}
+        >
+          {variant === 'informational' && (
             <React.Fragment>
-              <span
-                className={classNames(additionalTriggerTextClasses)}
-                role="combobox">{triggerText}</span>
-              <SprkIcon additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls" iconType="chevron-down" />
+              <span className={classNames(additionalTriggerTextClasses)} role="combobox">
+                {triggerText}
+              </span>
+              <SprkIcon
+                additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls"
+                iconType="chevron-down"
+              />
             </React.Fragment>
-          }
-          { variant === 'base' &&
+          )}
+          {variant === 'base' && (
             <React.Fragment>
-              <span
-                className={
-                  classNames("sprk-u-ScreenReaderText", additionalTriggerTextClasses)
-                }>{screenReaderText}</span>
+              <span className={classNames('sprk-u-ScreenReaderText', additionalTriggerTextClasses)}>
+                {screenReaderText}
+              </span>
               <SprkIcon iconType={iconType} additionalClasses={additionalIconClasses} />
             </React.Fragment>
-          }
+          )}
         </a>
-        {isOpen &&
-          <div className={classNames("sprk-c-Dropdown", additionalClasses)}>
-            {title &&
-            <div className="sprk-c-Dropdown__header">
-              <h2 className="sprk-c-Dropdown__title">{title}</h2>
-            </div>
-            }
+        {isOpen && (
+          <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
+            {title && (
+              <div className="sprk-c-Dropdown__header">
+                <h2 className="sprk-c-Dropdown__title">{title}</h2>
+              </div>
+            )}
             <ul className="sprk-c-Dropdown__links">
               {this.state.choiceItems.map((choice) => {
-                const {content, element, href, isActive, text, value, ...rest} = choice;
+                const {
+                  content, element, href, isActive, text, value, ...rest
+                } = choice;
                 const TagName = element || 'a';
-                return(
+                return (
                   <li className="sprk-c-Dropdown__item" role="option" key={choice.id}>
-
-                    {variant === 'base' &&
+                    {variant === 'base' && (
                       <TagName
                         className="sprk-c-Dropdown__link"
                         href={TagName === 'a' ? href || '#nogo' : undefined}
                         onClick={() => {
                           this.updateTriggerText(text);
-                          this.closeDropdown()
-                          this.runChoiceFunction(value)
+                          this.closeDropdown();
+                          this.runChoiceFunction(value);
                         }}
-                        {...rest}>{text}</TagName>
-                    }
-                    {variant === 'informational' &&
+                        {...rest}
+                      >
+                        {text}
+                      </TagName>
+                    )}
+                    {variant === 'informational' && (
                       <React.Fragment>
                         <TagName
-                          className={classNames(
-                            "sprk-c-Dropdown__link",
-                            {"sprk-c-Dropdown__link--active": isActive}
-                            )}
+                          className={classNames('sprk-c-Dropdown__link', {
+                            'sprk-c-Dropdown__link--active': isActive,
+                          })}
                           href={TagName === 'a' ? href || '#nogo' : undefined}
                           onClick={() => {
                             this.updateTriggerText(content.title);
-                            this.closeDropdown()
-                            this.runChoiceFunction(value)
+                            this.closeDropdown();
+                            this.runChoiceFunction(value);
                           }}
-                          {...rest}>
+                          {...rest}
+                        >
                           <p className="sprk-b-TypeBodyOne">{content.title}</p>
                           <p className="sprk-b-TypeBodyTwo">{content.infoLine1}</p>
                           <p className="sprk-b-TypeBodyTwo">{content.infoLine2}</p>
                         </TagName>
                       </React.Fragment>
-                    }
-                  </li>);
-              })
-            }
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
-        }
+        )}
       </div>
     );
   }
@@ -190,14 +199,16 @@ SprkDropdown.propTypes = {
   // Choices object that builds the dropdown contents
   choices: PropTypes.shape({
     // An array of objects that describe the items in the menu
-    items: PropTypes.arrayOf(PropTypes.shape({
-      // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Assigned to href of the element is 'a'
-      href: PropTypes.string,
-      // The text inside the item
-      text: PropTypes.string,
-    }))
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The element to render for each menu item
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        // Assigned to href of the element is 'a'
+        href: PropTypes.string,
+        // The text inside the item
+        text: PropTypes.string,
+      }),
+    ),
   }),
   // The text set as the default of the trigger link
   defaultTriggerText: PropTypes.string,
@@ -210,16 +221,16 @@ SprkDropdown.propTypes = {
   // The text of the optional header above the choices in the dropdown
   title: PropTypes.string,
   // The variant name
-  variant: PropTypes.oneOf(['base', 'informational'])
+  variant: PropTypes.oneOf(['base', 'informational']),
 };
 
 SprkDropdown.defaultProps = {
   choices: {
-    items: []
+    items: [],
   },
   defaultTriggerText: 'Choose One...',
   iconType: 'chevron-down',
-  variant: 'base'
+  variant: 'base',
 };
 
 export default SprkDropdown;
