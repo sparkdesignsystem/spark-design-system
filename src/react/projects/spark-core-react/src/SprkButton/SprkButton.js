@@ -1,40 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkSpinner } from '@sparkdesignsystem/spark-core-react';
+import SprkSpinner from '../SprkSpinner/SprkSpinner';
 
 const SprkButton = ({
-                      additionalClasses,
-                      analyticsString,
-                      children,
-                      disabled,
-                      element,
-                      idString,
-                      loading,
-                      variant,
-                      ...rest
-                    }) => {
-
+  additionalClasses,
+  analyticsString,
+  children,
+  disabled,
+  element,
+  idString,
+  loading,
+  variant,
+  ...rest
+}) => {
   const TagName = element;
   return (
     <TagName
       className={
         classnames(
           'sprk-c-Button',
-          {'sprk-c-Button--secondary': variant === 'secondary'},
-          {'sprk-c-Button--tertiary': variant === 'tertiary'},
-          {'sprk-is-Disabled': disabled },
-          additionalClasses
+          { 'sprk-c-Button--secondary': variant === 'secondary' },
+          { 'sprk-c-Button--tertiary': variant === 'tertiary' },
+          { 'sprk-is-Disabled': disabled },
+          additionalClasses,
         )}
-      role={element !== 'button' ? 'button' : undefined }
+      role={element !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
       disabled={disabled}
-      {...rest}>
+      {...rest}
+    >
       { (loading && <SprkSpinner />) || children }
     </TagName>
   );
-}
+};
 
 SprkButton.propTypes = {
   // classes to add to the class of the rendered element
@@ -53,13 +53,17 @@ SprkButton.propTypes = {
   loading: PropTypes.bool,
   // decides which button variant to render
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-}
+};
 
 SprkButton.defaultProps = {
+  additionalClasses: '',
+  analyticsString: '',
+  children: [],
   disabled: false,
+  idString: '',
   element: 'button',
   variant: 'primary',
   loading: false,
-}
+};
 
 export default SprkButton;

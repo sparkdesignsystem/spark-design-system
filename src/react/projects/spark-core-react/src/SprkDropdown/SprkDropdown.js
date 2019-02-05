@@ -11,14 +11,16 @@ class SprkDropdown extends Component {
     this.state = {
       triggerText: props.defaultTriggerText,
       isOpen: false,
-      choiceItems: props.choices.items.map(item => ({ id: uniqueId(), ...item })),
+      choiceItems: props.choices.items.map(
+        item => ({ id: uniqueId(), ...item }),
+      ),
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
     this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
-    this.updateTriggerText = this.updateTriggerText.bind(this);
-    this.runChoiceFunction = this.runChoiceFunction.bind(this);
+    this.selectChoice = this.selectChoice.bind(this);
+    this.setSelectedChoice = this.setSelectedChoice.bind(this);
     this.myRef = React.createRef();
   }
 
@@ -32,6 +34,29 @@ class SprkDropdown extends Component {
     window.removeEventListener('keydown', this.closeOnEsc);
     window.removeEventListener('focusin', this.closeOnClickOutside);
     window.removeEventListener('click', this.closeOnClickOutside);
+  }
+
+  setSelectedChoice(componentToUpdateId) {
+    const { choiceItems } = this.state;
+    return choiceItems.map(({ id, isActive, ...rest }) => {
+      if (id === componentToUpdateId) {
+        return { id, isActive: true, ...rest };
+      }
+      return { id, isActive: false, ...rest };
+    });
+  }
+
+  selectChoice(id, text) {
+    this.setState({
+      triggerText: text,
+      choiceItems: this.setSelectedChoice(id),
+    });
+  }
+
+  toggleDropdownOpen() {
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen,
+    }));
   }
 
   closeOnEsc(e) {
@@ -52,24 +77,6 @@ class SprkDropdown extends Component {
     });
   }
 
-  updateTriggerText(text) {
-    this.setState({
-      triggerText: text,
-    });
-  }
-
-  runChoiceFunction(text) {
-    if (this.props.choices.choiceFunction) {
-      this.props.choices.choiceFunction(text);
-    }
-  }
-
-  toggleDropdownOpen() {
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
-    }));
-  }
-
   render() {
     const {
       additionalClasses,
@@ -77,16 +84,15 @@ class SprkDropdown extends Component {
       additionalTriggerClasses,
       additionalTriggerTextClasses,
       analyticsString,
-      children,
       choices,
-      defaultTriggerText,
       iconType,
       idString,
       screenReaderText,
       title,
       variant,
     } = this.props;
-    const { triggerText, isOpen } = this.state;
+    const { choiceFunction } = choices;
+    const { choiceItems, isOpen, triggerText } = this.state;
     return (
       <div ref={this.myRef}>
         <a
@@ -97,15 +103,15 @@ class SprkDropdown extends Component {
             additionalTriggerClasses,
           )}
           href="#nogo"
-          aria-haspopup="true"
-          role="combobox"
+          aria-expanded={isOpen}
+          role="listbox"
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
         >
           {variant === 'informational' && (
             <React.Fragment>
-              <span className={classNames(additionalTriggerTextClasses)} role="combobox">
+              <span className={classNames(additionalTriggerTextClasses)}>
                 {triggerText}
               </span>
               <SprkIcon
@@ -125,27 +131,29 @@ class SprkDropdown extends Component {
         </a>
         {isOpen && (
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
-            {title && (
+            {title !== '' && (
               <div className="sprk-c-Dropdown__header">
                 <h2 className="sprk-c-Dropdown__title">{title}</h2>
               </div>
             )}
             <ul className="sprk-c-Dropdown__links">
-              {this.state.choiceItems.map((choice) => {
+              {choiceItems.map((choice) => {
                 const {
                   content, element, href, isActive, text, value, ...rest
                 } = choice;
                 const TagName = element || 'a';
                 return (
-                  <li className="sprk-c-Dropdown__item" role="option" key={choice.id}>
+                  <li className="sprk-c-Dropdown__item" aria-selected={isActive} role="option" key={choice.id}>
                     {variant === 'base' && (
                       <TagName
                         className="sprk-c-Dropdown__link"
                         href={TagName === 'a' ? href || '#nogo' : undefined}
                         onClick={() => {
-                          this.updateTriggerText(text);
+                          this.selectChoice(choice.id, text);
                           this.closeDropdown();
-                          this.runChoiceFunction(value);
+                          if (choiceFunction) {
+                            choiceFunction(value);
+                          }
                         }}
                         {...rest}
                       >
@@ -160,9 +168,11 @@ class SprkDropdown extends Component {
                           })}
                           href={TagName === 'a' ? href || '#nogo' : undefined}
                           onClick={() => {
-                            this.updateTriggerText(content.title);
+                            this.selectChoice(choice.id, content.title);
                             this.closeDropdown();
-                            this.runChoiceFunction(value);
+                            if (choiceFunction) {
+                              choiceFunction(value);
+                            }
                           }}
                           {...rest}
                         >
@@ -225,11 +235,20 @@ SprkDropdown.propTypes = {
 };
 
 SprkDropdown.defaultProps = {
+  additionalClasses: '',
+  additionalIconClasses: '',
+  additionalTriggerClasses: '',
+  additionalTriggerTextClasses: '',
+  analyticsString: '',
+  children: [],
   choices: {
     items: [],
   },
   defaultTriggerText: 'Choose One...',
   iconType: 'chevron-down',
+  idString: '',
+  screenReaderText: '',
+  title: '',
   variant: 'base',
 };
 
