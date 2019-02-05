@@ -7,6 +7,7 @@ import SprkListDocs from './SprkListDocs/SprkListDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
 import NotFound from './NotFound/NotFound';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
+import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 
 class Router extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class Router extends React.Component {
           <Route exact path="/lists" component={SprkListDocs} />
           <Route exact path="/dividers" component={SprkDividerDocs} />
           <Route exact path="/alerts" component={SprkAlertDocs} />
+          <Route exact path="/dictionary" component={SprkDictionaryDocs} />
           <Route component={NotFound} />
       </Switch>
       </BrowserRouter>
