@@ -2,18 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
-import addIdsToArray from '../../../utility/addIdsToArray';
+import { uniqueId } from 'lodash';
 
 class SprkMastheadAccordion extends React.Component {
   constructor(props){
     super(props);
-  }
-
-  componentWillMount() {
     this.setState({
-      links: this.props.links ? addIdsToArray(this.props.links) : undefined
+      links: this.props.links ? {id: uniqueId(), ...this.props.links} : undefined
     })
   }
+
   render(){
     const {additionalClasses, analyticsString, idString, links} = this.props;
     return (

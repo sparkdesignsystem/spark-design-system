@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkIcon from '../SprkIcon/SprkIcon';
-import addIdsToArray from '../utility/addIdsToArray';
+import { uniqueId } from 'lodash';
 
 class SprkDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
       triggerText: props.defaultTriggerText,
-      isOpen: false
+      isOpen: false,
+      choiceItems: this.props.choices.items ? { id: uniqueId(), ...this.props.choices.items} : undefined
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -32,16 +33,13 @@ class SprkDropdown extends Component {
     }
   }
 
-  componentWillMount() {
-    this.setState({
-      choiceItems: this.props.choices.items ? addIdsToArray(this.props.choices.items) : undefined
-    });
+  componentDidMount() {
     window.addEventListener('keydown', this.closeOnEsc)
     window.addEventListener('focusin', this.closeOnClickOutside)
     window.addEventListener('click', this.closeOnClickOutside)
   }
 
-  componentWillUnmount() {
+  componentDidUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
     window.removeEventListener('focusin', this.closeOnClickOutside)
     window.removeEventListener('click', this.closeOnClickOutside)
@@ -128,7 +126,7 @@ class SprkDropdown extends Component {
             </div>
             }
             <ul className="sprk-c-Dropdown__links">
-              {choices.items && this.state.choiceItems.map((choice) => {
+              {this.state.choiceItems.map((choice) => {
                 const {content, element, href, isActive, text, value, ...rest} = choice;
                 const TagName = element || 'a';
                 return(

@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
-import addIdsToArray from '../../../utility/addIdsToArray';
+import { uniqueId } from 'lodash';
 
 class SprkMastheadLittleNav extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentWillMount() {
     this.setState({
-      utilityContents: this.props.utilityContents ? addIdsToArray(this.props.utilityContents): undefined,
-      links: this.props.links ? addIdsToArray(this.props.links) : undefined
+      utilityContents: this.props.utilityContents ? { id: uniqueId(), ...this.props.utilityContents} : undefined,
+      links: this.props.links ? { id: uniqueId(), ...this.props.links} : undefined
     });
   }
 
@@ -48,7 +45,7 @@ class SprkMastheadLittleNav extends Component {
             {"sprk-o-HorizontalList--spacing-medium": spacing === 'medium'},
             "sprk-o-Stack__item--center-column"
             )}>
-          {this.props.links && this.state.links.map((link) => {
+          {this.state.links.map((link) => {
             const {element, href, text, ...rest} = link;
             const TagName = element || 'a';
             return(

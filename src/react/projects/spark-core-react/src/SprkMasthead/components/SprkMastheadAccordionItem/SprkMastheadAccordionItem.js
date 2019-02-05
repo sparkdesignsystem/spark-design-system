@@ -3,14 +3,16 @@ import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
-import addIdsToArray from '../../../utility/addIdsToArray';
+import { uniqueId } from 'lodash';
 
 class SprkMastheadAccordionItem extends Component {
   constructor(props){
     super(props);
     this.state = {
       isOpen: this.props.defaultOpen || false,
-      height: this.props.defaultOpen ? 'auto': 0};
+      height: this.props.defaultOpen ? 'auto': 0,
+      subNavLinks: this.props.subNavLinks ? { id: uniqueId(), ...this.props.subNavLinks} : undefined
+    };
     this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
   }
 
@@ -19,12 +21,6 @@ class SprkMastheadAccordionItem extends Component {
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0
     }));
-  }
-
-  componentWillMount() {
-    this.setState({
-      subNavLinks: this.props.subNavLinks ? addIdsToArray(this.props.subNavLinks) : undefined
-    });
   }
 
   render() {
@@ -50,7 +46,7 @@ class SprkMastheadAccordionItem extends Component {
             </a>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-                {subNavLinks && this.state.subNavLinks.map((subnavlink) => {
+                {this.state.subNavLinks.map((subnavlink) => {
                   const {element, href, id, text, ...rest} = subnavlink;
                   const TagName = element || 'a';
                   return (

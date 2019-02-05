@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkMastheadDropdown from '../SprkMastheadDropdown/SprkMastheadDropdown';
-import addIdsToArray from '../../../utility/addIdsToArray';
+import { uniqueId } from 'lodash';
 
 class SprkMastheadBigNav extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentWillMount() {
     this.setState({
-      links: this.props.links ? addIdsToArray(this.props.links) : undefined
+      links: this.props.links ? { id: uniqueId(), ...this.props.links} : undefined
     });
   }
 
@@ -28,7 +25,7 @@ class SprkMastheadBigNav extends Component {
             {...rest}>
             <ul
               className="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
-                { this.props.links && this.state.links.map((link) => {
+                {this.state.links.map((link) => {
 
                   const {element, additionalContainerClasses, isActive, text, ...rest} = link;
                   const TagName = element || 'a';

@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
 import classNames from 'classnames';
-import addIdsToArray from '../../../utility/addIdsToArray';
+import { uniqueId } from 'lodash';
 
 class SprkMastheadSelector extends Component {
   constructor(props) {
     super();
     this.state = {
       isOpen: false,
-      triggerText: props.defaultTriggerText || 'Select One'
+      triggerText: props.defaultTriggerText || 'Select One',
+      choiceItems: this.props.choices.items ? { id: uniqueId(), ...this.props.choices.items} : undefined
     };
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -32,17 +33,13 @@ class SprkMastheadSelector extends Component {
     }
   }
 
-  componentWillMount() {
-    this.setState({
-      choiceItems: this.props.choices.items ? addIdsToArray(this.props.choices.items) : undefined
-    });
-
+  componentDidMount() {
     window.addEventListener('keydown', this.closeOnEsc)
     window.addEventListener('focusin', this.closeOnClickOutside)
     window.addEventListener('click', this.closeOnClickOutside)
   }
 
-  componentWillUnmount() {
+  componentDidUnmount() {
     window.removeEventListener('keydown', this.closeOnEsc);
     window.removeEventListener('focusin', this.closeOnClickOutside)
     window.removeEventListener('click', this.closeOnClickOutside)
@@ -125,7 +122,7 @@ class SprkMastheadSelector extends Component {
           </div>
 
           <ul className="sprk-c-Dropdown__links">
-            {choices.items && this.state.choiceItems.map((item) => {
+            {this.state.choiceItems.map((item) => {
               const {element, href, title, information, value, ...rest} = item;
               const TagName = element || 'a';
               return (

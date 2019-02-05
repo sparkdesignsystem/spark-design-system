@@ -6,12 +6,12 @@ class IconSet extends React.Component {
     this.state = {icons: ''};
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('sprk-icons.svg')
       .then((r) => r.text())
       .then(text  => {
         this.setState({icons: text})
-      })
+      });
   }
 
   render() {
