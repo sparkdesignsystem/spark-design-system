@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SprkIcon from '../../../SprkIcon/SprkIcon';
 import { uniqueId } from 'lodash';
+import SprkIcon from '../../../SprkIcon/SprkIcon';
 
 class SprkMastheadAccordionItem extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
+    const { defaultOpen, subNavLinks } = this.props;
     this.state = {
-      isOpen: this.props.defaultOpen || false,
-      height: this.props.defaultOpen ? 'auto': 0,
-      subNavLinks: this.props.subNavLinks.map(link => { return { id: uniqueId(), ...link}; })
+      isOpen: defaultOpen || false,
+      height: defaultOpen ? 'auto' : 0,
+      subNavLinks: subNavLinks.map(link => ({ id: uniqueId(), ...link })),
     };
     this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
   }
@@ -19,77 +20,114 @@ class SprkMastheadAccordionItem extends Component {
   toggleAccordionOpen() {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
-      height: !prevState.isOpen ? 'auto' : 0
+      height: !prevState.isOpen ? 'auto' : 0,
     }));
   }
 
   render() {
-    const {text, defaultOpen, element, href, isActive, isButton, leadingIcon, subNavLinks, ...rest} = this.props;
-    const {isOpen, height} = this.state;
+    const {
+      additionalClasses,
+      analyticsString,
+      defaultOpen,
+      element,
+      href,
+      idString,
+      isActive,
+      isButton,
+      leadingIcon,
+      subNavLinks,
+      text,
+      ...rest
+    } = this.props;
+    const { isOpen, height, subNavLinks: stateLinks } = this.state;
     const TagName = element || 'a';
     return (
-        <li
-          className={classNames(
-            "sprk-c-MastheadAccordion__item",
-            { "sprk-c-MastheadAccordion__item--open": isOpen },
-            { "sprk-c-MastheadAccordion__item--active": isActive },
-            {"sprk-o-Box": isButton},
-            )}>
+      <li
+        className={classNames(
+          'sprk-c-MastheadAccordion__item',
+          { 'sprk-c-MastheadAccordion__item--open': isOpen },
+          { 'sprk-c-MastheadAccordion__item--active': isActive },
+          { 'sprk-o-Box': isButton },
+          additionalClasses,
+        )}
+        data-analytics={analyticsString}
+        data-id={idString}
+      >
 
-          { subNavLinks.length > 0 &&
+        { stateLinks.length > 0
+          && (
           <React.Fragment>
             <a href="#nogo" className="sprk-c-MastheadAccordion__summary" onClick={this.toggleAccordionOpen}>
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
                 {text}
               </span>
-              <SprkIcon additionalClasses={classNames({'sprk-c-Icon--open': isOpen})} iconType="chevron-down" />
+              <SprkIcon additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })} iconType="chevron-down" />
             </a>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-                {this.state.subNavLinks.map((subnavlink) => {
-                  const {element, href, id, text, ...rest} = subnavlink;
-                  const TagName = element || 'a';
+                {stateLinks.map((subnavlink) => {
+                  const {
+                    element: innerElement,
+                    href: innerHref,
+                    id: innerId,
+                    text: innerText,
+                    ...innerRest
+                  } = subnavlink;
+                  const InnerTagName = innerElement || 'a';
                   return (
-                    <li key={id}>
-                      <TagName
-                        href={TagName === 'a' ? href || '#nogo': undefined}
-                        className={classNames("sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link")}
-                        {...rest}>{text}</TagName>
+                    <li key={innerId}>
+                      <InnerTagName
+                        href={TagName === 'a' ? innerHref || '#nogo' : undefined}
+                        className={classNames('sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link')}
+                        {...innerRest}
+                      >
+                        {innerText}
+                      </InnerTagName>
                     </li>
                   );
                 })}
               </ul>
             </AnimateHeight>
           </React.Fragment>
+          )
           }
-          { subNavLinks.length <= 0 &&
+        { stateLinks.length <= 0
+          && (
           <TagName
             className={classNames(
-              {"sprk-c-MastheadAccordion__summary": !isButton},
-              {"sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm": isButton},
+              { 'sprk-c-MastheadAccordion__summary': !isButton },
+              { 'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm': isButton },
             )}
-            href={TagName === 'a' ? href || '#nogo': undefined}
-            {...rest}>
-            <span className={classNames({"sprk-c-MastheadAccordion__heading": !isButton})}>
-              {leadingIcon &&
-                <SprkIcon additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs" iconType={leadingIcon}></SprkIcon>
+            href={TagName === 'a' ? href || '#nogo' : undefined}
+            {...rest}
+          >
+            <span className={classNames({ 'sprk-c-MastheadAccordion__heading': !isButton })}>
+              {leadingIcon
+                && <SprkIcon additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs" iconType={leadingIcon} />
               }
               { text }
             </span>
           </TagName>
+          )
         }
-        </li>
+      </li>
     );
   }
 }
 
 SprkMastheadAccordionItem.propTypes = {
+  // Classes added to rendered element
+  additionalClasses: PropTypes.string,
+  // Assigned to data-analytics
+  analyticsString: PropTypes.string,
   // Decides whether the accordion should render open by default
   defaultOpen: PropTypes.bool,
   // The element to render, could be 'a' or a Component like Link
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   // Assigned to the href attribute if element is 'a'
   href: PropTypes.string,
+  // Assigned to data-id
+  idString: PropTypes.string,
   // Decides if the outer link is the active link
   isActive: PropTypes.bool,
   // Will render the element as a button with correct style
@@ -110,9 +148,17 @@ SprkMastheadAccordionItem.propTypes = {
 };
 
 SprkMastheadAccordionItem.defaultProps = {
+  additionalClasses: '',
+  analyticsString: '',
   defaultOpen: false,
-  link: {},
-  subNavLinks: []
+  element: 'a',
+  href: '#nogo',
+  idString: '',
+  isActive: false,
+  isButton: false,
+  leadingIcon: '',
+  subNavLinks: [],
+  text: '',
 };
 
 export default SprkMastheadAccordionItem;

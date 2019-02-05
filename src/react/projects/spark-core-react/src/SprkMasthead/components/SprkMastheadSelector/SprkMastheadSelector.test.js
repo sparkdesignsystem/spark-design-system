@@ -1,5 +1,6 @@
+/* global it expect window jest */
 import React from 'react';
-import Enzyme, { mount, unmount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMastheadSelector from './SprkMastheadSelector';
 
@@ -42,7 +43,7 @@ it('should assign data-id when idString has a value', () => {
 });
 
 it('should build the correct number of choices from a choices object', () => {
-  const choices = {items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('.sprk-c-Dropdown__link').length).toBe(2);
@@ -50,7 +51,7 @@ it('should build the correct number of choices from a choices object', () => {
 
 it('should run the choiceFunction supplied with the list of choices (base)', () => {
   const spyFunc = jest.fn();
-  const choices = {choiceFunction: spyFunc, items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
+  const choices = { choiceFunction: spyFunc, items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
   wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
@@ -59,7 +60,7 @@ it('should run the choiceFunction supplied with the list of choices (base)', () 
 
 it('should run the choiceFunction supplied with the list of choices (informational)', () => {
   const spyFunc = jest.fn();
-  const choices = {choiceFunction: spyFunc, items: [{text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }]};
+  const choices = { choiceFunction: spyFunc, items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} variant="informational" />);
   wrapper.find('.sprk-b-Link').simulate('click');
   wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
@@ -72,14 +73,14 @@ it('should close the selector on click outside', () => {
     map[event] = cb;
   });
 
-  const choices = {items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
-  const wrapper = mount(<SprkMastheadSelector choices={choices} />)
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
 
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
   map.click({});
   expect(wrapper.state().isOpen).toBe(false);
-})
+});
 
 it('should close the selector on keydown (Escape)', () => {
   const map = {};
@@ -87,14 +88,14 @@ it('should close the selector on keydown (Escape)', () => {
     map[event] = cb;
   });
 
-  const choices = {items: [{text: 'Item 1', value: 'item-1'}, {text: 'Item 2', value: 'item-2'}]};
-  const wrapper = mount(<SprkMastheadSelector choices={choices} />)
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
 
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
-  map.keydown({key: 'Escape'});
+  map.keydown({ key: 'Escape' });
   expect(wrapper.state().isOpen).toBe(false);
-})
+});
 
 it('should unmount without error', () => {
   const wrapper = mount(<SprkMastheadSelector />);
@@ -104,15 +105,15 @@ it('should unmount without error', () => {
 });
 
 it('should render the choices with the element specified', () => {
-  const wrapper = mount(<SprkMastheadSelector choices={{items : [{element: 'span', text: 'Item 1'}]}} />);
+  const wrapper = mount(<SprkMastheadSelector choices={{ items: [{ element: 'span', text: 'Item 1' }] }} />);
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('span.sprk-c-Dropdown__link').length).toBe(1);
-})
+});
 
 it('should pass unused keys on choice items through to the dom', () => {
-  const wrapper = mount(<SprkMastheadSelector choices={{items : [{element: 'span', text: 'Item 1', 'aria-hidden': 'true'}]}} />);
+  const wrapper = mount(<SprkMastheadSelector choices={{ items: [{ element: 'span', text: 'Item 1', 'aria-hidden': 'true' }] }} />);
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('.sprk-c-Dropdown__link[aria-hidden="true"]').length).toBe(1);
-})
+});

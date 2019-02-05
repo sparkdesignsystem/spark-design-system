@@ -1,3 +1,4 @@
+/* global it expect */
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -16,14 +17,14 @@ it('should default to open if defaultOpen is true', () => {
 });
 
 it('should toggle the accordion open on click', () => {
-  const wrapper = mount(<SprkMastheadAccordionItem text="Item 1" subNavLinks={[{text: 'Item 1'}]} />);
+  const wrapper = mount(<SprkMastheadAccordionItem text="Item 1" subNavLinks={[{ text: 'Item 1' }]} />);
   expect(wrapper.state().isOpen).toBe(false);
   wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
 });
 
 it('should render the supplied element', () => {
-  const wrapper = mount(<SprkMastheadAccordionItem element='p' />);
+  const wrapper = mount(<SprkMastheadAccordionItem element="p" />);
   expect(wrapper.find('p.sprk-c-MastheadAccordion__summary').length).toBe(1);
 });
 
@@ -42,4 +43,3 @@ it('should render the right icon if leadingIcon has value', () => {
   const wrapper = mount(<SprkMastheadAccordionItem leadingIcon="settings" />);
   expect(wrapper.find('.sprk-c-Icon > use[xlinkHref="#settings"]').length).toBe(1);
 });
-

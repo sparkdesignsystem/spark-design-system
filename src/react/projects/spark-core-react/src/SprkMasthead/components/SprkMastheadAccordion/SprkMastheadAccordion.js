@@ -1,31 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
 import { uniqueId } from 'lodash';
+import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
 
 class SprkMastheadAccordion extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      links: props.links.map(item => { return {id: uniqueId(), ...item}; })
+      links: props.links.map(item => ({ id: uniqueId(), ...item })),
     };
   }
 
-  render(){
-    const {additionalClasses, analyticsString, idString, links} = this.props;
+  render() {
+    const {
+      additionalClasses, analyticsString, idString,
+    } = this.props;
+    const {
+      links,
+    } = this.state;
     return (
       <ul
         data-analytics={analyticsString}
         data-id={idString}
-        className={classNames("sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare", additionalClasses)}>
-        {links && this.state.links.map((link) => {
-          return (
-            <SprkMastheadAccordionItem
-              {...link}
-              key={link.id} />
-          );
-        })}
+        className={classNames('sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare', additionalClasses)}
+      >
+        {links.map(link => (
+          <SprkMastheadAccordionItem
+            {...link}
+            key={link.id}
+          />
+        ))}
       </ul>
     );
   }
@@ -39,14 +44,23 @@ SprkMastheadAccordion.propTypes = {
   // assigned to data-id
   idString: PropTypes.string,
   // used to render SprkMastheadAccordionItems inside
-  links: PropTypes.array
+  links: PropTypes.arrayOf(PropTypes.shape({
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    leadingIcon: PropTypes.string,
+    text: PropTypes.string,
+    subNavLinks: PropTypes.arrayOf(PropTypes.shape({
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      leadingIcon: PropTypes.string,
+      text: PropTypes.string,
+    })),
+  })),
 };
 
 SprkMastheadAccordion.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
   idString: '',
-  links: []
+  links: [],
 };
 
 export default SprkMastheadAccordion;

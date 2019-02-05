@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function SiteNav(props) {
+function SiteNav() {
   return (
     <nav className="drizzle-c-ReactNav sprk-u-phm">
       <ul className="drizzle-b-List drizzle-b-List--inline drizzle-b-List--spacing-m">

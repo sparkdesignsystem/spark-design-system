@@ -11,25 +11,21 @@ import SprkMastheadExtendedDocs from './SprkMastheadExtendedDocs/SprkMastheadExt
 import SprkDropdownDocs from './SprkDropdownDocs/SprkDropdownDocs';
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 
-class Router extends React.Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/alert" component={SprkAlertDocs} />
-          <Route exact path="/button" component={SprkButtonDocs} />
-          <Route exact path="/dropdown" component={SprkDropdownDocs} />
-          <Route exact path="/link" component={SprkLinkDocs} />
-          <Route exact path="/dividers" component={SprkDividerDocs} />
-          <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
-          <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
-          <Route exact path="/dictionary" component={SprkDictionaryDocs} />
-          <Route component={NotFound} />
-      </Switch>
-      </BrowserRouter>
-    );
-  }
-}
+const Router = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route exact path="/alert" component={SprkAlertDocs} />
+      <Route exact path="/button" component={SprkButtonDocs} />
+      <Route exact path="/dropdown" component={SprkDropdownDocs} />
+      <Route exact path="/link" component={SprkLinkDocs} />
+      <Route exact path="/dividers" component={SprkDividerDocs} />
+      <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
+      <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
+      <Route exact path="/dictionary" component={SprkDictionaryDocs} />
+      <Route component={NotFound} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Router;

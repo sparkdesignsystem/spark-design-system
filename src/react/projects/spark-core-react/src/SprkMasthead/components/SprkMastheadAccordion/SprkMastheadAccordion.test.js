@@ -1,3 +1,4 @@
+/* global it expect */
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -34,9 +35,9 @@ it('should render the correct number of links', () => {
     {
       text: 'Item 2',
       href: 'https://www.google.com',
-      target: '_blank'
-    }
+      target: '_blank',
+    },
   ];
-  const wrapper = mount(<SprkMastheadAccordion links={links}/>);
+  const wrapper = mount(<SprkMastheadAccordion links={links} />);
   expect(wrapper.find('.sprk-c-MastheadAccordion__item').length).toBe(2);
 });

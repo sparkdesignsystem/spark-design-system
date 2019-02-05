@@ -1,3 +1,4 @@
+/* global it expect */
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -36,7 +37,7 @@ it('should render the correct number of links', () => {
     },
     {
       text: 'Nav Item',
-    }
+    },
   ];
   const wrapper = mount(<SprkMastheadLittleNav links={links} />);
   expect(wrapper.find('.sprk-c-Masthead__site-links li').length).toBe(3);

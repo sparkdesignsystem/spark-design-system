@@ -1,3 +1,4 @@
+/* global document window */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -7,13 +8,26 @@ import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMasthe
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 
 class SprkMasthead extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       narrowNavOpen: false,
-      isScrolled: false
+      isScrolled: false,
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 10) {
+        this.setState({ isScrolled: true });
+      } else {
+        this.setState({ isScrolled: false });
+      }
+    });
+    window.addEventListener('orientationchange', () => {
+      this.setState({ narrowNavOpen: false });
+    });
   }
 
   toggleNarrowNav() {
@@ -28,20 +42,12 @@ class SprkMasthead extends Component {
     }
 
     this.setState(prevState => ({
-      narrowNavOpen: !prevState.narrowNavOpen
+      narrowNavOpen: !prevState.narrowNavOpen,
     }));
   }
 
-  componentDidMount(){
-    window.addEventListener('scroll', (event) => {
-      window.scrollY >= 10 ? this.setState({isScrolled: true}) : this.setState({isScrolled: false});
-    });
-    window.addEventListener('orientationchange', () => {
-      this.setState({narrowNavOpen: false});
-    });
-  }
 
- render() {
+  render() {
     const {
       additionalClasses,
       analyticsString,
@@ -53,19 +59,22 @@ class SprkMasthead extends Component {
       selector,
       siteLogo,
       utilityContents,
-      variant
+      variant,
     } = this.props;
-    const { narrowNavOpen } = this.state;
+    const { isScrolled, narrowNavOpen } = this.state;
 
     return (
-      <header className={classNames(
-        "sprk-c-Masthead",
-        "sprk-o-Stack",
-        {"sprk-c-Masthead--scroll": this.state.isScrolled},
-        additionalClasses)}
-              role="banner"
-              data-analytics={analyticsString}
-              data-id={idString}>
+      <header
+        className={classNames(
+          'sprk-c-Masthead',
+          'sprk-o-Stack',
+          { 'sprk-c-Masthead--scroll': isScrolled },
+          additionalClasses,
+        )}
+        role="banner"
+        data-analytics={analyticsString}
+        data-id={idString}
+      >
         <div className="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs">
           <SprkMastheadMenuIcon toggleNarrowNav={this.toggleNarrowNav} isOpen={narrowNavOpen} />
 
@@ -77,13 +86,18 @@ class SprkMasthead extends Component {
 
           <SprkMastheadLittleNav
             selector={selector}
-            spacing={variant=== 'extended' ? 'medium' : 'large'}
+            spacing={variant === 'extended' ? 'medium' : 'large'}
             links={littleNavLinks}
-            utilityContents={utilityContents} />
+            utilityContents={utilityContents}
+          />
 
         </div>
         <SprkMastheadBigNav links={bigNavLinks} />
-        <SprkMastheadNarrowNav selector={narrowSelector} links={narrowNavLinks} isOpen={narrowNavOpen} />
+        <SprkMastheadNarrowNav
+          selector={narrowSelector}
+          links={narrowNavLinks}
+          isOpen={narrowNavOpen}
+        />
       </header>
     );
   }
@@ -95,27 +109,90 @@ SprkMasthead.propTypes = {
   // assigned to data-analytics
   analyticsString: PropTypes.string,
   // array of link objects to use in building the big nav
-  bigNavLinks: PropTypes.array,
+  bigNavLinks: PropTypes.arrayOf(PropTypes.shape(
+    {
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      text: PropTypes.string,
+      subNavLinks: PropTypes.arrayOf(PropTypes.shape(
+        {
+          text: PropTypes.string,
+          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        },
+      )),
+    },
+  )),
   // assigned to data-id
   idString: PropTypes.string,
   // array of link objects to use in building the little nav
-  littleNavLinks: PropTypes.array,
+  littleNavLinks: PropTypes.arrayOf(PropTypes.shape(
+    {
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      text: PropTypes.string,
+      subNavLinks: PropTypes.arrayOf(PropTypes.shape(
+        {
+          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          text: PropTypes.string,
+        },
+      )),
+    },
+  )),
   // array of link objects to use in building the narrow nav
-  narrowNavLinks: PropTypes.array,
+  narrowNavLinks: PropTypes.arrayOf(PropTypes.shape(
+    {
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      text: PropTypes.string,
+      subNavLinks: PropTypes.arrayOf(PropTypes.shape(
+        {
+          text: PropTypes.string,
+          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        },
+      )),
+    },
+  )),
   // object containing an array of objects to use in building the narrow selector
-  narrowSelector: PropTypes.object,
+  narrowSelector: PropTypes.shape({
+    choiceFunction: PropTypes.func,
+    footer: PropTypes.node,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      information: PropTypes.string,
+      text: PropTypes.string,
+      title: PropTypes.string,
+      value: PropTypes.string,
+    })),
+  }),
   // object containing an array of objects to use in building the selector
-  selector: PropTypes.object,
+  selector: PropTypes.shape({
+    choiceFunction: PropTypes.func,
+    footer: PropTypes.node,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      information: PropTypes.string,
+      text: PropTypes.string,
+      title: PropTypes.string,
+      value: PropTypes.string,
+    })),
+  }),
   // expects a component to render the logo
   siteLogo: PropTypes.node,
   // an array containing components to render into the utility area
-  utilityContents: PropTypes.array,
+  utilityContents: PropTypes.arrayOf(PropTypes.node),
   // the variant name to render
-  variant: PropTypes.oneOf(['default', 'extended'])
+  variant: PropTypes.oneOf(['default', 'extended']),
 };
 
 SprkMasthead.defaultProps = {
-  variant: 'default'
+  additionalClasses: '',
+  analyticsString: '',
+  bigNavLinks: [],
+  idString: '',
+  littleNavLinks: [],
+  narrowNavLinks: [],
+  narrowSelector: {},
+  selector: {},
+  siteLogo: {},
+  utilityContents: [],
+  variant: 'default',
 };
 
 export default SprkMasthead;
