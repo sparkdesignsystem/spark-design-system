@@ -7,22 +7,26 @@ import SprkMastheadBigNav from './SprkMastheadBigNav';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should render an element with the correct class', () => {
-  const wrapper = mount(<SprkMastheadBigNav />);
+  const links = [{ text: 'Item 1' }];
+  const wrapper = mount(<SprkMastheadBigNav links={links} />);
   expect(wrapper.find('.sprk-c-Masthead__big-nav').length).toBe(1);
 });
 
 it('should add classes when additionalClasses has a value', () => {
-  const wrapper = mount(<SprkMastheadBigNav additionalClasses="sprk-u-man" />);
+  const links = [{ text: 'Item 1' }];
+  const wrapper = mount(<SprkMastheadBigNav links={links} additionalClasses="sprk-u-man" />);
   expect(wrapper.find('.sprk-c-Masthead__big-nav.sprk-u-man').length).toBe(1);
 });
 
 it('should assign data-analytics when analyticsString has a value', () => {
-  const wrapper = mount(<SprkMastheadBigNav analyticsString="321" />);
+  const links = [{ text: 'Item 1' }];
+  const wrapper = mount(<SprkMastheadBigNav links={links} analyticsString="321" />);
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
 it('should assign data-id when idString has a value', () => {
-  const wrapper = mount(<SprkMastheadBigNav idString="321" />);
+  const links = [{ text: 'Item 1' }];
+  const wrapper = mount(<SprkMastheadBigNav links={links} idString="321" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 

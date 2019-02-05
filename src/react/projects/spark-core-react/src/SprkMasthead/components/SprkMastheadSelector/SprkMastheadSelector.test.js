@@ -7,38 +7,45 @@ import SprkMastheadSelector from './SprkMastheadSelector';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should render a trigger with the correct classes', () => {
-  const wrapper = mount(<SprkMastheadSelector />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
 });
 
 it('should add classes to the selector when additionalClasses has a value', () => {
-  const wrapper = mount(<SprkMastheadSelector additionalClasses="sprk-u-man" />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} additionalClasses="sprk-u-man" />);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('.sprk-c-Dropdown.sprk-u-man').length).toBe(1);
 });
 
 it('should add classes to the icon when additionalIconClasses has a value', () => {
-  const wrapper = mount(<SprkMastheadSelector additionalIconClasses="sprk-c-Icon--l" />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} additionalIconClasses="sprk-c-Icon--l" />);
   expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
 });
 
 it('should add classes to the trigger when additionalTriggerClasses has a value', () => {
-  const wrapper = mount(<SprkMastheadSelector additionalTriggerClasses="sprk-u-man" />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} additionalTriggerClasses="sprk-u-man" />);
   expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
 });
 
 it('should add classes to the trigger text when additionalTriggerTextClasses has a value', () => {
-  const wrapper = mount(<SprkMastheadSelector additionalTriggerTextClasses="sprk-u-man" />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} additionalTriggerTextClasses="sprk-u-man" />);
   expect(wrapper.find('span.sprk-u-man').length).toBe(1);
 });
 
 it('should assign data-analytics when analyticsString has a value', () => {
-  const wrapper = mount(<SprkMastheadSelector analyticsString="321" />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} analyticsString="321" />);
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
 it('should assign data-id when idString has a value', () => {
-  const wrapper = mount(<SprkMastheadSelector idString="321" />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} idString="321" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
@@ -98,7 +105,8 @@ it('should close the selector on keydown (Escape)', () => {
 });
 
 it('should unmount without error', () => {
-  const wrapper = mount(<SprkMastheadSelector />);
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.unmount();
   expect(wrapper.find('.sprk-b-Link').length).toBe(0);

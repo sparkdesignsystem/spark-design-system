@@ -7,6 +7,6 @@ import SprkMastheadMenuIcon from './SprkMastheadMenuIcon';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should display an svg element with the correct base class', () => {
-  const wrapper = shallow(<SprkMastheadMenuIcon />);
+  const wrapper = shallow(<SprkMastheadMenuIcon toggleNarrowNav={() => { console.log('hi'); }} />);
   expect(wrapper.find('svg.sprk-c-Icon').length).toBe(1);
 });

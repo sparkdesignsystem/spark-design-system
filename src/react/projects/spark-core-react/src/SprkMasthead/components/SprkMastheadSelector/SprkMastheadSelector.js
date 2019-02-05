@@ -92,7 +92,6 @@ class SprkMastheadSelector extends Component {
         role="dialog"
         ref={this.myRef}
         className={classNames({ 'sprk-c-MastheadMask': isOpen && isFlush })}
-        onKeyDown={() => { if (isOpen) { this.closeDropdown(); } }}
         onClick={() => { if (isOpen) { this.closeDropdown(); } }}
       >
         <div className={classNames({ 'sprk-o-Box': isFlush })}>

@@ -100,19 +100,27 @@ SprkMastheadLittleNav.propTypes = {
   idString: PropTypes.string,
   // used to render navigation inside
   links: PropTypes.arrayOf(PropTypes.shape({
+    // The element to render, can be 'a' or a Component like Link
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    // Classes to apply to the container of the link
+    additionalContainerClasses: PropTypes.string,
+    // Adds a class if the link is active
+    isActive: PropTypes.bool,
+    // The link text
+    text: PropTypes.string,
+  })).isRequired,
   // Choices object that builds the dropdown contents
-    selector: PropTypes.shape({
+  selector: PropTypes.shape({
     // An array of objects that describe the items in the menu
-      items: PropTypes.arrayOf(PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for each menu item
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        // Assigned to href of the element is 'a'
-        href: PropTypes.string,
-        // The text inside the item
-        text: PropTypes.string,
-      })),
-    }),
-  })),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      // Assigned to href of the element is 'a'
+      href: PropTypes.string,
+      // The text inside the item
+      text: PropTypes.string,
+    })),
+  }),
   // Determines the spacing between little nav items
   spacing: PropTypes.oneOf(['medium', 'large']),
   // An array of components to fill the utility area with
@@ -124,7 +132,7 @@ SprkMastheadLittleNav.defaultProps = {
   analyticsString: '',
   idString: '',
   spacing: 'medium',
-  links: [],
+  selector: {},
   utilityContents: [],
 };
 

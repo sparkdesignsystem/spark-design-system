@@ -56,8 +56,8 @@ class SprkMasthead extends Component {
       littleNavLinks,
       narrowNavLinks,
       narrowSelector,
-      selector,
       siteLogo,
+      selector,
       utilityContents,
       variant,
     } = this.props;
@@ -84,20 +84,26 @@ class SprkMasthead extends Component {
             </a>
           </div>
 
+          {littleNavLinks.length > 0
+          && (
           <SprkMastheadLittleNav
             selector={selector}
             spacing={variant === 'extended' ? 'medium' : 'large'}
             links={littleNavLinks}
             utilityContents={utilityContents}
           />
+          )
+          }
 
         </div>
-        <SprkMastheadBigNav links={bigNavLinks} />
+        {bigNavLinks.length > 0 && <SprkMastheadBigNav links={bigNavLinks} />}
+        {narrowNavLinks.length > 0 && (
         <SprkMastheadNarrowNav
           selector={narrowSelector}
           links={narrowNavLinks}
           isOpen={narrowNavOpen}
         />
+        )}
       </header>
     );
   }
@@ -190,7 +196,7 @@ SprkMasthead.defaultProps = {
   narrowNavLinks: [],
   narrowSelector: {},
   selector: {},
-  siteLogo: {},
+  siteLogo: [],
   utilityContents: [],
   variant: 'default',
 };

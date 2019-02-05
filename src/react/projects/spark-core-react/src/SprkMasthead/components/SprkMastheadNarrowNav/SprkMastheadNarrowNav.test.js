@@ -7,6 +7,7 @@ import SprkMastheadNarrowNav from './SprkMastheadNarrowNav';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('shouldnt render anything by default', () => {
-  const wrapper = shallow(<SprkMastheadNarrowNav />);
+  const links = [{ text: 'Item 1' }];
+  const wrapper = shallow(<SprkMastheadNarrowNav links={links} />);
   expect(wrapper.children.length).toBe(1);
 });
