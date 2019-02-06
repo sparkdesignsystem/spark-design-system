@@ -28,7 +28,7 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Immediately invole setDefaultActiveTab()
+  * Immediately invoke setDefaultActiveTab()
   * when component is inserted into the tree
   * and update state with the ID of the tab that's active by default.
   * Update aria-orientation and listen for resizes for future updates.
@@ -51,9 +51,10 @@ class SprkTabs extends Component {
   */
   setDefaultActiveTab() {
     const { children } = this.props;
+    const { btnIds } = this.state;
     children.forEach((child, index) => {
       if (child.props.isDefaultActive) {
-        this.setState({ isActive: `tab-${index + 1}` });
+        this.setState({ isActive: btnIds[index] });
       }
     });
   }
@@ -186,7 +187,7 @@ class SprkTabs extends Component {
       const { tabBtnChildren, tabBtnAdditionalClasses } = tabPanel.props;
       const { isFocused, isActive, btnIds } = this.state;
 
-      if (tabPanel.type.name !== SprkTabsPanel.name) return;
+      if (tabPanel.type.name !== SprkTabsPanel.name) return false;
 
       return (
         <SprkTabsButton
@@ -211,25 +212,23 @@ class SprkTabs extends Component {
     */
     const panels = children.map((tabPanel, index) => {
       const {
-        children,
+        children: tabPanelChildren,
         tabPanelAdditionalClasses,
-        ...rest
       } = tabPanel.props;
       const { isActive, isFocused, btnIds } = this.state;
 
-      if (tabPanel.type.name !== SprkTabsPanel.name) return;
+      if (tabPanel.type.name !== SprkTabsPanel.name) return false;
 
       return (
         <SprkTabsPanel
           tabBtnId={btnIds[index]}
           key={btnIds[index]}
-          tabAriaId={btnIds[index]}
-          activeTabBtnId={isActive}
+          ariaControls={`target-${btnIds[index]}`}
+          isActive={isActive === btnIds[index]}
           isFocused={isFocused}
-          additionalClasses={tabPanelAdditionalClasses}
-          {...rest}
+          tabPanelAdditionalClasses={tabPanelAdditionalClasses}
         >
-          {children}
+          {tabPanelChildren}
         </SprkTabsPanel>
       );
     });
@@ -237,14 +236,17 @@ class SprkTabs extends Component {
     return (
       <div
         className={classnames('sprk-c-Tabs', additionalClasses)}
-        role="tablist"
         aria-orientation="horizontal"
         data-id={idString}
         ref={this.tabsContainerRef}
-        onKeyDown={this.handleKeyboardEvent}
         {...other}
       >
-        <div className="sprk-c-Tabs__buttons">
+        {/* eslint-disable jsx-a11y/interactive-supports-focus */}
+        <div
+          onKeyDown={this.handleKeyboardEvent}
+          className="sprk-c-Tabs__buttons"
+          role="tablist"
+        >
           { buttons }
         </div>
         { panels }
@@ -253,6 +255,11 @@ class SprkTabs extends Component {
   }
 }
 
+SprkTabs.defaultProps = {
+  idString: undefined,
+  additionalClasses: undefined,
+};
+
 SprkTabs.propTypes = {
   // The children of the tabs component (SprkTabsPanel)
   children: PropTypes.node.isRequired,
@@ -260,11 +267,6 @@ SprkTabs.propTypes = {
   idString: PropTypes.string,
   // A string of additional classes for the Tabs component
   additionalClasses: PropTypes.string,
-};
-
-SprkTabs.defaultProps = {
-  idString: undefined,
-  additionalClasses: undefined,
 };
 
 export default SprkTabs;

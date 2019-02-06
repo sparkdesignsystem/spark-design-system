@@ -23,7 +23,6 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "enzyme": "^3.8.0",
-    "prop-types": "^15.6.2",
     "regenerator-runtime": "^0.13.1",
     "enzyme-adapter-react-16": "^1.7.1",
     "jest": "^23.6.0",
@@ -32,6 +31,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2"
   }
 }

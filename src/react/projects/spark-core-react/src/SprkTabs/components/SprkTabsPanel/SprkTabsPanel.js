@@ -8,8 +8,9 @@ class SprkTabsPanel extends Component {
     this.tabPanelRef = createRef();
   }
 
-  componentDidUpdate () {
-     if ((this.props.isFocused !== undefined) && (this.props.isFocused === this.tabPanelRef.current.id)) {
+  componentDidUpdate() {
+    const { isFocused } = this.props;
+    if ((isFocused !== undefined) && (isFocused === this.tabPanelRef.current.id)) {
       this.tabPanelRef.current.focus();
     }
   }
@@ -17,49 +18,48 @@ class SprkTabsPanel extends Component {
   render() {
     const {
       children,
-      activeTabBtnId,
+      isActive,
       tabBtnId,
-      tabAriaId,
-      additionalClasses
+      ariaControls,
+      tabPanelAdditionalClasses,
     } = this.props;
-    const classNames = classnames(
-      'sprk-c-Tabs_content',
-      {
-        'sprk-u-Display--none': activeTabBtnId !== tabBtnId,
-      },
-      additionalClasses
-    );
+
     return (
       <div
-        className={classNames}
+        className={classnames(
+          'sprk-c-Tabs_content',
+          {
+            'sprk-u-Display--none': !isActive,
+          },
+          tabPanelAdditionalClasses,
+        )}
         role="tabpanel"
         tabIndex="0"
         ref={this.tabPanelRef}
-        id={`target-${tabAriaId}`}
-        aria-labelledby={tabBtnId}>
+        id={ariaControls}
+        aria-labelledby={tabBtnId}
+      >
         {children}
       </div>
     );
   }
 }
 
+/* eslint-disable react/require-default-props */
 SprkTabsPanel.propTypes = {
   // The tab panel content
   children: PropTypes.node,
-  /*
-  * The currently active tab that is
-  * passed in from SprkTabs (parent component)
-  */
-  activeTabBtnId: PropTypes.string,
+  // Value supplied decides if button is active
+  isActive: PropTypes.bool,
   // A unique ID for each tab button
   tabBtnId: PropTypes.string,
   // State passed from parent that contains an id of a btn tab
   // when the corresponding panel should be focused
   isFocused: PropTypes.string,
-  // The ID to use for each tab panel so it corresponds to the button
-  tabAriaId: PropTypes.string,
+  // The aria ID to use for each tab panel so it corresponds to the button
+  ariaControls: PropTypes.string,
   // A string of additional classes to be applied to the tab panel
-  additionalClasses: PropTypes.string
-}
+  tabPanelAdditionalClasses: PropTypes.string,
+};
 
 export default SprkTabsPanel;
