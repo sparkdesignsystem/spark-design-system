@@ -1,4 +1,4 @@
-/* global it expect window jest */
+/* global it expect jest */
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -10,6 +10,20 @@ it('should render a trigger with the correct classes', () => {
   const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} />);
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+});
+
+it('should render a footer if supplied with the choices', () => {
+  const choices = { footer: (<p>hi</p>), items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('.sprk-c-Dropdown__footer').length).toBe(1);
+});
+
+
+it('should render the correct text if defaultTriggerText is defined', () => {
+  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} defaultTriggerText="Hello, World!" />);
+  expect(wrapper.find('.sprk-b-Link').instance().textContent).toBe('Hello, World!');
 });
 
 it('should add classes to the selector when additionalClasses has a value', () => {
@@ -74,33 +88,45 @@ it('should run the choiceFunction supplied with the list of choices (information
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
-it('should close the selector on click outside', () => {
-  const map = {};
-  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
-    map[event] = cb;
-  });
-
-  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+it('should not error if the choiceFunction is supplied, but undefined with the list of choices (base)', () => {
+  const choices = { choiceFunction: undefined, items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} />);
-
   wrapper.find('.sprk-b-Link').simulate('click');
+  wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+});
+
+it('should not error if the choiceFunction is supplied, but undefined with the list of choices (informational)', () => {
+  const choices = { choiceFunction: undefined, items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }] };
+  const wrapper = mount(<SprkMastheadSelector choices={choices} variant="informational" />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+});
+
+it('should close the dropdown on click outside', () => {
+  const choices = {
+    items: [{ text: 'Item 1', value: 'item-1' }],
+  };
+
+  const wrapper = mount(<SprkMastheadSelector choices={choices} />);
+  const linkWrapper = wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
-  map.click({});
+  wrapper.instance().closeOnClickOutside({ target: linkWrapper.instance() });
+  expect(wrapper.state().isOpen).toBe(true);
+  wrapper.instance().closeOnClickOutside({});
   expect(wrapper.state().isOpen).toBe(false);
 });
 
-it('should close the selector on keydown (Escape)', () => {
-  const map = {};
-  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
-    map[event] = cb;
-  });
+it('should close the dropdown on keydown (Escape)', () => {
+  const choices = {
+    items: [{ text: 'Item 1', value: 'item-1' }],
+  };
 
-  const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} />);
-
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
-  map.keydown({ key: 'Escape' });
+  wrapper.instance().closeOnEsc({ key: 'Delete' });
+  expect(wrapper.state().isOpen).toBe(true);
+  wrapper.instance().closeOnEsc({ key: 'Escape' });
   expect(wrapper.state().isOpen).toBe(false);
 });
 

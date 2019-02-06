@@ -21,11 +21,43 @@ it('should toggle the accordion open on click', () => {
   expect(wrapper.state().isOpen).toBe(false);
   wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
+  wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
+  expect(wrapper.state().isOpen).toBe(false);
 });
 
 it('should render the supplied element', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="p" />);
   expect(wrapper.find('p.sprk-c-MastheadAccordion__summary').length).toBe(1);
+});
+
+it('should render the supplied href', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'a', href: 'https://www.google.com' }]} />);
+  expect(wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href')).toBe('https://www.google.com');
+});
+
+it('should render the supplied href as #nogo if not supplied', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'a' }]} />);
+  expect(wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href')).toBe('#nogo');
+});
+
+it('should not render href if element supplied is not a', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'span' }]} />);
+  expect(wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href')).toBe(null);
+});
+
+it('should not render href if element supplied is not a', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem element="span" />);
+  expect(wrapper.find('.sprk-c-MastheadAccordion__summary').instance().getAttribute('href')).toBe(null);
+});
+
+it('should render href as #nogo if element supplied is a and href is not supplied', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem element="a" />);
+  expect(wrapper.find('.sprk-c-MastheadAccordion__summary').instance().getAttribute('href')).toBe('#nogo');
+});
+
+it('should render href as supplied value', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem element="a" href="https://www.google.com" />);
+  expect(wrapper.find('.sprk-c-MastheadAccordion__summary').instance().getAttribute('href')).toBe('https://www.google.com');
 });
 
 it('should add a class if isActive is true', () => {

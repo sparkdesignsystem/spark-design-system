@@ -40,7 +40,7 @@ class SprkMastheadAccordionItem extends Component {
       ...rest
     } = this.props;
     const { isOpen, height, subNavLinks: stateLinks } = this.state;
-    const TagName = element || 'a';
+    const TagName = element;
     return (
       <li
         className={classNames(
@@ -77,7 +77,7 @@ class SprkMastheadAccordionItem extends Component {
                   return (
                     <li key={innerId}>
                       <InnerTagName
-                        href={TagName === 'a' ? innerHref || '#nogo' : undefined}
+                        href={InnerTagName === 'a' ? innerHref || '#nogo' : undefined}
                         className={classNames('sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link')}
                         {...innerRest}
                       >
@@ -98,7 +98,7 @@ class SprkMastheadAccordionItem extends Component {
               { 'sprk-c-MastheadAccordion__summary': !isButton },
               { 'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm': isButton },
             )}
-            href={TagName === 'a' ? href || '#nogo' : undefined}
+            href={TagName === 'a' ? href : undefined}
             {...rest}
           >
             <span className={classNames({ 'sprk-c-MastheadAccordion__heading': !isButton })}>

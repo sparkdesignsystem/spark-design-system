@@ -10,13 +10,12 @@ class SprkMastheadSelector extends Component {
     super();
     this.state = {
       isOpen: false,
-      triggerText: props.defaultTriggerText || 'Select One',
+      triggerText: props.defaultTriggerText,
       choiceItems: props.choices.items.map(item => ({ id: uniqueId(), ...item })),
     };
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.updateTriggerText = this.updateTriggerText.bind(this);
-    this.runChoiceFunction = this.runChoiceFunction.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
     this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
     this.myRef = React.createRef();
@@ -46,7 +45,6 @@ class SprkMastheadSelector extends Component {
     }
   }
 
-
   openDropdown() {
     this.setState({
       isOpen: true,
@@ -65,13 +63,6 @@ class SprkMastheadSelector extends Component {
     });
   }
 
-  runChoiceFunction(text) {
-    const { choices } = this.props;
-    if (choices.choiceFunction) {
-      choices.choiceFunction(text);
-    }
-  }
-
   render() {
     const {
       additionalClasses,
@@ -84,10 +75,11 @@ class SprkMastheadSelector extends Component {
       idString,
       isFlush,
     } = this.props;
+    const { choiceFunction, footer } = choices;
     const { choiceItems, isOpen, triggerText } = this.state;
 
     return (
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+      // eslint-disable-next-line
       <div
         role="dialog"
         ref={this.myRef}
@@ -157,7 +149,9 @@ class SprkMastheadSelector extends Component {
                     onClick={() => {
                       this.updateTriggerText(title);
                       this.closeDropdown();
-                      this.runChoiceFunction(value);
+                      if (choiceFunction) {
+                        choiceFunction(value);
+                      }
                     }}
                     role="option"
                     {...rest}
@@ -171,10 +165,10 @@ class SprkMastheadSelector extends Component {
 
           </ul>
 
-          {choices.footer
+          {footer
             && (
             <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
-              {choices.footer}
+              {footer}
             </div>
             )
           }
@@ -200,6 +194,7 @@ SprkMastheadSelector.propTypes = {
   // Choices object that builds the dropdown contents
   choices: PropTypes.shape({
     // An array of objects that describe the items in the menu
+    footer: PropTypes.node,
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for each menu item
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
