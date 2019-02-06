@@ -32,18 +32,19 @@ class SprkMasthead extends Component {
 
   toggleNarrowNav() {
     document.body.classList.toggle('sprk-u-Overflow--hidden');
-    // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
     document.documentElement.classList.toggle('sprk-u-Overflow--hidden');
+
+    this.setState(prevState => ({
+      narrowNavOpen: !prevState.narrowNavOpen,
+    }));
+
+    // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
     if (document.documentElement.style.height !== '100%') {
       document.documentElement.classList.toggle('sprk-u-Height--100');
     }
     if (document.body.style.height !== '100%') {
       document.body.classList.toggle('sprk-u-Height--100');
     }
-
-    this.setState(prevState => ({
-      narrowNavOpen: !prevState.narrowNavOpen,
-    }));
   }
 
 
@@ -84,7 +85,7 @@ class SprkMasthead extends Component {
             </a>
           </div>
 
-          {littleNavLinks.length > 0
+          {(littleNavLinks.length > 0 || utilityContents.length > 0)
           && (
           <SprkMastheadLittleNav
             selector={selector}

@@ -77,6 +77,19 @@ it('should run the choiceFunction supplied with the list of choices (base)', () 
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
+it('should not error if choiceFunction is supplied but undefined (base)', () => {
+  const choices = {
+    choiceFunction: undefined,
+    items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }],
+  };
+  const wrapper = mount(<SprkDropdown choices={choices} />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  wrapper
+    .find('.sprk-c-Dropdown__link')
+    .first()
+    .simulate('click');
+});
+
 it('should run the choiceFunction supplied with the list of choices (informational)', () => {
   const spyFunc = jest.fn();
   const choices = {
@@ -92,37 +105,44 @@ it('should run the choiceFunction supplied with the list of choices (information
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
-it('should close the dropdown on click outside', () => {
-  const map = {};
-  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
-    map[event] = cb;
-  });
-
+it('should not error if choiceFunction is supplied but undefined (informational)', () => {
   const choices = {
-    items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }],
+    choiceFunction: undefined,
+    items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
   };
-  const wrapper = mount(<SprkDropdown choices={choices} />);
-
+  const wrapper = mount(<SprkDropdown choices={choices} variant="informational" />);
   wrapper.find('.sprk-b-Link').simulate('click');
+  wrapper
+    .find('.sprk-c-Dropdown__link')
+    .first()
+    .simulate('click');
+});
+
+it('should close the dropdown on click outside', () => {
+  const choices = {
+    items: [{ text: 'Item 1', value: 'item-1' }],
+  };
+
+  const wrapper = mount(<SprkDropdown choices={choices} />);
+  const linkWrapper = wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
-  map.click({});
+  wrapper.instance().closeOnClickOutside({ target: linkWrapper.instance() });
+  expect(wrapper.state().isOpen).toBe(true);
+  wrapper.instance().closeOnClickOutside({});
   expect(wrapper.state().isOpen).toBe(false);
 });
 
 it('should close the dropdown on keydown (Escape)', () => {
-  const map = {};
-  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
-    map[event] = cb;
-  });
-
   const choices = {
-    items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }],
+    items: [{ text: 'Item 1', value: 'item-1' }],
   };
-  const wrapper = mount(<SprkDropdown choices={choices} />);
 
+  const wrapper = mount(<SprkDropdown choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
-  map.keydown({ key: 'Escape' });
+  wrapper.instance().closeOnEsc({ key: 'Delete' });
+  expect(wrapper.state().isOpen).toBe(true);
+  wrapper.instance().closeOnEsc({ key: 'Escape' });
   expect(wrapper.state().isOpen).toBe(false);
 });
 
@@ -147,4 +167,14 @@ it('should pass unused keys on choice items through to the dom', () => {
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('.sprk-c-Dropdown__link[aria-hidden="true"]').length).toBe(1);
+});
+
+it('should not set href if the supplied tagname is not a', () => {
+  const wrapper = mount(
+    <SprkDropdown variant="informational" choices={{ items: [{ element: 'span', text: 'Item 1', content: { title: 'Item 1' } }] }} />,
+  );
+  expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('span.sprk-c-Dropdown__link').length).toBe(1);
+  expect(wrapper.find('span.sprk-c-Dropdown__link').instance().getAttribute('href')).toBe(null);
 });

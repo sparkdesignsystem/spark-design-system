@@ -108,7 +108,7 @@ SprkMastheadLittleNav.propTypes = {
     isActive: PropTypes.bool,
     // The link text
     text: PropTypes.string,
-  })).isRequired,
+  })),
   // Choices object that builds the dropdown contents
   selector: PropTypes.shape({
     // An array of objects that describe the items in the menu
@@ -131,6 +131,7 @@ SprkMastheadLittleNav.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
   idString: '',
+  links: [],
   spacing: 'medium',
   selector: {},
   utilityContents: [],
