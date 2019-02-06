@@ -27,7 +27,7 @@ class SprkTabsPanel extends Component {
     return (
       <div
         className={classnames(
-          'sprk-c-Tabs_content',
+          'sprk-c-Tabs__content',
           {
             'sprk-u-Display--none': !isActive,
           },
