@@ -69,6 +69,7 @@ class SprkMasthead extends Component {
         className={classNames(
           'sprk-c-Masthead',
           'sprk-o-Stack',
+          { 'sprk-c-Masthead--open': narrowNavOpen },
           { 'sprk-c-Masthead--scroll': isScrolled },
           additionalClasses,
         )}
