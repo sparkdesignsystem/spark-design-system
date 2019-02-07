@@ -1,4 +1,4 @@
-/* global it expect describe */
+/* global it expect describe Event window */
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -105,6 +105,20 @@ describe('SprkTabs Component', () => {
     expect(panel.getDOMNode().classList.contains('sprk-u-Display--none')).toBe(false);
   });
 
+  it('should focus the first tab when the left key is pressed while on the last tab', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    // First, tab into the Tab Button area
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 37 });
+    const button = wrapper.find(SprkTabsButton).first();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
   it('should focus the last Tab Button when the end key is pressed', () => {
     const wrapper = mount(
       <SprkTabs>
@@ -129,28 +143,108 @@ describe('SprkTabs Component', () => {
     );
     // First, tab into the Tab Button area
     wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
-    // Second, hit the end key
+    // Second, hit the home key
     wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 36 });
     const button = wrapper.find(SprkTabsButton).first();
     expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
   });
 
-  it('should focus the previous Tab Button when the left arrow key is pressed', () => {
+  it('should add the aria-orientation attribute when page loads', () => {
     const wrapper = mount(
       <SprkTabs>
         <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
-        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
       </SprkTabs>,
     );
-    // First, tab into the Tab Button area
-    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
-    // Second, arrow right to the next tab button (tab 2)
-    const button1 = wrapper.find(SprkTabsButton).first();
-    // wrapper.simulate('keydown', { keyCode: 39 });
-    // expect(button1.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(false);
-    // Then, hit the left arrow key to go back to the previous tab (tab 1)
-    // wrapper.simulate('keydown', { keyCode: 37 });
-    expect(button1.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+    expect(wrapper.find('div.sprk-c-Tabs').getDOMNode().hasAttribute('aria-orientation')).toBe(true);
+  });
 
+  it('should move back to the previous tab at the end of the tablist if the first tab is selected', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    const instance = wrapper.instance();
+    instance.retreatTab();
+    const button = wrapper.find(SprkTabsButton).last();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
+  it('should move back to the previous tab', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    const instance = wrapper.instance();
+    instance.retreatTab();
+    const button = wrapper.find(SprkTabsButton).first();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
+  it('should move to the next tab', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    const instance = wrapper.instance();
+    instance.advanceTab();
+    const button = wrapper.find(SprkTabsButton).last();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
+  it('should move to the first tab when the right key is pressed on the last tab', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    const instance = wrapper.instance();
+    instance.advanceTab();
+    const button = wrapper.find(SprkTabsButton).first();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
+  it('should get the active tab index', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    const instance = wrapper.instance();
+    const index = instance.getActiveTabIndex();
+    expect(index).toEqual(0);
+  });
+
+  it('should set the aria-orientation to vertical when the window size is less than the breakpoint', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    global.innerWidth = 320;
+    global.dispatchEvent(new Event('resize'));
+    expect(wrapper.find('.sprk-c-Tabs').getDOMNode().getAttribute('aria-orientation')).toEqual('vertical');
+  });
+
+
+  it('should not create a tab button for an element inside Tabs that is not a SprkTabsPanel', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <p>This is not a panel.</p>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    expect(wrapper.find('p').length).toBe(0);
   });
 });

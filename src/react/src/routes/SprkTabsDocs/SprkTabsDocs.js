@@ -12,6 +12,7 @@ const SprkTabsDocs = () => {
         data-custom="my-custom-tabs-attr"
       >
         <SprkTabsPanel
+          isDefaultActive
           tabBtnChildren="Tab 1"
           tabBtnAdditionalClasses="sprk-u-Color--blue"
           tabBtnAnalyticsString="tab-1-data-analytics"
