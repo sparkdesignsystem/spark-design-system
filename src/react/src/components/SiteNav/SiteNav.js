@@ -11,6 +11,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/icon" className="drizzle-b-Link drizzle-b-Link--light">
+            Icon
+          </Link>
+        </li>
+        <li>
           <Link to="/link" className="drizzle-b-Link drizzle-b-Link--light">
             Link
           </Link>

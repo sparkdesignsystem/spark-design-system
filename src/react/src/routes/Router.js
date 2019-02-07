@@ -10,6 +10,7 @@ import SprkMastheadDefaultDocs from './SprkMastheadDefaultDocs/SprkMastheadDefau
 import SprkMastheadExtendedDocs from './SprkMastheadExtendedDocs/SprkMastheadExtendedDocs';
 import SprkDropdownDocs from './SprkDropdownDocs/SprkDropdownDocs';
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
+import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
 
 const Router = () => (
   <BrowserRouter>
@@ -18,6 +19,7 @@ const Router = () => (
       <Route exact path="/alert" component={SprkAlertDocs} />
       <Route exact path="/button" component={SprkButtonDocs} />
       <Route exact path="/dropdown" component={SprkDropdownDocs} />
+      <Route exact path="/icon" component={SprkIconDocs} />
       <Route exact path="/link" component={SprkLinkDocs} />
       <Route exact path="/dividers" component={SprkDividerDocs} />
       <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
