@@ -70,7 +70,8 @@ const SprkTabsDocs = () => {
       <SprkTabs>
         <SprkTabsPanel
           tabBtnChildren="Fish"
-          tabBtnAnalyticsString="tab-set-2-tab-1">
+          tabBtnAnalyticsString="tab-set-2-tab-1"
+        >
           <p>
             Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
