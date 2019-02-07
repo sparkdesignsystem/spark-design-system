@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { cpus } from 'os';
 
 const SprkTable = (props) => {
-  const { columns, rows, additionalClasses, additionalTableClasses, idString, ...other } = props;
+  const { order, columns, subHeadings, rows, additionalClasses, additionalTableClasses, idString, ...other } = props;
   const wrapperClassNames = classnames(
     'sprk-b-TableContainer',
     additionalClasses
@@ -12,6 +13,39 @@ const SprkTable = (props) => {
     'sprk-b-Table',
     additionalTableClasses
   );
+  let columnData = [];
+  columns.map(column => columnData.push(column));
+
+  if(subHeadings) {
+    subHeadings.map(subHeading => 
+      columnData.push(subHeading));
+  }
+
+  // Check to see if order prop is being used
+  let orderedColumns = false;
+  columnData.map(data => 
+    {
+      if(data.hasOwnProperty('order')){
+        orderedColumns = true;
+      }
+    }
+  )
+
+  // If order prop is being used, re-order the array
+  if(orderedColumns) {
+    const columnDataOrdered = [];
+    columnData.map(data => 
+      {
+        if(data.hasOwnProperty('order')){
+          columnDataOrdered.push(data);
+        }
+      }
+    )
+    columnDataOrdered.sort(function(a,b){
+      return a.order - b.order;
+    });
+    columnData = columnDataOrdered;
+  }
 
   return (
     <div className={wrapperClassNames} data-id={idString}>
@@ -27,11 +61,22 @@ const SprkTable = (props) => {
               </th>  
             )}
           </tr>
+          { subHeadings &&
+          <tr>
+            {subHeadings.map(subHeading =>
+              <th
+                className="sprk-b-Table--grouped-column"
+                key={subHeading.name} >
+                  {subHeading.header}  
+              </th>
+            )}
+          </tr>
+          }
         </thead>
         <tbody>
               {rows.map(row => 
                 <tr key={row.column1}>
-                  {columns.map( col =>
+                  {columnData.map( col =>
                     <td key={col.name}>{row[col.name]}</td>
                   )}
                 </tr>
@@ -45,6 +90,10 @@ const SprkTable = (props) => {
 SprkTable.propTypes = {
   // An array used to render the table headings
   columns: PropTypes.array.isRequired,
+  // An array used to render the subheadings if applicable
+  subHeadings: PropTypes.array,
+  // A number that is used to specify the order of columns where the tbody data is rendered. This does not affect the order of the thead order.
+  order: PropTypes.number,
   // An array of objects used to map and render the table row data
   rows: PropTypes.arrayOf(PropTypes.object),
   // The string to use for the data-id attribute

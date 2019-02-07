@@ -13,9 +13,9 @@ const SprkTableDocs = () => {
           additionalTableClasses="sprk-b-Table--spacing-medium"
           idString="table-1"
           columns={[
-            { header: 'Column Heading', name: 'column1' },
-            { header: 'Column Heading 2', name: 'column2' },
-            { header: 'Column Heading 3', name: 'column3' }
+            { header: 'Column Heading', name: 'column1'},
+            { header: 'Column Heading 2', name: 'column2'},
+            { header: 'Column Heading 3', name: 'column3'}
           ]}
           rows={[
             { column1: 1, column2: 'Data 1', column3: 'Data 2' },
@@ -46,56 +46,32 @@ const SprkTableDocs = () => {
           ]}>
         </SprkTable>
       </ExampleContainer>
-{/*
+
       <ExampleContainer>
         <SprkTable 
           additionalTableClasses="sprk-b-Table--grouped-columns sprk-b-Table--spacing-medium"
-          idString="table-3">
-          <thead className="sprk-b-Table__head">
-            <tr>
-              <th rowSpan="2">Column Heading</th>
-              <th colSpan="3">Column Heading</th>
-              <th rowSpan="2">Column Heading</th>
-            </tr>
-            <tr>
-              <th className="sprk-b-Table--grouped-column">SubHeading</th>
-              <th className="sprk-b-Table--grouped-column">SubHeading</th>
-              <th className="sprk-b-Table--grouped-column">SubHeading</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
-              <td>Data 5</td>
-            </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
-              <td>Data 5</td>
-            </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
-              <td>Data 5</td>
-            </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
-              <td>Data 5</td>
-            </tr>
-          </tbody>
+          idString="table-3"
+          columns={[
+            { header: 'Column Heading', name: 'column1', rowspan: 2, order: 1 },
+            { header: 'Column Heading 2', name: 'column2', colspan: 3 },
+            { header: 'Column Heading 3', name: 'column3', rowspan: 2, order: 5 }
+          ]}
+          subHeadings={[
+            { header: 'Subheading 1', name: 'subheading1', order: 2 },
+            { header: 'Subheading 2', name: 'subheading2', order: 3 },
+            { header: 'Subheading 3', name: 'subheading3', order: 4 },
+          ]}
+          rows={[
+            { column1: 1, subheading1: 'Data 1', subheading2: 'Data 2', subheading3: 'Data 3', column3: 'Data 4' },
+            { column1: 2, subheading1: 'Data 1', subheading2: 'Data 2', subheading3: 'Data 3', column3: 'Data 4' },
+            { column1: 3, subheading1: 'Data 1', subheading2: 'Data 2', subheading3: 'Data 3', column3: 'Data 4' },
+            { column1: 4, subheading1: 'Data 1', subheading2: 'Data 2', subheading3: 'Data 3', column3: 'Data 4' },
+            { column1: 5, subheading1: 'Data 1', subheading2: 'Data 2', subheading3: 'Data 3', column3: 'Data 4' }
+          ]}
+          >
         </SprkTable>
       </ExampleContainer>
-
+{/*
       <ExampleContainer>
         <SprkTable 
           additionalTableClasses="sprk-b-Table--row-comparison sprk-b-Table--spacing-medium" 
