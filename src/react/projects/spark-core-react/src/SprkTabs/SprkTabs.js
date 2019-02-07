@@ -197,6 +197,7 @@ class SprkTabs extends Component {
         tabBtnAddClasses,
         tabBtnDataId,
         tabBtnAnalytics,
+        tabBtnClickFunc,
       } = tabPanel.props;
       const { isFocused, isActive, btnIds } = this.state;
 
@@ -210,7 +211,12 @@ class SprkTabs extends Component {
           ariaControls={`target-${btnIds[index]}`}
           ariaSelected={isActive === btnIds[index]}
           tabBtnId={btnIds[index]}
-          onTabClick={this.handleTabClick}
+          onTabClick={(e) => {
+            this.handleTabClick(e);
+            if (tabBtnClickFunc) {
+              tabBtnClickFunc();
+            }
+          }}
           tabBtnAddClasses={tabBtnAddClasses}
           tabBtnChildren={tabBtnChildren}
           tabBtnDataId={tabBtnDataId}
