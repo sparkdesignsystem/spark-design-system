@@ -215,7 +215,7 @@ class SprkTabs extends Component {
         children: tabPanelChildren,
         tabPanelAdditionalClasses,
       } = tabPanel.props;
-      const { isActive, isFocused, btnIds } = this.state;
+      const { isActive, btnIds } = this.state;
 
       if (tabPanel.type.name !== SprkTabsPanel.name) return false;
 
@@ -225,7 +225,6 @@ class SprkTabs extends Component {
           key={btnIds[index]}
           ariaControls={`target-${btnIds[index]}`}
           isActive={isActive === btnIds[index]}
-          isFocused={isFocused}
           tabPanelAdditionalClasses={tabPanelAdditionalClasses}
         >
           {tabPanelChildren}
