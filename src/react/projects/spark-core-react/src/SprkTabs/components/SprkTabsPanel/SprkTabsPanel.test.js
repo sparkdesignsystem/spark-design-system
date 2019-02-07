@@ -17,4 +17,19 @@ describe('SprkTabs Component', () => {
     );
     expect(wrapper.find('.sprk-c-Tabs__content').length).toBe(2);
   });
+
+  it('should focus the corresponding Tab Panel when the tab key is pressed', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    // First, tab into the Tab Button area
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+    // Second, hit the Tab key to move to the panel
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+    const panel = wrapper.find(SprkTabsPanel).first();
+    expect(panel.getDOMNode().classList.contains('sprk-u-Display--none')).toBe(false);
+  });
 });
