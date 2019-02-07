@@ -192,7 +192,12 @@ class SprkTabs extends Component {
     * for an element that is not a SprkTabsPanel.
     */
     const buttons = children.map((tabPanel, index) => {
-      const { tabBtnChildren, tabBtnAdditionalClasses } = tabPanel.props;
+      const {
+        tabBtnChildren,
+        tabBtnAddClasses,
+        tabBtnDataId,
+        tabBtnAnalytics,
+      } = tabPanel.props;
       const { isFocused, isActive, btnIds } = this.state;
 
       if (tabPanel.type.name !== SprkTabsPanel.name) return false;
@@ -206,8 +211,10 @@ class SprkTabs extends Component {
           ariaSelected={isActive === btnIds[index]}
           tabBtnId={btnIds[index]}
           onTabClick={this.handleTabClick}
-          tabBtnAdditionalClasses={tabBtnAdditionalClasses}
+          tabBtnAddClasses={tabBtnAddClasses}
           tabBtnChildren={tabBtnChildren}
+          tabBtnDataId={tabBtnDataId}
+          tabBtnAnalytics={tabBtnAnalytics}
         />
       );
     });
@@ -221,7 +228,7 @@ class SprkTabs extends Component {
     const panels = children.map((tabPanel, index) => {
       const {
         children: tabPanelChildren,
-        tabPanelAdditionalClasses,
+        tabPanelAddClasses,
       } = tabPanel.props;
       const { isActive, btnIds } = this.state;
 
@@ -233,7 +240,7 @@ class SprkTabs extends Component {
           key={btnIds[index]}
           ariaControls={`target-${btnIds[index]}`}
           isActive={isActive === btnIds[index]}
-          tabPanelAdditionalClasses={tabPanelAdditionalClasses}
+          tabPanelAddClasses={tabPanelAddClasses}
         >
           {tabPanelChildren}
         </SprkTabsPanel>

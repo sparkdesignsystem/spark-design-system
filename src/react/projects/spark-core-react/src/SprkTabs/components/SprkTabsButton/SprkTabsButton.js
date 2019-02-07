@@ -19,18 +19,19 @@ class SprkTabsButton extends Component {
     const {
       tabBtnChildren,
       tabBtnId,
-      tabBtnAdditionalClasses,
+      tabBtnAddClasses,
       ariaControls,
       ariaSelected,
       isActive,
       onTabClick,
-      tabBtnIdString,
+      tabBtnDataId,
+      tabBtnAnalytics,
     } = this.props;
     return (
       <button
         className={classnames(
           'sprk-c-Tabs__button',
-          tabBtnAdditionalClasses,
+          tabBtnAddClasses,
           { 'sprk-c-Tabs__button--active': isActive },
         )}
         role="tab"
@@ -41,7 +42,8 @@ class SprkTabsButton extends Component {
         type="button"
         tabIndex={isActive ? undefined : '-1'}
         ref={this.tabBtnRef}
-        data-id={tabBtnIdString}
+        data-id={tabBtnDataId}
+        data-analytics={tabBtnAnalytics}
       >
         {tabBtnChildren}
       </button>
@@ -50,23 +52,15 @@ class SprkTabsButton extends Component {
 }
 
 SprkTabsButton.defaultProps = {
-  // The tab panel content
   tabBtnChildren: undefined,
-  // If this tabe should be active
   isActive: false,
-  // State passed from parent that contains an id of a btn tab
-  // when the corresponding panel should be focused
   isFocused: undefined,
-  // The aria ID to use for each tab panel so it corresponds to the button
   ariaControls: undefined,
-  // A string of additional classes to be applied to the tab panel
-  tabBtnAdditionalClasses: undefined,
-
+  tabBtnAddClasses: undefined,
   ariaSelected: undefined,
-
   onTabClick: undefined,
-
-  tabBtnIdString: undefined,
+  tabBtnAnalytics: undefined,
+  tabBtnDataId: undefined,
 };
 
 SprkTabsButton.propTypes = {
@@ -82,13 +76,15 @@ SprkTabsButton.propTypes = {
   // The aria ID to use for each tab panel so it corresponds to the button
   ariaControls: PropTypes.string,
   // A string of additional classes to be applied to the tab panel
-  tabBtnAdditionalClasses: PropTypes.string,
-
+  tabBtnAddClasses: PropTypes.string,
+  // Determines what to supply to aria-selected
   ariaSelected: PropTypes.bool,
-
+  // The click handler for the Tab
   onTabClick: PropTypes.func,
-
-  tabBtnIdString: PropTypes.string,
+  // The id used for the data-id attribute
+  tabBtnDataId: PropTypes.string,
+  // The value used for the data-analytics attribute
+  tabBtnAnalytics: PropTypes.string,
 };
 
 export default SprkTabsButton;
