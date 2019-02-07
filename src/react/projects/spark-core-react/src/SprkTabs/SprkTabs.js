@@ -52,9 +52,17 @@ class SprkTabs extends Component {
   setDefaultActiveTab() {
     const { children } = this.props;
     const { btnIds } = this.state;
+    let counter = 0;
+
     children.forEach((child, index) => {
       if (child.props.isDefaultActive) {
         this.setState({ isActive: btnIds[index] });
+      } else {
+        counter += 1;
+      }
+
+      if (counter === children.length) {
+        this.setState({ isActive: btnIds[0] });
       }
     });
   }

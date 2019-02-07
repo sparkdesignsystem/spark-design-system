@@ -4,6 +4,7 @@ import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
+import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -102,5 +103,54 @@ describe('SprkTabs Component', () => {
 
     const panel = wrapper.find(SprkTabsPanel).first();
     expect(panel.getDOMNode().classList.contains('sprk-u-Display--none')).toBe(false);
+  });
+
+  it('should focus the last Tab Button when the end key is pressed', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    // First, tab into the Tab Button area
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+    // Second, hit the end key
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 35 });
+    const button = wrapper.find(SprkTabsButton).last();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
+  it('should focus the first Tab Button when the home key is pressed', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    // First, tab into the Tab Button area
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+    // Second, hit the end key
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 36 });
+    const button = wrapper.find(SprkTabsButton).first();
+    expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+  });
+
+  it('should focus the previous Tab Button when the left arrow key is pressed', () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    // First, tab into the Tab Button area
+    wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+    // Second, arrow right to the next tab button (tab 2)
+    const button1 = wrapper.find(SprkTabsButton).first();
+    // wrapper.simulate('keydown', { keyCode: 39 });
+    // expect(button1.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(false);
+    // Then, hit the left arrow key to go back to the previous tab (tab 1)
+    // wrapper.simulate('keydown', { keyCode: 37 });
+    expect(button1.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
+
   });
 });

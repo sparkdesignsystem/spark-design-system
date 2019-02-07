@@ -56,7 +56,7 @@ const SprkTabsDocs = () => {
           </p>
         </SprkTabsPanel>
 
-        <SprkTabsPanel tabBtnChildren="Tab 3" isDefaultActive>
+        <SprkTabsPanel tabBtnChildren="Tab 3">
           <p>
             Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
