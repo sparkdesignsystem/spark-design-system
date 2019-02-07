@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SprkDropdown } from '@sparkdesignsystem/spark-core-react';
+import { SprkButton, SprkDropdown } from '@sparkdesignsystem/spark-core-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
 
 const informationalChoices = {
   choiceFunction: (choiceText) => { console.log(choiceText); },
+  footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
   items: [
     {
       content: {

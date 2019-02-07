@@ -193,8 +193,9 @@ SprkMastheadSelector.propTypes = {
   analyticsString: PropTypes.string,
   // Choices object that builds the dropdown contents
   choices: PropTypes.shape({
-    // An array of objects that describe the items in the menu
+    // A node to render at the foot of the dropdown menu
     footer: PropTypes.node,
+    // An array of objects that describe the items in the menu
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for each menu item
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

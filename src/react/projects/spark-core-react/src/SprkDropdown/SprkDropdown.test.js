@@ -1,4 +1,4 @@
-/* global it, expect, jest, window */
+/* global it, expect, jest */
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -9,6 +9,13 @@ Enzyme.configure({ adapter: new Adapter() });
 it('should render a trigger with the correct classes', () => {
   const wrapper = mount(<SprkDropdown />);
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
+});
+
+it('should render a footer if supplied with the choices', () => {
+  const choices = { footer: (<p>hi</p>), items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const wrapper = mount(<SprkDropdown choices={choices} />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(wrapper.find('.sprk-c-Dropdown__footer').length).toBe(1);
 });
 
 it('should add classes to the dropdown when additionalClasses has a value', () => {

@@ -10,20 +10,29 @@ class SprkIconDocs extends React.Component {
     this.state = {
       symbols: [],
     };
+    this.buildSymbolIds = this.buildSymbolIds.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('load', () => {
-      const symbols = document.querySelectorAll('symbol');
-      const ids = [];
-      symbols.forEach((item) => {
-        ids.push(item.getAttribute('id'));
-      });
-      this.setState({
-        symbols: ids,
-      });
-    });
+    window.addEventListener('icons-loaded', this.buildSymbolIds);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('icons-loaded', this.buildSymbolIds);
+  }
+
+  buildSymbolIds() {
+    const symbols = document.querySelectorAll('symbol');
+    const ids = [];
+    symbols.forEach((item) => {
+      ids.push(item.getAttribute('id'));
+    });
+    this.setState({
+      symbols: ids,
+    });
+    return ids;
+  }
+
 
   render() {
     const { symbols } = this.state;

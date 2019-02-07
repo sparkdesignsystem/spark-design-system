@@ -1,4 +1,4 @@
-/* global fetch */
+/* global fetch window CustomEvent */
 import React from 'react';
 
 class IconSet extends React.Component {
@@ -12,6 +12,8 @@ class IconSet extends React.Component {
       .then(r => r.text())
       .then((text) => {
         this.setState({ icons: text });
+      }).then(() => {
+        window.dispatchEvent(new CustomEvent('icons-loaded'));
       });
   }
 

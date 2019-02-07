@@ -91,7 +91,7 @@ class SprkDropdown extends Component {
       title,
       variant,
     } = this.props;
-    const { choiceFunction } = choices;
+    const { choiceFunction, footer } = choices;
     const { choiceItems, isOpen, triggerText } = this.state;
     return (
       <div ref={this.myRef}>
@@ -186,6 +186,13 @@ class SprkDropdown extends Component {
                 );
               })}
             </ul>
+            {footer
+            && (
+            <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+              {footer}
+            </div>
+            )
+          }
           </div>
         )}
       </div>

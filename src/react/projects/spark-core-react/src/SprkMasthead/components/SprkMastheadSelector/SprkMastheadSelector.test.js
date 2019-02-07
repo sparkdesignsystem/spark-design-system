@@ -19,7 +19,6 @@ it('should render a footer if supplied with the choices', () => {
   expect(wrapper.find('.sprk-c-Dropdown__footer').length).toBe(1);
 });
 
-
 it('should render the correct text if defaultTriggerText is defined', () => {
   const choices = { items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
   const wrapper = mount(<SprkMastheadSelector choices={choices} defaultTriggerText="Hello, World!" />);
