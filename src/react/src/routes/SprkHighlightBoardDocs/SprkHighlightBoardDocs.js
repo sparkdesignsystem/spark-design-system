@@ -16,7 +16,6 @@ const SprkHighlightBoardDocs = () => {
           ctaText2='Developers'
           ctaHref2='/gettingstarted/developers.html'
           idString='highlightboard-1' >
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
         </SprkHighlightBoard>
       </ExampleContainer>
       <ExampleContainer heading="No Image">

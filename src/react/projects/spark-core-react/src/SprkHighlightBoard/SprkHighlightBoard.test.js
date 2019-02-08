@@ -27,11 +27,6 @@ it('should not render an image if imgSrc is not provided', () => {
   expect(img.length).toBe(0);
 });
 
-it ('should render children nodes if no other props are provided.', () => {
-  const wrapper = shallow(<SprkHighlightBoard>foobar</SprkHighlightBoard>);
-  expect(wrapper.text()).toBe('foobar');
-});
-
 it('should render an image if an imgSrc is provided', () => {
   const wrapper = shallow(<SprkHighlightBoard imgSrc='foo' imgAlt='bar'/>);
   const img = wrapper.find('img');

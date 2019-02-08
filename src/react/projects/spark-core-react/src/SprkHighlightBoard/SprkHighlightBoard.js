@@ -6,7 +6,6 @@ import warning from 'warning';
 
 const SprkHighlightBoard = (props) => {
   const {
-    children,
     imgSrc,
     imgAlt,
     heading,
@@ -53,10 +52,6 @@ const SprkHighlightBoard = (props) => {
             {heading}
           </h1>
         }
-
-        <div className='sprk-o-Stack__item'>
-          { children }
-        </div>
 
         { (ctaText || ctaText2) &&
         <div className= {
@@ -106,8 +101,6 @@ const SprkHighlightBoard = (props) => {
 }
 
 SprkHighlightBoard.propTypes = {
-  // Child elements are rendered in the content section of the component.
-  children: PropTypes.node,
   // The source for the image - required if imgAlt is provided
   imgSrc: PropTypes.string,
   // The alt text for the image - required if imgSrc is provided
