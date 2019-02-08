@@ -25,4 +25,4 @@ yarn-error.log*
 
 /projects/spark-core-react/coverage/
 
-/src/assets/sprk-icons.svg
+/public/sprk-icons.svg

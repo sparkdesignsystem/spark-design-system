@@ -71,7 +71,7 @@ class SprkMastheadSelector extends Component {
       additionalTriggerTextClasses,
       analyticsString,
       choices,
-      iconType,
+      iconName,
       idString,
       isFlush,
     } = this.props;
@@ -92,8 +92,8 @@ class SprkMastheadSelector extends Component {
               'sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
               additionalTriggerClasses,
             )}
-            data-analytics={analyticsString || 'undefined'}
-            data-id={idString || 'undefined'}
+            data-analytics={analyticsString}
+            data-id={idString}
             onClick={this.openDropdown}
             href="#nogo"
             data-sprk-dropdown-trigger="dropdown-selector"
@@ -106,7 +106,7 @@ class SprkMastheadSelector extends Component {
               {triggerText}
             </span>
             <SprkIcon
-              iconType={iconType}
+              iconName={iconName}
               additionalClasses={
               classNames('sprk-c-Icon--toggle sprk-Stack__item', additionalIconClasses)}
             />
@@ -131,7 +131,7 @@ class SprkMastheadSelector extends Component {
               >
                 {triggerText}
               </span>
-              <SprkIcon iconType="chevron-up" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
+              <SprkIcon iconName="chevron-up" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
             </a>
           </div>
 
@@ -210,7 +210,7 @@ SprkMastheadSelector.propTypes = {
   // The text set as the default of the trigger link
   defaultTriggerText: PropTypes.string,
   // The icon type of the trigger icon
-  iconType: PropTypes.string,
+  iconName: PropTypes.string,
   // Assigned to data-id
   idString: PropTypes.string,
   // Applies styles if the selector is flush with the sides of the viewport
@@ -225,7 +225,7 @@ SprkMastheadSelector.defaultProps = {
   analyticsString: '',
   children: [],
   defaultTriggerText: 'Choose One...',
-  iconType: 'chevron-down',
+  iconName: 'chevron-down',
   idString: '',
   isFlush: false,
 };

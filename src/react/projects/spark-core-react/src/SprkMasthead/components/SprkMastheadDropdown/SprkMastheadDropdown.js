@@ -62,7 +62,7 @@ class SprkMastheadDropdown extends Component {
       additionalTriggerClasses,
       additionalTriggerTextClasses,
       analyticsString,
-      iconType,
+      iconName,
       idString,
       title,
       triggerText,
@@ -86,7 +86,7 @@ class SprkMastheadDropdown extends Component {
           onClick={this.toggleDropdownOpen}
         >
           <span className={classNames(additionalTriggerTextClasses)}>{triggerText}</span>
-          <SprkIcon additionalClasses={classNames('sprk-c-Icon--stroke-current-color sprk-u-mls', additionalIconClasses)} iconType={iconType} />
+          <SprkIcon additionalClasses={classNames('sprk-c-Icon--stroke-current-color sprk-u-mls', additionalIconClasses)} iconName={iconName} />
         </a>
         {isOpen
         && (
@@ -153,7 +153,7 @@ SprkMastheadDropdown.propTypes = {
   // The text set as the default of the trigger link
   triggerText: PropTypes.string,
   // The icon type of the trigger icon
-  iconType: PropTypes.string,
+  iconName: PropTypes.string,
   // Assigned to data-id
   idString: PropTypes.string,
   // The text of the optional header above the choices in the dropdown
@@ -173,7 +173,7 @@ SprkMastheadDropdown.defaultProps = {
     items: [],
   },
   triggerText: 'Choose One...',
-  iconType: 'chevron-down',
+  iconName: 'chevron-down',
   idString: '',
   title: '',
   variant: 'base',

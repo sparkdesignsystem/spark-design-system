@@ -85,7 +85,7 @@ class SprkDropdown extends Component {
       additionalTriggerTextClasses,
       analyticsString,
       choices,
-      iconType,
+      iconName,
       idString,
       screenReaderText,
       title,
@@ -116,7 +116,7 @@ class SprkDropdown extends Component {
               </span>
               <SprkIcon
                 additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls"
-                iconType="chevron-down"
+                iconName="chevron-down"
               />
             </React.Fragment>
           )}
@@ -125,7 +125,7 @@ class SprkDropdown extends Component {
               <span className={classNames('sprk-u-ScreenReaderText', additionalTriggerTextClasses)}>
                 {screenReaderText}
               </span>
-              <SprkIcon iconType={iconType} additionalClasses={additionalIconClasses} />
+              <SprkIcon iconName={iconName} additionalClasses={additionalIconClasses} />
             </React.Fragment>
           )}
         </a>
@@ -230,7 +230,7 @@ SprkDropdown.propTypes = {
   // The text set as the default of the trigger link
   defaultTriggerText: PropTypes.string,
   // The icon type of the trigger icon
-  iconType: PropTypes.string,
+  iconName: PropTypes.string,
   // Assigned to data-id
   idString: PropTypes.string,
   // Text that is visually hidden when the trigger is just an icon
@@ -252,7 +252,7 @@ SprkDropdown.defaultProps = {
     items: [],
   },
   defaultTriggerText: 'Choose One...',
-  iconType: 'chevron-down',
+  iconName: 'chevron-down',
   idString: '',
   screenReaderText: '',
   title: '',

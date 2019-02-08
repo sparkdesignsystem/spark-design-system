@@ -58,7 +58,7 @@ const choices = {
 const SprkDropdownDocs = () => (
   <CentralColumnLayout>
     <ExampleContainer heading="Base">
-      <SprkDropdown choices={choices} iconType="settings" />
+      <SprkDropdown choices={choices} iconName="settings" />
     </ExampleContainer>
     <ExampleContainer heading="Informational">
       <SprkDropdown

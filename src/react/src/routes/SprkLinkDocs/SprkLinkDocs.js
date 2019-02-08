@@ -19,7 +19,7 @@ const SprkLinkDocs = () => (
 
     <ExampleContainer>
       <SprkLink variant="has-icon" target="_blank" href="#nogo" analyticsString="foo">
-        <SprkIcon additionalClasses="sprk-c-Icon--xl" iconType="communication" />
+        <SprkIcon additionalClasses="sprk-c-Icon--xl" iconName="communication" />
           Icon With Text Link
       </SprkLink>
     </ExampleContainer>

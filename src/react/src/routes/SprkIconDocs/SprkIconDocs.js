@@ -40,8 +40,8 @@ class SprkIconDocs extends React.Component {
       <CentralColumnLayout>
         { symbols.map(symbol => (
           <ExampleContainer heading={symbol} key={symbol}>
-            <SprkIcon iconType={symbol} />
-            <SprkIcon iconType={symbol} additionalClasses="sprk-c-Icon--l" />
+            <SprkIcon iconName={symbol} />
+            <SprkIcon iconName={symbol} additionalClasses="sprk-c-Icon--l" />
           </ExampleContainer>
         ))}
       </CentralColumnLayout>

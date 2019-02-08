@@ -5,7 +5,7 @@ import classNames from 'classnames';
 function SprkIcon({
   additionalClasses,
   children,
-  iconType,
+  iconName,
   idString,
   viewBox,
   ...rest
@@ -17,7 +17,7 @@ function SprkIcon({
       data-id={idString}
       {...rest}
     >
-      <use xlinkHref={`#${iconType}`} />
+      <use xlinkHref={`#${iconName}`} />
     </svg>
   );
 }
@@ -28,7 +28,7 @@ SprkIcon.propTypes = {
   // Incoming children
   children: PropTypes.node,
   // The id of the symbol to use for the icon
-  iconType: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
   // Assigned to data-id
   idString: PropTypes.string,
   // The viewbox of the svg containing the symbol
