@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
 
 const SprkPromo = (props) => {
-  const { 
+  const {
     title,
     subtitle,
     additionalClasses,
@@ -27,7 +27,7 @@ const SprkPromo = (props) => {
     children,
     ...other
   } = props;
-  
+
   return (
     <div
       className={
@@ -41,8 +41,8 @@ const SprkPromo = (props) => {
       data-id={idString}
       {...other} >
 
-      {imgSrc && isFlag && !mediaRev && 
-        <SprkLink 
+      {imgSrc && isFlag && !mediaRev &&
+        <SprkLink
           variant="plain"
           href={imgLinkHref}
           additionalClasses={
@@ -61,7 +61,7 @@ const SprkPromo = (props) => {
         </SprkLink>
       }
 
-      {imgSrc && !mediaRev && !isFlag && 
+      {imgSrc && !mediaRev && !isFlag &&
         <SprkLink
           variant="plain"
           href={imgLinkHref}
@@ -91,14 +91,14 @@ const SprkPromo = (props) => {
           {'sprk-o-Stack__item--half@s': imgSrc},
           additionalClassesContent
         )} >
-        
-        {title && 
+
+        {title &&
           <h3 className = "sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
             {title}
           </h3>
         }
 
-        {subtitle && 
+        {subtitle &&
           <div className="sprk-c-Promo__subtitle sprk-o-Stack__item">
             {subtitle}
           </div>
@@ -108,7 +108,7 @@ const SprkPromo = (props) => {
           {children}
         </div>
 
-        {cta === 'button' && 
+        {cta === 'button' &&
           <div className='sprk-o-Stack__item'>
             <SprkButton
               element="a"
@@ -122,22 +122,22 @@ const SprkPromo = (props) => {
         }
 
         {cta === 'link' &&
-          <div class="sprk-o-Stack__item">
+          <div className="sprk-o-Stack__item">
             <SprkLink
               variant="base"
               href={ctaHref}
               analyticsString={ctaAnalytics}
               idString={ctaIdString} >
-              
-                {ctaText}  
+
+                {ctaText}
             </SprkLink>
           </div>
         }
       </div>
 
-      {isFlag && imgSrc && mediaRev && 
+      {isFlag && imgSrc && mediaRev &&
 
-        <SprkLink 
+        <SprkLink
           variant="plain"
           href={imgLinkHref}
           additionalClasses={
@@ -157,8 +157,8 @@ const SprkPromo = (props) => {
         </SprkLink>
       }
 
-      {!isFlag && imgSrc && mediaRev && 
-      
+      {!isFlag && imgSrc && mediaRev &&
+
         <SprkLink
           variant="plain"
           href={imgLinkHref}
