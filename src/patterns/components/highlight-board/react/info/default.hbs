@@ -7,7 +7,7 @@
 
   <thead>
     <tr>
-      <th>Input</th>
+      <th>Property</th>
       <th>Type</th>
       <th>Description</th>
     </tr>
@@ -16,195 +16,157 @@
   <tbody>
     <tr>
       <td class="sprk-u-FontWeight--bold">
-        type
-      </td>
-
-      <td>
-        string
-      </td>
-
-      <td>
-        This determines the variation of the Highlight Board that
-        is rendered. Can be 'noImage', 'stacked' or not set at all. 
-        The default if not set is the default variation of the highlight board.
-      </td>
-    </tr>
-
-    <tr>
-      <td class="sprk-u-FontWeight--bold">
-        heading
-      </td>
-
-      <td>
-        string
-      </td>
-
-      <td>
-        The value supplied will be rendered
-        as the heading.
-      </td>
-    </tr>
-
-    <tr>
-      <td class="sprk-u-FontWeight--bold">
-        subHeading
-      </td>
-
-      <td>
-        string
-      </td>
-
-      <td>
-        The value supplied will be rendered
-        as the sub-heading.
-      </td>
-    </tr>
-
-    <tr>
-      <td class="sprk-u-FontWeight--bold">
-        analyticsStringCta
-      </td>
-
-      <td>
-        string
-      </td>
-
-      <td>
-        The value supplied will be assigned to
-         the 'data-analytics' attribute on
-         the call-to-action. Intended for an outside
-        library to capture data.
-      </td>
-    </tr>
-
-    <tr>
-      <td class="sprk-u-FontWeight--bold">
-        analyticsStringCta2
-      </td>
-
-      <td>
-        string
-      </td>
-
-      <td>
-        The value supplied will be assigned to
-         the 'data-analytics' attribute on
-         the second call-to-action. Intended for an outside
-        library to capture data.
-      </td>
-    </tr>
-
-    <tr>
-      <td class="sprk-u-FontWeight--bold">
         imgSrc
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        The Highlight Board will use this as
-        the source for the main image.
+        The source for the image. If this property is provided, imgAlt is required.
       </td>
     </tr>
-
     <tr>
       <td class="sprk-u-FontWeight--bold">
         imgAlt
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        The Highlight Board will use this as
-        the alt text for the main image.
+        The alt text for the image. If this property is provided, imgSrc is required.
       </td>
     </tr>
-
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        heading
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        The heading text.
+      </td>
+    </tr>
     <tr>
       <td class="sprk-u-FontWeight--bold">
         ctaText
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        The Highlight Board will use this as
-        the text for the main call-to-action.
+        The text for the first button.
       </td>
     </tr>
-
     <tr>
       <td class="sprk-u-FontWeight--bold">
         ctaHref
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        The Highlight Board will use this as
-        the href for the main call-to-action.
+        The href for the first button.
       </td>
     </tr>
-
     <tr>
       <td class="sprk-u-FontWeight--bold">
-        ctaHref2
+        ctaAnalytics
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        The Highlight Board will use this as
-        the href for the secondary call-to-action.
+        The data-analytics for the first button.
       </td>
     </tr>
-
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        ctaIdString
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        The data-id for the first button.
+      </td>
+    </tr>
     <tr>
       <td class="sprk-u-FontWeight--bold">
         ctaText2
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        The Highlight Board will use this as
-        the text for the secondary call-to-action.
+        The text for the second button.
       </td>
     </tr>
-
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        ctaHref2
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        The href for the second button.
+      </td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        ctaAnalytics2
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        The data-analytics for the second button.
+      </td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        ctaIdString2
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        The data-id for the second button.
+      </td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        variant
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        Expects 'noImage' or 'stacked'. Alters the layout of the highlight board.
+      </td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        idString
+      </td>
+      <td>
+        string
+      </td>
+      <td>
+        The string to use for the data-id attribute for the component.
+      </td>
+    </tr>
     <tr>
       <td class="sprk-u-FontWeight--bold">
         additionalClasses
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        Allows a string of
-        classes to add, in
-        addition to the spark classes.
-        Intended for overrides.
+        Any additional classes to add to the highlight board.
       </td>
-    </tr>
-    <tr>
-      <td class="sprk-u-FontWeight--bold">idString</td>
-      <td>string</td>
-      <td>The value supplied will be assigned to the 'data-id' attribute on the component. This is intended to be used as a 
-        selector for automated tools. This value should be unique per page.</td>
     </tr>
   </tbody>
 </table>

@@ -26,6 +26,11 @@ function SiteNav(props) {
           </Link>
         </li>
         <li>
+          <Link to="/highlightboard" className="drizzle-b-Link drizzle-b-Link--light">
+            Highlight Board
+          </Link>
+        </li>
+        <li>
           <Link to="/dictionary" className="drizzle-b-Link drizzle-b-Link--light">
             Dictionary
           </Link>
