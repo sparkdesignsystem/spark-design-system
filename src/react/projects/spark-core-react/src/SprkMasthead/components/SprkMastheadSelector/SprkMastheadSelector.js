@@ -18,7 +18,7 @@ class SprkMastheadSelector extends Component {
     this.updateTriggerText = this.updateTriggerText.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
     this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
-    this.dropDownRef = React.createRef();
+    this.dropdownRef = React.createRef();
   }
 
   componentDidMount() {
