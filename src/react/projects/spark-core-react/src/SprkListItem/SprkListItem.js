@@ -12,6 +12,11 @@ const SprkListItem = (props) => {
   );
 }
 
+SprkListItem.defaultProps = {
+  idString: undefined,
+  additionalClasses: undefined,
+}
+
 SprkListItem.propTypes = {
   // The children that will be rendered inside the list
   children: PropTypes.node,

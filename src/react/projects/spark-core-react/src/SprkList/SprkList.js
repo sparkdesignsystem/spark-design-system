@@ -19,6 +19,13 @@ const SprkList = (props) => {
   );
 }
 
+SprkList.defaultProps = {
+  element: undefined,
+  variant: undefined,
+  idString: undefined,
+  additionalClasses: undefined,
+}
+
 SprkList.propTypes = {
   // The element that will be rendered - Required
   element: PropTypes.oneOf(['ol', 'ul']).isRequired,
