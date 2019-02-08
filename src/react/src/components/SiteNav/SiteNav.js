@@ -6,18 +6,38 @@ function SiteNav() {
     <nav className="drizzle-c-ReactNav sprk-u-phm">
       <ul className="drizzle-b-List drizzle-b-List--inline drizzle-b-List--spacing-m">
         <li>
+          <Link to="/alert" className="drizzle-b-Link drizzle-b-Link--light">
+            Alert
+          </Link>
+        </li>
+        <li>
           <Link to="/button" className="drizzle-b-Link drizzle-b-Link--light">
             Button
           </Link>
         </li>
         <li>
-          <Link to="/icon" className="drizzle-b-Link drizzle-b-Link--light">
-            Icon
+          <Link to="/dictionary" className="drizzle-b-Link drizzle-b-Link--light">
+            Dictionary
           </Link>
         </li>
         <li>
-          <Link to="/promos" className="drizzle-b-Link drizzle-b-Link--light">
-            Promos
+          <Link to="/dividers" className="drizzle-b-Link drizzle-b-Link--light">
+            Dividers
+          </Link>
+        </li>
+        <li>
+          <Link to="/dropdown" className="drizzle-b-Link drizzle-b-Link--light">
+            Dropdown
+          </Link>
+        </li>
+        <li>
+          <Link to="/highlightboard" className="drizzle-b-Link drizzle-b-Link--light">
+            Highlight Board
+          </Link>
+        </li>
+        <li>
+          <Link to="/icon" className="drizzle-b-Link drizzle-b-Link--light">
+            Icon
           </Link>
         </li>
         <li>
@@ -36,30 +56,8 @@ function SiteNav() {
           </Link>
         </li>
         <li>
-          <Link to="/alert" className="drizzle-b-Link drizzle-b-Link--light">
-            Alert
-          </Link>
-        </li>
-        <li>
-          <Link to="/dropdown" className="drizzle-b-Link drizzle-b-Link--light">
-            Dropdown
-          </Link>
-        </li>
-        <li>
-          <Link to="/alerts" className="drizzle-b-Link drizzle-b-Link--light">
-            Alerts
-          </Link>
-        </li>
-        <li>
-          <Link to="/highlightboard" className="drizzle-b-Link drizzle-b-Link--light">
-            Highlight Board
-          <Link to="/dividers" className="drizzle-b-Link drizzle-b-Link--light">
-            Dividers
-          </Link>
-        </li>
-        <li>
-          <Link to="/dictionary" className="drizzle-b-Link drizzle-b-Link--light">
-            Dictionary
+          <Link to="/promos" className="drizzle-b-Link drizzle-b-Link--light">
+            Promos
           </Link>
         </li>
       </ul>
