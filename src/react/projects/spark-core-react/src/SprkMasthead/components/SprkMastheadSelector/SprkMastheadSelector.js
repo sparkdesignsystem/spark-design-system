@@ -18,7 +18,7 @@ class SprkMastheadSelector extends Component {
     this.updateTriggerText = this.updateTriggerText.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
     this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
-    this.myRef = React.createRef();
+    this.dropDownRef = React.createRef();
   }
 
   componentDidMount() {
@@ -40,7 +40,7 @@ class SprkMastheadSelector extends Component {
   }
 
   closeOnClickOutside(e) {
-    if (!this.myRef.current.contains(e.target)) {
+    if (!this.dropdownRef.current.contains(e.target)) {
       this.closeDropdown();
     }
   }
@@ -82,7 +82,7 @@ class SprkMastheadSelector extends Component {
       // eslint-disable-next-line
       <div
         role="dialog"
-        ref={this.myRef}
+        ref={this.dropdownRef}
         className={classNames({ 'sprk-c-MastheadMask': isOpen && isFlush })}
         onClick={() => { if (isOpen) { this.closeDropdown(); } }}
       >
