@@ -15,14 +15,14 @@ it('should display a ul element with the correct base class', () => {
   expect(wrapper.find('ul.sprk-b-List').length).toBe(1);
 });
 
-it('should display a ol element with correct classes when listType is indented', () => {
-  const wrapper = shallow(<SprkList element="ol" listType="indented" />);
+it('should display a ol element with correct classes when variant is indented', () => {
+  const wrapper = shallow(<SprkList element="ol" variant="indented" />);
   expect(wrapper.find('ol').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ol').hasClass('sprk-b-List--indented')).toBe(true);
 });
 
-it('should display a ul element with correct classes when listType is indented', () => {
-  const wrapper = shallow(<SprkList element="ul" listType="indented" />);
+it('should display a ul element with correct classes when variant is indented', () => {
+  const wrapper = shallow(<SprkList element="ul" variant="indented" />);
   expect(wrapper.find('ul').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ul').hasClass('sprk-b-List--indented')).toBe(true);
 });

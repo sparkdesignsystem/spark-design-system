@@ -24,7 +24,7 @@ const SprkListDocs = () => {
       </ExampleContainer>
 
       <ExampleContainer>
-        <SprkList element="ul" idString="bare-list-1" listType="bare">
+        <SprkList element="ul" idString="bare-list-1" variant="bare">
           <SprkListItem idString='list-item-8'>Bare List Item</SprkListItem>
           <SprkListItem idString='list-item-9'>Bare List Item</SprkListItem>
           <SprkListItem idString='list-item-10'>Bare List Item</SprkListItem>
@@ -33,7 +33,7 @@ const SprkListDocs = () => {
 
       <ExampleContainer>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum.</p>
-        <SprkList element="ol" idString="indented-list-1" listType="indented">
+        <SprkList element="ol" idString="indented-list-1" variant="indented">
           <SprkListItem idString='list-item-11'>Indented List Item</SprkListItem>
           <SprkListItem idString='list-item-12'>Indented List Item</SprkListItem>
           <SprkListItem idString='list-item-13'>Indented List Item</SprkListItem>

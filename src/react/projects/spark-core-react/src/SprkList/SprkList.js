@@ -3,12 +3,12 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const SprkList = (props) => {
-  const { element, children, listType, additionalClasses, idString, ...other  } = props;
+  const { element, children, variant, additionalClasses, idString, ...other  } = props;
   const classNames = classnames(
     'sprk-b-List',
     additionalClasses, {
-      'sprk-b-List--indented': listType === 'indented',
-      'sprk-b-List--bare': listType === 'bare',
+      'sprk-b-List--indented': variant === 'indented',
+      'sprk-b-List--bare': variant === 'bare',
     },
   )
   const TagName = element;
@@ -25,7 +25,7 @@ SprkList.propTypes = {
   // The children that will be rendered inside the list
   children: PropTypes.node,
   // The list variant that determines the class names
-  listType: PropTypes.oneOf(['indented', 'bare']),
+  variant: PropTypes.oneOf(['indented', 'bare']),
   //The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the link
