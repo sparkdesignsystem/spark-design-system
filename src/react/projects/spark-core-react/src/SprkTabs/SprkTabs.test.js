@@ -236,7 +236,6 @@ describe('SprkTabs Component', () => {
     expect(wrapper.find('.sprk-c-Tabs').getDOMNode().getAttribute('aria-orientation')).toEqual('vertical');
   });
 
-
   it('should not create a tab button for an element inside Tabs that is not a SprkTabsPanel', () => {
     const wrapper = mount(
       <SprkTabs>

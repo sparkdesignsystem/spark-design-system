@@ -9,7 +9,7 @@ import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 /*
 * This component expects SprkTabsPanel children.
 * It loops through each provided SprkTabsPanel
-* and creates a tab button for each tab.
+* and creates a SprkTabsButton for each tab.
 */
 class SprkTabs extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Find the child tab button that we want
+  * Find the SprkTabsButton that we want
   * active by default (isDefaultActive would be set on tab panel)
   * and update state with that tab button ID.
   */
@@ -69,7 +69,7 @@ class SprkTabs extends Component {
 
   /*
   * Get the index of the active tab
-  * by finding it from our state array of btn ids
+  * by finding it from our state array of btn IDs.
   */
   getActiveTabIndex() {
     const { isActive, btnIds } = this.state;
@@ -154,7 +154,7 @@ class SprkTabs extends Component {
 
   /*
   * Switch aria-orientation to vertical on
-  * narrow viewports (based on _tabs.scss breakpoint)
+  * narrow viewports (based on _tabs.scss breakpoint).
   */
   updateAriaOrientation(width, element, breakpoint) {
     this.width = width;
@@ -169,8 +169,7 @@ class SprkTabs extends Component {
 
   /*
   * Get the ID of the clicked tab
-  * and update the active tab ID
-  * in component state.
+  * and update state with the active tab ID.
   */
   handleTabClick(e) {
     const btnTabId = e.currentTarget.id;
@@ -186,9 +185,9 @@ class SprkTabs extends Component {
     } = this.props;
 
     /*
-    * Loop through all the Tab Panels and
-    * generate a Tab Button for each one.
-    * Don't render a Tab Button
+    * Loop through all the SprkTabsPanels and
+    * generate a SprkTabsButton for each one.
+    * Don't render a SprkTabsButton
     * for an element that is not a SprkTabsPanel.
     */
     const buttons = children.map((tabPanel, index) => {
@@ -226,9 +225,9 @@ class SprkTabs extends Component {
     });
 
     /*
-    * Loop through all the Tab Panels and return
+    * Loop through all the SprkTabsPanels and return
     * new SprkTabsPanels for each one with
-    * their respective props. Don't render a Tab Panel
+    * their respective props. Don't render a SprkTabsPanel
     * for an element that is not a SprkTabsPanel.
     */
     const panels = children.map((tabPanel, index) => {
