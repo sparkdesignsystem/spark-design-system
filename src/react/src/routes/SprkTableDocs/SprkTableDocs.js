@@ -12,23 +12,22 @@ const SprkTableDocs = () => {
         <SprkTable 
           additionalTableClasses="sprk-b-Table--spacing-medium"
           idString="table-1"
-          columns={[
-            { header: 'Column Heading', name: 'column1'},
-            { header: 'Column Heading 2', name: 'column2'},
-            { header: 'Column Heading 3', name: 'column3'}
+          columnNames = {[
+            {displayText: 'Name', key: "name"},
+            {displayText: 'Email', key: 'email'},
+            {displayText: 'Phone Number', key: 'phoneNumber'},
+            {displayText: 'Notes', key: 'notes'},
+            {displayText: 'Friends', key: 'friends', subHeadings: [{displayText:'Blonde',key: 'blonde'}, {displayText: 'Brunette', key: 'brunette'}, {displayText: 'Red', key: 'red'}]}
           ]}
-          rows={[
-            { column1: 1, column2: 'Data 1', column3: 'Data 2' },
-            { column1: 2, column2: 'Data 1', column3: 'Data 2' },
-            { column1: 3, column2: 'Data 1', column3: 'Data 2' },
-            { column1: 4, column2: 'Data 1', column3: 'Data 2' },
-            { column1: 5, column3: 'Data 2', column2: 'Data 1' }
+          data={[
+            {id: 1, name: 'RV Mendoza', email: 'rv@quicken.com', phoneNumber: '555*555*5555', notes: '', friends: []},
+            {id: 2, name: 'Katie Guernsey', email: 'katie@quicken.com', phoneNumber: '867*5309', notes:'1141 eanjkas', friends: ['Lina','James','Ronald McDonald']}
           ]}
           >
         </SprkTable>
       </ExampleContainer>
 
-       <ExampleContainer>
+       {/* <ExampleContainer>
         <SprkTable 
           additionalTableClasses="sprk-b-Table--secondary sprk-b-Table--spacing-medium"
           idString="table-2"
@@ -71,48 +70,27 @@ const SprkTableDocs = () => {
           >
         </SprkTable>
       </ExampleContainer>
-{/*
+
       <ExampleContainer>
         <SprkTable 
-          additionalTableClasses="sprk-b-Table--row-comparison sprk-b-Table--spacing-medium" 
-          idString="table-4">
-          <thead>
-            <tr>
-              <th className="sprk-b-Table__empty-heading"></th>
-              <th>Column Heading</th>
-              <th>Column Heading</th>
-              <th>Column Heading</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Row Heading</th>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-            <tr>
-              <th>Row Heading</th>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-            <tr>
-              <th>Row Heading</th>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-            <tr>
-              <th>Row Heading</th>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-          </tbody>
+          additionalTableClasses="sprk-b-Table--spacing-medium" 
+          idString="table-4"
+          rowComparison
+          columns={[
+            { header: 'Column Heading 1', name: 'column1'},
+            { header: 'Column Heading 2', name: 'column2'},
+            { header: 'Column Heading 3', name: 'column3'}
+          ]}
+          rows={[
+            {column1: 'Data 1',  column2: 'Data 2', column3: "Data 3" },
+            {column1: 'Data 1',  column2: 'Data 2', column3: "Data 3" },
+            {column1: 'Data 1',  column2: 'Data 2', column3: "Data 3" },
+            {column1: 'Data 1',  column2: 'Data 2', column3: "Data 3" },
+          ]}
+          >
         </SprkTable>
-      </ExampleContainer>
-
+      </ExampleContainer> */}
+{/*}
       <ExampleContainer>
         <SprkTable 
           additionalTableClasses="sprk-b-Table--secondary-row-comparison sprk-b-Table--spacing-medium" 
