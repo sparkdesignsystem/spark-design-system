@@ -19,7 +19,7 @@ class Router extends React.Component {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/buttons" component={SprkButtonDocs} />
           <Route exact path="/links" component={SprkLinkDocs} />
-          <Route exact path="/lists" component={SprkListDocs} />
+          <Route exact path="/list" component={SprkListDocs} />
           <Route exact path="/promos" component={SprkPromoDocs} />
           <Route exact path="/dividers" component={SprkDividerDocs} />
           <Route exact path="/alerts" component={SprkAlertDocs} />
