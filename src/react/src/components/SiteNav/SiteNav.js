@@ -16,6 +16,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/promos" className="drizzle-b-Link drizzle-b-Link--light">
+            Promos
+          </Link>
+        </li>
+        <li>
           <Link to="/link" className="drizzle-b-Link drizzle-b-Link--light">
             Link
           </Link>
@@ -41,6 +46,13 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/alerts" className="drizzle-b-Link drizzle-b-Link--light">
+            Alerts
+          </Link>
+        </li>
+        <li>
+          <Link to="/highlightboard" className="drizzle-b-Link drizzle-b-Link--light">
+            Highlight Board
           <Link to="/dividers" className="drizzle-b-Link drizzle-b-Link--light">
             Dividers
           </Link>
