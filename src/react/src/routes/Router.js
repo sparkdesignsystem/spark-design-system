@@ -11,25 +11,21 @@ import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
 import NotFound from './NotFound/NotFound';
 
-class Router extends React.Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/buttons" component={SprkButtonDocs} />
-          <Route exact path="/links" component={SprkLinkDocs} />
-          <Route exact path="/promos" component={SprkPromoDocs} />
-          <Route exact path="/dividers" component={SprkDividerDocs} />
-          <Route exact path="/alerts" component={SprkAlertDocs} />
-          <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
-          <Route exact path="/dictionary" component={SprkDictionaryDocs} />
-          <Route exact path="/tabs" component={SprkTabsDocs} />
-          <Route component={NotFound} />
-        </Switch>
-      </BrowserRouter>
-    );
-  }
-}
+const Router = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route exact path="/buttons" component={SprkButtonDocs} />
+      <Route exact path="/links" component={SprkLinkDocs} />
+      <Route exact path="/promos" component={SprkPromoDocs} />
+      <Route exact path="/dividers" component={SprkDividerDocs} />
+      <Route exact path="/alerts" component={SprkAlertDocs} />
+      <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
+      <Route exact path="/dictionary" component={SprkDictionaryDocs} />
+      <Route exact path="/tabs" component={SprkTabsDocs} />
+      <Route component={NotFound} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Router;
