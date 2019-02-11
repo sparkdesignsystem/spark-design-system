@@ -70,7 +70,7 @@ describe('SprkTabs Component', () => {
   it('should show the Tab Panel content for the tab button that was clicked', () => {
     const wrapper = mount(
       <SprkTabs>
-        <SprkTabsPanel tabBtnClickFunc={() => console.log('Button clicked')} tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+        <SprkTabsPanel tabBtnClickFunc={() => {}} tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
         <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
       </SprkTabs>,
     );

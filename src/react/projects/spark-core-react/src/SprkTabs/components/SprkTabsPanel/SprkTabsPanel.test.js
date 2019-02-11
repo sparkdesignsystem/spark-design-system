@@ -1,6 +1,6 @@
 /* global it expect describe */
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkTabs from '../../SprkTabs';
 import SprkTabsPanel from './SprkTabsPanel';
@@ -9,13 +9,13 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkTabs Component', () => {
   it('should display a Tab Panel element with the correct base class', () => {
-    const wrapper = mount(
-      <SprkTabs>
-        <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
-        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
-      </SprkTabs>,
-    );
-    expect(wrapper.find('.sprk-c-Tabs__content').length).toBe(2);
+    const wrapper = shallow(<SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>);
+    expect(wrapper.find('.sprk-c-Tabs__content').length).toBe(1);
+  });
+
+  it('should add classes when tabPanelAddClasses has a value', () => {
+    const wrapper = mount(<SprkTabsPanel tabBtnChildren="Tab 1" tabPanelAddClasses="test">Test Content 1</SprkTabsPanel>);
+    expect(wrapper.find('.sprk-c-Tabs__content.test').length).toBe(1);
   });
 
   it('should focus the corresponding Tab Panel when the tab key is pressed', () => {

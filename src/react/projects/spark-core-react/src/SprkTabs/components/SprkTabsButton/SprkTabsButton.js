@@ -56,7 +56,7 @@ SprkTabsButton.defaultProps = {
   isFocused: false,
   ariaControls: '',
   tabBtnAddClasses: '',
-  ariaSelected: '',
+  ariaSelected: false,
   onTabClick: () => {},
   tabBtnAnalytics: '',
   tabBtnDataId: '',
