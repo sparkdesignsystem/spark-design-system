@@ -60,6 +60,11 @@ function SiteNav() {
             Promos
           </Link>
         </li>
+        <li>
+          <Link to="/tabs" className="drizzle-b-Link drizzle-b-Link--light">
+            Tabs
+          </Link>
+        </li>
       </ul>
     </nav>
   );
