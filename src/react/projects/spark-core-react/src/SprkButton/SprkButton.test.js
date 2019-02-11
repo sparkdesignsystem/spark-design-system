@@ -1,3 +1,4 @@
+/* global it expect */
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -6,7 +7,7 @@ import SprkButton from './SprkButton';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should display a button element with the correct base class', () => {
-  const wrapper = shallow(<SprkButton/>);
+  const wrapper = shallow(<SprkButton />);
   expect(wrapper.find('button.sprk-c-Button').length).toBe(1);
 });
 
@@ -38,6 +39,16 @@ it('if loading is set, should render the spinner', () => {
 it('should add role=button if an anchor is rendered', () => {
   const wrapper = mount(<SprkButton element="a" href="#nogo" />);
   expect(wrapper.find('[role="button"]').length).toBe(1);
+});
+
+it('should add data-id if idString is supplied', () => {
+  const wrapper = mount(<SprkButton idString="button-1" />);
+  expect(wrapper.find('[data-id="button-1"]').length).toBe(1);
+});
+
+it('should add data-analytics if analyticsString is supplied', () => {
+  const wrapper = mount(<SprkButton analyticsString="button-1" />);
+  expect(wrapper.find('[data-analytics="button-1"]').length).toBe(1);
 });
 
 it('should apply any unknown props as attributes on the element', () => {

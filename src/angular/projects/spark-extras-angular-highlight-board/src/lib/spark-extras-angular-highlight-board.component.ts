@@ -104,11 +104,6 @@ export class SparkHighlightBoardComponent {
           'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked'
         );
         break;
-      case 'fullWidth':
-        classArray.push(
-          'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--has-image'
-        );
-        break;
       default:
         classArray.push('sprk-c-HighlightBoard--has-image');
         break;
