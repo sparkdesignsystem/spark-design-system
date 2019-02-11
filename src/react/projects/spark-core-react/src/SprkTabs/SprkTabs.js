@@ -273,8 +273,8 @@ class SprkTabs extends Component {
 }
 
 SprkTabs.defaultProps = {
-  idString: undefined,
-  additionalClasses: undefined,
+  idString: '',
+  additionalClasses: '',
   breakpoint: 736,
 };
 

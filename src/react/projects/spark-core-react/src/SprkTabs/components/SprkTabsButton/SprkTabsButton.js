@@ -54,12 +54,12 @@ class SprkTabsButton extends Component {
 SprkTabsButton.defaultProps = {
   isActive: false,
   isFocused: false,
-  ariaControls: undefined,
-  tabBtnAddClasses: undefined,
-  ariaSelected: undefined,
-  onTabClick: undefined,
-  tabBtnAnalytics: undefined,
-  tabBtnDataId: undefined,
+  ariaControls: '',
+  tabBtnAddClasses: '',
+  ariaSelected: '',
+  onTabClick: () => {},
+  tabBtnAnalytics: '',
+  tabBtnDataId: '',
 };
 
 SprkTabsButton.propTypes = {
