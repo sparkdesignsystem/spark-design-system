@@ -182,73 +182,67 @@ class SprkTabs extends Component {
       ...other
     } = this.props;
 
+    const buttons = [];
+    const panels = [];
+
     /*
     * Loop through all the SprkTabsPanels and
     * generate a SprkTabsButton for each one.
     * Don't render a SprkTabsButton
     * for an element that is not a SprkTabsPanel.
     */
-    const buttons = children.map((tabPanel, index) => {
-      const {
-        tabBtnChildren,
-        tabBtnAddClasses,
-        tabBtnDataId,
-        tabBtnAnalytics,
-        tabBtnClickFunc,
-      } = tabPanel.props;
-      const { isFocused, isActive, btnIds } = this.state;
+    const generateTabs = () => {
+      children.forEach((tabPanel, index) => {
+        const {
+          children: tabPanelChildren,
+          tabPanelAddClasses,
+          tabBtnChildren,
+          tabBtnAddClasses,
+          tabBtnDataId,
+          tabBtnAnalytics,
+          tabBtnClickFunc,
+        } = tabPanel.props;
 
-      if (tabPanel.type.name !== SprkTabsPanel.name) return false;
+        const { isFocused, isActive, btnIds } = this.state;
 
-      return (
-        <SprkTabsButton
-          key={btnIds[index]}
-          isFocused={isFocused === btnIds[index]}
-          isActive={isActive === btnIds[index]}
-          ariaControls={`target-${btnIds[index]}`}
-          ariaSelected={isActive === btnIds[index]}
-          tabBtnId={btnIds[index]}
-          onTabClick={(e) => {
-            this.handleTabClick(e);
-            if (tabBtnClickFunc) {
-              tabBtnClickFunc();
-            }
-          }}
-          tabBtnAddClasses={tabBtnAddClasses}
-          tabBtnChildren={tabBtnChildren}
-          tabBtnDataId={tabBtnDataId}
-          tabBtnAnalytics={tabBtnAnalytics}
-        />
-      );
-    });
+        if (tabPanel.type.name !== SprkTabsPanel.name) return;
 
-    /*
-    * Loop through all the SprkTabsPanels and return
-    * new SprkTabsPanels for each one with
-    * their respective props. Don't render a SprkTabsPanel
-    * for an element that is not a SprkTabsPanel.
-    */
-    const panels = children.map((tabPanel, index) => {
-      const {
-        children: tabPanelChildren,
-        tabPanelAddClasses,
-      } = tabPanel.props;
-      const { isActive, btnIds } = this.state;
+        buttons.push(
+          <SprkTabsButton
+            key={btnIds[index]}
+            isFocused={isFocused === btnIds[index]}
+            isActive={isActive === btnIds[index]}
+            ariaControls={`target-${btnIds[index]}`}
+            ariaSelected={isActive === btnIds[index]}
+            tabBtnId={btnIds[index]}
+            onTabClick={(e) => {
+              this.handleTabClick(e);
+              if (tabBtnClickFunc) {
+                tabBtnClickFunc();
+              }
+            }}
+            tabBtnAddClasses={tabBtnAddClasses}
+            tabBtnChildren={tabBtnChildren}
+            tabBtnDataId={tabBtnDataId}
+            tabBtnAnalytics={tabBtnAnalytics}
+          />,
+        );
 
-      if (tabPanel.type.name !== SprkTabsPanel.name) return false;
+        panels.push(
+          <SprkTabsPanel
+            tabBtnId={btnIds[index]}
+            key={btnIds[index]}
+            ariaControls={`target-${btnIds[index]}`}
+            isActive={isActive === btnIds[index]}
+            tabPanelAddClasses={tabPanelAddClasses}
+          >
+            {tabPanelChildren}
+          </SprkTabsPanel>,
+        );
+      });
+    };
 
-      return (
-        <SprkTabsPanel
-          tabBtnId={btnIds[index]}
-          key={btnIds[index]}
-          ariaControls={`target-${btnIds[index]}`}
-          isActive={isActive === btnIds[index]}
-          tabPanelAddClasses={tabPanelAddClasses}
-        >
-          {tabPanelChildren}
-        </SprkTabsPanel>
-      );
-    });
+    generateTabs();
 
     return (
       <div
