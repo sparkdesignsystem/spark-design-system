@@ -35,12 +35,11 @@ class SprkTabs extends Component {
   */
   componentDidMount() {
     const { breakpoint } = this.props;
-    const tabsContainer = this.tabsContainerRef;
 
     this.setDefaultActiveTab();
-    this.updateAriaOrientation(window.innerWidth, tabsContainer, breakpoint);
+    this.updateAriaOrientation(window.innerWidth, breakpoint);
     window.addEventListener('resize', () => {
-      this.updateAriaOrientation(window.innerWidth, tabsContainer, breakpoint);
+      this.updateAriaOrientation(window.innerWidth, breakpoint);
     });
   }
 
@@ -156,14 +155,13 @@ class SprkTabs extends Component {
   * Switch aria-orientation to vertical on
   * narrow viewports (based on _tabs.scss breakpoint).
   */
-  updateAriaOrientation(width, element, breakpoint) {
-    this.width = width;
-    this.element = element;
-    this.breakpoint = breakpoint;
+  updateAriaOrientation(width, breakpoint) {
+    const tabsContainer = this.tabsContainerRef;
+
     if (width <= breakpoint) {
-      element.current.setAttribute('aria-orientation', 'vertical');
+      tabsContainer.current.setAttribute('aria-orientation', 'vertical');
     } else {
-      element.current.setAttribute('aria-orientation', 'horizontal');
+      tabsContainer.current.setAttribute('aria-orientation', 'horizontal');
     }
   }
 
