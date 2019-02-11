@@ -21,7 +21,7 @@ class SprkDropdown extends Component {
     this.closeDropdown = this.closeDropdown.bind(this);
     this.selectChoice = this.selectChoice.bind(this);
     this.setSelectedChoice = this.setSelectedChoice.bind(this);
-    this.myRef = React.createRef();
+    this.dropdownRef = React.createRef();
   }
 
   componentDidMount() {
@@ -66,7 +66,7 @@ class SprkDropdown extends Component {
   }
 
   closeOnClickOutside(e) {
-    if (!this.myRef.current.contains(e.target)) {
+    if (!this.dropdownRef.current.contains(e.target)) {
       this.closeDropdown();
     }
   }
@@ -94,7 +94,7 @@ class SprkDropdown extends Component {
     const { choiceFunction, footer } = choices;
     const { choiceItems, isOpen, triggerText } = this.state;
     return (
-      <div ref={this.myRef}>
+      <div ref={this.dropdownRef}>
         <a
           className={classNames(
             'sprk-b-Link',
