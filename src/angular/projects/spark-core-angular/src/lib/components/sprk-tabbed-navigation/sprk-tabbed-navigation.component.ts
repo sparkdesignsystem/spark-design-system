@@ -22,8 +22,8 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
 @Component({
   selector: 'sprk-tabbed-navigation',
   template: `
-    <div [ngClass]="getClasses()" role="tablist" [attr.data-id]="idString">
-      <div class="sprk-c-Tabs__buttons">
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
+      <div class="sprk-c-Tabs__buttons" role="tablist">
         <ng-content select="[sprkTabbedNavigationTab]"></ng-content>
       </div>
       <ng-content select="[sprkTabbedNavigationPane]"></ng-content>

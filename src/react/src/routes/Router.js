@@ -5,7 +5,6 @@ import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import SprkPromoDocs from './SprkPromoDocs/SprkPromoDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
-import NotFound from './NotFound/NotFound';
 import SprkTableDocs from './SprkTableDocs/SprkTableDocs';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
 import SprkMastheadDefaultDocs from './SprkMastheadDefaultDocs/SprkMastheadDefaultDocs';
@@ -13,7 +12,9 @@ import SprkMastheadExtendedDocs from './SprkMastheadExtendedDocs/SprkMastheadExt
 import SprkDropdownDocs from './SprkDropdownDocs/SprkDropdownDocs';
 import SprkHighlightBoardDocs from './SprkHighlightBoardDocs/SprkHighlightBoardDocs';
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
+import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
 import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
+import NotFound from './NotFound/NotFound';
 
 const Router = () => (
   <BrowserRouter>
@@ -31,6 +32,7 @@ const Router = () => (
       <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
       <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
       <Route exact path="/dictionary" component={SprkDictionaryDocs} />
+      <Route exact path="/tabs" component={SprkTabsDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
