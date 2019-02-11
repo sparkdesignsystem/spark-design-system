@@ -9,8 +9,8 @@ class SprkTabsButton extends Component {
   }
 
   componentDidUpdate() {
-    const { isFocused, tabBtnId } = this.props;
-    if ((isFocused !== undefined) && (isFocused === tabBtnId)) {
+    const { isFocused } = this.props;
+    if (isFocused) {
       this.tabBtnRef.current.focus();
     }
   }
@@ -52,9 +52,8 @@ class SprkTabsButton extends Component {
 }
 
 SprkTabsButton.defaultProps = {
-  tabBtnChildren: undefined,
   isActive: false,
-  isFocused: undefined,
+  isFocused: false,
   ariaControls: undefined,
   tabBtnAddClasses: undefined,
   ariaSelected: undefined,
@@ -65,14 +64,14 @@ SprkTabsButton.defaultProps = {
 
 SprkTabsButton.propTypes = {
   // The content for the button
-  tabBtnChildren: PropTypes.node,
+  tabBtnChildren: PropTypes.node.isRequired,
   // Value supplied decides if button is active
   isActive: PropTypes.bool,
   // A unique ID for each tab button
   tabBtnId: PropTypes.string.isRequired,
   // State passed from parent that contains an id of a btn tab
   // when the corresponding panel should be focused
-  isFocused: PropTypes.string,
+  isFocused: PropTypes.bool,
   // The aria ID to use for each tab panel so it corresponds to the button
   ariaControls: PropTypes.string,
   // A string of additional classes to be applied to the tab panel

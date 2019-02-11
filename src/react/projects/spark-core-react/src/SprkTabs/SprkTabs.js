@@ -203,7 +203,7 @@ class SprkTabs extends Component {
       return (
         <SprkTabsButton
           key={btnIds[index]}
-          isFocused={isFocused}
+          isFocused={isFocused === btnIds[index]}
           isActive={isActive === btnIds[index]}
           ariaControls={`target-${btnIds[index]}`}
           ariaSelected={isActive === btnIds[index]}
