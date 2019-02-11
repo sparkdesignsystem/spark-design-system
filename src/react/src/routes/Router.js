@@ -9,6 +9,8 @@ import NotFound from './NotFound/NotFound';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
 import SprkHighlightBoardDocs from './SprkHighlightBoardDocs/SprkHighlightBoardDocs';
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
+import SprkPaginationDocs from './SprkPaginationDocs/SprkPaginationDocs';
+
 
 class Router extends React.Component {
   render() {
@@ -23,6 +25,7 @@ class Router extends React.Component {
           <Route exact path="/alerts" component={SprkAlertDocs} />
           <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
           <Route exact path="/dictionary" component={SprkDictionaryDocs} />
+          <Route exact path="/pagination" component={SprkPaginationDocs} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

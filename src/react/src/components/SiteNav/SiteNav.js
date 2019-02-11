@@ -40,6 +40,11 @@ function SiteNav(props) {
             Dictionary
           </Link>
         </li>
+        <li>
+          <Link to="/pagination" className="drizzle-b-Link drizzle-b-Link--light">
+            Pagination
+          </Link>
+        </li>
       </ul>
     </nav>
   );
