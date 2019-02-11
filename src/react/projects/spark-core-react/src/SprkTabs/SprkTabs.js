@@ -34,13 +34,13 @@ class SprkTabs extends Component {
   * Update aria-orientation and listen for resizes for future updates.
   */
   componentDidMount() {
-    const tabsBreakpoint = 736;
+    const { breakpoint } = this.props;
     const tabsContainer = this.tabsContainerRef;
 
     this.setDefaultActiveTab();
-    this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
+    this.updateAriaOrientation(window.innerWidth, tabsContainer, breakpoint);
     window.addEventListener('resize', () => {
-      this.updateAriaOrientation(window.innerWidth, tabsContainer, tabsBreakpoint);
+      this.updateAriaOrientation(window.innerWidth, tabsContainer, breakpoint);
     });
   }
 
@@ -160,7 +160,7 @@ class SprkTabs extends Component {
     this.width = width;
     this.element = element;
     this.breakpoint = breakpoint;
-    if (this.width <= this.breakpoint) {
+    if (width <= breakpoint) {
       element.current.setAttribute('aria-orientation', 'vertical');
     } else {
       element.current.setAttribute('aria-orientation', 'horizontal');
@@ -277,6 +277,7 @@ class SprkTabs extends Component {
 SprkTabs.defaultProps = {
   idString: undefined,
   additionalClasses: undefined,
+  breakpoint: 736,
 };
 
 SprkTabs.propTypes = {
@@ -286,6 +287,8 @@ SprkTabs.propTypes = {
   idString: PropTypes.string,
   // A string of additional classes for the Tabs component
   additionalClasses: PropTypes.string,
+  // Breakpoint for the aria-orientation switch from y to x
+  breakpoint: PropTypes.number,
 };
 
 export default SprkTabs;
