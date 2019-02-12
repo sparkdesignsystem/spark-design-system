@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkIcon from '../SprkIcon/SprkIcon';
 
-
 const SprkFooter = (props) => {
   const {
     additionalClasses,
