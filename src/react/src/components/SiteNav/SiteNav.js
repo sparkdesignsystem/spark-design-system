@@ -65,6 +65,11 @@ function SiteNav() {
             Tabs
           </Link>
         </li>
+        <li>
+          <Link to="/footer" className="drizzle-b-Link drizzle-b-Link--light">
+            Footer
+          </Link>
+        </li>
       </ul>
     </nav>
   );
