@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SprkAlert, SprkButton, SprkTextInput, SprkErrorContainer } from '@sparkdesignsystem/spark-core-react';
+import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-core-react';
 
 class FormExample extends Component {
   constructor(props) {
