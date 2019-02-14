@@ -24,6 +24,7 @@ const SprkTable = (props) => {
     {'sprk-b-Table--secondary' : variant === "secondary"},
     {'sprk-b-Table--secondary-row-comparison' : variant === "secondaryRowComparison"},
     {'sprk-b-Table--grouped-columns' : variant === "grouped"},
+    {'sprk-b-Table--row-comparison' : variant === 'rowComparison'},
     additionalTableClasses 
   );
 
@@ -87,6 +88,37 @@ const SprkTable = (props) => {
       </div>
     )
   }
+
+  if(variant === 'rowComparison' || variant === 'secondaryRowComparison') {
+    return (
+      <div className={wrapperClassNames} data-id={idString}>
+        <table className={tableClassNames} {...other}>
+          <thead className="sprk-b-Table__head">
+            <tr>
+              <th class="sprk-b-Table__empty-heading"></th>
+              {columns.map(col => {
+                return <th key={col.key}>{col.header}</th>
+              })}
+            </tr>
+          </thead>
+          
+          {data &&
+          <tbody>
+          {data.map(row => 
+            <tr key={row.key}>
+                <th>{row.rowHeading}</th>
+              {columns.map( col => 
+                <td key={col.key}>{row[col.key]}</td>  
+              )}
+            </tr>  
+          )}
+          </tbody>
+          }
+        </table>
+      </div>
+    );
+  }
+
 }
 
 export default SprkTable;
