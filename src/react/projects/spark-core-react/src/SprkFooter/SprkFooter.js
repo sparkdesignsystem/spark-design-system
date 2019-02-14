@@ -175,6 +175,8 @@ SprkFooter.defaultProps = {
   linkColumns: {},
   connectIcons: {},
   awards: {},
+  additionalIcons: [],
+  paragraphs: [],
 };
 
 SprkFooter.propTypes = {
@@ -234,6 +236,17 @@ SprkFooter.propTypes = {
       addClasses: PropTypes.string,
     })),
   }),
+  // Data used for additional icons at bottom of footer
+  additionalIcons: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    href: PropTypes.string,
+    addClasses: PropTypes.string,
+    screenReaderText: PropTypes.string,
+  })),
+  // The paragraphs, copyright info, etc
+  paragraphs: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+  })),
 };
 
 export default SprkFooter;
