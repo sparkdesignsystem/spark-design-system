@@ -10,7 +10,7 @@ const SprkTableDocs = () => {
       
       <ExampleContainer>
         <SprkTable 
-          variant="rowComparison"
+          variant="secondaryRowComparison"
           additionalTableClasses="sprk-b-Table--spacing-medium"
           idString="table-1"
           // columns={[[{key: 'email', header: 'Email', rowspan: 2}, {key: 'name', header: 'Name', colspan: 2}, {key: 'phoneNumber', header: 'Phone Number', rowspan: 2}],[{key: 'firstName', header: 

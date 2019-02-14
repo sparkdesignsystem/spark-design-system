@@ -89,7 +89,7 @@ const SprkTable = (props) => {
     )
   }
 
-  if(variant === 'rowComparison' || variant === 'secondaryRowComparison') {
+  if(variant === 'rowComparison') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
@@ -119,6 +119,51 @@ const SprkTable = (props) => {
     );
   }
 
+  if(variant === 'secondaryRowComparison') {
+    return (
+      <div className={wrapperClassNames} data-id={idString}>
+        <table className={tableClassNames} {...other}>
+          { data &&
+          <tbody>
+            {data.map(row => 
+            <tr key={row.key}>
+              <th>{row.rowHeading}</th>
+              {columns.map( col => 
+              <td key={col.key}>{row[col.key]}</td>  
+              )}
+            </tr>  
+            )}
+          </tbody>
+          }
+        </table>
+      </div>
+    )
+  }
+
+}
+
+SprkTable.propTypes = {
+  // An array used to render the table headings
+  columns: PropTypes.array,
+  // An array of objects used to map and render the table row data
+  data: PropTypes.arrayOf(PropTypes.object),
+  // A string to determine what variant of the table should render
+  variant: PropTypes.oneOf(['secondary', 'grouped', 'rowComparison', 'secondaryRowComparison']),
+  // The string to use for the data-id attribute
+  idString: PropTypes.string,
+  // Any additional classes to add to the table wrapper
+  additionalClasses: PropTypes.string,
+  // Any additional classes to add to the table
+  additionalTableClasses: PropTypes.string,
+}
+
+SprkTable.defaultProps = {
+  columms: [],
+  data: [],
+  variant: '',
+  idString: '',
+  additionalClasses: '',
+  additionalTableClasses: '',
 }
 
 export default SprkTable;
