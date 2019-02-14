@@ -38,7 +38,7 @@ const globalItems = {
       ),
     },
     {
-      mediaType: 'icon',
+      mediaType: 'SprkIcon',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       iconName: 'house',

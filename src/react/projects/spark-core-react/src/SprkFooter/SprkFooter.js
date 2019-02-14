@@ -35,10 +35,20 @@ const SprkFooter = (props) => {
                   <div className="sprk-o-Stack__item">
                     <a className="sprk-b-Link sprk-b-Link--plain" href={item.mediaHref}>
                       {item.mediaType === 'image'
-                        && <img className={item.mediaAddClasses} src={item.src} alt={item.altText} />
+                        && (
+                          <img
+                            className={item.mediaAddClasses}
+                            src={item.src}
+                            alt={item.altText}
+                          />
+                        )
                       }
-                      {item.mediaType === 'icon'
-                        && <SprkIcon iconName={item.iconName} additionalClasses={item.mediaAddClasses} />
+                      {item.mediaType === 'SprkIcon'
+                        && (
+                          <SprkIcon
+                            iconName={item.iconName}
+                            additionalClasses={item.mediaAddClasses} />
+                        )
                       }
                       {item.mediaType === 'svg'
                         && <span>{item.svg}</span>
@@ -187,7 +197,7 @@ SprkFooter.propTypes = {
     heading: PropTypes.string,
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for the global item's media
-      mediaType: PropTypes.oneOf(['image', 'svg']),
+      mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
       // Assigned to src attribute of the image
       src: PropTypes.string,
       // Assigned to href
@@ -201,21 +211,21 @@ SprkFooter.propTypes = {
     })),
   }),
   // The data for the columns of site links
-  linkColumns: PropTypes.shape({
+  linkColumns: PropTypes.arrayOf(PropTypes.shape({
     heading: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.shape({
       // The link href
-      href: PropTypes.oneOf(['image', 'svg']),
+      href: PropTypes.string,
       // The link text
       text: PropTypes.string,
     })),
-  }),
+  })),
   // The icons to use in the connect section
   connectIcons: PropTypes.shape({
     heading: PropTypes.string,
     icons: PropTypes.arrayOf(PropTypes.shape({
       // The link href for the icon
-      href: PropTypes.oneOf(['image', 'svg']),
+      href: PropTypes.string,
       // The name of the icon
       name: PropTypes.string,
       // Text used for screen readers
@@ -227,7 +237,7 @@ SprkFooter.propTypes = {
     heading: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.shape({
       // The link href for the image
-      href: PropTypes.oneOf(['image', 'svg']),
+      href: PropTypes.string,
       // The image src
       src: PropTypes.string,
       // Image alt text
