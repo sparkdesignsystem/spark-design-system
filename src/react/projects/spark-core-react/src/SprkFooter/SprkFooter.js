@@ -3,28 +3,21 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../SprkIcon/SprkIcon';
+import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 
 class SprkFooter extends Component {
   constructor(props) {
     super(props);
     const {
-      globalItems,
       linkColumns,
       connectIcons,
       awards,
       additionalIcons,
       paragraphs,
     } = props;
-
-    const globalItemsLinks = props.globalItems.items;
-    const connectIconsItems = props.connectIcons.icons;
-    const awardsImages = props.awards.images;
-
+//gloabl connectIcons awards
     this.state = {
-      globalItemsLinks: globalItemsLinks.map(
-        item => ({ heading: globalItems.heading, id: uniqueId(), ...item }),
-      ),
-      linkColumns: linkColumns.map(
+      linkColumnsHasIds: linkColumns.map(
         item => (
           {
             heading: item.heading,
@@ -35,14 +28,16 @@ class SprkFooter extends Component {
           }
         ),
       ),
-      connectIconsItems: connectIconsItems.map(
-        item => ({ heading: connectIcons.heading, id: uniqueId(), ...item }),
+      connectIconsHasIds: connectIcons.icons.map(
+        icon => ({ id: uniqueId(), ...icon }),
       ),
-      awardsImages: awardsImages.map(
-        item => ({ heading: awards.heading, id: uniqueId(), ...item }),
+      awardsImagesHasIds: awards.images.map(
+        item => ({ id: uniqueId(), ...item }),
       ),
-      additionalIcons: additionalIcons.map(icon => ({ id: uniqueId(), ...icon })),
-      paragraphs: paragraphs.map(p => ({ id: uniqueId(), ...p })),
+      additionalIconsHasIds: additionalIcons.map(
+        icon => ({ id: uniqueId(), ...icon }),
+      ),
+      paragraphsHasIds: paragraphs.map(p => ({ id: uniqueId(), ...p })),
     };
   }
 
@@ -53,15 +48,16 @@ class SprkFooter extends Component {
       additionalClasses,
       idString,
       awards,
+      paragraphs,
+      additionalIcons,
     } = this.props;
 
     const {
-      globalItemsLinks,
-      linkColumns,
-      connectIconsItems,
-      awardsImages,
-      additionalIcons,
-      paragraphs,
+      linkColumnsHasIds,
+      connectIconsHasIds,
+      awardsImagesHasIds,
+      additionalIconsHasIds,
+      paragraphsHasIds,
     } = this.state;
     const classNames = classnames(
       'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray',
@@ -72,52 +68,15 @@ class SprkFooter extends Component {
       <div className={classNames}>
         <footer className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b" role="contentinfo" data-id={idString}>
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-            {globalItems
+            {globalItems.items.length > 0
               && (
-              <div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
-                <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
-                  {globalItems.heading}
-                </h3>
-
-                {globalItemsLinks.map(item => (
-                  <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-                    <div className="sprk-o-Stack__item">
-                      <a className="sprk-b-Link sprk-b-Link--plain" href={item.mediaHref}>
-                        {item.mediaType === 'image'
-                          && (
-                            <img
-                              className={item.mediaAddClasses}
-                              src={item.src}
-                              alt={item.altText}
-                            />
-                          )
-                        }
-                        {item.mediaType === 'SprkIcon'
-                          && (
-                            <SprkIcon
-                              iconName={item.iconName}
-                              additionalClasses={item.mediaAddClasses}
-                            />
-                          )
-                        }
-                        {item.mediaType === 'svg'
-                          && <span>{item.svg}</span>
-                        }
-                      </a>
-                    </div>
-
-                    <p className="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                      {item.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+                <SprkFooterGlobalSection globalItems={globalItems} />
               )}
             <div className="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium">
               <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-                {linkColumns.length > 0
+                {linkColumnsHasIds.length > 0
                 && (
-                  linkColumns.map(column => (
+                  linkColumnsHasIds.map(column => (
                     <div
                       key={column.id}
                       className="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
@@ -140,7 +99,7 @@ class SprkFooter extends Component {
                 )}
               </div>
 
-              {connectIcons
+              {connectIcons.icons.length > 0
               && (
                 <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
                   <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
@@ -149,7 +108,7 @@ class SprkFooter extends Component {
 
                   <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
                     <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-                      {connectIconsItems.map(icon => (
+                      {connectIconsHasIds.map(icon => (
                         <li key={icon.id} className="sprk-o-Stack__item">
                           <a className="sprk-b-Link sprk-b-Link--plain" href={icon.href}>
                             <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
@@ -167,7 +126,7 @@ class SprkFooter extends Component {
           <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
 
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
-            {awards
+            {awards.images.length > 0
             && (
               <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
                 <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
@@ -175,7 +134,7 @@ class SprkFooter extends Component {
                 </h3>
 
                 <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
-                  {awardsImages.map(image => (
+                  {awardsImagesHasIds.map(image => (
                     <div key={image.id} className="sprk-o-Stack__item">
                       <a href={image.href}>
                         <img className={image.addClasses} src={image.src} alt={image.altText} />
@@ -203,19 +162,19 @@ class SprkFooter extends Component {
               </div>
             )}
 
-            {paragraphs
+            {paragraphs.length > 0
               && (
-                paragraphs.map(p => (
+                paragraphsHasIds.map(p => (
                   <p key={p.id} className="sprk-o-Stack__item sprk-b-TypeBodyFour">
                     {p.text}
                   </p>
                 ))
               )}
 
-            {additionalIcons
+            {additionalIcons.length > 0
               && (
                 <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-                  {additionalIcons.map(icon => (
+                  {additionalIconsHasIds.map(icon => (
                     <li key={icon.id} className="sprk-o-Stack__item">
                       <a className="sprk-b-Link sprk-b-Link--plain" href={icon.href}>
                         <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
@@ -236,7 +195,7 @@ SprkFooter.defaultProps = {
   additionalClasses: '',
   idString: '',
   globalItems: {},
-  linkColumns: {},
+  linkColumns: [],
   connectIcons: {},
   awards: {},
   additionalIcons: [],
