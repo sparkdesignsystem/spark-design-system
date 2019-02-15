@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SprkButton } from '@sparkdesignsystem/spark-core-react';
 
 const SprkTable = (props) => {
   
@@ -10,7 +11,9 @@ const SprkTable = (props) => {
     variant,
     idString, 
     additionalClasses, 
-    additionalTableClasses, 
+    additionalTableClasses,
+    button,
+    children, 
     ...other
   } = props;
   
@@ -120,6 +123,17 @@ const SprkTable = (props) => {
   }
 
   if(variant === 'secondaryRowComparison') {
+
+    const buttonVariant = button.variant ? button.variant : undefined;
+    const buttonClasses = button.additionalClasses ? button.classes : undefined;
+    const buttonAnalytics = button.analyticsString ? button.analyticsString : undefined;
+    const buttonChildren = button.children ? button.children : undefined;
+    const buttonDisabled = button.disabled ? button.disabled : undefined;
+    const buttonIdString = button.idString ? button.idString : undefined;
+    const buttonElement = button.element ? button.element : undefined;
+    const buttonLoading = button.loading ? button.loading : undefined;
+    const buttonRest = button.rest ? button.rest : undefined;
+  
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
@@ -131,10 +145,33 @@ const SprkTable = (props) => {
               {columns.map( col => 
               <td key={col.key}>{row[col.key]}</td>  
               )}
+              <td>
+                <SprkButton 
+                  variant={buttonVariant}
+                  additionalClasses={buttonClasses}
+                  analyticsString={buttonAnalytics}
+                  disabled={buttonDisabled}
+                  element={buttonElement}
+                  idString={buttonIdString}
+                  buttonRest
+                >
+                  {buttonChildren}
+                </SprkButton>
+              </td>
             </tr>  
             )}
           </tbody>
           }
+        </table>
+      </div>
+    )
+  }
+
+  if(variant === 'html') {
+    return (
+      <div className={wrapperClassNames} data-id={idString}>
+        <table className={tableClassNames} {...other}>
+          {children}
         </table>
       </div>
     )
@@ -148,13 +185,15 @@ SprkTable.propTypes = {
   // An array of objects used to map and render the table row data
   data: PropTypes.arrayOf(PropTypes.object),
   // A string to determine what variant of the table should render
-  variant: PropTypes.oneOf(['secondary', 'grouped', 'rowComparison', 'secondaryRowComparison']),
+  variant: PropTypes.oneOf(['secondary', 'grouped', 'rowComparison', 'secondaryRowComparison', 'html']),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the table wrapper
   additionalClasses: PropTypes.string,
   // Any additional classes to add to the table
   additionalTableClasses: PropTypes.string,
+  // And children markup to be rendered
+  children: PropTypes.node,
 }
 
 SprkTable.defaultProps = {
