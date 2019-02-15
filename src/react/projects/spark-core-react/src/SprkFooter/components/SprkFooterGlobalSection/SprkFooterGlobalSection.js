@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
 
-class SprkFooterGlobal extends Component {
+class SprkFooterGlobalSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,7 +44,7 @@ class SprkFooterGlobal extends Component {
                   )
                 }
                 {item.mediaType === 'svg'
-                  && <span>{item.svg}</span>
+                  && <div>{item.svg}</div>
                 }
               </a>
             </div>
@@ -59,11 +59,11 @@ class SprkFooterGlobal extends Component {
   }
 }
 
-SprkFooterGlobal.defaultProps = {
+SprkFooterGlobalSection.defaultProps = {
   globalItems: {},
 };
 
-SprkFooterGlobal.propTypes = {
+SprkFooterGlobalSection.propTypes = {
   // The data for the global site items
   globalItems: PropTypes.shape({
     heading: PropTypes.string,
@@ -84,4 +84,4 @@ SprkFooterGlobal.propTypes = {
   }),
 };
 
-export default SprkFooterGlobal;
+export default SprkFooterGlobalSection;
