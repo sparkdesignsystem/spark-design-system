@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../SprkIcon/SprkIcon';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
+import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
 
 class SprkFooter extends Component {
   constructor(props) {
     super(props);
     const {
       linkColumns,
-      connectIcons,
       awards,
       additionalIcons,
       paragraphs,
     } = props;
-//gloabl connectIcons awards
+// connectIcons awards
     this.state = {
       linkColumnsHasIds: linkColumns.map(
         item => (
@@ -27,9 +27,6 @@ class SprkFooter extends Component {
             )),
           }
         ),
-      ),
-      connectIconsHasIds: connectIcons.icons.map(
-        icon => ({ id: uniqueId(), ...icon }),
       ),
       awardsImagesHasIds: awards.images.map(
         item => ({ id: uniqueId(), ...item }),
@@ -54,7 +51,6 @@ class SprkFooter extends Component {
 
     const {
       linkColumnsHasIds,
-      connectIconsHasIds,
       awardsImagesHasIds,
       additionalIconsHasIds,
       paragraphsHasIds,
@@ -101,24 +97,7 @@ class SprkFooter extends Component {
 
               {connectIcons.icons.length > 0
               && (
-                <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-                  <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
-                    {connectIcons.heading}
-                  </h3>
-
-                  <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
-                    <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-                      {connectIconsHasIds.map(icon => (
-                        <li key={icon.id} className="sprk-o-Stack__item">
-                          <a className="sprk-b-Link sprk-b-Link--plain" href={icon.href}>
-                            <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
-                            <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <SprkFooterConnectIcons connectIcons={connectIcons} />
               )}
             </div>
           </div>
