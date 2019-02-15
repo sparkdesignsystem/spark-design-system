@@ -2,362 +2,183 @@ import React, { Component } from 'react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 import { SprkPagination } from '@sparkdesignsystem/spark-core-react';
-import { strict } from 'assert';
+import sampleData from './stateData.js';
+import * as _ from 'lodash';
 
 class SprkPaginationDocs extends Component {
   constructor(props) {
     super(props);
-    this.doSomethingWhenChanged = this.doSomethingWhenChanged.bind(this);
+
+    this.example_1_Updated_callback = this.example_1_Updated_callback.bind(this);
+    this.example_2_Updated_callback = this.example_2_Updated_callback.bind(this);
+    this.example_3_Updated_callback = this.example_3_Updated_callback.bind(this);
+
     this.state = {
-      tableData: stateData,
+      tableData: sampleData,
+      example1Props: {
+        currentPage: 1,
+        totalItems: sampleData.length,
+        itemsPerPage: 5
+      },
+      example2Props: {
+        currentPage: 1,
+        totalItems: sampleData.length,
+        itemsPerPage: 5
+      },
+      example3Props: {
+        currentPage: 1,
+        totalItems: sampleData.length,
+        itemsPerPage: 5
+      }
     }
   }
 
-  doSomethingWhenChanged(args) {
-    console.log(args);
-    example1Props.currentPage = args.currentPage;
-    // change the name of this func and update data
+  example_1_Updated_callback(args) {
+    this.setState({
+      example1Props: {
+        currentPage: args.currentPage,
+        totalItems: this.state.example1Props.totalItems,
+        itemsPerPage: this.state.example1Props.itemsPerPage,
+      }
+    });
+  }
+  example_2_Updated_callback(args) {
+    this.setState({
+      example2Props: {
+        currentPage: args.currentPage,
+        totalItems: this.state.example2Props.totalItems,
+        itemsPerPage: this.state.example2Props.itemsPerPage,
+      }
+    });
+  }
+  example_3_Updated_callback(args) {
+    this.setState({
+      example3Props: {
+        currentPage: args.currentPage,
+        totalItems: this.state.example3Props.totalItems,
+        itemsPerPage: this.state.example3Props.itemsPerPage,
+      }
+    });
   }
 
-  // let example1Props = {
-  //   currentPage: 1,
-  //   totalItems: stateData.length,
-  //   itemsPerPage: 10
-  // }
+  /*
+    Returns a slice of the sample data based on the page size and current page
+  */
+  sliceSampleData(itemsPerPage, currentPage) {
+    var firstIndexToInclude, lastIndexToInclude;
 
+    firstIndexToInclude = itemsPerPage * (currentPage - 1);
+    lastIndexToInclude = currentPage * itemsPerPage - 1;
 
-  // if i'm on page 2 with 10 items per page, page 1 is 0-9 and page 2 is 10-19
-
-  render(){
-
-    var showData = [];
-
-    if (example1Props.currentPage === 1){
-      var firstIndexToInclude = 0;
-      var lastIndexToInclude = firstIndexToInclude + example1Props.itemsPerPage - 1;
-    } else {
-      var firstIndexToInclude = example1Props.itemsPerPage * (example1Props.currentPage - 1);
-      var lastIndexToInclude = example1Props.currentPage * example1Props.itemsPerPage - 1;
+    if (lastIndexToInclude > this.state.tableData.length - 1){
+      lastIndexToInclude = this.state.tableData.length - 1;
     }
 
+    return this.state.tableData.slice(firstIndexToInclude, lastIndexToInclude + 1);
+  }
 
-    console.log('firstIndex: ' + firstIndexToInclude);
-    console.log('lastIndex: ' + lastIndexToInclude);
-
-    for (var i = firstIndexToInclude; i <= lastIndexToInclude; i++){
-      showData.push(this.state.tableData[i]);
-    }
-
-    console.log(showData);
-
-    var rowsMap = showData.map(usState => {
-      return (
-        <tr key={'table_1_' + usState.abbreviation}>
+  /*
+    build the table rows
+  */
+  buildTableRowMap(dataset, key){
+    return dataset.map(usState => {
+      return(
+        <tr key={_.uniqueId(key)}>
           <td>{usState.state}</td>
           <td>{usState.abbreviation}</td>
           <td>{usState.capital}</td>
         </tr>
-      );
-    });
+      )
+    })
+  }
+
+  render(){
+
+    var data1 = this.sliceSampleData(this.state.example1Props.itemsPerPage, this.state.example1Props.currentPage);
+    var data2 = this.sliceSampleData(this.state.example2Props.itemsPerPage, this.state.example2Props.currentPage);
+    var data3 = this.sliceSampleData(this.state.example3Props.itemsPerPage, this.state.example3Props.currentPage);
+
+    var example1_rowsMap = this.buildTableRowMap(data1, 'table_1_');
+    var example2_rowsMap = this.buildTableRowMap(data2, 'table_2_');
+    var example3_rowsMap = this.buildTableRowMap(data3, 'table_3_');
 
     return (
       <CentralColumnLayout>
         <ExampleContainer heading="Default Paginator">
           <div className="sprk-u-mbm">
 
-            <table>
+            <table className='drizzle-c-Table sprk-u-mbl'>
               <thead>
                 <tr>
-                  <td>State</td>
-                  <td>Abbr.</td>
-                  <td>Capital</td>
+                  <th className='sprk-u-FontWeight--bold'>State</th>
+                  <th className='sprk-u-FontWeight--bold'>Abbr.</th>
+                  <th className='sprk-u-FontWeight--bold'>Capital</th>
                 </tr>
               </thead>
               <tbody>
-                {rowsMap}
+                {example1_rowsMap}
               </tbody>
             </table>
 
             <SprkPagination
-              currentPage={example1Props.currentPage}
-              totalItems={example1Props.totalItems}
-              itemsPerPage={example1Props.itemsPerPage}
-              callback={this.doSomethingWhenChanged}
+              currentPage={this.state.example1Props.currentPage}
+              totalItems={this.state.example1Props.totalItems}
+              itemsPerPage={this.state.example1Props.itemsPerPage}
+              callback={this.example_1_Updated_callback}
             />
           </div>
         </ExampleContainer>
         <ExampleContainer heading="Long Paginator">
           <div className="sprk-u-mbm">
-            {/* <SprkPagination paginationType="long"/> */}
+          <table className='drizzle-c-Table sprk-u-mbl'>
+              <thead>
+                <tr>
+                  <th className='sprk-u-FontWeight--bold'>State</th>
+                  <th className='sprk-u-FontWeight--bold'>Abbr.</th>
+                  <th className='sprk-u-FontWeight--bold'>Capital</th>
+                </tr>
+              </thead>
+              <tbody>
+                {example2_rowsMap}
+              </tbody>
+            </table>
+
+            <SprkPagination
+              currentPage={this.state.example2Props.currentPage}
+              totalItems={this.state.example2Props.totalItems}
+              itemsPerPage={this.state.example2Props.itemsPerPage}
+              callback={this.example_2_Updated_callback}
+              variant="long"
+            />
           </div>
         </ExampleContainer>
         <ExampleContainer heading="Pager">
           <div className="sprk-u-mbm">
-            {/* <SprkPagination paginationType="pager"/> */}
+            <table className='drizzle-c-Table sprk-u-mbl'>
+              <thead>
+                <tr>
+                  <th className='sprk-u-FontWeight--bold'>State</th>
+                  <th className='sprk-u-FontWeight--bold'>Abbr.</th>
+                  <th className='sprk-u-FontWeight--bold'>Capital</th>
+                </tr>
+              </thead>
+              <tbody>
+                {example3_rowsMap}
+              </tbody>
+            </table>
+
+            <SprkPagination
+              currentPage={this.state.example3Props.currentPage}
+              totalItems={this.state.example3Props.totalItems}
+              itemsPerPage={this.state.example3Props.itemsPerPage}
+              callback={this.example_3_Updated_callback}
+              variant="pager"
+            />
           </div>
         </ExampleContainer>
       </CentralColumnLayout>
     );
   }
 };
-
-const stateData = [
-  {
-    state: 'Alabama',
-    abbreviation: 'AL',
-    capital: 'Montgomery'
-  },
-  {
-    state: 'Alaska',
-    abbreviation: 'AK',
-    capital: 'Juneau'
-  },
-  {
-    state: 'Arizona',
-    abbreviation: 'AZ',
-    capital: 'Phoenix'
-  },
-  {
-    state: 'Arkansas',
-    abbreviation: 'AR',
-    capital: 'Little Rock'
-  },
-  {
-    state: 'California',
-    abbreviation: 'CA',
-    capital: 'Sacramento'
-  },
-  {
-    state: 'Colorado',
-    abbreviation: 'CO',
-    capital: 'Denver'
-  },
-  {
-    state: 'Connecticut',
-    abbreviation: 'CT',
-    capital: 'Hartford'
-  },
-  {
-    state: 'Delaware',
-    abbreviation: 'DE',
-    capital: 'Dover'
-  },
-  {
-    state: 'Florida',
-    abbreviation: 'FL',
-    capital: 'Tallahassee'
-  },
-  {
-    state: 'Georgia',
-    abbreviation: 'GA',
-    capital: 'Atlanta'
-  },
-  {
-    state: 'Hawaii',
-    abbreviation: 'HI',
-    capital: 'Honolulu'
-  },
-  {
-    state: 'Idaho',
-    abbreviation: 'ID',
-    capital: 'Boise'
-  },
-  {
-    state: 'Illinois',
-    abbreviation: 'IL',
-    capital: 'Springfield'
-  },
-  {
-    state: 'Indiana',
-    abbreviation: 'IN',
-    capital: 'Indianapolis'
-  },
-  {
-    state: 'Iowa',
-    abbreviation: 'IA',
-    capital: 'Des Moines'
-  },
-  {
-    state: 'Kansas',
-    abbreviation: 'KS',
-    capital: 'Topeka'
-  },
-  {
-    state: 'Kentucky',
-    abbreviation: 'KY',
-    capital: 'Frankfort'
-  },
-  {
-    state: 'Louisiana',
-    abbreviation: 'LA',
-    capital: 'Baton Rouge'
-  },
-  {
-    state: 'Maine',
-    abbreviation: 'ME',
-    capital: 'Augusta'
-  },
-  {
-    state: 'Maryland',
-    abbreviation: 'MD',
-    capital: 'Annapolis'
-  },
-  {
-    state: 'Massachusetts',
-    abbreviation: 'MA',
-    capital: 'Boston'
-  },
-  {
-    state: 'Michigan',
-    abbreviation: 'MI',
-    capital: 'Detroit'
-  },
-  {
-    state: 'Minnesota',
-    abbreviation: 'MN',
-    capital: 'St. Paul'
-  },
-  {
-    state: 'Mississippi',
-    abbreviation: 'MS',
-    capital: 'Jackson'
-  },
-  {
-    state: 'Missouri',
-    abbreviation: 'MO',
-    capital: 'Jefferson City'
-  },
-  {
-    state: 'Montana',
-    abbreviation: 'MT',
-    capital: 'Helena'
-  },
-  {
-    state: 'Nebraska',
-    abbreviation: 'NE',
-    capital: 'Lincoln'
-  },
-  {
-    state: 'Nevada',
-    abbreviation: 'NV',
-    capital: 'Carson City'
-  },
-  {
-    state: 'New Hampshire',
-    abbreviation: 'NH',
-    capital: 'Concord'
-  },
-  {
-    state: 'New Jersey',
-    abbreviation: 'NJ',
-    capital: 'Trenton'
-  },
-  {
-    state: 'New Mexico',
-    abbreviation: 'NM',
-    capital: 'Santa Fe'
-  },
-  {
-    state: 'New York',
-    abbreviation: 'NY',
-    capital: 'Albany'
-  },
-  {
-    state: 'North Carolina',
-    abbreviation: 'NC',
-    capital: 'Raleigh'
-  },
-  {
-    state: 'North Dakota',
-    abbreviation: 'ND',
-    capital: 'Bismarck'
-  },
-  {
-    state: 'Ohio',
-    abbreviation: 'OH',
-    capital: 'Columbus'
-  },
-  {
-    state: 'Oklahoma',
-    abbreviation: 'OK',
-    capital: 'Oklahoma City'
-  },
-  {
-    state: 'Oregon',
-    abbreviation: 'OR',
-    capital: 'Salem'
-  },
-  {
-    state: 'Pennsylvania',
-    abbreviation: 'PA',
-    capital: 'Harrisburg'
-  },
-  {
-    state: 'Rhode Island',
-    abbreviation: 'RI',
-    capital: 'Providence'
-  },
-  {
-    state: 'South Carolina',
-    abbreviation: 'SC',
-    capital: 'Columbia'
-  },
-  {
-    state: 'South Dakota',
-    abbreviation: 'SD',
-    capital: 'Pierre'
-  },
-  {
-    state: 'Tennessee',
-    abbreviation: 'TN',
-    capital: 'Nashville'
-  },
-  {
-    state: 'Texas',
-    abbreviation: 'TX',
-    capital: 'Austin'
-  },
-  {
-    state: 'Utah',
-    abbreviation: 'UT',
-    capital: 'Salt Lake City'
-  },
-  {
-    state: 'Vermont',
-    abbreviation: 'VT',
-    capital: 'Montpelier'
-  },
-  {
-    state: 'Virginia',
-    abbreviation: 'VA',
-    capital: 'Richmond'
-  },
-  {
-    state: 'Washington',
-    abbreviation: 'WA',
-    capital: 'Olympia'
-  },
-  {
-    state: 'West Virginia',
-    abbreviation: 'WV',
-    capital: 'Charleston'
-  },
-  {
-    state: 'Wisconsin',
-    abbreviation: 'WI',
-    capital: 'Madison'
-  },
-  {
-    state: 'Wyoming',
-    abbreviation: 'WY',
-    capital: 'Cheyenne'
-  }
-]
-
-let example1Props = {
-  currentPage: 1,
-  totalItems: stateData.length,
-  itemsPerPage: 10
-}
 
 export default SprkPaginationDocs;
