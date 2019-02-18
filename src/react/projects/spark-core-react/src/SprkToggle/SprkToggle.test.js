@@ -30,3 +30,9 @@ it('should add a class to icon when opened', () => {
   wrapper.find('a').simulate('click');
   expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
 });
+
+it('should add aria-expanded="true" when the toggle is open', () => {
+  const wrapper = mount(<SprkToggle title="Toggle title">Body text</SprkToggle>);
+  wrapper.find('a').simulate('click');
+  expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
+});
