@@ -5,17 +5,16 @@ import { uniqueId } from 'lodash';
 import SprkIcon from '../SprkIcon/SprkIcon';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
+import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 
 class SprkFooter extends Component {
   constructor(props) {
     super(props);
     const {
       linkColumns,
-      awards,
       additionalIcons,
       paragraphs,
     } = props;
-// connectIcons awards
     this.state = {
       linkColumnsHasIds: linkColumns.map(
         item => (
@@ -27,9 +26,6 @@ class SprkFooter extends Component {
             )),
           }
         ),
-      ),
-      awardsImagesHasIds: awards.images.map(
-        item => ({ id: uniqueId(), ...item }),
       ),
       additionalIconsHasIds: additionalIcons.map(
         icon => ({ id: uniqueId(), ...icon }),
@@ -51,7 +47,6 @@ class SprkFooter extends Component {
 
     const {
       linkColumnsHasIds,
-      awardsImagesHasIds,
       additionalIconsHasIds,
       paragraphsHasIds,
     } = this.state;
@@ -64,10 +59,11 @@ class SprkFooter extends Component {
       <div className={classNames}>
         <footer className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b" role="contentinfo" data-id={idString}>
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-            {globalItems.items.length > 0
+            {globalItems
               && (
                 <SprkFooterGlobalSection globalItems={globalItems} />
-              )}
+              )
+            }
             <div className="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium">
               <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
                 {linkColumnsHasIds.length > 0
@@ -95,7 +91,7 @@ class SprkFooter extends Component {
                 )}
               </div>
 
-              {connectIcons.icons.length > 0
+              {connectIcons
               && (
                 <SprkFooterConnectIcons connectIcons={connectIcons} />
               )}
@@ -105,40 +101,9 @@ class SprkFooter extends Component {
           <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
 
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
-            {awards.images.length > 0
+            {awards
             && (
-              <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
-                <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
-                  {awards.heading}
-                </h3>
-
-                <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
-                  {awardsImagesHasIds.map(image => (
-                    <div key={image.id} className="sprk-o-Stack__item">
-                      <a href={image.href}>
-                        <img className={image.addClasses} src={image.src} alt={image.altText} />
-                      </a>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="sprk-o-Stack__item">
-                  <div>
-                    <a className="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon sprk-u-FontWeight--normal" href="#nogo">
-                      <svg className="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle sprk-u-mrs" viewBox="0 0 64 64">
-                        <use xlinkHref="#chevron-down-circle-two-color" />
-                      </svg>
-                      {awards.disclaimerTitle}
-                    </a>
-
-                    <div>
-                      <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
-                        {awards.disclaimerText}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <SprkFooterAwards awards={awards} />
             )}
 
             {paragraphs.length > 0

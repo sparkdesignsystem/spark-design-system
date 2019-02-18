@@ -6,15 +6,19 @@ import SprkIcon from '../../../SprkIcon/SprkIcon';
 class SprkFooterConnectIcons extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      connectIconsHasIds: props.connectIcons.icons.map(
-        icon => ({ id: uniqueId(), ...icon }),
-      ),
-    };
+
+    if (props.connectIcons.icons !== undefined) {
+      this.state = {
+        connectIconsHasIds: props.connectIcons.icons.map(
+          icon => ({ id: uniqueId(), ...icon }),
+        ),
+      };
+    }
   }
 
   render() {
     const { connectIcons } = this.props;
+    if (connectIcons.icons === undefined) return false;
     const { connectIconsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">

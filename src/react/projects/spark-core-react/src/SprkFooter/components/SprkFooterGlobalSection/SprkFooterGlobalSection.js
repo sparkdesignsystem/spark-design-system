@@ -6,23 +6,26 @@ import SprkIcon from '../../../SprkIcon/SprkIcon';
 class SprkFooterGlobalSection extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      globalItemsHasIds: props.globalItems.items.map(
-        item => ({ id: uniqueId(), ...item }),
-      ),
-    };
+
+    if (props.globalItems.items !== undefined) {
+      this.state = {
+        globalItemsHasIds: props.globalItems.items.map(
+          item => ({ id: uniqueId(), ...item }),
+        ),
+      };
+    }
   }
 
   render() {
     const { globalItems } = this.props;
+    if (globalItems.items === undefined) return false;
     const { globalItemsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
         <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
           {globalItems.heading}
         </h3>
-
-        {globalItemsHasIds.map(item => (
+        { globalItemsHasIds.map(item => (
           <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
             <div className="sprk-o-Stack__item">
               <a className="sprk-b-Link sprk-b-Link--plain" href={item.mediaHref}>
@@ -59,10 +62,6 @@ class SprkFooterGlobalSection extends Component {
   }
 }
 
-SprkFooterGlobalSection.defaultProps = {
-  globalItems: {},
-};
-
 SprkFooterGlobalSection.propTypes = {
   // The data for the global site items
   globalItems: PropTypes.shape({
@@ -81,7 +80,7 @@ SprkFooterGlobalSection.propTypes = {
       // The description of the image
       description: PropTypes.string,
     })),
-  }),
+  }).isRequired,
 };
 
 export default SprkFooterGlobalSection;
