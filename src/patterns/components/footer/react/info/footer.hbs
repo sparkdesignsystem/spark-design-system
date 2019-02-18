@@ -1,0 +1,123 @@
+<p class="sprk-u-mbm">
+  See below for available customization options:
+</p>
+
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-20">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>object</td>
+      <td>
+        This object should have a key of heading
+        (to be used as the global section heading) and an items array of
+        objects. The items array objects should have keys of mediaType, src,
+        mediaHref, altText, mediaAddClasses and description.
+        These will be used to construct the global items.
+        The key of mediaType should be 'image', 'svg' or 'SprkIcon'
+        depending on what media is desired for each global item. The key
+        of mediaAddClasses is for any additional classes that should be
+        applied to the media. For example, this can be
+        used to supply overrides for image width.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">linkColumns</td>
+      <td>array of objects</td>
+      <td>
+        This array should contain objects with keys of heading and links.
+        The heading will be used as the heading for the column. The links value
+        should be an array of objects with the keys of href and text for each link.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>object</td>
+      <td>
+        This object should have a key of heading
+        (to be used as the connect section heading) and an icons array of
+        objects. The icons array objects should have keys of href, name,
+        and screenReaderText. These will be used to construct the images.
+        The key of screenReaderText is a string used to
+        display information of what the icon
+        is to screen readers.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>object</td>
+      <td>
+        This object should have a key of heading
+        (to be used as the award section heading) and an images array of
+        objects. The images array objects should have keys of href, src,
+        altText, and addClasses. These will be used to construct the images.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>array of objects</td>
+      <td>
+        This array should contain objects with keys of name, href,
+        addClasses, and screenReaderText. The values from each key will be
+        used to display a SprkIcon. The key of addClasses is optional and is
+        a way to add addtional override classes to the icon. The key of
+        screenReaderText is a string used to display information of what the icon
+        is to screen readers.
+        Each object inside the array will be a new icon.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">paragraphs</td>
+      <td>array of objects</td>
+      <td>
+        This array should contain objects with a key of text and value of the text
+        that should be used. Each object inside the array will be a new paragraph.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">additionalClasses</td>
+      <td>string (space-delimited values)</td>
+      <td>
+        The value supplied to this will used to add classes to the SprkFooter.
+        For example, you could override the
+        background color of the footer by supplying a background color utility CSS class.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
+      <td class="sprk-u-FontWeight--bold">idString</td>
+      <td>string</td>
+      <td>
+        The value supplied to this will used to for the data-id
+        attribute for the SprkFooter.
+      </td>
+    </tr>
+  </tbody>
+</table>
