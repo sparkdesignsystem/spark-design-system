@@ -12,7 +12,7 @@ it('should display one element with the correct additional classes', () => {
 });
 
 it('should default to open if defaultOpen is true', () => {
-  const wrapper = shallow(<SprkToggle defaultOpen title="Toggle title">Body text</SprkToggle>);
+  const wrapper = shallow(<SprkToggle isDefaultOpen title="Toggle title">Body text</SprkToggle>);
   expect(wrapper.state().isOpen).toBe(true);
 });
 

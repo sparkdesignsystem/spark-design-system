@@ -7,10 +7,10 @@ import SprkIcon from '../SprkIcon/SprkIcon';
 class SprkToggle extends Component {
   constructor(props) {
     super(props);
-    const { defaultOpen } = this.props;
+    const { isDefaultOpen } = this.props;
     this.state = {
-      isOpen: defaultOpen || false,
-      height: defaultOpen ? 'auto' : 0,
+      isOpen: isDefaultOpen || false,
+      height: isDefaultOpen ? 'auto' : 0,
     };
     this.toggleOpen = this.toggleOpen.bind(this);
   }

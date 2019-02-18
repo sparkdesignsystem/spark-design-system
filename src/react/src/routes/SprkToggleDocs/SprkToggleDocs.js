@@ -6,8 +6,6 @@ import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralCol
 const SprkTabsDocs = () => (
   <CentralColumnLayout>
     <SprkToggle
-      additionalClasses="sprk-o-Stack__item"
-      toggleIconName="chevron-down-circle-two-color"
       title="My Disclaimer"
       analyticsString="toggle-1"
     >
