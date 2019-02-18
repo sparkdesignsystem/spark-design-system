@@ -10,7 +10,6 @@
 
   <thead>
     <tr>
-      <th>Component</th>
       <th>Prop</th>
       <th>Type</th>
       <th>Description</th>
@@ -19,7 +18,6 @@
 
   <tbody>
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">globalItems</td>
       <td>object</td>
       <td>
@@ -37,18 +35,18 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">linkColumns</td>
-      <td>array of objects</td>
+      <td>array</td>
       <td>
         This array should contain objects with keys of heading and links.
         The heading will be used as the heading for the column. The links value
         should be an array of objects with the keys of href and text for each link.
+        Each link item can also have an optional key of analyticsString. The value
+        will be used for the data-analytics attribute on the link.
       </td>
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">connectIcons</td>
       <td>object</td>
       <td>
@@ -63,7 +61,6 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">awards</td>
       <td>object</td>
       <td>
@@ -75,9 +72,8 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">additionalIcons</td>
-      <td>array of objects</td>
+      <td>array</td>
       <td>
         This array should contain objects with keys of name, href,
         addClasses, and screenReaderText. The values from each key will be
@@ -90,32 +86,30 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">paragraphs</td>
-      <td>array of objects</td>
+      <td>array</td>
       <td>
         This array should contain objects with a key of text and value of the text
-        that should be used. Each object inside the array will be a new paragraph.
+        that should be used for each new paragraph.
       </td>
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">additionalClasses</td>
-      <td>string (space-delimited values)</td>
+      <td>string</td>
       <td>
         The value supplied to this will used to add classes to the SprkFooter.
+        The string should have space-delimited values.
         For example, you could override the
         background color of the footer by supplying a background color utility CSS class.
       </td>
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">SprkFooter</td>
       <td class="sprk-u-FontWeight--bold">idString</td>
       <td>string</td>
       <td>
-        The value supplied to this will used to for the data-id
+        The value supplied to this will be used for the data-id
         attribute for the SprkFooter.
       </td>
     </tr>

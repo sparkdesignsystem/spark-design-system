@@ -53,6 +53,7 @@ const linkColumns = [
       {
         href: '#nogo',
         text: 'About This.',
+        analyticsString: 'about-this-link',
       },
       {
         href: '#nogo',

@@ -80,7 +80,11 @@ class SprkFooter extends Component {
                       <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
                         {column.links.map(columnLink => (
                           <li key={columnLink.id} className="sprk-o-Stack__item asfsdfasdf">
-                            <a className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal" href={columnLink.href}>
+                            <a
+                              className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                              href={columnLink.href}
+                              data-analytics={columnLink.analyticsString}
+                            >
                               {columnLink.text}
                             </a>
                           </li>
