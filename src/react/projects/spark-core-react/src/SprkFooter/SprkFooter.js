@@ -57,7 +57,11 @@ class SprkFooter extends Component {
 
     return (
       <div className={classNames}>
-        <footer className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b" role="contentinfo" data-id={idString}>
+        <footer
+          className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b"
+          role="contentinfo"
+          data-id={idString}
+        >
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
             {globalItems
               && (
@@ -151,11 +155,14 @@ SprkFooter.defaultProps = {
 };
 
 SprkFooter.propTypes = {
+  // Additional CSS classes
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
   // The data for the global site items
   globalItems: PropTypes.shape({
+    // The main heading for the global section
     heading: PropTypes.string,
+    // The global items
     items: PropTypes.arrayOf(PropTypes.shape({
       // The element to render for the global item's media
       mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
@@ -173,7 +180,9 @@ SprkFooter.propTypes = {
   }),
   // The data for the columns of site links
   linkColumns: PropTypes.arrayOf(PropTypes.shape({
+    // The main heading for the column
     heading: PropTypes.string,
+    // The links for each column
     links: PropTypes.arrayOf(PropTypes.shape({
       // The link href
       href: PropTypes.string,
@@ -183,7 +192,9 @@ SprkFooter.propTypes = {
   })),
   // The icons to use in the connect section
   connectIcons: PropTypes.shape({
+    // The main heading for the section
     heading: PropTypes.string,
+    // The icons
     icons: PropTypes.arrayOf(PropTypes.shape({
       // The link href for the icon
       href: PropTypes.string,
@@ -195,7 +206,9 @@ SprkFooter.propTypes = {
   }),
   // The awards section data
   awards: PropTypes.shape({
+    // The main heading for the section
     heading: PropTypes.string,
+    // The award images
     images: PropTypes.arrayOf(PropTypes.shape({
       // The link href for the image
       href: PropTypes.string,
@@ -209,9 +222,13 @@ SprkFooter.propTypes = {
   }),
   // Data used for additional icons at bottom of footer
   additionalIcons: PropTypes.arrayOf(PropTypes.shape({
+    // The icon name
     name: PropTypes.string,
+    // The icon href
     href: PropTypes.string,
+    // Additional classes for the icon
     addClasses: PropTypes.string,
+    // Text used for screen readers
     screenReaderText: PropTypes.string,
   })),
   // The paragraphs, copyright info, etc

@@ -28,7 +28,11 @@ class SprkFooterGlobalSection extends Component {
         { globalItemsHasIds.map(item => (
           <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
             <div className="sprk-o-Stack__item">
-              <a className="sprk-b-Link sprk-b-Link--plain" href={item.mediaHref}>
+              <a
+                className="sprk-b-Link sprk-b-Link--plain"
+                href={item.mediaHref}
+                data-analytics={item.analyticsString}
+              >
                 {item.mediaType === 'image'
                   && (
                     <img
@@ -79,6 +83,8 @@ SprkFooterGlobalSection.propTypes = {
       mediaAddClasses: PropTypes.string,
       // The description of the image
       description: PropTypes.string,
+      // The value for the data-analytics attribute
+      analyticsString: PropTypes.string,
     })),
   }).isRequired,
 };

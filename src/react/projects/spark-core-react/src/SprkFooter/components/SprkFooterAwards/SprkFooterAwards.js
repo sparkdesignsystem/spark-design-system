@@ -69,8 +69,11 @@ SprkFooterAwards.propTypes = {
       // Additional classes for the image
       addClasses: PropTypes.string,
     })),
+    // The text rendered in the disclaimer
     disclaimerText: PropTypes.string,
+    // Used for the data-analytics value on the title
     disclaimerAnalytics: PropTypes.string,
+    // The title text rendered in the disclaimer
     disclaimerTitle: PropTypes.string,
   }),
 };

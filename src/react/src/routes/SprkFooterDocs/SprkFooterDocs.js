@@ -124,6 +124,7 @@ const connectIcons = {
       href: '#nogo',
       name: 'facebook',
       screenReaderText: 'Facebook',
+      analyticsString: 'facebook-icon',
     },
     {
       href: '#nogo',

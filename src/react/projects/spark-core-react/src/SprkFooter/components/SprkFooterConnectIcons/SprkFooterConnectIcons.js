@@ -30,7 +30,7 @@ class SprkFooterConnectIcons extends Component {
           <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
             {connectIconsHasIds.map(icon => (
               <li key={icon.id} className="sprk-o-Stack__item">
-                <a className="sprk-b-Link sprk-b-Link--plain" href={icon.href}>
+                <a className="sprk-b-Link sprk-b-Link--plain" href={icon.href} data-analytics={icon.analyticsString}>
                   <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
                   <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
                 </a>
@@ -58,6 +58,8 @@ SprkFooterConnectIcons.propTypes = {
       name: PropTypes.string,
       // Text used for screen readers
       screenReaderText: PropTypes.string,
+      // String used for the data-analytics attribute
+      analyticsString: PropTypes.string,
     })),
   }),
 };

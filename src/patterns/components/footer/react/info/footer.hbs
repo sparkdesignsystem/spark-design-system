@@ -24,7 +24,7 @@
         This object should have a key of heading
         (to be used as the global section heading) and an items array of
         objects. The items array objects should have keys of mediaType, src,
-        mediaHref, altText, mediaAddClasses and description.
+        mediaHref, altText, mediaAddClasses, analyticsString and description.
         These will be used to construct the global items.
         The key of mediaType should be 'image', 'svg' or 'SprkIcon'
         depending on what media is desired for each global item. The key
@@ -53,7 +53,8 @@
         This object should have a key of heading
         (to be used as the connect section heading) and an icons array of
         objects. The icons array objects should have keys of href, name,
-        and screenReaderText. These will be used to construct the images.
+        analyticsString, and screenReaderText.
+        These will be used to construct the images.
         The key of screenReaderText is a string used to
         display information of what the icon
         is to screen readers.
