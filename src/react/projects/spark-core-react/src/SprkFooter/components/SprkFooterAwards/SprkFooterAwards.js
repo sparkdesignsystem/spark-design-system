@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
+import SprkToggle from '../../../SprkToggle/SprkToggle';
 
 class SprkFooterAwards extends Component {
   constructor(props) {
@@ -34,26 +35,25 @@ class SprkFooterAwards extends Component {
           ))}
         </div>
 
-        <div className="sprk-o-Stack__item">
-          <div>
-            <a className="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon sprk-u-FontWeight--normal" href="#nogo">
-              <svg className="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle sprk-u-mrs" viewBox="0 0 64 64">
-                <use xlinkHref="#chevron-down-circle-two-color" />
-              </svg>
-              {awards.disclaimerTitle}
-            </a>
-
-            <div>
-              <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
-                {awards.disclaimerText}
-              </p>
-            </div>
-          </div>
-        </div>
+        <SprkToggle
+          additionalClasses="sprk-o-Stack__item"
+          toggleIconName="chevron-down-circle-two-color"
+          title={awards.disclaimerTitle}
+          titleAddClasses="sprk-b-TypeBodyFour sprk-u-FontWeight--normal"
+          analyticsString={awards.disclaimerAnalytics}
+        >
+          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+            {awards.disclaimerText}
+          </p>
+        </SprkToggle>
       </div>
     );
   }
 }
+
+SprkFooterAwards.defaultProps = {
+  awards: {},
+};
 
 SprkFooterAwards.propTypes = {
   // The data for the global site items
@@ -69,7 +69,10 @@ SprkFooterAwards.propTypes = {
       // Additional classes for the image
       addClasses: PropTypes.string,
     })),
-  }).isRequired,
+    disclaimerText: PropTypes.string,
+    disclaimerAnalytics: PropTypes.string,
+    disclaimerTitle: PropTypes.string,
+  }),
 };
 
 export default SprkFooterAwards;

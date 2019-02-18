@@ -159,6 +159,7 @@ const awards = {
     },
   ],
   disclaimerTitle: 'My Award Disclaimer',
+  disclaimerAnalytics: 'test',
   disclaimerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
 };
 
