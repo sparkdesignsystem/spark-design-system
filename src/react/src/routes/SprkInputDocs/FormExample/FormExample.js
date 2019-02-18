@@ -1,51 +1,38 @@
 import React, { Component } from 'react';
 import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-core-react';
+import { formatPhone, isValidPhone } from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
 
 class FormExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isValid: true,
+      Phone: '',
+      formattedPhone: '',
     };
-    this.isValidName = this.isValidName.bind(this);
-    this.handleNameChange = this.handleNameChange.bind(this);
     this.testFormValidity = this.testFormValidity.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
   }
 
   componentDidUpdate() {
     this.testFormValidity();
   }
 
-  handleNameChange({ target }) {
+  handlePhoneChange({ target }) {
     const { value, name } = target;
     this.setState({
       [name]: value,
-      [`${name}Valid`]: this.isValidName(value),
-      [`${name}ErrorMessage`]: 'You have entered the wrong name.',
+      [`formatted${name}`]: formatPhone(value, true),
+      [`${name}Valid`]: isValidPhone(value),
+      [`${name}ErrorMessage`]: 'You have entered the wrong phone number.',
     });
-  }
-
-  handleEmailChange({ target }) {
-    const { value, name } = target;
-    this.setState({
-      [name]: value,
-      [`${name}Valid`]: this.isValidEmail(value),
-      [`${name}ErrorMessage`]: 'You have entered the wrong email.',
-    });
-  }
-
-  isValidName(value) {
-    return value === 'Rob';
-  }
-
-  isValidEmail(value) {
-    return value === 'sparkdesignsystem@quickenloans.com';
   }
 
   testFormValidity() {
-    const { isValid, NameValid, EmailValid } = this.state;
-    const newValidity = (NameValid && EmailValid);
+    const {
+      isValid, PhoneValid,
+    } = this.state;
+    const newValidity = PhoneValid;
     if (isValid !== newValidity) {
       this.setState({
         isValid: newValidity,
@@ -55,7 +42,17 @@ class FormExample extends Component {
 
   render() {
     const {
-      name, NameValid, NameErrorMessage, email, EmailValid, EmailErrorMessage, isValid,
+      Name,
+      NameValid,
+      NameErrorMessage,
+      Email,
+      EmailValid,
+      EmailErrorMessage,
+      Phone,
+      PhoneValid,
+      PhoneErrorMessage,
+      formattedPhone,
+      isValid,
     } = this.state;
     return (
       <form>
@@ -63,18 +60,27 @@ class FormExample extends Component {
           onChange={this.handleNameChange}
           label="Name"
           name="Name"
-          value={name}
           valid={NameValid}
+          value={Name}
           placeholder="Enter your first name"
           errorMessage={NameErrorMessage}
+        />
+        <SprkTextInput
+          onChange={this.handlePhoneChange}
+          label="Phone Number"
+          name="Phone"
+          valid={PhoneValid}
+          value={formattedPhone || Phone}
+          placeholder="(313) 333-1234"
+          errorMessage={PhoneErrorMessage}
         />
         <SprkTextInput
           onChange={this.handleEmailChange}
           label="Email"
           type="email"
           name="Email"
-          value={email}
           valid={EmailValid}
+          value={Email}
           placeholder="email@example.com"
           errorMessage={EmailErrorMessage}
         />

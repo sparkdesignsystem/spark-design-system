@@ -18,6 +18,7 @@ class SprkTextInput extends Component {
       additionalClasses,
       analyticsString,
       errorMessage,
+      formatter,
       idString,
       label,
       type,
@@ -28,6 +29,7 @@ class SprkTextInput extends Component {
     const {
       id, errorContainerId,
     } = this.state;
+
     return (
       <div className={classNames('sprk-b-InputContainer', additionalClasses)}>
         <label htmlFor={id} className="sprk-b-Label">
@@ -41,7 +43,7 @@ class SprkTextInput extends Component {
           type={type}
           aria-invalid={!valid}
           aria-describedby={errorContainerId}
-          value={value}
+          value={valid && formatter(value) ? formatter(value) : value}
           {...rest}
         />
         { !valid && <SprkErrorContainer id={errorContainerId} message={errorMessage} /> }
@@ -53,6 +55,7 @@ class SprkTextInput extends Component {
 SprkTextInput.propTypes = {
   additionalClasses: PropTypes.string,
   analyticsString: PropTypes.string,
+  formatter: PropTypes.func,
   idString: PropTypes.string,
   label: PropTypes.string,
   valid: PropTypes.bool,
@@ -61,6 +64,7 @@ SprkTextInput.propTypes = {
 SprkTextInput.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
+  formatter: value => value,
   idString: '',
   label: 'Text Input Label',
   valid: true,
