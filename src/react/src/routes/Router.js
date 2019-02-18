@@ -5,32 +5,37 @@ import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
 import SprkPromoDocs from './SprkPromoDocs/SprkPromoDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
-import NotFound from './NotFound/NotFound';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
+import SprkMastheadDefaultDocs from './SprkMastheadDefaultDocs/SprkMastheadDefaultDocs';
+import SprkMastheadExtendedDocs from './SprkMastheadExtendedDocs/SprkMastheadExtendedDocs';
+import SprkDropdownDocs from './SprkDropdownDocs/SprkDropdownDocs';
 import SprkHighlightBoardDocs from './SprkHighlightBoardDocs/SprkHighlightBoardDocs';
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 import SprkPaginationDocs from './SprkPaginationDocs/SprkPaginationDocs';
+import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
+import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
+import NotFound from './NotFound/NotFound';
 
-
-class Router extends React.Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/buttons" component={SprkButtonDocs} />
-          <Route exact path="/links" component={SprkLinkDocs} />
-          <Route exact path="/promos" component={SprkPromoDocs} />
-          <Route exact path="/dividers" component={SprkDividerDocs} />
-          <Route exact path="/alerts" component={SprkAlertDocs} />
-          <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
-          <Route exact path="/dictionary" component={SprkDictionaryDocs} />
-          <Route exact path="/pagination" component={SprkPaginationDocs} />
-          <Route component={NotFound} />
-        </Switch>
-      </BrowserRouter>
-    );
-  }
-}
+const Router = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route exact path="/alert" component={SprkAlertDocs} />
+      <Route exact path="/button" component={SprkButtonDocs} />
+      <Route exact path="/dictionary" component={SprkDictionaryDocs} />
+      <Route exact path="/dividers" component={SprkDividerDocs} />
+      <Route exact path="/dropdown" component={SprkDropdownDocs} />
+      <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
+      <Route exact path="/icon" component={SprkIconDocs} />
+      <Route exact path="/link" component={SprkLinkDocs} />
+      <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
+      <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
+      <Route exact path="/pagination" component={SprkPaginationDocs} />
+      <Route exact path="/promos" component={SprkPromoDocs} />
+      <Route exact path="/tabs" component={SprkTabsDocs} />
+      <Route component={NotFound} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Router;

@@ -13,6 +13,7 @@ restrictions:
     has a unique data-id property ("icon-1", "icon-2", "icon-3", etc).
 sparkPackageCore: true
 hasAngularInfo: true
+hasReactInfo: true
 isIconGallery: true
 variableTable:
   $sprk-icon-m:

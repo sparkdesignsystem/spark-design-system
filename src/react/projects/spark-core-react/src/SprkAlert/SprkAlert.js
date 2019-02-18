@@ -7,13 +7,13 @@ class SprkAlert extends Component {
     super(props);
     this.handleDismiss = this.handleDismiss.bind(this);
     this.state = {
-      isVisible: true
+      isVisible: true,
     };
   }
 
   handleDismiss() {
     this.setState({
-      isVisible: false
+      isVisible: false,
     });
   }
 
