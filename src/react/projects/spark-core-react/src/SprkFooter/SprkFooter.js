@@ -204,6 +204,8 @@ SprkFooter.propTypes = {
       text: PropTypes.string,
       // Element to render, can be 'a' or Link
       linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      // The value for the data-analytics attribute
+      analyticsString: PropTypes.string,
     })),
   })),
   // The icons to use in the connect section
