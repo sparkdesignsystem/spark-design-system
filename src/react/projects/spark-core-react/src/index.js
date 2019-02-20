@@ -6,7 +6,7 @@ export { default as SprkDropdown } from './SprkDropdown/SprkDropdown';
 export { default as SprkHighlightBoard } from './SprkHighlightBoard/SprkHighlightBoard';
 export { default as SprkIcon } from './SprkIcon/SprkIcon';
 export { default as SprkTextInput } from './SprkInput/SprkTextInput/SprkTextInput';
-export { default as SprkSelectionContainer } from './SprkInput/SprkSelectionContainer/SprkSelectionContainer';
+export { default as SprkSelectionInput } from './SprkInput/SprkSelectionInput/SprkSelectionInput';
 export { default as SprkLink } from './SprkLink/SprkLink';
 export { default as SprkMasthead } from './SprkMasthead/SprkMasthead';
 export { default as SprkPromo } from './SprkPromo/SprkPromo';

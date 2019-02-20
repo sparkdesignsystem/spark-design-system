@@ -30,17 +30,24 @@ class SprkTextInput extends Component {
       value,
       ...rest
     } = this.props;
-    const {
-      id, errorContainerId,
-    } = this.state;
+    const { id, errorContainerId } = this.state;
 
     return (
       <div className={classNames('sprk-b-InputContainer', additionalClasses)}>
-        <div className={classNames({ 'sprk-b-TextInputIconContainer': (leadingIcon.length > 0) || textIcon }, { 'sprk-b-TextInputIconContainer--has-text-icon': textIcon })}>
-          {
-            leadingIcon.length > 0
-            && <SprkIcon iconName={leadingIcon} additionalClasses="sprk-c-Icon--m sprk-c-Icon--stroke-current-color" />
-          }
+        <div
+          className={classNames(
+            {
+              'sprk-b-TextInputIconContainer': leadingIcon.length > 0 || textIcon,
+            },
+            { 'sprk-b-TextInputIconContainer--has-text-icon': textIcon },
+          )}
+        >
+          {leadingIcon.length > 0 && (
+            <SprkIcon
+              iconName={leadingIcon}
+              additionalClasses="sprk-c-Icon--m sprk-c-Icon--stroke-current-color"
+            />
+          )}
           <label
             htmlFor={id}
             className={classNames(
@@ -49,7 +56,7 @@ class SprkTextInput extends Component {
               { 'sprk-u-ScreenReaderText': hiddenLabel },
             )}
           >
-            { label }
+            {label}
           </label>
           <input
             className={classNames(
@@ -68,7 +75,7 @@ class SprkTextInput extends Component {
             {...rest}
           />
         </div>
-        { !valid && <SprkErrorContainer id={errorContainerId} message={errorMessage} /> }
+        {!valid && <SprkErrorContainer id={errorContainerId} message={errorMessage} />}
       </div>
     );
   }
