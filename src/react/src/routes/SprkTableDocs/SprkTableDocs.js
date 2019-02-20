@@ -10,21 +10,15 @@ const SprkTableDocs = () => {
       
       <ExampleContainer>
         <SprkTable 
-          variant="html"
+          variant="grouped"
           additionalTableClasses="sprk-b-Table--spacing-medium"
           idString="table-1"
-          // columns={[[{key: 'email', header: 'Email', rowspan: 2}, {key: 'name', header: 'Name', colspan: 2}, {key: 'phoneNumber', header: 'Phone Number', rowspan: 2}],[{key: 'firstName', header: 
-          // 'First Name'}, {key: 'lastName', header: 'Last Name'}]]}
+          columns={[[{name: 'email', header: 'Email', rowspan: 2}, {name: 'name', header: 'Name', colspan: 2}, {name: 'phoneNumber', header: 'Phone Number', rowspan: 2}],[{name: 'firstName', header: 
+          'First Name'}, {name: 'lastName', header: 'Last Name'}]]}
           // columns={[{key: 'email', header: 'Email'}, {key: 'phoneNumber', header: 'Phone Number'}, {key: 'name', header: 'Name'}]}
-          // data={[{key: 'kg1234', rowHeading: 'Person', email: "katie@email.com", phoneNumber: '(555) 518-6595', name: 'Katie Guernsey'}]}
+          data={[{rowHeading: 'Person', email: "katie@email.com", phoneNumber: '(555) 518-6595', firstName: 'Katie', lastName: 'Guernsey'}]}
           // button={{element: 'button', rest: 'href="#nogo" target="_blank"',}}
           >
-          <thead>
-
-          </thead>
-          <tbody>
-            
-          </tbody>
         </SprkTable>
       </ExampleContainer>
 

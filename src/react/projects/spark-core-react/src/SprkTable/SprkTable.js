@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { uniqueId } from 'lodash';
 
 const SprkTable = (props) => {
   
@@ -38,7 +39,7 @@ const SprkTable = (props) => {
           <thead className="sprk-b-Table__head">
             <tr>
               {columns.map(col => {
-                <th key={col.key}>{col.header}</th>
+                <th key={uniqueId('th_')}>{col.header}</th>
               })}
             </tr>
           </thead>
@@ -46,9 +47,9 @@ const SprkTable = (props) => {
           {data &&
           <tbody>
           {data.map(row => 
-            <tr key={row.key}>
+            <tr key={uniqueId('row_')}>
               {columns.map( col => 
-                <td key={col.key}>{row[col.key]}</td>  
+                <td key={col.name}>{row[col.name]}</td>  
               )}
             </tr>  
           )}
@@ -65,9 +66,9 @@ const SprkTable = (props) => {
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
             {columns.map(row => 
-              <tr>
+              <tr key={uniqueId('row_')}>
                 {row.map(col => 
-                  <th key={col.key} rowSpan={col.rowspan} colSpan={col.colspan}>{col.header}</th>
+                  <th key={uniqueId('th')} rowSpan={col.rowspan} colSpan={col.colspan}>{col.header}</th>
                 )}
               </tr>
             )}
@@ -76,11 +77,11 @@ const SprkTable = (props) => {
           {data &&
           <tbody>
             {data.map(row =>
-              <tr key={row.key}>
+              <tr key={uniqueId('row_')}>
                 {columns.map(col => 
                   col.map(c => 
-                    row.hasOwnProperty(c.key) &&
-                      <td key={c.key}>{row[c.key]}</td>
+                    row.hasOwnProperty(c.name) &&
+                      <td key={uniqueId('td_')}>{row[c.name]}</td>
                   )
                 )}
               </tr>
@@ -100,7 +101,7 @@ const SprkTable = (props) => {
             <tr>
               <th class="sprk-b-Table__empty-heading"></th>
               {columns.map(col => {
-                return <th key={col.key}>{col.header}</th>
+                return <th key={uniqueId('th_')}>{col.header}</th>
               })}
             </tr>
           </thead>
@@ -108,10 +109,10 @@ const SprkTable = (props) => {
           {data &&
           <tbody>
           {data.map(row => 
-            <tr key={row.key}>
+            <tr key={uniqueId('row_')}>
                 <th>{row.rowHeading}</th>
               {columns.map( col => 
-                <td key={col.key}>{row[col.key]}</td>  
+                <td key={uniqueId('td_')}>{row[col.name]}</td>  
               )}
             </tr>  
           )}
@@ -140,10 +141,10 @@ const SprkTable = (props) => {
           { data &&
           <tbody>
             {data.map(row => 
-            <tr key={row.key}>
+            <tr key={uniqueId('row_')}>
               <th>{row.rowHeading}</th>
               {columns.map( col => 
-              <td key={col.key}>{row[col.key]}</td>  
+              <td key={uniqueId('td_')}>{row[col.name]}</td>  
               )}
               <td>
                 <SprkButton 
