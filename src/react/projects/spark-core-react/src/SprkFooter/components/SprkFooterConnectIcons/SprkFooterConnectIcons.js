@@ -57,7 +57,9 @@ SprkFooterConnectIcons.defaultProps = {
 SprkFooterConnectIcons.propTypes = {
   // The data for the global site items
   connectIcons: PropTypes.shape({
+    // The main heading for the connect secion
     heading: PropTypes.string,
+    // An array of icon objects
     icons: PropTypes.arrayOf(PropTypes.shape({
       // The link href for the icon
       href: PropTypes.string,

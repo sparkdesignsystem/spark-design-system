@@ -133,7 +133,11 @@ class SprkFooter extends Component {
                     const TagName = icon.linkElement || 'a';
                     return (
                       <li key={icon.id} className="sprk-o-Stack__item">
-                        <TagName className="sprk-b-Link sprk-b-Link--plain" href={TagName === 'a' ? icon.href || '#nogo' : undefined}>
+                        <TagName
+                          className="sprk-b-Link sprk-b-Link--plain"
+                          href={TagName === 'a' ? icon.href || '#nogo' : undefined}
+                          data-analytics={icon.analyticsString}
+                        >
                           <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
                           <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
                         </TagName>
@@ -227,13 +231,15 @@ SprkFooter.propTypes = {
       // The link href for the image
       href: PropTypes.string,
       // Element to render, can be 'a' or Link
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The image src
       src: PropTypes.string,
       // Image alt text
       altText: PropTypes.string,
       // Additional classes for the image
       addClasses: PropTypes.string,
+      // String used for the data-analytics attribute
+      analyticsString: PropTypes.string,
     })),
     // The text rendered in the disclaimer
     disclaimerText: PropTypes.string,
@@ -254,6 +260,8 @@ SprkFooter.propTypes = {
     screenReaderText: PropTypes.string,
     // Element to render, can be 'a' or Link
     linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    // String used for the data-analytics attribute
+    analyticsString: PropTypes.string,
   })),
   // The paragraphs, copyright info, etc
   paragraphs: PropTypes.arrayOf(PropTypes.shape({

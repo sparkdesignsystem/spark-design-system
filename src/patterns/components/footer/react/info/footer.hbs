@@ -2,7 +2,7 @@
   See below for available customization options:
 </p>
 
-<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
   <colgroup>
     <col class="sprk-u-Width-20">
     <col>
@@ -21,18 +21,7 @@
       <td class="sprk-u-FontWeight--bold">globalItems</td>
       <td>object</td>
       <td>
-        This object should have a key of heading and an items array of
-        objects. The items array objects should have keys of mediaType, src,
-        mediaHref, altText, mediaAddClasses, linkElement, analyticsString and description.
-        The value for linkElment can be 'a' for anchor or it can
-        be a React router Link.
-        These will be used to construct the global items.
-        The key of mediaType should be 'image', 'svg' or 'SprkIcon'
-        depending on what media is desired for each global item. The key
-        of mediaAddClasses is for any additional classes that should be
-        applied to the media. For example, this can be
-        used to supply overrides for image width.
-        See the React code example above for the shape of the data.
+        This will be used to construct the global items section.
       </td>
     </tr>
 
@@ -40,13 +29,10 @@
       <td class="sprk-u-FontWeight--bold">linkColumns</td>
       <td>array</td>
       <td>
-        This array should contain objects with keys of heading and links.
-        The heading will be used as the heading for the column. The links value
-        should be an array of objects with the keys of href and text for each link.
-        Each link can have a value for linkElement which can be 'a' for anchor or it can
-        be a React router Link. Each link item can also have an optional key of analyticsString.
-        The value will be used for the data-analytics attribute on the link.
-        See the React code example above for the shape of the data.
+        This will be used to construct the columns of links.
+        The maxmum number of objects in this should be three
+        as the design requires three columns of links or less.
+        Each object in this array will represent a column.
       </td>
     </tr>
 
@@ -54,17 +40,7 @@
       <td class="sprk-u-FontWeight--bold">connectIcons</td>
       <td>object</td>
       <td>
-        This object should have a key of heading
-        (to be used as the connect section heading) and an icons array of
-        objects. The icons array objects should have keys of href, name,
-        analyticsString, linkElment, and screenReaderText.
-        The value for linkElment can be 'a' for anchor or it can
-        be a React router Link.
-        These will be used to construct the images.
-        The key of screenReaderText is a string used to
-        display information of what the icon
-        is to screen readers.
-        See the React code example above for the shape of the data.
+        This will be used to construct the connect icon section.
       </td>
     </tr>
 
@@ -72,14 +48,7 @@
       <td class="sprk-u-FontWeight--bold">awards</td>
       <td>object</td>
       <td>
-        This object should have a key of heading
-        (to be used as the award section heading) and an images array of
-        objects. The images array objects should have keys of href, src,
-        altText, linkElement, and addClasses.
-        The value for linkElment can be 'a' for anchor or it can
-        be a React router Link.
-        These will be used to construct the images.
-        See the React code example above for the shape of the data.
+        This will be used to construct the connect awards section.
       </td>
     </tr>
 
@@ -87,16 +56,9 @@
       <td class="sprk-u-FontWeight--bold">additionalIcons</td>
       <td>array</td>
       <td>
-        This array should contain objects with keys of name, href,
-        addClasses, linkElement, and screenReaderText. The values from each key will be
-        used to display a SprkIcon. The key of addClasses is optional and is
-        a way to add addtional override classes to the icon. The key of
-        screenReaderText is a string used to display information of what the icon
-        is to screen readers.
-        The value for linkElment can be 'a' for anchor or it can
-        be a React router Link.
-        Each object inside the array will be a new icon.
-        See the React code example above for the shape of the data.
+        This will be used to construct the additional icons section
+        at the bottom of the footer. Each object inside this array will be used to render
+        an icon.
       </td>
     </tr>
 
@@ -104,9 +66,8 @@
       <td class="sprk-u-FontWeight--bold">paragraphs</td>
       <td>array</td>
       <td>
-        This array should contain objects with a key of text and value of the text
-        that should be used for each new paragraph.
-        See the React code example above for the shape of the data.
+        Each object inside this array will be used to render
+        a paragraph.
       </td>
     </tr>
 
@@ -128,6 +89,414 @@
       <td>
         The value supplied to this will be used for the data-id
         attribute for the SprkFooter.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3">
+  Prop Information: <span class="sprk-u-TextTransform--none">globalItems</span>
+</h3>
+
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-20">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>heading</td>
+      <td>
+        The heading for the global items section.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>items</td>
+      <td>
+        This array should contain objects with keys of
+        mediaType, src, mediaHref, altText,
+        mediaAddClasses, and description, analyticsString,
+        and linkElement.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].mediaType</td>
+      <td>
+        This string value will be used to determine the element to render for the item's media.
+        This can one of 'image', 'svg', or use the SprkIcon component.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].src</td>
+      <td>
+        This string value will be used as the image source if the mediaType is 'image'.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].mediaHref</td>
+      <td>
+        This string value will be used for href of the tag that wraps the media.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].altText</td>
+      <td>
+        This string value will be used for the alt text of the tag that wraps the media.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].mediaAddClasses</td>
+      <td>
+        This should be a space-delimited string that is used for additional classes on the media.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].description</td>
+      <td>
+        This string value will be rendered as the description under the global item media.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].analyticsString</td>
+      <td>
+        This string value will be used for the data-analytics attribute on the link element
+        wrapping the media.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">globalItems</td>
+      <td>globalItems.items[i].linkElement</td>
+      <td>
+        The type of link that should be rendered. Can be an 'a'
+        or a React Router Link.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3">
+  Prop Information: <span class="sprk-u-TextTransform--none">connectIcons</span>
+</h3>
+
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-20">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>heading</td>
+      <td>
+        The heading for the connect icons section.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>icons</td>
+      <td>
+        This array should contain objects with keys of
+        href, name, screenReaderText, analyticsString,
+        and linkElement.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>connectIcons.icons[i].href</td>
+      <td>
+        This string value will be used as the href for the link element
+        that wraps the icon.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>connectIcons.icons[i].name</td>
+      <td>
+        This string value will be used to determine with SprkIcon to display.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>connectIcons.icons[i].screenReaderText</td>
+      <td>
+        This string value will be used for screen reader text for the icon.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>connectIcons.icons[i].analyticsString</td>
+      <td>
+        This string value will be used for the data-analytics attribute on the link element
+        wrapping the media.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">connectIcons</td>
+      <td>connectIcons.icons[i].linkElement</td>
+      <td>
+        The type of link that should be rendered. Can be an 'a'
+        or a React Router Link.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3">
+  Prop Information: <span class="sprk-u-TextTransform--none">awards</span>
+</h3>
+
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-20">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>heading</td>
+      <td>
+        The heading for the awards section.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>images</td>
+      <td>
+        This array should contain objects with keys of
+        href, linkElement, src, altText, addClasses,
+        and analyticsString.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>awards.images[i].href</td>
+      <td>
+        This string value will be used as the href for the link element
+        that wraps the image.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>awards.images[i].linkElement</td>
+      <td>
+        The type of link that should be rendered. Can be an 'a'
+        or a React Router Link.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>awards.images[i].src</td>
+      <td>
+        This string value will be used for the src attribute on the image.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>awards.images[i].altText</td>
+      <td>
+        This string value will be used for the alt text attribute on the image.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>awards.images[i].addClasses</td>
+      <td>
+        This should be a space-delimited string that is used for additional classes on the image.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>awards.images[i].analyticsString</td>
+      <td>
+        This string value will be used for the data-analytics attribute on the link element
+        wrapping the image.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>disclaimerText</td>
+      <td>
+        This string value will be used for the text content of the disclaimer.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>disclaimerAnalytics</td>
+      <td>
+        This string value will be used for the data-analytics attribute on the link element
+        used for the disclaimer.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">awards</td>
+      <td>disclaimerTitle</td>
+      <td>
+        This string value will be used for the link text of the disclaimer.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3">
+  Prop Information: <span class="sprk-u-TextTransform--none">additionalIcons</span>
+</h3>
+
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-20">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>additionalIcons[i].name</td>
+      <td>
+        This string value will be used to determine which icon
+        to display.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>additionalIcons[i].href</td>
+      <td>
+        This string value will be used as the href for the link element
+        that wraps the icon.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>additionalIcons[i].addClasses</td>
+      <td>
+        This space-delimited string value will be used as
+        additional classes on the icon.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>additionalIcons[i].screenReaderText</td>
+      <td>
+        This string value will be used for screen reader text.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>additionalIcons[i].linkElement</td>
+      <td>
+        The type of link that should be rendered. Can be an 'a'
+        or a React Router Link.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalIcons</td>
+      <td>additionalIcons[i].analyticsString</td>
+      <td>
+        This string value will be used for the data-analytics attribute on the link element
+        wrapping the icon.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3">
+  Prop Information: <span class="sprk-u-TextTransform--none">paragraphs</span>
+</h3>
+
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-20">
+    <col>
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">paragraphs</td>
+      <td>additionalIcons[i].text</td>
+      <td>
+        This string value will be rendered as
+        text inside a paragraph element.
       </td>
     </tr>
   </tbody>

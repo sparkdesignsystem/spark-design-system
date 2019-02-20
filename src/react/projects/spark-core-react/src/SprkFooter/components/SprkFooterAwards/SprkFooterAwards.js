@@ -27,10 +27,10 @@ class SprkFooterAwards extends Component {
 
         <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
           {awardsImagesHasIds.map((image) => {
-            const TagName = image.element || 'a';
+            const TagName = image.linkElement || 'a';
             return (
               <div key={image.id} className="sprk-o-Stack__item">
-                <TagName href={TagName === 'a' ? image.href || '#nogo' : undefined}>
+                <TagName href={TagName === 'a' ? image.href || '#nogo' : undefined} data-analytics={image.analyticsString}>
                   <img className={image.addClasses} src={image.src} alt={image.altText} />
                 </TagName>
               </div>
@@ -65,13 +65,15 @@ SprkFooterAwards.propTypes = {
       // The link href for the image
       href: PropTypes.string,
       // Element to render, can be 'a' or Link
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The image src
       src: PropTypes.string,
       // Image alt text
       altText: PropTypes.string,
       // Additional classes for the image
       addClasses: PropTypes.string,
+      // Used for the data-analytics attribute on the link wrapping the image
+      analyticsString: PropTypes.string,
     })),
     // The text rendered in the disclaimer
     disclaimerText: PropTypes.string,
