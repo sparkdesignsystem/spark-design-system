@@ -25,42 +25,45 @@ class SprkFooterGlobalSection extends Component {
         <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
           {globalItems.heading}
         </h3>
-        { globalItemsHasIds.map(item => (
-          <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-            <div className="sprk-o-Stack__item">
-              <a
-                className="sprk-b-Link sprk-b-Link--plain"
-                href={item.mediaHref}
-                data-analytics={item.analyticsString}
-              >
-                {item.mediaType === 'image'
-                  && (
-                    <img
-                      className={item.mediaAddClasses}
-                      src={item.src}
-                      alt={item.altText}
-                    />
-                  )
-                }
-                {item.mediaType === 'SprkIcon'
-                  && (
-                    <SprkIcon
-                      iconName={item.iconName}
-                      additionalClasses={item.mediaAddClasses}
-                    />
-                  )
-                }
-                {item.mediaType === 'svg'
-                  && <div>{item.svg}</div>
-                }
-              </a>
-            </div>
+        { globalItemsHasIds.map((item) => {
+          const TagName = item.linkElement || 'a';
+          return (
+            <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
+              <div className="sprk-o-Stack__item">
+                <TagName
+                  className="sprk-b-Link sprk-b-Link--plain"
+                  href={TagName === 'a' ? item.mediaHref || '#nogo' : undefined}
+                  data-analytics={item.analyticsString}
+                >
+                  {item.mediaType === 'image'
+                    && (
+                      <img
+                        className={item.mediaAddClasses}
+                        src={item.src}
+                        alt={item.altText}
+                      />
+                    )
+                  }
+                  {item.mediaType === 'SprkIcon'
+                    && (
+                      <SprkIcon
+                        iconName={item.iconName}
+                        additionalClasses={item.mediaAddClasses}
+                      />
+                    )
+                  }
+                  {item.mediaType === 'svg'
+                    && <div>{item.svg}</div>
+                  }
+                </TagName>
+              </div>
 
-            <p className="sprk-o-Stack__item sprk-b-TypeBodyFour">
-              {item.description}
-            </p>
-          </div>
-        ))}
+              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour">
+                {item.description}
+              </p>
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -85,6 +88,8 @@ SprkFooterGlobalSection.propTypes = {
       description: PropTypes.string,
       // The value for the data-analytics attribute
       analyticsString: PropTypes.string,
+      // Element to render, can be 'a' or Link
+      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }).isRequired,
 };

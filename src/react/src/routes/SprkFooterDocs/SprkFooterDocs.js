@@ -11,6 +11,8 @@ const globalItems = {
       altText: 'Spark Logo',
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
+      linkElement: 'a',
+      mediaHref: '#nogo',
     },
     {
       mediaType: 'image',
@@ -18,6 +20,8 @@ const globalItems = {
       altText: 'Spark Logo',
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
+      linkElement: 'a',
+      mediaHref: '#nogo',
     },
     {
       mediaType: 'svg',
@@ -36,12 +40,15 @@ const globalItems = {
           </g>
         </svg>
       ),
+      linkElement: 'a',
+      mediaHref: '#nogo',
     },
     {
       mediaType: 'SprkIcon',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       iconName: 'house',
+      linkElement: 'a',
     },
   ],
 };
@@ -54,22 +61,28 @@ const linkColumns = [
         href: '#nogo',
         text: 'About This.',
         analyticsString: 'about-this-link',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'About This Other Thing',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'About That',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'Link Item',
+        linkElement: 'a',
+        mediaHref: '#nogo',
       },
       {
         href: '#nogo',
         text: 'This Link Item',
+        linkElement: 'a',
       },
     ],
   },
@@ -79,18 +92,22 @@ const linkColumns = [
       {
         href: '#nogo',
         text: 'About This Other Thing',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'About This',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'About That',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'Link Item',
+        linkElement: 'a',
       },
     ],
   },
@@ -100,18 +117,22 @@ const linkColumns = [
       {
         href: '#nogo',
         text: 'Share Your Screen',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'Opt Out',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'Disclosures and Other Things',
+        linkElement: 'a',
       },
       {
         href: '#nogo',
         text: 'We Want Your Feedback',
+        linkElement: 'a',
       },
     ],
   },
@@ -125,21 +146,25 @@ const connectIcons = {
       name: 'facebook',
       screenReaderText: 'Facebook',
       analyticsString: 'facebook-icon',
+      linkElement: 'a',
     },
     {
       href: '#nogo',
       name: 'instagram',
       screenReaderText: 'Instagram',
+      linkElement: 'a',
     },
     {
       href: '#nogo',
       name: 'twitter',
       screenReaderText: 'Twitter',
+      linkElement: 'a',
     },
     {
       href: '#nogo',
       name: 'youtube',
       screenReaderText: 'Youtube',
+      linkElement: 'a',
     },
   ],
 };
@@ -152,12 +177,14 @@ const awards = {
       src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
       addClasses: 'drizzle-c-Logo',
+      linkElement: 'a',
     },
     {
       href: '#nogo',
       src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
       addClasses: 'drizzle-c-Logo',
+      linkElement: 'a',
     },
   ],
   disclaimerTitle: 'My Award Disclaimer',
@@ -178,18 +205,21 @@ const additionalIcons = [
     href: '#nogo',
     addClasses: '',
     screenReaderText: 'House',
+    linkElement: 'a',
   },
   {
     name: 'house',
     href: '#nogo',
     addClasses: '',
     screenReaderText: 'House',
+    linkElement: 'a',
   },
   {
     name: 'house',
     href: '#nogo',
     addClasses: '',
     screenReaderText: 'House',
+    linkElement: 'a',
   },
 ];
 

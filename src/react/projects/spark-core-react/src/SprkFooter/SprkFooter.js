@@ -82,17 +82,20 @@ class SprkFooter extends Component {
                       </h3>
 
                       <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
-                        {column.links.map(columnLink => (
-                          <li key={columnLink.id} className="sprk-o-Stack__item asfsdfasdf">
-                            <a
-                              className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
-                              href={columnLink.href}
-                              data-analytics={columnLink.analyticsString}
-                            >
-                              {columnLink.text}
-                            </a>
-                          </li>
-                        ))}
+                        {column.links.map((columnLink) => {
+                          const TagName = columnLink.linkElement || 'a';
+                          return (
+                            <li key={columnLink.id} className="sprk-o-Stack__item asfsdfasdf">
+                              <TagName
+                                className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                                href={TagName === 'a' ? columnLink.href || '#nogo' : undefined}
+                                data-analytics={columnLink.analyticsString}
+                              >
+                                {columnLink.text}
+                              </TagName>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ))
@@ -126,14 +129,17 @@ class SprkFooter extends Component {
             {additionalIcons.length > 0
               && (
                 <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-                  {additionalIconsHasIds.map(icon => (
-                    <li key={icon.id} className="sprk-o-Stack__item">
-                      <a className="sprk-b-Link sprk-b-Link--plain" href={icon.href}>
-                        <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
-                        <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
-                      </a>
-                    </li>
-                  ))}
+                  {additionalIconsHasIds.map((icon) => {
+                    const TagName = icon.linkElement || 'a';
+                    return (
+                      <li key={icon.id} className="sprk-o-Stack__item">
+                        <TagName className="sprk-b-Link sprk-b-Link--plain" href={TagName === 'a' ? icon.href || '#nogo' : undefined}>
+                          <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
+                          <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
+                        </TagName>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
           </div>
@@ -176,6 +182,10 @@ SprkFooter.propTypes = {
       mediaAddClasses: PropTypes.string,
       // The description of the image
       description: PropTypes.string,
+      // The value for the data-analytics attribute
+      analyticsString: PropTypes.string,
+      // Element to render, can be 'a' or Link
+      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }),
   // The data for the columns of site links
@@ -188,6 +198,8 @@ SprkFooter.propTypes = {
       href: PropTypes.string,
       // The link text
       text: PropTypes.string,
+      // Element to render, can be 'a' or Link
+      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   })),
   // The icons to use in the connect section
@@ -202,16 +214,20 @@ SprkFooter.propTypes = {
       name: PropTypes.string,
       // Text used for screen readers
       screenReaderText: PropTypes.string,
+      // String used for the data-analytics attribute
+      analyticsString: PropTypes.string,
+      // Element to render, can be 'a' or Link
+      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }),
   // The awards section data
   awards: PropTypes.shape({
-    // The main heading for the section
     heading: PropTypes.string,
-    // The award images
     images: PropTypes.arrayOf(PropTypes.shape({
       // The link href for the image
       href: PropTypes.string,
+      // Element to render, can be 'a' or Link
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The image src
       src: PropTypes.string,
       // Image alt text
@@ -219,6 +235,12 @@ SprkFooter.propTypes = {
       // Additional classes for the image
       addClasses: PropTypes.string,
     })),
+    // The text rendered in the disclaimer
+    disclaimerText: PropTypes.string,
+    // Used for the data-analytics value on the title
+    disclaimerAnalytics: PropTypes.string,
+    // The title text rendered in the disclaimer
+    disclaimerTitle: PropTypes.string,
   }),
   // Data used for additional icons at bottom of footer
   additionalIcons: PropTypes.arrayOf(PropTypes.shape({
@@ -230,6 +252,8 @@ SprkFooter.propTypes = {
     addClasses: PropTypes.string,
     // Text used for screen readers
     screenReaderText: PropTypes.string,
+    // Element to render, can be 'a' or Link
+    linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   })),
   // The paragraphs, copyright info, etc
   paragraphs: PropTypes.arrayOf(PropTypes.shape({
