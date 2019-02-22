@@ -58,7 +58,23 @@ const SprkTableDocs = () => {
 
         </SprkTable>
       </ExampleContainer>
-        
+      
+      <ExampleContainer heading="Row Comparison">
+        <SprkTable 
+          variant="rowComparison"
+          additionalTableClasses="sprk-b-Table--spacing-medium"
+          idString="table-5"
+          columns={[{name: 'data1', header: "Column"}, {name: 'data2', header: 'Column'}, {name: "data3", header: 'Column'}]}
+          data={[
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", data3: "Data"},
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", data3: "Data"},
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", data3: "Data"},
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", data3: "Data"},
+          ]}
+          >
+        </SprkTable>
+      </ExampleContainer>
+
       <ExampleContainer heading="Secondary Row Comparison">
         <SprkTable 
           variant="secondaryRowComparison"

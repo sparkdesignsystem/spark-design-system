@@ -102,7 +102,7 @@ const SprkTable = (props) => {
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
             <tr>
-              <th class="sprk-b-Table__empty-heading"></th>
+              <th className="sprk-b-Table__empty-heading"></th>
               {columns.map(col => {
                 return <th key={uniqueId('th_')}>{col.header}</th>
               })}
