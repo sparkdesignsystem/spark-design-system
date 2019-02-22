@@ -1,7 +1,7 @@
 import React from 'react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
-import { SprkTable } from '@sparkdesignsystem/spark-core-react';
+import { SprkTable, SprkButton } from '@sparkdesignsystem/spark-core-react';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
 const SprkTableDocs = () => {
@@ -10,14 +10,16 @@ const SprkTableDocs = () => {
       
       <ExampleContainer>
         <SprkTable 
-          variant="grouped"
+          variant="secondaryRowComparison"
           additionalTableClasses="sprk-b-Table--spacing-medium"
           idString="table-1"
-          columns={[[{name: 'email', header: 'Email', rowspan: 2}, {name: 'name', header: 'Name', colspan: 2}, {name: 'phoneNumber', header: 'Phone Number', rowspan: 2}],[{name: 'firstName', header: 
-          'First Name'}, {name: 'lastName', header: 'Last Name'}]]}
-          // columns={[{key: 'email', header: 'Email'}, {key: 'phoneNumber', header: 'Phone Number'}, {key: 'name', header: 'Name'}]}
-          data={[{rowHeading: 'Person', email: "katie@email.com", phoneNumber: '(555) 518-6595', firstName: 'Katie', lastName: 'Guernsey'}]}
-          // button={{element: 'button', rest: 'href="#nogo" target="_blank"',}}
+          columns={[{name: 'data1'}, {name: 'data1'}]}
+          data={[
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+            {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+          ]}
           >
         </SprkTable>
       </ExampleContainer>

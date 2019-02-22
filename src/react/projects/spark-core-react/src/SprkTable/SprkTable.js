@@ -124,16 +124,6 @@ const SprkTable = (props) => {
   }
 
   if(variant === 'secondaryRowComparison') {
-
-    const buttonVariant = button.variant ? button.variant : undefined;
-    const buttonClasses = button.additionalClasses ? button.classes : undefined;
-    const buttonAnalytics = button.analyticsString ? button.analyticsString : undefined;
-    const buttonChildren = button.children ? button.children : undefined;
-    const buttonDisabled = button.disabled ? button.disabled : undefined;
-    const buttonIdString = button.idString ? button.idString : undefined;
-    const buttonElement = button.element ? button.element : undefined;
-    const buttonLoading = button.loading ? button.loading : undefined;
-    const buttonRest = button.rest ? button.rest : undefined;
   
     return (
       <div className={wrapperClassNames} data-id={idString}>
@@ -147,17 +137,7 @@ const SprkTable = (props) => {
               <td key={uniqueId('td_')}>{row[col.name]}</td>  
               )}
               <td>
-                <SprkButton 
-                  variant={buttonVariant}
-                  additionalClasses={buttonClasses}
-                  analyticsString={buttonAnalytics}
-                  disabled={buttonDisabled}
-                  element={buttonElement}
-                  idString={buttonIdString}
-                  buttonRest
-                >
-                  {buttonChildren}
-                </SprkButton>
+                {row.button}
               </td>
             </tr>  
             )}
