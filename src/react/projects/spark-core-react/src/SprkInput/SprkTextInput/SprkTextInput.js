@@ -21,6 +21,7 @@ class SprkTextInput extends Component {
       children,
       errorMessage,
       formatter,
+      forwardedRef,
       helperText,
       hiddenLabel,
       idString,
@@ -84,6 +85,7 @@ class SprkTextInput extends Component {
               id={id}
               data-analytics={analyticsString}
               data-id={idString}
+              ref={forwardedRef}
               type={type}
               aria-invalid={!valid}
               aria-describedby={errorContainerId}
@@ -105,6 +107,7 @@ SprkTextInput.propTypes = {
   analyticsString: PropTypes.string,
   children: PropTypes.node,
   formatter: PropTypes.func,
+  forwardedRef: PropTypes.shape(),
   helperText: PropTypes.string,
   hiddenLabel: PropTypes.bool,
   idString: PropTypes.string,
@@ -119,6 +122,7 @@ SprkTextInput.defaultProps = {
   analyticsString: '',
   children: [],
   formatter: value => value,
+  forwardedRef: React.createRef(),
   helperText: '',
   hiddenLabel: false,
   idString: '',
