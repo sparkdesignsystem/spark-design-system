@@ -66,25 +66,27 @@ const SprkTable = (props) => {
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
-            {columns.map(row => 
+            {columns &&
+             columns.map(row => 
               <tr key={uniqueId('row_')}>
                 {row.map(col => 
                   <th key={uniqueId('th')} rowSpan={col.rowspan} colSpan={col.colspan}>{col.header}</th>
                 )}
               </tr>
-            )}
+            )
+            }
+
           </thead>
         
           {data &&
           <tbody>
             {data.map(row =>
               <tr key={uniqueId('row_')}>
-                {columns.map(col => 
-                  col.map(c => 
-                    row.hasOwnProperty(c.name) &&
-                      <td key={uniqueId('td_')}>{row[c.name]}</td>
+                {
+                  Object.values(row).map(item => 
+                    <td key={uniqueId('td_')}>{item}</td>
                   )
-                )}
+                }
               </tr>
             )}
           </tbody>
