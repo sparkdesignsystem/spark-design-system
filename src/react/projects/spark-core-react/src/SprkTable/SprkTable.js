@@ -13,7 +13,6 @@ const SprkTable = (props) => {
     idString, 
     additionalClasses, 
     additionalTableClasses,
-    button,
     children, 
     ...other
   } = props;
@@ -32,16 +31,18 @@ const SprkTable = (props) => {
     additionalTableClasses 
   );
 
-  if(variant === undefined || variant === 'secondary') {
+  if(variant === 'default' || variant === 'secondary') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
+            {columns &&
             <tr>
               {columns.map(col => {
-                <th key={uniqueId('th_')}>{col.header}</th>
+                return <th key={uniqueId('th_')}>{col.header}</th>
               })}
             </tr>
+            }
           </thead>
           
           {data &&
@@ -166,7 +167,7 @@ SprkTable.propTypes = {
   // An array of objects used to map and render the table row data
   data: PropTypes.arrayOf(PropTypes.object),
   // A string to determine what variant of the table should render
-  variant: PropTypes.oneOf(['secondary', 'grouped', 'rowComparison', 'secondaryRowComparison', 'html']),
+  variant: PropTypes.oneOf(['default', 'secondary', 'grouped', 'rowComparison', 'secondaryRowComparison', 'html']),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the table wrapper
@@ -178,9 +179,9 @@ SprkTable.propTypes = {
 }
 
 SprkTable.defaultProps = {
-  columms: [],
+  columns: [],
   data: [],
-  variant: '',
+  variant: 'default',
   idString: '',
   additionalClasses: '',
   additionalTableClasses: '',
