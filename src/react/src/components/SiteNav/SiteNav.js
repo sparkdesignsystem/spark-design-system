@@ -65,6 +65,11 @@ function SiteNav() {
             Tabs
           </Link>
         </li>
+        <li>
+          <Link to="/modal" className="drizzle-b-Link drizzle-b-Link--light">
+            Modal
+          </Link>
+        </li>
       </ul>
     </nav>
   );

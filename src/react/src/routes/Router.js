@@ -13,6 +13,7 @@ import SprkHighlightBoardDocs from './SprkHighlightBoardDocs/SprkHighlightBoardD
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
 import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
+import SprkModalDocs from './SprkModalDocs/SprkModalDocs';
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -31,6 +32,7 @@ const Router = () => (
       <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
       <Route exact path="/dictionary" component={SprkDictionaryDocs} />
       <Route exact path="/tabs" component={SprkTabsDocs} />
+      <Route exact path="/modal" component={SprkModalDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
