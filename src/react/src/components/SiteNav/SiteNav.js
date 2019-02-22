@@ -21,13 +21,8 @@ function SiteNav() {
           </Link>
         </li>
         <li>
-          <Link to="/alerts" className="drizzle-b-Link drizzle-b-Link--light">
-            Alerts
-          </Link>
-        </li>
-        <li>
-          <Link to="/tables" className="drizzle-b-Link drizzle-b-Link--light">
-            Tables
+          <Link to="/table" className="drizzle-b-Link drizzle-b-Link--light">
+            Table
           </Link>
         </li>
         <li>

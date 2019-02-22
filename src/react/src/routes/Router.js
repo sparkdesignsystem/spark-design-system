@@ -26,7 +26,7 @@ const Router = () => (
       <Route exact path="/icon" component={SprkIconDocs} />
       <Route exact path="/link" component={SprkLinkDocs} />
       <Route exact path="/promos" component={SprkPromoDocs} />
-      <Route exact path="/tables" component={SprkTableDocs} />
+      <Route exact path="/table" component={SprkTableDocs} />
       <Route exact path="/dividers" component={SprkDividerDocs} />
       <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
       <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />

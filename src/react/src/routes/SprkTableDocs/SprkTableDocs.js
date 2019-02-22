@@ -8,7 +8,7 @@ const SprkTableDocs = () => {
   return (
     <CentralColumnLayout>
       
-      <ExampleContainer>
+      <ExampleContainer heading="Secondary Row Comparison">
         <SprkTable 
           variant="secondaryRowComparison"
           additionalTableClasses="sprk-b-Table--spacing-medium"
