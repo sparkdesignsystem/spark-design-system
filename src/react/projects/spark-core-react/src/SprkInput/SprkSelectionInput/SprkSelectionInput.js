@@ -15,7 +15,7 @@ class SprkSelectionInput extends React.Component {
   }
 
   render() {
-    const { additionalClasses, label, valid, variant } = this.props;
+    const { additionalClasses, helperText, label, valid, variant } = this.props;
     const { choiceItems, id } = this.state;
     return (
       <React.Fragment>
@@ -60,6 +60,7 @@ class SprkSelectionInput extends React.Component {
               />
             </React.Fragment>
           )}
+          {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
           {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} />}
         </div>
       </React.Fragment>
@@ -77,6 +78,7 @@ SprkSelectionInput.propTypes = {
     }),
   ).isRequired,
   groupLabel: PropTypes.string,
+  helperText: PropTypes.string,
   valid: PropTypes.bool,
   variant: PropTypes.oneOf(['checkbox', 'radio', 'select']).isRequired,
 };
@@ -84,6 +86,7 @@ SprkSelectionInput.propTypes = {
 SprkSelectionInput.defaultProps = {
   additionalClasses: '',
   groupLabel: '',
+  helperText: '',
   valid: true,
 };
 

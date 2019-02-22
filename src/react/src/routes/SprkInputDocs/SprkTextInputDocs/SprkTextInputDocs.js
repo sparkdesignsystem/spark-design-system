@@ -1,8 +1,9 @@
 import React from 'react';
 import { SprkTextInput } from '@sparkdesignsystem/spark-core-react';
-import {
-  isValidPhone, formatPhone, isValidMonetary, formatMonetary,
-} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+import { isValidPhone,
+  formatPhone,
+  isValidMonetary,
+  formatMonetary } from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkTextInputDocs extends React.Component {
@@ -35,18 +36,26 @@ class SprkTextInputDocs extends React.Component {
     return (
       <React.Fragment>
         <ExampleContainer heading="Text">
+          <SprkTextInput label="Name" name="Name" placeholder="Enter your first name" />
+        </ExampleContainer>
+        <ExampleContainer heading="Text with Helper">
           <SprkTextInput
             label="Name"
             name="Name"
+            helperText="Optional helper text."
             placeholder="Enter your first name"
           />
         </ExampleContainer>
-        <ExampleContainer heading="Search">
+        <ExampleContainer heading="Textarea">
           <SprkTextInput
-            label="Search"
-            name="Search"
-            placeholder="Search"
+            label="Message"
+            name="Message"
+            type="textarea"
+            placeholder="Enter your message..."
           />
+        </ExampleContainer>
+        <ExampleContainer heading="Search">
+          <SprkTextInput label="Search" name="Search" placeholder="Search" />
         </ExampleContainer>
         <ExampleContainer heading="Inline Search">
           <SprkTextInput

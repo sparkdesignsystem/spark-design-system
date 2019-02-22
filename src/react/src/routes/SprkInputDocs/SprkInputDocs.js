@@ -4,6 +4,7 @@ import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralCol
 import FormExamples from './FormExamples/FormExamples';
 import SprkTextInputDocs from './SprkTextInputDocs/SprkTextInputDocs';
 import SprkSelectionInputDocs from './SprkSelectionInputDocs/SprkSelectionInputDocs';
+import SprkRevealInputDocs from './SprkRevealInputDocs/SprkRevealInputDocs';
 
 const SprkInputDocs = () => (
   <CentralColumnLayout>
@@ -19,6 +20,11 @@ const SprkInputDocs = () => (
         </Link>
       </li>
       <li>
+        <Link className="drizzle-b-Link" to="/input/reveal-input">
+          Reveal Input
+        </Link>
+      </li>
+      <li>
         <Link className="drizzle-b-Link" to="/input/forms">
           Form Examples
         </Link>
@@ -27,6 +33,7 @@ const SprkInputDocs = () => (
     <Route path="/input/forms" component={FormExamples} />
     <Route path="/input/text-input" component={SprkTextInputDocs} />
     <Route path="/input/selection-input" component={SprkSelectionInputDocs} />
+    <Route path="/input/reveal-input" component={SprkRevealInputDocs} />
   </CentralColumnLayout>
 );
 

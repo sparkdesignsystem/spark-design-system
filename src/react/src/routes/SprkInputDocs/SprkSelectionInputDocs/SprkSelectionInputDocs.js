@@ -27,6 +27,9 @@ function SprkSelectionInputDocs() {
       <ExampleContainer heading="Select">
         <SprkSelectionInput choices={choices} variant="select" />
       </ExampleContainer>
+      <ExampleContainer heading="Select with Helper">
+        <SprkSelectionInput choices={choices} helperText="Optional helper text." variant="select" />
+      </ExampleContainer>
     </React.Fragment>
   );
 }

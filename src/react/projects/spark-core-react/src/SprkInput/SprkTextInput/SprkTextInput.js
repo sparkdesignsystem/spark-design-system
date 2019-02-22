@@ -18,8 +18,10 @@ class SprkTextInput extends Component {
     const {
       additionalClasses,
       analyticsString,
+      children,
       errorMessage,
       formatter,
+      helperText,
       hiddenLabel,
       idString,
       label,
@@ -58,23 +60,40 @@ class SprkTextInput extends Component {
           >
             {label}
           </label>
-          <input
-            className={classNames(
-              'sprk-b-TextInput sprk-u-Width-100',
-              { 'sprk-b-TextInput--error': !valid },
-              { 'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0 },
-              { 'sprk-b-TextInput--has-text-icon': textIcon },
-            )}
-            id={id}
-            data-analytics={analyticsString}
-            data-id={idString}
-            type={type}
-            aria-invalid={!valid}
-            aria-describedby={errorContainerId}
-            value={valid && formatter(value) ? formatter(value) : value}
-            {...rest}
-          />
+          {type === 'textarea' && (
+            <textarea
+              className="sprk-b-TextArea sprk-u-Width-100"
+              id={id}
+              data-analytics={analyticsString}
+              data-id={idString}
+              type={type}
+              aria-invalid={!valid}
+              aria-describedby={errorContainerId}
+              value={valid && formatter(value) ? formatter(value) : value}
+              {...rest}
+            />
+          )}
+          {type !== 'textarea' && (
+            <input
+              className={classNames(
+                'sprk-b-TextInput sprk-u-Width-100',
+                { 'sprk-b-TextInput--error': !valid },
+                { 'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0 },
+                { 'sprk-b-TextInput--has-text-icon': textIcon },
+              )}
+              id={id}
+              data-analytics={analyticsString}
+              data-id={idString}
+              type={type}
+              aria-invalid={!valid}
+              aria-describedby={errorContainerId}
+              value={valid && formatter(value) ? formatter(value) : value}
+              {...rest}
+            />
+          )}
         </div>
+        {children}
+        {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
         {!valid && <SprkErrorContainer id={errorContainerId} message={errorMessage} />}
       </div>
     );
@@ -84,7 +103,9 @@ class SprkTextInput extends Component {
 SprkTextInput.propTypes = {
   additionalClasses: PropTypes.string,
   analyticsString: PropTypes.string,
+  children: PropTypes.node,
   formatter: PropTypes.func,
+  helperText: PropTypes.string,
   hiddenLabel: PropTypes.bool,
   idString: PropTypes.string,
   label: PropTypes.string,
@@ -96,7 +117,9 @@ SprkTextInput.propTypes = {
 SprkTextInput.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
+  children: [],
   formatter: value => value,
+  helperText: '',
   hiddenLabel: false,
   idString: '',
   label: 'Text Input Label',
