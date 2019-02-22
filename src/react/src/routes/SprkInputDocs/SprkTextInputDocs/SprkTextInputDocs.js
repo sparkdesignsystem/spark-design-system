@@ -1,6 +1,8 @@
 import React from 'react';
 import { SprkTextInput } from '@sparkdesignsystem/spark-core-react';
 import { isValidPhone,
+  isValidDate,
+  formatDate,
   formatPhone,
   isValidMonetary,
   formatMonetary } from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
@@ -10,6 +12,7 @@ class SprkTextInputDocs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      date: '',
       phone: '',
       monetary: '',
     };
@@ -32,7 +35,7 @@ class SprkTextInputDocs extends React.Component {
   }
 
   render() {
-    const { phone, monetary } = this.state;
+    const { date, phone, monetary } = this.state;
     return (
       <React.Fragment>
         <ExampleContainer heading="Text">
@@ -86,6 +89,18 @@ class SprkTextInputDocs extends React.Component {
             value={isValidPhone(phone) && formatPhone(phone) ? formatPhone(phone) : phone}
             onChange={this.handleChange}
             errorMessage="Incorrect phone number."
+          />
+        </ExampleContainer>
+        <ExampleContainer heading="Date (no picker)">
+          <SprkTextInput
+            formatter={formatDate}
+            label="Date"
+            name="date"
+            placeholder="01/01/2019"
+            valid={isValidDate(date)}
+            value={date}
+            onChange={this.handleChange}
+            errorMessage="Incorrect date."
           />
         </ExampleContainer>
       </React.Fragment>
