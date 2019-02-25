@@ -180,8 +180,8 @@ SprkFooter.propTypes = {
       src: PropTypes.string,
       // Assigned to href
       mediaHref: PropTypes.string,
-      // The alt text for the image
-      altText: PropTypes.string,
+      // The alt text for the image, icon, or SprkIcon
+      altText: PropTypes.string.isRequired,
       // Additional classes for the media
       mediaAddClasses: PropTypes.string,
       // The description of the image
@@ -236,8 +236,8 @@ SprkFooter.propTypes = {
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The image src
       src: PropTypes.string,
-      // Image alt text
-      altText: PropTypes.string,
+      // The alt text for the image, icon, or SprkIcon
+      altText: PropTypes.string.isRequired,
       // Additional classes for the image
       addClasses: PropTypes.string,
       // String used for the data-analytics attribute

@@ -50,7 +50,12 @@ class SprkFooterGlobalSection extends Component {
                     )
                   }
                   {item.mediaType === 'svg'
-                    && <div>{item.svg}</div>
+                    && (
+                      <div>{item.svg}</div>
+                    )
+                  }
+                  {item.mediaType !== 'image'
+                    && <span className="sprk-u-ScreenReaderText">{item.altText}</span>
                   }
                 </TagName>
               </div>

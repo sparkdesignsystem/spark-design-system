@@ -42,6 +42,7 @@ const globalItems = {
       ),
       element: 'a',
       mediaHref: '#nogo',
+      altText: 'Spark Logo',
     },
     {
       mediaType: 'SprkIcon',
@@ -49,6 +50,7 @@ const globalItems = {
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       iconName: 'house',
       element: 'a',
+      altText: 'A House Icon',
     },
   ],
 };
