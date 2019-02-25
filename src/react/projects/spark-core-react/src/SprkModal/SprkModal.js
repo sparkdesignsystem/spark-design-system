@@ -13,10 +13,18 @@ class SprkModal extends Component {
     super(props);
     console.log('loading the modal', props)
 
-    this.active = false;
-    this.wait = props.modalType == 'wait' ? true : false;
+    this.state = {
+      active: false,
+      wait: props.modalType == 'wait' ? true : false
+    }
+
     console.log('some children', props.children);
 
+    // Methods that need to access the class definition via `this` 
+    ['confirm', 'cancel', 'hide']
+      .forEach((method)=>{
+        this[method] = this[method].bind(this);
+      })
   }
 
   componentDidMount() {
@@ -33,7 +41,21 @@ class SprkModal extends Component {
     // window.removeEventListener('click', this.closeOnClickOutside);
   }
 
-  
+  confirm() {
+    console.log('modal confirming');
+    this.props.confirmClick();
+    this.hide();
+  }
+
+  cancel() {
+    console.log('modal canceling explicit');
+    this.props.cancelClick();
+    this.hide();
+  }
+
+  hide(ctx) {
+    console.log('in class hide method', ctx)
+  }
 
   render() {
     const {
@@ -57,11 +79,6 @@ class SprkModal extends Component {
       ...rest
     } = this.props;
 
-    function hideModal(e) {
-      e.preventDefault();
-      console.log('Should Hide');
-      this.setState({active: false});
-    }
 
     function showModal(e) {
       e.preventDefault();
@@ -101,8 +118,7 @@ class SprkModal extends Component {
                 className="sprk-c-Modal__icon"
                 type="button"
                 aria-label="Close Modal"
-                onClick={hideModal}
-                // (click)="closeModal($event)"
+                onClick={this.hide}
               >
                 <SprkIcon
                   icontype="close"
@@ -120,13 +136,14 @@ class SprkModal extends Component {
 
             
               <footer className="sprk-o-Stack__item">
-                <button className="sprk-c-Button sprk-u-mrm">
-                  Confirm
+                <button className="sprk-c-Button sprk-u-mrm" onClick={this.confirm}>
+                  {confirmText}
                 </button>
 
                 <button  className="sprk-c-Button sprk-c-Button--tertiary" 
-                        data-sprk-modal-cancel="exampleChoiceModal">
-                  Cancel
+                        data-sprk-modal-cancel="exampleChoiceModal"
+                        onClick={this.cancel} >
+                  {cancelText}
                 </button>
               </footer>
             
@@ -135,7 +152,7 @@ class SprkModal extends Component {
         </div>
         
         {/* Make sure to include the mask if the modal is active */}
-        <Mask clicked={hideModal}></Mask>
+        <Mask clicked={this.hide}></Mask>
       </div>
     );
   }
@@ -162,6 +179,7 @@ SprkModal.propTypes = {
   hide: PropTypes.func,
   confirmClick: PropTypes.func,
   cancelClick: PropTypes.func,
+  resolve: PropTypes.func,
 
   componentID:PropTypes.string,
   heading_id: PropTypes.string,

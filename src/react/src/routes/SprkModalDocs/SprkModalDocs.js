@@ -9,12 +9,12 @@ const SprkModalDocs = () => {
   return (
     <CentralColumnLayout>
       <ExampleContainer heading="Trigger A Basic Modal">
-        <SprkModal title="A Basic Modal">
+        <SprkModal title="A Basic Modal" confirmClick={()=>{console.log('confirm!')}}>
           Some Content for for that basic modal via slots
-          
+
           <p>And Even more text</p>
         </SprkModal>
-        <SprkButton variant="secondary">Trigger Modal</SprkButton>
+        <SprkButton variant="secondary" onClick={SprkModal.show}>Trigger Modal</SprkButton>
       </ExampleContainer>
 
       {/* <ExampleContainer heading="Trigger A Wait Modal">
