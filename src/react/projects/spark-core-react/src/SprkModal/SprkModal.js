@@ -57,51 +57,55 @@ class SprkModal extends Component {
           role={'dialog'}
           data-id={idString}
           data-analytics={analyticsString}
-          tabindex={'1'}
+          tabIndex={'1'}
           aria-labelledby={heading_id}
           aria-modal={'true'}
           aria-describedby={content_id}
           data-id={idString}
           {...rest}
         >
-          <div class="sprk-o-Stack sprk-o-Stack--large">
-            <header class="sprk-o-Stack__item sprk-c-Modal__header">
-              <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalChoiceHeading">
+          <div className={
+            classnames("sprk-o-Stack sprk-o-Stack--large")}>
+            <header  className="sprk-o-Stack__item sprk-c-Modal__header">
+              <h2  className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
+                   id="modalChoiceHeading">
                 Are you sure?
               </h2>
 
               <button
                 // *ngIf="modalType != 'wait'"
-                class="sprk-c-Modal__icon"
+                className="sprk-c-Modal__icon"
                 type="button"
                 aria-label="Close Modal"
                 // (click)="closeModal($event)"
               >
                 <SprkIcon
-                  iconType="close"
+                  icontype="close"
+                  iconName="close"
                   additionalClasses="sprk-c-Icon--stroke-current-color"
                 ></SprkIcon>
               </button>
             </header>
 
-            <div class="sprk-o-Stack__item sprk-c-Modal__body">
-              <p class="sprk-b-TypeBodyTwo" id="modalChoiceContent">
+            <div className="sprk-o-Stack__item sprk-c-Modal__body">
+              <p className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
                 This is some content that is in a modal. It explains what the modal is for. There will also be a way to close the modal.
               </p>
             </div>
 
-            <footer class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-u-mrm">
+            <footer className="sprk-o-Stack__item">
+              <button className="sprk-c-Button sprk-u-mrm">
                 Confirm
               </button>
 
-              <button class="sprk-c-Button sprk-c-Button--tertiary" data-sprk-modal-cancel="exampleChoiceModal">
+              <button  className="sprk-c-Button sprk-c-Button--tertiary" 
+                       data-sprk-modal-cancel="exampleChoiceModal">
                 Cancel
               </button>
             </footer>
           </div>
         </div>
-        <div data-sprk-modal-mask="true" class="sprk-c-ModalMask" tabindex="-1"></div>
+        <div data-sprk-modal-mask="true"  className="sprk-c-ModalMask" tabIndex="-1"></div>
         {/* sprk-u-Display--none */}
       </div>
     );
