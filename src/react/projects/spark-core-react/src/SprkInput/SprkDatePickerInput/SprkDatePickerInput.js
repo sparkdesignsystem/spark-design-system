@@ -5,8 +5,7 @@ import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
 class SprkDatePickerInput extends Component {
   constructor(props) {
-    super(props);
-    this.datePickerInputRef = React.createRef();
+    super(props).datePickerInputRef = React.createRef();
     this.tdpConfig = {
       mode: 'dp-below',
       lang: {
@@ -35,7 +34,25 @@ class SprkDatePickerInput extends Component {
 }
 
 SprkDatePickerInput.propTypes = {
-  datePickerConfig: PropTypes.shape(),
+  datePickerConfig: PropTypes.shape({
+    appendTo: PropTypes.node,
+    lang: PropTypes.shape({
+      days: PropTypes.arrayOf(PropTypes.string),
+      months: PropTypes.arrayOf(PropTypes.string),
+    }),
+    today: PropTypes.string,
+    clear: PropTypes.string,
+    close: PropTypes.string,
+    format: PropTypes.func,
+    parse: PropTypes.func,
+    mode: PropTypes.oneOf(['dp-modal', 'dp-below', 'dp-permanent']),
+    hilightedDate: PropTypes.string,
+    min: PropTypes.string,
+    max: PropTypes.string,
+    inRange: PropTypes.func,
+    dateClass: PropTypes.func,
+    dayOffset: PropTypes.number,
+  }),
 };
 
 SprkDatePickerInput.defaultProps = {

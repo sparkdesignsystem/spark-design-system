@@ -29,9 +29,7 @@ class FormExample extends Component {
   }
 
   testFormValidity() {
-    const {
-      isValid, PhoneValid,
-    } = this.state;
+    const { isValid, PhoneValid } = this.state;
     const newValidity = PhoneValid;
     if (isValid !== newValidity) {
       this.setState({
@@ -84,7 +82,9 @@ class FormExample extends Component {
           placeholder="email@example.com"
           errorMessage={EmailErrorMessage}
         />
-        <SprkButton type="button" disabled={!isValid}>Submit</SprkButton>
+        <SprkButton type="button" disabled={!isValid}>
+          Submit
+        </SprkButton>
       </form>
     );
   }

@@ -1,9 +1,15 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../SprkIcon/SprkIcon';
 
-const SprkErrorContainer = ({ message, id }) => (
-  <div className="sprk-b-ErrorContainer" id={id}>
+const SprkErrorContainer = ({ additionalClasses, analyticsString, idString, message, id }) => (
+  <div
+    className={classNames('sprk-b-ErrorContainer', additionalClasses)}
+    data-analytics={analyticsString}
+    data-id={idString}
+    id={id}
+  >
     <SprkIcon
       additionalClasses="sprk-c-Icon--m sprk-b-ErrorIcon"
       iconName="exclamation-filled-small"
@@ -13,12 +19,17 @@ const SprkErrorContainer = ({ message, id }) => (
 );
 
 SprkErrorContainer.propTypes = {
+  additionalClasses: PropTypes.string,
+  analyticsString: PropTypes.string,
   id: PropTypes.string.isRequired,
-  message: PropTypes.string,
+  idString: PropTypes.string,
+  message: PropTypes.string.isRequired,
 };
 
 SprkErrorContainer.defaultProps = {
-  message: 'This is an error in this field.',
+  additionalClasses: '',
+  analyticsString: '',
+  idString: '',
 };
 
 export default SprkErrorContainer;

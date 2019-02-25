@@ -15,11 +15,24 @@ class SprkSelectionInput extends React.Component {
   }
 
   render() {
-    const { additionalClasses, helperText, label, valid, variant } = this.props;
+    const {
+      additionalClasses,
+      analyticsString,
+      errorMessage,
+      helperText,
+      idString,
+      label,
+      valid,
+      variant,
+    } = this.props;
     const { choiceItems, id } = this.state;
     return (
       <React.Fragment>
-        <div className={classNames('sprk-b-InputContainer', additionalClasses)}>
+        <div
+          className={classNames('sprk-b-InputContainer', additionalClasses)}
+          data-analytics={analyticsString}
+          data-id={idString}
+        >
           {(variant === 'checkbox' || variant === 'radio') && (
             <fieldset className="sprk-b-Fieldset">
               <legend className="sprk-b-Legend">
@@ -61,7 +74,7 @@ class SprkSelectionInput extends React.Component {
             </React.Fragment>
           )}
           {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
-          {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} />}
+          {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} message={errorMessage} />}
         </div>
       </React.Fragment>
     );
@@ -70,6 +83,7 @@ class SprkSelectionInput extends React.Component {
 
 SprkSelectionInput.propTypes = {
   additionalClasses: PropTypes.string,
+  analyticsString: PropTypes.string,
   choices: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -77,16 +91,21 @@ SprkSelectionInput.propTypes = {
       value: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  errorMessage: PropTypes.string,
   groupLabel: PropTypes.string,
   helperText: PropTypes.string,
+  idString: PropTypes.string,
   valid: PropTypes.bool,
   variant: PropTypes.oneOf(['checkbox', 'radio', 'select']).isRequired,
 };
 
 SprkSelectionInput.defaultProps = {
   additionalClasses: '',
+  analyticsString: '',
+  errorMessage: '',
   groupLabel: '',
   helperText: '',
+  idString: '',
   valid: true,
 };
 

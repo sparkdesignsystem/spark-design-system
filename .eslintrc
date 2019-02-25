@@ -1,5 +1,10 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:jest/recommended"],
+  "plugins": ["jest"],
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
   "rules": {
     "object-curly-newline": ["error", {
       "ObjectPattern": { "multiline": true },
