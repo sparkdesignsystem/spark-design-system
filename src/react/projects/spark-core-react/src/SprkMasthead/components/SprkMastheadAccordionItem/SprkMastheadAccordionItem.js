@@ -57,7 +57,12 @@ class SprkMastheadAccordionItem extends Component {
         { stateLinks.length > 0
           && (
           <React.Fragment>
-            <a href="#nogo" className="sprk-c-MastheadAccordion__summary" onClick={this.toggleAccordionOpen}>
+            <a
+              href="#nogo"
+              className="sprk-c-MastheadAccordion__summary"
+              onClick={this.toggleAccordionOpen}
+              aria-expanded={isOpen ? 'true' : 'false'}
+            >
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
                 {text}
               </span>
