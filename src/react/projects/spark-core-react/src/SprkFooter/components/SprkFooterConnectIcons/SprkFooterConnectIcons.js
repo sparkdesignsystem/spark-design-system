@@ -18,7 +18,6 @@ class SprkFooterConnectIcons extends Component {
 
   render() {
     const { connectIcons } = this.props;
-    if (connectIcons.icons === undefined) return false;
     const { connectIconsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
@@ -50,10 +49,6 @@ class SprkFooterConnectIcons extends Component {
   }
 }
 
-SprkFooterConnectIcons.defaultProps = {
-  connectIcons: {},
-};
-
 SprkFooterConnectIcons.propTypes = {
   // The data for the global site items
   connectIcons: PropTypes.shape({
@@ -72,7 +67,7 @@ SprkFooterConnectIcons.propTypes = {
       // Element to render, can be 'a' or Link
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
-  }),
+  }).isRequired,
 };
 
 export default SprkFooterConnectIcons;

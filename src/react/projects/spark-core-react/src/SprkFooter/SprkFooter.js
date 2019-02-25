@@ -63,7 +63,7 @@ class SprkFooter extends Component {
           data-id={idString}
         >
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-            {globalItems
+            {Object.keys(globalItems).length > 1
               && (
                 <SprkFooterGlobalSection globalItems={globalItems} />
               )
@@ -102,7 +102,7 @@ class SprkFooter extends Component {
                 )}
               </div>
 
-              {connectIcons
+              {Object.keys(connectIcons).length > 1
               && (
                 <SprkFooterConnectIcons connectIcons={connectIcons} />
               )}
@@ -112,7 +112,7 @@ class SprkFooter extends Component {
           <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
 
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
-            {awards
+            {Object.keys(awards).length > 1
             && (
               <SprkFooterAwards awards={awards} />
             )}

@@ -18,7 +18,6 @@ class SprkFooterGlobalSection extends Component {
 
   render() {
     const { globalItems } = this.props;
-    if (globalItems.items === undefined) return false;
     const { globalItemsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">

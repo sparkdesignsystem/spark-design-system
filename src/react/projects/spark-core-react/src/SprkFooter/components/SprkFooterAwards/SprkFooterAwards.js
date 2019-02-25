@@ -17,7 +17,6 @@ class SprkFooterAwards extends Component {
 
   render() {
     const { awards } = this.props;
-    if (awards.images === undefined) return false;
     const { awardsImagesHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
@@ -54,10 +53,6 @@ class SprkFooterAwards extends Component {
   }
 }
 
-SprkFooterAwards.defaultProps = {
-  awards: {},
-};
-
 SprkFooterAwards.propTypes = {
   awards: PropTypes.shape({
     heading: PropTypes.string,
@@ -81,7 +76,7 @@ SprkFooterAwards.propTypes = {
     disclaimerAnalytics: PropTypes.string,
     // The title text rendered in the disclaimer
     disclaimerTitle: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default SprkFooterAwards;
