@@ -7,13 +7,11 @@ class SprkFooterConnectIcons extends Component {
   constructor(props) {
     super(props);
 
-    if (props.connectIcons.icons !== undefined) {
-      this.state = {
-        connectIconsHasIds: props.connectIcons.icons.map(
-          icon => ({ id: uniqueId(), ...icon }),
-        ),
-      };
-    }
+    this.state = {
+      connectIconsHasIds: props.connectIcons.icons.map(
+        icon => ({ id: uniqueId(), ...icon }),
+      ),
+    };
   }
 
   render() {
@@ -66,7 +64,7 @@ SprkFooterConnectIcons.propTypes = {
       analyticsString: PropTypes.string,
       // Element to render, can be 'a' or Link
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    })),
+    })).isRequired,
   }).isRequired,
 };
 

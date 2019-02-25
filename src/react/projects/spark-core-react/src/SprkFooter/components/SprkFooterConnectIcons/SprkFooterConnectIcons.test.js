@@ -42,4 +42,76 @@ describe('SprkFooterConnectIcons Component', () => {
     );
     expect(wrapper.find(SprkIcon).length).toBe(4);
   });
+
+  it('should render the href as nogo if not defined', () => {
+    const connectIcons = {
+      heading: 'Connect With Us',
+      icons: [
+        {
+          name: 'facebook',
+          screenReaderText: 'Facebook',
+          element: 'a',
+          analyticsString: 'test-link',
+        },
+        {
+          href: '#nogo',
+          name: 'instagram',
+          screenReaderText: 'Instagram',
+        },
+        {
+          href: '#nogo',
+          name: 'twitter',
+          screenReaderText: 'Twitter',
+        },
+        {
+          href: '#nogo',
+          name: 'youtube',
+          screenReaderText: 'Youtube',
+        },
+      ],
+    };
+
+    const wrapper = mount(
+      <SprkFooterConnectIcons
+        connectIcons={connectIcons}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+  });
+
+  it('should not render the href if element is not an a', () => {
+    const connectIcons = {
+      heading: 'Connect With Us',
+      icons: [
+        {
+          name: 'facebook',
+          screenReaderText: 'Facebook',
+          element: 'span',
+          analyticsString: 'test-link',
+        },
+        {
+          href: '#nogo',
+          name: 'instagram',
+          screenReaderText: 'Instagram',
+        },
+        {
+          href: '#nogo',
+          name: 'twitter',
+          screenReaderText: 'Twitter',
+        },
+        {
+          href: '#nogo',
+          name: 'youtube',
+          screenReaderText: 'Youtube',
+        },
+      ],
+    };
+
+    const wrapper = mount(
+      <SprkFooterConnectIcons
+        connectIcons={connectIcons}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+  });
 });

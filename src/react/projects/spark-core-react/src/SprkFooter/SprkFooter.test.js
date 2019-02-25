@@ -151,4 +151,115 @@ describe('SprkFooter Component', () => {
     );
     expect(wrapper.find('p').length).toBe(1);
   });
+
+  it('should render the href as nogo if not defined for additionalIcons', () => {
+    const additionalIcons = [
+      {
+        name: 'house',
+        addClasses: '',
+        screenReaderText: 'House',
+        analyticsString: 'test-link',
+        element: 'a',
+      },
+    ];
+    const wrapper = mount(
+      <SprkFooter
+        additionalIcons={additionalIcons}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+  });
+
+  it('should not render the href if element is not an a for additionalIcons', () => {
+    const additionalIcons = [
+      {
+        name: 'house',
+        addClasses: '',
+        screenReaderText: 'House',
+        analyticsString: 'test-link',
+        element: 'span',
+      },
+    ];
+    const wrapper = mount(
+      <SprkFooter
+        additionalIcons={additionalIcons}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+  });
+
+  it('should render the href as nogo if not defined for column links', () => {
+    const linkColumns = [
+      {
+        heading: 'Site Links',
+        links: [
+          {
+            text: 'About This.',
+            analyticsString: 'test-link',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'About This Other Thing',
+          },
+          {
+            href: '#nogo',
+            text: 'About That',
+          },
+          {
+            href: '#nogo',
+            text: 'Link Item',
+          },
+          {
+            href: '#nogo',
+            text: 'This Link Item',
+          },
+        ],
+      },
+    ];
+    const wrapper = mount(
+      <SprkFooter
+        linkColumns={linkColumns}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+  });
+
+  it('should not render the href if element is not an a for column links', () => {
+    const linkColumns = [
+      {
+        heading: 'Site Links',
+        links: [
+          {
+            href: '#nogo',
+            text: 'About This.',
+            analyticsString: 'test-link',
+            element: 'span',
+          },
+          {
+            href: '#nogo',
+            text: 'About This Other Thing',
+          },
+          {
+            href: '#nogo',
+            text: 'About That',
+          },
+          {
+            href: '#nogo',
+            text: 'Link Item',
+          },
+          {
+            href: '#nogo',
+            text: 'This Link Item',
+          },
+        ],
+      },
+    ];
+    const wrapper = mount(
+      <SprkFooter
+        linkColumns={linkColumns}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+  });
 });

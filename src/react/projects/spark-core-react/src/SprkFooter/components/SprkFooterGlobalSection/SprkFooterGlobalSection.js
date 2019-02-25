@@ -7,13 +7,11 @@ class SprkFooterGlobalSection extends Component {
   constructor(props) {
     super(props);
 
-    if (props.globalItems.items !== undefined) {
-      this.state = {
-        globalItemsHasIds: props.globalItems.items.map(
-          item => ({ id: uniqueId(), ...item }),
-        ),
-      };
-    }
+    this.state = {
+      globalItemsHasIds: props.globalItems.items.map(
+        item => ({ id: uniqueId(), ...item }),
+      ),
+    };
   }
 
   render() {

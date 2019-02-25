@@ -103,4 +103,64 @@ describe('SprkFooterGlobalSection Component', () => {
     );
     expect(wrapper.find('svg').length).toBe(1);
   });
+
+  it('should render the href as nogo if not defined', () => {
+    const globalItems = {
+      heading: 'Global Links',
+      items: [
+        {
+          mediaType: 'image',
+          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          altText: 'Spark Logo',
+          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          description: 'Lorem ipsum dolor sit amet, consectetur.',
+          element: 'a',
+          analyticsString: 'test-link',
+        },
+        {
+          mediaType: 'SprkIcon',
+          iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          description: 'Lorem ipsum dolor sit amet, consectetur.',
+        },
+      ],
+    };
+
+    const wrapper = mount(
+      <SprkFooterGlobalSection
+        globalItems={globalItems}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+  });
+
+  it('should not render the href if element is not an a', () => {
+    const globalItems = {
+      heading: 'Global Links',
+      items: [
+        {
+          mediaType: 'image',
+          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          altText: 'Spark Logo',
+          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          description: 'Lorem ipsum dolor sit amet, consectetur.',
+          element: 'span',
+          analyticsString: 'test-link',
+        },
+        {
+          mediaType: 'SprkIcon',
+          iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          description: 'Lorem ipsum dolor sit amet, consectetur.',
+        },
+      ],
+    };
+
+    const wrapper = mount(
+      <SprkFooterGlobalSection
+        globalItems={globalItems}
+      />,
+    );
+    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+  });
 });

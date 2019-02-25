@@ -6,13 +6,11 @@ import SprkToggle from '../../../SprkToggle/SprkToggle';
 class SprkFooterAwards extends Component {
   constructor(props) {
     super(props);
-    if (props.awards.images !== undefined) {
-      this.state = {
-        awardsImagesHasIds: props.awards.images.map(
-          item => ({ id: uniqueId(), ...item }),
-        ),
-      };
-    }
+    this.state = {
+      awardsImagesHasIds: props.awards.images.map(
+        item => ({ id: uniqueId(), ...item }),
+      ),
+    };
   }
 
   render() {
@@ -69,7 +67,7 @@ SprkFooterAwards.propTypes = {
       addClasses: PropTypes.string,
       // Used for the data-analytics attribute on the link wrapping the image
       analyticsString: PropTypes.string,
-    })),
+    })).isRequired,
     // The text rendered in the disclaimer
     disclaimerText: PropTypes.string,
     // Used for the data-analytics value on the title
