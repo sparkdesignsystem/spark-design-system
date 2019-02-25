@@ -71,12 +71,71 @@
     <tr>
       <td class="sprk-u-FontWeight--bold">columns</td>
       <td>array</td>
-      <td></td>
+      <td>Expects an array of objects that defines the number of columns. See below for column object details.</td>
     </tr>
     <tr>
       <td class="sprk-u-FontWeight--bold">data</td>
       <td>array</td>
-      <td></td>
+      <td>Expects an array of objects that defines the rows of data. See below for row object details.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">The column object represents a column that can be supplied to the table.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Sample Value</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">name</td>
+      <td>column1</td>
+      <td>The name of the column that will be used to match the data.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">header</td>
+      <td>Column Heading</td>
+      <td>The text that will be displayed in the column header.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">colspan</td>
+      <td>3</td>
+      <td>If present, will be added to determine the colSpan of the column.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">rowspan</td>
+      <td>2</td>
+      <td>If present, will be added to determine the rowSpan of the column.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">The row object represents a row that can be supplied to the table.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Sample Value</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">column1</td>
+      <td>Data 1</td>
+      <td>The key will determine what column the data is rendered in and the value is the rendered.</td>
     </tr>
   </tbody>
 </table>
