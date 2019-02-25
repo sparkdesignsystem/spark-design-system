@@ -5,13 +5,23 @@ import classnames from 'classnames';
 import { uniqueId, noop } from 'lodash';
 import SprkIcon from '../SprkIcon/SprkIcon';
 
+import Mask from './_mask.js';
+
 class SprkModal extends Component {
   constructor(props) {
+    
     super(props);
     console.log('loading the modal', props)
+
+    this.active = false;
+    this.wait = props.modalType == 'wait' ? true : false;
+    console.log('some children', props.children);
+
   }
 
   componentDidMount() {
+    console.log('mounted a wait modal?', this.wait);
+
     // window.addEventListener('keydown', this.closeOnEsc);
     // window.addEventListener('focusin', this.closeOnClickOutside);
     // window.addEventListener('click', this.closeOnClickOutside);
@@ -22,6 +32,8 @@ class SprkModal extends Component {
     // window.removeEventListener('focusin', this.closeOnClickOutside);
     // window.removeEventListener('click', this.closeOnClickOutside);
   }
+
+  
 
   render() {
     const {
@@ -45,6 +57,18 @@ class SprkModal extends Component {
       ...rest
     } = this.props;
 
+    function hideModal(e) {
+      e.preventDefault();
+      console.log('Should Hide');
+      this.setState({active: false});
+    }
+
+    function showModal(e) {
+      e.preventDefault();
+      console.log('Should Hide');
+      this.setState({active: true});
+    }
+    
     return (
       <div>
         <div
@@ -69,7 +93,7 @@ class SprkModal extends Component {
             <header  className="sprk-o-Stack__item sprk-c-Modal__header">
               <h2  className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
                    id="modalChoiceHeading">
-                Are you sure?
+                {title}
               </h2>
 
               <button
@@ -77,6 +101,7 @@ class SprkModal extends Component {
                 className="sprk-c-Modal__icon"
                 type="button"
                 aria-label="Close Modal"
+                onClick={hideModal}
                 // (click)="closeModal($event)"
               >
                 <SprkIcon
@@ -88,25 +113,29 @@ class SprkModal extends Component {
             </header>
 
             <div className="sprk-o-Stack__item sprk-c-Modal__body">
-              <p className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
-                This is some content that is in a modal. It explains what the modal is for. There will also be a way to close the modal.
-              </p>
+              <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
+                {children}
+              </div>
             </div>
 
-            <footer className="sprk-o-Stack__item">
-              <button className="sprk-c-Button sprk-u-mrm">
-                Confirm
-              </button>
+            
+              <footer className="sprk-o-Stack__item">
+                <button className="sprk-c-Button sprk-u-mrm">
+                  Confirm
+                </button>
 
-              <button  className="sprk-c-Button sprk-c-Button--tertiary" 
-                       data-sprk-modal-cancel="exampleChoiceModal">
-                Cancel
-              </button>
-            </footer>
+                <button  className="sprk-c-Button sprk-c-Button--tertiary" 
+                        data-sprk-modal-cancel="exampleChoiceModal">
+                  Cancel
+                </button>
+              </footer>
+            
           </div>
+          
         </div>
-        <div data-sprk-modal-mask="true"  className="sprk-c-ModalMask" tabIndex="-1"></div>
-        {/* sprk-u-Display--none */}
+        
+        {/* Make sure to include the mask if the modal is active */}
+        <Mask clicked={hideModal}></Mask>
       </div>
     );
   }
