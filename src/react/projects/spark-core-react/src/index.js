@@ -11,4 +11,5 @@ export { default as SprkMasthead } from './SprkMasthead/SprkMasthead';
 export { default as SprkPromo } from './SprkPromo/SprkPromo';
 export { default as SprkSpinner } from './SprkSpinner/SprkSpinner';
 export { default as SprkTabs } from './SprkTabs/SprkTabs';
-export { default as SprkTabsPanel } from './SprkTabs/components/SprkTabsPanel/SprkTabsPanel';
+export { default as SprkFooter } from './SprkFooter/SprkFooter';
+export { default as SprkToggle } from './SprkToggle/SprkToggle';
