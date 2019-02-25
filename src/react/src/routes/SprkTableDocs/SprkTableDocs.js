@@ -49,7 +49,7 @@ const SprkTableDocs = () => {
             [{name: 'data4', header: 'SubHeading 1'}, {name: 'data5', header: 'SubHeading 2'}, {name: 'data6', header: 'Subheading 3'}]
           ]}
           data={[
-            {data1: "Data 1", data2: "Data 2", data5: 'Data 5', data3: "Data 3", data4: 'Data 4'},
+            {data1: "Data 1", data2: "Data 2",  data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
             {data1: "Data 1", data2: "Data 2", data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
             {data1: "Data 1", data2: "Data 2", data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
             {data1: "Data 1", data2: "Data 2", data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
