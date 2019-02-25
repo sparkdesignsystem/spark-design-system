@@ -26,7 +26,7 @@ class SprkFooterGlobalSection extends Component {
           {globalItems.heading}
         </h3>
         { globalItemsHasIds.map((item) => {
-          const TagName = item.linkElement || 'a';
+          const TagName = item.element || 'a';
           return (
             <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div className="sprk-o-Stack__item">
@@ -89,7 +89,7 @@ SprkFooterGlobalSection.propTypes = {
       // The value for the data-analytics attribute
       analyticsString: PropTypes.string,
       // Element to render, can be 'a' or Link
-      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }).isRequired,
 };

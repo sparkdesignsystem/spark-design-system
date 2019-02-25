@@ -29,7 +29,7 @@ class SprkFooterConnectIcons extends Component {
         <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
           <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
             {connectIconsHasIds.map((icon) => {
-              const TagName = icon.linkElement || 'a';
+              const TagName = icon.element || 'a';
               return (
                 <li key={icon.id} className="sprk-o-Stack__item">
                   <TagName
@@ -70,7 +70,7 @@ SprkFooterConnectIcons.propTypes = {
       // String used for the data-analytics attribute
       analyticsString: PropTypes.string,
       // Element to render, can be 'a' or Link
-      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }),
 };

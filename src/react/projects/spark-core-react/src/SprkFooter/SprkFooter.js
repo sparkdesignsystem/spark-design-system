@@ -83,7 +83,7 @@ class SprkFooter extends Component {
 
                       <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
                         {column.links.map((columnLink) => {
-                          const TagName = columnLink.linkElement || 'a';
+                          const TagName = columnLink.element || 'a';
                           return (
                             <li key={columnLink.id} className="sprk-o-Stack__item asfsdfasdf">
                               <TagName
@@ -130,7 +130,7 @@ class SprkFooter extends Component {
               && (
                 <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
                   {additionalIconsHasIds.map((icon) => {
-                    const TagName = icon.linkElement || 'a';
+                    const TagName = icon.element || 'a';
                     return (
                       <li key={icon.id} className="sprk-o-Stack__item">
                         <TagName
@@ -189,7 +189,7 @@ SprkFooter.propTypes = {
       // The value for the data-analytics attribute
       analyticsString: PropTypes.string,
       // Element to render, can be 'a' or Link
-      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }),
   // The data for the columns of site links
@@ -203,7 +203,7 @@ SprkFooter.propTypes = {
       // The link text
       text: PropTypes.string,
       // Element to render, can be 'a' or Link
-      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The value for the data-analytics attribute
       analyticsString: PropTypes.string,
     })),
@@ -223,7 +223,7 @@ SprkFooter.propTypes = {
       // String used for the data-analytics attribute
       analyticsString: PropTypes.string,
       // Element to render, can be 'a' or Link
-      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     })),
   }),
   // The awards section data
@@ -233,7 +233,7 @@ SprkFooter.propTypes = {
       // The link href for the image
       href: PropTypes.string,
       // Element to render, can be 'a' or Link
-      linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The image src
       src: PropTypes.string,
       // Image alt text
@@ -261,7 +261,7 @@ SprkFooter.propTypes = {
     // Text used for screen readers
     screenReaderText: PropTypes.string,
     // Element to render, can be 'a' or Link
-    linkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     // String used for the data-analytics attribute
     analyticsString: PropTypes.string,
   })),
