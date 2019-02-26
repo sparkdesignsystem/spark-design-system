@@ -33,3 +33,31 @@ it('should assign data-id when idString has a value', () => {
   const wrapper = mount(<SprkSelectionInput choices={choices} idString="321" variant="checkbox" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
+
+it('should render helper text when supplied', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} helperText="Sample helper text." variant="radio" />,
+  );
+  expect(wrapper.find('.sprk-b-HelperText').length).toBe(1);
+  expect(wrapper.find('.sprk-b-HelperText').text()).toBe('Sample helper text.');
+});
+
+it('should not render helper text when not supplied', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} helperText="" variant="radio" valid={false} />,
+  );
+  expect(wrapper.find('.sprk-b-HelperText').length).toBe(0);
+});
+
+it('should render the input in an error state when valid is false', () => {
+  const wrapper = mount(
+    <SprkSelectionInput
+      choices={choices}
+      variant="checkbox"
+      errorMessage="error message"
+      valid={false}
+    />,
+  );
+  expect(wrapper.find('.sprk-b-ErrorContainer').length).toBe(1);
+  expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
+});

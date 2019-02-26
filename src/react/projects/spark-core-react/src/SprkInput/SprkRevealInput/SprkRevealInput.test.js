@@ -24,3 +24,12 @@ it('should assign data-id when idString has a value', () => {
   const wrapper = mount(<SprkRevealInput idString="321" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
+
+it('should toggle the input type between "text" and "password" on click of the checkbox', () => {
+  const wrapper = mount(<SprkRevealInput />);
+  const check = wrapper.find('.sprk-b-SelectionContainer input');
+  expect(wrapper.state().isRevealed).toBe(false);
+  check.simulate('click');
+  expect(wrapper.state().isRevealed).toBe(true);
+  check.simulate('click');
+});
