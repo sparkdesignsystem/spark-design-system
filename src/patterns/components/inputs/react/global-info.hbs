@@ -1,0 +1,113 @@
+<p class="sprk-u-mbm">The react implementation of inputs uses the following components to produce the variants below.
+  See each variant's example for configuration options.</p>
+
+<ul class="drizzle-b-List">
+  <li>SprkTextInput</li>
+  <li>SprkSelectionInput</li>
+  <li>SprkRevealInput</li>
+  <li>SprkDatepickerInput</li>
+</ul>
+
+<p class="sprk-u-mbm">The following props are available with all the Input components.</p>
+
+<h3 class="drizzle-b-h3 sprk-u-mbm">General</h3>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>additionalClasses</strong></td>
+      <td>string</td>
+      <td>A space-separated list of classes that will be added to the outermost element.</td>
+    </tr>
+    <tr>
+      <td><strong>analyticsString</strong></td>
+      <td>string</td>
+      <td>Assigned to the data-analytics attribute.</td>
+    </tr>
+    <tr>
+      <td><strong>disabled</strong></td>
+      <td>boolean</td>
+      <td>If true, will render the component in the disabled state.</td>
+    </tr>
+    <tr>
+      <td><strong>errorMessage</strong></td>
+      <td>string</td>
+      <td>The error message to render inside of the input's error container.</td>
+    </tr>
+    <tr>
+      <td><strong>helperText</strong></td>
+      <td>string</td>
+      <td>Text that appears below the input, intended to provide more information to a user.</td>
+    </tr>
+    <tr>
+      <td><strong>idString</strong></td>
+      <td>string</td>
+      <td>Assigned to the data-id attribute.</td>
+    </tr>
+    <tr>
+      <td><strong>label</strong></td>
+      <td>string</td>
+      <td>The text to render inside the label element.</td>
+    </tr>
+    <tr>
+      <td><strong>leadingIcon</strong></td>
+      <td>string</td>
+      <td>The name of the icon, when supplied, will be rendered inside the input element.</td>
+    </tr>
+    <tr>
+      <td><strong>textIcon</strong></td>
+      <td>string</td>
+      <td>If true, will render the currency icon inside the input element.</td>
+    </tr>
+    <tr>
+      <td><strong>valid</strong></td>
+      <td>boolean</td>
+      <td>Determines whether to render the component in the valid or the error state.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3 sprk-u-mbm">SprkTextInput</h3>
+<p class="sprk-u-mbm">In addition to the props above, the following props are available for SprkTextInput.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>formatter</strong></td>
+      <td>function</td>
+      <td>A function supplied will be passed the value of the input and then executed, if the valid prop is true.
+        The value returned will be assigned to the value of the input.</td>
+    </tr>
+    <tr>
+      <td><strong>forwardedRef</strong></td>
+      <td>React ref</td>
+      <td>A ref passed in will be attached to the input element of the rendered component.</td>
+    </tr>
+    <tr>
+      <td><strong>hiddenLabel</strong></td>
+      <td>boolean</td>
+      <td>If true, will visually hide the label, using the value of the label prop as screen reader only text.</td>
+    </tr>
+  </tbody>
+</table>
+

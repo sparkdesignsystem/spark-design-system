@@ -18,6 +18,7 @@ class SprkSelectionInput extends React.Component {
     const {
       additionalClasses,
       analyticsString,
+      disabled,
       errorMessage,
       helperText,
       idString,
@@ -41,6 +42,7 @@ class SprkSelectionInput extends React.Component {
               {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
                 <div className="sprk-b-SelectionContainer" key={innerId}>
                   <input
+                    disabled={disabled}
                     id={innerId}
                     type={variant}
                     aria-describedby={`errorcontainer-${id}`}
@@ -91,6 +93,7 @@ SprkSelectionInput.propTypes = {
       value: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   groupLabel: PropTypes.string,
   helperText: PropTypes.string,
@@ -102,6 +105,7 @@ SprkSelectionInput.propTypes = {
 SprkSelectionInput.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
+  disabled: false,
   errorMessage: '',
   groupLabel: '',
   helperText: '',
