@@ -51,3 +51,33 @@ it('should display a table element with the correct classes if the variant is se
   const wrapper = shallow(<SprkTable variant="secondaryRowComparison" />);
   expect(wrapper.find('table').hasClass('sprk-b-Table--secondary-row-comparison')).toBe(true);
 })
+
+it('should display a thead element with the correct class if the variant is default', () => {
+  const wrapper = shallow(<SprkTable variant='default' />);
+  expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
+})
+
+it('should display a thead element with the correct class if the variant is secondary', () => {
+  const wrapper = shallow(<SprkTable variant='secondary' />);
+  expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
+})
+
+it('should display a thead element with the correct class if the variant is grouped', () => {
+  const wrapper = shallow(<SprkTable variant='grouped' />);
+  expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
+})
+
+it('should display a thead element with the correct class if the variant is rowComparison', () => {
+  const wrapper = shallow(<SprkTable variant='rowComparison' />);
+  expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
+})
+
+it('should display one tr element in the thead element if columns are present', () => {
+  const wrapper = shallow(<SprkTable columns={[ {name:'data1', header: 'Header 1'}, {name:'data2', header: 'Header 2'}, {name:'data3', header: 'Header 3'} ]}/>);
+  expect(wrapper.find('tr').length).toBe(1);
+})
+
+it('should display multiple tr elements in the thead element if columns are present and the variant is grouped', () => {
+  const wrapper = shallow(<SprkTable variant="grouped" columns={[ [{name: 'column1', header: 'Column Heading', rowspan: 2}, {name: 'column2', header: 'Column Heading', colspan: 3}, {name: 'column3', header: 'Column Heading', rowspan: 2}], [{name: 'subheading1', header: 'SubHeading'}, {name: 'subheading2', header: 'SubHeading'}, {name: 'subheading3', header: 'Subheading'}] ]} />);
+  expect(wrapper.find('tr').length).toBe(2);
+})
