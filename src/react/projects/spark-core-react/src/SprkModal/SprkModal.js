@@ -11,24 +11,19 @@ class SprkModal extends Component {
   constructor(props) {
     
     super(props);
-    console.log('loading the modal', props)
 
     this.state = {
       active: false,
       wait: props.modalType == 'wait' ? true : false
     }
 
-    console.log('some children', props.children);
-
-    // Methods that need to access the class definition via `this` 
-    ['confirm', 'cancel', 'hide']
-      .forEach((method)=>{
-        this[method] = this[method].bind(this);
-      })
+    // Methods that need to access the class definition via `this`
+    this.confirm = this.confirm.bind(this);
+    this.cancel = this.cancel.bind(this);
   }
 
   componentDidMount() {
-    console.log('mounted a wait modal?', this.wait);
+    console.log('mounted a wait modal?', this.state.wait);
 
     // window.addEventListener('keydown', this.closeOnEsc);
     // window.addEventListener('focusin', this.closeOnClickOutside);
@@ -44,17 +39,11 @@ class SprkModal extends Component {
   confirm() {
     console.log('modal confirming');
     this.props.confirmClick();
-    this.hide();
   }
 
   cancel() {
     console.log('modal canceling explicit');
     this.props.cancelClick();
-    this.hide();
-  }
-
-  hide(ctx) {
-    console.log('in class hide method', ctx)
   }
 
   render() {
@@ -70,22 +59,15 @@ class SprkModal extends Component {
       isVisible,
 
       hide,
-      confirmClick,
-      cancelClick,
 
       componentID,
       heading_id,
       content_id,
       ...rest
     } = this.props;
-
-
-    function showModal(e) {
-      e.preventDefault();
-      console.log('Should Hide');
-      this.setState({active: true});
-    }
     
+    if (!this.props.isVisible) { return(null); }
+
     return (
       <div>
         <div
@@ -118,7 +100,7 @@ class SprkModal extends Component {
                 className="sprk-c-Modal__icon"
                 type="button"
                 aria-label="Close Modal"
-                onClick={this.hide}
+                onClick={this.cancel}
               >
                 <SprkIcon
                   icontype="close"
@@ -152,7 +134,7 @@ class SprkModal extends Component {
         </div>
         
         {/* Make sure to include the mask if the modal is active */}
-        <Mask clicked={this.hide}></Mask>
+        <Mask clicked={this.cancel}></Mask>
       </div>
     );
   }
@@ -176,7 +158,6 @@ SprkModal.propTypes = {
   idString: PropTypes.string,
   isVisible: PropTypes.bool,
 
-  hide: PropTypes.func,
   confirmClick: PropTypes.func,
   cancelClick: PropTypes.func,
   resolve: PropTypes.func,
@@ -195,10 +176,8 @@ SprkModal.defaultProps = {
   modalType: 'default',
   confirmText: 'Confirm',
   cancelText: 'Cancel',
-  idString: '',
   isVisible: false,
 
-  hide: noop,
   confirmClick: noop,
   cancelClick: noop,
 
