@@ -17,7 +17,9 @@ it('should default to open if defaultOpen is true', () => {
 });
 
 it('should toggle the accordion open on click', () => {
-  const wrapper = mount(<SprkMastheadAccordionItem text="Item 1" subNavLinks={[{ text: 'Item 1' }]} />);
+  const wrapper = mount(
+    <SprkMastheadAccordionItem text="Item 1" subNavLinks={[{ text: 'Item 1' }]} />,
+  );
   expect(wrapper.state().isOpen).toBe(false);
   wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
@@ -31,38 +33,78 @@ it('should render the supplied element', () => {
 });
 
 it('should render the supplied href', () => {
-  const wrapper = mount(<SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'a', href: 'https://www.google.com' }]} />);
-  expect(wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href')).toBe('https://www.google.com');
+  const wrapper = mount(
+    <SprkMastheadAccordionItem
+      subNavLinks={[{ text: 'Item 1', element: 'a', href: 'https://www.google.com' }]}
+    />,
+  );
+  expect(
+    wrapper
+      .find('.sprk-c-Masthead__link')
+      .instance()
+      .getAttribute('href'),
+  ).toBe('https://www.google.com');
 });
 
 it('should render the supplied href as #nogo if not supplied', () => {
-  const wrapper = mount(<SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'a' }]} />);
-  expect(wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href')).toBe('#nogo');
+  const wrapper = mount(
+    <SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'a' }]} />,
+  );
+  expect(
+    wrapper
+      .find('.sprk-c-Masthead__link')
+      .instance()
+      .getAttribute('href'),
+  ).toBe('#nogo');
 });
 
-it('should not render href if element supplied is not a', () => {
-  const wrapper = mount(<SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'span' }]} />);
-  expect(wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href')).toBe(null);
+it('should not render href if element supplied is not a (subnav)', () => {
+  const wrapper = mount(
+    <SprkMastheadAccordionItem subNavLinks={[{ text: 'Item 1', element: 'span' }]} />,
+  );
+  expect(
+    wrapper
+      .find('.sprk-c-Masthead__link')
+      .instance()
+      .getAttribute('href'),
+  ).toBe(null);
 });
 
 it('should not render href if element supplied is not a', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="span" />);
-  expect(wrapper.find('.sprk-c-MastheadAccordion__summary').instance().getAttribute('href')).toBe(null);
+  expect(
+    wrapper
+      .find('.sprk-c-MastheadAccordion__summary')
+      .instance()
+      .getAttribute('href'),
+  ).toBe(null);
 });
 
 it('should render href as #nogo if element supplied is a and href is not supplied', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="a" />);
-  expect(wrapper.find('.sprk-c-MastheadAccordion__summary').instance().getAttribute('href')).toBe('#nogo');
+  expect(
+    wrapper
+      .find('.sprk-c-MastheadAccordion__summary')
+      .instance()
+      .getAttribute('href'),
+  ).toBe('#nogo');
 });
 
 it('should render href as supplied value', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="a" href="https://www.google.com" />);
-  expect(wrapper.find('.sprk-c-MastheadAccordion__summary').instance().getAttribute('href')).toBe('https://www.google.com');
+  expect(
+    wrapper
+      .find('.sprk-c-MastheadAccordion__summary')
+      .instance()
+      .getAttribute('href'),
+  ).toBe('https://www.google.com');
 });
 
 it('should add a class if isActive is true', () => {
   const wrapper = mount(<SprkMastheadAccordionItem isActive />);
-  expect(wrapper.find('.sprk-c-MastheadAccordion__item.sprk-c-MastheadAccordion__item--active').length).toBe(1);
+  expect(
+    wrapper.find('.sprk-c-MastheadAccordion__item.sprk-c-MastheadAccordion__item--active').length,
+  ).toBe(1);
 });
 
 it('should render as add classes if isButton is true', () => {
@@ -74,4 +116,13 @@ it('should render as add classes if isButton is true', () => {
 it('should render the right icon if leadingIcon has value', () => {
   const wrapper = mount(<SprkMastheadAccordionItem leadingIcon="settings" />);
   expect(wrapper.find('.sprk-c-Icon > use[xlinkHref="#settings"]').length).toBe(1);
+});
+
+it('should add aria-expanded="true" when the item is open', () => {
+  const wrapper = mount(
+    <SprkMastheadAccordionItem text="Item 1" subNavLinks={[{ text: 'Item 1' }]} />,
+  );
+  expect(wrapper.state().isOpen).toBe(false);
+  wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
+  expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
 });

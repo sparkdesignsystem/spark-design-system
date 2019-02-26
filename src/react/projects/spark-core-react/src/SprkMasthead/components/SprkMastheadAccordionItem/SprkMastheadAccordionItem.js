@@ -53,15 +53,19 @@ class SprkMastheadAccordionItem extends Component {
         data-analytics={analyticsString}
         data-id={idString}
       >
-
-        { stateLinks.length > 0
-          && (
+        {stateLinks.length > 0 && (
           <React.Fragment>
-            <a href="#nogo" className="sprk-c-MastheadAccordion__summary" onClick={this.toggleAccordionOpen}>
-              <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
-                {text}
-              </span>
-              <SprkIcon additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })} iconName="chevron-down" />
+            <a
+              href="#nogo"
+              className="sprk-c-MastheadAccordion__summary"
+              onClick={this.toggleAccordionOpen}
+              aria-expanded={isOpen ? 'true' : 'false'}
+            >
+              <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">{text}</span>
+              <SprkIcon
+                additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })}
+                iconName="chevron-down"
+              />
             </a>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
@@ -78,7 +82,9 @@ class SprkMastheadAccordionItem extends Component {
                     <li key={innerId}>
                       <InnerTagName
                         href={InnerTagName === 'a' ? innerHref || '#nogo' : undefined}
-                        className={classNames('sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link')}
+                        className={classNames(
+                          'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link',
+                        )}
                         {...innerRest}
                       >
                         {innerText}
@@ -89,27 +95,29 @@ class SprkMastheadAccordionItem extends Component {
               </ul>
             </AnimateHeight>
           </React.Fragment>
-          )
-          }
-        { stateLinks.length <= 0
-          && (
+        )}
+        {stateLinks.length <= 0 && (
           <TagName
             className={classNames(
               { 'sprk-c-MastheadAccordion__summary': !isButton },
-              { 'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm': isButton },
+              {
+                'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm': isButton,
+              },
             )}
             href={TagName === 'a' ? href : undefined}
             {...rest}
           >
             <span className={classNames({ 'sprk-c-MastheadAccordion__heading': !isButton })}>
-              {leadingIcon
-                && <SprkIcon additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs" iconName={leadingIcon} />
-              }
-              { text }
+              {leadingIcon && (
+                <SprkIcon
+                  additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs"
+                  iconName={leadingIcon}
+                />
+              )}
+              {text}
             </span>
           </TagName>
-          )
-        }
+        )}
       </li>
     );
   }
@@ -135,14 +143,16 @@ SprkMastheadAccordionItem.propTypes = {
   // The name of the icon to render before the text
   leadingIcon: PropTypes.string,
   // An array of link objects that builds the sub nav
-  subNavLinks: PropTypes.arrayOf(PropTypes.shape({
-    // The element to render, could be 'a' or a Component like Link
-    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    // Assigned to the href attribute if element is 'a'
-    href: PropTypes.string,
-    // The element to render, could be 'a' or a Component like Link
-    text: PropTypes.string,
-  })),
+  subNavLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      // The element to render, could be 'a' or a Component like Link
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      // Assigned to the href attribute if element is 'a'
+      href: PropTypes.string,
+      // The element to render, could be 'a' or a Component like Link
+      text: PropTypes.string,
+    }),
+  ),
   // The text inside the element
   text: PropTypes.string,
 };
