@@ -10,7 +10,8 @@ class SprkModalDocs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      basic: false
+      basic: false,
+      wait: false
     };
   }
 
@@ -18,7 +19,6 @@ class SprkModalDocs extends React.Component {
     var mutator = {};
     mutator[key] = !this.state[key];
     this.setState(mutator, ()=>{
-      // wait for state to apply before the log
       console.log('trying to set', key, this.state)
     })
   }
