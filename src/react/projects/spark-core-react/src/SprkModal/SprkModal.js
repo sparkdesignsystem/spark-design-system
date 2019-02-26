@@ -43,7 +43,9 @@ class SprkModal extends Component {
 
   cancel() {
     console.log('modal canceling explicit');
-    this.props.cancelClick();
+    if (!this.state.wait) {
+      this.props.cancelClick();
+    }
   }
 
   render() {
@@ -68,13 +70,69 @@ class SprkModal extends Component {
     
     if (!this.props.isVisible) { return(null); }
 
+    var ModalBody = () =>{
+      if (this.state.wait) {
+        return (
+          <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
+            <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
+                {children}
+              </p>
+          </div>
+        )
+      } else {
+        return (
+          <div>
+            <div className="sprk-o-Stack__item sprk-c-Modal__body">
+              <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
+                {children}
+              </div>
+            </div>
+
+            &nbsp;
+            <footer className="sprk-o-Stack__item">
+              <button className="sprk-c-Button sprk-u-mrm" onClick={this.confirm}>
+                {confirmText}
+              </button>
+
+              <button  className="sprk-c-Button sprk-c-Button--tertiary" 
+                      data-sprk-modal-cancel="exampleChoiceModal"
+                      onClick={this.cancel} >
+                {cancelText}
+              </button>
+            </footer>
+          </div>
+        )
+      }
+    }
+
+    var CloseButton = () => {
+      if (this.state.wait) { return (null) }
+
+      return (
+        <button
+          className="sprk-c-Modal__icon"
+          type="button"
+          aria-label="Close Modal"
+          onClick={this.cancel}
+        >
+          <SprkIcon
+            icontype="close"
+            iconName="close"
+            additionalClasses="sprk-c-Icon--stroke-current-color"
+          ></SprkIcon>
+        </button>
+      );
+    }
+   
+
     return (
       <div>
         <div
           className={
             classnames(
               'sprk-c-Modal',
-              // 'sprk-u-Display--none'
+              this.state.wait ? 'sprk-c-Modal--wait' : '',
               additionalClasses,
             )}
           role={'dialog'}
@@ -82,55 +140,23 @@ class SprkModal extends Component {
           data-analytics={analyticsString}
           tabIndex={'1'}
           aria-labelledby={heading_id}
-          aria-modal={'true'}
+          aria-modal='true'
           aria-describedby={content_id}
           data-id={idString}
           {...rest}
         >
-          <div className={
-            classnames("sprk-o-Stack sprk-o-Stack--large")}>
-            <header  className="sprk-o-Stack__item sprk-c-Modal__header">
-              <h2  className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
+          <div className="sprk-o-Stack sprk-o-Stack--large">
+            <header className="sprk-o-Stack__item sprk-c-Modal__header">
+              <h2 className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
                    id="modalChoiceHeading">
                 {title}
               </h2>
 
-              <button
-                // *ngIf="modalType != 'wait'"
-                className="sprk-c-Modal__icon"
-                type="button"
-                aria-label="Close Modal"
-                onClick={this.cancel}
-              >
-                <SprkIcon
-                  icontype="close"
-                  iconName="close"
-                  additionalClasses="sprk-c-Icon--stroke-current-color"
-                ></SprkIcon>
-              </button>
+              <CloseButton />
             </header>
 
-            <div className="sprk-o-Stack__item sprk-c-Modal__body">
-              <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
-                {children}
-              </div>
-            </div>
-
-            
-              <footer className="sprk-o-Stack__item">
-                <button className="sprk-c-Button sprk-u-mrm" onClick={this.confirm}>
-                  {confirmText}
-                </button>
-
-                <button  className="sprk-c-Button sprk-c-Button--tertiary" 
-                        data-sprk-modal-cancel="exampleChoiceModal"
-                        onClick={this.cancel} >
-                  {cancelText}
-                </button>
-              </footer>
-            
+            <ModalBody />
           </div>
-          
         </div>
         
         {/* Make sure to include the mask if the modal is active */}
@@ -139,6 +165,8 @@ class SprkModal extends Component {
     );
   }
 };
+
+
 
 SprkModal.propTypes = {
   // classes to add to the class of the rendered element

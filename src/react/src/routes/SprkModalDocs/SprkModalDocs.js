@@ -29,7 +29,10 @@ class SprkModalDocs extends React.Component {
         <ExampleContainer heading="Trigger A Basic Modal">
           <SprkModal title="A Basic Modal" 
                      isVisible={this.state.basic} 
-                     confirmClick={()=>{console.log('confirm!')}}
+                     confirmClick={()=>{
+                       console.log('confirm!')
+                       this.toggle('basic')
+                      }}
                      cancelClick={this.toggle.bind(this, 'basic')}>
                      
             Some Content for for that basic modal via slots
@@ -39,13 +42,26 @@ class SprkModalDocs extends React.Component {
           <SprkButton variant="secondary" onClick={this.toggle.bind(this, 'basic')}>Trigger Modal</SprkButton>
         </ExampleContainer>
 
-        <h3>Debug:</h3>
-        <p>basic: {this.state.basic}</p>
+        <ExampleContainer heading="Trigger A Wait Modal">
+          <SprkModal title="A Wait Modal" 
+                     isVisible={this.state.wait}
+                     modalType="wait"
+                     confirmClick={()=>{
+                       console.log('confirm!')
+                       this.toggle('wait')
+                     }}
+                     cancelClick={this.toggle.bind(this, 'wait')}>
+                     
+            Some Content for for the wait modal via slots
 
-        {/* <ExampleContainer heading="Trigger A Wait Modal">
-          <SprkModal modalType="wait"></SprkModal>
-          <SprkButton variant="secondary">Trigger and Wait</SprkButton>
-        </ExampleContainer> */}
+            <p>This modal will dismiss via timeout after 2 seconds.</p>
+          </SprkModal>
+          <SprkButton variant="secondary" onClick={()=>{
+            this.toggle('wait');
+            setTimeout(this.toggle.bind(this, 'wait'), 2000);
+          }}>Trigger Modal</SprkButton>
+        </ExampleContainer>
+
       </CentralColumnLayout>
     );
   }
