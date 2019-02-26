@@ -31,3 +31,23 @@ it('should display a div element with the correct classes if additionalClasses h
   expect(wrapper.find('div').hasClass('sprk-b-TableContainer')).toBe(true);
   expect(wrapper.find('div').hasClass('additionalClass')).toBe(true);
 });
+
+it('should display a table element with the correct classes if the variant is secondary', () => {
+  const wrapper = shallow(<SprkTable variant="secondary" />);
+  expect(wrapper.find('table').hasClass('sprk-b-Table--secondary')).toBe(true);
+})
+
+it('should display a table element with the correct classes if the variant is grouped', () => {
+  const wrapper = shallow(<SprkTable variant="grouped" />);
+  expect(wrapper.find('table').hasClass('sprk-b-Table--grouped-columns')).toBe(true);
+})
+
+it('should display a table element with the correct classes if the variant is rowComparison', () => {
+  const wrapper = shallow(<SprkTable variant="rowComparison" />);
+  expect(wrapper.find('table').hasClass('sprk-b-Table--row-comparison')).toBe(true);
+})
+
+it('should display a table element with the correct classes if the variant is secondaryRowComparison', () => {
+  const wrapper = shallow(<SprkTable variant="secondaryRowComparison" />);
+  expect(wrapper.find('table').hasClass('sprk-b-Table--secondary-row-comparison')).toBe(true);
+})
