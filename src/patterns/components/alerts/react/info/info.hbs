@@ -21,6 +21,14 @@
     </td>
   </tr>
   <tr>
+    <td class="sprk-u-FontWeight--bold">isVisible</td>
+    <td>Boolean</td>
+    <td>
+      This determines whether to render the alert. Change the value of this prop to true
+      to show the alert or false to hide the alert.
+    </td>
+  </tr>
+  <tr>
     <td class="sprk-u-FontWeight--bold">message</td>
     <td>String</td>
     <td>The paragraph content for the alert message.</td>
@@ -63,11 +71,13 @@
     </td>
   </tr>
   <tr>
-    <td class="sprk-u-FontWeight--bold">dismissFunc</td>
+    <td class="sprk-u-FontWeight--bold">onDismiss</td>
     <td>Function</td>
     <td>
-      An optional function that is called when the
-      dismiss button is clicked.
+      A function that is called when the
+      dismiss button is clicked. This function should toggle
+      the isVisible state that is passed to the isVisible
+      prop.
     </td>
   </tr>
   </tbody>

@@ -1,4 +1,8 @@
-{{#embed "patterns.components.alerts.react.code.base" variant="fail" message="This is some text that a client needs
-to read because something failed or went wrong. There is extra text in here to demonstrate the icon placement when the
-message goes longer than one line. You will notice that the icon to the left stays vertically centered, but the dismiss
-icon remains in the top right corner. Alerts should never have this much text, though!" idString="alert-fail-1" analyticsString="alert"}}{{/embed}}
+<SprkAlert
+  message="This is a failure message to alert that something was not successful."
+  onDismiss={() => { this.setState({ isVisibleFailAlert: false }); }}
+  isVisible={this.state.isVisibleFailAlert}
+  variant="fail"
+  idString="alert-fail-1"
+  analyticsString="alert"
+/>
