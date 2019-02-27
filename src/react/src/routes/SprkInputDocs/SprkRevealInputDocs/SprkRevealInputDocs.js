@@ -28,6 +28,7 @@ class SprkRevealInputDocs extends Component {
         </ExampleContainer>
         <ExampleContainer heading="SSN">
           <SprkRevealInput
+            errorMessage="There is an error in this field."
             formatter={formatSSN}
             valid={isValidSSN(ssn)}
             value={ssn}
