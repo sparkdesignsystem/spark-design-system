@@ -11,16 +11,15 @@ class SprkModalDocs extends React.Component {
     super(props);
     this.state = {
       basic: false,
-      wait: false
+      wait: false,
+      info: false
     };
   }
 
   toggle(key) {
     var mutator = {};
     mutator[key] = !this.state[key];
-    this.setState(mutator, ()=>{
-      console.log('trying to set', key, this.state)
-    })
+    this.setState(mutator)
   }
 
   render () {
@@ -39,7 +38,24 @@ class SprkModalDocs extends React.Component {
 
             <p>And Even more text</p>
           </SprkModal>
-          <SprkButton variant="secondary" onClick={this.toggle.bind(this, 'basic')}>Trigger Modal</SprkButton>
+          <SprkButton onClick={this.toggle.bind(this, 'basic')}>Trigger Choice Modal</SprkButton>
+        </ExampleContainer>
+
+        <ExampleContainer heading="Trigger An Info Only Modal">
+          <SprkModal title="An Info Only Modal" 
+                     isVisible={this.state.info}
+                     modalType="info"
+                     confirmClick={()=>{
+                       console.log('confirm!')
+                       this.toggle('info')
+                     }}
+                     cancelClick={this.toggle.bind(this, 'info')}>
+                     
+            Some Content for for the info modal via slots
+
+            <p>The more you know!</p>
+          </SprkModal>
+          <SprkButton onClick={this.toggle.bind(this, 'info')} >Trigger Info Modal</SprkButton>
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger A Wait Modal">
@@ -56,10 +72,10 @@ class SprkModalDocs extends React.Component {
 
             <p>This modal will dismiss via timeout after 2 seconds.</p>
           </SprkModal>
-          <SprkButton variant="secondary" onClick={()=>{
+          <SprkButton onClick={()=>{
             this.toggle('wait');
             setTimeout(this.toggle.bind(this, 'wait'), 2000);
-          }}>Trigger Modal</SprkButton>
+          }}>Trigger Wait Modal</SprkButton>
         </ExampleContainer>
 
       </CentralColumnLayout>

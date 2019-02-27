@@ -3,49 +3,52 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { uniqueId, noop } from 'lodash';
-import SprkIcon from '../SprkIcon/SprkIcon';
+import SprkSpinner from '../SprkSpinner/SprkSpinner';
 
-import Mask from './_mask.js';
+import CloseButton from './CloseButton';
+import ModalFooter from './ModalFooter';
+import Mask from './Mask';
 
 class SprkModal extends Component {
   constructor(props) {
-    
     super(props);
-
-    this.state = {
-      active: false,
-      wait: props.modalType == 'wait' ? true : false
-    }
-
     // Methods that need to access the class definition via `this`
-    this.confirm = this.confirm.bind(this);
     this.cancel = this.cancel.bind(this);
+    this.removeListeners = this.removeListeners.bind(this);
+    this.attachListeners = this.attachListeners.bind(this);
+    this.closeOnEsc = this.closeOnEsc.bind(this);
   }
 
   componentDidMount() {
-    console.log('mounted a wait modal?', this.state.wait);
-
     // window.addEventListener('keydown', this.closeOnEsc);
     // window.addEventListener('focusin', this.closeOnClickOutside);
     // window.addEventListener('click', this.closeOnClickOutside);
   }
 
   componentWillUnmount() {
-    // window.removeEventListener('keydown', this.closeOnEsc);
-    // window.removeEventListener('focusin', this.closeOnClickOutside);
-    // window.removeEventListener('click', this.closeOnClickOutside);
+    this.removeListeners();
   }
 
-  confirm() {
-    console.log('modal confirming');
-    this.props.confirmClick();
+  closeOnEsc(e){
+    if (e.key == 'Escape' || e.keyCode == 27) {
+      this.cancel('escape');
+    }
   }
 
-  cancel() {
-    console.log('modal canceling explicit');
-    if (!this.state.wait) {
+  removeListeners() {
+    window.removeEventListener('keydown', this.closeOnEsc);
+  }
+
+  attachListeners() {
+    window.addEventListener('keydown', this.closeOnEsc);
+  }
+
+  cancel(source) {
+    console.log(`canceling ${this.props.modalType} modal (comp id: ${this.props.componentID}) because of '${source}'`);
+    if (this.props.modalType != 'wait') {
       this.props.cancelClick();
     }
+    this.removeListeners();
   }
 
   render() {
@@ -59,80 +62,30 @@ class SprkModal extends Component {
       cancelText,
       idString,
       isVisible,
-
-      hide,
-
+      confirmClick,
+      cancelClick,
       componentID,
       heading_id,
       content_id,
       ...rest
     } = this.props;
+
     
-    if (!this.props.isVisible) { return(null); }
+    var isWait = modalType == 'wait';
+    // var isInfo = modalType == 'info';
+    var isChoice = modalType != 'wait' && modalType != 'info';
+      
+    if (!isVisible) { return(null); }
 
-    var ModalBody = () =>{
-      if (this.state.wait) {
-        return (
-          <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
-            <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
-                {children}
-              </p>
-          </div>
-        )
-      } else {
-        return (
-          <div>
-            <div className="sprk-o-Stack__item sprk-c-Modal__body">
-              <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
-                {children}
-              </div>
-            </div>
-
-            &nbsp;
-            <footer className="sprk-o-Stack__item">
-              <button className="sprk-c-Button sprk-u-mrm" onClick={this.confirm}>
-                {confirmText}
-              </button>
-
-              <button  className="sprk-c-Button sprk-c-Button--tertiary" 
-                      data-sprk-modal-cancel="exampleChoiceModal"
-                      onClick={this.cancel} >
-                {cancelText}
-              </button>
-            </footer>
-          </div>
-        )
-      }
-    }
-
-    var CloseButton = () => {
-      if (this.state.wait) { return (null) }
-
-      return (
-        <button
-          className="sprk-c-Modal__icon"
-          type="button"
-          aria-label="Close Modal"
-          onClick={this.cancel}
-        >
-          <SprkIcon
-            icontype="close"
-            iconName="close"
-            additionalClasses="sprk-c-Icon--stroke-current-color"
-          ></SprkIcon>
-        </button>
-      );
-    }
+    this.attachListeners();
    
-
     return (
       <div>
         <div
           className={
             classnames(
               'sprk-c-Modal',
-              this.state.wait ? 'sprk-c-Modal--wait' : '',
+              isWait ? 'sprk-c-Modal--wait' : '',
               additionalClasses,
             )}
           role={'dialog'}
@@ -151,16 +104,32 @@ class SprkModal extends Component {
                    id="modalChoiceHeading">
                 {title}
               </h2>
-
-              <CloseButton />
+              
+              {!isWait && <CloseButton clickAction={this.cancel.bind(this, 'closeButton')} />}
             </header>
 
-            <ModalBody />
+            <div>
+              <div className="sprk-o-Stack__item sprk-c-Modal__body">
+                {isWait && <SprkSpinner />}
+                <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
+                  {children}
+                </div>
+              </div>
+
+              {isChoice && (
+                <ModalFooter 
+                confirmClick={confirmClick}
+                cancelClick={this.cancel.bind(this, 'cancelAction')}
+                confirmText={confirmText}
+                cancelText={cancelText}
+                />
+              )}
+            </div>
           </div>
         </div>
         
         {/* Make sure to include the mask if the modal is active */}
-        <Mask clicked={this.cancel}></Mask>
+        <Mask clicked={this.cancel.bind(this, 'mask')}></Mask>
       </div>
     );
   }
