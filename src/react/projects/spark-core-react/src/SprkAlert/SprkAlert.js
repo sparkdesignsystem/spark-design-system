@@ -16,6 +16,8 @@ const SprkAlert = (props) => {
     ...other
   } = props;
 
+  if (!isVisible) return null;
+
   let icon;
 
   const classNames = classnames(
@@ -41,18 +43,16 @@ const SprkAlert = (props) => {
       break;
   }
 
-  if (!isVisible) return null;
-
   return (
     <div className={classNames} role="alert" data-id={idString} {...other}>
       <div className="sprk-c-Alert__content">
         {variant
           && (
-          <SprkIcon
-            iconName={icon}
-            additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
-            aria-hidden="true"
-          />
+            <SprkIcon
+              iconName={icon}
+              additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+              aria-hidden="true"
+            />
           )
         }
 
