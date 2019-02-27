@@ -60,16 +60,6 @@
       <td>The text to render inside the label element.</td>
     </tr>
     <tr>
-      <td><strong>leadingIcon</strong></td>
-      <td>string</td>
-      <td>The name of the icon, when supplied, will be rendered inside the input element.</td>
-    </tr>
-    <tr>
-      <td><strong>textIcon</strong></td>
-      <td>string</td>
-      <td>If true, will render the currency icon inside the input element.</td>
-    </tr>
-    <tr>
       <td><strong>valid</strong></td>
       <td>boolean</td>
       <td>Determines whether to render the component in the valid or the error state.</td>
@@ -108,6 +98,135 @@
       <td>boolean</td>
       <td>If true, will visually hide the label, using the value of the label prop as screen reader only text.</td>
     </tr>
+    <tr>
+      <td><strong>leadingIcon</strong></td>
+      <td>string</td>
+      <td>The name of the icon, when supplied, will be rendered inside the input element.</td>
+    </tr>
+    <tr>
+      <td><strong>textIcon</strong></td>
+      <td>string</td>
+      <td>If true, will render the currency icon inside the input element.</td>
+    </tr>
+    <tr>
+      <td><strong>type</strong></td>
+      <td>string</td>
+      <td>Will assign its value to the type attribute of the input element. If it is set to 'textarea', will render a
+        textarea instead of an input.</td>
+    </tr>
+    <tr>
+      <td><strong>value</strong></td>
+      <td>string</td>
+      <td>Will assign its value to the value attribute of the input element.</td>
+    </tr>
   </tbody>
 </table>
 
+<h3 class="drizzle-b-h3 sprk-u-mbm">SprkSelectionInput</h3>
+<p class="sprk-u-mbm">In addition to the props above, the following props are available for SprkSelectionInput.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>choices</strong></td>
+    <td>array</td>
+    <td>Expects as array of objects that describe the choices available to the user. See below for choice object details.</td>
+  </tr>
+  <tr>
+    <td><strong>groupLabel</strong></td>
+    <td>string</td>
+    <td>Text that describes the group of selection items as a whole, applies to the checkbox and radio variants only.</td>
+  </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">The choice object describes a choice available the a user via SprkSelectionInput.
+  See below for object details.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>label</strong></td>
+    <td>string</td>
+    <td>Text attached to the rendered input element.</td>
+  </tr>
+  <tr>
+    <td><strong>name</strong></td>
+    <td>string</td>
+    <td>Assigned to the name attribute of the rendered input element.</td>
+  </tr>
+  <tr>
+    <td><strong>name</strong></td>
+    <td>string</td>
+    <td>Assigned to the name attribute of the rendered input element.</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3 sprk-u-mbm">SprkRevealInput</h3>
+<p class="sprk-u-mbm">In addition to the props above, the following props are available for SprkRevealInput.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>toggleLabel</strong></td>
+    <td>string</td>
+    <td>The text attached to the checkbox that toggles the visibility of the input's content.</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3 class="drizzle-b-h3 sprk-u-mbm">SprkDatePickerInput</h3>
+<p class="sprk-u-mbm">In addition to the props above, the following props are available for SprkDatePickerInput.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbl">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="sprk-u-FontWeight--bold">sprkDatePickerConfig</td>
+    <td>object</td>
+    <td>Exposes configuration provided by tiny-date-picker, see
+      <a href="https://github.com/chrisdavies/tiny-date-picker" class="drizzle-b-Link">github</a> for
+      documentation.</td>
+  </tr>
+  </tbody>
+</table>
