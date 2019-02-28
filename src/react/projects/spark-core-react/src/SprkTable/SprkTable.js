@@ -9,7 +9,7 @@ const SprkTable = (props) => {
     columns,
     variant,
     idString,
-    additionalClasses,
+    additionalContainerClasses,
     additionalTableClasses,
     children,
     ...other
@@ -17,7 +17,7 @@ const SprkTable = (props) => {
 
   const wrapperClassNames = classnames(
     'sprk-b-TableContainer',
-    additionalClasses,
+    additionalContainerClasses,
   );
 
   const tableClassNames = classnames(
@@ -170,7 +170,7 @@ SprkTable.propTypes = {
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the table wrapper
-  additionalClasses: PropTypes.string,
+  additionalContainerClasses: PropTypes.string,
   // Any additional classes to add to the table
   additionalTableClasses: PropTypes.string,
   // And children markup to be rendered
@@ -182,7 +182,7 @@ SprkTable.defaultProps = {
   data: [],
   variant: 'default',
   idString: '',
-  additionalClasses: '',
+  additionalContainerClasses: '',
   additionalTableClasses: '',
   children: undefined,
 };

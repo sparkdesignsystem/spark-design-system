@@ -28,8 +28,8 @@ it('should display a div element with the correct data-id if idString has a valu
   expect(wrapper.find('div[data-id="table-1"]').length).toBe(1);
 });
 
-it('should display a div element with the correct classes if additionalClasses has a value', () => {
-  const wrapper = shallow(<SprkTable additionalClasses="additionalClass" />);
+it('should display a div element with the correct classes if additionalContainerClasses has a value', () => {
+  const wrapper = shallow(<SprkTable additionalContainerClasses="additionalClass" />);
   expect(wrapper.find('div').hasClass('sprk-b-TableContainer')).toBe(true);
   expect(wrapper.find('div').hasClass('additionalClass')).toBe(true);
 });
