@@ -61,3 +61,21 @@ it('should render the input in an error state when valid is false', () => {
   expect(wrapper.find('.sprk-b-ErrorContainer').length).toBe(1);
   expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
 });
+
+it('should render grouped options if supplied', () => {
+  choices.push({
+    label: 'Grouped Options',
+    options: [
+      {
+        label: 'Option 1',
+        value: 'option-1',
+      },
+      {
+        label: 'Option 2',
+        value: 'option-2',
+      },
+    ],
+  });
+  const wrapper = mount(<SprkSelectionInput variant="select" choices={choices} />);
+  expect(wrapper.find('optgroup').length).toBe(1);
+});
