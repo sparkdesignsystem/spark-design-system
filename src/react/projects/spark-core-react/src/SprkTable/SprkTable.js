@@ -1,171 +1,168 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkButton } from '@sparkdesignsystem/spark-core-react';
 import { uniqueId } from 'lodash';
 
 const SprkTable = (props) => {
-  
   const {
     data,
     columns,
     variant,
-    idString, 
-    additionalClasses, 
+    idString,
+    additionalClasses,
     additionalTableClasses,
-    children, 
+    children,
     ...other
   } = props;
-  
+
   const wrapperClassNames = classnames(
     'sprk-b-TableContainer',
-    additionalClasses
+    additionalClasses,
   );
 
   const tableClassNames = classnames(
     'sprk-b-Table',
-    {'sprk-b-Table--secondary' : variant === "secondary"},
-    {'sprk-b-Table--secondary-row-comparison' : variant === "secondaryRowComparison"},
-    {'sprk-b-Table--grouped-columns' : variant === "grouped"},
-    {'sprk-b-Table--row-comparison' : variant === 'rowComparison'},
-    additionalTableClasses 
+    { 'sprk-b-Table--secondary': variant === 'secondary' },
+    { 'sprk-b-Table--secondary-row-comparison': variant === 'secondaryRowComparison' },
+    { 'sprk-b-Table--grouped-columns': variant === 'grouped' },
+    { 'sprk-b-Table--row-comparison': variant === 'rowComparison' },
+    additionalTableClasses,
   );
 
-  if(variant === 'default' || variant === 'secondary') {
+  if (variant === 'default' || variant === 'secondary') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
-            {columns &&
+            {columns
+            && (
             <tr>
-              {columns.map(col => {
-                return <th key={uniqueId('th_')}>{col.header}</th>
-              })}
+              {columns.map(col => <th key={uniqueId('th_')}>{col.header}</th>)}
             </tr>
-            }
-          </thead>
-          
-          {data &&
-          <tbody>
-          {data.map(row => 
-            <tr key={uniqueId('row_')}>
-              {columns.map( col => 
-                <td key={col.name}>{row[col.name]}</td>  
-              )}
-            </tr>  
-          )}
-          </tbody>
-          }
-        </table>
-      </div>
-    );
-  }
-
-  if(variant === 'grouped') {
-    return (
-      <div className={wrapperClassNames} data-id={idString}>
-        <table className={tableClassNames} {...other}>
-          <thead className="sprk-b-Table__head">
-            {columns &&
-             columns.map(row => 
-              <tr key={uniqueId('row_')}>
-                {row.map(col => 
-                  <th key={uniqueId('th')} rowSpan={col.rowspan} colSpan={col.colspan}>{col.header}</th>
-                )}
-              </tr>
             )
             }
-
           </thead>
-        
-          {data &&
+
+          {data
+          && (
           <tbody>
-            {data.map(row =>
+            {data.map(row => (
               <tr key={uniqueId('row_')}>
-                {
-                  Object.values(row).map(item => 
-                    <td key={uniqueId('td_')}>{item}</td>
-                  )
-                }
+                {columns.map(col => <td key={col.name}>{row[col.name]}</td>)}
               </tr>
-            )}
+            ))}
           </tbody>
-          }
-        </table>
-      </div>
-    )
-  }
-
-  if(variant === 'rowComparison') {
-    return (
-      <div className={wrapperClassNames} data-id={idString}>
-        <table className={tableClassNames} {...other}>
-          <thead className="sprk-b-Table__head">
-            <tr>
-              <th className="sprk-b-Table__empty-heading"></th>
-              {columns.map(col => {
-                return <th key={uniqueId('th_')}>{col.header}</th>
-              })}
-            </tr>
-          </thead>
-          
-          {data &&
-          <tbody>
-          {data.map(row => 
-            <tr key={uniqueId('row_')}>
-                <th>{row.rowHeading}</th>
-              {columns.map( col => 
-                <td key={uniqueId('td_')}>{row[col.name]}</td>  
-              )}
-            </tr>  
-          )}
-          </tbody>
+          )
           }
         </table>
       </div>
     );
   }
 
-  if(variant === 'secondaryRowComparison') {
-  
+  if (variant === 'grouped') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
-          { data &&
+          <thead className="sprk-b-Table__head">
+            {columns
+            && (
+              columns.map(row => (
+                <tr key={uniqueId('row_')}>
+                  {row.map(col => <th key={uniqueId('th')} rowSpan={col.rowspan} colSpan={col.colspan}>{col.header}</th>)}
+                </tr>
+              ))
+            )
+            }
+          </thead>
+
+          {data
+          && (
           <tbody>
-            {data.map(row => 
-            <tr key={uniqueId('row_')}>
-              <th>{row.rowHeading}</th>
-              {columns.map( col => 
-              <td key={uniqueId('td_')}>{row[col.name]}</td>  
-              )}
-              <td>
-                {row.button}
-              </td>
-            </tr>  
-            )}
+            {data.map(row => (
+              <tr key={uniqueId('row_')}>
+                {
+                  Object.values(row).map(item => <td key={uniqueId('td_')}>{item}</td>)
+                }
+              </tr>
+            ))}
           </tbody>
+          )
           }
         </table>
       </div>
-    )
+    );
   }
 
-  if(variant === 'html') {
+  if (variant === 'rowComparison') {
+    return (
+      <div className={wrapperClassNames} data-id={idString}>
+        <table className={tableClassNames} {...other}>
+          <thead className="sprk-b-Table__head">
+            <tr>
+              <th className="sprk-b-Table__empty-heading" />
+              {columns.map(col => <th key={uniqueId('th_')}>{col.header}</th>)}
+            </tr>
+          </thead>
+
+          {data
+          && (
+          <tbody>
+            {data.map(row => (
+              <tr key={uniqueId('row_')}>
+                <th>{row.rowHeading}</th>
+                {columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)}
+              </tr>
+            ))}
+          </tbody>
+          )
+          }
+        </table>
+      </div>
+    );
+  }
+
+  if (variant === 'secondaryRowComparison') {
+    return (
+      <div className={wrapperClassNames} data-id={idString}>
+        <table className={tableClassNames} {...other}>
+          {data
+          && (
+          <tbody>
+            {data.map(row => (
+              <tr key={uniqueId('row_')}>
+                <th>{row.rowHeading}</th>
+                {columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)}
+                <td>
+                  {row.button}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+          )
+          }
+        </table>
+      </div>
+    );
+  }
+
+  if (variant === 'html') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           {children}
         </table>
       </div>
-    )
+    );
   }
-
-}
+  return (null);
+};
 
 SprkTable.propTypes = {
-  // An array used to render the table headings
-  columns: PropTypes.array,
+  // An array used to render the table headings - Can be an array of objects or an array of arrays
+  columns: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.object),
+    PropTypes.arrayOf(PropTypes.array),
+  ]),
   // An array of objects used to map and render the table row data
   data: PropTypes.arrayOf(PropTypes.object),
   // A string to determine what variant of the table should render
@@ -178,7 +175,7 @@ SprkTable.propTypes = {
   additionalTableClasses: PropTypes.string,
   // And children markup to be rendered
   children: PropTypes.node,
-}
+};
 
 SprkTable.defaultProps = {
   columns: [],
@@ -187,6 +184,7 @@ SprkTable.defaultProps = {
   idString: '',
   additionalClasses: '',
   additionalTableClasses: '',
-}
+  children: undefined,
+};
 
 export default SprkTable;
