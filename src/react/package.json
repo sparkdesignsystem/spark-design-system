@@ -19,9 +19,9 @@
     "eject": "react-scripts eject"
   },
   "browserslist": [
-    "last 2 versions",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ]
-}
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+    ]
+  }
