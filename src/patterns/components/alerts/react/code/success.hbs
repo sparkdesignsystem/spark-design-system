@@ -1,2 +1,8 @@
-{{#embed "patterns.components.alerts.react.code.base" variant="success"
-         message="This is a success message." idString="alert-success-1" analyticsString="alert"}}{{/embed}}
+  <SprkAlert
+    message="This is a success message."
+    onDismiss={() => { this.setState({ isVisibleSuccessAlert: false }); }}
+    isVisible={this.state.isVisibleSuccessAlert}
+    variant="success"
+    idString="alert-success-1"
+    analyticsString="alert"
+  />
