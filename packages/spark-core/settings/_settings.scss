@@ -5,7 +5,7 @@
 //
 // Reset
 ///
-$sprk-selection-bg-color: $sprk-green;
+$sprk-selection-bg-color: $sprk-green !default;
 
 //
 // Spacing
@@ -99,7 +99,7 @@ $sprk-pag-max-width: 26rem !default;
 $sprk-pag-current-link-font-weight: 500;
 $sprk-pag-link-color: $sprk-black !default;
 $sprk-pag-link-color-hover: $sprk-pag-link-color !default;
-$sprk-pag-link-font-weight: 400;
+$sprk-pag-link-font-weight: 400 !default;
 $sprk-pag-selection-color: $sprk-green !default;
 $sprk-pag-selection-link-color: $sprk-white !default;
 $sprk-pag-selection-link-color-hover: $sprk-white !default;
@@ -223,8 +223,8 @@ $sprk-line-height-body-four: 1.84 !default;
 $sprk-font-weight-body-four: 300 !default;
 
 // Line-height Collision
-$sprk-line-height-collision-top-crop: 5;
-$sprk-line-height-collision-bottom-crop: 5;
+$sprk-line-height-collision-top-crop: 5 !default;
+$sprk-line-height-collision-bottom-crop: 5 !default;
 
 //
 // Consistent Style Vars
@@ -285,9 +285,9 @@ $sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 $sprk-btn-background-color: $sprk-green !default;
 $sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 $sprk-btn-border-style: solid !default;
-$sprk-btn-border-color: $sprk-btn-background-color;
-$sprk-btn-border-width: 2px;
-$sprk-btn-font-weight: 500;
+$sprk-btn-border-color: $sprk-btn-background-color !default;
+$sprk-btn-border-width: 2px !default;
+$sprk-btn-font-weight: 500 !default;
 $sprk-btn-text-color: $sprk-white !default;
 $sprk-btn-border-radius: 4px !default;
 $sprk-btn-hover-background-color: $sprk-green-dark !default;
@@ -651,7 +651,7 @@ $sprk-divider-border: 2px solid $sprk-divider-color !default;
 // Accordions
 ///
 $sprk-accordion-max-width: 53.125rem !default;
-$sprk-accordion-border: $sprk-divider-border;
+$sprk-accordion-border: $sprk-divider-border !default;
 $sprk-accordion-border-open: 2px solid $sprk-black !default;
 $sprk-accordion-summary-color: $sprk-black !default;
 $sprk-accordion-summary-active-color: $sprk-red !default;
@@ -674,7 +674,7 @@ $sprk-dropdown-border: 1px solid $sprk-gray !default;
 $sprk-dropdown-font-size: $sprk-font-size-body-one !default;
 $sprk-dropdown-font-weight: 400 !default;
 $sprk-dropdown-footer-padding: $sprk-space-inset-short-l !default;
-$sprk-dropdown-line-height: 1;
+$sprk-dropdown-line-height: 1 !default;
 $sprk-dropdown-max-width: 24rem !default;
 $sprk-dropdown-padding: $sprk-space-misc-a !default;
 $sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
@@ -743,7 +743,7 @@ $sprk-masthead-transition: box-shadow 0.3s ease-in !default;
 // Big Nav
 $sprk-big-nav-column-width: 64rem !default;
 $sprk-big-nav-bg: $sprk-white !default;
-$sprk-big-nav-link-font-weight: 400;
+$sprk-big-nav-link-font-weight: 400 !default;
 $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
 $sprk-big-nav-link-color: $sprk-black !default;
 $sprk-big-nav-active-color: $sprk-big-nav-link-color !default;

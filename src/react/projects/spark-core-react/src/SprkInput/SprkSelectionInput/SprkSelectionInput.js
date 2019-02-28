@@ -39,22 +39,24 @@ class SprkSelectionInput extends React.Component {
               <legend className="sprk-b-Legend">
                 <p className="sprk-b-Label">{label}</p>
               </legend>
-              {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
-                <div className="sprk-b-SelectionContainer" key={innerId}>
-                  <input
-                    disabled={disabled}
-                    id={innerId}
-                    type={variant}
-                    aria-describedby={`errorcontainer-${id}`}
-                    name={name}
-                    value={value}
-                    {...rest}
-                  />
-                  <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">
-                    {innerLabel}
-                  </label>
-                </div>
-              ))}
+              {choiceItems.map(
+                ({ label: innerLabel, id: innerId, isOptGroup, name, value, ...rest }) => (
+                  <div className="sprk-b-SelectionContainer" key={innerId}>
+                    <input
+                      disabled={disabled}
+                      id={innerId}
+                      type={variant}
+                      aria-describedby={`errorcontainer-${id}`}
+                      name={name}
+                      value={value}
+                      {...rest}
+                    />
+                    <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">
+                      {innerLabel}
+                    </label>
+                  </div>
+                ),
+              )}
             </fieldset>
           )}
           {variant === 'select' && (
@@ -63,11 +65,26 @@ class SprkSelectionInput extends React.Component {
                 {label}
               </label>
               <select className="sprk-b-Select" id={id} aria-describedby={`errorcontainer-${id}`}>
-                {choiceItems.map(({ id: innerId, label: innerLabel, value }) => (
-                  <option value={value} key={innerId}>
-                    {innerLabel}
-                  </option>
-                ))}
+                {choiceItems.map(
+                  ({ id: innerId, isOptGroup, label: innerLabel, options, value }) => {
+                    if (isOptGroup) {
+                      return (
+                        <optgroup label={innerLabel} key={innerId}>
+                          {options.map(({ value: optionValue, label: optionLabel }) => (
+                            <option key={`${innerId}-${uniqueId()}`} value={optionValue}>
+                              {optionLabel}
+                            </option>
+                          ))}
+                        </optgroup>
+                      );
+                    }
+                    return (
+                      <option value={value} key={innerId}>
+                        {innerLabel}
+                      </option>
+                    );
+                  },
+                )}
               </select>
               <SprkIcon
                 iconName="chevron-down"
@@ -89,8 +106,8 @@ SprkSelectionInput.propTypes = {
   choices: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      value: PropTypes.string,
     }),
   ).isRequired,
   disabled: PropTypes.bool,

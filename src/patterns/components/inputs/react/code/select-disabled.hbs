@@ -1,21 +1,35 @@
-<SprkSelectionInput choices={choices} variant="select" disabled />
+<SprkSelectionInput choices={choices} name="select" variant="select" disabled />
 <script>
   const choices = [
     {
-      label: 'Item 1',
-      name: 'select',
-      value: 'item-1',
-      defaultChecked: true,
+      label: 'Option 1',
+      value: 'option-1',
     },
     {
-      label: 'Item 2',
-      name: 'select',
-      value: 'item-2',
+      label: 'Option 2',
+      value: 'option-2',
     },
     {
-      label: 'Item 3',
-      name: 'select',
-      value: 'item-3',
+      label: 'Option 3',
+      value: 'option-3',
+    },
+    {
+      isOptGroup: true,
+      label: 'Grouped Options',
+      options: [
+        {
+          label: 'Grouped Option 1',
+          value: 'grouped-option-1',
+        },
+        {
+          label: 'Grouped Option 2',
+          value: 'grouped-option-2',
+        },
+        {
+          label: 'Grouped Option 3',
+          value: 'grouped-option-3',
+        },
+      ],
     },
   ];
 </script>
