@@ -39,9 +39,14 @@ it('should run onDismiss when the dismiss button is clicked', () => {
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
-it('should not run dismissFunc when the dismiss button is clicked and dismissFunc is empty', () => {
+it('should not run onDismiss when the dismiss button is clicked and onDismiss is empty', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(<SprkAlert message="test" isVisible />);
   wrapper.find('button.sprk-c-Alert__icon.sprk-c-Alert__icon--dismiss').simulate('click');
   expect(spyFunc.mock.calls.length).toBe(0);
+});
+
+it('should not render the alert is isVisible is false', () => {
+  const wrapper = shallow(<SprkAlert message="test" />);
+  expect(wrapper.find('div.sprk-c-Alert').length).toBe(0);
 });
