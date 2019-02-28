@@ -81,3 +81,13 @@ it('should display multiple tr elements in the thead element if columns are pres
   const wrapper = shallow(<SprkTable variant="grouped" columns={[ [{name: 'column1', header: 'Column Heading', rowspan: 2}, {name: 'column2', header: 'Column Heading', colspan: 3}, {name: 'column3', header: 'Column Heading', rowspan: 2}], [{name: 'subheading1', header: 'SubHeading'}, {name: 'subheading2', header: 'SubHeading'}, {name: 'subheading3', header: 'Subheading'}] ]} />);
   expect(wrapper.find('tr').length).toBe(2);
 })
+
+it('should display a tbody element', () => {
+  const wrapper = shallow(<SprkTable />);
+  expect(wrapper.find('tbody').length).toBe(1);
+})
+
+it('should display a th with the correct class when the variant is rowComparison', () => {
+  const wrapper = shallow(<SprkTable variant='rowComparison'/>);
+  expect(wrapper.find('th.sprk-b-Table__empty-heading').length).toBe(1);
+})
