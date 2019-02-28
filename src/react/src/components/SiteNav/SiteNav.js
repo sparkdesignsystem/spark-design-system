@@ -21,6 +21,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/dividers" className="drizzle-b-Link drizzle-b-Link--light">
+            Dividers
+          </Link>
+        </li>
+        <li>
           <Link to="/table" className="drizzle-b-Link drizzle-b-Link--light">
             Table
           </Link>
