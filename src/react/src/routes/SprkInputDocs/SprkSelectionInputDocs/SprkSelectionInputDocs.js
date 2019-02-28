@@ -29,7 +29,6 @@ function SprkSelectionInputDocs() {
       value: 'item-2',
     },
     {
-      isOptGroup: true,
       label: 'Grouped Options',
       options: [
         {
