@@ -30,7 +30,7 @@ class SprkTextInputDocs extends React.Component {
   handleMonetaryBlur({ target }) {
     const { value } = target;
     this.setState({
-      monetary: formatMonetary(value),
+      monetary: isValidMonetary(value) ? formatMonetary(value) : value,
     });
   }
 
@@ -78,6 +78,7 @@ class SprkTextInputDocs extends React.Component {
             onChange={this.handleChange}
             onBlur={this.handleMonetaryBlur}
             placeholder="0.00"
+            errorMessage="Enter valid monetary amount."
           />
         </ExampleContainer>
         <ExampleContainer heading="Phone Number">

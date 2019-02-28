@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TinyDatePicker from 'tiny-date-picker';
+import { assign } from 'lodash';
 import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
 class SprkDatePickerInput extends Component {
@@ -21,10 +22,7 @@ class SprkDatePickerInput extends Component {
 
   componentDidMount() {
     const { datePickerConfig } = this.props;
-    TinyDatePicker(
-      this.datePickerInputRef.current,
-      Object.assign(this.tdpConfig, datePickerConfig),
-    );
+    TinyDatePicker(this.datePickerInputRef.current, assign(this.tdpConfig, datePickerConfig));
   }
 
   render() {
