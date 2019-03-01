@@ -35,11 +35,7 @@ describe('SprkFooterConnectIcons Component', () => {
       ],
     };
 
-    const wrapper = mount(
-      <SprkFooterConnectIcons
-        connectIcons={connectIcons}
-      />,
-    );
+    const wrapper = mount(<SprkFooterConnectIcons connectIcons={connectIcons} />);
     expect(wrapper.find(SprkIcon).length).toBe(4);
   });
 
@@ -71,12 +67,13 @@ describe('SprkFooterConnectIcons Component', () => {
       ],
     };
 
-    const wrapper = mount(
-      <SprkFooterConnectIcons
-        connectIcons={connectIcons}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+    const wrapper = mount(<SprkFooterConnectIcons connectIcons={connectIcons} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe('#nogo');
   });
 
   it('should not render the href if element is not an a', () => {
@@ -107,11 +104,12 @@ describe('SprkFooterConnectIcons Component', () => {
       ],
     };
 
-    const wrapper = mount(
-      <SprkFooterConnectIcons
-        connectIcons={connectIcons}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+    const wrapper = mount(<SprkFooterConnectIcons connectIcons={connectIcons} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe(null);
   });
 });

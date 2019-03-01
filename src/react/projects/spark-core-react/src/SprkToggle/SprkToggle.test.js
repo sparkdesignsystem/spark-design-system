@@ -7,12 +7,20 @@ import SprkToggle from './SprkToggle';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should display one element with the correct additional classes', () => {
-  const wrapper = mount(<SprkToggle title="Toggle title" additionalClasses="sprk-o-Stack">Body text</SprkToggle>);
+  const wrapper = mount(
+    <SprkToggle title="Toggle title" additionalClasses="sprk-o-Stack">
+      Body text
+    </SprkToggle>,
+  );
   expect(wrapper.find('div.sprk-o-Stack').length).toBe(1);
 });
 
 it('should default to open if defaultOpen is true', () => {
-  const wrapper = shallow(<SprkToggle isDefaultOpen title="Toggle title">Body text</SprkToggle>);
+  const wrapper = shallow(
+    <SprkToggle isDefaultOpen title="Toggle title">
+      Body text
+    </SprkToggle>,
+  );
   expect(wrapper.state().isOpen).toBe(true);
 });
 

@@ -13,6 +13,7 @@ import SprkHighlightBoardDocs from './SprkHighlightBoardDocs/SprkHighlightBoardD
 import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
 import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
+import SprkInputDocs from './SprkInputDocs/SprkInputDocs';
 import SprkFooterDocs from './SprkFooterDocs/SprkFooterDocs';
 import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
 import NotFound from './NotFound/NotFound';
@@ -25,6 +26,7 @@ const Router = () => (
       <Route exact path="/button" component={SprkButtonDocs} />
       <Route exact path="/dropdown" component={SprkDropdownDocs} />
       <Route exact path="/icon" component={SprkIconDocs} />
+      <Route path="/input" component={SprkInputDocs} />
       <Route exact path="/link" component={SprkLinkDocs} />
       <Route exact path="/promos" component={SprkPromoDocs} />
       <Route exact path="/dividers" component={SprkDividerDocs} />

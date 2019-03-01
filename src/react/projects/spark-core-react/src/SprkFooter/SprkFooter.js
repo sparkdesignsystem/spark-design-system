@@ -10,26 +10,14 @@ import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 class SprkFooter extends Component {
   constructor(props) {
     super(props);
-    const {
-      linkColumns,
-      additionalIcons,
-      paragraphs,
-    } = props;
+    const { linkColumns, additionalIcons, paragraphs } = props;
     this.state = {
-      linkColumnsHasIds: linkColumns.map(
-        item => (
-          {
-            heading: item.heading,
-            id: uniqueId(),
-            links: item.links.map(link => (
-              { id: uniqueId(), ...link }
-            )),
-          }
-        ),
-      ),
-      additionalIconsHasIds: additionalIcons.map(
-        icon => ({ id: uniqueId(), ...icon }),
-      ),
+      linkColumnsHasIds: linkColumns.map(item => ({
+        heading: item.heading,
+        id: uniqueId(),
+        links: item.links.map(link => ({ id: uniqueId(), ...link })),
+      })),
+      additionalIconsHasIds: additionalIcons.map(icon => ({ id: uniqueId(), ...icon })),
       paragraphsHasIds: paragraphs.map(p => ({ id: uniqueId(), ...p })),
     };
   }
@@ -45,11 +33,7 @@ class SprkFooter extends Component {
       additionalIcons,
     } = this.props;
 
-    const {
-      linkColumnsHasIds,
-      additionalIconsHasIds,
-      paragraphsHasIds,
-    } = this.state;
+    const { linkColumnsHasIds, additionalIconsHasIds, paragraphsHasIds } = this.state;
     const classNames = classnames(
       'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray',
       additionalClasses,
@@ -63,23 +47,18 @@ class SprkFooter extends Component {
           data-id={idString}
         >
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-            {Object.keys(globalItems).length > 1
-              && (
-                <SprkFooterGlobalSection globalItems={globalItems} />
-              )
-            }
+            {Object.keys(globalItems).length > 1 && (
+              <SprkFooterGlobalSection globalItems={globalItems} />
+            )}
             <div className="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium">
               <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
                 {linkColumnsHasIds.length > 0
-                && (
-                  linkColumnsHasIds.map(column => (
+                  && linkColumnsHasIds.map(column => (
                     <div
                       key={column.id}
                       className="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
                     >
-                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
-                        {column.heading}
-                      </h3>
+                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">{column.heading}</h3>
 
                       <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
                         {column.links.map((columnLink) => {
@@ -98,12 +77,10 @@ class SprkFooter extends Component {
                         })}
                       </ul>
                     </div>
-                  ))
-                )}
+                  ))}
               </div>
 
-              {Object.keys(connectIcons).length > 1
-              && (
+              {Object.keys(connectIcons).length > 1 && (
                 <SprkFooterConnectIcons connectIcons={connectIcons} />
               )}
             </div>
@@ -112,40 +89,39 @@ class SprkFooter extends Component {
           <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
 
           <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
-            {Object.keys(awards).length > 1
-            && (
-              <SprkFooterAwards awards={awards} />
-            )}
+            {Object.keys(awards).length > 1 && <SprkFooterAwards awards={awards} />}
 
             {paragraphs.length > 0
-              && (
-                paragraphsHasIds.map(p => (
-                  <p key={p.id} className="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                    {p.text}
-                  </p>
-                ))
-              )}
+              && paragraphsHasIds.map(p => (
+                <p key={p.id} className="sprk-o-Stack__item sprk-b-TypeBodyFour">
+                  {p.text}
+                </p>
+              ))}
 
-            {additionalIcons.length > 0
-              && (
-                <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-                  {additionalIconsHasIds.map((icon) => {
-                    const TagName = icon.element || 'a';
-                    return (
-                      <li key={icon.id} className="sprk-o-Stack__item">
-                        <TagName
-                          className="sprk-b-Link sprk-b-Link--plain"
-                          href={TagName === 'a' ? icon.href || '#nogo' : undefined}
-                          data-analytics={icon.analyticsString}
-                        >
-                          <SprkIcon iconName={icon.name} additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${icon.addClasses}`} />
-                          <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
-                        </TagName>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+            {additionalIcons.length > 0 && (
+              <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+                {additionalIconsHasIds.map((icon) => {
+                  const TagName = icon.element || 'a';
+                  return (
+                    <li key={icon.id} className="sprk-o-Stack__item">
+                      <TagName
+                        className="sprk-b-Link sprk-b-Link--plain"
+                        href={TagName === 'a' ? icon.href || '#nogo' : undefined}
+                        data-analytics={icon.analyticsString}
+                      >
+                        <SprkIcon
+                          iconName={icon.name}
+                          additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${
+                            icon.addClasses
+                          }`}
+                        />
+                        <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
+                      </TagName>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </div>
         </footer>
       </div>
@@ -173,76 +149,86 @@ SprkFooter.propTypes = {
     // The main heading for the global section
     heading: PropTypes.string,
     // The global items
-    items: PropTypes.arrayOf(PropTypes.shape({
-      // The element to render for the global item's media
-      mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
-      // Assigned to src attribute of the image
-      src: PropTypes.string,
-      // Assigned to href
-      mediaHref: PropTypes.string,
-      // The alt text for the image, icon, or SprkIcon
-      altText: PropTypes.string.isRequired,
-      // Additional classes for the media
-      mediaAddClasses: PropTypes.string,
-      // The description of the image
-      description: PropTypes.string,
-      // The value for the data-analytics attribute
-      analyticsString: PropTypes.string,
-      // Element to render, can be 'a' or Link
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    })),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The element to render for the global item's media
+        mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
+        // Assigned to src attribute of the image
+        src: PropTypes.string,
+        // Assigned to href
+        mediaHref: PropTypes.string,
+        // The alt text for the image, icon, or SprkIcon
+        altText: PropTypes.string.isRequired,
+        // Additional classes for the media
+        mediaAddClasses: PropTypes.string,
+        // The description of the image
+        description: PropTypes.string,
+        // The value for the data-analytics attribute
+        analyticsString: PropTypes.string,
+        // Element to render, can be 'a' or Link
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      }),
+    ),
   }),
   // The data for the columns of site links
-  linkColumns: PropTypes.arrayOf(PropTypes.shape({
-    // The main heading for the column
-    heading: PropTypes.string,
-    // The links for each column
-    links: PropTypes.arrayOf(PropTypes.shape({
-      // The link href
-      href: PropTypes.string,
-      // The link text
-      text: PropTypes.string,
-      // Element to render, can be 'a' or Link
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // The value for the data-analytics attribute
-      analyticsString: PropTypes.string,
-    })),
-  })),
+  linkColumns: PropTypes.arrayOf(
+    PropTypes.shape({
+      // The main heading for the column
+      heading: PropTypes.string,
+      // The links for each column
+      links: PropTypes.arrayOf(
+        PropTypes.shape({
+          // The link href
+          href: PropTypes.string,
+          // The link text
+          text: PropTypes.string,
+          // Element to render, can be 'a' or Link
+          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          // The value for the data-analytics attribute
+          analyticsString: PropTypes.string,
+        }),
+      ),
+    }),
+  ),
   // The icons to use in the connect section
   connectIcons: PropTypes.shape({
     // The main heading for the section
     heading: PropTypes.string,
     // The icons
-    icons: PropTypes.arrayOf(PropTypes.shape({
-      // The link href for the icon
-      href: PropTypes.string,
-      // The name of the icon
-      name: PropTypes.string,
-      // Text used for screen readers
-      screenReaderText: PropTypes.string,
-      // String used for the data-analytics attribute
-      analyticsString: PropTypes.string,
-      // Element to render, can be 'a' or Link
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    })),
+    icons: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The link href for the icon
+        href: PropTypes.string,
+        // The name of the icon
+        name: PropTypes.string,
+        // Text used for screen readers
+        screenReaderText: PropTypes.string,
+        // String used for the data-analytics attribute
+        analyticsString: PropTypes.string,
+        // Element to render, can be 'a' or Link
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      }),
+    ),
   }),
   // The awards section data
   awards: PropTypes.shape({
     heading: PropTypes.string,
-    images: PropTypes.arrayOf(PropTypes.shape({
-      // The link href for the image
-      href: PropTypes.string,
-      // Element to render, can be 'a' or Link
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // The image src
-      src: PropTypes.string,
-      // The alt text for the image, icon, or SprkIcon
-      altText: PropTypes.string.isRequired,
-      // Additional classes for the image
-      addClasses: PropTypes.string,
-      // String used for the data-analytics attribute
-      analyticsString: PropTypes.string,
-    })),
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The link href for the image
+        href: PropTypes.string,
+        // Element to render, can be 'a' or Link
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        // The image src
+        src: PropTypes.string,
+        // The alt text for the image, icon, or SprkIcon
+        altText: PropTypes.string.isRequired,
+        // Additional classes for the image
+        addClasses: PropTypes.string,
+        // String used for the data-analytics attribute
+        analyticsString: PropTypes.string,
+      }),
+    ),
     // The text rendered in the disclaimer
     disclaimerText: PropTypes.string,
     // Used for the data-analytics value on the title
@@ -251,24 +237,28 @@ SprkFooter.propTypes = {
     disclaimerTitle: PropTypes.string,
   }),
   // Data used for additional icons at bottom of footer
-  additionalIcons: PropTypes.arrayOf(PropTypes.shape({
-    // The icon name
-    name: PropTypes.string,
-    // The icon href
-    href: PropTypes.string,
-    // Additional classes for the icon
-    addClasses: PropTypes.string,
-    // Text used for screen readers
-    screenReaderText: PropTypes.string,
-    // Element to render, can be 'a' or Link
-    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    // String used for the data-analytics attribute
-    analyticsString: PropTypes.string,
-  })),
+  additionalIcons: PropTypes.arrayOf(
+    PropTypes.shape({
+      // The icon name
+      name: PropTypes.string,
+      // The icon href
+      href: PropTypes.string,
+      // Additional classes for the icon
+      addClasses: PropTypes.string,
+      // Text used for screen readers
+      screenReaderText: PropTypes.string,
+      // Element to render, can be 'a' or Link
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      // String used for the data-analytics attribute
+      analyticsString: PropTypes.string,
+    }),
+  ),
   // The paragraphs, copyright info, etc
-  paragraphs: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string,
-  })),
+  paragraphs: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+    }),
+  ),
 };
 
 export default SprkFooter;

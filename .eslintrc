@@ -1,6 +1,26 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:jest/recommended"],
+  "plugins": ["jest"],
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
   "rules": {
-    "react/jsx-filename-extension": "off"
+    "object-curly-newline": ["error", {
+      "ObjectPattern": { "multiline": true },
+      "ImportDeclaration": "never"
+    }],
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["label"],
+      "labelAttributes": ["htmlFor"],
+      "controlComponents": ["input"]
+    }],
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+        "every": [ "id" ]
+      }
+    }]
   }
 }

@@ -25,14 +25,11 @@ describe('SprkFooterAwards Component', () => {
         },
       ],
       disclaimerTitle: 'My Award Disclaimer',
-      disclaimerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
+      disclaimerText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
     };
 
-    const wrapper = mount(
-      <SprkFooterAwards
-        awards={awards}
-      />,
-    );
+    const wrapper = mount(<SprkFooterAwards awards={awards} />);
     expect(wrapper.find('img').length).toBe(2);
   });
 
@@ -56,14 +53,11 @@ describe('SprkFooterAwards Component', () => {
         },
       ],
       disclaimerTitle: 'My Award Disclaimer',
-      disclaimerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
+      disclaimerText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
     };
 
-    const wrapper = mount(
-      <SprkFooterAwards
-        awards={awards}
-      />,
-    );
+    const wrapper = mount(<SprkFooterAwards awards={awards} />);
     expect(wrapper.find('a').length).toBe(3);
   });
 
@@ -85,15 +79,17 @@ describe('SprkFooterAwards Component', () => {
         },
       ],
       disclaimerTitle: 'My Award Disclaimer',
-      disclaimerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
+      disclaimerText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
     };
 
-    const wrapper = mount(
-      <SprkFooterAwards
-        awards={awards}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+    const wrapper = mount(<SprkFooterAwards awards={awards} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe('#nogo');
   });
 
   it('should not render the href if element us not an a', () => {
@@ -114,14 +110,16 @@ describe('SprkFooterAwards Component', () => {
         },
       ],
       disclaimerTitle: 'My Award Disclaimer',
-      disclaimerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
+      disclaimerText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
     };
 
-    const wrapper = mount(
-      <SprkFooterAwards
-        awards={awards}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+    const wrapper = mount(<SprkFooterAwards awards={awards} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe(null);
   });
 });
