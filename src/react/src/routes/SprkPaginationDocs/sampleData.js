@@ -1,260 +1,313 @@
 // Sample data used in the Pagination docs
+const shipData = [
+  {
+    name: 'Serenity',
+    type: 'Firefly',
+    source: 'Firefly',
+  },
+  {
+    name: 'Rocinante',
+    type: 'Martian Corvette',
+    source: 'The Expanse',
+  },
+  {
+    name: 'Galactica',
+    type: 'Battlestar',
+    source: 'Battlestar Galactica',
+  },
+  {
+    name: 'Millenium Falcon',
+    type: 'Corellian Light Freighter',
+    source: 'Star Wars',
+  },
+  {
+    name: 'Enterprise',
+    type: 'Constitution Class',
+    source: 'Star Trek',
+  },
+  {
+    name: 'Planet Express Ship',
+    type: 'Delivery',
+    source: 'Futurama',
+  },
+  {
+    name: 'T.A.R.D.I.S.',
+    type: 'Time Machine/Spacecraft',
+    source: 'Doctor Who',
+  },
+  {
+    name: 'Challenger',
+    type: 'Orbiter Vehicle',
+    source: 'Reality',
+  },
+  {
+    name: 'Nostromo',
+    type: 'Weyland-Yutani Commercial Hauler',
+    source: 'Alien',
+  },
+];
+
 const stateData = [
   {
     state: 'Alabama',
     abbreviation: 'AL',
-    capital: 'Montgomery'
+    capital: 'Montgomery',
   },
   {
     state: 'Alaska',
     abbreviation: 'AK',
-    capital: 'Juneau'
+    capital: 'Juneau',
   },
   {
     state: 'Arizona',
     abbreviation: 'AZ',
-    capital: 'Phoenix'
+    capital: 'Phoenix',
   },
   {
     state: 'Arkansas',
     abbreviation: 'AR',
-    capital: 'Little Rock'
+    capital: 'Little Rock',
   },
   {
     state: 'California',
     abbreviation: 'CA',
-    capital: 'Sacramento'
+    capital: 'Sacramento',
   },
   {
     state: 'Colorado',
     abbreviation: 'CO',
-    capital: 'Denver'
+    capital: 'Denver',
   },
   {
     state: 'Connecticut',
     abbreviation: 'CT',
-    capital: 'Hartford'
+    capital: 'Hartford',
   },
   {
     state: 'Delaware',
     abbreviation: 'DE',
-    capital: 'Dover'
+    capital: 'Dover',
   },
   {
     state: 'Florida',
     abbreviation: 'FL',
-    capital: 'Tallahassee'
+    capital: 'Tallahassee',
   },
   {
     state: 'Georgia',
     abbreviation: 'GA',
-    capital: 'Atlanta'
+    capital: 'Atlanta',
   },
   {
     state: 'Hawaii',
     abbreviation: 'HI',
-    capital: 'Honolulu'
+    capital: 'Honolulu',
   },
   {
     state: 'Idaho',
     abbreviation: 'ID',
-    capital: 'Boise'
+    capital: 'Boise',
   },
   {
     state: 'Illinois',
     abbreviation: 'IL',
-    capital: 'Springfield'
+    capital: 'Springfield',
   },
   {
     state: 'Indiana',
     abbreviation: 'IN',
-    capital: 'Indianapolis'
+    capital: 'Indianapolis',
   },
   {
     state: 'Iowa',
     abbreviation: 'IA',
-    capital: 'Des Moines'
+    capital: 'Des Moines',
   },
   {
     state: 'Kansas',
     abbreviation: 'KS',
-    capital: 'Topeka'
+    capital: 'Topeka',
   },
   {
     state: 'Kentucky',
     abbreviation: 'KY',
-    capital: 'Frankfort'
+    capital: 'Frankfort',
   },
   {
     state: 'Louisiana',
     abbreviation: 'LA',
-    capital: 'Baton Rouge'
+    capital: 'Baton Rouge',
   },
   {
     state: 'Maine',
     abbreviation: 'ME',
-    capital: 'Augusta'
+    capital: 'Augusta',
   },
   {
     state: 'Maryland',
     abbreviation: 'MD',
-    capital: 'Annapolis'
+    capital: 'Annapolis',
   },
   {
     state: 'Massachusetts',
     abbreviation: 'MA',
-    capital: 'Boston'
+    capital: 'Boston',
   },
   {
     state: 'Michigan',
     abbreviation: 'MI',
-    capital: 'Detroit'
+    capital: 'Detroit',
   },
   {
     state: 'Minnesota',
     abbreviation: 'MN',
-    capital: 'St. Paul'
+    capital: 'St. Paul',
   },
   {
     state: 'Mississippi',
     abbreviation: 'MS',
-    capital: 'Jackson'
+    capital: 'Jackson',
   },
   {
     state: 'Missouri',
     abbreviation: 'MO',
-    capital: 'Jefferson City'
+    capital: 'Jefferson City',
   },
   {
     state: 'Montana',
     abbreviation: 'MT',
-    capital: 'Helena'
+    capital: 'Helena',
   },
   {
     state: 'Nebraska',
     abbreviation: 'NE',
-    capital: 'Lincoln'
+    capital: 'Lincoln',
   },
   {
     state: 'Nevada',
     abbreviation: 'NV',
-    capital: 'Carson City'
+    capital: 'Carson City',
   },
   {
     state: 'New Hampshire',
     abbreviation: 'NH',
-    capital: 'Concord'
+    capital: 'Concord',
   },
   {
     state: 'New Jersey',
     abbreviation: 'NJ',
-    capital: 'Trenton'
+    capital: 'Trenton',
   },
   {
     state: 'New Mexico',
     abbreviation: 'NM',
-    capital: 'Santa Fe'
+    capital: 'Santa Fe',
   },
   {
     state: 'New York',
     abbreviation: 'NY',
-    capital: 'Albany'
+    capital: 'Albany',
   },
   {
     state: 'North Carolina',
     abbreviation: 'NC',
-    capital: 'Raleigh'
+    capital: 'Raleigh',
   },
   {
     state: 'North Dakota',
     abbreviation: 'ND',
-    capital: 'Bismarck'
+    capital: 'Bismarck',
   },
   {
     state: 'Ohio',
     abbreviation: 'OH',
-    capital: 'Columbus'
+    capital: 'Columbus',
   },
   {
     state: 'Oklahoma',
     abbreviation: 'OK',
-    capital: 'Oklahoma City'
+    capital: 'Oklahoma City',
   },
   {
     state: 'Oregon',
     abbreviation: 'OR',
-    capital: 'Salem'
+    capital: 'Salem',
   },
   {
     state: 'Pennsylvania',
     abbreviation: 'PA',
-    capital: 'Harrisburg'
+    capital: 'Harrisburg',
   },
   {
     state: 'Rhode Island',
     abbreviation: 'RI',
-    capital: 'Providence'
+    capital: 'Providence',
   },
   {
     state: 'South Carolina',
     abbreviation: 'SC',
-    capital: 'Columbia'
+    capital: 'Columbia',
   },
   {
     state: 'South Dakota',
     abbreviation: 'SD',
-    capital: 'Pierre'
+    capital: 'Pierre',
   },
   {
     state: 'Tennessee',
     abbreviation: 'TN',
-    capital: 'Nashville'
+    capital: 'Nashville',
   },
   {
     state: 'Texas',
     abbreviation: 'TX',
-    capital: 'Austin'
+    capital: 'Austin',
   },
   {
     state: 'Utah',
     abbreviation: 'UT',
-    capital: 'Salt Lake City'
+    capital: 'Salt Lake City',
   },
   {
     state: 'Vermont',
     abbreviation: 'VT',
-    capital: 'Montpelier'
+    capital: 'Montpelier',
   },
   {
     state: 'Virginia',
     abbreviation: 'VA',
-    capital: 'Richmond'
+    capital: 'Richmond',
   },
   {
     state: 'Washington',
     abbreviation: 'WA',
-    capital: 'Olympia'
+    capital: 'Olympia',
   },
   {
     state: 'West Virginia',
     abbreviation: 'WV',
-    capital: 'Charleston'
+    capital: 'Charleston',
   },
   {
     state: 'Wisconsin',
     abbreviation: 'WI',
-    capital: 'Madison'
+    capital: 'Madison',
   },
   {
     state: 'Wyoming',
     abbreviation: 'WY',
-    capital: 'Cheyenne'
+    capital: 'Cheyenne',
   },
   {
     state: 'Puerto Rico',
     abbreviation: 'PR',
-    capital: 'San Juan'
-  }
-]
+    capital: 'San Juan',
+  },
+];
 
-export default stateData;
+const datasets = {
+  shipData,
+  stateData,
+};
+
+export default datasets;

@@ -1,214 +1,241 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkLink } from '@sparkdesignsystem/spark-core-react';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
+import SprkLink from '../SprkLink/SprkLink';
+import SprkIcon from '../SprkIcon/SprkIcon';
 
-class SprkPagination extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPage: 1,
-      totalPages: Math.ceil(this.props.totalItems / this.props.itemsPerPage)
-    };
-  }
-
-  /*
-    Updates the state of the pager and calls the callback (if provided). This only includes
-    the current page in the pagination component; it doesn't do anything to do the data. Data
-    is not passed into the pagination component and is not necessary to render the component.
-  */
-  goToPage(e, page) {
+const SprkPagination = (props) => {
+  const goToPage = (e, page) => {
     e.preventDefault();
 
-    if (page > this.state.totalPages) { page = this.state.totalPages; }
+    const { totalItems, itemsPerPage, onChangeCallback } = props;
 
-    if (page < 1) { page = 1 }
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    this.setState({ currentPage: page, totalPages: this.state.totalPages })
+    let newPage = page;
+    if (page > totalPages) { newPage = totalPages; }
+    if (page < 1) { newPage = 1; }
 
-    this.props.callback({ currentPage: page });
+    onChangeCallback({ e, newPage });
   };
 
-  render() {
-    const {
-      paginationType,
-      nextLinkText,
-      prevLinktext,
-      currentPage,
-      totalItems,
-      itemsPerPage,
-      analyticsStringLinkNext,
-      analyticsStringLinkPrev,
-      additionalClasses,
-      callback,
-      ...other
-    } = this.props;
+  const {
+    variant,
+    totalItems,
+    itemsPerPage,
+    currentPage,
+    onChangeCallback,
+    additionalClasses,
+    nextLinkText,
+    prevLinkText,
+    analyticsStringNext,
+    analyticsStringPrev,
+    idString,
+    ...other
+  } = props;
 
-    var pageLinks = [];
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const longVariant = variant === 'default' && totalPages > 3;
 
-    if (this.props.variant == 'pager'){
-      // none of the pages are links
-    } else if (this.props.variant == 'long'){
-      // first, current, and last pages are links
+  let leftLinkClasses = 'sprk-c-Pagination__icon';
+  let rightLinkClasses = 'sprk-c-Pagination__icon';
 
-      pageLinks.push(
-        <li key={_.uniqueId('sprk_page_')}>
+  if (currentPage === 1) {
+    leftLinkClasses += ' sprk-b-Link--disabled';
+  }
+
+  if (currentPage === totalPages) {
+    rightLinkClasses += ' sprk-b-Link--disabled';
+  }
+
+  return (
+    <nav
+      aria-label="Pagination Navigation"
+      data-id={idString}
+    >
+      <ul
+        className={
+          classnames(
+            'sprk-c-Pagination',
+            'sprk-o-HorizontalList',
+            'sprk-o-HorizontalList--spacing-medium',
+            additionalClasses,
+          )
+        }
+        {...other}
+      >
+        <li>
           <SprkLink
-            onClick={(e) => this.goToPage(e, page.pageNum)}
             href="#"
-            additionalClasses=
-            {
-              classnames(
-                'sprk-c-Pagination__link',
-                {'sprk-c-Pagination__link--current': this.state.currentPage == 1}
-                )
-              }
-              >
-            1
+            onClick={e => goToPage(e, currentPage - 1)}
+            additionalClasses={leftLinkClasses}
+            variant="plain"
+            analyticsString={analyticsStringPrev}
+            aria-label="Previous Page"
+          >
+            <span className="sprk-u-ScreenReaderText">{prevLinkText}</span>
+            <SprkIcon iconName="chevron-left" />
           </SprkLink>
         </li>
-      );
 
-      if (this.state.currentPage > 2 && this.state.totalPages > 2){
-        pageLinks.push(
-          <li key={_.uniqueId('sprk_page_')}>
+        { variant === 'default' && (
+          <li key={uniqueId('sprk_page_')}>
+            <SprkLink
+              onClick={e => goToPage(e, 1)}
+              href="#"
+              additionalClasses={
+                classnames(
+                  'sprk-c-Pagination__link',
+                  { 'sprk-c-Pagination__link--current': currentPage === 1 },
+                )}
+              aria-label="Page 1"
+              aria-current={currentPage === 1}
+            >
+              1
+            </SprkLink>
+          </li>
+        )}
+
+        { longVariant && currentPage > 2 && (
+          <li key={uniqueId('sprk_page_')}>
             ...
           </li>
-        );
-      }
+        )}
 
-      if (this.state.currentPage > 1 && this.state.currentPage < this.state.totalPages && this.state.totalPages > 2){
-        pageLinks.push(
-          <li key={_.uniqueId('sprk_page_')}>
+        { longVariant && currentPage > 1 && currentPage < totalPages && (
+          <li key={uniqueId('sprk_page_')}>
             <SprkLink
-              onClick={(e) => this.goToPage(e, this.state.currentPage)}
+              onClick={e => goToPage(e, currentPage)}
               href="#"
-              additionalClasses=
-              {
+              additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
-                  'sprk-c-Pagination__link--current'
-                  )
-                }
-                >
-              {this.state.currentPage}
+                  'sprk-c-Pagination__link--current',
+                )
+              }
+              aria-label={`Page ${currentPage}`}
+              aria-current="true"
+            >
+              {currentPage}
             </SprkLink>
           </li>
-        );
-      }
+        )}
 
-      if (this.state.totalPages > 3 && this.state.currentPage < this.state.totalPages - 1){
-        pageLinks.push(
-          <li key={_.uniqueId('sprk_page_')}>
+        { longVariant && currentPage < totalPages - 1 && (
+          <li key={uniqueId('sprk_page_')}>
             ...
           </li>
-        );
-      }
+        )}
 
-      if (this.state.totalPages > 1){
-        pageLinks.push(
-          <li key={_.uniqueId('sprk_page_')}>
+        { longVariant && (
+          <li key={uniqueId('sprk_page_')}>
             <SprkLink
-              onClick={(e) => this.goToPage(e, this.state.totalPages)}
+              onClick={e => goToPage(e, totalPages)}
               href="#"
-              additionalClasses=
-              {
+              additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
-                  {'sprk-c-Pagination__link--current': this.state.currentPage == this.state.totalPages}
-                  )
-                }
-                >
-              {this.state.totalPages}
+                  { 'sprk-c-Pagination__link--current': currentPage === totalPages },
+                )
+              }
+              aria-label={`Page ${totalPages}`}
+              aria-current={currentPage === totalPages}
+            >
+              {totalPages}
             </SprkLink>
           </li>
-        );
-      }
+        )}
 
-
-    } else {
-      // every page is a link
-
-      var pages = [];
-
-      for (var i = 1; i <= this.state.totalPages; i++) {
-        pages.push({
-          pageNum: i
-        });
-      }
-
-      pageLinks = pages.map(page => {
-        return (
-          <li key={_.uniqueId('sprk_page_')}>
+        { variant === 'default' && !longVariant && (
+          <li key={uniqueId('sprk_page_')}>
             <SprkLink
-              onClick={(e) => this.goToPage(e, page.pageNum)}
+              onClick={e => goToPage(e, 2)}
               href="#"
-              additionalClasses=
-              {
+              additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
-                  {'sprk-c-Pagination__link--current': page.pageNum === this.state.currentPage}
-                  )
-                }
-                >
-              {page.pageNum}
-            </SprkLink>
-          </li>
-        );
-      });
-    };
-
-    return (
-      <nav>
-        <ul className="sprk-c-Pagination sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium">
-          <li>
-            <SprkLink
-              href="#"
-              onClick={(e) => this.goToPage(e, this.state.currentPage - 1)}
-              additionalClasses="sprk-c-Pagination__icon"
-              variant="plain"
+                  { 'sprk-c-Pagination__link--current': currentPage === 2 },
+                )}
+              aria-label="Page 2"
+              aria-current={currentPage === 2}
             >
-              &lt;
+              2
             </SprkLink>
           </li>
+        )}
 
-          {pageLinks}
-
-          <li>
+        { variant === 'default' && !longVariant && (
+          <li key={uniqueId('sprk_page_')}>
             <SprkLink
+              onClick={e => goToPage(e, 3)}
               href="#"
-              onClick={(e) => this.goToPage(e, this.state.currentPage + 1)}
-              additionalClasses="sprk-c-Pagination__icon"
-              variant="plain"
+              additionalClasses={
+                classnames(
+                  'sprk-c-Pagination__link',
+                  { 'sprk-c-Pagination__link--current': currentPage === 3 },
+                )}
+              aria-label="Page 3"
+              aria-current={currentPage === 3}
             >
-              &gt;
+              3
             </SprkLink>
           </li>
-        </ul>
-      </nav>
-    );
-  }
+        )}
+
+        <li>
+          <SprkLink
+            href="#"
+            onClick={e => goToPage(e, currentPage + 1)}
+            additionalClasses={rightLinkClasses}
+            variant="plain"
+            analyticsString={analyticsStringNext}
+            aria-label="Next Page"
+          >
+            <span className="sprk-u-ScreenReaderText">{nextLinkText}</span>
+            <SprkIcon iconName="chevron-right" />
+          </SprkLink>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
+
 SprkPagination.propTypes = {
-  variant: PropTypes.oneOf(['long', 'pager']),
-  nextLinkText: PropTypes.string,
-  prevLinkText: PropTypes.string,
+  // The pagination variant
+  variant: PropTypes.oneOf(['default', 'pager']),
+  // The total number of items that the pagination component will page through
+  totalItems: PropTypes.number.isRequired,
+  // The number of items per page in the component
+  itemsPerPage: PropTypes.number.isRequired,
+  // The current visible page of the component
   currentPage: PropTypes.number,
-  totalItems: PropTypes.number,
-  itemsPerPage: PropTypes.number,
-  analyticsStringLinkNext: PropTypes.string,
-  analyticsStringLinkPrev: PropTypes.string,
-  idString: PropTypes.string,
+  // callback for handling changes.
+  onChangeCallback: PropTypes.func.isRequired,
+  // Any additional classes to include on the component
   additionalClasses: PropTypes.string,
-  // callback for any state changes
-  callback: PropTypes.func
+  // Screenreader text for the 'previous page' chevron
+  nextLinkText: PropTypes.string,
+  // Screenreader text for the 'next page' chevron
+  prevLinkText: PropTypes.string,
+  // The data-analytics string for the 'previous page' link
+  analyticsStringNext: PropTypes.string,
+  // The data-analytics string for the 'next page' link
+  analyticsStringPrev: PropTypes.string,
+  // The data-id string for the component
+  idString: PropTypes.string,
 };
 
 SprkPagination.defaultProps = {
+  variant: 'default',
   currentPage: 1,
-  callback: function(){},
-}
+  additionalClasses: '',
+  nextLinkText: 'Next Page',
+  prevLinkText: 'Previous Page',
+  analyticsStringNext: '',
+  analyticsStringPrev: '',
+  idString: '',
+};
 
 export default SprkPagination;
