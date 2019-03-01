@@ -75,3 +75,10 @@ it('should render the right icon if leadingIcon has value', () => {
   const wrapper = mount(<SprkMastheadAccordionItem leadingIcon="settings" />);
   expect(wrapper.find('.sprk-c-Icon > use[xlinkHref="#settings"]').length).toBe(1);
 });
+
+it('should add aria-expanded="true" when the item is open', () => {
+  const wrapper = mount(<SprkMastheadAccordionItem text="Item 1" subNavLinks={[{ text: 'Item 1' }]} />);
+  expect(wrapper.state().isOpen).toBe(false);
+  wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
+  expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
+});
