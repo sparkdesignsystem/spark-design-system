@@ -33,6 +33,7 @@ class SprkAccordionItem extends Component {
       heading,
       headingAddClasses,
       additionalClasses,
+      contentAddClasses,
       iconAddClasses,
       isDefaultOpen,
       id,
@@ -75,7 +76,10 @@ class SprkAccordionItem extends Component {
         </a>
 
         <AnimateHeight duration={300} height={height}>
-          <div className="sprk-c-Accordion__content" id={id}>
+          <div
+            className={classnames('sprk-c-Accordion__content', contentAddClasses)}
+            id={id}
+          >
             {children}
           </div>
         </AnimateHeight>
@@ -92,6 +96,7 @@ SprkAccordionItem.defaultProps = {
   idString: '',
   isDefaultOpen: false,
   iconAddClasses: '',
+  contentAddClasses: '',
 };
 
 SprkAccordionItem.propTypes = {
@@ -111,6 +116,8 @@ SprkAccordionItem.propTypes = {
   isDefaultOpen: PropTypes.bool,
   // Additional classes for the toggle icon
   iconAddClasses: PropTypes.string,
+  // Additional classes for the toggle content
+  contentAddClasses: PropTypes.string,
 };
 
 export default SprkAccordionItem;
