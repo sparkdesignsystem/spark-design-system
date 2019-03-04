@@ -1,6 +1,6 @@
 /* global it expect jest */
 import React from 'react';
-import Enzyme, { shallow, mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkAccordionItem from './SprkAccordionItem';
 
@@ -35,4 +35,11 @@ it('should add aria-expanded="true" when the toggle is open', () => {
   const wrapper = mount(<SprkAccordionItem heading="test">test</SprkAccordionItem>);
   wrapper.find('a').simulate('click');
   expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
+});
+
+it('should run callback when passed as prop to onToggle', () => {
+  const spyFunc = jest.fn();
+  const wrapper = mount(<SprkAccordionItem heading="test" onToggle={spyFunc}>test</SprkAccordionItem>);
+  wrapper.find('a').simulate('click');
+  expect(spyFunc.mock.calls.length).toBe(1);
 });
