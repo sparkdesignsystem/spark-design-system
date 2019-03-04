@@ -23,3 +23,4 @@ export { default as SprkTabs } from './SprkTabs/SprkTabs';
 export { default as SprkFooter } from './SprkFooter/SprkFooter';
 export { default as SprkToggle } from './SprkToggle/SprkToggle';
 export { default as SprkAccordion } from './SprkAccordion/SprkAccordion';
+export { default as SprkAccordionItem } from './SprkAccordion/components/SprkAccordionItem/SprkAccordionItem';
