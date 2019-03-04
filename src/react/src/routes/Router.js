@@ -14,6 +14,7 @@ import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 import SprkPaginationDocs from './SprkPaginationDocs/SprkPaginationDocs';
 import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
 import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
+import SprkInputDocs from './SprkInputDocs/SprkInputDocs';
 import SprkFooterDocs from './SprkFooterDocs/SprkFooterDocs';
 import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
 import NotFound from './NotFound/NotFound';
@@ -29,6 +30,7 @@ const Router = () => (
       <Route exact path="/dropdown" component={SprkDropdownDocs} />
       <Route exact path="/highlightboard" component={SprkHighlightBoardDocs} />
       <Route exact path="/icon" component={SprkIconDocs} />
+      <Route path="/input" component={SprkInputDocs} />
       <Route exact path="/link" component={SprkLinkDocs} />
       <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
       <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
