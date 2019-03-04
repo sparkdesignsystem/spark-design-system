@@ -36,6 +36,8 @@ const SprkPagination = (props) => {
   } = props;
 
   const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  // the "long" variant is used if there are more than 3 total pages
   const longVariant = variant === 'default' && totalPages > 3;
 
   let leftLinkClasses = 'sprk-c-Pagination__icon';
@@ -147,7 +149,7 @@ const SprkPagination = (props) => {
           </li>
         )}
 
-        { variant === 'default' && !longVariant && (
+        { variant === 'default' && !longVariant && totalItems / itemsPerPage > 1 && (
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 2)}
@@ -165,7 +167,7 @@ const SprkPagination = (props) => {
           </li>
         )}
 
-        { variant === 'default' && !longVariant && (
+        { variant === 'default' && !longVariant && totalItems / itemsPerPage > 2 && (
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 3)}
