@@ -6,8 +6,6 @@ description: |
 information:
   - As a general guideline, you should use the "default" variant when the pager has 3 or fewer pages,
     and you should use the "long" variant when the pager has more than 3 pages.
-  - The React component will automatically switch between the "default" and "long" variants
-    as needed. This functionality will be coming to the Angular component in a later release.
 restrictions:
   - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance
