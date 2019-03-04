@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem';
 
@@ -12,20 +13,24 @@ class SprkAccordion extends Component {
   }
 
   render() {
-    const { idString, ...other } = this.props;
+    const {
+      idString,
+      additionalClasses,
+      ...other
+    } = this.props;
     const { items } = this.state;
     return (
       <ul
-        className="sprk-c-Accordion sprk-o-VerticalList"
+        className={classnames('sprk-c-Accordion sprk-o-VerticalList', additionalClasses)}
         data-id={idString}
         {...other}
       >
         {items.map(item => (
-            <SprkAccordionItem
-              {...item.props}
-              key={item.id}
-              id={item.id}
-            />
+          <SprkAccordionItem
+            {...item.props}
+            key={item.id}
+            id={item.id}
+          />
         ))}
       </ul>
     );
