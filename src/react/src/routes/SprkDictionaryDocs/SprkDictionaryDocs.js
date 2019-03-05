@@ -1,7 +1,6 @@
 import React from 'react';
-import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
-
 import { SprkDictionary } from '@sparkdesignsystem/spark-core-react';
+import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
 const SprkLinkDocs = () => {
@@ -19,14 +18,16 @@ const SprkLinkDocs = () => {
       <ExampleContainer>
         <SprkDictionary
           idString="dictionary1"
-          keyValuePairs={docsKeyValuePairs} />
+          keyValuePairs={docsKeyValuePairs}
+        />
       </ExampleContainer>
 
       <ExampleContainer>
         <SprkDictionary
           idString="dictionary2"
           keyValuePairs={docsKeyValuePairs}
-          variant="striped" />
+          variant="striped"
+        />
       </ExampleContainer>
     </CentralColumnLayout>
   );
