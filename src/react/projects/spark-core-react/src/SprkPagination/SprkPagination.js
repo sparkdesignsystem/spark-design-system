@@ -29,6 +29,7 @@ const SprkPagination = (props) => {
     additionalClasses,
     nextLinkText,
     prevLinkText,
+    analyticsStringPage,
     analyticsStringNext,
     analyticsStringPrev,
     idString,
@@ -93,6 +94,7 @@ const SprkPagination = (props) => {
                 )}
               aria-label="Page 1"
               aria-current={currentPage === 1}
+              data-analytics={analyticsStringPage}
             >
               1
             </SprkLink>
@@ -118,6 +120,7 @@ const SprkPagination = (props) => {
               }
               aria-label={`Page ${currentPage}`}
               aria-current="true"
+              data-analytics={analyticsStringPage}
             >
               {currentPage}
             </SprkLink>
@@ -143,6 +146,7 @@ const SprkPagination = (props) => {
               }
               aria-label={`Page ${totalPages}`}
               aria-current={currentPage === totalPages}
+              data-analytics={analyticsStringPage}
             >
               {totalPages}
             </SprkLink>
@@ -161,6 +165,7 @@ const SprkPagination = (props) => {
                 )}
               aria-label="Page 2"
               aria-current={currentPage === 2}
+              data-analytics={analyticsStringPage}
             >
               2
             </SprkLink>
@@ -179,6 +184,7 @@ const SprkPagination = (props) => {
                 )}
               aria-label="Page 3"
               aria-current={currentPage === 3}
+              data-analytics={analyticsStringPage}
             >
               3
             </SprkLink>
@@ -221,6 +227,8 @@ SprkPagination.propTypes = {
   nextLinkText: PropTypes.string,
   // Screenreader text for the 'next page' chevron
   prevLinkText: PropTypes.string,
+  // The data-analytics string for the individual page links
+  analyticsStringPage: PropTypes.string,
   // The data-analytics string for the 'previous page' link
   analyticsStringNext: PropTypes.string,
   // The data-analytics string for the 'next page' link
@@ -232,12 +240,13 @@ SprkPagination.propTypes = {
 SprkPagination.defaultProps = {
   variant: 'default',
   currentPage: 1,
-  additionalClasses: '',
+  additionalClasses: null,
   nextLinkText: 'Next Page',
   prevLinkText: 'Previous Page',
-  analyticsStringNext: '',
-  analyticsStringPrev: '',
-  idString: '',
+  analyticsStringNext: null,
+  analyticsStringPrev: null,
+  analyticsStringPage: null,
+  idString: null,
 };
 
 export default SprkPagination;

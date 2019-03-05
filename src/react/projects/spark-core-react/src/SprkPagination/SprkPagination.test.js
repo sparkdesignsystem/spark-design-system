@@ -230,3 +230,17 @@ it('should navigate to the first page when you click prev on the first page', ()
   wrapper.find('a.sprk-c-Pagination__icon').first().simulate('click');
   expect(spyFunc.mock.calls[0][0].newPage).toBe(1);
 });
+
+it('should add analytics strings to page links', () => {
+  const wrapper = mount(
+    <SprkPagination
+      totalItems={50}
+      itemsPerPage={10}
+      onChangeCallback={() => {}}
+      analyticsStringPage='foo'
+    />,
+  );
+
+  const pageLinks = wrapper.find('a.sprk-c-Pagination__link');
+  expect(pageLinks.every('[data-analytics="foo"]')).toBe(true);
+});
