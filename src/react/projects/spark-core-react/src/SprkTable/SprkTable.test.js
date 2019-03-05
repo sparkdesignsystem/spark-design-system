@@ -83,6 +83,30 @@ it('should display multiple tr elements in the thead element if columns are pres
   expect(wrapper.find('tr').length).toBe(2);
 });
 
+it('should display multiple tr elements in the tbody element if data is present and the variant is grouped', () => {
+  const wrapper = shallow(<SprkTable variant="grouped" 
+  columns={[
+    [{ name: 'data1', header: 'Data 1', rowspan: 2 }, { name: 'data3', header: 'Data 3', colspan: 3 }, { name: 'data2', header: 'Data 2', rowspan: 2 }],
+    [{ name: 'data4', header: 'SubHeading 1' }, { name: 'data5', header: 'SubHeading 2' }, { name: 'data6', header: 'Subheading 3' }],
+  ]}
+  data={[
+    {
+      data1: 'Data 1', data2: 'Data 2', data3: 'Data 3', data4: 'Data 4', data5: 'Data 5',
+    },
+    {
+      data1: 'Data 1', data2: 'Data 2', data3: 'Data 3', data4: 'Data 4', data5: 'Data 5',
+    },
+    {
+      data1: 'Data 1', data2: 'Data 2', data3: 'Data 3', data4: 'Data 4', data5: 'Data 5',
+    },
+    {
+      data1: 'Data 1', data2: 'Data 2', data3: 'Data 3', data4: 'Data 4', data5: 'Data 5',
+    },
+  ]}
+  />);
+  expect(wrapper.find('tbody tr').length).toBe(4);
+});
+
 it('should display a tbody element when data prop is not undefined', () => {
   const wrapper = shallow(<SprkTable
     data={[
@@ -135,6 +159,7 @@ it('should render the appropriate number of td elements based on the data prop',
 
 it('should render the appropriate number of tr elements in the tbody based on the data prop', () => {
   const wrapper = shallow(<SprkTable
+    variant="rowComparison"
     data={[
       { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
       { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
@@ -192,5 +217,6 @@ it('should render a appropriate number of th elements when data is passed and va
 
 it('should render div and table elements and children if variant is html', () => {
   const wrapper = shallow(<SprkTable variant="html" />);
-  expect(wrapper.find('<div class="sprk-b-TableContainer"><table className="sprk-b-Table" /></div>')).toBe(true);
+  expect(wrapper.find('div').hasClass('sprk-b-TableContainer')).toBe(true);
+  expect(wrapper.find('table').hasClass('sprk-b-Table')).toBe(true);
 });

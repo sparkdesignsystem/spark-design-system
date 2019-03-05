@@ -29,40 +29,6 @@ const SprkTable = (props) => {
     additionalTableClasses,
   );
 
-  if (variant === 'default' || variant === 'secondary') {
-    return (
-      <div className={wrapperClassNames} data-id={idString}>
-        <table className={tableClassNames} {...other}>
-          <thead className="sprk-b-Table__head">
-            {columns
-            && (
-            <tr>
-              {columns.map(col => <th key={uniqueId('th_')}>{col.header}</th>)}
-            </tr>
-            )
-            }
-          </thead>
-
-          {data
-          && (
-          <tbody>
-            {data.map(row => (
-              <tr key={uniqueId('row_')}>
-                {columns
-                && (
-                  columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)
-                )
-                }
-              </tr>
-            ))}
-          </tbody>
-          )
-          }
-        </table>
-      </div>
-    );
-  }
-
   if (variant === 'grouped') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
@@ -97,7 +63,7 @@ const SprkTable = (props) => {
     );
   }
 
-  if (variant === 'rowComparison') {
+  else if (variant === 'rowComparison') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
@@ -131,9 +97,9 @@ const SprkTable = (props) => {
         </table>
       </div>
     );
-  }
-
-  if (variant === 'secondaryRowComparison') {
+  } 
+  
+  else if (variant === 'secondaryRowComparison') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
@@ -165,7 +131,7 @@ const SprkTable = (props) => {
     );
   }
 
-  if (variant === 'html') {
+  else if (variant === 'html') {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
@@ -174,7 +140,40 @@ const SprkTable = (props) => {
       </div>
     );
   }
-  return (null);
+
+  else {
+    return (
+      <div className={wrapperClassNames} data-id={idString}>
+        <table className={tableClassNames} {...other}>
+          <thead className="sprk-b-Table__head">
+            {columns
+            && (
+            <tr>
+              {columns.map(col => <th key={uniqueId('th_')}>{col.header}</th>)}
+            </tr>
+            )
+            }
+          </thead>
+
+          {data
+          && (
+          <tbody>
+            {data.map(row => (
+              <tr key={uniqueId('row_')}>
+                {columns
+                && (
+                  columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)
+                )
+                }
+              </tr>
+            ))}
+          </tbody>
+          )
+          }
+        </table>
+      </div>
+    );
+  }
 };
 
 SprkTable.propTypes = {
