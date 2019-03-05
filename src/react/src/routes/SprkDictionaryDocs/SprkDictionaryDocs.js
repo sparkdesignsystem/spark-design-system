@@ -3,7 +3,7 @@ import { SprkDictionary } from '@sparkdesignsystem/spark-core-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
-const SprkLinkDocs = () => {
+const SprkDictionaryDocs = () => {
   const docsKeyValuePairs = {
     'Email Address': 'sparkdesignsystem@quickenloans.com',
     'Mailing Address': '123 Main Street, Detroit, MI, 48216',
@@ -33,4 +33,4 @@ const SprkLinkDocs = () => {
   );
 };
 
-export default SprkLinkDocs;
+export default SprkDictionaryDocs;
