@@ -12,10 +12,10 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkFooter Component', () => {
   it('should display a Footer element with the correct base class', () => {
-    const wrapper = mount(
-      <SprkFooter />,
+    const wrapper = mount(<SprkFooter />);
+    expect(wrapper.find('.sprk-o-Box.sprk-o-Box--large.sprk-u-BackgroundColor--gray').length).toBe(
+      1,
     );
-    expect(wrapper.find('.sprk-o-Box.sprk-o-Box--large.sprk-u-BackgroundColor--gray').length).toBe(1);
   });
 
   it('should display a Footer element with the global section', () => {
@@ -31,11 +31,7 @@ describe('SprkFooter Component', () => {
         },
       ],
     };
-    const wrapper = mount(
-      <SprkFooter
-        globalItems={globalItems}
-      />,
-    );
+    const wrapper = mount(<SprkFooter globalItems={globalItems} />);
     expect(wrapper.find(SprkFooterGlobalSection).length).toBe(1);
   });
 
@@ -67,11 +63,7 @@ describe('SprkFooter Component', () => {
         ],
       },
     ];
-    const wrapper = mount(
-      <SprkFooter
-        linkColumns={linkColumns}
-      />,
-    );
+    const wrapper = mount(<SprkFooter linkColumns={linkColumns} />);
     expect(wrapper.find('h3').getDOMNode().innerHTML).toBe('Site Links');
   });
 
@@ -86,11 +78,7 @@ describe('SprkFooter Component', () => {
         },
       ],
     };
-    const wrapper = mount(
-      <SprkFooter
-        connectIcons={connectIcons}
-      />,
-    );
+    const wrapper = mount(<SprkFooter connectIcons={connectIcons} />);
     expect(wrapper.find(SprkFooterConnectIcons).length).toBe(1);
   });
 
@@ -113,13 +101,10 @@ describe('SprkFooter Component', () => {
       ],
       disclaimerTitle: 'My Award Disclaimer',
       disclaimerAnalytics: 'test',
-      disclaimerText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
+      disclaimerText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
     };
-    const wrapper = mount(
-      <SprkFooter
-        awards={awards}
-      />,
-    );
+    const wrapper = mount(<SprkFooter awards={awards} />);
     expect(wrapper.find(SprkFooterAwards).length).toBe(1);
   });
 
@@ -132,23 +117,13 @@ describe('SprkFooter Component', () => {
         screenReaderText: 'House',
       },
     ];
-    const wrapper = mount(
-      <SprkFooter
-        additionalIcons={additionalIcons}
-      />,
-    );
+    const wrapper = mount(<SprkFooter additionalIcons={additionalIcons} />);
     expect(wrapper.find(SprkIcon).length).toBe(1);
   });
 
   it('should display a Footer element with the paragraphs section', () => {
-    const paragraphs = [
-      { text: 'Lorem ipsum dolor' },
-    ];
-    const wrapper = mount(
-      <SprkFooter
-        paragraphs={paragraphs}
-      />,
-    );
+    const paragraphs = [{ text: 'Lorem ipsum dolor' }];
+    const wrapper = mount(<SprkFooter paragraphs={paragraphs} />);
     expect(wrapper.find('p').length).toBe(1);
   });
 
@@ -162,12 +137,13 @@ describe('SprkFooter Component', () => {
         element: 'a',
       },
     ];
-    const wrapper = mount(
-      <SprkFooter
-        additionalIcons={additionalIcons}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+    const wrapper = mount(<SprkFooter additionalIcons={additionalIcons} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe('#nogo');
   });
 
   it('should not render the href if element is not an a for additionalIcons', () => {
@@ -180,12 +156,13 @@ describe('SprkFooter Component', () => {
         element: 'span',
       },
     ];
-    const wrapper = mount(
-      <SprkFooter
-        additionalIcons={additionalIcons}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+    const wrapper = mount(<SprkFooter additionalIcons={additionalIcons} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe(null);
   });
 
   it('should render the href as nogo if not defined for column links', () => {
@@ -217,12 +194,13 @@ describe('SprkFooter Component', () => {
         ],
       },
     ];
-    const wrapper = mount(
-      <SprkFooter
-        linkColumns={linkColumns}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe('#nogo');
+    const wrapper = mount(<SprkFooter linkColumns={linkColumns} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe('#nogo');
   });
 
   it('should not render the href if element is not an a for column links', () => {
@@ -255,11 +233,12 @@ describe('SprkFooter Component', () => {
         ],
       },
     ];
-    const wrapper = mount(
-      <SprkFooter
-        linkColumns={linkColumns}
-      />,
-    );
-    expect(wrapper.find('[data-analytics="test-link"]').instance().getAttribute('href')).toBe(null);
+    const wrapper = mount(<SprkFooter linkColumns={linkColumns} />);
+    expect(
+      wrapper
+        .find('[data-analytics="test-link"]')
+        .instance()
+        .getAttribute('href'),
+    ).toBe(null);
   });
 });

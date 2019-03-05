@@ -46,6 +46,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/input" className="drizzle-b-Link drizzle-b-Link--light">
+            Input
+          </Link>
+        </li>
+        <li>
           <Link to="/link" className="drizzle-b-Link drizzle-b-Link--light">
             Link
           </Link>
