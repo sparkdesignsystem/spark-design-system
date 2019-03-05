@@ -48,7 +48,11 @@ const SprkTable = (props) => {
           <tbody>
             {data.map(row => (
               <tr key={uniqueId('row_')}>
-                {columns.map(col => <td key={col.name}>{row[col.name]}</td>)}
+                {columns
+                && (
+                  columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)
+                )
+                }
               </tr>
             ))}
           </tbody>
@@ -98,10 +102,14 @@ const SprkTable = (props) => {
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
-            <tr>
-              <th className="sprk-b-Table__empty-heading" />
-              {columns.map(col => <th key={uniqueId('th_')}>{col.header}</th>)}
-            </tr>
+            {columns
+            && (
+              <tr>
+                <th className="sprk-b-Table__empty-heading" />
+                {columns.map(col => <th key={uniqueId('th_')}>{col.header}</th>)}
+              </tr>
+            )
+            }
           </thead>
 
           {data
@@ -110,7 +118,11 @@ const SprkTable = (props) => {
             {data.map(row => (
               <tr key={uniqueId('row_')}>
                 <th>{row.rowHeading}</th>
-                {columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)}
+                {columns
+                  && (
+                    columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)
+                  )
+                }
               </tr>
             ))}
           </tbody>
@@ -131,10 +143,18 @@ const SprkTable = (props) => {
             {data.map(row => (
               <tr key={uniqueId('row_')}>
                 <th>{row.rowHeading}</th>
-                {columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)}
-                <td>
-                  {row.button}
-                </td>
+                {columns
+                && (
+                  columns.map(col => <td key={uniqueId('td_')}>{row[col.name]}</td>)
+                )
+                }
+                {row.button
+                && (
+                  <td>
+                    {row.button}
+                  </td>
+                )
+                }
               </tr>
             ))}
           </tbody>
@@ -178,12 +198,12 @@ SprkTable.propTypes = {
 };
 
 SprkTable.defaultProps = {
-  columns: [],
-  data: [],
+  columns: undefined,
+  data: undefined,
   variant: 'default',
-  idString: '',
-  additionalContainerClasses: '',
-  additionalTableClasses: '',
+  idString: undefined,
+  additionalContainerClasses: undefined,
+  additionalTableClasses: undefined,
   children: undefined,
 };
 
