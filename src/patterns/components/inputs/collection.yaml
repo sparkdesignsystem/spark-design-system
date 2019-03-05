@@ -44,6 +44,7 @@ restrictions:
     has a unique data-id property ("input-text-1", "input-text-2", "input-date-1", etc).
 sparkPackageCore: true
 hasAngularInfo: true
+hasReactInfo: true
 variableTable:
   $sprk-monetary-symbol:
     default: '$'

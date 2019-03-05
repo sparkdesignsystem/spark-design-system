@@ -11,7 +11,7 @@ const SprkLinkDocs = () => {
     'Home Phone': '(123) 456-7890',
     'Cell Phone': '(098) 765-4321',
     'Work Phone': '(555) 555-5555',
-    'Work Extension': '55555'
+    'Work Extension': '55555',
   };
 
   return (
