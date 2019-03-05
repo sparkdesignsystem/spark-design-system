@@ -10,21 +10,22 @@ const SprkStackItem = (props) => {
     ...other
   } = props;
 
-  const classNames = classnames('sprk-o-Stack__item', additionalClasses);
-
   return (
-    <div className={classNames} data-id={idString} {...other}>
+    <div className={classnames('sprk-o-Stack__item', additionalClasses)} data-id={idString} {...other}>
       {children}
     </div>
   );
 };
 
 SprkStackItem.defaultProps = {
+  children: '',
   idString: '',
   additionalClasses: '',
 };
 
 SprkStackItem.propTypes = {
+  // The children of the stack item
+  children: PropTypes.node,
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the link
