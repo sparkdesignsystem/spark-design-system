@@ -115,6 +115,11 @@ function SiteNav() {
             Stack
           </Link>
         </li>
+        <li>
+          <Link to="/award" className="drizzle-b-Link drizzle-b-Link--light">
+            Award
+          </Link>
+        </li>
       </ul>
     </nav>
   );
