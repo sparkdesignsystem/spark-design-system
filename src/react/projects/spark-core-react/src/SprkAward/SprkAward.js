@@ -15,16 +15,17 @@ const SprkAward = (props) => {
     disclaimerAnalytics,
     images,
     splitAt,
+    itemSpacing,
   } = props;
   const classNames = classnames('sprk-o-CenteredColumn', additionalClasses);
 
   return (
-    <SprkStack className={classNames} data-id={idString} splitAt={splitAt}>
+    <SprkStack additionalClasses={classNames} idString={idString} itemSpacing={itemSpacing}>
       <h2 className="sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-b-TypeDisplayFive sprk-b-Measure sprk-b-Measure--narrow sprk-u-TextAlign--center">
         {heading}
       </h2>
 
-      <div className="sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+      <SprkStack additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--center-column" splitAt={splitAt} itemSpacing={itemSpacing}>
         {images.map(image => (
           <a
             className={classnames('sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack', image.linkAddClasses)}
@@ -40,7 +41,7 @@ const SprkAward = (props) => {
           </a>
         ))}
 
-      </div>
+      </SprkStack>
 
       <SprkToggle title={disclaimerTitle} analyticsString={disclaimerAnalytics} additionalClasses="sprk-o-Stack__item">
         <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
@@ -52,7 +53,8 @@ const SprkAward = (props) => {
 };
 
 SprkAward.defaultProps = {
-  splitAt: 'medium',
+  splitAt: 'small',
+  itemSpacing: 'medium',
   additionalClasses: '',
   idString: '',
   heading: '',
@@ -62,7 +64,9 @@ SprkAward.defaultProps = {
 };
 
 SprkAward.propTypes = {
-  // Determines when the flex-direction should change to row from column
+  // Determines the spacing between the items
+  itemSpacing: PropTypes.string,
+  // Determines when the flex-direction should change to row from column for the images
   splitAt: PropTypes.string,
   // Additional CSS classes on main award container
   additionalClasses: PropTypes.string,
@@ -82,6 +86,8 @@ SprkAward.propTypes = {
       alt: PropTypes.string.isRequired,
       // Additional classes for the image
       addClasses: PropTypes.string,
+      // Additional classes for the link wrapping the image
+      linkAddClasses: PropTypes.string,
       // String used for the data-analytics attribute
       analyticsString: PropTypes.string,
     }),
