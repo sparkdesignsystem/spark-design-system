@@ -3,7 +3,6 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkAward from './SprkAward';
-import { link } from 'fs';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -85,5 +84,4 @@ describe('SprkAward Component', () => {
     const wrapper = mount(<SprkAward images={images} itemSpacing="large" />);
     expect(wrapper.find('.sprk-o-Stack--large').length).toBe(2);
   });
-
 });
