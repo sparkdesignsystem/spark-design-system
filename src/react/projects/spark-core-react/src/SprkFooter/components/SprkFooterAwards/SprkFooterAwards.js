@@ -20,14 +20,24 @@ class SprkFooterAwards extends Component {
 
         <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
           {awardsImagesHasIds.map((image) => {
-            const TagName = image.element || 'a';
+            const {
+              element,
+              href,
+              analyticsString,
+              addClasses,
+              src,
+              altText,
+              ...rest
+            } = image;
+            const TagName = element || 'a';
             return (
               <div key={image.id} className="sprk-o-Stack__item">
                 <TagName
-                  href={TagName === 'a' ? image.href || '#nogo' : undefined}
-                  data-analytics={image.analyticsString}
+                  href={TagName === 'a' ? href || '#nogo' : undefined}
+                  data-analytics={analyticsString}
+                  {...rest}
                 >
-                  <img className={image.addClasses} src={image.src} alt={image.altText} />
+                  <img className={addClasses} src={src} alt={altText} />
                 </TagName>
               </div>
             );

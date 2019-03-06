@@ -89,32 +89,26 @@ class SprkFooter extends Component {
                         {column.heading}
                       </h3>
 
-                      <ul
-                        className="sprk-o-Stack__item
-                        sprk-o-Stack
-                        sprk-o-Stack--misc-a
-                        sprk-b-List
-                        sprk-b-List--bare"
-                      >
-                        {column.links.map(columnLink => {
-                          const TagName = columnLink.element || 'a';
+                      <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
+                        {column.links.map((columnLink) => {
+                          const {
+                            id,
+                            href,
+                            analyticsString,
+                            text,
+                            element,
+                            ...rest
+                          } = columnLink;
+                          const TagName = element || 'a';
                           return (
-                            <li
-                              key={columnLink.id}
-                              className="sprk-o-Stack__item asfsdfasdf"
-                            >
+                            <li key={id} className="sprk-o-Stack__item asfsdfasdf">
                               <TagName
-                                className="sprk-b-Link
-                                sprk-b-Link--simple
-                                sprk-u-FontWeight--normal"
-                                href={
-                                  TagName === 'a'
-                                    ? columnLink.href || '#nogo'
-                                    : undefined
-                                }
-                                data-analytics={columnLink.analyticsString}
+                                className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                                href={TagName === 'a' ? href || '#nogo' : undefined}
+                                data-analytics={analyticsString}
+                                {...rest}
                               >
-                                {columnLink.text}
+                                {text}
                               </TagName>
                             </li>
                           );
@@ -154,34 +148,34 @@ class SprkFooter extends Component {
               ))}
 
             {additionalIcons.length > 0 && (
-              <ul
-                className="sprk-o-Stack__item
-                sprk-o-Stack__item--flex@m
-                sprk-o-Stack
-                sprk-o-Stack--split@xxs
-                sprk-o-Stack--medium
-                sprk-b-List
-                sprk-b-List--bare"
-              >
-                {additionalIconsHasIds.map(icon => {
-                  const TagName = icon.element || 'a';
+              <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+                {additionalIconsHasIds.map((icon) => {
+                  const {
+                    id,
+                    href,
+                    analyticsString,
+                    name,
+                    addClasses,
+                    screenReaderText,
+                    element,
+                    ...rest
+                  } = icon;
+                  const TagName = element || 'a';
                   return (
-                    <li key={icon.id} className="sprk-o-Stack__item">
+                    <li key={id} className="sprk-o-Stack__item">
                       <TagName
                         className="sprk-b-Link sprk-b-Link--plain"
-                        href={
-                          TagName === 'a' ? icon.href || '#nogo' : undefined
-                        }
-                        data-analytics={icon.analyticsString}
+                        href={TagName === 'a' ? href || '#nogo' : undefined}
+                        data-analytics={analyticsString}
+                        {...rest}
                       >
                         <SprkIcon
-                          iconName={icon.name}
-                          additionalClasses={`sprk-c-Icon--stroke-current-color
-                            sprk-c-Icon--l ${icon.addClasses}`}
+                          iconName={name}
+                          additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${
+                            addClasses
+                          }`}
                         />
-                        <span className="sprk-u-ScreenReaderText">
-                          {icon.screenReaderText}
-                        </span>
+                        <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
                       </TagName>
                     </li>
                   );

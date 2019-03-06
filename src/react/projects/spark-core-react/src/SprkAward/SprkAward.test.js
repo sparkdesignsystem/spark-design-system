@@ -3,6 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkAward from './SprkAward';
+import { link } from 'fs';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -33,12 +34,13 @@ describe('SprkAward Component', () => {
         src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
+        element: 'a',
       },
       {
-        href: '#nogo',
         src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-2',
+        element: 'span',
       },
     ];
     const wrapper = mount(<SprkAward images={images} />);
@@ -48,10 +50,11 @@ describe('SprkAward Component', () => {
   it('should add the correct split class', () => {
     const images = [
       {
-        href: '#nogo',
+        to: '#nogo',
         src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
+        element: undefined,
       },
       {
         href: '#nogo',

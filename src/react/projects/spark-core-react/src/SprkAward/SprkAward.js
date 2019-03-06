@@ -26,21 +26,34 @@ const SprkAward = (props) => {
       </h2>
 
       <SprkStack additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--center-column" splitAt={splitAt} itemSpacing={itemSpacing}>
-        {images.map(image => (
-          <a
-            className={classnames('sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack', image.linkAddClasses)}
-            href={image.href}
-            data-analytics={image.analyticsString}
-            key={uniqueId('award-img-')}
-          >
-            <img
-              className={classnames('sprk-o-Stack__item sprk-o-Stack__item--center-column', image.addClasses)}
-              alt={image.alt}
-              src={image.src}
-            />
-          </a>
-        ))}
-
+        {images.map((image) => {
+          const {
+            analyticsString,
+            href,
+            linkAddClasses,
+            addClasses,
+            alt,
+            src,
+            element,
+            ...rest
+          } = image;
+          const TagName = element || 'a';
+          return (
+            <TagName
+              className={classnames('sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack', linkAddClasses)}
+              href={TagName === 'a' ? href || '#nogo' : undefined}
+              data-analytics={analyticsString}
+              key={uniqueId('award-img-')}
+              {...rest}
+            >
+              <img
+                className={classnames('sprk-o-Stack__item sprk-o-Stack__item--center-column', addClasses)}
+                alt={alt}
+                src={src}
+              />
+            </TagName>
+          );
+        })}
       </SprkStack>
 
       <SprkToggle title={disclaimerTitle} analyticsString={disclaimerAnalytics} additionalClasses="sprk-o-Stack__item">
@@ -81,7 +94,7 @@ SprkAward.propTypes = {
       // Element to render, can be 'a' or Link
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       // The image src
-      src: PropTypes.string,
+      src: PropTypes.string.isRequired,
       // The alt text for the image, icon, or SprkIcon
       alt: PropTypes.string.isRequired,
       // Additional classes for the image

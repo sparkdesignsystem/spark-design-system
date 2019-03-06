@@ -14,7 +14,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
           mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -38,7 +38,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
           mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -62,7 +62,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
           mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -126,7 +126,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
           mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -157,7 +157,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          mediaSrc: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
           mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
