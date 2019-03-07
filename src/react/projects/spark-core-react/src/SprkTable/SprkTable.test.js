@@ -116,61 +116,37 @@ it('should display multiple tr elements in the thead element if columns are pres
   expect(wrapper.find('tr').length).toBe(2);
 });
 
-it('should display multiple tr elements in the tbody element if data is present and the variant is grouped', () => {
+it('should display multiple tr elements in the tbody element if rows is present and the variant is grouped', () => {
   const wrapper = shallow(
     <SprkTable
       variant="grouped"
       columns={[
         [
-          { name: 'data1', header: 'Data 1', rowspan: 2 },
-          { name: 'data3', header: 'Data 3', colspan: 3 },
-          { name: 'data2', header: 'Data 2', rowspan: 2 },
+          { header: 'Data 1', rowspan: 2 },
+          { header: 'Data 3', colspan: 3 },
+          { header: 'Data 2', rowspan: 2 },
         ],
         [
-          { name: 'data4', header: 'SubHeading 1' },
-          { name: 'data5', header: 'SubHeading 2' },
-          { name: 'data6', header: 'Subheading 3' },
+          { header: 'SubHeading 1' },
+          { header: 'SubHeading 2' },
+          { header: 'Subheading 3' },
         ],
       ]}
-      data={[
-        {
-          data1: 'Data 1',
-          data2: 'Data 2',
-          data3: 'Data 3',
-          data4: 'Data 4',
-          data5: 'Data 5',
-        },
-        {
-          data1: 'Data 1',
-          data2: 'Data 2',
-          data3: 'Data 3',
-          data4: 'Data 4',
-          data5: 'Data 5',
-        },
-        {
-          data1: 'Data 1',
-          data2: 'Data 2',
-          data3: 'Data 3',
-          data4: 'Data 4',
-          data5: 'Data 5',
-        },
-        {
-          data1: 'Data 1',
-          data2: 'Data 2',
-          data3: 'Data 3',
-          data4: 'Data 4',
-          data5: 'Data 5',
-        },
+      rows={[
+        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
       ]}
     />,
   );
   expect(wrapper.find('tbody tr').length).toBe(4);
 });
 
-it('should display a tbody element when data prop is not undefined', () => {
+it('should display a tbody element when rows prop is not undefined', () => {
   const wrapper = shallow(
     <SprkTable
-      data={[
+      rows={[
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
@@ -218,15 +194,15 @@ it('should not render a tr element if the columns prop is not provided', () => {
   expect(wrapper.find('thead tr').length).toBe(0);
 });
 
-it('should not render a tr element if the data prop is not provided', () => {
+it('should not render a tr element if the rows prop is not provided', () => {
   const wrapper = shallow(<SprkTable />);
   expect(wrapper.find('tbody tr').length).toBe(0);
 });
 
-it('should render the appropriate number of td elements based on the data prop', () => {
+it('should render the appropriate number of td elements based on the rows prop', () => {
   const wrapper = shallow(
     <SprkTable
-      data={[
+      rows={[
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
@@ -242,11 +218,11 @@ it('should render the appropriate number of td elements based on the data prop',
   expect(wrapper.find('tbody td').length).toBe(12);
 });
 
-it('should render the appropriate number of tr elements in the tbody based on the data prop', () => {
+it('should render the appropriate number of tr elements in the tbody based on the rows prop', () => {
   const wrapper = shallow(
     <SprkTable
       variant="rowComparison"
-      data={[
+      rows={[
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
         { data1: 'Data 1', data2: 'Data 2', data3: 'Data 3' },
@@ -262,12 +238,12 @@ it('should render the appropriate number of tr elements in the tbody based on th
   expect(wrapper.find('tbody tr').length).toBe(4);
 });
 
-it('should render a buttons if the button is passed in the data prop and is variant secondaryRowComparison', () => {
+it('should render a buttons if the button is passed in the rows prop and is variant secondaryRowComparison', () => {
   const wrapper = mount(
     <SprkTable
       variant="secondaryRowComparison"
       columns={[{ name: 'data1' }, { name: 'data2' }]}
-      data={[
+      rows={[
         {
           rowHeading: 'Row Heading',
           data1: 'Data',
@@ -298,12 +274,12 @@ it('should render a buttons if the button is passed in the data prop and is vari
   expect(wrapper.find('tbody button').length).toBe(4);
 });
 
-it('should render a appropriate number of th elements when data is passed and variant is secondaryRowComparison', () => {
+it('should render a appropriate number of th elements when rows is passed and variant is secondaryRowComparison', () => {
   const wrapper = shallow(
     <SprkTable
       variant="secondaryRowComparison"
       columns={[{ name: 'data1' }, { name: 'data2' }]}
-      data={[
+      rows={[
         {
           rowHeading: 'Row Heading',
           data1: 'Data',

@@ -5,7 +5,7 @@ import { uniqueId } from 'lodash';
 
 const SprkTable = props => {
   const {
-    data,
+    rows,
     columns,
     variant,
     idString,
@@ -53,11 +53,11 @@ const SprkTable = props => {
               ))}
           </thead>
 
-          {data && (
+          {rows && (
             <tbody>
-              {data.map(row => (
+              {rows.map(row => (
                 <tr key={uniqueId('row_')}>
-                  {Object.values(row).map(item => (
+                  {row.map(item => (
                     <td key={uniqueId('td_')}>{item}</td>
                   ))}
                 </tr>
@@ -83,9 +83,9 @@ const SprkTable = props => {
             )}
           </thead>
 
-          {data && (
+          {rows && (
             <tbody>
-              {data.map(row => (
+              {rows.map(row => (
                 <tr key={uniqueId('row_')}>
                   <th>{row.rowHeading}</th>
                   {columns &&
@@ -104,9 +104,9 @@ const SprkTable = props => {
     return (
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
-          {data && (
+          {rows && (
             <tbody>
-              {data.map(row => (
+              {rows.map(row => (
                 <tr key={uniqueId('row_')}>
                   <th>{row.rowHeading}</th>
                   {columns &&
@@ -145,9 +145,9 @@ const SprkTable = props => {
           )}
         </thead>
 
-        {data && (
+        {rows && (
           <tbody>
-            {data.map(row => (
+            {rows.map(row => (
               <tr key={uniqueId('row_')}>
                 {columns &&
                   columns.map(col => (
@@ -169,7 +169,10 @@ SprkTable.propTypes = {
     PropTypes.arrayOf(PropTypes.array),
   ]),
   // An array of objects used to map and render the table row data
-  data: PropTypes.arrayOf(PropTypes.object),
+  rows: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.object),
+    PropTypes.arrayOf(PropTypes.array),
+  ]),
   // A string to determine what variant of the table should render
   variant: PropTypes.oneOf([
     'default',
@@ -191,7 +194,7 @@ SprkTable.propTypes = {
 
 SprkTable.defaultProps = {
   columns: undefined,
-  data: undefined,
+  rows: undefined,
   variant: 'default',
   idString: undefined,
   additionalContainerClasses: undefined,
