@@ -31,6 +31,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/table" className="drizzle-b-Link drizzle-b-Link--light">
+            Table
+          </Link>
+        </li>
+        <li>
           <Link to="/dropdown" className="drizzle-b-Link drizzle-b-Link--light">
             Dropdown
           </Link>
