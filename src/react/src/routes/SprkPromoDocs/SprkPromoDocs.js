@@ -68,7 +68,7 @@ const SprkPromoDocs = () => {
             additionalClasses="sprk-o-Stack--split@s"
             cta="link"
             ctaText="Learn More"
-            ctaLinkHref="https://www.sparkdesignsystem.com"
+            ctaHref="https://www.sparkdesignsystem.com"
             ctaAnalytics="promo-cta-4-analytics"
             ctaIdString="promo-cta-4"
             imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
@@ -150,7 +150,7 @@ const SprkPromoDocs = () => {
             imgLinkHref="https://sparkdesignsystem.com"
             imgLinkAnalytics="img-link-analytics-string"
             imgLinkIdString="img-link-id-string"
-            additionalClassesImageLink="additionalClassImageLink"
+            additionalClassesImgLink="additionalClassImageLink"
             idString="promo-7"
             hasBorder
             isFlag

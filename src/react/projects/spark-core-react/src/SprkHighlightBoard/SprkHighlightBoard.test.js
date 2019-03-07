@@ -35,6 +35,13 @@ it('should render an image if an imgSrc is provided', () => {
   expect(img.hasClass('sprk-c-HighlightBoard__image')).toBe(true);
 });
 
+it ('should render a header when provided', () => {
+  const wrapper = shallow(<SprkHighlightBoard heading='foo' />);
+  const header = wrapper.find('h1.sprk-c-HighlightBoard__heading');
+
+  expect(header.length).toBe(1);
+});
+
 it('should render both ctas when provided text for both', () => {
   const wrapper = shallow(<SprkHighlightBoard ctaText='this is a test' ctaText2='so is this'/>);
   const contentDiv = wrapper.find('div.sprk-c-HighlightBoard__cta');
