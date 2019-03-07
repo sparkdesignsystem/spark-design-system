@@ -14,6 +14,7 @@ export { default as SprkSelectionInput } from './SprkInput/SprkSelectionInput/Sp
 export { default as SprkLink } from './SprkLink/SprkLink';
 export { default as SprkTable } from './SprkTable/SprkTable';
 export { default as SprkMasthead } from './SprkMasthead/SprkMasthead';
+export { default as SprkPagination } from './SprkPagination/SprkPagination';
 export { default as SprkPromo } from './SprkPromo/SprkPromo';
 export { default as SprkSpinner } from './SprkSpinner/SprkSpinner';
 export { default as SprkTabs } from './SprkTabs/SprkTabs';

@@ -42,7 +42,7 @@ gulp.task('link-spark-core-react', (cb) => {
 });
 
 gulp.task('test-spark-core-react', (cb) => {
-  exec('cd src/react/projects/spark-core-react && npx jest spark-core-react', (err, stdout, stderr) => {
+  exec('cd src/react/projects/spark-core-react && npx jest spark-core-react --coverage', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

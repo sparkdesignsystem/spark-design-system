@@ -17,7 +17,10 @@ class SprkFooter extends Component {
         id: uniqueId(),
         links: item.links.map(link => ({ id: uniqueId(), ...link })),
       })),
-      additionalIconsHasIds: additionalIcons.map(icon => ({ id: uniqueId(), ...icon })),
+      additionalIconsHasIds: additionalIcons.map(icon => ({
+        id: uniqueId(),
+        ...icon,
+      })),
       paragraphsHasIds: paragraphs.map(p => ({ id: uniqueId(), ...p })),
     };
   }
@@ -33,7 +36,11 @@ class SprkFooter extends Component {
       additionalIcons,
     } = this.props;
 
-    const { linkColumnsHasIds, additionalIconsHasIds, paragraphsHasIds } = this.state;
+    const {
+      linkColumnsHasIds,
+      additionalIconsHasIds,
+      paragraphsHasIds,
+    } = this.state;
     const classNames = classnames(
       'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray',
       additionalClasses,
@@ -46,28 +53,65 @@ class SprkFooter extends Component {
           role="contentinfo"
           data-id={idString}
         >
-          <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
+          <div
+            className="sprk-o-Stack__item
+              sprk-o-Stack
+              sprk-o-Stack--medium
+              sprk-o-Stack--split@m"
+          >
             {Object.keys(globalItems).length > 1 && (
               <SprkFooterGlobalSection globalItems={globalItems} />
             )}
-            <div className="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium">
-              <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-                {linkColumnsHasIds.length > 0
-                  && linkColumnsHasIds.map(column => (
+            <div
+              className="sprk-o-Stack__item
+                sprk-o-Stack__item--seven-tenths@m
+                sprk-o-Stack
+                sprk-o-Stack--medium"
+            >
+              <div
+                className="sprk-o-Stack__item
+                  sprk-o-Stack
+                  sprk-o-Stack--medium
+                  sprk-o-Stack--split@m"
+              >
+                {linkColumnsHasIds.length > 0 &&
+                  linkColumnsHasIds.map(column => (
                     <div
                       key={column.id}
-                      className="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
+                      className="sprk-o-Stack__item
+                        sprk-o-Stack__item--third@m
+                        sprk-o-Box
+                        sprk-u-PaddingRight--a
+                        sprk-o-Stack
+                        sprk-o-Stack--large"
                     >
-                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">{column.heading}</h3>
+                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
+                        {column.heading}
+                      </h3>
 
-                      <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
-                        {column.links.map((columnLink) => {
+                      <ul
+                        className="sprk-o-Stack__item
+                        sprk-o-Stack
+                        sprk-o-Stack--misc-a
+                        sprk-b-List
+                        sprk-b-List--bare"
+                      >
+                        {column.links.map(columnLink => {
                           const TagName = columnLink.element || 'a';
                           return (
-                            <li key={columnLink.id} className="sprk-o-Stack__item asfsdfasdf">
+                            <li
+                              key={columnLink.id}
+                              className="sprk-o-Stack__item asfsdfasdf"
+                            >
                               <TagName
-                                className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
-                                href={TagName === 'a' ? columnLink.href || '#nogo' : undefined}
+                                className="sprk-b-Link
+                                sprk-b-Link--simple
+                                sprk-u-FontWeight--normal"
+                                href={
+                                  TagName === 'a'
+                                    ? columnLink.href || '#nogo'
+                                    : undefined
+                                }
                                 data-analytics={columnLink.analyticsString}
                               >
                                 {columnLink.text}
@@ -88,34 +132,56 @@ class SprkFooter extends Component {
 
           <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
 
-          <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
-            {Object.keys(awards).length > 1 && <SprkFooterAwards awards={awards} />}
+          <div
+            className="sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--misc-b
+            sprk-o-Box
+            sprk-u-PaddingTop--b"
+          >
+            {Object.keys(awards).length > 1 && (
+              <SprkFooterAwards awards={awards} />
+            )}
 
-            {paragraphs.length > 0
-              && paragraphsHasIds.map(p => (
-                <p key={p.id} className="sprk-o-Stack__item sprk-b-TypeBodyFour">
+            {paragraphs.length > 0 &&
+              paragraphsHasIds.map(p => (
+                <p
+                  key={p.id}
+                  className="sprk-o-Stack__item sprk-b-TypeBodyFour"
+                >
                   {p.text}
                 </p>
               ))}
 
             {additionalIcons.length > 0 && (
-              <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
-                {additionalIconsHasIds.map((icon) => {
+              <ul
+                className="sprk-o-Stack__item
+                sprk-o-Stack__item--flex@m
+                sprk-o-Stack
+                sprk-o-Stack--split@xxs
+                sprk-o-Stack--medium
+                sprk-b-List
+                sprk-b-List--bare"
+              >
+                {additionalIconsHasIds.map(icon => {
                   const TagName = icon.element || 'a';
                   return (
                     <li key={icon.id} className="sprk-o-Stack__item">
                       <TagName
                         className="sprk-b-Link sprk-b-Link--plain"
-                        href={TagName === 'a' ? icon.href || '#nogo' : undefined}
+                        href={
+                          TagName === 'a' ? icon.href || '#nogo' : undefined
+                        }
                         data-analytics={icon.analyticsString}
                       >
                         <SprkIcon
                           iconName={icon.name}
-                          additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${
-                            icon.addClasses
-                          }`}
+                          additionalClasses={`sprk-c-Icon--stroke-current-color
+                            sprk-c-Icon--l ${icon.addClasses}`}
                         />
-                        <span className="sprk-u-ScreenReaderText">{icon.screenReaderText}</span>
+                        <span className="sprk-u-ScreenReaderText">
+                          {icon.screenReaderText}
+                        </span>
                       </TagName>
                     </li>
                   );
