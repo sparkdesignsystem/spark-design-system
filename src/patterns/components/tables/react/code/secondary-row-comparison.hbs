@@ -2,12 +2,21 @@
     variant="secondaryRowComparison"
     additionalTableClasses="sprk-b-Table--spacing-medium"
     idString="table-5"
-    columns={[ {name: 'data1'}, {name: 'data2'} ]}
-    data={[
-      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
-      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
-      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
-      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
-    ]}
+    columns={columns}
+    rows={rows}
     >
   </SprkTable>
+
+  <script>
+    const columns = [ 
+      {name: 'data1'},
+      {name: 'data2'} 
+    ]
+
+    const rows = [
+      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+      {rowHeading: 'Row Heading', data1: "Data", data2: "Data", button: <SprkButton variant="secondary">Learn More</SprkButton> },
+    ]
+  </script>

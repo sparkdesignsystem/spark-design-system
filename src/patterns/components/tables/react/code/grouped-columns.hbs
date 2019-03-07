@@ -2,16 +2,30 @@
   variant="grouped"
   additionalTableClasses="sprk-b-Table--spacing-medium"
   idString="table-3"
-  columns={[
-    [{name: 'column1', header: 'Column Heading', rowspan: 2}, {name: 'column2', header: 'Column Heading', colspan: 3}, {name: 'column3', header: 'Column Heading', rowspan: 2}],
-    [{name: 'subheading1', header: 'SubHeading'}, {name: 'subheading2', header: 'SubHeading'}, {name: 'subheading3', header: 'Subheading'}]
-  ]}
-  data={[
-    {data1: "Data 1", data2: "Data 2",  data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
-    {data1: "Data 1", data2: "Data 2", data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
-    {data1: "Data 1", data2: "Data 2", data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
-    {data1: "Data 1", data2: "Data 2", data3: "Data 3", data4: 'Data 4', data5: 'Data 5'},
-  ]}
+  columns={columns}
+  rows={rows}
 >
 
 </SprkTable>
+
+<script>
+  const columns = [
+    [
+      {header: 'Column Heading', rowspan: 2},
+      {header: 'Column Heading', colspan: 3},
+      {header: 'Column Heading', rowspan: 2},
+    ],
+    [
+      {header: 'SubHeading'},
+      {header: 'SubHeading'}, 
+      {header: 'Subheading'},
+    ]
+  ]
+
+  const rows = [
+    ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
+    ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
+    ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
+    ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
+  ]
+</script>
