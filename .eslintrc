@@ -1,11 +1,16 @@
 {
-  "extends": ["airbnb", "plugin:jest/recommended"],
-  "plugins": ["jest"],
+  "extends": ["airbnb", "prettier", "plugin:jest/recommended"],
+  "plugins": ["prettier", "jest"],
   "env": {
     "browser": true,
     "jest/globals": true
   },
   "rules": {
+    "max-len": ["error", 80, {
+      "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
+      "ignoreUrls": true
+    }],
+    "prettier/prettier": ["error"],
     "object-curly-newline": ["error", {
       "ObjectPattern": { "multiline": true },
       "ImportDeclaration": "never"
