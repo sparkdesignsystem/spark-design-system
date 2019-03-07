@@ -1,3 +1,4 @@
+/* global it expect */
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -6,35 +7,39 @@ import SprkList from './SprkList';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should display a ol element with the correct base class', () => {
-  const wrapper = shallow(<SprkList element="ol"/>);
+  const wrapper = shallow(<SprkList element="ol" />);
   expect(wrapper.find('ol.sprk-b-List').length).toBe(1);
 });
 
 it('should display a ul element with the correct base class', () => {
-  const wrapper = shallow(<SprkList element="ul"/>);
+  const wrapper = shallow(<SprkList element="ul" />);
   expect(wrapper.find('ul.sprk-b-List').length).toBe(1);
 });
 
-it('should display a ol element with correct classes when variant is indented', () => {
+it('should render ol with correct classes when variant is indented', () => {
   const wrapper = shallow(<SprkList element="ol" variant="indented" />);
   expect(wrapper.find('ol').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ol').hasClass('sprk-b-List--indented')).toBe(true);
 });
 
-it('should display a ul element with correct classes when variant is indented', () => {
+it('should render ul with correct classes when variant is indented', () => {
   const wrapper = shallow(<SprkList element="ul" variant="indented" />);
   expect(wrapper.find('ul').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ul').hasClass('sprk-b-List--indented')).toBe(true);
 });
 
 it('should add classes to ol element if additionalClasses has a value', () => {
-  const wrapper = shallow(<SprkList element="ol" additionalClasses="additionalClass" />);
+  const wrapper = shallow(
+    <SprkList element="ol" additionalClasses="additionalClass" />,
+  );
   expect(wrapper.find('ol').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ol').hasClass('additionalClass')).toBe(true);
 });
 
 it('should add classes to ul element if additionalClasses has a value', () => {
-  const wrapper = shallow(<SprkList element="ul" additionalClasses="additionalClass" />);
+  const wrapper = shallow(
+    <SprkList element="ul" additionalClasses="additionalClass" />,
+  );
   expect(wrapper.find('ul').hasClass('sprk-b-List')).toBe(true);
   expect(wrapper.find('ul').hasClass('additionalClass')).toBe(true);
 });
