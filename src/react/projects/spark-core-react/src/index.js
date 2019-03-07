@@ -13,6 +13,7 @@ export { default as SprkRevealInput } from './SprkInput/SprkRevealInput/SprkReve
 export { default as SprkSelectionInput } from './SprkInput/SprkSelectionInput/SprkSelectionInput';
 export { default as SprkLink } from './SprkLink/SprkLink';
 export { default as SprkMasthead } from './SprkMasthead/SprkMasthead';
+export { default as SprkPagination } from './SprkPagination/SprkPagination';
 export { default as SprkPromo } from './SprkPromo/SprkPromo';
 export { default as SprkSpinner } from './SprkSpinner/SprkSpinner';
 export { default as SprkTabs } from './SprkTabs/SprkTabs';

@@ -61,6 +61,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/pagination" className="drizzle-b-Link drizzle-b-Link--light">
+            Pagination
+          </Link>
+        </li>
+        <li>
           <Link to="/promos" className="drizzle-b-Link drizzle-b-Link--light">
             Promos
           </Link>
