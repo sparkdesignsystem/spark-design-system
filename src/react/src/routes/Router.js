@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
+import SprkListDocs from './SprkListDocs/SprkListDocs';
 import SprkPromoDocs from './SprkPromoDocs/SprkPromoDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
@@ -39,6 +40,7 @@ const Router = () => (
       <Route exact path="/tabs" component={SprkTabsDocs} />
       <Route exact path="/footer" component={SprkFooterDocs} />
       <Route exact path="/toggle" component={SprkToggleDocs} />
+      <Route exact path="/list" component={SprkListDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
