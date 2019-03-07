@@ -50,8 +50,8 @@ const SprkTableDocs = () => (
         columns={[
           [
             { header: 'Data 1', rowspan: 2 },
-            { header: 'Data 3', colspan: 3 },
-            { header: 'Data 2', rowspan: 2 },
+            { header: 'Data 2', colspan: 3 },
+            { header: 'Data 3', rowspan: 2 },
           ],
           [
             { header: 'SubHeading 1' },
