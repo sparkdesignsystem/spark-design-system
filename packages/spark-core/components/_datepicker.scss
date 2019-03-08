@@ -110,12 +110,20 @@
 .dp-day:hover {
   background: $sprk-date-picker-day-interact-color;
   border-color: $sprk-date-picker-day-interact-color;
-  color: $sprk-date-picker-day-color;
+  color: $sprk-date-picker-day-interact-text-color;
   outline: 0;
 }
 
 .dp-current {
   font-weight: $sprk-date-picker-selected-day-font-weight;
+}
+
+.dp-current:not(.dp-selected),
+.dp-current:focus:not(.dp-selected) {
+  background: none;
+  border: 0;
+  color: $sprk-date-picker-day-text-color;
+  font-weight: $sprk-date-picker-font-weight;
 }
 
 .dp-day:hover {
