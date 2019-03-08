@@ -20,5 +20,8 @@ export { default as SprkSpinner } from './SprkSpinner/SprkSpinner';
 export { default as SprkList } from './SprkList/SprkList';
 export { default as SprkListItem } from './SprkList/components/SprkListItem/SprkListItem';
 export { default as SprkTabs } from './SprkTabs/SprkTabs';
+export { default as SprkTabsPanel } from './SprkTabs/components/SprkTabsPanel/SprkTabsPanel';
 export { default as SprkFooter } from './SprkFooter/SprkFooter';
 export { default as SprkToggle } from './SprkToggle/SprkToggle';
+export { default as SprkAccordion } from './SprkAccordion/SprkAccordion';
+export { default as SprkAccordionItem } from './SprkAccordion/components/SprkAccordionItem/SprkAccordionItem';

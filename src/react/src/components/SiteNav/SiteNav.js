@@ -95,6 +95,11 @@ function SiteNav() {
             Toggle
           </Link>
         </li>
+        <li>
+          <Link to="/accordion" className="drizzle-b-Link drizzle-b-Link--light">
+            Accordion
+          </Link>
+        </li>
       </ul>
     </nav>
   );

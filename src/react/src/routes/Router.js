@@ -19,6 +19,7 @@ import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
 import SprkInputDocs from './SprkInputDocs/SprkInputDocs';
 import SprkFooterDocs from './SprkFooterDocs/SprkFooterDocs';
 import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
+import SprkAccordionDocs from './SprkAccordionDocs/SprkAccordionDocs';
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -43,6 +44,7 @@ const Router = () => (
       <Route exact path="/footer" component={SprkFooterDocs} />
       <Route exact path="/toggle" component={SprkToggleDocs} />
       <Route exact path="/list" component={SprkListDocs} />
+      <Route exact path="/accordion" component={SprkAccordionDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
