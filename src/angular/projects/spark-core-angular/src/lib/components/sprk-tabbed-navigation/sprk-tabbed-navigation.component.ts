@@ -68,6 +68,13 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
 
   @HostListener('keydown', ['$event'])
   onKeydown($event) {
+    const isPanel = (event.target as HTMLTextAreaElement).classList.contains(
+      'sprk-c-Tabs__content'
+    );
+    if (isPanel) {
+      return;
+    }
+
     const keys = {
       end: 35,
       home: 36,
