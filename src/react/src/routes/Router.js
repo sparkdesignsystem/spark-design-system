@@ -3,8 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import SprkButtonDocs from './SprkButtonDocs/SprkButtonDocs';
 import SprkLinkDocs from './SprkLinkDocs/SprkLinkDocs';
+import SprkListDocs from './SprkListDocs/SprkListDocs';
 import SprkPromoDocs from './SprkPromoDocs/SprkPromoDocs';
 import SprkDividerDocs from './SprkDividerDocs/SprkDividerDocs';
+import SprkTableDocs from './SprkTableDocs/SprkTableDocs';
 import SprkAlertDocs from './SprkAlertDocs/SprkAlertDocs';
 import SprkMastheadDefaultDocs from './SprkMastheadDefaultDocs/SprkMastheadDefaultDocs';
 import SprkMastheadExtendedDocs from './SprkMastheadExtendedDocs/SprkMastheadExtendedDocs';
@@ -32,6 +34,7 @@ const Router = () => (
       <Route exact path="/icon" component={SprkIconDocs} />
       <Route path="/input" component={SprkInputDocs} />
       <Route exact path="/link" component={SprkLinkDocs} />
+      <Route exact path="/table" component={SprkTableDocs} />
       <Route exact path="/masthead-default" component={SprkMastheadDefaultDocs} />
       <Route exact path="/masthead-extended" component={SprkMastheadExtendedDocs} />
       <Route exact path="/pagination" component={SprkPaginationDocs} />
@@ -39,6 +42,7 @@ const Router = () => (
       <Route exact path="/tabs" component={SprkTabsDocs} />
       <Route exact path="/footer" component={SprkFooterDocs} />
       <Route exact path="/toggle" component={SprkToggleDocs} />
+      <Route exact path="/list" component={SprkListDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
