@@ -107,7 +107,6 @@ const linkColumns = [
         href: '#nogo',
         text: 'Link Item',
         element: 'a',
-        mediaHref: '#nogo',
       },
       {
         href: '#nogo',

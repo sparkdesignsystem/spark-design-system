@@ -101,13 +101,13 @@ function SiteNav() {
           </Link>
         </li>
         <li>
-          <Link to="/pagination" className="drizzle-b-Link drizzle-b-Link--light">
-            Pagination
-            </Link>
-        </li>
-        <li>
           <Link to="/stack" className="drizzle-b-Link drizzle-b-Link--light">
             Stack
+          </Link>
+        </li>
+        <li>
+          <Link to="/award" className="drizzle-b-Link drizzle-b-Link--light">
+            Award
           </Link>
         </li>
       </ul>

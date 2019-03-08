@@ -27,3 +27,4 @@ export { default as SprkAccordion } from './SprkAccordion/SprkAccordion';
 export { default as SprkAccordionItem } from './SprkAccordion/components/SprkAccordionItem/SprkAccordionItem';
 export { default as SprkStack } from './SprkStack/SprkStack';
 export { default as SprkStackItem } from './SprkStack/components/SprkStackItem/SprkStackItem';
+export { default as SprkAward } from './SprkAward/SprkAward';

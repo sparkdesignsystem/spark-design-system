@@ -17,31 +17,48 @@ class SprkFooterGlobalSection extends Component {
     const { globalItemsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
-        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">{globalItems.heading}</h3>
+        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
+          {globalItems.heading}
+        </h3>
         {globalItemsHasIds.map((item) => {
-          const TagName = item.element || 'a';
+          const {
+            id,
+            mediaHref,
+            analyticsString,
+            mediaType,
+            mediaAddClasses,
+            src,
+            altText,
+            iconName,
+            description,
+            element,
+            svg,
+            ...rest
+          } = item;
+          const TagName = element || 'a';
           return (
-            <div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
+            <div key={id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div className="sprk-o-Stack__item">
                 <TagName
                   className="sprk-b-Link sprk-b-Link--plain"
-                  href={TagName === 'a' ? item.mediaHref || '#nogo' : undefined}
-                  data-analytics={item.analyticsString}
+                  href={TagName === 'a' ? mediaHref || '#nogo' : undefined}
+                  data-analytics={analyticsString}
+                  {...rest}
                 >
-                  {item.mediaType === 'image' && (
-                    <img className={item.mediaAddClasses} src={item.src} alt={item.altText} />
+                  {mediaType === 'image' && (
+                    <img className={mediaAddClasses} src={src} alt={altText} />
                   )}
-                  {item.mediaType === 'SprkIcon' && (
-                    <SprkIcon iconName={item.iconName} additionalClasses={item.mediaAddClasses} />
+                  {mediaType === 'SprkIcon' && (
+                    <SprkIcon iconName={iconName} additionalClasses={mediaAddClasses} />
                   )}
-                  {item.mediaType === 'svg' && <div>{item.svg}</div>}
-                  {item.mediaType !== 'image' && (
-                    <span className="sprk-u-ScreenReaderText">{item.altText}</span>
+                  {mediaType === 'svg' && <div>{svg}</div>}
+                  {mediaType !== 'image' && (
+                    <span className="sprk-u-ScreenReaderText">{altText}</span>
                   )}
                 </TagName>
               </div>
 
-              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour">{item.description}</p>
+              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour">{description}</p>
             </div>
           );
         })}
