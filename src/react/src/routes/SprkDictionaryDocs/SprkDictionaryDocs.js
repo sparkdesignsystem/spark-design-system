@@ -1,10 +1,9 @@
 import React from 'react';
-import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
-
 import { SprkDictionary } from '@sparkdesignsystem/spark-core-react';
+import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
-const SprkLinkDocs = () => {
+const SprkDictionaryDocs = () => {
   const docsKeyValuePairs = {
     'Email Address': 'sparkdesignsystem@quickenloans.com',
     'Mailing Address': '123 Main Street, Detroit, MI, 48216',
@@ -19,17 +18,19 @@ const SprkLinkDocs = () => {
       <ExampleContainer>
         <SprkDictionary
           idString="dictionary1"
-          keyValuePairs={docsKeyValuePairs} />
+          keyValuePairs={docsKeyValuePairs}
+        />
       </ExampleContainer>
 
       <ExampleContainer>
         <SprkDictionary
           idString="dictionary2"
           keyValuePairs={docsKeyValuePairs}
-          variant="striped" />
+          variant="striped"
+        />
       </ExampleContainer>
     </CentralColumnLayout>
   );
 };
 
-export default SprkLinkDocs;
+export default SprkDictionaryDocs;
