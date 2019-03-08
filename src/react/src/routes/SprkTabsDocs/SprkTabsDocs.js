@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies */
 import { SprkTabs, SprkTabsPanel } from '@sparkdesignsystem/spark-core-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
@@ -166,6 +165,5 @@ const SprkTabsDocs = () => (
     </SprkTabs>
   </CentralColumnLayout>
 );
-
 
 export default SprkTabsDocs;

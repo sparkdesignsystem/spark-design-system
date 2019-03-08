@@ -20,6 +20,7 @@ import SprkInputDocs from './SprkInputDocs/SprkInputDocs';
 import SprkFooterDocs from './SprkFooterDocs/SprkFooterDocs';
 import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
 import SprkAccordionDocs from './SprkAccordionDocs/SprkAccordionDocs';
+import SprkStackDocs from './SprkStackDocs/SprkStackDocs';
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -42,6 +43,7 @@ const Router = () => (
       <Route exact path="/promos" component={SprkPromoDocs} />
       <Route exact path="/tabs" component={SprkTabsDocs} />
       <Route exact path="/footer" component={SprkFooterDocs} />
+      <Route exact path="/stack" component={SprkStackDocs} />
       <Route exact path="/toggle" component={SprkToggleDocs} />
       <Route exact path="/list" component={SprkListDocs} />
       <Route exact path="/accordion" component={SprkAccordionDocs} />
