@@ -319,8 +319,11 @@ variableTable:
   $sprk-date-picker-day-margin:
     default: 0 2px
     description:
-  $sprk-date-picker-day-color:
+  $sprk-date-picker-day-interact-text-color:
     default: $sprk-white
+    description:
+  $sprk-date-picker-day-text-color:
+    default: $sprk-black
     description:
   $sprk-date-picker-day-hover-color:
     default: $sprk-black
