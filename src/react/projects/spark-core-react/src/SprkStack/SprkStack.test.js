@@ -18,56 +18,56 @@ it('should set the tiny spacing class in addition to the base class when itemSpa
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--tiny').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "small"', () => {
+it('should set the small spacing class in addition to the base class when itemSpacing is "small"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="small" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--small').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "medium"', () => {
+it('should set the medium spacing class in addition to the base class when itemSpacing is "medium"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="medium" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--medium').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "large"', () => {
+it('should set the large spacing class in addition to the base class when itemSpacing is "large"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="large" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--large').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "huge"', () => {
+it('should set the huge spacing class in addition to the base class when itemSpacing is "huge"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="huge" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--huge').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "misc-a"', () => {
+it('should set the misc-a spacing class in addition to the base class when itemSpacing is "misc-a"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="misc-a" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-a').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "misc-b"', () => {
+it('should set the misc-b spacing class in addition to the base class when itemSpacing is "misc-b"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="misc-b" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-b').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "misc-c"', () => {
+it('should set the misc-c spacing class in addition to the base class when itemSpacing is "misc-c"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="misc-c" />,
   );
   expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-c').length).toBe(1);
 });
 
-it('should set the tiny spacing class in addition to the base class when itemSpacing is "misc-d"', () => {
+it('should set the misc-d spacing class in addition to the base class when itemSpacing is "misc-d"', () => {
   const wrapper = shallow(
     <SprkStack itemSpacing="misc-d" />,
   );
