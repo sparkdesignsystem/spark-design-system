@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>10/10</span>
       </div>
     </div>
   </div>
@@ -123,7 +123,24 @@
 78
 79
 80
-81</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,8 +161,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -222,31 +256,48 @@ class SprkFooterGlobalSection extends Component {
     const { globalItemsHasIds } = this.state;
     return (
       &lt;div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh"&gt;
-        &lt;h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne"&gt;{globalItems.heading}&lt;/h3&gt;
+        &lt;h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne"&gt;
+          {globalItems.heading}
+        &lt;/h3&gt;
         {globalItemsHasIds.map((item) =&gt; {
-          const TagName = item.element || 'a';
+          const {
+            id,
+            mediaHref,
+            analyticsString,
+            mediaType,
+            mediaAddClasses,
+            src,
+            altText,
+            iconName,
+            description,
+            element,
+            svg,
+            ...rest
+          } = item;
+          const TagName = element || 'a';
           return (
-            &lt;div key={item.id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"&gt;
+            &lt;div key={id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"&gt;
               &lt;div className="sprk-o-Stack__item"&gt;
                 &lt;TagName
                   className="sprk-b-Link sprk-b-Link--plain"
-                  href={TagName === 'a' ? item.mediaHref || '#nogo' : undefined}
-                  data-analytics={item.analyticsString}
+                  href={TagName === 'a' ? mediaHref || '#nogo' : undefined}
+                  data-analytics={analyticsString}
+                  {...rest}
                 &gt;
-                  {item.mediaType === 'image' &amp;&amp; (
-                    &lt;img className={item.mediaAddClasses} src={item.src} alt={item.altText} /&gt;
+                  {mediaType === 'image' &amp;&amp; (
+                    &lt;img className={mediaAddClasses} src={src} alt={altText} /&gt;
                   )}
-                  {item.mediaType === 'SprkIcon' &amp;&amp; (
-                    &lt;SprkIcon iconName={item.iconName} additionalClasses={item.mediaAddClasses} /&gt;
+                  {mediaType === 'SprkIcon' &amp;&amp; (
+                    &lt;SprkIcon iconName={iconName} additionalClasses={mediaAddClasses} /&gt;
                   )}
-                  {item.mediaType === 'svg' &amp;&amp; &lt;div&gt;{item.svg}&lt;/div&gt;}
-                  {item.mediaType !== 'image' &amp;&amp; (
-                    &lt;span className="sprk-u-ScreenReaderText"&gt;{item.altText}&lt;/span&gt;
+                  {mediaType === 'svg' &amp;&amp; &lt;div&gt;{svg}&lt;/div&gt;}
+                  {mediaType !== 'image' &amp;&amp; (
+                    &lt;span className="sprk-u-ScreenReaderText"&gt;{altText}&lt;/span&gt;
                   )}
                 &lt;/TagName&gt;
               &lt;/div&gt;
 &nbsp;
-              &lt;p className="sprk-o-Stack__item sprk-b-TypeBodyFour"&gt;{item.description}&lt;/p&gt;
+              &lt;p className="sprk-o-Stack__item sprk-b-TypeBodyFour"&gt;{description}&lt;/p&gt;
             &lt;/div&gt;
           );
         })}
@@ -289,7 +340,7 @@ export default SprkFooterGlobalSection;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 14:21:34 GMT-0500 (EST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 12 2019 12:19:17 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

@@ -25,9 +25,9 @@
         <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">94.12% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>16/17</span>
+        <span class='fraction'>17/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -177,7 +177,10 @@
 132
 133
 134
-135</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,22 +204,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -314,10 +320,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkButton } from '@sparkdesignsystem/spark-react';
 import warning from 'warning';
 &nbsp;
-const SprkHighlightBoard = (props) =&gt; {
+const SprkHighlightBoard = props =&gt; {
   const {
     imgSrc,
     imgAlt,
@@ -339,79 +345,82 @@ const SprkHighlightBoard = (props) =&gt; {
 &nbsp;
   warning(
     (imgSrc &amp;&amp; imgAlt) || (!imgSrc &amp;&amp; !imgAlt),
-    'SprkHighlightBoard: If imgSrc is provided, then imgAlt is required (and vice versa).'
+    'SprkHighlightBoard: If imgSrc is provided, then imgAlt is required (and vice versa).',
   );
 &nbsp;
   const classNames = classnames(
     'sprk-c-HighlightBoard',
     'sprk-u-mbm',
     additionalClasses,
-    {'sprk-c-HighlightBoard--has-image': imgSrc},
-    {'sprk-c-HighlightBoard--stacked': variant === 'stacked'},
+    { 'sprk-c-HighlightBoard--has-image': imgSrc },
+    { 'sprk-c-HighlightBoard--stacked': variant === 'stacked' },
   );
 &nbsp;
   return (
     &lt;div className={classNames} data-id={idString} {...other}&gt;
-      {imgSrc &amp;&amp;
+      {imgSrc &amp;&amp; (
         &lt;img
-          className='sprk-c-HighlightBoard__image'
+          className="sprk-c-HighlightBoard__image"
           src={imgSrc}
-          alt={imgAlt} /&gt;
-      }
+          alt={imgAlt}
+        /&gt;
+      )}
 &nbsp;
-      &lt;div className='sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large'&gt;
-        { heading &amp;&amp;
-<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;h1 className="sprk-b-TypeDisplayOne sprk-c-HighlightBoard__heading sprk-o-Stack__item"&gt;</span>
+      &lt;div className="sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large"&gt;
+        {heading &amp;&amp; (
+          &lt;h1 className="sprk-b-TypeDisplayOne sprk-c-HighlightBoard__heading sprk-o-Stack__item"&gt;
             {heading}
           &lt;/h1&gt;
-        }
+        )}
 &nbsp;
-        { (ctaText || ctaText2) &amp;&amp;
-        &lt;div className= {
-          classnames(
-            'sprk-o-Stack__item',
-            'sprk-o-Stack',
-            'sprk-o-Stack--medium',
-            'sprk-o-Stack--split@xs',
-            'sprk-o-Stack--center-column',
-            {'sprk-o-Stack--center-row' : variant === 'noImage' || variant === 'stacked'}
-          )
-        } &gt;
+        {(ctaText || ctaText2) &amp;&amp; (
+          &lt;div
+            className={classnames(
+              'sprk-o-Stack__item',
+              'sprk-o-Stack',
+              'sprk-o-Stack--medium',
+              'sprk-o-Stack--split@xs',
+              'sprk-o-Stack--center-column',
+              {
+                'sprk-o-Stack--center-row':
+                  variant === 'noImage' || variant === 'stacked',
+              },
+            )}
+          &gt;
+            {ctaText &amp;&amp; (
+              &lt;div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta"&gt;
+                &lt;SprkButton
+                  element="a"
+                  href={ctaHref}
+                  analyticsString={ctaAnalytics}
+                  idString={ctaIdString}
+                  additionalClasses="sprk-c-Button--full@sm"
+                &gt;
+                  {ctaText}
+                &lt;/SprkButton&gt;
+              &lt;/div&gt;
+            )}
 &nbsp;
-          { ctaText &amp;&amp;
-            &lt;div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta"&gt;
-              &lt;SprkButton
-                element="a"
-                href={ctaHref}
-                analyticsString={ctaAnalytics}
-                idString={ctaIdString}
-                additionalClasses='sprk-c-Button--full@sm' &gt;
-&nbsp;
-                {ctaText}
-              &lt;/SprkButton&gt;
-            &lt;/div&gt;
-          }
-&nbsp;
-          { ctaText2 &amp;&amp;
-            &lt;div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta"&gt;
-              &lt;SprkButton
-                variant='secondary'
-                element="a"
-                href={ctaHref2}
-                analyticsString={ctaAnalytics2}
-                idString={ctaIdString2}
-                additionalClasses='sprk-c-Button--full@sm' &gt;
-&nbsp;
-                {ctaText2}
-              &lt;/SprkButton&gt;
-            &lt;/div&gt;
-          }
-        &lt;/div&gt;
-        }
+            {ctaText2 &amp;&amp; (
+              &lt;div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta"&gt;
+                &lt;SprkButton
+                  variant="secondary"
+                  element="a"
+                  href={ctaHref2}
+                  analyticsString={ctaAnalytics2}
+                  idString={ctaIdString2}
+                  additionalClasses="sprk-c-Button--full@sm"
+                &gt;
+                  {ctaText2}
+                &lt;/SprkButton&gt;
+              &lt;/div&gt;
+            )}
+          &lt;/div&gt;
+        )}
       &lt;/div&gt;
     &lt;/div&gt;
   );
-}
+};
 &nbsp;
 SprkHighlightBoard.propTypes = {
   // The source for the image - required if imgAlt is provided
@@ -441,7 +450,7 @@ SprkHighlightBoard.propTypes = {
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // Any additional classes to add to the highlight board
-  additionalClasses: PropTypes.string
+  additionalClasses: PropTypes.string,
 };
 &nbsp;
 export default SprkHighlightBoard;
@@ -451,7 +460,7 @@ export default SprkHighlightBoard;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 14:21:34 GMT-0500 (EST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 12 2019 12:19:17 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../prettify.js"></script>

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/8</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/8</span>
+        <span class='fraction'>8/8</span>
       </div>
     </div>
   </div>
@@ -92,38 +92,54 @@
 47
 48
 49
-50</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+50
+51
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,49 +160,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { uniqueId } from 'lodash';
 &nbsp;
 const SprkDictionary = (props) =&gt; {
-    const { keyValuePairs, variant, idString, additionalClasses, ...other } = props;
-    const classNames = classnames(
-        'sprk-c-Dictionary',
-        additionalClasses, {
-            'sprk-c-Dictionary--striped': variant === 'striped'
-        }
-    );
+  const {
+    keyValuePairs,
+    variant,
+    idString,
+    additionalClasses,
+    ...other
+  } = props;
 &nbsp;
-    const keyValuePairsMap = Object.keys(keyValuePairs).map(<span class="fstat-no" title="function not covered" >te</span>rm =&gt; {
-<span class="cstat-no" title="statement not covered" >        return (</span>
-            &lt;div className="sprk-c-Dictionary__keyvaluepair"&gt;
-                &lt;dt className="sprk-c-Dictionary__key sprk-b-Label sprk-b-Label--no-input"&gt;{term}&lt;/dt&gt;
-                &lt;dd className="sprk-c-Dictionary__value"&gt;{keyValuePairs[term]}&lt;/dd&gt;
-            &lt;/div&gt;
-        )
-    });
+  const classNames = classnames(
+    'sprk-c-Dictionary',
+    additionalClasses, {
+      'sprk-c-Dictionary--striped': variant === 'striped',
+    },
+  );
 &nbsp;
-    return (
-        &lt;div className={classNames} data-id={idString}&gt;
-            &lt;dl className="sprk-c-Dictionary__keyvaluepairs"&gt;
-                {keyValuePairsMap}
-            &lt;/dl&gt;
-        &lt;/div&gt;
-    );
-}
+  const keyValuePairsMap = Object.keys(keyValuePairs).map(term =&gt; (
+    &lt;div className="sprk-c-Dictionary__keyvaluepair" key={uniqueId('key-')}&gt;
+      &lt;dt className="sprk-c-Dictionary__key sprk-b-Label sprk-b-Label--no-input"&gt;{term}&lt;/dt&gt;
+      &lt;dd className="sprk-c-Dictionary__value"&gt;{keyValuePairs[term]}&lt;/dd&gt;
+    &lt;/div&gt;
+  ));
+&nbsp;
+  return (
+    &lt;div className={classNames} data-id={idString} {...other}&gt;
+      &lt;dl className="sprk-c-Dictionary__keyvaluepairs"&gt;
+        {keyValuePairsMap}
+      &lt;/dl&gt;
+    &lt;/div&gt;
+  );
+};
 &nbsp;
 SprkDictionary.defaultProps = {
-    keyValuePairs: {}
-}
+  variant: '',
+  idString: '',
+  additionalClasses: '',
+};
 &nbsp;
 SprkDictionary.propTypes = {
-    // The data that this component will use to populate itself
-    keyValuePairs: PropTypes.object.isRequired,
-    // The link variant that determines the class names
-    variant: PropTypes.oneOf(['striped']),
-    // The string to use for the data-analytics attribute
-    analyticsString: PropTypes.string,
-    // The string to use for the data-id attribute
-    idString: PropTypes.string,
-    // Any additional classes to add to the link
-    additionalClasses: PropTypes.string
+  // The data that this component will use to populate itself
+  keyValuePairs: PropTypes.PropTypes.shape({
+    '': '',
+  }).isRequired,
+  // The link variant that determines the class names
+  variant: PropTypes.oneOf(['striped', '']),
+  // The string to use for the data-id attribute
+  idString: PropTypes.string,
+  // Any additional classes to add to the link
+  additionalClasses: PropTypes.string,
 };
 &nbsp;
 export default SprkDictionary;
@@ -196,7 +220,7 @@ export default SprkDictionary;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 14:21:34 GMT-0500 (EST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 12 2019 12:19:17 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../prettify.js"></script>
