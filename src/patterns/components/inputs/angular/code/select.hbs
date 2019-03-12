@@ -1,11 +1,11 @@
 <sprk-input-container>
-  <label sprkLabel>Select Box Label</label>
   <select
     class="sprk-b-Select"
     id="select-normal"
     aria-describedby="select-normal--error-container"
     data-id="select-1"
-    sprkInput>
+    sprkInput
+  >
     <option value="none">Please choose...</option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
@@ -16,4 +16,10 @@
       <option value="g3">Grouped Option 3</option>
     </optgroup>
   </select>
+  <sprk-icon
+    iconType="chevron-down"
+    additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+    sprk-select-icon
+  ></sprk-icon>
+  <label sprkLabel>Select Box Label</label>
 </sprk-input-container>
