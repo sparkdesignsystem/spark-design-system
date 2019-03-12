@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-core-react';
-import { formatPhone, isValidPhone } from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
+import {
+  formatPhone,
+  isValidPhone,
+} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
 
 class FormExample extends Component {
   constructor(props) {

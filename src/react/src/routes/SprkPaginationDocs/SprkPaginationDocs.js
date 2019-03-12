@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
-import { SprkPagination, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkPagination, SprkButton } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 import datasets from './sampleData';
@@ -65,7 +65,9 @@ class SprkPaginationDocs extends Component {
   }
 
   example1UpdatedCallback(args) {
-    const { example1Props: { itemsPerPage, totalItems, dataset } } = this.state;
+    const {
+      example1Props: { itemsPerPage, totalItems, dataset },
+    } = this.state;
 
     this.setState({
       example1Props: {
@@ -78,7 +80,9 @@ class SprkPaginationDocs extends Component {
   }
 
   swapExampleOneDataset() {
-    const { example1Props: { itemsPerPage, totalItems } } = this.state;
+    const {
+      example1Props: { itemsPerPage, totalItems },
+    } = this.state;
 
     if (totalItems > 15) {
       this.setState({
@@ -102,7 +106,9 @@ class SprkPaginationDocs extends Component {
   }
 
   example2UpdatedCallback(args) {
-    const { example2Props: { itemsPerPage, totalItems, dataset } } = this.state;
+    const {
+      example2Props: { itemsPerPage, totalItems, dataset },
+    } = this.state;
 
     this.setState({
       example2Props: {
@@ -115,7 +121,9 @@ class SprkPaginationDocs extends Component {
   }
 
   example3UpdatedCallback(args) {
-    const { example3Props: { itemsPerPage, totalItems, dataset } } = this.state;
+    const {
+      example3Props: { itemsPerPage, totalItems, dataset },
+    } = this.state;
 
     this.setState({
       example3Props: {
@@ -130,19 +138,39 @@ class SprkPaginationDocs extends Component {
   render() {
     const { example1Props, example2Props, example3Props } = this.state;
 
-    const data1 = SprkPaginationDocs.sliceSampleData(example1Props.dataset, example1Props.itemsPerPage, example1Props.currentPage);
-    const data2 = SprkPaginationDocs.sliceSampleData(example2Props.dataset, example2Props.itemsPerPage, example2Props.currentPage);
-    const data3 = SprkPaginationDocs.sliceSampleData(example3Props.dataset, example3Props.itemsPerPage, example3Props.currentPage);
+    const data1 = SprkPaginationDocs.sliceSampleData(
+      example1Props.dataset,
+      example1Props.itemsPerPage,
+      example1Props.currentPage,
+    );
+    const data2 = SprkPaginationDocs.sliceSampleData(
+      example2Props.dataset,
+      example2Props.itemsPerPage,
+      example2Props.currentPage,
+    );
+    const data3 = SprkPaginationDocs.sliceSampleData(
+      example3Props.dataset,
+      example3Props.itemsPerPage,
+      example3Props.currentPage,
+    );
 
-    const example1RowsMap = SprkPaginationDocs.buildTableRowMap(data1, 'table_1_');
-    const example2RowsMap = SprkPaginationDocs.buildTableRowMap(data2, 'table_2_');
-    const example3RowsMap = SprkPaginationDocs.buildTableRowMap(data3, 'table_3_');
+    const example1RowsMap = SprkPaginationDocs.buildTableRowMap(
+      data1,
+      'table_1_',
+    );
+    const example2RowsMap = SprkPaginationDocs.buildTableRowMap(
+      data2,
+      'table_2_',
+    );
+    const example3RowsMap = SprkPaginationDocs.buildTableRowMap(
+      data3,
+      'table_3_',
+    );
 
     return (
       <CentralColumnLayout>
         <ExampleContainer heading="Default Paginator">
           <div className="sprk-u-mbm">
-
             <SprkButton
               variant="primary"
               additionalClasses="sprk-u-mbm"
@@ -161,9 +189,7 @@ class SprkPaginationDocs extends Component {
                   <th className="sprk-u-FontWeight--bold">Source</th>
                 </tr>
               </thead>
-              <tbody>
-                {example1RowsMap}
-              </tbody>
+              <tbody>{example1RowsMap}</tbody>
             </table>
 
             <SprkPagination
@@ -185,9 +211,7 @@ class SprkPaginationDocs extends Component {
                   <th className="sprk-u-FontWeight--bold">Capital</th>
                 </tr>
               </thead>
-              <tbody>
-                {example2RowsMap}
-              </tbody>
+              <tbody>{example2RowsMap}</tbody>
             </table>
 
             <SprkPagination
@@ -209,9 +233,7 @@ class SprkPaginationDocs extends Component {
                   <th className="sprk-u-FontWeight--bold">Capital</th>
                 </tr>
               </thead>
-              <tbody>
-                {example3RowsMap}
-              </tbody>
+              <tbody>{example3RowsMap}</tbody>
             </table>
 
             <SprkPagination

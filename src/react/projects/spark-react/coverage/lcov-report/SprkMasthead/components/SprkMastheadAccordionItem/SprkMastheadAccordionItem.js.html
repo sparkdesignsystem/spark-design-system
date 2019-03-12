@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for SprkMasthead/components/SprkMastheadAccordionItem/SprkMastheadAccordionItem.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">SprkMasthead/components/SprkMastheadAccordionItem</a> SprkMastheadAccordionItem.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>22/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>15/15</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import AnimateHeight from 'react-animate-height';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { uniqueId } from 'lodash';
+import SprkIcon from '../../../SprkIcon/SprkIcon';
+&nbsp;
+class SprkMastheadAccordionItem extends Component {
+  constructor(props) {
+    super(props);
+    const { defaultOpen, subNavLinks } = this.props;
+    this.state = {
+      isOpen: defaultOpen || false,
+      height: defaultOpen ? 'auto' : 0,
+      subNavLinks: subNavLinks.map(link =&gt; ({ id: uniqueId(), ...link })),
+    };
+    this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
+  }
+&nbsp;
+  toggleAccordionOpen() {
+    this.setState(prevState =&gt; ({
+      isOpen: !prevState.isOpen,
+      height: !prevState.isOpen ? 'auto' : 0,
+    }));
+  }
+&nbsp;
+  render() {
+    const {
+      additionalClasses,
+      analyticsString,
+      defaultOpen,
+      element,
+      href,
+      idString,
+      isActive,
+      isButton,
+      leadingIcon,
+      subNavLinks,
+      text,
+      ...rest
+    } = this.props;
+    const { isOpen, height, subNavLinks: stateLinks } = this.state;
+    const TagName = element;
+    return (
+      &lt;li
+        className={classNames(
+          'sprk-c-MastheadAccordion__item',
+          { 'sprk-c-MastheadAccordion__item--open': isOpen },
+          { 'sprk-c-MastheadAccordion__item--active': isActive },
+          { 'sprk-o-Box': isButton },
+          additionalClasses,
+        )}
+        data-analytics={analyticsString}
+        data-id={idString}
+      &gt;
+        {stateLinks.length &gt; 0 &amp;&amp; (
+          &lt;React.Fragment&gt;
+            &lt;a
+              href="#nogo"
+              className="sprk-c-MastheadAccordion__summary"
+              onClick={this.toggleAccordionOpen}
+              aria-expanded={isOpen ? 'true' : 'false'}
+            &gt;
+              &lt;span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading"&gt;{text}&lt;/span&gt;
+              &lt;SprkIcon
+                additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })}
+                iconName="chevron-down"
+              /&gt;
+            &lt;/a&gt;
+            &lt;AnimateHeight duration={300} height={height}&gt;
+              &lt;ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"&gt;
+                {stateLinks.map((subnavlink) =&gt; {
+                  const {
+                    element: innerElement,
+                    href: innerHref,
+                    id: innerId,
+                    text: innerText,
+                    ...innerRest
+                  } = subnavlink;
+                  const InnerTagName = innerElement || 'a';
+                  return (
+                    &lt;li key={innerId}&gt;
+                      &lt;InnerTagName
+                        href={InnerTagName === 'a' ? innerHref || '#nogo' : undefined}
+                        className={classNames(
+                          'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link',
+                        )}
+                        {...innerRest}
+                      &gt;
+                        {innerText}
+                      &lt;/InnerTagName&gt;
+                    &lt;/li&gt;
+                  );
+                })}
+              &lt;/ul&gt;
+            &lt;/AnimateHeight&gt;
+          &lt;/React.Fragment&gt;
+        )}
+        {stateLinks.length &lt;= 0 &amp;&amp; (
+          &lt;TagName
+            className={classNames(
+              { 'sprk-c-MastheadAccordion__summary': !isButton },
+              {
+                'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm': isButton,
+              },
+            )}
+            href={TagName === 'a' ? href : undefined}
+            {...rest}
+          &gt;
+            &lt;span className={classNames({ 'sprk-c-MastheadAccordion__heading': !isButton })}&gt;
+              {leadingIcon &amp;&amp; (
+                &lt;SprkIcon
+                  additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs"
+                  iconName={leadingIcon}
+                /&gt;
+              )}
+              {text}
+            &lt;/span&gt;
+          &lt;/TagName&gt;
+        )}
+      &lt;/li&gt;
+    );
+  }
+}
+&nbsp;
+SprkMastheadAccordionItem.propTypes = {
+  // Classes added to rendered element
+  additionalClasses: PropTypes.string,
+  // Assigned to data-analytics
+  analyticsString: PropTypes.string,
+  // Decides whether the accordion should render open by default
+  defaultOpen: PropTypes.bool,
+  // The element to render, could be 'a' or a Component like Link
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  // Assigned to the href attribute if element is 'a'
+  href: PropTypes.string,
+  // Assigned to data-id
+  idString: PropTypes.string,
+  // Decides if the outer link is the active link
+  isActive: PropTypes.bool,
+  // Will render the element as a button with correct style
+  isButton: PropTypes.bool,
+  // The name of the icon to render before the text
+  leadingIcon: PropTypes.string,
+  // An array of link objects that builds the sub nav
+  subNavLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      // The element to render, could be 'a' or a Component like Link
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      // Assigned to the href attribute if element is 'a'
+      href: PropTypes.string,
+      // The element to render, could be 'a' or a Component like Link
+      text: PropTypes.string,
+    }),
+  ),
+  // The text inside the element
+  text: PropTypes.string,
+};
+&nbsp;
+SprkMastheadAccordionItem.defaultProps = {
+  additionalClasses: '',
+  analyticsString: '',
+  defaultOpen: false,
+  element: 'a',
+  href: '#nogo',
+  idString: '',
+  isActive: false,
+  isButton: false,
+  leadingIcon: '',
+  subNavLinks: [],
+  text: '',
+};
+&nbsp;
+export default SprkMastheadAccordionItem;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 14:21:34 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

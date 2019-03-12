@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for SprkPromo/SprkPromo.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">SprkPromo</a> SprkPromo.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>24/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/4</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+&nbsp;
+const SprkPromo = (props) =&gt; {
+  const {
+    title,
+    subtitle,
+    additionalClasses,
+    additionalClassesContent,
+    cta,
+    ctaText,
+    ctaHref,
+    ctaAnalytics,
+    ctaIdString,
+    imgSrc,
+    imgAlt,
+    imgLinkHref,
+    imgLinkAnalytics,
+    imgLinkIdString,
+    additionalClassesImgLink,
+    idString,
+    isFlag,
+    mediaRev,
+    hasBorder,
+    children,
+    ...other
+  } = props;
+&nbsp;
+  return (
+    &lt;div
+      className={
+        classnames(
+          'sprk-c-Promo',
+          'sprk-o-Stack',
+          {'sprk-c-Promo--flag': isFlag},
+          {'sprk-c-Promo--bordered': hasBorder},
+          additionalClasses
+        )}
+      data-id={idString}
+      {...other} &gt;
+&nbsp;
+      {imgSrc &amp;&amp; isFlag &amp;&amp; !mediaRev &amp;&amp;
+        &lt;SprkLink
+          variant="plain"
+          href={imgLinkHref}
+          additionalClasses={
+            classnames(
+              'sprk-o-Stack__item--fourth@s',
+              'sprk-o-Stack__item',
+              additionalClassesImgLink
+            )}
+          analyticsString={imgLinkAnalytics}
+          idString={imgLinkIdString} &gt;
+&nbsp;
+          &lt;img
+              className="sprk-c-Promo__image--flag"
+              alt={imgAlt}
+              src={imgSrc} /&gt;
+        &lt;/SprkLink&gt;
+      }
+&nbsp;
+      {imgSrc &amp;&amp; !mediaRev &amp;&amp; !isFlag &amp;&amp;
+        &lt;SprkLink
+          variant="plain"
+          href={imgLinkHref}
+          additionalClasses={
+            classnames(
+              'sprk-o-Stack__item',
+              'sprk-o-Stack__item--half@s',
+              additionalClassesImgLink
+            )}
+          analyticsString={imgLinkAnalytics}
+          idString={imgLinkIdString} &gt;
+&nbsp;
+          &lt;img
+            className="sprk-c-Promo__image"
+            alt={imgAlt}
+            src={imgSrc} /&gt;
+        &lt;/SprkLink&gt;
+      }
+&nbsp;
+      &lt;div className={
+        classnames(
+          'sprk-c-Promo__content',
+          'sprk-o-Stack__item',
+          'sprk-o-Stack',
+          'sprk-o-Stack--large',
+          {'sprk-o-Stack__item--three-fourths@s': isFlag},
+          {'sprk-o-Stack__item--half@s': imgSrc},
+          additionalClassesContent
+        )} &gt;
+&nbsp;
+        {title &amp;&amp;
+          &lt;h3 className = "sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title"&gt;
+            {title}
+          &lt;/h3&gt;
+        }
+&nbsp;
+        {subtitle &amp;&amp;
+          &lt;div className="sprk-c-Promo__subtitle sprk-o-Stack__item"&gt;
+            {subtitle}
+          &lt;/div&gt;
+        }
+&nbsp;
+        &lt;div className="sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-c-Promo__childrenContainer"&gt;
+          {children}
+        &lt;/div&gt;
+&nbsp;
+        {cta === 'button' &amp;&amp;
+          &lt;div className='sprk-o-Stack__item'&gt;
+            &lt;SprkButton
+              element="a"
+              href={ctaHref}
+              analyticsString={ctaAnalytics}
+              idString={ctaIdString} &gt;
+&nbsp;
+              {ctaText}
+            &lt;/SprkButton&gt;
+          &lt;/div&gt;
+        }
+&nbsp;
+        {cta === 'link' &amp;&amp;
+          &lt;div className="sprk-o-Stack__item"&gt;
+            &lt;SprkLink
+              variant="base"
+              href={ctaHref}
+              analyticsString={ctaAnalytics}
+              idString={ctaIdString} &gt;
+&nbsp;
+                {ctaText}
+            &lt;/SprkLink&gt;
+          &lt;/div&gt;
+        }
+      &lt;/div&gt;
+&nbsp;
+      {isFlag &amp;&amp; imgSrc &amp;&amp; mediaRev &amp;&amp;
+&nbsp;
+        &lt;SprkLink
+          variant="plain"
+          href={imgLinkHref}
+          additionalClasses={
+            classnames(
+              'sprk-o-Stack__item--fourth@s',
+              'sprk-o-Stack__item',
+              additionalClassesImgLink
+            )}
+          analyticsString={imgLinkAnalytics}
+          idString={imgLinkIdString} &gt;
+&nbsp;
+          &lt;img
+              className="sprk-c-Promo__image--flag"
+              alt={imgAlt}
+              src={imgSrc} /&gt;
+&nbsp;
+        &lt;/SprkLink&gt;
+      }
+&nbsp;
+      {!isFlag &amp;&amp; imgSrc &amp;&amp; mediaRev &amp;&amp;
+&nbsp;
+        &lt;SprkLink
+          variant="plain"
+          href={imgLinkHref}
+          additionalClasses={
+            classnames(
+              'sprk-o-Stack__item',
+              'sprk-o-Stack__item--half@s',
+              additionalClassesImgLink
+            )}
+          analyticsString={imgLinkAnalytics}
+          idString={imgLinkIdString} &gt;
+&nbsp;
+            &lt;img
+              className="sprk-c-Promo__image"
+              alt={imgAlt}
+              src={imgSrc} /&gt;
+&nbsp;
+        &lt;/SprkLink&gt;
+      }
+    &lt;/div&gt;
+  );
+}
+&nbsp;
+SprkPromo.propTypes = {
+  // The children that will be rendered inside the content portion of the promo
+  children: PropTypes.node,
+  // The text to appear in the title section
+  title: PropTypes.string,
+  // The text to appear in the subtitle section
+  subtitle: PropTypes.string,
+  // Any additional classes (space-delimited string) to apply to the root element
+  // of the Promo
+  additionalClasses: PropTypes.string,
+  // Any additional classes (space-delimited string) to apply to the content
+  // element of the Promo
+  additionalClassesContent: PropTypes.string,
+  // The type of element to use for the Promo Call-to-Action. If this property
+  // is omitted, no Call-to-Action will be rendered.
+  cta: PropTypes.oneOf(['button', 'link']),
+  // The text to include in the Call-to-Action.
+  ctaText: PropTypes.string,
+  // The URL to navigate to when the Call-to-Action is clicked.
+  ctaHref: PropTypes.string,
+  // The string to use for the data-analytics attribute on the Call-to-Action
+  ctaAnalytics: PropTypes.string,
+  // The string to use for the data-id attribute on the Call-to-Action
+  ctaIdString: PropTypes.string,
+  // The source location of the Promo image. If this propterty is omitted, no
+  // image will be rendered.
+  imgSrc: PropTypes.string,
+  // The alt text property for the image
+  imgAlt: PropTypes.string,
+  // The URL to navigate to when the image is clicked.
+  imgLinkHref: PropTypes.string,
+  // The string to use for the data-analytics attribute on the image link.
+  imgLinkAnalytics: PropTypes.string,
+  // The string to use for the data-id attribute on the image link.
+  imgLinkIdString: PropTypes.string,
+  // Any additional classes (space-delimited string) to apply to the image link.
+  additionalClassesImgLink: PropTypes.string,
+  // The string to use for the data-id property on the root Promo element.
+  idString: PropTypes.string,
+  // If provided, the Promo will render as the Flag variant.
+  isFlag: PropTypes.bool,
+  // If provided, the Promo will be rendered in reverse horizontal order
+  // (content on the left, image on the right)
+  mediaRev: PropTypes.bool,
+  // If provided, the Promo will be rendered with the sprk-c-Promo--bordered class.
+  hasBorder: PropTypes.bool,
+};
+&nbsp;
+export default SprkPromo;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 28 2019 14:21:34 GMT-0500 (EST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
