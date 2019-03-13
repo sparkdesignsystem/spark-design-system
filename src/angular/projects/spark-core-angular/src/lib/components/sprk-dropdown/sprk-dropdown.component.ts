@@ -215,7 +215,7 @@ export class SparkDropdownComponent {
   }
 
   getTriggerClasses(): string {
-    const classArray: string[] = ['sprk-b-Link'];
+    const classArray: string[] = [];
 
     if (this.additionalTriggerClasses) {
       this.additionalTriggerClasses.split(' ').forEach(className => {
