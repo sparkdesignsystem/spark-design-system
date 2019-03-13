@@ -16,13 +16,13 @@ import {
       }"
     >
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
-        <a
-          [ngClass]="getTriggerClasses()"
+        <sprk-link
+          [additionalClasses]="getTriggerClasses()"
           aria-haspopup="true"
           href="#nogo"
           (click)="toggle($event)"
-          [attr.data-id]="idString"
-          [attr.data-analytics]="analyticsString"
+          [idString]="idString"
+          [analyticsString]="analyticsString"
           role="combobox"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
@@ -31,7 +31,7 @@ import {
             [iconType]="triggerIconType"
             additionalClasses="sprk-u-mls sprk-c-Icon--stroke-current-color {{ additionalIconClasses }}"
           ></sprk-icon>
-        </a>
+        </sprk-link>
       </div>
 
       <div [ngClass]="getClasses()" *ngIf="isOpen">
@@ -43,9 +43,10 @@ import {
             {{ title }}
           </h2>
 
-          <a
+          <sprk-link
             *ngIf="selector && !title"
-            class="sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+            linkType="plain"
+            additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             href="#nogo"
             aria-haspopup="true"
             (click)="toggle($event)"
@@ -58,7 +59,7 @@ import {
               [iconType]="triggerIconType"
               additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls sprk-c-Icon--toggle sprk-Stack__item {{ additionalIconClasses }}"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </div>
 
         <ul class="sprk-c-Dropdown__links">
@@ -70,32 +71,27 @@ import {
           >
             <div *ngIf="choice.content; then: content; else: link"></div>
             <ng-template #link>
-              <a
-                [routerLink]="choice.href"
+              <sprk-link
+                linkType="unstyled"
+                [href]="choice.href || '#nogo'"
                 [attr.data-sprk-dropdown-value]="choice.value"
-                [attr.href]="choice.href || '#nogo'"
-                [ngClass]="{
-                  'sprk-c-Dropdown__link': true,
-                  'sprk-c-Dropdown__link--active': choice.active
-                }"
+                additionalClasses="sprk-c-Dropdown__link {{ choice.active && 'sprk-c-Dropdown__link--active' }}"
                 role="option"
                 >{{ choice.text }}
-              </a>
+              </sprk-link>
             </ng-template>
             <ng-template #content>
-              <a
+              <sprk-link
+                linkType="unstyled"
                 [attr.data-sprk-dropdown-value]="choice.value"
-                href="#nogo"
-                [ngClass]="{
-                  'sprk-c-Dropdown__link': true,
-                  'sprk-c-Dropdown__link--active': choice.active
-                }"
+                [href]="choice.href || '#nogo'"
+                additionalClasses="sprk-c-Dropdown__link {{ choice.active && 'sprk-c-Dropdown__link--active' }}"
                 role="option"
               >
                 <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
                 <p>{{ choice.content.infoLine1 }}</p>
                 <p>{{ choice.content.infoLine2 }}</p>
-              </a>
+              </sprk-link>
             </ng-template>
           </li>
         </ul>

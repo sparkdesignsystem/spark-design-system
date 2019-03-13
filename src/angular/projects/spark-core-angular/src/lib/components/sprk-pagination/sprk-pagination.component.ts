@@ -20,94 +20,76 @@ import {
         additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-medium"
       >
         <li>
-          <a
+          <sprk-link
+            linkType="plain"
             (click)="goBack($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__icon': true,
-              'sprk-b-Link': true,
-              'sprk-b-Link--disabled': currentPage === 1,
-              'sprk-b-Link--plain': true
-            }"
+            [disabled]="currentPage === 1"
+            additionalClasses="sprk-c-Pagination__icon"
             href="#"
-            [attr.data-analytics]="analyticsStringLinkPrev"
+            [analyticsString]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
               additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-left"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </li>
 
         <li>
-          <a
+          <sprk-link
             (click)="goToPage($event, 1)"
-            [ngClass]="{
-              'sprk-c-Pagination__link': true,
-              'sprk-c-Pagination__link--current': currentPage === 1,
-              'sprk-b-Link': true
-            }"
+            additionalClasses="sprk-c-Pagination__link {{currentPage === 1 && 'sprk-c-Pagination__link--current'}}"
             href="#"
-            [attr.data-analytics]="analyticsStringFirstLink"
+            [analyticsString]="analyticsStringFirstLink"
             [attr.aria-current]="currentPage === 1"
             aria-label="Page 1"
           >
             1
-          </a>
+          </sprk-link>
         </li>
 
         <li>
-          <a
+          <sprk-link
             (click)="goToPage($event, 2)"
-            [ngClass]="{
-              'sprk-c-Pagination__link': true,
-              'sprk-c-Pagination__link--current': currentPage === 2,
-              'sprk-b-Link': true
-            }"
+            additionalClasses="sprk-c-Pagination__link {{currentPage === 2 && 'sprk-c-Pagination__link--current'}}"
             href="#"
-            [attr.data-analytics]="analyticsStringSecondLink"
+            [analyticsString]="analyticsStringSecondLink"
             [attr.aria-current]="currentPage === 2"
             aria-label="Page 2"
           >
             2
-          </a>
+          </sprk-link>
         </li>
 
         <li>
-          <a
+          <sprk-link
             (click)="goToPage($event, 3)"
-            [ngClass]="{
-              'sprk-c-Pagination__link': true,
-              'sprk-c-Pagination__link--current': currentPage === 3,
-              'sprk-b-Link': true
-            }"
+            additionalClasses="sprk-c-Pagination__link {{currentPage === 3 && 'sprk-c-Pagination__link--current'}}"
             href="#"
-            [attr.data-analytics]="analyticsStringThirdLink"
+            [analyticsString]="analyticsStringThirdLink"
             [attr.aria-current]="currentPage === 3"
             aria-label="Page 3"
           >
             3
-          </a>
+          </sprk-link>
         </li>
 
         <li>
-          <a
+          <sprk-link
+            linkType="plain"
+            [disabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__icon': true,
-              'sprk-b-Link': true,
-              'sprk-b-Link--disabled': isLastPage(),
-              'sprk-b-Link--plain': true
-            }"
+            additionalClasses="sprk-c-Pagination__icon"
             href="#"
-            [attr.data-analytics]="analyticsStringLinkNext"
+            [analyticsString]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
             <sprk-icon
               additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-right"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </li>
       </sprk-unordered-list>
     </nav>
@@ -123,14 +105,11 @@ import {
         additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-small"
       >
         <li>
-          <a
+          <sprk-link
+            linkType="plain"
+            [disabled]="currentPage === 1"
             (click)="goBack($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__icon': true,
-              'sprk-b-Link': true,
-              'sprk-b-Link--disabled': currentPage === 1,
-              'sprk-b-Link--plain': true
-            }"
+            additionalClasses="sprk-c-Pagination__icon"
             href="#"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
@@ -138,23 +117,19 @@ import {
               additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-left"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </li>
 
         <li>
-          <a
+          <sprk-link
             (click)="goToPage($event, 1)"
-            [ngClass]="{
-              'sprk-c-Pagination__link': true,
-              'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': currentPage === 1
-            }"
+            additionalClasses="sprk-c-Pagination__link {{currentPage === 1 && 'sprk-c-Pagination__link--current'}}"
             href="#"
-            [attr.data-analytics]="analyticsStringFirstLink"
+            [analyticsString]="analyticsStringFirstLink"
             aria-label="Page 1"
           >
             1
-          </a>
+          </sprk-link>
         </li>
 
         <li
@@ -171,20 +146,16 @@ import {
               currentPage === 1 || currentPage === totalPages()
           }"
         >
-          <a
+          <sprk-link
             (click)="goToPage($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__link': true,
-              'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': true
-            }"
+            additionalClasses="sprk-c-Pagination__link sprk-c-Pagination__link--current"
             href="#"
             aria-current="true"
-            [attr.data-analytics]="analyticsStringSecondLink"
+            [analyticsString]="analyticsStringSecondLink"
             attr.aria-label="Page {{ currentPage }}"
           >
             {{ currentPage }}
-          </a>
+          </sprk-link>
         </li>
 
         <li
@@ -197,39 +168,32 @@ import {
         </li>
 
         <li>
-          <a
+          <sprk-link
             (click)="goToPage($event, totalPages())"
-            [ngClass]="{
-              'sprk-c-Pagination__link': true,
-              'sprk-b-Link': true,
-              'sprk-c-Pagination__link--current': currentPage === totalPages()
-            }"
+            additionalClasses="sprk-c-Pagination__link {{currentPage === totalPages() && 'sprk-c-Pagination__link--current'}}"
             href="#"
-            [attr.data-analytics]="analyticsStringThirdLink"
+            [analyticsString]="analyticsStringThirdLink"
             attr.aria-label="Page {{ totalPages() }}"
           >
             {{ totalPages() }}
-          </a>
+          </sprk-link>
         </li>
 
         <li>
-          <a
+          <sprk-link
+            linkType="plain"
+            [disabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__icon': true,
-              'sprk-b-Link': true,
-              'sprk-b-Link--disabled': isLastPage(),
-              'sprk-b-Link--plain': true
-            }"
+            additionalClasses="sprk-c-Pagination__icon"
             href="#"
-            [attr.data-analytics]="analyticsStringLinkNext"
+            [analyticsString]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">Next</span>
             <sprk-icon
               additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-right"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </li>
       </sprk-unordered-list>
     </nav>
@@ -245,45 +209,37 @@ import {
         additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-large"
       >
         <li class="sprk-c-Pagination__item">
-          <a
+          <sprk-link
+            linkType="plain"
+            [disabled]="currentPage === 1"
             (click)="goBack($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__icon': true,
-              'sprk-b-Link': true,
-              'sprk-b-Link--simple': true,
-              'sprk-b-Link--disabled': currentPage === 1,
-              'sprk-b-Link--plain': true
-            }"
+            additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
             href="#"
-            [attr.data-analytics]="analyticsStringLinkPrev"
+            [analyticsString]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
               additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-left"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </li>
 
         <li class="sprk-c-Pagination__item">
-          <a
+          <sprk-link
+            linkType="plain"
+            [disabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
-            [ngClass]="{
-              'sprk-c-Pagination__icon': true,
-              'sprk-b-Link': true,
-              'sprk-b-Link--simple': true,
-              'sprk-b-Link--disabled': isLastPage(),
-              'sprk-b-Link--plain': true
-            }"
+            additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
             href="#"
-            [attr.data-analytics]="analyticsStringLinkNext"
+            [analyticsString]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
             <sprk-icon
               additionalClasses="sprk-c-Icon--stroke-current-color"
               iconType="chevron-right"
             ></sprk-icon>
-          </a>
+          </sprk-link>
         </li>
       </sprk-unordered-list>
     </nav>

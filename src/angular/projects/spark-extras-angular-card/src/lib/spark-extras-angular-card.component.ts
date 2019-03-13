@@ -8,18 +8,19 @@ import { Component, Input } from '@angular/core';
       *ngIf="cardType === 'teaser'"
       [attr.data-id]="idString"
     >
-      <a
+      <sprk-link
+        linkType="unstyled"
         *ngIf="media === 'img'"
-        [routerLink]="imgHref"
-        class="sprk-o-Stack__item"
-        [attr.data-analytics]="imgLinkAnalytics"
+        href="imgHref"
+        additionalClasses="sprk-o-Stack__item"
+        analyticsString="imgLinkAnalytics"
       >
         <img
           class="sprk-c-Card__media"
           [attr.alt]="imgAlt"
           [attr.src]="imgSrc"
         />
-      </a>
+      </sprk-link>
 
       <div
         [ngClass]="{
@@ -30,30 +31,31 @@ import { Component, Input } from '@angular/core';
           'sprk-u-TextAlign--center': media === 'icon'
         }"
       >
-        <a
+        <sprk-link
+          linkType="unstyled"
           *ngIf="media === 'icon'"
-          [routerLink]="iconHref"
-          class="sprk-o-Stack__item sprk-u-AbsoluteCenter"
-          [attr.data-analytics]="iconLinkAnalytics"
+          href="iconHref"
+          additonalClasses="sprk-o-Stack__item sprk-u-AbsoluteCenter"
+          analyticsString="iconLinkAnalytics"
         >
           <sprk-icon
             [iconType]="iconType"
             [additionalClasses]="additionalClassesIcon"
           ></sprk-icon>
-        </a>
+        </sprk-link>
 
         <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">{{ title }}</h3>
 
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
 
         <div class="sprk-o-Stack__item">
-          <a
-            [routerLink]="ctaHref"
-            [ngClass]="getClassesCta()"
-            [attr.data-analytics]="ctaAnalytics"
+          <sprk-link
+            href="ctaHref"
+            additonalClasses="getClassesCta()"
+            analyticsString="ctaAnalytics"
           >
             {{ ctaText }}
-          </a>
+          </sprk-link>
         </div>
       </div>
     </div>
@@ -80,37 +82,39 @@ import { Component, Input } from '@angular/core';
       <div
         class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium"
       >
-        <a
+        <sprk-link
+          linkType="unstyled"
           *ngIf="media === 'img'"
-          [routerLink]="imgHref"
-          class="sprk-o-Stack__item"
-          [attr.data-analytics]="imgLinkAnalytics"
+          href="imgHref"
+          additonalClasses="sprk-o-Stack__item"
+          analyticsString="imgLinkAnalytics"
         >
           <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
-        </a>
+        </sprk-link>
 
-        <a
+        <sprk-link
           *ngIf="media === 'icon'"
-          [routerLink]="iconHref"
-          class="sprk-o-Stack__item sprk-o-Stack__item--center"
-          [attr.data-analytics]="iconLinkAnalytics"
+          href="iconHref"
+          linkType="unstyled"
+          additonalClasses="sprk-o-Stack__item sprk-o-Stack__item--center"
+          analyticsString="iconLinkAnalytics"
         >
           <sprk-icon
             [iconType]="iconType"
             [additionalClasses]="additionalClassesIcon"
           ></sprk-icon>
-        </a>
+        </sprk-link>
 
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
 
         <div class="sprk-o-Stack__item">
-          <a
-            [routerLink]="ctaHref"
-            [ngClass]="getClassesCta()"
-            [attr.data-analytics]="ctaAnalytics"
+          <sprk-link
+            href="ctaHref"
+            additonalClasses="getClassesCta()"
+            analyticsString="ctaAnalytics"
           >
             {{ ctaText }}
-          </a>
+          </sprk-link>
         </div>
       </div>
     </div>

@@ -11,19 +11,20 @@ import {
   selector: 'sprk-toggle',
   template: `
     <div class="{{ additionalClasses }}" [attr.data-id]="idString">
-      <a
-        class="{{ titleFontClass }} sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon"
+      <sprk-link
+        linkType="simple"
+        additionalClasses="{{ titleFontClass }} sprk-b-Link--has-icon"
         href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-        [attr.data-analytics]="analyticsString"
+        [analyticsString]="analyticsString"
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
           additionalClasses="{{ iconClass }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
-      </a>
+      </sprk-link>
 
       <div [@toggleContent]="animState" data-sprk-toggle="content">
         <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>

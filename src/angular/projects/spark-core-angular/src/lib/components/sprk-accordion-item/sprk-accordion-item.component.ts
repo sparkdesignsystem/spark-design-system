@@ -12,14 +12,12 @@ import {
   selector: 'sprk-accordion-item',
   template: `
     <li [ngClass]="getClasses()">
-      <a
+      <sprk-link
         [attr.aria-controls]="accordion_controls_id"
-        [ngClass]="{
-          'sprk-c-Accordion__summary': true
-        }"
+        additionalClasses="sprk-c-Accordion__summary"
         href="#nogo"
-        [attr.data-analytics]="analyticsString"
-        [attr.data-id]="idString"
+        [analyticsString]="analyticsString"
+        [idString]="idString"
         (click)="toggleAccordion($event)"
       >
         <span [ngClass]="getHeadingClasses()">
@@ -35,7 +33,7 @@ import {
           additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{ iconStateClass }}"
           [iconType]="currentIconType"
         ></sprk-icon>
-      </a>
+      </sprk-link>
 
       <div [@toggleContent]="animState">
         <div

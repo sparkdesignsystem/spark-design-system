@@ -52,12 +52,12 @@ import * as _ from 'lodash';
         <div
           class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
         >
-          <a [routerLink]="logoHref" href="#nogo">
+          <sprk-link [href]="logoHref" linkType="unstyled">
             <ng-content select="[logo-slot]"></ng-content>
             <span class="sprk-u-ScreenReaderText">{{
               logoLinkScreenReaderText
             }}</span>
-          </a>
+          </sprk-link>
         </div>
 
         <nav
@@ -106,13 +106,13 @@ import * as _ from 'lodash';
                 ></sprk-dropdown>
               </div>
               <div *ngIf="!link.subNav">
-                <a
-                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  [routerLink]="link.href"
-                  href="#nogo"
+                <sprk-link
+                  linkType="plain"
+                  additionalClasses="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  [href]="link.href"
                 >
                   {{ link.text }}
-                </a>
+                </sprk-link>
               </div>
             </li>
           </ul>
@@ -141,9 +141,13 @@ import * as _ from 'lodash';
               class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
               sprkDropdownFooter
             >
-              <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
+              <sprk-link
+                linkType="unstyled"
+                additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
+                href="#nogo"
+              >
                 Go Elsewhere
-              </a>
+              </sprk-link>
             </div>
           </sprk-dropdown>
 
@@ -164,10 +168,10 @@ import * as _ from 'lodash';
                       class="sprk-c-MastheadAccordion__item"
                       *ngFor="let subNavLink of narrowLink.subNav"
                     >
-                      <a
-                        class="sprk-c-MastheadAccordion__summary"
-                        [routerLink]="subNavLink.href"
-                        href="#nogo"
+                      <sprk-link
+                        linkType="unstyled"
+                        additionalClasses="sprk-c-MastheadAccordion__summary"
+                        [href]="subNavLink.href"
                       >
                         <sprk-icon
                           [iconType]="subNavLink.leadingIcon"
@@ -175,7 +179,7 @@ import * as _ from 'lodash';
                           *ngIf="subNavLink.leadingIcon"
                         ></sprk-icon>
                         {{ subNavLink.text }}
-                      </a>
+                      </sprk-link>
                     </li>
                   </ul>
                 </sprk-masthead-accordion-item>
@@ -187,10 +191,10 @@ import * as _ from 'lodash';
                     'sprk-c-MastheadAccordion__item--active': narrowLink.active
                   }"
                 >
-                  <a
-                    class="sprk-c-MastheadAccordion__summary"
-                    [routerLink]="narrowLink.href"
-                    href="#nogo"
+                  <sprk-link
+                    linkType="unstyled"
+                    additionalClasses="sprk-c-MastheadAccordion__summary"
+                    [href]="narrowLink.href"
                   >
                     <span class="sprk-c-MastheadAccordion__heading">
                       <sprk-icon
@@ -200,7 +204,7 @@ import * as _ from 'lodash';
                       ></sprk-icon>
                       {{ narrowLink.text }}
                     </span>
-                  </a>
+                  </sprk-link>
                 </li>
               </div>
             </div>

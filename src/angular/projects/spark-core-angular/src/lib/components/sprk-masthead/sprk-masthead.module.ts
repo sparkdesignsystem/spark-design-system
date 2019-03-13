@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SparkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SparkLinkModule } from '../sprk-link/sprk-link.module';
 import { SparkMastheadAccordionModule } from './sprk-masthead-accordion/sprk-masthead-accordion.module';
 import { SparkMastheadAccordionItemModule } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
 import { SparkMastheadComponent } from './sprk-masthead.component';
@@ -18,7 +19,8 @@ import { SparkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-
     SparkMastheadAccordionItemModule,
     SparkDropdownModule,
     SparkAccordionModule,
-    SparkAccordionItemModule
+    SparkAccordionItemModule,
+    SparkLinkModule
   ],
   declarations: [SparkMastheadComponent],
   exports: [SparkMastheadComponent]

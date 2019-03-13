@@ -21,29 +21,31 @@ import { Component, Input } from '@angular/core';
       </h2>
 
       <div sprkStackItem [ngClass]="getClasses()">
-        <a
-          class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-          [routerLink]="imgOneHref"
-          [attr.data-analytics]="analyticsStringImgOne"
+        <sprk-link
+          linkType="unstyled"
+          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
+          href="imgOneHref"
+          analyticsString="analyticsStringImgOne"
         >
           <img
             [ngClass]="getClassesImgOne()"
             alt="{{ imgOneAlt }}"
             src="{{ imgOneSrc }}"
           />
-        </a>
+        </sprk-link>
 
-        <a
-          class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-          [routerLink]="imgTwoHref"
-          [attr.data-analytics]="analyticsStringImgTwo"
+        <sprk-link
+          linkType="unstyled"
+          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
+          href="imgTwoHref"
+          analyticsString="analyticsStringImgTwo"
         >
           <img
             [ngClass]="getClassesImgTwo()"
             alt="{{ imgTwoAlt }}"
             src="{{ imgTwoSrc }}"
           />
-        </a>
+        </sprk-link>
       </div>
 
       <sprk-toggle
