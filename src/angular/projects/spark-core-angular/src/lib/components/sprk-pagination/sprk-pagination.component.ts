@@ -25,7 +25,6 @@ import {
             (click)="goBack($event, currentPage)"
             [disabled]="currentPage === 1"
             additionalClasses="sprk-c-Pagination__icon"
-            href="#"
             [analyticsString]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
@@ -40,7 +39,6 @@ import {
           <sprk-link
             (click)="goToPage($event, 1)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 1 && 'sprk-c-Pagination__link--current'}}"
-            href="#"
             [analyticsString]="analyticsStringFirstLink"
             [attr.aria-current]="currentPage === 1"
             aria-label="Page 1"
@@ -53,7 +51,6 @@ import {
           <sprk-link
             (click)="goToPage($event, 2)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 2 && 'sprk-c-Pagination__link--current'}}"
-            href="#"
             [analyticsString]="analyticsStringSecondLink"
             [attr.aria-current]="currentPage === 2"
             aria-label="Page 2"
@@ -66,7 +63,6 @@ import {
           <sprk-link
             (click)="goToPage($event, 3)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 3 && 'sprk-c-Pagination__link--current'}}"
-            href="#"
             [analyticsString]="analyticsStringThirdLink"
             [attr.aria-current]="currentPage === 3"
             aria-label="Page 3"
@@ -81,7 +77,6 @@ import {
             [disabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
-            href="#"
             [analyticsString]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
@@ -110,7 +105,6 @@ import {
             [disabled]="currentPage === 1"
             (click)="goBack($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
-            href="#"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
@@ -124,7 +118,6 @@ import {
           <sprk-link
             (click)="goToPage($event, 1)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 1 && 'sprk-c-Pagination__link--current'}}"
-            href="#"
             [analyticsString]="analyticsStringFirstLink"
             aria-label="Page 1"
           >
@@ -149,7 +142,6 @@ import {
           <sprk-link
             (click)="goToPage($event, currentPage)"
             additionalClasses="sprk-c-Pagination__link sprk-c-Pagination__link--current"
-            href="#"
             aria-current="true"
             [analyticsString]="analyticsStringSecondLink"
             attr.aria-label="Page {{ currentPage }}"
@@ -171,7 +163,6 @@ import {
           <sprk-link
             (click)="goToPage($event, totalPages())"
             additionalClasses="sprk-c-Pagination__link {{currentPage === totalPages() && 'sprk-c-Pagination__link--current'}}"
-            href="#"
             [analyticsString]="analyticsStringThirdLink"
             attr.aria-label="Page {{ totalPages() }}"
           >
@@ -185,7 +176,6 @@ import {
             [disabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
-            href="#"
             [analyticsString]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">Next</span>
@@ -214,7 +204,6 @@ import {
             [disabled]="currentPage === 1"
             (click)="goBack($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
-            href="#"
             [analyticsString]="analyticsStringLinkPrev"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
@@ -231,7 +220,6 @@ import {
             [disabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
-            href="#"
             [analyticsString]="analyticsStringLinkNext"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
