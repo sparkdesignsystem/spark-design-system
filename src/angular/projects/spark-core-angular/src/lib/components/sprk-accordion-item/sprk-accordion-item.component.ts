@@ -15,7 +15,6 @@ import {
       <sprk-link
         [attr.aria-controls]="accordion_controls_id"
         additionalClasses="sprk-c-Accordion__summary"
-        href="#nogo"
         [analyticsString]="analyticsString"
         [idString]="idString"
         (click)="toggleAccordion($event)"

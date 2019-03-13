@@ -14,7 +14,6 @@ import {
       <sprk-link
         linkType="simple"
         additionalClasses="{{ titleFontClass }} sprk-b-Link--has-icon"
-        href="#"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [analyticsString]="analyticsString"

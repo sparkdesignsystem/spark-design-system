@@ -19,7 +19,6 @@ import {
           linkType="unstyled"
           [attr.aria-controls]="accordion_controls_id"
           additionalClasses="sprk-c-MastheadAccordion__summary"
-          href="#nogo"
           [analyticsString]="analyticsString"
           [idString]="idString"
           (click)="toggleAccordion($event)"

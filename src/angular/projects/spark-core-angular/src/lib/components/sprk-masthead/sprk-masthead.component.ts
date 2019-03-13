@@ -144,7 +144,6 @@ import * as _ from 'lodash';
               <sprk-link
                 linkType="unstyled"
                 additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
-                href="#nogo"
               >
                 Go Elsewhere
               </sprk-link>

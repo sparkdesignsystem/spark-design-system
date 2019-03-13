@@ -19,7 +19,6 @@ import {
         <sprk-link
           [additionalClasses]="getTriggerClasses()"
           aria-haspopup="true"
-          href="#nogo"
           (click)="toggle($event)"
           [idString]="idString"
           [analyticsString]="analyticsString"
@@ -47,7 +46,6 @@ import {
             *ngIf="selector && !title"
             linkType="plain"
             additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
-            href="#nogo"
             aria-haspopup="true"
             (click)="toggle($event)"
           >
