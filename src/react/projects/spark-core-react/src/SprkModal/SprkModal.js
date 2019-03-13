@@ -70,15 +70,15 @@ class SprkModal extends Component {
       ...rest
     } = this.props;
 
-    
+
     var isWait = modalType == 'wait';
     // var isInfo = modalType == 'info';
     var isChoice = modalType != 'wait' && modalType != 'info';
-      
+
     if (!isVisible) { return(null); }
 
     this.attachListeners();
-   
+
     return (
       <div>
         <div
@@ -104,20 +104,22 @@ class SprkModal extends Component {
                    id="modalChoiceHeading">
                 {title}
               </h2>
-              
+
               {!isWait && <CloseButton clickAction={this.cancel.bind(this, 'closeButton')} />}
             </header>
 
             <div>
-              <div className="sprk-o-Stack__item sprk-c-Modal__body">
-                {isWait && <SprkSpinner />}
+              <div className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
+                {isWait &&
+                    <SprkSpinner size='large' lightness='dark' additionalClasses='sprk-o-Stack__item'/>
+                }
                 <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
                   {children}
                 </div>
               </div>
 
               {isChoice && (
-                <ModalFooter 
+                <ModalFooter
                 confirmClick={confirmClick}
                 cancelClick={this.cancel.bind(this, 'cancelAction')}
                 confirmText={confirmText}
@@ -127,7 +129,7 @@ class SprkModal extends Component {
             </div>
           </div>
         </div>
-        
+
         {/* Make sure to include the mask if the modal is active */}
         <Mask clicked={this.cancel.bind(this, 'mask')}></Mask>
       </div>
