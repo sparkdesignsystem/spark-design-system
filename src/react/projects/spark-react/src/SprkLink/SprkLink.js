@@ -2,24 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const SprkLink = (props) => {
-  const { children, variant, additionalClasses, idString, analyticsString, ...other } = props;
-  const classNames = classnames(
-    'sprk-b-Link',
-    additionalClasses, {
-      'sprk-b-Link--simple': variant === 'simple',
-      'sprk-b-Link--plain': variant === 'plain',
-      'sprk-b-Link--disabled': variant === 'disabled',
-      'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
-    },
-  );
+const SprkLink = props => {
+  const {
+    children,
+    element,
+    variant,
+    additionalClasses,
+    idString,
+    analyticsString,
+    ...other
+  } = props;
+  const TagName = element || 'a';
+  const classNames = classnames('sprk-b-Link', additionalClasses, {
+    'sprk-b-Link--simple': variant === 'simple',
+    'sprk-b-Link--plain': variant === 'plain',
+    'sprk-b-Link--disabled': variant === 'disabled',
+    'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
+  });
 
   return (
-    <a className={classNames} data-analytics={analyticsString} data-id={idString} {...other}>
+    <TagName
+      className={classNames}
+      data-analytics={analyticsString}
+      data-id={idString}
+      {...other}
+    >
       {children}
-    </a>
+    </TagName>
   );
-}
+};
 
 SprkLink.propTypes = {
   // The children that will be rendered inside the link
@@ -31,7 +42,15 @@ SprkLink.propTypes = {
   // The string to use for the data-analytics attribute
   analyticsString: PropTypes.string,
   // Any additional classes to add to the link
-  additionalClasses: PropTypes.string
+  additionalClasses: PropTypes.string,
+};
+
+SprkLink.defaultProps = {
+  children: [],
+  variant: 'base',
+  idString: '',
+  analyticsString: '',
+  additionalClasses: '',
 };
 
 export default SprkLink;

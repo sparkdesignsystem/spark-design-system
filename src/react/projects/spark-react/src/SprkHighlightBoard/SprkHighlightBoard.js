@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkButton } from '@sparkdesignsystem/spark-react';
 import warning from 'warning';
+import SprkButton from '../SprkButton/SprkButton';
 
 const SprkHighlightBoard = props => {
   const {
@@ -26,7 +26,8 @@ const SprkHighlightBoard = props => {
 
   warning(
     (imgSrc && imgAlt) || (!imgSrc && !imgAlt),
-    'SprkHighlightBoard: If imgSrc is provided, then imgAlt is required (and vice versa).',
+    'SprkHighlightBoard: If imgSrc is provided, then imgAlt is required' +
+      ' (and vice versa).',
   );
 
   const classNames = classnames(
@@ -47,9 +48,18 @@ const SprkHighlightBoard = props => {
         />
       )}
 
-      <div className="sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large">
+      <div
+        className="
+      sprk-c-HighlightBoard__content
+      sprk-o-Stack sprk-o-Stack--large"
+      >
         {heading && (
-          <h1 className="sprk-b-TypeDisplayOne sprk-c-HighlightBoard__heading sprk-o-Stack__item">
+          <h1
+            className="
+            sprk-b-TypeDisplayOne
+            sprk-c-HighlightBoard__heading
+            sprk-o-Stack__item"
+          >
             {heading}
           </h1>
         )}
@@ -132,6 +142,23 @@ SprkHighlightBoard.propTypes = {
   idString: PropTypes.string,
   // Any additional classes to add to the highlight board
   additionalClasses: PropTypes.string,
+};
+
+SprkHighlightBoard.defaultProps = {
+  imgSrc: '',
+  imgAlt: '',
+  heading: '',
+  ctaText: '',
+  ctaHref: '',
+  ctaAnalytics: '',
+  ctaAnalytics2: '',
+  ctaIdString: '',
+  ctaText2: '',
+  ctaHref2: '',
+  ctaIdString2: '',
+  variant: '',
+  idString: '',
+  additionalClasses: '',
 };
 
 export default SprkHighlightBoard;

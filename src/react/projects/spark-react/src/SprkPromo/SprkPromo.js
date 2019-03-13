@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkLink, SprkButton } from '@sparkdesignsystem/spark-react';
+import SprkLink from '../SprkLink/SprkLink';
+import SprkButton from '../SprkButton/SprkButton';
 
 const SprkPromo = props => {
   const {
@@ -92,7 +93,12 @@ const SprkPromo = props => {
         )}
       >
         {title && (
-          <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
+          <h3
+            className="
+            sprk-b-TypeDisplayFive
+            sprk-o-Stack__item
+            sprk-c-Promo__title"
+          >
             {title}
           </h3>
         )}
@@ -103,7 +109,12 @@ const SprkPromo = props => {
           </div>
         )}
 
-        <div className="sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-c-Promo__childrenContainer">
+        <div
+          className="
+          sprk-b-TypeBodyTwo
+          sprk-o-Stack__item
+          sprk-c-Promo__childrenContainer"
+        >
           {children}
         </div>
 
@@ -184,8 +195,8 @@ SprkPromo.propTypes = {
   title: PropTypes.string,
   // The text to appear in the subtitle section
   subtitle: PropTypes.string,
-  // Any additional classes (space-delimited string) to apply to the root element
-  // of the Promo
+  // Any additional classes (space-delimited string) to apply to the root
+  // element of the Promo
   additionalClasses: PropTypes.string,
   // Any additional classes (space-delimited string) to apply to the content
   // element of the Promo
@@ -221,8 +232,32 @@ SprkPromo.propTypes = {
   // If provided, the Promo will be rendered in reverse horizontal order
   // (content on the left, image on the right)
   mediaRev: PropTypes.bool,
-  // If provided, the Promo will be rendered with the sprk-c-Promo--bordered class.
+  // If provided, the Promo will be rendered with the sprk-c-Promo--bordered
+  // class.
   hasBorder: PropTypes.bool,
+};
+
+SprkPromo.defaultProps = {
+  children: [],
+  title: '',
+  subtitle: '',
+  additionalClasses: '',
+  additionalClassesContent: '',
+  cta: '',
+  ctaText: '',
+  ctaHref: '',
+  ctaAnalytics: '',
+  ctaIdString: '',
+  imgSrc: '',
+  imgAlt: '',
+  imgLinkHref: '',
+  imgLinkAnalytics: '',
+  imgLinkIdString: '',
+  additionalClassesImgLink: '',
+  idString: '',
+  isFlag: false,
+  mediaRev: false,
+  hasBorder: false,
 };
 
 export default SprkPromo;
