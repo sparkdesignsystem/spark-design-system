@@ -26,7 +26,7 @@ import { Component, Input } from '@angular/core';
             >
               <div class="sprk-o-Stack__item">
                 <sprk-link
-                  additionalClasses="sprk-b-Link sprk-b-Link--plain"
+                  linkType="plain"
                   href="{{ item.href }}"
                   analyticsString="{{ item.analytics }}"
                 >
@@ -76,7 +76,8 @@ import { Component, Input } from '@angular/core';
                     *ngFor="let link of item.links"
                   >
                     <sprk-link
-                      additionalClasses="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                      linkType="simple"
+                      additionalClasses="sprk-u-FontWeight--normal"
                       href="{{ link.href }}"
                     >
                       {{ link.text }}
@@ -106,7 +107,7 @@ import { Component, Input } from '@angular/core';
                     class="sprk-o-Stack__item"
                   >
                     <sprk-link
-                      additionalClasses="sprk-b-Link sprk-b-Link--plain"
+                      linkType="plain"
                       href="{{ item.href }}"
                       analyticsString="{{ item.analytics }}"
                     >
@@ -194,7 +195,7 @@ import { Component, Input } from '@angular/core';
           >
             <li *ngFor="let item of badgeLinks" class="sprk-o-Stack__item">
               <sprk-link
-                additionalClasses="sprk-b-Link sprk-b-Link--plain"
+                linkType="plain"
                 href="{{ item.href }}"
                 analyticsString="{{ item.analytics }}"
               >
