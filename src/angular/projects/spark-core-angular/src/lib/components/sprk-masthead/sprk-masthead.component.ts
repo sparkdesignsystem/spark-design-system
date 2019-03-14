@@ -1,4 +1,5 @@
 import { Component, HostListener, Input, Renderer2 } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 
 @Component({
@@ -211,7 +212,13 @@ import * as _ from 'lodash';
   `
 })
 export class SparkMastheadComponent {
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, router: Router) {
+    router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.closeNarrowNav();
+      }
+    });
+  }
 
   @Input()
   logoHref = '/';
