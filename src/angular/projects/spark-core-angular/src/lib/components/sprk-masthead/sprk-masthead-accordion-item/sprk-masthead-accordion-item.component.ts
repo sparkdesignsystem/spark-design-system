@@ -17,7 +17,7 @@ import {
       >
         <sprk-link
           linkType="unstyled"
-          [attr.aria-controls]="accordion_controls_id"
+          [ariaControls]="accordion_controls_id"
           additionalClasses="sprk-c-MastheadAccordion__summary"
           [analyticsString]="analyticsString"
           [idString]="idString"

@@ -11,9 +11,9 @@ import { Component, Input } from '@angular/core';
       <sprk-link
         linkType="unstyled"
         *ngIf="media === 'img'"
-        href="imgHref"
+        [href]="imgHref"
         additionalClasses="sprk-o-Stack__item"
-        analyticsString="imgLinkAnalytics"
+        [analyticsString]="imgLinkAnalytics"
       >
         <img
           class="sprk-c-Card__media"
@@ -34,9 +34,9 @@ import { Component, Input } from '@angular/core';
         <sprk-link
           linkType="unstyled"
           *ngIf="media === 'icon'"
-          href="iconHref"
+          [href]="iconHref"
           additonalClasses="sprk-o-Stack__item sprk-u-AbsoluteCenter"
-          analyticsString="iconLinkAnalytics"
+          [analyticsString]="iconLinkAnalytics"
         >
           <sprk-icon
             [iconType]="iconType"
@@ -50,9 +50,9 @@ import { Component, Input } from '@angular/core';
 
         <div class="sprk-o-Stack__item">
           <sprk-link
-            href="ctaHref"
-            additonalClasses="getClassesCta()"
-            analyticsString="ctaAnalytics"
+            [href]="ctaHref"
+            [additonalClasses]="getClassesCta()"
+            [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
           </sprk-link>
@@ -85,19 +85,19 @@ import { Component, Input } from '@angular/core';
         <sprk-link
           linkType="unstyled"
           *ngIf="media === 'img'"
-          href="imgHref"
+          [href]="imgHref"
           additonalClasses="sprk-o-Stack__item"
-          analyticsString="imgLinkAnalytics"
+          [analyticsString]="imgLinkAnalytics"
         >
           <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
         </sprk-link>
 
         <sprk-link
           *ngIf="media === 'icon'"
-          href="iconHref"
+          [href]="iconHref"
           linkType="unstyled"
           additonalClasses="sprk-o-Stack__item sprk-o-Stack__item--center"
-          analyticsString="iconLinkAnalytics"
+          [analyticsString]="iconLinkAnalytics"
         >
           <sprk-icon
             [iconType]="iconType"
@@ -109,9 +109,9 @@ import { Component, Input } from '@angular/core';
 
         <div class="sprk-o-Stack__item">
           <sprk-link
-            href="ctaHref"
-            additonalClasses="getClassesCta()"
-            analyticsString="ctaAnalytics"
+            [href]="ctaHref"
+            [additonalClasses]="getClassesCta()"
+            [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
           </sprk-link>

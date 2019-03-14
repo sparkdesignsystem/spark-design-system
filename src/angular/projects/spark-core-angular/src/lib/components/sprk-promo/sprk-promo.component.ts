@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <sprk-link
+        linkType="unstyled"
         *ngIf="isFlag && !mediaRev"
         [additionalClasses]="getClassesFlag()"
         [href]="imgHref"
@@ -17,6 +18,7 @@ import { Component, Input } from '@angular/core';
         />
       </sprk-link>
       <sprk-link
+        linkType="unstyled"
         *ngIf="imgSrc && !mediaRev && !isFlag"
         [href]="imgHref"
         [analyticsString]="imgLinkAnalytics"
@@ -68,6 +70,7 @@ import { Component, Input } from '@angular/core';
       </div>
 
       <sprk-link
+        linkType="unstyled"
         *ngIf="isFlag && mediaRev"
         [href]="imgHref"
         [additionalClasses]="getClassesFlag()"
@@ -81,6 +84,7 @@ import { Component, Input } from '@angular/core';
       </sprk-link>
 
       <sprk-link
+        linkType="unstyled"
         *ngIf="imgSrc && mediaRev && !isFlag"
         [href]="imgHref"
         [analyticsString]="imgLinkAnalytics"

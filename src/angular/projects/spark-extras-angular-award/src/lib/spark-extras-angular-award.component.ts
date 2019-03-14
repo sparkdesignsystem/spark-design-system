@@ -24,8 +24,8 @@ import { Component, Input } from '@angular/core';
         <sprk-link
           linkType="unstyled"
           additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-          href="imgOneHref"
-          analyticsString="analyticsStringImgOne"
+          [href]="imgOneHref"
+          [analyticsString]="analyticsStringImgOne"
         >
           <img
             [ngClass]="getClassesImgOne()"
@@ -37,8 +37,8 @@ import { Component, Input } from '@angular/core';
         <sprk-link
           linkType="unstyled"
           additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-          href="imgTwoHref"
-          analyticsString="analyticsStringImgTwo"
+          [href]="imgTwoHref"
+          [analyticsString]="analyticsStringImgTwo"
         >
           <img
             [ngClass]="getClassesImgTwo()"

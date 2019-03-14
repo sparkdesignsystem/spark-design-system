@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 
       <sprk-link href="https://www.google.com"> Google.com </sprk-link>
     </div>
+
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Same Page Links</h2>
 
-      <sprk-link href="/links#info"> Jump to #Info </sprk-link>
+      <sprk-link href="#info" aria-label="foo"> Jump to #Info </sprk-link>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
@@ -70,7 +71,7 @@ import { Component, OnInit } from '@angular/core';
       <h2 class="drizzle-b-h2">Disabled Link</h2>
 
       <sprk-link
-        linkType="disabled"
+        disabled="true"
         href="/buttons"
         idString="link-4"
         analyticsString="object.action.event"

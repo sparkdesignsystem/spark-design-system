@@ -40,8 +40,8 @@ import {
             (click)="goToPage($event, 1)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 1 && 'sprk-c-Pagination__link--current'}}"
             [analyticsString]="analyticsStringFirstLink"
-            [attr.aria-current]="currentPage === 1"
-            aria-label="Page 1"
+            [ariaCurrent]="currentPage === 1"
+            ariaLabel="Page 1"
           >
             1
           </sprk-link>
@@ -52,8 +52,8 @@ import {
             (click)="goToPage($event, 2)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 2 && 'sprk-c-Pagination__link--current'}}"
             [analyticsString]="analyticsStringSecondLink"
-            [attr.aria-current]="currentPage === 2"
-            aria-label="Page 2"
+            [ariaCurrent]="currentPage === 2"
+            ariaLabel="Page 2"
           >
             2
           </sprk-link>
@@ -64,8 +64,8 @@ import {
             (click)="goToPage($event, 3)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 3 && 'sprk-c-Pagination__link--current'}}"
             [analyticsString]="analyticsStringThirdLink"
-            [attr.aria-current]="currentPage === 3"
-            aria-label="Page 3"
+            [ariaCurrent]="currentPage === 3"
+            ariaLabel="Page 3"
           >
             3
           </sprk-link>
@@ -119,7 +119,7 @@ import {
             (click)="goToPage($event, 1)"
             additionalClasses="sprk-c-Pagination__link {{currentPage === 1 && 'sprk-c-Pagination__link--current'}}"
             [analyticsString]="analyticsStringFirstLink"
-            aria-label="Page 1"
+            ariaLabel="Page 1"
           >
             1
           </sprk-link>
@@ -142,9 +142,9 @@ import {
           <sprk-link
             (click)="goToPage($event, currentPage)"
             additionalClasses="sprk-c-Pagination__link sprk-c-Pagination__link--current"
-            aria-current="true"
+            ariaCurrent="true"
             [analyticsString]="analyticsStringSecondLink"
-            attr.aria-label="Page {{ currentPage }}"
+            ariaLabel="Page {{ currentPage }}"
           >
             {{ currentPage }}
           </sprk-link>
@@ -164,7 +164,7 @@ import {
             (click)="goToPage($event, totalPages())"
             additionalClasses="sprk-c-Pagination__link {{currentPage === totalPages() && 'sprk-c-Pagination__link--current'}}"
             [analyticsString]="analyticsStringThirdLink"
-            attr.aria-label="Page {{ totalPages() }}"
+            ariaLabel="Page {{ totalPages() }}"
           >
             {{ totalPages() }}
           </sprk-link>

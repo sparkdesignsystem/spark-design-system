@@ -18,7 +18,7 @@ import {
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
         <sprk-link
           [additionalClasses]="getTriggerClasses()"
-          aria-haspopup="true"
+          ariaHasPopUp="true"
           (click)="toggle($event)"
           [idString]="idString"
           [analyticsString]="analyticsString"
@@ -46,7 +46,7 @@ import {
             *ngIf="selector && !title"
             linkType="plain"
             additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
-            aria-haspopup="true"
+            ariaHasPopUp="true"
             (click)="toggle($event)"
           >
             <span
@@ -71,8 +71,7 @@ import {
             <ng-template #link>
               <sprk-link
                 linkType="unstyled"
-                [href]="choice.href || '#nogo'"
-                [attr.data-sprk-dropdown-value]="choice.value"
+                [href]="choice.href"
                 additionalClasses="sprk-c-Dropdown__link {{ choice.active && 'sprk-c-Dropdown__link--active' }}"
                 role="option"
                 >{{ choice.text }}
@@ -81,8 +80,7 @@ import {
             <ng-template #content>
               <sprk-link
                 linkType="unstyled"
-                [attr.data-sprk-dropdown-value]="choice.value"
-                [href]="choice.href || '#nogo'"
+                [href]="choice.href"
                 additionalClasses="sprk-c-Dropdown__link {{ choice.active && 'sprk-c-Dropdown__link--active' }}"
                 role="option"
               >

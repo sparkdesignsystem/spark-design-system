@@ -13,7 +13,8 @@ import {
   template: `
     <li [ngClass]="getClasses()">
       <sprk-link
-        [attr.aria-controls]="accordion_controls_id"
+        linkType="unstyled"
+        [ariaControls]="accordion_controls_id"
         additionalClasses="sprk-c-Accordion__summary"
         [analyticsString]="analyticsString"
         [idString]="idString"

@@ -1,6 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+// same page links
+// done
+// spread attributes
+// tests
+// docs
 @Component({
   selector: 'sprk-link',
   template: `
@@ -12,20 +17,38 @@ import { Router } from '@angular/router';
       [attr.target]="target"
       [attr.data-id]="idString"
       [attr.disabled]="disabled"
+      [attr.aria-controls]="ariaControls"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-haspopup]="ariaHasPopUp"
+      [attr.role]="role"
+      [attr.aria-current]="ariaCurrent"
+      [attr.aria-expanded]="ariaExpanded"
     >
       <ng-content></ng-content>
     </a>
   `
 })
-export class SparkLinkComponent {
+export class SparkLinkComponent implements OnInit {
   constructor(public router: Router) {}
 
   @Input()
   linkType: string;
   @Input()
-  href: string;
+  href = '#';
   @Input()
   idString: string;
+  @Input()
+  role: string;
+  @Input()
+  ariaControls: string;
+  @Input()
+  ariaCurrent: string;
+  @Input()
+  ariaExpanded: string;
+  @Input()
+  ariaHasPopUp: string;
+  @Input()
+  ariaLabel: string;
   @Input()
   analyticsString: string;
   @Input()
@@ -35,15 +58,36 @@ export class SparkLinkComponent {
   @Input()
   disabled: boolean;
 
+  ngOnInit() {
+    if (this.href === '' || this.href === null || this.href === undefined) {
+      this.href = '#';
+    }
+  }
+
   isExternal(value): boolean {
     return new RegExp('^(http|https)', 'i').test(value);
+  }
+
+  isCustomHash(value): boolean {
+    return new RegExp('^#.+', 'i').test(value);
+  }
+
+  isDefault(value): boolean {
+    return value === '#';
   }
 
   handleClick(event): void {
     if (this.isExternal(this.href)) {
       return;
+    }
+
+    event.preventDefault();
+
+    if (this.isDefault(this.href)) {
+      return;
+    } else if (this.isCustomHash(this.href)) {
+      this.router.navigateByUrl(this.router.url + this.href);
     } else {
-      event.preventDefault();
       this.router.navigateByUrl(this.href);
     }
   }
