@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SparkToggleComponent } from './sprk-toggle.component';
 
 describe('SparkToggleComponent', () => {
@@ -10,8 +12,12 @@ describe('SparkToggleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [SparkToggleComponent, SparkIconComponent]
+      imports: [BrowserAnimationsModule, RouterTestingModule],
+      declarations: [
+        SparkToggleComponent,
+        SparkIconComponent,
+        SparkLinkComponent
+      ]
     }).compileComponents();
   }));
 

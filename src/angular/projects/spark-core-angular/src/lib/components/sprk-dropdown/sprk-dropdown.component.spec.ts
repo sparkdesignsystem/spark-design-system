@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SparkDropdownComponent } from './sprk-dropdown.component';
 
 describe('SparkDropdownComponent', () => {
@@ -13,7 +14,11 @@ describe('SparkDropdownComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [SparkDropdownComponent, SparkIconComponent]
+      declarations: [
+        SparkDropdownComponent,
+        SparkIconComponent,
+        SparkLinkComponent
+      ]
     }).compileComponents();
   }));
 
