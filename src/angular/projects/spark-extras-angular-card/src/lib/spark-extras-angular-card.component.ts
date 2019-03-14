@@ -35,7 +35,7 @@ import { Component, Input } from '@angular/core';
           linkType="unstyled"
           *ngIf="media === 'icon'"
           [href]="iconHref"
-          additonalClasses="sprk-o-Stack__item sprk-u-AbsoluteCenter"
+          additionalClasses="sprk-o-Stack__item sprk-u-AbsoluteCenter"
           [analyticsString]="iconLinkAnalytics"
         >
           <sprk-icon
@@ -50,8 +50,9 @@ import { Component, Input } from '@angular/core';
 
         <div class="sprk-o-Stack__item">
           <sprk-link
+            linkType="unstyled"
             [href]="ctaHref"
-            [additonalClasses]="getClassesCta()"
+            [additionalClasses]="getClassesCta()"
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
@@ -86,7 +87,7 @@ import { Component, Input } from '@angular/core';
           linkType="unstyled"
           *ngIf="media === 'img'"
           [href]="imgHref"
-          additonalClasses="sprk-o-Stack__item"
+          additionalClasses="sprk-o-Stack__item"
           [analyticsString]="imgLinkAnalytics"
         >
           <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
@@ -96,7 +97,7 @@ import { Component, Input } from '@angular/core';
           *ngIf="media === 'icon'"
           [href]="iconHref"
           linkType="unstyled"
-          additonalClasses="sprk-o-Stack__item sprk-o-Stack__item--center"
+          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--center"
           [analyticsString]="iconLinkAnalytics"
         >
           <sprk-icon
@@ -109,8 +110,9 @@ import { Component, Input } from '@angular/core';
 
         <div class="sprk-o-Stack__item">
           <sprk-link
+            linkType="unstyled"
             [href]="ctaHref"
-            [additonalClasses]="getClassesCta()"
+            [additionalClasses]="getClassesCta()"
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
