@@ -1,9 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-// same page links
-// done
-// spread attributes
 // tests
 // docs
 @Component({
@@ -19,10 +15,12 @@ import { Router } from '@angular/router';
       [attr.disabled]="disabled"
       [attr.aria-controls]="ariaControls"
       [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledby"
       [attr.aria-haspopup]="ariaHasPopUp"
       [attr.role]="role"
       [attr.aria-current]="ariaCurrent"
       [attr.aria-expanded]="ariaExpanded"
+      [attr.aria-hidden]="ariaHidden"
     >
       <ng-content></ng-content>
     </a>
@@ -41,6 +39,10 @@ export class SparkLinkComponent implements OnInit {
   role: string;
   @Input()
   ariaControls: string;
+  @Input()
+  ariaLabelledby: string;
+  @Input()
+  ariaHidden: string;
   @Input()
   ariaCurrent: string;
   @Input()
