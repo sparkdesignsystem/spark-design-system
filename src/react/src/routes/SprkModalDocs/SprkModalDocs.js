@@ -1,12 +1,10 @@
 import React from 'react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
-// import {Link} from 'react-router-dom';
-
 import { SprkButton, SprkModal } from '@sparkdesignsystem/spark-core-react';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
 class SprkModalDocs extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -26,14 +24,14 @@ class SprkModalDocs extends React.Component {
     return (
       <CentralColumnLayout>
         <ExampleContainer heading="Trigger A Basic Modal">
-          <SprkModal title="A Basic Modal" 
-                     isVisible={this.state.basic} 
+          <SprkModal title="A Basic Modal"
+                     isVisible={this.state.basic}
                      confirmClick={()=>{
                        console.log('confirm!')
                        this.toggle('basic')
                       }}
                      cancelClick={this.toggle.bind(this, 'basic')}>
-                     
+
             Some Content for for that basic modal via slots
 
             <p>And Even more text</p>
@@ -42,15 +40,15 @@ class SprkModalDocs extends React.Component {
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger An Info Only Modal">
-          <SprkModal title="An Info Only Modal" 
+          <SprkModal title="An Info Only Modal"
                      isVisible={this.state.info}
-                     modalType="info"
+                     variant="info"
                      confirmClick={()=>{
                        console.log('confirm!')
                        this.toggle('info')
                      }}
                      cancelClick={this.toggle.bind(this, 'info')}>
-                     
+
             Some Content for for the info modal via slots
 
             <p>The more you know!</p>
@@ -59,15 +57,15 @@ class SprkModalDocs extends React.Component {
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger A Wait Modal">
-          <SprkModal title="A Wait Modal" 
+          <SprkModal title="A Wait Modal"
                      isVisible={this.state.wait}
-                     modalType="wait"
+                     variant="wait"
                      confirmClick={()=>{
                        console.log('confirm!')
                        this.toggle('wait')
                      }}
                      cancelClick={this.toggle.bind(this, 'wait')}>
-                     
+
             Some Content for for the wait modal via slots
 
             <p>This modal will dismiss via timeout after 2 seconds.</p>
