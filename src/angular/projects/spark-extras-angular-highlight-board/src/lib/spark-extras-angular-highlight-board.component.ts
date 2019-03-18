@@ -37,7 +37,7 @@ import { Component, Input } from '@angular/core';
           <div sprkStackItem class="sprk-c-HighlightBoard__cta">
             <a
               [routerLink]="ctaHref"
-              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@s"
               [attr.data-analytics]="analyticsStringCta"
             >
               {{ ctaText }}
@@ -51,7 +51,7 @@ import { Component, Input } from '@angular/core';
           >
             <a
               [routerLink]="ctaHref2"
-              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@s"
               [attr.data-analytics]="analyticsStringCta2"
             >
               {{ ctaText2 }}
