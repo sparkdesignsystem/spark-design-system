@@ -34,9 +34,13 @@ import { Component, OnInit } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Link Using tel</h2>
 
-      <sprk-link href="https://www.sparkdesignsystem.com" isExternal="true">
-        Spark
-      </sprk-link>
+      <sprk-link href="tel:+123456789"> Tel Link </sprk-link>
+    </div>
+
+    <div class="drizzle-o-ContentGrouping">
+      <h2 class="drizzle-b-h2">Link Using mailto</h2>
+
+      <sprk-link href="mailto:example@example.com"> mailto Link </sprk-link>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
