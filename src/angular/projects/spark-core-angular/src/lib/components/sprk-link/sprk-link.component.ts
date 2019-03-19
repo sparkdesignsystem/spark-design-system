@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// tests
-// docs
 @Component({
   selector: 'sprk-link',
   template: `
@@ -70,7 +68,7 @@ export class SparkLinkComponent implements OnInit {
     return new RegExp('^(http|https)', 'i').test(value);
   }
 
-  isCustomHash(value): boolean {
+  isJumpLink(value): boolean {
     return new RegExp('^#.+', 'i').test(value);
   }
 
@@ -87,7 +85,7 @@ export class SparkLinkComponent implements OnInit {
 
     if (this.isDefault(this.href)) {
       return;
-    } else if (this.isCustomHash(this.href)) {
+    } else if (this.isJumpLink(this.href)) {
       this.router.navigateByUrl(this.router.url + this.href);
     } else {
       this.router.navigateByUrl(this.href);
