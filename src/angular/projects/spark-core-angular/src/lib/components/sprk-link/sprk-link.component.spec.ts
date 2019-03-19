@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SparkLinkComponent } from './sprk-link.component';
 
 describe('SparkLinkComponent', () => {
@@ -8,6 +9,7 @@ describe('SparkLinkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [SparkLinkComponent]
     }).compileComponents();
   }));
@@ -43,12 +45,12 @@ describe('SparkLinkComponent', () => {
     );
   });
 
-  it('should add the correct class if linkType is disabled', () => {
-    component.linkType = 'disabled';
+  it('should add the correct class if disabled is set to true', () => {
+    component.isDisabled = true;
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--disabled');
   });
 
-  it('should add the correct class if linkType is disabled', () => {
+  it('should add the correct class if linkType is plain', () => {
     component.linkType = 'plain';
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--plain');
   });

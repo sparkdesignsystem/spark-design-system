@@ -15,14 +15,12 @@ import {
       <div
         class="sprk-u-Position--relative sprk-o-Stack__item sprk-u-Width-100"
       >
-        <a
-          [attr.aria-controls]="accordion_controls_id"
-          [ngClass]="{
-            'sprk-c-MastheadAccordion__summary': true
-          }"
-          href="#nogo"
-          [attr.data-analytics]="analyticsString"
-          [attr.data-id]="idString"
+        <sprk-link
+          linkType="unstyled"
+          [ariaControls]="accordion_controls_id"
+          additionalClasses="sprk-c-MastheadAccordion__summary"
+          [analyticsString]="analyticsString"
+          [idString]="idString"
           (click)="toggleAccordion($event)"
         >
           <span [ngClass]="getHeadingClasses()">
@@ -33,11 +31,12 @@ import {
             ></sprk-icon>
             {{ title }}
           </span>
+
           <sprk-icon
             additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle {{ iconStateClass }}"
             [iconType]="currentIconType"
           ></sprk-icon>
-        </a>
+        </sprk-link>
       </div>
 
       <div [@toggleContent]="animState">

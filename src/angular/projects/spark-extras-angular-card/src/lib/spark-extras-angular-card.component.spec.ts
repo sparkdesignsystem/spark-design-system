@@ -21,9 +21,7 @@ describe('SparkCardComponent', () => {
   });
 
   it('should create itself', () => {
-    fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('div');
-    expect(element).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   it('getClassesCard should match what gets set on the card', () => {
@@ -141,7 +139,7 @@ describe('SparkCardComponent', () => {
     component.cardType = 'base';
     component.idString = testString;
     fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('.sprk-c-Card');
+    element = fixture.nativeElement.querySelector('div');
     expect(element.getAttribute('data-id')).toEqual(testString);
   });
 

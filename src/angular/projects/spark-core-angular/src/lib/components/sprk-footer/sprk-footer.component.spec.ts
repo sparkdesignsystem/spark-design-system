@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SparkFooterComponent } from './sprk-footer.component';
 import { SparkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 
@@ -15,7 +16,8 @@ describe('SparkFooterComponent', () => {
       declarations: [
         SparkIconComponent,
         SparkToggleComponent,
-        SparkFooterComponent
+        SparkFooterComponent,
+        SparkLinkComponent
       ]
     }).compileComponents();
   }));
