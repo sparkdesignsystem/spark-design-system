@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
       [attr.data-analytics]="analyticsString"
       [attr.target]="target"
       [attr.data-id]="idString"
-      [attr.disabled]="disabled"
+      [attr.disabled]="isDisabled"
       [attr.aria-controls]="ariaControls"
       [attr.aria-label]="ariaLabel"
       [attr.aria-labelledby]="ariaLabelledby"
@@ -56,7 +56,9 @@ export class SparkLinkComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
-  disabled: boolean;
+  isDisabled: boolean;
+  @Input()
+  isExternal = false;
 
   ngOnInit() {
     if (this.href === '' || this.href === null || this.href === undefined) {
@@ -64,8 +66,8 @@ export class SparkLinkComponent implements OnInit {
     }
   }
 
-  isExternal(value): boolean {
-    return new RegExp('^(http|https)', 'i').test(value);
+  isExternalLink(value): boolean {
+    return new RegExp('^.*:', 'i').test(value);
   }
 
   isJumpLink(value): boolean {
@@ -77,7 +79,7 @@ export class SparkLinkComponent implements OnInit {
   }
 
   handleClick(event): void {
-    if (this.isExternal(this.href)) {
+    if (this.isExternalLink(this.href) || this.isExternal) {
       return;
     }
 
@@ -114,7 +116,7 @@ export class SparkLinkComponent implements OnInit {
         break;
     }
 
-    if (this.disabled) {
+    if (this.isDisabled) {
       classArray.push('sprk-b-Link--disabled');
     }
 

@@ -242,7 +242,7 @@
 
     <tr>
       <td class="sprk-u-FontWeight--bold">
-        disabled
+        isDisabled
       </td>
 
       <td>
@@ -251,6 +251,23 @@
 
       <td>
         If true, will set disabled styles on the link.
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        isExternal
+      </td>
+
+      <td>
+        boolean
+      </td>
+
+      <td>
+        By default, the component determines if the href is an external or internal link
+        by looking for the ':' character in the href string. If external link functionality is desired with
+        an href value that contains a ':' set this input to true. This overrides the default
+        and avoids using the Angular Router.
       </td>
     </tr>
   </tbody>

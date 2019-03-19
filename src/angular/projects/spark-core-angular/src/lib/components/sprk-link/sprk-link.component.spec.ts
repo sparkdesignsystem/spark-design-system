@@ -46,7 +46,7 @@ describe('SparkLinkComponent', () => {
   });
 
   it('should add the correct class if disabled is set to true', () => {
-    component.disabled = true;
+    component.isDisabled = true;
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--disabled');
   });
 

@@ -23,7 +23,7 @@ import {
           <sprk-link
             linkType="plain"
             (click)="goBack($event, currentPage)"
-            [disabled]="currentPage === 1"
+            [isDisabled]="currentPage === 1"
             additionalClasses="sprk-c-Pagination__icon"
             [analyticsString]="analyticsStringLinkPrev"
           >
@@ -74,7 +74,7 @@ import {
         <li>
           <sprk-link
             linkType="plain"
-            [disabled]="isLastPage()"
+            [isDisabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
             [analyticsString]="analyticsStringLinkNext"
@@ -102,7 +102,7 @@ import {
         <li>
           <sprk-link
             linkType="plain"
-            [disabled]="currentPage === 1"
+            [isDisabled]="currentPage === 1"
             (click)="goBack($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
           >
@@ -173,7 +173,7 @@ import {
         <li>
           <sprk-link
             linkType="plain"
-            [disabled]="isLastPage()"
+            [isDisabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
             [analyticsString]="analyticsStringLinkNext"
@@ -201,7 +201,7 @@ import {
         <li class="sprk-c-Pagination__item">
           <sprk-link
             linkType="plain"
-            [disabled]="currentPage === 1"
+            [isDisabled]="currentPage === 1"
             (click)="goBack($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
             [analyticsString]="analyticsStringLinkPrev"
@@ -217,7 +217,7 @@ import {
         <li class="sprk-c-Pagination__item">
           <sprk-link
             linkType="plain"
-            [disabled]="isLastPage()"
+            [isDisabled]="isLastPage()"
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
             [analyticsString]="analyticsStringLinkNext"
