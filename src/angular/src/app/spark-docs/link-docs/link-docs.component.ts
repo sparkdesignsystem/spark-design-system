@@ -15,11 +15,11 @@ import { Component, OnInit } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Same Page Links</h2>
 
-      <sprk-link fragment="info" additionalClasses="sprk-u-mrm"
-        >Fragment info</sprk-link
+      <sprk-link href="#info" additionalClasses="sprk-u-mrm"
+        >Jump Link</sprk-link
       >
-      <sprk-link fragment="links#info" aria-label="foo"
-        >Jump to links#Info</sprk-link
+      <sprk-link href="/buttons#foo" aria-label="foo"
+        >Jump Link With Page</sprk-link
       >
     </div>
 

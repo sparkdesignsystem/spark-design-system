@@ -105,7 +105,8 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes, {
-      anchorScrolling: 'enabled'
+      anchorScrolling: 'enabled',
+      useHash: true
     }),
     BrowserModule,
     SparkAwardModule,

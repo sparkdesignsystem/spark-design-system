@@ -54,8 +54,6 @@ export class SparkLinkComponent implements OnInit {
   @Input()
   target: string;
   @Input()
-  fragment: string;
-  @Input()
   additionalClasses: string;
   @Input()
   isDisabled: boolean;
@@ -63,18 +61,14 @@ export class SparkLinkComponent implements OnInit {
   isExternal = false;
 
   ngOnInit() {
-    if (
-      (this.href === '' || this.href === null || this.href === undefined) &&
-      !this.fragment
-    ) {
+    // Sets the default if no href provided
+    if (this.href === '' || this.href === null || this.href === undefined) {
       this.href = '#';
+      return;
     }
-
-    // If fragment detected, set href value to fragment
-    if (this.fragment) {
-      this.isJumpLinkWithPage(this.fragment)
-        ? (this.href = `${this.fragment}`)
-        : (this.href = `#${this.fragment}`);
+    // Build jump link's href
+    if (this.isJumpLink(this.href)) {
+      this.href = `${this.getPathWithoutHash(this.router.url)}${this.href}`;
     }
   }
 
@@ -90,39 +84,40 @@ export class SparkLinkComponent implements OnInit {
     return new RegExp('^#.+', 'i').test(value);
   }
 
-  isDefault(value): boolean {
+  isNoActionLink(value): boolean {
     return value === '#';
   }
 
+  getPathWithoutHash(value): string {
+    return value.split('#')[0];
+  }
+
   scrollToId() {
-    const elementID = this.fragment.split('#').pop();
+    const elementID = this.href.split('#').pop();
     const element: HTMLElement = document.getElementById(elementID);
     element.scrollIntoView();
   }
 
   handleClick(event): void {
+    // Let browser handle route if External Link
     if (this.isExternalLink(this.href) || this.isExternal) {
       return;
     }
 
     event.preventDefault();
 
-    if (this.isDefault(this.href)) {
+    // Prevent Default and return
+    if (this.isNoActionLink(this.href)) {
       return;
-    } else if (this.fragment && this.isJumpLinkWithPage(this.fragment)) {
-      if (this.isJumpLink(window.location.hash)) {
+    } else if (this.isJumpLinkWithPage(this.href)) {
+      if (
+        this.getPathWithoutHash(this.href) ===
+        this.getPathWithoutHash(this.router.url)
+      ) {
         this.scrollToId();
+      } else {
+        this.router.navigateByUrl(this.href);
       }
-      this.router.navigateByUrl(this.fragment);
-    } else if (this.fragment) {
-      if (this.isJumpLink(window.location.hash)) {
-        this.scrollToId();
-      }
-      this.router.navigate([window.location.pathname], {
-        fragment: this.fragment
-      });
-    } else {
-      this.router.navigateByUrl(this.href);
     }
   }
 
