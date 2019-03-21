@@ -125,4 +125,11 @@ describe('SparkLinkComponent', () => {
     expect(component.isExternalLink(url)).toBeTruthy();
     expect(component.isExternalLink(internal)).toBeFalsy();
   });
+
+  it('should add a hash as the href if an undefined value is supplied to href ', () => {
+    const test = undefined;
+    component.href = test;
+    fixture.detectChanges();
+    expect(component.href).toEqual('#');
+  });
 });
