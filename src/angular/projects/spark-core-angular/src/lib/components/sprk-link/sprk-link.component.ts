@@ -61,7 +61,7 @@ export class SparkLinkComponent implements OnInit {
   isExternal = false;
 
   ngOnInit() {
-    // Sets the default if no href provided
+    // Sets the default href if none provided
     if (this.href === '' || this.href === null || this.href === undefined) {
       this.href = '#';
       return;
@@ -99,14 +99,14 @@ export class SparkLinkComponent implements OnInit {
   }
 
   handleClick(event): void {
-    // Let browser handle route if External Link
+    // Let browser handle route if external Link
     if (this.isExternalLink(this.href) || this.isExternal) {
       return;
     }
 
     event.preventDefault();
 
-    // Prevent Default and return
+    // Prevent default and return
     if (this.isNoActionLink(this.href)) {
       return;
     } else if (this.isJumpLinkWithPage(this.href)) {
