@@ -6,17 +6,21 @@ import { Component, OnInit } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">External Links</h2>
 
-      <sprk-link href="https://www.google.com"
-        >https://www.google.com
-      </sprk-link>
+      <sprk-link href="https://www.google.com" additionalClasses="sprk-u-mrm"
+        >https://www.google.com</sprk-link
+      >
       <sprk-link href="http://www.google.com">http://www.google.com</sprk-link>
     </div>
 
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Same Page Links</h2>
 
-      <sprk-link href="#info" aria-label="foo">Jump to #Info </sprk-link>
-      <sprk-link href="links#info" aria-label="foo">Jump to #Info </sprk-link>
+      <sprk-link href="#info" additionalClasses="sprk-u-mrm"
+        >Jump Link</sprk-link
+      >
+      <sprk-link href="/buttons#foo" aria-label="foo"
+        >Jump Link With Page</sprk-link
+      >
     </div>
 
     <div class="drizzle-o-ContentGrouping">

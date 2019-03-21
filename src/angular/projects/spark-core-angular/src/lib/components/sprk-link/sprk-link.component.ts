@@ -30,7 +30,7 @@ export class SparkLinkComponent implements OnInit {
   @Input()
   linkType: string;
   @Input()
-  href = '#';
+  href: string;
   @Input()
   idString: string;
   @Input()
@@ -61,8 +61,14 @@ export class SparkLinkComponent implements OnInit {
   isExternal = false;
 
   ngOnInit() {
+    // Sets the default href if none provided
     if (this.href === '' || this.href === null || this.href === undefined) {
       this.href = '#';
+      return;
+    }
+    // Build jump link's href
+    if (this.isJumpLink(this.href)) {
+      this.href = `${this.getPathWithoutHash(this.router.url)}${this.href}`;
     }
   }
 
@@ -70,27 +76,48 @@ export class SparkLinkComponent implements OnInit {
     return new RegExp('^.*:', 'i').test(value);
   }
 
+  isJumpLinkWithPage(value): boolean {
+    return new RegExp('^.*#.+', 'i').test(value);
+  }
+
   isJumpLink(value): boolean {
     return new RegExp('^#.+', 'i').test(value);
   }
 
-  isDefault(value): boolean {
+  isNoActionLink(value): boolean {
     return value === '#';
   }
 
+  getPathWithoutHash(value): string {
+    return value.split('#')[0];
+  }
+
+  scrollToId() {
+    const elementID = this.href.split('#').pop();
+    const element: HTMLElement = document.getElementById(elementID);
+    element.scrollIntoView();
+  }
+
   handleClick(event): void {
+    // Let browser handle route if external Link
     if (this.isExternalLink(this.href) || this.isExternal) {
       return;
     }
 
     event.preventDefault();
 
-    if (this.isDefault(this.href)) {
+    // Prevent default and return
+    if (this.isNoActionLink(this.href)) {
       return;
-    } else if (this.isJumpLink(this.href)) {
-      this.router.navigateByUrl(this.router.url + this.href);
-    } else {
-      this.router.navigateByUrl(this.href);
+    } else if (this.isJumpLinkWithPage(this.href)) {
+      if (
+        this.getPathWithoutHash(this.href) ===
+        this.getPathWithoutHash(this.router.url)
+      ) {
+        this.scrollToId();
+      } else {
+        this.router.navigateByUrl(this.href);
+      }
     }
   }
 
