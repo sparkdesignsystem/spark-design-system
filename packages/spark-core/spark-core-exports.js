@@ -89,6 +89,10 @@ import {
   showDropDown,
   removeActiveStatus,
 } from './components/dropdown';
+import {
+  stepper,
+  bindUIEvents as bindStepperUIEvents,
+} from './components/stepper';
 
 export {
   dateInput,
@@ -179,4 +183,6 @@ export {
   hideDropDown,
   showDropDown,
   removeActiveStatus,
+  stepper,
+  bindStepperUIEvents,
 };
