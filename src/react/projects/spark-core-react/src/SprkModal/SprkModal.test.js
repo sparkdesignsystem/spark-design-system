@@ -10,3 +10,5 @@ it('should load the module', () => {
   const wrapper = shallow(<SprkModal />);
   expect(wrapper).toExist;
 });
+
+//foo
