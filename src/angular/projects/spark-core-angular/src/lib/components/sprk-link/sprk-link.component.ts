@@ -118,6 +118,8 @@ export class SparkLinkComponent implements OnInit {
       } else {
         this.router.navigateByUrl(this.href);
       }
+    } else {
+      this.router.navigateByUrl(this.href);
     }
   }
 
