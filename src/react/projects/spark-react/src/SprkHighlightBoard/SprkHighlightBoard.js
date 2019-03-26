@@ -26,8 +26,8 @@ const SprkHighlightBoard = props => {
 
   warning(
     (imgSrc && imgAlt) || (!imgSrc && !imgAlt),
-    'SprkHighlightBoard: If imgSrc is provided, then imgAlt is required' +
-      ' (and vice versa).',
+    `SprkHighlightBoard: If imgSrc is provided, then imgAlt is required
+    (and vice versa).`,
   );
 
   const classNames = classnames(
@@ -49,16 +49,13 @@ const SprkHighlightBoard = props => {
       )}
 
       <div
-        className="
-      sprk-c-HighlightBoard__content
-      sprk-o-Stack sprk-o-Stack--large"
+        className="sprk-c-HighlightBoard__content
+        sprk-o-Stack sprk-o-Stack--large"
       >
         {heading && (
           <h1
-            className="
-            sprk-b-TypeDisplayOne
-            sprk-c-HighlightBoard__heading
-            sprk-o-Stack__item"
+            className="sprk-b-TypeDisplayOne
+            sprk-c-HighlightBoard__heading sprk-o-Stack__item"
           >
             {heading}
           </h1>
@@ -85,7 +82,7 @@ const SprkHighlightBoard = props => {
                   href={ctaHref}
                   analyticsString={ctaAnalytics}
                   idString={ctaIdString}
-                  additionalClasses="sprk-c-Button--full@sm"
+                  additionalClasses="sprk-c-Button--full@s"
                 >
                   {ctaText}
                 </SprkButton>
@@ -100,7 +97,7 @@ const SprkHighlightBoard = props => {
                   href={ctaHref2}
                   analyticsString={ctaAnalytics2}
                   idString={ctaIdString2}
-                  additionalClasses="sprk-c-Button--full@sm"
+                  additionalClasses="sprk-c-Button--full@s"
                 >
                   {ctaText2}
                 </SprkButton>
@@ -145,20 +142,20 @@ SprkHighlightBoard.propTypes = {
 };
 
 SprkHighlightBoard.defaultProps = {
-  imgSrc: '',
-  imgAlt: '',
-  heading: '',
-  ctaText: '',
-  ctaHref: '',
-  ctaAnalytics: '',
-  ctaAnalytics2: '',
-  ctaIdString: '',
-  ctaText2: '',
-  ctaHref2: '',
-  ctaIdString2: '',
-  variant: '',
-  idString: '',
-  additionalClasses: '',
+  imgSrc: null,
+  imgAlt: null,
+  heading: null,
+  ctaText: null,
+  ctaHref: null,
+  ctaAnalytics: null,
+  ctaIdString: null,
+  ctaText2: null,
+  ctaHref2: null,
+  ctaAnalytics2: null,
+  ctaIdString2: null,
+  variant: null,
+  idString: null,
+  additionalClasses: null,
 };
 
 export default SprkHighlightBoard;
