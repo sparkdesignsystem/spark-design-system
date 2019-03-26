@@ -61,7 +61,9 @@ class SprkMastheadAccordionItem extends Component {
               onClick={this.toggleAccordionOpen}
               aria-expanded={isOpen ? 'true' : 'false'}
             >
-              <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">{text}</span>
+              <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
+                {text}
+              </span>
               <SprkIcon
                 additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })}
                 iconName="chevron-down"
@@ -69,7 +71,7 @@ class SprkMastheadAccordionItem extends Component {
             </a>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-                {stateLinks.map((subnavlink) => {
+                {stateLinks.map(subnavlink => {
                   const {
                     element: innerElement,
                     href: innerHref,
@@ -81,7 +83,11 @@ class SprkMastheadAccordionItem extends Component {
                   return (
                     <li key={innerId}>
                       <InnerTagName
-                        href={InnerTagName === 'a' ? innerHref || '#nogo' : undefined}
+                        href={
+                          InnerTagName === 'a'
+                            ? innerHref || '#nogo'
+                            : undefined
+                        }
                         className={classNames(
                           'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link',
                         )}
@@ -101,13 +107,17 @@ class SprkMastheadAccordionItem extends Component {
             className={classNames(
               { 'sprk-c-MastheadAccordion__summary': !isButton },
               {
-                'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@sm': isButton,
+                'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s': isButton,
               },
             )}
             href={TagName === 'a' ? href : undefined}
             {...rest}
           >
-            <span className={classNames({ 'sprk-c-MastheadAccordion__heading': !isButton })}>
+            <span
+              className={classNames({
+                'sprk-c-MastheadAccordion__heading': !isButton,
+              })}
+            >
               {leadingIcon && (
                 <SprkIcon
                   additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs"
