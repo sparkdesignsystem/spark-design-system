@@ -117,14 +117,50 @@ title: React
 
     <div class="drizzle-o-ContentGrouping">
       <p>
-        The following Spark React components rely on their 'something something'
-        Spark Core Extra packages:
+        The following Spark React components rely on their coordinating
+        Spark Extra packages:
         <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
-          <li>Spark Card</li>
-          <li>Spark Highlight Board</li>
-          <li>Spark Dictionary</li>
+          <li>
+            <p>Spark Card</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                npm install --save-dev @sparkdesignsystem/spark-card
+              </code>
+            </div>  
+          </li>
+          <li>
+            <p>Spark Highlight Board</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                npm install --save-dev @sparkdesignsystem/spark-highlight-board
+              </code>
+            </div>  
+          </li>
+          <li>
+            <p>Spark Dictionary</p>
+            <div class="drizzle-c-Command">
+              <code class="drizzle-CodeHighlight">
+                npm install --save-dev @sparkdesignsystem/spark-dictionary
+              </code>
+            </div>  
+          </li>
         </ul>
       </p>
+    </div>
+  </div>
+
+  <div class="drizzle-o-ContentGrouping">
+    <h2 class="drizzle-b-h2">Using Components</h2>
+
+    <div class="drizzle-o-ContentGrouping">
+      <p>To use a Spark React Component,
+        it needs to be imported into your component js file
+        using the following pattern:</p>
+      <div class="drizzle-c-Command">
+        <code class="drizzle-CodeHighlight">
+          import { ComponentName } from '@sparkdesignsystem/spark-react';
+        </code>
+      </div> 
     </div>
   </div>
 
