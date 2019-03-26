@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SprkAlert } from '@sparkdesignsystem/spark-core-react';
+import { SprkAlert } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
 class SprkAlertDocs extends Component {
@@ -33,7 +33,9 @@ class SprkAlertDocs extends Component {
             variant="info"
             idString="alert-1"
             additionalClasses="sprk-u-mbh"
-            onDismiss={() => { this.setState({ isVisible1: false }); }}
+            onDismiss={() => {
+              this.setState({ isVisible1: false });
+            }}
           />
         </div>
 
@@ -43,7 +45,9 @@ class SprkAlertDocs extends Component {
             message="Success alert message placeholder."
             variant="success"
             idString="alert-2"
-            onDismiss={() => { this.setState({ isVisible2: false }); }}
+            onDismiss={() => {
+              this.setState({ isVisible2: false });
+            }}
           />
         </div>
 
@@ -52,7 +56,9 @@ class SprkAlertDocs extends Component {
             isVisible={isVisible3}
             message="Plain alert message placeholder."
             idString="alert-3"
-            onDismiss={() => { this.setState({ isVisible3: false }); }}
+            onDismiss={() => {
+              this.setState({ isVisible3: false });
+            }}
           />
         </div>
 
@@ -62,7 +68,9 @@ class SprkAlertDocs extends Component {
             message="Fail alert message placeholder."
             variant="fail"
             idString="alert-4"
-            onDismiss={() => { this.setState({ isVisible4: false }); }}
+            onDismiss={() => {
+              this.setState({ isVisible4: false });
+            }}
           />
         </div>
 
@@ -79,7 +87,9 @@ class SprkAlertDocs extends Component {
         <div className="sprk-u-mbm">
           <SprkAlert
             isVisible={isVisible6}
-            onDismiss={() => { this.setState({ isVisible6: false }); }}
+            onDismiss={() => {
+              this.setState({ isVisible6: false });
+            }}
             message="ALERT ALERT!"
             variant="success"
             idString="alert-5"

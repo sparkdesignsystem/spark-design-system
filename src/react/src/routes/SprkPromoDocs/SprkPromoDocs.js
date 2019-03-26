@@ -1,7 +1,7 @@
 import React from 'react';
+import { SprkPromo } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
-import { SprkPromo } from '@sparkdesignsystem/spark-core-react';
 
 const SprkPromoDocs = () => {
   return (
@@ -19,8 +19,10 @@ const SprkPromoDocs = () => {
             ctaIdString="promo-cta-1"
             hasBorder
             idString="promo-1"
-            >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>
@@ -38,8 +40,10 @@ const SprkPromoDocs = () => {
             ctaIdString="promo-cta-2"
             idString="promo-2"
             hasBorder
-            >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>
@@ -56,8 +60,10 @@ const SprkPromoDocs = () => {
             idString="promo-3"
             isFlag
             hasBorder
-            >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>
@@ -79,8 +85,10 @@ const SprkPromoDocs = () => {
             isFlag
             mediaRev
             hasBorder
-            >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>
@@ -102,8 +110,10 @@ const SprkPromoDocs = () => {
             imgLinkIdString="promo-5-img-link"
             idString="promo-5"
             hasBorder
-            >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>
@@ -127,8 +137,10 @@ const SprkPromoDocs = () => {
             idString="promo-6"
             mediaRev
             hasBorder
-            >
-              Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>
@@ -155,8 +167,10 @@ const SprkPromoDocs = () => {
             hasBorder
             isFlag
             mediaRev
-            >
-              Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+          >
+            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+            inventore integer eum non enim diam habitant. Maecenas nunc per
+            lacus neque egestas. Diam quod curabitur.
           </SprkPromo>
         </div>
       </ExampleContainer>

@@ -1,11 +1,13 @@
 import React from 'react';
-import { SprkTextInput } from '@sparkdesignsystem/spark-core-react';
-import { isValidPhone,
+import { SprkTextInput } from '@sparkdesignsystem/spark-react';
+import {
+  isValidPhone,
   isValidDate,
   formatDate,
   formatPhone,
   isValidMonetary,
-  formatMonetary } from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+  formatMonetary,
+} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkTextInputDocs extends React.Component {
@@ -39,7 +41,11 @@ class SprkTextInputDocs extends React.Component {
     return (
       <React.Fragment>
         <ExampleContainer heading="Text">
-          <SprkTextInput label="Name" name="Name" placeholder="Enter your first name" />
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            placeholder="Enter your first name"
+          />
         </ExampleContainer>
         <ExampleContainer heading="Text with Helper">
           <SprkTextInput
@@ -87,7 +93,11 @@ class SprkTextInputDocs extends React.Component {
             name="phone"
             placeholder="(000) 000-0000"
             valid={isValidPhone(phone)}
-            value={isValidPhone(phone) && formatPhone(phone) ? formatPhone(phone) : phone}
+            value={
+              isValidPhone(phone) && formatPhone(phone)
+                ? formatPhone(phone)
+                : phone
+            }
             onChange={this.handleChange}
             errorMessage="Incorrect phone number."
           />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkSelectionInput } from '@sparkdesignsystem/spark-core-react';
+import { SprkSelectionInput } from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 function SprkSelectionInputDocs() {
@@ -46,10 +46,18 @@ function SprkSelectionInputDocs() {
   return (
     <React.Fragment>
       <ExampleContainer heading="Checkbox">
-        <SprkSelectionInput groupLabel="Checkbox Input" choices={choices} variant="checkbox" />
+        <SprkSelectionInput
+          groupLabel="Checkbox Input"
+          choices={choices}
+          variant="checkbox"
+        />
       </ExampleContainer>
       <ExampleContainer heading="Radio">
-        <SprkSelectionInput groupLabel="Radio Input" choices={choices} variant="radio" />
+        <SprkSelectionInput
+          groupLabel="Radio Input"
+          choices={choices}
+          variant="radio"
+        />
       </ExampleContainer>
       <ExampleContainer heading="Select">
         <SprkSelectionInput choices={selectChoices} variant="select" />

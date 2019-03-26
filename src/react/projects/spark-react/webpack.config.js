@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src',
   output: {
-    path: path.resolve(__dirname, '../../dist/spark-core-react'),
+    path: path.resolve(__dirname, '../../dist/spark-react'),
   },
   module: {
     rules: [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkFooter } from '@sparkdesignsystem/spark-core-react';
+import { SprkFooter } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
 const globalItems = {
@@ -7,7 +7,8 @@ const globalItems = {
   items: [
     {
       mediaType: 'image',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -16,7 +17,8 @@ const globalItems = {
     },
     {
       mediaType: 'image',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
       mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -203,14 +205,16 @@ const awards = {
   images: [
     {
       href: '#nogo',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
       addClasses: 'drizzle-c-Logo',
       element: 'a',
     },
     {
       href: '#nogo',
-      src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+      src:
+        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
       addClasses: 'drizzle-c-Logo',
       element: 'a',

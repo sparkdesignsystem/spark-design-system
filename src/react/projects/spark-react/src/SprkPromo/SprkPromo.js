@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import SprkLink from '../SprkLink/SprkLink';
+import SprkButton from '../SprkButton/SprkButton';
 
-const SprkPromo = (props) => {
+const SprkPromo = props => {
   const {
     title,
     subtitle,
@@ -30,157 +31,162 @@ const SprkPromo = (props) => {
 
   return (
     <div
-      className={
-        classnames(
-          'sprk-c-Promo',
-          'sprk-o-Stack',
-          {'sprk-c-Promo--flag': isFlag},
-          {'sprk-c-Promo--bordered': hasBorder},
-          additionalClasses
-        )}
+      className={classnames(
+        'sprk-c-Promo',
+        'sprk-o-Stack',
+        { 'sprk-c-Promo--flag': isFlag },
+        { 'sprk-c-Promo--bordered': hasBorder },
+        additionalClasses,
+      )}
       data-id={idString}
-      {...other} >
-
-      {imgSrc && isFlag && !mediaRev &&
-        <SprkLink
-          variant="plain"
-          href={imgLinkHref}
-          additionalClasses={
-            classnames(
+      {...other}
+    >
+      {imgSrc &&
+        isFlag &&
+        !mediaRev && (
+          <SprkLink
+            variant="plain"
+            href={imgLinkHref}
+            additionalClasses={classnames(
               'sprk-o-Stack__item--fourth@s',
               'sprk-o-Stack__item',
-              additionalClassesImgLink
+              additionalClassesImgLink,
             )}
-          analyticsString={imgLinkAnalytics}
-          idString={imgLinkIdString} >
-
-          <img
+            analyticsString={imgLinkAnalytics}
+            idString={imgLinkIdString}
+          >
+            <img
               className="sprk-c-Promo__image--flag"
               alt={imgAlt}
-              src={imgSrc} />
-        </SprkLink>
-      }
+              src={imgSrc}
+            />
+          </SprkLink>
+        )}
 
-      {imgSrc && !mediaRev && !isFlag &&
-        <SprkLink
-          variant="plain"
-          href={imgLinkHref}
-          additionalClasses={
-            classnames(
+      {imgSrc &&
+        !mediaRev &&
+        !isFlag && (
+          <SprkLink
+            variant="plain"
+            href={imgLinkHref}
+            additionalClasses={classnames(
               'sprk-o-Stack__item',
               'sprk-o-Stack__item--half@s',
-              additionalClassesImgLink
+              additionalClassesImgLink,
             )}
-          analyticsString={imgLinkAnalytics}
-          idString={imgLinkIdString} >
+            analyticsString={imgLinkAnalytics}
+            idString={imgLinkIdString}
+          >
+            <img className="sprk-c-Promo__image" alt={imgAlt} src={imgSrc} />
+          </SprkLink>
+        )}
 
-          <img
-            className="sprk-c-Promo__image"
-            alt={imgAlt}
-            src={imgSrc} />
-        </SprkLink>
-      }
-
-      <div className={
-        classnames(
+      <div
+        className={classnames(
           'sprk-c-Promo__content',
           'sprk-o-Stack__item',
           'sprk-o-Stack',
           'sprk-o-Stack--large',
-          {'sprk-o-Stack__item--three-fourths@s': isFlag},
-          {'sprk-o-Stack__item--half@s': imgSrc},
-          additionalClassesContent
-        )} >
-
-        {title &&
-          <h3 className = "sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
+          { 'sprk-o-Stack__item--three-fourths@s': isFlag },
+          { 'sprk-o-Stack__item--half@s': imgSrc },
+          additionalClassesContent,
+        )}
+      >
+        {title && (
+          <h3
+            className="
+            sprk-b-TypeDisplayFive
+            sprk-o-Stack__item
+            sprk-c-Promo__title"
+          >
             {title}
           </h3>
-        }
+        )}
 
-        {subtitle &&
+        {subtitle && (
           <div className="sprk-c-Promo__subtitle sprk-o-Stack__item">
             {subtitle}
           </div>
-        }
+        )}
 
-        <div className="sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-c-Promo__childrenContainer">
+        <div
+          className="
+          sprk-b-TypeBodyTwo
+          sprk-o-Stack__item
+          sprk-c-Promo__childrenContainer"
+        >
           {children}
         </div>
 
-        {cta === 'button' &&
-          <div className='sprk-o-Stack__item'>
+        {cta === 'button' && (
+          <div className="sprk-o-Stack__item">
             <SprkButton
               element="a"
               href={ctaHref}
               analyticsString={ctaAnalytics}
-              idString={ctaIdString} >
-
+              idString={ctaIdString}
+            >
               {ctaText}
             </SprkButton>
           </div>
-        }
+        )}
 
-        {cta === 'link' &&
+        {cta === 'link' && (
           <div className="sprk-o-Stack__item">
             <SprkLink
               variant="base"
               href={ctaHref}
               analyticsString={ctaAnalytics}
-              idString={ctaIdString} >
-
-                {ctaText}
+              idString={ctaIdString}
+            >
+              {ctaText}
             </SprkLink>
           </div>
-        }
+        )}
       </div>
 
-      {isFlag && imgSrc && mediaRev &&
-
-        <SprkLink
-          variant="plain"
-          href={imgLinkHref}
-          additionalClasses={
-            classnames(
+      {isFlag &&
+        imgSrc &&
+        mediaRev && (
+          <SprkLink
+            variant="plain"
+            href={imgLinkHref}
+            additionalClasses={classnames(
               'sprk-o-Stack__item--fourth@s',
               'sprk-o-Stack__item',
-              additionalClassesImgLink
+              additionalClassesImgLink,
             )}
-          analyticsString={imgLinkAnalytics}
-          idString={imgLinkIdString} >
-
-          <img
+            analyticsString={imgLinkAnalytics}
+            idString={imgLinkIdString}
+          >
+            <img
               className="sprk-c-Promo__image--flag"
               alt={imgAlt}
-              src={imgSrc} />
+              src={imgSrc}
+            />
+          </SprkLink>
+        )}
 
-        </SprkLink>
-      }
-
-      {!isFlag && imgSrc && mediaRev &&
-
-        <SprkLink
-          variant="plain"
-          href={imgLinkHref}
-          additionalClasses={
-            classnames(
+      {!isFlag &&
+        imgSrc &&
+        mediaRev && (
+          <SprkLink
+            variant="plain"
+            href={imgLinkHref}
+            additionalClasses={classnames(
               'sprk-o-Stack__item',
               'sprk-o-Stack__item--half@s',
-              additionalClassesImgLink
+              additionalClassesImgLink,
             )}
-          analyticsString={imgLinkAnalytics}
-          idString={imgLinkIdString} >
-
-            <img
-              className="sprk-c-Promo__image"
-              alt={imgAlt}
-              src={imgSrc} />
-
-        </SprkLink>
-      }
+            analyticsString={imgLinkAnalytics}
+            idString={imgLinkIdString}
+          >
+            <img className="sprk-c-Promo__image" alt={imgAlt} src={imgSrc} />
+          </SprkLink>
+        )}
     </div>
   );
-}
+};
 
 SprkPromo.propTypes = {
   // The children that will be rendered inside the content portion of the promo
@@ -189,8 +195,8 @@ SprkPromo.propTypes = {
   title: PropTypes.string,
   // The text to appear in the subtitle section
   subtitle: PropTypes.string,
-  // Any additional classes (space-delimited string) to apply to the root element
-  // of the Promo
+  // Any additional classes (space-delimited string) to apply to the root
+  // element of the Promo
   additionalClasses: PropTypes.string,
   // Any additional classes (space-delimited string) to apply to the content
   // element of the Promo
@@ -226,8 +232,32 @@ SprkPromo.propTypes = {
   // If provided, the Promo will be rendered in reverse horizontal order
   // (content on the left, image on the right)
   mediaRev: PropTypes.bool,
-  // If provided, the Promo will be rendered with the sprk-c-Promo--bordered class.
+  // If provided, the Promo will be rendered with the sprk-c-Promo--bordered
+  // class.
   hasBorder: PropTypes.bool,
+};
+
+SprkPromo.defaultProps = {
+  children: [],
+  title: '',
+  subtitle: '',
+  additionalClasses: '',
+  additionalClassesContent: '',
+  cta: '',
+  ctaText: '',
+  ctaHref: '',
+  ctaAnalytics: '',
+  ctaIdString: '',
+  imgSrc: '',
+  imgAlt: '',
+  imgLinkHref: '',
+  imgLinkAnalytics: '',
+  imgLinkIdString: '',
+  additionalClassesImgLink: '',
+  idString: '',
+  isFlag: false,
+  mediaRev: false,
+  hasBorder: false,
 };
 
 export default SprkPromo;

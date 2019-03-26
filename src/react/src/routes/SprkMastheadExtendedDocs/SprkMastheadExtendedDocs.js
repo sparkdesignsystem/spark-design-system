@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  SprkMasthead, SprkLink, SprkButton, SprkIcon, SprkDropdown,
-} from '@sparkdesignsystem/spark-core-react';
+  SprkMasthead,
+  SprkLink,
+  SprkButton,
+  SprkIcon,
+  SprkDropdown,
+} from '@sparkdesignsystem/spark-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 
@@ -86,7 +90,9 @@ function SprkMastheadExtendedDocs() {
   ];
 
   const dropdownChoices = {
-    choiceFunction: (choiceText) => { console.log(choiceText); },
+    choiceFunction: choiceText => {
+      console.log(choiceText);
+    },
     items: [
       {
         text: 'Option 1',
@@ -108,9 +114,10 @@ function SprkMastheadExtendedDocs() {
     ],
   };
 
-
   const selector = {
-    choiceFunction: (text) => { console.log(text); },
+    choiceFunction: text => {
+      console.log(text);
+    },
     items: [
       {
         title: 'Selection Choice Title 1',
@@ -125,13 +132,44 @@ function SprkMastheadExtendedDocs() {
         value: 'choice-2',
       },
     ],
-    footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
+    footer: (
+      <SprkButton
+        variant="tertiary"
+        additionalClasses="sprk-c-Button--compact"
+        onClick={() => {
+          console.log('Clicked!');
+        }}
+      >
+        Placeholder
+      </SprkButton>
+    ),
   };
 
   const utilityItems = [
-    <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
-    <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link"><SprkIcon iconName="settings" additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l" /></SprkLink>,
-    <SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconName="user" choices={dropdownChoices} title="My Choices" />,
+    <SprkLink
+      href="#nogo"
+      variant="plain"
+      additionalClasses="sprk-c-Masthead__link"
+    >
+      Talk To Us
+    </SprkLink>,
+    <SprkLink
+      href="#nogo"
+      variant="plain"
+      additionalClasses="sprk-c-Masthead__link"
+    >
+      <SprkIcon
+        iconName="settings"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l"
+      />
+    </SprkLink>,
+    <SprkDropdown
+      additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+      additionalIconClasses="sprk-c-Icon--l"
+      iconName="user"
+      choices={dropdownChoices}
+      title="My Choices"
+    />,
   ];
 
   return (

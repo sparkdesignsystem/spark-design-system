@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkAward } from '@sparkdesignsystem/spark-core-react';
+import { SprkAward } from '@sparkdesignsystem/spark-react';
 import { Link } from 'react-router-dom';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
@@ -22,7 +22,8 @@ const SprkAwardDocs = () => (
       images={[
         {
           href: 'https://www.sparkdesignsystem.com',
-          src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+          src:
+            'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
           alt: 'Spark Placeholder Logo',
           analyticsString: 'award-1',
           element: Link,
@@ -30,7 +31,8 @@ const SprkAwardDocs = () => (
         },
         {
           href: 'https://www.sparkdesignsystem.com',
-          src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+          src:
+            'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
           alt: 'Spark Placeholder Logo',
           analyticsString: 'award-2',
           element: 'a',
