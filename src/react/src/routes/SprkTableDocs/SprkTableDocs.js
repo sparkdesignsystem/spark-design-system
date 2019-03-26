@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkTable, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import { SprkTable, SprkButton } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 

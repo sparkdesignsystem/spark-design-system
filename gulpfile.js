@@ -13,20 +13,20 @@ require('./gulp/angular/spark-extras-angular-card/spark-extras-angular-card.gulp
 require('./gulp/angular/spark-extras-angular-dictionary/spark-extras-angular-dictionary.gulpfile.js');
 require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.gulpfile.js');
 require('./gulp/react/dev-app/reactdevapp.gulpfile.js');
-require('./gulp/react/spark-core-react/spark-core-react.gulpfile.js');
+require('./gulp/react/spark-react/spark-react.gulpfile.js');
 
-gulp.task('pre-publish', (cb) => {
+gulp.task('pre-publish', cb => {
   runSequence(
     'setup-spark-packages',
     'build-drizzle',
     ['install-angular-dev-app', 'install-react-dev-app'],
     'link-spark-to-react-dir',
-    ['setup-spark-angular-projects', 'setup-spark-core-react'],
+    ['setup-spark-angular-projects', 'setup-spark-react'],
     cb,
   );
 });
 
-gulp.task('setup-spark-packages', (cb) => {
+gulp.task('setup-spark-packages', cb => {
   runSequence(
     'setup-spark-core',
     'setup-spark-card',
@@ -37,7 +37,7 @@ gulp.task('setup-spark-packages', (cb) => {
 });
 
 // assumes that setup-spark-packages has been run
-gulp.task('setup-spark-angular-projects', (cb) => {
+gulp.task('setup-spark-angular-projects', cb => {
   runSequence(
     'setup-spark-core-angular',
     [
@@ -50,7 +50,7 @@ gulp.task('setup-spark-angular-projects', (cb) => {
   );
 });
 
-gulp.task('clean-all', (cb) => {
+gulp.task('clean-all', cb => {
   runSequence(
     [
       'clean',
@@ -58,7 +58,7 @@ gulp.task('clean-all', (cb) => {
       'clean-spark-highlight-board',
       'clean-angular-dev-app',
       'clean-react-dev-app',
-      'clean-spark-core-react',
+      'clean-spark-react',
       'clean-spark-core-angular',
       'clean-spark-extras-angular-award',
       'clean-spark-extras-angular-card',
@@ -69,11 +69,11 @@ gulp.task('clean-all', (cb) => {
   );
 });
 
-gulp.task('dev-spark-packages', (cb) => {
+gulp.task('dev-spark-packages', cb => {
   runSequence('setup-spark-packages', 'build-drizzle', ['watch', 'serve'], cb);
 });
 
-gulp.task('dev-spark-angular', (cb) => {
+gulp.task('dev-spark-angular', cb => {
   runSequence(
     'install-angular-dev-app',
     'setup-spark-packages',
@@ -83,32 +83,32 @@ gulp.task('dev-spark-angular', (cb) => {
   );
 });
 
-gulp.task('dev-spark-react', (cb) => {
+gulp.task('dev-spark-react', cb => {
   runSequence(
     'setup-spark-packages',
     'install-react-dev-app',
     'link-spark-to-react-dir',
-    'setup-spark-core-react',
+    'setup-spark-react',
     ['serve-react-dev-app', 'watch'],
     cb,
   );
 });
 
-gulp.task('dev-all', (cb) => {
+gulp.task('dev-all', cb => {
   runSequence(
     'setup-spark-packages',
     'install-angular-dev-app',
     'install-react-dev-app',
     'setup-spark-angular-projects',
     'link-spark-to-react-dir',
-    'setup-spark-core-react',
+    'setup-spark-react',
     'build-drizzle',
     ['serve-angular-dev-app', 'serve-react-dev-app', 'serve', 'watch'],
     cb,
   );
 });
 
-gulp.task('test-angular', (cb) => {
+gulp.task('test-angular', cb => {
   runSequence(
     'test-spark-core-angular',
     'test-spark-extras-angular-award',
@@ -119,23 +119,17 @@ gulp.task('test-angular', (cb) => {
   );
 });
 
-gulp.task('test-react', (cb) => {
-  runSequence(
-    'test-spark-core-react',
-    cb,
-  );
+gulp.task('test-react', cb => {
+  runSequence('test-spark-react', cb);
 });
 
 // netlify
-gulp.task('build', (cb) => {
-  runSequence(
-    'pre-publish',
-    cb,
-  );
+gulp.task('build', cb => {
+  runSequence('pre-publish', cb);
 });
 
 // netlify
-gulp.task('build-angular', (cb) => {
+gulp.task('build-angular', cb => {
   runSequence(
     'install-angular-dev-app',
     'setup-spark-packages',
@@ -146,12 +140,12 @@ gulp.task('build-angular', (cb) => {
 });
 
 // netlify react
-gulp.task('build-react', (cb) => {
+gulp.task('build-react', cb => {
   runSequence(
     'setup-spark-packages',
     'install-react-dev-app',
     'link-spark-to-react-dir',
-    'setup-spark-core-react',
+    'setup-spark-react',
     'build-react-dev-app-netlify',
     cb,
   );

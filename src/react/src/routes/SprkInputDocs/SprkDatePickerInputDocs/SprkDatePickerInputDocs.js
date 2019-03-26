@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SprkDatePickerInput } from '@sparkdesignsystem/spark-core-react';
+import { SprkDatePickerInput } from '@sparkdesignsystem/spark-react';
 import { formatDate, isValidDate } from '@sparkdesignsystem/spark-core';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 

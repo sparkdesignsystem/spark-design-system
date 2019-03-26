@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { SprkRevealInput } from '@sparkdesignsystem/spark-core-react';
-import { isValidSSN, formatSSN } from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+import { SprkRevealInput } from '@sparkdesignsystem/spark-react';
+import {
+  isValidSSN,
+  formatSSN,
+} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkRevealInputDocs extends Component {
@@ -24,7 +27,11 @@ class SprkRevealInputDocs extends Component {
     return (
       <React.Fragment>
         <ExampleContainer heading="Password Entry">
-          <SprkRevealInput label="Password" toggleLabel="Show Password" name="password-1" />
+          <SprkRevealInput
+            label="Password"
+            toggleLabel="Show Password"
+            name="password-1"
+          />
         </ExampleContainer>
         <ExampleContainer heading="SSN">
           <SprkRevealInput

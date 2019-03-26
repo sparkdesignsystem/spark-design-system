@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SprkMasthead, SprkLink, SprkButton } from '@sparkdesignsystem/spark-core-react';
+import {
+  SprkMasthead,
+  SprkLink,
+  SprkButton,
+} from '@sparkdesignsystem/spark-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
 import SiteLogo from '../../components/SiteLogo/SiteLogo';
 
@@ -40,9 +44,28 @@ function SprkMastheadDefaultDocs() {
   ];
 
   const utilityItems = [
-    <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
-    <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
-    <SprkButton element={Link} to="/button" variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>,
+    <SprkLink
+      href="#nogo"
+      variant="plain"
+      additionalClasses="sprk-c-Masthead__link"
+    >
+      (555) 555-5555
+    </SprkLink>,
+    <SprkLink
+      href="#nogo"
+      variant="plain"
+      additionalClasses="sprk-c-Masthead__link"
+    >
+      Talk To Us
+    </SprkLink>,
+    <SprkButton
+      element={Link}
+      to="/button"
+      variant="secondary"
+      additionalClasses="sprk-c-Button--compact"
+    >
+      Sign In
+    </SprkButton>,
   ];
 
   return (

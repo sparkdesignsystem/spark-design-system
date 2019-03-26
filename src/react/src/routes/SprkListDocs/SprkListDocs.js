@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkList, SprkListItem } from '@sparkdesignsystem/spark-core-react';
+import { SprkList, SprkListItem } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
