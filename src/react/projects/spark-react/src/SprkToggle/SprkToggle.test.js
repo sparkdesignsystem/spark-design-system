@@ -25,7 +25,9 @@ it('should default to open if defaultOpen is true', () => {
 });
 
 it('should toggle open on click', () => {
-  const wrapper = mount(<SprkToggle title="Toggle title">Body text</SprkToggle>);
+  const wrapper = mount(
+    <SprkToggle title="Toggle title">Body text</SprkToggle>,
+  );
   expect(wrapper.state().isOpen).toBe(false);
   wrapper.find('a').simulate('click');
   expect(wrapper.state().isOpen).toBe(true);
@@ -34,13 +36,17 @@ it('should toggle open on click', () => {
 });
 
 it('should add a class to icon when opened', () => {
-  const wrapper = mount(<SprkToggle title="Toggle title">Body text</SprkToggle>);
+  const wrapper = mount(
+    <SprkToggle title="Toggle title">Body text</SprkToggle>,
+  );
   wrapper.find('a').simulate('click');
   expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
 });
 
 it('should add aria-expanded="true" when the toggle is open', () => {
-  const wrapper = mount(<SprkToggle title="Toggle title">Body text</SprkToggle>);
+  const wrapper = mount(
+    <SprkToggle title="Toggle title">Body text</SprkToggle>,
+  );
   wrapper.find('a').simulate('click');
   expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
 });
