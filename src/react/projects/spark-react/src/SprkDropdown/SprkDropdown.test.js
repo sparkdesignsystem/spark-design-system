@@ -12,7 +12,13 @@ it('should render a trigger with the correct classes', () => {
 });
 
 it('should render a footer if supplied with the choices', () => {
-  const choices = { footer: (<p>hi</p>), items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }] };
+  const choices = {
+    footer: <p>hi</p>,
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+      { text: 'Item 2', value: 'item-2' },
+    ],
+  };
   const wrapper = mount(<SprkDropdown choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('.sprk-c-Dropdown__footer').length).toBe(1);
@@ -25,7 +31,9 @@ it('should add classes to the dropdown when additionalClasses has a value', () =
 });
 
 it('should add classes to the icon when additionalIconClasses has a value', () => {
-  const wrapper = mount(<SprkDropdown additionalIconClasses="sprk-c-Icon--l" />);
+  const wrapper = mount(
+    <SprkDropdown additionalIconClasses="sprk-c-Icon--l" />,
+  );
   expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
 });
 
@@ -35,7 +43,9 @@ it('should add classes to the trigger when additionalTriggerClasses has a value'
 });
 
 it('should add classes to the trigger text when additionalTriggerTextClasses has a value', () => {
-  const wrapper = mount(<SprkDropdown additionalTriggerTextClasses="sprk-u-man" />);
+  const wrapper = mount(
+    <SprkDropdown additionalTriggerTextClasses="sprk-u-man" />,
+  );
   expect(wrapper.find('span.sprk-u-man').length).toBe(1);
 });
 
@@ -62,7 +72,10 @@ it('should assign the choices header when title has a value', () => {
 
 it('should build the correct number of choices from a choices object', () => {
   const choices = {
-    items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }],
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+      { text: 'Item 2', value: 'item-2' },
+    ],
   };
   const wrapper = mount(<SprkDropdown choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
@@ -73,7 +86,10 @@ it('should run the choiceFunction supplied with the list of choices (base)', () 
   const spyFunc = jest.fn();
   const choices = {
     choiceFunction: spyFunc,
-    items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }],
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+      { text: 'Item 2', value: 'item-2' },
+    ],
   };
   const wrapper = mount(<SprkDropdown choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
@@ -87,7 +103,10 @@ it('should run the choiceFunction supplied with the list of choices (base)', () 
 it('should not error if choiceFunction is supplied but undefined (base)', () => {
   const choices = {
     choiceFunction: undefined,
-    items: [{ text: 'Item 1', value: 'item-1' }, { text: 'Item 2', value: 'item-2' }],
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+      { text: 'Item 2', value: 'item-2' },
+    ],
   };
   const wrapper = mount(<SprkDropdown choices={choices} />);
   wrapper.find('.sprk-b-Link').simulate('click');
@@ -103,7 +122,9 @@ it('should run the choiceFunction supplied with the list of choices (information
     choiceFunction: spyFunc,
     items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
   };
-  const wrapper = mount(<SprkDropdown choices={choices} variant="informational" />);
+  const wrapper = mount(
+    <SprkDropdown choices={choices} variant="informational" />,
+  );
   wrapper.find('.sprk-b-Link').simulate('click');
   wrapper
     .find('.sprk-c-Dropdown__link')
@@ -117,7 +138,9 @@ it('should not error if choiceFunction is supplied but undefined (informational)
     choiceFunction: undefined,
     items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
   };
-  const wrapper = mount(<SprkDropdown choices={choices} variant="informational" />);
+  const wrapper = mount(
+    <SprkDropdown choices={choices} variant="informational" />,
+  );
   wrapper.find('.sprk-b-Link').simulate('click');
   wrapper
     .find('.sprk-c-Dropdown__link')
@@ -161,7 +184,9 @@ it('should unmount without error', () => {
 });
 
 it('should render the choices with the element specified', () => {
-  const wrapper = mount(<SprkDropdown choices={{ items: [{ element: 'p', text: 'Item 1' }] }} />);
+  const wrapper = mount(
+    <SprkDropdown choices={{ items: [{ element: 'p', text: 'Item 1' }] }} />,
+  );
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('p.sprk-c-Dropdown__link').length).toBe(1);
@@ -169,19 +194,37 @@ it('should render the choices with the element specified', () => {
 
 it('should pass unused keys on choice items through to the dom', () => {
   const wrapper = mount(
-    <SprkDropdown choices={{ items: [{ element: 'p', text: 'Item 1', 'aria-hidden': 'true' }] }} />,
+    <SprkDropdown
+      choices={{
+        items: [{ element: 'p', text: 'Item 1', 'aria-hidden': 'true' }],
+      }}
+    />,
   );
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.find('.sprk-b-Link').simulate('click');
-  expect(wrapper.find('.sprk-c-Dropdown__link[aria-hidden="true"]').length).toBe(1);
+  expect(
+    wrapper.find('.sprk-c-Dropdown__link[aria-hidden="true"]').length,
+  ).toBe(1);
 });
 
 it('should not set href if the supplied tagname is not a', () => {
   const wrapper = mount(
-    <SprkDropdown variant="informational" choices={{ items: [{ element: 'span', text: 'Item 1', content: { title: 'Item 1' } }] }} />,
+    <SprkDropdown
+      variant="informational"
+      choices={{
+        items: [
+          { element: 'span', text: 'Item 1', content: { title: 'Item 1' } },
+        ],
+      }}
+    />,
   );
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(wrapper.find('span.sprk-c-Dropdown__link').length).toBe(1);
-  expect(wrapper.find('span.sprk-c-Dropdown__link').instance().getAttribute('href')).toBe(null);
+  expect(
+    wrapper
+      .find('span.sprk-c-Dropdown__link')
+      .instance()
+      .getAttribute('href'),
+  ).toBe(null);
 });
