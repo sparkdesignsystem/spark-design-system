@@ -69,15 +69,19 @@ class SprkAccordionItem extends Component {
           onClick={this.toggle}
           aria-expanded={isOpen ? 'true' : 'false'}
         >
-          <h3 className={headingClassNames}>
-            {heading}
-          </h3>
-          <SprkIcon iconName="chevron-up-circle-two-color" additionalClasses={iconClasses} />
+          <h3 className={headingClassNames}>{heading}</h3>
+          <SprkIcon
+            iconName="chevron-up-circle-two-color"
+            additionalClasses={iconClasses}
+          />
         </a>
 
         <AnimateHeight duration={300} height={height}>
           <div
-            className={classnames('sprk-c-Accordion__content', contentAddClasses)}
+            className={classnames(
+              'sprk-c-Accordion__content',
+              contentAddClasses,
+            )}
             id={id}
           >
             {children}
