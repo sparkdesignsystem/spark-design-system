@@ -1,3 +1,138 @@
 // ==================================================================
 // Stepper
 // ==================================================================
+$sprk-stepper-bg: transparent !default;
+$sprk-stepper-bg-step: transparent !default;
+$sprk-stepper-max-width: 480px;
+
+$sprk-stepper-step-icon-border-width: 2px !default;
+$sprk-stepper-step-icon-height: 16px !default;
+$sprk-stepper-step-icon-width: 16px !default;
+$sprk-stepper-step-icon-color: $sprk-white !default;
+$sprk-stepper-step-icon-color-selected: $sprk-white !default;
+$sprk-stepper-step-icon-border-color: $sprk-black !default;
+$sprk-stepper-step-icon-border-color-selected: $sprk-green !default;
+$sprk-stepper-step-icon-border-color-has-dark-bg: $sprk-white !default;
+$sprk-stepper-step-icon-color-has-dark-bg: $sprk-blue !default;
+$sprk-stepper-step-icon-transition: 0.3s box-shadow ease-in-out !default;
+$sprk-stepper-step-icon-z-index: $sprk-layer-height-xs !default;
+
+$sprk-stepper-step-border-radius: 5px !default;
+$sprk-stepper-step-heading-font-weight: 400 !default;
+$sprk-stepper-step-heading-size: $sprk-font-size-display-six !default;
+$sprk-stepper-step-heading-color: $sprk-black !default;
+$sprk-stepper-step-heading-color-has-dark-bg: $sprk-white !default;
+$sprk-stepper-step-heading-color-selected: $sprk-black !default;
+$sprk-stepper-step-padding: $sprk-space-misc-a !default;
+$sprk-stepper-step-bg-selected: $sprk-white !default;
+$sprk-stepper-step-bg-selected-has-dark-bg: $sprk-white !default;
+$sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
+
+$sprk-stepper-step-bar-width: 2px !default;
+$sprk-stepper-step-bar-color: $sprk-black !default;
+$sprk-stepper-step-bar-color-has-dark-bg: $sprk-white !default;
+
+$sprk-stepper-step-icon-diameter: $sprk-stepper-step-icon-width + $sprk-stepper-step-icon-border-width;
+$sprk-stepper-step-icon-radius: $sprk-stepper-step-icon-diameter / 2;
+$sprk-stepper-step-bar-left-spacing: $sprk-space-l;
+$sprk-stepper-step-content-margin-left: ($sprk-stepper-step-bar-left-spacing * 2) + $sprk-stepper-step-bar-width;
+$sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-stepper-step-icon-radius));
+
+.sprk-c-Stepper {
+  background-color: $sprk-stepper-bg;
+  list-style-type: none;
+  position: relative;
+  max-width: $sprk-stepper-max-width;
+}
+
+.sprk-c-Stepper--has-dark-bg {
+  .sprk-c-Stepper__step-heading {
+    color: $sprk-stepper-step-heading-color-has-dark-bg;
+  }
+  .sprk-c-Stepper__step::before {
+    background-color: $sprk-stepper-step-bar-color-has-dark-bg;
+  }
+  .sprk-c-Stepper__step-icon {
+    background-color: $sprk-stepper-step-icon-color-has-dark-bg;
+    border-color: $sprk-stepper-step-icon-border-color-has-dark-bg;
+  }
+  .sprk-c-Stepper__step--selected
+  .sprk-c-Stepper__step-content--has-description {
+    background-color: $sprk-stepper-step-bg-selected-has-dark-bg;
+  }
+  .sprk-c-Stepper__step--selected
+  .sprk-c-Stepper__step-icon {
+    background-color: $sprk-stepper-step-bg-selected-has-dark-bg;
+  }
+}
+
+.sprk-c-Stepper__step {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.sprk-c-Stepper__step::before {
+  width: $sprk-stepper-step-bar-width;
+  background-color: $sprk-stepper-step-bar-color;
+  content: '';
+  height: 100%;
+  left: $sprk-stepper-step-bar-left-spacing;
+  position: absolute;
+}
+
+.sprk-c-Stepper__step-icon {
+  background-color: $sprk-stepper-step-icon-color;
+  border: $sprk-stepper-step-icon-border-width solid $sprk-stepper-step-icon-border-color;
+  position: absolute;
+  left: $sprk-stepper-step-icon-left;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: $sprk-stepper-step-icon-z-index;
+  height: $sprk-stepper-step-icon-height;
+  width: $sprk-stepper-step-icon-width;
+  transition: $sprk-stepper-step-icon-transition;
+}
+
+.sprk-c-Stepper__step-content {
+  background-color: $sprk-stepper-bg-step;
+  padding: $sprk-stepper-step-padding;
+  position: relative;
+  margin-left: $sprk-stepper-step-content-margin-left;
+}
+
+.sprk-c-Stepper__step--selected {
+  .sprk-c-Stepper__step-description {
+    display: block;
+  }
+  .sprk-c-Stepper__step-heading {
+    color: $sprk-stepper-step-heading-color-selected;
+    font-weight: $sprk-stepper-step-heading-font-weight;
+  }
+  .sprk-c-Stepper__step-content--has-description {
+    background-color: $sprk-stepper-step-bg-selected;
+    border-radius: $sprk-stepper-step-border-radius;
+  }
+  .sprk-c-Stepper__step-icon {
+    background-color: $sprk-stepper-step-icon-color-selected;
+    border-color: $sprk-stepper-step-icon-border-color-selected;
+    box-shadow: 0 0px 0px 6px $sprk-stepper-step-icon-border-color-selected;
+  }
+}
+
+.sprk-c-Stepper__step-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: static; // Make sure icon is positioned by container
+}
+
+.sprk-c-Stepper__step-heading {
+  color: $sprk-stepper-step-heading-color;
+  font-size: $sprk-stepper-step-heading-size;
+}
+
+.sprk-c-Stepper__step-description {
+  padding-top: $sprk-stepper-step-description-top-spacing;
+}
