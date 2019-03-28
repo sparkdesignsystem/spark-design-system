@@ -1,2 +1,5 @@
 description:
-  TBD
+  The Stepper shows progression through a process.
+restrictions:
+- Has a minimum of three items.
+- Only one step can be selected at a time.

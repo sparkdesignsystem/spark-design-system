@@ -2,10 +2,60 @@
 name: Stepper
 order: 1
 ---
-<div
+<ol
+  class="sprk-c-Stepper"
   data-sprk-stepper="container"
   data-id="stepper-1"
   role="tablist"
 >
-  Welcome to Spark, Stepper!
-</div>
+  <li
+    class="sprk-c-Stepper__step"
+    role="tab"
+    data-sprk-stepper="step">
+    <div class="sprk-c-Stepper__step-content">
+      <div
+        class="sprk-c-Stepper__step-header"
+        data-sprk-stepper="trigger"
+      >
+        <span class="sprk-c-Stepper__step-icon"></span>
+        <h3 class="sprk-c-Stepper__step-heading">
+          Step One
+        </h3>
+      </div>
+    </div>
+  </li>
+
+  <li
+    class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+    role="tab"
+    data-sprk-stepper="step">
+    <div class="sprk-c-Stepper__step-content">
+      <div
+        class="sprk-c-Stepper__step-header"
+        data-sprk-stepper="trigger"
+      >
+        <span class="sprk-c-Stepper__step-icon"></span>
+        <h3 class="sprk-c-Stepper__step-heading">
+          Step Two
+        </h3>
+      </div>
+    </div>
+  </li>
+
+  <li
+    class="sprk-c-Stepper__step"
+    role="tab"
+    data-sprk-stepper="step">
+    <div class="sprk-c-Stepper__step-content">
+      <div
+        class="sprk-c-Stepper__step-header"
+        data-sprk-stepper="trigger"
+      >
+        <span class="sprk-c-Stepper__step-icon"></span>
+        <h3 class="sprk-c-Stepper__step-heading">
+          Step Three
+        </h3>
+      </div>
+    </div>
+  </li>
+</ol>
