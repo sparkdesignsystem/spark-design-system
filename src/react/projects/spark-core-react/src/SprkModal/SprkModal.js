@@ -19,22 +19,22 @@ class SprkModal extends Component {
     this.closeOnEsc = this.closeOnEsc.bind(this);
   }
 
-  componentWillUnmount() {
-    this.removeListeners();
-  }
-
   closeOnEsc(e){
     if (e.key == 'Escape' || e.keyCode == 27) {
       this.cancel();
     }
   }
 
+  attachListeners() {
+    window.addEventListener('keydown', this.closeOnEsc);
+  }
+
   removeListeners() {
     window.removeEventListener('keydown', this.closeOnEsc);
   }
 
-  attachListeners() {
-    window.addEventListener('keydown', this.closeOnEsc);
+  componentWillUnmount() {
+    this.removeListeners();
   }
 
   cancel() {
@@ -65,8 +65,7 @@ class SprkModal extends Component {
 
 
     var isWait = variant == 'wait';
-    // var isInfo = variant == 'info';
-    var isChoice = variant != 'wait' && variant != 'info';
+    var isChoice = variant == 'choice';
 
     if (!isVisible) { return(null); }
 
@@ -93,7 +92,7 @@ class SprkModal extends Component {
           <div className="sprk-o-Stack sprk-o-Stack--large">
             <header className="sprk-o-Stack__item sprk-c-Modal__header">
               <h2 className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
-                   id="modalChoiceHeading">
+                   id={heading_id}>
                 {title}
               </h2>
 
@@ -105,7 +104,7 @@ class SprkModal extends Component {
                 {isWait &&
                     <SprkSpinner size='large' lightness='dark' additionalClasses='sprk-o-Stack__item'/>
                 }
-                <div className="sprk-b-TypeBodyTwo" id="modalChoiceContent">
+                <div className="sprk-b-TypeBodyTwo" id={content_id}>
                   {children}
                 </div>
               </div>
@@ -131,26 +130,36 @@ class SprkModal extends Component {
 
 
 SprkModal.propTypes = {
-  // incoming children
+  // incoming children, body of the modal
   children: PropTypes.node,
+  // h2
   title: PropTypes.string,
-  variant: PropTypes.string,
+
+  variant: PropTypes.oneOf(['wait', 'info', 'choice']),
+  // text of confirm CTA in choice modal
   confirmText: PropTypes.string,
+  // text of cancel CTA in choice modal
   cancelText: PropTypes.string,
+  // component renders as null if false
   isVisible: PropTypes.bool,
+  // event for the confirm CTA in choice modal
   confirmClick: PropTypes.func,
+  // called by internal cancel function. Triggered by the cancel CTA in choice modal, clicking the X, clicking the Mask, or pressing Escape
   cancelClick: PropTypes.func,
   // classes to add to the class of the rendered element
   additionalClasses: PropTypes.string,
-
-  componentID: PropTypes.string,
-  heading_id: PropTypes.string,
-  content_id: PropTypes.string,
-
   // mapped to data-analytics
   analyticsString: PropTypes.string,
   // mapped to data-id for testing purposes
   idString: PropTypes.string,
+
+  // applied to the aria-labelledby attr on the modal. Needs to also be the ID of the thing it labels.
+  heading_id: PropTypes.string,
+  // applied to the aria-describedby attr on the modal. Needs to also be the ID of the thing it describes.
+  content_id: PropTypes.string,
+
+  // not currently used. Needed for aria stuff?
+  componentID: PropTypes.string,
 };
 
 SprkModal.defaultProps = {
@@ -159,7 +168,7 @@ SprkModal.defaultProps = {
   children: [],
   idString: null,
   title: '',
-  variant: 'default',
+  variant: 'choice',
   confirmText: 'Confirm',
   cancelText: 'Cancel',
   // Modals are typically hidden until invoked

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SprkIcon from '../SprkIcon/SprkIcon';
+import { noop } from 'lodash';
 
 class CloseButton extends Component {
 
@@ -15,7 +16,14 @@ class CloseButton extends Component {
           type="button"
           aria-label="Close Modal"
           onClick={clickAction}
-          ref={ref => { ref && ref.focus()}}
+
+
+          // https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
+          // I don't think this line is even working. Rewrite it or delete it.
+          // This button should be getting focus in the info variant, not the
+          // choice variant (and it should not exist in the wait variant)
+
+          // ref={ref => { ref && ref.focus()}}
         >
           <SprkIcon
             icontype="close"
@@ -25,16 +33,16 @@ class CloseButton extends Component {
         </button>
     )
   }
- 
+
 }
 
 CloseButton.propTypes = {
-  // classes to add to the class of the rendered element
+  // function to call when the button is clicked
   clickAction: PropTypes.func,
 }
 
 CloseButton.defaultProps = {
-  clickAction: function(){},
+  clickAction: noop,
 }
 
 export default CloseButton;

@@ -6,20 +6,20 @@ class SprkModalMask extends Component {
   render() {
     const {
       clicked,
-      ...rest
     } = this.props;
     return (
-      <div data-sprk-modal-mask="true" onClick={clicked} className="sprk-c-ModalMask" tabIndex="-1"></div>
-    )
+      <div data-sprk-modal-mask="true" onClick={clicked} className="sprk-c-ModalMask" tabIndex="-1" />
+    );
   }
 }
 
 SprkModalMask.propTypes = {
-  clicked: PropTypes.func
-}
+  // function to call when the mask is clicked
+  clicked: PropTypes.func,
+};
 
 SprkModalMask.defaultProps = {
-  clicked: noop
-}
+  clicked: noop,
+};
 
 export default SprkModalMask;
