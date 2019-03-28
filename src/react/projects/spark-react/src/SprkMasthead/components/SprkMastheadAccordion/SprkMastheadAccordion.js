@@ -13,23 +13,19 @@ class SprkMastheadAccordion extends React.Component {
   }
 
   render() {
-    const {
-      additionalClasses, analyticsString, idString,
-    } = this.props;
-    const {
-      links,
-    } = this.state;
+    const { additionalClasses, analyticsString, idString } = this.props;
+    const { links } = this.state;
     return (
       <ul
         data-analytics={analyticsString}
         data-id={idString}
-        className={classNames('sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare', additionalClasses)}
+        className={classNames(
+          'sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare',
+          additionalClasses,
+        )}
       >
         {links.map(link => (
-          <SprkMastheadAccordionItem
-            {...link}
-            key={link.id}
-          />
+          <SprkMastheadAccordionItem {...link} key={link.id} />
         ))}
       </ul>
     );
@@ -44,16 +40,20 @@ SprkMastheadAccordion.propTypes = {
   // assigned to data-id
   idString: PropTypes.string,
   // used to render SprkMastheadAccordionItems inside
-  links: PropTypes.arrayOf(PropTypes.shape({
-    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    leadingIcon: PropTypes.string,
-    text: PropTypes.string,
-    subNavLinks: PropTypes.arrayOf(PropTypes.shape({
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       leadingIcon: PropTypes.string,
       text: PropTypes.string,
-    })),
-  })),
+      subNavLinks: PropTypes.arrayOf(
+        PropTypes.shape({
+          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          leadingIcon: PropTypes.string,
+          text: PropTypes.string,
+        }),
+      ),
+    }),
+  ),
 };
 
 SprkMastheadAccordion.defaultProps = {

@@ -12,12 +12,16 @@ it('should render a trigger with the correct classes', () => {
 });
 
 it('should add classes when additionalClasses has a value', () => {
-  const wrapper = mount(<SprkMastheadAccordion additionalClasses="sprk-u-man" />);
+  const wrapper = mount(
+    <SprkMastheadAccordion additionalClasses="sprk-u-man" />,
+  );
   expect(wrapper.find('.sprk-c-MastheadAccordion.sprk-u-man').length).toBe(1);
 });
 
 it('should assign data-analytics when analyticsString has a value', () => {
-  const wrapper = mount(<SprkMastheadAccordion SprkDropdown analyticsString="321" />);
+  const wrapper = mount(
+    <SprkMastheadAccordion SprkDropdown analyticsString="321" />,
+  );
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
