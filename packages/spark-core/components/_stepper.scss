@@ -2,19 +2,21 @@
 // Stepper
 // ==================================================================
 $sprk-stepper-bg: transparent !default;
-$sprk-stepper-bg-step: transparent !default;
-$sprk-stepper-max-width: 480px;
+$sprk-stepper-max-width: 480px !default;
 
 $sprk-stepper-step-icon-border-width: 2px !default;
 $sprk-stepper-step-icon-height: 16px !default;
 $sprk-stepper-step-icon-width: 16px !default;
 $sprk-stepper-step-icon-color: $sprk-white !default;
+$sprk-stepper-step-icon-color-hover: $sprk-black;
 $sprk-stepper-step-icon-color-selected: $sprk-white !default;
 $sprk-stepper-step-icon-border-color: $sprk-black !default;
 $sprk-stepper-step-icon-border-color-selected: $sprk-green !default;
 $sprk-stepper-step-icon-border-color-has-dark-bg: $sprk-white !default;
 $sprk-stepper-step-icon-color-has-dark-bg: $sprk-blue !default;
-$sprk-stepper-step-icon-transition: 0.3s box-shadow ease-in-out !default;
+$sprk-stepper-step-icon-color-selected-has-dark-bg: $sprk-white !default;
+$sprk-stepper-step-icon-color-hover-has-dark-bg: $sprk-white !default;
+$sprk-stepper-step-icon-transition: 0.3s box-shadow ease-in-out, 0.3s background-color !default;
 $sprk-stepper-step-icon-z-index: $sprk-layer-height-xs !default;
 
 $sprk-stepper-step-border-radius: 5px !default;
@@ -27,16 +29,18 @@ $sprk-stepper-step-padding: $sprk-space-misc-a !default;
 $sprk-stepper-step-bg-selected: $sprk-white !default;
 $sprk-stepper-step-bg-selected-has-dark-bg: $sprk-white !default;
 $sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
+$sprk-stepper-step-content-bg: transparent !default;
 
-$sprk-stepper-step-bar-width: 2px !default;
-$sprk-stepper-step-bar-color: $sprk-black !default;
+$sprk-stepper-step-bar-color: $sprk-black-tint-50 !default;
 $sprk-stepper-step-bar-color-has-dark-bg: $sprk-white !default;
 
+// Not changeable by spark users: bar width and bar inset from left side
+$sprk-stepper-step-bar-width: 2px;
 $sprk-stepper-step-icon-diameter: $sprk-stepper-step-icon-width + $sprk-stepper-step-icon-border-width;
 $sprk-stepper-step-icon-radius: $sprk-stepper-step-icon-diameter / 2;
-$sprk-stepper-step-bar-left-spacing: $sprk-space-l;
-$sprk-stepper-step-content-margin-left: ($sprk-stepper-step-bar-left-spacing * 2) + $sprk-stepper-step-bar-width;
-$sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-stepper-step-icon-radius));
+$sprk-stepper-step-bar-left-inset: $sprk-space-l;
+$sprk-stepper-step-content-margin-left: ($sprk-stepper-step-bar-left-inset * 2) + $sprk-stepper-step-bar-width;
+$sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-inset + $sprk-stepper-step-icon-radius));
 
 .sprk-c-Stepper {
   background-color: $sprk-stepper-bg;
@@ -61,8 +65,16 @@ $sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-ste
     background-color: $sprk-stepper-step-bg-selected-has-dark-bg;
   }
   .sprk-c-Stepper__step--selected
+  .sprk-c-Stepper__step-icon,
+  .sprk-c-Stepper__step--selected
+  .sprk-c-Stepper__step-header:hover
   .sprk-c-Stepper__step-icon {
-    background-color: $sprk-stepper-step-bg-selected-has-dark-bg;
+    background-color: $sprk-stepper-step-icon-color-selected-has-dark-bg;
+  }
+
+  .sprk-c-Stepper__step-header:hover
+  .sprk-c-Stepper__step-icon {
+    background-color: $sprk-stepper-step-icon-color-hover-has-dark-bg;
   }
 }
 
@@ -78,8 +90,21 @@ $sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-ste
   background-color: $sprk-stepper-step-bar-color;
   content: '';
   height: 100%;
-  left: $sprk-stepper-step-bar-left-spacing;
+  left: $sprk-stepper-step-bar-left-inset;
   position: absolute;
+}
+
+.sprk-c-Stepper__step:first-child::before,
+.sprk-c-Stepper__step:last-child::before  {
+  height: 50%;
+}
+
+.sprk-c-Stepper__step:last-child::before  {
+  top: 0;
+}
+
+.sprk-c-Stepper__step:first-child::before  {
+  bottom: 0;
 }
 
 .sprk-c-Stepper__step-icon {
@@ -96,7 +121,7 @@ $sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-ste
 }
 
 .sprk-c-Stepper__step-content {
-  background-color: $sprk-stepper-bg-step;
+  background-color: $sprk-stepper-step-content-bg;
   padding: $sprk-stepper-step-padding;
   position: relative;
   margin-left: $sprk-stepper-step-content-margin-left;
@@ -113,11 +138,23 @@ $sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-ste
   .sprk-c-Stepper__step-content--has-description {
     background-color: $sprk-stepper-step-bg-selected;
     border-radius: $sprk-stepper-step-border-radius;
+    box-shadow: 0 3px 18px 1px rgba(0,0,0,.08);
   }
   .sprk-c-Stepper__step-icon {
     background-color: $sprk-stepper-step-icon-color-selected;
     border-color: $sprk-stepper-step-icon-border-color-selected;
     box-shadow: 0 0px 0px 6px $sprk-stepper-step-icon-border-color-selected;
+  }
+  .sprk-c-Stepper__step-header:hover
+  .sprk-c-Stepper__step-icon {
+    background-color: $sprk-stepper-step-icon-color-selected;
+  }
+  &.sprk-c-Stepper__step:first-child::before  {
+    height: 100%;
+    top: $sprk-stepper-step-padding + ($sprk-stepper-step-icon-height / 2);
+  }
+  &.sprk-c-Stepper__step:last-child::before  {
+    height: $sprk-stepper-step-padding;
   }
 }
 
@@ -125,7 +162,12 @@ $sprk-stepper-step-icon-left: -(($sprk-stepper-step-bar-left-spacing + $sprk-ste
   display: flex;
   align-items: center;
   cursor: pointer;
-  position: static; // Make sure icon is positioned by container
+  position: static;
+}
+
+.sprk-c-Stepper__step-header:hover
+.sprk-c-Stepper__step-icon {
+  background-color: $sprk-stepper-step-icon-color-hover;
 }
 
 .sprk-c-Stepper__step-heading {

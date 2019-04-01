@@ -9,9 +9,13 @@ import getElements from '../utilities/getElements';
  */
 const selectStep = (step) => {
   const description = step.querySelector('[data-sprk-stepper="description"]');
+
   step.classList.add('sprk-c-Stepper__step--selected');
   step.setAttribute('aria-selected', 'true');
-  if (description) description.classList.remove('sprk-u-HideWhenJs');
+
+  if (description) {
+    description.classList.remove('sprk-u-HideWhenJs');
+  }
 };
 
 /**
@@ -25,10 +29,13 @@ const deselectSteps = (steps) => {
   steps.forEach((step) => {
     const isSelected = step.classList.contains('sprk-c-Stepper__step--selected');
     const description = step.querySelector('[data-sprk-stepper="description"]');
+
     if (isSelected) {
       step.classList.remove('sprk-c-Stepper__step--selected');
       step.setAttribute('aria-selected', 'false');
-      if (description) description.classList.add('sprk-u-HideWhenJs');
+      if (description) {
+        description.classList.add('sprk-u-HideWhenJs');
+      }
     }
   });
 };
@@ -41,8 +48,8 @@ const deselectSteps = (steps) => {
  */
 const getSelectedStepIndex = (steps) => {
   let selected = null;
-  steps.forEach((tab, index) => {
-    if (tab.classList.contains('sprk-c-Stepper__step--selected')) {
+  steps.forEach((step, index) => {
+    if (step.classList.contains('sprk-c-Stepper__step--selected')) {
       selected = index;
     }
   });
