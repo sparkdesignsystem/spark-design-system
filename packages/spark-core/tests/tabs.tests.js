@@ -255,7 +255,7 @@ describe('resetTabs tests', () => {
   it('should remove the active class from all tabs', () => {
     let hasActiveClassSomeplace = false;
 
-    resetTabs(tabsSet, panels);
+    resetTabs(tabsSet, panels, 'sprk-c-Tabs__button--active');
 
     tabsSet.forEach((tab) => {
       if (tab.classList.contains('sprk-c-Tabs__button--active')) {
@@ -269,10 +269,10 @@ describe('resetTabs tests', () => {
   it('should hide all the panels', () => {
     let allAreHidden = true;
 
-    resetTabs(tabsSet, panels);
+    resetTabs(tabsSet, panels, 'sprk-c-Tabs__button--active');
 
     panels.forEach((panel) => {
-      if (!panel.classList.contains('sprk-u-Display--none')) {
+      if (!panel.classList.contains('sprk-u-HideWhenJs')) {
         allAreHidden = false;
       }
     });
@@ -298,7 +298,7 @@ describe('setActive tab tests', () => {
 
     panel1 = document.createElement('div');
     panel1.classList.add('sprk-c-Tabs__button');
-    panel1.classList.add('sprk-u-Display--none');
+    panel1.classList.add('sprk-u-HideWhenJse');
     panel1.setAttribute('role', 'tabpanel');
 
     tabContainer.appendChild(tab1);
@@ -306,17 +306,17 @@ describe('setActive tab tests', () => {
   });
 
   it('should add the right class and show the right panel', () => {
-    setActiveTab(tab1, panel1);
+    setActiveTab(tab1, panel1, 'sprk-c-Tabs__button--active');
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
   it('should show the right panel', () => {
-    setActiveTab(tab1, panel1);
-    expect(panel1.classList.contains('sprk-u-Display--none')).eql(false);
+    setActiveTab(tab1, panel1, 'sprk-c-Tabs__button--active');
+    expect(panel1.classList.contains('sprk-u-HideWhenJs')).eql(false);
   });
 
   it('should set aria-selected to true', () => {
-    setActiveTab(tab1, panel1);
+    setActiveTab(tab1, panel1, 'sprk-c-Tabs__button--active');
     expect(tab1.getAttribute('aria-selected')).eql('true');
   });
 });
@@ -382,15 +382,15 @@ describe('advanceTab tests', () => {
   });
 
   it('should advance the active tab to the next one, if its not the last in the list', () => {
-    advanceTab(tabsSet, panels);
+    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab2.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
   it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
-    advanceTab(tabsSet, panels); // set to 3
+    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active'); // set to 3
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
 
-    advanceTab(tabsSet, panels); // should move to 1
+    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active'); // should move to 1
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 });
@@ -456,12 +456,12 @@ describe('retreatTab tests', () => {
   });
 
   it('should retreat the active tab to the previous one, if its not the first in the list', () => {
-    retreatTab(tabsSet, panels);
+    retreatTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
   it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
-    retreatTab(tabsSet, panels);
+    retreatTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 });
@@ -502,11 +502,11 @@ describe('getActiveTabIndex tests', () => {
   });
 
   it('should return null when there are no tabs active', () => {
-    expect(getActiveTabIndex(tabsSet)).eql(null);
+    expect(getActiveTabIndex(tabsSet, 'sprk-c-Tabs__button--active')).eql(null);
   });
 
   it('should return the correct index when a tab is active', () => {
     tab2.classList.add('sprk-c-Tabs__button--active');
-    expect(getActiveTabIndex(tabsSet)).eql(1);
+    expect(getActiveTabIndex(tabsSet, 'sprk-c-Tabs__button--active')).eql(1);
   });
 });
