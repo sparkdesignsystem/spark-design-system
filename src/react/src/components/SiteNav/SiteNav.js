@@ -110,6 +110,11 @@ function SiteNav() {
             Award
           </Link>
         </li>
+        <li>
+          <Link to="/card" className="drizzle-b-Link drizzle-b-Link--light">
+            Card
+          </Link>
+        </li>
       </ul>
     </nav>
   );

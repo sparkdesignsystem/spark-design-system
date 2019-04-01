@@ -44,3 +44,4 @@ export {
   default as SprkStackItem,
 } from './SprkStack/components/SprkStackItem/SprkStackItem';
 export { default as SprkAward } from './SprkAward/SprkAward';
+export { default as SprkCard } from './SprkCard/SprkCard';

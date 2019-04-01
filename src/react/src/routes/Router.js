@@ -22,6 +22,7 @@ import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
 import SprkAccordionDocs from './SprkAccordionDocs/SprkAccordionDocs';
 import SprkStackDocs from './SprkStackDocs/SprkStackDocs';
 import SprkAwardDocs from './SprkAwardDocs/SprkAwardDocs';
+import SprkCardDocs from './SprkCardDocs/SprkCardDocs';
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -30,6 +31,7 @@ const Router = () => (
       <Route exact path="/" component={Homepage} />
       <Route exact path="/alert" component={SprkAlertDocs} />
       <Route exact path="/button" component={SprkButtonDocs} />
+      <Route exact path="/card" component={SprkCardDocs} />
       <Route exact path="/dictionary" component={SprkDictionaryDocs} />
       <Route exact path="/dividers" component={SprkDividerDocs} />
       <Route exact path="/dropdown" component={SprkDropdownDocs} />
