@@ -2,9 +2,9 @@ sudo: required
 addons:
   apt:
     sources:
-    - google-chrome
+      - google-chrome
     packages:
-    - google-chrome-stable
+      - google-chrome-stable
 
 language: node_js
 node_js:
@@ -15,16 +15,9 @@ before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
-  - npm install -g gulp
-  - npm install -g @angular/cli @angular-devkit/build-angular
   - npm install
-  - npm install --prefix ./packages/spark-core
-  - npm install --prefix ./packages/spark-highlight-board
-  - npm install --prefix ./src/angular
-  - npm install --prefix ./src/angular/projects/spark-core-angular
-  - npm install --prefix ./src/angular/projects/spark-extras-angular-award
-  - npm install --prefix ./src/angular/projects/spark-extras-angular-card
-  - npm install --prefix ./src/angular/projects/spark-extras-angular-dictionary
-  - npm install --prefix ./src/angular/projects/spark-extras-angular-highlight-board
+  - npm install -g @angular/cli @angular-devkit/build-angular
 
-install: npm test && gulp test-angular
+install:
+  - $(npm bin)/gulp pre-publish
+  - $(npm bin)/gulp test-angular
