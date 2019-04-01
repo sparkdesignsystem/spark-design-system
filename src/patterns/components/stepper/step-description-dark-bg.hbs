@@ -4,19 +4,21 @@ order: 3
 ---
 <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
   <ol
-    class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg"
-    data-sprk-stepper="container"
-    data-id="stepper-1"
-    role="tablist">
+  class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg"
+  data-sprk-stepper="container"
+  data-id="stepper-1"
+  role="tablist"
+  >
     <li
-      class="sprk-c-Stepper__step"
+      class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
       data-sprk-stepper="step">
       <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
         <a
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          data-sprk-stepper="trigger"
-          href="#"
-          role="tab">
+          aria-controls="target-1"
+          role="tab"
+          id="step-1"
+          href="#">
           <span class="sprk-c-Stepper__step-icon"></span>
           <h3 class="sprk-c-Stepper__step-heading">
             Step One
@@ -25,35 +27,9 @@ order: 3
 
         <div
           class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
-          data-sprk-stepper="description"
-          role="tabpanel">
-          <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium, consectetur esse. Consequuntur, eligendi architecto!
-            Animi amet, velit quas ipsum earum corporis quis necessitatibus vitae.
-          </p>
-        </div>
-      </div>
-    </li>
-
-    <li
-      class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
-      data-sprk-stepper="step">
-      <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
-        <a
-          class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          data-sprk-stepper="trigger"
-          href="#"
-          role="tab">
-          <span class="sprk-c-Stepper__step-icon"></span>
-          <h3 class="sprk-c-Stepper__step-heading">
-            Step Two Heading
-          </h3>
-        </a>
-
-        <div
-          class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
-          data-sprk-stepper="description"
+          id="target-1"
+          aria-labelledby="step-1"
+          tabindex="0"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,13 +42,47 @@ order: 3
 
     <li
       class="sprk-c-Stepper__step"
+      role="tab"
       data-sprk-stepper="step">
       <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
         <a
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          data-sprk-stepper="trigger"
-          href="#"
-          role="tab">
+          role="tab"
+          aria-controls="target-2"
+          id="step-2"
+          href="#">
+          <span class="sprk-c-Stepper__step-icon"></span>
+          <h3 class="sprk-c-Stepper__step-heading">
+            Step Two
+          </h3>
+        </a>
+
+        <div
+          class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+          aria-labelledby="step-2"
+          id="target-2"
+          tabindex="0"
+          role="tabpanel">
+          <p class="sprk-b-TypeBodyTwo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium, consectetur esse. Consequuntur, eligendi architecto!
+            Animi amet, velit quas ipsum earum corporis quis necessitatibus vitae.
+          </p>
+        </div>
+      </div>
+    </li>
+
+    <li
+      class="sprk-c-Stepper__step"
+      role="tab"
+      data-sprk-stepper="step">
+      <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
+        <a
+          class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+          role="tab"
+          aria-controls="target-3"
+          id="step-3"
+          href="#">
           <span class="sprk-c-Stepper__step-icon"></span>
           <h3 class="sprk-c-Stepper__step-heading">
             Step Three
@@ -81,35 +91,9 @@ order: 3
 
         <div
           class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
-          data-sprk-stepper="description"
-          role="tabpanel">
-          <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium, consectetur esse. Consequuntur, eligendi architecto!
-            Animi amet, velit quas ipsum earum corporis quis necessitatibus vitae.
-          </p>
-        </div>
-      </a>
-    </li>
-
-    <li
-      class="sprk-c-Stepper__step"
-      data-sprk-stepper="step">
-      <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
-        <a
-          class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          data-sprk-stepper="trigger"
-          href="#"
-          role="tab">
-          <span class="sprk-c-Stepper__step-icon"></span>
-          <h3 class="sprk-c-Stepper__step-heading">
-            Step Four
-          </h3>
-        </a>
-
-        <div
-          class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
-          data-sprk-stepper="description"
+          aria-labelledby="step-3"
+          ids="target-3"
+          tabindex="0"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -122,22 +106,26 @@ order: 3
 
     <li
       class="sprk-c-Stepper__step"
+      role="tab"
       data-sprk-stepper="step">
       <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
         <a
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          data-sprk-stepper="trigger"
-          href="#"
-          role="tab">
+          role="tab"
+          aria-controls="target-4"
+          id="step-4"
+          href="#">
           <span class="sprk-c-Stepper__step-icon"></span>
           <h3 class="sprk-c-Stepper__step-heading">
-            Step Five Heading
+            Step Four
           </h3>
         </a>
 
         <div
           class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
-          data-sprk-stepper="description"
+          aria-labelledby="step-4"
+          tabindex="0"
+          id="target-4"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
