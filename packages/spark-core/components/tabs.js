@@ -7,7 +7,7 @@ const resetTabs = (tabs, tabpanels, activeClass) => {
     const isStepper = tab.hasAttribute('data-sprk-stepper');
     tab.classList.remove(activeClass);
     if (isStepper) {
-      const tabTrigger = tab.querySelector('[role="tab"');
+      const tabTrigger = tab.querySelector('[role="tab]"');
       tabTrigger.setAttribute('aria-selected', 'false');
     } else {
       tab.setAttribute('aria-selected', 'false');
@@ -25,7 +25,7 @@ const setActiveTab = (tab, tabpanel, activeClass) => {
   if (tabpanel) tabpanel.classList.remove('sprk-u-HideWhenJs');
 
   if (isStepper) {
-    const tabTrigger = tab.querySelector('[role="tab"');
+    const tabTrigger = tab.querySelector('[role="tab]"');
     tabTrigger.setAttribute('aria-selected', 'true');
     tabTrigger.focus();
   } else {
