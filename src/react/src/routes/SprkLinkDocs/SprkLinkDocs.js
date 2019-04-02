@@ -5,8 +5,22 @@ import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer
 
 const SprkLinkDocs = () => (
   <CentralColumnLayout>
+    <h2 className="drizzle-b-h2">External Links</h2>
     <ExampleContainer>
-      <SprkLink id="foo">Base Link</SprkLink>
+      <SprkLink id="foo" href="https://google.com" target="_blank">https://google.com</SprkLink>
+    </ExampleContainer>
+
+    <ExampleContainer>
+      <SprkLink id="foo" href="https://google.com" target="_blank">http://google.com</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Same Page Links</h2>
+    <ExampleContainer>
+      <SprkLink href="#info">Jump Link</SprkLink>
+    </ExampleContainer>
+
+    <ExampleContainer>
+      <SprkLink href="/button#foo">Jump Link with Page</SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
@@ -38,6 +52,7 @@ const SprkLinkDocs = () => (
         Plain Link
       </SprkLink>
     </ExampleContainer>
+    <div id="info">Hi, I'm info!</div>
   </CentralColumnLayout>
 );
 
