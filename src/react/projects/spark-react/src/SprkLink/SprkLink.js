@@ -13,7 +13,8 @@ const SprkLink = props => {
     ...other
   } = props;
   const TagName = element || 'a';
-  const classNames = classnames('sprk-b-Link', additionalClasses, {
+  const classNames = classnames(additionalClasses, {
+    'sprk-b-Link': variant !== 'unstyled',
     'sprk-b-Link--simple': variant === 'simple',
     'sprk-b-Link--plain': variant === 'plain',
     'sprk-b-Link--disabled': variant === 'disabled',
@@ -36,7 +37,14 @@ SprkLink.propTypes = {
   // The children that will be rendered inside the link
   children: PropTypes.node,
   // The link variant that determines the class names
-  variant: PropTypes.oneOf(['base', 'simple', 'has-icon', 'plain', 'disabled']),
+  variant: PropTypes.oneOf([
+    'base',
+    'simple',
+    'has-icon',
+    'plain',
+    'disabled',
+    'unstyled',
+  ]),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // The string to use for the data-analytics attribute

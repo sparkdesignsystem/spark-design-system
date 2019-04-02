@@ -6,9 +6,14 @@ import SprkLink from './SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a link element with the correct base class', () => {
+it('should display a link element with the correct base class if the variant is not unstyled', () => {
   const wrapper = shallow(<SprkLink />);
   expect(wrapper.find('a.sprk-b-Link').length).toBe(1);
+});
+
+it('should display a link element without the sprk-b-Link class if the variant is unstyled', () => {
+  const wrapper = shallow(<SprkLink variant="unstyled" />);
+  expect(wrapper.find('a').hasClass('sprk-b-Link')).toBe(false);
 });
 
 it('should display a link element with correct classes when variant is simple', () => {

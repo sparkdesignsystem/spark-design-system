@@ -12,6 +12,12 @@ const SprkLinkDocs = () => (
     </ExampleContainer>
 
     <ExampleContainer>
+      <SprkLink href="#nogo" variant="unstyled">
+        Unstyled Link
+      </SprkLink>
+    </ExampleContainer>
+
+    <ExampleContainer>
       <SprkLink variant="simple" href="/button" idString="simple-link">
         Simple Link
       </SprkLink>
