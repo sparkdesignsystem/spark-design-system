@@ -41,6 +41,7 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
   @ContentChildren(SprkTabbedNavigationPanelDirective)
   panels: QueryList<SprkTabbedNavigationPanelDirective>;
   componentID = _.uniqueId();
+  activeClass = 'sprk-c-Tabs__button--active';
 
   @HostListener('click', ['$event'])
   onClick($event) {
@@ -54,10 +55,15 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
 
       resetTabs(
         this.tabs.map(tab => tab.ref.nativeElement),
-        this.panels.map(panel => panel.ref.nativeElement)
+        this.panels.map(panel => panel.ref.nativeElement),
+        this.activeClass
       );
 
-      setActiveTab($event.target, activePanel.ref.nativeElement);
+      setActiveTab(
+        $event.target,
+        activePanel.ref.nativeElement,
+        this.activeClass
+      );
     }
   }
 
@@ -85,20 +91,21 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
     const panelElements = this.panels.map(panel => panel.ref.nativeElement);
 
     if ($event.keyCode === keys.left) {
-      retreatTab(tabElements, panelElements);
+      retreatTab(tabElements, panelElements, this.activeClass);
     } else if ($event.keyCode === keys.right) {
-      advanceTab(tabElements, panelElements);
+      advanceTab(tabElements, panelElements, this.activeClass);
     } else if ($event.keyCode === keys.tab) {
       if ($event.target.classList.contains('sprk-c-Tabs__button')) {
         event.preventDefault();
         panelElements[getActiveTabIndex(tabElements)].focus();
       }
     } else if ($event.keyCode === keys.home) {
-      setActiveTab(tabElements[0], panelElements[0]);
+      setActiveTab(tabElements[0], panelElements[0], this.activeClass);
     } else if ($event.keyCode === keys.end) {
       setActiveTab(
         tabElements[tabElements.length - 1],
-        panelElements[panelElements.length - 1]
+        panelElements[panelElements.length - 1],
+        this.activeClass
       );
     }
   }

@@ -3,9 +3,6 @@ import getElements from '../utilities/getElements';
 import {
   handleTabKeydown,
   resetTabs,
-  // advanceTab,
-  // retreatTab,
-  getActiveTabIndex,
   setActiveTab,
 } from './tabs';
 
@@ -20,11 +17,6 @@ const bindUIEvents = (stepper) => {
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
-  // setActiveTab(
-  //   steps[getActiveTabIndex(steps, activeClass)],
-  //   stepPanels[getActiveTabIndex(steps, activeClass)],
-  //   activeClass,
-  // );
 
   steps.forEach((step, index) => {
     const stepTrigger = step.querySelector('[role="tab"]');
