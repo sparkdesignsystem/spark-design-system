@@ -57,17 +57,3 @@
     opacity: 1;
   }
 }
-
-//
-// pos
-///
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}

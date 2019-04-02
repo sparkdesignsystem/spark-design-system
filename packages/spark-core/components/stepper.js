@@ -20,14 +20,16 @@ const bindUIEvents = (stepper) => {
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
-  setActiveTab(
-    steps[getActiveTabIndex(steps, activeClass)],
-    stepPanels[getActiveTabIndex(steps, activeClass)],
-    activeClass,
-  );
+  // setActiveTab(
+  //   steps[getActiveTabIndex(steps, activeClass)],
+  //   stepPanels[getActiveTabIndex(steps, activeClass)],
+  //   activeClass,
+  // );
 
   steps.forEach((step, index) => {
-    step.addEventListener('click', (e) => {
+    const stepTrigger = step.querySelector('[role="tab"]');
+
+    stepTrigger.addEventListener('click', (e) => {
       e.preventDefault();
       resetTabs(steps, stepPanels, activeClass);
       setActiveTab(step, stepPanels[index], activeClass);
