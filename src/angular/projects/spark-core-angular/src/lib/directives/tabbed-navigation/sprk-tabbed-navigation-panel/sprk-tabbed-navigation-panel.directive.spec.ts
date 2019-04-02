@@ -4,7 +4,9 @@ import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-pan
 
 @Component({
   selector: 'sprk-test-component',
-  template: `<div additionalClasses="sprk-u-man" sprkTabbedNavigationPanel>Panel</div>`
+  template: `
+    <div additionalClasses="sprk-u-man" sprkTabbedNavigationPanel>Panel</div>
+  `
 })
 class TestComponent {}
 
@@ -45,6 +47,6 @@ describe('Spark Tabbed Navigation Panel Directive', () => {
   });
 
   it('should add the hide class by default', () => {
-    expect(element.classList.contains('sprk-u-Display--none')).toEqual(true);
+    expect(element.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
   });
 });

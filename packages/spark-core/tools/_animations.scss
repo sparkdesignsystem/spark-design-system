@@ -31,8 +31,7 @@
 }
 
 //
-// Opacity One to Zero (fade out)
-///
+// Opacity One to Zero
 
 @keyframes opacity-one-to-zero {
   0% {
@@ -41,19 +40,5 @@
 
   100% {
     opacity: 0;
-  }
-}
-
-//
-// Opacity Zero to One (fade in)
-///
-
-@keyframes opacity-zero-to-one {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
