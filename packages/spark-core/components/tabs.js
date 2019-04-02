@@ -9,7 +9,6 @@ const resetTabs = (tabs, tabpanels, activeClass) => {
     if (isStepper) {
       const tabTrigger = tab.querySelector('[role="tab"');
       tabTrigger.setAttribute('aria-selected', 'false');
-      tabTrigger.focus();
     } else {
       tab.setAttribute('aria-selected', 'false');
     }
