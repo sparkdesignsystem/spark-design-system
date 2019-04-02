@@ -93,3 +93,24 @@ $sprk-card-header-text-color: $sprk-white !default;
     min-width: 0%;
   }
 }
+
+.sprk-c-Card--full {
+  max-width: 100%;
+}
+
+.sprk-c-Card--full\@xs {
+  max-width: 100%;
+
+  @media screen and (min-width: $sprk-btn-breakpoint-xs) {
+    max-width: 100%;
+  }
+}
+
+.sprk-c-Card--full\@sm,
+.sprk-c-Card--full\@s {
+  max-width: 100%;
+
+  @media screen and (min-width: $sprk-btn-breakpoint-s) {
+    max-width: 100%;
+  }
+}
