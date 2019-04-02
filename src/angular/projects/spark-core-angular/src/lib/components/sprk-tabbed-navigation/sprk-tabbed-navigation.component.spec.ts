@@ -160,6 +160,7 @@ describe('SparkTabbedNavigationComponent', () => {
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.classList.add('sprk-c-Tabs__button');
+    testElement.setAttribute('role', 'tab');
     testElement.dispatchEvent(event);
     expect(testPanel2.focus).toHaveBeenCalled();
   });

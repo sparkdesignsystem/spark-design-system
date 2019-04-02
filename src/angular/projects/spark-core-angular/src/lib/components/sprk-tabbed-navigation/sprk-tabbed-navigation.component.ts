@@ -83,21 +83,23 @@ export class SparkTabbedNavigationComponent implements AfterContentInit {
       end: 35,
       home: 36,
       left: 37,
+      up: 38,
       right: 39,
+      down: 40,
       tab: 9
     };
 
     const tabElements = this.tabs.map(tab => tab.ref.nativeElement);
     const panelElements = this.panels.map(panel => panel.ref.nativeElement);
 
-    if ($event.keyCode === keys.left) {
+    if ($event.keyCode === keys.left || $event.keyCode === keys.up) {
       retreatTab(tabElements, panelElements, this.activeClass);
-    } else if ($event.keyCode === keys.right) {
+    } else if ($event.keyCode === keys.right || $event.keyCode === keys.down) {
       advanceTab(tabElements, panelElements, this.activeClass);
     } else if ($event.keyCode === keys.tab) {
-      if ($event.target.classList.contains('sprk-c-Tabs__button')) {
+      if ($event.target.getAttribute('role') === 'tab') {
         event.preventDefault();
-        panelElements[getActiveTabIndex(tabElements)].focus();
+        panelElements[getActiveTabIndex(tabElements, this.activeClass)].focus();
       }
     } else if ($event.keyCode === keys.home) {
       setActiveTab(tabElements[0], panelElements[0], this.activeClass);
