@@ -10,6 +10,8 @@ const SprkLink = props => {
     additionalClasses,
     idString,
     analyticsString,
+    href,
+    onClick,
     ...other
   } = props;
   const TagName = element || 'a';
@@ -21,11 +23,19 @@ const SprkLink = props => {
     'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
   });
 
+  const noDefault = e => {
+    e.preventDefault();
+  };
+
+  const clickEvent = href === '#' ? e => noDefault(e) : onClick;
+
   return (
     <TagName
       className={classNames}
       data-analytics={analyticsString}
       data-id={idString}
+      href={href}
+      onClick={clickEvent}
       {...other}
     >
       {children}
@@ -54,11 +64,8 @@ SprkLink.propTypes = {
 };
 
 SprkLink.defaultProps = {
-  children: [],
   variant: 'base',
-  idString: '',
-  analyticsString: '',
-  additionalClasses: '',
+  href: '#',
 };
 
 export default SprkLink;

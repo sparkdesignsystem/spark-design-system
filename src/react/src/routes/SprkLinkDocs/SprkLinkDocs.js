@@ -6,30 +6,21 @@ import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer
 const SprkLinkDocs = () => (
   <CentralColumnLayout>
     <ExampleContainer>
-      <SprkLink href="#nogo" id="foo">
-        Base Link
-      </SprkLink>
+      <SprkLink id="foo">Base Link</SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink href="#nogo" variant="unstyled">
-        Unstyled Link
-      </SprkLink>
+      <SprkLink variant="unstyled">Unstyled Link</SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink variant="simple" href="/button" idString="simple-link">
+      <SprkLink variant="simple" idString="simple-link">
         Simple Link
       </SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink
-        variant="has-icon"
-        target="_blank"
-        href="#nogo"
-        analyticsString="foo"
-      >
+      <SprkLink variant="has-icon" target="_blank" analyticsString="foo">
         <SprkIcon
           additionalClasses="sprk-c-Icon--xl"
           iconName="communication"
@@ -39,13 +30,11 @@ const SprkLinkDocs = () => (
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink variant="disabled" href="#nogo">
-        Disabled Link
-      </SprkLink>
+      <SprkLink variant="disabled">Disabled Link</SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink variant="plain" additionalClasses="foo" href="#nogo">
+      <SprkLink variant="plain" additionalClasses="foo">
         Plain Link
       </SprkLink>
     </ExampleContainer>
