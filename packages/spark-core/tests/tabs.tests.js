@@ -207,6 +207,9 @@ describe('resetTabs tests', () => {
   let tabsSet;
   let panels;
 
+  let step;
+  let stepTrigger;
+
   before(() => {
     tabContainer = document.createElement('div');
     tabContainer.classList.add('sprk-c-Tabs');
@@ -228,6 +231,14 @@ describe('resetTabs tests', () => {
     tab3.setAttribute('role', 'tab');
     tab3.setAttribute('aria-selected', 'false');
 
+    step = document.createElement('div');
+    step.classList.add('sprk-c-Stepper__step');
+    step.setAttribute('data-sprk-stepper', '');
+    stepTrigger = document.createElement('div');
+    stepTrigger.setAttribute('role', 'tab');
+    stepTrigger.setAttribute('aria-selected', 'false');
+    step.append(stepTrigger);
+
     panel1 = document.createElement('div');
     panel1.classList.add('sprk-c-Tabs__button');
     panel1.setAttribute('role', 'tabpanel');
@@ -248,7 +259,7 @@ describe('resetTabs tests', () => {
     tabContainer.appendChild(panel2);
     tabContainer.appendChild(panel3);
 
-    tabsSet = [tab1, tab2, tab3];
+    tabsSet = [tab1, tab2, tab3, step];
     panels = [panel1, panel2, panel3];
   });
 
@@ -279,12 +290,19 @@ describe('resetTabs tests', () => {
 
     expect(allAreHidden).eql(true);
   });
+
+  it('should set aria-selected to false on the stepper trigger', () => {
+    resetTabs(tabsSet, panels, 'sprk-c-Stepper__step--selected');
+    expect(stepTrigger.getAttribute('aria-selected')).eql('false');
+  });
 });
 
 describe('setActive tab tests', () => {
   let tabContainer;
   let tab1;
   let panel1;
+  let step;
+  let stepTrigger;
 
   before(() => {
     tabContainer = document.createElement('div');
@@ -296,6 +314,14 @@ describe('setActive tab tests', () => {
     tab1.setAttribute('role', 'tab');
     tab1.setAttribute('aria-selected', 'false');
 
+    step = document.createElement('div');
+    stepTrigger = document.createElement('div');
+    step.classList.add('sprk-c-Stepper__step');
+    step.setAttribute('data-sprk-stepper', '');
+    stepTrigger.setAttribute('role', 'tab');
+    stepTrigger.setAttribute('aria-selected', 'false');
+    step.append(stepTrigger);
+
     panel1 = document.createElement('div');
     panel1.classList.add('sprk-c-Tabs__button');
     panel1.classList.add('sprk-u-HideWhenJse');
@@ -303,6 +329,12 @@ describe('setActive tab tests', () => {
 
     tabContainer.appendChild(tab1);
     tabContainer.appendChild(panel1);
+  });
+
+  it('should not try to remove the tab panel if there is no tab panel', () => {
+    const noPanel = null;
+    setActiveTab(tab1, noPanel, 'sprk-c-Tabs__button--active');
+    expect(noPanel).eql(null);
   });
 
   it('should add the right class and show the right panel', () => {
@@ -318,6 +350,11 @@ describe('setActive tab tests', () => {
   it('should set aria-selected to true', () => {
     setActiveTab(tab1, panel1, 'sprk-c-Tabs__button--active');
     expect(tab1.getAttribute('aria-selected')).eql('true');
+  });
+
+  it('should set aria-selected to true on the stepper trigger', () => {
+    setActiveTab(step, panel1, 'sprk-c-Stepper__step--selected');
+    expect(stepTrigger.getAttribute('aria-selected')).eql('true');
   });
 });
 
