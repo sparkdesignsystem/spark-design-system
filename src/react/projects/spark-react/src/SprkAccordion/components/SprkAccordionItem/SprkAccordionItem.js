@@ -3,6 +3,7 @@ import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkLink from '../../../SprkLink/SprkLink';
 
 class SprkAccordionItem extends Component {
   constructor(props) {
@@ -61,20 +62,21 @@ class SprkAccordionItem extends Component {
 
     return (
       <li className={itemClassNames} data-id={idString} {...other}>
-        <a
+        <SprkLink
+          variant="unstyled"
           aria-controls={id}
-          className="sprk-c-Accordion__summary"
+          additionalClasses="sprk-c-Accordion__summary"
           data-analytics={analyticsString}
-          href="#nogo"
           onClick={this.toggle}
           aria-expanded={isOpen ? 'true' : 'false'}
+          href="#nogo"
         >
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
             iconName="chevron-up-circle-two-color"
             additionalClasses={iconClasses}
           />
-        </a>
+        </SprkLink>
 
         <AnimateHeight duration={300} height={height}>
           <div
@@ -93,14 +95,7 @@ class SprkAccordionItem extends Component {
 }
 
 SprkAccordionItem.defaultProps = {
-  analyticsString: '',
-  children: '',
-  headingAddClasses: '',
-  additionalClasses: '',
-  idString: '',
   isDefaultOpen: false,
-  iconAddClasses: '',
-  contentAddClasses: '',
 };
 
 SprkAccordionItem.propTypes = {
