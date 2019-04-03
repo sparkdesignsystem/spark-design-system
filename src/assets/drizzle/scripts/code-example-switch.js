@@ -23,29 +23,7 @@ const showSections = (values) => {
   });
 };
 
-// TODO: Remove once React is published
-// If query string present bool:true
-// then show code button
-// else clear localStorage that could include reat
-const toggleCodeButton = (hasQueryString, codeButton) => {
-  const isSetToReact = localStorage.getItem('code-example-switch') === 'react';
-  if (hasQueryString) {
-    codeButton.classList.remove('sprk-u-Display--none');
-  } else {
-    codeButton.classList.add('sprk-u-Display--none');
-    if (isSetToReact) {
-      localStorage.setItem('code-example-switch', 'none');
-    }
-  }
-};
-
 const bindUIEvents = (element) => {
-  // TODO: Remove once React is published
-  const reactButton = element.querySelector('[data-code-example-switch-react]');
-  const hasReactQueryString = window.location.search.indexOf('react') > -1;
-  toggleCodeButton(hasReactQueryString, reactButton);
-  // END TODO
-
   element.querySelectorAll('label').forEach((label) => {
     label.addEventListener('keydown', (e) => {
       if (e.keyCode === 13) {
