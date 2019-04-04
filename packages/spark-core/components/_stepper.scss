@@ -4,53 +4,53 @@
 .sprk-c-Stepper {
   background-color: $sprk-stepper-bg;
   list-style-type: none;
-  position: relative;
   max-width: $sprk-stepper-max-width;
+  position: relative;
 }
 
 .sprk-c-Stepper--has-dark-bg {
   .sprk-c-Stepper__step-heading {
-    color: $sprk-stepper-step-heading-color-has-dark-bg;
+    color: $sprk-stepper-dark-step-heading-color;
   }
   .sprk-c-Stepper__step::before {
-    background-color: $sprk-stepper-step-bar-color-has-dark-bg;
+    background-color: $sprk-stepper-dark-bar-color;
   }
   .sprk-c-Stepper__step-icon {
-    background-color: $sprk-stepper-step-icon-color-has-dark-bg;
-    border-color: $sprk-stepper-step-icon-border-color-has-dark-bg;
+    background-color: $sprk-stepper-dark-icon-color;
+    border-color: $sprk-stepper-dark-icon-border-color;
   }
   .sprk-c-Stepper__step--selected
   .sprk-c-Stepper__step-content--has-description {
-    background-color: $sprk-stepper-step-content-description-bg-selected-has-dark-bg;
+    background-color: $sprk-stepper-dark-step-description-bg-selected;
   }
   .sprk-c-Stepper__step--selected
   .sprk-c-Stepper__step-icon,
   .sprk-c-Stepper__step--selected
   .sprk-c-Stepper__step-header:hover
   .sprk-c-Stepper__step-icon {
-    background-color: $sprk-stepper-step-icon-color-selected-has-dark-bg;
+    background-color: $sprk-stepper-dark-icon-color-selected;
   }
 
   .sprk-c-Stepper__step-header:hover
   .sprk-c-Stepper__step-icon {
-    background-color: $sprk-stepper-step-icon-color-hover-has-dark-bg;
+    background-color: $sprk-stepper-dark-icon-color-hover;
   }
 }
 
 .sprk-c-Stepper__step {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   position: relative;
 }
 
 .sprk-c-Stepper__step::before {
-  width: $sprk-stepper-step-bar-width;
-  background-color: $sprk-stepper-step-bar-color;
+  background-color: $sprk-stepper-bar-color;
   content: '';
   height: 100%;
-  left: $sprk-stepper-step-bar-left-inset;
+  left: $sprk-stepper-bar-left-inset;
   position: absolute;
+  width: $sprk-stepper-bar-width;
 }
 
 .sprk-c-Stepper__step:first-child::before,
@@ -67,27 +67,27 @@
 }
 
 .sprk-c-Stepper__step-icon {
-  background-color: $sprk-stepper-step-icon-color;
-  border: $sprk-stepper-step-icon-border-width solid $sprk-stepper-step-icon-border-color;
-  position: absolute;
-  left: $sprk-stepper-step-icon-left;
+  background-color: $sprk-stepper-icon-color;
   border-radius: 50%;
+  border: $sprk-stepper-icon-border-width solid $sprk-stepper-icon-border-color;
   display: inline-block;
-  z-index: $sprk-stepper-step-icon-z-index;
-  height: $sprk-stepper-step-icon-height;
-  width: $sprk-stepper-step-icon-width;
-  transition: $sprk-stepper-step-icon-transition;
+  height: $sprk-stepper-icon-height;
+  left: $sprk-stepper-icon-left;
+  position: absolute;
+  transition: $sprk-stepper-icon-transition;
+  width: $sprk-stepper-icon-width;
+  z-index: $sprk-stepper-icon-z-index;
 }
 
 .sprk-c-Stepper__step-content {
   background-color: $sprk-stepper-step-content-bg;
+  margin-left: $sprk-stepper-step-content-margin-left;
   padding: $sprk-stepper-step-padding;
   position: relative;
-  margin-left: $sprk-stepper-step-content-margin-left;
 }
 
 .sprk-c-Stepper__step-content--has-description {
-  border-radius: $sprk-stepper-step-content-description-border-radius;
+  border-radius: $sprk-stepper-step-description-border-radius;
 }
 
 .sprk-c-Stepper__step--selected {
@@ -99,24 +99,24 @@
     font-weight: $sprk-stepper-step-heading-font-weight;
   }
   .sprk-c-Stepper__step-content--has-description {
-    background-color: $sprk-stepper-step-content-description-bg-selected;
-    box-shadow: $sprk-stepper-step-content-description-box-shadow;
+    background-color: $sprk-stepper-step-description-bg-selected;
+    box-shadow: $sprk-stepper-step-description-box-shadow;
   }
   .sprk-c-Stepper__step-icon {
-    background-color: $sprk-stepper-step-icon-color-selected;
-    border-color: $sprk-stepper-step-icon-border-color-selected;
-    box-shadow: $sprk-stepper-step-icon-box-shadow-selected;
+    background-color: $sprk-stepper-icon-color-selected;
+    border-color: $sprk-stepper-icon-border-color-selected;
+    box-shadow: $sprk-stepper-icon-box-shadow-selected;
   }
   .sprk-c-Stepper__step-header:hover
   .sprk-c-Stepper__step-icon {
-    background-color: $sprk-stepper-step-icon-color-selected;
+    background-color: $sprk-stepper-icon-color-selected;
   }
   &.sprk-c-Stepper__step:first-child::before  {
     height: 100%;
-    top: ($sprk-stepper-step-padding + $sprk-stepper-step-icon-box-shadow-selected-spread) + ($sprk-stepper-step-icon-height / 2);
+    top: ($sprk-stepper-step-padding + $sprk-stepper-icon-box-shadow-selected-spread) + ($sprk-stepper-icon-height / 2);
   }
   &.sprk-c-Stepper__step:last-child::before  {
-    height: ($sprk-stepper-step-padding + $sprk-stepper-step-icon-box-shadow-selected-spread);
+    height: ($sprk-stepper-step-padding + $sprk-stepper-icon-box-shadow-selected-spread);
   }
   .sprk-c-Stepper__step-content {
     background-color: $sprk-stepper-step-content-bg-selected;
@@ -124,15 +124,15 @@
 }
 
 .sprk-c-Stepper__step-header {
-  display: flex;
   align-items: center;
   cursor: pointer;
+  display: flex;
   position: static;
 }
 
 .sprk-c-Stepper__step-header:hover
 .sprk-c-Stepper__step-icon {
-  background-color: $sprk-stepper-step-icon-color-hover;
+  background-color: $sprk-stepper-icon-color-hover;
 }
 
 .sprk-c-Stepper__step-heading {
@@ -142,4 +142,15 @@
 
 .sprk-c-Stepper__step-description {
   padding-top: $sprk-stepper-step-description-top-spacing;
+}
+
+.slider {
+  background-color: $sprk-stepper-step-description-bg-selected;
+  min-height: 16px;
+  min-width: 16px;
+  border-radius: $sprk-stepper-step-description-border-radius;
+  left: $sprk-stepper-step-content-margin-left;
+  position: absolute;
+  top: 0;
+  transition: all .3s ease-in-out;
 }
