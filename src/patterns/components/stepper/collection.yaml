@@ -1,5 +1,8 @@
 description:
   The Stepper shows progression through a process.
+information:
+  - Stepper uses the aria rold of tablist for accessibility reasons.
+  - Users can use the arrow keys to tab through the steps.
 restrictions:
 - Has a minimum of three items.
 - Only one step can be selected at a time.
@@ -69,7 +72,7 @@ variableTable:
     description: The box shadow of the step content box when it has a description.
   $sprk-stepper-step-description-top-spacing:
     default: $sprk-space-m
-    description: The spacing between the step heading and description if description is present.
+    description: The spacing between the step heading and description.
   $sprk-stepper-step-heading-font-weight:
     default: 400
     description: The font weight of the step heading.
@@ -96,7 +99,7 @@ variableTable:
     description: The background color of the step content box when it has a description and when the step is selected.
   $sprk-stepper-dark-step-description-bg-selected:
     default: $sprk-white
-    description: The background color of the step content box when it has a description and when the step is selected. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
+    description: The background color of a selected step's content box when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
   $sprk-stepper-bar-color:
     default: $sprk-black-tint-50
     description: The color of the bar that connects the steps.
