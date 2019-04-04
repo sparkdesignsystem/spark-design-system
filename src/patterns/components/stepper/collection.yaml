@@ -1,8 +1,9 @@
 description:
   The Stepper shows progression through a process.
 information:
-  - Stepper uses the aria rold of tablist for accessibility reasons.
+  - Uses the aria role of "tablist" for accessibility reasons.
   - Users can use the arrow keys to tab through the steps.
+  - Pressing "enter" on a step will select that step.
 restrictions:
 - Has a minimum of three items.
 - Only one step can be selected at a time.
