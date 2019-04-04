@@ -143,14 +143,3 @@
 .sprk-c-Stepper__step-description {
   padding-top: $sprk-stepper-step-description-top-spacing;
 }
-
-.slider {
-  background-color: $sprk-stepper-step-description-bg-selected;
-  min-height: 16px;
-  min-width: 16px;
-  border-radius: $sprk-stepper-step-description-border-radius;
-  left: $sprk-stepper-step-content-margin-left;
-  position: absolute;
-  top: 0;
-  transition: all .3s ease-in-out;
-}
