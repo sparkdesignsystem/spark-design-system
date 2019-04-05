@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SparkPromoComponent } from './sprk-promo.component';
 
 describe('SparkPromoComponent', () => {
@@ -11,7 +12,11 @@ describe('SparkPromoComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [SparkPromoComponent, SparkIconComponent]
+      declarations: [
+        SparkPromoComponent,
+        SparkIconComponent,
+        SparkLinkComponent
+      ]
     }).compileComponents();
   }));
 

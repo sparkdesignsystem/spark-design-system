@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SparkLinkComponent } from './sprk-link.component';
 
 describe('SparkLinkComponent', () => {
@@ -8,6 +9,7 @@ describe('SparkLinkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [SparkLinkComponent]
     }).compileComponents();
   }));
@@ -43,12 +45,12 @@ describe('SparkLinkComponent', () => {
     );
   });
 
-  it('should add the correct class if linkType is disabled', () => {
-    component.linkType = 'disabled';
+  it('should add the correct class if disabled is set to true', () => {
+    component.isDisabled = true;
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--disabled');
   });
 
-  it('should add the correct class if linkType is disabled', () => {
+  it('should add the correct class if linkType is plain', () => {
     component.linkType = 'plain';
     expect(component.getClasses()).toEqual('sprk-b-Link sprk-b-Link--plain');
   });
@@ -92,5 +94,42 @@ describe('SparkLinkComponent', () => {
     component.target = '_blank';
     fixture.detectChanges();
     expect(linkElement.getAttribute('target')).toEqual('_blank');
+  });
+
+  it('should get the url path before the hash', () => {
+    const url = 'https://www.sparkdesignsystem.com/links#testing';
+    const hash = 'links#testing';
+    fixture.detectChanges();
+    expect(component.getPathWithoutHash(hash)).toEqual('links');
+    expect(component.getPathWithoutHash(url)).toEqual(
+      'https://www.sparkdesignsystem.com/links'
+    );
+  });
+
+  it('should determine if the value is a jump link', () => {
+    const hash = '#testing';
+    fixture.detectChanges();
+    expect(component.isJumpLink(hash)).toBeTruthy();
+  });
+
+  it('should determine if the value is a jump link on a specific page', () => {
+    const hash = 'links#testing';
+    fixture.detectChanges();
+    expect(component.isJumpLinkWithPage(hash)).toBeTruthy();
+  });
+
+  it('should determine if the value is an external link', () => {
+    const url = 'https://www.sparkdesignsystem.com/';
+    const internal = '/buttons';
+    fixture.detectChanges();
+    expect(component.isExternalLink(url)).toBeTruthy();
+    expect(component.isExternalLink(internal)).toBeFalsy();
+  });
+
+  it('should add a hash as the href if an undefined value is supplied to href ', () => {
+    const test = undefined;
+    component.href = test;
+    fixture.detectChanges();
+    expect(component.href).toEqual('#');
   });
 });

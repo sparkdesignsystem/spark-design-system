@@ -25,10 +25,10 @@ import { Component, Input } from '@angular/core';
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"
             >
               <div class="sprk-o-Stack__item">
-                <a
-                  class="sprk-b-Link sprk-b-Link--plain"
+                <sprk-link
+                  linkType="plain"
                   href="{{ item.href }}"
-                  attr.data-analytics="{{ item.analytics }}"
+                  analyticsString="{{ item.analytics }}"
                 >
                   <sprk-icon
                     *ngIf="item.icon"
@@ -44,7 +44,7 @@ import { Component, Input } from '@angular/core';
                     alt="{{ item.imgAlt }}"
                     class="{{ item.imgCSS }}"
                   />
-                </a>
+                </sprk-link>
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
@@ -75,12 +75,13 @@ import { Component, Input } from '@angular/core';
                     class="sprk-o-Stack__item"
                     *ngFor="let link of item.links"
                   >
-                    <a
-                      class="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                    <sprk-link
+                      linkType="simple"
+                      additionalClasses="sprk-u-FontWeight--normal"
                       href="{{ link.href }}"
                     >
                       {{ link.text }}
-                    </a>
+                    </sprk-link>
                   </li>
                 </ul>
               </div>
@@ -105,10 +106,10 @@ import { Component, Input } from '@angular/core';
                     *ngFor="let item of socialLinks"
                     class="sprk-o-Stack__item"
                   >
-                    <a
-                      class="sprk-b-Link sprk-b-Link--plain"
+                    <sprk-link
+                      linkType="plain"
                       href="{{ item.href }}"
-                      attr.data-analytics="{{ item.analytics }}"
+                      analyticsString="{{ item.analytics }}"
                     >
                       <sprk-icon
                         *ngIf="item.icon"
@@ -118,7 +119,7 @@ import { Component, Input } from '@angular/core';
                       <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
                         item.iconScreenReaderText
                       }}</span>
-                    </a>
+                    </sprk-link>
                   </li>
                 </ul>
               </div>
@@ -146,10 +147,10 @@ import { Component, Input } from '@angular/core';
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
             >
               <div class="sprk-o-Stack__item" *ngFor="let award of awards">
-                <a
-                  class="sprk-o-Stack__item"
+                <sprk-link
+                  additionalClasses="sprk-o-Stack__item"
                   href="{{ award.href }}"
-                  attr.data-analytics="{{ award.analytics }}"
+                  analyticsString="{{ award.analytics }}"
                 >
                   <img
                     *ngIf="award.imgSrc"
@@ -157,7 +158,7 @@ import { Component, Input } from '@angular/core';
                     alt="{{ award.imgAlt }}"
                     class="{{ award.imgCSS }}"
                   />
-                </a>
+                </sprk-link>
               </div>
             </div>
 
@@ -193,10 +194,10 @@ import { Component, Input } from '@angular/core';
             class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare"
           >
             <li *ngFor="let item of badgeLinks" class="sprk-o-Stack__item">
-              <a
-                class="sprk-b-Link sprk-b-Link--plain"
+              <sprk-link
+                linkType="plain"
                 href="{{ item.href }}"
-                attr.data-analytics="{{ item.analytics }}"
+                analyticsString="{{ item.analytics }}"
               >
                 <sprk-icon
                   *ngIf="item.icon"
@@ -206,7 +207,7 @@ import { Component, Input } from '@angular/core';
                 <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
                   item.iconScreenReaderText
                 }}</span>
-              </a>
+              </sprk-link>
             </li>
           </ul>
         </div>
