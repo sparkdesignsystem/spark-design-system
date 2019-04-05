@@ -6,6 +6,7 @@ import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMasthead
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
+import SprkLink from '../SprkLink/SprkLink';
 
 class SprkMasthead extends Component {
   constructor() {
@@ -83,7 +84,9 @@ class SprkMasthead extends Component {
           />
 
           <div className="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
-            <a href="/">{siteLogo}</a>
+            <SprkLink variant="unstyled" href="/">
+              {siteLogo}
+            </SprkLink>
           </div>
 
           {(littleNavLinks.length > 0 || utilityContents.length > 0) && (
@@ -191,16 +194,8 @@ SprkMasthead.propTypes = {
 };
 
 SprkMasthead.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  bigNavLinks: [],
-  idString: '',
   littleNavLinks: [],
-  narrowNavLinks: [],
-  narrowSelector: {},
-  selector: {},
-  siteLogo: [],
-  utilityContents: [],
+  bigNavLinks: [],
   variant: 'default',
 };
 
