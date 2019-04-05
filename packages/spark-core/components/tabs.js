@@ -54,7 +54,8 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     // Move slider
     sliderEl.style.top = `${sliderTopValue}px`;
     // Add active class to slider
-    setTimeout(() => { slider.classList.add(activeClass); }, 200);
+    // setTimeout(() => { slider.classList.add(activeClass); }, 200);
+    window.requestAnimationFrame(slider.classList.add(activeClass));
     // Set aria selected in slider
     const stepTrigger = slider.querySelector('[role="tab"]');
     stepTrigger.setAttribute('aria-selected', 'true');
