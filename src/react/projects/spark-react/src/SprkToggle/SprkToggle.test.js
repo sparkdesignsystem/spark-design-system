@@ -48,5 +48,5 @@ it('should add aria-expanded="true" when the toggle is open', () => {
     <SprkToggle title="Toggle title">Body text</SprkToggle>,
   );
   wrapper.find('a').simulate('click');
-  expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
+  expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
 });

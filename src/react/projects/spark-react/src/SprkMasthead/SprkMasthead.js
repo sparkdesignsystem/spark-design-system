@@ -195,7 +195,9 @@ SprkMasthead.propTypes = {
 
 SprkMasthead.defaultProps = {
   littleNavLinks: [],
+  narrowNavLinks: [],
   bigNavLinks: [],
+  utilityContents: [],
   variant: 'default',
 };
 

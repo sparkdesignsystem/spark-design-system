@@ -178,6 +178,9 @@ SprkMastheadDropdown.defaultProps = {
   triggerText: 'Choose One...',
   iconName: 'chevron-down',
   variant: 'base',
+  choices: {
+    items: [],
+  },
 };
 
 export default SprkMastheadDropdown;

@@ -42,12 +42,12 @@ it('should add classes to the trigger text when additionalTriggerTextClasses has
 
 it('should assign data-analytics when analyticsString has a value', () => {
   const wrapper = mount(<SprkMastheadDropdown analyticsString="321" />);
-  expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
+  expect(wrapper.find('[data-analytics="321"]').length).toBe(2);
 });
 
 it('should assign data-id when idString has a value', () => {
   const wrapper = mount(<SprkMastheadDropdown idString="321" />);
-  expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  expect(wrapper.find('[data-id="321"]').length).toBe(2);
 });
 
 it('should assign the choices header when title has a value', () => {

@@ -57,6 +57,7 @@ SprkMastheadAccordion.propTypes = {
 };
 
 SprkMastheadAccordion.defaultProps = {
+  links: [],
 };
 
 export default SprkMastheadAccordion;

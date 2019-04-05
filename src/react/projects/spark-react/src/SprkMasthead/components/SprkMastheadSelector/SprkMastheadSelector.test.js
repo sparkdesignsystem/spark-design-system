@@ -120,7 +120,7 @@ it('should assign data-analytics when analyticsString has a value', () => {
   const wrapper = mount(
     <SprkMastheadSelector choices={choices} analyticsString="321" />,
   );
-  expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
+  expect(wrapper.find('[data-analytics="321"]').length).toBe(2);
 });
 
 it('should assign data-id when idString has a value', () => {
@@ -133,7 +133,7 @@ it('should assign data-id when idString has a value', () => {
   const wrapper = mount(
     <SprkMastheadSelector choices={choices} idString="321" />,
   );
-  expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  expect(wrapper.find('[data-id="321"]').length).toBe(2);
 });
 
 it('should build the correct number of choices from a choices object', () => {

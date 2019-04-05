@@ -144,5 +144,5 @@ it('should add aria-expanded="true" when the item is open', () => {
   );
   expect(wrapper.state().isOpen).toBe(false);
   wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
-  expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
+  expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
 });
