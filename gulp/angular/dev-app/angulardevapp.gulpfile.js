@@ -12,7 +12,7 @@ gulp.task('build-angular-dev-app', (cb) => {
 });
 
 gulp.task('build-angular-dev-app-netlify', (cb) => {
-  exec('cd src/angular && node_modules/.bin/ng build --base-href angular', (err, stdout, stderr) => {
+  exec('cd src/angular && node_modules/.bin/ng build --base-href angular --prod', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
