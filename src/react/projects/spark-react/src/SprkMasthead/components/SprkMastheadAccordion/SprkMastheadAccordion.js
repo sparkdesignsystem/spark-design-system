@@ -57,10 +57,6 @@ SprkMastheadAccordion.propTypes = {
 };
 
 SprkMastheadAccordion.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  idString: '',
-  links: [],
 };
 
 export default SprkMastheadAccordion;

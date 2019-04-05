@@ -175,6 +175,7 @@ SprkMastheadAccordionItem.defaultProps = {
   href: '#nogo',
   isActive: false,
   isButton: false,
+  subNavLinks: [],
 };
 
 export default SprkMastheadAccordionItem;

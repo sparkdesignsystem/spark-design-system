@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkLink from '../../../SprkLink/SprkLink';
 
 class SprkMastheadDropdown extends Component {
   constructor(props) {
@@ -74,10 +75,9 @@ class SprkMastheadDropdown extends Component {
     const { choiceItems, isOpen } = this.state;
     return (
       <div ref={this.myRef}>
-        <a
-          className={classNames(
-            'sprk-b-Link',
-            'sprk-b-Link--plain',
+        <SprkLink
+          variant="plain"
+          additionalClasses={classNames(
             { 'sprk-u-mrs': variant === 'informational' },
             additionalTriggerClasses,
           )}
@@ -98,7 +98,7 @@ class SprkMastheadDropdown extends Component {
             )}
             iconName={iconName}
           />
-        </a>
+        </SprkLink>
         {isOpen && (
           <div
             className={classNames(
@@ -175,19 +175,8 @@ SprkMastheadDropdown.propTypes = {
 };
 
 SprkMastheadDropdown.defaultProps = {
-  additionalClasses: '',
-  additionalIconClasses: '',
-  additionalTriggerClasses: '',
-  additionalTriggerTextClasses: '',
-  analyticsString: '',
-  children: [],
-  choices: {
-    items: [],
-  },
   triggerText: 'Choose One...',
   iconName: 'chevron-down',
-  idString: '',
-  title: '',
   variant: 'base',
 };
 
