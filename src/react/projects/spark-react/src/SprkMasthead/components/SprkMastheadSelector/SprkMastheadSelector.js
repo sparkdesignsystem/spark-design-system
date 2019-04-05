@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkLink from '../../../SprkLink/SprkLink';
 
 class SprkMastheadSelector extends Component {
   constructor(props) {
@@ -94,9 +95,10 @@ class SprkMastheadSelector extends Component {
         }}
       >
         <div className={classNames({ 'sprk-o-Box': isFlush })}>
-          <a
-            className={classNames(
-              'sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
+          <SprkLink
+            variant="plain"
+            additionalClasses={classNames(
+              'sprk-c-Masthead__selector sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
               additionalTriggerClasses,
             )}
             data-analytics={analyticsString}
@@ -122,7 +124,7 @@ class SprkMastheadSelector extends Component {
                 additionalIconClasses,
               )}
             />
-          </a>
+          </SprkLink>
         </div>
 
         {isOpen && (
@@ -134,8 +136,9 @@ class SprkMastheadSelector extends Component {
             data-sprk-dropdown="dropdown-selector"
           >
             <div className="sprk-c-Dropdown__header">
-              <a
-                className="sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+              <SprkLink
+                variant="plain"
+                additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
                 onClick={this.closeDropdown}
                 href="#nogo"
                 aria-haspopup="true"
@@ -147,7 +150,7 @@ class SprkMastheadSelector extends Component {
                   iconName="chevron-up"
                   additionalClasses="sprk-c-Icon--toggle sprk-Stack__item"
                 />
-              </a>
+              </SprkLink>
             </div>
 
             <ul className="sprk-c-Dropdown__links">
@@ -236,15 +239,8 @@ SprkMastheadSelector.propTypes = {
 };
 
 SprkMastheadSelector.defaultProps = {
-  additionalClasses: '',
-  additionalIconClasses: '',
-  additionalTriggerClasses: '',
-  additionalTriggerTextClasses: '',
-  analyticsString: '',
-  children: [],
   defaultTriggerText: 'Choose One...',
   iconName: 'chevron-down',
-  idString: '',
   isFlush: false,
 };
 
