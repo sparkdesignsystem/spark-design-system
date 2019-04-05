@@ -8,29 +8,47 @@ import {
 
 const setActiveTabAndSlide = (step, stepPanel, sliderEl, activeClass) => {
   const stepPanel1 = stepPanel;
-  const tabTrigger = step.querySelector('[role="tab"]');
   const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
   const sliderTopValue = step.offsetTop;
   const slider = sliderEl;
-  slider.classList.add(activeClass);
+  const stepIcon = stepContent.querySelector('.sprk-c-Stepper__step-icon');
+  const stepHeading = stepContent.querySelector('.sprk-c-Stepper__step-heading');
+
   step.classList.add(activeClass);
+
   if (stepPanel1) {
     stepPanel1.classList.remove('sprk-u-HideWhenJs');
   }
-  tabTrigger.setAttribute('aria-selected', 'true');
+  // Create binding for old step content
   const stepInnerHTML = step.innerHTML;
-  stepContent.classList.add('sprk-u-Visibility--hidden');
-  stepContent.classList.add('sprk-u-Visibility--hidden');
-  slider.innerHTML = stepInnerHTML;
+  // Hide old step heading
+  stepHeading.classList.add('sprk-u-Visibility--hidden');
+  // Move slider
   slider.style.top = `${sliderTopValue}px`;
+  // Hide old step content entirely
+  stepContent.classList.add('sprk-u-Visibility--hidden');
+  // Add content to slider
+  slider.innerHTML = stepInnerHTML;
+  // Add active class to slider
+  slider.classList.add(activeClass);
+  // slider.style.opacity = '1';
+  // Set aria selected in slider
+  const tabTrigger = slider.querySelector('[role="tab"]');
+  tabTrigger.setAttribute('aria-selected', 'true');
   tabTrigger.focus();
 };
 
 const resetVisibility = (steps) => {
   steps.forEach((step) => {
     const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
+    const stepHeading = stepContent.querySelector('.sprk-c-Stepper__step-heading');
+
     if (stepContent.classList.contains('sprk-u-Visibility--hidden')) {
       stepContent.classList.remove('sprk-u-Visibility--hidden');
+    }
+
+    if (stepHeading.classList.contains('sprk-u-Visibility--hidden')) {
+      stepHeading.classList.remove('sprk-u-Visibility--hidden');
     }
   });
 };

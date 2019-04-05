@@ -11,13 +11,18 @@
 .sprk-c-Stepper__slider {
   position: absolute;
   top: 0;
-  transition: top .2s ease-in-out;
+  opacity: 0;
+  transition: top .2s ease-in-out,  opacity 0.3s ease;
   z-index: 1000;
   .sprk-c-Stepper__step-content {
     background-color: $sprk-stepper-step-description-bg-selected;
     box-shadow: $sprk-stepper-step-description-box-shadow;
     border-radius: $sprk-stepper-step-description-border-radius;
   }
+}
+
+.sprk-c-Stepper__slider.sprk-c-Stepper__step--selected {
+  opacity: 1;
 }
 
 .sprk-c-Stepper--has-dark-bg {
