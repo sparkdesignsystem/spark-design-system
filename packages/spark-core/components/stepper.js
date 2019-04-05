@@ -6,53 +6,6 @@ import {
   setActiveTab,
 } from './tabs';
 
-const setActiveTabAndSlide = (step, stepPanel, sliderEl, activeClass) => {
-  const stepPanel1 = stepPanel;
-  const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
-  const sliderTopValue = step.offsetTop;
-  const slider = sliderEl;
-  const stepIcon = stepContent.querySelector('.sprk-c-Stepper__step-icon');
-  const stepHeading = stepContent.querySelector('.sprk-c-Stepper__step-heading');
-
-  step.classList.add(activeClass);
-
-  if (stepPanel1) {
-    stepPanel1.classList.remove('sprk-u-HideWhenJs');
-  }
-  // Create binding for old step content
-  const stepInnerHTML = step.innerHTML;
-  // Hide old step heading
-  stepHeading.classList.add('sprk-u-Visibility--hidden');
-  // Move slider
-  slider.style.top = `${sliderTopValue}px`;
-  // Hide old step content entirely
-  stepContent.classList.add('sprk-u-Visibility--hidden');
-  // Add content to slider
-  slider.innerHTML = stepInnerHTML;
-  // Add active class to slider
-  slider.classList.add(activeClass);
-  // slider.style.opacity = '1';
-  // Set aria selected in slider
-  const tabTrigger = slider.querySelector('[role="tab"]');
-  tabTrigger.setAttribute('aria-selected', 'true');
-  tabTrigger.focus();
-};
-
-const resetVisibility = (steps) => {
-  steps.forEach((step) => {
-    const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
-    const stepHeading = stepContent.querySelector('.sprk-c-Stepper__step-heading');
-
-    if (stepContent.classList.contains('sprk-u-Visibility--hidden')) {
-      stepContent.classList.remove('sprk-u-Visibility--hidden');
-    }
-
-    if (stepHeading.classList.contains('sprk-u-Visibility--hidden')) {
-      stepHeading.classList.remove('sprk-u-Visibility--hidden');
-    }
-  });
-};
-
 /**
  * Takes in the stepper container.
  * Gets all the steps in container.
@@ -71,6 +24,7 @@ const bindUIEvents = (stepper) => {
   if (hasSlideEffect) {
     sliderEl = document.createElement('li');
     sliderEl.classList.add('sprk-c-Stepper__slider');
+    sliderEl.setAttribute('data-sprk-stepper', 'slider');
     stepper.prepend(sliderEl);
   }
 
@@ -80,18 +34,13 @@ const bindUIEvents = (stepper) => {
 
     stepTrigger.addEventListener('click', (e) => {
       e.preventDefault();
-      resetTabs(steps, stepPanels, activeClass);
-      if (hasSlideEffect) {
-        resetVisibility(steps);
-        setActiveTabAndSlide(step, stepPanels[index], sliderEl, activeClass);
-      } else {
-        setActiveTab(step, stepPanels[index], activeClass);
-      }
+      resetTabs(steps, stepPanels, activeClass, sliderEl);
+      setActiveTab(step, stepPanels[index], activeClass, sliderEl);
     });
   });
 
   stepper.addEventListener('keydown', (event) => {
-    handleTabKeydown(event, steps, stepPanels, activeClass);
+    handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
   });
 };
 
