@@ -821,10 +821,12 @@ $sprk-stepper-step-description-bg-selected: $sprk-white !default;
 $sprk-stepper-dark-step-description-bg-selected: $sprk-white !default;
 $sprk-stepper-bar-color: $sprk-black-tint-50 !default;
 $sprk-stepper-dark-bar-color: $sprk-white !default;
-// Not changeable by user: bar width and bar inset from left side
+// Restricted and not customizable
 $sprk-stepper-bar-width: 2px;
 $sprk-stepper-icon-diameter: $sprk-stepper-icon-width + $sprk-stepper-icon-border-width;
 $sprk-stepper-icon-radius: $sprk-stepper-icon-diameter / 2;
 $sprk-stepper-bar-left-inset: $sprk-space-l;
 $sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) + $sprk-stepper-bar-width;
 $sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset + $sprk-stepper-icon-radius));
+$sprk-stepper-slide-timing: 0.3s;
+$sprk-stepper-slider-text-fade-in-timing: 0.6s;
