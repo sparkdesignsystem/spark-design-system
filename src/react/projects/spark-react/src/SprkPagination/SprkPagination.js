@@ -70,7 +70,7 @@ const SprkPagination = (props) => {
       >
         <li>
           <SprkLink
-            href="#"
+            href="#nogo"
             onClick={e => goToPage(e, currentPage - 1)}
             additionalClasses={leftLinkClasses}
             variant="plain"
@@ -86,7 +86,7 @@ const SprkPagination = (props) => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 1)}
-              href="#"
+              href="#nogo"
               additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
@@ -111,7 +111,7 @@ const SprkPagination = (props) => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, currentPage)}
-              href="#"
+              href="#nogo"
               additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
@@ -137,7 +137,7 @@ const SprkPagination = (props) => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, totalPages)}
-              href="#"
+              href="#nogo"
               additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
@@ -157,7 +157,7 @@ const SprkPagination = (props) => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 2)}
-              href="#"
+              href="#nogo"
               additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
@@ -176,7 +176,7 @@ const SprkPagination = (props) => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 3)}
-              href="#"
+              href="#nogo"
               additionalClasses={
                 classnames(
                   'sprk-c-Pagination__link',
@@ -193,7 +193,7 @@ const SprkPagination = (props) => {
 
         <li>
           <SprkLink
-            href="#"
+            href="#nogo"
             onClick={e => goToPage(e, currentPage + 1)}
             additionalClasses={rightLinkClasses}
             variant="plain"
