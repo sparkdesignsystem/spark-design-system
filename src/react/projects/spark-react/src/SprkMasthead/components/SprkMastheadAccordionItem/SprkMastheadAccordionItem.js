@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkLink from '../../../SprkLink/SprkLink';
 
 class SprkMastheadAccordionItem extends Component {
   constructor(props) {
@@ -55,9 +56,10 @@ class SprkMastheadAccordionItem extends Component {
       >
         {stateLinks.length > 0 && (
           <React.Fragment>
-            <a
+            <SprkLink
+              variant="unstyled"
               href="#nogo"
-              className="sprk-c-MastheadAccordion__summary"
+              additionalClasses="sprk-c-MastheadAccordion__summary"
               onClick={this.toggleAccordionOpen}
               aria-expanded={isOpen ? 'true' : 'false'}
             >
@@ -68,7 +70,7 @@ class SprkMastheadAccordionItem extends Component {
                 additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })}
                 iconName="chevron-down"
               />
-            </a>
+            </SprkLink>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
                 {stateLinks.map(subnavlink => {
@@ -168,17 +170,11 @@ SprkMastheadAccordionItem.propTypes = {
 };
 
 SprkMastheadAccordionItem.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
   defaultOpen: false,
   element: 'a',
   href: '#nogo',
-  idString: '',
   isActive: false,
   isButton: false,
-  leadingIcon: '',
-  subNavLinks: [],
-  text: '',
 };
 
 export default SprkMastheadAccordionItem;
