@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkIconComponent } from '../../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../../sprk-link/sprk-link.component';
 import { SparkMastheadAccordionComponent } from './sprk-masthead-accordion.component';
 
 describe('SparkMastheadAccordionComponent', () => {
@@ -9,7 +10,11 @@ describe('SparkMastheadAccordionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkMastheadAccordionComponent, SparkIconComponent]
+      declarations: [
+        SparkMastheadAccordionComponent,
+        SparkIconComponent,
+        SparkLinkComponent
+      ]
     }).compileComponents();
   }));
 

@@ -167,7 +167,7 @@ import { Component } from '@angular/core';
             sprkInput
           />
         </sprk-input-container>
-        <sprk-icon-input-container iconContainerClasses="">
+        <sprk-icon-input-container>
           <label
             class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
             sprkLabel
@@ -258,7 +258,7 @@ import { Component } from '@angular/core';
             </div>
           </span>
         </sprk-input-container>
-        <sprk-icon-input-container iconContainerClasses="">
+        <sprk-icon-input-container>
           <label class="sprk-b-Label--with-icon" sprkLabel>
             Date Input (picker)
           </label>
