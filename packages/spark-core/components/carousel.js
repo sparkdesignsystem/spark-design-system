@@ -22,7 +22,7 @@ const carousel = (item) => {
   // after init event
   item.addEventListener('after.lory.init', () => {
     if (dotContainer) {
-      const dots = dotContainer.querySelectorAll('.js_dots li');
+      const dots = dotContainer.querySelectorAll('li');
       dots.forEach((dot, index) => {
         dot.addEventListener('click', event => {
           event.preventDefault();
@@ -35,10 +35,11 @@ const carousel = (item) => {
   item.addEventListener('after.lory.slide', event => {
     if (dotContainer) {
       const dots = dotContainer.querySelectorAll('li');
-      dots.forEach(dot => {
+      dots.forEach((dot) => {
         dot.classList.remove('sprk-c-Carousel__dot--active');
       });
       dots[event.detail.currentSlide - 1].classList.add('sprk-c-Carousel__dot--active');
+      item.dispatchEvent(new Event('sprk.carousel.slide', { index: [event.detail.currentSlide - 1]}));
     }
   });
 

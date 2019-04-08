@@ -14,12 +14,17 @@ import {
  * Binds keydown listener to each step.
  * @param {NodeList} stepper - Collection of stepper container.
 */
-const bindUIEvents = (stepper) => {
+const bindUIEvents = (stepper, carouselContainer) => {
+  const carouselInstance = carousel(carouselContainer);
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
   const hasSlideEffect = stepper.querySelector('[data-sprk-stepper="description"]');
   let sliderEl;
+
+  carouselContainer.addEventListener('sprk.carousel.slide', () => {
+    console.log('hi');
+  });
 
   // If the stepper has stepper descriptions then build slider
   if (hasSlideEffect) {
@@ -37,7 +42,7 @@ const bindUIEvents = (stepper) => {
       e.preventDefault();
       resetTabs(steps, stepPanels, activeClass, sliderEl);
       setActiveTab(step, stepPanels[index], activeClass, sliderEl);
-      // slideTo(stepIndex);
+      carouselInstance.slideTo(index);
     });
   });
 
@@ -47,12 +52,21 @@ const bindUIEvents = (stepper) => {
 };
 
 const stepper = () => {
-  getElements('[data-sprk-stepper="container"]', bindUIEvents);
-  const carouselContainer = document.querySelector('[data-sprk-carousel]');
-  const carouselInstance = carousel(carouselContainer);
+  getElements('[data-sprk-stepper="container"]', (item) => {
+    const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
+    let carouselInstance;
+    if (partnerCarouselID) {
+      const carouselContainer = document.querySelector(`[data-sprk-carousel=${partnerCarouselID}]`);
+      bindUIEvents(item, carouselContainer);
+    }
+  });
 };
 
 export {
   stepper,
   bindUIEvents,
 };
+
+// stepper state
+// steps / slides / dots
+// active step / slides / dots
