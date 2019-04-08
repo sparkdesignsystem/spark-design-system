@@ -50,7 +50,7 @@ const resetTabs = (tabs, tabpanels, activeClass, slider) => {
 const setActiveTab = (tab, tabpanel, activeClass, slider) => {
   if (slider) {
     const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
-    const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
+    const stepHeading = tab.querySelector('[data-sprk-stepper="heading"]');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
 
     const sliderTopValue = tab.offsetTop;
