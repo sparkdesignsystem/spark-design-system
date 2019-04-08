@@ -25,7 +25,9 @@ import * as _ from 'lodash';
           [attr.aria-selected]="isSelected"
         >
           <span class="sprk-c-Stepper__step-icon"></span>
-          <h3 class="sprk-c-Stepper__step-heading">{{ heading }}</h3>
+          <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
+            {{ heading }}
+          </h3>
         </a>
 
         <div

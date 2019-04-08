@@ -50,7 +50,7 @@ const resetTabs = (tabs, tabpanels, activeClass, slider) => {
 const setActiveTab = (tab, tabpanel, activeClass, slider) => {
   if (slider) {
     const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
-    const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
+    const stepHeading = tab.querySelector('[data-sprk-stepper="heading"]');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
 
     const sliderTopValue = tab.offsetTop;
@@ -73,13 +73,15 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     // Move slider
     sliderEl.style.top = `${sliderTopValue}px`;
     // Add active class to slider
-    // setTimeout(() => { slider.classList.add(activeClass); }, 200);
     window.requestAnimationFrame(()=> {
       slider.classList.add(activeClass)
     });
     // Set aria selected in slider
     const stepTrigger = slider.querySelector('[role="tab"]');
     stepTrigger.setAttribute('aria-selected', 'true');
+    stepTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+    });
     stepTrigger.focus();
   } else {
     const isStepper = tab.hasAttribute('data-sprk-stepper');
