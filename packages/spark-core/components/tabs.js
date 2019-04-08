@@ -3,7 +3,7 @@ import getElements from '../utilities/getElements';
 
 
 const resetSliderVisibility = (tab, activeClass, slider) => {
-  const stepDescription = tab.querySelector('.sprk-c-Stepper__step-description');
+  const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
   const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
   const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
 
@@ -49,7 +49,7 @@ const resetTabs = (tabs, tabpanels, activeClass, slider) => {
 // correct role=tab get aria-selected=true, get active class added, show correct panel
 const setActiveTab = (tab, tabpanel, activeClass, slider) => {
   if (slider) {
-    const stepDescription = tab.querySelector('.sprk-c-Stepper__step-description');
+    const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
     const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
 

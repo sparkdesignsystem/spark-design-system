@@ -37,6 +37,8 @@ import { SparkOrderedListModule } from './components/sprk-ordered-list/sprk-orde
 import { SparkPaginationModule } from './components/sprk-pagination/sprk-pagination.module';
 import { SparkPromoModule } from './components/sprk-promo/sprk-promo.module';
 import { SparkStackModule } from './components/sprk-stack/sprk-stack.module';
+import { SparkStepperModule } from './components/sprk-stepper/sprk-stepper.module';
+import { SparkStepperStepModule } from './components/sprk-stepper/sprk-stepper-step/sprk-stepper-step.module';
 import { SparkTabbedNavigationModule } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.module';
 import { SparkTableModule } from './components/sprk-table/sprk-table.module';
 import { SparkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
@@ -92,6 +94,8 @@ import TinyDatePicker from 'tiny-date-picker';
     SparkPaginationModule,
     SparkStackModule,
     SprkStackItemModule,
+    SparkStepperModule,
+    SparkStepperStepModule,
     SparkToggleModule,
     SparkIconModule,
     SparkFooterModule,
