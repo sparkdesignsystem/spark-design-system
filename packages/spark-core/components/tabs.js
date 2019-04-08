@@ -3,7 +3,10 @@ import getElements from '../utilities/getElements';
 
 
 const resetSliderVisibility = (tab, activeClass, slider) => {
-  const tabContent = tab.querySelector('.sprk-c-Stepper__step-content');
+  const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
+  const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
+  const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
+
   if (tab.classList.contains(activeClass)) {
     tab.classList.remove(activeClass);
   }
@@ -12,8 +15,16 @@ const resetSliderVisibility = (tab, activeClass, slider) => {
     slider.classList.remove(activeClass);
   }
 
-  if (tabContent.classList.contains('sprk-u-Visibility--hidden')) {
-    tabContent.classList.remove('sprk-u-Visibility--hidden');
+  if (stepDescription.classList.contains('sprk-u-Visibility--hidden')) {
+    stepDescription.classList.remove('sprk-u-Visibility--hidden');
+  }
+
+  if (stepHeading.classList.contains('sprk-u-Visibility--hidden')) {
+    stepHeading.classList.remove('sprk-u-Visibility--hidden');
+  }
+
+  if (stepContent.classList.contains('sprk-c-Stepper__step-content--hidden')) {
+    stepContent.classList.remove('sprk-c-Stepper__step-content--hidden');
   }
 };
 
@@ -38,7 +49,10 @@ const resetTabs = (tabs, tabpanels, activeClass, slider) => {
 // correct role=tab get aria-selected=true, get active class added, show correct panel
 const setActiveTab = (tab, tabpanel, activeClass, slider) => {
   if (slider) {
+    const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
+    const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
+
     const sliderTopValue = tab.offsetTop;
     const sliderEl = slider;
     // Add active class to new step
@@ -49,12 +63,20 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     const stepInnerHTML = tab.innerHTML;
     // Update slider with step's HTML
     sliderEl.innerHTML = stepInnerHTML;
-    // Hide old step content entirely
-    stepContent.classList.add('sprk-u-Visibility--hidden');
+    // Hide the icon in the slider to use icon in original step
+    const sliderElIcon = sliderEl.querySelector('.sprk-c-Stepper__step-icon');
+    sliderElIcon.classList.add('sprk-u-Visibility--hidden');
+    // Hide old step content
+    stepDescription.classList.add('sprk-u-Visibility--hidden');
+    stepHeading.classList.add('sprk-u-Visibility--hidden');
+    stepContent.classList.add('sprk-c-Stepper__step-content--hidden');
     // Move slider
     sliderEl.style.top = `${sliderTopValue}px`;
     // Add active class to slider
-    setTimeout(() => { slider.classList.add(activeClass); }, 200);
+    // setTimeout(() => { slider.classList.add(activeClass); }, 200);
+    window.requestAnimationFrame(()=> {
+      slider.classList.add(activeClass)
+    });
     // Set aria selected in slider
     const stepTrigger = slider.querySelector('[role="tab"]');
     stepTrigger.setAttribute('aria-selected', 'true');

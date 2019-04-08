@@ -18,7 +18,7 @@ const bindUIEvents = (stepper) => {
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
-  const hasSlideEffect = stepper.querySelector('.sprk-c-Stepper__step-description');
+  const hasSlideEffect = stepper.querySelector('[data-sprk-stepper="description"]');
   let sliderEl;
 
   // If the stepper has stepper descriptions then build slider
