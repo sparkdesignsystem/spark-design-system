@@ -1,5 +1,6 @@
 /* global document */
 import getElements from '../utilities/getElements';
+import { carousel } from './carousel';
 import {
   handleTabKeydown,
   resetTabs,
@@ -36,6 +37,7 @@ const bindUIEvents = (stepper) => {
       e.preventDefault();
       resetTabs(steps, stepPanels, activeClass, sliderEl);
       setActiveTab(step, stepPanels[index], activeClass, sliderEl);
+      // slideTo(stepIndex);
     });
   });
 
@@ -46,6 +48,8 @@ const bindUIEvents = (stepper) => {
 
 const stepper = () => {
   getElements('[data-sprk-stepper="container"]', bindUIEvents);
+  const carouselContainer = document.querySelector('[data-sprk-carousel]');
+  const carouselInstance = carousel(carouselContainer);
 };
 
 export {

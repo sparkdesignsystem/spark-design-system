@@ -1,0 +1,66 @@
+.sprk-c-Carousel__frame {
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sprk-c-Carousel__frame-item {
+  position: relative;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  color: #fff;
+  width: 100%;
+}
+
+.sprk-c-Carousel__slides {
+  display: inline-block;
+}
+
+.sprk-c-Carousel__controls {
+  justify-content: space-between;
+  display: flex;
+  width: 76px;
+  margin: 0 auto;
+}
+
+.sprk-c-Carousel__prev,
+.sprk-c-Carousel__next {
+  display: block;
+  cursor: pointer;
+}
+
+.sprk-c-Carousel__next {
+  right: 0;
+}
+
+.sprk-c-Carousel__prev {
+  left: 0;
+}
+
+.sprk-c-Carousel__dots {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.sprk-c-Carousel__dot {
+  background-color: $sprk-gray;
+  display: block;
+  height: 5px;
+  width: 25px;
+  margin-right: 1px;
+}
+
+.sprk-c-Carousel__dot:last-child {
+  margin-right: 0;
+}
+
+.sprk-c-Carousel__dot--active {
+  background-color: $sprk-green;
+}
