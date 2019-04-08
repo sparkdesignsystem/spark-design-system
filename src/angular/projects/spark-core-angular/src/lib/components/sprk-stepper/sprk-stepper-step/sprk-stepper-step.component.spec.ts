@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkStepperComponent } from './sprk-stepper.component';
+import { SparkStepperStepComponent } from './sprk-stepper-step.component';
 
 @Component({
   selector: 'sprk-test',
@@ -11,9 +11,9 @@ import { SparkStepperComponent } from './sprk-stepper.component';
 })
 export class TestComponent {}
 
-describe('SparkStepperComponent', () => {
-  let component: SparkStepperComponent;
-  let fixture: ComponentFixture<SparkStepperComponent>;
+describe('SparkStepperStepComponent', () => {
+  let component: SparkStepperStepComponent;
+  let fixture: ComponentFixture<SparkStepperStepComponent>;
   let element: HTMLElement;
 
   let testComponent: TestComponent;
@@ -26,7 +26,7 @@ describe('SparkStepperComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkStepperComponent, TestComponent]
+      declarations: [SparkStepperStepComponent, TestComponent]
     }).compileComponents();
   });
 
@@ -34,9 +34,9 @@ describe('SparkStepperComponent', () => {
     testFixture = TestBed.createComponent(TestComponent);
     testComponent = testFixture.componentInstance;
 
-    fixture = TestBed.createComponent(SparkStepperComponent);
+    fixture = TestBed.createComponent(SparkStepperStepComponent);
     component = fixture.componentInstance;
-    component.ngAfterViewInit();
+    component.ngAfterContentInit();
     testFixture.detectChanges();
 
     element = fixture.nativeElement.querySelector('div');
