@@ -35,13 +35,14 @@ import { Component, Input } from '@angular/core';
           additionalClasses="sprk-o-Stack--center-column {{centerBtns}}"
         >
           <div sprkStackItem class="sprk-c-HighlightBoard__cta">
-            <a
-              [routerLink]="ctaHref"
-              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@s"
-              [attr.data-analytics]="analyticsStringCta"
+            <sprk-link
+              linkType="unstyled"
+              [href]="ctaHref"
+              additionalClasses="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              [analyticsString]="analyticsStringCta"
             >
               {{ ctaText }}
-            </a>
+            </sprk-link>
           </div>
 
           <div
@@ -49,19 +50,19 @@ import { Component, Input } from '@angular/core';
             *ngIf="ctaText2"
             class="sprk-c-HighlightBoard__cta"
           >
-            <a
-              [routerLink]="ctaHref2"
-              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@s"
-              [attr.data-analytics]="analyticsStringCta2"
+            <sprk-link
+              linkType="unstyled"
+              [href]="ctaHref2"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              [analyticsString]="analyticsStringCta2"
             >
               {{ ctaText2 }}
-            </a>
+            </sprk-link>
           </div>
         </sprk-stack>
       </sprk-stack>
     </div>
-  `,
-  styles: ['']
+  `
 })
 export class SparkHighlightBoardComponent {
   @Input()
