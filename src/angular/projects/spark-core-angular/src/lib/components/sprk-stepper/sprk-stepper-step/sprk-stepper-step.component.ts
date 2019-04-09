@@ -46,12 +46,7 @@ import * as _ from 'lodash';
         </div>
       </div>
     </li>
-  `,
-  styles: [
-    `
-      /* TODO */
-    `
-  ]
+  `
 })
 export class SparkStepperStepComponent implements OnInit {
   @Input()

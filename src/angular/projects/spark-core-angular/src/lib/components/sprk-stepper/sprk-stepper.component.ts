@@ -62,6 +62,9 @@ export class SparkStepperComponent implements AfterViewInit {
     );
     let sliderEl;
 
+    steps[0].classList.add('sprk-c-Stepper__step--first');
+    steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
+
     // If the stepper has stepper descriptions then build slider
     if (hasSlideEffect) {
       sliderEl = document.createElement('li');
