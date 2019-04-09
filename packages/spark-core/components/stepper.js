@@ -1,11 +1,7 @@
 /* global document */
 import getElements from '../utilities/getElements';
 import { carousel } from './carousel';
-import {
-  handleTabKeydown,
-  resetTabs,
-  setActiveTab,
-} from './tabs';
+import { handleTabKeydown, resetTabs, setActiveTab } from './tabs';
 
 /**
  * Takes in the stepper container.
@@ -13,17 +9,22 @@ import {
  * Binds click listener to each step.
  * Binds keydown listener to each step.
  * @param {NodeList} stepper - Collection of stepper container.
-*/
+ */
 const bindUIEvents = (stepper, carouselContainer) => {
   const carouselInstance = carousel(carouselContainer);
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
-  const hasSlideEffect = stepper.querySelector('[data-sprk-stepper="description"]');
+  const hasSlideEffect = stepper.querySelector(
+    '[data-sprk-stepper="description"]',
+  );
   let sliderEl;
 
-  carouselContainer.addEventListener('sprk.carousel.slide', () => {
-    console.log('hi');
+  carouselContainer.addEventListener('sprk.carousel.slide', e => {
+    e.preventDefault();
+    const { index } = e.detail;
+    resetTabs(steps, stepPanels, activeClass, sliderEl);
+    setActiveTab(steps[index], stepPanels[index], activeClass, sliderEl);
   });
 
   // If the stepper has stepper descriptions then build slider
@@ -38,7 +39,7 @@ const bindUIEvents = (stepper, carouselContainer) => {
     const stepTrigger = step.querySelector('[role="tab"]');
     if (hasSlideEffect) step.classList.add('sprk-c-Stepper__step--has-slider');
 
-    stepTrigger.addEventListener('click', (e) => {
+    stepTrigger.addEventListener('click', e => {
       e.preventDefault();
       resetTabs(steps, stepPanels, activeClass, sliderEl);
       setActiveTab(step, stepPanels[index], activeClass, sliderEl);
@@ -46,26 +47,24 @@ const bindUIEvents = (stepper, carouselContainer) => {
     });
   });
 
-  stepper.addEventListener('keydown', (event) => {
+  stepper.addEventListener('keydown', event => {
     handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
   });
 };
 
 const stepper = () => {
-  getElements('[data-sprk-stepper="container"]', (item) => {
+  getElements('[data-sprk-stepper="container"]', item => {
     const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
-    let carouselInstance;
     if (partnerCarouselID) {
-      const carouselContainer = document.querySelector(`[data-sprk-carousel=${partnerCarouselID}]`);
+      const carouselContainer = document.querySelector(
+        `[data-sprk-carousel=${partnerCarouselID}]`,
+      );
       bindUIEvents(item, carouselContainer);
     }
   });
 };
 
-export {
-  stepper,
-  bindUIEvents,
-};
+export { stepper, bindUIEvents };
 
 // stepper state
 // steps / slides / dots

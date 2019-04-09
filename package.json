@@ -52,7 +52,7 @@
     "prettier-stylelint": "^0.4.2",
     "request": "^2.88.0",
     "sinon": "^7.2.2",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.10.1",
     "stylelint-scss": "^3.3.1",
     "suitcss-base": "^2.0.0",
     "suitcss-components-arrange": "^1.1.1",

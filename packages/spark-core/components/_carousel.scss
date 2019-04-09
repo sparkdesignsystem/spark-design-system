@@ -12,9 +12,9 @@
   display: inline-block;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-  font-size: 15px;
-  line-height: 30px;
-  color: #fff;
+  font-size: $sprk-font-size-body-two;
+  line-height: $sprk-line-height-body-two;
+  color: $sprk-white;
   width: 100%;
 }
 
@@ -24,9 +24,13 @@
 
 .sprk-c-Carousel__controls {
   justify-content: space-between;
-  display: flex;
+  display: none;
   width: 76px;
   margin: 0 auto;
+
+  @media (min-width: 80rem) {
+    display: flex;
+  }
 }
 
 .sprk-c-Carousel__prev,
@@ -44,9 +48,13 @@
 }
 
 .sprk-c-Carousel__dots {
-  display: flex;
+  display: none;
   justify-content: center;
   margin: 1rem auto;
+
+  @media (min-width: 80rem) {
+    display: flex;
+  }
 }
 
 .sprk-c-Carousel__dot {
