@@ -525,5 +525,6 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class StackDocsComponent {
+  text_input = '';
   constructor() {}
 }

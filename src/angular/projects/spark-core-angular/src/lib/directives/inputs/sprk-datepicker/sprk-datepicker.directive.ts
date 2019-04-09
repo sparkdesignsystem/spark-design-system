@@ -1,13 +1,11 @@
 import { Directive, ElementRef, Inject, Input, OnInit } from '@angular/core';
+import TinyDatePicker from 'tiny-date-picker';
 
 @Directive({
   selector: '[sprkDatepicker]'
 })
 export class SprkDatepickerDirective implements OnInit {
-  constructor(
-    public ref: ElementRef,
-    @Inject('TinyDatePicker') public TinyDatePicker: any
-  ) {}
+  constructor(public ref: ElementRef) {}
 
   @Input()
   sprkDatePickerConfig: object;
@@ -31,8 +29,8 @@ export class SprkDatepickerDirective implements OnInit {
           .replace(/[^ -~]/g, '')
     };
 
-    if (this.TinyDatePicker) {
-      this.TinyDatePicker(input, {
+    if (TinyDatePicker) {
+      TinyDatePicker(input, {
         ...tdpConfig,
         ...this.sprkDatePickerConfig
       }).on('select', () => {
