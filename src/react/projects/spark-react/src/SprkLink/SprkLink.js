@@ -23,11 +23,15 @@ const SprkLink = props => {
     'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
   });
 
-  const noDefault = e => {
+  let clickEvent;
+  function handleClick(e) {
     e.preventDefault();
-  };
-
-  const clickEvent = href === '#' ? e => noDefault(e) : onClick;
+  }
+  if (onClick) {
+    clickEvent = onClick;
+  } else if (!onClick && href === '#') {
+    clickEvent = handleClick;
+  }
 
   return (
     <TagName
@@ -61,6 +65,8 @@ SprkLink.propTypes = {
   analyticsString: PropTypes.string,
   // Any additional classes to add to the link
   additionalClasses: PropTypes.string,
+  // Url passed
+  href: PropTypes.string,
 };
 
 SprkLink.defaultProps = {

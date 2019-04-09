@@ -45,3 +45,14 @@ it('href should equal # if not provided', () => {
   const wrapper = shallow(<SprkLink />);
   expect(wrapper.find('a[href="#"]').length).toBe(1);
 });
+
+it('should prevent default when no href is provided', () => {
+  const wrapper = shallow(<SprkLink />);
+  let prevented = false;
+  wrapper.find('a').simulate('click', {
+    preventDefault: () => {
+      prevented = true;
+    },
+  });
+  expect(prevented).toBe(true);
+});
