@@ -1,7 +1,6 @@
 /* global window */
 import getElements from '../utilities/getElements';
 
-
 const resetSliderVisibility = (tab, activeClass, slider) => {
   const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
   const stepHeading = tab.querySelector('.sprk-c-Stepper__step-heading');
@@ -52,7 +51,6 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
     const stepHeading = tab.querySelector('[data-sprk-stepper="heading"]');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
-
     const sliderTopValue = tab.offsetTop;
     const sliderEl = slider;
     // Add active class to new step
@@ -158,7 +156,7 @@ const handleTabKeydown = (event, tabs, tabpanels, activeClass, slider) => {
     advanceTab(tabs, tabpanels, activeClass, slider);
   } else if (event.keyCode === keys.tab) {
     event.preventDefault();
-    if (tabpanels) tabpanels[getActiveTabIndex(tabs, activeClass)].focus();
+    if (tabpanels[0]) tabpanels[getActiveTabIndex(tabs, activeClass)].focus();
   } else if (event.keyCode === keys.home) {
     event.preventDefault();
     resetTabs(tabs, tabpanels, activeClass, slider);

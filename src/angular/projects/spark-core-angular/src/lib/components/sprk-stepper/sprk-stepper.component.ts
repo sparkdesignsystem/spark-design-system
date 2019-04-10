@@ -61,6 +61,11 @@ export class SparkStepperComponent implements AfterViewInit {
       '[data-sprk-stepper="description"]'
     );
     let sliderEl;
+    if (!steps[0]) {
+      return;
+    }
+    steps[0].classList.add('sprk-c-Stepper__step--first');
+    steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
 
     // If the stepper has stepper descriptions then build slider
     if (hasSlideEffect) {
@@ -72,19 +77,22 @@ export class SparkStepperComponent implements AfterViewInit {
 
     steps.forEach((step, index) => {
       const stepTrigger = step.querySelector('[role="tab"]');
+      if (!stepTrigger) {
+        return;
+      }
       if (hasSlideEffect) {
         step.classList.add('sprk-c-Stepper__step--has-slider');
       }
 
-      stepTrigger.addEventListener('click', e => {
-        e.preventDefault();
+      stepTrigger.addEventListener('click', event => {
+        event.preventDefault();
         resetTabs(steps, stepPanels, activeClass, sliderEl);
         setActiveTab(step, stepPanels[index], activeClass, sliderEl);
       });
     });
 
-    this.ref.nativeElement.addEventListener('keydown', event => {
-      handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
+    this.ref.nativeElement.addEventListener('keydown', e => {
+      handleTabKeydown(e, steps, stepPanels, activeClass, sliderEl);
     });
   }
 

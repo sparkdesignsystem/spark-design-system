@@ -57,6 +57,7 @@ import {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
+  handleTabKeydown,
 } from './components/tabs';
 import {
   toggle,
@@ -153,6 +154,7 @@ export {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
+  handleTabKeydown,
   toggle,
   toggleIconType,
   toggleAriaExpanded,

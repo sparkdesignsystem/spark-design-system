@@ -46,12 +46,7 @@ import * as _ from 'lodash';
         </div>
       </div>
     </li>
-  `,
-  styles: [
-    `
-      /* TODO */
-    `
-  ]
+  `
 })
 export class SparkStepperStepComponent implements OnInit {
   @Input()
@@ -64,6 +59,8 @@ export class SparkStepperStepComponent implements OnInit {
   isDefaultActive: boolean;
   @Input()
   heading: string;
+  @Input()
+  analyticsString: string;
   componentID = _.uniqueId('step-');
   componentAriaLabelID = _.uniqueId('step-aria-');
   activeClass = 'sprk-c-Stepper__step--selected';

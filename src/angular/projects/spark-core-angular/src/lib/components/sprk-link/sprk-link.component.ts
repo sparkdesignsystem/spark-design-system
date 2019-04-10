@@ -16,9 +16,11 @@ import { Router } from '@angular/router';
       [attr.aria-labelledby]="ariaLabelledby"
       [attr.aria-haspopup]="ariaHasPopUp"
       [attr.role]="role"
+      [attr.id]="id"
       [attr.aria-current]="ariaCurrent"
       [attr.aria-expanded]="ariaExpanded"
       [attr.aria-hidden]="ariaHidden"
+      [attr.aria-selected]="ariaSelected"
     >
       <ng-content></ng-content>
     </a>
@@ -36,9 +38,13 @@ export class SparkLinkComponent implements OnInit {
   @Input()
   role: string;
   @Input()
+  id: string;
+  @Input()
   ariaControls: string;
   @Input()
   ariaLabelledby: string;
+  @Input()
+  ariaSelected: string;
   @Input()
   ariaHidden: string;
   @Input()

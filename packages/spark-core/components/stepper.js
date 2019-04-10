@@ -16,14 +16,20 @@ import {
  * @param {NodeList} stepper - Collection of stepper container.
  */
 const bindUIEvents = (stepper, carouselContainer) => {
-  const carouselInstance = carousel(carouselContainer);
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
+  if (!steps) {
+    return;
+  }
+  const carouselInstance = carousel(carouselContainer);
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
   const hasSlideEffect = stepper.querySelector(
     '[data-sprk-stepper="description"]',
   );
   let sliderEl;
+
+  steps[0].classList.add('sprk-c-Stepper__step--first');
+  steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
 
   carouselContainer.addEventListener('sprk.carousel.slide', e => {
     e.preventDefault();
@@ -42,6 +48,9 @@ const bindUIEvents = (stepper, carouselContainer) => {
 
   steps.forEach((step, index) => {
     const stepTrigger = step.querySelector('[role="tab"]');
+    if (!stepTrigger) {
+      return;
+    }
     if (hasSlideEffect) step.classList.add('sprk-c-Stepper__step--has-slider');
 
     stepTrigger.addEventListener('click', e => {
