@@ -1,70 +1,67 @@
-import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkStepperComponent } from './sprk-stepper.component';
-
-@Component({
-  selector: 'sprk-test',
-  template: `
-    <sprk-stepper>
-    </ssprk-stepper>
-  `
-})
-export class TestComponent {}
+import { SparkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.component';
 
 describe('SparkStepperComponent', () => {
   let component: SparkStepperComponent;
   let fixture: ComponentFixture<SparkStepperComponent>;
-  let element: HTMLElement;
+  let stepperElement: HTMLElement;
 
-  let testComponent: TestComponent;
-  let testFixture: ComponentFixture<TestComponent>;
-  let testElement;
-  let testTab1;
-  let testTab2;
-  let testPanel1;
-  let testPanel2;
-
-  beforeEach(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkStepperComponent, TestComponent]
+      declarations: [SparkStepperComponent]
     }).compileComponents();
-  });
+  }));
 
   beforeEach(() => {
-    testFixture = TestBed.createComponent(TestComponent);
-    testComponent = testFixture.componentInstance;
-
     fixture = TestBed.createComponent(SparkStepperComponent);
     component = fixture.componentInstance;
-    component.ngAfterViewInit();
-    testFixture.detectChanges();
-
-    element = fixture.nativeElement.querySelector('div');
-    testElement = testFixture.nativeElement.querySelector('sprk-stepper');
-
-    testTab1 = testElement.querySelectorAll('.sprk-c-Stepper__step')[0];
-    testTab2 = testElement.querySelectorAll('.sprk-c-Stepper__step')[1];
-    testPanel1 = testElement.querySelectorAll(
-      '.sprk-c-Stepper__step-content'
-    )[0];
-    testPanel2 = testElement.querySelectorAll(
-      '.sprk-c-Stepper__step-content'
-    )[1];
+    stepperElement = fixture.nativeElement.querySelector('ol');
+    const step = document.createElement('li');
+    step.classList.add('sprk-c-Stepper__step');
+    step.setAttribute('data-sprk-stepper', 'step');
+    stepperElement.appendChild(step);
   });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should add classes if additionalClasses has a value', () => {
-    component.additionalClasses = 'sprk-u-man';
+  it('getClasses should match what gets set on the element', () => {
     fixture.detectChanges();
-    expect(element.classList.toString()).toEqual('sprk-c-Stepper sprk-u-man');
+    expect(stepperElement.classList.toString()).toEqual(component.getClasses());
   });
 
-  it('should create an id for each tab', () => {
-    expect(testTab1.id).toContain('tabbed-navigation');
-    expect(testTab2.id).toContain('tabbed-navigation');
-    expect(testTab1.id).not.toEqual(testTab2.id);
+  it('should add the correct class if hasDarkBg is not set', () => {
+    expect(component.getClasses()).toEqual('sprk-c-Stepper');
+  });
+
+  it('should add the correct class if hasDarkBg is true', () => {
+    component.hasDarkBg = true;
+    fixture.detectChanges();
+    expect(
+      stepperElement.classList.contains('sprk-c-Stepper--has-dark-bg')
+    ).toEqual(true);
+  });
+
+  it('should add the correct classes if additionalClasses has a value ', () => {
+    component.additionalClasses = 'sprk-u-pam sprk-u-man';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-c-Stepper sprk-u-pam sprk-u-man'
+    );
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(stepperElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(stepperElement.getAttribute('data-id')).toBeNull();
   });
 });

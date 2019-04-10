@@ -15,6 +15,7 @@ import {
 */
 const bindUIEvents = (stepper) => {
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
+  if (!steps) {return;}
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
   const hasSlideEffect = stepper.querySelector('[data-sprk-stepper="description"]');
@@ -33,6 +34,7 @@ const bindUIEvents = (stepper) => {
 
   steps.forEach((step, index) => {
     const stepTrigger = step.querySelector('[role="tab"]');
+    if (!stepTrigger) { return; }
     if (hasSlideEffect) step.classList.add('sprk-c-Stepper__step--has-slider');
 
     stepTrigger.addEventListener('click', (e) => {
@@ -43,6 +45,7 @@ const bindUIEvents = (stepper) => {
   });
 
   stepper.addEventListener('keydown', (event) => {
+    console.log(handleTabKeydown);
     handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
   });
 };
