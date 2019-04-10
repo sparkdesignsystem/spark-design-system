@@ -16,11 +16,14 @@ import {
  * @param {NodeList} stepper - Collection of stepper container.
  */
 const bindUIEvents = (stepper, carouselContainer) => {
+  let carouselInstance;
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   if (!steps) {
     return;
   }
-  const carouselInstance = carousel(carouselContainer);
+  if (carouselContainer) {
+    carouselInstance = carousel(carouselContainer);
+  }
   const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
   const activeClass = 'sprk-c-Stepper__step--selected';
   const hasSlideEffect = stepper.querySelector(
@@ -31,12 +34,14 @@ const bindUIEvents = (stepper, carouselContainer) => {
   steps[0].classList.add('sprk-c-Stepper__step--first');
   steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
 
-  carouselContainer.addEventListener('sprk.carousel.slide', e => {
-    e.preventDefault();
-    const { index } = e.detail;
-    resetTabs(steps, stepPanels, activeClass, sliderEl);
-    setActiveTab(steps[index], stepPanels[index], activeClass, sliderEl);
-  });
+  if (carouselContainer) {
+    carouselContainer.addEventListener('sprk.carousel.slide', e => {
+      e.preventDefault();
+      const { index } = e.detail;
+      resetTabs(steps, stepPanels, activeClass, sliderEl);
+      setActiveTab(steps[index], stepPanels[index], activeClass, sliderEl);
+    });
+  }
 
   // If the stepper has stepper descriptions then build slider
   if (hasSlideEffect) {
@@ -57,25 +62,30 @@ const bindUIEvents = (stepper, carouselContainer) => {
       e.preventDefault();
       resetTabs(steps, stepPanels, activeClass, sliderEl);
       setActiveTab(step, stepPanels[index], activeClass, sliderEl);
-      carouselInstance.slideTo(index);
+      if (carouselInstance) {
+        carouselInstance.slideTo(index);
+      }
     });
   });
 
   stepper.addEventListener('keydown', event => {
     handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
-    carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
+    if (carouselInstance) {
+      carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
+    }
   });
 };
 
 const stepper = () => {
   getElements('[data-sprk-stepper="container"]', item => {
+    let carouselContainer;
     const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
     if (partnerCarouselID) {
-      const carouselContainer = document.querySelector(
+      carouselContainer = document.querySelector(
         `[data-sprk-carousel=${partnerCarouselID}]`,
       );
-      bindUIEvents(item, carouselContainer);
     }
+    bindUIEvents(item, carouselContainer);
   });
 };
 
