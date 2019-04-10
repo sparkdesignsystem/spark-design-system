@@ -10,7 +10,6 @@
 .sprk-c-Carousel__frame-item {
   position: relative;
   display: inline-block;
-  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   font-size: $sprk-font-size-body-two;
   line-height: $sprk-line-height-body-two;
@@ -28,7 +27,7 @@
   width: 76px;
   margin: 0 auto;
 
-  @media (min-width: 80rem) {
+  @media (min-width: $sprk-split-breakpoint-xl) {
     display: none;
   }
 }
@@ -52,7 +51,7 @@
   justify-content: center;
   margin: 1rem auto;
 
-  @media (min-width: 80rem) {
+  @media (min-width: $sprk-split-breakpoint-xl) {
     display: none;
   }
 }
