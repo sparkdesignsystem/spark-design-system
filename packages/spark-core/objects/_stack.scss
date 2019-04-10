@@ -364,7 +364,11 @@
       flex: 0 0 40%;
       max-width: 40%;
     }
+  }
+}
 
+.sprk-o-Stack--split\@xxs {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -482,7 +486,11 @@
       flex: 0 0 40%;
       max-width: 40%;
     }
+  }
+}
 
+.sprk-o-Stack--split\@xs {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -600,7 +608,11 @@
       flex: 0 0 40%;
       max-width: 40%;
     }
+  }
+}
 
+.sprk-o-Stack--split\@s {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -718,7 +730,11 @@
       flex: 0 0 40%;
       max-width: 40%;
     }
+  }
+}
 
+.sprk-o-Stack--split\@m {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -836,7 +852,11 @@
       flex: 0 0 40%;
       max-width: 40%;
     }
+  }
+}
 
+.sprk-o-Stack--split\@l {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -954,7 +974,11 @@
       flex: 0 0 40%;
       max-width: 40%;
     }
+  }
+}
 
+.sprk-o-Stack--split\@xl {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
     // We want the last item to have zero margin on the right
     &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,
     &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,
@@ -1138,35 +1162,113 @@
 .sprk-o-Stack--split-reverse\@xxs {
   @media all and (min-width: $sprk-split-breakpoint-xxs) {
     flex-direction: row-reverse;
+
+    // We want the last positioned item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {
+      margin-right: 0;
+    }
   }
 }
 
 .sprk-o-Stack--split-reverse\@xs {
   @media all and (min-width: $sprk-split-breakpoint-xs) {
     flex-direction: row-reverse;
+
+    // We want the last positioned item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {
+      margin-right: 0;
+    }
   }
 }
 
 .sprk-o-Stack--split-reverse\@s {
   @media all and (min-width: $sprk-split-breakpoint-s) {
     flex-direction: row-reverse;
+
+    // We want the last positioned item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {
+      margin-right: 0;
+    }
   }
 }
 
 .sprk-o-Stack--split-reverse\@m {
   @media all and (min-width: $sprk-split-breakpoint-m) {
     flex-direction: row-reverse;
+
+    // We want the last positioned item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {
+      margin-right: 0;
+    }
   }
 }
 
 .sprk-o-Stack--split-reverse\@l {
   @media all and (min-width: $sprk-split-breakpoint-l) {
     flex-direction: row-reverse;
+
+    // We want the last positioned item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {
+      margin-right: 0;
+    }
   }
 }
 
 .sprk-o-Stack--split-reverse\@xl {
   @media all and (min-width: $sprk-split-breakpoint-xl) {
     flex-direction: row-reverse;
+
+    // We want the last positioned item to have zero margin on the right
+    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,
+    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {
+      margin-right: 0;
+    }
   }
 }
