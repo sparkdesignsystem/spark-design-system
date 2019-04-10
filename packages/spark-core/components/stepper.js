@@ -1,7 +1,12 @@
 /* global document */
 import getElements from '../utilities/getElements';
 import { carousel } from './carousel';
-import { handleTabKeydown, resetTabs, setActiveTab } from './tabs';
+import {
+  getActiveTabIndex,
+  handleTabKeydown,
+  resetTabs,
+  setActiveTab,
+} from './tabs';
 
 /**
  * Takes in the stepper container.
@@ -49,6 +54,7 @@ const bindUIEvents = (stepper, carouselContainer) => {
 
   stepper.addEventListener('keydown', event => {
     handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
+    carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
   });
 };
 
@@ -65,7 +71,3 @@ const stepper = () => {
 };
 
 export { stepper, bindUIEvents };
-
-// stepper state
-// steps / slides / dots
-// active step / slides / dots

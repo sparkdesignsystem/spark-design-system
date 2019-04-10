@@ -24,12 +24,12 @@
 
 .sprk-c-Carousel__controls {
   justify-content: space-between;
-  display: none;
+  display: flex;
   width: 76px;
   margin: 0 auto;
 
   @media (min-width: 80rem) {
-    display: flex;
+    display: none;
   }
 }
 
@@ -48,21 +48,22 @@
 }
 
 .sprk-c-Carousel__dots {
-  display: none;
+  display: flex;
   justify-content: center;
   margin: 1rem auto;
 
   @media (min-width: 80rem) {
-    display: flex;
+    display: none;
   }
 }
 
 .sprk-c-Carousel__dot {
-  background-color: $sprk-gray;
+  border: 2px solid $sprk-white;
+  border-radius: 50%;
   display: block;
-  height: 5px;
-  width: 25px;
-  margin-right: 1px;
+  height: 10px;
+  width: 10px;
+  margin-right: 20px;
 }
 
 .sprk-c-Carousel__dot:last-child {
@@ -70,5 +71,6 @@
 }
 
 .sprk-c-Carousel__dot--active {
-  background-color: $sprk-green;
+  background-color: $sprk-white;
+  box-shadow: 0 0 0 8px $sprk-green;
 }
