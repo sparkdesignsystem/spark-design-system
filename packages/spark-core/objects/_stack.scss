@@ -1135,37 +1135,37 @@
 //
 // Reverses the row at specific breakpoints
 ///
-.sprk-o-Stack--row-reverse\@xxs {
+.sprk-o-Stack--split-reverse\@xxs {
   @media all and (min-width: $sprk-split-breakpoint-xxs) {
     flex-direction: row-reverse;
   }
 }
 
-.sprk-o-Stack--row-reverse\@xs {
+.sprk-o-Stack--split-reverse\@xs {
   @media all and (min-width: $sprk-split-breakpoint-xs) {
     flex-direction: row-reverse;
   }
 }
 
-.sprk-o-Stack--row-reverse\@s {
+.sprk-o-Stack--split-reverse\@s {
   @media all and (min-width: $sprk-split-breakpoint-s) {
     flex-direction: row-reverse;
   }
 }
 
-.sprk-o-Stack--row-reverse\@m {
+.sprk-o-Stack--split-reverse\@m {
   @media all and (min-width: $sprk-split-breakpoint-m) {
     flex-direction: row-reverse;
   }
 }
 
-.sprk-o-Stack--row-reverse\@l {
+.sprk-o-Stack--split-reverse\@l {
   @media all and (min-width: $sprk-split-breakpoint-l) {
     flex-direction: row-reverse;
   }
 }
 
-.sprk-o-Stack--row-reverse\@xl {
+.sprk-o-Stack--split-reverse\@xl {
   @media all and (min-width: $sprk-split-breakpoint-xl) {
     flex-direction: row-reverse;
   }
