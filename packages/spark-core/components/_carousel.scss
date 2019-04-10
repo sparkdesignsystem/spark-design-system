@@ -1,0 +1,76 @@
+.sprk-c-Carousel__frame {
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sprk-c-Carousel__frame-item {
+  position: relative;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: $sprk-font-size-body-two;
+  line-height: $sprk-line-height-body-two;
+  color: $sprk-white;
+  width: 100%;
+}
+
+.sprk-c-Carousel__slides {
+  display: inline-block;
+}
+
+.sprk-c-Carousel__controls {
+  justify-content: space-between;
+  display: flex;
+  width: 76px;
+  margin: 0 auto;
+
+  @media (min-width: 80rem) {
+    display: none;
+  }
+}
+
+.sprk-c-Carousel__prev,
+.sprk-c-Carousel__next {
+  display: block;
+  cursor: pointer;
+}
+
+.sprk-c-Carousel__next {
+  right: 0;
+}
+
+.sprk-c-Carousel__prev {
+  left: 0;
+}
+
+.sprk-c-Carousel__dots {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+
+  @media (min-width: 80rem) {
+    display: none;
+  }
+}
+
+.sprk-c-Carousel__dot {
+  border: 2px solid $sprk-white;
+  border-radius: 50%;
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin-right: 20px;
+}
+
+.sprk-c-Carousel__dot:last-child {
+  margin-right: 0;
+}
+
+.sprk-c-Carousel__dot--active {
+  background-color: $sprk-white;
+  box-shadow: 0 0 0 8px $sprk-green;
+}

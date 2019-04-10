@@ -265,7 +265,8 @@
 //
 // Split at extra extra small breakpoint
 ///
-.sprk-o-Stack--split\@xxs {
+.sprk-o-Stack--split\@xxs,
+.sprk-o-Stack--split-reverse\@xxs {
   @media all and (min-width: $sprk-split-breakpoint-xxs) {
     // At extra small breakpoint we switch from column to row
     flex-direction: row;
@@ -382,7 +383,8 @@
 //
 // Split at extra small breakpoint
 ///
-.sprk-o-Stack--split\@xs {
+.sprk-o-Stack--split\@xs,
+.sprk-o-Stack--split-reverse\@xs {
   @media all and (min-width: $sprk-split-breakpoint-xs) {
     // At extra small breakpoint we switch from column to row
     flex-direction: row;
@@ -499,7 +501,8 @@
 //
 // Split at  small breakpoint
 ///
-.sprk-o-Stack--split\@s {
+.sprk-o-Stack--split\@s,
+.sprk-o-Stack--split-reverse\@s {
   @media all and (min-width: $sprk-split-breakpoint-s) {
     // At small breakpoint we switch from column to row
     flex-direction: row;
@@ -616,7 +619,8 @@
 //
 // Split at medium breakpoint
 ///
-.sprk-o-Stack--split\@m {
+.sprk-o-Stack--split\@m,
+.sprk-o-Stack--split-reverse\@m {
   @media all and (min-width: $sprk-split-breakpoint-m) {
     // At medium breakpoint we switch from column to row
     flex-direction: row;
@@ -733,7 +737,8 @@
 //
 // Split at large breakpoint
 ///
-.sprk-o-Stack--split\@l {
+.sprk-o-Stack--split\@l,
+.sprk-o-Stack--split-reverse\@l {
   @media all and (min-width: $sprk-split-breakpoint-l) {
     // At large breakpoint we switch from column to row
     flex-direction: row;
@@ -850,7 +855,8 @@
 //
 // Split at extra large breakpoint
 ///
-.sprk-o-Stack--split\@xl {
+.sprk-o-Stack--split\@xl,
+.sprk-o-Stack--split-reverse\@xl {
   @media all and (min-width: $sprk-split-breakpoint-xl) {
     // At extra large breakpoint we switch from column to row
     flex-direction: row;
@@ -1123,5 +1129,44 @@
 .sprk-o-Stack__item--center-column\@xl {
   @media all and (min-width: $sprk-split-breakpoint-xl) {
     align-self: center;
+  }
+}
+
+//
+// Reverses the row at specific breakpoints
+///
+.sprk-o-Stack--split-reverse\@xxs {
+  @media all and (min-width: $sprk-split-breakpoint-xxs) {
+    flex-direction: row-reverse;
+  }
+}
+
+.sprk-o-Stack--split-reverse\@xs {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
+    flex-direction: row-reverse;
+  }
+}
+
+.sprk-o-Stack--split-reverse\@s {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
+    flex-direction: row-reverse;
+  }
+}
+
+.sprk-o-Stack--split-reverse\@m {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
+    flex-direction: row-reverse;
+  }
+}
+
+.sprk-o-Stack--split-reverse\@l {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
+    flex-direction: row-reverse;
+  }
+}
+
+.sprk-o-Stack--split-reverse\@xl {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
+    flex-direction: row-reverse;
   }
 }

@@ -1,0 +1,183 @@
+---
+name: Stepper with Carousel
+---
+<div class="sprk-o-Stack sprk-o-Stack--split-reverse@xl sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@m">
+    <div class="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
+      <div class="sprk-c-Carousel__frame">
+        <ul class="sprk-c-Carousel__slides">
+          <li class="sprk-c-Carousel__frame-item">
+            <img src="../../../assets/toolkit/images/blue-house.jpg" alt="">
+          </li>
+          <li class="sprk-c-Carousel__frame-item">
+            <img src="../../../assets/toolkit/images/flower.jpg" alt="">
+          </li>
+          <li class="sprk-c-Carousel__frame-item">
+            <img src="../../../assets/toolkit/images/spark-placeholder.jpg" alt="">
+          </li>
+          <li class="sprk-c-Carousel__frame-item">
+            <img src="../../../assets/toolkit/images/blue-house.jpg" alt="">
+          </li>
+        </ul>
+        <ul class="sprk-c-Carousel__dots" data-sprk-carousel-dots="stepper-carousel-01"></ul>
+      </div>
+      <div class="sprk-c-Carousel__controls">
+        <span class="sprk-c-Carousel__prev">
+          <svg class="sprk-c-Icon  sprk-c-Icon--l" viewBox="0 0 100 100">
+            <use xlink:href="#chevron-left-circle" />
+          </svg>
+        </span>
+        <span class="sprk-c-Carousel__next">
+          <svg class="sprk-c-Icon  sprk-c-Icon--l" viewBox="0 0 100 100">
+            <use xlink:href="#chevron-right-circle" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="sprk-o-Stack__item">
+    <ol class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg" data-sprk-stepper="container"
+      data-sprk-stepper-carousel="stepper-carousel-01"
+      data-id="stepper-1"
+      role="tablist"
+      aria-orientation="vertical">
+      <li
+        class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
+          <a
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            aria-controls="target-1"
+            role="tab"
+            id="step-1"
+            href="#"
+            aria-selected="true">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading"
+              data-sprk-stepper="heading"
+            >
+              Step One
+            </h3>
+          </a>
+
+          <div
+            class="sprk-c-Stepper__step-description"
+            data-sprk-stepper="description"
+            id="target-1"
+            aria-labelledby="step-1"
+            tabindex="0"
+            role="tabpanel">
+            <p class="sprk-b-TypeBodyTwo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li
+        class="sprk-c-Stepper__step"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
+          <a
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            role="tab"
+            aria-controls="target-2"
+            id="step-2"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading"
+              data-sprk-stepper="heading"
+            >
+              Step Two
+            </h3>
+          </a>
+
+          <div
+            class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+            data-sprk-stepper="description"
+            aria-labelledby="step-2"
+            id="target-2"
+            tabindex="0"
+            role="tabpanel">
+            <p class="sprk-b-TypeBodyTwo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, consectetur esse. Consequuntur, eligendi architecto!
+              Animi amet, velit quas ipsum earum corporis quis necessitatibus vitae.
+              Praesentium, consectetur esse. Consequuntur, eligendi architecto!
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li
+        class="sprk-c-Stepper__step"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
+          <a
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            role="tab"
+            aria-controls="target-3"
+            id="step-3"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3 class="sprk-c-Stepper__step-heading"
+                data-sprk-stepper="heading"
+            >
+              Step Three
+            </h3>
+          </a>
+
+          <div
+            class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+            data-sprk-stepper="description"
+            aria-labelledby="step-3"
+            ids="target-3"
+            tabindex="0"
+            role="tabpanel">
+            <p class="sprk-b-TypeBodyTwo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, consectetur esse.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li
+        class="sprk-c-Stepper__step"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
+          <a
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            role="tab"
+            aria-controls="target-4"
+            id="step-4"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading"
+              data-sprk-stepper="heading"
+            >
+              Step Four
+            </h3>
+          </a>
+
+          <div
+            class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+            data-sprk-stepper="description"
+            aria-labelledby="step-4"
+            tabindex="0"
+            id="target-4"
+            role="tabpanel">
+            <p class="sprk-b-TypeBodyTwo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, consectetur esse. Consequuntur, eligendi architecto!
+              Animi amet, velit quas ipsum earum corporis quis necessitatibus vitae.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>

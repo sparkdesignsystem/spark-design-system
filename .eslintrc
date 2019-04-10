@@ -11,10 +11,7 @@
       "ignoreUrls": true
     }],
     "prettier/prettier": ["error"],
-    "object-curly-newline": ["error", {
-      "ObjectPattern": { "multiline": true },
-      "ImportDeclaration": "never"
-    }],
+    "object-curly-newline": "off",
     "react/jsx-filename-extension": "off",
     "jsx-a11y/label-has-associated-control": [ 2, {
       "labelComponents": ["label"],
