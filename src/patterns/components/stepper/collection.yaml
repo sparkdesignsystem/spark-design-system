@@ -115,3 +115,5 @@ classTable:
     description: This gets added to the step when it is selected.
   .sprk-c-Stepper__step-content--has-description:
     description: Goes on the step content when the step has a description in addition to the step heading.
+  .sprk-c-Stepper--has-carousel:
+    description: Use this when the stepper is paired with a carousel.

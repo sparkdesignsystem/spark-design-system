@@ -8,8 +8,26 @@
   position: relative;
 }
 
+.sprk-c-Stepper--has-carousel {
+  .sprk-c-Stepper__slider {
+    position: static;
+
+    @media (min-width: $sprk-stepper-breakpoint) {
+      position: absolute;
+    }
+  }
+
+  .sprk-c-Stepper__step {
+    display: none;
+
+    @media (min-width: $sprk-stepper-breakpoint) {
+      display: flex;
+    }
+  }
+}
+
 .sprk-c-Stepper__slider {
-  position: static;
+  position: absolute;
   top: 0;
   transition: top $sprk-stepper-slide-timing ease;
   z-index: 1000;
@@ -33,10 +51,6 @@
 
   .sprk-c-Stepper__step-icon {
     transition: opacity $sprk-stepper-slide-timing ease;
-  }
-
-  @media (min-width: $sprk-split-breakpoint-xl) {
-    position: absolute;
   }
 }
 
@@ -86,14 +100,10 @@
 }
 
 .sprk-c-Stepper__step {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-
-  @media (min-width: $sprk-split-breakpoint-xl) {
-    display: flex;
-  }
 }
 
 .sprk-c-Stepper__step::before {

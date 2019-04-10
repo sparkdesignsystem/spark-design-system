@@ -789,6 +789,7 @@ $sprk-tab-navigation-btn-font-weight: $sprk-font-weight-body-one !default;
 // Stepper
 ///
 $sprk-stepper-bg: transparent !default;
+$sprk-stepper-breakpoint: $sprk-split-breakpoint-xl !default;
 $sprk-stepper-max-width: 480px !default;
 $sprk-stepper-icon-border-width: 2px !default;
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
@@ -804,11 +805,11 @@ $sprk-stepper-dark-icon-color-selected: $sprk-white !default;
 $sprk-stepper-dark-icon-color-hover: $sprk-white !default;
 $sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
 $sprk-stepper-icon-z-index: $sprk-layer-height-xs !default;
-$sprk-stepper-icon-box-shadow-selected-spread: 8px !default;;
+$sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
 $sprk-stepper-icon-box-shadow-selected: 0 0 0 $sprk-stepper-icon-box-shadow-selected-spread $sprk-stepper-icon-border-color-selected !default;
 $sprk-stepper-step-content-bg: transparent !default;
 $sprk-stepper-step-description-border-radius: 5px !default;
-$sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0,0,0,.08) !default;
+$sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0,0,0,0.08) !default;
 $sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
 $sprk-stepper-step-heading-font-weight: 400 !default;
 $sprk-stepper-step-heading-size: $sprk-font-size-display-six !default;
