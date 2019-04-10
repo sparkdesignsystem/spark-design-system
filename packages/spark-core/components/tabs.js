@@ -51,7 +51,6 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
     const stepHeading = tab.querySelector('[data-sprk-stepper="heading"]');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
-
     const sliderTopValue = tab.offsetTop;
     const sliderEl = slider;
     // Add active class to new step
