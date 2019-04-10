@@ -67,6 +67,10 @@ SprkLink.propTypes = {
   additionalClasses: PropTypes.string,
   // Url passed
   href: PropTypes.string,
+  // The element that will be rendered
+  element: PropTypes.string,
+  // The event that will fire when the element is clicked
+  onClick: PropTypes.function,
 };
 
 SprkLink.defaultProps = {

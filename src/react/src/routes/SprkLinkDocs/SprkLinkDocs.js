@@ -47,7 +47,7 @@ const SprkLinkDocs = () => (
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink href="/button#foo">Jump Link with Page</SprkLink>
+      <SprkLink href="/button#jumpLinkTarget">Jump Link with Page</SprkLink>
     </ExampleContainer>
 
     <h2 className="drizzle-b-h2">Link with no href provided</h2>

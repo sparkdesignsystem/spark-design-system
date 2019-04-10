@@ -28,7 +28,7 @@ const SprkButtonDocs = () => {
         <SprkButton loading>Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Incoming Element">
-        <div id="foo" />
+        <div id="jumpLinkTarget" />
         <SprkButton element={Link} to="/links">
           React Router Link
         </SprkButton>
