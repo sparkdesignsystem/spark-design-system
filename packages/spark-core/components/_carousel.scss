@@ -36,6 +36,7 @@
 .sprk-c-Carousel__next {
   display: block;
   cursor: pointer;
+  color: $sprk-carousel-arrow-color;
 }
 
 .sprk-c-Carousel__next {
@@ -57,12 +58,13 @@
 }
 
 .sprk-c-Carousel__dot {
-  border: 2px solid $sprk-white;
   border-radius: 50%;
+  border: $sprk-carousel-dot-border;
+  cursor: pointer;
   display: block;
-  height: 10px;
-  width: 10px;
-  margin-right: 20px;
+  height: $sprk-carousel-dot-height;
+  margin-right: $sprk-carousel-dot-spacing;
+  width: $sprk-carousel-dot-width;
 }
 
 .sprk-c-Carousel__dot:last-child {
@@ -71,5 +73,5 @@
 
 .sprk-c-Carousel__dot--active {
   background-color: $sprk-white;
-  box-shadow: 0 0 0 8px $sprk-green;
+  box-shadow: $sprk-carousel-dot-selected;
 }
