@@ -12,9 +12,17 @@ const SprkButton = ({
   idString,
   loading,
   variant,
+  href,
   ...rest
 }) => {
-  const TagName = element;
+  let TagName;
+  if (href && !element) {
+    TagName = 'a';
+  } else if (element) {
+    TagName = element;
+  } else {
+    TagName = 'button';
+  }
   return (
     <TagName
       className={classnames(
@@ -28,6 +36,7 @@ const SprkButton = ({
       data-id={idString}
       data-analytics={analyticsString}
       disabled={disabled}
+      href={href}
       {...rest}
     >
       {(loading && <SprkSpinner />) || children}
@@ -56,15 +65,12 @@ SprkButton.propTypes = {
   loading: PropTypes.bool,
   // decides which button variant to render
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  // the url rendered if the href is provided
+  href: PropTypes.string,
 };
 
 SprkButton.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  children: [],
   disabled: false,
-  idString: '',
-  element: 'button',
   variant: 'primary',
   loading: false,
 };

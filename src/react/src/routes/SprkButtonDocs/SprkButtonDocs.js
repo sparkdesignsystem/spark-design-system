@@ -32,6 +32,11 @@ const SprkButtonDocs = () => {
           React Router Link
         </SprkButton>
       </ExampleContainer>
+      <ExampleContainer heading="href provided">
+        <SprkButton href="https://google.com" target="_blank">
+          Google.com
+        </SprkButton>
+      </ExampleContainer>
     </CentralColumnLayout>
   );
 };
