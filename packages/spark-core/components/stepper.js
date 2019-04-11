@@ -17,6 +17,7 @@ import {
  */
 const bindUIEvents = (stepper, carouselContainer) => {
   let carouselInstance;
+  let windowWidth = window.innerWidth || document.documentElement.clientWidth;
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   if (!steps) {
     return;
@@ -41,6 +42,19 @@ const bindUIEvents = (stepper, carouselContainer) => {
       resetTabs(steps, stepPanels, activeClass, sliderEl);
       setActiveTab(steps[index], stepPanels[index], activeClass, sliderEl);
     });
+
+    window.addEventListener('resize', evt => {
+      // Reset the slider top position
+      // when we switch from mobile to large
+      const activeStep = getActiveTabIndex(steps, activeClass);
+      const newViewportWidth = window.innerWidth || document.documentElement.clientWidth;
+      if (windowWidth < 1279 && newViewportWidth > 1279) {
+        console.log(windowWidth);
+        resetTabs(steps, stepPanels, activeClass, sliderEl);
+        setActiveTab(steps[activeStep], stepPanels[activeStep], activeClass, sliderEl);
+      }
+      windowWidth = newViewportWidth;
+    });
   }
 
   // If the stepper has stepper descriptions then build slider
@@ -52,7 +66,7 @@ const bindUIEvents = (stepper, carouselContainer) => {
   }
 
   const activeTab = getActiveTabIndex(steps, activeClass);
-  setActiveTab(steps[activeTab], stepPanels[activeTab], activeClass, sliderEl);
+  setActiveTab(steps[activeTab], stepPanels[activeTab], activeClass, sliderEl, true);
 
   steps.forEach((step, index) => {
     const stepTrigger = step.querySelector('[role="tab"]');

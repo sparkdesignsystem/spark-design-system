@@ -46,8 +46,9 @@ const resetTabs = (tabs, tabpanels, activeClass, slider) => {
 };
 
 // correct role=tab get aria-selected=true, get active class added, show correct panel
-const setActiveTab = (tab, tabpanel, activeClass, slider) => {
+const setActiveTab = (tab, tabpanel, activeClass, slider, isInit) => {
   if (slider) {
+    console.log('cats')
     const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
     const stepHeading = tab.querySelector('[data-sprk-stepper="heading"]');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
@@ -80,7 +81,7 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     stepTrigger.addEventListener('click', (e) => {
       e.preventDefault();
     });
-    stepTrigger.focus();
+    if (!isInit) stepTrigger.focus();
   } else {
     const isStepper = tab.hasAttribute('data-sprk-stepper');
     tab.classList.add(activeClass);
@@ -89,10 +90,10 @@ const setActiveTab = (tab, tabpanel, activeClass, slider) => {
     if (isStepper) {
       const tabTrigger = tab.querySelector('[role="tab"]');
       tabTrigger.setAttribute('aria-selected', 'true');
-      tabTrigger.focus();
+      if (!isInit) tabTrigger.focus();
     } else {
       tab.setAttribute('aria-selected', 'true');
-      tab.focus();
+      if (!isInit) tab.focus();
     }
   }
 };
