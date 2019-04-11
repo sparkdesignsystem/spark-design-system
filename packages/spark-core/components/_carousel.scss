@@ -22,11 +22,6 @@
 }
 
 .sprk-c-Carousel__controls {
-  justify-content: space-between;
-  display: flex;
-  width: 76px;
-  margin: 0 auto;
-
   @media (min-width: $sprk-split-breakpoint-xl) {
     display: none;
   }
@@ -37,14 +32,6 @@
   display: block;
   cursor: pointer;
   color: $sprk-carousel-arrow-color;
-}
-
-.sprk-c-Carousel__next {
-  right: 0;
-}
-
-.sprk-c-Carousel__prev {
-  left: 0;
 }
 
 .sprk-c-Carousel__dots {

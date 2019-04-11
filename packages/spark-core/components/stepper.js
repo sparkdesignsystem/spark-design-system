@@ -51,6 +51,9 @@ const bindUIEvents = (stepper, carouselContainer) => {
     stepper.prepend(sliderEl);
   }
 
+  const activeTab = getActiveTabIndex(steps, activeClass);
+  setActiveTab(steps[activeTab], stepPanels[activeTab], activeClass, sliderEl);
+
   steps.forEach((step, index) => {
     const stepTrigger = step.querySelector('[role="tab"]');
     if (!stepTrigger) {
