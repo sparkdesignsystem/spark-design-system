@@ -17,21 +17,20 @@ const SprkButton = ({
   const TagName = element;
   return (
     <TagName
-      className={
-        classnames(
-          'sprk-c-Button',
-          { 'sprk-c-Button--secondary': variant === 'secondary' },
-          { 'sprk-c-Button--tertiary': variant === 'tertiary' },
-          { 'sprk-is-Disabled': disabled },
-          additionalClasses,
-        )}
+      className={classnames(
+        'sprk-c-Button',
+        { 'sprk-c-Button--secondary': variant === 'secondary' },
+        { 'sprk-c-Button--tertiary': variant === 'tertiary' },
+        { 'sprk-is-Disabled': disabled },
+        additionalClasses,
+      )}
       role={element !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
       disabled={disabled}
       {...rest}
     >
-      { (loading && <SprkSpinner />) || children }
+      {(loading && <SprkSpinner />) || children}
     </TagName>
   );
 };
@@ -46,7 +45,11 @@ SprkButton.propTypes = {
   // whether to render a disabled button
   disabled: PropTypes.bool,
   // determines what element to render in the dom
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
+  element: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+    PropTypes.func,
+  ]),
   // mapped to data-id for testing purposes
   idString: PropTypes.string,
   // if true, will render a spinner in the button instead of children
