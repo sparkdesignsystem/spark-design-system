@@ -37,7 +37,7 @@
 .sprk-c-Carousel__dots {
   display: flex;
   justify-content: center;
-  margin: 1rem auto;
+  padding: $space-m;
 
   @media (min-width: $sprk-split-breakpoint-xl) {
     display: none;
