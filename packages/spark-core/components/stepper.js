@@ -48,8 +48,8 @@ const bindUIEvents = (stepper, carouselContainer) => {
       // when we switch from mobile to large
       const activeStep = getActiveTabIndex(steps, activeClass);
       const newViewportWidth = window.innerWidth || document.documentElement.clientWidth;
-      if (windowWidth < 1279 && newViewportWidth > 1279) {
-        console.log(windowWidth);
+      const sliderBreakpoint = 1279;
+      if (windowWidth < sliderBreakpoint && newViewportWidth > sliderBreakpoint) {
         resetTabs(steps, stepPanels, activeClass, sliderEl);
         setActiveTab(steps[activeStep], stepPanels[activeStep], activeClass, sliderEl);
       }

@@ -48,7 +48,6 @@ const resetTabs = (tabs, tabpanels, activeClass, slider) => {
 // correct role=tab get aria-selected=true, get active class added, show correct panel
 const setActiveTab = (tab, tabpanel, activeClass, slider, isInit) => {
   if (slider) {
-    console.log('cats')
     const stepDescription = tab.querySelector('[data-sprk-stepper="description"]');
     const stepHeading = tab.querySelector('[data-sprk-stepper="heading"]');
     const stepContent = tab.querySelector('.sprk-c-Stepper__step-content');
