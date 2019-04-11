@@ -4,6 +4,20 @@ import SprkIcon from '../SprkIcon/SprkIcon';
 import { noop } from 'lodash';
 
 class CloseButton extends Component {
+  constructor(props){
+    super(props);
+
+    this.buttonRef = React.createRef();
+    this.focusButton = this.focusButton.bind(this);
+  }
+
+  focusButton() {
+    // Apply focus to the button element. The button should receive focus when the
+    // modal becomes visible (not necessarily when it renders or updates), and
+    // only in the info variant.
+
+    this.buttonRef.current.focus();
+  }
 
   render() {
     const {
@@ -14,16 +28,10 @@ class CloseButton extends Component {
       <button
           className="sprk-c-Modal__icon"
           type="button"
-          aria-label="Close Modal"
+          aria-label="Click to close this modal"
           onClick={clickAction}
 
-
-          // https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
-          // I don't think this line is even working. Rewrite it or delete it.
-          // This button should be getting focus in the info variant, not the
-          // choice variant (and it should not exist in the wait variant)
-
-          // ref={ref => { ref && ref.focus()}}
+          ref={this.buttonRef}
         >
           <SprkIcon
             icontype="close"

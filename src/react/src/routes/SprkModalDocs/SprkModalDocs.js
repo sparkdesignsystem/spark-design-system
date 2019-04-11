@@ -10,7 +10,9 @@ class SprkModalDocs extends React.Component {
     this.state = {
       basic: false,
       wait: false,
-      info: false
+      info: false,
+      focusTarget: false,
+      noFocus: false,
     };
   }
 
@@ -24,23 +26,23 @@ class SprkModalDocs extends React.Component {
     return (
       <CentralColumnLayout>
         <ExampleContainer heading="Trigger A Basic Modal">
-          <SprkModal title="A Basic Modal"
+          <SprkModal title="Default Modal"
                      isVisible={this.state.basic}
+                     confirmText={'Yes please'}
+                     cancelText={'No thank you'}
                      confirmClick={()=>{
                        console.log('confirm!')
                        this.toggle('basic')
                       }}
                      cancelClick={this.toggle.bind(this, 'basic')}>
 
-            Some Content for for that basic modal via slots
-
-            <p>And Even more text</p>
+            Would you like to buy a mortgage?
           </SprkModal>
           <SprkButton onClick={this.toggle.bind(this, 'basic')}>Trigger Choice Modal</SprkButton>
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger An Info Only Modal">
-          <SprkModal title="An Info Only Modal"
+          <SprkModal title="Info Modal"
                      isVisible={this.state.info}
                      variant="info"
                      confirmClick={()=>{
@@ -49,15 +51,13 @@ class SprkModalDocs extends React.Component {
                      }}
                      cancelClick={this.toggle.bind(this, 'info')}>
 
-            Some Content for for the info modal via slots
-
-            <p>The more you know!</p>
+            Your mortgage has been downloaded.
           </SprkModal>
           <SprkButton onClick={this.toggle.bind(this, 'info')} >Trigger Info Modal</SprkButton>
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger A Wait Modal">
-          <SprkModal title="A Wait Modal"
+          <SprkModal title="Wait Modal"
                      isVisible={this.state.wait}
                      variant="wait"
                      confirmClick={()=>{
@@ -65,18 +65,48 @@ class SprkModalDocs extends React.Component {
                        this.toggle('wait')
                      }}
                      cancelClick={this.toggle.bind(this, 'wait')}>
-
-            Some Content for for the wait modal via slots
-
-            <p>This modal will dismiss via timeout after 2 seconds.</p>
+            This modal will close in 3 seconds.
           </SprkModal>
           <SprkButton onClick={()=>{
             this.toggle('wait');
-            setTimeout(this.toggle.bind(this, 'wait'), 2000);
+            setTimeout(this.toggle.bind(this, 'wait'), 3000);
           }}>Trigger Wait Modal</SprkButton>
         </ExampleContainer>
 
+        {/* <ExampleContainer heading="Focus Target Test">
+          <SprkModal title="Focus Target Test"
+                     isVisible={this.state.focusTarget}
+                     variant="info"
+                     onCloseFocusTarget={
+                       document.getElementById('focusTarget')
+                     }
+                     confirmClick={()=>{
+                       this.toggle('focusTarget')
+                     }}
+                     cancelClick={this.toggle.bind(this, 'focusTarget')}>
+
+            Closing this modal should focus the focus target.
+          </SprkModal>
+          <SprkButton onClick={this.toggle.bind(this, 'focusTarget')} >Trigger Focus Target Modal</SprkButton>
+          <SprkButton id='focusTarget' variant='secondary'>I'm the focus target</SprkButton>
+        </ExampleContainer> */}
+
+        <ExampleContainer heading="No Focus Test">
+          <SprkModal title="No Focus Modal"
+                     isVisible={this.state.noFocus}
+                     variant="info"
+                     shouldReturnFocusOnClose={false}
+                     confirmClick={()=>{
+                       this.toggle('noFocus')
+                     }}
+                     cancelClick={this.toggle.bind(this, 'noFocus')}>
+
+            Closing this modal should not return focus to the calling element. Focus behavior will depend on browser.
+          </SprkModal>
+          <SprkButton onClick={this.toggle.bind(this, 'noFocus')} >Trigger No Focus Modal</SprkButton>
+        </ExampleContainer>
       </CentralColumnLayout>
+
     );
   }
 };
