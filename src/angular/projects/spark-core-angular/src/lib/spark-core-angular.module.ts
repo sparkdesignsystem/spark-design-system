@@ -45,15 +45,7 @@ import { SparkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
 import { SparkUnorderedListModule } from './components/sprk-unordered-list/sprk-unordered-list.module';
 import { SprkButtonModule } from './directives/inputs/sprk-button/sprk-button.module';
 
-import TinyDatePicker from 'tiny-date-picker';
-
 @NgModule({
-  providers: [
-    {
-      provide: 'TinyDatePicker',
-      useValue: TinyDatePicker
-    }
-  ],
   exports: [
     SparkAlertModule,
     SparkAccordionModule,
