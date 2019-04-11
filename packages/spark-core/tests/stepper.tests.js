@@ -29,6 +29,7 @@ describe('steps UI Events tests', () => {
   let panel1;
   let panel2;
   let panel3;
+  let carousel;
 
   beforeEach(() => {
     stepContainer = document.createElement('ol');
@@ -36,11 +37,14 @@ describe('steps UI Events tests', () => {
     stepContainer.setAttribute('role', 'steplist');
     stepContainer.setAttribute('data-sprk-stepper', 'container');
     sinon.spy(stepContainer, 'addEventListener');
+    stepContainer.setAttribute('data-sprk-stepper-carousel', '1');
 
     step1 = document.createElement('div');
     step1.setAttribute('data-sprk-stepper', 'step');
     step1.classList.add('sprk-c-Stepper__step');
     step1.classList.add('sprk-c-Stepper__step--selected');
+
+    carousel = document.createElement('div');
 
     step1Trigger = document.createElement('a');
     step1Trigger.setAttribute('role', 'tab');
@@ -98,6 +102,7 @@ describe('steps UI Events tests', () => {
     stepContainer.appendChild(step1);
     stepContainer.appendChild(step2);
     stepContainer.appendChild(step3);
+    stepContainer.appendChild(carousel);
 
     stepper();
     bindUIEvents(stepContainer);
