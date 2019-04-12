@@ -31,7 +31,7 @@ title: React
   </div>
 
   <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
+    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark</h2>
     <h4 class="drizzle-b-h4">Getting Started</h4>
     <p>To get started with
       <span class="drizzle-c-Command">
@@ -103,72 +103,69 @@ title: React
           should occur in the DOM before the first use element.</p>
       </li>
     </ul>
+    <p>All Spark React components are included in the 
+      <span class="drizzle-c-Command">
+        <code class="drizzle-CodeHighlight">
+          spark-react
+        </code>
+      </span>
+      package. However, the following components rely on the vanilla
+      Spark Extra packages:
+      <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
+        <li class="sprk-u-mvm">
+          <h4 class="drizzle-b-h4">Spark Card</h4>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              npm install --save-dev @sparkdesignsystem/spark-card
+            </code>
+          </div>
+          <p>
+            Import the Sass file into your application. See section on Sass above for more details.
+            This will bring all Spark-Card patterns into your build.
+          </p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              @import &quot;node_modules/@sparkdesignsystem/spark-card/_card.scss&quot;;
+            </code>
+          </div>  
+        </li>
+        <li class="sprk-u-mvm">
+          <h4 class="drizzle-b-h4">Spark Highlight Board</h4>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              npm install --save-dev @sparkdesignsystem/spark-highlight-board
+            </code>
+          </div> 
+          <p>
+            Import the Sass file into your application. See section on Sass above for more details.
+            This will bring all Spark-Highlight-Board patterns into your build.
+          </p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              @import &quot;node_modules/@sparkdesignsystem/spark-highlight-board/_highlight-board.scss&quot;;
+            </code>
+          </div>  
+        </li>
+        <li class="sprk-u-mvm">
+          <h4 class="drizzle-b-h4">Spark Dictionary</h4>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              npm install --save-dev @sparkdesignsystem/spark-dictionary
+            </code>
+          </div>
+          <p>
+            Import the Sass file into your application. See section on Sass above for more details.
+            This will bring all Spark-Dictionary patterns into your build.
+          </p>
+          <div class="drizzle-c-Command">
+            <code class="drizzle-CodeHighlight">
+              @import &quot;node_modules/@sparkdesignsystem/spark-dictionary/_dictionary.scss&quot;;
+            </code>
+          </div> 
+        </li>
+      </ul>
+    </p>
   </div>
-
-  <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2">Spark Extras</h2>
-
-    <div class="drizzle-o-ContentGrouping">
-      <p>
-        The following Spark React components rely on their coordinating
-        Spark Extra packages:
-        <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
-          <li class="sprk-u-mvm">
-            <h4 class="drizzle-b-h4">Spark Card</h4>
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                npm install --save-dev @sparkdesignsystem/spark-card
-              </code>
-            </div>
-            <p>
-              Import the Sass file into your application. See section on Sass above for more details.
-              This will bring all Spark-Card patterns into your build.
-            </p>
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                @import &quot;node_modules/@sparkdesignsystem/spark-card/_card.scss&quot;;
-              </code>
-            </div>  
-          </li>
-          <li class="sprk-u-mvm">
-            <h4 class="drizzle-b-h4">Spark Highlight Board</h4>
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                npm install --save-dev @sparkdesignsystem/spark-highlight-board
-              </code>
-            </div> 
-            <p>
-              Import the Sass file into your application. See section on Sass above for more details.
-              This will bring all Spark-Highlight-Board patterns into your build.
-            </p>
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                @import &quot;node_modules/@sparkdesignsystem/spark-highlight-board/_highlight-board.scss&quot;;
-              </code>
-            </div>  
-          </li>
-          <li class="sprk-u-mvm">
-            <h4 class="drizzle-b-h4">Spark Dictionary</h4>
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                npm install --save-dev @sparkdesignsystem/spark-dictionary
-              </code>
-            </div>
-            <p>
-              Import the Sass file into your application. See section on Sass above for more details.
-              This will bring all Spark-Dictionary patterns into your build.
-            </p>
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">
-                @import &quot;node_modules/@sparkdesignsystem/spark-dictionary/_dictionary.scss&quot;;
-              </code>
-            </div> 
-          </li>
-        </ul>
-      </p>
-    </div>
-  </div>
-
   <div class="drizzle-o-ContentGrouping">
     <h2 class="drizzle-b-h2">Using Components</h2>
 

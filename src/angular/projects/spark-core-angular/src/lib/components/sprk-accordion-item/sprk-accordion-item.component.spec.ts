@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SparkAccordionItemComponent } from './sprk-accordion-item.component';
 
 describe('SparkAccordionItemComponent', () => {
@@ -13,8 +15,12 @@ describe('SparkAccordionItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [SparkAccordionItemComponent, SparkIconComponent]
+      imports: [BrowserAnimationsModule, RouterTestingModule],
+      declarations: [
+        SparkAccordionItemComponent,
+        SparkIconComponent,
+        SparkLinkComponent
+      ]
     }).compileComponents();
   }));
 

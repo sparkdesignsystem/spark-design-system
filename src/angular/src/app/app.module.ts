@@ -104,7 +104,9 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes, {}),
+    RouterModule.forRoot(appRoutes, {
+      anchorScrolling: 'enabled'
+    }),
     BrowserModule,
     SparkAwardModule,
     SparkCardModule,
