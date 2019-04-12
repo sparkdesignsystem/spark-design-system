@@ -15,6 +15,7 @@
       "ObjectPattern": { "multiline": true },
       "ImportDeclaration": "never"
     }],
+    "react/require-default-props" : "off",
     "react/jsx-filename-extension": "off",
     "jsx-a11y/label-has-associated-control": [ 2, {
       "labelComponents": ["label"],
