@@ -8,42 +8,35 @@ class SprkAccordion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: props.children.map(item => ({ id: uniqueId('accordion-item-'), ...item })),
+      items: props.children.map(item => ({
+        id: uniqueId('accordion-item-'),
+        ...item,
+      })),
     };
   }
 
   render() {
-    const {
-      idString,
-      additionalClasses,
-      ...other
-    } = this.props;
+    const { idString, additionalClasses, ...other } = this.props;
     const { items } = this.state;
     return (
       <ul
-        className={classnames('sprk-c-Accordion sprk-o-VerticalList', additionalClasses)}
+        className={classnames(
+          'sprk-c-Accordion sprk-o-VerticalList',
+          additionalClasses,
+        )}
         data-id={idString}
         {...other}
       >
-        {items.map((item) => {
+        {items.map(item => {
           if (item.type.name !== SprkAccordionItem.name) return null;
           return (
-            <SprkAccordionItem
-              {...item.props}
-              key={item.id}
-              id={item.id}
-            />
+            <SprkAccordionItem {...item.props} key={item.id} id={item.id} />
           );
         })}
       </ul>
     );
   }
 }
-
-SprkAccordion.defaultProps = {
-  idString: '',
-  additionalClasses: '',
-};
 
 SprkAccordion.propTypes = {
   // Value added to accordion container as additional classes
