@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SprkIcon from '../SprkIcon/SprkIcon';
 import { noop } from 'lodash';
+import SprkIcon from '../SprkIcon/SprkIcon';
 
 class CloseButton extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.buttonRef = React.createRef();
@@ -21,36 +21,35 @@ class CloseButton extends Component {
 
   render() {
     const {
-      clickAction
+      clickAction,
     } = this.props;
 
     return (
       <button
-          className="sprk-c-Modal__icon"
-          type="button"
-          aria-label="Click to close this modal"
-          onClick={clickAction}
+        className="sprk-c-Modal__icon"
+        type="button"
+        aria-label="Click to close this modal"
+        onClick={clickAction}
 
-          ref={this.buttonRef}
-        >
-          <SprkIcon
-            icontype="close"
-            iconName="close"
-            additionalClasses="sprk-c-Icon--stroke-current-color"
-          ></SprkIcon>
-        </button>
-    )
+        ref={this.buttonRef}
+      >
+        <SprkIcon
+          icontype="close"
+          iconName="close"
+          additionalClasses="sprk-c-Icon--stroke-current-color"
+        />
+      </button>
+    );
   }
-
 }
 
 CloseButton.propTypes = {
   // function to call when the button is clicked
   clickAction: PropTypes.func,
-}
+};
 
 CloseButton.defaultProps = {
   clickAction: noop,
-}
+};
 
 export default CloseButton;

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { noop } from 'lodash';
 
 class ModalFooter extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.confirmButtonRef = React.createRef();
     this.focusConfirm = this.focusConfirm.bind(this);
   }
 
-  focusConfirm(){
+  focusConfirm() {
     // Apply focus to the confirm button. The button should receive focus when the
     // modal becomes visible (not necessarily when it renders or updates), and
     // only in the default variant.
@@ -22,25 +23,33 @@ class ModalFooter extends Component {
       confirmClick,
       cancelClick,
       confirmText,
-      cancelText
+      cancelText,
     } = this.props;
 
     return (
       <footer className="sprk-o-Stack__item">
-        <p>&nbsp;</p> {/* vanilla expects a paragraph here */}
-        <button className="sprk-c-Button sprk-u-mrm" onClick={confirmClick} ref={this.confirmButtonRef}>
+        {/* vanilla expects a paragraph here */}
+        <p>&nbsp;</p>
+        <button
+          className="sprk-c-Button sprk-u-mrm"
+          onClick={confirmClick}
+          type="button"
+          ref={this.confirmButtonRef}
+        >
           {confirmText}
         </button>
 
-        <button className="sprk-c-Button sprk-c-Button--tertiary"
-                data-sprk-modal-cancel="exampleChoiceModal"
-                onClick={cancelClick} >
+        <button
+          className="sprk-c-Button sprk-c-Button--tertiary"
+          data-sprk-modal-cancel="exampleChoiceModal"
+          onClick={cancelClick}
+          type="button"
+        >
           {cancelText}
         </button>
       </footer>
-    )
+    );
   }
-
 }
 
 ModalFooter.propTypes = {
@@ -48,14 +57,14 @@ ModalFooter.propTypes = {
   confirmClick: PropTypes.func,
   cancelClick: PropTypes.func,
   confirmText: PropTypes.string,
-  cancelText: PropTypes.string
-}
+  cancelText: PropTypes.string,
+};
 
 ModalFooter.defaultProps = {
-  confirmClick: function(){},
-  cancelClick: function(){},
+  confirmClick: noop,
+  cancelClick: noop,
   confirmText: 'Confirm',
-  cancelText: 'Cancel'
-}
+  cancelText: 'Cancel',
+};
 
 export default ModalFooter;

@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
 
-class SprkModalMask extends Component {
-  render() {
-    const {
-      clicked,
-    } = this.props;
-    return (
-      <div data-sprk-modal-mask="true" onClick={clicked} className="sprk-c-ModalMask" tabIndex="-1" />
-    );
-  }
+function SprkModalMask({ clicked }) {
+  return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    // key events are handled by the parent component
+    <div
+      data-sprk-modal-mask="true"
+      onClick={clicked}
+      className="sprk-c-ModalMask"
+      tabIndex="-1"
+      // this component is only visual and has no semantic meaning
+      role="presentation"
+    />
+  );
 }
 
 SprkModalMask.propTypes = {

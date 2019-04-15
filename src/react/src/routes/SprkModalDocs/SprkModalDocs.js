@@ -1,10 +1,10 @@
+/* global document */
 import React from 'react';
-import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import { SprkButton, SprkModal } from '@sparkdesignsystem/spark-core-react';
+import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
 class SprkModalDocs extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -17,98 +17,109 @@ class SprkModalDocs extends React.Component {
   }
 
   toggle(key) {
-    var mutator = {};
+    const mutator = {};
+    // eslint-disable-next-line react/destructuring-assignment
     mutator[key] = !this.state[key];
-    this.setState(mutator)
+    this.setState(mutator);
   }
 
-  render () {
+  render() {
+    const {
+      basic, wait, info, focusTarget, noFocus,
+    } = this.state;
+
     return (
       <CentralColumnLayout>
         <ExampleContainer heading="Trigger A Basic Modal">
-          <SprkModal title="Default Modal"
-                     isVisible={this.state.basic}
-                     confirmText={'Yes please'}
-                     cancelText={'No thank you'}
-                     confirmClick={()=>{
-                       console.log('confirm!')
-                       this.toggle('basic')
-                      }}
-                     cancelClick={this.toggle.bind(this, 'basic')}>
+          <SprkModal
+            title="Default Modal"
+            isVisible={basic}
+            confirmText="Yes please"
+            cancelText="No thank you"
+            confirmClick={() => { this.toggle('basic'); }}
+            cancelClick={() => { this.toggle('basic'); }}
+          >
 
             Would you like to buy a mortgage?
           </SprkModal>
-          <SprkButton onClick={this.toggle.bind(this, 'basic')}>Trigger Choice Modal</SprkButton>
+          <SprkButton onClick={() => { this.toggle('basic'); }}>Trigger Choice Modal</SprkButton>
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger An Info Only Modal">
-          <SprkModal title="Info Modal"
-                     isVisible={this.state.info}
-                     variant="info"
-                     confirmClick={()=>{
-                       console.log('confirm!')
-                       this.toggle('info')
-                     }}
-                     cancelClick={this.toggle.bind(this, 'info')}>
-
+          <SprkModal
+            title="Info Modal"
+            isVisible={info}
+            variant="info"
+            confirmClick={() => { this.toggle('info'); }}
+            cancelClick={() => { this.toggle('info'); }}
+          >
             Your mortgage has been downloaded.
           </SprkModal>
-          <SprkButton onClick={this.toggle.bind(this, 'info')} >Trigger Info Modal</SprkButton>
+          <SprkButton onClick={() => { this.toggle('info'); }}>Trigger Info Modal</SprkButton>
         </ExampleContainer>
 
         <ExampleContainer heading="Trigger A Wait Modal">
-          <SprkModal title="Wait Modal"
-                     isVisible={this.state.wait}
-                     variant="wait"
-                     confirmClick={()=>{
-                       console.log('confirm!')
-                       this.toggle('wait')
-                     }}
-                     cancelClick={this.toggle.bind(this, 'wait')}>
+          <SprkModal
+            title="Wait Modal"
+            isVisible={wait}
+            variant="wait"
+            confirmClick={() => {
+              this.toggle('wait');
+            }}
+            cancelClick={() => { this.toggle('wait'); }}
+          >
             This modal will close in 3 seconds.
           </SprkModal>
-          <SprkButton onClick={()=>{
+          <SprkButton onClick={() => {
             this.toggle('wait');
             setTimeout(this.toggle.bind(this, 'wait'), 3000);
-          }}>Trigger Wait Modal</SprkButton>
+          }}
+          >
+            Trigger Wait Modal
+          </SprkButton>
         </ExampleContainer>
 
-        {/* <ExampleContainer heading="Focus Target Test">
-          <SprkModal title="Focus Target Test"
-                     isVisible={this.state.focusTarget}
-                     variant="info"
-                     onCloseFocusTarget={
-                       document.getElementById('focusTarget')
-                     }
-                     confirmClick={()=>{
-                       this.toggle('focusTarget')
-                     }}
-                     cancelClick={this.toggle.bind(this, 'focusTarget')}>
-
+        <ExampleContainer heading="Focus Target Test">
+          <SprkModal
+            title="Focus Target Test"
+            isVisible={focusTarget}
+            variant="info"
+            onCloseFocusTarget={
+              document.getElementById('focusTarget')
+            }
+            confirmClick={() => {
+              this.toggle('focusTarget');
+            }}
+            cancelClick={() => { this.toggle('focusTarget'); }}
+          >
             Closing this modal should focus the focus target.
           </SprkModal>
-          <SprkButton onClick={this.toggle.bind(this, 'focusTarget')} >Trigger Focus Target Modal</SprkButton>
-          <SprkButton id='focusTarget' variant='secondary'>I'm the focus target</SprkButton>
-        </ExampleContainer> */}
+
+          <SprkButton onClick={() => { this.toggle('focusTarget'); }}>Trigger Focus Target Modal</SprkButton>
+          <SprkButton id="focusTarget" variant="secondary">I am the focus target</SprkButton>
+
+        </ExampleContainer>
 
         <ExampleContainer heading="No Focus Test">
-          <SprkModal title="No Focus Modal"
-                     isVisible={this.state.noFocus}
-                     variant="info"
-                     shouldReturnFocusOnClose={false}
-                     confirmClick={()=>{
-                       this.toggle('noFocus')
-                     }}
-                     cancelClick={this.toggle.bind(this, 'noFocus')}>
-
-            Closing this modal should not return focus to the calling element. Focus behavior will depend on browser.
+          <SprkModal
+            title="No Focus Modal"
+            isVisible={noFocus}
+            variant="info"
+            shouldReturnFocusOnClose={false}
+            confirmClick={() => {
+              this.toggle('noFocus');
+            }}
+            cancelClick={() => { this.toggle('noFocus'); }}
+          >
+            Closing this modal should NOT return focus to the calling element.
+            Focus behavior will depend on browser and page state.
           </SprkModal>
-          <SprkButton onClick={this.toggle.bind(this, 'noFocus')} >Trigger No Focus Modal</SprkButton>
+          <SprkButton onClick={() => { this.toggle('noFocus'); }}>Trigger No Focus Modal</SprkButton>
         </ExampleContainer>
       </CentralColumnLayout>
 
     );
   }
-};
+}
 
 export default SprkModalDocs;

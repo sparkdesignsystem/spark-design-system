@@ -1,4 +1,5 @@
 /* global window */
+/* global document */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -10,6 +11,25 @@ import ModalFooter from './ModalFooter';
 import Mask from './Mask';
 
 class SprkModal extends Component {
+  static isTabPressed(e) {
+    return e.key === 'Tab' || e.keyCode === 9;
+  }
+
+  static isEscPressed(e) {
+    return e.key === 'Escape' || e.keyCode === 27;
+  }
+
+  // Check if passed in element is the currently active element
+  static isActiveElement(element) {
+    return document.activeElement === element;
+  }
+
+  // Get all focusable elements in a container
+  static getFocusableEls(container) {
+    const focusEls = container.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+    return focusEls;
+  }
+
   constructor(props) {
     super(props);
 
@@ -23,21 +43,6 @@ class SprkModal extends Component {
     this.setInternalFocus = this.setInternalFocus.bind(this);
     this.setExternalFocus = this.setExternalFocus.bind(this);
     this.handleKeyEvents = this.handleKeyEvents.bind(this);
-    this.getFocusableEls = this.getFocusableEls.bind(this);
-    this.isTabPressed = this.isTabPressed.bind(this);
-    this.isEscPressed = this.isEscPressed.bind(this);
-    this.focusFirstEl = this.focusFirstEl.bind(this);
-    this.isActiveElement = this.isActiveElement.bind(this);
-  }
-
-  shouldComponentUpdate(nextProps, nextState){
-    // if it's closed now and going to be open
-    if (!this.props.isVisible && nextProps.isVisible) {
-      // save the element with focus so we can apply it later.
-      this.focusTarget = document.activeElement;
-    }
-
-    return true;
   }
 
   componentDidMount() {
@@ -45,34 +50,45 @@ class SprkModal extends Component {
     this.setInternalFocus();
   }
 
+  shouldComponentUpdate(nextProps) {
+    const { isVisible } = this.props;
+
+    // if it's closed now and going to be open
+    if (!isVisible && nextProps.isVisible) {
+      // save the element with focus so we can apply it later.
+      this.focusTarget = document.activeElement;
+    }
+
+    return true;
+  }
+
   componentDidUpdate(prevProps) {
+    const { isVisible } = this.props;
+
     // if it was closed and now its open, set the internal focus
-    if (this.props.isVisible && !prevProps.isVisible)
+    if (isVisible && !prevProps.isVisible) {
       this.setInternalFocus();
+    }
 
     // if it was open and now its closed, set the external focus
-    if (prevProps.isVisible && !this.props.isVisible)
+    if (prevProps.isVisible && !isVisible) {
       this.setExternalFocus();
+    }
   }
 
   componentWillUnmount() {
     this.removeListeners();
   }
 
-  cancel() {
-    if (this.props.variant != 'wait') {
-      this.props.cancelClick();
-    }
-    this.removeListeners();
-  }
-
   setExternalFocus() {
+    const { isVisible, shouldReturnFocusOnClose, onCloseFocusTarget } = this.props;
+
     // only if the modal is closed
-    if (!this.props.isVisible){
-      // if the flag says to do it
-      if (this.props.shouldReturnFocusOnClose){
-        if (this.props.onCloseFocusTarget){
-          this.props.onCloseFocusTarget.focus();
+    if (!isVisible) {
+      // only if the flag says to do it
+      if (shouldReturnFocusOnClose) {
+        if (onCloseFocusTarget) {
+          onCloseFocusTarget.focus();
         } else {
           this.focusTarget.focus();
         }
@@ -81,17 +97,19 @@ class SprkModal extends Component {
   }
 
   setInternalFocus() {
-    if (this.props.isVisible){
-      switch (this.props.variant){
-        case "choice":
+    const { isVisible, variant } = this.props;
+
+    if (isVisible) {
+      switch (variant) {
+        case 'choice':
           // focus the confirm button
           this.footerRef.current.focusConfirm();
           break;
-        case "info":
+        case 'info':
           // focus the close button
           this.closeButtonRef.current.focusButton();
           break;
-        case "wait":
+        case 'wait':
           // focus the whole modal
           this.containerRef.current.focus();
           break;
@@ -103,75 +121,57 @@ class SprkModal extends Component {
     }
   }
 
-  // Get all focusable elements in a container
-  getFocusableEls (container) {
-    const focusEls = container.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-    return focusEls;
-  };
+  cancel() {
+    const { variant, cancelClick } = this.props;
 
-  isTabPressed (e) { return e.key === 'Tab' || e.keyCode === 9; }
-  isEscPressed (e) { return e.key === 'Escape' || e.keyCode === 27; }
-
-  // Focus first element in a container
-  focusFirstEl (container) {
-    const focusEls = getFocusableEls(container);
-    if (focusEls.length > 0) {
-      focusEls[0].focus();
+    if (variant !== 'wait') {
+      cancelClick();
     }
-  };
 
-  // Check if passed in element is the currently active element
-  isActiveElement ( element ) { return document.activeElement === element; }
+    this.removeListeners();
+  }
 
-  handleKeyEvents (e) {
+  handleKeyEvents(e) {
+    const { isVisible, variant } = this.props;
+
     // Return if there is no open modal
-    if (!this.props.isVisible) { return; }
+    if (!isVisible) { return; }
 
-    const focusableEls = this.getFocusableEls(this.containerRef.current);
+    const focusableEls = SprkModal.getFocusableEls(this.containerRef.current);
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
 
     switch (true) {
-      case this.isEscPressed(e):
-        if (!this.props.variant == 'wait') {
+      case SprkModal.isEscPressed(e):
+        if (variant !== 'wait') {
           e.preventDefault();
           this.cancel();
-          console.log("closing because of escape key")
         }
         break;
-      case this.isTabPressed(e) && e.shiftKey:
-        if (this.props.variant=='wait') {
+      case SprkModal.isTabPressed(e) && e.shiftKey:
+        if (variant === 'wait') {
           e.preventDefault();
           this.containerRef.current.focus();
-          console.log("focusing modal from tab key + shift")
-        } else if (this.isActiveElement(firstFocusableEl)) {
+        } else if (SprkModal.isActiveElement(firstFocusableEl)) {
           e.preventDefault();
           lastFocusableEl.focus();
-          console.log("on first el, so focusing last el from tab key + shift")
-        } else {
-          console.log("unaltered tab backward");
         }
         break;
-      case this.isTabPressed(e):
-        if (this.props.variant=='wait') {
+      case SprkModal.isTabPressed(e):
+        if (variant === 'wait') {
           e.preventDefault();
           this.containerRef.current.focus();
-          console.log("focusing modal from tab key");
-        } else if (this.isActiveElement(lastFocusableEl)) {
+        } else if (SprkModal.isActiveElement(lastFocusableEl)) {
           e.preventDefault();
           firstFocusableEl.focus();
-          console.log("on last el, so focusing first el from tab key")
-        } else {
-          console.log("unaltered tab forward")
         }
         break;
       default:
         break;
     }
-  };
+  }
 
   attachListeners() {
-    console.log("attaching listener");
     window.addEventListener('keydown', this.handleKeyEvents);
   }
 
@@ -197,10 +197,10 @@ class SprkModal extends Component {
       ...rest
     } = this.props;
 
-    var isWait = variant == 'wait';
-    var isChoice = variant == 'choice';
+    if (!isVisible) { return (null); }
 
-    if (!isVisible) { return(null); }
+    const isWait = variant === 'wait';
+    const isChoice = variant === 'choice';
 
     this.attachListeners();
 
@@ -213,30 +213,33 @@ class SprkModal extends Component {
               isWait ? 'sprk-c-Modal--wait' : '',
               additionalClasses,
             )}
-          role={'dialog'}
-          tabIndex={'0'}
-          aria-modal='true'
+          role="dialog"
+          aria-modal="true"
           aria-labelledby="modalHeading"
           aria-describedby="modalContent"
           data-analytics={analyticsString}
           data-id={idString}
           ref={this.containerRef}
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex="0"
           {...rest}
         >
           <div className="sprk-o-Stack sprk-o-Stack--large">
             <header className="sprk-o-Stack__item sprk-c-Modal__header">
-              <h2 className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
-                   id="modalHeading">
+              <h2
+                className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
+                id="modalHeading"
+              >
                 {title}
               </h2>
 
-              {!isWait && <CloseButton clickAction={this.cancel.bind(this)} ref={this.closeButtonRef} />}
+              {!isWait && <CloseButton clickAction={this.cancel} ref={this.closeButtonRef} />}
             </header>
 
             <div>
               <div className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium" id="modalContent">
-                {isWait &&
-                    <SprkSpinner size='large' lightness='dark' additionalClasses='sprk-o-Stack__item'/>
+                {isWait
+                && <SprkSpinner size="large" lightness="dark" additionalClasses="sprk-o-Stack__item" />
                 }
                 <div className="sprk-b-TypeBodyTwo">
                   {children}
@@ -245,24 +248,22 @@ class SprkModal extends Component {
 
               {isChoice && (
                 <ModalFooter
-                confirmClick={confirmClick}
-                cancelClick={this.cancel.bind(this)}
-                confirmText={confirmText}
-                cancelText={cancelText}
-                ref={this.footerRef}
+                  confirmClick={confirmClick}
+                  cancelClick={this.cancel}
+                  confirmText={confirmText}
+                  cancelText={cancelText}
+                  ref={this.footerRef}
                 />
               )}
             </div>
           </div>
         </div>
 
-        <Mask clicked={this.cancel.bind(this)}></Mask>
+        <Mask clicked={this.cancel} />
       </div>
     );
   }
-};
-
-
+}
 
 SprkModal.propTypes = {
   // incoming children, body of the modal
@@ -277,7 +278,8 @@ SprkModal.propTypes = {
   isVisible: PropTypes.bool,
   // event for the confirm CTA in choice modal
   confirmClick: PropTypes.func,
-  // called by internal cancel function. Triggered by the cancel CTA in choice modal, clicking the X, clicking the Mask, or pressing Escape
+  // called by internal cancel function. Triggered by the cancel CTA in choice modal,
+  // clicking the X, clicking the Mask, or pressing Escape
   cancelClick: PropTypes.func,
   // whether or not to automatically set focus on the last element that had focus
   shouldReturnFocusOnClose: PropTypes.bool,
