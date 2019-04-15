@@ -7,6 +7,7 @@ import * as _ from 'lodash';
     <li
       [ngClass]="getClasses()"
       [attr.data-id]="idString"
+      [attr.data-analytics]="analyticsString"
       data-sprk-stepper="step"
     >
       <div

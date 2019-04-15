@@ -76,8 +76,8 @@ describe('SparkStepperStepComponent', () => {
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     component.analyticsString = 'Click';
     fixture.detectChanges();
-    expect(stepTriggerElement.hasAttribute('data-analytics')).toEqual(true);
-    expect(stepTriggerElement.getAttribute('data-analytics')).toEqual('Click');
+    expect(stepElement.hasAttribute('data-analytics')).toEqual(true);
+    expect(stepElement.getAttribute('data-analytics')).toEqual('Click');
   });
 
   it('should add data-id when idString has a value', () => {
