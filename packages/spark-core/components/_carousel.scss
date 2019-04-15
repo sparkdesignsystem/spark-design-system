@@ -21,17 +21,15 @@
   display: inline-block;
 }
 
-.sprk-c-Carousel__controls {
-  @media (min-width: $sprk-split-breakpoint-xl) {
-    display: none;
-  }
-}
-
 .sprk-c-Carousel__prev,
 .sprk-c-Carousel__next {
   display: block;
   cursor: pointer;
   color: $sprk-carousel-arrow-color;
+
+  @media (min-width: $sprk-split-breakpoint-xl) {
+    display: none;
+  }
 }
 
 .sprk-c-Carousel__dots {
