@@ -125,7 +125,7 @@ gulp.task('test-react', cb => {
 
 // netlify
 gulp.task('build', cb => {
-  runSequence('pre-publish', cb);
+  runSequence('build-drizzle', cb);
 });
 
 // netlify

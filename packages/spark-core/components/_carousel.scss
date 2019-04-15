@@ -32,6 +32,14 @@
   }
 }
 
+.sprk-c-Carousel__prev {
+  margin-right: $sprk-carouse-arrow-spacing;
+}
+
+.sprk-c-Carousel__next {
+  margin-left: $sprk-carouse-arrow-spacing;
+}
+
 .sprk-c-Carousel__dots {
   display: flex;
   justify-content: center;

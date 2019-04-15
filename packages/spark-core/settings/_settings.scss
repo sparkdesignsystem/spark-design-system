@@ -838,5 +838,6 @@ $sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid $sprk-stepper-d
 $sprk-carousel-dot-height: 10px !default;
 $sprk-carousel-dot-width: 10px !default;
 $sprk-carousel-dot-spacing: $sprk-stack-spacing-misc-a !default;
-$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected;
+$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected !default;
 $sprk-carousel-arrow-color: $sprk-white !default;
+$sprk-carousel-arrow-spacing: $sprk-space-s !default;
