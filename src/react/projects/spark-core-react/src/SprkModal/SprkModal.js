@@ -133,33 +133,30 @@ class SprkModal extends Component {
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
 
-    switch (true) {
-      case isEscPressed(e):
-        if (variant !== 'wait') {
-          e.preventDefault();
-          this.cancel();
-        }
-        break;
-      case isTabPressed(e) && e.shiftKey:
-        if (variant === 'wait') {
-          e.preventDefault();
-          this.containerRef.current.focus();
-        } else if (isActiveElement(firstFocusableEl)) {
+    if (isEscPressed(e)) {
+      // Cannot use Esc to close Wait Modals
+      if (variant !== 'wait') {
+        e.preventDefault();
+        this.cancel();
+      }
+    }
+
+    if (isTabPressed(e)) {
+      if (variant === 'wait') {
+        e.preventDefault();
+        // Wait modals only ever focus the modal container
+        this.containerRef.current.focus();
+      } else if (e.shiftKey) {
+        if (isActiveElement(firstFocusableEl)) {
+          // underflow to the end
           e.preventDefault();
           lastFocusableEl.focus();
         }
-        break;
-      case isTabPressed(e):
-        if (variant === 'wait') {
-          e.preventDefault();
-          this.containerRef.current.focus();
-        } else if (isActiveElement(lastFocusableEl)) {
-          e.preventDefault();
-          firstFocusableEl.focus();
-        }
-        break;
-      default:
-        break;
+      } else if (isActiveElement(lastFocusableEl)) {
+        // overflow to the beginning
+        e.preventDefault();
+        firstFocusableEl.focus();
+      }
     }
   }
 
