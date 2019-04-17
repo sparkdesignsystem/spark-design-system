@@ -243,7 +243,6 @@ SprkPromo.defaultProps = {
   subtitle: '',
   additionalClasses: '',
   additionalClassesContent: '',
-  cta: '',
   ctaText: '',
   ctaHref: '',
   ctaAnalytics: '',
