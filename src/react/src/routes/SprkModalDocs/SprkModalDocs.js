@@ -1,6 +1,6 @@
 /* global document */
 import React from 'react';
-import { SprkButton, SprkModal, SprkAlert } from '@sparkdesignsystem/spark-core-react';
+import { SprkButton, SprkModal, SprkAlert } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
