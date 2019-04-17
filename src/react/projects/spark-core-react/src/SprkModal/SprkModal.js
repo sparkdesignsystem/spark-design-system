@@ -1,38 +1,34 @@
+/* eslint-disable prefer-template */
 /* global window */
 /* global document */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import noop from 'lodash';
+import { getFocusableEls, isActiveElement, isTabPressed, isEscPressed } from '@sparkdesignsystem/spark-core';
 import SprkSpinner from '../SprkSpinner/SprkSpinner';
-
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';
 import Mask from './Mask';
 
 class SprkModal extends Component {
-  static isTabPressed(e) {
-    return e.key === 'Tab' || e.keyCode === 9;
-  }
+  static makeid() {
+    const length = 3;
+    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let text = '';
+    let i = 0;
 
-  static isEscPressed(e) {
-    return e.key === 'Escape' || e.keyCode === 27;
-  }
+    for (i = 0; i < length; i += 1) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
 
-  // Check if passed in element is the currently active element
-  static isActiveElement(element) {
-    return document.activeElement === element;
-  }
-
-  // Get all focusable elements in a container
-  static getFocusableEls(container) {
-    const focusEls = container.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-    return focusEls;
+    return text;
   }
 
   constructor(props) {
     super(props);
 
+    this.aria_id = SprkModal.makeid();
     this.closeButtonRef = React.createRef();
     this.footerRef = React.createRef();
     this.containerRef = React.createRef();
@@ -81,17 +77,13 @@ class SprkModal extends Component {
   }
 
   setExternalFocus() {
-    const { isVisible, shouldReturnFocusOnClose, onCloseFocusTarget } = this.props;
+    const { isVisible, shouldReturnFocusOnClose } = this.props;
 
     // only if the modal is closed
     if (!isVisible) {
       // only if the flag says to do it
-      if (shouldReturnFocusOnClose) {
-        if (onCloseFocusTarget) {
-          onCloseFocusTarget.focus();
-        } else {
-          this.focusTarget.focus();
-        }
+      if (shouldReturnFocusOnClose && this.focusTarget) {
+        this.focusTarget.focus();
       }
     }
   }
@@ -137,31 +129,31 @@ class SprkModal extends Component {
     // Return if there is no open modal
     if (!isVisible) { return; }
 
-    const focusableEls = SprkModal.getFocusableEls(this.containerRef.current);
+    const focusableEls = getFocusableEls(this.containerRef.current);
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
 
     switch (true) {
-      case SprkModal.isEscPressed(e):
+      case isEscPressed(e):
         if (variant !== 'wait') {
           e.preventDefault();
           this.cancel();
         }
         break;
-      case SprkModal.isTabPressed(e) && e.shiftKey:
+      case isTabPressed(e) && e.shiftKey:
         if (variant === 'wait') {
           e.preventDefault();
           this.containerRef.current.focus();
-        } else if (SprkModal.isActiveElement(firstFocusableEl)) {
+        } else if (isActiveElement(firstFocusableEl)) {
           e.preventDefault();
           lastFocusableEl.focus();
         }
         break;
-      case SprkModal.isTabPressed(e):
+      case isTabPressed(e):
         if (variant === 'wait') {
           e.preventDefault();
           this.containerRef.current.focus();
-        } else if (SprkModal.isActiveElement(lastFocusableEl)) {
+        } else if (isActiveElement(lastFocusableEl)) {
           e.preventDefault();
           firstFocusableEl.focus();
         }
@@ -193,7 +185,6 @@ class SprkModal extends Component {
       confirmClick,
       cancelClick,
       shouldReturnFocusOnClose,
-      onCloseFocusTarget,
       ...rest
     } = this.props;
 
@@ -215,8 +206,8 @@ class SprkModal extends Component {
             )}
           role="dialog"
           aria-modal="true"
-          aria-labelledby="modalHeading"
-          aria-describedby="modalContent"
+          aria-labelledby={'modalHeading_' + this.aria_id}
+          aria-describedby={'modalContent_' + this.aria_id}
           data-analytics={analyticsString}
           data-id={idString}
           ref={this.containerRef}
@@ -228,7 +219,7 @@ class SprkModal extends Component {
             <header className="sprk-o-Stack__item sprk-c-Modal__header">
               <h2
                 className="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
-                id="modalHeading"
+                id={'modalHeading_' + this.aria_id}
               >
                 {title}
               </h2>
@@ -237,7 +228,7 @@ class SprkModal extends Component {
             </header>
 
             <div>
-              <div className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium" id="modalContent">
+              <div className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium" id={'modalContent_' + this.aria_id}>
                 {isWait
                 && <SprkSpinner size="large" lightness="dark" additionalClasses="sprk-o-Stack__item" />
                 }
@@ -283,8 +274,6 @@ SprkModal.propTypes = {
   cancelClick: PropTypes.func,
   // whether or not to automatically set focus on the last element that had focus
   shouldReturnFocusOnClose: PropTypes.bool,
-  // target for focus on close
-  onCloseFocusTarget: PropTypes.node,
   // classes to add to the class of the rendered element
   additionalClasses: PropTypes.string,
   // mapped to data-analytics
@@ -307,7 +296,6 @@ SprkModal.defaultProps = {
   confirmClick: noop,
   cancelClick: noop,
   shouldReturnFocusOnClose: true,
-  onCloseFocusTarget: null,
 };
 
 export default SprkModal;

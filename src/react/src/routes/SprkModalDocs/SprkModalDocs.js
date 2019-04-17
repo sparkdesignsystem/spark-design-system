@@ -1,6 +1,6 @@
 /* global document */
 import React from 'react';
-import { SprkButton, SprkModal } from '@sparkdesignsystem/spark-core-react';
+import { SprkButton, SprkModal, SprkAlert } from '@sparkdesignsystem/spark-core-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
@@ -13,6 +13,9 @@ class SprkModalDocs extends React.Component {
       info: false,
       focusTarget: false,
       noFocus: false,
+      alert: false,
+      nestedParent: false,
+      nestedChild: false,
     };
   }
 
@@ -25,7 +28,7 @@ class SprkModalDocs extends React.Component {
 
   render() {
     const {
-      basic, wait, info, focusTarget, noFocus,
+      basic, wait, info, focusTarget, noFocus, alert, nestedParent, nestedChild,
     } = this.state;
 
     return (
@@ -80,41 +83,115 @@ class SprkModalDocs extends React.Component {
         </ExampleContainer>
 
         <ExampleContainer heading="Focus Target Test">
-          <SprkModal
-            title="Focus Target Test"
-            isVisible={focusTarget}
-            variant="info"
-            onCloseFocusTarget={
-              document.getElementById('focusTarget')
-            }
-            confirmClick={() => {
-              this.toggle('focusTarget');
-            }}
-            cancelClick={() => { this.toggle('focusTarget'); }}
-          >
-            Closing this modal should focus the focus target.
-          </SprkModal>
+          <div className="sprk-o-Stack sprk-o-Stack--medium">
+            <p className="sprk-o-Stack__item">
+              Closing the modal should put focus on the target.
+            </p>
+            <SprkModal
+              title="Focus Target Test"
+              isVisible={focusTarget}
+              shouldReturnFocusOnClose={false}
+              confirmClick={() => {
+                this.toggle('focusTarget');
+                document.getElementById('focusTarget').focus();
+              }}
+              cancelClick={() => {
+                this.toggle('focusTarget');
+                document.getElementById('focusTarget').focus();
+              }}
+            >
+              Closing this modal should focus the focus target.
+            </SprkModal>
 
-          <SprkButton onClick={() => { this.toggle('focusTarget'); }}>Trigger Focus Target Modal</SprkButton>
-          <SprkButton id="focusTarget" variant="secondary">I am the focus target</SprkButton>
-
+            <div className="sprk-o-Stack__item">
+              <SprkButton
+                onClick={() => { this.toggle('focusTarget'); }}
+              >
+                Trigger Focus Target Modal
+              </SprkButton>
+            </div>
+            <div className="sprk-o-Stack__item">
+              <SprkButton
+                id="focusTarget"
+                variant="secondary"
+                additionalClasses="sprk-o-Stack__item"
+              >
+                I am the focus target
+              </SprkButton>
+            </div>
+          </div>
         </ExampleContainer>
 
         <ExampleContainer heading="No Focus Test">
+          <div className="sprk-o-Stack sprk-o-Stack--medium">
+            <p className="sprk-o-Stack__item">
+              Closing the modal should not return focus to any element.
+            </p>
+            <SprkModal
+              title="No Focus Modal"
+              isVisible={noFocus}
+              variant="info"
+              shouldReturnFocusOnClose={false}
+              confirmClick={() => {
+                this.toggle('noFocus');
+              }}
+              cancelClick={() => { this.toggle('noFocus'); }}
+            >
+              Closing this modal should NOT return focus to the calling element.
+              Focus behavior will depend on browser and page state.
+            </SprkModal>
+
+            <div className="sprk-o-Stack__item">
+              <SprkButton
+                onClick={() => { this.toggle('noFocus'); }}
+              >
+                Trigger No Focus Modal
+              </SprkButton>
+            </div>
+          </div>
+        </ExampleContainer>
+
+        <ExampleContainer heading="Modal in a Modal">
           <SprkModal
-            title="No Focus Modal"
-            isVisible={noFocus}
-            variant="info"
-            shouldReturnFocusOnClose={false}
-            confirmClick={() => {
-              this.toggle('noFocus');
-            }}
-            cancelClick={() => { this.toggle('noFocus'); }}
+            title="Nested Modal Parent Header"
+            isVisible={nestedParent}
+            confirmText="M O D A L C E P T I O N"
+            cancelText="Cancel"
+            confirmClick={() => { this.toggle('nestedChild'); }}
+            cancelClick={() => { this.toggle('nestedParent'); }}
           >
-            Closing this modal should NOT return focus to the calling element.
-            Focus behavior will depend on browser and page state.
+            Nested modal parent content.
+            <SprkModal
+              title="Nested Modal Child Header"
+              isVisible={nestedChild}
+              confirmText="Yes"
+              cancelText="No"
+              confirmClick={() => { this.toggle('nestedChild'); }}
+              cancelClick={() => { this.toggle('nestedChild'); }}
+            >
+              Nested modal child content. Clicking the Mask will close this modal.
+              Pressing Escape will close *all* modals.
+            </SprkModal>
           </SprkModal>
-          <SprkButton onClick={() => { this.toggle('noFocus'); }}>Trigger No Focus Modal</SprkButton>
+          <SprkButton onClick={() => { this.toggle('nestedParent'); }}>Trigger Nested Modal</SprkButton>
+        </ExampleContainer>
+
+        <ExampleContainer heading="Alert in a Modal">
+          <SprkModal
+            title="Alert in a Modal"
+            isVisible={alert}
+            variant="info"
+            confirmClick={() => { this.toggle('alert'); }}
+            cancelClick={() => { this.toggle('alert'); }}
+          >
+            SprkAlert does not currently pull focus, but this test case is provided in case
+            that functionality is added in the future.
+            <SprkAlert
+              message="Information alert message placeholder."
+              variant="info"
+            />
+          </SprkModal>
+          <SprkButton onClick={() => { this.toggle('alert'); }}>Trigger Modal Containing Alert</SprkButton>
         </ExampleContainer>
       </CentralColumnLayout>
 
