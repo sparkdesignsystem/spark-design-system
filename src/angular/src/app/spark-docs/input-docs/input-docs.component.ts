@@ -167,7 +167,7 @@ import { Component } from '@angular/core';
             sprkInput
           />
         </sprk-input-container>
-        <sprk-icon-input-container iconContainerClasses="">
+        <sprk-icon-input-container>
           <label
             class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
             sprkLabel
@@ -190,11 +190,11 @@ import { Component } from '@angular/core';
           />
         </sprk-icon-input-container>
         <sprk-icon-input-container
-          iconContainerClasses="sprk-b-TextInputIconContainer--monetary"
+          iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
         >
           <label class="sprk-b-Label--monetary" sprkLabel> Payment </label>
           <input
-            class="sprk-b-TextInput--monetary"
+            class="sprk-b-TextInput--has-text-icon"
             name="monetary_input"
             type="text"
             pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
@@ -258,7 +258,7 @@ import { Component } from '@angular/core';
             </div>
           </span>
         </sprk-input-container>
-        <sprk-icon-input-container iconContainerClasses="">
+        <sprk-icon-input-container>
           <label class="sprk-b-Label--with-icon" sprkLabel>
             Date Input (picker)
           </label>

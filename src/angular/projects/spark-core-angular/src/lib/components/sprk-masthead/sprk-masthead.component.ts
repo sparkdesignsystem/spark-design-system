@@ -1,4 +1,5 @@
 import { Component, HostListener, Input, Renderer2 } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 
 @Component({
@@ -51,12 +52,12 @@ import * as _ from 'lodash';
         <div
           class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
         >
-          <a [routerLink]="logoHref" href="#nogo">
+          <sprk-link [href]="logoHref" linkType="unstyled">
             <ng-content select="[logo-slot]"></ng-content>
             <span class="sprk-u-ScreenReaderText">{{
               logoLinkScreenReaderText
             }}</span>
-          </a>
+          </sprk-link>
         </div>
 
         <nav
@@ -105,113 +106,121 @@ import * as _ from 'lodash';
                 ></sprk-dropdown>
               </div>
               <div *ngIf="!link.subNav">
-                <a
-                  class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  [routerLink]="link.href"
-                  href="#nogo"
+                <sprk-link
+                  linkType="plain"
+                  additionalClasses="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  [href]="link.href"
                 >
                   {{ link.text }}
-                </a>
+                </sprk-link>
               </div>
             </li>
           </ul>
         </nav>
       </div>
 
-      <div *ngIf="isNarrowNavOpen">
-        <nav
-          class="sprk-c-Masthead__narrow-nav"
-          data-sprk-mobile-nav="mobileNav"
-          role="navigation"
+      <nav
+        *ngIf="isNarrowNavOpen"
+        class="sprk-c-Masthead__narrow-nav"
+        data-sprk-mobile-nav="mobileNav"
+        role="navigation"
+      >
+        <sprk-dropdown
+          *ngIf="narrowSelector"
+          dropdownType="mastheadSelector"
+          additionalClasses="sprk-c-Masthead__selector-dropdown"
+          additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
+          additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+          additionalIconClasses="sprk-Stack__item sprk-u-mrs"
+          [triggerText]="narrowSelector['trigger'].text"
+          selector="Select One"
+          triggerIconType="chevron-down"
+          [choices]="narrowSelector['choices']"
         >
-          <sprk-dropdown
-            *ngIf="narrowSelector"
-            dropdownType="mastheadSelector"
-            additionalClasses="sprk-c-Masthead__selector-dropdown"
-            additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
-            additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
-            additionalIconClasses="sprk-Stack__item sprk-u-mrs"
-            [triggerText]="narrowSelector['trigger'].text"
-            selector="Select One"
-            triggerIconType="chevron-down"
-            [choices]="narrowSelector['choices']"
+          <div
+            class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+            sprkDropdownFooter
           >
-            <div
-              class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
-              sprkDropdownFooter
+            <sprk-link
+              linkType="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
             >
-              <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
-                Go Elsewhere
-              </a>
-            </div>
-          </sprk-dropdown>
+              Go Elsewhere
+            </sprk-link>
+          </div>
+        </sprk-dropdown>
 
-          <sprk-masthead-accordion [additionalClasses]="getNarrowNavClasses()">
-            <div *ngFor="let narrowLink of narrowNavLinks">
-              <div *ngIf="narrowLink.subNav">
-                <sprk-masthead-accordion-item
-                  iconTypeOpen="chevron-down"
-                  iconTypeClosed="chevron-down"
-                  [leadingIcon]="narrowLink.leadingIcon"
-                  [isActive]="narrowLink.active"
-                  [title]="narrowLink.text"
+        <sprk-masthead-accordion [additionalClasses]="getNarrowNavClasses()">
+          <div *ngFor="let narrowLink of narrowNavLinks">
+            <div *ngIf="narrowLink.subNav">
+              <sprk-masthead-accordion-item
+                iconTypeOpen="chevron-down"
+                iconTypeClosed="chevron-down"
+                [leadingIcon]="narrowLink.leadingIcon"
+                [isActive]="narrowLink.active"
+                [title]="narrowLink.text"
+              >
+                <ul
+                  class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
                 >
-                  <ul
-                    class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+                  <li
+                    class="sprk-c-MastheadAccordion__item"
+                    *ngFor="let subNavLink of narrowLink.subNav"
                   >
-                    <li
-                      class="sprk-c-MastheadAccordion__item"
-                      *ngFor="let subNavLink of narrowLink.subNav"
+                    <sprk-link
+                      linkType="unstyled"
+                      additionalClasses="sprk-c-MastheadAccordion__summary"
+                      [href]="subNavLink.href"
                     >
-                      <a
-                        class="sprk-c-MastheadAccordion__summary"
-                        [routerLink]="subNavLink.href"
-                        href="#nogo"
-                      >
-                        <sprk-icon
-                          [iconType]="subNavLink.leadingIcon"
-                          additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
-                          *ngIf="subNavLink.leadingIcon"
-                        ></sprk-icon>
-                        {{ subNavLink.text }}
-                      </a>
-                    </li>
-                  </ul>
-                </sprk-masthead-accordion-item>
-              </div>
-              <div *ngIf="!narrowLink.subNav">
-                <li
-                  [ngClass]="{
-                    'sprk-c-MastheadAccordion__item': true,
-                    'sprk-c-MastheadAccordion__item--active': narrowLink.active
-                  }"
-                >
-                  <a
-                    class="sprk-c-MastheadAccordion__summary"
-                    [routerLink]="narrowLink.href"
-                    href="#nogo"
-                  >
-                    <span class="sprk-c-MastheadAccordion__heading">
                       <sprk-icon
-                        [iconType]="narrowLink.leadingIcon"
+                        [iconType]="subNavLink.leadingIcon"
                         additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
-                        *ngIf="narrowLink.leadingIcon"
+                        *ngIf="subNavLink.leadingIcon"
                       ></sprk-icon>
-                      {{ narrowLink.text }}
-                    </span>
-                  </a>
-                </li>
-              </div>
+                      {{ subNavLink.text }}
+                    </sprk-link>
+                  </li>
+                </ul>
+              </sprk-masthead-accordion-item>
             </div>
-          </sprk-masthead-accordion>
-          <ng-content select="[narrowNavFooter]"></ng-content>
-        </nav>
-      </div>
+            <div *ngIf="!narrowLink.subNav">
+              <li
+                [ngClass]="{
+                  'sprk-c-MastheadAccordion__item': true,
+                  'sprk-c-MastheadAccordion__item--active': narrowLink.active
+                }"
+              >
+                <sprk-link
+                  linkType="unstyled"
+                  additionalClasses="sprk-c-MastheadAccordion__summary"
+                  [href]="narrowLink.href"
+                >
+                  <span class="sprk-c-MastheadAccordion__heading">
+                    <sprk-icon
+                      [iconType]="narrowLink.leadingIcon"
+                      additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
+                      *ngIf="narrowLink.leadingIcon"
+                    ></sprk-icon>
+                    {{ narrowLink.text }}
+                  </span>
+                </sprk-link>
+              </li>
+            </div>
+          </div>
+        </sprk-masthead-accordion>
+        <ng-content select="[narrowNavFooter]"></ng-content>
+      </nav>
     </header>
   `
 })
 export class SparkMastheadComponent {
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, router: Router) {
+    router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.closeNarrowNav();
+      }
+    });
+  }
 
   @Input()
   logoHref = '/';

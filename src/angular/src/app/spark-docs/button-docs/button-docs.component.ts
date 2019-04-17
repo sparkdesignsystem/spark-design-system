@@ -16,7 +16,7 @@ import { setSpinning } from '@sparkdesignsystem/spark-core';
         Hello, World.
       </button>
     </div>
-    <div class="drizzle-o-ContentGrouping">
+    <div class="drizzle-o-ContentGrouping" id="foo">
       <h2 class="drizzle-b-h2">Tertiary Buttons</h2>
       <button class="sprk-c-Button--tertiary" sprkButton>Hello, World.</button>
       <button disabled class="sprk-c-Button--tertiary" sprkButton>

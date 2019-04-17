@@ -7,9 +7,9 @@ function SiteHeader(props) {
   return (
     <header>
       <div className="drizzle-o-Layout__header sprk-u-mbn sprk-u-pvl drizzle-c-AngularHeader">
-        <Link to="/">
+        <Link to="/" className="sprk-b-Link">
           <h1 className="drizzle-b-h1">
-            Spark Core React
+            Spark React
             <img width="50" alt="React Logo" src={logo} />
           </h1>
         </Link>

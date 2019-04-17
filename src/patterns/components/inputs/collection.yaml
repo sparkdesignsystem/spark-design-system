@@ -44,6 +44,7 @@ restrictions:
     has a unique data-id property ("input-text-1", "input-text-2", "input-date-1", etc).
 sparkPackageCore: true
 hasAngularInfo: true
+hasReactInfo: true
 variableTable:
   $sprk-monetary-symbol:
     default: '$'
@@ -421,5 +422,5 @@ classTable:
     description: Selects that are currently in focus.
   .sprk-b-Select--focusout:
     description: Selects that are currently not in focus.
-  .sprk-b-TextInputIconContainer--monetary:
-    description: Monetary text inputs with icons.
+  .sprk-b-TextInputIconContainer--has-text-icon:
+    description: Text inputs with icons.

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SparkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SparkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SparkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 import { SparkMastheadComponent } from './sprk-masthead.component';
@@ -20,6 +21,7 @@ describe('SparkMastheadComponent', () => {
       declarations: [
         SparkMastheadComponent,
         SparkIconComponent,
+        SparkLinkComponent,
         SparkDropdownComponent,
         SparkMastheadAccordionComponent,
         SparkMastheadAccordionItemComponent
@@ -51,7 +53,7 @@ describe('SparkMastheadComponent', () => {
     component.logoLinkScreenReaderText = 'Go to the alerts page.';
     fixture.detectChanges();
     const logoElement: HTMLElement = mastheadElement.querySelector(
-      '.sprk-c-Masthead__branding > a'
+      '.sprk-c-Masthead__branding a'
     );
     expect(logoElement.getAttribute('href')).toEqual('/alert');
     expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');

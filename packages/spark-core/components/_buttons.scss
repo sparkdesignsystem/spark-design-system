@@ -32,7 +32,8 @@
   }
 }
 
-.sprk-c-Button--full\@sm {
+.sprk-c-Button--full\@sm,
+.sprk-c-Button--full\@s {
   width: 100%;
 
   @media screen and (min-width: $sprk-btn-breakpoint-s) {
@@ -42,7 +43,8 @@
 
 .sprk-c-Button--secondary {
   background-color: $sprk-btn-secondary-background-color;
-  border: $sprk-btn-border-width $sprk-btn-border-style $sprk-btn-secondary-border-color;
+  border: $sprk-btn-border-width $sprk-btn-border-style
+    $sprk-btn-secondary-border-color;
   color: $sprk-btn-secondary-text-color;
   letter-spacing: $sprk-btn-secondary-letter-spacing;
 

@@ -1,1 +1,8 @@
-{{#embed "patterns.components.alerts.react.code.base" variant="info" message="This is important information." idString="alert-info-1" analyticsString="alert"}}{{/embed}}
+<SprkAlert
+  message="This is important information."
+  onDismiss={() => { this.setState({ isVisibleInfoAlert: false }); }}
+  isVisible={this.state.isVisibleInfoAlert}
+  variant="info"
+  idString="alert-info-1"
+  analyticsString="alert"
+/>

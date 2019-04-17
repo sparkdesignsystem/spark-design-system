@@ -29,7 +29,8 @@ module.exports = {
           'drizzle/scripts/drizzle': './src/assets/drizzle/scripts/drizzle.js',
           // Common toolkit scripts
           'toolkit/scripts/toolkit': './src/assets/toolkit/scripts/toolkit.js',
-          'toolkit/scripts/toolkit-prerender': './src/assets/toolkit/scripts/toolkit-prerender.js',
+          'toolkit/scripts/toolkit-prerender':
+            './src/assets/toolkit/scripts/toolkit-prerender.js',
         },
         output: {
           path: './dist/assets',
@@ -104,15 +105,11 @@ module.exports = {
         tasks: ['build-spark-core'],
       },
       {
-        match: [
-          './packages/spark-extras-highlight-board/*.js',
-        ],
+        match: ['./packages/spark-extras-highlight-board/*.js'],
         tasks: ['build-spark-extras-highlight-board'],
       },
       {
-        match: [
-          './src/angular/projects/spark-core-angular/src/lib/**/*.ts',
-        ],
+        match: ['./src/angular/projects/spark-core-angular/src/lib/**/*.ts'],
         tasks: ['build-spark-core-angular'],
       },
       {
@@ -140,10 +137,8 @@ module.exports = {
         tasks: ['build-spark-extras-angular-highlight-board'],
       },
       {
-        match: [
-          './src/react/projects/spark-core-react/src/**/*',
-        ],
-        tasks: ['build-spark-core-react'],
+        match: ['./src/react/projects/spark-react/src/**/*'],
+        tasks: ['build-spark-react'],
       },
     ],
   },
@@ -155,6 +150,8 @@ module.exports = {
       indent_size: 2,
       indent_with_tabs: false,
       max_preserve_newlines: 1,
+      e4x: true,
+      wrap_attributes: 'force-expand-multiline',
       wrap_line_length: 0,
       unformatted: `a abbr acronym address b bdo big cite code col del dfn dt em font
         h1 h2 h3 h4 h5 h6 i img ins kbd mark pre q s samp small span

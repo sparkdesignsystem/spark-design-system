@@ -181,7 +181,7 @@ classTable:
     description: Reduces the padding of the normal button to $space-inset-short-m.
   .sprk-c-Button--full@xs:
     description: Makes the button full width of its parent container until it flips to normal width at the $sprk-btn-breakpoint-xs breakpoint.
-  .sprk-c-Button--full@sm:
+  .sprk-c-Button--full@s:
     description: Makes the button full width of its parent container until it flips to normal width at the $sprk-btn-breakpoint-s breakpoint.
   .sprk-c-Button--secondary:
     description: Styles the button as the secondary variant.

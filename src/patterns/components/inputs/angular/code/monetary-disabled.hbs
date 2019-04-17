@@ -1,23 +1,26 @@
-<sprk-input-container iconContainerClasses="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--monetary">
-  <label
-    class="sprk-b-Label--monetary"
-    sprkLabel>
-    Payment
-  </label>
+<sprk-icon-input-container
+    iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
+>
+  <label class="sprk-b-Label--monetary" sprkLabel> Payment </label>
   <input
-    name="monetary_input"
-    type="text"
-    [ngClass]="{ 'sprk-b-TextInput--error': monetaryInput.invalid && monetaryInput.dirty, 'sprk-u-plm': true }"
-    pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
-    [(ngModel)]="monetary_input"
-    #monetaryInput="ngModel"
-    data-id="monetary-disabled-1"
-    sprkFormatterMonetary
-    sprkInput
-    disabled>
-    <div
+      disabled
+      class="sprk-b-TextInput--has-text-icon"
+      name="monetary_input"
+      type="text"
+      pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$"
+      [(ngModel)]="monetary_input"
+      #monetaryInput="ngModel"
+      sprkFormatterMonetary
+      sprkInput
+  />
+  <div
       [hidden]="monetaryInput.valid || monetaryInput.pristine"
-      sprkFieldError>
-      Invalid amount.
-    </div>
-</sprk-input-container>
+      sprkFieldError
+  >
+    <sprk-icon
+        iconType="exclamation-filled-small"
+        additionalClasses="sprk-b-ErrorIcon"
+    ></sprk-icon>
+    <div class="sprk-b-ErrorText">Invalid amount.</div>
+  </div>
+</sprk-icon-input-container>

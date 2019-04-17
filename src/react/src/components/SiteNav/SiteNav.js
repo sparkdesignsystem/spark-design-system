@@ -16,6 +16,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/list" className="drizzle-b-Link drizzle-b-Link--light">
+            List
+          </Link>
+        </li>
+        <li>
           <Link to="/dictionary" className="drizzle-b-Link drizzle-b-Link--light">
             Dictionary
           </Link>
@@ -23,6 +28,11 @@ function SiteNav() {
         <li>
           <Link to="/dividers" className="drizzle-b-Link drizzle-b-Link--light">
             Dividers
+          </Link>
+        </li>
+        <li>
+          <Link to="/table" className="drizzle-b-Link drizzle-b-Link--light">
+            Table
           </Link>
         </li>
         <li>
@@ -41,6 +51,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/input" className="drizzle-b-Link drizzle-b-Link--light">
+            Input
+          </Link>
+        </li>
+        <li>
           <Link to="/link" className="drizzle-b-Link drizzle-b-Link--light">
             Link
           </Link>
@@ -56,6 +71,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/pagination" className="drizzle-b-Link drizzle-b-Link--light">
+            Pagination
+          </Link>
+        </li>
+        <li>
           <Link to="/promos" className="drizzle-b-Link drizzle-b-Link--light">
             Promos
           </Link>
@@ -68,6 +88,36 @@ function SiteNav() {
         <li>
           <Link to="/modal" className="drizzle-b-Link drizzle-b-Link--light">
             Modal
+          </Link>
+        </li>
+        <li>
+          <Link to="/footer" className="drizzle-b-Link drizzle-b-Link--light">
+            Footer
+          </Link>
+        </li>
+        <li>
+          <Link to="/toggle" className="drizzle-b-Link drizzle-b-Link--light">
+            Toggle
+          </Link>
+        </li>
+        <li>
+          <Link to="/accordion" className="drizzle-b-Link drizzle-b-Link--light">
+            Accordion
+          </Link>
+        </li>
+        <li>
+          <Link to="/stack" className="drizzle-b-Link drizzle-b-Link--light">
+            Stack
+          </Link>
+        </li>
+        <li>
+          <Link to="/award" className="drizzle-b-Link drizzle-b-Link--light">
+            Award
+          </Link>
+        </li>
+        <li>
+          <Link to="/card" className="drizzle-b-Link drizzle-b-Link--light">
+            Card
           </Link>
         </li>
       </ul>
