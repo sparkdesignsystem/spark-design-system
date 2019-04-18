@@ -1,6 +1,7 @@
 import { lory } from 'lory.js';
 
-const initDots = (dotContainer, count) => {
+const beforeLoryInit = (dotContainer, count) => {
+  if (!dotContainer) return;
   const dotListItem = document.createElement('li');
   dotListItem.classList.add('sprk-c-Carousel__dot');
   for (let i = 0; i < count; i += 1) {
@@ -9,47 +10,50 @@ const initDots = (dotContainer, count) => {
   dotContainer.childNodes[0].classList.add('sprk-c-Carousel__dot--active');
 };
 
+const afterLoryInit = (dotContainer, carouselInstance) => {
+  if (dotContainer) {
+    const dots = dotContainer.querySelectorAll('li');
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        carouselInstance.slideTo(index);
+      });
+    });
+  }
+};
+
+const afterLorySlide = (dotContainer, item, event) => {
+  if (!dotContainer) return;
+  const dots = dotContainer.querySelectorAll('li');
+  dots.forEach(dot => {
+    dot.classList.remove('sprk-c-Carousel__dot--active');
+  });
+  dots[event.detail.currentSlide - 1].classList.add(
+    'sprk-c-Carousel__dot--active',
+  );
+  const sprkSlideEvent = document.createEvent('CustomEvent');
+  sprkSlideEvent.initCustomEvent('sprk.carousel.slide', true, true, {
+    index: [event.detail.currentSlide - 1],
+  });
+
+  item.dispatchEvent(sprkSlideEvent);
+};
+
 // init carousel
 const carousel = item => {
   let carouselInstance;
   const slideCount = item.querySelectorAll('li').length;
   const dotContainer = item.querySelector('[data-sprk-carousel-dots]');
-  // before init event
+
   item.addEventListener('before.lory.init', () => {
-    if (dotContainer) {
-      initDots(dotContainer, slideCount);
-    }
+    beforeLoryInit(dotContainer, slideCount);
   });
-  // after init event
+
   item.addEventListener('after.lory.init', () => {
-    if (dotContainer) {
-      const dots = dotContainer.querySelectorAll('li');
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', event => {
-          event.preventDefault();
-          carouselInstance.slideTo(index);
-        });
-      });
-    }
+    afterLoryInit(dotContainer, carouselInstance);
   });
-  // after slide event
-  item.addEventListener('after.lory.slide', event => {
-    if (dotContainer) {
-      const dots = dotContainer.querySelectorAll('li');
-      dots.forEach(dot => {
-        dot.classList.remove('sprk-c-Carousel__dot--active');
-      });
-      dots[event.detail.currentSlide - 1].classList.add(
-        'sprk-c-Carousel__dot--active',
-      );
-      item.dispatchEvent(
-        new CustomEvent('sprk.carousel.slide', {
-          detail: {
-            index: [event.detail.currentSlide - 1],
-          },
-        }),
-      );
-    }
+
+  item.addEventListener('after.lory.slide', e => {
+    afterLorySlide(dotContainer, item, e);
   });
 
   carouselInstance = lory(item, {
@@ -63,4 +67,4 @@ const carousel = item => {
   return carouselInstance;
 };
 
-export { carousel, initDots };
+export { carousel, beforeLoryInit, afterLoryInit, afterLorySlide };
