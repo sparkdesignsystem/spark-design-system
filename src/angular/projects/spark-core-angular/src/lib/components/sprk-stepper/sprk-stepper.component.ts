@@ -4,7 +4,6 @@ import {
   resetTabs,
   setActiveTab
 } from '@sparkdesignsystem/spark-core';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'sprk-stepper',

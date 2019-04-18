@@ -28,5 +28,8 @@
     "core-js": "^2.5.7",
     "tiny-date-picker": "^3.2.6",
     "zone.js": "^0.8.26"
+  },
+  "dependencies": {
+    "lory.js": "^2.5.3"
   }
 }
