@@ -63,7 +63,8 @@ it('should render an anchor tag if an href is provided and no element is', () =>
   expect(wrapper.find('a[href="#"]').length).toBe(1);
 });
 
-it('should render an href if one is provided and element is not set to "button"', () => {
+it('should not render an href if one is provided and element is set to "button"', () => {
   const wrapper = shallow(<SprkButton href="#" element="button" />);
-  expect(wrapper.find('button[href="#"]').length).toBe(1);
+  expect(wrapper.find('button[href="#"]').length).toBe(0);
+  expect(wrapper.find('button').length).toBe(1);
 });
