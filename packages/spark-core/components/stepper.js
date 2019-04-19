@@ -1,4 +1,3 @@
-/* global document */
 import getElements from '../utilities/getElements';
 import { carousel } from './carousel';
 import {
@@ -17,7 +16,7 @@ import {
  */
 const bindUIEvents = (stepper, carouselContainer) => {
   let carouselInstance;
-  let windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
   const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
   if (!steps) {
     return;
@@ -32,6 +31,14 @@ const bindUIEvents = (stepper, carouselContainer) => {
   );
   let sliderEl;
 
+  // If the stepper has stepper descriptions then build slider
+  if (hasSlideEffect) {
+    sliderEl = document.createElement('li');
+    sliderEl.classList.add('sprk-c-Stepper__slider');
+    sliderEl.setAttribute('data-sprk-stepper', 'slider');
+    stepper.prepend(sliderEl);
+  }
+
   steps[0].classList.add('sprk-c-Stepper__step--first');
   steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
 
@@ -43,30 +50,28 @@ const bindUIEvents = (stepper, carouselContainer) => {
       setActiveTab(steps[index], stepPanels[index], activeClass, sliderEl);
     });
 
-    window.addEventListener('resize', evt => {
-      // Reset the slider top position
-      // when we switch from mobile to large
+    window.addEventListener('resize', () => {
       const activeStep = getActiveTabIndex(steps, activeClass);
-      const newViewportWidth = window.innerWidth || document.documentElement.clientWidth;
       const sliderBreakpoint = 1279;
-      if (windowWidth < sliderBreakpoint && newViewportWidth > sliderBreakpoint) {
-        resetTabs(steps, stepPanels, activeClass, sliderEl);
-        setActiveTab(steps[activeStep], stepPanels[activeStep], activeClass, sliderEl);
+      const newViewportWidth =
+        window.innerWidth || document.documentElement.clientWidth;
+      if (
+        windowWidth < sliderBreakpoint &&
+        newViewportWidth > sliderBreakpoint
+      ) {
+        sliderEl.style.top = `${steps[activeStep].offsetTop}px`;
       }
-      windowWidth = newViewportWidth;
     });
   }
 
-  // If the stepper has stepper descriptions then build slider
-  if (hasSlideEffect) {
-    sliderEl = document.createElement('li');
-    sliderEl.classList.add('sprk-c-Stepper__slider');
-    sliderEl.setAttribute('data-sprk-stepper', 'slider');
-    stepper.prepend(sliderEl);
-  }
-
   const activeTab = getActiveTabIndex(steps, activeClass);
-  setActiveTab(steps[activeTab], stepPanels[activeTab], activeClass, sliderEl, true);
+  setActiveTab(
+    steps[activeTab],
+    stepPanels[activeTab],
+    activeClass,
+    sliderEl,
+    true,
+  );
 
   steps.forEach((step, index) => {
     const stepTrigger = step.querySelector('[role="tab"]');

@@ -40,7 +40,6 @@ const afterLorySlide = (dotContainer, item, event) => {
 
 // init carousel
 const carousel = item => {
-  let carouselInstance;
   const slideCount = item.querySelectorAll('li').length;
   const dotContainer = item.querySelector('[data-sprk-carousel-dots]');
 
@@ -48,15 +47,11 @@ const carousel = item => {
     beforeLoryInit(dotContainer, slideCount);
   });
 
-  item.addEventListener('after.lory.init', () => {
-    afterLoryInit(dotContainer, carouselInstance);
-  });
-
   item.addEventListener('after.lory.slide', e => {
     afterLorySlide(dotContainer, item, e);
   });
 
-  carouselInstance = lory(item, {
+  const carouselInstance = lory(item, {
     classNameFrame: 'sprk-c-Carousel__frame',
     classNameSlideContainer: 'sprk-c-Carousel__slides',
     classNamePrevCtrl: 'sprk-c-Carousel__prev',
@@ -64,6 +59,9 @@ const carousel = item => {
     infinite: 1,
     enableMouseEvents: true,
   });
+
+  afterLoryInit(dotContainer, carouselInstance);
+
   return carouselInstance;
 };
 
