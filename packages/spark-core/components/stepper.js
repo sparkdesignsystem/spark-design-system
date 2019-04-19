@@ -1,114 +1,100 @@
 import getElements from '../utilities/getElements';
-import { carousel } from './carousel';
-import {
-  getActiveTabIndex,
-  handleTabKeydown,
-  resetTabs,
-  setActiveTab,
-} from './tabs';
+import { resetTabs, setActiveTab } from './tabs';
 
-/**
- * Takes in the stepper container.
- * Gets all the steps in container.
- * Binds click listener to each step.
- * Binds keydown listener to each step.
- * @param {NodeList} stepper - Collection of stepper container.
- */
-const bindUIEvents = (stepper, carouselContainer) => {
-  let carouselInstance;
-  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-  const steps = stepper.querySelectorAll('[data-sprk-stepper="step"]');
-  if (!steps) {
-    return;
-  }
-  if (carouselContainer) {
-    carouselInstance = carousel(carouselContainer);
-  }
-  const stepPanels = stepper.querySelectorAll('[role="tabpanel"]');
-  const activeClass = 'sprk-c-Stepper__step--selected';
-  const hasSlideEffect = stepper.querySelector(
+const resetSlider = (steps, activeClass, slider) => {
+  if (!slider) return;
+  steps.forEach(step => {
+    const stepDescription = step.querySelector(
+      '[data-sprk-stepper="description"]',
+    );
+    const stepHeading = step.querySelector('.sprk-c-Stepper__step-heading');
+    const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
+
+    step.classList.remove(activeClass);
+    slider.classList.remove(activeClass);
+
+    stepHeading.classList.remove('sprk-u-Visibility--hidden');
+
+    if (stepDescription) {
+      stepDescription.classList.remove('sprk-u-Visibility--hidden');
+    }
+
+    stepContent.classList.remove('sprk-c-Stepper__step-content--hidden');
+  });
+};
+
+const positionSlider = (step, content, slider, activeClass) => {
+  if (!slider) return;
+  const stepDescription = step.querySelector(
     '[data-sprk-stepper="description"]',
   );
+  const stepHeading = step.querySelector('[data-sprk-stepper="heading"]');
+  const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
+  const sliderTopValue = step.offsetTop;
+  const sliderEl = slider;
+  // Add active class to new step
+  step.classList.add(activeClass);
+
+  if (content) {
+    content.classList.remove('sprk-u-HideWhenJs');
+  }
+  // Show new step panel
+  // Create binding for old step HTML
+  const stepInnerHTML = step.innerHTML;
+  // Update slider with step's HTML
+  sliderEl.innerHTML = stepInnerHTML;
+  // Hide the icon in the slider to use icon in original step
+  const sliderElIcon = sliderEl.querySelector('.sprk-c-Stepper__step-icon');
+  sliderElIcon.classList.add('sprk-u-Visibility--hidden');
+  // Hide old step content
+  if (stepDescription) {
+    stepDescription.classList.add('sprk-u-Visibility--hidden');
+  }
+  stepHeading.classList.add('sprk-u-Visibility--hidden');
+  stepContent.classList.add('sprk-c-Stepper__step-content--hidden');
+  // Move slider
+  sliderEl.style.top = `${sliderTopValue}px`;
+  // Add active class to slider
+  window.requestAnimationFrame(() => {
+    slider.classList.add(activeClass);
+  });
+  // Set aria selected in slider
+  const stepTrigger = slider.querySelector('[role="tab"]');
+  stepTrigger.setAttribute('aria-selected', 'true');
+  stepTrigger.addEventListener('click', e => {
+    e.preventDefault();
+  });
+};
+
+const bindUIEvents = stepContainer => {
+  const steps = stepContainer.querySelectorAll('[data-sprk-stepper="step"]');
+  const descriptions = stepContainer.querySelectorAll(
+    '[data-sprk-stepper="description"]',
+  );
+  const activeClass = 'sprk-c-Stepper__step--selected';
+  const stepLinks = stepContainer.querySelectorAll('[role="tab"]');
   let sliderEl;
 
-  // If the stepper has stepper descriptions then build slider
-  if (hasSlideEffect) {
+  if (descriptions.length > 0) {
     sliderEl = document.createElement('li');
     sliderEl.classList.add('sprk-c-Stepper__slider');
     sliderEl.setAttribute('data-sprk-stepper', 'slider');
-    stepper.prepend(sliderEl);
+    stepContainer.prepend(sliderEl);
   }
 
-  steps[0].classList.add('sprk-c-Stepper__step--first');
-  steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
-
-  if (carouselContainer) {
-    carouselContainer.addEventListener('sprk.carousel.slide', e => {
+  stepLinks.forEach((stepLink, index) => {
+    stepLink.addEventListener('click', e => {
       e.preventDefault();
-      const { index } = e.detail;
-      resetTabs(steps, stepPanels, activeClass, sliderEl);
-      setActiveTab(steps[index], stepPanels[index], activeClass, sliderEl);
+      resetTabs(steps, descriptions, activeClass);
+      setActiveTab(steps[index], descriptions[index], activeClass);
+      resetSlider(steps, activeClass, sliderEl);
+      positionSlider(steps[index], descriptions[index], sliderEl, activeClass);
     });
-
-    window.addEventListener('resize', () => {
-      const activeStep = getActiveTabIndex(steps, activeClass);
-      const sliderBreakpoint = 1279;
-      const newViewportWidth =
-        window.innerWidth || document.documentElement.clientWidth;
-      if (
-        windowWidth < sliderBreakpoint &&
-        newViewportWidth > sliderBreakpoint
-      ) {
-        sliderEl.style.top = `${steps[activeStep].offsetTop}px`;
-      }
-    });
-  }
-
-  const activeTab = getActiveTabIndex(steps, activeClass);
-  setActiveTab(
-    steps[activeTab],
-    stepPanels[activeTab],
-    activeClass,
-    sliderEl,
-    true,
-  );
-
-  steps.forEach((step, index) => {
-    const stepTrigger = step.querySelector('[role="tab"]');
-    if (!stepTrigger) {
-      return;
-    }
-    if (hasSlideEffect) step.classList.add('sprk-c-Stepper__step--has-slider');
-
-    stepTrigger.addEventListener('click', e => {
-      e.preventDefault();
-      resetTabs(steps, stepPanels, activeClass, sliderEl);
-      setActiveTab(step, stepPanels[index], activeClass, sliderEl);
-      if (carouselInstance) {
-        carouselInstance.slideTo(index);
-      }
-    });
-  });
-
-  stepper.addEventListener('keydown', event => {
-    handleTabKeydown(event, steps, stepPanels, activeClass, sliderEl);
-    if (carouselInstance) {
-      carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
-    }
   });
 };
 
 const stepper = () => {
-  getElements('[data-sprk-stepper="container"]', item => {
-    let carouselContainer;
-    const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
-    if (partnerCarouselID) {
-      carouselContainer = document.querySelector(
-        `[data-sprk-carousel=${partnerCarouselID}]`,
-      );
-    }
-    bindUIEvents(item, carouselContainer);
-  });
+  getElements('[data-sprk-stepper="container"]', bindUIEvents);
 };
 
-export { stepper, bindUIEvents };
+export { stepper, positionSlider, resetSlider };
