@@ -18,7 +18,6 @@ class SprkAccordionItem extends Component {
 
   toggle(e) {
     const { onToggle } = this.props;
-    e.preventDefault();
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
@@ -69,7 +68,6 @@ class SprkAccordionItem extends Component {
           data-analytics={analyticsString}
           onClick={this.toggle}
           aria-expanded={isOpen ? 'true' : 'false'}
-          href="#nogo"
         >
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon

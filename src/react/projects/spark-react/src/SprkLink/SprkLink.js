@@ -70,7 +70,7 @@ SprkLink.propTypes = {
   // The element that will be rendered
   element: PropTypes.string,
   // The event that will fire when the element is clicked
-  onClick: PropTypes.function,
+  onClick: PropTypes.func,
 };
 
 SprkLink.defaultProps = {
