@@ -28,9 +28,13 @@ const SprkButtonDocs = () => {
         <SprkButton loading>Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Incoming Element">
-        <div id="jumpLinkTarget" />
-        <SprkButton element={Link} to="/links">
+        <SprkButton element={Link} to="/link">
           React Router Link
+        </SprkButton>
+      </ExampleContainer>
+      <ExampleContainer heading="href provided">
+        <SprkButton href="https://google.com" target="_blank">
+          Google.com
         </SprkButton>
       </ExampleContainer>
     </CentralColumnLayout>
