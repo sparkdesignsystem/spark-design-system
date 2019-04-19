@@ -52,7 +52,6 @@ class SprkToggle extends Component {
       <div data-id={idString} {...other} className={additionalClasses}>
         <SprkLink
           additionalClasses={titleClassNames}
-          href="#nogo"
           data-analytics={analyticsString}
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}

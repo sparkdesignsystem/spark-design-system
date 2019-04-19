@@ -58,7 +58,6 @@ class SprkMastheadAccordionItem extends Component {
           <React.Fragment>
             <SprkLink
               variant="unstyled"
-              href="#nogo"
               additionalClasses="sprk-c-MastheadAccordion__summary"
               onClick={this.toggleAccordionOpen}
               aria-expanded={isOpen ? 'true' : 'false'}
@@ -172,7 +171,6 @@ SprkMastheadAccordionItem.propTypes = {
 SprkMastheadAccordionItem.defaultProps = {
   defaultOpen: false,
   element: 'a',
-  href: '#nogo',
   isActive: false,
   isButton: false,
   subNavLinks: [],

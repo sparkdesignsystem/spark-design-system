@@ -69,7 +69,6 @@ const SprkPagination = props => {
       >
         <li>
           <SprkLink
-            href="#nogo"
             onClick={e => goToPage(e, currentPage - 1)}
             additionalClasses={leftLinkClasses}
             variant="plain"
@@ -85,7 +84,6 @@ const SprkPagination = props => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 1)}
-              href="#nogo"
               additionalClasses={classnames('sprk-c-Pagination__link', {
                 'sprk-c-Pagination__link--current': currentPage === 1,
               })}
@@ -107,7 +105,6 @@ const SprkPagination = props => {
             <li key={uniqueId('sprk_page_')}>
               <SprkLink
                 onClick={e => goToPage(e, currentPage)}
-                href="#nogo"
                 additionalClasses={classnames(
                   'sprk-c-Pagination__link',
                   'sprk-c-Pagination__link--current',
@@ -130,7 +127,6 @@ const SprkPagination = props => {
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, totalPages)}
-              href="#nogo"
               additionalClasses={classnames('sprk-c-Pagination__link', {
                 'sprk-c-Pagination__link--current': currentPage === totalPages,
               })}
@@ -149,7 +145,6 @@ const SprkPagination = props => {
             <li key={uniqueId('sprk_page_')}>
               <SprkLink
                 onClick={e => goToPage(e, 2)}
-                href="#nogo"
                 additionalClasses={classnames('sprk-c-Pagination__link', {
                   'sprk-c-Pagination__link--current': currentPage === 2,
                 })}
@@ -168,7 +163,6 @@ const SprkPagination = props => {
             <li key={uniqueId('sprk_page_')}>
               <SprkLink
                 onClick={e => goToPage(e, 3)}
-                href="#nogo"
                 additionalClasses={classnames('sprk-c-Pagination__link', {
                   'sprk-c-Pagination__link--current': currentPage === 3,
                 })}
@@ -183,7 +177,6 @@ const SprkPagination = props => {
 
         <li>
           <SprkLink
-            href="#nogo"
             onClick={e => goToPage(e, currentPage + 1)}
             additionalClasses={rightLinkClasses}
             variant="plain"
@@ -229,13 +222,8 @@ SprkPagination.propTypes = {
 SprkPagination.defaultProps = {
   variant: 'default',
   currentPage: 1,
-  additionalClasses: null,
   nextLinkText: 'Next Page',
   prevLinkText: 'Previous Page',
-  analyticsStringNext: null,
-  analyticsStringPrev: null,
-  analyticsStringPage: null,
-  idString: null,
 };
 
 export default SprkPagination;
