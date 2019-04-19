@@ -36,7 +36,7 @@ const SprkButton = ({
       data-id={idString}
       data-analytics={analyticsString}
       disabled={disabled}
-      href={href}
+      href={TagName !== 'button' ? href : undefined}
       {...rest}
     >
       {(loading && <SprkSpinner />) || children}
