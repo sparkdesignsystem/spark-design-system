@@ -104,7 +104,6 @@ class SprkDropdown extends Component {
             { 'sprk-u-mrs': variant === 'informational' },
             additionalTriggerClasses,
           )}
-          href="#nogo"
           aria-expanded={isOpen}
           role="listbox"
           data-analytics={analyticsString || 'undefined'}
@@ -168,7 +167,7 @@ class SprkDropdown extends Component {
                     {variant === 'base' && (
                       <TagName
                         className="sprk-c-Dropdown__link"
-                        href={TagName === 'a' ? href || '#nogo' : undefined}
+                        href={TagName === 'a' ? href || '#' : undefined}
                         onClick={() => {
                           this.selectChoice(choice.id, text);
                           this.closeDropdown();
@@ -187,7 +186,7 @@ class SprkDropdown extends Component {
                           className={classNames('sprk-c-Dropdown__link', {
                             'sprk-c-Dropdown__link--active': isActive,
                           })}
-                          href={TagName === 'a' ? href || '#nogo' : undefined}
+                          href={TagName === 'a' ? href || '#' : undefined}
                           onClick={() => {
                             this.selectChoice(choice.id, content.title);
                             this.closeDropdown();
