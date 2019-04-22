@@ -1,5 +1,12 @@
 import getElements from '../utilities/getElements';
-import { resetTabs, setActiveTab } from './tabs';
+import {
+  advanceTab,
+  getActiveTabIndex,
+  resetTabs,
+  retreatTab,
+  setActiveTab,
+} from './tabs';
+import { carousel } from './carousel';
 
 const resetSlider = (steps, activeClass, slider) => {
   if (!slider) return;
@@ -9,9 +16,6 @@ const resetSlider = (steps, activeClass, slider) => {
     );
     const stepHeading = step.querySelector('.sprk-c-Stepper__step-heading');
     const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
-
-    step.classList.remove(activeClass);
-    slider.classList.remove(activeClass);
 
     stepHeading.classList.remove('sprk-u-Visibility--hidden');
 
@@ -32,8 +36,6 @@ const positionSlider = (step, content, slider, activeClass) => {
   const stepContent = step.querySelector('.sprk-c-Stepper__step-content');
   const sliderTopValue = step.offsetTop;
   const sliderEl = slider;
-  // Add active class to new step
-  step.classList.add(activeClass);
 
   if (content) {
     content.classList.remove('sprk-u-HideWhenJs');
@@ -66,7 +68,8 @@ const positionSlider = (step, content, slider, activeClass) => {
   });
 };
 
-const bindUIEvents = stepContainer => {
+const bindUIEvents = (stepContainer, carouselContainer) => {
+  let carouselInstance;
   const steps = stepContainer.querySelectorAll('[data-sprk-stepper="step"]');
   const descriptions = stepContainer.querySelectorAll(
     '[data-sprk-stepper="description"]',
@@ -74,6 +77,30 @@ const bindUIEvents = stepContainer => {
   const activeClass = 'sprk-c-Stepper__step--selected';
   const stepLinks = stepContainer.querySelectorAll('[role="tab"]');
   let sliderEl;
+
+  if (carouselContainer) {
+    carouselInstance = carousel(carouselContainer);
+    carouselContainer.addEventListener('sprk.carousel.slide', e => {
+      e.preventDefault();
+      const { index } = e.detail;
+      const currentActiveIndex = getActiveTabIndex(steps, activeClass);
+      resetTabs(steps, descriptions, activeClass, sliderEl);
+      setActiveTab(steps[index], descriptions[index], activeClass, sliderEl);
+      resetSlider(steps, activeClass, sliderEl);
+      positionSlider(
+        steps[getActiveTabIndex(steps, activeClass)],
+        descriptions[getActiveTabIndex(steps, activeClass)],
+        sliderEl,
+        activeClass,
+      );
+      if (
+        carouselInstance &&
+        currentActiveIndex !== getActiveTabIndex(steps, activeClass)
+      ) {
+        carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
+      }
+    });
+  }
 
   if (descriptions.length > 0) {
     sliderEl = document.createElement('li');
@@ -89,12 +116,67 @@ const bindUIEvents = stepContainer => {
       setActiveTab(steps[index], descriptions[index], activeClass);
       resetSlider(steps, activeClass, sliderEl);
       positionSlider(steps[index], descriptions[index], sliderEl, activeClass);
+
+      if (carouselInstance) {
+        carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
+      }
+    });
+
+    stepLink.addEventListener('keydown', event => {
+      event.preventDefault();
+      const keys = {
+        end: 35,
+        home: 36,
+        left: 37,
+        right: 39,
+        tab: 9,
+      };
+
+      if (event.keyCode === keys.left) {
+        retreatTab(steps, descriptions, activeClass);
+      } else if (event.keyCode === keys.right) {
+        advanceTab(steps, descriptions, activeClass);
+      } else if (event.keyCode === keys.tab) {
+        event.preventDefault();
+        descriptions[getActiveTabIndex(steps)].focus();
+      } else if (event.keyCode === keys.home) {
+        resetTabs(steps, descriptions, activeClass);
+        setActiveTab(steps[0], descriptions[0], activeClass);
+      } else if (event.keyCode === keys.end) {
+        resetTabs(steps, descriptions, activeClass);
+        setActiveTab(
+          steps[steps.length - 1],
+          descriptions[descriptions.length - 1],
+          activeClass,
+        );
+      }
+
+      resetSlider(steps, activeClass, sliderEl);
+      positionSlider(
+        steps[getActiveTabIndex(steps, activeClass)],
+        descriptions[getActiveTabIndex(steps, activeClass)],
+        sliderEl,
+        activeClass,
+      );
+
+      if (carouselInstance) {
+        carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
+      }
     });
   });
 };
 
 const stepper = () => {
-  getElements('[data-sprk-stepper="container"]', bindUIEvents);
+  getElements('[data-sprk-stepper="container"]', item => {
+    let carouselContainer;
+    const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
+    if (partnerCarouselID) {
+      carouselContainer = document.querySelector(
+        `[data-sprk-carousel=${partnerCarouselID}]`,
+      );
+    }
+    bindUIEvents(item, carouselContainer);
+  });
 };
 
 export { stepper, positionSlider, resetSlider };

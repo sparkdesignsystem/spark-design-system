@@ -19,10 +19,10 @@ const setActiveTab = (tab, tabpanel, activeClass) => {
   tab.focus();
 };
 
-const getActiveTabIndex = tabs => {
+const getActiveTabIndex = (tabs, activeClass) => {
   let activeIndex = null;
   tabs.forEach((tab, index) => {
-    if (tab.classList.contains('sprk-c-Tabs__button--active')) {
+    if (tab.classList.contains(activeClass || 'sprk-c-Tabs__button--active')) {
       activeIndex = index;
     }
   });
@@ -30,26 +30,38 @@ const getActiveTabIndex = tabs => {
   return activeIndex;
 };
 
-const advanceTab = (tabs, tabpanels) => {
-  const activeIndex = getActiveTabIndex(tabs);
-  resetTabs(tabs, tabpanels);
+const advanceTab = (tabs, tabpanels, activeClass) => {
+  const activeIndex = getActiveTabIndex(tabs, activeClass);
+  resetTabs(tabs, tabpanels, activeClass);
 
   if (activeIndex + 1 <= tabs.length - 1) {
-    setActiveTab(tabs[activeIndex + 1], tabpanels[activeIndex + 1]);
+    setActiveTab(
+      tabs[activeIndex + 1],
+      tabpanels[activeIndex + 1],
+      activeClass,
+    );
   } else {
-    setActiveTab(tabs[0], tabpanels[0]);
+    setActiveTab(tabs[0], tabpanels[0], activeClass);
   }
 };
 
-const retreatTab = (tabs, tabpanels) => {
-  const activeIndex = getActiveTabIndex(tabs);
+const retreatTab = (tabs, tabpanels, activeClass) => {
+  const activeIndex = getActiveTabIndex(tabs, activeClass);
 
-  resetTabs(tabs, tabpanels);
+  resetTabs(tabs, tabpanels, activeClass);
 
   if (activeIndex - 1 === -1) {
-    setActiveTab(tabs[tabs.length - 1], tabpanels[tabs.length - 1]);
+    setActiveTab(
+      tabs[tabs.length - 1],
+      tabpanels[tabs.length - 1],
+      activeClass,
+    );
   } else {
-    setActiveTab(tabs[activeIndex - 1], tabpanels[activeIndex - 1]);
+    setActiveTab(
+      tabs[activeIndex - 1],
+      tabpanels[activeIndex - 1],
+      activeClass,
+    );
   }
 };
 
