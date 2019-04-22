@@ -237,27 +237,4 @@ SprkPromo.propTypes = {
   hasBorder: PropTypes.bool,
 };
 
-SprkPromo.defaultProps = {
-  children: [],
-  title: '',
-  subtitle: '',
-  additionalClasses: '',
-  additionalClassesContent: '',
-  cta: '',
-  ctaText: '',
-  ctaHref: '',
-  ctaAnalytics: '',
-  ctaIdString: '',
-  imgSrc: '',
-  imgAlt: '',
-  imgLinkHref: '',
-  imgLinkAnalytics: '',
-  imgLinkIdString: '',
-  additionalClassesImgLink: '',
-  idString: '',
-  isFlag: false,
-  mediaRev: false,
-  hasBorder: false,
-};
-
 export default SprkPromo;

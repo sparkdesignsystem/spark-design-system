@@ -85,9 +85,7 @@ class SprkMastheadAccordionItem extends Component {
                     <li key={innerId}>
                       <InnerTagName
                         href={
-                          InnerTagName === 'a'
-                            ? innerHref || '#nogo'
-                            : undefined
+                          InnerTagName === 'a' ? innerHref || '#nogo' : undefined
                         }
                         className={classNames(
                           'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link',
@@ -174,6 +172,7 @@ SprkMastheadAccordionItem.defaultProps = {
   isActive: false,
   isButton: false,
   subNavLinks: [],
+  href: '#nogo',
 };
 
 export default SprkMastheadAccordionItem;
