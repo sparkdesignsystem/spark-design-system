@@ -5,7 +5,7 @@ import { uniqueId } from 'lodash';
 import SprkLink from '../SprkLink/SprkLink';
 import SprkIcon from '../SprkIcon/SprkIcon';
 
-const SprkPagination = (props) => {
+const SprkPagination = props => {
   const goToPage = (e, page) => {
     e.preventDefault();
 
@@ -14,8 +14,12 @@ const SprkPagination = (props) => {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
     let newPage = page;
-    if (page > totalPages) { newPage = totalPages; }
-    if (page < 1) { newPage = 1; }
+    if (page > totalPages) {
+      newPage = totalPages;
+    }
+    if (page < 1) {
+      newPage = 1;
+    }
 
     onChangeCallback({ e, newPage });
   };
@@ -53,24 +57,18 @@ const SprkPagination = (props) => {
   }
 
   return (
-    <nav
-      aria-label="Pagination Navigation"
-      data-id={idString}
-    >
+    <nav aria-label="Pagination Navigation" data-id={idString}>
       <ul
-        className={
-          classnames(
-            'sprk-c-Pagination',
-            'sprk-o-HorizontalList',
-            'sprk-o-HorizontalList--spacing-medium',
-            additionalClasses,
-          )
-        }
+        className={classnames(
+          'sprk-c-Pagination',
+          'sprk-o-HorizontalList',
+          'sprk-o-HorizontalList--spacing-medium',
+          additionalClasses,
+        )}
         {...other}
       >
         <li>
           <SprkLink
-            href="#"
             onClick={e => goToPage(e, currentPage - 1)}
             additionalClasses={leftLinkClasses}
             variant="plain"
@@ -82,16 +80,13 @@ const SprkPagination = (props) => {
           </SprkLink>
         </li>
 
-        { variant === 'default' && (
+        {variant === 'default' && (
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, 1)}
-              href="#"
-              additionalClasses={
-                classnames(
-                  'sprk-c-Pagination__link',
-                  { 'sprk-c-Pagination__link--current': currentPage === 1 },
-                )}
+              additionalClasses={classnames('sprk-c-Pagination__link', {
+                'sprk-c-Pagination__link--current': currentPage === 1,
+              })}
               aria-label="Page 1"
               aria-current={currentPage === 1}
               data-analytics={analyticsStringPage}
@@ -101,49 +96,40 @@ const SprkPagination = (props) => {
           </li>
         )}
 
-        { longVariant && currentPage > 2 && (
-          <li key={uniqueId('sprk_page_')}>
-            ...
-          </li>
-        )}
+        {longVariant &&
+          currentPage > 2 && <li key={uniqueId('sprk_page_')}>...</li>}
 
-        { longVariant && currentPage > 1 && currentPage < totalPages && (
-          <li key={uniqueId('sprk_page_')}>
-            <SprkLink
-              onClick={e => goToPage(e, currentPage)}
-              href="#"
-              additionalClasses={
-                classnames(
+        {longVariant &&
+          currentPage > 1 &&
+          currentPage < totalPages && (
+            <li key={uniqueId('sprk_page_')}>
+              <SprkLink
+                onClick={e => goToPage(e, currentPage)}
+                additionalClasses={classnames(
                   'sprk-c-Pagination__link',
                   'sprk-c-Pagination__link--current',
-                )
-              }
-              aria-label={`Page ${currentPage}`}
-              aria-current="true"
-              data-analytics={analyticsStringPage}
-            >
-              {currentPage}
-            </SprkLink>
-          </li>
-        )}
+                )}
+                aria-label={`Page ${currentPage}`}
+                aria-current="true"
+                data-analytics={analyticsStringPage}
+              >
+                {currentPage}
+              </SprkLink>
+            </li>
+          )}
 
-        { longVariant && currentPage < totalPages - 1 && (
-          <li key={uniqueId('sprk_page_')}>
-            ...
-          </li>
-        )}
+        {longVariant &&
+          currentPage < totalPages - 1 && (
+            <li key={uniqueId('sprk_page_')}>...</li>
+          )}
 
-        { longVariant && (
+        {longVariant && (
           <li key={uniqueId('sprk_page_')}>
             <SprkLink
               onClick={e => goToPage(e, totalPages)}
-              href="#"
-              additionalClasses={
-                classnames(
-                  'sprk-c-Pagination__link',
-                  { 'sprk-c-Pagination__link--current': currentPage === totalPages },
-                )
-              }
+              additionalClasses={classnames('sprk-c-Pagination__link', {
+                'sprk-c-Pagination__link--current': currentPage === totalPages,
+              })}
               aria-label={`Page ${totalPages}`}
               aria-current={currentPage === totalPages}
               data-analytics={analyticsStringPage}
@@ -153,47 +139,44 @@ const SprkPagination = (props) => {
           </li>
         )}
 
-        { variant === 'default' && !longVariant && totalItems / itemsPerPage > 1 && (
-          <li key={uniqueId('sprk_page_')}>
-            <SprkLink
-              onClick={e => goToPage(e, 2)}
-              href="#"
-              additionalClasses={
-                classnames(
-                  'sprk-c-Pagination__link',
-                  { 'sprk-c-Pagination__link--current': currentPage === 2 },
-                )}
-              aria-label="Page 2"
-              aria-current={currentPage === 2}
-              data-analytics={analyticsStringPage}
-            >
-              2
-            </SprkLink>
-          </li>
-        )}
+        {variant === 'default' &&
+          !longVariant &&
+          totalItems / itemsPerPage > 1 && (
+            <li key={uniqueId('sprk_page_')}>
+              <SprkLink
+                onClick={e => goToPage(e, 2)}
+                additionalClasses={classnames('sprk-c-Pagination__link', {
+                  'sprk-c-Pagination__link--current': currentPage === 2,
+                })}
+                aria-label="Page 2"
+                aria-current={currentPage === 2}
+                data-analytics={analyticsStringPage}
+              >
+                2
+              </SprkLink>
+            </li>
+          )}
 
-        { variant === 'default' && !longVariant && totalItems / itemsPerPage > 2 && (
-          <li key={uniqueId('sprk_page_')}>
-            <SprkLink
-              onClick={e => goToPage(e, 3)}
-              href="#"
-              additionalClasses={
-                classnames(
-                  'sprk-c-Pagination__link',
-                  { 'sprk-c-Pagination__link--current': currentPage === 3 },
-                )}
-              aria-label="Page 3"
-              aria-current={currentPage === 3}
-              data-analytics={analyticsStringPage}
-            >
-              3
-            </SprkLink>
-          </li>
-        )}
+        {variant === 'default' &&
+          !longVariant &&
+          totalItems / itemsPerPage > 2 && (
+            <li key={uniqueId('sprk_page_')}>
+              <SprkLink
+                onClick={e => goToPage(e, 3)}
+                additionalClasses={classnames('sprk-c-Pagination__link', {
+                  'sprk-c-Pagination__link--current': currentPage === 3,
+                })}
+                aria-label="Page 3"
+                aria-current={currentPage === 3}
+                data-analytics={analyticsStringPage}
+              >
+                3
+              </SprkLink>
+            </li>
+          )}
 
         <li>
           <SprkLink
-            href="#"
             onClick={e => goToPage(e, currentPage + 1)}
             additionalClasses={rightLinkClasses}
             variant="plain"
@@ -208,7 +191,6 @@ const SprkPagination = (props) => {
     </nav>
   );
 };
-
 
 SprkPagination.propTypes = {
   // The pagination variant
@@ -240,13 +222,8 @@ SprkPagination.propTypes = {
 SprkPagination.defaultProps = {
   variant: 'default',
   currentPage: 1,
-  additionalClasses: null,
   nextLinkText: 'Next Page',
   prevLinkText: 'Previous Page',
-  analyticsStringNext: null,
-  analyticsStringPrev: null,
-  analyticsStringPage: null,
-  idString: null,
 };
 
 export default SprkPagination;

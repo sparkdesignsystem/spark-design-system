@@ -4,13 +4,17 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkLink from '../../../SprkLink/SprkLink';
 
 class SprkMastheadDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
-      choiceItems: props.choices.items.map(item => ({ id: uniqueId(), ...item })),
+      choiceItems: props.choices.items.map(item => ({
+        id: uniqueId(),
+        ...item,
+      })),
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -71,10 +75,9 @@ class SprkMastheadDropdown extends Component {
     const { choiceItems, isOpen } = this.state;
     return (
       <div ref={this.myRef}>
-        <a
-          className={classNames(
-            'sprk-b-Link',
-            'sprk-b-Link--plain',
+        <SprkLink
+          variant="plain"
+          additionalClasses={classNames(
             { 'sprk-u-mrs': variant === 'informational' },
             additionalTriggerClasses,
           )}
@@ -85,41 +88,48 @@ class SprkMastheadDropdown extends Component {
           role="listbox"
           onClick={this.toggleDropdownOpen}
         >
-          <span className={classNames(additionalTriggerTextClasses)}>{triggerText}</span>
-          <SprkIcon additionalClasses={classNames('sprk-c-Icon--stroke-current-color sprk-u-mls', additionalIconClasses)} iconName={iconName} />
-        </a>
-        {isOpen
-        && (
-        <div className={classNames('sprk-c-Dropdown sprk-u-TextAlign--left', additionalClasses)}>
-          {title !== ''
-          && (
-          <div className="sprk-c-Dropdown__header">
-            <h2 className="sprk-c-Dropdown__title">{title}</h2>
+          <span className={classNames(additionalTriggerTextClasses)}>
+            {triggerText}
+          </span>
+          <SprkIcon
+            additionalClasses={classNames(
+              'sprk-c-Icon--stroke-current-color sprk-u-mls',
+              additionalIconClasses,
+            )}
+            iconName={iconName}
+          />
+        </SprkLink>
+        {isOpen && (
+          <div
+            className={classNames(
+              'sprk-c-Dropdown sprk-u-TextAlign--left',
+              additionalClasses,
+            )}
+          >
+            {title !== '' && (
+              <div className="sprk-c-Dropdown__header">
+                <h2 className="sprk-c-Dropdown__title">{title}</h2>
+              </div>
+            )}
+            <ul className="sprk-c-Dropdown__links">
+              {choiceItems.map(choice => {
+                const { element, href, text, ...rest } = choice;
+                const TagName = element || 'a';
+                return (
+                  <li className="sprk-c-Dropdown__item" key={choice.id}>
+                    <TagName
+                      href={TagName === 'a' ? href || '#nogo' : undefined}
+                      className="sprk-c-Dropdown__link"
+                      {...rest}
+                    >
+                      {text}
+                    </TagName>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          )
-          }
-          <ul className="sprk-c-Dropdown__links">
-            {choiceItems.map((choice) => {
-              const {
-                element, href, text, ...rest
-              } = choice;
-              const TagName = element || 'a';
-              return (
-                <li className="sprk-c-Dropdown__item" key={choice.id}>
-                  <TagName
-                    href={TagName === 'a' ? href || '#nogo' : undefined}
-                    className="sprk-c-Dropdown__link"
-                    {...rest}
-                  >
-                    {text}
-                  </TagName>
-                </li>);
-            })
-            }
-          </ul>
-        </div>
-        )
-        }
+        )}
       </div>
     );
   }
@@ -141,14 +151,16 @@ SprkMastheadDropdown.propTypes = {
   // Choices object that builds the dropdown contents
   choices: PropTypes.shape({
     // An array of objects that describe the items in the menu
-    items: PropTypes.arrayOf(PropTypes.shape({
-      // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-      // Assigned to href of the element is 'a'
-      href: PropTypes.string,
-      // The text inside the item
-      text: PropTypes.string,
-    })),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The element to render for each menu item
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+        // Assigned to href of the element is 'a'
+        href: PropTypes.string,
+        // The text inside the item
+        text: PropTypes.string,
+      }),
+    ),
   }),
   // The text set as the default of the trigger link
   triggerText: PropTypes.string,
@@ -163,20 +175,12 @@ SprkMastheadDropdown.propTypes = {
 };
 
 SprkMastheadDropdown.defaultProps = {
-  additionalClasses: '',
-  additionalIconClasses: '',
-  additionalTriggerClasses: '',
-  additionalTriggerTextClasses: '',
-  analyticsString: '',
-  children: [],
+  triggerText: 'Choose One...',
+  iconName: 'chevron-down',
+  variant: 'base',
   choices: {
     items: [],
   },
-  triggerText: 'Choose One...',
-  iconName: 'chevron-down',
-  idString: '',
-  title: '',
-  variant: 'base',
 };
 
 export default SprkMastheadDropdown;

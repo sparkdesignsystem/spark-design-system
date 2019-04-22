@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../SprkIcon/SprkIcon';
+import SprkLink from '../SprkLink/SprkLink';
 
 class SprkDropdown extends Component {
   constructor(props) {
@@ -11,9 +12,10 @@ class SprkDropdown extends Component {
     this.state = {
       triggerText: props.defaultTriggerText,
       isOpen: false,
-      choiceItems: props.choices.items.map(
-        item => ({ id: uniqueId(), ...item }),
-      ),
+      choiceItems: props.choices.items.map(item => ({
+        id: uniqueId(),
+        ...item,
+      })),
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -95,14 +97,13 @@ class SprkDropdown extends Component {
     const { choiceItems, isOpen, triggerText } = this.state;
     return (
       <div ref={this.dropdownRef}>
-        <a
-          className={classNames(
-            'sprk-b-Link',
-            'sprk-b-Link--plain',
+        <SprkLink
+          element="a"
+          variant="plain"
+          additionalClasses={classNames(
             { 'sprk-u-mrs': variant === 'informational' },
             additionalTriggerClasses,
           )}
-          href="#nogo"
           aria-expanded={isOpen}
           role="listbox"
           data-analytics={analyticsString || 'undefined'}
@@ -122,13 +123,21 @@ class SprkDropdown extends Component {
           )}
           {variant === 'base' && (
             <React.Fragment>
-              <span className={classNames('sprk-u-ScreenReaderText', additionalTriggerTextClasses)}>
+              <span
+                className={classNames(
+                  'sprk-u-ScreenReaderText',
+                  additionalTriggerTextClasses,
+                )}
+              >
                 {screenReaderText}
               </span>
-              <SprkIcon iconName={iconName} additionalClasses={additionalIconClasses} />
+              <SprkIcon
+                iconName={iconName}
+                additionalClasses={additionalIconClasses}
+              />
             </React.Fragment>
           )}
-        </a>
+        </SprkLink>
         {isOpen && (
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
             {title !== '' && (
@@ -137,17 +146,28 @@ class SprkDropdown extends Component {
               </div>
             )}
             <ul className="sprk-c-Dropdown__links">
-              {choiceItems.map((choice) => {
+              {choiceItems.map(choice => {
                 const {
-                  content, element, href, isActive, text, value, ...rest
+                  content,
+                  element,
+                  href,
+                  isActive,
+                  text,
+                  value,
+                  ...rest
                 } = choice;
                 const TagName = element || 'a';
                 return (
-                  <li className="sprk-c-Dropdown__item" aria-selected={isActive} role="option" key={choice.id}>
+                  <li
+                    className="sprk-c-Dropdown__item"
+                    aria-selected={isActive}
+                    role="option"
+                    key={choice.id}
+                  >
                     {variant === 'base' && (
                       <TagName
                         className="sprk-c-Dropdown__link"
-                        href={TagName === 'a' ? href || '#nogo' : undefined}
+                        href={TagName === 'a' ? href || '#' : undefined}
                         onClick={() => {
                           this.selectChoice(choice.id, text);
                           this.closeDropdown();
@@ -166,7 +186,7 @@ class SprkDropdown extends Component {
                           className={classNames('sprk-c-Dropdown__link', {
                             'sprk-c-Dropdown__link--active': isActive,
                           })}
-                          href={TagName === 'a' ? href || '#nogo' : undefined}
+                          href={TagName === 'a' ? href || '#' : undefined}
                           onClick={() => {
                             this.selectChoice(choice.id, content.title);
                             this.closeDropdown();
@@ -177,8 +197,12 @@ class SprkDropdown extends Component {
                           {...rest}
                         >
                           <p className="sprk-b-TypeBodyOne">{content.title}</p>
-                          <p className="sprk-b-TypeBodyTwo">{content.infoLine1}</p>
-                          <p className="sprk-b-TypeBodyTwo">{content.infoLine2}</p>
+                          <p className="sprk-b-TypeBodyTwo">
+                            {content.infoLine1}
+                          </p>
+                          <p className="sprk-b-TypeBodyTwo">
+                            {content.infoLine2}
+                          </p>
                         </TagName>
                       </React.Fragment>
                     )}
@@ -186,13 +210,11 @@ class SprkDropdown extends Component {
                 );
               })}
             </ul>
-            {footer
-            && (
-            <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
-              {footer}
-            </div>
-            )
-          }
+            {footer && (
+              <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+                {footer}
+              </div>
+            )}
           </div>
         )}
       </div>
