@@ -61,6 +61,7 @@ class SprkMasthead extends Component {
       selector,
       utilityContents,
       variant,
+      logoLink,
     } = this.props;
     const { isScrolled, narrowNavOpen } = this.state;
 
@@ -84,7 +85,7 @@ class SprkMasthead extends Component {
           />
 
           <div className="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
-            <SprkLink variant="unstyled" href="/">
+            <SprkLink variant="unstyled" href={logoLink}>
               {siteLogo}
             </SprkLink>
           </div>
@@ -191,6 +192,8 @@ SprkMasthead.propTypes = {
   utilityContents: PropTypes.arrayOf(PropTypes.node),
   // the variant name to render
   variant: PropTypes.oneOf(['default', 'extended']),
+  // the href to render for the logo link
+  logoLink: PropTypes.string,
 };
 
 SprkMasthead.defaultProps = {
@@ -199,6 +202,7 @@ SprkMasthead.defaultProps = {
   bigNavLinks: [],
   utilityContents: [],
   variant: 'default',
+  logoLink: '/',
 };
 
 export default SprkMasthead;
