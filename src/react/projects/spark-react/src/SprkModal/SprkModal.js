@@ -95,19 +95,27 @@ class SprkModal extends Component {
       switch (variant) {
         case 'choice':
           // focus the confirm button
-          this.footerRef.current.focusConfirm();
+          if (this.footerRef.current){
+            this.footerRef.current.focusConfirm();
+          }
           break;
         case 'info':
           // focus the close button
-          this.closeButtonRef.current.focusButton();
+          if (this.closeButtonRef.current) {
+            this.closeButtonRef.current.focusButton();
+          }
           break;
         case 'wait':
           // focus the whole modal
-          this.containerRef.current.focus();
+          if (this.containerRef.current) {
+            this.containerRef.current.focus();
+          }
           break;
         default:
           // focus the whole modal
-          this.containerRef.current.focus();
+          if (this.containerRef.current) {
+            this.containerRef.current.focus();
+          }
           break;
       }
     }

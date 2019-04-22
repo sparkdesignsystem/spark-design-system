@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
 
-function SprkModalMask({ clicked }) {
+function ModalMask({ clicked }) {
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     // key events are handled by the parent component
@@ -17,13 +17,13 @@ function SprkModalMask({ clicked }) {
   );
 }
 
-SprkModalMask.propTypes = {
+ModalMask.propTypes = {
   // function to call when the mask is clicked
   clicked: PropTypes.func,
 };
 
-SprkModalMask.defaultProps = {
+ModalMask.defaultProps = {
   clicked: noop,
 };
 
-export default SprkModalMask;
+export default ModalMask;
