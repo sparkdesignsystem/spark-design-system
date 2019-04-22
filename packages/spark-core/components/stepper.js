@@ -179,4 +179,4 @@ const stepper = () => {
   });
 };
 
-export { stepper, positionSlider, resetSlider };
+export { stepper, bindUIEvents, positionSlider, resetSlider };

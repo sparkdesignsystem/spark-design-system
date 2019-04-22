@@ -20,7 +20,9 @@ describe('tabs init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     tabs();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-navigation="tabs"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).eql(
+      '[data-sprk-navigation="tabs"]',
+    );
   });
 });
 
@@ -156,7 +158,8 @@ describe('tabs UI Events tests', () => {
     expect(document.activeElement).eql(panel1);
   });
 
-  it('should do nothing when a key is pressed that isnt home, end, or an arrow key', () => {
+  it(`should do nothing when a key is pressed that isnt home, end, or an arrow
+   key`, () => {
     event = new window.Event('keydown');
     event.keyCode = 8;
     tab2.click();
@@ -268,7 +271,7 @@ describe('resetTabs tests', () => {
 
     resetTabs(tabsSet, panels, 'sprk-c-Tabs__button--active');
 
-    tabsSet.forEach((tab) => {
+    tabsSet.forEach(tab => {
       if (tab.classList.contains('sprk-c-Tabs__button--active')) {
         hasActiveClassSomeplace = true;
       }
@@ -282,7 +285,7 @@ describe('resetTabs tests', () => {
 
     resetTabs(tabsSet, panels, 'sprk-c-Tabs__button--active');
 
-    panels.forEach((panel) => {
+    panels.forEach(panel => {
       if (!panel.classList.contains('sprk-u-HideWhenJs')) {
         allAreHidden = false;
       }
@@ -354,7 +357,7 @@ describe('setActive tab tests', () => {
 
   it('should set aria-selected to true on the stepper trigger', () => {
     setActiveTab(step, panel1, 'sprk-c-Stepper__step--selected');
-    expect(stepTrigger.getAttribute('aria-selected')).eql('true');
+    expect(step.getAttribute('aria-selected')).eql('true');
   });
 });
 
@@ -418,16 +421,18 @@ describe('advanceTab tests', () => {
     panels = [panel1, panel2, panel3];
   });
 
-  it('should advance the active tab to the next one, if its not the last in the list', () => {
+  it(`should advance the active tab to the next one, if its not the last in
+  the list`, () => {
     advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab2.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
-  it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
-    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active'); // set to 3
+  it(`should set the active tab to the first in the list, if the currently
+  active tab is list in the list`, () => {
+    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
 
-    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active'); // should move to 1
+    advanceTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 });
@@ -492,12 +497,14 @@ describe('retreatTab tests', () => {
     panels = [panel1, panel2, panel3];
   });
 
-  it('should retreat the active tab to the previous one, if its not the first in the list', () => {
+  it(`should retreat the active tab to the previous one, if its not the first
+  in the list`, () => {
     retreatTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab1.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
 
-  it('should set the active tab to the first in the list, if the currently active tab is list in the list', () => {
+  it(`should set the active tab to the first in the list, if the currently
+  active tab is list in the list`, () => {
     retreatTab(tabsSet, panels, 'sprk-c-Tabs__button--active');
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).eql(true);
   });
