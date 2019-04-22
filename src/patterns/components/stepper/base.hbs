@@ -11,43 +11,47 @@ hasAngularCodeInfo: true
   role="tablist"
   aria-orientation="vertical">
   <li
+    tabindex="0"
+    role="tab"
     class="sprk-c-Stepper__step sprk-c-Stepper__step--first"
     data-sprk-stepper="step">
     <div class="sprk-c-Stepper__step-content">
-      <a
+      <span
         class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-        role="tab"
         href="#">
         <span class="sprk-c-Stepper__step-icon"></span>
         <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
           Step One
         </h3>
-      </a>
+      </span>
     </div>
   </li>
 
   <li
+    tabindex="0"
+    role="tab"
     class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+    aria-selected="true"
     data-sprk-stepper="step">
     <div class="sprk-c-Stepper__step-content">
-      <a
+      <span
         class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-        role="tab"
-        href="#"
-        aria-selected="true">
+        href="#">
         <span class="sprk-c-Stepper__step-icon"></span>
         <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
           Step Two
         </h3>
-      </a>
+      </span>
     </div>
   </li>
 
   <li
+    tabindex="0"
+    role="tab"
     class="sprk-c-Stepper__step sprk-c-Stepper__step--last"
     data-sprk-stepper="step">
     <div class="sprk-c-Stepper__step-content">
-      <a
+      <span
         class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
         role="tab"
         href="#">
@@ -55,7 +59,7 @@ hasAngularCodeInfo: true
         <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
           Step Three
         </h3>
-      </a>
+      </span>
     </div>
   </li>
 </ol>

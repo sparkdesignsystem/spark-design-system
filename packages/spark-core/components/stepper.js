@@ -61,11 +61,7 @@ const positionSlider = (step, content, slider, activeClass) => {
     slider.classList.add(activeClass);
   });
   // Set aria selected in slider
-  const stepTrigger = slider.querySelector('[role="tab"]');
-  stepTrigger.setAttribute('aria-selected', 'true');
-  stepTrigger.addEventListener('click', e => {
-    e.preventDefault();
-  });
+  step.setAttribute('aria-selected', 'true');
 };
 
 const bindUIEvents = (stepContainer, carouselContainer) => {
@@ -75,7 +71,6 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
     '[data-sprk-stepper="description"]',
   );
   const activeClass = 'sprk-c-Stepper__step--selected';
-  const stepLinks = stepContainer.querySelectorAll('[role="tab"]');
   let sliderEl;
 
   if (carouselContainer) {
@@ -109,7 +104,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
     stepContainer.prepend(sliderEl);
   }
 
-  stepLinks.forEach((stepLink, index) => {
+  steps.forEach((stepLink, index) => {
     stepLink.addEventListener('click', e => {
       e.preventDefault();
       resetTabs(steps, descriptions, activeClass);
@@ -123,7 +118,6 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
     });
 
     stepLink.addEventListener('keydown', event => {
-      event.preventDefault();
       const keys = {
         end: 35,
         home: 36,
@@ -132,13 +126,14 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         tab: 9,
       };
 
-      if (event.keyCode === keys.left) {
+      if (event.keyCode === keys.left || event.keyCode === keys.up) {
+        event.preventDefault();
         retreatTab(steps, descriptions, activeClass);
-      } else if (event.keyCode === keys.right) {
+      } else if (event.keyCode === keys.right || event.keyCode === keys.down) {
+        event.preventDefault();
         advanceTab(steps, descriptions, activeClass);
       } else if (event.keyCode === keys.tab) {
-        event.preventDefault();
-        descriptions[getActiveTabIndex(steps)].focus();
+        // decide what to do
       } else if (event.keyCode === keys.home) {
         resetTabs(steps, descriptions, activeClass);
         setActiveTab(steps[0], descriptions[0], activeClass);
