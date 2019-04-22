@@ -10,21 +10,36 @@ const SprkLink = props => {
     additionalClasses,
     idString,
     analyticsString,
+    href,
+    onClick,
     ...other
   } = props;
   const TagName = element || 'a';
-  const classNames = classnames('sprk-b-Link', additionalClasses, {
+  const classNames = classnames(additionalClasses, {
+    'sprk-b-Link': variant !== 'unstyled',
     'sprk-b-Link--simple': variant === 'simple',
     'sprk-b-Link--plain': variant === 'plain',
     'sprk-b-Link--disabled': variant === 'disabled',
     'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
   });
 
+  let clickEvent;
+  function handleClick(e) {
+    e.preventDefault();
+  }
+  if (onClick) {
+    clickEvent = onClick;
+  } else if (!onClick && href === '#') {
+    clickEvent = handleClick;
+  }
+
   return (
     <TagName
       className={classNames}
       data-analytics={analyticsString}
       data-id={idString}
+      href={href}
+      onClick={clickEvent}
       {...other}
     >
       {children}
@@ -36,21 +51,31 @@ SprkLink.propTypes = {
   // The children that will be rendered inside the link
   children: PropTypes.node,
   // The link variant that determines the class names
-  variant: PropTypes.oneOf(['base', 'simple', 'has-icon', 'plain', 'disabled']),
+  variant: PropTypes.oneOf([
+    'base',
+    'simple',
+    'has-icon',
+    'plain',
+    'disabled',
+    'unstyled',
+  ]),
   // The string to use for the data-id attribute
   idString: PropTypes.string,
   // The string to use for the data-analytics attribute
   analyticsString: PropTypes.string,
   // Any additional classes to add to the link
   additionalClasses: PropTypes.string,
+  // Url passed
+  href: PropTypes.string,
+  // The element that will be rendered
+  element: PropTypes.string,
+  // The event that will fire when the element is clicked
+  onClick: PropTypes.func,
 };
 
 SprkLink.defaultProps = {
-  children: [],
   variant: 'base',
-  idString: '',
-  analyticsString: '',
-  additionalClasses: '',
+  href: '#',
 };
 
 export default SprkLink;

@@ -9,7 +9,10 @@ class SprkMastheadLittleNav extends Component {
     super(props);
     const { links, utilityContents } = props;
     this.state = {
-      utilityContents: utilityContents.map(item => ({ id: uniqueId(), ...item })),
+      utilityContents: utilityContents.map(item => ({
+        id: uniqueId(),
+        ...item,
+      })),
       links: links.map(link => ({ id: uniqueId(), ...link })),
     };
   }
@@ -22,27 +25,24 @@ class SprkMastheadLittleNav extends Component {
       selector,
       spacing,
     } = this.props;
-    const {
-      links,
-      utilityContents,
-    } = this.state;
+    const { links, utilityContents } = this.state;
     return (
       <nav
         role="navigation"
         data-analytics={analyticsString}
         data-id={idString}
-        className={
-             classNames('sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row', additionalClasses)}
+        className={classNames(
+          'sprk-c-Masthead__little-nav sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row',
+          additionalClasses,
+        )}
       >
-        {selector.items
-          && (
+        {selector.items && (
           <div className="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div className="sprk-o-Stack__item sprk-u-Position--relative">
               <SprkMastheadSelector choices={selector} />
             </div>
           </div>
-          )
-        }
+        )}
         <ul
           className={classNames(
             'sprk-c-Masthead__site-links',
@@ -53,10 +53,8 @@ class SprkMastheadLittleNav extends Component {
             'sprk-o-Stack__item--center-column',
           )}
         >
-          {links.map((link) => {
-            const {
-              element, href, text, ...rest
-            } = link;
+          {links.map(link => {
+            const { element, href, text, ...rest } = link;
             const TagName = element || 'a';
             return (
               <li key={link.id}>
@@ -81,9 +79,7 @@ class SprkMastheadLittleNav extends Component {
           )}
         >
           {utilityContents.map(item => (
-            <li key={item.id}>
-              {item}
-            </li>
+            <li key={item.id}>{item}</li>
           ))}
         </ul>
       </nav>
@@ -99,27 +95,31 @@ SprkMastheadLittleNav.propTypes = {
   // assigned to data-id
   idString: PropTypes.string,
   // used to render navigation inside
-  links: PropTypes.arrayOf(PropTypes.shape({
-    // The element to render, can be 'a' or a Component like Link
-    element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    // Classes to apply to the container of the link
-    additionalContainerClasses: PropTypes.string,
-    // Adds a class if the link is active
-    isActive: PropTypes.bool,
-    // The link text
-    text: PropTypes.string,
-  })),
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      // The element to render, can be 'a' or a Component like Link
+      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      // Classes to apply to the container of the link
+      additionalContainerClasses: PropTypes.string,
+      // Adds a class if the link is active
+      isActive: PropTypes.bool,
+      // The link text
+      text: PropTypes.string,
+    }),
+  ),
   // Choices object that builds the dropdown contents
   selector: PropTypes.shape({
     // An array of objects that describe the items in the menu
-    items: PropTypes.arrayOf(PropTypes.shape({
-      // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Assigned to href of the element is 'a'
-      href: PropTypes.string,
-      // The text inside the item
-      text: PropTypes.string,
-    })),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The element to render for each menu item
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        // Assigned to href of the element is 'a'
+        href: PropTypes.string,
+        // The text inside the item
+        text: PropTypes.string,
+      }),
+    ),
   }),
   // Determines the spacing between little nav items
   spacing: PropTypes.oneOf(['medium', 'large']),

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkLink from '../../../SprkLink/SprkLink';
 
 class SprkMastheadSelector extends Component {
   constructor(props) {
@@ -11,7 +12,10 @@ class SprkMastheadSelector extends Component {
     this.state = {
       isOpen: false,
       triggerText: props.defaultTriggerText,
-      choiceItems: props.choices.items.map(item => ({ id: uniqueId(), ...item })),
+      choiceItems: props.choices.items.map(item => ({
+        id: uniqueId(),
+        ...item,
+      })),
     };
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -84,12 +88,17 @@ class SprkMastheadSelector extends Component {
         role="dialog"
         ref={this.dropdownRef}
         className={classNames({ 'sprk-c-MastheadMask': isOpen && isFlush })}
-        onClick={() => { if (isOpen) { this.closeDropdown(); } }}
+        onClick={() => {
+          if (isOpen) {
+            this.closeDropdown();
+          }
+        }}
       >
         <div className={classNames({ 'sprk-o-Box': isFlush })}>
-          <a
-            className={classNames(
-              'sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
+          <SprkLink
+            variant="plain"
+            additionalClasses={classNames(
+              'sprk-c-Masthead__selector sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
               additionalTriggerClasses,
             )}
             data-analytics={analyticsString}
@@ -100,81 +109,91 @@ class SprkMastheadSelector extends Component {
             aria-haspopup="true"
           >
             <span
-              className={classNames('sprk-o-Stack__item sprk-o-Stack__item--flex@xxs', additionalTriggerTextClasses)}
+              className={classNames(
+                'sprk-o-Stack__item sprk-o-Stack__item--flex@xxs',
+                additionalTriggerTextClasses,
+              )}
               role="listbox"
             >
               {triggerText}
             </span>
             <SprkIcon
               iconName={iconName}
-              additionalClasses={
-              classNames('sprk-c-Icon--toggle sprk-Stack__item', additionalIconClasses)}
+              additionalClasses={classNames(
+                'sprk-c-Icon--toggle sprk-Stack__item',
+                additionalIconClasses,
+              )}
             />
-          </a>
+          </SprkLink>
         </div>
 
-        { isOpen
-        && (
-        <div
-          className={classNames('sprk-c-Masthead__selector-dropdown sprk-c-Dropdown', additionalClasses)}
-          data-sprk-dropdown="dropdown-selector"
-        >
-          <div className="sprk-c-Dropdown__header">
-            <a
-              className="sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
-              onClick={this.closeDropdown}
-              href="#nogo"
-              aria-haspopup="true"
-            >
-              <span
-                className="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+        {isOpen && (
+          <div
+            className={classNames(
+              'sprk-c-Masthead__selector-dropdown sprk-c-Dropdown',
+              additionalClasses,
+            )}
+            data-sprk-dropdown="dropdown-selector"
+          >
+            <div className="sprk-c-Dropdown__header">
+              <SprkLink
+                variant="plain"
+                additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+                onClick={this.closeDropdown}
+                href="#nogo"
+                aria-haspopup="true"
               >
-                {triggerText}
-              </span>
-              <SprkIcon iconName="chevron-up" additionalClasses="sprk-c-Icon--toggle sprk-Stack__item" />
-            </a>
-          </div>
-
-          <ul className="sprk-c-Dropdown__links">
-            {choiceItems.map((item) => {
-              const {
-                element, href, title, information, value, ...rest
-              } = item;
-              const TagName = element || 'a';
-              return (
-                <li className="sprk-c-Dropdown__item" key={item.id}>
-                  <TagName
-                    className="sprk-c-Dropdown__link sprk-u-ptm"
-                    href={TagName === 'a' ? href || '#nogo' : undefined}
-                    onClick={() => {
-                      this.updateTriggerText(title);
-                      this.closeDropdown();
-                      if (choiceFunction) {
-                        choiceFunction(value);
-                      }
-                    }}
-                    role="option"
-                    {...rest}
-                  >
-                    <p className="sprk-b-TypeBodyOne">{title}</p>
-                    <p>{information}</p>
-                  </TagName>
-                </li>
-              );
-            })}
-
-          </ul>
-
-          {footer
-            && (
-            <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
-              {footer}
+                <span className="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">
+                  {triggerText}
+                </span>
+                <SprkIcon
+                  iconName="chevron-up"
+                  additionalClasses="sprk-c-Icon--toggle sprk-Stack__item"
+                />
+              </SprkLink>
             </div>
-            )
-          }
-        </div>
-        )
-        }
+
+            <ul className="sprk-c-Dropdown__links">
+              {choiceItems.map(item => {
+                const {
+                  element,
+                  href,
+                  title,
+                  information,
+                  value,
+                  ...rest
+                } = item;
+                const TagName = element || 'a';
+                return (
+                  <li className="sprk-c-Dropdown__item" key={item.id}>
+                    <TagName
+                      className="sprk-c-Dropdown__link sprk-u-ptm"
+                      href={TagName === 'a' ? href || '#nogo' : undefined}
+                      onClick={() => {
+                        this.updateTriggerText(title);
+                        this.closeDropdown();
+                        if (choiceFunction) {
+                          choiceFunction(value);
+                        }
+                      }}
+                      role="option"
+                      {...rest}
+                    >
+                      <p className="sprk-b-TypeBodyOne">{title}</p>
+                      <p>{information}</p>
+                    </TagName>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {footer && (
+              <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+                {footer}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     );
   }
@@ -196,14 +215,16 @@ SprkMastheadSelector.propTypes = {
     // A node to render at the foot of the dropdown menu
     footer: PropTypes.node,
     // An array of objects that describe the items in the menu
-    items: PropTypes.arrayOf(PropTypes.shape({
-      // The element to render for each menu item
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Assigned to href of the element is 'a'
-      href: PropTypes.string,
-      // The text inside the item
-      text: PropTypes.string,
-    })).isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        // The element to render for each menu item
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        // Assigned to href of the element is 'a'
+        href: PropTypes.string,
+        // The text inside the item
+        text: PropTypes.string,
+      }),
+    ).isRequired,
   }).isRequired,
   // Incoming children
   children: PropTypes.node,
@@ -218,15 +239,8 @@ SprkMastheadSelector.propTypes = {
 };
 
 SprkMastheadSelector.defaultProps = {
-  additionalClasses: '',
-  additionalIconClasses: '',
-  additionalTriggerClasses: '',
-  additionalTriggerTextClasses: '',
-  analyticsString: '',
-  children: [],
   defaultTriggerText: 'Choose One...',
   iconName: 'chevron-down',
-  idString: '',
   isFlush: false,
 };
 

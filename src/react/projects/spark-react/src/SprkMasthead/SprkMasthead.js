@@ -6,6 +6,7 @@ import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMasthead
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
+import SprkLink from '../SprkLink/SprkLink';
 
 class SprkMasthead extends Component {
   constructor() {
@@ -47,7 +48,6 @@ class SprkMasthead extends Component {
     }
   }
 
-
   render() {
     const {
       additionalClasses,
@@ -78,33 +78,33 @@ class SprkMasthead extends Component {
         data-id={idString}
       >
         <div className="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs">
-          <SprkMastheadMenuIcon toggleNarrowNav={this.toggleNarrowNav} isOpen={narrowNavOpen} />
+          <SprkMastheadMenuIcon
+            toggleNarrowNav={this.toggleNarrowNav}
+            isOpen={narrowNavOpen}
+          />
 
           <div className="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
-            <a href="/">
+            <SprkLink variant="unstyled" href="/">
               {siteLogo}
-            </a>
+            </SprkLink>
           </div>
 
-          {(littleNavLinks.length > 0 || utilityContents.length > 0)
-          && (
-          <SprkMastheadLittleNav
-            selector={selector}
-            spacing={variant === 'extended' ? 'medium' : 'large'}
-            links={littleNavLinks}
-            utilityContents={utilityContents}
-          />
-          )
-          }
-
+          {(littleNavLinks.length > 0 || utilityContents.length > 0) && (
+            <SprkMastheadLittleNav
+              selector={selector}
+              spacing={variant === 'extended' ? 'medium' : 'large'}
+              links={littleNavLinks}
+              utilityContents={utilityContents}
+            />
+          )}
         </div>
         {bigNavLinks.length > 0 && <SprkMastheadBigNav links={bigNavLinks} />}
         {narrowNavLinks.length > 0 && (
-        <SprkMastheadNarrowNav
-          selector={narrowSelector}
-          links={narrowNavLinks}
-          isOpen={narrowNavOpen}
-        />
+          <SprkMastheadNarrowNav
+            selector={narrowSelector}
+            links={narrowNavLinks}
+            isOpen={narrowNavOpen}
+          />
         )}
       </header>
     );
@@ -117,69 +117,73 @@ SprkMasthead.propTypes = {
   // assigned to data-analytics
   analyticsString: PropTypes.string,
   // array of link objects to use in building the big nav
-  bigNavLinks: PropTypes.arrayOf(PropTypes.shape(
-    {
+  bigNavLinks: PropTypes.arrayOf(
+    PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       text: PropTypes.string,
-      subNavLinks: PropTypes.arrayOf(PropTypes.shape(
-        {
+      subNavLinks: PropTypes.arrayOf(
+        PropTypes.shape({
           text: PropTypes.string,
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        },
-      )),
-    },
-  )),
+        }),
+      ),
+    }),
+  ),
   // assigned to data-id
   idString: PropTypes.string,
   // array of link objects to use in building the little nav
-  littleNavLinks: PropTypes.arrayOf(PropTypes.shape(
-    {
+  littleNavLinks: PropTypes.arrayOf(
+    PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       text: PropTypes.string,
-      subNavLinks: PropTypes.arrayOf(PropTypes.shape(
-        {
+      subNavLinks: PropTypes.arrayOf(
+        PropTypes.shape({
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
           text: PropTypes.string,
-        },
-      )),
-    },
-  )),
+        }),
+      ),
+    }),
+  ),
   // array of link objects to use in building the narrow nav
-  narrowNavLinks: PropTypes.arrayOf(PropTypes.shape(
-    {
+  narrowNavLinks: PropTypes.arrayOf(
+    PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       text: PropTypes.string,
-      subNavLinks: PropTypes.arrayOf(PropTypes.shape(
-        {
+      subNavLinks: PropTypes.arrayOf(
+        PropTypes.shape({
           text: PropTypes.string,
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        },
-      )),
-    },
-  )),
+        }),
+      ),
+    }),
+  ),
   // object containing an array of objects to use in building the narrow selector
   narrowSelector: PropTypes.shape({
     choiceFunction: PropTypes.func,
     footer: PropTypes.node,
-    items: PropTypes.arrayOf(PropTypes.shape({
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      information: PropTypes.string,
-      text: PropTypes.string,
-      title: PropTypes.string,
-      value: PropTypes.string,
-    })),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        information: PropTypes.string,
+        text: PropTypes.string,
+        title: PropTypes.string,
+        value: PropTypes.string,
+      }),
+    ),
   }),
   // object containing an array of objects to use in building the selector
   selector: PropTypes.shape({
     choiceFunction: PropTypes.func,
     footer: PropTypes.node,
-    items: PropTypes.arrayOf(PropTypes.shape({
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      information: PropTypes.string,
-      text: PropTypes.string,
-      title: PropTypes.string,
-      value: PropTypes.string,
-    })),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        information: PropTypes.string,
+        text: PropTypes.string,
+        title: PropTypes.string,
+        value: PropTypes.string,
+      }),
+    ),
   }),
   // expects a component to render the logo
   siteLogo: PropTypes.node,
@@ -190,15 +194,9 @@ SprkMasthead.propTypes = {
 };
 
 SprkMasthead.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  bigNavLinks: [],
-  idString: '',
   littleNavLinks: [],
   narrowNavLinks: [],
-  narrowSelector: {},
-  selector: {},
-  siteLogo: [],
+  bigNavLinks: [],
   utilityContents: [],
   variant: 'default',
 };

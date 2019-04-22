@@ -41,7 +41,9 @@ it('should not add height 100 on html if its already there', () => {
   document.documentElement.style.height = '100%';
   document.documentElement.setAttribute('class', '');
   mount(<SprkMasthead />, { attachTo: div });
-  expect(document.documentElement.classList.contains('sprk-u-Height--100')).toBe(false);
+  expect(
+    document.documentElement.classList.contains('sprk-u-Height--100'),
+  ).toBe(false);
 });
 
 it('should not add height 100 on body if its already there', () => {
@@ -60,7 +62,7 @@ it('should update state on scroll', () => {
   expect(wrapper.state().isScrolled).toBe(true);
 });
 
-it('should update state on scroll', () => {
+it('should update state on scroll to top', () => {
   const wrapper = mount(<SprkMasthead />);
   window.scrollY = 1;
   window.dispatchEvent(new Event('scroll'));
@@ -85,8 +87,10 @@ it('should render the little nav if only utilityContents are provided', () => {
   expect(wrapper.find(SprkMastheadLittleNav).length).toBe(1);
 });
 
-it('should set spacing appropriately', () => {
-  const wrapper = mount(<SprkMasthead littleNavLinks={[{ text: 'Hi' }]} variant="extended" />);
+it('should set spacing appropriately when variant is extended', () => {
+  const wrapper = mount(
+    <SprkMasthead littleNavLinks={[{ text: 'Hi' }]} variant="extended" />,
+  );
   expect(wrapper.find(SprkMastheadLittleNav).props().spacing).toBe('medium');
 });
 
