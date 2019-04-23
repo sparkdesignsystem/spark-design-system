@@ -126,8 +126,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
     activeClass,
   );
 
-  steps.forEach((stepLink, index) => {
-    stepLink.addEventListener('click', e => {
+  steps.forEach((step, index) => {
+    step.addEventListener('click', e => {
       e.preventDefault();
       resetTabs(steps, descriptions, activeClass);
       setActiveTab(steps[index], descriptions[index], activeClass);
@@ -139,7 +139,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
       }
     });
 
-    stepLink.addEventListener('keydown', event => {
+    step.addEventListener('keydown', event => {
       const keys = {
         end: 35,
         home: 36,
@@ -147,8 +147,9 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         right: 39,
         up: 38,
         down: 40,
-        tab: 9,
       };
+
+      console.log(event.keyCode);
 
       if (event.keyCode === keys.left || event.keyCode === keys.up) {
         event.preventDefault();

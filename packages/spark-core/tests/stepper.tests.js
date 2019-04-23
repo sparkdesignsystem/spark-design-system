@@ -1,7 +1,8 @@
 /* global document window beforeEach afterEach describe it */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { stepper, bindUIEvents } from '../components/stepper';
+import createElementFromString from './_createElementFromString';
+import { stepper } from '../components/stepper';
 
 describe('stepper init', () => {
   afterEach(() => {
@@ -17,123 +18,349 @@ describe('stepper init', () => {
   });
 });
 
-describe('steps UI Events tests', () => {
-  let stepContainer;
-  let step1;
-  let step1Trigger;
-  let step2;
-  let step2Trigger;
-  let step3;
-  let step3Trigger;
-  let panel1;
-  let panel2;
-  let panel3;
-  let carousel;
+describe('steps UI Events tests, (no descriptions)', () => {
+  let stepperContainer;
 
   beforeEach(() => {
-    stepContainer = document.createElement('ol');
-    stepContainer.classList.add('sprk-c-Stepper');
-    stepContainer.setAttribute('role', 'steplist');
-    stepContainer.setAttribute('data-sprk-stepper', 'container');
-    sinon.spy(stepContainer, 'addEventListener');
-    stepContainer.setAttribute('data-sprk-stepper-carousel', '1');
+    stepperContainer = createElementFromString(`
+    <ol
+      class="sprk-c-Stepper"
+      data-sprk-stepper="container"
+      data-id="stepper-1"
+      role="tablist"
+      aria-orientation="vertical">
+      <li
+        role="tab"
+        class="sprk-c-Stepper__step sprk-c-Stepper__step--first"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content">
+          <span
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading"
+              data-sprk-stepper="heading">
+              Step One
+            </h3>
+          </span>
+        </div>
+      </li>
 
-    step1 = document.createElement('div');
-    step1.setAttribute('data-sprk-stepper', 'step');
-    step1.classList.add('sprk-c-Stepper__step');
-    step1.classList.add('sprk-c-Stepper__step--selected');
+      <li
+        role="tab"
+        class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+        aria-selected="true"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content">
+          <span
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading"
+              data-sprk-stepper="heading">
+              Step Two
+            </h3>
+          </span>
+        </div>
+      </li>
 
-    carousel = document.createElement('div');
-
-    step1Trigger = document.createElement('a');
-    step1Trigger.setAttribute('role', 'tab');
-    step1Trigger.setAttribute('aria-selected', 'true');
-    step1Trigger.textContent = 'step 1';
-    sinon.spy(step1Trigger, 'addEventListener');
-    step1.append(step1Trigger);
-
-    step2 = document.createElement('div');
-    step2.setAttribute('data-sprk-stepper', 'step');
-    step2.classList.add('sprk-c-Stepper__step');
-    step2.classList.add('sprk-c-Stepper__step--selected');
-
-    step2Trigger = document.createElement('a');
-    step2Trigger.setAttribute('role', 'tab');
-    step2Trigger.setAttribute('aria-selected', 'true');
-    step2Trigger.textContent = 'step 2';
-    sinon.spy(step2Trigger, 'addEventListener');
-    step2.append(step2Trigger);
-
-    step3 = document.createElement('div');
-    step3.setAttribute('data-sprk-stepper', 'step');
-    step3.classList.add('sprk-c-Stepper__step');
-    step3.classList.add('sprk-c-Stepper__step--selected');
-
-    step3Trigger = document.createElement('a');
-    step3Trigger.setAttribute('role', 'tab');
-    step3Trigger.setAttribute('aria-selected', 'true');
-    step3Trigger.textContent = 'step 3';
-    sinon.spy(step3Trigger, 'addEventListener');
-    step3.append(step3Trigger);
-
-    panel1 = document.createElement('div');
-    panel1.classList.add('sprk-c-Stepper__description');
-    panel1.setAttribute('role', 'tabpanel');
-    panel1.setAttribute('tabindex', '0');
-    panel1.textContent = 'panel';
-
-    panel2 = document.createElement('div');
-    panel2.classList.add('sprk-c-Stepper__description');
-    panel2.setAttribute('role', 'tabpanel');
-    panel2.setAttribute('tabindex', '0');
-    panel2.textContent = 'panel';
-
-    panel3 = document.createElement('div');
-    panel3.classList.add('sprk-c-Stepper__description');
-    panel3.setAttribute('role', 'tabpanel');
-    panel3.setAttribute('tabindex', '0');
-    panel3.textContent = 'panel';
-
-    step1.appendChild(panel1);
-    step2.appendChild(panel2);
-    step3.appendChild(panel3);
-
-    stepContainer.appendChild(step1);
-    stepContainer.appendChild(step2);
-    stepContainer.appendChild(step3);
-    stepContainer.appendChild(carousel);
-
-    stepper();
-    bindUIEvents(stepContainer);
+      <li
+        role="tab"
+        class="sprk-c-Stepper__step sprk-c-Stepper__step--last"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content">
+          <span
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3 class="sprk-c-Stepper__step-heading"
+              data-sprk-stepper="heading">
+              Step Three
+            </h3>
+          </span>
+        </div>
+      </li>
+    </ol>
+    `);
+    document.body.appendChild(stepperContainer);
   });
 
   afterEach(() => {
     document.body.innerHTML = '';
-    step1Trigger.addEventListener.restore();
-    step2Trigger.addEventListener.restore();
-    step3Trigger.addEventListener.restore();
-    stepContainer.addEventListener.restore();
   });
 
-  // it('should bind the click event on each step', () => {
-  //   expect(step1Trigger.addEventListener.getCall(0).args[0]).eql('click');
-  //   expect(step2Trigger.addEventListener.getCall(0).args[0]).eql('click');
-  //   expect(step3Trigger.addEventListener.getCall(0).args[0]).eql('click');
-  // });
+  it('should not create slider element when there are no descriptions', () => {
+    stepper(stepperContainer);
+    const sliderEl = stepperContainer.querySelectorAll(
+      '.sprk-c-Stepper__slider',
+    )[0];
+    expect(sliderEl).eql(undefined);
+  });
 
   it('should select step when clicked', () => {
-    step1Trigger.click();
+    stepper(stepperContainer);
+    const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    step1.click();
     expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
       true,
     );
   });
 
   it('should focus next step when right arrow pressed', () => {
+    stepper(stepperContainer);
+    const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
     const event = new window.Event('keydown');
     event.keyCode = 39;
+    step3.dispatchEvent(event);
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+
+  it('should focus next step when down arrow pressed', () => {
+    stepper(stepperContainer);
+    const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 40;
+    step3.dispatchEvent(event);
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+
+  it('should focus last step when end key pressed', () => {
+    stepper(stepperContainer);
+    const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 35;
+    step3.dispatchEvent(event);
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+
+  it('should focus next step when left arrow pressed', () => {
+    stepper(stepperContainer);
+    const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 37;
+    step1.dispatchEvent(event);
     expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
       true,
     );
-    stepContainer.dispatchEvent(event);
   });
+
+  it('should focus next step when up arrow pressed', () => {
+    stepper(stepperContainer);
+    const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 38;
+    step1.dispatchEvent(event);
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+
+  it('should focus first step when home key pressed', () => {
+    stepper(stepperContainer);
+    const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 36;
+    step1.dispatchEvent(event);
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+});
+
+describe('steps UI Events tests, (descriptions)', () => {
+  let stepperContainer;
+
+  beforeEach(() => {
+    stepperContainer = createElementFromString(`
+    <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+      <ol
+        class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg"
+        data-sprk-stepper="container"
+        data-id="stepper-1"
+        role="tablist"
+        aria-orientation="vertical">
+        <li
+          role="tab"
+          aria-selected="true"
+          class="
+            sprk-c-Stepper__step
+            sprk-c-Stepper__step--selected
+            sprk-c-Stepper__step--first"
+          data-sprk-stepper="step">
+          <div
+            class="
+              sprk-c-Stepper__step-content
+              sprk-c-Stepper__step-content--has-description">
+            <span
+              class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              aria-controls="target-1"
+              id="step-1"
+              >
+              <span class="sprk-c-Stepper__step-icon"></span>
+              <h3
+                class="sprk-c-Stepper__step-heading"
+                data-sprk-stepper="heading">
+                Step One
+              </h3>
+            </span>
+
+            <div
+              class="sprk-c-Stepper__step-description"
+              data-sprk-stepper="description"
+              id="target-1"
+              aria-labelledby="step-1"
+              role="tabpanel">
+              <p class="sprk-b-TypeBodyTwo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li
+          role="tab"
+          class="sprk-c-Stepper__step"
+          data-sprk-stepper="step">
+          <div
+            class="
+              sprk-c-Stepper__step-content
+              sprk-c-Stepper__step-content--has-description">
+            <span
+              class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              aria-controls="target-2"
+              id="step-2">
+              <span class="sprk-c-Stepper__step-icon"></span>
+              <h3
+                class="sprk-c-Stepper__step-heading"
+                data-sprk-stepper="heading">
+                Step Two
+              </h3>
+            </span>
+
+            <div
+              class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+              data-sprk-stepper="description"
+              aria-labelledby="step-2"
+              id="target-2"
+              role="tabpanel">
+              <p class="sprk-b-TypeBodyTwo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li
+          role="tab"
+          class="sprk-c-Stepper__step"
+          data-sprk-stepper="step">
+          <div
+            class="
+              sprk-c-Stepper__step-content
+              sprk-c-Stepper__step-content--has-description">
+            <span
+              class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              aria-controls="target-3"
+              id="step-3">
+              <span class="sprk-c-Stepper__step-icon"></span>
+              <h3
+                class="sprk-c-Stepper__step-heading"
+                data-sprk-stepper="heading">
+                Step Three
+              </h3>
+            </span>
+
+            <div
+              class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+              data-sprk-stepper="description"
+              aria-labelledby="step-3"
+              ids="target-3"
+              role="tabpanel">
+              <p class="sprk-b-TypeBodyTwo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li
+          role="tab"
+          class="sprk-c-Stepper__step sprk-c-Stepper__step--last"
+          data-sprk-stepper="step">
+          <div
+            class="
+              sprk-c-Stepper__step-content
+              sprk-c-Stepper__step-content--has-description">
+            <span
+              class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              aria-controls="target-4"
+              id="step-4"
+              href="#">
+              <span class="sprk-c-Stepper__step-icon"></span>
+              <h3
+                class="sprk-c-Stepper__step-heading"
+                data-sprk-stepper="heading">
+                Step Four
+              </h3>
+            </span>
+
+            <div
+              class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
+              data-sprk-stepper="description"
+              aria-labelledby="step-4"
+              id="target-4"
+              role="tabpanel">
+              <p class="sprk-b-TypeBodyTwo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+`);
+    document.body.appendChild(stepperContainer);
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  // it('should create slider element when there are no descriptions', () => {
+  //   stepper(stepperContainer);
+  //   const sliderEl = stepperContainer.querySelectorAll(
+  //     '.sprk-c-Stepper__slider',
+  //   )[0];
+  //   console.log(stepperContainer.outerHTML);
+  //   expect(sliderEl).not.eql(undefined);
+  // });
 });
