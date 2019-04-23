@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SparkCarouselItemComponent } from './sprk-carousel-item.component';
 
-describe('SparkAccordionComponent', () => {
+describe('SparkCarouselItemComponent', () => {
   let component: SparkCarouselItemComponent;
   let fixture: ComponentFixture<SparkCarouselItemComponent>;
-  let accordionElement: HTMLElement;
+  let carouselElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -15,7 +15,7 @@ describe('SparkAccordionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkCarouselItemComponent);
     component = fixture.componentInstance;
-    accordionElement = fixture.nativeElement.querySelector('ul');
+    carouselElement = fixture.nativeElement.querySelector('ul');
   });
 
   it('should create itself', () => {

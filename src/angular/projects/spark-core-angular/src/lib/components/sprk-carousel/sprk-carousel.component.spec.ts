@@ -1,21 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SparkCarouselComponent } from './sprk-carousel.component';
 
-describe('SparkAccordionComponent', () => {
+describe('SparkCarouselComponent', () => {
   let component: SparkCarouselComponent;
   let fixture: ComponentFixture<SparkCarouselComponent>;
-  let accordionElement: HTMLElement;
+  let carouselElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkCarouselComponent]
+      declarations: [SparkCarouselComponent, SparkIconComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SparkCarouselComponent);
     component = fixture.componentInstance;
-    accordionElement = fixture.nativeElement.querySelector('ul');
+    carouselElement = fixture.nativeElement.querySelector('ul');
   });
 
   it('should create itself', () => {
