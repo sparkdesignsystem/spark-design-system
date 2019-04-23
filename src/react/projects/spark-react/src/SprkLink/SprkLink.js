@@ -10,8 +10,8 @@ const SprkLink = props => {
     additionalClasses,
     idString,
     analyticsString,
-    href,
     onClick,
+    href,
     ...other
   } = props;
   const TagName = element || 'a';
@@ -23,13 +23,23 @@ const SprkLink = props => {
     'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
   });
 
+  let link;
+  if (href) {
+    link = href;
+  } else if (TagName === 'a' || TagName === 'button') {
+    link = '#';
+  } else {
+    link = undefined;
+  }
+
   let clickEvent;
   function handleClick(e) {
     e.preventDefault();
   }
   if (onClick) {
     clickEvent = onClick;
-  } else if (!onClick && href === '#') {
+  } else if (!onClick && link === '#') {
+    console.log(element);
     clickEvent = handleClick;
   }
 
@@ -38,7 +48,7 @@ const SprkLink = props => {
       className={classNames}
       data-analytics={analyticsString}
       data-id={idString}
-      href={href}
+      href={link}
       onClick={clickEvent}
       {...other}
     >
@@ -68,14 +78,13 @@ SprkLink.propTypes = {
   // Url passed
   href: PropTypes.string,
   // The element that will be rendered
-  element: PropTypes.string,
+  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   // The event that will fire when the element is clicked
   onClick: PropTypes.func,
 };
 
 SprkLink.defaultProps = {
   variant: 'base',
-  href: '#',
 };
 
 export default SprkLink;
