@@ -26,7 +26,7 @@ const SprkLink = props => {
   let link;
   if (href) {
     link = href;
-  } else if (TagName === 'a' || TagName === 'button') {
+  } else if (TagName === 'a' && !href) {
     link = '#';
   } else {
     link = undefined;
