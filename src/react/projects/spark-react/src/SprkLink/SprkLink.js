@@ -39,7 +39,6 @@ const SprkLink = props => {
   if (onClick) {
     clickEvent = onClick;
   } else if (!onClick && link === '#') {
-    console.log(element);
     clickEvent = handleClick;
   }
 
