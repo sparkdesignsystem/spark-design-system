@@ -327,7 +327,7 @@ describe('setActive tab tests', () => {
 
     panel1 = document.createElement('div');
     panel1.classList.add('sprk-c-Tabs__button');
-    panel1.classList.add('sprk-u-HideWhenJse');
+    panel1.classList.add('sprk-u-HideWhenJs');
     panel1.setAttribute('role', 'tabpanel');
 
     tabContainer.appendChild(tab1);
