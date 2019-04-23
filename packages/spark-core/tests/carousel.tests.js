@@ -91,7 +91,7 @@ describe('Carousel tests', () => {
 
   it('clicking a dot should end up with a call to slideTo()', () => {
     const dotContainer = document.createElement('ul');
-    const dot = document.createElement('li');
+    const dot = document.createElement('button');
     dotContainer.appendChild(dot);
     const instance = {
       slideTo: () => {},

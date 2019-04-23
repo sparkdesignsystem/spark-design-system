@@ -88,6 +88,10 @@
   position: relative;
 }
 
+.sprk-c-Stepper__step:focus {
+  outline: 0;
+}
+
 .sprk-c-Stepper__step::before {
   background-color: $sprk-stepper-bar-color;
   content: '';
