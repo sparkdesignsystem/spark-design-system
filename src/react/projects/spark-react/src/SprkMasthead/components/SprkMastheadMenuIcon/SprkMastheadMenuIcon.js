@@ -3,15 +3,27 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function SprkMastheadMenuIcon({
-  additionalClasses, analyticsString, idString, isOpen, toggleNarrowNav,
+  additionalClasses,
+  analyticsString,
+  idString,
+  isOpen,
+  toggleNarrowNav,
 }) {
   return (
     <div
-      className={classNames('sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs', additionalClasses)}
+      className={classNames(
+        'sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs',
+        additionalClasses,
+      )}
       data-analytics={analyticsString}
       data-id={idString}
     >
-      <button onClick={toggleNarrowNav} className="sprk-c-Menu" type="button" aria-expanded={isOpen ? 'true' : 'false'}>
+      <button
+        onClick={toggleNarrowNav}
+        className="sprk-c-Menu"
+        type="button"
+        aria-expanded={isOpen ? 'true' : 'false'}
+      >
         <span className="sprk-u-ScreenReaderText">Toggle Navigation</span>
         <svg
           className={classNames(
@@ -25,14 +37,22 @@ function SprkMastheadMenuIcon({
           xmlns="http://www.w3.org/2000/svg"
         >
           <g>
-            <path className="sprk-c-Menu__line sprk-c-Menu__line--two" d="m8 32h48" />
-            <path className="sprk-c-Menu__line sprk-c-Menu__line--one" d="m8 18.68h48" />
-            <path className="sprk-c-Menu__line sprk-c-Menu__line--three" d="m8 45.32h48" />
+            <path
+              className="sprk-c-Menu__line sprk-c-Menu__line--two"
+              d="m8 32h48"
+            />
+            <path
+              className="sprk-c-Menu__line sprk-c-Menu__line--one"
+              d="m8 18.68h48"
+            />
+            <path
+              className="sprk-c-Menu__line sprk-c-Menu__line--three"
+              d="m8 45.32h48"
+            />
           </g>
         </svg>
       </button>
     </div>
-
   );
 }
 

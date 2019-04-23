@@ -21,6 +21,12 @@ it('should render the nav if isOpen is true', () => {
 
 it('should render the selector if selector (and items) are defined', () => {
   const links = [{ text: 'Item 1' }];
-  const wrapper = mount(<SprkMastheadNarrowNav isOpen links={links} selector={{ items: [{ text: 'Item 1' }] }} />);
+  const wrapper = mount(
+    <SprkMastheadNarrowNav
+      isOpen
+      links={links}
+      selector={{ items: [{ text: 'Item 1' }] }}
+    />,
+  );
   expect(wrapper.find(SprkMastheadSelector).length).toBe(1);
 });

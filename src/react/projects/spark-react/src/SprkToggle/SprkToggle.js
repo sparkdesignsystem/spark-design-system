@@ -3,6 +3,7 @@ import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SprkIcon from '../SprkIcon/SprkIcon';
+import SprkLink from '../SprkLink/SprkLink';
 
 class SprkToggle extends Component {
   constructor(props) {
@@ -49,16 +50,15 @@ class SprkToggle extends Component {
 
     return (
       <div data-id={idString} {...other} className={additionalClasses}>
-        <a
-          className={titleClassNames}
-          href="#nogo"
+        <SprkLink
+          additionalClasses={titleClassNames}
           data-analytics={analyticsString}
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
           {title}
-        </a>
+        </SprkLink>
         <AnimateHeight duration={300} height={height}>
           <div>{children}</div>
         </AnimateHeight>
@@ -68,11 +68,6 @@ class SprkToggle extends Component {
 }
 
 SprkToggle.defaultProps = {
-  idString: '',
-  additionalClasses: '',
-  analyticsString: '',
-  titleAddClasses: '',
-  iconAddClasses: '',
   toggleIconName: 'chevron-down-circle-two-color',
 };
 

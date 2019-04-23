@@ -18,7 +18,9 @@ it('should render the element as an anchor when the element prop is a', () => {
 
 it('should display a button element with correct classes when variant is secondary', () => {
   const wrapper = shallow(<SprkButton variant="secondary" />);
-  expect(wrapper.find('button').hasClass('sprk-c-Button--secondary')).toBe(true);
+  expect(wrapper.find('button').hasClass('sprk-c-Button--secondary')).toBe(
+    true,
+  );
 });
 
 it('should display a button element with correct classes when variant is tertiary', () => {
@@ -54,4 +56,15 @@ it('should add data-analytics if analyticsString is supplied', () => {
 it('should apply any unknown props as attributes on the element', () => {
   const wrapper = shallow(<SprkButton aria-labelledby="label-1" />);
   expect(wrapper.find('button[aria-labelledby="label-1"]').length).toBe(1);
+});
+
+it('should render an anchor tag if an href is provided and no element is', () => {
+  const wrapper = shallow(<SprkButton href="#" />);
+  expect(wrapper.find('a[href="#"]').length).toBe(1);
+});
+
+it('should not render an href if one is provided and element is set to "button"', () => {
+  const wrapper = shallow(<SprkButton href="#" element="button" />);
+  expect(wrapper.find('button[href="#"]').length).toBe(0);
+  expect(wrapper.find('button').length).toBe(1);
 });

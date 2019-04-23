@@ -5,44 +5,90 @@ import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer
 
 const SprkLinkDocs = () => (
   <CentralColumnLayout>
+    <h2 className="drizzle-b-h2">Links</h2>
     <ExampleContainer>
-      <SprkLink href="#nogo" id="foo">
-        Base Link
-      </SprkLink>
+      <SprkLink href="/">This is a standard Spark Link!</SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink variant="simple" href="/button" idString="simple-link">
+      <p>
+        Here is a
+        <SprkLink href="/"> link </SprkLink>
+        in the middle of a line.
+      </p>
+    </ExampleContainer>
+
+    <ExampleContainer>
+      <SprkLink variant="unstyled">Unstyled Link</SprkLink>
+    </ExampleContainer>
+
+    <ExampleContainer>
+      <SprkLink variant="simple" idString="simple-link">
         Simple Link
       </SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink
-        variant="has-icon"
-        target="_blank"
-        href="#nogo"
-        analyticsString="foo"
-      >
+      <SprkLink variant="plain">Plain Link</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">External Links</h2>
+    <ExampleContainer>
+      <SprkLink id="foo" href="https://google.com" target="_blank">https://google.com</SprkLink>
+    </ExampleContainer>
+
+    <ExampleContainer>
+      <SprkLink id="foo" href="https://google.com" target="_blank">http://google.com</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Same Page Links</h2>
+    <ExampleContainer>
+      <SprkLink href="#info">Jump Link</SprkLink>
+    </ExampleContainer>
+
+    <ExampleContainer>
+      <SprkLink href="/button#jumpLinkTarget">Jump Link with Page</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Link with no href provided</h2>
+    <ExampleContainer>
+      <SprkLink>No href provided.</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Link Using Tel</h2>
+    <ExampleContainer>
+      <SprkLink href="tel:+123456789">Tel Link</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Link Using mailto</h2>
+    <ExampleContainer>
+      <SprkLink href="mailto:example@example.com">mailto Link</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Additional Classes</h2>
+    <ExampleContainer>
+      <SprkLink additionalClasses="sprk-u-mbm">
+        Link with Margin Bottom class
+      </SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Disabled Link</h2>
+    <ExampleContainer>
+      <SprkLink variant="disabled">Disabled Link</SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">Icon With Text Link</h2>
+    <ExampleContainer>
+      <SprkLink variant="has-icon" target="_blank" analyticsString="foo">
         <SprkIcon
           additionalClasses="sprk-c-Icon--xl"
           iconName="communication"
         />
-        Icon With Text Link
+        Message Us
       </SprkLink>
     </ExampleContainer>
 
-    <ExampleContainer>
-      <SprkLink variant="disabled" href="#nogo">
-        Disabled Link
-      </SprkLink>
-    </ExampleContainer>
-
-    <ExampleContainer>
-      <SprkLink variant="plain" additionalClasses="foo" href="#nogo">
-        Plain Link
-      </SprkLink>
-    </ExampleContainer>
+    <div id="info">Hi, I'm info!</div>
   </CentralColumnLayout>
 );
 

@@ -50,3 +50,5 @@ variableTable:
 classTable:
   .sprk-c-Card--standout:
     description: Use on cards that you would like to standout from the rest.
+  .sprk-c-Card--full:
+    description: Sets `max-width` to 100%, allowing card to fill entire width of it's container. Best used with base cards 

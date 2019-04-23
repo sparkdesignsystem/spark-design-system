@@ -14,13 +14,17 @@ it('should render an element with the correct class', () => {
 
 it('should add classes when additionalClasses has a value', () => {
   const links = [{ text: 'Item 1' }];
-  const wrapper = mount(<SprkMastheadBigNav links={links} additionalClasses="sprk-u-man" />);
+  const wrapper = mount(
+    <SprkMastheadBigNav links={links} additionalClasses="sprk-u-man" />,
+  );
   expect(wrapper.find('.sprk-c-Masthead__big-nav.sprk-u-man').length).toBe(1);
 });
 
 it('should assign data-analytics when analyticsString has a value', () => {
   const links = [{ text: 'Item 1' }];
-  const wrapper = mount(<SprkMastheadBigNav links={links} analyticsString="321" />);
+  const wrapper = mount(
+    <SprkMastheadBigNav links={links} analyticsString="321" />,
+  );
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
