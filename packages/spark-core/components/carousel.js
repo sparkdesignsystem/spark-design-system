@@ -2,17 +2,22 @@ import { lory } from 'lory.js';
 
 const beforeLoryInit = (dotContainer, count) => {
   if (!dotContainer) return;
-  const dotListItem = document.createElement('li');
+  const dotListItem = document.createElement('button');
   dotListItem.classList.add('sprk-c-Carousel__dot');
   for (let i = 0; i < count; i += 1) {
-    dotContainer.appendChild(dotListItem.cloneNode());
+    const dot = dotListItem.cloneNode();
+    const srt = document.createElement('span');
+    srt.classList.add('sprk-u-ScreenReaderText');
+    srt.textContent = `Slide ${i + 1}`;
+    dot.appendChild(srt);
+    dotContainer.appendChild(dot);
   }
   dotContainer.childNodes[0].classList.add('sprk-c-Carousel__dot--active');
 };
 
 const afterLoryInit = (dotContainer, carouselInstance) => {
   if (dotContainer) {
-    const dots = dotContainer.querySelectorAll('li');
+    const dots = dotContainer.querySelectorAll('button');
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         carouselInstance.slideTo(index);
@@ -23,7 +28,7 @@ const afterLoryInit = (dotContainer, carouselInstance) => {
 
 const afterLorySlide = (dotContainer, item, event) => {
   if (!dotContainer) return;
-  const dots = dotContainer.querySelectorAll('li');
+  const dots = dotContainer.querySelectorAll('button');
   dots.forEach(dot => {
     dot.classList.remove('sprk-c-Carousel__dot--active');
   });

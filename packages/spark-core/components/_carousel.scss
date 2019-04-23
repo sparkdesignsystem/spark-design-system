@@ -23,6 +23,8 @@
 
 .sprk-c-Carousel__prev,
 .sprk-c-Carousel__next {
+  background: none;
+  border: none;
   display: block;
   cursor: pointer;
   color: $sprk-carousel-arrow-color;
@@ -51,12 +53,14 @@
 }
 
 .sprk-c-Carousel__dot {
+  background: none;
   border-radius: 50%;
   border: $sprk-carousel-dot-border;
   cursor: pointer;
   display: block;
   height: $sprk-carousel-dot-height;
   margin-right: $sprk-carousel-dot-spacing;
+  padding: 0;
   width: $sprk-carousel-dot-width;
 }
 

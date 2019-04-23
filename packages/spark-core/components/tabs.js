@@ -3,6 +3,7 @@ import getElements from '../utilities/getElements';
 const resetTabs = (tabs, tabpanels, activeClass) => {
   tabs.forEach(tab => {
     tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
+    tab.removeAttribute('tabindex');
     tab.setAttribute('aria-selected', 'false');
     tabpanels.forEach(panel => {
       panel.classList.add('sprk-u-HideWhenJs');
@@ -12,6 +13,7 @@ const resetTabs = (tabs, tabpanels, activeClass) => {
 
 const setActiveTab = (tab, tabpanel, activeClass) => {
   tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
+  tab.setAttribute('tabindex', '0');
   tab.setAttribute('aria-selected', 'true');
   if (tabpanel) {
     tabpanel.classList.remove('sprk-u-HideWhenJs');

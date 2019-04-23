@@ -7,11 +7,12 @@ name: Stepper with Carousel
       <div class="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
         <div class="sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column">
 
-          <span class="sprk-c-Carousel__prev sprk-o-Stack__item">
+          <button class="sprk-c-Carousel__prev sprk-o-Stack__item">
+            <span class="sprk-u-ScreenReaderText">Previous Slide</span>
             <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 100 100">
               <use xlink:href="#chevron-left-circle" />
             </svg>
-          </span>
+          </button>
 
           <div class="sprk-c-Carousel__frame">
             <ul class="sprk-c-Carousel__slides">
@@ -28,14 +29,15 @@ name: Stepper with Carousel
                 <img src="../../../assets/toolkit/images/phone-shadow.png" alt="Cell phone with a blank screen.">
               </li>
             </ul>
-            <ul class="sprk-c-Carousel__dots" data-sprk-carousel-dots="stepper-carousel-01"></ul>
+            <div class="sprk-c-Carousel__dots" data-sprk-carousel-dots="stepper-carousel-01"></div>
           </div>
 
-          <span class="sprk-c-Carousel__next sprk-o-Stack__item">
+          <button class="sprk-c-Carousel__next sprk-o-Stack__item">
+            <span class="sprk-u-ScreenReaderText">Next Slide</span>
             <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 100 100">
               <use xlink:href="#chevron-right-circle" />
             </svg>
-          </span>
+          </button>
 
         </div>
       </div>
@@ -54,7 +56,6 @@ name: Stepper with Carousel
         aria-selected="true"
         aria-orientation="vertical">
         <li
-          tabindex="0"
           role="tab"
           class="sprk-c-Stepper__step sprk-c-Stepper__step--selected sprk-c-Stepper__step--first"
           data-sprk-stepper="step">
@@ -76,7 +77,6 @@ name: Stepper with Carousel
               data-sprk-stepper="description"
               id="target-1"
               aria-labelledby="step-1"
-              tabindex="0"
               role="tabpanel">
               <p class="sprk-b-TypeBodyTwo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -109,7 +109,6 @@ name: Stepper with Carousel
               data-sprk-stepper="description"
               aria-labelledby="step-2"
               id="target-2"
-              tabindex="0"
               role="tabpanel">
               <p class="sprk-b-TypeBodyTwo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -141,7 +140,6 @@ name: Stepper with Carousel
               data-sprk-stepper="description"
               aria-labelledby="step-3"
               ids="target-3"
-              tabindex="0"
               role="tabpanel">
               <p class="sprk-b-TypeBodyTwo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -173,7 +171,6 @@ name: Stepper with Carousel
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
               data-sprk-stepper="description"
               aria-labelledby="step-4"
-              tabindex="0"
               id="target-4"
               role="tabpanel">
               <p class="sprk-b-TypeBodyTwo">

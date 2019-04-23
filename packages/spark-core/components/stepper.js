@@ -104,6 +104,28 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
     stepContainer.prepend(sliderEl);
   }
 
+  // set the active tab
+  let indexOfActiveStep;
+  steps.forEach((step, index) => {
+    if (step.classList.contains('sprk-c-Stepper__step--selected')) {
+      indexOfActiveStep = index;
+    }
+  });
+
+  setActiveTab(
+    steps[indexOfActiveStep],
+    descriptions[indexOfActiveStep],
+    activeClass,
+    sliderEl,
+  );
+  resetSlider(steps, activeClass, sliderEl);
+  positionSlider(
+    steps[indexOfActiveStep],
+    descriptions[indexOfActiveStep],
+    sliderEl,
+    activeClass,
+  );
+
   steps.forEach((stepLink, index) => {
     stepLink.addEventListener('click', e => {
       e.preventDefault();
@@ -123,6 +145,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         home: 36,
         left: 37,
         right: 39,
+        up: 38,
+        down: 40,
         tab: 9,
       };
 
@@ -133,7 +157,9 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         event.preventDefault();
         advanceTab(steps, descriptions, activeClass);
       } else if (event.keyCode === keys.tab) {
-        // decide what to do
+        // advanceTab(steps, descriptions, activeClass);
+      } else if (event.keyCode === keys.tab && event.shiftKey) {
+        // retreatTab(steps, descriptions, activeClass);
       } else if (event.keyCode === keys.home) {
         resetTabs(steps, descriptions, activeClass);
         setActiveTab(steps[0], descriptions[0], activeClass);
