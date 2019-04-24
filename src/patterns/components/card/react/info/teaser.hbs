@@ -1,5 +1,5 @@
 <p>
-  All available proptypes for base card can apply to teaser cards.
+  All available proptypes for base card can apply to teaser cards except for additionaContentClasses.
 </p>
 <p class="sprk-u-mbm">
   See below for available customization options:
@@ -26,30 +26,43 @@
       </td>
       <td>
         Expects an object of configurations that populate the
-        content of SprkCard teaser.
+        content of SprkCard teaser. See below for teaserConfig's object details.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">
+  Here are the expected objects for <span class="sprk-u-FontWeight--bold">teaserConfig</span>
+</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">
+        teaserConfig
+      </td>
+      <td>
+        object
+      </td>
+      <td>
+        Expects an object of configurations that populate the
+        content of SprkCard teaser. See below for teaser object
+        details.
       </td>
     </tr>
     <tr>
-      <td class="sprk-u-FontWeight--bold sprk-u-pll">
-        <svg class="sprk-c-Icon  sprk-c-Icon--m sprk-u-mrs"
-          viewBox="0 0 100 100">
-          <use xlink:href="#chevron-right" />
-        </svg>
-        bodyText
-      </td>
-      <td>
-        string
-      </td>
-      <td>
-        Expects a string that will populate the teaser card's body text. This is a configuration of teaserConfig.
-      </td>
-    </tr>
-    <tr>
-      <td class="sprk-u-FontWeight--bold sprk-u-pll">
-        <svg class="sprk-c-Icon  sprk-c-Icon--m sprk-u-mrs"
-          viewBox="0 0 100 100">
-          <use xlink:href="#chevron-right" />
-        </svg>
+      <td class="sprk-u-FontWeight--bold">
         cta
       </td>
       <td>
@@ -57,7 +70,8 @@
       </td>
       <td>
         <p class="sprk-u-mbm">
-          Expects an object that configures the call-to-action of a teaser card.
+          Expects an object that configures the call-to-action of
+          a teaser card.
         </p>
         <p class="sprk-u-mbs">
           Expects the following items:
@@ -85,11 +99,7 @@
       </td>
     </tr>
     <tr>
-      <td class="sprk-u-FontWeight--bold sprk-u-pll">
-        <svg class="sprk-c-Icon  sprk-c-Icon--m sprk-u-mrs"
-          viewBox="0 0 100 100">
-          <use xlink:href="#chevron-right" />
-        </svg>
+      <td class="sprk-u-FontWeight--bold">
         media
       </td>
       <td>
@@ -97,7 +107,8 @@
       </td>
       <td>
         <p class="sprk-u-mbm">
-          Expects an object that configures the main media of a teaser card.
+          Expects an object that configures the main media of a
+          teaser card.
         </p>
         <p class="sprk-u-mbs">
           Expects the following items:
@@ -131,31 +142,29 @@
       </td>
     </tr>
     <tr>
-      <td class="sprk-u-FontWeight--bold sprk-u-pll">
-        <svg class="sprk-c-Icon  sprk-c-Icon--m sprk-u-mrs" viewBox="0 0 100 100">
-          <use xlink:href="#chevron-right" />
-        </svg>
+      <td class="sprk-u-FontWeight--bold">
         title
       </td>
       <td>
         string
       </td>
       <td>
-        Expects a string that will show up as the main headline of the teaserCard. This is a configuration of teaserConfig.
+        Expects a string that will show up as the main headline
+        of the teaserCard. This is a configuration of
+        teaserConfig.
       </td>
     </tr>
     <tr>
-      <td class="sprk-u-FontWeight--bold sprk-u-pll">
-        <svg class="sprk-c-Icon  sprk-c-Icon--m sprk-u-mrs" viewBox="0 0 100 100">
-          <use xlink:href="#chevron-right" />
-        </svg>
+      <td class="sprk-u-FontWeight--bold">
         titleFirst
       </td>
       <td>
         boolean
       </td>
       <td>
-        Expects a boolean that will determine if the teaser card's title is at the top or below the main media. This is a configuration of teaserConfig.
+        Expects a boolean that will determine if the teaser
+        card's title is at the top or below the main media. This
+        is a configuration of teaserConfig.
       </td>
     </tr>
   </tbody>
