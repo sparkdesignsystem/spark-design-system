@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SprkLink, SprkIcon } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
@@ -34,11 +35,15 @@ const SprkLinkDocs = () => (
 
     <h2 className="drizzle-b-h2">External Links</h2>
     <ExampleContainer>
-      <SprkLink id="foo" href="https://google.com" target="_blank">https://google.com</SprkLink>
+      <SprkLink id="foo" href="https://google.com" target="_blank">
+        https://google.com
+      </SprkLink>
     </ExampleContainer>
 
     <ExampleContainer>
-      <SprkLink id="foo" href="https://google.com" target="_blank">http://google.com</SprkLink>
+      <SprkLink id="foo" href="https://google.com" target="_blank">
+        http://google.com
+      </SprkLink>
     </ExampleContainer>
 
     <h2 className="drizzle-b-h2">Same Page Links</h2>
@@ -85,6 +90,13 @@ const SprkLinkDocs = () => (
           iconName="communication"
         />
         Message Us
+      </SprkLink>
+    </ExampleContainer>
+
+    <h2 className="drizzle-b-h2">React Router Link</h2>
+    <ExampleContainer>
+      <SprkLink element={Link} to='/button'>
+        To Button
       </SprkLink>
     </ExampleContainer>
 

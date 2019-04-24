@@ -1,11 +1,14 @@
 /* global it expect window document Event */
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMasthead from './SprkMasthead';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
+import SprkLink from '../SprkLink/SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -112,4 +115,22 @@ it('should render LittleNav if littleNavlinks is present', () => {
 it('should render NarrowNav if narrowNavlinks is present', () => {
   const wrapper = mount(<SprkMasthead narrowNavLinks={[{ text: 'Hi' }]} />);
   expect(wrapper.find(SprkMastheadNarrowNav).length).toBe(1);
+});
+
+it('should render the correct logoLink if logoLinkElement is an anchor', () => {
+  const wrapper = mount(
+    <SprkMasthead logoLinkElement="a" logoLink="https://google.com" />,
+  );
+  expect(wrapper.find(SprkLink).props().href).toBe('https://google.com');
+  expect(wrapper.find(SprkLink).props().element).toBe('a');
+});
+
+it('should render the correct logoLink if logoLinkElement is router link', () => {
+  const wrapper = mount(
+    <Router>
+      <SprkMasthead logoLinkElement={Link} logoLink="/button" />
+    </Router>,
+  );
+  expect(wrapper.find(SprkLink).props().to).toBe('/button');
+  expect(wrapper.find(SprkLink).props().element).toBe(Link);
 });

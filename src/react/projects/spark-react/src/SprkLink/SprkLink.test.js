@@ -1,5 +1,6 @@
 /* global it, expect, jest */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkLink from './SprkLink';
@@ -55,4 +56,9 @@ it('should prevent default when no href is provided', () => {
     },
   });
   expect(prevented).toBe(true);
+});
+
+it('should not render an href if none is provided and element passed is a router link', () => {
+  const wrapper = shallow(<SprkLink element={Link} to="button" />);
+  expect(wrapper.find('a[href="#"]').length).toBe(0);
 });
