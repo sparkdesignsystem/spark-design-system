@@ -12,17 +12,15 @@ class CloseButton extends Component {
   }
 
   focusButton() {
-    // Apply focus to the button element. The button should receive focus when the
-    // modal becomes visible (not necessarily when it renders or updates), and
-    // only in the info variant.
+    // Apply focus to the button element. The button should receive focus
+    // when the modal becomes visible (not necessarily when it
+    // renders or updates), and only in the info variant.
 
     this.buttonRef.current.focus();
   }
 
   render() {
-    const {
-      clickAction,
-    } = this.props;
+    const { clickAction, iconName } = this.props;
 
     return (
       <button
@@ -30,12 +28,11 @@ class CloseButton extends Component {
         type="button"
         aria-label="Click to close this modal"
         onClick={clickAction}
-
         ref={this.buttonRef}
       >
         <SprkIcon
           icontype="close"
-          iconName="close"
+          iconName={iconName}
           additionalClasses="sprk-c-Icon--stroke-current-color"
         />
       </button>
@@ -46,10 +43,13 @@ class CloseButton extends Component {
 CloseButton.propTypes = {
   // function to call when the button is clicked
   clickAction: PropTypes.func,
+  // the icon name to render the close icon
+  iconName: PropTypes.string,
 };
 
 CloseButton.defaultProps = {
   clickAction: noop,
+  iconName: 'close',
 };
 
 export default CloseButton;

@@ -82,7 +82,7 @@ class SprkModal extends Component {
       switch (variant) {
         case 'choice':
           // focus the confirm button
-          if (this.footerRef.current){
+          if (this.footerRef.current) {
             this.footerRef.current.focusConfirm();
           }
           break;
@@ -122,7 +122,9 @@ class SprkModal extends Component {
     const { isVisible, variant } = this.props;
 
     // Return if there is no open modal
-    if (!isVisible) { return; }
+    if (!isVisible) {
+      return;
+    }
 
     const focusableEls = getFocusableEls(this.containerRef.current);
     const firstFocusableEl = focusableEls[0];
@@ -177,10 +179,13 @@ class SprkModal extends Component {
       confirmClick,
       cancelClick,
       shouldReturnFocusOnClose,
+      closeIcon,
       ...rest
     } = this.props;
 
-    if (!isVisible) { return (null); }
+    if (!isVisible) {
+      return null;
+    }
 
     const isWait = variant === 'wait';
     const isChoice = variant === 'choice';
@@ -190,12 +195,11 @@ class SprkModal extends Component {
     return (
       <React.Fragment>
         <div
-          className={
-            classnames(
-              'sprk-c-Modal',
-              isWait ? 'sprk-c-Modal--wait' : '',
-              additionalClasses,
-            )}
+          className={classnames(
+            'sprk-c-Modal',
+            isWait ? 'sprk-c-Modal--wait' : '',
+            additionalClasses,
+          )}
           role="dialog"
           aria-modal="true"
           aria-labelledby={'modalHeading_' + this.aria_id}
@@ -216,14 +220,27 @@ class SprkModal extends Component {
                 {title}
               </h2>
 
-              {!isWait && <CloseButton clickAction={this.cancel} ref={this.closeButtonRef} />}
+              {!isWait && (
+                <CloseButton
+                  clickAction={this.cancel}
+                  ref={this.closeButtonRef}
+                  iconName={closeIcon}
+                />
+              )}
             </header>
 
             <div>
-              <div className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium" id={'modalContent_' + this.aria_id}>
-                {isWait
-                && <SprkSpinner size="large" lightness="dark" additionalClasses="sprk-o-Stack__item" />
-                }
+              <div
+                className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+                id={'modalContent_' + this.aria_id}
+              >
+                {isWait && (
+                  <SprkSpinner
+                    size="large"
+                    lightness="dark"
+                    additionalClasses="sprk-o-Stack__item"
+                  />
+                )}
                 <div className="sprk-b-TypeBodyTwo">
                   {children}
                 </div>
@@ -272,6 +289,8 @@ SprkModal.propTypes = {
   analyticsString: PropTypes.string,
   // mapped to data-id for testing purposes
   idString: PropTypes.string,
+  // the icon name to render the close icon
+  closeIcon: PropTypes.string,
 };
 
 SprkModal.defaultProps = {
