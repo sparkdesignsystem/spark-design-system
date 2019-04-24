@@ -237,4 +237,10 @@ SprkPromo.propTypes = {
   hasBorder: PropTypes.bool,
 };
 
+SprkPromo.defaultProps = {
+  isFlag: false,
+  mediaRev: false,
+  hasBorder: false,
+};
+
 export default SprkPromo;
