@@ -39,17 +39,20 @@ class SprkMastheadSelector extends Component {
 
   closeOnEsc(e) {
     if (e.key === 'Escape') {
+      e.preventDefault();
       this.closeDropdown();
     }
   }
 
   closeOnClickOutside(e) {
     if (!this.dropdownRef.current.contains(e.target)) {
+      e.preventDefault();
       this.closeDropdown();
     }
   }
 
-  openDropdown() {
+  openDropdown(e) {
+    e.preventDefault();
     this.setState({
       isOpen: true,
     });
