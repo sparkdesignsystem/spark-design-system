@@ -20,7 +20,7 @@ class CloseButton extends Component {
   }
 
   render() {
-    const { clickAction, iconName } = this.props;
+    const { clickAction, iconName, analyticsString } = this.props;
 
     return (
       <button
@@ -29,6 +29,7 @@ class CloseButton extends Component {
         aria-label="Click to close this modal"
         onClick={clickAction}
         ref={this.buttonRef}
+        data-analytics={analyticsString}
       >
         <SprkIcon
           icontype="close"
@@ -45,6 +46,8 @@ CloseButton.propTypes = {
   clickAction: PropTypes.func,
   // the icon name to render the close icon
   iconName: PropTypes.string,
+  // the string rendered for data-analytics
+  analyticsString: PropTypes.string,
 };
 
 CloseButton.defaultProps = {

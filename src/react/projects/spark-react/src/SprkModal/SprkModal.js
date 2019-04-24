@@ -180,6 +180,7 @@ class SprkModal extends Component {
       cancelClick,
       shouldReturnFocusOnClose,
       closeIcon,
+      closeAnalyticsString,
       ...rest
     } = this.props;
 
@@ -225,6 +226,7 @@ class SprkModal extends Component {
                   clickAction={this.cancel}
                   ref={this.closeButtonRef}
                   iconName={closeIcon}
+                  analyticsString={closeAnalyticsString}
                 />
               )}
             </header>
@@ -291,6 +293,8 @@ SprkModal.propTypes = {
   idString: PropTypes.string,
   // the icon name to render the close icon
   closeIcon: PropTypes.string,
+  // the string to pass to the CloseButton as analyticsString
+  closeAnalyticsString: PropTypes.string,
 };
 
 SprkModal.defaultProps = {
