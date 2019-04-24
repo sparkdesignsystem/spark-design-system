@@ -55,7 +55,8 @@ class SprkDropdown extends Component {
     });
   }
 
-  toggleDropdownOpen() {
+  toggleDropdownOpen(e) {
+    e.preventDefault();
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
     }));
