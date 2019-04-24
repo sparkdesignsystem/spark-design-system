@@ -58,31 +58,24 @@ const SprkCardDocs = () => {
     <CentralColumnLayout>
       <ExampleContainer>
         <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">Base Card</h3>
-        <SprkCard>
-          <div
-            className="
-              sprk-o-Stack__item
-              sprk-c-Card__content
-              sprk-o-Stack
-              sprk-o-Stack--large"
-          >
-            Base Card Content
-          </div>
+        <SprkCard
+          additionalContentClasses="
+            sprk-o-Stack
+            sprk-o-Stack--large"
+        >
+          Base Card Content
         </SprkCard>
       </ExampleContainer>
 
       <ExampleContainer>
         <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">Standout Card</h3>
-        <SprkCard isStandout>
-          <div
-            className="
-              sprk-o-Stack__item
-              sprk-c-Card__content
-              sprk-o-Stack
-              sprk-o-Stack--medium"
-          >
-            Standout Card Content
-          </div>
+        <SprkCard
+          isStandout
+          additionalContentClasses="
+            sprk-o-Stack
+            sprk-o-Stack--medium"
+        >
+          Standout Card Content
         </SprkCard>
       </ExampleContainer>
 

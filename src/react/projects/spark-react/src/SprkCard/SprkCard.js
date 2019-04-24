@@ -8,6 +8,7 @@ import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
 const SprkCard = props => {
   const {
     additionalClasses,
+    additionalContentClasses,
     children,
     highlightedHeaderConfig,
     idString,
@@ -50,7 +51,16 @@ const SprkCard = props => {
       return <SprkCardTeaser teaserConfig={teaserConfig} />;
     }
 
-    return <React.Fragment>{children}</React.Fragment>;
+    return (
+      <div
+        className={cx(
+          'sprk-c-Card__content sprk-o-Stack__item',
+          additionalContentClasses,
+        )}
+      >
+        {children}
+      </div>
+    );
   };
 
   return (
@@ -68,6 +78,7 @@ const SprkCard = props => {
 
 SprkCard.propTypes = {
   additionalClasses: PropTypes.string,
+  additionalContentClasses: PropTypes.string,
   children: PropTypes.node,
   highlightedHeaderConfig: PropTypes.shape({
     // Text inside of highlighted card
