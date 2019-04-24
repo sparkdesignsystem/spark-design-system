@@ -182,6 +182,8 @@ class SprkModal extends Component {
       closeIcon,
       closeAnalyticsString,
       maskAnalyticsString,
+      confirmAnalyticsString,
+      cancelAnalyticsString,
       ...rest
     } = this.props;
 
@@ -256,6 +258,8 @@ class SprkModal extends Component {
                   confirmText={confirmText}
                   cancelText={cancelText}
                   ref={this.footerRef}
+                  confirmAnalyticsString={confirmAnalyticsString}
+                  cancelAnalyticsString={cancelAnalyticsString}
                 />
               )}
             </div>
@@ -298,6 +302,10 @@ SprkModal.propTypes = {
   closeAnalyticsString: PropTypes.string,
   // the string to pass to the mask as analyticsString
   maskAnalyticsString: PropTypes.string,
+  // the string to pass to the modal footer for confirmAnalyticsString
+  confirmAnalyticsString: PropTypes.string,
+  // the string to pass to the modal footer for cancelAnalyticsString
+  cancelAnalyticsString: PropTypes.string,
 };
 
 SprkModal.defaultProps = {

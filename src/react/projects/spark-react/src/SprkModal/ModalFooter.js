@@ -19,7 +19,14 @@ class ModalFooter extends Component {
   }
 
   render() {
-    const { confirmClick, cancelClick, confirmText, cancelText } = this.props;
+    const {
+      confirmClick,
+      cancelClick,
+      confirmText,
+      cancelText,
+      cancelAnalyticsString,
+      confirmAnalyticsString,
+    } = this.props;
 
     return (
       <footer className="sprk-o-Stack__item">
@@ -30,6 +37,7 @@ class ModalFooter extends Component {
           onClick={confirmClick}
           type="button"
           ref={this.confirmButtonRef}
+          data-analytics={confirmAnalyticsString}
         >
           {confirmText}
         </button>
@@ -39,6 +47,7 @@ class ModalFooter extends Component {
           data-sprk-modal-cancel="exampleChoiceModal"
           onClick={cancelClick}
           type="button"
+          data-analytics={cancelAnalyticsString}
         >
           {cancelText}
         </button>
@@ -53,6 +62,10 @@ ModalFooter.propTypes = {
   cancelClick: PropTypes.func,
   confirmText: PropTypes.string,
   cancelText: PropTypes.string,
+  // the string to pass to the confirm button for data-analytics
+  confirmAnalyticsString: PropTypes.string,
+  // the string to pass to the cancel button for data-analytics
+  cancelAnalyticsString: PropTypes.string,
 };
 
 ModalFooter.defaultProps = {
