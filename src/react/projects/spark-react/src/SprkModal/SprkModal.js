@@ -181,6 +181,7 @@ class SprkModal extends Component {
       shouldReturnFocusOnClose,
       closeIcon,
       closeAnalyticsString,
+      maskAnalyticsString,
       ...rest
     } = this.props;
 
@@ -261,7 +262,7 @@ class SprkModal extends Component {
           </div>
         </div>
 
-        <Mask clicked={this.cancel} />
+        <Mask clicked={this.cancel} analyticsString={maskAnalyticsString} />
       </React.Fragment>
     );
   }
@@ -295,6 +296,8 @@ SprkModal.propTypes = {
   closeIcon: PropTypes.string,
   // the string to pass to the CloseButton as analyticsString
   closeAnalyticsString: PropTypes.string,
+  // the string to pass to the mask as analyticsString
+  maskAnalyticsString: PropTypes.string,
 };
 
 SprkModal.defaultProps = {

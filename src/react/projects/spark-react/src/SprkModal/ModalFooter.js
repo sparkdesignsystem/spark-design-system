@@ -19,12 +19,7 @@ class ModalFooter extends Component {
   }
 
   render() {
-    const {
-      confirmClick,
-      cancelClick,
-      confirmText,
-      cancelText,
-    } = this.props;
+    const { confirmClick, cancelClick, confirmText, cancelText } = this.props;
 
     return (
       <footer className="sprk-o-Stack__item">
