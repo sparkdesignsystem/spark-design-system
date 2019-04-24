@@ -16,7 +16,8 @@ class SprkToggle extends Component {
     this.toggleOpen = this.toggleOpen.bind(this);
   }
 
-  toggleOpen() {
+  toggleOpen(e) {
+    e.preventDefault();
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
