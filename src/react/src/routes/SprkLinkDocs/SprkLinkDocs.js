@@ -84,9 +84,9 @@ const SprkLinkDocs = () => (
 
     <h2 className="drizzle-b-h2">Icon With Text Link</h2>
     <ExampleContainer>
-      <SprkLink variant="has-icon" target="_blank" analyticsString="foo">
+      <SprkLink variant="has-icon" idString="link-">
         <SprkIcon
-          additionalClasses="sprk-c-Icon--xl"
+          additionalClasses="sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color"
           iconName="communication"
         />
         Message Us
@@ -95,7 +95,7 @@ const SprkLinkDocs = () => (
 
     <h2 className="drizzle-b-h2">React Router Link</h2>
     <ExampleContainer>
-      <SprkLink element={Link} to='/button'>
+      <SprkLink element={Link} to="/button">
         To Button
       </SprkLink>
     </ExampleContainer>
