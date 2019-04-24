@@ -106,7 +106,7 @@ class SprkMastheadDropdown extends Component {
               additionalClasses,
             )}
           >
-            {title !== '' && (
+            {title && (
               <div className="sprk-c-Dropdown__header">
                 <h2 className="sprk-c-Dropdown__title">{title}</h2>
               </div>
