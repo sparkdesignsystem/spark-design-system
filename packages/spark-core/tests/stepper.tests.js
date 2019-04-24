@@ -2,7 +2,21 @@
 import sinon from 'sinon';
 import { expect } from 'chai';
 import createElementFromString from './_createElementFromString';
-import { stepper } from '../components/stepper';
+
+const proxyquire = require('proxyquire');
+
+const carouselStub = sinon.stub(() => {
+  return {
+    slideTo: () => {},
+  };
+});
+
+const { stepper, positionSlider, resetSlider } = proxyquire(
+  '../components/stepper',
+  {
+    './carousel': { carousel: carouselStub },
+  },
+);
 
 describe('stepper init', () => {
   afterEach(() => {
@@ -194,6 +208,20 @@ describe('steps UI Events tests, (no descriptions)', () => {
       true,
     );
   });
+
+  it('should do nothing when other key pressed', () => {
+    stepper(stepperContainer);
+    const step2 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[1];
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 8;
+    step2.dispatchEvent(event);
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
 });
 
 describe('steps UI Events tests, (descriptions)', () => {
@@ -201,30 +229,85 @@ describe('steps UI Events tests, (descriptions)', () => {
 
   beforeEach(() => {
     stepperContainer = createElementFromString(`
-    <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+<div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+  <div class="
+    sprk-o-CenteredColumn
+    sprk-o-Stack
+    sprk-o-Stack--large
+    sprk-o-Stack--center-column
+    sprk-o-Stack--split-reverse@xl">
+    <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@m">
+      <div class="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
+        <div class="
+          sprk-c-Carousel__controls
+          sprk-o-Stack
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--center-row
+          sprk-o-Stack--center-column">
+          <button class="sprk-c-Carousel__prev sprk-o-Stack__item">
+            <span class="sprk-u-ScreenReaderText">Previous Slide</span>
+            <svg class="
+              sprk-c-Icon
+              sprk-c-Icon--stroke-current-color
+              sprk-c-Icon--l" viewBox="0 0 100 100">
+              <use xlink:href="#chevron-left-circle" />
+            </svg>
+          </button>
+
+          <div class="sprk-c-Carousel__frame">
+            <ul class="sprk-c-Carousel__slides">
+              <li class="sprk-c-Carousel__frame-item"></li>
+              <li class="sprk-c-Carousel__frame-item"></li>
+              <li class="sprk-c-Carousel__frame-item"></li>
+              <li class="sprk-c-Carousel__frame-item"></li>
+            </ul>
+            <div
+              class="sprk-c-Carousel__dots"
+              data-sprk-carousel-dots="stepper-carousel-01"></div>
+          </div>
+
+          <button class="sprk-c-Carousel__next sprk-o-Stack__item">
+            <span class="sprk-u-ScreenReaderText">Next Slide</span>
+            <svg
+              class="
+                sprk-c-Icon
+                sprk-c-Icon--stroke-current-color
+                sprk-c-Icon--l"
+              viewBox="0 0 100 100">
+              <use xlink:href="#chevron-right-circle" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@m">
       <ol
-        class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg"
+        class="
+          sprk-c-Stepper
+          sprk-c-Stepper--has-dark-bg
+          sprk-c-Stepper--has-carousel"
         data-sprk-stepper="container"
+        data-sprk-stepper-carousel="stepper-carousel-01"
         data-id="stepper-1"
         role="tablist"
+        aria-selected="true"
         aria-orientation="vertical">
         <li
           role="tab"
-          aria-selected="true"
           class="
             sprk-c-Stepper__step
             sprk-c-Stepper__step--selected
             sprk-c-Stepper__step--first"
           data-sprk-stepper="step">
-          <div
-            class="
-              sprk-c-Stepper__step-content
-              sprk-c-Stepper__step-content--has-description">
+          <div class="
+            sprk-c-Stepper__step-content
+            sprk-c-Stepper__step-content--has-description">
             <span
               class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
               aria-controls="target-1"
-              id="step-1"
-              >
+              id="step-1">
               <span class="sprk-c-Stepper__step-icon"></span>
               <h3
                 class="sprk-c-Stepper__step-heading"
@@ -247,24 +330,25 @@ describe('steps UI Events tests, (descriptions)', () => {
         </li>
 
         <li
-          role="tab"
           class="sprk-c-Stepper__step"
           data-sprk-stepper="step">
-          <div
-            class="
-              sprk-c-Stepper__step-content
-              sprk-c-Stepper__step-content--has-description">
-            <span
+          <div class="
+            sprk-c-Stepper__step-content
+            sprk-c-Stepper__step-content--has-description">
+            <a
               class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              role="tab"
               aria-controls="target-2"
-              id="step-2">
+              id="step-2"
+              href="#">
               <span class="sprk-c-Stepper__step-icon"></span>
               <h3
                 class="sprk-c-Stepper__step-heading"
-                data-sprk-stepper="heading">
+                data-sprk-stepper="heading"
+              >
                 Step Two
               </h3>
-            </span>
+            </a>
 
             <div
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
@@ -280,24 +364,24 @@ describe('steps UI Events tests, (descriptions)', () => {
         </li>
 
         <li
-          role="tab"
           class="sprk-c-Stepper__step"
           data-sprk-stepper="step">
-          <div
-            class="
-              sprk-c-Stepper__step-content
-              sprk-c-Stepper__step-content--has-description">
-            <span
+          <div class="
+            sprk-c-Stepper__step-content
+            sprk-c-Stepper__step-content--has-description">
+            <a
               class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              role="tab"
               aria-controls="target-3"
-              id="step-3">
+              id="step-3"
+              href="#">
               <span class="sprk-c-Stepper__step-icon"></span>
-              <h3
-                class="sprk-c-Stepper__step-heading"
-                data-sprk-stepper="heading">
+              <h3 class="sprk-c-Stepper__step-heading"
+                  data-sprk-stepper="heading"
+              >
                 Step Three
               </h3>
-            </span>
+            </a>
 
             <div
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
@@ -313,25 +397,25 @@ describe('steps UI Events tests, (descriptions)', () => {
         </li>
 
         <li
-          role="tab"
           class="sprk-c-Stepper__step sprk-c-Stepper__step--last"
           data-sprk-stepper="step">
-          <div
-            class="
-              sprk-c-Stepper__step-content
-              sprk-c-Stepper__step-content--has-description">
-            <span
+          <div class="
+            sprk-c-Stepper__step-content
+            sprk-c-Stepper__step-content--has-description">
+            <a
               class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+              role="tab"
               aria-controls="target-4"
               id="step-4"
               href="#">
               <span class="sprk-c-Stepper__step-icon"></span>
               <h3
                 class="sprk-c-Stepper__step-heading"
-                data-sprk-stepper="heading">
+                data-sprk-stepper="heading"
+              >
                 Step Four
               </h3>
-            </span>
+            </a>
 
             <div
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
@@ -347,6 +431,8 @@ describe('steps UI Events tests, (descriptions)', () => {
         </li>
       </ol>
     </div>
+ </div>
+</div>
 `);
     document.body.appendChild(stepperContainer);
   });
@@ -355,12 +441,107 @@ describe('steps UI Events tests, (descriptions)', () => {
     document.body.innerHTML = '';
   });
 
-  // it('should create slider element when there are no descriptions', () => {
-  //   stepper(stepperContainer);
-  //   const sliderEl = stepperContainer.querySelectorAll(
-  //     '.sprk-c-Stepper__slider',
-  //   )[0];
-  //   console.log(stepperContainer.outerHTML);
-  //   expect(sliderEl).not.eql(undefined);
-  // });
+  it('should create slider element when there are no descriptions', () => {
+    stepper(stepperContainer);
+    const sliderEl = stepperContainer.querySelectorAll(
+      '.sprk-c-Stepper__slider',
+    )[0];
+    expect(sliderEl).not.eql(undefined);
+  });
+
+  it('should not change active slide if index matches current', () => {
+    stepper(stepperContainer);
+    const carouselContainer = stepperContainer.querySelectorAll(
+      '[data-sprk-carousel]',
+    )[0];
+    const event = new window.Event('sprk.carousel.slide');
+    event.detail = { index: 0 };
+    carouselContainer.dispatchEvent(event);
+    const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+
+  it('should set active slide to index from sprk.carousel.slide', () => {
+    stepper(stepperContainer);
+    const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
+    const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
+    step1.click();
+    const carouselContainer = stepperContainer.querySelectorAll(
+      '[data-sprk-carousel]',
+    )[0];
+    const event = new window.Event('sprk.carousel.slide');
+    event.detail = { index: 2 };
+    carouselContainer.dispatchEvent(event);
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+
+  it('should focus next step when right arrow pressed', () => {
+    stepper(stepperContainer);
+    const step2 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[1];
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      false,
+    );
+    const event = new window.Event('keydown');
+    event.keyCode = 39;
+    step2.dispatchEvent(event);
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
+      true,
+    );
+  });
+});
+
+describe('slider position tests', () => {
+  it('should not error if step description is undefined', () => {
+    const slider = document.createElement('div');
+    const step = createElementFromString(`
+      <li
+        role="tab"
+        class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+        aria-selected="true"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content">
+          <span
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
+              Step Two
+            </h3>
+          </span>
+        </div>
+      </li>
+    `);
+    resetSlider([step], 'test', slider);
+    expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).eql(0);
+  });
+
+  it('should not error if content (description) is not present', () => {
+    const slider = document.createElement('div');
+    const step = createElementFromString(`
+      <li
+        role="tab"
+        class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+        aria-selected="true"
+        data-sprk-stepper="step">
+        <div class="sprk-c-Stepper__step-content">
+          <span
+            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+            href="#">
+            <span class="sprk-c-Stepper__step-icon"></span>
+            <h3
+              class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
+              Step Two
+            </h3>
+          </span>
+        </div>
+      </li>
+    `);
+    positionSlider(step, undefined, slider, 'test');
+    expect(step.getAttribute('aria-selected')).eql('true');
+  });
 });
