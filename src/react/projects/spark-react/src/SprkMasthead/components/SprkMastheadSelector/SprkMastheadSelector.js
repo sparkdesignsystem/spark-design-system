@@ -49,7 +49,8 @@ class SprkMastheadSelector extends Component {
     }
   }
 
-  openDropdown() {
+  openDropdown(e) {
+    e.preventDefault();
     this.setState({
       isOpen: true,
     });
