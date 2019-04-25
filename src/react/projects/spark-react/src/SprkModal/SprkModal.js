@@ -180,6 +180,10 @@ class SprkModal extends Component {
       cancelClick,
       shouldReturnFocusOnClose,
       closeIcon,
+      closeAnalyticsString,
+      maskAnalyticsString,
+      confirmAnalyticsString,
+      cancelAnalyticsString,
       ...rest
     } = this.props;
 
@@ -225,6 +229,7 @@ class SprkModal extends Component {
                   clickAction={this.cancel}
                   ref={this.closeButtonRef}
                   iconName={closeIcon}
+                  analyticsString={closeAnalyticsString}
                 />
               )}
             </header>
@@ -253,13 +258,15 @@ class SprkModal extends Component {
                   confirmText={confirmText}
                   cancelText={cancelText}
                   ref={this.footerRef}
+                  confirmAnalyticsString={confirmAnalyticsString}
+                  cancelAnalyticsString={cancelAnalyticsString}
                 />
               )}
             </div>
           </div>
         </div>
 
-        <Mask clicked={this.cancel} />
+        <Mask clicked={this.cancel} analyticsString={maskAnalyticsString} />
       </React.Fragment>
     );
   }
@@ -291,6 +298,14 @@ SprkModal.propTypes = {
   idString: PropTypes.string,
   // the icon name to render the close icon
   closeIcon: PropTypes.string,
+  // the string to pass to the CloseButton as analyticsString
+  closeAnalyticsString: PropTypes.string,
+  // the string to pass to the mask as analyticsString
+  maskAnalyticsString: PropTypes.string,
+  // the string to pass to the modal footer for confirmAnalyticsString
+  confirmAnalyticsString: PropTypes.string,
+  // the string to pass to the modal footer for cancelAnalyticsString
+  cancelAnalyticsString: PropTypes.string,
 };
 
 SprkModal.defaultProps = {
