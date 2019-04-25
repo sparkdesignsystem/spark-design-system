@@ -6,6 +6,7 @@ order: 3
   <ol
     class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg"
     data-sprk-stepper="container"
+    {{#if hasCarousel}}data-sprk-stepper-carousel="{{hasCarousel}}"{{/if}}
     data-id="stepper-1"
     role="tablist"
     aria-orientation="vertical">
@@ -33,7 +34,7 @@ order: 3
           aria-labelledby="step-1"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
@@ -61,7 +62,7 @@ order: 3
           id="target-2"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
@@ -89,7 +90,7 @@ order: 3
           ids="target-3"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Step 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
@@ -103,8 +104,7 @@ order: 3
         <span
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
           aria-controls="target-4"
-          id="step-4"
-          href="#">
+          id="step-4">
           <span class="sprk-c-Stepper__step-icon"></span>
           <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
             Step Four
@@ -118,7 +118,7 @@ order: 3
           id="target-4"
           role="tabpanel">
           <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Step 4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </div>
