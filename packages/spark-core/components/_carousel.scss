@@ -1,10 +1,14 @@
 .sprk-c-Carousel__frame {
-  width: 100%;
   position: relative;
   font-size: 0;
   line-height: 0;
   overflow: hidden;
   white-space: nowrap;
+  max-width: $sprk-carousel-narrow-image-max-width;
+
+  @media (min-width: $sprk-split-breakpoint-xl) {
+    max-width: none;
+  }
 }
 
 .sprk-c-Carousel__frame-item {
@@ -14,6 +18,15 @@
   font-size: $sprk-font-size-body-two;
   line-height: $sprk-line-height-body-two;
   color: $sprk-white;
+  max-width: $sprk-carousel-narrow-image-max-width;
+
+  @media (min-width: $sprk-split-breakpoint-xl) {
+    max-width: none;
+  }
+}
+
+// IE11 fix
+.sprk-c-Carousel__frame-item img {
   width: 100%;
 }
 
