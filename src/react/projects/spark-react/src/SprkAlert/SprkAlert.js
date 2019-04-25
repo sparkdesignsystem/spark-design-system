@@ -13,6 +13,10 @@ const SprkAlert = props => {
     onDismiss,
     analyticsString,
     isVisible,
+    iconNameSuccess,
+    iconNameInfo,
+    iconNameFail,
+    iconNameDismiss,
     ...other
   } = props;
 
@@ -28,13 +32,13 @@ const SprkAlert = props => {
 
   switch (variant) {
     case 'success':
-      icon = 'check-mark';
+      icon = iconNameSuccess;
       break;
     case 'info':
-      icon = 'bell';
+      icon = iconNameInfo;
       break;
     case 'fail':
-      icon = 'exclamation';
+      icon = iconNameFail;
       break;
     default:
       break;
@@ -62,7 +66,7 @@ const SprkAlert = props => {
           data-analytics={analyticsString}
         >
           <SprkIcon
-            iconName="close"
+            iconName={iconNameDismiss}
             additionalClasses="sprk-c-Icon--stroke-current-color"
             aria-hidden="true"
           />
@@ -73,6 +77,10 @@ const SprkAlert = props => {
 };
 
 SprkAlert.defaultProps = {
+  iconNameFail: 'exclamation',
+  iconNameDismiss: 'close',
+  iconNameInfo: 'bell',
+  iconNameSuccess: 'check-mark',
   isVisible: false,
   isDismissible: true,
 };
@@ -94,6 +102,14 @@ SprkAlert.propTypes = {
   additionalClasses: PropTypes.string,
   // Function that is called when dismiss button is clicked
   onDismiss: PropTypes.func,
+  // The icon name for the fail alert
+  iconNameFail: PropTypes.string,
+  // The icon name for the dismiss button
+  iconNameDismiss: PropTypes.string,
+  // The icon name for the info alert
+  iconNameInfo: PropTypes.string,
+  // The icon name for the success alert
+  iconNameSuccess: PropTypes.string,
 };
 
 export default SprkAlert;
