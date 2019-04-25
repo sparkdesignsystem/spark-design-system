@@ -449,6 +449,35 @@ describe('steps UI Events tests, (descriptions)', () => {
     expect(sliderEl).not.eql(undefined);
   });
 
+  it(
+    'do not reset the top of the slider if the resize event is fired and' +
+      'not moving from narrow to wide',
+    () => {
+      stepper(stepperContainer);
+      const sliderEl = stepperContainer.querySelectorAll(
+        '.sprk-c-Stepper__slider',
+      )[0];
+      const event = new window.Event('resize');
+      sliderEl.style.top = '25px';
+      window.dispatchEvent(event);
+      expect(sliderEl.style.top).eql('25px');
+    },
+  );
+
+  it(
+    'reset the top of the slider if the resize event is fired and' +
+      'moving from narrow to wide',
+    () => {
+      stepper(stepperContainer);
+      const sliderEl = stepperContainer.querySelectorAll(
+        '.sprk-c-Stepper__slider',
+      )[0];
+      sliderEl.style.top = '25px';
+      window.resizeTo(2000, 1000);
+      expect(sliderEl.style.top).eql('25px');
+    },
+  );
+
   it('should not change active slide if index matches current', () => {
     stepper(stepperContainer);
     const carouselContainer = stepperContainer.querySelectorAll(

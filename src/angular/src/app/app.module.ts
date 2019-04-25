@@ -38,7 +38,6 @@ import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-foun
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
 import { PromoDocsComponent } from './spark-docs/promo-docs/promo-docs.component';
 import { StackDocsComponent } from './spark-docs/stack-docs/stack-docs.component';
-import { StepperDocsComponent } from './spark-docs/stepper-docs/stepper-docs.component';
 import { TabbedNavigationDocsComponent } from './spark-docs/tabbed-navigation-docs/tabbed-navigation-docs.component';
 import { TableDocsComponent } from './spark-docs/table-docs/table-docs.component';
 import { ToggleDocsComponent } from './spark-docs/toggle-docs/toggle-docs.component';
@@ -67,7 +66,6 @@ const appRoutes: Routes = [
   { path: 'dictionary', component: DictionaryDocsComponent },
   { path: 'pagination', component: PaginationDocsComponent },
   { path: 'highlight-board', component: HighlightBoardDocsComponent },
-  { path: 'stepper', component: StepperDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -100,8 +98,7 @@ const appRoutes: Routes = [
     TabbedNavigationDocsComponent,
     DictionaryDocsComponent,
     PaginationDocsComponent,
-    HighlightBoardDocsComponent,
-    StepperDocsComponent
+    HighlightBoardDocsComponent
   ],
   imports: [
     BrowserAnimationsModule,

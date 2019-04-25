@@ -25,6 +25,7 @@ const resetSlider = (steps, activeClass, slider) => {
 
     stepContent.classList.remove('sprk-c-Stepper__step-content--hidden');
   });
+  slider.classList.remove(activeClass);
 };
 
 const positionSlider = (step, content, slider, activeClass) => {
@@ -66,6 +67,7 @@ const positionSlider = (step, content, slider, activeClass) => {
 
 const bindUIEvents = (stepContainer, carouselContainer) => {
   let carouselInstance;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
   const steps = stepContainer.querySelectorAll('[data-sprk-stepper="step"]');
   const descriptions = stepContainer.querySelectorAll(
     '[data-sprk-stepper="description"]',
@@ -136,6 +138,26 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 
       if (carouselInstance) {
         carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      const activeStep = getActiveTabIndex(steps, activeClass);
+      const newViewportWidth =
+        window.innerWidth || document.documentElement.clientWidth;
+      const sliderBreakpoint = 1279;
+
+      if (
+        windowWidth < sliderBreakpoint &&
+        newViewportWidth > sliderBreakpoint
+      ) {
+        resetTabs(steps, descriptions, activeClass, sliderEl);
+        setActiveTab(
+          steps[activeStep],
+          descriptions[activeStep],
+          activeClass,
+          sliderEl,
+        );
       }
     });
 

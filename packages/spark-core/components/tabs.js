@@ -97,11 +97,13 @@ const bindUIEvents = element => {
       left: 37,
       right: 39,
       tab: 9,
+      up: 38,
+      down: 40,
     };
 
-    if (event.keyCode === keys.left) {
+    if (event.keyCode === keys.left || event.keyCode === keys.up) {
       retreatTab(tabs, tabpanels);
-    } else if (event.keyCode === keys.right) {
+    } else if (event.keyCode === keys.right || event.keyCode === keys.down) {
       advanceTab(tabs, tabpanels);
     } else if (event.keyCode === keys.tab) {
       event.preventDefault();
