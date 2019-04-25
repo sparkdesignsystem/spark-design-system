@@ -14,6 +14,11 @@ it('should load the module', () => {
   expect(wrapper.find('div.sprk-c-Modal').length).toBe(1);
 });
 
+it ('should not render an invisible component', () => {
+  const wrapper = mount(<SprkModal isVisible={false} />);
+  expect(wrapper.find('div.sprk-c-Modal').length).toBe(0);
+});
+
 it('should have 3 buttons in the Choice variant', () => {
   const wrapper = mount(<SprkModal isVisible={true} />);
   expect(wrapper.find('button').length).toBe(3);
@@ -52,12 +57,9 @@ it('should render a Mask with the correct class', () => {
   expect(wrapper.find('div.sprk-c-ModalMask').length).toBe(1);
 });
 
-it('should correctly apply focus in choice variant', () => {
-  const wrapper = mount(<SprkModal isVisible={true} confirmText='foo'/>);
-  const confirmButton = wrapper.find('button').at(1);
-
-  expect(confirmButton.text()).toBe('foo');
-  expect(confirmButton).toEqual(document.activeElement);
+it('should accept key events', () => {
+  const wrapper = mount(<SprkModal isVisible={true} />);
+  
 });
 
 // setting focus
