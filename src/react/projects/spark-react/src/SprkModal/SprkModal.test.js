@@ -1,11 +1,9 @@
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
+import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
-import '../matchMedia';
+import '../windowStubs';
 import SprkModal from './SprkModal';
-import Mask from './Mask';
-import ModalFooter from './ModalFooter';
-import CloseButton from './CloseButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -50,17 +48,15 @@ it('should correctly apply additional classes', () => {
   expect(actual.hasClass(expected)).toBe(true);
 });
 
-// Mask tests
-it('should render a Mask with the correct class', () => {
-  const wrapper = mount(<Mask />);
+// it('should accept key events', () => {
+  // const cancelFunc = sinon.spy();
+  // const wrapper = mount(<SprkModal isVisible={true} cancelClick={cancelFunc} />);
+  // const modal = wrapper.find('div.sprk-c-Modal');
 
-  expect(wrapper.find('div.sprk-c-ModalMask').length).toBe(1);
-});
+  // modal.simulate('keydown', { keyCode: 27 }); // escape
+  // expect(cancelFunc.called).toBe(true);
 
-it('should accept key events', () => {
-  const wrapper = mount(<SprkModal isVisible={true} />);
-  
-});
+// });
 
 // setting focus
 
