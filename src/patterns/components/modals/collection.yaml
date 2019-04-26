@@ -1,30 +1,26 @@
 description: |
-  The Modal component is a dialog box that is displayed on top of all site content. When a Modal is present,
-  the rest of the site is inactive and covered by a mask. Use a Modal
-  when you need the user to make a choice, or you need to present important information based on an action they took,
-  or when you need to indicate something is happening. Modals are triggered by an action, usually, a form submit.
+  The Modal component is a dialog that is displayed on top of all site content. When a Modal is present,
+  the rest of the site is inactive and covered by a mask overlay. Modals are by definition an interruption of
+  the current user flow (they put the page into a new "mode"). Use a Modal when you need the user to enter a new
+  flow before they continue their current task, or to provide additional contextual information about the current
+  task. For example, you could use a modal to get confirmation from the user before deleting a record, or to
+  display a critical error message before continuing the task at hand. Keep in mind that modals will always
+  interrupt the current user task and should not be used if such an interruption is not desired. Research
+  shows that mandatory interruptions are very detrimental to productivity.
 information:
-  - When a Modal is open, the user can hit the "Escape" key, click the
-    cancel element, the close icon, or click the outside mask to close the Modal (unless the Modal type is "Wait").
-  - If you would like to use your own Modal JS instead of the Spark JS you should omit the
-    required data attributes as seen in the code blocks below.
+  - Spark Modals can be fully-controlled using a mouse, keyboard, and/or screen reader.
+  - Modals can be closed by pressing the "Escape" key, clicking the Cancel button (in the Choice variant),
+    clicking the Close icon (in the Choice or Info variants), or clicking the mask overlay (in the Choice or
+    Info variants). Wait variant modals must be closed programatically.
   - The Modal and mask elements are hidden by default.
   - If the content in the Modal is too large for the viewport then the Modal will show a scroll bar.
   - When the Modal is opened, the first focusable element inside the Modal will receive focus.
-  - When the Modal is closed, focus will be returned to the Modal's trigger button.
-  - When the Modal is open, focus is trapped inside the Modal when a user presses the Tab or Shift+Tab keys.
-  - When the Modal is open we tell assistive devices that everything behind it is
-    inactive by adding aria-hidden="true" on the main site container (data-sprk-main) and removing
-    it once the Modal is closed.
+  - While the Modal is open, focus is "trapped" inside the Modal. Pressing the Tab or Shift+Tab keys to move
+    focus will only shift focus between the elements in the Modal.
+  - When the Modal is closed, focus will be returned to the element that last had focus before the
+    modal was opened.
 restrictions:
-  - Each Modal must have an unique identifier that is used for all data attributes
-    related to that specific Modal. For example, data-sprk-modal="uniqueID" and data-sprk-modal-cancel="uniqueID".
-  - Modal container HTML must be added right above the closing body tag and be outside of the main site content container.
-  - The main content container of your site must have the attribute of 'data-sprk-main'.
   - The trigger element should always be outside the Modal container.
-  - No more than one Modal should be open at a time.
-  - Content length inside the Modal shouldn't exceed a reasonable
-    amount.
   - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("modal-choice-1", "modal-choice-2", "modal-info-1", etc).
@@ -32,7 +28,7 @@ sparkPackageCore: true
 variableTable:
   $sprk-modal-mask-color:
     default: rgba(34, 34, 34, 0.35)
-    description: Sets the background color of the site covering mask that is shown behind the modal.
+    description: Sets the color of the mask overlay that is shown behind the modal.
   $sprk-modal-color:
     default: $sprk-white
     description: The background color of the modal.
@@ -41,7 +37,7 @@ variableTable:
     description: The maximum width of the modal.
   $sprk-modal-height:
     default: 70%
-    description: The maximum height the modal can grow to be.
+    description: The maximum height of the modal.
   $sprk-modal-breakpoint-small:
     default: 25rem
     description: The point at which the modal moves farther down the viewport from the top.

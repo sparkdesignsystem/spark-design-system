@@ -45,3 +45,4 @@ export {
 } from './SprkStack/components/SprkStackItem/SprkStackItem';
 export { default as SprkAward } from './SprkAward/SprkAward';
 export { default as SprkCard } from './SprkCard/SprkCard';
+export { default as SprkModal } from './SprkModal/SprkModal';

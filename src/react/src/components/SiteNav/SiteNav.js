@@ -86,6 +86,11 @@ function SiteNav() {
           </Link>
         </li>
         <li>
+          <Link to="/modal" className="drizzle-b-Link drizzle-b-Link--light">
+            Modal
+          </Link>
+        </li>
+        <li>
           <Link to="/footer" className="drizzle-b-Link drizzle-b-Link--light">
             Footer
           </Link>

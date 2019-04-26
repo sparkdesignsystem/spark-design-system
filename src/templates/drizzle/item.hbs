@@ -91,6 +91,14 @@
     </div>
   {{/if}}
 
+  {{!-- Vanilla Docs --}}
+  {{#if data.hasVanillaDocs}}
+    <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-html-documentation>
+      <h3 class="drizzle-b-h3">HTML Documentation</h3>
+      {{{ pattern (alternateIdGen id 'vanilla' 'docs') @root }}}
+    </div>
+  {{/if}}
+
   {{!-- React Docs --}}
   {{#if data.hasReactDocs}}
     <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-react-documentation>
@@ -184,6 +192,14 @@
           <div class="drizzle-o-ContentGrouping drizzle-u-Display--none sprk-u-mtl" data-react-documentation>
             <h3 class="drizzle-b-h3">Information</h3>
             {{{ pattern (alternateIdGen id 'react' 'info') @root }}}
+          </div>
+        {{/if}}
+
+        {{!-- Code Information (vanilla) --}}
+        {{#if data.hasVanillaCodeInfo }}
+          <div class="drizzle-o-ContentGrouping drizzle-u-Display--none sprk-u-mtl" data-html-documentation>
+            <h3 class="drizzle-b-h3">Information</h3>
+            {{{ pattern (alternateIdGen id 'vanilla' 'info') @root }}}
           </div>
         {{/if}}
       {{/unless}}

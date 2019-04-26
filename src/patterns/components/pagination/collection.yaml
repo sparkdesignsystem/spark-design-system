@@ -4,8 +4,8 @@ description: |
   It serves as navigation and informs users where they currently are and where they
   can go in the future.
 information:
-  - As a general guideline, you should use the "default" variant when the pager has 3 or fewer pages,
-    and you should use the "long" variant when the pager has more than 3 pages.
+  - As a general guideline, you should use the "default" variant when the pager has three or fewer pages,
+    and you should use the "long" variant when the pager has more than three pages.
 restrictions:
   - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance

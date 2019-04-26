@@ -16,6 +16,7 @@ import SprkDictionaryDocs from './SprkDictionaryDocs/SprkDictionaryDocs';
 import SprkPaginationDocs from './SprkPaginationDocs/SprkPaginationDocs';
 import SprkTabsDocs from './SprkTabsDocs/SprkTabsDocs';
 import SprkIconDocs from './SprkIconDocs/SprkIconDocs';
+import SprkModalDocs from './SprkModalDocs/SprkModalDocs';
 import SprkInputDocs from './SprkInputDocs/SprkInputDocs';
 import SprkFooterDocs from './SprkFooterDocs/SprkFooterDocs';
 import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
@@ -45,6 +46,7 @@ const Router = () => (
       <Route exact path="/pagination" component={SprkPaginationDocs} />
       <Route exact path="/promos" component={SprkPromoDocs} />
       <Route exact path="/tabs" component={SprkTabsDocs} />
+      <Route exact path="/modal" component={SprkModalDocs} />
       <Route exact path="/footer" component={SprkFooterDocs} />
       <Route exact path="/stack" component={SprkStackDocs} />
       <Route exact path="/toggle" component={SprkToggleDocs} />
