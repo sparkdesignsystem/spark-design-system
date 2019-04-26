@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 // To text Link properly
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import SprkCardTeaser from './SprkCardTeaser';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -114,8 +114,8 @@ it('should render icon next to link', () => {
 // TagNameLink
 it('should render media img inside react router link', () => {
   testTeaserConfig.media.mediaVariant = 'img';
-  testTeaserConfig.media.mediaLinkElement = 'Link';
-  testTeaserConfig.media.href = 'www.test.com';
+  testTeaserConfig.media.mediaLinkElement = Link;
+  testTeaserConfig.media.to = 'www.test.com';
   const wrapper = mount(
     <Router>
       <SprkCardTeaser teaserConfig={testTeaserConfig} />
@@ -128,38 +128,54 @@ it('should render media img inside react router link', () => {
 it('should render media icon inside TagName link', () => {
   testTeaserConfig.media.mediaVariant = 'icon';
   testTeaserConfig.media.iconName = 'call-team-member';
-  testTeaserConfig.media.mediaLinkElement = 'Link';
+  testTeaserConfig.media.mediaLinkElement = Link;
   testTeaserConfig.media.to = 'www.test.com';
 
-  const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
+  const wrapper = mount(
+    <Router>
+      <SprkCardTeaser teaserConfig={testTeaserConfig} />
+    </Router>
+  );
   const hasTagNameLink = wrapper.find('Media Link SprkIcon').length === 1;
   expect(hasTagNameLink).toBe(true);
 });
 
 it('should render CTA link as TagName link', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
-  testTeaserConfig.cta.ctaLinkElement = 'Link';
+  testTeaserConfig.cta.ctaLinkElement = Link;
   testTeaserConfig.cta.to = 'www.test.com';
-  const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
+  const wrapper = mount(
+    <Router>
+      <SprkCardTeaser teaserConfig={testTeaserConfig} />
+    </Router>
+  );
   const hasRouterLink = wrapper.find('CallToAction Link').length === 1;
   expect(hasRouterLink).toBe(true);
 });
 
 it('should render CTA link with icon as TagName link', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
-  testTeaserConfig.cta.ctaLinkElement = 'Link';
+  testTeaserConfig.cta.ctaLinkElement = Link;
   testTeaserConfig.cta.to = 'www.test.com';
   testTeaserConfig.cta.ctaIcon = 'chevron-right';
-  const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
+  const wrapper = mount(
+    <Router>
+      <SprkCardTeaser teaserConfig={testTeaserConfig} />
+    </Router>
+  );
   const hasRouterLink = wrapper.find('CallToAction Link SprkIcon').length === 1;
   expect(hasRouterLink).toBe(true);
 });
 
 it('should render CTA button router link', () => {
   testTeaserConfig.cta.ctaVariant = 'button';
-  testTeaserConfig.cta.ctaLinkElement = 'Link';
+  testTeaserConfig.cta.ctaLinkElement = Link;
   testTeaserConfig.cta.to = 'www.test.com';
-  const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
+  const wrapper = mount(
+    <Router>
+      <SprkCardTeaser teaserConfig={testTeaserConfig} />
+    </Router>
+  );
   const hasRouterLink =
     wrapper.find('CallToAction Link.sprk-c-Button').length === 1;
   expect(hasRouterLink).toBe(true);

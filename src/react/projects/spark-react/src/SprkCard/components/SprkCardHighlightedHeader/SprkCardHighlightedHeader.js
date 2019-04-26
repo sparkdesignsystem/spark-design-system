@@ -59,8 +59,4 @@ SprkCardHighlightedHeader.propTypes = {
   }),
 };
 
-SprkCardHighlightedHeader.defaultProps = {
-  highlightedHeaderConfig: {},
-};
-
 export default SprkCardHighlightedHeader;
