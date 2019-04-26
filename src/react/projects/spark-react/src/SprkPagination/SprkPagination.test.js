@@ -3,6 +3,8 @@ import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkPagination from './SprkPagination';
+import SprkIcon from '../SprkIcon/SprkIcon';
+import SprkLink from '../SprkLink/SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -243,4 +245,50 @@ it('should add analytics strings to page links', () => {
 
   const pageLinks = wrapper.find('a.sprk-c-Pagination__link');
   expect(pageLinks.every('[data-analytics="foo"]')).toBe(true);
+});
+
+it('should render the correct prevIcon name if one is passed', () => {
+  const wrapper = mount(
+    <SprkPagination
+      totalItems={50}
+      itemsPerPage={10}
+      onChangeCallback={() => {}}
+      prevIcon="iconName"
+    />,
+  );
+  expect(wrapper.find(SprkIcon).first().prop('iconName')).toBe('iconName');
+});
+
+it('should render the correct prevIcon name if one is not passed', () => {
+  const wrapper = mount(
+    <SprkPagination
+      totalItems={50}
+      itemsPerPage={10}
+      onChangeCallback={() => {}}
+    />,
+  );
+  expect(wrapper.find(SprkIcon).first().prop('iconName')).toBe('chevron-left');
+});
+
+it('should render the correct nextIcon name if one is passed', () => {
+  const wrapper = mount(
+    <SprkPagination
+      totalItems={50}
+      itemsPerPage={10}
+      onChangeCallback={() => {}}
+      nextIcon="iconName"
+    />,
+  );
+  expect(wrapper.find(SprkIcon).last().prop('iconName')).toBe('iconName');
+});
+
+it('should render the correct nextIcon name if one is not passed', () => {
+  const wrapper = mount(
+    <SprkPagination
+      totalItems={50}
+      itemsPerPage={10}
+      onChangeCallback={() => {}}
+    />,
+  );
+  expect(wrapper.find(SprkIcon).last().prop('iconName')).toBe('chevron-right');
 });
