@@ -43,6 +43,7 @@
   color: $sprk-carousel-arrow-color;
   padding: $sprk-carousel-arrow-padding;
   position: absolute;
+  z-index: 1;
 
   @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
     position: static;
@@ -54,12 +55,12 @@
 
 .sprk-c-Carousel__prev {
   margin-right: $sprk-carousel-arrow-spacing;
-  left: $sprk-carousel-arrow-spacing;
+  left: $sprk-carousel-arrow-edge-spacing;
 }
 
 .sprk-c-Carousel__next {
   margin-left: $sprk-carousel-arrow-spacing;
-  right: $sprk-carousel-arrow-spacing;
+  right: $sprk-carousel-arrow-edge-spacing;
 }
 
 .sprk-c-Carousel__dots {
