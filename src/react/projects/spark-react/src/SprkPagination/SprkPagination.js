@@ -37,6 +37,8 @@ const SprkPagination = props => {
     analyticsStringNext,
     analyticsStringPrev,
     idString,
+    nextIcon,
+    prevIcon,
     ...other
   } = props;
 
@@ -76,7 +78,7 @@ const SprkPagination = props => {
             aria-label="Previous Page"
           >
             <span className="sprk-u-ScreenReaderText">{prevLinkText}</span>
-            <SprkIcon iconName="chevron-left" />
+            <SprkIcon iconName={prevIcon} />
           </SprkLink>
         </li>
 
@@ -184,7 +186,7 @@ const SprkPagination = props => {
             aria-label="Next Page"
           >
             <span className="sprk-u-ScreenReaderText">{nextLinkText}</span>
-            <SprkIcon iconName="chevron-right" />
+            <SprkIcon iconName={nextIcon} />
           </SprkLink>
         </li>
       </ul>
@@ -217,6 +219,10 @@ SprkPagination.propTypes = {
   analyticsStringPrev: PropTypes.string,
   // The data-id string for the component
   idString: PropTypes.string,
+  // the icon name to be rendered for the previous link
+  prevIcon: PropTypes.string,
+  // the icon name to be rendered for the next link
+  nextIcon: PropTypes.string,
 };
 
 SprkPagination.defaultProps = {
@@ -224,6 +230,8 @@ SprkPagination.defaultProps = {
   currentPage: 1,
   nextLinkText: 'Next Page',
   prevLinkText: 'Previous Page',
+  prevIcon: 'chevron-left',
+  nextIcon: 'chevron-right',
 };
 
 export default SprkPagination;

@@ -97,6 +97,37 @@ class SprkAlertDocs extends Component {
             analyticsString="dismiss-button"
           />
         </div>
+
+        <h2 className="sprk-u-mbl">Info Alert with different Icons</h2>
+        <div className="sprk-u-mbm">
+          <SprkAlert
+            isVisible={isVisible1}
+            message="Information alert message placeholder."
+            variant="info"
+            idString="alert-1"
+            additionalClasses="sprk-u-mbh"
+            iconNameDismiss="facebook"
+            iconNameInfo="instagram"
+            onDismiss={() => {
+              this.setState({ isVisible1: false });
+            }}
+          />
+        </div>
+
+        <h2 className="sprk-u-mbl">Success Alert with different Icon</h2>
+        <div className="sprk-u-mbm">
+          <SprkAlert
+            isVisible={isVisible1}
+            message="Success alert message placeholder."
+            variant="success"
+            idString="alert-1"
+            additionalClasses="sprk-u-mbh"
+            iconNameSuccess="camera"
+            onDismiss={() => {
+              this.setState({ isVisible1: false });
+            }}
+          />
+        </div>
       </CentralColumnLayout>
     );
   }
