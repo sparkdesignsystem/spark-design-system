@@ -67,7 +67,7 @@ const positionSlider = (step, content, slider, activeClass) => {
 
 const bindUIEvents = (stepContainer, carouselContainer) => {
   let carouselInstance;
-  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  const windowWidth = window.innerWidth;
   const steps = stepContainer.querySelectorAll('[data-sprk-stepper="step"]');
   const descriptions = stepContainer.querySelectorAll(
     '[data-sprk-stepper="description"]',
@@ -143,8 +143,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 
     window.addEventListener('resize', () => {
       const activeStep = getActiveTabIndex(steps, activeClass);
-      const newViewportWidth =
-        window.innerWidth || document.documentElement.clientWidth;
+      const newViewportWidth = window.innerWidth;
       const sliderBreakpoint = 1279;
 
       if (
