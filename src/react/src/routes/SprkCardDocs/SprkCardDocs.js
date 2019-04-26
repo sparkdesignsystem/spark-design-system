@@ -93,7 +93,7 @@ const SprkCardDocs = () => {
 
       <ExampleContainer>
         <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
-          Image / Anchor / Button
+          Image / Anchor / Link
         </h3>
         <SprkCard
           idString="test"
