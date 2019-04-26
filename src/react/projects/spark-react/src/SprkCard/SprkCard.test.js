@@ -32,6 +32,7 @@ it('should display a Card div with the correct standout classes', () => {
 it('should load teaser if there is teaserConfig', () => {
   const wrapper = mount(
     <SprkCard
+      variant="teaser"
       teaserConfig={{
         bodyText: 'Body text of a teaser card.',
         cta: {
@@ -63,6 +64,7 @@ it('should load teaser if there is teaserConfig', () => {
 it('should load highlighted header if there is highlightedHeaderConfig', () => {
   const wrapper = mount(
     <SprkCard
+      variant="highlightedHeader"
       highlightedHeaderConfig={{
         bodyText: `Highlight header card body text.
           Lorem ipsum dolor sit amet, doctus invenire vix te.

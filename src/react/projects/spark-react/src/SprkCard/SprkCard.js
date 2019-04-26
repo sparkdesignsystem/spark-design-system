@@ -1,44 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import warning from 'warning';
 import SprkCardHighlightedHeader from './components/SprkCardHighlightedHeader/SprkCardHighlightedHeader';
 import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
 
 const SprkCard = props => {
   const {
     additionalClasses,
+    additionalContentClasses,
     children,
     highlightedHeaderConfig,
     idString,
     isStandout,
     teaserConfig,
+    variant,
   } = props;
 
-  const highlightedHeaderConfigCount = Object.keys(highlightedHeaderConfig)
-    .length;
-  const teaserConfigCount = Object.keys(teaserConfig).length;
-
-  /*
-   TeaserConfigCount has some default props
-   so it'll always have a count of 2 by default
-  */
-  const onlyHasHighlightedHeader =
-    highlightedHeaderConfigCount > 0 && teaserConfigCount <= 2;
-  const onlyHasTeaser =
-    teaserConfigCount > 2 && highlightedHeaderConfigCount <= 0;
-  const hasNoVariant =
-    highlightedHeaderConfigCount <= 0 && teaserConfigCount <= 2;
-
-  // Card can either only be base, teaser, or highlighted header
-  warning(
-    onlyHasTeaser || onlyHasHighlightedHeader || hasNoVariant,
-    `SprkCard: cannot have teaserConfig and highlightedHeaderConfig propTypes
-    at the same time.`,
-  );
-
   const GetCardContent = () => {
-    if (onlyHasHighlightedHeader) {
+    if (variant === 'highlightedHeader') {
       return (
         <SprkCardHighlightedHeader
           highlightedHeaderConfig={highlightedHeaderConfig}
@@ -46,11 +25,20 @@ const SprkCard = props => {
       );
     }
 
-    if (onlyHasTeaser) {
+    if (variant === 'teaser') {
       return <SprkCardTeaser teaserConfig={teaserConfig} />;
     }
 
-    return <React.Fragment>{children}</React.Fragment>;
+    return (
+      <div
+        className={cx(
+          'sprk-c-Card__content sprk-o-Stack__item',
+          additionalContentClasses,
+        )}
+      >
+        {children}
+      </div>
+    );
   };
 
   return (
@@ -67,8 +55,20 @@ const SprkCard = props => {
 };
 
 SprkCard.propTypes = {
+  // Additional classes for
   additionalClasses: PropTypes.string,
+  // Additional classes for content container
+  additionalContentClasses: PropTypes.string,
+  // Takes content for a base card
   children: PropTypes.node,
+  // data-id
+  idString: PropTypes.string,
+  // Shadow darker than normal
+  isStandout: PropTypes.bool,
+  // Additional Card types (highlightedHeader, teaser)
+  variant: PropTypes.string,
+
+  // Configures highlighted header
   highlightedHeaderConfig: PropTypes.shape({
     // Text inside of highlighted card
     bodyText: PropTypes.string,
@@ -77,10 +77,7 @@ SprkCard.propTypes = {
     // Headline of card
     title: PropTypes.string,
   }),
-  // data-id
-  idString: PropTypes.string,
-  // Shadow darker than normal
-  isStandout: PropTypes.bool,
+
   // Configures teaser
   teaserConfig: PropTypes.shape({
     // Text in the main body
@@ -120,16 +117,14 @@ SprkCard.propTypes = {
       // Chooses if main media is img or SprkIcon
       mediaVariant: PropTypes.oneOf(['img', 'icon']),
     }),
+    // title of teaser card
     title: PropTypes.string,
+    // Decides if title goes first
     titleFirst: PropTypes.bool,
   }),
 };
 
 SprkCard.defaultProps = {
-  additionalClasses: '',
-  highlightedHeaderConfig: {},
-  children: null,
-  idString: null,
   isStandout: false,
   teaserConfig: {
     cta: {

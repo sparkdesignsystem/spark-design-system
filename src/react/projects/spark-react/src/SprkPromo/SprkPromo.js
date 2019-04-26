@@ -212,7 +212,7 @@ SprkPromo.propTypes = {
   ctaAnalytics: PropTypes.string,
   // The string to use for the data-id attribute on the Call-to-Action
   ctaIdString: PropTypes.string,
-  // The source location of the Promo image. If this propterty is omitted, no
+  // The source location of the Promo image. If this property is omitted, no
   // image will be rendered.
   imgSrc: PropTypes.string,
   // The alt text property for the image

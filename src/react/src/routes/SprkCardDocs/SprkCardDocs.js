@@ -58,31 +58,24 @@ const SprkCardDocs = () => {
     <CentralColumnLayout>
       <ExampleContainer>
         <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">Base Card</h3>
-        <SprkCard>
-          <div
-            className="
-              sprk-o-Stack__item
-              sprk-c-Card__content
-              sprk-o-Stack
-              sprk-o-Stack--large"
-          >
-            Base Card Content
-          </div>
+        <SprkCard
+          additionalContentClasses="
+            sprk-o-Stack
+            sprk-o-Stack--large"
+        >
+          Base Card Content
         </SprkCard>
       </ExampleContainer>
 
       <ExampleContainer>
         <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">Standout Card</h3>
-        <SprkCard isStandout>
-          <div
-            className="
-              sprk-o-Stack__item
-              sprk-c-Card__content
-              sprk-o-Stack
-              sprk-o-Stack--medium"
-          >
-            Standout Card Content
-          </div>
+        <SprkCard
+          isStandout
+          additionalContentClasses="
+            sprk-o-Stack
+            sprk-o-Stack--medium"
+        >
+          Standout Card Content
         </SprkCard>
       </ExampleContainer>
 
@@ -94,15 +87,17 @@ const SprkCardDocs = () => {
           highlightedHeaderConfig={testHighlightedHeaderConfig}
           idString="card-with-highlighted-header"
           isStandout
+          variant="highlightedHeader"
         />
       </ExampleContainer>
 
       <ExampleContainer>
         <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
-          Image / Anchor / Button
+          Image / Anchor / Link
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -132,6 +127,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -161,6 +157,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -191,6 +188,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -220,6 +218,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -249,6 +248,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -278,6 +278,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -308,6 +309,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -337,6 +339,7 @@ const SprkCardDocs = () => {
         </h3>
         <SprkCard
           idString="test"
+          variant="teaser"
           teaserConfig={{
             bodyText: 'Body text of a teaser card.',
             cta: {
@@ -374,11 +377,13 @@ const SprkCardDocs = () => {
         >
           <SprkCard
             idString="1"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
             teaserConfig={stackedTeaserImage}
           />
           <SprkCard
             idString="2"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
             teaserConfig={stackedTeaserImage}
           />
@@ -397,16 +402,19 @@ const SprkCardDocs = () => {
         >
           <SprkCard
             idString="card-1"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
             teaserConfig={stackedTeaserIcon}
           />
           <SprkCard
             idString="card-2"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
             teaserConfig={stackedTeaserIcon}
           />
           <SprkCard
             idString="card-3"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
             teaserConfig={stackedTeaserIcon}
           />
@@ -424,21 +432,25 @@ const SprkCardDocs = () => {
         >
           <SprkCard
             idString="1"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xl"
             teaserConfig={stackedTeaserImage}
           />
           <SprkCard
             idString="2"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xl"
             teaserConfig={stackedTeaserImage}
           />
           <SprkCard
             idString="3"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xl"
             teaserConfig={stackedTeaserImage}
           />
           <SprkCard
             idString="4"
+            variant="teaser"
             additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xl"
             teaserConfig={stackedTeaserImage}
           />
