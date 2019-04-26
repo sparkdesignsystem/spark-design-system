@@ -2,17 +2,21 @@ import { lory } from 'lory.js';
 
 const beforeLoryInit = (dotContainer, count) => {
   if (!dotContainer) return;
-  const dotListItem = document.createElement('button');
-  dotListItem.classList.add('sprk-c-Carousel__dot');
   for (let i = 0; i < count; i += 1) {
-    const dot = dotListItem.cloneNode();
+    const dotWrapper = document.createElement('div');
+    dotWrapper.classList.add('sprk-c-Carousel__dot-container');
+    const dot = document.createElement('button');
+    dot.classList.add('sprk-c-Carousel__dot');
     const srt = document.createElement('span');
     srt.classList.add('sprk-u-ScreenReaderText');
     srt.textContent = `Slide ${i + 1}`;
     dot.appendChild(srt);
-    dotContainer.appendChild(dot);
+    dotWrapper.appendChild(dot);
+    dotContainer.appendChild(dotWrapper);
   }
-  dotContainer.childNodes[0].classList.add('sprk-c-Carousel__dot--active');
+  dotContainer.childNodes[0].childNodes[0].classList.add(
+    'sprk-c-Carousel__dot--active',
+  );
 };
 
 const afterLoryInit = (dotContainer, carouselInstance) => {

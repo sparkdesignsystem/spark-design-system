@@ -41,7 +41,11 @@
   display: block;
   cursor: pointer;
   color: $sprk-carousel-arrow-color;
+  position: absolute;
 
+  @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
+    position: static;
+  }
   @media (min-width: $sprk-split-breakpoint-xl) {
     display: none;
   }
@@ -49,20 +53,36 @@
 
 .sprk-c-Carousel__prev {
   margin-right: $sprk-carousel-arrow-spacing;
+  left: $sprk-carousel-arrow-spacing;
 }
 
 .sprk-c-Carousel__next {
   margin-left: $sprk-carousel-arrow-spacing;
+  right: $sprk-carousel-arrow-spacing;
 }
 
 .sprk-c-Carousel__dots {
   display: flex;
   justify-content: center;
-  padding: $space-m;
+  padding: $sprk-carousel-dot-container-padding;
+  flex-wrap: wrap;
 
   @media (min-width: $sprk-split-breakpoint-xl) {
     display: none;
   }
+}
+
+.sprk-c-Carousel__dot-container {
+  justify-content: center;
+  margin: $sprk-carousel-narrow-dot-spacing;
+
+  @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
+    margin-right: $sprk-carousel-dot-spacing;
+  }
+}
+
+.sprk-c-Carousel__dot-container:last-child {
+  margin-right: 0;
 }
 
 .sprk-c-Carousel__dot {
@@ -71,14 +91,14 @@
   border: $sprk-carousel-dot-border;
   cursor: pointer;
   display: block;
-  height: $sprk-carousel-dot-height;
-  margin-right: $sprk-carousel-dot-spacing;
+  height: $sprk-carousel-narrow-dot-height;
   padding: 0;
-  width: $sprk-carousel-dot-width;
-}
+  width: $sprk-carousel-narrow-dot-width;
 
-.sprk-c-Carousel__dot:last-child {
-  margin-right: 0;
+  @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
+    height: $sprk-carousel-dot-height;
+    width: $sprk-carousel-dot-width;
+  }
 }
 
 .sprk-c-Carousel__dot--active {
