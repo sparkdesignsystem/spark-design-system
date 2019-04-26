@@ -41,6 +41,7 @@
   display: block;
   cursor: pointer;
   color: $sprk-carousel-arrow-color;
+  padding: $sprk-carousel-arrow-padding;
   position: absolute;
 
   @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
