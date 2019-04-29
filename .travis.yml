@@ -16,7 +16,7 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - npm install
-  - npm install -g @angular/cli @angular-devkit/build-angular
+  - npm install -g @angular/cli @angular-devkit/build-angular gulp@3.9.1
 
 install:
   - $(npm bin)/gulp pre-publish
