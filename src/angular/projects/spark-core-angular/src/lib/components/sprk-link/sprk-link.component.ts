@@ -101,7 +101,9 @@ export class SparkLinkComponent implements OnInit {
   scrollToId() {
     const elementID = this.href.split('#').pop();
     const element: HTMLElement = document.getElementById(elementID);
-    element.scrollIntoView();
+    if (element) {
+      element.scrollIntoView();
+    }
   }
 
   handleClick(event): void {

@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-extras-angular-card",
   "description": "Cards present related content. They provide an easy way to get information quickly and are typically used in groups.",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "scripts": {
     "lint": "ng lint spark-extras-angular-card",
     "test": "ng test spark-extras-angular-card --watch=false",
