@@ -43,6 +43,7 @@
   color: $sprk-carousel-arrow-color;
   padding: $sprk-carousel-arrow-padding;
   position: absolute;
+  touch-action: manipulation;
   z-index: 1;
 
   @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
