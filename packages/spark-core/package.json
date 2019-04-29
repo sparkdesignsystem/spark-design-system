@@ -26,6 +26,7 @@
   "dependencies": {
     "@scalescss/scalescss": "6.0.0-1",
     "dom-slider": "1.5.3",
+    "lory.js": "^2.5.3",
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {

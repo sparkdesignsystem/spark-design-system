@@ -96,21 +96,15 @@ describe('SparkTabbedNavigationComponent', () => {
   it('should change which tab / panel is active if a non-active tab is clicked', () => {
     testTab1.click();
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('clicking the panel should do nothing to the active state', () => {
     expect(testTab2.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel2.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel2.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
     testPanel1.click();
     expect(testTab2.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel2.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel2.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('resizing should set the aria-orientation correctly', () => {
@@ -120,54 +114,44 @@ describe('SparkTabbedNavigationComponent', () => {
 
   it('the right arrow key should advance the tab', () => {
     expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(true);
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
     const event: Event = new Event('keydown');
     event['keyCode'] = 39;
     testElement.dispatchEvent(event);
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the left arrow key should retreat the tab', () => {
     expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(true);
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
     const event: Event = new Event('keydown');
     event['keyCode'] = 37;
     testElement.dispatchEvent(event);
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the home key should bring active to the first tab', () => {
     testTab2.click();
     expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(true);
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
     const event: Event = new Event('keydown');
     event['keyCode'] = 36;
     testElement.dispatchEvent(event);
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the end key should bring active to the last tab', () => {
     testTab1.click();
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel1.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
     const event: Event = new Event('keydown');
     event['keyCode'] = 35;
     testElement.dispatchEvent(event);
     expect(testTab2.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel2.classList.contains('sprk-u-Display--none')).toEqual(
-      false
-    );
+    expect(testPanel2.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('should move focus into the active panel when tab is pressed and the target is a button', () => {
@@ -176,6 +160,7 @@ describe('SparkTabbedNavigationComponent', () => {
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.classList.add('sprk-c-Tabs__button');
+    testElement.setAttribute('role', 'tab');
     testElement.dispatchEvent(event);
     expect(testPanel2.focus).toHaveBeenCalled();
   });

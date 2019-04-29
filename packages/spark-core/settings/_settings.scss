@@ -784,3 +784,68 @@ $sprk-tab-navigation-btn-active-border-top: 3px solid $sprk-red !default;
 $sprk-tab-navigation-btn-active-bg-color: $sprk-white !default;
 $sprk-tab-navigation-btn-font-size: $sprk-font-size-body-one !default;
 $sprk-tab-navigation-btn-font-weight: $sprk-font-weight-body-one !default;
+
+//
+// Stepper
+///
+$sprk-stepper-bg: transparent !default;
+$sprk-stepper-breakpoint: $sprk-split-breakpoint-xl !default;
+$sprk-stepper-max-width: 480px !default;
+$sprk-stepper-icon-border-width: 2px !default;
+$sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
+$sprk-stepper-icon-border-color-selected: $sprk-green !default;
+$sprk-stepper-dark-icon-border-color: $sprk-white !default;
+$sprk-stepper-icon-height: 16px !default;
+$sprk-stepper-icon-width: 16px !default;
+$sprk-stepper-icon-color: $sprk-white !default;
+$sprk-stepper-icon-color-hover: $sprk-black-tint-50 !default;
+$sprk-stepper-icon-color-selected: $sprk-white !default;
+$sprk-stepper-dark-icon-color: $sprk-blue !default;
+$sprk-stepper-dark-icon-color-selected: $sprk-white !default;
+$sprk-stepper-dark-icon-color-hover: $sprk-white !default;
+$sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
+$sprk-stepper-icon-z-index: $sprk-layer-height-xs !default;
+$sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
+$sprk-stepper-icon-box-shadow-selected: 0 0 0 $sprk-stepper-icon-box-shadow-selected-spread $sprk-stepper-icon-border-color-selected !default;
+$sprk-stepper-step-content-bg: transparent !default;
+$sprk-stepper-step-description-border-radius: 5px !default;
+$sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0,0,0,0.08) !default;
+$sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
+$sprk-stepper-step-heading-font-weight: 400 !default;
+$sprk-stepper-step-heading-size: $sprk-font-size-display-six !default;
+$sprk-stepper-step-heading-color: $sprk-black !default;
+$sprk-stepper-dark-step-heading-color: $sprk-white !default;
+$sprk-stepper-step-heading-color-selected: $sprk-black !default;
+$sprk-stepper-step-padding: $sprk-space-misc-a !default;
+$sprk-stepper-step-content-bg-selected: $sprk-white !default;
+$sprk-stepper-step-description-bg-selected: $sprk-white !default;
+$sprk-stepper-dark-step-description-bg-selected: $sprk-white !default;
+$sprk-stepper-bar-color: $sprk-black-tint-50 !default;
+$sprk-stepper-dark-bar-color: $sprk-white !default;
+// Restricted and not customizable
+$sprk-stepper-bar-width: 2px;
+$sprk-stepper-icon-diameter: $sprk-stepper-icon-width + $sprk-stepper-icon-border-width;
+$sprk-stepper-icon-radius: $sprk-stepper-icon-diameter / 2;
+$sprk-stepper-bar-left-inset: $sprk-space-l;
+$sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) + $sprk-stepper-bar-width;
+$sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset + $sprk-stepper-icon-radius));
+$sprk-stepper-slide-timing: 0.3s;
+$sprk-stepper-slider-text-fade-in-timing: 0.6s;
+//
+// Carousel
+///
+$sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid $sprk-stepper-dark-icon-border-color !default;
+$sprk-carousel-dot-height: 10px !default;
+$sprk-carousel-dot-width: 10px !default;
+$sprk-carousel-narrow-dot-height: 10px !default;
+$sprk-carousel-narrow-dot-width: 10px !default;
+$sprk-carousel-dot-spacing: $sprk-space-m !default;
+$sprk-carousel-narrow-dot-spacing: $sprk-carousel-dot-spacing !default;
+$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected !default;
+$sprk-carousel-arrow-color: $sprk-white !default;
+$sprk-carousel-arrow-spacing: $sprk-space-m !default;
+$sprk-carousel-arrow-edge-spacing: 0 !default;
+$sprk-carousel-arrow-padding: $sprk-space-m !default;
+$sprk-carousel-narrow-image-max-width: 18.75rem !default;
+$sprk-carousel-arrow-position-breakpoint: 31.25rem !default;
+$sprk-carousel-dot-container-padding: $sprk-space-xs !default;

@@ -1,12 +1,23 @@
-import { dateInput, formatDate, bindUIEvents as bindDateInputUIEvents } from './base/dateInput';
-import { datePicker, bindUIEvents as bindDatePickerUIEvents } from './base/datePicker';
+import {
+  dateInput,
+  formatDate,
+  bindUIEvents as bindDateInputUIEvents,
+} from './base/dateInput';
+import {
+  datePicker,
+  bindUIEvents as bindDatePickerUIEvents,
+} from './base/datePicker';
 import {
   monetaryInput,
   formatMonetary,
   bindUIEvents as bindMonetaryUIEvents,
 } from './base/monetaryInput';
 import passwordInput from './base/passwordInput';
-import { phoneInput, formatPhone, bindUIEvents as bindPhoneInputUIEvents } from './base/phoneInput';
+import {
+  phoneInput,
+  formatPhone,
+  bindUIEvents as bindPhoneInputUIEvents,
+} from './base/phoneInput';
 import {
   requiredSelect,
   runValidation as runRequiredSelectValidation,
@@ -21,8 +32,16 @@ import {
   runValidation as runRequiredTickValidation,
   bindUIEvents as bindRequiredTickUIEvents,
 } from './base/requiredTick';
-import { ssnInput, formatSSN, bindUIEvents as bindSSNInputUIEvents } from './base/ssnInput';
-import { alerts, dismissAlert, bindUIEvents as bindAlertUIEvents } from './components/alerts';
+import {
+  ssnInput,
+  formatSSN,
+  bindUIEvents as bindSSNInputUIEvents,
+} from './base/ssnInput';
+import {
+  alerts,
+  dismissAlert,
+  bindUIEvents as bindAlertUIEvents,
+} from './components/alerts';
 import {
   masthead,
   toggleMobileNav,
@@ -44,9 +63,16 @@ import {
   currentOpenModal,
   bindUIEvents as bindModalUIEvents,
 } from './components/modals';
-import { setItemLabels, setAriaLabel, pagination } from './components/pagination';
 import {
-  spinners, getSpinnerClasses, setSpinning, cancelSpinning,
+  setItemLabels,
+  setAriaLabel,
+  pagination,
+} from './components/pagination';
+import {
+  spinners,
+  getSpinnerClasses,
+  setSpinning,
+  cancelSpinning,
 } from './components/spinners';
 import {
   tabs,
@@ -57,6 +83,7 @@ import {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
+  handleTabKeydown,
 } from './components/tabs';
 import {
   toggle,
@@ -77,7 +104,11 @@ import setValidTextInput from './utilities/validation/setValidTextInput';
 import setValidTick from './utilities/validation/setValidTick';
 import runValidation from './utilities/validation/validation-runner';
 import detectJS from './utilities/detectJS';
-import { getFocusableEls, focusFirstEl, isActiveElement } from './utilities/elementState';
+import {
+  getFocusableEls,
+  focusFirstEl,
+  isActiveElement,
+} from './utilities/elementState';
 import getElements from './utilities/getElements';
 import { isTabPressed, isEscPressed } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
@@ -89,6 +120,11 @@ import {
   showDropDown,
   removeActiveStatus,
 } from './components/dropdown';
+import {
+  stepper,
+  bindUIEvents as bindStepperUIEvents,
+} from './components/stepper';
+import { carousel } from './components/carousel';
 
 export {
   dateInput,
@@ -149,6 +185,7 @@ export {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
+  handleTabKeydown,
   toggle,
   toggleIconType,
   toggleAriaExpanded,
@@ -179,4 +216,7 @@ export {
   hideDropDown,
   showDropDown,
   removeActiveStatus,
+  stepper,
+  carousel,
+  bindStepperUIEvents,
 };
