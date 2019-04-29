@@ -83,6 +83,7 @@ import {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
+  handleTabKeydown,
 } from './components/tabs';
 import {
   toggle,
@@ -109,10 +110,7 @@ import {
   isActiveElement,
 } from './utilities/elementState';
 import getElements from './utilities/getElements';
-import {
-  isTabPressed,
-  isEscPressed,
-} from './utilities/keypress';
+import { isTabPressed, isEscPressed } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
 import {
   dropdowns,
@@ -122,6 +120,11 @@ import {
   showDropDown,
   removeActiveStatus,
 } from './components/dropdown';
+import {
+  stepper,
+  bindUIEvents as bindStepperUIEvents,
+} from './components/stepper';
+import { carousel } from './components/carousel';
 
 export {
   dateInput,
@@ -182,6 +185,7 @@ export {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
+  handleTabKeydown,
   toggle,
   toggleIconType,
   toggleAriaExpanded,
@@ -212,4 +216,7 @@ export {
   hideDropDown,
   showDropDown,
   removeActiveStatus,
+  stepper,
+  carousel,
+  bindStepperUIEvents,
 };

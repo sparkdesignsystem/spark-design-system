@@ -512,9 +512,19 @@ import { Component } from '@angular/core';
         <p class="sprk-b-TypeBodyOne">three-fifths</p>
       </div>
     </sprk-stack>
+
+    <sprk-stack splitAt="tiny">
+      <div sprkStackItem class="sprk-o-Stack__item--three-tenths@xs">
+        <p class="sprk-b-TypeBodyOne">three tenths</p>
+      </div>
+      <div sprkStackItem class="sprk-o-Stack__item--seven-tenths@xs">
+        <p class="sprk-b-TypeBodyOne">seven tenths</p>
+      </div>
+    </sprk-stack>
   `,
   styles: ['']
 })
 export class StackDocsComponent {
+  text_input = '';
   constructor() {}
 }

@@ -1,7 +1,20 @@
 description:
   Buttons are points of interaction for a website. A user is trained to activate a Button in order
-  to perform an action. The Button component consists of a clickable container with descriptive text inside.
-
+  to perform an action.
+  When writing button copy, use active verbs like “create”, “join”, or “discover” to
+  entice a client. Avoid vague labels like “learn more” or “get started.” Use consistent
+  phrases throughout the experience.
+  Clearly communicate what will happen when clients click the button.
+  The character limit of the button copy depends on where it’s placed in the design.
+  If the button(s) are not in a modal or dialogue box, each button can have up to
+  approximately 20 characters or a maximum width of 280px.
+  If the button(s) are in a modal or dialogue box, the character limit
+  depends on the number of buttons. The modal design requires the buttons
+  to be displayed side-by-side; therefore, the character limit for
+  the entire line of buttons within the modal is approximately 20
+  characters. This means each button should be no more than six to
+  eight characters depending on the number of each button and the
+  length of the copy on the other buttons.
 information:
   - Buttons make use of the Large Inset Short spacing.
 restrictions:
@@ -168,7 +181,7 @@ classTable:
     description: Reduces the padding of the normal button to $space-inset-short-m.
   .sprk-c-Button--full@xs:
     description: Makes the button full width of its parent container until it flips to normal width at the $sprk-btn-breakpoint-xs breakpoint.
-  .sprk-c-Button--full@sm:
+  .sprk-c-Button--full@s:
     description: Makes the button full width of its parent container until it flips to normal width at the $sprk-btn-breakpoint-s breakpoint.
   .sprk-c-Button--secondary:
     description: Styles the button as the secondary variant.

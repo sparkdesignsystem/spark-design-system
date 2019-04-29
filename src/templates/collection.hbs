@@ -27,6 +27,19 @@
             </div>
           {{/if}}
 
+          {{#if angularComingSoon}}
+            <div data-angular-documentation>
+              {{> drizzle.coming-soon framework="Angular" }}
+            </div>
+          {{/if}}
+
+          {{#if reactComingSoon}}
+            <div data-react-documentation>
+              {{> drizzle.coming-soon framework="React" }}
+            </div>
+          {{/if}}
+
+
           {{#if description}}
             <p class="drizzle-b-P">
               {{{description}}}
@@ -166,6 +179,14 @@
         <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-angular-documentation>
           <h2 class="drizzle-b-h2">Angular Information</h2>
           {{#embed (concat 'patterns.components.' (toLowerCase name) '.angular.global-info') }}{{/embed}}
+        </div>
+    {{/if}}
+
+    {{!- React Info (component wide) --}}
+    {{#if hasReactInfo}}
+        <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-react-documentation>
+          <h2 class="drizzle-b-h2">React Information</h2>
+          {{#embed (concat 'patterns.components.' (toLowerCase name) '.react.global-info') }}{{/embed}}
         </div>
     {{/if}}
 

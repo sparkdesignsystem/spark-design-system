@@ -11,7 +11,7 @@ restrictions:
   - Tab label content should not exceed a reasonable length.
   - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance
-    has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).
+    has a unique data-id property ("tab-1", "tab-2", "tab-3", etc).
 variableTable:
   $sprk-tab-navigation-breakpoint:
     default: 46rem

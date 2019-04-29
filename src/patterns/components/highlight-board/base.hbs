@@ -2,9 +2,9 @@
 name: Base
 hidden: true
 ---
-<div class="sprk-c-HighlightBoard {{#if image}}sprk-c-HighlightBoard--has-image {{/if}} {{#if stacked}}sprk-c-HighlightBoard--stacked {{/if}}sprk-u-mbm {{#if fullwidth}}sprk-u-FullWidth{{/if}}" {{#if idString}}data-id="{{idString}}"{{/if}}>
+<div class="sprk-c-HighlightBoard{{#if image}} sprk-c-HighlightBoard--has-image{{/if}}{{#if stacked}} sprk-c-HighlightBoard--stacked{{/if}} sprk-u-mbm" {{#if idString}}data-id="{{idString}}"{{/if}}>
   {{#if image }}
-    <img class="sprk-c-HighlightBoard__image" src="{{imagefile}}" alt="placeholder">
+    <img class="sprk-c-HighlightBoard__image" src="{{imagefile}}" alt="desktop">
   {{/if}}
 
   <div class="sprk-c-HighlightBoard__content sprk-o-Stack sprk-o-Stack--large">
@@ -14,13 +14,13 @@ hidden: true
 
     <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xs sprk-o-Stack--center-column {{#if stacked}}sprk-o-Stack--center-row{{/if}}">
       <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-        <a class="sprk-c-Button sprk-c-Button--full@sm" href="/gettingstarted/designers.html">
+        <a class="sprk-c-Button sprk-c-Button--full@s" href="/gettingstarted/designers.html">
           Designers
         </a>
       </div>
 
       <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-        <a class="sprk-c-Button sprk-c-Button--full@sm sprk-c-Button--secondary" href="/gettingstarted/developers.html">
+        <a class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary" href="/gettingstarted/developers.html">
           Developers
         </a>
       </div>

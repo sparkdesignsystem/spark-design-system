@@ -1,4 +1,4 @@
-/* global localStorage */
+/* global localStorage window */
 import { getElements } from '../../../../packages/spark-core';
 
 const saveSwitchSetting = (value) => {
@@ -37,6 +37,7 @@ const bindUIEvents = (element) => {
     element.querySelectorAll('input').forEach((rdio) => {
       values.push(rdio.value);
     });
+
     hideAllSections(values);
     showSections([`${e.target.value}`]);
     saveSwitchSetting(e.target.value);

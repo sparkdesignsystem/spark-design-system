@@ -4,8 +4,8 @@ description: |
   It serves as navigation and informs users where they currently are and where they
   can go in the future.
 information:
-  - Spark-Core Pagination JS will take care of adding in the correct aria-label
-    to each link on first page load and when the items are tapped or clicked.
+  - As a general guideline, you should use the "default" variant when the pager has three or fewer pages,
+    and you should use the "long" variant when the pager has more than three pages.
 restrictions:
   - The data-id property is provided as a hook for automated tools. If you have multiple
     instances of the same variant of a component on the same page, make sure each instance
@@ -14,7 +14,7 @@ sparkPackageCore: true
 variableTable:
   $sprk-pag-current-link-font-weight:
     default: 500
-    description: The font weight of the curren pagination link.
+    description: The font weight of the current pagination link.
   $sprk-pag-max-width:
     default: 26rem
     description: The maximum width of the pagination element.

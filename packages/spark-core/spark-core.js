@@ -16,6 +16,7 @@ import { spinners } from './components/spinners';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
 import { dropdowns } from './components/dropdown';
+import { stepper } from './components/stepper';
 
 const SparkCore = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
@@ -35,6 +36,7 @@ const SparkCore = ({ datePickerConfig = {} } = {}) => {
   masthead();
   alerts();
   dropdowns();
+  stepper();
 };
 
 export { SparkCore as default };

@@ -13,7 +13,7 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
     const classArray: string[] = ['sprk-c-Tabs__content'];
 
     if (!this.defaultActive) {
-      classArray.push('sprk-u-Display--none');
+      classArray.push('sprk-u-HideWhenJs');
     }
 
     if (this.additionalClasses) {

@@ -14,6 +14,7 @@
 
 .sprk-b-SelectionContainer [type='radio'],
 .sprk-b-SelectionContainer [type='checkbox'] {
+  flex: 0 0 auto;
   height: $sprk-selection-container-input-height;
   width: $sprk-selection-container-input-width;
   margin: $sprk-selection-container-input-margin;

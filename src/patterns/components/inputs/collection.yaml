@@ -44,6 +44,7 @@ restrictions:
     has a unique data-id property ("input-text-1", "input-text-2", "input-date-1", etc).
 sparkPackageCore: true
 hasAngularInfo: true
+hasReactInfo: true
 variableTable:
   $sprk-monetary-symbol:
     default: '$'
@@ -361,7 +362,7 @@ variableTable:
     default: $sprk-space-m
     description: The X offset of text icons inside input elements.
   $sprk-input-text-icon-offset-y:
-    default: 38px
+    default: 2em
     description: The Y offset of text icons inside input elements.
   $sprk-input-text-icon-font-size:
     default: 1rem
@@ -421,5 +422,5 @@ classTable:
     description: Selects that are currently in focus.
   .sprk-b-Select--focusout:
     description: Selects that are currently not in focus.
-  .sprk-b-TextInputIconContainer--monetary:
-    description: Monetary text inputs with icons.
+  .sprk-b-TextInputIconContainer--has-text-icon:
+    description: Text inputs with icons.

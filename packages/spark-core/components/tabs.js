@@ -1,29 +1,30 @@
-/* global window */
 import getElements from '../utilities/getElements';
 
-// all the role=tab get aria-selected=false, get active class removed, hide all panels
-const resetTabs = (tabs, tabpanels) => {
-  tabs.forEach((tab) => {
-    tab.classList.remove('sprk-c-Tabs__button--active');
+const resetTabs = (tabs, tabpanels, activeClass) => {
+  tabs.forEach(tab => {
+    tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
+    tab.removeAttribute('tabindex');
     tab.setAttribute('aria-selected', 'false');
-    tabpanels.forEach((panel) => {
-      panel.classList.add('sprk-u-Display--none');
+    tabpanels.forEach(panel => {
+      panel.classList.add('sprk-u-HideWhenJs');
     });
   });
 };
 
-// correct role=tab get aria-selected=true, get active class added, show correct panel
-const setActiveTab = (tab, tabpanel) => {
-  tab.classList.add('sprk-c-Tabs__button--active');
+const setActiveTab = (tab, tabpanel, activeClass) => {
+  tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
+  tab.setAttribute('tabindex', '0');
   tab.setAttribute('aria-selected', 'true');
-  tabpanel.classList.remove('sprk-u-Display--none');
+  if (tabpanel) {
+    tabpanel.classList.remove('sprk-u-HideWhenJs');
+  }
   tab.focus();
 };
 
-const getActiveTabIndex = (tabs) => {
+const getActiveTabIndex = (tabs, activeClass) => {
   let activeIndex = null;
   tabs.forEach((tab, index) => {
-    if (tab.classList.contains('sprk-c-Tabs__button--active')) {
+    if (tab.classList.contains(activeClass || 'sprk-c-Tabs__button--active')) {
       activeIndex = index;
     }
   });
@@ -31,31 +32,43 @@ const getActiveTabIndex = (tabs) => {
   return activeIndex;
 };
 
-const advanceTab = (tabs, tabpanels) => {
-  const activeIndex = getActiveTabIndex(tabs);
-  resetTabs(tabs, tabpanels);
+const advanceTab = (tabs, tabpanels, activeClass) => {
+  const activeIndex = getActiveTabIndex(tabs, activeClass);
+  resetTabs(tabs, tabpanels, activeClass);
 
   if (activeIndex + 1 <= tabs.length - 1) {
-    setActiveTab(tabs[activeIndex + 1], tabpanels[activeIndex + 1]);
+    setActiveTab(
+      tabs[activeIndex + 1],
+      tabpanels[activeIndex + 1],
+      activeClass,
+    );
   } else {
-    setActiveTab(tabs[0], tabpanels[0]);
+    setActiveTab(tabs[0], tabpanels[0], activeClass);
   }
 };
 
-const retreatTab = (tabs, tabpanels) => {
-  const activeIndex = getActiveTabIndex(tabs);
+const retreatTab = (tabs, tabpanels, activeClass) => {
+  const activeIndex = getActiveTabIndex(tabs, activeClass);
 
-  resetTabs(tabs, tabpanels);
+  resetTabs(tabs, tabpanels, activeClass);
 
   if (activeIndex - 1 === -1) {
-    setActiveTab(tabs[tabs.length - 1], tabpanels[tabs.length - 1]);
+    setActiveTab(
+      tabs[tabs.length - 1],
+      tabpanels[tabs.length - 1],
+      activeClass,
+    );
   } else {
-    setActiveTab(tabs[activeIndex - 1], tabpanels[activeIndex - 1]);
+    setActiveTab(
+      tabs[activeIndex - 1],
+      tabpanels[activeIndex - 1],
+      activeClass,
+    );
   }
 };
 
 const ariaOrientation = (width, element) => {
-  // switch aria-orientation to vertical on mobile (based on _tabs.scss breakpoint)
+  // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
   if (width <= 736) {
     element.setAttribute('aria-orientation', 'vertical');
   } else {
@@ -63,7 +76,7 @@ const ariaOrientation = (width, element) => {
   }
 };
 
-const bindUIEvents = (element) => {
+const bindUIEvents = element => {
   ariaOrientation(window.innerWidth, element);
 
   const tabContainer = element.querySelector('.sprk-c-Tabs__buttons');
@@ -77,18 +90,20 @@ const bindUIEvents = (element) => {
     });
   });
 
-  tabContainer.addEventListener('keydown', (event) => {
+  tabContainer.addEventListener('keydown', event => {
     const keys = {
       end: 35,
       home: 36,
       left: 37,
       right: 39,
       tab: 9,
+      up: 38,
+      down: 40,
     };
 
-    if (event.keyCode === keys.left) {
+    if (event.keyCode === keys.left || event.keyCode === keys.up) {
       retreatTab(tabs, tabpanels);
-    } else if (event.keyCode === keys.right) {
+    } else if (event.keyCode === keys.right || event.keyCode === keys.down) {
       advanceTab(tabs, tabpanels);
     } else if (event.keyCode === keys.tab) {
       event.preventDefault();
