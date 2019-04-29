@@ -21,7 +21,7 @@ const beforeLoryInit = (dotContainer, count) => {
 
 const afterLoryInit = (dotContainer, carouselInstance) => {
   if (dotContainer) {
-    const dots = dotContainer.querySelectorAll('button');
+    const dots = dotContainer.querySelectorAll('div');
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         carouselInstance.slideTo(index);

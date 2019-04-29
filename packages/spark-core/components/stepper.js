@@ -157,6 +157,13 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
           activeClass,
           sliderEl,
         );
+        resetSlider(steps, activeClass, sliderEl);
+        positionSlider(
+          steps[activeStep],
+          descriptions[activeStep],
+          sliderEl,
+          activeClass,
+        );
       }
     });
 
