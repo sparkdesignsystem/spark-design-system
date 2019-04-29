@@ -474,7 +474,7 @@ describe('steps UI Events tests, (descriptions)', () => {
       )[0];
       sliderEl.style.top = '25px';
       window.resizeTo(2000, 1000);
-      expect(sliderEl.style.top).eql('25px');
+      expect(sliderEl.style.top).eql('0px');
     },
   );
 
