@@ -48,16 +48,47 @@ it('should correctly apply additional classes', () => {
   expect(actual.hasClass(expected)).toBe(true);
 });
 
-// it('should accept key events', () => {
-  // const cancelFunc = sinon.spy();
-  // const wrapper = mount(<SprkModal isVisible={true} cancelClick={cancelFunc} />);
-  // const modal = wrapper.find('div.sprk-c-Modal');
+it('should call the cancelClick callback when the Close button is clicked', () => {
+  const cancelFunc = sinon.spy();
+  const wrapper = mount(<SprkModal isVisible={true} cancelClick={cancelFunc} />);
 
-  // modal.simulate('keydown', { keyCode: 27 }); // escape
-  // expect(cancelFunc.called).toBe(true);
+  const closeButton = wrapper.find('button.sprk-c-Modal__icon');
 
+  closeButton.simulate('click');
+
+  expect(cancelFunc.called).toBe(true);
+});
+
+it('should call the confirmClick callback when the confirm button is clicked', () => {
+  const confirmFunc = sinon.spy();
+  const wrapper = mount(<SprkModal isVisible={true} confirmClick={confirmFunc} />);
+
+  const confirmButton = wrapper.find('footer button.sprk-c-Button').first();
+
+  confirmButton.simulate('click');
+
+  expect(confirmFunc.called).toBe(true);
+});
+
+// it('should call the cancel callback when Escape is pressed.', () => {
+  // const cancelFunc = jest.fn();
+  // const wrapper = mount(<SprkModal variant={'choice'} isVisible={true} cancelClick={cancelFunc} />).find('.sprk-c-Button').first();
+  // // expect(wrapper.length).toBe(1);
+
+  // wrapper.simulate('keydown', { keyCode: 27 });
+
+  // expect(cancelFunc).toHaveBeenCalled();
+
+
+  // const wrapper = mount(
+  //   <SprkTabs>
+  //     <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
+  //     <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+  //   </SprkTabs>,
+  // );
+  // // First, tab into the Tab Button area
+  // wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
+  // wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 37 });
+  // const button = wrapper.find(SprkTabsButton).first();
+  // expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
 // });
-
-// setting focus
-
-// focus trapping
