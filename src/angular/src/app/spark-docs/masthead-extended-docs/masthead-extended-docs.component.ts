@@ -585,7 +585,12 @@ export class MastheadExtendedDocsComponent {
         value: 'Choice Title 2',
         active: true
       }
-    ]
+    ],
+    footer: {
+      analyticsString: 'Go Elsewhere Link',
+      text: 'Go Elsewhere',
+      href: '/alerts',
+    }
   };
 
   constructor() {}
