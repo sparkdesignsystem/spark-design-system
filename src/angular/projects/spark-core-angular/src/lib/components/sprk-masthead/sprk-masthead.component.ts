@@ -138,14 +138,17 @@ import * as _ from 'lodash';
           [choices]="narrowSelector['choices']"
         >
           <div
+            *ngIf="narrowSelector['footer']"
             class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
             sprkDropdownFooter
           >
             <sprk-link
               linkType="unstyled"
+              [analyticsString]="narrowSelector['footer'].analyticsString"
+              [href]="narrowSelector['footer'].href"
               additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
             >
-              Go Elsewhere
+              {{narrowSelector['footer'].text}}
             </sprk-link>
           </div>
         </sprk-dropdown>
