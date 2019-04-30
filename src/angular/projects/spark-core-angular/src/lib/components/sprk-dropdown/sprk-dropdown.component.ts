@@ -131,7 +131,6 @@ export class SparkDropdownComponent {
   constructor(public ref: ElementRef) {}
 
   toggle(event): void {
-    event.preventDefault();
     this.isOpen = !this.isOpen;
   }
 
@@ -157,7 +156,6 @@ export class SparkDropdownComponent {
   }
 
   choiceClick(event) {
-    event.preventDefault();
     this.clearActiveChoices();
     const choiceIndex = event.currentTarget.getAttribute(
       'data-sprk-dropdown-choice-index'
