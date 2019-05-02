@@ -13,6 +13,35 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   }
 };
 
+const toggleMenu = direction => {
+  console.log(direction);
+};
+
+let scrollPosition = 0;
+let scrollDirection;
+const checkScrollDirection = scrollPos => {
+  const diff = scrollPos - scrollPosition;
+  const direction = diff > 0 ? 'down' : 'up';
+  if (scrollDirection !== direction) {
+    toggleMenu(direction);
+  }
+  scrollDirection = direction;
+  scrollPosition = scrollPos;
+};
+
+const checkMenuVisibility = () => {
+  const mobileMenu = Array.from(
+    document.getElementsByClassName('sprk-c-Masthead__menu'),
+  );
+  const menuDisplay = window.getComputedStyle(mobileMenu[0]).display;
+  const menuVisible = menuDisplay !== 'none';
+  if (menuVisible) {
+    window.addEventListener('scroll', () => {
+      checkScrollDirection(window.scrollY);
+    });
+  }
+};
+
 const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
   // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
@@ -24,7 +53,9 @@ const toggleMobileNav = (iconContainer, nav, masthead) => {
     document.body.classList.add('sprk-u-Height--100');
   }
   masthead.classList.toggle('sprk-c-Masthead--open');
-  iconContainer.querySelector('svg').classList.toggle('sprk-c-Menu__icon--open');
+  iconContainer
+    .querySelector('svg')
+    .classList.toggle('sprk-c-Menu__icon--open');
   nav.classList.toggle('sprk-u-Display--none');
 };
 
@@ -39,37 +70,51 @@ const hideMobileNavs = () => {
   document.documentElement.classList.remove('sprk-u-Overflow--hidden');
   document.body.classList.remove('sprk-u-Height--100');
   document.documentElement.classList.remove('sprk-u-Height--100');
-  getElements('[data-sprk-mobile-nav]', (item) => {
+  getElements('[data-sprk-mobile-nav]', item => {
     item.classList.add('sprk-u-Display--none');
   });
-  getElements('.sprk-c-Menu__icon--open', (item) => {
+  getElements('.sprk-c-Menu__icon--open', item => {
     item.classList.remove('sprk-c-Menu__icon--open');
   });
-  getElements('.sprk-c-Masthead--open', (item) => {
+  getElements('.sprk-c-Masthead--open', item => {
     item.classList.remove('sprk-c-Masthead--open');
   });
 };
 
-const hideSelectorMask = (mastheadSelectorMask) => {
+const hideSelectorMask = mastheadSelectorMask => {
   mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
 };
 
-const showSelectorMask = (mastheadSelectorMask) => {
+const showSelectorMask = mastheadSelectorMask => {
   mastheadSelectorMask.classList.add('sprk-c-MastheadMask');
 };
 
 const bindUIEvents = () => {
-  getElements('[data-sprk-mobile-nav-trigger]', (element) => {
+  getElements('[data-sprk-mobile-nav-trigger]', element => {
     const mainLayout = document.querySelector('[data-sprk-main]');
     const masthead = document.querySelector('[data-sprk-masthead]');
-    const selectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector"]');
-    const selectorTrigger = document.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
-
-    const nav = document.querySelector(
-      `[data-sprk-mobile-nav="${element.getAttribute('data-sprk-mobile-nav-trigger')}"]`,
+    const selectorDropdown = document.querySelector(
+      '[data-sprk-dropdown="dropdown-selector"]',
+    );
+    const selectorTrigger = document.querySelector(
+      '[data-sprk-dropdown-trigger="dropdown-selector"]',
     );
 
-    element.addEventListener('click', (e) => {
+    const nav = document.querySelector(
+      `[data-sprk-mobile-nav="${element.getAttribute(
+        'data-sprk-mobile-nav-trigger',
+      )}"]`,
+    );
+
+    window.addEventListener('load', () => {
+      checkMenuVisibility();
+    });
+
+    window.addEventListener('resize', () => {
+      checkMenuVisibility();
+    });
+
+    element.addEventListener('click', e => {
       e.preventDefault();
       toggleMobileNav(element, nav, masthead);
     });
@@ -86,14 +131,26 @@ const bindUIEvents = () => {
     });
 
     if (selectorTrigger && selectorDropdown) {
-      const selectorTriggerInDropdown = document.querySelector('[data-sprk-selector-dropdown-trigger="dropdown-selector"]');
-      const wideSelectorDropdown = document.querySelector('[data-sprk-dropdown="dropdown-selector-wide"]');
-      const wideSelectorTriggerInDropdown = document.querySelector('[data-sprk-selector-dropdown-trigger="dropdown-selector-wide"]');
-      const mastheadSelectorMask = document.querySelector('[data-sprk-masthead-mask]');
-      const selectorDropdownChoices = selectorDropdown.querySelectorAll('[data-sprk-dropdown-choice]');
+      const selectorTriggerInDropdown = document.querySelector(
+        '[data-sprk-selector-dropdown-trigger="dropdown-selector"]',
+      );
+      const wideSelectorDropdown = document.querySelector(
+        '[data-sprk-dropdown="dropdown-selector-wide"]',
+      );
+      const wideSelectorTriggerInDropdown = document.querySelector(
+        '[data-sprk-selector-dropdown-trigger="dropdown-selector-wide"]',
+      );
+      const mastheadSelectorMask = document.querySelector(
+        '[data-sprk-masthead-mask]',
+      );
+      const selectorDropdownChoices = selectorDropdown.querySelectorAll(
+        '[data-sprk-dropdown-choice]',
+      );
 
       selectorTrigger.addEventListener('click', () => {
-        const dropdownIsOpen = selectorDropdown.classList.contains('sprk-c-Dropdown--open');
+        const dropdownIsOpen = selectorDropdown.classList.contains(
+          'sprk-c-Dropdown--open',
+        );
         if (dropdownIsOpen) {
           hideSelectorMask(mastheadSelectorMask);
         } else {
@@ -102,7 +159,9 @@ const bindUIEvents = () => {
       });
 
       selectorTriggerInDropdown.addEventListener('click', () => {
-        const dropdownIsOpen = selectorDropdown.classList.contains('sprk-c-Dropdown--open');
+        const dropdownIsOpen = selectorDropdown.classList.contains(
+          'sprk-c-Dropdown--open',
+        );
         if (dropdownIsOpen) {
           hideSelectorMask(mastheadSelectorMask);
           hideDropDown(selectorDropdown);
@@ -112,14 +171,16 @@ const bindUIEvents = () => {
         }
       });
 
-      selectorDropdownChoices.forEach((choice) => {
+      selectorDropdownChoices.forEach(choice => {
         choice.addEventListener('click', () => {
           hideSelectorMask(mastheadSelectorMask);
         });
       });
 
       wideSelectorTriggerInDropdown.addEventListener('click', () => {
-        const dropdownIsOpen = wideSelectorDropdown.classList.contains('sprk-c-Dropdown--open');
+        const dropdownIsOpen = wideSelectorDropdown.classList.contains(
+          'sprk-c-Dropdown--open',
+        );
         if (dropdownIsOpen) {
           hideDropDown(wideSelectorDropdown);
         } else {
@@ -127,13 +188,18 @@ const bindUIEvents = () => {
         }
       });
 
-      document.addEventListener('click', (e) => {
-        if (!(selectorTrigger.contains(e.target) || selectorDropdown.contains(e.target))) {
+      document.addEventListener('click', e => {
+        if (
+          !(
+            selectorTrigger.contains(e.target) ||
+            selectorDropdown.contains(e.target)
+          )
+        ) {
           hideSelectorMask(mastheadSelectorMask);
         }
       });
 
-      document.addEventListener('focusin', (e) => {
+      document.addEventListener('focusin', e => {
         /* istanbul ignore else: jsdom cant fire focusin on an element */
         if (!selectorDropdown.contains(e.target)) {
           hideSelectorMask(mastheadSelectorMask);
@@ -141,7 +207,7 @@ const bindUIEvents = () => {
         }
       });
 
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', e => {
         if (isEscPressed(e)) {
           hideSelectorMask(mastheadSelectorMask);
         }
@@ -166,4 +232,7 @@ export {
   addClassOnScroll,
   hideSelectorMask,
   showSelectorMask,
+  checkScrollDirection,
+  checkMenuVisibility,
+  toggleMenu,
 };
