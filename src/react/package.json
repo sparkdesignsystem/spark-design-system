@@ -13,7 +13,7 @@
     "whatwg-fetch": "^3.0.0"
   },
   "peerDependencies": {
-    "@sparkdesignsystem/spark-core": "^10.0.1",
+    "@sparkdesignsystem/spark": "^10.0.1",
     "@sparkdesignsystem/spark-react": "1.0.0"
   },
   "scripts": {

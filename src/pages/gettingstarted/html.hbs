@@ -21,7 +21,7 @@ title: HTML
   </div>
 
   <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
+    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark</h2>
     <h4 class="drizzle-b-h4">Getting Started</h4>
 
     <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
@@ -29,16 +29,16 @@ title: HTML
         <p>Install the npm package.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            npm install --save-dev @sparkdesignsystem/spark-core</code>
+            npm install --save-dev @sparkdesignsystem/spark</code>
         </div>
       </li>
       <li class="sprk-u-mvm">
         <p>Import the Sass setup file in your Sass build. This will bring all
-          Spark-Core Sass patterns into your build. This includes styles for base HTML elements, but the Spark classes are
+          Spark Sass patterns into your build. This includes styles for base HTML elements, but the Spark classes are
           namespaced so that they don't affect any existing css classes.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core&quot;;
+            @import &quot;node_modules/@sparkdesignsystem/spark/spark&quot;;
           </code>
         </div>
         <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
@@ -69,25 +69,25 @@ title: HTML
         <p>Spark has two JavaScript files that need to be incorporated into your build in order for Spark's behavior to
         work.</p>
         <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mvm">
-          <li><p><strong>spark-core.js</strong> - This file contains the bulk of Spark's behavior and can be loaded
+          <li><p><strong>spark.js</strong> - This file contains the bulk of Spark's behavior and can be loaded
             after the page is rendered, this is best done before the closing body tag.</p>
             <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mvm">
               <li class="sprk-u-mvm">
                 <p>
-                  Import the post-render ES6 setup file in your JS build. This will bring all the Spark-Core JS into your build. There is
-                  also an ES5 version if preferred. It's located in @sparkdesignsystem/spark-core/es5.
+                  Import the post-render ES6 setup file in your JS build. This will bring all the Spark JS into your build. There is
+                  also an ES5 version if preferred. It's located in @sparkdesignsystem/spark/es5.
                 </p>
                 <div class="drizzle-c-Command">
                   <code class="drizzle-CodeHighlight">
-                    import sparkCore from  &quot;@sparkdesignsystem/spark-core/spark-core&quot;;
+                    import spark from  &quot;@sparkdesignsystem/spark/spark&quot;;
                   </code>
                 </div>
               </li>
               <li class="sprk-u-mvm">
-                <p>Init the Spark Core JS, passing in a config object (optional).</p>
+                <p>Init the Spark JS, passing in a config object (optional).</p>
                 <div class="drizzle-c-Command">
                   <code class="drizzle-CodeHighlight">
-                    sparkCore({ //config, see below });
+                    spark({ //config, see below });
                   </code>
                 </div>
                 <div class="sprk-u-mvs">
@@ -117,7 +117,7 @@ title: HTML
             </ul>
 
           </li>
-          <li><p><strong>spark-core-polyfill.js</strong> - This file loads a few polyfills that Spark requires. If
+          <li><p><strong>spark-polyfill.js</strong> - This file loads a few polyfills that Spark requires. If
             your application is already polyfilling the items below, you don't need to load this file.
             </p>
             <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mvm">
@@ -130,7 +130,7 @@ title: HTML
             </ul>
             <div class="drizzle-c-Command">
               <code class="drizzle-CodeHighlight">
-                import &quot;@sparkdesignsystem/spark-core/es5/sparkCorePolyfills&quot;;
+                import &quot;@sparkdesignsystem/spark/es5/sparkPolyfills&quot;;
               </code>
             </div>
           </li>
@@ -140,33 +140,6 @@ title: HTML
         <p>Spark does not provide icons directly. What you see below are proprietary icons in use by Quicken Loans. To supply
           your own icon set, you need to import an svg that contains symbols for the ids referenced on the icon page. This symbol file
           should occur in the DOM before the first use element.</p>
-      </li>
-    </ul>
-  </div>
-
-  <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2">Spark Extras</h2>
-
-    <ul class="drizzle-b-List drizzle-b-List--spacing-m drizzle-b-List--nested">
-      <li>
-        <p>There are a few Spark Extras patterns available for install.</p>
-        <ul class="drizzle-b-List drizzle-b-List--spacing-m drizzle-b-List--nested">
-          <li class="sprk-u-mvm">
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">@sparkdesignsystem/spark-card</code>
-            </div>
-          </li>
-          <li class="sprk-u-mvm">
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">@sparkdesignsystem/spark-dictionary</code>
-            </div>
-          </li>
-          <li class="sprk-u-mvm">
-            <div class="drizzle-c-Command">
-              <code class="drizzle-CodeHighlight">@sparkdesignsystem/spark-highlight-board</code>
-            </div>
-          </li>
-        </ul>
       </li>
     </ul>
   </div>

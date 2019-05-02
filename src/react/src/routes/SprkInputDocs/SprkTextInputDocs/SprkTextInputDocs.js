@@ -7,7 +7,7 @@ import {
   formatPhone,
   isValidMonetary,
   formatMonetary,
-} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+} from '@sparkdesignsystem/spark/es5/sparkExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkTextInputDocs extends React.Component {

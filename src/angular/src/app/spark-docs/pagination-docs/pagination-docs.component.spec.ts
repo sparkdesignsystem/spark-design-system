@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { PaginationDocsComponent } from './pagination-docs.component';
 
 describe('PaginationDocsComponent', () => {
@@ -9,7 +9,7 @@ describe('PaginationDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [PaginationDocsComponent]
     }).compileComponents();
   }));

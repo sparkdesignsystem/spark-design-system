@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { MastheadDocsComponent } from './masthead-docs.component';
 
 describe('MastheadDocsComponent', () => {
@@ -9,7 +9,7 @@ describe('MastheadDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule, RouterTestingModule],
+      imports: [SparkAngularModule, RouterTestingModule],
       declarations: [MastheadDocsComponent]
     }).compileComponents();
   }));

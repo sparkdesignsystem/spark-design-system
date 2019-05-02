@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { AccordionDocsComponent } from './accordion-docs.component';
 
 describe('AccordionDocsComponent', () => {
@@ -8,7 +8,7 @@ describe('AccordionDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [AccordionDocsComponent]
     }).compileComponents();
   }));

@@ -1,3 +1,3 @@
-import sparkCorePrerender from '../../../../packages/spark-core/es5/sparkCorePrerender';
+import sparkPrerender from '../../../../packages/spark/es5/sparkPrerender';
 
-sparkCorePrerender();
+sparkPrerender();

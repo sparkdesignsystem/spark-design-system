@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { ModalDocsComponent } from './modal-docs.component';
 
 describe('ModalDocsComponent', () => {
@@ -11,7 +11,7 @@ describe('ModalDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [ModalDocsComponent]
     }).compileComponents();
   }));

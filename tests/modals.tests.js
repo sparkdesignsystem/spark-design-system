@@ -2,7 +2,7 @@
 import sinon from 'sinon';
 import { expect } from 'chai';
 import { hideWaitModal, MODAL_TIMER } from '../src/assets/drizzle/scripts/modals';
-import { modals } from '../packages/spark-core/components/modals';
+import { modals } from '../packages/spark/components/modals';
 
 describe('Modal tests', () => {
   let triggerDefaultModal;

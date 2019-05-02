@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { AlertDocsComponent } from './alert-docs.component';
 
 describe('AlertDocsComponent', () => {
@@ -8,7 +8,7 @@ describe('AlertDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [AlertDocsComponent]
     }).compileComponents();
   }));

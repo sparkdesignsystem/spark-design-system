@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { setSpinning } from '@sparkdesignsystem/spark-core';
+import { setSpinning } from '@sparkdesignsystem/spark';
 
 @Component({
   selector: 'sprk-button-docs',

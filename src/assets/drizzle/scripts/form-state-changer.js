@@ -1,5 +1,5 @@
 /* global document */
-import { getElements } from '../../../../packages/spark-core';
+import { getElements } from '../../../../packages/spark';
 
 const mapTemplates = (id, templates) => {
   const matchingTemplates = Array.from(templates).filter((template) => {

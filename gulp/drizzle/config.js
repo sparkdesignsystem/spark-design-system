@@ -70,8 +70,7 @@ module.exports = {
       {
         match: [
           './src/assets/**/*.scss',
-          './packages/spark-core/**/*.scss',
-          './packages/spark-extras/**/*.scss',
+          './packages/spark/**/*.scss',
           '!./src/angular',
         ],
         tasks: ['sass'],
@@ -79,7 +78,7 @@ module.exports = {
       {
         match: [
           './src/assets/drizzle/**/*.js',
-          './packages/spark-core/es5/*.js',
+          './packages/spark/es5/*.js',
           './src/assets/toolkit/**/*.js',
           '!./src/angular',
           '!./src/react',
@@ -99,42 +98,14 @@ module.exports = {
       },
       {
         match: [
-          './packages/spark-core/{base,components,objects,settings,tools,utilities}/**/*.js',
-          './packages/spark-core/*.js',
+          './packages/spark/{base,components,objects,settings,tools,utilities}/**/*.js',
+          './packages/spark/*.js',
         ],
-        tasks: ['build-spark-core'],
+        tasks: ['build-spark'],
       },
       {
-        match: ['./packages/spark-extras-highlight-board/*.js'],
-        tasks: ['build-spark-extras-highlight-board'],
-      },
-      {
-        match: ['./src/angular/projects/spark-core-angular/src/lib/**/*.ts'],
-        tasks: ['build-spark-core-angular'],
-      },
-      {
-        match: [
-          './src/angular/projects/spark-extras-angular-award/src/lib/**/*.ts',
-        ],
-        tasks: ['build-spark-extras-angular-award'],
-      },
-      {
-        match: [
-          './src/angular/projects/spark-extras-angular-card/src/lib/**/*.ts',
-        ],
-        tasks: ['build-spark-extras-angular-card'],
-      },
-      {
-        match: [
-          './src/angular/projects/spark-extras-angular-dictionary/src/lib/**/*.ts',
-        ],
-        tasks: ['build-spark-extras-angular-dictionary'],
-      },
-      {
-        match: [
-          './src/angular/projects/spark-extras-angular-highlight-board/src/lib/**/*.ts',
-        ],
-        tasks: ['build-spark-extras-angular-highlight-board'],
+        match: ['./src/angular/projects/spark-angular/src/lib/**/*.ts'],
+        tasks: ['build-spark-angular'],
       },
       {
         match: ['./src/react/projects/spark-react/src/**/*'],

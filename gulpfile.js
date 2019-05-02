@@ -1,17 +1,10 @@
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
 
-require('./gulp/spark-core/spark-core.gulpfile.js');
-require('./gulp/spark-extras/spark-card.gulpfile.js');
-require('./gulp/spark-extras/spark-dictionary.gulpfile.js');
-require('./gulp/spark-extras/spark-highlight-board.gulpfile.js');
+require('./gulp/spark/spark.gulpfile.js');
 require('./gulp/drizzle/drizzle.gulpfile.js');
 require('./gulp/angular/dev-app/angulardevapp.gulpfile.js');
-require('./gulp/angular/spark-core-angular/spark-core-angular.gulpfile.js');
-require('./gulp/angular/spark-extras-angular-award/spark-extras-angular-award.gulpfile.js');
-require('./gulp/angular/spark-extras-angular-card/spark-extras-angular-card.gulpfile.js');
-require('./gulp/angular/spark-extras-angular-dictionary/spark-extras-angular-dictionary.gulpfile.js');
-require('./gulp/angular/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.gulpfile.js');
+require('./gulp/angular/spark-angular/spark-angular.gulpfile.js');
 require('./gulp/react/dev-app/reactdevapp.gulpfile.js');
 require('./gulp/react/spark-react/spark-react.gulpfile.js');
 
@@ -21,49 +14,24 @@ gulp.task('pre-publish', cb => {
     'build-drizzle',
     ['install-angular-dev-app', 'install-react-dev-app'],
     'link-spark-to-react-dir',
-    ['setup-spark-angular-projects', 'setup-spark-react'],
+    ['setup-spark-angular', 'setup-spark-react'],
     cb,
   );
 });
 
 gulp.task('setup-spark-packages', cb => {
-  runSequence(
-    'setup-spark-core',
-    'setup-spark-card',
-    'setup-spark-dictionary',
-    'setup-spark-highlight-board',
-    cb,
-  );
-});
-
-// assumes that setup-spark-packages has been run
-gulp.task('setup-spark-angular-projects', cb => {
-  runSequence(
-    'setup-spark-core-angular',
-    [
-      'setup-spark-extras-angular-award',
-      'setup-spark-extras-angular-card',
-      'setup-spark-extras-angular-dictionary',
-      'setup-spark-extras-angular-highlight-board',
-    ],
-    cb,
-  );
+  runSequence('setup-spark', cb);
 });
 
 gulp.task('clean-all', cb => {
   runSequence(
     [
       'clean',
-      'clean-spark-core',
-      'clean-spark-highlight-board',
+      'clean-spark',
       'clean-angular-dev-app',
       'clean-react-dev-app',
       'clean-spark-react',
-      'clean-spark-core-angular',
-      'clean-spark-extras-angular-award',
-      'clean-spark-extras-angular-card',
-      'clean-spark-extras-angular-dictionary',
-      'clean-spark-extras-angular-highlight-board',
+      'clean-spark-angular',
     ],
     cb,
   );
@@ -77,7 +45,7 @@ gulp.task('dev-spark-angular', cb => {
   runSequence(
     'install-angular-dev-app',
     'setup-spark-packages',
-    'setup-spark-angular-projects',
+    'setup-spark-angular',
     ['serve-angular-dev-app', 'watch'],
     cb,
   );
@@ -99,7 +67,7 @@ gulp.task('dev-all', cb => {
     'setup-spark-packages',
     'install-angular-dev-app',
     'install-react-dev-app',
-    'setup-spark-angular-projects',
+    'setup-spark-angular',
     'link-spark-to-react-dir',
     'setup-spark-react',
     'build-drizzle',
@@ -109,14 +77,7 @@ gulp.task('dev-all', cb => {
 });
 
 gulp.task('test-angular', cb => {
-  runSequence(
-    'test-spark-core-angular',
-    'test-spark-extras-angular-award',
-    'test-spark-extras-angular-card',
-    'test-spark-extras-angular-dictionary',
-    'test-spark-extras-angular-highlight-board',
-    cb,
-  );
+  runSequence('test-spark-angular', cb);
 });
 
 gulp.task('test-react', cb => {
@@ -133,7 +94,7 @@ gulp.task('build-angular', cb => {
   runSequence(
     'install-angular-dev-app',
     'setup-spark-packages',
-    'setup-spark-angular-projects',
+    'setup-spark-angular',
     'build-angular-dev-app-netlify',
     cb,
   );
