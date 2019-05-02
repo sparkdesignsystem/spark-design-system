@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SprkStepperStepModule } from './sprk-stepper-step/sprk-stepper-step.module';
-import { SprkStepperComponent } from './sprk-stepper.component';
+import { SparkStepperStepModule } from './sprk-stepper-step/sprk-stepper-step.module';
+import { SparkStepperComponent } from './sprk-stepper.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, SprkStepperStepModule],
-  declarations: [SprkStepperComponent],
-  exports: [SprkStepperComponent]
+  imports: [CommonModule, RouterModule, SparkStepperStepModule],
+  declarations: [SparkStepperComponent],
+  exports: [SparkStepperComponent]
 })
-export class SprkStepperModule {}
+export class SparkStepperModule {}
