@@ -1,4 +1,5 @@
 - name: patterns.components.inputs.text-input
+- name: patterns.components.inputs.text-input-jumbo
 - name: patterns.components.inputs.text-input-error
 - name: patterns.components.inputs.text-input-disabled
 - name: patterns.components.inputs.checkbox

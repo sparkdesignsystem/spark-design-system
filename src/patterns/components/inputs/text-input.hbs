@@ -15,10 +15,10 @@ hasAngularCode: true
 hasReactCode: true
 ---
 
-<div class="sprk-b-InputContainer" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
+<div class="sprk-b-InputContainer {{#if containerclass}}{{containerclass}}{{/if}}" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
   <label
       for="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
-      class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}}">Text Input Label</label>
+      class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}} {{#if labelclass}}{{labelclass}} {{/if}}">Text Input Label</label>
   <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
          id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
          data-id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}"
@@ -27,8 +27,7 @@ hasReactCode: true
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container"
          {{#if disabled}} disabled{{/if}}
          {{#if invaliddata}} aria-invalid="true"{{/if}}
-
-         {{#if required}}required{{/if}}>
+         {{#if required}}required{{/if}} {{#if placeholder}}placeholder="{{placeholder}}"{{/if}}>
   {{#if errorMessage}}
     <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-normal{{/if}}--error-container">
       <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">

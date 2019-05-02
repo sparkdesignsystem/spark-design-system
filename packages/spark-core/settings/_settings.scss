@@ -401,6 +401,7 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
 $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
+$sprk-input-container-jumbo-max-width: 37.5rem !default;
 $sprk-input-max-width: 27.5rem !default;
 
 //
@@ -410,6 +411,8 @@ $sprk-text-input-font-family: $sprk-font-family-body-two !default;
 $sprk-text-input-font-size: 1rem !default;
 $sprk-text-input-font-weight: 300 !default;
 $sprk-text-input-height: 48px !default;
+$sprk-text-input-jumbo-height: 65px !default;
+$sprk-text-input-jumbo-font-size: $sprk-font-size-display-five !default;
 $sprk-text-input-line-height: 1 !default;
 $sprk-text-input-outline: 0 !default;
 $sprk-text-input-color: $sprk-black !default;
@@ -556,6 +559,8 @@ $sprk-label-padding: 0 !default;
 $sprk-label-font-family: $sprk-font-family-body-two !default;
 $sprk-label-font-size: 0.875rem !default;
 $sprk-label-font-weight: 400 !default;
+$sprk-label-jumbo-font-size: $sprk-font-size-display-four !default;
+$sprk-label-jumbo-margin: 0 0 $sprk-space-misc-b 0 !default;
 $sprk-label-line-height: 1 !default;
 $sprk-label-margin: 0 0 $sprk-space-s 0 !default;
 $sprk-visibility-control-margin: 6px 0 0 0 !default;

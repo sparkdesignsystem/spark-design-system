@@ -12,6 +12,11 @@
   color: $sprk-label-disabled-color;
 }
 
+.sprk-b-Label--jumbo {
+  font-size: $sprk-label-jumbo-font-size;
+  margin: $sprk-label-jumbo-margin;
+}
+
 .sprk-b-Label--no-input {
   padding: 0;
   transform: none;
