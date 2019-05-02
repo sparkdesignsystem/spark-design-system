@@ -14,13 +14,19 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
 };
 
 const toggleMenu = direction => {
-  console.log(direction);
+  const masthead = document.querySelector('[data-sprk-masthead]');
+  if (direction === 'down') {
+    masthead.classList.add('sprk-c-Masthead--hidden');
+  } else {
+    masthead.classList.remove('sprk-c-Masthead--hidden');
+  }
 };
 
 let scrollPosition = 0;
 let scrollDirection;
 const checkScrollDirection = scrollPos => {
   const diff = scrollPos - scrollPosition;
+  // console.log(diff);
   const direction = diff > 0 ? 'down' : 'up';
   if (scrollDirection !== direction) {
     toggleMenu(direction);
