@@ -173,6 +173,15 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         down: 40,
       };
 
+      // if the key pressed isnt in the list of keys, return
+      if (
+        !Object.keys(keys).some(key => {
+          return keys[key] === event.keyCode;
+        })
+      ) {
+        return;
+      }
+
       if (event.keyCode === keys.left || event.keyCode === keys.up) {
         event.preventDefault();
         retreatTab(steps, descriptions, activeClass);
