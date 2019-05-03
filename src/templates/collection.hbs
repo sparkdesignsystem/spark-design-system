@@ -27,6 +27,19 @@
             </div>
           {{/if}}
 
+          {{#if angularComingSoon}}
+            <div data-angular-documentation>
+              {{> drizzle.coming-soon framework="Angular" }}
+            </div>
+          {{/if}}
+
+          {{#if reactComingSoon}}
+            <div data-react-documentation>
+              {{> drizzle.coming-soon framework="React" }}
+            </div>
+          {{/if}}
+
+
           {{#if description}}
             <p class="drizzle-b-P">
               {{{description}}}

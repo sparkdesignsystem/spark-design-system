@@ -6,15 +6,17 @@
     "jest/globals": true
   },
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true,
+      "optionalDependencies": false,
+      "peerDependencies": false
+    }],
     "max-len": ["error", 80, {
       "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
       "ignoreUrls": true
     }],
     "prettier/prettier": ["error"],
-    "object-curly-newline": ["error", {
-      "ObjectPattern": { "multiline": true },
-      "ImportDeclaration": "never"
-    }],
+    "object-curly-newline": "off",
     "react/require-default-props" : "off",
     "react/jsx-filename-extension": "off",
     "jsx-a11y/label-has-associated-control": [ 2, {

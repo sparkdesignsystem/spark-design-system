@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-card",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Cards present related content. They provide an easy way to get information quickly and are typically used in groups.",
   "main": "_card.scss",
   "scripts": {

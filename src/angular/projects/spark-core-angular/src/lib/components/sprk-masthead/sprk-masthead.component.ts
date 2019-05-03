@@ -313,30 +313,34 @@ export class SparkMastheadComponent {
   toggleNarrowNav(event): void {
     event.preventDefault();
     if (this.isNarrowNavOpen) {
-      this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
-      this.renderer.removeClass(
-        document.body.parentElement,
-        'sprk-u-Overflow--hidden'
-      );
-      this.renderer.removeClass(document.body, 'sprk-u-Height--100');
-      this.renderer.removeClass(
-        document.body.parentElement,
-        'sprk-u-Height--100'
-      );
-      this.isNarrowNavOpen = false;
+      this.closeNarrowNav();
     } else {
-      this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
-      this.renderer.addClass(
-        document.body.parentElement,
-        'sprk-u-Overflow--hidden'
-      );
-      this.renderer.addClass(document.body, 'sprk-u-Height--100');
-      this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
-      this.isNarrowNavOpen = true;
+      this.openNarrowNav();
     }
   }
 
+  openNarrowNav(): void {
+    this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
+    this.renderer.addClass(
+      document.body.parentElement,
+      'sprk-u-Overflow--hidden'
+    );
+    this.renderer.addClass(document.body, 'sprk-u-Height--100');
+    this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
+    this.isNarrowNavOpen = true;
+  }
+
   closeNarrowNav(): void {
+    this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
+    this.renderer.removeClass(
+      document.body.parentElement,
+      'sprk-u-Overflow--hidden'
+    );
+    this.renderer.removeClass(document.body, 'sprk-u-Height--100');
+    this.renderer.removeClass(
+      document.body.parentElement,
+      'sprk-u-Height--100'
+    );
     this.isNarrowNavOpen = false;
   }
 }

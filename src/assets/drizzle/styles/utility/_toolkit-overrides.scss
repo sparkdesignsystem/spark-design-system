@@ -10,6 +10,12 @@
   z-index: 100001;
 }
 
+[data-template-id^='stepper-with-dark-background'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='stepper-with-carousel'] .#{$app-namespace}-c-Preview__example {
+  background-color: #007dba;
+}
+
+
 .#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-nav,
 .#{$app-namespace}-c-Preview .sprk-c-Masthead {
   position: static;

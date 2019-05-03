@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-dictionary",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Spark Dictionary is a component for displaying key value pairs.",
   "main": "_dictionary.scss",
   "scripts": {
