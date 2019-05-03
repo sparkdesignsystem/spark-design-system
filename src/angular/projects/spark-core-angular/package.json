@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-core-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "8.0.6",
+  "version": "8.0.7",
   "scripts": {
     "lint": "ng lint spark-core-angular",
     "test": "ng test spark-core-angular --watch=false",
