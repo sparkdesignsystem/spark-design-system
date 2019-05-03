@@ -70,25 +70,66 @@ it('should call the confirmClick callback when the confirm button is clicked', (
   expect(confirmFunc.called).toBe(true);
 });
 
-// it('should call the cancel callback when Escape is pressed.', () => {
-  // const cancelFunc = jest.fn();
-  // const wrapper = mount(<SprkModal variant={'choice'} isVisible={true} cancelClick={cancelFunc} />).find('.sprk-c-Button').first();
-  // // expect(wrapper.length).toBe(1);
+it('should call the cancel callback when cancel is clicked.', () => {
+  const cancelFunc = jest.fn();
+  const wrapper = mount(<SprkModal variant={'choice'} isVisible={true} cancelClick={cancelFunc} />);
+  expect(wrapper.find('.sprk-c-Button--tertiary').length).toBe(1);
 
-  // wrapper.simulate('keydown', { keyCode: 27 });
+  wrapper.find('.sprk-c-Button--tertiary').simulate('click');
+
+  expect(cancelFunc).toHaveBeenCalled();
+});
+
+it('should rollover focus in the focus trap.', () => {
+  const wrapper = mount(<SprkModal variant={'choice'} isVisible={true} >test</SprkModal>);
+
+  // put focus on the cancel button
+  const cancelButton = wrapper.instance().buttonRef;
+  // cancelButton.focus();
+
+  // assert that focus is on the cancel button
+
+
+  // press tab - Enzyme doesn't support event propagation so we need to call the
+  // handler directly rather than just simulating the event with .simulate
+  // wrapper.instance().handleKeyEvents(
+  //   {
+  //     keyCode: 9,
+  //     preventDefault: function() {}
+  //   }
+  // );
+
+  // assert that focus is on the close button
+
+});
+
+it('handles tab focus correctly in wait modal', () => {
+  const wrapper = mount(<SprkModal variant={'wait'} isVisible={true} />);
+  const elem = document.activeElement;
+
+  wrapper.instance().handleKeyEvents(
+    {
+      keyCode: 9,
+      preventDefault: function() {}
+    }
+  );
+
+  const focusedElement = document.activeElement;
+
+  // the focused element should not have changed when Tab was pressed
+  expect(elem === focusedElement).toBe(true);
+});
+
+it('should call the cancel callback when escape is pressed.', () => {
+  // const cancelFunc = jest.fn();
+  // const wrapper = mount(<SprkModal variant={'choice'} isVisible={true} cancelClick={cancelFunc} />);
+
+  // wrapper.instance().handleKeyEvents(
+  //   {
+  //     keyCode: 27,
+  //     preventDefault: function() {}
+  //   }
+  // );
 
   // expect(cancelFunc).toHaveBeenCalled();
-
-
-  // const wrapper = mount(
-  //   <SprkTabs>
-  //     <SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
-  //     <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
-  //   </SprkTabs>,
-  // );
-  // // First, tab into the Tab Button area
-  // wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 9 });
-  // wrapper.find('div.sprk-c-Tabs__buttons').simulate('keydown', { keyCode: 37 });
-  // const button = wrapper.find(SprkTabsButton).first();
-  // expect(button.getDOMNode().classList.contains('sprk-c-Tabs__button--active')).toBe(true);
-// });
+});
