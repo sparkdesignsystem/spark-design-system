@@ -545,7 +545,7 @@ describe('slider position tests', () => {
         </div>
       </li>
     `);
-    resetSlider([step], 'test', slider);
+    resetSlider([step], slider);
     expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).eql(0);
   });
 
@@ -570,7 +570,7 @@ describe('slider position tests', () => {
         </div>
       </li>
     `);
-    positionSlider(step, undefined, slider, 'test');
+    positionSlider(step, undefined, slider);
     expect(step.getAttribute('aria-selected')).eql('true');
   });
 });
