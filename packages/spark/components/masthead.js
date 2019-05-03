@@ -26,7 +26,6 @@ let scrollPosition = 0;
 let scrollDirection;
 const checkScrollDirection = scrollPos => {
   const diff = scrollPos - scrollPosition;
-  // console.log(diff);
   const direction = diff > 0 ? 'down' : 'up';
   if (scrollDirection !== direction) {
     toggleMenu(direction);
@@ -35,17 +34,24 @@ const checkScrollDirection = scrollPos => {
   scrollPosition = scrollPos;
 };
 
+let menuVisible = false;
 const checkMenuVisibility = () => {
   const mobileMenu = Array.from(
     document.getElementsByClassName('sprk-c-Masthead__menu'),
   );
   const menuDisplay = window.getComputedStyle(mobileMenu[0]).display;
-  const menuVisible = menuDisplay !== 'none';
-  if (menuVisible) {
+  const menuVisibility = menuDisplay !== 'none';
+  if (menuVisible !== menuVisibility) {
     window.addEventListener('scroll', () => {
       checkScrollDirection(window.scrollY);
     });
   }
+  menuVisible = menuVisibility;
+  // if (!menuVisible) {
+  //   window.removeEventListener('scroll', () => {
+  //     checkScrollDirection(window.scrollY);
+  //   }, false);
+  // }
 };
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
