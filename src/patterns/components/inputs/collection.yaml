@@ -60,7 +60,7 @@ variableTable:
     default: 27.5rem
     description: The value used as a maximum width for input containers.
   $sprk-input-container-jumbo-max-width:
-    default: 37.5remx
+    default: 37.5rem
     description: The value used as a maximum width for jumbo input containers.
   $sprk-text-input-font-family:
     default: $sprk-font-family-body-two
@@ -124,10 +124,10 @@ variableTable:
     description: The transition applied to text input elements.
   $sprk-text-input-jumbo-height:
     default: 65px
-    description: The height of the jumbo text input
+    description: The height of the jumbo text input.
   $sprk-text-input-jumbo-font-size:
     default: $sprk-font-size-display-five
-    description: The height of the jumbo text input
+    description: The height of the jumbo text input.
   $sprk-select-appearance:
     default: none
     description: The value set to the appearance property of select elements.
