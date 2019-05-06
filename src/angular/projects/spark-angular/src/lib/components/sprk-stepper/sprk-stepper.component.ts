@@ -19,7 +19,7 @@ import {
     </ol>
   `
 })
-export class SparkStepperComponent implements AfterViewInit {
+export class SprkStepperComponent implements AfterViewInit {
   @Input()
   additionalClasses: string;
   @Input()

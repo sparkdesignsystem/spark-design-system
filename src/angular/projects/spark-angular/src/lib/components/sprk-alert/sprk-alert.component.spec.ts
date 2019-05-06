@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkAlertComponent } from './sprk-alert.component';
 
 describe('SprkAlertComponent', () => {
@@ -9,7 +9,7 @@ describe('SprkAlertComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkAlertComponent, SparkIconComponent]
+      declarations: [SprkAlertComponent, SprkIconComponent]
     }).compileComponents();
   }));
 

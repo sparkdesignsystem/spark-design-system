@@ -1,7 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
 import { SprkAwardComponent } from './sprk-award.component';
+import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
+import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
+import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
+
+import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 
 describe('SparkAwardComponent', () => {
   let component: SprkAwardComponent;
@@ -11,7 +17,14 @@ describe('SparkAwardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, BrowserAnimationsModule],
-      declarations: [SprkAwardComponent]
+      declarations: [
+        SprkAwardComponent,
+        SprkLinkComponent,
+        SprkToggleComponent,
+        SprkStackComponent,
+        SprkStackItemDirective,
+        SprkIconComponent
+      ]
     }).compileComponents();
   }));
 

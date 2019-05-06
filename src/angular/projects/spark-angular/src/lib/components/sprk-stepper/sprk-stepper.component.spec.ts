@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkStepperComponent } from './sprk-stepper.component';
-import { SparkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.component';
+import { SprkStepperComponent } from './sprk-stepper.component';
 
-describe('SparkStepperComponent', () => {
-  let component: SparkStepperComponent;
-  let fixture: ComponentFixture<SparkStepperComponent>;
+describe('SprkStepperComponent', () => {
+  let component: SprkStepperComponent;
+  let fixture: ComponentFixture<SprkStepperComponent>;
   let stepperElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SparkStepperComponent]
+      declarations: [SprkStepperComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SparkStepperComponent);
+    fixture = TestBed.createComponent(SprkStepperComponent);
     component = fixture.componentInstance;
     stepperElement = fixture.nativeElement.querySelector('ol');
     const step = document.createElement('li');
