@@ -24,7 +24,8 @@ const toggleMenu = direction => {
 
 let scrollPosition = 0;
 let scrollDirection;
-const checkScrollDirection = scrollPos => {
+const checkScrollDirection = () => {
+  const scrollPos = window.scrollY;
   const diff = scrollPos - scrollPosition;
   const direction = diff > 0 ? 'down' : 'up';
   if (scrollDirection !== direction) {
@@ -41,17 +42,13 @@ const checkMenuVisibility = () => {
   );
   const menuDisplay = window.getComputedStyle(mobileMenu[0]).display;
   const menuVisibility = menuDisplay !== 'none';
-  if (menuVisible !== menuVisibility) {
-    window.addEventListener('scroll', () => {
-      checkScrollDirection(window.scrollY);
-    });
+  if (menuVisibility && menuVisible !== menuVisibility) {
+    window.addEventListener('scroll', checkScrollDirection);
   }
   menuVisible = menuVisibility;
-  // if (!menuVisible) {
-  //   window.removeEventListener('scroll', () => {
-  //     checkScrollDirection(window.scrollY);
-  //   }, false);
-  // }
+  if (!menuVisible) {
+    window.removeEventListener('scroll', checkScrollDirection, false);
+  }
 };
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
