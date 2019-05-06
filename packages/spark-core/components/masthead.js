@@ -37,17 +37,17 @@ const checkScrollDirection = () => {
 
 let menuVisible = false;
 const checkMenuVisibility = () => {
-  const mobileMenu = Array.from(
-    document.getElementsByClassName('sprk-c-Masthead__menu'),
-  );
-  const menuDisplay = window.getComputedStyle(mobileMenu[0]).display;
-  const menuVisibility = menuDisplay !== 'none';
-  if (menuVisibility && menuVisible !== menuVisibility) {
-    window.addEventListener('scroll', checkScrollDirection);
-  }
-  menuVisible = menuVisibility;
-  if (!menuVisible) {
-    window.removeEventListener('scroll', checkScrollDirection, false);
+  const mobileMenu = document.querySelectorAll('.sprk-c-Masthead__menu')[0];
+  if (mobileMenu) {
+    const menuDisplay = window.getComputedStyle(mobileMenu).display;
+    const menuVisibility = menuDisplay !== 'none';
+    if (menuVisibility && menuVisible !== menuVisibility) {
+      window.addEventListener('scroll', checkScrollDirection);
+    }
+    menuVisible = menuVisibility;
+    if (!menuVisible) {
+      window.removeEventListener('scroll', checkScrollDirection, false);
+    }
   }
 };
 
