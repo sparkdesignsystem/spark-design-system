@@ -6,20 +6,19 @@ const proxyquire = require('proxyquire');
 
 describe('Highlight Board tests', () => {
   let element;
-  let highlightBoard;
-  let objectFitImagesStub;
+  const objectFitImagesStub = sinon.spy();
+
+  const { highlightBoard } = proxyquire('../components/highlight-board', {
+    'object-fit-images': objectFitImagesStub,
+  });
 
   beforeEach(() => {
     element = document.createElement('img');
     element.classList.add('sprk-c-HighlightBoard__image');
-    objectFitImagesStub = sinon.spy();
-    highlightBoard = proxyquire('../highlight-board', {
-      'object-fit-images': objectFitImagesStub,
-    });
   });
 
   it('should set up', () => {
-    highlightBoard.default();
+    highlightBoard();
     expect(objectFitImagesStub.calledOnce).eql(true);
   });
 });
