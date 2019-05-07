@@ -3,7 +3,7 @@ description: |
   Examples of form elements.
 contents:
   Text Input: inputs.html#text-input
-  huge Text Input: inputs.html#text-input-huge
+  Huge Text Input: inputs.html#text-input-huge
   Checkboxes: inputs.html#checkboxes
   Radio Buttons: inputs.html#radio-buttons
   Select Box: inputs.html#select-box
