@@ -1,10 +1,30 @@
 // ==================================================================
 // Buttons
 // ==================================================================
+
 .sprk-c-Button {
-  transition: all $sprk-btn-transition-speed;
+  -webkit-appearance: none;
+  background-color: $sprk-btn-background-color;
+  border-color: $sprk-btn-border-color;
   border-radius: $sprk-btn-border-radius;
+  border-style: $sprk-btn-border-style;
+  border-width: $sprk-btn-border-width;
+  color: $sprk-btn-text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $sprk-btn-font-family;
+  font-size: $sprk-btn-font-size;
+  font-weight: $sprk-btn-font-weight;
   letter-spacing: $sprk-btn-letter-spacing;
+  line-height: $sprk-btn-line-height;
+  margin: 0;
+  overflow: visible;
+  padding: $sprk-btn-padding;
+  text-align: center;
+  text-decoration: none;
+  transition: all $sprk-btn-transition-speed;
+  vertical-align: middle;
+  white-space: normal;
 
   &:hover,
   &:active,
@@ -13,6 +33,7 @@
     border-color: $sprk-btn-hover-background-color;
     box-shadow: $sprk-btn-shadow;
     color: $sprk-btn-hover-text-color;
+    text-decoration: none;
   }
 
   &:visited {
@@ -100,9 +121,24 @@
   }
 }
 
+//
+// Removes extra padding and border in Firefox when using `input type="submit"`
+///
+.sprk-b-Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 .sprk-c-Button.sprk-is-Disabled,
 .sprk-c-Button[disabled] {
+  opacity: $sprk-btn-disabled-opacity;
+  pointer-events: none;
   box-shadow: $sprk-btn-disabled-shadow;
+  background-color: $sprk-btn-disabled-background-color;
+  border-width: $sprk-btn-disabled-border-width;
+  border-color: $sprk-btn-disabled-border-color;
+  border-style: $sprk-btn-disabled-border-style;
+  color: $sprk-btn-disabled-text-color;
 
   &:hover,
   &:active,

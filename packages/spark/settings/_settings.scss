@@ -296,6 +296,9 @@ $sprk-btn-border-style: solid !default;
 $sprk-btn-border-color: $sprk-btn-background-color !default;
 $sprk-btn-border-width: 2px !default;
 $sprk-btn-font-weight: 500 !default;
+$sprk-btn-font-size: inherit !default;
+$sprk-btn-font-family: inherit !default;
+$sprk-btn-line-height: normal !default;
 $sprk-btn-text-color: $sprk-white !default;
 $sprk-btn-border-radius: 4px !default;
 $sprk-btn-hover-background-color: $sprk-green-dark !default;
@@ -309,6 +312,7 @@ $sprk-btn-letter-spacing: 0.62px !default;
 // Disabled
 $sprk-btn-disabled-opacity: 1 !default;
 $sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
+$sprk-btn-disabled-border-style: $sprk-btn-border-style !default;
 $sprk-btn-disabled-background-color: $sprk-gray-dark !default;
 $sprk-btn-disabled-text-color: $sprk-white !default;
 $sprk-btn-disabled-border-color: transparent !default;
