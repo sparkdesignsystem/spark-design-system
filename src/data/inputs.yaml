@@ -1,7 +1,9 @@
 - name: patterns.components.inputs.text-input
-- name: patterns.components.inputs.text-input-huge
 - name: patterns.components.inputs.text-input-error
 - name: patterns.components.inputs.text-input-disabled
+- name: patterns.components.inputs.text-input-huge
+- name: patterns.components.inputs.text-input-huge-error
+- name: patterns.components.inputs.text-input-huge-disabled
 - name: patterns.components.inputs.checkbox
 - name: patterns.components.inputs.checkbox-error
 - name: patterns.components.inputs.checkbox-disabled
