@@ -3,6 +3,10 @@
   max-width: $sprk-input-max-width;
 }
 
+.sprk-b-InputContainer--huge {
+  max-width: $sprk-input-container-huge-max-width;
+}
+
 .sprk-b-InputContainer__visibility-toggle {
   margin: $sprk-visibility-control-margin;
 }

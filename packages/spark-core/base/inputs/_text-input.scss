@@ -20,6 +20,15 @@
   }
 }
 
+.sprk-b-TextInput--huge {
+  height: $sprk-text-input-huge-height;
+  font-size: $sprk-text-input-huge-font-size;
+
+  &::placeholder {
+    font-size: $sprk-text-input-huge-font-size;
+  }
+}
+
 .sprk-b-TextInput--error,
 .sprk-b-TextInput--error:focus {
   border-color: $sprk-text-input-error-border-color;
