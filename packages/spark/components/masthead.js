@@ -53,7 +53,8 @@ const checkMenuVisibility = () => {
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
-  // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
+  // Don't add height: 100% if site's html &
+  // body el already have it (reapplying makes page jump)
   document.documentElement.classList.toggle('sprk-u-Overflow--hidden');
   if (document.documentElement.style.height !== '100%') {
     document.documentElement.classList.add('sprk-u-Height--100');
