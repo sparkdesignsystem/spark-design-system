@@ -20,12 +20,12 @@
   }
 }
 
-.sprk-b-TextInput--jumbo {
-  height: $sprk-text-input-jumbo-height;
-  font-size: $sprk-text-input-jumbo-font-size;
+.sprk-b-TextInput--huge {
+  height: $sprk-text-input-huge-height;
+  font-size: $sprk-text-input-huge-font-size;
 
   &::placeholder {
-    font-size: $sprk-text-input-jumbo-font-size;
+    font-size: $sprk-text-input-huge-font-size;
   }
 }
 

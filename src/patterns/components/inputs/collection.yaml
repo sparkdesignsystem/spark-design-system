@@ -3,7 +3,7 @@ description: |
   Examples of form elements.
 contents:
   Text Input: inputs.html#text-input
-  Jumbo Text Input: inputs.html#text-input-jumbo
+  huge Text Input: inputs.html#text-input-huge
   Checkboxes: inputs.html#checkboxes
   Radio Buttons: inputs.html#radio-buttons
   Select Box: inputs.html#select-box
@@ -59,9 +59,9 @@ variableTable:
   $sprk-input-max-width:
     default: 27.5rem
     description: The value used as a maximum width for input containers.
-  $sprk-input-container-jumbo-max-width:
+  $sprk-input-container-huge-max-width:
     default: 37.5rem
-    description: The value used as a maximum width for jumbo input containers.
+    description: The value used as a maximum width for huge input containers.
   $sprk-text-input-font-family:
     default: $sprk-font-family-body-two
     description: The font family to use for inputs.
@@ -122,12 +122,12 @@ variableTable:
   $sprk-text-input-transition:
     default: border-color 0.15s ease
     description: The transition applied to text input elements.
-  $sprk-text-input-jumbo-height:
+  $sprk-text-input-huge-height:
     default: 65px
-    description: The height of the jumbo text input.
-  $sprk-text-input-jumbo-font-size:
+    description: The height of the huge text input.
+  $sprk-text-input-huge-font-size:
     default: $sprk-font-size-display-five
-    description: The height of the jumbo text input.
+    description: The height of the huge text input.
   $sprk-select-appearance:
     default: none
     description: The value set to the appearance property of select elements.
@@ -395,9 +395,9 @@ variableTable:
   $sprk-label-font-size:
     default: 0.875rem
     description: The font size used for labels.
-  $sprk-label-jumbo-font-size:
+  $sprk-label-huge-font-size:
     default: $sprk-font-size-display-four
-    description: The font size used for jumbo labels.
+    description: The font size used for huge labels.
   $sprk-label-font-weight:
     default: 400
     description: The font weight used for labels.
@@ -407,9 +407,9 @@ variableTable:
   $sprk-label-margin:
     default: 0 0 $sprk-space-s 0
     description: The margin surrounding labels.
-  $sprk-label-jumbo-margin:
+  $sprk-label-huge-margin:
     default: 0 0 $sprk-space-misc-b 0
-    description: The margin surrounding jumbo labels.
+    description: The margin surrounding huge labels.
   $sprk-visibility-control-margin:
     default: 6px 0 0 0
     description: The margin surrounding visibility controls (i.e. 'Show SSN').

@@ -1,5 +1,5 @@
 ---
-name: Text Input Jumbo - Disabled State
+name: Text Input Huge - Error State
 description:
   This is the base form input.
 information:
@@ -14,8 +14,8 @@ invisible: true
 hasAngularCode: false
 hasReactCode: false
 ---
-
-{{#embed "patterns.components.inputs.text-input-jumbo"
-         idattr="text-input-jumbo-disabled"
-         inputValue="disabled value"
-         disabled=true}}{{/embed}}
+{{#embed "patterns.components.inputs.text-input-huge"
+         idattr="text-input-huge-error"
+         invaliddata="true"
+         errorMessage="There is an error on this field."
+         class="sprk-b-TextInput--error"}}{{/embed}}
