@@ -1,50 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { stepper } from '@sparkdesignsystem/spark-core';
 
-const SprkStepper = props => {
-  const {
-    additionalClasses,
-    children,
-    ...other
-  } = props;
+class SprkStepper extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <ol
-    className={classnames(
-      'sprk-c-Stepper',
+  componentDidMount() {
+    stepper();
+  }
+
+  render() {
+    const {
       additionalClasses,
-    )}
-    >
-      { children }
-    </ol>
-    // <ol
-    // class="sprk-c-Stepper"
-    // data-sprk-stepper="container"
-    // data-id="stepper-1"
-    // role="tablist"
-    // aria-orientation="vertical"
-    // >
-    //   <li
-    //   role="tab"
-    //   class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
-    //   aria-selected="true"
-    //   data-sprk-stepper="step"
-    //   >
-    //     <div class="sprk-c-Stepper__step-content">
-    //       <span class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain">
-    //         <span class="sprk-c-Stepper__step-icon"></span>
-    //         <h3
-    //         class="sprk-c-Stepper__step-heading"
-    //         data-sprk-stepper="heading"
-    //         >
-    //         Step Two
-    //         </h3>
-    //       </span>
-    //     </div>
-    //   </li>
-    // </ol>
-  );
+      children,
+      idString,
+      ...other
+    } = this.props;
+
+    return (
+      <ol
+        className={classnames(
+          'sprk-c-Stepper',
+          additionalClasses,
+        )}
+        data-sprk-stepper="container"
+        role="tablist"
+        aria-orientation="vertical"
+        data-id={idString}
+      >
+        { children }
+      </ol>
+    );
+  }
 };
 
 SprkStepper.propTypes = {
@@ -53,8 +43,6 @@ SprkStepper.propTypes = {
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
-  analyticsString: PropTypes.string,
-
 };
 
 SprkStepper.defaultProps = {
