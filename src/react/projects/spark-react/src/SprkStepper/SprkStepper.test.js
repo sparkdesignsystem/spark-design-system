@@ -1,8 +1,8 @@
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import '../windowStubs';
 import SprkStepper from './SprkStepper';
-import SprkStepperItem from './components/SprkStepperItem/SprkStepperItem'
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -17,4 +17,12 @@ it ('should correctly apply additional classes', () => {
   const wrapper = mount(<SprkStepper additionalClasses={ expected } />);
 
   expect(wrapper.find('ol.sprk-c-Stepper').hasClass(expected)).toBe(true);
+});
+
+it ('should correctly apply idString', () => {
+  const expected = 'I am an id string';
+  const wrapper = mount(<SprkStepper idString={expected} />);
+  const node = wrapper.find('ol.sprk-c-Stepper');
+
+  expect(node.getDOMNode().attributes.getNamedItem('data-id').value).toEqual(expected);
 });

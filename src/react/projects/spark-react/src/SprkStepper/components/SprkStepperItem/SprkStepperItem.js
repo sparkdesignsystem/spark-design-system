@@ -8,6 +8,8 @@ const SprkStepperItem = props => {
     children,
     title,
     isSelected,
+    idString,
+    analyticsString,
     ...other
   } = props;
 
@@ -21,6 +23,8 @@ const SprkStepperItem = props => {
       )}
       aria-selected= {isSelected ? 'true' : 'false' }
       data-sprk-stepper="step"
+      data-id={idString}
+      data-analytics={analyticsString}
     >
       <div className="sprk-c-Stepper__step-content">
         <span className="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain">
@@ -35,10 +39,6 @@ const SprkStepperItem = props => {
       </div>
     </li>
       // <li
-      // role="tab"
-      // class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
-      // aria-selected="true"
-      // data-sprk-stepper="step"
       // >
       //   <div class="sprk-c-Stepper__step-content">
       //     <span class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain">

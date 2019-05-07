@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import '../../../windowStubs';
 import SprkStepperItem from './SprkStepperItem';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -34,4 +35,20 @@ it ('should correctly apply isSelected prop', () => {
 
   expect(node.hasClass(expected)).toBe(true);
   expect(node.getDOMNode().attributes.getNamedItem('aria-selected').value).toEqual('true');
+});
+
+it ('should correctly apply idString', () => {
+  const expected = 'I am an id string';
+  const wrapper = mount(<SprkStepperItem idString={expected} />);
+  const node = wrapper.find('li.sprk-c-Stepper__step');
+
+  expect(node.getDOMNode().attributes.getNamedItem('data-id').value).toEqual(expected);
+});
+
+it ('should correctly apply analyticsString', () => {
+  const expected = 'I am an analytics string';
+  const wrapper = mount(<SprkStepperItem analyticsString={expected} />);
+  const node = wrapper.find('li.sprk-c-Stepper__step');
+
+  expect(node.getDOMNode().attributes.getNamedItem('data-analytics').value).toEqual(expected);
 });
