@@ -6,14 +6,28 @@ const SprkStepperItem = props => {
   const {
     additionalClasses,
     children,
+    title,
     ...other
   } = props;
 
   return (
     <li
+      role="tab"
       className="sprk-c-Stepper__step"
+      aria-selected="false"
+      datak-sprk-stepper="step"
     >
-
+      <div className="sprk-c-Stepper__step-content">
+        <span className="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain">
+          <span className="sprk-c-Stepper__step-icon"></span>
+          <h3
+            className="sprk-c-Stepper__step-heading"
+            data-sprk-stepper="heading"
+          >
+            { title }
+          </h3>
+        </span>
+      </div>
     </li>
       // <li
       // role="tab"
@@ -37,13 +51,13 @@ const SprkStepperItem = props => {
 };
 
 SprkStepperItem.propTypes = {
-  // The children that will be rendered inside the content portion of the promo
+  // The children that will be rendered inside the component
   children: PropTypes.node,
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
   analyticsString: PropTypes.string,
-
+  title: PropTypes.string,
 };
 
 SprkStepperItem.defaultProps = {

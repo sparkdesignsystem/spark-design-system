@@ -10,3 +10,12 @@ it('should display a stepperitem element with the correct base class', () => {
   const wrapper = shallow(<SprkStepperItem />);
   expect(wrapper.find('li.sprk-c-Stepper__step').length).toBe(1);
 });
+
+it ('should correctly apply the title property', () => {
+  const expected = 'expected_title'
+  const wrapper = mount(<SprkStepperItem title={ expected } />);
+
+  const actual = wrapper.find('h3.sprk-c-Stepper__step-heading').text();
+
+  expect(actual).toBe(expected);
+});

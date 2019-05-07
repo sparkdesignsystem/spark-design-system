@@ -9,7 +9,13 @@ const SprkStepperDocs = () => {
       <ExampleContainer heading="Base Stepper">
         <div className="sprk-u-mbm">
           <SprkStepper>
-            <SprkStepperItem>
+            <SprkStepperItem title='Step One'>
+
+            </SprkStepperItem>
+            <SprkStepperItem title='Step Two'>
+
+            </SprkStepperItem>
+            <SprkStepperItem title='Step Three'>
 
             </SprkStepperItem>
           </SprkStepper>
