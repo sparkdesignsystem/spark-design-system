@@ -7,6 +7,7 @@ const SprkStepperItem = props => {
     additionalClasses,
     children,
     title,
+    isSelected,
     ...other
   } = props;
 
@@ -15,10 +16,11 @@ const SprkStepperItem = props => {
       role="tab"
       className={classnames(
         'sprk-c-Stepper__step',
+        isSelected ? 'sprk-c-Stepper__step--selected' : '',
         additionalClasses,
       )}
-      aria-selected="false"
-      datak-sprk-stepper="step"
+      aria-selected= {isSelected ? 'true' : 'false' }
+      data-sprk-stepper="step"
     >
       <div className="sprk-c-Stepper__step-content">
         <span className="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain">
@@ -61,6 +63,7 @@ SprkStepperItem.propTypes = {
   idString: PropTypes.string,
   analyticsString: PropTypes.string,
   title: PropTypes.string,
+  isSelected: PropTypes.bool,
 };
 
 SprkStepperItem.defaultProps = {

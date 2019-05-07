@@ -26,3 +26,12 @@ it ('should correctly apply additional classes', () => {
 
   expect(wrapper.find('li.sprk-c-Stepper__step').hasClass(expected)).toBe(true);
 });
+
+it ('should correctly apply isSelected prop', () => {
+  const expected = 'sprk-c-Stepper__step--selected';
+  const wrapper = mount(<SprkStepperItem isSelected={ true } />);
+  const node = wrapper.find('li.sprk-c-Stepper__step');
+
+  expect(node.hasClass(expected)).toBe(true);
+  expect(node.getDOMNode().attributes.getNamedItem('aria-selected').value).toEqual('true');
+});

@@ -12,7 +12,7 @@ const SprkStepperDocs = () => {
             <SprkStepperItem title='Step One'>
 
             </SprkStepperItem>
-            <SprkStepperItem title='Step Two'>
+            <SprkStepperItem title='Step Two' isSelected>
 
             </SprkStepperItem>
             <SprkStepperItem title='Step Three'>
