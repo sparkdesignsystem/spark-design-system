@@ -19,3 +19,10 @@ it ('should correctly apply the title property', () => {
 
   expect(actual).toBe(expected);
 });
+
+it ('should correctly apply additional classes', () => {
+  const expected = 'expected_class'
+  const wrapper = mount(<SprkStepperItem additionalClasses={ expected } />);
+
+  expect(wrapper.find('li.sprk-c-Stepper__step').hasClass(expected)).toBe(true);
+});

@@ -13,7 +13,10 @@ const SprkStepperItem = props => {
   return (
     <li
       role="tab"
-      className="sprk-c-Stepper__step"
+      className={classnames(
+        'sprk-c-Stepper__step',
+        additionalClasses,
+      )}
       aria-selected="false"
       datak-sprk-stepper="step"
     >

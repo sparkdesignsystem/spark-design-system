@@ -11,7 +11,10 @@ const SprkStepper = props => {
 
   return (
     <ol
-      className="sprk-c-Stepper"
+    className={classnames(
+      'sprk-c-Stepper',
+      additionalClasses,
+    )}
     >
       { children }
     </ol>

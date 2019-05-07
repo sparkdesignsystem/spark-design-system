@@ -11,3 +11,10 @@ it('should display a stepper element with the correct base class', () => {
   const wrapper = shallow(<SprkStepper />);
   expect(wrapper.find('ol.sprk-c-Stepper').length).toBe(1);
 });
+
+it ('should correctly apply additional classes', () => {
+  const expected = 'expected_class'
+  const wrapper = mount(<SprkStepper additionalClasses={ expected } />);
+
+  expect(wrapper.find('ol.sprk-c-Stepper').hasClass(expected)).toBe(true);
+});
