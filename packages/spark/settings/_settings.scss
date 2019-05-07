@@ -6,6 +6,8 @@
 // Reset
 ///
 $sprk-selection-bg-color: $sprk-green !default;
+$sprk-selection-text-color: $sprk-black !default;
+$sprk-pre-overflow: auto !default;
 
 //
 // Blockquote
@@ -593,6 +595,7 @@ $sprk-table-heading-alignment: center !default;
 $sprk-table-border-width: 1px !default;
 $sprk-table-border-style: solid !default;
 $sprk-table-border-color: $sprk-black !default;
+$sprk-table-border-collapse: collapse !default;
 
 // Primary
 $sprk-table-row-border-width: 1px !default;

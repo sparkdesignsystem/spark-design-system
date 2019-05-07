@@ -8,11 +8,11 @@
 @import './components/icons';
 
 ///
-// Generic utility styles
+// Spark Generic utility styles
 ///
 
-@import 'node_modules/@scalescss/generic-normalize/normalize';
-@import 'node_modules/@scalescss/generic-reset/reset';
+@import './generic/normalize';
+@import './generic/reset';
 
 ///
 // ScalesCss
