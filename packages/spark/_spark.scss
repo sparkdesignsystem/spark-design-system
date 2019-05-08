@@ -22,9 +22,9 @@
 @import './objects/horizontal-list';
 @import './objects/vertical-list';
 @import './objects/flag';
-@import 'node_modules/@scalescss/utilities-clearfix/clearfix';
-@import 'node_modules/@scalescss/utilities-width/width';
-@import 'node_modules/@scalescss/utilities-spacing/spacing';
+@import './utilities/clearfix';
+@import './utilities/width';
+@import './utilities/spacing';
 
 ///
 // Spark
