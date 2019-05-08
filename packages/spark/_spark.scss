@@ -20,8 +20,8 @@
 @import './objects/box';
 @import './objects/centered-column';
 @import './objects/horizontal-list';
-@import 'node_modules/@scalescss/objects-vertical-list/vertical-list';
-@import 'node_modules/@scalescss/objects-flag/flag';
+@import './objects/vertical-list';
+@import './objects/flag';
 @import 'node_modules/@scalescss/utilities-clearfix/clearfix';
 @import 'node_modules/@scalescss/utilities-width/width';
 @import 'node_modules/@scalescss/utilities-spacing/spacing';
