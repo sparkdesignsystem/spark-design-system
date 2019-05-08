@@ -41,10 +41,7 @@ $sprk-webfonts: (
   300
 );
 
-@import 'node_modules/@sparkdesignsystem/spark-core/spark-core.scss';
-@import 'node_modules/@sparkdesignsystem/spark-card/card';
-@import 'node_modules/@sparkdesignsystem/spark-dictionary/dictionary.scss';
-@import 'node_modules/@sparkdesignsystem/spark-highlight-board/highlight-board.scss';
+@import 'node_modules/@sparkdesignsystem/spark/spark.scss';
 
 //
 // Bring in doc site styles

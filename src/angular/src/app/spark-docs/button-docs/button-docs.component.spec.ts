@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { ButtonDocsComponent } from './button-docs.component';
 
 describe('ButtonDocsComponent', () => {
@@ -9,7 +9,7 @@ describe('ButtonDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [ButtonDocsComponent]
     }).compileComponents();
   }));

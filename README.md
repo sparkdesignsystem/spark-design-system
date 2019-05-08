@@ -8,49 +8,35 @@ Spark Design System is a system of patterns and components used to
 create the user interface for the Quicken Loans family of Fintech
 products.
 
-Spark's patterns are separated into two groups:
-
-* [Spark-Core](https://www.npmjs.com/package/@sparkdesignsystem/spark-core) contains the basic patterns and components that make up
+* [Spark](https://www.npmjs.com/package/@sparkdesignsystem/spark) contains the basic patterns and components that make up
   the visual and interaction design of the Quicken Loans family of
   Fintech products. If your application is expected to look and behave
   like a Quicken Loans application, this package is the starting point.
-  When the Spark-Core Sass and JS setup files are imported into an application you will receive code for all of Spark-Core.
-
-* [Spark-Extras](https://www.npmjs.com/package/@sparkdesignsystem/spark-extras) are components that may not be needed by all
-  applications, but are consistent with the style of Spark-Core.
-  Spark-Extras Sass and JS are imported into an application on an individual basis. You import the components that you need.
+  When the Spark Sass and JS setup files are imported into an application you will receive code for all of Spark.
 
 ## Getting Started
 
 **Spark assumes your project is using [Sass](https://sass-lang.com/) for styling and
 also that your project has a Javascript build step that will transpile ES6+ and polyfill appropriately for browser support.**
 
-### Spark Core
+### Spark
 
 * Install the npm package.
 
-  `npm install --save-dev @sparkdesignsystem/spark-core`
+  `npm install --save-dev @sparkdesignsystem/spark`
 
 * Import the Sass setup file in your Sass build.
 
-  `@import "node_modules/@sparkdesignsystem/spark-core/spark-core";`
+  `@import "node_modules/@sparkdesignsystem/spark/spark";`
 
-  This will bring all Spark-Core Sass patterns into your build. The Spark classes
+  This will bring all Spark Sass patterns into your build. The Spark classes
   are namespaced so they don't affect any existing CSS.
 
 * Import the JS setup file in your JS build.
 
-  `import sparkCore from "node_modules/@sparkdesignsystem/spark-core/spark-core";`
+  `import spark from "node_modules/@sparkdesignsystem/spark/spark";`
 
-  This will bring all Spark-Core JS into your build.
-
-### Spark Extras
-
-* Import any of the Spark-Extras Sass patterns that you need.
-
-  * `@sparkdesignsystem/spark-card`
-  * `@sparkdesignsystem/spark-dictionary`
-  * `@sparkdesignsystem/spark-highlight-board`
+  This will bring all Spark JS into your build.
 
 ## Contribution Guide
 
@@ -65,7 +51,7 @@ of [Drizzle](https://github.com/cloudfour/drizzle), a tool built
 by [cloudfour](https://github.com/cloudfour), for displaying pattern
 libraries. Spark uses Drizzle for documentation and plain html code examples.
 
-In the packages folder are Spark-Core and Spark-Extras. These are the files
+In the packages folder are Spark. These are the files
 that are published to npm.
 
 ### Dev Environment
@@ -82,7 +68,7 @@ Spark uses the [Mocha](http://https://mochajs.org/.chaijs.com/) test
 framework with the [Chai](http://www.chaijs.com/) assertion library
 for unit tests. To run unit tests in Spark:
 
-1. Navigate to the root of the Spark-Core or Spark-Extras repository.
+1. Navigate to the root of the Spark repository.
 2. Run `npm install` if you have not already.
 3. Run `npm test`.
 4. See test output in terminal to determine number of passing or failed tests.

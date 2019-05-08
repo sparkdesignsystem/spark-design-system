@@ -5,7 +5,7 @@ import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
 import {
   formatPhone,
   isValidPhone,
-} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+} from '@sparkdesignsystem/spark/es5/sparkExports';
 
 const FormikExample = () => (
   <Formik

@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../../../dist/spark-core-angular/lib/spark-core-angular.module';
+import { SparkAngularModule } from '../../../../dist/spark-angular/lib/spark-angular.module';
 import { DropdownDocsComponent } from './dropdown-docs.component';
 
 describe('DropdownDocsComponent', () => {
@@ -8,7 +8,7 @@ describe('DropdownDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [DropdownDocsComponent]
     }).compileComponents();
   }));

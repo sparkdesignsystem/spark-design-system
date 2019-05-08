@@ -64,7 +64,7 @@
     "start": "gulp --dev",
     "build": "npm install && gulp",
     "precommit": "lint-staged",
-    "test": "npm run test --prefix ./packages/spark-core && npm run test --prefix ./packages/spark-highlight-board",
+    "test": "npm run test --prefix ./packages/spark",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
     "spark-publish": "lerna bootstrap && lerna version && gulp pre-publish && lerna run lerna-publish"
   },

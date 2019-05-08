@@ -30,7 +30,9 @@ helpers.patternIdGen = patternIdGen;
 Object.assign(config.drizzle, { helpers });
 
 // Register core tasks
-['clean', 'copy', 'js', 'serve', 'watch'].forEach(name => tasks[name](gulp, config[name]));
+['clean', 'copy', 'js', 'serve', 'watch'].forEach(name =>
+  tasks[name](gulp, config[name]),
+);
 
 // Sass task
 gulp.task('sass', () => {
@@ -70,9 +72,15 @@ gulp.task('sass', () => {
 });
 
 // SVG icon task
-gulp.task('icons', (done) => {
-  const fileStream = fs.createWriteStream('./src/templates/drizzle/spark-core-icons.hbs');
-  request.get({ uri: 'https://spark-assets.netlify.com/spark-core-icons.svg', rejectUnauthorized: false })
+gulp.task('icons', done => {
+  const fileStream = fs.createWriteStream(
+    './src/templates/drizzle/spark-core-icons.hbs',
+  );
+  request
+    .get({
+      uri: 'https://spark-assets.netlify.com/spark-core-icons.svg',
+      rejectUnauthorized: false,
+    })
     .pipe(fileStream)
     .on('finish', done);
 });
@@ -89,7 +97,7 @@ gulp.task('drizzle', ['icons'], () => {
 });
 
 // Register build task (for continuous deployment via Netflify)
-gulp.task('build-drizzle', (done) => {
+gulp.task('build-drizzle', done => {
   runSequence(
     'clean',
     'icons',

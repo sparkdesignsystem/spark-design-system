@@ -13,10 +13,7 @@
   "peerDependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "@sparkdesignsystem/spark-core": "^10.0.0",
-    "@sparkdesignsystem/spark-card": "^4.0.2",
-    "@sparkdesignsystem/spark-highlight-board": "^4.0.2",
-    "@sparkdesignsystem/spark-dictionary": "^1.0.1"
+    "@sparkdesignsystem/spark": "^10.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
