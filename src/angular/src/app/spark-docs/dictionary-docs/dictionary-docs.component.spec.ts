@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
-import { SparkDictionaryModule } from '../../spark-extras-angular/components/spark-extras-angular-dictionary/spark-extras-angular-dictionary.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { DictionaryDocsComponent } from './dictionary-docs.component';
 
 describe('DictionaryDocsComponent', () => {
@@ -9,7 +8,7 @@ describe('DictionaryDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule, SparkDictionaryModule],
+      imports: [SparkAngularModule],
       declarations: [DictionaryDocsComponent]
     }).compileComponents();
   }));

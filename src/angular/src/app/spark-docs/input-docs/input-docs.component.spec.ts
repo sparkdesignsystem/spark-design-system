@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { InputDocsComponent } from './input-docs.component';
 
 describe('InputDocsComponent', () => {
@@ -9,7 +9,7 @@ describe('InputDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule, FormsModule],
+      imports: [SparkAngularModule, FormsModule],
       declarations: [InputDocsComponent]
     }).compileComponents();
   }));
