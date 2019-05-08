@@ -1,22 +1,11 @@
 ///
-// Spark settings
+// Spark styles manifest
 ///
-
 @import './settings/colors';
 @import './settings/settings';
 @import './components/icons';
-
-///
-// Spark Generic utility styles
-///
-
 @import './generic/normalize';
 @import './generic/reset';
-
-///
-// ScalesCss
-///
-
 @import './objects/box';
 @import './objects/centered-column';
 @import './objects/horizontal-list';
@@ -25,11 +14,6 @@
 @import './utilities/clearfix';
 @import './utilities/width';
 @import './utilities/spacing';
-
-///
-// Spark
-///
-
 @import './tools/animations';
 @import './tools/functions';
 @import './tools/mixins';
