@@ -15,10 +15,6 @@ describe('Highlight Board tests', () => {
   beforeEach(() => {
     element = document.createElement('img');
     element.classList.add('sprk-c-HighlightBoard__image');
-    objectFitImagesStub = sinon.spy();
-    highlightBoard = proxyquire('../highlight-board', {
-      'object-fit-images': objectFitImagesStub,
-    });
   });
 
   it('should set up', () => {
