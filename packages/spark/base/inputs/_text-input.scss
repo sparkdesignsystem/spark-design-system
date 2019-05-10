@@ -1,6 +1,13 @@
 // ==================================================================
 // Input Component
 // ==================================================================
+
+//
+// Available Variables
+///
+// Huge Box Shadow is from card's default box shadow
+$sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+
 .sprk-b-TextInput {
   box-shadow: $sprk-text-input-box-shadow;
   border: $sprk-text-input-border;
@@ -23,6 +30,8 @@
 .sprk-b-TextInput--huge {
   height: $sprk-text-input-huge-height;
   font-size: $sprk-text-input-huge-font-size;
+  text-align: center;
+  box-shadow: $sprk-input-huge-box-shadow;
 
   &::placeholder {
     font-size: $sprk-text-input-huge-font-size;

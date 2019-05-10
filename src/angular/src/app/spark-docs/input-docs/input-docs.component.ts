@@ -26,9 +26,7 @@ import { Component } from '@angular/core';
           </span>
         </sprk-input-container>
         <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
-          <label class="sprk-b-Label--huge" sprkLabel>
-            Disabled Text Input</label
-          >
+          <label sprkLabel> Disabled Text Input</label>
           <input
             disabled
             name="text_input"
@@ -45,7 +43,7 @@ import { Component } from '@angular/core';
           />
         </sprk-input-container>
         <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
-          <label class="sprk-b-Label--huge" sprkLabel>Huge Text Input</label>
+          <label sprkLabel>Huge Text Input</label>
           <input
             name="text_input"
             class="sprk-b-TextInput--huge"

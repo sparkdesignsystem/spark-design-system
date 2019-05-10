@@ -407,9 +407,6 @@ variableTable:
   $sprk-label-margin:
     default: 0 0 $sprk-space-s 0
     description: The margin surrounding labels.
-  $sprk-label-huge-margin:
-    default: 0 0 $sprk-space-l 0
-    description: The margin surrounding huge labels.
   $sprk-visibility-control-margin:
     default: 6px 0 0 0
     description: The margin surrounding visibility controls (i.e. 'Show SSN').
