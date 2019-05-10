@@ -25,6 +25,44 @@ import { Component } from '@angular/core';
             <div class="sprk-b-ErrorText">This field is required.</div>
           </span>
         </sprk-input-container>
+        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+          <label class="sprk-b-Label--huge" sprkLabel>
+            Disabled Text Input</label
+          >
+          <input
+            disabled
+            name="text_input"
+            [ngClass]="{
+              'sprk-b-TextInput--huge': true,
+              'sprk-b-TextInput--error': textInput.invalid && textInput.dirty
+            }"
+            type="text"
+            [(ngModel)]="text_input"
+            required
+            #textInput="ngModel"
+            data-id="input-disabled-1"
+            sprkInput
+          />
+        </sprk-input-container>
+        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+          <label class="sprk-b-Label--huge" sprkLabel>Huge Text Input</label>
+          <input
+            name="text_input"
+            class="sprk-b-TextInput--huge"
+            type="text"
+            [(ngModel)]="text_input"
+            required
+            #textInput="ngModel"
+            sprkInput
+          />
+          <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+            <sprk-icon
+              iconType="exclamation-filled-small"
+              additionalClasses="sprk-b-ErrorIcon"
+            ></sprk-icon>
+            <div class="sprk-b-ErrorText">This field is required.</div>
+          </span>
+        </sprk-input-container>
         <sprk-selection-container>
           <label sprkLabel>Checkbox Group Label</label>
           <sprk-selection-item-container>
