@@ -89,6 +89,12 @@ variableTable:
   $sprk-text-input-border-radius:
     default: 4px
     description: The border radius to use for text input elements.
+  $sprk-text-input-huge-border:
+    default: 1px solid $sprk-black-tint-25
+    description: The border around huge text input elements.
+  $sprk-text-input-huge-focus-border-width:
+    default: 2px
+    description: The border radius to use for huge text input elements when it's focused.
   $sprk-text-input-box-shadow:
     default: none
     description: The box shadow to use for text input elements.
