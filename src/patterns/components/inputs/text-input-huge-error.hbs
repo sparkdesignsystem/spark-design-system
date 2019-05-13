@@ -17,8 +17,13 @@ invisible: true
 hasAngularCode: true
 hasReactCode: true
 ---
-{{#embed "patterns.components.inputs.text-input-huge"
+
+{{#embed "patterns.components.inputs.text-input"
+         class="sprk-b-TextInput--huge sprk-b-TextInput--error"
+         containerclass="sprk-b-InputContainer--huge"
+         labelclass="sprk-u-ScreenReaderText"
          idattr="text-input-huge-error"
-         invaliddata="true"
+         placeholder="Placeholder text"
          errorMessage="There is an error on this field."
-         class="sprk-b-TextInput--error"}}{{/embed}}
+         invaliddata="true"
+         }}{{/embed}}
