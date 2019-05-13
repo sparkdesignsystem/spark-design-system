@@ -6,6 +6,16 @@
 // Reset
 ///
 $sprk-selection-bg-color: $sprk-green !default;
+$sprk-selection-text-color: $sprk-black !default;
+$sprk-pre-overflow: auto !default;
+
+//
+// Blockquote
+///
+$sprk-blockquote-source-prefix: '-' !default;
+$sprk-blockquote-margin: 0 !default;
+$sprk-blockquote-quote-margin: 0 !default;
+$sprk-blockquote-quote-last-margin: 0 !default;
 
 //
 // Spacing
@@ -52,6 +62,16 @@ $sprk-space-misc-c: 48px !default;
 $sprk-space-misc-d: 80px !default;
 
 //
+// Flag
+///
+$sprk-flag-gutter: $sprk-space-m !default;
+$sprk-flag-gutter-tiny: $sprk-space-xs !default;
+$sprk-flag-gutter-small: $sprk-space-s !default;
+$sprk-flag-gutter-large: $sprk-space-l !default;
+$sprk-flag-gutter-huge: $sprk-space-xl !default;
+$sprk-flag-stacked-breakpoint: 25em !default;
+
+//
 // Icons
 ///
 $sprk-icon-m: 16px !default;
@@ -91,6 +111,12 @@ $sprk-horizontal-list-spacing-small: $sprk-space-s !default;
 $sprk-horizontal-list-spacing-medium: $sprk-space-m !default;
 $sprk-horizontal-list-spacing-large: $sprk-space-l !default;
 $sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
+$sprk-horizontal-list-delimiter: ',' !default;
+
+//
+// Vertical List
+///
+$sprk-vertical-list-delimiter: ',\00A0' !default;
 
 //
 // Pagination
@@ -288,6 +314,9 @@ $sprk-btn-border-style: solid !default;
 $sprk-btn-border-color: $sprk-btn-background-color !default;
 $sprk-btn-border-width: 2px !default;
 $sprk-btn-font-weight: 500 !default;
+$sprk-btn-font-size: inherit !default;
+$sprk-btn-font-family: inherit !default;
+$sprk-btn-line-height: normal !default;
 $sprk-btn-text-color: $sprk-white !default;
 $sprk-btn-border-radius: 4px !default;
 $sprk-btn-hover-background-color: $sprk-green-dark !default;
@@ -301,6 +330,7 @@ $sprk-btn-letter-spacing: 0.62px !default;
 // Disabled
 $sprk-btn-disabled-opacity: 1 !default;
 $sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
+$sprk-btn-disabled-border-style: $sprk-btn-border-style !default;
 $sprk-btn-disabled-background-color: $sprk-gray-dark !default;
 $sprk-btn-disabled-text-color: $sprk-white !default;
 $sprk-btn-disabled-border-color: transparent !default;
@@ -577,6 +607,11 @@ $sprk-table-cell-alignment: center !default;
 $sprk-table-stripe-color: $sprk-gray !default;
 $sprk-table-highlight-color: $sprk-red !default;
 $sprk-table-highlight-text-color: $sprk-white !default;
+$sprk-table-heading-alignment: center !default;
+$sprk-table-border-width: 1px !default;
+$sprk-table-border-style: solid !default;
+$sprk-table-border-color: $sprk-black !default;
+$sprk-table-border-collapse: collapse !default;
 
 // Primary
 $sprk-table-row-border-width: 1px !default;
