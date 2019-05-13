@@ -395,9 +395,6 @@ variableTable:
   $sprk-label-font-size:
     default: 0.875rem
     description: The font size used for labels.
-  $sprk-label-huge-font-size:
-    default: $sprk-font-size-display-four
-    description: The font size used for huge labels.
   $sprk-label-font-weight:
     default: 400
     description: The font weight used for labels.
