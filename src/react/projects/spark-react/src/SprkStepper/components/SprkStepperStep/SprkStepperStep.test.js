@@ -13,7 +13,7 @@ it('should display a stepperitem element with the correct base class', () => {
 });
 
 it('should correctly apply the title property', () => {
-  const expected = 'expected_title'
+  const expected = 'expected_title';
   const wrapper = mount(<SprkStepperStep title={expected} />);
 
   const actual = wrapper.find('h3.sprk-c-Stepper__step-heading').text();
@@ -22,7 +22,7 @@ it('should correctly apply the title property', () => {
 });
 
 it('should correctly apply additional classes', () => {
-  const expected = 'expected_class'
+  const expected = 'expected_class';
   const wrapper = mount(<SprkStepperStep additionalClasses={expected} />);
 
   expect(wrapper.find('li.sprk-c-Stepper__step').hasClass(expected)).toBe(true);

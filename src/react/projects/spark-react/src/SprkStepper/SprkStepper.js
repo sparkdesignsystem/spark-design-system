@@ -2,14 +2,28 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { stepper } from '@sparkdesignsystem/spark';
+import { uniqueId } from 'lodash';
+import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 
 class SprkStepper extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      items: props.children.map(item => ({
+        id: uniqueId('stepper-item-'),
+        ...item,
+      })),
+    };
+  }
+
   componentDidMount() {
     stepper();
   }
 
   render() {
     const { additionalClasses, children, idString, ...other } = this.props;
+    const { items } = this.state;
 
     return (
       <ol
@@ -20,9 +34,15 @@ class SprkStepper extends Component {
         data-id={idString}
         {...other}
       >
-        {/* // figure out which children are stepper items and then re-render them.
-        // Is there a word for this practice? */}
-        {children}
+        {items.map(item => {
+          // ignore all child nodes that are not stepper steps
+          // is this what we want?
+          if (item.type.name !== SprkStepperStep.name) return null;
+
+          return <SprkStepperStep {...item.props} key={item.id} id={item.id} />;
+        })}
+
+        {/* {children} */}
       </ol>
     );
   }
