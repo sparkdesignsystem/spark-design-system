@@ -104,10 +104,12 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
   }
 
   if (descriptions.length > 0) {
-    sliderEl = document.createElement('li');
-    sliderEl.classList.add('sprk-c-Stepper__slider');
-    sliderEl.setAttribute('data-sprk-stepper', 'slider');
-    stepContainer.prepend(sliderEl);
+    if (stepContainer.querySelector('.sprk-c-Stepper__slider') === null) {
+      sliderEl = document.createElement('li');
+      sliderEl.classList.add('sprk-c-Stepper__slider');
+      sliderEl.setAttribute('data-sprk-stepper', 'slider');
+      stepContainer.prepend(sliderEl);
+    }
   }
 
   // set the active tab

@@ -1,41 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { stepper } from '@sparkdesignsystem/spark-core';
+import { stepper } from '@sparkdesignsystem/spark';
 
 class SprkStepper extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     stepper();
   }
 
   render() {
-    const {
-      additionalClasses,
-      children,
-      idString,
-      ...other
-    } = this.props;
+    const { additionalClasses, children, idString, ...other } = this.props;
 
     return (
       <ol
-        className={classnames(
-          'sprk-c-Stepper',
-          additionalClasses,
-        )}
+        className={classnames('sprk-c-Stepper', additionalClasses)}
         data-sprk-stepper="container"
         role="tablist"
         aria-orientation="vertical"
         data-id={idString}
+        {...other}
       >
-        { children }
+        {/* // figure out which children are stepper items and then re-render them.
+        // Is there a word for this practice? */}
+        {children}
       </ol>
     );
   }
-};
+}
 
 SprkStepper.propTypes = {
   // The children that will be rendered inside the content portion of the promo
@@ -45,7 +36,6 @@ SprkStepper.propTypes = {
   idString: PropTypes.string,
 };
 
-SprkStepper.defaultProps = {
-};
+SprkStepper.defaultProps = {};
 
 export default SprkStepper;
