@@ -8,6 +8,8 @@ import {
   toggleMobileNav,
   hideMobileNavs,
   addClassOnScroll,
+  checkMenuVisibility,
+  checkScrollDirection,
 } from '../components/masthead';
 import { dropdowns } from '../components/dropdown';
 
@@ -124,6 +126,7 @@ describe('masthead UI Events tests', () => {
 
     sinon.spy(nav, 'addEventListener');
     sinon.spy(iconContainer, 'addEventListener');
+    sinon.spy(checkMenuVisibility);
 
     mastheadDiv.appendChild(selector);
     mastheadDiv.appendChild(selectorWide);
@@ -277,6 +280,23 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('orientationchange');
     window.dispatchEvent(event);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
+  });
+
+  it('should call the checkMenuVisibility function on window load', () => {
+    event = new window.Event('load');
+    window.dispatchEvent(event);
+    const menuVisible = false;
+    checkMenuVisibility();
+    expect(menuVisible).eql(false);
+  });
+
+  it('should remove class from masthead when scrolling up', () => {
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    checkScrollDirection();
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).eql(
+      false,
+    );
   });
 });
 
