@@ -133,7 +133,7 @@ variableTable:
     description: The height of the huge text input.
   $sprk-text-input-huge-font-size:
     default: $sprk-font-size-display-five
-    description: The height of the huge text input.
+    description: The font-size of the huge text input.
   $sprk-select-appearance:
     default: none
     description: The value set to the appearance property of select elements.
