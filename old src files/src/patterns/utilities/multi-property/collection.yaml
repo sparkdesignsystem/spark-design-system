@@ -1,8 +1,0 @@
-order: 2
-name: Multi-property Utilities
-description:
-  Multi-property utilities combine several
-  CSS properties and values to perform common actions.
-  They are not meant to override default
-  functionality, but to aid in things like accessibility or layout.
-sparkPackageCore: true

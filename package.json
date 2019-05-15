@@ -4,7 +4,6 @@
   "version": "3.0.0",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "author": "Quicken Loans",
-  "license": "MIT",
   "dependencies": {
     "gatsby": "^2.4.3",
     "gatsby-image": "^2.0.41",
@@ -20,52 +19,19 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^6.0.2",
-    "babel-loader": "^6.2.4",
-    "babel-preset-env": "^1.7.0",
-    "chai": "^4.2.0",
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-babel": "^5.2.1",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.3.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.11.0",
-    "husky": "^0.14.3",
-    "jsdom": "^12.0.0",
-    "lint-staged": "^6.1.1",
-    "mocha": "^5.2.0",
-    "nyc": "^13.0.1",
-    "prettier-eslint-cli": "^4.7.1",
-    "prettier-stylelint": "^0.4.2",
-    "request": "^2.88.0",
-    "sinon": "^7.2.2",
-    "stylelint": "^9.10.1",
-    "stylelint-scss": "^3.3.1"
+    "prettier": "^1.17.1"
   },
   "keywords": [
     "gatsby"
   ],
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
     "serve": "gatsby serve",
-    "precommit": "lint-staged",
-    "test": "npm run test --prefix ./spark"
-  },
-  "lint-staged": {
-    "*.scss": [
-      "prettier-stylelint --write",
-      "stylelint --syntax scss",
-      "git add"
-    ],
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
@@ -73,14 +39,5 @@
   },
   "bugs": {
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
-  },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "nyc": {
-    "exclude": [
-      "packages/**/*.js",
-      "tests"
-    ]
   }
 }

@@ -1,8 +1,0 @@
-description: Space is the distance between elements. The space settings here should be used in the construction
-  of components not defined in Spark, or in arranging combinations of existing Spark components. These settings are
-  defined as variables.
-information:
-  - There are five spacing sizes to select from for creating new components or objects (xs, s, m, l, and xl).
-  - In the examples below, the green shows padding and orange shows margin.
-sparkPackageCore: true
-noCodeSwitch: true
