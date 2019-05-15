@@ -27,3 +27,4 @@ src/angular/dist
 /src/angular/projects/spark-extras-angular-card/coverage
 /src/angular/projects/spark-extras-angular-dictionary/coverage
 /src/angular/projects/spark-extras-angular-highlight-board/coverage
+.cache/
