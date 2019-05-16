@@ -11,12 +11,14 @@ const SprkStepperStep = props => {
     idString,
     analyticsString,
     variant,
+    onStepClick,
     ...other
   } = props;
 
   const hasDescription = variant === 'hasDescription';
 
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <li
       role="tab"
       className={classnames(
@@ -28,6 +30,7 @@ const SprkStepperStep = props => {
       data-sprk-stepper="step"
       data-id={idString}
       data-analytics={analyticsString}
+      onClick={onStepClick}
       {...other}
     >
       <div
@@ -83,6 +86,7 @@ SprkStepperStep.propTypes = {
   title: PropTypes.string,
   isSelected: PropTypes.bool,
   variant: PropTypes.oneOf(['default', 'hasDescription']),
+  onStepClick: PropTypes.func,
 };
 
 SprkStepperStep.defaultProps = {

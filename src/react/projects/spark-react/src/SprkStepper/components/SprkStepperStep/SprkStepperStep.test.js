@@ -58,31 +58,3 @@ it('should correctly apply analyticsString', () => {
     node.getDOMNode().attributes.getNamedItem('data-analytics').value,
   ).toEqual(expected);
 });
-
-it('should correctly apply styling for the hasDescription variant', () => {
-  const wrapper = mount(
-    <SprkStepperStep variant="hasDescription">
-      children content
-    </SprkStepperStep>,
-  );
-
-  const node = wrapper.find('div.sprk-c-Stepper__step-description');
-
-  expect(node.length).toBe(1);
-
-  expect(node.find('p.sprk-b-TypeBodyTwo').length).toBe(1);
-});
-
-it('should display child content in hasDescription variant', () => {
-  const expected = 'I am the child content';
-
-  const wrapper = mount(
-    <SprkStepperStep variant="hasDescription">{expected}</SprkStepperStep>,
-  );
-
-  const node = wrapper.find('div.sprk-c-Stepper__step-description p');
-
-  expect(node.length).toBe(1);
-
-  expect(node.text()).toBe(expected);
-});

@@ -13,27 +13,14 @@ const SprkStepperDocs = () => {
             <SprkStepperStep title="Step Two" isSelected />
             <SprkStepperStep title="Step Three" />
           </SprkStepper>
-
-          {/* <SprkStepper
-            variant="hasDescription"
-            items={[
-              {
-                title: 'Step One',
-                isSelected: false,
-                contents: 'Step one content - lorem ipsum lorem ipsum lorem',
-              },
-              {
-                title: 'Step Two',
-                isSelected: true,
-                contents: 'Step two content - lorem ipsum lorem ipsum lorem',
-              },
-              {
-                title: 'Step Three',
-                isSelected: false,
-                contents: 'Step three content - lorem ipsum lorem ipsum lorem',
-              },
-            ]}
-          /> */}
+        </div>
+      </ExampleContainer>
+      <ExampleContainer heading="Empty">
+        <div className="sprk-u-mbm">
+          <SprkStepper>
+            <SprkStepperStep />
+            <SprkStepperStep />
+          </SprkStepper>
         </div>
       </ExampleContainer>
       <ExampleContainer heading="Stepper with Step Descriptions">
@@ -60,27 +47,3 @@ const SprkStepperDocs = () => {
 };
 
 export default SprkStepperDocs;
-
-{/* <SprkStepper
-            variant="carousel"
-            additionalClasses='foo bar'
-            idString="foo"
-          >
-
-            <SprkStepperStep
-              isSelected={true}
-              imgSrc={blahblah.png}
-              imgAlt={"this is an image of a blahblah"}
-              darkBackground=true
-              backgroundColor=#003322
-              additionalClasses='foo bar'
-              additionalImageClasses='foo bar baz'
-              analyticsString="foo"
-              idString="foo"
-            >
-              Step 1 content lorem ipsum
-            </SprkStepperStep>
-
-            [... more stepper items ...]
-
-          </SprkStepper> */}
