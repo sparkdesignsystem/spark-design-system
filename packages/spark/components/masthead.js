@@ -2,6 +2,7 @@
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
+import isElementVisible from '../utilities/isElementVisible';
 import { hideDropDown, showDropDown } from './dropdown';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
@@ -13,43 +14,14 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   }
 };
 
-const toggleMenu = direction => {
-  const masthead = document.querySelector('[data-sprk-masthead]');
-  if (direction === 'down') {
-    masthead.classList.add('sprk-c-Masthead--hidden');
-  } else {
-    masthead.classList.remove('sprk-c-Masthead--hidden');
-  }
-};
-
-let scrollPosition = 0;
-let scrollDirection;
-const checkScrollDirection = () => {
-  const scrollPos = window.scrollY;
-  const diff = scrollPos - scrollPosition;
-  const direction = diff > 0 ? 'down' : 'up';
-  if (scrollDirection !== direction) {
-    toggleMenu(direction);
-  }
-  scrollDirection = direction;
-  scrollPosition = scrollPos;
-};
-
-let menuVisible = false;
-const checkMenuVisibility = () => {
-  const mobileMenu = document.querySelectorAll('.sprk-c-Masthead__menu')[0];
-  if (mobileMenu) {
-    const menuDisplay = window.getComputedStyle(mobileMenu).display;
-    const menuVisibility = menuDisplay !== 'none';
-    if (menuVisibility && menuVisible !== menuVisibility) {
-      window.addEventListener('scroll', checkScrollDirection);
-    }
-    menuVisible = menuVisibility;
-    if (!menuVisible) {
-      window.removeEventListener('scroll', checkScrollDirection, false);
-    }
-  }
-};
+// const toggleMenu = direction => {
+//   const masthead = document.querySelector('[data-sprk-masthead]');
+//   if (direction === 'down') {
+//     masthead.classList.add('sprk-c-Masthead--hidden');
+//   } else {
+//     masthead.classList.remove('sprk-c-Masthead--hidden');
+//   }
+// };
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
@@ -116,12 +88,54 @@ const bindUIEvents = () => {
       )}"]`,
     );
 
-    window.addEventListener('load', () => {
-      checkMenuVisibility();
-    });
+    /*
+    * Check the scroll direction
+    * because we only want to show/hide
+    * if the direction changes.
+    */
+    let scrollPosition = 0;
+    let scrollDirection;
+    const checkScrollDirection = () => {
+      const newScrollPos = window.scrollY;
+      const diff = newScrollPos - scrollPosition;
+      const direction = diff > 0 ? 'down' : 'up';
+      if (scrollDirection !== direction) {
+        // toggleMenu(direction);
+        console.log(direction);
+      }
+      scrollDirection = direction;
+      scrollPosition = newScrollPos;
+    };
 
+    /* If the mobile menu is visible
+    * add the check scroll event listener
+    * otherwise remove it
+    */
+    const toggleScrollEvent = isMenuVisible => {
+      if (isMenuVisible) {
+        window.addEventListener('scroll', checkScrollDirection);
+      } else {
+        window.removeEventListener('scroll', checkScrollDirection, false);
+      }
+    };
+
+    /*
+    * Check if the mobile menu is visible
+    * on page and set scroll event
+    */
+    let isMenuVisible = isElementVisible('.sprk-c-Masthead__menu');
+    toggleScrollEvent(isMenuVisible);
+
+    /*
+    * If the mobile menu visibility changes
+    * toggle scroll event listener
+    */
     window.addEventListener('resize', () => {
-      checkMenuVisibility();
+      const newMenuVisibility = isElementVisible('.sprk-c-Masthead__menu');
+      if (isMenuVisible !== newMenuVisibility) {
+        toggleScrollEvent(newMenuVisibility);
+      }
+      isMenuVisible = newMenuVisibility;
     });
 
     element.addEventListener('click', e => {
@@ -242,7 +256,4 @@ export {
   addClassOnScroll,
   hideSelectorMask,
   showSelectorMask,
-  checkScrollDirection,
-  checkMenuVisibility,
-  toggleMenu,
 };
