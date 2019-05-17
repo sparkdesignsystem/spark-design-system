@@ -3,6 +3,7 @@ import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
+import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
@@ -14,14 +15,45 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   }
 };
 
-// const toggleMenu = direction => {
-//   const masthead = document.querySelector('[data-sprk-masthead]');
-//   if (direction === 'down') {
-//     masthead.classList.add('sprk-c-Masthead--hidden');
-//   } else {
-//     masthead.classList.remove('sprk-c-Masthead--hidden');
-//   }
-// };
+/*
+* Add or remove the class depending
+* on if the user is scrolling up or down
+*/
+const toggleMenu = scrollDirection => {
+  const masthead = document.querySelector('[data-sprk-masthead]');
+  if (scrollDirection === 'down') {
+    masthead.classList.add('sprk-c-Masthead--hidden');
+  } else {
+    masthead.classList.remove('sprk-c-Masthead--hidden');
+  }
+};
+
+/*
+* Set initial scroll direction
+* If the scroll direction changes
+* toggle the masthead visibility 
+*/
+let direction = scrollYDirection();
+const checkScrollDirection = () => {
+  const newDirection = scrollYDirection();
+  if (direction !== newDirection) {
+    toggleMenu(newDirection);
+  }
+  direction = newDirection;
+};
+
+/* 
+* If the mobile menu is visible
+* add the check scroll event listener
+* otherwise remove it
+*/
+const toggleScrollEvent = isMenuVisible => {
+  if (isMenuVisible) {
+    window.addEventListener('scroll', checkScrollDirection);
+  } else {
+    window.removeEventListener('scroll', checkScrollDirection, false);
+  }
+};
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
   document.body.classList.toggle('sprk-u-Overflow--hidden');
@@ -87,37 +119,6 @@ const bindUIEvents = () => {
         'data-sprk-mobile-nav-trigger',
       )}"]`,
     );
-
-    /*
-    * Check the scroll direction
-    * because we only want to show/hide
-    * if the direction changes.
-    */
-    let scrollPosition = 0;
-    let scrollDirection;
-    const checkScrollDirection = () => {
-      const newScrollPos = window.scrollY;
-      const diff = newScrollPos - scrollPosition;
-      const direction = diff > 0 ? 'down' : 'up';
-      if (scrollDirection !== direction) {
-        // toggleMenu(direction);
-        console.log(direction);
-      }
-      scrollDirection = direction;
-      scrollPosition = newScrollPos;
-    };
-
-    /* If the mobile menu is visible
-    * add the check scroll event listener
-    * otherwise remove it
-    */
-    const toggleScrollEvent = isMenuVisible => {
-      if (isMenuVisible) {
-        window.addEventListener('scroll', checkScrollDirection);
-      } else {
-        window.removeEventListener('scroll', checkScrollDirection, false);
-      }
-    };
 
     /*
     * Check if the mobile menu is visible
@@ -256,4 +257,7 @@ export {
   addClassOnScroll,
   hideSelectorMask,
   showSelectorMask,
+  toggleScrollEvent,
+  checkScrollDirection,
+  toggleMenu,
 };

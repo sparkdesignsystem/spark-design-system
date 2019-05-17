@@ -51,6 +51,8 @@ import {
   hideSelectorMask,
   showSelectorMask,
   toggleScrollEvent,
+  checkScrollDirection,
+  toggleMenu,
   bindUIEvents as bindMastheadUIEvents,
 } from './components/masthead';
 import {
@@ -127,6 +129,7 @@ import {
 import { carousel } from './components/carousel';
 import { highlightBoard } from './components/highlight-board';
 import isElementVisible from './utilities/isElementVisible';
+import scrollYDirection from './utilities/scrollYDirection';
 
 export {
   dateInput,
@@ -223,4 +226,7 @@ export {
   bindStepperUIEvents,
   toggleScrollEvent,
   isElementVisible,
+  scrollYDirection,
+  checkScrollDirection,
+  toggleMenu,
 };
