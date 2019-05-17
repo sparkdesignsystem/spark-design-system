@@ -50,6 +50,7 @@ import {
   addClassOnScroll,
   hideSelectorMask,
   showSelectorMask,
+  toggleScrollEvent,
   bindUIEvents as bindMastheadUIEvents,
 } from './components/masthead';
 import {
@@ -125,6 +126,7 @@ import {
 } from './components/stepper';
 import { carousel } from './components/carousel';
 import { highlightBoard } from './components/highlight-board';
+import isElementVisible from './utilities/isElementVisible';
 
 export {
   dateInput,
@@ -219,4 +221,6 @@ export {
   stepper,
   carousel,
   bindStepperUIEvents,
+  toggleScrollEvent,
+  isElementVisible,
 };
