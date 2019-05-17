@@ -1,0 +1,14 @@
+/* global document */
+
+const isElementVisible = selector => {
+  const element = document.querySelector(selector);
+  const elementDisplayValue = window.getComputedStyle(element).display;
+  const elementVisibilityValue = window.getComputedStyle(element).visibility;
+  const elementIsVisible =
+    elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
+      ? false
+      : true;
+  return elementIsVisible;
+};
+
+export { isElementVisible as default };
