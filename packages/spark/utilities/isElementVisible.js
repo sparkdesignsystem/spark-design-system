@@ -2,6 +2,7 @@
 
 const isElementVisible = selector => {
   const element = document.querySelector(selector);
+  if (!element) return;
   const elementDisplayValue = window.getComputedStyle(element).display;
   const elementVisibilityValue = window.getComputedStyle(element).visibility;
   const elementIsVisible =
