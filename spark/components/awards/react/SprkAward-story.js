@@ -19,29 +19,16 @@ storiesOf('Award', module)
         "
       disclaimerTitle="My Disclaimer"
       images={[{
-        href:
-        '#nogo',
-        src:
-        'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-        alt:
-        'Spark Placeholder Logo',
-        analyticsString:
-        'award-1',
-        element:
-        'a',
-        },
-        {
-        href:
-        '#nogo',
-        src:
-        'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
-        alt:
-        'Spark Placeholder Logo',
-        analyticsString:
-        'award-2',
-        element:
-        'a',
-        },
+        href: '#nogo',
+        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        alt: 'Spark Placeholder Logo',
+        analyticsString: 'award-1',
+        element: 'a',},
+        {href: '#nogo',
+        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        alt: 'Spark Placeholder Logo',
+        analyticsString: 'award-2',
+        element: 'a',},
       ]}
     />
   ));
