@@ -4,7 +4,7 @@ import cx from 'classnames';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
 import SprkButton from '../../../SprkButton/SprkButton';
 
-const SprkCardTeaser = props => {
+const SprkCardTeaser = (props) => {
   const { teaserConfig } = props;
   const { bodyText, cta, media, title, titleFirst } = teaserConfig;
 
@@ -125,13 +125,11 @@ const SprkCardTeaser = props => {
     );
   };
 
-  const CallToAction = () => {
-    return (
-      <div className="sprk-o-Stack__item">
-        {cta.ctaVariant === 'link' ? <CtaLink /> : <CtaButton />}
-      </div>
-    );
-  };
+  const CallToAction = () => (
+    <div className="sprk-o-Stack__item">
+      {cta.ctaVariant === 'link' ? <CtaLink /> : <CtaButton />}
+    </div>
+  );
 
   const GetTeaserContentOrder = () => {
     // Title at top

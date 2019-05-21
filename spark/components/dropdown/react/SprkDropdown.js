@@ -147,7 +147,7 @@ class SprkDropdown extends Component {
               </div>
             )}
             <ul className="sprk-c-Dropdown__links">
-              {choiceItems.map(choice => {
+              {choiceItems.map((choice) => {
                 const {
                   content,
                   element,

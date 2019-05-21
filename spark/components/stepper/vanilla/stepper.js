@@ -10,7 +10,7 @@ import { carousel } from './carousel';
 
 const resetSlider = (steps, activeClass, slider) => {
   if (!slider) return;
-  steps.forEach(step => {
+  steps.forEach((step) => {
     const stepDescription = step.querySelector(
       '[data-sprk-stepper="description"]',
     );
@@ -77,7 +77,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 
   if (carouselContainer) {
     carouselInstance = carousel(carouselContainer);
-    carouselContainer.addEventListener('sprk.carousel.slide', e => {
+    carouselContainer.addEventListener('sprk.carousel.slide', (e) => {
       e.preventDefault();
       const { index } = e.detail;
       const currentActiveIndex = getActiveTabIndex(steps, activeClass);
@@ -91,8 +91,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         activeClass,
       );
       if (
-        carouselInstance &&
-        currentActiveIndex !== getActiveTabIndex(steps, activeClass)
+        carouselInstance
+        && currentActiveIndex !== getActiveTabIndex(steps, activeClass)
       ) {
         carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
       }
@@ -129,7 +129,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
   );
 
   steps.forEach((step, index) => {
-    step.addEventListener('click', e => {
+    step.addEventListener('click', (e) => {
       e.preventDefault();
       resetTabs(steps, descriptions, activeClass);
       setActiveTab(steps[index], descriptions[index], activeClass);
@@ -147,8 +147,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
       const sliderBreakpoint = 1279;
 
       if (
-        windowWidth < sliderBreakpoint &&
-        newViewportWidth > sliderBreakpoint
+        windowWidth < sliderBreakpoint
+        && newViewportWidth > sliderBreakpoint
       ) {
         resetTabs(steps, descriptions, activeClass, sliderEl);
         setActiveTab(
@@ -167,7 +167,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
       }
     });
 
-    step.addEventListener('keydown', event => {
+    step.addEventListener('keydown', (event) => {
       const keys = {
         end: 35,
         home: 36,
@@ -213,7 +213,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 };
 
 const stepper = () => {
-  getElements('[data-sprk-stepper="container"]', item => {
+  getElements('[data-sprk-stepper="container"]', (item) => {
     let carouselContainer;
     const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
     if (partnerCarouselID) {

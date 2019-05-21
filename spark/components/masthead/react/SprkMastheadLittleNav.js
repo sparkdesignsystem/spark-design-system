@@ -53,7 +53,7 @@ class SprkMastheadLittleNav extends Component {
             'sprk-o-Stack__item--center-column',
           )}
         >
-          {links.map(link => {
+          {links.map((link) => {
             const { element, href, text, ...rest } = link;
             const TagName = element || 'a';
             return (

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import SprkLink from '../SprkLink/SprkLink';
 import SprkButton from '../SprkButton/SprkButton';
 
-const SprkPromo = props => {
+const SprkPromo = (props) => {
   const {
     title,
     subtitle,
@@ -41,9 +41,9 @@ const SprkPromo = props => {
       data-id={idString}
       {...other}
     >
-      {imgSrc &&
-        isFlag &&
-        !mediaRev && (
+      {imgSrc
+        && isFlag
+        && !mediaRev && (
           <SprkLink
             variant="plain"
             href={imgLinkHref}
@@ -61,11 +61,11 @@ const SprkPromo = props => {
               src={imgSrc}
             />
           </SprkLink>
-        )}
+      )}
 
-      {imgSrc &&
-        !mediaRev &&
-        !isFlag && (
+      {imgSrc
+        && !mediaRev
+        && !isFlag && (
           <SprkLink
             variant="plain"
             href={imgLinkHref}
@@ -79,7 +79,7 @@ const SprkPromo = props => {
           >
             <img className="sprk-c-Promo__image" alt={imgAlt} src={imgSrc} />
           </SprkLink>
-        )}
+      )}
 
       <div
         className={classnames(
@@ -145,9 +145,9 @@ const SprkPromo = props => {
         )}
       </div>
 
-      {isFlag &&
-        imgSrc &&
-        mediaRev && (
+      {isFlag
+        && imgSrc
+        && mediaRev && (
           <SprkLink
             variant="plain"
             href={imgLinkHref}
@@ -165,11 +165,11 @@ const SprkPromo = props => {
               src={imgSrc}
             />
           </SprkLink>
-        )}
+      )}
 
-      {!isFlag &&
-        imgSrc &&
-        mediaRev && (
+      {!isFlag
+        && imgSrc
+        && mediaRev && (
           <SprkLink
             variant="plain"
             href={imgLinkHref}
@@ -183,7 +183,7 @@ const SprkPromo = props => {
           >
             <img className="sprk-c-Promo__image" alt={imgAlt} src={imgSrc} />
           </SprkLink>
-        )}
+      )}
     </div>
   );
 };

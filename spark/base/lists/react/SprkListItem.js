@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SprkListItem = props => {
+const SprkListItem = (props) => {
   const { children, additionalClasses, idString, ...other } = props;
 
   return (

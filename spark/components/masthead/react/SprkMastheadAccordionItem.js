@@ -72,7 +72,7 @@ class SprkMastheadAccordionItem extends Component {
             </SprkLink>
             <AnimateHeight duration={300} height={height}>
               <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
-                {stateLinks.map(subnavlink => {
+                {stateLinks.map((subnavlink) => {
                   const {
                     element: innerElement,
                     href: innerHref,

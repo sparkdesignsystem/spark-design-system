@@ -4,7 +4,7 @@ import cx from 'classnames';
 import SprkCardHighlightedHeader from './components/SprkCardHighlightedHeader/SprkCardHighlightedHeader';
 import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
 
-const SprkCard = props => {
+const SprkCard = (props) => {
   const {
     additionalClasses,
     additionalContentClasses,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SprkCardHighlightedHeader = props => {
+const SprkCardHighlightedHeader = (props) => {
   const { highlightedHeaderConfig } = props;
   const { description, title, bodyText } = highlightedHeaderConfig;
 

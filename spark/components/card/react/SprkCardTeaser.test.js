@@ -134,7 +134,7 @@ it('should render media icon inside TagName link', () => {
   const wrapper = mount(
     <Router>
       <SprkCardTeaser teaserConfig={testTeaserConfig} />
-    </Router>
+    </Router>,
   );
   const hasTagNameLink = wrapper.find('Media Link SprkIcon').length === 1;
   expect(hasTagNameLink).toBe(true);
@@ -147,7 +147,7 @@ it('should render CTA link as TagName link', () => {
   const wrapper = mount(
     <Router>
       <SprkCardTeaser teaserConfig={testTeaserConfig} />
-    </Router>
+    </Router>,
   );
   const hasRouterLink = wrapper.find('CallToAction Link').length === 1;
   expect(hasRouterLink).toBe(true);
@@ -161,7 +161,7 @@ it('should render CTA link with icon as TagName link', () => {
   const wrapper = mount(
     <Router>
       <SprkCardTeaser teaserConfig={testTeaserConfig} />
-    </Router>
+    </Router>,
   );
   const hasRouterLink = wrapper.find('CallToAction Link SprkIcon').length === 1;
   expect(hasRouterLink).toBe(true);
@@ -174,10 +174,9 @@ it('should render CTA button router link', () => {
   const wrapper = mount(
     <Router>
       <SprkCardTeaser teaserConfig={testTeaserConfig} />
-    </Router>
+    </Router>,
   );
-  const hasRouterLink =
-    wrapper.find('CallToAction Link.sprk-c-Button').length === 1;
+  const hasRouterLink = wrapper.find('CallToAction Link.sprk-c-Button').length === 1;
   expect(hasRouterLink).toBe(true);
 });
 
@@ -204,25 +203,22 @@ it('should render correct order when title is first', () => {
   testTeaserConfig.titleFirst = true;
   testTeaserConfig.media.mediaVariant = 'img';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
-  const hasCorrectOrder =
-    wrapper.find('Title + Media + div.sprk-c-Card__content').length === 1;
+  const hasCorrectOrder = wrapper.find('Title + Media + div.sprk-c-Card__content').length === 1;
   expect(hasCorrectOrder).toBe(true);
 });
 
 it('should render correct order of elements when media is icon', () => {
   testTeaserConfig.media.mediaVariant = 'icon';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
-  const hasCorrectOrder =
-    wrapper.find('Media + Title + BodyText + CallToAction').length === 1;
+  const hasCorrectOrder = wrapper.find('Media + Title + BodyText + CallToAction').length === 1;
   expect(hasCorrectOrder).toBe(true);
 });
 
 it('should render correct order of elements when media is img', () => {
   testTeaserConfig.media.mediaVariant = 'img';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
-  const hasCorrectOrder =
-    wrapper.find(
-      'Media + div.sprk-c-Card__content Title + BodyText + CallToAction',
-    ).length === 1;
+  const hasCorrectOrder = wrapper.find(
+    'Media + div.sprk-c-Card__content Title + BodyText + CallToAction',
+  ).length === 1;
   expect(hasCorrectOrder).toBe(true);
 });

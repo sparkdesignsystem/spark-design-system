@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import warning from 'warning';
 import SprkButton from '../SprkButton/SprkButton';
 
-const SprkHighlightBoard = props => {
+const SprkHighlightBoard = (props) => {
   const {
     imgSrc,
     imgAlt,

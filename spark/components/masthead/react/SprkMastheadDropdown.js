@@ -112,7 +112,7 @@ class SprkMastheadDropdown extends Component {
               </div>
             )}
             <ul className="sprk-c-Dropdown__links">
-              {choiceItems.map(choice => {
+              {choiceItems.map((choice) => {
                 const { element, href, text, ...rest } = choice;
                 const TagName = element || 'a';
                 return (

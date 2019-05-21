@@ -239,7 +239,7 @@ it('should add analytics strings to page links', () => {
       totalItems={50}
       itemsPerPage={10}
       onChangeCallback={() => {}}
-      analyticsStringPage='foo'
+      analyticsStringPage="foo"
     />,
   );
 

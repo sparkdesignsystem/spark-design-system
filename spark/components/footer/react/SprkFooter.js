@@ -74,8 +74,8 @@ class SprkFooter extends Component {
                   sprk-o-Stack--medium
                   sprk-o-Stack--split@m"
               >
-                {linkColumnsHasIds.length > 0 &&
-                  linkColumnsHasIds.map(column => (
+                {linkColumnsHasIds.length > 0
+                  && linkColumnsHasIds.map(column => (
                     <div
                       key={column.id}
                       className="sprk-o-Stack__item
@@ -137,8 +137,8 @@ class SprkFooter extends Component {
               <SprkFooterAwards awards={awards} />
             )}
 
-            {paragraphs.length > 0 &&
-              paragraphsHasIds.map(p => (
+            {paragraphs.length > 0
+              && paragraphsHasIds.map(p => (
                 <p
                   key={p.id}
                   className="sprk-o-Stack__item sprk-b-TypeBodyFour"

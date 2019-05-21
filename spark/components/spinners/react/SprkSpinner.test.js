@@ -6,7 +6,7 @@ import SprkSpinner from './SprkSpinner';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should display a div with the correct base class', () => {
-  const wrapper = shallow(<SprkSpinner/>);
+  const wrapper = shallow(<SprkSpinner />);
   expect(wrapper.find('div.sprk-c-Spinner').length).toBe(1);
 });
 

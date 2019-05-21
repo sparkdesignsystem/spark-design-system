@@ -27,7 +27,7 @@ class SprkAccordion extends Component {
         data-id={idString}
         {...other}
       >
-        {items.map(item => {
+        {items.map((item) => {
           if (item.type.name !== SprkAccordionItem.name) return null;
           return (
             <SprkAccordionItem {...item.props} key={item.id} id={item.id} />
