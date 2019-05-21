@@ -2,46 +2,46 @@ import {
   dateInput,
   formatDate,
   bindUIEvents as bindDateInputUIEvents,
-} from './base/inputs/vanilla/dateInput';
+} from '../../base/inputs/vanilla/dateInput';
 import {
   datePicker,
   bindUIEvents as bindDatePickerUIEvents,
-} from './base/inputs/vanilla/datePicker';
+} from '../../base/inputs/vanilla/datePicker';
 import {
   monetaryInput,
   formatMonetary,
   bindUIEvents as bindMonetaryUIEvents,
-} from './base/inputs/vanilla/monetaryInput';
-import passwordInput from './base/inputs/vanilla/passwordInput';
+} from '../../base/inputs/vanilla/monetaryInput';
+import passwordInput from '../../base/inputs/vanilla/passwordInput';
 import {
   phoneInput,
   formatPhone,
   bindUIEvents as bindPhoneInputUIEvents,
-} from './base/inputs/vanilla/phoneInput';
+} from '../../base/inputs/vanilla/phoneInput';
 import {
   requiredSelect,
   runValidation as runRequiredSelectValidation,
-} from './base/inputs/vanilla/requiredSelect';
+} from '../../base/inputs/vanilla/requiredSelect';
 import {
   requiredTextInput,
   runValidation as runRequiredTextInputValidation,
   bindUIEvents as bindRequiredTextInputUIEvents,
-} from './base/inputs/vanilla/requiredTextInput';
+} from '../../base/inputs/vanilla/requiredTextInput';
 import {
   requiredTick,
   runValidation as runRequiredTickValidation,
   bindUIEvents as bindRequiredTickUIEvents,
-} from './base/inputs/vanilla/requiredTick';
+} from '../../base/inputs/vanilla/requiredTick';
 import {
   ssnInput,
   formatSSN,
   bindUIEvents as bindSSNInputUIEvents,
-} from './base/inputs/vanilla/ssnInput';
+} from '../../base/inputs/vanilla/ssnInput';
 import {
   alerts,
   dismissAlert,
   bindUIEvents as bindAlertUIEvents,
-} from './components/alerts/vanilla/alerts';
+} from '../../components/alerts/vanilla/alerts';
 import {
   masthead,
   toggleMobileNav,
@@ -51,7 +51,7 @@ import {
   hideSelectorMask,
   showSelectorMask,
   bindUIEvents as bindMastheadUIEvents,
-} from './components/masthead/vanilla/masthead';
+} from '../../components/masthead/vanilla/masthead';
 import {
   modals,
   showModal,
@@ -62,18 +62,18 @@ import {
   handleMaskEvents,
   currentOpenModal,
   bindUIEvents as bindModalUIEvents,
-} from './components/modals/vanilla/modals';
+} from '../../components/modals/vanilla/modals';
 import {
   setItemLabels,
   setAriaLabel,
   pagination,
-} from './components/pagination/vanilla/pagination';
+} from '../../components/pagination/vanilla/pagination';
 import {
   spinners,
   getSpinnerClasses,
   setSpinning,
   cancelSpinning,
-} from './components/spinners/vanilla/spinners';
+} from '../../components/spinners/vanilla/spinners';
 import {
   tabs,
   bindUIEvents,
@@ -83,34 +83,34 @@ import {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
-} from './components/tabs/vanilla/tabs';
+} from '../../components/tabs/vanilla/tabs';
 import {
   toggle,
   toggleIconType,
   toggleAriaExpanded,
   handleToggleClick,
   bindToggleUIEvents,
-} from './components/toggle/vanilla/toggle';
-import isValidDate from './utilities/validation/vanilla/isValidDate';
-import isValidMonetary from './utilities/validation/vanilla/isValidMonetary';
-import isValidPhone from './utilities/validation/vanilla/isValidPhone';
-import isValidSSN from './utilities/validation/vanilla/isValidSSN';
-import setInvalidSelect from './utilities/validation/vanilla/setInvalidSelect';
-import setInvalidTextInput from './utilities/validation/vanilla/setInvalidTextInput';
-import setInvalidTick from './utilities/validation/vanilla/setInvalidTick';
-import setValidSelect from './utilities/validation/vanilla/setValidSelect';
-import setValidTextInput from './utilities/validation/vanilla/setValidTextInput';
-import setValidTick from './utilities/validation/vanilla/setValidTick';
-import runValidation from './utilities/validation/vanilla/validation-runner';
+} from '../../components/toggle/vanilla/toggle';
+import isValidDate from '../../utilities/validation/vanilla/isValidDate';
+import isValidMonetary from '../../utilities/validation/vanilla/isValidMonetary';
+import isValidPhone from '../../utilities/validation/vanilla/isValidPhone';
+import isValidSSN from '../../utilities/validation/vanilla/isValidSSN';
+import setInvalidSelect from '../../utilities/validation/vanilla/setInvalidSelect';
+import setInvalidTextInput from '../../utilities/validation/vanilla/setInvalidTextInput';
+import setInvalidTick from '../../utilities/validation/vanilla/setInvalidTick';
+import setValidSelect from '../../utilities/validation/vanilla/setValidSelect';
+import setValidTextInput from '../../utilities/validation/vanilla/setValidTextInput';
+import setValidTick from '../../utilities/validation/vanilla/setValidTick';
+import runValidation from '../../utilities/validation/vanilla/validation-runner';
 import detectJS from './utilities/validation/vanilla/detectJS';
 import {
   getFocusableEls,
   focusFirstEl,
   isActiveElement,
-} from './utilities/helpers/vanilla/elementState';
-import getElements from './utilities/helpers/vanilla/getElements';
-import { isTabPressed, isEscPressed } from './utilities/helpers/vanilla/keypress';
-import toggleValue from './utilities/helpers/vanilla/toggleValue';
+} from '../../utilities/helpers/vanilla/elementState';
+import getElements from '../../utilities/helpers/vanilla/getElements';
+import { isTabPressed, isEscPressed } from '../../utilities/helpers/vanilla/keypress';
+import toggleValue from '../../utilities/helpers/vanilla/toggleValue';
 import {
   dropdowns,
   bindUIEvents as bindDropdownUIEvents,
@@ -118,13 +118,13 @@ import {
   hideDropDown,
   showDropDown,
   removeActiveStatus,
-} from './components/dropdown/vanilla/dropdown';
+} from '../../components/dropdown/vanilla/dropdown';
 import {
   stepper,
   bindUIEvents as bindStepperUIEvents,
-} from './components/stepper/vanilla/stepper';
-import { carousel } from './components/carousel/vanilla/carousel';
-import { highlightBoard } from './components/highlight-board/vanilla/highlight-board';
+} from '../../components/stepper/vanilla/stepper';
+import { carousel } from '../../components/carousel/vanilla/carousel';
+import { highlightBoard } from '../../components/highlight-board/vanilla/highlight-board';
 
 export {
   dateInput,
