@@ -1,8 +1,8 @@
 plugins:
  -
    'stylelint-scss'
-extends:
-- './node_modules/prettier-stylelint/config.js'
+configBasedir:
+- './spark/'
 ignoreFiles:
 - './src/assets/drizzle/**/*.css'
 rules:
