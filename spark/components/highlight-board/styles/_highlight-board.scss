@@ -41,7 +41,6 @@ $sprk-highlight-board-content-box-color: $sprk-white !default;
 
 .sprk-c-HighlightBoard__heading {
   @media (max-width: $sprk-highlight-board-breakpoint) {
-    // prettier-ignore
     font-size: $sprk-font-size-display-three * $sprk-highlight-board-type-reduction-percentage;
   }
 }
