@@ -1,8 +1,8 @@
 // Polyfills
 import 'promise-polyfill/src/polyfill';
-import './utilities/polyfills/ArrayFrom';
-import './utilities/polyfills/StringIncludes';
-import './utilities/polyfills/ArrayFind';
-import './utilities/polyfills/NodeListForEach';
-import './utilities/polyfills/classListSVG';
-import './utilities/polyfills/ObjectPrepend';
+import './utilities/polyfills/vanilla/ArrayFrom';
+import './utilities/polyfills/vanilla/StringIncludes';
+import './utilities/polyfills/vanilla/ArrayFind';
+import './utilities/polyfills/vanilla/NodeListForEach';
+import './utilities/polyfills/vanilla/classListSVG';
+import './utilities/polyfills/vanilla/ObjectPrepend';
