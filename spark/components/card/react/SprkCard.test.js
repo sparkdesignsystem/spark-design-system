@@ -55,8 +55,7 @@ it('should load teaser if there is teaserConfig', () => {
       }}
     />,
   );
-  const loadsTeaserComponent =
-    wrapper.find('GetCardContent SprkCardTeaser').length === 1;
+  const loadsTeaserComponent = wrapper.find('GetCardContent SprkCardTeaser').length === 1;
   expect(loadsTeaserComponent).toBe(true);
 });
 
@@ -75,7 +74,6 @@ it('should load highlighted header if there is highlightedHeaderConfig', () => {
       }}
     />,
   );
-  const loadsHighlightedHeaderComponent =
-    wrapper.find('GetCardContent SprkCardHighlightedHeader').length === 1;
+  const loadsHighlightedHeaderComponent = wrapper.find('GetCardContent SprkCardHighlightedHeader').length === 1;
   expect(loadsHighlightedHeaderComponent).toBe(true);
 });

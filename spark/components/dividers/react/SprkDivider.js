@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const SprkDivider = props => {
+const SprkDivider = (props) => {
   const { element, additionalClasses, idString, ...other } = props;
   const classNames = classnames('sprk-c-Divider', additionalClasses);
   const TagName = element;

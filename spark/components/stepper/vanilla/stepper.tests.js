@@ -5,11 +5,9 @@ import createElementFromString from './_createElementFromString';
 
 const proxyquire = require('proxyquire');
 
-const carouselStub = sinon.stub(() => {
-  return {
-    slideTo: () => {},
-  };
-});
+const carouselStub = sinon.stub(() => ({
+  slideTo: () => {},
+}));
 
 const { stepper, positionSlider, resetSlider } = proxyquire(
   '../components/stepper',
@@ -450,8 +448,8 @@ describe('steps UI Events tests, (descriptions)', () => {
   });
 
   it(
-    'do not reset the top of the slider if the resize event is fired and' +
-      'not moving from narrow to wide',
+    'do not reset the top of the slider if the resize event is fired and'
+      + 'not moving from narrow to wide',
     () => {
       stepper(stepperContainer);
       const sliderEl = stepperContainer.querySelectorAll(
@@ -465,8 +463,8 @@ describe('steps UI Events tests, (descriptions)', () => {
   );
 
   it(
-    'reset the top of the slider if the resize event is fired and' +
-      'moving from narrow to wide',
+    'reset the top of the slider if the resize event is fired and'
+      + 'moving from narrow to wide',
     () => {
       stepper(stepperContainer);
       const sliderEl = stepperContainer.querySelectorAll(

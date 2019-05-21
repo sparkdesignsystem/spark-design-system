@@ -28,7 +28,7 @@ class SprkMastheadBigNav extends Component {
             role="navigation"
           >
             <ul className="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
-              {links.map(link => {
+              {links.map((link) => {
                 const {
                   element,
                   additionalContainerClasses,

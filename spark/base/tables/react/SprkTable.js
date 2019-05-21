@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { uniqueId } from 'lodash';
 
-const SprkTable = props => {
+const SprkTable = (props) => {
   const {
     rows,
     columns,
@@ -37,8 +37,8 @@ const SprkTable = props => {
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
-            {columns.length > 0 &&
-              columns.map(row => (
+            {columns.length > 0
+              && columns.map(row => (
                 <tr key={uniqueId('row_')}>
                   {row.map(col => (
                     <th
@@ -88,8 +88,8 @@ const SprkTable = props => {
               {rows.map(row => (
                 <tr key={uniqueId('row_')}>
                   <th>{row.rowHeading}</th>
-                  {columns.length > 0 &&
-                    columns.map(col => (
+                  {columns.length > 0
+                    && columns.map(col => (
                       <td key={uniqueId('td_')}>{row[col.name]}</td>
                     ))}
                 </tr>
@@ -109,8 +109,8 @@ const SprkTable = props => {
               {rows.map(row => (
                 <tr key={uniqueId('row_')}>
                   <th>{row.rowHeading}</th>
-                  {columns.length > 0 &&
-                    columns.map(col => (
+                  {columns.length > 0
+                    && columns.map(col => (
                       <td key={uniqueId('td_')}>{row[col.name]}</td>
                     ))}
                   {row.button && <td>{row.button}</td>}
@@ -149,8 +149,8 @@ const SprkTable = props => {
           <tbody>
             {rows.map(row => (
               <tr key={uniqueId('row_')}>
-                {columns.length > 0 &&
-                  columns.map(col => (
+                {columns.length > 0
+                  && columns.map(col => (
                     <td key={uniqueId('td_')}>{row[col.name]}</td>
                   ))}
               </tr>

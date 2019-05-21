@@ -173,7 +173,7 @@ it('should run the choiceFunction supplied with the list of choices (information
     items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
   };
   const wrapper = mount(
-    <SprkMastheadSelector choices={choices} variant="informational" />
+    <SprkMastheadSelector choices={choices} variant="informational" />,
   );
   wrapper.find('.sprk-b-Link').simulate('click');
   wrapper
@@ -205,7 +205,7 @@ it('should not error if the choiceFunction is supplied, but undefined with the l
     items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
   };
   const wrapper = mount(
-    <SprkMastheadSelector choices={choices} variant="informational" />
+    <SprkMastheadSelector choices={choices} variant="informational" />,
   );
   wrapper.find('.sprk-b-Link').simulate('click');
   wrapper

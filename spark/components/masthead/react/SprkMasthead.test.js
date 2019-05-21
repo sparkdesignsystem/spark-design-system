@@ -1,7 +1,7 @@
 /* global it expect window document Event */
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMasthead from './SprkMasthead';

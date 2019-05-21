@@ -118,7 +118,7 @@ it('should pass unused keys on choice items through to the dom', () => {
   const wrapper = mount(
     <SprkMastheadDropdown
       choices={{
-        items: [{ element: 'p', text: 'Item 1', 'aria-hidden': 'true' }]
+        items: [{ element: 'p', text: 'Item 1', 'aria-hidden': 'true' }],
       }}
     />,
   );

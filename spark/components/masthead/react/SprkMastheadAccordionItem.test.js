@@ -115,7 +115,7 @@ it('should add a class if isActive is true', () => {
   const wrapper = mount(<SprkMastheadAccordionItem isActive />);
   expect(
     wrapper.find(
-      '.sprk-c-MastheadAccordion__item.sprk-c-MastheadAccordion__item--active'
+      '.sprk-c-MastheadAccordion__item.sprk-c-MastheadAccordion__item--active',
     ).length,
   ).toBe(1);
 });

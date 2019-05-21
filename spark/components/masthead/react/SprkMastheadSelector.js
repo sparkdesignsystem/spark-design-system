@@ -155,7 +155,7 @@ class SprkMastheadSelector extends Component {
             </div>
 
             <ul className="sprk-c-Dropdown__links">
-              {choiceItems.map(item => {
+              {choiceItems.map((item) => {
                 const {
                   element,
                   href,

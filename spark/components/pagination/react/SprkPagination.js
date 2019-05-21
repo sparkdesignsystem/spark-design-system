@@ -5,7 +5,7 @@ import { uniqueId } from 'lodash';
 import SprkLink from '../SprkLink/SprkLink';
 import SprkIcon from '../SprkIcon/SprkIcon';
 
-const SprkPagination = props => {
+const SprkPagination = (props) => {
   const goToPage = (e, page) => {
     e.preventDefault();
 
@@ -98,12 +98,12 @@ const SprkPagination = props => {
           </li>
         )}
 
-        {longVariant &&
-          currentPage > 2 && <li key={uniqueId('sprk_page_')}>...</li>}
+        {longVariant
+          && currentPage > 2 && <li key={uniqueId('sprk_page_')}>...</li>}
 
-        {longVariant &&
-          currentPage > 1 &&
-          currentPage < totalPages && (
+        {longVariant
+          && currentPage > 1
+          && currentPage < totalPages && (
             <li key={uniqueId('sprk_page_')}>
               <SprkLink
                 onClick={e => goToPage(e, currentPage)}
@@ -118,12 +118,12 @@ const SprkPagination = props => {
                 {currentPage}
               </SprkLink>
             </li>
-          )}
+        )}
 
-        {longVariant &&
-          currentPage < totalPages - 1 && (
+        {longVariant
+          && currentPage < totalPages - 1 && (
             <li key={uniqueId('sprk_page_')}>...</li>
-          )}
+        )}
 
         {longVariant && (
           <li key={uniqueId('sprk_page_')}>
@@ -141,9 +141,9 @@ const SprkPagination = props => {
           </li>
         )}
 
-        {variant === 'default' &&
-          !longVariant &&
-          totalItems / itemsPerPage > 1 && (
+        {variant === 'default'
+          && !longVariant
+          && totalItems / itemsPerPage > 1 && (
             <li key={uniqueId('sprk_page_')}>
               <SprkLink
                 onClick={e => goToPage(e, 2)}
@@ -157,11 +157,11 @@ const SprkPagination = props => {
                 2
               </SprkLink>
             </li>
-          )}
+        )}
 
-        {variant === 'default' &&
-          !longVariant &&
-          totalItems / itemsPerPage > 2 && (
+        {variant === 'default'
+          && !longVariant
+          && totalItems / itemsPerPage > 2 && (
             <li key={uniqueId('sprk_page_')}>
               <SprkLink
                 onClick={e => goToPage(e, 3)}
@@ -175,7 +175,7 @@ const SprkPagination = props => {
                 3
               </SprkLink>
             </li>
-          )}
+        )}
 
         <li>
           <SprkLink
