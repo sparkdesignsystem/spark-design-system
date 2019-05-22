@@ -11,7 +11,7 @@ const SprkStepperStep = props => {
     idString,
     analyticsString,
     variant,
-    onStepClick,
+    onClick,
     ...other
   } = props;
 
@@ -30,7 +30,7 @@ const SprkStepperStep = props => {
       data-sprk-stepper="step"
       data-id={idString}
       data-analytics={analyticsString}
-      onClick={onStepClick}
+      onClick={onClick}
       {...other}
     >
       <div
@@ -61,16 +61,6 @@ const SprkStepperStep = props => {
             <p className="sprk-b-TypeBodyTwo">{children}</p>
           </div>
         )}
-        {/* <div
-      class="sprk-c-Stepper__step-description"
-      data-sprk-stepper="description"
-      id="one-target-1"
-      aria-labelledby="one-step-1"
-      role="tabpanel">
-      <p class="sprk-b-TypeBodyTwo">
-        Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-    </div> */}
       </div>
     </li>
   );
@@ -85,12 +75,13 @@ SprkStepperStep.propTypes = {
   analyticsString: PropTypes.string,
   title: PropTypes.string,
   isSelected: PropTypes.bool,
-  variant: PropTypes.oneOf(['default', 'hasDescription']),
-  onStepClick: PropTypes.func,
+  variant: PropTypes.oneOf(['default', 'hasDescription', 'carousel']),
+  onClick: PropTypes.func,
 };
 
 SprkStepperStep.defaultProps = {
   variant: 'default',
+  onClick: () => {}
 };
 
 export default SprkStepperStep;

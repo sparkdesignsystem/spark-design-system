@@ -25,18 +25,29 @@ const SprkStepperDocs = () => {
       </ExampleContainer>
       <ExampleContainer heading="Stepper with Step Descriptions">
         <div className="sprk-u-mbm">
-          <SprkStepper>
-            <SprkStepperStep title="Step One" variant="hasDescription">
+          <SprkStepper variant="hasDescription">
+            <SprkStepperStep title="Step One">
               Step one content - lorem ipsum lorem ipsum lorem
             </SprkStepperStep>
-            <SprkStepperStep
-              title="Step Two"
-              variant="hasDescription"
-              isSelected
-            >
+            <SprkStepperStep title="Step Two" isSelected>
               Step two content - lorem ipsum lorem ipsum lorem
             </SprkStepperStep>
-            <SprkStepperStep title="Step Three" variant="hasDescription">
+            <SprkStepperStep title="Step Three">
+              Step three content - lorem ipsum lorem ipsum
+            </SprkStepperStep>
+          </SprkStepper>
+        </div>
+      </ExampleContainer>
+      <ExampleContainer heading="Stepper with Dark Background">
+        <div className="sprk-u-mbm">
+          <SprkStepper hasDarkBackground variant="hasDescription">
+            <SprkStepperStep title="Step One">
+              Step one content - lorem ipsum lorem ipsum lorem
+            </SprkStepperStep>
+            <SprkStepperStep title="Step Two" isSelected>
+              Step two content - lorem ipsum lorem ipsum lorem
+            </SprkStepperStep>
+            <SprkStepperStep title="Step Three">
               Step three content - lorem ipsum lorem ipsum
             </SprkStepperStep>
           </SprkStepper>

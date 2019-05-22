@@ -65,7 +65,6 @@ class SprkStepper extends Component {
     const { activeStepId, stepIds } = this.state;
     const currentIndex = stepIds.indexOf(activeStepId);
     let newIndex = currentIndex - 1;
-
     if (newIndex < 0) {
       newIndex = stepIds.length - 1;
     }
@@ -123,15 +122,36 @@ class SprkStepper extends Component {
   }
 
   render() {
-    const { additionalClasses, children, idString, ...other } = this.props;
+    const { additionalClasses, children, idString, variant, hasDarkBackground, ...other } = this.props;
     const { items, activeStepId } = this.state;
 
-    return (
+    const hasCarousel = variant === 'carousel';
+
+    const carousel = (
+      <div
+        className='sprk-c-Carousel'
+        //data-id
+      >
+        <div
+          className='sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column'
+        >
+          {/* first button */}
+          {/* carouselStep components */}
+          {/* second button */}
+        </div>
+      </div>
+    );
+
+    let stepper = (
       <ol
-        className={classnames('sprk-c-Stepper', additionalClasses)}
+        className={classnames(
+          'sprk-c-Stepper',
+          hasDarkBackground ? 'sprk-c-Stepper--has-dark-bg' : '',
+          additionalClasses
+        )}
         data-sprk-stepper="container"
         role="tablist"
-        aria-orientation="vertical"
+        aria-orientation="vertical" // todo change based on window width
         data-id={idString}
         {...other}
       >
@@ -150,17 +170,28 @@ class SprkStepper extends Component {
               additionalClasses={classnames(
                 index === 0 ? 'sprk-c-Stepper__step--first' : '',
                 index === items.length - 1 ? 'sprk-c-Stepper__step--last' : '',
+                item.props.additionalClasses
               )}
               onKeyDown={this.handleKeyEvents}
-              onStepClick={this.handleStepClick}
-                // if (callbackpropertyputithere) {
-                //   thecallback(); // TODO
-                // }
+              onClick={(event) => { item.props.onClick(); this.handleStepClick(event); }}
+              variant={variant}
             />
           );
         })}
       </ol>
     );
+
+    // if we're a carousel, we need to wrap the carousel and stepper in a container div anyway
+    if (hasDarkBackground) {
+      stepper = (
+        <div className='sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large'>
+          {carousel}
+          {stepper}
+        </div>
+      )
+    }
+
+    return stepper;
   }
 }
 
@@ -170,9 +201,14 @@ SprkStepper.propTypes = {
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'hasDescription', 'carousel']),
+  hasDarkBackground: PropTypes.bool,
+  backgroundColor: PropTypes.string, // TODO
 };
 
-SprkStepper.defaultProps = {};
+SprkStepper.defaultProps = {
+  variant: 'default',
+  hasDarkBackground: false,
+};
 
 export default SprkStepper;

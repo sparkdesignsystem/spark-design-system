@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount, shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
 import '../windowStubs';
@@ -10,7 +10,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 // Root Element Tests
 it('should display a stepper element with the correct base class', () => {
-  const wrapper = shallow(
+  const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep />
       <SprkStepperStep />
@@ -21,7 +21,7 @@ it('should display a stepper element with the correct base class', () => {
 
 it('should correctly apply additional classes', () => {
   const expected = 'expected_class';
-  const wrapper = shallow(
+  const wrapper = mount(
     <SprkStepper additionalClasses={expected}>
       <SprkStepperStep />
       <SprkStepperStep />
@@ -96,6 +96,30 @@ it('should correctly advance the selected item with keyboard', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep />
+      <SprkStepperStep isSelected />
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  const lastStep = wrapper.find('li.sprk-c-Stepper__step--last');
+
+  expect(wrapper.state().activeStepId).not.toBe(lastStep.prop('id'));
+
+  const eventObj = {
+    keyCode: 39,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+
+  expect(wrapper.state().activeStepId).toBe(lastStep.prop('id'));
+});
+
+it('should correctly advance and overflow the selected item with keyboard', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep />
       <SprkStepperStep />
       <SprkStepperStep isSelected />
     </SprkStepper>,
@@ -118,6 +142,30 @@ it('should correctly advance the selected item with keyboard', () => {
 });
 
 it('should correctly retreat the selected item with keyboard', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep />
+      <SprkStepperStep isSelected/>
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
+
+  expect(wrapper.state().activeStepId).not.toBe(firstStep.prop('id'));
+
+  const eventObj = {
+    keyCode: 37,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+
+  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
+});
+
+it('should correctly retreat and underflow the selected item with keyboard', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep isSelected />
@@ -187,4 +235,72 @@ it('should correctly jump to first item with keyboard', () => {
   wrapper.instance().handleKeyEvents(eventObj);
 
   expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
+});
+
+it('should not change state for unexpected keypresses', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep isSelected />
+      <SprkStepperStep />
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
+
+  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
+
+  const eventObj = {
+    keyCode: 11,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+
+  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
+});
+
+it('should correctly structure the hasDarkBackground prop', () => {
+  const expected = 'div.sprk-u-BackgroundColor--blue';
+  const expected_inner = 'sprk-c-Stepper--has-dark-bg';
+  const wrapper = mount(
+    <SprkStepper hasDarkBackground>
+      <SprkStepperStep />
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  expect(wrapper.find(expected).length).toBe(1);
+  expect(wrapper.find('ol').hasClass(expected_inner)).toBe(true);
+});
+
+it('should call step callback function', () => {
+  const expectedFunc = sinon.spy();
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep />
+      <SprkStepperStep additionalClasses='foo' onClick={expectedFunc} />
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  const step = wrapper.find('li.foo');
+
+  step.simulate('click');
+
+  expect(expectedFunc.called).toBe(true);
+});
+
+it('should generate the correct carousel structure', () => {
+  const wrapper = mount(
+    <SprkStepper variant='carousel'>
+      <SprkStepperStep />
+      <SprkStepperStep />
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  expect(wrapper.find('div.sprk-c-Carousel').length).toBe(1);
+  expect(wrapper.find('div.sprk-c-Stepper').length).toBe(1);
 });
