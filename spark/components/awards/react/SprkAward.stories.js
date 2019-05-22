@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { SprkAward } from '@sparkdesignsystem/spark-react';
 
 storiesOf('Award', module)
-  .add('test', () => (
+  .add('default', () => (
     <SprkAward
       heading="Award Component Heading"
       idString="award-1"
