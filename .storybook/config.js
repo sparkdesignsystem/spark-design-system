@@ -1,5 +1,15 @@
 import { configure } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
+import { addParameters } from '@storybook/react';
+import { themes } from '@storybook/theming';
+import '@sparkdesignsystem/spark-core/_spark-core.scss';
+
+// Option defaults.
+addParameters({
+  options: {
+    theme: themes.normal,
+  },
+});
 
 // automatically import all files ending in *.stories.js
 const req = require.context("../spark", true, /.stories.js$/)
