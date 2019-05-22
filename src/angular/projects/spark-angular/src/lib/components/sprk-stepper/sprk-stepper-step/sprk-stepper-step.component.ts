@@ -43,7 +43,9 @@ import * as _ from 'lodash';
           tabindex="0"
           role="tabpanel"
         >
-          <ng-content></ng-content>
+          <p class="sprk-b-TypeBodyTwo">
+            <ng-content></ng-content>
+          </p>
         </div>
       </div>
     </li>

@@ -18,6 +18,21 @@ import { Component } from '@angular/core';
       </sprk-stepper>
     </div>
 
+    <div class="drizzle-o-ContentGrouping sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+      <h2 class="drizzle-b-h2">Stepper Dark Bg</h2>
+
+      <sprk-stepper idString="stepper-1" [hasDarkBg]="true">
+        <sprk-stepper-step heading="Step One"></sprk-stepper-step>
+
+        <sprk-stepper-step heading="Step Two"></sprk-stepper-step>
+
+        <sprk-stepper-step
+          heading="Step Three"
+          isDefaultActive="true"
+        ></sprk-stepper-step>
+      </sprk-stepper>
+    </div>
+
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Stepper With Descriptions</h2>
 
@@ -27,21 +42,15 @@ import { Component } from '@angular/core';
           isDefaultActive="true"
           variant="hasDescription"
         >
-          <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </sprk-stepper-step>
 
         <sprk-stepper-step heading="Step 2" variant="hasDescription">
-          <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </sprk-stepper-step>
 
         <sprk-stepper-step heading="Step 3" variant="hasDescription">
-          <p class="sprk-b-TypeBodyTwo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </sprk-stepper-step>
       </sprk-stepper>
     </div>
@@ -52,9 +61,7 @@ import { Component } from '@angular/core';
       <div class="sprk-u-BackgroundColor--blue sprk-o-Box">
         <sprk-stepper idString="stepper-2" hasDarkBg="true">
           <sprk-stepper-step heading="Step 1" variant="hasDescription">
-            <p class="sprk-b-TypeBodyTwo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </sprk-stepper-step>
 
           <sprk-stepper-step
@@ -62,15 +69,11 @@ import { Component } from '@angular/core';
             isDefaultActive="true"
             variant="hasDescription"
           >
-            <p class="sprk-b-TypeBodyTwo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </sprk-stepper-step>
 
           <sprk-stepper-step heading="Step 3" variant="hasDescription">
-            <p class="sprk-b-TypeBodyTwo">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
           </sprk-stepper-step>
         </sprk-stepper>
       </div>

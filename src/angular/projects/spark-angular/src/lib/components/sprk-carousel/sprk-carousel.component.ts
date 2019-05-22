@@ -4,7 +4,10 @@ import { carousel } from '@sparkdesignsystem/spark';
 @Component({
   selector: 'sprk-carousel',
   template: `
-    <div class="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
+    <div [ngClass]="getClasses()"
+      [attr.data-id]="idString"
+      [attr.data-analytics]="analyticsString"
+    >
       <div
         class="
         sprk-c-Carousel__controls
@@ -52,6 +55,10 @@ export class SprkCarouselComponent implements AfterViewInit {
 
   @Input()
   additionalClasses: string;
+  @Input()
+  analyticsString: string;
+  @Input()
+  idString: string;
 
   carouselInstance: object;
 

@@ -14,6 +14,7 @@ import { AlertDocsComponent } from './spark-docs/alert-docs/alert-docs.component
 import { AwardDocsComponent } from './spark-docs/award-docs/award-docs.component';
 import { ButtonDocsComponent } from './spark-docs/button-docs/button-docs.component';
 import { CardDocsComponent } from './spark-docs/card-docs/card-docs.component';
+import { CarouselDocsComponent } from './spark-docs/carousel-docs/carousel-docs.component';
 import { DictionaryDocsComponent } from './spark-docs/dictionary-docs/dictionary-docs.component';
 import { DividerDocsComponent } from './spark-docs/divider-docs/divider-docs.component';
 import { DropdownDocsComponent } from './spark-docs/dropdown-docs/dropdown-docs.component';
@@ -32,6 +33,7 @@ import { PageNotFoundComponent } from './spark-docs/page-not-found/page-not-foun
 import { PaginationDocsComponent } from './spark-docs/pagination-docs/pagination-docs.component';
 import { PromoDocsComponent } from './spark-docs/promo-docs/promo-docs.component';
 import { StackDocsComponent } from './spark-docs/stack-docs/stack-docs.component';
+import { StepperDocsComponent } from './spark-docs/stepper-docs/stepper-docs.component';
 import { TabbedNavigationDocsComponent } from './spark-docs/tabbed-navigation-docs/tabbed-navigation-docs.component';
 import { TableDocsComponent } from './spark-docs/table-docs/table-docs.component';
 import { ToggleDocsComponent } from './spark-docs/toggle-docs/toggle-docs.component';
@@ -60,6 +62,8 @@ const appRoutes: Routes = [
   { path: 'dictionary', component: DictionaryDocsComponent },
   { path: 'pagination', component: PaginationDocsComponent },
   { path: 'highlight-board', component: HighlightBoardDocsComponent },
+  { path: 'stepper', component: StepperDocsComponent },
+  { path: 'carousel', component: CarouselDocsComponent },
   { path: '', component: IntroDocsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -92,7 +96,9 @@ const appRoutes: Routes = [
     TabbedNavigationDocsComponent,
     DictionaryDocsComponent,
     PaginationDocsComponent,
-    HighlightBoardDocsComponent
+    HighlightBoardDocsComponent,
+    StepperDocsComponent,
+    CarouselDocsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
