@@ -67,4 +67,31 @@ storiesOf('Card', module)
         }}
       />
     </Box>
+  ))
+  .add('teaser with different element order', () => (
+    <Box>
+        <SprkCard
+          idString="card1"
+          variant="teaser"
+          teaserConfig={{
+            bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+            cta: {
+              ctaAnalytics: 'test',
+              text: 'Learn More',
+              ctaVariant: 'link',
+              href: 'https://sparkdesignsystem.com/',
+            },
+            media: {
+              href: 'https://sparkdesignsystem.com/',
+              mediaLinkElement: 'a',
+              imgAlt: 'placeholder image',
+              imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+              mediaAnalyticsString: 'Card:teaser-link',
+              mediaVariant: 'img',
+            },
+            title: 'Teaser Card Title',
+            titleFirst: true,
+          }}
+        />
+    </Box>
   ));
