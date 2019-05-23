@@ -8,8 +8,8 @@ import {
   toggleMobileNav,
   hideMobileNavs,
   addClassOnScroll,
-  checkMenuVisibility,
-  checkScrollDirection,
+  toggleMenu,
+  toggleScrollEvent,
 } from '../components/masthead';
 import { dropdowns } from '../components/dropdown';
 
@@ -43,6 +43,7 @@ describe('masthead UI Events tests', () => {
   let selectorTriggerInDropdown;
   let selectorTriggerInDropdownWide;
   let choice1;
+  let iconContainerDiv;
 
   beforeEach(() => {
     main = document.createElement('div');
@@ -118,15 +119,21 @@ describe('masthead UI Events tests', () => {
     iconContainer = document.createElement('button');
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
 
+    // Create a container div for icon
+    iconContainerDiv = document.createElement('div');
+    iconContainerDiv.classList.add('sprk-c-Masthead__menu');
+
     // Add mobile menu icon to container
     iconContainer.appendChild(icon);
 
-    // Add iconContainer to mastheadDiv
-    mastheadDiv.appendChild(iconContainer);
+    // Add iconContainer to iconContainerDiv
+    iconContainerDiv.appendChild(iconContainer);
+
+    // Add iconContainerDiv to mastheadDiv
+    mastheadDiv.appendChild(iconContainerDiv);
 
     sinon.spy(nav, 'addEventListener');
     sinon.spy(iconContainer, 'addEventListener');
-    sinon.spy(checkMenuVisibility);
 
     mastheadDiv.appendChild(selector);
     mastheadDiv.appendChild(selectorWide);
@@ -216,6 +223,40 @@ describe('masthead UI Events tests', () => {
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(true);
   });
 
+  it('should add class to masthead when the scrollDirection is down', () => {
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    toggleMenu('down');
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).eql(true);
+  });
+
+  it('should remove class to masthead when the scrollDirection is down', () => {
+    event = new window.Event('scroll');
+    window.dispatchEvent(event);
+    toggleMenu('up');
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).eql(
+      false,
+    );
+  });
+
+  it('should add checkScrollDirection event listener if menu is visible', () => {
+    const attached = toggleScrollEvent(true);
+    expect(attached).eql(true);
+  });
+
+  it('should not add checkScrollDirection event listener if menu is not visible', () => {
+    const attached = toggleScrollEvent(false);
+    expect(attached).eql(false);
+  });
+
+  it('should checkScrollDirection on resize and return true if menu visible', () => {
+    iconContainerDiv.setAttribute('style', 'display: none');
+    event = new window.Event('resize');
+    window.dispatchEvent(event);
+    const newMenuVisibility = true;
+    expect(toggleScrollEvent(newMenuVisibility)).eql(true);
+  });
+
   it('should not close the dropdown if a key that is not esc is pressed', () => {
     selector.click();
     const escKeyEvent = new window.Event('keydown');
@@ -280,23 +321,6 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('orientationchange');
     window.dispatchEvent(event);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
-  });
-
-  it('should call the checkMenuVisibility function on window load', () => {
-    event = new window.Event('load');
-    window.dispatchEvent(event);
-    const menuVisible = false;
-    checkMenuVisibility();
-    expect(menuVisible).eql(false);
-  });
-
-  it('should remove class from masthead when scrolling up', () => {
-    event = new window.Event('scroll');
-    window.dispatchEvent(event);
-    checkScrollDirection();
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).eql(
-      false,
-    );
   });
 });
 

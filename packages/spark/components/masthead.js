@@ -48,11 +48,15 @@ const checkScrollDirection = () => {
 * otherwise remove it
 */
 const toggleScrollEvent = isMenuVisible => {
+  let attached = false;
   if (isMenuVisible) {
     window.addEventListener('scroll', checkScrollDirection);
+    attached = true;
   } else {
     window.removeEventListener('scroll', checkScrollDirection, false);
+    attached = false;
   }
+  return attached;
 };
 
 const toggleMobileNav = (iconContainer, nav, masthead) => {
