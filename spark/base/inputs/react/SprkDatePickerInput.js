@@ -15,14 +15,20 @@ class SprkDatePickerInput extends Component {
       min: '01/1/2008',
       max: '01/1/2068',
       format: date => date
-        .toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
+        .toLocaleDateString('en-US', {
+          month: '2-digit',
+          day: '2-digit',
+          year: 'numeric' })
         .replace(/[^ -~]/g, ''),
     };
   }
 
   componentDidMount() {
     const { datePickerConfig } = this.props;
-    TinyDatePicker(this.datePickerInputRef.current, assign(this.tdpConfig, datePickerConfig));
+    TinyDatePicker(
+      this.datePickerInputRef.current,
+      assign(this.tdpConfig, datePickerConfig),
+    );
   }
 
   render() {

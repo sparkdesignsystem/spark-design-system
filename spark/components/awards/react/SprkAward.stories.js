@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box } from '../../../../.storybook/story-layout';
 import { SprkAward } from '@sparkdesignsystem/spark-react';
+import { Box } from '../../../../.storybook/story-layout';
 
 storiesOf('Award', module)
   .add('default', () => (
@@ -25,12 +25,12 @@ storiesOf('Award', module)
           src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
           alt: 'Spark Placeholder Logo',
           analyticsString: 'award-1',
-          element: 'a',},
-          {href: '#nogo',
+          element: 'a' },
+        { href: '#nogo',
           src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
           alt: 'Spark Placeholder Logo',
           analyticsString: 'award-2',
-          element: 'a',},
+          element: 'a' },
         ]}
       />
     </Box>

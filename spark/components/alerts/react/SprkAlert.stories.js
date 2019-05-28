@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Box } from '../../../../.storybook/story-layout';
 import { SprkAlert } from '@sparkdesignsystem/spark-react';
+import { Box } from '../../../../.storybook/story-layout';
 
 storiesOf('Alert', module)
   .add('default', () => (
@@ -10,9 +10,10 @@ storiesOf('Alert', module)
       <SprkAlert
         message="This is an alert."
         onDismiss={action('clicked')}
-        isVisible={true}
+        isVisible
         idString="alert-1"
-        analyticsString="alert" />
+        analyticsString="alert"
+      />
     </Box>
   ))
   .add('success', () => (
@@ -20,29 +21,32 @@ storiesOf('Alert', module)
       <SprkAlert
         message="This is a success alert."
         onDismiss={action('clicked')}
-        isVisible={true}
+        isVisible
         variant="success"
         idString="alert-success-1"
-        analyticsString="alert" />
+        analyticsString="alert"
+      />
     </Box>
   ))
   .add('info', () => (
     <Box>
       <SprkAlert
         message="This is important information."
-        isVisible={true}
+        isVisible
         variant="info"
         idString="alert-info-1"
-        analyticsString="alert" />
+        analyticsString="alert"
+      />
     </Box>
   ))
   .add('fail', () => (
     <Box>
       <SprkAlert
         message="This is important information."
-        isVisible={true}
+        isVisible
         variant="fail"
         idString="alert-info-1"
-        analyticsString="alert" />
+        analyticsString="alert"
+      />
     </Box>
   ));

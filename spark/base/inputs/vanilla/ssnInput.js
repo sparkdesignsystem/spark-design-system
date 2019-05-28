@@ -26,7 +26,8 @@ const bindUIEvents = (element) => {
 
   // set up the 'show ssn' button
   checkbox.addEventListener('change', () => {
-    field.setAttribute('type', toggleValue(field.getAttribute('type'), 'text', 'password'));
+    field.setAttribute('type', toggleValue(field
+      .getAttribute('type'), 'text', 'password'));
   });
 
   // set up the validation and formatter

@@ -2,12 +2,5 @@ node_modules/
 public/
 spark/**/angular/*
 spark/manifests/spark-angular
-
-spark/
-spark/base
+spark/utilities/polyfills
 spark/components
-spark/generic
-spark/objects
-spark/settings
-spark/tools
-spark/utilities

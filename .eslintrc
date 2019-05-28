@@ -6,11 +6,8 @@
     "jest/globals": true
   },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true,
-      "optionalDependencies": false,
-      "peerDependencies": false
-    }],
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
     "max-len": ["error", 80, {
       "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
       "ignoreUrls": true

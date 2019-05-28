@@ -123,7 +123,9 @@ SprkTextInput.propTypes = {
   label: PropTypes.string,
   leadingIcon: PropTypes.string,
   textIcon: PropTypes.bool,
+  type: PropTypes.string,
   valid: PropTypes.bool,
+  value: PropTypes.string,
 };
 
 SprkTextInput.defaultProps = {
@@ -139,7 +141,9 @@ SprkTextInput.defaultProps = {
   label: 'Text Input Label',
   leadingIcon: '',
   textIcon: false,
+  type: '',
   valid: true,
+  value: '',
 };
 
 export default SprkTextInput;
