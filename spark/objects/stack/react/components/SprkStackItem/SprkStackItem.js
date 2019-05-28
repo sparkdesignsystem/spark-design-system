@@ -11,7 +11,11 @@ const SprkStackItem = (props) => {
   } = props;
 
   return (
-    <div className={classnames('sprk-o-Stack__item', additionalClasses)} data-id={idString} {...other}>
+    <div
+      className={classnames('sprk-o-Stack__item', additionalClasses)}
+      data-id={idString}
+      {...other}
+    >
       {children}
     </div>
   );

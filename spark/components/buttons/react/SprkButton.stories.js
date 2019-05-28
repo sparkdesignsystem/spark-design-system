@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Box } from '../../../../.storybook/story-layout';
 import { SprkButton } from '@sparkdesignsystem/spark-react';
+import { Box } from '../../../../.storybook/story-layout';
 
 storiesOf('Button', module)
   .add('primary', () => (

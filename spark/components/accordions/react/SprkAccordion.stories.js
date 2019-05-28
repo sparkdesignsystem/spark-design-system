@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { SprkAccordion, SprkAccordionItem } from '@sparkdesignsystem/spark-react';
+
 import { Box } from '../../../../.storybook/story-layout';
-import { SprkAccordion } from '@sparkdesignsystem/spark-react';
-import { SprkAccordionItem } from '@sparkdesignsystem/spark-react';
 
 storiesOf('Accordion', module)
   .add('default', () => (
@@ -14,7 +14,8 @@ storiesOf('Accordion', module)
           heading="This is an accordion heading"
           contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
           idString="accordion-item-1"
-          analyticsString="analytics_string_goes_here">
+          analyticsString="analytics_string_goes_here"
+        >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
             This is an example of multiple HTML
             elements used for the content in an accordion item.
@@ -38,7 +39,8 @@ storiesOf('Accordion', module)
         <SprkAccordionItem
           heading="This is an accordion heading"
           idString="accordion-item-2"
-          analyticsString="analytics_string_goes_here">
+          analyticsString="analytics_string_goes_here"
+        >
           <p className="sprk-b-TypeBodyTwo">
             This is an example of accordion content.
             This is an example of accordion content.
@@ -50,7 +52,8 @@ storiesOf('Accordion', module)
         <SprkAccordionItem
           heading="This is an accordion heading"
           idString="accordion-item-3"
-          analyticsString="analytics_string_goes_here">
+          analyticsString="analytics_string_goes_here"
+        >
           <p className="sprk-b-TypeBodyTwo">
             This is an example of accordion content.
             This is an example of accordion content.
