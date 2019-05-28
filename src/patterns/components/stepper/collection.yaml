@@ -95,14 +95,14 @@ variableTable:
     default: $sprk-space-misc-a
     description: The padding value for the step.
   $sprk-stepper-step-content-bg-selected:
-    default: $sprk-white
+    default: transparent
     description: The background color of the step content box when the step is selected.
   $sprk-stepper-step-description-bg-selected:
     default: $sprk-white
     description: The background color of the step content box when it has a description and when the step is selected.
-  $sprk-stepper-dark-step-description-bg-selected:
-    default: $sprk-white
-    description: The background color of a selected step's content box when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
+  $sprk-stepper-dark-step-description-selected:
+    default: $sprk-black
+    description: The text color of a selected step's content and header when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
   $sprk-stepper-bar-color:
     default: $sprk-black-tint-50
     description: The color of the bar that connects the steps.

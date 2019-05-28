@@ -57,8 +57,9 @@
   }
 
   .sprk-c-Stepper__step--selected
-  .sprk-c-Stepper__step-content--has-description {
-    background-color: $sprk-stepper-dark-step-description-bg-selected;
+  .sprk-c-Stepper__step-content--has-description
+  .sprk-c-Stepper__step-heading {
+    color: $sprk-stepper-dark-step-description-selected;
   }
 
   .sprk-c-Stepper__step--selected
@@ -148,7 +149,6 @@
   }
 
   .sprk-c-Stepper__step-heading {
-    color: $sprk-stepper-step-heading-color-selected;
     font-weight: $sprk-stepper-step-heading-font-weight;
   }
 
