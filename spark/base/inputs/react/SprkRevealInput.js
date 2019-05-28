@@ -24,9 +24,19 @@ class SprkRevealInput extends Component {
     const { toggleLabel, ...rest } = this.props;
     return (
       <SprkTextInput type={isRevealed ? 'text' : 'password'} {...rest}>
-        <div className="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle">
-          <input id={revealControlId} type="checkbox" onClick={this.toggleReveal} />
-          <label htmlFor={revealControlId} className="sprk-b-Label sprk-b-Label--inline">
+        <div
+          className="sprk-b-SelectionContainer
+          sprk-b-InputContainer__visibility-toggle"
+        >
+          <input
+            id={revealControlId}
+            type="checkbox"
+            onClick={this.toggleReveal}
+          />
+          <label
+            htmlFor={revealControlId}
+            className="sprk-b-Label sprk-b-Label--inline"
+          >
             {toggleLabel}
           </label>
         </div>

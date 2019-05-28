@@ -18,7 +18,8 @@ describe('monetaryInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     monetaryInput();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-input="monetary"]');
+    expect(document.querySelectorAll.getCall(0)
+      .args[0]).eql('[data-sprk-input="monetary"]');
   });
 });
 
@@ -63,7 +64,11 @@ describe('bindUIEvents', () => {
   beforeEach(() => {
     div = document.createElement('div');
     field = document.createElement('input');
-    field.setAttribute('pattern', '(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$');
+    field
+      .setAttribute(
+        'pattern',
+        '(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$',
+      );
     field.value = '123';
     div.appendChild(field);
   });

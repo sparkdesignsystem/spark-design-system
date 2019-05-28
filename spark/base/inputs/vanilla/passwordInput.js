@@ -7,7 +7,8 @@ const bindUIEvents = (element) => {
 
   // set up the 'show password' button
   checkbox.addEventListener('change', () => {
-    field.setAttribute('type', toggleValue(field.getAttribute('type'), 'text', 'password'));
+    field.setAttribute('type', toggleValue(field
+      .getAttribute('type'), 'text', 'password'));
   });
 };
 

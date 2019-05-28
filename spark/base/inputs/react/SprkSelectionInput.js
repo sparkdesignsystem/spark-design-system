@@ -39,21 +39,26 @@ class SprkSelectionInput extends React.Component {
               <legend className="sprk-b-Legend">
                 <p className="sprk-b-Label">{label}</p>
               </legend>
-              {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
-                <div className="sprk-b-SelectionContainer" key={innerId}>
-                  <input
-                    disabled={disabled}
-                    id={innerId}
-                    type={variant}
-                    aria-describedby={`errorcontainer-${id}`}
-                    name={name}
-                    value={value}
-                    {...rest}
-                  />
-                  <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">
-                    {innerLabel}
-                  </label>
-                </div>
+              {choiceItems.map(({
+                label: innerLabel,
+                id: innerId, name, value, ...rest }) => (
+                  <div className="sprk-b-SelectionContainer" key={innerId}>
+                    <input
+                      disabled={disabled}
+                      id={innerId}
+                      type={variant}
+                      aria-describedby={`errorcontainer-${id}`}
+                      name={name}
+                      value={value}
+                      {...rest}
+                    />
+                    <label
+                      htmlFor={innerId}
+                      className="sprk-b-Label sprk-b-Label--inline"
+                    >
+                      {innerLabel}
+                    </label>
+                  </div>
               ))}
             </fieldset>
           )}
@@ -62,13 +67,25 @@ class SprkSelectionInput extends React.Component {
               <label htmlFor={id} className="sprk-b-Label">
                 {label}
               </label>
-              <select className="sprk-b-Select" id={id} aria-describedby={`errorcontainer-${id}`}>
-                {choiceItems.map(({ id: innerId, label: innerLabel, options, value }) => {
+              <select
+                className="sprk-b-Select"
+                id={id}
+                aria-describedby={`errorcontainer-${id}`}
+              >
+                {choiceItems.map(({
+                  id: innerId,
+                  label: innerLabel, options, value }) => {
                   if (options) {
                     return (
                       <optgroup label={innerLabel} key={innerId}>
-                        {options.map(({ value: optionValue, label: optionLabel }) => (
-                          <option key={`${innerId}-${uniqueId()}`} value={optionValue}>
+                        {options.map(({
+                          value: optionValue,
+                          label: optionLabel,
+                        }) => (
+                          <option
+                            key={`${innerId}-${uniqueId()}`}
+                            value={optionValue}
+                          >
                             {optionLabel}
                           </option>
                         ))}
@@ -84,12 +101,20 @@ class SprkSelectionInput extends React.Component {
               </select>
               <SprkIcon
                 iconName="chevron-down"
-                additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+                additionalClasses="sprk-c-Icon--stroke-current-color
+                sprk-b-SelectContainer__icon"
               />
             </React.Fragment>
           )}
-          {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
-          {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} message={errorMessage} />}
+          {helperText.length > 0
+          && <div className="sprk-b-HelperText">{helperText}</div>}
+          {!valid
+          && (
+          <SprkErrorContainer
+            id={`errorcontainer-${id}`}
+            message={errorMessage}
+          />
+          )}
         </div>
       </React.Fragment>
     );
@@ -111,6 +136,7 @@ SprkSelectionInput.propTypes = {
   groupLabel: PropTypes.string,
   helperText: PropTypes.string,
   idString: PropTypes.string,
+  label: PropTypes.string,
   valid: PropTypes.bool,
   variant: PropTypes.oneOf(['checkbox', 'radio', 'select']).isRequired,
 };
@@ -122,6 +148,7 @@ SprkSelectionInput.defaultProps = {
   errorMessage: '',
   groupLabel: '',
   helperText: '',
+  label: '',
   idString: '',
   valid: true,
 };

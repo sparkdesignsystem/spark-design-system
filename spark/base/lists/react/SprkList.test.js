@@ -1,7 +1,5 @@
-/* global it expect */
+/* global Enzyme shallow Adapter it expect */
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import SprkList from './SprkList';
 
 Enzyme.configure({ adapter: new Adapter() });

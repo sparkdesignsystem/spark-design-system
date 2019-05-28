@@ -3,19 +3,24 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../SprkIcon/SprkIcon';
 
-const SprkErrorContainer = ({ additionalClasses, analyticsString, idString, message, id }) => (
-  <div
-    className={classNames('sprk-b-ErrorContainer', additionalClasses)}
-    data-analytics={analyticsString}
-    data-id={idString}
-    id={id}
-  >
-    <SprkIcon
-      additionalClasses="sprk-c-Icon--m sprk-b-ErrorIcon"
-      iconName="exclamation-filled-small"
-    />
-    <div className="sprk-b-ErrorText">{message}</div>
-  </div>
+const SprkErrorContainer = ({
+  additionalClasses,
+  analyticsString,
+  idString,
+  message,
+  id }) => (
+    <div
+      className={classNames('sprk-b-ErrorContainer', additionalClasses)}
+      data-analytics={analyticsString}
+      data-id={idString}
+      id={id}
+    >
+      <SprkIcon
+        additionalClasses="sprk-c-Icon--m sprk-b-ErrorIcon"
+        iconName="exclamation-filled-small"
+      />
+      <div className="sprk-b-ErrorText">{message}</div>
+    </div>
 );
 
 SprkErrorContainer.propTypes = {
