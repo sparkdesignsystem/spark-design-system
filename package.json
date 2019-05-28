@@ -66,7 +66,9 @@
     "precommit": "lint-staged",
     "test": "npm run test --prefix ./packages/spark",
     "visual-regression": "wraith capture wraith/configs/capture.yaml",
-    "spark-publish": "lerna bootstrap && lerna version && gulp pre-publish && lerna run lerna-publish"
+    "spark-publish": "lerna bootstrap && lerna version && gulp pre-publish && lerna run lerna-publish",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "lint-staged": {
     "*.scss": [
@@ -103,6 +105,8 @@
     "npm": "^5.10.0",
     "prismjs": "^1.15.0",
     "run-sequence": "^2.2.1",
-    "tiny-date-picker": "^3.2.6"
-  }
+    "tiny-date-picker": "^3.2.6",
+    "snyk": "^1.168.0"
+  },
+  "snyk": true
 }
