@@ -59,8 +59,8 @@ class SprkTextInput extends Component {
             htmlFor={id}
             className={classNames('sprk-b-Label', {
               'sprk-b-Label--with-icon': leadingIcon.length > 0,
-              'sprk-u-ScreenReaderText': hiddenLabel,
-              'sprk-b-Label--huge': type === 'hugeTextInput',
+              'sprk-u-ScreenReaderText':
+                hiddenLabel || type === 'hugeTextInput',
             })}
           >
             {label}
