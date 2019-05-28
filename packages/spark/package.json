@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@scalescss/scalescss": "6.0.0-1",
     "dom-slider": "1.5.3",
     "lory.js": "^2.5.3",
     "object-fit-images": "^3.2.4",

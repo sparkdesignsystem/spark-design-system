@@ -18,9 +18,9 @@ it('should render a huge text input with the correct class', () => {
       .find('.sprk-b-InputContainer')
       .hasClass('sprk-b-InputContainer--huge'),
   ).toBe(true);
-  expect(wrapper.find('.sprk-b-Label').hasClass('sprk-b-Label--huge')).toBe(
-    true,
-  );
+  expect(
+    wrapper.find('.sprk-b-Label').hasClass('sprk-u-ScreenReaderText'),
+  ).toBe(true);
   expect(
     wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--huge'),
   ).toBe(true);
