@@ -1,9 +1,7 @@
-/* global it expect */
+/* global Enzyme Adapter shallow mount */
 import React from 'react';
-import Enzyme, { shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import SprkTable from './SprkTable';
-import SprkButton from '../SprkButton/SprkButton';
+import SprkButton from '../../../components/buttons/react/SprkButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -17,72 +15,84 @@ it('should display a table element with the correct base class', () => {
   expect(wrapper.find('table.sprk-b-Table').length).toBe(1);
 });
 
-it('should display a table element with the correct classes if additionalTableClasses has a value', () => {
+it('should display a table element with the correct classes if '
+  + 'additionalTableClasses has a value', () => {
   const wrapper = shallow(
     <SprkTable additionalTableClasses="sprk-b-Table--secondary" />,
   );
   expect(wrapper.find('table').hasClass('sprk-b-Table--secondary')).toBe(true);
 });
 
-it('should display a div element with the correct data-id if idString has a value', () => {
+it('should display a div element with the correct data-id if idString has a '
+  + 'value', () => {
   const wrapper = shallow(<SprkTable idString="table-1" />);
   expect(wrapper.find('div[data-id="table-1"]').length).toBe(1);
 });
 
-it('should display a div element with the correct classes if additionalContainerClasses has a value', () => {
+it('should display a div element with the correct classes if '
+  + 'additionalContainerClasses has a value', () => {
   const wrapper = shallow(
     <SprkTable additionalContainerClasses="additionalClass" />,
   );
   expect(wrapper.find('div').hasClass('additionalClass')).toBe(true);
 });
 
-it('should display a table element with the correct classes if the variant is secondary', () => {
+it('should display a table element with the correct classes if the variant is'
+  + 'secondary', () => {
   const wrapper = shallow(<SprkTable variant="secondary" />);
   expect(wrapper.find('table').hasClass('sprk-b-Table--secondary')).toBe(true);
 });
 
-it('should display a table element with the correct classes if the variant is grouped', () => {
+it('should display a table element with the correct classes if the variant '
+  + 'is grouped', () => {
   const wrapper = shallow(<SprkTable variant="grouped" />);
   expect(wrapper.find('table').hasClass('sprk-b-Table--grouped-columns')).toBe(
     true,
   );
 });
 
-it('should display a table element with the correct classes if the variant is rowComparison', () => {
+it('should display a table element with the correct classes if the variant'
+  + ' is rowComparison', () => {
   const wrapper = shallow(<SprkTable variant="rowComparison" />);
   expect(wrapper.find('table').hasClass('sprk-b-Table--row-comparison')).toBe(
     true,
   );
 });
 
-it('should display a table element with the correct classes if the variant is secondaryRowComparison', () => {
+it('should display a table element with the correct classes if the variant'
+  + ' is secondaryRowComparison', () => {
   const wrapper = shallow(<SprkTable variant="secondaryRowComparison" />);
   expect(
     wrapper.find('table').hasClass('sprk-b-Table--secondary-row-comparison'),
   ).toBe(true);
 });
 
-it('should display a thead element with the correct class if the variant is default', () => {
+it('should display a thead element with the correct class if the variant'
+  + ' is default', () => {
   const wrapper = shallow(<SprkTable variant="default" />);
   expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
 });
 
-it('should display a thead element with the correct class if the variant is secondary', () => {
+it('should display a thead element with the correct class if the variant'
+  + ' is secondary', () => {
   const wrapper = shallow(<SprkTable variant="secondary" />);
   expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
 });
 
-it('should display a thead element with the correct class if the variant is grouped', () => {
+it('should display a thead element with the correct class if the variant'
+  + ' is grouped', () => {
   const wrapper = shallow(<SprkTable variant="grouped" />);
   expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
 });
 
-it('should display a thead element with the correct class if the variant is rowComparison', () => {
+it('should display a thead element with the correct class if the variant'
+  + ' is rowComparison', () => {
   const wrapper = shallow(<SprkTable variant="rowComparison" />);
   expect(wrapper.find('thead').hasClass('sprk-b-Table__head')).toBe(true);
 });
 
-it('should display one tr element in the thead element if columns are present', () => {
+it('should display one tr element in the thead element if columns'
+  + ' are present', () => {
   const wrapper = shallow(
     <SprkTable
       columns={[
@@ -95,7 +105,8 @@ it('should display one tr element in the thead element if columns are present', 
   expect(wrapper.find('tr').length).toBe(1);
 });
 
-it('should display multiple tr elements in the thead element if columns are present and the variant is grouped', () => {
+it('should display multiple tr elements in the thead element if columns'
+  + ' are present and the variant is grouped', () => {
   const wrapper = shallow(
     <SprkTable
       variant="grouped"
@@ -116,7 +127,8 @@ it('should display multiple tr elements in the thead element if columns are pres
   expect(wrapper.find('tr').length).toBe(2);
 });
 
-it('should display multiple tr elements in the tbody element if rows is present and the variant is grouped', () => {
+it('should display multiple tr elements in the tbody element if rows is'
+  + ' present and the variant is grouped', () => {
   const wrapper = shallow(
     <SprkTable
       variant="grouped"
@@ -157,7 +169,8 @@ it('should display a tbody element when rows prop is not undefined', () => {
   expect(wrapper.find('tbody').length).toBe(1);
 });
 
-it('should display a th with the correct class when the variant is rowComparison and columns is not undefined', () => {
+it('should display a th with the correct class when the variant is'
+  + ' rowComparison and columns is not undefined', () => {
   const wrapper = shallow(
     <SprkTable
       variant="rowComparison"
@@ -171,12 +184,14 @@ it('should display a th with the correct class when the variant is rowComparison
   expect(wrapper.find('th.sprk-b-Table__empty-heading').length).toBe(1);
 });
 
-it('should not display a thead element if the variant is secondaryRowComparison', () => {
+it('should not display a thead element if the variant is'
+  + ' secondaryRowComparison', () => {
   const wrapper = shallow(<SprkTable variant="secondaryRowComparison" />);
   expect(wrapper.find('thead').length).toBe(0);
 });
 
-it('should render the appropriate number of td elements based on the columns prop', () => {
+it('should render the appropriate number of td elements based on'
+  + ' the columns prop', () => {
   const wrapper = shallow(
     <SprkTable
       columns={[
@@ -199,7 +214,8 @@ it('should not render a tr element if the rows prop is not provided', () => {
   expect(wrapper.find('tbody tr').length).toBe(0);
 });
 
-it('should render the appropriate number of td elements based on the rows prop', () => {
+it('should render the appropriate number of td elements'
+  + ' based on the rows prop', () => {
   const wrapper = shallow(
     <SprkTable
       rows={[
@@ -218,7 +234,8 @@ it('should render the appropriate number of td elements based on the rows prop',
   expect(wrapper.find('tbody td').length).toBe(12);
 });
 
-it('should render the appropriate number of tr elements in the tbody based on the rows prop', () => {
+it('should render the appropriate number of tr elements in the tbody'
+  + ' based on the rows prop', () => {
   const wrapper = shallow(
     <SprkTable
       variant="rowComparison"
@@ -238,7 +255,8 @@ it('should render the appropriate number of tr elements in the tbody based on th
   expect(wrapper.find('tbody tr').length).toBe(4);
 });
 
-it('should render a buttons if the button is passed in the rows prop and is variant secondaryRowComparison', () => {
+it('should render a buttons if the button is passed in the rows prop and'
+  + ' is variant secondaryRowComparison', () => {
   const wrapper = mount(
     <SprkTable
       variant="secondaryRowComparison"
@@ -274,7 +292,8 @@ it('should render a buttons if the button is passed in the rows prop and is vari
   expect(wrapper.find('tbody button').length).toBe(4);
 });
 
-it('should render a appropriate number of th elements when rows is passed and variant is secondaryRowComparison', () => {
+it('should render a appropriate number of th elements when rows is passed'
+  + ' and variant is secondaryRowComparison', () => {
   const wrapper = shallow(
     <SprkTable
       variant="secondaryRowComparison"
@@ -310,7 +329,8 @@ it('should render a appropriate number of th elements when rows is passed and va
   expect(wrapper.find('tbody th').length).toBe(4);
 });
 
-it('should render div and table elements and children if variant is html', () => {
+it('should render div and table elements and children if variant'
+  + ' is html', () => {
   const wrapper = shallow(<SprkTable variant="html" />);
   expect(wrapper.find('div').hasClass('sprk-b-TableContainer')).toBe(true);
   expect(wrapper.find('table').hasClass('sprk-b-Table')).toBe(true);

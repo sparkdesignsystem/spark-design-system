@@ -3,7 +3,6 @@ public/
 spark/**/angular/*
 spark/manifests/spark-angular
 
-spark/base
 spark/components
 spark/generic
 spark/objects
