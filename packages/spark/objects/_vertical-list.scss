@@ -1,0 +1,39 @@
+// ==========================================================================
+// Vertical List Object
+// ==========================================================================
+@mixin VerticalList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    display: block;
+  }
+}
+
+%sprk-o-VerticalList,
+.sprk-o-VerticalList {
+  @include VerticalList;
+}
+
+//
+// Character delimited Vertical List
+///
+.sprk-o-VerticalList--delimited {
+  > li {
+    &::after {
+      content: '#{$sprk-vertical-list-delimiter}';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+
+// Pass in a delimiter through a data attribute
+.sprk-o-VerticalList {
+  > [data-delimiter]::after {
+    content: attr(data-delimiter);
+  }
+}

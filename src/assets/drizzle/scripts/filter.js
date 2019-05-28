@@ -1,5 +1,5 @@
 /* global document */
-import { getElements } from '../../../../packages/spark-core';
+import { getElements } from '../../../../packages/spark';
 
 const filterList = (listName, value) => {
   const list = document.querySelector(`[data-filtered="${listName}"]`);

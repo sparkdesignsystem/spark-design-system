@@ -1,0 +1,189 @@
+// ==========================================================================
+// Reset
+// ==========================================================================
+//
+// This works best when complimented by Normalize CSS
+// http://necolas.github.io/normalize.css/
+//
+// Much of this is borrowed from HTML5 Boilerplate v5.0.0 (h5bp.com)
+// and csswizardry.com/2011/10/reset-restarted.
+///
+
+//
+// Inheriting box-sizing Probably Slightly Better Best-Practice
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+///
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+//
+// Remove padding and margins from elements.
+///
+blockquote,
+caption,
+dd,
+dl,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+legend,
+ol,
+p,
+pre,
+table,
+td,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+//
+// Change some things from Normalize
+///
+
+// Add border collapse to tables.
+table {
+  border-collapse: $sprk-table-border-collapse;
+}
+
+// Contain overflow in all browsers
+pre {
+  overflow: $sprk-pre-overflow;
+}
+
+// Less opinionated form font
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+//
+// Give a help cursor to elements that give extra info on ":hover".
+///
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+//
+// So that "alt" text is visually offset if images don't load.
+///
+img {
+  font-style: italic;
+}
+
+//
+// Get rid of all the form input styles for text fields and form buttons.
+// Hard to keep up with each input type, but they are listed here.
+// Better to use .TextInput class instead of keeping these up to date.
+///
+.sprk-b-TextInput,
+[type='date'],
+[type='datetime'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 100%;
+  line-height: inherit;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+}
+
+select {
+  background: none;
+  font-size: 100%;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+
+//
+// Give form elements some cursor interactions.
+///
+button,
+label,
+option,
+select {
+  cursor: pointer;
+}
+
+.sprk-b-TextInput:active,
+.sprk-b-TextInput:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+}
+
+// Fancy color for when you select stuff! Change the color for your app.
+::-moz-selection {
+  background: $sprk-selection-bg-color;
+  color: $sprk-selection-text-color;
+  text-shadow: none;
+}
+
+::selection {
+  background: $sprk-selection-bg-color;
+  color: $sprk-selection-text-color;
+  text-shadow: none;
+}
+
+// A better looking default hr.
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $sprk-divider-color;
+  padding: 0;
+  margin: 1em 0;
+}
+
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

@@ -1,10 +1,8 @@
-import sparkCore from '../../../../packages/spark-core/es5/sparkCore';
-import '../../../../packages/spark-core/es5/sparkCorePolyfills';
-import highlightBoard from '../../../../packages/spark-highlight-board/es5/highlightBoard';
+import spark from '../../../../packages/spark/es5/spark';
+import '../../../../packages/spark/es5/sparkPolyfills';
 
-sparkCore({
+spark({
   typeConfig: {
     familyName: '',
   },
 });
-highlightBoard();

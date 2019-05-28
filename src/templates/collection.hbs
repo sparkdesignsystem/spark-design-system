@@ -13,33 +13,6 @@
     <div class="drizzle-o-Layout__content">
       <section>
         <div class="drizzle-o-ContentGrouping">
-          {{#if sparkPackageCore}}
-            <div class="drizzle-c-Tag sprk-u-mbm">
-              <div class="drizzle-c-Tag__color-box"></div>
-              <a class="drizzle-c-Tag__desc" href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Core</a>
-            </div>
-          {{/if}}
-
-          {{#if sparkPackageExtras}}
-            <div class="drizzle-c-Tag sprk-u-mbm">
-              <div class="drizzle-c-Tag__color-box drizzle-c-Tag__color-box--extra"></div>
-              <a class="drizzle-c-Tag__desc" href="https://www.npmjs.com/package/@sparkdesignsystem/spark-core">Spark-Extras</a>
-            </div>
-          {{/if}}
-
-          {{#if angularComingSoon}}
-            <div data-angular-documentation>
-              {{> drizzle.coming-soon framework="Angular" }}
-            </div>
-          {{/if}}
-
-          {{#if reactComingSoon}}
-            <div data-react-documentation>
-              {{> drizzle.coming-soon framework="React" }}
-            </div>
-          {{/if}}
-
-
           {{#if description}}
             <p class="drizzle-b-P">
               {{{description}}}

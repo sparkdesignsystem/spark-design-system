@@ -32,51 +32,51 @@ title: Angular
           project. Currently,
           <span class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              spark-core-angular
+              spark-angular
             </code>
           </span>
-          is dependent on Angular 6 and has not been fully tested using Angular 7. 
+          is dependent on Angular 6 and has not been fully tested using Angular 7.
         </p>
       </li>
     </ul>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark Core</h2>
+    <h2 class="drizzle-b-h2 sprk-u-mbm">Spark</h2>
     <h4 class="drizzle-b-h4">Getting Started</h4>
     <p>In order to get started with
       <span class="drizzle-c-Command">
         <code class="drizzle-CodeHighlight">
-          spark-core-angular
+          spark-angular
         </code>
       </span>, you'll need to follow these steps:
     </p>
 
     <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
       <li class="sprk-u-mvm">
-        <p>Install the 
+        <p>Install the
           <span class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              spark-core
+              spark
             </code>
-          </span>  
+          </span>
         npm package.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            npm install --save-dev @sparkdesignsystem/spark-core</code>
+            npm install --save-dev @sparkdesignsystem/spark</code>
         </div>
       </li>
       <li class="sprk-u-mvm">
         <p>Install the
           <span class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              spark-core-angular
+              spark-angular
             </code>
-          </span>  
+          </span>
         npm package.</p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            npm install --save-dev @sparkdesignsystem/spark-core-angular</code>
+            npm install --save-dev @sparkdesignsystem/spark-angular</code>
         </div>
       </li>
       <li class="sprk-u-mvm">
@@ -87,10 +87,10 @@ title: Angular
           dependencies. If your application
           does not have one of our peer dependencies
           then your console should show a warning for that missing
-          dependency when you install 
+          dependency when you install
           <span class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              spark-core-angular
+              spark-angular
             </code>
           </span>
           .
@@ -101,12 +101,12 @@ title: Angular
           Import the Sass setup file in your Angular application's global styles Sass file.
           This can be done in the scss file specified
           at the highest level of your app.
-          This will bring all Spark-Core patterns into your build. The .scss file extension
+          This will bring all Spark patterns into your build. The .scss file extension
           is needed in the case of Angular so as to not conflict with JS files.
         </p>
         <div class="drizzle-c-Command">
           <code class="drizzle-CodeHighlight">
-            @import &quot;node_modules/@sparkdesignsystem/spark-core/spark-core.scss&quot;;
+            @import &quot;node_modules/@sparkdesignsystem/spark/spark.scss&quot;;
           </code>
         </div>
       </li>
@@ -122,17 +122,17 @@ title: Angular
           Add the following in your main app.module.ts file:
           <div class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              import { SparkCoreAngularModule } from "@sparkdesignsystem/spark-core-angular";
+              import { SparkAngularModule } from "@sparkdesignsystem/spark-angular";
             </code>
           </div>
         </p>
         <p>
-          Add the 
+          Add the
           <span class="drizzle-c-Command">
             <code class="drizzle-CodeHighlight">
-              SparkCoreAngularModule
+              SparkAngularModule
             </code>
-          </span> 
+          </span>
           to the NgModule imports array.
         </p>
 
@@ -147,7 +147,7 @@ title: Angular
           </div>
         </p>
         <p>
-          Add the 
+          Add the
             <span class="drizzle-c-Command">
               <code class="drizzle-CodeHighlight">
                 BrowserAnimationsModule
@@ -162,41 +162,6 @@ title: Angular
           should occur in the DOM before the first use element.</p>
       </li>
     </ul>
-  </div>
-
-  <div class="drizzle-o-ContentGrouping">
-    <h2 class="drizzle-b-h2">Spark Extras</h2>
-
-    <div class="drizzle-o-ContentGrouping">
-      <p>
-          The Spark Angular Extras components rely on the Spark Core
-          Angular npm package and the SparkCoreAngularModule importation documented above.
-          Make sure that is done in order to use the extras components.
-          If your baseURL if not set in your Typescript config file then
-          you will need the additional './' prepended to the path
-          for the module imports.
-      </p>
-
-      <ul class="drizzle-b-List drizzle-b-List--nested sprk-u-mbm">
-        <li class="sprk-u-mvm">
-          <p>
-              Install the npm package for the Spark Extra that you need.
-          </p>
-          <div class="drizzle-c-Command">
-            <code class="drizzle-CodeHighlight">
-            npm install --save-dev @sparkdesignsystem/spark-extras-angular-[package-name]</code>
-          </div>
-        </li>
-        <li class="sprk-u-mvm">
-          <p>You'll need to import the NgModule provided.</p>
-          <div class="drizzle-c-Command">
-            <code class="drizzle-CodeHighlight">
-            import { Spark[PatternName]Module } from '@sparkdesignsystem/spark-extras-angular-[pattern-name]';
-            </code>
-          </div>
-        </li>
-      </ul>
-    </div>
   </div>
 
   <div class="drizzle-o-ContentGrouping">
@@ -227,5 +192,5 @@ title: Angular
           contribution guide</a> to get started.</p>
     </div>
   </div>
-  
+
 </div>

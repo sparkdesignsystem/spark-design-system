@@ -3,6 +3,7 @@ description: |
   Examples of form elements.
 contents:
   Text Input: inputs.html#text-input
+  Huge Text Input: inputs.html#text-input-huge
   Checkboxes: inputs.html#checkboxes
   Radio Buttons: inputs.html#radio-buttons
   Select Box: inputs.html#select-box
@@ -58,6 +59,9 @@ variableTable:
   $sprk-input-max-width:
     default: 27.5rem
     description: The value used as a maximum width for input containers.
+  $sprk-input-container-huge-max-width:
+    default: 37.5rem
+    description: The value used as a maximum width for huge input containers.
   $sprk-text-input-font-family:
     default: $sprk-font-family-body-two
     description: The font family to use for inputs.
@@ -85,6 +89,12 @@ variableTable:
   $sprk-text-input-border-radius:
     default: 4px
     description: The border radius to use for text input elements.
+  $sprk-text-input-huge-border:
+    default: 1px solid $sprk-black-tint-25
+    description: The border around huge text input elements.
+  $sprk-text-input-huge-focus-border-width:
+    default: 2px
+    description: The border radius to use for huge text input elements when it's focused.
   $sprk-text-input-box-shadow:
     default: none
     description: The box shadow to use for text input elements.
@@ -118,6 +128,12 @@ variableTable:
   $sprk-text-input-transition:
     default: border-color 0.15s ease
     description: The transition applied to text input elements.
+  $sprk-text-input-huge-height:
+    default: 64px
+    description: The height of the huge text input.
+  $sprk-text-input-huge-font-size:
+    default: $sprk-font-size-display-five
+    description: The font-size of the huge text input.
   $sprk-select-appearance:
     default: none
     description: The value set to the appearance property of select elements.

@@ -5,14 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
-// Collected Spark Core Import
-import { SparkCoreAngularModule } from '@sparkdesignsystem/spark-core-angular';
-
-// Individual Spark Extras Imports
-import { SparkAwardModule } from '@sparkdesignsystem/spark-extras-angular-award';
-import { SparkCardModule } from '@sparkdesignsystem/spark-extras-angular-card';
-import { SparkDictionaryModule } from '@sparkdesignsystem/spark-extras-angular-dictionary';
-import { SparkHighlightBoardModule } from '@sparkdesignsystem/spark-extras-angular-highlight-board';
+// Collected Spark Import
+import { SparkAngularModule } from '@sparkdesignsystem/spark-angular';
 
 // Docs Site Component Imports
 import { AccordionDocsComponent } from './spark-docs/accordion-docs/accordion-docs.component';
@@ -108,11 +102,7 @@ const appRoutes: Routes = [
       anchorScrolling: 'enabled'
     }),
     BrowserModule,
-    SparkAwardModule,
-    SparkCardModule,
-    SparkHighlightBoardModule,
-    SparkDictionaryModule,
-    SparkCoreAngularModule
+    SparkAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

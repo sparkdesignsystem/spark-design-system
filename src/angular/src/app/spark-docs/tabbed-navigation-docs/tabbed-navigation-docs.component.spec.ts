@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { TabbedNavigationDocsComponent } from './tabbed-navigation-docs.component';
 
 describe('TabbedNavigationDocsComponent', () => {
@@ -8,7 +8,7 @@ describe('TabbedNavigationDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SparkCoreAngularModule],
+      imports: [SparkAngularModule],
       declarations: [TabbedNavigationDocsComponent]
     }).compileComponents();
   }));

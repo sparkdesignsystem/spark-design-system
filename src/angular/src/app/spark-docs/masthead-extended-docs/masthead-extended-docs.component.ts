@@ -589,7 +589,7 @@ export class MastheadExtendedDocsComponent {
     footer: {
       analyticsString: 'Go Elsewhere Link',
       text: 'Go Elsewhere',
-      href: '/alerts',
+      href: '/alerts'
     }
   };
 

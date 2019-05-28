@@ -3,7 +3,7 @@ import { SprkRevealInput } from '@sparkdesignsystem/spark-react';
 import {
   isValidSSN,
   formatSSN,
-} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+} from '@sparkdesignsystem/spark/es5/sparkExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkRevealInputDocs extends Component {

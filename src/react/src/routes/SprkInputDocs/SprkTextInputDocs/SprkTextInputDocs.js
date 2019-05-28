@@ -7,7 +7,7 @@ import {
   formatPhone,
   isValidMonetary,
   formatMonetary,
-} from '@sparkdesignsystem/spark-core/es5/sparkCoreExports';
+} from '@sparkdesignsystem/spark/es5/sparkExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkTextInputDocs extends React.Component {
@@ -45,6 +45,14 @@ class SprkTextInputDocs extends React.Component {
             label="Name"
             name="Name"
             placeholder="Enter your first name"
+          />
+        </ExampleContainer>
+        <ExampleContainer heading="Text Huge">
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            placeholder="Enter your first name"
+            type="hugeTextInput"
           />
         </ExampleContainer>
         <ExampleContainer heading="Text with Helper">

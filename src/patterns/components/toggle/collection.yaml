@@ -6,7 +6,7 @@ description: |
   the icon or link are clicked the content will then be revealed.
 information:
   - Toggles will look and function the same in all viewports.
-  - Spark-Core's Toggle JS will take care of initially adding and adjusting the aria-expanded HTML attribute based on
+  - Spark's Toggle JS will take care of initially adding and adjusting the aria-expanded HTML attribute based on
     if the content is hidden or visible.
   - You can adjust the spacing between the trigger link and the content by changing the
     spacing utility class on the content to a different size.
