@@ -7,6 +7,14 @@ module.exports = {
     author: '@sparkQL',
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'spark-components',
+        path: `${__dirname}/spark/components`,
+        ignore: ['**/.*', '**/*.test.*', '**/*.tests.*', '**/*.stories.*'],
+      },
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-symbol-set-fetch',

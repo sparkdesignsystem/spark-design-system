@@ -4,4 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+// exports.onCreateNode = ({ node }) => {
+//   console.log(node.internal.type);
+// };
+
+// {
+//   allDirectory(filter: { dir: { regex: "/./" } }) {
+//   edges {
+//     node {
+//       name
+//       dir
+//       relativeDirectory
+//       base
+//     }
+//   }
+// }
+// }
