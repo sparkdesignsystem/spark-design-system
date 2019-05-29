@@ -136,8 +136,6 @@ storiesOf('Inputs', module)
   .add('ssn input', () => (
     <Box>
       <SprkRevealInput
-        formatter={formatSSN}
-        valid={isValidSSN('')}
         label="Social Security Number"
         toggleLabel="Show SSN"
         name="ssn"
@@ -169,8 +167,6 @@ storiesOf('Inputs', module)
         label="Payment"
         textIcon
         name="monetary"
-        valid={isValidMonetary('')}
-
         placeholder="0.00"
       />
     </Box>
@@ -199,11 +195,6 @@ storiesOf('Inputs', module)
         label="Phone Number"
         name="phone"
         placeholder="(000) 000-0000"
-        valid={isValidPhone('')}
-        value={isValidPhone('')
-        && formatPhone('')
-          ? formatPhone('')
-          : ''}
         errorMessage="Incorrect phone number."
       />
     </Box>
@@ -211,7 +202,6 @@ storiesOf('Inputs', module)
   .add('date input', () => (
     <Box>
       <SprkTextInput
-        formatter={formatDate}
         label="Date"
         name="date"
         placeholder="01/01/2019"
@@ -222,11 +212,9 @@ storiesOf('Inputs', module)
   .add('date picker', () => (
     <Box>
       <SprkDatePickerInput
-        formatter={formatDate}
         label="Date"
         name="date"
         placeholder="01/01/2019"
-        valid={isValidDate('')}
         errorMessage="Incorrect date."
       />
     </Box>
