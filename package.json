@@ -5,8 +5,9 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "author": "Quicken Loans",
   "dependencies": {
-    "@sparkdesignsystem/spark-core": "^10.1.1",
-    "@sparkdesignsystem/spark-react": "^1.0.0",
+    "@sparkdesignsystem/spark": "^11.0.0",
+    "@sparkdesignsystem/spark-angular": "^9.0.0",
+    "@sparkdesignsystem/spark-react": "^1.0.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.4.3",
     "gatsby-image": "^2.0.41",
