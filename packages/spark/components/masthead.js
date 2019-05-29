@@ -123,14 +123,15 @@ const bindUIEvents = () => {
         'data-sprk-mobile-nav-trigger',
       )}"]`,
     );
-
     /*
     * Check if the mobile menu is visible
     * on page and set scroll event
     */
-    let isMenuVisible = isElementVisible('.sprk-c-Masthead__menu');
-    toggleScrollEvent(isMenuVisible);
-
+    let isMenuVisible;
+    window.addEventListener('load', () => {
+      isMenuVisible = isElementVisible('.sprk-c-Masthead__menu');
+      toggleScrollEvent(isMenuVisible);
+    });
     /*
     * If the mobile menu visibility changes
     * toggle scroll event listener
