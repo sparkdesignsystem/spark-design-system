@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkTabs from '../../SprkTabs';
-import SprkTabsPanel from '../SprkTabsPanel/SprkTabsPanel';
+import SprkTabsPanel from './SprkTabsPanel';
 import SprkTabsButton from './SprkTabsButton';
 
 Enzyme.configure({ adapter: new Adapter() });
