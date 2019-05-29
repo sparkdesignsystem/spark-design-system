@@ -11,8 +11,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'spark-components',
-        path: `${__dirname}/spark/components`,
-        ignore: ['**/.*', '**/*.test.*', '**/*.tests.*', '**/*.stories.*'],
+        path: `${__dirname}/spark/components/`,
       },
     },
     'gatsby-plugin-sass',
