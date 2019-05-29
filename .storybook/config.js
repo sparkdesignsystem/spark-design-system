@@ -1,7 +1,7 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { action } from "@storybook/addon-actions"
 import { themes } from '@storybook/theming';
-import '@sparkdesignsystem/spark-core/_spark-core.scss';
+import '@sparkdesignsystem/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 addDecorator(withA11y);
