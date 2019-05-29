@@ -6,7 +6,7 @@
   white-space: nowrap;
   max-width: $sprk-carousel-narrow-image-max-width;
 
-  @media (min-width: $sprk-split-breakpoint-xl) {
+  @media (min-width: $sprk-carousel-breakpoint) {
     max-width: none;
   }
 }
@@ -20,7 +20,7 @@
   color: $sprk-white;
   max-width: $sprk-carousel-narrow-image-max-width;
 
-  @media (min-width: $sprk-split-breakpoint-xl) {
+  @media (min-width: $sprk-carousel-breakpoint) {
     max-width: none;
   }
 }
@@ -49,7 +49,7 @@
   @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
     position: static;
   }
-  @media (min-width: $sprk-split-breakpoint-xl) {
+  @media (min-width: $sprk-carousel-breakpoint) {
     display: none;
   }
 }
@@ -71,17 +71,17 @@
   padding: $sprk-carousel-dot-container-padding;
   touch-action: manipulation;
 
-  @media (min-width: $sprk-split-breakpoint-xl) {
+  @media (min-width: $sprk-carousel-breakpoint) {
     display: none;
   }
 }
 
 .sprk-c-Carousel__dot-container {
   justify-content: center;
-  margin: $sprk-carousel-narrow-dot-spacing;
+  margin: $sprk-carousel-dot-spacing;
 
   @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
-    margin-right: $sprk-carousel-dot-spacing;
+    margin-right: $sprk-carousel-wide-dot-spacing;
   }
 }
 
@@ -95,13 +95,13 @@
   border: $sprk-carousel-dot-border;
   cursor: pointer;
   display: block;
-  height: $sprk-carousel-narrow-dot-height;
+  height: $sprk-carousel-dot-height;
   padding: 0;
-  width: $sprk-carousel-narrow-dot-width;
+  width: $sprk-carousel-dot-width;
 
   @media (min-width: $sprk-carousel-arrow-position-breakpoint) {
-    height: $sprk-carousel-dot-height;
-    width: $sprk-carousel-dot-width;
+    height: $sprk-carousel-wide-dot-height;
+    width: $sprk-carousel-wide-dot-width;
   }
 }
 

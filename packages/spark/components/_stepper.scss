@@ -36,9 +36,9 @@
   }
 }
 
-.sprk-c-Stepper__slider.sprk-c-Stepper__step--selected .sprk-c-Stepper__step-heading,
-.sprk-c-Stepper__slider.sprk-c-Stepper__step--selected .sprk-c-Stepper__step-icon,
-.sprk-c-Stepper__slider.sprk-c-Stepper__step--selected .sprk-c-Stepper__step-description {
+.sprk-c-Stepper__slider--active .sprk-c-Stepper__step-heading,
+.sprk-c-Stepper__slider--active .sprk-c-Stepper__step-icon,
+.sprk-c-Stepper__slider--active .sprk-c-Stepper__step-description {
   opacity: 1;
 }
 
@@ -142,6 +142,7 @@
   border-radius: $sprk-stepper-step-description-border-radius;
 }
 
+.sprk-c-Stepper__slider--active,
 .sprk-c-Stepper__step--selected {
   .sprk-c-Stepper__step-description {
     display: block;
