@@ -18,7 +18,10 @@ function Header({ logo, narrowNavLinks, utilityItems }) {
 export default Header;
 
 Header.propTypes = {
-  logo: PropTypes.string,
-  narrowNavLinks: PropTypes.arrayOf(PropTypes.Object),
-  utilityItems: PropTypes.arrayOf(PropTypes.Object),
+  logo: PropTypes.node,
+  narrowNavLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+    href: PropTypes.string,
+  })),
+  utilityItems: PropTypes.arrayOf(PropTypes.node),
 };

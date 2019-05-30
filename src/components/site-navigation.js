@@ -1,6 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
+import { Link } from 'gatsby';
 
 import { SprkToggle, SprkList, SprkListItem, SprkLink } from '@sparkdesignsystem/spark-react';
 
@@ -9,39 +11,53 @@ function SiteNavigation({ navItems }) {
     <>
       <nav className={cx('navigation')}>
         { navItems.map(item => (
-          <>
+          <div key={shortid.generate()}>
             {
-              item.subNavLinks
+                item.subNavLinks
                 && (
-                <SprkToggle
-                  title={item.text}
-                  additionalClasses="nav-toggle"
-                  toggleIconName="chevron-down"
-                  analyticsString="toggle-1"
-                  iconAddClasses="sprk-c-Icon--m"
-                >
-                  {item.subNavLinks.map(link => (
-                    <SprkList
-                      element="ul"
-                      variant="bare"
-                      additionalClasses="nav-list"
-                    >
-                      <SprkListItem additionalClasses="nav-list__item">
-                        <SprkLink variant="simple">{link.text}</SprkLink>
-                      </SprkListItem>
-                    </SprkList>
-                  ))}
-                </SprkToggle>
+                  <SprkToggle
+                    title={item.text}
+                    additionalClasses="nav-toggle"
+                    toggleIconName="chevron-down"
+                    key={shortid.generate()}
+                    analyticsString="toggle-1"
+                    iconAddClasses="sprk-c-Icon--m"
+                  >
+                    {item.subNavLinks.map(link => (
+                      <SprkList
+                        element="ul"
+                        variant="bare"
+                        key={shortid.generate()}
+                        additionalClasses="nav-list"
+                      >
+                        <SprkListItem additionalClasses="nav-list__item">
+                          <SprkLink
+                            element={Link}
+                            to={link.to}
+                            variant="simple"
+                          >
+                            {link.text}
+                          </SprkLink>
+                        </SprkListItem>
+                      </SprkList>
+                    ))}
+                  </SprkToggle>
                 )
-            }
-            { !item.subNavLinks
+              }
+            {!item.subNavLinks
               && (
-              <div className="nav-list__item">
-                <SprkLink variant="simple">{item.text}</SprkLink>
-              </div>
+                <div className="nav-list__item" key={shortid.generate()}>
+                  <SprkLink
+                    element={Link}
+                    to={item.to}
+                    variant="simple"
+                  >
+                    {item.text}
+                  </SprkLink>
+                </div>
               )
-            }
-          </>
+              }
+          </div>
         )) }
       </nav>
     </>
@@ -51,7 +67,11 @@ function SiteNavigation({ navItems }) {
 export default SiteNavigation;
 
 SiteNavigation.propTypes = {
-  navItems: PropTypes.arrayOf(PropTypes.Object),
+  navItems: PropTypes.arrayOf(PropTypes.shape({
+    element: PropTypes.node,
+    text: PropTypes.string,
+    href: PropTypes.string,
+  })),
 };
 
 SiteNavigation.defaultProps = {
