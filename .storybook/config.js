@@ -3,14 +3,16 @@ import { action } from "@storybook/addon-actions"
 import { themes } from '@storybook/theming';
 import '@sparkdesignsystem/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
+import { withInfo } from '@storybook/addon-info';
 
 addDecorator(withA11y);
-
+addDecorator(withInfo({styles: {padding: '16px'}}));
 // Option defaults.
 addParameters({
   options: {
     theme: themes.normal,
   },
+  info: { inline: true, header: false },
 });
 
 // automatically import all files ending in *.stories.js

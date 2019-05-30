@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { SprkMasthead, SprkButton, SprkLink } from '@sparkdesignsystem/spark-react';
-
 const links = [
   {
     text: 'Item 1',
@@ -13,7 +12,6 @@ const links = [
     target: '_blank',
   },
 ];
-
 const addedNarrowNavLinks = [
   {
     leadingIcon: 'landline',
@@ -31,7 +29,6 @@ const addedNarrowNavLinks = [
     isButton: true,
   },
 ];
-
 const selector = {
   choiceFunction: (text) => {
     console.log(text);
@@ -50,13 +47,11 @@ const selector = {
   ],
   footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
 };
-
 const utilityItems = [
   <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
   <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
   <SprkButton element="a" to="/button" variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>,
 ];
-
 storiesOf('Masthead', module)
   .add('default', () => (
     <SprkMasthead
@@ -65,7 +60,6 @@ storiesOf('Masthead', module)
       siteLogo={<div/>}
       utilityContents={utilityItems}
     />
-
   ))
   .add('extended', () => (
     <SprkMasthead

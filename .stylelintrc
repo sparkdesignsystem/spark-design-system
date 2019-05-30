@@ -1,10 +1,6 @@
 plugins:
  -
    'stylelint-scss'
-configBasedir:
-- './spark/'
-ignoreFiles:
-- './src/assets/drizzle/**/*.css'
 rules:
   #
   # Here are all the rules within stylelint, grouped first by category
