@@ -8,7 +8,12 @@ const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs)
 
 stories.add('primary', () => (
-    <SprkButton onClick={action('button clicked')}>Button</SprkButton>
+    <SprkButton
+      onClick={action('button clicked')}
+      disabled={boolean('disabled', false)}
+    >
+      Button
+    </SprkButton>
   ))
   .add('secondary', () => (
     <SprkButton
@@ -19,7 +24,12 @@ stories.add('primary', () => (
     </SprkButton>
   ))
   .add('tertiary', () => (
-    <SprkButton variant="tertiary">Button</SprkButton>
+    <SprkButton
+      variant="tertiary"
+      disabled={boolean('disabled', false)}
+    >
+      Button
+    </SprkButton>
   ))
   .add('disabled', () => (
     <SprkButton disabled>Button</SprkButton>
