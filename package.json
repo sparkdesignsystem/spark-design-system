@@ -5,6 +5,8 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "author": "Quicken Loans",
   "dependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
     "@sparkdesignsystem/spark": "^11.0.0",
     "@sparkdesignsystem/spark-angular": "^9.0.0",
     "@sparkdesignsystem/spark-react": "^1.0.1",
@@ -23,8 +25,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "shortid": "^2.2.14",
     "react-router-dom": "^5.0.0",
+    "shortid": "^2.2.14",
     "stylelint": "^10.0.1"
   },
   "devDependencies": {
@@ -34,7 +36,10 @@
     "@storybook/addon-info": "^5.0.11",
     "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
+    "@storybook/addon-storysource": "^5.0.11",
     "@storybook/addons": "^5.0.11",
+    "@storybook/angular": "^5.0.11",
+    "@storybook/html": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "babel-loader": "^8.0.6",
     "eslint": "^5.16.0",
@@ -56,8 +61,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:react": "node node_modules/@storybook/react/bin/index -p 9001 -c .storybook-react",
+    "storybook:html": "node node_modules/@storybook/html/bin/index -p 8001 -c .storybook-html",
+    "storybook:angular": "node node_modules/@storybook/angular/bin/index -p 8001 -c .storybook-angular"
   },
   "lint-staged": {
     "*.scss": [

@@ -16,9 +16,13 @@ addParameters({
 });
 
 // automatically import all files ending in *.stories.js
-const req = require.context("../spark", true, /.stories.js$/)
 function loadStories() {
-  req.keys().forEach(filename => req(filename))
+  const req = require.context("../spark", true, /.stories.js$/)
+  req.keys().forEach(filename => {
+    if (filename.indexOf('react') >= 0) {
+      req(filename);
+    }
+  });
 }
 
 // Gatsby's Link overrides:
