@@ -36,7 +36,6 @@ const toggleMenu = scrollDirection => {
 */
 let direction = scrollYDirection();
 const checkScrollDirection = () => {
-  console.log(direction);
   const newDirection = scrollYDirection();
   if (direction !== newDirection) {
     toggleMenu(newDirection);
