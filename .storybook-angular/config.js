@@ -1,11 +1,8 @@
-import { configure, addDecorator, addParameters } from '@storybook/angular';
+// import '@sparkdesignsystem/spark/_spark.scss';
+import '!style-loader!css-loader!sass-loader!@sparkdesignsystem/spark/_spark.scss';
+import { configure, addParameters } from '@storybook/angular';
 import { themes } from '@storybook/theming';
-import '@sparkdesignsystem/spark/_spark.scss';
-import { withA11y } from '@storybook/addon-a11y';
-import { withInfo } from '@storybook/addon-info';
 
-addDecorator(withA11y);
-addDecorator(withInfo);
 // Option defaults.
 addParameters({
   options: {

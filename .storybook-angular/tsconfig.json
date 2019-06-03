@@ -1,5 +1,4 @@
 {
-  "extends": "../tsconfig.json",
   "exclude": [
     "../spark/test.ts",
     "../spark/**/*.spec.ts",

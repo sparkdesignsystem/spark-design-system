@@ -1,16 +1,19 @@
-import { storiesOf } from '@storybook/angular';
-import { Button } from '@storybook/angular/demo';
+// import { storiesOf, moduleMetadata } from '@storybook/angular';
+// import { SprkButtonDirective } from './sprk-button.directive';
 
-storiesOf('My Button', module)
- .add('with text', () => ({
-    component: Button,
-    props: {
-      text: 'Hello Button',
-    },
-  }))
-  .add('with emoji', () => ({
-    component: Button,
-    props: {
-      text: '😀 😎 👍 💯',
-    },
-  }));
+// storiesOf('Button', module)
+//   .addDecorator(
+//     moduleMetadata({
+//       declarations: [SprkButtonDirective],
+//     }),
+//   )
+//  .add('Primary', () => ({
+//     template: `
+//       <button
+//         data-id="button-1"
+//         sprkButton
+//       >
+//         Primary
+//       </button>
+//     `
+//   }));
