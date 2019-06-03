@@ -5,6 +5,7 @@ import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
 import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
+import debounce from '../node_modules/lodash/debounce';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
@@ -35,6 +36,7 @@ const toggleMenu = scrollDirection => {
 */
 let direction = scrollYDirection();
 const checkScrollDirection = () => {
+  console.log(direction);
   const newDirection = scrollYDirection();
   if (direction !== newDirection) {
     toggleMenu(newDirection);
@@ -50,7 +52,7 @@ const checkScrollDirection = () => {
 const toggleScrollEvent = isMenuVisible => {
   let attached = false;
   if (isMenuVisible) {
-    window.addEventListener('scroll', checkScrollDirection);
+    window.addEventListener('scroll', debounce(checkScrollDirection, 30));
     attached = true;
   } else {
     window.removeEventListener('scroll', checkScrollDirection, false);
