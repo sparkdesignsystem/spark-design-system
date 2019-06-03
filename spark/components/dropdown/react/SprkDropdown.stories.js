@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
-import { Box } from '../../../../.storybook/story-layout';
 import { SprkDropdown, SprkButton } from '@sparkdesignsystem/spark-react';
 
 storiesOf('Dropdown', module)
   .add('default', () => (
-    <Box>
       <SprkDropdown
         choices={{
           choiceFunction: (choiceText) => {
@@ -33,10 +31,8 @@ storiesOf('Dropdown', module)
         }}
         iconName="settings"
       />
-    </Box>
   ))
   .add('information', () => (
-    <Box>
       <SprkDropdown
         variant="informational"
         title="My Choices"
@@ -69,5 +65,4 @@ storiesOf('Dropdown', module)
         }}
         defaultTriggerText="Make a selection..."
       />
-    </Box>
   ));

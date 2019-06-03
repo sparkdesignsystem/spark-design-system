@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
-import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
-import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-container/sprk-selection-item-container.component';
+import { SprkFieldErrorDirective } from './sprk-field-error.directive';
+import { SprkLabelDirective } from './sprk-label.directive';
+import { SprkSelectionInputDirective } from './sprk-selection-input.directive';
+import { SprkSelectionLabelDirective } from './sprk-selection-label.directive';
+import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container.component';
 import { SprkSelectionContainerComponent } from './sprk-selection-container.component';
 
 @Component({

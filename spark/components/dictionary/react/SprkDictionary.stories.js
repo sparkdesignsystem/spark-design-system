@@ -1,11 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { SprkDictionary } from '@sparkdesignsystem/spark-react';
-import { Box } from '../../../../.storybook/story-layout';
-
 storiesOf('Dictionary', module)
   .add('default', () => (
-    <Box>
       <SprkDictionary
         idString="dictionary-1"
         keyValuePairs={{
@@ -17,10 +14,8 @@ storiesOf('Dictionary', module)
           'Work Extension': '55555',
         }}
       />
-    </Box>
   ))
   .add('striped', () => (
-    <Box>
       <SprkDictionary
         variant="striped"
         idString="dictionary-2"
@@ -33,5 +28,4 @@ storiesOf('Dictionary', module)
           'Work Extension': '55555'
         }}
       />
-    </Box>
   ));

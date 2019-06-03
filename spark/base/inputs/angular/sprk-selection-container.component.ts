@@ -7,9 +7,9 @@ import {
   QueryList
 } from '@angular/core';
 import * as _ from 'lodash';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-container/sprk-selection-item-container.component';
+import { SprkFieldErrorDirective } from './sprk-field-error.directive';
+import { SprkLabelDirective } from './sprk-label.directive';
+import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container.component';
 
 @Component({
   selector: 'sprk-selection-container',

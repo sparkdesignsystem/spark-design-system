@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkStepperStepComponent } from './sprk-stepper-step.component';
-import { SprkLinkComponent } from '../../sprk-link/sprk-link.component';
+import { SprkLinkComponent } from '../../../base/links/angular/sprk-link.component';
 
 describe('SprkStepperStepComponent', () => {
   let component: SprkStepperStepComponent;

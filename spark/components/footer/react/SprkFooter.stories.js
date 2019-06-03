@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box } from '../../../../.storybook/story-layout';
 import { SprkFooter } from '@sparkdesignsystem/spark-react';
+
 const globalItems = {
   heading: 'Global Links',
   items: [{
@@ -200,14 +200,12 @@ const additionalIcons = [{
 ];
 storiesOf('Footer', module)
   .add('default', () => (
-    <Box>
-      <SprkFooter
-        globalItems={globalItems}
-        linkColumns={linkColumns}
-        connectIcons={connectIcons}
-        awards={awards}
-        additionalIcons={additionalIcons}
-        paragraphs={paragraphs}
-      />
-    </Box>
+    <SprkFooter
+      globalItems={globalItems}
+      linkColumns={linkColumns}
+      connectIcons={connectIcons}
+      awards={awards}
+      additionalIcons={additionalIcons}
+      paragraphs={paragraphs}
+    />
   ));
