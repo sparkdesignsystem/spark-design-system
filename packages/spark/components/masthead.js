@@ -35,13 +35,13 @@ const toggleMenu = scrollDirection => {
 * toggle the masthead visibility 
 */
 let direction = scrollYDirection();
-const checkScrollDirection = () => {
+const checkScrollDirection = debounce(() => {
   const newDirection = scrollYDirection();
   if (direction !== newDirection) {
     toggleMenu(newDirection);
   }
   direction = newDirection;
-};
+}, 30);
 
 /* 
 * If the mobile menu is visible
@@ -51,7 +51,7 @@ const checkScrollDirection = () => {
 const toggleScrollEvent = isMenuVisible => {
   let attached = false;
   if (isMenuVisible) {
-    window.addEventListener('scroll', debounce(checkScrollDirection, 30));
+    window.addEventListener('scroll', checkScrollDirection);
     attached = true;
   } else {
     window.removeEventListener('scroll', checkScrollDirection, false);
@@ -138,6 +138,7 @@ const bindUIEvents = () => {
     * toggle scroll event listener
     */
     window.addEventListener('resize', () => {
+      console.log(isMenuVisible);
       const newMenuVisibility = isElementVisible('.sprk-c-Masthead__menu');
       if (isMenuVisible !== newMenuVisibility) {
         toggleScrollEvent(newMenuVisibility);
