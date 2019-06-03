@@ -3,20 +3,26 @@ import { action } from "@storybook/addon-actions"
 import { themes } from '@storybook/theming';
 import '@sparkdesignsystem/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
+import { withInfo } from '@storybook/addon-info';
 
 addDecorator(withA11y);
-
+addDecorator(withInfo);
 // Option defaults.
 addParameters({
   options: {
     theme: themes.normal,
   },
+  info: { inline: true, header: false },
 });
 
 // automatically import all files ending in *.stories.js
-const req = require.context("../spark", true, /.stories.js$/)
 function loadStories() {
-  req.keys().forEach(filename => req(filename))
+  const req = require.context("../spark", true, /.stories.js$/)
+  req.keys().forEach(filename => {
+    if (filename.indexOf('react') >= 0) {
+      req(filename);
+    }
+  });
 }
 
 // Gatsby's Link overrides:

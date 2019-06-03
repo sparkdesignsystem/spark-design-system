@@ -1,145 +1,125 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { SprkStack, SprkStackItem } from '@sparkdesignsystem/spark-react';
-import { Box } from '../../../../.storybook/story-layout';
-
 storiesOf('Stack', module)
   .add('default', () => (
-    <Box>
-      <SprkStack>
-        <SprkStackItem>Test 1</SprkStackItem>
-        <SprkStackItem>Test 2</SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack>
+      <SprkStackItem>Test 1</SprkStackItem>
+      <SprkStackItem>Test 2</SprkStackItem>
+    </SprkStack>
   ))
   .add('two column', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
-          Column
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
+        Column
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('three column', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">
-          Column
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">
+        Column
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('four column', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
-          Column
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
+        Column
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('five column', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
-          Column
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">
+        Column
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('six column', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
-          Column
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
-          Column
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
+        Column
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">
+        Column
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('75/25', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs">
-        Item
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
-        Item
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs">
+      Item
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">
+      Item
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('60/40', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs">
-          Item
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs">
-          Item
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs">
+        Item
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs">
+        Item
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('30/70', () => (
-    <Box>
-      <SprkStack splitAt="tiny">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--three-tenths@xs">
-          Item
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--seven-tenths@xs">
-          Item
-        </SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack splitAt="tiny">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--three-tenths@xs">
+        Item
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--seven-tenths@xs">
+        Item
+      </SprkStackItem>
+    </SprkStack>
   ))
   .add('Mixed Column', () => (
-    <Box>
+    <React.Fragment>
       <SprkStack splitAt="tiny">
         <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter">
           <p className="sprk-b-TypeBodyOne">
@@ -157,7 +137,6 @@ storiesOf('Stack', module)
           </p>
         </SprkStackItem>
       </SprkStack>
-
       <SprkStack splitAt="tiny">
         <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
           <p className="sprk-b-TypeBodyOne">
@@ -180,7 +159,6 @@ storiesOf('Stack', module)
           </p>
         </SprkStackItem>
       </SprkStack>
-
       <SprkStack splitAt="tiny">
         <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter">
           <p className="sprk-b-TypeBodyOne">
@@ -203,7 +181,6 @@ storiesOf('Stack', module)
           </p>
         </SprkStackItem>
       </SprkStack>
-
       <SprkStack splitAt="tiny">
         <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
           <SprkStack
@@ -234,7 +211,6 @@ storiesOf('Stack', module)
           </p>
         </SprkStackItem>
       </SprkStack>
-
       <SprkStack splitAt="tiny">
         <SprkStackItem
           additionalClasses="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter"
@@ -251,16 +227,14 @@ storiesOf('Stack', module)
           </p>
         </SprkStackItem>
       </SprkStack>
-    </Box>
+    </React.Fragment>
   ))
   .add('with split modifier', () => (
-    <Box>
-      <SprkStack
-        itemSpacing="medium"
-        splitAt="small"
-      >
-        <SprkStackItem>Item</SprkStackItem>
-        <SprkStackItem>Item</SprkStackItem>
-      </SprkStack>
-    </Box>
+    <SprkStack
+      itemSpacing="medium"
+      splitAt="small"
+    >
+      <SprkStackItem>Item</SprkStackItem>
+      <SprkStackItem>Item</SprkStackItem>
+    </SprkStack>
   ));

@@ -5,6 +5,8 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "author": "Quicken Loans",
   "dependencies": {
+    "@angular/common": "^6.1.4",
+    "@angular/core": "^6.1.4",
     "@sparkdesignsystem/spark": "^11.0.0",
     "@sparkdesignsystem/spark-angular": "^9.0.0",
     "@sparkdesignsystem/spark-react": "^1.0.1",
@@ -23,24 +25,43 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "shortid": "^2.2.14",
     "react-router-dom": "^5.0.0",
+    "shortid": "^2.2.14",
     "stylelint": "^10.0.1"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^8.0.1",
+    "@angular/animations": "^6.1.4",
+    "@angular/compiler": "^6.1.4",
+    "@angular/compiler-cli": "^6.1.10",
+    "@angular/forms": "^6.1.4",
+    "@angular/platform-browser": "^6.1.4",
+    "@angular/platform-browser-dynamic": "^6.1.4",
+    "@angular/router": "^6.1.4",
     "@babel/core": "^7.4.4",
     "@storybook/addon-a11y": "^5.0.11",
     "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-info": "^5.0.11",
+    "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
+    "@storybook/addon-storysource": "^5.0.11",
     "@storybook/addons": "^5.0.11",
+    "@storybook/angular": "^5.0.11",
+    "@storybook/html": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.5.1",
-    "eslint-plugin-react": "^7.13.0"
+    "eslint-plugin-react": "^7.13.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "stylelint-scss": "^3.7.0",
+    "typescript": "^3.5.1",
+    "zone.js": "^0.8.29"
   },
   "keywords": [
     "gatsby"
@@ -53,8 +74,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:react": "node node_modules/@storybook/react/bin/index -p 9001 -c .storybook-react",
+    "storybook:html": "node node_modules/@storybook/html/bin/index -p 8001 -c .storybook-html",
+    "storybook:angular": "node node_modules/@storybook/angular/bin/index -p 7001 -c .storybook-angular"
   },
   "lint-staged": {
     "*.scss": [

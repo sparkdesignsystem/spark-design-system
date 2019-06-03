@@ -1,0 +1,13 @@
+{
+  "exclude": [
+    "../spark/test.ts",
+    "../spark/**/*.spec.ts",
+    "../spark/**/*.spec.ts"
+  ],
+  "include": [
+    "../spark/**/*"
+  ],
+  "compilerOptions": {
+    "experimentalDecorators": true
+  }
+}

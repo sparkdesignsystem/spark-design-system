@@ -1,7 +1,7 @@
 import { Component, ContentChild, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
-import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
+import { SprkSelectionInputDirective } from './sprk-selection-input.directive';
+import { SprkSelectionLabelDirective } from './sprk-selection-label.directive';
 
 @Component({
   selector: 'sprk-selection-item-container',

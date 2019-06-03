@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
-import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkStackComponent } from '../../../objects/stack/angular/sprk-stack.component';
+import { SprkStackItemDirective } from '../../../objects/stack/angular/sprk-stack-item.directive';
+import { SprkLinkComponent } from '../../../base/links/angular/sprk-link.component';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
 
 describe('SprkHighlightBoardComponent', () => {

@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
-import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
-import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkIconComponent } from '../../icons/angular/sprk-icon.component';
+import { SprkLinkComponent } from '../../../base/links/angular/sprk-link.component';
+import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion.component';
+import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
-import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
+import { SprkDropdownComponent } from '../../dropdown/angular/sprk-dropdown.component';
 
 describe('SprkMastheadComponent', () => {
   let component: SprkMastheadComponent;

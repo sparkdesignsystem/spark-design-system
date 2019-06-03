@@ -2,31 +2,38 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { SprkButton } from '@sparkdesignsystem/spark-react';
-import { Box } from '../../../../.storybook/story-layout';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-storiesOf('Button', module)
-  .add('primary', () => (
-    <Box>
-      <SprkButton onClick={action('button clicked')}>Button</SprkButton>
-    </Box>
+const stories = storiesOf('Button', module);
+stories.addDecorator(withKnobs)
+
+stories.add('primary', () => (
+    <SprkButton
+      onClick={action('button clicked')}
+      disabled={boolean('disabled', false)}
+    >
+      Button
+    </SprkButton>
   ))
   .add('secondary', () => (
-    <Box>
-      <SprkButton variant="secondary">Button</SprkButton>
-    </Box>
+    <SprkButton
+      variant="secondary"
+      disabled={boolean('disabled', false)}
+    >
+      {text('button text', 'hello')}
+    </SprkButton>
   ))
   .add('tertiary', () => (
-    <Box>
-      <SprkButton variant="tertiary">Button</SprkButton>
-    </Box>
+    <SprkButton
+      variant="tertiary"
+      disabled={boolean('disabled', false)}
+    >
+      Button
+    </SprkButton>
   ))
   .add('disabled', () => (
-    <Box>
-      <SprkButton disabled>Button</SprkButton>
-    </Box>
+    <SprkButton disabled>Button</SprkButton>
   ))
   .add('with spinner', () => (
-    <Box>
-      <SprkButton loading>Button</SprkButton>
-    </Box>
+    <SprkButton loading>Button</SprkButton>
   ));
