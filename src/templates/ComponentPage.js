@@ -6,13 +6,20 @@ import ContentIframe from '../components/content-iframe';
 
 function ComponentPage({ data }) {
   const { node } = data.allDirectory.edges[0];
+  const { build } = process.env;
+  let buildType = 'html';
+
+  if (build && build.type) {
+    buildType = build.type;
+  }
+
   return (
     <Layout>
       <div>
         <h1>{ node.name }</h1>
         <ContentIframe
           title="Preview"
-          src={`/react/iframe.html?id=${node.name}--default`}
+          src={`/${buildType}/iframe.html?id=${node.name}--default`}
         />
       </div>
     </Layout>

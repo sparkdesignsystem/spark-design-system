@@ -74,9 +74,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "build-storybook:html": "node_modules/@storybook/html/bin/build-storybook -c .storybook -o ./static/html",
-    "build-storybook:react": "node_modules/@storybook/react/bin/build-storybook -c .storybook -o ./static/react",
-    "build-storybook:angular": "node_modules/@storybook/angular/bin/build-storybook -c .storybook -o ./static/angular",
+    "build-storybook:html": "node node_modules/@storybook/html/bin/build -c .storybook-html -o ./static/html",
+    "build-storybook:react": "node node_modules/@storybook/react/bin/build -c .storybook-react -o ./static/react",
+    "build-storybook:angular": "node node_modules/@storybook/angular/bin/build -c .storybook-angular -o ./static/angular",
     "storybook:react": "node node_modules/@storybook/react/bin/index -p 9001 -c .storybook-react",
     "storybook:html": "node node_modules/@storybook/html/bin/index -p 8001 -c .storybook-html",
     "storybook:angular": "node node_modules/@storybook/angular/bin/index -p 7001 -c .storybook-angular"
