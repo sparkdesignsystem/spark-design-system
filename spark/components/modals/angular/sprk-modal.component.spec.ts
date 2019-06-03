@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
+import { SprkIconComponent } from '../../icons/angular/sprk-icon.component';
 import { SprkModalComponent } from './sprk-modal.component';
 
 describe('SparkModalComponent', () => {

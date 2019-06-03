@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SprkStepperStepModule } from './sprk-stepper-step/sprk-stepper-step.module';
+import { SprkStepperStepModule } from './sprk-stepper-step.module';
 import { SprkStepperComponent } from './sprk-stepper.component';
 
 @NgModule({

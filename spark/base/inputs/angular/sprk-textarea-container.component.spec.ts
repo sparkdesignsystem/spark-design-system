@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkFieldErrorDirective } from './sprk-field-error.directive';
+import { SprkInputDirective } from './sprk-input.directive';
+import { SprkLabelDirective } from './sprk-label.directive';
 import { SprkTextareaContainerComponent } from './sprk-textarea-container.component';
 
 @Component({

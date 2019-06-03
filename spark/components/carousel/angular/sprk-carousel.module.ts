@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkIconModule } from '../../icons/angular/sprk-icon.module';
 import { SprkCarouselComponent } from './sprk-carousel.component';
 
 @NgModule({

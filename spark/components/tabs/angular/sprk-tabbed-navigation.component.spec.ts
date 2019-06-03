@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-panel.directive';
+import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
 
 @Component({

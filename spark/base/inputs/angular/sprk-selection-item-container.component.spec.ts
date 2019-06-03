@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
-import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
+import { SprkSelectionInputDirective } from './sprk-selection-input.directive';
+import { SprkSelectionLabelDirective } from './sprk-selection-label.directive';
 import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container.component';
 
 @Component({
