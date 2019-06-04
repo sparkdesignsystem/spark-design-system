@@ -2,14 +2,25 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import ContentIframe from '../components/content-iframe';
 
 function ComponentPage({ data }) {
   const { node } = data.allDirectory.edges[0];
+  const { build } = process.env;
+  let buildType = 'html';
+
+  if (build && build.type) {
+    buildType = build.type;
+  }
+
   return (
     <Layout>
       <div>
         <h1>{ node.name }</h1>
-        <p>Hello, World!</p>
+        <ContentIframe
+          title="Preview"
+          src={`/${buildType}/iframe.html?id=${node.name}--default`}
+        />
       </div>
     </Layout>
   );

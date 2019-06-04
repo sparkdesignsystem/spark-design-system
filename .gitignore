@@ -29,3 +29,6 @@ src/angular/dist
 /src/angular/projects/spark-extras-angular-highlight-board/coverage
 .cache/
 /public
+/static/angular
+/static/react
+/static/html
