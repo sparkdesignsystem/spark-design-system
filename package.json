@@ -21,7 +21,6 @@
     "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-sharp": "^2.1.19",
     "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
@@ -57,6 +56,7 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.5.1",
     "eslint-plugin-react": "^7.13.0",
+    "prop-types": "^15.7.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylelint-scss": "^3.7.0",
@@ -79,7 +79,8 @@
     "build-storybook:angular": "node node_modules/@storybook/angular/bin/build -c .storybook-angular -o ./static/angular",
     "storybook:react": "node node_modules/@storybook/react/bin/index -p 9001 -c .storybook-react",
     "storybook:html": "node node_modules/@storybook/html/bin/index -p 8001 -c .storybook-html",
-    "storybook:angular": "node node_modules/@storybook/angular/bin/index -p 7001 -c .storybook-angular"
+    "storybook:angular": "node node_modules/@storybook/angular/bin/index -p 7001 -c .storybook-angular",
+    "storybook:all": "npm run storybook:html && npm run build-storybook:react && npm run build-storybook:angular"
   },
   "lint-staged": {
     "*.scss": [

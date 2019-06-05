@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkIcon } from '@sparkdesignsystem/spark-react';
-storiesOf('Icons', module)
+import SprkIcon from './SprkIcon';
+
+storiesOf('Components|Icons', module)
   .add('amount-money', () => (
     <SprkIcon iconName="amount-money" additionalClasses="sprk-c-Icon--l" />
   ))

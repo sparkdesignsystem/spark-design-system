@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkTable, SprkButton } from '@sparkdesignsystem/spark-react';
+import SprkTable from './SprkTable';
+import SprkButton from '../../../components/buttons/react/SprkButton';
 
-storiesOf('Tables', module)
+storiesOf('Base|Tables', module)
   .add('column comparison', () => (
     <SprkTable
       additionalTableClasses="sprk-b-Table--spacing-medium"

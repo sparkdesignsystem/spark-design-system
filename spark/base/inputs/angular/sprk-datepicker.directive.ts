@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Inject, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import TinyDatePicker from 'tiny-date-picker';
 
 @Directive({

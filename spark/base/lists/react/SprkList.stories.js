@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkList, SprkListItem } from '@sparkdesignsystem/spark-react';
+import SprkList from './SprkList';
+import SprkListItem from './SprkListItem';
 
-storiesOf('Lists', module)
+storiesOf('Base|Lists', module)
   .add('unordered list', () => (
     <SprkList
       element="ul"

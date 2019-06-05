@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import SprkCardHighlightedHeader from './components/SprkCardHighlightedHeader/SprkCardHighlightedHeader';
-import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
+import SprkCardHighlightedHeader from './SprkCardHighlightedHeader';
+import SprkCardTeaser from './SprkCardTeaser';
 
 const SprkCard = (props) => {
   const {

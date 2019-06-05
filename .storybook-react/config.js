@@ -1,3 +1,4 @@
+import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { action } from "@storybook/addon-actions"
 import { themes } from '@storybook/theming';
@@ -7,12 +8,16 @@ import { withInfo } from '@storybook/addon-info';
 
 addDecorator(withA11y);
 addDecorator(withInfo);
+addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
 // Option defaults.
 addParameters({
   options: {
     theme: themes.normal,
   },
-  info: { inline: true, header: false },
+  info: {
+    inline: true,
+    header: false,
+  },
 });
 
 // automatically import all files ending in *.stories.js

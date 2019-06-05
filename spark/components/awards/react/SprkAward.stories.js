@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkAward } from '@sparkdesignsystem/spark-react';
+import SprkAward from './SprkAward';
+
 storiesOf('Award', module)
   .add('default', () => (
     <SprkAward

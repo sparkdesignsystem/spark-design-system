@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
-import { SprkDropdown, SprkButton } from '@sparkdesignsystem/spark-react';
+import SprkDropdown from './SprkDropdown';
 
 storiesOf('Dropdown', module)
   .add('default', () => (

@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkTabs, SprkTabsPanel } from '@sparkdesignsystem/spark-react';
-storiesOf('Tabs', module)
+import SprkTabs from './SprkTabs';
+
+storiesOf('Components|Tabs', module)
   .add('default', () => (
     <SprkTabs idString="tabs-1">
       <SprkTabsPanel

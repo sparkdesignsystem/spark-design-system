@@ -1,7 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkStack, SprkStackItem } from '@sparkdesignsystem/spark-react';
-storiesOf('Stack', module)
+import SprkStack from './SprkStack';
+import SprkStackItem from './SprkStackItem';
+
+storiesOf('Objects|Stack', module)
   .add('default', () => (
     <SprkStack>
       <SprkStackItem>Test 1</SprkStackItem>

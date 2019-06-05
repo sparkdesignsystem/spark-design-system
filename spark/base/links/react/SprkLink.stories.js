@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkLink, SprkIcon } from '@sparkdesignsystem/spark-react';
-storiesOf('Links', module)
+import SprkLink from './SprkLink';
+
+storiesOf('Base|Links', module)
   .add('default', () => (
     <SprkLink
       href="#"
