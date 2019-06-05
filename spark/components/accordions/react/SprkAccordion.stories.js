@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import SprkAccordion from './SprkAccordion';
+import SprkAccordionItem from './SprkAccordionItem';
 
 storiesOf('Components|Accordion', module)
   .add('default', () => (
