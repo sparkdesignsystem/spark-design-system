@@ -1,15 +1,17 @@
 /* global document describe beforeEach afterEach it  window  */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import createElementFromString from './_createElementFromString';
-import { carousel as regCarousel } from '../components/carousel';
+import
+  createElementFromString
+  from '../../../utilities/helpers/vanilla/_createElementFromString';
+import { carousel as regCarousel } from './carousel';
 
 const proxyquire = require('proxyquire');
 
 const lorySpy = sinon.spy();
 
 const { carousel, beforeLoryInit, afterLoryInit, afterLorySlide } = proxyquire(
-  '../components/carousel',
+  './carousel',
   {
     'lory.js': {
       lory: lorySpy,

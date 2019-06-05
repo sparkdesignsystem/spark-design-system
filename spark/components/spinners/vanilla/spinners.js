@@ -1,5 +1,5 @@
 /* global window */
-import getElements from '../utilities/getElements';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 
 const getSpinnerClasses = (options) => {
   const classes = ['sprk-c-Spinner', 'sprk-c-Spinner--circle'];

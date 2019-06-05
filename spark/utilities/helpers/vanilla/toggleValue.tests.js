@@ -1,6 +1,6 @@
 /* global describe it */
 import { expect } from 'chai';
-import toggleValue from '../utilities/toggleValue';
+import toggleValue from './toggleValue';
 
 describe('toggle value tests', () => {
   it('if the current value is equal to value 1, return value 2', () => {

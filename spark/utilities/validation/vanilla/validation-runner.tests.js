@@ -1,7 +1,7 @@
 /* global describe it beforeEach document */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import runValidation from '../utilities/validation/validation-runner';
+import runValidation from './validation-runner';
 
 describe('validation runner', () => {
   let element;
@@ -34,6 +34,6 @@ describe('validation runner', () => {
     field.setAttribute('pattern', '(abc)?');
     field.value = '123';
     runValidation(element, field, validFunction, inValidFunction);
-    expect(inValidFunction.calledOnce).eql(true);
+    expect(inValidFunction.called).eql(true);
   });
 });

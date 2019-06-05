@@ -1,6 +1,8 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import { setAriaLabel } from '../components/pagination';
+import {
+  setAriaLabel,
+} from '../../../components/pagination/vanilla/pagination';
 
 describe('Pagination tests', () => {
   let navContainer;

@@ -1,7 +1,11 @@
 /* global window document describe before beforeEach afterEach it */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { requiredTextInput, runValidation, bindUIEvents } from '../base/requiredTextInput';
+import {
+  requiredTextInput,
+  runValidation,
+  bindUIEvents,
+} from './requiredTextInput';
 
 describe('requiredTextInput init', () => {
   afterEach(() => {

@@ -6,7 +6,7 @@
 *  in the markup.
 */
 import { expect } from 'chai';
-import isValidPhone from '../utilities/validation/isValidPhone';
+import isValidPhone from './isValidPhone';
 
 describe('isValidPhone tests', () => {
   it('should pass on a valid Phone', () => {

@@ -6,7 +6,7 @@
 * the markup.
 */
 import { expect } from 'chai';
-import isValidMonetary from '../utilities/validation/isValidMonetary';
+import isValidMonetary from './isValidMonetary';
 
 describe('isValidMonetary tests', () => {
   it('should pass on a valid ssn', () => {

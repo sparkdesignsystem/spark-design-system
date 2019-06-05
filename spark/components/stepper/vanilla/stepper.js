@@ -1,12 +1,12 @@
-import getElements from '../utilities/getElements';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 import {
   advanceTab,
   getActiveTabIndex,
   resetTabs,
   retreatTab,
   setActiveTab,
-} from './tabs';
-import { carousel } from './carousel';
+} from '../../tabs/vanilla/tabs';
+import { carousel } from '../../carousel/vanilla/carousel';
 
 const resetSlider = (steps, activeClass, slider) => {
   if (!slider) return;
