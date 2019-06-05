@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkSpinner from '../SprkSpinner/SprkSpinner';
+import SprkSpinner from '../../spinners/react/SprkSpinner';
 
 const SprkButton = ({
   additionalClasses,
@@ -45,27 +45,29 @@ const SprkButton = ({
 };
 
 SprkButton.propTypes = {
-  // classes to add to the class of the rendered element
+  /**
+   * Classes to add to the rendered element.
+   */
   additionalClasses: PropTypes.string,
-  // mapped to data-analytics
+  /** Value for the data-analytics attribute. */
   analyticsString: PropTypes.string,
-  // incoming children
+  /** Children */
   children: PropTypes.node,
-  // whether to render a disabled button
+  /** Boolen option to render a disabled button. */
   disabled: PropTypes.bool,
-  // determines what element to render in the dom
+  /** Determines what type of element to render. */
   element: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
   ]),
-  // mapped to data-id for testing purposes
+  /** Value for data-id for testing purposes. */
   idString: PropTypes.string,
-  // if true, will render a spinner in the button instead of children
+  /** If true, will render a spinner in the button instead of children. */
   loading: PropTypes.bool,
-  // decides which button variant to render
+  /** Decides which button variant to render. */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  // the url rendered if the href is provided
+  /** the url rendered if the href is provided */
   href: PropTypes.string,
 };
 
