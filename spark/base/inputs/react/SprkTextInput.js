@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from './SprkErrorContainer';
-import SprkIcon from '../../icons/react/SprkIcon';
+import SprkIcon from '../../../components/icons/react/SprkIcon';
 
 class SprkTextInput extends Component {
   constructor(props) {
