@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import SprkDropdown from './SprkDropdown';
 
-storiesOf('Dropdown', module)
+storiesOf('Components|Dropdown', module)
   .add('default', () => (
       <SprkDropdown
         choices={{
