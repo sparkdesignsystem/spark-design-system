@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import warning from 'warning';
-import SprkButton from '../SprkButton/SprkButton';
+import SprkButton from '../../buttons/react/SprkButton';
 
 const SprkHighlightBoard = (props) => {
   const {

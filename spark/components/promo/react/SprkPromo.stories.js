@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkPromo } from '@sparkdesignsystem/spark-react';
+import SprkPromo from './SprkPromo';
 
-storiesOf('Promo', module)
+storiesOf('Components|Promo', module)
   .add('default', () => (
     <SprkPromo
       title="Title"

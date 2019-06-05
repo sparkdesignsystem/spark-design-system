@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-storiesOf('Stepper', module);
+storiesOf('Components|Stepper', module);
   // .add('default', () => (
   // ))
   // .add('with descriptions', () => (

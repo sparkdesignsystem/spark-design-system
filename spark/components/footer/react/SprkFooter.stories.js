@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkFooter } from '@sparkdesignsystem/spark-react';
+import SprkFooter from './SprkFooter';
 
 const globalItems = {
   heading: 'Global Links',
@@ -198,7 +198,7 @@ const additionalIcons = [{
   element: 'a',
 },
 ];
-storiesOf('Footer', module)
+storiesOf('Components|Footer', module)
   .add('default', () => (
     <SprkFooter
       globalItems={globalItems}

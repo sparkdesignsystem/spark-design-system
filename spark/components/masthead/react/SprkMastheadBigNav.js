@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import SprkMastheadDropdown from '../SprkMastheadDropdown/SprkMastheadDropdown';
+import SprkMastheadDropdown from './SprkMastheadDropdown';
 
 class SprkMastheadBigNav extends Component {
   constructor(props) {

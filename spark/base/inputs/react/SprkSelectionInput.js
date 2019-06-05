@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
-import SprkIcon from '../../SprkIcon/SprkIcon';
+import SprkErrorContainer from './SprkErrorContainer';
+import SprkIcon from '../../icons/reaact/SprkIcon';
 
 class SprkSelectionInput extends React.Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkIcon from '../SprkIcon/SprkIcon';
+import SprkIcon from '../../icons/react/SprkIcon';
 
 const SprkAlert = (props) => {
   const {

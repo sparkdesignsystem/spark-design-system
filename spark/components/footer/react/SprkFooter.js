@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import SprkIcon from '../SprkIcon/SprkIcon';
-import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
-import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
-import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
+import SprkIcon from '../../icons/react/SprkIcon';
+import SprkFooterGlobalSection from './SprkFooterGlobalSection';
+import SprkFooterConnectIcons from './SprkFooterConnectIcons';
+import SprkFooterAwards from './SprkFooterAwards';
 
 class SprkFooter extends Component {
   constructor(props) {

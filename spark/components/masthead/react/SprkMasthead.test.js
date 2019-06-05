@@ -1,14 +1,13 @@
 /* global it expect window document Event */
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMasthead from './SprkMasthead';
-import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
-import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
-import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
-import SprkLink from '../SprkLink/SprkLink';
+import SprkMastheadLittleNav from './SprkMastheadLittleNav';
+import SprkMastheadBigNav from './SprkMastheadBigNav';
+import SprkMastheadNarrowNav from './SprkMastheadNarrowNav';
+import SprkLink from '../../../base/links/react/SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 

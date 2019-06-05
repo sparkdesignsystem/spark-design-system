@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TinyDatePicker from 'tiny-date-picker';
 import { assign } from 'lodash';
-import SprkTextInput from '../SprkTextInput/SprkTextInput';
+import SprkTextInput from './SprkTextInput';
 
 class SprkDatePickerInput extends Component {
   constructor(props) {

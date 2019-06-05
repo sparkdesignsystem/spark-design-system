@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { SprkAlert } from '@sparkdesignsystem/spark-react';
-storiesOf('Alert', module)
+import SprkAlert from './SprkAlert';
+
+storiesOf('Components|Alert', module)
   .add('default', () => (
     <SprkAlert
       message="This is an alert."

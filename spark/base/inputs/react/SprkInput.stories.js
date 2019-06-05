@@ -1,22 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  isValidPhone,
-  isValidDate,
-  formatDate,
-  formatPhone,
-  isValidMonetary,
-  formatSSN,
-  isValidSSN,
-} from '@sparkdesignsystem/spark/es5/sparkExports';
-import {
-  SprkTextInput,
-  SprkRevealInput,
-  SprkSelectionInput,
-  SprkDatePickerInput,
-} from '@sparkdesignsystem/spark-react';
+import formatPhone from '../vanilla/phoneInput';
+import isValidMonetary from '../vanilla/monetaryInput';
+import formatDate from '../vanilla/dateInput';
+import isValidDate from '../vanilla/dateInput';
+import isValidPhone from '../vanilla/phoneInput';
+import formatSSN from '../vanilla/ssnInput';
+import isValidSSN from '../vanilla/ssnInput';
+import SprkDatePickerInput from './SprkDatePickerInput';
+import SprkSelectionInput from './SprkSelectionInput';
+import SprkRevealInput from './SprkRevealInput';
+import SprkTextInput from './SprkTextInput';
 
-storiesOf('Inputs', module)
+storiesOf('Base|Inputs', module)
   .add('text input', () => (
     <SprkTextInput
       label="Text Input Label"

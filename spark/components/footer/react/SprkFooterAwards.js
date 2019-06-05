@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
-import SprkToggle from '../../../SprkToggle/SprkToggle';
+import SprkToggle from '../../toggle/react/SprkToggle';
 
 class SprkFooterAwards extends Component {
   constructor(props) {

@@ -2,8 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import SprkToggle from '../SprkToggle/SprkToggle';
-import SprkStack from '../SprkStack/SprkStack';
+import SprkToggle from '../../toggle/react/SprkToggle';
+import SprkStack from '../../../objects/stack/react/SprkStack';
 
 const SprkAward = (props) => {
   const {

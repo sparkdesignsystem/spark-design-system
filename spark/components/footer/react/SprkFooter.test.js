@@ -3,10 +3,10 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkFooter from './SprkFooter';
-import SprkIcon from '../SprkIcon/SprkIcon';
-import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
-import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
-import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
+import SprkIcon from '../../icons/react/SprkIcon';
+import SprkFooterGlobalSection from './SprkFooterGlobalSection';
+import SprkFooterConnectIcons from './SprkFooterConnectIcons';
+import SprkFooterAwards from './SprkFooterAwards';
 
 Enzyme.configure({ adapter: new Adapter() });
 

@@ -3,8 +3,8 @@ import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkPagination from './SprkPagination';
-import SprkIcon from '../SprkIcon/SprkIcon';
-import SprkLink from '../SprkLink/SprkLink';
+import SprkIcon from '../../icons/react/SprkIcon';
+import SprkLink from '../../../base/links/react/SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 

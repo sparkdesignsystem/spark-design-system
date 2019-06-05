@@ -2,11 +2,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMastheadMenuIcon';
-import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
-import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
-import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
-import SprkLink from '../SprkLink/SprkLink';
+import SprkMastheadMenuIcon from './SprkMastheadMenuIcon';
+import SprkMastheadLittleNav from './SprkMastheadLittleNav';
+import SprkMastheadNarrowNav from './SprkMastheadNarrowNav';
+import SprkMastheadBigNav from './SprkMastheadBigNav';
+import SprkLink from '../../../base/links/react/SprkLink';
 
 class SprkMasthead extends Component {
   constructor() {
