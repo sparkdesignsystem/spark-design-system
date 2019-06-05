@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ContentChildren, QueryList, ViewChildren, ChangeDetectorRef, ContentChild, TemplateRef, AfterContentInit } from '@angular/core';
 import {
   handleTabKeydown,
   resetTabs,
-  setActiveTab
+  setActiveTab,
 } from '@sparkdesignsystem/spark';
+import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.component';
 
 @Component({
   selector: 'sprk-stepper',
@@ -15,18 +16,26 @@ import {
       role="tablist"
       aria-orientation="vertical"
     >
-      <ng-content></ng-content>
+      <ng-container *ngFor="let step of steps; let i = index;">
+        <ng-container *ngTemplateOutlet='step.template'></ng-container>
+      </ng-container>
     </ol>
   `
 })
-export class SprkStepperComponent implements AfterViewInit {
+export class SprkStepperComponent implements AfterViewInit, AfterContentInit {
   @Input()
   additionalClasses: string;
   @Input()
   idString: string;
   @Input()
+  hasDescription: boolean;
+  @Input()
   hasDarkBg: boolean;
+  defaults: { name: string };
 
+
+  // Grabs the children of component
+  @ContentChildren(SprkStepperStepComponent) steps: QueryList<SprkStepperStepComponent>;
   constructor(public ref: ElementRef) {}
 
   getClasses(): string {
@@ -97,5 +106,11 @@ export class SprkStepperComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.bindUIEvents();
+  }
+
+  ngAfterContentInit(): void {
+    this.steps.forEach((step) => {
+      step.hasDescription = this.hasDescription;
+    });
   }
 }

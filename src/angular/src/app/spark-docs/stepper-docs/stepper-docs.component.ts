@@ -7,14 +7,16 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">Stepper</h2>
 
       <sprk-stepper idString="stepper-1">
-        <sprk-stepper-step heading="Step One"></sprk-stepper-step>
+        <sprk-stepper-step heading="Step One">
+        </sprk-stepper-step>
 
         <sprk-stepper-step heading="Step Two"></sprk-stepper-step>
 
         <sprk-stepper-step
           heading="Step Three"
           isDefaultActive="true"
-        ></sprk-stepper-step>
+        >
+        </sprk-stepper-step>
       </sprk-stepper>
     </div>
 
@@ -36,20 +38,19 @@ import { Component } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Stepper With Descriptions</h2>
 
-      <sprk-stepper idString="stepper-1">
+      <sprk-stepper idString="stepper-1" [hasDescription]="true">
         <sprk-stepper-step
           heading="Step 1"
           isDefaultActive="true"
-          variant="hasDescription"
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </sprk-stepper-step>
 
-        <sprk-stepper-step heading="Step 2" variant="hasDescription">
+        <sprk-stepper-step heading="Step 2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </sprk-stepper-step>
 
-        <sprk-stepper-step heading="Step 3" variant="hasDescription">
+        <sprk-stepper-step heading="Step 3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </sprk-stepper-step>
       </sprk-stepper>
