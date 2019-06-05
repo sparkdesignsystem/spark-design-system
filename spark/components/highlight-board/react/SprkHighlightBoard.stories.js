@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkHighlightBoard } from '@sparkdesignsystem/spark-react';
+import SprkHighlightBoard from './SprkHighlightBoard';
 
-storiesOf('Highlight Board', module)
+storiesOf('Components|Highlight Board', module)
   .add('default', () => (
     <SprkHighlightBoard
       imgSrc='https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg'

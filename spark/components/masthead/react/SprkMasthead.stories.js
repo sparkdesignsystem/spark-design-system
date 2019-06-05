@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkMasthead, SprkButton, SprkLink } from '@sparkdesignsystem/spark-react';
+import SprkMasthead from './SprkMasthead';
+
 const links = [
   {
     text: 'Item 1',
@@ -52,7 +53,7 @@ const utilityItems = [
   <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
   <SprkButton element="a" to="/button" variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>,
 ];
-storiesOf('Masthead', module)
+storiesOf('Components|Masthead', module)
   .add('default', () => (
     <SprkMasthead
       littleNavLinks={links}

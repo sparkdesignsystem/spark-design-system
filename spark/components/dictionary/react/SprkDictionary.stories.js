@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkDictionary } from '@sparkdesignsystem/spark-react';
-storiesOf('Dictionary', module)
+import SprkDictionary from './SprkDictionary';
+
+storiesOf('Components|Dictionary', module)
   .add('default', () => (
       <SprkDictionary
         idString="dictionary-1"

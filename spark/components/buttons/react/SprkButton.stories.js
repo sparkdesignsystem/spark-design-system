@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import SprkButton from './SprkButton';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-const stories = storiesOf('Button', module);
+const stories = storiesOf('Components|Button', module);
 
 stories.addDecorator(withKnobs);
 

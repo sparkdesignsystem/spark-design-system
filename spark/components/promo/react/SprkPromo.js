@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkLink from '../SprkLink/SprkLink';
-import SprkButton from '../SprkButton/SprkButton';
+import SprkLink from '../../../base/links/react/SprkLink';
+import SprkButton from '../../buttons/react/SprkButton';
 
 const SprkPromo = (props) => {
   const {

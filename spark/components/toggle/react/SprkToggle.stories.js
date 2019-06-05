@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkToggle } from '@sparkdesignsystem/spark-react';
-storiesOf('Toggle', module)
+import SprkToggle from './SprkToggle';
+
+storiesOf('Components|Toggle', module)
   .add('default', () => (
     <SprkToggle
       title="My Disclaimer"

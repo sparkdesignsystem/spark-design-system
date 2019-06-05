@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { SprkDivider } from '@sparkdesignsystem/spark-react';
+import SprkDivider from './SprkDivider';
+
 storiesOf('Divider', module)
   .add('as a span element', () => (
     <SprkDivider

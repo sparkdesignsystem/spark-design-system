@@ -67,7 +67,7 @@ SprkButton.propTypes = {
   loading: PropTypes.bool,
   /** Decides which button variant to render. */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  /** the url rendered if the href is provided */
+  /** The url rendered if the href is provided. */
   href: PropTypes.string,
 };
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { SprkAccordion, SprkAccordionItem } from '@sparkdesignsystem/spark-react';
-storiesOf('Accordion', module)
+import SprkAccordion from './SprkAccordion';
+
+storiesOf('Components|Accordion', module)
   .add('default', () => (
     <SprkAccordion>
       <SprkAccordionItem

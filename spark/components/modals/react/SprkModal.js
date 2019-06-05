@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import * as _ from 'lodash';
 import { getFocusableEls, isActiveElement, isTabPressed, isEscPressed } from '@sparkdesignsystem/spark';
-import SprkSpinner from '../SprkSpinner/SprkSpinner';
-import CloseButton from './components/CloseButton/CloseButton';
-import ModalFooter from './components/ModalFooter/ModalFooter';
-import Mask from './components/Mask/Mask';
+import SprkSpinner from '../../spinners/react/SprkSpinner';
+import CloseButton from './CloseButton';
+import ModalFooter from './ModalFooter';
+import Mask from './Mask';
 
 class SprkModal extends Component {
   constructor(props) {

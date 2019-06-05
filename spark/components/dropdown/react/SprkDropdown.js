@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkIcon from '../SprkIcon/SprkIcon';
-import SprkLink from '../SprkLink/SprkLink';
+import SprkIcon from '../../icons/react/SprkIcon';
+import SprkLink from '../../../base/links/react/SprkLink';
 
 class SprkDropdown extends Component {
   constructor(props) {
