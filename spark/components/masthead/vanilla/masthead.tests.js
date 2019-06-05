@@ -8,10 +8,10 @@ import {
   toggleMobileNav,
   hideMobileNavs,
   addClassOnScroll,
-} from '../components/masthead';
+} from './masthead';
 import {
   dropdowns,
-} from '../components/dropdown';
+} from '../../dropdown/vanilla/dropdown';
 
 describe('masthead init', () => {
   afterEach(() => {

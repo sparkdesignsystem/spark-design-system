@@ -10,7 +10,7 @@ import {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
-} from '../components/tabs';
+} from './tabs';
 
 describe('tabs init', () => {
   afterEach(() => {

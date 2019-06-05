@@ -1,7 +1,7 @@
 /* global document describe beforeEach afterEach it  window  */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import { dismissAlert, alerts, bindUIEvents } from '../components/alerts';
+import { dismissAlert, alerts, bindUIEvents } from './alerts';
 
 describe('Alert tests', () => {
   let container;

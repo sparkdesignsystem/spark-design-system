@@ -1,8 +1,8 @@
 /* global document window */
-import getElements from '../utilities/getElements';
-import { focusFirstEl } from '../utilities/elementState';
-import { isEscPressed } from '../utilities/keypress';
-import { hideDropDown, showDropDown } from './dropdown';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
+import { focusFirstEl } from '../../../utilities/helpers/vanilla/elementState';
+import { isEscPressed } from '../../../utilities/helpers/vanilla/keypress';
+import { hideDropDown, showDropDown } from '../../dropdown/vanilla/dropdown';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class

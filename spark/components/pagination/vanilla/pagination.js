@@ -1,4 +1,4 @@
-import getElements from '../utilities/getElements';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 
 /**
  *  Set aria-label to 'Page <number>'
