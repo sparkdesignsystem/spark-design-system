@@ -52,7 +52,9 @@ const toggleScrollEvent = isMenuVisible => {
   let attached = false;
   if (!isMenuVisible) {
     const masthead = document.querySelector('[data-sprk-masthead]');
-    masthead.classList.remove('sprk-c-Masthead--hidden');
+    if (masthead) {
+      masthead.classList.remove('sprk-c-Masthead--hidden');
+    }
   }
   if (isMenuVisible) {
     window.addEventListener('scroll', checkScrollDirection);
