@@ -5,7 +5,7 @@ import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
 import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
-import debounce from '../node_modules/lodash/debounce';
+import throttle from '../node_modules/lodash/throttle';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
@@ -20,6 +20,7 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
 * Add or remove the class depending
 * on if the user is scrolling up or down
 */
+let direction = scrollYDirection();
 const toggleMenu = scrollDirection => {
   const masthead = document.querySelector('[data-sprk-masthead]');
   if (scrollDirection === 'down') {
@@ -34,14 +35,13 @@ const toggleMenu = scrollDirection => {
 * If the scroll direction changes
 * toggle the masthead visibility 
 */
-let direction = scrollYDirection();
-const checkScrollDirection = debounce(() => {
+const checkScrollDirection = throttle(() => {
   const newDirection = scrollYDirection();
   if (direction !== newDirection) {
     toggleMenu(newDirection);
   }
   direction = newDirection;
-}, 30);
+}, 500);
 
 /* 
 * If the mobile menu is visible
@@ -50,6 +50,10 @@ const checkScrollDirection = debounce(() => {
 */
 const toggleScrollEvent = isMenuVisible => {
   let attached = false;
+  if (!isMenuVisible) {
+    const masthead = document.querySelector('[data-sprk-masthead]');
+    masthead.classList.remove('sprk-c-Masthead--hidden');
+  }
   if (isMenuVisible) {
     window.addEventListener('scroll', checkScrollDirection);
     attached = true;
@@ -137,14 +141,16 @@ const bindUIEvents = () => {
     * If the mobile menu visibility changes
     * toggle scroll event listener
     */
-    window.addEventListener('resize', () => {
-      console.log(isMenuVisible);
-      const newMenuVisibility = isElementVisible('.sprk-c-Masthead__menu');
-      if (isMenuVisible !== newMenuVisibility) {
-        toggleScrollEvent(newMenuVisibility);
-      }
-      isMenuVisible = newMenuVisibility;
-    });
+    window.addEventListener(
+      'resize',
+      throttle(() => {
+        const newMenuVisibility = isElementVisible('.sprk-c-Masthead__menu');
+        if (isMenuVisible !== newMenuVisibility) {
+          toggleScrollEvent(newMenuVisibility);
+        }
+        isMenuVisible = newMenuVisibility;
+      }, 500),
+    );
 
     element.addEventListener('click', e => {
       e.preventDefault();
