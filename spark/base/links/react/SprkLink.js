@@ -57,9 +57,12 @@ const SprkLink = (props) => {
 };
 
 SprkLink.propTypes = {
-  // The children that will be rendered inside the link
+  /** The children that will be rendered inside the link. */
   children: PropTypes.node,
-  // The link variant that determines the class names
+  /**
+   * Will cause the appropriate variant
+   * type to render.
+   */
   variant: PropTypes.oneOf([
     'base',
     'simple',
@@ -68,17 +71,27 @@ SprkLink.propTypes = {
     'disabled',
     'unstyled',
   ]),
-  // The string to use for the data-id attribute
+  /**
+   * The value supplied will be assigned to
+   * the 'data-id' attribute on the
+   * component. This is intended to be used as
+   * a selector for automated tools. This value
+   * should be unique per page.
+   */
   idString: PropTypes.string,
-  // The string to use for the data-analytics attribute
+  /** The value supplied will be assigned to the 'data-analytics' attribute. */
   analyticsString: PropTypes.string,
-  // Any additional classes to add to the link
+  /**
+   * A space-separated list of
+   * classes that will be added
+   * to the outermost element.
+  */
   additionalClasses: PropTypes.string,
-  // Url passed
+  /** The href value for the link. */
   href: PropTypes.string,
-  // The element that will be rendered
+  /** The element that will be rendered. */
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // The event that will fire when the element is clicked
+  /** The event that will fire when the element is clicked. */
   onClick: PropTypes.func,
 };
 

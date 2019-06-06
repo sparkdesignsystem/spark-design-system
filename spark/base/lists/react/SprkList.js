@@ -31,15 +31,28 @@ SprkList.defaultProps = {
 };
 
 SprkList.propTypes = {
-  // The element that will be rendered - Required
+  /** The element that will be rendered. */
   element: PropTypes.oneOf(['ol', 'ul']).isRequired,
-  // The children that will be rendered inside the list
+  /** The children that will be rendered inside the list. */
   children: PropTypes.node,
-  // The list variant that determines the class names
+  /**
+   * Will cause the appropriate variant
+   * type to render.
+   */
   variant: PropTypes.oneOf(['indented', 'bare']),
-  // The string to use for the data-id attribute
+  /**
+   * The value supplied will be assigned to
+   * the 'data-id' attribute on the
+   * component. This is intended to be used as
+   * a selector for automated tools. This value
+   * should be unique per page.
+   */
   idString: PropTypes.string,
-  // Any additional classes to add to the link
+  /**
+   * A space-separated list of
+   * classes that will be added
+   * to the outermost element.
+  */
   additionalClasses: PropTypes.string,
 };
 

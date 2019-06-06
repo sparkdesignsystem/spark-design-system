@@ -1,10 +1,11 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { action } from "@storybook/addon-actions"
-import { themes } from '@storybook/theming';
 import '@sparkdesignsystem/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
+import { themes } from '@storybook/theming';
+import sparkTheme from "../storybook-spark-theme";
 
 addDecorator(withA11y);
 addDecorator(withInfo);
@@ -12,7 +13,7 @@ addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
 // Option defaults.
 addParameters({
   options: {
-    theme: themes.normal,
+    theme: sparkTheme,
   },
   info: {
     inline: true,

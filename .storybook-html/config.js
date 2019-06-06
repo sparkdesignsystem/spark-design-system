@@ -1,16 +1,16 @@
 import { configure, addDecorator, addParameters } from '@storybook/html';
-import { themes } from '@storybook/theming';
 import '@sparkdesignsystem/spark/_spark.scss';
 import spark from "@sparkdesignsystem/spark/spark";
 import { withA11y } from '@storybook/addon-a11y';
-
+import { themes } from '@storybook/theming';
+import sparkTheme from "../storybook-spark-theme";
 
 spark({});
 addDecorator(withA11y);
 // Option defaults.
 addParameters({
   options: {
-    theme: themes.normal,
+    theme: sparkTheme,
   },
   info: { inline: true, header: false },
 });
