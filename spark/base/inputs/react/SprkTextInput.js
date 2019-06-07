@@ -111,6 +111,11 @@ class SprkTextInput extends Component {
 }
 
 SprkTextInput.propTypes = {
+  /**
+   * A space-separated list of
+   * classes that will be added
+   * to the outermost element.
+  */
   additionalClasses: PropTypes.string,
   analyticsString: PropTypes.string,
   children: PropTypes.node,

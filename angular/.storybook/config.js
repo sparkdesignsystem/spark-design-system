@@ -2,11 +2,12 @@
 import '!style-loader!css-loader!sass-loader!@sparkdesignsystem/spark/_spark.scss';
 import { configure, addParameters } from '@storybook/angular';
 import { themes } from '@storybook/theming';
+import sparkTheme from "../storybook-spark-theme";
 
 // Option defaults.
 addParameters({
   options: {
-    theme: themes.normal,
+    theme: sparkTheme,
   },
   info: { inline: true, header: false },
 });

@@ -19,9 +19,12 @@ module.exports = ({ config }) => {
 
    config.module.rules.push({
     test: /\.scss$/,
-    use: ['style-loader', 'css-loader', 'sass-loader'],
-    include: path.resolve(__dirname, '../'),
+    use: ['style-loader', 'css-loader', 'sass-loader']
   });
+
+  config.node = {
+    fs: 'empty'
+  }
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ["browser", "module", "main"]

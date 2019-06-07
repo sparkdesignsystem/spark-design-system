@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '../../../../react/node_modules/@storybook/react';
 import SprkToggle from './SprkToggle';
 
 storiesOf('Components|Toggle', module)

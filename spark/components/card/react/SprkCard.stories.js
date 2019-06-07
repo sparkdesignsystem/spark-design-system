@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '../../../../react/node_modules/@storybook/react';
 import { SprkCard } from '@sparkdesignsystem/spark-react';
 
 storiesOf('Components|Card', module)
