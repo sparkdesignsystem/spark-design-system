@@ -33,6 +33,11 @@
   box-shadow: $sprk-masthead-shadow-scroll;
 }
 
+.sprk-c-Masthead--hidden {
+  transform: $sprk-masthead-translateY;
+  transition: $sprk-masthead-transition;
+}
+
 // Keep padding settings consistent for menu, logo branding, and little nav
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding,
