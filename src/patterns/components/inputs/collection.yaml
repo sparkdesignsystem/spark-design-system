@@ -219,7 +219,7 @@ variableTable:
     default: 0.8125rem
     description: The font size used for input error text.
   $sprk-input-error-text-line-height:
-    default: 1.2
+    default: 1.4
     description: The line-height used for input error text.
   $sprk-input-error-text-margin:
     default: 0 0 0 6px

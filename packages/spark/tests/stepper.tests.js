@@ -387,7 +387,7 @@ describe('steps UI Events tests, (descriptions)', () => {
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
               data-sprk-stepper="description"
               aria-labelledby="step-3"
-              ids="target-3"
+              id="target-3"
               role="tabpanel">
               <p class="sprk-b-TypeBodyTwo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -545,7 +545,7 @@ describe('slider position tests', () => {
         </div>
       </li>
     `);
-    resetSlider([step], 'test', slider);
+    resetSlider([step], slider);
     expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).eql(0);
   });
 
@@ -570,7 +570,7 @@ describe('slider position tests', () => {
         </div>
       </li>
     `);
-    positionSlider(step, undefined, slider, 'test');
+    positionSlider(step, undefined, slider);
     expect(step.getAttribute('aria-selected')).eql('true');
   });
 });

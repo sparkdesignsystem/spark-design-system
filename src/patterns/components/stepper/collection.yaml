@@ -109,6 +109,54 @@ variableTable:
   $sprk-stepper-dark-bar-color:
     default: $sprk-white
     description: The color of the bar that connects the steps when the stepper is on a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-carousel-dot-border:
+    default: $sprk-stepper-icon-border-width solid $sprk-stepper-dark-icon-border-color
+    description: The border style for the dots under the carousel on mobile.
+  $sprk-carousel-dot-height:
+    default: 10px
+    description: The height of the dots under the carousel on mobile.
+  $sprk-carousel-dot-width:
+    default: 10px
+    description: The width of the dots under the carousel on mobile.
+  $sprk-carousel-wide-dot-height:
+    default: 10px
+    description: The height of the dots under the carousel on mobile, after the $sprk-carousel-breakpoint.
+  $sprk-carousel-wide-dot-width:
+    default: 10px
+    description: The width of the dots under the carousel on mobile, after the $sprk-carousel-breakpoint.
+  $sprk-carousel-dot-spacing:
+    default: $sprk-space-m
+    description: The spacing around the dots under the carousel on mobile.
+  $sprk-carousel-wide-dot-spacing:
+    default: $sprk-carousel-dot-spacing
+    description: The spacing around the dots under the carousel on mobile, after the $sprk-carousel-breakpoint.
+  $sprk-carousel-dot-selected:
+    default: $sprk-stepper-icon-box-shadow-selected
+    description: The box shadow style applied to the selected dot.
+  $sprk-carousel-arrow-color:
+    default: $sprk-white
+    description: The color of the arrow icons on either side of the carousel.
+  $sprk-carousel-arrow-spacing:
+    default: $sprk-space-m
+    description: The spacing around the arrow icons on either side of the carousel.
+  $sprk-carousel-arrow-edge-spacing:
+    default: 0
+    description: The spacing applied between the arrows and the edge of the viewport, before the $sprk-carousel-breakpoint.
+  $sprk-carousel-arrow-padding:
+    default: $sprk-space-m
+    description: The padding applied to the arrow icons on either side of the carousel.
+  $sprk-carousel-narrow-image-max-width:
+    default: 18.75rem
+    description: The max width applied to the carousel image, before the $sprk-carousel-breakpoint.
+  $sprk-carousel-arrow-position-breakpoint:
+    default: 31.25rem
+    description: The point at which the arrow icons stop being attached to the edges of the viewport.
+  $sprk-carousel-dot-container-padding:
+    default: $sprk-space-xs
+    description: The padding applied to the dot container, under the carousel.
+  $sprk-carousel-breakpoint:
+    default: $sprk-split-breakpoint-xl
+    description: The point when the carousel controls are no longer visible.
 
 classTable:
   .sprk-c-Stepper--has-dark-bg:
