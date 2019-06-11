@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-// import { stepper } from '@sparkdesignsystem/spark';
 import { uniqueId } from 'lodash';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
+import SprkCarousel from './components/SprkCarousel/SprkCarousel';
+import SprkCarouselStep from './components/SprkCarouselStep/SprkCarouselStep';
+import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
 
 class SprkStepper extends Component {
   constructor(props) {
@@ -16,84 +19,43 @@ class SprkStepper extends Component {
     this.jumpToFirstTab = this.jumpToFirstTab.bind(this);
     this.jumpToLastTab = this.jumpToLastTab.bind(this);
     this.setInitialActiveStep = this.setInitialActiveStep.bind(this);
-
-    const { children } = this.props;
-
-    let itemsVar = [];
-    let stepIds = [];
-    if (children.length > 0) {
-      stepIds = children.map(() => uniqueId('step-'));
-      itemsVar = props.children.map((item, index) => ({
-        id: stepIds[index],
-        ...item, // this copies through all of the other react props
-      }));
-    }
+    this.updateSliderPosition = this.updateSliderPosition.bind(this);
+    this.setNewActiveStep = this.setNewActiveStep.bind(this);
 
     this.state = {
-      // this will include all non-stepperitem children.
-      // Does this break things? Test and fix.
-      items: itemsVar,
-      stepIds,
-      activeStepId: null,
-      // selectedIndex: 0,
+      // index of the active step as it appears in the stepper/carousel
+      activeStepIndex: 0,
+      sliderStyle: { top: 0, },
     };
   }
 
   componentDidMount() {
     this.setInitialActiveStep();
+
+    this.setState({
+      sliderStyle: { top: 0 } // todo - is this doing anything?
+    });
   }
 
   setInitialActiveStep() {
     const { children } = this.props;
-    const { stepIds } = this.state;
+
+    // the first step is active by default
+    let initialIndex = 0;
 
     if (children.length > 0) {
       children.forEach((child, index) => {
         if (child.props.isSelected) {
-          this.setState({ activeStepId: stepIds[index] });
+          initialIndex = index;
         }
       });
     }
+
+    this.setNewActiveStep(initialIndex);
   }
 
-  handleStepClick(e) {
-    const stepId = e.currentTarget.id;
-    this.setState({ activeStepId: stepId });
-  }
-
-  retreatTab() {
-    const { activeStepId, stepIds } = this.state;
-    const currentIndex = stepIds.indexOf(activeStepId);
-    let newIndex = currentIndex - 1;
-    if (newIndex < 0) {
-      newIndex = stepIds.length - 1;
-    }
-
-    this.setState({ activeStepId: stepIds[newIndex] });
-  }
-
-  advanceTab() {
-    const { activeStepId, stepIds } = this.state;
-    const currentIndex = stepIds.indexOf(activeStepId);
-    let newIndex = currentIndex + 1;
-
-    if (newIndex >= stepIds.length) {
-      newIndex = 0;
-    }
-
-    this.setState({ activeStepId: stepIds[newIndex] });
-  }
-
-  jumpToFirstTab() {
-    const { stepIds } = this.state;
-
-    this.setState({ activeStepId: stepIds[0] });
-  }
-
-  jumpToLastTab() {
-    const { stepIds } = this.state;
-
-    this.setState({ activeStepId: stepIds[stepIds.length - 1] });
+  handleStepClick(e, indexOfStep) {
+    this.setNewActiveStep(indexOfStep);
   }
 
   handleKeyEvents(event) {
@@ -121,25 +83,82 @@ class SprkStepper extends Component {
     }
   }
 
+  retreatTab() {
+    const { activeStepIndex } = this.state;
+    const { children } = this.props;
+
+    let newIndex = activeStepIndex - 1;
+
+    if (newIndex < 0) {
+      newIndex = children.length - 1;
+    }
+
+    this.setNewActiveStep(newIndex);
+  }
+
+  advanceTab() {
+    const { activeStepIndex } = this.state;
+    const { children } = this.props;
+
+    let newIndex = activeStepIndex + 1;
+
+    if (newIndex >= children.length) {
+      newIndex = 0;
+    }
+
+    this.setNewActiveStep(newIndex);
+  }
+
+  jumpToFirstTab() {
+    this.setNewActiveStep(0);
+  }
+
+  jumpToLastTab() {
+    const { children } = this.props;
+
+    this.setNewActiveStep(children.length - 1);
+  }
+
+  setNewActiveStep(stepIndex){
+    this.setState({ activeStepIndex: stepIndex });
+  }
+
+  updateSliderPosition(position) {
+    console.log('callback with value: ' + position);
+    this.setState({
+      sliderStyle: { top: position }
+    });
+  }
+
   render() {
-    const { additionalClasses, children, idString, variant, hasDarkBackground, ...other } = this.props;
-    const { items, activeStepId } = this.state;
+    const { additionalClasses, children, idString, hasDarkBackground, hasDescriptions, ...other } = this.props;
+    const { activeStepIndex } = this.state;
 
-    const hasCarousel = variant === 'carousel';
+    let hasCarousel = false;
 
+    children.forEach((child, index) => {
+      if (child.props.imgSrc) {
+        // validate that if one has it they all have it
+        hasCarsousel = true;
+      }
+    });
+
+    // build the carousel steps as needed
     const carousel = (
-      <div
-        className='sprk-c-Carousel'
-        //data-id
-      >
-        <div
-          className='sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column'
-        >
-          {/* first button */}
-          {/* carouselStep components */}
-          {/* second button */}
-        </div>
-      </div>
+      <SprkCarousel>
+        {/* {childNodes.map((childNode, index) => {
+          return (
+            <SprkCarouselStep
+              key={index} //TODO lodash or something
+              imgSrc={childNode.props.imgSrc}
+              imgAlt={childNode.props.imgAlt}
+              isSelected={childNode.id === activeStepId}
+            >
+
+            </SprkCarouselStep>
+          )
+        })} */}
+      </SprkCarousel>
     );
 
     let stepper = (
@@ -155,37 +174,54 @@ class SprkStepper extends Component {
         data-id={idString}
         {...other}
       >
-        {items.map((item, index) => {
-          // ignore all child nodes that are not stepper steps
-          // is this what we want?
-          if (item.type.name !== SprkStepperStep.name) return null;
+        {hasDescriptions &&
+          <SprkStepperSlider
+            title={'asdf'}
+            contents={'foobar'}
+            sliderStyle={this.state.sliderStyle}
+          />
+        }
 
-          return (
+        {children.map((childNode, index) => {
+
+          let step = (
             <SprkStepperStep
-              {...item.props}
-              key={item.id}
-              id={item.id}
-              isSelected={activeStepId === item.id}
+              {...childNode.props}
+              key={index}
+              id={childNode.id}
+              isSelected={activeStepIndex === index}
               tabIndex={0}
               additionalClasses={classnames(
                 index === 0 ? 'sprk-c-Stepper__step--first' : '',
-                index === items.length - 1 ? 'sprk-c-Stepper__step--last' : '',
-                item.props.additionalClasses
+                index === children.length - 1 ? 'sprk-c-Stepper__step--last' : '',
+                childNode.props.additionalClasses
               )}
               onKeyDown={this.handleKeyEvents}
-              onClick={(event) => { item.props.onClick(); this.handleStepClick(event); }}
-              variant={variant}
+              onClick={(event) => { childNode.props.onClick(); this.handleStepClick(event, index); }}
+              renderCallback={ this.updateSliderPosition }
+              hasDescription={hasDescriptions}
+              hasDarkBackground={hasDarkBackground}
             />
           );
+
+          return step;
         })}
       </ol>
     );
+
+    if (hasCarousel) {
+      stepper = (
+        <div className='sprk-o-Box sprk-o-Box--large'>
+          {/* {carousel} */}
+          {stepper}
+        </div>
+      )
+    }
 
     // if we're a carousel, we need to wrap the carousel and stepper in a container div anyway
     if (hasDarkBackground) {
       stepper = (
         <div className='sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large'>
-          {carousel}
           {stepper}
         </div>
       )
@@ -201,13 +237,12 @@ SprkStepper.propTypes = {
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
-  variant: PropTypes.oneOf(['default', 'hasDescription', 'carousel']),
+  hasDescriptions: PropTypes.bool,
   hasDarkBackground: PropTypes.bool,
   backgroundColor: PropTypes.string, // TODO
 };
 
 SprkStepper.defaultProps = {
-  variant: 'default',
   hasDarkBackground: false,
 };
 

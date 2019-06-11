@@ -82,6 +82,15 @@
   }
 }
 
+// TODO this opacity needs to be set as part of the animation. The color
+// should be black but should be a variable and should be somewhere else.
+.sprk-c-Stepper__slider {
+  .sprk-c-Stepper__step-heading, .sprk-c-Stepper__step-description {
+    opacity: 1;
+    color: black;
+  }
+}
+
 .sprk-c-Stepper__step {
   display: flex;
   flex-direction: column;

@@ -3,7 +3,7 @@ import Enzyme, { mount } from 'enzyme';
 import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
 // import '../windowStubs';
-import SprkCarousel from './SprkCarousel';
+import SprkCarousel from './SprkStepperSlider';
 // import SprkStepper from './SprkStepper';
 // import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 

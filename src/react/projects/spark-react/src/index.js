@@ -26,7 +26,11 @@ export { default as SprkPagination } from './SprkPagination/SprkPagination';
 export { default as SprkPromo } from './SprkPromo/SprkPromo';
 export { default as SprkStepper } from './SprkStepper/SprkStepper';
 export { default as SprkStepperStep } from
-'./SprkStepper/components/SprkStepperStep/SprkStepperStep'
+'./SprkStepper/components/SprkStepperStep/SprkStepperStep';
+export { default as SprkStepperSlider } from
+'./SprkStepper/components/SprkStepperSlider/SprkStepperSlider';
+export { default as SprkCarousel } from './SprkStepper/components/SprkCarousel/SprkCarousel';
+export { default as SprkCarouselStep } from './SprkStepper/components/SprkCarouselStep/SprkCarouselStep';
 export { default as SprkSpinner } from './SprkSpinner/SprkSpinner';
 export { default as SprkList } from './SprkList/SprkList';
 export {
