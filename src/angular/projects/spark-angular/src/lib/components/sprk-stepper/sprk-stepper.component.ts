@@ -1,43 +1,70 @@
-import { AfterViewInit, Component, ElementRef, Input, ContentChildren, QueryList, ViewChildren, ChangeDetectorRef, ContentChild, TemplateRef, AfterContentInit } from '@angular/core';
 import {
-  handleTabKeydown,
-  resetTabs,
-  setActiveTab,
-} from '@sparkdesignsystem/spark';
+  Component,
+  ChangeDetectionStrategy,
+  ContentChildren,
+  ViewChildren,
+  ViewEncapsulation,
+  QueryList,
+  EventEmitter,
+  Input,
+  TemplateRef
+} from '@angular/core';
+import { CdkStepper, CdkStep } from '@angular/cdk/stepper';
+import { takeUntil } from 'rxjs/operators';
+
 import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.component';
 
 @Component({
   selector: 'sprk-stepper',
+  exportAs: 'bsStepper',
+  providers: [{ provide: CdkStepper, useExisting: SprkStepperComponent }],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <ol
-      [ngClass]="getClasses()"
-      data-sprk-stepper="container"
-      [attr.data-id]="idString"
-      role="tablist"
-      aria-orientation="vertical"
-    >
-      <ng-container *ngFor="let step of steps; let i = index;">
-        <ng-container *ngTemplateOutlet='step.template'></ng-container>
+    <ol [ngClass]="getClasses()">
+      <ng-container
+        *ngFor="
+          let step of _steps;
+          let i = index;
+          let isLast = last;
+          let isFirst = first
+        "
+      >
+        <sprk-stepper-step
+          (click)="onClick(i)"
+          (keydown)="_onKeydown($event)"
+          [id]="_getStepLabelId(i)"
+          [index]="i"
+          [state]="_getIndicatorType(i)"
+          [label]="step.stepLabel || step.label"
+          [selected]="selectedIndex === i"
+          [active]="step.completed || selectedIndex === i || !linear"
+          [optional]="step.optional"
+          [last]="isLast"
+          [first]="isFirst"
+        >
+        </sprk-stepper-step>
       </ng-container>
     </ol>
   `
 })
-export class SprkStepperComponent implements AfterViewInit, AfterContentInit {
-  @Input()
-  additionalClasses: string;
-  @Input()
-  idString: string;
-  @Input()
-  hasDescription: boolean;
-  @Input()
-  hasDarkBg: boolean;
-  defaults: { name: string };
+export class SprkStepperComponent extends CdkStepper {
+  @Input() additionalClasses: string;
+  @Input() hasDarkBg: boolean;
 
+  /** The list of step headers of the steps in the stepper. */
+  // @ViewChildren(MatStepHeader) _stepHeader: QueryList<MatStepHeader>;
+  @ViewChildren(SprkStepperStepComponent) _stepHeader: QueryList<
+    SprkStepperStepComponent
+  >;
 
-  // Grabs the children of component
-  @ContentChildren(SprkStepperStepComponent) steps: QueryList<SprkStepperStepComponent>;
-  constructor(public ref: ElementRef) {}
+  /** Steps that the stepper holds. */
+  // @ContentChildren(MatStep) _steps: QueryList<MatStep>;
+  @ContentChildren(CdkStep) _steps: QueryList<CdkStep>;
 
+  onClick(index: number): void {
+    this.selectedIndex = index;
+  }
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper'];
 
@@ -54,63 +81,17 @@ export class SprkStepperComponent implements AfterViewInit, AfterContentInit {
     return classArray.join(' ');
   }
 
-  bindUIEvents(): void {
-    const steps = this.ref.nativeElement.querySelectorAll(
-      '[data-sprk-stepper="step"]'
-    );
-    const stepPanels = this.ref.nativeElement.querySelectorAll(
-      '[role="tabpanel"]'
-    );
-    const activeClass = 'sprk-c-Stepper__step--selected';
-    const container = this.ref.nativeElement.querySelector(
-      '[data-sprk-stepper="container"]'
-    );
-    const hasSlideEffect = this.ref.nativeElement.querySelector(
-      '[data-sprk-stepper="description"]'
-    );
-    let sliderEl;
-    if (!steps[0]) {
-      return;
-    }
-    steps[0].classList.add('sprk-c-Stepper__step--first');
-    steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
-
-    // If the stepper has stepper descriptions then build slider
-    if (hasSlideEffect) {
-      sliderEl = document.createElement('li');
-      sliderEl.classList.add('sprk-c-Stepper__slider');
-      sliderEl.setAttribute('data-sprk-stepper', 'slider');
-      container.prepend(sliderEl);
-    }
-
-    steps.forEach((step, index) => {
-      const stepTrigger = step.querySelector('[role="tab"]');
-      if (!stepTrigger) {
-        return;
-      }
-      if (hasSlideEffect) {
-        step.classList.add('sprk-c-Stepper__step--has-slider');
-      }
-
-      stepTrigger.addEventListener('click', event => {
-        event.preventDefault();
-        resetTabs(steps, stepPanels, activeClass, sliderEl);
-        setActiveTab(step, stepPanels[index], activeClass, sliderEl);
-      });
-    });
-
-    this.ref.nativeElement.addEventListener('keydown', e => {
-      handleTabKeydown(e, steps, stepPanels, activeClass, sliderEl);
-    });
-  }
-
-  ngAfterViewInit(): void {
-    this.bindUIEvents();
-  }
-
-  ngAfterContentInit(): void {
-    this.steps.forEach((step) => {
-      step.hasDescription = this.hasDescription;
-    });
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngAfterContentInit() {
+    // Mark the component for change detection whenever the content children query changes
+    this._steps.changes
+      .pipe(takeUntil(this._destroyed))
+      .subscribe(() => this._stateChanged());
+    this._steps.changes
+      .pipe(takeUntil(this._destroyed))
+      .subscribe(() =>
+        console.log('SprkStepperComponent -> ngAfterContentInit')
+      );
+    console.log(this._steps, 'steps steps0');
   }
 }

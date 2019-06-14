@@ -47,12 +47,12 @@ import { SprkCardModule } from './components/sprk-card/sprk-card.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';
 import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk-highlight-board.module';
 import { SprkStepperModule } from './components/sprk-stepper/sprk-stepper.module';
-import { SprkStepperStepModule } from './components/sprk-stepper/sprk-stepper-step/sprk-stepper-step.module';
 import { SprkCarouselModule } from './components/sprk-carousel/sprk-carousel.module';
 import { SprkCarouselItemModule } from './components/sprk-carousel/sprk-carousel-item/sprk-carousel-item.module';
-
+import { CdkStepperModule } from '@angular/cdk/stepper';
 
 @NgModule({
+  imports: [CdkStepperModule],
   exports: [
     SprkAlertModule,
     SprkAccordionModule,
@@ -102,9 +102,8 @@ import { SprkCarouselItemModule } from './components/sprk-carousel/sprk-carousel
     SprkFooterModule,
     SprkTabbedNavigationModule,
     SprkStepperModule,
-    SprkStepperStepModule,
     SprkCarouselModule,
-    SprkCarouselItemModule,
+    SprkCarouselItemModule
   ]
 })
 export class SparkAngularModule {}

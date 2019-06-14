@@ -1,107 +1,117 @@
-import { OnInit, Component, ElementRef, Input, ViewChild, TemplateRef, AfterViewInit } from '@angular/core';
-import * as _ from 'lodash';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  ChangeDetectionStrategy,
+  ElementRef,
+  Input,
+  TemplateRef
+} from '@angular/core';
+import { FocusableOption } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'sprk-stepper-step',
   template: `
-    <ng-template #stepTemplate>
-      <li
-        [ngClass]="getClasses()"
-        [attr.data-id]="idString"
-        [attr.data-analytics]="analyticsString"
-        data-sprk-stepper="step"
+    <li [ngClass]="getClasses()">
+      <!-- {{
+        has-description needs to be conditional
+      }} -->
+      <div
+        [ngClass]="{
+          'sprk-c-Stepper__step-content': true,
+          'sprk-c-Stepper__step-content--has-description': true
+        }"
       >
+        <span
+          class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
+          role="tab"
+          [attr.aria-selected]="selected"
+        >
+          <span class="sprk-c-Stepper__step-icon"></span>
+          <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
+            {{ label }}
+          </h3>
+        </span>
+
+        <!-- {{
+          needs:
+          'sprk-u-HideWhenJs': !isSelected
+          *ngIf="hasDescription ==== true"
+          id="{{ componentID }}"
+          [attr.aria-labelledby]="componentAriaLabelID"
+          tabindex="0"
+          role="tabpanel"
+        }} -->
         <div
           [ngClass]="{
-            'sprk-c-Stepper__step-content': true,
-            'sprk-c-Stepper__step-content--has-description':
-            hasDescription === true
+            'sprk-c-Stepper__step-description': true
           }"
         >
-          <a
-            class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-            [attr.aria-controls]="componentID"
-            role="tab"
-            [attr.id]="componentAriaLabelID"
-            href="#"
-            [attr.aria-selected]="isSelected"
-          >
-            <span class="sprk-c-Stepper__step-icon"></span>
-            <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
-              {{ heading }}
-            </h3>
-          </a>
-
-          <div
-            *ngIf="hasDescription === true"
-            [ngClass]="{
-              'sprk-c-Stepper__step-description': true,
-              'sprk-u-HideWhenJs': !isSelected
-            }"
-            id="{{ componentID }}"
-            data-sprk-stepper="description"
-            [attr.aria-labelledby]="componentAriaLabelID"
-            tabindex="0"
-            role="tabpanel"
-          >
-            <p class="sprk-b-TypeBodyTwo">
-              <ng-content></ng-content>
-            </p>
-          </div>
+          <p class="sprk-b-TypeBodyTwo">
+            Figure out how to put description here
+          </p>
         </div>
-      </li>
-    </ng-template>
-  `
+      </div>
+    </li>
+  `,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SprkStepperStepComponent implements OnInit, AfterViewInit {
-  @Input()
-  additionalClasses: string;
-  @Input()
-  idString: string;
-  @Input()
-  variant: string;
-  @Input()
-  isDefaultActive: boolean;
-  @Input()
-  heading: string;
-  @Input()
-  analyticsString: string;
+export class SprkStepperStepComponent implements OnInit, FocusableOption {
+  /** State of the given step. */
+  @Input() state: string;
 
-  // Coming from AfterContentInit of Stepper
-  @Input()
-  hasDescription: boolean;
+  /** Label of the given step. */
+  // @Input() label: MatStepLabel | string;
+  @Input() label: string;
 
-  componentID = _.uniqueId('step-');
-  componentAriaLabelID = _.uniqueId('step-aria-');
-  activeClass = 'sprk-c-Stepper__step--selected';
-  isSelected = false;
+  /** Overrides for the header icons, passed in via the stepper. */
+  // @Input() iconOverrides: {[key: string]: TemplateRef<MatStepperIconContext>};
 
-  @ViewChild('stepTemplate') template: SprkStepperStepComponent;
+  /** Index of the given step. */
+  @Input() index: number;
 
-  constructor(public ref: ElementRef) { }
+  /** Whether the given step is selected. */
+  @Input() selected: boolean;
+
+  /** Whether the given step label is active. */
+  @Input() active: boolean;
+
+  /** Whether the given step is optional. */
+  @Input() optional: boolean;
+
+  /** Whether the given step is first. */
+  @Input() first: boolean;
+
+  /** Whether the given step is last. */
+  @Input() last: boolean;
+
+  constructor(private _element: ElementRef) {}
 
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper__step'];
 
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
+    // Apply Class if active
+    if (this.selected) {
+      classArray.push('sprk-c-Stepper__step--selected');
     }
 
-    if (this.isDefaultActive) {
-      classArray.push(this.activeClass);
+    // Apply Class if last
+    if (this.last) {
+      classArray.push('sprk-c-Stepper__step--last');
+    }
+
+    // Apply step if first
+    if (this.first) {
+      classArray.push('sprk-c-Stepper__step--first');
     }
 
     return classArray.join(' ');
   }
 
-  ngOnInit(): void {
-    if (this.isDefaultActive) {
-      this.isSelected = true;
-    }
-  }
+  ngOnInit() {}
 
-  ngAfterViewInit(): void {
+  focus() {
+    return this._element.nativeElement.focus();
   }
 }
