@@ -96,11 +96,7 @@
 // Center logo branding
 .sprk-c-Masthead__branding {
   margin: 0 auto;
-
-  @media (min-width: $sprk-split-breakpoint-xxs) {
-    // Centers logo on narrow by adding space on right to balance menu space on left
-    padding-right: (($sprk-masthead-content-padding + $sprk-masthead-content-item-padding-left + $sprk-masthead-content-item-padding-right) + $sprk-masthead-menu-icon-width);
-  }
+  
   @media (min-width: $sprk-masthead-breakpoint) {
     padding-right: $sprk-masthead-content-item-padding-right-wide;
   }
