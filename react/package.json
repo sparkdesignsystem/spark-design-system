@@ -5,6 +5,8 @@
   "version": "1.0.0",
   "author": "Quicken Loans",
   "dependencies": {
+    "@sparkdesignsystem/spark": "^11.0.0",
+    "@sparkdesignsystem/spark-react": "^1.0.1",
     "gatsby": "^2.8.5",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -16,7 +18,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
