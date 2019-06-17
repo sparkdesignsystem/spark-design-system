@@ -44,11 +44,12 @@ import { FocusableOption } from '@angular/cdk/a11y';
         }} -->
         <div
           [ngClass]="{
-            'sprk-c-Stepper__step-description': true
+            'sprk-c-Stepper__step-description': true,
+            'sprk-u-Display--none': !selected
           }"
         >
-          <p class="sprk-b-TypeBodyTwo">
-            Figure out how to put description here
+          <p class="sprk-b-TypeBodyTwo" select="description">
+            <ng-container [ngTemplateOutlet]="content"></ng-container>
           </p>
         </div>
       </div>
@@ -58,6 +59,9 @@ import { FocusableOption } from '@angular/cdk/a11y';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SprkStepperStepComponent implements OnInit, FocusableOption {
+  /** State of the given step. */
+  @Input() content: TemplateRef<any>;
+
   /** State of the given step. */
   @Input() state: string;
 

@@ -42,6 +42,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
           [optional]="step.optional"
           [last]="isLast"
           [first]="isFirst"
+          [content]="step.content"
         >
         </sprk-stepper-step>
       </ng-container>

@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
           1
         </cdk-step>
         <cdk-step [stepControl]="secondFormGroup" [label]="'2nd Step'">
+          2 Content
         </cdk-step>
         <cdk-step [label]="'3rd Step'">
           <div>
