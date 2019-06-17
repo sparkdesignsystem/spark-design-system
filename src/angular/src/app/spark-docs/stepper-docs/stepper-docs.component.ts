@@ -14,10 +14,10 @@ import { Component } from '@angular/core';
 
       <h2 class="drizzle-b-h2">Stepper With Description</h2>
       <sprk-stepper #stepper [hasDescription]="true">
-        <cdk-step [stepControl]="firstFormGroup" [label]="'1st Step'">
+        <cdk-step [label]="'1st Step'">
           1
         </cdk-step>
-        <cdk-step [stepControl]="secondFormGroup" [label]="'2nd Step'">
+        <cdk-step [label]="'2nd Step'">
           2 Content
         </cdk-step>
         <cdk-step [label]="'3rd Step'">
@@ -34,6 +34,31 @@ import { Component } from '@angular/core';
           </div>
         </cdk-step>
       </sprk-stepper>
+
+      <h2 class="drizzle-b-h2">Stepper Has Dark Bg</h2>
+      <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+        <sprk-stepper #stepper [hasDescription]="true" [hasDarkBg]="true">
+          <cdk-step [label]="'1st Step'">
+            1
+          </cdk-step>
+          <cdk-step [label]="'2nd Step'">
+            2 Content
+          </cdk-step>
+          <cdk-step [label]="'3rd Step'">
+            <div>
+              3rd
+              <img
+                src="https://www.pizzeria-kebap-erdal.ch/bilder/startseite/pizzahome.jpg"
+                alt="pizza1"
+              />
+              <div>
+                <button cdkStepperPrevious>Back</button>
+                <button (click)="stepper.reset()">Reset</button>
+              </div>
+            </div>
+          </cdk-step>
+        </sprk-stepper>
+      </div>
     </div>
   `
 })
