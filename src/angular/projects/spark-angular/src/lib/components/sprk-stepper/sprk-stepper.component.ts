@@ -43,6 +43,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
           [last]="isLast"
           [first]="isFirst"
           [content]="step.content"
+          [hasDescription]="hasDescription"
         >
         </sprk-stepper-step>
       </ng-container>
@@ -52,6 +53,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
 export class SprkStepperComponent extends CdkStepper {
   @Input() additionalClasses: string;
   @Input() hasDarkBg: boolean;
+  @Input() hasDescription: boolean;
 
   /** The list of step headers of the steps in the stepper. */
   // @ViewChildren(MatStepHeader) _stepHeader: QueryList<MatStepHeader>;
@@ -94,5 +96,6 @@ export class SprkStepperComponent extends CdkStepper {
         console.log('SprkStepperComponent -> ngAfterContentInit')
       );
     console.log(this._steps, 'steps steps0');
+    console.log(this.hasDescription, 'hasDescription');
   }
 }

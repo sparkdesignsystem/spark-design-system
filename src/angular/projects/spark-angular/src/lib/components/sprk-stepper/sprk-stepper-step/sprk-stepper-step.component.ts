@@ -19,7 +19,7 @@ import { FocusableOption } from '@angular/cdk/a11y';
       <div
         [ngClass]="{
           'sprk-c-Stepper__step-content': true,
-          'sprk-c-Stepper__step-content--has-description': true
+          'sprk-c-Stepper__step-content--has-description': hasDescription
         }"
       >
         <span
@@ -35,8 +35,6 @@ import { FocusableOption } from '@angular/cdk/a11y';
 
         <!-- {{
           needs:
-          'sprk-u-HideWhenJs': !isSelected
-          *ngIf="hasDescription ==== true"
           id="{{ componentID }}"
           [attr.aria-labelledby]="componentAriaLabelID"
           tabindex="0"
@@ -45,10 +43,11 @@ import { FocusableOption } from '@angular/cdk/a11y';
         <div
           [ngClass]="{
             'sprk-c-Stepper__step-description': true,
-            'sprk-u-Display--none': !selected
+            'sprk-u-HideWhenJs': !selected
           }"
+          *ngIf="hasDescription === true && selected"
         >
-          <p class="sprk-b-TypeBodyTwo" select="description">
+          <p class="sprk-b-TypeBodyTwo">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
           </p>
         </div>
@@ -59,7 +58,9 @@ import { FocusableOption } from '@angular/cdk/a11y';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SprkStepperStepComponent implements OnInit, FocusableOption {
-  /** State of the given step. */
+  @Input() hasDescription: boolean;
+
+  // Contains description
   @Input() content: TemplateRef<any>;
 
   /** State of the given step. */
@@ -113,7 +114,9 @@ export class SprkStepperStepComponent implements OnInit, FocusableOption {
     return classArray.join(' ');
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('CONTENT', this.content);
+  }
 
   focus() {
     return this._element.nativeElement.focus();

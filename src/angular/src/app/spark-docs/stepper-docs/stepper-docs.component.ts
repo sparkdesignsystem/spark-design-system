@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Stepper</h2>
 
-      <sprk-stepper #stepper>
+      <sprk-stepper #stepper [hasDescription]="false">
+        <cdk-step [label]="'1st Step'"> </cdk-step>
+        <cdk-step [label]="'2nd Step'"> </cdk-step>
+        <cdk-step [label]="'3rd Step'"> </cdk-step>
+      </sprk-stepper>
+
+      <h2 class="drizzle-b-h2">Stepper With Description</h2>
+      <sprk-stepper #stepper [hasDescription]="true">
         <cdk-step [stepControl]="firstFormGroup" [label]="'1st Step'">
           1
         </cdk-step>
