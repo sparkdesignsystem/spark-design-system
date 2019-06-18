@@ -28,7 +28,13 @@ module.exports = ({ config }) => {
   }
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
-  config.resolve.mainFields = ["browser", "module", "main"]
+  config.resolve.mainFields = ["browser", "module", "main"];
+
+  config.resolve.modules = [
+    ...(config.resolve.modules || []),
+    path.resolve(__dirname, "../"),
+    path.resolve(__dirname, "../node_modules")
+  ];
 
   return config
 }
