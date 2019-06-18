@@ -123,6 +123,13 @@ import { Component } from '@angular/core';
             ></path>
           </g>
         </svg>
+        <a
+          navLink-slot
+          class="sprk-b-TypeBodyOne sprk-u-TextDecoration--none"
+          href="#nogo"
+        >
+          Sign In
+        </a>
 
         <div
           little-nav-slot

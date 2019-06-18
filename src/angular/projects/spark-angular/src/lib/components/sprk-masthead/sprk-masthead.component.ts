@@ -60,6 +60,11 @@ import * as _ from 'lodash';
           </sprk-link>
         </div>
 
+        <div
+          class="sprk-c-Masthead__nav-link sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
+        >
+          <ng-content select="[navLink-slot]"></ng-content>
+        </div>
         <nav
           class="
           sprk-c-Masthead__little-nav
@@ -227,6 +232,8 @@ export class SprkMastheadComponent {
 
   @Input()
   logoHref = '/';
+  @Input()
+  navLinkHref = '';
   @Input()
   logoLinkScreenReaderText = 'Go to the homepage';
   @Input()
