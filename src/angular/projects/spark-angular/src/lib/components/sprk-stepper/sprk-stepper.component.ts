@@ -22,31 +22,30 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <ol [ngClass]="getClasses()">
-      <ng-container
+      <sprk-stepper-slider [offsetTop]="offsetTopValue"> </sprk-stepper-slider>
+      <sprk-stepper-step
         *ngFor="
           let step of _steps;
           let i = index;
           let isLast = last;
           let isFirst = first
         "
+        (click)="onClick(i, $event)"
+        (getOffset)="getOffset($event)"
+        (keydown)="_onKeydown($event)"
+        [id]="_getStepLabelId(i)"
+        [index]="i"
+        [state]="_getIndicatorType(i)"
+        [label]="step.stepLabel || step.label"
+        [selected]="selectedIndex === i"
+        [active]="step.completed || selectedIndex === i || !linear"
+        [optional]="step.optional"
+        [last]="isLast"
+        [first]="isFirst"
+        [content]="step.content"
+        [hasDescription]="hasDescription"
       >
-        <sprk-stepper-step
-          (click)="onClick(i)"
-          (keydown)="_onKeydown($event)"
-          [id]="_getStepLabelId(i)"
-          [index]="i"
-          [state]="_getIndicatorType(i)"
-          [label]="step.stepLabel || step.label"
-          [selected]="selectedIndex === i"
-          [active]="step.completed || selectedIndex === i || !linear"
-          [optional]="step.optional"
-          [last]="isLast"
-          [first]="isFirst"
-          [content]="step.content"
-          [hasDescription]="hasDescription"
-        >
-        </sprk-stepper-step>
-      </ng-container>
+      </sprk-stepper-step>
     </ol>
   `
 })
@@ -65,9 +64,18 @@ export class SprkStepperComponent extends CdkStepper {
   // @ContentChildren(MatStep) _steps: QueryList<MatStep>;
   @ContentChildren(CdkStep) _steps: QueryList<CdkStep>;
 
-  onClick(index: number): void {
+  offsetTopValue;
+
+  onClick(index: number, e): void {
     this.selectedIndex = index;
+    console.log(this.offsetTopValue, 'EEEEEE');
   }
+
+  // Sent from step child component
+  getOffset(e) {
+    this.offsetTopValue = e;
+  }
+
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper'];
 
@@ -90,12 +98,9 @@ export class SprkStepperComponent extends CdkStepper {
     this._steps.changes
       .pipe(takeUntil(this._destroyed))
       .subscribe(() => this._stateChanged());
-    this._steps.changes
-      .pipe(takeUntil(this._destroyed))
-      .subscribe(() =>
-        console.log('SprkStepperComponent -> ngAfterContentInit')
-      );
-    console.log(this._steps, 'steps steps0');
-    console.log(this.hasDescription, 'hasDescription');
+
+    this._steps.forEach(step => {
+      console.log(step);
+    });
   }
 }

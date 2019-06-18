@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">Stepper</h2>
 
       <sprk-stepper #stepper [hasDescription]="false">
-        <cdk-step [label]="'1st Step'"> </cdk-step>
-        <cdk-step [label]="'2nd Step'"> </cdk-step>
-        <cdk-step [label]="'3rd Step'"> </cdk-step>
+        <cdk-step [label]="'1st Step'"></cdk-step>
+        <cdk-step [label]="'2nd Step'"></cdk-step>
+        <cdk-step [label]="'3rd Step'"></cdk-step>
       </sprk-stepper>
 
       <h2 class="drizzle-b-h2">Stepper With Description</h2>
@@ -21,17 +21,11 @@ import { Component } from '@angular/core';
           2 Content
         </cdk-step>
         <cdk-step [label]="'3rd Step'">
-          <div>
-            3rd
-            <img
-              src="https://www.pizzeria-kebap-erdal.ch/bilder/startseite/pizzahome.jpg"
-              alt="pizza1"
-            />
-            <div>
-              <button cdkStepperPrevious>Back</button>
-              <button (click)="stepper.reset()">Reset</button>
-            </div>
-          </div>
+          3rd
+          <img
+            src="https://www.pizzeria-kebap-erdal.ch/bilder/startseite/pizzahome.jpg"
+            alt="pizza1"
+          />
         </cdk-step>
       </sprk-stepper>
 

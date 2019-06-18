@@ -5,6 +5,8 @@ import {
   ChangeDetectionStrategy,
   ElementRef,
   Input,
+  Output,
+  EventEmitter,
   TemplateRef
 } from '@angular/core';
 import { FocusableOption } from '@angular/cdk/a11y';
@@ -12,7 +14,7 @@ import { FocusableOption } from '@angular/cdk/a11y';
 @Component({
   selector: 'sprk-stepper-step',
   template: `
-    <li [ngClass]="getClasses()">
+    <li [ngClass]="getClasses()" (click)="onClick()">
       <!-- {{
         has-description needs to be conditional
       }} -->
@@ -21,6 +23,7 @@ import { FocusableOption } from '@angular/cdk/a11y';
           'sprk-c-Stepper__step-content': true,
           'sprk-c-Stepper__step-content--has-description': hasDescription
         }"
+        #stepContent
       >
         <span
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
@@ -91,6 +94,15 @@ export class SprkStepperStepComponent implements OnInit, FocusableOption {
   /** Whether the given step is last. */
   @Input() last: boolean;
 
+  // Sends offsetTop to parent so slider knows where to go
+  @Output() getOffset: EventEmitter<any> = new EventEmitter();
+
+  onClick() {
+    const offsetTopOfStep = this._element.nativeElement.offsetTop;
+    this.getOffset.emit(offsetTopOfStep);
+    // getStepContent and emit it
+  }
+
   constructor(private _element: ElementRef) {}
 
   getClasses(): string {
@@ -115,7 +127,8 @@ export class SprkStepperStepComponent implements OnInit, FocusableOption {
   }
 
   ngOnInit() {
-    console.log('CONTENT', this.content);
+    // console.log('CONTENT', this.content);
+    console.log('offsetTop', this._element.nativeElement.offsetTop);
   }
 
   focus() {
