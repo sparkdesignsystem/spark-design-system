@@ -233,8 +233,6 @@ export class SprkMastheadComponent {
   @Input()
   logoHref = '/';
   @Input()
-  navLinkHref = '';
-  @Input()
   logoLinkScreenReaderText = 'Go to the homepage';
   @Input()
   additionalClasses: string;
