@@ -61,9 +61,9 @@ import * as _ from 'lodash';
         </div>
 
         <div
-          class="sprk-c-Masthead__nav-link sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
+          class="sprk-c-Masthead__nav-item sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
         >
-          <ng-content select="[navLink-slot]"></ng-content>
+          <ng-content select="[navItem-slot]"></ng-content>
         </div>
         <nav
           class="

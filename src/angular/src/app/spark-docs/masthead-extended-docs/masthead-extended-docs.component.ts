@@ -124,8 +124,8 @@ import { Component } from '@angular/core';
           </g>
         </svg>
         <a
-          navLink-slot
-          class="sprk-b-TypeBodyOne sprk-u-TextDecoration--none"
+          navItem-slot
+          class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
           href="#nogo"
         >
           Sign In
