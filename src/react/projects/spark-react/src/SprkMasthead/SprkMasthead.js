@@ -64,8 +64,6 @@ class SprkMasthead extends Component {
       logoLink,
       logoLinkElement,
       navLink,
-      navLinkElement,
-      navLinkContent,
     } = this.props;
     const { isScrolled, narrowNavOpen } = this.state;
 
@@ -109,25 +107,7 @@ class SprkMasthead extends Component {
           </div>
 
           <div className="sprk-c-Masthead__nav-item sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
-            {navLinkElement !== 'a' ? (
-              <SprkLink
-                additionalClasses="sprk-c-Masthead__link"
-                variant="simple"
-                to={navLink}
-                element={navLinkElement}
-              >
-                {navLinkContent}
-              </SprkLink>
-            ) : (
-              <SprkLink
-                additionalClasses="sprk-c-Masthead__link"
-                variant="simple"
-                href={navLink}
-                element={navLinkElement}
-              >
-                {navLinkContent}
-              </SprkLink>
-            )}
+            {navLink}
           </div>
 
           {(littleNavLinks.length > 0 || utilityContents.length > 0) && (
@@ -236,12 +216,8 @@ SprkMasthead.propTypes = {
   logoLink: PropTypes.string,
   // the element link element to render for the logo
   logoLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // the href to render for the nav link
-  navLink: PropTypes.string,
-  // the element link element to render for the nav item link
-  navLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // the content to render
-  navLinkContent: PropTypes.string,
+  // expects a component to render the nav link
+  navLink: PropTypes.node,
 };
 
 SprkMasthead.defaultProps = {
