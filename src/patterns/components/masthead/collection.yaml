@@ -18,7 +18,7 @@ restrictions:
   - The narrow viewport expects three divs with the following classes to render properly
   - .sprk-c-Masthead__menu
   - .sprk-c-Masthead__branding
-  - .sprk-c-Masthead__nav-link
+  - .sprk-c-Masthead__nav-item
 sparkPackageCore: true
 hasAngularInfo: true
 variableTable:
