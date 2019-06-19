@@ -34,29 +34,33 @@ const SprkStepperDocs = () => {
       </ExampleContainer> */}
 
 
-      {/* <ExampleContainer heading="Base Stepper">
+      <ExampleContainer heading="Base Stepper">
         <div className="sprk-u-mbm">
           <SprkStepper>
             <SprkStepperStep title="Step One" />
             <SprkStepperStep title="Step Two" />
           </SprkStepper>
         </div>
-      </ExampleContainer> */}
+      </ExampleContainer>
       <ExampleContainer heading="Stepper with Step Descriptions">
         <div className="sprk-u-mbm">
           <SprkStepper>
             <SprkStepperStep title="Step One">
+              Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </SprkStepperStep>
             <SprkStepperStep title="Step Two" isSelected>
-              Step two content - lorem ipsum lorem ipsum lorem
+              Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </SprkStepperStep>
             <SprkStepperStep title="Step Three">
-              Step three content - lorem ipsum lorem ipsum
+              Step 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </SprkStepperStep>
+            <SprkStepperStep title="Step Four">
+              Step 4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </SprkStepperStep>
           </SprkStepper>
         </div>
       </ExampleContainer>
-      {/* <ExampleContainer heading="Stepper with Dark Background">
+      <ExampleContainer heading="Stepper with Dark Background">
         <div className="sprk-u-mbm">
           <SprkStepper hasDarkBackground>
             <SprkStepperStep title="Step One" />
@@ -64,8 +68,8 @@ const SprkStepperDocs = () => {
             <SprkStepperStep title="Step Three" />
           </SprkStepper>
         </div>
-      </ExampleContainer> */}
-      {/* <ExampleContainer heading="Stepper with Dark Background and Descriptions">
+      </ExampleContainer>
+      <ExampleContainer heading="Stepper with Dark Background and Descriptions">
         <div className="sprk-u-mbm">
           <SprkStepper hasDarkBackground>
             <SprkStepperStep title="Step One">
@@ -79,7 +83,7 @@ const SprkStepperDocs = () => {
             </SprkStepperStep>
           </SprkStepper>
         </div>
-      </ExampleContainer> */}
+      </ExampleContainer>
     </CentralColumnLayout>
   );
 };
