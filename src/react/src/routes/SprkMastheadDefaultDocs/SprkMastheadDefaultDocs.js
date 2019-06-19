@@ -75,6 +75,9 @@ function SprkMastheadDefaultDocs() {
         narrowNavLinks={links.concat(addedNarrowNavLinks)}
         siteLogo={<SiteLogo />}
         utilityContents={utilityItems}
+        navLinkContent="Sign In"
+        navLinkElement="a"
+        navLink="#nogo"
       />
       <div className="sprk-u-mal">
         <p>Lorem Ipsum</p>

@@ -65,6 +65,12 @@ function SprkMastheadExtendedDocs() {
       to: '/link',
     },
     {
+      element: Link,
+      leadingIcon: 'settings',
+      text: 'Settings',
+      to: '/button',
+    },
+    {
       leadingIcon: 'user',
       text: 'My Account',
       subNavLinks: [
@@ -147,16 +153,6 @@ function SprkMastheadExtendedDocs() {
     >
       Talk To Us
     </SprkLink>,
-    <SprkLink
-      href="#nogo"
-      variant="plain"
-      additionalClasses="sprk-c-Masthead__link"
-    >
-      <SprkIcon
-        iconName="settings"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l"
-      />
-    </SprkLink>,
     <SprkDropdown
       additionalClasses="sprk-u-Right--zero sprk-u-mrm"
       additionalIconClasses="sprk-c-Icon--l"
@@ -176,6 +172,9 @@ function SprkMastheadExtendedDocs() {
         siteLogo={<SiteLogo />}
         utilityContents={utilityItems}
         variant="extended"
+        navLinkContent="Sign In"
+        navLinkElement="a"
+        navLink="#nogo"
       />
       <div className="sprk-u-mal">
         <p>Lorem Ipsum</p>
