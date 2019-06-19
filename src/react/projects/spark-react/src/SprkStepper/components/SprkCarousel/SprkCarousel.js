@@ -21,28 +21,16 @@ class SprkCarousel extends Component {
     this.jumpToLastTab = this.jumpToLastTab.bind(this);
     this.setInitialActiveStep = this.setInitialActiveStep.bind(this);
 
-    const { children } = this.props;
-
-    const stepChildren = children.filter(child => child.type.name === SprkCarouselStep.name);
-
-    let itemsVar = [];
-    let stepIds = [];
-
-    if (stepChildren.length > 0) {
-      stepIds = stepChildren.map(
-        () => uniqueId('step-')
-      );
-
-      itemsVar = stepChildren.map((item, index) => ({
-        id: stepIds[index],
-        ...item,
-      }));
-    }
-
     this.state = {
-      childNodes: itemsVar,
-      stepIds,
-      activeStepId: null,
+      activeStepIndex: 0,
+      frameStyle: {
+        'maxWidth': 256, // this needs to be calculated - with a ref? What if the images are diff sizes?
+      },
+      slidesStyle: {
+        'transitionDuration': '300ms',
+        'transform': 'translateX(-512px)',
+        'transitionTimingFunction': 'ease',
+      }
     };
   }
 
@@ -50,63 +38,70 @@ class SprkCarousel extends Component {
     this.setInitialActiveStep();
   }
 
-  goToStep(stepId){
-    this.setState({ activeStepId: stepId });
+  goToStep(stepIndex){
+    this.setState({ activeStepIndex: stepIndex });
+    this.setState({
+      slidesStyle: {
+        'transitionDuration': '300ms',
+        // todo - 256 needs to be set in a callback probably. What if the images have different sizes?
+        'transform': 'translateX(' + 256*stepIndex*-1 + 'px)',
+        'transitionTimingFunction': 'ease',
+      }
+    })
   }
 
   setInitialActiveStep() {
     const { children } = this.props;
-    const { stepIds } = this.state;
 
     // the first step is active by default
-    this.setState({ activeStepId: stepIds[0] });
+    let initialIndex = 0;
 
     if (children.length > 0) {
       children.forEach((child, index) => {
         if (child.props.isSelected) {
-          this.setState({ activeStepId: stepIds[index] });
+          initialIndex = index;
         }
       });
     }
+
+    // console.log('carousel setting initial to ' + initialIndex);
+    this.goToStep(initialIndex);
   }
 
   retreatTab() {
-    const { activeStepId, stepIds } = this.state;
-    const currentIndex = stepIds.indexOf(activeStepId);
-    let newIndex = currentIndex - 1;
+    const { activeStepIndex } = this.state;
+    const { children } = this.props;
+
+    let newIndex = activeStepIndex - 1;
+
     if (newIndex < 0) {
-      newIndex = stepIds.length - 1;
+      newIndex = children.length - 1;
     }
 
-    this.setState({ activeStepId: stepIds[newIndex] });
-    console.log('carousel is now on step: ' + stepIds[newIndex]);
+    this.goToStep(newIndex);
   }
 
   advanceTab() {
-    const { activeStepId, stepIds } = this.state;
-    const currentIndex = stepIds.indexOf(activeStepId);
-    let newIndex = currentIndex + 1;
+    const { activeStepIndex } = this.state;
+    const { children } = this.props;
 
-    if (newIndex >= stepIds.length) {
+    let newIndex = activeStepIndex + 1;
+
+    if (newIndex >= children.length) {
       newIndex = 0;
     }
 
-    this.setState({ activeStepId: stepIds[newIndex] });
-    console.log('carousel is now on step: ' + stepIds[newIndex]);
+    this.goToStep(newIndex);
   }
 
   jumpToFirstTab() {
-    const { stepIds } = this.state;
-
-    this.setState({ activeStepId: stepIds[0] });
-    console.log('carousel is now on step: ' + stepIds[newIndex]);
+    this.goToStep(0);
   }
 
   jumpToLastTab() {
-    const { stepIds } = this.state;
+    const { children } = this.props;
 
-    this.setState({ activeStepId: stepIds[stepIds.length - 1] });
-    console.log('carousel is now on step: ' + stepIds[newIndex]);
+    this.goToStep(children.length - 1);
   }
 
   handleKeyEvents(event) {
@@ -146,62 +141,58 @@ class SprkCarousel extends Component {
       ...other
     } = this.props;
 
-    const { childNodes, activeStepId } = this.state;
+    const { activeStepIndex, frameStyle, slidesStyle } = this.state;
 
     return (
-      <div className="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
-        <div className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
-          <div className="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
-            <div className="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
-              <div className="sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column">
+      <div className="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
+        <div className="sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column">
 
-                <SprkLink
-                  onClick={e => this.retreatTab()}
-                  // additionalClasses={leftLinkClasses}
-                  variant="plain"
-                  // analyticsString={analyticsStringPrev}
-                  // aria-label="Previous Page"
+          <SprkLink
+            onClick={(e) => { e.preventDefault(); this.retreatTab(); }}
+            // additionalClasses={leftLinkClasses}
+            variant="plain"
+            // analyticsString={analyticsStringPrev}
+            // aria-label="Previous Page"
+            >
+            <span className="sprk-u-ScreenReaderText">{prevLinkText}</span>
+            <SprkIcon iconName={prevIcon} />
+          </SprkLink>
+
+          <div className="sprk-c-Carousel__frame" style={frameStyle}>
+            <ul className="sprk-c-Carousel__slides" style={slidesStyle}>
+              {children.map((childNode, index) => {
+                // console.log('Carousel outputting carousel step with index ' + index + ' and active step index ' + activeStepIndex + '. Selected should be ' + (activeStepIndex === index));
+                return (
+                  <SprkCarouselStep
+                    key={index} //TODO lodash or something
+                    imgSrc={childNode.props.imgSrc}
+                    imgAlt={childNode.props.imgAlt}
+                    isSelected={activeStepIndex == index}
+                    idString={index}
+
+                    // don't show it if it's inactive
+                    // vanilla is just using a CSS transition to
+                    // crop them out and slide as needed. I want to use CSS trans
+                    // anyway so let's start by trying that
                   >
-                  <span className="sprk-u-ScreenReaderText">{prevLinkText}</span>
-                  <SprkIcon iconName={prevIcon} />
-                </SprkLink>
-
-                <div className="sprk-c-Carousel__frame">
-                  <ul className="sprk-c-Carousel__slides">
-                    {childNodes.map((childNode, index) => {
-                      return (
-                        <SprkCarouselStep
-                          key={index} //TODO lodash or something
-                          imgSrc={childNode.props.imgSrc}
-                          imgAlt={childNode.props.imgAlt}
-                          isSelected={activeStepId == childNode.id}
-
-                          // don't show it if it's inactive
-                          // vanilla is just using a CSS transition to
-                          // crop them out and slide as needed. I want to use CSS trans
-                          // anyway so let's start by trying that
-                        >
-                        </SprkCarouselStep>
-                      )
-                    })}
-                  </ul>
-                  <div className="sprk-c-Carousel__dots" data-sprk-carousel-dots="stepper-carousel-01"></div>
-                </div>
-
-                <SprkLink
-                  onClick={e => this.advanceTab()}
-                  // additionalClasses={leftLinkClasses}
-                  variant="plain"
-                  // analyticsString={analyticsStringPrev}
-                  // aria-label="Previous Page"
-                >
-                  <span className="sprk-u-ScreenReaderText">{nextLinkText}</span>
-                  <SprkIcon iconName={nextIcon} />
-                </SprkLink>
-
-              </div>
-            </div>
+                  </SprkCarouselStep>
+                )
+              })}
+            </ul>
+            <div className="sprk-c-Carousel__dots" data-sprk-carousel-dots="stepper-carousel-01"></div>
           </div>
+
+          <SprkLink
+            onClick={e => this.advanceTab()}
+            // additionalClasses={leftLinkClasses}
+            variant="plain"
+            // analyticsString={analyticsStringPrev}
+            // aria-label="Previous Page"
+          >
+            <span className="sprk-u-ScreenReaderText">{nextLinkText}</span>
+            <SprkIcon iconName={nextIcon} />
+          </SprkLink>
+
         </div>
       </div>
     );

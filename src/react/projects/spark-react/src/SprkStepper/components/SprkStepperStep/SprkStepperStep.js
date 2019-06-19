@@ -47,7 +47,6 @@ class SprkStepperStep extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         onClick={onClick}
-        ref={isSelected ? activeStepRef : null}
         {...other}
       >
         <div
@@ -65,24 +64,22 @@ class SprkStepperStep extends Component {
             <h3
               className={classnames(
                 "sprk-c-Stepper__step-heading",
-                isSelected ? 'sprk-u-Visibility--hidden' : '',
+                hasDescription && isSelected ? 'sprk-u-Visibility--hidden' : '',
               )}
             >
               {title}
             </h3>
           </span>
 
-          {hasDescription && isSelected && (
-            <div
-              className={classnames(
-                "sprk-c-Stepper__step-description",
-                isSelected ? 'sprk-u-Visibility--hidden' : '',
-              )}
+          <div
+            className={classnames(
+              "sprk-c-Stepper__step-description",
+              hasDescription && isSelected ? 'sprk-u-Visibility--hidden' : '',
+            )}
 
-            >
-              <p className="sprk-b-TypeBodyTwo">{children}</p>
-            </div>
-          )}
+          >
+            <p className="sprk-b-TypeBodyTwo">{children}</p>
+          </div>
         </div>
       </li>
     );

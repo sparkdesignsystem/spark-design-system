@@ -6,6 +6,12 @@ import SprkLink from '../../../SprkLink/SprkLink';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
 import SprkCarouselStep from '../SprkCarouselStep/SprkCarouselStep';
 
+// todo - text should fade black to white before the slider animates, then fade white to black when it finishes animating.
+// can I make this work using react lifecycle?
+
+// componentWillUpdate() -> check if the top just changed. if it did, add a class or whatever to do the text color
+// componentDidUpdate() -> check to see if the top just changed and add a class as needed
+
 class SprkStepperSlider extends Component {
   constructor(props) {
     super(props);
@@ -19,11 +25,8 @@ class SprkStepperSlider extends Component {
       ...other
     } = this.props;
 
-    console.log('rendering slider with style: ' + sliderStyle.top);
-
     return (
       <li className='sprk-c-Stepper__slider sprk-c-Stepper__slider--active' style={sliderStyle}>
-        {/* my contents should be the same as the contents of the active step */}
         <div
           className={classnames(
             'sprk-c-Stepper__step-content',

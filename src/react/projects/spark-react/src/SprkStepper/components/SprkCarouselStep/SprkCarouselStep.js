@@ -15,6 +15,8 @@ const SprkCarouselStep = props => {
 
   // validate that the image has an alt attribute and error as needed
 
+  // console.log('rendering step ' + idString + ' with selected ' + isSelected);
+
   return (
     <li
       className={classnames(
@@ -35,7 +37,7 @@ SprkCarouselStep.propTypes = {
   additionalClasses: PropTypes.string,
   imgSrc: PropTypes.string,
   imgAlt: PropTypes.string,
-  idString: PropTypes.string,
+  idString: PropTypes.number,
   isSelected: PropTypes.bool,
 };
 

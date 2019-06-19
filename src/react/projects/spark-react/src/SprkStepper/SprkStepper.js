@@ -23,7 +23,6 @@ class SprkStepper extends Component {
     this.setNewActiveStep = this.setNewActiveStep.bind(this);
 
     this.state = {
-      // index of the active step as it appears in the stepper/carousel
       activeStepIndex: 0,
       sliderStyle: { top: 0, },
     };
@@ -31,10 +30,6 @@ class SprkStepper extends Component {
 
   componentDidMount() {
     this.setInitialActiveStep();
-
-    this.setState({
-      sliderStyle: { top: 0 } // todo - is this doing anything?
-    });
   }
 
   setInitialActiveStep() {
@@ -124,40 +119,53 @@ class SprkStepper extends Component {
   }
 
   updateSliderPosition(position) {
-    console.log('callback with value: ' + position);
     this.setState({
       sliderStyle: { top: position }
     });
   }
 
   render() {
-    const { additionalClasses, children, idString, hasDarkBackground, hasDescriptions, ...other } = this.props;
+    const { additionalClasses, children, idString, hasDarkBackground, ...other } = this.props;
     const { activeStepIndex } = this.state;
 
     let hasCarousel = false;
+    let hasDesc = false;
+    let descCount = 0;
 
     children.forEach((child, index) => {
       if (child.props.imgSrc) {
-        // validate that if one has it they all have it
-        hasCarsousel = true;
+        // TODO validate that if one has it they all have it
+        // hasCarousel = true;
+      }
+
+      if (child.props.children) {
+        descCount++;
       }
     });
+
+    if (descCount === children.length) {
+      hasDesc = true;
+    } else if (descCount > 0){
+      // true if 1 or more has a description but not all
+      console.warn("SprkStepper: If any step has a description, they all must have a description.");
+    }
 
     // build the carousel steps as needed
     const carousel = (
       <SprkCarousel>
-        {/* {childNodes.map((childNode, index) => {
+        {children.map((childNode, index) => {
+          // console.log('Stepper outputting carousel step with index ' + index + ' and active step index ' + activeStepIndex + '. Selected should be ' + (activeStepIndex === index));
           return (
             <SprkCarouselStep
               key={index} //TODO lodash or something
               imgSrc={childNode.props.imgSrc}
               imgAlt={childNode.props.imgAlt}
-              isSelected={childNode.id === activeStepId}
+              isSelected={activeStepIndex === index}
             >
 
             </SprkCarouselStep>
           )
-        })} */}
+        })}
       </SprkCarousel>
     );
 
@@ -174,10 +182,10 @@ class SprkStepper extends Component {
         data-id={idString}
         {...other}
       >
-        {hasDescriptions &&
+        {hasDesc &&
           <SprkStepperSlider
-            title={'asdf'}
-            contents={'foobar'}
+            title={children[activeStepIndex].props.title} // active title
+            contents={children[activeStepIndex].props.children} // active contents
             sliderStyle={this.state.sliderStyle}
           />
         }
@@ -199,7 +207,7 @@ class SprkStepper extends Component {
               onKeyDown={this.handleKeyEvents}
               onClick={(event) => { childNode.props.onClick(); this.handleStepClick(event, index); }}
               renderCallback={ this.updateSliderPosition }
-              hasDescription={hasDescriptions}
+              hasDescription={hasDesc}
               hasDarkBackground={hasDarkBackground}
             />
           );
@@ -209,15 +217,6 @@ class SprkStepper extends Component {
       </ol>
     );
 
-    if (hasCarousel) {
-      stepper = (
-        <div className='sprk-o-Box sprk-o-Box--large'>
-          {/* {carousel} */}
-          {stepper}
-        </div>
-      )
-    }
-
     // if we're a carousel, we need to wrap the carousel and stepper in a container div anyway
     if (hasDarkBackground) {
       stepper = (
@@ -226,6 +225,19 @@ class SprkStepper extends Component {
         </div>
       )
     }
+
+    // <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+    //   <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
+    //     <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
+
+    // if (hasCarousel) {
+    //   stepper = (
+    //     <div className=''>
+    //       {carousel}
+    //       {stepper}
+    //     </div>
+    //   )
+    // }
 
     return stepper;
   }
@@ -237,7 +249,7 @@ SprkStepper.propTypes = {
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
-  hasDescriptions: PropTypes.bool,
+  // hasDescriptions: PropTypes.bool,
   hasDarkBackground: PropTypes.bool,
   backgroundColor: PropTypes.string, // TODO
 };
