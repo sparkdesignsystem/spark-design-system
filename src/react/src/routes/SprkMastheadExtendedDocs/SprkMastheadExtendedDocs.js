@@ -65,12 +65,6 @@ function SprkMastheadExtendedDocs() {
       to: '/link',
     },
     {
-      element: Link,
-      leadingIcon: 'settings',
-      text: 'Settings',
-      to: '/button',
-    },
-    {
       leadingIcon: 'user',
       text: 'My Account',
       subNavLinks: [
