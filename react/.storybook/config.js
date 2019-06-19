@@ -21,13 +21,12 @@ addParameters({
   },
 });
 
-// automatically import all files ending in *.stories.js
-function loadStories() {
-  const req = require.context("../../spark", true, /.stories.js$/);
+// Automatically import all react stories
+const loadStories = () => {
+  const req = require.context('../../spark', true, /\/react\/.*\.stories.js$/);
+
   req.keys().forEach(filename => {
-    if (filename.indexOf('react') >= 0) {
-      req(filename);
-    }
+    req(filename);
   });
 }
 

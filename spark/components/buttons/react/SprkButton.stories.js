@@ -1,21 +1,21 @@
 import React from 'react';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
 import { action } from '@storybook/addon-actions';
-import SprkButton from './SprkButton';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { storiesOf } from '../../../../react/node_modules/@storybook/react';
+import SprkButton from './SprkButton';
 
 const stories = storiesOf('Components|Button', module);
 
 stories.addDecorator(withKnobs);
 
 stories.add('primary', () => (
-    <SprkButton
-      onClick={action('button clicked')}
-      disabled={boolean('disabled', false)}
-    >
+  <SprkButton
+    onClick={action('button clicked')}
+    disabled={boolean('disabled', false)}
+  >
       Button
-    </SprkButton>
-  ))
+  </SprkButton>
+))
   .add('secondary', () => (
     <SprkButton
       variant="secondary"

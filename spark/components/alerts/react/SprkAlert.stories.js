@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { storiesOf } from '../../../../react/node_modules/@storybook/react';
 import SprkAlert from './SprkAlert';
 
 storiesOf('Components|Alert', module)
