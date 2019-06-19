@@ -81,6 +81,10 @@
     border-bottom: $sprk-masthead-border-bottom-wide;
   }
 }
+.sprk-c-Masthead__nav-item {
+  display: flex;
+  justify-content: flex-end;
+}
 
 // Hide menu element and additional nav link on larger views
 .sprk-c-Masthead__menu,
@@ -107,10 +111,6 @@
     padding-right: $sprk-masthead-content-item-padding-right-wide;
     flex-grow:0;
   }
-}
-
-.sprk-c-Masthead__nav-item {
-  text-align: right;
 }
 
 // Add sizing range for logo
