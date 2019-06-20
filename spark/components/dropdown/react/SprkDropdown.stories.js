@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
+import { storiesOf } from '@storybook/react';
+
 import SprkDropdown from './SprkDropdown';
 import SprkButton from '../../buttons/react/SprkButton';
 

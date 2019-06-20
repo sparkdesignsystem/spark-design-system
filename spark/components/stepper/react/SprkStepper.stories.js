@@ -1,5 +1,6 @@
 import React from '../../../../react/node_modules/react';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
+import { storiesOf } from '@storybook/react';
+
 storiesOf('Components|Stepper', module);
   // .add('default', () => (
   // ))

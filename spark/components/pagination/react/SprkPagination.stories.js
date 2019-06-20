@@ -1,5 +1,6 @@
 import React from 'react';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
+import { storiesOf } from '@storybook/react';
+
 import SprkPagination from './SprkPagination';
 storiesOf('Components|Pagination', module);
   // .add('default', () => (
