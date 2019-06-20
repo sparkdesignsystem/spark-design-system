@@ -22,6 +22,7 @@ import { Component, Input, TemplateRef, OnChanges } from '@angular/core';
           ></span>
           <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
             Step One
+            {{ content }}
           </h3>
         </span>
       </div>

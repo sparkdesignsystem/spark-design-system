@@ -30,7 +30,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
           let isLast = last;
           let isFirst = first
         "
-        (click)="onClick(i, $event)"
+        (click)="onClick(i)"
         (getOffset)="getOffset($event)"
         (keydown)="_onKeydown($event)"
         [id]="_getStepLabelId(i)"
@@ -66,14 +66,14 @@ export class SprkStepperComponent extends CdkStepper {
 
   offsetTopValue;
 
-  onClick(index: number, e): void {
+  onClick(index: number): void {
     this.selectedIndex = index;
-    console.log(this.offsetTopValue, 'EEEEEE');
   }
 
   // Sent from step child component
   getOffset(e) {
     this.offsetTopValue = e;
+    console.log(e, 'getOffset() from stepper');
   }
 
   getClasses(): string {

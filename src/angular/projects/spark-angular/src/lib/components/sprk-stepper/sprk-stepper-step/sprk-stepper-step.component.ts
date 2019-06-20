@@ -23,12 +23,9 @@ import { FocusableOption } from '@angular/cdk/a11y';
           'sprk-c-Stepper__step-content': true,
           'sprk-c-Stepper__step-content--has-description': hasDescription
         }"
-        #stepContent
       >
         <span
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          role="tab"
-          [attr.aria-selected]="selected"
         >
           <span class="sprk-c-Stepper__step-icon"></span>
           <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
@@ -46,7 +43,7 @@ import { FocusableOption } from '@angular/cdk/a11y';
         <div
           [ngClass]="{
             'sprk-c-Stepper__step-description': true,
-            'sprk-u-HideWhenJs': !selected
+            'sprk-u-Display--none': !selected
           }"
           *ngIf="hasDescription === true && selected"
         >
