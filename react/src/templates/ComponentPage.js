@@ -6,12 +6,6 @@ import ContentIframe from '../components/content-iframe';
 
 function ComponentPage({ data }) {
   const { node } = data.allDirectory.edges[0];
-  const { build } = process.env;
-  let buildType = 'html';
-
-  if (build && build.type) {
-    buildType = build.type;
-  }
 
   return (
     <Layout>
@@ -19,7 +13,7 @@ function ComponentPage({ data }) {
         <h1>{ node.name }</h1>
         <ContentIframe
           title="Preview"
-          src={`/${buildType}/iframe.html?id=${node.name}--default`}
+          src={`/iframe.html?id=components-${node.name}--default`}
         />
       </div>
     </Layout>
@@ -31,8 +25,8 @@ export default ComponentPage;
 export const query = graphql`
   query($slug: String!) {
     allDirectory(filter: { fields: { slug: { eq: $slug } } }) {
-      edges { 
-        node { 
+      edges {
+        node {
           name
         }
       }
