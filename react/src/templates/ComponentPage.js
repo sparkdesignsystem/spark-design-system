@@ -6,14 +6,20 @@ import ContentIframe from '../components/content-iframe';
 
 function ComponentPage({ data }) {
   const { node } = data.allDirectory.edges[0];
-
+  /*
+  *  TODO: Get Storybook story data
+  * from storybook to pass in here
+  * to use to build iframe url.
+  * See react/.storybook/config.js, line 53, line 57
+  * */
   return (
     <Layout>
       <div>
         <h1>{ node.name }</h1>
         <ContentIframe
           title="Preview"
-          src={`/iframe.html?id=components-${node.name}--default`}
+          variant=""
+          src={`/iframe.html?id=components-${node.name}`}
         />
       </div>
     </Layout>

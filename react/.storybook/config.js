@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { configure, addDecorator, addParameters, getStorybook } from '@storybook/react';
 import { action } from "@storybook/addon-actions"
 import '../../spark/manifests/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
@@ -45,4 +45,19 @@ global.__PATH_PREFIX__ = ""
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
+
 configure(loadStories, module)
+
+const stories = getStorybook();
+
+const storyNames = stories.map(story => {
+  return story.stories.map(storyName => {return storyName.name});
+});
+
+const storyComponents = stories.map(story => {
+  return story.kind.split('|');
+});
+
+console.log("TCL: storyComponents", storyComponents)
+
+console.log("TCL: storybook", storyNames);
