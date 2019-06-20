@@ -55,71 +55,69 @@ const SprkCard = (props) => {
 };
 
 SprkCard.propTypes = {
-  // Additional classes for
+  /** Additional classes for */
   additionalClasses: PropTypes.string,
-  // Additional classes for content container
+  /** Additional classes for content container */
   additionalContentClasses: PropTypes.string,
-  // Takes content for a base card
+  /** Takes content for a base card */
   children: PropTypes.node,
-  // data-id
+  /** data-id */
   idString: PropTypes.string,
-  // Shadow darker than normal
+  /** Shadow darker than normal */
   isStandout: PropTypes.bool,
-  // Additional Card types (highlightedHeader, teaser)
+  /** Additional Card types (highlightedHeader, teaser) */
   variant: PropTypes.string,
-
-  // Configures highlighted header
+  /** Configures highlighted header */
   highlightedHeaderConfig: PropTypes.shape({
-    // Text inside of highlighted card
+    /** Text inside of highlighted card */
     bodyText: PropTypes.string,
-    // Sub-headline of card
+    /** Sub-headline of card */
     description: PropTypes.string,
-    // Headline of card
+    /** Headline of card */
     title: PropTypes.string,
   }),
-
-  // Configures teaser
+  /** Configures teaser */
   teaserConfig: PropTypes.shape({
-    // Text in the main body
+    /** Text in the main body */
     bodyText: PropTypes.string,
     cta: PropTypes.shape({
-      // Extra classes on the Call to Action of Teaser
+      /** Extra classes on the Call to Action of Teaser */
       additionalCtaIconClasses: PropTypes.string,
-      // CTA Analytics
+      /** CTA Analytics */
       ctaAnalytics: PropTypes.string,
-      // Icon next to CTA
+      /** Icon next to CTA */
       ctaIcon: PropTypes.string,
-      // Anchor tag, or router link at user discretion
+      /** Anchor tag, or router link at user discretion */
       mediaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Link or Button
+      /** Link or Button */
       ctaVariant: PropTypes.oneOf(['link', 'button']),
-      // Where the cta navigates to
+      /** Where the cta navigates to */
       href: PropTypes.string,
-      // Text of the CTA
+      /** Text of the CTA */
       text: PropTypes.string,
     }),
-    // Configs for the main media of the teaser card
+    /** Configs for the main media of the teaser card */
     media: PropTypes.shape({
-      // Additional classes if it's an icon
+      /** Additional classes if it's an icon */
       additionalMediaIconClasses: PropTypes.string,
-      // Where media navigates to
+      /** Where media navigates to */
       href: PropTypes.string,
-      // Anchor tag, or router link at user discretion
+      /** Anchor tag, or router link at user discretion */
       mediaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Reference name of SprkIcon
+      /** Reference name of SprkIcon */
       iconName: PropTypes.string,
-      // Alternative text for image
+      /** Alternative text for image */
       imgAlt: PropTypes.string,
-      // src for image
+      /** src for image */
       imgSrc: PropTypes.string,
-      // Analytics id tag for image
+      /** Analytics id tag for image */
       mediaAnalyticsString: PropTypes.string,
-      // Chooses if main media is img or SprkIcon
+      /** Chooses if main media is img or SprkIcon */
       mediaVariant: PropTypes.oneOf(['img', 'icon']),
     }),
-    // title of teaser card
+    /** title of teaser card */
     title: PropTypes.string,
-    // Decides if title goes first
+    /** Decides if title goes first */
     titleFirst: PropTypes.bool,
   }),
 };

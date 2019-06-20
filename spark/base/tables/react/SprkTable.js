@@ -163,17 +163,17 @@ const SprkTable = (props) => {
 };
 
 SprkTable.propTypes = {
-  // Array used to render the table headings
+  /** Array used to render the table headings. */
   columns: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.object),
     PropTypes.arrayOf(PropTypes.array),
   ]),
-  // An array of objects used to map and render the table row data
+  /** An array of objects used to map and render the table row data. */
   rows: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.object),
     PropTypes.arrayOf(PropTypes.array),
   ]),
-  // A string to determine what variant of the table should render
+  /** A string to determine what variant of the table should render. */
   variant: PropTypes.oneOf([
     'default',
     'secondary',
@@ -182,13 +182,13 @@ SprkTable.propTypes = {
     'secondaryRowComparison',
     'html',
   ]),
-  // The string to use for the data-id attribute
+  /** The string to use for the data-id attribute. */
   idString: PropTypes.string,
-  // Any additional classes to add to the table wrapper
+  /** Any additional classes to add to the table wrapper. */
   additionalContainerClasses: PropTypes.string,
-  // Any additional classes to add to the table
+  /** Any additional classes to add to the table. */
   additionalTableClasses: PropTypes.string,
-  // And children markup to be rendered
+  /** And children markup to be rendered. */
   children: PropTypes.node,
 };
 

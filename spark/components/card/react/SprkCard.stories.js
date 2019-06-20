@@ -1,6 +1,7 @@
 import React from 'react';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
-import { SprkCard } from '@sparkdesignsystem/spark-react';
+import { storiesOf } from '@storybook/react';
+
+import SprkCard from './SprkCard';
 
 storiesOf('Components|Card', module)
   .add('default', () => (

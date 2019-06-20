@@ -1,5 +1,6 @@
 import React from 'react';
-import { storiesOf } from '../../../../react/node_modules/@storybook/react';
+import { storiesOf } from '@storybook/react';
+
 import SprkDictionary from './SprkDictionary';
 
 storiesOf('Components|Dictionary', module)

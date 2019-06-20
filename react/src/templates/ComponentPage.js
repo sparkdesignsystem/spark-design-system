@@ -6,20 +6,20 @@ import ContentIframe from '../components/content-iframe';
 
 function ComponentPage({ data }) {
   const { node } = data.allDirectory.edges[0];
-  const { build } = process.env;
-  let buildType = 'html';
-
-  if (build && build.type) {
-    buildType = build.type;
-  }
-
+  /*
+  *  TODO: Get Storybook story data
+  * from storybook to pass in here
+  * to use to build iframe url.
+  * See react/.storybook/config.js, line 53, line 57
+  * */
   return (
     <Layout>
       <div>
         <h1>{ node.name }</h1>
         <ContentIframe
           title="Preview"
-          src={`/${buildType}/iframe.html?id=${node.name}--default`}
+          variant=""
+          src={`/iframe.html?id=components-${node.name}`}
         />
       </div>
     </Layout>
@@ -31,8 +31,8 @@ export default ComponentPage;
 export const query = graphql`
   query($slug: String!) {
     allDirectory(filter: { fields: { slug: { eq: $slug } } }) {
-      edges { 
-        node { 
+      edges {
+        node {
           name
         }
       }
