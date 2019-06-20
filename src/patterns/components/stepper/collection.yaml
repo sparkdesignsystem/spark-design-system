@@ -8,7 +8,7 @@ restrictions:
 - Has a minimum of three items.
 - Only one step can be selected at a time.
 angularComingSoon: true
-reactComingSoon: true
+reactComingSoon: false
 variableTable:
   $sprk-stepper-bg:
     default: transparent
