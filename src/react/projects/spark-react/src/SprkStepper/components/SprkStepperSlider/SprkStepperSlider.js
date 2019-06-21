@@ -5,16 +5,35 @@ import { uniqueId } from 'lodash';
 import SprkLink from '../../../SprkLink/SprkLink';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
 import SprkCarouselStep from '../SprkCarouselStep/SprkCarouselStep';
-
-// todo - text should fade black to white before the slider animates, then fade white to black when it finishes animating.
-// can I make this work using react lifecycle?
-
-// componentWillUpdate() -> check if the top just changed. if it did, add a class or whatever to do the text color
-// componentDidUpdate() -> check to see if the top just changed and add a class as needed
+import AnimateOnChange from 'react-animate-on-change'
 
 class SprkStepperSlider extends Component {
   constructor(props) {
     super(props);
+
+    this.state = { sliderAnimating: false };
+  }
+
+  componentWillReceiveProps(nextProps){
+    if (nextProps.sliderStyle !== this.props.sliderStyle) {
+      // console.log("starting animation");
+      // requestAnimationFrame(() => {
+      //   this.setState({ sliderAnimating: true });
+      // });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    const { sliderStyle } = this.props;
+
+    if (prevProps.sliderStyle === sliderStyle){
+      // nothing
+    } else {
+      // console.log("ending animation");
+      // requestAnimationFrame(() => {
+      //   this.setState({sliderAnimating: false});
+      // });
+    }
   }
 
   render() {
@@ -25,8 +44,15 @@ class SprkStepperSlider extends Component {
       ...other
     } = this.props;
 
+    const { sliderAnimating } = this.state;
+
     return (
-      <li className='sprk-c-Stepper__slider sprk-c-Stepper__slider--active' style={sliderStyle}>
+      <li className={classnames(
+        'sprk-c-Stepper__slider',
+        !sliderAnimating ? 'sprk-c-Stepper__slider--active' : '',
+        )}
+        style={sliderStyle}
+      >
         <div
           className={classnames(
             'sprk-c-Stepper__step-content',

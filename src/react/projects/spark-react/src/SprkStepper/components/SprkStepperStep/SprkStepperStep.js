@@ -10,6 +10,8 @@ class SprkStepperStep extends Component {
 
     if (isSelected && !prevProps.isSelected) {
       const top = ReactDOM.findDOMNode(this).offsetTop;
+      // call our parent and let them know what our top is so they can pass that
+      // to the slider component
       renderCallback(top);
     }
   }
@@ -78,6 +80,7 @@ class SprkStepperStep extends Component {
             )}
 
           >
+            {/* desc is only ever displayed in the slider. This is probably just for spacing. */}
             <p className="sprk-b-TypeBodyTwo">{children}</p>
           </div>
         </div>
@@ -87,24 +90,23 @@ class SprkStepperStep extends Component {
 };
 
 SprkStepperStep.propTypes = {
-  // The children that will be rendered inside the component
-  children: PropTypes.node,
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
+  // The children that will be rendered inside the component
+  children: PropTypes.node,
+  hasDarkBackground: PropTypes.bool,
   idString: PropTypes.string,
   analyticsString: PropTypes.string,
   title: PropTypes.string,
   isSelected: PropTypes.bool,
   hasDescription: PropTypes.bool,
-  hasDarkBackground: PropTypes.bool,
   onClick: PropTypes.func,
+  renderCallback: PropTypes.func,
   imgSrc: PropTypes.string,
   imgAlt: PropTypes.string,
-  renderCallback: PropTypes.func,
 };
 
 SprkStepperStep.defaultProps = {
-  variant: 'default',
   onClick: () => {}
 };
 

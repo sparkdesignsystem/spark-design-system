@@ -154,7 +154,6 @@ class SprkStepper extends Component {
     const carousel = (
       <SprkCarousel>
         {children.map((childNode, index) => {
-          // console.log('Stepper outputting carousel step with index ' + index + ' and active step index ' + activeStepIndex + '. Selected should be ' + (activeStepIndex === index));
           return (
             <SprkCarouselStep
               key={index} //TODO lodash or something
@@ -217,7 +216,6 @@ class SprkStepper extends Component {
       </ol>
     );
 
-    // if we're a carousel, we need to wrap the carousel and stepper in a container div anyway
     if (hasDarkBackground) {
       stepper = (
         <div className='sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large'>
@@ -225,10 +223,6 @@ class SprkStepper extends Component {
         </div>
       )
     }
-
-    // <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
-    //   <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
-    //     <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
 
     // if (hasCarousel) {
     //   stepper = (
@@ -244,18 +238,10 @@ class SprkStepper extends Component {
 }
 
 SprkStepper.propTypes = {
-  // The children that will be rendered inside the content portion of the promo
   children: PropTypes.node,
-  // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
   idString: PropTypes.string,
-  // hasDescriptions: PropTypes.bool,
   hasDarkBackground: PropTypes.bool,
-  backgroundColor: PropTypes.string, // TODO
-};
-
-SprkStepper.defaultProps = {
-  hasDarkBackground: false,
 };
 
 export default SprkStepper;

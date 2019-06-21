@@ -1,14 +1,13 @@
 description:
-  The Stepper shows progression through a process.
+  The Stepper displays a series of sequentical steps with optional contextual descriptions.
 information:
-  - Uses the aria role of "tablist" for accessibility reasons.
   - Users can use the arrow keys to tab through the steps.
-  - Pressing "enter" on a step will select that step.
 restrictions:
-- Has a minimum of three items.
+- Steppers must have a minimum of 2 items.
 - Only one step can be selected at a time.
+- The Stepper component should NOT be used as a progress indicator, as there is
+  no way at this time to mark a step as "complete".
 angularComingSoon: true
-reactComingSoon: true
 variableTable:
   $sprk-stepper-bg:
     default: transparent
