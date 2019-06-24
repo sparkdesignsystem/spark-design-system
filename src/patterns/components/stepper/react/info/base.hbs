@@ -63,12 +63,6 @@
     </tr>
 
     <tr>
-      <td class="sprk-u-FontWeight--bold">hasDarkBackground</td>
-      <td>bool</td>
-      <td>If true, the StepperStep will render with lighter text appropriate for displaying on a dark background.</td>
-    </tr>
-
-    <tr>
       <td class="sprk-u-FontWeight--bold">idString</td>
       <td>string</td>
       <td>The value supplied will be assigned to the <code>data-id</code> attribute on the StepperStep.</td>
@@ -95,13 +89,7 @@
     <tr>
       <td class="sprk-u-FontWeight--bold">onClick</td>
       <td>function</td>
-      <td>This callback function will be called when the StepperStep is clicked.</td>
-    </tr>
-
-    <tr>
-      <td class="sprk-u-FontWeight--bold">renderCallback</td>
-      <td>function</td>
-      <td>This callback function will be called when the StepperStep finishes rendering.</td>
+      <td>This callback function will be called when the StepperStep is clicked. Note that this function is called before the Stepper state is updated.</td>
     </tr>
   </tbody>
 </table>

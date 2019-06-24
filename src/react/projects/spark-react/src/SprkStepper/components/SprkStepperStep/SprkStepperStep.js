@@ -19,20 +19,17 @@ class SprkStepperStep extends Component {
   render() {
     const {
       additionalClasses,
-      children,
-      title,
-      isSelected,
-      idString,
-      analyticsString,
       hasDescription,
       hasDarkBackground,
+      idString,
+      analyticsString,
+      title,
+      isSelected,
       onClick,
       // not using this anywhere but I have to have it on the component so it doesn't
-      // throw any errors. Because we're using SprkStepperStep as a DTO to move props around
-      // like imgSrc, even though SprkStepperStep doesn't render any imgSrc.
-      imgSrc,
-      // same
+      // throw any errors.
       renderCallback,
+      children,
       ...other
     } = this.props;
 
@@ -92,18 +89,26 @@ class SprkStepperStep extends Component {
 SprkStepperStep.propTypes = {
   // Any additional classes (space-delimited string) to apply to the root
   additionalClasses: PropTypes.string,
-  // The children that will be rendered inside the component
-  children: PropTypes.node,
-  hasDarkBackground: PropTypes.bool,
+  // The provided value will be assigned to the data-id attribute on the Step.
   idString: PropTypes.string,
+  // The provided value will be assigned to the data-analytics attribute on the Step.
   analyticsString: PropTypes.string,
+  // The value to display in the title
   title: PropTypes.string,
+  // If true, this step will be selected.
   isSelected: PropTypes.bool,
-  hasDescription: PropTypes.bool,
+  // An optional function to call when a Step is clicked. Note that this function is called before the Stepper
+  // state is updated.
   onClick: PropTypes.func,
+  // If true, the StepperStep will render with lighter text appropriate for displaying on a dark background.
+  // Note that this property is not documented on our docs site as it is only used internally.
+  hasDarkBackground: PropTypes.bool,
+  // If true, the StepperStep will render in a way that is suitable for use with a Slider component
+  // Note that this property is not documented on our docs site as it is only used internally.
+  hasDescription: PropTypes.bool,
+  // A function to call when the component finishes rendering. Used to move the slider to the appropriate position.
+  // Note that this property is not documented on our docs site as it is only used internally.
   renderCallback: PropTypes.func,
-  imgSrc: PropTypes.string,
-  imgAlt: PropTypes.string,
 };
 
 SprkStepperStep.defaultProps = {

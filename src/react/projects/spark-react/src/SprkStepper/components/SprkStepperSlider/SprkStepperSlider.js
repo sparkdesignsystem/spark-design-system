@@ -1,58 +1,34 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { uniqueId } from 'lodash';
 
 class SprkStepperSlider extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { sliderAnimating: false };
-  }
-
   render() {
     const {
       title,
       contents,
       sliderStyle,
-      ...other
     } = this.props;
-
-    const { sliderAnimating } = this.state;
 
     return (
       <li className={classnames(
         'sprk-c-Stepper__slider',
-        !sliderAnimating ? 'sprk-c-Stepper__slider--active' : '',
+        'sprk-c-Stepper__slider--active',
         )}
         style={sliderStyle}
       >
-        <div
-          className={classnames(
-            'sprk-c-Stepper__step-content',
-            'sprk-c-Stepper__step-content--has-description',
-          )}
-        >
-          <span
-            className="
-            sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          >
+        <div className='sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description' >
+          <span className="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain" >
             <span className="sprk-c-Stepper__step-icon sprk-u-Visibility--hidden" />
-            <h3
-              className={classnames(
-                "sprk-c-Stepper__step-heading",
-              )}
-            >
+            <h3 className="sprk-c-Stepper__step-heading" >
               {title}
             </h3>
           </span>
 
-          <div
-            className={classnames(
-              "sprk-c-Stepper__step-description",
-            )}
-          >
-            <p className="sprk-b-TypeBodyTwo">{contents}</p>
+          <div className="sprk-c-Stepper__step-description" >
+            <p className="sprk-b-TypeBodyTwo">
+              {contents}
+            </p>
           </div>
         </div>
       </li>
@@ -61,8 +37,11 @@ class SprkStepperSlider extends Component {
 }
 
 SprkStepperSlider.propTypes = {
+  // The title text for the slider
   title: PropTypes.string,
+  // The contents text for the slider
   contents: PropTypes.string,
+  // An object representing the style properties of this component. The important property is "top".
   sliderStyle: PropTypes.object,
 };
 

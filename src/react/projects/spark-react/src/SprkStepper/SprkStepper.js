@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { uniqueId } from 'lodash';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
+import { uniqueId } from 'lodash';
 
 class SprkStepper extends Component {
   constructor(props) {
@@ -17,8 +16,8 @@ class SprkStepper extends Component {
     this.jumpToFirstTab = this.jumpToFirstTab.bind(this);
     this.jumpToLastTab = this.jumpToLastTab.bind(this);
     this.setInitialActiveStep = this.setInitialActiveStep.bind(this);
-    this.updateSliderPosition = this.updateSliderPosition.bind(this);
     this.setNewActiveStep = this.setNewActiveStep.bind(this);
+    this.updateSliderPosition = this.updateSliderPosition.bind(this);
 
     this.state = {
       activeStepIndex: 0,
@@ -28,23 +27,6 @@ class SprkStepper extends Component {
 
   componentDidMount() {
     this.setInitialActiveStep();
-  }
-
-  setInitialActiveStep() {
-    const { children } = this.props;
-
-    // the first step is active by default
-    let initialIndex = 0;
-
-    if (children.length > 0) {
-      children.forEach((child, index) => {
-        if (child.props.isSelected) {
-          initialIndex = index;
-        }
-      });
-    }
-
-    this.setNewActiveStep(initialIndex);
   }
 
   handleStepClick(e, indexOfStep) {
@@ -112,6 +94,23 @@ class SprkStepper extends Component {
     this.setNewActiveStep(children.length - 1);
   }
 
+  setInitialActiveStep() {
+    const { children } = this.props;
+
+    // the first step is active by default
+    let initialIndex = 0;
+
+    if (children.length > 0) {
+      children.forEach((child, index) => {
+        if (child.props.isSelected) {
+          initialIndex = index;
+        }
+      });
+    }
+
+    this.setNewActiveStep(initialIndex);
+  }
+
   setNewActiveStep(stepIndex){
     this.setState({ activeStepIndex: stepIndex });
   }
@@ -129,7 +128,7 @@ class SprkStepper extends Component {
     let hasDesc = false;
     let descCount = 0;
 
-    // count the number of children with descriptions. If that doesn't match the number of children,
+    // count the number of children with descriptions. If that doesn't match the total number of children,
     // warn the user
     children.forEach((child, index) => {
       if (child.props.children) {
@@ -140,7 +139,6 @@ class SprkStepper extends Component {
     if (descCount === children.length) {
       hasDesc = true;
     } else if (descCount > 0){
-      // true if 1 or more has a description but not all
       console.warn("SprkStepper: If any step has a description, they all must have a description.");
     }
 
@@ -204,10 +202,12 @@ class SprkStepper extends Component {
 }
 
 SprkStepper.propTypes = {
-  children: PropTypes.node,
-  additionalClasses: PropTypes.string,
-  idString: PropTypes.string,
+  // If true, the Stepper will be rendered on a dark background
   hasDarkBackground: PropTypes.bool,
+  // A space-delimited list of additional CSS classes that should be applied to the Stepper.
+  additionalClasses: PropTypes.string,
+  // The value supplied will be assigned to the data-id attribute on the Stepper.
+  idString: PropTypes.string,
 };
 
 export default SprkStepper;
