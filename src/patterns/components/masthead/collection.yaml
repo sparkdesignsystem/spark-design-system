@@ -15,6 +15,10 @@ restrictions:
     $sprk-masthead-narrow-height to that height.
   - You must duplicate your navigational items in the Masthead navigation HTML and in the Masthead narrow
     navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
+  - The narrow viewport expects three divs with the following classes to render properly
+  - .sprk-c-Masthead__menu
+  - .sprk-c-Masthead__branding
+  - .sprk-c-Masthead__nav-item
 sparkPackageCore: true
 hasAngularInfo: true
 variableTable:

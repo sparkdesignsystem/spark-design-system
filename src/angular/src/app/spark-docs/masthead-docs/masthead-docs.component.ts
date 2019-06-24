@@ -122,6 +122,15 @@ import { Component } from '@angular/core';
           </g>
         </svg>
 
+        <sprk-link
+          navItem-slot
+          linkType="plain"
+          additionalClasses="sprk-c-Masthead__link"
+          href="#nogo"
+        >
+          Sign In
+        </sprk-link>
+
         <div
           class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
           little-nav-slot

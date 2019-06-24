@@ -6,6 +6,7 @@
     siteLogo={<SiteLogo />}
     utilityContents={utilityItems}
     variant="extended"
+    navLink={<SprkLink variant="simple" href="#nogo" additionalClasses="sprk-c-Masthead__link">Sign In</SprkLink>}
 />
 <script>
   const links = [
@@ -60,12 +61,6 @@
       leadingIcon: 'call-team-member',
       text: 'Talk To Us',
       to: '/link',
-    },
-    {
-      element: Link,
-      leadingIcon: 'settings',
-      text: 'Settings',
-      to: '/button',
     },
     {
       leadingIcon: 'user',
