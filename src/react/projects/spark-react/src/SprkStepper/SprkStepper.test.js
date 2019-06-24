@@ -56,30 +56,6 @@ it('should correctly apply bookend classes', () => {
   ).toBe(true);
 });
 
-it('should update state when a step is clicked', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep />
-      <SprkStepperStep isSelected />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const lastStep = wrapper.find('li.sprk-c-Stepper__step--last');
-
-  expect(wrapper.state().activeStepId).not.toBe(lastStep.prop('id'));
-
-  const eventObj = {
-    target: {
-      value: lastStep.prop('id'),
-    },
-  };
-
-  lastStep.simulate('click', eventObj);
-
-  expect(wrapper.state().activeStepId).toBe(lastStep.prop('id'));
-});
-
 it('should ignore non-step children', () => {
   const wrapper = mount(
     <SprkStepper>
@@ -90,30 +66,6 @@ it('should ignore non-step children', () => {
   );
 
   expect(wrapper.find('div#foo').length).toBe(0);
-});
-
-it('should correctly advance the selected item with keyboard', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep />
-      <SprkStepperStep isSelected />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const lastStep = wrapper.find('li.sprk-c-Stepper__step--last');
-
-  expect(wrapper.state().activeStepId).not.toBe(lastStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 39,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
-  expect(wrapper.state().activeStepId).toBe(lastStep.prop('id'));
 });
 
 it('should correctly advance and overflow the selected item with keyboard', () => {
@@ -138,102 +90,6 @@ it('should correctly advance and overflow the selected item with keyboard', () =
   wrapper.instance().handleKeyEvents(eventObj);
 
   const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
-  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
-});
-
-it('should correctly retreat the selected item with keyboard', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep />
-      <SprkStepperStep isSelected/>
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
-
-  expect(wrapper.state().activeStepId).not.toBe(firstStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 37,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
-  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
-});
-
-it('should correctly retreat and underflow the selected item with keyboard', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep isSelected />
-      <SprkStepperStep />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const lastStep = wrapper.find('li.sprk-c-Stepper__step--last');
-
-  expect(wrapper.state().activeStepId).not.toBe(lastStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 37,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
-  expect(wrapper.state().activeStepId).toBe(lastStep.prop('id'));
-});
-
-it('should correctly jump to end with keyboard', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep />
-      <SprkStepperStep isSelected />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const lastStep = wrapper.find('li.sprk-c-Stepper__step--last');
-
-  expect(wrapper.state().activeStepId).not.toBe(lastStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 35,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
-  expect(wrapper.state().activeStepId).toBe(lastStep.prop('id'));
-});
-
-it('should correctly jump to first item with keyboard', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep />
-      <SprkStepperStep isSelected />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
-
-  expect(wrapper.state().activeStepId).not.toBe(firstStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 36,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
   expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
 });
 
