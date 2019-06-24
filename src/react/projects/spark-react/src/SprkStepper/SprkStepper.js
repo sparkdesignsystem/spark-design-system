@@ -151,7 +151,6 @@ class SprkStepper extends Component {
           hasDarkBackground ? 'sprk-c-Stepper--has-dark-bg' : '',
           additionalClasses
         )}
-        data-sprk-stepper="container"
         role="tablist"
         aria-orientation="vertical" // todo change based on window width
         data-id={idString}
