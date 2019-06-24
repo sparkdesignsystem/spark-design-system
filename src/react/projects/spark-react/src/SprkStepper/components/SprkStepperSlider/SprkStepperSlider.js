@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkLink from '../../../SprkLink/SprkLink';
 import SprkIcon from '../../../SprkIcon/SprkIcon';
-import SprkCarouselStep from '../SprkCarouselStep/SprkCarouselStep';
 import AnimateOnChange from 'react-animate-on-change'
 
 class SprkStepperSlider extends Component {

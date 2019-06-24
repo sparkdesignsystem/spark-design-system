@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { uniqueId } from 'lodash';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
-import SprkCarousel from './components/SprkCarousel/SprkCarousel';
-import SprkCarouselStep from './components/SprkCarouselStep/SprkCarouselStep';
 import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
 
 class SprkStepper extends Component {
@@ -128,16 +126,12 @@ class SprkStepper extends Component {
     const { additionalClasses, children, idString, hasDarkBackground, ...other } = this.props;
     const { activeStepIndex } = this.state;
 
-    let hasCarousel = false;
     let hasDesc = false;
     let descCount = 0;
 
+    // count the number of children with descriptions. If that doesn't match the number of children,
+    // warn the user
     children.forEach((child, index) => {
-      if (child.props.imgSrc) {
-        // TODO validate that if one has it they all have it
-        // hasCarousel = true;
-      }
-
       if (child.props.children) {
         descCount++;
       }
@@ -149,24 +143,6 @@ class SprkStepper extends Component {
       // true if 1 or more has a description but not all
       console.warn("SprkStepper: If any step has a description, they all must have a description.");
     }
-
-    // build the carousel steps as needed
-    const carousel = (
-      <SprkCarousel>
-        {children.map((childNode, index) => {
-          return (
-            <SprkCarouselStep
-              key={index} //TODO lodash or something
-              imgSrc={childNode.props.imgSrc}
-              imgAlt={childNode.props.imgAlt}
-              isSelected={activeStepIndex === index}
-            >
-
-            </SprkCarouselStep>
-          )
-        })}
-      </SprkCarousel>
-    );
 
     let stepper = (
       <ol
@@ -223,15 +199,6 @@ class SprkStepper extends Component {
         </div>
       )
     }
-
-    // if (hasCarousel) {
-    //   stepper = (
-    //     <div className=''>
-    //       {carousel}
-    //       {stepper}
-    //     </div>
-    //   )
-    // }
 
     return stepper;
   }

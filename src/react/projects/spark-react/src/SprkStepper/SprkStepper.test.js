@@ -5,7 +5,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import '../windowStubs';
 import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
-import SprkCarousel from './components/SprkCarousel/SprkCarousel';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -291,18 +290,4 @@ it('should call step callback function', () => {
   step.simulate('click');
 
   expect(expectedFunc.called).toBe(true);
-});
-
-it('should generate the correct carousel structure', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkCarousel/>
-      <SprkStepperStep />
-      <SprkStepperStep />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  expect(wrapper.find('div.sprk-c-Carousel').length).toBe(1);
-  expect(wrapper.find('div.sprk-c-Stepper').length).toBe(1);
 });
