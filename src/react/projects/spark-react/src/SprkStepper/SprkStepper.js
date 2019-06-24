@@ -164,7 +164,7 @@ class SprkStepper extends Component {
 
         {children.map((childNode, index) => {
 
-          let step = (
+          return (
             <SprkStepperStep
               {...childNode.props}
               key={index}
@@ -183,8 +183,6 @@ class SprkStepper extends Component {
               hasDarkBackground={hasDarkBackground}
             />
           );
-
-          return step;
         })}
       </ol>
     );

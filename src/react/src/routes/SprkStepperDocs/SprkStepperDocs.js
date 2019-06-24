@@ -12,6 +12,7 @@ const SprkStepperDocs = () => {
           <SprkStepper>
             <SprkStepperStep title="Step One" ></SprkStepperStep>
             <SprkStepperStep title="Step Two" ></SprkStepperStep>
+            <div>This child div should be ignored</div>
             <SprkStepperStep title="Step Three" ></SprkStepperStep>
           </SprkStepper>
         </div>
@@ -30,10 +31,10 @@ const SprkStepperDocs = () => {
       <ExampleContainer heading="Stepper with Step Descriptions">
         <div className="sprk-u-mbm">
           <SprkStepper>
-            <SprkStepperStep title="Step One">
+            <SprkStepperStep title="Step One" isSelected>
               Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </SprkStepperStep>
-            <SprkStepperStep title="Step Two" isSelected>
+            <SprkStepperStep title="Step Two">
               Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </SprkStepperStep>
             <SprkStepperStep title="Step Three">
@@ -45,6 +46,7 @@ const SprkStepperDocs = () => {
           </SprkStepper>
         </div>
       </ExampleContainer>
+
       <ExampleContainer heading="Stepper with Dark Background and Descriptions">
         <div className="sprk-u-mbm">
           <SprkStepper hasDarkBackground>
