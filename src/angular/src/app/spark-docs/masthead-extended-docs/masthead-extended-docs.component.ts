@@ -181,7 +181,7 @@ import { Component } from '@angular/core';
               [choices]="simpleChoices"
               dropdownType="simple"
               title="My Account"
-              triggerIconType="user"
+              triggerIconType="user-account"
               additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               additionalIconClasses="sprk-c-Icon--l"
               additionalClasses="sprk-u-Right--zero sprk-u-mrm"

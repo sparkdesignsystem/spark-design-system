@@ -156,7 +156,7 @@ function SprkMastheadExtendedDocs() {
     <SprkDropdown
       additionalClasses="sprk-u-Right--zero sprk-u-mrm"
       additionalIconClasses="sprk-c-Icon--l"
-      iconName="user"
+      iconName="user-account"
       choices={dropdownChoices}
       title="My Choices"
     />,
