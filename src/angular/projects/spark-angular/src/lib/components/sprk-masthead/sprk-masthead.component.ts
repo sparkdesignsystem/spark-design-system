@@ -60,6 +60,11 @@ import * as _ from 'lodash';
           </sprk-link>
         </div>
 
+        <div
+          class="sprk-c-Masthead__nav-item sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
+        >
+          <ng-content select="[navItem-slot]"></ng-content>
+        </div>
         <nav
           class="
           sprk-c-Masthead__little-nav

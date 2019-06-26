@@ -8,6 +8,7 @@ restrictions:
 - The Stepper component should NOT be used as a progress indicator, as there is
   no way at this time to mark a step as "complete".
 angularComingSoon: true
+=======
 variableTable:
   $sprk-stepper-bg:
     default: transparent
