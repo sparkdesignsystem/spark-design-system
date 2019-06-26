@@ -41,8 +41,10 @@ SprkStepperSlider.propTypes = {
   title: PropTypes.string,
   // The contents text for the slider
   contents: PropTypes.string,
-  // An object representing the style properties of this component. The important property is "top".
-  sliderStyle: PropTypes.object,
+  // An object representing the style properties of this component.
+  sliderStyle: PropTypes.shape({
+    top: PropTypes.number,
+  }),
 };
 
 export default SprkStepperSlider;

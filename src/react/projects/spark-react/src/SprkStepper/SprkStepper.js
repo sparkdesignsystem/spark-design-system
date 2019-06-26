@@ -15,18 +15,14 @@ class SprkStepper extends Component {
     this.advanceTab = this.advanceTab.bind(this);
     this.jumpToFirstTab = this.jumpToFirstTab.bind(this);
     this.jumpToLastTab = this.jumpToLastTab.bind(this);
-    this.setInitialActiveStep = this.setInitialActiveStep.bind(this);
+    this.getInitialActiveStep = this.getInitialActiveStep.bind(this);
     this.setNewActiveStep = this.setNewActiveStep.bind(this);
     this.updateSliderPosition = this.updateSliderPosition.bind(this);
 
     this.state = {
-      activeStepIndex: 0,
+      activeStepIndex: this.getInitialActiveStep(),
       sliderStyle: { top: 0, },
     };
-  }
-
-  componentDidMount() {
-    this.setInitialActiveStep();
   }
 
   handleStepClick(e, indexOfStep) {
@@ -94,7 +90,7 @@ class SprkStepper extends Component {
     this.setNewActiveStep(children.length - 1);
   }
 
-  setInitialActiveStep() {
+  getInitialActiveStep() {
     const { children } = this.props;
 
     // the first step is active by default
@@ -108,7 +104,7 @@ class SprkStepper extends Component {
       });
     }
 
-    this.setNewActiveStep(initialIndex);
+    return initialIndex;
   }
 
   setNewActiveStep(stepIndex){
@@ -128,10 +124,10 @@ class SprkStepper extends Component {
     let hasDesc = false;
     let descCount = 0;
 
-    // count the number of children with descriptions. If that doesn't match the total number of children,
+    // count the number of Step children with descriptions. If that doesn't match the total number of children,
     // warn the user
     children.forEach((child, index) => {
-      if (child.props.children) {
+      if (child.type.name === SprkStepperStep.name && child.props.children) {
         descCount++;
       }
     });
@@ -146,7 +142,7 @@ class SprkStepper extends Component {
       <ol
         className={classnames(
           'sprk-c-Stepper',
-          hasDarkBackground ? 'sprk-c-Stepper--has-dark-bg' : '',
+          hasDarkBackground ? 'sprk-u-BackgroundColor--blue sprk-c-Stepper--has-dark-bg' : '',
           additionalClasses
         )}
         role="tablist"
@@ -164,11 +160,13 @@ class SprkStepper extends Component {
 
         {children.map((childNode, index) => {
 
+          // Ignore all child nodes that are not SprkStepperSteps
+          if (childNode.type.name !== SprkStepperStep.name) return null;
+
           return (
             <SprkStepperStep
               {...childNode.props}
               key={index}
-              id={childNode.id}
               isSelected={activeStepIndex === index}
               tabIndex={0}
               additionalClasses={classnames(
@@ -186,14 +184,6 @@ class SprkStepper extends Component {
         })}
       </ol>
     );
-
-    if (hasDarkBackground) {
-      stepper = (
-        <div className='sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large'>
-          {stepper}
-        </div>
-      )
-    }
 
     return stepper;
   }

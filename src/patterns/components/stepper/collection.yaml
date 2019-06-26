@@ -1,5 +1,5 @@
 description:
-  The Stepper displays a series of sequentical steps with optional contextual descriptions.
+  The Stepper displays a series of sequential steps with optional contextual descriptions.
 information:
   - Users can use the arrow keys to tab through the steps.
 restrictions:

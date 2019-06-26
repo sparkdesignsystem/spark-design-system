@@ -5,10 +5,21 @@ import classnames from 'classnames';
 
 class SprkStepperStep extends Component {
 
+  componentDidMount() {
+    const { renderCallback, isSelected } = this.props;
+    if (isSelected) {
+
+      const top = ReactDOM.findDOMNode(this).offsetTop;
+      // call our parent and let them know what our top is so they can pass that
+      // to the slider component
+      renderCallback(top);
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     const { renderCallback, isSelected } = this.props;
-
     if (isSelected && !prevProps.isSelected) {
+
       const top = ReactDOM.findDOMNode(this).offsetTop;
       // call our parent and let them know what our top is so they can pass that
       // to the slider component
@@ -26,10 +37,10 @@ class SprkStepperStep extends Component {
       title,
       isSelected,
       onClick,
+      children,
       // not using this anywhere but I have to have it on the component so it doesn't
       // throw any errors.
       renderCallback,
-      children,
       ...other
     } = this.props;
 
@@ -77,7 +88,7 @@ class SprkStepperStep extends Component {
             )}
 
           >
-            {/* desc is only ever displayed in the slider. This is probably just for spacing. */}
+            {/* desc is only ever displayed in the slider. This is just for spacing. */}
             <p className="sprk-b-TypeBodyTwo">{children}</p>
           </div>
         </div>
