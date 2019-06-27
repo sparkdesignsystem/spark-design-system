@@ -1,0 +1,269 @@
+// ==================================================================
+// Typography
+// ==================================================================
+
+@if $sprk-using-webfonts {
+  @each $sprk-src, $sprk-name, $sprk-weight in $sprk-webfonts {
+    @font-face {
+      font-display: $sprk-font-display;
+      font-family: $sprk-name;
+      src: $sprk-src;
+      font-weight: $sprk-weight;
+    }
+  }
+}
+
+h1,
+.sprk-b-TypeDisplayOne {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-one,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-one) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-one
+  );
+
+  color: $sprk-color-display-one;
+  font-family: $sprk-font-family-display-one;
+  font-size: $sprk-font-size-display-one;
+  font-weight: $sprk-font-weight-display-one;
+
+  @media screen and (min-width: $sprk-type-display-one-breakpoint) {
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-one-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (
+        strip-unit($sprk-font-size-display-one-wide) * 16
+      ),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-one-wide
+    );
+
+    font-size: $sprk-font-size-display-one;
+  }
+}
+
+h2,
+.sprk-b-TypeDisplayTwo {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-two,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-two) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-two
+  );
+
+  color: $sprk-color-display-two;
+  font-family: $sprk-font-family-display-two;
+  font-size: $sprk-font-size-display-two;
+  font-weight: $sprk-font-weight-display-two;
+
+  @media screen and (min-width: $sprk-type-display-two-breakpoint) {
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-two-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (
+        strip-unit($sprk-font-size-display-two-wide) * 16
+      ),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-two-wide
+    );
+
+    font-size: $sprk-font-size-display-two-wide;
+  }
+}
+
+h3,
+.sprk-b-TypeDisplayThree {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-three,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-three) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-three
+  );
+
+  color: $sprk-color-display-three;
+  font-family: $sprk-font-family-display-three;
+  font-size: $sprk-font-size-display-three;
+  font-weight: $sprk-font-weight-display-three;
+
+  @media screen and (min-width: $sprk-type-display-three-breakpoint) {
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-three-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (
+        strip-unit($sprk-font-size-display-three-wide) * 16
+      ),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-three
+    );
+
+    font-size: $sprk-font-size-display-three-wide;
+  }
+}
+
+h4,
+.sprk-b-TypeDisplayFour {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-four,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-four) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-four
+  );
+
+  color: $sprk-color-display-four;
+  font-family: $sprk-font-family-display-four;
+  font-size: $sprk-font-size-display-four;
+  font-weight: $sprk-font-weight-display-four;
+}
+
+h5,
+.sprk-b-TypeDisplayFive {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-five,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-five) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-five
+  );
+
+  color: $sprk-color-display-five;
+  font-family: $sprk-font-family-display-five;
+  font-size: $sprk-font-size-display-five;
+  font-weight: $sprk-font-weight-display-five;
+}
+
+h6,
+.sprk-b-TypeDisplaySix {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-six,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-six) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-six
+  );
+
+  color: $sprk-color-display-six;
+  font-family: $sprk-font-family-display-six;
+  font-size: $sprk-font-size-display-six;
+  font-weight: $sprk-font-weight-display-six;
+  line-height: $sprk-line-height-display-six;
+}
+
+.sprk-b-TypeDisplaySeven {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-display-seven,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-display-seven) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-display-seven
+  );
+
+  color: $sprk-color-display-seven;
+  font-family: $sprk-font-family-display-seven;
+  font-size: $sprk-font-size-display-seven;
+  font-weight: $sprk-font-weight-display-seven;
+  line-height: $sprk-line-height-display-seven;
+}
+
+.sprk-b-TypeBodyOne {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-body-one,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-body-one) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-body-one
+  );
+
+  color: $sprk-color-body-one;
+  font-family: $sprk-font-family-body-one;
+  font-size: $sprk-font-size-body-one;
+  font-weight: $sprk-font-weight-body-one;
+}
+
+p,
+body,
+.sprk-b-TypeBodyTwo {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-body-two,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-body-two) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-body-two
+  );
+
+  color: $sprk-color-body-two;
+  font-family: $sprk-font-family-body-two;
+  font-size: $sprk-font-size-body-two;
+  font-weight: $sprk-font-weight-body-two;
+}
+
+.sprk-b-TypeBodyThree {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-body-three,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-body-three) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-body-three
+  );
+
+  color: $sprk-color-body-three;
+  font-family: $sprk-font-family-body-three;
+  font-size: $sprk-font-size-body-three;
+  font-weight: $sprk-font-weight-body-three;
+}
+
+.sprk-b-TypeBodyFour {
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-body-four,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-body-four) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-body-four
+  );
+
+  color: $sprk-color-body-four;
+  font-family: $sprk-font-family-body-four;
+  font-size: $sprk-font-size-body-four;
+  font-weight: $sprk-font-weight-body-four;
+}
+
+.sprk-b-PageTitle {
+  &::before {
+    content: '';
+    width: $sprk-page-title-mark-width;
+    border-top-width: $sprk-page-title-mark-height;
+    border-top-style: solid;
+    border-top-color: $sprk-page-title-mark-color;
+    padding: $sprk-page-title-mark-padding;
+
+    @media all and (min-width: $sprk-typography-breakpoint) {
+      border-top-width: $sprk-page-title-mark-height-wide-viewport;
+      padding: $sprk-page-title-mark-padding-wide-viewport;
+    }
+  }
+}

@@ -12,7 +12,7 @@
  * data-sprk-pagination="next" and data-sprk-pagination="prev"
  * These identify the previous and next links in the pagination components.
  */
-import { getElements } from '../../../../../packages/spark-core';
+import { getElements } from '../../../../../packages/spark';
 
 // Add aria-current attr to new page link, remove from old
 const setAriaCurrent = (newPageLink, oldPageLink) => {

@@ -1,0 +1,21 @@
+// ==========================================================================
+// Images
+// ==========================================================================
+//
+// These are some base styles to make images more responsive
+//
+///
+
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+//
+// Remove max-width when explicitely set
+///
+img[width],
+img[height] {
+  max-width: none;
+}

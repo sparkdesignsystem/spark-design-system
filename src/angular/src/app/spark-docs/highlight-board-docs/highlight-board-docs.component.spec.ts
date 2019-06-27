@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SparkCoreAngularModule } from '../../spark-core-angular/spark-core-angular.module';
-import { SparkHighlightBoardModule } from '../../spark-extras-angular/components/spark-extras-angular-highlight-board/spark-extras-angular-highlight-board.module';
+import { SparkAngularModule } from '../../spark-angular/spark-angular.module';
 import { HighlightBoardDocsComponent } from './highlight-board-docs.component';
 
 describe('HighlightBoardDocsComponent', () => {
@@ -10,11 +9,7 @@ describe('HighlightBoardDocsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        SparkCoreAngularModule,
-        SparkHighlightBoardModule,
-        RouterTestingModule
-      ],
+      imports: [SparkAngularModule, RouterTestingModule],
       declarations: [HighlightBoardDocsComponent]
     }).compileComponents();
   }));

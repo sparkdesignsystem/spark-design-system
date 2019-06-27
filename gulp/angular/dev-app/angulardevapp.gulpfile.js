@@ -31,20 +31,20 @@ gulp.task('install-angular-dev-app', (cb) => {
 });
 
 gulp.task('link-spark-to-angular-dir', (cb) => {
-  gulp.src(['src/angular/node_modules/@sparkdesignsystem/spark-core', 'src/angular/node_modules/@sparkdesignsystem/spark-extras'], { read: false })
+  gulp.src(['src/angular/node_modules/@sparkdesignsystem/spark'], { read: false })
     .pipe(clean())
   exec(
-    `cd src/angular && npm link @sparkdesignsystem/spark-core && npm link @sparkdesignsystem/spark-card && npm link @sparkdesignsystem/spark-dictionary && npm link @sparkdesignsystem/spark-highlight-board`, (err, stdout, stderr) => {
+    `cd src/angular && npm link @sparkdesignsystem/spark`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
   });
 });
 
-gulp.task('link-spark-core-angular-to-angular-dir', (cb) => {
-  gulp.src(['./src/angular/node_modules/@sparkdesignsystem/spark-core-angular'], { read: false })
+gulp.task('link-spark-angular-to-angular-dir', (cb) => {
+  gulp.src(['./src/angular/node_modules/@sparkdesignsystem/spark-angular'], { read: false })
     .pipe(clean());
-  exec(`cd src/angular && npm link @sparkdesignsystem/spark-core-angular`, (err, stdout, stderr) => {
+  exec(`cd src/angular && npm link @sparkdesignsystem/spark-angular`, (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);

@@ -1,7 +1,7 @@
 /* global document window */
 import 'prismjs';
 import 'babel-polyfill';
-import '../../../../packages/spark-core/utilities/polyfills/NodeListForEach';
+import '../../../../packages/spark/utilities/polyfills/NodeListForEach';
 
 import { paginationLong } from './pagination/long';
 import { paginationDefault } from './pagination/default';

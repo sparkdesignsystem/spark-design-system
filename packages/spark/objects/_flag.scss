@@ -1,0 +1,210 @@
+// ==========================================================================
+// Flag Object
+// ==========================================================================
+.sprk-o-Flag {
+  display: table;
+  width: 100%;
+}
+
+.sprk-o-Flag__body,
+.sprk-o-Flag__figure {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.sprk-o-Flag__figure {
+  padding-right: $sprk-flag-gutter;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.sprk-o-Flag__body {
+  width: 100%;
+
+  > :last-child,
+  & {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Reversed flag
+///
+.sprk-o-Flag--rev {
+  direction: rtl;
+
+  > .sprk-o-Flag__body,
+  > .sprk-o-Flag__figure {
+    direction: ltr;
+  }
+
+  > .sprk-o-Flag__figure {
+    padding-right: 0;
+    padding-left: $sprk-flag-gutter;
+  }
+}
+
+//
+// Flush flag (no gutter)
+///
+.sprk-o-Flag--flush {
+  > .sprk-o-Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+//
+// Tiny flag
+///
+.sprk-o-Flag--tiny {
+  > .sprk-o-Flag__figure {
+    padding-right: $sprk-flag-gutter-tiny;
+  }
+
+  &.sprk-o-Flag--rev {
+    > .sprk-o-Flag__figure {
+      padding-right: 0;
+      padding-left: $sprk-flag-gutter-tiny;
+    }
+  }
+}
+
+//
+// Small flag
+///
+.sprk-o-Flag--small {
+  > .sprk-o-Flag__figure {
+    padding-right: $sprk-flag-gutter-small;
+  }
+
+  &.sprk-o-Flag--rev {
+    > .sprk-o-Flag__figure {
+      padding-right: 0;
+      padding-left: $sprk-flag-gutter-small;
+    }
+  }
+}
+
+//
+// Large flag
+///
+.sprk-o-Flag--large {
+  > .sprk-o-Flag__figure {
+    padding-right: $sprk-flag-gutter-large;
+  }
+
+  &.sprk-o-Flag--rev {
+    > .sprk-o-Flag__figure {
+      padding-right: 0;
+      padding-left: $sprk-flag-gutter-large;
+    }
+  }
+}
+
+//
+// Huge flag
+///
+.sprk-o-Flag--huge {
+  > .sprk-o-Flag__figure {
+    padding-right: $sprk-flag-gutter-huge;
+  }
+
+  &.sprk-o-Flag--rev {
+    > .sprk-o-Flag__figure {
+      padding-right: 0;
+      padding-left: $sprk-flag-gutter-huge;
+    }
+  }
+}
+
+//
+// Vertically Align content to the middle
+///
+.sprk-o-Flag--middle {
+  > .sprk-o-Flag__body,
+  > .sprk-o-Flag__figure {
+    vertical-align: middle;
+  }
+}
+
+//
+// Vertically align content to the bottom
+///
+.sprk-o-Flag--bottom {
+  > .sprk-o-Flag__body,
+  > .sprk-o-Flag__figure {
+    vertical-align: bottom;
+  }
+}
+
+//
+// Stacked flag at smaller screen width
+///
+@media all and (max-width: $sprk-flag-stacked-breakpoint) {
+  //
+  // Default stacked flag
+  ///
+  .sprk-o-Flag--stacked {
+    direction: ltr;
+
+    > .sprk-o-Flag__body,
+    > .sprk-o-Flag__figure,
+    & {
+      display: block;
+    }
+
+    > .sprk-o-Flag__figure {
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: $sprk-flag-gutter;
+    }
+
+    //
+    // Tiny stacked flag
+    ///
+    &.sprk-o-Flag--tiny {
+      > .sprk-o-Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $sprk-flag-gutter-tiny;
+      }
+    }
+
+    //
+    // Small stacked flag
+    ///
+    &.sprk-o-Flag--small {
+      > .sprk-o-Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $sprk-flag-gutter-small;
+      }
+    }
+
+    //
+    // Large stacked flag
+    ///
+    &.sprk-o-Flag--large {
+      > .sprk-o-Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $sprk-flag-gutter-large;
+      }
+    }
+
+    //
+    // Huge stacked flag
+    ///
+    &.sprk-o-Flag--huge {
+      > .sprk-o-Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $sprk-flag-gutter-huge;
+      }
+    }
+  }
+}

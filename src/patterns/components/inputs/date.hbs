@@ -6,7 +6,7 @@ information:
   - Spark recommends that this component be used for well known dates (i.e. birthdate), or dates in the far future or past (i.e. when did you move?).
   - Masking is automatically applied when the field contains a valid input.
   - The field value contains special characters which you may need to parse out before submitting the form.
-order: 25
+order: 26
 hasAngularCode: true
 hasReactCode: true
 hasAngularCodeInfo: true
@@ -18,7 +18,7 @@ hasAngularCodeInfo: true
          id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}"
          data-id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}"
          type="text"
-         pattern="^(((0[1358]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02(\/?)((0?\d)|[12]\d))(\4|\7|\9)[12]\d{3})?$"
+         pattern="^(((0[13578]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02([\/-]?)((0[1-9])|[12]\d))(\4|\7|\9)[12]\d{3})?$"
          placeholder="MM/DD/YYYY"
          aria-describedby="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container"
          {{#if invaliddata}} aria-invalid="true"{{/if}}

@@ -1,5 +1,5 @@
 /* global document window */
-import { focusFirstEl } from '../../../../../packages/spark-core/utilities/elementState';
+import { focusFirstEl } from '../../../../../packages/spark/utilities/elementState';
 
 const hideMobileNav = (nav) => {
   document.body.classList.remove('drizzle-u-Overflow--hidden');

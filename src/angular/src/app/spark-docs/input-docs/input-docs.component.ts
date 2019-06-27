@@ -25,6 +25,44 @@ import { Component } from '@angular/core';
             <div class="sprk-b-ErrorText">This field is required.</div>
           </span>
         </sprk-input-container>
+        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+          <label sprkLabel> Disabled Text Input</label>
+          <input
+            disabled
+            name="text_input_huge_disabled"
+            [ngClass]="{
+              'sprk-b-TextInput--huge': true,
+              'sprk-b-TextInput--error': textInput.invalid && textInput.dirty
+            }"
+            type="text"
+            [(ngModel)]="text_input_huge_disabled"
+            required
+            #textInput="ngModel"
+            data-id="input-disabled-1"
+            sprkInput
+          />
+        </sprk-input-container>
+        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+          <label class="sprk-u-ScreenReaderText" sprkLabel
+            >Huge Text Input</label
+          >
+          <input
+            name="text_input_huge"
+            class="sprk-b-TextInput--huge"
+            type="text"
+            [(ngModel)]="text_input_huge"
+            required
+            #textInput="ngModel"
+            sprkInput
+          />
+          <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+            <sprk-icon
+              iconType="exclamation-filled-small"
+              additionalClasses="sprk-b-ErrorIcon"
+            ></sprk-icon>
+            <div class="sprk-b-ErrorText">This field is required.</div>
+          </span>
+        </sprk-input-container>
         <sprk-selection-container>
           <label sprkLabel>Checkbox Group Label</label>
           <sprk-selection-item-container>
@@ -271,7 +309,7 @@ import { Component } from '@angular/core';
             name="datepicker_input"
             class="sprk-b-TextInput--has-svg-icon"
             type="text"
-            pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+            pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
             placeholder="MM/DD/YYYY"
             [(ngModel)]="datepicker_input"
             #datepickerInput="ngModel"
@@ -296,7 +334,7 @@ import { Component } from '@angular/core';
           <input
             name="date_input"
             type="text"
-            pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+            pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
             placeholder="MM/DD/YYYY"
             [(ngModel)]="date_input"
             #dateInput="ngModel"
@@ -332,6 +370,8 @@ export class InputDocsComponent {
   constructor() {}
 
   text_input = '';
+  text_input_huge = '';
+  text_input_huge_disabled = '';
   textarea_input = '';
   search_input = '';
   inline_search_input = '';

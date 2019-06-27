@@ -11,6 +11,21 @@ it('should render an element with the correct class', () => {
   expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
 });
 
+it('should render a huge text input with the correct class', () => {
+  const wrapper = mount(<SprkTextInput type="hugeTextInput" />);
+  expect(
+    wrapper
+      .find('.sprk-b-InputContainer')
+      .hasClass('sprk-b-InputContainer--huge'),
+  ).toBe(true);
+  expect(
+    wrapper.find('.sprk-b-Label').hasClass('sprk-u-ScreenReaderText'),
+  ).toBe(true);
+  expect(
+    wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--huge'),
+  ).toBe(true);
+});
+
 it('should add classes when additionalClasses has a value', () => {
   const wrapper = mount(<SprkTextInput additionalClasses="sprk-u-man" />);
   expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
@@ -39,7 +54,9 @@ it('should render a textarea is type is set to textarea', () => {
 it('should run the supplied formatter', () => {
   const formatter = jest.fn(() => true);
   const onChangeMock = jest.fn();
-  mount(<SprkTextInput type="text" formatter={formatter} onChange={onChangeMock} />);
+  mount(
+    <SprkTextInput type="text" formatter={formatter} onChange={onChangeMock} />,
+  );
   expect(formatter.mock.calls.length).toBe(2);
 });
 
@@ -52,7 +69,13 @@ it('should not run the formatter if the field is invalid', () => {
 it('should run the supplied formatter (textarea)', () => {
   const formatter = jest.fn(() => true);
   const onChangeMock = jest.fn();
-  mount(<SprkTextInput type="textarea" formatter={formatter} onChange={onChangeMock} />);
+  mount(
+    <SprkTextInput
+      type="textarea"
+      formatter={formatter}
+      onChange={onChangeMock}
+    />,
+  );
   expect(formatter.mock.calls.length).toBe(2);
 });
 

@@ -36,28 +36,32 @@ class SprkTextInput extends Component {
     const { id, errorContainerId } = this.state;
 
     return (
-      <div className={classNames('sprk-b-InputContainer', additionalClasses)}>
+      <div
+        className={classNames('sprk-b-InputContainer', additionalClasses, {
+          'sprk-b-InputContainer--huge': type === 'hugeTextInput',
+        })}
+      >
         <div
-          className={classNames(
-            {
-              'sprk-b-TextInputIconContainer': leadingIcon.length > 0 || textIcon,
-            },
-            { 'sprk-b-TextInputIconContainer--has-text-icon': textIcon },
-          )}
+          className={classNames({
+            'sprk-b-TextInputIconContainer': leadingIcon.length > 0 || textIcon,
+            'sprk-b-TextInputIconContainer--has-text-icon': textIcon,
+          })}
         >
           {leadingIcon.length > 0 && (
             <SprkIcon
               iconName={leadingIcon}
-              additionalClasses="sprk-c-Icon--m sprk-c-Icon--stroke-current-color"
+              additionalClasses="
+                sprk-c-Icon--m sprk-c-Icon--stroke-current-color
+              "
             />
           )}
           <label
             htmlFor={id}
-            className={classNames(
-              'sprk-b-Label',
-              { 'sprk-b-Label--with-icon': leadingIcon.length > 0 },
-              { 'sprk-u-ScreenReaderText': hiddenLabel },
-            )}
+            className={classNames('sprk-b-Label', {
+              'sprk-b-Label--with-icon': leadingIcon.length > 0,
+              'sprk-u-ScreenReaderText':
+                hiddenLabel || type === 'hugeTextInput',
+            })}
           >
             {label}
           </label>
@@ -76,12 +80,12 @@ class SprkTextInput extends Component {
           )}
           {type !== 'textarea' && (
             <input
-              className={classNames(
-                'sprk-b-TextInput sprk-u-Width-100',
-                { 'sprk-b-TextInput--error': !valid },
-                { 'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0 },
-                { 'sprk-b-TextInput--has-text-icon': textIcon },
-              )}
+              className={classNames('sprk-b-TextInput sprk-u-Width-100', {
+                'sprk-b-TextInput--error': !valid,
+                'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0,
+                'sprk-b-TextInput--has-text-icon': textIcon,
+                'sprk-b-TextInput--huge': type === 'hugeTextInput',
+              })}
               id={id}
               data-analytics={analyticsString}
               data-id={idString}
@@ -95,8 +99,12 @@ class SprkTextInput extends Component {
           )}
         </div>
         {children}
-        {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
-        {!valid && <SprkErrorContainer id={errorContainerId} message={errorMessage} />}
+        {helperText.length > 0 && (
+          <div className="sprk-b-HelperText">{helperText}</div>
+        )}
+        {!valid && (
+          <SprkErrorContainer id={errorContainerId} message={errorMessage} />
+        )}
       </div>
     );
   }

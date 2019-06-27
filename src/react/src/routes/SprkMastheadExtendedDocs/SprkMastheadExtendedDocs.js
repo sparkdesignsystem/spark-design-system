@@ -153,20 +153,10 @@ function SprkMastheadExtendedDocs() {
     >
       Talk To Us
     </SprkLink>,
-    <SprkLink
-      href="#nogo"
-      variant="plain"
-      additionalClasses="sprk-c-Masthead__link"
-    >
-      <SprkIcon
-        iconName="settings"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l"
-      />
-    </SprkLink>,
     <SprkDropdown
       additionalClasses="sprk-u-Right--zero sprk-u-mrm"
       additionalIconClasses="sprk-c-Icon--l"
-      iconName="user"
+      iconName="user-account"
       choices={dropdownChoices}
       title="My Choices"
     />,
@@ -182,6 +172,7 @@ function SprkMastheadExtendedDocs() {
         siteLogo={<SiteLogo />}
         utilityContents={utilityItems}
         variant="extended"
+        navLink={<SprkLink variant="simple" href="#nogo" additionalClasses="sprk-c-Masthead__link">Sign In</SprkLink>}
       />
       <div className="sprk-u-mal">
         <p>Lorem Ipsum</p>

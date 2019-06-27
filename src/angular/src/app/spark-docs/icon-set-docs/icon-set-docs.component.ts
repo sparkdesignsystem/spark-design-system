@@ -197,6 +197,7 @@ export class IconSetDocsComponent {
     'update',
     'upload',
     'user',
+    'user-account',
     'verified-approval',
     'vip',
     'wifi',
