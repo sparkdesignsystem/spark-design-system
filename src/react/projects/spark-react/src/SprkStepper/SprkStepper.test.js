@@ -117,20 +117,6 @@ it('should not change state for unexpected keypresses', () => {
   expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
 });
 
-it('should correctly structure the hasDarkBackground prop', () => {
-  const expected = 'div.sprk-u-BackgroundColor--blue';
-  const expected_inner = 'sprk-c-Stepper--has-dark-bg';
-  const wrapper = mount(
-    <SprkStepper hasDarkBackground>
-      <SprkStepperStep />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  expect(wrapper.find(expected).length).toBe(1);
-  expect(wrapper.find('ol').hasClass(expected_inner)).toBe(true);
-});
-
 it('should call step callback function', () => {
   const expectedFunc = sinon.spy();
   const wrapper = mount(
