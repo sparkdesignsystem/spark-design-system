@@ -166,7 +166,7 @@ class SprkStepper extends Component {
           return (
             <SprkStepperStep
               {...childNode.props}
-              key={index}
+              key={childNode.props.id || index}
               isSelected={activeStepIndex === index}
               tabIndex={0}
               additionalClasses={classnames(
