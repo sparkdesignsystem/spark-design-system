@@ -105,7 +105,7 @@ import * as _ from 'lodash';
                 <sprk-dropdown
                   [choices]="link.subNav"
                   additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  additionalClasses="sprk-u-Width-100 sprk-u-TextAlign--left"
+                  additionalClasses="sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
                   [triggerText]="link.text"
                 ></sprk-dropdown>
