@@ -7,6 +7,8 @@ restrictions:
 - Only one step can be selected at a time.
 - The Stepper component should NOT be used as a progress indicator, as there is
   no way at this time to mark a step as "complete".
+- The React Stepper uses the index of its children to keep track of the active step. If you want to modify the index of the child steps
+  (for example, to sort them or add more steps) you need to re-initialize the component so that it refreshes the internal indices.
 angularComingSoon: true
 variableTable:
   $sprk-stepper-bg:
