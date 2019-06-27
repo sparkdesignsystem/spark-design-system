@@ -49,7 +49,6 @@ class SprkStepperDocs extends Component {
             <SprkStepper>
               <SprkStepperStep title="Step One" ></SprkStepperStep>
               <SprkStepperStep title="Step Two" ></SprkStepperStep>
-              <div>This child div should be ignored</div>
               <SprkStepperStep title="Step Three" ></SprkStepperStep>
             </SprkStepper>
           </div>
