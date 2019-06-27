@@ -39,12 +39,12 @@ function Layout({ children }) {
     <StaticQuery
       query={graphql`
       {
-        allDirectory {
+        allMdx {
           edges {
             node {
-              name
-              fields {
-                slug 
+              frontmatter {
+                path
+                title
               }
             }
           }
@@ -77,14 +77,14 @@ function Layout({ children }) {
                   [{
                     text: 'Components',
                     subNavLinks:
-                      data.allDirectory.edges
-                        .filter(edge => ((edge.node.name
-                          && edge.node.fields
-                          && edge.node.fields.slug) ? edge : null))
+                      data.allMdx.edges
+                        .filter(edge => ((edge.node.frontmatter.title
+                          && edge.node.frontmatter
+                          && edge.node.frontmatter.path) ? edge : null))
                         .map(edge => ({
                           element: Link,
-                          text: edge.node.name,
-                          to: edge.node.fields.slug,
+                          text: edge.node.frontmatter.title,
+                          to: edge.node.frontmatter.path,
                         })),
                   }],
                 )
@@ -98,14 +98,14 @@ function Layout({ children }) {
                 [{
                   text: 'Components',
                   subNavLinks:
-                data.allDirectory.edges
-                  .filter(edge => ((edge.node.name
-                    && edge.node.fields
-                    && edge.node.fields.slug) ? edge : null))
+                data.allMdx.edges
+                  .filter(edge => ((edge.node.frontmatter.title
+                    && edge.node.frontmatter
+                    && edge.node.frontmatter.path) ? edge : null))
                   .map(edge => ({
                     element: Link,
-                    text: edge.node.name,
-                    to: edge.node.fields.slug })),
+                    text: edge.node.frontmatter.title,
+                    to: edge.node.frontmatter.path })),
                 }],
               )
             }
