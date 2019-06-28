@@ -120,6 +120,11 @@ function SiteNav() {
             Card
           </Link>
         </li>
+        <li>
+          <Link to="/stepper" className="drizzle-b-Link drizzle-b-Link--light">
+            Stepper
+          </Link>
+        </li>
       </ul>
     </nav>
   );

@@ -1,14 +1,15 @@
 description:
-  The Stepper shows progression through a process.
+  The Stepper displays a series of sequential steps with optional contextual descriptions.
 information:
-  - Uses the aria role of "tablist" for accessibility reasons.
   - Users can use the arrow keys to tab through the steps.
-  - Pressing "enter" on a step will select that step.
 restrictions:
-- Has a minimum of three items.
+- Steppers must have a minimum of 2 items.
 - Only one step can be selected at a time.
+- The Stepper component should NOT be used as a progress indicator, as there is
+  no way at this time to mark a step as "complete".
+- The React Stepper uses the index of its children to keep track of the active step. If you want to modify the index of the child steps
+  (for example, to sort them or add more steps) you need to re-initialize the component so that it refreshes the internal indices.
 angularComingSoon: true
-reactComingSoon: false
 variableTable:
   $sprk-stepper-bg:
     default: transparent
@@ -95,14 +96,14 @@ variableTable:
     default: $sprk-space-misc-a
     description: The padding value for the step.
   $sprk-stepper-step-content-bg-selected:
-    default: $sprk-white
+    default: transparent
     description: The background color of the step content box when the step is selected.
   $sprk-stepper-step-description-bg-selected:
     default: $sprk-white
     description: The background color of the step content box when it has a description and when the step is selected.
-  $sprk-stepper-dark-step-description-bg-selected:
-    default: $sprk-white
-    description: The background color of a selected step's content box when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
+  $sprk-stepper-dark-step-description-selected:
+    default: $sprk-black
+    description: The text color of a selected step's content and header when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
   $sprk-stepper-bar-color:
     default: $sprk-black-tint-50
     description: The color of the bar that connects the steps.
