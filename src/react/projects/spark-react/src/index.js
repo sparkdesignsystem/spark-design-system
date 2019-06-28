@@ -24,6 +24,9 @@ export { default as SprkTable } from './SprkTable/SprkTable';
 export { default as SprkMasthead } from './SprkMasthead/SprkMasthead';
 export { default as SprkPagination } from './SprkPagination/SprkPagination';
 export { default as SprkPromo } from './SprkPromo/SprkPromo';
+export { default as SprkStepper } from './SprkStepper/SprkStepper';
+export { default as SprkStepperStep } from
+'./SprkStepper/components/SprkStepperStep/SprkStepperStep';
 export { default as SprkSpinner } from './SprkSpinner/SprkSpinner';
 export { default as SprkList } from './SprkList/SprkList';
 export {

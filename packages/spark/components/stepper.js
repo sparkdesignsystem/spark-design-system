@@ -69,6 +69,10 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
   let carouselInstance;
   let windowWidth = window.innerWidth;
   const steps = stepContainer.querySelectorAll('[data-sprk-stepper="step"]');
+
+  steps[0].classList.add('sprk-c-Stepper__step--first');
+  steps[steps.length - 1].classList.add('sprk-c-Stepper__step--last');
+
   const descriptions = stepContainer.querySelectorAll(
     '[data-sprk-stepper="description"]',
   );
