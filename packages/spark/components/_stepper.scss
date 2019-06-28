@@ -43,6 +43,8 @@
 }
 
 .sprk-c-Stepper--has-dark-bg {
+  .sprk-c-Stepper__step-heading,
+  .sprk-c-Stepper__step--selected
   .sprk-c-Stepper__step-heading {
     color: $sprk-stepper-dark-step-heading-color;
   }
