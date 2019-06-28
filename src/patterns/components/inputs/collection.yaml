@@ -75,7 +75,7 @@ variableTable:
     default: 48px
     description: The height of text input elements.
   $sprk-text-input-line-height:
-    default: 1.2
+    default: 1.3
     description: The line height to use for inputs.
   $sprk-text-input-outline:
     default: 0
@@ -174,7 +174,7 @@ variableTable:
     default: $sprk-text-input-outline
     description: The outline applied to select elements.
   $sprk-select-padding:
-    default: 14px 45px 14px 13px
+    default: 12px 45px 12px 13px
     description: The padding applied to select elements.
   $sprk-select-arrow-offset-y:
     default: -37px
@@ -219,7 +219,7 @@ variableTable:
     default: 0.8125rem
     description: The font size used for input error text.
   $sprk-input-error-text-line-height:
-    default: 1.2
+    default: 1.4
     description: The line-height used for input error text.
   $sprk-input-error-text-margin:
     default: 0 0 0 6px

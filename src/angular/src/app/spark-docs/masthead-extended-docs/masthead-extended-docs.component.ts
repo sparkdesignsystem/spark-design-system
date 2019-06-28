@@ -123,6 +123,14 @@ import { Component } from '@angular/core';
             ></path>
           </g>
         </svg>
+        <sprk-link
+          navItem-slot
+          linkType="plain"
+          additionalClasses="sprk-c-Masthead__link"
+          href="#nogo"
+        >
+          Sign In
+        </sprk-link>
 
         <div
           little-nav-slot
@@ -169,25 +177,11 @@ import { Component } from '@angular/core';
           </li>
 
           <li>
-            <a
-              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-              routerLink="/cards"
-              href="#nogo"
-            >
-              <sprk-icon
-                iconType="settings"
-                additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
-              ></sprk-icon>
-              <span class="sprk-u-ScreenReaderText">Settings</span>
-            </a>
-          </li>
-
-          <li>
             <sprk-dropdown
               [choices]="simpleChoices"
               dropdownType="simple"
               title="My Account"
-              triggerIconType="user"
+              triggerIconType="user-account"
               additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               additionalIconClasses="sprk-c-Icon--l"
               additionalClasses="sprk-u-Right--zero sprk-u-mrm"

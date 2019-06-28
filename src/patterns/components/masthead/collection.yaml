@@ -3,6 +3,7 @@ description:
 information:
   - There are three custom configurations that you must do in order for the Masthead's narrow navigation to work properly (see below restrictions).
   - The Masthead is "sticky" and content will flow under it.
+  - Vanilla Implementation Only - On narrow viewports when a user scrolls down the page, the masthead will become hidden. When the user scrolls back up towards the top of the page, the masthead will come back into view.
   - All content used here is placeholder content. Please use your own logo, content, and hrefs.
   - Make sure you leave the 'data-sprk-masthead' attribute on the main Masthead element as it functions as a Spark JS hook. It's already included in the provided code.
 restrictions:
@@ -15,6 +16,10 @@ restrictions:
     $sprk-masthead-narrow-height to that height.
   - You must duplicate your navigational items in the Masthead navigation HTML and in the Masthead narrow
     navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
+  - The narrow viewport expects three divs with the following classes to render properly
+  - .sprk-c-Masthead__menu
+  - .sprk-c-Masthead__branding
+  - .sprk-c-Masthead__nav-item
 sparkPackageCore: true
 hasAngularInfo: true
 variableTable:
@@ -118,8 +123,11 @@ variableTable:
     default: rgba(0, 0, 0, 0.5)
     description: The color of the mask that gets applied when the selector dropdown is open on narrow screens.
   $sprk-masthead-transition:
-    default: box-shadow 0.3s ease-in
+    default: all 0.3s ease-in
     description: The transition applied to the masthead.
+  $sprk-masthead-translateY:
+    default: translateY(-100%)
+    description: The transform length that gets applied when the masthead scrolls out of view on narrow screens.
   $sprk-masthead-selector-dropdown-padding:
     default: 0
     description: The padding for the selector dropdown.
@@ -203,6 +211,8 @@ classTable:
     description: Sets styles for the masthead when it is open.
   .sprk-c-Masthead--scroll:
     description: Sets styles for the masthead when the user scrolls past it.
+  .sprk-c-Masthead--hidden:
+    description: Sets styles to hide the masthead when a user scrolls on a narrow screen.
   .sprk-c-Masthead__link--big-nav:
     description: Adds an underline on links used in the big navigation bar.
   .sprk-c-Masthead__big-nav-item--active:

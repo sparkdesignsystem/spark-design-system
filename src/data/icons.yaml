@@ -569,6 +569,9 @@
 - name: user
   viewBox: 0 0 64 64
   description: ...
+- name: user-account
+  viewBox: 0 0 64 64
+  description: ...
 - name: verified-approval
   viewBox: 0 0 64 64
   description: ...

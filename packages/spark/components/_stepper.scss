@@ -43,6 +43,8 @@
 }
 
 .sprk-c-Stepper--has-dark-bg {
+  .sprk-c-Stepper__step-heading,
+  .sprk-c-Stepper__step--selected
   .sprk-c-Stepper__step-heading {
     color: $sprk-stepper-dark-step-heading-color;
   }
@@ -57,8 +59,9 @@
   }
 
   .sprk-c-Stepper__step--selected
-  .sprk-c-Stepper__step-content--has-description {
-    background-color: $sprk-stepper-dark-step-description-bg-selected;
+  .sprk-c-Stepper__step-content--has-description
+  .sprk-c-Stepper__step-heading {
+    color: $sprk-stepper-dark-step-description-selected;
   }
 
   .sprk-c-Stepper__step--selected
@@ -149,13 +152,8 @@
   }
 
   .sprk-c-Stepper__step-heading {
-    color: $sprk-stepper-step-heading-color-selected;
     font-weight: $sprk-stepper-step-heading-font-weight;
-  }
-
-  .sprk-c-Stepper__step-content--has-description {
-    background-color: $sprk-stepper-step-description-bg-selected;
-    box-shadow: $sprk-stepper-step-description-box-shadow;
+    color: $sprk-stepper-step-heading-color-selected;
   }
 
   .sprk-c-Stepper__step-icon {
@@ -182,6 +180,11 @@
 
   .sprk-c-Stepper__step-content {
     background-color: $sprk-stepper-step-content-bg-selected;
+  }
+
+  .sprk-c-Stepper__step-content--has-description {
+    background-color: $sprk-stepper-step-description-bg-selected;
+    box-shadow: $sprk-stepper-step-description-box-shadow;
   }
 
   .sprk-c-Stepper__step-content--hidden {
