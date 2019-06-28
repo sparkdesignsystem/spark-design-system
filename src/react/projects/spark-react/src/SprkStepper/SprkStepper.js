@@ -139,50 +139,55 @@ class SprkStepper extends Component {
     }
 
     let stepper = (
-      <ol
-        className={classnames(
-          'sprk-c-Stepper',
-          hasDarkBackground ? 'sprk-u-BackgroundColor--blue sprk-c-Stepper--has-dark-bg' : '',
-          additionalClasses
-        )}
-        role="tablist"
-        aria-orientation="vertical" // todo change based on window width
-        data-id={idString}
-        {...other}
-      >
-        {hasDesc &&
-          <SprkStepperSlider
-            title={children[activeStepIndex].props.title} // active title
-            contents={children[activeStepIndex].props.children} // active contents
-            sliderStyle={this.state.sliderStyle}
-          />
-        }
-
-        {children.map((childNode, index) => {
-
-          // Ignore all child nodes that are not SprkStepperSteps
-          if (childNode.type.name !== SprkStepperStep.name) return null;
-
-          return (
-            <SprkStepperStep
-              {...childNode.props}
-              key={childNode.props.id || index}
-              isSelected={activeStepIndex === index}
-              tabIndex={0}
-              additionalClasses={classnames(
-                index === 0 ? 'sprk-c-Stepper__step--first' : '',
-                index === children.length - 1 ? 'sprk-c-Stepper__step--last' : '',
-                childNode.props.additionalClasses
-              )}
-              onKeyDown={this.handleKeyEvents}
-              onClick={(event) => { childNode.props.onClick(); this.handleStepClick(event, index); }}
-              renderCallback={ this.updateSliderPosition }
-              hasDescription={hasDesc}
-              hasDarkBackground={hasDarkBackground}
+      <div className={classnames(
+        hasDarkBackground ? 'sprk-u-BackgroundColor--blue sprk-c-Stepper--has-dark-bg' : '',
+        additionalClasses
+      )}>
+        <ol
+          className={classnames(
+            'sprk-c-Stepper',
+            hasDarkBackground ? 'sprk-u-BackgroundColor--blue sprk-c-Stepper--has-dark-bg' : '',
+            additionalClasses
+          )}
+          role="tablist"
+          aria-orientation="vertical" // todo change based on window width
+          data-id={idString}
+          {...other}
+        >
+          {hasDesc &&
+            <SprkStepperSlider
+              title={children[activeStepIndex].props.title} // active title
+              contents={children[activeStepIndex].props.children} // active contents
+              sliderStyle={this.state.sliderStyle}
             />
-          );
-        })}
-      </ol>
+          }
+
+          {children.map((childNode, index) => {
+
+            // Ignore all child nodes that are not SprkStepperSteps
+            if (childNode.type.name !== SprkStepperStep.name) return null;
+
+            return (
+              <SprkStepperStep
+                {...childNode.props}
+                key={childNode.props.id || index}
+                isSelected={activeStepIndex === index}
+                tabIndex={0}
+                additionalClasses={classnames(
+                  index === 0 ? 'sprk-c-Stepper__step--first' : '',
+                  index === children.length - 1 ? 'sprk-c-Stepper__step--last' : '',
+                  childNode.props.additionalClasses
+                )}
+                onKeyDown={this.handleKeyEvents}
+                onClick={(event) => { childNode.props.onClick(); this.handleStepClick(event, index); }}
+                renderCallback={ this.updateSliderPosition }
+                hasDescription={hasDesc}
+                hasDarkBackground={hasDarkBackground}
+              />
+            );
+          })}
+        </ol>
+      </div>
     );
 
     return stepper;
