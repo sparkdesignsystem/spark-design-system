@@ -138,16 +138,12 @@ class SprkStepper extends Component {
       console.warn("SprkStepper: If any step has a description, they all must have a description.");
     }
 
-    let stepper = (
-      <div className={classnames(
-        hasDarkBackground ? 'sprk-u-BackgroundColor--blue sprk-c-Stepper--has-dark-bg' : '',
-        additionalClasses
-      )}>
+     let stepper = (
         <ol
           className={classnames(
             'sprk-c-Stepper',
-            hasDarkBackground ? 'sprk-u-BackgroundColor--blue sprk-c-Stepper--has-dark-bg' : '',
-            additionalClasses
+            hasDarkBackground ? 'sprk-c-Stepper--has-dark-bg' : '',
+            !hasDarkBackground ? additionalClasses : '',
           )}
           role="tablist"
           aria-orientation="vertical" // todo change based on window width
@@ -155,11 +151,11 @@ class SprkStepper extends Component {
           {...other}
         >
           {hasDesc &&
-            <SprkStepperSlider
-              title={children[activeStepIndex].props.title} // active title
-              contents={children[activeStepIndex].props.children} // active contents
-              sliderStyle={this.state.sliderStyle}
-            />
+          <SprkStepperSlider
+            title={children[activeStepIndex].props.title} // active title
+            contents={children[activeStepIndex].props.children} // active contents
+            sliderStyle={this.state.sliderStyle}
+          />
           }
 
           {children.map((childNode, index) => {
@@ -187,8 +183,16 @@ class SprkStepper extends Component {
             );
           })}
         </ol>
-      </div>
     );
+
+    if (hasDarkBackground) {
+      return (
+        <div className={classnames(
+          'sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large',
+          additionalClasses
+        )}>{stepper}</div>
+      );
+    }
 
     return stepper;
   }
