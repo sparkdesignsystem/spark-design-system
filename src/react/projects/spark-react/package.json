@@ -24,7 +24,7 @@
     "babel-loader": "^8.0.5",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "regenerator-runtime": "^0.13.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
