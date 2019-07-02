@@ -3,7 +3,7 @@ import {
   Input,
   ContentChildren,
   QueryList,
-  OnInit
+  AfterContentInit
 } from '@angular/core';
 import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.component';
 
@@ -25,7 +25,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
         [first]="isFirst"
         [title]="step.title"
         [content]="step.content"
-        [selected]="checkIfSelected(step.isSelected, i)"
+        [selected]="this.selectedIndex === i"
         [selectedIndex]="selectedIndex"
         [hasDescription]="hasDescription"
       >
@@ -33,25 +33,21 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
     </ol>
   `
 })
-export class SprkStepperComponent implements OnInit {
+export class SprkStepperComponent implements AfterContentInit {
   @Input() additionalClasses: string;
   @Input() hasDarkBg: boolean;
   @Input() hasDescription: boolean;
 
-  selectedIndex = null;
-  defaultSelected;
   @ContentChildren(SprkStepperStepComponent) steps: QueryList<
     SprkStepperStepComponent
   >;
 
-  checkIfSelected(isSelected, i) {
-    if (this.selectedIndex === i) {
-      return true;
-    }
-  }
+  // variable to be affected by afterContentInit (for default active step), and onClick that sets recently pressed step
+  selectedIndex = null;
 
-  onClick(index: number): void {
-    this.selectedIndex = index;
+  onClick(i) {
+    // set the step that was just clicked equal to its index
+    this.selectedIndex = i;
   }
 
   getClasses(): string {
@@ -70,10 +66,13 @@ export class SprkStepperComponent implements OnInit {
     return classArray.join(' ');
   }
 
-  ngOnInit() {
-    // this.steps.forEach(step => {
-    //   if (step.isSelected) {
-    //   }
-    // });
+  ngAfterContentInit() {
+    // On init, go through all steps find the default active
+    // Only needs to happen one time because after later click, it's irrelevant
+    this.steps.forEach((step, i) => {
+      if (step.isSelected) {
+        this.selectedIndex = i;
+      }
+    });
   }
 }

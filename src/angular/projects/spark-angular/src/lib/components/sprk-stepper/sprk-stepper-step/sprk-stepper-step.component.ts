@@ -11,6 +11,7 @@ import { Component, Input, ViewChild, TemplateRef } from '@angular/core';
 export class SprkStepperStepComponent {
   /** Title of given step */
   @Input() title: string;
+  /** default selected */
   @Input() isSelected: boolean;
 
   @ViewChild(TemplateRef) content: TemplateRef<any>;

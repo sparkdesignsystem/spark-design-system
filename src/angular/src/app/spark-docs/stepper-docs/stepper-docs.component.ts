@@ -13,10 +13,10 @@ import { Component } from '@angular/core';
         <sprk-stepper-step title="Step 1">
           Description
         </sprk-stepper-step>
-        <sprk-stepper-step title="Step 2" [isSelected]="true">
+        <sprk-stepper-step title="Step 2">
           Description
         </sprk-stepper-step>
-        <sprk-stepper-step title="Step 3">
+        <sprk-stepper-step title="Step 3" [isSelected]="true">
           Description
         </sprk-stepper-step>
       </sprk-stepper>
