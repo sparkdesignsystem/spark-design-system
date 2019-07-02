@@ -1,17 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CdkStepperModule } from '@angular/cdk/stepper';
-
 import { SprkStepperComponent } from './sprk-stepper.component';
-import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.component';
+import { SprkStepperStepItemComponent } from './sprk-stepper-step-item/sprk-stepper-step-item.component';
 import { SprkStepperSliderComponent } from './sprk-stepper-slider/sprk-stepper-slider.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, CdkStepperModule],
+  imports: [CommonModule, RouterModule],
   declarations: [
     SprkStepperComponent,
-    SprkStepperStepComponent,
+    SprkStepperStepItemComponent,
     SprkStepperSliderComponent
   ],
   exports: [SprkStepperComponent]

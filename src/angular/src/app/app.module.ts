@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { SparkAngularModule } from '@sparkdesignsystem/spark-angular';
 
 // Docs Site Component Imports
-import { CdkStepperModule } from '@angular/cdk/stepper';
 import { AccordionDocsComponent } from './spark-docs/accordion-docs/accordion-docs.component';
 import { AlertDocsComponent } from './spark-docs/alert-docs/alert-docs.component';
 import { AwardDocsComponent } from './spark-docs/award-docs/award-docs.component';
@@ -109,7 +108,6 @@ const appRoutes: Routes = [
       anchorScrolling: 'enabled'
     }),
     BrowserModule,
-    CdkStepperModule,
     SparkAngularModule
   ],
   providers: [],
