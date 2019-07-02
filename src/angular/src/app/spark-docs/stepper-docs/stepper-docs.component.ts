@@ -6,8 +6,17 @@ import { Component } from '@angular/core';
     <div class="drizzle-o-ContentGrouping">
       <h2 class="drizzle-b-h2">Stepper</h2>
 
-      <sprk-stepper>
-        <sprk-stepper-step title="1">
+      <!-- {{
+        Needs hasDescription or none of the descriptions will show */
+      }} -->
+      <sprk-stepper [hasDescription]="true">
+        <sprk-stepper-step title="Step 1">
+          Description
+        </sprk-stepper-step>
+        <sprk-stepper-step title="Step 2" [isSelected]="true">
+          Description
+        </sprk-stepper-step>
+        <sprk-stepper-step title="Step 3">
           Description
         </sprk-stepper-step>
       </sprk-stepper>
