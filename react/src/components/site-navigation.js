@@ -32,9 +32,10 @@ function SiteNavigation({ navItems }) {
                       >
                         <SprkListItem additionalClasses="nav-list__item">
                           <SprkLink
-                            element={Link}
+                            element={link.element}
                             to={link.to}
                             variant="simple"
+
                           >
                             {link.text}
                           </SprkLink>
