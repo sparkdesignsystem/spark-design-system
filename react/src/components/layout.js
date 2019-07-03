@@ -6,24 +6,6 @@ import SiteLogo from './site-logo';
 import Header from './header';
 import SiteNavigation from './site-navigation';
 
-const links = [{
-  text: 'Item 1',
-  subNavLinks: [
-    {
-      element: Link,
-      text: 'Item 1',
-      to: '/link',
-    },
-  ],
-},
-{
-  text: 'Item 2',
-  to: '/link',
-  href: 'https://www.google.com',
-  target: '_blank',
-},
-];
-
 const utilityItems = [
   <SprkTextInput
     leadingIcon="search"
@@ -73,41 +55,31 @@ function Layout({ children }) {
             <Header
               logo={<SiteLogo />}
               narrowNavLinks={
-                links.concat(
-                  [{
-                    text: 'Components',
-                    subNavLinks:
-                      data.allMdx.edges
-                        .filter(edge => ((edge.node.frontmatter.title
-                          && edge.node.frontmatter
-                          && edge.node.frontmatter.path) ? edge : null))
-                        .map(edge => ({
-                          element: Link,
-                          text: edge.node.frontmatter.title,
-                          to: edge.node.frontmatter.path,
-                        })),
-                  }],
-                )
+                [{
+                  text: 'Components',
+                  subNavLinks:
+                    data.allMdx.edges
+                      .map(edge => ({
+                        element: Link,
+                        text: edge.node.frontmatter.title,
+                        to: edge.node.frontmatter.path,
+                      })),
+                }]
               }
               utilityItems={utilityItems}
             />
           </div>
           <div className="nav-layout__panel nav-layout__nav">
             <SiteNavigation navItems={
-              links.concat(
-                [{
-                  text: 'Components',
-                  subNavLinks:
-                data.allMdx.edges
-                  .filter(edge => ((edge.node.frontmatter.title
-                    && edge.node.frontmatter
-                    && edge.node.frontmatter.path) ? edge : null))
-                  .map(edge => ({
-                    element: Link,
-                    text: edge.node.frontmatter.title,
-                    to: edge.node.frontmatter.path })),
-                }],
-              )
+              [{
+                text: 'Components',
+                subNavLinks:
+                  data.allMdx.edges
+                    .map(edge => ({
+                      element: Link,
+                      text: edge.node.frontmatter.title,
+                      to: edge.node.frontmatter.path })),
+                  }]
             }
             />
           </div>
