@@ -3,7 +3,11 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-stepper-step-item',
   template: `
-    <li [ngClass]="getClasses()">
+    <li
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString"
+      [attr.data-analytics]="analyticsString"
+    >
       <div
         [ngClass]="{
           'sprk-c-Stepper__step-content': true,
@@ -34,14 +38,24 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkStepperStepItemComponent {
+  @Input() additionalClasses: string;
+  @Input() idString: string;
+  @Input() analyticsString: string;
+
+  /** Check if this step is selected */
+  @Input() selected: boolean;
+
   /** Headline of step */
   @Input() title: string;
 
-  /** If there is content for steps */
-  @Input() hasDescription: boolean;
-
   /** Order number of the given step. */
   @Input() index: number;
+
+  /** Checks which step is selected */
+  @Input() selectedIndex: number;
+
+  /** If there is content for steps */
+  @Input() hasDescription: boolean;
 
   /** Whether the given step is first. */
   @Input() first: boolean;
@@ -49,13 +63,8 @@ export class SprkStepperStepItemComponent {
   /** Whether the given step is last. */
   @Input() last: boolean;
 
+  /** Gets content inside of step */
   @Input() content;
-
-  /** Check if this step is selected */
-  @Input() selected: boolean;
-
-  /** Checks which step is selected */
-  @Input() selectedIndex: number;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper__step'];
@@ -73,6 +82,12 @@ export class SprkStepperStepItemComponent {
     // Apply step if first
     if (this.first) {
       classArray.push('sprk-c-Stepper__step--first');
+    }
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
     }
 
     return classArray.join(' ');

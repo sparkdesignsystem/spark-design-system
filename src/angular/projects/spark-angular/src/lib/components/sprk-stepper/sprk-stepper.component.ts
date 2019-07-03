@@ -10,7 +10,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
 @Component({
   selector: 'sprk-stepper',
   template: `
-    <ol [ngClass]="getClasses()">
+    <ol [ngClass]="getClasses()" [attr.data-id]="idString">
       <sprk-stepper-slider></sprk-stepper-slider>
       <sprk-stepper-step-item
         *ngFor="
@@ -19,15 +19,18 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
           let isLast = last;
           let isFirst = first
         "
-        (click)="onClick(i)"
+        [idString]="step.idString"
+        [analyticsString]="step.analyticsString"
         [index]="i"
         [last]="isLast"
         [first]="isFirst"
+        (click)="onClick(i)"
         [title]="step.title"
+        [hasDescription]="hasDescription"
+        [additionalClasses]="step.additionalClasses"
         [content]="step.content"
         [selected]="this.selectedIndex === i"
         [selectedIndex]="selectedIndex"
-        [hasDescription]="hasDescription"
       >
       </sprk-stepper-step-item>
     </ol>
@@ -35,6 +38,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
 })
 export class SprkStepperComponent implements AfterContentInit {
   @Input() additionalClasses: string;
+  @Input() idString: string;
   @Input() hasDarkBg: boolean;
   @Input() hasDescription: boolean;
 
@@ -70,6 +74,7 @@ export class SprkStepperComponent implements AfterContentInit {
     // On init, go through all steps find the default active
     // Only needs to happen one time because after later click, it's irrelevant
     this.steps.forEach((step, i) => {
+      console.log(step.content);
       if (step.isSelected) {
         this.selectedIndex = i;
       }

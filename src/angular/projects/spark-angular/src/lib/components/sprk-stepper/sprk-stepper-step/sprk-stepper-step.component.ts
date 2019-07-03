@@ -13,6 +13,9 @@ export class SprkStepperStepComponent {
   @Input() title: string;
   /** default selected */
   @Input() isSelected: boolean;
+  @Input() analyticsString: string;
+  @Input() idString: string;
+  @Input() additionalClasses: string;
 
   @ViewChild(TemplateRef) content: TemplateRef<any>;
 }
