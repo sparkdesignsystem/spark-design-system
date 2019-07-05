@@ -33,3 +33,4 @@ src/angular/dist
 /static/react
 /static/html
 /react/static
+/spark/manifests/spark-react/coverage
