@@ -1,9 +1,6 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkRevealInput from './SprkRevealInput';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 it('should render an element with the correct class', () => {
   const wrapper = mount(<SprkRevealInput />);

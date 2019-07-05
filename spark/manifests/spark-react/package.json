@@ -4,7 +4,7 @@
   "description": "A collection of Spark Design System components in React 16+",
   "main": "index.js",
   "scripts": {
-    "test": "jest spark-react --coverage",
+    "test": "jest --config jest-config.js --coverage",
     "build": "npx babel src -d ../../dist/spark-react --copy-files && cp ./package.json ../../dist/spark-react",
     "lerna-publish": "npm run build && npm publish ../../dist/spark-react"
   },
@@ -25,7 +25,11 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "regenerator-runtime": "^0.13.1",
+    "sinon": "^7.3.2",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   },
