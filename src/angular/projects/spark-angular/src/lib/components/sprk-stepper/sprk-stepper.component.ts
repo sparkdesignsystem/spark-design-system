@@ -11,28 +11,38 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
   selector: 'sprk-stepper',
   template: `
     <ol [ngClass]="getClasses()" [attr.data-id]="idString">
-      <sprk-stepper-slider></sprk-stepper-slider>
-      <sprk-stepper-step-item
+      <ng-container
         *ngFor="
           let step of steps;
           let i = index;
           let isLast = last;
           let isFirst = first
         "
-        [idString]="step.idString"
-        [analyticsString]="step.analyticsString"
-        [index]="i"
-        [last]="isLast"
-        [first]="isFirst"
-        (click)="onClick(i)"
-        [title]="step.title"
-        [hasDescription]="hasDescription"
-        [additionalClasses]="step.additionalClasses"
-        [content]="step.content"
-        [selected]="this.selectedIndex === i"
-        [selectedIndex]="selectedIndex"
       >
-      </sprk-stepper-step-item>
+        <sprk-stepper-slider
+          [offsetTop]="offsetTop"
+          [content]="step.content"
+          [title]="step.title"
+          [selected]="selectedIndex === i"
+          [hasDescription]="hasDescription"
+        ></sprk-stepper-slider>
+        <sprk-stepper-step-item
+          [idString]="step.idString"
+          [analyticsString]="step.analyticsString"
+          [index]="i"
+          [last]="isLast"
+          [first]="isFirst"
+          (click)="onClick(i)"
+          (getOffset)="getOffset($event)"
+          [title]="step.title"
+          [hasDescription]="hasDescription"
+          [additionalClasses]="step.additionalClasses"
+          [content]="step.content"
+          [selected]="selectedIndex === i"
+          [selectedIndex]="selectedIndex"
+        >
+        </sprk-stepper-step-item>
+      </ng-container>
     </ol>
   `
 })
@@ -48,6 +58,19 @@ export class SprkStepperComponent implements AfterContentInit {
 
   // variable to be affected by afterContentInit (for default active step), and onClick that sets recently pressed step
   selectedIndex = null;
+  /** Emitted from stepper step */
+  offsetTop;
+  getOffset(e) {
+    this.offsetTop = e;
+  }
+
+  setData() {
+    this.steps.forEach((step, i) => {
+      if (step.isSelected) {
+        this.selectedIndex = i;
+      }
+    });
+  }
 
   onClick(i) {
     // set the step that was just clicked equal to its index
@@ -73,11 +96,6 @@ export class SprkStepperComponent implements AfterContentInit {
   ngAfterContentInit() {
     // On init, go through all steps find the default active
     // Only needs to happen one time because after later click, it's irrelevant
-    this.steps.forEach((step, i) => {
-      console.log(step.content);
-      if (step.isSelected) {
-        this.selectedIndex = i;
-      }
-    });
+    this.setData();
   }
 }

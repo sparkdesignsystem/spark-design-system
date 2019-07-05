@@ -1,9 +1,19 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ElementRef,
+  SimpleChanges,
+  OnChanges,
+  AfterContentInit
+} from '@angular/core';
 
 @Component({
   selector: 'sprk-stepper-step-item',
   template: `
     <li
+      (click)="onClick()"
       [ngClass]="getClasses()"
       [attr.data-id]="idString"
       [attr.data-analytics]="analyticsString"
@@ -37,7 +47,8 @@ import { Component, Input } from '@angular/core';
     </li>
   `
 })
-export class SprkStepperStepItemComponent {
+export class SprkStepperStepItemComponent
+  implements OnChanges, AfterContentInit {
   @Input() additionalClasses: string;
   @Input() idString: string;
   @Input() analyticsString: string;
@@ -66,6 +77,12 @@ export class SprkStepperStepItemComponent {
   /** Gets content inside of step */
   @Input() content;
 
+  // Sends offsetTop to parent so slider knows where to go
+  @Output() getOffset: EventEmitter<any> = new EventEmitter();
+
+  constructor(private _element: ElementRef) {}
+  offsetTopOfStep;
+
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper__step'];
 
@@ -92,4 +109,21 @@ export class SprkStepperStepItemComponent {
 
     return classArray.join(' ');
   }
+
+  emitData() {
+    setTimeout(() => {
+      this.offsetTopOfStep = this._element.nativeElement.offsetTop;
+      this.getOffset.emit(this.offsetTopOfStep);
+    }, 10);
+  }
+
+  onClick() {
+    this.emitData();
+  }
+
+  ngAfterContentInit() {
+    this.emitData();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {}
 }

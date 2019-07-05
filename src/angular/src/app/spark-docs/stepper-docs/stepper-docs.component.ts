@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
           title="Step 1"
           idString="step-1"
           analyticsString="step1"
+          [isSelected]="true"
         >
         </sprk-stepper-step>
         <sprk-stepper-step title="Step 2"> </sprk-stepper-step>
@@ -19,13 +20,13 @@ import { Component } from '@angular/core';
       <h2 class="drizzle-b-h2">Stepper With Description and Default Active</h2>
       <sprk-stepper idString="stepper2" [hasDescription]="true">
         <sprk-stepper-step title="Step 1">
-          Description
+          Description for 1
         </sprk-stepper-step>
         <sprk-stepper-step title="Step 2">
-          Description
+          Description for 2
         </sprk-stepper-step>
         <sprk-stepper-step title="Step 3" [isSelected]="true">
-          Description
+          Description for 3
         </sprk-stepper-step>
       </sprk-stepper>
 
@@ -38,13 +39,13 @@ import { Component } from '@angular/core';
           [hasDarkBg]="true"
         >
           <sprk-stepper-step title="Step 1">
-            Description
+            Description for 1
           </sprk-stepper-step>
           <sprk-stepper-step title="Step 2">
-            Description
+            Description for 2
           </sprk-stepper-step>
           <sprk-stepper-step title="Step 3" [isSelected]="true">
-            Description
+            Description for 3
           </sprk-stepper-step>
         </sprk-stepper>
       </div>
