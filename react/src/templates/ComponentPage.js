@@ -19,7 +19,7 @@ function ComponentPage({ data }) {
         <ContentIframe
           title="Preview"
           variant=""
-          src={`/iframe.html?id=components-${node.name}`}
+          src={`/iframe.html?id=components-${node.name}--default`}
         />
       </div>
     </Layout>
