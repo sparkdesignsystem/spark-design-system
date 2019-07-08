@@ -85,7 +85,7 @@ class SprkStepperStep extends Component {
             <div
               className={classnames(
                 "sprk-c-Stepper__step-description",
-                hasDescription && !isSelected ? 'sprk-u-Display--none' : 'sprk-u-Visibility--hidden',
+                isSelected ? 'sprk-u-Visibility--hidden' : 'sprk-u-Display--none',
               )}
 
             >
