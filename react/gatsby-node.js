@@ -7,44 +7,40 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === 'Directory'
-    && node.dir.endsWith('spark/components')) {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    });
-  }
-};
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  return graphql(`
-    {
-      allDirectory {
-        edges {
-          node {
-            fields {
-              slug
+
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allMdx {
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+              }
+              code {
+                body
+              }
             }
           }
         }
       }
-    }
-  `).then((result) => {
-    result.data.allDirectory.edges.forEach(({ node }) => {
-      if (node.fields && node.fields.slug) {
+    `).then(result => {
+
+      result.data.allMdx.edges.forEach(({ node }) => {
         createPage({
-          path: node.fields.slug,
+          path: node.frontmatter.path,
           component: path.resolve('./src/templates/ComponentPage.js'),
           context: {
-            slug: node.fields.slug,
+            slug: node.frontmatter.path,
+            title: node.frontmatter.title,
+            body: node.code.body
           },
         });
-      }
+      });
+      resolve();
     });
   });
 };
