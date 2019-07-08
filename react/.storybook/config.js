@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure, addDecorator, addParameters, getStorybook } from '@storybook/react';
+import { load, addDecorator, addParameters, getStorybook } from '@storybook/react';
 import { action } from "@storybook/addon-actions"
 import '../../spark/manifests/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
@@ -30,6 +30,14 @@ const loadStories = () => {
   });
 }
 
+const loadMDX = () => {
+  const req = require.context('../../spark', true, /\/react\/.*\.stories.mdx$/);
+
+  req.keys().forEach(filename => {
+    req(filename);
+  });
+}
+
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to
 // prevent its method calls from creating console errors you override it here
@@ -46,7 +54,8 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-configure(loadStories, module)
+load(loadStories, module);
+load(loadMDX, module);
 
 const stories = getStorybook();
 
