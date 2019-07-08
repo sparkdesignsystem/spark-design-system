@@ -111,7 +111,7 @@ class SprkStepperDocs extends Component {
                   <SprkStepperStep
                     title={item.title}
                     isSelected={item.isSelected}
-                    key={+new Date()}
+                    key={index}
                     id={item.id}
                     >
                       This is my content
