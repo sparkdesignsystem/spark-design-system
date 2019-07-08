@@ -2,8 +2,6 @@
 import React from 'react';
 import SprkList from './SprkList';
 
-Enzyme.configure({ adapter: new Adapter() });
-
 it('should display a ol element with the correct base class', () => {
   const wrapper = shallow(<SprkList element="ol" />);
   expect(wrapper.find('ol.sprk-b-List').length).toBe(1);

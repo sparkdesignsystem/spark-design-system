@@ -1,10 +1,6 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import SprkTextInput from './SprkTextInput';
-import SprkIcon from '../../icons/react/SprkIcon';
-
-Enzyme.configure({ adapter: new Adapter() });
+import SprkIcon from '../../../components/icons/react/SprkIcon';
 
 it('should render an element with the correct class', () => {
   const wrapper = mount(<SprkTextInput />);

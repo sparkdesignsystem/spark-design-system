@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import * as _ from 'lodash';
-import { getFocusableEls, isActiveElement, isTabPressed, isEscPressed } from '@sparkdesignsystem/spark';
+import { getFocusableEls, isActiveElement, isTabPressed, isEscPressed } from '../../tabs/vanilla/tabs';
 import SprkSpinner from '../../spinners/react/SprkSpinner';
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';

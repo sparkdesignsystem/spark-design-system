@@ -2,7 +2,6 @@ import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
-import '../windowStubs';
 import SprkModal from './SprkModal';
 
 Enzyme.configure({ adapter: new Adapter() });
