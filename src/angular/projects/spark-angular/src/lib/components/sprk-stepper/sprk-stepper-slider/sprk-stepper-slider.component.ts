@@ -1,4 +1,11 @@
-import { Component, Input, OnChanges, AfterContentInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  AfterContentInit,
+  SimpleChanges,
+  TemplateRef
+} from '@angular/core';
 
 @Component({
   selector: 'sprk-stepper-slider',
@@ -32,14 +39,14 @@ export class SprkStepperSliderComponent implements OnChanges, AfterContentInit {
   name = 'Angular';
   @Input() offsetTop = 0;
   @Input() title: string;
-  @Input() content;
+  @Input() content: TemplateRef<any>;
   @Input() selected: boolean;
   @Input() hasDescription: boolean;
 
   myStyle;
+  contentFromStep;
 
   ngOnChanges() {
-    /// NEEDS LEFT OFFSET
     this.myStyle = { top: this.offsetTop + 'px' };
   }
 

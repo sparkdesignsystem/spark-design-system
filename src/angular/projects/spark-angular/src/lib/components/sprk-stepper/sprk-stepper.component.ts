@@ -21,7 +21,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
       >
         <sprk-stepper-slider
           [offsetTop]="offsetTop"
-          [content]="step.content"
+          [content]="stepContent"
           [title]="step.title"
           [selected]="selectedIndex === i"
           [hasDescription]="hasDescription"
@@ -34,6 +34,7 @@ import { SprkStepperStepComponent } from './sprk-stepper-step/sprk-stepper-step.
           [first]="isFirst"
           (click)="onClick(i)"
           (getOffset)="getOffset($event)"
+          (getContent)="getContent($event)"
           [title]="step.title"
           [hasDescription]="hasDescription"
           [additionalClasses]="step.additionalClasses"
@@ -60,16 +61,14 @@ export class SprkStepperComponent implements AfterContentInit {
   selectedIndex = null;
   /** Emitted from stepper step */
   offsetTop;
+  stepContent;
   getOffset(e) {
     this.offsetTop = e;
   }
 
-  setData() {
-    this.steps.forEach((step, i) => {
-      if (step.isSelected) {
-        this.selectedIndex = i;
-      }
-    });
+  // TODO: This get content emitted from step, but not sure why it's not working from the let loop
+  getContent(e) {
+    this.stepContent = e;
   }
 
   onClick(i) {
@@ -96,6 +95,10 @@ export class SprkStepperComponent implements AfterContentInit {
   ngAfterContentInit() {
     // On init, go through all steps find the default active
     // Only needs to happen one time because after later click, it's irrelevant
-    this.setData();
+    this.steps.forEach((step, i) => {
+      if (step.isSelected) {
+        this.selectedIndex = i;
+      }
+    });
   }
 }

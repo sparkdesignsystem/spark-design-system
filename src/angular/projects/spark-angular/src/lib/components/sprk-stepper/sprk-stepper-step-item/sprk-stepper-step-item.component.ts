@@ -6,6 +6,7 @@ import {
   ElementRef,
   SimpleChanges,
   OnChanges,
+  TemplateRef,
   AfterContentInit
 } from '@angular/core';
 
@@ -75,10 +76,13 @@ export class SprkStepperStepItemComponent
   @Input() last: boolean;
 
   /** Gets content inside of step */
-  @Input() content;
+  @Input() content: TemplateRef<any>;
 
   // Sends offsetTop to parent so slider knows where to go
   @Output() getOffset: EventEmitter<any> = new EventEmitter();
+
+  // Sends content to parent so slider knows what content to display
+  @Output() getContent: EventEmitter<any> = new EventEmitter();
 
   constructor(private _element: ElementRef) {}
   offsetTopOfStep;
@@ -111,9 +115,11 @@ export class SprkStepperStepItemComponent
   }
 
   emitData() {
+    // TODO: Figure out a way to not have ot use setTimeout
     setTimeout(() => {
       this.offsetTopOfStep = this._element.nativeElement.offsetTop;
       this.getOffset.emit(this.offsetTopOfStep);
+      this.getContent.emit(this.content);
     }, 10);
   }
 
