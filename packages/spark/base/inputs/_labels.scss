@@ -24,3 +24,13 @@
 .sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
   font-size: $sprk-visibility-control-label-font-size;
 }
+
+.sprk-b-InputContainer--huge label {
+  font-size: $sprk-text-input-huge-font-size;
+  position: absolute;
+  transition: .3s all;
+  top: 0;
+  width: 90%;
+  cursor: pointer;
+  padding: $sprk-text-input-padding;
+}

@@ -29,17 +29,25 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 
 // Refactor to only require the class on the container
 .sprk-b-InputContainer--huge input { 
-  border: $sprk-text-input-huge-border;
-  height: $sprk-text-input-huge-height;
+  position: relative;
   font-size: $sprk-text-input-huge-font-size;
+  transition: $sprk-btn-transition-speed;
+  transition-delay: 0s;
+  height: $sprk-text-input-huge-height;
+  border: $sprk-text-input-huge-border;
+  border-radius: $sprk-text-input-border-radius;
+  font-size: $sprk-text-input-huge-font-size;
+  padding: $sprk-text-input-padding;
   box-shadow: $sprk-input-huge-box-shadow;
 
   &:focus {
     border-width: $sprk-text-input-huge-focus-border-width;
+    border-color: $sprk-green;
   }
 
   &::placeholder {
     font-size: $sprk-text-input-huge-font-size;
+    opacity: 0;
   }
 }
 
