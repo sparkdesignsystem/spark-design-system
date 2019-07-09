@@ -1,0 +1,10 @@
+node_modules/
+public/
+spark/manifests/
+spark/**/*.tests.js
+spark/**/*.test.js
+spark/utilities/polyfills
+spark/coverage
+/react/
+/angular/
+/vanilla/

@@ -38,16 +38,16 @@ const selector = {
     console.log(text);
   },
   items: [{
-      title: 'Selection Choice Title 1',
-      information: 'Additional Information',
-      value: 'choice-1',
-    },
-    {
-      title: 'Selection Choice Title 2',
-      information: 'Additional Information',
-      to: '/button',
-      value: 'choice-2',
-    },
+    title: 'Selection Choice Title 1',
+    information: 'Additional Information',
+    value: 'choice-1',
+  },
+  {
+    title: 'Selection Choice Title 2',
+    information: 'Additional Information',
+    to: '/button',
+    value: 'choice-2',
+  },
   ],
   footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
 };
@@ -61,7 +61,7 @@ storiesOf('Components|Masthead', module)
     <SprkMasthead
       littleNavLinks={links}
       narrowNavLinks={links.concat(addedNarrowNavLinks)}
-      siteLogo={<div/>}
+      siteLogo={<div />}
       utilityContents={utilityItems}
     />
   ))
@@ -71,7 +71,7 @@ storiesOf('Components|Masthead', module)
       selector={selector}
       narrowSelector={selector}
       narrowNavLinks={links.concat(addedNarrowNavLinks)}
-      siteLogo={<div/>}
+      siteLogo={<div />}
       utilityContents={utilityItems}
       variant="extended"
     />

@@ -15,11 +15,11 @@
 import {
   getFocusableEls,
   focusFirstEl,
-  isActiveElement
+  isActiveElement,
 } from '../../../utilities/helpers/vanilla/elementState';
 import {
   isTabPressed,
-  isEscPressed
+  isEscPressed,
 } from '../../../utilities/helpers/vanilla/keypress';
 
 const isMaskClicked = e => e.target.getAttribute('data-sprk-modal-mask') === 'true';

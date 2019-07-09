@@ -1,6 +1,0 @@
-node_modules/
-public/
-spark/**/angular/*
-spark/manifests/spark-angular
-spark/utilities/polyfills
-spark/components

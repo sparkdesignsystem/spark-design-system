@@ -16,7 +16,7 @@ storiesOf('Components|Promo', module)
       ctaIdString="promo-cta-1"
       hasBorder
       idString="promo-1"
-      >
+    >
         Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
         inventore integer eum non enim diam habitant. Maecenas nunc per lacus
         neque egestas. Diam quod curabitur.
@@ -33,11 +33,11 @@ storiesOf('Components|Promo', module)
       idString="promo-3"
       isFlag
       hasBorder
-      >
+    >
         Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
         inventore integer eum non enim diam habitant. Maecenas nunc per
         lacus neque egestas. Diam quod curabitur.
-      </SprkPromo>
+    </SprkPromo>
   ))
   .add('with image', () => (
     <SprkPromo
@@ -55,7 +55,7 @@ storiesOf('Components|Promo', module)
       imgLinkIdString="promo-5-img-link"
       idString="promo-5"
       hasBorder
-      >
+    >
         Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
         inventore integer eum non enim diam habitant. Maecenas nunc per
         lacus neque egestas. Diam quod curabitur.
@@ -79,9 +79,9 @@ storiesOf('Components|Promo', module)
       idString="promo-6"
       mediaRev
       hasBorder
-      >
+    >
         Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
         inventore integer eum non enim diam habitant. Maecenas nunc per
         lacus neque egestas. Diam quod curabitur.
-      </SprkPromo>
+    </SprkPromo>
   ));

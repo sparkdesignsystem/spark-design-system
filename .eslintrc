@@ -6,6 +6,7 @@
     "jest/globals": true
   },
   "rules": {
+    "no-redeclare": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
     "max-len": ["error", 80, {
