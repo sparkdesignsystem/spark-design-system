@@ -18,10 +18,32 @@ hasAngularCode: true
 hasReactCode: true
 ---
 
-{{#embed "patterns.components.inputs.text-input"
-         class="sprk-b-TextInput--huge"
-         containerclass="sprk-b-InputContainer--huge"
-         labelclass="sprk-u-ScreenReaderText"
-         idattr="text-input-huge"
-         placeholder="Placeholder text"
-         }}{{/embed}}
+<div class="sprk-b-InputContainer sprk-b-InputContainer--huge{{#if containerclass}} {{containerclass}}{{/if}}" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
+  <input class="sprk-b-TextInput sprk-u-Width-100"
+    id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
+    data-id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
+    type="text"
+    {{#if inputValue}}value="{{inputValue}}"{{/if}}
+    aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container"
+    {{#if disabled}} disabled{{/if}}
+    {{#if invaliddata}} aria-invalid="true"{{/if}}
+    {{#if required}}required{{/if}} placeholder="{{#if placeholder}}{{placeholder}}{{else}}Placeholder Text{{/if}}">
+  <label
+    for="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
+    class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}} {{#if labelclass}}{{labelclass}}{{/if}}">Text Input Label</label>
+  {{#if errorMessage}}
+    <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container">
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled-small" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+          {{errorMessage}}
+      </div>
+    </div>
+  {{/if}}
+  {{#if helperText }}
+    <div class="sprk-b-HelperText">
+      {{ helperText }}
+    </div>
+  {{/if}}
+</div>
