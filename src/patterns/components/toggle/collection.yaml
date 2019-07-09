@@ -25,6 +25,6 @@ restrictions:
     instances of the same variant of a component on the same page, make sure each instance
     has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).
 variableTable:
-  $sprk-toggle-transistion-timing:
+  $sprk-toggle-transition-timing:
     default: 0.3s ease
     description: The transition timing for the rotation of the icon when the toggle is opened.
