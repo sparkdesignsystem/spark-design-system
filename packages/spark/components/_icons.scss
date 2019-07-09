@@ -95,7 +95,7 @@
 // Initial state for icons that will be toggled
 .sprk-c-Icon--toggle {
   transform-origin: center;
-  transition: transform $sprk-toggle-transistion-timing;
+  transition: transform $sprk-toggle-transition-timing;
 }
 
 .sprk-c-Icon--open {
