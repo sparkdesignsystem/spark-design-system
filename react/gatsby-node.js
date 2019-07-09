@@ -5,8 +5,8 @@
  */
 
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
 
+//todo this is not getting rerun by gatsby develop
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -19,16 +19,25 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 path
                 title
+                description
+                restrictions
               }
               code {
                 body
+              }
+              exports {
+                variants {
+                  description
+                  name
+                  component
+                  sourceCode
+                }
               }
             }
           }
         }
       }
     `).then(result => {
-
       result.data.allMdx.edges.forEach(({ node }) => {
         createPage({
           path: node.frontmatter.path,
@@ -36,7 +45,10 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: node.frontmatter.path,
             title: node.frontmatter.title,
-            body: node.code.body
+            description: node.frontmatter.description,
+            restrictions: node.frontmatter.restrictions,
+            body: node.code.body,
+            variants: node.exports.variants
           },
         });
       });

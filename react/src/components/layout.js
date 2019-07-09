@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import { SprkLink, SprkTextInput } from '@sparkdesignsystem/spark-react';
+import {
+  SprkTextInput,
+  SprkFooter
+} from '@sparkdesignsystem/spark-react';
 import SiteLogo from './site-logo';
 import Header from './header';
 import SiteNavigation from './site-navigation';
@@ -85,15 +88,25 @@ function Layout({ children }) {
           </div>
           <div className="nav-layout__panel nav-layout__main">
             {children}
-            <footer>
-              <SprkLink
-                href="#"
-                variant="plain"
-                additionalClasses="sprk-c-Masthead__link"
-              >
-                @sparkQL
-              </SprkLink>
-            </footer>
+            <SprkFooter
+              connectIcons={{
+                heading: 'Connect With Us',
+                icons: [
+                  {
+                    href: '#nogo',
+                    name: 'twitter',
+                    screenReaderText: 'Twitter',
+                    element: 'a',
+                  },
+                  {
+                    href: '#nogo',
+                    name: 'github',
+                    screenReaderText: 'github',
+                    element: 'a',
+                  },
+                ],
+              }}
+            />
           </div>
         </div>
       )}

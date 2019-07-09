@@ -51,11 +51,11 @@
   "license": "MIT",
   "scripts": {
     "build": "npm run build-storybook && gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby clean && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./static"
+    "build-storybook": "build-storybook -o ./storybook-dist"
   },
   "repository": {
     "type": "git",
