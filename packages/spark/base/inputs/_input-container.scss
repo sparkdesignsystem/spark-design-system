@@ -5,6 +5,23 @@
 
 .sprk-b-InputContainer--huge {
   max-width: $sprk-input-container-huge-max-width;
+  position: relative;
+
+  &.active > input, input:focus {
+    opacity: 1;
+    transition-delay: .15s;
+    
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+  
+  &.active > label, input:focus ~ label, input:not(:placeholder-shown) ~ label {
+    font-size: .75em;
+    top: 4px;
+    color: $sprk-green;
+    cursor: default;
+  }
 }
 
 .sprk-b-InputContainer__visibility-toggle {
