@@ -1,20 +1,15 @@
 ---
 title: Links
 path: links
-description: Text links should take the
-             user to a new place or change the view
-             the user is on. Links use the medium
-             blue brand color for their idle and
-             hover states while using the dark
-             blue brand color for the visited state.
-restrictions:
-  - Do not use Spark Link classes on links that solely have images in them.
-  - Link text should be as meaningful as possible so users can understand what the purpose of the link is.
-  - The data-id property is provided as a hook for automated tools. If you have multiple instances of the same
-    variant of a component on the same page, make sure each instance has a unique data-id property
-    ("link-1", "link-2", "link-3", etc).
 ---
-// move description and restrictions into vars instead of frontmattter
+
+export const restrictions = [
+  'Do not use Spark Link classes on links that solely have images in them.',
+  'Link text should be as meaningful as possible so users can understand what the purpose of the link is.',
+  'The data-id property is provided as a hook for automated tools. If you have multiple instances of the same variant of a component on the same page, make sure each instance has a unique data-id property ("link-1", "link-2", "link-3", etc).',
+]
+
+export const description = 'Text links should take the user to a new place or change the view the user is on. Links use the medium blue brand color for their idle and hover states while using the dark blue brand color for the visited state.'
 
 export const variants = [
   {

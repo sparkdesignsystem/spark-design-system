@@ -19,8 +19,6 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 path
                 title
-                description
-                restrictions
               }
               code {
                 body
@@ -32,6 +30,8 @@ exports.createPages = ({ graphql, actions }) => {
                   component
                   sourceCode
                 }
+                description
+                restrictions
               }
             }
           }
@@ -45,8 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: node.frontmatter.path,
             title: node.frontmatter.title,
-            description: node.frontmatter.description,
-            restrictions: node.frontmatter.restrictions,
+            description: node.exports.description,
+            restrictions: node.exports.restrictions,
             body: node.code.body,
             variants: node.exports.variants
           },
