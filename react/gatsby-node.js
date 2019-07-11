@@ -32,6 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 description
                 restrictions
+                information
               }
             }
           }
@@ -47,6 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
             title: node.frontmatter.title,
             description: node.exports.description,
             restrictions: node.exports.restrictions,
+            information: node.exports.information,
             body: node.code.body,
             variants: node.exports.variants
           },

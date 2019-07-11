@@ -10,9 +10,7 @@ import {
 import Layout from '../components/layout';
 
 const ComponentPage = ({ pageContext }) => {
-  const { title, description, body, restrictions, variants } = pageContext;
-  console.log("TCL: ComponentPage -> variants", variants)
-  console.log("TCL: ComponentPage -> pageContext", pageContext)
+  const { title, description, body, restrictions, variants, information } = pageContext;
 
   return (
     <Layout>
@@ -36,6 +34,18 @@ const ComponentPage = ({ pageContext }) => {
 
           <SprkList element="ul">
             {restrictions.map((item, i) =>(<SprkListItem key={i}>{item}</SprkListItem>))}
+          </SprkList>
+        </div>
+      )}
+
+      {information && (
+        <div className="sprk-o-Box">
+          <h2 className="sprk-b-TypeDisplayThree sprk-u-mbm">
+            Information
+          </h2>
+
+          <SprkList element="ul">
+            {information.map((item, i) =>(<SprkListItem key={i}>{item}</SprkListItem>))}
           </SprkList>
         </div>
       )}
