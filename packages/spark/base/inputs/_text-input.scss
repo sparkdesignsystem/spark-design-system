@@ -28,26 +28,52 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 }
 
 // Refactor to only require the class on the container
-.sprk-b-InputContainer--huge input { 
-  position: relative;
-  font-size: $sprk-text-input-huge-font-size;
-  transition: $sprk-btn-transition-speed;
-  transition-delay: 0s;
-  height: $sprk-text-input-huge-height;
-  border: $sprk-text-input-huge-border;
-  border-radius: $sprk-text-input-border-radius;
-  font-size: $sprk-text-input-huge-font-size;
-  padding: $sprk-text-input-padding;
-  box-shadow: $sprk-input-huge-box-shadow;
-
-  &:focus {
-    border-width: $sprk-text-input-huge-focus-border-width;
-    border-color: $sprk-green;
-  }
-
-  &::placeholder {
+.sprk-b-InputContainer--huge {
+  input { 
+    position: relative;
     font-size: $sprk-text-input-huge-font-size;
-    opacity: 0;
+    transition: $sprk-text-input-huge-transition;
+    transition-delay: $sprk-text-input-huge-transition-delay;
+    height: $sprk-text-input-huge-height;
+    border-width: $sprk-text-input-huge-border-width;
+    border-radius: $sprk-text-input-border-radius;
+    font-size: $sprk-text-input-huge-font-size;
+    padding: $sprk-text-input-huge-padding;
+    box-shadow: $sprk-input-huge-box-shadow;
+  
+    &:focus {
+      border-width: $sprk-text-input-huge-focus-border-width;
+    }
+  
+    &::placeholder {
+      font-size: $sprk-text-input-huge-font-size;
+      opacity: $sprk-text-input-huge-placeholder-opacity;
+  
+    }
+
+    &.sprk-b-TextInput--label-hidden {
+      &::placeholder {
+        opacity: $sprk-text-input-huge-placeholder-active-opacity;
+      }
+      &:focus {
+        padding: $sprk-text-input-huge-padding;
+      }
+    }
+  }
+  &.active > input, input:focus {
+    opacity: $sprk-text-input-huge-placeholder-active-opacity;
+    padding-top: $sprk-text-input-huge-active-padding-top;
+    
+    &::placeholder {
+      opacity: $sprk-text-input-huge-placeholder-active-opacity;
+    }
+  }
+  
+  &.active > label, input:focus ~ label {
+    font-size: $sprk-text-input-huge-label-font-size;
+    top: $sprk-text-input-huge-label-active-top;
+    color: $sprk-green;
+    cursor: default;
   }
 }
 
