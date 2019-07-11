@@ -443,15 +443,17 @@ $sprk-text-input-font-weight: 300 !default;
 $sprk-text-input-height: 48px !default;
 $sprk-text-input-huge-height: 64px !default;
 $sprk-text-input-huge-font-size: $sprk-font-size-display-five !default;
+$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four;
 $sprk-text-input-line-height: 1.3 !default;
 $sprk-text-input-outline: 0 !default;
 $sprk-text-input-color: $sprk-black !default;
 $sprk-text-input-border: 2px solid $sprk-black-tint-25 !default;
 $sprk-text-input-border-radius: 4px !default;
-$sprk-text-input-huge-border: 1px solid $sprk-black-tint-25 !default;
+$sprk-text-input-huge-border-width: 1px !default;
 $sprk-text-input-huge-focus-border-width: 2px;
 $sprk-text-input-box-shadow: none !default;
 $sprk-text-input-padding: 0 $sprk-space-m !default;
+$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default;
 $sprk-text-input-focus-border-color: $sprk-green !default;
 $sprk-text-input-error-border-color: $sprk-yellow !default;
 $sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
@@ -461,6 +463,13 @@ $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 $sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
 $sprk-text-input-readonly-color: $sprk-gray !default;
 $sprk-text-input-transition: border-color 0.15s ease !default;
+$sprk-text-input-huge-transition: 0.3s !default;
+$sprk-text-input-huge-transition-delay: 0s !default;
+$sprk-text-input-huge-placeholder-opacity: 0 !default;
+$sprk-text-input-huge-placeholder-active-opacity: 1 !default;
+$sprk-text-input-huge-label-top: $sprk-text-input-huge-height/3 !default;
+$sprk-text-input-huge-label-active-top: $sprk-space-s !default;
+$sprk-text-input-huge-active-padding-top: $sprk-text-input-huge-height/3 !default;
 
 //
 // Select

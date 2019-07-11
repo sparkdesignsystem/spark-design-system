@@ -26,11 +26,10 @@
 }
 
 .sprk-b-InputContainer--huge label {
-  font-size: $sprk-text-input-huge-font-size;
   position: absolute;
-  transition: .3s all;
-  top: 0;
-  width: 90%;
+  top: $sprk-text-input-huge-label-top;
+  font-size: $sprk-text-input-huge-font-size;
+  padding: $sprk-text-input-huge-padding;
+  transition: $sprk-text-input-huge-transition;
   cursor: pointer;
-  padding: $sprk-text-input-padding;
 }
