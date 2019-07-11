@@ -2,15 +2,23 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-mdx';
 import {
-  SprkList,
-  SprkListItem,
   SprkDivider,
-  SprkLink
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layout';
+import ComponentDocList from '../components/ComponentDocList';
+import ComponentDocSample from '../components/ComponentDocSample';
 
 const ComponentPage = ({ pageContext }) => {
-  const { title, description, body, restrictions, variants, information } = pageContext;
+  const {
+    title,
+    description,
+    body,
+    restrictions,
+    variants,
+    information,
+    sprkComponent,
+    sourceCode
+  } = pageContext;
 
   return (
     <Layout>
@@ -26,28 +34,21 @@ const ComponentPage = ({ pageContext }) => {
         )}
       </div>
 
-      {restrictions && (
+      {sprkComponent && (
         <div className="sprk-o-Box">
-          <h2 className="sprk-b-TypeDisplayThree sprk-u-mbm">
-            Restrictions
-          </h2>
-
-          <SprkList element="ul">
-            {restrictions.map((item, i) =>(<SprkListItem key={i}>{item}</SprkListItem>))}
-          </SprkList>
+          <ComponentDocSample
+            sprkComponent={sprkComponent}
+            sourceCode={sourceCode}
+          />
         </div>
       )}
 
-      {information && (
-        <div className="sprk-o-Box">
-          <h2 className="sprk-b-TypeDisplayThree sprk-u-mbm">
-            Information
-          </h2>
+      {restrictions && (
+        <ComponentDocList list={restrictions} heading="Restrictions" />
+      )}
 
-          <SprkList element="ul">
-            {information.map((item, i) =>(<SprkListItem key={i}>{item}</SprkListItem>))}
-          </SprkList>
-        </div>
+      {information && (
+        <ComponentDocList list={information} heading="Information" />
       )}
 
       <SprkDivider element="span"></SprkDivider>
@@ -59,29 +60,14 @@ const ComponentPage = ({ pageContext }) => {
           </h2>
 
           {variants.map(item => {
-            const { name, description, component, sourceCode } = item;
+            const { name, description, sprkComponent, sourceCode } = item;
             return (
-              <div className="sprk-u-mbm" id={`#${ name }`} key={name}>
-                <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
-                  <SprkLink href={`#${ name }`} variant="simple">
-                    { name }
-                  </SprkLink>
-                </h3>
-
-                <p className="sprk-b-TypeBodyTwo sprk-u-mbm">
-                  { description }
-                </p>
-
-                <div className="sprk-u-mbm">
-                  Component:
-                  { component }
-                </div>
-
-                <div className="sprk-u-mbm">
-                  sourceCode:
-                  { sourceCode }
-                </div>
-              </div>
+              <ComponentDocSample
+                name={name}
+                description={description}
+                sprkComponent={sprkComponent}
+                sourceCode={sourceCode}
+              />
             )
           })}
         </div>

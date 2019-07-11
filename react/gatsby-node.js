@@ -27,12 +27,14 @@ exports.createPages = ({ graphql, actions }) => {
                 variants {
                   description
                   name
-                  component
+                  sprkComponent
                   sourceCode
                 }
                 description
                 restrictions
                 information
+                sprkComponent
+                sourceCode
               }
             }
           }
@@ -49,6 +51,8 @@ exports.createPages = ({ graphql, actions }) => {
             description: node.exports.description,
             restrictions: node.exports.restrictions,
             information: node.exports.information,
+            sprkComponent: node.exports.sprkComponent,
+            sourceCode: node.exports.sourceCode,
             body: node.code.body,
             variants: node.exports.variants
           },

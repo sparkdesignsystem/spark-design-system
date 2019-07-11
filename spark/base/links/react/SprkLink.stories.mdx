@@ -2,7 +2,8 @@
 title: Links
 path: links
 ---
-
+export const sprkComponent = 'This will be a rendered link from Storybook';
+export const sourceCode = '<SprkLink>This will be the source code for the default link</SprkLink>';
 export const restrictions = [
   'Do not use Spark Link classes on links that \
    solely have images in them.',
@@ -13,15 +14,13 @@ export const restrictions = [
    of the same variant of a component on the same \
    page, make sure each instance has a unique \
    data-id property ("link-1", "link-2", "link-3", etc).',
-]
-
+];
 export const description = 'Text links should take the user to \
                             a new place or change the view the \
                             user is on. Links use the medium \
                             blue brand color for their idle \
                             and hover states while using the \
-                            dark blue brand color for the visited state.'
-
+                            dark blue brand color for the visited state.';
 export const variants = [
   {
     name: 'Simple',
@@ -29,7 +28,7 @@ export const variants = [
                   of text. For example, a list of secondary navigation links in the \
                   footer or a cancel action next to a submit button.',
      // This would be storybookDocs <Story id=""> component
-    component: 'foo',
+    sprkComponent: 'foo',
     sourceCode: '<div>foo</div>'
   },
   {
@@ -38,13 +37,13 @@ export const variants = [
                   there is an icon with description text. You may change \
                   the size of the icon by adjusting the icon modifier \
                   class that is on the svg element.',
-    component: 'foo',
+    sprkComponent: 'foo',
     sourceCode: '<div>foo</div>'
   },
   {
     name: 'Disabled',
     description: 'These have a muted color and are not clickable.',
-    component: 'foo',
+    sprkComponent: 'foo',
     sourceCode: '<div>foo</div>'
   },
 ];
