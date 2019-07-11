@@ -6,7 +6,6 @@
 
 const path = require('path');
 
-//todo this is not getting rerun by gatsby develop
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
