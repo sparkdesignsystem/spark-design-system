@@ -25,11 +25,19 @@
   font-size: $sprk-visibility-control-label-font-size;
 }
 
-.sprk-b-InputContainer--huge > label {
-  position: absolute;
-  top: $sprk-text-input-huge-label-top;
-  font-size: $sprk-text-input-huge-font-size;
-  padding: $sprk-text-input-huge-padding;
-  transition: $sprk-text-input-huge-transition;
-  cursor: pointer;
+.sprk-b-InputContainer--huge {
+  > label {
+    position: absolute;
+    top: $sprk-text-input-huge-label-top;
+    font-size: $sprk-text-input-huge-font-size;
+    padding: $sprk-text-input-huge-padding;
+    transition: $sprk-text-input-huge-transition;
+    cursor: pointer;
+  }
+  &.active > label, > input:focus ~ label {
+    font-size: $sprk-text-input-huge-label-font-size;
+    top: $sprk-text-input-huge-label-active-top;
+    color: $sprk-green;
+    cursor: default;
+  }
 }
