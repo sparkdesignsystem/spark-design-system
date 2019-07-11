@@ -5,7 +5,6 @@ import {
   SprkLink
 } from '@sparkdesignsystem/spark-react';
 
-
 import '../scss/main.scss';
 
 const IndexPage = () => (
