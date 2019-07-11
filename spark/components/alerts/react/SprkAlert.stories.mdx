@@ -1,6 +1,50 @@
 ---
-title: Alert
+title: Alerts
 path: alerts
 ---
-# Alerts!
-So cool!
+
+export const information = [
+  'May have timed visibility (10 seconds) and/or be dismissed by the user by clicking the "x" icon.',
+  'If the content wraps to a new line the icon on the left should remain vertically centered, but the dismiss icon should remain in place at the top right.',
+]
+
+export const restrictions = [
+  'Should fill the width of the viewport.',
+  'The content should be kept short and concise.',
+  'role="alert" is required so that assistive technology can inform users their attention is needed.',
+  'The data-id property is provided as a hook for automated tools. If you have multiple instances of the same variant of a component on the same page, make sure each instance has a unique data-id property ("alert-info-1", "alert-info-2", "alert-info-3", etc).'
+]
+
+
+export const description = 'Typography means the style and size of text. Type settings here should be used in the construction of components not defined in Spark. See each setting for intended use.'
+
+export const variants = [
+  {
+    name: 'Information',
+    description: 'Shows information that is important for a client to read. Information Alerts have a Bell icon.',
+     // This would be storybookDocs <Story id=""> component
+    component: '<SprkAlert></SprkAlert>',
+    sourceCode: '<div>foo</div>'
+  },
+  {
+    name: 'Success',
+    description: 'These provide positive feedback to a user\'s action. Success Alerts have a checkmark icon.',
+    component: 'foo',
+    sourceCode: '<div>foo</div>'
+  },
+  {
+    name: 'Fail',
+    description: 'These provide negative feedback to a user\'s action. Fail Alerts have an exclamation mark icon.',
+    component: 'foo',
+    sourceCode: '<div>foo</div>'
+  },
+  {
+    name: 'Alert Without A Dismiss Button',
+    description: 'Alerts can be used without the dismiss button. Here is a Success Alert that is not able to be dismissed.',
+    component: 'foo',
+    sourceCode: '<div>foo</div>'
+  },
+];
+
+# Extra Heading
+Extra content added in MDX File
