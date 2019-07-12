@@ -123,7 +123,8 @@ SprkStepperStep.propTypes = {
 };
 
 SprkStepperStep.defaultProps = {
-  onClick: () => {}
+  onClick: () => {},
+  renderCallback: () => {},
 };
 
 export default SprkStepperStep;
