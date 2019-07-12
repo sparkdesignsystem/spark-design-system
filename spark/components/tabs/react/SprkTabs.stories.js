@@ -48,4 +48,4 @@ storiesOf('Components|Tabs', module)
         </p>
       </SprkTabsPanel>
     </SprkTabs>
-  ));;
+  ));

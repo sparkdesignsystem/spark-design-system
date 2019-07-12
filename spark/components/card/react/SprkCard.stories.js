@@ -7,7 +7,8 @@ storiesOf('Components|Card', module)
   .add('default', () => (
     <SprkCard
       idString="card-1"
-      additionalContentClasses="sprk-o-Stack sprk-o-Stack--large"/>
+      additionalContentClasses="sprk-o-Stack sprk-o-Stack--large"
+    />
   ))
   .add('standout', () => (
     <SprkCard

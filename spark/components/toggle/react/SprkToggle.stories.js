@@ -19,4 +19,4 @@ storiesOf('Components|Toggle', module)
         that the link is a control for expandable content.
       </p>
     </SprkToggle>
-  ));;
+  ));

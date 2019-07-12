@@ -54,19 +54,5 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-load(loadStories, module);
-load(loadMDX, module);
-
-const stories = getStorybook();
-
-const storyNames = stories.map(story => {
-  return story.stories.map(storyName => {return storyName.name});
-});
-
-const storyComponents = stories.map(story => {
-  return story.kind.split('|');
-});
-
-console.log("TCL: storyComponents", storyComponents)
-
-console.log("TCL: storybook", storyNames);
+// load(loadStories, module);
+// load(loadMDX, module);

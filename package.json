@@ -1,0 +1,25 @@
+{
+  "name": "spark-design-system",
+  "version": "3.0.0",
+  "description": "A pattern library authoring environment.",
+  "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
+  },
+  "author": "Quicken Loans",
+  "bugs": {
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "stylelint": "^10.1.0",
+    "stylelint-scss": "^3.9.0"
+  }
+}

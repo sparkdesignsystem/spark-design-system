@@ -16,6 +16,7 @@ function SiteNavigation({ navItems }) {
                 item.subNavLinks
                 && (
                   <SprkToggle
+                    isDefaultOpen
                     title={item.text}
                     additionalClasses="nav-toggle"
                     toggleIconName="chevron-down"
