@@ -51,7 +51,7 @@
   "license": "MIT",
   "scripts": {
     "build": "npm run build-storybook && gatsby build",
-    "develop": "gatsby clean && gatsby develop",
+    "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "storybook": "start-storybook -p 6006",
