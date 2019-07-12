@@ -8,7 +8,7 @@ import Layout from '../components/layout';
 import ComponentDocList from '../components/ComponentDocList';
 import ComponentDocSample from '../components/ComponentDocSample';
 
-const ComponentPage = ({ pageContext }) => {
+const FundamentalPage = ({ pageContext }) => {
   const {
     title,
     description,
@@ -24,7 +24,7 @@ const ComponentPage = ({ pageContext }) => {
     <Layout>
       <div className="sprk-o-Box">
         <h1 className="sprk-b-TypeDisplayOne sprk-u-mbm">
-          { title }
+          { title } - Fundamental
         </h1>
 
         {description && (
@@ -78,8 +78,8 @@ const ComponentPage = ({ pageContext }) => {
   )
 };
 
-export default ComponentPage;
+export default FundamentalPage;
 
-ComponentPage.propTypes = {
+FundamentalPage.propTypes = {
   pageContext: Proptypes.shape({}),
 }
