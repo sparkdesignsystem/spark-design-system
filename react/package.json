@@ -50,7 +50,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "npm install && npm run build-storybook && gatsby build",
+    "build": "npm install && gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
