@@ -55,16 +55,24 @@ class SprkTextInput extends Component {
               "
             />
           )}
-          <label
-            htmlFor={id}
-            className={classNames('sprk-b-Label', {
-              'sprk-b-Label--with-icon': leadingIcon.length > 0,
-              'sprk-u-ScreenReaderText':
-                hiddenLabel || type === 'hugeTextInput',
-            })}
-          >
-            {label}
-          </label>
+
+          {/*
+            Render this only if it's not huge Text Input
+            Huge Text Input's label needs to be rendered under the input
+          */}
+          {type != 'hugeTextInput' && (
+            <label
+              htmlFor={id}
+              className={classNames('sprk-b-Label', {
+                'sprk-b-Label--with-icon': leadingIcon.length > 0,
+                'sprk-u-ScreenReaderText':
+                  hiddenLabel || type === 'hugeTextInput',
+              })}
+            >
+              {label}
+            </label>
+          )}
+
           {type === 'textarea' && (
             <textarea
               className="sprk-b-TextArea sprk-u-Width-100"
@@ -85,6 +93,7 @@ class SprkTextInput extends Component {
                 'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0,
                 'sprk-b-TextInput--has-text-icon': textIcon,
                 'sprk-b-TextInput--huge': type === 'hugeTextInput',
+                'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel
               })}
               id={id}
               data-analytics={analyticsString}
@@ -97,6 +106,24 @@ class SprkTextInput extends Component {
               {...rest}
             />
           )}
+
+          {/*
+            Render this only if it is huge Text Input
+            Huge Text Input's label needs to be rendered under the input
+          */}
+          {type === 'hugeTextInput' && (
+            <label
+              htmlFor={id}
+              className={classNames('sprk-b-Label', {
+                // TODO: Huge input with icon
+                // 'sprk-b-Label--with-icon': leadingIcon.length > 0,
+                'sprk-u-ScreenReaderText': hiddenLabel,
+              })}
+            >
+              {label}
+            </label>
+          )}
+
         </div>
         {children}
         {helperText.length > 0 && (
