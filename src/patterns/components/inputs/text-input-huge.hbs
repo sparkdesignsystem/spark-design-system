@@ -19,7 +19,7 @@ hasReactCode: true
 ---
 
 <div class="sprk-b-InputContainer sprk-b-InputContainer--huge{{#if containerclass}} {{containerclass}}{{/if}}" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
-  <input class="sprk-b-TextInput sprk-u-Width-100"
+  <input class="sprk-b-TextInput sprk-u-Width-100{{#if class}} {{class}}{{/if}}"
     id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     data-id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     type="text"
@@ -27,7 +27,7 @@ hasReactCode: true
     aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container"
     {{#if disabled}} disabled{{/if}}
     {{#if invaliddata}} aria-invalid="true"{{/if}}
-    {{#if required}}required{{/if}} placeholder="{{#if placeholder}}{{placeholder}}{{else}} {{/if}}">
+    {{#if required}}required{{/if}} {{#if placeholder}}placeholder="{{placeholder}}"{{/if}}>
   <label
     for="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}} {{#if labelclass}}{{labelclass}}{{/if}}">Text Input Label</label>
