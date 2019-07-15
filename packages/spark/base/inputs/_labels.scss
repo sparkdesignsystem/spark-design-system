@@ -26,7 +26,7 @@
 }
 
 .sprk-b-InputContainer--huge {
-  > label {
+  input:first-child ~ label {
     position: absolute;
     top: $sprk-text-input-huge-label-top;
     font-size: $sprk-text-input-huge-font-size;
@@ -34,7 +34,7 @@
     transition: $sprk-text-input-huge-transition;
     cursor: pointer;
   }
-  &.active > label, > input:focus ~ label {
+  input:first-child:focus ~ label {
     font-size: $sprk-text-input-huge-label-font-size;
     top: $sprk-text-input-huge-label-active-top;
     color: $sprk-green;
