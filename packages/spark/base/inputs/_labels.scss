@@ -37,7 +37,10 @@
   input:first-child:focus ~ label {
     font-size: $sprk-text-input-huge-label-font-size;
     top: $sprk-text-input-huge-label-active-top;
-    color: $sprk-green;
+    color: $sprk-text-input-huge-focus-label-color;
     cursor: default;
+  }
+  input.sprk-b-TextInput--error:first-child:focus ~ label {
+    color: $sprk-text-input-huge-error-focus-label-color;
   }
 }
