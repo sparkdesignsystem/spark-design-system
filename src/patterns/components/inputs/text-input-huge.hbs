@@ -27,7 +27,7 @@ hasReactCode: true
     aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container"
     {{#if disabled}} disabled{{/if}}
     {{#if invaliddata}} aria-invalid="true"{{/if}}
-    {{#if required}}required{{/if}} {{#if placeholder}}placeholder="{{placeholder}}"{{/if}}>
+    {{#if required}}required{{/if}} placeholder="{{#if placeholder}}{{placeholder}}{{else}} {{/if}}">
   <label
     for="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}} {{#if labelclass}}{{labelclass}}{{/if}}">Text Input Label</label>

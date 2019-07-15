@@ -40,8 +40,10 @@
     color: $sprk-text-input-huge-focus-label-color;
     cursor: default;
   }
-  input.sprk-b-TextInput--error:first-child:focus ~ label {
-    color: $sprk-text-input-huge-error-focus-label-color;
+  input.sprk-b-TextInput--error:first-child {
+    &:focus ~ label, &:not(:placeholder-shown) ~ label{
+      color: $sprk-text-input-huge-error-focus-label-color;
+    }
   }
   input:first-child ~ label.sprk-b-Label--disabled {
     font-size: $sprk-text-input-huge-label-font-size;
