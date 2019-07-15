@@ -26,29 +26,31 @@
 }
 
 .sprk-b-InputContainer--huge {
-  input:first-child ~ label {
-    position: absolute;
-    top: $sprk-text-input-huge-label-top;
-    font-size: $sprk-text-input-huge-font-size;
-    padding: $sprk-text-input-huge-padding;
-    transition: $sprk-text-input-huge-transition;
-    cursor: pointer;
-  }
-  input:first-child:focus ~ label, input:first-child:not(:placeholder-shown) ~ label {
-    font-size: $sprk-text-input-huge-label-font-size;
-    top: $sprk-text-input-huge-label-active-top;
-    color: $sprk-text-input-huge-focus-label-color;
-    cursor: default;
-  }
-  input.sprk-b-TextInput--error:first-child {
-    &:focus ~ label, &:not(:placeholder-shown) ~ label{
-      color: $sprk-text-input-huge-error-focus-label-color;
+  input:first-child {
+    ~ label {
+      position: absolute;
+      top: $sprk-text-input-huge-label-top;
+      font-size: $sprk-text-input-huge-font-size;
+      padding: $sprk-text-input-huge-padding;
+      transition: $sprk-text-input-huge-transition;
+      cursor: pointer;
+    }
+    &:focus ~ label, &:not(:placeholder-shown) ~ label, &.sprk-b-TextInput--float-label ~ label {
+      font-size: $sprk-text-input-huge-label-font-size;
+      top: $sprk-text-input-huge-label-active-top;
+      color: $sprk-text-input-huge-focus-label-color;
+      cursor: default;
+    }
+    &:disabled ~ label {
+      font-size: $sprk-text-input-huge-label-font-size;
+      top: $sprk-text-input-huge-label-active-top;
+      color: $sprk-text-input-disabled-color;
+      cursor: not-allowed;
     }
   }
-  input:first-child ~ label.sprk-b-Label--disabled {
-    font-size: $sprk-text-input-huge-label-font-size;
-    top: $sprk-text-input-huge-label-active-top;
-    color: $sprk-text-input-disabled-color;
-    cursor: not-allowed;
+  input.sprk-b-TextInput--error:first-child {
+    &:focus ~ label, &:not(:placeholder-shown) ~ label, &.sprk-b-TextInput--float-label ~ label {
+      color: $sprk-text-input-huge-error-focus-label-color;
+    }
   }
 }

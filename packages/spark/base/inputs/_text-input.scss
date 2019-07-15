@@ -22,7 +22,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
   padding: $sprk-text-input-padding;
   transition: $sprk-text-input-transition;
 
-  &:focus {
+  &:focus, &.sprk-b-TextInput--float-label {
     border-color: $sprk-text-input-focus-border-color;
   }
 }
@@ -41,7 +41,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
     padding: $sprk-text-input-huge-padding;
     box-shadow: $sprk-input-huge-box-shadow;
   
-    &:focus {
+    &:focus, &.sprk-b-TextInput--float-label {
       border-width: $sprk-text-input-huge-focus-border-width;
     }
   
@@ -62,21 +62,22 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
     &::placeholder {
       opacity: $sprk-text-input-huge-placeholder-opacity;
     }
-    &:focus {
+    &:focus, &.sprk-b-TextInput--float-label {
       opacity: $sprk-text-input-huge-placeholder-active-opacity;
       padding-top: $sprk-text-input-huge-active-padding-top;
       &::placeholder {
         opacity: $sprk-text-input-huge-placeholder-active-opacity;
       }
     }
-    &:disabled, &:not(:placeholder-shown) {
+    &:disabled, &:not(:placeholder-shown), &.sprk-b-TextInput--float-label {
       padding-top: $sprk-text-input-huge-active-padding-top;
     }
   }
 }
 
 .sprk-b-TextInput--error,
-.sprk-b-TextInput--error:focus {
+.sprk-b-TextInput--error:focus,
+.sprk-b-TextInput--error.sprk-b-TextInput--float-label {
   border-color: $sprk-text-input-error-border-color;
 }
 
