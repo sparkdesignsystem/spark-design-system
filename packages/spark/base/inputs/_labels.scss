@@ -43,4 +43,10 @@
   input.sprk-b-TextInput--error:first-child:focus ~ label {
     color: $sprk-text-input-huge-error-focus-label-color;
   }
+  input:first-child ~ label.sprk-b-Label--disabled {
+    font-size: $sprk-text-input-huge-label-font-size;
+    top: $sprk-text-input-huge-label-active-top;
+    color: $sprk-text-input-disabled-color;
+    cursor: not-allowed;
+  }
 }
