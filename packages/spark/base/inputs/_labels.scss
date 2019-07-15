@@ -34,7 +34,7 @@
     transition: $sprk-text-input-huge-transition;
     cursor: pointer;
   }
-  input:first-child:focus ~ label {
+  input:first-child:focus ~ label, input:first-child:not(:placeholder-shown) ~ label {
     font-size: $sprk-text-input-huge-label-font-size;
     top: $sprk-text-input-huge-label-active-top;
     color: $sprk-text-input-huge-focus-label-color;
