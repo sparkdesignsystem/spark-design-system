@@ -53,7 +53,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
   // Applies when input is first direct child of the container div
   // to create floating label effect
   // Label element must follow the input element
-  > input:first-child {
+  > input:first-child, .sprk-b-TextInputIconContainer input {
     &:focus, &.sprk-b-TextInput--float-label {
       opacity: $sprk-text-input-huge-placeholder-active-opacity;
       padding-top: $sprk-text-input-huge-active-padding-top;
@@ -83,6 +83,9 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 
     &:disabled, &:not(:placeholder-shown), &.sprk-b-TextInput--float-label {
       padding-top: $sprk-text-input-huge-active-padding-top;
+    }
+    .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:focus, .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
+      padding: $sprk-text-input-huge-has-text-icon-padding;
     }
   }
   // Huge styles for Monetary Input
