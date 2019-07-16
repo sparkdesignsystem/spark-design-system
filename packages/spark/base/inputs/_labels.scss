@@ -26,8 +26,10 @@
 }
 
 .sprk-b-InputContainer--huge {
-  input:first-child {
-    ~ label {
+  // Apply styles to label to create floating label effect
+  // on huge inputs. Label element must follow input element
+  > input:first-child {
+    + label {
       position: absolute;
       top: $sprk-text-input-huge-label-top;
       font-size: $sprk-text-input-huge-font-size;
@@ -35,21 +37,21 @@
       transition: $sprk-text-input-huge-transition;
       cursor: pointer;
     }
-    &:focus ~ label, &:not(:placeholder-shown) ~ label, &.sprk-b-TextInput--float-label ~ label {
+    &:focus + label, &:not(:placeholder-shown) + label, &.sprk-b-TextInput--float-label + label {
       font-size: $sprk-text-input-huge-label-font-size;
       top: $sprk-text-input-huge-label-active-top;
       color: $sprk-text-input-huge-focus-label-color;
       cursor: default;
     }
-    &:disabled ~ label {
+    &:disabled + label {
       font-size: $sprk-text-input-huge-label-font-size;
       top: $sprk-text-input-huge-label-active-top;
       color: $sprk-text-input-disabled-color;
       cursor: not-allowed;
     }
   }
-  input.sprk-b-TextInput--error:first-child {
-    &:focus ~ label, &:not(:placeholder-shown) ~ label, &.sprk-b-TextInput--float-label ~ label {
+  > input.sprk-b-TextInput--error:first-child {
+    &:focus + label, &:not(:placeholder-shown) + label, &.sprk-b-TextInput--float-label + label {
       color: $sprk-text-input-huge-error-focus-label-color;
     }
   }

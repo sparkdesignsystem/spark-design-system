@@ -29,6 +29,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 
 // Refactor to only require the class on the container
 .sprk-b-InputContainer--huge {
+  // Applies to any huge input
   input { 
     position: relative;
     font-size: $sprk-text-input-huge-font-size;
@@ -48,20 +49,11 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
     &::placeholder {
       font-size: $sprk-text-input-huge-font-size;
     }
-
-    &.sprk-b-TextInput--label-hidden {
-      &::placeholder {
-        opacity: $sprk-text-input-huge-placeholder-active-opacity;
-      }
-      &:focus {
-        padding: $sprk-text-input-huge-padding;
-      }
-    }
   }
-  input:first-child {
-    &::placeholder {
-      opacity: $sprk-text-input-huge-placeholder-opacity;
-    }
+  // Applies when input is first direct child of the container div
+  // to create floating label effect
+  // Label element must follow the input element
+  > input:first-child {
     &:focus, &.sprk-b-TextInput--float-label {
       opacity: $sprk-text-input-huge-placeholder-active-opacity;
       padding-top: $sprk-text-input-huge-active-padding-top;
@@ -69,6 +61,26 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
         opacity: $sprk-text-input-huge-placeholder-active-opacity;
       }
     }
+
+    &::placeholder {
+      opacity: $sprk-text-input-huge-placeholder-opacity;
+    }
+
+    &.sprk-b-TextInput--label-hidden {
+      &::placeholder {
+        opacity: $sprk-text-input-huge-placeholder-active-opacity;
+      }
+      &:focus, &:not(:placeholder-shown) {
+        padding: $sprk-text-input-huge-padding;
+      }
+      + label {
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+    }
+
     &:disabled, &:not(:placeholder-shown), &.sprk-b-TextInput--float-label {
       padding-top: $sprk-text-input-huge-active-padding-top;
     }
