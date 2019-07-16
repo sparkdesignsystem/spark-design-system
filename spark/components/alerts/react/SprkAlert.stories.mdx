@@ -3,8 +3,7 @@ title: Alerts
 path: alerts
 type: component
 ---
-
-export const sprkComponent = 'This will be a rendered alert from Storybook';
+export const sprkComponent = 'components-alert--default';
 export const sourceCode = '<SprkAlert>This will be the source code for the default alert</SprkAlert>';
 export const information = [
   'May have timed visibility (10 seconds) and/or be \
@@ -36,8 +35,8 @@ export const variants = [
     name: 'Information',
     description: 'Shows information that is important for a client to read. \
                   Information Alerts have a Bell icon.',
-     // This would be storybookDocs <Story id=""> component
-    sprkComponent: '<SprkAlert></SprkAlert>',
+     // This would be the ID for storybookDocs <Story id=""> component
+    sprkComponent: 'components-alert--information',
     sourceCode: '<div>foo</div>'
   },
   {
