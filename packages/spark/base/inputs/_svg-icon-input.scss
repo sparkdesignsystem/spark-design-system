@@ -8,3 +8,9 @@
   position: absolute;
   z-index: $sprk-input-icon-z-index;
 }
+
+.sprk-b-InputContainer--huge {
+  .sprk-b-TextInputIconContainer .sprk-c-Icon {
+    margin-top: $sprk-input-huge-icon-offset-y;
+  }
+}

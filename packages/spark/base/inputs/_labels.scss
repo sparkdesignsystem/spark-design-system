@@ -25,7 +25,7 @@
   font-size: $sprk-visibility-control-label-font-size;
 }
 
-.sprk-b-InputContainer--huge {
+.sprk-b-InputContainer--huge, .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
   // Apply styles to label to create floating label effect
   // on huge inputs. Label element must follow input element
   > input:first-child {
@@ -54,5 +54,12 @@
     &:focus + label, &:not(:placeholder-shown) + label, &.sprk-b-TextInput--float-label + label {
       color: $sprk-text-input-huge-error-focus-label-color;
     }
+  }
+}
+
+// Huge monetary inputs overrides
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
+  > input:first-child + label {
+    padding: $sprk-text-input-huge-has-text-icon-padding;
   }
 }

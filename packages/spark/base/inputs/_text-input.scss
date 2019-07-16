@@ -28,7 +28,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 }
 
 // Refactor to only require the class on the container
-.sprk-b-InputContainer--huge {
+.sprk-b-InputContainer--huge, .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
   // Applies to any huge input
   input { 
     position: relative;
@@ -86,9 +86,12 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
     }
   }
   // Huge styles for Monetary Input
-  .sprk-b-TextInputIconContainer--has-text-icon {
+  .sprk-b-TextInputIconContainer {
     input {
       padding: $sprk-text-input-has-icon-padding;
+    }
+    > input:first-child {
+      padding: $sprk-text-input-huge-has-text-icon-padding;
     }
   }
 }
