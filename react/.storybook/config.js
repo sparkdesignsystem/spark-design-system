@@ -1,10 +1,9 @@
 import React from 'react';
-import { load, addDecorator, addParameters, getStorybook } from '@storybook/react';
+import { load, addDecorator, addParameters } from '@storybook/react';
 import { action } from "@storybook/addon-actions"
 import '../../spark/manifests/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
-import { themes } from '@storybook/theming';
 import sparkTheme from "../storybook-spark-theme";
 
 addDecorator(withA11y);
@@ -20,23 +19,6 @@ addParameters({
     header: false,
   },
 });
-
-// Automatically import all react stories
-const loadStories = () => {
-  const req = require.context('../../spark', true, /\/react\/.*\.stories.js$/);
-
-  req.keys().forEach(filename => {
-    req(filename);
-  });
-}
-
-const loadMDX = () => {
-  const req = require.context('../../spark', true, /\/react\/.*\.stories.mdx$/);
-
-  req.keys().forEach(filename => {
-    req(filename);
-  });
-}
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to
@@ -54,5 +36,5 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-// load(loadStories, module);
-// load(loadMDX, module);
+load(require.context('../../spark', true, /\/react\/.*\.stories.js$/), module);
+load(require.context('../../spark', true, /\/react\/.*\.stories.mdx$/), module);

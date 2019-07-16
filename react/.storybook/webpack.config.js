@@ -29,6 +29,13 @@ module.exports = ({ config }) => {
     use: ['style-loader', 'css-loader', 'sass-loader']
   });
 
+  config.module.rules.push({
+    test: /\.stories\.[tj]sx?$/,
+    loaders: [require.resolve('@storybook/source-loader')],
+    include: [path.resolve(__dirname, '../../spark')],
+    enforce: 'pre',
+  });
+
   config.node = {
     fs: 'empty'
   }
