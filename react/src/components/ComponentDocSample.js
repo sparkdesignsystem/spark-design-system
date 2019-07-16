@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 import {
   SprkLink
 } from '@sparkdesignsystem/spark-react';
+import { Story } from "@storybook/addon-docs/blocks";
 
-const ComponentDocSample = ({ name, description, sprkComponent, sourceCode, ...rest }) =>
+const ComponentDocSample = ({
+  name,
+  description,
+  sprkComponent,
+  sourceCode,
+  ...rest
+}) =>
 (
   <div className="sprk-u-mbm" id={`#${ name }`} {...rest}>
     <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
@@ -19,7 +26,8 @@ const ComponentDocSample = ({ name, description, sprkComponent, sourceCode, ...r
 
     <div className="sprk-u-mbm">
       Spark Component:
-      { sprkComponent }
+
+      <Story id={ sprkComponent } />
     </div>
 
     <div className="sprk-u-mbm">

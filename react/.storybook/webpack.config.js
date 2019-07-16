@@ -30,7 +30,8 @@ module.exports = ({ config }) => {
   });
 
   config.module.rules.push({
-    test: /\.stories\.[tj]sx?$/,
+    test: /\.js$/,
+    exclude: /node_modules/,
     loaders: [require.resolve('@storybook/source-loader')],
     include: [path.resolve(__dirname, '../../spark')],
     enforce: 'pre',
@@ -42,6 +43,8 @@ module.exports = ({ config }) => {
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
+
+  delete config.resolve.alias['core-js'];
 
   config.resolve.modules = [
     ...(config.resolve.modules || []),
