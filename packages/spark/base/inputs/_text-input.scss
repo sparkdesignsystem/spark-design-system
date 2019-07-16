@@ -85,6 +85,12 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
       padding-top: $sprk-text-input-huge-active-padding-top;
     }
   }
+  // Huge styles for Monetary Input
+  .sprk-b-TextInputIconContainer--has-text-icon {
+    input {
+      padding: $sprk-text-input-has-icon-padding;
+    }
+  }
 }
 
 .sprk-b-TextInput--error,
