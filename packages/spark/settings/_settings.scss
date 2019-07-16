@@ -585,6 +585,7 @@ $sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
 $sprk-text-input-has-text-icon-padding: 12px 13px 12px 37px !default;
+$sprk-text-input-huge-has-text-icon-padding: 0 37px !default;
 $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 
 //
@@ -592,6 +593,7 @@ $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 ///
 $sprk-input-icon-offset-x: $sprk-space-m !default;
 $sprk-input-icon-offset-y: $sprk-space-m !default;
+$sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 $sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
 $sprk-input-icon-z-index: $sprk-layer-height-xs !default;
 $sprk-input-huge-icon-offset-y: 50% !default;
