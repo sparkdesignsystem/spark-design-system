@@ -142,25 +142,25 @@ variableTable:
     description: The default opacity applied to the huge text input placeholders
   $sprk-text-input-huge-placeholder-active-opacity:
     default: 1
-    description:
+    description: The opacity applied to the placeholder when the huge text input is in focus.
   $sprk-text-input-huge-label-top:
     default: $sprk-text-input-huge-height/3
-    description:
+    description: Top positioning for the label on huge text inputs.
   $sprk-text-input-huge-label-active-top:
     default: $sprk-space-s
-    description:
+    description: Top positioning for the label on huge text inputs when input is in focus.
   $sprk-text-input-huge-active-padding-top: 
     default: $sprk-text-input-huge-height/3
-    description:
+    description: Padding-top for huge text inputs when input is in focus
   $sprk-text-input-huge-focus-label-color:
     default: $sprk-green
-    description:
+    description: Label color for huge text inputs when input is in focus
   $sprk-text-input-huge-error-focus-label-color:
     default: $sprk-black
-    description:
+    description: Label color for huge text inputs when input is in focus and there is an error.
   $sprk-text-input-huge-complete-label-color: 
     default: $sprk-black
-    description: 
+    description: Label color for huge text inputs when input is in focus and there is a value present or no placeholder is shown.
   $sprk-text-input-huge-height:
     default: 64px
     description: The height of the huge text input.
@@ -406,7 +406,7 @@ variableTable:
     description: The Y offset of icons inside input elements.
   $sprk-input-huge-icon-offset-y:
     default: $sprk-space-misc-a
-    description:
+    description: The Y offset of icons inside the huge text input elements.
   $sprk-text-input-has-icon-padding:
     default: 12px 13px 12px 40px
     description: The padding inside input elements that contain icons.
@@ -415,7 +415,7 @@ variableTable:
     description: The z-index applied to the icon inside input elements.
   $sprk-input-huge-icon-offset-top:
     default: 50%
-    description:
+    description: 
   $sprk-input-text-icon-offset-x:
     default: $sprk-space-m
     description: The X offset of text icons inside input elements.
@@ -485,3 +485,7 @@ classTable:
     description: Selects that are currently not in focus.
   .sprk-b-TextInputIconContainer--has-text-icon:
     description: Text inputs with icons.
+  .sprk-b-TextInput--float-label:
+    description: Trigger the floating label state on huge text inputs.
+  .sprk-b-TextInput--label-hidden:
+    description: Adjust styling and hide label on huge text inputs.
