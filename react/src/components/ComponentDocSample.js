@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
   SprkLink
 } from '@sparkdesignsystem/spark-react';
-import { Story } from "@storybook/addon-docs/blocks";
 
 const ComponentDocSample = ({
   name,
@@ -27,7 +26,7 @@ const ComponentDocSample = ({
     <div className="sprk-u-mbm">
       Spark Component:
 
-      <Story id={ sprkComponent } />
+      { sprkComponent }
     </div>
 
     <div className="sprk-u-mbm">
