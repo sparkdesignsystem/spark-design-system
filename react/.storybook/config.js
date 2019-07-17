@@ -17,7 +17,7 @@ addParameters({
   info: {
     inline: true,
     header: false,
-  },
+  }
 });
 
 // Gatsby's Link overrides:
@@ -37,4 +37,4 @@ window.___navigate = pathname => {
 }
 
 load(require.context('../../spark', true, /\/react\/.*\.stories.js$/), module);
-load(require.context('../../spark', true, /\/react\/.*\.stories.mdx$/), module);
+// load(require.context('../../spark', true, /\/react\/.*\.stories.mdx$/), module);
