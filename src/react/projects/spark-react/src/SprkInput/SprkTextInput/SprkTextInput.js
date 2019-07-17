@@ -35,100 +35,135 @@ class SprkTextInput extends Component {
     } = this.props;
     const { id, errorContainerId } = this.state;
 
+    const Label = () => {
+      return (
+        <label
+          htmlFor={id}
+          className={classNames('sprk-b-Label', {
+            // TODO: Huge input with icon
+            'sprk-b-Label--with-icon': leadingIcon.length > 0,
+            'sprk-u-ScreenReaderText': hiddenLabel,
+          })}
+        >
+          {label}
+        </label>
+      );
+    }
+
+    const TextArea = () => {
+      return (
+        <textarea
+          className="sprk-b-TextArea sprk-u-Width-100"
+          id={id}
+          data-analytics={analyticsString}
+          data-id={idString}
+          type={type}
+          aria-invalid={!valid}
+          aria-describedby={errorContainerId}
+          value={valid && formatter(value) ? formatter(value) : value}
+          {...rest}
+        />
+      );
+    }
+
+    // BOTH - Not Text Area
+    const SingleLineTextInput = () => {
+      return (
+        <input
+          className={classNames('sprk-b-TextInput sprk-u-Width-100', {
+            'sprk-b-TextInput--error': !valid,
+            'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0,
+            'sprk-b-TextInput--has-text-icon': textIcon,
+            'sprk-b-TextInput--huge': type === 'hugeTextInput',
+            'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel
+          })}
+          id={id}
+          data-analytics={analyticsString}
+          data-id={idString}
+          ref={forwardedRef}
+          type={type}
+          aria-invalid={!valid}
+          aria-describedby={errorContainerId}
+          value={valid && formatter(value) ? formatter(value) : value}
+          {...rest}
+        />
+      );
+    }
+
+    // If hugeTextInput, label has to be after Input
+    const GetInputLabelOrder = () => {
+      if (type === 'textarea') {
+        return (
+          <React.Fragment>
+            <Label />
+            <TextArea/>
+          </React.Fragment>
+        );
+      }
+
+      if (type === 'hugeTextInput') {
+        return (
+          <React.Fragment>
+            {type !== 'textarea' && (
+              <SingleLineTextInput />
+            )}
+            <Label />
+          </React.Fragment>
+        );
+      }
+
+      return (
+        <React.Fragment>
+          <Label />
+          <SingleLineTextInput />
+        </React.Fragment>
+      );
+    }
+
+    const GetTextInputLayout = () => {
+      if (leadingIcon.length > 0 || textIcon) {
+        return (
+          <div
+            className={classNames('sprk-b-TextInputIconContainer',{
+              'sprk-b-TextInputIconContainer--has-text-icon': textIcon,
+            })}
+          >
+            {/* TODO: Redundant check */}
+            {/* Why is it not showing??? */}
+            {leadingIcon.length > 0 && (
+              <SprkIcon
+                iconName={leadingIcon}
+                additionalClasses="
+                  sprk-c-Icon--m sprk-c-Icon--stroke-current-color
+                "
+              />
+            )}
+            <GetInputLabelOrder />
+          </div>
+        );
+      }
+
+      // No Icon
+      return (
+        <React.Fragment>
+          <GetInputLabelOrder />
+        </React.Fragment>
+      );
+    }
+
     return (
       <div
         className={classNames('sprk-b-InputContainer', additionalClasses, {
           'sprk-b-InputContainer--huge': type === 'hugeTextInput',
         })}
       >
-        <div
-          className={classNames({
-            'sprk-b-TextInputIconContainer': leadingIcon.length > 0 || textIcon,
-            'sprk-b-TextInputIconContainer--has-text-icon': textIcon,
-          })}
-        >
-          {leadingIcon.length > 0 && (
-            <SprkIcon
-              iconName={leadingIcon}
-              additionalClasses="
-                sprk-c-Icon--m sprk-c-Icon--stroke-current-color
-              "
-            />
-          )}
-
-          {/*
-            Render this only if it's not huge Text Input
-            Huge Text Input's label needs to be rendered under the input
-          */}
-          {type != 'hugeTextInput' && (
-            <label
-              htmlFor={id}
-              className={classNames('sprk-b-Label', {
-                'sprk-b-Label--with-icon': leadingIcon.length > 0,
-                'sprk-u-ScreenReaderText':
-                  hiddenLabel || type === 'hugeTextInput',
-              })}
-            >
-              {label}
-            </label>
-          )}
-
-          {type === 'textarea' && (
-            <textarea
-              className="sprk-b-TextArea sprk-u-Width-100"
-              id={id}
-              data-analytics={analyticsString}
-              data-id={idString}
-              type={type}
-              aria-invalid={!valid}
-              aria-describedby={errorContainerId}
-              value={valid && formatter(value) ? formatter(value) : value}
-              {...rest}
-            />
-          )}
-          {type !== 'textarea' && (
-            <input
-              className={classNames('sprk-b-TextInput sprk-u-Width-100', {
-                'sprk-b-TextInput--error': !valid,
-                'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0,
-                'sprk-b-TextInput--has-text-icon': textIcon,
-                'sprk-b-TextInput--huge': type === 'hugeTextInput',
-                'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel
-              })}
-              id={id}
-              data-analytics={analyticsString}
-              data-id={idString}
-              ref={forwardedRef}
-              type={type}
-              aria-invalid={!valid}
-              aria-describedby={errorContainerId}
-              value={valid && formatter(value) ? formatter(value) : value}
-              {...rest}
-            />
-          )}
-
-          {/*
-            Render this only if it is huge Text Input
-            Huge Text Input's label needs to be rendered under the input
-          */}
-          {type === 'hugeTextInput' && (
-            <label
-              htmlFor={id}
-              className={classNames('sprk-b-Label', {
-                // TODO: Huge input with icon
-                // 'sprk-b-Label--with-icon': leadingIcon.length > 0,
-                'sprk-u-ScreenReaderText': hiddenLabel,
-              })}
-            >
-              {label}
-            </label>
-          )}
-
-        </div>
+        <GetTextInputLayout />
         {children}
+
         {helperText.length > 0 && (
           <div className="sprk-b-HelperText">{helperText}</div>
         )}
+
         {!valid && (
           <SprkErrorContainer id={errorContainerId} message={errorMessage} />
         )}
