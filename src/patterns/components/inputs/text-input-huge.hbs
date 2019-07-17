@@ -2,12 +2,18 @@
 name: Text Input Huge
 description:
   This text input is larger than base text input.
+  The label is centered inside the input until focused. The label transitions to the top of the input and the placeholder is shown.
 information:
   - The input's 'type' attribute should be the most appropriate value that semantically matches your
     use case.
-  - The label is hidden, but important to include so it's still accessible to screen readers.
+  - The label is visible by default. To hide the label and only display the placeholder, 
+    add the .sprk-b-TextInput--label-hidden class to the input element.
+    This will hide the label, but it will still be available for screen readers.
+
 restrictions:
   - This should only be used in a form that asks for one input at a time.
+  - The input label must come before the label element.
+  - A placeholder is required for full functionality. If you do not want to show a placeholder, include placeholder=" " (space included) to maintain functionality.
 links:
   Helper Text:
     external: false
@@ -27,7 +33,7 @@ hasReactCode: true
     aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container"
     {{#if disabled}} disabled{{/if}}
     {{#if invaliddata}} aria-invalid="true"{{/if}}
-    {{#if required}}required{{/if}} placeholder="{{#if placeholder}}{{placeholder}}{{else}} {{/if}}">
+    {{#if required}}required{{/if}} placeholder="{{#if placeholder}}{{placeholder}}{{else}}Placeholder{{/if}}">
   <label
     for="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}} {{#if labelclass}}{{labelclass}}{{/if}}">Text Input Label</label>
