@@ -84,9 +84,6 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
     &:disabled, &:not(:placeholder-shown), &.sprk-b-TextInput--float-label {
       padding-top: $sprk-text-input-huge-active-padding-top;
     }
-    .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:focus, .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
-      padding: $sprk-text-input-huge-has-text-icon-padding;
-    }
   }
   // Huge styles for Monetary Input
   .sprk-b-TextInputIconContainer {
@@ -107,6 +104,11 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
   &:focus, &:not(:placeholder-shown){
     padding: $sprk-text-input-has-icon-padding;
   }
+}
+.sprk-b-InputContainer--huge {
+  .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:focus, .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
+    padding: $sprk-text-input-has-icon-padding;
+  } 
 }
 
 .sprk-b-TextInput--error,
