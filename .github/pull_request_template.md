@@ -34,6 +34,9 @@ then please remove it.
   - [ ] Microsoft Edge
   - [ ] Apple Safari
   - [ ] Apple Safari (Mobile)
+  
+### Manual Testing Plan
+  - [ ] Update excel sheet with component changes
 
 ### Design Review
  - [ ] Design reviewed and approved
