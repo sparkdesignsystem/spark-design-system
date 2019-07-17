@@ -4,7 +4,13 @@ import {
   SprkLink
 } from '@sparkdesignsystem/spark-react';
 
-const ComponentDocSample = ({ name, description, sprkComponent, sourceCode, ...rest }) =>
+const ComponentDocSample = ({
+  name,
+  description,
+  sprkComponent,
+  sourceCode,
+  ...rest
+}) =>
 (
   <div className="sprk-u-mbm" id={`#${ name }`} {...rest}>
     <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
@@ -19,6 +25,7 @@ const ComponentDocSample = ({ name, description, sprkComponent, sourceCode, ...r
 
     <div className="sprk-u-mbm">
       Spark Component:
+
       { sprkComponent }
     </div>
 

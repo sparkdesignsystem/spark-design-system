@@ -5,7 +5,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import * as _ from 'lodash';
-import { getFocusableEls, isActiveElement, isTabPressed, isEscPressed } from '../../tabs/vanilla/tabs';
+import {
+  getFocusableEls,
+  isActiveElement,
+} from '../../../utilities/helpers/vanilla/elementState';
+import { isTabPressed, isEscPressed } from '../../../utilities/helpers/vanilla/keypress';
 import SprkSpinner from '../../spinners/react/SprkSpinner';
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';

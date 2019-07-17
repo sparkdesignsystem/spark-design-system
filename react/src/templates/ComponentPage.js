@@ -63,6 +63,7 @@ const ComponentPage = ({ pageContext }) => {
             const { name, description, sprkComponent, sourceCode } = item;
             return (
               <ComponentDocSample
+                key={name}
                 name={name}
                 description={description}
                 sprkComponent={sprkComponent}
