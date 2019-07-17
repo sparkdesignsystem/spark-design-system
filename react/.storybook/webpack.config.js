@@ -29,22 +29,12 @@ module.exports = ({ config }) => {
     use: ['style-loader', 'css-loader', 'sass-loader']
   });
 
-  config.module.rules.push({
-    test: /\.js$/,
-    exclude: /node_modules/,
-    loaders: [require.resolve('@storybook/source-loader')],
-    include: [path.resolve(__dirname, '../../spark')],
-    enforce: 'pre',
-  });
-
   config.node = {
     fs: 'empty'
   }
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
-
-  delete config.resolve.alias['core-js'];
 
   config.resolve.modules = [
     ...(config.resolve.modules || []),
