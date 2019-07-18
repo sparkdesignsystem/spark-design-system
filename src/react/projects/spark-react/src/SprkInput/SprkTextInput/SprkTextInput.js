@@ -104,9 +104,7 @@ class SprkTextInput extends Component {
       if (type === 'hugeTextInput') {
         return (
           <React.Fragment>
-            {type !== 'textarea' && (
-              <SingleLineTextInput />
-            )}
+            <SingleLineTextInput />
             <Label />
           </React.Fragment>
         );
@@ -120,7 +118,9 @@ class SprkTextInput extends Component {
       );
     }
 
-    const GetTextInputLayout = () => {
+    // Rename to actual function -- has icon or not
+    // Put this in another file for Inputs -- look at Masthead
+    const GetTextInputLayout = (props) => {
       if (leadingIcon.length > 0 || textIcon) {
         return (
           <div
@@ -138,7 +138,7 @@ class SprkTextInput extends Component {
                 "
               />
             )}
-            <GetInputLabelOrder />
+            {props.children}
           </div>
         );
       }
@@ -146,7 +146,7 @@ class SprkTextInput extends Component {
       // No Icon
       return (
         <React.Fragment>
-          <GetInputLabelOrder />
+          {props.children}
         </React.Fragment>
       );
     }
@@ -157,7 +157,9 @@ class SprkTextInput extends Component {
           'sprk-b-InputContainer--huge': type === 'hugeTextInput',
         })}
       >
-        <GetTextInputLayout />
+        <GetTextInputLayout>
+          <GetInputLabelOrder />
+        </GetTextInputLayout>
         {children}
 
         {helperText.length > 0 && (

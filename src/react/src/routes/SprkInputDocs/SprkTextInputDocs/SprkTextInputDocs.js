@@ -87,6 +87,7 @@ class SprkTextInputDocs extends React.Component {
             label="Money Amount"
             textIcon
             name="monetary"
+            idString="f234234"
             valid={isValidMonetary(monetary)}
             value={monetary}
             onChange={this.handleChange}
