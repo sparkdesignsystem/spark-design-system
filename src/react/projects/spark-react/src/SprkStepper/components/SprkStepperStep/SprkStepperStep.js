@@ -81,16 +81,18 @@ class SprkStepperStep extends Component {
             </h3>
           </span>
 
-          <div
-            className={classnames(
-              "sprk-c-Stepper__step-description",
-              hasDescription && !isSelected ? 'sprk-u-Display--none' : 'sprk-u-Visibility--hidden',
-            )}
+          { hasDescription &&
+            <div
+              className={classnames(
+                "sprk-c-Stepper__step-description",
+                isSelected ? 'sprk-u-Visibility--hidden' : 'sprk-u-Display--none',
+              )}
 
-          >
-            {/* desc is only ever displayed in the slider. This is just for spacing. */}
-            <p className="sprk-b-TypeBodyTwo">{children}</p>
-          </div>
+            >
+              {/* desc is only ever displayed in the slider. This is just for spacing. */}
+              <p className="sprk-b-TypeBodyTwo">{children}</p>
+            </div>
+          }
         </div>
       </li>
     );
