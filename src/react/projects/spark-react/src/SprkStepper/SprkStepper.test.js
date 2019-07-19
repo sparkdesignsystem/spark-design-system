@@ -279,29 +279,3 @@ it('should not change state for unexpected keypresses', () => {
   expect(newSelectedStep.hasClass('first')).toBe(true);
 });
 
-// These tests pass, but I'm commenting them out because they throw
-// console.warn in the test console. You can uncomment them to get to 100% code coverage.
-
-it('should warn if children are missing descriptions', () => {
-  // const wrapper = mount(
-  //   <SprkStepper hasDarkBackground>
-  //     <SprkStepperStep>I have a description</SprkStepperStep>
-  //     <SprkStepperStep>The next one does not</SprkStepperStep>
-  //     <SprkStepperStep />
-  //   </SprkStepper>,
-  // );
-
-  // expect a console warning
-});
-
-it('should not warn if children are not missing descriptions', () => {
-  // const wrapper = mount(
-  //   <SprkStepper hasDarkBackground>
-  //     <SprkStepperStep>I have a description</SprkStepperStep>
-  //     <SprkStepperStep>The next one does too</SprkStepperStep>
-  //     <SprkStepperStep>tadaaa</SprkStepperStep>
-  //   </SprkStepper>,
-  // );
-
-  // expect no console warning
-});
