@@ -31,6 +31,8 @@
   // on huge inputs. Label element must follow input element
   > .sprk-b-TextInput:first-child,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput {
+
+    // Label that is directly after Text Input
     + .sprk-b-Label {
       position: absolute;
       top: $sprk-text-input-huge-label-top;
@@ -38,7 +40,7 @@
       padding: $sprk-text-input-huge-padding;
       transition: $sprk-text-input-huge-transition;
       transform: translateZ(0);
-      cursor: pointer;
+      pointer-events: none;
     }
 
     &:focus + .sprk-b-Label,
@@ -47,7 +49,6 @@
       font-size: $sprk-text-input-huge-label-font-size;
       top: $sprk-text-input-huge-label-active-top;
       color: $sprk-text-input-huge-focus-label-color;
-      cursor: default;
     }
 
     &:not(:placeholder-shown) + .sprk-b-Label {
