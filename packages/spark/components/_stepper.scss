@@ -26,11 +26,6 @@
     opacity: 0;
   }
 
-  .sprk-c-Stepper__step-heading,
-  .sprk-c-Stepper__step-description {
-    transition: opacity $sprk-stepper-slider-text-fade-in-timing ease 0.2s;
-  }
-
   .sprk-c-Stepper__step-icon {
     transition: opacity $sprk-stepper-slide-timing ease;
   }
@@ -40,6 +35,7 @@
 .sprk-c-Stepper__slider--active .sprk-c-Stepper__step-icon,
 .sprk-c-Stepper__slider--active .sprk-c-Stepper__step-description {
   opacity: 1;
+  transition: opacity $sprk-stepper-slider-text-fade-in-timing ease 0.2s;
 }
 
 .sprk-c-Stepper--has-dark-bg {
@@ -212,7 +208,6 @@
 
 .sprk-c-Stepper__step-description {
   padding-top: $sprk-stepper-step-description-top-spacing;
-  transition: opacity 0.1s ease-in-out;
 }
 
 .sprk-c-Stepper--has-carousel {
