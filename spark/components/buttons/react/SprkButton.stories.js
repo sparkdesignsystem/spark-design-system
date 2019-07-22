@@ -38,9 +38,9 @@ stories.add('primary', () => (
   .add('with spinner', () => (
     <SprkButton loading>Button</SprkButton>
   ))
-  .add('full with at small viewport', () => (
+  .add('full width at small viewport', () => (
     <SprkButton additionalClasses="sprk-c-Button--full@s">Button</SprkButton>
   ))
-  .add('full with at extra small viewport', () => (
+  .add('full width at extra small viewport', () => (
     <SprkButton additionalClasses="sprk-c-Button--full@xs">Button</SprkButton>
   ));
