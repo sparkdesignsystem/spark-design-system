@@ -96,13 +96,11 @@ class SprkStepper extends Component {
     // the first step is active by default
     let initialIndex = 0;
 
-    if (children.length > 0) {
-      children.forEach((child, index) => {
-        if (child.props.isSelected) {
-          initialIndex = index;
-        }
-      });
-    }
+    children.forEach((child, index) => {
+      if (child.props.isSelected) {
+        initialIndex = index;
+      }
+    });
 
     return initialIndex;
   }
