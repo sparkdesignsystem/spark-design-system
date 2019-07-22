@@ -39,7 +39,7 @@ storiesOf('Components|Card', module)
         cta: {
           ctaAnalytics: 'test',
           text: 'Learn More',
-          ctaVariant: 'link',
+          ctaVariant: 'button',
           href: 'https://sparkdesignsystem.com/',
         },
         media: {
@@ -64,7 +64,7 @@ storiesOf('Components|Card', module)
         cta: {
           ctaAnalytics: 'test',
           text: 'Learn More',
-          ctaVariant: 'link',
+          ctaVariant: 'button',
           href: 'https://sparkdesignsystem.com/',
         },
         media: {
@@ -79,4 +79,232 @@ storiesOf('Components|Card', module)
         titleFirst: true,
       }}
     />
+  ))
+  .add('card layout - two up', () => (
+    <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
+      <SprkCard
+        idString="card-1"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+      <SprkCard
+        idString="card-2"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+    </section>
+  ))
+  .add('card layout - three up', () => (
+    <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
+      <SprkCard
+        idString="card-1"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+      <SprkCard
+        idString="card-2"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+      <SprkCard
+        idString="card-3"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+    </section>
+  ))
+  .add('card layout - four up', () => (
+    <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
+      <SprkCard
+        idString="card-1"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+      <SprkCard
+        idString="card-2"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+      <SprkCard
+        idString="card-3"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+      <SprkCard
+        idString="card-4"
+        variant="teaser"
+        additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l"
+        teaserConfig={{
+          bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: true,
+        }}
+      />
+    </section>
   ));
