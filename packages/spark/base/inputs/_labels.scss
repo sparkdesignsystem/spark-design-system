@@ -89,3 +89,11 @@
     }
   }
 }
+
+.sprk-b-InputContainer--huge > .sprk-b-TextInput:focus:first-child {
+  + .sprk-b-Label {
+    font-size: $sprk-text-input-huge-label-font-size;
+    top: $sprk-text-input-huge-label-active-top;
+    color: $sprk-text-input-huge-focus-label-color;
+  }
+}
