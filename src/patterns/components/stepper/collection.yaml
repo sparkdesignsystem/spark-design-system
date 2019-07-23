@@ -14,6 +14,9 @@ variableTable:
   $sprk-stepper-bg:
     default: transparent
     description: Sets the background color of the stepper.
+  $sprk-stepper-breakpoint:
+    default: $sprk-split-breakpoint-xl
+    description: Sets the minimum width at which the component switches between narrow and wide layouts.
   $sprk-stepper-max-width:
     default: 480px
     description: Sets the maximum width of the stepper.
@@ -50,7 +53,7 @@ variableTable:
   $sprk-stepper-dark-icon-color-selected:
     default: $sprk-white
     description: The color of the step icon when the step is selected and the stepper has a dark background (sprk-c-Stepper--has-dark-bg).
-  $sprk-stepper-dark-icon-color-hoverg:
+  $sprk-stepper-dark-icon-color-hover:
     default: $sprk-white
     description: The color of the step icon on hover when the stepper has a dark background (sprk-c-Stepper--has-dark-bg).
   $sprk-stepper-dark-icon-transition:
