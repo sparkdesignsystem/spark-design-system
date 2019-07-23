@@ -124,9 +124,6 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
   .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
     padding: $sprk-text-input-has-icon-padding;
   }
-  &:focus, &:not(:placeholder-shown){
-    padding: $sprk-text-input-has-icon-padding;
-  }
 }
 .sprk-b-InputContainer--huge {
   .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:focus, .sprk-b-TextInputIconContainer input.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
