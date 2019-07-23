@@ -8,7 +8,6 @@ import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-// Root Element Tests
 it('should display a stepper element with the correct base class', () => {
   const wrapper = mount(
     <SprkStepper>
@@ -68,55 +67,6 @@ it('should ignore non-step children', () => {
   expect(wrapper.find('div#foo').length).toBe(0);
 });
 
-it('should correctly advance and overflow the selected item with keyboard', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep />
-      <SprkStepperStep />
-      <SprkStepperStep isSelected />
-    </SprkStepper>,
-  );
-
-  const lastStep = wrapper.find('li.sprk-c-Stepper__step--last');
-
-  expect(wrapper.state().activeStepId).toBe(lastStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 39,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
-  const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
-  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
-});
-
-it('should not change state for unexpected keypresses', () => {
-  const wrapper = mount(
-    <SprkStepper>
-      <SprkStepperStep isSelected />
-      <SprkStepperStep />
-      <SprkStepperStep />
-    </SprkStepper>,
-  );
-
-  const firstStep = wrapper.find('li.sprk-c-Stepper__step--first');
-
-  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
-
-  const eventObj = {
-    keyCode: 11,
-    preventDefault() {},
-  };
-
-  // call the key handle function with eventObj
-  wrapper.instance().handleKeyEvents(eventObj);
-
-  expect(wrapper.state().activeStepId).toBe(firstStep.prop('id'));
-});
-
 it('should call step callback function', () => {
   const expectedFunc = sinon.spy();
   const wrapper = mount(
@@ -133,3 +83,199 @@ it('should call step callback function', () => {
 
   expect(expectedFunc.called).toBe(true);
 });
+
+it('should have the correct structure with a dark background', () => {
+  const expected = 'div.sprk-u-BackgroundColor--blue';
+
+  const wrapper = mount(
+    <SprkStepper hasDarkBackground>
+      <SprkStepperStep />
+      <SprkStepperStep />
+    </SprkStepper>,
+  );
+
+  expect(wrapper.find(expected).length).toBe(1);
+});
+
+it('should correctly advance the tab when a key is pressed', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' />
+      <SprkStepperStep additionalClasses='second' isSelected />
+      <SprkStepperStep additionalClasses='third' />
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('second')).toBe(true);
+
+  const eventObj = {
+    keyCode: 39,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('third')).toBe(true);
+});
+
+it('should correctly retreat the tab when a key is pressed', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' />
+      <SprkStepperStep additionalClasses='second' isSelected />
+      <SprkStepperStep additionalClasses='third' />
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('second')).toBe(true);
+
+  const eventObj = {
+    keyCode: 37,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('first')).toBe(true);
+});
+
+it('should correctly jump to first step when Home is pressed', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' />
+      <SprkStepperStep additionalClasses='second' isSelected />
+      <SprkStepperStep additionalClasses='third' />
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('second')).toBe(true);
+
+  const eventObj = {
+    keyCode: 36,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('first')).toBe(true);
+});
+
+it('should correctly jump to last step when End is pressed', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' />
+      <SprkStepperStep additionalClasses='second' isSelected />
+      <SprkStepperStep additionalClasses='third' />
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('second')).toBe(true);
+
+  const eventObj = {
+    keyCode: 35,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('third')).toBe(true);
+});
+
+it('should correctly advance and overflow the selected item with keyboard', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' />
+      <SprkStepperStep additionalClasses='second' />
+      <SprkStepperStep additionalClasses='third' isSelected/>
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('third')).toBe(true);
+
+  const eventObj = {
+    keyCode: 39,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('first')).toBe(true);
+});
+
+it('should correctly retreat and underflow the selected item with keyboard', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' isSelected/>
+      <SprkStepperStep additionalClasses='second' />
+      <SprkStepperStep additionalClasses='third' />
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('first')).toBe(true);
+
+  const eventObj = {
+    keyCode: 37,
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('third')).toBe(true);
+});
+
+it('should not change state for unexpected keypresses', () => {
+  const wrapper = mount(
+    <SprkStepper>
+      <SprkStepperStep additionalClasses='first' isSelected/>
+      <SprkStepperStep additionalClasses='second' />
+      <SprkStepperStep additionalClasses='third' />
+    </SprkStepper>,
+  );
+
+  const selectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+
+  expect(selectedStep.hasClass('first')).toBe(true);
+
+  const eventObj = {
+    keyCode: 110, // decimal point
+    preventDefault() {},
+  };
+
+  // call the key handle function with eventObj
+  wrapper.instance().handleKeyEvents(eventObj);
+  wrapper.update();
+
+  const newSelectedStep = wrapper.find('li.sprk-c-Stepper__step--selected');
+  expect(newSelectedStep.hasClass('first')).toBe(true);
+});
+

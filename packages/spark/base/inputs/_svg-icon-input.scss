@@ -4,12 +4,14 @@
 
 .sprk-b-TextInputIconContainer .sprk-c-Icon {
   margin-left: $sprk-input-icon-offset-x;
+  // TODO: We should be using margin bottom, not margin top
   margin-top: $sprk-input-icon-offset-y;
   position: absolute;
   z-index: $sprk-input-icon-z-index;
 }
 
 .sprk-b-InputContainer--huge {
+  // TODO: We should be using margin bottom, not margin top
   .sprk-b-TextInputIconContainer .sprk-c-Icon {
     margin-top: $sprk-input-huge-icon-offset-y;
   }

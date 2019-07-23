@@ -6,7 +6,7 @@ description:
 information:
   - The input's 'type' attribute should be the most appropriate value that semantically matches your
     use case.
-  - The label is visible by default. To hide the label and only display the placeholder, 
+  - The label is visible by default. To hide the label and only display the placeholder,
     add the .sprk-b-TextInput--label-hidden class to the input element.
     This will hide the label, but it will still be available for screen readers.
 
@@ -26,6 +26,7 @@ hasReactCode: true
 
 <div class="sprk-b-InputContainer sprk-b-InputContainer--huge{{#if containerclass}} {{containerclass}}{{/if}}" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
   <input class="sprk-b-TextInput sprk-u-Width-100{{#if class}} {{class}}{{/if}}"
+    data-sprk-input="hugeTextInput"
     id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     data-id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
     type="text"
