@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions"
 import '../../spark/manifests/spark/_spark.scss';
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
-import sparkTheme from "../storybook-spark-theme";
+import sparkTheme from "../../storybook-spark-theme";
 
 addDecorator(withA11y);
 addDecorator(withInfo);

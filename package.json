@@ -1,12 +1,18 @@
 {
-  "name": "spark-design-system",
+  "name": "spark-design-system-gatsby",
   "version": "3.0.0",
-  "description": "A pattern library authoring environment.",
+  "description": "A documentation and guide site for Spark Design System",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
+  },
+  "scripts": {
+    "build": "npm install && gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
   },
   "author": "Quicken Loans",
   "bugs": {
@@ -15,6 +21,8 @@
   "dependencies": {
     "@sparkdesignsystem/spark": "^11.0.0",
     "@sparkdesignsystem/spark-react": "^1.0.1",
+    "babel-plugin-react-docgen": "^3.1.0",
+    "change-case": "^3.1.0",
     "gatsby": "^2.8.5",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
