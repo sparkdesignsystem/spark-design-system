@@ -42,20 +42,32 @@
       transform: translateZ(0);
       pointer-events: none;
     }
-
-    &:focus + .sprk-b-Label,
-    &:not(:placeholder-shown) + .sprk-b-Label,
     &.sprk-b-TextInput--float-label + .sprk-b-Label {
       font-size: $sprk-text-input-huge-label-font-size;
       top: $sprk-text-input-huge-label-active-top;
       color: $sprk-text-input-huge-focus-label-color;
     }
-
-    &:not(:placeholder-shown) + .sprk-b-Label {
+  }
+  > .sprk-b-TextInput:focus:first-child,
+  > .sprk-b-TextInput:not(:placeholder-shown):first-child,
+  .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus,
+  .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) {
+    + .sprk-b-Label {
+      font-size: $sprk-text-input-huge-label-font-size;
+      top: $sprk-text-input-huge-label-active-top;
+      color: $sprk-text-input-huge-focus-label-color;
+    }
+  }
+  > .sprk-b-TextInput:not(:placeholder-shown):first-child,
+  .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) {
+    + .sprk-b-Label {
       color: $sprk-text-input-huge-complete-label-color;
     }
+  }
 
-    &:disabled + .sprk-b-Label {
+  > .sprk-b-TextInput:disabled:first-child,
+  .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled {
+    + .sprk-b-Label {
       font-size: $sprk-text-input-huge-label-font-size;
       top: $sprk-text-input-huge-label-active-top;
       color: $sprk-text-input-disabled-color;
@@ -65,9 +77,15 @@
 
   > .sprk-b-TextInput.sprk-b-TextInput--error:first-child,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error {
-    &:focus + .sprk-b-Label,
-    &:not(:placeholder-shown) + .sprk-b-Label,
     &.sprk-b-TextInput--float-label + .sprk-b-Label {
+      color: $sprk-text-input-huge-error-focus-label-color;
+    }
+  }
+  > .sprk-b-TextInput.sprk-b-TextInput--error:focus:first-child,
+  > .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown):first-child,
+  .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:focus,
+  .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown) {
+    + .sprk-b-Label {
       color: $sprk-text-input-huge-error-focus-label-color;
     }
   }
@@ -87,13 +105,5 @@
     + .sprk-b-Label {
       padding: $sprk-text-input-huge-has-text-icon-padding;
     }
-  }
-}
-
-.sprk-b-InputContainer--huge > .sprk-b-TextInput:focus:first-child {
-  + .sprk-b-Label {
-    font-size: $sprk-text-input-huge-label-font-size;
-    top: $sprk-text-input-huge-label-active-top;
-    color: $sprk-text-input-huge-focus-label-color;
   }
 }
