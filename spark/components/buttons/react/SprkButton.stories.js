@@ -13,7 +13,7 @@ stories.add('primary', () => (
     onClick={action('button clicked')}
     disabled={boolean('disabled', false)}
   >
-      Button
+    {text('button text', 'hello')}
   </SprkButton>
 ))
   .add('secondary', () => (
