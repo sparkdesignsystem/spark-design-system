@@ -4,8 +4,8 @@ import GuidesMenu from './GuidesMenu';
 import APIDocumentationMenu from './APIDocumentationMenu';
 
 const ContextMenu = ({ context, links, setContext }) => (
-  <nav>
-    <select onChange={(e) => { 
+  <div className="context-menu">
+    <select className="context-menu__context-control" onChange={(e) => { 
       setContext(e.target.value);
       }}>
       <option value="guides">Guides</option>
@@ -19,7 +19,7 @@ const ContextMenu = ({ context, links, setContext }) => (
       context === 'apidocumentation'
       && <APIDocumentationMenu /> 
     }
-  </nav>
+  </div>
 );
 
 export default ContextMenu;

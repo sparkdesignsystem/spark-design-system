@@ -1,0 +1,40 @@
+/* stylelint-disable */
+.context-menu {
+  padding: $sprk-space-l;
+  margin: $sprk-space-m;
+  background-color: $sprk-gray;
+}
+
+.context-menu__heading {
+  font-size: 1.18rem;
+  font-weight: 400;
+  padding: 2rem 0;
+}
+
+.context-menu__collection-heading {
+  font-weight: 700;
+}
+
+.context-menu__collection-item {
+  padding: 0.5rem 0;
+}
+
+.context-menu__collection {
+  list-style-type: none;
+}
+
+.context-menu__link {
+  color: $sprk-black;
+  font-weight: 300;
+}
+
+.context-menu__link:hover {
+  font-weight: 700;
+}
+
+.context-menu__context-control {
+  padding: 1rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+/* stylelint-enable */

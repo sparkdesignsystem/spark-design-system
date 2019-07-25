@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, Link } from 'gatsby';
-import { SprkToggle } from '@sparkdesignsystem/spark-react';
+import { SprkAccordion, SprkAccordionItem } from '@sparkdesignsystem/spark-react';
 
 const APIDocumentationMenu = () => {
   return (
@@ -29,20 +29,28 @@ const APIDocumentationMenu = () => {
         const { edges: components } = data.allMdx;
         return (
           <>
-            <h3>API Documentation</h3>
-            <ul>
-              <SprkToggle title="React">
-                { components.map((component) => {
-                    return (
+            <h3 className="context-menu__heading">API Documentation</h3>
+              <SprkAccordion>
+                <SprkAccordionItem heading="HTML">
+                  Coming Soon
+                </SprkAccordionItem>
+                <SprkAccordionItem additionalClasses="context-menu__collection-heading" heading="React">
+                  <ul className="context-menu__collection">
+                  { components.map((component) => {
+                      return (
 
-                      <li>
-                        <a href={`http://react.sparkdesignsystem.com/${component.node.frontmatter.title}`}>{ component.node.frontmatter.title || guide.node.parent.name }</a>
-                      </li>
-                    );
-                  })
-                }
-              </SprkToggle>
-            </ul>
+                        <li className="context-menu__collection-item">
+                          <a className="context-menu__link" href={`http://react.sparkdesignsystem.com/${component.node.frontmatter.title}`}>{ component.node.frontmatter.title || guide.node.parent.name }</a>
+                        </li>
+                      );
+                    })
+                  }
+                  </ul>
+                </SprkAccordionItem>
+                <SprkAccordionItem heading="Angular">
+                  Coming Soon
+                </SprkAccordionItem>
+              </SprkAccordion>
           </>
         );
       }
