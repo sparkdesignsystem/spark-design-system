@@ -11,10 +11,10 @@ stories
   .add('default', () => (
     <SprkAlert
       message={text('Message', 'This is an alert.')}
-      additionalClasses={text('additionalClasses', '')}
-      iconNameDismiss={text('iconNameDismiss', 'close')}
-      iconNameFail={text('iconNameFail', 'exclamation')}
-      iconNameSuccess={text('iconNameSuccess', 'check-mark')}
+      additionalClasses={text('additionalClasses', null)}
+      iconNameDismiss={text('iconNameDismiss', null)}
+      iconNameFail={text('iconNameFail', null)}
+      iconNameSuccess={text('iconNameSuccess', null)}
       iconNameInfo={text('iconNameInfo', 'bell')}
       onDismiss={action('clicked')}
       isVisible={boolean('isVisible', true)}
@@ -26,11 +26,11 @@ stories
   .add('success', () => (
     <SprkAlert
       message={text('Message', 'This is a success message.')}
-      additionalClasses={text('additionalClasses', '')}
-      iconNameDismiss={text('iconNameDismiss', 'close')}
-      iconNameFail={text('iconNameFail', 'exclamation')}
-      iconNameSuccess={text('iconNameSuccess', 'check-mark')}
-      iconNameInfo={text('iconNameInfo', 'bell')}
+      additionalClasses={text('additionalClasses', null)}
+      iconNameDismiss={text('iconNameDismiss', null)}
+      iconNameFail={text('iconNameFail', null)}
+      iconNameSuccess={text('iconNameSuccess', null)}
+      iconNameInfo={text('iconNameInfo', null)}
       onDismiss={action('clicked')}
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', true)}
@@ -42,11 +42,11 @@ stories
   .add('info', () => (
     <SprkAlert
       message={text('Message', 'This is important information.')}
-      iconNameDismiss={text('iconNameDismiss', 'close')}
-      iconNameFail={text('iconNameFail', 'exclamation')}
-      iconNameInfo={text('iconNameInfo', 'bell')}
-      iconNameSuccess={text('iconNameSuccess', 'check-mark')}
-      additionalClasses={text('additionalClasses', '')}
+      iconNameDismiss={text('iconNameDismiss', null)}
+      iconNameFail={text('iconNameFail', null)}
+      iconNameInfo={text('iconNameInfo', null)}
+      iconNameSuccess={text('iconNameSuccess', null)}
+      additionalClasses={text('additionalClasses', null)}
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', true)}
       variant="info"
@@ -57,11 +57,11 @@ stories
   .add('fail', () => (
     <SprkAlert
       message={text('Message', 'This is a failure message to alert that something was not successful.')}
-      iconNameDismiss={text('iconNameDismiss', 'close')}
-      iconNameFail={text('iconNameFail', 'exclamation')}
-      iconNameSuccess={text('iconNameSuccess', 'check-mark')}
-      iconNameInfo={text('iconNameInfo', 'bell')}
-      additionalClasses={text('additionalClasses', '')}
+      iconNameDismiss={text('iconNameDismiss', null)}
+      iconNameFail={text('iconNameFail', null)}
+      iconNameSuccess={text('iconNameSuccess', null)}
+      iconNameInfo={text('iconNameInfo', null)}
+      additionalClasses={text('additionalClasses', null)}
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', true)}
       variant="fail"
@@ -72,11 +72,11 @@ stories
   .add('with no dismiss button', () => (
     <SprkAlert
       message={text('Message', 'This success alert has no dismiss button.')}
-      iconNameDismiss={text('iconNameDismiss', 'close')}
-      iconNameFail={text('iconNameFail', 'exclamation')}
-      iconNameSuccess={text('iconNameSuccess', 'check-mark')}
-      iconNameInfo={text('iconNameInfo', 'bell')}
-      additionalClasses={text('additionalClasses', '')}
+      iconNameDismiss={text('iconNameDismiss', null)}
+      iconNameFail={text('iconNameFail', null)}
+      iconNameSuccess={text('iconNameSuccess', null)}
+      iconNameInfo={text('iconNameInfo', null)}
+      additionalClasses={text('additionalClasses', null)}
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', false)}
       variant="success"

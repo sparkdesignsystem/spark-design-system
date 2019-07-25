@@ -12,35 +12,131 @@ stories.add('primary', () => (
   <SprkButton
     onClick={action('button clicked')}
     disabled={boolean('disabled', false)}
+    element={text('element', null)}
+    href={text('href (if element = "a" link)', null)}
+    loading={boolean('loading', false)}
+    additionalClasses={text('additionalClasses', null)}
+    idString={text('idString', 'button-1')}
+    analyticsString={text('analyticsString', 'button-1-analytics')}
   >
-    {text('button text', 'hello')}
+    {text('button text', 'Button')}
   </SprkButton>
 ))
   .add('secondary', () => (
     <SprkButton
       variant="secondary"
       disabled={boolean('disabled', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-2')}
+      additionalClasses={text('additionalClasses', null)}
+      analyticsString={text('analyticsString', 'button-2-analytics')}
+      loading={boolean('loading', false)}
     >
-      {text('button text', 'hello')}
+      {text('button text', 'Button')}
     </SprkButton>
   ))
   .add('tertiary', () => (
     <SprkButton
       variant="tertiary"
       disabled={boolean('disabled', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      additionalClasses={text('additionalClasses', null)}
+      idString={text('idString', 'button-3')}
+      analyticsString={text('analyticsString', 'button-3-analytics')}
+      loading={boolean('loading', false)}
     >
-      Button
+      {text('button text', 'Button')}
     </SprkButton>
   ))
   .add('disabled', () => (
-    <SprkButton disabled>Button</SprkButton>
+    <SprkButton
+      loading={boolean('loading', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-4')}
+      additionalClasses={text('additionalClasses', null)}
+      analyticsString={text('analyticsString', 'button-4-analytics')}
+      disabled={boolean('disabled', true)}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
+  ))
+  .add('disabled secondary', () => (
+    <SprkButton
+      variant="secondary"
+      loading={boolean('loading', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-5')}
+      additionalClasses={text('additionalClasses', null)}
+      analyticsString={text('analyticsString', 'button-5-analytics')}
+      disabled={boolean('disabled', true)}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
+  ))
+  .add('disabled tertiary', () => (
+    <SprkButton
+      variant="tertiary"
+      loading={boolean('loading', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-6')}
+      additionalClasses={text('additionalClasses', null)}
+      analyticsString={text('analyticsString', 'button-6-analytics')}
+      disabled={boolean('disabled', true)}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
   ))
   .add('with spinner', () => (
-    <SprkButton loading>Button</SprkButton>
+    <SprkButton
+      loading={boolean('loading', true)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-7')}
+      analyticsString={text('analyticsString', 'button-7-analytics')}
+      disabled={boolean('disabled', false)}
+      additionalClasses={text('additionalClasses', null)}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
   ))
   .add('full width at small viewport', () => (
-    <SprkButton additionalClasses="sprk-c-Button--full@s">Button</SprkButton>
+    <SprkButton
+      loading={boolean('loading', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-8')}
+      analyticsString={text('analyticsString', 'button-8-analytics')}
+      additionalClasses={text('additionalClasses', 'sprk-c-Button--full@s')}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
   ))
   .add('full width at extra small viewport', () => (
-    <SprkButton additionalClasses="sprk-c-Button--full@xs">Button</SprkButton>
+    <SprkButton
+      loading={boolean('loading', false)}
+      element={text('element', null)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-9')}
+      analyticsString={text('analyticsString', 'button-9-analytics')}
+      additionalClasses={text('additionalClasses', 'sprk-c-Button--full@xs')}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
+  ))
+  .add('as a link element', () => (
+    <SprkButton
+      element={text('element', 'a')}
+      loading={boolean('loading', false)}
+      href={text('href (if element = "a" link)', null)}
+      idString={text('idString', 'button-10')}
+      analyticsString={text('analyticsString', 'button-10-analytics')}
+      additionalClasses={text('additionalClasses', null)}
+    >
+      {text('button text', 'Button')}
+    </SprkButton>
   ));
