@@ -3,7 +3,10 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
-import SprkIcon from '../../SprkIcon/SprkIcon';
+import SprkTextInputLabel from './components/SprkTextInputLabel';
+import SprkTextInputTextArea from './components/SprkTextInputTextArea';
+import SprkTextInputSingleLine from './components/SprkTextInputSingleLine';
+import SprkTextInputIconCheck from './components/SprkTextInputIconCheck';
 
 class SprkTextInput extends Component {
   constructor(props) {
@@ -17,86 +20,32 @@ class SprkTextInput extends Component {
   render() {
     const {
       additionalClasses,
-      analyticsString,
-      children,
-      errorMessage,
-      formatter,
-      forwardedRef,
-      helperText,
-      hiddenLabel,
-      idString,
-      label,
       leadingIcon,
       textIcon,
+      hiddenLabel,
+      helperText,
       type,
       valid,
-      value,
-      ...rest
-    } = this.props;
+      label,
+      errorMessage,
+      formatter,
+      children,
+      ...rest } = this.props;
     const { id, errorContainerId } = this.state;
-
-    const Label = () => {
-      return (
-        <label
-          htmlFor={id}
-          className={classNames('sprk-b-Label', {
-            // TODO: Huge input with icon
-            'sprk-b-Label--with-icon': leadingIcon.length > 0,
-            'sprk-u-ScreenReaderText': hiddenLabel,
-          })}
-        >
-          {label}
-        </label>
-      );
-    }
-
-    const TextArea = () => {
-      return (
-        <textarea
-          className="sprk-b-TextArea sprk-u-Width-100"
-          id={id}
-          data-analytics={analyticsString}
-          data-id={idString}
-          type={type}
-          aria-invalid={!valid}
-          aria-describedby={errorContainerId}
-          value={valid && formatter(value) ? formatter(value) : value}
-          {...rest}
-        />
-      );
-    }
-
-    // BOTH - Not Text Area
-    const SingleLineTextInput = () => {
-      return (
-        <input
-          className={classNames('sprk-b-TextInput sprk-u-Width-100', {
-            'sprk-b-TextInput--error': !valid,
-            'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0,
-            'sprk-b-TextInput--has-text-icon': textIcon,
-            'sprk-b-TextInput--huge': type === 'hugeTextInput',
-            'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel
-          })}
-          id={id}
-          data-analytics={analyticsString}
-          data-id={idString}
-          ref={forwardedRef}
-          type={type}
-          aria-invalid={!valid}
-          aria-describedby={errorContainerId}
-          value={valid && formatter(value) ? formatter(value) : value}
-          {...rest}
-        />
-      );
-    }
 
     // If hugeTextInput, label has to be after Input
     const GetInputLabelOrder = () => {
       if (type === 'textarea') {
         return (
           <React.Fragment>
-            <Label />
-            <TextArea/>
+            <SprkTextInputLabel
+              leadingIcon={leadingIcon}
+              hiddenLabel={hiddenLabel}
+              id={id}
+            />
+            <SprkTextInputTextArea
+              {...rest}
+            />
           </React.Fragment>
         );
       }
@@ -104,52 +53,33 @@ class SprkTextInput extends Component {
       if (type === 'hugeTextInput') {
         return (
           <React.Fragment>
-            <SingleLineTextInput />
-            <Label />
+            <SprkTextInputSingleLine
+              {...rest}
+            />
+            <SprkTextInputLabel
+              label={label}
+              leadingIcon={leadingIcon}
+              hiddenLabel={hiddenLabel}
+            />
           </React.Fragment>
         );
       }
 
       return (
         <React.Fragment>
-          <Label />
-          <SingleLineTextInput />
+          <SprkTextInputLabel
+            label={label}
+            leadingIcon={leadingIcon}
+            hiddenLabel={hiddenLabel}
+          />
+          <SprkTextInputSingleLine
+            {...rest}
+          />
         </React.Fragment>
       );
     }
 
-    // Rename to actual function -- has icon or not
-    // Put this in another file for Inputs -- look at Masthead
-    const GetTextInputLayout = (props) => {
-      if (leadingIcon.length > 0 || textIcon) {
-        return (
-          <div
-            className={classNames('sprk-b-TextInputIconContainer',{
-              'sprk-b-TextInputIconContainer--has-text-icon': textIcon,
-            })}
-          >
-            {/* TODO: Redundant check */}
-            {/* Why is it not showing??? */}
-            {leadingIcon.length > 0 && (
-              <SprkIcon
-                iconName={leadingIcon}
-                additionalClasses="
-                  sprk-c-Icon--m sprk-c-Icon--stroke-current-color
-                "
-              />
-            )}
-            {props.children}
-          </div>
-        );
-      }
 
-      // No Icon
-      return (
-        <React.Fragment>
-          {props.children}
-        </React.Fragment>
-      );
-    }
 
     return (
       <div
@@ -157,9 +87,13 @@ class SprkTextInput extends Component {
           'sprk-b-InputContainer--huge': type === 'hugeTextInput',
         })}
       >
-        <GetTextInputLayout>
+        <SprkTextInputIconCheck
+          leadingIcon={leadingIcon}
+          textIcon={textIcon}
+        >
           <GetInputLabelOrder />
-        </GetTextInputLayout>
+        </SprkTextInputIconCheck>
+
         {children}
 
         {helperText.length > 0 && (
@@ -187,6 +121,7 @@ SprkTextInput.propTypes = {
   label: PropTypes.string,
   leadingIcon: PropTypes.string,
   textIcon: PropTypes.bool,
+  type: PropTypes.string,
   valid: PropTypes.bool,
 };
 
@@ -203,6 +138,7 @@ SprkTextInput.defaultProps = {
   label: 'Text Input Label',
   leadingIcon: '',
   textIcon: false,
+  type: '',
   valid: true,
 };
 
