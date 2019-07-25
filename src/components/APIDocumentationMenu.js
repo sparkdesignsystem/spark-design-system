@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, Link } from 'gatsby';
+import { SprkToggle } from '@sparkdesignsystem/spark-react';
 
 const APIDocumentationMenu = () => {
   return (
@@ -30,14 +31,17 @@ const APIDocumentationMenu = () => {
           <>
             <h3>API Documentation</h3>
             <ul>
-              { components.map((component) => {
-                  return (
-                    <li>
-                      <a href={`http://react.sparkdesignsystem.com/${component.node.frontmatter.title}`}>{ component.node.frontmatter.title || guide.node.parent.name }</a>
-                    </li>
-                  );
-                })
-              }
+              <SprkToggle title="React">
+                { components.map((component) => {
+                    return (
+
+                      <li>
+                        <a href={`http://react.sparkdesignsystem.com/${component.node.frontmatter.title}`}>{ component.node.frontmatter.title || guide.node.parent.name }</a>
+                      </li>
+                    );
+                  })
+                }
+              </SprkToggle>
             </ul>
           </>
         );
