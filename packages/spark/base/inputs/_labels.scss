@@ -107,3 +107,7 @@
     }
   }
 }
+
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus + .sprk-b-Label {
+  top: 8px;
+}
