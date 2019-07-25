@@ -1,8 +1,8 @@
 import getElements from '../utilities/getElements';
-import toggleClassWithFocus from '../utilities/toggleClassWithFocus';
+import toggleClassWithValue from '../utilities/toggleClassWithValue';
 
 const bindUIEvents = element => {
-  toggleClassWithFocus(element, 'sprk-b-TextInput--float-label');
+  toggleClassWithValue(element, 'sprk-b-TextInput--float-label');
 };
 const hugeTextInput = () => {
   getElements('[data-sprk-input="hugeTextInput"]', bindUIEvents);
