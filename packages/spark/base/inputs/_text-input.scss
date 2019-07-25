@@ -81,7 +81,6 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput,
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput {
-  background-color: blue;
   &::placeholder {
     opacity: $sprk-text-input-huge-placeholder-opacity;
   }
