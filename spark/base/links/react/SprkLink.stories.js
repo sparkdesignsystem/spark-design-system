@@ -1,45 +1,64 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
+import { withKnobs, text } from '@storybook/addon-knobs';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../../components/icons/react/SprkIcon';
 
-storiesOf('Base|Links', module)
+const stories = storiesOf('Base|Links', module);
+stories.addDecorator(withKnobs);
+
+stories
   .add('default', () => (
     <SprkLink
-      href="#"
-      id="link-1"
+      element={text('element', 'a')}
+      href={text('href', 'https://www.sparkdesignsystem.com')}
+      idString={text('idString', 'link-1')}
+      analyticsString={text('analyticsString', 'link-default')}
+      additionalClasses={text('additionalClasses', null)}
     >
-      Base Link
+      {text('text', 'Base Link')}
     </SprkLink>
   ))
   .add('simple', () => (
     <SprkLink
+      element={text('element', 'a')}
       variant="simple"
-      idString="link-2"
-      href="#"
+      analyticsString={text('analyticsString', 'link-simple')}
+      idString={text('idString', 'link-2')}
+      href={text('href', 'https://www.sparkdesignsystem.com')}
+      additionalClasses={text('additionalClasses', null)}
     >
-      Simple Link
+      {text('text', 'Simple Link')}
     </SprkLink>
   ))
   .add('icon with text link', () => (
     <SprkLink
+      element={text('element', 'a')}
+      analyticsString={text('analyticsString', 'link-has-icon')}
+      href={text('href', 'https://www.sparkdesignsystem.com')}
+      additionalClasses={text('additionalClasses', null)}
       variant="has-icon"
-      idString="link-4"
+      idString={text('idString', 'link-3')}
     >
       <SprkIcon
-        additionalClasses="sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color"
+        additionalClasses="
+        sprk-c-Icon--l
+        sprk-u-mrs
+        sprk-c-Icon--stroke-current-color"
         iconName="communication"
       />
-        Message Us
+      {text('text', 'Message Us')}
     </SprkLink>
   ))
   .add('disabled', () => (
     <SprkLink
+      element={text('element', 'a')}
+      analyticsString={text('analyticsString', 'link-disabled')}
       variant="disabled"
-      idString="link-3"
-      href="#"
+      idString={text('idString', 'link-4')}
+      href={text('href', 'https://www.sparkdesignsystem.com')}
+      additionalClasses={text('additionalClasses', null)}
     >
-      Disabled Link
+      {text('text', 'Disabled Link')}
     </SprkLink>
   ));
