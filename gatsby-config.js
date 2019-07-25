@@ -31,7 +31,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-mdx',
+    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
