@@ -22,7 +22,6 @@
     "@sparkdesignsystem/spark": "^11.0.0",
     "@sparkdesignsystem/spark-react": "^1.0.1",
     "babel-plugin-react-docgen": "^3.1.0",
-    "change-case": "^3.1.0",
     "gatsby": "^2.8.5",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -52,7 +51,6 @@
     "gatsby-plugin-mdx": "^1.0.17",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-transformer-remark": "^2.5.0",
-    "glob": "^7.1.4",
     "node-sass": "^4.12.0",
     "stylelint": "^10.1.0",
     "stylelint-scss": "^3.9.0"
