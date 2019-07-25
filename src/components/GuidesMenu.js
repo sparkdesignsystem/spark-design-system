@@ -26,7 +26,6 @@ const GuidesMenu = () => {
         }
       `}
       render={ data => {
-        console.log(data);
         const { edges: guides } = data.allMdx;
         return(
           <>
