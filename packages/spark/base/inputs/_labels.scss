@@ -25,59 +25,64 @@
   font-size: $sprk-visibility-control-label-font-size;
 }
 
-.sprk-b-InputContainer--huge,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput{
   // Apply styles to label to create floating label effect
   // on huge inputs. Label element must follow input element
-  > :first-child.sprk-b-TextInput,
-  .sprk-b-TextInputIconContainer .sprk-b-TextInput {
-
     // Label that is directly after Text Input
-    + .sprk-b-Label {
-      position: absolute;
-      top: $sprk-text-input-huge-label-top;
-      font-size: $sprk-text-input-huge-font-size;
-      padding: $sprk-text-input-huge-padding;
-      transition: $sprk-text-input-huge-transition;
-      transform: translateZ(0);
-      pointer-events: none;
-    }
-
-    &:focus + .sprk-b-Label,
-    &:not(:placeholder-shown) + .sprk-b-Label,
-    &.sprk-b-TextInput--float-label + .sprk-b-Label {
-      font-size: $sprk-text-input-huge-label-font-size;
-      top: $sprk-text-input-huge-label-active-top;
-      color: $sprk-text-input-huge-focus-label-color;
-    }
-
-    &:not(:placeholder-shown) + .sprk-b-Label {
-      color: $sprk-text-input-huge-complete-label-color;
-    }
-
-    &:disabled + .sprk-b-Label {
-      font-size: $sprk-text-input-huge-label-font-size;
-      top: $sprk-text-input-huge-label-active-top;
-      color: $sprk-text-input-disabled-color;
-      cursor: not-allowed;
-    }
+  + .sprk-b-Label {
+    position: absolute;
+    top: $sprk-text-input-huge-label-top;
+    font-size: $sprk-text-input-huge-font-size;
+    padding: $sprk-text-input-huge-padding;
+    transition: $sprk-text-input-huge-transition;
+    transform: translateZ(0);
+    pointer-events: none;
   }
+}
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus,
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:not(:placeholder-shown),
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown),
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label {
+  + .sprk-b-Label {
+    font-size: $sprk-text-input-huge-label-font-size;
+    top: $sprk-text-input-huge-label-active-top;
+    color: $sprk-text-input-huge-focus-label-color;
+  }
+}
 
-  > :first-child.sprk-b-TextInput.sprk-b-TextInput--error,
-  .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error {
-    &:focus + .sprk-b-Label,
-    &:not(:placeholder-shown) + .sprk-b-Label,
-    &.sprk-b-TextInput--float-label + .sprk-b-Label {
-      color: $sprk-text-input-huge-error-focus-label-color;
-    }
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:not(:placeholder-shown),
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) {
+  + .sprk-b-Label {
+    color: $sprk-text-input-huge-complete-label-color;
+  }
+}
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:disabled,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled {
+  + .sprk-b-Label {
+    font-size: $sprk-text-input-huge-label-font-size;
+    top: $sprk-text-input-huge-label-active-top;
+    color: $sprk-text-input-disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:focus,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:focus,
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown),
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown),
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-TextInput--float-label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-TextInput--float-label {
+  + .sprk-b-Label {
+    color: $sprk-text-input-huge-error-focus-label-color;
   }
 }
 
 // Huge monetary inputs overrides
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
-  > :first-child.sprk-b-TextInput + .sprk-b-Label {
-    padding: $sprk-text-input-huge-has-text-icon-padding;
-  }
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon > :first-child.sprk-b-TextInput + .sprk-b-Label {
+  padding: $sprk-text-input-huge-has-text-icon-padding;
 }
 
 //Huge text input with svg icon overwrites
