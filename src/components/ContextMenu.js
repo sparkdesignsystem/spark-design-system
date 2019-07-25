@@ -1,17 +1,23 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import GuidesMenu from './GuidesMenu';
+import APIDocumentationMenu from './APIDocumentationMenu';
 
-const ContextMenu = ({ links }) => (
+const ContextMenu = ({ context, links, setContext }) => (
   <nav>
-    <select onChange={() => { console.log('hi'); }}>
-      <option>Guides</option>
-      <option>API Documentation</option>
+    <select onChange={(e) => { 
+      setContext(e.target.value);
+      }}>
+      <option value="guides">Guides</option>
+      <option value="apidocumentation">API Documentation</option>
     </select>
 
-    <p>[context title]</p>
-    { links.map(link => (
-      <a href="#nogo">{link.text}</a>
-    ))
+    { context === 'guides' 
+    && <GuidesMenu /> 
+    }
+    {
+      context === 'apidocumentation'
+      && <APIDocumentationMenu /> 
     }
   </nav>
 );

@@ -14,6 +14,14 @@ module.exports = {
         name: 'spark-components',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: 'src/pages',
+        name: 'mdx-generated-pages',
+      },
+    },
+
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-symbol-set-fetch',
@@ -31,7 +39,14 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-mdx',
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
+        },
+      },
+    },
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',

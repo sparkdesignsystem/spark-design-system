@@ -6,46 +6,6 @@
 
 const path = require('path');
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions;
-
-// return new Promise((resolve, reject) => {
-//   graphql(`
-//     query pages {
-//       allMdx {
-//         edges {
-//           node {
-//             frontmatter {
-//               path
-//               title
-//               type
-//             }
-//             code {
-//               body
-//             }
-//             exports {
-//               variants {
-//                 description
-//                 name
-//                 sprkComponent
-//                 sourceCode
-//               }
-//               description
-//               restrictions
-//               information
-//               sprkComponent
-//               sourceCode
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-//     result.data.allMdx.edges.forEach(({ node }) => {
-//       console.log(node);
-//   });
-// });
-
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'develop-html' || stage === 'build-html') {
     actions.setWebpackConfig({

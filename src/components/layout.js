@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import {
@@ -7,7 +7,8 @@ import {
 } from '@sparkdesignsystem/spark-react';
 import SiteLogo from './site-logo';
 import Header from './header';
-import SiteNavigation from './site-navigation';
+import ContextMenu from './ContextMenu';
+// import SiteNavigation from './site-navigation';
 
 const utilityItems = [
   <SprkTextInput
@@ -20,6 +21,8 @@ const utilityItems = [
 
 
 function Layout({ children }) {
+  const [context, setContext] = useState('guides');
+
   return (
     <StaticQuery
       query={graphql`
@@ -59,15 +62,7 @@ function Layout({ children }) {
               />
             </div>
             <div className="nav-layout__panel nav-layout__nav">
-              <SiteNavigation navItems={
-                  [
-                    {
-                      text: 'Components',
-                      subNavLinks: [],
-                    },
-                  ]
-                }
-              />
+              <ContextMenu context={context} setContext={setContext} links={[]} />
             </div>
             <div className="nav-layout__panel nav-layout__main">
               {children}
