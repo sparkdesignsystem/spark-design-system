@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import {
   SprkTextInput,
-  SprkFooter
+  SprkFooter,
 } from '@sparkdesignsystem/spark-react';
 import SiteLogo from './site-logo';
 import Header from './header';
@@ -24,17 +24,6 @@ function Layout({ children }) {
     <StaticQuery
       query={graphql`
       {
-        allMdx {
-          edges {
-            node {
-              frontmatter {
-                path
-                title
-                type
-              }
-            }
-          }
-        }
         allSparkIconSet {
           edges {
             node {
@@ -47,108 +36,63 @@ function Layout({ children }) {
       }
     `}
       render={
-        data => {
-          let docPages = [];
-          let fundamentals = [];
-          let components = [];
-
-          data.allMdx.edges.map(edge => {
-            if (edge.node.frontmatter.type === 'fundamental') {
-              return fundamentals.push({
-                element: Link,
-                text: edge.node.frontmatter.title,
-                to: edge.node.frontmatter.path
-              });
-            } else if (edge.node.frontmatter.type === 'component') {
-              return components.push({
-                element: Link,
-                text: edge.node.frontmatter.title,
-                to: edge.node.frontmatter.path
-              });
-            } else {
-              return docPages.push({
-                element: Link,
-                text: edge.node.frontmatter.title,
-                to: edge.node.frontmatter.path
-              });
-            }
-          });
-
-          return (
-            <div className="nav-layout">
-              {
-              }
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: data.allSparkIconSet.edges[0].node.internal.content,
-                }}
-              />
-              <div className="nav-layout__panel nav-layout__header">
-                <Header
-                  logo={<SiteLogo />}
-                  narrowNavLinks={
-                    [
-                      {
-                        text: 'Documentation',
-                        subNavLinks: docPages
-                      },
-                      {
-                        text: 'Fundamentals',
-                        subNavLinks: fundamentals
-                      },
-                      {
-                        text: 'Components',
-                        subNavLinks: components
-                      },
-                    ]
-                  }
-                  utilityItems={utilityItems}
-                />
-              </div>
-              <div className="nav-layout__panel nav-layout__nav">
-                <SiteNavigation navItems={
+        data => (
+          <div className="nav-layout">
+            <div
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: data.allSparkIconSet.edges[0].node.internal.content,
+              }}
+            />
+            <div className="nav-layout__panel nav-layout__header">
+              <Header
+                logo={<SiteLogo />}
+                narrowNavLinks={
                   [
                     {
-                      text: 'Documentation',
-                      subNavLinks: docPages
-                    },
-                    {
-                      text: 'Fundamentals',
-                      subNavLinks: fundamentals
-                    },
-                    {
                       text: 'Components',
-                      subNavLinks: components
+                      subNavLinks: [],
                     },
                   ]
                 }
-                />
-              </div>
-              <div className="nav-layout__panel nav-layout__main">
-                {children}
-                <SprkFooter
-                  connectIcons={{
-                    heading: 'Connect With Us',
-                    icons: [
-                      {
-                        href: '#nogo',
-                        name: 'twitter',
-                        screenReaderText: 'Twitter',
-                        element: 'a',
-                      },
-                      {
-                        href: '#nogo',
-                        name: 'github',
-                        screenReaderText: 'github',
-                        element: 'a',
-                      },
-                    ],
-                  }}
-                />
-              </div>
+                utilityItems={utilityItems}
+              />
             </div>
-          )
-        }
+            <div className="nav-layout__panel nav-layout__nav">
+              <SiteNavigation navItems={
+                  [
+                    {
+                      text: 'Components',
+                      subNavLinks: [],
+                    },
+                  ]
+                }
+              />
+            </div>
+            <div className="nav-layout__panel nav-layout__main">
+              {children}
+              <SprkFooter
+                connectIcons={{
+                  heading: 'Connect With Us',
+                  icons: [
+                    {
+                      href: '#nogo',
+                      name: 'twitter',
+                      screenReaderText: 'Twitter',
+                      element: 'a',
+                    },
+                    {
+                      href: '#nogo',
+                      name: 'github',
+                      screenReaderText: 'github',
+                      element: 'a',
+                    },
+                  ],
+                }}
+              />
+            </div>
+          </div>
+        )
       }
     />
   );

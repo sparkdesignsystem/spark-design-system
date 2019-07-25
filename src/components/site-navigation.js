@@ -5,10 +5,12 @@ import shortid from 'shortid';
 import { Link } from 'gatsby';
 
 import { SprkToggle, SprkList, SprkListItem, SprkLink } from '@sparkdesignsystem/spark-react';
+import ContextMenu from './ContextMenu';
 
 function SiteNavigation({ navItems }) {
   return (
     <>
+      <ContextMenu title="My Context" links={[]} />
       <nav className={cx('navigation')}>
         { navItems.map(item => (
           <div key={shortid.generate()}>
