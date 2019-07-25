@@ -29,7 +29,7 @@
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
   // Apply styles to label to create floating label effect
   // on huge inputs. Label element must follow input element
-  > .sprk-b-TextInput:first-child,
+  > :first-child.sprk-b-TextInput,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput {
 
     // Label that is directly after Text Input
@@ -48,8 +48,8 @@
       color: $sprk-text-input-huge-focus-label-color;
     }
   }
-  > .sprk-b-TextInput:focus:first-child,
-  > .sprk-b-TextInput:not(:placeholder-shown):first-child,
+  > :first-child.sprk-b-TextInput:focus,
+  > :first-child.sprk-b-TextInput:not(:placeholder-shown),
   .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) {
     + .sprk-b-Label {
@@ -58,14 +58,14 @@
       color: $sprk-text-input-huge-focus-label-color;
     }
   }
-  > .sprk-b-TextInput:not(:placeholder-shown):first-child,
+  > :first-child.sprk-b-TextInput:not(:placeholder-shown),
   .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) {
     + .sprk-b-Label {
       color: $sprk-text-input-huge-complete-label-color;
     }
   }
 
-  > .sprk-b-TextInput:disabled:first-child,
+  > :first-child.sprk-b-TextInput:disabled,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled {
     + .sprk-b-Label {
       font-size: $sprk-text-input-huge-label-font-size;
@@ -75,14 +75,14 @@
     }
   }
 
-  > .sprk-b-TextInput.sprk-b-TextInput--error:first-child,
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--error,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error {
     &.sprk-b-TextInput--float-label + .sprk-b-Label {
       color: $sprk-text-input-huge-error-focus-label-color;
     }
   }
-  > .sprk-b-TextInput.sprk-b-TextInput--error:focus:first-child,
-  > .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown):first-child,
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:focus,
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown),
   .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:focus,
   .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown) {
     + .sprk-b-Label {
@@ -93,7 +93,7 @@
 
 // Huge monetary inputs overrides
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon {
-  > .sprk-b-TextInput:first-child + .sprk-b-Label {
+  > :first-child.sprk-b-TextInput + .sprk-b-Label {
     padding: $sprk-text-input-huge-has-text-icon-padding;
   }
 }
