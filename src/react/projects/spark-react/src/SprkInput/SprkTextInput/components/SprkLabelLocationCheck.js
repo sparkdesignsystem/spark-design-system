@@ -18,7 +18,6 @@ const SprkLabelLocationCheck = ({
           htmlFor={id}
           className={classNames('sprk-b-Label', {
             'sprk-b-Label--with-icon': leadingIcon.length > 0,
-            'sprk-u-ScreenReaderText': hiddenLabel && type !== "hugeTextInput",
           })}
         >
           {label}
@@ -32,7 +31,7 @@ const SprkLabelLocationCheck = ({
         htmlFor={id}
         className={classNames('sprk-b-Label', {
           'sprk-b-Label--with-icon': leadingIcon.length > 0,
-          'sprk-u-ScreenReaderText': hiddenLabel && type !== "hugeTextInput",
+          'sprk-u-ScreenReaderText': hiddenLabel,
         })}
       >
         {label}
