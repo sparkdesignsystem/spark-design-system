@@ -45,7 +45,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge .sprk-b-TextInput:focus {
   border-width: $sprk-text-input-huge-focus-border-width;
 }
-.sprk-b-InputContainer--huge .sprk-b-TextInput:focus::placeholder {
+.sprk-b-InputContainer--huge .sprk-b-TextInput::placeholder {
   font-size: $sprk-text-input-huge-font-size;
 }
 .sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--float-label {
@@ -116,7 +116,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus {
   padding: $sprk-text-input-huge-padding;
 }
-.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus + .sprk-b-Label {
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden + .sprk-b-Label {
   left: -10000px;
   width: 1px;
   height: 1px;
