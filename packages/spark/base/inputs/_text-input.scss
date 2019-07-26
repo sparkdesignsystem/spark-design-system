@@ -125,6 +125,7 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
   padding: $sprk-text-input-huge-padding;
 }
+
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) + .sprk-b-Label {
   left: -10000px;
   width: 1px;
@@ -140,6 +141,9 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 }
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label {
   padding-top: $sprk-text-input-huge-active-padding-top;
+}
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden.sprk-b-TextInput.sprk-b-TextInput--float-label {
+  padding: $sprk-text-input-huge-padding;
 }
 
 //Huge styles for inputs with icon
