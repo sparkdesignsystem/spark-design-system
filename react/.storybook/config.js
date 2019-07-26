@@ -50,5 +50,4 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-load(require.context('../../spark', true, /\/react\/.*\.stories.js$/), module);
-// load(require.context('../../spark', true, /\/react\/.*\.stories.mdx$/), module);
+load(require.context('../../spark', true, /\/react\/.*\.stories\.(js|ts|tsx|mdx)$/), module);
