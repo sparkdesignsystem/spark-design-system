@@ -12,7 +12,7 @@ stories.add('primary', () => (
   <SprkButton
     onClick={action('button clicked')}
     disabled={boolean('disabled', false)}
-    element={text('element', '') || undefined}
+    element={text('element', 'button') || undefined}
     href={text('href (if element = "a" link)', '') || undefined}
     loading={boolean('loading', false)}
     additionalClasses={text('additionalClasses', '') || undefined}
@@ -26,7 +26,7 @@ stories.add('primary', () => (
     <SprkButton
       variant="secondary"
       disabled={boolean('disabled', false)}
-      element={text('element', '') || undefined}
+      element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
       idString={text('idString', 'button-2')}
       additionalClasses={text('additionalClasses', '') || undefined}
@@ -40,7 +40,7 @@ stories.add('primary', () => (
     <SprkButton
       variant="tertiary"
       disabled={boolean('disabled', false)}
-      element={text('element', '') || undefined}
+      element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
       additionalClasses={text('additionalClasses', '') || undefined}
       idString={text('idString', 'button-3')}
@@ -53,8 +53,8 @@ stories.add('primary', () => (
   .add('disabled', () => (
     <SprkButton
       loading={boolean('loading', false)}
-      variant={text('variant', '') || undefined}
-      element={text('element', '') || undefined}
+      variant={text('variant', 'tertiary') || undefined}
+      element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
       idString={text('idString', 'button-4')}
       additionalClasses={text('additionalClasses', '') || undefined}
@@ -67,7 +67,7 @@ stories.add('primary', () => (
   .add('with spinner', () => (
     <SprkButton
       loading={boolean('loading', true)}
-      element={text('element', '') || undefined}
+      element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
       idString={text('idString', 'button-7')}
       analyticsString={text('analyticsString', 'button-7-analytics')}
@@ -80,7 +80,7 @@ stories.add('primary', () => (
   .add('full width at small viewport', () => (
     <SprkButton
       loading={boolean('loading', false)}
-      element={text('element', '') || undefined}
+      element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
       idString={text('idString', 'button-8')}
       analyticsString={text('analyticsString', 'button-8-analytics')}
@@ -94,7 +94,7 @@ stories.add('primary', () => (
   .add('full width at extra small viewport', () => (
     <SprkButton
       loading={boolean('loading', false)}
-      element={text('element', '') || undefined}
+      element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
       idString={text('idString', 'button-9')}
       analyticsString={text('analyticsString', 'button-9-analytics')}
