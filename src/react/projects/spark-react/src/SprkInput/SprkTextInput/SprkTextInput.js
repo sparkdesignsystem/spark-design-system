@@ -53,11 +53,13 @@ class SprkTextInput extends Component {
             id={id}
           >
             <SprkTextAreaCheck
-              analyticsString={analyticsString}
               id={id}
+              analyticsString={analyticsString}
               idString={idString}
-              errorContainerId={errorContainerId}
+              forwardedRef={forwardedRef}
               type={type}
+              formatter={formatter}
+              errorContainerId={errorContainerId}
               hiddenLabel={hiddenLabel}
               valid={valid}
               leadingIcon={leadingIcon}

@@ -9,8 +9,11 @@ const SprkTextareaCheck = props => {
     errorContainerId,
     type,
     id,
+    formatter,
+    forwardedRef,
     idString,
     leadingIcon,
+    value,
     textIcon,
     hiddenLabel,
     valid,
@@ -31,10 +34,12 @@ const SprkTextareaCheck = props => {
       })}
       type={type}
       htmlFor={id}
+      ref={forwardedRef}
       data-id={idString}
       data-analytics={analyticsString}
       aria-invalid={!valid}
       aria-describedby={errorContainerId}
+      value={valid && formatter(value) ? formatter(value) : value}
       {...rest}
     >
       {children}
@@ -45,6 +50,7 @@ const SprkTextareaCheck = props => {
 SprkTextareaCheck.propTypes = {
   analyticsString: propTypes.string,
   errorContainerId: propTypes.string,
+  formatter: propTypes.func,
   type: propTypes.string,
   id: propTypes.string,
   idString: propTypes.string,
