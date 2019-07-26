@@ -58,6 +58,7 @@ class SprkTextInput extends Component {
               idString={idString}
               errorContainerId={errorContainerId}
               type={type}
+              hiddenLabel={hiddenLabel}
               valid={valid}
               leadingIcon={leadingIcon}
               textIcon={textIcon}

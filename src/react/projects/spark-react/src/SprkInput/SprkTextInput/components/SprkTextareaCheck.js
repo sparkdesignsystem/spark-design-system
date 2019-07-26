@@ -12,6 +12,7 @@ const SprkTextareaCheck = props => {
     idString,
     leadingIcon,
     textIcon,
+    hiddenLabel,
     valid,
     ...rest
   } = props;
@@ -22,15 +23,14 @@ const SprkTextareaCheck = props => {
       className={classNames('sprk-u-Width-100', {
         'sprk-b-TextArea': type === 'textarea',
         'sprk-b-TextInput': type !== 'textarea',
+        'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel,
         'sprk-b-TextInput--error': type !== 'textarea' && !valid,
         'sprk-b-TextInput--has-svg-icon':
           type !== 'textarea' && leadingIcon.length > 0,
         'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
-        'sprk-b-TextInput--huge': type === 'hugeTextInput',
       })}
       type={type}
-      valid={valid}
-      for={id}
+      htmlFor={id}
       data-id={idString}
       data-analytics={analyticsString}
       aria-invalid={!valid}
@@ -49,7 +49,7 @@ SprkTextareaCheck.propTypes = {
   id: propTypes.string,
   idString: propTypes.string,
   leadingIcon: propTypes.string,
-  textIcon: propTypes.string,
+  textIcon: propTypes.bool,
   valid: propTypes.bool,
 };
 

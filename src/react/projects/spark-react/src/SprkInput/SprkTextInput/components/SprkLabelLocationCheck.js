@@ -7,7 +7,6 @@ const SprkLabelLocationCheck = ({
   type,
   label,
   leadingIcon,
-  hiddenLabel,
   id,
 }) => {
   if (type === 'hugeTextInput') {
@@ -18,7 +17,6 @@ const SprkLabelLocationCheck = ({
           htmlFor={id}
           className={classNames('sprk-b-Label', {
             'sprk-b-Label--with-icon': leadingIcon.length > 0,
-            'sprk-u-ScreenReaderText': hiddenLabel,
           })}
         >
           {label}
@@ -32,7 +30,6 @@ const SprkLabelLocationCheck = ({
         htmlFor={id}
         className={classNames('sprk-b-Label', {
           'sprk-b-Label--with-icon': leadingIcon.length > 0,
-          'sprk-u-ScreenReaderText': hiddenLabel,
         })}
       >
         {label}
@@ -46,7 +43,6 @@ SprkLabelLocationCheck.propTypes = {
   type: propTypes.string,
   label: propTypes.string,
   leadingIcon: propTypes.string,
-  hiddenLabel: propTypes.bool,
   id: propTypes.string,
 };
 
