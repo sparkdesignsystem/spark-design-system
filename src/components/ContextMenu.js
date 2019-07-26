@@ -1,16 +1,20 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { Link } from 'gatsby';
 import GuidesMenu from './GuidesMenu';
 import APIDocumentationMenu from './APIDocumentationMenu';
 
 const ContextMenu = ({ context, links, setContext }) => (
   <div className="context-menu">
-    <select className="context-menu__context-control" onChange={(e) => { 
-      setContext(e.target.value);
-      }}>
-      <option value="guides">Guides</option>
-      <option value="apidocumentation">API Documentation</option>
-    </select>
+
+    <ul>
+      <li>
+        <Link className="context-menu__link" to="/apidocumentation" onClick={(e) => { setContext('apidocumentation');}}>API Documentation</Link>
+      </li>
+      <li>
+        <Link className="context-menu__link" to="/gettingstarted" onClick={(e) => { setContext('guides');}}>Guides</Link>
+      </li>
+    </ul>
 
     { context === 'guides' 
     && <GuidesMenu /> 

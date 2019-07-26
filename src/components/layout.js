@@ -20,8 +20,8 @@ const utilityItems = [
 ];
 
 
-function Layout({ children }) {
-  const [context, setContext] = useState('guides');
+function Layout({ children, menuContext }) {
+  const [context, setContext] = useState(menuContext || 'guides');
 
   return (
     <StaticQuery
