@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import SprkToggle from './SprkToggle';
 
 storiesOf('Components|Toggle', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkToggle
       title="My Disclaimer"
       analyticsString="toggle-1"

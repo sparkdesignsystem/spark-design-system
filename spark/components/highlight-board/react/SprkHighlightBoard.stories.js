@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import SprkHighlightBoard from './SprkHighlightBoard';
 
 storiesOf('Components|Highlight Board', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkHighlightBoard
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
       imgAlt="desktop"
@@ -16,7 +16,7 @@ storiesOf('Components|Highlight Board', module)
       idString="highlightboard-1"
     />
   ))
-  .add('no image', () => (
+  .add('No Image', () => (
     <SprkHighlightBoard
       variant="noImage"
       heading="Hello, Welcome To Spark Design System"
@@ -27,7 +27,7 @@ storiesOf('Components|Highlight Board', module)
       idString="highlightboard-2"
     />
   ))
-  .add('stacked', () => (
+  .add('Stacked', () => (
     <SprkHighlightBoard
       variant="stacked"
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"

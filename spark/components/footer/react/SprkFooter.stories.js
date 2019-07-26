@@ -200,7 +200,7 @@ const additionalIcons = [{
 },
 ];
 storiesOf('Components|Footer', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkFooter
       globalItems={globalItems}
       linkColumns={linkColumns}
