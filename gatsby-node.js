@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
-
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'develop-html' || stage === 'build-html') {
     actions.setWebpackConfig({

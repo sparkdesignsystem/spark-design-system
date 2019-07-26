@@ -40,10 +40,10 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
+          default: require.resolve('./src/components/layout.js'),
         },
       },
     },
