@@ -1,18 +1,51 @@
 {
-  "name": "spark-design-system",
+  "name": "spark-design-system-gatsby",
   "version": "3.0.0",
-  "description": "A pattern library authoring environment.",
+  "description": "A documentation and guide site for Spark Design System",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
+  "scripts": {
+    "build": "npm install && gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  },
   "author": "Quicken Loans",
   "bugs": {
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.0.21",
+    "@mdx-js/react": "^1.0.21",
+    "@sparkdesignsystem/spark": "^11.0.0",
+    "@sparkdesignsystem/spark-react": "^1.0.1",
+    "babel-plugin-react-docgen": "^3.1.0",
+    "gatsby": "^2.8.5",
+    "gatsby-image": "^2.1.2",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-mdx": "^1.0.17",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-transformer-sharp": "^2.1.21",
+    "gatsby-transformer-remark": "^2.5.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.1",
+    "shortid": "^2.2.14"
+  },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.0",

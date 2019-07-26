@@ -1,20 +1,18 @@
 {
-  "name": "spark-react-docs",
+  "name": "spark-react-storybook",
   "private": true,
-  "description": "A docs site and dev environment for @sparkdesignsystem/spark-react",
+  "description": "A storybook environment for @sparkdesignsystem/spark-react",
   "version": "1.0.0",
-  "author": "Quicken Loans",
+  "bugs": {
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
+  },
   "dependencies": {
     "@sparkdesignsystem/spark": "^11.0.0",
     "@sparkdesignsystem/spark-react": "^1.0.1",
-    "gatsby": "^2.8.5",
-    "gatsby-image": "^2.1.2",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-offline": "^2.1.1",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.1.3",
-    "gatsby-source-filesystem": "^2.0.38",
-    "gatsby-transformer-sharp": "^2.1.21",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -37,32 +35,18 @@
     "@storybook/source-loader": "^5.2.0-beta.7",
     "@storybook/theming": "^5.2.0-beta.7",
     "babel-loader": "^8.0.6",
-    "gatsby-mdx": "^0.6.3",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-transformer-remark": "^2.5.0",
     "glob": "^7.1.4",
     "node-sass": "^4.12.0"
   },
   "keywords": [
-    "gatsby",
     "sparkdesignsystem",
     "spark",
     "react"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "npm install && gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "build": "npm install && build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o ./storybook-dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
