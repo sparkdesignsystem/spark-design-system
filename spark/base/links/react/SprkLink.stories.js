@@ -14,7 +14,7 @@ stories
       href={text('href', 'https://www.sparkdesignsystem.com')}
       idString={text('idString', 'link-1')}
       analyticsString={text('analyticsString', 'link-default')}
-      additionalClasses={text('additionalClasses', null)}
+      additionalClasses={text('additionalClasses', '') || undefined}
     >
       {text('text', 'Base Link')}
     </SprkLink>
@@ -26,7 +26,7 @@ stories
       analyticsString={text('analyticsString', 'link-simple')}
       idString={text('idString', 'link-2')}
       href={text('href', 'https://www.sparkdesignsystem.com')}
-      additionalClasses={text('additionalClasses', null)}
+      additionalClasses={text('additionalClasses', '') || undefined}
     >
       {text('text', 'Simple Link')}
     </SprkLink>
@@ -36,7 +36,7 @@ stories
       element={text('element', 'a')}
       analyticsString={text('analyticsString', 'link-has-icon')}
       href={text('href', 'https://www.sparkdesignsystem.com')}
-      additionalClasses={text('additionalClasses', null)}
+      additionalClasses={text('additionalClasses', '') || undefined}
       variant="has-icon"
       idString={text('idString', 'link-3')}
     >
@@ -57,7 +57,7 @@ stories
       variant="disabled"
       idString={text('idString', 'link-4')}
       href={text('href', 'https://www.sparkdesignsystem.com')}
-      additionalClasses={text('additionalClasses', null)}
+      additionalClasses={text('additionalClasses', '') || undefined}
     >
       {text('text', 'Disabled Link')}
     </SprkLink>
