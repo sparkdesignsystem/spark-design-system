@@ -10,13 +10,14 @@ stories.addDecorator(withKnobs);
 stories
   .add('default', () => (
     <SprkAlert
+      onFocus={action('focus')}
       message={text('Message', 'This is an alert.')}
       additionalClasses={text('additionalClasses', '') || undefined}
       iconNameDismiss={text('iconNameDismiss', '') || undefined}
       iconNameFail={text('iconNameFail', '') || undefined}
       iconNameSuccess={text('iconNameSuccess', '') || undefined}
       iconNameInfo={text('iconNameInfo', 'bell')}
-      onDismiss={action('clicked')}
+      onDismiss={action('click')}
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', true)}
       idString={text('idString', 'alert-1')}
@@ -25,13 +26,14 @@ stories
   ))
   .add('success', () => (
     <SprkAlert
+      onFocus={action('focus')}
       message={text('Message', 'This is a success message.')}
       additionalClasses={text('additionalClasses', '') || undefined}
       iconNameDismiss={text('iconNameDismiss', '') || undefined}
       iconNameFail={text('iconNameFail', '') || undefined}
       iconNameSuccess={text('iconNameSuccess', '') || undefined}
       iconNameInfo={text('iconNameInfo', '') || undefined}
-      onDismiss={action('clicked')}
+      onDismiss={action('click')}
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', true)}
       variant="success"
@@ -41,6 +43,7 @@ stories
   ))
   .add('info', () => (
     <SprkAlert
+      onFocus={action('focus')}
       message={text('Message', 'This is important information.')}
       iconNameDismiss={text('iconNameDismiss', '') || undefined}
       iconNameFail={text('iconNameFail', '') || undefined}
@@ -50,12 +53,15 @@ stories
       isVisible={boolean('isVisible', true)}
       isDismissible={boolean('isDismissible', true)}
       variant="info"
+      onDismiss={action('click')}
       idString={text('idString', 'alert-3')}
       analyticsString={text('analyticsString', 'alert-3')}
     />
   ))
   .add('fail', () => (
     <SprkAlert
+      onFocus={action('focus')}
+      onDismiss={action('click')}
       message={text('Message', 'This is a failure message to alert that something was not successful.')}
       iconNameDismiss={text('iconNameDismiss', '') || undefined}
       iconNameFail={text('iconNameFail', '') || undefined}
@@ -71,6 +77,8 @@ stories
   ))
   .add('with no dismiss button', () => (
     <SprkAlert
+      onFocus={action('focus')}
+      onDismiss={action('click')}
       message={text('Message', 'This success alert has no dismiss button.')}
       iconNameDismiss={text('iconNameDismiss', '') || undefined}
       iconNameFail={text('iconNameFail', '') || undefined}

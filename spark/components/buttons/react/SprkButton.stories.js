@@ -10,7 +10,8 @@ stories.addDecorator(withKnobs);
 
 stories.add('primary', () => (
   <SprkButton
-    onClick={action('button clicked')}
+    onClick={action('click')}
+    onFocus={action('focus')}
     disabled={boolean('disabled', false)}
     element={text('element', 'button') || undefined}
     href={text('href (if element = "a" link)', '') || undefined}
@@ -24,6 +25,8 @@ stories.add('primary', () => (
 ))
   .add('secondary', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       variant="secondary"
       disabled={boolean('disabled', false)}
       element={text('element', 'button') || undefined}
@@ -38,6 +41,8 @@ stories.add('primary', () => (
   ))
   .add('tertiary', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       variant="tertiary"
       disabled={boolean('disabled', false)}
       element={text('element', 'button') || undefined}
@@ -52,6 +57,8 @@ stories.add('primary', () => (
   ))
   .add('disabled', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       loading={boolean('loading', false)}
       variant={text('variant', 'tertiary') || undefined}
       element={text('element', 'button') || undefined}
@@ -66,6 +73,8 @@ stories.add('primary', () => (
   ))
   .add('with spinner', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       loading={boolean('loading', true)}
       element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
@@ -79,6 +88,8 @@ stories.add('primary', () => (
   ))
   .add('full width at small viewport', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       loading={boolean('loading', false)}
       element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
@@ -93,6 +104,8 @@ stories.add('primary', () => (
   ))
   .add('full width at extra small viewport', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       loading={boolean('loading', false)}
       element={text('element', 'button') || undefined}
       href={text('href (if element = "a" link)', '') || undefined}
@@ -107,6 +120,8 @@ stories.add('primary', () => (
   ))
   .add('as a link element', () => (
     <SprkButton
+      onClick={action('click')}
+      onFocus={action('focus')}
       element={text('element', 'a')}
       loading={boolean('loading', false)}
       href={text('href', 'https://www.sparkdesignsystem.com')}
