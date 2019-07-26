@@ -19,7 +19,7 @@ const stories = storiesOf('Base|Inputs', module);
 
 stories.addDecorator(withKnobs);
 
-stories.add('text input', () => (
+stories.add('Text Input', () => (
   <SprkTextInput
     label={boolean('label', 'Text Input Label')}
     name="text-input-label"
@@ -28,14 +28,14 @@ stories.add('text input', () => (
     errorMessage="There is an error on this field."
   />
 ))
-  .add('huge text input', () => (
+  .add('Huge Text Input', () => (
     <SprkTextInput
       type="hugeTextInput"
       label="Text Input Label"
       name="text-input-label"
     />
   ))
-  .add('checkboxes', () => (
+  .add('Checkboxes', () => (
     <SprkSelectionInput
       groupLabel="Checkbox Input"
       choices={[
@@ -58,7 +58,7 @@ stories.add('text input', () => (
       variant="checkbox"
     />
   ))
-  .add('radio buttons', () => (
+  .add('Radio Buttons', () => (
     <SprkSelectionInput
       groupLabel="Radio Group Label"
       choices={[
@@ -81,7 +81,7 @@ stories.add('text input', () => (
       variant="radio"
     />
   ))
-  .add('select', () => (
+  .add('Select', () => (
     <SprkSelectionInput
       choices={[
         {
@@ -118,28 +118,28 @@ stories.add('text input', () => (
       variant="select"
     />
   ))
-  .add('textarea', () => (
+  .add('Textarea', () => (
     <SprkTextInput
       label="Description"
       name="description"
       type="textarea"
     />
   ))
-  .add('ssn input', () => (
+  .add('SSN Input', () => (
     <SprkRevealInput
       label="Social Security Number"
       toggleLabel="Show SSN"
       name="ssn"
     />
   ))
-  .add('search input', () => (
+  .add('Search Input', () => (
     <SprkTextInput
       label="Search"
       name="Search"
       placeholder="Search"
     />
   ))
-  .add('inline search input', () => (
+  .add('Inline Search Input', () => (
     <SprkTextInput
       leadingIcon="search"
       hiddenLabel
@@ -147,7 +147,7 @@ stories.add('text input', () => (
       placeholder="Search"
     />
   ))
-  .add('monetary input', () => (
+  .add('Monetary Input', () => (
     <SprkTextInput
       label="Payment"
       textIcon
@@ -155,21 +155,21 @@ stories.add('text input', () => (
       placeholder="0.00"
     />
   ))
-  .add('password input', () => (
+  .add('Password Input', () => (
     <SprkRevealInput
       label="Password"
       toggleLabel="Show Password"
       name="password-1"
     />
   ))
-  .add('helper text', () => (
+  .add('Helper Text', () => (
     <SprkRevealInput
       label="Password"
       toggleLabel="Show Password"
       name="password-1"
     />
   ))
-  .add('phone number input', () => (
+  .add('Phone Number Input', () => (
     <SprkTextInput
       label="Phone Number"
       name="phone"
@@ -177,7 +177,7 @@ stories.add('text input', () => (
       errorMessage="Incorrect phone number."
     />
   ))
-  .add('date input', () => (
+  .add('Date Input', () => (
     <SprkTextInput
       label="Date"
       name="date"
@@ -185,7 +185,7 @@ stories.add('text input', () => (
       errorMessage="Incorrect date."
     />
   ))
-  .add('date picker', () => (
+  .add('Date Picker', () => (
     <SprkDatePickerInput
       name="date"
       placeholder={text('placeholder', '01/01/2019')}

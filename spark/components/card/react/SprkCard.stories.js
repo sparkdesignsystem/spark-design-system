@@ -4,13 +4,13 @@ import { storiesOf } from '@storybook/react';
 import SprkCard from './SprkCard';
 
 storiesOf('Components|Card', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkCard
       idString="card-1"
       additionalContentClasses="sprk-o-Stack sprk-o-Stack--large"
     />
   ))
-  .add('standout', () => (
+  .add('Standout', () => (
     <SprkCard
       isStandout
       idString="card-20"
@@ -30,7 +30,7 @@ storiesOf('Components|Card', module)
       }}
     />
   ))
-  .add('teaser', () => (
+  .add('Teaser', () => (
     <SprkCard
       idString="card1"
       variant="teaser"
@@ -55,7 +55,7 @@ storiesOf('Components|Card', module)
       }}
     />
   ))
-  .add('teaser with different element order', () => (
+  .add('Teaser With Different Element Order', () => (
     <SprkCard
       idString="card1"
       variant="teaser"
@@ -80,7 +80,7 @@ storiesOf('Components|Card', module)
       }}
     />
   ))
-  .add('card layout - two up', () => (
+  .add('Card Layout - Two up', () => (
     <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
       <SprkCard
         idString="card-1"
@@ -132,7 +132,7 @@ storiesOf('Components|Card', module)
       />
     </section>
   ))
-  .add('card layout - three up', () => (
+  .add('Card Layout - Three up', () => (
     <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
       <SprkCard
         idString="card-1"
@@ -208,7 +208,7 @@ storiesOf('Components|Card', module)
       />
     </section>
   ))
-  .add('card layout - four up', () => (
+  .add('Card Layout - Four up', () => (
     <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
       <SprkCard
         idString="card-1"

@@ -8,7 +8,7 @@ const stories = storiesOf('Components|Alert', module);
 stories.addDecorator(withKnobs);
 
 stories
-  .add('default', () => (
+  .add('Default', () => (
     <SprkAlert
       onFocus={action('focus')}
       message={text('Message', 'This is an alert.')}
@@ -24,7 +24,7 @@ stories
       analyticsString={text('analyticsString', 'alert-1')}
     />
   ))
-  .add('success', () => (
+  .add('Success', () => (
     <SprkAlert
       onFocus={action('focus')}
       message={text('Message', 'This is a success message.')}
@@ -41,7 +41,7 @@ stories
       analyticsString={text('analyticsString', 'alert-2')}
     />
   ))
-  .add('info', () => (
+  .add('Info', () => (
     <SprkAlert
       onFocus={action('focus')}
       message={text('Message', 'This is important information.')}
@@ -58,7 +58,7 @@ stories
       analyticsString={text('analyticsString', 'alert-3')}
     />
   ))
-  .add('fail', () => (
+  .add('Fail', () => (
     <SprkAlert
       onFocus={action('focus')}
       onDismiss={action('click')}
@@ -75,7 +75,7 @@ stories
       analyticsString={text('analyticsString', 'alert-4')}
     />
   ))
-  .add('with no dismiss button', () => (
+  .add('No Dismiss Button', () => (
     <SprkAlert
       onFocus={action('focus')}
       onDismiss={action('click')}

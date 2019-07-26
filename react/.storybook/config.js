@@ -17,6 +17,20 @@ addParameters({
   info: {
     inline: true,
     header: false,
+    styles: {
+      infoBody: {
+        paddingRight: '0',
+        paddingLeft: '0',
+      },
+      source: {
+        h1: {
+          fontSize: '1.25rem',
+        },
+      },
+      propTableHead: {
+        fontSize: '1rem',
+      }
+    },
   }
 });
 

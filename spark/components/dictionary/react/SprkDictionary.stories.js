@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import SprkDictionary from './SprkDictionary';
 
 storiesOf('Components|Dictionary', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkDictionary
       idString="dictionary-1"
       keyValuePairs={{
@@ -17,7 +17,7 @@ storiesOf('Components|Dictionary', module)
       }}
     />
   ))
-  .add('striped', () => (
+  .add('Striped', () => (
     <SprkDictionary
       variant="striped"
       idString="dictionary-2"

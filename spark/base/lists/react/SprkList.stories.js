@@ -5,7 +5,7 @@ import SprkList from './SprkList';
 import SprkListItem from './SprkListItem';
 
 storiesOf('Base|Lists', module)
-  .add('unordered list', () => (
+  .add('Unordered', () => (
     <SprkList
       element="ul"
       idString="unordered-list-1"
@@ -21,7 +21,7 @@ storiesOf('Base|Lists', module)
       </SprkListItem>
     </SprkList>
   ))
-  .add('ordered list', () => (
+  .add('Ordered', () => (
     <SprkList
       element="ol"
       idString="ordered-list-1"
@@ -37,7 +37,7 @@ storiesOf('Base|Lists', module)
       </SprkListItem>
     </SprkList>
   ))
-  .add('indented', () => (
+  .add('Indented', () => (
     <SprkList
       element="ul"
       idString="indented-list-1"
@@ -48,7 +48,7 @@ storiesOf('Base|Lists', module)
       <SprkListItem idString="list-item-13">Indented List Item</SprkListItem>
     </SprkList>
   ))
-  .add('bare', () => (
+  .add('Bare', () => (
     <SprkList
       element="ul"
       idString="bare-list-1"

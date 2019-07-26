@@ -6,7 +6,7 @@ import SprkDropdown from './SprkDropdown';
 import SprkButton from '../../buttons/react/SprkButton';
 
 storiesOf('Components|Dropdown', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkDropdown
       choices={{
         choiceFunction: (choiceText) => {
@@ -34,7 +34,7 @@ storiesOf('Components|Dropdown', module)
       iconName="settings"
     />
   ))
-  .add('information', () => (
+  .add('Information', () => (
     <SprkDropdown
       variant="informational"
       title="My Choices"

@@ -8,7 +8,7 @@ const stories = storiesOf('Components|Button', module);
 
 stories.addDecorator(withKnobs);
 
-stories.add('primary', () => (
+stories.add('Primary', () => (
   <SprkButton
     onClick={action('click')}
     onFocus={action('focus')}
@@ -23,7 +23,7 @@ stories.add('primary', () => (
     {text('button text', 'Button')}
   </SprkButton>
 ))
-  .add('secondary', () => (
+  .add('Secondary', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}
@@ -39,7 +39,7 @@ stories.add('primary', () => (
       {text('button text', 'Button')}
     </SprkButton>
   ))
-  .add('tertiary', () => (
+  .add('Tertiary', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}
@@ -55,7 +55,7 @@ stories.add('primary', () => (
       {text('button text', 'Button')}
     </SprkButton>
   ))
-  .add('disabled', () => (
+  .add('Disabled', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}
@@ -71,7 +71,7 @@ stories.add('primary', () => (
       {text('button text', 'Button')}
     </SprkButton>
   ))
-  .add('with spinner', () => (
+  .add('Spinner', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}
@@ -86,7 +86,7 @@ stories.add('primary', () => (
       {text('button text', 'Button')}
     </SprkButton>
   ))
-  .add('full width at small viewport', () => (
+  .add('Full Width At Small Viewport', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}
@@ -102,7 +102,7 @@ stories.add('primary', () => (
       {text('button text', 'Button')}
     </SprkButton>
   ))
-  .add('full width at extra small viewport', () => (
+  .add('Full Width At Extra Small Viewport', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}
@@ -118,7 +118,7 @@ stories.add('primary', () => (
       {text('button text', 'Button')}
     </SprkButton>
   ))
-  .add('as a link element', () => (
+  .add('As A Link Element', () => (
     <SprkButton
       onClick={action('click')}
       onFocus={action('focus')}

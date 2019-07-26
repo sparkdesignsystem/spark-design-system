@@ -9,7 +9,7 @@ const stories = storiesOf('Base|Links', module);
 stories.addDecorator(withKnobs);
 
 stories
-  .add('default', () => (
+  .add('Default', () => (
     <SprkLink
       onClick={action('click')}
       onFocus={action('focus')}
@@ -22,7 +22,7 @@ stories
       {text('text', 'Base Link')}
     </SprkLink>
   ))
-  .add('simple', () => (
+  .add('Simple', () => (
     <SprkLink
       element={text('element', 'a')}
       onClick={action('click')}
@@ -36,7 +36,7 @@ stories
       {text('text', 'Simple Link')}
     </SprkLink>
   ))
-  .add('icon with text link', () => (
+  .add('Icon With Text Link', () => (
     <SprkLink
       element={text('element', 'a')}
       onClick={action('click')}
@@ -57,7 +57,7 @@ stories
       {text('text', 'Message Us')}
     </SprkLink>
   ))
-  .add('disabled', () => (
+  .add('Disabled', () => (
     <SprkLink
       element={text('element', 'a')}
       onClick={action('click')}

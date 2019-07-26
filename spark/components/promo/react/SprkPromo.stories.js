@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import SprkPromo from './SprkPromo';
 
 storiesOf('Components|Promo', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkPromo
       title="Title"
       subtitle="Subtitle"
@@ -22,7 +22,7 @@ storiesOf('Components|Promo', module)
         neque egestas. Diam quod curabitur.
     </SprkPromo>
   ))
-  .add('flag', () => (
+  .add('Flag', () => (
     <SprkPromo
       additionalClasses="sprk-o-Stack--split@s"
       imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
@@ -39,7 +39,7 @@ storiesOf('Components|Promo', module)
         lacus neque egestas. Diam quod curabitur.
     </SprkPromo>
   ))
-  .add('with image', () => (
+  .add('With Image', () => (
     <SprkPromo
       title="Title"
       subtitle="Subtitle"
@@ -61,7 +61,7 @@ storiesOf('Components|Promo', module)
         lacus neque egestas. Diam quod curabitur.
     </SprkPromo>
   ))
-  .add('with reversed image', () => (
+  .add('With Reversed Image', () => (
     <SprkPromo
       title="Title"
       subtitle="Subtitle"
