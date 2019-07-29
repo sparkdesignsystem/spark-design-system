@@ -1,51 +1,75 @@
-import React from 'react';
-import propTypes from 'prop-types';
+import React, { Component } from 'react';
 import classNames from 'classnames';
+import propTypes from 'prop-types';
 
-const SprkTextareaCheck = props => {
-  const {
-    analyticsString,
-    children,
-    errorContainerId,
-    type,
-    id,
-    formatter,
-    forwardedRef,
-    idString,
-    leadingIcon,
-    value,
-    textIcon,
-    hiddenLabel,
-    valid,
-    ...rest
-  } = props;
-  const Element = type === 'textarea' ? 'textarea' : 'input';
+class SprkTextareaCheck extends Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <Element
-      className={classNames('sprk-u-Width-100', {
-        'sprk-b-TextArea': type === 'textarea',
-        'sprk-b-TextInput': type !== 'textarea',
-        'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel,
-        'sprk-b-TextInput--error': type !== 'textarea' && !valid,
-        'sprk-b-TextInput--has-svg-icon':
-          type !== 'textarea' && leadingIcon.length > 0,
-        'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
-      })}
-      type={type}
-      htmlFor={id}
-      ref={forwardedRef}
-      data-id={idString}
-      data-analytics={analyticsString}
-      aria-invalid={!valid}
-      aria-describedby={errorContainerId}
-      value={valid && formatter(value) ? formatter(value) : value}
-      {...rest}
-    >
-      {children}
-    </Element>
-  );
-};
+    this.state = {
+      hasValue: this.props.value,
+    }
+  }
+
+  render() {
+    const {
+      analyticsString,
+      children,
+      errorContainerId,
+      type,
+      id,
+      formatter,
+      forwardedRef,
+      idString,
+      leadingIcon,
+      value,
+      textIcon,
+      hiddenLabel,
+      valid,
+      ...rest
+    } = this.props;
+    const { hasValue } = this.state;
+
+    const Element = type === 'textarea' ? 'textarea' : 'input';
+
+    // Adds class for IE and Edge
+    const handleOnBlur = (e) => {
+      if (e.target.value.length > 0) {
+        this.setState({hasValue: true})
+      } else {
+        this.setState({hasValue: false})
+      }
+    }
+
+    return (
+      <Element
+        className={classNames('sprk-u-Width-100', {
+          'sprk-b-TextArea': type === 'textarea',
+          'sprk-b-TextInput': type !== 'textarea',
+          'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel,
+          'sprk-b-TextInput--error': type !== 'textarea' && !valid,
+          'sprk-b-TextInput--has-svg-icon':
+            type !== 'textarea' && leadingIcon.length > 0,
+          'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
+          'sprk-b-TextInput--float-label': hasValue && type === 'hugeTextInput',
+        })}
+        type={type}
+        htmlFor={id}
+        ref={forwardedRef}
+        data-id={idString}
+        data-analytics={analyticsString}
+        aria-invalid={!valid}
+        aria-describedby={errorContainerId}
+        value={valid && formatter(value) ? formatter(value) : value}
+        onBlur={(e) => handleOnBlur(e)}
+        {...rest}
+      >
+        {children}
+      </Element>
+    );
+
+  }
+}
 
 SprkTextareaCheck.propTypes = {
   analyticsString: propTypes.string,
@@ -59,4 +83,4 @@ SprkTextareaCheck.propTypes = {
   valid: propTypes.bool,
 };
 
-export default SprkTextareaCheck;
+export default SprkTextareaCheck
