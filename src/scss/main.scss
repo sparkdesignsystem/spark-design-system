@@ -1,7 +1,7 @@
 @import './spark-theme';
 @import '@sparkdesignsystem/spark/_spark.scss';
-
-@import 'components/layout';
-@import './components/header';
-@import './components/navigation';
-@import './components/context-menu';
+@import './components/component-index';
+@import './site-structure/layout';
+@import './site-structure/header';
+@import './site-structure/footer';
+@import './site-structure/context-menu';

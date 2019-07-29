@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import ComponentIndex from '../components/ComponentIndex';
-import Layout from '../components/site-structure/Layout';
+import Header from './Header';
+import Menu from './Menu';
+import Footer from './Footer';
 
-const APIDocumenation = () => (
-  <StaticQuery
-    query={graphql`
+const Layout = ({ children, menuContext }) => {
+  const [context, setContext] = useState(menuContext || 'guides');
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  return (
+    <StaticQuery
+      query={graphql`
       {
+        allSparkIconSet {
+          edges {
+            node {
+              internal {
+                content
+              }
+            }
+          }
+        }
         allDirectory(filter: {relativePath: {regex: "/^components\\//"}, relativeDirectory: {eq: "components"}}) {
           edges {
             node {
@@ -66,25 +80,32 @@ const APIDocumenation = () => (
         }
       }
     `}
-    render={(data) => {
-      const { edges: components } = data.allDirectory;
-      return (
-        <Layout menuContext="apidocumentation">
-          <h1 className="sprk-b-TypeDisplayTwo sprk-b-PageTitle">API Documentation</h1>
-          {components.map((component, index) => (
-            <ComponentIndex
-              key={index}
-              id={component.node.name}
-              name={component.node.name}
-              reactLink={data.reactMdx.edges.filter(edge => edge.node.frontmatter.title.toLowerCase() === component.node.name).length === 1 ? component.node.name : null}
-              angularLink={data.angularMdx.edges.filter(edge => edge.node.frontmatter.title.toLowerCase() === component.node.name).length === 1 ? component.node.name : null}
-              htmlLink={data.htmlMdx.edges.filter(edge => edge.node.frontmatter.title.toLowerCase() === component.node.name).length === 1 ? component.node.name : null}
-            />
-          ))}
-        </Layout>
-      );
-    }}
-  />
-);
+      render={data => (
+        <>
+          <div
+              // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: data.allSparkIconSet.edges[0].node.internal.content,
+            }}
+          />
+          <Header
+            menuVisible={menuVisible}
+            setMenuVisible={setMenuVisible}
+          />
+          <Menu
+            context={context}
+            setContext={setContext}
+            menuVisible={menuVisible}
+            setMenuVisible={setMenuVisible}
+          />
+          <div className="content">
+            { children }
+          </div>
+          <Footer />
+        </>
+      )}
+    />
+  );
+};
 
-export default APIDocumenation;
+export default Layout;

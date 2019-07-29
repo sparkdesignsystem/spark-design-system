@@ -38,15 +38,13 @@ const APIDocumentationMenu = () => (
       return (
         <>
           <h3 className="context-menu__heading">API Documentation</h3>
-          <ul>
-          {
-            components.map((component) => {
-              return (
-                <li>
-                  <a href={`#${component.node.name}`}>{component.node.name}</a>
-                </li>
-              );
-            })
+          <ul className="context-menu__collection">
+            {
+            components.map((component, index) => (
+              <li key={index}>
+                <a className="context-menu__link" href={`#${component.node.name}`}>{component.node.name}</a>
+              </li>
+            ))
           }
           </ul>
         </>

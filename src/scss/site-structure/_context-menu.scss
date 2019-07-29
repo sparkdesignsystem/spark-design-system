@@ -25,7 +25,17 @@
 
 .context-menu__link {
   color: $sprk-black;
+  display: block;
   font-weight: 300;
+  padding: 0.3rem 0;
+}
+
+.context-menu__link--main {
+  font-size: 1.2rem;
+}
+
+.context-menu__link--active {
+  background-color: darkgrey;
 }
 
 .context-menu__link:hover {
