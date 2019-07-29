@@ -139,7 +139,6 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 }
 // IE11 Override
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:-ms-input-placeholder {
-  opacity: 1;
   color: transparent;
 }
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::placeholder  {     
