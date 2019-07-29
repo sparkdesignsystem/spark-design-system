@@ -8,12 +8,21 @@ class SprkStepperSlider extends Component {
     super(props);
 
     this.sliderRef = React.createRef();
+
+    // prevProps is not available in getDerivedStateFromProps,
+    // so we cache these in state.
+    this.state = {
+      cachedTop: props.sliderStyle ? props.sliderStyle.top : undefined,
+      cachedSliderRef: this.sliderRef,
+    }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.sliderStyle.top != this.props.sliderStyle.top){
-      this.sliderRef.current.classList.remove('sprk-c-Stepper__slider--active');
+  static getDerivedStateFromProps(nextProps, prevState){
+    if (nextProps.sliderStyle && (nextProps.sliderStyle.top != prevState.cachedTop)) {
+      prevState.cachedSliderRef.current.classList.remove('sprk-c-Stepper__slider--active');
     }
+
+    return null;
   }
 
   componentDidUpdate(prevProps, prevState) {
