@@ -80,9 +80,10 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus::placeholder {
   opacity: $sprk-text-input-huge-placeholder-active-opacity;
 }
-.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus:-ms-input-placeholder {
-  // opacity: $sprk-text-input-huge-placeholder-active-opacity;
+// IE11 Override
+.sprk-b-InputContainer--huge > input:first-child.sprk-b-TextInput:focus:-ms-input-placeholder {
   color: $sprk-placeholder-color;
+  opacity: 1;
 }
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus {
   opacity: $sprk-text-input-huge-placeholder-active-opacity;
@@ -92,8 +93,9 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus::placeholder {
   opacity: $sprk-text-input-huge-placeholder-active-opacity;
 }
+// IE11 Override
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus:-ms-input-placeholder {
-  // opacity: $sprk-text-input-huge-placeholder-active-opacity;
+  opacity: 1;
   color: $sprk-placeholder-color;
 }
 
@@ -105,8 +107,9 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder {
   opacity: $sprk-text-input-huge-placeholder-active-opacity;
 }
+// IE11 Override
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label:-ms-input-placeholder {
-  // opacity: $sprk-text-input-huge-placeholder-active-opacity;
+  opacity: 1;
   color: $sprk-placeholder-color;
 }
 
@@ -118,29 +121,33 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder {
   opacity: $sprk-text-input-huge-placeholder-active-opacity;
 }
+// IE11 Override
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label:-ms-input-placeholder {
-  // opacity: $sprk-text-input-huge-placeholder-active-opacity;
+  opacity: 1;
   color: $sprk-placeholder-color;
 }
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput::placeholder {
   opacity: $sprk-text-input-huge-placeholder-opacity;
 }
+// IE11 Override
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:-ms-input-placeholder {
-  // opacity: $sprk-text-input-huge-placeholder-opacity;
+  opacity: 1;
   color: transparent;
 }
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput::placeholder {
   opacity: $sprk-text-input-huge-placeholder-opacity;
 }
+// IE11 Override
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:-ms-input-placeholder {
-  // opacity: $sprk-text-input-huge-placeholder-opacity;
+  opacity: 1;
   color: transparent;
 }
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::placeholder  {     
   opacity: $sprk-text-input-huge-placeholder-active-opacity;
 }
+// IE11 Override
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:-ms-input-placeholder  {     
-  // opacity: $sprk-text-input-huge-placeholder-active-opacity;
+  opacity: 1;
   color: $sprk-placeholder-color;
 }
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus {
