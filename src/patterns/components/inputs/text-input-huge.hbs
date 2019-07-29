@@ -9,10 +9,12 @@ information:
   - The label is visible by default. To hide the label and only display the placeholder,
     add the .sprk-b-TextInput--label-hidden class to the input element.
     This will hide the label, but it will still be available for screen readers.
+  - IE11 - The placeholder will not be visible when the input is focused.
 
 restrictions:
   - This should only be used in a form that asks for one input at a time.
   - The input label must come before the label element.
+  - Labels should not be too long. They should not wrap onto a second line.
   - A placeholder is required for full functionality. If you do not want to show a placeholder, include placeholder=" " (space included) to maintain functionality.
 links:
   Helper Text:
