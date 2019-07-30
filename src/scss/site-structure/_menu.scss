@@ -1,16 +1,17 @@
 /* stylelint-disable */
 .menu {
-  padding: $sprk-space-l;
-  margin: $sprk-space-m;
   background-color: $sprk-gray;
-  position: absolute;
   left: -100%;
-  z-index: 2;
+  margin: 0 $sprk-space-l;
+  max-width: 350px;
+  padding: $sprk-space-l;
+  position: absolute;
   width: 95%;
+  z-index: 2;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     position: static;
-    width: 300px;
+    width: 25%;
   }
 }
 
@@ -55,9 +56,7 @@
   font-weight: 700;
 }
 
-.menu__context-control {
-  padding: 1rem;
+.menu__select {
   width: 100%;
-  font-size: 0.9rem;
 }
 /* stylelint-enable */

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { SprkTextInput } from '@sparkdesignsystem/spark-react';
 import GuidesMenu from '../context/GuidesMenu';
 import APIDocumentationMenu from '../context/APIDocumentationMenu';
@@ -19,26 +19,23 @@ const Menu = ({ context, setContext, menuVisible }) => (
       leadingIcon="search"
       placeholder="Search"
     />
-    <ul className="menu__collection">
-      <li>
-        <Link
-          className="menu__link menu__link--main"
-          to="/apidocumentation"
-          onClick={() => { setContext('apidocumentation'); }}
-        >
-            API Documentation
-        </Link>
-      </li>
-      <li>
-        <Link
-          className="menu__link menu__link--main"
-          to="/gettingstarted"
-          onClick={() => { setContext('guides'); }}
-        >
-            Guides
-        </Link>
-      </li>
-    </ul>
+    <select
+      className="menu__select"
+      onChange={
+        (e) => {
+          setContext(e.target.value);
+
+          if (e.target.value === 'guides') {
+            navigate('gettingstarted/');
+          } else {
+            navigate(`${e.target.value}/`);
+          }
+        }
+      }
+    >
+      <option value="guides" selected={context === 'guides'}>Guides</option>
+      <option value="apidocumentation" selected={context === 'apidocumentation'}>API Documentation</option>
+    </select>
 
     { context === 'guides'
     && <GuidesMenu />

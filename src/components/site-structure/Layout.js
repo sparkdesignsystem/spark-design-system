@@ -101,9 +101,9 @@ const Layout = ({ children, menuContext }) => {
             />
             <div className="content">
               { children }
+              <Footer />
             </div>
           </div>
-          <Footer />
         </div>
       )}
     />
