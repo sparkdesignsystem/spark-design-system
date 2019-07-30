@@ -1,6 +1,7 @@
 <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
-  <label class="sprk-u-ScreenReaderText" sprkLabel>Text Input Label</label>
+  
   <input
+    placeholder="Placeholder"
     name="text_input"
     [ngClass]="{ 'sprk-b-TextInput--huge':true, 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
     type="text"
@@ -9,6 +10,7 @@
     #textInput="ngModel"
     data-id="input-error-1"
     sprkInput>
+  <label sprkLabel>Text Input Label</label>
   <span
     [hidden]="textInput.valid || textInput.pristine"
     sprkFieldError>There is an error on this field.</span>
