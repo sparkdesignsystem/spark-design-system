@@ -27,12 +27,12 @@ const GuidesMenu = () => (
       const { edges: guides } = data.allMdx;
       return (
         <>
-          <h3 className="context-menu__heading">Guides</h3>
+          <h3 className="menu__heading">Guides</h3>
           <nav>
-            <ul className="context-menu__collection">
+            <ul className="menu__collection">
               { guides.map(guide => (
-                <li className="context-menu__collection-item">
-                  <Link className="context-menu__link" to={`/${guide.node.parent.name}`}>{ guide.node.frontmatter.title || guide.node.parent.name }</Link>
+                <li className="menu__collection-item">
+                  <Link className="menu__link" to={`/${guide.node.parent.name}`}>{ guide.node.frontmatter.title || guide.node.parent.name }</Link>
                 </li>
               ))}
             </ul>

@@ -81,7 +81,7 @@ const Layout = ({ children, menuContext }) => {
       }
     `}
       render={data => (
-        <>
+        <div className="layout">
           <div
               // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
@@ -92,17 +92,19 @@ const Layout = ({ children, menuContext }) => {
             menuVisible={menuVisible}
             setMenuVisible={setMenuVisible}
           />
-          <Menu
-            context={context}
-            setContext={setContext}
-            menuVisible={menuVisible}
-            setMenuVisible={setMenuVisible}
-          />
-          <div className="content">
-            { children }
+          <div className="content-menu-wrapper">
+            <Menu
+              context={context}
+              setContext={setContext}
+              menuVisible={menuVisible}
+              setMenuVisible={setMenuVisible}
+            />
+            <div className="content">
+              { children }
+            </div>
           </div>
           <Footer />
-        </>
+        </div>
       )}
     />
   );

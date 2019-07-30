@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { SprkAccordion, SprkAccordionItem } from '@sparkdesignsystem/spark-react';
 
 const APIDocumentationMenu = () => (
   <StaticQuery
@@ -37,12 +36,12 @@ const APIDocumentationMenu = () => (
       const { edges: components } = data.allDirectory;
       return (
         <>
-          <h3 className="context-menu__heading">API Documentation</h3>
-          <ul className="context-menu__collection">
+          <h3 className="menu__heading">API Documentation</h3>
+          <ul className="menu__collection">
             {
             components.map((component, index) => (
               <li key={index}>
-                <a className="context-menu__link" href={`#${component.node.name}`}>{component.node.name}</a>
+                <a className="menu__link" href={`#${component.node.name}`}>{component.node.name}</a>
               </li>
             ))
           }

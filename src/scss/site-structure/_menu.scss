@@ -1,48 +1,61 @@
 /* stylelint-disable */
-.context-menu {
+.menu {
   padding: $sprk-space-l;
   margin: $sprk-space-m;
   background-color: $sprk-gray;
+  position: absolute;
+  left: -100%;
+  z-index: 2;
+  width: 95%;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    position: static;
+    width: 300px;
+  }
 }
 
-.context-menu__heading {
+.menu--visible {
+  left: 0;
+}
+
+.menu__heading {
   font-size: 1.18rem;
   font-weight: 400;
   padding: 2rem 0;
 }
 
-.context-menu__collection-heading {
+.menu__collection-heading {
   font-weight: 700;
 }
 
-.context-menu__collection-item {
+.menu__collection-item {
   padding: 0.5rem 0;
 }
 
-.context-menu__collection {
+.menu__collection {
   list-style-type: none;
 }
 
-.context-menu__link {
+.menu__link {
   color: $sprk-black;
   display: block;
   font-weight: 300;
   padding: 0.3rem 0;
 }
 
-.context-menu__link--main {
+.menu__link--main {
   font-size: 1.2rem;
 }
 
-.context-menu__link--active {
+.menu__link--active {
   background-color: darkgrey;
 }
 
-.context-menu__link:hover {
+.menu__link:hover {
   font-weight: 700;
 }
 
-.context-menu__context-control {
+.menu__context-control {
   padding: 1rem;
   width: 100%;
   font-size: 0.9rem;
