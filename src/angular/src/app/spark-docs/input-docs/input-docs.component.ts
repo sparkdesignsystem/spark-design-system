@@ -26,12 +26,11 @@ import { Component } from '@angular/core';
           </span>
         </sprk-input-container>
         <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
-          <label sprkLabel> Disabled Text Input</label>
           <input
+            placeholder="Placeholder"
             disabled
             name="text_input_huge_disabled"
             [ngClass]="{
-              'sprk-b-TextInput--huge': true,
               'sprk-b-TextInput--error': textInput.invalid && textInput.dirty
             }"
             type="text"
@@ -41,20 +40,19 @@ import { Component } from '@angular/core';
             data-id="input-disabled-1"
             sprkInput
           />
+          <label sprkLabel> Disabled Text Input</label>
         </sprk-input-container>
         <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
-          <label class="sprk-u-ScreenReaderText" sprkLabel
-            >Huge Text Input</label
-          >
           <input
+            placeholder="Placeholder"
             name="text_input_huge"
-            class="sprk-b-TextInput--huge"
             type="text"
             [(ngModel)]="text_input_huge"
             required
             #textInput="ngModel"
             sprkInput
           />
+          <label sprkLabel>Huge Text Input</label>
           <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
             <sprk-icon
               iconType="exclamation-filled-small"

@@ -7,14 +7,24 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
 @Component({
   selector: 'sprk-input-container',
   template: `
-    <div [ngClass]="getClasses()">
-      <ng-content select="[sprkLabel]"></ng-content>
+    <div [ngClass]="classList" *ngIf="isHuge; else elseBlock">
       <ng-content select="[sprkInput]"></ng-content>
+      <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprk-select-icon]"></ng-content>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
     </div>
+    <ng-template #elseBlock>
+      <div [ngClass]="classList">
+        <ng-content select="[sprkLabel]"></ng-content>
+        <ng-content select="[sprkInput]"></ng-content>
+        <ng-content select="[sprk-select-icon]"></ng-content>
+        <ng-content select="sprk-selection-item-container"></ng-content>
+        <ng-content select="[sprkHelperText]"></ng-content>
+        <ng-content select="[sprkFieldError]"></ng-content>
+      </div>
+    </ng-template>
   `
 })
 export class SparkInputContainerComponent implements OnInit {
@@ -33,6 +43,8 @@ export class SparkInputContainerComponent implements OnInit {
   id = _.uniqueId();
   input_id = `input_${this.id}`;
   error_id = `error_${this.id}`;
+  isHuge = false;
+  classList;
 
   getClasses(): string {
     const classArray: string[] = ['sprk-b-InputContainer'];
@@ -42,11 +54,16 @@ export class SparkInputContainerComponent implements OnInit {
         classArray.push(className);
       });
     }
-
-    return classArray.join(' ');
+    const hugeIndex = classArray.indexOf('sprk-b-InputContainer--huge');
+    if (hugeIndex >= 0) {
+      this.isHuge = true;
+    }
+    this.classList = classArray.join(' ');
+    return this.classList;
   }
 
   ngOnInit(): void {
+    this.getClasses();
     if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
       this.input.ref.nativeElement.id = this.input_id;
