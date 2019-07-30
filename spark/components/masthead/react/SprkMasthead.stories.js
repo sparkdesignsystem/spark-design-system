@@ -57,7 +57,7 @@ const utilityItems = [
   <SprkButton element="a" to="/button" variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>,
 ];
 storiesOf('Components|Masthead', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkMasthead
       littleNavLinks={links}
       narrowNavLinks={links.concat(addedNarrowNavLinks)}
@@ -65,7 +65,7 @@ storiesOf('Components|Masthead', module)
       utilityContents={utilityItems}
     />
   ))
-  .add('extended', () => (
+  .add('Extended', () => (
     <SprkMasthead
       bigNavLinks={links}
       selector={selector}

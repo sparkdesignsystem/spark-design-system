@@ -6,7 +6,7 @@ import SprkAccordion from './SprkAccordion';
 import SprkAccordionItem from './SprkAccordionItem';
 
 storiesOf('Components|Accordion', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkAccordion>
       <SprkAccordionItem
         onClick={action('clicked')}

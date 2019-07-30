@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import SprkAward from './SprkAward';
 
 storiesOf('Components|Award', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkAward
       heading="Award Component Heading"
       idString="award-1"

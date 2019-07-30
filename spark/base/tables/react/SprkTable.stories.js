@@ -5,7 +5,7 @@ import SprkTable from './SprkTable';
 import SprkButton from '../../../components/buttons/react/SprkButton';
 
 storiesOf('Base|Tables', module)
-  .add('column comparison', () => (
+  .add('Column Comparison', () => (
     <SprkTable
       additionalTableClasses="sprk-b-Table--spacing-medium"
       idString="table-1"
@@ -48,7 +48,7 @@ storiesOf('Base|Tables', module)
       ]}
     />
   ))
-  .add('secondary', () => (
+  .add('Secondary', () => (
     <SprkTable
       variant="secondary"
       additionalTableClasses="sprk-b-Table--spacing-medium"
@@ -89,7 +89,7 @@ storiesOf('Base|Tables', module)
       ]}
     />
   ))
-  .add('grouped columns', () => (
+  .add('Grouped Columns', () => (
     <SprkTable
       variant="grouped"
       additionalTableClasses="sprk-b-Table--spacing-medium"
@@ -127,7 +127,7 @@ storiesOf('Base|Tables', module)
       ]}
     />
   ))
-  .add('row comparison', () => (
+  .add('Row Comparison', () => (
     <SprkTable
       variant="rowComparison"
       additionalTableClasses="sprk-b-Table--spacing-medium"
@@ -172,7 +172,7 @@ storiesOf('Base|Tables', module)
       ]}
     />
   ))
-  .add('secondary row comparison', () => (
+  .add('Secondary Row Comparison', () => (
     <SprkTable
       variant="secondaryRowComparison"
       additionalTableClasses="sprk-b-Table--spacing-medium"

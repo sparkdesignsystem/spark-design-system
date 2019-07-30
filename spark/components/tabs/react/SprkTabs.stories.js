@@ -5,7 +5,7 @@ import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './SprkTabsPanel';
 
 storiesOf('Components|Tabs', module)
-  .add('default', () => (
+  .add('Default', () => (
     <SprkTabs idString="tabs-1">
       <SprkTabsPanel
         isDefaultActive
