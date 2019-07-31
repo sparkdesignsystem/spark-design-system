@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
+import SprkInputLabel from './SprkInputLabel'
 
 const SprkLabelLocationCheck = ({
   children,
@@ -14,28 +15,23 @@ const SprkLabelLocationCheck = ({
     return (
       <>
         {children}
-        <label
-          htmlFor={id}
-          className={classNames('sprk-b-Label', {
-            'sprk-b-Label--with-icon': leadingIcon.length > 0,
-          })}
-        >
-          {label}
-        </label>
+        <SprkInputLabel
+          id={id}
+          leadingIcon={id}
+          hiddenLabel={hiddenLabel}
+          label={label}
+        />
       </>
     );
   }
   return (
     <>
-      <label
-        htmlFor={id}
-        className={classNames('sprk-b-Label', {
-          'sprk-b-Label--with-icon': leadingIcon.length > 0,
-          'sprk-u-ScreenReaderText': hiddenLabel,
-        })}
-      >
-        {label}
-      </label>
+      <SprkInputLabel
+        id={id}
+        leadingIcon={id}
+        hiddenLabel={hiddenLabel}
+        label={label}
+      />
       {children}
     </>
   );
@@ -46,6 +42,7 @@ SprkLabelLocationCheck.propTypes = {
   label: propTypes.string,
   leadingIcon: propTypes.string,
   id: propTypes.string,
+  hiddenLabel: propTypes.bool,
 };
 
 export default SprkLabelLocationCheck;
