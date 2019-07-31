@@ -1,11 +1,11 @@
 /* global document window */
+import { throttle } from 'lodash';
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
 import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
-import throttle from '../node_modules/lodash/throttle';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
@@ -17,9 +17,9 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
 };
 
 /*
-* Add or remove the class depending
-* on if the user is scrolling up or down
-*/
+ * Add or remove the class depending
+ * on if the user is scrolling up or down
+ */
 let direction = scrollYDirection();
 const toggleMenu = scrollDirection => {
   const masthead = document.querySelector('[data-sprk-masthead]');
@@ -31,10 +31,10 @@ const toggleMenu = scrollDirection => {
 };
 
 /*
-* Set initial scroll direction
-* If the scroll direction changes
-* toggle the masthead visibility 
-*/
+ * Set initial scroll direction
+ * If the scroll direction changes
+ * toggle the masthead visibility
+ */
 const checkScrollDirection = throttle(() => {
   const newDirection = scrollYDirection();
   if (direction !== newDirection) {
@@ -43,11 +43,11 @@ const checkScrollDirection = throttle(() => {
   direction = newDirection;
 }, 500);
 
-/* 
-* If the mobile menu is visible
-* add the check scroll event listener
-* otherwise remove it
-*/
+/*
+ * If the mobile menu is visible
+ * add the check scroll event listener
+ * otherwise remove it
+ */
 const toggleScrollEvent = isMenuVisible => {
   let attached = false;
   if (!isMenuVisible) {
@@ -131,18 +131,18 @@ const bindUIEvents = () => {
       )}"]`,
     );
     /*
-    * Check if the mobile menu is visible
-    * on page and set scroll event
-    */
+     * Check if the mobile menu is visible
+     * on page and set scroll event
+     */
     let isMenuVisible;
     window.addEventListener('load', () => {
       isMenuVisible = isElementVisible('.sprk-c-Masthead__menu');
       toggleScrollEvent(isMenuVisible);
     });
     /*
-    * If the mobile menu visibility changes
-    * toggle scroll event listener
-    */
+     * If the mobile menu visibility changes
+     * toggle scroll event listener
+     */
     window.addEventListener(
       'resize',
       throttle(() => {
