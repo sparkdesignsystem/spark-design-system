@@ -24,17 +24,15 @@
     "@babel/core": "^7.4.5",
     "@mdx-js/mdx": "^1.0.21",
     "@mdx-js/react": "^1.0.21",
-    "@storybook/addon-a11y": "^5.2.0-beta.7",
-    "@storybook/addon-actions": "^5.2.0-beta.7",
-    "@storybook/addon-docs": "^5.2.0-beta.7",
-    "@storybook/addon-info": "^5.2.0-beta.7",
-    "@storybook/addon-knobs": "^5.2.0-beta.7",
-    "@storybook/addon-links": "^5.2.0-beta.7",
-    "@storybook/addons": "^5.2.0-beta.7",
+    "@storybook/addon-a11y": "^5.2.0-beta.19",
+    "@storybook/addon-actions": "^5.2.0-beta.19",
+    "@storybook/addon-docs": "^5.2.0-beta.19",
+    "@storybook/addon-knobs": "^5.2.0-beta.19",
+    "@storybook/addon-links": "^5.2.0-beta.19",
+    "@storybook/addons": "^5.2.0-beta.19",
     "@storybook/preset-scss": "^1.0.2",
-    "@storybook/react": "^5.2.0-beta.7",
-    "@storybook/source-loader": "^5.2.0-beta.7",
-    "@storybook/theming": "^5.2.0-beta.7",
+    "@storybook/react": "^5.2.0-beta.19",
+    "@storybook/theming": "^5.2.0-beta.19",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "glob": "^7.1.4",
@@ -51,6 +49,6 @@
   "scripts": {
     "build": "npm install && build-storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./storybook-dist"
+    "build-storybook": "build-storybook"
   }
 }
