@@ -1,1 +1,4 @@
-module.exports = ["@storybook/addon-docs/common/preset"];
+module.exports = [
+  "@storybook/addon-docs/common/preset",
+  "@storybook/preset-scss"
+];
