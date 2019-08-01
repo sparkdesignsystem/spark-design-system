@@ -4,7 +4,7 @@ import Header from './Header';
 import Menu from './Menu';
 import Footer from './Footer';
 
-const Layout = ({ children, menuContext }) => {
+const Layout = ({ children, menuContext, render }) => {
   const [context, setContext] = useState(menuContext || 'guides');
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -18,15 +18,6 @@ const Layout = ({ children, menuContext }) => {
               internal {
                 content
               }
-            }
-          }
-        }
-        allDirectory(filter: {relativePath: {regex: "/^components\\//"}, relativeDirectory: {eq: "components"}}) {
-          edges {
-            node {
-              name
-              relativePath
-              relativeDirectory
             }
           }
         }
@@ -80,7 +71,16 @@ const Layout = ({ children, menuContext }) => {
         }
       }
     `}
-      render={data => (
+    render={data => { 
+
+      const components = Array.from(
+        new Set([
+          ...data.reactMdx.edges.map((edge) => { return edge.node.frontmatter.title;}),
+          ...data.angularMdx.edges.map((edge) => { return edge.node.frontmatter.title;}),
+          ...data.htmlMdx.edges.map((edge) => { return edge.node.frontmatter.title;})
+        ])).sort();
+
+      return(
         <div className="layout">
           <div
               // eslint-disable-next-line react/no-danger
@@ -100,14 +100,15 @@ const Layout = ({ children, menuContext }) => {
               setMenuVisible={setMenuVisible}
             />
             <div className="content">
+              { render && render(data, components) }
               { children }
               <Footer />
             </div>
           </div>
         </div>
       )}
-    />
-  );
-};
+    }
+  />
+)};
 
 export default Layout;
