@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  padding: 2rem;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    margin-left: 4rem;
+  }
+}
+
+.header__menu-button {
+  margin-right: 1rem;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    display: none;
+  }
+}

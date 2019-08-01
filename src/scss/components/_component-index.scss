@@ -1,0 +1,28 @@
+.component-index {
+  margin: 3rem 0;
+}
+
+.component-index__heading {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.component-index-list {
+  background-color: $sprk-gray;
+  padding: 1rem;
+  list-style-type: none;
+  max-width: 300px;
+  text-align: center;
+  
+}
+
+.component-index-list__item {
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.component-index-list__link {
+  text-transform: capitalize;
+}
+

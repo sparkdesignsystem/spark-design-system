@@ -1,0 +1,62 @@
+/* stylelint-disable */
+.menu {
+  background-color: $sprk-gray;
+  left: -100%;
+  margin: 0 $sprk-space-l;
+  max-width: 350px;
+  padding: $sprk-space-l;
+  position: absolute;
+  width: 95%;
+  z-index: 2;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    position: static;
+    width: 25%;
+  }
+}
+
+.menu--visible {
+  left: 0;
+}
+
+.menu__heading {
+  font-size: 1.18rem;
+  font-weight: 400;
+  padding: 2rem 0;
+}
+
+.menu__collection-heading {
+  font-weight: 700;
+}
+
+.menu__collection-item {
+  padding: 0.5rem 0;
+}
+
+.menu__collection {
+  list-style-type: none;
+}
+
+.menu__link {
+  color: $sprk-black;
+  display: block;
+  font-weight: 300;
+  padding: 0.3rem 0;
+}
+
+.menu__link--main {
+  font-size: 1.2rem;
+}
+
+.menu__link--active {
+  background-color: darkgrey;
+}
+
+.menu__link:hover {
+  font-weight: 700;
+}
+
+.menu__select {
+  width: 100%;
+}
+/* stylelint-enable */

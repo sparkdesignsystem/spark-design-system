@@ -14,6 +14,14 @@ module.exports = {
         name: 'spark-components',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: 'src/pages',
+        name: 'mdx-generated-pages',
+      },
+    },
+
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-symbol-set-fetch',
@@ -22,32 +30,14 @@ module.exports = {
           + '/Icons/spark-core-icons-V10.svg',
       },
     },
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-mdx',
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png',
+        defaultLayouts: {
+          default: require.resolve('./src/components/site-structure/Layout.js'),
+        },
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline
-    // functionality // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
