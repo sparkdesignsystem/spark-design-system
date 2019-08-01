@@ -4,9 +4,59 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import SprkAlert from './SprkAlert';
 
 export default {
-  title: 'Components|Alert',
+  title: 'Components|Alerts',
   decorators: [withKnobs],
-  parameters: { component: SprkAlert },
+  parameters: {
+    component: SprkAlert,
+  },
+};
+
+export const defaultStory = () => (
+  <SprkAlert
+    onFocus={action('focus')}
+    message={text('Message', 'This is an alert.')}
+    additionalClasses={text('additionalClasses', '') || undefined}
+    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    iconNameFail={text('iconNameFail', '') || undefined}
+    iconNameSuccess={text('iconNameSuccess', '') || undefined}
+    iconNameInfo={text('iconNameInfo', 'bell')}
+    onDismiss={action('click')}
+    isVisible={boolean('isVisible', true)}
+    isDismissible={boolean('isDismissible', true)}
+    idString={text('idString', 'alert-1')}
+    analyticsString={text('analyticsString', 'alert-1')}
+  />
+);
+
+defaultStory.story = {
+  name: 'Default',
+  parameters: {
+    info: `
+An Alert is a way to notify users without interrupting their actions.
+Alerts are to appear at the top of the page. They consist of an icon
+(in either a success, info, or error state), an area for text, and an
+optional dismiss button.
+
+### Information
+- May have timed visibility (10 seconds) and/or be
+dismissed by the user by clicking the "x" icon.
+- If the content wraps to a new line the icon on
+the left should remain vertically centered, but
+the dismiss icon should remain in place at the top right.
+
+### Restrictions
+- Should fill the width of the viewport.
+- The content should be kept short and concise.
+- role="alert" is required so that assistive
+technology can inform users their attention is needed.
+- The data-id property is provided as a hook for
+automated tools. If you have multiple
+instances of the same variant of a
+component on the same page, make sure
+each instance has a unique data-id property
+("alert-info-1", "alert-info-2", "alert-info-3", etc).
+    `,
+  },
 };
 
 export const success = () => (
@@ -29,6 +79,12 @@ export const success = () => (
 
 success.story = {
   name: 'Success',
+  parameters: {
+    info: `
+These provide positive feedback to a user's action.
+Success Alerts have a checkmark icon.
+    `,
+  },
 };
 
 export const info = () => (
@@ -51,6 +107,12 @@ export const info = () => (
 
 info.story = {
   name: 'Info',
+  parameters: {
+    info: `
+Shows information that is important for a
+client to read. Information Alerts have a Bell icon.
+    `,
+  },
 };
 
 export const fail = () => (
@@ -76,6 +138,13 @@ export const fail = () => (
 
 fail.story = {
   name: 'Fail',
+  parameters: {
+    info: `
+These provide negative feedback to a
+user's action. Fail Alerts have an
+exclamation mark icon.
+    `,
+  },
 };
 
 export const noDismissButton = () => (
@@ -98,25 +167,10 @@ export const noDismissButton = () => (
 
 noDismissButton.story = {
   name: 'No Dismiss Button',
-};
-
-export const defaultStory = () => (
-  <SprkAlert
-    onFocus={action('focus')}
-    message={text('Message', 'This is an alert.')}
-    additionalClasses={text('additionalClasses', '') || undefined}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    iconNameInfo={text('iconNameInfo', 'bell')}
-    onDismiss={action('click')}
-    isVisible={boolean('isVisible', true)}
-    isDismissible={boolean('isDismissible', true)}
-    idString={text('idString', 'alert-1')}
-    analyticsString={text('analyticsString', 'alert-1')}
-  />
-);
-
-defaultStory.story = {
-  name: 'Default',
+  parameters: {
+    info: `
+Alerts can be used without the dismiss button.
+Here is a Success Alert that is not able to be dismissed.
+    `,
+  },
 };
