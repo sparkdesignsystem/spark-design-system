@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
             <div class="sprk-b-ErrorText">This field is required.</div>
           </span>
         </sprk-input-container>
-        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+        <sprk-huge-input-container>
           <input
             placeholder="Placeholder"
             disabled
@@ -41,8 +41,8 @@ import { Component } from '@angular/core';
             sprkInput
           />
           <label sprkLabel> Disabled Text Input</label>
-        </sprk-input-container>
-        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+        </sprk-huge-input-container>
+        <sprk-huge-input-container>
           <input
             placeholder="Placeholder"
             name="text_input_huge"
@@ -60,7 +60,7 @@ import { Component } from '@angular/core';
             ></sprk-icon>
             <div class="sprk-b-ErrorText">This field is required.</div>
           </span>
-        </sprk-input-container>
+        </sprk-huge-input-container>
         <sprk-selection-container>
           <label sprkLabel>Checkbox Group Label</label>
           <sprk-selection-item-container>

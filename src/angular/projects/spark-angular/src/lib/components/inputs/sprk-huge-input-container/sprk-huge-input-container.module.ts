@@ -9,4 +9,4 @@ import { SparkHugeInputContainerComponent } from './sprk-huge-input-container.co
   declarations: [SparkHugeInputContainerComponent],
   exports: [SparkHugeInputContainerComponent]
 })
-export class SparkInputContainerModule {}
+export class SparkHugeInputContainerModule {}

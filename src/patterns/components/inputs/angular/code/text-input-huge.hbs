@@ -1,8 +1,8 @@
-<sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+<sprk-huge-input-container>
   <input
     placeholder="Placeholder"
     name="text_input"
-    [ngClass]="{ 'sprk-b-TextInput--huge': true, 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
+    [ngClass]="{'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
     type="text"
     [(ngModel)]="text_input"
     required
@@ -10,4 +10,4 @@
     data-id="input-1"
     sprkInput>
   <label sprkLabel>Text Input Label</label>
-</sprk-input-container>
+</sprk-huge-input-container>
