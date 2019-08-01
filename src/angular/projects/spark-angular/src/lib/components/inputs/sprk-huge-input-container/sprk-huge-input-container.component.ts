@@ -5,11 +5,11 @@ import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-i
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 
 @Component({
-  selector: 'sprk-input-container',
+  selector: 'sprk-huge-input-container',
   template: `
     <div [ngClass]="getClasses()">
-      <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprkInput]"></ng-content>
+      <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprk-select-icon]"></ng-content>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
@@ -17,7 +17,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
     </div>
   `
 })
-export class SparkInputContainerComponent implements OnInit {
+export class SparkHugeInputContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
@@ -35,7 +35,10 @@ export class SparkInputContainerComponent implements OnInit {
   error_id = `error_${this.id}`;
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-b-InputContainer'];
+    const classArray: string[] = [
+      'sprk-b-InputContainer',
+      'sprk-b-InputContainer--huge'
+    ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
