@@ -21,6 +21,7 @@ const Menu = ({ context, setContext, menuVisible }) => (
     />
     <select
       className="menu__select"
+      defaultValue={context}
       onChange={
         (e) => {
           setContext(e.target.value);
@@ -33,8 +34,8 @@ const Menu = ({ context, setContext, menuVisible }) => (
         }
       }
     >
-      <option value="guides" selected={context === 'guides'}>Guides</option>
-      <option value="apidocumentation" selected={context === 'apidocumentation'}>API Documentation</option>
+      <option value="guides">Guides</option>
+      <option value="apidocumentation">API Documentation</option>
     </select>
 
     { context === 'guides'

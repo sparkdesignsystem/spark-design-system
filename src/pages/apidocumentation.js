@@ -7,15 +7,6 @@ const APIDocumenation = () => (
   <StaticQuery
     query={graphql`
       {
-        allDirectory(filter: {relativePath: {regex: "/^components\\//"}, relativeDirectory: {eq: "components"}}) {
-          edges {
-            node {
-              name
-              relativePath
-              relativeDirectory
-            }
-          }
-        }
         reactMdx: allMdx(filter: {fileAbsolutePath: {regex: "/react/"}}) {
           edges {
             node {
@@ -67,18 +58,24 @@ const APIDocumenation = () => (
       }
     `}
     render={(data) => {
-      const { edges: components } = data.allDirectory;
+      const components = Array.from(
+        new Set([
+          ...data.reactMdx.edges.map((edge) => { return edge.node.frontmatter.title;}),
+          ...data.angularMdx.edges.map((edge) => { return edge.node.frontmatter.title;}),
+          ...data.htmlMdx.edges.map((edge) => { return edge.node.frontmatter.title;})
+        ])).sort();
+      
       return (
         <Layout menuContext="apidocumentation">
           <h1 className="sprk-b-TypeDisplayTwo sprk-b-PageTitle">API Documentation</h1>
           {components.map((component, index) => (
             <ComponentIndex
               key={index}
-              id={component.node.name}
-              name={component.node.name}
-              reactLink={data.reactMdx.edges.filter(edge => edge.node.frontmatter.title.toLowerCase() === component.node.name).length === 1 ? component.node.name : null}
-              angularLink={data.angularMdx.edges.filter(edge => edge.node.frontmatter.title.toLowerCase() === component.node.name).length === 1 ? component.node.name : null}
-              htmlLink={data.htmlMdx.edges.filter(edge => edge.node.frontmatter.title.toLowerCase() === component.node.name).length === 1 ? component.node.name : null}
+              id={component}
+              name={component}
+              reactLink={data.reactMdx.edges.filter(edge => edge.node.frontmatter.title === component).length === 1 ? component : null}
+              angularLink={data.angularMdx.edges.filter(edge => edge.node.frontmatter.title === component).length === 1 ? component : null}
+              htmlLink={data.htmlMdx.edges.filter(edge => edge.node.frontmatter.title === component).length === 1 ? component : null}
             />
           ))}
         </Layout>
