@@ -6,7 +6,7 @@ import { SprkTextInput } from '@sparkdesignsystem/spark-react';
 import GuidesMenu from '../context/GuidesMenu';
 import APIDocumentationMenu from '../context/APIDocumentationMenu';
 
-const Menu = ({ context, setContext, menuVisible }) => (
+const Menu = ({ context, components, setContext, menuVisible }) => (
   <div className={classNames(
     'menu',
     { 'menu--visible': menuVisible },
@@ -43,7 +43,7 @@ const Menu = ({ context, setContext, menuVisible }) => (
     }
     {
       context === 'apidocumentation'
-      && <APIDocumentationMenu />
+      && <APIDocumentationMenu components={components} />
     }
   </div>
 );

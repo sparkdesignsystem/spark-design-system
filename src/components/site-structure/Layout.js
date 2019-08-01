@@ -94,6 +94,7 @@ const Layout = ({ children, menuContext, render }) => {
           />
           <div className="content-menu-wrapper">
             <Menu
+              components={components}
               context={context}
               setContext={setContext}
               menuVisible={menuVisible}
