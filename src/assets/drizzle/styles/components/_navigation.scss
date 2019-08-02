@@ -24,6 +24,7 @@ $drizzle-nav-padding: 1rem;
 .#{$app-namespace}-c-Navigation__logo-container {
   align-items: center;
   display: flex;
+  justify-content: space-between;
 
   @media (min-width: $drizzle-nav-switch-breakpoint) {
     margin-bottom: 2rem;
@@ -31,8 +32,6 @@ $drizzle-nav-padding: 1rem;
 }
 
 .#{$app-namespace}-c-Navigation__logo {
-  flex: calc(100% - 16px);
-
   @media (min-width: $drizzle-nav-switch-breakpoint) {
     margin: 0;
     text-align: center;
@@ -75,7 +74,24 @@ svg {
   }
 }
 
+.#{$app-namespace}-c-Navigation__mobile-search {
+  flex: 1;
+  margin: 0 1.4rem;
+  max-width: 300px;
+
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    display: none;
+  }
+}
+
+.#{$app-namespace}-c-Navigation.is-active
+.#{$app-namespace}-c-Navigation__mobile-search {
+  visibility: hidden;
+}
+
 .#{$app-namespace}-c-Navigation__search-container {
+  display: none;
+
   @media (min-width: $drizzle-nav-switch-breakpoint) {
     display: block;
   }
