@@ -6,7 +6,7 @@ import Layout from '../components/site-structure/Layout';
 const APIDocumenation = () => {
     return (
       <Layout menuContext="apidocumentation"
-        render={(data, components) => {
+        render={(components, reactStoriedComponents, angularStoriedComponents, vanillaStoriedComponents) => {
           return(
             <>
               <h1 className="sprk-b-TypeDisplayTwo sprk-b-PageTitle">API Documentation</h1>
@@ -15,9 +15,9 @@ const APIDocumenation = () => {
                     key={index}
                     id={component}
                     name={component}
-                    reactLink={data.reactMdx.edges.filter(edge => edge.node.frontmatter.title === component).length === 1 ? component : null}
-                    angularLink={data.angularMdx.edges.filter(edge => edge.node.frontmatter.title === component).length === 1 ? component : null}
-                    htmlLink={data.htmlMdx.edges.filter(edge => edge.node.frontmatter.title === component).length === 1 ? component : null}
+                    reactLink={reactStoriedComponents.includes(component) ? component : null}
+                    angularLink={angularStoriedComponents.includes(component) ? component : null}
+                    htmlLink={vanillaStoriedComponents.includes(component) ? component : null}
                   />
                 ))}
             </>
