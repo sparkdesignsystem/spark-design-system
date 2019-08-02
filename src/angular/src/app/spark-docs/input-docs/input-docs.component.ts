@@ -25,6 +25,38 @@ import { Component } from '@angular/core';
             <div class="sprk-b-ErrorText">This field is required.</div>
           </span>
         </sprk-input-container>
+        <sprk-input-container additionalClasses="sprk-b-InputContainer--huge">
+          <label sprkLabel>Text Input *</label>
+          <input
+            placeholder="Placeholder Text"
+            name="text_input"
+            type="text"
+            [(ngModel)]="text_input"
+            required
+            #textInput="ngModel"
+            sprkInput
+          />
+        </sprk-input-container>
+        <sprk-huge-input-container>
+          <input
+            class="sprk-b-TextInput--label-hidden"
+            placeholder="Placeholder"
+            name="text_input_huge"
+            type="text"
+            [(ngModel)]="text_input_huge"
+            required
+            #textInput="ngModel"
+            sprkInput
+          />
+          <label sprkLabel>Huge Text Input</label>
+          <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
+            <sprk-icon
+              iconType="exclamation-filled-small"
+              additionalClasses="sprk-b-ErrorIcon"
+            ></sprk-icon>
+            <div class="sprk-b-ErrorText">This field is required.</div>
+          </span>
+        </sprk-huge-input-container>
         <sprk-huge-input-container>
           <input
             placeholder="Placeholder"
