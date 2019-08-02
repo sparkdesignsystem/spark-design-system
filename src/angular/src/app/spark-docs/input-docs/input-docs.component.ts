@@ -29,9 +29,9 @@ import { Component } from '@angular/core';
           <label sprkLabel>Text Input *</label>
           <input
             placeholder="Placeholder Text"
-            name="text_input"
+            name="text_input_huge_2"
             type="text"
-            [(ngModel)]="text_input"
+            [(ngModel)]="text_input_huge_2"
             required
             #textInput="ngModel"
             sprkInput
@@ -41,9 +41,9 @@ import { Component } from '@angular/core';
           <input
             class="sprk-b-TextInput--label-hidden"
             placeholder="Placeholder"
-            name="text_input_huge"
+            name="text_input_huge_1"
             type="text"
-            [(ngModel)]="text_input_huge"
+            [(ngModel)]="text_input_huge_1"
             required
             #textInput="ngModel"
             sprkInput
