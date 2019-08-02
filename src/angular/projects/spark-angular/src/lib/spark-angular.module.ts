@@ -18,6 +18,7 @@ import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/s
 import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
+import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
 import { SprkIconInputContainerModule } from './components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkSelectionContainerModule } from './components/inputs/sprk-selection-container/sprk-selection-container.module';
@@ -65,6 +66,7 @@ import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk
     SprkUnorderedListModule,
     SprkListItemModule,
     SparkInputContainerModule,
+    SprkHugeInputContainerModule,
     SprkTextareaContainerModule,
     SprkIconInputContainerModule,
     SprkSelectionContainerModule,
