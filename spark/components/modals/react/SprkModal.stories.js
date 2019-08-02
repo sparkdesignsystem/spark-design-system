@@ -1,10 +1,16 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
-import { SprkModal } from './SprkModal';
+import SprkModal from './SprkModal';
 
-storiesOf('Components|Modal', module);
-// .add('choice', () => (
-// ))
-// .add('informational', () => (
-// ));
+export default {
+  title: 'Components|Modal',
+  parameters: { component: SprkModal },
+};
+
+export const defaultStory = () => (
+  <div>Modal!</div>
+);
+
+defaultStory.story = {
+  name: 'Default',
+};

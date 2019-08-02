@@ -77,7 +77,9 @@ const SprkAlert = (props) => {
 };
 
 SprkAlert.propTypes = {
-  /** Determines whether to render the alert */
+  /**
+   * Determines whether to render the alert.
+   */
   isVisible: PropTypes.bool,
   /** The alert message that will be rendered inside the paragraph tab */
   message: PropTypes.string.isRequired,

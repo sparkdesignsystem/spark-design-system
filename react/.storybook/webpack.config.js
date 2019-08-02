@@ -12,10 +12,6 @@ module.exports = ({ config }) => {
   config.module.rules[0].use[0].options.plugins = [
     require.resolve('@babel/plugin-proposal-class-properties'),
   ];
-  config.module.rules.push({
-    test: /\.scss$/,
-    use: ['style-loader', 'css-loader', 'sass-loader']
-  });
   config.node = {
     fs: 'empty'
   }

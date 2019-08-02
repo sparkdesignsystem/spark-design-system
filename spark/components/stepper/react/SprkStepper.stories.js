@@ -1,12 +1,16 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+// import React from 'react';
 
-storiesOf('Components|Stepper', module);
-// .add('default', () => (
-// ))
-// .add('with descriptions', () => (
-// ))
-// .add('with dark background', () => (
-// ))
-// .add('with dark background and carousel', () => (
-// ));
+// import SprkStepper from './SprkStepper';
+
+// export default {
+//   title: 'Components|Stepper',
+//   parameters: { component: SprkStepper },
+// };
+
+// export const defaultStory = () => (
+//   <div>Hey!</div>
+// );
+
+// defaultStory.story = {
+//   name: 'Default',
+// };

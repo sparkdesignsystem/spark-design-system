@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import SprkMasthead from './SprkMasthead';
 import SprkButton from '../../buttons/react/SprkButton';
@@ -34,45 +33,80 @@ const addedNarrowNavLinks = [
   },
 ];
 const selector = {
-  choiceFunction: (text) => {
+  choiceFunction: text => {
     console.log(text);
   },
-  items: [{
-    title: 'Selection Choice Title 1',
-    information: 'Additional Information',
-    value: 'choice-1',
-  },
-  {
-    title: 'Selection Choice Title 2',
-    information: 'Additional Information',
-    to: '/button',
-    value: 'choice-2',
-  },
+  items: [
+    {
+      title: 'Selection Choice Title 1',
+      information: 'Additional Information',
+      value: 'choice-1',
+    },
+    {
+      title: 'Selection Choice Title 2',
+      information: 'Additional Information',
+      to: '/button',
+      value: 'choice-2',
+    },
   ],
-  footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
+  footer: (
+    <SprkButton
+      variant="tertiary"
+      additionalClasses="sprk-c-Button--compact"
+      onClick={() => {
+        console.log('Clicked!');
+      }}
+    >
+      Placeholder
+    </SprkButton>
+  ),
 };
 const utilityItems = [
-  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
-  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
-  <SprkButton element="a" to="/button" variant="secondary" additionalClasses="sprk-c-Button--compact">Sign In</SprkButton>,
+  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">
+    (555) 555-5555
+  </SprkLink>,
+  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">
+    Talk To Us
+  </SprkLink>,
+  <SprkButton
+    element="a"
+    to="/button"
+    variant="secondary"
+    additionalClasses="sprk-c-Button--compact"
+  >
+    Sign In
+  </SprkButton>,
 ];
-storiesOf('Components|Masthead', module)
-  .add('Default', () => (
-    <SprkMasthead
-      littleNavLinks={links}
-      narrowNavLinks={links.concat(addedNarrowNavLinks)}
-      siteLogo={<div />}
-      utilityContents={utilityItems}
-    />
-  ))
-  .add('Extended', () => (
-    <SprkMasthead
-      bigNavLinks={links}
-      selector={selector}
-      narrowSelector={selector}
-      narrowNavLinks={links.concat(addedNarrowNavLinks)}
-      siteLogo={<div />}
-      utilityContents={utilityItems}
-      variant="extended"
-    />
-  ));
+
+export default {
+  title: 'Components|Masthead',
+};
+
+export const defaultStory = () => (
+  <SprkMasthead
+    littleNavLinks={links}
+    narrowNavLinks={links.concat(addedNarrowNavLinks)}
+    siteLogo={<div />}
+    utilityContents={utilityItems}
+  />
+);
+
+defaultStory.story = {
+  name: 'Default',
+};
+
+export const extended = () => (
+  <SprkMasthead
+    bigNavLinks={links}
+    selector={selector}
+    narrowSelector={selector}
+    narrowNavLinks={links.concat(addedNarrowNavLinks)}
+    siteLogo={<div />}
+    utilityContents={utilityItems}
+    variant="extended"
+  />
+);
+
+extended.story = {
+  name: 'Extended',
+};

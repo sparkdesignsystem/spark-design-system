@@ -1,59 +1,18 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import SprkTable from './SprkTable';
 import SprkButton from '../../../components/buttons/react/SprkButton';
 
-storiesOf('Base|Tables', module)
-  .add('Column Comparison', () => (
-    <SprkTable
-      additionalTableClasses="sprk-b-Table--spacing-medium"
-      idString="table-1"
-      columns={
-        [
-          {
-            name: 'data1',
-            header: 'Column Heading',
-          },
-          {
-            name: 'data2',
-            header: 'Column Heading',
-          },
-          {
-            name: 'data3',
-            header: 'Column Heading',
-          },
-        ]
-      }
-      rows={[{
-        data1: 'Data 1',
-        data2: 'Data 2',
-        data3: 'Data 3',
-      },
+export default {
+  title: 'Base|Tables',
+};
+
+export const columnComparison = () => (
+  <SprkTable
+    additionalTableClasses="sprk-b-Table--spacing-medium"
+    idString="table-1"
+    columns={[
       {
-        data1: 'Data 1',
-        data2: 'Data 2',
-        data3: 'Data 3',
-      },
-      {
-        data1: 'Data 1',
-        data2: 'Data 2',
-        data3: 'Data 3',
-      },
-      {
-        data1: 'Data 1',
-        data2: 'Data 2',
-        data3: 'Data 3',
-      },
-      ]}
-    />
-  ))
-  .add('Secondary', () => (
-    <SprkTable
-      variant="secondary"
-      additionalTableClasses="sprk-b-Table--spacing-medium"
-      idString="table-2"
-      columns={[{
         name: 'data1',
         header: 'Column Heading',
       },
@@ -65,12 +24,8 @@ storiesOf('Base|Tables', module)
         name: 'data3',
         header: 'Column Heading',
       },
-      ]}
-      rows={[{
-        data1: 'Data 1',
-        data2: 'Data 2',
-        data3: 'Data 3',
-      },
+    ]}
+    rows={[
       {
         data1: 'Data 1',
         data2: 'Data 2',
@@ -86,16 +41,75 @@ storiesOf('Base|Tables', module)
         data2: 'Data 2',
         data3: 'Data 3',
       },
-      ]}
-    />
-  ))
-  .add('Grouped Columns', () => (
-    <SprkTable
-      variant="grouped"
-      additionalTableClasses="sprk-b-Table--spacing-medium"
-      idString="table-3"
-      columns={[
-        [{
+      {
+        data1: 'Data 1',
+        data2: 'Data 2',
+        data3: 'Data 3',
+      },
+    ]}
+  />
+);
+
+columnComparison.story = {
+  name: 'Column Comparison',
+};
+
+export const secondary = () => (
+  <SprkTable
+    variant="secondary"
+    additionalTableClasses="sprk-b-Table--spacing-medium"
+    idString="table-2"
+    columns={[
+      {
+        name: 'data1',
+        header: 'Column Heading',
+      },
+      {
+        name: 'data2',
+        header: 'Column Heading',
+      },
+      {
+        name: 'data3',
+        header: 'Column Heading',
+      },
+    ]}
+    rows={[
+      {
+        data1: 'Data 1',
+        data2: 'Data 2',
+        data3: 'Data 3',
+      },
+      {
+        data1: 'Data 1',
+        data2: 'Data 2',
+        data3: 'Data 3',
+      },
+      {
+        data1: 'Data 1',
+        data2: 'Data 2',
+        data3: 'Data 3',
+      },
+      {
+        data1: 'Data 1',
+        data2: 'Data 2',
+        data3: 'Data 3',
+      },
+    ]}
+  />
+);
+
+secondary.story = {
+  name: 'Secondary',
+};
+
+export const groupedColumns = () => (
+  <SprkTable
+    variant="grouped"
+    additionalTableClasses="sprk-b-Table--spacing-medium"
+    idString="table-3"
+    columns={[
+      [
+        {
           header: 'Column Heading',
           rowspan: 2,
         },
@@ -107,8 +121,9 @@ storiesOf('Base|Tables', module)
           header: 'Column Heading',
           rowspan: 2,
         },
-        ],
-        [{
+      ],
+      [
+        {
           header: 'SubHeading',
         },
         {
@@ -117,22 +132,28 @@ storiesOf('Base|Tables', module)
         {
           header: 'Subheading',
         },
-        ],
-      ]}
-      rows={[
-        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
-        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
-        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
-        ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
-      ]}
-    />
-  ))
-  .add('Row Comparison', () => (
-    <SprkTable
-      variant="rowComparison"
-      additionalTableClasses="sprk-b-Table--spacing-medium"
-      idString="table-5"
-      columns={[{
+      ],
+    ]}
+    rows={[
+      ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+      ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+      ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+      ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+    ]}
+  />
+);
+
+groupedColumns.story = {
+  name: 'Grouped Columns',
+};
+
+export const rowComparison = () => (
+  <SprkTable
+    variant="rowComparison"
+    additionalTableClasses="sprk-b-Table--spacing-medium"
+    idString="table-5"
+    columns={[
+      {
         name: 'data1',
         header: 'Column',
       },
@@ -144,13 +165,8 @@ storiesOf('Base|Tables', module)
         name: 'data3',
         header: 'Column',
       },
-      ]}
-      rows={[{
-        rowHeading: 'Row Heading',
-        data1: 'Data',
-        data2: 'Data',
-        data3: 'Data',
-      },
+    ]}
+    rows={[
       {
         rowHeading: 'Row Heading',
         data1: 'Data',
@@ -169,27 +185,34 @@ storiesOf('Base|Tables', module)
         data2: 'Data',
         data3: 'Data',
       },
-      ]}
-    />
-  ))
-  .add('Secondary Row Comparison', () => (
-    <SprkTable
-      variant="secondaryRowComparison"
-      additionalTableClasses="sprk-b-Table--spacing-medium"
-      idString="table-5"
-      columns={[{
+      {
+        rowHeading: 'Row Heading',
+        data1: 'Data',
+        data2: 'Data',
+        data3: 'Data',
+      },
+    ]}
+  />
+);
+
+rowComparison.story = {
+  name: 'Row Comparison',
+};
+
+export const secondaryRowComparison = () => (
+  <SprkTable
+    variant="secondaryRowComparison"
+    additionalTableClasses="sprk-b-Table--spacing-medium"
+    idString="table-5"
+    columns={[
+      {
         name: 'data1',
       },
       {
         name: 'data2',
       },
-      ]}
-      rows={[{
-        rowHeading: 'Row Heading',
-        data1: 'Data',
-        data2: 'Data',
-        button: <SprkButton variant="secondary">Learn More</SprkButton>,
-      },
+    ]}
+    rows={[
       {
         rowHeading: 'Row Heading',
         data1: 'Data',
@@ -208,6 +231,16 @@ storiesOf('Base|Tables', module)
         data2: 'Data',
         button: <SprkButton variant="secondary">Learn More</SprkButton>,
       },
-      ]}
-    />
-  ));
+      {
+        rowHeading: 'Row Heading',
+        data1: 'Data',
+        data2: 'Data',
+        button: <SprkButton variant="secondary">Learn More</SprkButton>,
+      },
+    ]}
+  />
+);
+
+secondaryRowComparison.story = {
+  name: 'Secondary Row Comparison',
+};
