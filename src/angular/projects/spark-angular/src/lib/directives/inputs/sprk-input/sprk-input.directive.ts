@@ -10,8 +10,6 @@ import {
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
-  @Input() ngModel: string;
-
   constructor(public ref: ElementRef) {}
 
   @HostListener('change')
