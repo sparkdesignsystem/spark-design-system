@@ -21,51 +21,27 @@ const Layout = ({ children, menuContext, render }) => {
             }
           }
         }
-        reactMdx: allMdx(filter: {fileAbsolutePath: {regex: "/react/"}}) {
+        reactAllFile: allFile(filter: {absolutePath: {regex: "/\\/react\\//"}, name: {regex: "/stories/"}}) {
           edges {
             node {
               id
-              frontmatter {
-                title
-              }
-              parent {
-                ... on File {
-                  id
-                  name
-                }
-              }
+              name
             }
           }
         }
-        angularMdx: allMdx(filter: {fileAbsolutePath: {regex: "/angular/"}}) {
+        angularAllFile: allFile(filter: {absolutePath: {regex: "/\\/angular\\//"}, name: {regex: "/stories/"}}) {
           edges {
             node {
               id
-              frontmatter {
-                title
-              }
-              parent {
-                ... on File {
-                  id
-                  name
-                }
-              }
+              name
             }
           }
         }
-        htmlMdx: allMdx(filter: {fileAbsolutePath: {regex: "/vanilla/"}}) {
+        htmlAllFile: allFile(filter: {absolutePath: {regex: "/\\/vanilla\\//"}, name: {regex: "/stories/"}}) {
           edges {
             node {
               id
-              frontmatter {
-                title
-              }
-              parent {
-                ... on File {
-                  id
-                  name
-                }
-              }
+              name
             }
           }
         }
@@ -73,11 +49,39 @@ const Layout = ({ children, menuContext, render }) => {
     `}
     render={data => { 
 
+      const reactStoriedComponents =  
+        data.reactAllFile.edges.map((edge) => { 
+          return edge
+            .node
+            .name
+            .split('.')[0]
+            .replace(/Sprk/, '')
+            .toLowerCase();
+        });
+
+      const angularStoriedComponents =
+        data.angularAllFile.edges.map((edge) => { 
+          return edge
+            .node
+            .name
+            .split('.')[0]
+            .replace(/sprk\-/, '');
+        });
+
+      const vanillaStoriedComponents = 
+        data.htmlAllFile.edges.map((edge) => { 
+        return edge
+          .node
+          .name
+          .split('.')[0]
+          .replace(/Sprk/, '');
+        });
+
       const components = Array.from(
         new Set([
-          ...data.reactMdx.edges.map((edge) => { return edge.node.frontmatter.title;}),
-          ...data.angularMdx.edges.map((edge) => { return edge.node.frontmatter.title;}),
-          ...data.htmlMdx.edges.map((edge) => { return edge.node.frontmatter.title;})
+          ...reactStoriedComponents,
+          ...angularStoriedComponents,
+          ...vanillaStoriedComponents
         ])).sort();
 
       return(
@@ -101,7 +105,7 @@ const Layout = ({ children, menuContext, render }) => {
               setMenuVisible={setMenuVisible}
             />
             <div className="content">
-              { render && render(data, components) }
+              { render && render(components, reactStoriedComponents, angularStoriedComponents, vanillaStoriedComponents) }
               { children }
               <Footer />
             </div>
