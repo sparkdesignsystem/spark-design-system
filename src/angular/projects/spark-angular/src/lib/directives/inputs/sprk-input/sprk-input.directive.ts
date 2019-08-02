@@ -1,10 +1,28 @@
-import { Directive, ElementRef, OnInit, HostListener } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  OnInit,
+  HostListener,
+  Input
+} from '@angular/core';
 
 @Directive({
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
+  @Input() ngModel: string;
+
   constructor(public ref: ElementRef) {}
+
+  @HostListener('change')
+  OnChange($event) {
+    const value = (this.ref.nativeElement as HTMLInputElement).value;
+    if (value.length > 0) {
+      this.ref.nativeElement.classList.add('sprk-b-TextInput--float-label');
+    } else {
+      this.ref.nativeElement.classList.remove('sprk-b-TextInput--float-label');
+    }
+  }
 
   ngOnInit(): void {
     if (this.ref.nativeElement.nodeName === 'SELECT') {
