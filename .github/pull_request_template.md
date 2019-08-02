@@ -2,7 +2,7 @@
 A clear and concise description of what this PR does.
 
 ### Associated Issue 
-Issue Number that this PR is closing out.
+Fixes (Issue Number that this PR is closing out)
 
 ## Please check off completed items as you work.
 If a checklist item or section does not apply to your PR
