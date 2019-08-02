@@ -8,17 +8,25 @@ $drizzle-nav-padding: 1rem;
 .#{$app-namespace}-c-Navigation__header {
   background: $drizzle-nav-background-color;
   color: $drizzle-white;
-  display: flex;
-  justify-content: space-between;
   padding: $drizzle-nav-padding;
   position: fixed;
   width: 100%;
   z-index: $drizzle-layer-height-m;
 
   @media (min-width: $drizzle-nav-switch-breakpoint) {
+    display: block;
+    height: 200px;
     padding: 4rem 0 2rem;
-    position: static;
     width: $drizzle-layout-nav-width;
+  }
+}
+
+.#{$app-namespace}-c-Navigation__logo-container {
+  align-items: center;
+  display: flex;
+
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -63,6 +71,13 @@ svg {
   @media (min-width: $drizzle-nav-switch-breakpoint) {
     display: block;
     padding-bottom: 0;
+    margin-top: 200px;
+  }
+}
+
+.#{$app-namespace}-c-Navigation__search-container {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    display: block;
   }
 }
 
@@ -72,7 +87,7 @@ svg {
   display: block;
   height: 100%;
   width: 100%;
-  top: 64px;
+  top: 62px;
   left: 0;
   overflow: auto;
   padding-top: 1rem;
