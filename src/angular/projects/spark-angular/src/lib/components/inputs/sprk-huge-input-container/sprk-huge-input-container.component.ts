@@ -17,7 +17,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
     </div>
   `
 })
-export class SparkHugeInputContainerComponent implements OnInit {
+export class SprkHugeInputContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()

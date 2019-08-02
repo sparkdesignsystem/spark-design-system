@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SparkHugeInputContainerComponent } from './sprk-huge-input-container.component';
+import { SprkHugeInputContainerComponent } from './sprk-huge-input-container.component';
 
 @Component({
   selector: 'sprk-test',
@@ -19,12 +19,12 @@ import { SparkHugeInputContainerComponent } from './sprk-huge-input-container.co
 })
 class TestComponent {}
 
-describe('SparkHugeInputContainerComponent', () => {
+describe('SprkHugeInputContainerComponent', () => {
   let testFixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
 
-  let inputContainerFixture: ComponentFixture<SparkHugeInputContainerComponent>;
-  let inputContainerComponent: SparkHugeInputContainerComponent;
+  let inputContainerFixture: ComponentFixture<SprkHugeInputContainerComponent>;
+  let inputContainerComponent: SprkHugeInputContainerComponent;
   let inputContainerElement: HTMLElement;
 
   let labelElement: HTMLElement;
@@ -38,7 +38,7 @@ describe('SparkHugeInputContainerComponent', () => {
         SprkInputDirective,
         SprkFieldErrorDirective,
         TestComponent,
-        SparkHugeInputContainerComponent
+        SprkHugeInputContainerComponent
       ]
     }).compileComponents();
   }));
@@ -48,7 +48,7 @@ describe('SparkHugeInputContainerComponent', () => {
     component = testFixture.componentInstance;
 
     inputContainerFixture = TestBed.createComponent(
-      SparkHugeInputContainerComponent
+      SprkHugeInputContainerComponent
     );
     inputContainerComponent = inputContainerFixture.componentInstance;
 
