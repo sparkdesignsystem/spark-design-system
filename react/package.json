@@ -47,7 +47,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build-netlify": "npm install && build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
