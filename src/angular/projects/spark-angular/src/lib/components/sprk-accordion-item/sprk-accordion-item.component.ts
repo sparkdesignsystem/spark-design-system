@@ -60,7 +60,7 @@ import {
       state(
         'open',
         style({
-          height: '100%',
+          height: '100px',
           display: 'block'
         })
       ),
