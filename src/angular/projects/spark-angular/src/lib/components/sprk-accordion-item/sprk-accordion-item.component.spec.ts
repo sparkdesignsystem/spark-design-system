@@ -92,10 +92,10 @@ describe('SprkAccordionItemComponent', () => {
     );
   });
 
-  it('details should not be present if isOpen is false', () => {
+  it('details should not be visible if isOpen is false', () => {
     component.isOpen = false;
     fixture.detectChanges();
-    expect(accordionDetailsElement.style.display).toEqual('none');
+    expect(accordionDetailsElement.style.height).toEqual('0px');
   });
 
   it('should add data-id when idString has a value', () => {
