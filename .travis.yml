@@ -7,8 +7,6 @@ addons:
     - google-chrome-stable
 
 language: node_js
-node_js:
-  - "8.10.0"
 
 services:
   - xvfb
