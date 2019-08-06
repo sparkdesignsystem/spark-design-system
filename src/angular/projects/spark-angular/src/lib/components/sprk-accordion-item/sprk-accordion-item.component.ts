@@ -52,9 +52,9 @@ import {
       state(
         'closed',
         style({
-          height: '0'
+          height: '0',
           // display: 'none'
-          // overflow: 'hidden'
+          overflow: 'hidden'
         })
       ),
       state(
