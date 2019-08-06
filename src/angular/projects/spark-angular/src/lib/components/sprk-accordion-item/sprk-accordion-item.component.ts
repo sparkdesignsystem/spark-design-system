@@ -52,16 +52,18 @@ import {
       state(
         'closed',
         style({
-          height: '0',
-          display: 'none',
-          overflow: 'hidden'
+          background: 'blue'
+          // height: '0',
+          // display: 'none',
+          // overflow: 'hidden'
         })
       ),
       state(
         'open',
         style({
-          height: '100px',
-          display: 'block'
+          background: 'green'
+          // height: '*',
+          // display: 'block'
         })
       ),
       transition('closed => open', animate('300ms ease-in')),
