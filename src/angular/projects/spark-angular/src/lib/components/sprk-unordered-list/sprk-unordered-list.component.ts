@@ -1,10 +1,23 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ContentChildren, QueryList } from '@angular/core';
+import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.component';
 
 @Component({
   selector: 'sprk-unordered-list',
   template: `
     <ul [ngClass]="getClasses()" [attr.data-id]="idString">
-      <ng-content></ng-content>
+      <li
+        *ngFor="
+          let item of items;
+          let i = index;
+          let isLast = last;
+          let isFirst = first
+        "
+        [attr.data-analytics]="item.analyticsString"
+        [attr.data-id]="item.idString"
+        [ngClass]="item.additionalClasses"
+      >
+        <ng-container [ngTemplateOutlet]="item.content"></ng-container>
+      </li>
     </ul>
   `
 })
@@ -15,6 +28,10 @@ export class SprkUnorderedListComponent {
   additionalClasses: string;
   @Input()
   idString: string;
+
+  @ContentChildren(SprkListItemComponent) items: QueryList<
+    SprkListItemComponent
+  >;
 
   getClasses(): string {
     const classArray: string[] = [''];
