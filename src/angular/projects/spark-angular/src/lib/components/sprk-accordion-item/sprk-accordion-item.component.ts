@@ -92,13 +92,13 @@ export class SprkAccordionItemComponent implements OnInit {
   }
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-c-Accordion__item'];
+    const classArray: string[] = [
+      'sprk-c-Accordion__item',
+      'sprk-u-Overflow--hidden'
+    ];
 
     if (this.isOpen) {
-      classArray.push(
-        'sprk-c-Accordion__item--open',
-        'sprk-u-Overflow--hidden'
-      );
+      classArray.push('sprk-c-Accordion__item--open');
     }
 
     if (this.isActive) {
