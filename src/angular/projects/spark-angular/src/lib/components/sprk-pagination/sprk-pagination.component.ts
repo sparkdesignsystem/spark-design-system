@@ -12,7 +12,6 @@ import {
     <nav
       aria-label="Pagination Navigation"
       [ngClass]="getClasses()"
-      *ngIf="paginationType === 'default'"
       [attr.data-id]="idString"
     >
       <sprk-unordered-list
@@ -26,6 +25,7 @@ import {
             [isDisabled]="currentPage === 1"
             additionalClasses="sprk-c-Pagination__icon"
             [analyticsString]="analyticsStringLinkPrev"
+            ariaLabel="Previous Page"
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
@@ -35,7 +35,7 @@ import {
           </sprk-link>
         </li>
 
-        <li>
+        <li *ngIf="showNumbers()">
           <sprk-link
             (click)="goToPage($event, 1)"
             additionalClasses="sprk-c-Pagination__link {{
@@ -49,103 +49,23 @@ import {
           </sprk-link>
         </li>
 
-        <li>
+        <li *ngIf="showNumbers() && currentPage !== 2 && totalPages() === 3">
           <sprk-link
             (click)="goToPage($event, 2)"
-            additionalClasses="sprk-c-Pagination__link {{
-              currentPage === 2 && 'sprk-c-Pagination__link--current'
-            }}"
-            [analyticsString]="analyticsStringSecondLink"
-            [ariaCurrent]="currentPage === 2"
+            additionalClasses="sprk-c-Pagination__link"
+            [ariaCurrent]="false"
             ariaLabel="Page 2"
           >
             2
           </sprk-link>
         </li>
 
-        <li>
-          <sprk-link
-            (click)="goToPage($event, 3)"
-            additionalClasses="sprk-c-Pagination__link {{
-              currentPage === 3 && 'sprk-c-Pagination__link--current'
-            }}"
-            [analyticsString]="analyticsStringThirdLink"
-            [ariaCurrent]="currentPage === 3"
-            ariaLabel="Page 3"
-          >
-            3
-          </sprk-link>
-        </li>
-
-        <li>
-          <sprk-link
-            linkType="plain"
-            [isDisabled]="isLastPage()"
-            (click)="goForward($event, currentPage)"
-            additionalClasses="sprk-c-Pagination__icon"
-            [analyticsString]="analyticsStringLinkNext"
-          >
-            <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
-            <sprk-icon
-              additionalClasses="sprk-c-Icon--stroke-current-color"
-              iconType="chevron-right"
-            ></sprk-icon>
-          </sprk-link>
-        </li>
-      </sprk-unordered-list>
-    </nav>
-
-    <nav
-      aria-label="Pagination Navigation"
-      [ngClass]="getClasses()"
-      *ngIf="paginationType === 'long'"
-      [attr.data-id]="idString"
-    >
-      <sprk-unordered-list
-        listType="horizontal"
-        additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-small"
-      >
-        <li>
-          <sprk-link
-            linkType="plain"
-            [isDisabled]="currentPage === 1"
-            (click)="goBack($event, currentPage)"
-            additionalClasses="sprk-c-Pagination__icon"
-          >
-            <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon
-              additionalClasses="sprk-c-Icon--stroke-current-color"
-              iconType="chevron-left"
-            ></sprk-icon>
-          </sprk-link>
-        </li>
-
-        <li>
-          <sprk-link
-            (click)="goToPage($event, 1)"
-            additionalClasses="sprk-c-Pagination__link {{
-              currentPage === 1 && 'sprk-c-Pagination__link--current'
-            }}"
-            [analyticsString]="analyticsStringFirstLink"
-            ariaLabel="Page 1"
-          >
-            1
-          </sprk-link>
-        </li>
-
-        <li
-          [ngClass]="{
-            'sprk-u-Display--none': currentPage === 1 || currentPage === 2
-          }"
-        >
+        <li *ngIf="showNumbers() && currentPage > 2 && totalPages() > 3">
           ...
         </li>
 
         <li
-          [ngClass]="{
-            'sprk-u-Display--none':
-              currentPage === 1 || currentPage === totalPages()
-          }"
+          *ngIf="showNumbers() && currentPage > 1 && currentPage < totalPages()"
         >
           <sprk-link
             (click)="goToPage($event, currentPage)"
@@ -159,22 +79,22 @@ import {
         </li>
 
         <li
-          [ngClass]="{
-            'sprk-u-Display--none':
-              currentPage === totalPages() || currentPage === totalPages() - 1
-          }"
+          *ngIf="
+            showNumbers() && currentPage < totalPages() - 1 && totalPages() > 3
+          "
         >
           ...
         </li>
 
-        <li>
+        <li *ngIf="showNumbers() && totalPages() > 1">
           <sprk-link
             (click)="goToPage($event, totalPages())"
             additionalClasses="sprk-c-Pagination__link {{
               currentPage === totalPages() && 'sprk-c-Pagination__link--current'
             }}"
-            [analyticsString]="analyticsStringThirdLink"
             ariaLabel="Page {{ totalPages() }}"
+            [analyticsString]="analyticsStringThirdLink"
+            [ariaCurrent]="currentPage === totalPages()"
           >
             {{ totalPages() }}
           </sprk-link>
@@ -187,50 +107,7 @@ import {
             (click)="goForward($event, currentPage)"
             additionalClasses="sprk-c-Pagination__icon"
             [analyticsString]="analyticsStringLinkNext"
-          >
-            <span class="sprk-u-ScreenReaderText">Next</span>
-            <sprk-icon
-              additionalClasses="sprk-c-Icon--stroke-current-color"
-              iconType="chevron-right"
-            ></sprk-icon>
-          </sprk-link>
-        </li>
-      </sprk-unordered-list>
-    </nav>
-
-    <nav
-      aria-label="Pagination Navigation"
-      [ngClass]="getClasses()"
-      *ngIf="paginationType === 'pager'"
-      [attr.data-id]="idString"
-    >
-      <sprk-unordered-list
-        listType="horizontal"
-        additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-large"
-      >
-        <li class="sprk-c-Pagination__item">
-          <sprk-link
-            linkType="plain"
-            [isDisabled]="currentPage === 1"
-            (click)="goBack($event, currentPage)"
-            additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
-            [analyticsString]="analyticsStringLinkPrev"
-          >
-            <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
-            <sprk-icon
-              additionalClasses="sprk-c-Icon--stroke-current-color"
-              iconType="chevron-left"
-            ></sprk-icon>
-          </sprk-link>
-        </li>
-
-        <li class="sprk-c-Pagination__item">
-          <sprk-link
-            linkType="plain"
-            [isDisabled]="isLastPage()"
-            (click)="goForward($event, currentPage)"
-            additionalClasses="sprk-c-Pagination__icon sprk-b-Link--simple"
-            [analyticsString]="analyticsStringLinkNext"
+            ariaLabel="Next Page"
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
             <sprk-icon
@@ -245,11 +122,12 @@ import {
 })
 export class SprkPaginationComponent {
   @Input()
-  paginationType = 'default'; // default, long, pager
+  // long and default have been combined and render the same now
+  paginationType = 'default';
   @Input()
-  nextLinkText = 'Next'; // Text to display for next link
+  nextLinkText = 'Next'; // Screenreader text for next link
   @Input()
-  prevLinkText = 'Prev'; // Text to display for previous link
+  prevLinkText = 'Prev'; // Screenreader text for previous link
   @Input()
   currentPage = 1; // The currently active page
   @Input()
@@ -281,26 +159,32 @@ export class SprkPaginationComponent {
 
   goToPage(event, page): void {
     event.preventDefault();
-    // Update currentPage to new selected page
     this.currentPage = page;
-    // Emit out click event and page when clicked
     this.pageClick.emit({ event, page });
   }
 
   goBack(event, page): void {
     event.preventDefault();
+    let newPage = page;
+
     if (this.currentPage > 1) {
-      this.currentPage = this.currentPage - 1;
+      newPage = this.currentPage - 1;
+      this.currentPage = newPage;
     }
-    this.previousClick.emit({ event, page });
+
+    this.previousClick.emit({ event, page: newPage });
   }
 
   goForward(event, page): void {
     event.preventDefault();
+    let newPage = page;
+
     if (this.currentPage < this.totalPages()) {
-      this.currentPage = this.currentPage + 1;
+      newPage = this.currentPage + 1;
+      this.currentPage = newPage;
     }
-    this.nextClick.emit({ event, page });
+
+    this.nextClick.emit({ event, page: newPage });
   }
 
   // Returns total # of
@@ -313,6 +197,12 @@ export class SprkPaginationComponent {
   // Returns true if currently on the last page
   isLastPage(): boolean {
     return this.currentPage === this.totalPages();
+  }
+
+  // Returns true if the component is in either the default or long variant
+  // These variants render the same now
+  showNumbers(): boolean {
+    return this.paginationType === 'default' || this.paginationType === 'long';
   }
 
   getClasses(): string {
