@@ -1,12 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
 @Component({
   selector: 'sprk-accordion-item',
@@ -47,27 +41,7 @@ import {
       </div>
     </li>
   `,
-  animations: [
-    trigger('toggleContent', [
-      state(
-        'closed',
-        style({
-          height: '0',
-          display: 'none',
-          overflow: 'hidden'
-        })
-      ),
-      state(
-        'open',
-        style({
-          height: '*',
-          display: 'block'
-        })
-      ),
-      transition('closed => open', animate('300ms ease-in')),
-      transition('open => closed', animate('300ms ease-out'))
-    ])
-  ]
+  animations: [toggleAnimations.toggleContent]
 })
 export class SprkAccordionItemComponent implements OnInit {
   @Input()
@@ -121,7 +95,10 @@ export class SprkAccordionItemComponent implements OnInit {
     const classArray: string[] = ['sprk-c-Accordion__item'];
 
     if (this.isOpen) {
-      classArray.push('sprk-c-Accordion__item--open');
+      classArray.push(
+        'sprk-c-Accordion__item--open',
+        'sprk-u-Overflow--hidden'
+      );
     }
 
     if (this.isActive) {
