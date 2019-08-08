@@ -1,15 +1,15 @@
 import { Component, ContentChild, Input, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 
 @Component({
-  selector: 'sprk-input-container',
+  selector: 'sprk-huge-input-container',
   template: `
     <div [ngClass]="getClasses()">
-      <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprkInput]"></ng-content>
+      <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprk-select-icon]"></ng-content>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
@@ -17,7 +17,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
     </div>
   `
 })
-export class SparkInputContainerComponent implements OnInit {
+export class SprkHugeInputContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
@@ -30,12 +30,15 @@ export class SparkInputContainerComponent implements OnInit {
   @ContentChild(SprkFieldErrorDirective)
   error: SprkFieldErrorDirective;
 
-  id = _.uniqueId();
+  id = uniqueId();
   input_id = `input_${this.id}`;
   error_id = `error_${this.id}`;
 
   getClasses(): string {
-    const classArray: string[] = ['sprk-b-InputContainer'];
+    const classArray: string[] = [
+      'sprk-b-InputContainer',
+      'sprk-b-InputContainer--huge'
+    ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {

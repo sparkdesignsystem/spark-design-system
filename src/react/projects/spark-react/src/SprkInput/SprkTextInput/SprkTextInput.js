@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkIcon from '../../SprkIcon/SprkIcon';
+import SprkInputIconCheck from './components/SprkInputIconCheck';
+import SprkLabelLocationCheck from './components/SprkLabelLocationCheck';
+import SprkTextAreaCheck from './components/SprkTextareaCheck';
 
 class SprkTextInput extends Component {
   constructor(props) {
@@ -41,63 +44,31 @@ class SprkTextInput extends Component {
           'sprk-b-InputContainer--huge': type === 'hugeTextInput',
         })}
       >
-        <div
-          className={classNames({
-            'sprk-b-TextInputIconContainer': leadingIcon.length > 0 || textIcon,
-            'sprk-b-TextInputIconContainer--has-text-icon': textIcon,
-          })}
-        >
-          {leadingIcon.length > 0 && (
-            <SprkIcon
-              iconName={leadingIcon}
-              additionalClasses="
-                sprk-c-Icon--m sprk-c-Icon--stroke-current-color
-              "
-            />
-          )}
-          <label
-            htmlFor={id}
-            className={classNames('sprk-b-Label', {
-              'sprk-b-Label--with-icon': leadingIcon.length > 0,
-              'sprk-u-ScreenReaderText':
-                hiddenLabel || type === 'hugeTextInput',
-            })}
+        <SprkInputIconCheck leadingIcon={leadingIcon} textIcon={textIcon}>
+          <SprkLabelLocationCheck
+            type={type}
+            label={label}
+            leadingIcon={leadingIcon}
+            hiddenLabel={hiddenLabel}
+            id={id}
           >
-            {label}
-          </label>
-          {type === 'textarea' && (
-            <textarea
-              className="sprk-b-TextArea sprk-u-Width-100"
+            <SprkTextAreaCheck
               id={id}
-              data-analytics={analyticsString}
-              data-id={idString}
+              analyticsString={analyticsString}
+              idString={idString}
+              forwardedRef={forwardedRef}
               type={type}
-              aria-invalid={!valid}
-              aria-describedby={errorContainerId}
-              value={valid && formatter(value) ? formatter(value) : value}
+              formatter={formatter}
+              errorContainerId={errorContainerId}
+              hiddenLabel={hiddenLabel}
+              valid={valid}
+              leadingIcon={leadingIcon}
+              textIcon={textIcon}
+              value={value}
               {...rest}
             />
-          )}
-          {type !== 'textarea' && (
-            <input
-              className={classNames('sprk-b-TextInput sprk-u-Width-100', {
-                'sprk-b-TextInput--error': !valid,
-                'sprk-b-TextInput--has-svg-icon': leadingIcon.length > 0,
-                'sprk-b-TextInput--has-text-icon': textIcon,
-                'sprk-b-TextInput--huge': type === 'hugeTextInput',
-              })}
-              id={id}
-              data-analytics={analyticsString}
-              data-id={idString}
-              ref={forwardedRef}
-              type={type}
-              aria-invalid={!valid}
-              aria-describedby={errorContainerId}
-              value={valid && formatter(value) ? formatter(value) : value}
-              {...rest}
-            />
-          )}
-        </div>
+          </SprkLabelLocationCheck>
+        </SprkInputIconCheck>
         {children}
         {helperText.length > 0 && (
           <div className="sprk-b-HelperText">{helperText}</div>

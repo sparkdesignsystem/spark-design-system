@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
-import { uniqueId } from 'lodash';
 
 class SprkStepper extends Component {
   constructor(props) {
@@ -111,13 +110,15 @@ class SprkStepper extends Component {
 
   updateSliderPosition(position) {
     this.setState({
-      sliderStyle: { top: position }
+      sliderStyle: {
+        top: position
+      },
     });
   }
 
   render() {
     const { additionalClasses, children, idString, hasDarkBackground, ...other } = this.props;
-    const { activeStepIndex } = this.state;
+    const { activeStepIndex, sliderStyle } = this.state;
 
     let hasDesc = false;
     let descCount = 0;
@@ -152,7 +153,7 @@ class SprkStepper extends Component {
           <SprkStepperSlider
             title={children[activeStepIndex].props.title} // active title
             contents={children[activeStepIndex].props.children} // active contents
-            sliderStyle={this.state.sliderStyle}
+            sliderStyle={sliderStyle}
           />
           }
 
