@@ -16,9 +16,9 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
 
-  @ContentChild(SprkSelectionLabelDirective)
+  @ContentChild(SprkSelectionLabelDirective, { static: true })
   label: SprkSelectionLabelDirective;
-  @ContentChild(SprkSelectionInputDirective)
+  @ContentChild(SprkSelectionInputDirective, { static: true })
   input: SprkSelectionInputDirective;
 
   id = _.uniqueId();

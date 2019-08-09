@@ -30,9 +30,9 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
   @Input()
   additionalClasses: string;
 
-  @ContentChild(SprkLabelDirective)
+  @ContentChild(SprkLabelDirective, { static: false })
   label: SprkLabelDirective;
-  @ContentChild(SprkFieldErrorDirective)
+  @ContentChild(SprkFieldErrorDirective, { static: false })
   error: SprkFieldErrorDirective;
   @ContentChildren(SprkSelectionItemContainerComponent)
   selectionItems: QueryList<SprkSelectionItemContainerComponent>;
