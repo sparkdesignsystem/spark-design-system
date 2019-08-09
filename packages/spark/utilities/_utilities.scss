@@ -171,6 +171,7 @@
 .sprk-u-TextCrop--none {
   &::before,
   &::after {
+    content: none !important;
     margin-bottom: 0 !important;
     margin-top: 0 !important;
   }
