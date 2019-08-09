@@ -10,7 +10,9 @@ import { toggleAnimations } from './sprk-toggle-animations';
     >
       <sprk-link
         linkType="simple"
-        additionalClasses="{{ titleFontClass }} sprk-b-Link--has-icon"
+        additionalClasses="{{
+          titleFontClass
+        }} sprk-b-Link--has-icon sprk-u-TextCrop--none"
         (click)="toggle($event)"
         [ariaExpanded]="isOpen ? 'true' : 'false'"
         [analyticsString]="analyticsString"

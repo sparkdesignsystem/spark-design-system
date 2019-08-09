@@ -168,6 +168,14 @@
   text-transform: none !important;
 }
 
+.sprk-u-TextCrop--none {
+  &::before,
+  &::after {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
 .sprk-u-WordWrap--break-word {
   word-wrap: break-word !important;
 }
