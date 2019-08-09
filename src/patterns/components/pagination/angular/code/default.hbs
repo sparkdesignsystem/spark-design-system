@@ -1,12 +1,8 @@
 <sprk-pagination
-  paginationType="default"
-  [currentPage]="1"
-  nextLinkText="Next"
-  prevLinkText="Prev"
   [totalItems]="3"
   [itemsPerPage]="1"
-  (previousClick)="yourGoBackFunction($event)"
-  (pageClick)="yourGoToPageFunction($event)"
-  (nextClick)="yourGoForwardFunction($event)"
-  idString="pagination-1">
+  (previousClick)="yourGoBackFunction($event, currentPage)"
+  (pageClick)="yourGoToPageFunction($event, currentPage)"
+  (nextClick)="yourGoForwardFunction($event, currentPage)"
+>
 </sprk-pagination>
