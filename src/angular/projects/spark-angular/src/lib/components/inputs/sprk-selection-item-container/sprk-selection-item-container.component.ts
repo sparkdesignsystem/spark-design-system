@@ -9,6 +9,7 @@ import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-sel
     <div [ngClass]="getClasses()">
       <ng-content select="[sprkSelectionInput]"></ng-content>
       <ng-content select="[sprkSelectionLabel]"></ng-content>
+      <ng-content></ng-content>
     </div>
   `
 })

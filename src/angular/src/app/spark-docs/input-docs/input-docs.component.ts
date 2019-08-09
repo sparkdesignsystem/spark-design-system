@@ -104,6 +104,7 @@ import { Component } from '@angular/core';
               #checkboxInput1="ngModel"
             />
             <label sprkSelectionLabel>Item 1</label>
+            <div>Extra div being passed through in selection item</div>
           </sprk-selection-item-container>
           <sprk-selection-item-container>
             <input
@@ -125,6 +126,7 @@ import { Component } from '@angular/core';
             />
             <label sprkSelectionLabel>Item 3</label>
           </sprk-selection-item-container>
+          <div>Extra div being passed through in selection container</div>
         </sprk-selection-container>
         <sprk-selection-container>
           <label sprkLabel>Radio Group Label</label>
