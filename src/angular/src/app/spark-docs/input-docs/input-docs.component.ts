@@ -511,11 +511,6 @@ export class InputDocsComponent {
     this.checkbox_input1 === true
       ? (this.isChecked = true)
       : (this.isChecked = false);
-
-    console.log(this.checkbox_input1);
-    console.log(this.checkbox_input1a);
-    console.log(this.checkbox_input2);
-    console.log(this.checkbox_input3);
   }
 
   onRadioSelect($event) {
