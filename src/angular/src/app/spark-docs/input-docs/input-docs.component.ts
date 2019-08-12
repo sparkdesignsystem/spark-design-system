@@ -95,16 +95,32 @@ import { Component } from '@angular/core';
         </sprk-huge-input-container>
         <sprk-selection-container>
           <label sprkLabel>Checkbox Group Label</label>
-          <sprk-selection-item-container>
+          <sprk-selection-item-container
+            additionalClasses="angular-docs-u-FlexWrap--wrap"
+          >
             <input
+              class="sprk-u-mbm"
               type="checkbox"
               name="checkbox_input"
               [(ngModel)]="checkbox_input1"
               sprkSelectionInput
               #checkboxInput1="ngModel"
             />
-            <label sprkSelectionLabel>Item 1</label>
-            <div>Extra div being passed through in selection item</div>
+            <label sprkSelectionLabel class="sprk-u-Width-90 sprk-u-mbm"
+              >Item 1</label
+            >
+            <sprk-selection-item-container
+              additionalClasses="sprk-u-plm sprk-u-mbn"
+            >
+              <input
+                type="checkbox"
+                name="checkbox_input"
+                [(ngModel)]="checkbox_input100"
+                sprkSelectionInput
+                #checkboxInput100="ngModel"
+              />
+              <label sprkSelectionLabel>Item 1: Extra Field</label>
+            </sprk-selection-item-container>
           </sprk-selection-item-container>
           <sprk-selection-item-container>
             <input
