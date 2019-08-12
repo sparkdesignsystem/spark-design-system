@@ -185,7 +185,9 @@ export class SprkPaginationComponent {
       this.currentPage = newPage;
     }
 
-    this.previousClick.emit({ event, page: newPage });
+    // Page is still returning the old page. This allows us to
+    // close Issue 1401 without introducing a breaking change.
+    this.previousClick.emit({ event, page, newPage });
   }
 
   goForward(event, page): void {
@@ -197,7 +199,9 @@ export class SprkPaginationComponent {
       this.currentPage = newPage;
     }
 
-    this.nextClick.emit({ event, page: newPage });
+    // Page is still returning the old page. This allows us to
+    // close Issue 1401 without introducing a breaking change.
+    this.nextClick.emit({ event, page, newPage });
   }
 
   // Returns total # of

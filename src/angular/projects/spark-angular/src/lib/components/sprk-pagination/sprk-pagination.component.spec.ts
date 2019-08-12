@@ -95,65 +95,60 @@ describe('SprkPaginationComponent', () => {
     expect(called).toEqual(true);
   });
 
-  it('should emit previousClick when previous link is clicked', done => {
-    let called = false;
-    component.currentPage = 2;
-    fixture.detectChanges();
-    component.previousClick.subscribe(g => {
-      called = true;
-      done();
-    });
-    let item = element.querySelectorAll('.sprk-b-Link');
-    item = item[0];
-    item.click();
-    expect(called).toEqual(true);
-  });
-
   it('should emit previousClick when prev link is clicked', done => {
     let called = false;
-    const expectedPageNum = 1;
-    let actualPageNum = -1;
+    const expectedPage = 2;
+    const expectedNewPage = 1;
+    let actualPage = -1;
+    let actualNewPage = -1;
 
     component.currentPage = 2;
-    component.totalItems = 100;
-    component.itemsPerPage = 25;
+    component.totalItems = 3;
+    component.itemsPerPage = 1;
 
     component.previousClick.subscribe(g => {
       called = true;
-      actualPageNum = g.page;
+      actualPage = g.page;
+      actualNewPage = g.newPage;
       done();
     });
 
-    let item = element.querySelectorAll('.sprk-b-Link');
-    item = item[0];
+    const item = element.querySelectorAll('a.sprk-c-Pagination__icon')[0];
     item.click();
 
     expect(called).toEqual(true);
-    expect(actualPageNum).toEqual(expectedPageNum);
+    // Page is still returning the old page. This allows us to
+    // close Issue 1401 without introducing a breaking change.
+    expect(actualPage).toEqual(expectedPage);
+    expect(actualNewPage).toEqual(expectedNewPage);
   });
 
   it('should emit nextClick when next link is clicked', done => {
     let called = false;
     const expectedPage = 2;
+    const expectedNewPage = 3;
     let actualPage = -1;
+    let actualNewPage = -1;
 
-    component.currentPage = 1;
+    component.currentPage = 2;
     component.totalItems = 3;
     component.itemsPerPage = 1;
-    fixture.detectChanges();
 
     component.nextClick.subscribe(g => {
       called = true;
       actualPage = g.page;
+      actualNewPage = g.newPage;
       done();
     });
 
-    let item = element.querySelectorAll('.sprk-b-Link');
-    item = item[4];
+    const item = element.querySelectorAll('a.sprk-c-Pagination__icon')[1];
     item.click();
 
-    expect(actualPage).toEqual(expectedPage);
     expect(called).toEqual(true);
+    // Page is still returning the old page. This allows us to
+    // close Issue 1401 without introducing a breaking change.
+    expect(actualPage).toEqual(expectedPage);
+    expect(actualNewPage).toEqual(expectedNewPage);
   });
 
   it('should add data-id when idString has a value', () => {
