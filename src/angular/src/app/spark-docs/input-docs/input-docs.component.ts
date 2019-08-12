@@ -102,15 +102,24 @@ import { Component } from '@angular/core';
               class="sprk-u-mbm"
               type="checkbox"
               name="checkbox_input"
+              [ngClass]="{ 'sprk-u-mbm': checkboxChecked }"
               [(ngModel)]="checkbox_input1"
               sprkSelectionInput
               #checkboxInput1="ngModel"
+              (change)="onCheckboxSelect($event)"
             />
-            <label sprkSelectionLabel class="sprk-u-Width-90 sprk-u-mbm"
-              >Item 1</label
+            <label
+              sprkSelectionLabel
+              [ngClass]="{
+                'sprk-u-mbm': checkboxChecked,
+                'sprk-u-Width-90': checkboxChecked
+              }"
             >
+              Item 1
+            </label>
             <sprk-selection-item-container
               additionalClasses="sprk-u-plm sprk-u-mbn"
+              *ngIf="checkboxChecked"
             >
               <input
                 type="checkbox"
@@ -435,6 +444,7 @@ export class InputDocsComponent {
   passwordType = 'password';
   ssnType = 'password';
   form_submitted = false;
+  checkboxChecked = false;
 
   dpConfig = {
     mode: 'dp-below'
@@ -454,5 +464,11 @@ export class InputDocsComponent {
 
   onSubmit(event): void {
     this.form_submitted = true;
+  }
+
+  onCheckboxSelect(event) {
+    event.target.checked === true
+      ? (this.checkboxChecked = true)
+      : (this.checkboxChecked = false);
   }
 }
