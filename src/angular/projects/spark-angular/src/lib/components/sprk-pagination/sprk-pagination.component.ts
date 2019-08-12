@@ -121,19 +121,19 @@ import {
   `
 })
 export class SprkPaginationComponent {
-  @Input()
   // long and default have been combined and render the same now
+  @Input()
   paginationType = 'default';
-  @Input()
-  nextLinkText = 'Next'; // Screenreader text for next link
-  @Input()
-  prevLinkText = 'Prev'; // Screenreader text for previous link
-  @Input()
-  currentPage = 1; // The currently active page
   @Input()
   totalItems: number; // Total number of items
   @Input()
   itemsPerPage: number; // Total number of items to show per page
+  @Input()
+  additionalClasses: string;
+  @Input()
+  nextLinkText = 'Next'; // Screenreader text for next link
+  @Input()
+  prevLinkText = 'Prev'; // Screenreader text for previous link
   @Input()
   analyticsStringFirstLink: string;
   @Input()
@@ -146,8 +146,21 @@ export class SprkPaginationComponent {
   analyticsStringLinkPrev: string;
   @Input()
   idString: string;
+
+  private _currentPage = 1;
   @Input()
-  additionalClasses: string;
+  set currentPage(value: number) {
+    if (value > this.totalPages()) {
+      value = this.totalPages();
+    } else if (value < 1) {
+      value = 1;
+    }
+
+    this._currentPage = value;
+  }
+  get currentPage(): number {
+    return this._currentPage;
+  }
 
   // Will be emitted to the parent component on the click event
   @Output()

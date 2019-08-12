@@ -255,4 +255,100 @@ describe('SprkPaginationComponent', () => {
       ).length
     ).toEqual(1); // 1 ellipsis
   });
+
+  it('handles currentPage outside bounds', () => {
+    // should render 5 pages
+    component.totalItems = 5;
+    component.itemsPerPage = 1;
+    component.currentPage = 99;
+
+    fixture.detectChanges();
+
+    expect(component.currentPage).toEqual(5);
+
+    component.currentPage = -99;
+    fixture.detectChanges();
+
+    expect(component.currentPage).toEqual(1);
+  });
+
+  it('defaults currentPage to 1', () => {
+    expect(component.currentPage).toEqual(1);
+  });
+
+  it('renders ellipses with more than 3 pages in long variant', () => {
+    // < 1 ... 3 ... 5 >
+    component.paginationType = 'long';
+    component.totalItems = 50;
+    component.itemsPerPage = 10;
+    component.currentPage = 3;
+    fixture.detectChanges();
+
+    expect(
+      element.querySelectorAll('a.sprk-c-Pagination__icon').length
+    ).toEqual(2); // 2 chevrons
+    expect(
+      element.querySelectorAll('a.sprk-c-Pagination__link').length
+    ).toEqual(3); // 3 pages
+    expect(
+      Array.from(element.querySelectorAll('li')).filter(
+        x => (x as HTMLElement).innerText === '...'
+      ).length
+    ).toEqual(2); // 2 ellipses
+
+    // < 1 ... 4 5 >
+    component.currentPage = 4;
+    fixture.detectChanges();
+    expect(
+      Array.from(element.querySelectorAll('li')).filter(
+        x => (x as HTMLElement).innerText === '...'
+      ).length
+    ).toEqual(1); // 1 ellipsis
+  });
+
+  it('renders three numbered pages and no ellipses with 3 or fewer pages in long variant', () => {
+    // < 1 2 3 >
+    component.paginationType = 'long';
+    component.totalItems = 30;
+    component.itemsPerPage = 10;
+    fixture.detectChanges();
+
+    expect(
+      element.querySelectorAll('a.sprk-c-Pagination__icon').length
+    ).toEqual(2); // 2 chevrons
+    expect(
+      element.querySelectorAll('a.sprk-c-Pagination__link').length
+    ).toEqual(3); // 3 pages
+    expect(
+      Array.from(element.querySelectorAll('a')).filter(
+        x => (x as HTMLElement).innerText === '...'
+      ).length
+    ).toEqual(0); // 0 chevrons
+  });
+
+  it('should not change page when going back from page 1', () => {
+    // < 1 2 3 >
+    component.totalItems = 3;
+    component.itemsPerPage = 1;
+    component.currentPage = 1;
+    fixture.detectChanges();
+
+    const goBackArrow = element.querySelectorAll('.sprk-b-Link')[0];
+    goBackArrow.click();
+
+    expect(component.currentPage).toEqual(1);
+  });
+
+  it('should not change page when going forward from last page', () => {
+    // < 1 2 3 >
+    component.totalItems = 3;
+    component.itemsPerPage = 1;
+    component.currentPage = 3;
+    fixture.detectChanges();
+
+    const goForwardArrow = element.querySelectorAll('.sprk-b-Link')[4];
+    goForwardArrow.click();
+
+    expect(component.currentPage).toEqual(3);
+  });
 });
