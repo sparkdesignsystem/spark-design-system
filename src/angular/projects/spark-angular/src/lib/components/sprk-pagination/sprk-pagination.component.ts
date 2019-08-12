@@ -219,7 +219,7 @@ export class SprkPaginationComponent {
   // Returns true if the component is in either the default or long variant
   // These variants render the same now
   showNumbers(): boolean {
-    return this.paginationType === 'default' || this.paginationType === 'long';
+    return this.paginationType !== 'pager';
   }
 
   getClasses(): string {
