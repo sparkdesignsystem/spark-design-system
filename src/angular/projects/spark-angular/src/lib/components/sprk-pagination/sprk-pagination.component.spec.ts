@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
-import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
+import { SprkOrderedListComponent } from '../sprk-ordered-list/sprk-ordered-list.component';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 
 describe('SprkPaginationComponent', () => {
@@ -15,7 +15,7 @@ describe('SprkPaginationComponent', () => {
       imports: [RouterTestingModule],
       declarations: [
         SprkPaginationComponent,
-        SprkUnorderedListComponent,
+        SprkOrderedListComponent,
         SprkIconComponent,
         SprkLinkComponent
       ]
