@@ -17,16 +17,4 @@ export class SprkListItemComponent {
   additionalClasses: string;
 
   @ViewChild(TemplateRef) content: TemplateRef<any>;
-
-  getClasses(): string {
-    const classArray: string[] = [];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-
-      return classArray.join(' ');
-    }
-  }
 }

@@ -1,14 +1,42 @@
+import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkOrderedListComponent } from './sprk-ordered-list.component';
+import { SprkOrderedListModule } from './sprk-ordered-list.module';
+import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
+
+@Component({
+  selector: 'sprk-test',
+  template: `
+    <sprk-ordered-list>
+      <sprk-list-item
+        additionalClasses="test-class"
+        analyticsString="test-analytics-string"
+        idString="test-id-string"
+      >
+        Content
+      </sprk-list-item>
+      <sprk-list-item additionalClasses="no-id">
+        Content
+      </sprk-list-item>
+    </sprk-ordered-list>
+  `
+})
+class SprkTestingComponent {}
 
 describe('SprkOrderedListComponent', () => {
   let component: SprkOrderedListComponent;
   let fixture: ComponentFixture<SprkOrderedListComponent>;
   let element;
 
+  // for testing list items
+  let listItemFixture: ComponentFixture<SprkTestingComponent>;
+  let listItem;
+  let noId;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkOrderedListComponent]
+      declarations: [SprkTestingComponent],
+      imports: [SprkListItemModule, SprkOrderedListModule]
     }).compileComponents();
   }));
 
@@ -17,6 +45,12 @@ describe('SprkOrderedListComponent', () => {
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('ol');
     fixture.detectChanges();
+
+    // testing project list items
+    listItemFixture = TestBed.createComponent(SprkTestingComponent);
+    listItemFixture.detectChanges();
+    listItem = listItemFixture.nativeElement.querySelector('li');
+    noId = listItemFixture.nativeElement.querySelector('.no-id');
   });
 
   it('should create', () => {
@@ -57,5 +91,25 @@ describe('SprkOrderedListComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  // Testing list items
+  it('should add the correct classes if additionalClasses have values', () => {
+    expect(listItem.classList.contains('test-class')).toBeTruthy();
+  });
+
+  it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
+    expect(listItem.hasAttribute('data-analytics')).toEqual(true);
+    expect(listItem.getAttribute('data-analytics')).toEqual(
+      'test-analytics-string'
+    );
+  });
+
+  it('should add data-id when idString has a value', () => {
+    expect(listItem.getAttribute('data-id')).toEqual('test-id-string');
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    expect(noId.getAttribute('data-id')).toBeNull();
   });
 });
