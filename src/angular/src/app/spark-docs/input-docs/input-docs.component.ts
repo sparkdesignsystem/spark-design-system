@@ -102,31 +102,31 @@ import { Component } from '@angular/core';
               class="sprk-u-mbm"
               type="checkbox"
               name="checkbox_input"
-              [ngClass]="{ 'sprk-u-mbm': checkboxChecked }"
+              [ngClass]="{ 'sprk-u-mbm': isChecked }"
               [(ngModel)]="checkbox_input1"
               sprkSelectionInput
               #checkboxInput1="ngModel"
-              (change)="onCheckboxSelect($event)"
+              (change)="onSelect($event)"
             />
             <label
               sprkSelectionLabel
               [ngClass]="{
-                'sprk-u-mbm': checkboxChecked,
-                'sprk-u-Width-90': checkboxChecked
+                'sprk-u-mbm': isChecked,
+                'sprk-u-Width-90': isChecked
               }"
             >
               Item 1
             </label>
             <sprk-selection-item-container
               additionalClasses="sprk-u-plm sprk-u-mbn"
-              *ngIf="checkboxChecked"
+              *ngIf="isChecked"
             >
               <input
                 type="checkbox"
                 name="checkbox_input"
-                [(ngModel)]="checkbox_input100"
+                [(ngModel)]="checkbox_input1a"
                 sprkSelectionInput
-                #checkboxInput100="ngModel"
+                #checkboxInput1a="ngModel"
               />
               <label sprkSelectionLabel>Item 1: Extra Field</label>
             </sprk-selection-item-container>
@@ -154,17 +154,59 @@ import { Component } from '@angular/core';
           <div>Extra div being passed through in selection container</div>
         </sprk-selection-container>
         <sprk-selection-container>
-          <label sprkLabel>Radio Group Label</label>
-          <sprk-selection-item-container>
+          <label sprkLabel>
+            Radio Group Label
+          </label>
+          <sprk-selection-item-container
+            additionalClasses="angular-docs-u-FlexWrap--wrap"
+          >
             <input
               type="radio"
               value="1"
+              [ngClass]="{ 'sprk-u-mbm': isRadioChecked }"
               name="radio_input"
               [(ngModel)]="radio_input"
               sprkSelectionInput
               #radioInput="ngModel"
+              (change)="onRadioSelect($event)"
             />
-            <label sprkSelectionLabel>Item 1</label>
+            <label
+              sprkSelectionLabel
+              [ngClass]="{
+                'sprk-u-mbm': isRadioChecked,
+                'sprk-u-Width-90': isRadioChecked
+              }"
+            >
+              Item 1
+            </label>
+            <sprk-selection-item-container
+              *ngIf="isRadioChecked"
+              additionalClasses="sprk-u-plm sprk-u-mbn"
+            >
+              <input
+                type="radio"
+                value="1a"
+                name="radio_input"
+                [(ngModel)]="radio_inpu1a"
+                sprkSelectionInput
+                #radioInput1a="ngModel"
+              />
+              <label sprkSelectionLabel>Item 1: Extra Radio, A. Option</label>
+            </sprk-selection-item-container>
+            <sprk-selection-item-container
+              *ngIf="isRadioChecked"
+              additionalClasses="sprk-u-plm sprk-u-mbn"
+            >
+              <input
+                type="radio"
+                value="1b"
+                name="radio_input"
+                [(ngModel)]="radio_inpu1b"
+                sprkSelectionInput
+                #radioInput1b="ngModel"
+              />
+              <label sprkSelectionLabel>Item 1: Extra Radio, B. Option</label>
+            </sprk-selection-item-container>
           </sprk-selection-item-container>
           <sprk-selection-item-container>
             <input
@@ -435,7 +477,10 @@ export class InputDocsComponent {
   phone_input = '';
   date_input = '';
   radio_input: string;
+  radio_inpu1a: string;
+  radio_inpu1b: string;
   checkbox_input1: string;
+  checkbox_input1a: string;
   checkbox_input2: string;
   checkbox_input3: string;
   ssn_input: string;
@@ -444,7 +489,8 @@ export class InputDocsComponent {
   passwordType = 'password';
   ssnType = 'password';
   form_submitted = false;
-  checkboxChecked = false;
+  isChecked = false;
+  isRadioChecked = false;
 
   dpConfig = {
     mode: 'dp-below'
@@ -466,9 +512,15 @@ export class InputDocsComponent {
     this.form_submitted = true;
   }
 
-  onCheckboxSelect(event) {
-    event.target.checked === true
-      ? (this.checkboxChecked = true)
-      : (this.checkboxChecked = false);
+  onSelect($event) {
+    $event.target.checked === true
+      ? (this.isChecked = true)
+      : (this.isChecked = false);
+  }
+
+  onRadioSelect($event) {
+    $event.target.checked === true
+      ? (this.isRadioChecked = true)
+      : (this.isRadioChecked = false);
   }
 }
