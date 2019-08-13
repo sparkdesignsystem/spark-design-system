@@ -84,13 +84,13 @@ variableTable:
     default: $sprk-black
     description: The color of the text inside input elements.
   $sprk-text-input-border:
-    default: 2px solid $sprk-black-tint-25
+    default: 2px solid $sprk-gray-dark
     description: The border around text input elements.
   $sprk-text-input-border-radius:
     default: 4px
     description: The border radius to use for text input elements.
   $sprk-text-input-huge-border-width:
-    default: 1px
+    default: 2x
     description: The border width around huge text input elements.
   $sprk-text-input-huge-focus-border-width:
     default: 2px
@@ -147,10 +147,10 @@ variableTable:
     default: $sprk-text-input-huge-height/3
     description: Top positioning for the label on huge text inputs.
   $sprk-text-input-huge-label-active-top:
-    default: $sprk-space-s
+    default: 10px
     description: Top positioning for the label on huge text inputs when input is in focus.
   $sprk-text-input-huge-active-padding-top: 
-    default: $sprk-text-input-huge-height/3
+    default: $sprk-text-input-huge-height/4
     description: Padding-top for huge text inputs when input is in focus
   $sprk-text-input-huge-focus-label-color:
     default: $sprk-green
