@@ -145,6 +145,14 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
   padding-top: $sprk-text-input-huge-active-padding-top;
 }
 
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:disabled {
+  color: transparent;
+}
+
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:disabled.sprk-b-TextInput--label-hidden {
+  color: $sprk-text-input-disabled-color;
+}
+
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:not(:placeholder-shown) {
   padding-top: $sprk-text-input-huge-active-padding-top;
 }

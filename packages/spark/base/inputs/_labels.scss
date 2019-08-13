@@ -80,8 +80,8 @@
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:disabled + .sprk-b-Label,
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled + .sprk-b-Label {
-  font-size: $sprk-text-input-huge-label-font-size;
-  top: $sprk-text-input-huge-label-active-top;
+  top: $sprk-text-input-huge-label-top;
+  font-size: $sprk-text-input-huge-font-size;
   color: $sprk-text-input-disabled-color;
   cursor: not-allowed;
 }
