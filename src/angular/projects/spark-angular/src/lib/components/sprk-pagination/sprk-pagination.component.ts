@@ -14,7 +14,7 @@ import {
       [ngClass]="getClasses()"
       [attr.data-id]="idString"
     >
-      <sprk-ordered-list
+      <sprk-unordered-list
         listType="horizontal"
         additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-medium"
       >
@@ -116,7 +116,7 @@ import {
             ></sprk-icon>
           </sprk-link>
         </li>
-      </sprk-ordered-list>
+      </sprk-unordered-list>
     </nav>
   `
 })
