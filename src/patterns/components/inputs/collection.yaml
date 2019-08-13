@@ -137,6 +137,12 @@ variableTable:
   $sprk-text-input-huge-transition-delay:
     default: 0s
     description: The transition delay applied to huge text input elements
+  $sprk-text-input-huge-placeholder-transition-delay:
+    default: 100ms
+    description:
+  $sprk-text-input-huge-placeholder-transition-property:
+    default: opacity
+    description:
   $sprk-text-input-huge-placeholder-opacity:
     default: 0
     description: The default opacity applied to the huge text input placeholders

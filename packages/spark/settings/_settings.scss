@@ -465,6 +465,8 @@ $sprk-text-input-readonly-color: $sprk-gray !default;
 $sprk-text-input-transition: border-color 0.15s ease !default;
 $sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default;
 $sprk-text-input-huge-transition-delay: 0s !default;
+$sprk-text-input-huge-placeholder-transition-delay: 100ms !default;
+$sprk-text-input-huge-placeholder-transition-property: opacity !default;
 $sprk-text-input-huge-placeholder-opacity: 0 !default;
 $sprk-text-input-huge-placeholder-active-opacity: 1 !default;
 $sprk-text-input-huge-label-top: $sprk-text-input-huge-height / 3 !default;
