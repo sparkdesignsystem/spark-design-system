@@ -6,12 +6,7 @@ import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.componen
   template: `
     <ul [ngClass]="getClasses()" [attr.data-id]="idString">
       <li
-        *ngFor="
-          let item of items;
-          let i = index;
-          let isLast = last;
-          let isFirst = first
-        "
+        *ngFor="let item of items; "
         [attr.data-analytics]="item.analyticsString"
         [attr.data-id]="item.idString"
         [ngClass]="item.additionalClasses"
