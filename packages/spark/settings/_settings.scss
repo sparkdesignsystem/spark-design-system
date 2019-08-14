@@ -720,6 +720,7 @@ $sprk-accordion-active-background-color: $sprk-gray !default;
 // Toggle
 ///
 $sprk-toggle-transition-timing: 0.3s ease !default;
+$sprk-toggle-transistion-timing: $sprk-toggle-transition-timing;
 
 //
 // Dropdown
@@ -861,6 +862,7 @@ $sprk-stepper-icon-color-selected: $sprk-white !default;
 $sprk-stepper-dark-icon-color: $sprk-blue !default;
 $sprk-stepper-dark-icon-color-selected: $sprk-white !default;
 $sprk-stepper-dark-icon-color-hover: $sprk-white !default;
+$sprk-stepper-dark-icon-color-hoverg: $sprk-stepper-dark-icon-color-hover;
 $sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
 $sprk-stepper-icon-z-index: $sprk-layer-height-xs !default;
 $sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
