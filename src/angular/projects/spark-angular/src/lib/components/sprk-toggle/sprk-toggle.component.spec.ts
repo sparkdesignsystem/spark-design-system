@@ -66,7 +66,9 @@ describe('SprkToggleComponent', () => {
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(element.classList.toString()).toEqual('sprk-u-pam sprk-u-man');
+    expect(element.classList.toString()).toEqual(
+      'sprk-u-Overflow--hidden sprk-u-pam sprk-u-man'
+    );
   });
 
   it('should add data-id when idString has a value', () => {
