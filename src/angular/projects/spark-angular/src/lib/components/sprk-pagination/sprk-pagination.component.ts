@@ -134,7 +134,7 @@ import {
         </sprk-list-item>
 
         <sprk-list-item
-          [ngClass]="{
+          [additionalClasses]="{
             'sprk-u-Display--none': currentPage === 1 || currentPage === 2
           }"
         >
@@ -142,7 +142,7 @@ import {
         </sprk-list-item>
 
         <sprk-list-item
-          [ngClass]="{
+          [additionalClasses]="{
             'sprk-u-Display--none':
               currentPage === 1 || currentPage === totalPages()
           }"
@@ -159,7 +159,7 @@ import {
         </sprk-list-item>
 
         <sprk-list-item
-          [ngClass]="{
+          [additionalClasses]="{
             'sprk-u-Display--none':
               currentPage === totalPages() || currentPage === totalPages() - 1
           }"
@@ -208,7 +208,7 @@ import {
         listType="horizontal"
         additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-large"
       >
-        <sprk-list-item class="sprk-c-Pagination__item">
+        <sprk-list-item additionalClasses="sprk-c-Pagination__item">
           <sprk-link
             linkType="plain"
             [isDisabled]="currentPage === 1"
@@ -224,7 +224,7 @@ import {
           </sprk-link>
         </sprk-list-item>
 
-        <sprk-list-item class="sprk-c-Pagination__item">
+        <sprk-list-item additionalClasses="sprk-c-Pagination__item">
           <sprk-link
             linkType="plain"
             [isDisabled]="isLastPage()"
