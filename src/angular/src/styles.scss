@@ -78,9 +78,13 @@ $sprk-webfonts: (
 
 $override-namespace: 'angular-docs';
 
-// angular doc specific overrides
+// Angular doc specific overrides
 .#{$override-namespace}-u-Masthead-docs
 .sprk-c-Masthead__narrow-navigation-container {
   position: static;
   margin-top: -2px;
+}
+
+.#{$override-namespace}-u-FlexWrap--wrap {
+  flex-wrap: wrap;
 }
