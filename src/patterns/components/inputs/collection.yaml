@@ -84,13 +84,13 @@ variableTable:
     default: $sprk-black
     description: The color of the text inside input elements.
   $sprk-text-input-border:
-    default: 2px solid $sprk-black-tint-25
+    default: 2px solid $sprk-gray-dark
     description: The border around text input elements.
   $sprk-text-input-border-radius:
     default: 4px
     description: The border radius to use for text input elements.
   $sprk-text-input-huge-border-width:
-    default: 1px
+    default: 2px
     description: The border width around huge text input elements.
   $sprk-text-input-huge-focus-border-width:
     default: 2px
@@ -133,13 +133,19 @@ variableTable:
     description: The transition applied to text input elements.
   $sprk-text-input-huge-transition:
     default: top 0.3s, color 0.3s, font-size 0.3s
-    description: The transition applied to huge text input elements
+    description: The transition applied to huge text input elements.
   $sprk-text-input-huge-transition-delay:
     default: 0s
-    description: The transition delay applied to huge text input elements
+    description: The transition delay applied to huge text input elements.
+  $sprk-text-input-huge-placeholder-transition-delay:
+    default: 100ms
+    description: Transition delay for the placeholder on huge text input elements when the input is focused.
+  $sprk-text-input-huge-placeholder-transition-property:
+    default: opacity
+    description: Transition delay property for the placeholder on huge text input elements when the input is focused.
   $sprk-text-input-huge-placeholder-opacity:
     default: 0
-    description: The default opacity applied to the huge text input placeholders
+    description: The default opacity applied to the huge text input placeholders.
   $sprk-text-input-huge-placeholder-active-opacity:
     default: 1
     description: The opacity applied to the placeholder when the huge text input is in focus.
@@ -147,14 +153,14 @@ variableTable:
     default: $sprk-text-input-huge-height/3
     description: Top positioning for the label on huge text inputs.
   $sprk-text-input-huge-label-active-top:
-    default: $sprk-space-s
+    default: 10px
     description: Top positioning for the label on huge text inputs when input is in focus.
   $sprk-text-input-huge-active-padding-top: 
-    default: $sprk-text-input-huge-height/3
-    description: Padding-top for huge text inputs when input is in focus
+    default: $sprk-text-input-huge-height/4
+    description: Padding-top for huge text inputs when input is in focus.
   $sprk-text-input-huge-focus-label-color:
     default: $sprk-green
-    description: Label color for huge text inputs when input is in focus
+    description: Label color for huge text inputs when input is in focus.
   $sprk-text-input-huge-error-focus-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is an error.
