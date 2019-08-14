@@ -37,13 +37,19 @@
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus + .sprk-b-Label,
-.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label {
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus + .sprk-b-Label {
   font-size: $sprk-text-input-huge-label-font-size;
   top: $sprk-text-input-huge-label-active-top;
   color: $sprk-text-input-huge-focus-label-color;
 }
+
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label {
+  font-size: $sprk-text-input-huge-label-font-size;
+  top: $sprk-text-input-huge-label-active-top;
+  color: $sprk-text-input-huge-complete-label-color;
+}
+
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label,
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label {
