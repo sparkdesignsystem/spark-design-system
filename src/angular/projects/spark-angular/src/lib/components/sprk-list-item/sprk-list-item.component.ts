@@ -16,5 +16,5 @@ export class SprkListItemComponent {
   @Input()
   additionalClasses: string;
 
-  @ViewChild(TemplateRef) content: TemplateRef<any>;
+  @ViewChild(TemplateRef, { static: true }) content: TemplateRef<any>;
 }
