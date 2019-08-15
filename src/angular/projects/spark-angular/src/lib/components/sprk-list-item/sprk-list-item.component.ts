@@ -1,15 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'sprk-list-item',
   template: `
-    <li
-      [ngClass]="getClasses()"
-      [attr.data-analytics]="analyticsString"
-      [attr.data-id]="idString"
-    >
+    <ng-template>
       <ng-content></ng-content>
-    </li>
+    </ng-template>
   `
 })
 export class SprkListItemComponent {
@@ -20,15 +16,5 @@ export class SprkListItemComponent {
   @Input()
   additionalClasses: string;
 
-  getClasses(): string {
-    const classArray: string[] = [];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-
-      return classArray.join(' ');
-    }
-  }
+  @ViewChild(TemplateRef, { static: true }) content: TemplateRef<any>;
 }

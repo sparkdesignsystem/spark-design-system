@@ -18,7 +18,7 @@ import {
         listType="horizontal"
         additionalClasses="sprk-c-Pagination sprk-o-HorizontalList--spacing-medium"
       >
-        <li>
+        <sprk-list-item>
           <sprk-link
             linkType="plain"
             (click)="goBack($event, currentPage)"
@@ -33,9 +33,9 @@ import {
               iconType="chevron-left"
             ></sprk-icon>
           </sprk-link>
-        </li>
+        </sprk-list-item>
 
-        <li *ngIf="showNumbers()">
+        <sprk-list-item *ngIf="showNumbers()">
           <sprk-link
             (click)="goToPage($event, 1)"
             additionalClasses="sprk-c-Pagination__link {{
@@ -47,9 +47,11 @@ import {
           >
             1
           </sprk-link>
-        </li>
+        </sprk-list-item>
 
-        <li *ngIf="showNumbers() && currentPage !== 2 && totalPages() === 3">
+        <sprk-list-item
+          *ngIf="showNumbers() && currentPage !== 2 && totalPages() === 3"
+        >
           <sprk-link
             (click)="goToPage($event, 2)"
             additionalClasses="sprk-c-Pagination__link"
@@ -58,13 +60,15 @@ import {
           >
             2
           </sprk-link>
-        </li>
+        </sprk-list-item>
 
-        <li *ngIf="showNumbers() && currentPage > 2 && totalPages() > 3">
+        <sprk-list-item
+          *ngIf="showNumbers() && currentPage > 2 && totalPages() > 3"
+        >
           ...
-        </li>
+        </sprk-list-item>
 
-        <li
+        <sprk-list-item
           *ngIf="showNumbers() && currentPage > 1 && currentPage < totalPages()"
         >
           <sprk-link
@@ -76,17 +80,17 @@ import {
           >
             {{ currentPage }}
           </sprk-link>
-        </li>
+        </sprk-list-item>
 
-        <li
+        <sprk-list-item
           *ngIf="
             showNumbers() && currentPage < totalPages() - 1 && totalPages() > 3
           "
         >
           ...
-        </li>
+        </sprk-list-item>
 
-        <li *ngIf="showNumbers() && totalPages() > 1">
+        <sprk-list-item *ngIf="showNumbers() && totalPages() > 1">
           <sprk-link
             (click)="goToPage($event, totalPages())"
             additionalClasses="sprk-c-Pagination__link {{
@@ -98,9 +102,9 @@ import {
           >
             {{ totalPages() }}
           </sprk-link>
-        </li>
+        </sprk-list-item>
 
-        <li>
+        <sprk-list-item>
           <sprk-link
             linkType="plain"
             [isDisabled]="isLastPage()"
@@ -115,7 +119,7 @@ import {
               iconType="chevron-right"
             ></sprk-icon>
           </sprk-link>
-        </li>
+        </sprk-list-item>
       </sprk-unordered-list>
     </nav>
   `

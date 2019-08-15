@@ -23,6 +23,7 @@ import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-cont
       </fieldset>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
+      <ng-content></ng-content>
     </div>
   `
 })
