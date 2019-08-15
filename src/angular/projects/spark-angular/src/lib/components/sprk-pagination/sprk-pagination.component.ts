@@ -1,10 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'sprk-pagination',
@@ -172,7 +166,7 @@ export class SprkPaginationComponent {
   @Output()
   nextClick = new EventEmitter();
   @Output()
-  pageClick = new EventEmitter<object>();
+  pageClick = new EventEmitter();
 
   goToPage(event, page): void {
     event.preventDefault();
@@ -237,5 +231,5 @@ export class SprkPaginationComponent {
 
     return classArray.join(' ');
   }
-  constructor(public ref: ElementRef) {}
+  constructor() {}
 }
