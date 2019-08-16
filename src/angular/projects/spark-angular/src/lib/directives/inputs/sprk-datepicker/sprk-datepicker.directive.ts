@@ -37,9 +37,9 @@ export class SprkDatepickerDirective implements OnInit {
 
         let event;
 
-        if(typeof(Event) === 'function') {
+        if (typeof(Event) === 'function') {
           event = new Event('input');
-        }else{
+        } else {
           event = document.createEvent('Event');
           event.initEvent('input', true, true);
         }
