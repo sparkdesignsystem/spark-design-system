@@ -1,13 +1,10 @@
 <sprk-pagination
-  additionalClasses="sprk-u-mbl"
-  paginationType="long"
-  nextLinkText="Next"
-  prevLinkText="Prev"
-  [currentPage]="1"
-  [totalItems]="100"
-  [itemsPerPage]="25"
-  (previousClick)="yourGoBackFunction($event)"
-  (pageClick)="yourGoToPageFunction($event)"
-  (nextClick)="yourGoForwardFunction($event)"
-  idString="pagination-2">
+  [currentPage]="11"
+  [totalItems]="22"
+  [itemsPerPage]="1"
+  (previousClick)="yourGoBackFunction($event, currentPage)"
+  (pageClick)="yourGoToPageFunction($event, currentPage)"
+  (nextClick)="yourGoForwardFunction($event, currentPage)"
+  idString="pagination-2"
+>
 </sprk-pagination>
