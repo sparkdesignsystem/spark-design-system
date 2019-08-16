@@ -35,12 +35,13 @@ export class SprkDatepickerDirective implements OnInit {
         ...this.sprkDatePickerConfig
       }).on('select', () => {
 
-        var event;
+        let event;
+
         if(typeof(Event) === 'function') {
-            event = new Event('input');
+          event = new Event('input');
         }else{
-            event = document.createEvent('Event');
-            event.initEvent('input', true, true);
+          event = document.createEvent('Event');
+          event.initEvent('input', true, true);
         }
 
         this.ref.nativeElement.dispatchEvent(event);
