@@ -6,6 +6,7 @@
     "entryFile": "src/public_api.ts"
   },
   "whitelistedNonPeerDependencies": [
-    "lory.js"
+    "lory.js",
+    "lodash"
   ]
 }
