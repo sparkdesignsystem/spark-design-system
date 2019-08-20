@@ -21,6 +21,12 @@
   position: static;
 }
 
+//Override masthead translate to avoid Masthead examples animating on narrow viewports
+.#{$app-namespace}-c-Preview .sprk-c-Masthead.sprk-c-Masthead--hidden {
+  transform: translateY(0);
+}
+
+
 [data-template-id^='masthead-with-extended-navigation'] .#{$app-namespace}-c-Preview__example {
   position: relative;
 }
