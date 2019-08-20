@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": ">=7.0.0 < 9.0.0",
     "@angular/router": ">=7.0.0 < 9.0.0",
     "@sparkdesignsystem/spark": "^12.1.0",
-    "lodash": "^4.17.10",
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {
@@ -29,6 +28,7 @@
     "zone.js": "^0.8.26"
   },
   "dependencies": {
-    "lory.js": "^2.5.3"
+    "lory.js": "^2.5.3",
+    "lodash": "^4.17.15"
   }
 }
