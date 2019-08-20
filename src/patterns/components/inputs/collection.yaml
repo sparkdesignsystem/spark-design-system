@@ -23,10 +23,9 @@ information:
   - You should use <a class="drizzle-b-Link" href="#helper-text">helper text</a> when a user needs further
     clarification beyond the field label.
   - In Vanilla JS applications, if an input is required only, meaning that no validation is needed aside from a value
-    being supplied, you can add the
-    <code class='drizzle-c-Command drizzle-c-Command--inline'>data-sprk-required-only</code> attribute. The values that
-    are available are 'text', 'select', and 'tick'. Text is for any input that accepts text as a value, Select is only
-    for select inputs, and Tick is for radio buttons or checkboxes.
+    being supplied, you can add the <code class='drizzle-c-Command drizzle-c-Command--inline'>data-sprk-required-only</code>
+    attribute to the input container. The values that are available are 'text', 'select', and 'tick'. Text is for any
+    input that accepts text as a value, Select is only for select inputs, and Tick is for radio buttons or checkboxes.
 restrictions:
   - You should always add the <code class='drizzle-c-Command drizzle-c-Command--inline'>novalidate</code> attribute
     to your form, since we handle form validation ourselves,
