@@ -33,8 +33,10 @@
   text-decoration: none;
 
   &:hover {
-    color: $sprk-accordion-summary-active-color;
-    text-decoration: none;
+    .sprk-c-Accordion__heading {
+      color: $sprk-accordion-summary-active-color;
+      text-decoration: none;
+    }
   }
 }
 

@@ -24,7 +24,7 @@ variableTable:
     default: $sprk-black
     description: Sets the font color of the item summary.
   $sprk-accordion-summary-active-color:
-    default: $sprk-red
+    default: $sprk-green
     description: Sets the color of the icon in the summary when the accordion item is open or hovered.
   $sprk-accordion-summary-padding:
     default: $sprk-space-misc-a 0
