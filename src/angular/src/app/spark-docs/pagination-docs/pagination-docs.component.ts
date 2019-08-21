@@ -7,31 +7,33 @@ import { Component, OnInit } from '@angular/core';
       <h2 class="drizzle-b-h2">
         Use Case
       </h2>
-      <div class="sprk-u-Width-80 sprk-u-mbl">
-        <sprk-table>
-          <thead sprkTableHead>
-            <tr>
-              <th>#</th>
-              <th>Distance</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              *ngFor="
-                let run of runConfig.data.slice(
-                  (runConfig.currentPage - 1) * runConfig.itemsPerPage,
-                  (runConfig.currentPage - 1) * runConfig.itemsPerPage +
-                    runConfig.itemsPerPage
-                )
-              "
-            >
-              <td>{{ runConfig.data.indexOf(run) + 1 }}</td>
-              <td>{{ run.distance }} {{ run.unit }}</td>
-              <td>{{ runTime(run.time) }}</td>
-            </tr>
-          </tbody>
-        </sprk-table>
+      <div class="sprk-u-AbsoluteCenter">
+        <div class="sprk-u-Width-80 sprk-u-mbl">
+          <sprk-table>
+            <thead sprkTableHead>
+              <tr>
+                <th>#</th>
+                <th>Distance</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let run of runConfig.data.slice(
+                    (runConfig.currentPage - 1) * runConfig.itemsPerPage,
+                    (runConfig.currentPage - 1) * runConfig.itemsPerPage +
+                      runConfig.itemsPerPage
+                  )
+                "
+              >
+                <td>{{ runConfig.data.indexOf(run) + 1 }}</td>
+                <td>{{ run.distance }} {{ run.unit }}</td>
+                <td>{{ runTime(run.time) }}</td>
+              </tr>
+            </tbody>
+          </sprk-table>
+        </div>
       </div>
 
       <sprk-pagination
@@ -234,11 +236,6 @@ export class PaginationDocsComponent implements OnInit {
       }
     ]
   };
-
-  handlePageChange(event) {
-    console.log(event);
-    this.runConfig.currentPage = event.newPage;
-  }
 
   runTime(time) {
     time = parseFloat(time);
