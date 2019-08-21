@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLinkModule } from '../sprk-link/sprk-link.module';
 import { SprkUnorderedListModule } from '../sprk-unordered-list/sprk-unordered-list.module';
+import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SprkPaginationComponent } from './sprk-pagination.component';
     RouterModule,
     SprkUnorderedListModule,
     SprkIconModule,
-    SprkLinkModule
+    SprkLinkModule,
+    SprkListItemModule
   ],
   declarations: [SprkPaginationComponent],
   exports: [SprkPaginationComponent]

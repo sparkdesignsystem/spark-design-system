@@ -17,9 +17,6 @@ $sprk-webfonts:
 // Override breakpoint for masthead because of Drizzle layout containment
 $masthead-breakpoint: 74rem;
 
-//Override masthead translate to avoid Masthead examples animating on narrow viewports
-$sprk-masthead-translateY: translateY(0);
-
 @import '../../../../packages/spark/spark.scss';
 
 //

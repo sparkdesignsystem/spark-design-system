@@ -23,11 +23,11 @@ export class SparkInputContainerComponent implements OnInit {
   @Input()
   iconContainerClasses: string;
 
-  @ContentChild(SprkLabelDirective)
+  @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
-  @ContentChild(SprkInputDirective)
+  @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
-  @ContentChild(SprkFieldErrorDirective)
+  @ContentChild(SprkFieldErrorDirective, { static: true })
   error: SprkFieldErrorDirective;
 
   id = _.uniqueId();
@@ -42,7 +42,6 @@ export class SparkInputContainerComponent implements OnInit {
         classArray.push(className);
       });
     }
-
     return classArray.join(' ');
   }
 

@@ -443,15 +443,17 @@ $sprk-text-input-font-weight: 300 !default;
 $sprk-text-input-height: 48px !default;
 $sprk-text-input-huge-height: 64px !default;
 $sprk-text-input-huge-font-size: $sprk-font-size-display-five !default;
+$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default;
 $sprk-text-input-line-height: 1.3 !default;
 $sprk-text-input-outline: 0 !default;
 $sprk-text-input-color: $sprk-black !default;
-$sprk-text-input-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-text-input-border: 2px solid $sprk-gray-dark !default;
 $sprk-text-input-border-radius: 4px !default;
-$sprk-text-input-huge-border: 1px solid $sprk-black-tint-25 !default;
-$sprk-text-input-huge-focus-border-width: 2px;
+$sprk-text-input-huge-border-width: 2px !default;
+$sprk-text-input-huge-focus-border-width: 2px !default;
 $sprk-text-input-box-shadow: none !default;
 $sprk-text-input-padding: 0 $sprk-space-m !default;
+$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default;
 $sprk-text-input-focus-border-color: $sprk-green !default;
 $sprk-text-input-error-border-color: $sprk-yellow !default;
 $sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
@@ -461,6 +463,18 @@ $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 $sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
 $sprk-text-input-readonly-color: $sprk-gray !default;
 $sprk-text-input-transition: border-color 0.15s ease !default;
+$sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default;
+$sprk-text-input-huge-transition-delay: 0s !default;
+$sprk-text-input-huge-placeholder-transition-delay: 100ms !default;
+$sprk-text-input-huge-placeholder-transition-property: opacity !default;
+$sprk-text-input-huge-placeholder-opacity: 0 !default;
+$sprk-text-input-huge-placeholder-active-opacity: 1 !default;
+$sprk-text-input-huge-label-top: $sprk-text-input-huge-height / 3 !default;
+$sprk-text-input-huge-label-active-top: 10px !default;
+$sprk-text-input-huge-active-padding-top: $sprk-text-input-huge-height / 4 !default;
+$sprk-text-input-huge-focus-label-color: $sprk-green !default;
+$sprk-text-input-huge-error-focus-label-color: $sprk-black !default;
+$sprk-text-input-huge-complete-label-color: $sprk-black !default;
 
 //
 // Select
@@ -574,6 +588,7 @@ $sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
 $sprk-text-input-has-text-icon-padding: 12px 13px 12px 37px !default;
+$sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 
 //
@@ -581,8 +596,10 @@ $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 ///
 $sprk-input-icon-offset-x: $sprk-space-m !default;
 $sprk-input-icon-offset-y: $sprk-space-m !default;
+$sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 $sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
 $sprk-input-icon-z-index: $sprk-layer-height-xs !default;
+$sprk-input-huge-icon-offset-top: 50% !default;
 
 //
 // Labels
@@ -694,7 +711,7 @@ $sprk-accordion-max-width: 53.125rem !default;
 $sprk-accordion-border: $sprk-divider-border !default;
 $sprk-accordion-border-open: 2px solid $sprk-black !default;
 $sprk-accordion-summary-color: $sprk-black !default;
-$sprk-accordion-summary-active-color: $sprk-red !default;
+$sprk-accordion-summary-active-color: $sprk-green !default;
 $sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
 $sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
 $sprk-accordion-active-background-color: $sprk-gray !default;
@@ -702,7 +719,8 @@ $sprk-accordion-active-background-color: $sprk-gray !default;
 //
 // Toggle
 ///
-$sprk-toggle-transistion-timing: 0.3s ease !default;
+$sprk-toggle-transition-timing: 0.3s ease !default;
+$sprk-toggle-transistion-timing: $sprk-toggle-transition-timing;
 
 //
 // Dropdown
@@ -844,13 +862,16 @@ $sprk-stepper-icon-color-selected: $sprk-white !default;
 $sprk-stepper-dark-icon-color: $sprk-blue !default;
 $sprk-stepper-dark-icon-color-selected: $sprk-white !default;
 $sprk-stepper-dark-icon-color-hover: $sprk-white !default;
+$sprk-stepper-dark-icon-color-hoverg: $sprk-stepper-dark-icon-color-hover;
 $sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
 $sprk-stepper-icon-z-index: $sprk-layer-height-xs !default;
 $sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
-$sprk-stepper-icon-box-shadow-selected: 0 0 0 $sprk-stepper-icon-box-shadow-selected-spread $sprk-stepper-icon-border-color-selected !default;
+$sprk-stepper-icon-box-shadow-selected: 0 0 0
+  $sprk-stepper-icon-box-shadow-selected-spread
+  $sprk-stepper-icon-border-color-selected !default;
 $sprk-stepper-step-content-bg: transparent !default;
 $sprk-stepper-step-description-border-radius: 5px !default;
-$sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0,0,0,0.08) !default;
+$sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
 $sprk-stepper-step-heading-font-weight: 400 !default;
 $sprk-stepper-step-heading-size: $sprk-font-size-display-six !default;
@@ -865,17 +886,22 @@ $sprk-stepper-bar-color: $sprk-black-tint-50 !default;
 $sprk-stepper-dark-bar-color: $sprk-white !default;
 // Restricted and not customizable
 $sprk-stepper-bar-width: 2px;
-$sprk-stepper-icon-diameter: $sprk-stepper-icon-width + $sprk-stepper-icon-border-width;
+$sprk-stepper-icon-diameter: $sprk-stepper-icon-width +
+  $sprk-stepper-icon-border-width;
 $sprk-stepper-icon-radius: $sprk-stepper-icon-diameter / 2;
 $sprk-stepper-bar-left-inset: $sprk-space-l;
-$sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) + $sprk-stepper-bar-width;
-$sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset + $sprk-stepper-icon-radius));
+$sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) +
+  $sprk-stepper-bar-width;
+$sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset +
+$sprk-stepper-icon-radius));
 $sprk-stepper-slide-timing: 0.3s;
 $sprk-stepper-slider-text-fade-in-timing: 0.6s;
+$sprk-stepper-slider-text-fade-in-delay: 0.2s;
 //
 // Carousel
 ///
-$sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid $sprk-stepper-dark-icon-border-color !default;
+$sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid
+  $sprk-stepper-dark-icon-border-color !default;
 $sprk-carousel-dot-height: 10px !default;
 $sprk-carousel-dot-width: 10px !default;
 $sprk-carousel-wide-dot-height: 10px !default;

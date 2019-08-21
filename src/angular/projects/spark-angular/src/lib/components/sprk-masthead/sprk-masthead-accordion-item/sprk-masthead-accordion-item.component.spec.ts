@@ -37,11 +37,11 @@ describe('SprkMastheadAccordionItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should add classes if additionalClasses has a value', () => {
+  it('should add classes to the item element if additionalClasses has a value', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
-      'sprk-c-MastheadAccordion__item sprk-u-man'
+      'sprk-c-MastheadAccordion__item sprk-u-Overflow--hidden sprk-u-man'
     );
   });
 

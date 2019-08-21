@@ -47,3 +47,19 @@ it('should correctly apply analyticsString', () => {
     node.getDOMNode().attributes.getNamedItem('data-analytics').value,
   ).toEqual(expected);
 });
+
+it('should have the correct structure for hasDescription', () => {
+  const expected = 'sprk-c-Stepper__step-content--has-description';
+  const wrapper = mount(<SprkStepperStep hasDescription={true} />);
+  const contentDiv = wrapper.find('div.sprk-c-Stepper__step-content');
+
+  expect(contentDiv.hasClass(expected)).toBe(true);
+});
+
+it('should correctly hide selected description (covered by slider)', () => {
+  const expected = 'sprk-u-Visibility--hidden';
+  const wrapper = mount(<SprkStepperStep hasDescription={true} isSelected={true} />);
+  const contentDiv = wrapper.find('h3.sprk-c-Stepper__step-heading');
+
+  expect(contentDiv.hasClass(expected)).toBe(true);
+});

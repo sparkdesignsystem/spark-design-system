@@ -18,11 +18,46 @@ it('should render a huge text input with the correct class', () => {
       .find('.sprk-b-InputContainer')
       .hasClass('sprk-b-InputContainer--huge'),
   ).toBe(true);
+});
+
+it('should add float-label class to huge text when a value is present and blurred out', () => {
+  const wrapper = mount(
+    <SprkTextInput type="hugeTextInput" />,
+  );
+  const input = wrapper.find('input');
+
+  // on blur pass object into blur handler
+  // Enzyme does not update state of the DOM but we can simulate update to the DOM state by passing same state into react function
+  input.simulate("blur", { target: { value: "foo" } })
+
   expect(
-    wrapper.find('.sprk-b-Label').hasClass('sprk-u-ScreenReaderText'),
+    wrapper
+      .find('.sprk-b-TextInput')
+      .hasClass('sprk-b-TextInput--float-label'),
   ).toBe(true);
+});
+
+it('should remove/not have float-label class to huge text when a value is not present and blurred out', () => {
+  const wrapper = mount(
+    <SprkTextInput type="hugeTextInput" />,
+  );
+  const input = wrapper.find('input');
+
+  input.simulate("blur", { target: { value: "" } })
+
   expect(
-    wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--huge'),
+    wrapper
+      .find('.sprk-b-TextInput')
+      .hasClass('sprk-b-TextInput--float-label'),
+  ).toBe(false);
+});
+
+it('should have float-label class to huge text when there is value', () => {
+  const wrapper = mount(<SprkTextInput value="value present" type="hugeTextInput" />);
+  expect(
+    wrapper
+      .find('.sprk-b-TextInput')
+      .hasClass('sprk-b-TextInput--float-label'),
   ).toBe(true);
 });
 

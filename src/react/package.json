@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "formik": "^1.5.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -13,8 +13,8 @@
     "whatwg-fetch": "^3.0.0"
   },
   "peerDependencies": {
-    "@sparkdesignsystem/spark": "^10.0.1",
-    "@sparkdesignsystem/spark-react": "1.0.0"
+    "@sparkdesignsystem/spark": "^12.1.0",
+    "@sparkdesignsystem/spark-react": "^1.2.0"
   },
   "scripts": {
     "start": "PORT=5200 react-scripts start",

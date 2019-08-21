@@ -1,4 +1,5 @@
 // Import all Spark components
+import { hugeTextInput } from './base/hugeTextInput';
 import { ssnInput } from './base/ssnInput';
 import passwordInput from './base/passwordInput';
 import { monetaryInput } from './base/monetaryInput';
@@ -39,6 +40,7 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   dropdowns();
   stepper();
   highlightBoard();
+  hugeTextInput();
 };
 
 export { Spark as default };

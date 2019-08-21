@@ -7,25 +7,39 @@
 
 <div class=" drizzle-o-Layout__nav drizzle-c-Navigation" id="nav">
   <div class="drizzle-c-Navigation__header">
+    <div class="drizzle-c-Navigation__logo-container">
     <div class="drizzle-c-Navigation__logo">
       <a href="{{@root.baseurl}}/">
         {{> drizzle.small-logo}}
       </a>
     </div>
-    <div class="drizzle-c-Navigation__toggle-icon">
-      <a href="#nav">
-        <svg viewBox="-1 -1 12 7" width="16" height="16">
-          <polyline fill="none" stroke="currentColor" stroke-width="2" points="0 0 5 5 10 0"/>
-        </svg>
-        <span class="drizzle-u-ScreenReaderText">Navigation</span>
-      </a>
+    <div class="drizzle-c-Navigation__mobile-search">
+      <input
+        class="drizzle-b-TextInput drizzle-b-TextInput--mobile-search"
+        id="mobile-search"
+        type="text"
+        placeholder="Search"
+        >
+        <label class="drizzle-u-ScreenReaderText" for="mobile-search">Search</label>
+    </div>
+      <div class="drizzle-c-Navigation__toggle-icon">
+        <a href="#nav">
+          <svg viewBox="-1 -1 12 7" width="16" height="16">
+            <polyline fill="none" stroke="currentColor" stroke-width="2" points="0 0 5 5 10 0"/>
+          </svg>
+          <span class="drizzle-u-ScreenReaderText">Navigation</span>
+        </a>
+      </div>
+    </div>
+    <div class="drizzle-c-Navigation__search-container">
+      <label class="drizzle-u-ScreenReaderText" for="search">Search</label>
+      <input class="drizzle-b-TextInput drizzle-b-TextInput--search" id="search" type="text" placeholder="Search">
     </div>
 
   </div>
-  <div class="drizzle-c-Navigation__main" id="nav-menu" data-filtered="navList">
-    <label class="drizzle-u-ScreenReaderText" for="filter">Filter</label>
-    <input class="drizzle-b-TextInput drizzle-b-TextInput--filter" id="filter" type="text" placeholder="Filter" data-filter="navList">
-    {{!-- Getting Started --}}
+  <div class="drizzle-c-Navigation__main" id="nav-menu">
+
+  {{!-- Getting Started --}}
     <h5 class="drizzle-c-Navigation__item drizzle-b-h5">Getting Started</h5>
     <ul class="drizzle-c-Navigation__menu">
       {{#each (pages "gettingstarted")}}

@@ -385,7 +385,7 @@ rules:
     - 'after-dollar-variable'
   'scss/dollar-variable-no-missing-interpolation': true
   'scss/dollar-variable-pattern':
-  - '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$'
+  - '^(sprk)(-[\w]+)+$'
 
   # Placeholders
   'scss/percent-placeholder-pattern':
