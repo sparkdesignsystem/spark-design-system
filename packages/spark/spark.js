@@ -19,6 +19,7 @@ import { alerts } from './components/alerts';
 import { dropdowns } from './components/dropdown';
 import { stepper } from './components/stepper';
 import { highlightBoard } from './components/highlight-board';
+import versionCheck from './utilities/versionCheck';
 
 const Spark = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
@@ -41,6 +42,7 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   stepper();
   highlightBoard();
   hugeTextInput();
+  versionCheck();
 };
 
 export { Spark as default };
