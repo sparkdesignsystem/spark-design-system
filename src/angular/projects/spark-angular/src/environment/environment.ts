@@ -1,5 +1,3 @@
-declare const require: any;
-
 export const environment = {
-  version: require('../package.json').version
+  version: '9.2.0'
 };
