@@ -15,7 +15,7 @@ gulp.task('setup-spark-angular', (cb) => {
 });
 
 gulp.task('build-spark-angular', (cb) => {
-  exec('cd src/angular/projects/spark-angular && ../../node_modules/.bin/ng build spark-angular', (err, stdout, stderr) => {
+  exec('cd src/angular/projects/spark-angular && npm run build', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     cb(err);
