@@ -29,7 +29,8 @@
     "zone.js": "^0.8.26"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
     "lory.js": "^2.5.3",
-    "lodash": "^4.17.15"
+    "replace": "^1.1.1"
   }
 }
