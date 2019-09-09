@@ -7,6 +7,7 @@ import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMasthe
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../SprkLink/SprkLink';
+import { isElementVisible } from '@sparkdesignsystem/spark';
 
 class SprkMasthead extends Component {
   constructor() {
@@ -14,6 +15,7 @@ class SprkMasthead extends Component {
     this.state = {
       narrowNavOpen: false,
       isScrolled: false,
+      isHidden: false,
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
   }
@@ -29,6 +31,9 @@ class SprkMasthead extends Component {
     window.addEventListener('orientationchange', () => {
       this.setState({ narrowNavOpen: false });
     });
+
+    let isMenuVisible = isElementVisible('.sprk-c-Masthead__menu');
+    console.log(isMenuVisible);
   }
 
   toggleNarrowNav() {
@@ -65,7 +70,7 @@ class SprkMasthead extends Component {
       logoLinkElement,
       navLink,
     } = this.props;
-    const { isScrolled, narrowNavOpen } = this.state;
+    const { isScrolled, narrowNavOpen, isHidden } = this.state;
 
     return (
       <header
@@ -74,6 +79,7 @@ class SprkMasthead extends Component {
           'sprk-o-Stack',
           { 'sprk-c-Masthead--open': narrowNavOpen },
           { 'sprk-c-Masthead--scroll': isScrolled },
+          { 'sprk-c-Masthead--hidden': isHidden },
           additionalClasses,
         )}
         role="banner"
