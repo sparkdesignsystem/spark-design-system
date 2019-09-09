@@ -7,7 +7,7 @@ import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMasthe
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../SprkLink/SprkLink';
-import { isElementVisible } from '@sparkdesignsystem/spark';
+import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
 import throttle from 'lodash/throttle';
 
 class SprkMasthead extends Component {
@@ -18,10 +18,13 @@ class SprkMasthead extends Component {
       isScrolled: false,
       isHidden: false,
       isNarrowLayout: false,
+      scrollDirection: 'up',
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
     this.toggleScrollEvent = this.toggleScrollEvent.bind(this);
     this.checkScrollDirection = this.checkScrollDirection.bind(this);
+    this.throttledCheckScrollDirection = throttle(this.checkScrollDirection, 500);
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   componentDidMount() {
@@ -74,15 +77,23 @@ class SprkMasthead extends Component {
     }
   }
 
-  checkScrollDirection() {
+  toggleMenu() {
     console.log(window.scrollY);
+  }
+
+  checkScrollDirection() {
+    const newDirection = scrollYDirection();
+    if(this.state.scrollDirection !== newDirection) {
+      this.setState({ scrollDirection : newDirection });
+      this.toggleMenu();
+    }
   }
 
   toggleScrollEvent() {
     if(this.state.isNarrowLayout) {
-      window.addEventListener('scroll', this.checkScrollDirection);
+      window.addEventListener('scroll', this.throttledCheckScrollDirection);
     } else {
-      window.removeEventListener('scroll', this.checkScrollDirection, false);
+      window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
     }
   }
 
