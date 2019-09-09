@@ -78,7 +78,11 @@ class SprkMasthead extends Component {
   }
 
   toggleMenu() {
-    console.log(window.scrollY);
+    if(this.state.scrollDirection === 'down') {
+      this.setState({ isHidden : true });
+    } else {
+      this.setState({ isHidden : false });
+    }
   }
 
   checkScrollDirection() {
