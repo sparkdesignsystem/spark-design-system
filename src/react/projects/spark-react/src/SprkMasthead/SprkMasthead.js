@@ -44,6 +44,9 @@ class SprkMasthead extends Component {
         if (this.state.isNarrowLayout !== newMenuVisibility) {
           this.setState({ isNarrowLayout : newMenuVisibility });
           this.toggleScrollEvent();
+          if(!this.state.isNarrowLayout) {
+            this.setState({ isHidden : false });
+          }
         }
       }, 500)
     )
@@ -76,11 +79,10 @@ class SprkMasthead extends Component {
   }
 
   toggleScrollEvent() {
-    const checkScrollDirection = this.checkScrollDirection;
     if(this.state.isNarrowLayout) {
-      window.addEventListener('scroll', checkScrollDirection);
+      window.addEventListener('scroll', this.checkScrollDirection);
     } else {
-      window.removeEventListener('scroll', checkScrollDirection, false);
+      window.removeEventListener('scroll', this.checkScrollDirection, false);
     }
   }
 
