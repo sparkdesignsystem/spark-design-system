@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import '../windowStubs';
 import SprkMasthead from './SprkMasthead';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
@@ -133,4 +134,19 @@ it('should render the correct logoLink if logoLinkElement is router link', () =>
   );
   expect(wrapper.find(SprkLink).props().to).toBe('/button');
   expect(wrapper.find(SprkLink).props().element).toBe(Link);
+});
+
+it('should add the hidden class when state isHidden is true', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  wrapper.setState({ isHidden : true });
+  expect(wrapper.find('header.sprk-c-Masthead--hidden').length).toBe(1);
+});
+
+it('should update state isHidden to true when scrollDirection is equal to down', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  expect(wrapper.state('isHidden')).toEqual(false);
+  wrapper.setState({ scrollDirection : 'down' });
+  instance.toggleMenu();
+  expect(wrapper.state('isHidden')).toEqual(true);
 });
