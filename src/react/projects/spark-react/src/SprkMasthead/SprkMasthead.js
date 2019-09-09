@@ -20,6 +20,8 @@ class SprkMasthead extends Component {
       isNarrowLayout: false,
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
+    this.toggleScrollEvent = this.toggleScrollEvent.bind(this);
+    this.checkScrollDirection = this.checkScrollDirection.bind(this);
   }
 
   componentDidMount() {
@@ -40,8 +42,8 @@ class SprkMasthead extends Component {
       throttle(() => {
         const newMenuVisibility = isElementVisible('.sprk-c-Masthead__menu');
         if (this.state.isNarrowLayout !== newMenuVisibility) {
-          // toggleScrollEvent(newMenuVisibility);
           this.setState({ isNarrowLayout : newMenuVisibility });
+          this.toggleScrollEvent();
         }
       }, 500)
     )
@@ -69,6 +71,19 @@ class SprkMasthead extends Component {
     }
   }
 
+  checkScrollDirection() {
+    console.log(window.scrollY);
+  }
+
+  toggleScrollEvent() {
+    const checkScrollDirection = this.checkScrollDirection;
+    if(this.state.isNarrowLayout) {
+      window.addEventListener('scroll', checkScrollDirection);
+    } else {
+      window.removeEventListener('scroll', checkScrollDirection, false);
+    }
+  }
+
   render() {
     const {
       additionalClasses,
@@ -87,6 +102,9 @@ class SprkMasthead extends Component {
       navLink,
     } = this.props;
     const { isScrolled, narrowNavOpen, isHidden, isNarrowLayout } = this.state;
+
+    // On render check whether to add the scroll event
+    this.toggleScrollEvent();
     return (
       <header
         className={classNames(
