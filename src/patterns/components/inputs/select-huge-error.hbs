@@ -1,0 +1,20 @@
+---
+name: Select Box Huge - Error State
+description:
+  This input type should be used when a
+  user needs to select a single option
+  from a list of two or more options.
+information:
+  - Every item in the select input should be a valid option. As a best practice, do not put
+    "Select an option..." or similar as the first option in the dropdown. If you want to provide
+    further instructions related to this input, use Helper Text.
+invisible: true
+order: 10
+hasAngularCode: false
+hasReactCode: false
+---
+
+{{#embed "patterns.components.inputs.select"
+         idattr="select-error-huge"
+         class="sprk-b-Select--error"
+         errorMessage="There is an error on this field."}}{{/embed}}
