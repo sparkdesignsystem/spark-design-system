@@ -19,6 +19,7 @@ class SprkMasthead extends Component {
       isHidden: false,
       isNarrowLayout: false,
       scrollDirection: 'up',
+      currentLayout: false,
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
     this.toggleScrollEvent = this.toggleScrollEvent.bind(this);
@@ -26,9 +27,11 @@ class SprkMasthead extends Component {
     this.throttledCheckScrollDirection = throttle(this.checkScrollDirection, 500);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.checkIfNarrowLayout = this.checkIfNarrowLayout.bind(this);
-    this.throttledCheckIfNarrowLayout = throttle(this.checkIfNarrowLayout, 500);
+    this.checkLayoutOnResize = this.checkLayoutOnResize.bind(this);
+    this.throttledCheckLayoutOnResize = throttle(this.checkLayoutOnResize, 500);
     this.closeNarrowNavMenu = this.closeNarrowNavMenu.bind(this);
     this.setIsScrolled = this.setIsScrolled.bind(this);
+    this.getCurrentLayout = this.getCurrentLayout.bind(this);
   }
 
   componentDidMount() {
@@ -36,7 +39,7 @@ class SprkMasthead extends Component {
 
     window.addEventListener('scroll', this.setIsScrolled);
     window.addEventListener('orientationchange', this.closeNarrowNavMenu);
-    window.addEventListener('resize', this.throttledCheckIfNarrowLayout);
+    window.addEventListener('resize', this.throttledCheckLayoutOnResize);
   }
 
   componentWillUnmount() {
@@ -75,15 +78,23 @@ class SprkMasthead extends Component {
     }
   }
 
+  getCurrentLayout() {
+    this.setState({ currentLayout : isElementVisible('.sprk-c-Masthead__menu')});
+  }
+
   checkIfNarrowLayout() {
-    const newMenuVisibility = isElementVisible('.sprk-c-Masthead__menu');
-    if (this.state.isNarrowLayout !== newMenuVisibility) {
-      this.setState({ isNarrowLayout : newMenuVisibility });
+    if (this.state.isNarrowLayout !== this.state.currentLayout) {
+      this.setState({ isNarrowLayout : this.state.currentLayout });
       this.toggleScrollEvent();
       if(!this.state.isNarrowLayout) {
         this.setState({ isHidden : false });
       }
     }
+  }
+
+  checkLayoutOnResize() {
+    this.getCurrentLayout();
+    this.checkIfNarrowLayout();
   }
 
   toggleMenu() {
