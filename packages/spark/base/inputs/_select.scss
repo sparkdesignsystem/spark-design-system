@@ -15,6 +15,12 @@
   &:focus {
     border-color: $sprk-select-focus-border-color;
   }
+
+  // Remove FF specific focusring
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $sprk-select-color;
+  }
 }
 
 // IE11
