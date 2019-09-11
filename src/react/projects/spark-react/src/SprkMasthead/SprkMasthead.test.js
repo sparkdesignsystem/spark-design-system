@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import '../windowStubs';
 import SprkMasthead from './SprkMasthead';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
@@ -134,3 +135,80 @@ it('should render the correct logoLink if logoLinkElement is router link', () =>
   expect(wrapper.find(SprkLink).props().to).toBe('/button');
   expect(wrapper.find(SprkLink).props().element).toBe(Link);
 });
+
+it('should add the hidden class when state isHidden is true', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  wrapper.setState({ isHidden : true });
+  expect(wrapper.find('header.sprk-c-Masthead--hidden').length).toBe(1);
+});
+
+it('should update state isHidden to true when scrollDirection is equal to down', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  expect(wrapper.state('isHidden')).toEqual(false);
+  wrapper.setState({ scrollDirection : 'down' });
+  instance.toggleMenu();
+  expect(wrapper.state('isHidden')).toEqual(true);
+});
+
+it('should update state isHidden to false when scrollDirection is equal to up', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  wrapper.setState({ isHidden : true });
+  expect(wrapper.state('isHidden')).toEqual(true);
+  wrapper.setState({ scrollDirection : 'up' });
+  instance.toggleMenu();
+  expect(wrapper.state('isHidden')).toEqual(false);
+});
+
+it('should update narrowNavOpen to false when closeNarrowNavMenu is called', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  wrapper.setState({ narrowNavOpen : true });
+  expect(wrapper.state('narrowNavOpen')).toEqual(true);
+  instance.closeNarrowNavMenu();
+  expect(wrapper.state('narrowNavOpen')).toEqual(false);
+});
+
+it('should update state of isNarrowLayout if isNarrowLayout !== newMenuVisibility', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  wrapper.setState({ currentLayout : true });
+  wrapper.setState({ isNarrowLayout : false });
+  instance.checkIfNarrowLayout();
+  expect(wrapper.state('isNarrowLayout')).toEqual(true);
+});
+
+it('should update state of isHidden if isNarrowLayout is false', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  wrapper.setState({ currentLayout : false });
+  wrapper.setState({ isNarrowLayout : true });
+  wrapper.setState({ isHidden : true });
+  instance.checkIfNarrowLayout();
+  expect(wrapper.state('isHidden')).toEqual(false);
+});
+
+it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");  
+  wrapper.update();
+  instance.checkLayoutOnResize();
+  expect(spy).toHaveBeenCalled();
+});
+
+it('should call checkIfNarrowLayout when checkLayoutOnResize is called', () => {
+  const wrapper = mount(<SprkMasthead/>);
+  const instance = wrapper.instance();
+  const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");  
+  wrapper.update();
+  instance.checkLayoutOnResize();
+  expect(spy).toHaveBeenCalled();
+});
+
+// NOT TESTING REMOVAL OF EVENTLISTENERS ON UNMOUNT
+// - There is no functionality in JS to detect the presence of eventlisteners
+// - The only way is to use state or variables like attached = true/false
+// - Unable to detect state after component has been unmounted
+// - Testing unmount function is testing native functionality of react and is redundant
