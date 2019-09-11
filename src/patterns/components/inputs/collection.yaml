@@ -12,6 +12,7 @@ contents:
   Search Input: inputs.html#search-input
   Inline Search Input: inputs.html#inline-search-input
   Money Input: inputs.html#monetary-input
+  Percentage Input: inputs.html#percentage-input
   Password Input: inputs.html#password-input
   Helper Text: inputs.html#helper-text
   Phone Number: inputs.html#phone-number-input
@@ -154,7 +155,7 @@ variableTable:
   $sprk-text-input-huge-label-active-top:
     default: 10px
     description: Top positioning for the label on huge text inputs when input is in focus.
-  $sprk-text-input-huge-active-padding-top: 
+  $sprk-text-input-huge-active-padding-top:
     default: $sprk-text-input-huge-height/4
     description: Padding-top for huge text inputs when input is in focus.
   $sprk-text-input-huge-focus-label-color:
@@ -163,7 +164,7 @@ variableTable:
   $sprk-text-input-huge-error-focus-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is an error.
-  $sprk-text-input-huge-complete-label-color: 
+  $sprk-text-input-huge-complete-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is a value present or no placeholder is shown.
   $sprk-text-input-huge-height:
@@ -420,7 +421,7 @@ variableTable:
     description: The z-index applied to the icon inside input elements.
   $sprk-input-huge-icon-offset-top:
     default: 50%
-    description: 
+    description:
   $sprk-input-text-icon-offset-x:
     default: $sprk-space-m
     description: The X offset of text icons inside input elements.
