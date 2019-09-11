@@ -86,7 +86,7 @@ class SprkMasthead extends Component {
     if (this.state.isNarrowLayout !== this.state.currentLayout) {
       this.setState({ isNarrowLayout : this.state.currentLayout });
       this.toggleScrollEvent();
-      if(!this.state.isNarrowLayout) {
+      if (!this.state.isNarrowLayout) {
         this.setState({ isHidden : false });
       }
     }
@@ -98,7 +98,7 @@ class SprkMasthead extends Component {
   }
 
   toggleMenu() {
-    if(this.state.scrollDirection === 'down') {
+    if (this.state.scrollDirection === 'down') {
       this.setState({ isHidden : true });
     } else {
       this.setState({ isHidden : false });
@@ -107,14 +107,14 @@ class SprkMasthead extends Component {
 
   checkScrollDirection() {
     const newDirection = scrollYDirection();
-    if(this.state.scrollDirection !== newDirection) {
+    if (this.state.scrollDirection !== newDirection) {
       this.setState({ scrollDirection : newDirection });
       this.toggleMenu();
     }
   }
 
   toggleScrollEvent() {
-    if(this.state.isNarrowLayout) {
+    if (this.state.isNarrowLayout) {
       window.addEventListener('scroll', this.throttledCheckScrollDirection);
     } else {
       window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
