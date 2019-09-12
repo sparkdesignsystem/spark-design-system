@@ -3,7 +3,7 @@ import {
   HostListener,
   Input,
   Renderer2,
-  AfterContentInit,
+  AfterContentInit
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
@@ -265,6 +265,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   isNarrowLayout = false;
   scrollDirection = 'up';
   isHidden = false;
+  currentLayout = false;
 
   @HostListener('window:orientationchange')
   handleResizeEvent() {
@@ -276,6 +277,18 @@ export class SprkMastheadComponent implements AfterContentInit {
     window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
     if (this.isNarrowLayout) {
       this.checkScrollDirection();
+    }
+  }
+
+  // Handles when viewport size changes to large while narrow nav is hidden
+  @HostListener('window:resize', ['$event'])
+  onResize(event): void {
+    this.currentLayout = isElementVisible('.sprk-c-Masthead__menu');
+    if (this.isNarrowLayout !== this.currentLayout) {
+      this.isNarrowLayout = this.currentLayout;
+      if (!this.isNarrowLayout) {
+        this.isHidden = false;
+      }
     }
   }
 
