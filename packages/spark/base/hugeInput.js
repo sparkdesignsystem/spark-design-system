@@ -21,7 +21,7 @@ const bindUIEventsHugeInput = element => {
   }
 };
 
-const hugeTextInput = () => {
+const hugeInput = () => {
   /*
    * TODO: Deprecate the code below
    * that gets elements with `data-sprk-input="hugeTextInput"`
@@ -32,4 +32,4 @@ const hugeTextInput = () => {
   getElements('[data-sprk-input="huge"]', bindUIEventsHugeInput);
 };
 
-export { hugeTextInput, bindUIEventsHugeInput, bindUIEvents };
+export { hugeInput, bindUIEventsHugeInput, bindUIEvents };

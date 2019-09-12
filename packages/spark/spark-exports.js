@@ -38,10 +38,11 @@ import {
   bindUIEvents as bindSSNInputUIEvents,
 } from './base/ssnInput';
 import {
-  hugeTextInput,
+  hugeInput,
+  hugeInput as hugeTextInput,
   bindUIEventsHugeInput,
   bindUIEvents as bindUIEventsHugeInputOld,
-} from './base/hugeTextInput';
+} from './base/hugeInput';
 import {
   alerts,
   dismissAlert,
@@ -235,6 +236,7 @@ export {
   checkScrollDirection,
   toggleMenu,
   hugeTextInput,
+  hugeInput,
   bindUIEventsHugeInput,
   bindUIEventsHugeInputOld,
 };
