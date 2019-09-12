@@ -8,12 +8,12 @@ import addClassIfNotEmpty from '../utilities/addClassIfNotEmpty';
  * in favor of the more universal `sprk-b-Input--has-floating-label`.
  */
 const bindUIEvents = element => {
-  addClassIfNotEmpty('sprk-b-TextInput--float-label');
+  addClassIfNotEmpty(element, 'sprk-b-TextInput--float-label');
   toggleClassWithValue(element, 'sprk-b-TextInput--float-label', 'input');
 };
 
 const bindUIEventsHugeInput = element => {
-  addClassIfNotEmpty('sprk-b-Input--has-floating-label');
+  addClassIfNotEmpty(element, 'sprk-b-Input--has-floating-label');
   if (element.tagName === 'SELECT') {
     toggleClassWithValue(element, 'sprk-b-Input--has-floating-label', 'change');
   } else {
