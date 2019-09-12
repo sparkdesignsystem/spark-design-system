@@ -24,6 +24,8 @@
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.4",
+    "@angular/cli": "^8.3.4",
     "core-js": "^2.5.7",
     "tiny-date-picker": "^3.2.6",
     "zone.js": "^0.8.26"
