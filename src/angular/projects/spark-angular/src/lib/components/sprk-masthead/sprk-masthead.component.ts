@@ -1,5 +1,13 @@
-import { Component, HostListener, Input, Renderer2 } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  Renderer2,
+  AfterContentInit,
+  OnDestroy
+} from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
+import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
 import * as _ from 'lodash';
 
 @Component({
@@ -221,7 +229,7 @@ import * as _ from 'lodash';
     </header>
   `
 })
-export class SprkMastheadComponent {
+export class SprkMastheadComponent implements AfterContentInit, OnDestroy {
   constructor(private renderer: Renderer2, router: Router) {
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -255,6 +263,9 @@ export class SprkMastheadComponent {
   componentID = _.uniqueId();
   controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
   isScrolled = false;
+  isNarrowLayout = false;
+  scrollDirection = 'up';
+  isHidden = false;
 
   @HostListener('window:orientationchange')
   handleResizeEvent() {
@@ -264,6 +275,36 @@ export class SprkMastheadComponent {
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
+  }
+
+  ngAfterContentInit() {
+    this.isNarrowLayout = isElementVisible('.sprk-c-Masthead__menu');
+    this.toggleScrollEvent();
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('scroll', this.checkScrollDirection, false);
+  }
+
+  toggleMenu() {
+    this.scrollDirection === 'down' ? this.isHidden = true : this.isHidden = false;
+  }
+
+  checkScrollDirection() {
+    const newDirection = scrollYDirection();
+    if (this.scrollDirection !== newDirection) {
+      this.scrollDirection = newDirection;
+      this.scrollDirection === 'down' ? this.isHidden = true : this.isHidden = false;
+      console.log('isHidden', this.isHidden);
+    }
+  }
+
+  toggleScrollEvent() {
+    if (this.isNarrowLayout) {
+      window.addEventListener('scroll', this.checkScrollDirection);
+    } else {
+      window.removeEventListener('scroll', this.checkScrollDirection, false);
+    }
   }
 
   getClasses(): string {
@@ -281,6 +322,10 @@ export class SprkMastheadComponent {
 
     if (this.isScrolled) {
       classArray.push('sprk-c-Masthead--scroll');
+    }
+
+    if (this.isHidden) {
+      classArray.push('sprk-c-Masthead--hidden');
     }
 
     return classArray.join(' ');
