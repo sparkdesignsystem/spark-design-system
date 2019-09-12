@@ -1,4 +1,4 @@
-const toggleClassWithValue = (element, className, eventType) => {
+const toggleClassWithValue = (element, className, eventType = 'input') => {
   element.addEventListener(`${eventType}`, () => {
     const { value } = element;
 
