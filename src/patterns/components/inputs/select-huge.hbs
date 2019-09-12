@@ -1,13 +1,14 @@
 ---
 name: Select Box Huge
 description:
-  This input type should be used when a
-  user needs to select a single option
-  from a list of two or more options.
+  This select input is larger than the default select input.
+  The label is centered inside the select until focused. On focus, the label transitions to the top of the select.
 information:
-  - Every item in the select input should be a valid option. As a best practice, do not put
-    "Select an option..." or similar as the first option in the dropdown. If you want to provide
-    further instructions related to this input, use Helper Text.
+  - The first option element inside the select needs to be empty as seen in the code below.
+restrictions:
+  - This should only be used in a form that displays one input at a time.
+  - The select element must come before the label element.
+  - Labels cannot be long in length as they must fit inside the select. They should not wrap onto a second line.
 order: 10
 hasAngularCode: false
 hasReactCode: false
@@ -18,9 +19,8 @@ hasReactCode: false
           id="{{#if idattr}}{{idattr}}{{else}}select-huge{{/if}}"
           data-id="{{#if idattr}}{{idattr}}{{else}}select-huge{{/if}}"
           aria-describedby="{{#if idattr}}{{idattr}}{{else}}select-huge{{/if}}--error-container"
-          data-sprk-input="hugeTextInput"
-          {{#if disabled}} disabled{{/if}}
-    >
+          data-sprk-input="huge"
+          {{#if disabled}} disabled{{/if}}>
     <option value="not-selected" disabled selected hidden></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
