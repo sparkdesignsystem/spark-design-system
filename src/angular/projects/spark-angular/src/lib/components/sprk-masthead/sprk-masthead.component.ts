@@ -304,7 +304,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   checkScrollDirection() {
-    console.log('scroll:', window.scrollY);
     const newDirection = scrollYDirection();
     if (this.scrollDirection !== newDirection) {
       this.scrollDirection = newDirection;
