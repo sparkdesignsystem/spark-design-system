@@ -89,10 +89,10 @@ variableTable:
   $sprk-text-input-border-radius:
     default: 4px
     description: The border radius to use for text input elements.
-  $sprk-text-input-huge-border-width:
+  $sprk-input-huge-border-width:
     default: 2px
     description: The border width around huge text input elements.
-  $sprk-text-input-huge-focus-border-width:
+  $sprk-input-huge-focus-border-width:
     default: 2px
     description: The border radius to use for huge text input elements when it's focused.
   $sprk-text-input-box-shadow:
@@ -101,7 +101,7 @@ variableTable:
   $sprk-text-input-padding:
     default: 12px 13px
     description: The padding inside of text input elements.
-  $sprk-text-input-huge-padding:
+  $sprk-input-huge-padding:
     default: 0 $sprk-space-misc-a
     description: The padding inside of huge text input elements.
   $sprk-text-input-focus-border-color:
@@ -131,49 +131,49 @@ variableTable:
   $sprk-text-input-transition:
     default: border-color 0.15s ease
     description: The transition applied to text input elements.
-  $sprk-text-input-huge-transition:
+  $sprk-input-huge-transition:
     default: top 0.3s, color 0.3s, font-size 0.3s
     description: The transition applied to huge text input elements.
-  $sprk-text-input-huge-transition-delay:
+  $sprk-input-huge-transition-delay:
     default: 0s
     description: The transition delay applied to huge text input elements.
-  $sprk-text-input-huge-placeholder-transition-delay:
+  $sprk-input-huge-placeholder-transition-delay:
     default: 100ms
     description: Transition delay for the placeholder on huge text input elements when the input is focused.
-  $sprk-text-input-huge-placeholder-transition-property:
+  $sprk-input-huge-placeholder-transition-property:
     default: opacity
     description: Transition delay property for the placeholder on huge text input elements when the input is focused.
-  $sprk-text-input-huge-placeholder-opacity:
+  $sprk-input-huge-placeholder-opacity:
     default: 0
     description: The default opacity applied to the huge text input placeholders.
-  $sprk-text-input-huge-placeholder-active-opacity:
+  $sprk-input-huge-placeholder-active-opacity:
     default: 1
     description: The opacity applied to the placeholder when the huge text input is in focus.
-  $sprk-text-input-huge-label-top:
-    default: $sprk-text-input-huge-height/3
+  $sprk-input-huge-label-top:
+    default: $sprk-input-huge-height/3
     description: Top positioning for the label on huge text inputs.
-  $sprk-text-input-huge-label-active-top:
+  $sprk-input-huge-label-active-top:
     default: 10px
     description: Top positioning for the label on huge text inputs when input is in focus.
-  $sprk-text-input-huge-active-padding-top:
-    default: $sprk-text-input-huge-height/4
+  $sprk-input-huge-active-padding-top:
+    default: $sprk-input-huge-height/4
     description: Padding-top for huge text inputs when input is in focus.
-  $sprk-text-input-huge-focus-label-color:
+  $sprk-input-huge-focus-label-color:
     default: $sprk-green
     description: Label color for huge text inputs when input is in focus.
-  $sprk-text-input-huge-error-focus-label-color:
+  $sprk-input-huge-error-focus-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is an error.
-  $sprk-text-input-huge-complete-label-color:
+  $sprk-input-huge-complete-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is a value present or no placeholder is shown.
-  $sprk-text-input-huge-height:
+  $sprk-input-huge-height:
     default: 64px
     description: The height of the huge text input.
-  $sprk-text-input-huge-font-size:
+  $sprk-input-huge-font-size:
     default: $sprk-font-size-display-five
     description: The font-size of the huge text input.
-  $sprk-text-input-huge-label-font-size:
+  $sprk-input-huge-label-font-size:
     default: $sprk-font-size-body-four
     description: The font-size of the huge text input label.
   $sprk-select-appearance:
