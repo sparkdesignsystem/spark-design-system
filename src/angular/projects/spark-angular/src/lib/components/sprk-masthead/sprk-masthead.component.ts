@@ -267,6 +267,9 @@ export class SprkMastheadComponent implements AfterContentInit {
   isHidden = false;
   currentLayout = false;
 
+  throttledCheckScrollDirection = _.throttle(this.checkScrollDirection, 500);
+  throttledCheckIfNarrowLayout = _.throttle(this.checkIfNarrowLayout, 500);
+
   @HostListener('window:orientationchange')
   handleResizeEvent() {
     this.closeNarrowNav();
@@ -276,13 +279,17 @@ export class SprkMastheadComponent implements AfterContentInit {
   onScroll(event): void {
     window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
     if (this.isNarrowLayout) {
-      this.checkScrollDirection();
+      this.throttledCheckScrollDirection();
     }
   }
 
   // Handles when viewport size changes to large while narrow nav is hidden
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
+    this.throttledCheckIfNarrowLayout();
+  }
+
+  checkIfNarrowLayout() {
     this.currentLayout = isElementVisible('.sprk-c-Masthead__menu');
     if (this.isNarrowLayout !== this.currentLayout) {
       this.isNarrowLayout = this.currentLayout;
@@ -297,6 +304,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   checkScrollDirection() {
+    console.log('scroll:', window.scrollY);
     const newDirection = scrollYDirection();
     if (this.scrollDirection !== newDirection) {
       this.scrollDirection = newDirection;
