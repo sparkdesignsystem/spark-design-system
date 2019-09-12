@@ -4,7 +4,6 @@ import {
   Input,
   Renderer2,
   AfterContentInit,
-  OnDestroy
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
@@ -229,7 +228,7 @@ import * as _ from 'lodash';
     </header>
   `
 })
-export class SprkMastheadComponent implements AfterContentInit, OnDestroy {
+export class SprkMastheadComponent implements AfterContentInit {
   constructor(private renderer: Renderer2, router: Router) {
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -275,35 +274,22 @@ export class SprkMastheadComponent implements AfterContentInit, OnDestroy {
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
+    if (this.isNarrowLayout) {
+      this.checkScrollDirection();
+    }
   }
 
   ngAfterContentInit() {
     this.isNarrowLayout = isElementVisible('.sprk-c-Masthead__menu');
-    this.toggleScrollEvent();
-  }
-
-  ngOnDestroy() {
-    window.removeEventListener('scroll', this.checkScrollDirection, false);
-  }
-
-  toggleMenu() {
-    this.scrollDirection === 'down' ? this.isHidden = true : this.isHidden = false;
   }
 
   checkScrollDirection() {
     const newDirection = scrollYDirection();
     if (this.scrollDirection !== newDirection) {
       this.scrollDirection = newDirection;
-      this.scrollDirection === 'down' ? this.isHidden = true : this.isHidden = false;
-      console.log('isHidden', this.isHidden);
-    }
-  }
-
-  toggleScrollEvent() {
-    if (this.isNarrowLayout) {
-      window.addEventListener('scroll', this.checkScrollDirection);
-    } else {
-      window.removeEventListener('scroll', this.checkScrollDirection, false);
+      this.scrollDirection === 'down'
+        ? (this.isHidden = true)
+        : (this.isHidden = false);
     }
   }
 
