@@ -7,11 +7,15 @@ import toggleClassWithValue from '../utilities/toggleClassWithValue';
  * in favor of the more universal `sprk-b-Input--has-floating-label`.
  */
 const bindUIEvents = element => {
-  toggleClassWithValue(element, 'sprk-b-TextInput--float-label');
+  toggleClassWithValue(element, 'sprk-b-TextInput--float-label', 'input');
 };
 
 const bindUIEventsHugeInput = element => {
-  toggleClassWithValue(element, 'sprk-b-Input--has-floating-label');
+  if (element.tagName === 'SELECT') {
+    toggleClassWithValue(element, 'sprk-b-Input--has-floating-label', 'change');
+  } else {
+    toggleClassWithValue(element, 'sprk-b-Input--has-floating-label', 'input');
+  }
 };
 
 const hugeTextInput = () => {

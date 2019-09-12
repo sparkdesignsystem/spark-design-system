@@ -1,5 +1,5 @@
-const toggleClassWithValue = (element, className) => {
-  element.addEventListener('input', () => {
+const toggleClassWithValue = (element, className, eventType) => {
+  element.addEventListener(`${eventType}`, () => {
     const { value } = element;
 
     if (value) {
