@@ -8,12 +8,10 @@ import addClassIfNotEmpty from '../utilities/addClassIfNotEmpty';
  * in favor of the more universal `sprk-b-Input--has-floating-label`.
  */
 const bindUIEvents = element => {
-  addClassIfNotEmpty(element, 'sprk-b-TextInput--float-label');
   toggleClassWithValue(element, 'sprk-b-TextInput--float-label', 'input');
 };
 
 const bindUIEventsHugeInput = element => {
-  addClassIfNotEmpty(element, 'sprk-b-Input--has-floating-label');
   if (element.tagName === 'SELECT') {
     toggleClassWithValue(element, 'sprk-b-Input--has-floating-label', 'change');
   } else {
@@ -22,6 +20,24 @@ const bindUIEventsHugeInput = element => {
 };
 
 const hugeInput = () => {
+  window.onload = () => {
+    const oldInputs = Array.from(
+      document.querySelectorAll('[data-sprk-input="hugeTextInput"]'),
+    );
+    const newInputs = Array.from(
+      document.querySelectorAll('[data-sprk-input="huge"]'),
+    );
+
+    oldInputs.map(input => {
+      addClassIfNotEmpty(input, 'sprk-b-TextInput--float-label');
+      return input;
+    });
+
+    newInputs.map(input => {
+      addClassIfNotEmpty(input, 'sprk-b-Input--has-floating-label');
+      return input;
+    });
+  };
   /*
    * TODO: Deprecate the code below
    * that gets elements with `data-sprk-input="hugeTextInput"`
