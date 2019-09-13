@@ -434,7 +434,7 @@ variableTable:
     default: 700
     description: The font weight of text icons inside input elements.
   $sprk-text-input-has-text-icon-padding:
-    default: 12px 13px 12px 37px
+    default: 0 0 1px 37px;
     description: The padding inside input elements that contain text icons.
   $sprk-text-input-huge-has-text-icon-padding:
     default: 0 40px
