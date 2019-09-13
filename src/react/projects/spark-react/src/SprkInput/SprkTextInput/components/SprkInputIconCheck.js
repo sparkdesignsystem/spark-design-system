@@ -10,6 +10,7 @@ const SprkInputIconCheck = ({ children, leadingIcon, textIcon }) => {
         className={classnames({
           'sprk-b-TextInputIconContainer': true,
           'sprk-b-TextInputIconContainer--has-text-icon': textIcon,
+          'sprk-b-TextInputIconContainer--has-text-icon-right': textIconRight,
         })}
       >
         {leadingIcon.length > 0 && (
