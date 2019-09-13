@@ -21,21 +21,17 @@ const bindUIEventsHugeInput = element => {
 
 const hugeInput = () => {
   window.onload = () => {
-    const oldInputs = Array.from(
-      document.querySelectorAll('[data-sprk-input="hugeTextInput"]'),
+    const oldInputs = document.querySelectorAll(
+      '[data-sprk-input="hugeTextInput"]',
     );
-    const newInputs = Array.from(
-      document.querySelectorAll('[data-sprk-input="huge"]'),
-    );
+    const newInputs = document.querySelectorAll('[data-sprk-input="huge"]');
 
-    oldInputs.map(input => {
+    oldInputs.forEach(input => {
       addClassIfNotEmpty(input, 'sprk-b-TextInput--float-label');
-      return input;
     });
 
-    newInputs.map(input => {
+    newInputs.forEach(input => {
       addClassIfNotEmpty(input, 'sprk-b-Input--has-floating-label');
-      return input;
     });
   };
   /*
