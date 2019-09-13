@@ -16,10 +16,10 @@
     border-color: $sprk-select-focus-border-color;
   }
 
-  // Remove FF specific focusring
+  // Remove FF specific focusring in favor of ours
   &:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 $sprk-select-color;
+    color: $sprk-select-moz-focusring-color;
+    text-shadow: $sprk-select-moz-focusring-text-shadow;
   }
 }
 
