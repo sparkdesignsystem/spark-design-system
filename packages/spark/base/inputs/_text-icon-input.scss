@@ -12,6 +12,22 @@
   }
 }
 
+.sprk-b-TextInputIconContainer--has-text-icon-right {
+  max-width: $sprk-input-container-narrow-max-width;
+
+  &::before {
+    content: $sprk-percent-symbol;
+    display: block;
+    font-size: $sprk-input-text-icon-font-size;
+    font-weight: $sprk-input-text-icon-font-weight;
+    line-height: 1;
+    margin-left: $sprk-input-text-icon-offset-x-right;
+    position: absolute;
+    top: calc(100% - #{$sprk-input-text-icon-offset-y});
+    z-index: $sprk-input-text-icon-z-index;
+  }
+}
+
 .sprk-b-InputContainer--huge {
   .sprk-b-TextInputIconContainer--has-text-icon {
     &::before {

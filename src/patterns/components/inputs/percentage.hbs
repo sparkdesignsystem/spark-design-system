@@ -4,14 +4,40 @@ description:
   This input is used to %%%%
 information:
   - There's a mask or somethign maybe that does something or does it?
-order: 19
+order: 21
 ---
 
-<div class="sprk-b-InputContainer" data-sprk-input="percentage">
+<div class="sprk-b-InputContainer" data-sprk-input="monetary">
   <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+    <label for="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}" class="sprk-b-Label sprk-b-Label--monetary">Payment</label>
+    <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
+           pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$"
+           id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}"
+           data-id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}"
+           type="tel"
+           aria-describedby="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container"
+           {{#if invaliddata}} aria-invalid="true"{{/if}}
+           {{#if disabled}} disabled{{/if}}
+           >
+  </div>
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}monetary-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled-small" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+
+<div class="sprk-b-InputContainer" data-sprk-input="percentage">
+  <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon-right">
     <label for="{{#if idattr}}{{idattr}}{{else}}percentage-normal{{/if}}"
       class="sprk-b-Label sprk-b-Label--percentage">Interest Rate</label>
-    <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
+    <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon-right {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
       {{!-- pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" --}}
       id="{{#if idattr}}{{idattr}}{{else}}percentage-normal{{/if}}"
       data-id="{{#if idattr}}{{idattr}}{{else}}percentage-normal{{/if}}" {{!-- type="tel" --}}
