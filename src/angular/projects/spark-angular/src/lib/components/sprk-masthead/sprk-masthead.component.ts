@@ -11,6 +11,13 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'sprk-masthead',
+  styles: [`:host {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            display: block;
+          }`
+        ],
   template: `
     <header [ngClass]="getClasses()" role="banner" [attr.data-id]="idString">
       <div
