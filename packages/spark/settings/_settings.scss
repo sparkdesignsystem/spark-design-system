@@ -508,8 +508,6 @@ $sprk-text-input-transition: border-color 0.15s ease !default;
 ///
 $sprk-select-appearance: none !default;
 $sprk-select-background: none !default;
-$sprk-select-moz-focusring-color: transparent !default;
-$sprk-select-moz-focusring-text-shadow: 0 0 0 $sprk-select-color !default;
 $sprk-select-border: $sprk-text-input-border !default;
 $sprk-select-focus-border-color: $sprk-text-input-focus-border-color !default;
 $sprk-select-error-border-color: $sprk-text-input-error-border-color !default;
@@ -528,6 +526,8 @@ $sprk-select-arrow-stroke-width: 6px !default;
 $sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
 $sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
 $sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
+$sprk-select-moz-focusring-color: transparent !default;
+$sprk-select-moz-focusring-text-shadow: 0 0 0 $sprk-select-color !default;
 
 //
 // Textarea
