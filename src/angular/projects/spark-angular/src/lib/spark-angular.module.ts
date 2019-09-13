@@ -1,3 +1,6 @@
+import { environment } from '../environment/environment';
+window['sprk'] = { version: { angular: environment.version } } || {};
+
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.module';
 import { SprkFormatterMonetaryModule } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
