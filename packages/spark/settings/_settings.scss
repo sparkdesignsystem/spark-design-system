@@ -437,8 +437,6 @@ $sprk-input-max-width: 27.5rem !default;
 // Huge Inputs
 ///
 $sprk-input-container-huge-max-width: 37.5rem !default;
-$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default; // Todo deprecate
-$sprk-input-huge-padding: $sprk-text-input-huge-padding !default;
 $sprk-text-input-huge-height: 64px !default; // Todo deprecate
 $sprk-input-huge-height: $sprk-text-input-huge-height !default;
 $sprk-text-input-huge-font-size: $sprk-font-size-display-five !default; // Todo deprecate
@@ -447,6 +445,9 @@ $sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default; // To
 $sprk-input-huge-label-font-size: $sprk-text-input-huge-label-font-size !default;
 $sprk-text-input-huge-border-width: 2px !default; // Todo deprecate
 $sprk-input-huge-border-width: $sprk-text-input-huge-border-width !default;
+$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default; // Todo deprecate
+$sprk-input-huge-padding: $sprk-text-input-huge-padding !default;
+$sprk-input-huge-label-padding: 0 ($sprk-space-misc-a + $sprk-input-huge-border-width) !default;
 $sprk-text-input-huge-focus-border-width: 2px !default; // Todo deprecate
 $sprk-input-huge-focus-border-width: $sprk-text-input-huge-focus-border-width !default;
 $sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default; // Todo deprecate
