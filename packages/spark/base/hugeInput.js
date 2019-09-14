@@ -20,28 +20,30 @@ const bindUIEventsHugeInput = element => {
 };
 
 const hugeInput = () => {
-  window.onload = () => {
-    const oldInputs = document.querySelectorAll(
-      '[data-sprk-input="hugeTextInput"]',
-    );
-    const newInputs = document.querySelectorAll('[data-sprk-input="huge"]');
-
-    oldInputs.forEach(input => {
-      addClassIfNotEmpty(input, 'sprk-b-TextInput--float-label');
-    });
-
-    newInputs.forEach(input => {
-      addClassIfNotEmpty(input, 'sprk-b-Input--has-floating-label');
-    });
-  };
+  const oldSelector = '[data-sprk-input="hugeTextInput"]';
+  const newSelector = '[data-sprk-input="huge"]';
+  window.addEventListener('load', () => {
+    const oldInputs = document.querySelectorAll(oldSelector);
+    const newInputs = document.querySelectorAll(newSelector);
+    if (oldInputs.length > 0) {
+      oldInputs.forEach(input => {
+        addClassIfNotEmpty(input, 'sprk-b-TextInput--float-label');
+      });
+    }
+    if (newInputs.length > 0) {
+      newInputs.forEach(input => {
+        addClassIfNotEmpty(input, 'sprk-b-Input--has-floating-label');
+      });
+    }
+  });
   /*
    * TODO: Deprecate the code below
    * that gets elements with `data-sprk-input="hugeTextInput"`
    * in favor of the more universal `data-sprk-input="huge"`.
    */
-  getElements('[data-sprk-input="hugeTextInput"]', bindUIEvents);
+  getElements(oldSelector, bindUIEvents);
 
-  getElements('[data-sprk-input="huge"]', bindUIEventsHugeInput);
+  getElements(newSelector, bindUIEventsHugeInput);
 };
 
 export { hugeInput, bindUIEventsHugeInput, bindUIEvents };

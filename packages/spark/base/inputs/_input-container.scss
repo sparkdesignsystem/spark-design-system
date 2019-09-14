@@ -26,6 +26,11 @@
   box-shadow: $sprk-input-huge-box-shadow;
 }
 
+// Adjust for select open icon
+.sprk-b-InputContainer--huge .sprk-b-Select {
+  padding-right: $sprk-select-input-huge-padding-right;
+}
+
 .sprk-b-InputContainer--huge .sprk-b-TextInput:focus,
 .sprk-b-InputContainer--huge .sprk-b-Select:focus {
   border-width: $sprk-input-huge-focus-border-width;

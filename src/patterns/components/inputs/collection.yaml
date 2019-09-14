@@ -107,6 +107,9 @@ variableTable:
   $sprk-input-huge-padding:
     default: 0 $sprk-space-misc-a
     description: The padding inside of huge input elements.
+$sprk-select-input-huge-padding-right:
+    default: 45px
+    description: The padding right for huge select inputs with a select icon.
   $sprk-text-input-focus-border-color:
     default: $sprk-green
     description: The border color when input elements receive focus.
