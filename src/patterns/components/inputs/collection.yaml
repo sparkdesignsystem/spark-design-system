@@ -50,6 +50,9 @@ variableTable:
   $sprk-monetary-symbol:
     default: '$'
     description: The symbol used to denote currency.
+  $sprk-percent-symbol:
+    default: '%'
+    description: The symbol used to denote a percentage.
   $sprk-fieldset-padding:
     default: $sprk-space-m 0 0 0
     description: The value for padding applied to the fieldset element.
@@ -425,6 +428,9 @@ variableTable:
   $sprk-input-text-icon-offset-x:
     default: $sprk-space-m
     description: The X offset of text icons inside input elements.
+  $sprk-input-text-icon-offset-x-right:
+    default: calc(100% - $sprk-space-l)
+    description: The X offset of text icons on the right inside edge of input elements.
   $sprk-input-text-icon-offset-y:
     default: 2em
     description: The Y offset of text icons inside input elements.
