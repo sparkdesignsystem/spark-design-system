@@ -219,7 +219,7 @@ $sprk-font-weight-display-seven: 500 !default;
 // Body One
 $sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$sprk-font-size-body-one: 0.9375rem !default;
+$sprk-font-size-body-one: 1rem !default;
 $sprk-color-body-one: $sprk-black !default;
 $sprk-line-height-body-one: 1.6 !default;
 $sprk-font-weight-body-one: 500 !default;
@@ -227,7 +227,7 @@ $sprk-font-weight-body-one: 500 !default;
 // Body Two
 $sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$sprk-font-size-body-two: 0.9375rem !default;
+$sprk-font-size-body-two: 1rem !default;
 $sprk-color-body-two: $sprk-black !default;
 $sprk-line-height-body-two: 1.6 !default;
 $sprk-font-weight-body-two: 300 !default;
@@ -235,7 +235,7 @@ $sprk-font-weight-body-two: 300 !default;
 // Body Three
 $sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$sprk-font-size-body-three: 0.9375rem !default;
+$sprk-font-size-body-three: 1rem !default;
 $sprk-color-body-three: $sprk-black !default;
 $sprk-line-height-body-three: 2 !default;
 $sprk-font-weight-body-three: 300 !default;
@@ -556,7 +556,7 @@ $sprk-date-picker-button-size: 2.25rem !default;
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
 $sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
-$sprk-date-picker-font-size: 0.9375rem !default;
+$sprk-date-picker-font-size: 1rem !default;
 $sprk-date-picker-font-weight: 300 !default;
 $sprk-date-picker-day-interact-color: $sprk-green !default;
 $sprk-date-picker-selected-day-font-weight: 500 !default;
@@ -587,7 +587,7 @@ $sprk-input-text-icon-offset-x: $sprk-space-m !default;
 $sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
-$sprk-text-input-has-text-icon-padding: 12px 13px 12px 37px !default;
+$sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 

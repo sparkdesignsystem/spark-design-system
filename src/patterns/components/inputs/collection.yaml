@@ -154,7 +154,7 @@ variableTable:
   $sprk-text-input-huge-label-active-top:
     default: 10px
     description: Top positioning for the label on huge text inputs when input is in focus.
-  $sprk-text-input-huge-active-padding-top: 
+  $sprk-text-input-huge-active-padding-top:
     default: $sprk-text-input-huge-height/4
     description: Padding-top for huge text inputs when input is in focus.
   $sprk-text-input-huge-focus-label-color:
@@ -163,7 +163,7 @@ variableTable:
   $sprk-text-input-huge-error-focus-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is an error.
-  $sprk-text-input-huge-complete-label-color: 
+  $sprk-text-input-huge-complete-label-color:
     default: $sprk-black
     description: Label color for huge text inputs when input is in focus and there is a value present or no placeholder is shown.
   $sprk-text-input-huge-height:
@@ -332,7 +332,7 @@ variableTable:
     default: 0 4px 16px rgba(51, 51, 51, 0.1)
     description: The box shadow applied to the datepicker modal.
   $sprk-date-picker-font-size:
-    default: 0.9375rem
+    default: 1rem
     description: The font size used for the datepicker modal.
   $sprk-date-picker-font-family:
     default: sprk-font-family-body-two
@@ -420,7 +420,7 @@ variableTable:
     description: The z-index applied to the icon inside input elements.
   $sprk-input-huge-icon-offset-top:
     default: 50%
-    description: 
+    description:
   $sprk-input-text-icon-offset-x:
     default: $sprk-space-m
     description: The X offset of text icons inside input elements.
@@ -434,7 +434,7 @@ variableTable:
     default: 700
     description: The font weight of text icons inside input elements.
   $sprk-text-input-has-text-icon-padding:
-    default: 12px 13px 12px 37px
+    default: 0 0 1px 37px;
     description: The padding inside input elements that contain text icons.
   $sprk-text-input-huge-has-text-icon-padding:
     default: 0 40px
