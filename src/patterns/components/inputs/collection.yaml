@@ -333,7 +333,7 @@ variableTable:
     default: 0 4px 16px rgba(51, 51, 51, 0.1)
     description: The box shadow applied to the datepicker modal.
   $sprk-date-picker-font-size:
-    default: 0.9375rem
+    default: 1rem
     description: The font size used for the datepicker modal.
   $sprk-date-picker-font-family:
     default: sprk-font-family-body-two
@@ -435,7 +435,7 @@ variableTable:
     default: 700
     description: The font weight of text icons inside input elements.
   $sprk-text-input-has-text-icon-padding:
-    default: 12px 13px 12px 37px
+    default: 0 0 1px 37px;
     description: The padding inside input elements that contain text icons.
   $sprk-text-input-huge-has-text-icon-padding:
     default: 0 40px
