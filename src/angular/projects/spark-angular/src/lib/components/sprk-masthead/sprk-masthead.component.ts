@@ -293,12 +293,11 @@ export class SprkMastheadComponent implements AfterContentInit {
   // Handles when viewport size changes to large while narrow nav is hidden
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
+    this.isNarrowOnResize = isElementVisible('.sprk-c-Masthead__menu');
     this.throttledUpdateLayoutState();
   }
 
   updateLayoutState() {
-    this.isNarrowOnResize = isElementVisible('.sprk-c-Masthead__menu');
-
     if (this.isNarrowLayout !== this.isNarrowOnResize) {
       this.isNarrowLayout = this.isNarrowOnResize;
 

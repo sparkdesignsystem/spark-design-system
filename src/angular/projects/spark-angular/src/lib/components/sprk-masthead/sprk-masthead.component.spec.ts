@@ -39,6 +39,7 @@ describe('SprkMastheadComponent', () => {
     component.scrollDirection = 'up';
     component.isHidden = false;
     component.isNarrowLayout = false;
+    component.isNarrowOnResize = false;
     window.document.body.style.minHeight = '800px';
     window.document.body.style.minWidth = '1024px';
   });
@@ -174,19 +175,21 @@ describe('SprkMastheadComponent', () => {
     expect(component.scrollDirection).toBe('down');
   });
 
-  // it('should update narrowLayout and isHidden on resize', () => {
-  //   component.isHidden = true;
-  //   fixture.detectChanges();
+  it('should show masthead when going from small to large screen', () => {
+    component.isNarrowOnResize = false;
+    component.isNarrowLayout = true;
+    fixture.detectChanges();
+    component.throttledUpdateLayoutState();
 
-  //   console.log(component.isHidden, 'isHidden');
-  //   const resizeEvent = document.createEvent('CustomEvent');
-  //   resizeEvent.initCustomEvent('resize', false, false, null);
+    expect(component.isHidden).toBe(false);
+    expect(component.isNarrowLayout).toBe(false);
+  });
 
-  //   window.resizeTo(1500, 800);
-  //   window.dispatchEvent(resizeEvent);
-  //   fixture.detectChanges();
-  //   console.log(component.isHidden, 'after isHidden');
-
-  //   expect(component.isHidden).toBe(false);
-  // });
+  it('should call throttledUpdateLayoutState to be called on resize', () => {
+    const spyOnResize = spyOn(component, 'throttledUpdateLayoutState');
+    const resizeEvent = document.createEvent('CustomEvent');
+    resizeEvent.initCustomEvent('resize', false, false, null);
+    window.dispatchEvent(resizeEvent);
+    expect(spyOnResize).toHaveBeenCalled();
+  });
 });
