@@ -21,25 +21,22 @@ const bindUIEventsHugeInput = element => {
 
 const hugeInput = () => {
   const oldSelector = '[data-sprk-input="hugeTextInput"]';
+  const oldClassName = 'sprk-b-TextInput--float-label';
   const newSelector = '[data-sprk-input="huge"]';
+  const newClassName = 'sprk-b-Input--has-floating-label';
+
   window.addEventListener('load', () => {
-    const oldInputs = document.querySelectorAll(oldSelector);
-    const newInputs = document.querySelectorAll(newSelector);
-    if (oldInputs.length > 0) {
-      oldInputs.forEach(input => {
-        addClassIfNotEmpty(input, 'sprk-b-TextInput--float-label');
-      });
-    }
-    if (newInputs.length > 0) {
-      newInputs.forEach(input => {
-        addClassIfNotEmpty(input, 'sprk-b-Input--has-floating-label');
-      });
-    }
+    getElements(oldSelector, element => {
+      addClassIfNotEmpty(element, oldClassName);
+    });
+    getElements(newSelector, element => {
+      addClassIfNotEmpty(element, newClassName);
+    });
   });
   /*
    * TODO: Deprecate the code below
-   * that gets elements with `data-sprk-input="hugeTextInput"`
-   * in favor of the more universal `data-sprk-input="huge"`.
+   * that gets elements with the oldSelector
+   * in favor of the more universal newSelector.
    */
   getElements(oldSelector, bindUIEvents);
 
