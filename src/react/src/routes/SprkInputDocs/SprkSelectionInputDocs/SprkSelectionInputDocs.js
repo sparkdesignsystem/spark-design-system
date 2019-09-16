@@ -52,6 +52,7 @@ function SprkSelectionInputDocs() {
           variant="checkbox"
         />
       </ExampleContainer>
+
       <ExampleContainer heading="Radio">
         <SprkSelectionInput
           groupLabel="Radio Input"
@@ -59,15 +60,25 @@ function SprkSelectionInputDocs() {
           variant="radio"
         />
       </ExampleContainer>
+
       <ExampleContainer heading="Select">
         <SprkSelectionInput choices={selectChoices} variant="select" />
       </ExampleContainer>
+
       <ExampleContainer heading="Select with Helper">
         <SprkSelectionInput
           choices={selectChoices}
           helperText="Optional helper text."
           variant="select"
         />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Select Huge">
+        <SprkSelectionInput
+            choices={selectChoices}
+            helperText="Optional helper text."
+            variant="select"
+          />
       </ExampleContainer>
     </React.Fragment>
   );
