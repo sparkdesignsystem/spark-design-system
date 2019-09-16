@@ -272,10 +272,10 @@ export class SprkMastheadComponent implements AfterContentInit {
   isNarrowLayout = false;
   scrollDirection = 'up';
   isHidden = false;
-  currentLayout = false;
+  isNarrowOnResize = false;
 
   throttledCheckScrollDirection = _.throttle(this.checkScrollDirection, 500);
-  throttledCheckIfNarrowLayout = _.throttle(this.checkIfNarrowLayout, 500);
+  throttledUpdateLayoutState = _.throttle(this.updateLayoutState, 500);
 
   @HostListener('window:orientationchange')
   handleResizeEvent() {
@@ -293,13 +293,16 @@ export class SprkMastheadComponent implements AfterContentInit {
   // Handles when viewport size changes to large while narrow nav is hidden
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
-    this.throttledCheckIfNarrowLayout();
+    this.throttledUpdateLayoutState();
   }
 
-  checkIfNarrowLayout() {
-    this.currentLayout = isElementVisible('.sprk-c-Masthead__menu');
-    if (this.isNarrowLayout !== this.currentLayout) {
-      this.isNarrowLayout = this.currentLayout;
+  updateLayoutState() {
+    this.isNarrowOnResize = isElementVisible('.sprk-c-Masthead__menu');
+
+    if (this.isNarrowLayout !== this.isNarrowOnResize) {
+      this.isNarrowLayout = this.isNarrowOnResize;
+
+      // If is not narrow on resize update, make sure it's visible
       if (!this.isNarrowLayout) {
         this.isHidden = false;
       }
