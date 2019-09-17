@@ -440,6 +440,15 @@ variableTable:
   $sprk-text-input-huge-has-text-icon-padding:
     default: 0 40px
     description:
+  $sprk-text-input-has-text-icon-right-height:
+    default: 1em
+    description: The height of the icon displayed on the right side of inputs.
+  $sprk-text-input-has-text-icon-right-top:
+    default: 38px
+    description: The top offset of the icon displayed on the right side of inputs.
+  $sprk-text-input-has-text-icon-right-left:
+    default: 71px
+    description: The left offset of the icon displayed on the right side of inputs.
   $sprk-input-text-icon-z-index:
     default: $sprk-layer-height-xs
     description: The z-index applied to the text icon.

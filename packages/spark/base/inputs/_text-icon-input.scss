@@ -14,9 +14,9 @@
 
 .sprk-b-TextInput__icon--right {
   position: absolute;
-  height: 1em;
-  top: 38px;
-  left: 71px;
+  height: $sprk-text-input-has-text-icon-right-height;
+  top: $sprk-text-input-has-text-icon-right-top;
+  left: $sprk-text-input-has-text-icon-right-left;
 }
 
 .sprk-b-TextInputIconContainer--has-text-icon {
