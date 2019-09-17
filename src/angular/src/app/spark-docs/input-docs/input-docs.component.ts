@@ -252,6 +252,36 @@ import { Component } from '@angular/core';
           ></sprk-icon>
           <label sprkLabel>Select Box Label</label>
         </sprk-input-container>
+        <sprk-huge-input-container>
+          <select
+            id="select-huge"
+            data-id="select-huge"
+            aria-describedby="select-huge--error-container"
+            data-sprk-input="huge"
+            sprkInput
+          >
+            <option
+              value=""
+              disabled
+              selected
+              hidden
+            ></option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <optgroup label="Grouped Options">
+              <option value="g1">Grouped Option 1</option>
+              <option value="g2">Grouped Option 2</option>
+              <option value="g3">Grouped Option 3</option>
+            </optgroup>
+          </select>
+          <sprk-icon
+            iconType="chevron-down"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+            sprk-select-icon
+          ></sprk-icon>
+          <label sprkLabel for="select-huge">Select Box Label</label>
+        </sprk-huge-input-container>
         <sprk-textarea-container>
           <label sprkLabel>Textarea Input</label>
           <textarea
