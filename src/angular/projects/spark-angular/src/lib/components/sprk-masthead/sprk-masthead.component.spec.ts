@@ -6,7 +6,6 @@ import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-m
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
-
 describe('SprkMastheadComponent', () => {
   let component: SprkMastheadComponent;
   let fixture: ComponentFixture<SprkMastheadComponent>;
@@ -34,6 +33,15 @@ describe('SprkMastheadComponent', () => {
     component = fixture.componentInstance;
     mastheadElement = fixture.nativeElement.querySelector('header');
     hamburgerIcon = mastheadElement.querySelector('.sprk-c-Menu');
+  });
+
+  afterEach(() => {
+    component.scrollDirection = 'up';
+    component.isHidden = false;
+    component.isNarrowLayout = false;
+    component.isNarrowOnResize = false;
+    window.document.body.style.minHeight = '800px';
+    window.document.body.style.minWidth = '1024px';
   });
 
   it('should create itself', () => {
@@ -135,5 +143,53 @@ describe('SprkMastheadComponent', () => {
     expect(secondaryNavElement.classList.toString()).toEqual(
       'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare'
     );
+  });
+
+  it('should add the scroll class when state isScrolled is true', () => {
+    component.isScrolled = true;
+    fixture.detectChanges();
+    expect(mastheadElement.classList.contains('sprk-c-Masthead--scroll')).toEqual(true);
+  });
+
+  it('should add the hidden class when state isHidden is true', () => {
+    component.isHidden = true;
+    fixture.detectChanges();
+    expect(mastheadElement.classList.contains('sprk-c-Masthead--hidden')).toEqual(true);
+  });
+
+  it('should update state isHidden to true when scrollDirection is equal to down', () => {
+
+    // Scroll down the page
+    const scrollEvent = document.createEvent('CustomEvent');
+    scrollEvent.initCustomEvent('scroll', false, false, null);
+    const expectedLeft = 0;
+    const expectedTop = 456;
+    window.document.body.style.minHeight = '9000px';
+    window.document.body.style.minWidth = '200px';
+    fixture.detectChanges();
+    window.scrollTo(expectedLeft, expectedTop);
+    window.dispatchEvent(scrollEvent);
+
+
+    expect(component.isHidden).toBe(true);
+    expect(component.scrollDirection).toBe('down');
+  });
+
+  it('should show masthead when going from small to large screen', () => {
+    component.isNarrowOnResize = false;
+    component.isNarrowLayout = true;
+    fixture.detectChanges();
+    component.throttledUpdateLayoutState();
+
+    expect(component.isHidden).toBe(false);
+    expect(component.isNarrowLayout).toBe(false);
+  });
+
+  it('should call throttledUpdateLayoutState to be called on resize', () => {
+    const spyOnResize = spyOn(component, 'throttledUpdateLayoutState');
+    const resizeEvent = document.createEvent('CustomEvent');
+    resizeEvent.initCustomEvent('resize', false, false, null);
+    window.dispatchEvent(resizeEvent);
+    expect(spyOnResize).toHaveBeenCalled();
   });
 });
