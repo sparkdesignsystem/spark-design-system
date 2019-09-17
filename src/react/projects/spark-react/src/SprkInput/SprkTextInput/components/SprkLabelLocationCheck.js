@@ -27,7 +27,7 @@ const SprkLabelLocationCheck = ({
     <>
       <SprkInputLabel
         id={id}
-        leadingIcon={id}
+        leadingIcon={leadingIcon}
         hiddenLabel={hiddenLabel}
         label={label}
       />

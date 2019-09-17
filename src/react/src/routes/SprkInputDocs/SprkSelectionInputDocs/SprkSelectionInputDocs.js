@@ -64,7 +64,7 @@ function SprkSelectionInputDocs() {
         <SprkSelectionInput choices={selectChoices} variant="select" />
       </ExampleContainer>
 
-      <ExampleContainer heading="Select with Helper And Default Option of Item 2">
+      <ExampleContainer heading="Select With Helper And Default Option Of Item 2">
         <SprkSelectionInput
           choices={selectChoices}
           helperText="Optional helper text."
@@ -80,6 +80,16 @@ function SprkSelectionInputDocs() {
           variant="hugeSelect"
           label="Huge Select Box Label"
           defaultValue=""
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Select Huge With Default Value">
+        <SprkSelectionInput
+          choices={selectChoices}
+          helperText="Optional helper text."
+          variant="hugeSelect"
+          label="Huge Select Box Label"
+          defaultValue="item-1"
         />
       </ExampleContainer>
     </React.Fragment>

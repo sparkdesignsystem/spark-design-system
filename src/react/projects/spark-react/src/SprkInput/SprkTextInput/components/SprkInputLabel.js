@@ -12,7 +12,7 @@ const SprkInputLabel = ({
     <label
       htmlFor={id}
       className={classNames('sprk-b-Label', {
-        'sprk-b-Label--with-icon': leadingIcon.length > 0,
+        'sprk-b-Label--with-icon': leadingIcon,
         'sprk-u-ScreenReaderText': hiddenLabel,
       })}
     >

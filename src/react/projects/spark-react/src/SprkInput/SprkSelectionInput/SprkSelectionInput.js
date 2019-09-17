@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
+import SprkLabelLocationCheck from '../SprkTextInput/components/SprkLabelLocationCheck';
 import SprkIcon from '../../SprkIcon/SprkIcon';
 
 class SprkSelectionInput extends React.Component {
@@ -17,7 +18,7 @@ class SprkSelectionInput extends React.Component {
 
   handleChange(e) {
     const { onChangeFunc } = this.props;
-    this.setState({ value: event.target.value });
+    this.setState({ hasValue: event.target.value });
     if (onChangeFunc) onChangeFunc(e);
   }
 
@@ -35,7 +36,7 @@ class SprkSelectionInput extends React.Component {
       variant,
       ...other
     } = this.props;
-    const { choiceItems, id, value } = this.state;
+    const { choiceItems, id, hasValue } = this.state;
     return (
       <React.Fragment>
         <div
@@ -68,78 +69,44 @@ class SprkSelectionInput extends React.Component {
               ))}
             </fieldset>
           )}
-          {variant === 'select' && (
+          {(variant === 'select' || variant === 'hugeSelect') && (
             <React.Fragment>
-              <label htmlFor={id} className="sprk-b-Label">
-                {label}
-              </label>
-              <select
-                className="sprk-b-Select"
+              <SprkLabelLocationCheck
+                type={variant}
+                label={label}
                 id={id}
-                aria-describedby={`errorcontainer-${id}`}
-                {...other}
               >
-                {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
-                  if (options) {
+                <select className={
+                    classNames(
+                      'sprk-b-Select',
+                      {'sprk-b-Input--has-floating-label' : hasValue && variant === 'hugeSelect'}
+                    )}
+                  id={id}
+                  aria-describedby={`errorcontainer-${id}`}
+                  onChange={this.handleChange}
+                  {...other}
+                >
+                  {variant === 'hugeSelect' && (<option value="" defaultValue hidden disabled></option>)}
+                  {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
+                    if (options) {
+                      return (
+                        <optgroup label={innerLabel} key={innerId}>
+                          {options.map(({ value: optionValue, label: optionLabel }) => (
+                            <option key={`${innerId}-${uniqueId()}`} value={optionValue} {...rest}>
+                              {optionLabel}
+                            </option>
+                          ))}
+                        </optgroup>
+                      );
+                    }
                     return (
-                      <optgroup label={innerLabel} key={innerId}>
-                        {options.map(({ value: optionValue, label: optionLabel }) => (
-                          <option key={`${innerId}-${uniqueId()}`} value={optionValue} {...rest}>
-                            {optionLabel}
-                          </option>
-                        ))}
-                      </optgroup>
+                      <option value={value} key={innerId} {...rest}>
+                        {innerLabel}
+                      </option>
                     );
-                  }
-                  return (
-                    <option value={value} key={innerId} {...rest}>
-                      {innerLabel}
-                    </option>
-                  );
-                })}
-              </select>
-              <SprkIcon
-                iconName="chevron-down"
-                additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
-              />
-            </React.Fragment>
-          )}
-          {variant === 'hugeSelect' && (
-            <React.Fragment>
-              <select
-                className={
-                  classNames(
-                    'sprk-b-Select',
-                    {'sprk-b-Input--has-floating-label' : value}
-                  )}
-                id={id}
-                aria-describedby={`errorcontainer-${id}`}
-                onChange={this.handleChange}
-                {...other}
-              >
-                <option value="" defaultValue hidden disabled></option>
-                {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
-                  if (options) {
-                    return (
-                      <optgroup label={innerLabel} key={innerId}>
-                        {options.map(({ value: optionValue, label: optionLabel }) => (
-                          <option key={`${innerId}-${uniqueId()}`} value={optionValue} {...rest}>
-                            {optionLabel}
-                          </option>
-                        ))}
-                      </optgroup>
-                    );
-                  }
-                  return (
-                    <option value={value} key={innerId} {...rest}>
-                      {innerLabel}
-                    </option>
-                  );
-                })}
-              </select>
-              <label htmlFor={id} className="sprk-b-Label">
-                {label}
-              </label>
+                  })}
+                </select>
+              </SprkLabelLocationCheck>
               <SprkIcon
                 iconName="chevron-down"
                 additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"

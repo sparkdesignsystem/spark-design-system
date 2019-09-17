@@ -52,8 +52,8 @@ it('should remove/not have float-label class to huge text when a value is not pr
   ).toBe(false);
 });
 
-it('should have float-label class to huge text when there is value', () => {
-  const wrapper = mount(<SprkTextInput value="value present" type="hugeTextInput" />);
+it('should add floating label class to huge text when there is value', () => {
+  const wrapper = mount(<SprkTextInput defaultValue="value present" type="hugeTextInput" />);
   expect(
     wrapper
       .find('.sprk-b-TextInput')
