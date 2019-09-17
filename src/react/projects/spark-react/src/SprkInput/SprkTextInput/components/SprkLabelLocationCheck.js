@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import propTypes from 'prop-types';
 import SprkInputLabel from './SprkInputLabel'
 
@@ -11,13 +10,13 @@ const SprkLabelLocationCheck = ({
   hiddenLabel,
   id,
 }) => {
-  if (type === 'hugeTextInput') {
+  if (type === 'hugeTextInput' || type === 'hugeSelect') {
     return (
       <>
         {children}
         <SprkInputLabel
           id={id}
-          leadingIcon={id}
+          leadingIcon={leadingIcon}
           hiddenLabel={hiddenLabel}
           label={label}
         />
