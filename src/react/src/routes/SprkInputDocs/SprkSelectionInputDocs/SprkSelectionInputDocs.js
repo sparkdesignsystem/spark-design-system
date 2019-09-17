@@ -64,7 +64,7 @@ function SprkSelectionInputDocs() {
         <SprkSelectionInput choices={selectChoices} variant="select" />
       </ExampleContainer>
 
-      <ExampleContainer heading="Select with Helper">
+      <ExampleContainer heading="Select with Helper And Default Option of Item 2">
         <SprkSelectionInput
           choices={selectChoices}
           helperText="Optional helper text."

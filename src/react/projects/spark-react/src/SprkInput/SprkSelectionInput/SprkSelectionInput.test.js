@@ -11,7 +11,9 @@ beforeEach(() => {
 });
 
 it('should render an element with the correct class', () => {
-  const wrapper = mount(<SprkSelectionInput choices={choices} variant="checkbox" />);
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="checkbox" />
+  );
   expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
 });
 

@@ -33,7 +33,7 @@ it('should add float-label class to huge text when a value is present and blurre
   expect(
     wrapper
       .find('.sprk-b-TextInput')
-      .hasClass('sprk-b-TextInput--float-label'),
+      .hasClass('sprk-b-Input--has-floating-label'),
   ).toBe(true);
 });
 
@@ -48,7 +48,7 @@ it('should remove/not have float-label class to huge text when a value is not pr
   expect(
     wrapper
       .find('.sprk-b-TextInput')
-      .hasClass('sprk-b-TextInput--float-label'),
+      .hasClass('sprk-b-Input--has-floating-label'),
   ).toBe(false);
 });
 
@@ -57,7 +57,7 @@ it('should have float-label class to huge text when there is value', () => {
   expect(
     wrapper
       .find('.sprk-b-TextInput')
-      .hasClass('sprk-b-TextInput--float-label'),
+      .hasClass('sprk-b-Input--has-floating-label'),
   ).toBe(true);
 });
 
