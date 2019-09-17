@@ -11,12 +11,3 @@
     z-index: $sprk-input-text-icon-z-index;
   }
 }
-
-.sprk-b-InputContainer--huge {
-  .sprk-b-TextInputIconContainer--has-text-icon {
-    &::before {
-      top: $sprk-input-huge-icon-offset-top;
-      font-size: $sprk-text-input-huge-font-size;
-    }
-  }
-}

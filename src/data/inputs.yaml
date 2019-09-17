@@ -13,6 +13,9 @@
 - name: patterns.components.inputs.select
 - name: patterns.components.inputs.select-error
 - name: patterns.components.inputs.select-disabled
+- name: patterns.components.inputs.select-huge
+- name: patterns.components.inputs.select-huge-error
+- name: patterns.components.inputs.select-huge-disabled
 - name: patterns.components.inputs.textarea
 - name: patterns.components.inputs.textarea-error
 - name: patterns.components.inputs.textarea-disabled
@@ -41,7 +44,3 @@
 - name: patterns.components.inputs.date
 - name: patterns.components.inputs.date-error
 - name: patterns.components.inputs.date-disabled
-
-
-
-

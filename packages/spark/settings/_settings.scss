@@ -219,7 +219,7 @@ $sprk-font-weight-display-seven: 500 !default;
 // Body One
 $sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$sprk-font-size-body-one: 0.9375rem !default;
+$sprk-font-size-body-one: 1rem !default;
 $sprk-color-body-one: $sprk-black !default;
 $sprk-line-height-body-one: 1.6 !default;
 $sprk-font-weight-body-one: 500 !default;
@@ -227,7 +227,7 @@ $sprk-font-weight-body-one: 500 !default;
 // Body Two
 $sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$sprk-font-size-body-two: 0.9375rem !default;
+$sprk-font-size-body-two: 1rem !default;
 $sprk-color-body-two: $sprk-black !default;
 $sprk-line-height-body-two: 1.6 !default;
 $sprk-font-weight-body-two: 300 !default;
@@ -235,7 +235,7 @@ $sprk-font-weight-body-two: 300 !default;
 // Body Three
 $sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-$sprk-font-size-body-three: 0.9375rem !default;
+$sprk-font-size-body-three: 1rem !default;
 $sprk-color-body-three: $sprk-black !default;
 $sprk-line-height-body-three: 2 !default;
 $sprk-font-weight-body-three: 300 !default;
@@ -431,8 +431,55 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
 $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
-$sprk-input-container-huge-max-width: 37.5rem !default;
 $sprk-input-max-width: 27.5rem !default;
+
+//
+// Huge Inputs
+///
+$sprk-input-container-huge-max-width: 37.5rem !default;
+$sprk-text-input-huge-height: 64px !default; // Todo deprecate
+$sprk-input-huge-height: $sprk-text-input-huge-height !default;
+$sprk-text-input-huge-font-size: $sprk-font-size-display-five !default; // Todo deprecate
+$sprk-input-huge-font-size: $sprk-text-input-huge-font-size !default;
+$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default; // Todo deprecate
+$sprk-input-huge-label-font-size: $sprk-text-input-huge-label-font-size !default;
+$sprk-text-input-huge-border-width: 2px !default; // Todo deprecate
+$sprk-input-huge-border-width: $sprk-text-input-huge-border-width !default;
+$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default; // Todo deprecate
+$sprk-input-huge-padding: $sprk-text-input-huge-padding !default;
+$sprk-select-input-huge-padding-right: 45px !default;
+$sprk-input-huge-label-padding: 0 ($sprk-space-misc-a + $sprk-input-huge-border-width) !default;
+$sprk-text-input-huge-focus-border-width: 2px !default; // Todo deprecate
+$sprk-input-huge-focus-border-width: $sprk-text-input-huge-focus-border-width !default;
+$sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default; // Todo deprecate
+$sprk-input-huge-transition: $sprk-text-input-huge-transition !default;
+$sprk-text-input-huge-transition-delay: 0s !default; // Todo deprecate
+$sprk-input-huge-transition-delay: $sprk-text-input-huge-transition-delay !default;
+$sprk-text-input-huge-placeholder-transition-delay: 100ms !default; // Todo deprecate
+$sprk-input-huge-placeholder-transition-delay: $sprk-text-input-huge-placeholder-transition-delay !default;
+$sprk-text-input-huge-placeholder-transition-property: opacity !default; // Todo deprecate
+$sprk-input-huge-placeholder-transition-property: $sprk-text-input-huge-placeholder-transition-property !default;
+$sprk-text-input-huge-placeholder-opacity: 0 !default; // Todo deprecate
+$sprk-input-huge-placeholder-opacity: $sprk-text-input-huge-placeholder-opacity !default;
+$sprk-text-input-huge-placeholder-active-opacity: 1 !default; // Todo deprecate
+$sprk-input-huge-placeholder-active-opacity: $sprk-text-input-huge-placeholder-active-opacity !default;
+$sprk-text-input-huge-label-top: $sprk-input-huge-height / 3 !default; // Todo deprecate
+$sprk-input-huge-label-top: $sprk-text-input-huge-label-top !default;
+$sprk-text-input-huge-label-active-top: 10px !default; // Todo deprecate
+$sprk-input-huge-label-active-top: $sprk-text-input-huge-label-active-top !default;
+$sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default; // Todo deprecate
+$sprk-input-huge-active-padding-top: $sprk-text-input-huge-active-padding-top !default;
+$sprk-text-input-huge-focus-label-color: $sprk-green !default; // Todo deprecate
+$sprk-input-huge-focus-label-color: $sprk-text-input-huge-focus-label-color !default;
+$sprk-text-input-huge-error-focus-label-color: $sprk-black !default; // Todo deprecate
+$sprk-input-huge-error-focus-label-color: $sprk-text-input-huge-error-focus-label-color !default;
+$sprk-text-input-huge-complete-label-color: $sprk-black !default;// Todo deprecate
+$sprk-input-huge-complete-label-color: $sprk-text-input-huge-complete-label-color !default;
+$sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
+$sprk-input-huge-icon-offset-top: 50% !default;
+$sprk-select-input-huge-icon-margin-top: -(($sprk-input-huge-height - $sprk-icon-m) / 2 + $sprk-icon-m) !default;
+$sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
 //
 // Text Input
@@ -441,19 +488,13 @@ $sprk-text-input-font-family: $sprk-font-family-body-two !default;
 $sprk-text-input-font-size: 1rem !default;
 $sprk-text-input-font-weight: 300 !default;
 $sprk-text-input-height: 48px !default;
-$sprk-text-input-huge-height: 64px !default;
-$sprk-text-input-huge-font-size: $sprk-font-size-display-five !default;
-$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default;
 $sprk-text-input-line-height: 1.3 !default;
 $sprk-text-input-outline: 0 !default;
 $sprk-text-input-color: $sprk-black !default;
 $sprk-text-input-border: 2px solid $sprk-gray-dark !default;
 $sprk-text-input-border-radius: 4px !default;
-$sprk-text-input-huge-border-width: 2px !default;
-$sprk-text-input-huge-focus-border-width: 2px !default;
 $sprk-text-input-box-shadow: none !default;
 $sprk-text-input-padding: 0 $sprk-space-m !default;
-$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default;
 $sprk-text-input-focus-border-color: $sprk-green !default;
 $sprk-text-input-error-border-color: $sprk-yellow !default;
 $sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
@@ -463,18 +504,6 @@ $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 $sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
 $sprk-text-input-readonly-color: $sprk-gray !default;
 $sprk-text-input-transition: border-color 0.15s ease !default;
-$sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default;
-$sprk-text-input-huge-transition-delay: 0s !default;
-$sprk-text-input-huge-placeholder-transition-delay: 100ms !default;
-$sprk-text-input-huge-placeholder-transition-property: opacity !default;
-$sprk-text-input-huge-placeholder-opacity: 0 !default;
-$sprk-text-input-huge-placeholder-active-opacity: 1 !default;
-$sprk-text-input-huge-label-top: $sprk-text-input-huge-height / 3 !default;
-$sprk-text-input-huge-label-active-top: 10px !default;
-$sprk-text-input-huge-active-padding-top: $sprk-text-input-huge-height / 4 !default;
-$sprk-text-input-huge-focus-label-color: $sprk-green !default;
-$sprk-text-input-huge-error-focus-label-color: $sprk-black !default;
-$sprk-text-input-huge-complete-label-color: $sprk-black !default;
 
 //
 // Select
@@ -499,6 +528,8 @@ $sprk-select-arrow-stroke-width: 6px !default;
 $sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
 $sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
 $sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
+$sprk-select-moz-focusring-color: transparent !default;
+$sprk-select-moz-focusring-text-shadow: 0 0 0 $sprk-select-color !default;
 
 //
 // Textarea
@@ -556,7 +587,7 @@ $sprk-date-picker-button-size: 2.25rem !default;
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
 $sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
-$sprk-date-picker-font-size: 0.9375rem !default;
+$sprk-date-picker-font-size: 1rem !default;
 $sprk-date-picker-font-weight: 300 !default;
 $sprk-date-picker-day-interact-color: $sprk-green !default;
 $sprk-date-picker-selected-day-font-weight: 500 !default;
@@ -587,7 +618,7 @@ $sprk-input-text-icon-offset-x: $sprk-space-m !default;
 $sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
-$sprk-text-input-has-text-icon-padding: 12px 13px 12px 37px !default;
+$sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 
@@ -596,10 +627,8 @@ $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 ///
 $sprk-input-icon-offset-x: $sprk-space-m !default;
 $sprk-input-icon-offset-y: $sprk-space-m !default;
-$sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 $sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
 $sprk-input-icon-z-index: $sprk-layer-height-xs !default;
-$sprk-input-huge-icon-offset-top: 50% !default;
 
 //
 // Labels
