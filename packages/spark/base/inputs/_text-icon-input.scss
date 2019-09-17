@@ -12,6 +12,13 @@
   }
 }
 
+.sprk-b-TextInput__icon--right {
+  position: absolute;
+  height: 1em;
+  top: 38px;
+  left: 71px;
+}
+
 .sprk-b-TextInputIconContainer--has-text-icon {
   &::before {
     content: $sprk-monetary-symbol;
@@ -20,9 +27,4 @@
 
 .sprk-b-TextInputIconContainer--has-text-icon-right {
   max-width: $sprk-input-container-narrow-max-width;
-
-  &::before {
-    content: $sprk-percent-symbol;
-    margin-left: $sprk-input-text-icon-offset-x-right;
-  }
 }

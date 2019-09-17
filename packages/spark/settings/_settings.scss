@@ -429,7 +429,6 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 // Inputs
 ///
 $sprk-monetary-symbol: '$' !default;
-$sprk-percent-symbol: '%' !default;
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
 $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
 $sprk-input-container-huge-max-width: 37.5rem !default;
@@ -586,7 +585,6 @@ $sprk-date-picker-years-modal-max-height: 500px !default;
 // Text Icon Inputs
 ///
 $sprk-input-text-icon-offset-x: $sprk-space-m !default;
-$sprk-input-text-icon-offset-x-right: calc(100% - #{$sprk-space-l}) !default;
 $sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
