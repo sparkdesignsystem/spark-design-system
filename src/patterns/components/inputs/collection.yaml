@@ -450,6 +450,9 @@ variableTable:
   $sprk-text-input-has-text-icon-right-height:
     default: 1em
     description: The height of the icon displayed on the right side of inputs.
+  $sprk-text-input-has-text-icon-right-width:
+    default: 1em
+    description: The width of the icon displayed on the right side of inputs.
   $sprk-text-input-has-text-icon-right-top:
     default: 38px
     description: The top offset of the icon displayed on the right side of inputs.
