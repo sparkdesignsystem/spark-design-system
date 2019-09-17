@@ -11,11 +11,9 @@ order: 21
   <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon-right">
     <label for="{{#if idattr}}{{idattr}}{{else}}percentage-normal{{/if}}"
       class="sprk-b-Label sprk-b-Label--percentage">Interest Rate</label>
-
-    <svg id="percent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class='sprk-b-TextInput__icon--right' aria-hidden='true'>
-      <path d="M4,22.89C4,14.82,8.74,9.57,15.83,9.57s11.82,5.25,11.82,13.32S22.92,36.22,15.83,36.22,4,31,4,22.89Zm15.7,0c0-4.46-1.25-6.63-3.88-6.63S12,18.43,12,22.89s1.31,6.7,3.87,6.7S19.71,27.36,19.71,22.89ZM43,10H50.9L20.82,56.58H12.94Zm-7,33.68c0-8.07,4.73-13.33,11.82-13.33S59.7,35.57,59.7,43.64,55,57,47.88,57,36.06,51.72,36.06,43.64Zm15.76,0c0-4.46-1.32-6.69-3.94-6.69S44,39.18,44,43.64s1.32,6.64,3.88,6.64S51.82,48,51.82,43.64Z"/>
+    <svg class="sprk-b-TextInput__icon--right" viewBox="0 0 64 64">
+      <use xlink:href="#percent" />
     </svg>
-
     <input
       class="sprk-b-TextInput sprk-b-TextInput--has-text-icon-right {{#if class}}{{class}} {{/if}} sprk-u-Width-100"
       id="{{#if idattr}}{{idattr}}{{else}}percentage-normal{{/if}}"
