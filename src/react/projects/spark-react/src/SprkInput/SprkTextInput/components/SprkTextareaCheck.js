@@ -51,7 +51,7 @@ class SprkTextareaCheck extends Component {
           'sprk-b-TextInput--has-svg-icon':
             type !== 'textarea' && leadingIcon.length > 0,
           'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
-          'sprk-b-TextInput--float-label': hasValue && type === 'hugeTextInput',
+          'sprk-b-Input--has-floating-label': hasValue && type === 'hugeTextInput',
         })}
         type={type}
         htmlFor={id}
