@@ -8,12 +8,12 @@ function SprkSelectionInputDocs() {
       label: 'Item 1',
       name: 'check[]',
       value: 'item-1',
-      defaultChecked: true,
     },
     {
       label: 'Item 2',
       name: 'check[]',
       value: 'item-2',
+      defaultChecked: true,
     },
   ];
   const selectChoices = [
@@ -26,7 +26,6 @@ function SprkSelectionInputDocs() {
       label: 'Item 2',
       name: 'check[]',
       value: 'item-2',
-      defaultValue: true,
     },
     {
       label: 'Grouped Options',
