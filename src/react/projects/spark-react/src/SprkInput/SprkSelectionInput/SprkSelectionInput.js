@@ -30,6 +30,7 @@ class SprkSelectionInput extends React.Component {
       helperText,
       idString,
       label,
+      groupLabel,
       valid,
       variant,
       ...other
@@ -47,7 +48,7 @@ class SprkSelectionInput extends React.Component {
           {(variant === 'checkbox' || variant === 'radio') && (
             <fieldset className="sprk-b-Fieldset">
               <legend className="sprk-b-Legend">
-                <p className="sprk-b-Label">{label}</p>
+                <p className="sprk-b-Label">{groupLabel || label }</p>
               </legend>
               {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
                 <div className="sprk-b-SelectionContainer" key={innerId}>
