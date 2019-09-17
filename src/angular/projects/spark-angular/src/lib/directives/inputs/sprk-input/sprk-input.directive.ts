@@ -16,9 +16,9 @@ export class SprkInputDirective implements OnInit {
   OnChange($event) {
     const value = (this.ref.nativeElement as HTMLInputElement).value;
     if (value.length > 0) {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput--float-label');
+      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
     } else {
-      this.ref.nativeElement.classList.remove('sprk-b-TextInput--float-label');
+      this.ref.nativeElement.classList.remove('sprk-b-Input--has-floating-label');
     }
   }
 
