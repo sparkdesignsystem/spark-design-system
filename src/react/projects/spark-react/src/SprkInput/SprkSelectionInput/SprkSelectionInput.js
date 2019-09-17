@@ -12,6 +12,13 @@ class SprkSelectionInput extends React.Component {
       id: uniqueId(),
       choiceItems: props.choices.map(item => ({ id: uniqueId(), ...item })),
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    const { onChangeFunc } = this.props;
+    this.setState({ value: event.target.value });
+    if (onChangeFunc) onChangeFunc(e);
   }
 
   render() {
