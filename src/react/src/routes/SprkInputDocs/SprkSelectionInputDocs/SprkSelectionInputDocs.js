@@ -3,7 +3,7 @@ import { SprkSelectionInput } from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 function SprkSelectionInputDocs() {
-  const choices = [
+  const checkBoxAndRadioChoices = [
     {
       label: 'Item 1',
       name: 'check[]',
@@ -21,12 +21,12 @@ function SprkSelectionInputDocs() {
       label: 'Item 1',
       name: 'check[]',
       value: 'item-1',
-      defaultChecked: true,
     },
     {
       label: 'Item 2',
       name: 'check[]',
       value: 'item-2',
+      defaultValue: true,
     },
     {
       label: 'Grouped Options',
@@ -48,7 +48,7 @@ function SprkSelectionInputDocs() {
       <ExampleContainer heading="Checkbox">
         <SprkSelectionInput
           groupLabel="Checkbox Input"
-          choices={choices}
+          choices={checkBoxAndRadioChoices}
           variant="checkbox"
         />
       </ExampleContainer>
@@ -56,7 +56,7 @@ function SprkSelectionInputDocs() {
       <ExampleContainer heading="Radio">
         <SprkSelectionInput
           groupLabel="Radio Input"
-          choices={choices}
+          choices={checkBoxAndRadioChoices}
           variant="radio"
         />
       </ExampleContainer>
@@ -70,15 +70,18 @@ function SprkSelectionInputDocs() {
           choices={selectChoices}
           helperText="Optional helper text."
           variant="select"
+          defaultValue="item-2"
         />
       </ExampleContainer>
 
       <ExampleContainer heading="Select Huge">
         <SprkSelectionInput
-            choices={selectChoices}
-            helperText="Optional helper text."
-            variant="select"
-          />
+          choices={selectChoices}
+          helperText="Optional helper text."
+          variant="hugeSelect"
+          label="Huge Select Box Label"
+          defaultValue=""
+        />
       </ExampleContainer>
     </React.Fragment>
   );
