@@ -64,6 +64,20 @@ it('should render the input in an error state when valid is false', () => {
   expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
 });
 
+it('should make select disabled when disabled is set', () => {
+  const wrapper = mount(
+    <SprkSelectionInput
+      choices={choices}
+      variant="select"
+      disabled
+      errorMessage="error message"
+      valid={true}
+    />,
+  );
+  console.log(wrapper.find('select').getDOMNode().parentElement.innerHTML, 'catssssssssss')
+  expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(true);
+});
+
 it('should render grouped options if supplied', () => {
   choices.push({
     label: 'Grouped Options',

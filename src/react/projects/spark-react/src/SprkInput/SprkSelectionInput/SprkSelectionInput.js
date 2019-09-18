@@ -82,6 +82,7 @@ class SprkSelectionInput extends React.Component {
                       {'sprk-b-Input--has-floating-label' : hasValue && variant === 'hugeSelect'}
                     )}
                   id={id}
+                disabled={disabled}
                   aria-describedby={`errorcontainer-${id}`}
                   onChange={this.handleChange}
                   {...other}
