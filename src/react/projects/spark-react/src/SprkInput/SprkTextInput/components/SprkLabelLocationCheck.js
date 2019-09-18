@@ -6,8 +6,8 @@ const SprkLabelLocationCheck = ({
   children,
   type,
   label,
-  leadingIcon,
   hiddenLabel,
+  disabled,
   id,
 }) => {
   if (type === 'hugeTextInput' || type === 'hugeSelect') {
@@ -16,9 +16,9 @@ const SprkLabelLocationCheck = ({
         {children}
         <SprkInputLabel
           id={id}
-          leadingIcon={leadingIcon}
           hiddenLabel={hiddenLabel}
           label={label}
+          disabled={disabled}
         />
       </>
     );
@@ -27,9 +27,9 @@ const SprkLabelLocationCheck = ({
     <>
       <SprkInputLabel
         id={id}
-        leadingIcon={leadingIcon}
         hiddenLabel={hiddenLabel}
         label={label}
+        disabled={disabled}
       />
       {children}
     </>
@@ -39,8 +39,8 @@ const SprkLabelLocationCheck = ({
 SprkLabelLocationCheck.propTypes = {
   type: propTypes.string,
   label: propTypes.string,
-  leadingIcon: propTypes.string,
   id: propTypes.string,
+  disabled: propTypes.bool,
   hiddenLabel: propTypes.bool,
 };
 
