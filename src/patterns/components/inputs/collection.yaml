@@ -495,8 +495,6 @@ classTable:
     description: Text inputs that have a value.
   .sprk-b-TextInput--focusin:
     description: Text inputs that are currently in focus.
-  .sprk-b-Label--with-icon:
-    description: Labels that have an icon in them.
   .sprk-b-Label--monetary:
     description: For labels on monetary inputs.
   .sprk-b-Select--error:

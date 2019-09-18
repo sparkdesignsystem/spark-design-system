@@ -74,7 +74,6 @@ it('should make select disabled when disabled is set', () => {
       valid={true}
     />,
   );
-  console.log(wrapper.find('select').getDOMNode().parentElement.innerHTML, 'catssssssssss')
   expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(true);
 });
 

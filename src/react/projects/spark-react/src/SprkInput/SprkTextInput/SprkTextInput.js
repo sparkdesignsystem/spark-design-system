@@ -29,6 +29,7 @@ class SprkTextInput extends Component {
       hiddenLabel,
       idString,
       label,
+      disabled,
       leadingIcon,
       textIcon,
       type,
@@ -51,6 +52,7 @@ class SprkTextInput extends Component {
             leadingIcon={leadingIcon}
             hiddenLabel={hiddenLabel}
             id={id}
+            disabled={disabled}
           >
             <SprkTextAreaCheck
               id={id}
@@ -95,6 +97,7 @@ SprkTextInput.propTypes = {
   leadingIcon: PropTypes.string,
   textIcon: PropTypes.bool,
   valid: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 SprkTextInput.defaultProps = {
@@ -111,6 +114,7 @@ SprkTextInput.defaultProps = {
   leadingIcon: '',
   textIcon: false,
   valid: true,
+  disabled: false,
 };
 
 export default SprkTextInput;
