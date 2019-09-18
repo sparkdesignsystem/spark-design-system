@@ -47,12 +47,21 @@ class SprkTextInputDocs extends React.Component {
             placeholder="Enter your first name"
           />
         </ExampleContainer>
+        <ExampleContainer heading="Text Input Disabled">
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            disabled
+            placeholder="Enter your first name"
+          />
+        </ExampleContainer>
         <ExampleContainer heading="Text Huge">
           <SprkTextInput
             label="Name"
             name="Name"
             placeholder="Enter your first name"
             type="hugeTextInput"
+            defaultValue="Default Value"
           />
         </ExampleContainer>
         <ExampleContainer heading="Text Huge Hidden Label">

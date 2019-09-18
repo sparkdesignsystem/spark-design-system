@@ -38,12 +38,21 @@ function SprkSelectionInputDocs() {
           label: 'Option 2',
           value: 'option-2',
         },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
       ],
+    },
+    {
+      label: 'Item 3',
+      name: 'check[]',
+      value: 'item-3',
     },
   ];
 
   return (
-    <React.Fragment>
+    <>
       <ExampleContainer heading="Checkbox">
         <SprkSelectionInput
           groupLabel="Checkbox Input"
@@ -69,6 +78,7 @@ function SprkSelectionInputDocs() {
           choices={selectChoices}
           helperText="Optional helper text."
           variant="select"
+          name="select-with-helper"
           defaultValue="item-2"
         />
       </ExampleContainer>
@@ -76,10 +86,10 @@ function SprkSelectionInputDocs() {
       <ExampleContainer heading="Select Huge">
         <SprkSelectionInput
           choices={selectChoices}
+          name="select-huge"
           helperText="Optional helper text."
           variant="hugeSelect"
           label="Huge Select Box Label"
-          defaultValue=""
         />
       </ExampleContainer>
 
@@ -92,7 +102,18 @@ function SprkSelectionInputDocs() {
           defaultValue="item-1"
         />
       </ExampleContainer>
-    </React.Fragment>
+
+      <ExampleContainer heading="Select Huge Disabled">
+        <SprkSelectionInput
+          choices={selectChoices}
+          helperText="Optional helper text."
+          variant="hugeSelect"
+          label="Huge Select Box Label"
+          data-my-attr="my-test-attr"
+          disabled
+        />
+      </ExampleContainer>
+    </>
   );
 }
 
