@@ -69,6 +69,7 @@ class SprkSelectionInput extends React.Component {
       groupLabel,
       valid,
       variant,
+      hasBlankFirstOption,
       ...other
     } = this.props;
     const {
@@ -134,7 +135,7 @@ class SprkSelectionInput extends React.Component {
                 ref={this.selectRef}
                 {...other}
               >
-                {variant === 'hugeSelect' && (<option value="" hidden disabled></option>)}
+                {variant === 'hugeSelect' && (<option value="" hidden={!hasBlankFirstOption} disabled={!hasBlankFirstOption}></option>)}
                 {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
                   if (options) {
                     return (
@@ -184,6 +185,7 @@ SprkSelectionInput.propTypes = {
   helperText: PropTypes.string,
   idString: PropTypes.string,
   valid: PropTypes.bool,
+  hasBlankFirstOption: PropTypes.bool,
   onChangeFunc: PropTypes.func,
   variant: PropTypes.oneOf(['checkbox', 'radio', 'select', 'hugeSelect']).isRequired,
 };
@@ -197,6 +199,7 @@ SprkSelectionInput.defaultProps = {
   helperText: '',
   idString: '',
   valid: true,
+  hasBlankFirstOption: false,
 };
 
 export default SprkSelectionInput;

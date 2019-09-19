@@ -176,6 +176,18 @@ function SprkSelectionInputDocs() {
            defaultValue=""
          />
        </ExampleContainer>
+
+       <ExampleContainer heading="Select Huge With Blank First Option">
+         <SprkSelectionInput
+           choices={selectChoices}
+           helperText="Optional helper text."
+           variant="hugeSelect"
+           label="Huge Select Box"
+           data-my-attr="my-test-attr"
+           defaultValue=""
+           hasBlankFirstOption
+         />
+       </ExampleContainer>
     </>
   );
 }
