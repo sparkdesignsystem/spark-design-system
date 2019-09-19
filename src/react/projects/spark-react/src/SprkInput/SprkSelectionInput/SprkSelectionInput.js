@@ -14,11 +14,21 @@ class SprkSelectionInput extends React.Component {
       choiceItems: props.choices.map(item => ({ id: uniqueId(), ...item })),
     };
     this.handleChange = this.handleChange.bind(this);
+
+    // Only create select ref if input is huge select
+    if (this.props.variant === 'hugeSelect') {
+      this.selectRef = React.createRef();
+  }
   }
 
-  handleChange(e) {
+  handleChange(e, variant) {
     const { onChangeFunc } = this.props;
-    this.setState({ hasValue: event.target.value });
+    const isHugeSelect = variant === 'hugeSelect';
+    if (isHugeSelect) {
+      this.setState({
+        selectHugeHasValue: event.target.value !== '' ? true : false
+      });
+    }
     if (onChangeFunc) onChangeFunc(e);
   }
 
