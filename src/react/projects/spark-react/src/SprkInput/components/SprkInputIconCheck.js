@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import propTypes from 'prop-types';
-import SprkIcon from '../../../SprkIcon/SprkIcon';
+import SprkIcon from '../../SprkIcon/SprkIcon';
 
 const SprkInputIconCheck = ({ children, leadingIcon, textIcon }) => {
   if (leadingIcon.length > 0 || textIcon) {

@@ -7,7 +7,10 @@ Enzyme.configure({ adapter: new Adapter() });
 let choices;
 
 beforeEach(() => {
-  choices = [{ name: 'item-choice', label: 'Item 1', value: '1' }];
+  choices = [
+    { name: 'item-choice', label: 'Item 1', value: '1' },
+    { name: 'item-choice-2', label: 'Item 2', value: '2' }
+  ];
 });
 
 it('should render an element with the correct class', () => {
@@ -15,6 +18,50 @@ it('should render an element with the correct class', () => {
     <SprkSelectionInput choices={choices} variant="checkbox" />
   );
   expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
+});
+
+it('should add huge input class to container if variant is hugeSelect', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue="" />
+  );
+  expect(wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.contains('sprk-b-InputContainer--huge')).toBe(true);
+});
+
+it('should add floating label to select if it has a default value', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue="test-value"/>
+  );
+  expect(wrapper.find('select').getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
+});
+
+it('should add floating label to huge select if it has a value on change', done => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue=""/>
+  );
+  const select = wrapper.find('.sprk-b-Select').getDOMNode();
+  const ev = new Event('change');
+  select.value = '1';
+  select.dispatchEvent(ev);
+
+  // console.log(select.parentElement.innerHTML, 'select asdlkfj a;ksdjfkl adsjfk;lsdjfl;sdj ')
+  setTimeout(()=> {
+    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
+    done()
+  }, 3000 );
+});
+
+it('should update state if huge select has a value', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue="test-value" />
+  );
+  expect(wrapper.state().selectHugeHasValue).toBe(true);
+});
+
+it('should not update state if huge select does not have a value', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue="" />
+  );
+  expect(wrapper.state().selectHugeHasValue).toBe(undefined);
 });
 
 it('should add classes when additionalClasses has a value', () => {
@@ -64,6 +111,20 @@ it('should render the input in an error state when valid is false', () => {
   expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
 });
 
+it('should render the select in an error state when valid is false', () => {
+  const wrapper = mount(
+    <SprkSelectionInput
+      choices={choices}
+      variant="select"
+      errorMessage="error message"
+      valid={false}
+    />,
+  );
+  expect(wrapper.find('.sprk-b-Select--error').length).toBe(1);
+  expect(wrapper.find('.sprk-b-ErrorContainer').length).toBe(1);
+  expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
+});
+
 it('should make select disabled when disabled is set', () => {
   const wrapper = mount(
     <SprkSelectionInput
@@ -75,6 +136,7 @@ it('should make select disabled when disabled is set', () => {
     />,
   );
   expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(true);
+  expect(wrapper.find('label').getDOMNode().classList.contains('sprk-b-Label--disabled')).toBe(true);
 });
 
 it('should render grouped options if supplied', () => {

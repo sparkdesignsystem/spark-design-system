@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkIcon from '../../SprkIcon/SprkIcon';
-import SprkInputIconCheck from './components/SprkInputIconCheck';
-import SprkLabelLocationCheck from './components/SprkLabelLocationCheck';
-import SprkTextAreaCheck from './components/SprkTextareaCheck';
+import SprkInputIconCheck from '../components/SprkInputIconCheck';
+import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck';
+import SprkTextAreaCheck from '../components/SprkTextareaCheck';
 
 class SprkTextInput extends Component {
   constructor(props) {

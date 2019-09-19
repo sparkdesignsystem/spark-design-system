@@ -21,12 +21,17 @@ class SprkSelectionInput extends React.Component {
     }
   }
 
+  /*
+  * Runs optional onChangeFunc prop.
+  * Updates state if huge selects have
+  * a value.
+  */
   handleChange(e, variant) {
     const { onChangeFunc } = this.props;
     const isHugeSelect = variant === 'hugeSelect';
     if (isHugeSelect) {
       this.setState({
-        selectHugeHasValue: event.target.value !== '' ? true : false
+        selectHugeHasValue: e.target.value !== '' ? true : false
       });
     }
     if (onChangeFunc) onChangeFunc(e);
