@@ -32,6 +32,31 @@ class SprkSelectionInput extends React.Component {
     if (onChangeFunc) onChangeFunc(e);
   }
 
+  /*
+  * Expects an element ref
+  * Returns true if the element
+  * has a value.
+  */
+  elementHasValue(elementRef) {
+    if (!elementRef) return false;
+    return elementRef.current.value === '' ? false : true;
+  }
+
+  componentDidMount() {
+    /*
+    * Check if Huge Select has a value when it first mounts.
+    * Set presence of value in state.
+    */
+   if (this.props.variant === 'hugeSelect') {
+      const selectHugeHasValue = this.elementHasValue(this.selectRef);
+      if (selectHugeHasValue) {
+        this.setState({
+          selectHugeHasValue
+        });
+      }
+    }
+  }
+
   render() {
     const {
       additionalClasses,
@@ -46,7 +71,12 @@ class SprkSelectionInput extends React.Component {
       variant,
       ...other
     } = this.props;
-    const { choiceItems, id, hasValue } = this.state;
+    const {
+      choiceItems,
+      id,
+      selectHugeHasValue,
+    } = this.state;
+
     return (
       <React.Fragment>
         <div
