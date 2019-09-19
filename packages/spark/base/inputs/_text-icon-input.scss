@@ -1,6 +1,6 @@
-.sprk-b-TextInputIconContainer--has-text-icon,
-.sprk-b-TextInputIconContainer--has-text-icon-right {
+.sprk-b-TextInputIconContainer--has-text-icon {
   &::before {
+    content: $sprk-monetary-symbol;
     display: block;
     font-size: $sprk-input-text-icon-font-size;
     font-weight: $sprk-input-text-icon-font-weight;
@@ -10,22 +10,4 @@
     top: calc(100% - #{$sprk-input-text-icon-offset-y});
     z-index: $sprk-input-text-icon-z-index;
   }
-}
-
-.sprk-b-TextInput__icon--right {
-  position: absolute;
-  height: $sprk-text-input-has-text-icon-right-height;
-  width: $sprk-text-input-has-text-icon-right-width;
-  top: $sprk-text-input-has-text-icon-right-top;
-  left: $sprk-text-input-has-text-icon-right-left;
-}
-
-.sprk-b-TextInputIconContainer--has-text-icon {
-  &::before {
-    content: $sprk-monetary-symbol;
-  }
-}
-
-.sprk-b-TextInputIconContainer--has-text-icon-right {
-  max-width: $sprk-input-container-narrow-max-width;
 }
