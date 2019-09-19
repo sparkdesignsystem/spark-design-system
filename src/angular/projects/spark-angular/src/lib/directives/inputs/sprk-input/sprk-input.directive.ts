@@ -13,7 +13,7 @@ export class SprkInputDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
   @HostListener('change')
-  OnChange($event) {
+  OnChange() {
     const value = (this.ref.nativeElement as HTMLInputElement).value;
     if (value.length > 0) {
       this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
