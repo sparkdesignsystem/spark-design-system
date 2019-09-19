@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
-import SprkLabelLocationCheck from '../SprkTextInput/components/SprkLabelLocationCheck';
+import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck';
 import SprkIcon from '../../SprkIcon/SprkIcon';
 
 class SprkSelectionInput extends React.Component {
