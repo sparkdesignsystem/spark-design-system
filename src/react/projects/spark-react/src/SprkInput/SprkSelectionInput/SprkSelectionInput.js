@@ -18,7 +18,7 @@ class SprkSelectionInput extends React.Component {
     // Only create select ref if input is huge select
     if (this.props.variant === 'hugeSelect') {
       this.selectRef = React.createRef();
-  }
+    }
   }
 
   handleChange(e, variant) {
@@ -78,86 +78,92 @@ class SprkSelectionInput extends React.Component {
     } = this.state;
 
     return (
-      <React.Fragment>
-        <div
-          className={classNames('sprk-b-InputContainer', additionalClasses, {
-            'sprk-b-InputContainer--huge': variant === 'hugeSelect',
-          })}
-          data-analytics={analyticsString}
-          data-id={idString}
-        >
-          {(variant === 'checkbox' || variant === 'radio') && (
-            <fieldset className="sprk-b-Fieldset">
-              <legend className="sprk-b-Legend">
-                <p className="sprk-b-Label">{groupLabel || label }</p>
-              </legend>
-              {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
-                <div className="sprk-b-SelectionContainer" key={innerId}>
-                  <input
-                    disabled={disabled}
-                    id={innerId}
-                    type={variant}
-                    aria-describedby={`errorcontainer-${id}`}
-                    name={name}
-                    value={value}
-                    {...rest}
-                  />
-                  <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">
-                    {innerLabel}
-                  </label>
-                </div>
-              ))}
-            </fieldset>
-          )}
-          {(variant === 'select' || variant === 'hugeSelect') && (
-            <React.Fragment>
-              <SprkLabelLocationCheck
-                type={variant}
-                label={label}
-                id={id}
-              >
-                <select className={
-                    classNames(
-                      'sprk-b-Select',
-                      {'sprk-b-Input--has-floating-label' : hasValue && variant === 'hugeSelect'}
-                    )}
-                  id={id}
-                disabled={disabled}
+      <div
+        className={
+          classNames('sprk-b-InputContainer', additionalClasses, {
+          'sprk-b-InputContainer--huge': variant === 'hugeSelect',
+        })}
+        data-analytics={analyticsString}
+        data-id={idString}
+      >
+        {(variant === 'checkbox' || variant === 'radio') && (
+          <fieldset className="sprk-b-Fieldset">
+            <legend className="sprk-b-Legend">
+              <p className="sprk-b-Label">{groupLabel || label }</p>
+            </legend>
+            {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
+              <div className="sprk-b-SelectionContainer" key={innerId}>
+                <input
+                  disabled={disabled}
+                  id={innerId}
+                  type={variant}
                   aria-describedby={`errorcontainer-${id}`}
-                  onChange={this.handleChange}
-                  {...other}
-                >
-                  {variant === 'hugeSelect' && (<option value="" defaultValue hidden disabled></option>)}
-                  {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
-                    if (options) {
-                      return (
-                        <optgroup label={innerLabel} key={innerId}>
-                          {options.map(({ value: optionValue, label: optionLabel }) => (
-                            <option key={`${innerId}-${uniqueId()}`} value={optionValue} {...rest}>
-                              {optionLabel}
-                            </option>
-                          ))}
-                        </optgroup>
-                      );
+                  name={name}
+                  value={value}
+                  onChange={(e)=>{this.handleChange(e, variant)}}
+                  {...rest}
+                />
+                <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">
+                  {innerLabel}
+                </label>
+              </div>
+            ))}
+          </fieldset>
+        )}
+
+        {(variant === 'select' || variant === 'hugeSelect') && (
+          <>
+            <SprkLabelLocationCheck
+              type={variant}
+              label={label}
+              id={id}
+              disabled={disabled}
+            >
+              <select className={
+                  classNames(
+                    'sprk-b-Select',
+                    {
+                      'sprk-b-Input--has-floating-label' : selectHugeHasValue,
+                      'sprk-b-Select--error': !valid,
                     }
+                  )}
+                id={id}
+                disabled={disabled}
+                aria-describedby={`errorcontainer-${id}`}
+                onChange={(e)=>{this.handleChange(e, variant)}}
+                ref={this.selectRef}
+                {...other}
+              >
+                {variant === 'hugeSelect' && (<option value="" hidden disabled></option>)}
+                {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
+                  if (options) {
                     return (
-                      <option value={value} key={innerId} {...rest}>
-                        {innerLabel}
-                      </option>
+                      <optgroup label={innerLabel} key={innerId}>
+                        {options.map(({ value: optionValue, label: optionLabel }) => (
+                          <option key={`${innerId}-${uniqueId()}`} value={optionValue} {...rest}>
+                            {optionLabel}
+                          </option>
+                        ))}
+                      </optgroup>
                     );
-                  })}
-                </select>
-              </SprkLabelLocationCheck>
-              <SprkIcon
-                iconName="chevron-down"
-                additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
-              />
-            </React.Fragment>
-          )}
-          {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
-          {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} message={errorMessage} />}
-        </div>
-      </React.Fragment>
+                  }
+                  return (
+                    <option value={value} key={innerId} {...rest}>
+                      {innerLabel}
+                    </option>
+                  );
+                })}
+              </select>
+            </SprkLabelLocationCheck>
+            <SprkIcon
+              iconName="chevron-down"
+              additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+            />
+          </>
+        )}
+        {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
+        {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} message={errorMessage} />}
+      </div>
     );
   }
 }
