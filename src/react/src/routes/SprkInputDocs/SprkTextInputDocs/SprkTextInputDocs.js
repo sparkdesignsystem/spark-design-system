@@ -55,6 +55,15 @@ class SprkTextInputDocs extends React.Component {
             placeholder="Enter your first name"
           />
         </ExampleContainer>
+        <ExampleContainer heading="Text Input - Error">
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            valid={false}
+            placeholder="Enter your first name"
+            errorMessage="There is an error on this field."
+          />
+        </ExampleContainer>
         <ExampleContainer heading="Text Huge">
           <SprkTextInput
             label="Name"

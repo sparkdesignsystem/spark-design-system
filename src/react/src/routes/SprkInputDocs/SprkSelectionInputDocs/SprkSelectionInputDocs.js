@@ -51,6 +51,24 @@ function SprkSelectionInputDocs() {
     },
   ];
 
+  const selectNotRequired = [
+    {
+      label: 'Please select...',
+      name: '',
+      value: '',
+    },
+    {
+      label: 'Item 2',
+      name: 'check[]',
+      value: 'item-2',
+    },
+    {
+      label: 'Item 3',
+      name: 'check[]',
+      value: 'item-3',
+    },
+  ];
+
   return (
     <>
       <ExampleContainer heading="Checkbox">
@@ -70,12 +88,43 @@ function SprkSelectionInputDocs() {
       </ExampleContainer>
 
       <ExampleContainer heading="Select">
-        <SprkSelectionInput choices={selectChoices} variant="select" />
+        <SprkSelectionInput label="Select Box Label" choices={selectChoices} variant="select" />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Select - Error ">
+        <SprkSelectionInput
+          choices={selectChoices}
+          variant="select"
+          label="Select Box Label"
+          name="select"
+          valid={false}
+          errorMessage="There is an error in the field."
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Select - Disabled ">
+        <SprkSelectionInput
+          choices={selectNotRequired}
+          label="Select Box Label"
+          variant="select"
+          name="select"
+          disabled
+          errorMessage="There is an error in the field."
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Select (not required)">
+        <SprkSelectionInput
+          choices={selectNotRequired}
+          variant="select"
+          label="Select Box Label"
+        />
       </ExampleContainer>
 
       <ExampleContainer heading="Select With Helper And Default Option Of Item 2">
         <SprkSelectionInput
           choices={selectChoices}
+          label="Select Box Label"
           helperText="Optional helper text."
           variant="select"
           name="select-with-helper"
@@ -90,29 +139,43 @@ function SprkSelectionInputDocs() {
           helperText="Optional helper text."
           variant="hugeSelect"
           label="Huge Select Box Label"
+          defaultValue=""
         />
       </ExampleContainer>
 
-      <ExampleContainer heading="Select Huge With Default Value">
+      <ExampleContainer heading="Select Huge Error">
         <SprkSelectionInput
           choices={selectChoices}
-          helperText="Optional helper text."
+          name="select-huge"
           variant="hugeSelect"
           label="Huge Select Box Label"
-          defaultValue="item-1"
+          valid={false}
+          errorMessage="There is an error in the field."
+          defaultValue=""
         />
       </ExampleContainer>
 
-      <ExampleContainer heading="Select Huge Disabled">
-        <SprkSelectionInput
-          choices={selectChoices}
-          helperText="Optional helper text."
-          variant="hugeSelect"
-          label="Huge Select Box Label"
-          data-my-attr="my-test-attr"
-          disabled
-        />
-      </ExampleContainer>
+       <ExampleContainer heading="Select Huge With Default Value Of Item 3">
+         <SprkSelectionInput
+           choices={selectChoices}
+           helperText="Optional helper text."
+           variant="hugeSelect"
+           label="Huge Select Box Label"
+           defaultValue="item-3"
+         />
+       </ExampleContainer>
+
+       <ExampleContainer heading="Select Huge Disabled">
+         <SprkSelectionInput
+           choices={selectChoices}
+           helperText="Optional helper text."
+           variant="hugeSelect"
+           label="Disabled Label"
+           data-my-attr="my-test-attr"
+           disabled
+           defaultValue=""
+         />
+       </ExampleContainer>
     </>
   );
 }
