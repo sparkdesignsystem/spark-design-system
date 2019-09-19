@@ -348,6 +348,22 @@ import { Component } from '@angular/core';
             <div class="sprk-b-ErrorText">Invalid amount.</div>
           </div>
         </sprk-icon-input-container>
+        <sprk-icon-input-container
+          iconContainerClasses="sprk-b-InputContainer__icon-container--narrow"
+        >
+          <label sprkLabel>Percentage</label>
+          <sprk-icon
+            iconType="percent"
+            additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
+            sprk-input-icon
+          ></sprk-icon>
+          <input
+            class="sprk-b-InputContainer__input--has-icon-right"
+            name="percentage"
+            type="tel"
+            sprkInput
+          />
+        </sprk-icon-input-container>
         <sprk-input-container>
           <label sprkLabel>Password</label>
           <input [type]="passwordType" name="password_input" sprkInput />
