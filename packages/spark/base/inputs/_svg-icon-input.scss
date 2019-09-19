@@ -18,8 +18,8 @@
 
 // Specificity needed to override {.sprk-b-TextInputIconContainer .sprk-c-Icon}
 .sprk-b-InputContainer__icon-container .sprk-b-InputContainer__icon--right {
-  top: $sprk-text-input-has-text-icon-right-top;
-  left: $sprk-text-input-has-text-icon-right-left;
+  top: $sprk-input-has-icon-right-top;
+  left: $sprk-input-has-icon-right-left;
   margin: 0;
   stroke-width: $sprk-icon-custom-stroke-width-s;
   fill: $sprk-icon-filled-fill-color;

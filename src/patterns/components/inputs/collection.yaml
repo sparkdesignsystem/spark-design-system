@@ -63,6 +63,9 @@ variableTable:
   $sprk-input-container-huge-max-width:
     default: 37.5rem
     description: The value used as a maximum width for huge input containers.
+  $sprk-input-container-narrow-max-width:
+    default: 6.5rem
+    description: The value used for the maximum width of an icon container using the .sprk-b-InputContainer__icon-container--narrow modifier.
   $sprk-text-input-font-family:
     default: $sprk-font-family-body-two
     description: The font family to use for inputs.
@@ -447,16 +450,10 @@ variableTable:
   $sprk-text-input-huge-has-text-icon-padding:
     default: 0 40px
     description:
-  $sprk-text-input-has-text-icon-right-height:
-    default: 1em
-    description: The height of the icon displayed on the right side of inputs.
-  $sprk-text-input-has-text-icon-right-width:
-    default: 1em
-    description: The width of the icon displayed on the right side of inputs.
-  $sprk-text-input-has-text-icon-right-top:
+  $sprk-input-has-icon-right-top:
     default: 38px
     description: The top offset of the icon displayed on the right side of inputs.
-  $sprk-text-input-has-text-icon-right-left:
+  $sprk-input-has-icon-right-left:
     default: 71px
     description: The left offset of the icon displayed on the right side of inputs.
   $sprk-input-text-icon-z-index:
@@ -514,3 +511,9 @@ classTable:
     description: Trigger the floating label state on huge inputs.
   .sprk-b-TextInput--label-hidden:
     description: Adjust styling and hide label on huge inputs.
+  .sprk-b-InputContainer__icon-container--narrow:
+    description: Limits the max-width of the input icon container.
+  .sprk-b-InputContainer__icon--right:
+    description: For a SVG icon inside of input that is positioned to the right.
+  .sprk-b-InputContainer__input--has-icon-right:
+    description: For an input that contains a SVG that is positioned to the right.
