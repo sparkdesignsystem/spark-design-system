@@ -10,7 +10,7 @@ const SprkInputIconCheck = ({
   narrowWidth,
   iconRight,
 }) => {
-  if (leadingIcon.length > 0 || textIcon) {
+  if (leadingIcon || textIcon) {
     return (
       <div
         className={classnames({
@@ -19,7 +19,7 @@ const SprkInputIconCheck = ({
           'sprk-b-InputContainer__icon-container--narrow': narrowWidth,
         })}
       >
-        {leadingIcon.length > 0 && (
+        {leadingIcon && (
           <SprkIcon
             iconName={leadingIcon}
             additionalClasses={classnames({
