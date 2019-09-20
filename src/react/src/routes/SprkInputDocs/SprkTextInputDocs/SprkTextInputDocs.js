@@ -158,6 +158,16 @@ class SprkTextInputDocs extends React.Component {
             errorMessage="Enter valid monetary amount."
           />
         </ExampleContainer>
+        <ExampleContainer heading="Percentage">
+          <SprkTextInput
+            label="Percentage"
+            iconRight
+            leadingIcon="percent"
+            narrowWidth
+            name="percentage"
+            type="tel"
+          />
+        </ExampleContainer>
         <ExampleContainer heading="Phone Number">
           <SprkTextInput
             label="Phone Number"

@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import SprkInputLabel from './SprkInputLabel'
+import SprkInputLabel from './SprkInputLabel';
 
 const SprkLabelLocationCheck = ({
   children,
@@ -47,6 +47,5 @@ SprkLabelLocationCheck.propTypes = {
   disabled: propTypes.bool,
   hiddenLabel: propTypes.bool,
 };
-
 
 export default SprkLabelLocationCheck;

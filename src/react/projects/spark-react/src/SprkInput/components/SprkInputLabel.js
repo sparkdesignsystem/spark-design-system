@@ -2,12 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
-const SprkInputLabel = ({
-  id,
-  hiddenLabel,
-  label,
-  disabled,
-}) => {
+const SprkInputLabel = ({ id, hiddenLabel, label, disabled }) => {
   return (
     <label
       htmlFor={id}

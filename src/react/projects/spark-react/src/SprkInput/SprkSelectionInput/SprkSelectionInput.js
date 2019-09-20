@@ -18,17 +18,17 @@ class SprkSelectionInput extends React.Component {
   }
 
   /*
-  * Runs optional onChangeFunc prop.
-  * Updates state if huge selects have
-  * a value.
-  */
+   * Runs optional onChangeFunc prop.
+   * Updates state if huge selects have
+   * a value.
+   */
   handleChange(e, variant) {
-     const { onChangeFunc } = this.props;
-     const isHugeSelect = variant === 'hugeSelect';
+    const { onChangeFunc } = this.props;
+    const isHugeSelect = variant === 'hugeSelect';
 
-     if (isHugeSelect) {
+    if (isHugeSelect) {
       this.setState({
-        selectHugeHasValue: e.target.value !== ''
+        selectHugeHasValue: e.target.value !== '',
       });
     }
     if (onChangeFunc) onChangeFunc(e);
@@ -36,13 +36,13 @@ class SprkSelectionInput extends React.Component {
 
   componentDidMount() {
     /*
-    * Check if Huge Select has a value when it first mounts.
-    * Set presence of value in state.
-    */
-   if (this.props.variant === 'hugeSelect') {
+     * Check if Huge Select has a value when it first mounts.
+     * Set presence of value in state.
+     */
+    if (this.props.variant === 'hugeSelect') {
       if (this.selectRef.current.value !== '') {
         this.setState({
-          selectHugeHasValue: true
+          selectHugeHasValue: true,
         });
       }
     }
@@ -64,16 +64,11 @@ class SprkSelectionInput extends React.Component {
       onChangeFunc,
       ...other
     } = this.props;
-    const {
-      choiceItems,
-      id,
-      selectHugeHasValue,
-    } = this.state;
+    const { choiceItems, id, selectHugeHasValue } = this.state;
 
     return (
       <div
-        className={
-          classNames('sprk-b-InputContainer', additionalClasses, {
+        className={classNames('sprk-b-InputContainer', additionalClasses, {
           'sprk-b-InputContainer--huge': variant === 'hugeSelect',
         })}
         data-analytics={analyticsString}
@@ -82,24 +77,29 @@ class SprkSelectionInput extends React.Component {
         {(variant === 'checkbox' || variant === 'radio') && (
           <fieldset className="sprk-b-Fieldset">
             <legend className="sprk-b-Legend">
-              <p className="sprk-b-Label">{groupLabel || label }</p>
+              <p className="sprk-b-Label">{groupLabel || label}</p>
             </legend>
-            {choiceItems.map(({ label: innerLabel, id: innerId, name, value, ...rest }) => (
-              <div className="sprk-b-SelectionContainer" key={innerId}>
-                <input
-                  disabled={disabled}
-                  id={innerId}
-                  type={variant}
-                  aria-describedby={`errorcontainer-${id}`}
-                  name={name}
-                  value={value}
-                  {...rest}
-                />
-                <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">
-                  {innerLabel}
-                </label>
-              </div>
-            ))}
+            {choiceItems.map(
+              ({ label: innerLabel, id: innerId, name, value, ...rest }) => (
+                <div className="sprk-b-SelectionContainer" key={innerId}>
+                  <input
+                    disabled={disabled}
+                    id={innerId}
+                    type={variant}
+                    aria-describedby={`errorcontainer-${id}`}
+                    name={name}
+                    value={value}
+                    {...rest}
+                  />
+                  <label
+                    htmlFor={innerId}
+                    className="sprk-b-Label sprk-b-Label--inline"
+                  >
+                    {innerLabel}
+                  </label>
+                </div>
+              ),
+            )}
           </fieldset>
         )}
 
@@ -111,40 +111,59 @@ class SprkSelectionInput extends React.Component {
               id={id}
               disabled={disabled}
             >
-              <select className={
-                  classNames(
-                    'sprk-b-Select',
-                    {
-                      'sprk-b-Input--has-floating-label' : selectHugeHasValue,
-                      'sprk-b-Select--error': !valid,
-                    }
-                  )}
+              <select
+                className={classNames('sprk-b-Select', {
+                  'sprk-b-Input--has-floating-label': selectHugeHasValue,
+                  'sprk-b-Select--error': !valid,
+                })}
                 id={id}
                 disabled={disabled}
                 aria-describedby={`errorcontainer-${id}`}
-                onChange={(e)=>{this.handleChange(e, variant)}}
+                onChange={e => {
+                  this.handleChange(e, variant);
+                }}
                 ref={this.selectRef}
                 {...other}
               >
-                {variant === 'hugeSelect' && (<option value="" hidden={!hasBlankFirstOption} disabled={!hasBlankFirstOption}></option>)}
-                {choiceItems.map(({ id: innerId, label: innerLabel, options, value, ...rest }) => {
-                  if (options) {
+                {variant === 'hugeSelect' && (
+                  <option
+                    value=""
+                    hidden={!hasBlankFirstOption}
+                    disabled={!hasBlankFirstOption}
+                  />
+                )}
+                {choiceItems.map(
+                  ({
+                    id: innerId,
+                    label: innerLabel,
+                    options,
+                    value,
+                    ...rest
+                  }) => {
+                    if (options) {
+                      return (
+                        <optgroup label={innerLabel} key={innerId}>
+                          {options.map(
+                            ({ value: optionValue, label: optionLabel }) => (
+                              <option
+                                key={optionValue}
+                                value={optionValue}
+                                {...rest}
+                              >
+                                {optionLabel}
+                              </option>
+                            ),
+                          )}
+                        </optgroup>
+                      );
+                    }
                     return (
-                      <optgroup label={innerLabel} key={innerId}>
-                        {options.map(({ value: optionValue, label: optionLabel }) => (
-                          <option key={optionValue} value={optionValue} {...rest}>
-                            {optionLabel}
-                          </option>
-                        ))}
-                      </optgroup>
+                      <option value={value} key={value} {...rest}>
+                        {innerLabel}
+                      </option>
                     );
-                  }
-                  return (
-                    <option value={value} key={value} {...rest}>
-                      {innerLabel}
-                    </option>
-                  );
-                })}
+                  },
+                )}
               </select>
             </SprkLabelLocationCheck>
             <SprkIcon
@@ -153,8 +172,15 @@ class SprkSelectionInput extends React.Component {
             />
           </>
         )}
-        {helperText.length > 0 && <div className="sprk-b-HelperText">{helperText}</div>}
-        {!valid && <SprkErrorContainer id={`errorcontainer-${id}`} message={errorMessage} />}
+        {helperText.length > 0 && (
+          <div className="sprk-b-HelperText">{helperText}</div>
+        )}
+        {!valid && (
+          <SprkErrorContainer
+            id={`errorcontainer-${id}`}
+            message={errorMessage}
+          />
+        )}
       </div>
     );
   }
@@ -178,7 +204,8 @@ SprkSelectionInput.propTypes = {
   valid: PropTypes.bool,
   hasBlankFirstOption: PropTypes.bool,
   onChangeFunc: PropTypes.func,
-  variant: PropTypes.oneOf(['checkbox', 'radio', 'select', 'hugeSelect']).isRequired,
+  variant: PropTypes.oneOf(['checkbox', 'radio', 'select', 'hugeSelect'])
+    .isRequired,
 };
 
 SprkSelectionInput.defaultProps = {

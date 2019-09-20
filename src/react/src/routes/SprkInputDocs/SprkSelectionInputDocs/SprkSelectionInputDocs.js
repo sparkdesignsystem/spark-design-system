@@ -50,7 +50,9 @@ function SprkSelectionInputDocs() {
       label: 'Checkbox Item 1',
       name: 'checkbox-input',
       value: 'item-1',
-      onChange: ()=>{console.log('item 1 onChange handler')},
+      onChange: () => {
+        console.log('item 1 onChange handler');
+      },
     },
     {
       label: 'Checkbox Item 2',
@@ -109,9 +111,7 @@ function SprkSelectionInputDocs() {
 
   return (
     <>
-      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">
-        Checkbox
-      </h1>
+      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Checkbox</h1>
 
       <ExampleContainer heading="Checkbox">
         <SprkSelectionInput
@@ -152,9 +152,7 @@ function SprkSelectionInputDocs() {
         />
       </ExampleContainer>
 
-      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">
-        Radio
-      </h1>
+      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Radio</h1>
 
       <ExampleContainer>
         <SprkSelectionInput
@@ -186,12 +184,14 @@ function SprkSelectionInputDocs() {
         />
       </ExampleContainer>
 
-      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">
-        Select Box
-      </h1>
+      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Select Box</h1>
 
       <ExampleContainer>
-        <SprkSelectionInput label="Select Box Label" choices={selectChoices} variant="select" />
+        <SprkSelectionInput
+          label="Select Box Label"
+          choices={selectChoices}
+          variant="select"
+        />
       </ExampleContainer>
 
       <ExampleContainer heading="Select - Error ">
@@ -235,9 +235,7 @@ function SprkSelectionInputDocs() {
         />
       </ExampleContainer>
 
-      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">
-        Select Huge
-      </h1>
+      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Select Huge</h1>
 
       <ExampleContainer>
         <SprkSelectionInput
@@ -262,54 +260,56 @@ function SprkSelectionInputDocs() {
         />
       </ExampleContainer>
 
-       <ExampleContainer heading="Select Huge With Default Value Of Item 3">
-         <SprkSelectionInput
-           choices={selectChoices}
-           helperText="Optional helper text."
-           name="select-huge-default-value"
-           variant="hugeSelect"
-           label="Huge Select Box Label"
-           defaultValue="item-3"
-         />
-       </ExampleContainer>
+      <ExampleContainer heading="Select Huge With Default Value Of Item 3">
+        <SprkSelectionInput
+          choices={selectChoices}
+          helperText="Optional helper text."
+          name="select-huge-default-value"
+          variant="hugeSelect"
+          label="Huge Select Box Label"
+          defaultValue="item-3"
+        />
+      </ExampleContainer>
 
-       <ExampleContainer heading="Select Huge With Value Of Item 2">
-         <SprkSelectionInput
-           choices={selectChoices}
-           helperText="Optional helper text."
-           variant="hugeSelect"
-           label="Huge Select Box Label"
-           name="select-huge-value"
-           value="item-2"
-           onChangeFunc={()=>{console.log('test function')}}
-         />
-       </ExampleContainer>
+      <ExampleContainer heading="Select Huge With Value Of Item 2">
+        <SprkSelectionInput
+          choices={selectChoices}
+          helperText="Optional helper text."
+          variant="hugeSelect"
+          label="Huge Select Box Label"
+          name="select-huge-value"
+          value="item-2"
+          onChangeFunc={() => {
+            console.log('test function');
+          }}
+        />
+      </ExampleContainer>
 
-       <ExampleContainer heading="Select Huge Disabled">
-         <SprkSelectionInput
-           choices={selectChoices}
-           helperText="Optional helper text."
-           name="select-huge-disabled"
-           variant="hugeSelect"
-           label="Disabled Label"
-           data-my-attr="my-test-attr"
-           disabled
-           defaultValue=""
-         />
-       </ExampleContainer>
+      <ExampleContainer heading="Select Huge Disabled">
+        <SprkSelectionInput
+          choices={selectChoices}
+          helperText="Optional helper text."
+          name="select-huge-disabled"
+          variant="hugeSelect"
+          label="Disabled Label"
+          data-my-attr="my-test-attr"
+          disabled
+          defaultValue=""
+        />
+      </ExampleContainer>
 
-       <ExampleContainer heading="Select Huge With Blank First Option">
-         <SprkSelectionInput
-           choices={selectChoices}
-           helperText="Optional helper text."
-           variant="hugeSelect"
-           name="select-huge-blank-first-option"
-           label="Huge Select Box"
-           data-my-attr="my-test-attr"
-           defaultValue=""
-           hasBlankFirstOption
-         />
-       </ExampleContainer>
+      <ExampleContainer heading="Select Huge With Blank First Option">
+        <SprkSelectionInput
+          choices={selectChoices}
+          helperText="Optional helper text."
+          variant="hugeSelect"
+          name="select-huge-blank-first-option"
+          label="Huge Select Box"
+          data-my-attr="my-test-attr"
+          defaultValue=""
+          hasBlankFirstOption
+        />
+      </ExampleContainer>
     </>
   );
 }
