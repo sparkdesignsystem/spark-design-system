@@ -107,8 +107,9 @@ class SprkTextInputDocs extends React.Component {
         <ExampleContainer heading="Percentage">
           <SprkTextInput
             label="Percentage"
-            additionalClasses=""
-            textIconRight
+            iconRight
+            leadingIcon="percent"
+            narrowWidth
             name="percentage"
           />
         </ExampleContainer>

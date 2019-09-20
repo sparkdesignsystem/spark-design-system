@@ -27,9 +27,11 @@ class SprkTextInput extends Component {
       forwardedRef,
       helperText,
       hiddenLabel,
+      iconRight,
       idString,
       label,
       leadingIcon,
+      narrowWidth,
       textIcon,
       type,
       valid,
@@ -44,7 +46,12 @@ class SprkTextInput extends Component {
           'sprk-b-InputContainer--huge': type === 'hugeTextInput',
         })}
       >
-        <SprkInputIconCheck leadingIcon={leadingIcon} textIcon={textIcon}>
+        <SprkInputIconCheck
+          leadingIcon={leadingIcon}
+          textIcon={textIcon}
+          narrowWidth={narrowWidth}
+          iconRight={iconRight}
+        >
           <SprkLabelLocationCheck
             type={type}
             label={label}
@@ -65,6 +72,7 @@ class SprkTextInput extends Component {
               leadingIcon={leadingIcon}
               textIcon={textIcon}
               value={value}
+              iconRight={iconRight}
               {...rest}
             />
           </SprkLabelLocationCheck>
@@ -90,8 +98,10 @@ SprkTextInput.propTypes = {
   forwardedRef: PropTypes.shape(),
   helperText: PropTypes.string,
   hiddenLabel: PropTypes.bool,
+  iconRight: PropTypes.bool,
   idString: PropTypes.string,
   label: PropTypes.string,
+  narrowWidth: PropTypes.bool,
   leadingIcon: PropTypes.string,
   textIcon: PropTypes.bool,
   valid: PropTypes.bool,
@@ -106,9 +116,11 @@ SprkTextInput.defaultProps = {
   forwardedRef: React.createRef(),
   helperText: '',
   hiddenLabel: false,
+  iconRight: false,
   idString: '',
   label: 'Text Input Label',
   leadingIcon: '',
+  narrowWidth: false,
   textIcon: false,
   valid: true,
 };

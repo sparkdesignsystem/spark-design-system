@@ -4,11 +4,11 @@ import propTypes from 'prop-types';
 
 class SprkTextareaCheck extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       hasValue: this.props.value,
-    }
+    };
   }
 
   render() {
@@ -20,6 +20,7 @@ class SprkTextareaCheck extends Component {
       id,
       formatter,
       forwardedRef,
+      iconRight,
       idString,
       leadingIcon,
       value,
@@ -33,25 +34,27 @@ class SprkTextareaCheck extends Component {
     const Element = type === 'textarea' ? 'textarea' : 'input';
 
     // Adds class for IE and Edge
-    const handleOnBlur = (e) => {
+    const handleOnBlur = e => {
       if (e.target.value.length > 0) {
-        this.setState({hasValue: true})
+        this.setState({ hasValue: true });
       } else {
-        this.setState({hasValue: false})
+        this.setState({ hasValue: false });
       }
-    }
+    };
 
     return (
       <Element
         className={classNames('sprk-u-Width-100', {
           'sprk-b-TextArea': type === 'textarea',
-          'sprk-b-TextInput': type !== 'textarea',
-          'sprk-b-TextInput--label-hidden': type === 'hugeTextInput' && hiddenLabel,
+          'sprk-b-TextInput sprk-b-InputContainer__input': type !== 'textarea',
+          'sprk-b-TextInput--label-hidden':
+            type === 'hugeTextInput' && hiddenLabel,
           'sprk-b-TextInput--error': type !== 'textarea' && !valid,
           'sprk-b-TextInput--has-svg-icon':
             type !== 'textarea' && leadingIcon.length > 0,
           'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
           'sprk-b-TextInput--float-label': hasValue && type === 'hugeTextInput',
+          'sprk-b-InputContainer__input--has-icon-right': iconRight,
         })}
         type={type}
         htmlFor={id}
@@ -61,13 +64,12 @@ class SprkTextareaCheck extends Component {
         aria-invalid={!valid}
         aria-describedby={errorContainerId}
         value={valid && formatter(value) ? formatter(value) : value}
-        onBlur={(e) => handleOnBlur(e)}
+        onBlur={e => handleOnBlur(e)}
         {...rest}
       >
         {children}
       </Element>
     );
-
   }
 }
 
@@ -76,6 +78,7 @@ SprkTextareaCheck.propTypes = {
   errorContainerId: propTypes.string,
   formatter: propTypes.func,
   type: propTypes.string,
+  iconRight: propTypes.bool,
   id: propTypes.string,
   idString: propTypes.string,
   leadingIcon: propTypes.string,
@@ -83,4 +86,4 @@ SprkTextareaCheck.propTypes = {
   valid: propTypes.bool,
 };
 
-export default SprkTextareaCheck
+export default SprkTextareaCheck;
