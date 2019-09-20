@@ -31,6 +31,9 @@
 - name: patterns.components.inputs.monetary
 - name: patterns.components.inputs.monetary-error
 - name: patterns.components.inputs.monetary-disabled
+- name: patterns.components.inputs.percentage
+- name: patterns.components.inputs.percentage-error
+- name: patterns.components.inputs.percentage-disabled
 - name: patterns.components.inputs.password
 - name: patterns.components.inputs.password-error
 - name: patterns.components.inputs.password-disabled

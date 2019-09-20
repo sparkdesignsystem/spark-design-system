@@ -431,6 +431,7 @@ $sprk-list-indented-margin-left: $sprk-space-l !default;
 $sprk-monetary-symbol: '$' !default;
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
 $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
+$sprk-input-container-narrow-max-width: 6.5rem !default;
 $sprk-input-max-width: 27.5rem !default;
 
 //
@@ -448,7 +449,8 @@ $sprk-input-huge-border-width: $sprk-text-input-huge-border-width !default;
 $sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default; // Todo deprecate
 $sprk-input-huge-padding: $sprk-text-input-huge-padding !default;
 $sprk-select-input-huge-padding-right: 45px !default;
-$sprk-input-huge-label-padding: 0 ($sprk-space-misc-a + $sprk-input-huge-border-width) !default;
+$sprk-input-huge-label-padding: 0
+  ($sprk-space-misc-a + $sprk-input-huge-border-width) !default;
 $sprk-text-input-huge-focus-border-width: 2px !default; // Todo deprecate
 $sprk-input-huge-focus-border-width: $sprk-text-input-huge-focus-border-width !default;
 $sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default; // Todo deprecate
@@ -473,12 +475,14 @@ $sprk-text-input-huge-focus-label-color: $sprk-green !default; // Todo deprecate
 $sprk-input-huge-focus-label-color: $sprk-text-input-huge-focus-label-color !default;
 $sprk-text-input-huge-error-focus-label-color: $sprk-black !default; // Todo deprecate
 $sprk-input-huge-error-focus-label-color: $sprk-text-input-huge-error-focus-label-color !default;
-$sprk-text-input-huge-complete-label-color: $sprk-black !default;// Todo deprecate
+$sprk-text-input-huge-complete-label-color: $sprk-black !default; // Todo deprecate
 $sprk-input-huge-complete-label-color: $sprk-text-input-huge-complete-label-color !default;
 $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 $sprk-input-huge-icon-offset-top: 50% !default;
-$sprk-select-input-huge-icon-margin-top: -(($sprk-input-huge-height - $sprk-icon-m) / 2 + $sprk-icon-m) !default;
+$sprk-select-input-huge-icon-margin-top: -((
+  $sprk-input-huge-height - $sprk-icon-m
+) / 2 + $sprk-icon-m) !default;
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
 //
@@ -618,7 +622,10 @@ $sprk-input-text-icon-offset-x: $sprk-space-m !default;
 $sprk-input-text-icon-offset-y: 2em !default;
 $sprk-input-text-icon-font-size: 1rem !default;
 $sprk-input-text-icon-font-weight: 700 !default;
+$sprk-input-has-icon-right-top: 38px !default;
+$sprk-input-has-icon-right-left: 71px !default;
 $sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
+$sprk-input-has-icon-padding-right: 0 37px 1px 12px !default;
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 
