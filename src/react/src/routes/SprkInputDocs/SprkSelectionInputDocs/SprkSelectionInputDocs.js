@@ -45,6 +45,21 @@ function SprkSelectionInputDocs() {
     },
   ];
 
+  const checkBoxChoicesOnChange = [
+    {
+      label: 'Checkbox Item 1',
+      name: 'checkbox-input',
+      value: 'item-1',
+      onChange: ()=>{console.log('item 1 onChange handler')},
+    },
+    {
+      label: 'Checkbox Item 2',
+      name: 'checkbox-input',
+      value: 'item-2',
+      defaultChecked: true,
+    },
+  ];
+
   const selectChoices = [
     {
       label: 'Item 1',
@@ -102,6 +117,15 @@ function SprkSelectionInputDocs() {
         <SprkSelectionInput
           groupLabel="Checkbox Input"
           choices={checkBoxChoices}
+          variant="checkbox"
+          name="checkbox-input"
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Checkbox With onChange">
+        <SprkSelectionInput
+          groupLabel="Checkbox Input"
+          choices={checkBoxChoicesOnChange}
           variant="checkbox"
           name="checkbox-input"
         />

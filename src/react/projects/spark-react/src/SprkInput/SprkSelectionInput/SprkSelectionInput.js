@@ -28,20 +28,10 @@ class SprkSelectionInput extends React.Component {
 
      if (isHugeSelect) {
       this.setState({
-        selectHugeHasValue: e.target.value === '' ? false : true
+        selectHugeHasValue: e.target.value !== ''
       });
     }
     if (onChangeFunc) onChangeFunc(e);
-  }
-
-  /*
-  * Expects an element ref
-  * Returns true if the element
-  * has a value.
-  */
-  elementHasValue(elementRef) {
-    if (!elementRef) return false;
-    return elementRef.current.value === '' ? false : true;
   }
 
   componentDidMount() {
@@ -50,8 +40,7 @@ class SprkSelectionInput extends React.Component {
     * Set presence of value in state.
     */
    if (this.props.variant === 'hugeSelect') {
-      const selectHugeHasValue = this.elementHasValue(this.selectRef);
-      if (selectHugeHasValue) {
+      if (this.selectRef.current.value !== '') {
         this.setState({
           selectHugeHasValue: true
         });
@@ -104,7 +93,6 @@ class SprkSelectionInput extends React.Component {
                   aria-describedby={`errorcontainer-${id}`}
                   name={name}
                   value={value}
-                  onChange={(e)=>{this.handleChange(e, variant)}}
                   {...rest}
                 />
                 <label htmlFor={innerId} className="sprk-b-Label sprk-b-Label--inline">

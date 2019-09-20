@@ -44,6 +44,36 @@ it('should add floating label to huge select if it has a value on change', () =>
   expect(select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
 });
 
+it('should not add floating label to regular select if it has a value on change', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="select" defaultValue=""/>
+  );
+  const select = wrapper.find('.sprk-b-Select');
+  select.value = '1';
+  select.simulate('change', { target: {value:'test-value'} });
+  expect(select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(false);
+});
+
+it('should not add floating label to huge select if has no value on load', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="select" defaultValue=""/>
+  );
+  const select = wrapper.find('.sprk-b-Select');
+  expect(select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(false);
+});
+
+it('should run the supplied onChange function for checkboxes', () => {
+  const onCheckboxChangeMock = jest.fn();
+  const wrapper = mount(
+    <SprkSelectionInput choices={[
+      { name: 'item-choice', label: 'Item 1', value: '1',  onChange: onCheckboxChangeMock},
+    ]} variant="checkbox" />,
+  );
+  const checkbox = wrapper.find('input[type="checkbox"]');
+  checkbox.simulate('change', { target: {value:'test-value'} });
+  expect(onCheckboxChangeMock.mock.calls.length).toBe(1);
+});
+
 it('should run the supplied onChange function for selects', () => {
   const onChangeMock = jest.fn();
   const wrapper = mount(
@@ -58,7 +88,7 @@ it('should run the supplied onChange function for selects', () => {
 it('should run the supplied onChange function for huge selects', () => {
   const onChangeMock = jest.fn();
   const wrapper = mount(
-    <SprkSelectionInput choices={choices} variant="hugeSelect" onChange={onChangeMock} defaultValue="" />,
+    <SprkSelectionInput choices={choices} variant="hugeSelect" onChangeFunc={onChangeMock} defaultValue="" />,
   );
   const select = wrapper.find('.sprk-b-Select');
   select.value = '1';
@@ -183,34 +213,4 @@ it('should render grouped options if supplied', () => {
   });
   const wrapper = mount(<SprkSelectionInput variant="select" choices={choices} />);
   expect(wrapper.find('optgroup').length).toBe(1);
-});
-
-it('should select grouped option if selected', () => {
-  choices.push(
-    [
-      {
-        label: 'Option 1',
-        value: 'option-1',
-      },
-      {
-        label: 'Grouped Options',
-        options: [
-          {
-            label: 'Option 1',
-            value: 'option-1',
-          },
-          {
-            label: 'Option 2',
-            value: 'option-2',
-          },
-        ],
-      }
-    ]
-  );
-  const wrapper = mount(<SprkSelectionInput variant="hugeSelect" choices={choices} defaultValue="" />);
-  const select = wrapper.find('.sprk-b-Select');
-  select.value = 'option-1';
-  select.simulate('change', { target: {value:'option-1'} });
-  expect(select.getDOMNode().value).toBe('option-1');
-
 });
