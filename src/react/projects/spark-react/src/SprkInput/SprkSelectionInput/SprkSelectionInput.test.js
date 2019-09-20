@@ -34,20 +34,14 @@ it('should add floating label to select if it has a default value', () => {
   expect(wrapper.find('select').getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
 });
 
-it('should add floating label to huge select if it has a value on change', done => {
+it('should add floating label to huge select if it has a value on change', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue=""/>
   );
-  const select = wrapper.find('.sprk-b-Select').getDOMNode();
-  const ev = new Event('change');
+  const select = wrapper.find('.sprk-b-Select');
   select.value = '1';
-  select.dispatchEvent(ev);
-
-  // console.log(select.parentElement.innerHTML, 'select asdlkfj a;ksdjfkl adsjfk;lsdjfl;sdj ')
-  setTimeout(()=> {
-    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
-    done()
-  }, 3000 );
+  select.simulate('change', { target: {value:'test-value'} });
+  expect(select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
 });
 
 it('should update state if huge select has a value', () => {
