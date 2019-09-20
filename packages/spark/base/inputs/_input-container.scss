@@ -42,15 +42,19 @@
 */
 
 .sprk-b-InputContainer--huge .sprk-b-TextInput::placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-Input--has-floating-label::placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInput.sprk-b-Input--has-floating-label::placeholder,
 .sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Input--has-floating-label {
   font-size: $sprk-input-huge-font-size;
 }
 
 .sprk-b-InputContainer--huge .sprk-b-TextInput:-ms-input-placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--float-label:-ms-input-placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-Input--has-floating-label:-ms-input-placeholder {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInput.sprk-b-TextInput--float-label:-ms-input-placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInput.sprk-b-Input--has-floating-label:-ms-input-placeholder {
   font-size: $sprk-input-huge-font-size;
 }
 
@@ -68,39 +72,57 @@
   margin-top: $sprk-select-input-huge-icon-margin-top;
 }
 
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer :first-child.sprk-b-TextInput {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+:first-child.sprk-b-TextInput {
   padding: $sprk-text-input-huge-has-text-icon-padding;
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:focus,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--float-label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-Input--has-floating-label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-Input--has-floating-label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-Input--has-floating-label {
   opacity: $sprk-input-huge-placeholder-active-opacity;
   padding-top: $sprk-input-huge-active-padding-top;
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus::placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus::placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:focus::placeholder,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-Input--has-floating-label::placeholder,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-Input--has-floating-label::placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-Input--has-floating-label::placeholder,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::placeholder {
   opacity: $sprk-input-huge-placeholder-active-opacity;
   transition-delay: $sprk-input-huge-placeholder-transition-delay;
   transition-property: $sprk-input-huge-placeholder-transition-property;
 }
 
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput::placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput::placeholder,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput::placeholder {
   opacity: $sprk-input-huge-placeholder-opacity;
 }
 
 // IE11 Override
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:-ms-input-placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:-ms-input-placeholder,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:-ms-input-placeholder {
   color: transparent;
   opacity: $sprk-input-huge-placeholder-active-opacity;
@@ -159,23 +181,33 @@
 }
 
 // Huge styles for text inputs with icon
-.sprk-b-InputContainer--huge > :first-child.sprk-b-Label + .sprk-b-TextInputIconContainer .sprk-b-TextInput::placeholder {
+.sprk-b-InputContainer--huge > :first-child.sprk-b-Label + .sprk-b-TextInputIconContainer
+.sprk-b-TextInput::placeholder {
   opacity: $sprk-input-huge-placeholder-active-opacity;
 }
 
-.sprk-b-InputContainer--huge > :first-child.sprk-b-Label + .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus {
+.sprk-b-InputContainer--huge > :first-child.sprk-b-Label + .sprk-b-TextInputIconContainer
+.sprk-b-TextInput:focus,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus {
   padding: $sprk-text-input-has-icon-padding;
 }
 
-.sprk-b-InputContainer--huge > :first-child.sprk-b-Label + .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown),
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
+.sprk-b-InputContainer--huge > :first-child.sprk-b-Label + .sprk-b-TextInputIconContainer
+.sprk-b-TextInput:not(:placeholder-shown),
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
   padding: $sprk-text-input-has-icon-padding;
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput + .sprk-b-Label {
   position: absolute;
   top: $sprk-input-huge-label-top;
   font-size: $sprk-input-huge-font-size;
@@ -187,7 +219,10 @@
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select:focus + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:focus + .sprk-b-Label {
   font-size: $sprk-input-huge-label-font-size;
   top: $sprk-input-huge-label-active-top;
   color: $sprk-input-huge-focus-label-color;
@@ -196,31 +231,54 @@
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-Input--has-floating-label + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select.sprk-b-Input--has-floating-label + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-Input--has-floating-label + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-Input--has-floating-label + .sprk-b-Label {
   font-size: $sprk-input-huge-label-font-size;
   top: $sprk-input-huge-label-active-top;
   color: $sprk-input-huge-complete-label-color;
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label {
   font-size: $sprk-input-huge-label-font-size;
   top: $sprk-input-huge-label-active-top;
   color: $sprk-input-huge-focus-label-color;
 }
 
+/* stylelint-disable */
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label  {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label {
   color: $sprk-input-huge-complete-label-color;
 }
 
+/* stylelint-enable */
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:focus + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:focus + .sprk-b-Label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--error:focus + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-TextInput--float-label + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-TextInput--float-label + .sprk-b-Label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-TextInput--float-label + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-Input--has-floating-label + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-Input--has-floating-label + .sprk-b-Label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-Input--has-floating-label + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select.sprk-b-Select--error:focus + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select.sprk-b-Select--error.sprk-b-Input--has-floating-label + .sprk-b-Label {
   color: $sprk-input-huge-error-focus-label-color;
@@ -228,23 +286,34 @@
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown) + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select.sprk-b-Select--error + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown) + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown) + .sprk-b-Label {
   color: $sprk-input-huge-error-focus-label-color;
 }
 
 // Huge monetary inputs overrides
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon > :first-child.sprk-b-TextInput + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon > :first-child.sprk-b-TextInput + .sprk-b-Label {
   padding: $sprk-text-input-huge-has-text-icon-padding;
 }
 
 // Huge text input with svg icon overwrites
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus + .sprk-b-Label {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput + .sprk-b-Label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:focus + .sprk-b-Label {
   padding: $sprk-text-input-huge-has-text-icon-padding;
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:disabled + .sprk-b-Label,
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled + .sprk-b-Label,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:disabled + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select:disabled + .sprk-b-Label {
   top: $sprk-input-huge-label-top;
   font-size: $sprk-input-huge-font-size;
@@ -252,7 +321,8 @@
   cursor: not-allowed;
 }
 
-.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer--has-text-icon::before {
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer--has-text-icon::before {
   top: $sprk-input-huge-icon-offset-top;
   font-size: $sprk-input-huge-font-size;
 }

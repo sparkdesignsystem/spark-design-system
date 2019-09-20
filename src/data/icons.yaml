@@ -593,3 +593,15 @@
 - name: youtube-two-color
   viewBox: 0 0 64 64
   description: ...
+- name: dollar
+  viewBox: 0 0 64 64
+  description: US dollar symbol
+- name: percent
+  viewBox: 0 0 64 64
+  description: Percent symbol
+- name: multiple-pages
+  viewBox: 0 0 64 64
+  description: Indicates multiple pages
+- name: rotate-page
+  viewBox: 0 0 42.09 56.18
+  description: Indicates an action for rotating a page
