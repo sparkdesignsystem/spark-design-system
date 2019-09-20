@@ -111,6 +111,7 @@ class SprkTextInputDocs extends React.Component {
             leadingIcon="percent"
             narrowWidth
             name="percentage"
+            type="tel"
           />
         </ExampleContainer>
         <ExampleContainer heading="Phone Number">
