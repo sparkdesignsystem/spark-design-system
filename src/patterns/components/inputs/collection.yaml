@@ -495,8 +495,6 @@ classTable:
     description: Text inputs that have a value.
   .sprk-b-TextInput--focusin:
     description: Text inputs that are currently in focus.
-  .sprk-b-Label--with-icon:
-    description: Labels that have an icon in them.
   .sprk-b-Label--monetary:
     description: For labels on monetary inputs.
   .sprk-b-Select--error:
@@ -507,7 +505,7 @@ classTable:
     description: Selects that are currently not in focus.
   .sprk-b-TextInputIconContainer--has-text-icon:
     description: Text inputs with icons.
-  .sprk-b-TextInput--float-label:
+  .sprk-b-Input--has-floating-label:
     description: Trigger the floating label state on huge inputs.
   .sprk-b-TextInput--label-hidden:
     description: Adjust styling and hide label on huge inputs.

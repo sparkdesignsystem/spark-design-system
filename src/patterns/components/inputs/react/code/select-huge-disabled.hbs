@@ -1,0 +1,41 @@
+<SprkSelectionInput
+  label="Select Box Label"
+  choices={choices}
+  variant="hugeSelect"
+  name="select"
+  disabled
+  defaultValue=""
+/>
+<script>
+  const choices = [
+    {
+      label: 'Option 1',
+      value: 'option-1',
+    },
+    {
+      label: 'Option 2',
+      value: 'option-2',
+    },
+    {
+      label: 'Option 3',
+      value: 'option-3',
+    },
+    {
+      label: 'Grouped Options',
+      options: [
+        {
+          label: 'Grouped Option 1',
+          value: 'grouped-option-1',
+        },
+        {
+          label: 'Grouped Option 2',
+          value: 'grouped-option-2',
+        },
+        {
+          label: 'Grouped Option 3',
+          value: 'grouped-option-3',
+        },
+      ],
+    },
+  ];
+</script>

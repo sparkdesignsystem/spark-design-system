@@ -7,7 +7,7 @@ information:
   - If a select will have a value on page load then add the class of 'sprk-b-Input--has-floating-label' to the select.
     Spark JS will check for a value in the select and float the label by adding the class on page load if the class is not there.
   - If a blank default option (a not required select) is desired then remove the 'disabled' and 'hidden' attributes
-    from the first option in the select. This will also users to select a blank first option.
+    from the first option in the select. This will allow users to select a blank first option.
 restrictions:
   - The first option element inside the select must be empty and have the 'selected' attribute.
   - This should only be used in a form that displays one input at a time.
@@ -15,7 +15,7 @@ restrictions:
   - Labels cannot be long in length as they must fit inside the select. They should not wrap onto a second line.
 order: 11
 hasAngularCode: true
-hasReactCode: false
+hasReactCode: true
 ---
 
 <div class="sprk-b-InputContainer sprk-b-InputContainer--huge" {{#if requiredOnly}}data-sprk-required-only="select"{{/if}}>

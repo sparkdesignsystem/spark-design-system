@@ -4,7 +4,6 @@ import {
   SprkMasthead,
   SprkLink,
   SprkButton,
-  SprkIcon,
   SprkDropdown,
 } from '@sparkdesignsystem/spark-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';

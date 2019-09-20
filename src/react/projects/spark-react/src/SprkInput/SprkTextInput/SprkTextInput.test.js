@@ -20,44 +20,44 @@ it('should render a huge text input with the correct class', () => {
   ).toBe(true);
 });
 
-it('should add float-label class to huge text when a value is present and blurred out', () => {
+it('should add floating label class to huge input when a value is present and blurred out', () => {
   const wrapper = mount(
     <SprkTextInput type="hugeTextInput" />,
   );
   const input = wrapper.find('input');
-
+  input.value = 'foo';
   // on blur pass object into blur handler
   // Enzyme does not update state of the DOM but we can simulate update to the DOM state by passing same state into react function
-  input.simulate("blur", { target: { value: "foo" } })
+  input.simulate('blur', { target: { value: 'foo' } })
 
   expect(
     wrapper
       .find('.sprk-b-TextInput')
-      .hasClass('sprk-b-TextInput--float-label'),
+      .hasClass('sprk-b-Input--has-floating-label'),
   ).toBe(true);
 });
 
-it('should remove/not have float-label class to huge text when a value is not present and blurred out', () => {
+it('should remove/not have floating label class to huge input when a value is not present and blurred out', () => {
   const wrapper = mount(
     <SprkTextInput type="hugeTextInput" />,
   );
   const input = wrapper.find('input');
 
-  input.simulate("blur", { target: { value: "" } })
+  input.simulate('blur', { target: { value: '' } })
 
   expect(
     wrapper
       .find('.sprk-b-TextInput')
-      .hasClass('sprk-b-TextInput--float-label'),
+      .hasClass('sprk-b-Input--has-floating-label'),
   ).toBe(false);
 });
 
-it('should have float-label class to huge text when there is value', () => {
-  const wrapper = mount(<SprkTextInput value="value present" type="hugeTextInput" />);
+it('should add floating label class to huge text when there is value', () => {
+  const wrapper = mount(<SprkTextInput value="value present" type="hugeTextInput" onChange={()=>{ }} />);
   expect(
     wrapper
       .find('.sprk-b-TextInput')
-      .hasClass('sprk-b-TextInput--float-label'),
+      .hasClass('sprk-b-Input--has-floating-label'),
   ).toBe(true);
 });
 
