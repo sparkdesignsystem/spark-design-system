@@ -44,6 +44,28 @@ it('should add floating label to huge select if it has a value on change', () =>
   expect(select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
 });
 
+it('should run the supplied onChange function for selects', () => {
+  const onChangeMock = jest.fn();
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="select" onChange={onChangeMock} />,
+  );
+  const select = wrapper.find('.sprk-b-Select');
+  select.value = '1';
+  select.simulate('change', { target: {value:'test-value'} });
+  expect(onChangeMock.mock.calls.length).toBe(1);
+});
+
+it('should run the supplied onChange function for huge selects', () => {
+  const onChangeMock = jest.fn();
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} variant="hugeSelect" onChange={onChangeMock} />,
+  );
+  const select = wrapper.find('.sprk-b-Select');
+  select.value = '1';
+  select.simulate('change', { target: {value:'test-value'} });
+  expect(onChangeMock.mock.calls.length).toBe(1);
+});
+
 it('should update state if huge select has a value', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue="test-value" />

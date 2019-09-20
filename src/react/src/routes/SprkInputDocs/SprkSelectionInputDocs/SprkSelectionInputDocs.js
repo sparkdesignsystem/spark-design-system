@@ -79,11 +79,53 @@ function SprkSelectionInputDocs() {
         />
       </ExampleContainer>
 
+      <ExampleContainer heading="Checkbox - Error">
+        <SprkSelectionInput
+          groupLabel="Checkbox Input"
+          choices={checkBoxAndRadioChoices}
+          variant="checkbox"
+          valid={false}
+          errorMessage="There is an error on this field."
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Checkbox - Disabled">
+        <SprkSelectionInput
+          groupLabel="Checkbox Input"
+          choices={checkBoxAndRadioChoices}
+          variant="checkbox"
+          disabled
+        />
+      </ExampleContainer>
+
       <ExampleContainer heading="Radio">
         <SprkSelectionInput
           groupLabel="Radio Input"
           choices={checkBoxAndRadioChoices}
           variant="radio"
+          valid={true}
+          errorMessage="There is an error on this field."
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Radio - Disabled">
+        <SprkSelectionInput
+          groupLabel="Radio Input"
+          choices={checkBoxAndRadioChoices}
+          variant="radio"
+          valid={true}
+          errorMessage="There is an error on this field."
+          disabled
+        />
+      </ExampleContainer>
+
+      <ExampleContainer heading="Radio - Error">
+        <SprkSelectionInput
+          groupLabel="Radio Input"
+          choices={checkBoxAndRadioChoices}
+          variant="radio"
+          valid={false}
+          errorMessage="There is an error on this field."
         />
       </ExampleContainer>
 
