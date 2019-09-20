@@ -4,7 +4,6 @@ import {
   SprkMasthead,
   SprkLink,
   SprkButton,
-  SprkIcon,
   SprkDropdown,
 } from '@sparkdesignsystem/spark-react';
 import EmptyLayout from '../../containers/EmptyLayout/EmptyLayout';
@@ -172,7 +171,15 @@ function SprkMastheadExtendedDocs() {
         siteLogo={<SiteLogo />}
         utilityContents={utilityItems}
         variant="extended"
-        navLink={<SprkLink variant="simple" href="#nogo" additionalClasses="sprk-c-Masthead__link">Sign In</SprkLink>}
+        navLink={
+          <SprkLink
+            variant="simple"
+            href="#nogo"
+            additionalClasses="sprk-c-Masthead__link"
+          >
+            Sign In
+          </SprkLink>
+        }
       />
       <div className="sprk-u-mal">
         <p>Lorem Ipsum</p>

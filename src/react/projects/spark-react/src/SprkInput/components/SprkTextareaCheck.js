@@ -26,6 +26,7 @@ class SprkTextareaCheck extends Component {
       value,
       textIcon,
       hiddenLabel,
+      disabled,
       valid,
       ...rest
     } = this.props;
@@ -53,11 +54,13 @@ class SprkTextareaCheck extends Component {
           'sprk-b-TextInput--has-svg-icon':
             type !== 'textarea' && leadingIcon.length > 0,
           'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
-          'sprk-b-TextInput--float-label': hasValue && type === 'hugeTextInput',
+          'sprk-b-Input--has-floating-label':
+            hasValue && type === 'hugeTextInput',
           'sprk-b-InputContainer__input--has-icon-right': iconRight,
         })}
         type={type}
         htmlFor={id}
+        disabled={disabled}
         ref={forwardedRef}
         data-id={idString}
         data-analytics={analyticsString}

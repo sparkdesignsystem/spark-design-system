@@ -1,25 +1,24 @@
 import React from 'react';
-import classNames from 'classnames';
 import propTypes from 'prop-types';
-import SprkInputLabel from './SprkInputLabel'
+import SprkInputLabel from './SprkInputLabel';
 
 const SprkLabelLocationCheck = ({
   children,
   type,
   label,
-  leadingIcon,
   hiddenLabel,
+  disabled,
   id,
 }) => {
-  if (type === 'hugeTextInput') {
+  if (type === 'hugeTextInput' || type === 'hugeSelect') {
     return (
       <>
         {children}
         <SprkInputLabel
           id={id}
-          leadingIcon={id}
           hiddenLabel={hiddenLabel}
           label={label}
+          disabled={disabled}
         />
       </>
     );
@@ -28,20 +27,24 @@ const SprkLabelLocationCheck = ({
     <>
       <SprkInputLabel
         id={id}
-        leadingIcon={id}
         hiddenLabel={hiddenLabel}
         label={label}
+        disabled={disabled}
       />
       {children}
     </>
   );
 };
+SprkLabelLocationCheck.defaultProps = {
+  disabled: false,
+  hiddenLabel: false,
+};
 
 SprkLabelLocationCheck.propTypes = {
   type: propTypes.string,
   label: propTypes.string,
-  leadingIcon: propTypes.string,
   id: propTypes.string,
+  disabled: propTypes.bool,
   hiddenLabel: propTypes.bool,
 };
 

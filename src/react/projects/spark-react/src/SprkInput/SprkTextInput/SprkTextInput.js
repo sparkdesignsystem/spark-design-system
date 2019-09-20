@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkIcon from '../../SprkIcon/SprkIcon';
-import SprkInputIconCheck from './components/SprkInputIconCheck';
-import SprkLabelLocationCheck from './components/SprkLabelLocationCheck';
-import SprkTextAreaCheck from './components/SprkTextareaCheck';
+import SprkInputIconCheck from '../components/SprkInputIconCheck';
+import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck';
+import SprkTextAreaCheck from '../components/SprkTextareaCheck';
 
 class SprkTextInput extends Component {
   constructor(props) {
@@ -30,6 +30,7 @@ class SprkTextInput extends Component {
       iconRight,
       idString,
       label,
+      disabled,
       leadingIcon,
       narrowWidth,
       textIcon,
@@ -58,6 +59,7 @@ class SprkTextInput extends Component {
             leadingIcon={leadingIcon}
             hiddenLabel={hiddenLabel}
             id={id}
+            disabled={disabled}
           >
             <SprkTextAreaCheck
               id={id}
@@ -73,6 +75,7 @@ class SprkTextInput extends Component {
               textIcon={textIcon}
               value={value}
               iconRight={iconRight}
+              disabled={disabled}
               {...rest}
             />
           </SprkLabelLocationCheck>
@@ -105,6 +108,7 @@ SprkTextInput.propTypes = {
   leadingIcon: PropTypes.string,
   textIcon: PropTypes.bool,
   valid: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 SprkTextInput.defaultProps = {
@@ -123,6 +127,7 @@ SprkTextInput.defaultProps = {
   narrowWidth: false,
   textIcon: false,
   valid: true,
+  disabled: false,
 };
 
 export default SprkTextInput;

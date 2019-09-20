@@ -1,8 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import propTypes from 'prop-types';
-import SprkIcon from '../../../SprkIcon/SprkIcon';
-import classNames from 'classnames';
+import SprkIcon from '../../SprkIcon/SprkIcon';
 
 const SprkInputIconCheck = ({
   children,
@@ -23,7 +22,7 @@ const SprkInputIconCheck = ({
         {leadingIcon.length > 0 && (
           <SprkIcon
             iconName={leadingIcon}
-            additionalClasses={classNames({
+            additionalClasses={classnames({
               'sprk-b-InputContainer__icon sprk-c-Icon--m sprk-c-Icon--stroke-current-color': true,
               'sprk-b-InputContainer__icon--right': iconRight,
             })}
