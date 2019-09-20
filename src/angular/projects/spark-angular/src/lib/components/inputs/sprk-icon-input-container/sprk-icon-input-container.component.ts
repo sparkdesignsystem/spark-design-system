@@ -37,7 +37,7 @@ export class SprkIconInputContainerComponent implements OnInit {
   error_id = `error_${this.id}`;
 
   getIconContainerClasses(): string {
-    const classArray: string[] = ['sprk-b-TextInputIconContainer'];
+    const classArray: string[] = ['sprk-b-InputContainer__icon-container'];
 
     if (this.iconContainerClasses) {
       this.iconContainerClasses.split(' ').forEach(className => {
