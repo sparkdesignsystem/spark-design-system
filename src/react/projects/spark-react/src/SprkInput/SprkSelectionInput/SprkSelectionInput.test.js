@@ -27,7 +27,7 @@ it('should add huge input class to container if variant is hugeSelect', () => {
   expect(wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.contains('sprk-b-InputContainer--huge')).toBe(true);
 });
 
-it('should add floating label to select if it has a default value', () => {
+it('should add floating label to huge select if it has a default value', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} variant="hugeSelect" defaultValue="test-value"/>
   );
@@ -58,7 +58,7 @@ it('should run the supplied onChange function for selects', () => {
 it('should run the supplied onChange function for huge selects', () => {
   const onChangeMock = jest.fn();
   const wrapper = mount(
-    <SprkSelectionInput choices={choices} variant="hugeSelect" onChange={onChangeMock} />,
+    <SprkSelectionInput choices={choices} variant="hugeSelect" onChange={onChangeMock} defaultValue="" />,
   );
   const select = wrapper.find('.sprk-b-Select');
   select.value = '1';
@@ -80,9 +80,16 @@ it('should not update state if huge select does not have a value', () => {
   expect(wrapper.state().selectHugeHasValue).toBe(undefined);
 });
 
-it('should add classes when additionalClasses has a value', () => {
+it('should add classes when additionalClasses has a value to radios', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} additionalClasses="sprk-u-man" variant="radio" />,
+  );
+  expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
+});
+
+it('should add classes when additionalClasses has a value to selects', () => {
+  const wrapper = mount(
+    <SprkSelectionInput choices={choices} additionalClasses="sprk-u-man" variant="select" />,
   );
   expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
 });
@@ -94,8 +101,13 @@ it('should assign data-analytics when analyticsString has a value', () => {
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
-it('should assign data-id when idString has a value', () => {
+it('should assign data-id when idString has a value to checkboxes', () => {
   const wrapper = mount(<SprkSelectionInput choices={choices} idString="321" variant="checkbox" />);
+  expect(wrapper.find('[data-id="321"]').length).toBe(1);
+});
+
+it('should assign data-id when idString has a value to selects', () => {
+  const wrapper = mount(<SprkSelectionInput choices={choices} idString="321" variant="select" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
@@ -171,4 +183,34 @@ it('should render grouped options if supplied', () => {
   });
   const wrapper = mount(<SprkSelectionInput variant="select" choices={choices} />);
   expect(wrapper.find('optgroup').length).toBe(1);
+});
+
+it('should select grouped option if selected', () => {
+  choices.push(
+    [
+      {
+        label: 'Option 1',
+        value: 'option-1',
+      },
+      {
+        label: 'Grouped Options',
+        options: [
+          {
+            label: 'Option 1',
+            value: 'option-1',
+          },
+          {
+            label: 'Option 2',
+            value: 'option-2',
+          },
+        ],
+      }
+    ]
+  );
+  const wrapper = mount(<SprkSelectionInput variant="hugeSelect" choices={choices} defaultValue="" />);
+  const select = wrapper.find('.sprk-b-Select');
+  select.value = 'option-1';
+  select.simulate('change', { target: {value:'option-1'} });
+  expect(select.getDOMNode().value).toBe('option-1');
+
 });

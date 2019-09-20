@@ -14,11 +14,7 @@ class SprkSelectionInput extends React.Component {
       choiceItems: props.choices.map(item => ({ id: uniqueId(), ...item })),
     };
     this.handleChange = this.handleChange.bind(this);
-
-    // Only create select ref if input is huge select
-    if (this.props.variant === 'hugeSelect') {
-      this.selectRef = React.createRef();
-    }
+    this.selectRef = React.createRef();
   }
 
   /*
@@ -27,11 +23,12 @@ class SprkSelectionInput extends React.Component {
   * a value.
   */
   handleChange(e, variant) {
-    const { onChangeFunc } = this.props;
-    const isHugeSelect = variant === 'hugeSelect';
-    if (isHugeSelect) {
+     const { onChangeFunc } = this.props;
+     const isHugeSelect = variant === 'hugeSelect';
+
+     if (isHugeSelect) {
       this.setState({
-        selectHugeHasValue: e.target.value !== '' ? true : false
+        selectHugeHasValue: e.target.value === '' ? false : true
       });
     }
     if (onChangeFunc) onChangeFunc(e);
@@ -56,7 +53,7 @@ class SprkSelectionInput extends React.Component {
       const selectHugeHasValue = this.elementHasValue(this.selectRef);
       if (selectHugeHasValue) {
         this.setState({
-          selectHugeHasValue
+          selectHugeHasValue: true
         });
       }
     }
@@ -147,7 +144,7 @@ class SprkSelectionInput extends React.Component {
                     return (
                       <optgroup label={innerLabel} key={innerId}>
                         {options.map(({ value: optionValue, label: optionLabel }) => (
-                          <option key={`${innerId}-${uniqueId()}`} value={optionValue} {...rest}>
+                          <option key={optionValue} value={optionValue} {...rest}>
                             {optionLabel}
                           </option>
                         ))}
@@ -155,7 +152,7 @@ class SprkSelectionInput extends React.Component {
                     );
                   }
                   return (
-                    <option value={value} key={innerId} {...rest}>
+                    <option value={value} key={value} {...rest}>
                       {innerLabel}
                     </option>
                   );

@@ -51,7 +51,7 @@ class SprkTextInputDocs extends React.Component {
           <SprkTextInput
             label="Name"
             name="Name"
-            value="default value"
+            defaultValue="default value"
             placeholder="Enter your first name"
           />
         </ExampleContainer>

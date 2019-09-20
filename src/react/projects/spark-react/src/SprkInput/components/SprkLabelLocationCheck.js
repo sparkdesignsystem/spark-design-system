@@ -35,6 +35,10 @@ const SprkLabelLocationCheck = ({
     </>
   );
 };
+SprkLabelLocationCheck.defaultProps = {
+  disabled: false,
+  hiddenLabel: false,
+};
 
 SprkLabelLocationCheck.propTypes = {
   type: propTypes.string,
@@ -43,5 +47,6 @@ SprkLabelLocationCheck.propTypes = {
   disabled: propTypes.bool,
   hiddenLabel: propTypes.bool,
 };
+
 
 export default SprkLabelLocationCheck;
