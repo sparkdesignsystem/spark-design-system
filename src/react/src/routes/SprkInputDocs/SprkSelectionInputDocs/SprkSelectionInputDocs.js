@@ -165,6 +165,17 @@ function SprkSelectionInputDocs() {
          />
        </ExampleContainer>
 
+       <ExampleContainer heading="Select Huge With Value Of Item 2">
+         <SprkSelectionInput
+           choices={selectChoices}
+           helperText="Optional helper text."
+           variant="hugeSelect"
+           label="Huge Select Box Label"
+           value="item-2"
+           onChangeFunc={()=>{console.log('test function')}}
+         />
+       </ExampleContainer>
+
        <ExampleContainer heading="Select Huge Disabled">
          <SprkSelectionInput
            choices={selectChoices}

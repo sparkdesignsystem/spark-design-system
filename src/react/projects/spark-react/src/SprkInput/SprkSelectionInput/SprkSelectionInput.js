@@ -75,6 +75,7 @@ class SprkSelectionInput extends React.Component {
       valid,
       variant,
       hasBlankFirstOption,
+      onChangeFunc,
       ...other
     } = this.props;
     const {

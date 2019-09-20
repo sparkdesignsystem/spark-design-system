@@ -39,11 +39,19 @@ class SprkTextInputDocs extends React.Component {
   render() {
     const { date, phone, monetary } = this.state;
     return (
-      <React.Fragment>
+      <>
         <ExampleContainer heading="Text">
           <SprkTextInput
             label="Name"
             name="Name"
+            placeholder="Enter your first name"
+          />
+        </ExampleContainer>
+        <ExampleContainer heading="Text With Default Value">
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            value="default value"
             placeholder="Enter your first name"
           />
         </ExampleContainer>
@@ -65,6 +73,34 @@ class SprkTextInputDocs extends React.Component {
           />
         </ExampleContainer>
         <ExampleContainer heading="Text Huge">
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            placeholder="Enter your first name"
+            type="hugeTextInput"
+          />
+        </ExampleContainer>
+        <ExampleContainer heading="Text Huge - Error">
+          <SprkTextInput
+            label="Name"
+            name="Name"
+            type="hugeTextInput"
+            valid={false}
+            placeholder="Enter your first name"
+            errorMessage="There is an error on this field."
+          />
+        </ExampleContainer>
+        <ExampleContainer heading="Text Huge - Disabled">
+          <SprkTextInput
+            type="hugeTextInput"
+            label="Text Input Label"
+            name="text-input-label"
+            valid={true}
+            disabled
+            errorMessage="There is an error on this field."
+          />
+        </ExampleContainer>
+        <ExampleContainer heading="Text Huge With Default Value">
           <SprkTextInput
             label="Name"
             name="Name"
@@ -149,7 +185,7 @@ class SprkTextInputDocs extends React.Component {
             errorMessage="Incorrect date."
           />
         </ExampleContainer>
-      </React.Fragment>
+      </>
     );
   }
 }

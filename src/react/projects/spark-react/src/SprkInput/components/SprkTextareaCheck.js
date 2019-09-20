@@ -25,6 +25,7 @@ class SprkTextareaCheck extends Component {
       value,
       textIcon,
       hiddenLabel,
+      disabled,
       valid,
       ...rest
     } = this.props;
@@ -55,6 +56,7 @@ class SprkTextareaCheck extends Component {
         })}
         type={type}
         htmlFor={id}
+        disabled={disabled}
         ref={forwardedRef}
         data-id={idString}
         data-analytics={analyticsString}

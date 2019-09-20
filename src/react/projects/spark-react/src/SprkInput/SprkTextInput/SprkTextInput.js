@@ -67,6 +67,7 @@ class SprkTextInput extends Component {
               leadingIcon={leadingIcon}
               textIcon={textIcon}
               value={value}
+              disabled={disabled}
               {...rest}
             />
           </SprkLabelLocationCheck>
