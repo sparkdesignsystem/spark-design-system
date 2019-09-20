@@ -6,7 +6,7 @@ import SprkInputIconCheck from './SprkInputIconCheck';
 Enzyme.configure({ adapter: new Adapter() });
 
 it('should render base class', () => {
-  const wrapper = mount(<SprkInputIconCheck />);
+  const wrapper = mount(<SprkInputIconCheck leadingIcon="percent" />);
   expect(wrapper.find('.sprk-b-InputContainer__icon-container').length).toBe(1);
 });
 
