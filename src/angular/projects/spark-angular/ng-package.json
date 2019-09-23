@@ -5,8 +5,5 @@
   "lib": {
     "entryFile": "src/public_api.ts"
   },
-  "whitelistedNonPeerDependencies": [
-    "lory.js",
-    "lodash"
-  ]
+  "whitelistedNonPeerDependencies": ["replace", "lory.js", "lodash"]
 }
