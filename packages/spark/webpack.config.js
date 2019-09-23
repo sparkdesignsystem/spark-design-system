@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -7,6 +8,11 @@ module.exports = {
     sparkExports: './spark-exports.js',
     sparkPolyfills: './spark-polyfills.js',
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      SPRK_CURRENT_VERSION: JSON.stringify(process.env.npm_package_version),
+    }),
+  ],
   module: {
     rules: [
       {
