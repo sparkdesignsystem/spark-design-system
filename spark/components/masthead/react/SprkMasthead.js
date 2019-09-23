@@ -19,16 +19,18 @@ class SprkMasthead extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= 10) {
-        this.setState({ isScrolled: true });
-      } else {
-        this.setState({ isScrolled: false });
-      }
-    });
-    window.addEventListener('orientationchange', () => {
-      this.setState({ narrowNavOpen: false });
-    });
+    if (window) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= 10) {
+          this.setState({ isScrolled: true });
+        } else {
+          this.setState({ isScrolled: false });
+        }
+      });
+      window.addEventListener('orientationchange', () => {
+        this.setState({ narrowNavOpen: false });
+      });
+    }
   }
 
   toggleNarrowNav() {

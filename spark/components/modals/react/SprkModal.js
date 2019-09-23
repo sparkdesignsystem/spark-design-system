@@ -162,11 +162,15 @@ class SprkModal extends Component {
   }
 
   attachListeners() {
-    window.addEventListener('keydown', this.handleKeyEvents);
+    if (window) {
+      window.addEventListener('keydown', this.handleKeyEvents);
+    }
   }
 
   removeListeners() {
-    window.removeEventListener('keydown', this.handleKeyEvents);
+    if (window) {
+      window.removeEventListener('keydown', this.handleKeyEvents);
+    }
   }
 
   render() {

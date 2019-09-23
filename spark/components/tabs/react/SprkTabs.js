@@ -38,9 +38,11 @@ class SprkTabs extends Component {
 
     this.setDefaultActiveTab();
     this.updateAriaOrientation(window.innerWidth, breakpoint);
-    window.addEventListener('resize', () => {
-      this.updateAriaOrientation(window.innerWidth, breakpoint);
-    });
+    if (window) {
+      window.addEventListener('resize', () => {
+        this.updateAriaOrientation(window.innerWidth, breakpoint);
+      });
+    }
   }
 
   /*

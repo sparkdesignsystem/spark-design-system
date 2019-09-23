@@ -24,15 +24,19 @@ class SprkMastheadDropdown extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', this.closeOnEsc);
-    window.addEventListener('focusin', this.closeOnClickOutside);
-    window.addEventListener('click', this.closeOnClickOutside);
+    if (window) {
+      window.addEventListener('keydown', this.closeOnEsc);
+      window.addEventListener('focusin', this.closeOnClickOutside);
+      window.addEventListener('click', this.closeOnClickOutside);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.closeOnEsc);
-    window.removeEventListener('focusin', this.closeOnClickOutside);
-    window.removeEventListener('click', this.closeOnClickOutside);
+    if (window) {
+      window.removeEventListener('keydown', this.closeOnEsc);
+      window.removeEventListener('focusin', this.closeOnClickOutside);
+      window.removeEventListener('click', this.closeOnClickOutside);
+    }
   }
 
   closeOnEsc(e) {
