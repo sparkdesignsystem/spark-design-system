@@ -1,6 +1,9 @@
-const stories = storiesOf('Button', module);
+export default {
+  title: 'Components|Buttons',
+};
 
-export const primary = () => '<button class="sprk-c-Button" data-id="button-1">Button</button>';
+export const primary = () =>
+  '<button class="sprk-c-Button" data-id="button-1">Button</button>';
 
 export const secondary = () =>
   '<button class="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-1">Button</button>';
