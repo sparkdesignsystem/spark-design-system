@@ -33,6 +33,7 @@ $sprk-dictionary-label-line-height: $sprk-line-height-body-one !default;
   font-weight: $sprk-dictionary-label-font-weight;
 }
 
+// prettier-ignore
 .sprk-c-Dictionary--striped .sprk-c-Dictionary__keyvaluepair:nth-child(even) {
   background-color: $sprk-dictionary-stripe-color;
 }
