@@ -1,9 +1,9 @@
 import React from 'react';
-
 import SprkDivider from './SprkDivider';
 
 export default {
   title: 'Components|Divider',
+  parameters: { component: SprkDivider },
 };
 
 export const asASpanElement = () => <SprkDivider idString="divider-1" element="span" />;

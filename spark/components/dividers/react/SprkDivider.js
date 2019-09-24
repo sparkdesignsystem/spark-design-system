@@ -15,11 +15,11 @@ SprkDivider.defaultProps = {
 };
 
 SprkDivider.propTypes = {
-  // The element that will be rendered - required
+  /** The element that will be rendered - required */ 
   element: PropTypes.oneOf(['span', 'hr']).isRequired,
-  // The string to use for the data-id attribute
+  /** The string to use for the data-id attribute */ 
   idString: PropTypes.string,
-  // Any additional classes to add to the element
+  /** Any additional classes to add to the element */ 
   additionalClasses: PropTypes.string,
 };
 
