@@ -19,7 +19,7 @@ import { alerts } from '../../components/alerts/vanilla/alerts';
 import { dropdowns } from '../../components/dropdown/vanilla/dropdown';
 import { stepper } from '../../components/stepper/vanilla/stepper';
 import { highlightBoard } from '../../components/highlight-board/vanilla/highlight-board';
-import versionCheck from '../../utilities/helpers/vanilla/versionCheck';
+// import versionCheck from '../../utilities/helpers/vanilla/versionCheck';
 
 const Spark = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();

@@ -1,15 +1,18 @@
 import '../../spark/manifests/spark/_spark.scss';
 import { configure, addParameters, addDecorator } from '@storybook/html';
-// import { withA11y } from '@storybook/addon-a11y';
+import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from '../../storybook-spark-theme';
 import spark from '../../spark/manifests/spark/spark';
+import { withActions } from '@storybook/addon-actions';
 
 // initialize spark js
 spark();
 
-// addDecorator(withA11y);
+addDecorator(withA11y);
+addDecorator(withActions('click .sprk-c-Button'));
+addDecorator(withActions('click .sprk-b-Link'));
 addDecorator(story => `<div class="sprk-o-Box">${story()}</div>`);
-// Option defaults.
+// Option defaults
 addParameters({
   options: {
     theme: sparkTheme,
