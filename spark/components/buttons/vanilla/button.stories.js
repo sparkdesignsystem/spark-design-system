@@ -1,4 +1,4 @@
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Components|Buttons',
