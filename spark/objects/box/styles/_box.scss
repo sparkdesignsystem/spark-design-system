@@ -2,10 +2,10 @@
 // Box Object
 // ==========================================================================
 
-
 //
 // Box Mixin
 ///
+
 @mixin Box($padding: $sprk-box-padding) {
   @extend %ClearFix;
 

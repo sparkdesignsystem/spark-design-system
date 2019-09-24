@@ -3,7 +3,6 @@
 // ==================================================================
 .sprk-c-Accordion {
   border-top: $sprk-accordion-border;
-  margin: 0 auto;
   max-width: $sprk-accordion-max-width;
   width: 100%;
 }
@@ -34,8 +33,10 @@
   text-decoration: none;
 
   &:hover {
-    color: $sprk-accordion-summary-active-color;
-    text-decoration: none;
+    .sprk-c-Accordion__heading {
+      color: $sprk-accordion-summary-active-color;
+      text-decoration: none;
+    }
   }
 }
 
