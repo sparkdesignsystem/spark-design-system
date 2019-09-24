@@ -1,0 +1,24 @@
+// ==========================================================================
+// Blockquote
+// ==========================================================================
+// Credit goes to our very own Dave on https://github.com/ScalesCSS/scalescss/tree/master/packages/base-blockquotes
+.sprk-b-Blockquote {
+  margin: $sprk-blockquote-margin;
+}
+
+.sprk-b-Blockquote__quote {
+  margin: $sprk-blockquote-quote-margin;
+
+  &:last-of-type {
+    margin: $sprk-blockquote-quote-last-margin;
+  }
+}
+
+.sprk-b-Blockquote__source {
+  display: block;
+  text-indent: 0;
+
+  &::before {
+    content: $sprk-blockquote-source-prefix;
+  }
+}

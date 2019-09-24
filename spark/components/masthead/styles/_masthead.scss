@@ -33,10 +33,16 @@
   box-shadow: $sprk-masthead-shadow-scroll;
 }
 
-// Keep padding settings consistent for menu, logo branding, and little nav
+.sprk-c-Masthead--hidden {
+  transform: $sprk-masthead-translateY;
+  transition: $sprk-masthead-transition;
+}
+
+// Keep padding settings consistent for menu, logo branding, little nav, and additional nav link
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding,
-.sprk-c-Masthead__little-nav {
+.sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-item {
   padding-top: $sprk-masthead-content-item-padding-top;
   padding-left: $sprk-masthead-content-item-padding-left;
   padding-right: $sprk-masthead-content-item-padding-right;
@@ -50,7 +56,7 @@
   }
 }
 
-// Content includes menu, logo, little nav
+// Content includes menu, logo, little nav, additional nav link
 .sprk-c-Masthead__content {
   padding: $sprk-masthead-content-padding;
 
@@ -75,9 +81,16 @@
     border-bottom: $sprk-masthead-border-bottom-wide;
   }
 }
+.sprk-c-Masthead__nav-item {
+  display: flex;
+  justify-content: flex-end;
+}
 
-// Hide menu element on larger views
-.sprk-c-Masthead__menu {
+// Hide menu element and additional nav link on larger views
+.sprk-c-Masthead__menu,
+.sprk-c-Masthead__nav-item {
+  flex: 1;
+
   @media all and (min-width: $sprk-masthead-breakpoint) {
     display: none;
   }
@@ -91,13 +104,12 @@
 // Center logo branding
 .sprk-c-Masthead__branding {
   margin: 0 auto;
+  flex: 2;
+  text-align: center;
 
-  @media (min-width: $sprk-split-breakpoint-xxs) {
-    // Centers logo on narrow by adding space on right to balance menu space on left
-    padding-right: (($sprk-masthead-content-padding + $sprk-masthead-content-item-padding-left + $sprk-masthead-content-item-padding-right) + $sprk-masthead-menu-icon-width);
-  }
   @media (min-width: $sprk-masthead-breakpoint) {
     padding-right: $sprk-masthead-content-item-padding-right-wide;
+    flex-grow:0;
   }
 }
 
