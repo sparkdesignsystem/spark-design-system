@@ -92,7 +92,7 @@
 }
 
 //
-// Height (Scales has Widths)
+// Height
 ///
 
 /* stylelint-disable selector-class-pattern */
@@ -166,6 +166,15 @@
 
 .sprk-u-TextTransform--none {
   text-transform: none !important;
+}
+
+.sprk-u-TextCrop--none {
+  &::before,
+  &::after {
+    content: none !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
 }
 
 .sprk-u-WordWrap--break-word {
