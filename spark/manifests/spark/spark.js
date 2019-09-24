@@ -42,7 +42,7 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   stepper();
   highlightBoard();
   hugeInput();
-  versionCheck();
+  // versionCheck(); //TODO get SPRK_CURRENT_VERSION var from webpack working
 };
 
 export { Spark as default };
