@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
-import SprkToggle from '../../toggle/react/SprkToggle';
+import SprkToggle from '../../../../toggle/react/SprkToggle';
 
 class SprkFooterAwards extends Component {
   constructor(props) {
@@ -17,7 +17,6 @@ class SprkFooterAwards extends Component {
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
         <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">{awards.heading}</h3>
-
         <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
           {awardsImagesHasIds.map((image) => {
             const {
