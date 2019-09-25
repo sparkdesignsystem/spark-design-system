@@ -16,13 +16,13 @@ describe('SprkFooterGlobalSection Component', () => {
           mediaType: 'image',
           src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
         {
           mediaType: 'SprkIcon',
           iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
@@ -40,13 +40,13 @@ describe('SprkFooterGlobalSection Component', () => {
           mediaType: 'image',
           src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
         {
           mediaType: 'SprkIcon',
           iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
@@ -64,7 +64,7 @@ describe('SprkFooterGlobalSection Component', () => {
           mediaType: 'image',
           src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
         {
@@ -72,7 +72,7 @@ describe('SprkFooterGlobalSection Component', () => {
           description: 'Lorem ipsum dolor sit amet, consectetur.',
           svg: (
             <svg
-              className="drizzle-c-Logo drizzle-c-Logo--small"
+              className="sprksb-c-Logo sprksb-c-Logo--small"
               viewBox="0 0 303 274"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -128,7 +128,7 @@ describe('SprkFooterGlobalSection Component', () => {
           mediaType: 'image',
           src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
           element: 'a',
           analyticsString: 'test-link',
@@ -136,7 +136,7 @@ describe('SprkFooterGlobalSection Component', () => {
         {
           mediaType: 'SprkIcon',
           iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
@@ -159,7 +159,7 @@ describe('SprkFooterGlobalSection Component', () => {
           mediaType: 'image',
           src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
           altText: 'Spark Logo',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
           element: 'span',
           analyticsString: 'test-link',
@@ -167,7 +167,7 @@ describe('SprkFooterGlobalSection Component', () => {
         {
           mediaType: 'SprkIcon',
           iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
-          mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
+          mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
