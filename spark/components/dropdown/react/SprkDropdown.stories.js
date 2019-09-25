@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import SprkDropdown from './SprkDropdown';
 import SprkButton from '../../buttons/react/SprkButton';
@@ -22,12 +22,12 @@ export const defaultStory = () => (
           href: '/link',
           target: '_blank',
         },
-        {
-          text: 'Option 2',
-          value: 'option-2',
-          element: Link,
-          to: '/link',
-        },
+        // {
+        //   text: 'Option 2',
+        //   value: 'option-2',
+        //   element: Link,
+        //   to: '/link',
+        // },
         {
           text: 'Option 3',
           value: 'option-3',
@@ -71,17 +71,17 @@ export const information = () => (
           value: 'choice-title-1',
           isActive: false,
         },
-        {
-          element: Link,
-          content: {
-            title: 'Choice Title',
-            infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
-          },
-          to: '/button',
-          value: 'choice-title-2',
-          isActive: true,
-        },
+        // {
+        //   element: Link,
+        //   content: {
+        //     title: 'Choice Title',
+        //     infoLine1: 'Information about this choice',
+        //     infoLine2: 'More Information',
+        //   },
+        //   to: '/button',
+        //   value: 'choice-title-2',
+        //   isActive: true,
+        // },
       ],
     }}
     defaultTriggerText="Make a selection..."
