@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkMastheadAccordionItem from './SprkMastheadAccordionItem';
+import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
 
 class SprkMastheadAccordion extends React.Component {
   constructor(props) {

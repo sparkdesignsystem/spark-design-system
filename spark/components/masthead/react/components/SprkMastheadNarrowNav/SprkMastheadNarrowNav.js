@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SprkMastheadAccordion from './SprkMastheadAccordion';
-import SprkMastheadSelector from './SprkMastheadSelector';
+import SprkMastheadAccordion from '../SprkMastheadAccordion/SprkMastheadAccordion';
+import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 const SprkMastheadNarrowNav = ({
   idString,

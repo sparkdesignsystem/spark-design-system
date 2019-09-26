@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkIcon from '../../icons/react/SprkIcon';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkIcon from '../../../../icons/react/SprkIcon';
+import SprkLink from '../../../../../base/links/react/SprkLink';
 
 class SprkMastheadDropdown extends Component {
   constructor(props) {
