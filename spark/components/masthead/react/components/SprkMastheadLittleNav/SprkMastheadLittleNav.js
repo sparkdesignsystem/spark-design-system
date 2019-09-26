@@ -88,42 +88,42 @@ class SprkMastheadLittleNav extends Component {
 }
 
 SprkMastheadLittleNav.propTypes = {
-  // classes to be added to the masthead
+  /** classes to be added to the masthead */ 
   additionalClasses: PropTypes.string,
-  // assigned to data-analytics
+  /** assigned to data-analytics */ 
   analyticsString: PropTypes.string,
-  // assigned to data-id
+  /** assigned to data-id */ 
   idString: PropTypes.string,
-  // used to render navigation inside
+  /** used to render navigation inside */ 
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      // The element to render, can be 'a' or a Component like Link
+      /** The element to render, can be 'a' or a Component like Link */ 
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Classes to apply to the container of the link
+      /** Classes to apply to the container of the link */ 
       additionalContainerClasses: PropTypes.string,
-      // Adds a class if the link is active
+      /** Adds a class if the link is active */ 
       isActive: PropTypes.bool,
-      // The link text
+      /** The link text */ 
       text: PropTypes.string,
     }),
   ),
-  // Choices object that builds the dropdown contents
+  /** Choices object that builds the dropdown contents */ 
   selector: PropTypes.shape({
-    // An array of objects that describe the items in the menu
+    /** An array of objects that describe the items in the menu */ 
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        // The element to render for each menu item
+        /** The element to render for each menu item */ 
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        // Assigned to href of the element is 'a'
+        /** Assigned to href of the element is 'a' */ 
         href: PropTypes.string,
-        // The text inside the item
+        /** The text inside the item */ 
         text: PropTypes.string,
       }),
     ),
   }),
-  // Determines the spacing between little nav items
+  /** Determines the spacing between little nav items */ 
   spacing: PropTypes.oneOf(['medium', 'large']),
-  // An array of components to fill the utility area with
+  /** An array of components to fill the utility area with */ 
   utilityContents: PropTypes.arrayOf(PropTypes.node),
 };
 
