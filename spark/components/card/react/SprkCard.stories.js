@@ -24,7 +24,7 @@ export const standout = () => (
           sprk-o-Stack
           sprk-o-Stack--medium"
   >
-    Base Card Content
+    Standout Card Content
   </SprkCard>
 );
 
