@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkAccordion from './SprkAccordion';
-import SprkAccordionItem from './components/SprkAccordionItem';
+import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 

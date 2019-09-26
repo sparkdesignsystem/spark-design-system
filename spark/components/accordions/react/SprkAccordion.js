@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkAccordionItem from './components/SprkAccordionItem';
+import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem';
 
 class SprkAccordion extends Component {
   constructor(props) {

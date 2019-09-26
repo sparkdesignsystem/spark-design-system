@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import SprkAccordion from './SprkAccordion';
-import SprkAccordionItem from './components/SprkAccordionItem';
+import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem';
 
 export default {
   title: 'Components|Accordion',
