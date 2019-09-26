@@ -22,6 +22,7 @@ export const defaultStory = () => (
           href: '/link',
           target: '_blank',
         },
+        // TODO - when we build knobs, make sure this story demos multiple kinds of dropdown items
         // {
         //   text: 'Option 2',
         //   value: 'option-2',
@@ -71,6 +72,7 @@ export const information = () => (
           value: 'choice-title-1',
           isActive: false,
         },
+        // TODO - when we build knobs, make sure this story demos multiple kinds of dropdown items
         // {
         //   element: Link,
         //   content: {
