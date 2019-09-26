@@ -1,4 +1,5 @@
 // Import all Spark components
+import { hugeInput } from '../../base/inputs/vanilla/hugeInput';
 import { ssnInput } from '../../base/inputs/vanilla/ssnInput';
 import passwordInput from '../../base/inputs/vanilla/passwordInput';
 import { monetaryInput } from '../../base/inputs/vanilla/monetaryInput';
@@ -17,8 +18,8 @@ import { masthead } from '../../components/masthead/vanilla/masthead';
 import { alerts } from '../../components/alerts/vanilla/alerts';
 import { dropdowns } from '../../components/dropdown/vanilla/dropdown';
 import { stepper } from '../../components/stepper/vanilla/stepper';
-import { highlightBoard }
-  from '../../components/highlight-board/vanilla/highlight-board';
+import { highlightBoard } from '../../components/highlight-board/vanilla/highlight-board';
+// import versionCheck from '../../utilities/helpers/vanilla/versionCheck';
 
 const Spark = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
@@ -40,6 +41,8 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   dropdowns();
   stepper();
   highlightBoard();
+  hugeInput();
+  // versionCheck(); //TODO get SPRK_CURRENT_VERSION var from webpack working
 };
 
 export { Spark as default };
