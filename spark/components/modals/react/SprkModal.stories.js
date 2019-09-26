@@ -11,8 +11,8 @@ export const defaultStory = () => (
   <SprkModal
     title="Default Modal"
     isVisible={true}
-    confirmText="Yes please"
-    cancelText="No thank you"
+    confirmText="Confirm Text"
+    cancelText="Cancel Text"
     confirmClick={() => {
       alert('confirm');
     }}
@@ -20,7 +20,7 @@ export const defaultStory = () => (
       alert('cancel click');
     }}
   >
-    Would you like to buy a mortgage?
+    Default Modal Content
   </SprkModal>
 );
 
@@ -40,7 +40,7 @@ export const infoStory = () => (
       alert('cancel click');
     }}
   >
-    Your mortgage has been downloaded.
+    Info Modal Content
   </SprkModal>
 );
 
@@ -58,7 +58,7 @@ export const waitStory = () => (
     isVisible={true}
     variant="wait"
   >
-    This mortgage can only be closed with javascript
+    Wait Modal Content
   </SprkModal>
 );
 
