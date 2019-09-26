@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkIcon from '../../icons/react/SprkIcon';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkIcon from '../../../icons/react/SprkIcon';
+import SprkLink from '../../../../base/links/react/SprkLink';
 
 class SprkAccordionItem extends Component {
   constructor(props) {
