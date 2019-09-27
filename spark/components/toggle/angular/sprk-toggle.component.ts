@@ -1,19 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import { toggleAnimations } from './sprk-toggle-animations';
 
 @Component({
   selector: 'sprk-toggle',
   template: `
-    <div class="{{ additionalClasses }}" [attr.data-id]="idString">
+    <div
+      class="sprk-u-Overflow--hidden {{ additionalClasses }}"
+      [attr.data-id]="idString"
+    >
       <sprk-link
         linkType="simple"
-        additionalClasses="{{ titleFontClass }} sprk-b-Link--has-icon"
+        additionalClasses="{{
+          titleFontClass
+        }} sprk-b-Link--has-icon sprk-u-TextCrop--none"
         (click)="toggle($event)"
         [ariaExpanded]="isOpen ? 'true' : 'false'"
         [analyticsString]="analyticsString"
@@ -27,32 +26,12 @@ import {
         {{ title }}
       </sprk-link>
 
-      <div [@toggleContent]="animState" data-sprk-toggle="content">
+      <div [@toggleContent]="animState">
         <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
       </div>
     </div>
   `,
-  animations: [
-    trigger('toggleContent', [
-      state(
-        'closed',
-        style({
-          height: '0',
-          display: 'none',
-          overflow: 'hidden'
-        })
-      ),
-      state(
-        'open',
-        style({
-          height: '*',
-          display: 'block'
-        })
-      ),
-      transition('closed => open', animate('300ms ease-in')),
-      transition('open => closed', animate('300ms ease-out'))
-    ])
-  ]
+  animations: [toggleAnimations.toggleContent]
 })
 export class SprkToggleComponent implements OnInit {
   @Input()

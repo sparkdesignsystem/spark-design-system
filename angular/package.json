@@ -1,0 +1,62 @@
+{
+  "name": "spark-angular-storybook",
+  "private": true,
+  "description": "A storybook environment for @sparkdesignsystem/spark-angular",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
+  },
+  "dependencies": {
+    "@sparkdesignsystem/spark": "^12.1.1",
+    "@sparkdesignsystem/spark-angular": "^9.2.0",
+    "@angular/animations": "^8.2.0",
+    "@angular/common": "^8.2.0",
+    "@angular/compiler": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "@angular/forms": "^8.2.0",
+    "@angular/platform-browser": "^8.2.0",
+    "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular/router": "^8.2.0",
+    "core-js": "^2.5.4",
+    "rxjs": "^6.5.2",
+    "zone.js": "^0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.802.0",
+    "@angular/cli": "^8.2.0",
+    "@angular/compiler-cli": "^8.2.0",
+    "@babel/core": "^7.6.2",
+    "@angular/language-service": "^8.2.0",
+    "@storybook/addon-a11y": "^5.2.1",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-docs": "^5.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/angular": "^5.2.1",
+    "@storybook/preset-scss": "^1.0.2",
+    "@storybook/theming": "^5.2.1",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.5.3"
+  },
+  "keywords": [
+    "sparkdesignsystem",
+    "spark",
+    "angular"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build-netlify": "npm install && build-storybook",
+    "storybook": "start-storybook -p 8006",
+    "build-storybook": "build-storybook"
+  }
+}

@@ -1,13 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SprkIconComponent } from '../../icons/angular/sprk-icon.component';
-import { SprkLinkComponent } from '../../../base/links/angular/sprk-link.component';
-import { SprkAccordionItemComponent } from './sprk-accordion-item.component';
+import { SprkIconComponent } from '../../../icons/angular/sprk-icon.component';
+import { SprkLinkComponent } from '../../../../base/links/angular/sprk-link.component';
+import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item.component';
 
-describe('SprkAccordionItemComponent', () => {
-  let component: SprkAccordionItemComponent;
-  let fixture: ComponentFixture<SprkAccordionItemComponent>;
+describe('SprkMastheadAccordionItemComponent', () => {
+  let component: SprkMastheadAccordionItemComponent;
+  let fixture: ComponentFixture<SprkMastheadAccordionItemComponent>;
   let accordionItemElement: HTMLElement;
   let accordionItemLinkElement: HTMLElement;
   let accordionHeadingElement: HTMLElement;
@@ -17,7 +17,7 @@ describe('SprkAccordionItemComponent', () => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule, RouterTestingModule],
       declarations: [
-        SprkAccordionItemComponent,
+        SprkMastheadAccordionItemComponent,
         SprkIconComponent,
         SprkLinkComponent
       ]
@@ -25,7 +25,7 @@ describe('SprkAccordionItemComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SprkAccordionItemComponent);
+    fixture = TestBed.createComponent(SprkMastheadAccordionItemComponent);
     component = fixture.componentInstance;
     accordionItemElement = fixture.nativeElement.querySelector('li');
     accordionItemLinkElement = fixture.nativeElement.querySelector('a');
@@ -41,7 +41,7 @@ describe('SprkAccordionItemComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
-      'sprk-c-Accordion__item sprk-u-man'
+      'sprk-c-MastheadAccordion__item sprk-u-man'
     );
   });
 
@@ -65,7 +65,9 @@ describe('SprkAccordionItemComponent', () => {
     component.isOpen = false;
     fixture.detectChanges();
     expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--open')
+      accordionItemElement.classList.contains(
+        'sprk-c-MastheadAccordion__item--open'
+      )
     ).toEqual(false);
   });
 
@@ -73,7 +75,9 @@ describe('SprkAccordionItemComponent', () => {
     component.isOpen = true;
     fixture.detectChanges();
     expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--open')
+      accordionItemElement.classList.contains(
+        'sprk-c-MastheadAccordion__item--open'
+      )
     ).toEqual(true);
   });
 
@@ -95,7 +99,7 @@ describe('SprkAccordionItemComponent', () => {
   it('details should not be present if isOpen is false', () => {
     component.isOpen = false;
     fixture.detectChanges();
-    expect(accordionDetailsElement.style.display).toEqual('none');
+    expect(accordionDetailsElement.style.display).toEqual('');
   });
 
   it('should add data-id when idString has a value', () => {
@@ -117,7 +121,9 @@ describe('SprkAccordionItemComponent', () => {
     component.isActive = true;
     fixture.detectChanges();
     expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--active')
+      accordionItemElement.classList.contains(
+        'sprk-c-MastheadAccordion__item--active'
+      )
     ).toEqual(true);
   });
 });

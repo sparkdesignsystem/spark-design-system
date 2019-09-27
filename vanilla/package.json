@@ -10,10 +10,11 @@
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@sparkdesignsystem/spark": "^12.1.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
-    "@sparkdesignsystem/spark": "^12.1.1",
     "@storybook/addon-a11y": "^5.2.1",
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-docs": "^5.2.1",

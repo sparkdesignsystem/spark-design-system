@@ -1,11 +1,12 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 8+",
-  "version": "8.0.6",
+  "version": "9.2.1",
   "scripts": {
     "lint": "ng lint spark-angular",
-    "test": "ng test spark-angular --watch=false",
-    "build": "ng build spark-angular",
+    "test": "npm run set-version && ng test spark-angular --watch=false",
+    "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./src/environment/environment.ts",
+    "build": "npm run set-version && ng build spark-angular",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
@@ -15,7 +16,6 @@
     "@angular/compiler-cli": ">=7.0.0 < 9.0.0",
     "@angular/core": ">=7.0.0 < 9.0.0",
     "@angular/forms": ">=7.0.0 < 9.0.0",
-    "@angular/http": ">=7.0.0 < 9.0.0",
     "@angular/platform-browser": ">=7.0.0 < 9.0.0",
     "@angular/platform-browser-dynamic": ">=7.0.0 < 9.0.0",
     "@angular/router": ">=7.0.0 < 9.0.0",
@@ -27,7 +27,7 @@
     "@angular/cli": "^8.3.4",
     "core-js": "^2.5.7",
     "tiny-date-picker": "^3.2.6",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.29"
   },
   "dependencies": {
     "lodash": "^4.17.15",

@@ -1,13 +1,12 @@
 {
+  "extends": "../tsconfig.json",
   "exclude": [
-    "../spark/test.ts",
-    "../spark/**/*.spec.ts",
-    "../spark/**/*.spec.ts"
+    "../../spark/test.ts",
+    "../../spark/**/*.spec.ts",
+    "../../spark/**/*.spec.ts"
   ],
   "include": [
-    "../spark/**/*"
-  ],
-  "compilerOptions": {
-    "experimentalDecorators": true
+    "../../spark/**/*",
+    "../../spark/**/*"
+  ]
   }
-}
