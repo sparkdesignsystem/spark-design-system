@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import logo from 'https://spark-assets.netlify.com/spark-logo.svg';
 import SprkFooter from './SprkFooter';
 
 const globalItems = {
@@ -8,9 +8,8 @@ const globalItems = {
     {
       mediaType: 'image',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo.svg',
       altText: 'Spark Logo',
-      mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
       mediaHref: '#nogo',
@@ -18,9 +17,8 @@ const globalItems = {
     {
       mediaType: 'image',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo.svg',
       altText: 'Spark Logo',
-      mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
       mediaHref: '#nogo',
@@ -30,7 +28,6 @@ const globalItems = {
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       svg: (
         <svg
-          className="sprksb-c-Logo sprksb-c-Logo--small"
           viewBox="0 0 303 274"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -77,7 +74,6 @@ const globalItems = {
     {
       mediaType: 'SprkIcon',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
-      mediaAddClasses: 'sprksb-c-Logo sprksb-c-Logo--small',
       iconName: 'house',
       element: 'a',
       altText: 'A House Icon',
@@ -205,17 +201,15 @@ const awards = {
     {
       href: '#nogo',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo.svg',
       altText: 'Spark Logo',
-      addClasses: 'sprksb-c-Logo',
       element: 'a',
     },
     {
       href: '#nogo',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo.svg',
       altText: 'Spark Logo',
-      addClasses: 'sprksb-c-Logo',
       element: 'a',
     },
   ],
