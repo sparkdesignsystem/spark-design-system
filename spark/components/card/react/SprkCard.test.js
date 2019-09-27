@@ -46,7 +46,7 @@ it('should load teaser if there is teaserConfig', () => {
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
           imgSrc:
-            'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+            'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
