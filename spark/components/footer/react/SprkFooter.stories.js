@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from 'https://spark-assets.netlify.com/spark-logo.svg';
 import SprkFooter from './SprkFooter';
 
 const globalItems = {
