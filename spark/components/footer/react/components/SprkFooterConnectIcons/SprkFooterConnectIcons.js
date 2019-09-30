@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
-import SprkIcon from '../../icons/react/SprkIcon';
+import SprkIcon from '../../../../icons/react/SprkIcon';
 
 class SprkFooterConnectIcons extends Component {
   constructor(props) {
