@@ -1,18 +1,9 @@
 import React from 'react';
-
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-
-// import formatPhone from '../vanilla/phoneInput';
-// import isValidMonetary from '../vanilla/monetaryInput';
-// import formatDate from '../vanilla/dateInput';
-// import isValidDate from '../vanilla/dateInput';
-// import isValidPhone from '../vanilla/phoneInput';
-// import formatSSN from '../vanilla/ssnInput';
-// import isValidSSN from '../vanilla/ssnInput';
-import SprkDatePickerInput from './SprkDatePickerInput';
-import SprkSelectionInput from './SprkSelectionInput';
-import SprkRevealInput from './SprkRevealInput';
-import SprkTextInput from './SprkTextInput';
+import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
+import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
+import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
+import SprkTextInput from './SprkTextInput/SprkTextInput';
 
 export default {
   title: 'Base|Inputs',
@@ -21,7 +12,7 @@ export default {
 
 export const textInput = () => (
   <SprkTextInput
-    label={boolean('label', 'Text Input Label')}
+    label={text('label', 'Text Input Label')}
     name="text-input-label"
     valid={boolean('valid', true)}
     disabled={boolean('disabled', false)}
@@ -34,7 +25,14 @@ textInput.story = {
 };
 
 export const hugeTextInput = () => (
-  <SprkTextInput type="hugeTextInput" label="Text Input Label" name="text-input-label" />
+  <SprkTextInput
+    type="hugeTextInput"
+    label={text('label', 'Text Input Label')}
+    name="text-input-label"
+    valid={boolean('valid', true)}
+    disabled={boolean('disabled', false)}
+    errorMessage="There is an error on this field."
+  />
 );
 
 hugeTextInput.story = {
@@ -148,7 +146,11 @@ textarea.story = {
 };
 
 export const ssnInput = () => (
-  <SprkRevealInput label="Social Security Number" toggleLabel="Show SSN" name="ssn" />
+  <SprkRevealInput
+    label="SocialSecurity Number"
+    toggleLabel="Show SSN"
+    name="ssn"
+  />
 );
 
 ssnInput.story = {
@@ -164,7 +166,12 @@ searchInput.story = {
 };
 
 export const inlineSearchInput = () => (
-  <SprkTextInput leadingIcon="search" hiddenLabel name="InlineSearch" placeholder="Search" />
+  <SprkTextInput
+    leadingIcon="search"
+    hiddenLabel
+    name="InlineSearch"
+    placeholder="Search"
+  />
 );
 
 inlineSearchInput.story = {
@@ -180,7 +187,11 @@ monetaryInput.story = {
 };
 
 export const passwordInput = () => (
-  <SprkRevealInput label="Password" toggleLabel="Show Password" name="password-1" />
+  <SprkRevealInput
+    label="Password"
+    toggleLabel="Show Password"
+    name="password-1"
+  />
 );
 
 passwordInput.story = {
@@ -188,7 +199,11 @@ passwordInput.story = {
 };
 
 export const helperText = () => (
-  <SprkRevealInput label="Password" toggleLabel="Show Password" name="password-1" />
+  <SprkRevealInput
+    label="Password"
+    toggleLabel="Show Password"
+    name="password-1"
+  />
 );
 
 helperText.story = {
@@ -209,7 +224,12 @@ phoneNumberInput.story = {
 };
 
 export const dateInput = () => (
-  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" errorMessage="Incorrect date." />
+  <SprkTextInput
+    label="Date"
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+  />
 );
 
 dateInput.story = {

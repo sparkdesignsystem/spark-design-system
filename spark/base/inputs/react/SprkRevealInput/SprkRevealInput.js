@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import SprkTextInput from './SprkTextInput';
+import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
 class SprkRevealInput extends Component {
   constructor(props) {
@@ -25,7 +25,8 @@ class SprkRevealInput extends Component {
     return (
       <SprkTextInput type={isRevealed ? 'text' : 'password'} {...rest}>
         <div
-          className="sprk-b-SelectionContainer
+          className="
+          sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle"
         >
           <input

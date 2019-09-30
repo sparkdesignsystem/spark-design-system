@@ -25,8 +25,7 @@ it('should assign data-id when idString has a value', () => {
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
-it('format function should format the date to 2 day month and year by'
-  + ' default', () => {
+it('format function should format the date to 2 day month and year by default', () => {
   const wrapper = mount(<SprkDatePickerInput idString="321" />);
   const date = new Date('December 17, 1995 03:24:00');
   expect(
