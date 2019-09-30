@@ -8,6 +8,7 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 export default {
   title: 'Base|Inputs',
   decorators: [withKnobs],
+  parameters: { component: SprkTextInput },
 };
 
 export const textInput = () => (
