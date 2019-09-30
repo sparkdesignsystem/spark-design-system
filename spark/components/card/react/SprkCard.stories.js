@@ -1,9 +1,11 @@
 import React from 'react';
-
+import { withKnobs } from '@storybook/addon-knobs';
 import SprkCard from './SprkCard';
 
 export default {
   title: 'Components|Card',
+  decorators: [withKnobs],
+  parameters: { component: SprkCard },
 };
 
 export const defaultStory = () => (

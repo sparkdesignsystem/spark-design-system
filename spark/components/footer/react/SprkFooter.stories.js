@@ -1,4 +1,5 @@
 import React from 'react';
+import { withKnobs } from '@storybook/addon-knobs';
 import SprkFooter from './SprkFooter';
 
 const globalItems = {
@@ -259,6 +260,9 @@ const additionalIcons = [
 
 export default {
   title: 'Components|Footer',
+  decorators: [withKnobs],
+  parameters: { component: SprkFooter },
+
 };
 
 export const defaultStory = () => (
