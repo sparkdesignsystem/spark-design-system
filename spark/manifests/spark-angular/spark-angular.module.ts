@@ -1,4 +1,4 @@
-import { environment } from '../environment/environment';
+import { environment } from './src/environment/environment';
 window['sprk'] = { version: { angular: environment.version } } || {};
 
 import { NgModule } from '@angular/core';
