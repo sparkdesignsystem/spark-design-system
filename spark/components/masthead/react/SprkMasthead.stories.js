@@ -3,96 +3,120 @@ import React from 'react';
 import SprkMasthead from './SprkMasthead';
 import SprkButton from '../../buttons/react/SprkButton';
 import SprkLink from '../../../base/links/react/SprkLink';
+import SprkDropdown from '../../dropdown/react/SprkDropdown';
 
-const links = [
-  {
+
+const links = [{
+  text: 'Item',
+  subNavLinks: [{
+      text: 'Placeholder',
+    },
+    {
+      text: 'Item',
+    },
+    {
+      text: 'Sub Menu Item',
+    },
+  ],
+},
+{
+  element: 'a',
+  text: 'Your Item',
+  to: '/link',
+},
+{
+  element: 'a',
+  text: 'Nav Item',
+  to: '/button',
+},
+{
+  text: 'Item',
+  subNavLinks: [{
+      text: 'Item 1',
+    },
+    {
+      text: 'Taxes and Insurance',
+    },
+    {
+      text: 'Item 3',
+    },
+  ],
+},
+{
+  element: 'a',
+  text: 'Your Item',
+  to: '/link',
+},
+];
+const addedNarrowNavLinks = [{
+  element: 'a',
+  leadingIcon: 'call-team-member',
+  text: 'Talk To Us',
+  to: '/link',
+},
+{
+  leadingIcon: 'user',
+  text: 'My Account',
+  subNavLinks: [{
+      text: 'Change Username',
+    },
+    {
+      element: 'a',
+      text: 'Change Password',
+      to: '/link',
+    },
+    {
+      text: 'Sign Out',
+    },
+  ],
+},
+];
+const dropdownChoices = {
+choiceFunction: (choiceText) => {
+  console.log(choiceText);
+},
+items: [{
+    text: 'Option 1',
+    value: 'option-1',
     element: 'a',
-    text: 'Item 1',
-    to: '/link',
-  },
-  {
-    text: 'Item 2',
-    href: 'https://www.google.com',
+    href: '/link',
     target: '_blank',
   },
-];
-
-const addedNarrowNavLinks = [
   {
+    text: 'Option 2',
+    value: 'option-2',
     element: 'a',
-    leadingIcon: 'landline',
-    text: '(555) 555-5555',
-    to: '/button',
-  },
-  {
-    element: 'a',
-    leadingIcon: 'call-team-member',
-    text: 'Talk To Us',
     to: '/link',
   },
   {
-    element: 'a',
-    text: 'Sign In',
-    to: '/button',
-    isButton: true,
+    text: 'Option 3',
+    value: 'option-3',
   },
-];
-
+],
+};
+const selector = {
+choiceFunction: (text) => {
+  console.log(text);
+},
+items: [{
+    title: 'Selection Choice Title 1',
+    information: 'Additional Information',
+    value: 'choice-1',
+  },
+  {
+    element: 'a',
+    title: 'Selection Choice Title 2',
+    information: 'Additional Information',
+    to: '/button',
+    value: 'choice-2',
+  },
+],
+footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
+};
 const utilityItems = [
-  <SprkLink
-    href="#nogo"
-    variant="plain"
-    additionalClasses="sprk-c-Masthead__link"
-  >
-    (555) 555-5555
-  </SprkLink>,
-  <SprkLink
-    href="#nogo"
-    variant="plain"
-    additionalClasses="sprk-c-Masthead__link"
-  >
-    Talk To Us
-  </SprkLink>,
-  <SprkButton
-    element='button'
-    to="/button"
-    variant="secondary"
-    additionalClasses="sprk-c-Button--compact"
-  >
-    Sign In
-  </SprkButton>,
+<SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
+<SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconName="user-account" choices={dropdownChoices} title="My Choices" />,
 ];
-
-    const selector = {
-      choiceFunction: text => {
-        console.log(text);
-      },
-      items: [
-        {
-          title: 'Selection Choice Title 1',
-          information: 'Additional Information',
-          value: 'choice-1',
-        },
-        {
-          element: 'a',
-          title: 'Selection Choice Title 2',
-          information: 'Additional Information',
-          to: '/button',
-          value: 'choice-2',
-        },
-      ],
-      footer: (
-        <SprkButton
-          variant="tertiary"
-          additionalClasses="sprk-c-Button--compact"
-          onClick={() => {
-            console.log('Clicked!');
-          }}
-        >
-          Placeholder
-        </SprkButton>
-      ),
-    };
 
 export default {
   title: 'Components|Masthead',
