@@ -5,6 +5,7 @@ import SprkTabsPanel from './components/SprkTabsPanel';
 
 export default {
   title: 'Components|Tabs',
+  parameters: { component: SprkTabs}
 };
 
 export const defaultStory = () => (
