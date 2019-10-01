@@ -1,10 +1,11 @@
 import React from 'react';
 
 import SprkTabs from './SprkTabs';
-import SprkTabsPanel from './SprkTabsPanel';
+import SprkTabsPanel from './components/SprkTabsPanel';
 
 export default {
   title: 'Components|Tabs',
+  parameters: { component: SprkTabs}
 };
 
 export const defaultStory = () => (
