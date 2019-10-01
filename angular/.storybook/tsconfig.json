@@ -1,12 +1,10 @@
 {
   "extends": "../tsconfig.json",
   "exclude": [
-    "../../spark/test.ts",
     "../../spark/**/*.spec.ts",
-    "../../spark/**/*.spec.ts"
+    "../../spark/manifests/*"
   ],
   "include": [
-    "../../spark/**/*",
     "../../spark/**/*"
   ]
-  }
+}

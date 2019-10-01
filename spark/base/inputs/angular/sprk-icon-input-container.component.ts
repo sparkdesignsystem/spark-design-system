@@ -25,11 +25,11 @@ export class SprkIconInputContainerComponent implements OnInit {
   @Input()
   iconContainerClasses: string;
 
-  @ContentChild(SprkLabelDirective)
+  @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
-  @ContentChild(SprkInputDirective)
+  @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
-  @ContentChild(SprkFieldErrorDirective)
+  @ContentChild(SprkFieldErrorDirective, { static: true })
   error: SprkFieldErrorDirective;
 
   id = _.uniqueId();
@@ -37,7 +37,7 @@ export class SprkIconInputContainerComponent implements OnInit {
   error_id = `error_${this.id}`;
 
   getIconContainerClasses(): string {
-    const classArray: string[] = ['sprk-b-TextInputIconContainer'];
+    const classArray: string[] = ['sprk-b-InputContainer__icon-container'];
 
     if (this.iconContainerClasses) {
       this.iconContainerClasses.split(' ').forEach(className => {

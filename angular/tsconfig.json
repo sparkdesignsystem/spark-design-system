@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -17,11 +17,17 @@
       "dom"
     ],
     "paths": {
-      "@sparkdesignsystem/spark": [
-        "../spark"
+      "@sparkdesignsystem/*": [
+        "node_modules/@sparkdesignsystem/*"
       ],
-      "@sparkdesignsystem/spark-angular": [
-        "../spark"
+      "@angular/*": [
+        "node_modules/@angular/*"
+      ],
+      "@storybook/*": [
+        "node_modules/@storybook/*"
+      ],
+      "tiny-date-picker": [
+        "node_modules/tiny-date-picker"
       ]
     }
   }
