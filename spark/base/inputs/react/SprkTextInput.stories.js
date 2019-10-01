@@ -8,7 +8,6 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 export default {
   title: 'Base|Inputs',
   decorators: [withKnobs],
-  parameters: { component: SprkTextInput },
 };
 
 export const textInput = () => (
@@ -32,6 +31,7 @@ export const hugeTextInput = () => (
     name="text-input-label"
     valid={boolean('valid', true)}
     disabled={boolean('disabled', false)}
+    placeholder="Huge Text Placeholder"
     errorMessage="There is an error on this field."
   />
 );
