@@ -1,16 +1,53 @@
-// import React from 'react';
+import React from 'react';
 
-// import SprkStepper from './SprkStepper';
+import SprkStepper from './SprkStepper';
+import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 
-// export default {
-//   title: 'Components|Stepper',
-//   parameters: { component: SprkStepper },
-// };
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-// export const defaultStory = () => (
-//   <div>Hey!</div>
-// );
+export default {
+  title: 'Components|Stepper',
+  decorators: [withKnobs],
+  parameters: {
+  info: `
+This is some info about the Stepper
+    `,
+  },
+};
 
-// defaultStory.story = {
-//   name: 'Default',
-// };
+export const defaultStory = () => (
+  <SprkStepper
+    hasDarkBackground={boolean('hasDarkBackground', false)}
+    additionalClasses={text('additionalClasses', '')}
+    idString={text('idString', '')}
+  >
+    <SprkStepperStep title="Step One"></SprkStepperStep>
+    <SprkStepperStep title="Step Two"></SprkStepperStep>
+    <SprkStepperStep title="Step Three"></SprkStepperStep>
+  </SprkStepper>
+);
+
+defaultStory.story = {
+  name: 'Default',
+};
+
+export const withDescriptions = () => (
+  <SprkStepper
+    hasDarkBackground={boolean('hasDarkBackground', false)}
+    additionalClasses={text('additionalClasses', '')}
+    idString={text('idString', '')}
+  >
+    <SprkStepperStep title="Step One" isSelected>
+      Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
+    <SprkStepperStep title="Step Two">
+      Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
+    <SprkStepperStep title="Step Three">
+      Step 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
+    <SprkStepperStep title="Step Four">
+      Step 4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
+  </SprkStepper>
+);

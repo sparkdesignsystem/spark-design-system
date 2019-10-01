@@ -1,13 +1,17 @@
 import React from 'react';
-
+import { withKnobs } from '@storybook/addon-knobs';
 import SprkCard from './SprkCard';
 
 export default {
   title: 'Components|Card',
+  decorators: [withKnobs],
+  parameters: { component: SprkCard },
 };
 
 export const defaultStory = () => (
-  <SprkCard idString="card-1" additionalContentClasses="sprk-o-Stack sprk-o-Stack--large" />
+  <SprkCard idString="card-1" additionalContentClasses="sprk-o-Stack sprk-o-Stack--large">
+    Base Card Content
+  </SprkCard>
 );
 
 defaultStory.story = {
@@ -21,7 +25,9 @@ export const standout = () => (
     additionalContentClasses="
           sprk-o-Stack
           sprk-o-Stack--medium"
-  />
+  >
+    Standout Card Content
+  </SprkCard>
 );
 
 standout.story = {
@@ -42,7 +48,7 @@ export const highlightedHeader = () => (
 );
 
 highlightedHeader.story = {
-  name: 'highlighted header',
+  name: 'Highlighted Header',
 };
 
 export const teaser = () => (
@@ -61,7 +67,7 @@ export const teaser = () => (
         href: 'https://sparkdesignsystem.com/',
         mediaLinkElement: 'a',
         imgAlt: 'placeholder image',
-        imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+        imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
         mediaAnalyticsString: 'Card:teaser-link',
         mediaVariant: 'img',
       },
@@ -91,7 +97,7 @@ export const teaserWithDifferentElementOrder = () => (
         href: 'https://sparkdesignsystem.com/',
         mediaLinkElement: 'a',
         imgAlt: 'placeholder image',
-        imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+        imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
         mediaAnalyticsString: 'Card:teaser-link',
         mediaVariant: 'img',
       },
@@ -123,7 +129,7 @@ export const cardLayoutTwoUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -147,7 +153,7 @@ export const cardLayoutTwoUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -180,7 +186,7 @@ export const cardLayoutThreeUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -204,7 +210,7 @@ export const cardLayoutThreeUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -228,7 +234,7 @@ export const cardLayoutThreeUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -261,7 +267,7 @@ export const cardLayoutFourUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -285,7 +291,7 @@ export const cardLayoutFourUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -309,7 +315,7 @@ export const cardLayoutFourUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
@@ -333,7 +339,7 @@ export const cardLayoutFourUp = () => (
           href: 'https://sparkdesignsystem.com/',
           mediaLinkElement: 'a',
           imgAlt: 'placeholder image',
-          imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+          imgSrc: 'https://spark-assets.netlify.com/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
         },
