@@ -200,10 +200,10 @@ passwordInput.story = {
 };
 
 export const helperText = () => (
-  <SprkRevealInput
-    label="Password"
-    toggleLabel="Show Password"
-    name="password-1"
+  <SprkTextInput
+    label="Text Input"
+    name="helper-text-example"
+    helperText="This is my helper text."
   />
 );
 
