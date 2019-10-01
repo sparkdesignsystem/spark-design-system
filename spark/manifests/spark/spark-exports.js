@@ -2,11 +2,11 @@ import {
   dateInput,
   formatDate,
   bindUIEvents as bindDateInputUIEvents,
-} from '../../base/inputs/vanilla/inputs/vanilla/dateInput';
+} from '../../base/inputs/vanilla/dateInput';
 import {
   datePicker,
   bindUIEvents as bindDatePickerUIEvents,
-} from '../../base/inputs/vanilla/inputs/vanilla/datePicker';
+} from '../../base/inputs/vanilla/datePicker';
 import {
   monetaryInput,
   formatMonetary,
@@ -100,7 +100,7 @@ import {
   handleToggleClick,
   bindToggleUIEvents,
 } from '../../components/toggle/vanilla/toggle';
-import isValidDate from '../../utilities/validation/vanilla/vanilla/isValidDate';
+import isValidDate from '../../utilities/validation/vanilla/isValidDate';
 import isValidMonetary from '../../utilities/validation/vanilla/isValidMonetary';
 import isValidPhone from '../../utilities/validation/vanilla/isValidPhone';
 import isValidSSN from '../../utilities/validation/vanilla/isValidSSN';
@@ -131,7 +131,7 @@ import {
 import {
   stepper,
   bindUIEvents as bindStepperUIEvents,
-} from '../../components/stepper';
+} from '../../components/stepper/vanilla/stepper';
 import { carousel } from '../../components/carousel/vanilla/carousel';
 import { highlightBoard } from '../../components/highlight-board/vanilla/highlight-board';
 import isElementVisible from '../../utilities/helpers/vanilla/isElementVisible';

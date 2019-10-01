@@ -7,7 +7,7 @@ import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMasthe
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../../../base/links/react/SprkLink';
-import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
+import { isElementVisible, scrollYDirection } from '../../../manifests/spark/spark-exports';
 import throttle from 'lodash/throttle';
 
 class SprkMasthead extends Component {
