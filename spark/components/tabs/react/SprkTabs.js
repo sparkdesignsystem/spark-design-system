@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkTabsPanel from './SprkTabsPanel';
-import SprkTabsButton from './SprkTabsButton';
+import SprkTabsPanel from './components/SprkTabsPanel';
+import SprkTabsButton from './components/SprkTabsButton';
 
 /*
 * This component expects SprkTabsPanel children.

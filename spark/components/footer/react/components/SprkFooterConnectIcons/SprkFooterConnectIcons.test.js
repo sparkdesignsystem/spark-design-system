@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkFooterConnectIcons from './SprkFooterConnectIcons';
-import SprkIcon from '../../icons/react/SprkIcon';
+import SprkIcon from '../../../../icons/react/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
