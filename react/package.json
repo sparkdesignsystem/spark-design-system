@@ -11,14 +11,14 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "dependencies": {
-    "@sparkdesignsystem/spark": "^11.0.0",
-    "@sparkdesignsystem/spark-react": "^1.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-animate-height": "^2.0.15",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.1",
-    "shortid": "^2.2.14"
+    "shortid": "^2.2.14",
+    "tiny-date-picker": "^3.2.8"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -30,13 +30,14 @@
     "@storybook/addon-knobs": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
-    "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^5.2.1",
     "@storybook/theming": "^5.2.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "glob": "^7.1.4",
     "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
   },
