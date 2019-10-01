@@ -1,9 +1,7 @@
 import { SprkButtonDirective } from './sprk-button.directive';
 
-export default {
-  title: 'Components|Buttons'
-}
+export default { title: 'My Button' }
 
-export const primaryButton = () => ({
-  component: SprkButtonDirective,
+export const withText = () => ({
+  component: SprkButtonDirective
 });

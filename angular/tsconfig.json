@@ -28,6 +28,9 @@
       ],
       "tiny-date-picker": [
         "node_modules/tiny-date-picker"
+      ],
+      "lodash": [
+        "node_modules/lodash"
       ]
     }
   }

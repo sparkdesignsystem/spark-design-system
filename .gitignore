@@ -36,4 +36,5 @@ src/angular/dist
 /spark/coverage
 /react/storybook-dist
 /react/storybook-static
+/angular/storybook-static
 /vanilla/storybook-static
