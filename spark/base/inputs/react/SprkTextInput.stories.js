@@ -138,6 +138,52 @@ select.story = {
   name: 'Select',
 };
 
+export const hugeSelect = () => (
+  <SprkSelectionInput
+    label="Select Box Label"
+    choices={[
+      {
+        label: 'Option 1',
+        value: 'option-1',
+      },
+      {
+        label: 'Option 2',
+        value: 'option-2',
+      },
+      {
+        label: 'Option 3',
+        value: 'option-3',
+      },
+      {
+        label: 'Grouped Options',
+        options: [
+          {
+            label: 'Grouped Option 1',
+            value: 'grouped-option-1',
+          },
+          {
+            label: 'Grouped Option 2',
+            value: 'grouped-option-2',
+          },
+          {
+            label: 'Grouped Option 3',
+            value: 'grouped-option-3',
+          },
+        ],
+      },
+    ]}
+    variant="hugeSelect"
+    name="select"
+    valid
+    erorMessage="There is an error in the field."
+    defaultValue=""
+  />
+);
+
+hugeSelect.story = {
+  name: 'Huge Select',
+};
+
 export const textarea = () => (
   <SprkTextInput label="Description" name="description" type="textarea" />
 );
