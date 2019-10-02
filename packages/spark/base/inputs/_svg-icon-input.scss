@@ -1,6 +1,7 @@
 .sprk-b-TextInputIconContainer,
 .sprk-b-InputContainer__icon-container {
   position: relative;
+  z-index: -1;
 }
 
 .sprk-b-InputContainer__icon-container--narrow {
