@@ -1,3 +1,6 @@
+import { environment } from './src/environment/environment';
+if (window) window['sprk'] = { version: { angular: environment.version } } || {};
+
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from '../../../spark/base/inputs/angular/formatters/sprk-formatter-date.module';
 import { SprkFormatterMonetaryModule } from '../../../spark/base/inputs/angular/formatters/sprk-formatter-monetary.module';

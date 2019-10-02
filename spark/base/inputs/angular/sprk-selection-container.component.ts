@@ -23,6 +23,7 @@ import { SprkSelectionItemContainerComponent } from './sprk-selection-item-conta
       </fieldset>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
+      <ng-content></ng-content>
     </div>
   `
 })
@@ -30,9 +31,9 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
   @Input()
   additionalClasses: string;
 
-  @ContentChild(SprkLabelDirective)
+  @ContentChild(SprkLabelDirective, { static: false })
   label: SprkLabelDirective;
-  @ContentChild(SprkFieldErrorDirective)
+  @ContentChild(SprkFieldErrorDirective, { static: false })
   error: SprkFieldErrorDirective;
   @ContentChildren(SprkSelectionItemContainerComponent)
   selectionItems: QueryList<SprkSelectionItemContainerComponent>;

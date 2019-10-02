@@ -22,11 +22,11 @@ export class SprkTextareaContainerComponent implements OnInit {
   @Input()
   iconContainerClasses: string;
 
-  @ContentChild(SprkLabelDirective)
+  @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
-  @ContentChild(SprkInputDirective)
+  @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
-  @ContentChild(SprkFieldErrorDirective)
+  @ContentChild(SprkFieldErrorDirective, { static: true })
   error: SprkFieldErrorDirective;
 
   id = _.uniqueId();

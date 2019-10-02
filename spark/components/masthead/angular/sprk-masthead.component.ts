@@ -1,9 +1,23 @@
-import { Component, HostListener, Input, Renderer2 } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  Renderer2,
+  AfterContentInit
+} from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
+import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
 import * as _ from 'lodash';
 
 @Component({
   selector: 'sprk-masthead',
+  styles: [`:host {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            display: block;
+          }`
+        ],
   template: `
     <header [ngClass]="getClasses()" role="banner" [attr.data-id]="idString">
       <div
@@ -60,6 +74,11 @@ import * as _ from 'lodash';
           </sprk-link>
         </div>
 
+        <div
+          class="sprk-c-Masthead__nav-item sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
+        >
+          <ng-content select="[navItem-slot]"></ng-content>
+        </div>
         <nav
           class="
           sprk-c-Masthead__little-nav
@@ -100,7 +119,7 @@ import * as _ from 'lodash';
                 <sprk-dropdown
                   [choices]="link.subNav"
                   additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  additionalClasses="sprk-u-Width-100 sprk-u-TextAlign--left"
+                  additionalClasses="sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
                   [triggerText]="link.text"
                 ></sprk-dropdown>
@@ -138,14 +157,17 @@ import * as _ from 'lodash';
           [choices]="narrowSelector['choices']"
         >
           <div
+            *ngIf="narrowSelector['footer']"
             class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
             sprkDropdownFooter
           >
             <sprk-link
               linkType="unstyled"
+              [analyticsString]="narrowSelector['footer'].analyticsString"
+              [href]="narrowSelector['footer'].href"
               additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
             >
-              Go Elsewhere
+              {{ narrowSelector['footer'].text }}
             </sprk-link>
           </div>
         </sprk-dropdown>
@@ -213,7 +235,7 @@ import * as _ from 'lodash';
     </header>
   `
 })
-export class SprkMastheadComponent {
+export class SprkMastheadComponent implements AfterContentInit {
   constructor(private renderer: Renderer2, router: Router) {
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -247,6 +269,13 @@ export class SprkMastheadComponent {
   componentID = _.uniqueId();
   controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
   isScrolled = false;
+  isNarrowLayout = false;
+  scrollDirection = 'up';
+  isHidden = false;
+  isNarrowOnResize = false;
+
+  throttledCheckScrollDirection = _.throttle(this.checkScrollDirection, 500);
+  throttledUpdateLayoutState = _.throttle(this.updateLayoutState, 500);
 
   @HostListener('window:orientationchange')
   handleResizeEvent() {
@@ -256,6 +285,41 @@ export class SprkMastheadComponent {
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
+    if (this.isNarrowLayout) {
+      this.throttledCheckScrollDirection();
+    }
+  }
+
+  // Handles when viewport size changes to large while narrow nav is hidden
+  @HostListener('window:resize', ['$event'])
+  onResize(event): void {
+    this.isNarrowOnResize = isElementVisible('.sprk-c-Masthead__menu');
+    this.throttledUpdateLayoutState();
+  }
+
+  updateLayoutState() {
+    if (this.isNarrowLayout !== this.isNarrowOnResize) {
+      this.isNarrowLayout = this.isNarrowOnResize;
+
+      // If is not narrow on resize update, make sure it's visible
+      if (!this.isNarrowLayout) {
+        this.isHidden = false;
+      }
+    }
+  }
+
+  ngAfterContentInit() {
+    this.isNarrowLayout = isElementVisible('.sprk-c-Masthead__menu');
+  }
+
+  checkScrollDirection() {
+    const newDirection = scrollYDirection();
+    if (this.scrollDirection !== newDirection) {
+      this.scrollDirection = newDirection;
+      this.scrollDirection === 'down'
+        ? (this.isHidden = true)
+        : (this.isHidden = false);
+    }
   }
 
   getClasses(): string {
@@ -273,6 +337,10 @@ export class SprkMastheadComponent {
 
     if (this.isScrolled) {
       classArray.push('sprk-c-Masthead--scroll');
+    }
+
+    if (this.isHidden) {
+      classArray.push('sprk-c-Masthead--hidden');
     }
 
     return classArray.join(' ');

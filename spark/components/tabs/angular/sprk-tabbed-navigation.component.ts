@@ -16,8 +16,8 @@ import {
   setActiveTab
 } from '@sparkdesignsystem/spark';
 import * as _ from 'lodash';
-import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-panel.directive';
-import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from './components/sprk-tabbed-navigation-panel.directive';
+import { SprkTabbedNavigationTabDirective } from './components/sprk-tabbed-navigation-tab.directive';
 
 @Component({
   selector: 'sprk-tabbed-navigation',

@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark",
-  "version": "10.1.0",
+  "version": "12.1.1",
   "description": "Spark is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
@@ -25,15 +25,15 @@
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
     "dom-slider": "1.5.3",
+    "lodash": "^4.17.15",
     "lory.js": "^2.5.3",
     "object-fit-images": "^3.2.4",
-    "react": "^16.8.6",
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/register": "^7.4.4",
+    "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
     "chai": "^4.1.2",
     "jsdom": "^11.12.0",
@@ -43,7 +43,7 @@
     "proxyquire": "^2.1.0",
     "sinon": "^7.2.2",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1"
+    "webpack-cli": "^3.3.9"
   },
   "publishConfig": {
     "access": "public"

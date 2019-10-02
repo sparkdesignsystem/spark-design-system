@@ -1,25 +1,23 @@
 import { Component, ContentChild, Input, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 import { SprkInputDirective } from './sprk-input.directive';
 import { SprkLabelDirective } from './sprk-label.directive';
 
 @Component({
-  selector: 'sprk-icon-input-container',
+  selector: 'sprk-huge-input-container',
   template: `
     <div [ngClass]="getClasses()">
-      <div [ngClass]="getIconContainerClasses()">
-        <ng-content select="[sprkLabel]"></ng-content>
-        <ng-content select="[sprk-input-icon]"></ng-content>
-        <ng-content select="[sprkInput]"></ng-content>
-      </div>
+      <ng-content select="[sprkInput]"></ng-content>
+      <ng-content select="[sprkLabel]"></ng-content>
+      <ng-content select="[sprk-select-icon]"></ng-content>
       <ng-content select="sprk-selection-item-container"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
     </div>
   `
 })
-export class SprkIconInputContainerComponent implements OnInit {
+export class SprkHugeInputContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
   @Input()
@@ -32,31 +30,21 @@ export class SprkIconInputContainerComponent implements OnInit {
   @ContentChild(SprkFieldErrorDirective, { static: true })
   error: SprkFieldErrorDirective;
 
-  id = _.uniqueId();
+  id = uniqueId();
   input_id = `input_${this.id}`;
   error_id = `error_${this.id}`;
 
-  getIconContainerClasses(): string {
-    const classArray: string[] = ['sprk-b-InputContainer__icon-container'];
-
-    if (this.iconContainerClasses) {
-      this.iconContainerClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
-
   getClasses(): string {
-    const classArray: string[] = ['sprk-b-InputContainer'];
+    const classArray: string[] = [
+      'sprk-b-InputContainer',
+      'sprk-b-InputContainer--huge'
+    ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
         classArray.push(className);
       });
     }
-
     return classArray.join(' ');
   }
 

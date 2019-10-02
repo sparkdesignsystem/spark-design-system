@@ -9,6 +9,7 @@ import { SprkSelectionLabelDirective } from './sprk-selection-label.directive';
     <div [ngClass]="getClasses()">
       <ng-content select="[sprkSelectionInput]"></ng-content>
       <ng-content select="[sprkSelectionLabel]"></ng-content>
+      <ng-content></ng-content>
     </div>
   `
 })
@@ -16,9 +17,9 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
 
-  @ContentChild(SprkSelectionLabelDirective)
+  @ContentChild(SprkSelectionLabelDirective, { static: true })
   label: SprkSelectionLabelDirective;
-  @ContentChild(SprkSelectionInputDirective)
+  @ContentChild(SprkSelectionInputDirective, { static: true })
   input: SprkSelectionInputDirective;
 
   id = _.uniqueId();

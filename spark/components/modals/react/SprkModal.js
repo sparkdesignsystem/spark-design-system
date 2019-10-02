@@ -8,8 +8,9 @@ import * as _ from 'lodash';
 import {
   getFocusableEls,
   isActiveElement,
-} from '../../../utilities/helpers/vanilla/elementState';
-import { isTabPressed, isEscPressed } from '../../../utilities/helpers/vanilla/keypress';
+  isTabPressed,
+  isEscPressed,
+} from '@sparkdesignsystem/spark';
 import SprkSpinner from '../../spinners/react/SprkSpinner';
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';
