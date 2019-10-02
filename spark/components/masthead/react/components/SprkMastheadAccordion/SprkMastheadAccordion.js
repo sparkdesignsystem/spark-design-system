@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkMastheadAccordionItem from './SprkMastheadAccordionItem';
+import SprkMastheadAccordionItem from '../SprkMastheadAccordionItem/SprkMastheadAccordionItem';
 
 class SprkMastheadAccordion extends React.Component {
   constructor(props) {
@@ -33,13 +33,13 @@ class SprkMastheadAccordion extends React.Component {
 }
 
 SprkMastheadAccordion.propTypes = {
-  // classes to be added to the masthead
+  /** classes to be added to the masthead */ 
   additionalClasses: PropTypes.string,
-  // assigned to data-analytics
+  /** assigned to data-analytics */ 
   analyticsString: PropTypes.string,
-  // assigned to data-id
+  /** assigned to data-id */ 
   idString: PropTypes.string,
-  // used to render SprkMastheadAccordionItems inside
+  /** used to render SprkMastheadAccordionItems inside */ 
   links: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

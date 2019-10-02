@@ -2,11 +2,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SprkMastheadMenuIcon from './SprkMastheadMenuIcon';
-import SprkMastheadLittleNav from './SprkMastheadLittleNav';
-import SprkMastheadNarrowNav from './SprkMastheadNarrowNav';
-import SprkMastheadBigNav from './SprkMastheadBigNav';
+import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMastheadMenuIcon';
+import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
+import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
+import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../../../base/links/react/SprkLink';
+import { isElementVisible, scrollYDirection } from '../../../manifests/spark/spark-exports';
+import throttle from 'lodash/throttle';
 
 class SprkMasthead extends Component {
   constructor() {
@@ -14,21 +16,37 @@ class SprkMasthead extends Component {
     this.state = {
       narrowNavOpen: false,
       isScrolled: false,
+      isHidden: false,
+      isNarrowLayout: false,
+      scrollDirection: 'up',
+      currentLayout: false,
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
+    this.toggleScrollEvent = this.toggleScrollEvent.bind(this);
+    this.checkScrollDirection = this.checkScrollDirection.bind(this);
+    this.throttledCheckScrollDirection = throttle(this.checkScrollDirection, 500);
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.checkIfNarrowLayout = this.checkIfNarrowLayout.bind(this);
+    this.checkLayoutOnResize = this.checkLayoutOnResize.bind(this);
+    this.throttledCheckLayoutOnResize = throttle(this.checkLayoutOnResize, 500);
+    this.closeNarrowNavMenu = this.closeNarrowNavMenu.bind(this);
+    this.setIsScrolled = this.setIsScrolled.bind(this);
+    this.getCurrentLayout = this.getCurrentLayout.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= 10) {
-        this.setState({ isScrolled: true });
-      } else {
-        this.setState({ isScrolled: false });
-      }
-    });
-    window.addEventListener('orientationchange', () => {
-      this.setState({ narrowNavOpen: false });
-    });
+    this.setState({ isNarrowLayout : isElementVisible('.sprk-c-Masthead__menu') });
+
+    window.addEventListener('scroll', this.setIsScrolled);
+    window.addEventListener('orientationchange', this.closeNarrowNavMenu);
+    window.addEventListener('resize', this.throttledCheckLayoutOnResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.setIsScrolled, false);
+    window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
+    window.removeEventListener('orientationchange', this.closeNarrowNavMenu, false);
+    window.removeEventListener('resize', this.throttledCheckIfNarrowLayout, false);
   }
 
   toggleNarrowNav() {
@@ -48,6 +66,61 @@ class SprkMasthead extends Component {
     }
   }
 
+  closeNarrowNavMenu() {
+    this.setState({ narrowNavOpen: false });
+  }
+
+  setIsScrolled() {
+    if (window.scrollY >= 10) {
+      this.setState({ isScrolled: true });
+    } else {
+      this.setState({ isScrolled: false });
+    }
+  }
+
+  getCurrentLayout() {
+    this.setState({ currentLayout : isElementVisible('.sprk-c-Masthead__menu')});
+  }
+
+  checkIfNarrowLayout() {
+    if (this.state.isNarrowLayout !== this.state.currentLayout) {
+      this.setState({ isNarrowLayout : this.state.currentLayout });
+      this.toggleScrollEvent();
+      if (!this.state.isNarrowLayout) {
+        this.setState({ isHidden : false });
+      }
+    }
+  }
+
+  checkLayoutOnResize() {
+    this.getCurrentLayout();
+    this.checkIfNarrowLayout();
+  }
+
+  toggleMenu() {
+    if (this.state.scrollDirection === 'down') {
+      this.setState({ isHidden : true });
+    } else {
+      this.setState({ isHidden : false });
+    }
+  }
+
+  checkScrollDirection() {
+    const newDirection = scrollYDirection();
+    if (this.state.scrollDirection !== newDirection) {
+      this.setState({ scrollDirection : newDirection });
+      this.toggleMenu();
+    }
+  }
+
+  toggleScrollEvent() {
+    if (this.state.isNarrowLayout) {
+      window.addEventListener('scroll', this.throttledCheckScrollDirection);
+    } else {
+      window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
+    }
+  }
+
   render() {
     const {
       additionalClasses,
@@ -63,9 +136,12 @@ class SprkMasthead extends Component {
       variant,
       logoLink,
       logoLinkElement,
+      navLink,
     } = this.props;
-    const { isScrolled, narrowNavOpen } = this.state;
+    const { isScrolled, narrowNavOpen, isHidden } = this.state;
 
+    // On render check whether to add the scroll event
+    this.toggleScrollEvent();
     return (
       <header
         className={classNames(
@@ -73,6 +149,7 @@ class SprkMasthead extends Component {
           'sprk-o-Stack',
           { 'sprk-c-Masthead--open': narrowNavOpen },
           { 'sprk-c-Masthead--scroll': isScrolled },
+          { 'sprk-c-Masthead--hidden': isHidden },
           additionalClasses,
         )}
         role="banner"
@@ -105,6 +182,10 @@ class SprkMasthead extends Component {
             )}
           </div>
 
+          <div className="sprk-c-Masthead__nav-item sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
+            {navLink}
+          </div>
+
           {(littleNavLinks.length > 0 || utilityContents.length > 0) && (
             <SprkMastheadLittleNav
               selector={selector}
@@ -128,11 +209,11 @@ class SprkMasthead extends Component {
 }
 
 SprkMasthead.propTypes = {
-  // classes to be added to the masthead
+  /** classes to be added to the masthead */ 
   additionalClasses: PropTypes.string,
-  // assigned to data-analytics
+  /** assigned to data-analytics */ 
   analyticsString: PropTypes.string,
-  // array of link objects to use in building the big nav
+  /** array of link objects to use in building the big nav */ 
   bigNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -145,9 +226,9 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  // assigned to data-id
+  /** assigned to data-id */ 
   idString: PropTypes.string,
-  // array of link objects to use in building the little nav
+  /** array of link objects to use in building the little nav */ 
   littleNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -160,7 +241,7 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  // array of link objects to use in building the narrow nav
+  /** array of link objects to use in building the narrow nav */ 
   narrowNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -173,7 +254,7 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  // object containing an array of objects to use in building the narrow selector
+  /** object containing an array of objects to use in building the narrow selector */ 
   narrowSelector: PropTypes.shape({
     choiceFunction: PropTypes.func,
     footer: PropTypes.node,
@@ -187,7 +268,7 @@ SprkMasthead.propTypes = {
       }),
     ),
   }),
-  // object containing an array of objects to use in building the selector
+  /** object containing an array of objects to use in building the selector */ 
   selector: PropTypes.shape({
     choiceFunction: PropTypes.func,
     footer: PropTypes.node,
@@ -201,16 +282,18 @@ SprkMasthead.propTypes = {
       }),
     ),
   }),
-  // expects a component to render the logo
+  /** expects a component to render the logo */ 
   siteLogo: PropTypes.node,
-  // an array containing components to render into the utility area
+  /** an array containing components to render into the utility area */ 
   utilityContents: PropTypes.arrayOf(PropTypes.node),
-  // the variant name to render
+  /** the variant name to render */ 
   variant: PropTypes.oneOf(['default', 'extended']),
-  // the href to render for the logo link
+  /** the href to render for the logo link */ 
   logoLink: PropTypes.string,
-  // the element link element to render for the logo
+  /** the element link element to render for the logo */ 
   logoLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  /** expects a component to render the nav link */ 
+  navLink: PropTypes.node,
 };
 
 SprkMasthead.defaultProps = {

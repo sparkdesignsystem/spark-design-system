@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkIcon from '../../icons/react/SprkIcon';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkIcon from '../../../../icons/react/SprkIcon';
+import SprkLink from '../../../../../base/links/react/SprkLink';
 
 class SprkAccordionItem extends Component {
   constructor(props) {
@@ -98,23 +98,23 @@ SprkAccordionItem.defaultProps = {
 };
 
 SprkAccordionItem.propTypes = {
-  // Content for the item
+  /** Content for the item */ 
   children: PropTypes.node,
-  // Value for the data-analytics attribute on the accordion trigger
+  /** Value for the data-analytics attribute on the accordion trigger */ 
   analyticsString: PropTypes.string,
-  // The item heading
+  /** The item heading */ 
   heading: PropTypes.string.isRequired,
-  // Additional classes for the heading
+  /** Additional classes for the heading */ 
   headingAddClasses: PropTypes.string,
-  // Additional classes for the item
+  /** Additional classes for the item */ 
   additionalClasses: PropTypes.string,
-  // The data-id value for the accordion item
+  /** The data-id value for the accordion item */ 
   idString: PropTypes.string,
-  // Used to specify whether the item should be open by default
+  /** Used to specify whether the item should be open by default */ 
   isDefaultOpen: PropTypes.bool,
-  // Additional classes for the toggle icon
+  /** Additional classes for the toggle icon */ 
   iconAddClasses: PropTypes.string,
-  // Additional classes for the toggle content
+  /** Additional classes for the toggle content */ 
   contentAddClasses: PropTypes.string,
 };
 

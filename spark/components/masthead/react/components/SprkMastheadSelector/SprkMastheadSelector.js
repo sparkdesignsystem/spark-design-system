@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkIcon from '../../icons/react/SprkIcon';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkIcon from '../../../../icons/react/SprkIcon';
+import SprkLink from '../../../../../base/links/react/SprkLink';
 
 class SprkMastheadSelector extends Component {
   constructor(props) {
@@ -201,41 +201,41 @@ class SprkMastheadSelector extends Component {
 }
 
 SprkMastheadSelector.propTypes = {
-  // Classes applied to the dropdown
+  /** Classes applied to the dropdown */ 
   additionalClasses: PropTypes.string,
-  // Classes applied to the icon
+  /** Classes applied to the icon */ 
   additionalIconClasses: PropTypes.string,
-  // Classes applied to the link that triggers the dropdown to open
+  /** Classes applied to the link that triggers the dropdown to open */ 
   additionalTriggerClasses: PropTypes.string,
-  // Classes applied to the text in the trigger link
+  /** Classes applied to the text in the trigger link */ 
   additionalTriggerTextClasses: PropTypes.string,
-  // Assigned to data-analytics
+  /** Assigned to data-analytics */ 
   analyticsString: PropTypes.string,
-  // Choices object that builds the dropdown contents
+  /** Choices object that builds the dropdown contents */ 
   choices: PropTypes.shape({
-    // A node to render at the foot of the dropdown menu
+    /** A node to render at the foot of the dropdown menu */ 
     footer: PropTypes.node,
-    // An array of objects that describe the items in the menu
+    /** An array of objects that describe the items in the menu */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        // The element to render for each menu item
+        /** The element to render for each menu item */ 
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        // Assigned to href of the element is 'a'
+        /** Assigned to href of the element is 'a' */ 
         href: PropTypes.string,
-        // The text inside the item
+        /** The text inside the item */ 
         text: PropTypes.string,
       }),
     ).isRequired,
   }).isRequired,
-  // Incoming children
+  /** Incoming children */ 
   children: PropTypes.node,
-  // The text set as the default of the trigger link
+  /** The text set as the default of the trigger link */ 
   defaultTriggerText: PropTypes.string,
-  // The icon type of the trigger icon
+  /** The icon type of the trigger icon */ 
   iconName: PropTypes.string,
-  // Assigned to data-id
+  /** Assigned to data-id  */ 
   idString: PropTypes.string,
-  // Applies styles if the selector is flush with the sides of the viewport
+  /** Applies styles if the selector is flush with the sides of the viewport */ 
   isFlush: PropTypes.bool,
 };
 

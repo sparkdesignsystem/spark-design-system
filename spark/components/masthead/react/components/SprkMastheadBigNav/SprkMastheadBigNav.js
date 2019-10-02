@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import SprkMastheadDropdown from './SprkMastheadDropdown';
+import SprkMastheadDropdown from '../SprkMastheadDropdown/SprkMastheadDropdown';
 
 class SprkMastheadBigNav extends Component {
   constructor(props) {
@@ -74,22 +74,22 @@ class SprkMastheadBigNav extends Component {
 }
 
 SprkMastheadBigNav.propTypes = {
-  // classes to be added to the masthead
+  /** classes to be added to the masthead */ 
   additionalClasses: PropTypes.string,
-  // assigned to data-analytics
+  /** assigned to data-analytics */ 
   analyticsString: PropTypes.string,
-  // assigned to data-id
+  /** assigned to data-id */ 
   idString: PropTypes.string,
-  // used to render navigation inside
+  /** used to render navigation inside */ 
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      // The element to render, can be 'a' or a Component like Link
+      /** The element to render, can be 'a' or a Component like Link */ 
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Classes to apply to the container of the link
+      /** Classes to apply to the container of the link */ 
       additionalContainerClasses: PropTypes.string,
-      // Adds a class if the link is active
+      /** Adds a class if the link is active */ 
       isActive: PropTypes.bool,
-      // The link text
+      /** The link text */ 
       text: PropTypes.string,
     }),
   ).isRequired,

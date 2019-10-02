@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
-import SprkIcon from '../../icons/react/SprkIcon';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkIcon from '../../../../icons/react/SprkIcon';
+import SprkLink from '../../../../../base/links/react/SprkLink';
 
 class SprkMastheadDropdown extends Component {
   constructor(props) {
@@ -136,41 +136,41 @@ class SprkMastheadDropdown extends Component {
 }
 
 SprkMastheadDropdown.propTypes = {
-  // Classes applied to the dropdown
+  /** Classes applied to the dropdown */ 
   additionalClasses: PropTypes.string,
-  // Classes applied to the icon
+  /** Classes applied to the icon */ 
   additionalIconClasses: PropTypes.string,
-  // Classes applied to the link that triggers the dropdown to open
+  /** Classes applied to the link that triggers the dropdown to open */ 
   additionalTriggerClasses: PropTypes.string,
-  // Classes applied to the text in the trigger link
+  /** Classes applied to the text in the trigger link */ 
   additionalTriggerTextClasses: PropTypes.string,
-  // Assigned to data-analytics
+  /** Assigned to data-analytics */ 
   analyticsString: PropTypes.string,
-  // Incoming children
+  /** Incoming children */ 
   children: PropTypes.node,
-  // Choices object that builds the dropdown contents
+  /** Choices object that builds the dropdown contents */
   choices: PropTypes.shape({
-    // An array of objects that describe the items in the menu
+    /** An array of objects that describe the items in the menu */ 
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        // The element to render for each menu item
+        /** The element to render for each menu item */ 
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-        // Assigned to href of the element is 'a'
+        /** Assigned to href of the element is 'a' */ 
         href: PropTypes.string,
-        // The text inside the item
+        /** The text inside the item */ 
         text: PropTypes.string,
       }),
     ),
   }),
-  // The text set as the default of the trigger link
+  /** The text set as the default of the trigger link */ 
   triggerText: PropTypes.string,
-  // The icon type of the trigger icon
+  /** The icon type of the trigger icon */ 
   iconName: PropTypes.string,
-  // Assigned to data-id
+  /** Assigned to data-id */ 
   idString: PropTypes.string,
-  // The text of the optional header above the choices in the dropdown
+  /** The text of the optional header above the choices in the dropdown */ 
   title: PropTypes.string,
-  // The variant name
+  /** The variant name */ 
   variant: PropTypes.oneOf(['base', 'informational']),
 };
 
