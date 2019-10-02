@@ -6,19 +6,7 @@ import SprkLink from '../../../base/links/react/SprkLink';
 import SprkDropdown from '../../dropdown/react/SprkDropdown';
 
 
-const links = [{
-  text: 'Item',
-  subNavLinks: [{
-      text: 'Placeholder',
-    },
-    {
-      text: 'Item',
-    },
-    {
-      text: 'Sub Menu Item',
-    },
-  ],
-},
+const links = [
 {
   element: 'a',
   text: 'Your Item',
@@ -26,21 +14,8 @@ const links = [{
 },
 {
   element: 'a',
-  text: 'Nav Item',
+  text: 'Your Item',
   to: '/button',
-},
-{
-  text: 'Item',
-  subNavLinks: [{
-      text: 'Item 1',
-    },
-    {
-      text: 'Taxes and Insurance',
-    },
-    {
-      text: 'Item 3',
-    },
-  ],
 },
 {
   element: 'a',
@@ -111,7 +86,10 @@ items: [{
     value: 'choice-2',
   },
 ],
-footer: <SprkButton variant="tertiary" additionalClasses="sprk-c-Button--compact" onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>,
+footer: (<SprkButton
+  variant="tertiary"
+  additionalClasses="sprk-c-Button--compact"
+  onClick={() => { console.log('Clicked!'); }}>Placeholder</SprkButton>),
 };
 const utilityItems = [
 <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
