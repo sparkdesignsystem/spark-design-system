@@ -1,5 +1,5 @@
 import { environment } from './src/environment/environment';
-window['sprk'] = { version: { angular: environment.version } } || {};
+if (window) window['sprk'] = { version: { angular: environment.version } } || {};
 
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from '../../../spark/base/inputs/angular/formatters/sprk-formatter-date.module';

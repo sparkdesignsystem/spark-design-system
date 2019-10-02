@@ -11,7 +11,6 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "dependencies": {
-    "@sparkdesignsystem/spark": "^12.1.1",
     "@angular/animations": "^8.2.0",
     "@angular/common": "^8.2.0",
     "@angular/compiler": "^8.2.0",

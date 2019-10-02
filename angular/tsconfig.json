@@ -17,9 +17,6 @@
       "dom"
     ],
     "paths": {
-      "@sparkdesignsystem/*": [
-        "node_modules/@sparkdesignsystem/*"
-      ],
       "@angular/*": [
         "node_modules/@angular/*"
       ],

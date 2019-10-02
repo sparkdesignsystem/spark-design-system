@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from "../../storybook-spark-theme";
 
 addDecorator(withA11y);
-// addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
+// TODO: addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
 // Option defaults.
 addParameters({
   options: {
