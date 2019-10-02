@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import '../windowStubs';
+import '../../../utilities/testing/react/windowStubs';
 import SprkMasthead from './SprkMasthead';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
@@ -191,7 +191,7 @@ it('should update state of isHidden if isNarrowLayout is false', () => {
 it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
-  const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");  
+  const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");
   wrapper.update();
   instance.checkLayoutOnResize();
   expect(spy).toHaveBeenCalled();
@@ -200,7 +200,7 @@ it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
 it('should call checkIfNarrowLayout when checkLayoutOnResize is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
-  const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");  
+  const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");
   wrapper.update();
   instance.checkLayoutOnResize();
   expect(spy).toHaveBeenCalled();

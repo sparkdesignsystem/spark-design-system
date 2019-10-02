@@ -28,6 +28,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "regenerator-runtime": "^0.13.1",
+    "sinon": "^7.5.0",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
   },

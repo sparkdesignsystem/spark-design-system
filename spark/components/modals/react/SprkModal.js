@@ -5,12 +5,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import * as _ from 'lodash';
-import {
-  getFocusableEls,
-  isActiveElement,
-  isTabPressed,
-  isEscPressed,
-} from '@sparkdesignsystem/spark';
 import SprkSpinner from '../../spinners/react/SprkSpinner';
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';
@@ -31,6 +25,10 @@ class SprkModal extends Component {
     this.setInternalFocus = this.setInternalFocus.bind(this);
     this.setExternalFocus = this.setExternalFocus.bind(this);
     this.handleKeyEvents = this.handleKeyEvents.bind(this);
+    this.isTabPressed = this.isTabPressed.bind(this);
+    this.isEscPressed = this.isEscPressed.bind(this);
+    this.getFocusableEls = this.getFocusableEls.bind(this);
+    this.isActiveElement = this.isActiveElement.bind(this);
   }
 
   componentDidMount() {
@@ -66,6 +64,29 @@ class SprkModal extends Component {
 
   componentWillUnmount() {
     this.removeListeners();
+  }
+
+  isTabPressed(e) {
+    e.key === 'Tab' || e.keyCode === 9;
+  }
+
+  isEscPressed(e) {
+    e.key === 'Escape' || e.keyCode === 27;
+  }
+
+  getFocusableEls (containerRef) {
+    const focusEls = containerRef.querySelectorAll(
+      'a[href], area[href],'
+      + 'input:not([disabled]),'
+      + 'select:not([disabled]),'
+      + 'textarea:not([disabled]),'
+      + 'button:not([disabled]), [tabindex="0"]',
+    );
+    return focusEls;
+  };
+
+  isActiveElement(elementRef) {
+    document.activeElement === elementRef;
   }
 
   setExternalFocus() {
@@ -131,11 +152,11 @@ class SprkModal extends Component {
       return;
     }
 
-    const focusableEls = getFocusableEls(this.containerRef.current);
+    const focusableEls = this.getFocusableEls(this.containerRef.current);
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
 
-    if (isEscPressed(e)) {
+    if (this.isEscPressed(e)) {
       // Cannot use Esc to close Wait Modals
       if (variant !== 'wait') {
         e.preventDefault();
@@ -143,18 +164,18 @@ class SprkModal extends Component {
       }
     }
 
-    if (isTabPressed(e)) {
+    if (this.isTabPressed(e)) {
       if (variant === 'wait') {
         e.preventDefault();
         // Wait modals only ever focus the modal container
         this.containerRef.current.focus();
       } else if (e.shiftKey) {
-        if (isActiveElement(firstFocusableEl)) {
+        if (this.isActiveElement(firstFocusableEl)) {
           // underflow to the end
           e.preventDefault();
           lastFocusableEl.focus();
         }
-      } else if (isActiveElement(lastFocusableEl)) {
+      } else if (this.isActiveElement(lastFocusableEl)) {
         // overflow to the beginning
         e.preventDefault();
         firstFocusableEl.focus();
@@ -202,7 +223,7 @@ class SprkModal extends Component {
     this.attachListeners();
 
     return (
-      <React.Fragment>
+      <>
         <div
           className={classnames(
             'sprk-c-Modal',
@@ -272,7 +293,7 @@ class SprkModal extends Component {
         </div>
 
         <Mask clicked={this.cancel} analyticsString={maskAnalyticsString} />
-      </React.Fragment>
+      </>
     );
   }
 }
