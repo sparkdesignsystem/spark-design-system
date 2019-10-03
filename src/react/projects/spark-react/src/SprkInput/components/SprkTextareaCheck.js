@@ -14,12 +14,8 @@ class SprkTextareaCheck extends Component {
   }
 
   componentDidMount() {
-    /*
-     * Check if Huge Select has a value when it first mounts.
-     * Set presence of value in state.
-     */
     if (this.props.variant === 'hugeTextInput') {
-      if (this.inputRef.current.value !== '') {
+      if (this.props.value != '') {
         this.setState({
           hasValue: true,
         });
