@@ -218,6 +218,103 @@ import { Component } from '@angular/core';
           This is an info Spark alert!
         </sprk-alert>
         <h2 class="drizzle-b-h2">Masthead</h2>
+        <sprk-icon-input-container
+          iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
+        >
+          <label class="sprk-b-Label--monetary" sprkLabel> Payment </label>
+          <input
+            class="sprk-b-TextInput--has-text-icon"
+            name="monetary_input"
+            type="text"
+            pattern="(^$?(d+|d{1,3}(,d{3})*)(.d+)?$)|^$"
+            [(ngModel)]="monetary_input"
+            #monetaryInput="ngModel"
+            sprkFormatterMonetary
+            sprkInput
+          />
+          <div
+            [hidden]="monetaryInput.valid || monetaryInput.pristine"
+            sprkFieldError
+          >
+            <sprk-icon
+              iconType="exclamation-filled-small"
+              additionalClasses="sprk-b-ErrorIcon"
+            ></sprk-icon>
+            <div class="sprk-b-ErrorText">Invalid amount.</div>
+          </div>
+        </sprk-icon-input-container>
+        <sprk-icon-input-container>
+          <label
+            class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+            sprkLabel
+          >
+            Search
+          </label>
+          <sprk-icon
+            iconType="search"
+            additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+            sprk-input-icon
+          ></sprk-icon>
+          <input
+            name="inline_search_input"
+            class="sprk-b-TextInput--has-svg-icon"
+            type="text"
+            placeholder="Search"
+            [(ngModel)]="inline_search_input"
+            #inlineSearchInput="ngModel"
+            data-id="input-search-1"
+            sprkInput
+          />
+        </sprk-icon-input-container>
+        <sprk-icon-input-container
+          iconContainerClasses="sprk-b-InputContainer__icon-container--narrow"
+        >
+          <label sprkLabel>Percentage</label>
+          <sprk-icon
+            iconType="percent"
+            additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
+            sprk-input-icon
+          ></sprk-icon>
+          <input
+            class="sprk-b-InputContainer__input--has-icon-right"
+            name="percentage"
+            type="tel"
+            sprkInput
+          />
+        </sprk-icon-input-container>
+        <sprk-icon-input-container>
+          <label class="sprk-b-Label--with-icon" sprkLabel>
+            Date Input (picker)
+          </label>
+          <sprk-icon
+            iconType="calendar"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+            sprk-input-icon
+          ></sprk-icon>
+          <input
+            name="datepicker_input"
+            class="sprk-b-TextInput--has-svg-icon"
+            type="text"
+            pattern="^(((0[13578]|1[02])([/-]?)(0[1-9]|[12]d|3[01])|(0[469]|11)([/-]?)(0[1-9]|[12]d|30)|02([/-]?)((0[1-9])|[12]d))(4|7|9)[12]d{3})?$"
+            placeholder="MM/DD/YYYY"
+            [(ngModel)]="datepicker_input"
+            #datepickerInput="ngModel"
+            sprkFormatterDate
+            [sprkDatePickerConfig]="dpConfig"
+            sprkDatepicker
+            sprkInput
+          />
+          <div
+            [hidden]="datepickerInput.valid || datepickerInput.pristine"
+            sprkFieldError
+          >
+            <sprk-icon
+              iconType="exclamation-filled-small"
+              additionalClasses="sprk-b-ErrorIcon"
+            ></sprk-icon>
+            <div class="sprk-b-ErrorText">Invalid date.</div>
+          </div>
+        </sprk-icon-input-container>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
