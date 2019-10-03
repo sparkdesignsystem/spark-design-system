@@ -9,6 +9,22 @@ class SprkTextareaCheck extends Component {
     this.state = {
       hasValue: this.props.value,
     };
+
+    this.inputRef = React.createRef();
+  }
+
+  componentDidMount() {
+    /*
+     * Check if Huge Select has a value when it first mounts.
+     * Set presence of value in state.
+     */
+    if (this.props.variant === 'hugeTextInput') {
+      if (this.inputRef.current.value !== '') {
+        this.setState({
+          hasValue: true,
+        });
+      }
+    }
   }
 
   render() {
@@ -68,6 +84,7 @@ class SprkTextareaCheck extends Component {
         aria-describedby={errorContainerId}
         value={valid && formatter(value) ? formatter(value) : value}
         onBlur={e => handleOnBlur(e)}
+        ref={this.inputRef}
         {...rest}
       >
         {children}
