@@ -9,13 +9,11 @@ class SprkTextareaCheck extends Component {
     this.state = {
       hasValue: this.props.value,
     };
-
-    this.inputRef = React.createRef();
   }
 
   componentDidMount() {
-    if (this.props.variant === 'hugeTextInput') {
-      if (this.props.value != '') {
+    if (this.props.type === 'hugeTextInput') {
+      if (this.props.value !== '') {
         this.setState({
           hasValue: true,
         });
@@ -80,7 +78,6 @@ class SprkTextareaCheck extends Component {
         aria-describedby={errorContainerId}
         value={valid && formatter(value) ? formatter(value) : value}
         onBlur={e => handleOnBlur(e)}
-        ref={this.inputRef}
         {...rest}
       >
         {children}
