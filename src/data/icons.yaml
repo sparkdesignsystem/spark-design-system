@@ -596,9 +596,11 @@
 - name: dollar
   viewBox: 0 0 64 64
   description: US dollar symbol
+  filled: true
 - name: percent
   viewBox: 0 0 64 64
   description: Percent symbol
+  filled: true
 - name: multiple-pages
   viewBox: 0 0 64 64
   description: Indicates multiple pages
