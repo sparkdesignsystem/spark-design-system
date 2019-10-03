@@ -15,7 +15,6 @@ import * as _ from 'lodash';
             position: sticky;
             position: -webkit-sticky;
             top: 0;
-            display: block;
           }`
         ],
   template: `

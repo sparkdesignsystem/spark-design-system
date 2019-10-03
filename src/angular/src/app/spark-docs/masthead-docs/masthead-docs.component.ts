@@ -198,6 +198,29 @@ import { Component } from '@angular/core';
       </sprk-masthead>
 
       <div class="sprk-o-CenteredColumn">
+        <sprk-icon-input-container>
+          <label
+            class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+            sprkLabel
+          >
+            Search
+          </label>
+          <sprk-icon
+            iconType="search"
+            additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-InlineSearch__icon"
+            sprk-input-icon
+          ></sprk-icon>
+          <input
+            name="inline_search_input"
+            class="sprk-b-TextInput--has-svg-icon"
+            type="text"
+            placeholder="Search"
+            [(ngModel)]="inline_search_input"
+            #inlineSearchInput="ngModel"
+            sprkInput
+          />
+        </sprk-icon-input-container>
+
         <h2 class="drizzle-b-h2">Masthead</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
