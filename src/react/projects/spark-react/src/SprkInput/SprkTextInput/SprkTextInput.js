@@ -15,6 +15,25 @@ class SprkTextInput extends Component {
       id: uniqueId(),
       errorContainerId: uniqueId(),
     };
+    this.inputContainerRef = React.createRef();
+  }
+
+  componentDidMount() {
+    /*
+     * Check if Huge Input has a value when it first mounts.
+     * Set presence of value in state.
+     */
+    if (this.props.type === 'hugeTextInput') {
+      // Drill into container and grab huge input
+      const hugeInput = this.inputContainerRef.current.querySelector(
+        '[type="hugeTextInput"]',
+      );
+      if (hugeInput.value !== '') {
+        this.setState({
+          inputHugeHasValue: true,
+        });
+      }
+    }
   }
 
   render() {
@@ -39,13 +58,14 @@ class SprkTextInput extends Component {
       value,
       ...rest
     } = this.props;
-    const { id, errorContainerId } = this.state;
+    const { id, errorContainerId, inputHugeHasValue } = this.state;
 
     return (
       <div
         className={classNames('sprk-b-InputContainer', additionalClasses, {
           'sprk-b-InputContainer--huge': type === 'hugeTextInput',
         })}
+        ref={this.inputContainerRef}
       >
         <SprkInputIconCheck
           leadingIcon={leadingIcon}
@@ -76,6 +96,7 @@ class SprkTextInput extends Component {
               value={value}
               iconRight={iconRight}
               disabled={disabled}
+              inputHugeHasValue={inputHugeHasValue}
               {...rest}
             />
           </SprkLabelLocationCheck>

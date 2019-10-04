@@ -11,16 +11,6 @@ class SprkTextareaCheck extends Component {
     };
   }
 
-  componentDidMount() {
-    if (this.props.type === 'hugeTextInput') {
-      if (this.props.value !== '') {
-        this.setState({
-          hasValue: true,
-        });
-      }
-    }
-  }
-
   render() {
     const {
       analyticsString,
@@ -37,6 +27,7 @@ class SprkTextareaCheck extends Component {
       textIcon,
       hiddenLabel,
       disabled,
+      inputHugeHasValue,
       valid,
       ...rest
     } = this.props;
@@ -65,7 +56,7 @@ class SprkTextareaCheck extends Component {
             type !== 'textarea' && leadingIcon.length > 0,
           'sprk-b-TextInput--has-text-icon': type !== 'textarea' && textIcon,
           'sprk-b-Input--has-floating-label':
-            hasValue && type === 'hugeTextInput',
+            (hasValue && type === 'hugeTextInput') || inputHugeHasValue,
           'sprk-b-InputContainer__input--has-icon-right': iconRight,
         })}
         type={type}
