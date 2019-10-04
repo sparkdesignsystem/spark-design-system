@@ -595,15 +595,15 @@
   description: ...
 - name: dollar
   viewBox: 0 0 64 64
-  description: US dollar symbol
+  description: US dollar symbol.
   filled: true
 - name: percent
   viewBox: 0 0 64 64
-  description: Percent symbol
+  description: Percent symbol.
   filled: true
 - name: multiple-pages
   viewBox: 0 0 64 64
-  description: Indicates multiple pages
+  description: Indicates multiple pages.
 - name: rotate-page
   viewBox: 0 0 42.09 56.18
-  description: Indicates an action for rotating a page
+  description: Indicates an action for rotating a page.
