@@ -11,14 +11,14 @@ import {
 })
 export class SprkInputDirective implements OnInit {
   constructor(public ref: ElementRef) {}
-
+  
   @HostListener('change', ['$event'])
   OnChange($event) {
     const value = (this.ref.nativeElement as HTMLInputElement).value;
     if (value.length > 0) {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput--float-label');
+      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
     } else {
-      this.ref.nativeElement.classList.remove('sprk-b-TextInput--float-label');
+      this.ref.nativeElement.classList.remove('sprk-b-Input--has-floating-label');
     }
   }
 
@@ -32,6 +32,9 @@ export class SprkInputDirective implements OnInit {
       this.ref.nativeElement.classList.add('sprk-b-TextInput');
     }
 
+    if ((this.ref.nativeElement as HTMLInputElement).value.length > 0 ) {
+      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
+    }
     this.ref.nativeElement.classList.add('sprk-u-Width-100');
   }
 }

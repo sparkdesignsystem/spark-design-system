@@ -13,6 +13,9 @@
 - name: patterns.components.inputs.select
 - name: patterns.components.inputs.select-error
 - name: patterns.components.inputs.select-disabled
+- name: patterns.components.inputs.select-huge
+- name: patterns.components.inputs.select-huge-error
+- name: patterns.components.inputs.select-huge-disabled
 - name: patterns.components.inputs.textarea
 - name: patterns.components.inputs.textarea-error
 - name: patterns.components.inputs.textarea-disabled
@@ -28,6 +31,9 @@
 - name: patterns.components.inputs.monetary
 - name: patterns.components.inputs.monetary-error
 - name: patterns.components.inputs.monetary-disabled
+- name: patterns.components.inputs.percentage
+- name: patterns.components.inputs.percentage-error
+- name: patterns.components.inputs.percentage-disabled
 - name: patterns.components.inputs.password
 - name: patterns.components.inputs.password-error
 - name: patterns.components.inputs.password-disabled
@@ -41,7 +47,3 @@
 - name: patterns.components.inputs.date
 - name: patterns.components.inputs.date-error
 - name: patterns.components.inputs.date-disabled
-
-
-
-

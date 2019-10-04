@@ -7,11 +7,13 @@ contents:
   Checkboxes: inputs.html#checkboxes
   Radio Buttons: inputs.html#radio-buttons
   Select Box: inputs.html#select-box
+  Huge Select Box: inputs.html#select-box-huge
   Textarea Input: inputs.html#textarea
   SSN Input: inputs.html#ssn-input
   Search Input: inputs.html#search-input
   Inline Search Input: inputs.html#inline-search-input
   Money Input: inputs.html#monetary-input
+  Percentage Input: inputs.html#percentage-input
   Password Input: inputs.html#password-input
   Helper Text: inputs.html#helper-text
   Phone Number: inputs.html#phone-number-input
@@ -61,6 +63,9 @@ variableTable:
   $sprk-input-container-huge-max-width:
     default: 37.5rem
     description: The value used as a maximum width for huge input containers.
+  $sprk-input-container-narrow-max-width:
+    default: 6.5rem
+    description: The value used for the maximum width of an icon container using the .sprk-b-InputContainer__icon-container--narrow modifier.
   $sprk-text-input-font-family:
     default: $sprk-font-family-body-two
     description: The font family to use for inputs.
@@ -88,21 +93,27 @@ variableTable:
   $sprk-text-input-border-radius:
     default: 4px
     description: The border radius to use for text input elements.
-  $sprk-text-input-huge-border-width:
+  $sprk-input-huge-border-width:
     default: 2px
-    description: The border width around huge text input elements.
-  $sprk-text-input-huge-focus-border-width:
+    description: The border width around huge input elements.
+  $sprk-input-huge-focus-border-width:
     default: 2px
-    description: The border radius to use for huge text input elements when it's focused.
+    description: The border radius to use for huge input elements when it's focused.
+  $sprk-input-huge-label-padding:
+    default: 0 ($sprk-space-misc-a + $sprk-input-huge-border-width)
+    description: The padding for the huge input label.
   $sprk-text-input-box-shadow:
     default: none
     description: The box shadow to use for text input elements.
   $sprk-text-input-padding:
     default: 12px 13px
     description: The padding inside of text input elements.
-  $sprk-text-input-huge-padding:
+  $sprk-input-huge-padding:
     default: 0 $sprk-space-misc-a
-    description: The padding inside of huge text input elements.
+    description: The padding inside of huge input elements.
+  $sprk-select-input-huge-padding-right:
+    default: 45px
+    description: The padding right for huge select inputs.
   $sprk-text-input-focus-border-color:
     default: $sprk-green
     description: The border color when input elements receive focus.
@@ -130,51 +141,51 @@ variableTable:
   $sprk-text-input-transition:
     default: border-color 0.15s ease
     description: The transition applied to text input elements.
-  $sprk-text-input-huge-transition:
+  $sprk-input-huge-transition:
     default: top 0.3s, color 0.3s, font-size 0.3s
-    description: The transition applied to huge text input elements.
-  $sprk-text-input-huge-transition-delay:
+    description: The transition applied to huge input elements.
+  $sprk-input-huge-transition-delay:
     default: 0s
-    description: The transition delay applied to huge text input elements.
-  $sprk-text-input-huge-placeholder-transition-delay:
+    description: The transition delay applied to huge input elements.
+  $sprk-input-huge-placeholder-transition-delay:
     default: 100ms
-    description: Transition delay for the placeholder on huge text input elements when the input is focused.
-  $sprk-text-input-huge-placeholder-transition-property:
+    description: Transition delay for the placeholder on huge input elements when the input is focused.
+  $sprk-input-huge-placeholder-transition-property:
     default: opacity
-    description: Transition delay property for the placeholder on huge text input elements when the input is focused.
-  $sprk-text-input-huge-placeholder-opacity:
+    description: Transition delay property for the placeholder on huge input elements when the input is focused.
+  $sprk-input-huge-placeholder-opacity:
     default: 0
-    description: The default opacity applied to the huge text input placeholders.
-  $sprk-text-input-huge-placeholder-active-opacity:
+    description: The default opacity applied to the huge input placeholders.
+  $sprk-input-huge-placeholder-active-opacity:
     default: 1
-    description: The opacity applied to the placeholder when the huge text input is in focus.
-  $sprk-text-input-huge-label-top:
-    default: $sprk-text-input-huge-height/3
-    description: Top positioning for the label on huge text inputs.
-  $sprk-text-input-huge-label-active-top:
+    description: The opacity applied to the placeholder when the huge input is in focus.
+  $sprk-input-huge-label-top:
+    default: $sprk-input-huge-height/3
+    description: Top positioning for the label on huge inputs.
+  $sprk-input-huge-label-active-top:
     default: 10px
-    description: Top positioning for the label on huge text inputs when input is in focus.
-  $sprk-text-input-huge-active-padding-top: 
-    default: $sprk-text-input-huge-height/4
-    description: Padding-top for huge text inputs when input is in focus.
-  $sprk-text-input-huge-focus-label-color:
+    description: Top positioning for the label on huge inputs when input is in focus.
+  $sprk-input-huge-active-padding-top:
+    default: $sprk-input-huge-height/4
+    description: Padding-top for huge inputs when input is in focus.
+  $sprk-input-huge-focus-label-color:
     default: $sprk-green
-    description: Label color for huge text inputs when input is in focus.
-  $sprk-text-input-huge-error-focus-label-color:
+    description: Label color for huge inputs when input is in focus.
+  $sprk-input-huge-error-focus-label-color:
     default: $sprk-black
-    description: Label color for huge text inputs when input is in focus and there is an error.
-  $sprk-text-input-huge-complete-label-color: 
+    description: Label color for huge inputs when input is in focus and there is an error.
+  $sprk-input-huge-complete-label-color:
     default: $sprk-black
-    description: Label color for huge text inputs when input is in focus and there is a value present or no placeholder is shown.
-  $sprk-text-input-huge-height:
+    description: Label color for huge inputs when input is in focus and there is a value present or no placeholder is shown.
+  $sprk-input-huge-height:
     default: 64px
-    description: The height of the huge text input.
-  $sprk-text-input-huge-font-size:
+    description: The height of the huge input.
+  $sprk-input-huge-font-size:
     default: $sprk-font-size-display-five
-    description: The font-size of the huge text input.
-  $sprk-text-input-huge-label-font-size:
+    description: The font-size of the huge input.
+  $sprk-input-huge-label-font-size:
     default: $sprk-font-size-body-four
-    description: The font-size of the huge text input label.
+    description: The font-size of the huge input label.
   $sprk-select-appearance:
     default: none
     description: The value set to the appearance property of select elements.
@@ -332,7 +343,7 @@ variableTable:
     default: 0 4px 16px rgba(51, 51, 51, 0.1)
     description: The box shadow applied to the datepicker modal.
   $sprk-date-picker-font-size:
-    default: 0.9375rem
+    default: 1rem
     description: The font size used for the datepicker modal.
   $sprk-date-picker-font-family:
     default: sprk-font-family-body-two
@@ -411,7 +422,7 @@ variableTable:
     description: The Y offset of icons inside input elements.
   $sprk-input-huge-icon-offset-y:
     default: $sprk-space-misc-a
-    description: The Y offset of icons inside the huge text input elements.
+    description: The Y offset of icons inside the huge input elements.
   $sprk-text-input-has-icon-padding:
     default: 12px 13px 12px 40px
     description: The padding inside input elements that contain icons.
@@ -420,7 +431,7 @@ variableTable:
     description: The z-index applied to the icon inside input elements.
   $sprk-input-huge-icon-offset-top:
     default: 50%
-    description: 
+    description:
   $sprk-input-text-icon-offset-x:
     default: $sprk-space-m
     description: The X offset of text icons inside input elements.
@@ -434,11 +445,17 @@ variableTable:
     default: 700
     description: The font weight of text icons inside input elements.
   $sprk-text-input-has-text-icon-padding:
-    default: 12px 13px 12px 37px
+    default: 0 0 1px 37px;
     description: The padding inside input elements that contain text icons.
   $sprk-text-input-huge-has-text-icon-padding:
     default: 0 40px
     description:
+  $sprk-input-has-icon-right-top:
+    default: 38px
+    description: The top offset of the icon displayed on the right side of inputs.
+  $sprk-input-has-icon-right-left:
+    default: 71px
+    description: The left offset of the icon displayed on the right side of inputs.
   $sprk-input-text-icon-z-index:
     default: $sprk-layer-height-xs
     description: The z-index applied to the text icon.
@@ -478,8 +495,6 @@ classTable:
     description: Text inputs that have a value.
   .sprk-b-TextInput--focusin:
     description: Text inputs that are currently in focus.
-  .sprk-b-Label--with-icon:
-    description: Labels that have an icon in them.
   .sprk-b-Label--monetary:
     description: For labels on monetary inputs.
   .sprk-b-Select--error:
@@ -490,7 +505,13 @@ classTable:
     description: Selects that are currently not in focus.
   .sprk-b-TextInputIconContainer--has-text-icon:
     description: Text inputs with icons.
-  .sprk-b-TextInput--float-label:
-    description: Trigger the floating label state on huge text inputs.
+  .sprk-b-Input--has-floating-label:
+    description: Trigger the floating label state on huge inputs.
   .sprk-b-TextInput--label-hidden:
-    description: Adjust styling and hide label on huge text inputs.
+    description: Adjust styling and hide label on huge inputs.
+  .sprk-b-InputContainer__icon-container--narrow:
+    description: Limits the max-width of the input icon container.
+  .sprk-b-InputContainer__icon--right:
+    description: For a SVG icon inside of input that is positioned to the right.
+  .sprk-b-InputContainer__input--has-icon-right:
+    description: For an input that contains a SVG that is positioned to the right.

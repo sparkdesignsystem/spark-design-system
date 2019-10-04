@@ -38,6 +38,12 @@ import {
   bindUIEvents as bindSSNInputUIEvents,
 } from './base/ssnInput';
 import {
+  hugeInput,
+  hugeInput as hugeTextInput,
+  bindUIEventsHugeInput,
+  bindUIEvents as bindUIEventsHugeInputOld,
+} from './base/hugeInput';
+import {
   alerts,
   dismissAlert,
   bindUIEvents as bindAlertUIEvents,
@@ -106,6 +112,8 @@ import setValidTextInput from './utilities/validation/setValidTextInput';
 import setValidTick from './utilities/validation/setValidTick';
 import runValidation from './utilities/validation/validation-runner';
 import detectJS from './utilities/detectJS';
+import addClassIfNotEmpty from './utilities/addClassIfNotEmpty';
+import toggleClassWithValue from './utilities/toggleClassWithValue';
 import {
   getFocusableEls,
   focusFirstEl,
@@ -229,4 +237,10 @@ export {
   scrollYDirection,
   checkScrollDirection,
   toggleMenu,
+  hugeTextInput,
+  hugeInput,
+  bindUIEventsHugeInput,
+  bindUIEventsHugeInputOld,
+  addClassIfNotEmpty,
+  toggleClassWithValue,
 };

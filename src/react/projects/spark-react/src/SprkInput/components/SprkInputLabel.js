@@ -2,18 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
-const SprkInputLabel = ({
-  id,
-  leadingIcon,
-  hiddenLabel,
-  label,
-}) => {
+const SprkInputLabel = ({ id, hiddenLabel, label, disabled }) => {
   return (
     <label
       htmlFor={id}
       className={classNames('sprk-b-Label', {
-        'sprk-b-Label--with-icon': leadingIcon.length > 0,
         'sprk-u-ScreenReaderText': hiddenLabel,
+        'sprk-b-Label--disabled': disabled,
       })}
     >
       {label}
@@ -22,8 +17,9 @@ const SprkInputLabel = ({
 };
 
 SprkInputLabel.propTypes = {
+  disabled: propTypes.bool,
+  hiddenLabel: propTypes.bool,
   label: propTypes.string,
-  leadingIcon: propTypes.string,
   id: propTypes.string,
 };
 

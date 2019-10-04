@@ -3,7 +3,7 @@ description:
 information:
   - There are three custom configurations that you must do in order for the Masthead's narrow navigation to work properly (see below restrictions).
   - The Masthead is "sticky" and content will flow under it.
-  - Vanilla Implementation Only - On narrow viewports when a user scrolls down the page, the masthead will become hidden. When the user scrolls back up towards the top of the page, the masthead will come back into view.
+  - On narrow viewports when a user scrolls down the page, the masthead will become hidden. When the user scrolls back up towards the top of the page, the masthead will come back into view.
   - All content used here is placeholder content. Please use your own logo, content, and hrefs.
   - Make sure you leave the 'data-sprk-masthead' attribute on the main Masthead element as it functions as a Spark JS hook. It's already included in the provided code.
 restrictions:

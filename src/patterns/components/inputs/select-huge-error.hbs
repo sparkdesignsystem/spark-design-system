@@ -1,0 +1,24 @@
+---
+name: Select Box Huge - Error State
+description:
+  This select input is larger than the default select input and the design is consistent with the huge text input.
+information:
+  - If a select will have a value on page load then add the class of 'sprk-b-Input--has-floating-label' to the select.
+    Spark JS will check for a value in the select and float the label by adding the class on page load if the class is not there.
+  - If a blank default option (a not required select) is desired then remove the 'disabled' and 'hidden' attributes
+    from the first option in the select. This will allow users to select a blank first option.
+restrictions:
+  - The first option element inside the select must be empty and have the 'selected' attribute.
+  - This should only be used in a form that displays one input at a time.
+  - The select element must come before the label element.
+  - Labels cannot be long in length as they must fit inside the select. They should not wrap onto a second line.
+invisible: true
+order: 11
+hasAngularCode: true
+hasReactCode: true
+---
+
+{{#embed "patterns.components.inputs.select-huge"
+         idattr="select-error-huge"
+         class="sprk-b-Select--error"
+         errorMessage="There is an error on this field."}}{{/embed}}

@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "9.2.3",
+  "version": "9.3.0",
   "scripts": {
     "lint": "ng lint spark-angular",
     "test": "npm run set-version && ng test spark-angular --watch=false",
@@ -20,7 +20,7 @@
     "@angular/platform-browser": ">=7.0.0 < 9.0.0",
     "@angular/platform-browser-dynamic": ">=7.0.0 < 9.0.0",
     "@angular/router": ">=7.0.0 < 9.0.0",
-    "@sparkdesignsystem/spark": "^12.1.0",
+    "@sparkdesignsystem/spark": "^12.2.0",
     "tiny-date-picker": "^3.2.6"
   },
   "devDependencies": {
