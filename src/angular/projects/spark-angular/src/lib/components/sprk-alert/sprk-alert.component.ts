@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { dismissAlert } from '@sparkdesignsystem/spark';
 
 @Component({
   selector: 'sprk-alert',
@@ -82,6 +81,6 @@ export class SprkAlertComponent {
   }
 
   alertDismiss(event): void {
-    dismissAlert(event.currentTarget.parentElement);
+    this.visible = false;
   }
 }
