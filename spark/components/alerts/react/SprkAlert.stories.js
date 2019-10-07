@@ -15,7 +15,6 @@ export const defaultStory = () => (
   <SprkAlert
     onFocus={action('focus')}
     message={text('Message', 'This is an alert.')}
-    additionalClasses={text('additionalClasses', '') || undefined}
     iconNameDismiss={text('iconNameDismiss', '') || undefined}
     iconNameFail={text('iconNameFail', '') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
@@ -63,7 +62,6 @@ export const success = () => (
   <SprkAlert
     onFocus={action('focus')}
     message={text('Message', 'This is a success message.')}
-    additionalClasses={text('additionalClasses', '') || undefined}
     iconNameDismiss={text('iconNameDismiss', '') || undefined}
     iconNameFail={text('iconNameFail', '') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
@@ -95,7 +93,6 @@ export const info = () => (
     iconNameFail={text('iconNameFail', '') || undefined}
     iconNameInfo={text('iconNameInfo', '') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    additionalClasses={text('additionalClasses', '') || undefined}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
     variant="info"
@@ -127,7 +124,6 @@ export const fail = () => (
     iconNameFail={text('iconNameFail', '') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
     iconNameInfo={text('iconNameInfo', '') || undefined}
-    additionalClasses={text('additionalClasses', '') || undefined}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
     variant="fail"
@@ -156,7 +152,6 @@ export const noDismissButton = () => (
     iconNameFail={text('iconNameFail', '') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
     iconNameInfo={text('iconNameInfo', '') || undefined}
-    additionalClasses={text('additionalClasses', '') || undefined}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', undefined)}
     variant="success"
