@@ -12,7 +12,6 @@ export default {
 };
 
 export const defaultStory = () => (
-  <>
   <SprkAlert
     onFocus={action('focus')}
     message={text('message','This is an Alert with no variant.')}
@@ -24,18 +23,6 @@ export const defaultStory = () => (
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
   />
-  <SprkAlert
-    onFocus={action('focus')}
-    message={text('message','This is an Alert with no variant.')}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    iconNameInfo={text('iconNameInfo', 'bell')}
-    onDismiss={action('onDismiss')}
-    isVisible={boolean('isVisible', true)}
-    isDismissible={boolean('isDismissible', true)}
-  />
-  </>
 );
 
 defaultStory.story = {
