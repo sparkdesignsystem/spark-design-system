@@ -12,19 +12,30 @@ export default {
 };
 
 export const defaultStory = () => (
+  <>
   <SprkAlert
     onFocus={action('focus')}
-    message={text('Message', 'This is an alert.')}
+    message={text('message','This is an Alert with no variant.')}
     iconNameDismiss={text('iconNameDismiss', '') || undefined}
     iconNameFail={text('iconNameFail', '') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
     iconNameInfo={text('iconNameInfo', 'bell')}
-    onDismiss={action('click')}
+    onDismiss={action('onDismiss')}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
-    idString={text('idString', 'alert-1')}
-    analyticsString={text('analyticsString', 'alert-1')}
   />
+  <SprkAlert
+    onFocus={action('focus')}
+    message={text('message','This is an Alert with no variant.')}
+    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    iconNameFail={text('iconNameFail', '') || undefined}
+    iconNameSuccess={text('iconNameSuccess', '') || undefined}
+    iconNameInfo={text('iconNameInfo', 'bell')}
+    onDismiss={action('onDismiss')}
+    isVisible={boolean('isVisible', true)}
+    isDismissible={boolean('isDismissible', true)}
+  />
+  </>
 );
 
 defaultStory.story = {
@@ -60,18 +71,13 @@ each instance has a unique data-id property
 
 export const success = () => (
   <SprkAlert
-    onFocus={action('focus')}
-    message={text('Message', 'This is a success message.')}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    iconNameInfo={text('iconNameInfo', '') || undefined}
-    onDismiss={action('click')}
+    variant="success"
+    message={text('message','This is a success message.')}
+    iconNameSuccess={text('iconNameSuccess', 'check-mark') || undefined}
+    iconNameDismiss={text('iconNameDismiss', 'close') || undefined}
+    onDismiss={action('onDismiss')}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
-    variant="success"
-    idString={text('idString', 'alert-2')}
-    analyticsString={text('analyticsString', 'alert-2')}
   />
 );
 
@@ -87,18 +93,13 @@ Success Alerts have a checkmark icon.
 
 export const info = () => (
   <SprkAlert
-    onFocus={action('focus')}
+    variant="info"
     message={text('Message', 'This is important information.')}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
     iconNameInfo={text('iconNameInfo', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
+    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    onDismiss={action('onDismiss')}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
-    variant="info"
-    onDismiss={action('click')}
-    idString={text('idString', 'alert-3')}
-    analyticsString={text('analyticsString', 'alert-3')}
   />
 );
 
@@ -114,21 +115,16 @@ client to read. Information Alerts have a Bell icon.
 
 export const fail = () => (
   <SprkAlert
-    onFocus={action('focus')}
-    onDismiss={action('click')}
+    variant="fail"
     message={text(
       'Message',
       'This is a failure message to alert that something was not successful.'
     )}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
     iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    iconNameInfo={text('iconNameInfo', '') || undefined}
+    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    onDismiss={action('onDismiss')}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
-    variant="fail"
-    idString={text('idString', 'alert-4')}
-    analyticsString={text('analyticsString', 'alert-4')}
   />
 );
 
@@ -139,33 +135,6 @@ fail.story = {
 These provide negative feedback to a
 user's action. Fail Alerts have an
 exclamation mark icon.
-    `,
-  },
-};
-
-export const noDismissButton = () => (
-  <SprkAlert
-    onFocus={action('focus')}
-    onDismiss={action('click')}
-    message={text('Message', 'This success alert has no dismiss button.')}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    iconNameInfo={text('iconNameInfo', '') || undefined}
-    isVisible={boolean('isVisible', true)}
-    isDismissible={boolean('isDismissible', undefined)}
-    variant="success"
-    idString={text('idString', 'alert-5')}
-    analyticsString={text('analyticsString', 'alert-5')}
-  />
-);
-
-noDismissButton.story = {
-  name: 'No Dismiss Button',
-  parameters: {
-    info: `
-Alerts can be used without the dismiss button.
-Here is a Success Alert that is not able to be dismissed.
     `,
   },
 };
