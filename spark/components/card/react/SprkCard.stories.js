@@ -78,11 +78,11 @@ teaser.story = {
   name: 'Teaser',
 };
 
-export const teaserWithDifferentElementOrder = () => (
+export const teaserWithTitleFirst = () => (
   <SprkCard
     idString="teaser-card-alt-order"
     variant="teaser"
-    teaserConfig={object('teaserConfig', {
+    teaserConfig={{
       bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
       cta: {
         ctaAnalytics: 'test',
@@ -100,12 +100,12 @@ export const teaserWithDifferentElementOrder = () => (
       },
       title: 'Teaser Card Title',
       titleFirst: true,
-    })}
+    }}
   />
 );
 
-teaserWithDifferentElementOrder.story = {
-  name: 'Teaser With Different Element Order',
+teaserWithTitleFirst.story = {
+  name: 'Teaser With Title First',
 };
 
 export const cardLayoutTwoUp = () => (
