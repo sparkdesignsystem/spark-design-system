@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text, object } from '@storybook/addon-knobs';
 import SprkCard from './SprkCard';
 
 export default {
@@ -9,7 +9,7 @@ export default {
 };
 
 export const defaultStory = () => (
-  <SprkCard idString="card-1" additionalContentClasses="sprk-o-Stack sprk-o-Stack--large">
+  <SprkCard idString="card-1">
     Base Card Content
   </SprkCard>
 );
@@ -20,11 +20,8 @@ defaultStory.story = {
 
 export const standout = () => (
   <SprkCard
-    isStandout
-    idString="card-20"
-    additionalContentClasses="
-          sprk-o-Stack
-          sprk-o-Stack--medium"
+    isStandout={boolean('isStandout', true)}
+    idString="card-2"
   >
     Standout Card Content
   </SprkCard>
@@ -36,14 +33,14 @@ standout.story = {
 
 export const highlightedHeader = () => (
   <SprkCard
-    idString="highlighted-header"
+    idString="card-highlighted-header"
     variant="highlightedHeader"
-    highlightedHeaderConfig={{
+    highlightedHeaderConfig={object('highlightedHeaderConfig',{
       bodyText:
         'Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi perpetua an pri, errem commune mea at, mei prima tantas signiferumque at. Numquam.',
       title: 'Card Title',
       description: 'Description',
-    }}
+    })}
   />
 );
 
@@ -53,9 +50,9 @@ highlightedHeader.story = {
 
 export const teaser = () => (
   <SprkCard
-    idString="card1"
+    idString="teaser-card"
     variant="teaser"
-    teaserConfig={{
+    teaserConfig={object('teaserConfig', {
       bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
       cta: {
         ctaAnalytics: 'test',
@@ -73,7 +70,7 @@ export const teaser = () => (
       },
       title: 'Teaser Card Title',
       titleFirst: false,
-    }}
+    })}
   />
 );
 
@@ -83,9 +80,9 @@ teaser.story = {
 
 export const teaserWithDifferentElementOrder = () => (
   <SprkCard
-    idString="card1"
+    idString="teaser-card-alt-order"
     variant="teaser"
-    teaserConfig={{
+    teaserConfig={object('teaserConfig', {
       bodyText: 'Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua.',
       cta: {
         ctaAnalytics: 'test',
@@ -103,7 +100,7 @@ export const teaserWithDifferentElementOrder = () => (
       },
       title: 'Teaser Card Title',
       titleFirst: true,
-    }}
+    })}
   />
 );
 
