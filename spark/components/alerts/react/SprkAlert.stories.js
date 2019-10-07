@@ -15,8 +15,8 @@ export const defaultStory = () => (
   <SprkAlert
     onFocus={action('focus')}
     message={text('message','This is an Alert with no variant.')}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
+    iconNameDismiss={text('iconNameDismiss', 'close') || undefined}
+    iconNameFail={text('iconNameFail', 'exclamation') || undefined}
     iconNameSuccess={text('iconNameSuccess', '') || undefined}
     iconNameInfo={text('iconNameInfo', 'bell')}
     onDismiss={action('onDismiss')}
@@ -82,8 +82,8 @@ export const info = () => (
   <SprkAlert
     variant="info"
     message={text('Message', 'This is important information.')}
-    iconNameInfo={text('iconNameInfo', '') || undefined}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    iconNameInfo={text('iconNameInfo', 'bell') || undefined}
+    iconNameDismiss={text('iconNameDismiss', 'close') || undefined}
     onDismiss={action('onDismiss')}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
@@ -107,8 +107,8 @@ export const fail = () => (
       'Message',
       'This is a failure message to alert that something was not successful.'
     )}
-    iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    iconNameFail={text('iconNameFail', 'exclamation') || undefined}
+    iconNameDismiss={text('iconNameDismiss', 'close') || undefined}
     onDismiss={action('onDismiss')}
     isVisible={boolean('isVisible', true)}
     isDismissible={boolean('isDismissible', true)}
