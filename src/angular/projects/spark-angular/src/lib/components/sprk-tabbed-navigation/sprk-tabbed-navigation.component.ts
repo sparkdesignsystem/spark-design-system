@@ -7,14 +7,6 @@ import {
   Input,
   QueryList
 } from '@angular/core';
-import {
-  advanceTab,
-  ariaOrientation,
-  getActiveTabIndex,
-  resetTabs,
-  retreatTab,
-  setActiveTab
-} from '@sparkdesignsystem/spark';
 import * as _ from 'lodash';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
@@ -53,13 +45,13 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
         );
       });
 
-      resetTabs(
+      this.resetTabs(
         this.tabs.map(tab => tab.ref.nativeElement),
         this.panels.map(panel => panel.ref.nativeElement),
         this.activeClass
       );
 
-      setActiveTab(
+      this.setActiveTab(
         $event.target,
         activePanel.ref.nativeElement,
         this.activeClass
@@ -69,7 +61,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
 
   @HostListener('window:resize')
   onResize() {
-    ariaOrientation(window.innerWidth, this.ref.nativeElement);
+    this.ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 
   @HostListener('keydown', ['$event'])
@@ -93,18 +85,20 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     const panelElements = this.panels.map(panel => panel.ref.nativeElement);
 
     if ($event.keyCode === keys.left || $event.keyCode === keys.up) {
-      retreatTab(tabElements, panelElements, this.activeClass);
+      this.retreatTab(tabElements, panelElements, this.activeClass);
     } else if ($event.keyCode === keys.right || $event.keyCode === keys.down) {
-      advanceTab(tabElements, panelElements, this.activeClass);
+      this.advanceTab(tabElements, panelElements, this.activeClass);
     } else if ($event.keyCode === keys.tab) {
       if ($event.target.getAttribute('role') === 'tab') {
         event.preventDefault();
-        panelElements[getActiveTabIndex(tabElements, this.activeClass)].focus();
+        panelElements[
+          this.getActiveTabIndex(tabElements, this.activeClass)
+        ].focus();
       }
     } else if ($event.keyCode === keys.home) {
-      setActiveTab(tabElements[0], panelElements[0], this.activeClass);
+      this.setActiveTab(tabElements[0], panelElements[0], this.activeClass);
     } else if ($event.keyCode === keys.end) {
-      setActiveTab(
+      this.setActiveTab(
         tabElements[tabElements.length - 1],
         panelElements[panelElements.length - 1],
         this.activeClass
@@ -149,7 +143,85 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  advanceTab(tabs, tabpanels, activeClass) {
+    const activeIndex = this.getActiveTabIndex(tabs, activeClass);
+    this.resetTabs(tabs, tabpanels, activeClass);
+
+    if (activeIndex + 1 <= tabs.length - 1) {
+      this.setActiveTab(
+        tabs[activeIndex + 1],
+        tabpanels[activeIndex + 1],
+        activeClass
+      );
+    } else {
+      this.setActiveTab(tabs[0], tabpanels[0], activeClass);
+    }
+  }
+
+  ariaOrientation(width, element) {
+    // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
+    if (width <= 736) {
+      element.setAttribute('aria-orientation', 'vertical');
+    } else {
+      element.setAttribute('aria-orientation', 'horizontal');
+    }
+  }
+
+  getActiveTabIndex(tabs, activeClass) {
+    let activeIndex = null;
+    tabs.forEach((tab, index) => {
+      if (
+        tab.classList.contains(activeClass || 'sprk-c-Tabs__button--active')
+      ) {
+        activeIndex = index;
+      }
+    });
+
+    return activeIndex;
+  }
+
+  resetTabs(tabs, tabpanels, activeClass) {
+    tabs.forEach(tab => {
+      tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
+      tab.removeAttribute('tabindex');
+      tab.setAttribute('aria-selected', 'false');
+      tabpanels.forEach(panel => {
+        panel.classList.add('sprk-u-HideWhenJs');
+      });
+    });
+  }
+
+  retreatTab(tabs, tabpanels, activeClass) {
+    const activeIndex = this.getActiveTabIndex(tabs, activeClass);
+
+    this.resetTabs(tabs, tabpanels, activeClass);
+
+    if (activeIndex - 1 === -1) {
+      this.setActiveTab(
+        tabs[tabs.length - 1],
+        tabpanels[tabs.length - 1],
+        activeClass
+      );
+    } else {
+      this.setActiveTab(
+        tabs[activeIndex - 1],
+        tabpanels[activeIndex - 1],
+        activeClass
+      );
+    }
+  }
+
+  setActiveTab(tab, tabpanel, activeClass) {
+    tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
+    tab.setAttribute('tabindex', '0');
+    tab.setAttribute('aria-selected', 'true');
+    if (tabpanel) {
+      tabpanel.classList.remove('sprk-u-HideWhenJs');
+    }
+    tab.focus();
+  }
+
   constructor(public ref: ElementRef) {
-    ariaOrientation(window.innerWidth, this.ref.nativeElement);
+    this.ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 }
