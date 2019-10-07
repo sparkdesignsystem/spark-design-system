@@ -1,5 +1,4 @@
 import { Component, Input, AfterViewInit, ElementRef } from '@angular/core';
-import { carousel } from '@sparkdesignsystem/spark';
 
 @Component({
   selector: 'sprk-carousel',
@@ -55,6 +54,10 @@ export class SprkCarouselComponent implements AfterViewInit {
 
   carouselInstance: object;
 
+  carousel(carouselElement): any {
+    // TODO: implement
+  }
+
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Carousel'];
 
@@ -69,6 +72,6 @@ export class SprkCarouselComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const carouselElement = this.ref.nativeElement;
-    this.carouselInstance = carousel(carouselElement);
+    this.carouselInstance = this.carousel(carouselElement);
   }
 }
