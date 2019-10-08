@@ -15,7 +15,7 @@ export const defaultStory = () => (
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
             <div class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--medium"></div>
+                <img src="https://spark-assets.netlify.com/spark-logo.svg" />
               </a>
             </div>
 
@@ -27,7 +27,7 @@ export const defaultStory = () => (
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
             <div class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--medium"></div>
+                <img src="https://spark-assets.netlify.com/spark-logo.svg" />
               </a>
             </div>
 
@@ -39,7 +39,7 @@ export const defaultStory = () => (
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
             <div class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--medium"></div>
+                <img src="https://spark-assets.netlify.com/spark-logo.svg" />
               </a>
             </div>
 
@@ -51,7 +51,7 @@ export const defaultStory = () => (
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
             <div class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#">
-                <div class="drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--medium"></div>
+                <img src="https://spark-assets.netlify.com/spark-logo.svg" />
               </a>
             </div>
 
@@ -222,13 +222,13 @@ export const defaultStory = () => (
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
             <div class="sprk-o-Stack__item">
               <a href="#">
-                <div class="drizzle-c-Logo-placeholder"></div>
+                <img src="https://spark-assets.netlify.com/spark-logo.svg" />
               </a>
             </div>
 
             <div class="sprk-o-Stack__item">
               <a href="#">
-                <div class="drizzle-c-Logo-placeholder"></div>
+                <img src="https://spark-assets.netlify.com/spark-logo.svg" />
               </a>
             </div>
           </div>
