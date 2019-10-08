@@ -1,0 +1,12 @@
+<script>
+  fetch('https://spark-assets.netlify.com/spark-core-icons.svg', {strictSSL: false})
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(svg) {
+    document.querySelector('#sprk-icons').innerHTML = svg;
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+</script>
