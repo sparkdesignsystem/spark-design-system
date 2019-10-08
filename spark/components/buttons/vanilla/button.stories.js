@@ -23,24 +23,26 @@ export const disabled = () => (
   '<button class="sprk-c-Button sprk-is-Disabled" data-id="button-1" disabled>Button</button>'
 );
 
-const withSpinner = () => (
-  '<button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner-1">Submit</button>'
+export const spinner = () => (
+  `
+  <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner-1">
+    <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
+  </button>
+  `
 );
-
-withSpinner.story = {
-  name: 'with spinner',
+spinner.story = {
+  name: 'Spinner',
 };
 
 export const fullWidthAtSmallViewport = () =>
   '<button class="sprk-c-Button sprk-c-Button--full@s" type="button" data-id="button-1">Button</button>';
-
 fullWidthAtSmallViewport.story = {
-  name: 'full width at small viewport',
+  name: 'Full Width at Small Viewport',
 };
 
 export const fullWidthAtExtraSmallViewport = () =>
   '<button class="sprk-c-Button sprk-c-Button--full@xs" type="button" data-id="button-90">Button</button>';
 
 fullWidthAtExtraSmallViewport.story = {
-  name: 'full width at extra small viewport',
+  name: 'Full Width at Extra Small Viewport',
 };
