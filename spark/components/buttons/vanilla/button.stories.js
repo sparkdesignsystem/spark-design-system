@@ -1,14 +1,12 @@
-import { withKnobs, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Components|Buttons',
-  decorators: [withKnobs],
 };
 
 export const primary = () => (
   `
     <button class="sprk-c-Button" data-id="button-1">
-      ${text('button text', 'Button')}
+      Button
     </button>
   `
 );
