@@ -1,9 +1,4 @@
 import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
-import {
-  handleTabKeydown,
-  resetTabs,
-  setActiveTab
-} from '@sparkdesignsystem/spark';
 
 @Component({
   selector: 'sprk-stepper',
@@ -28,6 +23,31 @@ export class SprkStepperComponent implements AfterViewInit {
   hasDarkBg: boolean;
 
   constructor(public ref: ElementRef) {}
+
+  resetTabs(tabs, tabpanels, activeClass) {
+    tabs.forEach(tab => {
+      tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
+      tab.removeAttribute('tabindex');
+      tab.setAttribute('aria-selected', 'false');
+      tabpanels.forEach(panel => {
+        panel.classList.add('sprk-u-HideWhenJs');
+      });
+    });
+  }
+
+  handleTabKeydown(e, steps, stepPanels, activeClass, sliderEl) {
+    // TODO: implement
+  }
+
+  setActiveTab(tab, tabpanel, activeClass) {
+    tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
+    tab.setAttribute('tabindex', '0');
+    tab.setAttribute('aria-selected', 'true');
+    if (tabpanel) {
+      tabpanel.classList.remove('sprk-u-HideWhenJs');
+    }
+    tab.focus();
+  }
 
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper'];
@@ -85,13 +105,13 @@ export class SprkStepperComponent implements AfterViewInit {
 
       stepTrigger.addEventListener('click', event => {
         event.preventDefault();
-        resetTabs(steps, stepPanels, activeClass, sliderEl);
-        setActiveTab(step, stepPanels[index], activeClass, sliderEl);
+        this.resetTabs(steps, stepPanels, activeClass);
+        this.setActiveTab(step, stepPanels[index], activeClass);
       });
     });
 
     this.ref.nativeElement.addEventListener('keydown', e => {
-      handleTabKeydown(e, steps, stepPanels, activeClass, sliderEl);
+      this.handleTabKeydown(e, steps, stepPanels, activeClass, sliderEl);
     });
   }
 
