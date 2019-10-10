@@ -6,7 +6,6 @@ import {
   AfterContentInit
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
-import { isElementVisible, scrollYDirection } from '@sparkdesignsystem/spark';
 import * as _ from 'lodash';
 
 @Component({
@@ -266,6 +265,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   scrollDirection = 'up';
   isHidden = false;
   isNarrowOnResize = false;
+  scrollPosition = 0;
 
   throttledCheckScrollDirection = _.throttle(this.checkScrollDirection, 500);
   throttledUpdateLayoutState = _.throttle(this.updateLayoutState, 500);
@@ -286,7 +286,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   // Handles when viewport size changes to large while narrow nav is hidden
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
-    this.isNarrowOnResize = isElementVisible('.sprk-c-Masthead__menu');
+    this.isNarrowOnResize = this.isElementVisible('.sprk-c-Masthead__menu');
     this.throttledUpdateLayoutState();
   }
 
@@ -302,11 +302,36 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   ngAfterContentInit() {
-    this.isNarrowLayout = isElementVisible('.sprk-c-Masthead__menu');
+    this.isNarrowLayout = this.isElementVisible('.sprk-c-Masthead__menu');
+  }
+
+  isElementVisible(selector) {
+    const element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
+    const elementDisplayValue = window.getComputedStyle(element).display;
+    const elementVisibilityValue = window.getComputedStyle(element).visibility;
+    const elementIsVisible =
+      elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
+        ? false
+        : true;
+    return elementIsVisible;
+  }
+
+  scrollYDirection() {
+    const newScrollPos = window.scrollY;
+    if (newScrollPos < 0) {
+      return;
+    }
+    const diff = newScrollPos - this.scrollPosition;
+    const direction = diff > 0 ? 'down' : 'up';
+    this.scrollPosition = newScrollPos;
+    return direction;
   }
 
   checkScrollDirection() {
-    const newDirection = scrollYDirection();
+    const newDirection = this.scrollYDirection();
     if (this.scrollDirection !== newDirection) {
       this.scrollDirection = newDirection;
       this.scrollDirection === 'down'
