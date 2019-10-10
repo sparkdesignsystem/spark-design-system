@@ -108,9 +108,7 @@ describe('SprkAlertComponent', () => {
     fixture.detectChanges();
     alertElement.querySelector('button').click();
     fixture.detectChanges();
-    expect(
-      alertElement.classList.contains('sprk-u-Display--none')
-    ).toBeTruthy();
+    expect(component.visible).toBe(false);
   });
 
   it('should add data-id when idString has a value', () => {
