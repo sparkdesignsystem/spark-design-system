@@ -21,7 +21,7 @@ export const secondary = () => (
 
 export const tertiary = () => (
   `
-    <button class="sprk-c-Button sprk-c-Button--tertiary" type="button" data-id="button-1">
+    <button class="sprk-c-Button sprk-c-Button--tertiary" type="button" data-id="button-2">
     Button
     </button>
   `
