@@ -6,9 +6,7 @@ import SprkAlert from './SprkAlert';
 export default {
   title: 'Components|Alerts',
   decorators: [withKnobs],
-  parameters: {
-    component: SprkAlert,
-  },
+  component: SprkAlert,
 };
 
 export const defaultStory = () => (

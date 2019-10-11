@@ -6,6 +6,7 @@ import SprkButton from '../../buttons/react/SprkButton';
 
 export default {
   title: 'Components|Dropdown',
+  component: SprkDropdown,
 };
 
 export const defaultStory = () => (

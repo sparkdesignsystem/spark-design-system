@@ -7,7 +7,7 @@ import SprkIcon from '../../../components/icons/react/SprkIcon';
 export default {
   title: 'Base|Links',
   decorators: [withKnobs],
-  parameters: { component: SprkLink },
+  component: SprkLink,
 };
 
 export const defaultStory = () => (

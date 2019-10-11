@@ -299,38 +299,47 @@ class SprkModal extends Component {
 }
 
 SprkModal.propTypes = {
-  // incoming children, body of the modal
+  /** Incoming children for the body of the modal. */
   children: PropTypes.node,
+  /** The modal heading text. */
   title: PropTypes.string,
+  /** The variant of the modal. */
   variant: PropTypes.oneOf(['wait', 'info', 'choice']),
-  // text of confirm CTA in choice modal
+  /** Text of confirm CTA in choice modal. */
   confirmText: PropTypes.string,
-  // text of cancel CTA in choice modal
+  /** Text of cancel CTA in choice modal. */
   cancelText: PropTypes.string,
-  // component renders as null if false
+  /** Sets whether the modal is displayed. */
   isVisible: PropTypes.bool,
-  // event for the confirm CTA in choice modal
+  /** Event for the confirm CTA in choice modal. */
   confirmClick: PropTypes.func,
-  // called by internal cancel function. Triggered by the cancel CTA in choice modal,
-  // clicking the X, clicking the Mask, or pressing Escape
+  /**
+   * Called by internal cancel function.
+   * Triggered by the cancel CTA in choice modal,
+   * clicking the X, clicking the Mask, or pressing Escape
+  */
   cancelClick: PropTypes.func,
-  // whether or not to automatically set focus on the last element that had focus
+  /**
+   * The value supplied determines if the modal will
+   * automatically set focus on the last
+   * element that had focus before the modal was opened.
+  */
   shouldReturnFocusOnClose: PropTypes.bool,
-  // classes to add to the class of the rendered element
+  /** Additional CSS classes to add to modal. */
   additionalClasses: PropTypes.string,
-  // mapped to data-analytics
+  /** Mapped to data-analytics */
   analyticsString: PropTypes.string,
-  // mapped to data-id for testing purposes
+  /** Mapped to data-id for testing purposes. */
   idString: PropTypes.string,
-  // the icon name to render the close icon
+  /** The name of the icon to use for the close button. */
   closeIcon: PropTypes.string,
-  // the string to pass to the CloseButton as analyticsString
+  /** The string to pass to the CloseButton as analyticsString */
   closeAnalyticsString: PropTypes.string,
-  // the string to pass to the mask as analyticsString
+  /** The string to pass to the modal mask to be used for the data-analytics attribute. */
   maskAnalyticsString: PropTypes.string,
-  // the string to pass to the modal footer for confirmAnalyticsString
+  /** The string to pass to the modal footer for the data-analytics attribute. */
   confirmAnalyticsString: PropTypes.string,
-  // the string to pass to the modal footer for cancelAnalyticsString
+  /** The string to pass to the modal footer for the data-analytics attribute. */
   cancelAnalyticsString: PropTypes.string,
 };
 
@@ -338,7 +347,7 @@ SprkModal.defaultProps = {
   variant: 'choice',
   confirmText: 'Confirm',
   cancelText: 'Cancel',
-  // Modals are typically hidden until invoked
+  /** Sets whether the modal is displayed. */
   isVisible: false,
   confirmClick: _.noop,
   cancelClick: _.noop,

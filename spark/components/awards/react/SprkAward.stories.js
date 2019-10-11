@@ -3,6 +3,7 @@ import SprkAward from './SprkAward';
 
 export default {
   title: 'Components|Award',
+  component: SprkAward,
 };
 
 export const defaultStory = () => (

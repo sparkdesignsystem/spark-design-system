@@ -4,6 +4,7 @@ import SprkHighlightBoard from './SprkHighlightBoard';
 
 export default {
   title: 'Components|Highlight Board',
+  component: SprkHighlightBoard,
 };
 
 export const defaultStory = () => (

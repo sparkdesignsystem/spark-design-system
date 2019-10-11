@@ -4,7 +4,7 @@ import SprkModal from './SprkModal';
 
 export default {
   title: 'Components|Modal',
-  parameters: { component: SprkModal },
+  component: SprkModal,
 };
 
 export const defaultStory = () => (

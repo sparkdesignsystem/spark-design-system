@@ -4,6 +4,7 @@ import SprkIcon from './SprkIcon';
 
 export default {
   title: 'Components|Icons',
+  component: SprkIcon,
 };
 
 export const amountMoney = () => (

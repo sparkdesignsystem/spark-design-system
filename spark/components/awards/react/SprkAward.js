@@ -84,35 +84,35 @@ SprkAward.propTypes = {
    * change to row from column for the images.
    */
   splitAt: PropTypes.string,
-  /** Additional CSS classes on main award container */
+  /** Additional CSS classes on main award container. */
   additionalClasses: PropTypes.string,
-  /** Heading text */
+  /** Heading text. */
   heading: PropTypes.string,
   idString: PropTypes.string,
-  /** The image data */
+  /** The image data. */
   images: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The link href for the image */
+      /** The link href for the image. */
       href: PropTypes.string,
-      /** Element to render, can be 'a' or Link */
+      /** Element to render, can be 'a' or Link. */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** The image src */
+      /** The image src. */
       src: PropTypes.string.isRequired,
-      /** The alt text for the image, icon, or SprkIcon */
+      /** The alt text for the image, icon, or SprkIcon. */
       alt: PropTypes.string.isRequired,
-      /** Additional classes for the image */
+      /** Additional classes for the image. */
       addClasses: PropTypes.string,
-      /** Additional classes for the link wrapping the image */
+      /** Additional classes for the link wrapping the image. */
       linkAddClasses: PropTypes.string,
-      /** String used for the data-analytics attribute */
+      /** String used for the data-analytics attribute. */
       analyticsString: PropTypes.string,
     }),
   ).isRequired,
-  /** The text rendered in the disclaimer */
+  /** The text rendered in the disclaimer. */
   disclaimerText: PropTypes.string,
-  /** Used for the data-analytics value on the title */
+  /** Used for the data-analytics value on the title. */
   disclaimerAnalytics: PropTypes.string,
-  /** The title text rendered in the disclaimer */
+  /** The title text rendered in the disclaimer. */
   disclaimerTitle: PropTypes.string,
 };
 

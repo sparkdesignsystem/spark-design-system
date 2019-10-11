@@ -39,11 +39,11 @@ class SprkAccordion extends Component {
 }
 
 SprkAccordion.propTypes = {
-  /** Value added to accordion container as additional classes */ 
+  /** Value added to accordion container as additional classes. */ 
   additionalClasses: PropTypes.string,
-  /** Expects SprkAccordionItem as children */ 
+  /** Expects SprkAccordionItem as children. */ 
   children: PropTypes.node.isRequired,
-  /** An optional id for automated testing */ 
+  /** An optional id for automated testing. */ 
   idString: PropTypes.string,
 };
 

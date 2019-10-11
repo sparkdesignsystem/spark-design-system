@@ -261,8 +261,7 @@ const additionalIcons = [
 export default {
   title: 'Components|Footer',
   decorators: [withKnobs],
-  parameters: { component: SprkFooter },
-
+  component: SprkFooter,
 };
 
 export const defaultStory = () => (

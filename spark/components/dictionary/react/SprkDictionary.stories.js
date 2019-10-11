@@ -4,6 +4,7 @@ import SprkDictionary from './SprkDictionary';
 
 export default {
   title: 'Components|Dictionary',
+  component: SprkDictionary,
 };
 
 export const defaultStory = () => (

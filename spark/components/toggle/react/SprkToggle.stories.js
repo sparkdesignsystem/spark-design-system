@@ -4,6 +4,7 @@ import SprkToggle from './SprkToggle';
 
 export default {
   title: 'Components|Toggle',
+  component: SprkToggle,
 };
 
 export const defaultStory = () => (

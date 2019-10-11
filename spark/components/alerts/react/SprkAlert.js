@@ -81,27 +81,27 @@ SprkAlert.propTypes = {
    * Determines whether to render the alert.
    */
   isVisible: PropTypes.bool,
-  /** The alert message that will be rendered inside the paragraph tab */
+  /** The alert message that will be rendered inside the paragraph tab. */
   message: PropTypes.string.isRequired,
-  /** The link variant that determines the class names */
+  /** The link variant that determines the class names. */
   variant: PropTypes.oneOf(['info', 'success', 'fail']),
-  /** The string to use for the data-id attribute */
+  /** The string to use for the data-id attribute. */
   idString: PropTypes.string,
-  /** Determines if the dismiss button is added */
+  /** Determines if the dismiss button is added. */
   isDismissible: PropTypes.bool,
-  /** The string to use for the data-analytics attribute on the close button */
+  /** The string to use for the data-analytics attribute on the close button. */
   analyticsString: PropTypes.string,
-  /** Any additional classes to add to the link */
+  /** Any additional classes to add to the link. */
   additionalClasses: PropTypes.string,
-  /** Function that is called when dismiss button is clicked */
+  /** Function that is called when dismiss button is clicked. */
   onDismiss: PropTypes.func,
-  /** The icon name for the fail alert */
+  /** The icon name for the fail alert. */
   iconNameFail: PropTypes.string,
-  /** The icon name for the dismiss button */
+  /** The icon name for the dismiss button. */
   iconNameDismiss: PropTypes.string,
-  /** The icon name for the info alert */
+  /** The icon name for the info alert. */
   iconNameInfo: PropTypes.string,
-  /** The icon name for the success alert */
+  /** The icon name for the success alert. */
   iconNameSuccess: PropTypes.string,
 };
 

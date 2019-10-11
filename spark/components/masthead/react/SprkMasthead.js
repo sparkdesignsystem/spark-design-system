@@ -229,11 +229,11 @@ class SprkMasthead extends Component {
 }
 
 SprkMasthead.propTypes = {
-  /** classes to be added to the masthead */
+  /** Classes to be added to the masthead. */
   additionalClasses: PropTypes.string,
-  /** assigned to data-analytics */
+  /** Assigned to data-analytics. */
   analyticsString: PropTypes.string,
-  /** array of link objects to use in building the big nav */
+  /** Array of link objects to use in building the big nav. */
   bigNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -246,9 +246,9 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  /** assigned to data-id */
+  /** Assigned to data-id. */
   idString: PropTypes.string,
-  /** array of link objects to use in building the little nav */
+  /** Array of link objects to use in building the little nav. */
   littleNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -261,7 +261,7 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  /** array of link objects to use in building the narrow nav */
+  /** Array of link objects to use in building the narrow nav. */
   narrowNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -274,7 +274,11 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  /** object containing an array of objects to use in building the narrow selector */
+  /**
+   * Object containing an array of
+   * objects to use in building
+   * the narrow selector.
+  */
   narrowSelector: PropTypes.shape({
     choiceFunction: PropTypes.func,
     footer: PropTypes.node,
@@ -288,7 +292,10 @@ SprkMasthead.propTypes = {
       }),
     ),
   }),
-  /** object containing an array of objects to use in building the selector */
+  /**
+   * Object containing an array of
+   * objects to use in building the selector.
+  */
   selector: PropTypes.shape({
     choiceFunction: PropTypes.func,
     footer: PropTypes.node,
@@ -302,17 +309,22 @@ SprkMasthead.propTypes = {
       }),
     ),
   }),
-  /** expects a component to render the logo */
+  /**
+   * Expects a component to render the logo.
+   */
   siteLogo: PropTypes.node,
-  /** an array containing components to render into the utility area */
+  /**
+   * An array containing components to
+   * render into the utility area.
+  */
   utilityContents: PropTypes.arrayOf(PropTypes.node),
-  /** the variant name to render */
+  /** The variant name to render. */
   variant: PropTypes.oneOf(['default', 'extended']),
-  /** the href to render for the logo link */
+  /** The href to render for the logo link. */
   logoLink: PropTypes.string,
-  /** the element link element to render for the logo */
+  /** The element link element to render for the logo. */
   logoLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  /** expects a component to render the nav link */
+  /** Expects a component to render the nav link. */
   navLink: PropTypes.node,
 };
 

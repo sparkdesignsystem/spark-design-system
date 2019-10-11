@@ -8,6 +8,7 @@ import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 export default {
   title: 'Components|Stepper',
   decorators: [withKnobs],
+  component: SprkStepper,
   parameters: {
   info: `
 This is some info about the Stepper

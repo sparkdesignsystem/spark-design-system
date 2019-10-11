@@ -5,6 +5,7 @@ import SprkButton from '../../../components/buttons/react/SprkButton';
 
 export default {
   title: 'Base|Tables',
+  component: SprkTable,
 };
 
 export const columnComparison = () => (
