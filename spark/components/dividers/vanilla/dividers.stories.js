@@ -17,7 +17,7 @@ export const asAHrElement = () => (
   `
     <hr
       class="sprk-c-Divider"
-      data-id="divider-1"
+      data-id="divider-2"
     >
   `
 );
