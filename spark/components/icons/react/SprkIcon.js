@@ -23,15 +23,15 @@ function SprkIcon({
 }
 
 SprkIcon.propTypes = {
-  // Classes added to the svg
+  /** Classes added to the svg. */
   additionalClasses: PropTypes.string,
-  // Incoming children
+  /** Incoming children. */
   children: PropTypes.node,
-  // The id of the symbol to use for the icon
+  /** The id of the symbol to use for the icon. */
   iconName: PropTypes.string.isRequired,
-  // Assigned to data-id
+  /** Assigned to data-id. */
   idString: PropTypes.string,
-  // The viewbox of the svg containing the symbol
+  /** The viewbox of the svg containing the symbol. */
   viewBox: PropTypes.string,
 };
 

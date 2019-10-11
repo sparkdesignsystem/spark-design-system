@@ -5,6 +5,7 @@ import SprkListItem from './SprkListItem';
 
 export default {
   title: 'Base|Lists',
+  component: SprkList,
 };
 
 export const unordered = () => (

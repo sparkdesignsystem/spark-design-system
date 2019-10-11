@@ -5,6 +5,7 @@ import SprkStackItem from './SprkStackItem';
 
 export default {
   title: 'Objects|Stack',
+  component: SprkStack,
 };
 
 export const defaultStory = () => (

@@ -189,51 +189,70 @@ const SprkPromo = (props) => {
 };
 
 SprkPromo.propTypes = {
-  // The children that will be rendered inside the content portion of the promo
+  /**
+   * The children that will
+   * be rendered inside the content portion
+   * of the promo.
+  */
   children: PropTypes.node,
-  // The text to appear in the title section
-  title: PropTypes.string,
-  // The text to appear in the subtitle section
+  /** The text to appear in the subtitle section. */
   subtitle: PropTypes.string,
-  // Any additional classes (space-delimited string) to apply to the root
-  // element of the Promo
+  /**
+   * Any additional classes (space-delimited string) to apply to the root
+   * element of the Promo.
+  */
   additionalClasses: PropTypes.string,
-  // Any additional classes (space-delimited string) to apply to the content
-  // element of the Promo
+  /**
+   * Any additional classes
+   * (space-delimited string) to
+   * apply to the content
+   * element of the Promo.
+  */
   additionalClassesContent: PropTypes.string,
-  // The type of element to use for the Promo Call-to-Action. If this property
-  // is omitted, no Call-to-Action will be rendered.
+  /**
+   * The type of element to use
+   * for the Promo Call-to-Action. If this property
+   * is omitted, no Call-to-Action will be rendered.
+  */
   cta: PropTypes.oneOf(['button', 'link']),
-  // The text to include in the Call-to-Action.
+  /** The text to include in the Call-to-Action. */
   ctaText: PropTypes.string,
-  // The URL to navigate to when the Call-to-Action is clicked.
+  /** The URL to navigate to when the Call-to-Action is clicked. */
   ctaHref: PropTypes.string,
-  // The string to use for the data-analytics attribute on the Call-to-Action
+  /** The string to use for the data-analytics attribute on the Call-to-Action */
   ctaAnalytics: PropTypes.string,
-  // The string to use for the data-id attribute on the Call-to-Action
+  /** The string to use for the data-id attribute on the Call-to-Action */
   ctaIdString: PropTypes.string,
-  // The source location of the Promo image. If this property is omitted, no
-  // image will be rendered.
+  /**
+   * The source location of the
+   * Promo image. If this property is omitted, no
+   * image will be rendered.
+  */
   imgSrc: PropTypes.string,
-  // The alt text property for the image
+  /** The alt text property for the image. */
   imgAlt: PropTypes.string,
-  // The URL to navigate to when the image is clicked.
+  /** The URL to navigate to when the image is clicked. */
   imgLinkHref: PropTypes.string,
-  // The string to use for the data-analytics attribute on the image link.
+  /** The string to use for the data-analytics attribute on the image link. */
   imgLinkAnalytics: PropTypes.string,
-  // The string to use for the data-id attribute on the image link.
+  /** The string to use for the data-id attribute on the image link. */
   imgLinkIdString: PropTypes.string,
-  // Any additional classes (space-delimited string) to apply to the image link.
+  /** Any additional classes (space-delimited string) to apply to the image link. */
   additionalClassesImgLink: PropTypes.string,
-  // The string to use for the data-id property on the root Promo element.
+  /** The string to use for the data-id property on the root Promo element. */
   idString: PropTypes.string,
-  // If provided, the Promo will render as the Flag variant.
+  /** If provided, the Promo will render as the Flag variant. */
   isFlag: PropTypes.bool,
-  // If provided, the Promo will be rendered in reverse horizontal order
-  // (content on the left, image on the right)
+  /**
+   * If provided, the Promo will be rendered
+   * in reverse horizontal order
+   * (content on the left, image on the right) .
+  */
   mediaRev: PropTypes.bool,
-  // If provided, the Promo will be rendered with the sprk-c-Promo--bordered
-  // class.
+  /**
+   * If provided, the Promo will be
+   * rendered with the sprk-c-Promo--bordered class.
+  */
   hasBorder: PropTypes.bool,
 };
 

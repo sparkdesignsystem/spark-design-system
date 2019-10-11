@@ -7,7 +7,7 @@ import SprkButton from './SprkButton';
 export default {
   title: 'Components|Buttons',
   decorators: [withKnobs],
-  parameters: { component: SprkButton },
+  component: SprkButton,
 };
 
 export const primary = () => (

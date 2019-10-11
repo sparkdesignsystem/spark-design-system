@@ -4,7 +4,7 @@ import SprkPagination from './SprkPagination';
 
 export default {
   title: 'Components|Pagination',
-  parameters: { component: SprkPagination },
+  component: SprkPagination,
 };
 
 export const defaultStory = () => (

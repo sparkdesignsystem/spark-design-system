@@ -111,33 +111,33 @@ const SprkHighlightBoard = (props) => {
 };
 
 SprkHighlightBoard.propTypes = {
-  // The source for the image - required if imgAlt is provided
+  /** The source for the image - required if imgAlt is provided. */ 
   imgSrc: PropTypes.string,
-  // The alt text for the image - required if imgSrc is provided
+  /** The alt text for the image - required if imgSrc is provided. */
   imgAlt: PropTypes.string,
-  // The heading text
+  /** The heading text. */ 
   heading: PropTypes.string,
-  // The text for the first CTA
+  /** The text for the first call-to-action. */
   ctaText: PropTypes.string,
-  // The href for the first CTA
+  /**  The href for the first call-to-action. */
   ctaHref: PropTypes.string,
-  // The data-analytics for the first CTA
+  /** The data-analytics for the first call-to-action. */
   ctaAnalytics: PropTypes.string,
-  // The data-id for the first CTA
+  /** The data-id for the first call-to-action. */
   ctaIdString: PropTypes.string,
-  // The text for the second CTA
+  /** The text for the second call-to-action. */
   ctaText2: PropTypes.string,
-  // The href for the second CTA
+  /** The href for the second call-to-action. */
   ctaHref2: PropTypes.string,
-  // The data-analytics for the second CTA
+  /** The data-analytics for the second call-to-action. */
   ctaAnalytics2: PropTypes.string,
-  // The data-id for the second CTA
+  /** The data-id for the second call-to-action. */
   ctaIdString2: PropTypes.string,
-  // The variant that determines the class names
+  /** The variant that determines the class names. */
   variant: PropTypes.oneOf(['noImage', 'stacked']),
-  // The string to use for the data-id attribute
+  /** The string to use for the data-id attribute. */
   idString: PropTypes.string,
-  // Any additional classes to add to the highlight board
+  /** Any additional classes to add to the highlight board. */
   additionalClasses: PropTypes.string,
 };
 

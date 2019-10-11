@@ -4,6 +4,7 @@ import SprkPromo from './SprkPromo';
 
 export default {
   title: 'Components|Promo',
+  component: SprkPromo,
 };
 
 export const defaultStory = () => (

@@ -214,11 +214,20 @@ class SprkStepper extends Component {
 }
 
 SprkStepper.propTypes = {
-  // If true, the Stepper will be rendered on a dark background
+  /**
+   * If true, the Stepper will be
+   * rendered on a dark background.
+  */
   hasDarkBackground: PropTypes.bool,
-  // A space-delimited list of additional CSS classes that should be applied to the Stepper.
+  /**
+   * A space-delimited list of additional CSS
+   * classes that should be applied to the Stepper.
+  */
   additionalClasses: PropTypes.string,
-  // The value supplied will be assigned to the data-id attribute on the Stepper.
+  /**
+   * The value supplied will be assigned
+   * to the data-id attribute on the Stepper.
+  */
   idString: PropTypes.string,
 };
 

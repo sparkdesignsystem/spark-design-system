@@ -73,21 +73,21 @@ SprkToggle.defaultProps = {
 };
 
 SprkToggle.propTypes = {
-  // The name of the icon to use in the toggle title
+  /** The name of the icon to use in the toggle title. */
   toggleIconName: PropTypes.string,
-  // The clickable title text
+  /** The clickable title text. */
   title: PropTypes.string.isRequired,
-  // The children of the tabs component (SprkTabsPanel)
+  /** The children of the tabs component (SprkTabsPanel). */
   children: PropTypes.node.isRequired,
-  // The data-id value for UI testing purposes
+  /** The data-id value for UI testing purposes. */
   idString: PropTypes.string,
-  // The data-analytics value
+  /** The data-analytics value. */
   analyticsString: PropTypes.string,
-  // A string of additional classes for the Tabs component
+  /** A string of additional classes for the Tabs component. */
   additionalClasses: PropTypes.string,
-  // Additional classes for the title text
+  /** Additional classes for the title text. */
   titleAddClasses: PropTypes.string,
-  // Additional classes for the toggle icon
+  /** Additional classes for the toggle icon. */
   iconAddClasses: PropTypes.string,
 };
 

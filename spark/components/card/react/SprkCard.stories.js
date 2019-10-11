@@ -5,7 +5,7 @@ import SprkCard from './SprkCard';
 export default {
   title: 'Components|Card',
   decorators: [withKnobs],
-  parameters: { component: SprkCard },
+  component: SprkCard,
 };
 
 export const defaultStory = () => (

@@ -195,33 +195,33 @@ const SprkPagination = (props) => {
 };
 
 SprkPagination.propTypes = {
-  // The pagination variant
+  /** The pagination variant type. */
   variant: PropTypes.oneOf(['default', 'pager']),
-  // The total number of items that the pagination component will page through
+  /** The total number of items that the pagination component will page through. */
   totalItems: PropTypes.number.isRequired,
-  // The number of items per page in the component
+  /** The number of items per page in the component. */
   itemsPerPage: PropTypes.number.isRequired,
-  // The current visible page of the component
+  /** The current visible page of the component. */
   currentPage: PropTypes.number,
-  // callback for handling changes.
+  /** The callback for handling changes. */
   onChangeCallback: PropTypes.func.isRequired,
-  // Any additional classes to include on the component
+  /** Any additional classes to include on the component. */
   additionalClasses: PropTypes.string,
-  // Screenreader text for the 'previous page' chevron
+  /** Screenreader text for the 'previous page' icon. */
   nextLinkText: PropTypes.string,
-  // Screenreader text for the 'next page' chevron
+  /** Screenreader text for the 'next page' icon. */
   prevLinkText: PropTypes.string,
-  // The data-analytics string for the individual page links
+  /** The data-analytics string for the individual page links. */
   analyticsStringPage: PropTypes.string,
-  // The data-analytics string for the 'previous page' link
+  /** The data-analytics string for the 'previous page' link. */
   analyticsStringNext: PropTypes.string,
-  // The data-analytics string for the 'next page' link
+  /** The data-analytics string for the 'next page' link. */
   analyticsStringPrev: PropTypes.string,
-  // The data-id string for the component
+  /** The data-id string for the component. */
   idString: PropTypes.string,
-  // the icon name to be rendered for the previous link
+  /** The icon name to be rendered for the previous link. */
   prevIcon: PropTypes.string,
-  // the icon name to be rendered for the next link
+  /** The icon name to be rendered for the next link. */
   nextIcon: PropTypes.string,
 };
 

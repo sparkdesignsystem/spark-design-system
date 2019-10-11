@@ -273,13 +273,13 @@ SprkTabs.defaultProps = {
 };
 
 SprkTabs.propTypes = {
-  // The children of the tabs component (SprkTabsPanel)
+  /** The children of the tabs component (SprkTabsPanel). */
   children: PropTypes.node.isRequired,
-  // The data-id value for UI testing purposes
+  /** The data-id value for UI testing purposes. */
   idString: PropTypes.string,
-  // A string of additional classes for the Tabs component
+  /** A string of additional classes for the Tabs component. */
   additionalClasses: PropTypes.string,
-  // Breakpoint for the aria-orientation switch from y to x
+  /** Breakpoint for the aria-orientation switch from y to x. */
   breakpoint: PropTypes.number,
 };
 

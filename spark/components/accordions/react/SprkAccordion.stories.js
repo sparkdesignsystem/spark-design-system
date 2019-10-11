@@ -5,7 +5,7 @@ import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem'
 
 export default {
   title: 'Components|Accordion',
-  parameters: { component: SprkAccordion },
+  component: SprkAccordion,
 };
 
 export const defaultStory = () => (
