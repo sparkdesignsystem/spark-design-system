@@ -789,7 +789,7 @@ export const landlineFilled = () => (
 export const landlineFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
-    <use xlink:href="#landline-filled" />
+    <use xlink:href="#landline-filled-small" />
   </svg>         
   `
 );
