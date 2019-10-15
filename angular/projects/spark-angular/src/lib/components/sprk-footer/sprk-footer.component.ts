@@ -100,7 +100,14 @@ import { Component, Input } from '@angular/core';
               >
                 <ul
                   *ngIf="socialLinks"
-                  class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare"
+                  class="
+                    sprk-o-Stack__item
+                    sprk-o-Stack__item--flex@m
+                    sprk-o-Stack
+                    sprk-o-Stack--split@xxs
+                    sprk-o-Stack--medium
+                    sprk-b-List
+                    sprk-b-List--bare"
                 >
                   <li
                     *ngFor="let item of socialLinks"
