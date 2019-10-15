@@ -7,7 +7,7 @@ export default {
 export const info = () => {
   useEffect(() => {
     alerts();
-  });
+  }, []);
 
   return `
     <div
