@@ -2,8 +2,24 @@ import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from "./storybook-spark-theme";
 
+const storyWrapper = templateFn => storyFn => {
+  const story = storyFn();
+  return {
+    ...story,
+    template: templateFn(story.template)
+  };
+};
+
+addDecorator(
+  storyWrapper(
+    storyContent => (
+      `<div class="sprk-o-Box">${ storyContent }<div>`
+    )
+  )
+);
+
 addDecorator(withA11y);
-// TODO: addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
+
 // Option defaults.
 addParameters({
   options: {
