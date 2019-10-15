@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { SprkLinkModule } from '../sprk-link/sprk-link.module';
+import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkCardComponent } from './sprk-card.component';
 
 describe('SparkCardComponent', () => {
@@ -9,7 +11,7 @@ describe('SparkCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, SprkLinkModule, SprkIconModule],
       declarations: [SprkCardComponent]
     }).compileComponents();
   }));

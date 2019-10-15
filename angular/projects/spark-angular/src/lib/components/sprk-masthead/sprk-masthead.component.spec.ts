@@ -140,15 +140,8 @@ describe('SprkMastheadComponent', () => {
     secondaryNavElement = fixture.nativeElement.querySelector(
       '.sprk-c-Masthead__big-nav-items'
     );
-    expect(secondaryNavElement.classList.toString()).toEqual(
-      'sprk-c-Masthead__big-nav-items' +
-      'sprk-o-Stack' +
-      'sprk-o-Stack--misc-a' +
-      'sprk-o-Stack--center-row' +
-      'sprk-o-Stack--split@xxs' +
-      'sprk-b-List' +
-      'sprk-b-List--bare'
-    );
+    expect(
+      secondaryNavElement.classList.length).toEqual(7);
   });
 
   it('should add the scroll class when state isScrolled is true', () => {
