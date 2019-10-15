@@ -5,7 +5,7 @@ export default {
 
 export const primary = () => (
   `
-    <button class="sprk-c-Button" data-id="button-1">
+    <button class="sprk-c-Button" data-id="button-primary">
       Button
     </button>
   `
@@ -13,7 +13,7 @@ export const primary = () => (
 
 export const secondary = () => (
   `
-    <button class="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-1">
+    <button class="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-secondary">
     Button
     </button>
   `
@@ -21,7 +21,7 @@ export const secondary = () => (
 
 export const tertiary = () => (
   `
-    <button class="sprk-c-Button sprk-c-Button--tertiary" type="button" data-id="button-2">
+    <button class="sprk-c-Button sprk-c-Button--tertiary" type="button" data-id="button-tertiary">
     Button
     </button>
   `
@@ -29,7 +29,7 @@ export const tertiary = () => (
 
 export const disabled = () => (
   `
-  <button class="sprk-c-Button sprk-is-Disabled" data-id="button-1" disabled>
+  <button class="sprk-c-Button sprk-is-Disabled" data-id="button-disabled" disabled>
     Button
   </button>
   `
@@ -37,7 +37,7 @@ export const disabled = () => (
 
 export const spinner = () => (
   `
-  <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner-1">
+  <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner">
     <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
   </button>
   `
@@ -48,7 +48,7 @@ spinner.story = {
 
 export const fullWidthAtSmallViewport = () => (
   `
-  <button class="sprk-c-Button sprk-c-Button--full@s" type="button" data-id="button-1">
+  <button class="sprk-c-Button sprk-c-Button--full@s" type="button" data-id="button-full-smv">
     Button
   </button>
   `
@@ -59,7 +59,7 @@ fullWidthAtSmallViewport.story = {
 
 export const fullWidthAtExtraSmallViewport = () => (
   `
-  <button class="sprk-c-Button sprk-c-Button--full@xs" type="button" data-id="button-90">
+  <button class="sprk-c-Button sprk-c-Button--full@xs" type="button" data-id="button-full-xsmv">
     Button
   </button>
   `
