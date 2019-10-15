@@ -11,8 +11,10 @@ const storyWrapper = templateFn => storyFn => {
 };
 
 addDecorator(
-  storyWrapper(storyContent => (
-    `<div class="sprk-o-Box">${ storyContent }<div>`)
+  storyWrapper(
+    storyContent => (
+      `<div class="sprk-o-Box">${ storyContent }<div>`
+    )
   )
 );
 
