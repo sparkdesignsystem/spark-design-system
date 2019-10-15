@@ -7,7 +7,8 @@
     "lint": "ng lint",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
     "storybook": "start-storybook -p 8006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "publish": "npm run build && cd dist/spark-angular && npm publish"
   },
   "private": true,
   "dependencies": {
