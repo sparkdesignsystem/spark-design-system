@@ -1,4 +1,6 @@
 .sprk-b-Select {
+  -webkit-appearance: $sprk-select-appearance;
+  -moz-appearance: $sprk-select-appearance;
   appearance: $sprk-select-appearance;
   border: $sprk-select-border;
   border-radius: $sprk-select-border-radius;
