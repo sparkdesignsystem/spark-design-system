@@ -96,7 +96,7 @@ it('renders ellipses with more than 3 pages', () => {
   expect(paginationItems.length).toBe(7); // < 1 ... 3 ... 5 >
   expect(paginationItems.find('a.sprk-c-Pagination__icon').length).toBe(2); // two chevrons
   expect(paginationItems.find('a.sprk-c-Pagination__link').length).toBe(3); // three pages
-  expect(paginationItems.findWhere(x => x.text() === '...').length).toBe(2); // two ellipses
+  expect(paginationItems.findWhere(x => x.type() === 'li' && x.text() === '...').length).toBe(2); // two ellipses
 });
 
 it('navigates back one page when you click the first chevron', () => {
@@ -142,7 +142,7 @@ it('goes to hard-coded page 1 when you click 1', () => {
       onChangeCallback={spyFunc}
     />,
   );
-  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.text() === '1').simulate('click');
+  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.type() === 'a' && x.text() === '1').simulate('click');
   // first param of the first call
   expect(spyFunc.mock.calls[0][0].newPage).toBe(1); // expect it to have "1" as arg.newPage
 });
@@ -156,7 +156,7 @@ it('goes to hard-coded page 2 when you click 2', () => {
       onChangeCallback={spyFunc}
     />,
   );
-  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.text() === '2').simulate('click');
+  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.type() === 'a' && x.text() === '2').simulate('click');
   // first param of the first call
   expect(spyFunc.mock.calls[0][0].newPage).toBe(2); // expect it to have "2" as arg.newPage
 });
@@ -170,7 +170,7 @@ it('goes to hard-coded page 3 when you click 3', () => {
       onChangeCallback={spyFunc}
     />,
   );
-  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.text() === '3').simulate('click');
+  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.type() === 'a' && x.text() === '3').simulate('click');
   // first param of the first call
   expect(spyFunc.mock.calls[0][0].newPage).toBe(3); // expect it to have "3" as arg.newPage
 });
