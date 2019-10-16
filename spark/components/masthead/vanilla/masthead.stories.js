@@ -1,14 +1,6 @@
 import { useEffect } from '@storybook/client-api';
-import {
-  masthead,
-  toggleMobileNav,
-  hideMobileNavs,
-  focusTrap,
-  bindUIEvents,
-  addClassOnScroll,
-  hideSelectorMask,
-  showSelectorMask,
-} from './masthead';
+import { masthead } from './masthead';
+import { toggle } from '../../toggle/vanilla/toggle';
 
 export default {
   title: 'Components|Masthead',
@@ -18,13 +10,7 @@ export default {
 export const defaultMasthead = () => {
   useEffect(() => {
     masthead();
-    toggleMobileNav();
-    // hideMobileNavs();
-    // focusTrap();
-    // bindUIEvents();
-    // addClassOnScroll();
-    // hideSelectorMask();
-    // showSelectorMask();
+    toggle();
   }, []);
   return `
     <header
