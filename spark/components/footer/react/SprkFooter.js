@@ -201,119 +201,122 @@ SprkFooter.defaultProps = {
 };
 
 SprkFooter.propTypes = {
-  // Additional CSS classes
+  /**
+  * Classes to add to the rendered element.
+  */
   additionalClasses: PropTypes.string,
+  /** Value for data-id for testing purposes. */
   idString: PropTypes.string,
-  // The data for the global site items
+  /**  The data for the global site items */
   globalItems: PropTypes.shape({
-    // The main heading for the global section
+    /** The main heading for the global section */
     heading: PropTypes.string,
-    // The global items
+    /** The global items */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        // The element to render for the global item's media
+        /** The element to render for the global item's media */
         mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
-        // Assigned to src attribute of the image
+        /** Assigned to src attribute of the image */
         src: PropTypes.string,
-        // Assigned to href
+        /** Assigned to href */
         mediaHref: PropTypes.string,
-        // The alt text for the image, icon, or SprkIcon
+        /**  The alt text for the image, icon, or SprkIcon */
         altText: PropTypes.string.isRequired,
-        // Additional classes for the media
+        /** Additional classes for the media */
         mediaAddClasses: PropTypes.string,
-        // The description of the image
+        /** The description of the image */
         description: PropTypes.string,
-        // The value for the data-analytics attribute
+        /** The value for the data-analytics attribute */
         analyticsString: PropTypes.string,
-        // Element to render, can be 'a' or Link
+        /** Element to render, can be 'a' or Link */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
     ),
   }),
-  // The data for the columns of site links
+  /** The data for the columns of site links */
   linkColumns: PropTypes.arrayOf(
     PropTypes.shape({
-      // The main heading for the column
+      /** The main heading for the column */
       heading: PropTypes.string,
-      // The links for each column
+      /**  The links for each column */
       links: PropTypes.arrayOf(
         PropTypes.shape({
-          // The link href
+          /**  The link href */
           href: PropTypes.string,
-          // The link text
+          /**  The link text */
           text: PropTypes.string,
-          // Element to render, can be 'a' or Link
+          /** Element to render, can be 'a' or Link */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-          // The value for the data-analytics attribute
+          /** The value for the data-analytics attribute */
           analyticsString: PropTypes.string,
         }),
       ),
     }),
   ),
-  // The icons to use in the connect section
+  /** The icons to use in the connect section */
   connectIcons: PropTypes.shape({
-    // The main heading for the section
+    /** The main heading for the section */
     heading: PropTypes.string,
-    // The icons
+    /** The icons */
     icons: PropTypes.arrayOf(
       PropTypes.shape({
-        // The link href for the icon
+        /** The link href for the icon */
         href: PropTypes.string,
-        // The name of the icon
+        /** The name of the icon */
         name: PropTypes.string,
-        // Text used for screen readers
+        /** Text used for screen readers */
         screenReaderText: PropTypes.string,
-        // String used for the data-analytics attribute
+        /** String used for the data-analytics attribute */
         analyticsString: PropTypes.string,
-        // Element to render, can be 'a' or Link
+        /** Element to render, can be 'a' or Link */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
     ),
   }),
-  // The awards section data
+  /** The awards section data */
   awards: PropTypes.shape({
     heading: PropTypes.string,
     images: PropTypes.arrayOf(
       PropTypes.shape({
-        // The link href for the image
+        /** The link href for the image */
         href: PropTypes.string,
-        // Element to render, can be 'a' or Link
+        /** Element to render, can be 'a' or Link */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        // The image src
+        /** The image src */
         src: PropTypes.string,
-        // The alt text for the image, icon, or SprkIcon
+        /** The alt text for the image, icon, or SprkIcon */
         altText: PropTypes.string.isRequired,
-        // Additional classes for the image
+        /** Additional classes for the image */
         addClasses: PropTypes.string,
-        // String used for the data-analytics attribute
+        /** String used for the data-analytics attribute */
         analyticsString: PropTypes.string,
       }),
     ),
-    // The text rendered in the disclaimer
+    /** The text rendered in the disclaimer */
     disclaimerText: PropTypes.string,
-    // Used for the data-analytics value on the title
+    /** Used for the data-analytics value on the title */
     disclaimerAnalytics: PropTypes.string,
-    // The title text rendered in the disclaimer
+    /** The title text rendered in the disclaimer */
     disclaimerTitle: PropTypes.string,
   }),
-  // Data used for additional icons at bottom of footer
+  /** Data used for additional icons at bottom of footer */
   additionalIcons: PropTypes.arrayOf(
     PropTypes.shape({
-      // The icon name
+      /** The icon name */
       name: PropTypes.string,
-      // The icon href
+      /** The icon href */
       href: PropTypes.string,
-      // Additional classes for the icon
+      /** Additional classes for the icon */
       addClasses: PropTypes.string,
-      // Text used for screen readers
+      /** Text used for screen readers */
       screenReaderText: PropTypes.string,
-      // Element to render, can be 'a' or Link
+      /** Element to render, can be 'a' or Link */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // String used for the data-analytics attribute
+      /** String used for the data-analytics attribute */
       analyticsString: PropTypes.string,
     }),
   ),
-  // The paragraphs, copyright info, etc
+  /** The paragraphs, copyright info, etc */
   paragraphs: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
