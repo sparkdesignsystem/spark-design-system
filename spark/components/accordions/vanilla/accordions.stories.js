@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { toggle } from '../../toggle/vanilla/toggle';
+import '../../../utilities/polyfills/vanilla/classListSVG';
 
 export default {
   title: 'Components|Accordion',
