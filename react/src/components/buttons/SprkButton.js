@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkSpinner from '../../spinners/react/SprkSpinner';
+import SprkSpinner from '../spinners/SprkSpinner';
 
 const SprkButton = ({
   additionalClasses,

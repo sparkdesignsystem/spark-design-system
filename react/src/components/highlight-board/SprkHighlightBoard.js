@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import warning from 'warning';
-import SprkButton from '../../buttons/react/SprkButton';
+import SprkButton from '../buttons/SprkButton';
 
 const SprkHighlightBoard = (props) => {
   const {
@@ -111,11 +111,11 @@ const SprkHighlightBoard = (props) => {
 };
 
 SprkHighlightBoard.propTypes = {
-  /** The source for the image - required if imgAlt is provided. */ 
+  /** The source for the image - required if imgAlt is provided. */
   imgSrc: PropTypes.string,
   /** The alt text for the image - required if imgSrc is provided. */
   imgAlt: PropTypes.string,
-  /** The heading text. */ 
+  /** The heading text. */
   heading: PropTypes.string,
   /** The text for the first call-to-action. */
   ctaText: PropTypes.string,

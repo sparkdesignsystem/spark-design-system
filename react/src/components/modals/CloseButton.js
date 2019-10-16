@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { noop } from 'lodash';
-import SprkIcon from '../../icons/react/SprkIcon';
+import noop from 'lodash/noop';
+import SprkIcon from '../icons/SprkIcon';
 
 class CloseButton extends Component {
   constructor(props) {

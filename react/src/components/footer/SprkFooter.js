@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { uniqueId } from 'lodash';
-import SprkIcon from '../../icons/react/SprkIcon';
+import uniqueId from 'lodash/uniqueid';
+import SprkIcon from '../icons/SprkIcon';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';

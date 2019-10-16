@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { uniqueId } from 'lodash';
-import SprkTabsPanel from './components/SprkTabsPanel';
-import SprkTabsButton from './components/SprkTabsButton';
+import uniqueId from 'lodash/uniqueid';
+import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
+import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 /*
 * This component expects SprkTabsPanel children.

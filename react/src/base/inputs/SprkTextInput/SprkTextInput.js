@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { uniqueId } from 'lodash';
+import uniqueId from 'lodash/uniqueid';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
-import SprkInputIconCheck from '../components/SprkInputIconCheck';
-import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck';
-import SprkTextAreaCheck from '../components/SprkTextareaCheck';
+import SprkInputIconCheck from '../components/SprkInputIconCheck/SprkInputIconCheck';
+import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLabelLocationCheck';
+import SprkTextAreaCheck from '../components/SprkTextareaCheck/SprkTextareaCheck';
 
 class SprkTextInput extends Component {
   constructor(props) {

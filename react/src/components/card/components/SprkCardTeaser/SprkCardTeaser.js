@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import SprkIcon from '../../../../icons/react/SprkIcon';
-import SprkButton from '../../../../buttons/react/SprkButton';
+import SprkIcon from '../../../icons/SprkIcon';
+import SprkButton from '../../../buttons/SprkButton';
 
 const SprkCardTeaser = (props) => {
   const { teaserConfig } = props;

@@ -5,7 +5,7 @@ import commonjs from "rollup-plugin-commonjs";
 // import replace from 'rollup-plugin-replace';
 
 export default {
-  input: './spark-exports-react.js',
+  input: './src/spark-exports-react.js',
   output: {
     file: './dist/index.js',
     format: 'es',
@@ -16,13 +16,9 @@ export default {
   },
 
   plugins: [
-    resolve({
-      customResolveOptions: {
-        moduleDirectory: './node_modules'
-      }
-    }),
+    resolve(),
     commonjs({
-      exclude: '../../**/**/react/**/*.js'
+      exclude: path.resolve(__dirname, 'src/**/*.js')
     }),
     babel({
       exclude: path.resolve(__dirname, './node_modules')

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { uniqueId } from 'lodash';
-import SprkLink from '../../../base/links/react/SprkLink';
-import SprkIcon from '../../icons/react/SprkIcon';
+import uniqueId from 'lodash/uniqueid';
+import SprkLink from '../../base/links/SprkLink';
+import SprkIcon from '../icons/SprkIcon';
 
 const SprkPagination = (props) => {
   const goToPage = (e, page) => {

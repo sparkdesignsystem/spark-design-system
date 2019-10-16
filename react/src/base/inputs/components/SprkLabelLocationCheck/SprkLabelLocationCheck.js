@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import SprkInputLabel from './SprkInputLabel';
+import SprkInputLabel from '../SprkInputLabel/SprkInputLabel';
 
 const SprkLabelLocationCheck = ({
   children,

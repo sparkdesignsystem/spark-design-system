@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import SprkIcon from '../../../../components/icons/react/SprkIcon';
+import SprkIcon from '../../../components/icons/SprkIcon';
 
 const SprkErrorContainer = ({
   additionalClasses,

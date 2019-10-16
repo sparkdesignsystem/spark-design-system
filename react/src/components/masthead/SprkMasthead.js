@@ -6,7 +6,7 @@ import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMasthead
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkLink from '../../base/links/SprkLink';
 import throttle from 'lodash/throttle';
 
 class SprkMasthead extends Component {

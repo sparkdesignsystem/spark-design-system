@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import propTypes from 'prop-types';
-import SprkIcon from '../../../../components/icons/react/SprkIcon';
+import SprkIcon from '../../../../components/icons/SprkIcon';
 
 const SprkInputIconCheck = ({
   children,
