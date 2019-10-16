@@ -11,7 +11,6 @@ export const choice = () => {
   });
 
   return `
-  <div data-sprk-main>
   <button
   class="sprk-c-Button"
   data-sprk-modal-trigger="exampleChoiceModal"
@@ -83,7 +82,6 @@ export const choice = () => {
   class="sprk-c-ModalMask sprk-u-Display--none"
   tabindex="-1"
  ></div>
- </div>
   `
 };
 
@@ -93,7 +91,6 @@ export const info = () => {
   });
 
   return `
-  <div data-sprk-main>
   <button
   class="sprk-c-Button"
   data-sprk-modal-trigger="exampleInfoModal"
@@ -145,7 +142,6 @@ data-id="modal-info-1"
  </div>
 </div>
 <div data-sprk-modal-mask="true" class="sprk-c-ModalMask sprk-u-Display--none" tabindex="-1"></div>
-</div>
   `
 };
 
@@ -174,7 +170,6 @@ export const wait = () => {
   });
 
   return `
-  <div data-sprk-main>
   <button
   class="sprk-c-Button"
   data-sprk-modal-trigger="exampleWaitModal"
@@ -217,6 +212,5 @@ export const wait = () => {
   class="sprk-c-ModalMask sprk-u-Display--none"
   tabindex="-1"
  ></div>
- </div>
   `
 };
