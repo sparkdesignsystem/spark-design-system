@@ -3,11 +3,62 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "storybook": {
+      "root": "./",
+      "sourceRoot": "./",
+      "projectType": "application",
+      "schematics": {
+        "component": {
+          "inlineStyle": true,
+          "inlineTemplate": true
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "./tsconfig.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "/assets/"
+              }
+            ],
+            "styles": [
+              "../spark/manifests/spark/_spark.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular:build"
+          }
+        }
+      }
+    },
     "spark-angular": {
       "projectType": "library",
       "root": "projects/spark-angular",
       "sourceRoot": "projects/spark-angular/src",
-      "prefix": "lib",
+      "prefix": "sprk",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -38,5 +89,5 @@
         }
       }
     }},
-  "defaultProject": "spark-angular"
+  "defaultProject": "storybook"
 }

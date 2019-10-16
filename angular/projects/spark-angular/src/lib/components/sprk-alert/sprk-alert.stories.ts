@@ -1,9 +1,9 @@
 import { SprkAlertModule } from './sprk-alert.module';
 
-export default { title: 'Components|Alerts' }
+export default { title: 'Components|Alerts' };
 
 const modules = {
-	imports: [SprkAlertModule],
+  imports: [SprkAlertModule],
 };
 
 export const info = () => ({

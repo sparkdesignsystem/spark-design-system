@@ -2,7 +2,7 @@
   "name": "spark-angular-workspace",
   "version": "0.0.0",
   "scripts": {
-    "build": "npm run set-version && ng build",
+    "build": "npm run set-version && ng build spark-angular",
     "test": "ng test",
     "lint": "ng lint",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
