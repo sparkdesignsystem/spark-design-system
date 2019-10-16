@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
 import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 class SprkMastheadLittleNav extends Component {

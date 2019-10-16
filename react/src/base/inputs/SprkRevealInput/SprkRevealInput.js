@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
 import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
 class SprkRevealInput extends Component {

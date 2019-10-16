@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import SprkLink from './SprkLink';
-import SprkIcon from '../../../components/icons/react/SprkIcon';
+import SprkIcon from '../../components/icons/SprkIcon';
 
 export default {
   title: 'Base|Links',

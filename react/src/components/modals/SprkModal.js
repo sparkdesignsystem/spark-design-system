@@ -4,7 +4,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
+import noop from 'lodash/noop';
 import SprkSpinner from '../spinners/SprkSpinner';
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';
@@ -349,8 +350,8 @@ SprkModal.defaultProps = {
   cancelText: 'Cancel',
   /** Sets whether the modal is displayed. */
   isVisible: false,
-  confirmClick: _.noop,
-  cancelClick: _.noop,
+  confirmClick: noop,
+  cancelClick: noop,
   shouldReturnFocusOnClose: true,
 };
 

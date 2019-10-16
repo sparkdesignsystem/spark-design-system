@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../../icons/SprkIcon';
 

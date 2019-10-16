@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkInputIconCheck from '../components/SprkInputIconCheck/SprkInputIconCheck';
 import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLabelLocationCheck';

@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkTextInput from './SprkTextInput';
-import SprkIcon from '../../../../components/icons/react/SprkIcon';
+import SprkIcon from '../../../components/icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 

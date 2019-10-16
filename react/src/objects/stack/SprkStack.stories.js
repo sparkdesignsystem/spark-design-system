@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SprkStack from './SprkStack';
-import SprkStackItem from './SprkStackItem';
+import SprkStackItem from './components/SprkStackItem/SprkStackItem';
 
 export default {
   title: 'Objects|Stack',

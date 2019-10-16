@@ -2,7 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 import SprkDropdown from './SprkDropdown';
-import SprkButton from '../../buttons/react/SprkButton';
+import SprkButton from '../buttons/SprkButton';
 
 export default {
   title: 'Components|Dropdown',

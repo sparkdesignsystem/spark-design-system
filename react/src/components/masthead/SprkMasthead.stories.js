@@ -1,9 +1,9 @@
 import React from 'react';
 
 import SprkMasthead from './SprkMasthead';
-import SprkButton from '../../buttons/react/SprkButton';
-import SprkLink from '../../../base/links/react/SprkLink';
-import SprkDropdown from '../../dropdown/react/SprkDropdown';
+import SprkButton from '../buttons/SprkButton';
+import SprkLink from '../../base/links/SprkLink';
+import SprkDropdown from '../dropdown/SprkDropdown';
 
 
 const links = [

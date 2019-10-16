@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkMastheadLittleNav from './SprkMastheadLittleNav';
-import SprkButton from '../../../../buttons/react/SprkButton';
+import SprkButton from '../../../buttons/SprkButton';
 import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 Enzyme.configure({ adapter: new Adapter() });

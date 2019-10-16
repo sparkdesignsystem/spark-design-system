@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SprkTable from './SprkTable';
-import SprkButton from '../../../components/buttons/react/SprkButton';
+import SprkButton from '../../components/buttons/SprkButton';
 
 export default {
   title: 'Base|Tables',

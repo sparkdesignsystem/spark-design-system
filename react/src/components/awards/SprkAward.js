@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
 import SprkToggle from '../toggle/SprkToggle';
 import SprkStack from '../../objects/stack/SprkStack';
 

@@ -13,4 +13,4 @@ addParameters({
   },
 });
 
-configure(require.context('../../spark', true, /\/react\/.*\.stories\.(js|ts|tsx|mdx)$/), module);
+configure(require.context('../src', true, /\.stories\.(js|ts|tsx|mdx)$/), module);

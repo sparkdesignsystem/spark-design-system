@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import uniqueId from 'lodash/uniqueid';
+import uniqueId from 'lodash/uniqueId';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
