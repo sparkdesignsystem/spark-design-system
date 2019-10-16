@@ -3,12 +3,12 @@ import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import '../../../utilities/testing/react/windowStubs';
+import '../../utilities/testing/windowStubs';
 import SprkMasthead from './SprkMasthead';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
-import SprkLink from '../../../base/links/react/SprkLink';
+import SprkLink from '../../base/links/SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 

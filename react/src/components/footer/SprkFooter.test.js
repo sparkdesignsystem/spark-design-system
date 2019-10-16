@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkFooter from './SprkFooter';
-import SprkIcon from '../../icons/react/SprkIcon';
+import SprkIcon from '../icons/SprkIcon';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';

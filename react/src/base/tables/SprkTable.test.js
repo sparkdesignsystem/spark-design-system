@@ -1,7 +1,7 @@
 /* global Enzyme Adapter shallow mount */
 import React from 'react';
 import SprkTable from './SprkTable';
-import SprkButton from '../../../components/buttons/react/SprkButton';
+import SprkButton from '../../components/buttons/SprkButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
