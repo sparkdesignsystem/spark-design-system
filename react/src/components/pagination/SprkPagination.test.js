@@ -184,7 +184,7 @@ it('goes to last page when you click last page', () => {
       onChangeCallback={spyFunc}
     />,
   );
-  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.text() === '9').simulate('click');
+  wrapper.findWhere((x) => {return x.type() == "a" && x.text() === "9"}).simulate('click');
   // first param of the first call
   expect(spyFunc.mock.calls[0][0].newPage).toBe(9); // expect it to have "9" as arg.newPage
 });
@@ -199,7 +199,7 @@ it('goes to page X when you click X', () => {
       onChangeCallback={spyFunc}
     />,
   );
-  wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.text() === '3').simulate('click');
+  wrapper.findWhere((x) => { return x.type() == "a" && x.text() === "3"}).simulate('click');
   // first param of the first call
   expect(spyFunc.mock.calls[0][0].newPage).toBe(3); // expect it to have "3" as arg.newPage
 });
