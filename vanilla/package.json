@@ -35,6 +35,6 @@
   "scripts": {
     "build-netlify": "npm install && build-storybook",
     "storybook": "start-storybook -p 7006 -s ./static",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./static"
   }
 }
