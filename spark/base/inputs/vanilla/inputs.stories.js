@@ -2,6 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { requiredTextInput } from './requiredTextInput';
 import { requiredTick } from './requiredTick';
 import { hugeInput } from './hugeInput';
+import { dateInput } from './dateInput';
 import { phoneInput } from './phoneInput';
 import passwordInput from './passwordInput';
 import { monetaryInput } from './monetaryInput';
@@ -655,4 +656,168 @@ export const passwordInputStory = () => {
 
 passwordInputStory.story = {
   name: 'Password Input',
+};
+
+export const helperText = () => (
+  `
+    <div class="sprk-b-InputContainer ">
+      <label
+        for="text-input-helper"
+        class="sprk-b-Label"
+      >
+        Text Input Label
+      </label>
+
+      <input
+        class="sprk-b-TextInput sprk-u-Width-100"
+        id="text-input-helper"
+        data-id="text-input-helper"
+        type="text"
+        value=""
+        aria-describedby="text-input-helper--error-container"
+        aria-invalid="true"
+      >
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="text-input-helper--error-container"
+      ></div>
+
+      <div class="sprk-b-HelperText">
+        Optional helper text, used to clarify the field&#x27;s intent.
+      </div>
+    </div>
+  `
+);
+
+helperText.story = {
+  name: 'Helper Text',
+};
+
+export const phoneInputStory = () => {
+  useEffect(() => {
+    requiredTextInput();
+    phoneInput();
+  }, []);
+
+  return `
+    <div
+      class="sprk-b-InputContainer"
+      data-sprk-input="phone"
+    >
+      <label
+        for="phone-input"
+        class="sprk-b-Label"
+      >
+        Phone Number
+      </label>
+
+      <input
+        class="sprk-b-TextInput sprk-u-Width-100"
+        id="phone-input"
+        data-id="phone-input"
+        type="tel"
+        pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+        placeholder="(000) 000-0000"
+        aria-describedby="phone-input--error-container"
+      >
+      <div
+        class="sprk-b-ErrorContainer"
+        id="phone-input--error-container"
+      ></div>
+    </div>
+  `;
+};
+
+phoneInputStory.story = {
+  name: 'Phone Input',
+};
+
+export const dateInputStory = () => {
+  useEffect(() => {
+    requiredTextInput();
+    dateInput();
+  }, []);
+
+  return `
+    <div
+      class="sprk-b-InputContainer"
+      data-sprk-input="date"
+    >
+      <label
+        for="date-input"
+        class="sprk-b-Label"
+      >
+        Date
+      </label>
+
+      <input
+        class="sprk-b-TextInput sprk-u-Width-100"
+        id="date-input"
+        data-id="date-input"
+        type="text"
+        pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+        placeholder="MM/DD/YYYY"
+        aria-describedby="date-input--error-container"
+      >
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="date-input--error-container"
+      ></div>
+    </div>
+  `;
+};
+
+dateInputStory.story = {
+  name: 'Date Input',
+};
+
+export const datePickerStory = () => {
+  useEffect(() => {
+    datePicker();
+  }, []);
+
+  return `
+    <div
+      class="sprk-b-InputContainer"
+      data-sprk-input="date"
+      data-sprk-datepicker
+    >
+      <label
+        for="datepicker"
+        class="sprk-b-Label sprk-b-Label--with-icon"
+      >
+        Date
+      </label>
+
+      <div class="sprk-b-TextInputIconContainer">
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--stroke-current-color"
+          viewBox="0 0 64 64"
+        >
+          <use xlink:href="#calendar" />
+        </svg>
+
+        <input
+          class="sprk-b-TextInput sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+          id="datepicker"
+          data-id="datepicker"
+          type="text"
+          pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+          placeholder="MM/DD/YYYY"
+          aria-describedby="datepicker--error-container"
+        >
+      </div>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="datepicker--error-container"
+      ></div>
+    </div>
+  `;
+};
+
+datePickerStory.story = {
+  name: 'Date Picker',
 };
