@@ -29,14 +29,14 @@ export const defaultStory = () => {
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
-          src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg" />
+          src="https://spark-assets.netlify.com/spark-placeholder.jpg" />
       </a>
 
       <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
-          src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg" />
+          src="https://spark-assets.netlify.com/spark-placeholder.jpg" />
       </a>
     </div>
 

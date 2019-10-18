@@ -32,7 +32,7 @@ defaultStory.story = {
 export const flag = () => (
   <SprkPromo
     additionalClasses="sprk-o-Stack--split@s"
-    imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+    imgSrc="https://spark-assets.netlify.com/spark-placeholder.jpg"
     imgAlt="Spark Design System Logo"
     imgLinkHref="https://sparkdesignsystem.com"
     imgLinkAnalytics="promo-3-img-link-analytics"

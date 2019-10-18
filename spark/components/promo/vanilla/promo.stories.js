@@ -46,7 +46,7 @@ export const flag = () => (`
       <img
         class="sprk-c-Promo__image--flag"
         alt="Spark placeholder image."
-        src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+        src="https://spark-assets.netlify.com/spark-placeholder.jpg"
       >
     </a>
 
