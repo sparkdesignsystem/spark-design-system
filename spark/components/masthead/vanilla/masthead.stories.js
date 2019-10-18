@@ -1,6 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 // import { addDecorator } from '@storybook/html';
-import { masthead, checkScrollDirection, toggleMenu } from './masthead';
+import { masthead, checkScrollDirection, toggleMenu, toggleScrollEvent } from './masthead';
 import { toggle } from '../../toggle/vanilla/toggle';
 import { dropdowns } from '../../dropdown/vanilla/dropdown';
 
@@ -15,6 +15,7 @@ export const defaultMasthead = () => {
   useEffect(() => {
     masthead();
     toggle();
+    toggleScrollEvent();
     checkScrollDirection();
     toggleMenu();
   }, []);
@@ -262,6 +263,7 @@ export const extended = () => {
     dropdowns();
     masthead();
     toggle();
+    toggleScrollEvent();
     checkScrollDirection();
     toggleMenu();
   }, []);
