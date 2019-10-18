@@ -9,7 +9,7 @@ export const defaultHighlightBoard = () => `
     >
       <img
         class="sprk-c-HighlightBoard__image"
-        src="/images/desktop.jpg"
+        src="https://spark-assets.netlify.com/desktop.jpg"
         alt="desktop"
       >
 
@@ -111,7 +111,7 @@ export const stacked = () => `
   >
     <img
       class="sprk-c-HighlightBoard__image"
-      src="/images/desktop.jpg" alt="desktop">
+      src="https://spark-assets.netlify.com/desktop.jpg" alt="desktop">
 
     <div class="
       sprk-c-HighlightBoard__content
