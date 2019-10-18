@@ -82,7 +82,7 @@ export const defaultStory = () => {
 };
 
 defaultStory.story = {
-  name: 'default',
+  name: 'Default',
 };
 
 export const long = () => {

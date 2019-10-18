@@ -2,10 +2,10 @@ export default {
   title: 'Components|Promo',
 };
 
-export const base = () => (`
+export const defaultStory = () => (`
   <div
-  class="sprk-c-Promo  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
-  data-id="promo-1"
+    class="sprk-c-Promo  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    data-id="promo-1"
   >
 
     <div 
@@ -63,10 +63,14 @@ export const flag = () => (`
   </div>
 `);
 
+defaultStory.story = {
+  name: 'Default',
+};
+
 export const withImage = () => (`
   <div
-  class="sprk-c-Promo  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
-  data-id="promo-3"
+    class="sprk-c-Promo sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    data-id="promo-3"
   >
 
     <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
@@ -105,8 +109,8 @@ export const withImage = () => (`
 
 export const withReversedImage = () => (`
   <div
-  class="sprk-c-Promo  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
-  data-id="promo-4"
+    class="sprk-c-Promo sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    data-id="promo-4"
   >
 
     <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">

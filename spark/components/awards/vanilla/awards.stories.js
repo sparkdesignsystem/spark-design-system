@@ -24,7 +24,7 @@ export const defaultStory = () => {
     <div class="sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-        href=""
+        href="#"
       >
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
@@ -32,7 +32,7 @@ export const defaultStory = () => {
           src="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg" />
       </a>
 
-      <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="">
+      <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
@@ -41,8 +41,8 @@ export const defaultStory = () => {
     </div>
 
     <div
-    class="sprk-o-Stack__item"
-    data-sprk-toggle="container"
+      class="sprk-o-Stack__item"
+      data-sprk-toggle="container"
     >
       <a
         class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon"
@@ -76,5 +76,5 @@ export const defaultStory = () => {
 };
 
 defaultStory.story = {
-  name: 'default',
+  name: 'Default',
 };
