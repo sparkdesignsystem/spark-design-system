@@ -11,13 +11,13 @@ describe('SprkAward Component', () => {
     const images = [
       {
         href: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
       },
       {
         href: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-2',
       },
@@ -30,13 +30,13 @@ describe('SprkAward Component', () => {
     const images = [
       {
         href: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
         element: 'a',
       },
       {
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-2',
         element: 'span',
@@ -50,14 +50,14 @@ describe('SprkAward Component', () => {
     const images = [
       {
         to: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
         element: undefined,
       },
       {
         href: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-2',
       },
@@ -70,13 +70,13 @@ describe('SprkAward Component', () => {
     const images = [
       {
         href: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
       },
       {
         href: '#nogo',
-        src: 'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-2',
       },
