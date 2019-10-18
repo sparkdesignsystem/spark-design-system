@@ -24,7 +24,7 @@ describe('SprkFooter Component', () => {
       items: [
         {
           mediaType: 'image',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
@@ -87,12 +87,12 @@ describe('SprkFooter Component', () => {
       images: [
         {
           href: '#nogo',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
         },
         {
           href: '#nogo',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
         },
       ],

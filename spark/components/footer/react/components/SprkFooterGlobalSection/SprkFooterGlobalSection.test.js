@@ -14,13 +14,13 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
         {
           mediaType: 'SprkIcon',
-          iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          iconName: 'https://spark-assets.netlify.com/spark-logo.svg',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
@@ -36,13 +36,13 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
         {
           mediaType: 'SprkIcon',
-          iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          iconName: 'https://spark-assets.netlify.com/spark-logo.svg',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
@@ -58,7 +58,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
@@ -121,7 +121,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
           element: 'a',
@@ -129,7 +129,7 @@ describe('SprkFooterGlobalSection Component', () => {
         },
         {
           mediaType: 'SprkIcon',
-          iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          iconName: 'https://spark-assets.netlify.com/spark-logo.svg',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
@@ -150,7 +150,7 @@ describe('SprkFooterGlobalSection Component', () => {
       items: [
         {
           mediaType: 'image',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
           element: 'span',
@@ -158,7 +158,7 @@ describe('SprkFooterGlobalSection Component', () => {
         },
         {
           mediaType: 'SprkIcon',
-          iconName: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          iconName: 'https://spark-assets.netlify.com/spark-logo.svg',
           description: 'Lorem ipsum dolor sit amet, consectetur.',
         },
       ],
