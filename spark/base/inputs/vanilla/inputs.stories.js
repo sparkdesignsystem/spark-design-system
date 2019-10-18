@@ -272,7 +272,11 @@ export const selectBox = () => {
       </select>
 
       <svg
-        class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--stroke-current-color
+          sprk-b-SelectContainer__icon
+        "
         viewBox="0 0 64 64"
       >
         <use xlink:href="#chevron-down" />
@@ -329,7 +333,11 @@ export const hugeSelectBox = () => {
       </label>
 
       <svg
-        class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--stroke-current-color
+          sprk-b-SelectContainer__icon
+        "
         viewBox="0 0 64 64"
       >
         <use xlink:href="#chevron-down" />
@@ -405,7 +413,10 @@ export const ssnInputStory = () => {
       >
 
       <div
-        class="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle"
+        class="
+          sprk-b-SelectionContainer
+          sprk-b-InputContainer__visibility-toggle
+        "
       >
         <input
           id="ssn-show-ssn"
@@ -491,7 +502,11 @@ export const inlineSearchInput = () => {
         </svg>
 
         <input
-          class="sprk-b-TextInput sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+          class="
+            sprk-b-TextInput
+            sprk-b-TextInput--has-svg-icon
+            sprk-u-Width-100
+          "
           id="search-inline"
           data-id="search-inline"
           type="text"
@@ -524,7 +539,10 @@ export const monetaryInputStory = () => {
       data-sprk-input="monetary"
     >
       <div
-        class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon"
+        class="
+          sprk-b-TextInputIconContainer
+          sprk-b-TextInputIconContainer--has-text-icon
+        "
       >
         <label
           for="monetary"
@@ -534,7 +552,11 @@ export const monetaryInputStory = () => {
         </label>
 
         <input
-          class="sprk-b-TextInput sprk-b-TextInput--has-text-icon sprk-u-Width-100"
+          class="
+            sprk-b-TextInput
+            sprk-b-TextInput--has-text-icon
+            sprk-u-Width-100
+          "
           pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
           id="monetary"
           data-id="monetary-input"
@@ -566,7 +588,10 @@ export const percentageInput = () => {
       data-sprk-input="percentage"
     >
       <div
-        class="sprk-b-InputContainer__icon-container sprk-b-InputContainer__icon-container--narrow"
+        class="
+          sprk-b-InputContainer__icon-container
+          sprk-b-InputContainer__icon-container--narrow
+        "
       >
         <label
           for="percentage"
@@ -576,14 +601,23 @@ export const percentageInput = () => {
         </label>
 
         <svg
-          class="sprk-c-Icon sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
+          class="
+            sprk-c-Icon
+            sprk-b-InputContainer__icon
+            sprk-b-InputContainer__icon--right
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#percent" />
         </svg>
 
         <input
-          class="sprk-b-TextInput sprk-b-InputContainer__input sprk-b-InputContainer__input--has-icon-right sprk-u-Width-100"
+          class="
+            sprk-b-TextInput
+            sprk-b-InputContainer__input
+            sprk-b-InputContainer__input--has-icon-right
+            sprk-u-Width-100
+          "
           id="percentage"
           data-id="percentage"
           type="tel"
@@ -629,7 +663,12 @@ export const passwordInputStory = () => {
         aria-describedby="password--error-container"
       >
 
-      <div class="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle">
+      <div
+        class="
+          sprk-b-SelectionContainer
+          sprk-b-InputContainer__visibility-toggle
+        "
+      >
         <input
           id="password-show-password"
           type="checkbox"
@@ -799,7 +838,11 @@ export const datePickerStory = () => {
         </svg>
 
         <input
-          class="sprk-b-TextInput sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+          class="
+            sprk-b-TextInput
+            sprk-b-TextInput--has-svg-icon
+            sprk-u-Width-100
+          "
           id="datepicker"
           data-id="datepicker-input"
           type="text"
