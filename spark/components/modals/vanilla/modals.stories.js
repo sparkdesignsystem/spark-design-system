@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { modals, isWaitModal, hideModal } from './modals';
+import { modals } from './modals';
 
 export default {
   title: 'Components|Modals',
@@ -82,7 +82,7 @@ export const choice = () => {
   class="sprk-c-ModalMask sprk-u-Display--none"
   tabindex="-1"
 ></div>
-  `
+  `;
 };
 
 export const info = () => {
@@ -147,31 +147,12 @@ export const info = () => {
   class="sprk-c-ModalMask sprk-u-Display--none"
   tabindex="-1"
 ></div>
-  `
+  `;
 };
 
 export const wait = () => {
   useEffect(() => {
     modals();
-
-    // bind a second click event to this trigger that closes
-    // the modal after 5 seconds
-    const trigger = document.querySelector('[data-sprk-modal-trigger]');
-
-    trigger.addEventListener('click', () => {
-      // Get value of trigger data-attr to get corresponding modal name
-      const modalName = trigger.getAttribute('data-sprk-modal-trigger');
-      const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
-      const mask = document.querySelector('[data-sprk-modal-mask="true"]');
-      const main = document.querySelector('[data-sprk-main]');
-
-      // Only proceed if this is a wait modal
-      if (!isWaitModal(modal)) return;
-
-      setTimeout(() => {
-        hideModal(modal, mask, main);
-      }, 5000);
-    });
   });
 
   return `
@@ -204,10 +185,12 @@ export const wait = () => {
     </header>
 
     <div
-      class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+      class="sprk-o-Stack__item
+        sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
     >
       <div
-        class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
+        class="sprk-o-Stack__item sprk-c-Spinner
+          sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
       ></div>
       <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -222,5 +205,5 @@ export const wait = () => {
   class="sprk-c-ModalMask sprk-u-Display--none"
   tabindex="-1"
 ></div>
-  `
+  `;
 };
