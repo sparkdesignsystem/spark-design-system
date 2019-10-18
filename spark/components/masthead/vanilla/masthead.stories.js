@@ -1,4 +1,5 @@
 import { useEffect } from '@storybook/client-api';
+// import { addDecorator } from '@storybook/html';
 import { masthead, checkScrollDirection, toggleMenu } from './masthead';
 import { toggle } from '../../toggle/vanilla/toggle';
 import { dropdowns } from '../../dropdown/vanilla/dropdown';
@@ -7,6 +8,8 @@ export default {
   title: 'Components|Masthead',
 };
 
+// TODO: Add this decorator individually rather than globally
+// addDecorator(story => `<div data-sprk-main>${story()}</div>`);
 
 export const defaultMasthead = () => {
   useEffect(() => {
