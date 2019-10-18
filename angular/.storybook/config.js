@@ -1,6 +1,6 @@
 import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
-import sparkTheme from "../../storybook-spark-theme";
+import sparkTheme from "./storybook-spark-theme";
 
 const storyWrapper = templateFn => storyFn => {
   const story = storyFn();
@@ -27,4 +27,4 @@ addParameters({
   },
 });
 
-configure(require.context('../../spark', true, /\/angular\/.*\.stories\.(js|ts|tsx|mdx)$/), module);
+configure(require.context('../projects/spark-angular/src/lib', true, /\.stories\.(js|ts|tsx|mdx)$/), module);

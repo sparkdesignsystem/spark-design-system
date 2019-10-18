@@ -1,13 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "./",
+  "newProjectRoot": "projects",
   "projects": {
-    "angular": {
+    "storybook": {
       "root": "./",
       "sourceRoot": "./",
       "projectType": "application",
-      "prefix": "sprk",
       "schematics": {
         "component": {
           "inlineStyle": true,
@@ -54,7 +53,41 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "angular"
+    },
+    "spark-angular": {
+      "projectType": "library",
+      "root": "projects/spark-angular",
+      "sourceRoot": "projects/spark-angular/src",
+      "prefix": "sprk",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/spark-angular/tsconfig.lib.json",
+            "project": "projects/spark-angular/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/spark-angular/src/test.ts",
+            "tsConfig": "projects/spark-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/spark-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/spark-angular/tsconfig.lib.json",
+              "projects/spark-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "storybook"
 }

@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "sprk",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "sprk",
+      "kebab-case"
+    ],
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "ordered-imports": false
+  }
+}
