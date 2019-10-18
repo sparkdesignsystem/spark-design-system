@@ -76,7 +76,7 @@ export const withImage = () => (`
     <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
       <img
         class="sprk-c-Promo__image"
-        src="https://sparkdesignsystem.com/assets/toolkit/images/blue-house.jpg"
+        src="https://spark-assets.netlify.com/blue-house.jpg"
         alt="Spark placeholder image."
       />
     </a>
@@ -139,7 +139,7 @@ export const withReversedImage = () => (`
     <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
       <img
         class="sprk-c-Promo__image"
-        src="https://sparkdesignsystem.com/assets/toolkit/images/blue-house.jpg"
+        src="https://spark-assets.netlify.com/blue-house.jpg"
         alt="Spark placeholder image."
       />
     </a>
