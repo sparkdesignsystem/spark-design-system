@@ -69,7 +69,7 @@ export const hugeTextInput = () => {
 
       <label
         for="text-input-huge"
-        class="sprk-b-Label "
+        class="sprk-b-Label"
       >
         Text Input Label
       </label>
@@ -88,6 +88,7 @@ hugeTextInput.story = {
 
 export const checkboxInputs = () => {
   useEffect(() => {
+    requiredTextInput();
     requiredTick();
   }, []);
 
@@ -271,10 +272,7 @@ export const selectBox = () => {
       </select>
 
       <svg
-        class="
-          sprk-c-Icon sprk-c-Icon--stroke-current-color
-          sprk-b-SelectContainer__icon
-        "
+        class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         viewBox="0 0 64 64"
       >
         <use xlink:href="#chevron-down" />
@@ -301,7 +299,7 @@ export const hugeSelectBox = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <select
-        class="sprk-b-Select "
+        class="sprk-b-Select"
         id="select-huge"
         data-id="select-huge"
         aria-describedby="select-huge--error-container"
@@ -331,10 +329,7 @@ export const hugeSelectBox = () => {
       </label>
 
       <svg
-        class="
-          sprk-c-Icon sprk-c-Icon--stroke-current-color
-          sprk-b-SelectContainer__icon
-        "
+        class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         viewBox="0 0 64 64"
       >
         <use xlink:href="#chevron-down" />
@@ -383,6 +378,7 @@ textarea.story = {
 
 export const ssnInputStory = () => {
   useEffect(() => {
+    requiredTextInput();
     ssnInput();
   }, []);
 
@@ -454,7 +450,7 @@ export const searchInput = () => {
       <input
         class="sprk-b-TextInput sprk-u-Width-100"
         id="search-input"
-        data-id="search-input-1"
+        data-id="search-input"
         type="search"
         role="search"
         aria-describedby="search--error-container"
@@ -518,6 +514,7 @@ inlineSearchInput.story = {
 
 export const monetaryInputStory = () => {
   useEffect(() => {
+    requiredTextInput();
     monetaryInput();
   }, []);
 
@@ -526,7 +523,9 @@ export const monetaryInputStory = () => {
       class="sprk-b-InputContainer"
       data-sprk-input="monetary"
     >
-      <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+      <div
+        class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon"
+      >
         <label
           for="monetary"
           class="sprk-b-Label sprk-b-Label--monetary"
@@ -538,7 +537,7 @@ export const monetaryInputStory = () => {
           class="sprk-b-TextInput sprk-b-TextInput--has-text-icon sprk-u-Width-100"
           pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
           id="monetary"
-          data-id="monetary"
+          data-id="monetary-input"
           type="tel"
           aria-describedby="monetary--error-container"
         >
@@ -559,7 +558,6 @@ monetaryInputStory.story = {
 export const percentageInput = () => {
   useEffect(() => {
     requiredTextInput();
-    monetaryInput();
   }, []);
 
   return `
@@ -626,7 +624,7 @@ export const passwordInputStory = () => {
       <input
         class="sprk-b-TextInput sprk-u-Width-100"
         id="password"
-        data-id="password"
+        data-id="password-input"
         type="password"
         aria-describedby="password--error-container"
       >
@@ -660,7 +658,7 @@ passwordInputStory.story = {
 
 export const helperText = () => (
   `
-    <div class="sprk-b-InputContainer ">
+    <div class="sprk-b-InputContainer">
       <label
         for="text-input-helper"
         class="sprk-b-Label"
@@ -775,6 +773,7 @@ dateInputStory.story = {
 
 export const datePickerStory = () => {
   useEffect(() => {
+    requiredTextInput();
     datePicker();
   }, []);
 
@@ -802,7 +801,7 @@ export const datePickerStory = () => {
         <input
           class="sprk-b-TextInput sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
           id="datepicker"
-          data-id="datepicker"
+          data-id="datepicker-input"
           type="text"
           pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
           placeholder="MM/DD/YYYY"
