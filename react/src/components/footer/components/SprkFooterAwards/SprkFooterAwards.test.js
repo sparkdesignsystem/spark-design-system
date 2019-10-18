@@ -13,13 +13,13 @@ describe('SprkFooterAwards Component', () => {
       images: [
         {
           href: '#nogo',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           addClasses: 'drizzle-c-Logo',
         },
         {
           href: '#nogo',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           addClasses: 'drizzle-c-Logo',
         },
@@ -39,14 +39,14 @@ describe('SprkFooterAwards Component', () => {
       images: [
         {
           href: '#nogo',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           addClasses: 'drizzle-c-Logo',
           element: 'a',
         },
         {
           href: '#nogo',
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           addClasses: 'drizzle-c-Logo',
           element: 'a',
@@ -66,13 +66,13 @@ describe('SprkFooterAwards Component', () => {
       heading: 'Awards Heading Title',
       images: [
         {
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           analyticsString: 'test-link',
           element: 'a',
         },
         {
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           addClasses: 'drizzle-c-Logo',
           element: 'a',
@@ -97,13 +97,13 @@ describe('SprkFooterAwards Component', () => {
       heading: 'Awards Heading Title',
       images: [
         {
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           analyticsString: 'test-link',
           element: 'span',
         },
         {
-          src: 'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+          src: 'https://spark-assets.netlify.com/spark-logo.svg',
           altText: 'Spark Logo',
           addClasses: 'drizzle-c-Logo',
           element: 'a',
