@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { masthead } from './masthead';
+import { masthead, checkScrollDirection, toggleMenu } from './masthead';
 import { toggle } from '../../toggle/vanilla/toggle';
 import { dropdowns } from '../../dropdown/vanilla/dropdown';
 
@@ -12,6 +12,8 @@ export const defaultMasthead = () => {
   useEffect(() => {
     masthead();
     toggle();
+    checkScrollDirection();
+    toggleMenu();
   }, []);
   return `
     <header
@@ -225,6 +227,8 @@ export const extended = () => {
     dropdowns();
     masthead();
     toggle();
+    checkScrollDirection();
+    toggleMenu();
   }, []);
   return `
     <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idstring="masthead-2" data-sprk-masthead="">

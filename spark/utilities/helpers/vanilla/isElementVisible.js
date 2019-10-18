@@ -5,7 +5,10 @@ const isElementVisible = selector => {
   if (!element) return;
   const elementDisplayValue = window.getComputedStyle(element).display;
   const elementVisibilityValue = window.getComputedStyle(element).visibility;
-  const elementIsVisible = elementDisplayValue === 'none' || elementVisibilityValue === 'hidden' ? false : true;
+  const elementIsVisible =
+    elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
+      ? false
+      : true;
   return elementIsVisible;
 };
 
