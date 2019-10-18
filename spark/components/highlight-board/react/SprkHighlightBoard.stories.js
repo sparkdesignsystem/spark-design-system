@@ -9,7 +9,7 @@ export default {
 
 export const defaultStory = () => (
   <SprkHighlightBoard
-    imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+    imgSrc="https://spark-assets.netlify.com/desktop.jpg"
     imgAlt="desktop"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"
@@ -43,7 +43,7 @@ noImage.story = {
 export const stacked = () => (
   <SprkHighlightBoard
     variant="stacked"
-    imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+    imgSrc="https://spark-assets.netlify.com/desktop.jpg"
     imgAlt="desktop"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"
