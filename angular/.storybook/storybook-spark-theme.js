@@ -15,5 +15,5 @@ export default create({
   inputBorderRadius: 4,
   brandTitle: 'Spark Design System',
   brandUrl: 'https://sparkdesignsystem.com',
-  brandImage: 'https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+  brandImage: 'https://spark-assets.netlify.com/spark-logo-black-text.svg',
 });
