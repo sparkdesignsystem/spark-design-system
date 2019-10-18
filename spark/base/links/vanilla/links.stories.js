@@ -24,7 +24,7 @@ export const simple = () => (
     <a
       class="sprk-b-Link sprk-b-Link--simple"
       href="#"
-      data-id="link-1"
+      data-id="link-2"
       data-analytics="object.action.event"
     >
       Simple Link
@@ -37,7 +37,7 @@ export const iconWithTextLink = () => (
     <a
       class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--simple"
       href="#nogo"
-      data-id="link-1"
+      data-id="link-3"
       data-analytics="object.action.event"
     >
       <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color" viewBox="0 0 100 100">
@@ -54,7 +54,7 @@ export const disabled = () => (
     <a
       class="sprk-b-Link sprk-b-Link--disabled"
       href="#nogo"
-      data-id="link-3"
+      data-id="link-4"
       data-analytics="object.action.event"
     >
       Disabled
