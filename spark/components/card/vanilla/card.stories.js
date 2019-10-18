@@ -240,7 +240,7 @@ export const twoUpCards = () => (
             sprk-c-Card__content
             sprk-o-Stack
             sprk-o-Stack--large
-            "
+          "
           >
           <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
             Title
