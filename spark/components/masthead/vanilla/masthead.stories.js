@@ -1,8 +1,9 @@
 import { useEffect } from '@storybook/client-api';
 // import { addDecorator } from '@storybook/html';
-import { masthead, checkScrollDirection, toggleMenu, toggleScrollEvent } from './masthead';
+import { masthead, toggleScrollEvent } from './masthead';
 import { toggle } from '../../toggle/vanilla/toggle';
 import { dropdowns } from '../../dropdown/vanilla/dropdown';
+import isElementVisible from '../../../utilities/helpers/vanilla/isElementVisible';
 
 export default {
   title: 'Components|Masthead',
@@ -13,11 +14,14 @@ export default {
 
 export const defaultMasthead = () => {
   useEffect(() => {
-    masthead();
     toggle();
-    toggleScrollEvent();
-    checkScrollDirection();
-    toggleMenu();
+    masthead();
+
+    // Our masthead.js applies load event to `window` but doesn't work in storybook iframes
+    // This useEffect runs this code when component mounts
+    const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
+    toggleScrollEvent(isMenuVisibleSB);
+
   }, []);
   return `
     <header
@@ -255,11 +259,13 @@ defaultMasthead.story = {
 export const extended = () => {
   useEffect(() => {
     dropdowns();
-    masthead();
     toggle();
-    toggleScrollEvent();
-    checkScrollDirection();
-    toggleMenu();
+    masthead();
+
+    // Our masthead.js applies load event to `window` but doesn't work in storybook iframes
+    // This useEffect runs this code when component mounts
+    const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
+    toggleScrollEvent(isMenuVisibleSB);
   }, []);
   return `
     <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idstring="masthead-2" data-sprk-masthead="">
