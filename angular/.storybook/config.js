@@ -1,6 +1,7 @@
 import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from "./storybook-spark-theme";
+import '../src/polyfills';
 
 const storyWrapper = templateFn => storyFn => {
   const story = storyFn();

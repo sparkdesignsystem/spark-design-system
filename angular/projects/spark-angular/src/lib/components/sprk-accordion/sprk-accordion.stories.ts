@@ -7,14 +7,14 @@ import { SprkAccordionComponent } from './sprk-accordion.component';
 
 export default {
   title: 'Components|Accordions',
-  component: SprkAccordionComponent
+  component: SprkAccordionModule,
 };
 
 const modules = {
   imports: [
     SprkAccordionModule,
     SprkAccordionItemModule,
-    RouterModule.forRoot([], { useHash: true }),
+    RouterModule.forRoot([{ path: 'iframe.html', component: SprkAccordionComponent }]),
     BrowserAnimationsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]

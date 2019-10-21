@@ -23,6 +23,7 @@
     "@angular/router": "~8.2.0",
     "replace": "^1.1.1",
     "rxjs": "~6.4.0",
+    "classlist.js": "^1.1.20150312",
     "tiny-date-picker": "^3.2.8",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
