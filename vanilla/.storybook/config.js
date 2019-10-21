@@ -7,7 +7,7 @@ import { withActions } from '@storybook/addon-actions';
 addDecorator(withA11y);
 addDecorator(withActions('click .sprk-c-Button'));
 addDecorator(withActions('click .sprk-b-Link'));
-addDecorator(story => `<div class="sprk-o-Box">${story()}</div>`);
+addDecorator(story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`);
 // Option defaults
 addParameters({
   options: {

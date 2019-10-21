@@ -27,7 +27,11 @@ export const defaultStory = () => {
         </h3>
 
         <svg
-          class="sprk-c-Icon sprk-c-Icon--toggle sprk-c-Icon--l sprk-c-Accordion__icon"
+          class="
+            sprk-c-Icon sprk-c-Icon--toggle
+            sprk-c-Icon--l
+            sprk-c-Accordion__icon
+          "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
@@ -76,7 +80,12 @@ export const defaultStory = () => {
         </h3>
 
         <svg
-          class="sprk-c-Icon sprk-c-Icon--toggle sprk-c-Icon--l sprk-c-Accordion__icon"
+          class="
+            sprk-c-Icon
+            sprk-c-Icon--toggle
+            sprk-c-Icon--l
+            sprk-c-Accordion__icon
+          "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
@@ -111,7 +120,10 @@ export const defaultStory = () => {
         </h3>
 
         <svg
-          class="sprk-c-Icon sprk-c-Icon--toggle sprk-c-Icon--l sprk-c-Accordion__icon"
+          class="
+            sprk-c-Icon sprk-c-Icon--toggle
+            sprk-c-Icon--l sprk-c-Accordion__icon
+          "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
@@ -136,5 +148,5 @@ export const defaultStory = () => {
 };
 
 defaultStory.story = {
-  name: 'default',
+  name: 'Default',
 };

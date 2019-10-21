@@ -1,55 +1,60 @@
 {
-  "name": "spark-react-storybook",
-  "private": true,
-  "description": "A storybook environment for @sparkdesignsystem/spark-react",
-  "version": "1.0.0",
-  "bugs": {
-    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
+  "name": "@sparkdesignsystem/spark-react",
+  "version": "1.3.0",
+  "description": "A collection of Spark Design System components in React 16+",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --config ./src/jest-config.js --coverage",
+    "build": "rollup -c rollup.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "publish": "npm run build && npm publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sparkdesignsystem/spark-design-system"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-animate-height": "^2.0.15",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "react-router-dom": "^5.0.1",
-    "shortid": "^2.2.14",
-    "tiny-date-picker": "^3.2.8"
+  "author": "Quicken Loans",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "@sparkdesignsystem/spark": "^12.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@mdx-js/mdx": "^1.0.21",
-    "@mdx-js/react": "^1.0.21",
-    "@storybook/addon-a11y": "^5.2.1",
-    "@storybook/addon-actions": "^5.2.1",
-    "@storybook/addon-docs": "^5.2.1",
-    "@storybook/addon-knobs": "^5.2.1",
-    "@storybook/addon-links": "^5.2.1",
-    "@storybook/addons": "^5.2.1",
-    "@storybook/react": "^5.2.1",
-    "@storybook/theming": "^5.2.1",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.1.0",
-    "glob": "^7.1.4",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-a11y": "^5.1.3",
+    "@storybook/addon-actions": "^5.1.3",
+    "@storybook/addon-docs": "^5.2.4",
+    "@storybook/addon-info": "^5.1.3",
+    "@storybook/addon-knobs": "^5.1.3",
+    "@storybook/addon-links": "^5.1.3",
+    "@storybook/addons": "^5.1.3",
+    "@storybook/react": "^5.1.3",
+    "@storybook/theming": "^5.1.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.9.0",
     "node-sass": "^4.12.0",
-    "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "regenerator-runtime": "^0.13.3",
+    "rollup": "^1.23.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "sinon": "^7.5.0"
   },
-  "keywords": [
-    "sparkdesignsystem",
-    "spark",
-    "react"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build-netlify": "npm install && build-storybook",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash.assign": "^4.2.0",
+    "lodash.uniqueid": "^4.0.1",
+    "prop-types": "^15.6.2",
+    "react-animate-height": "^2.0.16",
+    "tiny-date-picker": "^3.2.8",
+    "warning": "^4.0.3"
   }
 }
