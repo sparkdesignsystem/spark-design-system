@@ -532,7 +532,7 @@ describe('slider position tests', () => {
         </div>
       </li>
     `);
-    resetSlider([step], 'test', slider);
+    resetSlider([step], slider, 'test');
     expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).eql(0);
   });
 
