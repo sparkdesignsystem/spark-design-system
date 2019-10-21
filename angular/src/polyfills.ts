@@ -17,7 +17,6 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
-console.log('hellow from polyfills!');
 import 'whatwg-fetch';
 
 /**
