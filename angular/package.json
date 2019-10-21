@@ -5,6 +5,7 @@
     "build": "npm run set-version && ng build spark-angular",
     "test": "ng test",
     "lint": "ng lint",
+    "coverage": "ng test spark-angular --watch=false --code-coverage",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
     "storybook": "start-storybook -p 8006",
     "build-storybook": "build-storybook",
