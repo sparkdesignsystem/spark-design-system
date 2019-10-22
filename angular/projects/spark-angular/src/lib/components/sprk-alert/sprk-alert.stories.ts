@@ -1,4 +1,14 @@
+import { addDecorator } from '@storybook/angular';
+import { storyWrapper } from '../../../../../../.storybook/helpers';
 import { SprkAlertModule } from './sprk-alert.module';
+
+addDecorator(
+  storyWrapper(
+    storyContent => (
+      `<div>${ storyContent }<div>`
+    )
+  )
+);
 
 export default {
   title: 'Components|Alerts',

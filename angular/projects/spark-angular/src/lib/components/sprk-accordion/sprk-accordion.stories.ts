@@ -1,9 +1,19 @@
+import { addDecorator } from '@storybook/angular';
+import { storyWrapper } from '../../../../../../.storybook/helpers';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
+
+addDecorator(
+  storyWrapper(
+    storyContent => (
+      `<div class="sprk-o-Box">${ storyContent }<div>`
+    )
+  )
+);
 
 export default {
   title: 'Components|Accordions',
