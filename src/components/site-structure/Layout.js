@@ -5,7 +5,7 @@ import Menu from './Menu';
 import Footer from './Footer';
 
 const Layout = ({ children, menuContext, render }) => {
-  const [context, setContext] = useState(menuContext || 'guides');
+  const [context, setContext] = useState(menuContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
@@ -21,68 +21,9 @@ const Layout = ({ children, menuContext, render }) => {
             }
           }
         }
-        reactAllFile: allFile(filter: {absolutePath: {regex: "/\\/react\\//"}, name: {regex: "/stories/"}}) {
-          edges {
-            node {
-              id
-              name
-            }
-          }
-        }
-        angularAllFile: allFile(filter: {absolutePath: {regex: "/\\/angular\\//"}, name: {regex: "/stories/"}}) {
-          edges {
-            node {
-              id
-              name
-            }
-          }
-        }
-        htmlAllFile: allFile(filter: {absolutePath: {regex: "/\\/vanilla\\//"}, name: {regex: "/stories/"}}) {
-          edges {
-            node {
-              id
-              name
-            }
-          }
-        }
       }
     `}
-    render={data => { 
-
-      const reactStoriedComponents =  
-        data.reactAllFile.edges.map((edge) => { 
-          return edge
-            .node
-            .name
-            .split('.')[0]
-            .replace(/Sprk/, '')
-            .toLowerCase();
-        });
-
-      const angularStoriedComponents =
-        data.angularAllFile.edges.map((edge) => { 
-          return edge
-            .node
-            .name
-            .split('.')[0]
-            .replace(/sprk\-/, '');
-        });
-
-      const vanillaStoriedComponents = 
-        data.htmlAllFile.edges.map((edge) => { 
-        return edge
-          .node
-          .name
-          .split('.')[0]
-          .replace(/Sprk/, '');
-        });
-
-      const components = Array.from(
-        new Set([
-          ...reactStoriedComponents,
-          ...angularStoriedComponents,
-          ...vanillaStoriedComponents
-        ])).sort();
+    render={data => {
 
       return(
         <div className="layout">
@@ -93,19 +34,18 @@ const Layout = ({ children, menuContext, render }) => {
             }}
           />
           <Header
+            setContext={setContext}
             menuVisible={menuVisible}
             setMenuVisible={setMenuVisible}
           />
           <div className="content-menu-wrapper">
             <Menu
-              components={components}
+              components={{}}
               context={context}
-              setContext={setContext}
               menuVisible={menuVisible}
               setMenuVisible={setMenuVisible}
             />
             <div className="content">
-              { render && render(components, reactStoriedComponents, angularStoriedComponents, vanillaStoriedComponents) }
               { children }
               <Footer />
             </div>
