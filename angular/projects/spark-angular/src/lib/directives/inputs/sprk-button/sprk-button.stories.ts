@@ -17,3 +17,16 @@ export const primary = () => ({
     </button>
   `,
 });
+
+export const spinning = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      data-id="button-1"
+      sprkButton
+      [isSpinning]="true"
+    >
+      Button
+    </button>
+  `,
+});
