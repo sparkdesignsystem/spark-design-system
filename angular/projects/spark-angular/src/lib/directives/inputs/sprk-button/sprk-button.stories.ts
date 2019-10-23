@@ -95,10 +95,9 @@ export const submissionSpinner = () => {
     moduleMetadata: modules,
     template: `
       <button
-        (click)="toDoSpinner()"
         data-id="button-spinner"
         sprkButton
-        isSpinning
+        [isSpinning]="true"
       >
         Button
       </button>
