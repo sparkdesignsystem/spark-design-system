@@ -5,7 +5,7 @@ import { SprkAlertModule } from './sprk-alert.module';
 addDecorator(
   storyWrapper(
     storyContent => (
-      `<div>${ storyContent }<div>`
+      `<div id="alert-story">${ storyContent }<div>`
     )
   )
 );

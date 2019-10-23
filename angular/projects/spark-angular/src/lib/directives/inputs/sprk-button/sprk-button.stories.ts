@@ -5,7 +5,7 @@ import { storyWrapper } from '../../../../../../../.storybook/helpers';
 addDecorator(
   storyWrapper(
     storyContent => (
-      `<div class="sprk-o-Box">${ storyContent }<div>`
+      `<div class="sprk-o-Box" id="button-story">${ storyContent }<div>`
     )
   )
 );

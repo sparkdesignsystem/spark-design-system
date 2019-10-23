@@ -10,7 +10,7 @@ import { SprkAccordionComponent } from './sprk-accordion.component';
 addDecorator(
   storyWrapper(
     storyContent => (
-      `<div class="sprk-o-Box">${ storyContent }<div>`
+      `<div class="sprk-o-Box" id="accordion-story">${ storyContent }<div>`
     )
   )
 );

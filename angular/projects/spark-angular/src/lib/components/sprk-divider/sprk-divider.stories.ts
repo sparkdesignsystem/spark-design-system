@@ -5,7 +5,7 @@ import { SprkDividerModule } from './sprk-divider.module';
 addDecorator(
   storyWrapper(
     storyContent => (
-      `<div class="sprk-o-Box">${ storyContent }<div>`
+      `<div class="sprk-o-Box" id="divider-story">${ storyContent }<div>`
     )
   )
 );
