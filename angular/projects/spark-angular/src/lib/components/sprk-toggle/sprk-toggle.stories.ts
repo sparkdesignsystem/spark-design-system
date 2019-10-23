@@ -1,4 +1,5 @@
 import { RouterModule } from '@angular/router';
+import { storyWrapper } from '../../../../../../.storybook/helpers';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkToggleModule } from './sprk-toggle.module';
@@ -7,6 +8,13 @@ import { SprkToggleComponent } from './sprk-toggle.component';
 export default {
   title: 'Components|Toggle',
   component: SprkToggleModule,
+  decorators: [
+      storyWrapper(
+        storyContent => (
+          `<div class="sprk-o-Box">${ storyContent }<div>`
+        )
+      )
+  ],
 };
 
 const modules = {

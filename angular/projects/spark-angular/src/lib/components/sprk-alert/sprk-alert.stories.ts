@@ -1,4 +1,3 @@
-import { addDecorator } from '@storybook/angular';
 import { storyWrapper } from '../../../../../../.storybook/helpers';
 import { SprkAlertModule } from './sprk-alert.module';
 

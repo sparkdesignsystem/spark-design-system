@@ -1,4 +1,3 @@
-import { addDecorator } from '@storybook/angular';
 import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../../.storybook/helpers';
 

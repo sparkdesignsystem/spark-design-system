@@ -1,4 +1,3 @@
-import { addDecorator } from '@storybook/angular';
 import { SprkDropdownModule } from './sprk-dropdown.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';

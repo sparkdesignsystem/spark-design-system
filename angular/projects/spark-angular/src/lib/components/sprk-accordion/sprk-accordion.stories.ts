@@ -1,4 +1,3 @@
-import { addDecorator } from '@storybook/angular';
 import { storyWrapper } from '../../../../../../.storybook/helpers';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';

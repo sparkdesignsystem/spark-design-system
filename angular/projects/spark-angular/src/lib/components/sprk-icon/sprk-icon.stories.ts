@@ -1,8 +1,16 @@
 import { SprkIconModule } from './sprk-icon.module';
+import { storyWrapper } from '../../../../../../.storybook/helpers';
 
 export default {
   title: 'Components|Icons',
   component: SprkIconModule,
+  decorators: [
+      storyWrapper(
+        storyContent => (
+          `<div class="sprk-o-Box">${ storyContent }<div>`
+        )
+      )
+  ],
 };
 
 const modules = {
