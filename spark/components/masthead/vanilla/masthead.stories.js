@@ -268,7 +268,7 @@ export const extended = () => {
     toggleScrollEvent(isMenuVisibleSB);
   }, []);
   return `
-    <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idstring="masthead-2" data-sprk-masthead="">
+    <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idstring="masthead-2" data-sprk-masthead>
       <div class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs">
         <div class="sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
           <button class="sprk-c-Menu" type="button" aria-expanded="false" data-sprk-mobile-nav-trigger="mobileNav2">
