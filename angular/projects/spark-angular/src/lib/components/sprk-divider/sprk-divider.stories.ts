@@ -2,17 +2,16 @@ import { addDecorator } from '@storybook/angular';
 import { storyWrapper } from '../../../../../../.storybook/helpers';
 import { SprkDividerModule } from './sprk-divider.module';
 
-addDecorator(
-  storyWrapper(
-    storyContent => (
-      `<div class="sprk-o-Box" id="divider-story">${ storyContent }<div>`
-    )
-  )
-);
-
 export default {
   title: 'Components|Divider',
   component: SprkDividerModule,
+  decorators: [
+      storyWrapper(
+        storyContent => (
+          `<div class="sprk-o-Box">${ storyContent }<div>`
+        )
+      )
+  ],
 };
 
 const modules = {

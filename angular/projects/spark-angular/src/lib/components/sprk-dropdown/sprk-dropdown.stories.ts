@@ -5,17 +5,16 @@ import { APP_BASE_HREF } from '@angular/common';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { storyWrapper } from '../../../../../../.storybook/helpers';
 
-addDecorator(
-  storyWrapper(
-    storyContent => (
-      `<div class="sprk-o-Box" id="dropdown-story">${ storyContent }<div>`
-    )
-  )
-);
-
 export default {
   title: 'Components|Dropdown',
   component: SprkDropdownModule,
+  decorators: [
+      storyWrapper(
+        storyContent => (
+          `<div class="sprk-o-Box" >${ storyContent }<div>`
+        )
+      )
+  ],
 };
 
 const modules = {
