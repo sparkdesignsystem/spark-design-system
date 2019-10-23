@@ -388,93 +388,91 @@ export const extended = () => {
 
       <div class="sprk-o-Stack__item">
         <nav class="sprk-c-Masthead__big-nav" role="navigation">
-      <ul class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare" data-sprk-navigation="big">
-        <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item sprk-c-Masthead__big-nav-item--active">
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo" data-sprk-dropdown-trigger="dropdown03" aria-haspopup="true" role="combobox">
-              Navigation Item
+          <ul class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare" data-sprk-navigation="big">
+            <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item sprk-c-Masthead__big-nav-item--active">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo" data-sprk-dropdown-trigger="dropdown03" aria-haspopup="true" role="combobox">
+                  Navigation Item
 
-            <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-u-mls" viewBox="0 0 64 64">
-              <use xlink:href="#chevron-down"></use>
-            </svg>
-          </a>
+                <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-u-mls" viewBox="0 0 64 64">
+                  <use xlink:href="#chevron-down"></use>
+                </svg>
+              </a>
 
-          <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-TextAlign--left" data-sprk-dropdown="dropdown03">
-            <ul class="sprk-c-Dropdown__links">
-              <li class="sprk-c-Dropdown__item" role="option">
-                <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Placeholder
-                </a>
-              </li>
+              <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-TextAlign--left" data-sprk-dropdown="dropdown03">
+                <ul class="sprk-c-Dropdown__links">
+                  <li class="sprk-c-Dropdown__item" role="option">
+                    <a class="sprk-c-Dropdown__link" href="#nogo">
+                      Placeholder
+                    </a>
+                  </li>
 
-              <li class="sprk-c-Dropdown__item" role="option">
-                <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Item
-                </a>
-              </li>
+                  <li class="sprk-c-Dropdown__item" role="option">
+                    <a class="sprk-c-Dropdown__link" href="#nogo">
+                      Item
+                    </a>
+                  </li>
 
-              <li class="sprk-c-Dropdown__item" role="option">
-                <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Sub Menu Item
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+                  <li class="sprk-c-Dropdown__item" role="option">
+                    <a class="sprk-c-Dropdown__link" href="#nogo">
+                      Sub Menu Item
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-        <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo-link">
-            Your Item
-          </a>
-        </li>
+            <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo-link">
+                Your Item
+              </a>
+            </li>
 
-        <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo">
-            Nav Item
-          </a>
-        </li>
+            <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo">
+                Nav Item
+              </a>
+            </li>
 
-        <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo" data-sprk-dropdown-trigger="dropdown04" aria-haspopup="true" role="combobox">
-              Navigation Item
+            <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo" data-sprk-dropdown-trigger="dropdown04" aria-haspopup="true" role="combobox">
+                  Navigation Item
 
-            <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-u-mls" viewBox="0 0 64 64">
-              <use xlink:href="#chevron-down"></use>
-            </svg>
-          </a>
+                <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-u-mls" viewBox="0 0 64 64">
+                  <use xlink:href="#chevron-down"></use>
+                </svg>
+              </a>
 
-          <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-TextAlign--left" data-sprk-dropdown="dropdown04">
-            <ul class="sprk-c-Dropdown__links">
-              <li class="sprk-c-Dropdown__item" role="option">
-                <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Dropdown Item
-                </a>
-              </li>
+              <div class="sprk-c-Dropdown sprk-u-Display--none sprk-u-TextAlign--left" data-sprk-dropdown="dropdown04">
+                <ul class="sprk-c-Dropdown__links">
+                  <li class="sprk-c-Dropdown__item" role="option">
+                    <a class="sprk-c-Dropdown__link" href="#nogo">
+                      Dropdown Item
+                    </a>
+                  </li>
 
-              <li class="sprk-c-Dropdown__item" role="option">
-                <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Placeholder
-                </a>
-              </li>
+                  <li class="sprk-c-Dropdown__item" role="option">
+                    <a class="sprk-c-Dropdown__link" href="#nogo">
+                      Placeholder
+                    </a>
+                  </li>
 
-              <li class="sprk-c-Dropdown__item" role="option">
-                <a class="sprk-c-Dropdown__link" href="#nogo">
-                  Dropdown Placeholder Item
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+                  <li class="sprk-c-Dropdown__item" role="option">
+                    <a class="sprk-c-Dropdown__link" href="#nogo">
+                      Dropdown Placeholder Item
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-        <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
-          <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo">
-            Item
-          </a>
-        </li>
-      </ul>
-    </nav>
-
+            <li class="sprk-c-Masthead__big-nav-item sprk-o-Stack__item">
+              <a class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav" href="#nogo">
+                Item
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
       <nav class="sprk-c-Masthead__narrow-nav sprk-u-Display--none" data-sprk-mobile-nav="mobileNav2" role="navigation" data-id="navigation-narrow-2">
 
         <div data-sprk-masthead-mask="">
