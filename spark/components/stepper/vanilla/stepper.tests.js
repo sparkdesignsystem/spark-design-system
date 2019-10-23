@@ -60,7 +60,6 @@ describe('steps UI Events tests, (no descriptions)', () => {
           </span>
         </div>
       </li>
-
       <li
         role="tab"
         class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
@@ -79,7 +78,6 @@ describe('steps UI Events tests, (no descriptions)', () => {
           </span>
         </div>
       </li>
-
       <li
         role="tab"
         class="sprk-c-Stepper__step sprk-c-Stepper__step--last"
@@ -253,7 +251,6 @@ describe('steps UI Events tests, (descriptions)', () => {
               <use xlink:href="#chevron-left-circle" />
             </svg>
           </button>
-
           <div class="sprk-c-Carousel__frame">
             <ul class="sprk-c-Carousel__slides">
               <li class="sprk-c-Carousel__frame-item"></li>
@@ -265,7 +262,6 @@ describe('steps UI Events tests, (descriptions)', () => {
               class="sprk-c-Carousel__dots"
               data-sprk-carousel-dots="stepper-carousel-01"></div>
           </div>
-
           <button class="sprk-c-Carousel__next sprk-o-Stack__item">
             <span class="sprk-u-ScreenReaderText">Next Slide</span>
             <svg
@@ -277,11 +273,9 @@ describe('steps UI Events tests, (descriptions)', () => {
               <use xlink:href="#chevron-right-circle" />
             </svg>
           </button>
-
         </div>
       </div>
     </div>
-
     <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@m">
       <ol
         class="
@@ -315,7 +309,6 @@ describe('steps UI Events tests, (descriptions)', () => {
                 Step One
               </h3>
             </span>
-
             <div
               class="sprk-c-Stepper__step-description"
               data-sprk-stepper="description"
@@ -328,7 +321,6 @@ describe('steps UI Events tests, (descriptions)', () => {
             </div>
           </div>
         </li>
-
         <li
           class="sprk-c-Stepper__step"
           data-sprk-stepper="step">
@@ -349,7 +341,6 @@ describe('steps UI Events tests, (descriptions)', () => {
                 Step Two
               </h3>
             </a>
-
             <div
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
               data-sprk-stepper="description"
@@ -362,7 +353,6 @@ describe('steps UI Events tests, (descriptions)', () => {
             </div>
           </div>
         </li>
-
         <li
           class="sprk-c-Stepper__step"
           data-sprk-stepper="step">
@@ -382,7 +372,6 @@ describe('steps UI Events tests, (descriptions)', () => {
                 Step Three
               </h3>
             </a>
-
             <div
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
               data-sprk-stepper="description"
@@ -395,7 +384,6 @@ describe('steps UI Events tests, (descriptions)', () => {
             </div>
           </div>
         </li>
-
         <li
           class="sprk-c-Stepper__step sprk-c-Stepper__step--last"
           data-sprk-stepper="step">
@@ -416,7 +404,6 @@ describe('steps UI Events tests, (descriptions)', () => {
                 Step Four
               </h3>
             </a>
-
             <div
               class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
               data-sprk-stepper="description"
@@ -450,8 +437,8 @@ describe('steps UI Events tests, (descriptions)', () => {
   });
 
   it(
-    'do not reset the top of the slider if the resize event is fired and'
-      + 'not moving from narrow to wide',
+    'do not reset the top of the slider if the resize event is fired and' +
+      'not moving from narrow to wide',
     () => {
       stepper(stepperContainer);
       const sliderEl = stepperContainer.querySelectorAll(
@@ -465,8 +452,8 @@ describe('steps UI Events tests, (descriptions)', () => {
   );
 
   it(
-    'reset the top of the slider if the resize event is fired and'
-      + 'moving from narrow to wide',
+    'reset the top of the slider if the resize event is fired and' +
+      'moving from narrow to wide',
     () => {
       stepper(stepperContainer);
       const sliderEl = stepperContainer.querySelectorAll(
@@ -545,7 +532,7 @@ describe('slider position tests', () => {
         </div>
       </li>
     `);
-    resetSlider([step], 'test', slider);
+    resetSlider([step], slider, 'test');
     expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).eql(0);
   });
 
