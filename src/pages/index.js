@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   SprkHighlightBoard,
   SprkLink,
@@ -7,8 +7,9 @@ import Layout from '../components/site-structure/Layout';
 
 import '../scss/main.scss';
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+return(
+<>
     <SprkHighlightBoard
       imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/wires.jpg"
       imgAlt="Spark Design Systen"
@@ -30,7 +31,7 @@ const IndexPage = () => (
           family of Fintech products.
       </p>
     </div>
-  </Layout>
-);
+  </>
+)};
 
 export default IndexPage;

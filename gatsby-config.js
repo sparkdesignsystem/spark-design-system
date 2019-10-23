@@ -10,13 +10,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: 'spark/',
-        name: 'spark-components',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         path: 'src/pages',
         name: 'mdx-generated-pages',
       },
@@ -35,7 +28,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/site-structure/Layout.js'),
+          default: require.resolve('./src/components/site-structure/ContentWrapper.js'),
         },
       },
     },
