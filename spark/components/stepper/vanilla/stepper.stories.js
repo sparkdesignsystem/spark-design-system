@@ -382,7 +382,7 @@ export const stepperWithCarousel = () => {
     }, false);
     setTimeout(() => {
       iframeWindow.dispatchEvent(event);
-    }, 2000);
+    }, 500);
   }, []);
 
   return `
