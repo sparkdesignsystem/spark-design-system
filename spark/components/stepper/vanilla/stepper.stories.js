@@ -375,6 +375,14 @@ export const stepperWithDarkBackground = () => {
 export const stepperWithCarousel = () => {
   useEffect(() => {
     stepper();
+    const iframeWindow = window.frameElement.contentWindow;
+    const event = new Event('resize');
+    iframeWindow.addEventListener('resize', () => {
+      iframeWindow.resizeBy(0, 0);
+    }, false);
+    setTimeout(() => {
+      iframeWindow.dispatchEvent(event);
+    }, 2000);
   }, []);
 
   return `
