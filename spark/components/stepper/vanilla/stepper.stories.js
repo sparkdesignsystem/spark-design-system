@@ -462,8 +462,8 @@ export const stepperWithCarousel = () => {
             <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
               <span
                 class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-                aria-controls="target-1"
-                id="step-1"
+                aria-controls="sc-target-1"
+                id="sc-step-1"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
                 <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
@@ -474,8 +474,8 @@ export const stepperWithCarousel = () => {
               <div
                 class="sprk-c-Stepper__step-description"
                 data-sprk-stepper="description"
-                id="target-1"
-                aria-labelledby="step-1"
+                id="sc-target-1"
+                aria-labelledby="sc-step-1"
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
@@ -493,8 +493,8 @@ export const stepperWithCarousel = () => {
             <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
               <span
                 class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-                aria-controls="target-2"
-                id="step-2"
+                aria-controls="sc-target-2"
+                id="sc-step-2"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
                 <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
@@ -505,8 +505,8 @@ export const stepperWithCarousel = () => {
               <div
                 class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
                 data-sprk-stepper="description"
-                aria-labelledby="step-2"
-                id="target-2"
+                aria-labelledby="sc-step-2"
+                id="sc-target-2"
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
@@ -524,8 +524,8 @@ export const stepperWithCarousel = () => {
             <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
               <span
                 class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-                aria-controls="target-3"
-                id="step-3"
+                aria-controls="sc-target-3"
+                id="sc-step-3"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
                 <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
@@ -536,8 +536,8 @@ export const stepperWithCarousel = () => {
               <div
                 class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
                 data-sprk-stepper="description"
-                aria-labelledby="step-3"
-                id="target-3"
+                aria-labelledby="sc-step-3"
+                id="sc-target-3"
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
@@ -555,8 +555,8 @@ export const stepperWithCarousel = () => {
             <div class="sprk-c-Stepper__step-content sprk-c-Stepper__step-content--has-description">
               <span
                 class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-                aria-controls="target-4"
-                id="step-4"
+                aria-controls="sc-target-4"
+                id="sc-step-4"
               >
                 <span class="sprk-c-Stepper__step-icon"></span>
                 <h3 class="sprk-c-Stepper__step-heading" data-sprk-stepper="heading">
@@ -567,8 +567,8 @@ export const stepperWithCarousel = () => {
               <div
                 class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
                 data-sprk-stepper="description"
-                aria-labelledby="step-4"
-                id="target-4"
+                aria-labelledby="sc-step-4"
+                id="sc-target-4"
                 role="tabpanel"
               >
                 <p class="sprk-b-TypeBodyTwo">
