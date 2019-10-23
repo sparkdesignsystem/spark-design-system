@@ -2,6 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 import { Link, navigate } from 'gatsby';
+import InstallingSparkDocsMenu from '../context/InstallingSparkDocsMenu';
+import UsingSparkDocsMenu from '../context/UsingSparkDocsMenu';
+import PrinciplesSparkDocsMenu from '../context/PrinciplesDocsMenu';
 
 const Menu = ({ context, menuVisible }) => (
   <div className={classNames(
@@ -9,19 +12,16 @@ const Menu = ({ context, menuVisible }) => (
     { 'menu--visible': menuVisible },
   )}
   >
-
-    { context } is the context
-
     { context === 'installing-spark'
-      && <p>Im a installing menu!</p>
+      && <InstallingSparkDocsMenu/>
     }
     {
       context === 'using-spark'
-      && <p>Im a using spark menu!</p>
+      && <UsingSparkDocsMenu/>
     }
     {
       context === 'principles'
-      && <p>Im a principles menu!</p>
+      && <PrinciplesSparkDocsMenu/>
     }
   </div>
 );

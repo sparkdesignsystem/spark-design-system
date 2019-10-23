@@ -4,8 +4,8 @@ import Header from './Header';
 import Menu from './Menu';
 import Footer from './Footer';
 
-const Layout = ({ children, menuContext, render }) => {
-  const [context, setContext] = useState(menuContext || 'homepage');
+const Layout = ({ children, render }) => {
+  const [context, setContext] = useState('homepage');
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
@@ -39,12 +39,13 @@ const Layout = ({ children, menuContext, render }) => {
             setMenuVisible={setMenuVisible}
           />
           <div className="content-menu-wrapper">
+            { context !== 'homepage' &&
             <Menu
               components={{}}
               context={context}
               menuVisible={menuVisible}
               setMenuVisible={setMenuVisible}
-            />
+            />}
             <div className="content">
               { children }
               <Footer />

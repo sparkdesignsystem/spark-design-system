@@ -28,7 +28,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/site-structure/Layout.js'),
+          default: require.resolve('./src/components/site-structure/ContentWrapper.js'),
         },
       },
     },
