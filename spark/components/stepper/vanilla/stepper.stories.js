@@ -376,6 +376,8 @@ export const stepperWithDarkBackground = () => {
 export const stepperWithCarousel = () => {
   useEffect(() => {
     stepper();
+
+    // Trigger iframe window resize to address lory carousel issues
     const iframeWindow = window.frameElement.contentWindow;
     const event = document.createEvent('Event');
     event.initEvent('resize', true, true);
