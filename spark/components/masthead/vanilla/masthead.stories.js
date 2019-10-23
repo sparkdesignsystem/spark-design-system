@@ -6,24 +6,24 @@ import { dropdowns } from '../../dropdown/vanilla/dropdown';
 import isElementVisible from '../../../utilities/helpers/vanilla/isElementVisible';
 
 export default {
-  title: 'Components|Masthead',
+    title: 'Components|Masthead',
 };
 
 // TODO: Add this decorator individually rather than globally
 // addDecorator(story => `<div data-sprk-main>${story()}</div>`);
 
 export const defaultMasthead = () => {
-  useEffect(() => {
-    toggle();
-    masthead();
+    useEffect(() => {
+        toggle();
+        masthead();
 
-    // Our masthead.js applies load event to `window`,
-    // but doesn't work in storybook iframes
-    // This useEffect runs this code when component mounts
-    const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
-    toggleScrollEvent(isMenuVisibleSB);
-  }, []);
-  return `
+        // Our masthead.js applies load event to `window`,
+        // but doesn't work in storybook iframes
+        // This useEffect runs this code when component mounts
+        const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
+        toggleScrollEvent(isMenuVisibleSB);
+    }, []);
+    return `
     <header
       class="sprk-c-Masthead sprk-o-Stack"
       role="banner"
@@ -373,49 +373,37 @@ export const defaultMasthead = () => {
     </header>
     <div class="sprk-u-pam">
       <p class="sprk-u-mbm">
-        Molestie convallis gravida neque fermentum tellus vivamus praesent nisl curae; urna maecenas. Feugiat tortor pharetra vivamus scelerisque netus consectetur inceptos diam sociosqu fusce ac sem. Vestibulum congue mauris, facilisi aenean nulla. Erat habitant ipsum penatibus elit vulputate maecenas cras donec nisl leo. Accumsan sit scelerisque penatibus quam nisl. Torquent non nibh sollicitudin non. Sollicitudin rutrum gravida auctor a?
-      </p>
-      <p class="sprk-u-mbm">
-        Egestas magnis nulla arcu maecenas. Praesent conubia lacus viverra semper class facilisi et scelerisque molestie augue. Orci platea eget mauris iaculis. Dignissim mattis nulla laoreet nisl ad dignissim eget non ultrices vestibulum massa amet. Rutrum rutrum rhoncus lectus ac euismod. Ipsum mi nulla tempor non orci mollis sociis. Interdum lacinia cras nibh nullam malesuada ut nisi mauris vitae. Nullam egestas quis ligula. Urna condimentum tortor imperdiet velit lacinia hac fringilla? Penatibus tristique fusce, nec suscipit enim porta? Vel taciti laoreet venenatis felis senectus iaculis ipsum litora gravida massa mauris ullamcorper. Quam sed tellus non posuere neque.
-      </p>
-      <p class="sprk-u-mbm">
-        Fames consectetur neque etiam pharetra pretium. Nullam tempor etiam venenatis suspendisse laoreet dignissim lorem lacinia et nunc, magnis vehicula. Suspendisse; dolor per nostra. Fusce eleifend consequat varius. Dui feugiat adipiscing cras etiam non turpis conubia scelerisque neque sociosqu. Dictum feugiat taciti dis augue ridiculus tincidunt mus purus posuere massa conubia? Quis aliquam auctor quis habitasse mauris nascetur tincidunt facilisi. Congue.
-      </p>
-      <p class="sprk-u-mbm">
-        Sed curabitur litora vestibulum hac aenean interdum elementum nam. Eget duis sapien sociis libero lorem. Fringilla convallis mauris est. Leo habitant erat non vel auctor sit magna dis semper. Ornare bibendum diam mollis parturient egestas elit ullamcorper blandit! Ipsum taciti aenean auctor. Cum tristique luctus tempor tempor lobortis varius nec vel phasellus penatibus. Nostra est pulvinar mollis, sociosqu nascetur. Magna pharetra vehicula phasellus dui felis tempor! Ipsum, ullamcorper purus purus dolor nec a commodo purus habitasse! Curabitur semper vivamus convallis nunc euismod.
-      </p>
-      <p class="sprk-u-mbm">
-        Ad proin hac volutpat. Accumsan accumsan facilisi natoque; mauris curabitur sollicitudin! Pretium cubilia feugiat dapibus bibendum eu luctus? Hac scelerisque etiam dignissim diam augue morbi pellentesque volutpat elementum himenaeos quisque torquent. Nibh ultricies pellentesque maecenas mattis tellus adipiscing tempor, porttitor nisi metus ultrices. Sociis tempus cum placerat leo porta morbi.
-      </p>
-      <p class="sprk-u-mbm">
-        Amet sociis conubia pharetra dolor pharetra, arcu integer! Aliquam eget pellentesque ad etiam vivamus nostra. Nostra iaculis suscipit sed inceptos enim blandit convallis, convallis fringilla. Semper ultricies aliquam congue sed ipsum. Fames amet etiam accumsan urna fermentum, netus habitant ut dui est. Ipsum conubia ullamcorper consectetur ut congue placerat tempus, rutrum ac laoreet pretium aptent. Augue vehicula mollis vitae mi quis turpis commodo venenatis varius. Odio ullamcorper leo scelerisque ipsum fusce luctus per fusce tortor? Ligula sagittis himenaeos faucibus commodo. Montes cum, sociis.
-      </p>
-      <p class="sprk-u-mbm">
-        Cubilia congue curabitur aliquet accumsan turpis nulla. Gravida maecenas, augue diam felis auctor platea. Urna dictumst elementum per lobortis cum euismod ullamcorper. Eget mattis commodo integer volutpat potenti. Mollis nisl urna et, justo facilisis volutpat quis nascetur ipsum? Ac est nec dui torquent vulputate volutpat a eget suscipit dictum. Etiam tempor, curae; proin potenti nunc posuere primis tellus dui eget. Eget lectus mauris mollis imperdiet purus in himenaeos torquent elit curabitur. Cras erat libero eros ultricies placerat rhoncus nec rutrum, at mi. Luctus etiam lobortis taciti scelerisque. Tellus, fringilla nulla odio class phasellus. Aliquet praesent fringilla.
-      </p>
-      <p class="sprk-u-mbm">
-        Sollicitudin mollis consequat ligula et sed curabitur tempor. Nullam lobortis porttitor lectus scelerisque lacinia ridiculus? Elementum penatibus tristique est ornare? Imperdiet sit ultrices vehicula augue adipiscing primis. Duis, quis interdum dignissim consequat class ultrices mi. Molestie suspendisse pulvinar massa nec velit posuere venenatis ad. Amet dui ridiculus volutpat habitasse. Ut, fringilla neque fusce faucibus! Mi velit cras ante, in lobortis sit blandit ligula cras sodales donec suscipit. Nec commodo aptent euismod sodales quis tellus ipsum habitasse! Donec.
+        Molestie convallis gravida neque fermentum
+        tellus vivamus praesent nisl curae; urna maecenas.
+        Feugiat tortor pharetra vivamus scelerisque netus consectetur inceptos
+        diam sociosqu fusce ac sem. Vestibulum congue mauris, facilisi aenean
+        nulla.
+        Erat habitant ipsum penatibus elit vulputate maecenas cras
+        donec nisl leo. Accumsan sit scelerisque penatibus quam nisl.
+        Torquent non nibh sollicitudin non.
+        Sollicitudin rutrum gravida auctor a?
       </p>
     </div>
   `;
 };
 
 defaultMasthead.story = {
-  name: 'Default',
+    name: 'Default',
 };
 
 export const extended = () => {
-  useEffect(() => {
-    dropdowns();
-    toggle();
-    masthead();
+    useEffect(() => {
+        dropdowns();
+        toggle();
+        masthead();
 
-    // Our masthead.js applies load event to `window` but doesn't work in storybook iframes
-    // This useEffect runs this code when component mounts
-    const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
-    toggleScrollEvent(isMenuVisibleSB);
-  }, []);
-  return `
+        // Our masthead.js applies load event to `window`,
+        // but doesn't work in storybook iframes
+        // This useEffect runs this code when component mounts
+        const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
+        toggleScrollEvent(isMenuVisibleSB);
+    }, []);
+    return `
     <header class="sprk-c-Masthead sprk-o-Stack" role="banner" idstring="masthead-2" data-sprk-masthead>
       <div class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs">
         <div class="sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
