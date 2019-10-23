@@ -2,6 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { stepper } from './stepper';
 import '../../../utilities/polyfills/vanilla/classListSVG';
 import '../../../utilities/polyfills/vanilla/CustomEvent';
+import '../../../utilities/polyfills/vanilla/ObjectPrepend';
 
 export default {
   title: 'Components|Stepper',
@@ -376,7 +377,8 @@ export const stepperWithCarousel = () => {
   useEffect(() => {
     stepper();
     const iframeWindow = window.frameElement.contentWindow;
-    const event = new Event('resize');
+    const event = document.createEvent('Event');
+    event.initEvent('resize', true, true);
     iframeWindow.addEventListener('resize', () => {
       iframeWindow.resizeBy(0, 0);
     }, false);
