@@ -21,7 +21,6 @@ export const defaultMasthead = () => {
     // This useEffect runs this code when component mounts
     const isMenuVisibleSB = isElementVisible('.sprk-c-Masthead__menu');
     toggleScrollEvent(isMenuVisibleSB);
-
   }, []);
   return `
     <header
@@ -249,12 +248,12 @@ export const defaultMasthead = () => {
         Sollicitudin mollis consequat ligula et sed curabitur tempor. Nullam lobortis porttitor lectus scelerisque lacinia ridiculus? Elementum penatibus tristique est ornare? Imperdiet sit ultrices vehicula augue adipiscing primis. Duis, quis interdum dignissim consequat class ultrices mi. Molestie suspendisse pulvinar massa nec velit posuere venenatis ad. Amet dui ridiculus volutpat habitasse. Ut, fringilla neque fusce faucibus! Mi velit cras ante, in lobortis sit blandit ligula cras sodales donec suscipit. Nec commodo aptent euismod sodales quis tellus ipsum habitasse! Donec.
       </p>
     </div>
-  `
+  `;
 };
 
 defaultMasthead.story = {
   name: 'Default',
-}
+};
 
 export const extended = () => {
   useEffect(() => {
@@ -697,5 +696,5 @@ export const extended = () => {
         Sollicitudin mollis consequat ligula et sed curabitur tempor. Nullam lobortis porttitor lectus scelerisque lacinia ridiculus? Elementum penatibus tristique est ornare? Imperdiet sit ultrices vehicula augue adipiscing primis. Duis, quis interdum dignissim consequat class ultrices mi. Molestie suspendisse pulvinar massa nec velit posuere venenatis ad. Amet dui ridiculus volutpat habitasse. Ut, fringilla neque fusce faucibus! Mi velit cras ante, in lobortis sit blandit ligula cras sodales donec suscipit. Nec commodo aptent euismod sodales quis tellus ipsum habitasse! Donec.
       </p>
     </div>
-  `
+  `;
 };
