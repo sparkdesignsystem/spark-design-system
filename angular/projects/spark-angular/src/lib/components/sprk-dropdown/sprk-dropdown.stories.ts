@@ -33,7 +33,6 @@ export const base = () => ({
           value: 'Option 2'
         }
       ]"
-      (choiceMade)="choiceHandler($event)"
     >
     </sprk-dropdown>
   `
@@ -48,7 +47,6 @@ export const informational = () => ({
       triggerText="Make a Selection..."
       title="My Choices"
       triggerIconType="chevron-down"
-      (choiceMade)="choiceHandler($event)"
       [choices]="[{
         content: {
           title: 'Choice Title',
