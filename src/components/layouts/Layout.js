@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classnames from 'classnames';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
 import Menu from '../Menu';
@@ -41,7 +42,10 @@ const Layout = ({ children, initialContext,  render }) => {
               setMenuVisible={setMenuVisible}
             />
           </div>
-          <div className="layout__content-wrapper">
+          <div className={classnames({
+            "layout__side-bar": true,
+            "layout__side-bar-mobile--visible": menuVisible
+          })}>
             <Menu
               components={{}}
               context={context}
@@ -49,10 +53,10 @@ const Layout = ({ children, initialContext,  render }) => {
               menuVisible={menuVisible}
               setMenuVisible={setMenuVisible}
             />
-            <div className="layout__content">
-              { children }
-              <Footer />
-            </div>
+          </div>
+          <div className="layout__content">
+            { children }
+            <Footer />
           </div>
         </div>
       )}

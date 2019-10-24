@@ -2,11 +2,6 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
-
-  @media (min-width: $doc-site-mobile-breakpoint) {
-    margin-left: 4rem;
-  }
 }
 
 .header__group {

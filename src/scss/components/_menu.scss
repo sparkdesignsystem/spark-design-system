@@ -1,41 +1,22 @@
 /* stylelint-disable */
 .menu {
-  background-color: $sprk-gray;
-  left: -100%;
-  margin: 0 $sprk-space-l;
-  max-width: 350px;
-  padding: $sprk-space-l;
-  position: absolute;
-  width: 95%;
-  z-index: 2;
 
-  @media (min-width: $doc-site-mobile-breakpoint) {
-    position: static;
-    width: 25%;
-  }
-}
-
-.menu--visible {
-  left: 0;
 }
 
 .menu__heading {
   font-size: 1.18rem;
   font-weight: 400;
-  padding: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .menu__subheading {
   font-size: 1.1rem;
   font-weight: 300;
+  margin: 1rem 0;
 }
 
 .menu__collection-heading {
   font-weight: 700;
-}
-
-.menu__collection-item {
-  padding: 0.5rem 0;
 }
 
 .menu__collection {
