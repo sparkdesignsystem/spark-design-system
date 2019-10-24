@@ -1,3 +1,4 @@
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
 import { RouterModule } from '@angular/router';
@@ -8,6 +9,13 @@ import { SprkAccordionComponent } from './sprk-accordion.component';
 export default {
   title: 'Components|Accordions',
   component: SprkAccordionModule,
+  decorators: [
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
+      )
+    )
+  ],
 };
 
 const modules = {
