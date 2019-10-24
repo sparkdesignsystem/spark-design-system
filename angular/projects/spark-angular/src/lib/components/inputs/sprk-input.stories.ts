@@ -3,6 +3,8 @@ import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.m
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkIconModule } from './../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 
 export default {
   title: 'Components|Inputs',
@@ -15,6 +17,8 @@ const modules = {
     SprkInputModule,
     SprkHugeInputContainerModule,
     SprkIconModule,
+    SprkSelectionContainerModule,
+    SprkSelectionItemContainerModule,
   ],
 };
 
@@ -66,5 +70,61 @@ export const hugeTextInput = () => ({
         <div class="sprk-b-ErrorText">This field is required.</div>
       </span>
     </sprk-huge-input-container>
+  `,
+});
+
+export const checkbox = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-selection-container>
+      <label sprkLabel>
+        Checkbox Group Label
+      </label>
+
+      <sprk-selection-item-container>
+        <input
+        type="checkbox"
+        name="checkbox_input"
+        [(ngModel)]="checkbox_input1"
+        sprkSelectionInput
+        #checkboxInput1="ngModel"
+        data-id="checkbox-1"
+        >
+
+        <label sprkSelectionLabel>
+          Checkbox Item 1
+        </label>
+      </sprk-selection-item-container>
+
+      <sprk-selection-item-container>
+        <input
+        type="checkbox"
+        name="checkbox_input"
+        [(ngModel)]="checkbox_input2"
+        sprkSelectionInput
+        #checkboxInput2="ngModel"
+        data-id="checkbox-2"
+        >
+
+        <label sprkSelectionLabel>
+          Checkbox Item 2
+        </label>
+      </sprk-selection-item-container>
+
+      <sprk-selection-item-container>
+        <input
+        type="checkbox"
+        name="checkbox_input"
+        [(ngModel)]="checkbox_input3"
+        sprkSelectionInput
+        #checkboxInput3="ngModel"
+        data-id="checkbox-3"
+        >
+
+        <label sprkSelectionLabel>
+          Checkbox Item 3
+        </label>
+      </sprk-selection-item-container>
+    </sprk-selection-container>
   `,
 });
