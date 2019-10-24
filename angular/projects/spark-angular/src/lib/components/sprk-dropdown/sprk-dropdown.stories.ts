@@ -10,7 +10,7 @@ export default {
   decorators: [
     storyWrapper(
       storyContent => (
-        `<div class="sprk-o-Box" >${ storyContent }<div>`
+        `<div class="sprk-o-Box">${ storyContent }<div>`
       )
     )
   ],
