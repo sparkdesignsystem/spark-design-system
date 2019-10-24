@@ -221,8 +221,7 @@ export const defaultStory = () => ({
           href: '/awards-1',
           imgSrc:
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS:
-            'sprk-u-Width-50',
+          imgCSS: 'sprk-u-Width-50',
           imgAlt: 'placeholder',
           analytics: 'awards-link-1'
         },
@@ -230,8 +229,7 @@ export const defaultStory = () => ({
           href: '/awards-2',
           imgSrc:
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS:
-            'sprk-u-Width-50',
+          imgCSS: 'sprk-u-Width-50',
           imgAlt: 'placeholder',
           analytics: 'awards-link-2'
         }
