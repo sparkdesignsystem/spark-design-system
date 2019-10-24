@@ -222,7 +222,7 @@ export const defaultStory = () => ({
           imgSrc:
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
           imgCSS:
-            'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
+            'sprk-u-Width-50',
           imgAlt: 'placeholder',
           analytics: 'awards-link-1'
         },
@@ -231,7 +231,7 @@ export const defaultStory = () => ({
           imgSrc:
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
           imgCSS:
-            'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
+            'sprk-u-Width-50',
           imgAlt: 'placeholder',
           analytics: 'awards-link-2'
         }
