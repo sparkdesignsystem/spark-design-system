@@ -1,0 +1,35 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    margin-left: 4rem;
+  }
+}
+
+.header__group {
+  align-items: center;
+  display: flex;
+}
+
+.header .sprk-b-InputContainer {
+  margin-bottom: 0;
+}
+
+.header__menu-button {
+  background: none;
+  border: none;
+  margin-right: 1rem;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.header__menu-wrapper {
+  @media (max-width: $doc-site-mobile-breakpoint) {
+    display: none;
+  }
+}

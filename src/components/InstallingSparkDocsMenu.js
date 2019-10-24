@@ -37,7 +37,9 @@ const InstallingSparkDocsMenu = () => (
                   className="menu__collection-item">
                   <Link
                     className="menu__link"
-                    to={`/${guide.node.parent.relativeDirectory}/${guide.node.parent.name}`}>{ guide.node.frontmatter.title || guide.node.parent.name }</Link>
+                    to={`/installing-spark/${guide.node.parent.name}`}>
+                      { guide.node.frontmatter.title || guide.node.parent.name }
+                  </Link>
                 </li>
               ))}
             </ul>

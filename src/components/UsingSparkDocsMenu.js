@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import LinkList from '../site-structure/LinkList';
+import { StaticQuery, graphql } from 'gatsby';
+import ContextSubMenu from './ContextSubMenu';
 
 const UsingSparkDocsMenu = () => (
   <StaticQuery
@@ -85,12 +85,14 @@ const UsingSparkDocsMenu = () => (
       return (
         <>
           <h3 className="menu__heading">Using Spark</h3>
-          <nav>
-            {foundationPages.length > 0 && <LinkList heading="Foundations" collection={foundationPages} />}
-            {guidePages.length > 0 && <LinkList heading="Guides" collection={guidePages} />}
-            {componentPages.length > 0 && <LinkList heading="Components" collection={componentPages} />}
-            {examplePages.length > 0 && <LinkList heading="Examples" collection={examplePages} />}
-          </nav>
+          <div className="menu__collection">
+            <nav>
+              {foundationPages.length > 0 && <ContextSubMenu directory="foundations" heading="Foundations" collection={foundationPages} />}
+              {guidePages.length > 0 && <ContextSubMenu directory="guides" heading="Guides" collection={guidePages} />}
+              {componentPages.length > 0 && <ContextSubMenu directory="components" heading="Components" collection={componentPages} />}
+              {examplePages.length > 0 && <ContextSubMenu directory="examples" heading="Examples" collection={examplePages} />}
+            </nav>
+          </div>
         </>
       );
     }}

@@ -25,6 +25,11 @@
   padding: 2rem 0;
 }
 
+.menu__subheading {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
 .menu__collection-heading {
   font-weight: 700;
 }
@@ -35,6 +40,7 @@
 
 .menu__collection {
   list-style-type: none;
+  padding-left: 1rem;
 }
 
 .menu__link {
@@ -59,4 +65,11 @@
 .menu__select {
   width: 100%;
 }
+
+.menu__context {
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    display: none;
+  }
+}
+
 /* stylelint-enable */

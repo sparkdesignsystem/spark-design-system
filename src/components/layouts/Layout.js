@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Header from './Header';
-import Menu from './Menu';
-import Footer from './Footer';
+import Header from '../Header';
+import Menu from '../Menu';
+import Footer from '../Footer';
 
-const Layout = ({ children, render }) => {
-  const [context, setContext] = useState('homepage');
+const Layout = ({ children, initialContext,  render }) => {
+  const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
@@ -33,20 +33,23 @@ const Layout = ({ children, render }) => {
               __html: data.allSparkIconSet.edges[0].node.internal.content,
             }}
           />
-          <Header
-            setContext={setContext}
-            menuVisible={menuVisible}
-            setMenuVisible={setMenuVisible}
-          />
-          <div className="content-menu-wrapper">
-            { context !== 'homepage' &&
+          <div className="layout__header">
+            <Header
+              context={context}
+              setContext={setContext}
+              menuVisible={menuVisible}
+              setMenuVisible={setMenuVisible}
+            />
+          </div>
+          <div className="layout__content-wrapper">
             <Menu
               components={{}}
               context={context}
+              setContext={setContext}
               menuVisible={menuVisible}
               setMenuVisible={setMenuVisible}
-            />}
-            <div className="content">
+            />
+            <div className="layout__content">
               { children }
               <Footer />
             </div>

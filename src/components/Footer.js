@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import SiteLogo from '../site-logo';
+import SiteLogo from './site-logo';
 
 const Footer = ({ children }) => (
   <div className="footer">

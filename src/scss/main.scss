@@ -1,11 +1,12 @@
 @import './spark-theme';
-@import '@sparkdesignsystem/spark/_spark.scss';
+@import '~@sparkdesignsystem/spark/_spark.scss';
 
 $doc-site-mobile-breakpoint: 1035px;
 
 @import './components/component-index';
-@import './site-structure/layout';
-@import './site-structure/header';
-@import './site-structure/content';
-@import './site-structure/footer';
-@import './site-structure/menu';
+@import './components/layout';
+@import './components/header';
+@import './components/context-menu';
+@import './components/content';
+@import './components/footer';
+@import './components/menu';

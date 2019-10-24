@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-function LinkList({heading, collection}) {
+function ContextSubMenu({heading, collection, directory}) {
   return (
-    <>
-      <h4>{heading}</h4>
+    <div className="sub-menu">
+      <h4 className="menu__subheading">{heading}</h4>
       <ul className="menu__collection">
         { collection.map(item => (
           <li
@@ -12,14 +12,14 @@ function LinkList({heading, collection}) {
             className="menu__collection-item">
             <Link
               className="menu__link"
-              to={`/${item.node.parent.relativeDirectory}/${item.node.parent.name}`}>
+              to={`/using-spark/${directory}/${item.node.parent.name}`}>
                 { item.node.frontmatter.title || item.node.parent.name }
             </Link>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
-export default LinkList;
+export default ContextSubMenu;
