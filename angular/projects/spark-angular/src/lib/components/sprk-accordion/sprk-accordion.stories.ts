@@ -10,11 +10,11 @@ export default {
   title: 'Components|Accordions',
   component: SprkAccordionModule,
   decorators: [
-      storyWrapper(
-        storyContent => (
-          `<div class="sprk-o-Box">${ storyContent }<div>`
-        )
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
       )
+    )
   ],
 };
 

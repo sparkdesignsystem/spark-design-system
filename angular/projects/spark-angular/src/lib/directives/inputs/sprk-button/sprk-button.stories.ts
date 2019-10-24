@@ -5,11 +5,11 @@ export default {
   title: 'Components|Buttons',
   component: SprkButtonModule,
   decorators: [
-      storyWrapper(
-        storyContent => (
-          `<div class="sprk-o-Box">${ storyContent }<div>`
-        )
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
       )
+    )
   ],
  };
 

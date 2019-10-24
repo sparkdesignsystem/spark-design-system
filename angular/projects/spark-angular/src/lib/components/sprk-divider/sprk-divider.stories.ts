@@ -5,11 +5,11 @@ export default {
   title: 'Components|Divider',
   component: SprkDividerModule,
   decorators: [
-      storyWrapper(
-        storyContent => (
-          `<div class="sprk-o-Box">${ storyContent }<div>`
-        )
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
       )
+    )
   ],
 };
 

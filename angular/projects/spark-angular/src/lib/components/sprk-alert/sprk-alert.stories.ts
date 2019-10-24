@@ -5,11 +5,11 @@ export default {
   title: 'Components|Alerts',
   component: SprkAlertModule,
   decorators: [
-      storyWrapper(
-        storyContent => (
-          `<div class="sprk-o-Box">${ storyContent }<div>`
-        )
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
       )
+    )
   ],
 };
 
@@ -29,8 +29,6 @@ export const info = () => ({
     </sprk-alert>
   `,
 });
-
-
 
 export const success = () => ({
   moduleMetadata: modules,

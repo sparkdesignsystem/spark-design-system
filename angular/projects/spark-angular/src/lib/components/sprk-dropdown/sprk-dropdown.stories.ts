@@ -8,11 +8,11 @@ export default {
   title: 'Components|Dropdown',
   component: SprkDropdownModule,
   decorators: [
-      storyWrapper(
-        storyContent => (
-          `<div class="sprk-o-Box" >${ storyContent }<div>`
-        )
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box" >${ storyContent }<div>`
       )
+    )
   ],
 };
 
