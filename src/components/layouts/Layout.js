@@ -4,8 +4,9 @@ import { StaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
+import '../../scss/main.scss';
 
-const Layout = ({ children, initialContext,  render }) => {
+const Layout = ({ children, initialContext }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
 

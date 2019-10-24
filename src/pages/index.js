@@ -5,8 +5,6 @@ import {
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
 
-import '../scss/main.scss';
-
 const IndexPage = () => {
 return(
 <Layout>
