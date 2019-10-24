@@ -190,7 +190,12 @@ export const secondaryRowComparison = () => ({
           <td>Data</td>
           <td class="sprk-o-Stack sprk-o-Stack--end-column">
             <div class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-c-Button--secondary" type="button">Learn More</button>
+              <button
+                class="sprk-c-Button sprk-c-Button--secondary"
+                type="button"
+              >
+                Learn More
+              </button>
             </div>
           </td>
         </tr>
@@ -200,7 +205,12 @@ export const secondaryRowComparison = () => ({
           <td>Data</td>
           <td class="sprk-o-Stack sprk-o-Stack--end-column">
             <div class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-c-Button--secondary" type="button">Learn More</button>
+              <button
+                class="sprk-c-Button sprk-c-Button--secondary"
+                type="button"
+              >
+                Learn More
+              </button>
             </div>
           </td>
         </tr>
@@ -210,7 +220,12 @@ export const secondaryRowComparison = () => ({
           <td>Data</td>
           <td class="sprk-o-Stack sprk-o-Stack--end-column">
             <div class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-c-Button--secondary" type="button">Learn More</button>
+              <button
+                class="sprk-c-Button sprk-c-Button--secondary"
+                type="button"
+              >
+                Learn More
+              </button>
             </div>
           </td>
         </tr>
