@@ -1,5 +1,5 @@
 import { SprkIconModule } from './sprk-icon.module';
-import { storyWrapper } from '../../../../../../.storybook/helpers';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 
 export default {
   title: 'Components|Icons',

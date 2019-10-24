@@ -1,4 +1,4 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
 import { RouterModule } from '@angular/router';

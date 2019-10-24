@@ -2,7 +2,7 @@ import { SprkDropdownModule } from './sprk-dropdown.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
-import { storyWrapper } from '../../../../../../.storybook/helpers';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 
 export default {
   title: 'Components|Dropdown',

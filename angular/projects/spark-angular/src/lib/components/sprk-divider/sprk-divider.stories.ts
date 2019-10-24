@@ -1,4 +1,4 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDividerModule } from './sprk-divider.module';
 
 export default {

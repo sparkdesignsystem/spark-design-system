@@ -1,4 +1,4 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
 
 export default {

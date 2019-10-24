@@ -1,5 +1,5 @@
 import { SprkButtonModule } from './sprk-button.module';
-import { storyWrapper } from '../../../../../../../.storybook/helpers';
+import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
 
 export default {
   title: 'Components|Buttons',
