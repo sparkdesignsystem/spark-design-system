@@ -5,78 +5,135 @@
 //
 // Reset
 ///
+
+/// Color of selections.
 $sprk-selection-bg-color: $sprk-green !default;
+/// Font color of selections.
 $sprk-selection-text-color: $sprk-black !default;
+/// Reset for the overflow property on pre elements.
 $sprk-pre-overflow: auto !default;
 
 //
 // Blockquote
 ///
+
+/// The content property value of the
+/// before pseudo-element on .sprk-b-Blockquote__source.
 $sprk-blockquote-source-prefix: '-' !default;
+/// Value for the margin property on .sprk-b-Blockquote.
 $sprk-blockquote-margin: 0 !default;
+/// Value for the margin property .sprk-b-Blockquote__quote.
 $sprk-blockquote-quote-margin: 0 !default;
+/// Value for the margin property on the
+/// last .sprk-b-Blockquote__quote in a .sprk-b-Blockquote.
 $sprk-blockquote-quote-last-margin: 0 !default;
 
 //
 // Spacing
 ///
+
+/// Vargin for the extra small inset space.
 $sprk-space-inset-xs: 4px 4px 4px 4px !default;
+/// Value for the small inset space.
 $sprk-space-inset-s: 8px 8px 8px 8px !default;
+/// Value for the medium inset space.
 $sprk-space-inset-m: 16px 16px 16px 16px !default;
+/// Value for the large inset space.
 $sprk-space-inset-l: 32px 32px 32px 32px !default;
+/// Value for the extra large inset space.
 $sprk-space-inset-xl: 64px 64px 64px 64px !default;
 
 // Inset Short
+
+/// Value for the extra small inset short space.
 $sprk-space-inset-short-xs: 2px 4px 2px 4px !default;
+/// Value for the small inset short space.
 $sprk-space-inset-short-s: 4px 8px 4px 8px !default;
+/// Value for the medium inset short space.
 $sprk-space-inset-short-m: 8px 16px 8px 16px !default;
+/// Value for the large inset short space.
 $sprk-space-inset-short-l: 16px 32px 16px 32px !default;
+/// Value for the extra large inset short space.
 $sprk-space-inset-short-xl: 32px 64px 32px 64px !default;
 
-// Inset Tall
+/// Value for the extra small inset tall space.
 $sprk-space-inset-tall-xs: 6px 4px 6px 4px !default;
+/// Value for the small inset tall space.
 $sprk-space-inset-tall-s: 12px 8px 12px 8px !default;
+/// Value for the medium inset tall space.
 $sprk-space-inset-tall-m: 24px 16px 24px 16px !default;
+/// Value for the large inset tall space.
 $sprk-space-inset-tall-l: 48px 32px 48px 32px !default;
+/// Value for the extra large inset tall space.
 $sprk-space-inset-tall-xl: 96px 64px 96px 64px !default;
 
 // Stack
+
+/// Value for the extra small stack space.
 $sprk-space-stack-xs: 0 0 4px 0 !default;
+/// Value for the small stack space.
 $sprk-space-stack-s: 0 0 8px 0 !default;
+/// Value for the medium stack space.
 $sprk-space-stack-m: 0 0 16px 0 !default;
+/// Value for the large stack space.
 $sprk-space-stack-l: 0 0 32px 0 !default;
+/// Value for the extra large stack space.
 $sprk-space-stack-xl: 0 0 64px 0 !default;
 
 // Global Spacing Utilities
+
+/// Value for the extra small space setting.
 $sprk-space-xs: 4px !default;
+/// Value for the small space setting.
 $sprk-space-s: 8px !default;
+/// Value for the medium space setting.
 $sprk-space-m: 16px !default;
+/// Value for the large inset tall space setting.
 $sprk-space-l: 32px !default;
+/// Value for the extra large space setting.
 $sprk-space-xl: 64px !default;
+/// Value for the huge space setting.
 $sprk-space-h: $sprk-space-xl !default;
 
 // Misc  Spacing Utilities
+
+/// Value for the misc a space setting.
 $sprk-space-misc-a: 24px !default;
+/// Value for the misc b space setting.
 $sprk-space-misc-b: 40px !default;
+/// Value for the misc c space setting.
 $sprk-space-misc-c: 48px !default;
+/// Value for the misc d space setting.
 $sprk-space-misc-d: 80px !default;
 
 //
 // Flag
 ///
+
+/// Value for the gutters between body and figure in .sprk-o-Flag.
 $sprk-flag-gutter: $sprk-space-m !default;
+/// Value for the gutters between body and figure in .sprk-o-Flag--tiny.
 $sprk-flag-gutter-tiny: $sprk-space-xs !default;
+/// Value for the gutters between body and figure in .sprk-o-Flag--small.
 $sprk-flag-gutter-small: $sprk-space-s !default;
+/// Value for the gutters between body and figure in .sprk-o-Flag--large.
 $sprk-flag-gutter-large: $sprk-space-l !default;
+/// Value for the gutters between body and figure in .sprk-o-Flag--huge.
 $sprk-flag-gutter-huge: $sprk-space-xl !default;
+/// Value for the gutters between body and figure in .sprk-o-Flag--stacked.
 $sprk-flag-stacked-breakpoint: 25em !default;
 
 //
 // Icons
 ///
+
+// Value for height and width of .sprk-c-Icon.
 $sprk-icon-m: 16px !default;
+// Value for height and width of .sprk-c-Icon--l.
 $sprk-icon-l: 32px !default;
+// Value for height and width of .sprk-c-Icon--xl.
 $sprk-icon-xl: 64px !default;
+// Value for height and width of .sprk-c-Icon--xxl.
 $sprk-icon-xxl: 128px !default;
 $sprk-icon-fill-color: none !default;
 $sprk-icon-stroke-color: $sprk-black !default;

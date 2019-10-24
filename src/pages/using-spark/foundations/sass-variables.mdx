@@ -1,0 +1,39 @@
+---
+  title: "Sass Variables"
+---
+import { SprkTable } from '@sparkdesignsystem/spark-react';
+import * as sassData from '../../../data/sass-data.json';
+
+export const sassVars = sassData.map(item => (
+  {
+    name: item.context.name,
+    value: item.context.value,
+    description: item.description,
+  }
+));
+
+# Sass Variables
+
+<div className="sprk-o-Box">
+  {console.log(sassVars, 'cats')}
+  {sassVars && (
+    <SprkTable
+      additionalTableClasses="sprk-b-Table--spacing-medium"
+      idString="table-1"
+      columns={[{
+          name: 'name',
+          header: 'Variable',
+        },
+        {
+          name: 'value',
+          header: 'Default Value',
+        },
+        {
+          name: 'description',
+          header: 'Description',
+        }]
+      }
+      rows={sassVars}
+    />
+  )}
+</div>
