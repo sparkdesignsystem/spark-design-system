@@ -28,7 +28,7 @@ const modules = {
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
-export const base = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-link
@@ -40,6 +40,10 @@ export const base = () => ({
     </sprk-link>
   `,
 });
+
+defaultStory.story = {
+  name: 'Default',
+};
 
 export const simple = () => ({
   moduleMetadata: modules,
@@ -55,7 +59,7 @@ export const simple = () => ({
   `,
 });
 
-export const iconWithText = () => ({
+export const iconWithTextLink = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-link
