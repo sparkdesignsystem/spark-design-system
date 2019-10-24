@@ -5,6 +5,7 @@ import { SprkIconModule } from './../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 
 export default {
   title: 'Components|Inputs',
@@ -19,6 +20,7 @@ const modules = {
     SprkIconModule,
     SprkSelectionContainerModule,
     SprkSelectionItemContainerModule,
+    SprkSelectionLabelModule,
   ],
 };
 
@@ -89,9 +91,13 @@ export const checkbox = () => ({
         sprkSelectionInput
         #checkboxInput1="ngModel"
         data-id="checkbox-1"
+        id="checkbox-1"
         >
 
-        <label sprkSelectionLabel>
+        <label
+          for="checkbox-1"
+          sprkSelectionLabel
+        >
           Checkbox Item 1
         </label>
       </sprk-selection-item-container>
@@ -104,9 +110,13 @@ export const checkbox = () => ({
         sprkSelectionInput
         #checkboxInput2="ngModel"
         data-id="checkbox-2"
+        id="checkbox-2"
         >
 
-        <label sprkSelectionLabel>
+        <label
+          id="checkbox-2"
+          sprkSelectionLabel
+        >
           Checkbox Item 2
         </label>
       </sprk-selection-item-container>
@@ -119,10 +129,77 @@ export const checkbox = () => ({
         sprkSelectionInput
         #checkboxInput3="ngModel"
         data-id="checkbox-3"
+        id="checkbox-3"
         >
 
-        <label sprkSelectionLabel>
+        <label
+          id="checkbox-3"
+          sprkSelectionLabel
+        >
           Checkbox Item 3
+        </label>
+      </sprk-selection-item-container>
+    </sprk-selection-container>
+  `,
+});
+
+export const radioButtons = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-selection-container>
+      <label sprkLabel>Radio Group Label</label>
+      <sprk-selection-item-container>
+        <input
+          type="radio"
+          value="1"
+          name="radio_input"
+          [(ngModel)]="radio_input"
+          sprkSelectionInput
+          #radioInput="ngModel"
+          data-id="radio-1"
+          id="radio-1"
+        >
+        <label
+          for="radio-1"
+         sprkSelectionLabel
+        >
+          Item 1
+        </label>
+      </sprk-selection-item-container>
+      <sprk-selection-item-container>
+        <input
+          type="radio"
+          value="2"
+          name="radio_input"
+          sprkSelectionInput
+          [(ngModel)]="radio_input"
+          #radioInput="ngModel"
+          data-id="radio-2"
+          id="radio-2"
+        >
+        <label
+          for="radio-2"
+          sprkSelectionLabel
+        >
+          Item 2
+        </label>
+      </sprk-selection-item-container>
+      <sprk-selection-item-container>
+        <input
+          type="radio"
+          value="3"
+          name="radio_input"
+          sprkSelectionInput
+          [(ngModel)]="radio_input"
+          #radioInput="ngModel"
+          data-id="radio-3"
+          id="radio-3"
+        >
+        <label
+          for="radio-3"
+          sprkSelectionLabel
+        >
+          Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
