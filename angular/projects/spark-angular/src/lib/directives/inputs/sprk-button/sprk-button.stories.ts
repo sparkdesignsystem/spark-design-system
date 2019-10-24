@@ -1,8 +1,16 @@
 import { SprkButtonModule } from './sprk-button.module';
+import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
 
 export default {
   title: 'Components|Buttons',
   component: SprkButtonModule,
+  decorators: [
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
+      )
+    )
+  ],
  };
 
 const modules = {
@@ -18,7 +26,7 @@ export const primary = () => ({
       data-id="button-primary"
       sprkButton
     >
-      Button
+      Buttons
     </button>
   `,
 });

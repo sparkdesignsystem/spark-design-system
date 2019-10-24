@@ -1,8 +1,16 @@
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
 
 export default {
   title: 'Components|Alerts',
   component: SprkAlertModule,
+  decorators: [
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
+      )
+    )
+  ],
 };
 
 const modules = {
