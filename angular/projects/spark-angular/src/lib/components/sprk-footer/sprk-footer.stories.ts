@@ -1,3 +1,4 @@
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkFooterModule } from './sprk-footer.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -6,13 +7,22 @@ import { SprkFooterComponent } from './sprk-footer.component';
 
 export default {
   title: 'Components|Footer',
-  component: SprkFooterModule,
+  decorators: [
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">${ storyContent }<div>`
+      )
+    )
+  ]
 };
 
 const modules = {
   imports: [
     SprkFooterModule,
-    RouterModule.forRoot([{ path: 'iframe.html', component: SprkFooterComponent }]),
+    RouterModule.forRoot([{
+      path: 'iframe.html',
+      component: SprkFooterComponent,
+    }]),
     BrowserAnimationsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
@@ -211,7 +221,8 @@ export const defaultStory = () => ({
           href: '/awards-1',
           imgSrc:
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS: 'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
+          imgCSS:
+            'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
           imgAlt: 'placeholder',
           analytics: 'awards-link-1'
         },
@@ -219,7 +230,8 @@ export const defaultStory = () => ({
           href: '/awards-2',
           imgSrc:
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS: 'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
+          imgCSS:
+            'drizzle-c-Logo-placeholder drizzle-c-Logo-placeholder--large',
           imgAlt: 'placeholder',
           analytics: 'awards-link-2'
         }
@@ -231,7 +243,9 @@ export const defaultStory = () => ({
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         },
         {
-          text: 'Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+          text:
+            'Incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam.'
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.'
@@ -243,7 +257,9 @@ export const defaultStory = () => ({
       [disclaimerToggle]="[
         {
           title: 'My Award Disclaimer',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante.',
+          body:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Aliquam in laoreet ante.',
           analytics: 'disclaimer'
         }
       ]"
