@@ -1,3 +1,5 @@
 .nyc_output/
 .storybook/
 tests/
+storybook-static/
+

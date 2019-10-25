@@ -111,7 +111,7 @@ import setValidSelect from './utilities/validation/setValidSelect';
 import setValidTextInput from './utilities/validation/setValidTextInput';
 import setValidTick from './utilities/validation/setValidTick';
 import runValidation from './utilities/validation/validation-runner';
-import detectJS from './utilities/helpers/detectJS';
+import detectJS from './utilities/detectJS';
 import {
   getFocusableEls,
   focusFirstEl,
