@@ -1,0 +1,32 @@
+.sprk-b-TextArea {
+  border: $sprk-text-input-border;
+  border-radius: $sprk-text-input-border-radius;
+  box-shadow: $sprk-text-input-box-shadow;
+  color: $sprk-text-input-color;
+  font-family: $sprk-text-input-font-family;
+  font-size: $sprk-text-input-font-size;
+  font-weight: $sprk-text-input-font-weight;
+  height: auto;
+  line-height: $sprk-text-input-line-height;
+  margin: $sprk-textarea-margin;
+  min-height: $sprk-textarea-min-height;
+  outline: $sprk-text-input-outline;
+  padding: $sprk-textarea-padding;
+  transition: $sprk-text-input-transition;
+
+  &:focus {
+    border-color: $sprk-text-input-focus-border-color;
+  }
+}
+
+.sprk-b-TextArea--error,
+.sprk-b-TextArea--error:focus {
+  border-color: $sprk-text-input-error-border-color;
+}
+
+.sprk-b-TextArea[disabled] {
+  background-color: $sprk-text-input-disabled-background-color;
+  border-color: $sprk-text-input-disabled-border-color;
+  color: $sprk-text-input-disabled-color;
+  cursor: not-allowed;
+}

@@ -1,0 +1,37 @@
+// ==================================================================
+// Spinner Animation
+// ==================================================================
+.sprk-c-Spinner {
+  animation: rotate-infinite $sprk-spinner-speed linear infinite;
+  height: $sprk-spinner-size;
+  width: $sprk-spinner-size;
+}
+
+.sprk-c-Button .sprk-c-Spinner {
+  margin: 0 auto;
+}
+
+.sprk-c-Button--removal .sprk-c-Spinner,
+.sprk-c-Button--removal:hover .sprk-c-Spinner,
+.sprk-c-Button--removal:active .sprk-c-Spinner,
+.sprk-c-Button--removal:focus .sprk-c-Spinner {
+  border-color: $sprk-red;
+  border-right-color: transparent;
+}
+
+.sprk-c-Spinner--circle {
+  border: $sprk-spinner-thickness solid $sprk-spinner-color;
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+.sprk-c-Spinner--large {
+  width: $sprk-spinner-size-large;
+  height: $sprk-spinner-size-large;
+}
+
+.sprk-c-Spinner--dark {
+  border-top-color: $sprk-red;
+  border-left-color: $sprk-red;
+  border-bottom-color: $sprk-red;
+}

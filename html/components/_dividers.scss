@@ -1,0 +1,11 @@
+// ==================================================================
+// Dividers
+// ==================================================================
+hr,
+.sprk-c-Divider {
+  display: block;
+  border-bottom: $sprk-divider-border;
+  border-top: none;
+  margin-bottom: $sprk-space-m;
+  margin-top: $sprk-space-m;
+}

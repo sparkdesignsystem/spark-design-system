@@ -1,0 +1,61 @@
+// ==================================================================
+// Mixins
+// ==================================================================
+
+//
+// Underline used on hover in main navigation
+// Use within a :hover selector
+///
+
+@mixin HoverLine($sprk-hoverline-color, $sprk-hoverline-width, $sprk-hoverline-height) {
+  &::after {
+    background-color: $sprk-hoverline-color;
+    content: ' ';
+    height: $sprk-hoverline-height;
+    display: block;
+    width: $sprk-hoverline-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+//
+// Text Cropping for avoiding line-height collision
+// See http://text-crop.eightshapes.com/ and
+// https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+///
+
+@mixin TextCrop(
+  $sprk-text-crop-line-height: 1.3,
+  $sprk-text-crop-top-adjustment: 0,
+  $sprk-text-crop-bottom-adjustment: 0,
+  $sprk-text-crop-top-crop: 0,
+  $sprk-text-crop-bottom-crop: 0,
+  $sprk-text-crop-crop-font-size: 16,
+  $sprk-text-crop-crop-line-height: 1.3
+) {
+  // Apply values to calculate em-based margins that work with any font size
+  // prettier-ignore
+  $sprk-text-crop-dynamic-top-crop: max(($sprk-text-crop-top-crop + ($sprk-text-crop-line-height - $sprk-text-crop-crop-line-height) * ($sprk-text-crop-crop-font-size / 2)), 0) / $sprk-text-crop-crop-font-size;
+  // prettier-ignore
+  $sprk-text-crop-dynamic-bottom-crop: max(( $sprk-text-crop-bottom-crop + ($sprk-text-crop-line-height - $sprk-text-crop-crop-line-height) * ( $sprk-text-crop-crop-font-size / 2 ) ), 0) / $sprk-text-crop-crop-font-size;
+
+  // Mixin output
+  line-height: $sprk-text-crop-line-height;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  &::before {
+    margin-bottom: calc(-#{$sprk-text-crop-dynamic-top-crop}em + #{$sprk-text-crop-top-adjustment}px);
+  }
+
+  &::after {
+    margin-top: calc(-#{$sprk-text-crop-dynamic-bottom-crop}em + #{$sprk-text-crop-bottom-adjustment}px);
+  }
+}

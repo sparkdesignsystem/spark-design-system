@@ -1,0 +1,26 @@
+.sprk-b-ErrorContainer {
+  align-items: center;
+  display: flex;
+  margin: $sprk-error-container-margin;
+}
+
+[hidden].sprk-b-ErrorContainer {
+  display: none;
+}
+
+.sprk-b-ErrorIcon {
+  fill: $sprk-text-input-error-color;
+  stroke: none;
+  flex: 0 0 auto;
+  height: $sprk-error-icon-size;
+  width: $sprk-error-icon-size;
+}
+
+.sprk-b-ErrorText {
+  color: $sprk-input-error-text-color;
+  font-family: $sprk-input-error-text-font-family;
+  font-size: $sprk-input-error-text-font-size;
+  font-weight: $sprk-input-error-text-font-weight;
+  line-height: $sprk-input-error-text-line-height;
+  margin: $sprk-input-error-text-margin;
+}

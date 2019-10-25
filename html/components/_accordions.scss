@@ -1,0 +1,49 @@
+// ==================================================================
+// Accordions
+// ==================================================================
+.sprk-c-Accordion {
+  border-top: $sprk-accordion-border;
+  max-width: $sprk-accordion-max-width;
+  width: 100%;
+}
+
+.sprk-c-Accordion__item--open + .sprk-c-Accordion__item--open {
+  &::before {
+    display: none;
+  }
+}
+
+.sprk-c-Accordion__item {
+  border-bottom: $sprk-accordion-border;
+}
+
+.sprk-c-Accordion__heading {
+  flex: 1;
+}
+
+.sprk-c-Accordion__icon {
+  flex: 0 0 auto;
+}
+
+.sprk-c-Accordion__summary {
+  align-items: center;
+  color: $sprk-accordion-summary-color;
+  display: flex;
+  padding: $sprk-accordion-summary-padding;
+  text-decoration: none;
+
+  &:hover {
+    .sprk-c-Accordion__heading {
+      color: $sprk-accordion-summary-active-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
+  color: $sprk-accordion-summary-active-color;
+}
+
+.sprk-c-Accordion__content {
+  padding: $sprk-accordion-content-padding;
+}

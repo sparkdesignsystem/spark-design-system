@@ -1,0 +1,44 @@
+// ==================================================================
+// Animations
+// ==================================================================
+
+//
+// Infinite Rotation
+///
+
+@keyframes rotate-infinite {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//
+// Width Zero To Full
+///
+
+@keyframes width-zero-to-full {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+//
+// Opacity One to Zero
+//
+@keyframes opacity-one-to-zero {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

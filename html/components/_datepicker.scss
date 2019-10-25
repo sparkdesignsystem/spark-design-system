@@ -1,0 +1,223 @@
+// ==================================================================
+// Date Picker
+// ==================================================================
+
+/* stylelint-disable selector-class-pattern */
+.dp {
+  background: $sprk-date-picker-background;
+  border-radius: $sprk-date-picker-border-radius;
+  box-shadow: $sprk-date-picker-box-shadow;
+  font-family: $sprk-date-picker-font-family;
+  font-size: $sprk-date-picker-font-size;
+  padding: $sprk-date-picker-padding;
+  position: relative;
+  max-width: $sprk-date-picker-max-width;
+
+  @media (min-width: $sprk-date-picker-max-width) {
+    padding: $sprk-date-picker-padding-wide;
+  }
+}
+
+.dp::before {
+  position: absolute;
+}
+
+// for the little arrows above / below the dp box
+.dp-is-above,
+.dp-is-below {
+  &::after,
+  &::before {
+    border: solid transparent;
+    bottom: 99%;
+    content: '';
+    left: $sprk-space-l;
+    position: absolute;
+  }
+
+  &::after {
+    border-bottom-color: $sprk-white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+
+  &::before {
+    border-bottom-color: $sprk-gray;
+    border-width: 12px;
+    margin-left: -12px;
+  }
+}
+
+.dp-is-above {
+  &::after,
+  &::before {
+    top: 99%;
+    transform: rotate(180deg);
+  }
+}
+
+.dp-header {
+  display: flex;
+}
+
+.dp-year,
+.dp-month,
+.dp-cal-header button {
+  background: none;
+  border: 2px solid transparent;
+  margin: 0 0.2rem;
+  padding: 0 0.2rem;
+}
+
+.dp-cal-footer {
+  display: none;
+}
+
+.dp-col-header {
+  border-bottom: $sprk-date-picker-header-border;
+  display: inline-block;
+  font-size: $sprk-date-picker-header-font-size;
+  font-weight: $sprk-date-picker-header-font-weight;
+  padding: $sprk-date-picker-col-header-padding;
+  text-align: center;
+  max-width: $sprk-date-picker-button-size + $sprk-date-picker-column-adjustment-x;
+  width: 100%;
+}
+
+.dp-day {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  font-size: $sprk-date-picker-font-size;
+  font-weight: $sprk-date-picker-font-weight;
+  height: $sprk-date-picker-button-size;
+  line-height: 1;
+  padding: $sprk-date-picker-day-padding;
+  margin: $sprk-date-picker-day-margin;
+  width: $sprk-date-picker-button-size;
+}
+
+.dp-day:first-child,
+.dp-day:nth-child(7n) {
+  margin-right: 0;
+}
+
+.dp-day::selection {
+  user-select: none;
+}
+
+.dp-current,
+.dp-selected,
+.dp-day:hover {
+  background: $sprk-date-picker-day-interact-color;
+  border-color: $sprk-date-picker-day-interact-color;
+  color: $sprk-date-picker-day-color;
+  outline: 0;
+}
+
+.dp-current {
+  font-weight: $sprk-date-picker-selected-day-font-weight;
+}
+
+.dp-day:hover {
+  background: none;
+  color: $sprk-date-picker-day-hover-color;
+}
+
+.dp-day-disabled,
+.dp-edge-day {
+  color: $sprk-date-picker-day-edge-day-color;
+}
+
+.dp-day-today::after {
+  background-color: $sprk-date-picker-day-interact-color;
+  border-radius: 50%;
+  display: block;
+  content: '';
+  height: 5px;
+  width: 5px;
+  margin: 2px auto;
+}
+
+.dp-current.dp-day-today::after {
+  background: $sprk-date-picker-background;
+}
+
+.dp-current.dp-day-today:hover::after {
+  background-color: $sprk-date-picker-day-interact-color;
+}
+
+.dp-cal-header {
+  display: flex;
+  padding: $sprk-date-picker-header-padding;
+}
+
+.dp-cal-month,
+.dp-cal-year {
+  font-size: $sprk-date-picker-month-year-font-size;
+}
+
+.dp-next,
+.dp-prev {
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  font-size: 0;
+  flex: 0.5;
+  height: 35px;
+  overflow: hidden;
+  top: $sprk-space-m;
+  width: 35px;
+  // to make them look like carets, rather than have text
+  &::before {
+    border: 2px solid $sprk-date-picker-arrow-color;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    margin: 13px 0 40px;
+    transform: rotate(-45deg);
+    transition: border-color 0.2s;
+    width: 10px;
+  }
+}
+
+// caret-right
+.dp-next::before {
+  border-left: 0;
+  border-top: 0;
+  float: right;
+  margin-left: 0;
+}
+
+// caret-left
+.dp-prev::before {
+  border-right: 0;
+  border-bottom: 0;
+  float: left;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.dp-years {
+  max-height: $sprk-date-picker-years-modal-max-height;
+  overflow: scroll;
+  padding: $sprk-space-m;
+}
+
+.dp-year {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dp-below {
+  margin: $sprk-date-picker-modal-margin;
+  position: absolute;
+  z-index: $sprk-date-picker-modal-z-index;
+
+  @media (max-width: $sprk-date-picker-max-width) {
+    left: 0 !important;
+    margin: $sprk-date-picker-modal-margin-wide !important;
+  }
+}
+
+/* stylelint-enable selector-class-pattern */
