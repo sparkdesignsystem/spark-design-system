@@ -6,6 +6,7 @@ import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.m
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 
 export default {
   title: 'Components|Inputs',
@@ -21,6 +22,7 @@ const modules = {
     SprkSelectionContainerModule,
     SprkSelectionItemContainerModule,
     SprkSelectionLabelModule,
+    SprkTextareaContainerModule,
   ],
 };
 
@@ -272,3 +274,24 @@ export const hugeSelect = () => ({
     </sprk-huge-input-container>
   `,
 });
+
+export const textarea = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-textarea-container>
+      <label for="textarea-1" sprkLabel>Description</label>
+      <textarea
+      name="textarea_input"
+      id="textarea-1"
+      [(ngModel)]="textarea_input"
+      #textareaInput="ngModel"
+      data-id="textarea-1"
+      sprkInput
+      ></textarea>
+    </sprk-textarea-container>
+  `,
+});
+
+
+
+
