@@ -285,7 +285,7 @@ export const selectBox = () => ({
       additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
       sprk-select-icon
       ></sprk-icon>
-      <label sprkLabel for="select-normal-1">Huge Select Box Label</label>
+      <label sprkLabel for="select-normal-1">Select Box Label</label>
     </sprk-input-container>
   `,
 });
@@ -316,7 +316,7 @@ export const hugeSelect = () => ({
           <option value="g3">Grouped Option 3</option>
         </optgroup>
       </select>
-      <label sprkLabel for="select-huge-1">Select Box Label</label>
+      <label sprkLabel for="select-huge-1">Huge Select Box Label</label>
       <sprk-icon
         iconType="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
