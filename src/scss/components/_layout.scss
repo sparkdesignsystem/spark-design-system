@@ -22,9 +22,10 @@ $doc-site-layout-max-width: 90rem;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     align-self: start;
+    -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: span 2;
-    -ms-grid-row: 1 / 2;
+    -ms-grid-row: 1;
     grid-row: 1 / 2;
   }
 }
@@ -35,7 +36,8 @@ $doc-site-layout-max-width: 90rem;
   @media (min-width: $doc-site-mobile-breakpoint) {
     display: block;
     padding: 2rem;
-    -ms-grid-row: 2 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
     grid-row: 2 / 3;
   }
 }
@@ -54,6 +56,7 @@ $doc-site-layout-max-width: 90rem;
 .layout__content {
   padding: 2rem;
   overflow-x: scroll;
-  -ms-grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
   grid-row: 2 / 3;
 }
