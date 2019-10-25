@@ -205,3 +205,34 @@ export const radioButtons = () => ({
     </sprk-selection-container>
   `,
 });
+
+export const selectBox = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <select
+      class="sprk-b-Select"
+      id="select-normal"
+      aria-describedby="select-normal--error-container"
+      data-id="select-1"
+      sprkInput
+      >
+        <option value="none">Please choose...</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <optgroup label="Grouped Options">
+          <option value="g1">Grouped Option 1</option>
+          <option value="g2">Grouped Option 2</option>
+          <option value="g3">Grouped Option 3</option>
+        </optgroup>
+      </select>
+      <sprk-icon
+      iconType="chevron-down"
+      additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+      sprk-select-icon
+      ></sprk-icon>
+      <label sprkLabel for="select-normal">Select Box Label</label>
+    </sprk-input-container>
+  `,
+});

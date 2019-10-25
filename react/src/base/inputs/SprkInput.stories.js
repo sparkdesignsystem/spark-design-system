@@ -97,7 +97,7 @@ radioButtons.story = {
   name: 'Radio Buttons',
 };
 
-export const select = () => (
+export const selectBox = () => (
   <SprkSelectionInput
     choices={[
       {
@@ -132,6 +132,7 @@ export const select = () => (
     ]}
     name="name"
     variant="select"
+    label="Select Box Label"
   />
 );
 
