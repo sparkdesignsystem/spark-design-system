@@ -6,9 +6,9 @@
 // Reset
 ///
 
-/// Color of selections.
+/// Background color of text when selected.
 $sprk-selection-bg-color: $sprk-green !default;
-/// Font color of selections.
+/// Color of text when selected.
 $sprk-selection-text-color: $sprk-black !default;
 /// Reset for the overflow property on pre elements.
 $sprk-pre-overflow: auto !default;
@@ -32,7 +32,7 @@ $sprk-blockquote-quote-last-margin: 0 !default;
 // Spacing
 ///
 
-/// Vargin for the extra small inset space.
+/// Value for the extra small inset space.
 $sprk-space-inset-xs: 4px 4px 4px 4px !default;
 /// Value for the small inset space.
 $sprk-space-inset-s: 8px 8px 8px 8px !default;
@@ -127,301 +127,556 @@ $sprk-flag-stacked-breakpoint: 25em !default;
 // Icons
 ///
 
-// Value for height and width of .sprk-c-Icon.
+/// Value for height and width of .sprk-c-Icon.
 $sprk-icon-m: 16px !default;
-// Value for height and width of .sprk-c-Icon--l.
+/// Value for height and width of .sprk-c-Icon--l.
 $sprk-icon-l: 32px !default;
-// Value for height and width of .sprk-c-Icon--xl.
+/// Value for height and width of .sprk-c-Icon--xl.
 $sprk-icon-xl: 64px !default;
-// Value for height and width of .sprk-c-Icon--xxl.
+/// Value for height and width of .sprk-c-Icon--xxl.
 $sprk-icon-xxl: 128px !default;
+/// Value for the fill property on .sprk-c-Icon.
 $sprk-icon-fill-color: none !default;
+/// Value for the stroke property on .sprk-c-Icon.
 $sprk-icon-stroke-color: $sprk-black !default;
+/// Value for the fill property on .sprk-c-Icon--filled.
 $sprk-icon-filled-fill-color: $sprk-black !default;
+/// Value for the stroke property on .sprk-c-Icon--filled.
 $sprk-icon-filled-stroke-color: none !default;
+/// Boolean value for if a custom stroke is desired.
 $sprk-icon-using-custom-stroke: true !default;
+/// Value for a small custom stroke width.
 $sprk-icon-custom-stroke-width-s: 1px !default;
+/// Value for a medium custom stroke width.
 $sprk-icon-custom-stroke-width-m: 1.5px !default;
+/// Value for a large custom stroke width.
 $sprk-icon-custom-stroke-width-l: 2px !default;
+/// Value for an extra large custom stroke width.
 $sprk-icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layout
 ///
+
+/// Width value for the .sprk-o-CenteredColumn layout container.
 $sprk-centered-column-width: 64rem !default;
 
 //
 // Layers
 ///
+
+/// The extra small z-index value setting.
 $sprk-layer-height-xs: 1 !default;
+/// The small z-index value setting.
 $sprk-layer-height-s: 1000 !default;
+/// The medium z-index value setting.
 $sprk-layer-height-m: 2000 !default;
+/// The large z-index value setting.
 $sprk-layer-height-l: 3000 !default;
+/// The extra large z-index value setting.
 $sprk-layer-height-xl: 99999 !default;
 
 //
 // Horizontal List
 ///
+
+/// The default spacing value for .sprk-o-HorizontalList.
 $sprk-horizontal-list-spacing: $sprk-space-m !default;
+/// The tiny spacing value for .sprk-o-HorizontalList--spacing-tiny.
 $sprk-horizontal-list-spacing-tiny: $sprk-space-xs !default;
+/// The small spacing value for .sprk-o-HorizontalList--spacing-small.
 $sprk-horizontal-list-spacing-small: $sprk-space-s !default;
+/// The medium spacing value for .sprk-o-HorizontalList--spacing-medium.
 $sprk-horizontal-list-spacing-medium: $sprk-space-m !default;
+/// The large spacing value for .sprk-o-HorizontalList--spacing-large.
 $sprk-horizontal-list-spacing-large: $sprk-space-l !default;
+/// The huge spacing value for .sprk-o-HorizontalList--spacing-huge.
 $sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
+/// The delimiter between .sprk-o-HorizontalList--delimited items.
 $sprk-horizontal-list-delimiter: ',' !default;
 
 //
 // Vertical List
 ///
+
+/// The delimiter between .sprk-o-VerticalList--delimited items.
 $sprk-vertical-list-delimiter: ',\00A0' !default;
 
 //
 // Pagination
 ///
+
+/// The maximum width of the pagination element.
 $sprk-pag-max-width: 26rem !default;
+/// The font weight of the current pagination link.
 $sprk-pag-current-link-font-weight: 500;
+/// The color of the pagination links.
 $sprk-pag-link-color: $sprk-black !default;
+/// The color of the pagination links on hover
 $sprk-pag-link-color-hover: $sprk-pag-link-color !default;
+/// The font weight of the pagination links.
 $sprk-pag-link-font-weight: 400 !default;
+/// The accent color for selected pagination links.
 $sprk-pag-selection-color: $sprk-green !default;
+/// The text color of the currently selected pagination link.
 $sprk-pag-selection-link-color: $sprk-white !default;
+/// The text color of the currently selected pagination link on hover.
 $sprk-pag-selection-link-color-hover: $sprk-white !default;
+/// The width and height setting of the
+/// circle around the currently selected pagination link.
 $sprk-pag-circle-size: 2em !default;
 
 //
 // Typography
 ///
+
 $sprk-measure: 40rem !default;
 $sprk-narrow-measure: 25rem !default;
 $sprk-typography-breakpoint: 54rem !default;
 
 // Webfonts
+/// Boolean value for if the app is using webfonts.
 $sprk-using-webfonts: false !default;
+/// The supplied value will be set on all
+/// generated Font-face calls, as
+/// font-display. The default is 'swap.'
 $sprk-font-display: swap !default;
+/// Expects a Sass List containing
+/// one or more nested Sass Lists. The nested
+/// lists should each contain: A List of
+/// urls to download a font, the name
+/// of the font and the weight of the font.
 $sprk-webfonts: '' !default;
 
 // Page Title
+/// The color of the page title mark.
 $sprk-page-title-mark-color: $sprk-red !default;
+/// The width of the page title mark.
 $sprk-page-title-mark-width: 32px !default;
+/// The height of the page title mark.
 $sprk-page-title-mark-height: 5px !default;
+/// The height of the mark on a large viewport (using $sprk-typography-breakpoint).
 $sprk-page-title-mark-height-wide-viewport: 6px !default;
+/// Amount of padding between the mark and the text.
 $sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
+/// Amount of padding between the mark and the
+/// text. on a large viewport (using $sprk-typography-breakpoint).
 $sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
 
 // Display One
+/// The color of the TypeDisplayOne text.
 $sprk-color-display-one: $sprk-black !default;
+/// The font-family, including fallbacks of TypeDisplayOne.
 $sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The size of the TypeDisplayOne text
+/// when the viewport is narrower than
+/// $sprk-font-size-display-one-breakpoint.
 $sprk-font-size-display-one: 2.75rem !default;
+/// The size of the TypeDisplayOne font when the
+/// viewport is wider than
+/// $sprk-font-size-display-one-breakpoint.
 $sprk-font-size-display-one-wide: 3.375rem !default;
+/// The width of the viewport at
+/// which to switch the font size
+/// from $sprk-font-size-display-one to
+/// $sprk-font-size-display-one-wide.
 $sprk-type-display-one-breakpoint: 43.75rem !default;
+/// The weight of the TypeDisplayOne font.
 $sprk-font-weight-display-one: bold !default;
+/// The line-height of the TypeDisplayOne font
+/// when the viewport is narrower than
+/// $sprk-font-size-display-one-breakpoint.
 $sprk-line-height-display-one: 1.27 !default;
+/// The line height of TypeDisplayOne
+/// when the viewport is
+/// wider than $sprk-font-size-display-one-breakpoint.
 $sprk-line-height-display-one-wide: 1.03 !default;
 
 // Display Two
+/// The color of the TypeDisplayTwo text.
 $sprk-color-display-two: $sprk-black !default;
+/// The font-family, including fallbacks of TypeDisplayTwo.
 $sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The size of the TypeDisplayTwo text
+/// when the viewport is narrower than
+/// $sprk-font-size-display-two-breakpoint.
 $sprk-font-size-display-two: 2rem !default;
+/// The size of the TypeDisplayTwo font when the
+/// viewport is wider than
+/// $sprk-font-size-display-two-breakpoint.
 $sprk-font-size-display-two-wide: 2.5rem !default;
+/// The width of the viewport at which
+/// to switch the TypeDisplayTwo font size from
+/// $sprk-font-size-display-two to
+/// $sprk-font-size-display-two-wide
 $sprk-type-display-two-breakpoint: 43.75rem !default;
+/// The font weight of TypeDisplayTwo.
 $sprk-font-weight-display-two: bold !default;
+/// The line height of TypeDisplayTwo when the
+/// viewport is narrower than
+/// $sprk-font-size-display-two-breakpoint.
 $sprk-line-height-display-two: 1 !default;
+/// The line height of TypeDisplayTwo when
+/// the viewport is wider than
+/// $sprk-font-size-display-two-breakpoint
 $sprk-line-height-display-two-wide: 1 !default;
 
 // Display Three
+/// The color of the TypeDisplayThree text.
 $sprk-color-display-three: $sprk-black !default;
+/// The font-family, including fallbacks of TypeDisplayThree.
 $sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The size of TypeDisplayThree
+/// when the viewport is narrower than
+/// $sprk-font-size-display-three-breakpoint.
 $sprk-font-size-display-three: 1.75rem !default;
+/// The size of TypeDisplayThree when the
+/// viewport is wider than
+/// $sprk-font-size-display-three-breakpoint.
 $sprk-font-size-display-three-wide: 2.125rem !default;
+/// The width of the viewport at which
+/// to switch the font size from
+/// $sprk-font-size-display-three to
+/// $sprk-font-size-display-three-wide
 $sprk-type-display-three-breakpoint: 43.75rem !default;
+/// The font weight of TypeDisplayThree.
 $sprk-font-weight-display-three: 300 !default;
+/// The line height of TypeDisplayThree when the
+/// viewport is narrower than
+/// $sprk-font-size-display-three-breakpoint.
 $sprk-line-height-display-three: 1.6 !default;
+/// The line height of TypeDisplayThree when
+/// the viewport is wider than
+/// $sprk-font-size-display-three-breakpoint
 $sprk-line-height-display-three-wide: 1.32 !default;
 
 // Display Four
+/// The color of the TypeDisplayFour text.
 $sprk-color-display-four: $sprk-black !default;
+/// The font-family, including fallbacks of TypeDisplayFour.
 $sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeDisplayFour.
 $sprk-font-size-display-four: 1.625rem !default;
+/// The font weight of TypeDisplayFour.
 $sprk-font-weight-display-four: bold !default;
+/// The line height of TypeDisplayFour.
 $sprk-line-height-display-four: 1.23 !default;
 
 // Display Five
+/// The color of the TypeDisplayFive text.
 $sprk-color-display-five: $sprk-black !default;
+/// The font-family, including fallbacks of TypeDisplayFive.
 $sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeDisplayFive.
 $sprk-font-size-display-five: 1.25rem !default;
+/// The font weight of TypeDisplayFive.
 $sprk-font-weight-display-five: 500 !default;
+/// The line height of TypeDisplayFive.
 $sprk-line-height-display-five: 1.2 !default;
 
 // Display Six
+/// The color of the TypeDisplaySix text.
 $sprk-color-display-six: $sprk-black !default;
+/// The font-family, including fallbacks of TypeDisplaySix.
 $sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeDisplaySix.
 $sprk-font-size-display-six: 1.25rem !default;
+/// The font weight of TypeDisplaySix.
 $sprk-font-weight-display-six: 300 !default;
+/// The line height of TypeDisplaySix.
 $sprk-line-height-display-six: 1.2 !default;
 
 // Display Seven
+/// The font-family, including fallbacks of TypeDisplaySeven.
 $sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeDisplaySeven.
 $sprk-font-size-display-seven: 1rem !default;
+/// The color of the TypeDisplaySeven text.
 $sprk-color-display-seven: $sprk-black !default;
+/// The line height of TypeDisplaySeven.
 $sprk-line-height-display-seven: 1 !default;
+/// The font weight of TypeDisplaySeven.
 $sprk-font-weight-display-seven: 500 !default;
 
 // Body One
+/// The font-family, including fallbacks of TypeBodyOne.
 $sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+  /// The font size of TypeBodyOne.
 $sprk-font-size-body-one: 1rem !default;
+/// The color of the TypeBodyOne text.
 $sprk-color-body-one: $sprk-black !default;
+/// The line height of TypeBodyOne.
 $sprk-line-height-body-one: 1.6 !default;
+/// The font weight of TypeBodyOne.
 $sprk-font-weight-body-one: 500 !default;
 
 // Body Two
+/// The font-family, including fallbacks of TypeBodyTwo.
 $sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeBodyTwo.
 $sprk-font-size-body-two: 1rem !default;
+/// The color of the TypeBodyTwo text.
 $sprk-color-body-two: $sprk-black !default;
+/// The line height of TypeBodyTwo.
 $sprk-line-height-body-two: 1.6 !default;
+/// The font weight of TypeBodyTwo.
 $sprk-font-weight-body-two: 300 !default;
 
 // Body Three
+/// The font-family, including fallbacks of TypeBodyThree.
 $sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeBodyThree.
 $sprk-font-size-body-three: 1rem !default;
+/// The color of the TypeBodyThree text.
 $sprk-color-body-three: $sprk-black !default;
+/// The line height of TypeBodyThree.
 $sprk-line-height-body-three: 2 !default;
+/// The font weight of TypeBodyThree.
 $sprk-font-weight-body-three: 300 !default;
 
 // Body Four
+/// The font-family, including fallbacks of TypeBodyFour.
 $sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
+/// The font size of TypeBodyFour.
 $sprk-font-size-body-four: 0.8125rem !default;
+/// The color of the TypeBodyFour text.
 $sprk-color-body-four: $sprk-black !default;
+/// The line height of TypeBodyFour.
 $sprk-line-height-body-four: 1.84 !default;
+/// The font weight of TypeBodyFour.
 $sprk-font-weight-body-four: 300 !default;
 
 // Line-height Collision
+/// The top crop value for line height collision correction.
 $sprk-line-height-collision-top-crop: 5 !default;
+/// The bottom crop value for line height collision correction.
 $sprk-line-height-collision-bottom-crop: 5 !default;
 
 //
 // Consistent Style Vars
 ///
+
+/// Value used for border-radius across the system.
 $sprk-border-radius: 5px !default;
 
 //
 // Alerts
 ///
+
+/// Value for border-radius on the Alert component.
 $sprk-alert-border-radius: 4px !default;
+/// Value for border on the Alert component.
 $sprk-alert-border: 1px solid $sprk-gray !default;
+/// Value for shadow on the Alert component.
 $sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+/// Value for color of the Alert component.
 $sprk-alert-color: $sprk-black !default;
+/// The background color of the default Alert component.
 $sprk-alert-bg-color: $sprk-white !default;
+/// Sets the height and width of the two icons
+/// used in the Alert component.
 $sprk-alert-icon-size: 32px !default;
+/// The font size of the text in the content
+/// area of the Alert component.
 $sprk-alert-font-size: 1rem !default;
+/// The font weight of the text in the content
+/// area of the Alert component.
 $sprk-alert-font-weight: 400 !default;
+/// The line height of the text in the content
+/// area of the Alert component.
 $sprk-alert-line-height: 1.5 !default;
+/// The padding around the main content icon and
+/// message in the Alert component.
 $sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
   $sprk-space-misc-a !default;
+/// The padding around the dismiss icon in the Alert component.
 $sprk-alert-dismiss-padding: $sprk-space-m 24px $sprk-space-m $sprk-space-m !default;
+/// The margin for the icon in the Alert component.
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
+/// The color of the dimiss icon in the Alert component.
 $sprk-alert-dismiss-icon-color: $sprk-black !default;
+/// The size of the dimiss icon in the Alert component.
 $sprk-alert-dismiss-icon-size: $sprk-space-m !default;
 // Info
+/// The icon color of the Information Alert component.
 $sprk-alert-icon-color-info: $sprk-blue !default;
+/// The border value of the Information Alert component.
 $sprk-alert-border-info: 1px solid $sprk-blue !default;
+/// The background color of the Information Alert component.
 $sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
+/// The value for the color property in the Information Alert component.
 $sprk-alert-text-color-info: $sprk-black !default;
 // Success
+/// The icon color of the Success Alert component.
 $sprk-alert-icon-color-success: $sprk-green !default;
+/// The border value of the Success Alert component.
 $sprk-alert-border-success: 1px solid $sprk-green !default;
+/// The background color of the Success Alert component.
 $sprk-alert-bg-color-success: rgb(237, 253, 251) !default;
+/// The value for the color property in the Success Alert component.
 $sprk-alert-text-color-success: $sprk-black !default;
 // Fail
+/// The icon color of the Fail Alert component.
 $sprk-alert-icon-color-fail: $sprk-yellow !default;
+/// The border value of the Fail Alert component.
 $sprk-alert-border-fail: 1px solid $sprk-yellow !default;
+/// The background color of the Fail Alert component.
 $sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
+/// The value for the color property in the Fail Alert component.
 $sprk-alert-text-color-fail: $sprk-black !default;
 
 //
 // Promos
 ///
+
+/// The background color of the Promo component.
 $sprk-promo-background-color: $sprk-white !default;
+/// The border of the Promo component.
 $sprk-promo-border: 1px solid $sprk-gray !default;
+/// The maximum width of the Promo component.
 $sprk-promo-max-width: 42.5rem !default;
+/// The Promo component breakpoint at which large viewport styles begin.
 $sprk-promo-breakpoint: 42.5rem !default;
+/// The maximum width of the image in the
+/// Promo component on narrow viewports.
 $sprk-promo-image-narrow-max-height: 20rem !default;
+/// The background color of the Promo component.
 $sprk-promo-image-narrow-max-width: 50% !default;
+/// The background color of the Promo component.
 $sprk-promo-title-font-color: $sprk-black !default;
+/// The background color of the Promo component.
 $sprk-promo-title-font-weight: $sprk-font-weight-display-four !default;
+/// The background color of the Promo component.
 $sprk-promo-subtitle-font-color: $sprk-black !default;
+/// The background color of the Promo component.
 $sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 
 //
 // Buttons
 ///
+
+/// The background color of the Button component.
 $sprk-btn-background-color: $sprk-green !default;
+/// The box shadow value of the Button component.
 $sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+/// The border style of the Button component.
 $sprk-btn-border-style: solid !default;
+/// The border color of the Button component.
 $sprk-btn-border-color: $sprk-btn-background-color !default;
+/// The border width of the Button component.
 $sprk-btn-border-width: 2px !default;
+/// The font weight of the Button component.
 $sprk-btn-font-weight: 500 !default;
+/// The font size of the Button component.
 $sprk-btn-font-size: inherit !default;
+/// The font family value of the Button component.
 $sprk-btn-font-family: inherit !default;
+/// The line height of the Button component.
 $sprk-btn-line-height: normal !default;
+/// The text color of the Button component.
 $sprk-btn-text-color: $sprk-white !default;
+/// The border radius of the Button component.
 $sprk-btn-border-radius: 4px !default;
+/// The background color of the
+/// Button component on hover.
 $sprk-btn-hover-background-color: $sprk-green-dark !default;
+/// The text color of the Button component on hover.
 $sprk-btn-hover-text-color: $sprk-white !default;
+/// The padding of the Button component.
 $sprk-btn-padding: $sprk-space-m 24px !default;
+/// The extra small breakpoint at which Full Width Buttons switch to normal width.
 $sprk-btn-breakpoint-xs: 30rem !default;
+/// The small breakpoint at which Full Width Buttons switch to normal width.
 $sprk-btn-breakpoint-s: 42.5rem !default;
+/// The transition speed setting for transitions on the Button component.
 $sprk-btn-transition-speed: 0.3s !default;
+/// The letter spacing value of the Button component.
 $sprk-btn-letter-spacing: 0.62px !default;
 
 // Disabled
+/// The opacity value of the Button component.
 $sprk-btn-disabled-opacity: 1 !default;
+/// The border width of the Disabled Button component.
 $sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
+/// The border style of the Disabled Button component.
 $sprk-btn-disabled-border-style: $sprk-btn-border-style !default;
+/// The background color of the Disabled Button component.
 $sprk-btn-disabled-background-color: $sprk-gray-dark !default;
+/// The text color of the Disabled Button component.
 $sprk-btn-disabled-text-color: $sprk-white !default;
+/// The border color of the Disabled Button component.
 $sprk-btn-disabled-border-color: transparent !default;
+/// The box shadow of the Disabled Button component.
 $sprk-btn-disabled-shadow: none !default;
+/// The background color of the Disabled Button component.
 $sprk-btn-secondary-disabled-background-color: transparent !default;
+/// The text color of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-text-color: $sprk-gray-dark !default;
+/// The border color of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
+/// The box shadow of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-shadow: none !default;
+/// The box shadow of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-shadow: none !default;
+/// The border value of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-border: none !default;
 
 // Secondary
+/// The background color of the Secondary Button component.
 $sprk-btn-secondary-background-color: $sprk-white !default;
+/// The border color of the Secondary Button component.
 $sprk-btn-secondary-border-color: $sprk-gray-dark !default;
+/// The text color of the Secondary Button component.
 $sprk-btn-secondary-text-color: $sprk-black !default;
+/// The hover text color of the Secondary Button component.
 $sprk-btn-secondary-hover-text-color: $sprk-black !default;
+/// The background color of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-background-color: $sprk-white !default;
+/// The border color of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-border-color: $sprk-black !default;
+/// The box shadow of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+/// The letter spacing of the Secondary Button component.
 $sprk-btn-secondary-letter-spacing: 0.62px !default;
 
 // Tertiary
+/// The background color of the Tertiary Button component.
 $sprk-btn-tertiary-background-color: transparent !default;
+/// The border of the Tertiary Button component.
 $sprk-btn-tertiary-border: none !default;
+/// The text color of the Tertiary Button component.
 $sprk-btn-tertiary-text-color: $sprk-black !default;
+/// The underline width of the Tertiary Button component.
 $sprk-btn-tertiary-underline-width: 0.125em !default;
+/// The vertical distance between the
+/// underline and the text for the Tertiary Button component.
 $sprk-btn-tertiary-underline-padding-top: 0.125em !default;
+/// The color of the underline for the Tertiary Button component.
 $sprk-btn-tertiary-underline-color: $sprk-gray-dark !default;
+/// The text color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-text-color: $sprk-black !default;
+/// The underline color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-underline-color: $sprk-black !default;
+/// The background color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-background-color: transparent !default;
+/// The box shadow of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-shadow: none !default;
+/// The background color of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-background-color: transparent !default;
+/// The text color of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-text-color: $sprk-gray-dark !default;
+/// The letter spacing of the Tertiary Button component.
 $sprk-btn-tertiary-letter-spacing: normal !default;
 
 //
