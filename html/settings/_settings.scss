@@ -1171,98 +1171,179 @@ $sprk-input-icon-z-index: $sprk-layer-height-xs !default;
 //
 // Labels
 ///
+
+/// The padding applied to Input labels.
 $sprk-label-padding: 0 !default;
+/// The font family applied to Input labels.
 $sprk-label-font-family: $sprk-font-family-body-two !default;
+/// The font size applied to Input labels.
 $sprk-label-font-size: 0.875rem !default;
+/// The font weight applied to Input labels.
 $sprk-label-font-weight: 400 !default;
+/// The line height applied to Input labels.
 $sprk-label-line-height: 1 !default;
+/// The margin applied to Input labels.
 $sprk-label-margin: 0 0 $sprk-space-s 0 !default;
+/// The margin surrounding visibility controls (Ex. 'Show SSN').
 $sprk-visibility-control-margin: 6px 0 0 0 !default;
+/// The font size used for visibility controls.
 $sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
+/// The color of the disabled Input labels.
 $sprk-label-disabled-color: $sprk-gray-dark !default;
 
 //
 // Tables
 ///
+
+/// The small Table padding.
 $sprk-table-padding-small: $sprk-space-inset-s !default;
+/// The medium Table padding.
 $sprk-table-padding-medium: $sprk-space-inset-m !default;
+/// The large Table padding.
 $sprk-table-padding-large: $sprk-space-inset-l !default;
+/// The Table cell alignment.
 $sprk-table-cell-alignment: center !default;
+/// The stripe color or the striped Table.
 $sprk-table-stripe-color: $sprk-gray !default;
+/// The highlight background color of the sprk-b-TableHighlight.
 $sprk-table-highlight-color: $sprk-red !default;
+/// The highlight text color of the sprk-b-TableHighlight.
 $sprk-table-highlight-text-color: $sprk-white !default;
+/// The heading alignment of in Tables.
 $sprk-table-heading-alignment: center !default;
+/// The border width on Tables.
 $sprk-table-border-width: 1px !default;
+/// The border style of Tables.
 $sprk-table-border-style: solid !default;
+/// The border color of Tables.
 $sprk-table-border-color: $sprk-black !default;
+/// The border collapse setting of Tables.
 $sprk-table-border-collapse: collapse !default;
 
 // Primary
+/// The width of the bottom border on Table rows.
 $sprk-table-row-border-width: 1px !default;
+/// The style of the bottom border on Table rows.
 $sprk-table-row-border-style: solid !default;
+/// The color of the bottom border on Table rows.
 $sprk-table-row-border-color: $sprk-gray !default;
+/// The background color of the Table header.
 $sprk-table-header-background-color: $sprk-black !default;
+/// The font color of the Table header.
 $sprk-table-header-font-color: $sprk-white !default;
+/// The font size of the Table header.
 $sprk-table-header-font-size: $sprk-font-size-body-one !default;
+/// The font weight of the Table header.
 $sprk-table-header-font-weight: $sprk-font-weight-body-one !default;
+/// The width of the right border on the Table header.
 $sprk-table-header-border-spacing: 2px !default;
+/// The color of the right border on the Table header.
 $sprk-table-header-border-color: $sprk-white !default;
+/// The background color of empty Table headers.
 $sprk-table-empty-heading-background-color: $sprk-white !default;
 
 // Secondary
+/// The background color of Secondary Table headers.
 $sprk-table-secondary-header-background-color: $sprk-white !default;
+/// The font color of Secondary Table headers.
 $sprk-table-secondary-header-font-color: $sprk-black !default;
+/// The text alignment of Secondary Table headers.
 $sprk-table-secondary-header-text-alignment: left !default;
+/// The text alignment of Secondary Table cells.
 $sprk-table-secondary-cell-text-alignment: left !default;
+/// The width of the right border on the Secondary Table header.
 $sprk-table-secondary-header-border-spacing: 0 !default;
+/// The color of the right border on the Secondary Table header.
 $sprk-table-secondary-header-border-color: $sprk-white !default;
 
 // Grouped-Column
+/// The background color of the header in the Grouped Columns Table variant.
 $sprk-table-grouped-header-background-color: $sprk-black !default;
+/// The font size of the header in the Grouped Columns Table variant.
 $sprk-table-grouped-header-font-size: $sprk-font-size-body-four !default;
+/// The font weight of the header in the Grouped Columns Table variant.
 $sprk-table-grouped-header-font-weight: normal !default;
 
 // Secondary Row Comparison
+/// The distance between the borders of
+/// adjacent cells in the Secondary Row
+/// Comparison Table (horizontal | vertical).
 $sprk-table-secondary-row-comp-row-spacing: 0 15px !default;
+/// The width of the borders in the Secondary Row Comparison Table cells.
 $sprk-table-secondary-row-comp-border-width: 1px !default;
+/// The style of the borders in the Secondary Row Comparison Table cells.
 $sprk-table-secondary-row-comp-border-style: solid !default;
+/// The color of the borders in the Secondary Row Comparison Table cells.
 $sprk-table-secondary-row-comp-border-color: $sprk-gray !default;
 
 //
 // Box
 ///
+
+/// The padding of the tiny Box object.
 $sprk-box-padding-tiny: $sprk-space-inset-xs !default;
+/// The padding of the small Box object.
 $sprk-box-padding-small: $sprk-space-inset-s !default;
+/// The padding of the default (medium) Box object.
 $sprk-box-padding: $sprk-space-inset-m !default;
+/// The padding of the large Box object.
 $sprk-box-padding-large: $sprk-space-inset-l !default;
+/// The padding of the huge Box object.
 $sprk-box-padding-huge: $sprk-space-inset-xl !default;
 
 //
 // Media
 ///
+
+/// The gutter of the tiny Media object.
 $sprk-media-gutter-tiny: $sprk-space-xs !default;
+/// The gutter of the small Media object.
 $sprk-media-gutter-small: $sprk-space-s !default;
+/// The gutter of the default (medium) Media object.
 $sprk-media-gutter: $sprk-space-m !default;
+/// The gutter of the large Media object.
 $sprk-media-gutter-large: $sprk-space-l !default;
+/// The gutter of the huge Media object.
 $sprk-media-gutter-huge: $sprk-space-xl !default;
 
 //
 // Stack Object
 ///
+/// The spacing of the tiny Stack object.
 $sprk-stack-spacing-tiny: $sprk-space-xs !default;
+/// The spacing of the small Stack object.
 $sprk-stack-spacing-small: $sprk-space-s !default;
+/// The spacing of the medium Stack object.
 $sprk-stack-spacing-medium: $sprk-space-m !default;
+/// The spacing of the large Stack object.
 $sprk-stack-spacing-large: $sprk-space-l !default;
+/// The spacing of the huge Stack object.
 $sprk-stack-spacing-huge: $sprk-space-xl !default;
+/// The spacing of the Misc A Stack object.
 $sprk-stack-spacing-misc-a: $sprk-space-misc-a !default;
+/// The spacing of the Misc B Stack object.
 $sprk-stack-spacing-misc-b: $sprk-space-misc-b !default;
+/// The spacing of the Misc C Stack object.
 $sprk-stack-spacing-misc-c: $sprk-space-misc-c !default;
+/// The spacing of the Misc D Stack object.
 $sprk-stack-spacing-misc-d: $sprk-space-misc-d !default;
+/// The breakpoint for Stack objects
+/// that split at the extra extra small point.
 $sprk-split-breakpoint-xxs: 20rem !default;
+/// The breakpoint for Stack objects that
+/// split at the extra small point.
 $sprk-split-breakpoint-xs: 30rem !default;
+/// The breakpoint for Stack objects that split at the
+/// small point.
 $sprk-split-breakpoint-s: 42.5rem !default;
+/// The breakpoint for Stack objects that split at the
+/// medium point.
 $sprk-split-breakpoint-m: 55rem !default;
+/// The breakpoint for Stack objects that split at the
+/// large point.
 $sprk-split-breakpoint-l: 67.5rem !default;
+/// The breakpoint for Stack objects that split at the
+/// extra large point.
 $sprk-split-breakpoint-xl: 80rem !default;
 
 //
