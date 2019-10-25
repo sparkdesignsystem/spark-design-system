@@ -52,7 +52,7 @@ module.exports = {
           'homepage-pages': require.resolve('./src/components/layouts/HomepageLayout.js'),
           'installing-spark-pages': require.resolve('./src/components/layouts/InstallingSparkLayout.js'),
           'using-spark-pages': require.resolve('./src/components/layouts/UsingSparkLayout.js'),
-          'principle-pages': require.resolve('./src/components/layouts/PrincipleLayout.js'),
+          'principle-pages': require.resolve('./src/components/layouts/PrinciplesLayout.js'),
           default: require.resolve('./src/components/layouts/Layout.js'),
         },
       },
