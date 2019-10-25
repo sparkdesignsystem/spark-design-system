@@ -508,8 +508,9 @@ export const passwordInput = () => ({
           type="checkbox"
           sprkSelectionInput
           (click)="togglePasswordType()"
+          id="show-password"
         />
-        <label sprkSelectionLabel>Show Password</label>
+        <label for="show-password" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,
