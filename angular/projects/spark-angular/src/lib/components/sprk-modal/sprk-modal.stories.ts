@@ -1,9 +1,5 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkModalModule } from './sprk-modal.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SprkModalComponent } from './sprk-modal.component';
 
 export default {
   title: 'Components|Modals',
@@ -19,13 +15,7 @@ export default {
 const modules = {
   imports: [
     SprkModalModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkModalComponent,
-    }]),
-    BrowserAnimationsModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
