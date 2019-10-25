@@ -1,7 +1,7 @@
 /* global describe it beforeEach document */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import runValidation from './validation-runner';
+import runValidation from '../utilities/validation/validation-runner';
 
 describe('validation runner', () => {
   let element;

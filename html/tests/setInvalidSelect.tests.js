@@ -1,6 +1,6 @@
 /* global document describe beforeEach it */
 import { expect } from 'chai';
-import setInvalidSelect from './setInvalidSelect';
+import setInvalidSelect from '../utilities/validation/setInvalidSelect';
 
 describe('setInvalidSelect tests', () => {
   let inputContainer;

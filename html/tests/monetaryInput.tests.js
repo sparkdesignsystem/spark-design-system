@@ -1,7 +1,7 @@
 /* global window document describe it beforeEach afterEach */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import { monetaryInput, formatMonetary, bindUIEvents } from './monetaryInput';
+import { monetaryInput, formatMonetary, bindUIEvents } from '../base/monetaryInput';
 
 describe('monetaryInput init', () => {
   let div;

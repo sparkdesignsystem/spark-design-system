@@ -1,7 +1,7 @@
 /* global document describe it beforeEach afterEach window */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { formatSSN, ssnInput, bindUIEvents } from './ssnInput';
+import { formatSSN, ssnInput, bindUIEvents } from '../base/ssnInput';
 
 describe('ssnInput init', () => {
   afterEach(() => {

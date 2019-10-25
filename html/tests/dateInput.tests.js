@@ -1,7 +1,7 @@
 /* global window document describe it beforeEach afterEach */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { dateInput, formatDate, bindUIEvents } from './dateInput';
+import { dateInput, formatDate, bindUIEvents } from '../base/dateInput';
 
 describe('dateInput init', () => {
   afterEach(() => {

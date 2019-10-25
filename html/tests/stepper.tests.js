@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import { expect } from 'chai';
 import
   createElementFromString
-  from '../../../utilities/helpers/vanilla/_createElementFromString';
+  from '../tests/_createElementFromString';
 
 const proxyquire = require('proxyquire');
 
@@ -12,9 +12,9 @@ const carouselStub = sinon.stub(() => ({
 }));
 
 const { stepper, positionSlider, resetSlider } = proxyquire(
-  './stepper',
+  '../components/stepper',
   {
-    '../../carousel/vanilla/carousel': { carousel: carouselStub },
+    '../components/carousel': { carousel: carouselStub },
   },
 );
 

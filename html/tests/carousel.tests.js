@@ -3,15 +3,15 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import
   createElementFromString
-  from '../../../utilities/helpers/vanilla/_createElementFromString';
-import { carousel as regCarousel } from './carousel';
+  from '../tests/_createElementFromString';
+import { carousel as regCarousel } from '../components/carousel';
 
 const proxyquire = require('proxyquire');
 
 const lorySpy = sinon.spy();
 
 const { carousel, beforeLoryInit, afterLoryInit, afterLorySlide } = proxyquire(
-  './carousel',
+  '../components/carousel',
   {
     'lory.js': {
       lory: lorySpy,

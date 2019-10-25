@@ -2,7 +2,7 @@
 import { expect } from 'chai';
 import {
   setAriaLabel,
-} from '../../../components/pagination/vanilla/pagination';
+} from '../components/pagination';
 
 describe('Pagination tests', () => {
   let navContainer;

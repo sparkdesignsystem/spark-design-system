@@ -1,6 +1,6 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import getArrowClass from './getArrowClass';
+import getArrowClass from '../utilities/getArrowClass';
 
 describe('datepicker getArrowClass tests', () => {
   let inputContainer;

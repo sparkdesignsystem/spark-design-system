@@ -1,6 +1,6 @@
 /* global document describe beforeEach it */
 import { expect } from 'chai';
-import setValidSelect from './setValidSelect';
+import setValidSelect from '../utilities/validation/setValidSelect';
 
 describe('setValidSelect tests', () => {
   let inputContainer;

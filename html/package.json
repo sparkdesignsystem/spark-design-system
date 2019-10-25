@@ -4,7 +4,7 @@
   "description": "Spark is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
-    "test": "mocha --require babel-core/register --require \"./tests/_setup.js\" \"./tests/*.tests.js\"",
+    "test": "mocha --require './runner.js' './tests/*.tests.js'",
     "coverage": "nyc npm test",
     "build": "webpack",
     "prepublishOnly": "npm run build",

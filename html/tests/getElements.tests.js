@@ -1,6 +1,6 @@
 /* global document describe it */
 import { expect } from 'chai';
-import getElements from './getElements';
+import getElements from '../utilities/getElements';
 
 describe('getElements tests', () => {
   it('should call the given function for each element found', () => {

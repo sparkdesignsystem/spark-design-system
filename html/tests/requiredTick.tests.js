@@ -1,7 +1,7 @@
 /* global window document describe before beforeEach it afterEach */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { requiredTick, runValidation, bindUIEvents } from './requiredTick';
+import { requiredTick, runValidation, bindUIEvents } from '../base/requiredTick';
 
 describe('requiredTick init', () => {
   afterEach(() => {

@@ -7,7 +7,7 @@ const proxyquireStrict = require('proxyquire').noCallThru();
 describe('Toggle init', () => {
   const domSliderStub = {};
   const { toggle } = proxyquireStrict(
-    './toggle',
+    '../components/toggle',
     { 'dom-slider': domSliderStub },
   );
 
@@ -40,7 +40,7 @@ describe('Toggle tests', () => {
     toggleAriaExpanded,
     handleToggleClick,
     bindToggleUIEvents,
-  } = proxyquireStrict('./toggle', { 'dom-slider': domSliderStub });
+  } = proxyquireStrict('../components/toggle', { 'dom-slider': domSliderStub });
 
   beforeEach(() => {
     container = document.createElement('div');

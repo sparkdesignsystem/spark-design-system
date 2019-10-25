@@ -1,6 +1,6 @@
 /* global document describe it */
 import { expect } from 'chai';
-import detectJS from './detectJS';
+import detectJS from '../utilities/detectJS';
 
 describe('wide nav tests', () => {
   it('should add js to the html element', () => {

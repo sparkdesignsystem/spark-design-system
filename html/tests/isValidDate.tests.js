@@ -5,7 +5,7 @@
 * practice, the regex is assigned to the pattern attribute in the markup.
 */
 import { expect } from 'chai';
-import isValidDate from './isValidDate';
+import isValidDate from '../utilities/validation/isValidDate';
 
 describe('isValidDate tests', () => {
   it('should pass on 8 digits (plausible date)', () => {

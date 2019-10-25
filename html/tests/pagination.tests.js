@@ -1,7 +1,7 @@
 /* global document describe beforeEach afterEach it */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { pagination, setItemLabels } from './pagination';
+import { pagination, setItemLabels } from '../components/pagination';
 
 describe('pagination init', () => {
   let container;

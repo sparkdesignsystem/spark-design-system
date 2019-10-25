@@ -6,7 +6,7 @@ import {
   getSpinnerClasses,
   setSpinning,
   cancelSpinning,
-} from './spinners';
+} from '../components/spinners';
 
 describe('spinners init', () => {
   afterEach(() => {

@@ -5,7 +5,7 @@ import {
   hideDropDown,
   showDropDown,
   toggleDropDown,
-} from './dropdown';
+} from '../components/dropdown';
 
 describe('Dropdown tests', () => {
   let trigger;
