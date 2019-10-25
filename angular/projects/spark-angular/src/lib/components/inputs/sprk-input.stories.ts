@@ -1,3 +1,4 @@
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
@@ -16,6 +17,22 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 
 export default {
   title: 'Components|Inputs',
+  decorators: [
+    storyWrapper(
+      storyContent => (
+        `<div class="sprk-o-Box">
+          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+            ${storyContent}
+          </form>
+        <div>`
+      )
+    )
+  ],
+  props: {
+    onSubmit(event): void {
+      this.form_submitted = true;
+    }
+  }
 };
 
 const modules = {
@@ -106,6 +123,7 @@ export const checkbox = () => ({
           #checkboxInput1="ngModel"
           data-id="checkbox-1"
           id="checkbox-1"
+          (change)="onSelect($event)"
         >
 
         <label
@@ -125,10 +143,11 @@ export const checkbox = () => ({
           #checkboxInput2="ngModel"
           data-id="checkbox-2"
           id="checkbox-2"
+           (change)="onSelect($event)"
         >
 
         <label
-          id="checkbox-2"
+          for="checkbox-2"
           sprkSelectionLabel
         >
           Checkbox Item 2
@@ -144,10 +163,11 @@ export const checkbox = () => ({
         #checkboxInput3="ngModel"
         data-id="checkbox-3"
         id="checkbox-3"
+        (change)="onSelect($event)"
         >
 
         <label
-          id="checkbox-3"
+          for="checkbox-3"
           sprkSelectionLabel
         >
           Checkbox Item 3
@@ -155,6 +175,13 @@ export const checkbox = () => ({
       </sprk-selection-item-container>
     </sprk-selection-container>
   `,
+  props: {
+    onSelect() {
+      this.checkbox_input1 === true
+        ? (this.isChecked = true)
+        : (this.isChecked = false);
+    }
+  },
 });
 
 export const radioButtons = () => ({
@@ -172,10 +199,11 @@ export const radioButtons = () => ({
           #radioInput="ngModel"
           data-id="radio-1"
           id="radio-1"
+          (change)="onRadioSelect($event)"
         >
         <label
           for="radio-1"
-         sprkSelectionLabel
+          sprkSelectionLabel
         >
           Item 1
         </label>
@@ -190,6 +218,7 @@ export const radioButtons = () => ({
           #radioInput="ngModel"
           data-id="radio-2"
           id="radio-2"
+          (change)="onRadioSelect($event)"
         >
         <label
           for="radio-2"
@@ -208,6 +237,7 @@ export const radioButtons = () => ({
           #radioInput="ngModel"
           data-id="radio-3"
           id="radio-3"
+          (change)="onRadioSelect($event)"
         >
         <label
           for="radio-3"
@@ -218,6 +248,13 @@ export const radioButtons = () => ({
       </sprk-selection-item-container>
     </sprk-selection-container>
   `,
+  props: {
+    onRadioSelect($event) {
+      $event.target.checked === true && this.radio_input === '1'
+        ? (this.isRadioChecked = true)
+        : (this.isRadioChecked = false);
+    }
+  }
 });
 
 export const selectBox = () => ({

@@ -3,7 +3,6 @@ import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapp
 
 export default {
   title: 'Components|Buttons',
-  component: SprkButtonModule,
   decorators: [
     storyWrapper(
       storyContent => (
