@@ -9,6 +9,7 @@ import { SprkSelectionItemContainerModule } from './sprk-selection-item-containe
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFormatterPhoneNumberModule } from '../../directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
 import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
 import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
 import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
@@ -49,6 +50,7 @@ const modules = {
     SprkFieldErrorModule,
     SprkFormatterSsnModule,
     SprkFormatterMonetaryModule,
+    SprkFormatterPhoneNumberModule,
     SprkIconInputContainerModule,
     SprkHelperTextModule,
     SprkDatepickerModule,
