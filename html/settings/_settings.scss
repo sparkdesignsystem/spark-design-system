@@ -243,8 +243,11 @@ $sprk-pag-circle-size: 2em !default;
 // Typography
 ///
 
+/// The max-width value for the .sprk-u-Measure class.
 $sprk-measure: 40rem !default;
+/// The max-width value for the .sprk-u-Measure--narrow class.
 $sprk-narrow-measure: 25rem !default;
+/// The breakpoint used for typography.
 $sprk-typography-breakpoint: 54rem !default;
 
 // Webfonts
@@ -786,16 +789,27 @@ $sprk-link-disabled-hover-border-bottom: $sprk-link-disabled-underline-width
 //
 // Lists
 ///
+
+/// The default margin left indentation on Lists.
 $sprk-list-margin-left: $sprk-space-m !default;
+/// The extended indentation (margin left) on Indented Lists.
 $sprk-list-indented-margin-left: $sprk-space-l !default;
 
 //
 // Inputs
 ///
+
+/// The symbol used to denote currency for Monetary Inputs.
 $sprk-monetary-symbol: '$' !default;
+/// The value for padding applied to fieldset elements.
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
+/// The value used for margin around Input containers.
 $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
+/// The value used for the maximum width of
+/// an icon container using the
+/// .sprk-b-InputContainer__icon-container--narrow modifier.
 $sprk-input-container-narrow-max-width: 6.5rem !default;
+/// The value used as a maximum width for Input containers.
 $sprk-input-max-width: 27.5rem !default;
 
 //
@@ -1297,23 +1311,41 @@ $sprk-stepper-icon-radius));
 $sprk-stepper-slide-timing: 0.3s;
 $sprk-stepper-slider-text-fade-in-timing: 0.6s;
 $sprk-stepper-slider-text-fade-in-delay: 0.2s;
+
 //
 // Carousel
 ///
+
+/// The border value for the Carousel component.
 $sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid
   $sprk-stepper-dark-icon-border-color !default;
+/// The height of the dots in the Carousel component.
 $sprk-carousel-dot-height: 10px !default;
+/// The width of the dots in the Carousel component.
 $sprk-carousel-dot-width: 10px !default;
+/// The height of the dots in the Carousel component on wide viewports.
 $sprk-carousel-wide-dot-height: 10px !default;
+/// The width of the dots in the Carousel component on wide viewports.
 $sprk-carousel-wide-dot-width: 10px !default;
+/// The spacing between dots in the Carousel component.
 $sprk-carousel-dot-spacing: $sprk-space-m !default;
+/// The spacing between dots in the Carousel component on wide viewports.
 $sprk-carousel-wide-dot-spacing: $sprk-carousel-dot-spacing !default;
+/// The box shadow of the active dot in the Carousel component.
 $sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected !default;
+/// The color of the arrows in the Carousel component.
 $sprk-carousel-arrow-color: $sprk-white !default;
+/// The spacing for the arrows in the Carousel component.
 $sprk-carousel-arrow-spacing: $sprk-space-m !default;
+/// The left and right values of the arrows in the Carousel component.
 $sprk-carousel-arrow-edge-spacing: 0 !default;
+/// The padding value of the arrows in the Carousel component.
 $sprk-carousel-arrow-padding: $sprk-space-m !default;
+/// The maximum width of the image in the Carousel component.
 $sprk-carousel-narrow-image-max-width: 18.75rem !default;
+/// The breakpoint for the arrows in the Carousel component.
 $sprk-carousel-arrow-position-breakpoint: 31.25rem !default;
+/// The padding value for the dots container in the Carousel component.
 $sprk-carousel-dot-container-padding: $sprk-space-xs !default;
+/// The breakpoint for the Carousel component.
 $sprk-carousel-breakpoint: $sprk-split-breakpoint-xl !default;
