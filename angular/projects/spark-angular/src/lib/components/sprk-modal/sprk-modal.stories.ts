@@ -59,8 +59,8 @@ export const info = () => ({
       modalType="info"
       idString="modal-info-1"
     >
-      This is some content that is in a Modal.
-      It explains what the Modal is for.
+      This is some content that is in a modal.
+      It explains what the modal is for.
       There will also be a way to close the modal.
     </sprk-modal>
   `,
