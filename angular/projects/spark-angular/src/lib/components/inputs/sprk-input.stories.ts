@@ -212,7 +212,7 @@ export const selectBox = () => ({
     <sprk-input-container>
       <select
       class="sprk-b-Select"
-      id="select-normal"
+      id="select-normal-1"
       aria-describedby="select-normal--error-container"
       data-id="select-1"
       sprkInput
@@ -232,7 +232,43 @@ export const selectBox = () => ({
       additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
       sprk-select-icon
       ></sprk-icon>
-      <label sprkLabel for="select-normal">Select Box Label</label>
+      <label sprkLabel for="select-normal-1">Select Box Label</label>
     </sprk-input-container>
+  `,
+});
+
+export const hugeSelect = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-huge-input-container>
+      <select
+      id="select-huge-1"
+      aria-describedby="select-normal--error-container"
+      data-id="select-huge-1"
+      data-sprk-input="huge"
+      sprkInput
+      >
+        <option
+        value=""
+        disabled
+        selected
+        hidden
+        ></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <optgroup label="Grouped Options">
+          <option value="g1">Grouped Option 1</option>
+          <option value="g2">Grouped Option 2</option>
+          <option value="g3">Grouped Option 3</option>
+        </optgroup>
+      </select>
+      <label sprkLabel for="select-huge-1">Select Box Label</label>
+      <sprk-icon
+      iconType="chevron-down"
+      additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+      sprk-select-icon
+      ></sprk-icon>
+    </sprk-huge-input-container>
   `,
 });
