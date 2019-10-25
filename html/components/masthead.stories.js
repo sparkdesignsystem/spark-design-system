@@ -1,9 +1,9 @@
 import { useEffect } from '@storybook/client-api';
 // import { addDecorator } from '@storybook/html';
 import { masthead, toggleScrollEvent } from './masthead';
-import { toggle } from '../../toggle/vanilla/toggle';
-import { dropdowns } from '../../dropdown/vanilla/dropdown';
-import isElementVisible from '../../../utilities/helpers/vanilla/isElementVisible';
+import { toggle } from '../components/toggle';
+import { dropdowns } from '../components/dropdown';
+import isElementVisible from '../utilities/isElementVisible';
 
 export default {
   title: 'Components|Masthead',

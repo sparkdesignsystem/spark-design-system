@@ -1,8 +1,8 @@
 import { useEffect } from '@storybook/client-api';
 import { stepper } from './stepper';
-import '../../../utilities/polyfills/vanilla/classListSVG';
-import '../../../utilities/polyfills/vanilla/CustomEvent';
-import '../../../utilities/polyfills/vanilla/ObjectPrepend';
+import '../utilities/polyfills/classListSVG';
+import '../utilities/polyfills/CustomEvent';
+import '../utilities/polyfills/ObjectPrepend';
 
 export default {
   title: 'Components|Stepper',

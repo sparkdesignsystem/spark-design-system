@@ -1,6 +1,6 @@
 /* global document */
-import getElements from '../../../utilities/helpers/vanilla/getElements';
-import { isEscPressed } from '../../../utilities/helpers/vanilla/keypress';
+import getElements from '../utilities/getElements';
+import { isEscPressed } from '../utilities/keypress';
 
 const hideDropDown = (dropdown) => {
   dropdown.classList.remove('sprk-c-Dropdown--open');

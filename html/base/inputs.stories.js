@@ -9,7 +9,7 @@ import { monetaryInput } from './monetaryInput';
 import { ssnInput } from './ssnInput';
 import { datePicker } from './datePicker';
 import { requiredSelect } from './requiredSelect';
-import '../../../utilities/polyfills/vanilla/classListSVG';
+import '../utilities/polyfills/classListSVG';
 
 export default {
   title: 'Base|Inputs',

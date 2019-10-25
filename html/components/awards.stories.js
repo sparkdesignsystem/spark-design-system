@@ -1,6 +1,6 @@
 import { useEffect } from '@storybook/client-api';
-import { toggle } from '../../toggle/vanilla/toggle';
-import '../../../utilities/polyfills/vanilla/classListSVG';
+import { toggle } from './toggle';
+import '../utilities/polyfills/classListSVG';
 
 export default {
   title: 'Components|Awards',

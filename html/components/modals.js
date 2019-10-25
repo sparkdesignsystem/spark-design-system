@@ -16,11 +16,11 @@ import {
   getFocusableEls,
   focusFirstEl,
   isActiveElement,
-} from '../../../utilities/helpers/vanilla/elementState';
+} from '../utilities/elementState';
 import {
   isTabPressed,
   isEscPressed,
-} from '../../../utilities/helpers/vanilla/keypress';
+} from '../utilities/keypress';
 
 const isMaskClicked = e => e.target.getAttribute('data-sprk-modal-mask') === 'true';
 const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';

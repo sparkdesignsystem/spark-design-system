@@ -1,5 +1,5 @@
-import toggleValue from '../../../utilities/helpers/vanilla/toggleValue';
-import getElements from '../../../utilities/helpers/vanilla/getElements';
+import toggleValue from '../utilities/toggleValue';
+import getElements from '../utilities/getElements';
 
 const bindUIEvents = (element) => {
   const field = element.querySelector('input');

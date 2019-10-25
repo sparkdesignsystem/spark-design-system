@@ -1,6 +1,6 @@
 /* global window */
 import TinyDatePicker from 'tiny-date-picker';
-import getElements from '../../../utilities/helpers/vanilla/getElements';
+import getElements from '../utilities/getElements';
 
 const setupTDP = (input, config) => {
   const tdpConfig = {

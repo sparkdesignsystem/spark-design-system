@@ -1,5 +1,5 @@
 import 'dom-slider';
-import getElements from '../../../utilities/helpers/vanilla/getElements';
+import getElements from '../utilities/getElements';
 
 /**
  *  Toggle JS

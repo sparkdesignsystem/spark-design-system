@@ -1,6 +1,6 @@
-import getElements from '../../../utilities/helpers/vanilla/getElements';
-import toggleClassWithValue from '../../../utilities/helpers/vanilla/toggleClassWithValue';
-import addClassIfNotEmpty from '../../../utilities/helpers/vanilla/addClassIfNotEmpty';
+import getElements from '../utilities/getElements';
+import toggleClassWithValue from '../utilities/toggleClassWithValue';
+import addClassIfNotEmpty from '../utilities/addClassIfNotEmpty';
 
 /*
  * TODO: Deprecate the code below

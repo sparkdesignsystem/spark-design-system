@@ -1,10 +1,10 @@
-import getElements from '../../../utilities/helpers/vanilla/getElements';
+import getElements from '../utilities/getElements';
 import
 setInvalidSelect
-  from '../../../utilities/validation/vanilla/setInvalidSelect';
+  from '../utilities/validation/setInvalidSelect';
 import
 setValidSelect
-  from '../../../utilities/validation/vanilla/setValidSelect';
+  from '../utilities/validation/setValidSelect';
 
 const runValidation = (element) => {
   const select = element.querySelector('select');

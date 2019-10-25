@@ -1,4 +1,4 @@
-import '../../spark/manifests/spark/_spark.scss';
+import '../_spark.scss';
 import { configure, addParameters, addDecorator } from '@storybook/html';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from '../../storybook-spark-theme';
@@ -18,4 +18,5 @@ addParameters({
   },
 });
 
-configure(require.context('../../spark', true, /\/vanilla\/.*\.stories\.(js|ts|tsx|mdx)$/), module);
+configure(require.context('..', true, /^((?![\\/]node_modules|dist[\\/]).)*\.stories\.js$/));
+

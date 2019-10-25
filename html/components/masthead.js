@@ -1,11 +1,11 @@
 /* global document window */
 import { throttle } from 'lodash';
-import getElements from '../../../utilities/helpers/vanilla/getElements';
-import { focusFirstEl } from '../../../utilities/helpers/vanilla/elementState';
-import { isEscPressed } from '../../../utilities/helpers/vanilla/keypress';
-import isElementVisible from '../../../utilities/helpers/vanilla/isElementVisible';
-import scrollYDirection from '../../../utilities/helpers/vanilla/scrollYDirection';
-import { hideDropDown, showDropDown } from '../../dropdown/vanilla/dropdown';
+import getElements from '../utilities/getElements';
+import { focusFirstEl } from '../utilities/elementState';
+import { isEscPressed } from '../utilities/keypress';
+import isElementVisible from '../utilities/isElementVisible';
+import scrollYDirection from '../utilities/scrollYDirection';
+import { hideDropDown, showDropDown } from './dropdown';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
