@@ -815,204 +815,357 @@ $sprk-input-max-width: 27.5rem !default;
 //
 // Huge Inputs
 ///
+
+/// THe max-width setting for Huge Inputs.
 $sprk-input-container-huge-max-width: 37.5rem !default;
 $sprk-text-input-huge-height: 64px !default; // Todo deprecate
+/// The height value for Huge Inputs.
 $sprk-input-huge-height: $sprk-text-input-huge-height !default;
 $sprk-text-input-huge-font-size: $sprk-font-size-display-five !default; // Todo deprecate
+/// The font size for Huge Inputs.
 $sprk-input-huge-font-size: $sprk-text-input-huge-font-size !default;
 $sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default; // Todo deprecate
+/// The label font size for Huge Inputs.
 $sprk-input-huge-label-font-size: $sprk-text-input-huge-label-font-size !default;
 $sprk-text-input-huge-border-width: 2px !default; // Todo deprecate
+/// The border width for Huge Inputs.
 $sprk-input-huge-border-width: $sprk-text-input-huge-border-width !default;
 $sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default; // Todo deprecate
+/// The padding for Huge Inputs.
 $sprk-input-huge-padding: $sprk-text-input-huge-padding !default;
+/// The padding right value for Huge Inputs.
 $sprk-select-input-huge-padding-right: 45px !default;
+/// The label padding value for Huge Inputs.
 $sprk-input-huge-label-padding: 0
   ($sprk-space-misc-a + $sprk-input-huge-border-width) !default;
 $sprk-text-input-huge-focus-border-width: 2px !default; // Todo deprecate
+/// The border width for Huge Inputs on focus.
 $sprk-input-huge-focus-border-width: $sprk-text-input-huge-focus-border-width !default;
 $sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default; // Todo deprecate
+/// The transition value for Huge Inputs.
 $sprk-input-huge-transition: $sprk-text-input-huge-transition !default;
 $sprk-text-input-huge-transition-delay: 0s !default; // Todo deprecate
+/// The transition delay value for Huge Inputs.
 $sprk-input-huge-transition-delay: $sprk-text-input-huge-transition-delay !default;
 $sprk-text-input-huge-placeholder-transition-delay: 100ms !default; // Todo deprecate
+/// The transition placeholder delay value for Huge Inputs.
 $sprk-input-huge-placeholder-transition-delay: $sprk-text-input-huge-placeholder-transition-delay !default;
 $sprk-text-input-huge-placeholder-transition-property: opacity !default; // Todo deprecate
+/// The transition placeholder value for Huge Inputs.
 $sprk-input-huge-placeholder-transition-property: $sprk-text-input-huge-placeholder-transition-property !default;
 $sprk-text-input-huge-placeholder-opacity: 0 !default; // Todo deprecate
+/// The placeholder opacity for Huge Inputs.
 $sprk-input-huge-placeholder-opacity: $sprk-text-input-huge-placeholder-opacity !default;
 $sprk-text-input-huge-placeholder-active-opacity: 1 !default; // Todo deprecate
+/// The placeholder opacity for Huge Inputs when they are active.
 $sprk-input-huge-placeholder-active-opacity: $sprk-text-input-huge-placeholder-active-opacity !default;
 $sprk-text-input-huge-label-top: $sprk-input-huge-height / 3 !default; // Todo deprecate
+/// The top value for Huge Input labels.
+/// This adjusts how far the label is from the top of the container.
 $sprk-input-huge-label-top: $sprk-text-input-huge-label-top !default;
 $sprk-text-input-huge-label-active-top: 10px !default; // Todo deprecate
+/// The top value for Huge Input labels when they are active.
+/// This adjusts how far the label is from the top of the container.
 $sprk-input-huge-label-active-top: $sprk-text-input-huge-label-active-top !default;
 $sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default; // Todo deprecate
+/// The padding top value of active Huge Inputs.
 $sprk-input-huge-active-padding-top: $sprk-text-input-huge-active-padding-top !default;
 $sprk-text-input-huge-focus-label-color: $sprk-green !default; // Todo deprecate
+/// The label color value of Huge Inputs on focus.
 $sprk-input-huge-focus-label-color: $sprk-text-input-huge-focus-label-color !default;
 $sprk-text-input-huge-error-focus-label-color: $sprk-black !default; // Todo deprecate
+/// The label color value of Huge Inputs when they have an error.
 $sprk-input-huge-error-focus-label-color: $sprk-text-input-huge-error-focus-label-color !default;
 $sprk-text-input-huge-complete-label-color: $sprk-black !default; // Todo deprecate
+/// The label color when the Huge Input has a value
+/// and is not focused.
 $sprk-input-huge-complete-label-color: $sprk-text-input-huge-complete-label-color !default;
+/// The box shadow value on Huge Inputs.
 $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+/// The margin-top value for icons in Huge Inputs.
 $sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
+/// The top value for icons in Huge Inputs.
 $sprk-input-huge-icon-offset-top: 50% !default;
+/// The margin-top value for icons in Huge Select Inputs.
 $sprk-select-input-huge-icon-margin-top: -((
   $sprk-input-huge-height - $sprk-icon-m
 ) / 2 + $sprk-icon-m) !default;
+/// The padding value for Huge Inputs with icons.
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
 //
 // Text Input
 ///
+
+/// The font family for Inputs.
 $sprk-text-input-font-family: $sprk-font-family-body-two !default;
+/// The font size for Inputs.
 $sprk-text-input-font-size: 1rem !default;
+/// The font weight for Inputs.
 $sprk-text-input-font-weight: 300 !default;
+/// The height setting for Inputs.
 $sprk-text-input-height: 48px !default;
+/// The line height setting for Inputs.
 $sprk-text-input-line-height: 1.3 !default;
+/// The outline setting for Inputs.
 $sprk-text-input-outline: 0 !default;
+/// The color setting for Inputs.
 $sprk-text-input-color: $sprk-black !default;
+/// The border setting for Inputs.
 $sprk-text-input-border: 2px solid $sprk-gray-dark !default;
+/// The border radius for Inputs.
 $sprk-text-input-border-radius: 4px !default;
+/// The box shadow for Inputs.
 $sprk-text-input-box-shadow: none !default;
+/// The padding for Inputs.
 $sprk-text-input-padding: 0 $sprk-space-m !default;
+/// The border color on Inputs when focused.
 $sprk-text-input-focus-border-color: $sprk-green !default;
+/// The border color on Inputs when there is an error.
 $sprk-text-input-error-border-color: $sprk-yellow !default;
+/// The border color on disabled Inputs.
 $sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
+/// The background color on disabled Inputs.
 $sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
+/// The box shadow on disabled Inputs.
 $sprk-text-input-disabled-box-shadow: none !default;
+/// The color setting on disabled Inputs.
 $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
+/// The border color setting on readonly Inputs.
 $sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
+/// The color setting on readonly Inputs.
 $sprk-text-input-readonly-color: $sprk-gray !default;
+/// The transition setting Inputs.
 $sprk-text-input-transition: border-color 0.15s ease !default;
 
 //
 // Select
 ///
+
+/// The value for the appearance property for Selects.
 $sprk-select-appearance: none !default;
+/// The background setting for Selects.
 $sprk-select-background: none !default;
+/// The border setting for Selects.
 $sprk-select-border: $sprk-text-input-border !default;
+/// The border color setting for Selects on focus.
 $sprk-select-focus-border-color: $sprk-text-input-focus-border-color !default;
+/// The border color setting for Selects when they have an error.
 $sprk-select-error-border-color: $sprk-text-input-error-border-color !default;
+/// The border radius setting for Selects.
 $sprk-select-border-radius: $sprk-text-input-border-radius !default;
+/// The box shadow setting for Selects.
 $sprk-select-box-shadow: $sprk-text-input-box-shadow !default;
+/// The value for the color property for Selects.
 $sprk-select-color: $sprk-text-input-color !default;
+/// The font size of Selects.
 $sprk-select-font-size: $sprk-text-input-font-size !default;
+/// The font family of Selects.
 $sprk-select-font-family: $sprk-text-input-font-family !default;
+/// The font weight of Selects.
 $sprk-select-font-weight: $sprk-text-input-font-weight !default;
+/// The line height of Selects.
 $sprk-select-line-height: $sprk-text-input-line-height !default;
+/// The outline setting for Selects.
 $sprk-select-outline: $sprk-text-input-outline !default;
+/// The padding of Selects.
 $sprk-select-padding: 12px 45px 12px 13px !default;
+/// The value for margin-top on the icon in Selects.
 $sprk-select-arrow-offset-y: -31px !default;
+/// The value for margin-right on the icon in Selects.
 $sprk-select-arrow-offset-x: 19px !default;
+/// The stroke width of the icon in Selects.
 $sprk-select-arrow-stroke-width: 6px !default;
+/// The border color of disabled Selects.
 $sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
+/// The background color of disabled Selects.
 $sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
+/// The color property value of disabled Selects.
 $sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
+/// The value for the Firefox specific -moz-focusring color setting.
 $sprk-select-moz-focusring-color: transparent !default;
+/// The value for the Firefox specific -moz-focusring text-shadow setting.
 $sprk-select-moz-focusring-text-shadow: 0 0 0 $sprk-select-color !default;
 
 //
 // Textarea
 ///
+
+/// The minimum height of Textarea.
 $sprk-textarea-min-height: 125px !default;
+/// The margin surrounding Textarea.
 $sprk-textarea-margin: $sprk-space-stack-m !default;
+/// The padding inside Textarea.
 $sprk-textarea-padding: $sprk-space-m !default;
 
 //
 // Input Errors
 ///
+
+/// Color setting for Inputs with errors.
 $sprk-text-input-error-color: $sprk-yellow !default;
+/// Value for color on Inputs with errors.
 $sprk-input-error-text-color: $sprk-black !default;
+/// The font family used for Input error text.
 $sprk-input-error-text-font-family: $sprk-font-family-body-two !default;
+/// The font weight used for Input error text.
 $sprk-input-error-text-font-weight: 400 !default;
+/// The font size used for Input error text.
 $sprk-input-error-text-font-size: 0.8125rem !default;
+/// The line height used for Input error text.
 $sprk-input-error-text-line-height: 1.4 !default;
+/// The margin for Input error text.
 $sprk-input-error-text-margin: 0 0 0 6px !default;
+/// The margin for Input containers that have an error.
 $sprk-error-container-margin: $sprk-space-s 0 0 0 !default;
+/// The Input error icon size.
 $sprk-error-icon-size: 1.25rem !default;
 
 //
 // Helper Text
 ///
+
+/// The color of the helper text for Inputs.
 $sprk-helper-color: $sprk-black-tint-50 !default;
+/// The font size of the helper text for Inputs.
 $sprk-helper-font-size: 0.8125rem !default;
+/// The font family of the helper text for Inputs.
 $sprk-helper-font-family: $sprk-text-input-font-family !default;
+/// The font weight of the helper text for Inputs.
 $sprk-helper-font-weight: $sprk-text-input-font-weight !default;
+/// The line height of the helper text for Inputs.
 $sprk-helper-line-height: $sprk-text-input-line-height !default;
+/// The margin of the helper text for Inputs.
 $sprk-helper-margin: $sprk-error-container-margin !default;
 
 //
 // Placeholder
 ///
+
+/// The color of the placeholder for Inputs.
 $sprk-placeholder-color: $sprk-black-tint-50 !default;
+/// The font size of the placeholder for Inputs.
 $sprk-placeholder-font-size: $sprk-text-input-font-size !default;
+/// The font family of the placeholder for Inputs.
 $sprk-placeholder-font-family: $sprk-text-input-font-family !default;
+/// The font weight of the placeholder for Inputs.
 $sprk-placeholder-font-weight: $sprk-text-input-font-weight !default;
 
 //
 // Selection Container
 ///
+
+/// The margin of the selection container for Inputs.
 $sprk-selection-container-margin: 0 0 $sprk-space-m 0 !default;
+/// The font weight of the label in the selection container for Inputs.
 $sprk-selection-container-label-font-weight: 300 !default;
+/// The height of the selection container for Inputs.
 $sprk-selection-container-input-height: auto !default;
+/// The width of Input inside the selection container.
 $sprk-selection-container-input-width: auto !default;
+/// The margin of the Input inside the selection container.
 $sprk-selection-container-input-margin: 0 $sprk-space-s 0 0 !default;
 
 //
-// DatePicker
+// Date Picker
 ///
+
+/// The maximum width of the Date Picker popup.
 $sprk-date-picker-max-width: 20rem !default;
+/// The border radius applied to the Date Picker popup.
 $sprk-date-picker-border-radius: 4px !default;
+/// The size of the buttons used internally by the Date Picker popup.
 $sprk-date-picker-button-size: 2.25rem !default;
+/// The offset applied to columns used internally by the Date Picker.
 $sprk-date-picker-column-adjustment-x: 0.25rem !default;
+/// The box shadow of the Date Picker.
 $sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
+/// The font family in the Date Picker popup.
 $sprk-date-picker-font-family: $sprk-font-family-body-two !default;
+/// The font size of the Date Picker popup.
 $sprk-date-picker-font-size: 1rem !default;
+/// The font weight of the Date Picker popup.
 $sprk-date-picker-font-weight: 300 !default;
+/// Color used internally by Date Picker to highlight elements
 $sprk-date-picker-day-interact-color: $sprk-green !default;
+/// Font weight used by the currently selected day in the Date Picker popup.
 $sprk-date-picker-selected-day-font-weight: 500 !default;
+/// The value for background in the Date Picker.
 $sprk-date-picker-background: $sprk-white !default;
+/// The value for padding in the Date Picker.
 $sprk-date-picker-padding: $sprk-space-inset-s !default;
+/// The value for padding on wide viewports in the Date Picker.
 $sprk-date-picker-padding-wide: $sprk-space-inset-m !default;
+/// The border setting for the header in the Date Picker.
 $sprk-date-picker-header-border: 1px solid $sprk-gray !default;
+/// The font size for the header in the Date Picker.
 $sprk-date-picker-header-font-size: $sprk-font-size-body-three !default;
+/// The font weight for the header in the Date Picker.
 $sprk-date-picker-header-font-weight: 700 !default;
+/// The padding for the header in the Date Picker.
 $sprk-date-picker-header-padding: 0 0 $sprk-space-s 0 !default;
+/// The padding around the month header in the Date Picker popup.
 $sprk-date-picker-col-header-padding: 10px !default;
+/// The padding around the day in the Date Picker popup.
 $sprk-date-picker-day-padding: 6px !default;
+/// The margin around the day in the Date Picker popup.
 $sprk-date-picker-day-margin: 0 2px !default;
+/// The color of the day in the Date Picker popup.
 $sprk-date-picker-day-color: $sprk-white !default;
+/// The color of the day in the Date Picker popup on hover.
 $sprk-date-picker-day-hover-color: $sprk-black !default;
+/// The color of days in the Date Picker
+/// popup that are in the next month or disabled.
 $sprk-date-picker-day-edge-day-color: $sprk-black-tint-50 !default;
+/// The font size of the month and year in the Date Picker popup.
 $sprk-date-picker-month-year-font-size: $sprk-font-size-display-six !default;
+/// The color of the prev/next arrows in the Date Picker popup.
 $sprk-date-picker-arrow-color: $sprk-black !default;
+/// The margin applied to the Date Picker popup.
 $sprk-date-picker-modal-margin: $sprk-space-m 0 0 0 !default;
+/// The margin applied to the Date Picker popup on wide viewports.
 $sprk-date-picker-modal-margin-wide: 2px !default;
+/// The z-index applied to the Date Picker popup.
 $sprk-date-picker-modal-z-index: $sprk-layer-height-m !default;
+/// The value for max-height applied to the Date Picker popup.
 $sprk-date-picker-years-modal-max-height: 500px !default;
 
 //
 // Text Icon Inputs
 ///
+
+/// The X offset of text icons inside Inputs.
 $sprk-input-text-icon-offset-x: $sprk-space-m !default;
+/// The Y offset of text icons inside Inputs.
 $sprk-input-text-icon-offset-y: 2em !default;
+/// The font size of text icons inside Inputs.
 $sprk-input-text-icon-font-size: 1rem !default;
+/// The font weight of text icons inside Inputs.
 $sprk-input-text-icon-font-weight: 700 !default;
+/// The top offset of the icon displayed on the right side of Inputs.
 $sprk-input-has-icon-right-top: 38px !default;
+/// The font size of text icons inside Inputs.
 $sprk-input-has-icon-right-left: 71px !default;
+/// The font size of text icons inside Inputs.
 $sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
+/// The font size of text icons inside Inputs.
 $sprk-input-has-icon-padding-right: 0 37px 1px 12px !default;
+/// The font size of text icons inside Inputs.
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
+/// The font size of text icons inside Inputs.
 $sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
 
 //
 // SVG Icon Inputs
 ///
+
+/// The X offset of icons inside Inputs.
 $sprk-input-icon-offset-x: $sprk-space-m !default;
+/// The Y offset of icons inside Inputs.
 $sprk-input-icon-offset-y: $sprk-space-m !default;
+/// The padding inside Inputs that contain icons.
 $sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
+/// The z-index applied to the icon inside Inputs.
 $sprk-input-icon-z-index: $sprk-layer-height-xs !default;
 
 //
