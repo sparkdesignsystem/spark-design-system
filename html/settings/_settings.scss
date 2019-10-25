@@ -1349,19 +1349,31 @@ $sprk-split-breakpoint-xl: 80rem !default;
 //
 // Dividers
 ///
+
+/// The value for color of Dividers.
 $sprk-divider-color: rgb(230, 230, 230) !default;
+/// The value of border for Dividers.
 $sprk-divider-border: 2px solid $sprk-divider-color !default;
 
 //
 // Accordions
 ///
+
+/// The maximum width of Accordions.
 $sprk-accordion-max-width: 53.125rem !default;
+/// The border of Accordions.
 $sprk-accordion-border: $sprk-divider-border !default;
-$sprk-accordion-border-open: 2px solid $sprk-black !default;
+/// The font color of the Accordion item summary.
 $sprk-accordion-summary-color: $sprk-black !default;
+/// The color of the icon in the summary when the
+/// Accordion item is open or hovered.
 $sprk-accordion-summary-active-color: $sprk-green !default;
+/// The padding of the Accordion summary.
 $sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
+/// The padding of the Accordion content.
 $sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
+/// The background color used for hover
+/// and active on items in the Accordion.
 $sprk-accordion-active-background-color: $sprk-gray !default;
 
 //
