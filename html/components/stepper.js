@@ -1,16 +1,16 @@
-import getElements from '../utilities/getElements';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 import {
   advanceTab,
   getActiveTabIndex,
   resetTabs,
   retreatTab,
   setActiveTab,
-} from './tabs';
-import { carousel } from './carousel';
+} from '../../tabs/vanilla/tabs';
+import { carousel } from '../../carousel/vanilla/carousel';
 
 const resetSlider = (steps, slider) => {
   if (!slider) return;
-  steps.forEach(step => {
+  steps.forEach((step) => {
     const stepDescription = step.querySelector(
       '[data-sprk-stepper="description"]',
     );
@@ -81,7 +81,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 
   if (carouselContainer) {
     carouselInstance = carousel(carouselContainer);
-    carouselContainer.addEventListener('sprk.carousel.slide', e => {
+    carouselContainer.addEventListener('sprk.carousel.slide', (e) => {
       e.preventDefault();
       const { index } = e.detail;
       const currentActiveIndex = getActiveTabIndex(steps, activeClass);
@@ -95,8 +95,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         activeClass,
       );
       if (
-        carouselInstance &&
-        currentActiveIndex !== getActiveTabIndex(steps, activeClass)
+        carouselInstance
+        && currentActiveIndex !== getActiveTabIndex(steps, activeClass)
       ) {
         carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
       }
@@ -133,7 +133,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
   );
 
   steps.forEach((step, index) => {
-    step.addEventListener('click', e => {
+    step.addEventListener('click', (e) => {
       e.preventDefault();
       resetTabs(steps, descriptions, activeClass);
       setActiveTab(steps[index], descriptions[index], activeClass);
@@ -151,8 +151,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
       const sliderBreakpoint = 1279;
 
       if (
-        windowWidth < sliderBreakpoint &&
-        newViewportWidth > sliderBreakpoint
+        windowWidth < sliderBreakpoint
+        && newViewportWidth > sliderBreakpoint
       ) {
         resetTabs(steps, descriptions, activeClass);
         setActiveTab(steps[activeStep], descriptions[activeStep], activeClass);
@@ -167,7 +167,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
       windowWidth = newViewportWidth;
     });
 
-    step.addEventListener('keydown', event => {
+    step.addEventListener('keydown', (event) => {
       const keys = {
         end: 35,
         home: 36,
@@ -177,11 +177,9 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         down: 40,
       };
 
-      // if the key pressed isnt in the list of keys, return
+      // if the key pressed is not in the list of keys, return
       if (
-        !Object.keys(keys).some(key => {
-          return keys[key] === event.keyCode;
-        })
+        !Object.keys(keys).some(key => keys[key] === event.keyCode)
       ) {
         return;
       }
@@ -221,7 +219,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 };
 
 const stepper = () => {
-  getElements('[data-sprk-stepper="container"]', item => {
+  getElements('[data-sprk-stepper="container"]', (item) => {
     let carouselContainer;
     const partnerCarouselID = item.getAttribute('data-sprk-stepper-carousel');
     if (partnerCarouselID) {

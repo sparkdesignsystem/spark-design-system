@@ -1,12 +1,12 @@
 /* global describe it */
 
 /*
-* These tests are for testing the regex provided in isValidMonetary, although in practice, the
-* regex is assigned to the pattern attribute in the markup.
-*
+* These tests are for testing the regex provided in isValidMonetary,
+* although in practice, the regex is assigned to the pattern attribute in
+* the markup.
 */
 import { expect } from 'chai';
-import isValidMonetary from '../utilities/validation/isValidMonetary';
+import isValidMonetary from './isValidMonetary';
 
 describe('isValidMonetary tests', () => {
   it('should pass on a valid ssn', () => {
@@ -77,7 +77,8 @@ describe('isValidMonetary tests', () => {
     expect(isValidMonetary('1234,123,123,123.00')).eql(false);
   });
 
-  it('should fail four digits in a segment, three commas, 2 digit change', () => {
+  it('should fail four digits in a segment, three commas, 2 digit'
+    + ' change', () => {
     expect(isValidMonetary('1,2345,123,123.00')).eql(false);
   });
 

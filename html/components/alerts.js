@@ -1,4 +1,4 @@
-import getElements from '../utilities/getElements';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 
 const dismissAlert = (alert) => {
   alert.classList.add('sprk-u-Display--none');

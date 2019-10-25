@@ -12,8 +12,15 @@
  * - trigger element for modal to have `data-sprk-modal-trigger="customID"``
  */
 
-import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
-import { isTabPressed, isEscPressed } from '../utilities/keypress';
+import {
+  getFocusableEls,
+  focusFirstEl,
+  isActiveElement,
+} from '../../../utilities/helpers/vanilla/elementState';
+import {
+  isTabPressed,
+  isEscPressed,
+} from '../../../utilities/helpers/vanilla/keypress';
 
 const isMaskClicked = e => e.target.getAttribute('data-sprk-modal-mask') === 'true';
 const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';

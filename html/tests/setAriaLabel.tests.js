@@ -1,6 +1,8 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import { setAriaLabel } from '../components/pagination';
+import {
+  setAriaLabel,
+} from '../../../components/pagination/vanilla/pagination';
 
 describe('Pagination tests', () => {
   let navContainer;
@@ -38,14 +40,16 @@ describe('Pagination tests', () => {
     navContainer.appendChild(longListContainer);
   });
 
-  it('should add/set the aria label to match the link text in the default version', () => {
+  it('should add/set the aria label to match the link text in the default'
+    + ' version', () => {
     setAriaLabel(pagLink);
     const pagNum = pagLink.textContent;
     const pagLabel = `Page ${pagNum}`;
     expect(pagLink.getAttribute('aria-label')).eql(pagLabel);
   });
 
-  it('should add/set the aria label to match the link text in the long version', () => {
+  it('should add/set the aria label to match the link text in the long'
+    + ' version', () => {
     setAriaLabel(longPagLink);
     const longPagNum = longPagLink.textContent;
     const longPagLabel = `Page ${longPagNum}`;

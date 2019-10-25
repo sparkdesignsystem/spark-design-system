@@ -1,24 +1,24 @@
 /* global document */
-import getElements from '../utilities/getElements';
-import { isEscPressed } from '../utilities/keypress';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
+import { isEscPressed } from '../../../utilities/helpers/vanilla/keypress';
 
-const hideDropDown = dropdown => {
+const hideDropDown = (dropdown) => {
   dropdown.classList.remove('sprk-c-Dropdown--open');
   dropdown.classList.add('sprk-u-Display--none');
 };
 
-const showDropDown = dropdown => {
+const showDropDown = (dropdown) => {
   dropdown.classList.add('sprk-c-Dropdown--open');
   dropdown.classList.remove('sprk-u-Display--none');
 };
 
-const removeActiveStatus = choices => {
-  choices.forEach(choice => {
+const removeActiveStatus = (choices) => {
+  choices.forEach((choice) => {
     choice.classList.remove('sprk-c-Dropdown__link--active');
   });
 };
 
-const toggleDropDown = dropdown => {
+const toggleDropDown = (dropdown) => {
   if (dropdown.classList.contains('sprk-c-Dropdown--open')) {
     hideDropDown(dropdown);
   } else {
@@ -26,7 +26,7 @@ const toggleDropDown = dropdown => {
   }
 };
 
-const bindUIEvents = dropdownTrigger => {
+const bindUIEvents = (dropdownTrigger) => {
   const id = dropdownTrigger.getAttribute('data-sprk-dropdown-trigger');
   const triggerText = dropdownTrigger.querySelector(
     '[data-sprk-dropdown-trigger-text-container]',
@@ -42,7 +42,7 @@ const bindUIEvents = dropdownTrigger => {
     toggleDropDown(dropdownElement);
   });
 
-  document.addEventListener('click', e => {
+  document.addEventListener('click', (e) => {
     if (
       !(
         dropdownElement.contains(e.target) || dropdownTrigger.contains(e.target)
@@ -52,22 +52,22 @@ const bindUIEvents = dropdownTrigger => {
     }
   });
 
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', (e) => {
     if (isEscPressed(e)) {
       hideDropDown(dropdownElement);
     }
   });
 
-  document.addEventListener('focusin', e => {
+  document.addEventListener('focusin', (e) => {
     /* istanbul ignore else: jsdom cant fire focusin on an element */
     if (!dropdownElement.contains(e.target)) {
       hideDropDown(dropdownElement);
     }
   });
 
-  dropdownChoices.forEach(choice => {
+  dropdownChoices.forEach((choice) => {
     const value = choice.getAttribute('data-sprk-dropdown-choice');
-    choice.addEventListener('click', e => {
+    choice.addEventListener('click', (e) => {
       e.preventDefault();
       if (triggerText) {
         triggerText.textContent = value;

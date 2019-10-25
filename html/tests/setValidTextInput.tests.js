@@ -1,7 +1,7 @@
 /* global document describe before it */
 import { expect } from 'chai';
-import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
-import setValidTextInput from '../utilities/validation/setValidTextInput';
+import setInvalidTextInput from './setInvalidTextInput';
+import setValidTextInput from './setValidTextInput';
 
 describe('setValidTextInput tests', () => {
   let inputContainer;

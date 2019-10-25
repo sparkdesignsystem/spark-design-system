@@ -11,9 +11,7 @@ describe('datePicker tests', () => {
   const tinyDatePickerStub = (element, config) => {
     config.format(new Date('10/31/1999'));
     const stub = {
-      on: (eventName, cb) => {
-        cb();
-      },
+      on: (eventName, cb) => { cb(); },
     };
 
     return stub;
@@ -21,9 +19,9 @@ describe('datePicker tests', () => {
 
   const tdpSpy = sinon.spy(tinyDatePickerStub);
 
-  const { datePicker } = proxyquire('../base/datePicker', {
-    'tiny-date-picker': tdpSpy,
-  });
+  const { datePicker } = proxyquire('./datePicker',
+    { 'tiny-date-picker': tdpSpy });
+
 
   beforeEach(() => {
     dp = document.createElement('div'); // calendar stub
@@ -34,7 +32,10 @@ describe('datePicker tests', () => {
     input.type = 'text';
     input.setAttribute(
       'pattern',
-      '^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$',
+      '^(((0[1358]|1[02])([\\/-]?)'
+      + '(0[1-9]|[12]\\d|3[01])|(0[469]|11)'
+      + '([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)'
+      + '((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$',
     );
     sinon.spy(input, 'addEventListener');
     inputContainer.appendChild(input);

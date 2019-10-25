@@ -11,9 +11,16 @@ import {
   handleMaskEvents,
   bindUIEvents,
   currentOpenModal,
-} from '../components/modals';
-import { getFocusableEls, focusFirstEl, isActiveElement } from '../utilities/elementState';
-import { isTabPressed, isEscPressed } from '../utilities/keypress';
+} from './modals';
+import {
+  getFocusableEls,
+  focusFirstEl,
+  isActiveElement
+} from '../../../utilities/helpers/vanilla/elementState';
+import {
+  isTabPressed,
+  isEscPressed
+} from '../../../utilities/helpers/vanilla/keypress';
 
 describe('modals init', () => {
   afterEach(() => {

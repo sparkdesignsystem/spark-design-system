@@ -1,6 +1,6 @@
 /* global document describe it */
 import { expect } from 'chai';
-import isElementVisible from '../utilities/isElementVisible';
+import isElementVisible from './isElementVisible';
 
 describe('isElementVisible tests', () => {
   let main;

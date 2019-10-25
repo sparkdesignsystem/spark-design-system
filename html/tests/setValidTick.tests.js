@@ -1,6 +1,6 @@
 /* global document describe beforeEach it */
 import { expect } from 'chai';
-import setValidTick from '../utilities/validation/setValidTick';
+import setValidTick from './setValidTick';
 
 describe('setValidTick tests', () => {
   let inputContainer;

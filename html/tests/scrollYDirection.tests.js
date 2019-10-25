@@ -1,7 +1,7 @@
 /* global document describe it */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import scrollYDirection from '../utilities/scrollYDirection';
+import scrollYDirection from './scrollYDirection';
 
 describe('scrollYDirection tests', () => {
   // Placeholder tests

@@ -1,7 +1,7 @@
 /* global window document describe before beforeEach it afterEach */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { requiredTick, runValidation, bindUIEvents } from '../base/requiredTick';
+import { requiredTick, runValidation, bindUIEvents } from './requiredTick';
 
 describe('requiredTick init', () => {
   afterEach(() => {
@@ -11,7 +11,9 @@ describe('requiredTick init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     requiredTick();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-required-only="tick"]');
+    expect(document
+      .querySelectorAll
+      .getCall(0).args[0]).eql('[data-sprk-required-only="tick"]');
   });
 });
 
@@ -106,7 +108,8 @@ describe('requiredTextInput UI Events tests', () => {
     expect(inputContainer.addEventListener.getCall(0).args[0]).eql('change');
   });
 
-  it('should mark error when change is triggered with no selected inputs', () => {
+  it('should mark error when change is triggered with no selected'
+    + ' inputs', () => {
     event = new window.Event('change');
     inputContainer.dispatchEvent(event);
     expect(errorContainer.textContent).eql('This field is required.');

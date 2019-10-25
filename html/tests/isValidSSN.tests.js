@@ -1,12 +1,12 @@
 /* global describe it */
 
 /*
-* These tests are for testing the regex provided in isValidSSN, although in practice, the regex is
+* These tests are for testing the regex provided in isValidSSN,
+* although in practice, the regex is
 * assigned to the pattern attribute in the markup.
-*
 */
 import { expect } from 'chai';
-import isValidSSN from '../utilities/validation/isValidSSN';
+import isValidSSN from './isValidSSN';
 
 describe('isValidSSN tests', () => {
   it('should pass on a valid ssn', () => {

@@ -1,4 +1,4 @@
-import detectJS from './utilities/detectJS';
+import detectJS from '../../utilities/helpers/vanilla/detectJS';
 
 const SparkPrerender = () => {
   detectJS();

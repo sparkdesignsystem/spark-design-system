@@ -8,7 +8,7 @@ describe('Highlight Board tests', () => {
   let element;
   const objectFitImagesStub = sinon.spy();
 
-  const { highlightBoard } = proxyquire('../components/highlight-board', {
+  const { highlightBoard } = proxyquire('./highlight-board', {
     'object-fit-images': objectFitImagesStub,
   });
 

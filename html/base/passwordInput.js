@@ -1,5 +1,5 @@
-import toggleValue from '../utilities/toggleValue';
-import getElements from '../utilities/getElements';
+import toggleValue from '../../../utilities/helpers/vanilla/toggleValue';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 
 const bindUIEvents = (element) => {
   const field = element.querySelector('input');
@@ -7,7 +7,8 @@ const bindUIEvents = (element) => {
 
   // set up the 'show password' button
   checkbox.addEventListener('change', () => {
-    field.setAttribute('type', toggleValue(field.getAttribute('type'), 'text', 'password'));
+    field.setAttribute('type', toggleValue(field
+      .getAttribute('type'), 'text', 'password'));
   });
 };
 

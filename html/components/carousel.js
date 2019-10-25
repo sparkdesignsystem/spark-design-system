@@ -33,7 +33,7 @@ const afterLoryInit = (dotContainer, carouselInstance) => {
 const afterLorySlide = (dotContainer, item, event) => {
   if (!dotContainer) return;
   const dots = dotContainer.querySelectorAll('button');
-  dots.forEach(dot => {
+  dots.forEach((dot) => {
     dot.classList.remove('sprk-c-Carousel__dot--active');
   });
   dots[event.detail.currentSlide - 1].classList.add(
@@ -48,7 +48,7 @@ const afterLorySlide = (dotContainer, item, event) => {
 };
 
 // init carousel
-const carousel = item => {
+const carousel = (item) => {
   const slideCount = item.querySelectorAll('li').length;
   const dotContainer = item.querySelector('[data-sprk-carousel-dots]');
 
@@ -56,7 +56,7 @@ const carousel = item => {
     beforeLoryInit(dotContainer, slideCount);
   });
 
-  item.addEventListener('after.lory.slide', e => {
+  item.addEventListener('after.lory.slide', (e) => {
     afterLorySlide(dotContainer, item, e);
   });
 

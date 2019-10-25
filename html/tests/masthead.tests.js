@@ -8,10 +8,10 @@ import {
   toggleMobileNav,
   hideMobileNavs,
   addClassOnScroll,
-  toggleMenu,
-  toggleScrollEvent,
-} from '../components/masthead';
-import { dropdowns } from '../components/dropdown';
+} from './masthead';
+import {
+  dropdowns,
+} from '../../dropdown/vanilla/dropdown';
 
 describe('masthead init', () => {
   afterEach(() => {
@@ -21,9 +21,7 @@ describe('masthead init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     masthead();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql(
-      '[data-sprk-mobile-nav-trigger]',
-    );
+    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-mobile-nav-trigger]');
   });
 });
 
@@ -43,7 +41,6 @@ describe('masthead UI Events tests', () => {
   let selectorTriggerInDropdown;
   let selectorTriggerInDropdownWide;
   let choice1;
-  let iconContainerDiv;
 
   beforeEach(() => {
     main = document.createElement('div');
@@ -60,10 +57,7 @@ describe('masthead UI Events tests', () => {
 
     // Create the narrow selector
     selectorWide = document.createElement('a');
-    selectorWide.setAttribute(
-      'data-sprk-dropdown-trigger',
-      'dropdown-selector-wide',
-    );
+    selectorWide.setAttribute('data-sprk-dropdown-trigger', 'dropdown-selector-wide');
 
     // Create the narrow selector's dropdown
     selectorDropdown = document.createElement('div');
@@ -72,25 +66,16 @@ describe('masthead UI Events tests', () => {
 
     // Create the narrow selector's dropdown trigger element inside the dropdown
     selectorTriggerInDropdown = document.createElement('a');
-    selectorTriggerInDropdown.setAttribute(
-      'data-sprk-selector-dropdown-trigger',
-      'dropdown-selector',
-    );
+    selectorTriggerInDropdown.setAttribute('data-sprk-selector-dropdown-trigger', 'dropdown-selector');
 
     // Create a selector trigger for wide
     selectorDropdownWide = document.createElement('div');
-    selectorDropdownWide.setAttribute(
-      'data-sprk-dropdown',
-      'dropdown-selector-wide',
-    );
+    selectorDropdownWide.setAttribute('data-sprk-dropdown', 'dropdown-selector-wide');
     selectorDropdownWide.classList.add('sprk-c-Dropdown');
 
     // Create the narrow selector's dropdown trigger element inside the dropdown
     selectorTriggerInDropdownWide = document.createElement('a');
-    selectorTriggerInDropdownWide.setAttribute(
-      'data-sprk-selector-dropdown-trigger',
-      'dropdown-selector-wide',
-    );
+    selectorTriggerInDropdownWide.setAttribute('data-sprk-selector-dropdown-trigger', 'dropdown-selector-wide');
 
     // Create choice in dropdown
     choice1 = document.createElement('a');
@@ -119,18 +104,11 @@ describe('masthead UI Events tests', () => {
     iconContainer = document.createElement('button');
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
 
-    // Create a container div for icon
-    iconContainerDiv = document.createElement('div');
-    iconContainerDiv.classList.add('sprk-c-Masthead__menu');
-
     // Add mobile menu icon to container
     iconContainer.appendChild(icon);
 
-    // Add iconContainer to iconContainerDiv
-    iconContainerDiv.appendChild(iconContainer);
-
-    // Add iconContainerDiv to mastheadDiv
-    mastheadDiv.appendChild(iconContainerDiv);
+    // Add iconContainer to mastheadDiv
+    mastheadDiv.appendChild(iconContainer);
 
     sinon.spy(nav, 'addEventListener');
     sinon.spy(iconContainer, 'addEventListener');
@@ -169,38 +147,26 @@ describe('masthead UI Events tests', () => {
   it('should close the dropdown box when selector is clicked and its opened already', () => {
     selectorDropdown.classList.add('sprk-c-Dropdown--open');
     selector.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(
-      false,
-    );
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
   });
 
   it('should open the dropdown box when selector is clicked', () => {
     selector.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(
-      true,
-    );
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
   });
 
   it('should open the wide dropdown box when selector is clicked', () => {
     selectorTriggerInDropdownWide.dispatchEvent(new window.Event('click'));
-    expect(
-      selectorDropdownWide.classList.contains('sprk-c-Dropdown--open'),
-    ).eql(true);
+    expect(selectorDropdownWide.classList.contains('sprk-c-Dropdown--open')).eql(true);
     selectorTriggerInDropdownWide.dispatchEvent(new window.Event('click'));
-    expect(
-      selectorDropdownWide.classList.contains('sprk-c-Dropdown--open'),
-    ).eql(false);
+    expect(selectorDropdownWide.classList.contains('sprk-c-Dropdown--open')).eql(false);
   });
 
   it('should open the dropdown box when selector in dropdown is clicked', () => {
     selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(
-      true,
-    );
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
     selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(
-      false,
-    );
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
   });
 
   it('should hide the masthead mask when esc is pressed', () => {
@@ -223,73 +189,31 @@ describe('masthead UI Events tests', () => {
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(true);
   });
 
-  it('should add class to masthead when the scrollDirection is down', () => {
-    event = new window.Event('scroll');
-    window.dispatchEvent(event);
-    toggleMenu('down');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).eql(true);
-  });
-
-  it('should remove class to masthead when the scrollDirection is down', () => {
-    event = new window.Event('scroll');
-    window.dispatchEvent(event);
-    toggleMenu('up');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).eql(
-      false,
-    );
-  });
-
-  it('should add checkScrollDirection event listener if menu is visible', () => {
-    const attached = toggleScrollEvent(true);
-    expect(attached).eql(true);
-  });
-
-  it('should not add checkScrollDirection event listener if menu is not visible', () => {
-    const attached = toggleScrollEvent(false);
-    expect(attached).eql(false);
-  });
-
-  it('should checkScrollDirection on resize and return true if menu visible', () => {
-    iconContainerDiv.setAttribute('style', 'display: none');
-    event = new window.Event('resize');
-    window.dispatchEvent(event);
-    const newMenuVisibility = true;
-    expect(toggleScrollEvent(newMenuVisibility)).eql(true);
-  });
-
   it('should not close the dropdown if a key that is not esc is pressed', () => {
     selector.click();
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 26;
     document.dispatchEvent(escKeyEvent);
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(
-      true,
-    );
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
   });
 
   it('should close the dropdown if an element outside the dropdown is focused', () => {
     selectorWide.click();
     document.dispatchEvent(new window.Event('focusin'));
-    expect(
-      selectorDropdownWide.classList.contains('sprk-c-Dropdown--open'),
-    ).eql(false);
+    expect(selectorDropdownWide.classList.contains('sprk-c-Dropdown--open')).eql(false);
   });
 
   it('should not close the dropdown if an element inside the dropdown is focused', () => {
     selector.click();
     nav.focus();
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(
-      true,
-    );
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
   });
 
   it('should remove class from masthead when scrolled to the top', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     addClassOnScroll(mastheadDiv, 0, 150, 'sprk-c-Masthead--scroll');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(
-      false,
-    );
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).eql(false);
   });
 
   it('should close the nav when clicked and the nav is already open', () => {
@@ -360,34 +284,22 @@ describe('toggleMobileNav tests', () => {
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(false);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(true);
-    expect(
-      document
-        .getElementsByTagName('body')[0]
-        .classList.contains('sprk-u-Overflow--hidden'),
-    ).eql(true);
+    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(true);
     toggleMobileNav(iconContainer, nav, mastheadDiv);
-    expect(
-      document
-        .getElementsByTagName('body')[0]
-        .classList.contains('sprk-u-Overflow--hidden'),
-    ).eql(false);
+    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
   });
 
   it('should add sprk-u-Height--100 to the html element', () => {
     toggleMobileNav(iconContainer, nav, mastheadDiv);
-    expect(
-      document.documentElement.classList.contains('sprk-u-Height--100'),
-    ).eql(true);
+    expect(document.documentElement.classList.contains('sprk-u-Height--100')).eql(true);
   });
 
   it('should not add sprk-u-Height--100 to the html element if its already set to 100%', () => {
     document.documentElement.style.height = '100%';
     toggleMobileNav(iconContainer, nav, mastheadDiv);
-    expect(
-      document.documentElement.classList.contains('sprk-u-Height--100'),
-    ).eql(false);
+    expect(document.documentElement.classList.contains('sprk-u-Height--100')).eql(false);
   });
 
   it('should add sprk-u-Height--100 to the body element', () => {
@@ -425,19 +337,13 @@ describe('hideMobileNavs tests', () => {
     iconContainer.appendChild(icon);
     main.appendChild(nav);
     main.appendChild(iconContainer);
-    document
-      .getElementsByTagName('body')[0]
-      .classList.add('sprk-u-Overflow--hidden');
+    document.getElementsByTagName('body')[0].classList.add('sprk-u-Overflow--hidden');
     document.getElementsByTagName('body')[0].appendChild(main);
   });
 
   it('should add the hide class to the nav element and remove the open class from the icon', () => {
     hideMobileNavs();
-    expect(
-      document
-        .getElementsByTagName('body')[0]
-        .classList.contains('sprk-u-Overflow--hidden'),
-    ).eql(false);
+    expect(document.getElementsByTagName('body')[0].classList.contains('sprk-u-Overflow--hidden')).eql(false);
     expect(nav.classList.contains('sprk-u-Display--none')).eql(true);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).eql(false);
   });
@@ -533,9 +439,7 @@ describe('masthead no selector test', () => {
   });
 
   it('should not add event listener to selector if it does not exist', () => {
-    const selectorTrigger = mastheadDiv.querySelector(
-      '[data-sprk-dropdown-trigger="dropdown-selector"]',
-    );
+    const selectorTrigger = mastheadDiv.querySelector('[data-sprk-dropdown-trigger="dropdown-selector"]');
     expect(selectorTrigger).eql(null);
   });
 });

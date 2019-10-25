@@ -1,6 +1,10 @@
-import getElements from '../utilities/getElements';
-import setInvalidSelect from '../utilities/validation/setInvalidSelect';
-import setValidSelect from '../utilities/validation/setValidSelect';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
+import
+setInvalidSelect
+  from '../../../utilities/validation/vanilla/setInvalidSelect';
+import
+setValidSelect
+  from '../../../utilities/validation/vanilla/setValidSelect';
 
 const runValidation = (element) => {
   const select = element.querySelector('select');
@@ -19,7 +23,8 @@ const runValidation = (element) => {
   return selectionMade;
 };
 
-// cant really cause keyup without making a choice, but an app can trigger keyup on submission of a
+// cant really cause keyup without making a choice,
+// but an app can trigger keyup on submission of a
 // form to test for validity
 const bindUIEvents = (element) => {
   const field = element.querySelector('select');

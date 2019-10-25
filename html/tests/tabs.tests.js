@@ -10,7 +10,7 @@ import {
   advanceTab,
   retreatTab,
   getActiveTabIndex,
-} from '../components/tabs';
+} from './tabs';
 
 describe('tabs init', () => {
   afterEach(() => {
@@ -271,7 +271,7 @@ describe('resetTabs tests', () => {
 
     resetTabs(tabsSet, panels, 'sprk-c-Tabs__button--active');
 
-    tabsSet.forEach(tab => {
+    tabsSet.forEach((tab) => {
       if (tab.classList.contains('sprk-c-Tabs__button--active')) {
         hasActiveClassSomeplace = true;
       }
@@ -285,7 +285,7 @@ describe('resetTabs tests', () => {
 
     resetTabs(tabsSet, panels, 'sprk-c-Tabs__button--active');
 
-    panels.forEach(panel => {
+    panels.forEach((panel) => {
       if (!panel.classList.contains('sprk-u-HideWhenJs')) {
         allAreHidden = false;
       }

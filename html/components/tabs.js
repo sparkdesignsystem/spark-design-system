@@ -1,11 +1,11 @@
-import getElements from '../utilities/getElements';
+import getElements from '../../../utilities/helpers/vanilla/getElements';
 
 const resetTabs = (tabs, tabpanels, activeClass) => {
-  tabs.forEach(tab => {
+  tabs.forEach((tab) => {
     tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
     tab.removeAttribute('tabindex');
     tab.setAttribute('aria-selected', 'false');
-    tabpanels.forEach(panel => {
+    tabpanels.forEach((panel) => {
       panel.classList.add('sprk-u-HideWhenJs');
     });
   });
@@ -76,7 +76,7 @@ const ariaOrientation = (width, element) => {
   }
 };
 
-const bindUIEvents = element => {
+const bindUIEvents = (element) => {
   ariaOrientation(window.innerWidth, element);
 
   const tabContainer = element.querySelector('.sprk-c-Tabs__buttons');
@@ -90,7 +90,7 @@ const bindUIEvents = element => {
     });
   });
 
-  tabContainer.addEventListener('keydown', event => {
+  tabContainer.addEventListener('keydown', (event) => {
     const keys = {
       end: 35,
       home: 36,
