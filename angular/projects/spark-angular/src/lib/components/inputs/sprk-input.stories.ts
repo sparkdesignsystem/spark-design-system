@@ -9,6 +9,7 @@ import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
+import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 
 export default {
@@ -28,6 +29,7 @@ const modules = {
     SprkTextareaContainerModule,
     SprkFieldErrorModule,
     SprkFormatterSsnModule,
+    SprkFormatterMonetaryModule,
     SprkIconInputContainerModule,
   ],
 };
@@ -385,6 +387,38 @@ export const inlineSearchInput = () => ({
         data-id="input-search-1"
         sprkInput
       >
+    </sprk-icon-input-container>
+  `,
+});
+
+
+export const monetaryInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container
+      iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
+    >
+      <label class="sprk-b-Label--monetary" sprkLabel> Payment </label>
+      <input
+        class="sprk-b-TextInput--has-text-icon"
+        name="monetary_input"
+        type="text"
+        pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
+        [(ngModel)]="monetary_input"
+        #monetaryInput="ngModel"
+        sprkFormatterMonetary
+        sprkInput
+      />
+      <div
+        [hidden]="monetaryInput.valid || monetaryInput.pristine"
+        sprkFieldError
+      >
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">Invalid amount.</div>
+      </div>
     </sprk-icon-input-container>
   `,
 });
