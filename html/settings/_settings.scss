@@ -1643,16 +1643,28 @@ $sprk-spinner-color: $sprk-white !default;
 //
 // Tabbed Navigation
 ///
+
+/// The breakpoint at which the tabs
+/// go from stacked layout to side by side in Tabbed Navigation.
 $sprk-tab-navigation-breakpoint: 46rem !default;
+/// The tab button text color in Tabbed Navigation.
 $sprk-tab-navigation-btn-color: $sprk-black !default;
+/// The tab button background color in Tabbed Navigation.
 $sprk-tab-navigation-btn-bg-color: $sprk-gray !default;
+/// The border on the top of the button tabs in Tabbed Navigation.
 $sprk-tab-navigation-btn-border-top: 3px solid $sprk-gray !default;
+/// The border on the top of the
+/// button tabs on hover in Tabbed Navigation.
 $sprk-tab-navigation-btn-hover-border-top: 3px solid $sprk-red !default;
+/// The button tab text color of the
+/// currently active tab in Tabbed Navigation.
 $sprk-tab-navigation-btn-active-color: $sprk-red !default;
+/// The button tab top border of the
+/// currently active tab in Tabbed Navigation.
 $sprk-tab-navigation-btn-active-border-top: 3px solid $sprk-red !default;
+/// The button tab background color
+/// of the currently active tab in Tabbed Navigation.
 $sprk-tab-navigation-btn-active-bg-color: $sprk-white !default;
-$sprk-tab-navigation-btn-font-size: $sprk-font-size-body-one !default;
-$sprk-tab-navigation-btn-font-weight: $sprk-font-weight-body-one !default;
 
 //
 // Stepper
