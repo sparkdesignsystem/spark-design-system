@@ -482,7 +482,6 @@ export const passwordInput = () => ({
   },
 });
 
-
 export const helperText = () => ({
   moduleMetadata: modules,
   template: `
@@ -502,6 +501,42 @@ export const helperText = () => ({
       <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
       </p>
+    </sprk-input-container>
+  `,
+});
+
+export const phoneInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Phone Number</label>
+      <input
+        name="phone_input"
+        type="text"
+        pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
+        placeholder="(000) 000-0000"
+        [(ngModel)]="phone_input"
+        required
+        #phoneInput="ngModel"
+        sprkFormatterPhoneNumber
+        sprkInput
+      />
+      <span
+        [hidden]="phoneInput.valid || phoneInput.pristine"
+        sprkFieldError
+      >
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">
+          {{
+            phoneInput.invalid && phoneInput.value === ''
+              ? 'This field is required.'
+              : 'This field is invalid.'
+          }}
+        </div>
+      </span>
     </sprk-input-container>
   `,
 });
