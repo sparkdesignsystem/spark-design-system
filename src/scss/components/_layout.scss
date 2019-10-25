@@ -9,7 +9,9 @@ $doc-site-layout-max-width: 90rem;
   }
 
   @media (min-width: $doc-site-mobile-breakpoint) {
+    display:-ms-grid;
     display: grid;
+    -ms-grid-columns: 300px 1fr;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 188px 1fr;
   }
@@ -20,6 +22,7 @@ $doc-site-layout-max-width: 90rem;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     align-self: start;
+    -ms-grid-column-span: 2;
     grid-column: span 2;
     grid-row: 1 / 2;
   }
