@@ -283,7 +283,7 @@ export const selectBox = () => ({
       additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
       sprk-select-icon
       ></sprk-icon>
-      <label sprkLabel for="select-normal-1">Select Box Label</label>
+      <label sprkLabel for="select-normal-1">Huge Select Box Label</label>
     </sprk-input-container>
   `,
 });
