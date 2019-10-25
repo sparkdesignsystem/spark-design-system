@@ -695,52 +695,91 @@ $sprk-btn-tertiary-letter-spacing: normal !default;
 //
 // Links
 ///
+
+/// The transition timing for hover, active and focus styles on Links.
 $sprk-link-transition: 0.3s !default;
+/// The default color on Links.
 $sprk-link-color: $sprk-black !default;
+/// The font weight on Links.
 $sprk-link-font-weight: $sprk-font-weight-body-one !default;
+/// The text decoration on Links.
 $sprk-link-text-decoration: none !default;
+/// The color of the underline on Links.
 $sprk-link-underline-color: $sprk-gray-dark !default;
+/// The underline width on Links.
 $sprk-link-underline-width: 0.09375rem !default;
+/// The border style of the underline on Links.
 $sprk-link-border-bottom-style: solid !default;
+/// The style of the underline on Links.
 $sprk-link-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-color !default;
+/// The color of Links on hover.
 $sprk-link-hover-color: $sprk-black !default;
+/// The underline style of Links on hover.
 $sprk-link-hover-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-hover-color !default;
+/// The color of visited Links.
 $sprk-link-visited-color: $sprk-black-tint-75 !default;
+/// The color of the underline on visited Links.
 $sprk-link-underline-visited-color: $sprk-gray-dark !default;
+/// The style of the underline on visited Links.
 $sprk-link-visited-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
+/// The color value of Simple Links.
 $sprk-link-simple-color: $sprk-black !default;
+/// The underline color of Simple Links.
 $sprk-link-simple-underline-color: transparent !default;
+/// The underline width of Simple Links.
 $sprk-link-simple-underline-width: 0.0625rem !default;
+/// The font weight of Simple Links.
 $sprk-link-simple-font-weight: $sprk-font-weight-body-two !default;
+/// The color of Simple Links on hover.
 $sprk-link-simple-hover-color: $sprk-black !default;
+/// The underline width of Simple Links on hover.
 $sprk-link-simple-hover-underline-width: 0.0625rem !default;
+/// The underline color of Simple Links on hover.
 $sprk-link-simple-hover-underline-color: $sprk-black !default;
+/// The underline style of Simple Links.
 $sprk-link-simple-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
+/// The underline style of visited Simple Links.
 $sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
+/// The underline style of visited Simple Links on hover.
 $sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
+/// The color of icons in Links containing icons.
 $sprk-link-has-icon-color-icon: $sprk-green !default;
+/// The font weight of Links containing icons.
 $sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
+/// The underline width of Links containing icons.
 $sprk-link-has-icon-underline-width: 0 !default;
+/// The underline color of Links containing icons.
 $sprk-link-has-icon-underline-color: transparent !default;
+/// The fill color for icons contained in Links.
 $sprk-link-has-icon-fill: transparent !default;
+/// The border settings for Links with icons.
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+/// The border settings for Links with icons in the hover state.
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+/// The color value for Links with icons in the hover state.
 $sprk-link-has-icon-hover-color-text: $sprk-green !default;
+/// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
+/// The border settings for Plain Links in the visited state
 $sprk-link-plain-visited-border: none !default;
+/// The disabled Link color.
 $sprk-link-disabled-color: $sprk-gray-dark !default;
+/// The disabled Link font weight.
 $sprk-link-disabled-font-weight: $sprk-font-weight-body-one !default;
+/// The underline width for the disabled Link.
 $sprk-link-disabled-underline-width: 0 !default;
+/// The underline settings for the disabled Link.
 $sprk-link-disabled-border-bottom: $sprk-link-disabled-underline-width
   $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
+/// The underline settings for the disabled Link on hover.
 $sprk-link-disabled-hover-border-bottom: $sprk-link-disabled-underline-width
   $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
 
