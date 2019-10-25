@@ -85,11 +85,10 @@ export const hugeTextInput = () => ({
   template: `
     <sprk-huge-input-container>
       <input
-        class="sprk-b-TextInput--label-hidden"
         placeholder="Placeholder"
-        name="text_input_huge_1"
+        name="text_input_huge"
         type="text"
-        [(ngModel)]="text_input_huge_1"
+        [(ngModel)]="text_input_huge"
         required
         #textInput="ngModel"
         sprkInput
