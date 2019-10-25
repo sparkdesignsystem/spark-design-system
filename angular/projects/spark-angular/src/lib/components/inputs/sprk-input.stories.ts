@@ -91,13 +91,13 @@ export const checkbox = () => ({
 
       <sprk-selection-item-container>
         <input
-        type="checkbox"
-        name="checkbox_input"
-        [(ngModel)]="checkbox_input1"
-        sprkSelectionInput
-        #checkboxInput1="ngModel"
-        data-id="checkbox-1"
-        id="checkbox-1"
+          type="checkbox"
+          name="checkbox_input"
+          [(ngModel)]="checkbox_input1"
+          sprkSelectionInput
+          #checkboxInput1="ngModel"
+          data-id="checkbox-1"
+          id="checkbox-1"
         >
 
         <label
@@ -110,13 +110,13 @@ export const checkbox = () => ({
 
       <sprk-selection-item-container>
         <input
-        type="checkbox"
-        name="checkbox_input"
-        [(ngModel)]="checkbox_input2"
-        sprkSelectionInput
-        #checkboxInput2="ngModel"
-        data-id="checkbox-2"
-        id="checkbox-2"
+          type="checkbox"
+          name="checkbox_input"
+          [(ngModel)]="checkbox_input2"
+          sprkSelectionInput
+          #checkboxInput2="ngModel"
+          data-id="checkbox-2"
+          id="checkbox-2"
         >
 
         <label
@@ -217,11 +217,11 @@ export const selectBox = () => ({
   template: `
     <sprk-input-container>
       <select
-      class="sprk-b-Select"
-      id="select-normal-1"
-      aria-describedby="select-normal--error-container"
-      data-id="select-1"
-      sprkInput
+        class="sprk-b-Select"
+        id="select-normal-1"
+        aria-describedby="select-normal--error-container"
+        data-id="select-1"
+        sprkInput
       >
         <option value="none">Please choose...</option>
         <option value="1">Option 1</option>
@@ -248,17 +248,17 @@ export const hugeSelect = () => ({
   template: `
     <sprk-huge-input-container>
       <select
-      id="select-huge-1"
-      aria-describedby="select-normal--error-container"
-      data-id="select-huge-1"
-      data-sprk-input="huge"
-      sprkInput
+        id="select-huge-1"
+        aria-describedby="select-normal--error-container"
+        data-id="select-huge-1"
+        data-sprk-input="huge"
+        sprkInput
       >
         <option
-        value=""
-        disabled
-        selected
-        hidden
+          value=""
+          disabled
+          selected
+          hidden
         ></option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
@@ -271,9 +271,9 @@ export const hugeSelect = () => ({
       </select>
       <label sprkLabel for="select-huge-1">Select Box Label</label>
       <sprk-icon
-      iconType="chevron-down"
-      additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
-      sprk-select-icon
+        iconType="chevron-down"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        sprk-select-icon
       ></sprk-icon>
     </sprk-huge-input-container>
   `,
@@ -337,6 +337,23 @@ export const SSNInput = () => ({
           </sprk-icon>
           <div class="sprk-b-ErrorText">Invalid SSN.</div>
         </div>
+    </sprk-input-container>
+  `,
+});
+
+export const searchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Search Input</label>
+      <input
+      name="search_input"
+      type="search"
+      [(ngModel)]="search_input"
+      #searchInput="ngModel"
+      data-id="search-1"
+      sprkInput
+      >
     </sprk-input-container>
   `,
 });
