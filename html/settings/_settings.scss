@@ -1379,25 +1379,45 @@ $sprk-accordion-active-background-color: $sprk-gray !default;
 //
 // Toggle
 ///
+
+/// The transition timing for the
+/// rotation of the icon when the Toggle is opened.
 $sprk-toggle-transition-timing: 0.3s ease !default;
-$sprk-toggle-transistion-timing: $sprk-toggle-transition-timing;
+$sprk-toggle-transistion-timing: $sprk-toggle-transition-timing; //TODO: deprecate
 
 //
 // Dropdown
 ///
+
+/// Background color of the Dropdown items that
+/// are active or hovered.
 $sprk-dropdown-active-background-color: $sprk-gray !default;
+/// The left border of the Dropdown item that is active.
 $sprk-dropdown-active-border: 2.5px solid $sprk-green !default;
+/// The box-shadow of the Dropdown item that is active.
 $sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-green !default;
+/// The border of the Dropdown.
 $sprk-dropdown-border: 1px solid $sprk-gray !default;
+/// The font size of the Dropdown.
 $sprk-dropdown-font-size: $sprk-font-size-body-one !default;
+/// The font weight of the Dropdown.
 $sprk-dropdown-font-weight: 400 !default;
+/// The padding around the Informational Dropdown
+/// footer.
 $sprk-dropdown-footer-padding: $sprk-space-inset-short-l !default;
+/// The line height of the Dropdown.
 $sprk-dropdown-line-height: 1 !default;
+/// The max-width of the Dropdown.
 $sprk-dropdown-max-width: 24rem !default;
+/// The padding around the Dropdown items.
 $sprk-dropdown-padding: $sprk-space-misc-a !default;
+/// The box shadow of the Dropdown.
 $sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
+/// The color of the Dropdown title.
 $sprk-dropdown-title-color: $sprk-black-tint-25 !default;
+/// The font size of the Dropdown title.
 $sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
+/// The font weight of the Dropdown title.
 $sprk-dropdown-title-font-weight: 300 !default;
 
 //
