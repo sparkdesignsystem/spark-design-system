@@ -343,6 +343,14 @@ export const SSNInput = () => ({
         </div>
     </sprk-input-container>
   `,
+  props: {
+    ssnType: 'password',
+    toggleSSNType(): void {
+      this.ssnType === 'password'
+        ? (this.ssnType = 'text')
+        : (this.ssnType = 'password');
+    }
+  }
 });
 
 export const searchInput = () => ({
@@ -423,7 +431,6 @@ export const monetaryInput = () => ({
   `,
 });
 
-
 export const percentageInput = () => ({
   moduleMetadata: modules,
   template: `
@@ -442,4 +449,33 @@ export const percentageInput = () => ({
       />
     </sprk-icon-input-container>
   `,
+});
+
+
+export const passwordInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Password</label>
+      <input [type]="passwordType" name="password_input" sprkInput />
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          (click)="togglePasswordType()"
+        />
+        <label sprkSelectionLabel>Show Password</label>
+      </sprk-selection-item-container>
+    </sprk-input-container>
+  `,
+  props: {
+    passwordType: 'password',
+    togglePasswordType(): void {
+      this.passwordType === 'password'
+        ? (this.passwordType = 'text')
+        : (this.passwordType = 'password');
+    }
+  },
 });
