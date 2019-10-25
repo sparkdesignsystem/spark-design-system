@@ -2,10 +2,16 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
-import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
-import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import {
+  SprkMastheadAccordionComponent
+} from './sprk-masthead-accordion/sprk-masthead-accordion.component';
+import {
+  SprkMastheadAccordionItemComponent
+} from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
-import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
+import {
+  SprkDropdownComponent
+} from '../sprk-dropdown/sprk-dropdown.component';
 describe('SprkMastheadComponent', () => {
   let component: SprkMastheadComponent;
   let fixture: ComponentFixture<SprkMastheadComponent>;
@@ -140,20 +146,23 @@ describe('SprkMastheadComponent', () => {
     secondaryNavElement = fixture.nativeElement.querySelector(
       '.sprk-c-Masthead__big-nav-items'
     );
-    expect(
-      secondaryNavElement.classList.length).toEqual(7);
+    expect(secondaryNavElement.classList.toString()).toEqual(
+      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare'
+    );
   });
 
   it('should add the scroll class when state isScrolled is true', () => {
     component.isScrolled = true;
     fixture.detectChanges();
-    expect(mastheadElement.classList.contains('sprk-c-Masthead--scroll')).toEqual(true);
+    expect(mastheadElement.classList.contains('sprk-c-Masthead--scroll'))
+    .toEqual(true);
   });
 
   it('should add the hidden class when state isHidden is true', () => {
     component.isHidden = true;
     fixture.detectChanges();
-    expect(mastheadElement.classList.contains('sprk-c-Masthead--hidden')).toEqual(true);
+    expect(mastheadElement.classList.contains('sprk-c-Masthead--hidden'))
+    .toEqual(true);
   });
 
   it('should update state isHidden to true when scrollDirection is equal to down', () => {
