@@ -1423,91 +1423,221 @@ $sprk-dropdown-title-font-weight: 300 !default;
 //
 // Modals
 ///
+
+/// The color of the mask overlay that is shown behind the Modal.
 $sprk-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
+/// The background color of the Modal.
 $sprk-modal-color: $sprk-white !default;
+/// The maximum width of the Modal.
 $sprk-modal-max-width: 43.75rem !default;
+/// The maximum height of the Modal.
 $sprk-modal-height: 70% !default;
+/// The point at which the Modal
+/// moves farther down the viewport from the top.
 $sprk-modal-breakpoint-small: 25rem !default;
+/// The point at which the Modal moves even
+/// farther down the viewport from the top than
+// it does at the small breakpoint.
 $sprk-modal-breakpoint-medium: 37.5rem !default;
+/// The box shadow on the Modal.
 $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
+/// The border radius on the Modal.
 $sprk-modal-border-radius: 8px !default;
 
 //
 // Masthead
 ///
+
+/// The width of the menu icon on narrow viewports in the Masthead.
 $sprk-masthead-menu-icon-width: $sprk-icon-l !default;
+/// The height of the menu icon on narrow viewports in the Masthead.
 $sprk-masthead-menu-icon-height: $sprk-icon-l !default;
+/// The background color of the Masthead.
 $sprk-masthead-bg-color: $sprk-white !default;
+/// The padding of the Masthead content, menu, and branding sections.
 $sprk-masthead-content-padding: $sprk-space-s !default;
+/// The padding top around the content items in the
+/// content section of the Masthead.
 $sprk-masthead-content-item-padding-top: $sprk-space-s !default;
+/// The padding bottom around the content
+/// items in the content section of the Masthead.
 $sprk-masthead-content-item-padding-bottom: $sprk-space-s !default;
+/// The padding right around the content items in the
+/// content section of the Masthead.
 $sprk-masthead-content-item-padding-right: $sprk-space-s !default;
+/// The padding left around the content items in the
+// content section of the Masthead.
 $sprk-masthead-content-item-padding-left: $sprk-space-s !default;
+/// The padding around the content
+/// section in the Masthead on wide viewports.
 $sprk-masthead-content-padding-wide: $sprk-space-m !default;
+/// The padding top of the content
+/// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-top-wide: $sprk-space-s !default;
+/// The padding bottom of the content
+/// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-bottom-wide: $sprk-space-s !default;
+/// The padding right of the content
+/// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
+/// The padding left of the content
+/// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
+/// The visited state color of Masthead links.
 $sprk-masthead-link-visited-color: $sprk-black !default;
+/// The hover state color of Masthead links.
 $sprk-masthead-link-hover-color: $sprk-green !default;
+/// The font weight of Masthead links.
 $sprk-masthead-link-font-weight: 500 !default;
+/// The size of the bottom border on the Masthead.
 $sprk-masthead-border-bottom-size: 1px !default;
+/// The bottom border on the Masthead.
 $sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray !default;
+/// The bottom border on the Masthead on wide viewports.
 $sprk-masthead-border-bottom-wide: 0 !default;
+/// The right border on the site links in the Masthead.
 $sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-25 !default;
+/// The point at which the Masthead navigation switches
+/// from narrow viewport style to large viewport
+/// style.
 $sprk-masthead-breakpoint: 54rem !default;
+/// The maximum width of the Masthead.
 $sprk-masthead-column-width: 89rem !default;
+/// The maximum width of the logo in the Masthead.
 $sprk-masthead-logo-max-width: 192px !default;
+/// The minimum width of the logo in the Masthead.
 $sprk-masthead-logo-min-width: 174px !default;
+/// The box shadow of the Masthead.
 $sprk-masthead-shadow: none !default;
+/// The box shadow of the Masthead in wide viewports.
 $sprk-masthead-shadow-wide: none;
+/// The Masthead shadow that gets applied when the page is scrolled.
 $sprk-masthead-shadow-scroll: 0 0 40px rgba(0, 0, 0, 0.1) !default;
+/// The border of the selector in the Masthead with Extended Navigation.
 $sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
 $sprk-masthead-selector-font-weight: 300 !default;
+/// The border radius of the selector in the Masthead with Extended Navigation.
 $sprk-masthead-selector-border-radius: 5px !default;
+/// The bottom border that gets applied to
+/// the selector dropdown when open in the
+/// Masthead with Extended Navigation.
 $sprk-masthead-selector-dropdown-border-bottom-mask-open: 2px solid $sprk-gray !default;
+/// The box shadow that gets applied to
+/// the selector dropdown when open in the
+/// Masthead with Extended Navigation.
 $sprk-masthead-selector-dropdown-box-shadow-mask-open: 0 5px 10px
   rgba(0, 0, 0, 0.1) !default;
+/// The border color that gets applied to
+/// the selector dropdown when open in the
+/// Masthead with Extended Navigation.
 $sprk-masthead-selector-border-color-mask-open: $sprk-white !default;
+/// The font color of the selector in
+/// the Masthead with Extended Navigation.
 $sprk-masthead-selector-font-color: $sprk-black !default;
+/// The background color of the selector in
+/// the Masthead with Extended Navigation.
 $sprk-masthead-selector-bg-color: $sprk-white !default;
+/// The padding of the selector in
+/// the Masthead with Extended Navigation.
 $sprk-masthead-selector-padding: $sprk-space-inset-short-m !default;
+/// The padding of the selector dropdown in
+/// the Masthead with Extended Navigation.
 $sprk-masthead-selector-dropdown-padding: 0 !default;
+/// The minimum width of the selector
+/// in the Masthead with Extended Navigation.
 $sprk-masthead-selector-min-width: 17rem !default;
+/// This is the height of the Masthead on
+/// small viewports and is used to calculate
+/// how far from the top the narrow
+/// navigation items should be displayed.
 $sprk-masthead-narrow-height: 81px !default;
+/// The color of the mask that
+/// gets applied when the Masthead selector
+/// dropdown is open on narrow screens.
 $sprk-masthead-mask-color: rgba(0, 0, 0, 0.5) !default;
+/// The transition applied to the Masthead.
 $sprk-masthead-transition: all 0.3s ease-in !default;
+/// The transform length that gets applied
+/// when the Masthead scrolls out of view on narrow screens.
 $sprk-masthead-translateY: translateY(-100%) !default;
 
 // Big Nav
+/// The maximum width of the
+/// big navigation items in the
+/// navigation bar in the Masthead Extended.
 $sprk-big-nav-column-width: 64rem !default;
+/// The background color of the big
+/// navigation bar in the Masthead Extended.
 $sprk-big-nav-bg: $sprk-white !default;
+/// The font weight of the big
+/// navigation link in the Masthead Extended.
 $sprk-big-nav-link-font-weight: 400 !default;
+/// The padding of the big navigation
+/// link in the Masthead Extended.
 $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
+/// The color of the big navigation link in the Masthead Extended.
 $sprk-big-nav-link-color: $sprk-black !default;
+/// The text and underline color of
+/// the active big navigation item in the Masthead Extended.
 $sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
+/// The line height
+/// of the big navigation items
+/// in the Masthead Extended.
 $sprk-big-nav-item-line-height: 53px !default;
 // Masthead Accordion
+/// The left border of the active item
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
+/// The font weight of the active item
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-active-heading-font-weight: 400 !default;
+/// The color of the active item
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-active-heading-color: $sprk-black !default;
+/// The color of the heading
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-heading-color: $sprk-black !default;
+/// The font weight of the heading
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-heading-font-weight: 400 !default;
+/// The font weight of the details
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-details-font-weight: 300 !default;
+/// The font color of the details
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-details-font-color: $sprk-black !default;
+/// The background color of the active
+/// item in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-active-background-color: $sprk-gray !default;
+/// The font color of the active
+/// item in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-active-font-color: $sprk-black !default;
+/// The font color of the text
+/// in items in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-font-color: $sprk-black !default;
+/// The color of the line on open items
+/// in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
+/// The height of the line on open
+/// items in the narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-item-open-line-height: 2px !default;
+/// The padding of the items in the
+/// narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-item-padding: $sprk-space-m !default;
+
 //
 // Spinners
 ///
+
+/// The height and width of Spinners.
 $sprk-spinner-size: 1.3rem !default;
+/// The height and width of large Spinners.
 $sprk-spinner-size-large: 3rem !default;
+/// The speed of the animation for Spinners.
 $sprk-spinner-speed: 1s !default;
+/// The thickness of Spinners.
 $sprk-spinner-thickness: 0.18rem !default;
+/// The color of Spinners.
 $sprk-spinner-color: $sprk-white !default;
 
 //
