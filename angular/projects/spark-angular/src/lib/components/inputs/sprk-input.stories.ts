@@ -7,6 +7,8 @@ import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-se
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
 
 export default {
   title: 'Components|Inputs',
@@ -23,6 +25,8 @@ const modules = {
     SprkSelectionItemContainerModule,
     SprkSelectionLabelModule,
     SprkTextareaContainerModule,
+    SprkFieldErrorModule,
+    SprkFormatterSsnModule,
   ],
 };
 
@@ -292,6 +296,47 @@ export const textarea = () => ({
   `,
 });
 
-
-
-
+export const SSNInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+        <label for="ssn-input" sprkLabel>SSN Input</label>
+        <input
+          [type]="ssnType"
+          [ngClass]="{ 'sprk-b-TextInput--error': ssnInput.invalid && ssnInput.dirty }"
+          pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$"
+          placeholder="000-00-0000"
+          name="ssn_input"
+          [(ngModel)]="ssn_input"
+          #ssnInput="ngModel"
+          data-id="ssn-1"
+          id="ssn-input"
+          sprkFormatterSsn
+          sprkInput
+        >
+        <sprk-selection-item-container
+          additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        >
+          <input
+            type="checkbox"
+            sprkSelectionInput
+            (click)="toggleSSNType()"
+            data-id="ssn-reveal-3"
+            id="show-ssn"
+          >
+          <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
+        </sprk-selection-item-container>
+        <div
+          [hidden]="ssnInput.valid || ssnInput.pristine"
+          sprkFieldError
+        >
+          <sprk-icon
+            iconType="exclamation-filled-small"
+            additionalClasses="sprk-b-ErrorIcon"
+          >
+          </sprk-icon>
+          <div class="sprk-b-ErrorText">Invalid SSN.</div>
+        </div>
+    </sprk-input-container>
+  `,
+});
