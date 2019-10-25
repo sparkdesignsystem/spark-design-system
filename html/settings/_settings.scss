@@ -1669,42 +1669,102 @@ $sprk-tab-navigation-btn-active-bg-color: $sprk-white !default;
 //
 // Stepper
 ///
+
+/// The background color of the Stepper.
 $sprk-stepper-bg: transparent !default;
+/// The minimum width at which the Stepper
+/// switches between narrow and wide layouts.
 $sprk-stepper-breakpoint: $sprk-split-breakpoint-xl !default;
+/// The maximum width of the Stepper.
 $sprk-stepper-max-width: 480px !default;
+/// The border width of the Stepper icons.
 $sprk-stepper-icon-border-width: 2px !default;
+/// The color of the border around the Stepper icon.
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
+/// The color of the step icon when the step is selected in the Stepper.
 $sprk-stepper-icon-border-color-selected: $sprk-green !default;
+/// The color of the icon border when the
+/// Stepper is on a dark background
+/// (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-icon-border-color: $sprk-white !default;
+/// The height of the step icon in the Stepper.
 $sprk-stepper-icon-height: 16px !default;
+/// The width of the step icon in the Stepper.
 $sprk-stepper-icon-width: 16px !default;
+/// The color of the step icon in the Stepper.
 $sprk-stepper-icon-color: $sprk-white !default;
+/// The color of the step icon
+/// in the Stepper when hovered.
 $sprk-stepper-icon-color-hover: $sprk-black-tint-50 !default;
+/// The color of the Stepper step icon when the step is selected.
 $sprk-stepper-icon-color-selected: $sprk-white !default;
+/// The color of the step icon when the
+/// Stepper has a dark background (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-icon-color: $sprk-blue !default;
+/// The color of the Stepper step icon when the step
+/// is selected and the Stepper has a
+/// dark background (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-icon-color-selected: $sprk-white !default;
+/// The color of the step icon on hover
+/// when the Stepper has a dark background
+/// (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-icon-color-hover: $sprk-white !default;
-$sprk-stepper-dark-icon-color-hoverg: $sprk-stepper-dark-icon-color-hover;
+$sprk-stepper-dark-icon-color-hoverg: $sprk-stepper-dark-icon-color-hover; // TODO: deprecate
+/// The transition of the Stepper step icon.
 $sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
+/// The z-index of the Stepper step icon.
 $sprk-stepper-icon-z-index: $sprk-layer-height-xs !default;
+/// The spread value of the icon box
+/// shadow when the Stepper step is selected.
 $sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
+/// The box shadow of the Stepper step icon
+/// when the icon is selected.
 $sprk-stepper-icon-box-shadow-selected: 0 0 0
   $sprk-stepper-icon-box-shadow-selected-spread
   $sprk-stepper-icon-border-color-selected !default;
+/// The background color of the content in the Stepper step.
 $sprk-stepper-step-content-bg: transparent !default;
+/// The border radius of the Stepper step
+/// content box when it has a description.
 $sprk-stepper-step-description-border-radius: 5px !default;
+/// The box shadow of the Stepper step content
+/// box when it has a description.
 $sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
+/// The spacing between the
+/// Stepper step heading and description.
 $sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
+/// The font weight of the Stepper step heading.
 $sprk-stepper-step-heading-font-weight: 400 !default;
+/// The font size of the Stepper step heading.
 $sprk-stepper-step-heading-size: $sprk-font-size-display-six !default;
+/// The color of the Stepper step heading.
 $sprk-stepper-step-heading-color: $sprk-black !default;
+/// The color of the Stepper step heading when
+/// the Stepper is on a dark
+/// background (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-step-heading-color: $sprk-white !default;
+/// The color of the Stepper
+/// step heading when the step is selected.
 $sprk-stepper-step-heading-color-selected: $sprk-black !default;
+/// The padding value for the Stepper step.
 $sprk-stepper-step-padding: $sprk-space-misc-a !default;
+/// The background color of the
+/// Stepper step content box when the step is selected.
 $sprk-stepper-step-content-bg-selected: transparent !default;
+/// The background color of the Stepper step
+/// content box when it has a
+/// description and when the step is selected.
 $sprk-stepper-step-description-bg-selected: $sprk-white !default;
+/// The text color of a selected Stepper step's
+/// content and header when it has a
+/// description. This applies to
+/// steppers with the sprk-c-Stepper--has-dark-bg class.
 $sprk-stepper-dark-step-description-selected: $sprk-black !default;
+/// The color of the bar that connects the steps in the Stepper.
 $sprk-stepper-bar-color: $sprk-black-tint-50 !default;
+/// The color of the bar that connects
+/// the steps when the Stepper is on a
+/// dark background (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-bar-color: $sprk-white !default;
 // Restricted and not customizable
 $sprk-stepper-bar-width: 2px;
