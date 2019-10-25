@@ -12,6 +12,7 @@ import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-
 import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
 import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
+import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 
 export default {
   title: 'Components|Inputs',
@@ -33,6 +34,7 @@ const modules = {
     SprkFormatterMonetaryModule,
     SprkIconInputContainerModule,
     SprkHelperTextModule,
+    SprkDatepickerModule,
   ],
 };
 
@@ -538,5 +540,70 @@ export const phoneInput = () => ({
         </div>
       </span>
     </sprk-input-container>
+  `,
+});
+
+export const dateInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Date Input (No Picker)</label>
+      <input
+        name="date_input"
+        type="text"
+        pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="date_input"
+        #dateInput="ngModel"
+        sprkFormatterDate
+        sprkInput
+      />
+      <span [hidden]="dateInput.valid || dateInput.pristine" sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">Invalid date.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+export const datePicker = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label class="sprk-b-Label--with-icon" sprkLabel>
+        Date Input
+      </label>
+      <sprk-icon
+        iconType="calendar"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="datepicker_input"
+        class="sprk-b-TextInput--has-svg-icon"
+        type="text"
+        pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="datepicker_input"
+        #datepickerInput="ngModel"
+        sprkFormatterDate
+        [sprkDatePickerConfig]="dpConfig"
+        sprkDatepicker
+        sprkInput
+      />
+      <div
+        [hidden]="datepickerInput.valid || datepickerInput.pristine"
+        sprkFieldError
+      >
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">Invalid date.</div>
+      </div>
+    </sprk-icon-input-container>
   `,
 });
