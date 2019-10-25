@@ -10,6 +10,7 @@ import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-text
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
 import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
+import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 
 export default {
@@ -31,6 +32,7 @@ const modules = {
     SprkFormatterSsnModule,
     SprkFormatterMonetaryModule,
     SprkIconInputContainerModule,
+    SprkHelperTextModule,
   ],
 };
 
@@ -478,4 +480,28 @@ export const passwordInput = () => ({
         : (this.passwordType = 'password');
     }
   },
+});
+
+
+export const helperText = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>
+        Text Input Label
+      </label>
+      <input
+        sprkInput
+        name="text_input"
+        type="text"
+        [(ngModel)]="text_input"
+        required
+        #textInput="ngModel"
+        data-id="text-input-1"
+      >
+      <p sprkHelperText>
+        Optional helper text, used to clarify the field's intent.
+      </p>
+    </sprk-input-container>
+  `,
 });
