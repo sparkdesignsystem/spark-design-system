@@ -70,7 +70,6 @@ export const textInput = () => ({
         #textInput="ngModel"
         sprkInput
       />
-      <p sprkHelperText>Please enter some input.</p>
       <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
         <sprk-icon
           iconType="exclamation-filled-small"
