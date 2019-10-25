@@ -422,3 +422,24 @@ export const monetaryInput = () => ({
     </sprk-icon-input-container>
   `,
 });
+
+
+export const percentageInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
+      <label sprkLabel>Percentage</label>
+      <sprk-icon
+        iconType="percent"
+        additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        class="sprk-b-InputContainer__input--has-icon-right"
+        name="percentage"
+        type="tel"
+        sprkInput
+      />
+    </sprk-icon-input-container>
+  `,
+});

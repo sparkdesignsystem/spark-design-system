@@ -196,7 +196,7 @@ textarea.story = {
 
 export const ssnInput = () => (
   <SprkRevealInput
-    label="SocialSecurity Number"
+    label="Social Security Number"
     toggleLabel="Show SSN"
     name="ssn"
   />
@@ -234,6 +234,17 @@ export const monetaryInput = () => (
 monetaryInput.story = {
   name: 'Monetary Input',
 };
+
+export const percentageInput = () => (
+  <SprkTextInput
+    label="Percentage"
+    iconRight
+    leadingIcon="percent"
+    narrowWidth
+    name="percentage"
+    type="tel"
+  />
+);
 
 export const passwordInput = () => (
   <SprkRevealInput
