@@ -16,9 +16,6 @@ links:
     external: false
     href: /patterns/fundamentals/layout.html#stack-object
 variableTable:
-  $sprk-card-border:
-    default: 1px solid rgba(0, 0, 0, 0.15)
-    description: Sets the border surrounding the card.
   $sprk-card-breakpoint:
     default: $sprk-split-breakpoint-s
     description: The breakpoint at which the card styles change.
