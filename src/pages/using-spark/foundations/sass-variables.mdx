@@ -14,12 +14,22 @@ export const sassVars = sassData.map(item => (
 
 # Sass Variables
 
+Spark uses Sass to provide global settings for the design system.
+These settings allow users of Spark to have an application
+that looks and feels the same as all other Spark applications.
+This keeps a cohesive experience and ensures quality standards
+are met. However, because Spark uses Sass variables
+there is the opportunity to override those settings
+if the use case should occur. To override Spark settings,
+a new Sass file will need to be created and imported before the main Spark
+Sass file import. In that new file, any of the the below variables
+can be reset with a new value.
+
 <div className="sprk-o-Box">
   {console.log(sassVars, 'cats')}
   {sassVars && (
     <SprkTable
-      additionalTableClasses="sprk-b-Table--spacing-medium"
-      idString="table-1"
+      additionalTableClasses="docs-b-Table--left-align-last sprk-b-Table--spacing-medium sprk-b-Table--striped-even sprk-u-TextAlign--right"
       columns={[{
           name: 'name',
           header: 'Variable',
