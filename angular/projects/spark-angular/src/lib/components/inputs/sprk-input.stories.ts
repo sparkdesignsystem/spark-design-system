@@ -9,6 +9,7 @@ import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
+import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 
 export default {
   title: 'Components|Inputs',
@@ -27,6 +28,7 @@ const modules = {
     SprkTextareaContainerModule,
     SprkFieldErrorModule,
     SprkFormatterSsnModule,
+    SprkIconInputContainerModule,
   ],
 };
 
@@ -355,5 +357,34 @@ export const searchInput = () => ({
       sprkInput
       >
     </sprk-input-container>
+  `,
+});
+
+export const inlineSearchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label
+        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        sprkLabel
+      >
+        Search
+      </label>
+      <sprk-icon
+        iconType="search"
+        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="inline_search_input"
+        class="sprk-b-TextInput--has-svg-icon"
+        type="text"
+        placeholder="Search"
+        [(ngModel)]="inline_search_input"
+        #inlineSearchInput="ngModel"
+        data-id="input-search-1"
+        sprkInput
+      >
+    </sprk-icon-input-container>
   `,
 });
