@@ -39,6 +39,7 @@
     "@storybook/addon-docs": "^5.2.5",
     "@storybook/addon-knobs": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
+    "@storybook/addon-storyshots": "^5.2.5",
     "@storybook/addons": "^5.2.5",
     "@storybook/angular": "^5.2.5",
     "@storybook/preset-scss": "^1.0.2",
@@ -65,6 +66,6 @@
     "ts-node": "~7.0.0",
     "tsickle": "^0.36.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "^3.4.1"
   }
 }
