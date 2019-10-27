@@ -4,6 +4,7 @@ import SprkDivider from './SprkDivider';
 export default {
   title: 'Components|Divider',
   component: SprkDivider,
+  parameters: { jest: ['SprkDivider'] },
 };
 
 export const asASpanElement = () => <SprkDivider idString="divider-1" element="span" />;

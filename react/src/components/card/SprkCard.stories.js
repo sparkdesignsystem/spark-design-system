@@ -6,6 +6,7 @@ export default {
   title: 'Components|Card',
   decorators: [withKnobs],
   component: SprkCard,
+  parameters: { jest: ['SprkCard'] },
 };
 
 export const defaultStory = () => (

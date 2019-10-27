@@ -1,11 +1,11 @@
 import React from 'react';
-
 import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
 
 export default {
   title: 'Objects|Stack',
   component: SprkStack,
+  parameters: { jest: ['SprkStack', 'SprkStackItem'] },
 };
 
 export const defaultStory = () => (

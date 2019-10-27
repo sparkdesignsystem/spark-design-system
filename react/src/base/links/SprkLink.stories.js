@@ -8,6 +8,7 @@ export default {
   title: 'Base|Links',
   decorators: [withKnobs],
   component: SprkLink,
+  parameters: { jest: ['SprkLink'] },
 };
 
 export const defaultStory = () => (

@@ -5,6 +5,7 @@ import SprkDictionary from './SprkDictionary';
 export default {
   title: 'Components|Dictionary',
   component: SprkDictionary,
+  parameters: { jest: ['SprkDictionary'] },
 };
 
 export const defaultStory = () => (

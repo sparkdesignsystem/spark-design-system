@@ -58,5 +58,4 @@ it('should run callback when passed as prop to onToggle', () => {
   );
   wrapper.find('a').simulate('click');
   expect(spyFunc.mock.calls.length).toBe(1);
-  console.log('fooooooooooo')
 });

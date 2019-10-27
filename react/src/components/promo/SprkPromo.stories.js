@@ -5,6 +5,7 @@ import SprkPromo from './SprkPromo';
 export default {
   title: 'Components|Promo',
   component: SprkPromo,
+  parameters: { jest: ['SprkPromo'] },
 };
 
 export const defaultStory = () => (

@@ -5,6 +5,15 @@ import SprkModal from './SprkModal';
 export default {
   title: 'Components|Modal',
   component: SprkModal,
+  parameters: {
+    jest: [
+      'SprkModal',
+      'CloseButton',
+      'Mask',
+      'ModalFooter',
+    ]
+  },
+
 };
 
 export const defaultStory = () => (
