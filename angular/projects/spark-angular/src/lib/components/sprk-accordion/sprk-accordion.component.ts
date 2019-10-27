@@ -9,9 +9,6 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkAccordionComponent {
-  /**
-   * Additional CSS classes applied to the Accordion ul element.
-   */
   @Input()
   additionalClasses: string;
 

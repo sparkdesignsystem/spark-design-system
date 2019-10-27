@@ -51,14 +51,11 @@
     "sinon": "^7.5.0"
   },
   "dependencies": {
-    "@sparkdesignsystem/spark": "^12.2.0",
     "classnames": "^2.2.6",
     "lodash.assign": "^4.2.0",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.6.2",
     "react-animate-height": "^2.0.16",
-    "react-router-dom": "^5.1.2",
-    "sass-loader": "^8.0.0",
     "tiny-date-picker": "^3.2.8",
     "warning": "^4.0.3"
   }
