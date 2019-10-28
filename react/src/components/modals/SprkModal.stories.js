@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { action } from '@storybook/addon-actions';
 import SprkModal from './SprkModal';
 
 export default {
@@ -22,12 +22,8 @@ export const defaultStory = () => (
     isVisible={true}
     confirmText="Confirm Text"
     cancelText="Cancel Text"
-    confirmClick={() => {
-      alert('confirm');
-    }}
-    cancelClick={() => {
-      alert('cancel click');
-    }}
+    confirmClick={action('confirm')}
+    cancelClick={action('cancel')}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
@@ -43,12 +39,8 @@ export const infoStory = () => (
     title="Info Modal"
     isVisible={true}
     variant="info"
-    confirmClick={() => {
-      alert('confirm click');
-    }}
-    cancelClick={() => {
-      alert('cancel click');
-    }}
+    confirmClick={action('confirm')}
+    cancelClick={action('cancel')}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
@@ -57,10 +49,6 @@ export const infoStory = () => (
 
 infoStory.story = {
   name: 'Info',
-};
-
-defaultStory.story = {
-  name: 'Default',
 };
 
 export const waitStory = () => (

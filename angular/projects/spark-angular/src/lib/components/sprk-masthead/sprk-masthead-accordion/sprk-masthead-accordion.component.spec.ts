@@ -1,7 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
 import { SprkLinkComponent } from '../../sprk-link/sprk-link.component';
-import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion.component';
+import {
+  SprkMastheadAccordionComponent
+} from './sprk-masthead-accordion.component';
 
 describe('SprkMastheadAccordionComponent', () => {
   let component: SprkMastheadAccordionComponent;

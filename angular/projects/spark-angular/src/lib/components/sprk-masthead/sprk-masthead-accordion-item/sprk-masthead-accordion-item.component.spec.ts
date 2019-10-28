@@ -3,7 +3,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
 import { SprkLinkComponent } from '../../sprk-link/sprk-link.component';
-import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item.component';
+import {
+  SprkMastheadAccordionItemComponent
+} from './sprk-masthead-accordion-item.component';
 
 describe('SprkMastheadAccordionItemComponent', () => {
   let component: SprkMastheadAccordionItemComponent;
