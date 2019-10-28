@@ -1,7 +1,5 @@
 import React from 'react';
-
 import SprkToggle from './SprkToggle';
-import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Components|Toggle',
