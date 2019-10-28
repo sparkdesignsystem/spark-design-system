@@ -196,7 +196,7 @@ export const defaultStory = () => ({
         <li>
           <a
             class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
-            href="tel:555-555-5555"
+            href="#nogo"
           >
             (555) 555-5555
           </a>
@@ -239,15 +239,15 @@ export const defaultStory = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '/links',
+            href: '#nogo',
           },
           {
             text: 'Item 2',
-            href: '/links',
+            href: '#nogo',
           },
           {
             text: 'Item 3',
-            href: '/links',
+            href: '#nogo',
           }
         ]
       },
@@ -473,7 +473,7 @@ export const extended = () => ({
     links: [
       {
         text: 'Navigation Item',
-        href: '/icons',
+        href: '#nogo',
         active: false
       },
       {
@@ -482,7 +482,7 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '/links'
+            href: '#nogo'
           },
           {
             text: 'Item 2',
@@ -533,15 +533,15 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '/links'
+            href: '#nogo'
           },
           {
             text: 'Item 2',
-            href: '/links'
+            href: '#nogo'
           },
           {
             text: 'Item 3',
-            href: '/links'
+            href: '#nogo'
           }
         ]
       },
@@ -556,15 +556,15 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '/links'
+            href: '#nogo'
           },
           {
             text: 'Item 2',
-            href: '/links'
+            href: '#nogo'
           },
           {
             text: 'Item 3',
-            href: '/links'
+            href: '#nogo'
           }
         ]
       },
@@ -602,7 +602,7 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Change Username',
-            href: '/links'
+            href: '#nogo'
           },
           {
             text: 'Change Password',
@@ -642,7 +642,7 @@ export const extended = () => ({
       footer: {
         analyticsString: 'Go Elsewhere Link',
         text: 'Go Elsewhere',
-        href: '/alerts',
+        href: '#nogo',
       }
     },
     siteDropdownChoices: [
