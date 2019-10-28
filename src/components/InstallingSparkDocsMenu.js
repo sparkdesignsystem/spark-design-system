@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
 
-const PrinciplesSparkDocsMenu = () => (
+const InstallingSparkDocsMenu = () => (
   <StaticQuery
     query={graphql`
       {
-        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/principles/"}}) {
+        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/installing-spark/"}}) {
           edges {
             node {
               id
@@ -28,16 +28,18 @@ const PrinciplesSparkDocsMenu = () => (
       const { edges: guides } = data.allMdx;
       return (
         <>
-          <h3 className="menu__heading">Principles</h3>
+          <h3 className="docs-menu__heading">Installing Spark</h3>
           <nav>
-            <ul className="menu__collection">
+            <ul className="docs-menu__collection">
               { guides.map(guide => (
                 <li
                   key={guide.node.parent.name}
-                  className="menu__collection-item">
+                  className="docs-menu__collection-item">
                   <Link
-                    className="menu__link"
-                    to={`/${guide.node.parent.relativeDirectory}/${guide.node.parent.name}`}>{ guide.node.frontmatter.title || guide.node.parent.name }</Link>
+                    className="docs-menu__link"
+                    to={`/installing-spark/${guide.node.parent.name}`}>
+                      { guide.node.frontmatter.title || guide.node.parent.name }
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -48,4 +50,4 @@ const PrinciplesSparkDocsMenu = () => (
   />
 );
 
-export default PrinciplesSparkDocsMenu;
+export default InstallingSparkDocsMenu;
