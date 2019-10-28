@@ -7,6 +7,7 @@ import { SprkFooterComponent } from './sprk-footer.component';
 
 export default {
   title: 'Components|Footer',
+  component: SprkFooterModule,
   decorators: [
     storyWrapper(
       storyContent => (
