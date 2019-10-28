@@ -4,25 +4,25 @@ import classnames from 'classnames';
 
 function ContextMenu({context, setContext, className}) {
   return (
-    <div className="context-menu">
+    <div className="docs-context-menu">
       <ul className={className}>
         <li>
           <SprkLink
-            additionalClasses={classnames({'context-menu__item--active': context==='installing-spark'})}
+            additionalClasses={classnames({'docs-context-menu__item--active': context==='installing-spark'})}
             onClick={(e) => {e.preventDefault(); setContext('installing-spark');}}
             variant="simple"
             href="#nogo">Installing Spark</SprkLink>
         </li>
         <li>
           <SprkLink
-            additionalClasses={classnames({'context-menu__item--active': context==='using-spark'})}
+            additionalClasses={classnames({'docs-context-menu__item--active': context==='using-spark'})}
             onClick={(e) => {e.preventDefault(); setContext('using-spark');}}
             variant="simple"
             href="#nogo">Using Spark</SprkLink>
         </li>
         <li>
           <SprkLink
-            additionalClasses={classnames({'context-menu__item--active': context==='principles'})}
+            additionalClasses={classnames({'docs-context-menu__item--active': context==='principles'})}
             onClick={(e) => {e.preventDefault(); setContext('principles');}}
             variant="simple"
             href="#nogo">Principles</SprkLink>

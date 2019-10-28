@@ -28,14 +28,14 @@ const Layout = ({ children, initialContext }) => {
     render={data => {
 
       return(
-        <div className="layout">
+        <div className="docs-layout">
           <div
               // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: data.allSparkIconSet.edges[0].node.internal.content,
             }}
           />
-          <div className="layout__header">
+          <div className="docs-layout__header">
             <Header
               context={context}
               setContext={setContext}
@@ -44,8 +44,8 @@ const Layout = ({ children, initialContext }) => {
             />
           </div>
           <div className={classnames({
-            "layout__side-bar": true,
-            "layout__side-bar-mobile--visible": menuVisible
+            "docs-layout__side-bar": true,
+            "docs-layout__side-bar-mobile--visible": menuVisible
           })}>
             <Menu
               components={{}}
@@ -55,7 +55,7 @@ const Layout = ({ children, initialContext }) => {
               setMenuVisible={setMenuVisible}
             />
           </div>
-          <div className="layout__content">
+          <div className="docs-layout__content">
             { children }
             <Footer />
           </div>

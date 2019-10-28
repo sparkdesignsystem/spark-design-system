@@ -28,13 +28,13 @@ const PrinciplesSparkDocsMenu = () => (
       const { edges: guides } = data.allMdx;
       return (
         <>
-          <h3 className="menu__heading">Principles</h3>
+          <h3 className="docs-menu__heading">Principles</h3>
           <nav>
-            <ul className="menu__collection">
+            <ul className="docs-menu__collection">
               { guides.map(guide => (
                 <li
                   key={guide.node.parent.name}
-                  className="menu__collection-item">
+                  className="docs-menu__collection-item">
                   <Link
                     className="menu__link"
                     to={`/${guide.node.parent.relativeDirectory}/${guide.node.parent.name}`}>{ guide.node.frontmatter.title || guide.node.parent.name }</Link>

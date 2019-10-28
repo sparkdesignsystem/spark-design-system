@@ -1,56 +1,51 @@
 /* stylelint-disable */
-.menu {
-
-}
-
-.menu__heading {
+.docs-menu__heading {
   font-size: 1.18rem;
   font-weight: 400;
   margin-bottom: 2rem;
 }
 
-.menu__subheading {
+.docs-menu__subheading {
   font-size: 1.1rem;
   font-weight: 300;
   margin: 1rem 0;
 }
 
-.menu__collection-heading {
+.docs-menu__collection-heading {
   font-weight: 700;
 }
 
-.menu__collection {
+.docs-menu__collection {
   list-style-type: none;
   padding-left: 1rem;
 }
 
-.menu__link {
+.docs-menu__link {
   color: $sprk-black;
   display: block;
   font-weight: 300;
   padding: 0.3rem 0;
 }
 
-.menu__link--main {
+.docs-menu__link--main {
   font-size: 1.2rem;
 }
 
-.menu__link--active {
+.docs-menu__link--active {
   background-color: darkgrey;
 }
 
-.menu__link:hover {
+.docs-menu__link:hover {
   font-weight: 700;
 }
 
-.menu__select {
+.docs-menu__select {
   width: 100%;
 }
 
-.menu__context {
+.docs-menu__context {
   @media (min-width: $doc-site-mobile-breakpoint) {
     display: none;
   }
 }
-
 /* stylelint-enable */

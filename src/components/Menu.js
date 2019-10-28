@@ -7,8 +7,8 @@ import ContextMenu from './ContextMenu';
 import { SprkTextInput, SprkDivider } from '@sparkdesignsystem/spark-react';
 
 const Menu = ({ context, setContext}) => (
-  <div className="menu">
-    <div className="menu__context">
+  <div className="docs-menu">
+    <div className="docs-menu__context">
       <ContextMenu
         className="sprk-b-List sprk-b-List--bare"
         context={context}

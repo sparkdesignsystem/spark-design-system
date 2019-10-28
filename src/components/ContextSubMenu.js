@@ -3,15 +3,15 @@ import { Link } from 'gatsby';
 
 function ContextSubMenu({heading, collection, directory}) {
   return (
-    <div className="sub-menu">
-      <h4 className="menu__subheading">{heading}</h4>
-      <ul className="menu__collection">
+    <div className="docs-sub-menu">
+      <h4 className="docs-menu__subheading">{heading}</h4>
+      <ul className="docs-menu__collection">
         { collection.map(item => (
           <li
             key={item.node.parent.name}
-            className="menu__collection-item">
+            className="docs-menu__collection-item">
             <Link
-              className="menu__link"
+              className="docs-menu__link"
               to={`/using-spark/${directory}/${item.node.parent.name}`}>
                 { item.node.frontmatter.title || item.node.parent.name }
             </Link>

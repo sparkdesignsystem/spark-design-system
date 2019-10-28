@@ -1,19 +1,19 @@
-.header {
+.docs-header {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-.header__group {
+.docs-header__group {
   align-items: center;
   display: flex;
 }
 
-.header .sprk-b-InputContainer {
+.docs-header .sprk-b-InputContainer {
   margin-bottom: 0;
 }
 
-.header__menu-button {
+.docs-header__menu-button {
   background: none;
   border: none;
   margin-right: 1rem;
@@ -23,7 +23,7 @@
   }
 }
 
-.header__menu-wrapper {
+.docs-header__menu-wrapper {
   @media (max-width: $doc-site-mobile-breakpoint) {
     display: none;
   }

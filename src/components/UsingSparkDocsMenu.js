@@ -84,8 +84,8 @@ const UsingSparkDocsMenu = () => (
 
       return (
         <>
-          <h3 className="menu__heading">Using Spark</h3>
-          <div className="menu__collection">
+          <h3 className="docs-menu__heading">Using Spark</h3>
+          <div className="docs-menu__collection">
             <nav>
               {foundationPages.length > 0 && <ContextSubMenu directory="foundations" heading="Foundations" collection={foundationPages} />}
               {guidePages.length > 0 && <ContextSubMenu directory="guides" heading="Guides" collection={guidePages} />}

@@ -3,10 +3,8 @@
 
 $doc-site-mobile-breakpoint: 1035px;
 
-@import './components/component-index';
 @import './components/layout';
 @import './components/header';
 @import './components/context-menu';
-@import './components/content';
 @import './components/footer';
 @import './components/menu';
