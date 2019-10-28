@@ -26,10 +26,14 @@ Sass file import. In that new file, any of the the below variables
 can be reset with a new value.
 
 <div className="sprk-o-Box">
-  {console.log(sassVars, 'cats')}
   {sassVars && (
     <SprkTable
-      additionalTableClasses="docs-b-Table--left-align-last sprk-b-Table--spacing-medium sprk-b-Table--striped-even sprk-u-TextAlign--right"
+      additionalTableClasses="
+        docs-b-Table--left-align-last
+        sprk-b-Table--spacing-medium
+        sprk-b-Table--striped-even
+        sprk-u-TextAlign--right
+      "
       columns={[{
           name: 'name',
           header: 'Variable',
