@@ -54,7 +54,7 @@ export const flag = () => ({
   template: `
     <sprk-promo
       isFlag="true"
-      imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+      imgSrc="https://spark-assets.netlify.com/spark-placeholder.jpg"
       imgAlt="Spark Design System Logo"
       idString="promo-2"
     >
@@ -73,7 +73,7 @@ export const withImage = () => ({
       subtitle="Subtitle"
       media="img"
       imgAlt="placeholder"
-      imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+      imgSrc="https://spark-assets.netlify.com/blue-house.jpg"
       cta="button"
       ctaText="Learn More"
       idString="promo-3"
@@ -94,7 +94,7 @@ export const withReversedImaged = () => ({
       subtitle="Subtitle"
       mediaRev="true"
       imgAlt="placeholder"
-      imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+      imgSrc="https://spark-assets.netlify.com/blue-house.jpg"
       imgHref="https://sparkdesignsystem.com"
       cta="button"
       ctaText="Learn More"
