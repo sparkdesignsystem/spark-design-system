@@ -1,7 +1,6 @@
 ///
 // Spark styles manifest
 ///
-
 @import './settings/colors';
 @import './settings/settings';
 @import './components/icons';
@@ -15,12 +14,12 @@
 @import './utilities/clearfix';
 @import './utilities/width';
 @import './utilities/spacing';
-@import './utilities/utilities';
 @import './tools/animations';
 @import './tools/functions';
 @import './tools/mixins';
+@import './base/blockquotes';
 @import './base/images';
-@import './base/inputs/inputs';
+@import './base/inputs';
 @import './base/links';
 @import './base/lists';
 @import './base/tables';
@@ -44,3 +43,4 @@
 @import './components/stepper';
 @import './components/spinners';
 @import './components/tabs';
+@import './utilities/utilities';
