@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import SprkAccordion from './SprkAccordion';
 import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem';
 
@@ -11,7 +10,6 @@ export default {
 export const defaultStory = () => (
   <SprkAccordion>
     <SprkAccordionItem
-      onClick={action('clicked')}
       heading="This is an accordion heading"
       contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
       idString="accordion-item-1"
@@ -38,7 +36,6 @@ export const defaultStory = () => (
     </SprkAccordionItem>
 
     <SprkAccordionItem
-      onClick={action('clicked')}
       heading="This is an accordion heading"
       idString="accordion-item-2"
       analyticsString="analytics_string_goes_here"
@@ -51,7 +48,6 @@ export const defaultStory = () => (
     </SprkAccordionItem>
 
     <SprkAccordionItem
-      onClick={action('clicked')}
       heading="This is an accordion heading"
       idString="accordion-item-3"
       analyticsString="analytics_string_goes_here"

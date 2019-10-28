@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SprkToggle from './SprkToggle';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Components|Toggle',
@@ -20,6 +21,7 @@ export const defaultStory = () => (
       understanding that the link is a control for expandable content.
     </p>
   </SprkToggle>
+
 );
 
 defaultStory.story = {
