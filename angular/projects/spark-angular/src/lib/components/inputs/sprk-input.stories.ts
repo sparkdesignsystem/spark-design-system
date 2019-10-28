@@ -9,7 +9,9 @@ import { SprkSelectionItemContainerModule } from './sprk-selection-item-containe
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkFormatterPhoneNumberModule } from '../../directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
+import {
+  SprkFormatterPhoneNumberModule
+} from '../../directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
 import { SprkFormatterSsnModule } from '../../directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
 import { SprkFormatterDateModule } from '../../directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.module';
 import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
@@ -145,7 +147,7 @@ export const checkbox = () => ({
           #checkboxInput2="ngModel"
           data-id="checkbox-2"
           id="checkbox-2"
-           (change)="onSelect($event)"
+          (change)="onSelect($event)"
         >
 
         <label
@@ -158,14 +160,14 @@ export const checkbox = () => ({
 
       <sprk-selection-item-container>
         <input
-        type="checkbox"
-        name="checkbox_input"
-        [(ngModel)]="checkbox_input3"
-        sprkSelectionInput
-        #checkboxInput3="ngModel"
-        data-id="checkbox-3"
-        id="checkbox-3"
-        (change)="onSelect($event)"
+          type="checkbox"
+          name="checkbox_input"
+          [(ngModel)]="checkbox_input3"
+          sprkSelectionInput
+          #checkboxInput3="ngModel"
+          data-id="checkbox-3"
+          id="checkbox-3"
+          (change)="onSelect($event)"
         >
 
         <label
@@ -281,9 +283,9 @@ export const selectBox = () => ({
         </optgroup>
       </select>
       <sprk-icon
-      iconType="chevron-down"
-      additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
-      sprk-select-icon
+        iconType="chevron-down"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        sprk-select-icon
       ></sprk-icon>
       <label sprkLabel for="select-normal-1">Select Box Label</label>
     </sprk-input-container>
@@ -332,12 +334,12 @@ export const textarea = () => ({
     <sprk-textarea-container>
       <label for="textarea-1" sprkLabel>Description</label>
       <textarea
-      name="textarea_input"
-      id="textarea-1"
-      [(ngModel)]="textarea_input"
-      #textareaInput="ngModel"
-      data-id="textarea-1"
-      sprkInput
+        name="textarea_input"
+        id="textarea-1"
+        [(ngModel)]="textarea_input"
+        #textareaInput="ngModel"
+        data-id="textarea-1"
+        sprkInput
       ></textarea>
     </sprk-textarea-container>
   `,
@@ -347,43 +349,43 @@ export const SSNInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-        <label for="ssn-input" sprkLabel>SSN Input</label>
+      <label for="ssn-input" sprkLabel>SSN Input</label>
+      <input
+        [type]="ssnType"
+        [ngClass]="{ 'sprk-b-TextInput--error': ssnInput.invalid && ssnInput.dirty }"
+        pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$"
+        placeholder="000-00-0000"
+        name="ssn_input"
+        [(ngModel)]="ssn_input"
+        #ssnInput="ngModel"
+        data-id="ssn-1"
+        id="ssn-input"
+        sprkFormatterSsn
+        sprkInput
+      >
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
         <input
-          [type]="ssnType"
-          [ngClass]="{ 'sprk-b-TextInput--error': ssnInput.invalid && ssnInput.dirty }"
-          pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$"
-          placeholder="000-00-0000"
-          name="ssn_input"
-          [(ngModel)]="ssn_input"
-          #ssnInput="ngModel"
-          data-id="ssn-1"
-          id="ssn-input"
-          sprkFormatterSsn
-          sprkInput
+          type="checkbox"
+          sprkSelectionInput
+          (click)="toggleSSNType()"
+          data-id="ssn-reveal-3"
+          id="show-ssn"
         >
-        <sprk-selection-item-container
-          additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
+      </sprk-selection-item-container>
+      <div
+        [hidden]="ssnInput.valid || ssnInput.pristine"
+        sprkFieldError
+      >
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
         >
-          <input
-            type="checkbox"
-            sprkSelectionInput
-            (click)="toggleSSNType()"
-            data-id="ssn-reveal-3"
-            id="show-ssn"
-          >
-          <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
-        </sprk-selection-item-container>
-        <div
-          [hidden]="ssnInput.valid || ssnInput.pristine"
-          sprkFieldError
-        >
-          <sprk-icon
-            iconType="exclamation-filled-small"
-            additionalClasses="sprk-b-ErrorIcon"
-          >
-          </sprk-icon>
-          <div class="sprk-b-ErrorText">Invalid SSN.</div>
-        </div>
+        </sprk-icon>
+        <div class="sprk-b-ErrorText">Invalid SSN.</div>
+      </div>
     </sprk-input-container>
   `,
   props: {
@@ -402,12 +404,12 @@ export const searchInput = () => ({
     <sprk-input-container>
       <label sprkLabel>Search Input</label>
       <input
-      name="search_input"
-      type="search"
-      [(ngModel)]="search_input"
-      #searchInput="ngModel"
-      data-id="search-1"
-      sprkInput
+        name="search_input"
+        type="search"
+        [(ngModel)]="search_input"
+        #searchInput="ngModel"
+        data-id="search-1"
+        sprkInput
       >
     </sprk-input-container>
   `,
@@ -442,14 +444,15 @@ export const inlineSearchInput = () => ({
   `,
 });
 
-
 export const monetaryInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary" sprkLabel> Payment </label>
+      <label class="sprk-b-Label--monetary" sprkLabel>
+        Payment
+      </label>
       <input
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
@@ -493,7 +496,6 @@ export const percentageInput = () => ({
     </sprk-icon-input-container>
   `,
 });
-
 
 export const passwordInput = () => ({
   moduleMetadata: modules,
