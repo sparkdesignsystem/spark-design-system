@@ -1,5 +1,8 @@
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkPromoModule } from './sprk-promo.module';
+import { SprkPromoComponent } from './sprk-promo.component';
 
 export default {
   title: 'Components|Promo',
@@ -15,7 +18,12 @@ export default {
 const modules = {
   imports: [
     SprkPromoModule,
+    RouterModule.forRoot([{
+      path: 'iframe.html',
+      component: SprkPromoComponent,
+    }]),
   ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -40,3 +48,63 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default'
 };
+
+export const flag = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-promo
+      isFlag="true"
+      imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg"
+      imgAlt="Spark Design System Logo"
+      idString="promo-2"
+    >
+      Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+      inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+      neque egestas. Diam quod curabitur.
+    </sprk-promo>
+  `,
+});
+
+export const withImage = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-promo
+      title="Title"
+      subtitle="Subtitle"
+      media="img"
+      imgAlt="placeholder"
+      imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+      cta="button"
+      ctaText="Learn More"
+      idString="promo-3"
+    >
+      Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+      inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+      neque egestas. Diam quod curabitur.
+    </sprk-promo>
+  `,
+});
+
+
+export const withReversedImaged = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-promo
+      title="Title"
+      subtitle="Subtitle"
+      mediaRev="true"
+      imgAlt="placeholder"
+      imgSrc="https://sparkdesignsystem.com/assets/toolkit/images/flower.jpg"
+      imgHref="https://sparkdesignsystem.com"
+      cta="button"
+      ctaText="Learn More"
+      idString="promo-4"
+    >
+      Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+      inventore integer eum non enim diam habitant. Maecenas nunc per lacus
+      neque egestas. Diam quod curabitur.
+    </sprk-promo>
+  `,
+});
+
+
