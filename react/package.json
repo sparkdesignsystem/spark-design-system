@@ -7,9 +7,9 @@
     "test": "jest --config ./src/jest-config.js --coverage",
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
     "build": "rollup -c rollup.config.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "npm run prebuild:storybook && start-storybook -p 6006",
     "prebuild:storybook": "npm run test:generate-output",
-    "build-storybook": "build-storybook",
+    "build-storybook": "npm run prebuild:storybook && build-storybook",
     "publish": "npm run build && npm publish"
   },
   "author": "Quicken Loans",
