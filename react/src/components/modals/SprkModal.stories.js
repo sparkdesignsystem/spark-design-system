@@ -42,10 +42,6 @@ infoStory.story = {
   name: 'Info',
 };
 
-defaultStory.story = {
-  name: 'Default',
-};
-
 export const waitStory = () => (
   <SprkModal
     title="Wait Modal"
