@@ -1,4 +1,5 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+import { action } from '@storybook/addon-actions';
 import { SprkModalModule } from './sprk-modal.module';
 
 export default {
@@ -34,14 +35,8 @@ export const defaultStory = () => ({
   `,
   props: {
     choiceVisible: true,
-    toggleChoiceModal: (event: any) => {
-      event.preventDefault();
-      alert('cancel click');
-    },
-    confirmClick: (event: any) => {
-      event.preventDefault();
-      alert('confirm');
-    },
+    toggleChoiceModal: action('Cancel Click'),
+    confirmClick: action('Confirm Click'),
   },
 });
 
@@ -66,10 +61,7 @@ export const info = () => ({
   `,
   props: {
     infoVisible: true,
-    toggleInfoModal: (event: any) => {
-      event.preventDefault();
-      alert('cancel click');
-    },
+    toggleInfoModal: action('Cancel Click'),
   },
 });
 
