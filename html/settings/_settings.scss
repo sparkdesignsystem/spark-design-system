@@ -282,12 +282,12 @@ $sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
 $sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
 
 // Display One
-/// The color of the TypeDisplayOne text.
+/// The color of TypeDisplayOne.
 $sprk-color-display-one: $sprk-black !default;
 /// The font-family, including fallbacks of TypeDisplayOne.
 $sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-/// The size of the TypeDisplayOne text
+/// The size of TypeDisplayOne
 /// when the viewport is narrower than
 /// $sprk-font-size-display-one-breakpoint.
 $sprk-font-size-display-one: 2.75rem !default;
@@ -312,12 +312,12 @@ $sprk-line-height-display-one: 1.27 !default;
 $sprk-line-height-display-one-wide: 1.03 !default;
 
 // Display Two
-/// The color of the TypeDisplayTwo text.
+/// The color of TypeDisplayTwo.
 $sprk-color-display-two: $sprk-black !default;
 /// The font-family, including fallbacks of TypeDisplayTwo.
 $sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-/// The size of the TypeDisplayTwo text
+/// The size of TypeDisplayTwo
 /// when the viewport is narrower than
 /// $sprk-font-size-display-two-breakpoint.
 $sprk-font-size-display-two: 2rem !default;
@@ -342,7 +342,7 @@ $sprk-line-height-display-two: 1 !default;
 $sprk-line-height-display-two-wide: 1 !default;
 
 // Display Three
-/// The color of the TypeDisplayThree text.
+/// The color of TypeDisplayThree.
 $sprk-color-display-three: $sprk-black !default;
 /// The font-family, including fallbacks of TypeDisplayThree.
 $sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
@@ -372,7 +372,7 @@ $sprk-line-height-display-three: 1.6 !default;
 $sprk-line-height-display-three-wide: 1.32 !default;
 
 // Display Four
-/// The color of the TypeDisplayFour text.
+/// The color of TypeDisplayFour.
 $sprk-color-display-four: $sprk-black !default;
 /// The font-family, including fallbacks of TypeDisplayFour.
 $sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
@@ -385,7 +385,7 @@ $sprk-font-weight-display-four: bold !default;
 $sprk-line-height-display-four: 1.23 !default;
 
 // Display Five
-/// The color of the TypeDisplayFive text.
+/// The color of TypeDisplayFive.
 $sprk-color-display-five: $sprk-black !default;
 /// The font-family, including fallbacks of TypeDisplayFive.
 $sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial,
@@ -398,7 +398,7 @@ $sprk-font-weight-display-five: 500 !default;
 $sprk-line-height-display-five: 1.2 !default;
 
 // Display Six
-/// The color of the TypeDisplaySix text.
+/// The color of TypeDisplaySix.
 $sprk-color-display-six: $sprk-black !default;
 /// The font-family, including fallbacks of TypeDisplaySix.
 $sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial,
@@ -416,7 +416,7 @@ $sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
 /// The font size of TypeDisplaySeven.
 $sprk-font-size-display-seven: 1rem !default;
-/// The color of the TypeDisplaySeven text.
+/// The color of TypeDisplaySeven.
 $sprk-color-display-seven: $sprk-black !default;
 /// The line height of TypeDisplaySeven.
 $sprk-line-height-display-seven: 1 !default;
@@ -429,7 +429,7 @@ $sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
   /// The font size of TypeBodyOne.
 $sprk-font-size-body-one: 1rem !default;
-/// The color of the TypeBodyOne text.
+/// The color of TypeBodyOne.
 $sprk-color-body-one: $sprk-black !default;
 /// The line height of TypeBodyOne.
 $sprk-line-height-body-one: 1.6 !default;
@@ -442,7 +442,7 @@ $sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
 /// The font size of TypeBodyTwo.
 $sprk-font-size-body-two: 1rem !default;
-/// The color of the TypeBodyTwo text.
+/// The color of TypeBodyTwo.
 $sprk-color-body-two: $sprk-black !default;
 /// The line height of TypeBodyTwo.
 $sprk-line-height-body-two: 1.6 !default;
@@ -455,7 +455,7 @@ $sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
 /// The font size of TypeBodyThree.
 $sprk-font-size-body-three: 1rem !default;
-/// The color of the TypeBodyThree text.
+/// The color of TypeBodyThree.
 $sprk-color-body-three: $sprk-black !default;
 /// The line height of TypeBodyThree.
 $sprk-line-height-body-three: 2 !default;
