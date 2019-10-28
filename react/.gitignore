@@ -2,3 +2,4 @@ dist/
 node_modules/
 coverage/
 storybook-static/
+src/.jest-test-results.json

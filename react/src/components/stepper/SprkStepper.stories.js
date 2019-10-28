@@ -13,6 +13,11 @@ export default {
   info: `
 This is some info about the Stepper
     `,
+    jest: [
+      'SprkStepper',
+      'SprkStepperSlider',
+      'SprkStepperStep'
+    ]
   },
 };
 

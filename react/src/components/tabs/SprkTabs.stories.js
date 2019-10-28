@@ -6,6 +6,14 @@ import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 export default {
   title: 'Components|Tabs',
   component: SprkTabs,
+  parameters: {
+    jest: [
+      'SprkTabs',
+      'SprkTabsPanel',
+      'SprkTabsButton',
+    ]
+  },
+
 };
 
 export const defaultStory = () => (

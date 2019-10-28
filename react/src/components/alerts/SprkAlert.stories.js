@@ -7,6 +7,7 @@ export default {
   title: 'Components|Alerts',
   decorators: [withKnobs],
   component: SprkAlert,
+  parameters: { jest: ['SprkAlert'] },
 };
 
 export const defaultStory = () => (

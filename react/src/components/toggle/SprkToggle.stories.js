@@ -5,6 +5,7 @@ import SprkToggle from './SprkToggle';
 export default {
   title: 'Components|Toggle',
   component: SprkToggle,
+  parameters: { jest: ['SprkToggle'] },
 };
 
 export const defaultStory = () => (

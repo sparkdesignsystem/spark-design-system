@@ -5,6 +5,7 @@ import SprkIcon from './SprkIcon';
 export default {
   title: 'Components|Icons',
   component: SprkIcon,
+  parameters: { jest: ['SprkIcon'] },
 };
 
 export const access = () => (
