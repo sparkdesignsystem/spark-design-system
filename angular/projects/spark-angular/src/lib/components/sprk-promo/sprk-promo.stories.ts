@@ -85,8 +85,7 @@ export const withImage = () => ({
   `,
 });
 
-
-export const withReversedImaged = () => ({
+export const withReversedImage = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-promo
