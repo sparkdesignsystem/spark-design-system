@@ -4,6 +4,7 @@ import { SprkModalModule } from './sprk-modal.module';
 
 export default {
   title: 'Components|Modals',
+  component: SprkModalModule,
   decorators: [
     storyWrapper(
       storyContent => (

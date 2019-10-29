@@ -3,6 +3,7 @@ import { SprkTableModule } from './sprk-table.module';
 
 export default {
   title: 'Components|Table',
+  component: SprkTableModule,
   decorators: [
     storyWrapper(
       storyContent => (

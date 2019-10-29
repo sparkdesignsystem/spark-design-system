@@ -6,6 +6,7 @@ import { SprkPaginationComponent } from './sprk-pagination.component';
 
 export default {
   title: 'Components|Pagination',
+  component: SprkPaginationModule,
   decorators: [
     storyWrapper(
       storyContent => (

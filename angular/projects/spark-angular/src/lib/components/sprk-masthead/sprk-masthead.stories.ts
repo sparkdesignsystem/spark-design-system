@@ -9,6 +9,7 @@ import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 
 export default {
   title: 'Components|Masthead',
+  component: SprkMastheadModule,
   decorators: [
     storyWrapper(
       storyContent => (
