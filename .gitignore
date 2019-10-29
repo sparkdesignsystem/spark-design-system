@@ -39,4 +39,4 @@ src/angular/dist
 /angular/storybook-static
 /vanilla/storybook-static
 /react/public
-/src/data/sass-data.json
+/src/data/sass-vars.json
