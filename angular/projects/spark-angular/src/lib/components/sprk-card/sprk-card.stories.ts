@@ -38,7 +38,11 @@ export const defaultStory = () => ({
       cardType="base"
       idString="card-default"
     >
-      <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__content
+        sprk-o-Stack
+        sprk-o-Stack--medium">
         Base Card Content
       </div>
     </sprk-card>
@@ -57,7 +61,11 @@ export const standout = () => ({
       idString="card-standout"
       additionalClasses="sprk-c-Card--standout"
     >
-      <div class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium">Standout Card Content</div>
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__content
+        sprk-o-Stack
+        sprk-o-Stack--medium">Standout Card Content</div>
     </sprk-card>
   `
 });
@@ -74,17 +82,31 @@ export const highlightedHeader = () => ({
       idString="card-highlighted-header"
       additionalClasses="sprk-c-Card--standout"
     >
-      <div class="sprk-o-Stack__item sprk-c-Card__header sprk-o-Stack sprk-o-Stack--medium">
-        <h3 class="sprk-b-TypeDisplaySeven sprk-o-Stack__item sprk-u-Color--white">
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__header
+        sprk-o-Stack
+        sprk-o-Stack--medium">
+        <h3 class="
+          sprk-b-TypeDisplaySeven
+          sprk-o-Stack__item
+          sprk-u-Color--white">
           Description
         </h3>
 
-        <h4 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-u-Color--white">
+        <h4 class="
+          sprk-b-TypeDisplayFive
+          sprk-o-Stack__item
+          sprk-u-Color--white">
           Card Title
         </h4>
       </div>
 
-      <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-c-Card__content">
+      <div class="
+        sprk-o-Stack__item
+        sprk-o-Stack
+        sprk-o-Stack--medium
+        sprk-c-Card__content">
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
           Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi
           perpetua an pri, errem commune mea at, mei prima tantas
@@ -104,9 +126,8 @@ export const teaser = () => ({
     <sprk-card
       media="img"
       cardType="teaser"
-      title="Card Component"
-      body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-        image."
+      title="Teaser Card Title"
+      body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
       imgSrc="https://spark-assets.netlify.com/desktop.jpg"
       imgAlt="Placeholder Image"
       imgHref="www.sparkdesignsystem.com"
@@ -127,45 +148,47 @@ teaser.story = {
 export const twoUp = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-stack
-      splitAt="medium"
-      itemSpacing="medium"
-      additionalClasses="sprk-o-Stack--center-row"
-    >
-      <sprk-card
+   <sprk-stack
+     itemSpacing="large"
+     splitAt="large"
+     additionalClasses="sprk-o-Stack--center-row"
+   >
+     <div
+       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+       sprkStackItem
+     >
+       <sprk-card
+         cardType="teaser"
+         media="img"
+         idString="card-two-up-1"
+         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+           Facilisi perpetua an pri, errem commune mea at, mei prima tantas
+           signiferumque at. Numquam."
+         ctaType="button"
+         ctaText="Learn More"
+         title="Title"
+         sprkStackItem
+       ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-two-up-1"
       >
-      </sprk-card>
-      <sprk-card
-        sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-two-up-2"
-      >
-      </sprk-card>
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-two-up-2"
+          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
     </sprk-stack>
   `,
 });
@@ -177,62 +200,65 @@ twoUp.story = {
 export const threeUp = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-stack
-      splitAt="medium"
-      itemSpacing="medium"
-      additionalClasses="sprk-o-Stack--center-row"
-    >
-      <sprk-card
+   <sprk-stack
+     itemSpacing="large"
+     splitAt="large"
+     additionalClasses="sprk-o-Stack--center-row"
+   >
+     <div
+       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+       sprkStackItem
+     >
+       <sprk-card
+         cardType="teaser"
+         idString="card-three-up-1"
+         media="img"
+         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+           Facilisi perpetua an pri, errem commune mea at, mei prima
+           tantas signiferumque at. Numquam."
+         ctaType="button"
+         ctaText="Learn More"
+         title="Title"
+         sprkStackItem
+       ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-three-up-1"
       >
-      </sprk-card>
-      <sprk-card
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-three-up-2"
+          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-three-up-2"
       >
-      </sprk-card>
-      <sprk-card
-        sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-three-up-3"
-      >
-      </sprk-card>
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-three-up-3"
+          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
     </sprk-stack>
   `,
 });
@@ -244,79 +270,84 @@ threeUp.story = {
 export const fourUp = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-stack
-      splitAt="medium"
-      itemSpacing="medium"
-      additionalClasses="sprk-o-Stack--center-row"
-    >
-      <sprk-card
+   <sprk-stack
+     itemSpacing="large"
+     splitAt="large"
+     additionalClasses="sprk-o-Stack--center-row"
+   >
+     <div
+       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+       sprkStackItem
+     >
+       <sprk-card
+         cardType="teaser"
+         media="img"
+         idString="card-four-up-1"
+         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+           Facilisi perpetua an pri, errem commune mea at, mei prima
+           tantas signiferumque at. Numquam."
+         ctaType="button"
+         ctaText="Learn More"
+         title="Title"
+         sprkStackItem
+       ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-four-up-1"
       >
-      </sprk-card>
-      <sprk-card
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-four-up-2"
+          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-four-up-2"
       >
-      </sprk-card>
-      <sprk-card
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-four-up-3"
+          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-four-up-3"
       >
-      </sprk-card>
-      <sprk-card
-        sprkStackItem
-        media="img"
-        cardType="teaser"
-        title="Card Component"
-        body="This is an example of the Card component. Here, you could write some paragraph text related to the card
-          image."
-        imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-        imgAlt="Placeholder Image"
-        imgHref="www.sparkdesignsystem.com"
-        ctaType="button"
-        ctaText="Learn More"
-        ctaHref="www.sparkdesignsystem.com"
-        ctaAnalytics="Button: Spark"
-        idString="card-four-up-4"
-      >
-      </sprk-card>
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-four-up-4"
+          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+         ></sprk-card>
+      </div>
     </sprk-stack>
   `,
 });
