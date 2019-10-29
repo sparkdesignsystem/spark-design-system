@@ -7,6 +7,7 @@ import SprkButton from '../buttons/SprkButton';
 export default {
   title: 'Components|Dropdown',
   component: SprkDropdown,
+  parameters: { jest: ['SprkDropdown'] },
 };
 
 export const defaultStory = () => (

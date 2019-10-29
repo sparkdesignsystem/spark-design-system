@@ -6,6 +6,7 @@ import SprkButton from '../../components/buttons/SprkButton';
 export default {
   title: 'Base|Tables',
   component: SprkTable,
+  parameters: { jest: ['SprkTable'] },
 };
 
 export const columnComparison = () => (

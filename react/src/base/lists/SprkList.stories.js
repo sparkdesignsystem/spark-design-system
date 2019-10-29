@@ -6,6 +6,7 @@ import SprkListItem from './SprkListItem';
 export default {
   title: 'Base|Lists',
   component: SprkList,
+  parameters: { jest: ['SprkList, SprkListItem'] },
 };
 
 export const unordered = () => (

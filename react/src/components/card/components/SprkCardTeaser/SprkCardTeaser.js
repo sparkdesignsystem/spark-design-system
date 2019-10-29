@@ -207,7 +207,11 @@ SprkCardTeaser.propTypes = {
       additionalCtaIconClasses: PropTypes.string,
       ctaAnalytics: PropTypes.string,
       ctaIcon: PropTypes.string,
-      ctaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      ctaLinkElement: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       ctaVariant: PropTypes.oneOf(['link', 'button']),
       href: PropTypes.string,
       text: PropTypes.string,
@@ -215,7 +219,11 @@ SprkCardTeaser.propTypes = {
     media: PropTypes.shape({
       additionalMediaIconClasses: PropTypes.string,
       href: PropTypes.string,
-      mediaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      mediaLinkElement: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       iconName: PropTypes.string,
       imgAlt: PropTypes.string,
       imgSrc: PropTypes.string,
