@@ -162,7 +162,7 @@ export const selectBox = () => (
   />
 );
 
-select.story = {
+selectBox.story = {
   name: 'Select',
   parameters: {
     jest: [
