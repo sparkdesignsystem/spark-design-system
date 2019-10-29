@@ -1434,12 +1434,13 @@ $sprk-modal-color: $sprk-white !default;
 $sprk-modal-max-width: 43.75rem !default;
 /// The maximum height of the Modal.
 $sprk-modal-height: 70% !default;
-/// The point at which the Modal
-/// moves farther down the viewport from the top.
+/// Determines how far down
+/// from the top of the page the
+/// Modal renders at the small breakpoint.
 $sprk-modal-breakpoint-small: 25rem !default;
-/// The point at which the Modal moves even
-/// farther down the viewport from the top than
-// it does at the small breakpoint.
+/// Determines how far down
+/// from the top of the page the
+/// Modal renders at the medium breakpoint.
 $sprk-modal-breakpoint-medium: 37.5rem !default;
 /// The box shadow on the Modal.
 $sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
@@ -1489,7 +1490,7 @@ $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
 $sprk-masthead-link-visited-color: $sprk-black !default;
 /// The hover state color of Masthead links.
 $sprk-masthead-link-hover-color: $sprk-green !default;
-/// The font weight of Masthead links.
+/// The font weight for Masthead links.
 $sprk-masthead-link-font-weight: 500 !default;
 /// The size of the bottom border on the Masthead.
 $sprk-masthead-border-bottom-size: 1px !default;
