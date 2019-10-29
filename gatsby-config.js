@@ -17,6 +17,20 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: 'src/data/',
+        name: 'data',
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        path: 'src/data/',
+        name: 'data',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: 'src/pages/installing-spark',
         name: 'installing-spark-pages',
       },
