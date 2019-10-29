@@ -123,7 +123,7 @@ radioButtons.story = {
   },
 };
 
-export const select = () => (
+export const selectBox = () => (
   <SprkSelectionInput
     choices={[
       {
@@ -158,6 +158,7 @@ export const select = () => (
     ]}
     name="name"
     variant="select"
+    label="Select Box Label"
   />
 );
 
@@ -236,7 +237,7 @@ textarea.story = {
 
 export const ssnInput = () => (
   <SprkRevealInput
-    label="SocialSecurity Number"
+    label="Social Security Number"
     toggleLabel="Show SSN"
     name="ssn"
   />
@@ -294,6 +295,17 @@ monetaryInput.story = {
     ]
   },
 };
+
+export const percentageInput = () => (
+  <SprkTextInput
+    label="Percentage"
+    iconRight
+    leadingIcon="percent"
+    narrowWidth
+    name="percentage"
+    type="tel"
+  />
+);
 
 export const passwordInput = () => (
   <SprkRevealInput
