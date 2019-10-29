@@ -262,6 +262,7 @@ export default {
   title: 'Components|Footer',
   decorators: [withKnobs],
   component: SprkFooter,
+  parameters: { jest: ['SprkFooter'] },
 };
 
 export const defaultStory = () => (

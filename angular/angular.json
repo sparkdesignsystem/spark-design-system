@@ -30,7 +30,7 @@
               }
             ],
             "styles": [
-              "../spark/manifests/spark/_spark.scss"
+              "../html/_spark.scss"
             ],
             "scripts": []
           }

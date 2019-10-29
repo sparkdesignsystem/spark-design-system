@@ -323,7 +323,11 @@ SprkMasthead.propTypes = {
   /** The href to render for the logo link. */
   logoLink: PropTypes.string,
   /** The element link element to render for the logo. */
-  logoLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  logoLinkElement: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.elementType
+  ]),
   /** Expects a component to render the nav link. */
   navLink: PropTypes.node,
 };

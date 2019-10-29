@@ -5,6 +5,7 @@ import SprkPagination from './SprkPagination';
 export default {
   title: 'Components|Pagination',
   component: SprkPagination,
+  parameters: { jest: ['SprkPagination'] },
 };
 
 export const defaultStory = () => (

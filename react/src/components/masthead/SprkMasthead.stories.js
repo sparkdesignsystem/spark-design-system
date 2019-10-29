@@ -1,10 +1,8 @@
 import React from 'react';
-
 import SprkMasthead from './SprkMasthead';
 import SprkButton from '../buttons/SprkButton';
 import SprkLink from '../../base/links/SprkLink';
 import SprkDropdown from '../dropdown/SprkDropdown';
-
 
 const links = [
   {
@@ -103,6 +101,14 @@ const utilityItems = [
 export default {
   title: 'Components|Masthead',
   component: SprkMasthead,
+  parameters: {
+    jest: [
+      'SprkMasthead',
+      'SprkMastheadLittleNav',
+      'SprkMastheadMenuIcon',
+      'SprkMastheadNarrowNav',
+    ]
+  },
 };
 
 export const defaultStory = () => (
@@ -337,4 +343,12 @@ export const extended = () => (
 
 extended.story = {
   name: 'Extended',
+  parameters: {
+    jest: [
+      'SprkMastheadAccordion',
+      'SprkMastheadAccordionItem',
+      'SprkMastheadDropdown',
+      'SprkMastheadSelector',
+    ]
+  },
 };

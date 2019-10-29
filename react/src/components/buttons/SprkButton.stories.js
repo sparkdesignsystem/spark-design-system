@@ -8,6 +8,7 @@ export default {
   title: 'Components|Buttons',
   decorators: [withKnobs],
   component: SprkButton,
+  parameters: { jest: ['SprkButton'] },
 };
 
 export const primary = () => (

@@ -9,6 +9,12 @@ export default {
   title: 'Base|Inputs',
   decorators: [withKnobs],
   component: SprkTextInput,
+  parameters: {
+    jest: [
+      'SprkErrorContainer',
+      'SprkInputIconCheck',
+    ]
+  },
 };
 
 export const textInput = () => (
@@ -23,6 +29,11 @@ export const textInput = () => (
 
 textInput.story = {
   name: 'Text Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const hugeTextInput = () => (
@@ -39,6 +50,11 @@ export const hugeTextInput = () => (
 
 hugeTextInput.story = {
   name: 'Huge Text Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const checkboxes = () => (
@@ -67,6 +83,11 @@ export const checkboxes = () => (
 
 checkboxes.story = {
   name: 'Checkboxes',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
 };
 
 export const radioButtons = () => (
@@ -95,6 +116,11 @@ export const radioButtons = () => (
 
 radioButtons.story = {
   name: 'Radio Buttons',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
 };
 
 export const selectBox = () => (
@@ -138,6 +164,11 @@ export const selectBox = () => (
 
 select.story = {
   name: 'Select',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
 };
 
 export const hugeSelect = () => (
@@ -184,6 +215,11 @@ export const hugeSelect = () => (
 
 hugeSelect.story = {
   name: 'Huge Select',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
 };
 
 export const textarea = () => (
@@ -192,6 +228,11 @@ export const textarea = () => (
 
 textarea.story = {
   name: 'Textarea',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const ssnInput = () => (
@@ -204,6 +245,11 @@ export const ssnInput = () => (
 
 ssnInput.story = {
   name: 'SSN Input',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
 };
 
 export const searchInput = () => (
@@ -212,6 +258,11 @@ export const searchInput = () => (
 
 searchInput.story = {
   name: 'Search Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  }
 };
 
 export const inlineSearchInput = () => (
@@ -225,6 +276,11 @@ export const inlineSearchInput = () => (
 
 inlineSearchInput.story = {
   name: 'Inline Search Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const monetaryInput = () => (
@@ -233,6 +289,11 @@ export const monetaryInput = () => (
 
 monetaryInput.story = {
   name: 'Monetary Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const percentageInput = () => (
@@ -256,6 +317,11 @@ export const passwordInput = () => (
 
 passwordInput.story = {
   name: 'Password Input',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
 };
 
 export const helperText = () => (
@@ -268,6 +334,11 @@ export const helperText = () => (
 
 helperText.story = {
   name: 'Helper Text',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const phoneNumberInput = () => (
@@ -281,6 +352,11 @@ export const phoneNumberInput = () => (
 
 phoneNumberInput.story = {
   name: 'Phone Number Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const dateInput = () => (
@@ -294,6 +370,11 @@ export const dateInput = () => (
 
 dateInput.story = {
   name: 'Date Input',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
 };
 
 export const datePicker = () => (
@@ -309,4 +390,9 @@ export const datePicker = () => (
 
 datePicker.story = {
   name: 'Date Picker',
+  parameters: {
+    jest: [
+      'SprkDatePickerInput',
+    ]
+  },
 };

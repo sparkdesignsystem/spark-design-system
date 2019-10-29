@@ -90,7 +90,11 @@ SprkLink.propTypes = {
   /** The href value for the link. */
   href: PropTypes.string,
   /** The element that will be rendered. */
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  element: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.elementType
+  ]),
   /** The event that will fire when the element is clicked. */
   onClick: PropTypes.func,
 };
