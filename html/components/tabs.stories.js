@@ -3,6 +3,9 @@ import { tabs } from './tabs';
 
 export default {
   title: 'Components|Tabs',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultTabs = () => {

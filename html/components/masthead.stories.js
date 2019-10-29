@@ -7,6 +7,9 @@ import isElementVisible from '../utilities/isElementVisible';
 
 export default {
   title: 'Components|Masthead',
+  decorators: [
+    story => `<div data-sprk-main>${story()}</div>`,
+  ],
 };
 
 // TODO: Add this decorator individually rather than globally

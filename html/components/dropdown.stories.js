@@ -3,6 +3,9 @@ import { dropdowns } from './dropdown';
 
 export default {
   title: 'Components|Dropdown',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultDropdown = () => {

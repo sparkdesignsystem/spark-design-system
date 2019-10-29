@@ -1,5 +1,8 @@
 export default {
   title: 'Base|Links',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultLink = () => (
