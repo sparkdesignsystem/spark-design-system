@@ -7,7 +7,10 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 
 export default {
   title: 'Base|Inputs',
-  decorators: [withKnobs],
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkTextInput,
   parameters: {
     jest: [

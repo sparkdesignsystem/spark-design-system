@@ -6,6 +6,9 @@ import SprkButton from '../../components/buttons/SprkButton';
 export default {
   title: 'Base|Tables',
   component: SprkTable,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: { jest: ['SprkTable'] },
 };
 

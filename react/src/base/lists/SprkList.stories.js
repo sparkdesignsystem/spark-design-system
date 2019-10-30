@@ -6,6 +6,9 @@ import SprkListItem from './SprkListItem';
 export default {
   title: 'Base|Lists',
   component: SprkList,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: { jest: ['SprkList, SprkListItem'] },
 };
 
