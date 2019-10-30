@@ -1820,3 +1820,66 @@ $sprk-carousel-arrow-position-breakpoint: 31.25rem !default;
 $sprk-carousel-dot-container-padding: $sprk-space-xs !default;
 /// The breakpoint for the Carousel component.
 $sprk-carousel-breakpoint: $sprk-split-breakpoint-xl !default;
+
+//
+// Card
+///
+
+/// The maximum width of the Card.
+$sprk-card-max-width: 26.5625rem !default;
+/// The main Card breakpoint.
+$sprk-card-breakpoint: $sprk-split-breakpoint-s !default;
+/// The box shadow of the Card on small viewports.
+$sprk-card-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+/// The box shadow of the Card on wide viewports.
+$sprk-card-shadow-wide-viewport: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
+/// The box shadow of the Standout Card variant on small viewports.
+$sprk-card-shadow-standout: 0 4px 20px 2px rgba(0, 0, 0, 0.1) !default;
+/// The box shadow of the Standout Card variant on wide viewports.
+$sprk-card-shadow-standout-wide-viewport: 0 4px 40px 2px rgba(0, 0, 0, 0.1) !default;
+/// The border radius of the Card.
+$sprk-card-border-radius: 8px !default;
+/// The padding of the content inside the Card.
+$sprk-card-content-padding: $sprk-space-misc-a !default;
+/// The background color of the header area for the Highlighted Header Card.
+$sprk-card-header-bg-color: $sprk-green !default;
+/// The text color for the Highlighted Header Card.
+$sprk-card-header-text-color: $sprk-white !default;
+
+//
+// Dictionary
+///
+
+/// The border surrounding the Dictionary.
+$sprk-dictionary-border: 1px solid $sprk-gray !default;
+/// The background color of the key value pairs in the striped Dictionary.
+$sprk-dictionary-stripe-color: $sprk-gray !default;
+/// The breakpoint of the Dictionary component.
+$sprk-dictionary-breakpoint: 38.4375rem !default;
+/// The font size of the labels in the Dictionary.
+$sprk-dictionary-label-font-size: $sprk-font-size-body-one !default;
+/// The font weight of the labels in the Dictionary.
+$sprk-dictionary-label-font-weight: $sprk-font-weight-body-one !default;
+/// The line height of the labels in the Dictionary.
+$sprk-dictionary-label-line-height: $sprk-line-height-body-one !default;
+
+//
+// Highlight Board
+///
+
+/// The Highlight Board breakpoint at which styles change
+/// for padding, font size and button width.
+$sprk-highlight-board-breakpoint: 30rem !default;
+/// The maximum width of the content
+/// for the Highlight Board when it has an image.
+$sprk-highlight-board-content-width: 30rem !default;
+/// Percentage reduction value for the
+/// font size in the Highlight Board in narrow viewports.
+$sprk-highlight-board-type-reduction-percentage: 0.8 !default;
+/// The height of the Highlight Board image.
+$sprk-highlight-board-height: 31.25rem !default;
+/// The background color of the Highlight Board.
+$sprk-highlight-board-color: $sprk-white !default;
+/// The background color of
+/// the content box in the Highlight Board.
+$sprk-highlight-board-content-box-color: $sprk-white !default;
