@@ -2,13 +2,14 @@
   background-color: $sprk-gray;
   display: inline-block;
   font-family: monospace;
+  font-size: 1.1rem;
   overflow: auto;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
   max-width: 100%;
   vertical-align: middle;
 }
 
-.docs-command code {
+.docs-codehighlight {
   font-size: 0.9rem;
 }
