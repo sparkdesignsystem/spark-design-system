@@ -12,7 +12,7 @@ import { requiredSelect } from './requiredSelect';
 import '../utilities/polyfills/classListSVG';
 
 export default {
-  title: 'Base|Inputs',
+  title: 'Components|Input',
 };
 
 export const textInput = () => {
@@ -44,10 +44,6 @@ export const textInput = () => {
       ></div>
     </div>
   `;
-};
-
-textInput.story = {
-  name: 'Text Input',
 };
 
 export const hugeTextInput = () => {
@@ -83,11 +79,7 @@ export const hugeTextInput = () => {
   `;
 };
 
-hugeTextInput.story = {
-  name: 'Huge Text Input',
-};
-
-export const checkboxInputs = () => {
+export const checkbox = () => {
   useEffect(() => {
     requiredTextInput();
     requiredTick();
@@ -160,11 +152,7 @@ export const checkboxInputs = () => {
   `;
 };
 
-checkboxInputs.story = {
-  name: 'Checkboxes',
-};
-
-export const radioInputs = () => {
+export const radioButton = () => {
   useEffect(() => {
     requiredTick();
   }, []);
@@ -235,10 +223,6 @@ export const radioInputs = () => {
       ></div>
     </div>
   `;
-};
-
-radioInputs.story = {
-  name: 'Radio Inputs',
 };
 
 export const selectBox = () => {
@@ -352,10 +336,6 @@ export const hugeSelectBox = () => {
   `;
 };
 
-hugeSelectBox.story = {
-  name: 'Huge Select Box',
-};
-
 export const textarea = () => (
   `
     <div class="sprk-b-InputContainer">
@@ -380,10 +360,6 @@ export const textarea = () => (
     </div>
   `
 );
-
-textarea.story = {
-  name: 'Textarea',
-};
 
 export const ssnInputStory = () => {
   useEffect(() => {
@@ -476,10 +452,6 @@ export const searchInput = () => {
   `;
 };
 
-searchInput.story = {
-  name: 'Search Input',
-};
-
 export const inlineSearchInput = () => {
   useEffect(() => {
     requiredTextInput();
@@ -522,10 +494,6 @@ export const inlineSearchInput = () => {
       ></div>
     </div>
   `;
-};
-
-inlineSearchInput.story = {
-  name: 'Inline Search Input',
 };
 
 export const monetaryInputStory = () => {
@@ -634,10 +602,6 @@ export const percentageInput = () => {
   `;
 };
 
-percentageInput.story = {
-  name: 'Percentage Input',
-};
-
 export const passwordInputStory = () => {
   useEffect(() => {
     requiredTextInput();
@@ -727,10 +691,6 @@ export const helperText = () => (
     </div>
   `
 );
-
-helperText.story = {
-  name: 'Helper Text',
-};
 
 export const phoneInputStory = () => {
   useEffect(() => {

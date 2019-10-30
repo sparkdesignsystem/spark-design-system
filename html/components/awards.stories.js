@@ -3,7 +3,7 @@ import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
 
 export default {
-  title: 'Components|Awards',
+  title: 'Components|Award',
 };
 
 export const defaultStory = () => {

@@ -1,6 +1,6 @@
 
 export default {
-  title: 'Components|Buttons',
+  title: 'Components|Button',
 };
 
 export const primary = () => (

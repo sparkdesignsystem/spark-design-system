@@ -1,5 +1,5 @@
 export default {
-  title: 'Base|Links',
+  title: 'Components|Link',
 };
 
 export const defaultLink = () => (

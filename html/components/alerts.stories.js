@@ -2,7 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { alerts } from './alerts';
 
 export default {
-  title: 'Components|Alerts',
+  title: 'Components|Alert',
 };
 export const info = () => {
   useEffect(() => {

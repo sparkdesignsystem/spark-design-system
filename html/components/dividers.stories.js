@@ -1,5 +1,5 @@
 export default {
-  title: 'Components|Dividers',
+  title: 'Components|Divider',
 };
 
 export const asASpanElement = () =>(`
