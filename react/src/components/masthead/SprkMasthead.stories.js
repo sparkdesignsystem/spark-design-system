@@ -8,7 +8,7 @@ export default {
   title: 'Components|Masthead',
   component: SprkMasthead,
   decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
+    story => <div>{story()}</div>
   ],
   parameters: {
     jest: [
