@@ -2,16 +2,6 @@
 // Dictionary
 // ==================================================================
 
-//
-// Available Variables
-///
-$sprk-dictionary-border: 1px solid $sprk-gray !default;
-$sprk-dictionary-stripe-color: $sprk-gray !default;
-$sprk-dictionary-breakpoint: 38.4375rem !default;
-$sprk-dictionary-label-font-size: $sprk-font-size-body-one !default;
-$sprk-dictionary-label-font-weight: $sprk-font-weight-body-one !default;
-$sprk-dictionary-label-line-height: $sprk-line-height-body-one !default;
-
 .sprk-c-Dictionary {
   border: $sprk-dictionary-border;
 }
