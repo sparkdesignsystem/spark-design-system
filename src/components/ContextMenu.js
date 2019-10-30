@@ -1,5 +1,6 @@
 import React from 'react';
 import { SprkLink } from '@sparkdesignsystem/spark-react';
+import { Link } from 'gatsby';
 import classnames from 'classnames';
 
 function ContextMenu({context, setContext, className}) {
@@ -9,9 +10,10 @@ function ContextMenu({context, setContext, className}) {
         <li>
           <SprkLink
             additionalClasses={classnames({'docs-context-menu__item--active': context==='installing-spark'})}
-            onClick={(e) => {e.preventDefault(); setContext('installing-spark');}}
+            onClick={(e) => {setContext('installing-spark');}}
             variant="simple"
-            href="#nogo">Installing Spark</SprkLink>
+            element={Link}
+            to="/installing-spark/setting-up-your-environment">Installing Spark</SprkLink>
         </li>
         <li>
           <SprkLink

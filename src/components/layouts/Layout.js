@@ -5,6 +5,26 @@ import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
+import { MDXProvider } from "@mdx-js/react";
+
+import H1 from '../markdown-render/h1';
+import H2 from '../markdown-render/h2';
+import P from '../markdown-render/p';
+import Ul from '../markdown-render/ul';
+import Li from '../markdown-render/li';
+import A from '../markdown-render/a';
+import inlineCode from '../markdown-render/inlineCode';
+
+const components = {
+  h1: H1,
+  h2: H2,
+  p: P,
+  ul: Ul,
+  li: Li,
+  a: A,
+  code: inlineCode
+}
+
 
 const Layout = ({ children, initialContext }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
@@ -56,7 +76,9 @@ const Layout = ({ children, initialContext }) => {
             />
           </div>
           <div className="docs-layout__content">
-            { children }
+              <MDXProvider components={components}>
+                { children }
+              </MDXProvider>
             <Footer />
           </div>
         </div>

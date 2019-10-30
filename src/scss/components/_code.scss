@@ -1,0 +1,14 @@
+.docs-command {
+  background-color: $sprk-gray;
+  display: inline-block;
+  font-family: monospace;
+  overflow: auto;
+  padding: 1rem;
+  margin: 1rem 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.docs-command code {
+  font-size: 0.9rem;
+}
