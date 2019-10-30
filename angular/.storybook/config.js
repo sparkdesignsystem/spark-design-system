@@ -11,6 +11,7 @@ addDecorator(withA11y);
 addParameters({
   options: {
     theme: sparkTheme,
+    storySort: (a, b) => a[1].id.localeCompare(b[1].id),
   },
 });
 
