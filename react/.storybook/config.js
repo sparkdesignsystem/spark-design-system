@@ -14,7 +14,7 @@ addDecorator(
     results
   }
 ));
-addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
+
 // Option defaults.
 addParameters({
   options: {
