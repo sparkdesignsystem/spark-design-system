@@ -6,6 +6,9 @@ export default {
   title: 'Components|Highlight Board',
   component: SprkHighlightBoard,
   parameters: { jest: ['SprkHighlightBoard'] },
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
 };
 
 export const defaultStory = () => (

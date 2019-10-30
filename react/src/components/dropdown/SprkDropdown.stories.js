@@ -7,6 +7,9 @@ import SprkButton from '../buttons/SprkButton';
 export default {
   title: 'Components|Dropdown',
   component: SprkDropdown,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: { jest: ['SprkDropdown'] },
 };
 

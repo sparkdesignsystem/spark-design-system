@@ -2,6 +2,16 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import SprkFooter from './SprkFooter';
 
+export default {
+  title: 'Components|Footer',
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  component: SprkFooter,
+  parameters: { jest: ['SprkFooter'] },
+};
+
 const globalItems = {
   heading: 'Global Links',
   items: [
@@ -257,13 +267,6 @@ const additionalIcons = [
     element: 'a',
   },
 ];
-
-export default {
-  title: 'Components|Footer',
-  decorators: [withKnobs],
-  component: SprkFooter,
-  parameters: { jest: ['SprkFooter'] },
-};
 
 export const defaultStory = () => (
   <SprkFooter

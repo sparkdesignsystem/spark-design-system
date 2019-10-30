@@ -4,6 +4,9 @@ import SprkPromo from './SprkPromo';
 
 export default {
   title: 'Components|Promo',
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkPromo,
   parameters: { jest: ['SprkPromo'] },
 };

@@ -5,7 +5,10 @@ import SprkAlert from './SprkAlert';
 
 export default {
   title: 'Components|Alerts',
-  decorators: [withKnobs],
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkAlert,
   parameters: { jest: ['SprkAlert'] },
 };

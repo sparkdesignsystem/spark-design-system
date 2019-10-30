@@ -4,6 +4,9 @@ import SprkAward from './SprkAward';
 export default {
   title: 'Components|Award',
   component: SprkAward,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: { jest: ['SprkAward'] },
 };
 

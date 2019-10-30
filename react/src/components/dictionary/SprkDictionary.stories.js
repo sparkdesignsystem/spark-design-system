@@ -4,6 +4,9 @@ import SprkDictionary from './SprkDictionary';
 
 export default {
   title: 'Components|Dictionary',
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkDictionary,
   parameters: { jest: ['SprkDictionary'] },
 };

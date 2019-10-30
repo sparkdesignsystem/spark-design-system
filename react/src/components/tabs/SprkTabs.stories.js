@@ -6,6 +6,9 @@ import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 export default {
   title: 'Components|Tabs',
   component: SprkTabs,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: {
     jest: [
       'SprkTabs',
