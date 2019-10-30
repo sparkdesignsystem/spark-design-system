@@ -1,15 +1,7 @@
-.docs-command {
-  background-color: $sprk-gray;
-  display: inline-block;
-  font-family: monospace;
+.docs-code {
   font-size: 1.1rem;
+  font-family: monospace;
   overflow: auto;
-  padding: 1rem;
   margin: 2rem 0;
   max-width: 100%;
-  vertical-align: middle;
-}
-
-.docs-codehighlight {
-  font-size: 0.9rem;
 }
