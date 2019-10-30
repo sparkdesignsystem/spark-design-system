@@ -24,7 +24,7 @@ const modules = {
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
-export const base = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-dropdown
@@ -45,6 +45,10 @@ export const base = () => ({
     </sprk-dropdown>
   `
 });
+
+defaultStory.story = {
+  name: 'Default',
+};
 
 export const informational = () => ({
   moduleMetadata: modules,

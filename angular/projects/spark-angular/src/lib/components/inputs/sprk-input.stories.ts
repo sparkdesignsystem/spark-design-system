@@ -20,7 +20,7 @@ import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-i
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 
 export default {
-  title: 'Components|Inputs',
+  title: 'Components|Input',
   decorators: [
     storyWrapper(
       storyContent => (
@@ -188,7 +188,7 @@ export const checkbox = () => ({
   },
 });
 
-export const radioButtons = () => ({
+export const radioButton = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
@@ -292,7 +292,7 @@ export const selectBox = () => ({
   `,
 });
 
-export const hugeSelect = () => ({
+export const hugeSelectBox = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>

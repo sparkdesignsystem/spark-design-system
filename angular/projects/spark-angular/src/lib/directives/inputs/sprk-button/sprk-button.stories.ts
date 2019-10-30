@@ -2,7 +2,7 @@ import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
 
 export default {
-  title: 'Components|Buttons',
+  title: 'Components|Button',
   component: SprkButtonModule,
   decorators: [
     storyWrapper(
@@ -98,7 +98,7 @@ export const disabledTertiary = () => ({
   `,
 });
 
-export const submissionSpinner = () => {
+export const spinner = () => {
   return {
     moduleMetadata: modules,
     template: `
@@ -128,6 +128,10 @@ export const fullWidthAtSmallViewport = () => {
   };
 };
 
+fullWidthAtSmallViewport.story = {
+  name: 'Full Width at Small Viewport',
+};
+
 export const fullWidthAtExtraSmallViewport = () => {
   return {
     moduleMetadata: modules,
@@ -141,4 +145,8 @@ export const fullWidthAtExtraSmallViewport = () => {
       </button>
     `,
   };
+};
+
+fullWidthAtExtraSmallViewport.story = {
+  name: 'Full Width at Extra Small Viewport',
 };
