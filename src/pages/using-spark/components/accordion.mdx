@@ -10,9 +10,12 @@ separated into smaller, digestible
 chunks. An Accordion consists of a
 series of Toggle components.
 
-<ComponentPreview component="accordion" />
-
-[React](google.com) [Angular](google.com) [Html](google.com)
+<ComponentPreview
+  componentName="accordion--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
 
 ## Usage
 An Accordion should be used when
@@ -28,10 +31,3 @@ apparent that the content is important.
 - Content length inside the Accordion does not have a limit.
 - Title content of the Accordion can wrap, but it is recommended
   that it is short and to the point.
-- Accordions take up 100% width of their parent container until
-  they hit their max width of 850px.
-- The data-id property is provided as a hook for automated tools.
-  If you have multiple instances of the same variant of a
-  component on the same page, make sure each instance
-  has a unique data-id property
-  ("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc).

@@ -54,12 +54,16 @@ $doc-site-layout-max-width: 90rem;
 }
 
 .docs-layout__content {
-  max-width: 50rem;
   padding: 2rem;
-  overflow-x: scroll;
-  -ms-grid-column: 2;
-  -ms-grid-row: 2;
-  grid-row: 2 / 3;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    overflow-x: scroll;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2 / 3;
+  }
 }
 
 // gatsby-remark-sectionize creates the sections from md
