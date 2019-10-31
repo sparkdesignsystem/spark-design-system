@@ -9,6 +9,7 @@ import { MDXProvider } from "@mdx-js/react";
 
 import H1 from '../markdown-render/h1';
 import H2 from '../markdown-render/h2';
+import H3 from '../markdown-render/h3';
 import P from '../markdown-render/p';
 import Ul from '../markdown-render/ul';
 import Li from '../markdown-render/li';
@@ -18,6 +19,7 @@ import inlineCode from '../markdown-render/inlineCode';
 const components = {
   h1: H1,
   h2: H2,
+  h3: H3,
   p: P,
   ul: Ul,
   li: Li,
