@@ -5,11 +5,14 @@ import propTypes from 'prop-types';
 class SprkTextareaCheck extends Component {
   constructor(props) {
     const { value } = props;
+    const { defaultValue } = props;
     super(props);
 
-    this.state = {
-      hasValue: value,
-    };
+    if( value || defaultValue ) {
+      this.state = {
+        hasValue: true,
+      };
+    }
   }
 
   render() {
