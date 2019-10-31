@@ -1550,7 +1550,7 @@ $sprk-masthead-selector-dropdown-padding: 0 !default;
 /// in the Masthead with Extended Navigation.
 $sprk-masthead-selector-min-width: 17rem !default;
 /// This is the height of the Masthead on
-/// small viewports and is used to calculate
+/// narrow viewports and is used to calculate
 /// how far from the top the narrow
 /// navigation items should be displayed.
 $sprk-masthead-narrow-height: 81px !default;
@@ -1829,11 +1829,11 @@ $sprk-carousel-breakpoint: $sprk-split-breakpoint-xl !default;
 $sprk-card-max-width: 26.5625rem !default;
 /// The main Card breakpoint.
 $sprk-card-breakpoint: $sprk-split-breakpoint-s !default;
-/// The box shadow of the Card on small viewports.
+/// The box shadow of the Card on narrow viewports.
 $sprk-card-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 /// The box shadow of the Card on wide viewports.
 $sprk-card-shadow-wide-viewport: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
-/// The box shadow of the Standout Card variant on small viewports.
+/// The box shadow of the Standout Card variant on narrow viewports.
 $sprk-card-shadow-standout: 0 4px 20px 2px rgba(0, 0, 0, 0.1) !default;
 /// The box shadow of the Standout Card variant on wide viewports.
 $sprk-card-shadow-standout-wide-viewport: 0 4px 40px 2px rgba(0, 0, 0, 0.1) !default;
