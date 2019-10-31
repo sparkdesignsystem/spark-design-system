@@ -54,9 +54,15 @@ $doc-site-layout-max-width: 90rem;
 }
 
 .docs-layout__content {
+  max-width: 50rem;
   padding: 2rem;
   overflow-x: scroll;
   -ms-grid-column: 2;
   -ms-grid-row: 2;
   grid-row: 2 / 3;
+}
+
+// gatsby-remark-sectionize creates the sections from md
+.docs-layout__content section section {
+  padding-top: $sprk-space-l;
 }
