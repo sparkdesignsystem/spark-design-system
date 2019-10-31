@@ -1,21 +1,6 @@
 // ==================================================================
 // Card
 // ==================================================================
-
-//
-// Available Variables
-///
-$sprk-card-max-width: 26.5625rem !default;
-$sprk-card-breakpoint: $sprk-split-breakpoint-s !default;
-$sprk-card-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
-$sprk-card-shadow-wide-viewport: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
-$sprk-card-shadow-standout: 0 4px 20px 2px rgba(0, 0, 0, 0.1) !default;
-$sprk-card-shadow-standout-wide-viewport: 0 4px 40px 2px rgba(0, 0, 0, 0.1) !default;
-$sprk-card-border-radius: 8px !default;
-$sprk-card-content-padding: $sprk-space-misc-a !default;
-$sprk-card-header-bg-color: $sprk-green !default;
-$sprk-card-header-text-color: $sprk-white !default;
-
 .sprk-c-Card {
   box-shadow: $sprk-card-shadow;
   border-radius: $sprk-card-border-radius;
