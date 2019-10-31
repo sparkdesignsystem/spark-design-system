@@ -5,7 +5,7 @@ import SprkButton from './SprkButton';
 
 
 export default {
-  title: 'Components|Buttons',
+  title: 'Components|Button',
   decorators: [withKnobs],
   component: SprkButton,
   parameters: { jest: ['SprkButton'] },
@@ -28,7 +28,6 @@ export const primary = () => (
 );
 
 primary.story = {
-  name: 'Primary',
   parameters: {
     info: `
 Buttons are points of interaction for a website.
@@ -103,7 +102,6 @@ export const secondary = () => (
 );
 
 secondary.story = {
-  name: 'Secondary',
   parameters: {
     info: `
 When there is more then one action within a single view, Secondary
@@ -133,7 +131,6 @@ export const tertiary = () => (
 );
 
 tertiary.story = {
-  name: 'Tertiary',
   parameters: {
     info: `
 Use Tertiary buttons to give users the option to navigate to a new page.
@@ -161,7 +158,6 @@ export const disabled = () => (
 );
 
 disabled.story = {
-  name: 'Disabled',
   parameters: {
     info: `
 Use a Disabled Button when an action is unavailable to the user.
@@ -190,7 +186,6 @@ export const spinner = () => (
 );
 
 spinner.story = {
-  name: 'Spinner',
   parameters: {
     info: `
 Use the Spinner component on any Button that
@@ -215,7 +210,7 @@ export const fullWidthAtSmallViewport = () => (
 );
 
 fullWidthAtSmallViewport.story = {
-  name: 'Full Width At Small Viewport',
+  name: 'Full Width at Small Viewport',
   parameters: {
     info: `
 Use for a full width button on small
@@ -240,7 +235,7 @@ export const fullWidthAtExtraSmallViewport = () => (
 );
 
 fullWidthAtExtraSmallViewport.story = {
-  name: 'Full Width At Extra Small Viewport',
+  name: 'Full Width at Extra Small Viewport',
   parameters: {
     info: `
 Use for a full width button on extra small
@@ -265,7 +260,7 @@ export const asALinkElement = () => (
 );
 
 asALinkElement.story = {
-  name: 'As A Link Element',
+  name: 'As a Link Element',
   parameters: {
     info: `
 An Alert is a way to notify users without interrupting their actions.

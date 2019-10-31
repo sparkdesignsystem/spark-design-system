@@ -3,6 +3,9 @@ import { pagination } from './pagination';
 
 export default {
   title: 'Components|Pagination',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultStory = () => {
@@ -183,7 +186,7 @@ export const pager = () => {
       class="sprk-c-Pagination sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large"
     >
       <li>
-        <a 
+        <a
           class="sprk-c-Pagination__icon sprk-b-Link sprk-b-Link--plain"
           href=""
         >

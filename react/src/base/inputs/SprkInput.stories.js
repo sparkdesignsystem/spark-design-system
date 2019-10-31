@@ -6,7 +6,7 @@ import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 
 export default {
-  title: 'Base|Inputs',
+  title: 'Components|Input',
   decorators: [withKnobs],
   component: SprkTextInput,
   parameters: {
@@ -28,7 +28,6 @@ export const textInput = () => (
 );
 
 textInput.story = {
-  name: 'Text Input',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -49,7 +48,6 @@ export const hugeTextInput = () => (
 );
 
 hugeTextInput.story = {
-  name: 'Huge Text Input',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -57,7 +55,7 @@ hugeTextInput.story = {
   },
 };
 
-export const checkboxes = () => (
+export const checkbox = () => (
   <SprkSelectionInput
     groupLabel="Checkbox Input"
     choices={[
@@ -81,8 +79,7 @@ export const checkboxes = () => (
   />
 );
 
-checkboxes.story = {
-  name: 'Checkboxes',
+checkbox.story = {
   parameters: {
     jest: [
       'SprkSelectionInput',
@@ -90,7 +87,7 @@ checkboxes.story = {
   },
 };
 
-export const radioButtons = () => (
+export const radioButton = () => (
   <SprkSelectionInput
     groupLabel="Radio Group Label"
     choices={[
@@ -114,8 +111,7 @@ export const radioButtons = () => (
   />
 );
 
-radioButtons.story = {
-  name: 'Radio Buttons',
+radioButton.story = {
   parameters: {
     jest: [
       'SprkSelectionInput',
@@ -163,7 +159,6 @@ export const selectBox = () => (
 );
 
 selectBox.story = {
-  name: 'Select',
   parameters: {
     jest: [
       'SprkSelectionInput',
@@ -171,7 +166,7 @@ selectBox.story = {
   },
 };
 
-export const hugeSelect = () => (
+export const hugeSelectBox = () => (
   <SprkSelectionInput
     label="Select Box Label"
     choices={[
@@ -213,8 +208,7 @@ export const hugeSelect = () => (
   />
 );
 
-hugeSelect.story = {
-  name: 'Huge Select',
+hugeSelectBox.story = {
   parameters: {
     jest: [
       'SprkSelectionInput',
@@ -227,7 +221,6 @@ export const textarea = () => (
 );
 
 textarea.story = {
-  name: 'Textarea',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -257,7 +250,6 @@ export const searchInput = () => (
 );
 
 searchInput.story = {
-  name: 'Search Input',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -275,7 +267,6 @@ export const inlineSearchInput = () => (
 );
 
 inlineSearchInput.story = {
-  name: 'Inline Search Input',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -288,7 +279,6 @@ export const monetaryInput = () => (
 );
 
 monetaryInput.story = {
-  name: 'Monetary Input',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -316,7 +306,6 @@ export const passwordInput = () => (
 );
 
 passwordInput.story = {
-  name: 'Password Input',
   parameters: {
     jest: [
       'SprkRevealInput',
@@ -333,7 +322,6 @@ export const helperText = () => (
 );
 
 helperText.story = {
-  name: 'Helper Text',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -341,7 +329,7 @@ helperText.story = {
   },
 };
 
-export const phoneNumberInput = () => (
+export const phoneInput = () => (
   <SprkTextInput
     label="Phone Number"
     name="phone"
@@ -350,8 +338,7 @@ export const phoneNumberInput = () => (
   />
 );
 
-phoneNumberInput.story = {
-  name: 'Phone Number Input',
+phoneInput.story = {
   parameters: {
     jest: [
       'SprkTextInput',
@@ -369,7 +356,6 @@ export const dateInput = () => (
 );
 
 dateInput.story = {
-  name: 'Date Input',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -389,7 +375,6 @@ export const datePicker = () => (
 );
 
 datePicker.story = {
-  name: 'Date Picker',
   parameters: {
     jest: [
       'SprkDatePickerInput',

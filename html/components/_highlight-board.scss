@@ -1,17 +1,6 @@
 // ==================================================================
 // Highlight Board
 // ==================================================================
-
-//
-// Available Variables
-///
-$sprk-highlight-board-breakpoint: 30rem !default;
-$sprk-highlight-board-content-width: 30rem !default;
-$sprk-highlight-board-type-reduction-percentage: 0.8 !default;
-$sprk-highlight-board-height: 31.25rem !default;
-$sprk-highlight-board-color: $sprk-white !default;
-$sprk-highlight-board-content-box-color: $sprk-white !default;
-
 .sprk-c-HighlightBoard {
   background-color: $sprk-highlight-board-color;
   position: relative;
