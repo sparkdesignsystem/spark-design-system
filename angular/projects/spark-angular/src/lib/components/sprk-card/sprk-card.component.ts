@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
         linkType="unstyled"
         *ngIf="media === 'img'"
         [href]="imgHref"
-        additionalClasses="sprk-o-Stack__item"
+        class="sprk-o-Stack__item"
         [analyticsString]="imgLinkAnalytics"
       >
         <img
