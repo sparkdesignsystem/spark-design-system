@@ -1,6 +1,9 @@
 
 export default {
   title: 'Components|Button',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const primary = () => (

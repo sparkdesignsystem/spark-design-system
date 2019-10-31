@@ -6,6 +6,9 @@ import '../utilities/polyfills/ObjectPrepend';
 
 export default {
   title: 'Components|Stepper',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultStory = () => {
@@ -112,7 +115,7 @@ export const withStepDescriptions = () => {
             Step One
           </h3>
         </span>
-  
+
         <div
           class="sprk-c-Stepper__step-description"
           data-sprk-stepper="description"
@@ -126,7 +129,7 @@ export const withStepDescriptions = () => {
         </div>
       </div>
     </li>
-  
+
     <li
       role="tab"
       class="sprk-c-Stepper__step"
@@ -145,7 +148,7 @@ export const withStepDescriptions = () => {
             Step Two
           </h3>
         </span>
-  
+
         <div
           class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
           data-sprk-stepper="description"
@@ -159,7 +162,7 @@ export const withStepDescriptions = () => {
         </div>
       </div>
     </li>
-  
+
     <li
       role="tab"
       class="sprk-c-Stepper__step"
@@ -178,7 +181,7 @@ export const withStepDescriptions = () => {
             Step Three
           </h3>
         </span>
-  
+
         <div
           class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
           data-sprk-stepper="description"
@@ -192,7 +195,7 @@ export const withStepDescriptions = () => {
         </div>
       </div>
     </li>
-  
+
     <li
       role="tab"
       class="sprk-c-Stepper__step"
@@ -211,7 +214,7 @@ export const withStepDescriptions = () => {
             Step Four
           </h3>
         </span>
-  
+
         <div
           class="sprk-c-Stepper__step-description sprk-u-HideWhenJs"
           data-sprk-stepper="description"

@@ -3,6 +3,9 @@ import { modals } from './modals';
 
 export default {
   title: 'Components|Modal',
+  decorators: [
+    story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
+  ],
 };
 
 export const defaultStory = () => {

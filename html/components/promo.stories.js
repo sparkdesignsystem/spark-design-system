@@ -1,5 +1,8 @@
 export default {
   title: 'Components|Promo',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultStory = () => (`
@@ -8,7 +11,7 @@ export const defaultStory = () => (`
     data-id="promo-1"
   >
 
-    <div 
+    <div
       class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large"
     >
 

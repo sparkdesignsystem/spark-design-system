@@ -1,5 +1,8 @@
 export default {
   title: 'Components|Table',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const columnComparison = () => (

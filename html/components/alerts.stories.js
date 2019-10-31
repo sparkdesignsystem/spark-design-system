@@ -3,7 +3,11 @@ import { alerts } from './alerts';
 
 export default {
   title: 'Components|Alert',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
+
 export const info = () => {
   useEffect(() => {
     alerts();
