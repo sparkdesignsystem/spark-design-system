@@ -1,3 +1,5 @@
+import ComponentPreview from '../../../components/ComponentPreview';
+
 # Accordion
 
 An Accordion is a simple way of showing,
@@ -7,3 +9,29 @@ of related content needs to be
 separated into smaller, digestible
 chunks. An Accordion consists of a
 series of Toggle components.
+
+<ComponentPreview component="accordion" />
+
+[React](google.com) [Angular](google.com) [Html](google.com)
+
+## Usage
+An Accordion should be used when
+content needs to be broken down,
+but is still important enough to
+be of primary interest on the page.
+This Accordion's design is used to
+give it some visual weight
+within the design and make it
+apparent that the content is important.
+
+## Guidelines
+- Content length inside the Accordion does not have a limit.
+- Title content of the Accordion can wrap, but it is recommended
+  that it is short and to the point.
+- Accordions take up 100% width of their parent container until
+  they hit their max width of 850px.
+- The data-id property is provided as a hook for automated tools.
+  If you have multiple instances of the same variant of a
+  component on the same page, make sure each instance
+  has a unique data-id property
+  ("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc).
