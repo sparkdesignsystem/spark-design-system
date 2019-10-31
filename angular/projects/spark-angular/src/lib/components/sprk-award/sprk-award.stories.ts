@@ -50,3 +50,7 @@ export const defaultStory = () => ({
     </sprk-award>
   `,
 });
+
+defaultStory.story = {
+  name: 'Default',
+};

@@ -4,6 +4,9 @@ import '../utilities/polyfills/classListSVG';
 
 export default {
   title: 'Components|Toggle',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const defaultStory = () => {

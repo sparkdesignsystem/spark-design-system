@@ -218,7 +218,7 @@ $sprk-vertical-list-delimiter: ',\00A0' !default;
 $sprk-pag-max-width: 26rem !default;
 /// The font weight of the current
 /// pagination link in the Pagination component.
-$sprk-pag-current-link-font-weight: 500;
+$sprk-pag-current-link-font-weight: 500 !default;
 /// The color of the pagination links in the Pagination component.
 $sprk-pag-link-color: $sprk-black !default;
 /// The color of the pagination links on hover
@@ -427,7 +427,7 @@ $sprk-font-weight-display-seven: 500 !default;
 /// The font-family, including fallbacks of TypeBodyOne.
 $sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
   sans-serif !default;
-  /// The font size of TypeBodyOne.
+/// The font size of TypeBodyOne.
 $sprk-font-size-body-one: 1rem !default;
 /// The color of TypeBodyOne.
 $sprk-color-body-one: $sprk-black !default;
@@ -818,7 +818,7 @@ $sprk-input-max-width: 27.5rem !default;
 // Huge Inputs
 ///
 
-/// THe max-width setting for Huge Inputs.
+/// The max-width setting for Huge Inputs.
 $sprk-input-container-huge-max-width: 37.5rem !default;
 $sprk-text-input-huge-height: 64px !default; // Todo deprecate
 /// The height value for Huge Inputs.
@@ -1513,7 +1513,7 @@ $sprk-masthead-logo-min-width: 174px !default;
 /// The box shadow of the Masthead.
 $sprk-masthead-shadow: none !default;
 /// The box shadow of the Masthead in wide viewports.
-$sprk-masthead-shadow-wide: none;
+$sprk-masthead-shadow-wide: none !default;
 /// The Masthead shadow that gets applied when the page is scrolled.
 $sprk-masthead-shadow-scroll: 0 0 40px rgba(0, 0, 0, 0.1) !default;
 /// The border of the selector in the Masthead with Extended Navigation.
@@ -1550,7 +1550,7 @@ $sprk-masthead-selector-dropdown-padding: 0 !default;
 /// in the Masthead with Extended Navigation.
 $sprk-masthead-selector-min-width: 17rem !default;
 /// This is the height of the Masthead on
-/// small viewports and is used to calculate
+/// narrow viewports and is used to calculate
 /// how far from the top the narrow
 /// navigation items should be displayed.
 $sprk-masthead-narrow-height: 81px !default;
@@ -1820,3 +1820,66 @@ $sprk-carousel-arrow-position-breakpoint: 31.25rem !default;
 $sprk-carousel-dot-container-padding: $sprk-space-xs !default;
 /// The breakpoint for the Carousel component.
 $sprk-carousel-breakpoint: $sprk-split-breakpoint-xl !default;
+
+//
+// Card
+///
+
+/// The maximum width of the Card.
+$sprk-card-max-width: 26.5625rem !default;
+/// The main Card breakpoint.
+$sprk-card-breakpoint: $sprk-split-breakpoint-s !default;
+/// The box shadow of the Card on narrow viewports.
+$sprk-card-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+/// The box shadow of the Card on wide viewports.
+$sprk-card-shadow-wide-viewport: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
+/// The box shadow of the Standout Card variant on narrow viewports.
+$sprk-card-shadow-standout: 0 4px 20px 2px rgba(0, 0, 0, 0.1) !default;
+/// The box shadow of the Standout Card variant on wide viewports.
+$sprk-card-shadow-standout-wide-viewport: 0 4px 40px 2px rgba(0, 0, 0, 0.1) !default;
+/// The border radius of the Card.
+$sprk-card-border-radius: 8px !default;
+/// The padding of the content inside the Card.
+$sprk-card-content-padding: $sprk-space-misc-a !default;
+/// The background color of the header area for the Highlighted Header Card.
+$sprk-card-header-bg-color: $sprk-green !default;
+/// The text color for the Highlighted Header Card.
+$sprk-card-header-text-color: $sprk-white !default;
+
+//
+// Dictionary
+///
+
+/// The border surrounding the Dictionary.
+$sprk-dictionary-border: 1px solid $sprk-gray !default;
+/// The background color of the key value pairs in the striped Dictionary.
+$sprk-dictionary-stripe-color: $sprk-gray !default;
+/// The breakpoint of the Dictionary component.
+$sprk-dictionary-breakpoint: 38.4375rem !default;
+/// The font size of the labels in the Dictionary.
+$sprk-dictionary-label-font-size: $sprk-font-size-body-one !default;
+/// The font weight of the labels in the Dictionary.
+$sprk-dictionary-label-font-weight: $sprk-font-weight-body-one !default;
+/// The line height of the labels in the Dictionary.
+$sprk-dictionary-label-line-height: $sprk-line-height-body-one !default;
+
+//
+// Highlight Board
+///
+
+/// The Highlight Board breakpoint at which styles change
+/// for padding, font size and button width.
+$sprk-highlight-board-breakpoint: 30rem !default;
+/// The maximum width of the content
+/// for the Highlight Board when it has an image.
+$sprk-highlight-board-content-width: 30rem !default;
+/// Percentage reduction value for the
+/// font size in the Highlight Board in narrow viewports.
+$sprk-highlight-board-type-reduction-percentage: 0.8 !default;
+/// The height of the Highlight Board image.
+$sprk-highlight-board-height: 31.25rem !default;
+/// The background color of the Highlight Board.
+$sprk-highlight-board-color: $sprk-white !default;
+/// The background color of
+/// the content box in the Highlight Board.
+$sprk-highlight-board-content-box-color: $sprk-white !default;
