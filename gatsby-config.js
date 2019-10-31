@@ -62,6 +62,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-sectionize`,
+        ],
         defaultLayouts: {
           'homepage-pages': require.resolve('./src/components/layouts/HomepageLayout.js'),
           'installing-spark-pages': require.resolve('./src/components/layouts/InstallingSparkLayout.js'),
