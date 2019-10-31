@@ -54,6 +54,7 @@ $doc-site-layout-max-width: 90rem;
 }
 
 .docs-layout__content {
+  max-width: 50rem;
   padding: 2rem;
   overflow-x: scroll;
   -ms-grid-column: 2;
