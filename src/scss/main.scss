@@ -8,3 +8,5 @@ $doc-site-mobile-breakpoint: 1035px;
 @import './components/context-menu';
 @import './components/footer';
 @import './components/menu';
+@import './vendor/algolia';
+@import './vendor/prism';

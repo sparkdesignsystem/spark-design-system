@@ -1,0 +1,13 @@
+/* stylelint-disable */
+.algolia-autocomplete {
+  width: 100%;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  min-width: 0 !important;
+
+  @media (min-width: 500px) {
+    min-width: 500px !important;
+  }
+}
+/* stylelint-enable */

@@ -16,7 +16,7 @@ const Menu = ({ context, setContext}) => (
       />
 
       <SprkTextInput
-        additionalClasses="sprk-u-mvl sprk-u-BackgroundColor--white"
+        additionalClasses="docs-nav-search sprk-u-mvl sprk-u-BackgroundColor--white sprk-u-Width--100"
         leadingIcon="search"
         hiddenLabel
         name="InlineSearch"

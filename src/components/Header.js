@@ -20,6 +20,7 @@ const Header = ({ menuVisible, setMenuVisible, context, setContext }) => (
         setContext={setContext}
         className="sprk-o-HorizontalList"/>
       <SprkTextInput
+        additionalClasses="docs-header-search"
         leadingIcon="search"
         hiddenLabel
         name="InlineSearch"
