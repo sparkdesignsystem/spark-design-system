@@ -12,6 +12,10 @@ class SprkTextareaCheck extends Component {
       this.state = {
         hasValue: true,
       };
+    } else {
+      this.state = {
+        hasValue: false,
+      };
     }
   }
 
