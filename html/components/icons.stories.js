@@ -1,20 +1,23 @@
 export default {
   title: 'Components|Icons',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const access = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#access" />
-  </svg>        
+  </svg>
   `
 );
-                  
+
 export const amountMoney = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#amount-money" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -22,7 +25,7 @@ export const application = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#application" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -30,7 +33,7 @@ export const applyNow = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#apply-now" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -38,7 +41,7 @@ export const autoLoans = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#auto-loans" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -46,7 +49,7 @@ export const baths = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#baths" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -54,7 +57,7 @@ export const beds = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#beds" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -62,7 +65,7 @@ export const bell = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#bell" />
-  </svg>        
+  </svg>
   `
 );
 
@@ -70,7 +73,7 @@ export const bellFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#bell-filled" />
-  </svg>                  
+  </svg>
   `
 );
 
@@ -78,7 +81,7 @@ export const bellFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled " viewBox="0 0 100 100">
     <use xlink:href="#bell-filled-small" />
-  </svg>                    
+  </svg>
   `
 );
 
@@ -86,7 +89,7 @@ export const blog = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#blog" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -94,7 +97,7 @@ export const calculator = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#calculator" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -102,7 +105,7 @@ export const calendar = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#calendar" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -110,7 +113,7 @@ export const callTeamMember = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#call-team-member" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -118,7 +121,7 @@ export const camera = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#camera" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -126,7 +129,7 @@ export const cashBack = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#cash-back" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -134,7 +137,7 @@ export const chatOnline = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chat-online" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -142,7 +145,7 @@ export const chatOnlineFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chat-online-filled" />
-  </svg>                                              
+  </svg>
   `
 );
 
@@ -150,7 +153,7 @@ export const chatOnlineFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled " viewBox="0 0 100 100">
     <use xlink:href="#chat-online-filled-small" />
-  </svg>                                                            
+  </svg>
   `
 );
 
@@ -158,7 +161,7 @@ export const checkMark = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#check-mark" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -166,7 +169,7 @@ export const checkMarkFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#check-mark-filled" />
-  </svg>                                              
+  </svg>
   `
 );
 
@@ -174,7 +177,7 @@ export const checkMarkFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled " viewBox="0 0 100 100">
     <use xlink:href="#check-mark-filled-small" />
-  </svg>                                                            
+  </svg>
   `
 );
 
@@ -182,7 +185,7 @@ export const chevronDown = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-down" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -190,7 +193,7 @@ export const chevronDownCircle = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-down-circle" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -198,7 +201,7 @@ export const chevronDownCircleTwoColor = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-down-circle-two-color" />
-  </svg>                                          
+  </svg>
   `
 );
 
@@ -206,7 +209,7 @@ export const chevronDownFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-down-filled" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -222,7 +225,7 @@ export const chevronLeft = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-left" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -230,7 +233,7 @@ export const chevronLeftCircle = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-left-circle" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -238,7 +241,7 @@ export const chevronLeftCircleTwoColor = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-left-circle-two-color" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -246,7 +249,7 @@ export const chevronLeftFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-left-filled" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -254,7 +257,7 @@ export const chevronLeftFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#chevron-left-filled-small" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -262,7 +265,7 @@ export const chevronRight = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-right" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -270,7 +273,7 @@ export const chevronRightCircle = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-right-circle" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -278,7 +281,7 @@ export const chevronRightCircleTwoColor = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-right-circle-two-color" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -286,7 +289,7 @@ export const chevronRightFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-right-filled" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -294,7 +297,7 @@ export const chevronRightFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#chevron-right-filled-small" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -302,7 +305,7 @@ export const chevronUp = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-up" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -310,7 +313,7 @@ export const chevronUpCircle = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-up-circle" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -318,7 +321,7 @@ export const chevronUpCircleTwoColor = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-up-circle-two-color" />
-  </svg>                               
+  </svg>
   `
 );
 
@@ -326,7 +329,7 @@ export const chevronUpFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#chevron-up-filled" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -334,7 +337,7 @@ export const chevronUpFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#chevron-up-filled-small" />
-  </svg>                                                                    
+  </svg>
   `
 );
 
@@ -342,7 +345,7 @@ export const clock = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#clock" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -350,7 +353,7 @@ export const clockFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#clock-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -358,7 +361,7 @@ export const clockFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#clock-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -366,7 +369,7 @@ export const closeCircle = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#close-circle" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -374,7 +377,7 @@ export const close = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#close" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -382,7 +385,7 @@ export const closeFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#close-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -390,7 +393,7 @@ export const closeFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#close-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -398,7 +401,7 @@ export const cloud = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#cloud" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -406,7 +409,7 @@ export const cloudFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#cloud-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -414,7 +417,7 @@ export const cloudFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#cloud-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -422,7 +425,7 @@ export const communication = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#communication" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -430,7 +433,7 @@ export const communicationFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#communication-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -438,7 +441,7 @@ export const communicationFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#communication-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -446,7 +449,7 @@ export const condo = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#condo" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -454,7 +457,7 @@ export const cooling = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#cooling" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -462,7 +465,7 @@ export const credit = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#credit" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -470,7 +473,7 @@ export const creditCardPayoff = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#credit-card-payoff" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -478,7 +481,7 @@ export const dedicatedTeam = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#dedicated-team" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -486,7 +489,7 @@ export const desktopComputer = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#desktop-computer" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -494,7 +497,7 @@ export const documentReview = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#document-review" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -502,7 +505,7 @@ export const documentReviewFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#document-review-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -510,7 +513,7 @@ export const documentReviewFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#document-review-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -518,7 +521,7 @@ export const documents = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#documents" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -526,7 +529,7 @@ export const dollar = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#dollar" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -534,7 +537,7 @@ export const download = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#download" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -542,7 +545,7 @@ export const downloadFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#download-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -550,7 +553,7 @@ export const downloadFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#download-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -558,7 +561,7 @@ export const editable = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#editable" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -566,7 +569,7 @@ export const educationalResources = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#educational-resources" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -574,7 +577,7 @@ export const email = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#email" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -582,7 +585,7 @@ export const emailFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#email-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -590,7 +593,7 @@ export const emailFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#email-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -598,7 +601,7 @@ export const exclamation = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#exclamation" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -606,7 +609,7 @@ export const exclamationCredit = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#exclamation-credit" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -614,7 +617,7 @@ export const exclamationFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#exclamation-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -622,7 +625,7 @@ export const exclamationFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#exclamation-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -630,7 +633,7 @@ export const facebook = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#facebook" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -638,7 +641,7 @@ export const facebookTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#facebook-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -646,7 +649,7 @@ export const feedback = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#feedback" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -654,7 +657,7 @@ export const feedbackFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#feedback-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -662,7 +665,7 @@ export const feedbackFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#feedback-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -670,7 +673,7 @@ export const findAgent = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#find-agent" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -678,7 +681,7 @@ export const free = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#free" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -686,7 +689,7 @@ export const heat = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#heat" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -694,7 +697,7 @@ export const home = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#home" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -702,7 +705,7 @@ export const homeImprovement = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#home-improvement" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -710,7 +713,7 @@ export const homeShopping = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#home-shopping" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -718,7 +721,7 @@ export const homeSize = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#home-size" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -726,7 +729,7 @@ export const information = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#information" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -734,7 +737,7 @@ export const informationFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#information-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -742,7 +745,7 @@ export const informationFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#information-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -750,7 +753,7 @@ export const instagram = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#instagram" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -758,7 +761,7 @@ export const instagramTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#instagram-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -766,7 +769,7 @@ export const land = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#land" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -774,7 +777,7 @@ export const landline = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#landline" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -782,7 +785,7 @@ export const landlineFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#landline-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -790,7 +793,7 @@ export const landlineFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#landline-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -798,7 +801,7 @@ export const laptop = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#laptop" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -806,7 +809,7 @@ export const largePurchase = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#large-purchase" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -814,7 +817,7 @@ export const linkedin = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#linkedin" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -822,7 +825,7 @@ export const linkedinTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#linkedin-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -830,7 +833,7 @@ export const lock = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#lock" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -838,7 +841,7 @@ export const medicalExpenses = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#medical-expenses" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -846,7 +849,7 @@ export const menu = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#menu" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -854,7 +857,7 @@ export const mls = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#mls" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -862,7 +865,7 @@ export const mobile = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#mobile" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -870,7 +873,7 @@ export const mortgage = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#mortgage" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -878,7 +881,7 @@ export const multiFamily = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#multi-family" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -886,7 +889,7 @@ export const multiplePages = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#multiple-pages" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -894,7 +897,7 @@ export const oneTimeUpdate = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#one-time-update" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -902,7 +905,7 @@ export const organize = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#organize" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -910,7 +913,7 @@ export const organizeFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#organize-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -918,7 +921,7 @@ export const organizeFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#organize-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -926,7 +929,7 @@ export const ourFamily = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#our-family" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -934,7 +937,7 @@ export const parking = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#parking" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -942,7 +945,7 @@ export const payment = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#payment" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -950,7 +953,7 @@ export const paymentCenter = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#payment-center" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -958,7 +961,7 @@ export const percent = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#percent" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -966,7 +969,7 @@ export const pinterest = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#pinterest" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -974,7 +977,7 @@ export const pinterestTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#pinterest-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -982,7 +985,7 @@ export const play = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#play" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -990,7 +993,7 @@ export const plus = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#plus" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -998,7 +1001,7 @@ export const plusFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#plus-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1006,7 +1009,7 @@ export const plusFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#plus-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1014,7 +1017,7 @@ export const prequalified = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#prequalified" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1022,7 +1025,7 @@ export const prequalifiedFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#prequalified-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1030,7 +1033,7 @@ export const prequalifiedFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#prequalified-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1038,7 +1041,7 @@ export const pricePerSqFt = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#price-per-sq-ft" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1046,7 +1049,7 @@ export const print = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#print" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1054,7 +1057,7 @@ export const question = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#question" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1062,7 +1065,7 @@ export const questionFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#question-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1070,7 +1073,7 @@ export const questionFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#question-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1078,7 +1081,7 @@ export const rateShield = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#rate-shield" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1086,7 +1089,7 @@ export const rateShieldFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#rate-shield-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1094,7 +1097,7 @@ export const rateShieldFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#rate-shield-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1102,7 +1105,7 @@ export const rates = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#rates" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1110,7 +1113,7 @@ export const recurringUpdate = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#recurring-update" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1118,7 +1121,7 @@ export const refinance = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#refinance" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1126,7 +1129,7 @@ export const reviews = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#reviews" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1134,7 +1137,7 @@ export const rocket = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#rocket" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1142,7 +1145,7 @@ export const rocketDocTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#rocket-doc-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1150,7 +1153,7 @@ export const rotatePage = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#rotate-page" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1158,7 +1161,7 @@ export const sameDay = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#same-day" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1166,7 +1169,7 @@ export const savings = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#savings" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1174,7 +1177,7 @@ export const schools = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#schools" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1182,7 +1185,7 @@ export const search = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#search" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1190,7 +1193,7 @@ export const secureProcess = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#secure-process" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1198,7 +1201,7 @@ export const settings = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#settings" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1206,7 +1209,7 @@ export const settingsFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#settings-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1214,7 +1217,7 @@ export const settingsFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#settings-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1222,7 +1225,7 @@ export const single = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#single" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1230,7 +1233,7 @@ export const smallBusiness = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#small-business" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1238,7 +1241,7 @@ export const snapchat = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#snapchat" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1246,7 +1249,7 @@ export const snapchatTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#snapchat-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1254,7 +1257,7 @@ export const technology = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#technology" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1262,7 +1265,7 @@ export const thumbsUp = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#thumbs-up" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1270,7 +1273,7 @@ export const townhouse = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#townhouse" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1278,7 +1281,7 @@ export const trash = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#trash" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1286,7 +1289,7 @@ export const trashFilled = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#trash-filled" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1294,7 +1297,7 @@ export const trashFilledSmall = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--filled" viewBox="0 0 100 100">
     <use xlink:href="#trash-filled-small" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1302,7 +1305,7 @@ export const twitter = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#twitter" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1310,7 +1313,7 @@ export const twitterTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#twitter-two-color" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1318,7 +1321,7 @@ export const unlock = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#unlock" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1326,7 +1329,7 @@ export const update = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#update" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1334,7 +1337,7 @@ export const upload = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#upload" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1342,7 +1345,7 @@ export const user = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#user" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1350,7 +1353,7 @@ export const userAccount = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#user-account" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1358,7 +1361,7 @@ export const verifiedApproval = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#verified-approval" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1366,7 +1369,7 @@ export const vip = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#vip" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1374,7 +1377,7 @@ export const wifi = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#wifi" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1382,7 +1385,7 @@ export const writtenCheck = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#written-check" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1390,7 +1393,7 @@ export const yearBuilt = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#year-built" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1398,7 +1401,7 @@ export const youtube = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#youtube" />
-  </svg>         
+  </svg>
   `
 );
 
@@ -1406,6 +1409,6 @@ export const youtubeTwoColor = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#youtube-two-color" />
-  </svg>         
+  </svg>
   `
 );

@@ -13,6 +13,9 @@ import '../utilities/polyfills/classListSVG';
 
 export default {
   title: 'Base|Inputs',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const textInput = () => {
