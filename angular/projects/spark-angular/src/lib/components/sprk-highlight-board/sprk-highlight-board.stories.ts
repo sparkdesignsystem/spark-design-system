@@ -3,7 +3,6 @@ import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export default {
   title: 'Components|Highlight Board',
@@ -24,7 +23,6 @@ const modules = {
       path: 'iframe.html',
       component: SprkHighlightBoardComponent,
     }]),
-    BrowserAnimationsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
@@ -71,7 +69,7 @@ export const stacked = () => ({
       heading="Highlight Board Heading Example"
       ctaText="Learn More"
       type="stacked"
-      imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+      imgSrc="https://spark-assets.netlify.com/desktop.jpg"
       imgAlt="placeholder"
       idString="highlightboard-4"
     >
