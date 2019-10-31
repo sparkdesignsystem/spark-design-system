@@ -11,7 +11,7 @@ export default {
   ],
 };
 
-export const stepperStory = () => {
+export const defaultStory = () => {
   useEffect(() => {
     stepper();
   }, []);
@@ -79,11 +79,11 @@ export const stepperStory = () => {
   `;
 };
 
-stepperStory.story = {
-  name: 'Stepper',
+defaultStory.story = {
+  name: 'Default',
 };
 
-export const stepperWithStepDescriptions = () => {
+export const withStepDescriptions = () => {
   useEffect(() => {
     stepper();
   }, []);
@@ -232,7 +232,7 @@ export const stepperWithStepDescriptions = () => {
   `;
 };
 
-export const stepperWithDarkBackground = () => {
+export const withDarkBackground = () => {
   useEffect(() => {
     stepper();
   }, []);
@@ -376,7 +376,7 @@ export const stepperWithDarkBackground = () => {
   `;
 };
 
-export const stepperWithCarousel = () => {
+export const withCarousel = () => {
   useEffect(() => {
     stepper();
 

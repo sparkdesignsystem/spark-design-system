@@ -14,6 +14,8 @@ addDecorator(withActions('click .sprk-b-Link'));
 addParameters({
   options: {
     theme: sparkTheme,
+    storySort: (a, b) =>
+      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, { numeric: true }),
   },
 });
 

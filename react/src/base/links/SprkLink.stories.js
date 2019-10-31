@@ -5,7 +5,7 @@ import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
 
 export default {
-  title: 'Base|Links',
+  title: 'Components|Link',
   decorators: [withKnobs],
   component: SprkLink,
   parameters: { jest: ['SprkLink'] },

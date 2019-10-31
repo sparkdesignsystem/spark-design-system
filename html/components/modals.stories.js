@@ -2,13 +2,13 @@ import { useEffect } from '@storybook/client-api';
 import { modals } from './modals';
 
 export default {
-  title: 'Components|Modals',
+  title: 'Components|Modal',
   decorators: [
     story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
   ],
 };
 
-export const choice = () => {
+export const defaultStory = () => {
   useEffect(() => {
     modals();
   });
@@ -86,6 +86,10 @@ export const choice = () => {
   tabindex="-1"
 ></div>
   `;
+};
+
+defaultStory.story = {
+  name: 'Default',
 };
 
 export const info = () => {

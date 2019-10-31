@@ -1,11 +1,11 @@
 export default {
-  title: 'Base|Tables',
+  title: 'Components|Table',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
 };
 
-export const defaultTable = () => (
+export const columnComparison = () => (
   `<div class="sprk-b-TableContainer" data-id="table-1">
     <table class="sprk-b-Table sprk-b-Table--spacing-medium">
       <thead>
@@ -41,7 +41,7 @@ export const defaultTable = () => (
   </div>`
 );
 
-export const secondaryTable = () => (
+export const secondary = () => (
   `<div class="sprk-b-TableContainer" data-id="table-2">
     <table class="sprk-b-Table sprk-b-Table--secondary sprk-b-Table--spacing-medium">
       <thead>
@@ -77,7 +77,7 @@ export const secondaryTable = () => (
   </div>`
 );
 
-export const groupedColumnsTable = () => (
+export const groupedColumns = () => (
   `<div class="sprk-b-TableContainer" data-id="table-3">
     <table class="sprk-b-Table sprk-b-Table--grouped-columns sprk-b-Table--spacing-medium">
       <thead>
@@ -126,7 +126,7 @@ export const groupedColumnsTable = () => (
   </div>`
 );
 
-export const rowComparisonTable = () => (
+export const rowComparison = () => (
   `<div class="sprk-b-TableContainer" data-id="table-4">
     <table class="sprk-b-Table sprk-b-Table--row-comparison sprk-b-Table--spacing-medium">
       <thead>
@@ -167,7 +167,7 @@ export const rowComparisonTable = () => (
   </div>`
 );
 
-export const secondaryRowComparisonTable = () => (
+export const secondaryRowComparison = () => (
   `<div class="sprk-b-TableContainer" data-id="table-5">
     <table class="sprk-b-Table sprk-b-Table--secondary-row-comparison sprk-b-Table--spacing-medium">
       <tbody>

@@ -1,6 +1,6 @@
 
 export default {
-  title: 'Components|Buttons',
+  title: 'Components|Button',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

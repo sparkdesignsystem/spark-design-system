@@ -31,10 +31,6 @@ export const standout = () => (
   </SprkCard>
 );
 
-standout.story = {
-  name: 'Standout',
-};
-
 export const highlightedHeader = () => (
   <SprkCard
     idString="highlighted-header"
@@ -47,10 +43,6 @@ export const highlightedHeader = () => (
     }}
   />
 );
-
-highlightedHeader.story = {
-  name: 'Highlighted Header',
-};
 
 export const teaser = () => (
   <SprkCard
@@ -78,10 +70,6 @@ export const teaser = () => (
   />
 );
 
-teaser.story = {
-  name: 'Teaser',
-};
-
 export const teaserWithDifferentElementOrder = () => (
   <SprkCard
     idString="card1"
@@ -107,10 +95,6 @@ export const teaserWithDifferentElementOrder = () => (
     }}
   />
 );
-
-teaserWithDifferentElementOrder.story = {
-  name: 'Teaser With Different Element Order',
-};
 
 export const cardLayoutTwoUp = () => (
   <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
@@ -166,7 +150,7 @@ export const cardLayoutTwoUp = () => (
 );
 
 cardLayoutTwoUp.story = {
-  name: 'Card Layout - Two up',
+  name: 'Card Layout - Two Up',
 };
 
 export const cardLayoutThreeUp = () => (
@@ -247,7 +231,7 @@ export const cardLayoutThreeUp = () => (
 );
 
 cardLayoutThreeUp.story = {
-  name: 'Card Layout - Three up',
+  name: 'Card Layout - Three Up',
 };
 
 export const cardLayoutFourUp = () => (
@@ -352,5 +336,5 @@ export const cardLayoutFourUp = () => (
 );
 
 cardLayoutFourUp.story = {
-  name: 'Card Layout - Four up',
+  name: 'Card Layout - Four Up',
 };
