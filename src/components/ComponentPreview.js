@@ -31,6 +31,7 @@ class ComponentPreview extends React.Component {
       hasHTML
     } = this.props;
     const componentURL = `https://spark-sb-html.netlify.com/iframe.html?id=components-${componentName}`;
+    const devcomponentURL = `https://spark-sb-html.netlify.com/iframe.html?id=components-${componentName}`;
 
     return (
       <div className="sprk-o-Box">
@@ -39,7 +40,7 @@ class ComponentPreview extends React.Component {
             title="Component Preview"
             className="docs-c-ComponentPreview"
             width="100%"
-            src={componentURL}
+            src={devcomponentURL}
           />
         </div>
 
