@@ -1,5 +1,8 @@
 export default {
-  title: 'Components|Dividers',
+  title: 'Components|Divider',
+  decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
+  ],
 };
 
 export const asASpanElement = () =>(`

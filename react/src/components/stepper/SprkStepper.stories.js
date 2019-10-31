@@ -40,7 +40,7 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const withDescriptions = () => (
+export const withStepDescriptions = () => (
   <SprkStepper
     hasDarkBackground={boolean('hasDarkBackground', false)}
     additionalClasses={text('additionalClasses', '')}

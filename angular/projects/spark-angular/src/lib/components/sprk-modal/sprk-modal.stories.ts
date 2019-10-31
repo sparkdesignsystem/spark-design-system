@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { SprkModalModule } from './sprk-modal.module';
 
 export default {
-  title: 'Components|Modals',
+  title: 'Components|Modal',
   component: SprkModalModule,
   decorators: [
     storyWrapper(

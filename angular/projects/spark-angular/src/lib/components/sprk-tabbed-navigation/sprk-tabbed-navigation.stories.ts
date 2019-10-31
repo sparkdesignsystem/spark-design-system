@@ -9,7 +9,7 @@ import {
 
 
 export default {
-  title: 'Components|Tabbed Navigation',
+  title: 'Components|Tabs',
   component: SprkTabbedNavigationModule,
   decorators: [
     storyWrapper(

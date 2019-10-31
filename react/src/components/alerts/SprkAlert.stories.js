@@ -4,7 +4,7 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import SprkAlert from './SprkAlert';
 
 export default {
-  title: 'Components|Alerts',
+  title: 'Components|Alert',
   decorators: [
     withKnobs,
     story => <div className="sprk-o-Box">{story()}</div>
@@ -61,34 +61,6 @@ each instance has a unique data-id property
   },
 };
 
-export const success = () => (
-  <SprkAlert
-    onFocus={action('focus')}
-    message={text('Message', 'This is a success message.')}
-    additionalClasses={text('additionalClasses', '') || undefined}
-    iconNameDismiss={text('iconNameDismiss', '') || undefined}
-    iconNameFail={text('iconNameFail', '') || undefined}
-    iconNameSuccess={text('iconNameSuccess', '') || undefined}
-    iconNameInfo={text('iconNameInfo', '') || undefined}
-    onDismiss={action('click')}
-    isVisible={boolean('isVisible', true)}
-    isDismissible={boolean('isDismissible', true)}
-    variant="success"
-    idString={text('idString', 'alert-2')}
-    analyticsString={text('analyticsString', 'alert-2')}
-  />
-);
-
-success.story = {
-  name: 'Success',
-  parameters: {
-    info: `
-These provide positive feedback to a user's action.
-Success Alerts have a checkmark icon.
-    `,
-  },
-};
-
 export const info = () => (
   <SprkAlert
     onFocus={action('focus')}
@@ -108,11 +80,37 @@ export const info = () => (
 );
 
 info.story = {
-  name: 'Info',
   parameters: {
     info: `
 Shows information that is important for a
 client to read. Information Alerts have a Bell icon.
+    `,
+  },
+};
+
+export const success = () => (
+  <SprkAlert
+    onFocus={action('focus')}
+    message={text('Message', 'This is a success message.')}
+    additionalClasses={text('additionalClasses', '') || undefined}
+    iconNameDismiss={text('iconNameDismiss', '') || undefined}
+    iconNameFail={text('iconNameFail', '') || undefined}
+    iconNameSuccess={text('iconNameSuccess', '') || undefined}
+    iconNameInfo={text('iconNameInfo', '') || undefined}
+    onDismiss={action('click')}
+    isVisible={boolean('isVisible', true)}
+    isDismissible={boolean('isDismissible', true)}
+    variant="success"
+    idString={text('idString', 'alert-2')}
+    analyticsString={text('analyticsString', 'alert-2')}
+  />
+);
+
+success.story = {
+  parameters: {
+    info: `
+These provide positive feedback to a user's action.
+Success Alerts have a checkmark icon.
     `,
   },
 };
@@ -139,7 +137,6 @@ export const fail = () => (
 );
 
 fail.story = {
-  name: 'Fail',
   parameters: {
     info: `
 These provide negative feedback to a
@@ -168,7 +165,6 @@ export const noDismissButton = () => (
 );
 
 noDismissButton.story = {
-  name: 'No Dismiss Button',
   parameters: {
     info: `
 Alerts can be used without the dismiss button.

@@ -48,7 +48,7 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const information = () => (
+export const informational = () => (
   <SprkDropdown
     variant="informational"
     title="My Choices"
@@ -94,7 +94,3 @@ export const information = () => (
     defaultTriggerText="Make a selection..."
   />
 );
-
-information.story = {
-  name: 'Information',
-};

@@ -4,7 +4,7 @@ import SprkList from './SprkList';
 import SprkListItem from './SprkListItem';
 
 export default {
-  title: 'Base|Lists',
+  title: 'Components|List',
   component: SprkList,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
