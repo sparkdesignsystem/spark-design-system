@@ -5,6 +5,7 @@
 
 .algolia-autocomplete .ds-dropdown-menu {
   min-width: 0 !important;
+  width: 100%;
 
   @media (min-width: 500px) {
     min-width: 500px !important;

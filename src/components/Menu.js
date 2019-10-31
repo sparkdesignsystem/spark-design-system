@@ -14,15 +14,6 @@ const Menu = ({ context, setContext}) => (
         context={context}
         setContext={setContext}
       />
-
-      <SprkTextInput
-        additionalClasses="docs-nav-search sprk-u-mvl sprk-u-BackgroundColor--white sprk-u-Width--100"
-        leadingIcon="search"
-        hiddenLabel
-        name="InlineSearch"
-        placeholder="Search"
-      />
-
       <SprkDivider element="span" />
     </div>
     { context === 'installing-spark'

@@ -1,12 +1,19 @@
 .docs-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: $docs-search-wrap-breakpoint) {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
 }
 
 .docs-header__group {
-  align-items: center;
-  display: flex;
+  margin: 1rem auto;
+
+  @media (min-width: $docs-search-wrap-breakpoint) {
+    align-items: center;
+    display: flex;
+    margin: 0;
+  }
 }
 
 .docs-header .sprk-b-InputContainer {
@@ -23,7 +30,7 @@
   }
 }
 
-.docs-header__menu-wrapper {
+.docs-header__menu {
   @media (max-width: $doc-site-mobile-breakpoint) {
     display: none;
   }
