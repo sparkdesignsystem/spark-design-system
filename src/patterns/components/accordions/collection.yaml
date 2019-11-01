@@ -17,9 +17,6 @@ variableTable:
   $sprk-accordion-border:
     default: 1px solid $sprk-black-tint-25
     description: Sets the border used in the accordion.
-  $sprk-accordion-border-open:
-    default: 1px solid $sprk-black
-    description: Sets the border used in the accordion items when they are open.
   $sprk-accordion-summary-color:
     default: $sprk-black
     description: Sets the font color of the item summary.
