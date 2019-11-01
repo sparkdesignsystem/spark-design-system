@@ -55,6 +55,27 @@ hugeTextInput.story = {
   },
 };
 
+export const hugeTextInputWithDefaultValue = () => (
+  <SprkTextInput
+    type="hugeTextInput"
+    label={text('label', 'Text Input Label')}
+    name="text-input-label"
+    valid={boolean('valid', true)}
+    disabled={boolean('disabled', false)}
+    placeholder="Huge Text Placeholder"
+    errorMessage="There is an error on this field."
+    defaultValue="Default Value"
+  />
+);
+
+hugeTextInputWithDefaultValue.story = {
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
 export const checkbox = () => (
   <SprkSelectionInput
     groupLabel="Checkbox Input"
