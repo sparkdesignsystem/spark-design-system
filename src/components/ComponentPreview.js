@@ -29,9 +29,10 @@ class ComponentPreview extends React.Component {
       hasReact,
       hasAngular,
       hasHTML,
+      componentType,
     } = this.props;
-    const componentURL = `https://spark-sb-html.netlify.com/iframe.html?id=components-${componentName}`;
-    const devcomponentURL = `https://deploy-preview-2267--spark-sb-html.netlify.com/iframe.html?id=components-${componentName}`;
+    const componentIframeURL = `https://spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
+    const devcomponentURL = `https://deploy-preview-2267--spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
 
     return (
       <>
@@ -52,7 +53,9 @@ class ComponentPreview extends React.Component {
           >
             {hasHTML && (
               <SprkListItem>
-                <SprkLink href="#">
+                <SprkLink
+                  href={`https://spark-sb-html.netlify.com/?path=/story/${componentType}-${componentName}`}
+                  target="_blank">
                   HTML
                 </SprkLink>
               </SprkListItem>
@@ -60,7 +63,9 @@ class ComponentPreview extends React.Component {
 
             {hasReact && (
               <SprkListItem>
-                <SprkLink href="#">
+                <SprkLink
+                  href={`https://spark-sb-react.netlify.com/?path=/story/${componentType}-${componentName}`}
+                  target="_blank">
                   React
                 </SprkLink>
               </SprkListItem>
@@ -68,7 +73,9 @@ class ComponentPreview extends React.Component {
 
             {hasAngular && (
               <SprkListItem>
-                <SprkLink href="#">
+                <SprkLink
+                  href={`https://spark-sb-angular.netlify.com/?path=/story/${componentType}-${componentName}`}
+                  target="_blank">
                   Angular
                 </SprkLink>
               </SprkListItem>
@@ -89,6 +96,7 @@ ComponentPreview.defaultProps = {
   hasAngular: true,
   hasReact: true,
   hasHTML: true,
+  componentType: 'components',
 };
 
 export default ComponentPreview;
