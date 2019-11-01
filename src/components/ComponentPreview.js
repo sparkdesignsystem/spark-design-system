@@ -35,7 +35,7 @@ class ComponentPreview extends React.Component {
     const devcomponentURL = `https://deploy-preview-2267--spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
 
     return (
-      <>
+      <div className="sprk-u-mbm">
         <div className="sprk-u-AbsoluteCenter sprk-u-mbm sprk-o-Box">
           <IframeResizer
             title="Component Preview"
@@ -83,7 +83,7 @@ class ComponentPreview extends React.Component {
           </SprkList>
           </>
         )}
-      </>
+      </div>
     );
   }
 };
