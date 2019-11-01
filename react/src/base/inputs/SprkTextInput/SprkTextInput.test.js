@@ -63,6 +63,20 @@ it('should add floating label class to huge text when there is value', () => {
   ).toBe(true);
 });
 
+it('should add floating label class to huge text when there is defaultValue', () => {
+  const wrapper = mount(
+    <SprkTextInput
+      defaultValue="default Value"
+      type="hugeTextInput"
+    />,
+  );
+  expect(
+    wrapper
+      .find('.sprk-b-TextInput')
+      .hasClass('sprk-b-Input--has-floating-label'),
+  ).toBe(true);
+});
+
 it('should add classes when additionalClasses has a value', () => {
   const wrapper = mount(<SprkTextInput additionalClasses="sprk-u-man" />);
   expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
