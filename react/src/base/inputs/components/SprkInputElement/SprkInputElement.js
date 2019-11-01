@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
-class SprkTextareaCheck extends Component {
+class SprkInputElement extends Component {
   constructor(props) {
     const { value } = props;
     const { defaultValue } = props;
@@ -84,7 +84,7 @@ class SprkTextareaCheck extends Component {
   }
 }
 
-SprkTextareaCheck.propTypes = {
+SprkInputElement.propTypes = {
   analyticsString: propTypes.string,
   errorContainerId: propTypes.string,
   formatter: propTypes.func,
@@ -97,4 +97,4 @@ SprkTextareaCheck.propTypes = {
   valid: propTypes.bool,
 };
 
-export default SprkTextareaCheck;
+export default SprkInputElement;
