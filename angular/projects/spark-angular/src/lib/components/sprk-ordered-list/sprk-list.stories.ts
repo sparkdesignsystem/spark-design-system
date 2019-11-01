@@ -60,10 +60,6 @@ export const ordered = () => ({
 export const indented = () => ({
   moduleMetadata: modules,
   template: `
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum.
-    </p>
-
     <sprk-unordered-list
       listType="indented"
       idString="unordered-list-2"
@@ -78,10 +74,6 @@ export const indented = () => ({
         Indented Item
       </sprk-list-item>
     </sprk-unordered-list>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum.
-    </p>
   `,
 });
 

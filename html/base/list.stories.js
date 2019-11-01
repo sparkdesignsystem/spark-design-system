@@ -33,11 +33,6 @@ export const ordered = () => (
 
 export const indented = () => (
   `
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed gravida urna quis nulla ultrices, sed efficitur
-      risus elementum.
-    </p>
     <ul
       class="sprk-b-List sprk-b-List--indented"
       data-id="unordered-list-2"
@@ -46,11 +41,6 @@ export const indented = () => (
       <li data-id="list-item-8">Indented Item</li>
       <li data-id="list-item-9">Indented Item</li>
     </ul>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit. Sed gravida urna quis
-      nulla ultrices, sed efficitur risus elementum.
-    </p>
   `
 );
 
