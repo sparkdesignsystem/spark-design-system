@@ -1,6 +1,6 @@
 .docs-c-ComponentPreview {
-  border: 0;
+  border: 2px solid $sprk-black;
+  max-width: $sprk-measure;
   width: 100%;
-  max-width: 37.5rem;
   display: block;
 }

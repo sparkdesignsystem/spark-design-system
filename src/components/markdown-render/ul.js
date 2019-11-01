@@ -5,6 +5,7 @@ function Ul(props) {
     <ul className="
       sprk-b-List
       sprk-b-List--indented
+      sprk-u-Measure
       sprk-u-mbl" {...props}/>
   );
 }

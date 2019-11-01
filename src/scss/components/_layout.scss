@@ -55,8 +55,8 @@ $doc-site-layout-max-width: 90rem;
 
 .docs-layout__content {
   padding: 2rem;
-  max-width: 50rem;
   margin: 0 auto;
+  width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     overflow-x: scroll;

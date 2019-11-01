@@ -14,15 +14,6 @@ class ComponentPreview extends React.Component {
     this.iframeRef = React.createRef();
   }
 
-  // resizePreview(elementRef) {
-  //   console.log(elementRef, 'cats')
-  //   elementRef.current.style.height = elementRef.current.contentWindow.document.body.scrollHeight + 'px';
-  // }
-
-  // componentDidMount() {
-  //   this.resizePreview(this.iframeRef);
-  // }
-
   render() {
     const {
       componentName,
@@ -30,16 +21,22 @@ class ComponentPreview extends React.Component {
       hasAngular,
       hasHTML,
       componentType,
+      minHeight,
+      maxWidth,
     } = this.props;
     const componentIframeURL = `https://spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
     const devcomponentURL = `https://deploy-preview-2267--spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
 
     return (
       <div className="sprk-u-mbm">
-        <div className="sprk-u-AbsoluteCenter sprk-u-mbm sprk-o-Box">
+        <div className="sprk-u-mbm">
           <IframeResizer
+            style={{
+              minHeight: minHeight,
+              maxWidth: maxWidth
+            }}
             title="Component Preview"
-            className="docs-c-ComponentPreview"
+            className="docs-c-ComponentPreview sprk-o-Box"
             src={devcomponentURL}
           />
         </div>
@@ -90,12 +87,14 @@ class ComponentPreview extends React.Component {
 
 ComponentPreview.propTypes = {
   isVisible: PropTypes.string,
+  minHeight: PropTypes.string,
+  componentName: PropTypes.string,
+  hasAngular: PropTypes.bool,
+  hasReact: PropTypes.bool,
+  hasHTML: PropTypes.bool,
 };
 
 ComponentPreview.defaultProps = {
-  hasAngular: true,
-  hasReact: true,
-  hasHTML: true,
   componentType: 'components',
 };
 
