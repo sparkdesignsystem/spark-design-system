@@ -7,7 +7,12 @@ export default {
   title: 'Components|Alert',
   decorators: [withKnobs],
   component: SprkAlert,
-  parameters: { jest: ['SprkAlert'] },
+  parameters: {
+    jest: ['SprkAlert'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
+    `,
+   },
 };
 
 export const defaultStory = () => (
@@ -27,15 +32,6 @@ export const defaultStory = () => (
   />
 );
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
-    `,
-  },
-};
-
 export const info = () => (
   <SprkAlert
     onFocus={action('focus')}
@@ -54,15 +50,6 @@ export const info = () => (
   />
 );
 
-info.story = {
-  parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
-    `,
-  },
-};
-
-
 export const success = () => (
   <SprkAlert
     onFocus={action('focus')}
@@ -80,14 +67,6 @@ export const success = () => (
     analyticsString={text('analyticsString', 'alert-2')}
   />
 );
-
-success.story = {
-  parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
-    `,
-  },
-};
 
 export const fail = () => (
   <SprkAlert
@@ -110,14 +89,6 @@ export const fail = () => (
   />
 );
 
-fail.story = {
-  parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
-    `,
-  },
-};
-
 export const noDismissButton = () => (
   <SprkAlert
     onFocus={action('focus')}
@@ -135,11 +106,3 @@ export const noDismissButton = () => (
     analyticsString={text('analyticsString', 'alert-5')}
   />
 );
-
-noDismissButton.story = {
-  parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
-    `,
-  },
-};

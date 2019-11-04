@@ -8,7 +8,12 @@ export default {
   title: 'Components|Link',
   decorators: [withKnobs],
   component: SprkLink,
-  parameters: { jest: ['SprkLink'] },
+  parameters: {
+    jest: ['SprkLink'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/link)
+    `,
+  },
 };
 
 export const defaultStory = () => (
@@ -27,24 +32,6 @@ export const defaultStory = () => (
 
 defaultStory.story = {
   name: 'Default',
-  parameters: {
-    info: `
-Text links should take the user to a new place or change
-the view the user is on. Links use the medium blue brand
-color for their idle and hover states while using the dark
-blue brand color for the visited state.
-
-### Restrictions
-- Do not use Spark Link classes on links that solely have images in them.
-- Link text should be as meaningful as possible so users can
-understand what the purpose of the link is.
-- The data-id property is provided as a hook for
-automated tools. If you have multiple instances of
-the same variant of a component on the same page,
-make sure each instance has a unique data-id
-property ("link-1", "link-2", "link-3", etc).
-    `,
-  },
 };
 
 export const simple = () => (
@@ -61,17 +48,6 @@ export const simple = () => (
     {text('text', 'Simple Link')}
   </SprkLink>
 );
-
-simple.story = {
-  name: 'Simple',
-  parameters: {
-    info: `
-These are generally used when they are not part of a body of text.
-For example, a list of secondary navigation links in
-the footer or a cancel action next to a submit button.
-    `,
-  },
-};
 
 export const iconWithTextLink = () => (
   <SprkLink
@@ -97,15 +73,6 @@ export const iconWithTextLink = () => (
 
 iconWithTextLink.story = {
   name: 'Icon With Text Link',
-  parameters: {
-    info: `
-This is the link and icon style
-to use when there is an icon
-with description text. You may change the
-size of the icon by adjusting the icon modifier class
-that is on the svg element.
-    `,
-  },
 };
 
 export const disabled = () => (
@@ -121,12 +88,3 @@ export const disabled = () => (
     {text('text', 'Disabled Link')}
   </SprkLink>
 );
-
-disabled.story = {
-  name: 'Disabled',
-  parameters: {
-    info: `
-These have a muted color and are not clickable.
-    `,
-  },
-};
