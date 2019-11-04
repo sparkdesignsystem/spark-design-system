@@ -1,34 +1,82 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import SiteLogo from './site-logo';
+import { SprkFooter, SprkLink } from '@sparkdesignsystem/spark-react';
 
-const Footer = ({ children }) => (
-  <div className="docs-footer">
-    <SiteLogo />
-    <div className="docs-footer__content">
-      <p>Licensed under <a className="sprk-b-Link" href="https://github.com/sparkdesignsystem/spark-design-system/blob/master/LICENSE">MIT</a></p>
-      <p>2019 <a className="sprk-b-Link" href="https://www.rocketmortgage.com/">Rocket Mortgage</a> by Quicken Loans</p>
-      <p> Spark is available for
-        <a className="sprk-b-Link" href="#nogo">Angular</a>,
-        <a className="sprk-b-Link" href="#nogo">React</a>,
-        and <a className="sprk-b-Link" href="#nogo">Vanilla JS</a>
-      </p>
-    </div>
+const linkColumns = [
+  {
+    heading: 'Support',
+    links: [{
+        href: 'https://github.com/sparkdesignsystem/spark-design-system/blob/staging/CONTRIBUTING.md',
+        text: 'Contributing',
+        element: 'a',
+      },
+      {
+        href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
+        text: 'Release Notes',
+        element: 'a',
+      },
+      {
+        href: 'https://github.com/sparkdesignsystem/spark-design-system',
+        text: 'Github',
+        element: 'a',
+      },
+      {
+        href: 'https://github.com/sparkdesignsystem/spark-design-system/issues/new/choose',
+        text: 'File An Issue',
+        element: 'a',
+      },
+    ],
+  },
+  {
+    heading: 'Available Packages',
+    links: [{
+        href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark-angular',
+        text: 'Angular',
+        element: 'a',
+      },
+      {
+        href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark-react',
+        text: 'React',
+        element: 'a',
+      },
+      {
+        href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark',
+        text: 'HTML',
+        element: 'a',
+      },
+    ],
+  },
+];
 
-    <ul className="docs-footer__links">
-      <li className="docs-footer__link">
-        <a className="sprk-b-Link" href="https://github.com/sparkdesignsystem/spark-design-system/blob/staging/CONTRIBUTING.md">Contribution Guidelines</a>
-      </li>
-      <li className="docs-footer__link">
-        <a className="sprk-b-Link" href="https://github.com/sparkdesignsystem/spark-design-system">Github</a>
-      </li>
-      <li className="docs-footer__link">
-        <a className="sprk-b-Link" href="https://twitter.com/sparkQL">Twitter</a>
-      </li>
-      <li className="docs-footer__link">
-        <a className="sprk-b-Link" href="#nogo" mailto="sparkdesignsystem@quickenloans.com">Contact Us</a>
-      </li>
-    </ul>
-  </div>
+const connectIcons = {
+  heading: 'Connect With Us',
+  icons: [
+    {
+      href: 'https://twitter.com/sparkQL',
+      name: 'twitter',
+      screenReaderText: 'Twitter',
+      element: 'a',
+    },
+    {
+      href: 'mailto:sparkdesignsystem@quickenloans.com',
+      name: 'email',
+      screenReaderText: 'Email',
+      element: 'a',
+    },
+  ],
+}
+
+const paragraphs = [
+   {
+     text: 'TBD Footer ©2000 – 2019... Information that we will put here.',
+   },
+ ]
+
+const Footer = () => (
+  <SprkFooter
+    linkColumns={linkColumns}
+    connectIcons={connectIcons}
+    paragraphs={paragraphs}
+  />
 );
 export default Footer;

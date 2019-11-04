@@ -154,7 +154,7 @@ export const noDismissButton = () => (
     iconNameInfo={text('iconNameInfo', '') || undefined}
     additionalClasses={text('additionalClasses', '') || undefined}
     isVisible={boolean('isVisible', true)}
-    isDismissible={boolean('isDismissible', undefined)}
+    isDismissible={false}
     variant="success"
     idString={text('idString', 'alert-5')}
     analyticsString={text('analyticsString', 'alert-5')}

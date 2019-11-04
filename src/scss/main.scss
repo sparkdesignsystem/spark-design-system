@@ -1,5 +1,5 @@
 @import './spark-theme';
-@import '~@sparkdesignsystem/spark/_spark.scss';
+@import '~@sparkdesignsystem/spark/spark.scss';
 
 $doc-site-mobile-breakpoint: 1035px;
 
@@ -7,5 +7,5 @@ $doc-site-mobile-breakpoint: 1035px;
 @import './components/layout';
 @import './components/header';
 @import './components/context-menu';
-@import './components/footer';
 @import './components/menu';
+@import './components/component-preview';
