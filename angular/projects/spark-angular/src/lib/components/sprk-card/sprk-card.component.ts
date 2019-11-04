@@ -8,57 +8,73 @@ import { Component, Input } from '@angular/core';
       *ngIf="cardType === 'teaser'"
       [attr.data-id]="idString"
     >
-      <sprk-link
-        linkType="unstyled"
-        *ngIf="media === 'img'"
-        [href]="imgHref"
-        class="sprk-o-Stack__item"
-        [analyticsString]="imgLinkAnalytics"
-      >
-        <img
-          class="sprk-c-Card__media"
-          [attr.alt]="imgAlt"
-          [attr.src]="imgSrc"
-        />
-      </sprk-link>
-
-      <div
-        [ngClass]="{
-          'sprk-o-Stack__item': true,
-          'sprk-c-Card__content': true,
-          'sprk-o-Stack': true,
-          'sprk-o-Stack--medium': true,
-          'sprk-u-TextAlign--center': media === 'icon'
-        }"
-      >
-        <sprk-link
-          linkType="unstyled"
-          *ngIf="media === 'icon'"
-          [href]="iconHref"
-          additionalClasses="sprk-o-Stack__item sprk-u-AbsoluteCenter"
-          [analyticsString]="iconLinkAnalytics"
-        >
-          <sprk-icon
-            [iconType]="iconType"
-            [additionalClasses]="additionalClassesIcon"
-          ></sprk-icon>
-        </sprk-link>
-
-        <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">{{ title }}</h3>
-
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
-
-        <div class="sprk-o-Stack__item">
+      <sprk-stack>
+        <div sprkStackItem>
           <sprk-link
             linkType="unstyled"
-            [href]="ctaHref"
-            [additionalClasses]="getClassesCta()"
-            [analyticsString]="ctaAnalytics"
+            *ngIf="media === 'img'"
+            [href]="imgHref"
+            class="sprk-o-Stack__item"
+            [analyticsString]="imgLinkAnalytics"
           >
-            {{ ctaText }}
+            <img
+              class="sprk-c-Card__media"
+              [attr.alt]="imgAlt"
+              [attr.src]="imgSrc"
+            />
           </sprk-link>
         </div>
-      </div>
+
+        <div sprkStackItem>
+          <div
+            [ngClass]="{
+              'sprk-c-Card__content': true,
+              'sprk-u-TextAlign--center': media === 'icon'
+            }"
+          >
+            <sprk-stack itemSpacing="medium">
+              <div sprkStackItem>
+                <sprk-link
+                  linkType="unstyled"
+                  *ngIf="media === 'icon'"
+                  [href]="iconHref"
+                  additionalClasses="sprk-u-AbsoluteCenter"
+                  [analyticsString]="iconLinkAnalytics"
+                >
+                  <sprk-icon
+                    [iconType]="iconType"
+                    [additionalClasses]="additionalClassesIcon"
+                  ></sprk-icon>
+                </sprk-link>
+              </div>
+
+              <div sprkStackItem>
+              <h3 class="sprk-b-TypeDisplayFive">
+                {{ title }}
+              </h3>
+              </div>
+
+              <div sprkStackItem>
+                <p class="sprk-b-TypeBodyTwo">
+                  {{ body }}
+                </p>
+              </div>
+
+              <div sprkStackItem>
+                <sprk-link
+                  linkType="unstyled"
+                  [href]="ctaHref"
+                  [additionalClasses]="getClassesCta()"
+                  [analyticsString]="ctaAnalytics"
+                >
+                  {{ ctaText }}
+                </sprk-link>
+              </div>
+            </sprk-stack>
+
+          </div>
+        </div>
+      </sprk-stack>
     </div>
 
     <div
@@ -181,7 +197,7 @@ export class SprkCardComponent {
   }
 
   getClassesCard(): string {
-    const classArray: string[] = ['sprk-c-Card', 'sprk-o-Stack'];
+    const classArray: string[] = ['sprk-c-Card'];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
