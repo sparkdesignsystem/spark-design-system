@@ -6,7 +6,6 @@ import DevDocLinks from './DevDocLinks';
 class ComponentPreview extends React.Component {
   constructor(props) {
     super(props);
-    this.iframeRef = React.createRef();
   }
 
   render() {
@@ -19,8 +18,7 @@ class ComponentPreview extends React.Component {
       minHeight,
       maxWidth,
     } = this.props;
-    const componentIframeURL = `https://spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
-    const devcomponentURL = `https://deploy-preview-2267--spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
+    const iframeURL = `https://spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
 
     return (
       <div className="sprk-u-mbm sprk-u-ptl">
@@ -32,7 +30,7 @@ class ComponentPreview extends React.Component {
             }}
             title="Component Preview"
             className="docs-c-ComponentPreview sprk-o-Box"
-            src={devcomponentURL}
+            src={iframeURL}
           />
         </div>
 
@@ -51,7 +49,7 @@ class ComponentPreview extends React.Component {
 };
 
 ComponentPreview.propTypes = {
-  isVisible: PropTypes.string,
+  maxWidth: PropTypes.string,
   minHeight: PropTypes.string,
   componentName: PropTypes.string,
   hasAngular: PropTypes.bool,
