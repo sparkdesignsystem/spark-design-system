@@ -24,7 +24,6 @@ import { Component, Input } from '@angular/core';
             />
           </sprk-link>
         </div>
-
         <div sprkStackItem>
           <div
             [ngClass]="{
@@ -47,19 +46,16 @@ import { Component, Input } from '@angular/core';
                   ></sprk-icon>
                 </sprk-link>
               </div>
-
               <div sprkStackItem>
               <h3 class="sprk-b-TypeDisplayFive">
                 {{ title }}
               </h3>
               </div>
-
               <div sprkStackItem>
                 <p class="sprk-b-TypeBodyTwo">
                   {{ body }}
                 </p>
               </div>
-
               <div sprkStackItem>
                 <sprk-link
                   linkType="unstyled"
@@ -71,7 +67,6 @@ import { Component, Input } from '@angular/core';
                 </sprk-link>
               </div>
             </sprk-stack>
-
           </div>
         </div>
       </sprk-stack>
