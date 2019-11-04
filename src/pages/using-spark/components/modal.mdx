@@ -12,6 +12,18 @@ the site is inactive and covered by a
 mask overlay. Modals are by definition an
 interruption of the current user flow
 (they put the page into a new "mode").
+
+<ComponentPreview
+  componentName="modal--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="25rem"
+/>
+
+### Usage
+A Choice Modal poses a question to the
+user and allows them to take an action.
 Use a Modal when you need the user to
 enter a new flow before they continue
 their current task, or to provide additional
@@ -25,19 +37,7 @@ should not be used if such an interruption is
 not desired. Research shows that mandatory
 interruptions are very detrimental to productivity.
 
-<ComponentPreview
-  componentName="modal--default-story"
-  hasReact
-  hasAngular
-  hasHTML
-  minHeight="25rem"
-/>
-
-## Usage
-A Choice Modal poses a question to the
-user and allows them to take an action.
-
-## Guidelines
+### Guidelines
 - Spark Modals can be fully-controlled using a mouse, keyboard,
   and/or screen reader.
 - Modals can be closed by pressing the "Escape" key, clicking the Cancel button
@@ -56,8 +56,12 @@ user and allows them to take an action.
   the element that last had focus before the modal was opened.
 - The trigger element should always be outside the Modal container.
 
-## Accessibility
-This is a11y stuf.
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
 
 ### Info
 
@@ -85,3 +89,6 @@ loading screens
   hasHTML
   minHeight="25rem"
 />
+
+## Accessibility
+This is a11y stuff.
