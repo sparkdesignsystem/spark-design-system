@@ -4,8 +4,8 @@ function Ul(props) {
   return (
     <ul className="
       sprk-b-List
-      sprk-b-List--bare
       sprk-b-List--indented
+      sprk-u-Measure
       sprk-u-mbl" {...props}/>
   );
 }

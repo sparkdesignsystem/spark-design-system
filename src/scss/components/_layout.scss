@@ -53,17 +53,21 @@
 }
 
 .docs-layout__content {
-  max-width: 50rem;
   padding: 2rem;
-  overflow-x: scroll;
-  -ms-grid-column: 2;
-  -ms-grid-row: 2;
-  grid-row: 2 / 3;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    overflow-x: scroll;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2 / 3;
+  }
 }
 
 // gatsby-remark-sectionize creates the sections from md
 .docs-layout__content section,
-.docs-layout__content h2,
-.docs-layout__content h3 {
+.docs-layout__content .docs-b-h2,
+.docs-layout__content .docs-b-h3 {
   padding-top: $sprk-space-l;
 }

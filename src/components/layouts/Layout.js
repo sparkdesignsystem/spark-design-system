@@ -27,7 +27,6 @@ const components = {
   code: inlineCode
 }
 
-
 const Layout = ({ children, initialContext }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
@@ -48,42 +47,43 @@ const Layout = ({ children, initialContext }) => {
       }
     `}
     render={data => {
-
       return(
-        <div className="docs-layout">
-          <div
-              // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: data.allSparkIconSet.edges[0].node.internal.content,
-            }}
-          />
-          <div className="docs-layout__header">
-            <Header
-              context={context}
-              setContext={setContext}
-              menuVisible={menuVisible}
-              setMenuVisible={setMenuVisible}
+        <>
+          <div className="docs-layout">
+            <div
+                // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: data.allSparkIconSet.edges[0].node.internal.content,
+              }}
             />
-          </div>
-          <div className={classnames({
-            "docs-layout__side-bar": true,
-            "docs-layout__side-bar-mobile--visible": menuVisible
-          })}>
-            <Menu
-              components={{}}
-              context={context}
-              setContext={setContext}
-              menuVisible={menuVisible}
-              setMenuVisible={setMenuVisible}
-            />
-          </div>
-          <div className="docs-layout__content">
+            <div className="docs-layout__header">
+              <Header
+                context={context}
+                setContext={setContext}
+                menuVisible={menuVisible}
+                setMenuVisible={setMenuVisible}
+              />
+            </div>
+            <div className={classnames({
+              "docs-layout__side-bar": true,
+              "docs-layout__side-bar-mobile--visible": menuVisible
+            })}>
+              <Menu
+                components={{}}
+                context={context}
+                setContext={setContext}
+                menuVisible={menuVisible}
+                setMenuVisible={setMenuVisible}
+              />
+            </div>
+            <div className="docs-layout__content">
               <MDXProvider components={components}>
                 { children }
               </MDXProvider>
-            <Footer />
+            </div>
           </div>
-        </div>
+          <Footer />
+        </>
       )}
     }
   />
