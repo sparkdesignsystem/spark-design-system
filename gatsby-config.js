@@ -77,13 +77,5 @@ module.exports = {
         postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
       },
     },
-    {
-      resolve: `gatsby-plugin-algolia-docsearch`,
-      options: {
-        apiKey: "9486baf438a1d7fd0b6c982838d6f9bc",
-        indexName: "sparkdesignsystem",
-        inputSelector: ".docs-header-search input"
-      }
-    }
   ],
 };
