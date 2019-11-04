@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IframeResizer from 'iframe-resizer-react';
-
-import {
-  SprkLink,
-  SprkList,
-  SprkListItem
-} from '@sparkdesignsystem/spark-react';
+import DevDocLinks from './DevDocLinks';
 
 class ComponentPreview extends React.Component {
   constructor(props) {
@@ -28,8 +23,8 @@ class ComponentPreview extends React.Component {
     const devcomponentURL = `https://deploy-preview-2267--spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
 
     return (
-      <div className="sprk-u-mbm">
-        <div className="sprk-u-mbm">
+      <div className="sprk-u-mbm sprk-u-ptl">
+        <div className="sprk-u-mbl">
           <IframeResizer
             style={{
               minHeight: minHeight,
@@ -42,43 +37,13 @@ class ComponentPreview extends React.Component {
         </div>
 
         {(hasHTML || hasAngular || hasReact) && (
-          <>
-          <SprkList
-            element="ul"
-            variant="bare"
-            additionalClasses="sprk-o-HorizontalList"
-          >
-            {hasHTML && (
-              <SprkListItem>
-                <SprkLink
-                  href={`https://spark-sb-html.netlify.com/?path=/story/${componentType}-${componentName}`}
-                  target="_blank">
-                  HTML
-                </SprkLink>
-              </SprkListItem>
-            )}
-
-            {hasReact && (
-              <SprkListItem>
-                <SprkLink
-                  href={`https://spark-sb-react.netlify.com/?path=/story/${componentType}-${componentName}`}
-                  target="_blank">
-                  React
-                </SprkLink>
-              </SprkListItem>
-            )}
-
-            {hasAngular && (
-              <SprkListItem>
-                <SprkLink
-                  href={`https://spark-sb-angular.netlify.com/?path=/story/${componentType}-${componentName}`}
-                  target="_blank">
-                  Angular
-                </SprkLink>
-              </SprkListItem>
-            )}
-          </SprkList>
-          </>
+          <DevDocLinks
+            hasAngular={hasAngular}
+            hasHTML={hasHTML}
+            hasReact={hasReact}
+            componentType={componentType}
+            componentName={componentName}
+          />
         )}
       </div>
     );
