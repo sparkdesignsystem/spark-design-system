@@ -7,9 +7,6 @@ import SprkDropdown from '../dropdown/SprkDropdown';
 export default {
   title: 'Components|Masthead',
   component: SprkMasthead,
-  decorators: [
-    story => <div>{story()}</div>
-  ],
   parameters: {
     jest: [
       'SprkMasthead',
