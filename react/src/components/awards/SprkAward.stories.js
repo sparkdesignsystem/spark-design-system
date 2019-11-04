@@ -4,7 +4,12 @@ import SprkAward from './SprkAward';
 export default {
   title: 'Components|Award',
   component: SprkAward,
-  parameters: { jest: ['SprkAward'] },
+  parameters: {
+    jest: ['SprkAward'] ,
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
+    `,
+  },
 };
 
 export const defaultStory = () => (

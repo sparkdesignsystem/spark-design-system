@@ -5,7 +5,12 @@ import SprkPagination from './SprkPagination';
 export default {
   title: 'Components|Pagination',
   component: SprkPagination,
-  parameters: { jest: ['SprkPagination'] },
+  parameters: {
+    jest: ['SprkPagination'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/pagination)
+    `,
+  },
 };
 
 export const defaultStory = () => (

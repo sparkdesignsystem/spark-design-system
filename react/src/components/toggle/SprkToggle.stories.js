@@ -4,7 +4,12 @@ import SprkToggle from './SprkToggle';
 export default {
   title: 'Components|Toggle',
   component: SprkToggle,
-  parameters: { jest: ['SprkToggle'] },
+  parameters: {
+    jest: ['SprkToggle'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/toggle)
+    `,
+  },
 };
 
 export const defaultStory = () => (

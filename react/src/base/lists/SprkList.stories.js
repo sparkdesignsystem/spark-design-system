@@ -6,7 +6,12 @@ import SprkListItem from './SprkListItem';
 export default {
   title: 'Components|List',
   component: SprkList,
-  parameters: { jest: ['SprkList, SprkListItem'] },
+  parameters: {
+    jest: ['SprkList, SprkListItem'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/List)
+    `,
+  },
 };
 
 export const unordered = () => (

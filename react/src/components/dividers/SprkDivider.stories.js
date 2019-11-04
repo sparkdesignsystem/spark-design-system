@@ -4,7 +4,12 @@ import SprkDivider from './SprkDivider';
 export default {
   title: 'Components|Divider',
   component: SprkDivider,
-  parameters: { jest: ['SprkDivider'] },
+  parameters: {
+    jest: ['SprkDivider'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/divider)
+    `,
+  },
 };
 
 export const asASpanElement = () => <SprkDivider idString="divider-1" element="span" />;

@@ -6,7 +6,12 @@ export default {
   title: 'Components|Card',
   decorators: [withKnobs],
   component: SprkCard,
-  parameters: { jest: ['SprkCard'] },
+  parameters: {
+    jest: ['SprkCard'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
+    `,
+  },
 };
 
 export const defaultStory = () => (

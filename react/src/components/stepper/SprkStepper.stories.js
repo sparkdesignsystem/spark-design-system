@@ -10,8 +10,8 @@ export default {
   decorators: [withKnobs],
   component: SprkStepper,
   parameters: {
-  info: `
-This is some info about the Stepper
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stepper)
     `,
     jest: [
       'SprkStepper',

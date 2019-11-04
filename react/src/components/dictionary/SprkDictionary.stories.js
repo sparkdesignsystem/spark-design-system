@@ -5,7 +5,12 @@ import SprkDictionary from './SprkDictionary';
 export default {
   title: 'Components|Dictionary',
   component: SprkDictionary,
-  parameters: { jest: ['SprkDictionary'] },
+  parameters: {
+    jest: ['SprkDictionary'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dictionary)
+    `,
+  },
 };
 
 export const defaultStory = () => (
