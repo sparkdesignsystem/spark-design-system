@@ -9,7 +9,12 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkFooter,
-  parameters: { jest: ['SprkFooter'] },
+  parameters: {
+    jest: ['SprkFooter'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
+    `,
+  },
 };
 
 const globalItems = {
@@ -267,18 +272,6 @@ const additionalIcons = [
     element: 'a',
   },
 ];
-
-export default {
-  title: 'Components|Footer',
-  decorators: [withKnobs],
-  component: SprkFooter,
-  parameters: {
-    jest: ['SprkFooter'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
-    `,
-  },
-};
 
 export const defaultStory = () => (
   <SprkFooter
