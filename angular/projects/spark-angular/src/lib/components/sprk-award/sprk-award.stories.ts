@@ -14,7 +14,12 @@ export default {
         `<div class="sprk-o-Box sprk-o-CenteredColumn">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
+    `,
+  },
 };
 
 const modules = {

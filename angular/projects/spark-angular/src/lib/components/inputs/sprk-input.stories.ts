@@ -36,7 +36,12 @@ export default {
     onSubmit(event): void {
       this.form_submitted = true;
     }
-  }
+  },
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+    `,
+  },
 };
 
 const modules = {
