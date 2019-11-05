@@ -6,7 +6,10 @@ import SprkIcon from '../../components/icons/SprkIcon';
 
 export default {
   title: 'Components|Link',
-  decorators: [withKnobs],
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkLink,
   parameters: {
     jest: ['SprkLink'],

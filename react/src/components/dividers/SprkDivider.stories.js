@@ -4,6 +4,9 @@ import SprkDivider from './SprkDivider';
 export default {
   title: 'Components|Divider',
   component: SprkDivider,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: {
     jest: ['SprkDivider'],
     info: `

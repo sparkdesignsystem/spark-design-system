@@ -4,6 +4,21 @@ import SprkButton from '../buttons/SprkButton';
 import SprkLink from '../../base/links/SprkLink';
 import SprkDropdown from '../dropdown/SprkDropdown';
 
+export default {
+  title: 'Components|Masthead',
+  component: SprkMasthead,
+  parameters: {
+    jest: [
+      'SprkMasthead',
+      'SprkMastheadLittleNav',
+      'SprkMastheadMenuIcon',
+      'SprkMastheadNarrowNav',
+    ]
+  },
+};
+
+
+
 const links = [
   {
     element: 'a',

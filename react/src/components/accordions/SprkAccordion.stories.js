@@ -5,6 +5,9 @@ import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem'
 export default {
   title: 'Components|Accordion',
   component: SprkAccordion,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
 };
 
 export const defaultStory = () => (

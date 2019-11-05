@@ -5,6 +5,9 @@ import SprkModal from './SprkModal';
 export default {
   title: 'Components|Modal',
   component: SprkModal,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: {
     jest: [
       'SprkModal',

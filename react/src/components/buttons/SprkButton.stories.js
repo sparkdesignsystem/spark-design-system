@@ -6,7 +6,10 @@ import SprkButton from './SprkButton';
 
 export default {
   title: 'Components|Button',
-  decorators: [withKnobs],
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkButton,
   parameters: {
     jest: ['SprkButton'],

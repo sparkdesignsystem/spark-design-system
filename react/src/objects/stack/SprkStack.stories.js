@@ -5,6 +5,9 @@ import SprkStackItem from './components/SprkStackItem/SprkStackItem';
 export default {
   title: 'Objects|Stack',
   component: SprkStack,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: {
     jest: ['SprkStack', 'SprkStackItem'],
     info: `
