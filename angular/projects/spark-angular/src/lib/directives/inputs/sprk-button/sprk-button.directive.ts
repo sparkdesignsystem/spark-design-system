@@ -8,6 +8,9 @@ export class SprkButtonDirective implements OnInit {
 
   @Input() isSpinning = false;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = [];
     classArray.push('sprk-c-Button');

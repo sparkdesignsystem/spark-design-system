@@ -45,11 +45,17 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
 export class SprkMastheadAccordionItemComponent implements OnInit {
   @Input()
   title: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -98,6 +104,9 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
     this.accordionState();
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [
       'sprk-c-MastheadAccordion__item',

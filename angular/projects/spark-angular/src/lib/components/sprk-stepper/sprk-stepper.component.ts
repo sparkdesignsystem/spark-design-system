@@ -24,7 +24,7 @@ export class SprkStepperComponent implements AfterViewInit {
   additionalClasses: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -32,11 +32,18 @@ export class SprkStepperComponent implements AfterViewInit {
    */
   @Input()
   idString: string;
+  /**
+   * If `true`, this will apply the correct styles
+   * the to the Stepper for when it is on a dark background.
+   */
   @Input()
   hasDarkBg: boolean;
 
   constructor(public ref: ElementRef) {}
 
+  /**
+   * @ignore
+   */
   resetTabs(tabs, tabpanels, activeClass) {
     tabs.forEach(tab => {
       tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
@@ -48,10 +55,16 @@ export class SprkStepperComponent implements AfterViewInit {
     });
   }
 
+  /**
+   * @ignore
+   */
   handleTabKeydown(e, steps, stepPanels, activeClass, sliderEl) {
     // TODO: implement
   }
 
+  /**
+   * @ignore
+   */
   setActiveTab(tab, tabpanel, activeClass) {
     tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
     tab.setAttribute('tabindex', '0');
@@ -62,6 +75,9 @@ export class SprkStepperComponent implements AfterViewInit {
     tab.focus();
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper'];
 
@@ -78,6 +94,9 @@ export class SprkStepperComponent implements AfterViewInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   bindUIEvents(): void {
     const steps = this.ref.nativeElement.querySelectorAll(
       '[data-sprk-stepper="step"]'

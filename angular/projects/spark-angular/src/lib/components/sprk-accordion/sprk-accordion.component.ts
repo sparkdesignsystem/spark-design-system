@@ -9,14 +9,17 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkAccordionComponent {
-  @Input()
   /**
    * Expects a space separated string
    * of classes to be added to the
    * component.
    */
+  @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Accordion', 'sprk-o-VerticalList'];
 

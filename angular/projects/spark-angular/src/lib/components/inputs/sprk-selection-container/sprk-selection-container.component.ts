@@ -41,6 +41,9 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
   id = _.uniqueId();
   error_id = `error_${this.id}`;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-InputContainer'];
 

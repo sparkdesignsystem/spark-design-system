@@ -8,9 +8,18 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
   additionalClasses: string;
   @Input()
   defaultActive: boolean;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-c-Tabs__button'];
 

@@ -7,6 +7,9 @@ export class SprkTableRowHeadingDirective implements OnInit {
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray = ['sprk-b-Table__row-heading'];
     if (this.additionalClasses) {

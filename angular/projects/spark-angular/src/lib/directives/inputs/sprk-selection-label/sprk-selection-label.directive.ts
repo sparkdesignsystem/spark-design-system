@@ -6,6 +6,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
 export class SprkSelectionLabelDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-b-Label', 'sprk-b-Label--inline'];
     return classArray;

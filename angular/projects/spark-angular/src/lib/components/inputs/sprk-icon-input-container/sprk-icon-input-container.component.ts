@@ -48,6 +48,9 @@ export class SprkIconInputContainerComponent implements OnInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-InputContainer'];
 

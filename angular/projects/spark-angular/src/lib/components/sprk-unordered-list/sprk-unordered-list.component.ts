@@ -17,6 +17,10 @@ import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.componen
   `
 })
 export class SprkUnorderedListComponent {
+  /**
+   * This value determines what List variant is rendered.
+   * Can be `bare` or `indented`.
+   */
   @Input()
   listType: string;
   /**
@@ -28,7 +32,7 @@ export class SprkUnorderedListComponent {
   additionalClasses: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -37,10 +41,17 @@ export class SprkUnorderedListComponent {
   @Input()
   idString: string;
 
+  /**
+   * This component expects children `<sprk-list-item></sprk-list-item>`
+   * components.
+   */
   @ContentChildren(SprkListItemComponent) items: QueryList<
     SprkListItemComponent
   >;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [''];
 

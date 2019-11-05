@@ -9,11 +9,17 @@ import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
   `
 })
 export class SprkListItemComponent {
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique

@@ -6,6 +6,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
 export class SprkSelectionInputDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-b-SelectionInput'];
     return classArray;

@@ -9,6 +9,9 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
   @Input()
   defaultActive: boolean;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-c-Tabs__content'];
 

@@ -239,7 +239,7 @@ export class SprkFooterComponent {
   additionalClasses: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -247,27 +247,68 @@ export class SprkFooterComponent {
    */
   @Input()
   idString: string;
+  /**
+   * The heading for the "Global" section.
+   */
   @Input()
   globalHeading: string;
+  /**
+   * The heading for the "Awards" section.
+   */
   @Input()
   awardsHeading: string;
+  /**
+   * The heading for the "Connect With Us" section.
+   */
   @Input()
   connectHeading: string;
+  /**
+   * Array of objects to build the links in the "Global" section.
+   */
   @Input()
   globalLinks: object[];
+  /**
+   * Array of objects to build the links in the "Site Links" section.
+   */
   @Input()
   localLinks: object[];
+  /**
+   * Array of objects to build the
+   * icon links in the "Connect With Us section".
+   */
   @Input()
   socialLinks: object[];
+  /**
+   * Array of objects to build the
+   * awards in the "Awards".
+   */
   @Input()
   awards: object[];
+  /**
+   * Array of objects to build the
+   * icon links in the icon sectin in the bottom
+   * of the Footer.
+   */
   @Input()
   badgeLinks: object[];
+  /**
+   * Array of objects
+   * to build disclaimer text in the bottom
+   * of the Footer.
+   */
   @Input()
   disclaimerText: object[];
+  /**
+   * Array of objects to build
+   * the disclamer toggle(s) in
+   * the bottom of the Footer.
+   */
   @Input()
   disclaimerToggle: object[];
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [
       'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b'

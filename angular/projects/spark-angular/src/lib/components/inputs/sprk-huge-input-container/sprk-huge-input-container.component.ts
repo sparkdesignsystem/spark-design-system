@@ -34,6 +34,9 @@ export class SprkHugeInputContainerComponent implements OnInit {
   input_id = `input_${this.id}`;
   error_id = `error_${this.id}`;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [
       'sprk-b-InputContainer',

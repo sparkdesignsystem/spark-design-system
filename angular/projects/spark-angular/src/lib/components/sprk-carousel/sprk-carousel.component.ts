@@ -58,6 +58,9 @@ export class SprkCarouselComponent implements AfterViewInit {
     // TODO: implement
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Carousel'];
 

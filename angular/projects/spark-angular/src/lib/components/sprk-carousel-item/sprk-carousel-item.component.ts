@@ -16,6 +16,9 @@ export class SprkCarouselItemComponent {
   @Input()
   altText: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [''];
 

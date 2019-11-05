@@ -37,13 +37,22 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkAlertComponent {
+  /**
+   * The type of Alert variant to render.
+   */
   @Input()
   alertType: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -58,12 +67,25 @@ export class SprkAlertComponent {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * A false value will result in the dismiss
+   * button will not be rendered.
+   */
   @Input()
-  dismissible: boolean; // Shows/hides dismiss button based on value
+  dismissible: boolean;
 
+  /**
+   * @ignore
+   */
   public icon: string;
+  /**
+   * @ignore
+   */
   public visible = true;
 
+  /**
+   * @ignore
+   */
   getClassesAlertContainer(): string {
     const alertClassArray: string[] = ['sprk-c-Alert'];
 
@@ -93,6 +115,11 @@ export class SprkAlertComponent {
     return alertClassArray.join(' ');
   }
 
+  /**
+   * When the dismiss button is clicked
+   * this method sets the visable state to false
+   * and hides the Alert component.
+   */
   alertDismiss(event): void {
     this.visible = false;
   }

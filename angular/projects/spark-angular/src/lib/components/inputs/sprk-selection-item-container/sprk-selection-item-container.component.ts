@@ -25,6 +25,9 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   id = _.uniqueId();
   input_id = `input_${this.id}`;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-SelectionContainer'];
 

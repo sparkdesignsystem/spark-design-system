@@ -102,7 +102,7 @@ export class SprkModalComponent {
   cancelAnalyticsString: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique

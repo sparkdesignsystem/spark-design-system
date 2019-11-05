@@ -7,6 +7,9 @@ export class SprkTableEmptyHeadingDirective implements OnInit {
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray = ['sprk-b-Table__empty-heading'];
     if (this.additionalClasses) {

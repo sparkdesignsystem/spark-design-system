@@ -7,6 +7,9 @@ export class SprkTableGroupedColumnDirective implements OnInit {
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray = ['sprk-b-Table__grouped-column'];
     if (this.additionalClasses) {

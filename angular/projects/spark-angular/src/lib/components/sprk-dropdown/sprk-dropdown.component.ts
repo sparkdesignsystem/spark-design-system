@@ -117,27 +117,25 @@ export class SprkDropdownComponent {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component.
+   * icon.
    */
   @Input()
   additionalIconClasses: string;
   /**
    * Expects a space separated string of
-   * classes to be added to the dropdown
-   * component's trigger link element.
+   * classes to be added to the trigger link element.
    */
   @Input()
   additionalTriggerClasses: string;
   /**
    * Expects a space separated string of
-   * classes to be added to the dropdown
-   * component's trigger text.
+   * classes to be added to the trigger text.
    */
   @Input()
   additionalTriggerTextClasses: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -145,27 +143,75 @@ export class SprkDropdownComponent {
    */
   @Input()
   idString: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
+  /**
+   * If `true`, the Dropdown will be open when rendered.
+   */
   @Input()
   isOpen = false;
+  /**
+   * The value supplied will be displayed
+   * in a box above the choices.
+   */
   @Input()
   title: string;
+  /**
+   * The value supplied will be assigned to
+   * the `.Dropdown__title` text.
+   * Should be used if using the `mastheadSelector` type.
+   */
   @Input()
   selector: string;
+  /**
+   * Expects an array of choice objects.
+   */
   @Input()
   choices: any[];
+  /**
+   * If supplied, will render the icon
+   * to the right of the trigger text.
+   */
   @Input()
   triggerIconType: string;
+  /**
+   * The text that is initially rendered to the trigger.
+   * If `dropdownType` is `informational`,
+   * clicking on a choice will change the trigger text.
+   */
   @Input()
   triggerText: string;
+  /**
+   * The value supplied will be visually hidden
+   * inside the trigger. Userful
+   * for when title is empty,
+   * and only `triggerIconType` is supplied.
+   */
   @Input()
   screenReaderText: string;
+  /**
+   * When the `dropdownType` is
+   *  `informational` and a
+   * user clicks on a choice from
+   * the menu, the `choiceMade` event is
+   * emitted from the Dropdown and it
+   * contains the value of the clicked choice.
+   */
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
-
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
-
+  /**
+   * @ignore
+   */
   toggle(event): void {
     this.isOpen = !this.isOpen;
   }
@@ -190,7 +236,9 @@ export class SprkDropdownComponent {
       this.hideDropdown();
     }
   }
-
+  /**
+   * @ignore
+   */
   choiceClick(event) {
     this.clearActiveChoices();
     const choiceIndex = event.currentTarget.getAttribute(
@@ -207,14 +255,18 @@ export class SprkDropdownComponent {
     this.hideDropdown();
     this.choiceMade.emit(clickedChoice['value']);
   }
-
+  /**
+   * @ignore
+   */
   setActiveChoice(event): void {
     const choiceIndex = event.currentTarget.getAttribute(
       'data-sprk-dropdown-choice-index'
     );
     this.choices[choiceIndex]['active'] = true;
   }
-
+  /**
+   * @ignore
+   */
   updateTriggerText(event): void {
     const choiceIndex = event.currentTarget.getAttribute(
       'data-sprk-dropdown-choice-index'
@@ -222,16 +274,25 @@ export class SprkDropdownComponent {
     this.triggerText = this.choices[choiceIndex]['value'];
   }
 
+  /**
+   * @ignore
+   */
   clearActiveChoices(): void {
     this.choices.forEach((choice: object) => {
       choice['active'] = false;
     });
   }
 
+  /**
+   * @ignore
+   */
   hideDropdown(): void {
     this.isOpen = false;
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Dropdown'];
 
@@ -244,6 +305,9 @@ export class SprkDropdownComponent {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getTriggerClasses(): string {
     const classArray: string[] = [];
 
@@ -256,6 +320,9 @@ export class SprkDropdownComponent {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getTriggerTextClasses(): string {
     const classArray: string[] = [''];
 

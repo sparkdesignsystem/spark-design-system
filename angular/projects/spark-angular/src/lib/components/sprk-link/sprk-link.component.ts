@@ -35,7 +35,7 @@ export class SprkLinkComponent implements OnInit {
   href: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -63,6 +63,12 @@ export class SprkLinkComponent implements OnInit {
   ariaHasPopUp: string;
   @Input()
   ariaLabel: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
   @Input()
@@ -144,6 +150,9 @@ export class SprkLinkComponent implements OnInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [];
 

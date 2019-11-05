@@ -27,7 +27,7 @@ export class SprkTableComponent {
   additionalTableClasses: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -36,6 +36,9 @@ export class SprkTableComponent {
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-TableContainer'];
 
@@ -48,6 +51,9 @@ export class SprkTableComponent {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getTableClasses(): string {
     const classArray: string[] = [
       'sprk-b-Table',

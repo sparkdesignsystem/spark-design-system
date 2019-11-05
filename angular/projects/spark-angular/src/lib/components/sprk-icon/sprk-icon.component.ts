@@ -21,7 +21,7 @@ export class SprkIconComponent {
   additionalClasses: string;
   /**
    * The value supplied will be assigned
-   * to the 'data-id' attribute on the
+   * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
@@ -30,8 +30,14 @@ export class SprkIconComponent {
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   public icon: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Icon'];
 
