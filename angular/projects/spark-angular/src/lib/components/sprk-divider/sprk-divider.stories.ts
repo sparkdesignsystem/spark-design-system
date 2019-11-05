@@ -1,9 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDividerModule } from './sprk-divider.module';
+import { SprkDividerComponent } from './sprk-divider.component';
 
 export default {
   title: 'Components|Divider',
-  component: SprkDividerModule,
+  component: SprkDividerComponent,
   decorators: [
     storyWrapper(
       storyContent => (

@@ -1,9 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDictionaryModule } from './sprk-dictionary.module';
+import { SprkDictionaryComponent } from './sprk-dictionary.component';
 
 export default {
   title: 'Components|Dictionary',
-  component: SprkDictionaryModule,
+  component: SprkDictionaryComponent,
   decorators: [
     storyWrapper(
       storyContent => (

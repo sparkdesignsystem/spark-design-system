@@ -126,6 +126,11 @@ export class SprkPaginationComponent {
   totalItems: number; // Total number of items
   @Input()
   itemsPerPage: number; // Total number of items to show per page
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
   @Input()
@@ -142,6 +147,14 @@ export class SprkPaginationComponent {
   analyticsStringLinkNext: string;
   @Input()
   analyticsStringLinkPrev: string;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 

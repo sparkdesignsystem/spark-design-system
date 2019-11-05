@@ -1,10 +1,11 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { action } from '@storybook/addon-actions';
 import { SprkModalModule } from './sprk-modal.module';
+import { SprkModalComponent } from './sprk-modal.component';
 
 export default {
   title: 'Components|Modal',
-  component: SprkModalModule,
+  component: SprkModalComponent,
   decorators: [
     storyWrapper(
       storyContent => (

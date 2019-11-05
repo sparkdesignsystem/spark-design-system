@@ -15,6 +15,11 @@ export class SprkStackComponent {
   itemSpacing: string;
   @Input()
   analyticsString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
 

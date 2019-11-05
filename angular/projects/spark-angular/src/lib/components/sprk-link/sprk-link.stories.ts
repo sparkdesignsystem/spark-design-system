@@ -7,7 +7,7 @@ import { SprkLinkComponent } from './sprk-link.component';
 
 export default {
   title: 'Components|Link',
-  component: SprkLinkModule,
+  component: SprkLinkComponent,
   decorators: [
     storyWrapper(
       storyContent => (

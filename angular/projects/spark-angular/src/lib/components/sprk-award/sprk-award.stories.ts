@@ -7,7 +7,7 @@ import { SprkAwardComponent } from './sprk-award.component';
 
 export default {
   title: 'Components|Award',
-  component: SprkAwardModule,
+  component: SprkAwardComponent,
   decorators: [
     storyWrapper(
       storyContent => (

@@ -116,30 +116,76 @@ export class SprkPromoComponent {
   ctaLinkHref: string;
   @Input()
   ctaLinkAnalytics: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * content container.
+   */
   @Input()
   additionalClassesContent: string;
   @Input()
   isFlag: boolean; // if true, use the flag variant
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * link surrounding the image in the Flag variant.
+   */
   @Input()
   additionalClassesFlagLink: string;
   @Input()
   flagLinkAnalytics: string;
+  /**
+   * The source value for the Promo image.
+   */
   @Input()
   imgSrc: string;
+  /**
+   * The alt text for the Promo image.
+   */
   @Input()
   imgAlt: string;
+  /**
+   * The href value for the Promo image.
+   */
   @Input()
   imgHref: string;
   @Input()
   imgLinkAnalytics: string;
+  /**
+   * If imgSrc is true and isFlag is false,
+   * this string of additional classes will
+   * be added to the anchor containing the Promo
+   * image. This is intended for overrides.
+   */
   @Input()
   additionalClassesImgLink: string;
+  /**
+   * If true, the media will render
+   * on the right side of the Promo content.
+   */
   @Input()
   mediaRev: boolean;
+  /**
+   * If true, the Promo will be rendered
+   * with a border.
+   */
   @Input()
   hasBorder: boolean;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 

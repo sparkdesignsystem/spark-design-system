@@ -246,16 +246,39 @@ export class SprkMastheadComponent implements AfterContentInit {
   logoHref = '/';
   @Input()
   logoLinkScreenReaderText = 'Go to the homepage';
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * big navigation link container.
+   */
   @Input()
   additionalBigNavClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * narrow navigation container.
+   */
   @Input()
   additionalNarrowNavClasses: string;
   @Input()
   narrowNavLinks: any[];
   @Input()
   isNarrowNavOpen = false;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
   @Input()

@@ -33,6 +33,14 @@ export class SprkLinkComponent implements OnInit {
   linkType: string;
   @Input()
   href: string;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
   @Input()
@@ -59,6 +67,11 @@ export class SprkLinkComponent implements OnInit {
   analyticsString: string;
   @Input()
   target: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
   @Input()

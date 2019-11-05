@@ -1,9 +1,10 @@
 import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
+import { SprkButtonDirective } from './sprk-button.directive';
 
 export default {
   title: 'Components|Button',
-  component: SprkButtonModule,
+  directive: SprkButtonDirective,
   decorators: [
     storyWrapper(
       storyContent => (

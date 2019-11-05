@@ -107,14 +107,42 @@ import {
 export class SprkDropdownComponent {
   @Input()
   dropdownType = 'base';
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalIconClasses: string;
+  /**
+   * Expects a space separated string of
+   * classes to be added to the dropdown
+   * component's trigger link element.
+   */
   @Input()
   additionalTriggerClasses: string;
+  /**
+   * Expects a space separated string of
+   * classes to be added to the dropdown
+   * component's trigger text.
+   */
   @Input()
   additionalTriggerTextClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
   @Input()

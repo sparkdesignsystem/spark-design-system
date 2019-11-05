@@ -6,7 +6,7 @@ import { APP_BASE_HREF } from '@angular/common';
 
 export default {
   title: 'Components|Highlight Board',
-  component: SprkHighlightBoardModule,
+  component: SprkHighlightBoardComponent,
   decorators: [
     storyWrapper(
       storyContent => (

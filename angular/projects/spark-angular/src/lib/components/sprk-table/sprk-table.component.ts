@@ -11,10 +11,28 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkTableComponent {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component container.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * table element.
+   */
   @Input()
   additionalTableClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 

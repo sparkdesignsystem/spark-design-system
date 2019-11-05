@@ -36,6 +36,11 @@ import { toggleAnimations } from './sprk-toggle-animations';
 export class SprkToggleComponent implements OnInit {
   @Input()
   analyticsString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
   @Input()
@@ -44,6 +49,14 @@ export class SprkToggleComponent implements OnInit {
   iconClass: string;
   @Input()
   titleFontClass = 'sprk-b-TypeBodyThree';
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 

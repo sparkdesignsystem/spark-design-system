@@ -6,11 +6,12 @@ import {
 import {
   SprkTabbedNavigationTabModule
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
+import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
 
 
 export default {
   title: 'Components|Tabs',
-  component: SprkTabbedNavigationModule,
+  component: SprkTabbedNavigationComponent,
   decorators: [
     storyWrapper(
       storyContent => (

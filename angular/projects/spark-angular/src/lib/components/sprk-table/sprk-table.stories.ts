@@ -1,9 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkTableModule } from './sprk-table.module';
+import { SprkTableComponent } from './sprk-table.component';
 
 export default {
   title: 'Components|Table',
-  component: SprkTableModule,
+  component: SprkTableComponent,
   decorators: [
     storyWrapper(
       storyContent => (

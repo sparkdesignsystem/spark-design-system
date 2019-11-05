@@ -129,6 +129,11 @@ export class SprkCardComponent {
   body: string;
   @Input()
   media: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon if the media type is icon.
+   */
   @Input()
   additionalClassesIcon: string;
   @Input()
@@ -155,10 +160,28 @@ export class SprkCardComponent {
   iconLinkAnalytics: string;
   @Input()
   ctaHref: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * call-to-action.
+   */
   @Input()
   additionalCtaClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the 'data-id' attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 

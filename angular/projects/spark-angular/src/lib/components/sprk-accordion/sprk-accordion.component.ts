@@ -10,6 +10,11 @@ import { Component, Input } from '@angular/core';
 })
 export class SprkAccordionComponent {
   @Input()
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: string;
 
   getClasses(): string {

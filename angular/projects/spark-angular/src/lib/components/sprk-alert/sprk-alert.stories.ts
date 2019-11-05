@@ -1,9 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
+import { SprkAlertComponent } from './sprk-alert.component';
 
 export default {
   title: 'Components|Alert',
-  component: SprkAlertModule,
+  component: SprkAlertComponent,
   decorators: [
     storyWrapper(
       storyContent => (

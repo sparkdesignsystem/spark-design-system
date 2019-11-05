@@ -8,7 +8,7 @@ import { SprkAccordionComponent } from './sprk-accordion.component';
 
 export default {
   title: 'Components|Accordion',
-  component: SprkAccordionModule,
+  component: SprkAccordionComponent,
   decorators: [
     storyWrapper(
       storyContent => (

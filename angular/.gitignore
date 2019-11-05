@@ -4,6 +4,7 @@
 /dist
 /storybook-static
 /tmp
+documentation.json
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
