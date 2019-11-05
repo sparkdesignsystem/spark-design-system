@@ -113,6 +113,22 @@ const utilityItems = [
   <SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconName="user-account" choices={dropdownChoices} title="My Choices" />,
 ];
 
+export default {
+  title: 'Components|Masthead',
+  component: SprkMasthead,
+  parameters: {
+    jest: [
+      'SprkMasthead',
+      'SprkMastheadLittleNav',
+      'SprkMastheadMenuIcon',
+      'SprkMastheadNarrowNav',
+    ],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
+    `,
+  },
+};
+
 export const defaultStory = () => (
   <SprkMasthead
     littleNavLinks={links}

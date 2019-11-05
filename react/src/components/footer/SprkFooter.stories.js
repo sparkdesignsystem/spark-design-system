@@ -268,6 +268,18 @@ const additionalIcons = [
   },
 ];
 
+export default {
+  title: 'Components|Footer',
+  decorators: [withKnobs],
+  component: SprkFooter,
+  parameters: {
+    jest: ['SprkFooter'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
+    `,
+  },
+};
+
 export const defaultStory = () => (
   <SprkFooter
     globalItems={globalItems}

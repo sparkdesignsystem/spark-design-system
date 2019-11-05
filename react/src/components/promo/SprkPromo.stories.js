@@ -8,7 +8,12 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkPromo,
-  parameters: { jest: ['SprkPromo'] },
+  parameters: {
+    jest: ['SprkPromo'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/promo)
+    `,
+  },
 };
 
 export const defaultStory = () => (

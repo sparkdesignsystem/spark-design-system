@@ -1,0 +1,95 @@
+---
+  title: Modal
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Modal
+
+The Modal component is a dialog that
+is displayed on top of all site content.
+When a Modal is present, the rest of
+the site is inactive and covered by a
+mask overlay. Modals are by definition an
+interruption of the current user flow
+(they put the page into a new "mode").
+
+<ComponentPreview
+  componentName="modal--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="25rem"
+/>
+
+### Usage
+A Choice Modal poses a question to the
+user and allows them to take an action.
+Use a Modal when you need the user to
+enter a new flow before they continue
+their current task, or to provide additional
+contextual information about the current task.
+For example, you could use a modal to get confirmation from
+the user before deleting a record, or to display a
+critical error message before continuing the
+task at hand. Keep in mind that modals will
+always interrupt the current user task and
+should not be used if such an interruption is
+not desired. Research shows that mandatory
+interruptions are very detrimental to productivity.
+
+### Guidelines
+- Spark Modals can be fully-controlled using a mouse, keyboard,
+  and/or screen reader.
+- Modals can be closed by pressing the "Escape" key, clicking the Cancel button
+  (in the Choice variant), clicking the Close icon (in the Choice or Info variants),
+  or clicking the mask overlay (in the Choice or Info variants). Wait variant
+  modals must be closed programatically.
+- The Modal and mask elements are hidden by default.
+- If the content in the Modal is too large for the viewport
+  then the Modal will show a scroll bar.
+- When the Modal is opened, the first focusable element
+  inside the Modal will receive focus.
+- While the Modal is open, focus is "trapped" inside the
+  Modal. Pressing the Tab or Shift+Tab keys to move focus
+  will only shift focus between the elements in the Modal.
+- When the Modal is closed, focus will be returned to
+  the element that last had focus before the modal was opened.
+- The trigger element should always be outside the Modal container.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Info
+
+An Info Modal shows information to the user.
+
+<ComponentPreview
+  componentName="modal--info"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="20rem"
+/>
+
+### Wait
+
+Wait Modals display a message to the user
+and can only be dismissed programatically.
+This variant is useful for displaying
+loading screens
+
+<ComponentPreview
+  componentName="modal--wait"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="25rem"
+/>
+
+## Accessibility
+This is a11y stuff.

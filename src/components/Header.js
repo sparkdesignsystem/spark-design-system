@@ -15,11 +15,15 @@ const Header = ({ menuVisible, setMenuVisible, context, setContext }) => (
       </Link>
     </div>
     <div className="docs-header__group docs-header__menu-wrapper">
-      <ContextMenu
-        context={context}
-        setContext={setContext}
-        className="sprk-o-HorizontalList"/>
+      <div className="docs-header__menu">
+        <ContextMenu
+          autoNav
+          context={context}
+          setContext={setContext}
+          className="sprk-o-HorizontalList"/>
+      </div>
       <SprkTextInput
+        additionalClasses="docs-header-search"
         leadingIcon="search"
         hiddenLabel
         name="InlineSearch"

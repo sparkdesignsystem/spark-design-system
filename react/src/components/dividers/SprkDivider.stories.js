@@ -7,7 +7,12 @@ export default {
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
-  parameters: { jest: ['SprkDivider'] },
+  parameters: {
+    jest: ['SprkDivider'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/divider)
+    `,
+  },
 };
 
 export const asASpanElement = () => <SprkDivider idString="divider-1" element="span" />;

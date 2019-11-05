@@ -8,7 +8,12 @@ export default {
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
-  parameters: { jest: ['SprkPagination'] },
+  parameters: {
+    jest: ['SprkPagination'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/pagination)
+    `,
+  },
 };
 
 export const defaultStory = () => (

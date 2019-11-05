@@ -7,7 +7,12 @@ export default {
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
-  parameters: { jest: ['SprkToggle'] },
+  parameters: {
+    jest: ['SprkToggle'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/toggle)
+    `,
+  },
 };
 
 export const defaultStory = () => (

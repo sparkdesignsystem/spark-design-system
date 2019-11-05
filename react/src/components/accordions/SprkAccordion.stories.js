@@ -66,5 +66,10 @@ export const defaultStory = () => (
 
 defaultStory.story = {
   name: 'Default',
-  parameters: { jest: ['SprkAccordion', 'SprkAccordionItem'] },
+  parameters: {
+    jest: ['SprkAccordion', 'SprkAccordionItem'] ,
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
+    `,
+  },
 };

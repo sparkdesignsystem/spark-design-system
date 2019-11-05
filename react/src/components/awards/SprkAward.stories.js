@@ -7,7 +7,12 @@ export default {
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
-  parameters: { jest: ['SprkAward'] },
+  parameters: {
+    jest: ['SprkAward'] ,
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
+    `,
+  },
 };
 
 export const defaultStory = () => (

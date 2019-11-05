@@ -16,7 +16,10 @@ export default {
     jest: [
       'SprkErrorContainer',
       'SprkInputIconCheck',
-    ]
+    ],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+    `,
   },
 };
 
@@ -51,6 +54,27 @@ export const hugeTextInput = () => (
 );
 
 hugeTextInput.story = {
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const hugeTextInputWithDefaultValue = () => (
+  <SprkTextInput
+    type="hugeTextInput"
+    label={text('label', 'Text Input Label')}
+    name="text-input-label"
+    valid={boolean('valid', true)}
+    disabled={boolean('disabled', false)}
+    placeholder="Huge Text Placeholder"
+    errorMessage="There is an error on this field."
+    defaultValue="Default Value"
+  />
+);
+
+hugeTextInputWithDefaultValue.story = {
   parameters: {
     jest: [
       'SprkTextInput',

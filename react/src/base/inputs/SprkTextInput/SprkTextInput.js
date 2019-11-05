@@ -5,7 +5,7 @@ import uniqueId from 'lodash/uniqueId';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkInputIconCheck from '../components/SprkInputIconCheck/SprkInputIconCheck';
 import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLabelLocationCheck';
-import SprkTextAreaCheck from '../components/SprkTextareaCheck/SprkTextareaCheck';
+import SprkInputElement from '../components/SprkInputElement/SprkInputElement';
 
 class SprkTextInput extends Component {
   constructor(props) {
@@ -60,7 +60,7 @@ class SprkTextInput extends Component {
             id={id}
             disabled={disabled}
           >
-            <SprkTextAreaCheck
+            <SprkInputElement
               id={id}
               analyticsString={analyticsString}
               idString={idString}

@@ -8,7 +8,12 @@ export default {
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
-  parameters: { jest: ['SprkStack', 'SprkStackItem'] },
+  parameters: {
+    jest: ['SprkStack', 'SprkStackItem'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
+    `,
+  },
 };
 
 export const defaultStory = () => (
