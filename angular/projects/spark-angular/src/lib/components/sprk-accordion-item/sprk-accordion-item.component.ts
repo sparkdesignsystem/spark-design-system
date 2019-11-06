@@ -46,7 +46,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 export class SprkAccordionItemComponent implements OnInit {
   /**
    * The value supplied will be rendered
-   * inside the title area of the accordion item.
+   * inside the title area of the Accordion item.
    */
   @Input()
   title: string;
@@ -78,38 +78,38 @@ export class SprkAccordionItemComponent implements OnInit {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * heading in the accordion item.
+   * heading in the Accordion item.
    */
   @Input()
   additionalHeadingClasses: string;
   /**
-   * The accordion item will use this to decide
+   * The Accordion item will use this to decide
    * if it should be open or closed on first render.
    * (Interacting with the toggle will override this input.)
    */
   @Input()
   isOpen = false;
   /**
-   * If true, the active CSS class
+   * If `true`, the active CSS class
    * will be applied to the item.
    */
   @Input()
   isActive: boolean;
   /**
    * The name of the icon to use for
-   * a closed accordion item.
+   * a closed Accordion item.
    */
   @Input()
   iconTypeClosed = 'chevron-up-circle-two-color';
   /**
    * The name of the icon to use for
-   * an open accordion item.
+   * an open Accordion item.
    */
   @Input()
   iconTypeOpen = 'chevron-up-circle-two-color';
   /**
    * The name of the icon to use before
-   * the title in the accordion item.
+   * the title in the Accordion item.
    * This is optional.
    */
   @Input()

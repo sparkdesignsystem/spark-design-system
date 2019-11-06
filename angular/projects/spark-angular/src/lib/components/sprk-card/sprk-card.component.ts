@@ -155,34 +155,34 @@ export class SprkCardComponent {
   @Input()
   title: string;
   /**
-   * If the media input is set to `image`,
+   * If the `media` input is set to `image`,
    * this is the text that will be applied to the
    * `src` attribute of the image.
    */
   @Input()
   imgSrc: string;
   /**
-   * If the media input is set to `image`,
+   * If the `media` input is set to `image`,
    * this is the text that is applied to
    * the `alt` attribute of the image.
    */
   @Input()
   imgAlt: string;
   /**
-   * If the media input is set to `icon`, this
+   * If the `media` input is set to `icon`, this
    * is used to supply the name of the icon to use.
    */
   @Input()
   iconType: string;
   /**
-   * If the media input is set to `icon`, this
-   * is used to supply the href for the icon.
+   * If the `media` input is set to `icon`, this
+   * is used to supply the `href` for the icon.
    */
   @Input()
   iconHref: string;
   /**
-   * If the media input is set to `img`, this
-   * is used to supply the href of the image.
+   * If the `media` input is set to `img`, this
+   * is used to supply the `href` of the image.
    */
   @Input()
   imgHref: string;
@@ -216,7 +216,7 @@ export class SprkCardComponent {
   @Input()
   iconLinkAnalytics: string;
   /**
-   * The href value for the call-to-action.
+   * The `href` value for the call-to-action.
    */
   @Input()
   ctaHref: string;

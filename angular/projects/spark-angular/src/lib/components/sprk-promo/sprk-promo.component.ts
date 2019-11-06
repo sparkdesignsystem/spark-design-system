@@ -177,7 +177,7 @@ export class SprkPromoComponent {
   @Input()
   additionalClassesFlagLink: string;
   /**
-   * If `isFlag` is set to true,
+   * If `isFlag` is set to `true`,
    * the Promo will render with
    * an anchor element containing the
    * image specified in `imgSrc`. The value
