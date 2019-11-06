@@ -78,30 +78,59 @@ const SprkAlert = (props) => {
 
 SprkAlert.propTypes = {
   /**
-   * Determines whether to render the alert.
+   * Determines whether to render the Alert.
    */
   isVisible: PropTypes.bool,
-  /** The alert message that will be rendered inside the paragraph tab. */
+  /**
+   * The text of the Alert message.
+   * Will be rendered inside a paragraph tag.
+   */
   message: PropTypes.string.isRequired,
-  /** The link variant that determines the class names. */
+  /**
+   * The type of Alert variant to render.
+   * 	Can be `info`, `fail`, or `success`.
+   */
   variant: PropTypes.oneOf(['info', 'success', 'fail']),
-  /** The string to use for the data-id attribute. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** Determines if the dismiss button is added. */
+  /**
+   * If `false`, the dismiss button will not be rendered and
+   * the Alert will not dismissible.
+   * If `true`, the dismiss button will be rendered and
+   * the Alert will be dismissible.
+   */
   isDismissible: PropTypes.bool,
-  /** The string to use for the data-analytics attribute on the close button. */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the dismiss button.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** Any additional classes to add to the link. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** Function that is called when dismiss button is clicked. */
+  /**
+   * Function that is called when dismiss button is clicked.
+   */
   onDismiss: PropTypes.func,
-  /** The icon name for the fail alert. */
+  /** The icon name for the fail Alert. */
   iconNameFail: PropTypes.string,
   /** The icon name for the dismiss button. */
   iconNameDismiss: PropTypes.string,
-  /** The icon name for the info alert. */
+  /** The icon name for the info Alert. */
   iconNameInfo: PropTypes.string,
-  /** The icon name for the success alert. */
+  /** The icon name for the success Alert. */
   iconNameSuccess: PropTypes.string,
 };
 

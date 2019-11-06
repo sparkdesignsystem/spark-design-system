@@ -15,11 +15,20 @@ SprkDivider.defaultProps = {
 };
 
 SprkDivider.propTypes = {
-  /** The element that will be rendered - required */ 
+  /**
+   * The type of element that will be rendered.
+   */
   element: PropTypes.oneOf(['span', 'hr']).isRequired,
-  /** The string to use for the data-id attribute */ 
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This val ue should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** Any additional classes to add to the element */ 
+  /** Any additional classes to add to the element */
   additionalClasses: PropTypes.string,
 };
 

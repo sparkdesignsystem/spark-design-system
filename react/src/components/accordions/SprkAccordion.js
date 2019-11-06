@@ -39,11 +39,24 @@ class SprkAccordion extends Component {
 }
 
 SprkAccordion.propTypes = {
-  /** Value added to accordion container as additional classes. */
+  /**
+    * Expects a space separated string
+    * of classes to be added to the
+    * component.
+    */
   additionalClasses: PropTypes.string,
-  /** Expects SprkAccordionItem as children. */
+  /**
+   * Expects `SprkAccordionItem` as children.
+   */
   children: PropTypes.node.isRequired,
-  /** An optional id for automated testing. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
 };
 

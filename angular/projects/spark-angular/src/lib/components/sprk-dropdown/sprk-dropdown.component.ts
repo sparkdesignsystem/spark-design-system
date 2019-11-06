@@ -105,6 +105,9 @@ import {
   `
 })
 export class SprkDropdownComponent {
+  /**
+   * The variant of the Dropdown to render.
+   */
   @Input()
   dropdownType = 'base';
   /**

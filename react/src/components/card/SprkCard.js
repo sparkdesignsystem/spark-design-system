@@ -55,17 +55,35 @@ const SprkCard = (props) => {
 };
 
 SprkCard.propTypes = {
-  /** Additional classes for */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** Additional classes for content container */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * Card Content.
+   */
   additionalContentClasses: PropTypes.string,
   /** Takes content for a base card */
   children: PropTypes.node,
-  /** data-id */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** Shadow darker than normal */
+  /**
+   * If `true`, the Standout Card styles
+   * will be applied.
+   */
   isStandout: PropTypes.bool,
-  /** Additional Card types (highlightedHeader, teaser) */
+  /** The type of Card variant to render. */
   variant: PropTypes.string,
   /** Configures highlighted header */
   highlightedHeaderConfig: PropTypes.shape({

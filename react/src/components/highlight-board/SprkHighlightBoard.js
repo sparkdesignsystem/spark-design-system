@@ -111,33 +111,77 @@ const SprkHighlightBoard = (props) => {
 };
 
 SprkHighlightBoard.propTypes = {
-  /** The source for the image - required if imgAlt is provided. */
+  /**
+   * The Highlight Board will use this as the
+   * source for the main image.
+   */
   imgSrc: PropTypes.string,
-  /** The alt text for the image - required if imgSrc is provided. */
+  /**
+   * The Highlight Board will use this as
+   * the `alt` text for the main image.
+   */
   imgAlt: PropTypes.string,
-  /** The heading text. */
+  /**
+   * The value supplied will be rendered as the heading.
+   */
   heading: PropTypes.string,
-  /** The text for the first call-to-action. */
+  /**
+   * The Highlight Board will use this as
+   * the text for the main call-to-action.
+   */
   ctaText: PropTypes.string,
-  /**  The href for the first call-to-action. */
+  /**
+   * The Highlight Board will use this as the
+   * `href` for the main call-to-action.
+   */
   ctaHref: PropTypes.string,
-  /** The data-analytics for the first call-to-action. */
+  /**
+   * The value supplied will be assigned to
+   * the `data-analytics` attribute on the call-to-action.
+   * Intended for an outside library to capture data.
+   */
   ctaAnalytics: PropTypes.string,
-  /** The data-id for the first call-to-action. */
+  /**
+   * The `data-id` for the first call-to-action.
+   */
   ctaIdString: PropTypes.string,
   /** The text for the second call-to-action. */
   ctaText2: PropTypes.string,
-  /** The href for the second call-to-action. */
+  /**
+   * The `href` for the second call-to-action.
+   */
   ctaHref2: PropTypes.string,
-  /** The data-analytics for the second call-to-action. */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the second
+   * call-to-action. Intended for an outside
+   * library to capture data.
+   */
   ctaAnalytics2: PropTypes.string,
-  /** The data-id for the second call-to-action. */
+  /**
+   * The `data-id` for the second call-to-action.
+   */
   ctaIdString2: PropTypes.string,
-  /** The variant that determines the class names. */
+  /**
+   * The variation of the
+   * Highlight Board that is rendered.
+   * Can be `noImage`, `stacked`.
+   */
   variant: PropTypes.oneOf(['noImage', 'stacked']),
-  /** The string to use for the data-id attribute. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** Any additional classes to add to the highlight board. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
 };
 

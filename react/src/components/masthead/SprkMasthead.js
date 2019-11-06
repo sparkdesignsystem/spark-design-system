@@ -229,9 +229,18 @@ class SprkMasthead extends Component {
 }
 
 SprkMasthead.propTypes = {
-  /** Classes to be added to the masthead. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** Assigned to data-analytics. */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
   /** Array of link objects to use in building the big nav. */
   bigNavLinks: PropTypes.arrayOf(
@@ -246,7 +255,14 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
-  /** Assigned to data-id. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
   /** Array of link objects to use in building the little nav. */
   littleNavLinks: PropTypes.arrayOf(
@@ -320,7 +336,9 @@ SprkMasthead.propTypes = {
   utilityContents: PropTypes.arrayOf(PropTypes.node),
   /** The variant name to render. */
   variant: PropTypes.oneOf(['default', 'extended']),
-  /** The href to render for the logo link. */
+  /**
+   * The `href` to render for the logo link.
+   */
   logoLink: PropTypes.string,
   /** The element link element to render for the logo. */
   logoLinkElement: PropTypes.oneOfType([
