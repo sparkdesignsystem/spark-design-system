@@ -11,6 +11,11 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkMastheadAccordionComponent {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
   /**

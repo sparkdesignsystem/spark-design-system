@@ -27,10 +27,27 @@ import { Router } from '@angular/router';
   `
 })
 export class SprkLinkComponent implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public router: Router) {}
 
+  /**
+   * Will cause the appropriate variant type to render.
+   * Optional values are: `simple`, `icon`, `unstyled` or `plain`.
+   * If omitted, the default Spark Link class is applied.
+   * The `unstyled` variant will render an `href` with no
+   * CSS classes.
+   */
   @Input()
   linkType: string;
+  /**
+   * The `href` value of the link. If omitted,
+   * the href will be set to `#`
+   * and the routing will be disabled. If
+   * set to reference an ID then the page
+   * will scroll to that anchor as normal.
+   */
   @Input()
   href: string;
   /**
@@ -43,24 +60,65 @@ export class SprkLinkComponent implements OnInit {
    */
   @Input()
   idString: string;
+  /**
+   * Value for the `role`
+   * attribute of the link.
+   */
   @Input()
   role: string;
+  /**
+   * The string that will be
+   * assigned to the `id` attribute of
+   * the link.
+   */
   @Input()
   id: string;
+  /**
+   * Expects a value to assign to the
+   * `aria-controls` attribute of the link.
+   */
   @Input()
   ariaControls: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-labelledby` attribute of the link.
+   */
   @Input()
   ariaLabelledby: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-selected` attribute of the link.
+   */
   @Input()
   ariaSelected: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-hidden` attribute of the link.
+   */
   @Input()
   ariaHidden: string;
+  /**
+   * Expects a value to assign
+   * to the `aria-curren`t attribute of the link.
+   */
   @Input()
   ariaCurrent: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-expanded `attribute of the link.
+   */
   @Input()
   ariaExpanded: string;
+  /**
+   * Expects a value to assign
+   * to the `aria-haspopup` attribute of the link.
+   */
   @Input()
   ariaHasPopUp: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-label` attribute of the link.
+   */
   @Input()
   ariaLabel: string;
   /**
@@ -71,6 +129,10 @@ export class SprkLinkComponent implements OnInit {
    */
   @Input()
   analyticsString: string;
+  /**
+   * Expects a value to assign to
+   * the `target` attribute of the link.
+   */
   @Input()
   target: string;
   /**
@@ -80,11 +142,26 @@ export class SprkLinkComponent implements OnInit {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * If `true`, will set disabled styles on the link.
+   */
   @Input()
   isDisabled: boolean;
+  /**
+   * By default, the component determines if
+   * the `href` is an external or internal link
+   * by looking for the `:` character in the
+   * `href` string. If external link functionality
+   * is desired with an `href` value that contains
+   * a `:` set this input to true. This overrides
+   * the default and avoids using the Angular Router.
+   */
   @Input()
   isExternal = false;
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
     // Sets the default href if none provided
     if (this.href === '' || this.href === null || this.href === undefined) {
@@ -96,27 +173,39 @@ export class SprkLinkComponent implements OnInit {
       this.href = `${this.getPathWithoutHash(this.router.url)}${this.href}`;
     }
   }
-
+  /**
+   * @ignore
+   */
   isExternalLink(value): boolean {
     return new RegExp('^.*:', 'i').test(value);
   }
-
+  /**
+   * @ignore
+   */
   isJumpLinkWithPage(value): boolean {
     return new RegExp('^.*#.+', 'i').test(value);
   }
-
+  /**
+   * @ignore
+   */
   isJumpLink(value): boolean {
     return new RegExp('^#.+', 'i').test(value);
   }
-
+  /**
+   * @ignore
+   */
   isNoActionLink(value): boolean {
     return value === '#';
   }
-
+  /**
+   * @ignore
+   */
   getPathWithoutHash(value): string {
     return value.split('#')[0];
   }
-
+  /**
+   * @ignore
+   */
   scrollToId() {
     const elementID = this.href.split('#').pop();
     const element: HTMLElement = document.getElementById(elementID);
@@ -124,7 +213,9 @@ export class SprkLinkComponent implements OnInit {
       element.scrollIntoView();
     }
   }
-
+  /**
+   * @ignore
+   */
   handleClick(event): void {
     // Let browser handle route if external Link
     if (this.isExternalLink(this.href) || this.isExternal) {

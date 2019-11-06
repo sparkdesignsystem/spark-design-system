@@ -34,7 +34,8 @@ export class SprkStepperComponent implements AfterViewInit {
   idString: string;
   /**
    * If `true`, this will apply the correct styles
-   * the to the Stepper for when it is on a dark background.
+   * the to the Stepper for when
+   * it is on a dark background.
    */
   @Input()
   hasDarkBg: boolean;
@@ -147,6 +148,10 @@ export class SprkStepperComponent implements AfterViewInit {
     });
   }
 
+
+  /**
+   * @ignore
+   */
   ngAfterViewInit(): void {
     this.bindUIEvents();
   }

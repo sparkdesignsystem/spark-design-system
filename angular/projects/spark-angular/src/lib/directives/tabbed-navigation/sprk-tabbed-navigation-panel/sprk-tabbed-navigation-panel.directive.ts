@@ -4,8 +4,17 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkTabbedNavigationPanel]'
 })
 export class SprkTabbedNavigationPanelDirective implements OnInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * If `true`, the Panel will
+   * be set as the active Panel on render.
+   */
   @Input()
   defaultActive: boolean;
 
@@ -27,7 +36,9 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
 
     return classArray;
   }
-
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.ref.nativeElement.setAttribute('role', 'tabpanel');
     this.ref.nativeElement.setAttribute('tabindex', '0');
@@ -36,6 +47,8 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
       this.ref.nativeElement.classList.add(item);
     });
   }
-
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

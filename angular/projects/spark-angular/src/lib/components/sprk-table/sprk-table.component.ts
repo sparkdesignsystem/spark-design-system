@@ -14,14 +14,14 @@ export class SprkTableComponent {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component container.
+   * component container element.
    */
   @Input()
   additionalClasses: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * table element.
+   * `table` element.
    */
   @Input()
   additionalTableClasses: string;

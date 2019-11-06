@@ -239,7 +239,7 @@ export class SprkPaginationComponent {
   /**
    * Accepts a function to run when the
    * previous link is clicked.
-   * On click, previousClick
+   * On click, `previousClick`
    * will emit the click event and current page.
    */
   @Output()
@@ -247,13 +247,13 @@ export class SprkPaginationComponent {
   /**
    * Accepts a function
    * to run when the next link is clicked.
-   * On click, nextClick will emit the click event and current page.
+   * On click, `nextClick` will emit the click event and current page.
    */
   @Output()
   nextClick = new EventEmitter();
   /**
    * Accepts a function to run when the individual page
-   * links are clicked. On click, pageClick will
+   * links are clicked. On click, `pageClick` will
    * emit the click event and current page.
    */
   @Output()

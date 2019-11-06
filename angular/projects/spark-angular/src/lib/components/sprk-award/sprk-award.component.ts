@@ -74,24 +74,24 @@ export class SprkAwardComponent {
   @Input()
   splitAt: string;
   /**
-   * The alt text that will be applied to the first image.
+   * The `alt` text that will be applied to the first image.
    */
   @Input()
   imgOneAlt: string;
   /**
-   * The image href value that will be
+   * The image `href` value that will be
    * applied to the first image.
    */
   @Input()
   imgOneHref: string;
   /**
-   * The image href value that will be
+   * The image `href` value that will be
    * applied to the second image.
    */
   @Input()
   imgTwoHref: string;
   /**
-   * The alt text that will be applied to the second image.
+   * The `alt` text that will be applied to the second image.
    */
   @Input()
   imgTwoAlt: string;
@@ -165,7 +165,7 @@ export class SprkAwardComponent {
   @Input()
   disclaimerCopy: string;
   /**
-   * If false, the disclaimer
+   * If `false`, the disclaimer
    * toggle will not be rendered.
    */
   @Input()
@@ -189,7 +189,8 @@ export class SprkAwardComponent {
       'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
-    // Handle the choice of item split breakpoint by adding CSS class
+    // Handle the choice of item split
+    // breakpoint by adding CSS class
     switch (this.splitAt) {
       case 'tiny':
         classArray.push('sprk-o-Stack--split@xs');

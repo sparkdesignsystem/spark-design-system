@@ -144,7 +144,7 @@ export class SprkPromoComponent {
   /**
    * The value supplied will be assigned to
    * the `data-analytics` attribute on the
-   * call-to-action link if cta is set to
+   * call-to-action link if `cta` is set to
    * `link`. This is intended for an
    * outside library to capture data.
    */
@@ -180,7 +180,7 @@ export class SprkPromoComponent {
    * If `isFlag` is set to true,
    * the Promo will render with
    * an anchor element containing the
-   * image specified in imgSrc. The value
+   * image specified in `imgSrc`. The value
    * supplied here will be assigned to the `data-analytics`
    * attribute on that anchor element.
    * This is intended for an outside library to capture data.
@@ -193,12 +193,12 @@ export class SprkPromoComponent {
   @Input()
   imgSrc: string;
   /**
-   * The alt text for the Promo image.
+   * The `alt` text for the Promo image.
    */
   @Input()
   imgAlt: string;
   /**
-   * The href value for the Promo image.
+   * The `href` value for the Promo image.
    */
   @Input()
   imgHref: string;

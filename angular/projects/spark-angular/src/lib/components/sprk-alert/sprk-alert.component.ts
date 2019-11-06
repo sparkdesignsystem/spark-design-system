@@ -39,6 +39,7 @@ import { Component, Input } from '@angular/core';
 export class SprkAlertComponent {
   /**
    * The type of Alert variant to render.
+   * 	Can be `info`, `fail`, or `success`.
    */
   @Input()
   alertType: string;
@@ -68,8 +69,10 @@ export class SprkAlertComponent {
   @Input()
   additionalClasses: string;
   /**
-   * A false value will result in the dismiss
-   * button will not be rendered.
+   * If `false`, the dismiss button will not be rendered and
+   * the Alert will not dismissible.
+   * If `true`, the dismiss button will be rendered and
+   * the Alert will be dismissible.
    */
   @Input()
   dismissible: boolean;
@@ -117,7 +120,7 @@ export class SprkAlertComponent {
 
   /**
    * When the dismiss button is clicked
-   * this method sets the visable state to false
+   * this method sets the visable state to `false`
    * and hides the Alert component.
    */
   alertDismiss(event): void {

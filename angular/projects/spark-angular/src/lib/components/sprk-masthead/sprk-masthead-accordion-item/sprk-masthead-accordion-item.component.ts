@@ -63,27 +63,75 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
    */
   @Input()
   idString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * heading.
+   */
   @Input()
   additionalHeadingClasses: string;
+  /**
+   * If `true`, the Masthead accordion item
+   * will be open when it is rendered.
+   */
   @Input()
   isOpen = false;
+  /**
+   * If `true`, the Masthead ccordion item
+   * will be active when it is rendered.
+   */
   @Input()
   isActive: boolean;
+  /**
+   * The name of the icon to use
+   * for the clickable close icon.
+   */
   @Input()
   iconTypeClosed = 'chevron-up-circle-two-color';
+  /**
+   * The name of the icon to use
+   * for the clickable open icon.
+   */
   @Input()
   iconTypeOpen = 'chevron-up-circle-two-color';
+  /**
+   * Expects a name of an icon to use
+   * as a leading icon for the Masthead accordion item.
+   */
   @Input()
   leadingIcon: string;
 
+  /**
+   * @ignore
+   */
   componentID = _.uniqueId();
+  /**
+   * @ignore
+   */
   accordion_controls_id = `accordionHeading__${this.componentID}`;
+  /**
+   * @ignore
+   */
   public currentIconType = this.iconTypeClosed;
+  /**
+   * @ignore
+   */
   public iconStateClass = '';
+  /**
+   * @ignore
+   */
   public animState = 'closed';
 
+  /**
+   * @ignore
+   */
   accordionState(): void {
     this.isOpen === false
       ? (this.animState = 'closed')
@@ -97,7 +145,9 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
       ? (this.iconStateClass = '')
       : (this.iconStateClass = 'sprk-c-Icon--open');
   }
-
+  /**
+   * @ignore
+   */
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
@@ -129,7 +179,9 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
 
     return classArray.join(' ');
   }
-
+  /**
+   * @ignore
+   */
   getHeadingClasses(): string {
     const classArray: string[] = ['sprk-c-MastheadAccordion__heading'];
 
@@ -142,6 +194,9 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
     this.accordionState();
   }

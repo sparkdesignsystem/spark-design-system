@@ -4,8 +4,17 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkTabbedNavigationTab]'
 })
 export class SprkTabbedNavigationTabDirective implements OnInit {
+ /**
+  * Expects a space separated string
+  * of classes to be added to the
+  * element.
+  */
   @Input()
   additionalClasses: string;
+  /**
+   * If `true`, the Tab will have
+   * active styles and aria attributes on render.
+   */
   @Input()
   defaultActive: boolean;
   /**
@@ -35,7 +44,9 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
 
     return classArray;
   }
-
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
@@ -54,6 +65,8 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
       );
     }
   }
-
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

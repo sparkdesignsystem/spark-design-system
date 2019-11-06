@@ -65,22 +65,61 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkHighlightBoardComponent {
+  /**
+   * The value supplied will be rendered as the heading.
+   */
   @Input()
   heading: string;
+  /**
+   * The Highlight Board will use this as the
+   * source for the main image.
+   */
   @Input()
   imgSrc: string;
+  /**
+   * The Highlight Board will use this as
+   * the `alt` text for the main image.
+   */
   @Input()
   imgAlt: string;
+  /**
+   * The Highlight Board will use this as
+   * the text for the main call-to-action.
+   */
   @Input()
   ctaText: string;
+  /**
+   * The Highlight Board will use this as the
+   * `href` for the main call-to-action.
+   */
   @Input()
   ctaHref: string;
+  /**
+   * The Highlight Board will use this as
+   * the text for the secondary call-to-action.
+   */
   @Input()
   ctaText2: string;
+  /**
+   * The Highlight Board will use this
+   * as the `href` for the secondary
+   * call-to-action.
+   */
   @Input()
   ctaHref2: string;
+  /**
+   * The value supplied will be assigned to
+   * the `data-analytics` attribute on the call-to-action.
+   * Intended for an outside library to capture data.
+   */
   @Input()
   analyticsStringCta: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the second
+   * call-to-action. Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsStringCta2: string;
   /**
@@ -90,6 +129,13 @@ export class SprkHighlightBoardComponent {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * The variation of the
+   * Highlight Board that is rendered.
+   * Can be `noImage`, `stacked` or not
+   * set at all. The default if not set
+   * is the default variation of the Highlight Board.
+   */
   @Input()
   type: string;
   /**
@@ -103,6 +149,9 @@ export class SprkHighlightBoardComponent {
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   public centerBtns = '';
 
   /**

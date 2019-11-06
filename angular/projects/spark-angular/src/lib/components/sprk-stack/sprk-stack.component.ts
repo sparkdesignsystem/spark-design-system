@@ -17,8 +17,9 @@ export class SprkStackComponent {
   @Input()
   splitAt: string;
   /**
+   * This is used as the amount of spacing
+   * between the child `sprkStackItem` items.
    * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
-   * This is used as the amount of spacing between Stack items.
    */
   @Input()
   itemSpacing: string;

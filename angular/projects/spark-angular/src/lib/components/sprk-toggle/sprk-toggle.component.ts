@@ -50,19 +50,22 @@ export class SprkToggleComponent implements OnInit {
   @Input()
   additionalClasses: string;
   /**
-   * The value supplied will be rendered as the main Toggle link text.
+   * The value supplied will be
+   * rendered as the main Toggle link text.
    */
   @Input()
   title: string;
   /**
    * The value supplied will be assigned as a
    * CSS class on the icon used in the Toggle.
+   * This is intended for overrides.
    */
   @Input()
   iconClass: string;
   /**
    * The value supplied will be assigned as a CSS class
    * on the clickable title text used in the Toggle.
+   * This is intended for overrides.
    */
   @Input()
   titleFontClass = 'sprk-b-TypeBodyThree';

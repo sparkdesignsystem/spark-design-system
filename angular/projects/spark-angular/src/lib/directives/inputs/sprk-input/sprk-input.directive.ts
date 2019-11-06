@@ -9,9 +9,15 @@ import {
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 
-@HostListener('change', ['$event'])
+  /**
+   * @ignore
+   */
+  @HostListener('change', ['$event'])
   OnChange($event) {
     const value = (this.ref.nativeElement as HTMLInputElement).value;
     if (value.length > 0) {
@@ -20,7 +26,9 @@ export class SprkInputDirective implements OnInit {
       this.ref.nativeElement.classList.remove('sprk-b-Input--has-floating-label');
     }
   }
-
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     if (this.ref.nativeElement.nodeName === 'SELECT') {
       this.ref.nativeElement.classList.add('sprk-b-Select');

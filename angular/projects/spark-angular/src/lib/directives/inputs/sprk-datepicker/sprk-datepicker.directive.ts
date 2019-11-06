@@ -7,9 +7,17 @@ import TinyDatePicker from 'tiny-date-picker';
 export class SprkDatepickerDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
+  /**
+   * Exposes configuration provided
+   * by `tiny-date-picker`,
+   * see [github](https://github.com/chrisdavies/tiny-date-picker) for documentation.
+   */
   @Input()
   sprkDatePickerConfig: object;
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     const input = this.ref.nativeElement;
     const tdpConfig = {

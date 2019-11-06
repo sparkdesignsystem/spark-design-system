@@ -46,16 +46,16 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   @Input()
   idString: string;
   /**
-   * This component expects children button elements
-   * with the SprkTabbedNavigationTabDirective on them.
-   * These buttons serve as the Tabs.
+   * This component expects children `<button>` elements
+   * with the `SprkTabbedNavigationTabDirective` on them.
+   * These serve as the Tabs.
    */
   @ContentChildren(SprkTabbedNavigationTabDirective)
   tabs: QueryList<SprkTabbedNavigationTabDirective>;
   /**
-   * This component expects children div elements
-   * with the SprkTabbedNavigationPanelDirective on them.
-   * These divs serve as the Panels.
+   * This component expects children `<div>` elements
+   * with the `SprkTabbedNavigationPanelDirective` on them.
+   * These serve as the Panels.
    */
   @ContentChildren(SprkTabbedNavigationPanelDirective)
   panels: QueryList<SprkTabbedNavigationPanelDirective>;
@@ -68,6 +68,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   activeClass = 'sprk-c-Tabs__button--active';
 
+  /**
+   * @ignore
+   */
   @HostListener('click', ['$event'])
   onClick($event) {
     if ($event.target.classList.contains('sprk-c-Tabs__button')) {
@@ -92,11 +95,17 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   @HostListener('window:resize')
   onResize() {
     this.ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 
+  /**
+   * @ignore
+   */
   @HostListener('keydown', ['$event'])
   onKeydown($event) {
     const isPanel = $event.target.classList.contains('sprk-c-Tabs__content');

@@ -6,6 +6,10 @@ import { Directive, ElementRef, OnInit, Input } from '@angular/core';
 export class SprkButtonDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
+  /**
+   * Will show a spinner inside the
+   * button if set to `true`.
+   */
   @Input() isSpinning = false;
 
   /**
@@ -17,6 +21,9 @@ export class SprkButtonDirective implements OnInit {
     return classArray;
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);
@@ -25,7 +32,9 @@ export class SprkButtonDirective implements OnInit {
       this.setSpinning(this.ref.nativeElement);
     }
   }
-
+  /**
+   * @ignore
+   */
   setSpinning = (element) => {
     const el = element;
     const width = element.offsetWidth;

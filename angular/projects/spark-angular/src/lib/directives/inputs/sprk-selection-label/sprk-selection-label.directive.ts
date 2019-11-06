@@ -4,6 +4,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
   selector: '[sprkSelectionLabel]'
 })
 export class SprkSelectionLabelDirective implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 
   /**
@@ -14,6 +17,9 @@ export class SprkSelectionLabelDirective implements OnInit {
     return classArray;
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);

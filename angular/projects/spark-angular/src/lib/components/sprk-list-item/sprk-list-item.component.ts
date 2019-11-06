@@ -27,8 +27,16 @@ export class SprkListItemComponent {
    */
   @Input()
   idString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   @ViewChild(TemplateRef, { static: true }) content: TemplateRef<any>;
 }

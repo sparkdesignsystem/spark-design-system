@@ -10,6 +10,12 @@ import { Component, Input } from '@angular/core';
   styles: [':host { line-height: 1; }']
 })
 export class SprkIconComponent {
+  /**
+   * Determines which icon is rendered.
+   * Expects the value to match the exact name
+   * of the icon found in the docs
+   * (i.e. `chevron-down`, instead of `chevron down`).
+   */
   @Input()
   iconType: string;
   /**

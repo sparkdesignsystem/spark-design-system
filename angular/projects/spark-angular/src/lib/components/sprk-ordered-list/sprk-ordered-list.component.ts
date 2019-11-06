@@ -17,8 +17,17 @@ import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.componen
   `
 })
 export class SprkOrderedListComponent {
+  /**
+   * Will cause the appropriate variant type to render.
+   * Can be `bare` or `indented`.
+   */
   @Input()
   listType: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
   /**
@@ -32,6 +41,10 @@ export class SprkOrderedListComponent {
   @Input()
   idString: string;
 
+  /**
+   * This component expects children
+   * components of `<sprk-list-item></<sprk-list-item>`.
+   */
   @ContentChildren(SprkListItemComponent) items: QueryList<
     SprkListItemComponent
   >;
