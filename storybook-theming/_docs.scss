@@ -96,4 +96,12 @@ body {
   font-family: $sprk-font-family-body-two;
   font-size: $sprk-font-size-body-two;
   font-weight: $sprk-font-weight-body-two;
+  margin-bottom: $sprk-space-m;
+}
+
+.docblock-propstable code {
+  font-size: 0.9rem;
+  padding: 0 $sprk-space-s;
+  background-color: $sprk-gray;
+  display: inline-block;
 }
