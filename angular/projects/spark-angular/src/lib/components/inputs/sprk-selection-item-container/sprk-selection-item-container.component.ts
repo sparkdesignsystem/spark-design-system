@@ -14,6 +14,11 @@ import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-sel
   `
 })
 export class SprkSelectionItemContainerComponent implements OnInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
 
@@ -22,7 +27,13 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   @ContentChild(SprkSelectionInputDirective, { static: true })
   input: SprkSelectionInputDirective;
 
+  /**
+   * @ignore
+   */
   id = _.uniqueId();
+  /**
+   * @ignore
+   */
   input_id = `input_${this.id}`;
 
   /**
@@ -39,7 +50,9 @@ export class SprkSelectionItemContainerComponent implements OnInit {
 
     return classArray.join(' ');
   }
-
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);

@@ -69,12 +69,14 @@ export class SprkAwardComponent {
    * from a stacked layout to a side by side
    * layout. You will need to experiment
    * with your content to see which value
-   * is the best fit.
+   * is the best fit. Can be `tiny`,
+   * `small`, `medium`, `large` or `huge`.
    */
   @Input()
   splitAt: string;
   /**
-   * The `alt` text that will be applied to the first image.
+   * The `alt` text that will be applied
+   * to the first image.
    */
   @Input()
   imgOneAlt: string;
@@ -91,17 +93,20 @@ export class SprkAwardComponent {
   @Input()
   imgTwoHref: string;
   /**
-   * The `alt` text that will be applied to the second image.
+   * The `alt` text that will be applied
+   * 'to the second image.
    */
   @Input()
   imgTwoAlt: string;
   /**
-   * The image source that will be applied to the first image.
+   * The image source that will be
+   * applied to the first image.
    */
   @Input()
   imgOneSrc: string;
   /**
-   * The image source that will be applied to the second image.
+   * The image source that will be
+   * applied to the second image.
    */
   @Input()
   imgTwoSrc: string;

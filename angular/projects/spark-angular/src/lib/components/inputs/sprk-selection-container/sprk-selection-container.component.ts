@@ -28,6 +28,11 @@ import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-cont
   `
 })
 export class SprkSelectionContainerComponent implements AfterContentInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
 
@@ -38,7 +43,13 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
   @ContentChildren(SprkSelectionItemContainerComponent)
   selectionItems: QueryList<SprkSelectionItemContainerComponent>;
 
+  /**
+   * @ignore
+   */
   id = _.uniqueId();
+  /**
+   * @ignore
+   */
   error_id = `error_${this.id}`;
 
   /**
@@ -55,7 +66,9 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
 
     return classArray.join(' ');
   }
-
+  /**
+   * @ignore
+   */
   ngAfterContentInit(): void {
     if (this.selectionItems && this.error) {
       this.selectionItems.forEach(item => {

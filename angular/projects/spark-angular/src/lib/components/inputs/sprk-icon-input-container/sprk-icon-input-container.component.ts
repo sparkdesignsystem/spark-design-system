@@ -20,8 +20,18 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
   `
 })
 export class SprkIconInputContainerComponent implements OnInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon container.
+   */
   @Input()
   iconContainerClasses: string;
 
@@ -32,10 +42,21 @@ export class SprkIconInputContainerComponent implements OnInit {
   @ContentChild(SprkFieldErrorDirective, { static: true })
   error: SprkFieldErrorDirective;
 
+  /**
+   * @ignore
+   */
   id = _.uniqueId();
+  /**
+   * @ignore
+   */
   input_id = `input_${this.id}`;
+  /**
+   * @ignore
+   */
   error_id = `error_${this.id}`;
-
+  /**
+   * @ignore
+   */
   getIconContainerClasses(): string {
     const classArray: string[] = ['sprk-b-InputContainer__icon-container'];
 
@@ -63,6 +84,9 @@ export class SprkIconInputContainerComponent implements OnInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);
