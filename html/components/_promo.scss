@@ -11,6 +11,22 @@
   border: $sprk-promo-border;
 }
 
+.sprk-c-Promo--bar {
+  background-color: $sprk-blue;
+  color: $sprk-white;
+  max-width: 100%;
+  width: 100%;
+}
+
+.sprk-c-Promo--bar .sprk-c-Promo__content {
+  max-width: $sprk-masthead-column-width;
+  text-align: center;
+}
+
+.sprk-c-Promo--bar .sprk-c-Promo__text {
+  color: $sprk-white;
+}
+
 .sprk-c-Promo__title {
   font-weight: $sprk-promo-title-font-weight;
   color: $sprk-promo-title-font-color;

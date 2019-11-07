@@ -148,3 +148,17 @@ export const withReversedImage = () => (`
     </a>
   </div>
 `);
+
+
+export const promoBar = () => (
+  `
+    <div class="sprk-c-Promo sprk-c-Promo--bar sprk-o-Stack sprk-o-Stack--center-row" data-id="promo-bar">
+      <div class="sprk-c-Promo__content sprk-o-Stack__item">
+        <p class="sprk-b-TypeBodyTwo sprk-c-Promo__text">
+          Lorem ipsum dolor. Sit amet pede.
+          Lorem ipsum dolor. Sit amet pede.
+        </p>
+      </div>
+    </div>
+  `
+);
