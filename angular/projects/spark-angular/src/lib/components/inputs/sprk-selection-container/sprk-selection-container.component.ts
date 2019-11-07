@@ -36,10 +36,22 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
   @Input()
   additionalClasses: string;
 
+  /**
+   * This component expects a child label element
+   * with the `sprkLabel` directive.
+   */
   @ContentChild(SprkLabelDirective, { static: false })
   label: SprkLabelDirective;
+  /**
+   * This component expects a child element
+   * with the `sprkFieldError` directive.
+   */
   @ContentChild(SprkFieldErrorDirective, { static: false })
   error: SprkFieldErrorDirective;
+  /**
+   * This component expects a child
+   * `<sprk-selection-item-container>` component.
+   */
   @ContentChildren(SprkSelectionItemContainerComponent)
   selectionItems: QueryList<SprkSelectionItemContainerComponent>;
 

@@ -22,8 +22,16 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   @Input()
   additionalClasses: string;
 
+  /**
+   * This component expects a child label element
+   * with the `sprkSelectionLabel` directive.
+   */
   @ContentChild(SprkSelectionLabelDirective, { static: true })
   label: SprkSelectionLabelDirective;
+  /**
+   * This component expects a child selection input
+   * with the `sprkSelectionInput` directive.
+   */
   @ContentChild(SprkSelectionInputDirective, { static: true })
   input: SprkSelectionInputDirective;
 

@@ -35,10 +35,22 @@ export class SprkIconInputContainerComponent implements OnInit {
   @Input()
   iconContainerClasses: string;
 
+  /**
+   * This component expects a child label element
+   * with the `sprkLabel` directive.
+   */
   @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
+  /**
+   * This component expects a child input element
+   * with the `sprkInput` directive.
+   */
   @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
+  /**
+   * This component expects a child element
+   * with the `sprkFieldError` directive.
+   */
   @ContentChild(SprkFieldErrorDirective, { static: true })
   error: SprkFieldErrorDirective;
 
