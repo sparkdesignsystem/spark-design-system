@@ -1,9 +1,10 @@
 import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
+import { SprkButtonDirective } from './sprk-button.directive';
 
 export default {
   title: 'Components|Button',
-  component: SprkButtonModule,
+  directive: SprkButtonDirective,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -11,6 +12,11 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/button)
+    `,
+  },
  };
 
 const modules = {

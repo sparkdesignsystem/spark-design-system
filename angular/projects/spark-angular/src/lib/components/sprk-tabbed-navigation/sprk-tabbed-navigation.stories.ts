@@ -6,18 +6,24 @@ import {
 import {
   SprkTabbedNavigationTabModule
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
+import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
 
 
 export default {
   title: 'Components|Tabs',
-  component: SprkTabbedNavigationModule,
+  component: SprkTabbedNavigationComponent,
   decorators: [
     storyWrapper(
       storyContent => (
         `<div class="sprk-o-Box sprk-u-JavaScript">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/tabs)
+    `,
+  },
 };
 
 const modules = {

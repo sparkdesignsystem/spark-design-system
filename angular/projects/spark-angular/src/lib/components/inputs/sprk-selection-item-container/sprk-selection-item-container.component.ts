@@ -14,17 +14,39 @@ import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-sel
   `
 })
 export class SprkSelectionItemContainerComponent implements OnInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
 
+  /**
+   * This component expects a child label element
+   * with the `sprkSelectionLabel` directive.
+   */
   @ContentChild(SprkSelectionLabelDirective, { static: true })
   label: SprkSelectionLabelDirective;
+  /**
+   * This component expects a child selection input
+   * with the `sprkSelectionInput` directive.
+   */
   @ContentChild(SprkSelectionInputDirective, { static: true })
   input: SprkSelectionInputDirective;
 
+  /**
+   * @ignore
+   */
   id = _.uniqueId();
+  /**
+   * @ignore
+   */
   input_id = `input_${this.id}`;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-SelectionContainer'];
 

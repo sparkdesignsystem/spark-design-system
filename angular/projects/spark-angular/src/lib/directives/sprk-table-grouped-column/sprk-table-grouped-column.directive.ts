@@ -4,9 +4,17 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkTableGroupedColumn]'
 })
 export class SprkTableGroupedColumnDirective implements OnInit {
+ /**
+  * Expects a space separated string
+  * of classes to be added to the
+  * element.
+  */
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray = ['sprk-b-Table__grouped-column'];
     if (this.additionalClasses) {
@@ -22,6 +30,8 @@ export class SprkTableGroupedColumnDirective implements OnInit {
       this.ref.nativeElement.classList.add(className);
     });
   }
-
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

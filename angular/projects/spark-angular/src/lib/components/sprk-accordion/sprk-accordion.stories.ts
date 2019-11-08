@@ -8,7 +8,7 @@ import { SprkAccordionComponent } from './sprk-accordion.component';
 
 export default {
   title: 'Components|Accordion',
-  component: SprkAccordionModule,
+  component: SprkAccordionComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -16,6 +16,11 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
+    `,
+  },
 };
 
 const modules = {

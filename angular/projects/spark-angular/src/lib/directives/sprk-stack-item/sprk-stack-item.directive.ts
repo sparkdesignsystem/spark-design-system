@@ -8,5 +8,8 @@ export class SprkStackItemDirective implements OnInit {
     this.ref.nativeElement.classList.add('sprk-o-Stack__item');
   }
 
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

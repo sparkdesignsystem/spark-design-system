@@ -4,9 +4,17 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkTableEmptyHeading]'
 })
 export class SprkTableEmptyHeadingDirective implements OnInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray = ['sprk-b-Table__empty-heading'];
     if (this.additionalClasses) {
@@ -23,5 +31,8 @@ export class SprkTableEmptyHeadingDirective implements OnInit {
     });
   }
 
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

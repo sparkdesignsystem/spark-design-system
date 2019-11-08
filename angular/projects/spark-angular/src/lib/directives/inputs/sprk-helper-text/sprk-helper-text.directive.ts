@@ -6,6 +6,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
 export class SprkHelperTextDirective implements OnInit {
   constructor(public ref: ElementRef) {}
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-b-HelperText'];
     return classArray;

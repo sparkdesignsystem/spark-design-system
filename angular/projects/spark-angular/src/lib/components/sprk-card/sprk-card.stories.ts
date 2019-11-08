@@ -8,7 +8,7 @@ import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack
 
 export default {
   title: 'Components|Card',
-  component: SprkCardModule,
+  component: SprkCardComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -16,6 +16,11 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
+    `,
+  },
 };
 
 const modules = {

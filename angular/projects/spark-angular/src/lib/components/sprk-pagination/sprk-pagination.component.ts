@@ -119,33 +119,109 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   `
 })
 export class SprkPaginationComponent {
-  // long and default have been combined and render the same now
+  /**
+   * If set to `pager`, the component will render
+   * in the Pager variant with no visible number
+   * links. Otherwise, the component will render in
+   * the Default variant if there three or fewer
+   * pages or in the Long variant if there are
+   * more than three pages.
+   */
   @Input()
   paginationType = 'default';
+  /**
+   * The total number of items in the
+   * paged data. This is used to calculate
+   * the number of pages.
+   */
   @Input()
-  totalItems: number; // Total number of items
+  totalItems: number;
+  /**
+   * The total number of items
+   * to render per page. This is
+   * used to calculate the number of pages.
+   */
   @Input()
-  itemsPerPage: number; // Total number of items to show per page
+  itemsPerPage: number;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Screen reader text for the "Next Page" icon.
+   */
   @Input()
-  nextLinkText = 'Next'; // Screenreader text for next link
+  nextLinkText = 'Next';
+  /**
+   * Screen reader text for the "Previous Page"
+   * icon.
+   */
   @Input()
-  prevLinkText = 'Prev'; // Screenreader text for previous link
+  prevLinkText = 'Prev';
+  /**
+   * The value supplied will be assigned
+   * to the `data-analytics` attribute on
+   * the first link. Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsStringFirstLink: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-analytics` attribute on
+   * the second link. Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsStringSecondLink: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-analytics` attribute on
+   * the third link. Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsStringThirdLink: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-analytics` attribute on
+   * the "Next" link. Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsStringLinkNext: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-analytics` attribute on
+   * the "Prev" link. Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsStringLinkPrev: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   private _currentPage = 1;
+
+  /**
+   * The current page number.
+   * In the Default and Long variants,
+   * this value corresponds to the active page link.
+   */
   @Input()
   set currentPage(value: number) {
     if (value > this.totalPages()) {
@@ -160,20 +236,41 @@ export class SprkPaginationComponent {
     return this._currentPage;
   }
 
-  // Will be emitted to the parent component on the click event
+  /**
+   * Accepts a function to run when the
+   * previous link is clicked.
+   * On click, `previousClick`
+   * will emit the click event and current page.
+   */
   @Output()
   previousClick = new EventEmitter();
+  /**
+   * Accepts a function
+   * to run when the next link is clicked.
+   * On click, `nextClick` will emit the click event and current page.
+   */
   @Output()
   nextClick = new EventEmitter();
+  /**
+   * Accepts a function to run when the individual page
+   * links are clicked. On click, `pageClick` will
+   * emit the click event and current page.
+   */
   @Output()
   pageClick = new EventEmitter();
 
+  /**
+   * @ignore
+   */
   goToPage(event, page): void {
     event.preventDefault();
     this.currentPage = page;
     this.pageClick.emit({ event, page });
   }
 
+  /**
+   * @ignore
+   */
   goBack(event, page): void {
     event.preventDefault();
     let newPage = page;
@@ -188,6 +285,9 @@ export class SprkPaginationComponent {
     this.previousClick.emit({ event, page, newPage });
   }
 
+  /**
+   * @ignore
+   */
   goForward(event, page): void {
     event.preventDefault();
     let newPage = page;
@@ -202,24 +302,36 @@ export class SprkPaginationComponent {
     this.nextClick.emit({ event, page, newPage });
   }
 
-  // Returns total # of
-  // pages based on total # of
-  // items & desired # of items to show per page
+  /**
+   * @ignore
+   * @returns total number of pages based on total
+   * number of items and the desired number of
+   * items to show per page.
+   */
   totalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
-  // Returns true if currently on the last page
+  /**
+   * @ignore
+   * @returns true if currently on the last page.
+   */
   isLastPage(): boolean {
     return this.currentPage === this.totalPages();
   }
 
-  // Returns true if the component is in either the default or long variant
-  // These variants render the same now
+  /**
+   * @ignore
+   * @returns true if the component is in
+   * either the default or long variant.
+   */
   showNumbers(): boolean {
     return this.paginationType !== 'pager';
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [''];
 

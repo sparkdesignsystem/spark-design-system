@@ -1,16 +1,22 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkTableModule } from './sprk-table.module';
+import { SprkTableComponent } from './sprk-table.component';
 
 export default {
   title: 'Components|Table',
-  component: SprkTableModule,
+  component: SprkTableComponent,
   decorators: [
     storyWrapper(
       storyContent => (
         `<div class="sprk-o-Box">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
+    `,
+  },
 };
 
 const modules = {

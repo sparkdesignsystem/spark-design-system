@@ -7,7 +7,7 @@ import { SprkToggleComponent } from './sprk-toggle.component';
 
 export default {
   title: 'Components|Toggle',
-  component: SprkToggleModule,
+  component: SprkToggleComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -15,6 +15,11 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/toggle)
+    `,
+  },
 };
 
 const modules = {

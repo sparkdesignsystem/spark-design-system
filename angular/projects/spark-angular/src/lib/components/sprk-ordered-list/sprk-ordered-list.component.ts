@@ -17,17 +17,41 @@ import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.componen
   `
 })
 export class SprkOrderedListComponent {
+  /**
+   * Will cause the appropriate variant type to render.
+   * Can be `bare` or `indented`.
+   */
   @Input()
   listType: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 
+  /**
+   * This component expects children
+   * components of `<sprk-list-item></<sprk-list-item>`.
+   */
   @ContentChildren(SprkListItemComponent) items: QueryList<
     SprkListItemComponent
   >;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-List'];
 

@@ -102,19 +102,44 @@ SprkAccordionItem.propTypes = {
   children: PropTypes.node,
   /** Value for the data-analytics attribute on the accordion trigger */
   analyticsString: PropTypes.string,
-  /** The item heading */
+  /** The text for the item heading. */
   heading: PropTypes.string.isRequired,
-  /** Additional classes for the heading */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * heading.
+   */
   headingAddClasses: PropTypes.string,
-  /** Additional classes for the item */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** The data-id value for the accordion item */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** Used to specify whether the item should be open by default */
+  /**
+   * Used to specify whether the item should be open by default.
+   */
   isDefaultOpen: PropTypes.bool,
-  /** Additional classes for the toggle icon */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon.
+   */
   iconAddClasses: PropTypes.string,
-  /** Additional classes for the toggle content */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * toggle content.
+   */
   contentAddClasses: PropTypes.string,
 };
 

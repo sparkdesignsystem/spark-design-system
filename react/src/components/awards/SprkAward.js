@@ -84,10 +84,22 @@ SprkAward.propTypes = {
    * change to row from column for the images.
    */
   splitAt: PropTypes.string,
-  /** Additional CSS classes on main award container. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
   /** Heading text. */
   heading: PropTypes.string,
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
   /** The image data. */
   images: PropTypes.arrayOf(

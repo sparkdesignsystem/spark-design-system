@@ -18,9 +18,11 @@ import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/
 import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
+import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 
 export default {
   title: 'Components|Input',
+  component: SprkIconInputContainerComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -36,7 +38,12 @@ export default {
     onSubmit(event): void {
       this.form_submitted = true;
     }
-  }
+  },
+  parameters: {
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+    `,
+  },
 };
 
 const modules = {

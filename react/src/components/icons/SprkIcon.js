@@ -23,13 +23,24 @@ function SprkIcon({
 }
 
 SprkIcon.propTypes = {
-  /** Classes added to the svg. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
   /** Incoming children. */
   children: PropTypes.node,
   /** The id of the symbol to use for the icon. */
   iconName: PropTypes.string.isRequired,
-  /** Assigned to data-id. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
   /** The viewbox of the svg containing the symbol. */
   viewBox: PropTypes.string,

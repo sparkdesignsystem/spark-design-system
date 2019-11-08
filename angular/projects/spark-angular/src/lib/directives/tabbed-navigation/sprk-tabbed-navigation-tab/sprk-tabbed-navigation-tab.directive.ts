@@ -4,13 +4,31 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkTabbedNavigationTab]'
 })
 export class SprkTabbedNavigationTabDirective implements OnInit {
+ /**
+  * Expects a space separated string
+  * of classes to be added to the
+  * element.
+  */
   @Input()
   additionalClasses: string;
+  /**
+   * If `true`, the Tab will have
+   * active styles and aria attributes on render.
+   */
   @Input()
   defaultActive: boolean;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-c-Tabs__button'];
 
@@ -45,6 +63,8 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
       );
     }
   }
-
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

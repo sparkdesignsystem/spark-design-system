@@ -7,14 +7,19 @@ import { SprkAwardComponent } from './sprk-award.component';
 
 export default {
   title: 'Components|Award',
-  component: SprkAwardModule,
+  component: SprkAwardComponent,
   decorators: [
     storyWrapper(
       storyContent => (
         `<div class="sprk-o-Box sprk-o-CenteredColumn">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
+    `,
+  },
 };
 
 const modules = {
