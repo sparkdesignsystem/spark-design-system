@@ -26,9 +26,7 @@ export class SprkInputDirective implements OnInit {
       this.ref.nativeElement.classList.remove('sprk-b-Input--has-floating-label');
     }
   }
-  /**
-   * @ignore
-   */
+
   ngOnInit(): void {
     if (this.ref.nativeElement.nodeName === 'SELECT') {
       this.ref.nativeElement.classList.add('sprk-b-Select');

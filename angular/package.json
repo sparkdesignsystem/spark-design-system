@@ -6,7 +6,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "coverage": "ng test spark-angular --watch=false --code-coverage",
-    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
+    "docs:json": "compodoc --disableLifeCycleHooks -p ./tsconfig.json -e json -d .",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
     "storybook": "npm run docs:json && start-storybook -p 8006",
     "build-storybook": "npm run docs:json && build-storybook",

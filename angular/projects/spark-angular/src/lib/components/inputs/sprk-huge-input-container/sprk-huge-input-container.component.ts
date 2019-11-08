@@ -82,9 +82,6 @@ export class SprkHugeInputContainerComponent implements OnInit {
     return classArray.join(' ');
   }
 
-  /**
-   * @ignore
-   */
   ngOnInit(): void {
     if (this.label && this.input) {
       this.label.ref.nativeElement.setAttribute('for', this.input_id);

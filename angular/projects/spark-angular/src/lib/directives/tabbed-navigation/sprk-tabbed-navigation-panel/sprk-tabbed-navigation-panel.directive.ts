@@ -36,9 +36,7 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
 
     return classArray;
   }
-  /**
-   * @ignore
-   */
+
   ngOnInit(): void {
     this.ref.nativeElement.setAttribute('role', 'tabpanel');
     this.ref.nativeElement.setAttribute('tabindex', '0');

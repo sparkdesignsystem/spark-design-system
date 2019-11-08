@@ -115,9 +115,6 @@ export class SprkToggleComponent implements OnInit {
     this.toggleState();
   }
 
-  /**
-   * @ignore
-   */
   ngOnInit() {
     this.toggleState();
   }

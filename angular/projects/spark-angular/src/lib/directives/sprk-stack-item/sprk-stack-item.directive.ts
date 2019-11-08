@@ -4,9 +4,6 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
   selector: '[sprkStackItem]'
 })
 export class SprkStackItemDirective implements OnInit {
-  /**
-   * @ignore
-   */
   ngOnInit(): void {
     this.ref.nativeElement.classList.add('sprk-o-Stack__item');
   }

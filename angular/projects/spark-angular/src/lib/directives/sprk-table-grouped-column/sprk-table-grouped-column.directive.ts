@@ -24,9 +24,7 @@ export class SprkTableGroupedColumnDirective implements OnInit {
     }
     return classArray;
   }
-  /**
-   * @ignore
-   */
+
   ngOnInit(): void {
     this.getClasses().forEach(className => {
       this.ref.nativeElement.classList.add(className);

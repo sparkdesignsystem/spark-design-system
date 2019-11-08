@@ -194,9 +194,6 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
     return classArray.join(' ');
   }
 
-  /**
-   * @ignore
-   */
   ngOnInit() {
     this.accordionState();
   }

@@ -17,9 +17,6 @@ export class SprkLabelDirective implements OnInit {
     return classArray;
   }
 
-  /**
-   * @ignore
-   */
   ngOnInit(): void {
     this.getClasses().forEach(item => {
       this.ref.nativeElement.classList.add(item);

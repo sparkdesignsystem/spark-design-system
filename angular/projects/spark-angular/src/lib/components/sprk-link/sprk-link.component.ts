@@ -159,9 +159,6 @@ export class SprkLinkComponent implements OnInit {
   @Input()
   isExternal = false;
 
-  /**
-   * @ignore
-   */
   ngOnInit() {
     // Sets the default href if none provided
     if (this.href === '' || this.href === null || this.href === undefined) {

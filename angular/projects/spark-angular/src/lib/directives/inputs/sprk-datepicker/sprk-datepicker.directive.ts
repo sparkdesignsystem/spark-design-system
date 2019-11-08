@@ -15,9 +15,6 @@ export class SprkDatepickerDirective implements OnInit {
   @Input()
   sprkDatePickerConfig: object;
 
-  /**
-   * @ignore
-   */
   ngOnInit(): void {
     const input = this.ref.nativeElement;
     const tdpConfig = {
