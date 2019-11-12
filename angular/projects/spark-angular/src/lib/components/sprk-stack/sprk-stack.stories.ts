@@ -363,10 +363,7 @@ export const stackSplitLayoutMixed = () => ({
         sprkStackItem
         class="sprk-o-Stack__item--half@xs"
       >
-        <sprk-stack
-          splitAt="tiny"
-          itemSpacing="medium"
-        >
+        <sprk-stack splitAt="tiny">
           <div
             sprkStackItem
             class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
