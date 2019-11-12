@@ -3,10 +3,10 @@ import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
 
 export default {
-  title: 'Objects|Stack',
+  title: 'Components|Stack',
   component: SprkStack,
   decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
+    story => <div className="sprk-o-Box sb-decorate">{story()}</div>
   ],
   parameters: {
     jest: ['SprkStack', 'SprkStackItem'],
@@ -18,114 +18,125 @@ export default {
 
 export const defaultStory = () => (
   <SprkStack>
-    <SprkStackItem>Test 1</SprkStackItem>
-    <SprkStackItem>Test 2</SprkStackItem>
+    <SprkStackItem></SprkStackItem>
+    <SprkStackItem></SprkStackItem>
   </SprkStack>
 );
 
 defaultStory.story = {
-  name: 'default',
+  name: 'Default',
 };
 
-export const twoColumn = () => (
-  <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">Column</SprkStackItem>
+export const stackSplit = () => (
+  <SprkStack itemSpacing="medium" splitAt="small">
+    <SprkStackItem>Stack Item One</SprkStackItem>
+    <SprkStackItem>Stack Item Two</SprkStackItem>
   </SprkStack>
 );
 
-twoColumn.story = {
-  name: 'two column',
+stackSplit.story = {
+  name: 'Stack/Split - Spaced Items',
 };
 
-export const threeColumn = () => (
+export const stackSplitTwoCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs">Column</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs"></SprkStackItem>
   </SprkStack>
 );
 
-threeColumn.story = {
-  name: 'three column',
+stackSplitTwoCol.story = {
+  name: 'Stack/Split - Two Column',
 };
 
-export const fourColumn = () => (
+export const stackSplitThreeCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">Column</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs"></SprkStackItem>
   </SprkStack>
 );
 
-fourColumn.story = {
-  name: 'four column',
+stackSplitThreeCol.story = {
+  name: 'Stack/Split - Three Column',
 };
 
-export const fiveColumn = () => (
+export const stackSplitFourCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs">Column</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
   </SprkStack>
 );
 
-fiveColumn.story = {
-  name: 'five column',
+stackSplitFourCol.story = {
+  name: 'Stack/Split - Four Column',
 };
 
-export const sixColumn = () => (
+export const stackSplitFiveCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">Column</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs">Column</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
   </SprkStack>
 );
 
-sixColumn.story = {
-  name: 'six column',
+stackSplitFiveCol.story = {
+  name: 'Stack/Split - Five Column',
 };
 
-export const seventyFiveTwentyFive = () => (
+export const stackSplitSixCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs">Item</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs">Item</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
   </SprkStack>
 );
 
-seventyFiveTwentyFive.story = {
-  name: 'seventy-five twenty-five',
+stackSplitSixCol.story = {
+  name: 'Stack/Split - Six Column',
 };
 
-export const sixtyForty = () => (
+export const stackSplitLayoutThreeFourths = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs">Item</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs">Item</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
   </SprkStack>
 );
 
-sixtyForty.story = {
-  name: 'sixty forty',
+stackSplitLayoutThreeFourths.story = {
+  name: 'Stack/Split - 75/25',
 };
 
-export const thirtySeventy = () => (
+export const stackSplitLayoutThreeFifths = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-tenths@xs">Item</SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--seven-tenths@xs">Item</SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs"></SprkStackItem>
   </SprkStack>
 );
 
-thirtySeventy.story = {
-  name: 'thirty seventy',
+stackSplitLayoutThreeFifths.story = {
+  name: 'Stack/Split - 60/40',
 };
 
-export const mixedColumn = () => (
+export const stackSplitLayoutThreeTenths = () => (
+  <SprkStack splitAt="tiny">
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-tenths@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--seven-tenths@xs"></SprkStackItem>
+  </SprkStack>
+);
+
+stackSplitLayoutThreeTenths.story = {
+  name: 'Stack/Split - 30/70',
+};
+
+export const stackSplitLayoutMixed = () => (
   <div>
     <SprkStack splitAt="tiny">
       <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter">
@@ -168,7 +179,7 @@ export const mixedColumn = () => (
     </SprkStack>
     <SprkStack splitAt="tiny">
       <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
-        <SprkStack splitAt="tiny" itemSpacing="medium">
+        <SprkStack splitAt="tiny">
           <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
             <p className="sprk-b-TypeBodyOne">Nested Item (flex)</p>
           </SprkStackItem>
@@ -192,17 +203,6 @@ export const mixedColumn = () => (
   </div>
 );
 
-mixedColumn.story = {
-  name: 'Mixed Column',
-};
-
-export const withSplitModifier = () => (
-  <SprkStack itemSpacing="medium" splitAt="small">
-    <SprkStackItem>Item</SprkStackItem>
-    <SprkStackItem>Item</SprkStackItem>
-  </SprkStack>
-);
-
-withSplitModifier.story = {
-  name: 'with split modifier',
+stackSplitLayoutMixed.story = {
+  name: 'Stack/Split - Mixed Column',
 };

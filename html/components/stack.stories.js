@@ -221,7 +221,7 @@ export const stackSplitLayoutMixed = () => (
 
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs">
-        <div class="sprk-o-Stack sprk-o-Stack--meduim sprk-o-Stack--split@xs">
+        <div class="sprk-o-Stack sprk-o-Stack--split@xs">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
             <p class="sprk-b-TypeBodyOne">
               Nested Item (flex)
