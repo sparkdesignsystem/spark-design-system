@@ -28,17 +28,49 @@ import {
   `
 })
 export class SprkTabbedNavigationComponent implements AfterContentInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
+  /**
+   * This component expects children `<button>` elements
+   * with the `SprkTabbedNavigationTabDirective` on them.
+   * These serve as the Tabs.
+   */
   @ContentChildren(SprkTabbedNavigationTabDirective)
   tabs: QueryList<SprkTabbedNavigationTabDirective>;
+  /**
+   * This component expects children `<div>` elements
+   * with the `SprkTabbedNavigationPanelDirective` on them.
+   * These serve as the Panels.
+   */
   @ContentChildren(SprkTabbedNavigationPanelDirective)
   panels: QueryList<SprkTabbedNavigationPanelDirective>;
+  /**
+   * @ignore
+   */
   componentID = _.uniqueId();
+  /**
+   * @ignore
+   */
   activeClass = 'sprk-c-Tabs__button--active';
 
+  /**
+   * @ignore
+   */
   @HostListener('click', ['$event'])
   onClick($event) {
     if ($event.target.classList.contains('sprk-c-Tabs__button')) {
@@ -63,11 +95,17 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   @HostListener('window:resize')
   onResize() {
     this.ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 
+  /**
+   * @ignore
+   */
   @HostListener('keydown', ['$event'])
   onKeydown($event) {
     const isPanel = $event.target.classList.contains('sprk-c-Tabs__content');
@@ -110,6 +148,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Tabs'];
 
@@ -122,6 +163,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   ngAfterContentInit(): void {
     let tabIDs = [];
     let panelIDs = [];
@@ -147,6 +191,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   advanceTab(tabs, tabpanels, activeClass) {
     const activeIndex = this.getActiveTabIndex(tabs, activeClass);
     this.resetTabs(tabs, tabpanels, activeClass);
@@ -162,6 +209,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   ariaOrientation(width, element) {
     // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
     if (width <= 736) {
@@ -171,6 +221,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   getActiveTabIndex(tabs, activeClass) {
     let activeIndex = null;
     tabs.forEach((tab, index) => {
@@ -184,6 +237,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     return activeIndex;
   }
 
+  /**
+   * @ignore
+   */
   resetTabs(tabs, tabpanels, activeClass) {
     tabs.forEach(tab => {
       tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
@@ -195,6 +251,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     });
   }
 
+  /**
+   * @ignore
+   */
   retreatTab(tabs, tabpanels, activeClass) {
     const activeIndex = this.getActiveTabIndex(tabs, activeClass);
 
@@ -215,6 +274,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   setActiveTab(tab, tabpanel, activeClass) {
     tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
     tab.setAttribute('tabindex', '0');
@@ -225,6 +287,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     tab.focus();
   }
 
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {
     this.ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }

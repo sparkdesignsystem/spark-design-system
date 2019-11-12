@@ -9,14 +9,19 @@ import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 
 export default {
   title: 'Components|Masthead',
-  component: SprkMastheadModule,
+  component: SprkMastheadComponent,
   decorators: [
     storyWrapper(
       storyContent => (
         `<div class="sprk-o-Box">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
+    `,
+  },
 };
 
 const modules = {

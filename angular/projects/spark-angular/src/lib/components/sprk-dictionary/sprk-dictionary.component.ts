@@ -21,16 +21,44 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkDictionaryComponent {
+  /**
+   * The collection of key-value pairs to be rendered
+   * into the component.
+   */
   @Input()
   data: object = {};
+  /**
+   * Determines the variant of the dictionary component to render.
+   * The only available option is `striped`.
+   * Supplying no value will cause the base variant to be used.
+   */
   @Input()
   dictionaryType = 'base';
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
+  /**
+   * @ignore
+   */
   objectKeys = Object.keys;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Dictionary'];
 

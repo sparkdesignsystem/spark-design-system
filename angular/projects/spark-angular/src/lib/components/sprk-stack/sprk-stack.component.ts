@@ -9,15 +9,39 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkStackComponent {
+  /**
+   * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
+   * This is used as the breakpoint at which the component
+   * moves or "splits" to a side by side layout.
+   */
   @Input()
   splitAt: string;
+  /**
+   * This is used as the amount of spacing
+   * between the child `sprkStackItem` items.
+   * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
+   */
   @Input()
   itemSpacing: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-o-Stack'];
 

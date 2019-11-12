@@ -4,9 +4,17 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[sprkTableHead]'
 })
 export class SprkTableHeadDirective implements OnInit {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
   @Input()
   additionalClasses: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string[] {
     const classArray = ['sprk-b-Table__head'];
     if (this.additionalClasses) {
@@ -22,6 +30,8 @@ export class SprkTableHeadDirective implements OnInit {
       this.ref.nativeElement.classList.add(className);
     });
   }
-
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 }

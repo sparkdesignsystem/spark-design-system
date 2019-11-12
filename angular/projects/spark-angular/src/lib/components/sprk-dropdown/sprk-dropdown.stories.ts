@@ -6,7 +6,7 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 
 export default {
   title: 'Components|Dropdown',
-  component: SprkDropdownModule,
+  component: SprkDropdownComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -14,6 +14,11 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dropdown)
+    `,
+  },
 };
 
 const modules = {

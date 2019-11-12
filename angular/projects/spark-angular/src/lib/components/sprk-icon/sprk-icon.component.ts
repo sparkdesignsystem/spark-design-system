@@ -10,15 +10,40 @@ import { Component, Input } from '@angular/core';
   styles: [':host { line-height: 1; }']
 })
 export class SprkIconComponent {
+  /**
+   * Determines which icon is rendered.
+   * Expects the value to match the exact name
+   * of the icon found in the docs
+   * (i.e. `chevron-down`, instead of `chevron down`).
+   */
   @Input()
   iconType: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   public icon: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Icon'];
 

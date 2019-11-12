@@ -7,11 +7,14 @@ import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Components|Stepper',
-  decorators: [withKnobs],
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   component: SprkStepper,
   parameters: {
-  info: `
-This is some info about the Stepper
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stepper)
     `,
     jest: [
       'SprkStepper',

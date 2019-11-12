@@ -5,7 +5,15 @@ import SprkStackItem from './components/SprkStackItem/SprkStackItem';
 export default {
   title: 'Objects|Stack',
   component: SprkStack,
-  parameters: { jest: ['SprkStack', 'SprkStackItem'] },
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  parameters: {
+    jest: ['SprkStack', 'SprkStackItem'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
+    `,
+  },
 };
 
 export const defaultStory = () => (

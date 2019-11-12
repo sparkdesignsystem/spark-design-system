@@ -6,7 +6,15 @@ import SprkButton from '../../components/buttons/SprkButton';
 export default {
   title: 'Components|Table',
   component: SprkTable,
-  parameters: { jest: ['SprkTable'] },
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  parameters: {
+    jest: ['SprkTable'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
+    `,
+  },
 };
 
 export const columnComparison = () => (

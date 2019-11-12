@@ -5,13 +5,19 @@ import SprkModal from './SprkModal';
 export default {
   title: 'Components|Modal',
   component: SprkModal,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
   parameters: {
     jest: [
       'SprkModal',
       'CloseButton',
       'Mask',
       'ModalFooter',
-    ]
+    ],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/modal)
+    `,
   },
 
 };

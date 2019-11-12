@@ -234,6 +234,9 @@ import * as _ from 'lodash';
   `
 })
 export class SprkMastheadComponent implements AfterContentInit {
+  /**
+   * @ignore
+   */
   constructor(private renderer: Renderer2, router: Router) {
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -242,45 +245,137 @@ export class SprkMastheadComponent implements AfterContentInit {
     });
   }
 
+ /**
+  *  The `href` value of the logo.
+  */
   @Input()
   logoHref = '/';
+  /**
+   * The value supplied will be used as
+   * screen reader text that is visually hidden
+   * for the link that wraps the logo.
+   */
   @Input()
   logoLinkScreenReaderText = 'Go to the homepage';
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * big navigation link container.
+   */
   @Input()
   additionalBigNavClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * narrow navigation container.
+   */
   @Input()
   additionalNarrowNavClasses: string;
+  /**
+   * Expects an array of link objects, to be
+   * represented in the narrow nav element
+   * of the Masthead component.
+   */
   @Input()
   narrowNavLinks: any[];
+  /**
+   * Represents the initial state of the
+   * narrow nav element of the Masthead component.
+   */
   @Input()
   isNarrowNavOpen = false;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
+  /**
+   * Expects an array of link objects, to be
+   * represented in the big nav element of
+   * the Masthead component.
+   */
   @Input()
   bigNavLinks: any[];
+  /**
+   * Expects a `narrowSelector` object that
+   * represents choices to be supplied to
+   * the dropdown above the narrow navigation
+   * of link objects.
+   */
   @Input()
   narrowSelector: object;
 
+  /**
+   * @ignore
+   */
   iconType = 'chevron-down';
+  /**
+   * @ignore
+   */
   componentID = _.uniqueId();
+  /**
+   * @ignore
+   */
   controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
+  /**
+   * @ignore
+   */
   isScrolled = false;
+  /**
+   * @ignore
+   */
   isNarrowLayout = false;
+  /**
+   * @ignore
+   */
   scrollDirection = 'up';
+  /**
+   * @ignore
+   */
   isHidden = false;
+  /**
+   * @ignore
+   */
   isNarrowOnResize = false;
+  /**
+   * @ignore
+   */
   scrollPosition = 0;
-
+  /**
+   * @ignore
+   */
   throttledCheckScrollDirection = _.throttle(this.checkScrollDirection, 500);
+  /**
+   * @ignore
+   */
   throttledUpdateLayoutState = _.throttle(this.updateLayoutState, 500);
 
+  /**
+   * @ignore
+   * Closes the narrow navigation menu
+   * if it is left open when
+   * the viewport is expanded.
+   */
   @HostListener('window:orientationchange')
   handleResizeEvent() {
     this.closeNarrowNav();
   }
 
+  /**
+   * @ignore
+   */
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
@@ -289,13 +384,20 @@ export class SprkMastheadComponent implements AfterContentInit {
     }
   }
 
-  // Handles when viewport size changes to large while narrow nav is hidden
+  /**
+   * @ignore
+   * Handles when viewport size changes to
+   * large while narrow nav is hidden.
+   */
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
     this.isNarrowOnResize = this.isElementVisible('.sprk-c-Masthead__menu');
     this.throttledUpdateLayoutState();
   }
 
+  /**
+   * @ignore
+   */
   updateLayoutState() {
     if (this.isNarrowLayout !== this.isNarrowOnResize) {
       this.isNarrowLayout = this.isNarrowOnResize;
@@ -307,10 +409,16 @@ export class SprkMastheadComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   ngAfterContentInit() {
     this.isNarrowLayout = this.isElementVisible('.sprk-c-Masthead__menu');
   }
 
+  /**
+   * @ignore
+   */
   isElementVisible(selector) {
     const element = document.querySelector(selector);
     if (!element) {
@@ -325,6 +433,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     return elementIsVisible;
   }
 
+  /**
+   * @ignore
+   */
   scrollYDirection() {
     const newScrollPos = window.scrollY;
     if (newScrollPos < 0) {
@@ -336,6 +447,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     return direction;
   }
 
+  /**
+   * @ignore
+   */
   checkScrollDirection() {
     const newDirection = this.scrollYDirection();
     if (this.scrollDirection !== newDirection) {
@@ -346,6 +460,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
 
@@ -370,6 +487,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getNarrowNavClasses(): string {
     const classArray: string[] = [];
 
@@ -382,6 +502,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getSecondaryNavClasses(): string {
     const classArray: string[] = [
       'sprk-c-Masthead__big-nav-items',
@@ -402,6 +525,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   toggleNarrowNav(event): void {
     event.preventDefault();
     if (this.isNarrowNavOpen) {
@@ -411,6 +537,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   openNarrowNav(): void {
     this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.addClass(
@@ -422,6 +551,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     this.isNarrowNavOpen = true;
   }
 
+  /**
+   * @ignore
+   */
   closeNarrowNav(): void {
     this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.removeClass(

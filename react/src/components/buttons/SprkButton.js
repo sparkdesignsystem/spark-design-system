@@ -46,28 +46,53 @@ const SprkButton = ({
 
 SprkButton.propTypes = {
   /**
-   * Classes to add to the rendered element.
-   */
+    * Expects a space separated string
+    * of classes to be added to the
+    * component.
+    */
   additionalClasses: PropTypes.string,
-  /** Value for the data-analytics attribute. */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
   /** Children */
   children: PropTypes.node,
-  /** Boolen option to render a disabled button. */
+  /**
+   * If `true`, the button styles will be added.
+   */
   disabled: PropTypes.bool,
-  /** Determines what type of element to render. */
+  /**
+   * Determines what type of element to render.
+   */
   element: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
   ]),
-  /** Value for data-id for testing purposes. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This val ue should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** If true, will render a spinner in the button instead of children. */
+  /**
+   * If `true`, will render a spinner
+   * in the button instead of children.
+   */
   loading: PropTypes.bool,
-  /** Decides which button variant to render. */
+  /**
+   * Decides which button variant to render.
+   */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  /** The URL rendered if the href is provided. */
+  /**
+   * The `URL` rendered if the `href` is provided.
+   */
   href: PropTypes.string,
 };
 

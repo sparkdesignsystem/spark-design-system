@@ -1,6 +1,7 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import '../../html/_spark.scss';
+import '../../storybook-theming/_docs.scss';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from "../../storybook-theming/storybook-spark-theme";
 import { withTests } from '@storybook/addon-jest';
@@ -14,7 +15,7 @@ addDecorator(
     results
   }
 ));
-addDecorator(story => <div className="sprk-o-Box">{story()}</div>)
+
 // Option defaults.
 addParameters({
   options: {

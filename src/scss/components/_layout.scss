@@ -1,5 +1,3 @@
-$doc-site-layout-max-width: 90rem;
-
 .docs-layout {
   max-width: $doc-site-layout-max-width;
   position: relative;
@@ -18,7 +16,7 @@ $doc-site-layout-max-width: 90rem;
 }
 
 .docs-layout__header {
-  padding: 2rem;
+  padding: 1rem;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     align-self: start;
@@ -27,6 +25,7 @@ $doc-site-layout-max-width: 90rem;
     grid-column: span 2;
     -ms-grid-row: 1;
     grid-row: 1 / 2;
+    padding: 2rem;
   }
 }
 
@@ -48,9 +47,9 @@ $doc-site-layout-max-width: 90rem;
   padding: 2rem;
   display: block;
   position: absolute;
-  top: 113px;
+  top: 93px;
   width: 100%;
-  z-index: 2;
+  z-index: 100;
 }
 
 .docs-layout__content {

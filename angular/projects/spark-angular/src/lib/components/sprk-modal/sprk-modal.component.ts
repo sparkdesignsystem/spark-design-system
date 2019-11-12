@@ -90,31 +90,96 @@ import * as _ from 'lodash';
 export class SprkModalComponent {
   @Input()
   title: string;
+  /**
+   * This determines the variant of the Modal.
+   * Can be `choice`, `info`, or `wait`.
+   */
   @Input()
   modalType: string;
+  /**
+   * The value supplied will be
+   * rendered as the text for the confirm button.
+   */
   @Input()
   confirmText = 'Confirm';
+  /**
+   * The value supplied will be rendered
+   * as the text for the cancel button.
+   */
   @Input()
   cancelText = 'Cancel';
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute
+   * on the confirm button. Intended
+   * for an outside library to capture data.
+   */
   @Input()
   confirmAnalyticsString: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute
+   * on the cancel button. Intended
+   * for an outside library to capture data.
+   */
   @Input()
   cancelAnalyticsString: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
+  /**
+   * If `true`, the Modal will be shown.
+   * If `false`, the modal will not be shown.
+   */
   @Input()
   isVisible = false;
+  /**
+   * When the Modal is closed the hide event is
+   * emitted and a callback function can
+   * be triggered if supplied.
+   */
   @Output()
   hide = new EventEmitter<any>();
+  /**
+   * Available when the Modal type is `choice`.
+   * The Modal will emit a confirm click event
+   * when the confirmation button is clicked.
+   * A callback function can be triggered if
+   * supplied.
+   */
   @Output()
   confirmClick = new EventEmitter<any>();
+  /**
+   * Available when the Modal type is `choice`.
+   * The Modal will emit a cancel click event
+   * when the cancel link is clicked.
+   * A callback function can be triggered if supplied.
+   */
   @Output()
   cancelClick = new EventEmitter<any>();
-
+  /**
+   * @ignore
+   */
   componentID = _.uniqueId();
+  /**
+   * @ignore
+   */
   heading_id = `modalHeading__${this.componentID}`;
+  /**
+   * @ignore
+   */
   content_id = `modalContent__${this.componentID}`;
 
+  /**
+   * @ignore
+   */
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if (this.isVisible && event.key === 'Escape') {
@@ -122,8 +187,14 @@ export class SprkModalComponent {
     }
   }
 
+  /**
+   * @ignore
+   */
   constructor() {}
 
+  /**
+   * @ignore
+   */
   closeModal(event): void {
     if (this.modalType !== 'wait') {
       event.preventDefault();
@@ -131,10 +202,18 @@ export class SprkModalComponent {
     }
   }
 
+  /**
+   * Emits an event when the confirmation
+   * button is clicked.
+   */
   emitConfirmClick(event): void {
     this.confirmClick.emit(event);
   }
 
+  /**
+   * Emits an event when the cancel
+   * link is clicked.
+   */
   emitCancelClick(event): void {
     event.preventDefault();
     this.cancelClick.emit(event);

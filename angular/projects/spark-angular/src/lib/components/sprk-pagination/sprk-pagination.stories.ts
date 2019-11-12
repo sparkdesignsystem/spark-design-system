@@ -6,14 +6,19 @@ import { SprkPaginationComponent } from './sprk-pagination.component';
 
 export default {
   title: 'Components|Pagination',
-  component: SprkPaginationModule,
+  component: SprkPaginationComponent,
   decorators: [
     storyWrapper(
       storyContent => (
         `<div class="sprk-o-Box">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/pagination)
+    `,
+  },
 };
 
 const modules = {

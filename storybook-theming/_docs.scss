@@ -1,0 +1,115 @@
+@import '../html/settings/colors';
+@import '../html/settings/settings';
+
+.sbdocs .sbdocs-a {
+  color: $sprk-link-color;
+  border-bottom: $sprk-link-border-bottom;
+  font-weight: $sprk-link-font-weight;
+  font-family: $sprk-font-family-body-two;
+  font-size: inherit;
+  position: relative;
+  text-decoration: $sprk-link-text-decoration;
+  transition: $sprk-link-transition;
+
+  &:visited {
+    color: $sprk-link-visited-color;
+    border-bottom: $sprk-link-visited-border-bottom;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-link-hover-color;
+    border-bottom: $sprk-link-hover-border-bottom;
+  }
+}
+
+.sbdocs .sbdocs-title {
+  color: $sprk-color-display-one;
+  font-family: $sprk-font-family-display-one;
+  font-size: $sprk-font-size-display-one;
+  font-weight: $sprk-font-weight-display-one;
+  margin-bottom: $sprk-space-m;
+
+  &::before {
+    content: '';
+    width: $sprk-page-title-mark-width;
+    border-top-width: $sprk-page-title-mark-height;
+    border-top-style: solid;
+    border-top-color: $sprk-page-title-mark-color;
+    padding: $sprk-page-title-mark-padding;
+
+    @media all and (min-width: $sprk-typography-breakpoint) {
+      border-top-width: $sprk-page-title-mark-height-wide-viewport;
+      padding: $sprk-page-title-mark-padding-wide-viewport;
+    }
+  }
+
+  @media screen and (min-width: $sprk-type-display-one-breakpoint) {
+    font-size: $sprk-font-size-display-one;
+  }
+}
+
+.sbdocs .sbdocs-h2 {
+  color: $sprk-color-display-two;
+  font-family: $sprk-font-family-display-two;
+  font-size: $sprk-font-size-display-two;
+  font-weight: $sprk-font-weight-display-two;
+  margin-bottom: $sprk-space-m;
+
+  @media screen and (min-width: $sprk-type-display-two-breakpoint) {
+    font-size: $sprk-font-size-display-two-wide;
+  }
+}
+
+.sbdocs .sbdocs-h3 {
+  color: $sprk-color-display-three;
+  font-family: $sprk-font-family-display-three;
+  font-size: $sprk-font-size-display-three;
+  font-weight: $sprk-font-weight-display-three;
+  margin-bottom: $sprk-space-m;
+
+  @media screen and (min-width: $sprk-type-display-three-breakpoint) {
+    font-size: $sprk-font-size-display-three-wide;
+  }
+}
+
+.sbdocs .sbdocs-h4 {
+  color: $sprk-color-display-four;
+  font-family: $sprk-font-family-display-four;
+  font-size: $sprk-font-size-display-four;
+  font-weight: $sprk-font-weight-display-four;
+  margin-bottom: $sprk-space-m;
+}
+
+.sbdocs .sbdocs-h5 {
+  color: $sprk-color-display-five;
+  font-family: $sprk-font-family-display-five;
+  font-size: $sprk-font-size-display-five;
+  font-weight: $sprk-font-weight-display-five;
+  margin-bottom: $sprk-space-m;
+}
+
+p,
+body {
+  color: $sprk-color-body-two;
+  font-family: $sprk-font-family-body-two;
+  font-size: $sprk-font-size-body-two;
+  font-weight: $sprk-font-weight-body-two;
+}
+
+.docblock-propstable code {
+  font-size: 0.9rem;
+  padding: 0 $sprk-space-s;
+  background-color: $sprk-gray;
+  display: inline-block;
+}
+
+.docblock-propstable p {
+  margin-bottom: $sprk-space-m;
+}
+
+.sb-show-main .sprk-o-CenteredColumn {
+  background-color: $sprk-gray-dark;
+  height: 4rem;
+}

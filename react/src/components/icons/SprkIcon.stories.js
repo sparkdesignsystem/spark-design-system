@@ -5,7 +5,15 @@ import SprkIcon from './SprkIcon';
 export default {
   title: 'Components|Icons',
   component: SprkIcon,
-  parameters: { jest: ['SprkIcon'] },
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  parameters: {
+    jest: ['SprkIcon'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/icons)
+    `,
+  },
 };
 
 export const access = () => (

@@ -2,13 +2,28 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import SprkFooter from './SprkFooter';
 
+export default {
+  title: 'Components|Footer',
+  decorators: [
+    withKnobs,
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  component: SprkFooter,
+  parameters: {
+    jest: ['SprkFooter'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
+    `,
+  },
+};
+
 const globalItems = {
   heading: 'Global Links',
   items: [
     {
       mediaType: 'image',
       src:
-        'https://spark-assets.netlify.com/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo-black-text.svg',
       altText: 'Spark Logo',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
@@ -17,7 +32,7 @@ const globalItems = {
     {
       mediaType: 'image',
       src:
-        'https://spark-assets.netlify.com/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo-black-text.svg',
       altText: 'Spark Logo',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
@@ -201,14 +216,14 @@ const awards = {
     {
       href: '#nogo',
       src:
-        'https://spark-assets.netlify.com/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo-black-text.svg',
       altText: 'Spark Logo',
       element: 'a',
     },
     {
       href: '#nogo',
       src:
-        'https://spark-assets.netlify.com/spark-logo.svg',
+        'https://spark-assets.netlify.com/spark-logo-black-text.svg',
       altText: 'Spark Logo',
       element: 'a',
     },
@@ -257,13 +272,6 @@ const additionalIcons = [
     element: 'a',
   },
 ];
-
-export default {
-  title: 'Components|Footer',
-  decorators: [withKnobs],
-  component: SprkFooter,
-  parameters: { jest: ['SprkFooter'] },
-};
 
 export const defaultStory = () => (
   <SprkFooter

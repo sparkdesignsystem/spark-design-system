@@ -123,45 +123,131 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkCardComponent {
+  /**
+   * The type of Card variant to render.
+   * The available values are `base`, `teaser`, and `teaserHeading`.
+   */
   @Input()
   cardType = 'base';
+  /**
+   * The main content
+   * of the Card. Placed between
+   * the title and call-to-action.
+   */
   @Input()
   body: string;
+  /**
+   * Determines which type of media will be rendered.
+   * The available values are `image` and `icon`.
+   */
   @Input()
   media: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon if the media type is icon.
+   */
   @Input()
   additionalClassesIcon: string;
+  /**
+   * The title of the Card.
+   */
   @Input()
   title: string;
+  /**
+   * If the `media` input is set to `image`,
+   * this is the text that will be applied to the
+   * `src` attribute of the image.
+   */
   @Input()
   imgSrc: string;
+  /**
+   * If the `media` input is set to `image`,
+   * this is the text that is applied to
+   * the `alt` attribute of the image.
+   */
   @Input()
   imgAlt: string;
+  /**
+   * If the `media` input is set to `icon`, this
+   * is used to supply the name of the icon to use.
+   */
   @Input()
   iconType: string;
+  /**
+   * If the `media` input is set to `icon`, this
+   * is used to supply the `href` for the icon.
+   */
   @Input()
   iconHref: string;
+  /**
+   * If the `media` input is set to `img`, this
+   * is used to supply the `href` of the image.
+   */
   @Input()
   imgHref: string;
+  /**
+   * Determines which type of call-to-action is rendered.
+   * The available values are `link` and `button`.
+   */
   @Input()
   ctaType = 'link';
+  /**
+   * The text content of the call-to-action.
+   */
   @Input()
   ctaText: string;
+  /**
+   * The text that will be applied to the `data-analytics` attribute
+   * of the call-to-action.
+   */
   @Input()
   ctaAnalytics: string;
+  /**
+   * The text that will be applied to the `data-analytics` attribute
+   * of the link surrounding the image.
+   */
   @Input()
   imgLinkAnalytics: string;
+  /**
+   * The text that will be applied to the `data-analytics` attribute
+   * of the link surrounding the icon.
+   */
   @Input()
   iconLinkAnalytics: string;
+  /**
+   * The `href` value for the call-to-action.
+   */
   @Input()
   ctaHref: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * call-to-action.
+   */
   @Input()
   additionalCtaClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   getClassesCta(): string {
     const ctaClassArray: string[] = [];
 
@@ -180,6 +266,9 @@ export class SprkCardComponent {
     return ctaClassArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getClassesCard(): string {
     const classArray: string[] = ['sprk-c-Card', 'sprk-o-Stack'];
 

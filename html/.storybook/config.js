@@ -1,4 +1,5 @@
 import '../_spark.scss';
+import '../../storybook-theming/_docs.scss';
 import { configure, addParameters, addDecorator } from '@storybook/html';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from '../../storybook-theming/storybook-spark-theme';

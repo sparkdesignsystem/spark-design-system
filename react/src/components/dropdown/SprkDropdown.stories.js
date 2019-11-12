@@ -7,7 +7,15 @@ import SprkButton from '../buttons/SprkButton';
 export default {
   title: 'Components|Dropdown',
   component: SprkDropdown,
-  parameters: { jest: ['SprkDropdown'] },
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  parameters: {
+    jest: ['SprkDropdown'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dropdown)
+    `,
+  },
 };
 
 export const defaultStory = () => (

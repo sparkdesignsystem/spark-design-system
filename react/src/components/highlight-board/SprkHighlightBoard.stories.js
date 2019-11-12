@@ -5,7 +5,15 @@ import SprkHighlightBoard from './SprkHighlightBoard';
 export default {
   title: 'Components|Highlight Board',
   component: SprkHighlightBoard,
-  parameters: { jest: ['SprkHighlightBoard'] },
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
+  parameters: {
+    jest: ['SprkHighlightBoard'],
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/highlight-board)
+    `,
+  },
 };
 
 export const defaultStory = () => (

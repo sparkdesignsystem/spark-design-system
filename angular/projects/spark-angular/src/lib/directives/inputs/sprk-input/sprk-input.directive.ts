@@ -9,9 +9,15 @@ import {
   selector: '[sprkInput]'
 })
 export class SprkInputDirective implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 
-@HostListener('change', ['$event'])
+  /**
+   * @ignore
+   */
+  @HostListener('change', ['$event'])
   OnChange($event) {
     const value = (this.ref.nativeElement as HTMLInputElement).value;
     if (value.length > 0) {

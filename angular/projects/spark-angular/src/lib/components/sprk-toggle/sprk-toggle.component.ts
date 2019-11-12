@@ -34,23 +34,68 @@ import { toggleAnimations } from './sprk-toggle-animations';
   animations: [toggleAnimations.toggleContent]
 })
 export class SprkToggleComponent implements OnInit {
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * The value supplied will be
+   * rendered as the main Toggle link text.
+   */
   @Input()
   title: string;
+  /**
+   * The value supplied will be assigned as a
+   * CSS class on the icon used in the Toggle.
+   * This is intended for overrides.
+   */
   @Input()
   iconClass: string;
+  /**
+   * The value supplied will be assigned as a CSS class
+   * on the clickable title text used in the Toggle.
+   * This is intended for overrides.
+   */
   @Input()
   titleFontClass = 'sprk-b-TypeBodyThree';
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   public isOpen = false;
+  /**
+   * @ignore
+   */
   public iconStateClass = '';
+  /**
+   * @ignore
+   */
   public animState = 'closed';
 
+  /**
+   * @ignore
+   */
   toggleState(): void {
     this.isOpen === false
       ? (this.animState = 'closed')
@@ -61,6 +106,9 @@ export class SprkToggleComponent implements OnInit {
       : (this.iconStateClass = 'sprk-c-Icon--open');
   }
 
+  /**
+   * @ignore
+   */
   toggle(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;

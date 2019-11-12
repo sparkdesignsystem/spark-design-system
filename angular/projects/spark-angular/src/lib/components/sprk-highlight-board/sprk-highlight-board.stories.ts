@@ -6,14 +6,19 @@ import { APP_BASE_HREF } from '@angular/common';
 
 export default {
   title: 'Components|Highlight Board',
-  component: SprkHighlightBoardModule,
+  component: SprkHighlightBoardComponent,
   decorators: [
     storyWrapper(
       storyContent => (
         `<div class="sprk-o-Box">${ storyContent }<div>`
       )
     )
-  ]
+  ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/highlight-board)
+    `,
+  },
 };
 
 const modules = {

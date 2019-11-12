@@ -1,9 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
+import { SprkAlertComponent } from './sprk-alert.component';
 
 export default {
   title: 'Components|Alert',
-  component: SprkAlertModule,
+  component: SprkAlertComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -11,6 +12,11 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
+    `,
+  },
 };
 
 const modules = {

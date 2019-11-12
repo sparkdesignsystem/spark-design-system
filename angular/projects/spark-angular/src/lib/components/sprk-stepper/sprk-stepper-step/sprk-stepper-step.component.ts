@@ -52,6 +52,14 @@ import * as _ from 'lodash';
 export class SprkStepperStepComponent implements OnInit {
   @Input()
   additionalClasses: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
   @Input()
@@ -60,6 +68,12 @@ export class SprkStepperStepComponent implements OnInit {
   isDefaultActive: boolean;
   @Input()
   heading: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   @Input()
   analyticsString: string;
   componentID = _.uniqueId('step-');
@@ -69,6 +83,9 @@ export class SprkStepperStepComponent implements OnInit {
 
   constructor(public ref: ElementRef) {}
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Stepper__step'];
 

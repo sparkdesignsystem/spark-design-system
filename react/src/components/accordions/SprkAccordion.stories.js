@@ -5,6 +5,9 @@ import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem'
 export default {
   title: 'Components|Accordion',
   component: SprkAccordion,
+  decorators: [
+    story => <div className="sprk-o-Box">{story()}</div>
+  ],
 };
 
 export const defaultStory = () => (
@@ -63,5 +66,10 @@ export const defaultStory = () => (
 
 defaultStory.story = {
   name: 'Default',
-  parameters: { jest: ['SprkAccordion', 'SprkAccordionItem'] },
+  parameters: {
+    jest: ['SprkAccordion', 'SprkAccordionItem'] ,
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
+    `,
+  },
 };

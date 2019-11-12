@@ -63,49 +63,139 @@ import { Component, Input } from '@angular/core';
   styles: ['']
 })
 export class SprkAwardComponent {
+  /**
+   * The relative size of the viewport that
+   * the Award component should switch
+   * from a stacked layout to a side by side
+   * layout. You will need to experiment
+   * with your content to see which value
+   * is the best fit. Can be `tiny`,
+   * `small`, `medium`, `large` or `huge`.
+   */
   @Input()
   splitAt: string;
+  /**
+   * The `alt` text that will be applied
+   * to the first image.
+   */
   @Input()
   imgOneAlt: string;
+  /**
+   * The image `href` value that will be
+   * applied to the first image.
+   */
   @Input()
   imgOneHref: string;
+  /**
+   * The image `href` value that will be
+   * applied to the second image.
+   */
   @Input()
   imgTwoHref: string;
+  /**
+   * The `alt` text that will be applied
+   * 'to the second image.
+   */
   @Input()
   imgTwoAlt: string;
+  /**
+   * The image source that will be
+   * applied to the first image.
+   */
   @Input()
   imgOneSrc: string;
+  /**
+   * The image source that will be
+   * applied to the second image.
+   */
   @Input()
   imgTwoSrc: string;
+  /**
+   * The string that will be assigned to the
+   * `data-analytics` attribute of the first image.
+   */
   @Input()
   analyticsStringImgOne: string;
+  /**
+   * The string that will be assigned to the
+   * `data-analytics` attribute of the second image.
+   */
   @Input()
   analyticsStringImgTwo: string;
+  /**
+   * The string that will be assigned to the
+   * `data-analytics` attribute of
+   * the clickable disclaimer.
+   */
   @Input()
   analyticsStringDisclaimer: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * first image.
+   */
   @Input()
   additionalClassesImgOne: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * second image.
+   */
   @Input()
   additionalClassesImgTwo: string;
+  /**
+   * The text that appears above the
+   * images and serves as the heading
+   * for the Award.
+   */
   @Input()
   title: string;
+  /**
+   * The text that will be the clickable
+   * title of the disclaimer toggle.
+   */
   @Input()
   disclaimerTitle: string;
+  /**
+   * The text that will be inside the
+   * disclaimer toggle.
+   */
   @Input()
   disclaimerCopy: string;
+  /**
+   * If `false`, the disclaimer
+   * toggle will not be rendered.
+   */
   @Input()
   disclaimer: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   @Input()
   idString: string;
 
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = [
       'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
     ];
 
-    // Handle the choice of item split breakpoint by adding CSS class
+    // Handle the choice of item split
+    // breakpoint by adding CSS class
     switch (this.splitAt) {
       case 'tiny':
         classArray.push('sprk-o-Stack--split@xs');
@@ -129,6 +219,9 @@ export class SprkAwardComponent {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getClassesImgOne(): string {
     const classArray: string[] = [
       'sprk-o-Stack__item sprk-o-Stack__item--center-column'
@@ -142,6 +235,9 @@ export class SprkAwardComponent {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getClassesImgTwo(): string {
     const classArray: string[] = [
       'sprk-o-Stack__item sprk-o-Stack__item--center-column'

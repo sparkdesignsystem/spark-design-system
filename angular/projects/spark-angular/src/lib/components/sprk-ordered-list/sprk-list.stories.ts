@@ -2,10 +2,11 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkOrderedListModule } from './sprk-ordered-list.module';
 import { SprkUnorderedListModule } from '../sprk-unordered-list/sprk-unordered-list.module';
 import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
+import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
 
 export default {
   title: 'Components|List',
-  component: SprkUnorderedListModule,
+  component: SprkUnorderedListComponent,
   decorators: [
     storyWrapper(
       storyContent => (
