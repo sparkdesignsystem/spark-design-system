@@ -33,7 +33,7 @@ export const stackSplit = () => (
 );
 
 stackSplit.story = {
-  name: 'With Split Items and Spacing',
+  name: 'Stack/Split - Spaced Items',
 };
 
 export const stackSplitTwoCol = () => (
@@ -46,7 +46,7 @@ export const stackSplitTwoCol = () => (
 );
 
 stackSplitTwoCol.story = {
-  name: 'Split - Two Column',
+  name: 'Stack/Split - Two Column',
 };
 
 export const stackSplitThreeCol = () => (
@@ -60,7 +60,7 @@ export const stackSplitThreeCol = () => (
 );
 
 stackSplitThreeCol.story = {
-  name: 'Split - Three Column',
+  name: 'Stack/Split - Three Column',
 };
 
 export const stackSplitFourCol = () => (
@@ -75,7 +75,7 @@ export const stackSplitFourCol = () => (
 );
 
 stackSplitFourCol.story = {
-  name: 'Split - Four Column',
+  name: 'Stack/Split - Four Column',
 };
 
 export const stackSplitFiveCol = () => (
@@ -91,7 +91,7 @@ export const stackSplitFiveCol = () => (
 );
 
 stackSplitFiveCol.story = {
-  name: 'Split - Five Column',
+  name: 'Stack/Split - Five Column',
 };
 
 export const stackSplitSixCol = () => (
@@ -108,7 +108,7 @@ export const stackSplitSixCol = () => (
 );
 
 stackSplitSixCol.story = {
-  name: 'Split - Six Column',
+  name: 'Stack/Split - Six Column',
 };
 
 export const stackSplitLayoutThreeFourths = () => (
@@ -120,8 +120,8 @@ export const stackSplitLayoutThreeFourths = () => (
   `
 );
 
-stackSplitSixCol.story = {
-  name: 'Split - 75/25 Layout',
+stackSplitLayoutThreeFourths.story = {
+  name: 'Stack/Split - 75/25',
 };
 
 export const stackSplitLayoutThreeFifths = () => (
@@ -133,8 +133,8 @@ export const stackSplitLayoutThreeFifths = () => (
   `
 );
 
-stackSplitSixCol.story = {
-  name: 'Split - 60/40 Layout',
+stackSplitLayoutThreeFifths.story = {
+  name: 'Stack/Split - 60/40',
 };
 
 export const stackSplitLayoutThreeTenths = () => (
@@ -146,8 +146,8 @@ export const stackSplitLayoutThreeTenths = () => (
   `
 );
 
-stackSplitSixCol.story = {
-  name: 'Split - 30/70 Layout',
+stackSplitLayoutThreeTenths.story = {
+  name: 'Stack/Split - 30/70',
 };
 
 export const stackSplitLayoutMixed = () => (
@@ -253,6 +253,6 @@ export const stackSplitLayoutMixed = () => (
   `
 );
 
-stackSplitSixCol.story = {
-  name: 'Split - Mixed Column Layout',
+stackSplitLayoutMixed.story = {
+  name: 'Stack/Split - Mixed Column',
 };
