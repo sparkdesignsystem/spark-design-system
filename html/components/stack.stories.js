@@ -12,7 +12,6 @@ export const defaultStory = () => (
     <div class="sprk-o-Stack">
       <div class="sprk-o-Stack__item">
       </div>
-
       <div class="sprk-o-Stack__item">
       </div>
     </div>
