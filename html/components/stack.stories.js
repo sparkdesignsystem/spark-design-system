@@ -26,8 +26,12 @@ defaultStory.story = {
 export const stackSplit = () => (
   `
   <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
-    <div class="sprk-o-Stack__item">Item One</div>
-    <div class="sprk-o-Stack__item">Item Two</div>
+    <div class="sprk-o-Stack__item">
+      <p>Stack Item One</p>
+    </div>
+    <div class="sprk-o-Stack__item">
+      <p>Stack Item Two</p>
+    </div>
   </div>
   `
 );
