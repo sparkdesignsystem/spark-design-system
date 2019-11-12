@@ -109,7 +109,8 @@ body {
   margin-bottom: $sprk-space-m;
 }
 
-.sb-show-main .sprk-o-CenteredColumn {
+.sb-show-main .sb-decorate .sprk-o-CenteredColumn,
+.sb-show-main .sb-decorate .sprk-o-Box {
   background-color: $sprk-gray-dark;
   height: 4rem;
 }
