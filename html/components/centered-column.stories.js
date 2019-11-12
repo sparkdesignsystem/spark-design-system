@@ -7,7 +7,9 @@ export default {
   ],
 };
 
-export const defaultStory = () => ('<div class="sprk-o-CenteredColumn"></div>');
+export const defaultStory = () => (
+  '<div class="sprk-o-CenteredColumn" data-id="centered-column"></div>'
+);
 
 defaultStory.story = {
   name: 'Default',
