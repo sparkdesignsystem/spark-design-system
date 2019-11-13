@@ -1,5 +1,4 @@
 import { useEffect } from '@storybook/client-api';
-// import { addDecorator } from '@storybook/html';
 import { masthead, toggleScrollEvent } from './masthead';
 import { toggle } from '../components/toggle';
 import { dropdowns } from '../components/dropdown';
@@ -10,10 +9,12 @@ export default {
   decorators: [
     story => `<div data-sprk-main>${story()}</div>`,
   ],
+  parameters: {
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
+    `,
+  },
 };
-
-// TODO: Add this decorator individually rather than globally
-// addDecorator(story => `<div data-sprk-main>${story()}</div>`);
 
 export const defaultMasthead = () => {
   useEffect(() => {

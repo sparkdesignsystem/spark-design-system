@@ -25,4 +25,15 @@ addParameters({
   },
 });
 
+addParameters({
+  docs: {
+    extractComponentDescription: (component, { info }) => {
+      if (info) {
+        return typeof info === 'string' ? info : info.markdown || info.text;
+      }
+      return null;
+    },
+  },
+})
+
 configure(require.context('../src', true, /\.stories\.(js|ts|tsx|mdx)$/), module);

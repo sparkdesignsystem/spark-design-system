@@ -9,8 +9,6 @@ import '!style-loader!css-loader!sass-loader!../../storybook-theming/font-loader
 import '../../storybook-theming/icon-loader';
 
 addDecorator(withA11y);
-addDecorator(withActions('click .sprk-c-Button'));
-addDecorator(withActions('click .sprk-b-Link'));
 
 // Option defaults
 addParameters({
@@ -21,5 +19,16 @@ addParameters({
   },
 });
 
-configure(require.context('..', true, /^((?![\\/]node_modules|dist[\\/]).)*\.stories\.js$/));
+addParameters({
+  docs: {
+    extractComponentDescription: (component, { info }) => {
+      if (info) {
+        return typeof info === 'string' ? info : info.markdown || info.text;
+      }
+      return null;
+    },
+  },
+});
+
+configure(require.context('..', true, /^((?![\\/]node_modules|dist[\\/]).)*\.stories\.js$/), module);
 

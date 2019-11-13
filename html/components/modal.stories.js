@@ -6,6 +6,11 @@ export default {
   decorators: [
     story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
   ],
+  parameters: {
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/modal)
+    `,
+  },
 };
 
 export const defaultStory = () => {
