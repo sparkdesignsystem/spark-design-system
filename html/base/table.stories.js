@@ -3,6 +3,11 @@ export default {
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
+  parameters: {
+    info: `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
+    `,
+  },
 };
 
 export const columnComparison = () => (
