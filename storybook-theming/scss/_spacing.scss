@@ -1,178 +1,169 @@
 $sb-space-margin-color: rgba(217, 217, 217, 0.8);
 $sb-space-padding-color: rgba(207, 207, 207, 0.8);
-$sb-space-xs: 4px;
-$sb-space-s: 8px;
-$sb-space-m: 16px;
-$sb-space-l: 32px;
-$sb-space-xl: 64px;
-$sb-space-misc-a: 24px;
-$sb-space-misc-b: 40px;
-$sb-space-misc-c: 48px;
-$sb-space-misc-d: 80px;
 
 // Inset tall
 .sb-spacing-inset-tall-xs {
-  box-shadow: inset 0 (-1 * ($sb-space-xs * 1.5)) 0 $sb-space-padding-color,
-  inset 0 ($sb-space-xs * 1.5) 0 $sb-space-padding-color,
-  inset $sb-space-xs 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-xs) 0 0 0 $sb-space-padding-color;
-  padding: ($sb-space-xs * 1.5) $sb-space-xs ($sb-space-xs * 1.5) $sb-space-xs;
+  box-shadow: inset 0 (-1 * ($sprk-space-xs * 1.5)) 0 $sb-space-padding-color,
+  inset 0 ($sprk-space-xs * 1.5) 0 $sb-space-padding-color,
+  inset $sprk-space-xs 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-xs) 0 0 0 $sb-space-padding-color;
+  padding: ($sprk-space-xs * 1.5) $sprk-space-xs ($sprk-space-xs * 1.5) $sprk-space-xs;
 }
 
 .sb-spacing-inset-tall-s {
-  box-shadow: inset 0 (-1 * ($sb-space-s * 1.5)) 0 $sb-space-padding-color,
-  inset 0 ($sb-space-s * 1.5) 0 $sb-space-padding-color,
-  inset $sb-space-s 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-s) 0 0 0 $sb-space-padding-color;
-  padding: ($sb-space-s * 1.5) $sb-space-s ($sb-space-s * 1.5) $sb-space-s;
+  box-shadow: inset 0 (-1 * ($sprk-space-s * 1.5)) 0 $sb-space-padding-color,
+  inset 0 ($sprk-space-s * 1.5) 0 $sb-space-padding-color,
+  inset $sprk-space-s 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-s) 0 0 0 $sb-space-padding-color;
+  padding: ($sprk-space-s * 1.5) $sprk-space-s ($sprk-space-s * 1.5) $sprk-space-s;
 }
 
 .sb-spacing-inset-tall-m {
-  box-shadow: inset 0 (-1 * ($sb-space-m * 1.5)) 0 $sb-space-padding-color,
-  inset 0 ($sb-space-m * 1.5) 0 $sb-space-padding-color,
-  inset $sb-space-m 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-m) 0 0 0 $sb-space-padding-color;
-  padding: ($sb-space-m * 1.5) $sb-space-m ($sb-space-m * 1.5) $sb-space-m;
+  box-shadow: inset 0 (-1 * ($sprk-space-m * 1.5)) 0 $sb-space-padding-color,
+  inset 0 ($sprk-space-m * 1.5) 0 $sb-space-padding-color,
+  inset $sprk-space-m 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-m) 0 0 0 $sb-space-padding-color;
+  padding: ($sprk-space-m * 1.5) $sprk-space-m ($sprk-space-m * 1.5) $sprk-space-m;
 }
 
 .sb-spacing-inset-tall-l {
-  box-shadow: inset 0 (-1 * ($sb-space-l * 1.5)) 0 $sb-space-padding-color,
-  inset 0 ($sb-space-l * 1.5) 0 $sb-space-padding-color,
-  inset $sb-space-l 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-l) 0 0 0 $sb-space-padding-color;
-  padding: ($sb-space-l * 1.5) $sb-space-l ($sb-space-l * 1.5) $sb-space-l;
+  box-shadow: inset 0 (-1 * ($sprk-space-l * 1.5)) 0 $sb-space-padding-color,
+  inset 0 ($sprk-space-l * 1.5) 0 $sb-space-padding-color,
+  inset $sprk-space-l 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-l) 0 0 0 $sb-space-padding-color;
+  padding: ($sprk-space-l * 1.5) $sprk-space-l ($sprk-space-l * 1.5) $sprk-space-l;
 }
 
 .sb-spacing-inset-tall-xl {
-  box-shadow: inset 0 (-1 * ($sb-space-xl * 1.5)) 0 $sb-space-padding-color,
-  inset 0 ($sb-space-xl * 1.5) 0 $sb-space-padding-color,
-  inset $sb-space-xl 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-xl) 0 0 0 $sb-space-padding-color;
-  padding: ($sb-space-xl * 1.5) $sb-space-xl ($sb-space-xl * 1.5) $sb-space-xl;
+  box-shadow: inset 0 (-1 * ($sprk-space-xl * 1.5)) 0 $sb-space-padding-color,
+  inset 0 ($sprk-space-xl * 1.5) 0 $sb-space-padding-color,
+  inset $sprk-space-xl 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-xl) 0 0 0 $sb-space-padding-color;
+  padding: ($sprk-space-xl * 1.5) $sprk-space-xl ($sprk-space-xl * 1.5) $sprk-space-xl;
 }
 
 /* Inset short */
 .sb-spacing-inset-short-xs {
-  box-shadow: inset 0 (-1 * ($sb-space-xs / 2)) 0 $sb-space-padding-color,
-  inset 0 ($sb-space-xs / 2) 0 $sb-space-padding-color,
-  inset $sb-space-xs 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-xs) 0 0 0 $sb-space-padding-color;
-  padding: ($sb-space-xs / 2) $sb-space-xs ($sb-space-xs / 2) $sb-space-xs;
+  box-shadow: inset 0 (-1 * ($sprk-space-xs / 2)) 0 $sb-space-padding-color,
+  inset 0 ($sprk-space-xs / 2) 0 $sb-space-padding-color,
+  inset $sprk-space-xs 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-xs) 0 0 0 $sb-space-padding-color;
+  padding: ($sprk-space-xs / 2) $sprk-space-xs ($sprk-space-xs / 2) $sprk-space-xs;
 }
 
 .sb-spacing-inset-short-s {
-  box-shadow: inset 0 (-1 * $sb-space-xs) 0 $sb-space-padding-color,
-  inset 0 $sb-space-xs 0 $sb-space-padding-color,
-  inset $sb-space-s 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-s) 0 0 0 $sb-space-padding-color;
-  padding: $sb-space-xs $sb-space-s $sb-space-xs $sb-space-s;
+  box-shadow: inset 0 (-1 * $sprk-space-xs) 0 $sb-space-padding-color,
+  inset 0 $sprk-space-xs 0 $sb-space-padding-color,
+  inset $sprk-space-s 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-s) 0 0 0 $sb-space-padding-color;
+  padding: $sprk-space-xs $sprk-space-s $sprk-space-xs $sprk-space-s;
 }
 
 .sb-spacing-inset-short-m {
-  box-shadow: inset 0 (-1 * $sb-space-s) 0 $sb-space-padding-color,
-  inset 0 $sb-space-s 0 $sb-space-padding-color,
-  inset $sb-space-m 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-m) 0 0 0 $sb-space-padding-color;
-  padding: $sb-space-s $sb-space-m $sb-space-s $sb-space-m;
+  box-shadow: inset 0 (-1 * $sprk-space-s) 0 $sb-space-padding-color,
+  inset 0 $sprk-space-s 0 $sb-space-padding-color,
+  inset $sprk-space-m 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-m) 0 0 0 $sb-space-padding-color;
+  padding: $sprk-space-s $sprk-space-m $sprk-space-s $sprk-space-m;
 }
 
 .sb-spacing-inset-short-l {
-  box-shadow: inset 0 (-1 * $sb-space-m) 0 $sb-space-padding-color,
-  inset 0 $sb-space-m 0 $sb-space-padding-color,
-  inset $sb-space-l 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-l) 0 0 0 $sb-space-padding-color;
-  padding: $sb-space-m $sb-space-l $sb-space-m $sb-space-l;
+  box-shadow: inset 0 (-1 * $sprk-space-m) 0 $sb-space-padding-color,
+  inset 0 $sprk-space-m 0 $sb-space-padding-color,
+  inset $sprk-space-l 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-l) 0 0 0 $sb-space-padding-color;
+  padding: $sprk-space-m $sprk-space-l $sprk-space-m $sprk-space-l;
 }
 
 .sb-spacing-inset-short-xl {
-  box-shadow: inset 0 (-1 * $sb-space-l) 0 $sb-space-padding-color,
-  inset 0 $sb-space-l 0 $sb-space-padding-color,
-  inset $sb-space-xl 0 0 0 $sb-space-padding-color,
-  inset (-1 * $sb-space-xl) 0 0 0 $sb-space-padding-color;
-  padding: $sb-space-l $sb-space-xl $sb-space-l $sb-space-xl;
+  box-shadow: inset 0 (-1 * $sprk-space-l) 0 $sb-space-padding-color,
+  inset 0 $sprk-space-l 0 $sb-space-padding-color,
+  inset $sprk-space-xl 0 0 0 $sb-space-padding-color,
+  inset (-1 * $sprk-space-xl) 0 0 0 $sb-space-padding-color;
+  padding: $sprk-space-l $sprk-space-xl $sprk-space-l $sprk-space-xl;
 }
 
 // Global Spacing
 .sb-spacing-inset-xs {
-  box-shadow: inset 0 0 0 $sb-space-xs $sb-space-padding-color;
-  padding: $sb-space-xs;
+  box-shadow: inset 0 0 0 $sprk-space-xs $sb-space-padding-color;
+  padding: $sprk-space-xs;
 }
 
 .sb-spacing-inset-s {
-  box-shadow: inset 0 0 0 $sb-space-s $sb-space-padding-color;
-  padding: $sb-space-s;
+  box-shadow: inset 0 0 0 $sprk-space-s $sb-space-padding-color;
+  padding: $sprk-space-s;
 }
 
 .sb-spacing-inset-m {
-  box-shadow: inset 0 0 0 $sb-space-m $sb-space-padding-color;
-  padding: $sb-space-m;
+  box-shadow: inset 0 0 0 $sprk-space-m $sb-space-padding-color;
+  padding: $sprk-space-m;
 }
 
 .sb-spacing-inset-l {
-  box-shadow: inset 0 0 0 $sb-space-l $sb-space-padding-color;
-  padding: $sb-space-l;
+  box-shadow: inset 0 0 0 $sprk-space-l $sb-space-padding-color;
+  padding: $sprk-space-l;
 }
 
 .sb-spacing-inset-xl {
-  box-shadow: inset 0 0 0 $sb-space-xl $sb-space-padding-color;
-  padding: $sb-space-xl;
+  box-shadow: inset 0 0 0 $sprk-space-xl $sb-space-padding-color;
+  padding: $sprk-space-xl;
 }
 
 // Stack
 .sb-spacing-stack-xs {
-  border-bottom: $sb-space-xs solid $sb-space-margin-color;
+  border-bottom: $sprk-space-xs solid $sb-space-margin-color;
 }
 
 .sb-spacing-stack-s {
-  border-bottom: $sb-space-s solid $sb-space-margin-color;
+  border-bottom: $sprk-space-s solid $sb-space-margin-color;
 }
 
 .sb-spacing-stack-m {
-  border-bottom: $sb-space-m solid $sb-space-margin-color;
+  border-bottom: $sprk-space-m solid $sb-space-margin-color;
 }
 
 .sb-spacing-stack-l {
-  border-bottom: $sb-space-l solid $sb-space-margin-color;
+  border-bottom: $sprk-space-l solid $sb-space-margin-color;
 }
 
 .sb-spacing-stack-xl {
-  border-bottom: $sb-space-xl solid $sb-space-margin-color;
+  border-bottom: $sprk-space-xl solid $sb-space-margin-color;
 }
 
 /* Inline Doc Displays */
 .sb-spacing-inline-right-xs {
-  border-right: $sb-space-xs solid $sb-space-margin-color;
+  border-right: $sprk-space-xs solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-s {
-  border-right: $sb-space-s solid $sb-space-margin-color;
+  border-right: $sprk-space-s solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-m {
-  border-right: $sb-space-m solid $sb-space-margin-color;
+  border-right: $sprk-space-m solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-l {
-  border-right: $sb-space-l solid $sb-space-margin-color;
+  border-right: $sprk-space-l solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-xl {
-  border-right: $sb-space-xl solid $sb-space-margin-color;
+  border-right: $sprk-space-xl solid $sb-space-margin-color;
 }
 
 /* Inline Misc Spacing Doc Displays */
 .sb-spacing-inline-right-misc-a {
-  border-right: $sb-space-misc-a solid $sb-space-margin-color;
+  border-right: $sprk-space-misc-a solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-misc-b {
-  border-right: $sb-space-misc-b solid $sb-space-margin-color;
+  border-right: $sprk-space-misc-b solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-misc-c {
-  border-right: $sb-space-misc-c solid $sb-space-margin-color;
+  border-right: $sprk-space-misc-c solid $sb-space-margin-color;
 }
 
 .sb-spacing-inline-right-misc-d {
-  border-right: $sb-space-misc-d solid $sb-space-margin-color;
+  border-right: $sprk-space-misc-d solid $sb-space-margin-color;
 }
