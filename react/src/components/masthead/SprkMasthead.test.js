@@ -191,11 +191,7 @@ it('should update state of isHidden if isNarrowLayout is false', () => {
 it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
-<<<<<<< HEAD:react/src/components/masthead/SprkMasthead.test.js
   const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");
-=======
-  const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");
->>>>>>> staging:src/react/projects/spark-react/src/SprkMasthead/SprkMasthead.test.js
   wrapper.update();
   instance.checkLayoutOnResize();
   expect(spy).toHaveBeenCalled();
@@ -204,11 +200,7 @@ it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
 it('should call checkIfNarrowLayout when checkLayoutOnResize is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
-<<<<<<< HEAD:react/src/components/masthead/SprkMasthead.test.js
   const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");
-=======
-  const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");
->>>>>>> staging:src/react/projects/spark-react/src/SprkMasthead/SprkMasthead.test.js
   wrapper.update();
   instance.checkLayoutOnResize();
   expect(spy).toHaveBeenCalled();
