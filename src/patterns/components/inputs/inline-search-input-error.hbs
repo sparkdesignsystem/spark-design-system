@@ -1,0 +1,15 @@
+---
+name: Inline Search Input - Error State
+description:
+  This input is used for entering search queries. This component uses a
+  compact layout that is suitable for use in a Masthead component.
+order: 19
+invisible: true
+hasAngularCode: true
+hasReactCode: true
+---
+{{#embed "patterns.components.inputs.inline-search-input"
+         invaliddata="true"
+         idattr="inline-search-error"
+         errorMessage="There is an error on this field."
+         class="sprk-b-TextInput--error"}}{{/embed}}

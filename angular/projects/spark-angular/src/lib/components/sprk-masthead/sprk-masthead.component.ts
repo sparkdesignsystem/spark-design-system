@@ -384,20 +384,27 @@ export class SprkMastheadComponent implements AfterContentInit {
     }
   }
 
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   /**
    * @ignore
    * Handles when viewport size changes to
    * large while narrow nav is hidden.
    */
+=======
+  // Handles when viewport size changes to large while narrow nav is hidden
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
     this.isNarrowOnResize = this.isElementVisible('.sprk-c-Masthead__menu');
     this.throttledUpdateLayoutState();
   }
 
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   /**
    * @ignore
    */
+=======
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   updateLayoutState() {
     if (this.isNarrowLayout !== this.isNarrowOnResize) {
       this.isNarrowLayout = this.isNarrowOnResize;
@@ -409,16 +416,22 @@ export class SprkMastheadComponent implements AfterContentInit {
     }
   }
 
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   /**
    * @ignore
    */
+=======
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   ngAfterContentInit() {
     this.isNarrowLayout = this.isElementVisible('.sprk-c-Masthead__menu');
   }
 
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   /**
    * @ignore
    */
+=======
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   isElementVisible(selector) {
     const element = document.querySelector(selector);
     if (!element) {
@@ -433,9 +446,12 @@ export class SprkMastheadComponent implements AfterContentInit {
     return elementIsVisible;
   }
 
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   /**
    * @ignore
    */
+=======
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   scrollYDirection() {
     const newScrollPos = window.scrollY;
     if (newScrollPos < 0) {
@@ -447,9 +463,12 @@ export class SprkMastheadComponent implements AfterContentInit {
     return direction;
   }
 
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   /**
    * @ignore
    */
+=======
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.ts
   checkScrollDirection() {
     const newDirection = this.scrollYDirection();
     if (this.scrollDirection !== newDirection) {

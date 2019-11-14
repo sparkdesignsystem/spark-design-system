@@ -1,0 +1,90 @@
+[data-template-id^='footer'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='masthead-default'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='masthead-with-extended-navigation'] .#{$app-namespace}-c-Preview__example {
+  padding: 0;
+}
+
+[data-template-id^='masthead-default'] .sprk-c-Masthead,
+[data-template-id^='masthead-with-extended-navigation'] .sprk-c-Masthead,
+.#{$app-namespace}-c-Preview .sprk-c-Dropdown {
+  z-index: 100001;
+}
+
+[data-template-id^='stepper-with-dark-background'] .#{$app-namespace}-c-Preview__example,
+[data-template-id^='stepper-with-carousel'] .#{$app-namespace}-c-Preview__example {
+  background-color: #007dba;
+}
+
+
+.#{$app-namespace}-c-Preview .sprk-c-Masthead__narrow-nav,
+.#{$app-namespace}-c-Preview .sprk-c-Masthead {
+  position: static;
+}
+
+//Override masthead translate to avoid Masthead examples animating on narrow viewports
+.#{$app-namespace}-c-Preview .sprk-c-Masthead.sprk-c-Masthead--hidden {
+  transform: translateY(0);
+}
+
+[data-template-id^='masthead-with-extended-navigation'] .#{$app-namespace}-c-Preview__example {
+  position: relative;
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-MastheadMask {
+  position: absolute;
+}
+
+[data-template-id^='box-object'] .sprk-o-Box {
+  border: 1px solid #ccc;
+}
+
+.#{$app-namespace}-c-Icon-Sizing {
+  align-items: center;
+}
+
+[data-template-id='centered-column'] .sprk-o-CenteredColumn {
+  background-color: #ccc;
+  height: 4rem;
+}
+
+[data-template-id^='stack-object'] .sprk-o-Stack__item {
+  background-color: rgba(253, 108, 69, 0.4);
+  border: 2px solid rgb(253, 108, 69);
+  padding: 2rem;
+}
+
+[data-template-id='flag-object'] .sprk-o-Flag__body p {
+  font-family: RocketSans, sans-serif;
+}
+
+[data-template-id='full-width'] .#{$app-namespace}-c-Preview__example {
+  overflow: hidden;
+}
+
+.#{$app-namespace}-c-Logo-placeholder {
+  background-color: #ccc;
+  height: 55px;
+  width: 262px;
+}
+
+.#{$app-namespace}-c-Logo-placeholder--small {
+  width: 3.75rem;
+}
+
+.#{$app-namespace}-c-Logo-placeholder--medium {
+  width: 7.75rem;
+}
+
+.#{$app-namespace}-c-Logo-placeholder--large {
+  width: 18.75rem;
+  height: 11rem;
+}
+
+.#{$app-namespace}-b-Body.sprk-u-Overflow--hidden,
+.#{$app-namespace}-o-Layout.sprk-u-Overflow--hidden {
+  overflow: visible !important; // Overrides a utility class (sprk-u-Overflow--hidden) that is added by JS.
+}
+
+.#{$app-namespace}-c-Preview .sprk-c-Modal {
+  z-index: 100003;
+}

@@ -9,11 +9,12 @@ setInvalidTextInput
 import
 runValidation from '../utilities/validation/validation-runner';
 
-const formatMonetary = value => Number(value.replace(/,/g, ''))
-  .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-  .replace(/\$/g, '');
+const formatMonetary = value =>
+  Number(value.replace(/,/g, ''))
+    .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    .replace(/\$/g, '');
 
-const bindUIEvents = (element) => {
+const bindUIEvents = element => {
   const field = element.querySelector('input');
 
   field.addEventListener('input', () => {
@@ -21,7 +22,10 @@ const bindUIEvents = (element) => {
   });
 
   field.addEventListener('blur', () => {
-    if (runValidation(element, field, setValidTextInput, setInvalidTextInput)) {
+    if (
+      runValidation(element, field, setValidTextInput, setInvalidTextInput) &&
+      field.value !== ''
+    ) {
       field.value = formatMonetary(field.value);
     }
   });

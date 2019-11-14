@@ -1,0 +1,173 @@
+description:
+  The Stepper displays a series of sequential steps with optional contextual descriptions.
+information:
+  - Users can use the arrow keys to tab through the steps.
+restrictions:
+- Steppers must have a minimum of 2 items.
+- Only one step can be selected at a time.
+- The Stepper component should NOT be used as a progress indicator, as there is
+  no way at this time to mark a step as "complete".
+- The React Stepper uses the index of its children to keep track of the active step. If you want to modify the index of the child steps
+  (for example, to sort them or add more steps) you need to re-initialize the component so that it refreshes the internal indices.
+angularComingSoon: true
+variableTable:
+  $sprk-stepper-bg:
+    default: transparent
+    description: Sets the background color of the stepper.
+  $sprk-stepper-breakpoint:
+    default: $sprk-split-breakpoint-xl
+    description: Sets the minimum width at which the component switches between narrow and wide layouts.
+  $sprk-stepper-max-width:
+    default: 480px
+    description: Sets the maximum width of the stepper.
+  $sprk-stepper-step-icon-border-width:
+    default: 2px
+    description: Sets the border width of the stepper icons.
+  $sprk-stepper-icon-border-color:
+    default: $sprk-black-tint-50
+    description: The color of the border around the icon.
+  $sprk-stepper-icon-border-color-selected:
+    default: $sprk-green
+    description: The color of the step icon when the step is selected.
+  $sprk-stepper-dark-icon-border-color:
+    default: $sprk-white
+    description: The color of the icon border when the stepper is on a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-stepper-icon-height:
+    default: 16px
+    description: The height of the step icon.
+  $sprk-stepper-icon-width:
+    default: 16px
+    description: The width of the step icon.
+  $sprk-stepper-icon-color:
+    default: $sprk-white
+    description: The color of the step icon.
+  $sprk-stepper-icon-color-hover:
+    default: $sprk-black-tint-50
+    description: The color of the step icon on hover.
+  $sprk-stepper-icon-color-selected:
+    default: $sprk-white
+    description: The color of the step icon when the step is selected.
+  $sprk-stepper-dark-icon-color:
+    default: $sprk-blue
+    description: The color of the step icon when the stepper has a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-stepper-dark-icon-color-selected:
+    default: $sprk-white
+    description: The color of the step icon when the step is selected and the stepper has a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-stepper-dark-icon-color-hover:
+    default: $sprk-white
+    description: The color of the step icon on hover when the stepper has a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-stepper-dark-icon-transition:
+    default: 0.3s all ease-in-out
+    description: The transition state of the step icon.
+  $sprk-stepper-dark-icon-z-index:
+    default: $sprk-layer-height-xs
+    description: The z-index value of the step icon.
+  $sprk-stepper-icon-box-shadow-selected-spread:
+    default: 8px
+    description: The spread value of the icon box shadow when the step is selected.
+  $sprk-stepper-icon-box-shadow-selected:
+    default: 0 0 0 $sprk-stepper-step-icon-box-shadow-selected-spread $sprk-stepper-step-icon-border-color-selected
+    description: The box shadow of the step icon when the icon is selected.
+  $sprk-stepper-step-content-bg:
+    default: transparent
+    description: The background color of the content in the step.
+  $sprk-stepper-step-description-border-radius:
+    default: 5px
+    description: The border radius of the step content box when it has a description.
+  $sprk-stepper-step-description-box-shadow:
+    default: 0 3px 18px 1px rgba(0,0,0,.08)
+    description: The box shadow of the step content box when it has a description.
+  $sprk-stepper-step-description-top-spacing:
+    default: $sprk-space-m
+    description: The spacing between the step heading and description.
+  $sprk-stepper-step-heading-font-weight:
+    default: 400
+    description: The font weight of the step heading.
+  $sprk-stepper-step-heading-size:
+    default: $sprk-font-size-display-six
+    description: The font size of the step heading.
+  $sprk-stepper-step-heading-color:
+    default: $sprk-black
+    description: The color of the step heading.
+  $sprk-stepper-dark-step-heading-color:
+    default: $sprk-white
+    description: The color of the step heading when the stepper is on a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-stepper-step-heading-color-selected:
+    default: $sprk-black
+    description: The color of the step heading when the step is selected.
+  $sprk-stepper-step-padding:
+    default: $sprk-space-misc-a
+    description: The padding value for the step.
+  $sprk-stepper-step-content-bg-selected:
+    default: transparent
+    description: The background color of the step content box when the step is selected.
+  $sprk-stepper-step-description-bg-selected:
+    default: $sprk-white
+    description: The background color of the step content box when it has a description and when the step is selected.
+  $sprk-stepper-dark-step-description-selected:
+    default: $sprk-black
+    description: The text color of a selected step's content and header when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.
+  $sprk-stepper-bar-color:
+    default: $sprk-black-tint-50
+    description: The color of the bar that connects the steps.
+  $sprk-stepper-dark-bar-color:
+    default: $sprk-white
+    description: The color of the bar that connects the steps when the stepper is on a dark background (sprk-c-Stepper--has-dark-bg).
+  $sprk-carousel-dot-border:
+    default: $sprk-stepper-icon-border-width solid $sprk-stepper-dark-icon-border-color
+    description: The border style for the dots under the carousel on mobile.
+  $sprk-carousel-dot-height:
+    default: 10px
+    description: The height of the dots under the carousel on mobile.
+  $sprk-carousel-dot-width:
+    default: 10px
+    description: The width of the dots under the carousel on mobile.
+  $sprk-carousel-wide-dot-height:
+    default: 10px
+    description: The height of the dots under the carousel on mobile, after the $sprk-carousel-breakpoint.
+  $sprk-carousel-wide-dot-width:
+    default: 10px
+    description: The width of the dots under the carousel on mobile, after the $sprk-carousel-breakpoint.
+  $sprk-carousel-dot-spacing:
+    default: $sprk-space-m
+    description: The spacing around the dots under the carousel on mobile.
+  $sprk-carousel-wide-dot-spacing:
+    default: $sprk-carousel-dot-spacing
+    description: The spacing around the dots under the carousel on mobile, after the $sprk-carousel-breakpoint.
+  $sprk-carousel-dot-selected:
+    default: $sprk-stepper-icon-box-shadow-selected
+    description: The box shadow style applied to the selected dot.
+  $sprk-carousel-arrow-color:
+    default: $sprk-white
+    description: The color of the arrow icons on either side of the carousel.
+  $sprk-carousel-arrow-spacing:
+    default: $sprk-space-m
+    description: The spacing around the arrow icons on either side of the carousel.
+  $sprk-carousel-arrow-edge-spacing:
+    default: 0
+    description: The spacing applied between the arrows and the edge of the viewport, before the $sprk-carousel-breakpoint.
+  $sprk-carousel-arrow-padding:
+    default: $sprk-space-m
+    description: The padding applied to the arrow icons on either side of the carousel.
+  $sprk-carousel-narrow-image-max-width:
+    default: 18.75rem
+    description: The max width applied to the carousel image, before the $sprk-carousel-breakpoint.
+  $sprk-carousel-arrow-position-breakpoint:
+    default: 31.25rem
+    description: The point at which the arrow icons stop being attached to the edges of the viewport.
+  $sprk-carousel-dot-container-padding:
+    default: $sprk-space-xs
+    description: The padding applied to the dot container, under the carousel.
+  $sprk-carousel-breakpoint:
+    default: $sprk-split-breakpoint-xl
+    description: The point when the carousel controls are no longer visible.
+
+classTable:
+  .sprk-c-Stepper--has-dark-bg:
+    description: Use this when the stepper has a dark background color.
+  .sprk-c-Stepper__step--selected:
+    description: This gets added to the step when it is selected.
+  .sprk-c-Stepper__step-content--has-description:
+    description: Goes on the step content when the step has a description in addition to the step heading.
+  .sprk-c-Stepper--has-carousel:
+    description: Use this when the stepper is paired with a carousel.

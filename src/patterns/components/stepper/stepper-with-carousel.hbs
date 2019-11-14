@@ -1,0 +1,53 @@
+---
+name: Stepper with Carousel
+hasReactDocs: true
+---
+<div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
+    <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
+      <div class="sprk-c-Carousel" data-sprk-carousel="stepper-carousel-01">
+        <div class="sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column">
+
+          <button class="sprk-o-Stack__item sprk-c-Carousel__prev">
+            <span class="sprk-u-ScreenReaderText">Previous Slide</span>
+            <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 100 100">
+              <use xlink:href="#chevron-left" />
+            </svg>
+          </button>
+
+          <div class="sprk-c-Carousel__frame">
+            <ul class="sprk-c-Carousel__slides">
+              <li class="sprk-c-Carousel__frame-item">
+                <img src="../../../assets/toolkit/images/phone-shadow.png" alt="Cell phone with a blank screen.">
+              </li>
+              <li class="sprk-c-Carousel__frame-item">
+                <img src="../../../assets/toolkit/images/phone-shadow.png" alt="Cell phone with a blank screen.">
+              </li>
+              <li class="sprk-c-Carousel__frame-item">
+                <img src="../../../assets/toolkit/images/phone-shadow.png" alt="Cell phone with a blank screen.">
+              </li>
+              <li class="sprk-c-Carousel__frame-item">
+                <img src="../../../assets/toolkit/images/phone-shadow.png" alt="Cell phone with a blank screen.">
+              </li>
+            </ul>
+            <div class="sprk-c-Carousel__dots" data-sprk-carousel-dots="stepper-carousel-01"></div>
+          </div>
+
+          <button class="sprk-o-Stack__item sprk-c-Carousel__next">
+            <span class="sprk-u-ScreenReaderText">Next Slide</span>
+            <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 100 100">
+              <use xlink:href="#chevron-right" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
+      {{#embed "patterns.components.stepper.stepper--dark-bg"
+               additionalClasses="sprk-c-Stepper--has-carousel"
+               hasCarousel="stepper-carousel-01"}}{{/embed}}
+    </div>
+ </div>
+</div>

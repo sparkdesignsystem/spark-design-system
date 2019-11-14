@@ -1,0 +1,27 @@
+sudo: required
+addons:
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+
+language: node_js
+node_js:
+  - "10.16.1"
+
+services:
+  - xvfb
+
+services:
+  - xvfb
+
+before_install:
+  - export CHROME_BIN=/usr/bin/google-chrome
+  - npm install
+  - npm install -g @angular/cli @angular-devkit/build-angular
+
+install:
+  - $(npm bin)/gulp pre-publish
+  - $(npm bin)/gulp test-angular
+  - $(npm bin)/gulp test-react

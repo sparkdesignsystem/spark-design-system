@@ -1,0 +1,58 @@
+---
+name: Text Input Huge
+description:
+  This text input is larger than base text input.
+  The label is centered inside the input until focused. The label transitions to the top of the input and the placeholder is shown.
+information:
+  - The input's 'type' attribute should be the most appropriate value that semantically matches your
+    use case.
+  - The label is visible by default. To hide the label and only display the placeholder,
+    add the .sprk-b-TextInput--label-hidden class to the input element.
+    This will hide the label, but it will still be available for screen readers.
+  - IE11 - The placeholder will not be visible when the input is focused.
+
+restrictions:
+  - This should only be used in a form that asks for one input at a time.
+  - The input label must come before the label element.
+  - Labels should not be too long. They should not wrap onto a second line.
+  - A placeholder is required for full functionality. If you do not want to show a placeholder, include placeholder=" " (space included) to maintain functionality.
+links:
+  Helper Text:
+    external: false
+    href: inputs.html#helper-text
+order: 3
+invisible: false
+hasAngularCode: true
+hasReactCode: true
+---
+
+<div class="sprk-b-InputContainer sprk-b-InputContainer--huge{{#if containerclass}} {{containerclass}}{{/if}}" {{#if requiredOnly}}data-sprk-required-only="text"{{/if}}>
+  <input class="sprk-b-TextInput sprk-u-Width-100{{#if class}} {{class}}{{/if}}"
+    data-sprk-input="huge"
+    id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
+    data-id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
+    type="text"
+    {{#if inputValue}}value="{{inputValue}}"{{/if}}
+    aria-describedby="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container"
+    {{#if disabled}} disabled{{/if}}
+    {{#if invaliddata}} aria-invalid="true"{{/if}}
+    {{#if required}}required{{/if}} placeholder="{{#if placeholder}}{{placeholder}}{{else}}Placeholder{{/if}}">
+  <label
+    for="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}"
+    class="sprk-b-Label{{#if disabled}} sprk-b-Label--disabled{{/if}} {{#if labelclass}}{{labelclass}}{{/if}}">Text Input Label</label>
+  {{#if errorMessage}}
+    <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}text-input-huge{{/if}}--error-container">
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled-small" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+          {{errorMessage}}
+      </div>
+    </div>
+  {{/if}}
+  {{#if helperText }}
+    <div class="sprk-b-HelperText">
+      {{ helperText }}
+    </div>
+  {{/if}}
+</div>

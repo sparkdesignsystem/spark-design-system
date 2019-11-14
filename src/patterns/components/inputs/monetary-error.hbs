@@ -1,0 +1,17 @@
+---
+name: Monetary Input - Error State
+description:
+  This input is used to collect a monetary amount in US dollars.
+information:
+  - If no decimal amount is entered, the input will be automatically formatted with a decimal and two zeros on blur (ex. 1,000.00).
+invisible: true
+order: 21
+hasAngularCode: true
+hasReactCode: true
+---
+
+{{#embed "patterns.components.inputs.monetary"
+         idattr="monetary-error"
+         invaliddata="true"
+         errorMessage="There is an error on this field."
+         class="sprk-b-TextInput--error"}}{{/embed}}

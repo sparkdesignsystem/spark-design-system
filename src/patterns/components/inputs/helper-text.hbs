@@ -1,0 +1,17 @@
+---
+name: Helper Text
+description:
+  Helper text is used to provide additional contextual information or guidance for an input.
+information:
+  - Helper text should be placed above the error container in each input pattern.
+  - The sprk-b-InputContainer--huge class is available for use on this input. For full functionality, see restrictions in the Text Huge Inputs section.
+stateChanger: true
+order: 27
+hasAngularCode: true
+hasAngularDocs: true
+---
+
+{{#embed "patterns.components.inputs.text-input"
+         idattr="text-input-helper"
+         invaliddata="true"
+         helperText="Optional helper text, used to clarify the field's intent."}}{{/embed}}

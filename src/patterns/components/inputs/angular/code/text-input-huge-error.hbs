@@ -1,0 +1,16 @@
+<sprk-huge-input-container>
+  <input
+    placeholder="Placeholder"
+    name="text_input"
+    [ngClass]="{ 'sprk-b-TextInput--error': textInput.invalid && textInput.dirty }"
+    type="text"
+    [(ngModel)]="text_input"
+    required
+    #textInput="ngModel"
+    data-id="input-error-1"
+    sprkInput>
+  <label sprkLabel>Text Input Label</label>
+  <span
+    [hidden]="textInput.valid || textInput.pristine"
+    sprkFieldError>There is an error on this field.</span>
+</sprk-huge-input-container>

@@ -112,6 +112,8 @@ import setValidTextInput from './utilities/validation/setValidTextInput';
 import setValidTick from './utilities/validation/setValidTick';
 import runValidation from './utilities/validation/validation-runner';
 import detectJS from './utilities/detectJS';
+import addClassIfNotEmpty from './utilities/addClassIfNotEmpty';
+import toggleClassWithValue from './utilities/toggleClassWithValue';
 import {
   getFocusableEls,
   focusFirstEl,
@@ -239,4 +241,6 @@ export {
   hugeInput,
   bindUIEventsHugeInput,
   bindUIEventsHugeInputOld,
+  addClassIfNotEmpty,
+  toggleClassWithValue,
 };

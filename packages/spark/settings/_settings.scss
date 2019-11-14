@@ -1,0 +1,955 @@
+// =================================================================
+// Settings
+// =================================================================
+
+//
+// Reset
+///
+$sprk-selection-bg-color: $sprk-green !default;
+$sprk-selection-text-color: $sprk-black !default;
+$sprk-pre-overflow: auto !default;
+
+//
+// Blockquote
+///
+$sprk-blockquote-source-prefix: '-' !default;
+$sprk-blockquote-margin: 0 !default;
+$sprk-blockquote-quote-margin: 0 !default;
+$sprk-blockquote-quote-last-margin: 0 !default;
+
+//
+// Spacing
+///
+$sprk-space-inset-xs: 4px 4px 4px 4px !default;
+$sprk-space-inset-s: 8px 8px 8px 8px !default;
+$sprk-space-inset-m: 16px 16px 16px 16px !default;
+$sprk-space-inset-l: 32px 32px 32px 32px !default;
+$sprk-space-inset-xl: 64px 64px 64px 64px !default;
+
+// Inset Short
+$sprk-space-inset-short-xs: 2px 4px 2px 4px !default;
+$sprk-space-inset-short-s: 4px 8px 4px 8px !default;
+$sprk-space-inset-short-m: 8px 16px 8px 16px !default;
+$sprk-space-inset-short-l: 16px 32px 16px 32px !default;
+$sprk-space-inset-short-xl: 32px 64px 32px 64px !default;
+
+// Inset Tall
+$sprk-space-inset-tall-xs: 6px 4px 6px 4px !default;
+$sprk-space-inset-tall-s: 12px 8px 12px 8px !default;
+$sprk-space-inset-tall-m: 24px 16px 24px 16px !default;
+$sprk-space-inset-tall-l: 48px 32px 48px 32px !default;
+$sprk-space-inset-tall-xl: 96px 64px 96px 64px !default;
+
+// Stack
+$sprk-space-stack-xs: 0 0 4px 0 !default;
+$sprk-space-stack-s: 0 0 8px 0 !default;
+$sprk-space-stack-m: 0 0 16px 0 !default;
+$sprk-space-stack-l: 0 0 32px 0 !default;
+$sprk-space-stack-xl: 0 0 64px 0 !default;
+
+// Global Spacing Utilities
+$sprk-space-xs: 4px !default;
+$sprk-space-s: 8px !default;
+$sprk-space-m: 16px !default;
+$sprk-space-l: 32px !default;
+$sprk-space-xl: 64px !default;
+$sprk-space-h: $sprk-space-xl !default;
+
+// Misc  Spacing Utilities
+$sprk-space-misc-a: 24px !default;
+$sprk-space-misc-b: 40px !default;
+$sprk-space-misc-c: 48px !default;
+$sprk-space-misc-d: 80px !default;
+
+//
+// Flag
+///
+$sprk-flag-gutter: $sprk-space-m !default;
+$sprk-flag-gutter-tiny: $sprk-space-xs !default;
+$sprk-flag-gutter-small: $sprk-space-s !default;
+$sprk-flag-gutter-large: $sprk-space-l !default;
+$sprk-flag-gutter-huge: $sprk-space-xl !default;
+$sprk-flag-stacked-breakpoint: 25em !default;
+
+//
+// Icons
+///
+$sprk-icon-m: 16px !default;
+$sprk-icon-l: 32px !default;
+$sprk-icon-xl: 64px !default;
+$sprk-icon-xxl: 128px !default;
+$sprk-icon-fill-color: none !default;
+$sprk-icon-stroke-color: $sprk-black !default;
+$sprk-icon-filled-fill-color: $sprk-black !default;
+$sprk-icon-filled-stroke-color: none !default;
+$sprk-icon-using-custom-stroke: true !default;
+$sprk-icon-custom-stroke-width-s: 1px !default;
+$sprk-icon-custom-stroke-width-m: 1.5px !default;
+$sprk-icon-custom-stroke-width-l: 2px !default;
+$sprk-icon-custom-stroke-width-xl: 3px !default;
+
+//
+// Layout
+///
+$sprk-centered-column-width: 64rem !default;
+
+//
+// Layers
+///
+$sprk-layer-height-xs: 1 !default;
+$sprk-layer-height-s: 1000 !default;
+$sprk-layer-height-m: 2000 !default;
+$sprk-layer-height-l: 3000 !default;
+$sprk-layer-height-xl: 99999 !default;
+
+//
+// Horizontal List
+///
+$sprk-horizontal-list-spacing: $sprk-space-m !default;
+$sprk-horizontal-list-spacing-tiny: $sprk-space-xs !default;
+$sprk-horizontal-list-spacing-small: $sprk-space-s !default;
+$sprk-horizontal-list-spacing-medium: $sprk-space-m !default;
+$sprk-horizontal-list-spacing-large: $sprk-space-l !default;
+$sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
+$sprk-horizontal-list-delimiter: ',' !default;
+
+//
+// Vertical List
+///
+$sprk-vertical-list-delimiter: ',\00A0' !default;
+
+//
+// Pagination
+///
+$sprk-pag-max-width: 26rem !default;
+$sprk-pag-current-link-font-weight: 500;
+$sprk-pag-link-color: $sprk-black !default;
+$sprk-pag-link-color-hover: $sprk-pag-link-color !default;
+$sprk-pag-link-font-weight: 400 !default;
+$sprk-pag-selection-color: $sprk-green !default;
+$sprk-pag-selection-link-color: $sprk-white !default;
+$sprk-pag-selection-link-color-hover: $sprk-white !default;
+$sprk-pag-circle-size: 2em !default;
+
+//
+// Typography
+///
+$sprk-measure: 40rem !default;
+$sprk-narrow-measure: 25rem !default;
+$sprk-typography-breakpoint: 54rem !default;
+
+// Webfonts
+$sprk-using-webfonts: false !default;
+$sprk-font-display: swap !default;
+$sprk-webfonts: '' !default;
+
+// Page Title
+$sprk-page-title-mark-color: $sprk-red !default;
+$sprk-page-title-mark-width: 32px !default;
+$sprk-page-title-mark-height: 5px !default;
+$sprk-page-title-mark-height-wide-viewport: 6px !default;
+$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
+
+// Display One
+$sprk-color-display-one: $sprk-black !default;
+$sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-one: 2.75rem !default;
+$sprk-font-size-display-one-wide: 3.375rem !default;
+$sprk-type-display-one-breakpoint: 43.75rem !default;
+$sprk-font-weight-display-one: bold !default;
+$sprk-line-height-display-one: 1.27 !default;
+$sprk-line-height-display-one-wide: 1.03 !default;
+
+// Display Two
+$sprk-color-display-two: $sprk-black !default;
+$sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-two: 2rem !default;
+$sprk-font-size-display-two-wide: 2.5rem !default;
+$sprk-type-display-two-breakpoint: 43.75rem !default;
+$sprk-font-weight-display-two: bold !default;
+$sprk-line-height-display-two: 1 !default;
+$sprk-line-height-display-two-wide: 1 !default;
+
+// Display Three
+$sprk-color-display-three: $sprk-black !default;
+$sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-three: 1.75rem !default;
+$sprk-font-size-display-three-wide: 2.125rem !default;
+$sprk-type-display-three-breakpoint: 43.75rem !default;
+$sprk-font-weight-display-three: 300 !default;
+$sprk-line-height-display-three: 1.6 !default;
+$sprk-line-height-display-three-wide: 1.32 !default;
+
+// Display Four
+$sprk-color-display-four: $sprk-black !default;
+$sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-four: 1.625rem !default;
+$sprk-font-weight-display-four: bold !default;
+$sprk-line-height-display-four: 1.23 !default;
+
+// Display Five
+$sprk-color-display-five: $sprk-black !default;
+$sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-five: 1.25rem !default;
+$sprk-font-weight-display-five: 500 !default;
+$sprk-line-height-display-five: 1.2 !default;
+
+// Display Six
+$sprk-color-display-six: $sprk-black !default;
+$sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-six: 1.25rem !default;
+$sprk-font-weight-display-six: 300 !default;
+$sprk-line-height-display-six: 1.2 !default;
+
+// Display Seven
+$sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-display-seven: 1rem !default;
+$sprk-color-display-seven: $sprk-black !default;
+$sprk-line-height-display-seven: 1 !default;
+$sprk-font-weight-display-seven: 500 !default;
+
+// Body One
+$sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-body-one: 1rem !default;
+$sprk-color-body-one: $sprk-black !default;
+$sprk-line-height-body-one: 1.6 !default;
+$sprk-font-weight-body-one: 500 !default;
+
+// Body Two
+$sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-body-two: 1rem !default;
+$sprk-color-body-two: $sprk-black !default;
+$sprk-line-height-body-two: 1.6 !default;
+$sprk-font-weight-body-two: 300 !default;
+
+// Body Three
+$sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-body-three: 1rem !default;
+$sprk-color-body-three: $sprk-black !default;
+$sprk-line-height-body-three: 2 !default;
+$sprk-font-weight-body-three: 300 !default;
+
+// Body Four
+$sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial,
+  sans-serif !default;
+$sprk-font-size-body-four: 0.8125rem !default;
+$sprk-color-body-four: $sprk-black !default;
+$sprk-line-height-body-four: 1.84 !default;
+$sprk-font-weight-body-four: 300 !default;
+
+// Line-height Collision
+$sprk-line-height-collision-top-crop: 5 !default;
+$sprk-line-height-collision-bottom-crop: 5 !default;
+
+//
+// Consistent Style Vars
+///
+$sprk-border-radius: 5px !default;
+
+//
+// Alerts
+///
+$sprk-alert-border-radius: 4px !default;
+$sprk-alert-border: 1px solid $sprk-gray !default;
+$sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-alert-color: $sprk-black !default;
+$sprk-alert-bg-color: $sprk-white !default;
+$sprk-alert-icon-size: 32px !default;
+$sprk-alert-font-size: 1rem !default;
+$sprk-alert-font-weight: 400 !default;
+$sprk-alert-line-height: 1.5 !default;
+$sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
+  $sprk-space-misc-a !default;
+$sprk-alert-dismiss-padding: $sprk-space-m 24px $sprk-space-m $sprk-space-m !default;
+$sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
+$sprk-alert-dismiss-icon-color: $sprk-black !default;
+$sprk-alert-dismiss-icon-size: $sprk-space-m !default;
+// Info
+$sprk-alert-icon-color-info: $sprk-blue !default;
+$sprk-alert-border-info: 1px solid $sprk-blue !default;
+$sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
+$sprk-alert-text-color-info: $sprk-black !default;
+// Success
+$sprk-alert-icon-color-success: $sprk-green !default;
+$sprk-alert-border-success: 1px solid $sprk-green !default;
+$sprk-alert-bg-color-success: rgb(237, 253, 251) !default;
+$sprk-alert-text-color-success: $sprk-black !default;
+// Fail
+$sprk-alert-icon-color-fail: $sprk-yellow !default;
+$sprk-alert-border-fail: 1px solid $sprk-yellow !default;
+$sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
+$sprk-alert-text-color-fail: $sprk-black !default;
+
+//
+// Promos
+///
+$sprk-promo-background-color: $sprk-white !default;
+$sprk-promo-border: 1px solid $sprk-gray !default;
+$sprk-promo-max-width: 42.5rem !default;
+$sprk-promo-breakpoint: 42.5rem !default;
+$sprk-promo-image-narrow-max-height: 20rem !default;
+$sprk-promo-image-narrow-max-width: 50% !default;
+$sprk-promo-title-font-color: $sprk-black !default;
+$sprk-promo-title-font-weight: $sprk-font-weight-display-four !default;
+$sprk-promo-subtitle-font-color: $sprk-black !default;
+$sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
+
+//
+// Buttons
+///
+$sprk-btn-background-color: $sprk-green !default;
+$sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-border-style: solid !default;
+$sprk-btn-border-color: $sprk-btn-background-color !default;
+$sprk-btn-border-width: 2px !default;
+$sprk-btn-font-weight: 500 !default;
+$sprk-btn-font-size: inherit !default;
+$sprk-btn-font-family: inherit !default;
+$sprk-btn-line-height: normal !default;
+$sprk-btn-text-color: $sprk-white !default;
+$sprk-btn-border-radius: 4px !default;
+$sprk-btn-hover-background-color: $sprk-green-dark !default;
+$sprk-btn-hover-text-color: $sprk-white !default;
+$sprk-btn-padding: $sprk-space-m 24px !default;
+$sprk-btn-breakpoint-xs: 30rem !default;
+$sprk-btn-breakpoint-s: 42.5rem !default;
+$sprk-btn-transition-speed: 0.3s !default;
+$sprk-btn-letter-spacing: 0.62px !default;
+
+// Disabled
+$sprk-btn-disabled-opacity: 1 !default;
+$sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
+$sprk-btn-disabled-border-style: $sprk-btn-border-style !default;
+$sprk-btn-disabled-background-color: $sprk-gray-dark !default;
+$sprk-btn-disabled-text-color: $sprk-white !default;
+$sprk-btn-disabled-border-color: transparent !default;
+$sprk-btn-disabled-shadow: none !default;
+$sprk-btn-secondary-disabled-background-color: transparent !default;
+$sprk-btn-secondary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-shadow: none !default;
+$sprk-btn-tertiary-disabled-shadow: none !default;
+$sprk-btn-tertiary-disabled-border: none !default;
+
+// Secondary
+$sprk-btn-secondary-background-color: $sprk-white !default;
+$sprk-btn-secondary-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-text-color: $sprk-black !default;
+$sprk-btn-secondary-hover-text-color: $sprk-black !default;
+$sprk-btn-secondary-hover-background-color: $sprk-white !default;
+$sprk-btn-secondary-hover-border-color: $sprk-black !default;
+$sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-secondary-letter-spacing: 0.62px !default;
+
+// Tertiary
+$sprk-btn-tertiary-background-color: transparent !default;
+$sprk-btn-tertiary-border: none !default;
+$sprk-btn-tertiary-text-color: $sprk-black !default;
+$sprk-btn-tertiary-underline-width: 0.125em !default;
+$sprk-btn-tertiary-underline-padding-top: 0.125em !default;
+$sprk-btn-tertiary-underline-color: $sprk-gray-dark !default;
+$sprk-btn-tertiary-hover-text-color: $sprk-black !default;
+$sprk-btn-tertiary-hover-underline-color: $sprk-black !default;
+$sprk-btn-tertiary-hover-background-color: transparent !default;
+$sprk-btn-tertiary-hover-shadow: none !default;
+$sprk-btn-tertiary-disabled-background-color: transparent !default;
+$sprk-btn-tertiary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-tertiary-letter-spacing: normal !default;
+
+//
+// Links
+///
+$sprk-link-transition: 0.3s !default;
+$sprk-link-color: $sprk-black !default;
+$sprk-link-font-weight: $sprk-font-weight-body-one !default;
+$sprk-link-text-decoration: none !default;
+$sprk-link-underline-color: $sprk-gray-dark !default;
+$sprk-link-underline-width: 0.09375rem !default;
+$sprk-link-border-bottom-style: solid !default;
+$sprk-link-border-bottom: $sprk-link-underline-width
+  $sprk-link-border-bottom-style $sprk-link-underline-color !default;
+$sprk-link-hover-color: $sprk-black !default;
+$sprk-link-hover-border-bottom: $sprk-link-underline-width
+  $sprk-link-border-bottom-style $sprk-link-hover-color !default;
+$sprk-link-visited-color: $sprk-black-tint-75 !default;
+$sprk-link-underline-visited-color: $sprk-gray-dark !default;
+$sprk-link-visited-border-bottom: $sprk-link-underline-width
+  $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
+$sprk-link-simple-color: $sprk-black !default;
+$sprk-link-simple-underline-color: transparent !default;
+$sprk-link-simple-underline-width: 0.0625rem !default;
+$sprk-link-simple-font-weight: $sprk-font-weight-body-two !default;
+$sprk-link-simple-hover-color: $sprk-black !default;
+$sprk-link-simple-hover-underline-width: 0.0625rem !default;
+$sprk-link-simple-hover-underline-color: $sprk-black !default;
+$sprk-link-simple-border-bottom: $sprk-link-simple-underline-width
+  $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
+$sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
+  $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
+$sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
+  $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
+$sprk-link-has-icon-color-icon: $sprk-green !default;
+$sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
+$sprk-link-has-icon-underline-width: 0 !default;
+$sprk-link-has-icon-underline-color: transparent !default;
+$sprk-link-has-icon-fill: transparent !default;
+$sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
+  $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+$sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
+  $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+$sprk-link-has-icon-hover-color-text: $sprk-green !default;
+$sprk-link-plain-border: none !default;
+$sprk-link-plain-visited-border: none !default;
+$sprk-link-disabled-color: $sprk-gray-dark !default;
+$sprk-link-disabled-font-weight: $sprk-font-weight-body-one !default;
+$sprk-link-disabled-underline-width: 0 !default;
+$sprk-link-disabled-border-bottom: $sprk-link-disabled-underline-width
+  $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
+$sprk-link-disabled-hover-border-bottom: $sprk-link-disabled-underline-width
+  $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
+
+//
+// Lists
+///
+$sprk-list-margin-left: $sprk-space-m !default;
+$sprk-list-indented-margin-left: $sprk-space-l !default;
+
+//
+// Inputs
+///
+$sprk-monetary-symbol: '$' !default;
+$sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
+$sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
+$sprk-input-container-narrow-max-width: 6.5rem !default;
+$sprk-input-max-width: 27.5rem !default;
+
+//
+// Huge Inputs
+///
+$sprk-input-container-huge-max-width: 37.5rem !default;
+$sprk-text-input-huge-height: 64px !default; // Todo deprecate
+$sprk-input-huge-height: $sprk-text-input-huge-height !default;
+$sprk-text-input-huge-font-size: $sprk-font-size-display-five !default; // Todo deprecate
+$sprk-input-huge-font-size: $sprk-text-input-huge-font-size !default;
+$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default; // Todo deprecate
+$sprk-input-huge-label-font-size: $sprk-text-input-huge-label-font-size !default;
+$sprk-text-input-huge-border-width: 2px !default; // Todo deprecate
+$sprk-input-huge-border-width: $sprk-text-input-huge-border-width !default;
+$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default; // Todo deprecate
+$sprk-input-huge-padding: $sprk-text-input-huge-padding !default;
+$sprk-select-input-huge-padding-right: 45px !default;
+$sprk-input-huge-label-padding: 0
+  ($sprk-space-misc-a + $sprk-input-huge-border-width) !default;
+$sprk-text-input-huge-focus-border-width: 2px !default; // Todo deprecate
+$sprk-input-huge-focus-border-width: $sprk-text-input-huge-focus-border-width !default;
+$sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default; // Todo deprecate
+$sprk-input-huge-transition: $sprk-text-input-huge-transition !default;
+$sprk-text-input-huge-transition-delay: 0s !default; // Todo deprecate
+$sprk-input-huge-transition-delay: $sprk-text-input-huge-transition-delay !default;
+$sprk-text-input-huge-placeholder-transition-delay: 100ms !default; // Todo deprecate
+$sprk-input-huge-placeholder-transition-delay: $sprk-text-input-huge-placeholder-transition-delay !default;
+$sprk-text-input-huge-placeholder-transition-property: opacity !default; // Todo deprecate
+$sprk-input-huge-placeholder-transition-property: $sprk-text-input-huge-placeholder-transition-property !default;
+$sprk-text-input-huge-placeholder-opacity: 0 !default; // Todo deprecate
+$sprk-input-huge-placeholder-opacity: $sprk-text-input-huge-placeholder-opacity !default;
+$sprk-text-input-huge-placeholder-active-opacity: 1 !default; // Todo deprecate
+$sprk-input-huge-placeholder-active-opacity: $sprk-text-input-huge-placeholder-active-opacity !default;
+$sprk-text-input-huge-label-top: $sprk-input-huge-height / 3 !default; // Todo deprecate
+$sprk-input-huge-label-top: $sprk-text-input-huge-label-top !default;
+$sprk-text-input-huge-label-active-top: 10px !default; // Todo deprecate
+$sprk-input-huge-label-active-top: $sprk-text-input-huge-label-active-top !default;
+$sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default; // Todo deprecate
+$sprk-input-huge-active-padding-top: $sprk-text-input-huge-active-padding-top !default;
+$sprk-text-input-huge-focus-label-color: $sprk-green !default; // Todo deprecate
+$sprk-input-huge-focus-label-color: $sprk-text-input-huge-focus-label-color !default;
+$sprk-text-input-huge-error-focus-label-color: $sprk-black !default; // Todo deprecate
+$sprk-input-huge-error-focus-label-color: $sprk-text-input-huge-error-focus-label-color !default;
+$sprk-text-input-huge-complete-label-color: $sprk-black !default; // Todo deprecate
+$sprk-input-huge-complete-label-color: $sprk-text-input-huge-complete-label-color !default;
+$sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
+$sprk-input-huge-icon-offset-top: 50% !default;
+$sprk-select-input-huge-icon-margin-top: -((
+  $sprk-input-huge-height - $sprk-icon-m
+) / 2 + $sprk-icon-m) !default;
+$sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
+
+//
+// Text Input
+///
+$sprk-text-input-font-family: $sprk-font-family-body-two !default;
+$sprk-text-input-font-size: 1rem !default;
+$sprk-text-input-font-weight: 300 !default;
+$sprk-text-input-height: 48px !default;
+$sprk-text-input-line-height: 1.3 !default;
+$sprk-text-input-outline: 0 !default;
+$sprk-text-input-color: $sprk-black !default;
+$sprk-text-input-border: 2px solid $sprk-gray-dark !default;
+$sprk-text-input-border-radius: 4px !default;
+$sprk-text-input-box-shadow: none !default;
+$sprk-text-input-padding: 0 $sprk-space-m !default;
+$sprk-text-input-focus-border-color: $sprk-green !default;
+$sprk-text-input-error-border-color: $sprk-yellow !default;
+$sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-box-shadow: none !default;
+$sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
+$sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
+$sprk-text-input-readonly-color: $sprk-gray !default;
+$sprk-text-input-transition: border-color 0.15s ease !default;
+
+//
+// Select
+///
+$sprk-select-appearance: none !default;
+$sprk-select-background: none !default;
+$sprk-select-border: $sprk-text-input-border !default;
+$sprk-select-focus-border-color: $sprk-text-input-focus-border-color !default;
+$sprk-select-error-border-color: $sprk-text-input-error-border-color !default;
+$sprk-select-border-radius: $sprk-text-input-border-radius !default;
+$sprk-select-box-shadow: $sprk-text-input-box-shadow !default;
+$sprk-select-color: $sprk-text-input-color !default;
+$sprk-select-font-size: $sprk-text-input-font-size !default;
+$sprk-select-font-family: $sprk-text-input-font-family !default;
+$sprk-select-font-weight: $sprk-text-input-font-weight !default;
+$sprk-select-line-height: $sprk-text-input-line-height !default;
+$sprk-select-outline: $sprk-text-input-outline !default;
+$sprk-select-padding: 12px 45px 12px 13px !default;
+$sprk-select-arrow-offset-y: -31px !default;
+$sprk-select-arrow-offset-x: 19px !default;
+$sprk-select-arrow-stroke-width: 6px !default;
+$sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
+$sprk-select-disabled-background-color: $sprk-text-input-disabled-background-color !default;
+$sprk-select-disabled-color: $sprk-text-input-disabled-color !default;
+$sprk-select-moz-focusring-color: transparent !default;
+$sprk-select-moz-focusring-text-shadow: 0 0 0 $sprk-select-color !default;
+
+//
+// Textarea
+///
+$sprk-textarea-min-height: 125px !default;
+$sprk-textarea-margin: $sprk-space-stack-m !default;
+$sprk-textarea-padding: $sprk-space-m !default;
+
+//
+// Input Errors
+///
+$sprk-text-input-error-color: $sprk-yellow !default;
+$sprk-input-error-text-color: $sprk-black !default;
+$sprk-input-error-text-font-family: $sprk-font-family-body-two !default;
+$sprk-input-error-text-font-weight: 400 !default;
+$sprk-input-error-text-font-size: 0.8125rem !default;
+$sprk-input-error-text-line-height: 1.4 !default;
+$sprk-input-error-text-margin: 0 0 0 6px !default;
+$sprk-error-container-margin: $sprk-space-s 0 0 0 !default;
+$sprk-error-icon-size: 1.25rem !default;
+
+//
+// Helper Text
+///
+$sprk-helper-color: $sprk-black-tint-50 !default;
+$sprk-helper-font-size: 0.8125rem !default;
+$sprk-helper-font-family: $sprk-text-input-font-family !default;
+$sprk-helper-font-weight: $sprk-text-input-font-weight !default;
+$sprk-helper-line-height: $sprk-text-input-line-height !default;
+$sprk-helper-margin: $sprk-error-container-margin !default;
+
+//
+// Placeholder
+///
+$sprk-placeholder-color: $sprk-black-tint-50 !default;
+$sprk-placeholder-font-size: $sprk-text-input-font-size !default;
+$sprk-placeholder-font-family: $sprk-text-input-font-family !default;
+$sprk-placeholder-font-weight: $sprk-text-input-font-weight !default;
+
+//
+// Selection Container
+///
+$sprk-selection-container-margin: 0 0 $sprk-space-m 0 !default;
+$sprk-selection-container-label-font-weight: 300 !default;
+$sprk-selection-container-input-height: auto !default;
+$sprk-selection-container-input-width: auto !default;
+$sprk-selection-container-input-margin: 0 $sprk-space-s 0 0 !default;
+
+//
+// DatePicker
+///
+$sprk-date-picker-max-width: 20rem !default;
+$sprk-date-picker-border-radius: 4px !default;
+$sprk-date-picker-button-size: 2.25rem !default;
+$sprk-date-picker-column-adjustment-x: 0.25rem !default;
+$sprk-date-picker-box-shadow: 0 4px 16px rgba(51, 51, 51, 0.1) !default;
+$sprk-date-picker-font-family: $sprk-font-family-body-two !default;
+$sprk-date-picker-font-size: 1rem !default;
+$sprk-date-picker-font-weight: 300 !default;
+$sprk-date-picker-day-interact-color: $sprk-green !default;
+$sprk-date-picker-selected-day-font-weight: 500 !default;
+$sprk-date-picker-background: $sprk-white !default;
+$sprk-date-picker-padding: $sprk-space-inset-s !default;
+$sprk-date-picker-padding-wide: $sprk-space-inset-m !default;
+$sprk-date-picker-header-border: 1px solid $sprk-gray !default;
+$sprk-date-picker-header-font-size: $sprk-font-size-body-three !default;
+$sprk-date-picker-header-font-weight: 700 !default;
+$sprk-date-picker-header-padding: 0 0 $sprk-space-s 0 !default;
+$sprk-date-picker-col-header-padding: 10px !default;
+$sprk-date-picker-day-padding: 6px !default;
+$sprk-date-picker-day-margin: 0 2px !default;
+$sprk-date-picker-day-color: $sprk-white !default;
+$sprk-date-picker-day-hover-color: $sprk-black !default;
+$sprk-date-picker-day-edge-day-color: $sprk-black-tint-50 !default;
+$sprk-date-picker-month-year-font-size: $sprk-font-size-display-six !default;
+$sprk-date-picker-arrow-color: $sprk-black !default;
+$sprk-date-picker-modal-margin: $sprk-space-m 0 0 0 !default;
+$sprk-date-picker-modal-margin-wide: 2px !default;
+$sprk-date-picker-modal-z-index: $sprk-layer-height-m !default;
+$sprk-date-picker-years-modal-max-height: 500px !default;
+
+//
+// Text Icon Inputs
+///
+$sprk-input-text-icon-offset-x: $sprk-space-m !default;
+$sprk-input-text-icon-offset-y: 2em !default;
+$sprk-input-text-icon-font-size: 1rem !default;
+$sprk-input-text-icon-font-weight: 700 !default;
+$sprk-input-has-icon-right-top: 38px !default;
+$sprk-input-has-icon-right-left: 71px !default;
+$sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
+$sprk-input-has-icon-padding-right: 0 37px 1px 12px !default;
+$sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
+$sprk-input-text-icon-z-index: $sprk-layer-height-xs !default;
+
+//
+// SVG Icon Inputs
+///
+$sprk-input-icon-offset-x: $sprk-space-m !default;
+$sprk-input-icon-offset-y: $sprk-space-m !default;
+$sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
+$sprk-input-icon-z-index: $sprk-layer-height-xs !default;
+
+//
+// Labels
+///
+$sprk-label-padding: 0 !default;
+$sprk-label-font-family: $sprk-font-family-body-two !default;
+$sprk-label-font-size: 0.875rem !default;
+$sprk-label-font-weight: 400 !default;
+$sprk-label-line-height: 1 !default;
+$sprk-label-margin: 0 0 $sprk-space-s 0 !default;
+$sprk-visibility-control-margin: 6px 0 0 0 !default;
+$sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
+$sprk-label-disabled-color: $sprk-gray-dark !default;
+
+//
+// Tables
+///
+$sprk-table-padding-small: $sprk-space-inset-s !default;
+$sprk-table-padding-medium: $sprk-space-inset-m !default;
+$sprk-table-padding-large: $sprk-space-inset-l !default;
+$sprk-table-cell-alignment: center !default;
+$sprk-table-stripe-color: $sprk-gray !default;
+$sprk-table-highlight-color: $sprk-red !default;
+$sprk-table-highlight-text-color: $sprk-white !default;
+$sprk-table-heading-alignment: center !default;
+$sprk-table-border-width: 1px !default;
+$sprk-table-border-style: solid !default;
+$sprk-table-border-color: $sprk-black !default;
+$sprk-table-border-collapse: collapse !default;
+
+// Primary
+$sprk-table-row-border-width: 1px !default;
+$sprk-table-row-border-style: solid !default;
+$sprk-table-row-border-color: $sprk-gray !default;
+$sprk-table-header-background-color: $sprk-black !default;
+$sprk-table-header-font-color: $sprk-white !default;
+$sprk-table-header-font-size: $sprk-font-size-body-one !default;
+$sprk-table-header-font-weight: $sprk-font-weight-body-one !default;
+$sprk-table-header-border-spacing: 2px !default;
+$sprk-table-header-border-color: $sprk-white !default;
+$sprk-table-empty-heading-background-color: $sprk-white !default;
+
+// Secondary
+$sprk-table-secondary-header-background-color: $sprk-white !default;
+$sprk-table-secondary-header-font-color: $sprk-black !default;
+$sprk-table-secondary-header-text-alignment: left !default;
+$sprk-table-secondary-cell-text-alignment: left !default;
+$sprk-table-secondary-header-border-spacing: 0 !default;
+$sprk-table-secondary-header-border-color: $sprk-white !default;
+
+// Grouped-Column
+$sprk-table-grouped-header-background-color: $sprk-black !default;
+$sprk-table-grouped-header-font-size: $sprk-font-size-body-four !default;
+$sprk-table-grouped-header-font-weight: normal !default;
+
+// Secondary Row Comparison
+$sprk-table-secondary-row-comp-row-spacing: 0 15px !default;
+$sprk-table-secondary-row-comp-border-width: 1px !default;
+$sprk-table-secondary-row-comp-border-style: solid !default;
+$sprk-table-secondary-row-comp-border-color: $sprk-gray !default;
+
+//
+// Box
+///
+$sprk-box-padding-tiny: $sprk-space-inset-xs !default;
+$sprk-box-padding-small: $sprk-space-inset-s !default;
+$sprk-box-padding: $sprk-space-inset-m !default;
+$sprk-box-padding-large: $sprk-space-inset-l !default;
+$sprk-box-padding-huge: $sprk-space-inset-xl !default;
+
+//
+// Media
+///
+$sprk-media-gutter-tiny: $sprk-space-xs !default;
+$sprk-media-gutter-small: $sprk-space-s !default;
+$sprk-media-gutter: $sprk-space-m !default;
+$sprk-media-gutter-large: $sprk-space-l !default;
+$sprk-media-gutter-huge: $sprk-space-xl !default;
+
+//
+// Stack Object
+///
+$sprk-stack-spacing-tiny: $sprk-space-xs !default;
+$sprk-stack-spacing-small: $sprk-space-s !default;
+$sprk-stack-spacing-medium: $sprk-space-m !default;
+$sprk-stack-spacing-large: $sprk-space-l !default;
+$sprk-stack-spacing-huge: $sprk-space-xl !default;
+$sprk-stack-spacing-misc-a: $sprk-space-misc-a !default;
+$sprk-stack-spacing-misc-b: $sprk-space-misc-b !default;
+$sprk-stack-spacing-misc-c: $sprk-space-misc-c !default;
+$sprk-stack-spacing-misc-d: $sprk-space-misc-d !default;
+$sprk-split-breakpoint-xxs: 20rem !default;
+$sprk-split-breakpoint-xs: 30rem !default;
+$sprk-split-breakpoint-s: 42.5rem !default;
+$sprk-split-breakpoint-m: 55rem !default;
+$sprk-split-breakpoint-l: 67.5rem !default;
+$sprk-split-breakpoint-xl: 80rem !default;
+
+//
+// Dividers
+///
+$sprk-divider-color: rgb(230, 230, 230) !default;
+$sprk-divider-border: 2px solid $sprk-divider-color !default;
+
+//
+// Accordions
+///
+$sprk-accordion-max-width: 53.125rem !default;
+$sprk-accordion-border: $sprk-divider-border !default;
+$sprk-accordion-border-open: 2px solid $sprk-black !default;
+$sprk-accordion-summary-color: $sprk-black !default;
+$sprk-accordion-summary-active-color: $sprk-green !default;
+$sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
+$sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
+$sprk-accordion-active-background-color: $sprk-gray !default;
+
+//
+// Toggle
+///
+$sprk-toggle-transition-timing: 0.3s ease !default;
+$sprk-toggle-transistion-timing: $sprk-toggle-transition-timing;
+
+//
+// Dropdown
+///
+$sprk-dropdown-active-background-color: $sprk-gray !default;
+$sprk-dropdown-active-border: 2.5px solid $sprk-green !default;
+$sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-green !default;
+$sprk-dropdown-border: 1px solid $sprk-gray !default;
+$sprk-dropdown-font-size: $sprk-font-size-body-one !default;
+$sprk-dropdown-font-weight: 400 !default;
+$sprk-dropdown-footer-padding: $sprk-space-inset-short-l !default;
+$sprk-dropdown-line-height: 1 !default;
+$sprk-dropdown-max-width: 24rem !default;
+$sprk-dropdown-padding: $sprk-space-misc-a !default;
+$sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
+$sprk-dropdown-title-color: $sprk-black-tint-25 !default;
+$sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
+$sprk-dropdown-title-font-weight: 300 !default;
+
+//
+// Modals
+///
+$sprk-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
+$sprk-modal-color: $sprk-white !default;
+$sprk-modal-max-width: 43.75rem !default;
+$sprk-modal-height: 70% !default;
+$sprk-modal-breakpoint-small: 25rem !default;
+$sprk-modal-breakpoint-medium: 37.5rem !default;
+$sprk-modal-shadow: 0 4px 5px rgba(0, 0, 0, 0.6) !default;
+$sprk-modal-border-radius: 8px !default;
+
+//
+// Masthead
+///
+$sprk-masthead-menu-icon-width: $sprk-icon-l !default;
+$sprk-masthead-menu-icon-height: $sprk-icon-l !default;
+$sprk-masthead-bg-color: $sprk-white !default;
+$sprk-masthead-content-padding: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-top: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-bottom: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-right: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-left: $sprk-space-s !default;
+$sprk-masthead-content-padding-wide: $sprk-space-m !default;
+$sprk-masthead-content-item-padding-top-wide: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-bottom-wide: $sprk-space-s !default;
+$sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
+$sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
+$sprk-masthead-link-visited-color: $sprk-black !default;
+$sprk-masthead-link-hover-color: $sprk-green !default;
+$sprk-masthead-link-font-weight: 500 !default;
+$sprk-masthead-border-bottom-size: 1px !default;
+$sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray !default;
+$sprk-masthead-border-bottom-wide: 0 !default;
+$sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-breakpoint: 54rem !default;
+$sprk-masthead-column-width: 89rem !default;
+$sprk-masthead-logo-max-width: 192px !default;
+$sprk-masthead-logo-min-width: 174px !default;
+$sprk-masthead-shadow: none !default;
+$sprk-masthead-shadow-wide: none;
+$sprk-masthead-shadow-scroll: 0 0 40px rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-selector-font-weight: 300 !default;
+$sprk-masthead-selector-border-radius: 5px !default;
+$sprk-masthead-selector-dropdown-border-bottom-mask-open: 2px solid $sprk-gray !default;
+$sprk-masthead-selector-dropdown-box-shadow-mask-open: 0 5px 10px
+  rgba(0, 0, 0, 0.1) !default;
+$sprk-masthead-selector-border-color-mask-open: $sprk-white !default;
+$sprk-masthead-selector-font-color: $sprk-black !default;
+$sprk-masthead-selector-bg-color: $sprk-white !default;
+$sprk-masthead-selector-padding: $sprk-space-inset-short-m !default;
+$sprk-masthead-selector-dropdown-padding: 0 !default;
+$sprk-masthead-selector-min-width: 17rem !default;
+$sprk-masthead-narrow-height: 81px !default;
+$sprk-masthead-mask-color: rgba(0, 0, 0, 0.5) !default;
+$sprk-masthead-transition: all 0.3s ease-in !default;
+$sprk-masthead-translateY: translateY(-100%) !default;
+
+// Big Nav
+$sprk-big-nav-column-width: 64rem !default;
+$sprk-big-nav-bg: $sprk-white !default;
+$sprk-big-nav-link-font-weight: 400 !default;
+$sprk-big-nav-link-padding: 0 $sprk-space-s !default;
+$sprk-big-nav-link-color: $sprk-black !default;
+$sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
+$sprk-big-nav-item-line-height: 53px !default;
+// Masthead Accordion
+$sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
+$sprk-masthead-accordion-active-heading-font-weight: 400 !default;
+$sprk-masthead-accordion-active-heading-color: $sprk-black !default;
+$sprk-masthead-accordion-heading-color: $sprk-black !default;
+$sprk-masthead-accordion-heading-font-weight: 400 !default;
+$sprk-masthead-accordion-details-font-weight: 300 !default;
+$sprk-masthead-accordion-details-font-color: $sprk-black !default;
+$sprk-masthead-accordion-active-background-color: $sprk-gray !default;
+$sprk-masthead-accordion-active-font-color: $sprk-black !default;
+$sprk-masthead-accordion-font-color: $sprk-black !default;
+$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
+$sprk-masthead-accordion-item-open-line-height: 2px !default;
+$sprk-masthead-accordion-item-padding: $sprk-space-m !default;
+//
+// Spinners
+///
+$sprk-spinner-size: 1.3rem !default;
+$sprk-spinner-size-large: 3rem !default;
+$sprk-spinner-speed: 1s !default;
+$sprk-spinner-thickness: 0.18rem !default;
+$sprk-spinner-color: $sprk-white !default;
+
+//
+// Tabbed Navigation
+///
+$sprk-tab-navigation-breakpoint: 46rem !default;
+$sprk-tab-navigation-btn-color: $sprk-black !default;
+$sprk-tab-navigation-btn-bg-color: $sprk-gray !default;
+$sprk-tab-navigation-btn-border-top: 3px solid $sprk-gray !default;
+$sprk-tab-navigation-btn-hover-border-top: 3px solid $sprk-red !default;
+$sprk-tab-navigation-btn-active-color: $sprk-red !default;
+$sprk-tab-navigation-btn-active-border-top: 3px solid $sprk-red !default;
+$sprk-tab-navigation-btn-active-bg-color: $sprk-white !default;
+$sprk-tab-navigation-btn-font-size: $sprk-font-size-body-one !default;
+$sprk-tab-navigation-btn-font-weight: $sprk-font-weight-body-one !default;
+
+//
+// Stepper
+///
+$sprk-stepper-bg: transparent !default;
+$sprk-stepper-breakpoint: $sprk-split-breakpoint-xl !default;
+$sprk-stepper-max-width: 480px !default;
+$sprk-stepper-icon-border-width: 2px !default;
+$sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
+$sprk-stepper-icon-border-color-selected: $sprk-green !default;
+$sprk-stepper-dark-icon-border-color: $sprk-white !default;
+$sprk-stepper-icon-height: 16px !default;
+$sprk-stepper-icon-width: 16px !default;
+$sprk-stepper-icon-color: $sprk-white !default;
+$sprk-stepper-icon-color-hover: $sprk-black-tint-50 !default;
+$sprk-stepper-icon-color-selected: $sprk-white !default;
+$sprk-stepper-dark-icon-color: $sprk-blue !default;
+$sprk-stepper-dark-icon-color-selected: $sprk-white !default;
+$sprk-stepper-dark-icon-color-hover: $sprk-white !default;
+$sprk-stepper-dark-icon-color-hoverg: $sprk-stepper-dark-icon-color-hover;
+$sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
+$sprk-stepper-icon-z-index: $sprk-layer-height-xs !default;
+$sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
+$sprk-stepper-icon-box-shadow-selected: 0 0 0
+  $sprk-stepper-icon-box-shadow-selected-spread
+  $sprk-stepper-icon-border-color-selected !default;
+$sprk-stepper-step-content-bg: transparent !default;
+$sprk-stepper-step-description-border-radius: 5px !default;
+$sprk-stepper-step-description-box-shadow: 0 3px 18px 1px rgba(0, 0, 0, 0.08) !default;
+$sprk-stepper-step-description-top-spacing: $sprk-space-m !default;
+$sprk-stepper-step-heading-font-weight: 400 !default;
+$sprk-stepper-step-heading-size: $sprk-font-size-display-six !default;
+$sprk-stepper-step-heading-color: $sprk-black !default;
+$sprk-stepper-dark-step-heading-color: $sprk-white !default;
+$sprk-stepper-step-heading-color-selected: $sprk-black !default;
+$sprk-stepper-step-padding: $sprk-space-misc-a !default;
+$sprk-stepper-step-content-bg-selected: transparent !default;
+$sprk-stepper-step-description-bg-selected: $sprk-white !default;
+$sprk-stepper-dark-step-description-selected: $sprk-black !default;
+$sprk-stepper-bar-color: $sprk-black-tint-50 !default;
+$sprk-stepper-dark-bar-color: $sprk-white !default;
+// Restricted and not customizable
+$sprk-stepper-bar-width: 2px;
+$sprk-stepper-icon-diameter: $sprk-stepper-icon-width +
+  $sprk-stepper-icon-border-width;
+$sprk-stepper-icon-radius: $sprk-stepper-icon-diameter / 2;
+$sprk-stepper-bar-left-inset: $sprk-space-l;
+$sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) +
+  $sprk-stepper-bar-width;
+$sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset +
+$sprk-stepper-icon-radius));
+$sprk-stepper-slide-timing: 0.3s;
+$sprk-stepper-slider-text-fade-in-timing: 0.6s;
+$sprk-stepper-slider-text-fade-in-delay: 0.2s;
+//
+// Carousel
+///
+$sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid
+  $sprk-stepper-dark-icon-border-color !default;
+$sprk-carousel-dot-height: 10px !default;
+$sprk-carousel-dot-width: 10px !default;
+$sprk-carousel-wide-dot-height: 10px !default;
+$sprk-carousel-wide-dot-width: 10px !default;
+$sprk-carousel-dot-spacing: $sprk-space-m !default;
+$sprk-carousel-wide-dot-spacing: $sprk-carousel-dot-spacing !default;
+$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected !default;
+$sprk-carousel-arrow-color: $sprk-white !default;
+$sprk-carousel-arrow-spacing: $sprk-space-m !default;
+$sprk-carousel-arrow-edge-spacing: 0 !default;
+$sprk-carousel-arrow-padding: $sprk-space-m !default;
+$sprk-carousel-narrow-image-max-width: 18.75rem !default;
+$sprk-carousel-arrow-position-breakpoint: 31.25rem !default;
+$sprk-carousel-dot-container-padding: $sprk-space-xs !default;
+$sprk-carousel-breakpoint: $sprk-split-breakpoint-xl !default;

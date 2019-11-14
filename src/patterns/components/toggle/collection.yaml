@@ -1,0 +1,30 @@
+description: |
+  Toggles have a clickable
+  link and icon pair that show or hide a block of content.
+  Use a Toggle when you need a simple way of showing, hiding and breaking down lengthy content.
+  When the page loads, the Toggle icon and link are shown, but the content is hidden. When
+  the icon or link are clicked the content will then be revealed.
+information:
+  - Toggles will look and function the same in all viewports.
+  - Spark's Toggle JS will take care of initially adding and adjusting the aria-expanded HTML attribute based on
+    if the content is hidden or visible.
+  - You can adjust the spacing between the trigger link and the content by changing the
+    spacing utility class on the content to a different size.
+sparkPackageCore: true
+restrictions:
+  - Content that requires user interaction or consumption should
+    not be housed within a Toggle.
+  - If you need several Toggles in succession use the
+    <a class="drizzle-b-Link" href="https://sparkdesignsystem.com/patterns/components/accordions">Accordion</a> component instead.
+  - Overall sizing of the Toggle should be dependent on type size,
+    but should remain large enough to be tappable on a mobile device
+  - Content length inside the Toggle does not have a limit, but shouldn't exceed a reasonable
+    amount.
+  - The title of the Toggle doesn't have a specific maximum length and can wrap if needed.
+  - The data-id property is provided as a hook for automated tools. If you have multiple
+    instances of the same variant of a component on the same page, make sure each instance
+    has a unique data-id property ("toggle-1", "toggle-2", "toggle-3", etc).
+variableTable:
+  $sprk-toggle-transition-timing:
+    default: 0.3s ease
+    description: The transition timing for the rotation of the icon when the toggle is opened.

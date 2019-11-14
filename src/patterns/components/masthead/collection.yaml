@@ -1,0 +1,221 @@
+description:
+    The Masthead is the first component on a page and includes navigation elements.
+information:
+  - There are three custom configurations that you must do in order for the Masthead's narrow navigation to work properly (see below restrictions).
+  - The Masthead is "sticky" and content will flow under it.
+  - On narrow viewports when a user scrolls down the page, the masthead will become hidden. When the user scrolls back up towards the top of the page, the masthead will come back into view.
+  - All content used here is placeholder content. Please use your own logo, content, and hrefs.
+  - Make sure you leave the 'data-sprk-masthead' attribute on the main Masthead element as it functions as a Spark JS hook. It's already included in the provided code.
+restrictions:
+  - You must configure the size of your own logo asset. If you don't then the logo will be automatically sized
+    between the $sprk-masthead-logo-max-width (192px) and $sprk-masthead-logo-min-width (174px). You can additionally override those
+    min and max settings by resetting those variables in your own SCSS file.
+  - You must set (in your own SCSS file) the SCSS variable $sprk-masthead-narrow-height so that the navigation displays properly on small screens.
+    To get the correct setting for your needs, put your logo in the Masthead and then grab the total height of the
+    Masthead (on a narrow viewport) with your logo in it. Set
+    $sprk-masthead-narrow-height to that height.
+  - You must duplicate your navigational items in the Masthead navigation HTML and in the Masthead narrow
+    navigation HTML. There are two chunks of markup for the Masthead, one for large viewports and one for small.
+  - The narrow viewport expects three divs with the following classes to render properly
+  - .sprk-c-Masthead__menu
+  - .sprk-c-Masthead__branding
+  - .sprk-c-Masthead__nav-item
+sparkPackageCore: true
+hasAngularInfo: true
+variableTable:
+  $sprk-masthead-menu-icon-width:
+    default: $sprk-icon-l
+    description: Sets the narrow viewport menu icon width.
+  $sprk-masthead-menu-icon-height:
+    default: $sprk-icon-l
+    description: Sets the narrow viewport menu icon height.
+  $sprk-masthead-bg-color:
+    default: $sprk-white
+    description: Sets the background color of the masthead.
+  $sprk-masthead-content-padding:
+    default: $sprk-space-s
+    description: Sets the padding of the masthead content, menu, and branding sections.
+  $sprk-masthead-content-item-padding-top:
+    default: $sprk-space-s
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-item-padding-bottom:
+    default: $sprk-space-s
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-item-padding-right:
+    default: $sprk-space-s
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-item-padding-left:
+    default: $sprk-space-s
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-padding-wide:
+    default: $sprk-space-m
+    description: The padding around the content section on wide viewports.
+  $sprk-masthead-content-item-padding-top-wide:
+    default: $sprk-space-s
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-item-padding-bottom-wide:
+    default: $sprk-space-s
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-item-padding-right-wide:
+    default: $sprk-space-m
+    description: The padding around the content items in the content section.
+  $sprk-masthead-content-item-padding-left-wide:
+    default: $sprk-space-m
+    description: The padding around the content items in the content section.
+  $sprk-masthead-border-bottom-size:
+    default: 1px
+    description: Sets the size of the bottom border on the masthead.
+  $sprk-masthead-border-bottom:
+    default: $sprk-masthead-border-bottom-size solid $sprk-gray
+    description: Sets the border on the masthead.
+  $sprk-masthead-border-bottom-wide:
+    default: 0
+    description: Sets the border on the masthead on wide viewports.
+  $sprk-masthead-site-links-border-right:
+    default: 2px solid $black-tint-25
+    description: Sets the right border on the site links.
+  $sprk-masthead-breakpoint:
+    default: 54rem
+    description: Sets the point at which the masthead navigation switches from narrow viewport style (shown on menu tap/click) to large viewport style (shown all the time).
+  $sprk-masthead-column-width:
+    default: 89rem
+    description: Sets the maximum width of the masthead.
+  $sprk-big-nav-column-width:
+    default: 64rem
+    description: Sets the maximum width of the big navigation items in the navigation bar.
+  $sprk-big-nav-bg:
+    default: $sprk-white
+    description: Sets the background color of the big navigation bar.
+  $sprk-big-nav-link-color:
+    default: $sprk-black
+    description: Sets the color of the big navigation link.
+  $sprk-big-nav-link-font-weight:
+    default: 400
+    description: Sets the font weight of the big navigation link.
+  $sprk-big-nav-link-padding:
+    default: 0 $sprk-space-s
+    description: Sets the padding of the big navigation link.
+  $sprk-big-nav-active-color:
+    default: $sprk-big-nav-link-color
+    description: Sets the text and underline color of the active big navigation item.
+  $sprk-big-nav-item-line-height:
+    default: 53px
+    description: Sets the text and underline color of the active big navigation ite
+  $sprk-masthead-logo-max-width:
+    default: 192px
+    description: Sets the maximum width of the logo.
+  $sprk-masthead-shadow:
+    default: none
+    description: The default masthead shadow.
+  $sprk-masthead-shadow-wide:
+    default:  none
+    description: The masthead shadow on wide viewports.
+  $sprk-masthead-shadow-scroll:
+    default:  0 0 40px rgba(0, 0, 0, 0.1)
+    description: The masthead shadow that gets applied when the page is scrolled.
+  $sprk-masthead-selector-dropdown-border-bottom-mask-open:
+    default: 2px solid $sprk-gray
+    description: The bottom border that gets applied to the selector dropdown when open.
+  $sprk-masthead-selector-bg-color:
+    default: $sprk-white
+    description: The background color of the selector.
+  $sprk-masthead-mask-color:
+    default: rgba(0, 0, 0, 0.5)
+    description: The color of the mask that gets applied when the selector dropdown is open on narrow screens.
+  $sprk-masthead-transition:
+    default: all 0.3s ease-in
+    description: The transition applied to the masthead.
+  $sprk-masthead-translateY:
+    default: translateY(-100%)
+    description: The transform length that gets applied when the masthead scrolls out of view on narrow screens.
+  $sprk-masthead-selector-dropdown-padding:
+    default: 0
+    description: The padding for the selector dropdown.
+  $sprk-masthead-selector-border-color-mask-open:
+    default: $sprk-white
+    description: The border color of the selector when the dropdown is open.
+  $sprk-masthead-selector-dropdown-box-shadow-mask-open:
+    default: 0 5px 10px rgba(0, 0, 0, 0.1)
+    description: The bottom border that gets applied to the selector dropdown when open.
+  $sprk-masthead-selector-border:
+    default: 2px solid $sprk-black-tint-25
+    description: Sets the border of the masthead selector.
+  $sprk-masthead-selector-font-weight:
+    default: 300
+    description: Sets the font weight of the selector.
+  $sprk-masthead-selector-border-radius:
+    default: 5px
+    description: Sets the border radius width of the selector.
+  $sprk-masthead-selector-font-color:
+    default: $sprk-black
+    description: Sets the font color of the selector.
+  $sprk-masthead-selector-padding:
+    default: $sprk-space-inset-short-m
+    description: Sets the padding of the selector.
+  $sprk-masthead-selector-min-width:
+    default: 17rem
+    description: Sets the minimum width of the selector.
+  $sprk-masthead-logo-min-width:
+    default: 174px
+    description: Sets the minimum width of the logo.
+  $sprk-masthead-narrow-height:
+    default: 81px
+    description: This is the height of the masthead on small viewports and is used to calculate how far from the top the narrow navigation items should be displayed.
+  $sprk-masthead-link-visited-color:
+    default: $sprk-black
+    description: Sets the visited state color of masthead links.
+  $sprk-masthead-link-hover-color:
+    default: $sprk-green
+    description: Sets the hover state color of masthead links.
+  $sprk-masthead-link-font-weight:
+    default: 500
+    description: Sets the font weight of masthead links.
+  $sprk-masthead-accordion-active-left-border:
+    default: 3px solid $sprk-black
+    description: The left border of the active item in the narrow viewport accordion.
+  $sprk-masthead-accordion-active-heading-font-weight:
+    default:  400
+    description: The font weight of the active item in the narrow viewport accordion.
+  $sprk-masthead-accordion-active-heading-color:
+    default: $sprk-black
+    description: The heading color of the active item in the narrow viewport accordion.
+  $sprk-masthead-accordion-heading-font-weight:
+    default: 400
+    description: The font weight of the headings in the narrow viewport accordion.
+  $sprk-masthead-accordion-details-font-weight:
+    default: 300
+    description: The font weight of the text in the details in the narrow viewport accordion.
+  $sprk-masthead-accordion-details-font-color:
+    default: $sprk-black
+    description: The font color of the text in the details in the narrow viewport accordion.
+  $sprk-masthead-accordion-active-background-color:
+    default: $sprk-gray
+    description: The background color of the active item in the narrow viewport accordion.
+  $sprk-masthead-accordion-active-font-color:
+    default: $sprk-black
+    description: The font color of the text in the active item in the narrow viewport accordion.
+  $sprk-masthead-accordion-font-color:
+    default: $sprk-black
+    description: The font color of the text in items in the narrow viewport accordion.
+  $sprk-masthead-accordion-item-open-line-background-color:
+    default: $sprk-black-tint-25
+    description: The color of the line on open items in the narrow viewport accordion.
+  $sprk-masthead-accordion-item-open-line-height:
+    default: 2px
+    description: The height of the line on open items in the narrow viewport accordion.
+  $sprk-masthead-accordion-item-padding:
+    default: $sprk-space-m
+    description: The padding of the items in the narrow viewport accordion.
+classTable:
+  .sprk-c-Masthead--open:
+    description: Sets styles for the masthead when it is open.
+  .sprk-c-Masthead--scroll:
+    description: Sets styles for the masthead when the user scrolls past it.
+  .sprk-c-Masthead--hidden:
+    description: Sets styles to hide the masthead when a user scrolls on a narrow screen.
+  .sprk-c-Masthead__link--big-nav:
+    description: Adds an underline on links used in the big navigation bar.
+  .sprk-c-Masthead__big-nav-item--active:
+    description: Adds an active state color and bold font weight to active big navigation items.
+  .sprk-c-Masthead__big-nav-item--open:
+    description: Add open styles to open big navigation items.

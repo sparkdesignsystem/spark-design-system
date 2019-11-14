@@ -1,0 +1,38 @@
+{
+  "name": "@sparkdesignsystem/spark-angular",
+  "description": "A collection of Spark Design System components in Angular 6+",
+  "version": "9.3.0",
+  "scripts": {
+    "lint": "ng lint spark-angular",
+    "test": "npm run set-version && ng test spark-angular --watch=false",
+    "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./src/environment/environment.ts",
+    "build": "npm run set-version && ng build spark-angular",
+    "prepublishOnly": "npm run build",
+    "lerna-publish": "cd ../../dist/spark-angular && npm publish"
+  },
+  "peerDependencies": {
+    "@angular/animations": ">=7.0.0 < 9.0.0",
+    "@angular/common": ">=7.0.0 < 9.0.0",
+    "@angular/compiler": ">=7.0.0 < 9.0.0",
+    "@angular/compiler-cli": ">=7.0.0 < 9.0.0",
+    "@angular/core": ">=7.0.0 < 9.0.0",
+    "@angular/forms": ">=7.0.0 < 9.0.0",
+    "@angular/platform-browser": ">=7.0.0 < 9.0.0",
+    "@angular/platform-browser-dynamic": ">=7.0.0 < 9.0.0",
+    "@angular/router": ">=7.0.0 < 9.0.0",
+    "@sparkdesignsystem/spark": "^12.2.0",
+    "tiny-date-picker": "^3.2.6"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.4",
+    "@angular/cli": "^8.3.4",
+    "core-js": "^2.5.7",
+    "tiny-date-picker": "^3.2.6",
+    "zone.js": "^0.8.26"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "lory.js": "^2.5.3",
+    "replace": "^1.1.1"
+  }
+}

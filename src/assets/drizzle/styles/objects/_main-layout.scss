@@ -1,0 +1,99 @@
+$drizzle-header-padding-vert-wide: 1rem;
+
+.#{$app-namespace}-o-Layout__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.#{$app-namespace}-o-Layout {
+  height: 100%;
+  margin: 0;
+}
+
+.#{$app-namespace}-o-Layout__main {
+  flex: 1 0 auto;
+  padding-bottom: 4rem;
+
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    width: $drizzle-layout-main-width;
+    margin-left: $drizzle-layout-nav-width;
+  }
+}
+
+.#{$app-namespace}-o-Layout__footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    width: $drizzle-layout-main-width;
+    margin-left: $drizzle-layout-nav-width;
+  }
+  @media (max-width: $drizzle-footer-collapse-breakpoint) {
+    display: block;
+    justify-content: center;
+  }
+}
+
+.#{$app-namespace}-o-Layout__content {
+  max-width: 66rem;
+  padding: $drizzle-space-l $drizzle-space-m;
+
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    padding: $drizzle-space-l;
+  }
+}
+
+.#{$app-namespace}-o-ContentGrouping {
+  margin-bottom: 2.5rem;
+}
+
+.#{$app-namespace}-o-Layout__content--centered {
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.#{$app-namespace}-o-Layout__nav {
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    position: fixed;
+    z-index: $drizzle-layer-height-xs;
+    top: 0;
+    left: 0;
+    width: $drizzle-layout-nav-width;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.#{$app-namespace}-o-Layout__header {
+  background-color: $drizzle-highlight;
+  padding: 5.1875rem 1rem 1rem 2rem;
+  width: 100%;
+
+  @media (min-width: $drizzle-nav-switch-breakpoint) {
+    padding: $drizzle-header-padding-vert-wide 0
+      $drizzle-header-padding-vert-wide 2rem;
+    position: sticky;
+    top: 0;
+    z-index: $drizzle-layer-height-m;
+  }
+}
+
+.#{$app-namespace}-o-Layout__header--shared {
+  display: block;
+
+  @media (min-width: 34.375rem) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.#{$app-namespace}-o-Layout__header .#{$app-namespace}-b-h1 {
+  color: $drizzle-white;
+}

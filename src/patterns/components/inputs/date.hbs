@@ -1,0 +1,38 @@
+---
+name: Date Input
+description:
+  The date input is used for collecting date information. This component does not include a date picker.
+information:
+  - Spark recommends that this component be used for well known dates (i.e. birthdate), or dates in the far future or past (i.e. when did you move?).
+  - Masking is automatically applied when the field contains a valid input.
+  - The field value contains special characters which you may need to parse out before submitting the form.
+  - The sprk-b-InputContainer--huge class is available for use on this input. For full functionality, see restrictions in the Text Huge Inputs section.
+
+order: 30
+hasAngularCode: true
+hasReactCode: true
+hasAngularCodeInfo: true
+---
+
+<div class="sprk-b-InputContainer" data-sprk-input="date">
+  <label for="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}" class="sprk-b-Label">Date</label>
+  <input class="sprk-b-TextInput {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
+         id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}"
+         data-id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}"
+         type="text"
+         pattern="^(((0[13578]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02([\/-]?)((0[1-9])|[12]\d))(\4|\7|\9)[12]\d{3})?$"
+         placeholder="MM/DD/YYYY"
+         aria-describedby="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container"
+         {{#if invaliddata}} aria-invalid="true"{{/if}}
+         {{#if disabled}} disabled{{/if}} >
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}date-input-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled-small" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
+</div>

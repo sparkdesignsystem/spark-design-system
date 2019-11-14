@@ -1,0 +1,199 @@
+{{#extend "default"}}
+  {{#content "main"}}
+    <div class="drizzle-o-Layout__header{{#unless noCodeSwitch }} drizzle-o-Layout__header--shared{{/unless}}">
+      <h1 class="drizzle-b-h1">
+        {{name}}
+      </h1>
+      {{#unless noCodeSwitch}}
+        <div class="drizzle-o-Layout__control">
+          {{> drizzle.code-example-switch }}
+        </div>
+      {{/unless}}
+    </div>
+    <div class="drizzle-o-Layout__content">
+      <section>
+        <div class="drizzle-o-ContentGrouping">
+          {{#if description}}
+            <p class="drizzle-b-P">
+              {{{description}}}
+            </p>
+          {{/if}}
+        </div>
+
+        {{#if information}}
+          <div class="drizzle-o-ContentGrouping">
+            <h2 class="drizzle-b-h2">Information</h2>
+            <ul class="drizzle-b-List drizzle-b-List--nested">
+              {{#each information}}
+                <li>{{{.}}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+
+      {{!-- Links --}}
+      {{#if links}}
+        <div class="drizzle-o-ContentGrouping">
+          <div class="drizzle-u-inlineBlock">
+            <h2 class="drizzle-b-h2">Links</h2>
+            <ul class="drizzle-b-List drizzle-b-List--nested">
+              {{#each links as |details label|}}
+                <li class="drizzle-b-List__item">
+                  <a class="drizzle-b-Link" href="{{details.href}}">
+                    {{label}}
+                    {{#if details.external }}
+                      <svg class="drizzle-b-Icon drizzle-b-Icon--small" viewBox="0 0 11 12">
+                        <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+                        <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+                      </svg>
+                    {{/if}}
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if restrictions}}
+        <div class="drizzle-o-ContentGrouping">
+          <h2 class="drizzle-b-h2">Restrictions</h2>
+          <ul class="drizzle-b-List drizzle-b-List--nested">
+            {{#each restrictions}}
+              <li class="drizzle-b-List__item">{{{.}}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/if}}
+
+      {{!-- contents --}}
+      {{#if contents}}
+        <div class="drizzle-o-ContentGrouping">
+          <div>
+            <h2 class="drizzle-b-h2">Table of Contents</h2>
+            <ul class="drizzle-b-List drizzle-b-List--nested">
+              {{#each contents as |url label|}}
+                <li class="drizzle-b-List__item">
+                  <a class="drizzle-b-Link" href="{{url}}">[{{label}}]</a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if variableTable}}
+      <div data-html-documentation>
+        <h2 class="drizzle-b-h2">Configurable Variables</h2>
+        <table class="drizzle-c-Table sprk-u-mbl">
+          <colgroup>
+            <col class="sprk-u-Width-35">
+            <col class="sprk-u-Width-25">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each variableTable as |var varName|}}
+              <tr>
+                <td class="sprk-u-FontWeight--bold">{{varName}}</td>
+                <td>{{var.default}}</td>
+                <td>{{var.description}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      {{/if}}
+
+      {{#if classTable}}
+        <div data-html-documentation>
+          <h2 class="drizzle-b-h2">Class Modifiers</h2>
+          <table class="drizzle-c-Table">
+            <colgroup>
+              <col class="sprk-u-Width-40">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each classTable as |class selector|}}
+                <tr>
+                  <td class="sprk-u-FontWeight--bold">{{selector}}</td>
+                  <td>{{class.description}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      {{/if}}
+    </section>
+
+    {{!-- Properties --}}
+    {{#if hasProperties }}
+      <div class="drizzle-o-ContentGrouping ">
+        <h2 class="drizzle-b-h2">Optional Properties</h2>
+        {{!-- inject the template at /properties/collection.hbs --}}
+        {{> (patternIdGen (concat id '.properties.collection')) }}
+      </div>
+    {{/if}}
+
+    {{!- Angular Info (component wide) --}}
+    {{#if hasAngularInfo}}
+        <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-angular-documentation>
+          <h2 class="drizzle-b-h2">Angular Information</h2>
+          {{#embed (concat 'patterns.components.' (toLowerCase name) '.angular.global-info') }}{{/embed}}
+        </div>
+    {{/if}}
+
+    {{#if angularComingSoon}}
+      <div data-angular-documentation>
+        {{> drizzle.coming-soon framework="Angular" }}
+      </div>
+    {{/if}}
+
+    {{!- React Info (component wide) --}}
+    {{#if hasReactInfo}}
+        <div class="drizzle-o-ContentGrouping drizzle-u-Display--none" data-react-documentation>
+          <h2 class="drizzle-b-h2">React Information</h2>
+          {{#embed (concat 'patterns.components.' (toLowerCase name) '.react.global-info') }}{{/embed}}
+        </div>
+    {{/if}}
+
+    {{#if reactComingSoon}}
+      <div data-react-documentation>
+        {{> drizzle.coming-soon framework="React" }}
+      </div>
+    {{/if}}
+
+    <div class="drizzle-c-Divider"></div>
+
+    {{#if isIconGallery }}
+      {{#each patterns}}
+        {{> drizzle.item}}
+      {{/each}}
+      {{> drizzle.icon-gallery }}
+      {{else if gridViewGallery}}
+        {{#each patterns}}
+          {{> drizzle.item-gallery}}
+        {{/each}}
+      {{else}}
+        {{#each patterns}}
+          {{> drizzle.item}}
+        {{/each}}
+    {{/if}}
+    {{/content}}
+  {{/extend}}
+  {{#content "foot"}}
+    {{> drizzle.footer}}
+  {{/content}}
+</div>

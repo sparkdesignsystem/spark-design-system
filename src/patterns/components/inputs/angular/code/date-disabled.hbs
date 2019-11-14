@@ -1,0 +1,18 @@
+<sprk-input-container>
+  <label sprkLabel>Date</label>
+  <input
+    disabled
+    name="date_input"
+    [ngClass]="{ 'sprk-b-TextInput--error': dateInput.invalid && dateInput.dirty }"
+    type="text"
+    pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
+    placeholder="MM/DD/YYYY"
+    [(ngModel)]="date_input"
+    #dateInput="ngModel"
+    data-id="input-date-disabled-1"
+    sprkFormatterDate
+    sprkInput>
+  <span
+    [hidden]="dateInput.valid || dateInput.pristine"
+    sprkFieldError>There is an error on this field.</span>
+</sprk-input-container>

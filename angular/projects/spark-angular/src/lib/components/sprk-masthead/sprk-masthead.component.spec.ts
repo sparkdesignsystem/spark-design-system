@@ -154,15 +154,23 @@ describe('SprkMastheadComponent', () => {
   it('should add the scroll class when state isScrolled is true', () => {
     component.isScrolled = true;
     fixture.detectChanges();
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.spec.ts
     expect(mastheadElement.classList.contains('sprk-c-Masthead--scroll'))
     .toEqual(true);
+=======
+    expect(mastheadElement.classList.contains('sprk-c-Masthead--scroll')).toEqual(true);
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.spec.ts
   });
 
   it('should add the hidden class when state isHidden is true', () => {
     component.isHidden = true;
     fixture.detectChanges();
+<<<<<<< HEAD:angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.spec.ts
     expect(mastheadElement.classList.contains('sprk-c-Masthead--hidden'))
     .toEqual(true);
+=======
+    expect(mastheadElement.classList.contains('sprk-c-Masthead--hidden')).toEqual(true);
+>>>>>>> staging:src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.component.spec.ts
   });
 
   it('should update state isHidden to true when scrollDirection is equal to down', () => {

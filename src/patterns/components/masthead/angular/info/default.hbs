@@ -1,0 +1,145 @@
+<p class="sprk-u-mbm">See below for available customization options:</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Input</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">logoHref</td>
+      <td>string</td>
+      <td>Expects a url to direct a user to when the logo is clicked.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">logoLinkScreenReaderText</td>
+      <td>string</td>
+      <td>The value supplied will be used as visually hidden screen reader text for the link that wraps the logo.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalClasses</td>
+      <td>string</td>
+      <td>Expects a space-separated list of class names to be applied to the masthead component.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalBigNavClasses</td>
+      <td>string</td>
+      <td>Expects a space-separated list of class names to be applied to big nav element of the masthead component.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">additionalNarrowNavClasses</td>
+      <td>string</td>
+      <td>Expects a space-separated list of class names to be applied to narrow nav element of the masthead component.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">narrowNavLinks</td>
+      <td>object[]</td>
+      <td>Expects an array of link objects, to be represented in the narrow nav element of the masthead component. See below for link object details.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">narrowSelector</td>
+      <td>object</td>
+      <td>Expects a narrowSelector object that represents choices to be supplied to the dropdown above the narrow
+        navigation of link objects. See below for narrowSelector object details.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">bigNavLinks</td>
+      <td>object[]</td>
+      <td>Expects an array of link objects, to be represented in the big nav element of the masthead component. See below for link object details.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">isNarrowNavOpen</td>
+      <td>boolean</td>
+      <td>Represents the initial state of the narrow nav element of the masthead component.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">idString</td>
+      <td>boolean</td>
+      <td>The value supplied will be applied to the data-id attribute of the masthead component.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">The link object represents a link that can be supplied to the masthead, for use
+with big nav or narrow nav.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Sample Value</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">text</td>
+      <td>Item 1</td>
+      <td>The text that is rendered to the screen.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">href</td>
+      <td>/help</td>
+      <td>The value that is assigned to the href attribute.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">active</td>
+      <td>false</td>
+      <td>If true, denotes that the link represents the current page.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">subNav</td>
+      <td>array of link objects</td>
+      <td>Expects an array containing link objects. Will be treated as a subnav to the link.</td>
+    </tr>
+    <tr>
+      <td class="sprk-u-FontWeight--bold">leadingIcon</td>
+      <td>landline</td>
+      <td>When the link is rendered to a compatible element (narrowNav), will draw the specified icon to the left of the link text.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="sprk-u-mbm">The narrowSelector object represents a set of data that can be supplied to the masthead, for use
+  with the selector in the narrow nav.</p>
+<table class="drizzle-c-Table drizzle-c-Table--wide sprk-u-mbm">
+  <colgroup>
+    <col class="sprk-u-Width-40">
+    <col>
+  </colgroup>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Sample Value</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="sprk-u-FontWeight--bold">trigger</td>
+    <td>{ text: 'My Selector' }</td>
+    <td>An object that contains text to be passed to the dropdown component.</td>
+  </tr>
+  <tr>
+    <td class="sprk-u-FontWeight--bold">choices</td>
+    <td>dropdown-choices-object</td>
+    <td>See the dropdown component for details regarding a choices object.</td>
+  </tr>
+  <tr>
+    <td class="sprk-u-FontWeight--bold">footer</td>
+    <td>Object</td>
+    <td>An object that contains text to render inside the footer link of the
+      narrow dropdown. Also accepts an href to point the link to and optionally
+      an analyticsString to map to the link's data-analytics attribute.</td>
+  </tr>
+  </tbody>
+</table>

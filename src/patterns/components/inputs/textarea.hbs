@@ -1,0 +1,28 @@
+---
+name: Textarea
+description:
+  This input is for entering multiple lines of freeform text.
+order: 13
+hasAngularCode: true
+hasReactCode: true
+---
+
+<div class="sprk-b-InputContainer">
+  <label for="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}" class="sprk-b-Label">Description</label>
+  <textarea class="sprk-b-TextArea {{#if class}}{{class}} {{/if}}sprk-u-Width-100"
+            id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}"
+            data-id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}"
+            aria-describedby="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container"
+            {{#if disabled}} disabled{{/if}}
+            {{#if invaliddata}} aria-invalid="true"{{/if}} ></textarea>
+  <div class="sprk-b-ErrorContainer" id="{{#if idattr}}{{idattr}}{{else}}textarea-normal{{/if}}--error-container">
+    {{#if errorMessage}}
+      <svg class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon" viewBox="0 0 64 64">
+        <use xlink:href="#exclamation-filled-small" />
+      </svg>
+      <div class="sprk-b-ErrorText">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+  </div>
+</div>
