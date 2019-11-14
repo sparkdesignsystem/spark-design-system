@@ -1,11 +1,9 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import SprkCard from './SprkCard';
 
 export default {
   title: 'Components|Card',
   decorators: [
-    withKnobs,
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkCard,

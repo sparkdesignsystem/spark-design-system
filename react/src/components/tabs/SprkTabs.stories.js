@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 

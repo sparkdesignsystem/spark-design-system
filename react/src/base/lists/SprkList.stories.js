@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkList from './SprkList';
 import SprkListItem from './SprkListItem';
 

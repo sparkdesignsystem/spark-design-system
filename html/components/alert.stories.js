@@ -110,3 +110,32 @@ export const fail = () => {
     </div>
   `
 }
+
+export const noDismissButton = () => {
+  useEffect(() => {
+    alerts();
+  });
+
+  return `
+    <div
+      class="sprk-c-Alert sprk-c-Alert--success"
+      role="alert"
+      data-sprk-alert="container"
+      data-id="alert-no-dismiss"
+      data-analytics="alert-no-dismiss-analytics"
+    >
+      <div class="sprk-c-Alert__content">
+        <svg
+          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+          viewBox="0 0 512 512"
+          aria-hidden="true"
+        >
+          <use xlink:href="#check-mark"></use>
+        </svg>
+        <p class="sprk-c-Alert__text">
+          This success alert has no dismiss button.
+        </p>
+      </div>
+    </div>
+  `
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkTable from './SprkTable';
 import SprkButton from '../../components/buttons/SprkButton';
 

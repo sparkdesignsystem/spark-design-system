@@ -1,5 +1,4 @@
 import React from 'react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
@@ -8,7 +7,6 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 export default {
   title: 'Components|Input',
   decorators: [
-    withKnobs,
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkTextInput,
@@ -25,10 +23,10 @@ export default {
 
 export const textInput = () => (
   <SprkTextInput
-    label={text('label', 'Text Input Label')}
+    label="Text Input Label"
     name="text-input-label"
-    valid={boolean('valid', true)}
-    disabled={boolean('disabled', false)}
+    valid={true}
+    disabled={false}
     errorMessage="There is an error on this field."
   />
 );
@@ -44,10 +42,10 @@ textInput.story = {
 export const hugeTextInput = () => (
   <SprkTextInput
     type="hugeTextInput"
-    label={text('label', 'Text Input Label')}
+    label="Text Input Label"
     name="text-input-label"
-    valid={boolean('valid', true)}
-    disabled={boolean('disabled', false)}
+    valid={true}
+    disabled={false}
     placeholder="Huge Text Placeholder"
     errorMessage="There is an error on this field."
   />
@@ -64,10 +62,10 @@ hugeTextInput.story = {
 export const hugeTextInputWithDefaultValue = () => (
   <SprkTextInput
     type="hugeTextInput"
-    label={text('label', 'Text Input Label')}
+    label="Text Input Label"
     name="text-input-label"
-    valid={boolean('valid', true)}
-    disabled={boolean('disabled', false)}
+    valid={true}
+    disabled={false}
     placeholder="Huge Text Placeholder"
     errorMessage="There is an error on this field."
     defaultValue="Default Value"
@@ -229,7 +227,8 @@ export const hugeSelectBox = () => (
     ]}
     variant="hugeSelect"
     name="select"
-    valid
+    valid={true}
+    disabled={false}
     erorMessage="There is an error in the field."
     defaultValue=""
   />
@@ -393,11 +392,11 @@ dateInput.story = {
 export const datePicker = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder={text('placeholder', '01/01/2019')}
+    placeholder="01/01/2019"
     errorMessage="Incorrect date."
-    label={text('label', 'Date')}
-    valid={boolean('valid', true)}
-    disabled={boolean('disabled', false)}
+    label="Date"
+    valid={true}
+    disabled={false}
   />
 );
 

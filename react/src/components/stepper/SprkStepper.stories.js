@@ -1,14 +1,10 @@
 import React from 'react';
-
 import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
-
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Components|Stepper',
   decorators: [
-    withKnobs,
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkStepper,
@@ -26,9 +22,8 @@ export default {
 
 export const defaultStory = () => (
   <SprkStepper
-    hasDarkBackground={boolean('hasDarkBackground', false)}
-    additionalClasses={text('additionalClasses', '')}
-    idString={text('idString', '')}
+    hasDarkBackground={false}
+    idString="stepper"
   >
     <SprkStepperStep title="Step One"></SprkStepperStep>
     <SprkStepperStep title="Step Two"></SprkStepperStep>
@@ -42,9 +37,8 @@ defaultStory.story = {
 
 export const withStepDescriptions = () => (
   <SprkStepper
-    hasDarkBackground={boolean('hasDarkBackground', false)}
-    additionalClasses={text('additionalClasses', '')}
-    idString={text('idString', '')}
+    hasDarkBackground={false}
+    idString="stepper-descriptions"
   >
     <SprkStepperStep title="Step One" isSelected>
       Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.

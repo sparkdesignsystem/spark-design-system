@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkHighlightBoard from './SprkHighlightBoard';
 
 export default {

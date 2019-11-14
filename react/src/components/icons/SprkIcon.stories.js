@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkIcon from './SprkIcon';
 
 export default {
