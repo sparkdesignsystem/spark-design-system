@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkDictionary from './SprkDictionary';
 
 export default {

@@ -20,8 +20,6 @@ export default {
   },
 };
 
-
-
 const links = [
   {
     element: 'a',

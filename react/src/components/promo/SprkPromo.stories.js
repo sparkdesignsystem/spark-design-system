@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkPromo from './SprkPromo';
 
 export default {

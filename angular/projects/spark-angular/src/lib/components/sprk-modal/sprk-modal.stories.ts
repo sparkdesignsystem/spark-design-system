@@ -1,5 +1,4 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { action } from '@storybook/addon-actions';
 import { SprkModalModule } from './sprk-modal.module';
 import { SprkModalComponent } from './sprk-modal.component';
 
@@ -42,8 +41,6 @@ export const defaultStory = () => ({
   `,
   props: {
     choiceVisible: true,
-    toggleChoiceModal: action('Cancel Click'),
-    confirmClick: action('Confirm Click'),
   },
 });
 
@@ -68,7 +65,6 @@ export const info = () => ({
   `,
   props: {
     infoVisible: true,
-    toggleInfoModal: action('Cancel Click'),
   },
 });
 

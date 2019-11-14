@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SprkPagination from './SprkPagination';
 
 export default {
