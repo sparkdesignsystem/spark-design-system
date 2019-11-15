@@ -177,9 +177,11 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         down: 40,
       };
 
-      // if the key pressed is not in the list of keys, return
+      // if the key pressed isnt in the list of keys, return
       if (
-        !Object.keys(keys).some(key => keys[key] === event.keyCode)
+        !Object.keys(keys).some(key => {
+          return keys[key] === event.keyCode;
+        })
       ) {
         return;
       }

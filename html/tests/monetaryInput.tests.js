@@ -1,7 +1,11 @@
 /* global window document describe it beforeEach afterEach */
 import { expect } from 'chai';
 import sinon from 'sinon';
-import { monetaryInput, formatMonetary, bindUIEvents } from '../base/monetaryInput';
+import {
+  monetaryInput,
+  formatMonetary,
+  bindUIEvents,
+} from '../base/monetaryInput';
 
 describe('monetaryInput init', () => {
   let div;
@@ -92,7 +96,7 @@ describe('bindUIEvents', () => {
     expect(field.addEventListener.getCall(1).args[0]).eql('blur');
   });
 
-  it('should format when blur is triggered with valid input', (done) => {
+  it('should format when blur is triggered with valid input', done => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
     event = new window.Event('blur');
@@ -101,7 +105,17 @@ describe('bindUIEvents', () => {
     expect(field.value).eql('123.00');
   });
 
-  it('should not format when blur is triggered with invalid input', (done) => {
+  it('should not format when blur is triggered with no value', done => {
+    sinon.spy(field, 'addEventListener');
+    bindUIEvents(div);
+    field.value = '';
+    event = new window.Event('blur');
+    field.dispatchEvent(event);
+    done();
+    expect(field.value).eql('');
+  });
+
+  it('should not format when blur is triggered with invalid input', done => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
     field.value = 'abc';
