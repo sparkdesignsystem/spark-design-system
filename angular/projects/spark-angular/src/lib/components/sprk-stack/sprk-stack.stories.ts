@@ -17,6 +17,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
     `,
+    docs: { iframeHeight: 180 },
   },
 };
 
@@ -415,4 +416,7 @@ export const stackSplitLayoutMixed = () => ({
 
 stackSplitLayoutMixed.story = {
   name: 'Stack/Split - Mixed',
+  parameters: {
+    docs: { iframeHeight: 400 },
+  },
 };

@@ -264,6 +264,16 @@ export class SprkFooterComponent {
   connectHeading: string;
   /**
    * Array of objects to build the links in the "Global" section.
+   * @code `cats`
+   * @code `
+     globalLinks = [{
+        text: 'Lorem ipsum dolor sit amet, consectetur.',
+        href: '/global-1',
+        icon: 'auto-loans',
+        iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
+        analytics: 'link-1',
+        iconScreenReaderText: 'cats'
+      }]`
    */
   @Input()
   globalLinks: object[];

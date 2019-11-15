@@ -14,6 +14,12 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/list)
+    `,
+    docs: { iframeHeight: 100 },
+  },
 };
 
 const modules = {
