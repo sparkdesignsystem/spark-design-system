@@ -229,7 +229,7 @@ export const hugeSelectBox = () => (
     name="select"
     valid={true}
     disabled={false}
-    erorMessage="There is an error in the field."
+    errorMessage="There is an error in the field."
     defaultValue=""
   />
 );
