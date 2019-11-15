@@ -49,7 +49,6 @@ export const tertiary = () => (
 
 export const disabled = () => (
   <SprkButton
-    variant="button"
     disabled={true}
     element="button"
     idString="button-4"
@@ -63,8 +62,8 @@ export const spinner = () => (
   <SprkButton
     loading={true}
     element="button"
-    idString="button-4"
-    analyticsString="button-4-analytics"
+    idString="button-5"
+    analyticsString="button-5-analytics"
   >
     Button
   </SprkButton>
@@ -73,8 +72,8 @@ export const spinner = () => (
 export const fullWidthAtSmallViewport = () => (
   <SprkButton
     element="button"
-    idString="button-5"
-    analyticsString="button-5-analytics"
+    idString="button-6"
+    analyticsString="button-6-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
     Button
@@ -84,8 +83,8 @@ export const fullWidthAtSmallViewport = () => (
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
     element="button"
-    idString="button-6"
-    analyticsString="button-6-analytics"
+    idString="button-7"
+    analyticsString="button-7-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
     Button
@@ -96,8 +95,8 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="https://www.sparkdesignsystem.com"
-    idString="button-7"
-    analyticsString="button-7-analytics"
+    idString="button-8"
+    analyticsString="button-8-analytics"
   >
     Button
   </SprkButton>
