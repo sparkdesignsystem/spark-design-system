@@ -8,7 +8,7 @@
             "IE >= 10"
           ]
         },
-        "useBuiltIns": true
+        "useBuiltIns": "entry"
       }
     ]
   ]
