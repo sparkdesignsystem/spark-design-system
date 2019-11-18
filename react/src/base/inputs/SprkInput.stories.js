@@ -5,7 +5,7 @@ import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 
 export default {
-  title: 'Components|Input',
+  title: 'Components/Input',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

@@ -3,7 +3,7 @@ import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
 
 export default {
-  title: 'Components|Link',
+  title: 'Components/Link',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

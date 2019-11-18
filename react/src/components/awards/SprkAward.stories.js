@@ -2,7 +2,7 @@ import React from 'react';
 import SprkAward from './SprkAward';
 
 export default {
-  title: 'Components|Award',
+  title: 'Components/Award',
   component: SprkAward,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

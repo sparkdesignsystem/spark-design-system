@@ -3,7 +3,7 @@ import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 
 export default {
-  title: 'Components|Tabs',
+  title: 'Components/Tabs',
   component: SprkTabs,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import SprkDictionary from './SprkDictionary';
 
 export default {
-  title: 'Components|Dictionary',
+  title: 'Components/Dictionary',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

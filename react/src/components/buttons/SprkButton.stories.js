@@ -2,7 +2,7 @@ import React from 'react';
 import SprkButton from './SprkButton';
 
 export default {
-  title: 'Components|Button',
+  title: 'Components/Button',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

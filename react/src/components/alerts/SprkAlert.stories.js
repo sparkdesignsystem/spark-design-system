@@ -2,7 +2,7 @@ import React from 'react';
 import SprkAlert from './SprkAlert';
 
 export default {
-  title: 'Components|Alert',
+  title: 'Components/Alert',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
