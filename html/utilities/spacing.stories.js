@@ -44,27 +44,27 @@ insetSpacing.story = {
 
 export const insetSpacingShort = () => (
   `
-    <div class="sb-spacing-inset-short-xs sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the extra small inset short of 2px 4px 2px 4px.
       </p>
     </div>
-    <div class="sb-spacing-inset-short-s sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the small inset short of 4px 8px 4px 8px.
       </p>
     </div>
-    <div class="sb-spacing-inset-short-m sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the medium inset short of 8px 16px 8px 16px.
       </p>
     </div>
-    <div class="sb-spacing-inset-short-l sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the large inset short of 16px 32px 16px 32px.
       </p>
     </div>
-    <div class="sb-spacing-inset-short-xl sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the extra large inset short of 32px 64px 32px 64px.
       </p>
@@ -74,6 +74,7 @@ export const insetSpacingShort = () => (
 
 insetSpacingShort.story = {
   name: 'Inset Short',
+  decorators: [storyFn => `<div class="sb-inset-spacing-short-example">${storyFn()}</div>`],
 };
 
 export const insetSpacingTall = () => (

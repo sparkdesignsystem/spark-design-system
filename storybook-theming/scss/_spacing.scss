@@ -43,7 +43,7 @@ $sb-space-padding-color: rgba(207, 207, 207, 0.8);
 }
 
 /* Inset short */
-.sb-spacing-inset-short-xs {
+.sb-inset-spacing-short-example div:nth-child(1) {
   box-shadow: inset 0 (-1 * ($sprk-space-xs / 2)) 0 $sb-space-padding-color,
   inset 0 ($sprk-space-xs / 2) 0 $sb-space-padding-color,
   inset $sprk-space-xs 0 0 0 $sb-space-padding-color,
@@ -51,7 +51,7 @@ $sb-space-padding-color: rgba(207, 207, 207, 0.8);
   padding: ($sprk-space-xs / 2) $sprk-space-xs ($sprk-space-xs / 2) $sprk-space-xs;
 }
 
-.sb-spacing-inset-short-s {
+.sb-inset-spacing-short-example div:nth-child(2) {
   box-shadow: inset 0 (-1 * $sprk-space-xs) 0 $sb-space-padding-color,
   inset 0 $sprk-space-xs 0 $sb-space-padding-color,
   inset $sprk-space-s 0 0 0 $sb-space-padding-color,
@@ -59,7 +59,7 @@ $sb-space-padding-color: rgba(207, 207, 207, 0.8);
   padding: $sprk-space-xs $sprk-space-s $sprk-space-xs $sprk-space-s;
 }
 
-.sb-spacing-inset-short-m {
+.sb-inset-spacing-short-example div:nth-child(3) {
   box-shadow: inset 0 (-1 * $sprk-space-s) 0 $sb-space-padding-color,
   inset 0 $sprk-space-s 0 $sb-space-padding-color,
   inset $sprk-space-m 0 0 0 $sb-space-padding-color,
@@ -67,7 +67,7 @@ $sb-space-padding-color: rgba(207, 207, 207, 0.8);
   padding: $sprk-space-s $sprk-space-m $sprk-space-s $sprk-space-m;
 }
 
-.sb-spacing-inset-short-l {
+.sb-inset-spacing-short-example div:nth-child(4) {
   box-shadow: inset 0 (-1 * $sprk-space-m) 0 $sb-space-padding-color,
   inset 0 $sprk-space-m 0 $sb-space-padding-color,
   inset $sprk-space-l 0 0 0 $sb-space-padding-color,
@@ -75,7 +75,7 @@ $sb-space-padding-color: rgba(207, 207, 207, 0.8);
   padding: $sprk-space-m $sprk-space-l $sprk-space-m $sprk-space-l;
 }
 
-.sb-spacing-inset-short-xl {
+.sb-inset-spacing-short-example div:nth-child(5) {
   box-shadow: inset 0 (-1 * $sprk-space-l) 0 $sb-space-padding-color,
   inset 0 $sprk-space-l 0 $sb-space-padding-color,
   inset $sprk-space-xl 0 0 0 $sb-space-padding-color,
