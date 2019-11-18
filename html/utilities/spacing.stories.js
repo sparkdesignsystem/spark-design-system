@@ -9,27 +9,27 @@ export default {
 
 export const insetSpacing = () => (
   `
-    <div class="sb-spacing-inset-tall-xs sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the extra small inset of 4px.
       </p>
     </div>
-    <div class="sb-spacing-inset-tall-s sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the small inset of 8px.
       </p>
     </div>
-    <div class="sb-spacing-inset-m sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the medium inset of 16px.
       </p>
     </div>
-    <div class="sb-spacing-inset-l sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the large inset of 32px.
       </p>
     </div>
-    <div class="sb-spacing-inset-xl sprk-u-mbm">
+    <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
         The grey border shows the extra large inset of 64px.
       </p>
@@ -39,6 +39,7 @@ export const insetSpacing = () => (
 
 insetSpacing.story = {
   name: 'Inset',
+  decorators: [storyFn => `<div class="sb-inset-spacing-example">${storyFn()}</div>`],
 };
 
 export const insetSpacingShort = () => (

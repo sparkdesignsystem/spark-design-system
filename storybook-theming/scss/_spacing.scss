@@ -84,27 +84,27 @@ $sb-space-padding-color: rgba(207, 207, 207, 0.8);
 }
 
 // Global Spacing
-.sb-spacing-inset-xs {
+.sb-inset-spacing-example div:nth-child(1) {
   box-shadow: inset 0 0 0 $sprk-space-xs $sb-space-padding-color;
   padding: $sprk-space-xs;
 }
 
-.sb-spacing-inset-s {
+.sb-inset-spacing-example div:nth-child(2) {
   box-shadow: inset 0 0 0 $sprk-space-s $sb-space-padding-color;
   padding: $sprk-space-s;
 }
 
-.sb-spacing-inset-m {
+.sb-inset-spacing-example div:nth-child(3) {
   box-shadow: inset 0 0 0 $sprk-space-m $sb-space-padding-color;
   padding: $sprk-space-m;
 }
 
-.sb-spacing-inset-l {
+.sb-inset-spacing-example div:nth-child(4) {
   box-shadow: inset 0 0 0 $sprk-space-l $sb-space-padding-color;
   padding: $sprk-space-l;
 }
 
-.sb-spacing-inset-xl {
+.sb-inset-spacing-example div:nth-child(5) {
   box-shadow: inset 0 0 0 $sprk-space-xl $sb-space-padding-color;
   padding: $sprk-space-xl;
 }
