@@ -2,7 +2,7 @@ import React from 'react';
 import SprkHighlightBoard from './SprkHighlightBoard';
 
 export default {
-  title: 'Components|Highlight Board',
+  title: 'Components/Highlight Board',
   component: SprkHighlightBoard,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

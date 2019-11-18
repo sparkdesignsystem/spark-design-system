@@ -3,7 +3,7 @@ import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
 
 export default {
-  title: 'Components|Stack',
+  title: 'Components/Stack',
   component: SprkStack,
   decorators: [
     story => <div className="sprk-o-Box sb-decorate">{story()}</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import SprkCard from './SprkCard';
 
 export default {
-  title: 'Components|Card',
+  title: 'Components/Card',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

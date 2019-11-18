@@ -2,7 +2,7 @@ import React from 'react';
 import SprkFooter from './SprkFooter';
 
 export default {
-  title: 'Components|Footer',
+  title: 'Components/Footer',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
