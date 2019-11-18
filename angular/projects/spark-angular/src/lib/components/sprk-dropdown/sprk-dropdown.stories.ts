@@ -18,6 +18,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dropdown)
     `,
+    docs: { iframeHeight: 200 },
   },
 };
 
@@ -95,3 +96,9 @@ export const informational = () => ({
     </sprk-dropdown>
   `
 });
+
+informational.story = {
+  parameters: {
+    docs: { iframeHeight: 400 },
+  },
+}

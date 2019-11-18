@@ -16,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
     `,
+    docs: { iframeHeight: 120 },
   },
 };
 
@@ -62,6 +63,12 @@ export const fail = () => ({
     </sprk-alert>
   `
 });
+
+fail.story = {
+  parameters: {
+    docs: { iframeHeight: 235 },
+  },
+}
 
 export const withNoDismissButton = () => ({
   moduleMetadata: modules,

@@ -4,7 +4,7 @@ import sparkTheme from "../../storybook-theming/storybook-spark-theme";
 import '../src/polyfills';
 import '!style-loader!css-loader!sass-loader!../../storybook-theming/font-loader.scss';
 import '../../storybook-theming/icon-loader';
-import { setCompodocJson } from '@storybook/addon-docs/angular';
+import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 
 setCompodocJson(docJson);
@@ -25,6 +25,7 @@ addParameters({
       }
       return null;
     },
+    extractProps,
   },
 });
 
