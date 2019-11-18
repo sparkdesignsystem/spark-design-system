@@ -12,7 +12,7 @@ import { requiredSelect } from './requiredSelect';
 import '../utilities/polyfills/classListSVG';
 
 export default {
-  title: 'Components|Input',
+  title: 'Components/Input',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

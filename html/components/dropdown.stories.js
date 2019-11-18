@@ -2,7 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { dropdowns } from './dropdown';
 
 export default {
-  title: 'Components|Dropdown',
+  title: 'Components/Dropdown',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

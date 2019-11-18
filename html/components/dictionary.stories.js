@@ -1,5 +1,5 @@
 export default {
-  title: 'Components|Dictionary',
+  title: 'Components/Dictionary',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

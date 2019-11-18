@@ -5,7 +5,7 @@ import { dropdowns } from '../components/dropdown';
 import isElementVisible from '../utilities/isElementVisible';
 
 export default {
-  title: 'Components|Masthead',
+  title: 'Components/Masthead',
   decorators: [
     story => `<div data-sprk-main>${story()}</div>`,
   ],
