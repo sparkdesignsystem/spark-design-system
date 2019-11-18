@@ -14,14 +14,14 @@ addParameters({
   options: {
     theme: sparkTheme,
     showRoots: true,
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, { numeric: true }),
+    storySort: function(a, b) {
+      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, { numeric: true })},
   },
 });
 
 addParameters({
   docs: {
-    extractComponentDescription: (component, { info }) => {
+    extractComponentDescription: function(component, { info }) {
       if (info) {
         return typeof info === 'string' ? info : info.markdown || info.text;
       }
