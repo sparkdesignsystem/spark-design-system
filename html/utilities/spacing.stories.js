@@ -1,5 +1,5 @@
 export default {
-  title: 'Fundamentals|Spacing',
+  title: 'Fundamentals/Spacing',
   decorators: [
     story => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
@@ -138,7 +138,7 @@ export const stackSpacing = () => (
       <p class="sprk-b-TypeBodyTwo">
         The grey shows the extra large stack spacing of 64px.
       </p>
-    </div> 
+    </div>
   `
 );
 
@@ -178,7 +178,7 @@ export const inlineSpacing = () => (
     <p>
       Inline items with no right margin on the last item.
     </p>
-    <span>Fish</span><span>Frogs</span><span>Turtles</span> 
+    <span>Fish</span><span>Frogs</span><span>Turtles</span>
   `
 );
 

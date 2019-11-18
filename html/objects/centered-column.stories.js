@@ -1,5 +1,5 @@
 export default {
-  title: 'Components|Centered Column',
+  title: 'Components/Centered Column',
   decorators: [
     story => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
