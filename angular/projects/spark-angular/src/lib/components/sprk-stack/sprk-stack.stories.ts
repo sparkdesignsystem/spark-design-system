@@ -4,7 +4,7 @@ import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 
 export default {
-  title: 'Components|Stack',
+  title: 'Components/Stack',
   component: SprkStackComponent,
   decorators: [
     storyWrapper(

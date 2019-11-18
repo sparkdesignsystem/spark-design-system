@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 
 export default {
-  title: 'Components|Highlight Board',
+  title: 'Components/Highlight Board',
   component: SprkHighlightBoardComponent,
   decorators: [
     storyWrapper(

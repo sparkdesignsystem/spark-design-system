@@ -3,7 +3,7 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkIconComponent } from './sprk-icon.component';
 
 export default {
-  title: 'Components|Icons',
+  title: 'Components/Icons',
   component: SprkIconComponent,
   decorators: [
     storyWrapper(

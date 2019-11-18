@@ -5,7 +5,7 @@ import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
 import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
 
 export default {
-  title: 'Components|List',
+  title: 'Components/List',
   component: SprkUnorderedListComponent,
   decorators: [
     storyWrapper(

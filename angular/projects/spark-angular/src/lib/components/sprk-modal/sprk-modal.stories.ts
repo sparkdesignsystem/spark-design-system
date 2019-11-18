@@ -3,7 +3,7 @@ import { SprkModalModule } from './sprk-modal.module';
 import { SprkModalComponent } from './sprk-modal.component';
 
 export default {
-  title: 'Components|Modal',
+  title: 'Components/Modal',
   component: SprkModalComponent,
   decorators: [
     storyWrapper(

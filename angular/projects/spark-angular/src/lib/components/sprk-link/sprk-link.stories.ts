@@ -6,7 +6,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { SprkLinkComponent } from './sprk-link.component';
 
 export default {
-  title: 'Components|Link',
+  title: 'Components/Link',
   component: SprkLinkComponent,
   decorators: [
     storyWrapper(
