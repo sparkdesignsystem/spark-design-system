@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
 
 export default {
-  title: 'Components|Footer',
+  title: 'Components/Footer',
   component: SprkFooterComponent,
   decorators: [
     storyWrapper(

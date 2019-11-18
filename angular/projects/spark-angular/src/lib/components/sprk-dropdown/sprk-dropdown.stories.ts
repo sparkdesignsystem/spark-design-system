@@ -5,7 +5,7 @@ import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 
 export default {
-  title: 'Components|Dropdown',
+  title: 'Components/Dropdown',
   component: SprkDropdownComponent,
   decorators: [
     storyWrapper(

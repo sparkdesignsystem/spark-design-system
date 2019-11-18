@@ -5,7 +5,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 
 export default {
-  title: 'Components|Pagination',
+  title: 'Components/Pagination',
   component: SprkPaginationComponent,
   decorators: [
     storyWrapper(

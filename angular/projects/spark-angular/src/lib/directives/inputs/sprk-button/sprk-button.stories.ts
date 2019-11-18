@@ -3,7 +3,7 @@ import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapp
 import { SprkButtonDirective } from './sprk-button.directive';
 
 export default {
-  title: 'Components|Button',
+  title: 'Components/Button',
   directive: SprkButtonDirective,
   decorators: [
     storyWrapper(

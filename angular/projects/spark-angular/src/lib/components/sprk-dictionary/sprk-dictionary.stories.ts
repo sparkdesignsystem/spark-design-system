@@ -3,7 +3,7 @@ import { SprkDictionaryModule } from './sprk-dictionary.module';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
 
 export default {
-  title: 'Components|Dictionary',
+  title: 'Components/Dictionary',
   component: SprkDictionaryComponent,
   decorators: [
     storyWrapper(

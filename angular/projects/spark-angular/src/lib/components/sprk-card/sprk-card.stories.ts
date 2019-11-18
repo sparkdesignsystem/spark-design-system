@@ -7,7 +7,7 @@ import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 
 export default {
-  title: 'Components|Card',
+  title: 'Components/Card',
   component: SprkCardComponent,
   decorators: [
     storyWrapper(

@@ -5,7 +5,7 @@ import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
 
 export default {
-  title: 'Components|Promo',
+  title: 'Components/Promo',
   component: SprkPromoComponent,
   decorators: [
     storyWrapper(
