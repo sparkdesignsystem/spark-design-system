@@ -6,7 +6,7 @@ import { SprkToggleModule } from './sprk-toggle.module';
 import { SprkToggleComponent } from './sprk-toggle.component';
 
 export default {
-  title: 'Components|Toggle',
+  title: 'Components/Toggle',
   component: SprkToggleComponent,
   decorators: [
     storyWrapper(

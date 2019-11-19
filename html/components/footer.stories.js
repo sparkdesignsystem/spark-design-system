@@ -3,7 +3,7 @@ import { toggle } from '../components/toggle';
 import '../utilities/polyfills/classListSVG';
 
 export default {
-  title: 'Components|Footer',
+  title: 'Components/Footer',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

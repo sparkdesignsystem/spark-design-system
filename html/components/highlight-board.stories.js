@@ -1,5 +1,5 @@
 export default {
-  title: 'Components|Highlight Board',
+  title: 'Components/Highlight Board',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

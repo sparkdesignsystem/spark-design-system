@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 
 export default {
-  title: 'Components|Accordion',
+  title: 'Components/Accordion',
   component: SprkAccordionComponent,
   decorators: [
     storyWrapper(

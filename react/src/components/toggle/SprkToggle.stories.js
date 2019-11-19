@@ -2,7 +2,7 @@ import React from 'react';
 import SprkToggle from './SprkToggle';
 
 export default {
-  title: 'Components|Toggle',
+  title: 'Components/Toggle',
   component: SprkToggle,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

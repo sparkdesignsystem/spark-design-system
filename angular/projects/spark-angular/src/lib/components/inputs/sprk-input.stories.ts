@@ -21,7 +21,7 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 
 export default {
-  title: 'Components|Input',
+  title: 'Components/Input',
   component: SprkIconInputContainerComponent,
   decorators: [
     storyWrapper(

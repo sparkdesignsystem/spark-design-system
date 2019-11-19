@@ -3,7 +3,7 @@ import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 
 export default {
-  title: 'Components|Alert',
+  title: 'Components/Alert',
   component: SprkAlertComponent,
   decorators: [
     storyWrapper(

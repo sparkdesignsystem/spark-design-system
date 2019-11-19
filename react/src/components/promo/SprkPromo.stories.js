@@ -2,7 +2,7 @@ import React from 'react';
 import SprkPromo from './SprkPromo';
 
 export default {
-  title: 'Components|Promo',
+  title: 'Components/Promo',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

@@ -10,7 +10,7 @@ import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.componen
 
 
 export default {
-  title: 'Components|Tabs',
+  title: 'Components/Tabs',
   component: SprkTabbedNavigationComponent,
   decorators: [
     storyWrapper(

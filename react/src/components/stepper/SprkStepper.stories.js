@@ -3,7 +3,7 @@ import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 
 export default {
-  title: 'Components|Stepper',
+  title: 'Components/Stepper',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
