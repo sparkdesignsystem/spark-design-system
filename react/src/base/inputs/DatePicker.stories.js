@@ -30,6 +30,7 @@ export const datePicker = () => (
 );
 
 datePicker.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkDatePickerInput',

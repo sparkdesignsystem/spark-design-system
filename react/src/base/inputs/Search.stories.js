@@ -23,6 +23,7 @@ export const searchInput = () => (
 );
 
 searchInput.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',
@@ -40,6 +41,7 @@ export const inlineSearchInput = () => (
 );
 
 inlineSearchInput.story = {
+  name: 'Inline',
   parameters: {
     jest: [
       'SprkTextInput',

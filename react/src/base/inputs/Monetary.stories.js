@@ -23,6 +23,7 @@ export const monetaryInput = () => (
 );
 
 monetaryInput.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',

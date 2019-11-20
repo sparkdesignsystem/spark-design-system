@@ -29,6 +29,7 @@ export const textInput = () => (
 );
 
 textInput.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',

@@ -30,6 +30,7 @@ export const percentageInput = () => (
 );
 
 percentageInput.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',

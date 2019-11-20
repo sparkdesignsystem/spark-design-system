@@ -59,6 +59,7 @@ export const selectBox = () => (
 );
 
 selectBox.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkSelectionInput',

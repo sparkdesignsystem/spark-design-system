@@ -27,6 +27,7 @@ export const helperText = () => (
 );
 
 helperText.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',

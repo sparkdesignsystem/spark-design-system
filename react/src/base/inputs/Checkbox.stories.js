@@ -43,6 +43,7 @@ export const checkbox = () => (
 );
 
 checkbox.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkSelectionInput',

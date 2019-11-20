@@ -31,6 +31,7 @@ export const hugeTextInput = () => (
 );
 
 hugeTextInput.story = {
+  name: 'Default',
   component: SprkTextInput,
   parameters: {
     jest: [
@@ -53,6 +54,7 @@ export const hugeTextInputWithDefaultValue = () => (
 );
 
 hugeTextInputWithDefaultValue.story = {
+  name: 'With Default Value',
   parameters: {
     jest: [
       'SprkTextInput',

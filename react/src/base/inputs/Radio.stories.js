@@ -43,6 +43,7 @@ export const radioButton = () => (
 );
 
 radioButton.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkSelectionInput',

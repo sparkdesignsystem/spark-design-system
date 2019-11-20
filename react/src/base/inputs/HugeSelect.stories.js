@@ -62,6 +62,7 @@ export const hugeSelectBox = () => (
 );
 
 hugeSelectBox.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkSelectionInput',

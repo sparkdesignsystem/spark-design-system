@@ -23,6 +23,7 @@ export const textarea = () => (
 );
 
 textarea.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',

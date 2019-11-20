@@ -28,6 +28,7 @@ export const dateInput = () => (
 );
 
 dateInput.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',

@@ -27,7 +27,7 @@ export const ssnInput = () => (
 );
 
 ssnInput.story = {
-  name: 'SSN Input',
+  name: 'Default',
   parameters: {
     jest: [
       'SprkRevealInput',

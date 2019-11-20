@@ -28,6 +28,7 @@ export const phoneInput = () => (
 );
 
 phoneInput.story = {
+  name: 'Default',
   parameters: {
     jest: [
       'SprkTextInput',
