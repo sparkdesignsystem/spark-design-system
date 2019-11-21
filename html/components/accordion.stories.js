@@ -1,6 +1,17 @@
 import { useEffect } from '@storybook/client-api';
 import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
+import { markdownTableBuilder } from '../../storybook-utilities/markdownTableBuilder';
+import { markdownLinkBuilder } from '../../storybook-utilities/markdownLinkBuilder';
+
+
+const data = {
+  headers: ['Class Modifier', 'Description'],
+  rows: [
+    ['.sprk-b-Table--secondary', 'Sets styles for the secondary table variant.'],
+    ['.sprk-b-Table--grouped-columns', 'Sets styles for the grouped column table variant.'],
+  ],
+};
 
 export default {
   title: 'Components/Accordion',
@@ -8,9 +19,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
-    `,
+    info: markdownLinkBuilder('accordion') + markdownTableBuilder(data),
   },
 };
 
