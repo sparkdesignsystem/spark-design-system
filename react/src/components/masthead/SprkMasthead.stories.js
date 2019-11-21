@@ -3,6 +3,7 @@ import SprkMasthead from './SprkMasthead';
 import SprkButton from '../buttons/SprkButton';
 import SprkLink from '../../base/links/SprkLink';
 import SprkDropdown from '../dropdown/SprkDropdown';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Masthead',
@@ -14,9 +15,7 @@ export default {
       'SprkMastheadMenuIcon',
       'SprkMastheadNarrowNav',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
-    `,
+    info: markdownLinkBuilder('masthead'),
   },
 };
 

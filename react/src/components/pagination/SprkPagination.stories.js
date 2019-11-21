@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkPagination from './SprkPagination';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Pagination',
@@ -9,9 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkPagination'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/pagination)
-    `,
+    info: markdownLinkBuilder('pagination'),
   },
 };
 

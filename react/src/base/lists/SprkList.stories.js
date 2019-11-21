@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkList from './SprkList';
 import SprkListItem from './SprkListItem';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/List',
@@ -10,9 +11,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkList, SprkListItem'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/List)
-    `,
+    info: markdownLinkBuilder('list'),
   },
 };
 

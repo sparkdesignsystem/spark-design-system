@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkIcon from './SprkIcon';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Icons',
@@ -9,9 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkIcon'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/icons)
-    `,
+    info: markdownLinkBuilder('icon'),
   },
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkToggle from './SprkToggle';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Toggle',
@@ -9,9 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkToggle'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/toggle)
-    `,
+    info: markdownLinkBuilder('toggle'),
   },
 };
 

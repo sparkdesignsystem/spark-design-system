@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkAward from './SprkAward';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Award',
@@ -9,9 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkAward'] ,
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
-    `,
+    info: markdownLinkBuilder('award'),
   },
 };
 

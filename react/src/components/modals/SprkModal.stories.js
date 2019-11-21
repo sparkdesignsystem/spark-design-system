@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkModal from './SprkModal';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Modal',
@@ -14,9 +15,7 @@ export default {
       'Mask',
       'ModalFooter',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/modal)
-    `,
+    info: markdownLinkBuilder('modal'),
   },
 
 };

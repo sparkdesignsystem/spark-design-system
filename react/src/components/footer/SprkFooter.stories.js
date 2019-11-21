@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Footer',
@@ -9,9 +10,7 @@ export default {
   component: SprkFooter,
   parameters: {
     jest: ['SprkFooter'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
-    `,
+    info: markdownLinkBuilder('footer'),
   },
 };
 

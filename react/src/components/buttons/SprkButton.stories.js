@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkButton from './SprkButton';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Button',
@@ -9,9 +10,7 @@ export default {
   component: SprkButton,
   parameters: {
     jest: ['SprkButton'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/button)
-    `,
+    info: markdownLinkBuilder('button'),
    },
 };
 

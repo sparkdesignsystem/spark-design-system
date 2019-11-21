@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Link',
@@ -10,9 +11,7 @@ export default {
   component: SprkLink,
   parameters: {
     jest: ['SprkLink'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/link)
-    `,
+    info: markdownLinkBuilder('link'),
   },
 };
 

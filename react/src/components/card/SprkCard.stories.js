@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkCard from './SprkCard';
+import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Card',
@@ -9,9 +10,7 @@ export default {
   component: SprkCard,
   parameters: {
     jest: ['SprkCard'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
-    `,
+    info: markdownLinkBuilder('card'),
   },
 };
 
