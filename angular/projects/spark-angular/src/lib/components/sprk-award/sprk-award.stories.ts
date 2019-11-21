@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAwardComponent } from './sprk-award.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Award',
@@ -16,9 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
-    `,
+    info: markdownLinkBuilder('award'),
     docs: { iframeHeight: 400 },
   },
 };

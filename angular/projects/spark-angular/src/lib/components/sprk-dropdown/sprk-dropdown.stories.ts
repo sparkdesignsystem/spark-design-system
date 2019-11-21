@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Dropdown',
@@ -15,9 +16,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dropdown)
-    `,
+    info: markdownLinkBuilder('dropdown'),
     docs: { iframeHeight: 200 },
   },
 };

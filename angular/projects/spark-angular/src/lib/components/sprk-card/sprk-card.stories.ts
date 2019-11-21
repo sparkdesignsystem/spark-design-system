@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Card',
@@ -17,9 +18,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
-    `,
+    info: markdownLinkBuilder('card'),
     docs: { iframeHeight: 200 },
   },
 };

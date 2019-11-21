@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkTableModule } from './sprk-table.module';
 import { SprkTableComponent } from './sprk-table.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Table',
@@ -13,9 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
-    `,
+    info: markdownLinkBuilder('table'),
     docs: { iframeHeight: 380 },
   },
 };

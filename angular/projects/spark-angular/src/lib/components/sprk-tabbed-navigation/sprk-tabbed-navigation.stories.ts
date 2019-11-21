@@ -7,6 +7,7 @@ import {
   SprkTabbedNavigationTabModule
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 
 export default {
@@ -20,9 +21,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/tabs)
-    `,
+    info: markdownLinkBuilder('tabs'),
     docs: { iframeHeight: 300 },
   },
 };

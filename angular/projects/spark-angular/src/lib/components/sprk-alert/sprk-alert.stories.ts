@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Alert',
@@ -13,9 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
-    `,
+    info: markdownLinkBuilder('alert'),
     docs: { iframeHeight: 120 },
   },
 };

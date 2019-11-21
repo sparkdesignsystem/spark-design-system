@@ -2,6 +2,7 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Stack',
@@ -14,9 +15,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
-    `,
+    info: markdownLinkBuilder('stack'),
     docs: { iframeHeight: 180 },
   },
 };

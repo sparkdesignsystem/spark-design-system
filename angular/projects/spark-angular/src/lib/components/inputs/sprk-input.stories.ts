@@ -19,6 +19,7 @@ import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/s
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Input',
@@ -40,12 +41,10 @@ export default {
     }
   },
   parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownLinkBuilder('input'),
     docs: { iframeHeight: 200 },
-  }
-}
+  },
+};
 
 const modules = {
   imports: [

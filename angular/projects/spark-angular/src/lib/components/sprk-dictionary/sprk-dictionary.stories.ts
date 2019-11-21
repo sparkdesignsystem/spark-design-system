@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDictionaryModule } from './sprk-dictionary.module';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Dictionary',
@@ -13,9 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dictionary)
-    `,
+    info: markdownLinkBuilder('dictionary'),
     docs: { iframeHeight: 500 },
   },
 };

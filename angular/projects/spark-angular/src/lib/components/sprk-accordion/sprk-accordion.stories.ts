@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Accordion',
@@ -17,9 +18,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
-    `,
+    info: markdownLinkBuilder('accordion'),
     docs: { iframeHeight: 420 },
   },
 };

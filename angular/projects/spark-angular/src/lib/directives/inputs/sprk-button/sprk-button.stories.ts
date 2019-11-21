@@ -1,6 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
 import { SprkButtonDirective } from './sprk-button.directive';
+import { markdownLinkBuilder } from '../../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Button',
@@ -13,9 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/button)
-    `,
+    info: markdownLinkBuilder('button'),
     docs: { iframeHeight: 100 },
   },
  };

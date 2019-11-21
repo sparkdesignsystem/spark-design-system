@@ -4,6 +4,7 @@ import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkLinkComponent } from './sprk-link.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Link',
@@ -16,9 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/link)
-    `,
+    info: markdownLinkBuilder('link'),
     docs: { iframeHeight: 60 },
   },
 };

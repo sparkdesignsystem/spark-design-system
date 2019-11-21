@@ -3,6 +3,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Promo',
@@ -15,9 +16,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/promo)
-    `,
+    info: markdownLinkBuilder('promo'),
     docs: { iframeHeight: 430 },
   },
 };

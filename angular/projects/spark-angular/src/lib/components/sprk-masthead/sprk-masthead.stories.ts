@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkLinkModule } from '../sprk-link/sprk-link.module';
 import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
+import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
 export default {
   title: 'Components/Masthead',
@@ -18,9 +19,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
-    `,
+    info: markdownLinkBuilder('masthead'),
     docs: { iframeHeight: 300 },
   },
 };
