@@ -5,7 +5,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
 import 'iframe-resizer/js/iframeResizer.contentWindow.min';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
-import '../../storybook-theming/icon-loader';
+import '../../storybook-utilities/icon-loader';
 
 addDecorator(withA11y);
 
