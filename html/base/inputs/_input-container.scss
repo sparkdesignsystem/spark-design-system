@@ -119,6 +119,10 @@
   opacity: $sprk-input-huge-placeholder-opacity;
 }
 
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput::-ms-input-placeholder {
+  opacity: $sprk-input-huge-placeholder-opacity;
+}
+
 // IE11 Override
 .sprk-b-InputContainer--huge
 .sprk-b-TextInputIconContainer
