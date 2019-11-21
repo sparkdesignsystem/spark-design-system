@@ -94,6 +94,24 @@
   padding-top: $sprk-input-huge-active-padding-top;
 }
 
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus::-ms-input-placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput:focus::-ms-input-placeholder,
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label::-ms-input-placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-TextInput--float-label::-ms-input-placeholder,
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-Input--has-floating-label::-ms-input-placeholder,
+.sprk-b-InputContainer--huge
+.sprk-b-TextInputIconContainer
+.sprk-b-TextInput.sprk-b-Input--has-floating-label::-ms-input-placeholder,
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::-ms-input-placeholder {
+  opacity: $sprk-input-huge-placeholder-active-opacity;
+  transition-delay: $sprk-input-huge-placeholder-transition-delay;
+  transition-property: $sprk-input-huge-placeholder-transition-property;
+}
+
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus::placeholder,
 .sprk-b-InputContainer--huge
 .sprk-b-TextInputIconContainer
@@ -112,14 +130,14 @@
   transition-property: $sprk-input-huge-placeholder-transition-property;
 }
 
+.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput::-ms-input-placeholder {
+  opacity: $sprk-input-huge-placeholder-opacity;
+}
+
 .sprk-b-InputContainer--huge
 .sprk-b-TextInputIconContainer
 .sprk-b-TextInput::placeholder,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput::placeholder {
-  opacity: $sprk-input-huge-placeholder-opacity;
-}
-
-.sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput::-ms-input-placeholder {
   opacity: $sprk-input-huge-placeholder-opacity;
 }
 
