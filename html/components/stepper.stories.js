@@ -5,7 +5,7 @@ import '../utilities/polyfills/CustomEvent';
 import '../utilities/polyfills/ObjectPrepend';
 
 export default {
-  title: 'Components|Stepper',
+  title: 'Components/Stepper',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

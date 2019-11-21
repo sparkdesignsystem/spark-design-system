@@ -2,7 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { pagination } from './pagination';
 
 export default {
-  title: 'Components|Pagination',
+  title: 'Components/Pagination',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

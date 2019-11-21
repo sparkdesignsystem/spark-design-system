@@ -5,7 +5,7 @@ import SprkLink from '../../base/links/SprkLink';
 import SprkDropdown from '../dropdown/SprkDropdown';
 
 export default {
-  title: 'Components|Masthead',
+  title: 'Components/Masthead',
   component: SprkMasthead,
   parameters: {
     jest: [
@@ -19,8 +19,6 @@ export default {
     `,
   },
 };
-
-
 
 const links = [
   {

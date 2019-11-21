@@ -18,31 +18,30 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
   `
 })
 export class SprkHugeInputContainerComponent implements OnInit {
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
-   */
+ /**
+  * Expects a space separated string
+  * of classes to be added to the
+  * component.
+  */
   @Input()
   additionalClasses: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon container.
-   */
+ /**
+  * Expects a space separated string
+  * of classes to be added to the
+  * icon container.
+  */
   @Input()
   iconContainerClasses: string;
-
   /**
    * This component expects a child label element
    * with the `sprkLabel` directive.
    */
   @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
-  /**
-   * This component expects a child input element
-   * with the `sprkInput` directive.
-   */
+ /**
+  * This component expects a child input element
+  * with the `sprkInput` directive.
+  */
   @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
   /**

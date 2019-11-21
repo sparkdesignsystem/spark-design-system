@@ -4,7 +4,7 @@ import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-sp
 import '../src/polyfills';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-loader';
-import { setCompodocJson } from '@storybook/addon-docs/angular';
+import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 
 setCompodocJson(docJson);
@@ -12,6 +12,7 @@ addDecorator(withA11y);
 addParameters({
   options: {
     theme: sparkTheme,
+    showRoots: true,
     storySort: (a, b) =>
       a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, { numeric: true }),
   },
@@ -25,6 +26,7 @@ addParameters({
       }
       return null;
     },
+    extractProps,
   },
 });
 

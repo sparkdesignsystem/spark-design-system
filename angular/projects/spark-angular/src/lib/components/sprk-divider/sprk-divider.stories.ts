@@ -3,7 +3,7 @@ import { SprkDividerModule } from './sprk-divider.module';
 import { SprkDividerComponent } from './sprk-divider.component';
 
 export default {
-  title: 'Components|Divider',
+  title: 'Components/Divider',
   component: SprkDividerComponent,
   decorators: [
     storyWrapper(
@@ -16,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/divider)
     `,
+    docs: { iframeHeight: 60 },
   },
 };
 

@@ -6,7 +6,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { SprkLinkComponent } from './sprk-link.component';
 
 export default {
-  title: 'Components|Link',
+  title: 'Components/Link',
   component: SprkLinkComponent,
   decorators: [
     storyWrapper(
@@ -19,6 +19,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/link)
     `,
+    docs: { iframeHeight: 60 },
   },
 };
 

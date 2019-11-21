@@ -3,7 +3,7 @@ import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapp
 import { SprkButtonDirective } from './sprk-button.directive';
 
 export default {
-  title: 'Components|Button',
+  title: 'Components/Button',
   directive: SprkButtonDirective,
   decorators: [
     storyWrapper(
@@ -16,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/button)
     `,
+    docs: { iframeHeight: 100 },
   },
  };
 

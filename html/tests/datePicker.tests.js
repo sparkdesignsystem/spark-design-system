@@ -11,7 +11,9 @@ describe('datePicker tests', () => {
   const tinyDatePickerStub = (element, config) => {
     config.format(new Date('10/31/1999'));
     const stub = {
-      on: (eventName, cb) => { cb(); },
+      on: (eventName, cb) => {
+        cb();
+      },
     };
 
     return stub;
@@ -19,9 +21,9 @@ describe('datePicker tests', () => {
 
   const tdpSpy = sinon.spy(tinyDatePickerStub);
 
-  const { datePicker } = proxyquire('../base/datePicker',
-    { 'tiny-date-picker': tdpSpy });
-
+  const { datePicker } = proxyquire('../base/datePicker', {
+    'tiny-date-picker': tdpSpy,
+  });
 
   beforeEach(() => {
     dp = document.createElement('div'); // calendar stub

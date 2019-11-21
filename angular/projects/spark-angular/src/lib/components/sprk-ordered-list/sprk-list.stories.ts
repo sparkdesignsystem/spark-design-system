@@ -5,7 +5,7 @@ import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
 import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
 
 export default {
-  title: 'Components|List',
+  title: 'Components/List',
   component: SprkUnorderedListComponent,
   decorators: [
     storyWrapper(
@@ -14,6 +14,12 @@ export default {
       )
     )
   ],
+  parameters: {
+    info: `
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/list)
+    `,
+    docs: { iframeHeight: 100 },
+  },
 };
 
 const modules = {

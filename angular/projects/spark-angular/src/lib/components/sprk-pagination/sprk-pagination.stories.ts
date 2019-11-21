@@ -5,7 +5,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 
 export default {
-  title: 'Components|Pagination',
+  title: 'Components/Pagination',
   component: SprkPaginationComponent,
   decorators: [
     storyWrapper(
@@ -18,6 +18,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/pagination)
     `,
+    docs: { iframeHeight: 70 },
   },
 };
 

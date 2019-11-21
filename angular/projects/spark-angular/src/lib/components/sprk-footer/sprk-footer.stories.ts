@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
 
 export default {
-  title: 'Components|Footer',
+  title: 'Components/Footer',
   component: SprkFooterComponent,
   decorators: [
     storyWrapper(
@@ -19,6 +19,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
     `,
+    docs: { iframeHeight: 800 },
   },
 };
 

@@ -7,7 +7,7 @@ import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 
 export default {
-  title: 'Components|Card',
+  title: 'Components/Card',
   component: SprkCardComponent,
   decorators: [
     storyWrapper(
@@ -20,6 +20,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
     `,
+    docs: { iframeHeight: 200 },
   },
 };
 
@@ -56,6 +57,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    docs: { iframeHeight: 150 },
+  },
 };
 
 export const standout = () => ({
@@ -122,7 +126,10 @@ export const highlightedHeader = () => ({
 });
 
 highlightedHeader.story = {
-  name: 'Highlighted Header'
+  name: 'Highlighted Header',
+  parameters: {
+    docs: { iframeHeight: 300 },
+  },
 };
 
 export const teaser = () => ({
@@ -148,6 +155,9 @@ export const teaser = () => ({
 
 teaser.story = {
   name: 'Teaser',
+  parameters: {
+    docs: { iframeHeight: 500 },
+  },
 };
 
 export const twoUp = () => ({
@@ -200,6 +210,9 @@ export const twoUp = () => ({
 
 twoUp.story = {
   name: 'Card Layout - Two Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };
 
 export const threeUp = () => ({
@@ -269,7 +282,10 @@ export const threeUp = () => ({
 });
 
 threeUp.story = {
-  name: 'Card Layout - Three Up'
+  name: 'Card Layout - Three Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };
 
 export const fourUp = () => ({
@@ -358,4 +374,7 @@ export const fourUp = () => ({
 
 fourUp.story = {
   name: 'Card Layout - Four Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };

@@ -1,13 +1,10 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
 
 export default {
-  title: 'Components|Link',
+  title: 'Components/Link',
   decorators: [
-    withKnobs,
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkLink,
@@ -21,15 +18,12 @@ export default {
 
 export const defaultStory = () => (
   <SprkLink
-    onClick={action('click')}
-    onFocus={action('focus')}
-    element={text('element', 'a')}
-    href={text('href', 'https://www.sparkdesignsystem.com')}
-    idString={text('idString', 'link-1')}
-    analyticsString={text('analyticsString', 'link-default')}
-    additionalClasses={text('additionalClasses', '') || undefined}
+    element="a"
+    href="https://www.sparkdesignsystem.com"
+    idString="link-1"
+    analyticsString="link-default"
   >
-    {text('text', 'Base Link')}
+    Base Link
   </SprkLink>
 );
 
@@ -39,29 +33,23 @@ defaultStory.story = {
 
 export const simple = () => (
   <SprkLink
-    element={text('element', 'a')}
-    onClick={action('click')}
-    onFocus={action('focus')}
+    element="a"
     variant="simple"
-    analyticsString={text('analyticsString', 'link-simple')}
-    idString={text('idString', 'link-2')}
-    href={text('href', 'https://www.sparkdesignsystem.com')}
-    additionalClasses={text('additionalClasses', '') || undefined}
+    analyticsString="link-simple"
+    idString="link-2"
+    href="https://www.sparkdesignsystem.com"
   >
-    {text('text', 'Simple Link')}
+    Simple Link
   </SprkLink>
 );
 
 export const iconWithTextLink = () => (
   <SprkLink
-    element={text('element', 'a')}
-    onClick={action('click')}
-    onFocus={action('focus')}
-    analyticsString={text('analyticsString', 'link-has-icon')}
-    href={text('href', 'https://www.sparkdesignsystem.com')}
-    additionalClasses={text('additionalClasses', '') || undefined}
+    element="a"
+    analyticsString="link-icon"
+    href="https://www.sparkdesignsystem.com"
     variant="has-icon"
-    idString={text('idString', 'link-3')}
+    idString="link-3"
   >
     <SprkIcon
       additionalClasses="
@@ -70,7 +58,7 @@ export const iconWithTextLink = () => (
         sprk-c-Icon--stroke-current-color"
       iconName="communication"
     />
-    {text('text', 'Message Us')}
+    Message Us
   </SprkLink>
 );
 
@@ -80,14 +68,12 @@ iconWithTextLink.story = {
 
 export const disabled = () => (
   <SprkLink
-    element={text('element', 'a')}
-    onClick={action('click')}
-    analyticsString={text('analyticsString', 'link-disabled')}
+    element="a"
+    analyticsString="link-disabled"
     variant="disabled"
-    idString={text('idString', 'link-4')}
-    href={text('href', 'https://www.sparkdesignsystem.com')}
-    additionalClasses={text('additionalClasses', '') || undefined}
+    idString="link-4"
+    href="https://www.sparkdesignsystem.com"
   >
-    {text('text', 'Disabled Link')}
+    Disabled Link
   </SprkLink>
 );

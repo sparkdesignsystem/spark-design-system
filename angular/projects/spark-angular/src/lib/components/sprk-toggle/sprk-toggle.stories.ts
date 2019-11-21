@@ -6,7 +6,7 @@ import { SprkToggleModule } from './sprk-toggle.module';
 import { SprkToggleComponent } from './sprk-toggle.component';
 
 export default {
-  title: 'Components|Toggle',
+  title: 'Components/Toggle',
   component: SprkToggleComponent,
   decorators: [
     storyWrapper(
@@ -19,6 +19,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/toggle)
     `,
+    docs: { iframeHeight: 160 },
   },
 };
 

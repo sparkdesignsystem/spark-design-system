@@ -21,7 +21,7 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 
 export default {
-  title: 'Components|Input',
+  title: 'Components/Input',
   component: SprkIconInputContainerComponent,
   decorators: [
     storyWrapper(
@@ -43,8 +43,9 @@ export default {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,
-  },
-};
+    docs: { iframeHeight: 200 },
+  }
+}
 
 const modules = {
   imports: [
@@ -656,3 +657,9 @@ export const datePicker = () => ({
     </sprk-icon-input-container>
   `,
 });
+
+datePicker.story = {
+  parameters: {
+    docs: { iframeHeight: 400 },
+  }
+};

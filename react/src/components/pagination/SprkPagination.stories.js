@@ -1,9 +1,8 @@
 import React from 'react';
-
 import SprkPagination from './SprkPagination';
 
 export default {
-  title: 'Components|Pagination',
+  title: 'Components/Pagination',
   component: SprkPagination,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

@@ -1,10 +1,9 @@
 import React from 'react';
-
 import SprkList from './SprkList';
 import SprkListItem from './SprkListItem';
 
 export default {
-  title: 'Components|List',
+  title: 'Components/List',
   component: SprkList,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

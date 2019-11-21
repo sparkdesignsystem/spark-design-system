@@ -1,10 +1,9 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { action } from '@storybook/addon-actions';
 import { SprkModalModule } from './sprk-modal.module';
 import { SprkModalComponent } from './sprk-modal.component';
 
 export default {
-  title: 'Components|Modal',
+  title: 'Components/Modal',
   component: SprkModalComponent,
   decorators: [
     storyWrapper(
@@ -17,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/modal)
     `,
+    docs: { iframeHeight: 450 },
   },
 };
 
@@ -42,8 +42,6 @@ export const defaultStory = () => ({
   `,
   props: {
     choiceVisible: true,
-    toggleChoiceModal: action('Cancel Click'),
-    confirmClick: action('Confirm Click'),
   },
 });
 
@@ -68,7 +66,6 @@ export const info = () => ({
   `,
   props: {
     infoVisible: true,
-    toggleInfoModal: action('Cancel Click'),
   },
 });
 

@@ -3,7 +3,7 @@ import { SprkTableModule } from './sprk-table.module';
 import { SprkTableComponent } from './sprk-table.component';
 
 export default {
-  title: 'Components|Table',
+  title: 'Components/Table',
   component: SprkTableComponent,
   decorators: [
     storyWrapper(
@@ -16,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
     `,
+    docs: { iframeHeight: 380 },
   },
 };
 

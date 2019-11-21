@@ -1,11 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-
 import SprkDropdown from './SprkDropdown';
 import SprkButton from '../buttons/SprkButton';
 
 export default {
-  title: 'Components|Dropdown',
+  title: 'Components/Dropdown',
   component: SprkDropdown,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

@@ -3,7 +3,7 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkIconComponent } from './sprk-icon.component';
 
 export default {
-  title: 'Components|Icons',
+  title: 'Components/Icons',
   component: SprkIconComponent,
   decorators: [
     storyWrapper(
@@ -16,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/icon)
     `,
+    docs: { iframeHeight: 90 },
   },
 };
 

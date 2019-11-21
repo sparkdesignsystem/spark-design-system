@@ -5,7 +5,7 @@ import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
 
 export default {
-  title: 'Components|Promo',
+  title: 'Components/Promo',
   component: SprkPromoComponent,
   decorators: [
     storyWrapper(
@@ -18,6 +18,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/promo)
     `,
+    docs: { iframeHeight: 430 },
   },
 };
 
@@ -70,6 +71,12 @@ export const flag = () => ({
     </sprk-promo>
   `,
 });
+
+flag.story = {
+  parameters: {
+    docs: { iframeHeight: 300 },
+  },
+}
 
 export const withImage = () => ({
   moduleMetadata: modules,

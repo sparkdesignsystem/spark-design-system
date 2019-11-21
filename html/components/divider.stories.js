@@ -1,5 +1,5 @@
 export default {
-  title: 'Components|Divider',
+  title: 'Components/Divider',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

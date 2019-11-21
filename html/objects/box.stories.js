@@ -1,5 +1,5 @@
 export default {
-  title: 'Components|Box',
+  title: 'Components/Box',
   decorators: [
     story => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>

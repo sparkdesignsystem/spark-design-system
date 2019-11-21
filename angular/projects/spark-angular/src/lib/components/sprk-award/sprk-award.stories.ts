@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAwardComponent } from './sprk-award.component';
 
 export default {
-  title: 'Components|Award',
+  title: 'Components/Award',
   component: SprkAwardComponent,
   decorators: [
     storyWrapper(
@@ -19,6 +19,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
     `,
+    docs: { iframeHeight: 400 },
   },
 };
 

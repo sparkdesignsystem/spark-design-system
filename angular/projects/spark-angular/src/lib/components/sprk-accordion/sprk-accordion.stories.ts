@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 
 export default {
-  title: 'Components|Accordion',
+  title: 'Components/Accordion',
   component: SprkAccordionComponent,
   decorators: [
     storyWrapper(
@@ -20,6 +20,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
     `,
+    docs: { iframeHeight: 420 },
   },
 };
 

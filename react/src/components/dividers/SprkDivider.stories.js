@@ -2,7 +2,7 @@ import React from 'react';
 import SprkDivider from './SprkDivider';
 
 export default {
-  title: 'Components|Divider',
+  title: 'Components/Divider',
   component: SprkDivider,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>

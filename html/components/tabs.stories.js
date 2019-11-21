@@ -2,7 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { tabs } from './tabs';
 
 export default {
-  title: 'Components|Tabs',
+  title: 'Components/Tabs',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],

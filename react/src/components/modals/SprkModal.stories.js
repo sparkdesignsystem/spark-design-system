@@ -1,9 +1,8 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import SprkModal from './SprkModal';
 
 export default {
-  title: 'Components|Modal',
+  title: 'Components/Modal',
   component: SprkModal,
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
@@ -28,8 +27,6 @@ export const defaultStory = () => (
     isVisible={true}
     confirmText="Confirm Text"
     cancelText="Cancel Text"
-    confirmClick={action('confirm')}
-    cancelClick={action('cancel')}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
@@ -45,8 +42,6 @@ export const infoStory = () => (
     title="Info Modal"
     isVisible={true}
     variant="info"
-    confirmClick={action('confirm')}
-    cancelClick={action('cancel')}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.

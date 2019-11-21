@@ -117,3 +117,7 @@ body {
   border: 2px solid $sprk-black;
   height: 4rem;
 }
+
+.sbdocs.sbdocs-content {
+  max-width: $sprk-centered-column-width;
+}

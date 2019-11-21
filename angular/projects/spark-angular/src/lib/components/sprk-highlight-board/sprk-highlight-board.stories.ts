@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 
 export default {
-  title: 'Components|Highlight Board',
+  title: 'Components/Highlight Board',
   component: SprkHighlightBoardComponent,
   decorators: [
     storyWrapper(
@@ -18,6 +18,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/highlight-board)
     `,
+    docs: { iframeHeight: 600 },
   },
 };
 
@@ -67,6 +68,12 @@ export const noImage = () => ({
   `,
 });
 
+noImage.story = {
+  parameters: {
+    docs: { iframeHeight: 300 },
+  }
+};
+
 export const stacked = () => ({
   moduleMetadata: modules,
   template: `
@@ -81,4 +88,10 @@ export const stacked = () => ({
     </sprk-highlight-board>
   `,
 });
+
+stacked.story = {
+  parameters: {
+    docs: { iframeHeight: 800 },
+  }
+}
 

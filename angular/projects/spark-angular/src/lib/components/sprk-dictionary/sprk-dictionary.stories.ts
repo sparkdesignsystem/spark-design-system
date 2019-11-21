@@ -3,7 +3,7 @@ import { SprkDictionaryModule } from './sprk-dictionary.module';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
 
 export default {
-  title: 'Components|Dictionary',
+  title: 'Components/Dictionary',
   component: SprkDictionaryComponent,
   decorators: [
     storyWrapper(
@@ -16,6 +16,7 @@ export default {
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dictionary)
     `,
+    docs: { iframeHeight: 500 },
   },
 };
 

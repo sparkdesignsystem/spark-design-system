@@ -2,7 +2,7 @@ import { useEffect } from '@storybook/client-api';
 import { modals } from './modals';
 
 export default {
-  title: 'Components|Modal',
+  title: 'Components/Modal',
   decorators: [
     story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
   ],
