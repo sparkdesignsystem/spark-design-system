@@ -1,9 +1,9 @@
 import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
-import sparkTheme from "../../storybook-theming/storybook-spark-theme";
+import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-spark-theme";
 import '../src/polyfills';
-import '!style-loader!css-loader!sass-loader!../../storybook-theming/font-loader.scss';
-import '../../storybook-theming/icon-loader';
+import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
+import '../../storybook-utilities/icon-loader';
 import { setCompodocJson } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 
