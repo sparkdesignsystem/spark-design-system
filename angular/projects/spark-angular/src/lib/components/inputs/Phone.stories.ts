@@ -4,13 +4,12 @@ import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.m
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
-import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
+import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 
 
 export default {
   title: 'Components/Input/Phone',
-  component: SprkIconInputContainerComponent,
+  component: SparkInputContainerComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -42,7 +41,6 @@ const modules = {
     SprkInputModule,
     SprkIconModule,
     SprkFieldErrorModule,
-    SprkIconInputContainerModule,
   ],
 };
 

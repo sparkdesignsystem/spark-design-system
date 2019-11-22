@@ -3,12 +3,12 @@ import { SparkInputContainerModule } from './sprk-input-container/sprk-input-con
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
+import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 
 export default {
   title: 'Components/Input/Textarea',
-  component: SprkIconInputContainerComponent,
+  component: SparkInputContainerComponent,
   decorators: [
     storyWrapper(
       storyContent => (

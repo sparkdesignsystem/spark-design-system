@@ -1,5 +1,4 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
@@ -37,7 +36,6 @@ export default {
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,

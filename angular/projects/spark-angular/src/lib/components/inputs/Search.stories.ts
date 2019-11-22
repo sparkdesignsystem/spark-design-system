@@ -4,11 +4,11 @@ import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.m
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
-import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
+import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 
 export default {
   title: 'Components/Input/Search',
-  component: SprkIconInputContainerComponent,
+  component: SparkInputContainerComponent,
   decorators: [
     storyWrapper(
       storyContent => (

@@ -1,16 +1,13 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
-import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionContainerComponent} from './sprk-selection-container/sprk-selection-container.component';
-import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 
 export default {
   title: 'Components/Input/Select',
-  component: SprkSelectionContainerComponent,
+  component: SparkInputContainerComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -40,9 +37,6 @@ const modules = {
     SparkInputContainerModule,
     SprkIconInputContainerModule,
     SprkLabelModule,
-    SprkSelectionContainerModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionLabelModule,
     SprkIconModule,
   ],
 };

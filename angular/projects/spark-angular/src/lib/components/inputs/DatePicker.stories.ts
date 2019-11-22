@@ -1,16 +1,15 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
+import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 
 export default {
   title: 'Components/Input/Date Picker',
-  component: SprkIconInputContainerComponent,
+  component: SparkInputContainerComponent,
   decorators: [
     storyWrapper(
       storyContent => (
@@ -37,13 +36,12 @@ export default {
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkIconInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
     SprkFieldErrorModule,
     SprkDatepickerModule,
-    SprkIconInputContainerModule,
   ],
 };
 
