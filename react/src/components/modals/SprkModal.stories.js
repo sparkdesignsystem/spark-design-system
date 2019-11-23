@@ -1,5 +1,8 @@
 import React from 'react';
 import SprkModal from './SprkModal';
+import Mask from './Mask';
+import CloseButton from './CloseButton';
+import ModalFooter from './ModalFooter';
 
 export default {
   title: 'Components/Modal',
@@ -8,6 +11,11 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   parameters: {
+    subcomponents: {
+      Mask,
+      ModalFooter,
+      CloseButton,
+    },
     jest: [
       'SprkModal',
       'CloseButton',

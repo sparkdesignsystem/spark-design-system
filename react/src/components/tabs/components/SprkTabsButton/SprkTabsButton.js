@@ -63,11 +63,15 @@ SprkTabsButton.defaultProps = {
 };
 
 SprkTabsButton.propTypes = {
-  // The content for the button
+  /**
+   * The content for the button.
+   */
   tabBtnChildren: PropTypes.node.isRequired,
-  // Value supplied decides if button is active
+  /**
+   * Value supplied decides if button is active.
+   */
   isActive: PropTypes.bool,
-  // A unique ID for each tab button
+  /** A unique ID for each tab button. */
   tabBtnId: PropTypes.string.isRequired,
   // State passed from parent that contains an id of a btn tab
   // when the corresponding panel should be focused

@@ -136,41 +136,69 @@ class SprkMastheadDropdown extends Component {
 }
 
 SprkMastheadDropdown.propTypes = {
-  /** Classes applied to the dropdown */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** Classes applied to the icon */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon.
+   */
   additionalIconClasses: PropTypes.string,
-  /** Classes applied to the link that triggers the dropdown to open */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * dropdown trigger link.
+   */
   additionalTriggerClasses: PropTypes.string,
-  /** Classes applied to the text in the trigger link */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * text inside in the trigger.
+   */
   additionalTriggerTextClasses: PropTypes.string,
-  /** Assigned to data-analytics */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** Incoming children */
+  /** Incoming children. */
   children: PropTypes.node,
-  /** Choices object that builds the dropdown contents */
+  /** Choices object that builds the dropdown contents. */
   choices: PropTypes.shape({
-    /** An array of objects that describe the items in the menu */
+    /** An array of objects that describe the items in the menu. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        /** The element to render for each menu item */
+        /** The element to render for each menu item. */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-        /** Assigned to href of the element is 'a' */
+        /** Assigned to `href` of the element is 'a'. */
         href: PropTypes.string,
-        /** The text inside the item */
+        /** The text inside the item. */
         text: PropTypes.string,
       }),
     ),
   }),
-  /** The text set as the default of the trigger link */
+  /** The text set as the default of the trigger link. */
   triggerText: PropTypes.string,
-  /** The icon type of the trigger icon */
+  /** The icon type of the trigger icon .*/
   iconName: PropTypes.string,
-  /** Assigned to data-id */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** The text of the optional header above the choices in the dropdown */
+  /** The text of the optional header above the choices in the dropdown. */
   title: PropTypes.string,
-  /** The variant name */
+  /** The variant name. */
   variant: PropTypes.oneOf(['base', 'informational']),
 };
 

@@ -9,6 +9,9 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   parameters: {
+    subcomponents: {
+      SprkListItem,
+    },
     jest: ['SprkList, SprkListItem'],
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/List)

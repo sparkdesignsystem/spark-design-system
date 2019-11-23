@@ -98,9 +98,16 @@ SprkAccordionItem.defaultProps = {
 };
 
 SprkAccordionItem.propTypes = {
-  /** Content for the item */
+  /**
+   * Children content for the item.
+   */
   children: PropTypes.node,
-  /** Value for the data-analytics attribute on the accordion trigger */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the clickable item.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
   /** The text for the item heading. */
   heading: PropTypes.string.isRequired,
