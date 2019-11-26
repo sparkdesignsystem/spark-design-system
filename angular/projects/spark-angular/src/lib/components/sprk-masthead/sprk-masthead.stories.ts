@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkLinkModule } from '../sprk-link/sprk-link.module';
 import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
+import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
+import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 
 export default {
   title: 'Components/Masthead',
@@ -18,6 +20,10 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkMastheadAccordionComponent,
+      SprkMastheadAccordionItemComponent,
+    },
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
     `,
