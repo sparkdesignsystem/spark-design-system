@@ -4,7 +4,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
 
 export default {
   title: 'Components/Button',
-  directive: SprkButtonDirective,
+  component: SprkButtonDirective,
   decorators: [
     storyWrapper(
       storyContent => (
