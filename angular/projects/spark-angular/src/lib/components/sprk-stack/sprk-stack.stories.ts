@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
 
@@ -15,6 +16,9 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkStackItemDirective,
+    },
     info: markdownLinkBuilder('stack'),
     docs: { iframeHeight: 180 },
   },

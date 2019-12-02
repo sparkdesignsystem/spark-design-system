@@ -2,6 +2,7 @@ import React from 'react';
 import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
 
 export default {
   title: 'Components/Stepper',
@@ -10,6 +11,10 @@ export default {
   ],
   component: SprkStepper,
   parameters: {
+    subcomponents: {
+      SprkStepperSlider,
+      SprkStepperStep
+    },
     info: markdownLinkBuilder('stepper'),
     jest: [
       'SprkStepper',

@@ -1,6 +1,8 @@
 import React from 'react';
 import SprkCard from './SprkCard';
 import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import SprkCardHighlightedHeader from './components/SprkCardHighlightedHeader/SprkCardHighlightedHeader';
+import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
 
 export default {
   title: 'Components/Card',
@@ -9,6 +11,7 @@ export default {
   ],
   component: SprkCard,
   parameters: {
+    subcomponents: { SprkCardTeaser, SprkCardHighlightedHeader },
     jest: ['SprkCard'],
     info: markdownLinkBuilder('card'),
   },

@@ -5,7 +5,7 @@ import { markdownLinkBuilder } from '../../../../../../../../storybook-utilities
 
 export default {
   title: 'Components/Button',
-  directive: SprkButtonDirective,
+  component: SprkButtonDirective,
   decorators: [
     storyWrapper(
       storyContent => (

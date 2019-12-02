@@ -57,10 +57,35 @@ function SprkMastheadMenuIcon({
 }
 
 SprkMastheadMenuIcon.propTypes = {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
+  /**
+   * If `true`, the Menu will be open on first render.
+   */
   isOpen: PropTypes.bool,
+  /**
+   * Function to run when the Menu is clicked.
+   */
   toggleNarrowNav: PropTypes.func.isRequired,
 };
 

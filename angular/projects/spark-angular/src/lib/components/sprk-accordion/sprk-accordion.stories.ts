@@ -6,6 +6,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { SprkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
 
 export default {
   title: 'Components/Accordion',
@@ -18,6 +19,9 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkAccordionItemComponent,
+    },
     info: markdownLinkBuilder('accordion'),
     docs: { iframeHeight: 420 },
   },

@@ -10,6 +10,9 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   parameters: {
+    subcomponents: {
+      SprkListItem,
+    },
     jest: ['SprkList, SprkListItem'],
     info: markdownLinkBuilder('list'),
   },

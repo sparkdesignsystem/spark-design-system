@@ -74,22 +74,38 @@ class SprkMastheadBigNav extends Component {
 }
 
 SprkMastheadBigNav.propTypes = {
-  /** classes to be added to the masthead */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** assigned to data-analytics */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** assigned to data-id */
+ /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** used to render navigation inside */
+  /** Used to render navigation inside. */
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The element to render, can be 'a' or a Component like Link */
+      /** The element to render, can be 'a' or a Component like Link. */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Classes to apply to the container of the link */
+      /** Classes to apply to the container of the link. */
       additionalContainerClasses: PropTypes.string,
-      /** Adds a class if the link is active */
+      /** Adds a class if the link is active. */
       isActive: PropTypes.bool,
-      /** The link text */
+      /** The link text. */
       text: PropTypes.string,
     }),
   ).isRequired,

@@ -133,36 +133,58 @@ class SprkMastheadAccordionItem extends Component {
 }
 
 SprkMastheadAccordionItem.propTypes = {
-  // Classes added to rendered element
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  // Assigned to data-analytics
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  // Decides whether the accordion should render open by default
+  /**
+   * Decides whether the Accordion item should render open by default.
+   */
   defaultOpen: PropTypes.bool,
-  // The element to render, could be 'a' or a Component like Link
+  /**
+   * The element to render, could be 'a' or a Component.
+   */
   element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  // Assigned to the href attribute if element is 'a'
+  /**
+   * Assigned to the `href` attribute if element is 'a'.
+   */
   href: PropTypes.string,
-  // Assigned to data-id
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  // Decides if the outer link is the active link
+  /** Decides if the outer link is the active link.*/
   isActive: PropTypes.bool,
-  // Will render the element as a button with correct style
+  /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
-  // The name of the icon to render before the text
+  /** The name of the icon to render before the text. */
   leadingIcon: PropTypes.string,
-  // An array of link objects that builds the sub nav
+  /** An array of link objects that builds the sub nav. */
   subNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
-      // The element to render, could be 'a' or a Component like Link
+      /** The element to render, could be 'a' or a Component. */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      // Assigned to the href attribute if element is 'a'
+      /** Assigned to the href attribute if element is 'a'. */
       href: PropTypes.string,
-      /** The element to render, could be 'a' or a Component like Link */
+      /** The element to render, could be 'a' or a Component. */
       text: PropTypes.string,
     }),
   ),
-  /** The text inside the element */
+  /** The text inside the element. */
   text: PropTypes.string,
 };
 

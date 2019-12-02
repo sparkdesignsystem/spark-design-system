@@ -2,6 +2,7 @@ import React from 'react';
 import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 export default {
   title: 'Components/Tabs',
@@ -10,6 +11,10 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   parameters: {
+    subcomponents: {
+      SprkTabsButton,
+      SprkTabsPanel,
+    },
     jest: [
       'SprkTabs',
       'SprkTabsPanel',

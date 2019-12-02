@@ -201,6 +201,11 @@ const SprkCardTeaser = (props) => {
 };
 
 SprkCardTeaser.propTypes = {
+  /**
+   * Configuration data for the Teaser.
+   * Accepts data for the body text, the call-to-actions,
+   * the media, and the title of the Card.
+   */
   teaserConfig: PropTypes.shape({
     bodyText: PropTypes.string,
     cta: PropTypes.shape({

@@ -8,7 +8,12 @@ import {
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
 import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
-
+import {
+  SprkTabbedNavigationPanelDirective
+ } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
+import {
+  SprkTabbedNavigationTabDirective
+} from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 
 export default {
   title: 'Components/Tabs',
@@ -21,6 +26,10 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkTabbedNavigationPanelDirective,
+      SprkTabbedNavigationTabDirective,
+    },
     info: markdownLinkBuilder('tabs'),
     docs: { iframeHeight: 300 },
   },

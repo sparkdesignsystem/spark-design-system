@@ -69,11 +69,15 @@ class SprkStepperSlider extends Component {
 }
 
 SprkStepperSlider.propTypes = {
-  // The title text for the slider
+  /**
+   * The title text for the slider.
+   */
   title: PropTypes.string,
-  // The contents text for the slider
+  /** The content text for the slider. */
   contents: PropTypes.string,
-  // An object representing the style properties of this component.
+  /**
+   * An object representing the style properties of this component.
+   */
   sliderStyle: PropTypes.shape({
     top: PropTypes.number,
   }),

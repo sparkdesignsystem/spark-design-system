@@ -10,6 +10,9 @@ export default {
     story => <div className="sprk-o-Box sb-decorate">{story()}</div>
   ],
   parameters: {
+    subcomponents: {
+      SprkStackItem,
+    },
     jest: ['SprkStack', 'SprkStackItem'],
     info: markdownLinkBuilder('stack'),
   },

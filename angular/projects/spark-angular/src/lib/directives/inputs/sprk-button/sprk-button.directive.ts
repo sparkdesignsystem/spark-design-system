@@ -4,6 +4,9 @@ import { Directive, ElementRef, OnInit, Input } from '@angular/core';
   selector: '[sprkButton]'
 })
 export class SprkButtonDirective implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 
   /**

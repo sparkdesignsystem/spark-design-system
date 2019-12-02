@@ -1,6 +1,9 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
 import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
+import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
+import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 
 export default {
   title: 'Components/Footer',
@@ -9,6 +12,11 @@ export default {
   ],
   component: SprkFooter,
   parameters: {
+    subcomponents: {
+      SprkFooterAwards,
+      SprkFooterConnectIcons,
+      SprkFooterGlobalSection
+    },
     jest: ['SprkFooter'],
     info: markdownLinkBuilder('footer'),
   },
