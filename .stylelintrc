@@ -1,10 +1,6 @@
 plugins:
  -
    'stylelint-scss'
-extends:
-- './node_modules/prettier-stylelint/config.js'
-ignoreFiles:
-- './src/assets/drizzle/**/*.css'
 rules:
   #
   # Here are all the rules within stylelint, grouped first by category

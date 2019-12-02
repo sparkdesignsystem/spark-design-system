@@ -1,0 +1,37 @@
+.docs-header {
+  @media (min-width: $docs-search-wrap-breakpoint) {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+.docs-header__group {
+  margin: 1rem auto;
+
+  @media (min-width: $docs-search-wrap-breakpoint) {
+    align-items: center;
+    display: flex;
+    margin: 0;
+  }
+}
+
+.docs-header .sprk-b-InputContainer {
+  margin-bottom: 0;
+}
+
+.docs-header__menu-button {
+  background: none;
+  border: none;
+  margin-right: 1rem;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.docs-header__menu {
+  @media (max-width: $doc-site-mobile-breakpoint) {
+    display: none;
+  }
+}

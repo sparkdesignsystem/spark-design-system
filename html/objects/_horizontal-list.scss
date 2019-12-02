@@ -1,0 +1,141 @@
+// ==========================================================================
+// Horizontal List Object
+// ==========================================================================
+$space-values: (
+  tiny: $sprk-horizontal-list-spacing-tiny,
+  small: $sprk-horizontal-list-spacing-small,
+  medium: $sprk-horizontal-list-spacing-medium,
+  large: $sprk-horizontal-list-spacing-large,
+  huge: $sprk-horizontal-list-spacing-huge
+) !default;
+
+//
+// Horizontal List classes
+///
+
+@mixin HorizontalList($spacing) {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    margin-right: $spacing;
+  }
+
+  > li:last-child {
+    margin-right: 0;
+  }
+}
+
+%sprk-o-HorizontalList,
+.sprk-o-HorizontalList {
+  @include HorizontalList($spacing: $sprk-horizontal-list-spacing);
+}
+
+.sprk-o-HorizontalList--spacing-tiny {
+  @include HorizontalList($spacing: $sprk-horizontal-list-spacing-tiny);
+}
+
+.sprk-o-HorizontalList--spacing-small {
+  @include HorizontalList($spacing: $sprk-horizontal-list-spacing-small);
+}
+
+.sprk-o-HorizontalList--spacing-medium {
+  @include HorizontalList($spacing: $sprk-horizontal-list-spacing-medium);
+}
+
+.sprk-o-HorizontalList--spacing-large {
+  @include HorizontalList($spacing: $sprk-horizontal-list-spacing-large);
+}
+
+.sprk-o-HorizontalList--spacing-huge {
+  @include HorizontalList($spacing: $sprk-horizontal-list-spacing-huge);
+}
+
+.sprk-o-HorizontalList--center {
+  justify-content: center;
+}
+
+.sprk-o-HorizontalList--right {
+  justify-content: flex-end;
+}
+
+.sprk-o-HorizontalList--left {
+  justify-content: flex-start;
+}
+
+.sprk-o-HorizontalList--fill {
+  display: flex;
+  flex-wrap: nowrap;
+
+  > li {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+//
+// Character delimited Horizontal List
+///
+
+@mixin DelimitedHorizonalList($spacing, $distribution) {
+  > li {
+    margin-right: 0;
+
+    &::after {
+      @if ($distribution == 'split') {
+        margin-left: $spacing / 2;
+        margin-right: $spacing / 2;
+      }
+
+      @else if ($distribution == 'left') {
+        margin-left: $spacing;
+      } @else if ($distribution == 'right') {
+        margin-right: $spacing;
+      }
+
+      content: '#{$sprk-horizontal-list-delimiter}';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+
+.sprk-o-HorizontalList--delimited-split-distribution {
+  @include DelimitedHorizonalList($spacing: $sprk-horizontal-list-spacing, $distribution: 'split');
+}
+
+.sprk-o-HorizontalList--delimited-left-distribution {
+  @include DelimitedHorizonalList($spacing: $sprk-horizontal-list-spacing, $distribution: 'left');
+}
+
+.sprk-o-HorizontalList--delimited-right-distribution {
+  @include DelimitedHorizonalList($spacing: $sprk-horizontal-list-spacing, $distribution: 'right');
+}
+
+// Pass in a delimiter through a data attribute
+.sprk-o-HorizontalList {
+  > [data-delimiter]::after {
+    content: attr(data-delimiter) !important;
+  }
+}
+
+@each $space-name in tiny, small, medium, large, huge {
+  $space-value: map-get($map: $space-values, $key: $space-name);
+
+  .sprk-o-HorizontalList--spacing-#{$space-name}.sprk-o-HorizontalList--delimited-split-distribution {
+    @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'split');
+  }
+
+  .sprk-o-HorizontalList--spacing-#{$space-name}.sprk-o-HorizontalList--delimited-left-distribution {
+    @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'left');
+  }
+
+  .sprk-o-HorizontalList--spacing-#{$space-name}.sprk-o-HorizontalList--delimited-right-distribution {
+    @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'right');
+  }
+}

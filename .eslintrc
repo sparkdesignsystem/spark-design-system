@@ -1,21 +1,18 @@
 {
-  "extends": ["airbnb", "prettier", "plugin:jest/recommended"],
-  "plugins": ["prettier", "jest"],
+  "extends": ["airbnb", "plugin:jest/recommended"],
+  "plugins": ["jest", "import"],
   "env": {
     "browser": true,
     "jest/globals": true
   },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true,
-      "optionalDependencies": false,
-      "peerDependencies": false
-    }],
+    "no-redeclare": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
     "max-len": ["error", 80, {
       "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
       "ignoreUrls": true
     }],
-    "prettier/prettier": ["error"],
     "object-curly-newline": "off",
     "react/require-default-props" : "off",
     "react/jsx-filename-extension": "off",

@@ -1,0 +1,178 @@
+---
+  title: Setting Up Your Environment
+---
+# Environment Setup
+
+This is a guide for setting up a development environment with all of the tools necessary for building a site with Spark.
+
+This guide covers setup for a Vanilla HTML (i.e. no JS framework) site framework. We have separate guides for React and Angular environment setups.
+
+At the end of this guide you will have built a brand new website with all of the required preconditions for installing Spark.
+
+**What we'll cover in this guide:**
+- Create the initial folder structure
+- Install Webpack
+- Install Sass
+
+> To learn how to install Spark into an existing site, check out our [Installing Vanilla](./Installing_Vanilla.md) guide (or [Angular](./Installing_Angular.md), or [React](./Installing_React.md)).
+
+> To learn how to add a Spark component to your site once Spark is installed, check out the [Hello Spark](../Guides/Hello_Spark.md) guide ([Angular](../Guides/Hello_Angular.md), [React](../Guides/Hello_React.md)).
+
+## Step 0: Before You Use This Guide
+This guide makes extensive use of a tool called Node Package Manager. You can find installation instructions for NPM [here](https://www.npmjs.com/get-npm).
+
+## Step 1 - Create folder structure
+
+The first step in creating your website is creating the initial folder structure.
+
+```bash
+mkdir mySite
+
+cd mySite
+
+npm init
+```
+
+The `npm init` command tells Node Package Manager to create a `package.json` file for your new site. `package.json` keeps track of all of the dependencies that your site needs to build and run.
+
+Now we are going to create the initial files for your new site. Inside your `mySite` folder, create a `src` folder and a `dist` folder.
+
+In the `src` folder, create a file called `index.js` and copy this code into it.
+
+```javascript
+function component() {
+  const element = document.createElement('div');
+
+  element.innerHTML = 'Hello, Spark!';
+
+  return element;
+}
+
+document.body.appendChild(component());
+```
+
+In the `dist` folder, create a file called `index.html` and copy this code into it.
+
+```html
+<html>
+  <head>
+      <title>Hello, Spark!</title>
+  </head>
+  <body>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+```
+
+If you open `index.html` in a web browser, you should see this.
+
+TODO IMAGE
+
+## Step 2 - Webpack
+
+Now we are going to set up a tool called Webpack. Once we have Spark installed, we will use Webpack to combine all of the JavaScript needed to run Spark (as well as any other JavaScript dependencies our website has) into one JavaScript file that we can include in our site.
+
+Run this command to install Webpack.
+
+```bash
+npm install webpack webpack-cli --save-dev
+```
+
+> Self signed cert issues? Try `NODE_TLS_REJECT_UNAUTHORIZED=0 npm install` instead. It's just one of those things.
+
+In your `package.json` file, look for the `scripts` section. This section is a list of custom commands that Node can run against your package. We're going to add a new one for building the site with Webpack.
+
+```json
+"scripts": {
+  "build": "webpack"
+},
+```
+
+During our build, Webpack will now combine all of our javascript dependencies into a single js file called `main.js`. We want our site to use that file, so change the line in `index.html` where we set up the `<script>` tag to look like this:
+
+```html
+<script src="main.js"></script>
+```
+
+Now you can build your website by running this command:
+
+```bash
+npm run build
+```
+
+TODO - how can we verify that this is working?
+
+> Looking for more help setting up Webpack? Check out the [Webpack Getting Started Guide](https://webpack.js.org/guides/getting-started/).
+
+## Step 3 - Sass
+
+All of the CSS for Spark is included in our `npm` package. In order to use these styles in your site, you're going to import them using a tool called Sass.
+
+First, run this command to install all of the packages you'll use to build the site CSS.
+
+```bash
+# for bundling css into main.js with the javascript
+npm install sass node-sass sass-loader css-loader style-loader --save-dev
+
+# for extracting CSS into separate files. Alan's doc uses this
+npm install sass node-sass sass-loader html-webpack-plugin mini-css-extract-plugin --save-dev
+```
+
+> Self signed cert issues? Try `NODE_TLS_REJECT_UNAUTHORIZED=0 npm install` instead. It's just one of those things.
+
+In the root directory of your project, create a new file called `webpack.config.js` and paste this code into it.
+
+```javascript
+// for bundling css into main.js with the javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+    ],
+  },
+};
+
+// for extracting into a separate file
+// TODO this still doesn't work - talk to Alan
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // fallback to style-loader in development
+          process.env.NODE_ENV !== 'production'
+            ? 'style-loader'
+            : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
+};
+```
+
+# You did it!
+
+You should now have a development environment set up and ready to install Spark. For guidance on how to install Spark, check out our [Installation Guide](./Installing_Vanilla.md).
