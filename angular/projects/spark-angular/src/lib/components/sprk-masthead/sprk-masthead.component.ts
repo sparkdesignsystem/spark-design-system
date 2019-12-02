@@ -7,6 +7,11 @@ import {
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
+import {
+  SprkNarrowNavLink,
+  SprkBigNavLink,
+  SprkNarrowSelector
+} from './sprk-masthead.interfaces';
 
 @Component({
   selector: 'sprk-masthead',
@@ -279,12 +284,14 @@ export class SprkMastheadComponent implements AfterContentInit {
   @Input()
   additionalNarrowNavClasses: string;
   /**
-   * Expects an array of link objects, to be
+   * Expects an array of
+   * [SprkNarrowNavLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
+   * to be
    * represented in the narrow nav element
    * of the Masthead component.
    */
   @Input()
-  narrowNavLinks: any[];
+  narrowNavLinks: SprkNarrowNavLink[];
   /**
    * Represents the initial state of the
    * narrow nav element of the Masthead component.
@@ -302,20 +309,22 @@ export class SprkMastheadComponent implements AfterContentInit {
   @Input()
   idString: string;
   /**
-   * Expects an array of link objects, to be
-   * represented in the big nav element of
+   * Expects an array of
+   * [SprkBigNavLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead.interfaces.ts)
+   * to be
+   * used to create the Big Navigation of
    * the Masthead component.
    */
   @Input()
-  bigNavLinks: any[];
+  bigNavLinks: SprkBigNavLink[];
   /**
-   * Expects a `narrowSelector` object that
-   * represents choices to be supplied to
-   * the dropdown above the narrow navigation
-   * of link objects.
+   * Expects a [SprkNarrowSelector](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead.interfaces.ts)
+   * object that
+   * represents dropdown choices inside the dropdown
+   * rendered in the Narrow Navigation.
    */
   @Input()
-  narrowSelector: object;
+  narrowSelector: SprkNarrowSelector;
 
   /**
    * @ignore
@@ -568,3 +577,5 @@ export class SprkMastheadComponent implements AfterContentInit {
     this.isNarrowNavOpen = false;
   }
 }
+
+

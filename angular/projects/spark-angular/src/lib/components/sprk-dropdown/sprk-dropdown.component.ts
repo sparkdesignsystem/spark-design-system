@@ -6,6 +6,7 @@ import {
   HostListener,
   EventEmitter
 } from '@angular/core';
+import { SprkDropdownChoice } from './sprk-dropdown.interfaces';
 
 @Component({
   selector: 'sprk-dropdown',
@@ -167,16 +168,17 @@ export class SprkDropdownComponent {
   title: string;
   /**
    * The value supplied will be assigned to
-   * the `.Dropdown__title` text.
-   * Should be used if using the `mastheadSelector` type.
+   * the `.sprk-c-Dropdown__title` text.
    */
   @Input()
   selector: string;
   /**
-   * Expects an array of choice objects.
+   * Expects an array of
+   * [SprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   *  objects.
    */
   @Input()
-  choices: any[];
+  choices: SprkDropdownChoice[];
   /**
    * If supplied, will render the icon
    * to the right of the trigger text.
@@ -199,12 +201,10 @@ export class SprkDropdownComponent {
   @Input()
   screenReaderText: string;
   /**
-   * When the `dropdownType` is
-   *  `informational` and a
-   * user clicks on a choice from
-   * the menu, the `choiceMade` event is
-   * emitted from the Dropdown and it
-   * contains the value of the clicked choice.
+   * The event that is
+   * emitted from the Dropdown when a choice
+   * is clicked. The event contains the value
+   * of the choice that was clicked.
    */
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
