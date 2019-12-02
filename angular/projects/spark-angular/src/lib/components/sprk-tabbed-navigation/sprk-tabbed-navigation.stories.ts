@@ -7,7 +7,12 @@ import {
   SprkTabbedNavigationTabModule
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
-
+import {
+  SprkTabbedNavigationPanelDirective
+ } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
+import {
+  SprkTabbedNavigationTabDirective
+} from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 
 export default {
   title: 'Components/Tabs',
@@ -20,6 +25,10 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkTabbedNavigationPanelDirective,
+      SprkTabbedNavigationTabDirective,
+    },
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/tabs)
     `,

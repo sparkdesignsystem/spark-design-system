@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
+import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
 
 export default {
   title: 'Components/Stepper',
@@ -9,6 +10,10 @@ export default {
   ],
   component: SprkStepper,
   parameters: {
+    subcomponents: {
+      SprkStepperSlider,
+      SprkStepperStep
+    },
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stepper)
     `,

@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 
 export default {
@@ -14,6 +15,9 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkStackItemDirective,
+    },
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
     `,

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
+import { SprkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
 
 export default {
   title: 'Components/Accordion',
@@ -17,6 +18,9 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkAccordionItemComponent,
+    },
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
     `,

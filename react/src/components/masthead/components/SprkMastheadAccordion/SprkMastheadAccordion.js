@@ -33,13 +33,31 @@ class SprkMastheadAccordion extends React.Component {
 }
 
 SprkMastheadAccordion.propTypes = {
-  /** classes to be added to the masthead */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** assigned to data-analytics */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** assigned to data-id */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** used to render SprkMastheadAccordionItems inside */
+  /**
+   * Used to render child `SprkMastheadAccordionItem`.
+   */
   links: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

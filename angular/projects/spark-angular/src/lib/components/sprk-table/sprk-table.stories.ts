@@ -1,6 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkTableModule } from './sprk-table.module';
 import { SprkTableComponent } from './sprk-table.component';
+import { SprkTableEmptyHeadingDirective } from '../../directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
+import { SprkTableHeadDirective } from '../../directives/sprk-table-head/sprk-table-head.directive';
+import { SprkTableGroupedColumnDirective } from '../../directives/sprk-table-grouped-column/sprk-table-grouped-column.directive';
+import { SprkTableRowHeadingDirective } from '../../directives/sprk-table-row-heading/sprk-table-row-heading.directive';
 
 export default {
   title: 'Components/Table',
@@ -13,6 +17,12 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkTableEmptyHeadingDirective,
+      SprkTableHeadDirective,
+      SprkTableGroupedColumnDirective,
+      SprkTableRowHeadingDirective,
+    },
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
     `,

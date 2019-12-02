@@ -8,6 +8,9 @@ export default {
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
+  parameters: {
+    subcomponents: { SprkAccordionItem },
+  }
 };
 
 export const defaultStory = () => (

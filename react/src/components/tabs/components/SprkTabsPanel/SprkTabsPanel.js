@@ -35,7 +35,9 @@ class SprkTabsPanel extends Component {
 
 /* eslint-disable react/require-default-props */
 SprkTabsPanel.propTypes = {
-  // The tab panel content
+  /**
+   * The tab panel content.
+   */
   children: PropTypes.node,
   // Value supplied decides if button is active
   isActive: PropTypes.bool,

@@ -28,11 +28,22 @@ SprkStackItem.defaultProps = {
 };
 
 SprkStackItem.propTypes = {
-  // The children of the stack item
+  /**  The children of the Stack item. */
   children: PropTypes.node,
-  // The string to use for the data-id attribute
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  // Any additional classes to add to the link
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
 };
 

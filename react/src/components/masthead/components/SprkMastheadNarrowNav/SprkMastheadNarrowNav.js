@@ -26,8 +26,22 @@ const SprkMastheadNarrowNav = ({
 );
 
 SprkMastheadNarrowNav.propTypes = {
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
+  /**
+   * If `true`, will render the Narrow Navigation.
+   */
   isOpen: PropTypes.bool,
+  /**
+   * Data to build the links inside the Narrow Navigation.
+   */
   links: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

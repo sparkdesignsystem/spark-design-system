@@ -3,11 +3,29 @@ import SprkMasthead from './SprkMasthead';
 import SprkButton from '../buttons/SprkButton';
 import SprkLink from '../../base/links/SprkLink';
 import SprkDropdown from '../dropdown/SprkDropdown';
+import SprkMastheadAccordion from './components/SprkMastheadAccordion/SprkMastheadAccordion';
+import SprkMastheadAccordionItem from './components/SprkMastheadAccordionItem/SprkMastheadAccordionItem';
+import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
+import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
+import SprkMastheadDropdown from './components/SprkMastheadDropdown/SprkMastheadDropdown';
+import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMastheadMenuIcon';
+import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
+import SprkMastheadSelector from './components/SprkMastheadSelector/SprkMastheadSelector';
 
 export default {
   title: 'Components/Masthead',
   component: SprkMasthead,
   parameters: {
+    subcomponents: {
+      SprkMastheadAccordion,
+      SprkMastheadAccordionItem,
+      SprkMastheadBigNav,
+      SprkMastheadDropdown,
+      SprkMastheadLittleNav,
+      SprkMastheadMenuIcon,
+      SprkMastheadNarrowNav,
+      SprkMastheadSelector,
+    },
     jest: [
       'SprkMasthead',
       'SprkMastheadLittleNav',

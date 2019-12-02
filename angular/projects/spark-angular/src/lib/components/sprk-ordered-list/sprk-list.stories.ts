@@ -1,8 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkOrderedListModule } from './sprk-ordered-list.module';
 import { SprkUnorderedListModule } from '../sprk-unordered-list/sprk-unordered-list.module';
+import { SprkOrderedListComponent } from '../sprk-ordered-list/sprk-ordered-list.component';
 import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
 import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
+import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.component';
 
 export default {
   title: 'Components/List',
@@ -15,6 +17,11 @@ export default {
     )
   ],
   parameters: {
+    subcomponents: {
+      SprkOrderedListComponent,
+      SprkUnorderedListComponent,
+      SprkListItemComponent,
+    },
     info: `
   ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/list)
     `,

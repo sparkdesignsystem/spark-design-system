@@ -1,5 +1,8 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
+import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
+import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
+import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 
 export default {
   title: 'Components/Footer',
@@ -8,6 +11,11 @@ export default {
   ],
   component: SprkFooter,
   parameters: {
+    subcomponents: {
+      SprkFooterAwards,
+      SprkFooterConnectIcons,
+      SprkFooterGlobalSection
+    },
     jest: ['SprkFooter'],
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
