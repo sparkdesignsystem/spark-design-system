@@ -4,7 +4,7 @@ import { SprkDropdownChoice } from '../sprk-dropdown/sprk-dropdown.interfaces';
  * Structure of a link in
  * the Narrow version of the Masthead.
  */
-export interface SprkNarrowNavLink {
+export interface SprkMastheadNarrowNavLink {
   /**
    * The text for the link.
    * Each Link must have a value for text.
@@ -58,7 +58,7 @@ export interface SprkNarrowNavLink {
  * inside of a `<ul>` that has a parent
  * `<nav>` element.
  */
-export interface SprkBigNavLink {
+export interface SprkMastheadBigNavLink {
   /**
    * The text for the link.
    */
@@ -107,7 +107,7 @@ export interface SprkBigNavLink {
  * inside the `<div>` with the `little-nav-slot`
  * attribute.
  */
-export interface SprkNarrowSelector {
+export interface SprkMastheadNarrowSelector {
   trigger: {
     /**
      * Text used as the
