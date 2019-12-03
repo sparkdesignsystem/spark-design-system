@@ -228,3 +228,46 @@ it('should not set href if the supplied tagname is not a', () => {
       .getAttribute('href'),
   ).toBe(null);
 });
+
+it('should choose correct aria-label text if default variant', () => {
+  const choices = {
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+    ],
+  };
+  const wrapper = mount(<SprkDropdown choices={choices} />);
+
+  wrapper.find('.sprk-b-Link').simulate('click');
+
+  expect(
+    wrapper
+      .find('.sprk-c-Dropdown__item')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Item 1');
+});
+
+it('should choose correct aria-label text if informational variant', () => {
+  const wrapper = mount(
+    <SprkDropdown
+      variant="informational"
+      choices={{
+        items: [
+          { content: { title: 'Item 1' } },
+        ],
+      }}
+    />,
+  );
+  wrapper.find('.sprk-b-Link').simulate('click');
+  console.log(
+      wrapper.find('.sprk-c-Dropdown__item')
+      .instance(),
+      'from informational'
+  )
+  expect(
+    wrapper
+      .find('.sprk-c-Dropdown__item')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Item 1');
+});
