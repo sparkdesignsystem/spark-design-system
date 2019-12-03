@@ -42,7 +42,7 @@ textInput.story = {
 export const invalidTextInput = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="text-input-error"
+        for="text-input-invalid"
         class="sprk-b-Label"
       >
         Text Input Label
@@ -50,16 +50,16 @@ export const invalidTextInput = () => `
 
       <input
         class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
-        id="text-input-error"
-        data-id="text-input-error"
+        id="text-input-invalid"
+        data-id="text-input-invalid"
         type="text"
         value=""
-        aria-describedby="text-input-error--error-container"
+        aria-describedby="text-input-invalid--error-container"
       >
 
       <div
         class="sprk-b-ErrorContainer"
-        id="text-input-error--error-container"
+        id="text-input-invalid--error-container"
       >
         <svg
          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"

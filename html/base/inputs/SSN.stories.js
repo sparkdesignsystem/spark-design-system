@@ -1,6 +1,3 @@
-import { useEffect } from '@storybook/client-api';
-import { ssnInput } from '../ssnInput';
-
 export default {
   title: 'Components/Input/SSN',
   decorators: [
@@ -13,15 +10,9 @@ export default {
   },
 };
 
-export const ssnInputStory = () => {
-  useEffect(() => {
-    ssnInput();
-  }, []);
-
-  return `
+export const SSNInputStory = () => `
     <div
       class="sprk-b-InputContainer"
-      data-sprk-input="ssn"
     >
       <label
         for="ssn"
@@ -35,7 +26,6 @@ export const ssnInputStory = () => {
         id="ssn"
         data-id="ssn"
         type="password"
-        pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$"
         placeholder="000-00-0000"
         aria-describedby="ssn--error-container"
       >
@@ -66,8 +56,119 @@ export const ssnInputStory = () => {
       ></div>
     </div>
   `;
+
+SSNInputStory.story = {
+  name: 'Default',
 };
 
-ssnInputStory.story = {
-  name: 'Default',
+export const invalidSSNInputStory = () => `
+    <div class="sprk-b-InputContainer">
+      <label
+        for="ssn-invalid"
+        class="sprk-b-Label"
+      >
+        Social Security #
+      </label>
+
+      <input
+        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        id="ssn"
+        data-id="ssn"
+        type="password"
+        placeholder="000-00-0000"
+        aria-describedby="ssn-invalid--error-container"
+      >
+
+      <div
+        class="
+          sprk-b-SelectionContainer
+          sprk-b-InputContainer__visibility-toggle
+        "
+      >
+        <input
+          id="ssn-invalid-show-ssn"
+          type="checkbox"
+          data-id="ssn-show-ssn"
+        >
+
+        <label
+          for="ssn-invalid-show-ssn"
+          class="sprk-b-Label sprk-b-Label--inline"
+        >
+          Show SSN
+        </label>
+    </div>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="ssn-invalid--error-container"
+      >
+        <svg
+         class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+         viewBox="0 0 64 64"
+        >
+          <use xlink:href="#exclamation-filled-small" />
+        </svg>
+        <div class="sprk-b-ErrorText">
+          There is an error on this field.
+        </div>
+      </div>
+    </div>
+  `;
+
+invalidSSNInputStory.story = {
+  name: 'Invalid',
+};
+
+export const disabledSSNInputStory = () => `
+    <div
+      class="sprk-b-InputContainer"
+    >
+      <label
+        for="ssn-disabled"
+        class="sprk-b-Label sprk-b-Label--disabled"
+      >
+        Social Security #
+      </label>
+
+      <input
+        class="sprk-b-TextInput sprk-u-Width-100"
+        id="ssn-disabled"
+        data-id="ssn-disabled"
+        type="password"
+        placeholder="000-00-0000"
+        aria-describedby="ssn-disabled--error-container"
+        disabled
+      >
+
+      <div
+        class="
+          sprk-b-SelectionContainer
+          sprk-b-InputContainer__visibility-toggle
+        "
+      >
+        <input
+          id="ssn-disabled-show-ssn"
+          type="checkbox"
+          data-id="ssn-show-ssn"
+          disabled
+        >
+
+        <label
+          for="ssn-disabled-show-ssn"
+          class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
+        >
+          Show SSN
+        </label>
+    </div>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="ssn-disabled--error-container"
+      ></div>
+    </div>
+  `;
+
+disabledSSNInputStory.story = {
+  name: 'Disabled',
 };

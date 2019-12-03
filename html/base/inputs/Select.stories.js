@@ -1,6 +1,3 @@
-import { useEffect } from '@storybook/client-api';
-import { requiredSelect } from '../requiredSelect';
-
 export default {
   title: 'Components/Input/Select',
   decorators: [
@@ -13,12 +10,7 @@ export default {
   },
 };
 
-export const selectBox = () => {
-  useEffect(() => {
-    requiredSelect();
-  }, []);
-
-  return `
+export const selectBox = () => `
     <div class="sprk-b-InputContainer">
       <label
         for="select"
@@ -61,8 +53,114 @@ export const selectBox = () => {
       ></div>
     </div>
   `;
-};
 
 selectBox.story = {
   name: 'Default',
+};
+
+export const invalidSelectBox = () => `
+    <div class="sprk-b-InputContainer">
+      <label
+        for="select-invalid"
+        class="sprk-b-Label"
+      >
+        Select Box Label
+      </label>
+
+      <select
+        class="sprk-b-Select sprk-b-Select--error"
+        id="select-invalid"
+        data-id="select-invalid"
+        aria-describedby="select-invalid--error-container"
+      >
+        <option value="not-selected">Make a selection...</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <optgroup label="Grouped Options">
+          <option value="g1">Grouped Option 1</option>
+          <option value="g2">Grouped Option 2</option>
+          <option value="g3">Grouped Option 3</option>
+        </optgroup>
+      </select>
+
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--stroke-current-color
+          sprk-b-SelectContainer__icon
+        "
+        viewBox="0 0 64 64"
+      >
+        <use xlink:href="#chevron-down" />
+      </svg>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="select-invalid--error-container"
+      >
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+          viewBox="0 0 64 64"
+        >
+          <use xlink:href="#exclamation-filled-small" />
+        </svg>
+        <div class="sprk-b-ErrorText">
+          There is an error on this field.
+        </div>
+      </div>
+    </div>
+  `;
+
+invalidSelectBox.story = {
+  name: 'Invalid',
+};
+
+export const disabledSelectBox = () => `
+    <div class="sprk-b-InputContainer">
+      <label
+        for="select-disabled"
+        class="sprk-b-Label sprk-b-Label--disabled"
+      >
+        Select Box Label
+      </label>
+
+      <select
+        class="sprk-b-Select"
+        id="select-disabled"
+        data-id="select-disabled"
+        aria-describedby="select-disabled--error-container"
+        disabled
+      >
+        <option value="not-selected">Make a selection...</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <optgroup label="Grouped Options">
+          <option value="g1">Grouped Option 1</option>
+          <option value="g2">Grouped Option 2</option>
+          <option value="g3">Grouped Option 3</option>
+        </optgroup>
+      </select>
+
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--stroke-current-color
+          sprk-b-SelectContainer__icon
+        "
+        viewBox="0 0 64 64"
+      >
+        <use xlink:href="#chevron-down" />
+      </svg>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="select-disabled--error-container"
+      ></div>
+    </div>
+  `;
+
+disabledSelectBox.story = {
+  name: 'Disabled',
 };
