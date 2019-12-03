@@ -1,4 +1,13 @@
 import { Component, Input } from '@angular/core';
+import {
+  SprkFooterGlobalLink,
+  SprkFooterLocalLinkColumn,
+  SprkFooterSocialLink,
+  SprkFooterAward,
+  SprkFooterBadgeLink,
+  SprkFooterDisclaimerText,
+  SprkFooterDisclaimerToggle
+} from './sprk-footer.interfaces';
 
 @Component({
   selector: 'sprk-footer',
@@ -264,48 +273,65 @@ export class SprkFooterComponent {
   @Input()
   connectHeading: string;
   /**
-   * Array of objects to build the links in the "Global" section.
+   * Array of
+   * [SprkFooterGlobalLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build the
+   * links in the "Global" section.
    */
   @Input()
-  globalLinks: object[];
+  globalLinks: SprkFooterGlobalLink[];
   /**
-   * Array of objects to build the links in the "Site Links" section.
+   * Array of
+   * [SprkFooterLocalLinkColumn](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build
+   * the columns of links
+   * in the "Site Links" section.
    */
   @Input()
-  localLinks: object[];
+  localLinks: SprkFooterLocalLinkColumn[];
   /**
-   * Array of objects to build the
+   * Array of
+   * [SprkFooterSocialLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build the
    * icon links in the "Connect With Us section".
    */
   @Input()
-  socialLinks: object[];
+  socialLinks: SprkFooterSocialLink[];
   /**
-   * Array of objects to build the
-   * awards in the "Awards".
+   * Array of
+   * [SprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build the
+   * awards in the "Awards" section.
    */
   @Input()
-  awards: object[];
+  awards: SprkFooterAward[];
   /**
-   * Array of objects to build the
-   * icon links in the icon sectin in the bottom
+   * Array of
+   * [SprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build the
+   * icon links in the icon
+   * section in the bottom
    * of the Footer.
    */
   @Input()
-  badgeLinks: object[];
+  badgeLinks: SprkFooterBadgeLink[];
   /**
-   * Array of objects
-   * to build disclaimer text in the bottom
+   * Array of
+   * [SprkFooterDisclaimerText](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build disclaimer text in the
    * of the Footer.
    */
   @Input()
-  disclaimerText: object[];
+  disclaimerText: SprkFooterDisclaimerText[];
   /**
-   * Array of objects to build
+   * Array of
+   * [SprkFooterDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * used to build
    * the disclamer toggle(s) in
-   * the bottom of the Footer.
+   * the the Footer.
    */
   @Input()
-  disclaimerToggle: object[];
+  disclaimerToggle: SprkFooterDisclaimerToggle[];
 
   /**
    * @ignore
