@@ -28,7 +28,7 @@ import { Component, Input } from '@angular/core';
                 <sprk-link
                   linkType="plain"
                   href="{{ item.href }}"
-                  analyticsString="{{ item.analytics }}"
+                  analyticsString="{{ item.analytics || item.analyticsString }}"
                 >
                   <sprk-icon
                     *ngIf="item.icon"
@@ -79,6 +79,7 @@ import { Component, Input } from '@angular/core';
                       linkType="simple"
                       additionalClasses="sprk-u-FontWeight--normal"
                       href="{{ link.href }}"
+                      analyticsString="{{ link.analyticsString || link.analytics }}"
                     >
                       {{ link.text }}
                     </sprk-link>
@@ -116,7 +117,7 @@ import { Component, Input } from '@angular/core';
                     <sprk-link
                       linkType="plain"
                       href="{{ item.href }}"
-                      analyticsString="{{ item.analytics }}"
+                      analyticsString="{{ item.analytics || item.analyticsString }}"
                     >
                       <sprk-icon
                         *ngIf="item.icon"
@@ -157,7 +158,7 @@ import { Component, Input } from '@angular/core';
                 <sprk-link
                   additionalClasses="sprk-o-Stack__item"
                   href="{{ award.href }}"
-                  analyticsString="{{ award.analytics }}"
+                  analyticsString="{{ award.analytics || award.analyticsString }}"
                 >
                   <img
                     *ngIf="award.imgSrc"
@@ -175,7 +176,7 @@ import { Component, Input } from '@angular/core';
             >
               <sprk-toggle
                 title="{{ toggle.title }}"
-                analyticsString="{{ toggle.analytics }}"
+                analyticsString="{{ toggle.analytics || toggle.analyticsString }}"
                 iconClass="sprk-c-Icon--stroke-current-color"
                 titleFontClass="sprk-b-TypeBodyFour"
               >
@@ -211,7 +212,7 @@ import { Component, Input } from '@angular/core';
               <sprk-link
                 linkType="plain"
                 href="{{ item.href }}"
-                analyticsString="{{ item.analytics }}"
+                analyticsString="{{ item.analytics || item.analyticsString }}"
               >
                 <sprk-icon
                   *ngIf="item.icon"
