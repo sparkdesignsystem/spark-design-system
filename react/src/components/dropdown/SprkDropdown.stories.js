@@ -18,6 +18,7 @@ export default {
 
 export const defaultStory = () => (
   <SprkDropdown
+    screenReaderText="Description of default dropdown."
     choices={{
       choiceFunction: choiceText => {
         console.log(choiceText);
@@ -29,6 +30,7 @@ export const defaultStory = () => (
           element: 'a',
           href: '/link',
           target: '_blank',
+          idString: 'option-1',
         },
         // TODO - when we build knobs, make sure this story demos multiple kinds of dropdown items
         // {
@@ -38,8 +40,8 @@ export const defaultStory = () => (
         //   to: '/link',
         // },
         {
-          text: 'Option 3',
-          value: 'option-3',
+          text: 'Option 2',
+          value: 'option-2',
         },
       ],
     }}

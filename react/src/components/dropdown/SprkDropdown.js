@@ -106,7 +106,8 @@ class SprkDropdown extends Component {
             additionalTriggerClasses,
           )}
           aria-expanded={isOpen}
-          role="listbox"
+          aria-haspopup="listbox"
+          aria-label={title ? title : screenReaderText}
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
@@ -146,7 +147,10 @@ class SprkDropdown extends Component {
                 <h2 className="sprk-c-Dropdown__title">{title}</h2>
               </div>
             )}
-            <ul className="sprk-c-Dropdown__links">
+            <ul
+              className="sprk-c-Dropdown__links"
+              role="listbox"
+            >
               {choiceItems.map((choice) => {
                 const {
                   content,
@@ -162,6 +166,7 @@ class SprkDropdown extends Component {
                   <li
                     className="sprk-c-Dropdown__item"
                     aria-selected={isActive}
+                    aria-label={ text || content.title }
                     role="option"
                     key={choice.id}
                   >
