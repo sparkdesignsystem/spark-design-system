@@ -64,7 +64,7 @@ SSNInputStory.story = {
 export const invalidSSNInputStory = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="ssn-invalid"
+        for="ssn"
         class="sprk-b-Label"
       >
         Social Security #
@@ -76,7 +76,7 @@ export const invalidSSNInputStory = () => `
         data-id="ssn"
         type="password"
         placeholder="000-00-0000"
-        aria-describedby="ssn-invalid--error-container"
+        aria-describedby="ssn--error-container"
       >
 
       <div
@@ -86,13 +86,13 @@ export const invalidSSNInputStory = () => `
         "
       >
         <input
-          id="ssn-invalid-show-ssn"
+          id="ssn-show-ssn"
           type="checkbox"
           data-id="ssn-show-ssn"
         >
 
         <label
-          for="ssn-invalid-show-ssn"
+          for="ssn-show-ssn"
           class="sprk-b-Label sprk-b-Label--inline"
         >
           Show SSN
@@ -101,7 +101,7 @@ export const invalidSSNInputStory = () => `
 
       <div
         class="sprk-b-ErrorContainer"
-        id="ssn-invalid--error-container"
+        id="ssn--error-container"
       >
         <svg
          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
@@ -125,7 +125,7 @@ export const disabledSSNInputStory = () => `
       class="sprk-b-InputContainer"
     >
       <label
-        for="ssn-disabled"
+        for="ssn"
         class="sprk-b-Label sprk-b-Label--disabled"
       >
         Social Security #
@@ -133,11 +133,11 @@ export const disabledSSNInputStory = () => `
 
       <input
         class="sprk-b-TextInput sprk-u-Width-100"
-        id="ssn-disabled"
-        data-id="ssn-disabled"
+        id="ssn"
+        data-id="ssn"
         type="password"
         placeholder="000-00-0000"
-        aria-describedby="ssn-disabled--error-container"
+        aria-describedby="ssn--error-container"
         disabled
       >
 
@@ -148,14 +148,14 @@ export const disabledSSNInputStory = () => `
         "
       >
         <input
-          id="ssn-disabled-show-ssn"
+          id="ssn-show-ssn"
           type="checkbox"
           data-id="ssn-show-ssn"
           disabled
         >
 
         <label
-          for="ssn-disabled-show-ssn"
+          for="ssn-show-ssn"
           class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
         >
           Show SSN
@@ -164,7 +164,7 @@ export const disabledSSNInputStory = () => `
 
       <div
         class="sprk-b-ErrorContainer"
-        id="ssn-disabled--error-container"
+        id="ssn--error-container"
       ></div>
     </div>
   `;

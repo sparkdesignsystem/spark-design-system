@@ -43,7 +43,7 @@ export const invalidTextarea = () => (
   `
     <div class="sprk-b-InputContainer">
       <label
-        for="textarea-invalid"
+        for="textarea"
         class="sprk-b-Label"
       >
         Description
@@ -51,15 +51,15 @@ export const invalidTextarea = () => (
 
       <textarea
         class="sprk-b-TextArea sprk-b-TextArea--error sprk-u-Width-100"
-        id="textarea-invalid"
-        data-id="textarea-invalid"
-        aria-describedby="textarea-invalid--error-container"
+        id="textarea"
+        data-id="textarea"
+        aria-describedby="textarea--error-container"
         aria-invalid="true"
       ></textarea>
 
       <div
         class="sprk-b-ErrorContainer"
-        id="textarea-invalid--error-container"
+        id="textarea--error-container"
       >
         <svg
          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
@@ -83,7 +83,7 @@ export const disabledTextarea = () => (
   `
     <div class="sprk-b-InputContainer">
       <label
-        for="textarea-disabled"
+        for="textarea"
         class="sprk-b-Label sprk-b-Label--disabled"
       >
         Description
@@ -91,9 +91,9 @@ export const disabledTextarea = () => (
 
       <textarea
         class="sprk-b-TextArea sprk-u-Width-100"
-        id="textarea-disabled"
-        data-id="textarea-disabled"
-        aria-describedby="textarea-disabled--error-container"
+        id="textarea"
+        data-id="textarea"
+        aria-describedby="textarea--error-container"
         disabled
       ></textarea>
 

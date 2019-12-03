@@ -15,7 +15,7 @@ export default {
 export const searchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="search"
+        for="search-input"
         class="sprk-b-Label sprk-b-Label--with-icon sprk-u-ScreenReaderText"
       >
         Search
@@ -35,8 +35,8 @@ export const searchInput = () => `
             sprk-b-TextInput--has-svg-icon
             sprk-u-Width-100
           "
-          id="search"
-          data-id="search"
+          id="search-input"
+          data-id="search-input"
           type="text"
           placeholder="Search"
           aria-describedby="search--error-container"
@@ -57,7 +57,7 @@ searchInput.story = {
 export const invalidSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="search-invalid"
+        for="search-input"
         class="sprk-b-Label sprk-b-Label--with-icon sprk-u-ScreenReaderText"
       >
         Search
@@ -78,17 +78,17 @@ export const invalidSearchInput = () => `
             sprk-b-TextInput--has-svg-icon
             sprk-u-Width-100
           "
-          id="search-invalid"
-          data-id="search-invalid"
+          id="search-input"
+          data-id="search-input"
           type="text"
           placeholder="Search"
-          aria-describedby="search-invalid--error-container"
+          aria-describedby="search--error-container"
         >
       </div>
 
       <div
         class="sprk-b-ErrorContainer"
-        id="search-invalid--error-container"
+        id="search--error-container"
       >
         <svg
           class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
@@ -110,7 +110,7 @@ invalidSearchInput.story = {
 export const disabledSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="search-disabled"
+        for="search-input"
         class="
           sprk-b-Label
           sprk-b-Label--disabled
@@ -134,18 +134,18 @@ export const disabledSearchInput = () => `
             sprk-b-TextInput--has-svg-icon
             sprk-u-Width-100
           "
-          id="search-disabled"
-          data-id="search-disabled"
+          id="search-input"
+          data-id="search-input"
           type="text"
           placeholder="Search"
-          aria-describedby="search-disabled--error-container"
+          aria-describedby="search--error-container"
           disabled
         >
       </div>
 
       <div
         class="sprk-b-ErrorContainer"
-        id="search-disabled--error-container"
+        id="search--error-container"
       ></div>
     </div>
   `;

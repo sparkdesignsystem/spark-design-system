@@ -61,7 +61,7 @@ selectBox.story = {
 export const invalidSelectBox = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="select-invalid"
+        for="select"
         class="sprk-b-Label"
       >
         Select Box Label
@@ -69,9 +69,9 @@ export const invalidSelectBox = () => `
 
       <select
         class="sprk-b-Select sprk-b-Select--error"
-        id="select-invalid"
-        data-id="select-invalid"
-        aria-describedby="select-invalid--error-container"
+        id="select"
+        data-id="select"
+        aria-describedby="select--error-container"
       >
         <option value="not-selected">Make a selection...</option>
         <option value="1">Option 1</option>
@@ -97,7 +97,7 @@ export const invalidSelectBox = () => `
 
       <div
         class="sprk-b-ErrorContainer"
-        id="select-invalid--error-container"
+        id="select--error-container"
       >
         <svg
           class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
@@ -119,7 +119,7 @@ invalidSelectBox.story = {
 export const disabledSelectBox = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="select-disabled"
+        for="select"
         class="sprk-b-Label sprk-b-Label--disabled"
       >
         Select Box Label
@@ -127,9 +127,9 @@ export const disabledSelectBox = () => `
 
       <select
         class="sprk-b-Select"
-        id="select-disabled"
-        data-id="select-disabled"
-        aria-describedby="select-disabled--error-container"
+        id="select"
+        data-id="select"
+        aria-describedby="select--error-container"
         disabled
       >
         <option value="not-selected">Make a selection...</option>
@@ -156,7 +156,7 @@ export const disabledSelectBox = () => `
 
       <div
         class="sprk-b-ErrorContainer"
-        id="select-disabled--error-container"
+        id="select--error-container"
       ></div>
     </div>
   `;

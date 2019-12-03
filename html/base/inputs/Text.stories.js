@@ -42,7 +42,7 @@ textInput.story = {
 export const invalidTextInput = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="text-input-invalid"
+        for="text-input"
         class="sprk-b-Label"
       >
         Text Input Label
@@ -50,16 +50,16 @@ export const invalidTextInput = () => `
 
       <input
         class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
-        id="text-input-invalid"
-        data-id="text-input-invalid"
+        id="text-input"
+        data-id="text-input"
         type="text"
         value=""
-        aria-describedby="text-input-invalid--error-container"
+        aria-describedby="text-input--error-container"
       >
 
       <div
         class="sprk-b-ErrorContainer"
-        id="text-input-invalid--error-container"
+        id="text-input--error-container"
       >
         <svg
          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
@@ -81,7 +81,7 @@ invalidTextInput.story = {
 export const disabledTextInput = () => `
     <div class="sprk-b-InputContainer">
       <label
-        for="text-input-disabled"
+        for="text-input"
         class="sprk-b-Label sprk-b-Label--disabled"
       >
         Text Input Label
@@ -89,17 +89,17 @@ export const disabledTextInput = () => `
 
       <input
         class="sprk-b-TextInput sprk-u-Width-100"
-        id="text-input-disabled"
-        data-id="text-input-disabled"
+        id="text-input"
+        data-id="text-input"
         type="text"
         value=""
-        aria-describedby="text-input-disabled--error-container"
+        aria-describedby="text-input--error-container"
         disabled
       >
 
       <div
         class="sprk-b-ErrorContainer"
-        id="text-input-disabled--error-container"
+        id="text-input--error-container"
       ></div>
     </div>
   `;
