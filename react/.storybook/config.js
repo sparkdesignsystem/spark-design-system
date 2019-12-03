@@ -8,6 +8,7 @@ import { withTests } from '@storybook/addon-jest';
 import results from '../src/.jest-test-results.json';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-loader';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
 
 addDecorator(withA11y);
 addDecorator(
@@ -34,6 +35,13 @@ addParameters({
       }
       return null;
     },
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>
+        <div>
+          {children}
+        </div>
+      </DocsContainer>
+    ),
   },
 })
 

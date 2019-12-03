@@ -1,3 +1,4 @@
+import React from 'react';
 import '../_spark.scss';
 import '../../storybook-utilities/storybook-theming/_docs.scss';
 import { configure, addParameters, addDecorator } from '@storybook/html';
@@ -6,6 +7,7 @@ import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-sp
 import 'iframe-resizer/js/iframeResizer.contentWindow.min';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-loader';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
 
 addDecorator(withA11y);
 
@@ -27,8 +29,14 @@ addParameters({
       }
       return null;
     },
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>
+        <div>
+          {children}
+        </div>
+      </DocsContainer>
+    ),
   },
 });
 
 configure(require.context('..', true, /^((?![\\/]node_modules|dist[\\/]).)*\.stories\.js$/), module);
-

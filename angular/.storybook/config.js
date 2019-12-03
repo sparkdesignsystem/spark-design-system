@@ -1,3 +1,4 @@
+import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-spark-theme";
@@ -6,6 +7,7 @@ import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook
 import '../../storybook-utilities/icon-loader';
 import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
 
 setCompodocJson(docJson);
 addDecorator(withA11y);
@@ -26,6 +28,13 @@ addParameters({
       }
       return null;
     },
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>
+        <div>
+          {children}
+        </div>
+      </DocsContainer>
+    ),
     extractProps,
   },
 });
