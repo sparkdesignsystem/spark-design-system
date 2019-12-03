@@ -8,6 +8,7 @@ import 'iframe-resizer/js/iframeResizer.contentWindow.min';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-loader';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { SprkTable } from '@sparkdesignsystem/spark-react';
 
 addDecorator(withA11y);
 
@@ -33,6 +34,46 @@ addParameters({
       <DocsContainer context={context}>
         <div>
           {children}
+          <h3 class="sprk-u-mbm">Class Modifiers for {/[^/]*$/.exec(context.kind)[0]}</h3>  
+          <SprkTable
+            additionalTableClasses="sprk-b-Table--spacing-medium"
+            columns = {[
+              {
+                name: 'data1',
+                header: 'Column Heading'
+              },
+              {
+                name: 'data2',
+                header: 'Column Heading'
+              },
+              {
+                name: 'data3',
+                header: 'Column Heading'
+              }
+            ]}
+            rows = {[
+              {
+                data1: "Data 1",
+                data2: "Data 2",
+                data3: "Data 3"
+              },
+              {
+                data1: "Data 1",
+                data2: "Data 2",
+                data3: "Data 3"
+              },
+              {
+                data1: "Data 1",
+                data2: "Data 2",
+                data3: "Data 3"
+              },
+              {
+                data1: "Data 1",
+                data2: "Data 2",
+                data3: "Data 3"
+              },
+            ]}
+          />
         </div>
       </DocsContainer>
     ),
