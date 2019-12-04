@@ -18,11 +18,11 @@ import {
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
         <sprk-link
           [additionalClasses]="getTriggerClasses()"
-          ariaHasPopUp="true"
           (click)="toggle($event)"
           [idString]="idString"
           [analyticsString]="analyticsString"
-          role="combobox"
+          aria-haspopup="listbox"
+          [attr.aria-label]="title ? title : screenReaderText"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
@@ -64,12 +64,16 @@ import {
           </sprk-link>
         </div>
 
-        <ul class="sprk-c-Dropdown__links">
+        <ul
+          class="sprk-c-Dropdown__links"
+          role="listbox"
+        >
           <li
             class="sprk-c-Dropdown__item"
             *ngFor="let choice of choices; let i = index"
             [attr.data-sprk-dropdown-choice-index]="i"
             (click)="choiceClick($event)"
+            [attr.aria-label]="choice.content ? choice.content.title : choice.text"
           >
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
