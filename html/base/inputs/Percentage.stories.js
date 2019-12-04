@@ -106,6 +106,7 @@ export const invalidPercentageInput = () => `
           id="percentage"
           data-id="percentage"
           type="tel"
+          aria-invalid="true"
           aria-describedby="percentage--error-container"
         >
       </div>

@@ -78,6 +78,7 @@ export const invalidMonetaryInputStory = () => `
           id="monetary"
           data-id="monetary-input"
           type="tel"
+          aria-invalid="true"
           aria-describedby="monetary--error-container"
         >
       </div>

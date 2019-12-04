@@ -82,6 +82,7 @@ export const invalidSearchInput = () => `
           data-id="search-input"
           type="text"
           placeholder="Search"
+          aria-invalid="true"
           aria-describedby="search--error-container"
         >
       </div>

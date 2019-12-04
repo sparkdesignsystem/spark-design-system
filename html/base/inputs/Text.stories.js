@@ -54,6 +54,7 @@ export const invalidTextInput = () => `
         data-id="text-input"
         type="text"
         value=""
+        aria-invalid="true"
         aria-describedby="text-input--error-container"
       >
 

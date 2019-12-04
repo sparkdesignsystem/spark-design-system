@@ -76,6 +76,7 @@ export const invalidSSNInputStory = () => `
         data-id="ssn"
         type="password"
         placeholder="000-00-0000"
+        aria-invalid="true"
         aria-describedby="ssn--error-container"
       >
 

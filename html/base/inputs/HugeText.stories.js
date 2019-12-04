@@ -68,6 +68,7 @@ export const invalidHugeTextInput = () => {
         id="text-input-huge"
         data-id="text-input-huge"
         type="text"
+        aria-invalid="true"
         aria-describedby="text-input-huge--error-container"
         placeholder="Placeholder"
       >

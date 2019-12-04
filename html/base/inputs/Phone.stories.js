@@ -59,6 +59,7 @@ export const invalidPhoneInputStory = () => `
         data-id="phone-input"
         type="tel"
         placeholder="(000) 000-0000"
+        aria-invalid="true"
         aria-describedby="phone-input--error-container"
       >
       <div

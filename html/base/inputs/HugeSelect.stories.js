@@ -85,6 +85,7 @@ export const invalidHugeSelectBox = () => {
         class="sprk-b-Select sprk-b-Select--error"
         id="select-huge"
         data-id="select-huge"
+        aria-invalid="true"
         aria-describedby="select-huge--error-container"
         data-sprk-input="huge"
       >

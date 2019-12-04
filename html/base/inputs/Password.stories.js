@@ -78,6 +78,7 @@ export const invalidPasswordInputStory = () => `
         id="password"
         data-id="password-input"
         type="password"
+        aria-invalid="true"
         aria-describedby="password--error-container"
       >
 

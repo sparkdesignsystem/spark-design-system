@@ -71,6 +71,7 @@ export const invalidSelectBox = () => `
         class="sprk-b-Select sprk-b-Select--error"
         id="select"
         data-id="select"
+        aria-invalid="true"
         aria-describedby="select--error-container"
       >
         <option value="not-selected">Make a selection...</option>
