@@ -166,7 +166,7 @@ class SprkDropdown extends Component {
                   <li
                     className="sprk-c-Dropdown__item"
                     aria-selected={isActive}
-                    aria-label={ text || content.title }
+                    aria-label={ content ? content.title : text }
                     role="option"
                     key={choice.id}
                   >

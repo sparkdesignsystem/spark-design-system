@@ -259,11 +259,6 @@ it('should choose correct aria-label text if informational variant', () => {
     />,
   );
   wrapper.find('.sprk-b-Link').simulate('click');
-  console.log(
-      wrapper.find('.sprk-c-Dropdown__item')
-      .instance(),
-      'from informational'
-  )
   expect(
     wrapper
       .find('.sprk-c-Dropdown__item')
