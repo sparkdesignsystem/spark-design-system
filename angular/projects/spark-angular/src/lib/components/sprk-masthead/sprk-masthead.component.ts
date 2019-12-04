@@ -8,10 +8,14 @@ import {
 import { Router, Event, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 import {
-  SprkMastheadNarrowNavLink,
-  SprkMastheadBigNavLink,
-  SprkMastheadNarrowSelector
-} from './sprk-masthead.interfaces';
+  ISprkNarrowNavLink,
+} from '../../interfaces/sprk-narrow-nav-link.interface';
+import {
+  ISprkNarrowSelector
+} from '../../interfaces/sprk-narrow-selector.interface';
+import {
+  ISprkBigNavLink,
+} from '../../interfaces/sprk-big-nav-link.interface';
 
 @Component({
   selector: 'sprk-masthead',
@@ -285,13 +289,13 @@ export class SprkMastheadComponent implements AfterContentInit {
   additionalNarrowNavClasses: string;
   /**
    * Expects an array of
-   * [SprkMastheadNarrowNavLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
+   * [ISprkNarrowNavLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-narrow-nav-link.interface.ts)
    * to be
    * represented in the narrow nav element
    * of the Masthead component.
    */
   @Input()
-  narrowNavLinks: SprkMastheadNarrowNavLink[];
+  narrowNavLinks: ISprkNarrowNavLink[];
   /**
    * Represents the initial state of the
    * narrow nav element of the Masthead component.
@@ -310,21 +314,21 @@ export class SprkMastheadComponent implements AfterContentInit {
   idString: string;
   /**
    * Expects an array of
-   * [SprkMastheadBigNavLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
+   * [ISprkBigNavLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-big-nav-link.interface.ts)
    * to be
    * used to create the Big Navigation of
    * the Masthead component.
    */
   @Input()
-  bigNavLinks: SprkMastheadBigNavLink[];
+  bigNavLinks: ISprkBigNavLink[];
   /**
-   * Expects a [SprkMastheadNarrowSelector](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
+   * Expects a [ISprkNarrowSelector](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-narrow-selector.interface.ts)
    * object that
    * represents dropdown choices inside the dropdown
    * rendered in the Narrow Navigation.
    */
   @Input()
-  narrowSelector: SprkMastheadNarrowSelector;
+  narrowSelector: ISprkNarrowSelector;
 
   /**
    * @ignore

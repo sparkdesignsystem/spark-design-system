@@ -6,7 +6,7 @@ import {
   HostListener,
   EventEmitter
 } from '@angular/core';
-import { SprkDropdownChoice } from './sprk-dropdown.interfaces';
+import { ISprkDropdownChoice } from '../../interfaces/sprk-dropdown-choice.interface';
 
 @Component({
   selector: 'sprk-dropdown',
@@ -174,11 +174,11 @@ export class SprkDropdownComponent {
   selector: string;
   /**
    * Expects an array of
-   * [SprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-dropdown.interfaces.ts)
    *  objects.
    */
   @Input()
-  choices: SprkDropdownChoice[];
+  choices: ISprkDropdownChoice[];
   /**
    * If supplied, will render the icon
    * to the right of the trigger text.
@@ -281,7 +281,7 @@ export class SprkDropdownComponent {
    * @ignore
    */
   clearActiveChoices(): void {
-    this.choices.forEach((choice: object) => {
+    this.choices.forEach((choice: ISprkDropdownChoice) => {
       choice['active'] = false;
     });
   }

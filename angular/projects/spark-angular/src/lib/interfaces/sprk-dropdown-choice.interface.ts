@@ -3,16 +3,18 @@
  * construct a selectable
  * choice item in the dropdown.
  */
-export interface SprkDropdownChoice {
+export interface ISprkDropdownChoice {
   /**
    * The text for the dropdown choice item.
    */
   text: string;
   /**
    * The `href` value for the dropdown
-   * choice item.
+   * choice item. If omitted,
+   * the href will be set to `#` by the `SprkLink`
+   * component.
    */
-  href: string;
+  href?: string;
   /**
    * If `true`, the dropdown choice item
    * will have active styles applied.
@@ -28,8 +30,17 @@ export interface SprkDropdownChoice {
    * Additionally, if the `dropdownType` is set to `informational`
    * or `mastheadSelector` the trigger text
    * will be updated to this value on click.
+   * This field is marked as optional since it
+   * technically won't break the component if
+   * omitted but should be supplied
+   * if the `dropdownType` is set to `informational`
+   * or `mastheadSelector`. This is because
+   * the dropdown trigger
+   * text will be updated to this value on click,
+   * meaning the trigger text will be set to empty if
+   * this is omitted in those cases.
    */
-  value: string;
+  value?: string;
   /**
    * The dropdown choice can be a standard
    * link or it can be a link with optional
