@@ -1,20 +1,11 @@
+import { ISprkLink } from './sprk-link.interface';
+
 /**
  * The choice object is used to
  * construct a selectable
  * choice item in the dropdown.
  */
-export interface ISprkDropdownChoice {
-  /**
-   * The text for the dropdown choice item.
-   */
-  text: string;
-  /**
-   * The `href` value for the dropdown
-   * choice item. If omitted,
-   * the href will be set to `#` by the `SprkLink`
-   * component.
-   */
-  href?: string;
+export interface ISprkDropdownChoice extends ISprkLink {
   /**
    * If `true`, the dropdown choice item
    * will have active styles applied.
