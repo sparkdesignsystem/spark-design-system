@@ -16,6 +16,8 @@
   }
 }
 
+/// Use on cards that you would like to standout from the rest.
+/// @name .sprk-c-Card--standout
 .sprk-c-Card--standout {
   box-shadow: $sprk-card-shadow-standout;
 
@@ -34,10 +36,6 @@
   color: $sprk-card-header-text-color;
 }
 
-/// Use when you have an img, svg or header element
-/// with a bg color
-/// at top of the card to
-/// have border-radius match the card container
 .sprk-c-Card__media,
 .sprk-c-Card__header {
   border-radius: $sprk-card-border-radius $sprk-card-border-radius 0 0;
