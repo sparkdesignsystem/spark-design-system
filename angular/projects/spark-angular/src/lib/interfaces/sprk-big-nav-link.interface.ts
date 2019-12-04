@@ -1,24 +1,9 @@
+import { ISprkLink } from './sprk-link.interface';
 /**
  * Used to create the "Big Navigation"
- * in the extended variant of the masthead.
- * Data is used to create `<li>` elements
- * inside of a `<ul>` that has a parent
- * `<nav>` element.
+ * in the extended variant of the Masthead.
  */
-export interface ISprkBigNavLink {
-  /**
-   * The text for the link.
-   */
-  text: string;
-  /**
-   * The `href` value for the link if it does not
-   * have a `subNav`. If it has a `subNav`, then
-   * the link is treated as a trigger that opens
-   * the `subNav` and it doesnt navigate the user
-   * anywhere. Therefore, this is optional as it is
-   * only needed in cases where there is no `subNav`.
-   */
-  href?: string;
+export interface ISprkBigNavLink extends ISprkLink {
   /**
    * If this is `true` and the link has a `subNav`
    * then the link will
