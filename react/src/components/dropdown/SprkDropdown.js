@@ -159,6 +159,7 @@ class SprkDropdown extends Component {
                   isActive,
                   text,
                   value,
+                  idString,
                   ...rest
                 } = choice;
                 const TagName = element || 'a';
@@ -181,6 +182,7 @@ class SprkDropdown extends Component {
                             choiceFunction(value);
                           }
                         }}
+                        data-id={idString}
                         {...rest}
                       >
                         {text}
