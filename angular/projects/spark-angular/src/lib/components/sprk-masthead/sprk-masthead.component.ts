@@ -122,12 +122,14 @@ import {
                   additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
+                  analyticsString="link.analyticsString"
                   [triggerText]="link.text"
                 ></sprk-dropdown>
               </div>
               <div *ngIf="!link.subNav">
                 <sprk-link
                   linkType="plain"
+                  analyticsString="link.analyticsString"
                   additionalClasses="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   [href]="link.href"
                 >
