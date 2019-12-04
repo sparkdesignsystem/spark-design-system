@@ -1,7 +1,10 @@
 import { ISprkLink } from './sprk-link.interface';
+import { ISprkDropdownChoice } from './sprk-dropdown-choice.interface';
+
 /**
  * Used to create the "Big Navigation"
  * in the extended variant of the Masthead.
+ * The Navigation links can have an optional dropdown (sub navigation).
  */
 export interface ISprkBigNavLink extends ISprkLink {
   /**
@@ -14,19 +17,5 @@ export interface ISprkBigNavLink extends ISprkLink {
    * Optional sub-navigation for the link.
    * Renders a dropdown under the main link.
    */
-  subNav?: Array<{
-    /**
-     * The text for the sub-navigation link.
-     */
-    text: string;
-    /**
-     * The `href` for the sub-navigation link.
-     */
-    href: string;
-    /**
-     * If `true`, applies active styles to
-     * the dropdown link.
-     */
-    active?: boolean;
-  }>;
+  subNav?: ISprkDropdownChoice;
 }
