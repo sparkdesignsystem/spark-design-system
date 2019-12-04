@@ -77,6 +77,7 @@ import { ISprkDropdownChoice } from '../../interfaces/sprk-dropdown-choice.inter
               <sprk-link
                 linkType="unstyled"
                 [href]="choice.href"
+                [analyticsString]="choice.analyticsString"
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
@@ -88,6 +89,7 @@ import { ISprkDropdownChoice } from '../../interfaces/sprk-dropdown-choice.inter
               <sprk-link
                 linkType="unstyled"
                 [href]="choice.href"
+                [analyticsString]="choice.analyticsString"
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
