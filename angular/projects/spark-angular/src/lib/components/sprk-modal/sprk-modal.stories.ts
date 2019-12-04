@@ -1,7 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkModalModule } from './sprk-modal.module';
 import { SprkModalComponent } from './sprk-modal.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Modal',
@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('modal'),
+    info: markdownDocumentationLinkBuilder('modal'),
     docs: { iframeHeight: 450 },
   },
 };

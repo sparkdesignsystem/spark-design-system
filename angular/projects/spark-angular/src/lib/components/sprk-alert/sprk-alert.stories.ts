@@ -1,7 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Alert',
@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('alert'),
+    info: markdownDocumentationLinkBuilder('alert'),
     docs: { iframeHeight: 120 },
   },
 };

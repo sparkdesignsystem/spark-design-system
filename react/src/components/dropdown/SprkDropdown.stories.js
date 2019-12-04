@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkDropdown from './SprkDropdown';
 import SprkButton from '../buttons/SprkButton';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Dropdown',
@@ -11,7 +11,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkDropdown'],
-    info: markdownLinkBuilder('dropdown'),
+    info: markdownDocumentationLinkBuilder('dropdown'),
   },
 };
 

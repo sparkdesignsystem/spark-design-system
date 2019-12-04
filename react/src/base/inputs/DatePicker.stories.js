@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -13,7 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: markdownLinkBuilder('input'),
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 

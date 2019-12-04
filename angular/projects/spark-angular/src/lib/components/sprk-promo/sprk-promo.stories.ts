@@ -3,7 +3,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Promo',
@@ -16,7 +16,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('promo'),
+    info: markdownDocumentationLinkBuilder('promo'),
     docs: { iframeHeight: 430 },
   },
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkList from './SprkList';
 import SprkListItem from './SprkListItem';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/List',
@@ -14,7 +14,7 @@ export default {
       SprkListItem,
     },
     jest: ['SprkList, SprkListItem'],
-    info: markdownLinkBuilder('list'),
+    info: markdownDocumentationLinkBuilder('list'),
   },
 };
 

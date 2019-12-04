@@ -1,7 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
-import { markdownLinkBuilder } from '../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Accordion',
@@ -9,7 +9,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
-    info: markdownLinkBuilder('accordion'),
+    info: markdownDocumentationLinkBuilder('accordion'),
   },
 };
 

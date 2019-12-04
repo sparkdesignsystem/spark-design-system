@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkDictionary from './SprkDictionary';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Dictionary',
@@ -10,7 +10,7 @@ export default {
   component: SprkDictionary,
   parameters: {
     jest: ['SprkDictionary'],
-    info: markdownLinkBuilder('dictionary'),
+    info: markdownDocumentationLinkBuilder('dictionary'),
   },
 };
 

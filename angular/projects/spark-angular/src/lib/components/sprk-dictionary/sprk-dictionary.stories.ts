@@ -1,7 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDictionaryModule } from './sprk-dictionary.module';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Dictionary',
@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('dictionary'),
+    info: markdownDocumentationLinkBuilder('dictionary'),
     docs: { iframeHeight: 500 },
   },
 };

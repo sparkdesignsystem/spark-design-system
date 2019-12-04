@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 export default {
@@ -20,7 +20,7 @@ export default {
       'SprkTabsPanel',
       'SprkTabsButton',
     ],
-    info: markdownLinkBuilder('tab'),
+    info: markdownDocumentationLinkBuilder('tab'),
   },
 
 };

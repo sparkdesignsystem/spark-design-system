@@ -3,7 +3,7 @@ import { SprkPaginationModule } from './sprk-pagination.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkPaginationComponent } from './sprk-pagination.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Pagination',
@@ -16,7 +16,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('pagination'),
+    info: markdownDocumentationLinkBuilder('pagination'),
     docs: { iframeHeight: 70 },
   },
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Select',
@@ -14,7 +14,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: markdownLinkBuilder('input'),
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 

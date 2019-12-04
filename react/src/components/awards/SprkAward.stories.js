@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkAward from './SprkAward';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Award',
@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkAward'] ,
-    info: markdownLinkBuilder('award'),
+    info: markdownDocumentationLinkBuilder('award'),
   },
 };
 

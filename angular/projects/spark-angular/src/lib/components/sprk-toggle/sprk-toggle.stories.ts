@@ -4,7 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkToggleModule } from './sprk-toggle.module';
 import { SprkToggleComponent } from './sprk-toggle.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Toggle',
@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('toggle'),
+    info: markdownDocumentationLinkBuilder('toggle'),
     docs: { iframeHeight: 160 },
   },
 };

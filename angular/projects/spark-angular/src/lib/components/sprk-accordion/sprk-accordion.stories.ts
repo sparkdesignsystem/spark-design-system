@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
 
 export default {
@@ -22,7 +22,7 @@ export default {
     subcomponents: {
       SprkAccordionItemComponent,
     },
-    info: markdownLinkBuilder('accordion'),
+    info: markdownDocumentationLinkBuilder('accordion'),
     docs: { iframeHeight: 420 },
   },
 };

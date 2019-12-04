@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
 
 export default {
@@ -15,7 +15,7 @@ export default {
       SprkStepperSlider,
       SprkStepperStep
     },
-    info: markdownLinkBuilder('stepper'),
+    info: markdownDocumentationLinkBuilder('stepper'),
     jest: [
       'SprkStepper',
       'SprkStepperSlider',

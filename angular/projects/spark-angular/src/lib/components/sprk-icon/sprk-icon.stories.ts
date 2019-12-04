@@ -1,7 +1,7 @@
 import { SprkIconModule } from './sprk-icon.module';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkIconComponent } from './sprk-icon.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Icons',
@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('icon'),
+    info: markdownDocumentationLinkBuilder('icon'),
     docs: { iframeHeight: 90 },
   },
 };

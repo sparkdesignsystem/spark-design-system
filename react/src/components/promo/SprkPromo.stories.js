@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkPromo from './SprkPromo';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Promo',
@@ -10,7 +10,7 @@ export default {
   component: SprkPromo,
   parameters: {
     jest: ['SprkPromo'],
-    info: markdownLinkBuilder('promo'),
+    info: markdownDocumentationLinkBuilder('promo'),
   },
 };
 

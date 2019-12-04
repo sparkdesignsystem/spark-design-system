@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAwardComponent } from './sprk-award.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Award',
@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('award'),
+    info: markdownDocumentationLinkBuilder('award'),
     docs: { iframeHeight: 400 },
   },
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
@@ -18,7 +18,7 @@ export default {
       SprkFooterGlobalSection
     },
     jest: ['SprkFooter'],
-    info: markdownLinkBuilder('footer'),
+    info: markdownDocumentationLinkBuilder('footer'),
   },
 };
 

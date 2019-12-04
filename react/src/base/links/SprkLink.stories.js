@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Link',
@@ -11,7 +11,7 @@ export default {
   component: SprkLink,
   parameters: {
     jest: ['SprkLink'],
-    info: markdownLinkBuilder('link'),
+    info: markdownDocumentationLinkBuilder('link'),
   },
 };
 

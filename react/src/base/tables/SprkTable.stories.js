@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkTable from './SprkTable';
 import SprkButton from '../../components/buttons/SprkButton';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Table',
@@ -11,7 +11,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkTable'],
-    info: markdownLinkBuilder('table'),
+    info: markdownDocumentationLinkBuilder('table'),
   },
 };
 

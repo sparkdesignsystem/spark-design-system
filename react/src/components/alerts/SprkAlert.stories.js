@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkAlert from './SprkAlert';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Alert',
@@ -10,7 +10,7 @@ export default {
   component: SprkAlert,
   parameters: {
     jest: ['SprkAlert'],
-    info: markdownLinkBuilder('alert'),
+    info: markdownDocumentationLinkBuilder('alert'),
    },
 };
 

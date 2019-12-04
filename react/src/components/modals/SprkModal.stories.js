@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkModal from './SprkModal';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import Mask from './Mask';
 import CloseButton from './CloseButton';
 import ModalFooter from './ModalFooter';
@@ -23,7 +23,7 @@ export default {
       'Mask',
       'ModalFooter',
     ],
-    info: markdownLinkBuilder('modal'),
+    info: markdownDocumentationLinkBuilder('modal'),
   },
 
 };

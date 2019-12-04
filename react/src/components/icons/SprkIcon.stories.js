@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkIcon from './SprkIcon';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Icons',
@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkIcon'],
-    info: markdownLinkBuilder('icon'),
+    info: markdownDocumentationLinkBuilder('icon'),
   },
 };
 

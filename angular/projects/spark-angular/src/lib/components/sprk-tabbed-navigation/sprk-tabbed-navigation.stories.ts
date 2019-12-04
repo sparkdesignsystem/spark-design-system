@@ -7,7 +7,7 @@ import {
   SprkTabbedNavigationTabModule
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import {
   SprkTabbedNavigationPanelDirective
  } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
@@ -30,7 +30,7 @@ export default {
       SprkTabbedNavigationPanelDirective,
       SprkTabbedNavigationTabDirective,
     },
-    info: markdownLinkBuilder('tabs'),
+    info: markdownDocumentationLinkBuilder('tabs'),
     docs: { iframeHeight: 300 },
   },
 };

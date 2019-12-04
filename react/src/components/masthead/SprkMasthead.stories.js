@@ -3,7 +3,7 @@ import SprkMasthead from './SprkMasthead';
 import SprkButton from '../buttons/SprkButton';
 import SprkLink from '../../base/links/SprkLink';
 import SprkDropdown from '../dropdown/SprkDropdown';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkMastheadAccordion from './components/SprkMastheadAccordion/SprkMastheadAccordion';
 import SprkMastheadAccordionItem from './components/SprkMastheadAccordionItem/SprkMastheadAccordionItem';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
@@ -33,7 +33,7 @@ export default {
       'SprkMastheadMenuIcon',
       'SprkMastheadNarrowNav',
     ],
-    info: markdownLinkBuilder('masthead'),
+    info: markdownDocumentationLinkBuilder('masthead'),
   },
 };
 

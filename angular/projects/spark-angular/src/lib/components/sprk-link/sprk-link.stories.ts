@@ -4,7 +4,7 @@ import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkLinkComponent } from './sprk-link.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Link',
@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('link'),
+    info: markdownDocumentationLinkBuilder('link'),
     docs: { iframeHeight: 60 },
   },
 };

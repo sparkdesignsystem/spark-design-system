@@ -3,7 +3,7 @@ import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Stack',
@@ -19,7 +19,7 @@ export default {
     subcomponents: {
       SprkStackItemDirective,
     },
-    info: markdownLinkBuilder('stack'),
+    info: markdownDocumentationLinkBuilder('stack'),
     docs: { iframeHeight: 180 },
   },
 };

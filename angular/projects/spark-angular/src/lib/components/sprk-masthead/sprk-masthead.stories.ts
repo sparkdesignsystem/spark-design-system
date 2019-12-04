@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkLinkModule } from '../sprk-link/sprk-link.module';
 import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 
@@ -25,7 +25,7 @@ export default {
       SprkMastheadAccordionComponent,
       SprkMastheadAccordionItemComponent,
     },
-    info: markdownLinkBuilder('masthead'),
+    info: markdownDocumentationLinkBuilder('masthead'),
     docs: { iframeHeight: 300 },
   },
 };

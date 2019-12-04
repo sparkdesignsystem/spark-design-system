@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Stack',
@@ -14,7 +14,7 @@ export default {
       SprkStackItem,
     },
     jest: ['SprkStack', 'SprkStackItem'],
-    info: markdownLinkBuilder('stack'),
+    info: markdownDocumentationLinkBuilder('stack'),
   },
 };
 

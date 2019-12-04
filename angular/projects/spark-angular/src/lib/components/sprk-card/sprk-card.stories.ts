@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
-import { markdownLinkBuilder } from '../../../../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Card',
@@ -18,7 +18,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownLinkBuilder('card'),
+    info: markdownDocumentationLinkBuilder('card'),
     docs: { iframeHeight: 200 },
   },
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkHighlightBoard from './SprkHighlightBoard';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Highlight Board',
@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkHighlightBoard'],
-    info: markdownLinkBuilder('highlight-board'),
+    info: markdownDocumentationLinkBuilder('highlight-board'),
   },
 };
 

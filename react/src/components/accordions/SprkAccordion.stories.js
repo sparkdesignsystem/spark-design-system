@@ -1,7 +1,7 @@
 import React from 'react';
 import SprkAccordion from './SprkAccordion';
 import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem';
-import { markdownLinkBuilder } from '../../../../storybook-utilities/markdownLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Accordion',
@@ -72,6 +72,6 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['SprkAccordion', 'SprkAccordionItem'] ,
-    info: markdownLinkBuilder('accordion'),
+    info: markdownDocumentationLinkBuilder('accordion'),
   },
 };
