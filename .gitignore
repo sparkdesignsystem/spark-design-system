@@ -40,3 +40,4 @@ src/angular/dist
 /vanilla/storybook-static
 /react/public
 /src/data/sass-vars.json
+src/data/sass-modifiers.json
