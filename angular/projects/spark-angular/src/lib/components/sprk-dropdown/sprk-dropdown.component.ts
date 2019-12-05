@@ -6,7 +6,7 @@ import {
   HostListener,
   EventEmitter
 } from '@angular/core';
-import { ISprkDropdownChoice } from '../../interfaces/sprk-dropdown-choice.interface';
+import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 
 @Component({
   selector: 'sprk-dropdown',
@@ -170,13 +170,13 @@ export class SprkDropdownComponent {
   title: string;
   /**
    * The value supplied will be assigned to
-   * the `.sprk-c-Dropdown__title` text.
+   * the title text.
    */
   @Input()
   selector: string;
   /**
    * Expects an array of
-   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-dropdown.interfaces.ts)
+   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
    *  objects.
    */
   @Input()

@@ -1,32 +1,13 @@
 import { Component, Input } from '@angular/core';
 import {
-  ISprkFooterGlobalLink
-} from '../../interfaces/sprk-footer-global-link.interface';
-
-import {
-  ISprkFooterLocalLinkColumn
-} from '../../interfaces/sprk-footer-local-link-column.interface';
-
-import {
-  ISprkFooterSocialLink
-} from '../../interfaces/sprk-footer-socical-link.interface';
-
-import {
- ISprkFooterAward
-} from '../../interfaces/sprk-footer-award.interface';
-
-import {
-  ISprkFooterBadgeLink
-} from '../../interfaces/sprk-footer-badge-link.interface';
-
-import {
-  ISprkText
-} from '../../interfaces/sprk-text.interface';
-
-import {
+  ISprkFooterGlobalLink,
+  ISprkFooterLocalLinkColumn,
+  ISprkFooterSocialLink,
+  ISprkFooterAward,
+  ISprkFooterBadgeLink,
+  ISprkDisclaimerText,
   ISprkDisclaimerToggle
-} from '../../interfaces/sprk-disclaimer-toggle.interface';
-
+} from './sprk-footer.interfaces';
 
 @Component({
   selector: 'sprk-footer',
@@ -318,7 +299,7 @@ export class SprkFooterComponent {
   socialLinks: ISprkFooterSocialLink[];
   /**
    * Array of
-   * [ISprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-footer-award.interface.ts)
+   * [ISprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    * used to build the
    * awards in the "Awards" section.
    */
@@ -326,7 +307,7 @@ export class SprkFooterComponent {
   awards: ISprkFooterAward[];
   /**
    * Array of
-   * [ISprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-footer-badge-link.interface.ts)
+   * [ISprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    * used to build the
    * icon links in the icon
    * section in the bottom
@@ -336,15 +317,15 @@ export class SprkFooterComponent {
   badgeLinks: ISprkFooterBadgeLink[];
   /**
    * Array of
-   * [ISprkText](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-text.interface.ts)
+   * [ISprkText](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/components/sprk-footer/sprk-footer.interfaces.ts)
    * used to build disclaimer text in the
    * of the Footer.
    */
   @Input()
-  disclaimerText: ISprkText[];
+  disclaimerText: ISprkDisclaimerText[];
   /**
    * Array of
-   * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-disclaimer-toggle.interface.ts)
+   * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    * used to build
    * the disclamer toggle(s) in
    * the the Footer.
