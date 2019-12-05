@@ -174,6 +174,7 @@ class SprkDropdown extends Component {
                       <TagName
                         className="sprk-c-Dropdown__link"
                         href={TagName === 'a' ? href || '#' : undefined}
+                        aria-label={text}
                         onClick={() => {
                           this.selectChoice(choice.id, text);
                           this.closeDropdown();
@@ -194,6 +195,7 @@ class SprkDropdown extends Component {
                             'sprk-c-Dropdown__link--active': isActive,
                           })}
                           href={TagName === 'a' ? href || '#' : undefined}
+                          aria-label={content.title }
                           onClick={() => {
                             this.selectChoice(choice.id, content.title);
                             this.closeDropdown();

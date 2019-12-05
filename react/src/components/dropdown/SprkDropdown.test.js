@@ -241,7 +241,7 @@ it('should choose correct aria-label text if default variant', () => {
 
   expect(
     wrapper
-      .find('.sprk-c-Dropdown__item')
+      .find('.sprk-c-Dropdown__link')
       .instance()
       .getAttribute('aria-label'),
   ).toBe('Item 1');
@@ -261,7 +261,7 @@ it('should choose correct aria-label text if informational variant', () => {
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(
     wrapper
-      .find('.sprk-c-Dropdown__item')
+      .find('.sprk-c-Dropdown__link')
       .instance()
       .getAttribute('aria-label'),
   ).toBe('Item 1');
