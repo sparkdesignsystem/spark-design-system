@@ -21,10 +21,9 @@ export const defaultDropdown = () => {
   return `
     <a
       class="sprk-b-Link sprk-b-Link--plain"
-      href="#nogo"
       data-sprk-dropdown-trigger="dropdown01"
-      aria-haspopup="true"
-      role="combobox"
+      aria-haspopup="listbox"
+      aria-label="Dropdown example description"
     >
       <svg class="sprk-c-Icon sprk-u-mls" viewBox="0 0 100 100">
         <use xlink:href="#settings" />
@@ -40,7 +39,10 @@ export const defaultDropdown = () => {
         <h2 class="sprk-c-Dropdown__title">My Choices</h2>
       </div>
 
-      <ul class="sprk-c-Dropdown__links">
+      <ul
+        class="sprk-c-Dropdown__links"
+        role="listbox"
+      >
         <li
           class="sprk-c-Dropdown__item"
           role="option"
@@ -75,13 +77,13 @@ export const informationalDropdown = () => {
   return `
     <a
       class="sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
-      href="#nogo"
       data-sprk-dropdown-trigger="dropdown02"
-      aria-haspopup="true"
+      aria-haspopup="listbox"
+      aria-label="Dropdown example description"
       data-analytics="object.action.event">
         <span
           data-sprk-dropdown-trigger-text-container=""
-          role="combobox">Make a selection...</span>
+          >Make a selection...</span>
         <svg
           class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-u-mls"
           viewBox="0 0 100 100">
@@ -100,12 +102,17 @@ export const informationalDropdown = () => {
         </h2>
       </div>
 
-      <ul class="sprk-c-Dropdown__links">
-        <li class="sprk-c-Dropdown__item">
+      <ul
+        class="sprk-c-Dropdown__links"
+        role="listbox"
+      >
+        <li
+          class="sprk-c-Dropdown__item"
+          role="option"
+        >
           <a
             class="sprk-c-Dropdown__link"
             href="#nogo" data-sprk-dropdown-choice="Choice Title 1"
-            role="option"
           >
             <p class="sprk-b-TypeBodyOne">
               Choice Title
@@ -124,8 +131,9 @@ export const informationalDropdown = () => {
         <li
           class="sprk-c-Dropdown__item"
           data-sprk-dropdown-choice="Choice Title 2"
+          role="option"
         >
-          <a class="sprk-c-Dropdown__link" href="#nogo" role="option">
+          <a class="sprk-c-Dropdown__link" href="#nogo">
             <p class="sprk-b-TypeBodyOne">Choice Title</p>
             <p class="sprk-b-TypeBodyTwo">Information about this choice</p>
             <p class="sprk-b-TypeBodyTwo">More information</p>

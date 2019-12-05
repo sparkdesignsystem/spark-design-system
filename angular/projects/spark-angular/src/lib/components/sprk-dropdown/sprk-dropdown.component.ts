@@ -48,7 +48,6 @@ import {
             *ngIf="selector && !title"
             linkType="plain"
             additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
-            ariaHasPopUp="true"
             (click)="toggle($event)"
           >
             <span
@@ -73,7 +72,8 @@ import {
             *ngFor="let choice of choices; let i = index"
             [attr.data-sprk-dropdown-choice-index]="i"
             (click)="choiceClick($event)"
-            [attr.aria-label]="choice.content ? choice.content.title : choice.text"
+            [attr.aria-selected]="choice.active"
+            role="option"
           >
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
@@ -83,7 +83,6 @@ import {
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
-                role="option"
                 >{{ choice.text }}
               </sprk-link>
             </ng-template>
@@ -94,7 +93,6 @@ import {
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
-                role="option"
               >
                 <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
                 <p>{{ choice.content.infoLine1 }}</p>
