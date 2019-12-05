@@ -83,6 +83,7 @@ import {
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
+                [attr.aria-label]="choice.text"
                 >{{ choice.text }}
               </sprk-link>
             </ng-template>
@@ -93,6 +94,7 @@ import {
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
+                [attr.aria-label]="choice.content.title"
               >
                 <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
                 <p>{{ choice.content.infoLine1 }}</p>

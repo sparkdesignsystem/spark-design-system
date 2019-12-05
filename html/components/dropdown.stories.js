@@ -112,10 +112,12 @@ export const informationalDropdown = () => {
         >
           <a
             class="sprk-c-Dropdown__link"
-            href="#nogo" data-sprk-dropdown-choice="Choice Title 1"
+            href="#nogo"
+            aria-label="Choice Title 1"
+            data-sprk-dropdown-choice="Choice Title 1"
           >
             <p class="sprk-b-TypeBodyOne">
-              Choice Title
+              Choice Title 1
             </p>
 
             <p class="sprk-b-TypeBodyTwo">
@@ -131,10 +133,11 @@ export const informationalDropdown = () => {
         <li
           class="sprk-c-Dropdown__item"
           data-sprk-dropdown-choice="Choice Title 2"
+          aria-label="Choice Title 2"
           role="option"
         >
           <a class="sprk-c-Dropdown__link" href="#nogo">
-            <p class="sprk-b-TypeBodyOne">Choice Title</p>
+            <p class="sprk-b-TypeBodyOne">Choice Title 2</p>
             <p class="sprk-b-TypeBodyTwo">Information about this choice</p>
             <p class="sprk-b-TypeBodyTwo">More information</p>
           </a>
