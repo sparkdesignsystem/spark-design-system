@@ -1,7 +1,9 @@
 const configClassModifierJsonProcessor = (classModifierJSON, componentName) => {
+  if (!classModifierJSON || !componentName) { return; }
+  const componentNameLowerCase = componentName.toLowerCase();
   const docs = classModifierJSON
     .filter((item) => {
-      return item.group.indexOf(componentName) !== -1;
+      return item.group.indexOf(componentNameLowerCase) !== -1;
     })
     .map((item) => {
       return {
@@ -9,7 +11,9 @@ const configClassModifierJsonProcessor = (classModifierJSON, componentName) => {
         ...item,
       };
     });
-  return docs;
+  if (docs.length > 0) {
+    return docs;
+  }
 };
 
 export { configClassModifierJsonProcessor };

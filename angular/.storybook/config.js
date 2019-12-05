@@ -9,6 +9,9 @@ import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { SprkTable } from '@sparkdesignsystem/spark-react';
+import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
+
+const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
 setCompodocJson(docJson);
 addDecorator(withA11y);
@@ -29,53 +32,43 @@ addParameters({
       }
       return null;
     },
-    container: ({ children, context }) => (
-      <DocsContainer context={context}>
-        <div>
-          {children}
-          <h3 class="sprk-u-mbm">Class Modifiers for {/[^/]*$/.exec(context.kind)[0]}</h3>  
-          <SprkTable
-             additionalTableClasses="sprk-b-Table--spacing-medium"
-             columns = {[
-              {
-                name: 'data1',
-                header: 'Column Heading'
-              },
-              {
-                name: 'data2',
-                header: 'Column Heading'
-              },
-              {
-                name: 'data3',
-                header: 'Column Heading'
-              }
-            ]}
-            rows = {[
-              {
-                data1: "Data 1",
-                data2: "Data 2",
-                data3: "Data 3"
-              },
-              {
-                data1: "Data 1",
-                data2: "Data 2",
-                data3: "Data 3"
-              },
-              {
-                data1: "Data 1",
-                data2: "Data 2",
-                data3: "Data 3"
-              },
-              {
-                data1: "Data 1",
-                data2: "Data 2",
-                data3: "Data 3"
-              },
-            ]}
-          /> 
-        </div>
-      </DocsContainer>
-    ),
+    container: ({ children, context }) => {
+      const componentName = context.kind.split('/')[1];
+      const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
+      if (processedJson) {
+        return (
+          <DocsContainer context={context}>
+            <div>
+              {children}
+
+              <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
+              <SprkTable
+                additionalTableClasses="sprk-b-Table--spacing-medium sprk-b-Table--secondary sprk-b-Table--striped"
+                columns = {[
+                  {
+                    name: 'selector',
+                    header: 'Class'
+                  },
+                  {
+                    name: 'description',
+                    header: 'Description'
+                  },
+                ]}
+                rows = {processedJson}
+              />
+            </div>
+          </DocsContainer>
+        )
+      } else {
+        return (
+          <DocsContainer context={context}>
+            <div>
+              {children}
+            </div>
+          </DocsContainer>
+        )
+      }
+    },
     extractProps,
   },
 });

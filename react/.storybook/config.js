@@ -40,32 +40,42 @@ addParameters({
       return null;
     },
     container: ({ children, context }) => {
-      const componentName = /[^/]*$/.exec(context.kind)[0].toLowerCase();
+      const componentName = context.kind.split('/')[1];
       const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
-      
-      return (
-      <DocsContainer context={context}>
-        <div>
-          <h3 className="sprk-u-mbm">Class Modifiers for {/[^/]*$/.exec(context.kind)[0]}</h3>
+      if (processedJson) {
+        return (
+          <DocsContainer context={context}>
+            <div>
+              {children}
 
-          {children}
-          <SprkTable
-             additionalTableClasses="sprk-b-Table--spacing-medium"
-             columns = {[
-              {
-                name: 'selector',
-                header: 'Class'
-              },
-              {
-                name: 'description',
-                header: 'Description'
-              },
-            ]}
-            rows = {processedJson}
-          />
-        </div>
-      </DocsContainer>
-    )},
+              <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
+              <SprkTable
+                additionalTableClasses="sprk-b-Table--spacing-medium sprk-b-Table--secondary sprk-b-Table--striped"
+                columns = {[
+                  {
+                    name: 'selector',
+                    header: 'Class'
+                  },
+                  {
+                    name: 'description',
+                    header: 'Description'
+                  },
+                ]}
+                rows = {processedJson}
+              />
+            </div>
+          </DocsContainer>
+        )
+      } else {
+        return (
+          <DocsContainer context={context}>
+            <div>
+              {children}
+            </div>
+          </DocsContainer>
+        )
+      }
+    },
   },
 })
 
