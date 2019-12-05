@@ -10,6 +10,7 @@ import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook
 import '../../storybook-utilities/icon-loader';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { SprkTable } from '@sparkdesignsystem/spark-react';
+import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
 
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
@@ -40,21 +41,14 @@ addParameters({
     },
     container: ({ children, context }) => {
       const componentName = /[^/]*$/.exec(context.kind)[0].toLowerCase();
-      const docs = classModifierJSON.filter((item) => { return item.group.indexOf(componentName) !== -1});
-      const processDocs = docs.map((item) => { 
-        return {
-          selector: item.context.name,
-          ...item
-        }; 
-      });
+      const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
       
       return (
       <DocsContainer context={context}>
-        {console.log(`The current component is ${/[^/]*$/.exec(context.kind)[0].toLowerCase()}`)}
-
         <div>
-          {children}
           <h3 className="sprk-u-mbm">Class Modifiers for {/[^/]*$/.exec(context.kind)[0]}</h3>
+
+          {children}
           <SprkTable
              additionalTableClasses="sprk-b-Table--spacing-medium"
              columns = {[
@@ -67,7 +61,7 @@ addParameters({
                 header: 'Description'
               },
             ]}
-            rows = {processDocs}
+            rows = {processedJson}
           />
         </div>
       </DocsContainer>
