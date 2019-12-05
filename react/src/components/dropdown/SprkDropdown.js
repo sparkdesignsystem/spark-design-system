@@ -149,6 +149,7 @@ class SprkDropdown extends Component {
             )}
             <ul
               className="sprk-c-Dropdown__links"
+              aria-label={title ? title : screenReaderText}
               role="listbox"
             >
               {choiceItems.map((choice) => {

@@ -67,6 +67,7 @@ import {
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
+          [attr.aria-label]="title ? title : screenReaderText"
         >
           <li
             class="sprk-c-Dropdown__item"

@@ -42,6 +42,7 @@ export const defaultDropdown = () => {
       <ul
         class="sprk-c-Dropdown__links"
         role="listbox"
+        aria-label="Dropdown example description"
       >
         <li
           class="sprk-c-Dropdown__item"
@@ -105,6 +106,7 @@ export const informationalDropdown = () => {
       <ul
         class="sprk-c-Dropdown__links"
         role="listbox"
+        aria-label="Dropdown example description"
       >
         <li
           class="sprk-c-Dropdown__item"
