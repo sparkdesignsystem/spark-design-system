@@ -1,8 +1,6 @@
 import { ISprkLink } from './sprk-link.interface';
 import { TSprkOptionalProps } from './utilities.interface';
 
-export type TSprkFooterLinkOptionalProps = TSprkOptionalProps<ISprkFooterLink>;
-
 export interface ISprkFooterLink extends ISprkLink {
   /**
    * TODO: Deprecate this.
@@ -13,3 +11,5 @@ export interface ISprkFooterLink extends ISprkLink {
    */
   analytics?: string;
 }
+
+export type TSprkFooterLinkOptionalProps = TSprkOptionalProps<ISprkFooterLink>;

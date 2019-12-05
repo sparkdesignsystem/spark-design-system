@@ -1,4 +1,4 @@
-import { ISprkIcon } from './sprk-icon-interface';
+import { ISprkIcon } from './sprk-icon-interfaces';
 
 export interface ISprkFooterIcon extends ISprkIcon{
   /**

@@ -3,7 +3,7 @@ import { TSprkOptionalProps } from './utilities.interface';
 
 /**
  * Interface for the case when there is
- * a link that includes an icon and text.
+ * a link that includes an icon.
  */
 export interface ISprkIconTextLink extends ISprkLink {
   /**
