@@ -6,8 +6,11 @@
 export interface ISprkDropdownChoice {
   /**
    * The text rendered inside the link.
+   * If `content` is supplied, then the
+   * value for `title` is used instead
+   * of this.
    */
-  text: string;
+  text?: string;
   /**
    * The `href` value for the link.
    * If omitted, the href will
