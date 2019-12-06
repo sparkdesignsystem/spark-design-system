@@ -7,7 +7,7 @@ export interface ISprkDropdownChoice {
   /**
    * The text rendered inside the link.
    */
-  text?: string;
+  text: string;
   /**
    * The `href` value for the link.
    * If omitted, the href will
