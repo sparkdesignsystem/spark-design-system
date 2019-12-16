@@ -19,19 +19,6 @@ export default {
 };
 
 export const searchInput = () => (
-  <SprkTextInput label="Search" name="Search" placeholder="Search" />
-);
-
-searchInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
-  }
-};
-
-export const inlineSearchInput = () => (
   <SprkTextInput
     leadingIcon="search"
     hiddenLabel
@@ -40,8 +27,47 @@ export const inlineSearchInput = () => (
   />
 );
 
-inlineSearchInput.story = {
-  name: 'Inline',
+searchInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const invalidSearchInput = () => (
+  <SprkTextInput
+    leadingIcon="search"
+    hiddenLabel
+    name="InlineSearch"
+    placeholder="Search"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidSearchInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const disabledSearchInput = () => (
+  <SprkTextInput
+    leadingIcon="search"
+    hiddenLabel
+    name="InlineSearch"
+    placeholder="Search"
+    disabled
+  />
+);
+
+disabledSearchInput.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkTextInput',

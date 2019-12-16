@@ -37,3 +37,46 @@ percentageInput.story = {
     ]
   },
 };
+
+export const invalidPercentageInput = () => (
+  <SprkTextInput
+    label="Percentage"
+    iconRight
+    leadingIcon="percent"
+    narrowWidth
+    name="percentage"
+    type="tel"
+    valid={false}
+    errorMessage="There is an error with this field."
+  />
+);
+
+invalidPercentageInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const disabledPercentageInput = () => (
+  <SprkTextInput
+    label="Percentage"
+    iconRight
+    leadingIcon="percent"
+    narrowWidth
+    name="percentage"
+    type="tel"
+    disabled
+  />
+);
+
+disabledPercentageInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
