@@ -22,11 +22,7 @@ export const hugeTextInput = () => (
   <SprkTextInput
     type="hugeTextInput"
     label="Text Input Label"
-    name="text-input-label"
-    valid={true}
-    disabled={false}
-    placeholder="Huge Text Placeholder"
-    errorMessage="There is an error on this field."
+    name="text-input-label" placeholder="Huge Text Placeholder"
   />
 );
 
@@ -40,24 +36,44 @@ hugeTextInput.story = {
   },
 };
 
-export const hugeTextInputWithDefaultValue = () => (
+export const invalidHugeTextInput = () => (
   <SprkTextInput
     type="hugeTextInput"
     label="Text Input Label"
     name="text-input-label"
-    valid={true}
-    disabled={false}
     placeholder="Huge Text Placeholder"
-    errorMessage="There is an error on this field."
-    defaultValue="Default Value"
+    valid={false}
+    errorMessage="There is an error with this field."
   />
 );
 
-hugeTextInputWithDefaultValue.story = {
-  name: 'With Default Value',
+invalidHugeTextInput.story = {
+  name: 'Invalid',
+  component: SprkTextInput,
   parameters: {
     jest: [
       'SprkTextInput',
     ]
   },
 };
+
+export const disabledHugeTextInput = () => (
+  <SprkTextInput
+    type="hugeTextInput"
+    label="Text Input Label"
+    name="text-input-label"
+    placeholder="Huge Text Placeholder"
+    disabled
+  />
+);
+
+disabledHugeTextInput.story = {
+  name: 'Disabled',
+  component: SprkTextInput,
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+

@@ -34,3 +34,22 @@ helperText.story = {
     ]
   },
 };
+
+export const invalidHelperText = () => (
+  <SprkTextInput
+    label="Text Input"
+    name="helper-text-example"
+    helperText="This is my helper text."
+    errorMessage="There is an error with this field."
+    valid={false}
+  />
+);
+
+invalidHelperText.story = {
+  name: 'With Error Text',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
