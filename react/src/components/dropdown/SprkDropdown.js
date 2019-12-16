@@ -107,7 +107,7 @@ class SprkDropdown extends Component {
           )}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
-          aria-label={triggerText ? triggerText : screenReaderText}
+          aria-label={title ? triggerText : screenReaderText}
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
