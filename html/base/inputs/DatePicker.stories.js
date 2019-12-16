@@ -49,7 +49,6 @@ export const datePickerStory = () => {
           id="datepicker"
           data-id="datepicker-input"
           type="text"
-          pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
           placeholder="MM/DD/YYYY"
           aria-describedby="datepicker--error-container"
         >
@@ -65,4 +64,121 @@ export const datePickerStory = () => {
 
 datePickerStory.story = {
   name: 'Default',
+};
+
+export const invalidDatePickerStory = () => {
+  useEffect(() => {
+    datePicker();
+  }, []);
+
+  return `
+    <div
+      class="sprk-b-InputContainer"
+      data-sprk-input="date"
+      data-sprk-datepicker
+    >
+      <label
+        for="datepicker"
+        class="sprk-b-Label sprk-b-Label--with-icon"
+      >
+        Date
+      </label>
+
+      <div class="sprk-b-TextInputIconContainer">
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--stroke-current-color"
+          viewBox="0 0 64 64"
+        >
+          <use xlink:href="#calendar" />
+        </svg>
+
+        <input
+          class="
+            sprk-b-TextInput
+            sprk-b-TextInput--error
+            sprk-b-TextInput--has-svg-icon
+            sprk-u-Width-100
+          "
+          id="datepicker"
+          data-id="datepicker-input"
+          type="text"
+          placeholder="MM/DD/YYYY"
+          aria-invalid="true"
+          aria-describedby="datepicker--error-container"
+        >
+      </div>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="datepicker--error-container"
+      >
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+          viewBox="0 0 64 64"
+        >
+          <use xlink:href="#exclamation-filled-small" />
+        </svg>
+        <div class="sprk-b-ErrorText">
+          There is an error on this field.
+        </div>
+      </div>
+    </div>
+  `;
+};
+
+invalidDatePickerStory.story = {
+  name: 'Invalid',
+};
+
+export const disabledDatePickerStory = () => {
+  useEffect(() => {
+    datePicker();
+  }, []);
+
+  return `
+    <div
+      class="sprk-b-InputContainer"
+      data-sprk-input="date"
+      data-sprk-datepicker
+    >
+      <label
+        for="datepicker"
+        class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--with-icon"
+      >
+        Date
+      </label>
+
+      <div class="sprk-b-TextInputIconContainer">
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--stroke-current-color"
+          viewBox="0 0 64 64"
+        >
+          <use xlink:href="#calendar" />
+        </svg>
+
+        <input
+          class="
+            sprk-b-TextInput
+            sprk-b-TextInput--has-svg-icon
+            sprk-u-Width-100
+          "
+          id="datepicker"
+          data-id="datepicker-input"
+          type="text"
+          placeholder="MM/DD/YYYY"
+          aria-describedby="datepicker--error-container"
+          disabled
+        >
+      </div>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="datepicker--error-container"
+      ></div>
+    </div>
+  `;
+};
+
+disabledDatePickerStory.story = {
+  name: 'Disabled',
 };
