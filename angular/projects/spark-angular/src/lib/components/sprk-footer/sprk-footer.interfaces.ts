@@ -28,7 +28,7 @@ export interface ISprkDisclaimerToggle {
    */
   analyticsString?: string;
   /**
-   * TODO: Deprecate this.
+   * Deprecated.
    * The API supports using this
    * or `analyticsString` but
    * using `analyticsString` is
@@ -91,7 +91,7 @@ export interface ISprkFooterSocialLink {
    */
   analyticsString?: string;
   /**
-   * TODO: Deprecate this.
+   * Deprecated.
    * The Footer API supports using this
    * or `analyticsString` but
    * using `analyticsString` is
@@ -140,7 +140,7 @@ export interface ISprkFooterLocalLinkColumn {
      */
     analyticsString?: string;
     /**
-     * TODO: Deprecate this.
+     * Deprecated.
      * The Footer API supports using this
      * or `analyticsString` but
      * using `analyticsString` is
@@ -210,7 +210,7 @@ export interface ISprkFooterGlobalLink {
    */
   analyticsString?: string;
   /**
-   * TODO: Deprecate this.
+   * Deprecated.
    * The Footer API supports using this
    * or `analyticsString` but
    * using `analyticsString` is
@@ -265,7 +265,7 @@ export interface ISprkFooterBadgeLink {
    */
   analyticsString?: string;
   /**
-   * TODO: Deprecate this.
+   * Deprecated.
    * The Footer API supports using this
    * or `analyticsString` but
    * using `analyticsString` is
@@ -297,7 +297,7 @@ export interface ISprkFooterAward {
    */
   analyticsString?: string;
   /**
-   * TODO: Deprecate this.
+   * Deprecated.
    * The Footer API supports using this
    * or `analyticsString` but
    * using `analyticsString` is
