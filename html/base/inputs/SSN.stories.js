@@ -98,8 +98,7 @@ export const invalidSSNInputStory = () => `
         >
           Show SSN
         </label>
-    </div>
-
+      </div>
       <div
         class="sprk-b-ErrorContainer"
         id="ssn--error-container"
@@ -161,7 +160,7 @@ export const disabledSSNInputStory = () => `
         >
           Show SSN
         </label>
-    </div>
+      </div>
 
       <div
         class="sprk-b-ErrorContainer"

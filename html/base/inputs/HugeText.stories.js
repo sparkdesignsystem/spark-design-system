@@ -1,10 +1,10 @@
 import { useEffect } from '@storybook/client-api';
-import { requiredTextInput } from '../requiredTextInput';
 import { hugeInput } from '../hugeInput';
 
 export default {
   title: 'Components/Input/Huge Text',
   decorators: [
+    story => `<div class="sprk-o-Box">${story()}</div>`,
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
@@ -16,7 +16,6 @@ export default {
 
 export const hugeTextInput = () => {
   useEffect(() => {
-    requiredTextInput();
     hugeInput();
   }, []);
 
@@ -53,7 +52,6 @@ hugeTextInput.story = {
 
 export const invalidHugeTextInput = () => {
   useEffect(() => {
-    requiredTextInput();
     hugeInput();
   }, []);
 
@@ -104,7 +102,6 @@ invalidHugeTextInput.story = {
 
 export const disabledHugeTextInput = () => {
   useEffect(() => {
-    requiredTextInput();
     hugeInput();
   }, []);
 
