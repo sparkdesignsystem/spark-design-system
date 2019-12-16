@@ -37,7 +37,7 @@ export const invalidMonetaryInput = () => (
     textIcon name="monetary"
     placeholder="0.00"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

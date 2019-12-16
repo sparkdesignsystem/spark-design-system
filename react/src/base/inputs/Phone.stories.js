@@ -41,7 +41,7 @@ export const invalidPhoneInput = () => (
     name="phone"
     placeholder="(000) 000-0000"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

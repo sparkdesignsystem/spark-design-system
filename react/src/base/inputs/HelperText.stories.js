@@ -40,7 +40,7 @@ export const invalidHelperText = () => (
     label="Text Input"
     name="helper-text-example"
     helperText="This is my helper text."
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
     valid={false}
   />
 );

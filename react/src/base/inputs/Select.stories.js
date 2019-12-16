@@ -103,7 +103,7 @@ export const invalidSelectBox = () => (
     variant="select"
     label="Select Box Label"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

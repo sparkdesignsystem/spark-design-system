@@ -41,7 +41,7 @@ export const invalidSSNInput = () => (
     toggleLabel="Show SSN"
     name="ssn"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

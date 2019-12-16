@@ -47,7 +47,7 @@ export const invalidPercentageInput = () => (
     name="percentage"
     type="tel"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

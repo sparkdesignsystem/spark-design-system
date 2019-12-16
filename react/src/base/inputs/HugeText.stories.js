@@ -22,7 +22,8 @@ export const hugeTextInput = () => (
   <SprkTextInput
     type="hugeTextInput"
     label="Text Input Label"
-    name="text-input-label" placeholder="Huge Text Placeholder"
+    name="text-input-label"
+    placeholder="Huge Text Placeholder"
   />
 );
 
@@ -43,7 +44,7 @@ export const invalidHugeTextInput = () => (
     name="text-input-label"
     placeholder="Huge Text Placeholder"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

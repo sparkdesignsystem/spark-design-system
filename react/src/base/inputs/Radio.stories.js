@@ -73,7 +73,7 @@ export const invalidRadioButton = () => (
     ]}
     variant="radio"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   />
 );
 

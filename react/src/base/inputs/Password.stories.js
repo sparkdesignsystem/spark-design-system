@@ -40,7 +40,7 @@ export const invalidPasswordInput = () => (
     toggleLabel="Show Password"
     name="password-1"
     valid={false}
-    errorMessage="There is an error with this field."
+    errorMessage="There is an error on this field."
   /> );
 
 invalidPasswordInput.story = {
