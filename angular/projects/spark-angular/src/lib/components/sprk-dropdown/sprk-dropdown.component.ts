@@ -22,7 +22,7 @@ import {
           [idString]="idString"
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
-          [attr.aria-label]="title ? title : screenReaderText"
+          [attr.aria-label]="triggerText ? triggerText : screenReaderText"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
