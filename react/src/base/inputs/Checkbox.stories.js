@@ -68,7 +68,7 @@ export const invalidCheckbox = () => (
       {
         label: 'Checkbox Item 3',
         name: 'check[]',
-        value: 'item-2',
+        value: 'item-3',
       },
     ]}
     variant="checkbox"
@@ -103,7 +103,7 @@ export const disabledCheckbox = () => (
       {
         label: 'Checkbox Item 3',
         name: 'check[]',
-        value: 'item-2',
+        value: 'item-3',
       },
     ]}
     variant="checkbox"

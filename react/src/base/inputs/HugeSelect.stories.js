@@ -154,7 +154,7 @@ export const disabledHugeSelectBox = () => (
     ]}
     variant="hugeSelect"
     name="select"
-    disabled={true}
+    disabled
     defaultValue=""
   />
 );

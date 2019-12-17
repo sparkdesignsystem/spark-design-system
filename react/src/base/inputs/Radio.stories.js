@@ -35,7 +35,7 @@ export const radioButton = () => (
       {
         label: 'Radio Item 3',
         name: 'radio[]',
-        value: 'item-2',
+        value: 'item-3',
       },
     ]}
     variant="radio"
@@ -68,7 +68,7 @@ export const invalidRadioButton = () => (
       {
         label: 'Radio Item 3',
         name: 'radio[]',
-        value: 'item-2',
+        value: 'item-3',
       },
     ]}
     variant="radio"
@@ -103,7 +103,7 @@ export const disabledRadioButton = () => (
       {
         label: 'Radio Item 3',
         name: 'radio[]',
-        value: 'item-2',
+        value: 'item-3',
       },
     ]}
     variant="radio"
