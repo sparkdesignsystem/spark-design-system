@@ -38,6 +38,7 @@
     "@babel/preset-react": "^7.7.4",
     "@babel/traverse": "^7.6.0",
     "@compodoc/compodoc": "^1.1.11",
+    "@sparkdesignsystem/spark-react": "1.1.1",
     "@storybook/addon-a11y": "^5.3.0-beta.31",
     "@storybook/addon-docs": "^5.3.0-beta.31",
     "@storybook/addons": "^5.3.0-beta.31",
