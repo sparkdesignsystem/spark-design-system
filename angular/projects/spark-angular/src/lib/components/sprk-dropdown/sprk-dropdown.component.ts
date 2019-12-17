@@ -23,7 +23,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           [idString]="idString"
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
-          [attr.aria-label]="title ? triggerText : screenReaderText"
+          [attr.aria-label]="triggerText ? triggerText : (screenReaderText || 'Make a Selection')"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
@@ -68,7 +68,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
-          [attr.aria-label]="title ? title : screenReaderText"
+          [attr.aria-label]="title ? title : (screenReaderText || 'My Choices')"
         >
           <li
             class="sprk-c-Dropdown__item"
