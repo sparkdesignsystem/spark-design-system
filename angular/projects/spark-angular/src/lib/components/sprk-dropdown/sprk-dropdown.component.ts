@@ -6,6 +6,7 @@ import {
   HostListener,
   EventEmitter
 } from '@angular/core';
+import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 
 @Component({
   selector: 'sprk-dropdown',
@@ -76,6 +77,7 @@ import {
               <sprk-link
                 linkType="unstyled"
                 [href]="choice.href"
+                [analyticsString]="choice.analyticsString"
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
@@ -87,6 +89,7 @@ import {
               <sprk-link
                 linkType="unstyled"
                 [href]="choice.href"
+                [analyticsString]="choice.analyticsString"
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
@@ -167,16 +170,17 @@ export class SprkDropdownComponent {
   title: string;
   /**
    * The value supplied will be assigned to
-   * the `.Dropdown__title` text.
-   * Should be used if using the `mastheadSelector` type.
+   * the title text.
    */
   @Input()
   selector: string;
   /**
-   * Expects an array of choice objects.
+   * Expects an array of
+   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   *  objects.
    */
   @Input()
-  choices: any[];
+  choices: ISprkDropdownChoice[];
   /**
    * If supplied, will render the icon
    * to the right of the trigger text.
@@ -199,12 +203,10 @@ export class SprkDropdownComponent {
   @Input()
   screenReaderText: string;
   /**
-   * When the `dropdownType` is
-   *  `informational` and a
-   * user clicks on a choice from
-   * the menu, the `choiceMade` event is
-   * emitted from the Dropdown and it
-   * contains the value of the clicked choice.
+   * The event that is
+   * emitted from the Dropdown when a choice
+   * is clicked. The event contains the value
+   * of the choice that was clicked.
    */
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
@@ -281,7 +283,7 @@ export class SprkDropdownComponent {
    * @ignore
    */
   clearActiveChoices(): void {
-    this.choices.forEach((choice: object) => {
+    this.choices.forEach((choice: ISprkDropdownChoice) => {
       choice['active'] = false;
     });
   }

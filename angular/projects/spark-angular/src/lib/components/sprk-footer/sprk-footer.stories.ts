@@ -127,7 +127,7 @@ export const defaultStory = () => ({
           href: '/global-1',
           icon: 'auto-loans',
           iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
-          analytics: 'link-1',
+          analyticsString: 'link-1',
           iconScreenReaderText: 'auto loans'
         },
         {
@@ -137,7 +137,7 @@ export const defaultStory = () => ({
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
           imgCSS: 'sprk-u-Width-20',
           imgAlt: 'Spark Placeholder Image',
-          analytics: 'link-2'
+          analyticsString: 'link-2'
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
@@ -146,14 +146,14 @@ export const defaultStory = () => ({
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
           imgCSS: 'sprk-u-Width-20',
           imgAlt: 'Spark Placeholder Image',
-          analytics: 'link-3'
+          analyticsString: 'link-3'
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
           href: '/global-4',
           icon: 'auto-loans',
           iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
-          analytics: 'link-4',
+          analyticsString: 'link-4',
           iconScreenReaderText: 'auto loans'
         },
         {
@@ -161,7 +161,7 @@ export const defaultStory = () => ({
           href: '/global-5',
           icon: 'payment-center',
           iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
-          analytics: 'link-5',
+          analyticsString: 'link-5',
           iconScreenReaderText: 'payment center'
         }
       ]"
@@ -171,28 +171,28 @@ export const defaultStory = () => ({
           href: '/icons-1',
           icon: 'facebook-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'social-link-1',
+          analyticsString: 'social-link-1',
           iconScreenReaderText: 'facebook'
         },
         {
           href: '/icons-2',
           icon: 'instagram-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'social-link-2',
+          analyticsString: 'social-link-2',
           iconScreenReaderText: 'instagram'
         },
         {
           href: '/icons-3',
           icon: 'twitter-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'social-link-3',
+          analyticsString: 'social-link-3',
           iconScreenReaderText: 'twitter'
         },
         {
           href: '/icons-4',
           icon: 'youtube-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'social-link-4',
+          analyticsString: 'social-link-4',
           iconScreenReaderText: 'youtube'
         }
       ]"
@@ -202,21 +202,21 @@ export const defaultStory = () => ({
           href: '/badge-1',
           icon: 'townhouse',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'link-1',
+          analyticsString: 'link-1',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '/badge-2',
           icon: 'townhouse',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'link-2',
+          analyticsString: 'link-2',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '/badge-3',
           icon: 'townhouse',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
-          analytics: 'link-3',
+          analyticsString: 'link-3',
           iconScreenReaderText: 'townhouse'
         }
       ]"
@@ -229,7 +229,7 @@ export const defaultStory = () => ({
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
           imgCSS: 'sprk-u-Width-50',
           imgAlt: 'placeholder',
-          analytics: 'awards-link-1'
+          analyticsString: 'awards-link-1'
         },
         {
           href: '/awards-2',
@@ -237,7 +237,7 @@ export const defaultStory = () => ({
             'https://spark-assets.netlify.com/spark-placeholder.jpg',
           imgCSS: 'sprk-u-Width-50',
           imgAlt: 'placeholder',
-          analytics: 'awards-link-2'
+          analyticsString: 'awards-link-2'
         }
       ]"
 
@@ -264,7 +264,7 @@ export const defaultStory = () => ({
           body:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
              Aliquam in laoreet ante.',
-          analytics: 'disclaimer'
+          analyticsString: 'disclaimer'
         }
       ]"
     >
