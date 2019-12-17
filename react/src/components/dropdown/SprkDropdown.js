@@ -107,7 +107,7 @@ class SprkDropdown extends Component {
           )}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
-          aria-label={variant === "informational" ? triggerText : (screenReaderText || "Choose One")}
+          aria-label={screenReaderText ? screenReaderText : triggerText}
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
@@ -149,7 +149,7 @@ class SprkDropdown extends Component {
             )}
             <ul
               className="sprk-c-Dropdown__links"
-              aria-label={title ? title : (screenReaderText || "Choose One")}
+              aria-label={title ? title : (screenReaderText || "My Choices")}
               role="listbox"
             >
               {choiceItems.map((choice) => {

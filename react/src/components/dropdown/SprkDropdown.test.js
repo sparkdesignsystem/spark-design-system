@@ -301,5 +301,5 @@ it('should default to correct aria-label if screenReaderText is not provided on 
       .find('.sprk-b-Link')
       .instance()
       .getAttribute('aria-label'),
-  ).toBe('Choose One');
+  ).toBe('Choose One...');
 });
