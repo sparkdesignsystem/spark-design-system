@@ -107,7 +107,7 @@ class SprkDropdown extends Component {
           )}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
-          aria-label={title ? triggerText : screenReaderText}
+          aria-label={variant === "informational" ? triggerText : (screenReaderText || "Choose One")}
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
@@ -149,7 +149,7 @@ class SprkDropdown extends Component {
             )}
             <ul
               className="sprk-c-Dropdown__links"
-              aria-label={title ? title : screenReaderText}
+              aria-label={title ? title : (screenReaderText || "Choose One")}
               role="listbox"
             >
               {choiceItems.map((choice) => {
@@ -196,7 +196,7 @@ class SprkDropdown extends Component {
                             'sprk-c-Dropdown__link--active': isActive,
                           })}
                           href={TagName === 'a' ? href || '#' : undefined}
-                          aria-label={content.title }
+                          aria-label={content.title}
                           onClick={() => {
                             this.selectChoice(choice.id, content.title);
                             this.closeDropdown();

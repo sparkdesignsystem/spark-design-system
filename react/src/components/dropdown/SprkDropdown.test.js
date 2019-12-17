@@ -229,25 +229,28 @@ it('should not set href if the supplied tagname is not a', () => {
   ).toBe(null);
 });
 
-it('should choose correct aria-label text if default variant', () => {
-  const choices = {
-    items: [
-      { text: 'Item 1', value: 'item-1' },
-    ],
-  };
-  const wrapper = mount(<SprkDropdown choices={choices} />);
-
+it('should choose correct aria-label text if informational variant', () => {
+  const wrapper = mount(
+    <SprkDropdown
+      defaultTriggerText="Make a selection..."
+      variant="informational"
+      choices={{
+        items: [
+          { content: { title: 'Item 1' } },
+        ],
+      }}
+    />,
+  );
   wrapper.find('.sprk-b-Link').simulate('click');
-
   expect(
     wrapper
-      .find('.sprk-c-Dropdown__link')
+      .find('.sprk-b-Link')
       .instance()
       .getAttribute('aria-label'),
-  ).toBe('Item 1');
+  ).toBe('Make a selection...');
 });
 
-it('should choose correct aria-label text if informational variant', () => {
+it('should choose correct aria-label text if informational variant does not have defaultTriggerText', () => {
   const wrapper = mount(
     <SprkDropdown
       variant="informational"
@@ -261,8 +264,42 @@ it('should choose correct aria-label text if informational variant', () => {
   wrapper.find('.sprk-b-Link').simulate('click');
   expect(
     wrapper
-      .find('.sprk-c-Dropdown__link')
+      .find('.sprk-b-Link')
       .instance()
       .getAttribute('aria-label'),
-  ).toBe('Item 1');
+  ).toBe('Choose One...');
+});
+
+it('should default to correct aria-label if screenReaderText is provided on default variant', () => {
+  const choices = {
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+    ],
+  };
+
+  const wrapper = mount(<SprkDropdown choices={choices} screenReaderText="Dropdown description"/>);
+
+  expect(
+    wrapper
+      .find('.sprk-b-Link')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Dropdown description');
+});
+
+it('should default to correct aria-label if screenReaderText is not provided on default variant', () => {
+  const choices = {
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+    ],
+  };
+
+  const wrapper = mount(<SprkDropdown choices={choices} />);
+
+  expect(
+    wrapper
+      .find('.sprk-b-Link')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Choose One');
 });
