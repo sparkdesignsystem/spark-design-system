@@ -30,3 +30,40 @@ monetaryInput.story = {
     ]
   },
 };
+
+export const invalidMonetaryInput = () => (
+  <SprkTextInput
+    label="Payment"
+    textIcon name="monetary"
+    placeholder="0.00"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidMonetaryInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const disabledMonetaryInput = () => (
+  <SprkTextInput
+    label="Payment"
+    textIcon name="monetary"
+    placeholder="0.00"
+    disabled
+  />
+);
+
+disabledMonetaryInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};

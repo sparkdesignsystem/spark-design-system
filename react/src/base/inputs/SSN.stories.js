@@ -18,7 +18,7 @@ export default {
   },
 };
 
-export const ssnInput = () => (
+export const SSNInput = () => (
   <SprkRevealInput
     label="Social Security Number"
     toggleLabel="Show SSN"
@@ -26,8 +26,45 @@ export const ssnInput = () => (
   />
 );
 
-ssnInput.story = {
+SSNInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
+};
+
+export const invalidSSNInput = () => (
+  <SprkRevealInput
+    label="Social Security Number"
+    toggleLabel="Show SSN"
+    name="ssn"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidSSNInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
+};
+
+export const disabledSSNInput = () => (
+  <SprkRevealInput
+    label="Social Security Number"
+    toggleLabel="Show SSN"
+    name="ssn"
+    disabled
+  />
+);
+
+disabledSSNInput.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkRevealInput',

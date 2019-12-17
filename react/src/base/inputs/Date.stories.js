@@ -23,12 +23,48 @@ export const dateInput = () => (
     label="Date"
     name="date"
     placeholder="01/01/2019"
-    errorMessage="Incorrect date."
   />
 );
 
 dateInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const invalidDateInput = () => (
+  <SprkTextInput
+    label="Date"
+    name="date"
+    placeholder="01/01/2019"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidDateInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const disabledDateInput = () => (
+  <SprkTextInput
+    label="Date"
+    name="date"
+    placeholder="01/01/2019"
+    disabled
+  />
+);
+
+disabledDateInput.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkTextInput',
