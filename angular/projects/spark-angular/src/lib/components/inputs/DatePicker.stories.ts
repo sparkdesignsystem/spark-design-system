@@ -6,6 +6,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -27,6 +28,9 @@ export default {
     }
   },
   parameters: {
+    subcomponents: {
+      SprkDatepickerDirective,
+    },
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,

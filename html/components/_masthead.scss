@@ -81,6 +81,7 @@
     border-bottom: $sprk-masthead-border-bottom-wide;
   }
 }
+
 .sprk-c-Masthead__nav-item {
   display: flex;
   justify-content: flex-end;
@@ -109,7 +110,7 @@
 
   @media (min-width: $sprk-masthead-breakpoint) {
     padding-right: $sprk-masthead-content-item-padding-right-wide;
-    flex-grow:0;
+    flex-grow: 0;
   }
 }
 
