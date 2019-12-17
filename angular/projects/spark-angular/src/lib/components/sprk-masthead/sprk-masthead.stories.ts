@@ -635,7 +635,7 @@ export const extended = () => ({
       choices: [
         {
           content: {
-            title: 'Choice Title',
+            title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
             infoLine2: 'More Information'
           },
@@ -644,7 +644,7 @@ export const extended = () => ({
         },
         {
           content: {
-            title: 'Choice Title',
+            title: 'Choice Title 2',
             infoLine1: 'Information about this choice',
             infoLine2: 'More Information'
           },

@@ -19,7 +19,7 @@ import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.componen
     </sprk-tabbed-navigation>
   `
 })
-export class TestComponent {}
+class TestComponent {}
 
 describe('SprkTabbedNavigationComponent', () => {
   let component: SprkTabbedNavigationComponent;

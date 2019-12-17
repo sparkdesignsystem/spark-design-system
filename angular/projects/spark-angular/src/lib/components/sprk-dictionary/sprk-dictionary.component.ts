@@ -53,6 +53,8 @@ export class SprkDictionaryComponent {
   idString: string;
   /**
    * @ignore
+   * Used to grab all the keys from
+   * objects.
    */
   objectKeys = Object.keys;
 
