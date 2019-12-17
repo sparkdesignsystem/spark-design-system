@@ -67,7 +67,7 @@ fail.story = {
   parameters: {
     docs: { iframeHeight: 235 },
   },
-}
+};
 
 export const withNoDismissButton = () => ({
   moduleMetadata: modules,
