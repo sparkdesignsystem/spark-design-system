@@ -3,7 +3,7 @@
 // ==================================================================
 
 ////
-/// @group highlight-board
+/// @group highlight board
 ////
 .sprk-c-HighlightBoard {
   background-color: $sprk-highlight-board-color;
@@ -46,6 +46,13 @@
   }
 }
 
+/// Adds the styles for the Stacked Highlight Board variant.
+/// @name .sprk-c-HighlightBoard--stacked
+
+/// A Spark utility class that can be used on
+/// the Highlight Board to make it become 100% width.
+/// @name .sprk-u-FullWidth
+
 /// Adds the styles for Highlight Boards with an image.
 /// @name .sprk-c-HighlightBoard--has-image
 .sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked)
@@ -57,10 +64,3 @@
   right: $sprk-space-l;
   text-align: left;
 }
-
-/// Adds the styles for the Stacked Highlight Board variant.
-/// @name .sprk-c-HighlightBoard--stacked
-
-/// A Spark utility class that can be used on
-/// the Highlight Board to make it become 100% width.
-/// @name .sprk-u-FullWidth
