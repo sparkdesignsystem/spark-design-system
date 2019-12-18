@@ -1,6 +1,9 @@
 // ==================================================================
 // Masthead
 // ==================================================================
+////
+/// @group masthead
+////
 .sprk-c-Masthead {
   background-color: $sprk-masthead-bg-color;
   border-bottom: $sprk-masthead-border-bottom;
@@ -236,12 +239,14 @@
 
 /// Adds an active state color and bold
 /// font weight to active big navigation items.
+/// @name .sprk-c-Masthead__big-nav-item--active
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
   color: $sprk-big-nav-active-color;
   font-weight: $sprk-big-nav-link-font-weight;
 }
 
-/// Add open/active styles to open big navigation items.
+/// Add open styles to open big navigation items.
+/// @name .sprk-c-Masthead__big-nav-item--open
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
 .sprk-c-Masthead__big-nav-item--active {
@@ -345,7 +350,8 @@
   }
 }
 
-/// Add top divider when open
+/// Add top divider when open.
+/// @name .sprk-c-MastheadAccordion__item--open
 .sprk-c-MastheadAccordion__item--open::before {
   background-color: $sprk-masthead-accordion-item-open-line-background-color;
   content: '';
@@ -355,7 +361,8 @@
   width: 100%;
 }
 
-/// Add selected item background highlight and left color bar
+/// Add selected item background highlight and left color bar.
+/// @name .sprk-c-MastheadAccordion__item--active
 .sprk-c-MastheadAccordion__item--active
 .sprk-c-MastheadAccordion__summary {
   background-color: $sprk-masthead-accordion-active-background-color;
@@ -371,7 +378,7 @@
   font-weight: $sprk-masthead-accordion-active-heading-font-weight;
 }
 
-// When item is open, add bottom divider
+// When item is open, add bottom divider.
 .sprk-c-MastheadAccordion__details {
   &::after {
     background-color: $sprk-masthead-accordion-item-open-line-background-color;
