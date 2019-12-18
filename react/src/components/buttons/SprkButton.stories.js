@@ -48,7 +48,7 @@ export const tertiary = () => (
 
 export const disabled = () => (
   <SprkButton
-    disabled={true}
+    disabled
     element="button"
     idString="button-4"
     analyticsString="button-4-analytics"

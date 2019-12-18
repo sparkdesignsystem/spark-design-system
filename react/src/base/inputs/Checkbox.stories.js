@@ -49,3 +49,72 @@ checkbox.story = {
     ]
   },
 };
+
+export const invalidCheckbox = () => (
+  <SprkSelectionInput
+    groupLabel="Checkbox Input"
+    choices={[
+      {
+        label: 'Checkbox Item 1',
+        name: 'check[]',
+        value: 'item-1',
+      },
+      {
+        label: 'Checkbox Item 2',
+        name: 'check[]',
+        value: 'item-2',
+      },
+      {
+        label: 'Checkbox Item 3',
+        name: 'check[]',
+        value: 'item-3',
+      },
+    ]}
+    variant="checkbox"
+    valid={false}
+    errorMessage="There is an error on this field"
+  />
+);
+
+invalidCheckbox.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
+};
+
+export const disabledCheckbox = () => (
+  <SprkSelectionInput
+    groupLabel="Checkbox Input"
+    choices={[
+      {
+        label: 'Checkbox Item 1',
+        name: 'check[]',
+        value: 'item-1',
+      },
+      {
+        label: 'Checkbox Item 2',
+        name: 'check[]',
+        value: 'item-2',
+      },
+      {
+        label: 'Checkbox Item 3',
+        name: 'check[]',
+        value: 'item-3',
+      },
+    ]}
+    variant="checkbox"
+    disabled
+  />
+);
+
+disabledCheckbox.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
+};
