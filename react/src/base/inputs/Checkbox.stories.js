@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Checkbox',
@@ -12,9 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 
@@ -44,6 +43,75 @@ export const checkbox = () => (
 
 checkbox.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
+};
+
+export const invalidCheckbox = () => (
+  <SprkSelectionInput
+    groupLabel="Checkbox Input"
+    choices={[
+      {
+        label: 'Checkbox Item 1',
+        name: 'check[]',
+        value: 'item-1',
+      },
+      {
+        label: 'Checkbox Item 2',
+        name: 'check[]',
+        value: 'item-2',
+      },
+      {
+        label: 'Checkbox Item 3',
+        name: 'check[]',
+        value: 'item-3',
+      },
+    ]}
+    variant="checkbox"
+    valid={false}
+    errorMessage="There is an error on this field"
+  />
+);
+
+invalidCheckbox.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkSelectionInput',
+    ]
+  },
+};
+
+export const disabledCheckbox = () => (
+  <SprkSelectionInput
+    groupLabel="Checkbox Input"
+    choices={[
+      {
+        label: 'Checkbox Item 1',
+        name: 'check[]',
+        value: 'item-1',
+      },
+      {
+        label: 'Checkbox Item 2',
+        name: 'check[]',
+        value: 'item-2',
+      },
+      {
+        label: 'Checkbox Item 3',
+        name: 'check[]',
+        value: 'item-3',
+      },
+    ]}
+    variant="checkbox"
+    disabled
+  />
+);
+
+disabledCheckbox.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkSelectionInput',

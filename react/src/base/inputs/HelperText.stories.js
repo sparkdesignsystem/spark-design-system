@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Helper Text',
@@ -12,9 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 
@@ -28,6 +27,25 @@ export const helperText = () => (
 
 helperText.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const invalidHelperText = () => (
+  <SprkTextInput
+    label="Text Input"
+    name="helper-text-example"
+    helperText="This is my helper text."
+    errorMessage="There is an error on this field."
+    valid={false}
+  />
+);
+
+invalidHelperText.story = {
+  name: 'With Error Text',
   parameters: {
     jest: [
       'SprkTextInput',

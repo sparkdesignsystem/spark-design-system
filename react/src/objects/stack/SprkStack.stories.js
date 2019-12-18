@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Stack',
@@ -13,9 +14,7 @@ export default {
       SprkStackItem,
     },
     jest: ['SprkStack', 'SprkStackItem'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
-    `,
+    info: markdownDocumentationLinkBuilder('stack'),
   },
 };
 

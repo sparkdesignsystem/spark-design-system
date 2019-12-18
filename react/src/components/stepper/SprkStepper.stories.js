@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkStepper from './SprkStepper';
 import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider';
 
 export default {
@@ -14,9 +15,7 @@ export default {
       SprkStepperSlider,
       SprkStepperStep
     },
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stepper)
-    `,
+    info: markdownDocumentationLinkBuilder('stepper'),
     jest: [
       'SprkStepper',
       'SprkStepperSlider',

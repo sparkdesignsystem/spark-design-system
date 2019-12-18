@@ -1,11 +1,17 @@
+import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
-import sparkTheme from "../../storybook-theming/storybook-spark-theme";
+import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-spark-theme";
 import '../src/polyfills';
-import '!style-loader!css-loader!sass-loader!../../storybook-theming/font-loader.scss';
-import '../../storybook-theming/icon-loader';
+import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
+import '../../storybook-utilities/icon-loader';
 import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { SprkTable } from '@sparkdesignsystem/spark-react';
+import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
+
+const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
 setCompodocJson(docJson);
 addDecorator(withA11y);
@@ -25,6 +31,43 @@ addParameters({
         return typeof info === 'string' ? info : info.markdown || info.text;
       }
       return null;
+    },
+    container: ({ children, context }) => {
+      const componentName = context.kind.split('/')[1];
+      const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
+      if (processedJson) {
+        return (
+          <DocsContainer context={context}>
+            <div>
+              {children}
+
+              <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
+              <SprkTable
+                additionalTableClasses="sprk-b-Table--spacing-medium sprk-b-Table--secondary sprk-b-Table--striped"
+                columns = {[
+                  {
+                    name: 'selector',
+                    header: 'Class'
+                  },
+                  {
+                    name: 'description',
+                    header: 'Description'
+                  },
+                ]}
+                rows = {processedJson}
+              />
+            </div>
+          </DocsContainer>
+        )
+      } else {
+        return (
+          <DocsContainer context={context}>
+            <div>
+              {children}
+            </div>
+          </DocsContainer>
+        )
+      }
     },
     extractProps,
   },

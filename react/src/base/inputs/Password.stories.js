@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Password',
@@ -12,9 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 
@@ -34,3 +33,38 @@ passwordInput.story = {
     ]
   },
 };
+
+export const invalidPasswordInput = () => (
+  <SprkRevealInput label="Password"
+    toggleLabel="Show Password"
+    name="password-1"
+    valid={false}
+    errorMessage="There is an error on this field."
+  /> );
+
+invalidPasswordInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
+};
+
+export const disabledPasswordInput = () => (
+  <SprkRevealInput label="Password"
+     toggleLabel="Show Password"
+     name="password-1"
+     disabled
+  />
+);
+
+disabledPasswordInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
+};
+

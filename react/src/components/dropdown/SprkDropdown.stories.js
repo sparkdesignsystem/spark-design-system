@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkDropdown from './SprkDropdown';
 import SprkButton from '../buttons/SprkButton';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Dropdown',
@@ -10,9 +11,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkDropdown'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dropdown)
-    `,
+    info: markdownDocumentationLinkBuilder('dropdown'),
   },
 };
 

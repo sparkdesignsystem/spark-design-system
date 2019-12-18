@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkDivider from './SprkDivider';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Divider',
@@ -9,9 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkDivider'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/divider)
-    `,
+    info: markdownDocumentationLinkBuilder('divider'),
   },
 };
 

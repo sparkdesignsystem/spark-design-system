@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/SSN',
@@ -12,13 +13,11 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 
-export const ssnInput = () => (
+export const SSNInput = () => (
   <SprkRevealInput
     label="Social Security Number"
     toggleLabel="Show SSN"
@@ -26,8 +25,45 @@ export const ssnInput = () => (
   />
 );
 
-ssnInput.story = {
+SSNInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
+};
+
+export const invalidSSNInput = () => (
+  <SprkRevealInput
+    label="Social Security Number"
+    toggleLabel="Show SSN"
+    name="ssn"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidSSNInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkRevealInput',
+    ]
+  },
+};
+
+export const disabledSSNInput = () => (
+  <SprkRevealInput
+    label="Social Security Number"
+    toggleLabel="Show SSN"
+    name="ssn"
+    disabled
+  />
+);
+
+disabledSSNInput.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkRevealInput',

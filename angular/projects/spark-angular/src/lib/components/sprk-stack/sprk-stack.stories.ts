@@ -3,6 +3,7 @@ import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Stack',
@@ -18,9 +19,7 @@ export default {
     subcomponents: {
       SprkStackItemDirective,
     },
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stack)
-    `,
+    info: markdownDocumentationLinkBuilder('stack'),
     docs: { iframeHeight: 180 },
   },
 };

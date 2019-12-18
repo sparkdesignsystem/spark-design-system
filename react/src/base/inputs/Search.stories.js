@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Search',
@@ -12,26 +13,11 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 
 export const searchInput = () => (
-  <SprkTextInput label="Search" name="Search" placeholder="Search" />
-);
-
-searchInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
-  }
-};
-
-export const inlineSearchInput = () => (
   <SprkTextInput
     leadingIcon="search"
     hiddenLabel
@@ -40,8 +26,47 @@ export const inlineSearchInput = () => (
   />
 );
 
-inlineSearchInput.story = {
-  name: 'Inline',
+searchInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const invalidSearchInput = () => (
+  <SprkTextInput
+    leadingIcon="search"
+    hiddenLabel
+    name="InlineSearch"
+    placeholder="Search"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidSearchInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkTextInput',
+    ]
+  },
+};
+
+export const disabledSearchInput = () => (
+  <SprkTextInput
+    leadingIcon="search"
+    hiddenLabel
+    name="InlineSearch"
+    placeholder="Search"
+    disabled
+  />
+);
+
+disabledSearchInput.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkTextInput',

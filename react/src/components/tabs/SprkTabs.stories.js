@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTabs from './SprkTabs';
 import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 export default {
@@ -19,9 +20,7 @@ export default {
       'SprkTabsPanel',
       'SprkTabsButton',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/tabs)
-    `,
+    info: markdownDocumentationLinkBuilder('tab'),
   },
 
 };

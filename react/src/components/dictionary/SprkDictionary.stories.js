@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkDictionary from './SprkDictionary';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Dictionary',
@@ -9,9 +10,7 @@ export default {
   component: SprkDictionary,
   parameters: {
     jest: ['SprkDictionary'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dictionary)
-    `,
+    info: markdownDocumentationLinkBuilder('dictionary'),
   },
 };
 

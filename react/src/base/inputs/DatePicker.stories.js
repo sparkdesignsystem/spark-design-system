@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -12,9 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 
@@ -24,13 +23,50 @@ export const datePicker = () => (
     placeholder="01/01/2019"
     errorMessage="Incorrect date."
     label="Date"
-    valid={true}
-    disabled={false}
   />
 );
 
 datePicker.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'SprkDatePickerInput',
+    ]
+  },
+};
+
+export const invalidDatePicker = () => (
+  <SprkDatePickerInput
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+    valid={false}
+    errorMessage="There is an error on this field"
+  />
+);
+
+invalidDatePicker.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'SprkDatePickerInput',
+    ]
+  },
+};
+
+export const disabledDatePicker = () => (
+  <SprkDatePickerInput
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+    disabled
+  />
+);
+
+disabledDatePicker.story = {
+  name: 'Disabled',
   parameters: {
     jest: [
       'SprkDatePickerInput',

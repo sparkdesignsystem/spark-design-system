@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkHighlightBoard from './SprkHighlightBoard';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Highlight Board',
@@ -9,9 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkHighlightBoard'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/highlight-board)
-    `,
+    info: markdownDocumentationLinkBuilder('highlight-board'),
   },
 };
 

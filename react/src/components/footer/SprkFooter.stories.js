@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
@@ -17,9 +18,7 @@ export default {
       SprkFooterGlobalSection
     },
     jest: ['SprkFooter'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
-    `,
+    info: markdownDocumentationLinkBuilder('footer'),
   },
 };
 
