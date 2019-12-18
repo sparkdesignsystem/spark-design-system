@@ -55,18 +55,10 @@ export const hugeTextInput = () => ({
         name="text_input_huge"
         type="text"
         [(ngModel)]="text_input_huge"
-        required
         #textInput="ngModel"
         sprkInput
       />
       <label sprkLabel>Huge Text Input</label>
-      <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">This field is required.</div>
-      </span>
     </sprk-huge-input-container>
   `,
 });
@@ -74,3 +66,56 @@ export const hugeTextInput = () => ({
 hugeTextInput.story = {
   name: 'Default',
 };
+
+export const invalidHugeTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-huge-input-container>
+      <input
+        placeholder="Placeholder"
+        name="text_input_huge"
+        type="text"
+        [(ngModel)]="text_input_huge"
+        #textInput="ngModel"
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+        sprkInput
+      />
+      <label sprkLabel>Huge Text Input</label>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-huge-input-container>
+  `,
+});
+
+invalidHugeTextInput.story = {
+  name: 'Invalid',
+};
+
+export const disabledHugeTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-huge-input-container>
+      <input
+        placeholder="Placeholder"
+        name="text_input_huge"
+        type="text"
+        [(ngModel)]="text_input_huge"
+        #textInput="ngModel"
+        sprkInput
+        disabled
+      />
+      <label class="sprk-b-Label--disabled" sprkLabel>Huge Text Input</label>
+    </sprk-huge-input-container>
+  `,
+});
+
+disabledHugeTextInput.story = {
+  name: 'Disabled',
+};
+

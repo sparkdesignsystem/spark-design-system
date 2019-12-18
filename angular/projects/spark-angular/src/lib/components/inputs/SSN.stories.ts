@@ -55,15 +55,12 @@ export const SSNInput = () => ({
       <label for="ssn-input" sprkLabel>SSN Input</label>
       <input
         [type]="ssnType"
-        [ngClass]="{ 'sprk-b-TextInput--error': ssnInput.invalid && ssnInput.dirty }"
-        pattern="(^(?!666|000|9\\d{2})\\d{3}([-]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$"
         placeholder="000-00-0000"
         name="ssn_input"
         [(ngModel)]="ssn_input"
         #ssnInput="ngModel"
         data-id="ssn-1"
         id="ssn-input"
-        sprkFormatterSsn
         sprkInput
       >
       <sprk-selection-item-container
@@ -78,6 +75,87 @@ export const SSNInput = () => ({
         >
         <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
       </sprk-selection-item-container>
+    </sprk-input-container>
+  `,
+});
+
+SSNInput.story = {
+  name: 'Default',
+};
+
+export const invalidSSNInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label for="ssn-input" sprkLabel>SSN Input</label>
+      <input
+        [type]="ssnType"
+        placeholder="000-00-0000"
+        name="ssn_input"
+        [(ngModel)]="ssn_input"
+        #ssnInput="ngModel"
+        data-id="ssn-1"
+        id="ssn-input"
+        sprkInput
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+      >
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          (click)="toggleSSNType()"
+          data-id="ssn-reveal-3"
+          id="show-ssn"
+        >
+        <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
+      </sprk-selection-item-container>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidSSNInput.story = {
+  name: 'Invalid',
+};
+
+export const disabledSSNInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label class="sprk-b-Label--disabled" for="ssn-input" sprkLabel>SSN Input</label>
+      <input
+        [type]="ssnType"
+        placeholder="000-00-0000"
+        name="ssn_input"
+        [(ngModel)]="ssn_input"
+        #ssnInput="ngModel"
+        data-id="ssn-1"
+        id="ssn-input"
+        sprkInput
+        disabled
+      >
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          (click)="toggleSSNType()"
+          data-id="ssn-reveal-3"
+          id="show-ssn"
+          disabled
+        >
+        <label class="sprk-b-Label--disabled" for="show-ssn" sprkSelectionLabel>Show SSN</label>
+      </sprk-selection-item-container>
       <div
         [hidden]="ssnInput.valid || ssnInput.pristine"
         sprkFieldError
@@ -91,16 +169,8 @@ export const SSNInput = () => ({
       </div>
     </sprk-input-container>
   `,
-  props: {
-    ssnType: 'password',
-    toggleSSNType(): void {
-      this.ssnType === 'password'
-        ? (this.ssnType = 'text')
-        : (this.ssnType = 'password');
-    }
-  }
 });
 
-SSNInput.story = {
-  name: 'Default',
+disabledSSNInput.story = {
+  name: 'Disabled',
 };

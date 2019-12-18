@@ -52,34 +52,67 @@ export const phoneInput = () => ({
       <input
         name="phone_input"
         type="text"
-        pattern="(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
-        required
         #phoneInput="ngModel"
-        sprkFormatterPhoneNumber
         sprkInput
       />
-      <span
-        [hidden]="phoneInput.valid || phoneInput.pristine"
-        sprkFieldError
-      >
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">
-          {{
-            phoneInput.invalid && phoneInput.value === ''
-              ? 'This field is required.'
-              : 'This field is invalid.'
-          }}
-        </div>
-      </span>
     </sprk-input-container>
   `,
 });
 
 phoneInput.story = {
   name: 'Default',
+};
+
+export const invalidPhoneInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Phone Number</label>
+      <input
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+        name="phone_input"
+        type="text"
+        placeholder="(000) 000-0000"
+        [(ngModel)]="phone_input"
+        #phoneInput="ngModel"
+        sprkInput
+      />
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidPhoneInput.story = {
+  name: 'Invalid',
+};
+
+export const disabledPhoneInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label class="sprk-b-Label--disabled" sprkLabel>Phone Number</label>
+      <input
+        name="phone_input"
+        type="text"
+        placeholder="(000) 000-0000"
+        [(ngModel)]="phone_input"
+        #phoneInput="ngModel"
+        sprkInput
+        disabled
+      />
+    </sprk-input-container>
+  `,
+});
+
+disabledPhoneInput.story = {
+  name: 'Disabled',
 };

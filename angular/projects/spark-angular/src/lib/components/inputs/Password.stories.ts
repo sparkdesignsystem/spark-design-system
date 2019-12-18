@@ -53,30 +53,83 @@ export const passwordInput = () => ({
   template: `
     <sprk-input-container>
       <label sprkLabel>Password</label>
-      <input [type]="passwordType" name="password_input" sprkInput />
+      <input type="password" name="password_input" sprkInput />
       <sprk-selection-item-container
         additionalClasses="sprk-b-InputContainer__visibility-toggle"
       >
         <input
           type="checkbox"
           sprkSelectionInput
-          (click)="togglePasswordType()"
           id="show-password"
         />
         <label for="show-password" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,
-  props: {
-    passwordType: 'password',
-    togglePasswordType(): void {
-      this.passwordType === 'password'
-        ? (this.passwordType = 'text')
-        : (this.passwordType = 'password');
-    }
-  },
 });
 
 passwordInput.story = {
   name: 'Default',
+};
+
+export const invalidPasswordInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Password</label>
+      <input
+        type="password"
+        name="password_input"
+        sprkInput
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+      />
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          id="show-password"
+        />
+        <label for="show-password" sprkSelectionLabel>Show Password</label>
+      </sprk-selection-item-container>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidPasswordInput.story = {
+  name: 'Invalid',
+};
+
+export const disabledPasswordInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label class="sprk-b-Label--disabled" sprkLabel>Password</label>
+      <input type="password" name="password_input" sprkInput disabled />
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          id="show-password"
+          disabled
+        />
+        <label class="sprk-b-Label--disabled" for="show-password" sprkSelectionLabel>Show Password</label>
+      </sprk-selection-item-container>
+    </sprk-input-container>
+  `,
+});
+
+disabledPasswordInput.story = {
+  name: 'Disabled',
 };
