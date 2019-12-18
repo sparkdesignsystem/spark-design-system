@@ -52,21 +52,63 @@ export const textInput = () => ({
         name="text_input"
         type="text"
         [(ngModel)]="text_input"
-        required
         #textInput="ngModel"
         sprkInput
       />
-      <span [hidden]="textInput.valid || textInput.pristine" sprkFieldError>
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">This field is required.</div>
-      </span>
     </sprk-input-container>
   `,
 });
 
 textInput.story = {
   name: 'Default',
+};
+
+export const invalidTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Text Input Label</label>
+      <input
+        class="sprk-b-TextInput--error"
+        name="text_input"
+        type="text"
+        [(ngModel)]="text_input"
+        #textInput="ngModel"
+        sprkInput
+        aria-invalid="true"
+      />
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidTextInput.story = {
+  name: 'Invalid',
+};
+
+export const disabledTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label class="sprk-b-Label--disabled" sprkLabel>Text Input Label</label>
+      <input
+        name="text_input"
+        type="text"
+        [(ngModel)]="text_input"
+        #textInput="ngModel"
+        sprkInput
+        disabled
+      />
+    </sprk-input-container>
+  `,
+});
+
+disabledTextInput.story = {
+  name: 'Disabled',
 };
