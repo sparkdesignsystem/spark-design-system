@@ -21,6 +21,7 @@ export const defaultDropdown = () => {
   return `
     <a
       class="sprk-b-Link sprk-b-Link--plain"
+      href="#nogo"
       data-sprk-dropdown-trigger="dropdown01"
       aria-haspopup="listbox"
       aria-label="Dropdown example description"
@@ -78,6 +79,7 @@ export const informationalDropdown = () => {
   return `
     <a
       class="sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
+      href="#nogo"
       data-sprk-dropdown-trigger="dropdown02"
       aria-haspopup="listbox"
       aria-label="Dropdown example description"
