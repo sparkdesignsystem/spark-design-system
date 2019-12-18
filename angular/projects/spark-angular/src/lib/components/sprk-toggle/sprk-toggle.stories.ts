@@ -4,6 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkToggleModule } from './sprk-toggle.module';
 import { SprkToggleComponent } from './sprk-toggle.component';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Toggle',
@@ -16,9 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/toggle)
-    `,
+    info: markdownDocumentationLinkBuilder('toggle'),
     docs: { iframeHeight: 160 },
   },
 };

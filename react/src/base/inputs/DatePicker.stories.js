@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
-import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -13,9 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 

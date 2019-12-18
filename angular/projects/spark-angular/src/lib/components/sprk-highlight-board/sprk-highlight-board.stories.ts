@@ -3,6 +3,7 @@ import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Highlight Board',
@@ -15,9 +16,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/highlight-board)
-    `,
+    info: markdownDocumentationLinkBuilder('highlight-board'),
     docs: { iframeHeight: 600 },
   },
 };

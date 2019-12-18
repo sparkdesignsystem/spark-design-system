@@ -31,7 +31,7 @@
             ],
             "styles": [
               "../html/_spark.scss",
-              "../storybook-theming/_docs.scss"
+              "../storybook-utilities/storybook-theming/_docs.scss"
             ],
             "scripts": []
           }

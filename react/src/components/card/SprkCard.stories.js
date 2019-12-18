@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkCard from './SprkCard';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkCardHighlightedHeader from './components/SprkCardHighlightedHeader/SprkCardHighlightedHeader';
 import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
 
@@ -12,9 +13,7 @@ export default {
   parameters: {
     subcomponents: { SprkCardTeaser, SprkCardHighlightedHeader },
     jest: ['SprkCard'],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
-    `,
+    info: markdownDocumentationLinkBuilder('card'),
   },
 };
 

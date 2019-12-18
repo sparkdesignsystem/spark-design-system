@@ -1,6 +1,7 @@
 import { SprkIconModule } from './sprk-icon.module';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkIconComponent } from './sprk-icon.component';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Icons',
@@ -13,9 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/icon)
-    `,
+    info: markdownDocumentationLinkBuilder('icon'),
     docs: { iframeHeight: 90 },
   },
 };

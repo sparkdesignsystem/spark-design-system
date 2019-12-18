@@ -1,6 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Accordion',
@@ -8,9 +9,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/accordion)
-    `,
+    info: markdownDocumentationLinkBuilder('accordion'),
   },
 };
 

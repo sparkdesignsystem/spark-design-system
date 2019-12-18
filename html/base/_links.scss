@@ -2,6 +2,11 @@
 // Links
 // ==================================================================
 //
+
+////
+/// @group link
+////
+
 .sprk-b-Link {
   color: $sprk-link-color;
   border-bottom: $sprk-link-border-bottom;
@@ -23,6 +28,7 @@
   }
 }
 
+/// Simple links have no underline until hovered.
 .sprk-b-Link--simple {
   color: $sprk-link-simple-color;
   border-bottom: $sprk-link-simple-border-bottom;

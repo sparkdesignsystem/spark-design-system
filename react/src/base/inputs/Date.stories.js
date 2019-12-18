@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date',
@@ -12,9 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+    info: markdownDocumentationLinkBuilder('input'),
   },
 };
 

@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkTableModule } from './sprk-table.module';
 import { SprkTableComponent } from './sprk-table.component';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkTableEmptyHeadingDirective } from '../../directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
 import { SprkTableHeadDirective } from '../../directives/sprk-table-head/sprk-table-head.directive';
 import { SprkTableGroupedColumnDirective } from '../../directives/sprk-table-grouped-column/sprk-table-grouped-column.directive';
@@ -23,9 +24,7 @@ export default {
       SprkTableGroupedColumnDirective,
       SprkTableRowHeadingDirective,
     },
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/table)
-    `,
+    info: markdownDocumentationLinkBuilder('table'),
     docs: { iframeHeight: 380 },
   },
 };

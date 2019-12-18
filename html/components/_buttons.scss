@@ -1,6 +1,11 @@
 // ==================================================================
 // Buttons
 // ==================================================================
+
+//// 
+/// @group button
+////
+
 .sprk-c-Button {
   -webkit-appearance: none;
   background-color: $sprk-btn-background-color;
@@ -40,10 +45,16 @@
   }
 }
 
+
+/// Reduces the padding of the normal button
+/// to $space-inset-short-m
 .sprk-c-Button--compact {
   padding: $sprk-space-inset-short-m;
 }
 
+/// Makes the button full width of its parent container until it flips
+/// to normal width at the $sprk-btn-breakpoint-xs breakpoint.
+/// @name .sprk-c-Button--full@xs
 .sprk-c-Button--full\@xs {
   width: 100%;
 
@@ -120,9 +131,9 @@
   }
 }
 
-//
-// Removes extra padding and border in Firefox when using `input type="submit"`
-///
+/*
+Removes extra padding and border in Firefox when using `input type="submit"`
+*/
 .sprk-b-Button::-moz-focus-inner {
   border: 0;
   padding: 0;

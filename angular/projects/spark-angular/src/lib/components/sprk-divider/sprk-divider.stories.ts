@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDividerModule } from './sprk-divider.module';
 import { SprkDividerComponent } from './sprk-divider.component';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Divider',
@@ -13,9 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/divider)
-    `,
+    info: markdownDocumentationLinkBuilder('divider'),
     docs: { iframeHeight: 60 },
   },
 };
