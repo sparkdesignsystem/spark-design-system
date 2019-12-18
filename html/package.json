@@ -9,8 +9,9 @@
     "sassdocmodifiers": "sassdoc ../html/**/_*.scss --parse > ../src/data/sass-modifiers.json",
     "build": "webpack",
     "prepublishOnly": "npm run build",
-    "storybook": "npm run sassdocmodifiers && start-storybook -p 7006",
-    "build-storybook": "build-storybook"
+    "prebuild:storybook": "npm run sassdocmodifiers",
+    "storybook": "npm run prebuild:storybook && start-storybook -p 7006",
+    "build-storybook": "npm run prebuild:storybook && build-storybook"
   },
   "nyc": {
     "exclude": "tests/*.js"

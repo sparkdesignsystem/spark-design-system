@@ -9,8 +9,9 @@
     "sassdocmodifiers": "sassdoc ../html/**/_*.scss --parse > ../src/data/sass-modifiers.json",
     "docs:json": "compodoc --disableLifeCycleHooks -p ./tsconfig.json -e json -d .",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
-    "storybook": "npm run sassdocmodifiers && npm run docs:json && start-storybook -p 8006",
-    "build-storybook": "npm run docs:json && build-storybook",
+    "prebuild:storybook": "npm run sassdocmodifiers",
+    "storybook": "npm run prebuild:storybook && npm run docs:json && start-storybook -p 8006",
+    "build-storybook": "npm run prebuild:storybook && npm run docs:json && build-storybook",
     "publish": "npm run build && cd dist/spark-angular && npm publish"
   },
   "private": true,
