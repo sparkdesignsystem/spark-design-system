@@ -18,7 +18,7 @@
   }
 }
 
-/// Sets styles for the Masthead when it is open.
+/// Adds styles for the Masthead when it is open.
 .sprk-c-Masthead--open {
   position: fixed;
   left: 0;
@@ -31,19 +31,20 @@
   }
 }
 
-///	Sets styles for the Masthead when the user scrolls past it.
+///	Adds styles for the Masthead when the user scrolls past it.
 .sprk-c-Masthead--scroll {
   box-shadow: $sprk-masthead-shadow-scroll;
 }
 
-/// Sets styles to hide the Masthead
+/// Adds styles to hide the Masthead
 /// when a user scrolls on a narrow screen.
 .sprk-c-Masthead--hidden {
   transform: $sprk-masthead-translateY;
   transition: $sprk-masthead-transition;
 }
 
-// Keep padding settings consistent for menu, logo branding, little nav, and additional nav link
+// Keep padding settings consistent for menu,
+// logo branding, little nav, and additional nav link
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding,
 .sprk-c-Masthead__little-nav,
@@ -61,7 +62,8 @@
   }
 }
 
-// Content includes menu, logo, little nav, additional nav link
+// Content includes menu, logo,
+// little nav, additional nav link
 .sprk-c-Masthead__content {
   padding: $sprk-masthead-content-padding;
 
@@ -245,7 +247,7 @@
   font-weight: $sprk-big-nav-link-font-weight;
 }
 
-/// Add open styles to open big navigation items.
+/// Adds open styles to open big navigation items.
 /// @name .sprk-c-Masthead__big-nav-item--open
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
@@ -350,7 +352,7 @@
   }
 }
 
-/// Add top divider when open.
+/// Adds top divider when open.
 /// @name .sprk-c-MastheadAccordion__item--open
 .sprk-c-MastheadAccordion__item--open::before {
   background-color: $sprk-masthead-accordion-item-open-line-background-color;
@@ -361,7 +363,7 @@
   width: 100%;
 }
 
-/// Add selected item background highlight and left color bar.
+/// Adds selected item background highlight and left color bar.
 /// @name .sprk-c-MastheadAccordion__item--active
 .sprk-c-MastheadAccordion__item--active
 .sprk-c-MastheadAccordion__summary {
