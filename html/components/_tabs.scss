@@ -1,6 +1,9 @@
 // ==================================================================
 // Tabbed Navigation
 // ==================================================================
+////
+/// @group Tabs
+////
 .sprk-c-Tabs__buttons {
   color: $sprk-tab-navigation-btn-color;
   display: block;
@@ -33,6 +36,8 @@
   }
 }
 
+/// Adds active state styles to the Tab button.
+/// @name .sprk-c-Tabs__button--active
 .sprk-c-Tabs__button--active,
 .sprk-c-Tabs__button:focus {
   background-color: $sprk-white;
