@@ -23,7 +23,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           [idString]="idString"
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
-          [attr.aria-label]="triggerText ? triggerText : (screenReaderText || 'Make a Selection')"
+          [attr.aria-label]="triggerText ? triggerText : (screenReaderText || 'Choose One')"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>

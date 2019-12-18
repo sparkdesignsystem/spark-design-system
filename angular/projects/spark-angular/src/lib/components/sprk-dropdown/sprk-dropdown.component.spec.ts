@@ -155,4 +155,57 @@ describe('SprkDropdownComponent', () => {
       true
     );
   });
+
+  it('should apply aria-label when triggerText is provided', () => {
+    component.triggerText = 'test';
+    component.screenReaderText = '';
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('sprk-link').getAttribute('aria-label')).toEqual(
+      'test'
+    );
+  });
+
+  it('should apply aria-label when screenReaderText is provided', () => {
+    component.triggerText = '';
+    component.screenReaderText = 'test';
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('sprk-link').getAttribute('aria-label')).toEqual(
+      'test'
+    );
+  });
+
+  it('should apply a default aria-label when none is provided', () => {
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('sprk-link').getAttribute('aria-label')).toEqual(
+      'Choose One'
+    );
+  });
+
+  it('should apply an aria-label to listbox when title provided', () => {
+    fixture.autoDetectChanges();
+    component.title = 'test';
+    dropdownTriggerElement.click();
+
+    const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
+    expect(listBoxAria).toEqual('test');
+  });
+
+  it('should apply an aria-label to listbox when screenReaderText is provided', () => {
+    fixture.autoDetectChanges();
+    component.screenReaderText = 'test';
+    dropdownTriggerElement.click();
+
+    const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
+    expect(listBoxAria).toEqual('test');
+  });
+
+  it('should apply a default aria-label to listbox when none is provided', () => {
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
+    expect(listBoxAria).toEqual(
+      'My Choices'
+    );
+
+  });
 });
