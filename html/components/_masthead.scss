@@ -15,7 +15,7 @@
   }
 }
 
-// Fixed masthead on narrow, sticky position on larger views
+/// Sets styles for the Masthead when it is open.
 .sprk-c-Masthead--open {
   position: fixed;
   left: 0;
@@ -28,11 +28,13 @@
   }
 }
 
-// Added via JS when page is scolled past masthead
+///	Sets styles for the Masthead when the user scrolls past it.
 .sprk-c-Masthead--scroll {
   box-shadow: $sprk-masthead-shadow-scroll;
 }
 
+/// Sets styles to hide the Masthead
+/// when a user scrolls on a narrow screen.
 .sprk-c-Masthead--hidden {
   transform: $sprk-masthead-translateY;
   transition: $sprk-masthead-transition;
@@ -189,6 +191,8 @@
   }
 }
 
+/// Adds an underline on links used in
+/// the big navigation bar.
 .sprk-c-Masthead__link--big-nav {
   display: block;
   font-weight: $sprk-big-nav-link-font-weight;
@@ -230,12 +234,14 @@
   }
 }
 
-// Active Big Nav link styles
+/// Adds an active state color and bold
+/// font weight to active big navigation items.
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
   color: $sprk-big-nav-active-color;
   font-weight: $sprk-big-nav-link-font-weight;
 }
 
+/// Add open/active styles to open big navigation items.
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
 .sprk-c-Masthead__big-nav-item--active {
@@ -339,7 +345,7 @@
   }
 }
 
-// Add top divider when open
+/// Add top divider when open
 .sprk-c-MastheadAccordion__item--open::before {
   background-color: $sprk-masthead-accordion-item-open-line-background-color;
   content: '';
@@ -349,7 +355,7 @@
   width: 100%;
 }
 
-// Add selected item background highlight and left color bar
+/// Add selected item background highlight and left color bar
 .sprk-c-MastheadAccordion__item--active
 .sprk-c-MastheadAccordion__summary {
   background-color: $sprk-masthead-accordion-active-background-color;
