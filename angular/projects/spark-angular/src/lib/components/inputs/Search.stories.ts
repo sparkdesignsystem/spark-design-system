@@ -5,6 +5,7 @@ import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 
 export default {
   title: 'Components/Input/Search',
@@ -40,31 +41,11 @@ const modules = {
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
+    SprkFieldErrorModule
   ],
 };
 
 export const searchInput = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-input-container>
-      <label sprkLabel>Search Input</label>
-      <input
-        name="search_input"
-        type="search"
-        [(ngModel)]="search_input"
-        #searchInput="ngModel"
-        data-id="search-1"
-        sprkInput
-      >
-    </sprk-input-container>
-  `,
-});
-
-searchInput.story = {
-  name: 'Default',
-};
-
-export const inlineSearchInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -93,6 +74,83 @@ export const inlineSearchInput = () => ({
   `,
 });
 
-inlineSearchInput.story = {
-  name: 'Inline',
+searchInput.story = {
+  name: 'Default',
 };
+
+export const invalidSearchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label
+        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        sprkLabel
+      >
+        Search
+      </label>
+      <sprk-icon
+        iconType="search"
+        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="inline_search_input"
+        class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
+        type="text"
+        placeholder="Search"
+        [(ngModel)]="inline_search_input"
+        #inlineSearchInput="ngModel"
+        data-id="input-search-1"
+        sprkInput
+        aria-invalid="true"
+      >
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-icon-input-container>
+  `,
+});
+
+invalidSearchInput.story = {
+  name: 'Invalid',
+};
+
+export const disabeldSearchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label
+        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText sprk-b-Label--disabled"
+        sprkLabel
+      >
+        Search
+      </label>
+      <sprk-icon
+        iconType="search"
+        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="inline_search_input"
+        class="sprk-b-TextInput--has-svg-icon"
+        type="text"
+        placeholder="Search"
+        [(ngModel)]="inline_search_input"
+        #inlineSearchInput="ngModel"
+        data-id="input-search-1"
+        sprkInput
+        disabled
+      >
+    </sprk-icon-input-container>
+  `,
+});
+
+disabeldSearchInput.story = {
+  name: 'Disabled',
+};
+
+
