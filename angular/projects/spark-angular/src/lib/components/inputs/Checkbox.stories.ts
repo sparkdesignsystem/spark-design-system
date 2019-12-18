@@ -220,7 +220,7 @@ export const disabledCheckbox = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
-      <label sprkLabel>
+      <label class="sprk-b-Label--disabled" sprkLabel>
         Checkbox Group Label
       </label>
 
@@ -239,6 +239,7 @@ export const disabledCheckbox = () => ({
 
         <label
           for="checkbox-1"
+          class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
           Checkbox Item 1
@@ -260,6 +261,7 @@ export const disabledCheckbox = () => ({
 
         <label
           for="checkbox-2"
+          class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
           Checkbox Item 2
@@ -281,6 +283,7 @@ export const disabledCheckbox = () => ({
 
         <label
           for="checkbox-3"
+          class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
           Checkbox Item 3
