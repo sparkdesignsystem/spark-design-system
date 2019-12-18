@@ -61,31 +61,96 @@ export const datePicker = () => ({
         name="datepicker_input"
         class="sprk-b-TextInput--has-svg-icon"
         type="text"
-        pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
         placeholder="MM/DD/YYYY"
         [(ngModel)]="datepicker_input"
         #datepickerInput="ngModel"
-        sprkFormatterDate
         [sprkDatePickerConfig]="dpConfig"
         sprkDatepicker
         sprkInput
       />
-      <div
-        [hidden]="datepickerInput.valid || datepickerInput.pristine"
-        sprkFieldError
-      >
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">Invalid date.</div>
-      </div>
     </sprk-icon-input-container>
   `,
 });
 
 datePicker.story = {
   name: 'Default',
+  parameters: {
+    docs: { iframeHeight: 400 },
+  }
+};
+
+export const invalidDatePicker = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label class="sprk-b-Label--with-icon" sprkLabel>
+        Date Input
+      </label>
+      <sprk-icon
+        iconType="calendar"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="datepicker_input"
+        class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="datepicker_input"
+        #datepickerInput="ngModel"
+        [sprkDatePickerConfig]="dpConfig"
+        aria-invalid="true"
+        sprkDatepicker
+        sprkInput
+      />
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-icon-input-container>
+  `,
+});
+
+invalidDatePicker.story = {
+  name: 'Invalid',
+  parameters: {
+    docs: { iframeHeight: 400 },
+  }
+};
+
+export const disabledDatePicker = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
+        Date Input
+      </label>
+      <sprk-icon
+        iconType="calendar"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        disabled
+        name="datepicker_input"
+        class="sprk-b-TextInput--has-svg-icon"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="datepicker_input"
+        #datepickerInput="ngModel"
+        [sprkDatePickerConfig]="dpConfig"
+        sprkDatepicker
+        sprkInput
+      />
+    </sprk-icon-input-container>
+  `,
+});
+
+disabledDatePicker.story = {
+  name: 'Disabled',
   parameters: {
     docs: { iframeHeight: 400 },
   }
