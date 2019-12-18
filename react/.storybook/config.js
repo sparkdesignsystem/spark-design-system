@@ -41,7 +41,6 @@ addParameters({
     },
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
-      console.log(componentName, 'cats');
       const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
       if (processedJson) {
         return (
