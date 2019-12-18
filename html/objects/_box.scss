@@ -2,9 +2,13 @@
 // Box Object
 // ==========================================================================
 
+////
+/// @group box
+////
+
 //
 // Box Mixin
-///
+//
 
 @mixin Box($padding: $sprk-box-padding) {
   @extend %ClearFix;
@@ -19,42 +23,32 @@
 
 //
 // Default box
-///
+//
 .sprk-o-Box {
   @include Box;
 }
 
-//
-// Flush box (No padding)
-///
+/// Flush box - No padding
 .sprk-o-Box--flush {
   padding: 0;
 }
 
-//
-// Tiny box
-///
+/// Tiny box - 4px padding
 .sprk-o-Box--tiny {
   padding: $sprk-box-padding-tiny;
 }
 
-//
-// Small box
-///
+/// Small box - 8px padding
 .sprk-o-Box--small {
   padding: $sprk-box-padding-small;
 }
 
-//
-// Large box
-///
+/// Large box - 32px padding
 .sprk-o-Box--large {
   padding: $sprk-box-padding-large;
 }
 
-//
-// Huge box
-///
+/// Huge box - 64px padding 
 .sprk-o-Box--huge {
   padding: $sprk-box-padding-huge;
 }
