@@ -6,6 +6,7 @@ import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-i
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 
 export default {
   title: 'Components/Input/Huge Select',
@@ -41,6 +42,7 @@ const modules = {
     SprkIconInputContainerModule,
     SprkLabelModule,
     SprkIconModule,
+    SprkFieldErrorModule,
     SprkInputModule,
   ],
 };
@@ -85,3 +87,92 @@ hugeSelectBox.story = {
   name: 'Default',
 };
 
+export const invalidHugeSelectBox = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-huge-input-container>
+      <select
+        id="select-huge-1"
+        aria-describedby="select-normal--error-container"
+        data-id="select-huge-1"
+        data-sprk-input="huge"
+        sprkInput
+        class="sprk-b-Select--error"
+        aria-invalid="true"
+      >
+        <option
+          value=""
+          disabled
+          selected
+          hidden
+        ></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <optgroup label="Grouped Options">
+          <option value="g1">Grouped Option 1</option>
+          <option value="g2">Grouped Option 2</option>
+          <option value="g3">Grouped Option 3</option>
+        </optgroup>
+      </select>
+      <label sprkLabel for="select-huge-1">Huge Select Box Label</label>
+      <sprk-icon
+        iconType="chevron-down"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        sprk-select-icon
+      ></sprk-icon>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-huge-input-container>
+  `,
+});
+
+invalidHugeSelectBox.story = {
+  name: 'Invalid',
+};
+
+export const disabledHugeSelectBox = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-huge-input-container>
+      <select
+        id="select-huge-1"
+        aria-describedby="select-normal--error-container"
+        data-id="select-huge-1"
+        data-sprk-input="huge"
+        sprkInput
+        disabled
+      >
+        <option
+          value=""
+          disabled
+          selected
+          hidden
+        ></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <optgroup label="Grouped Options">
+          <option value="g1">Grouped Option 1</option>
+          <option value="g2">Grouped Option 2</option>
+          <option value="g3">Grouped Option 3</option>
+        </optgroup>
+      </select>
+      <label sprkLabel class="sprk-b-Label--disabled" for="select-huge-1">Huge Select Box Label</label>
+      <sprk-icon
+        iconType="chevron-down"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        sprk-select-icon
+      ></sprk-icon>
+    </sprk-huge-input-container>
+  `,
+});
+
+disabledHugeSelectBox.story = {
+  name: 'Disabled',
+};
