@@ -4,6 +4,7 @@ import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-se
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 import { SprkSelectionContainerComponent} from './sprk-selection-container/sprk-selection-container.component';
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 
@@ -42,6 +43,7 @@ const modules = {
     SprkFieldErrorModule,
     SprkIconModule,
     SprkSelectionLabelModule,
+    SprkSelectionInputModule
   ],
 };
 
