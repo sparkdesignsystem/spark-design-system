@@ -1,6 +1,11 @@
 // ==========================================================================
 // Flag Object
 // ==========================================================================
+
+////
+/// @group flag
+////
+
 .sprk-o-Flag {
   display: table;
   width: 100%;
@@ -30,9 +35,8 @@
   }
 }
 
-//
-// Reversed flag
-///
+/// Reverses the flag and places the 
+/// image on the right of the body content.
 .sprk-o-Flag--rev {
   direction: rtl;
 
@@ -47,9 +51,7 @@
   }
 }
 
-//
-// Flush flag (no gutter)
-///
+/// Removes gutter.
 .sprk-o-Flag--flush {
   > .sprk-o-Flag__figure {
     padding-right: 0;
@@ -57,9 +59,7 @@
   }
 }
 
-//
-// Tiny flag
-///
+/// Adds 4px gutter.
 .sprk-o-Flag--tiny {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-tiny;
@@ -73,9 +73,7 @@
   }
 }
 
-//
-// Small flag
-///
+/// Adds 8px gutter.
 .sprk-o-Flag--small {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-small;
@@ -89,9 +87,7 @@
   }
 }
 
-//
-// Large flag
-///
+/// Adds 32px gutter.
 .sprk-o-Flag--large {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-large;
@@ -105,9 +101,7 @@
   }
 }
 
-//
-// Huge flag
-///
+/// Adds 64px gutter.
 .sprk-o-Flag--huge {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-huge;
@@ -121,9 +115,7 @@
   }
 }
 
-//
-// Vertically Align content to the middle
-///
+/// Vertically align content to the middle.
 .sprk-o-Flag--middle {
   > .sprk-o-Flag__body,
   > .sprk-o-Flag__figure {
@@ -131,9 +123,7 @@
   }
 }
 
-//
-// Vertically align content to the bottom
-///
+/// Vertically align content to the bottom.
 .sprk-o-Flag--bottom {
   > .sprk-o-Flag__body,
   > .sprk-o-Flag__figure {
@@ -141,13 +131,9 @@
   }
 }
 
-//
-// Stacked flag at smaller screen width
-///
 @media all and (max-width: $sprk-flag-stacked-breakpoint) {
-  //
-  // Default stacked flag
-  ///
+  
+  /// Stacked flag at smaller screen width.
   .sprk-o-Flag--stacked {
     direction: ltr;
 
@@ -165,7 +151,7 @@
 
     //
     // Tiny stacked flag
-    ///
+    //
     &.sprk-o-Flag--tiny {
       > .sprk-o-Flag__figure {
         padding-right: 0;
@@ -176,7 +162,7 @@
 
     //
     // Small stacked flag
-    ///
+    //
     &.sprk-o-Flag--small {
       > .sprk-o-Flag__figure {
         padding-right: 0;
@@ -187,7 +173,7 @@
 
     //
     // Large stacked flag
-    ///
+    //
     &.sprk-o-Flag--large {
       > .sprk-o-Flag__figure {
         padding-right: 0;
@@ -198,7 +184,7 @@
 
     //
     // Huge stacked flag
-    ///
+    //
     &.sprk-o-Flag--huge {
       > .sprk-o-Flag__figure {
         padding-right: 0;
