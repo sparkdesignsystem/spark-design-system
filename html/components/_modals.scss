@@ -1,6 +1,9 @@
 // ==================================================================
 // Modals
 // ==================================================================
+////
+/// @group modal
+////
 .sprk-c-Modal,
 .sprk-c-ModalMask {
   left: 0;
@@ -40,6 +43,8 @@
   }
 }
 
+/// Adds styles for the Wait Modal
+/// variant. Applies center alignment.
 .sprk-c-Modal--wait {
   text-align: center;
 }
