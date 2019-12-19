@@ -33,22 +33,22 @@
   padding: 0;
 }
 
-/// Tiny box - 4px padding
+/// Tiny box - Extra small padding (Default 4px)
 .sprk-o-Box--tiny {
   padding: $sprk-box-padding-tiny;
 }
 
-/// Small box - 8px padding
+/// Small box - Small padding (Default 8px)
 .sprk-o-Box--small {
   padding: $sprk-box-padding-small;
 }
 
-/// Large box - 32px padding
+/// Large box - Large padding (Default 32px)
 .sprk-o-Box--large {
   padding: $sprk-box-padding-large;
 }
 
-/// Huge box - 64px padding 
+/// Huge box - Extra large padding (Default 64px)
 .sprk-o-Box--huge {
   padding: $sprk-box-padding-huge;
 }
