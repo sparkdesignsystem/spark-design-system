@@ -1,6 +1,9 @@
 // ==================================================================
 // Pagination
 // ==================================================================
+////
+/// @group pagination
+////
 .sprk-c-Pagination {
   align-items: center;
   display: flex;
@@ -43,6 +46,8 @@
   }
 }
 
+/// Adds styles for the
+/// currently selected pagination link.
 .sprk-c-Pagination__link--current {
   background-color: $sprk-pag-selection-color;
   color: $sprk-pag-selection-link-color;
