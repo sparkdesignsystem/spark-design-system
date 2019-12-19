@@ -59,7 +59,7 @@
   }
 }
 
-/// Adds 4px gutter.
+/// Adds extra small gutter. (Default 4px)
 .sprk-o-Flag--tiny {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-tiny;
@@ -73,7 +73,7 @@
   }
 }
 
-/// Adds 8px gutter.
+/// Adds small gutter. (Default 8px)
 .sprk-o-Flag--small {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-small;
@@ -87,7 +87,7 @@
   }
 }
 
-/// Adds 32px gutter.
+/// Adds large gutter. (Default 32px)
 .sprk-o-Flag--large {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-large;
@@ -101,7 +101,7 @@
   }
 }
 
-/// Adds 64px gutter.
+/// Adds extra large gutter. (Default 64px)
 .sprk-o-Flag--huge {
   > .sprk-o-Flag__figure {
     padding-right: $sprk-flag-gutter-huge;
