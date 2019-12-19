@@ -1,6 +1,9 @@
 // ==================================================================
 // Tables
 // ==================================================================
+////
+/// @group Table
+////
 .sprk-b-TableContainer {
   display: block;
   max-width: 100%;
@@ -11,9 +14,7 @@
   width: 100%;
 }
 
-//
 // Cell alignments
-///
 [rowspan] {
   vertical-align: middle;
 }
@@ -47,6 +48,8 @@
   border-right: 0;
 }
 
+/// Adds styles for the secondary table variant.
+/// @name .sprk-b-Table--secondary
 .sprk-b-Table--secondary td {
   text-align: $sprk-table-secondary-cell-text-alignment;
 }
@@ -66,6 +69,8 @@
   border-right-style: solid;
 }
 
+/// Adds styles for the grouped table variant.
+/// @name .sprk-b-Table--grouped-columns
 .sprk-b-Table--grouped-columns .sprk-b-Table--grouped-column {
   border: 0;
   background-color: $sprk-table-grouped-header-background-color;
@@ -73,10 +78,13 @@
   font-weight: $sprk-table-grouped-header-font-weight;
 }
 
+/// Adds styles for the row comparison table variant.
+/// @name .sprk-b-Table--row-comparison
 .sprk-b-Table--row-comparison .sprk-b-Table__empty-heading {
   background-color: $sprk-table-empty-heading-background-color;
 }
 
+/// Adds styles for the secondary row comparison table variant.
 .sprk-b-Table--secondary-row-comparison {
   border-collapse: separate;
   border-top: 0;
@@ -101,21 +109,19 @@
   border-right-color: $sprk-table-secondary-row-comp-border-color;
 }
 
-//
-// Force table cells to be equal width
-///
+/// Forces Table cells to be equal width.
 .sprk-b-Table--fixed {
   table-layout: fixed;
 }
 
-// Even rows
+/// Adds stripes to even rows.
 .sprk-b-Table--striped-even {
   tbody tr:nth-child(even) {
     background-color: $sprk-table-stripe-color;
   }
 }
 
-// Remove outside column borders
+/// Removes outside column borders.
 .sprk-b-Table--bordered-columns-inside {
   border-left-width: 0;
 
@@ -127,7 +133,8 @@
   }
 }
 
-// Odd rows
+/// Adds stripes to odd rows.
+/// @name .sprk-b-Table--striped-odd
 .sprk-b-Table--striped,
 .sprk-b-Table--striped-odd {
   tbody tr:nth-child(odd) {
@@ -135,9 +142,7 @@
   }
 }
 
-//
-// Cell padding options
-///
+/// Adds large spacing to the Table items.
 .sprk-b-Table--spacing-large {
   th,
   td {
@@ -145,6 +150,7 @@
   }
 }
 
+/// Adds medium spacing to the Table items.
 .sprk-b-Table--spacing-medium {
   th,
   td {
@@ -152,6 +158,7 @@
   }
 }
 
+/// Adds small spacing to the Table items.
 .sprk-b-Table--spacing-small {
   th,
   td {
@@ -159,7 +166,7 @@
   }
 }
 
-// Borders around all sides
+/// Adds a borders around all sides of the Table.
 .sprk-b-Table--bordered {
   border-top: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
   border-right: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
@@ -174,7 +181,7 @@
   }
 }
 
-// Remove outside table borders
+/// Removes outside Table borders.
 .sprk-b-Table--bordered-inside {
   border-top-width: 0;
   border-right-width: 0;
@@ -191,7 +198,7 @@
   }
 }
 
-// Borders on just the bottom of rows
+/// Adds bottom borders on Table rows.
 .sprk-b-Table--bordered-rows {
   th,
   td {
@@ -199,7 +206,7 @@
   }
 }
 
-// Remove outside row borders
+/// Removes outside row borders.
 .sprk-b-Table--bordered-rows-inside {
   tbody tr:last-child {
     th,
@@ -209,7 +216,7 @@
   }
 }
 
-// Borders on just the columns
+/// Adds borders on just the columns.
 .sprk-b-Table--bordered-columns {
   border-left: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
 
@@ -219,9 +226,7 @@
   }
 }
 
-//
 // Highlight specific row or cell
-///
 .sprk-b-TableHighlight {
   background-color: $sprk-table-highlight-color !important;
   color: $sprk-table-highlight-text-color !important;
