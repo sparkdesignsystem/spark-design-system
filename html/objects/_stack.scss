@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-/// 	When placed on a container, its children will be
+/// When placed on a container, its children will be
 /// aligned to the end of the container when flex-direction is row.
 /// You can choose for this to be constant or add a responsive
 /// modifier and have it start at a specific breakpoint
@@ -111,7 +111,7 @@
   }
 }
 
-///	When placed on a container, its children will be centered
+/// When placed on a container, its children will be centered
 /// along the cross axis of the container.
 .sprk-o-Stack--center-column {
   align-items: center;
@@ -390,7 +390,6 @@
     }
     
     /* stylelint-enable selector-class-pattern */
-
     > .sprk-o-Stack__item--sixth\@xxs {
       flex: 0 0 16.666666667%;
       max-width: 16.666666667%;
@@ -435,7 +434,6 @@
       flex: 0 0 70%;
       max-width: 70%;
     }
-
 
     > .sprk-o-Stack__item--two-fifths\@xxs {
       flex: 0 0 40%;
@@ -1178,7 +1176,7 @@
   }
 }
 
-/// 	When placed on a specific item, it will be aligned to the
+/// When placed on a specific item, it will be aligned to the
 /// start of the container when flex-direction is column. You can
 /// also add a responsive suffix to have it start at a breakpoint
 /// that you specify (xxs, xs, s, m, l, xl).
@@ -1222,7 +1220,7 @@
   }
 }
 
-/// 	When placed on a specific item, it will be centered
+/// When placed on a specific item, it will be centered
 /// along the cross axis of the container. You can also add a
 /// responsive suffix to have it start at a breakpoint that
 /// you specify (xxs, xs, s, m, l, xl).
