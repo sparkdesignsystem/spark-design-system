@@ -1,6 +1,9 @@
 // ==================================================================
 // Icons
 // ==================================================================
+////
+/// @group Icons
+////
 .sprk-o-StrokeIconSymbol circle,
 .sprk-o-StrokeIconSymbol ellipse,
 .sprk-o-StrokeIconSymbol line,
@@ -60,44 +63,66 @@
   }
 }
 
+/// Adds styles for filled Icons.
+/// @name .sprk-c-Icon--filled
 .sprk-c-Icon--filled,
 .sprk-c-Icon--filled-small {
   stroke: $sprk-icon-filled-stroke-color;
   fill: $sprk-icon-filled-fill-color;
 }
 
+/// Adds styles for small filled Icons.
+/// @name .sprk-c-Icon--filled-small
+
+/// Adds the fill and stroke properties
+/// set to the current color of its container.
 .sprk-c-Icon--stroke-current-color {
   stroke: currentColor;
 }
 
+/// Adds the fill property set
+/// to the current color of its container.
 .sprk-c-Icon--filled-current-color {
   fill: currentColor;
 }
 
+/// Adds the Icon height and width
+/// to $sprk-icon-l and stroke-width
+/// to $icon-custom-stroke-width-l.
 .sprk-c-Icon--l {
   height: $sprk-icon-l;
   width: $sprk-icon-l;
   stroke-width: $sprk-icon-custom-stroke-width-l;
 }
 
+/// Adds the Icon height and width to
+/// $icon-xl and stroke-width to
+/// $icon-custom-stroke-width-m.
 .sprk-c-Icon--xl {
   height: $sprk-icon-xl;
   width: $sprk-icon-xl;
   stroke-width: $sprk-icon-custom-stroke-width-m;
 }
 
+/// Adds the Icon height and
+/// width to $icon-xxl and
+/// stroke-width to $icon-custom-stroke-width-s.
 .sprk-c-Icon--xxl {
   height: $sprk-icon-xxl;
   width: $sprk-icon-xxl;
   stroke-width: $sprk-icon-custom-stroke-width-s;
 }
 
-// Initial state for icons that will be toggled
+///	Adds styles for
+/// Icons that serve as toggle controls.
 .sprk-c-Icon--toggle {
   transform-origin: center;
   transition: transform $sprk-toggle-transition-timing;
 }
 
+/// Rotates Icon -180 degrees.
+/// Should be used in conjunction
+/// with .sprk-c-Icon--toggle.
 .sprk-c-Icon--open {
   transform: rotate(-180deg);
 }
