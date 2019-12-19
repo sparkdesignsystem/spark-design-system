@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-react",
-  "version": "1.3.0",
+  "version": "1.4.0-alpha.0",
   "description": "A collection of Spark Design System components in React 16+",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "storybook": "npm run prebuild:storybook && start-storybook -p 6006",
     "prebuild:storybook": "npm run test:generate-output && npm run sassdocmodifiers",
     "build-storybook": "npm run prebuild:storybook && build-storybook",
-    "publish": "npm run build && npm publish"
+    "prepublishOnly": "npm run build"
   },
   "author": "Quicken Loans",
   "license": "MIT",
