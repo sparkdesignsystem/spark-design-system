@@ -47,6 +47,7 @@
   }
 }
 
+/// Used when a link is next to an icon. There will not be an underline.
 .sprk-b-Link--has-icon {
   border-bottom: $sprk-link-has-icon-border-bottom;
   font-weight: $sprk-link-has-icon-font-weight;
@@ -66,6 +67,8 @@
   fill: $sprk-link-has-icon-fill;
 }
 
+/// Disabled links have a muted color and cannot be interacted with.
+/// @name .sprk-b-Link--disabled
 .sprk-b-Link--disabled,
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
@@ -84,6 +87,8 @@
   }
 }
 
+/// Removes the underline from links on initial state
+/// and on hover, active, focus, and visited states.
 .sprk-b-Link--plain {
   border: $sprk-link-plain-border;
 
