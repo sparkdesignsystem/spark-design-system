@@ -1,3 +1,7 @@
+////
+/// @group input
+////
+
 .sprk-b-InputContainer {
   margin: $sprk-input-container-margin;
   max-width: $sprk-input-max-width;
@@ -41,6 +45,8 @@
 * delete this selector `.sprk-b-TextInput--float-label`
 */
 
+/// Trigger the floating label state on huge inputs.
+/// @name .sprk-b-Input--has-floating-label
 .sprk-b-InputContainer--huge .sprk-b-TextInput::placeholder,
 .sprk-b-InputContainer--huge
 .sprk-b-TextInput.sprk-b-TextInput--float-label::placeholder,
@@ -94,6 +100,8 @@
   padding-top: $sprk-input-huge-active-padding-top;
 }
 
+/// Adjust styling and hide label on huge inputs.
+/// @name .sprk-b-TextInput--label-hidden
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus::-ms-input-placeholder,
 .sprk-b-InputContainer--huge
 .sprk-b-TextInputIconContainer

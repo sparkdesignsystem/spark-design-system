@@ -1,3 +1,7 @@
+////
+/// @group input
+////
+
 .sprk-b-Select {
   -webkit-appearance: $sprk-select-appearance;
   -moz-appearance: $sprk-select-appearance;
@@ -49,6 +53,8 @@
   color: $sprk-select-disabled-color;
 }
 
+/// Adds select error styles.
+/// @name .sprk-b-Select--error
 .sprk-b-Select--error,
 .sprk-b-Select--error:focus {
   border-color: $sprk-select-error-border-color;

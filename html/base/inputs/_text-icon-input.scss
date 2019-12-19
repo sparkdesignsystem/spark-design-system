@@ -1,3 +1,8 @@
+////
+/// @group input
+////
+
+/// Text inputs with icons.
 .sprk-b-TextInputIconContainer--has-text-icon {
   &::before {
     content: $sprk-monetary-symbol;
