@@ -228,3 +228,110 @@ it('should not set href if the supplied tagname is not a', () => {
       .getAttribute('href'),
   ).toBe(null);
 });
+
+it('should choose correct aria-label text if defaultTriggerText is provided.', () => {
+  const wrapper = mount(
+    <SprkDropdown
+      defaultTriggerText="test"
+      variant="informational"
+      choices={{
+        items: [
+          { content: { title: 'Item 1' } },
+        ],
+      }}
+    />,
+  );
+  expect(
+    wrapper
+      .find('.sprk-b-Link')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('test');
+});
+
+it('should apply default aria-label if defaultTriggerText is not provided.', () => {
+  const wrapper = mount(
+    <SprkDropdown
+      variant="informational"
+      choices={{
+        items: [
+          { content: { title: 'Item 1' } },
+        ],
+      }}
+    />,
+  );
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(
+    wrapper
+      .find('.sprk-b-Link')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Choose One...');
+});
+
+it('should default to correct aria-label if screenReaderText is provided.', () => {
+  const choices = {
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+    ],
+  };
+
+  const wrapper = mount(<SprkDropdown choices={choices} screenReaderText="Dropdown description"/>);
+
+  expect(
+    wrapper
+      .find('.sprk-b-Link')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Dropdown description');
+});
+
+it('should default to correct aria-label if screenReaderText is not provided.', () => {
+  const choices = {
+    items: [
+      { text: 'Item 1', value: 'item-1' },
+    ],
+  };
+
+  const wrapper = mount(<SprkDropdown choices={choices} />);
+
+  expect(
+    wrapper
+      .find('.sprk-b-Link')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('Choose One...');
+});
+
+it('should apply aria-label to listbox when title is provided', () => {
+  const wrapper = mount(<SprkDropdown title="test"/>);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(
+    wrapper
+      .find('ul')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('test');
+});
+
+it('should apply aria-label to listbox when there is no title but screenReaderText is provided', () => {
+  const wrapper = mount(<SprkDropdown screenReaderText="test"/>);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(
+    wrapper
+      .find('ul')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('test');
+});
+
+it('should apply default aria-label to listbox when neither title nor screenReaderText is provided', () => {
+  const wrapper = mount(<SprkDropdown />);
+  wrapper.find('.sprk-b-Link').simulate('click');
+  expect(
+    wrapper
+      .find('ul')
+      .instance()
+      .getAttribute('aria-label'),
+  ).toBe('My Choices');
+});

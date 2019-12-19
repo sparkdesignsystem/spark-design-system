@@ -19,11 +19,11 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
         <sprk-link
           [additionalClasses]="getTriggerClasses()"
-          ariaHasPopUp="true"
           (click)="toggle($event)"
           [idString]="idString"
           [analyticsString]="analyticsString"
-          role="combobox"
+          aria-haspopup="listbox"
+          [attr.aria-label]="triggerText ? triggerText : (screenReaderText || 'Choose One')"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
@@ -49,8 +49,8 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             *ngIf="selector && !title"
             linkType="plain"
             additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
-            ariaHasPopUp="true"
             (click)="toggle($event)"
+            [attr.aria-label]="title"
           >
             <span
               class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
@@ -65,12 +65,18 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           </sprk-link>
         </div>
 
-        <ul class="sprk-c-Dropdown__links">
+        <ul
+          class="sprk-c-Dropdown__links"
+          role="listbox"
+          [attr.aria-label]="title ? title : (screenReaderText || 'My Choices')"
+        >
           <li
             class="sprk-c-Dropdown__item"
             *ngFor="let choice of choices; let i = index"
             [attr.data-sprk-dropdown-choice-index]="i"
             (click)="choiceClick($event)"
+            [attr.aria-selected]="choice.active"
+            role="option"
           >
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
@@ -81,7 +87,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
-                role="option"
+                [attr.aria-label]="choice.text"
                 >{{ choice.text }}
               </sprk-link>
             </ng-template>
@@ -93,7 +99,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 additionalClasses="sprk-c-Dropdown__link {{
                   choice.active && 'sprk-c-Dropdown__link--active'
                 }}"
-                role="option"
+                [attr.aria-label]="choice.content.title"
               >
                 <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
                 <p>{{ choice.content.infoLine1 }}</p>
