@@ -51,24 +51,66 @@ export const dateInput = () => ({
       <input
         name="date_input"
         type="text"
-        pattern="^(((0[13578]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02([\\/-]?)((0[1-9])|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
         placeholder="MM/DD/YYYY"
         [(ngModel)]="date_input"
         #dateInput="ngModel"
-        sprkFormatterDate
         sprkInput
       />
-      <span [hidden]="dateInput.valid || dateInput.pristine" sprkFieldError>
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">Invalid date.</div>
-      </span>
     </sprk-input-container>
   `,
 });
 
 dateInput.story = {
   name: 'Default',
+};
+
+export const invalidDateInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Date Input (No Picker)</label>
+      <input
+        class="sprk-b-TextInput--error"
+        name="date_input"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="date_input"
+        #dateInput="ngModel"
+        sprkInput
+      />
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidDateInput.story = {
+  name: 'Invalid',
+};
+
+export const disabledDateInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel class="sprk-b-Label--disabled">Date Input (No Picker)</label>
+      <input
+        disabled
+        name="date_input"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="date_input"
+        #dateInput="ngModel"
+        sprkInput
+      />
+    </sprk-input-container>
+  `,
+});
+
+disabledDateInput.story = {
+  name: 'Disabled',
 };

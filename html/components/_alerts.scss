@@ -1,6 +1,11 @@
 // ==================================================================
 // Alerts
 // ==================================================================
+
+//// 
+/// @group alert
+////
+
 .sprk-c-Alert {
   align-items: center;
   background-color: $sprk-alert-bg-color;
@@ -11,6 +16,7 @@
   justify-content: center;
 }
 
+/// Styles the alert as an information alert.
 .sprk-c-Alert--info {
   background-color: $sprk-alert-bg-color-info;
   border: $sprk-alert-border-info;
@@ -25,6 +31,7 @@
   }
 }
 
+/// Styles the alert as a success alert.
 .sprk-c-Alert--success {
   background-color: $sprk-alert-bg-color-success;
   border: $sprk-alert-border-success;
@@ -39,6 +46,7 @@
   }
 }
 
+/// Styles the alert as a failure alert. 
 .sprk-c-Alert--fail {
   background-color: $sprk-alert-bg-color-fail;
   border: $sprk-alert-border-fail;
@@ -84,6 +92,8 @@
   width: $sprk-alert-icon-size;
 }
 
+/// Adds specific styles to the icon
+/// that is used for closing the alert.
 .sprk-c-Alert__icon--dismiss {
   align-self: flex-start;
   background-color: transparent;

@@ -57,7 +57,6 @@ export const helperText = () => ({
         name="text_input"
         type="text"
         [(ngModel)]="text_input"
-        required
         #textInput="ngModel"
         data-id="text-input-1"
       >
@@ -70,4 +69,39 @@ export const helperText = () => ({
 
 helperText.story = {
   name: 'Default',
+};
+
+export const invalidHelperText = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>
+        Text Input Label
+      </label>
+      <input
+        sprkInput
+        name="text_input"
+        type="text"
+        [(ngModel)]="text_input"
+        #textInput="ngModel"
+        data-id="text-input-1"
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+      >
+      <p sprkHelperText>
+        Optional helper text, used to clarify the field's intent.
+      </p>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidHelperText.story = {
+  name: 'With Error Text',
 };
