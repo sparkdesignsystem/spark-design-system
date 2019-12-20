@@ -23,5 +23,11 @@
 /// For an input that contains a SVG that is positioned to the right.
 /// @name .sprk-b-InputContainer__input--has-icon-right
 
+/// Limits the max-width of the input icon container.
+/// @name .sprk-b-InputContainer__icon-container--narrow
+
+/// For a SVG icon inside of input that is positioned to the right.
+/// @name .sprk-b-InputContainer__icon--right
+
 // Need this to end the file after sassdoc comments.
 .sprk-b-Input {}
