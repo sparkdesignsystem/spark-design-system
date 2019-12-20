@@ -1,6 +1,11 @@
 // ==================================================================
 // Dropdown
 // ==================================================================
+
+////
+/// @group dropdown
+////
+
 .sprk-c-Dropdown {
   background-color: $sprk-white;
   border: $sprk-dropdown-border;
@@ -64,6 +69,8 @@
   }
 }
 
+/// Adds styles to indicate that the dropdown
+/// link is currently active. 
 .sprk-c-Dropdown__link--active {
   box-shadow: $sprk-dropdown-active-box-shadow;
   border-left: $sprk-dropdown-active-border;
