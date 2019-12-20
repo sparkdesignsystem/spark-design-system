@@ -33,6 +33,7 @@ export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-dropdown
+      screenReaderText="Description of default dropdown."
       dropdownType="base"
       title="My Choices"
       triggerIconType="settings"

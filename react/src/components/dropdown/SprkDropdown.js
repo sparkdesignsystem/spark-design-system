@@ -106,7 +106,8 @@ class SprkDropdown extends Component {
             additionalTriggerClasses,
           )}
           aria-expanded={isOpen}
-          role="listbox"
+          aria-haspopup="listbox"
+          aria-label={screenReaderText ? screenReaderText : triggerText}
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
@@ -146,7 +147,11 @@ class SprkDropdown extends Component {
                 <h2 className="sprk-c-Dropdown__title">{title}</h2>
               </div>
             )}
-            <ul className="sprk-c-Dropdown__links">
+            <ul
+              className="sprk-c-Dropdown__links"
+              aria-label={title ? title : (screenReaderText || "My Choices")}
+              role="listbox"
+            >
               {choiceItems.map((choice) => {
                 const {
                   content,
@@ -155,6 +160,7 @@ class SprkDropdown extends Component {
                   isActive,
                   text,
                   value,
+                  idString,
                   ...rest
                 } = choice;
                 const TagName = element || 'a';
@@ -169,6 +175,7 @@ class SprkDropdown extends Component {
                       <TagName
                         className="sprk-c-Dropdown__link"
                         href={TagName === 'a' ? href || '#' : undefined}
+                        aria-label={text}
                         onClick={() => {
                           this.selectChoice(choice.id, text);
                           this.closeDropdown();
@@ -176,6 +183,7 @@ class SprkDropdown extends Component {
                             choiceFunction(value);
                           }
                         }}
+                        data-id={idString}
                         {...rest}
                       >
                         {text}
@@ -188,6 +196,7 @@ class SprkDropdown extends Component {
                             'sprk-c-Dropdown__link--active': isActive,
                           })}
                           href={TagName === 'a' ? href || '#' : undefined}
+                          aria-label={content.title}
                           onClick={() => {
                             this.selectChoice(choice.id, content.title);
                             this.closeDropdown();
