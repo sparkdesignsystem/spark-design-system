@@ -1,0 +1,27 @@
+////
+/// @group input
+////
+
+/// Trigger the floating label state on huge inputs.
+/// @name .sprk-b-Input--has-floating-label
+
+/// Adjust styling and hide label on huge inputs.
+/// @name .sprk-b-TextInput--label-hidden
+
+/// Apply when a label is used without an input.
+/// @name .sprk-b-Label--no-input
+
+/// Used for inline labels.
+/// @name .sprk-b-Label--inline
+
+/// Adds select error styles.
+/// @name .sprk-b-Select--error
+
+/// Text inputs with icons.
+/// @name .sprk-b-TextInputIconContainer--has-text-icon
+
+/// For an input that contains a SVG that is positioned to the right.
+/// @name .sprk-b-InputContainer__input--has-icon-right
+
+// Need this to end the file after sassdoc comments.
+.sprk-b-Input {}
