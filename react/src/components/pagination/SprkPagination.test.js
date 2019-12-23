@@ -7,7 +7,7 @@ import SprkIcon from '../../components/icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a pagination element with the correct base class', () => {
+it('SprkPagination: Should display a pagination element with the correct base class', () => {
   const wrapper = shallow(
     <SprkPagination
       totalItems={0}
@@ -24,7 +24,7 @@ it('should display a pagination element with the correct base class', () => {
   expect(ul.hasClass('sprk-c-Pagination')).toBe(true);
 });
 
-it('should render with exactly two chevrons in any variant', () => {
+it('SprkPagination: Should render with exactly two chevrons in any variant', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={0}
@@ -37,7 +37,7 @@ it('should render with exactly two chevrons in any variant', () => {
   expect(chevronLinks.length).toBe(2);
 });
 
-it('should calculate the correct number of pages in the default variant', () => {
+it('SprkPagination: Should calculate the correct number of pages in the default variant', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={30}
@@ -50,7 +50,7 @@ it('should calculate the correct number of pages in the default variant', () => 
   expect(pageLinks.length).toBe(3);
 });
 
-it('applies current page correctly in the default variant', () => {
+it('SprkPagination: Applies current page correctly in the default variant', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={30}
@@ -65,7 +65,7 @@ it('applies current page correctly in the default variant', () => {
   expect(currentPageLink.text()).toEqual('2');
 });
 
-it('renders three numbered pages and no ellipses with 3 or fewer pages', () => {
+it('SprkPagination: Renders three numbered pages and no ellipses with 3 or fewer pages', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={30}
@@ -81,7 +81,7 @@ it('renders three numbered pages and no ellipses with 3 or fewer pages', () => {
   expect(paginationItems.findWhere(x => x.text() === '...').length).toBe(0); // zero ellipses
 });
 
-it('renders ellipses with more than 3 pages', () => {
+it('SprkPagination: Renders ellipses with more than 3 pages', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={50}
@@ -98,7 +98,7 @@ it('renders ellipses with more than 3 pages', () => {
   expect(paginationItems.findWhere(x => x.type() === 'li' && x.text() === '...').length).toBe(2); // two ellipses
 });
 
-it('navigates back one page when you click the first chevron', () => {
+it('SprkPagination: Navigates back one page when you click the first chevron', () => {
   const spyFunc = jest.fn();
   const currentPage = 3;
 
@@ -115,7 +115,7 @@ it('navigates back one page when you click the first chevron', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(currentPage - 1);
 });
 
-it('navigates forward one page when you click the last chevron', () => {
+it('SprkPagination: Navigates forward one page when you click the last chevron', () => {
   const spyFunc = jest.fn();
   const currentPage = 3;
 
@@ -132,7 +132,7 @@ it('navigates forward one page when you click the last chevron', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(currentPage + 1);
 });
 
-it('goes to hard-coded page 1 when you click 1', () => {
+it('SprkPagination: Goes to hard-coded page 1 when you click 1', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -146,7 +146,7 @@ it('goes to hard-coded page 1 when you click 1', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(1); // expect it to have "1" as arg.newPage
 });
 
-it('goes to hard-coded page 2 when you click 2', () => {
+it('SprkPagination: Goes to hard-coded page 2 when you click 2', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -160,7 +160,7 @@ it('goes to hard-coded page 2 when you click 2', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(2); // expect it to have "2" as arg.newPage
 });
 
-it('goes to hard-coded page 3 when you click 3', () => {
+it('SprkPagination: Goes to hard-coded page 3 when you click 3', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -174,7 +174,7 @@ it('goes to hard-coded page 3 when you click 3', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(3); // expect it to have "3" as arg.newPage
 });
 
-it('goes to last page when you click last page', () => {
+it('SprkPagination: Goes to last page when you click last page', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -189,7 +189,7 @@ it('goes to last page when you click last page', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(9); // expect it to have "9" as arg.newPage
 });
 
-it('goes to page X when you click X', () => {
+it('SprkPagination: Goes to page X when you click X', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -204,7 +204,7 @@ it('goes to page X when you click X', () => {
   expect(spyFunc.mock.calls[0][0].newPage).toBe(3); // expect it to have "3" as arg.newPage
 });
 
-it('should navigate to the last page when you click next on the last page', () => {
+it('SprkPagination: Should navigate to the last page when you click next on the last page', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -218,7 +218,7 @@ it('should navigate to the last page when you click next on the last page', () =
   expect(spyFunc.mock.calls[0][0].newPage).toBe(5);
 });
 
-it('should navigate to the first page when you click prev on the first page', () => {
+it('SprkPagination: Should navigate to the first page when you click prev on the first page', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkPagination
@@ -232,7 +232,7 @@ it('should navigate to the first page when you click prev on the first page', ()
   expect(spyFunc.mock.calls[0][0].newPage).toBe(1);
 });
 
-it('should add analytics strings to page links', () => {
+it('SprkPagination: Should add analytics strings to page links', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={50}
@@ -246,7 +246,7 @@ it('should add analytics strings to page links', () => {
   expect(pageLinks.every('[data-analytics="foo"]')).toBe(true);
 });
 
-it('should render the correct prevIcon name if one is passed', () => {
+it('SprkPagination: Should render the correct prevIcon name if one is passed', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={50}
@@ -258,7 +258,7 @@ it('should render the correct prevIcon name if one is passed', () => {
   expect(wrapper.find(SprkIcon).first().prop('iconName')).toBe('iconName');
 });
 
-it('should render the correct prevIcon name if one is not passed', () => {
+it('SprkPagination: Should render the correct prevIcon name if one is not passed', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={50}
@@ -269,7 +269,7 @@ it('should render the correct prevIcon name if one is not passed', () => {
   expect(wrapper.find(SprkIcon).first().prop('iconName')).toBe('chevron-left');
 });
 
-it('should render the correct nextIcon name if one is passed', () => {
+it('SprkPagination: Should render the correct nextIcon name if one is passed', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={50}
@@ -281,7 +281,7 @@ it('should render the correct nextIcon name if one is passed', () => {
   expect(wrapper.find(SprkIcon).last().prop('iconName')).toBe('iconName');
 });
 
-it('should render the correct nextIcon name if one is not passed', () => {
+it('SprkPagination: Should render the correct nextIcon name if one is not passed', () => {
   const wrapper = mount(
     <SprkPagination
       totalItems={50}
