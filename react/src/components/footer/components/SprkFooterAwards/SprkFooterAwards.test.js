@@ -6,7 +6,7 @@ import SprkFooterAwards from './SprkFooterAwards';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkFooterAwards Component', () => {
+describe('SprkFooterAwards:', () => {
   it('should display the awards', () => {
     const awards = {
       heading: 'Awards Heading Title',

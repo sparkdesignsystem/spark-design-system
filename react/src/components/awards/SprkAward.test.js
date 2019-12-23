@@ -6,7 +6,7 @@ import SprkAward from './SprkAward';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkAward Component', () => {
+describe('SprkAward:', () => {
   it('should display a SprkAward with the correct base class', () => {
     const images = [
       {

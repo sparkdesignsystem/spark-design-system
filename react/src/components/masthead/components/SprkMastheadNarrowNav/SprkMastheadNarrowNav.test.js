@@ -7,26 +7,28 @@ import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('shouldnt render anything by default', () => {
-  const links = [{ text: 'Item 1' }];
-  const wrapper = mount(<SprkMastheadNarrowNav links={links} />);
-  expect(wrapper.children.length).toBe(1);
-});
+describe('SprkMastheadNarrowNav:', () => {
+  it('shouldnt render anything by default', () => {
+    const links = [{ text: 'Item 1' }];
+    const wrapper = mount(<SprkMastheadNarrowNav links={links} />);
+    expect(wrapper.children.length).toBe(1);
+  });
 
-it('should render the nav if isOpen is true', () => {
-  const links = [{ text: 'Item 1' }];
-  const wrapper = mount(<SprkMastheadNarrowNav isOpen links={links} />);
-  expect(wrapper.find('.sprk-c-Masthead__narrow-nav').length).toBe(1);
-});
+  it('should render the nav if isOpen is true', () => {
+    const links = [{ text: 'Item 1' }];
+    const wrapper = mount(<SprkMastheadNarrowNav isOpen links={links} />);
+    expect(wrapper.find('.sprk-c-Masthead__narrow-nav').length).toBe(1);
+  });
 
-it('should render the selector if selector (and items) are defined', () => {
-  const links = [{ text: 'Item 1' }];
-  const wrapper = mount(
-    <SprkMastheadNarrowNav
-      isOpen
-      links={links}
-      selector={{ items: [{ text: 'Item 1' }] }}
-    />,
-  );
-  expect(wrapper.find(SprkMastheadSelector).length).toBe(1);
+  it('should render the selector if selector (and items) are defined', () => {
+    const links = [{ text: 'Item 1' }];
+    const wrapper = mount(
+      <SprkMastheadNarrowNav
+        isOpen
+        links={links}
+        selector={{ items: [{ text: 'Item 1' }] }}
+      />,
+    );
+    expect(wrapper.find(SprkMastheadSelector).length).toBe(1);
+  });
 });

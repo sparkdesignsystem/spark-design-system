@@ -10,7 +10,7 @@ import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkFooter Component', () => {
+describe('SprkFooter:', () => {
   it('should display a Footer element with the correct base class', () => {
     const wrapper = mount(<SprkFooter />);
     expect(wrapper.find('.sprk-o-Box.sprk-o-Box--large.sprk-u-BackgroundColor--gray').length).toBe(
