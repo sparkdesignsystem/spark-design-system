@@ -6,7 +6,7 @@ import SprkStepperSlider from './SprkStepperSlider';
 Enzyme.configure({ adapter: new Adapter() });
 
 // Root Element Tests
-it('should display a slider element with the correct base class', () => {
+it('SprkStepperSlider: Should display a slider element with the correct base class', () => {
   const wrapper = shallow(<SprkStepperSlider />);
   expect(wrapper.find('li.sprk-c-Stepper__slider').length).toBe(1);
 });

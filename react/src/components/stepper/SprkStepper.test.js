@@ -8,7 +8,7 @@ import SprkStepperStep from './components/SprkStepperStep/SprkStepperStep';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a stepper element with the correct base class', () => {
+it('SprkStepper: Should display a stepper element with the correct base class', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep />
@@ -18,7 +18,7 @@ it('should display a stepper element with the correct base class', () => {
   expect(wrapper.find('ol.sprk-c-Stepper').length).toBe(1);
 });
 
-it('should correctly apply additional classes', () => {
+it('SprkStepper: Should correctly apply additional classes', () => {
   const expected = 'expected_class';
   const wrapper = mount(
     <SprkStepper additionalClasses={expected}>
@@ -30,7 +30,7 @@ it('should correctly apply additional classes', () => {
   expect(wrapper.find('ol.sprk-c-Stepper').hasClass(expected)).toBe(true);
 });
 
-it('should correctly apply bookend classes', () => {
+it('SprkStepper: Should correctly apply bookend classes', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep />
@@ -55,7 +55,7 @@ it('should correctly apply bookend classes', () => {
   ).toBe(true);
 });
 
-it('should ignore non-step children', () => {
+it('SprkStepper: Should ignore non-step children', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep />
@@ -67,7 +67,7 @@ it('should ignore non-step children', () => {
   expect(wrapper.find('div#foo').length).toBe(0);
 });
 
-it('should call step callback function', () => {
+it('SprkStepper: Should call step callback function', () => {
   const expectedFunc = sinon.spy();
   const wrapper = mount(
     <SprkStepper>
@@ -84,7 +84,7 @@ it('should call step callback function', () => {
   expect(expectedFunc.called).toBe(true);
 });
 
-it('should have the correct structure with a dark background', () => {
+it('SprkStepper: Should have the correct structure with a dark background', () => {
   const expected = 'div.sprk-u-BackgroundColor--blue';
 
   const wrapper = mount(
@@ -97,7 +97,7 @@ it('should have the correct structure with a dark background', () => {
   expect(wrapper.find(expected).length).toBe(1);
 });
 
-it('should correctly advance the tab when a key is pressed', () => {
+it('SprkStepper: Should correctly advance the tab when a key is pressed', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' />
@@ -123,7 +123,7 @@ it('should correctly advance the tab when a key is pressed', () => {
   expect(newSelectedStep.hasClass('third')).toBe(true);
 });
 
-it('should correctly retreat the tab when a key is pressed', () => {
+it('SprkStepper: Should correctly retreat the tab when a key is pressed', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' />
@@ -149,7 +149,7 @@ it('should correctly retreat the tab when a key is pressed', () => {
   expect(newSelectedStep.hasClass('first')).toBe(true);
 });
 
-it('should correctly jump to first step when Home is pressed', () => {
+it('SprkStepper: Should correctly jump to first step when Home is pressed', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' />
@@ -175,7 +175,7 @@ it('should correctly jump to first step when Home is pressed', () => {
   expect(newSelectedStep.hasClass('first')).toBe(true);
 });
 
-it('should correctly jump to last step when End is pressed', () => {
+it('SprkStepper: Should correctly jump to last step when End is pressed', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' />
@@ -201,7 +201,7 @@ it('should correctly jump to last step when End is pressed', () => {
   expect(newSelectedStep.hasClass('third')).toBe(true);
 });
 
-it('should correctly advance and overflow the selected item with keyboard', () => {
+it('SprkStepper: Should correctly advance and overflow the selected item with keyboard', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' />
@@ -227,7 +227,7 @@ it('should correctly advance and overflow the selected item with keyboard', () =
   expect(newSelectedStep.hasClass('first')).toBe(true);
 });
 
-it('should correctly retreat and underflow the selected item with keyboard', () => {
+it('SprkStepper: Should correctly retreat and underflow the selected item with keyboard', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' isSelected/>
@@ -253,7 +253,7 @@ it('should correctly retreat and underflow the selected item with keyboard', () 
   expect(newSelectedStep.hasClass('third')).toBe(true);
 });
 
-it('should not change state for unexpected keypresses', () => {
+it('SprkStepper: Should not change state for unexpected keypresses', () => {
   const wrapper = mount(
     <SprkStepper>
       <SprkStepperStep additionalClasses='first' isSelected/>

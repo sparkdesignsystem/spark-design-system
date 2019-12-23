@@ -7,12 +7,12 @@ import SprkStepperStep from './SprkStepperStep';
 Enzyme.configure({ adapter: new Adapter() });
 
 // Root Element Tests
-it('should display a stepperitem element with the correct base class', () => {
+it('SprkStepperStep: Should display a stepperitem element with the correct base class', () => {
   const wrapper = shallow(<SprkStepperStep />);
   expect(wrapper.find('li.sprk-c-Stepper__step').length).toBe(1);
 });
 
-it('should correctly apply the title property', () => {
+it('SprkStepperStep: Should correctly apply the title property', () => {
   const expected = 'expected_title';
   const wrapper = mount(<SprkStepperStep title={expected} />);
 
@@ -21,14 +21,14 @@ it('should correctly apply the title property', () => {
   expect(actual).toBe(expected);
 });
 
-it('should correctly apply additional classes', () => {
+it('SprkStepperStep: Should correctly apply additional classes', () => {
   const expected = 'expected_class';
   const wrapper = mount(<SprkStepperStep additionalClasses={expected} />);
 
   expect(wrapper.find('li.sprk-c-Stepper__step').hasClass(expected)).toBe(true);
 });
 
-it('should correctly apply idString', () => {
+it('SprkStepperStep: Should correctly apply idString', () => {
   const expected = 'I am an id string';
   const wrapper = mount(<SprkStepperStep idString={expected} />);
   const node = wrapper.find('li.sprk-c-Stepper__step');
@@ -38,7 +38,7 @@ it('should correctly apply idString', () => {
   );
 });
 
-it('should correctly apply analyticsString', () => {
+it('SprkStepperStep: Should correctly apply analyticsString', () => {
   const expected = 'I am an analytics string';
   const wrapper = mount(<SprkStepperStep analyticsString={expected} />);
   const node = wrapper.find('li.sprk-c-Stepper__step');
@@ -48,7 +48,7 @@ it('should correctly apply analyticsString', () => {
   ).toEqual(expected);
 });
 
-it('should have the correct structure for hasDescription', () => {
+it('SprkStepperStep: Should have the correct structure for hasDescription', () => {
   const expected = 'sprk-c-Stepper__step-content--has-description';
   const wrapper = mount(<SprkStepperStep hasDescription={true} />);
   const contentDiv = wrapper.find('div.sprk-c-Stepper__step-content');
@@ -56,7 +56,7 @@ it('should have the correct structure for hasDescription', () => {
   expect(contentDiv.hasClass(expected)).toBe(true);
 });
 
-it('should correctly hide selected description (covered by slider)', () => {
+it('SprkStepperStep: Should correctly hide selected description (covered by slider)', () => {
   const expected = 'sprk-u-Visibility--hidden';
   const wrapper = mount(<SprkStepperStep hasDescription={true} isSelected={true} />);
   const contentDiv = wrapper.find('h3.sprk-c-Stepper__step-heading');
