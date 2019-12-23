@@ -8,17 +8,17 @@ import SprkTabsPanel from './SprkTabsPanel';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkTabs Component', () => {
-  it('should display a Tab Panel element with the correct base class', () => {
+  it('SprkTabsPanel: Should display a Tab Panel element with the correct base class', () => {
     const wrapper = shallow(<SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>);
     expect(wrapper.find('.sprk-c-Tabs__content').length).toBe(1);
   });
 
-  it('should add classes when tabPanelAddClasses has a value', () => {
+  it('SprkTabsPanel: Should add classes when tabPanelAddClasses has a value', () => {
     const wrapper = mount(<SprkTabsPanel tabBtnChildren="Tab 1" tabPanelAddClasses="test">Test Content 1</SprkTabsPanel>);
     expect(wrapper.find('.sprk-c-Tabs__content.test').length).toBe(1);
   });
 
-  it('should focus the corresponding Tab Panel when the tab key is pressed', () => {
+  it('SprkTabsPanel: Should focus the corresponding Tab Panel when the tab key is pressed', () => {
     const wrapper = mount(
       <SprkTabs>
         <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>
