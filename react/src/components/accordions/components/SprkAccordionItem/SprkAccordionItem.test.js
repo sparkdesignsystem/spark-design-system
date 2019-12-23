@@ -6,14 +6,14 @@ import SprkAccordionItem from './SprkAccordionItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display an element with the correct base class', () => {
+it('SprkAccordionItem: Should display an element with the correct base class', () => {
   const wrapper = mount(
     <SprkAccordionItem heading="test">test</SprkAccordionItem>,
   );
   expect(wrapper.find('li.sprk-c-Accordion__item').length).toBe(1);
 });
 
-it('should default to open if defaultOpen is true', () => {
+it('SprkAccordionItem: Should default to open if defaultOpen is true', () => {
   const wrapper = mount(
     <SprkAccordionItem heading="test" isDefaultOpen>
       test
@@ -22,7 +22,7 @@ it('should default to open if defaultOpen is true', () => {
   expect(wrapper.state().isOpen).toBe(true);
 });
 
-it('should toggle open on click', () => {
+it('SprkAccordionItem: Should toggle open on click', () => {
   const wrapper = mount(
     <SprkAccordionItem heading="test">test</SprkAccordionItem>,
   );
@@ -33,7 +33,7 @@ it('should toggle open on click', () => {
   expect(wrapper.state().isOpen).toBe(false);
 });
 
-it('should add a class to icon when opened', () => {
+it('SprkAccordionItem: Should add a class to icon when opened', () => {
   const wrapper = mount(
     <SprkAccordionItem heading="test">test</SprkAccordionItem>,
   );
@@ -41,7 +41,7 @@ it('should add a class to icon when opened', () => {
   expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
 });
 
-it('should add aria-expanded="true" when the toggle is open', () => {
+it('SprkAccordionItem: Should add aria-expanded="true" when the toggle is open', () => {
   const wrapper = mount(
     <SprkAccordionItem heading="test">test</SprkAccordionItem>,
   );
@@ -49,7 +49,7 @@ it('should add aria-expanded="true" when the toggle is open', () => {
   expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
 });
 
-it('should run callback when passed as prop to onToggle', () => {
+it('SprkAccordionItem: Should run callback when passed as prop to onToggle', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(
     <SprkAccordionItem heading="test" onToggle={spyFunc}>

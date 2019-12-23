@@ -7,7 +7,7 @@ import SprkAccordionItem from './components/SprkAccordionItem/SprkAccordionItem'
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a ul element with the correct base class', () => {
+it('SprkAccordion: Should display a ul element with the correct base class', () => {
   const wrapper = mount(
     <SprkAccordion>
       <SprkAccordionItem
@@ -92,7 +92,7 @@ it('should display a ul element with the correct base class', () => {
   expect(wrapper.find('ul.sprk-c-Accordion.sprk-o-VerticalList').length).toBe(1);
 });
 
-it('should display not render out an accordion item for elements that are not SprkAccordionItem', () => {
+it('SprkAccordion: Should display not render out an accordion item for elements that are not SprkAccordionItem', () => {
   const wrapper = mount(
     <SprkAccordion>
       <p>Test text</p>
