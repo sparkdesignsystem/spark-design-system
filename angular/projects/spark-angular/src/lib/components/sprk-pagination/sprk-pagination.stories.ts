@@ -48,19 +48,6 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const long = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-pagination
-      [currentPage]="11"
-      [totalItems]="22"
-      [itemsPerPage]="1"
-      idString="pagination-2"
-    >
-    </sprk-pagination>
-  `,
-});
-
 export const pager = () => ({
   moduleMetadata: modules,
   template: `
