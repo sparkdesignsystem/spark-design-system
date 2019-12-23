@@ -5,7 +5,7 @@ import SprkDictionary from './SprkDictionary';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a div with the correct base class', () => {
+it('SprkDictionary: Should display a div with the correct base class', () => {
   const testKeyValuePairs = {
     'Email Address': 'sparkdesignsystem@quickenloans.com',
     'Mailing Address': '123 Main Street, Detroit, MI, 48216',
@@ -18,7 +18,7 @@ it('should display a div with the correct base class', () => {
   expect(wrapper.find('div.sprk-c-Dictionary').hasClass('sprk-c-Dictionary')).toBe(true);
 });
 
-it('should display a striped dictionary with correct classes when variant is striped', () => {
+it('SprkDictionary: Should display a striped dictionary with correct classes when variant is striped', () => {
   const testKeyValuePairs = {
     'Email Address': 'sparkdesignsystem@quickenloans.com',
     'Mailing Address': '123 Main Street, Detroit, MI, 48216',
