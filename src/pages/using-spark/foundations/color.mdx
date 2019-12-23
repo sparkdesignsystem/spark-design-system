@@ -2,13 +2,27 @@
   title: Color
 ---
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
+import colorsOnDark from '../../../images/colors-on-dark.jpg';
+import colorsOnLight from '../../../images/colors-on-light.jpg';
+import { SprkStack, SprkStackItem } from '@sparkdesignsystem/spark-react';
 
 # Color
 Having a consistent color palatte is one of the foundations of a unified user experience.
 These are the colors that have been chosen to represent the brand.
-<div className="sprk-u-mbm">
-  <img src="https://placehold.co/1080x400"/>
-</div>
+
+<SprkStack splitAt="huge" itemSpacing="medium">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
+    <img
+      src={colorsOnLight}
+      alt="The brand colors on a light background."/>
+  </SprkStackItem>
+
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
+    <img
+      src={colorsOnDark}
+      alt="The brand colors on a dark background."/>
+  </SprkStackItem>
+</SprkStack>
 
 ## Color Palette
 ### Red
