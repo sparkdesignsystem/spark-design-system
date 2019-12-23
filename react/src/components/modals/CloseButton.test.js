@@ -5,7 +5,7 @@ import CloseButton from './CloseButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should load the component', () => {
+it('CloseButton: Should load the component', () => {
   const wrapper = mount(<CloseButton />);
   expect(wrapper.find('button.sprk-c-Modal__icon').length).toBe(1);
 });

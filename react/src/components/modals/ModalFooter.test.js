@@ -5,7 +5,7 @@ import ModalFooter from './ModalFooter';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should load the component', () => {
+it('ModalFooter: Should load the component', () => {
   const wrapper = mount(<ModalFooter />);
   expect(wrapper.find('footer.sprk-o-Stack__item').length).toBe(1);
 });
