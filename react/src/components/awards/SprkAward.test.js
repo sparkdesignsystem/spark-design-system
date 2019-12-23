@@ -7,7 +7,7 @@ import SprkAward from './SprkAward';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkAward Component', () => {
-  it('should display a SprkAward with the correct base class', () => {
+  it('SprkAward: Should display a SprkAward with the correct base class', () => {
     const images = [
       {
         href: '#nogo',
@@ -26,7 +26,7 @@ describe('SprkAward Component', () => {
     expect(wrapper.find('div.sprk-o-Stack.sprk-o-CenteredColumn.sprk-o-Stack--medium').length).toBe(1);
   });
 
-  it('should display the award component with the images section', () => {
+  it('SprkAward: Should display the award component with the images section', () => {
     const images = [
       {
         href: '#nogo',
@@ -46,7 +46,7 @@ describe('SprkAward Component', () => {
     expect(wrapper.find('img').length).toBe(2);
   });
 
-  it('should add the correct split class', () => {
+  it('SprkAward: Should add the correct split class', () => {
     const images = [
       {
         to: '#nogo',
@@ -66,7 +66,7 @@ describe('SprkAward Component', () => {
     expect(wrapper.find('div.sprk-o-Stack--medium.sprk-o-Stack__item--center-column').hasClass('sprk-o-Stack--split@l')).toBe(true);
   });
 
-  it('should add the correct item spacing class', () => {
+  it('SprkAward: Should add the correct item spacing class', () => {
     const images = [
       {
         href: '#nogo',
