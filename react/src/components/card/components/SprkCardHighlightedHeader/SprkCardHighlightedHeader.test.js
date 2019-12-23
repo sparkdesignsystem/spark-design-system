@@ -24,7 +24,7 @@ afterEach(() => {
   createTestObjects();
 });
 
-describe('SprkHighlightedHeader:', () => {
+describe('SprkCardHighlightedHeader:', () => {
   it("should display highlighted header's body text", () => {
     const testVariable = 'test';
     testHighlightedHeaderConfig.bodyText = testVariable;
