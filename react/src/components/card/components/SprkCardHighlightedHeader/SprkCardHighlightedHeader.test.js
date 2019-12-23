@@ -24,7 +24,7 @@ afterEach(() => {
   createTestObjects();
 });
 
-it("should display highlighted header's body text", () => {
+it("SprkCardHighlightedHeader: Should display highlighted header's body text", () => {
   const testVariable = 'test';
   testHighlightedHeaderConfig.bodyText = testVariable;
   const wrapper = shallow(
@@ -34,7 +34,7 @@ it("should display highlighted header's body text", () => {
   expect(hasBodyText).toBe(true);
 });
 
-it("should display highlighted header's title", () => {
+it("SprkCardHighlightedHeader: Should display highlighted header's title", () => {
   const testVariable = 'test';
   testHighlightedHeaderConfig.title = testVariable;
   const wrapper = shallow(
@@ -44,7 +44,7 @@ it("should display highlighted header's title", () => {
   expect(hasTitleText).toBe(true);
 });
 
-it("should display highlighted header's description", () => {
+it("SprkCardHighlightedHeader: Should display highlighted header's description", () => {
   const testVariable = 'test';
   testHighlightedHeaderConfig.description = testVariable;
   const wrapper = shallow(

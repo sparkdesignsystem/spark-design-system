@@ -45,14 +45,14 @@ afterEach(() => {
 });
 
 // Media
-it('should render media as image', () => {
+it('SprkCardTeaser: Should render media as image', () => {
   testTeaserConfig.media.mediaVariant = 'img';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
   const hasMediaImg = wrapper.find('Media img').length === 1;
   expect(hasMediaImg).toBe(true);
 });
 
-it('should render media as icon', () => {
+it('SprkCardTeaser: Should render media as icon', () => {
   testTeaserConfig.media.mediaVariant = 'icon';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
   const hasMediaImg = wrapper.find('SprkIcon').length === 1;
@@ -60,7 +60,7 @@ it('should render media as icon', () => {
 });
 
 // Body Text
-it('should render bodyText', () => {
+it('SprkCardTeaser: Should render bodyText', () => {
   const testVariable = 'test';
   testTeaserConfig.bodyText = testVariable;
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
@@ -69,7 +69,7 @@ it('should render bodyText', () => {
 });
 
 // Title
-it('should render title with correct classes (!titleFirst)', () => {
+it('SprkCardTeaser: Should render title with correct classes (!titleFirst)', () => {
   const testVariable = 'test';
   testTeaserConfig.title = testVariable;
   testTeaserConfig.titleFirst = false;
@@ -78,7 +78,7 @@ it('should render title with correct classes (!titleFirst)', () => {
   expect(hasTitle).toBe(true);
 });
 
-it('should render title with correct classes when titleFirst', () => {
+it('SprkCardTeaser: Should render title with correct classes when titleFirst', () => {
   const testVariable = 'test';
   testTeaserConfig.title = testVariable;
   testTeaserConfig.titleFirst = true;
@@ -88,7 +88,7 @@ it('should render title with correct classes when titleFirst', () => {
 });
 
 // CTA
-it('should render cta as a button', () => {
+it('SprkCardTeaser: Should render cta as a button', () => {
   testTeaserConfig.cta.ctaVariant = 'button';
   testTeaserConfig.cta.ctaLinkElement = 'button';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
@@ -96,14 +96,14 @@ it('should render cta as a button', () => {
   expect(hasButtonCta).toBe(true);
 });
 
-it('should render cta as a link', () => {
+it('SprkCardTeaser: Should render cta as a link', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
   const hasButtonCta = wrapper.find('CallToAction a').length === 1;
   expect(hasButtonCta).toBe(true);
 });
 
-it('should render icon next to link', () => {
+it('SprkCardTeaser: Should render icon next to link', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
   testTeaserConfig.cta.ctaIcon = 'chevron-right';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
@@ -112,7 +112,7 @@ it('should render icon next to link', () => {
 });
 
 // TagNameLink
-it('should render media img inside react router link', () => {
+it('SprkCardTeaser: Should render media img inside react router link', () => {
   testTeaserConfig.media.mediaVariant = 'img';
   testTeaserConfig.media.mediaLinkElement = Link;
   testTeaserConfig.media.to = 'www.test.com';
@@ -125,7 +125,7 @@ it('should render media img inside react router link', () => {
   expect(hasRouterLink).toBe(true);
 });
 
-it('should render media icon inside TagName link', () => {
+it('SprkCardTeaser: Should render media icon inside TagName link', () => {
   testTeaserConfig.media.mediaVariant = 'icon';
   testTeaserConfig.media.iconName = 'call-team-member';
   testTeaserConfig.media.mediaLinkElement = Link;
@@ -140,7 +140,7 @@ it('should render media icon inside TagName link', () => {
   expect(hasTagNameLink).toBe(true);
 });
 
-it('should render CTA link as TagName link', () => {
+it('SprkCardTeaser: Should render CTA link as TagName link', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
   testTeaserConfig.cta.ctaLinkElement = Link;
   testTeaserConfig.cta.to = 'www.test.com';
@@ -153,7 +153,7 @@ it('should render CTA link as TagName link', () => {
   expect(hasRouterLink).toBe(true);
 });
 
-it('should render CTA link with icon as TagName link', () => {
+it('SprkCardTeaser: Should render CTA link with icon as TagName link', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
   testTeaserConfig.cta.ctaLinkElement = Link;
   testTeaserConfig.cta.to = 'www.test.com';
@@ -167,7 +167,7 @@ it('should render CTA link with icon as TagName link', () => {
   expect(hasRouterLink).toBe(true);
 });
 
-it('should render CTA button router link', () => {
+it('SprkCardTeaser: Should render CTA button router link', () => {
   testTeaserConfig.cta.ctaVariant = 'button';
   testTeaserConfig.cta.ctaLinkElement = Link;
   testTeaserConfig.cta.to = 'www.test.com';
@@ -180,7 +180,7 @@ it('should render CTA button router link', () => {
   expect(hasRouterLink).toBe(true);
 });
 
-it('should render CTA button as anchor link with button style', () => {
+it('SprkCardTeaser: Should render CTA button as anchor link with button style', () => {
   testTeaserConfig.cta.ctaVariant = 'button';
   testTeaserConfig.cta.ctaLinkElement = 'a';
   testTeaserConfig.cta.href = 'www.test.com';
@@ -189,7 +189,7 @@ it('should render CTA button as anchor link with button style', () => {
   expect(hasRouterLink).toBe(true);
 });
 
-it('should render CTA link as anchor', () => {
+it('SprkCardTeaser: Should render CTA link as anchor', () => {
   testTeaserConfig.cta.ctaVariant = 'link';
   testTeaserConfig.cta.ctaLinkElement = 'a';
   testTeaserConfig.cta.href = 'www.test.com';
@@ -199,7 +199,7 @@ it('should render CTA link as anchor', () => {
 });
 
 // Order if Title First
-it('should render correct order when title is first', () => {
+it('SprkCardTeaser: Should render correct order when title is first', () => {
   testTeaserConfig.titleFirst = true;
   testTeaserConfig.media.mediaVariant = 'img';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
@@ -207,14 +207,14 @@ it('should render correct order when title is first', () => {
   expect(hasCorrectOrder).toBe(true);
 });
 
-it('should render correct order of elements when media is icon', () => {
+it('SprkCardTeaser: Should render correct order of elements when media is icon', () => {
   testTeaserConfig.media.mediaVariant = 'icon';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
   const hasCorrectOrder = wrapper.find('Media + Title + BodyText + CallToAction').length === 1;
   expect(hasCorrectOrder).toBe(true);
 });
 
-it('should render correct order of elements when media is img', () => {
+it('SprkCardTeaser: Should render correct order of elements when media is img', () => {
   testTeaserConfig.media.mediaVariant = 'img';
   const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
   const hasCorrectOrder = wrapper.find(

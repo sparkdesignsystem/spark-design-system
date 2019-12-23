@@ -7,13 +7,13 @@ import SprkCard from './SprkCard';
 Enzyme.configure({ adapter: new Adapter() });
 
 // Checks base card
-it('should display a Card div with the correct base classes', () => {
+it('SprkCard: Should display a Card div with the correct base classes', () => {
   const wrapper = shallow(<SprkCard />);
   expect(wrapper.find('.sprk-o-Stack').hasClass('sprk-c-Card')).toBe(true);
 });
 
 // Checks that children render inside of base card
-it('should display children inside of Card', () => {
+it('SprkCard: Should display children inside of Card', () => {
   const testVariable = <p>test</p>;
   const wrapper = mount(<SprkCard>{testVariable}</SprkCard>);
   const hasChildren = wrapper.find('GetCardContent p').contains('test');
@@ -21,7 +21,7 @@ it('should display children inside of Card', () => {
 });
 
 // Tests standout variant
-it('should display a Card div with the correct standout classes', () => {
+it('SprkCard: Should display a Card div with the correct standout classes', () => {
   const wrapper = shallow(<SprkCard isStandout />);
   expect(wrapper.find('.sprk-c-Card').hasClass('sprk-c-Card--standout')).toBe(
     true,
@@ -29,7 +29,7 @@ it('should display a Card div with the correct standout classes', () => {
 });
 
 // If teaser, should load teaser card
-it('should load teaser if there is teaserConfig', () => {
+it('SprkCard: Should load teaser if there is teaserConfig', () => {
   const wrapper = mount(
     <SprkCard
       variant="teaser"
@@ -60,7 +60,7 @@ it('should load teaser if there is teaserConfig', () => {
 });
 
 // If highlighted header, should load teaser card
-it('should load highlighted header if there is highlightedHeaderConfig', () => {
+it('SprkCard: Should load highlighted header if there is highlightedHeaderConfig', () => {
   const wrapper = mount(
     <SprkCard
       variant="highlightedHeader"
