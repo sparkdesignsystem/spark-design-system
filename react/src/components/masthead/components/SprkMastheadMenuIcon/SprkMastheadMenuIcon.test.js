@@ -6,7 +6,7 @@ import SprkMastheadMenuIcon from './SprkMastheadMenuIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display an svg element with the correct base class', () => {
+it('SprkMastheadMenuIcon: Should display an svg element with the correct base class', () => {
   const wrapper = shallow(
     <SprkMastheadMenuIcon
       toggleNarrowNav={() => {

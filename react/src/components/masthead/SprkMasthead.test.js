@@ -12,33 +12,33 @@ import SprkLink from '../../base/links/SprkLink';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a div element with the correct base class', () => {
+it('SprkMasthead: Should display a div element with the correct base class', () => {
   const wrapper = shallow(<SprkMasthead />);
   expect(wrapper.find('header.sprk-c-Masthead').length).toBe(1);
 });
 
-it('should add classes if additionalClasses has a value', () => {
+it('SprkMasthead: Should add classes if additionalClasses has a value', () => {
   const wrapper = shallow(<SprkMasthead additionalClasses="sprk-u-man" />);
   expect(wrapper.find('header.sprk-u-man').length).toBe(1);
 });
 
-it('should add data-analytics if analyticsString has a value', () => {
+it('SprkMasthead: Should add data-analytics if analyticsString has a value', () => {
   const wrapper = shallow(<SprkMasthead analyticsString="masthead-1" />);
   expect(wrapper.find('header[data-analytics="masthead-1"]').length).toBe(1);
 });
 
-it('should add data-id if idString has a value', () => {
+it('SprkMasthead: Should add data-id if idString has a value', () => {
   const wrapper = shallow(<SprkMasthead idString="masthead-1" />);
   expect(wrapper.find('header[data-id="masthead-1"]').length).toBe(1);
 });
 
-it('should toggle classes on html and body and update its own state when the narrow nav is toggled', () => {
+it('SprkMasthead: Should toggle classes on html and body and update its own state when the narrow nav is toggled', () => {
   const wrapper = mount(<SprkMasthead />);
   wrapper.find('.sprk-c-Menu').simulate('click');
   expect(wrapper.state().narrowNavOpen).toBe(true);
 });
 
-it('should not add height 100 on html if its already there', () => {
+it('SprkMasthead: Should not add height 100 on html if its already there', () => {
   const div = document.createElement('div');
   document.body.append(div);
   document.documentElement.style.height = '100%';
@@ -49,7 +49,7 @@ it('should not add height 100 on html if its already there', () => {
   ).toBe(false);
 });
 
-it('should not add height 100 on body if its already there', () => {
+it('SprkMasthead: Should not add height 100 on body if its already there', () => {
   const div = document.createElement('div');
   document.body.append(div);
   document.body.style.height = '100%';
@@ -58,21 +58,21 @@ it('should not add height 100 on body if its already there', () => {
   expect(document.body.classList.contains('sprk-u-Height--100')).toBe(false);
 });
 
-it('should update state on scroll', () => {
+it('SprkMasthead: Should update state on scroll', () => {
   const wrapper = mount(<SprkMasthead />);
   window.scrollY = 11;
   window.dispatchEvent(new Event('scroll'));
   expect(wrapper.state().isScrolled).toBe(true);
 });
 
-it('should update state on scroll to top', () => {
+it('SprkMasthead: Should update state on scroll to top', () => {
   const wrapper = mount(<SprkMasthead />);
   window.scrollY = 1;
   window.dispatchEvent(new Event('scroll'));
   expect(wrapper.state().isScrolled).toBe(false);
 });
 
-it('should update state on orientationchange', () => {
+it('SprkMasthead: Should update state on orientationchange', () => {
   const wrapper = mount(<SprkMasthead />);
   wrapper.find('.sprk-c-Menu').simulate('click');
   expect(wrapper.state().narrowNavOpen).toBe(true);
@@ -80,44 +80,44 @@ it('should update state on orientationchange', () => {
   expect(wrapper.state().narrowNavOpen).toBe(false);
 });
 
-it('should render the little nav if only littleNavLinks are provided', () => {
+it('SprkMasthead: Should render the little nav if only littleNavLinks are provided', () => {
   const wrapper = mount(<SprkMasthead littleNavLinks={[{ text: 'Hi' }]} />);
   expect(wrapper.find(SprkMastheadLittleNav).length).toBe(1);
 });
 
-it('should render the little nav if only utilityContents are provided', () => {
+it('SprkMasthead: Should render the little nav if only utilityContents are provided', () => {
   const wrapper = mount(<SprkMasthead utilityContents={[<p>hi</p>]} />);
   expect(wrapper.find(SprkMastheadLittleNav).length).toBe(1);
 });
 
-it('should set spacing appropriately when variant is extended', () => {
+it('SprkMasthead: Should set spacing appropriately when variant is extended', () => {
   const wrapper = mount(
     <SprkMasthead littleNavLinks={[{ text: 'Hi' }]} variant="extended" />,
   );
   expect(wrapper.find(SprkMastheadLittleNav).props().spacing).toBe('medium');
 });
 
-it('should set spacing appropriately', () => {
+it('SprkMasthead: Should set spacing appropriately', () => {
   const wrapper = mount(<SprkMasthead littleNavLinks={[{ text: 'Hi' }]} />);
   expect(wrapper.find(SprkMastheadLittleNav).props().spacing).toBe('large');
 });
 
-it('should render BigNav if bignavlinks is present', () => {
+it('SprkMasthead: Should render BigNav if bignavlinks is present', () => {
   const wrapper = mount(<SprkMasthead bigNavLinks={[{ text: 'Hi' }]} />);
   expect(wrapper.find(SprkMastheadBigNav).length).toBe(1);
 });
 
-it('should render LittleNav if littleNavlinks is present', () => {
+it('SprkMasthead: Should render LittleNav if littleNavlinks is present', () => {
   const wrapper = mount(<SprkMasthead littleNavLinks={[{ text: 'Hi' }]} />);
   expect(wrapper.find(SprkMastheadLittleNav).length).toBe(1);
 });
 
-it('should render NarrowNav if narrowNavlinks is present', () => {
+it('SprkMasthead: Should render NarrowNav if narrowNavlinks is present', () => {
   const wrapper = mount(<SprkMasthead narrowNavLinks={[{ text: 'Hi' }]} />);
   expect(wrapper.find(SprkMastheadNarrowNav).length).toBe(1);
 });
 
-it('should render the correct logoLink if logoLinkElement is an anchor', () => {
+it('SprkMasthead: Should render the correct logoLink if logoLinkElement is an anchor', () => {
   const wrapper = mount(
     <SprkMasthead logoLinkElement="a" logoLink="https://google.com" />,
   );
@@ -125,7 +125,7 @@ it('should render the correct logoLink if logoLinkElement is an anchor', () => {
   expect(wrapper.find(SprkLink).props().element).toBe('a');
 });
 
-it('should render the correct logoLink if logoLinkElement is router link', () => {
+it('SprkMasthead: Should render the correct logoLink if logoLinkElement is router link', () => {
   const wrapper = mount(
     <Router>
       <SprkMasthead logoLinkElement={Link} logoLink="/button" />
@@ -135,13 +135,13 @@ it('should render the correct logoLink if logoLinkElement is router link', () =>
   expect(wrapper.find(SprkLink).props().element).toBe(Link);
 });
 
-it('should add the hidden class when state isHidden is true', () => {
+it('SprkMasthead: Should add the hidden class when state isHidden is true', () => {
   const wrapper = mount(<SprkMasthead/>);
   wrapper.setState({ isHidden : true });
   expect(wrapper.find('header.sprk-c-Masthead--hidden').length).toBe(1);
 });
 
-it('should update state isHidden to true when scrollDirection is equal to down', () => {
+it('SprkMasthead: Should update state isHidden to true when scrollDirection is equal to down', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   expect(wrapper.state('isHidden')).toEqual(false);
@@ -150,7 +150,7 @@ it('should update state isHidden to true when scrollDirection is equal to down',
   expect(wrapper.state('isHidden')).toEqual(true);
 });
 
-it('should update state isHidden to false when scrollDirection is equal to up', () => {
+it('SprkMasthead: Should update state isHidden to false when scrollDirection is equal to up', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   wrapper.setState({ isHidden : true });
@@ -160,7 +160,7 @@ it('should update state isHidden to false when scrollDirection is equal to up', 
   expect(wrapper.state('isHidden')).toEqual(false);
 });
 
-it('should update narrowNavOpen to false when closeNarrowNavMenu is called', () => {
+it('SprkMasthead: Should update narrowNavOpen to false when closeNarrowNavMenu is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   wrapper.setState({ narrowNavOpen : true });
@@ -169,7 +169,7 @@ it('should update narrowNavOpen to false when closeNarrowNavMenu is called', () 
   expect(wrapper.state('narrowNavOpen')).toEqual(false);
 });
 
-it('should update state of isNarrowLayout if isNarrowLayout !== newMenuVisibility', () => {
+it('SprkMasthead: Should update state of isNarrowLayout if isNarrowLayout !== newMenuVisibility', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   wrapper.setState({ currentLayout : true });
@@ -178,7 +178,7 @@ it('should update state of isNarrowLayout if isNarrowLayout !== newMenuVisibilit
   expect(wrapper.state('isNarrowLayout')).toEqual(true);
 });
 
-it('should update state of isHidden if isNarrowLayout is false', () => {
+it('SprkMasthead: Should update state of isHidden if isNarrowLayout is false', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   wrapper.setState({ currentLayout : false });
@@ -188,7 +188,7 @@ it('should update state of isHidden if isNarrowLayout is false', () => {
   expect(wrapper.state('isHidden')).toEqual(false);
 });
 
-it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
+it('SprkMasthead: Should call getCurrentLayout when checkLayoutOnResize is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");
@@ -197,7 +197,7 @@ it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
   expect(spy).toHaveBeenCalled();
 });
 
-it('should call checkIfNarrowLayout when checkLayoutOnResize is called', () => {
+it('SprkMasthead: Should call checkIfNarrowLayout when checkLayoutOnResize is called', () => {
   const wrapper = mount(<SprkMasthead/>);
   const instance = wrapper.instance();
   const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");

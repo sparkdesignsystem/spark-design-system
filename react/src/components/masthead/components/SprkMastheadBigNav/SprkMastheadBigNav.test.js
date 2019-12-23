@@ -6,13 +6,13 @@ import SprkMastheadBigNav from './SprkMastheadBigNav';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should render an element with the correct class', () => {
+it('SprkMastheadBigNav: Should render an element with the correct class', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(<SprkMastheadBigNav links={links} />);
   expect(wrapper.find('.sprk-c-Masthead__big-nav').length).toBe(1);
 });
 
-it('should add classes when additionalClasses has a value', () => {
+it('SprkMastheadBigNav: Should add classes when additionalClasses has a value', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(
     <SprkMastheadBigNav links={links} additionalClasses="sprk-u-man" />,
@@ -20,7 +20,7 @@ it('should add classes when additionalClasses has a value', () => {
   expect(wrapper.find('.sprk-c-Masthead__big-nav.sprk-u-man').length).toBe(1);
 });
 
-it('should assign data-analytics when analyticsString has a value', () => {
+it('SprkMastheadBigNav: Should assign data-analytics when analyticsString has a value', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(
     <SprkMastheadBigNav links={links} analyticsString="321" />,
@@ -28,13 +28,13 @@ it('should assign data-analytics when analyticsString has a value', () => {
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
-it('should assign data-id when idString has a value', () => {
+it('SprkMastheadBigNav: Should assign data-id when idString has a value', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(<SprkMastheadBigNav links={links} idString="321" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
-it('should render the correct number of links', () => {
+it('SprkMastheadBigNav: Should render the correct number of links', () => {
   const links = [
     {
       text: 'Navigation Item',
@@ -61,7 +61,7 @@ it('should render the correct number of links', () => {
   expect(wrapper.find('.sprk-c-Masthead__big-nav-item').length).toBe(3);
 });
 
-it('should add a class to the link if its active', () => {
+it('SprkMastheadBigNav: Should add a class to the link if its active', () => {
   const links = [
     {
       text: 'Navigation Item',

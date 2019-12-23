@@ -8,13 +8,13 @@ import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should render an element with the correct class', () => {
+it('SprkMastheadLittleNav: Should render an element with the correct class', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(<SprkMastheadLittleNav links={links} />);
   expect(wrapper.find('.sprk-c-Masthead__little-nav').length).toBe(1);
 });
 
-it('should add classes when additionalClasses has a value', () => {
+it('SprkMastheadLittleNav: Should add classes when additionalClasses has a value', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(
     <SprkMastheadLittleNav links={links} additionalClasses="sprk-u-man" />,
@@ -24,7 +24,7 @@ it('should add classes when additionalClasses has a value', () => {
   );
 });
 
-it('should assign data-analytics when analyticsString has a value', () => {
+it('SprkMastheadLittleNav: Should assign data-analytics when analyticsString has a value', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(
     <SprkMastheadLittleNav links={links} analyticsString="321" />,
@@ -32,13 +32,13 @@ it('should assign data-analytics when analyticsString has a value', () => {
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
-it('should assign data-id when idString has a value', () => {
+it('SprkMastheadLittleNav: Should assign data-id when idString has a value', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(<SprkMastheadLittleNav links={links} idString="321" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
-it('should render the selector if selector.items is defined', () => {
+it('SprkMastheadLittleNav: Should render the selector if selector.items is defined', () => {
   const wrapper = mount(
     <SprkMastheadLittleNav
       selector={{
@@ -52,7 +52,7 @@ it('should render the selector if selector.items is defined', () => {
   expect(wrapper.find(SprkMastheadSelector).length).toBe(1);
 });
 
-it('should not render the selector if selector.items is not defined', () => {
+it('SprkMastheadLittleNav: Should not render the selector if selector.items is not defined', () => {
   const wrapper = mount(
     <SprkMastheadLittleNav
       selector={{
@@ -65,7 +65,7 @@ it('should not render the selector if selector.items is not defined', () => {
   expect(wrapper.find(SprkMastheadSelector).length).toBe(0);
 });
 
-it('should render href on the link if supplied', () => {
+it('SprkMastheadLittleNav: Should render href on the link if supplied', () => {
   const wrapper = mount(
     <SprkMastheadLittleNav
       links={[{ text: 'Item 1', href: 'https://www.google.com' }]}
@@ -79,7 +79,7 @@ it('should render href on the link if supplied', () => {
   ).toBe('https://www.google.com');
 });
 
-it('should not render href on the link if the element is not a', () => {
+it('SprkMastheadLittleNav: Should not render href on the link if the element is not a', () => {
   const wrapper = mount(
     <SprkMastheadLittleNav links={[{ text: 'Item 1', element: 'span' }]} />,
   );
@@ -91,7 +91,7 @@ it('should not render href on the link if the element is not a', () => {
   ).toBe(null);
 });
 
-it('should not render href as #nogo on the link if the href is not defined', () => {
+it('SprkMastheadLittleNav: Should not render href as #nogo on the link if the href is not defined', () => {
   const wrapper = mount(
     <SprkMastheadLittleNav links={[{ text: 'Item 1', element: 'a' }]} />,
   );
@@ -103,7 +103,7 @@ it('should not render href as #nogo on the link if the href is not defined', () 
   ).toBe('#nogo');
 });
 
-it('should render the correct number of links', () => {
+it('SprkMastheadLittleNav: Should render the correct number of links', () => {
   const links = [
     {
       text: 'Navigation Item',
@@ -119,7 +119,7 @@ it('should render the correct number of links', () => {
   expect(wrapper.find('.sprk-c-Masthead__site-links li').length).toBe(3);
 });
 
-it('should render utilityContents if supplied', () => {
+it('SprkMastheadLittleNav: Should render utilityContents if supplied', () => {
   const utilityContents = [<SprkButton>hi</SprkButton>];
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(

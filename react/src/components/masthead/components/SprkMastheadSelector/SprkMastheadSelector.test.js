@@ -6,7 +6,7 @@ import SprkMastheadSelector from './SprkMastheadSelector';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should render a trigger with the correct classes', () => {
+it('SprkMastheadSelector: Should render a trigger with the correct classes', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -17,7 +17,7 @@ it('should render a trigger with the correct classes', () => {
   expect(wrapper.find('.sprk-b-Link').length).toBe(1);
 });
 
-it('should render a footer if supplied with the choices', () => {
+it('SprkMastheadSelector: Should render a footer if supplied with the choices', () => {
   const choices = {
     footer: <p>hi</p>,
     items: [
@@ -30,7 +30,7 @@ it('should render a footer if supplied with the choices', () => {
   expect(wrapper.find('.sprk-c-Dropdown__footer').length).toBe(1);
 });
 
-it('should render the correct text if defaultTriggerText is defined', () => {
+it('SprkMastheadSelector: Should render the correct text if defaultTriggerText is defined', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -48,7 +48,7 @@ it('should render the correct text if defaultTriggerText is defined', () => {
   );
 });
 
-it('should add classes to the selector when additionalClasses has a value', () => {
+it('SprkMastheadSelector: Should add classes to the selector when additionalClasses has a value', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -62,7 +62,7 @@ it('should add classes to the selector when additionalClasses has a value', () =
   expect(wrapper.find('.sprk-c-Dropdown.sprk-u-man').length).toBe(1);
 });
 
-it('should add classes to the icon when additionalIconClasses has a value', () => {
+it('SprkMastheadSelector: Should add classes to the icon when additionalIconClasses has a value', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -78,7 +78,7 @@ it('should add classes to the icon when additionalIconClasses has a value', () =
   expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
 });
 
-it('should add classes to the trigger when additionalTriggerClasses has a value', () => {
+it('SprkMastheadSelector: Should add classes to the trigger when additionalTriggerClasses has a value', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -94,7 +94,7 @@ it('should add classes to the trigger when additionalTriggerClasses has a value'
   expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
 });
 
-it('should add classes to the trigger text when additionalTriggerTextClasses has a value', () => {
+it('SprkMastheadSelector: Should add classes to the trigger text when additionalTriggerTextClasses has a value', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -110,7 +110,7 @@ it('should add classes to the trigger text when additionalTriggerTextClasses has
   expect(wrapper.find('span.sprk-u-man').length).toBe(1);
 });
 
-it('should assign data-analytics when analyticsString has a value', () => {
+it('SprkMastheadSelector: Should assign data-analytics when analyticsString has a value', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -123,7 +123,7 @@ it('should assign data-analytics when analyticsString has a value', () => {
   expect(wrapper.find('[data-analytics="321"]').length).toBe(2);
 });
 
-it('should assign data-id when idString has a value', () => {
+it('SprkMastheadSelector: Should assign data-id when idString has a value', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -136,7 +136,7 @@ it('should assign data-id when idString has a value', () => {
   expect(wrapper.find('[data-id="321"]').length).toBe(2);
 });
 
-it('should build the correct number of choices from a choices object', () => {
+it('SprkMastheadSelector: Should build the correct number of choices from a choices object', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -148,7 +148,7 @@ it('should build the correct number of choices from a choices object', () => {
   expect(wrapper.find('.sprk-c-Dropdown__link').length).toBe(2);
 });
 
-it('should run the choiceFunction supplied with the list of choices (base)', () => {
+it('SprkMastheadSelector: Should run the choiceFunction supplied with the list of choices (base)', () => {
   const spyFunc = jest.fn();
   const choices = {
     choiceFunction: spyFunc,
@@ -166,7 +166,7 @@ it('should run the choiceFunction supplied with the list of choices (base)', () 
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
-it('should run the choiceFunction supplied with the list of choices (informational)', () => {
+it('SprkMastheadSelector: Should run the choiceFunction supplied with the list of choices (informational)', () => {
   const spyFunc = jest.fn();
   const choices = {
     choiceFunction: spyFunc,
@@ -183,7 +183,7 @@ it('should run the choiceFunction supplied with the list of choices (information
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
-it('should not error if the choiceFunction is supplied, but undefined with the list of choices (base)', () => {
+it('SprkMastheadSelector: Should not error if the choiceFunction is supplied, but undefined with the list of choices (base)', () => {
   const choices = {
     choiceFunction: undefined,
     items: [
@@ -199,7 +199,7 @@ it('should not error if the choiceFunction is supplied, but undefined with the l
     .simulate('click');
 });
 
-it('should not error if the choiceFunction is supplied, but undefined with the list of choices (informational)', () => {
+it('SprkMastheadSelector: Should not error if the choiceFunction is supplied, but undefined with the list of choices (informational)', () => {
   const choices = {
     choiceFunction: undefined,
     items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
@@ -214,7 +214,7 @@ it('should not error if the choiceFunction is supplied, but undefined with the l
     .simulate('click');
 });
 
-it('should close the dropdown on click outside', () => {
+it('SprkMastheadSelector: Should close the dropdown on click outside', () => {
   const choices = {
     items: [{ text: 'Item 1', value: 'item-1' }],
   };
@@ -228,7 +228,7 @@ it('should close the dropdown on click outside', () => {
   expect(wrapper.state().isOpen).toBe(false);
 });
 
-it('should close the dropdown on keydown (Escape)', () => {
+it('SprkMastheadSelector: Should close the dropdown on keydown (Escape)', () => {
   const choices = {
     items: [{ text: 'Item 1', value: 'item-1' }],
   };
@@ -242,7 +242,7 @@ it('should close the dropdown on keydown (Escape)', () => {
   expect(wrapper.state().isOpen).toBe(false);
 });
 
-it('should unmount without error', () => {
+it('SprkMastheadSelector: Should unmount without error', () => {
   const choices = {
     items: [
       { text: 'Item 1', value: 'item-1' },
@@ -255,7 +255,7 @@ it('should unmount without error', () => {
   expect(wrapper.find('.sprk-b-Link').length).toBe(0);
 });
 
-it('should render the choices with the element specified', () => {
+it('SprkMastheadSelector: Should render the choices with the element specified', () => {
   const wrapper = mount(
     <SprkMastheadSelector
       choices={{ items: [{ element: 'span', text: 'Item 1' }] }}
@@ -266,7 +266,7 @@ it('should render the choices with the element specified', () => {
   expect(wrapper.find('span.sprk-c-Dropdown__link').length).toBe(1);
 });
 
-it('should pass unused keys on choice items through to the dom', () => {
+it('SprkMastheadSelector: Should pass unused keys on choice items through to the dom', () => {
   const wrapper = mount(
     <SprkMastheadSelector
       choices={{

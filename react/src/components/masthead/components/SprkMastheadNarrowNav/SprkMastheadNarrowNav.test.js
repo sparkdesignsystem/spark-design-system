@@ -7,19 +7,19 @@ import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('shouldnt render anything by default', () => {
+it('SprkMastheadNarrowNav: Shouldnt render anything by default', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(<SprkMastheadNarrowNav links={links} />);
   expect(wrapper.children.length).toBe(1);
 });
 
-it('should render the nav if isOpen is true', () => {
+it('SprkMastheadNarrowNav: Should render the nav if isOpen is true', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(<SprkMastheadNarrowNav isOpen links={links} />);
   expect(wrapper.find('.sprk-c-Masthead__narrow-nav').length).toBe(1);
 });
 
-it('should render the selector if selector (and items) are defined', () => {
+it('SprkMastheadNarrowNav: Should render the selector if selector (and items) are defined', () => {
   const links = [{ text: 'Item 1' }];
   const wrapper = mount(
     <SprkMastheadNarrowNav

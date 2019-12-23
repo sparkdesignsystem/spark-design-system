@@ -6,17 +6,17 @@ import SprkMastheadAccordionItem from './SprkMastheadAccordionItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display one element with the correct base class', () => {
+it('SprkMastheadAccordionItem: Should display one element with the correct base class', () => {
   const wrapper = mount(<SprkMastheadAccordionItem />);
   expect(wrapper.find('.sprk-c-MastheadAccordion__item').length).toBe(1);
 });
 
-it('should default to open if defaultOpen is true', () => {
+it('SprkMastheadAccordionItem: Should default to open if defaultOpen is true', () => {
   const wrapper = shallow(<SprkMastheadAccordionItem defaultOpen />);
   expect(wrapper.state().isOpen).toBe(true);
 });
 
-it('should toggle the accordion open on click', () => {
+it('SprkMastheadAccordionItem: Should toggle the accordion open on click', () => {
   const wrapper = mount(
     <SprkMastheadAccordionItem
       text="Item 1"
@@ -30,12 +30,12 @@ it('should toggle the accordion open on click', () => {
   expect(wrapper.state().isOpen).toBe(false);
 });
 
-it('should render the supplied element', () => {
+it('SprkMastheadAccordionItem: Should render the supplied element', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="p" />);
   expect(wrapper.find('p.sprk-c-MastheadAccordion__summary').length).toBe(1);
 });
 
-it('should render the supplied href', () => {
+it('SprkMastheadAccordionItem: Should render the supplied href', () => {
   const wrapper = mount(
     <SprkMastheadAccordionItem
       subNavLinks={[
@@ -51,7 +51,7 @@ it('should render the supplied href', () => {
   ).toBe('https://www.google.com');
 });
 
-it('should render the supplied href as #nogo if not supplied', () => {
+it('SprkMastheadAccordionItem: Should render the supplied href as #nogo if not supplied', () => {
   const wrapper = mount(
     <SprkMastheadAccordionItem
       subNavLinks={[{ text: 'Item 1', element: 'a' }]}
@@ -65,7 +65,7 @@ it('should render the supplied href as #nogo if not supplied', () => {
   ).toBe('#nogo');
 });
 
-it('should not render href if element supplied is not a (subnav)', () => {
+it('SprkMastheadAccordionItem: Should not render href if element supplied is not a (subnav)', () => {
   const wrapper = mount(
     <SprkMastheadAccordionItem
       subNavLinks={[{ text: 'Item 1', element: 'span' }]}
@@ -79,7 +79,7 @@ it('should not render href if element supplied is not a (subnav)', () => {
   ).toBe(null);
 });
 
-it('should not render href if element supplied is not a', () => {
+it('SprkMastheadAccordionItem: Should not render href if element supplied is not a', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="span" />);
   expect(
     wrapper
@@ -89,7 +89,7 @@ it('should not render href if element supplied is not a', () => {
   ).toBe(null);
 });
 
-it('should render href as #nogo if element supplied is a and href is not supplied', () => {
+it('SprkMastheadAccordionItem: Should render href as #nogo if element supplied is a and href is not supplied', () => {
   const wrapper = mount(<SprkMastheadAccordionItem element="a" />);
   expect(
     wrapper
@@ -99,7 +99,7 @@ it('should render href as #nogo if element supplied is a and href is not supplie
   ).toBe('#nogo');
 });
 
-it('should render href as supplied value', () => {
+it('SprkMastheadAccordionItem: Should render href as supplied value', () => {
   const wrapper = mount(
     <SprkMastheadAccordionItem element="a" href="https://www.google.com" />,
   );
@@ -111,7 +111,7 @@ it('should render href as supplied value', () => {
   ).toBe('https://www.google.com');
 });
 
-it('should add a class if isActive is true', () => {
+it('SprkMastheadAccordionItem: Should add a class if isActive is true', () => {
   const wrapper = mount(<SprkMastheadAccordionItem isActive />);
   expect(
     wrapper.find(
@@ -120,7 +120,7 @@ it('should add a class if isActive is true', () => {
   ).toBe(1);
 });
 
-it('should render as add classes if isButton is true', () => {
+it('SprkMastheadAccordionItem: Should render as add classes if isButton is true', () => {
   const wrapper = mount(<SprkMastheadAccordionItem isButton />);
   expect(
     wrapper.find('.sprk-c-MastheadAccordion__item.sprk-o-Box').length,
@@ -128,14 +128,14 @@ it('should render as add classes if isButton is true', () => {
   expect(wrapper.find('span.sprk-c-MastheadAccordion__heading').length).toBe(0);
 });
 
-it('should render the right icon if leadingIcon has value', () => {
+it('SprkMastheadAccordionItem: Should render the right icon if leadingIcon has value', () => {
   const wrapper = mount(<SprkMastheadAccordionItem leadingIcon="settings" />);
   expect(wrapper.find('.sprk-c-Icon > use[xlinkHref="#settings"]').length).toBe(
     1,
   );
 });
 
-it('should add aria-expanded="true" when the item is open', () => {
+it('SprkMastheadAccordionItem: Should add aria-expanded="true" when the item is open', () => {
   const wrapper = mount(
     <SprkMastheadAccordionItem
       text="Item 1"
