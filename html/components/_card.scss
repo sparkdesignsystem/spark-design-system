@@ -17,7 +17,6 @@
 }
 
 /// Use on cards that you would like to standout from the rest.
-/// @name .sprk-c-Card--standout
 .sprk-c-Card--standout {
   box-shadow: $sprk-card-shadow-standout;
 
@@ -82,6 +81,9 @@
   }
 }
 
+/// Sets `max-width` to 100%, allowing card to fill
+/// the entire width of it's container. Best used
+/// with base cards.
 .sprk-c-Card--full {
   max-width: 100%;
 }
