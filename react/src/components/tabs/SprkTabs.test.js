@@ -8,7 +8,7 @@ import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkTabs Component', () => {
+describe('SprkTabs:', () => {
   it('should display a Tab element with the correct base class', () => {
     const wrapper = mount(
       <SprkTabs>

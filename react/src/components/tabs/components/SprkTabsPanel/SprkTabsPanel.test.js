@@ -7,7 +7,7 @@ import SprkTabsPanel from './SprkTabsPanel';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkTabs Component', () => {
+describe('SprkTabsPanel:', () => {
   it('should display a Tab Panel element with the correct base class', () => {
     const wrapper = shallow(<SprkTabsPanel tabBtnChildren="Tab 1">Test Content 1</SprkTabsPanel>);
     expect(wrapper.find('.sprk-c-Tabs__content').length).toBe(1);
