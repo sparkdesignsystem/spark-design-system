@@ -61,6 +61,7 @@ const ColorSwatchGrid = ({ color }) => (
             name={formattedName}
             hexValue={hexValue}
             rgbValue={value}
+            key={name}
             sassVar={`$${name}`}
             description={description}
           />
