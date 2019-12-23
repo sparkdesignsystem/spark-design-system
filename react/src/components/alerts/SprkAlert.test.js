@@ -2,33 +2,33 @@
 import React from 'react';
 import SprkAlert from './SprkAlert';
 
-it('should display a div element with the correct base class', () => {
+it('SprkAlert: Should display a div element with the correct base class', () => {
   const wrapper = shallow(<SprkAlert message="test" isVisible />);
   expect(wrapper.find('div.sprk-c-Alert').length).toBe(1);
 });
 
-it('should display a div element with correct classes when variant is info', () => {
+it('SprkAlert: Should display a div element with correct classes when variant is info', () => {
   const wrapper = shallow(<SprkAlert variant="info" message="test" isVisible />);
   expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--info')).toBe(true);
 });
 
-it('should display a div element with correct classes when variant is success', () => {
+it('SprkAlert: Should display a div element with correct classes when variant is success', () => {
   const wrapper = shallow(<SprkAlert variant="success" message="test" isVisible />);
   expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--success')).toBe(true);
 });
 
-it('should display a div element with correct classes when variant is fail', () => {
+it('SprkAlert: Should display a div element with correct classes when variant is fail', () => {
   const wrapper = shallow(<SprkAlert variant="fail" message="test" isVisible />);
   expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--fail')).toBe(true);
 });
 
-it('should hide the dismiss button when isDismissible is set to false', () => {
+it('SprkAlert: Should hide the dismiss button when isDismissible is set to false', () => {
   const wrapper = shallow(<SprkAlert isDismissible={false} message="test" isVisible />);
   expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert')).toBe(true);
   expect(wrapper.find('button.sprk-c-Alert__icon.sprk-c-Alert__icon--dismiss').length).toBe(0);
 });
 
-it('should run onDismiss when the dismiss button is clicked', () => {
+it('SprkAlert: Should run onDismiss when the dismiss button is clicked', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(<SprkAlert message="test" isVisible onDismiss={spyFunc} />);
   wrapper
@@ -37,7 +37,7 @@ it('should run onDismiss when the dismiss button is clicked', () => {
   expect(spyFunc.mock.calls.length).toBe(1);
 });
 
-it('should not run onDismiss when the dismiss button is clicked and onDismiss is empty', () => {
+it('SprkAlert: Should not run onDismiss when the dismiss button is clicked and onDismiss is empty', () => {
   const spyFunc = jest.fn();
   const wrapper = mount(<SprkAlert message="test" isVisible />);
   wrapper
@@ -46,12 +46,12 @@ it('should not run onDismiss when the dismiss button is clicked and onDismiss is
   expect(spyFunc.mock.calls.length).toBe(0);
 });
 
-it('should not render the alert is isVisible is false', () => {
+it('SprkAlert: Should not render the alert is isVisible is false', () => {
   const wrapper = shallow(<SprkAlert message="test" />);
   expect(wrapper.find('div.sprk-c-Alert').length).toBe(0);
 });
 
-it('should display custom success icon when iconNameSuccess has value', () => {
+it('SprkAlert: Should display custom success icon when iconNameSuccess has value', () => {
   const wrapper = mount(
     <SprkAlert
       variant="success"
@@ -68,7 +68,7 @@ it('should display custom success icon when iconNameSuccess has value', () => {
   ).toBe('#facebook');
 });
 
-it('should display custom dismiss icon when iconNameDismiss has value', () => {
+it('SprkAlert: Should display custom dismiss icon when iconNameDismiss has value', () => {
   const wrapper = mount(
     <SprkAlert
       variant="success"
@@ -85,7 +85,7 @@ it('should display custom dismiss icon when iconNameDismiss has value', () => {
   ).toBe('#instagram');
 });
 
-it('should display custom alert icon when iconNameInfo has value', () => {
+it('SprkAlert: Should display custom alert icon when iconNameInfo has value', () => {
   const wrapper = mount(
     <SprkAlert
       variant="info"
@@ -102,7 +102,7 @@ it('should display custom alert icon when iconNameInfo has value', () => {
   ).toBe('#twitter');
 });
 
-it('should display custom alert icon when iconNameFail has value', () => {
+it('SprkAlert: Should display custom alert icon when iconNameFail has value', () => {
   const wrapper = mount(
     <SprkAlert variant="fail" message="test" isVisible iconNameFail="camera" />,
   );
