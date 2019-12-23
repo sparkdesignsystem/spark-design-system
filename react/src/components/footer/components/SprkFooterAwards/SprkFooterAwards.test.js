@@ -7,7 +7,7 @@ import SprkFooterAwards from './SprkFooterAwards';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkFooterAwards Component', () => {
-  it('should display the awards', () => {
+  it('SprkFooterAwards: Should display the awards', () => {
     const awards = {
       heading: 'Awards Heading Title',
       images: [
@@ -33,7 +33,7 @@ describe('SprkFooterAwards Component', () => {
     expect(wrapper.find('img').length).toBe(2);
   });
 
-  it('should render a tags for the image link element', () => {
+  it('SprkFooterAwards: Should render a tags for the image link element', () => {
     const awards = {
       heading: 'Awards Heading Title',
       images: [
@@ -61,7 +61,7 @@ describe('SprkFooterAwards Component', () => {
     expect(wrapper.find('a').length).toBe(3);
   });
 
-  it('should render the href as nogo if not defined', () => {
+  it('SprkFooterAwards: Should render the href as nogo if not defined', () => {
     const awards = {
       heading: 'Awards Heading Title',
       images: [
@@ -92,7 +92,7 @@ describe('SprkFooterAwards Component', () => {
     ).toBe('#nogo');
   });
 
-  it('should not render the href if element us not an a', () => {
+  it('SprkFooterAwards: Should not render the href if element us not an a', () => {
     const awards = {
       heading: 'Awards Heading Title',
       images: [

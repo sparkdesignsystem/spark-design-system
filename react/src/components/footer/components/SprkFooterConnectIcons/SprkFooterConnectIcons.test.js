@@ -8,7 +8,7 @@ import SprkIcon from '../../../icons/SprkIcon';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkFooterConnectIcons Component', () => {
-  it('should display the connect icons', () => {
+  it('SprkFooterConnectIcons: Should display the connect icons', () => {
     const connectIcons = {
       heading: 'Connect With Us',
       icons: [
@@ -39,7 +39,7 @@ describe('SprkFooterConnectIcons Component', () => {
     expect(wrapper.find(SprkIcon).length).toBe(4);
   });
 
-  it('should render the href as nogo if not defined', () => {
+  it('SprkFooterConnectIcons: Should render the href as nogo if not defined', () => {
     const connectIcons = {
       heading: 'Connect With Us',
       icons: [
@@ -76,7 +76,7 @@ describe('SprkFooterConnectIcons Component', () => {
     ).toBe('#nogo');
   });
 
-  it('should not render the href if element is not an a', () => {
+  it('SprkFooterConnectIcons: Should not render the href if element is not an a', () => {
     const connectIcons = {
       heading: 'Connect With Us',
       icons: [

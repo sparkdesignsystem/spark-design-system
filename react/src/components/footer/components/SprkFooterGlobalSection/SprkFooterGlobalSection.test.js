@@ -8,7 +8,7 @@ import SprkIcon from '../../../icons/SprkIcon';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkFooterGlobalSection Component', () => {
-  it('should display the global items', () => {
+  it('SprkFooterGlobalSection: Should display the global items', () => {
     const globalItems = {
       heading: 'Global Links',
       items: [
@@ -30,7 +30,7 @@ describe('SprkFooterGlobalSection Component', () => {
     expect(wrapper.find('div.sprk-o-Stack__item.sprk-o-Stack.sprk-o-Stack--medium').length).toBe(2);
   });
 
-  it('should render a SprkIcon if mediaType is SprkIcon', () => {
+  it('SprkFooterGlobalSection: Should render a SprkIcon if mediaType is SprkIcon', () => {
     const globalItems = {
       heading: 'Global Links',
       items: [
@@ -52,7 +52,7 @@ describe('SprkFooterGlobalSection Component', () => {
     expect(wrapper.find(SprkIcon).length).toBe(1);
   });
 
-  it('should render svg if mediaType is svg', () => {
+  it('SprkFooterGlobalSection: Should render svg if mediaType is svg', () => {
     const globalItems = {
       heading: 'Global Links',
       items: [
@@ -115,7 +115,7 @@ describe('SprkFooterGlobalSection Component', () => {
     expect(wrapper.find('svg').length).toBe(1);
   });
 
-  it('should render the href as nogo if not defined', () => {
+  it('SprkFooterGlobalSection: Should render the href as nogo if not defined', () => {
     const globalItems = {
       heading: 'Global Links',
       items: [
@@ -144,7 +144,7 @@ describe('SprkFooterGlobalSection Component', () => {
     ).toBe('#nogo');
   });
 
-  it('should not render the href if element is not an a', () => {
+  it('SprkFooterGlobalSection: Should not render the href if element is not an a', () => {
     const globalItems = {
       heading: 'Global Links',
       items: [
