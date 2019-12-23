@@ -6,12 +6,12 @@ import SprkIcon from '../../../components/icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should render an element with the correct class', () => {
+it('SprkTextInput: Should render an element with the correct class', () => {
   const wrapper = mount(<SprkTextInput />);
   expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
 });
 
-it('should render a huge text input with the correct class', () => {
+it('SprkTextInput: Should render a huge text input with the correct class', () => {
   const wrapper = mount(<SprkTextInput type="hugeTextInput" />);
   expect(
     wrapper
@@ -20,7 +20,7 @@ it('should render a huge text input with the correct class', () => {
   ).toBe(true);
 });
 
-it('should add floating label class to huge input when a value is present and blurred out', () => {
+it('SprkTextInput: Should add floating label class to huge input when a value is present and blurred out', () => {
   const wrapper = mount(<SprkTextInput type="hugeTextInput" />);
   const input = wrapper.find('input');
   input.value = 'foo';
@@ -35,7 +35,7 @@ it('should add floating label class to huge input when a value is present and bl
   ).toBe(true);
 });
 
-it('should remove/not have floating label class to huge input when a value is not present and blurred out', () => {
+it('SprkTextInput: Should remove/not have floating label class to huge input when a value is not present and blurred out', () => {
   const wrapper = mount(<SprkTextInput type="hugeTextInput" />);
   const input = wrapper.find('input');
 
@@ -48,7 +48,7 @@ it('should remove/not have floating label class to huge input when a value is no
   ).toBe(false);
 });
 
-it('should add floating label class to huge text when there is value', () => {
+it('SprkTextInput: Should add floating label class to huge text when there is value', () => {
   const wrapper = mount(
     <SprkTextInput
       value="value present"
@@ -63,7 +63,7 @@ it('should add floating label class to huge text when there is value', () => {
   ).toBe(true);
 });
 
-it('should add floating label class to huge text when there is defaultValue', () => {
+it('SprkTextInput: Should add floating label class to huge text when there is defaultValue', () => {
   const wrapper = mount(
     <SprkTextInput
       defaultValue="default Value"
@@ -77,32 +77,32 @@ it('should add floating label class to huge text when there is defaultValue', ()
   ).toBe(true);
 });
 
-it('should add classes when additionalClasses has a value', () => {
+it('SprkTextInput: Should add classes when additionalClasses has a value', () => {
   const wrapper = mount(<SprkTextInput additionalClasses="sprk-u-man" />);
   expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
 });
 
-it('should assign data-analytics when analyticsString has a value', () => {
+it('SprkTextInput: Should assign data-analytics when analyticsString has a value', () => {
   const wrapper = mount(<SprkTextInput analyticsString="321" />);
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
-it('should assign data-id when idString has a value', () => {
+it('SprkTextInput: Should assign data-id when idString has a value', () => {
   const wrapper = mount(<SprkTextInput idString="321" />);
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
-it('should render an icon if leadingIcon is supplied', () => {
+it('SprkTextInput: Should render an icon if leadingIcon is supplied', () => {
   const wrapper = mount(<SprkTextInput leadingIcon="calendar" />);
   expect(wrapper.find(SprkIcon).length).toBe(1);
 });
 
-it('should render a textarea is type is set to textarea', () => {
+it('SprkTextInput: Should render a textarea is type is set to textarea', () => {
   const wrapper = mount(<SprkTextInput type="textarea" />);
   expect(wrapper.find('textarea.sprk-b-TextArea').length).toBe(1);
 });
 
-it('should run the supplied formatter', () => {
+it('SprkTextInput: Should run the supplied formatter', () => {
   const formatter = jest.fn(() => true);
   const onChangeMock = jest.fn();
   mount(
@@ -111,13 +111,13 @@ it('should run the supplied formatter', () => {
   expect(formatter.mock.calls.length).toBe(2);
 });
 
-it('should not run the formatter if the field is invalid', () => {
+it('SprkTextInput: Should not run the formatter if the field is invalid', () => {
   const formatter = jest.fn();
   mount(<SprkTextInput type="text" formatter={formatter} valid={false} />);
   expect(formatter.mock.calls.length).toBe(0);
 });
 
-it('should run the supplied formatter (textarea)', () => {
+it('SprkTextInput: Should run the supplied formatter (textarea)', () => {
   const formatter = jest.fn(() => true);
   const onChangeMock = jest.fn();
   mount(
@@ -130,18 +130,18 @@ it('should run the supplied formatter (textarea)', () => {
   expect(formatter.mock.calls.length).toBe(2);
 });
 
-it('should not run the formatter if the field is invalid (textarea)', () => {
+it('SprkTextInput: Should not run the formatter if the field is invalid (textarea)', () => {
   const formatter = jest.fn();
   mount(<SprkTextInput type="textarea" formatter={formatter} valid={false} />);
   expect(formatter.mock.calls.length).toBe(0);
 });
 
-it('should render helper text if supplied', () => {
+it('SprkTextInput: Should render helper text if supplied', () => {
   const wrapper = mount(<SprkTextInput helperText="sample helper text" />);
   expect(wrapper.find('.sprk-b-HelperText').length).toBe(1);
 });
 
-it('should not render helper text if not supplied', () => {
+it('SprkTextInput: Should not render helper text if not supplied', () => {
   const wrapper = mount(<SprkTextInput helperText="" />);
   expect(wrapper.find('.sprk-b-HelperText').length).toBe(0);
 });

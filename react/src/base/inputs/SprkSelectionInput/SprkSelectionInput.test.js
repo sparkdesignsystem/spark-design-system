@@ -13,14 +13,14 @@ beforeEach(() => {
   ];
 });
 
-it('should render an element with the correct class', () => {
+it('SprkSelectionInput: Should render an element with the correct class', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} variant="checkbox" />,
   );
   expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
 });
 
-it('should add huge input class to container if variant is hugeSelect', () => {
+it('SprkSelectionInput: Should add huge input class to container if variant is hugeSelect', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -36,7 +36,7 @@ it('should add huge input class to container if variant is hugeSelect', () => {
   ).toBe(true);
 });
 
-it('should add floating label to huge select if it has a default value', () => {
+it('SprkSelectionInput: Should add floating label to huge select if it has a default value', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -52,7 +52,7 @@ it('should add floating label to huge select if it has a default value', () => {
   ).toBe(true);
 });
 
-it('should add floating label to huge select if it has a value on change', () => {
+it('SprkSelectionInput: Should add floating label to huge select if it has a value on change', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -68,7 +68,7 @@ it('should add floating label to huge select if it has a value on change', () =>
   ).toBe(true);
 });
 
-it('should not add floating label to regular select if it has a value on change', () => {
+it('SprkSelectionInput: Should not add floating label to regular select if it has a value on change', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} variant="select" defaultValue="" />,
   );
@@ -80,7 +80,7 @@ it('should not add floating label to regular select if it has a value on change'
   ).toBe(false);
 });
 
-it('should not add floating label to huge select if has no value on load', () => {
+it('SprkSelectionInput: Should not add floating label to huge select if has no value on load', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} variant="select" defaultValue="" />,
   );
@@ -90,7 +90,7 @@ it('should not add floating label to huge select if has no value on load', () =>
   ).toBe(false);
 });
 
-it('should run the supplied onChange function for checkboxes', () => {
+it('SprkSelectionInput: Should run the supplied onChange function for checkboxes', () => {
   const onCheckboxChangeMock = jest.fn();
   const wrapper = mount(
     <SprkSelectionInput
@@ -110,7 +110,7 @@ it('should run the supplied onChange function for checkboxes', () => {
   expect(onCheckboxChangeMock.mock.calls.length).toBe(1);
 });
 
-it('should run the supplied onChange function for selects', () => {
+it('SprkSelectionInput: Should run the supplied onChange function for selects', () => {
   const onChangeMock = jest.fn();
   const wrapper = mount(
     <SprkSelectionInput
@@ -125,7 +125,7 @@ it('should run the supplied onChange function for selects', () => {
   expect(onChangeMock.mock.calls.length).toBe(1);
 });
 
-it('should run the supplied onChange function for huge selects', () => {
+it('SprkSelectionInput: Should run the supplied onChange function for huge selects', () => {
   const onChangeMock = jest.fn();
   const wrapper = mount(
     <SprkSelectionInput
@@ -141,7 +141,7 @@ it('should run the supplied onChange function for huge selects', () => {
   expect(onChangeMock.mock.calls.length).toBe(1);
 });
 
-it('should update state if huge select has a value', () => {
+it('SprkSelectionInput: Should update state if huge select has a value', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -152,7 +152,7 @@ it('should update state if huge select has a value', () => {
   expect(wrapper.state().selectHugeHasValue).toBe(true);
 });
 
-it('should not update state if huge select does not have a value', () => {
+it('SprkSelectionInput: Should not update state if huge select does not have a value', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -163,7 +163,7 @@ it('should not update state if huge select does not have a value', () => {
   expect(wrapper.state().selectHugeHasValue).toBe(undefined);
 });
 
-it('should add classes when additionalClasses has a value to radios', () => {
+it('SprkSelectionInput: Should add classes when additionalClasses has a value to radios', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -174,7 +174,7 @@ it('should add classes when additionalClasses has a value to radios', () => {
   expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
 });
 
-it('should add classes when additionalClasses has a value to selects', () => {
+it('SprkSelectionInput: Should add classes when additionalClasses has a value to selects', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -185,7 +185,7 @@ it('should add classes when additionalClasses has a value to selects', () => {
   expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
 });
 
-it('should assign data-analytics when analyticsString has a value', () => {
+it('SprkSelectionInput: Should assign data-analytics when analyticsString has a value', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -196,21 +196,21 @@ it('should assign data-analytics when analyticsString has a value', () => {
   expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
 });
 
-it('should assign data-id when idString has a value to checkboxes', () => {
+it('SprkSelectionInput: Should assign data-id when idString has a value to checkboxes', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} idString="321" variant="checkbox" />,
   );
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
-it('should assign data-id when idString has a value to selects', () => {
+it('SprkSelectionInput: Should assign data-id when idString has a value to selects', () => {
   const wrapper = mount(
     <SprkSelectionInput choices={choices} idString="321" variant="select" />,
   );
   expect(wrapper.find('[data-id="321"]').length).toBe(1);
 });
 
-it('should render helper text when supplied', () => {
+it('SprkSelectionInput: Should render helper text when supplied', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -222,7 +222,7 @@ it('should render helper text when supplied', () => {
   expect(wrapper.find('.sprk-b-HelperText').text()).toBe('Sample helper text.');
 });
 
-it('should not render helper text when not supplied', () => {
+it('SprkSelectionInput: Should not render helper text when not supplied', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -234,7 +234,7 @@ it('should not render helper text when not supplied', () => {
   expect(wrapper.find('.sprk-b-HelperText').length).toBe(0);
 });
 
-it('should render the input in an error state when valid is false', () => {
+it('SprkSelectionInput: Should render the input in an error state when valid is false', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -247,7 +247,7 @@ it('should render the input in an error state when valid is false', () => {
   expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
 });
 
-it('should render the select in an error state when valid is false', () => {
+it('SprkSelectionInput: Should render the select in an error state when valid is false', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -261,7 +261,7 @@ it('should render the select in an error state when valid is false', () => {
   expect(wrapper.find('.sprk-b-ErrorContainer').text()).toBe('error message');
 });
 
-it('should make select disabled when disabled is set', () => {
+it('SprkSelectionInput: Should make select disabled when disabled is set', () => {
   const wrapper = mount(
     <SprkSelectionInput
       choices={choices}
@@ -285,7 +285,7 @@ it('should make select disabled when disabled is set', () => {
   ).toBe(true);
 });
 
-it('should render grouped options if supplied', () => {
+it('SprkSelectionInput: Should render grouped options if supplied', () => {
   choices.push({
     label: 'Grouped Options',
     options: [
