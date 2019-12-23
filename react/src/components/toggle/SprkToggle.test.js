@@ -6,7 +6,7 @@ import SprkToggle from './SprkToggle';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display one element with the correct additional classes', () => {
+it('SprkToggle: Should display one element with the correct additional classes', () => {
   const wrapper = mount(
     <SprkToggle title="Toggle title" additionalClasses="sprk-o-Stack">
       Body text
@@ -15,7 +15,7 @@ it('should display one element with the correct additional classes', () => {
   expect(wrapper.find('div.sprk-o-Stack').length).toBe(1);
 });
 
-it('should default to open if defaultOpen is true', () => {
+it('SprkToggle: Should default to open if defaultOpen is true', () => {
   const wrapper = shallow(
     <SprkToggle isDefaultOpen title="Toggle title">
       Body text
@@ -24,7 +24,7 @@ it('should default to open if defaultOpen is true', () => {
   expect(wrapper.state().isOpen).toBe(true);
 });
 
-it('should toggle open on click', () => {
+it('SprkToggle: Should toggle open on click', () => {
   const wrapper = mount(
     <SprkToggle title="Toggle title">Body text</SprkToggle>,
   );
@@ -35,7 +35,7 @@ it('should toggle open on click', () => {
   expect(wrapper.state().isOpen).toBe(false);
 });
 
-it('should add a class to icon when opened', () => {
+it('SprkToggle: Should add a class to icon when opened', () => {
   const wrapper = mount(
     <SprkToggle title="Toggle title">Body text</SprkToggle>,
   );
@@ -43,7 +43,7 @@ it('should add a class to icon when opened', () => {
   expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
 });
 
-it('should add aria-expanded="true" when the toggle is open', () => {
+it('SprkToggle: Should add aria-expanded="true" when the toggle is open', () => {
   const wrapper = mount(
     <SprkToggle title="Toggle title">Body text</SprkToggle>,
   );
