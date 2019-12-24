@@ -75,3 +75,15 @@ export const fullWidthAtExtraSmallViewport = () => (
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
 };
+
+export const asALinkElement = () => (
+  `
+    <a
+      class="sprk-c-Button"
+      href="https://www.sparkdesignsystem.com"
+      data-id="button-link-element"
+    >
+      Button
+    </a>
+  `
+);
