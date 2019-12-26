@@ -7,7 +7,7 @@ import SprkIcon from '../../../icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkFooterGlobalSection Component', () => {
+describe('SprkFooterGlobalSection:', () => {
   it('should display the global items', () => {
     const globalItems = {
       heading: 'Global Links',

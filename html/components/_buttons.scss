@@ -47,7 +47,7 @@
 
 
 /// Reduces the padding of the normal button
-/// to $space-inset-short-m
+/// to $space-inset-short-m.
 .sprk-c-Button--compact {
   padding: $sprk-space-inset-short-m;
 }
@@ -63,6 +63,9 @@
   }
 }
 
+/// Makes the button full width of its parent container until it flips
+/// to normal width at the $sprk-btn-breakpoint-s breakpoint.
+/// @name .sprk-c-Button--full@s
 .sprk-c-Button--full\@sm,
 .sprk-c-Button--full\@s {
   width: 100%;
@@ -72,6 +75,7 @@
   }
 }
 
+/// Styles the button as the secondary variant.
 .sprk-c-Button--secondary {
   background-color: $sprk-btn-secondary-background-color;
   border: $sprk-btn-border-width $sprk-btn-border-style
@@ -94,6 +98,7 @@
   }
 }
 
+/// Styles the button as the tertiary variant.
 .sprk-c-Button--tertiary {
   background-color: $sprk-btn-tertiary-background-color;
   box-shadow: none;

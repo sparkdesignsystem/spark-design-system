@@ -8,7 +8,7 @@ import SprkTabsButton from './SprkTabsButton';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkTabs Component', () => {
+describe('SprkTabsButton:', () => {
   it('should display a Tab Button element with the correct base class', () => {
     const wrapper = shallow(<SprkTabsButton tabBtnChildren="Tab 1" tabBtnId="tab-22">Test Content 1</SprkTabsButton>);
     expect(wrapper.find('.sprk-c-Tabs__button').length).toBe(1);

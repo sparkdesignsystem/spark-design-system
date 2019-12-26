@@ -7,7 +7,7 @@ import SprkIcon from '../../../icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkFooterConnectIcons Component', () => {
+describe('SprkFooterConnectIcons:', () => {
   it('should display the connect icons', () => {
     const connectIcons = {
       heading: 'Connect With Us',

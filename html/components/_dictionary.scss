@@ -2,6 +2,10 @@
 // Dictionary
 // ==================================================================
 
+////
+/// @group dictionary
+////
+
 .sprk-c-Dictionary {
   border: $sprk-dictionary-border;
 }
@@ -22,6 +26,10 @@
   line-height: $sprk-dictionary-label-line-height;
   font-weight: $sprk-dictionary-label-font-weight;
 }
+
+/// Adds a background color to every
+/// even-numbered row in the dictionary.
+/// @name .sprk-c-Dictionary--striped
 
 // prettier-ignore
 .sprk-c-Dictionary--striped .sprk-c-Dictionary__keyvaluepair:nth-child(even) {

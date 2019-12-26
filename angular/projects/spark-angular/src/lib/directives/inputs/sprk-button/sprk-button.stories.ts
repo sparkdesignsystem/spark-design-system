@@ -32,7 +32,7 @@ export const primary = () => ({
       data-id="button-primary"
       sprkButton
     >
-      Buttons
+      Button
     </button>
   `,
 });

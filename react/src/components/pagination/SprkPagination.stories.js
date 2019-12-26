@@ -27,15 +27,6 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const long = () => (
-  <SprkPagination
-    currentPage={1}
-    totalItems={100}
-    itemsPerPage={5}
-    onChangeCallback={() => {}}
-  />
-);
-
 export const pager = () => (
   <SprkPagination
     variant="pager"

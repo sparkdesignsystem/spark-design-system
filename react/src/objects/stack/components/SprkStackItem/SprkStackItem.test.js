@@ -5,7 +5,9 @@ import SprkStackItem from './SprkStackItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('should display a div element with the correct base class', () => {
-  const wrapper = shallow(<SprkStackItem />);
-  expect(wrapper.find('div.sprk-o-Stack__item').length).toBe(1);
+describe('SprkStackItem:', () => {
+  it('should display a div element with the correct base class', () => {
+    const wrapper = shallow(<SprkStackItem />);
+    expect(wrapper.find('div.sprk-o-Stack__item').length).toBe(1);
+  });
 });
