@@ -1,3 +1,7 @@
+////
+/// @group input
+////
+
 .sprk-b-Label {
   display: block;
   font-family: $sprk-label-font-family;
@@ -12,11 +16,13 @@
   color: $sprk-label-disabled-color;
 }
 
+/// Apply when a label is used without an input.
 .sprk-b-Label--no-input {
   padding: 0;
   transform: none;
 }
 
+/// Used for inline labels.
 .sprk-b-Label--inline {
   display: inline-block;
 }
