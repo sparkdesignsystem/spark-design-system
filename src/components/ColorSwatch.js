@@ -2,17 +2,12 @@ import React from 'react';
 import InlineCode from '../components/markdown-render/inlineCode';
 import lightTheme from "prism-react-renderer/themes/github";
 
-const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar }) => (
-  <div
-    className="
-      sprk-c-Card
-      sprk-o-Stack
-    "
-  >
+const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHeight }) => (
+  <div className="sprk-c-Card sprk-o-Stack">
     <div className="sprk-o-Stack__item">
       <div
         style={{
-          minHeight: '140px',
+          minHeight: swatchHeight || '140px',
           backgroundColor: rgbValue
         }}
         className="sprk-c-Card__media"></div>

@@ -69,13 +69,8 @@ const ColorSwatchGrid = ({ color }) => (
       });
 
       return (
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gridGap: '1rem'
-          }}>
-            {swatches}
+        <div className="docs-o-ColorSwatchGrid">
+          {swatches}
         </div>
       );
     }}
