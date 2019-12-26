@@ -38,7 +38,8 @@ const bindUIEvents = (dropdownTrigger) => {
     '[data-sprk-dropdown-choice]',
   );
 
-  dropdownTrigger.addEventListener('click', () => {
+  dropdownTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
     toggleDropDown(dropdownElement);
   });
 

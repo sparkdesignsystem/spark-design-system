@@ -217,7 +217,8 @@ const bindUIEvents = () => {
         });
       });
 
-      wideSelectorTriggerInDropdown.addEventListener('click', () => {
+      wideSelectorTriggerInDropdown.addEventListener('click', (e) => {
+        e.preventDefault();
         const dropdownIsOpen = wideSelectorDropdown.classList.contains(
           'sprk-c-Dropdown--open',
         );
