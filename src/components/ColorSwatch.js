@@ -1,6 +1,6 @@
 import React from 'react';
 import InlineCode from '../components/markdown-render/inlineCode';
-import lightTheme from "prism-react-renderer/themes/github";
+import theme from 'prism-react-renderer/themes/github';
 
 const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHeight }) => (
   <div className="sprk-c-Card sprk-o-Stack">
@@ -37,7 +37,7 @@ const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHei
 
             <InlineCode
               className="css"
-              theme={lightTheme}
+              theme={theme}
               additionalPreClasses="sprk-u-pas sprk-u-man sprk-o-Stack__item"
             >
               {hexValue}
@@ -52,7 +52,7 @@ const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHei
 
           <InlineCode
             className="css"
-            theme={lightTheme}
+            theme={theme}
             additionalPreClasses="sprk-u-pas sprk-u-man sprk-o-Stack__item"
           >
             {rgbValue}
@@ -66,7 +66,7 @@ const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHei
 
           <InlineCode
             className="css"
-            theme={lightTheme}
+            theme={theme}
             additionalPreClasses="sprk-u-pas sprk-u-man sprk-o-Stack__item"
           >
             {sassVar}
