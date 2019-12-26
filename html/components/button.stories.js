@@ -80,7 +80,7 @@ export const asALinkElement = () => (
   `
     <a
       class="sprk-c-Button"
-      href="https://www.sparkdesignsystem.com"
+      href="#nogo"
       data-id="button-link-element"
     >
       Button
