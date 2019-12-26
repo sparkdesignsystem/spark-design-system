@@ -2,25 +2,47 @@
   title: Color
 ---
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
-import colorsOnDark from '../../../images/colors-on-dark.jpg';
-import colorsOnLight from '../../../images/colors-on-light.jpg';
-import { SprkStack, SprkStackItem } from '@sparkdesignsystem/spark-react';
+import colorsOnDark from '../../../images/colors-on-dark.png';
+import colorsOnDark2x from '../../../images/colors-on-dark@2x.png';
+import colorsOnDark3x from '../../../images/colors-on-dark@3x.png';
+import colorsOnLight from '../../../images/colors-on-light.png';
+import colorsOnLight2x from '../../../images/colors-on-light@2x.png';
+import colorsOnLight3x from '../../../images/colors-on-light@3x.png';
+
+import {
+  SprkStack,
+  SprkStackItem
+} from '@sparkdesignsystem/spark-react';
+export const colorsLightSrcSet = `${colorsOnLight} 560w, ${colorsOnLight2x} 1120w, ${colorsOnLight3x} 1680w`;
+export const colorsDarkSrcSet = `${colorsOnDark} 560w, ${colorsOnDark2x} 1120w, ${colorsOnDark3x} 1680w`;
 
 # Color
 Having a consistent color palatte is one of the foundations of a unified user experience.
 These are the colors that have been chosen to represent the brand.
 
-<SprkStack splitAt="huge" itemSpacing="medium">
+<SprkStack
+  splitAt="huge"
+  itemSpacing="medium"
+  additionalClasses="sprk-u-mbl"
+>
   <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
     <img
+      srcset={colorsLightSrcSet}
       src={colorsOnLight}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
       alt="The brand colors on a light background."/>
   </SprkStackItem>
 
   <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
-    <img
-      src={colorsOnDark}
-      alt="The brand colors on a dark background."/>
+  <img
+    srcset={colorsDarkSrcSet}
+    src={colorsOnDark}
+    sizes="(min-width: 1120px) 1120px,
+          (min-width: 1680px) 1680px,
+          560px"
+    alt="The brand colors on a dark background."/>
   </SprkStackItem>
 </SprkStack>
 
