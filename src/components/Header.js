@@ -8,6 +8,7 @@ const Header = ({ menuVisible, setMenuVisible, context, setContext }) => (
   <header className="docs-header">
     <div className="docs-header__group">
       <button className="docs-header__menu-button" onClick={() => { setMenuVisible(!menuVisible); }}>
+        <span className="sprk-u-ScreenReaderText">Toggle Navigation</span>
         <SprkIcon iconName="menu"/>
       </button>
       <Link to="/" onClick={() => {setContext('homepage');}} className="docs-header__logo-container">

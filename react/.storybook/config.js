@@ -79,5 +79,4 @@ addParameters({
   },
 })
 
-
 configure(require.context('../src', true, /\.stories\.(js|ts|tsx|mdx)$/), module);

@@ -1,0 +1,115 @@
+---
+  title: Color
+---
+import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
+import colorsOnDark from '../../../images/colors-on-dark.png';
+import colorsOnDark2x from '../../../images/colors-on-dark@2x.png';
+import colorsOnDark3x from '../../../images/colors-on-dark@3x.png';
+import colorsOnLight from '../../../images/colors-on-light.png';
+import colorsOnLight2x from '../../../images/colors-on-light@2x.png';
+import colorsOnLight3x from '../../../images/colors-on-light@3x.png';
+
+import doNotMixColors from '../../../images/do-not-mix-colors.png';
+import doNotOveruseRed from '../../../images/do-not-overuse-red.png';
+import doNotUseAccentsLarge from '../../../images/do-not-use-accents-in-large-amounts.png';
+import doNotUseDarkBgsForText from '../../../images/do-not-use-dark-bgs-for-text.png';
+import doNotUseGradients from '../../../images/do-not-use-gradients.png';
+import doNotMakeTextIllegible from '../../../images/legibility.png';
+
+import {
+  SprkStack,
+  SprkStackItem
+} from '@sparkdesignsystem/spark-react';
+export const colorsLightSrcSet = `${colorsOnLight} 560w, ${colorsOnLight2x} 1120w, ${colorsOnLight3x} 1680w`;
+export const colorsDarkSrcSet = `${colorsOnDark} 560w, ${colorsOnDark2x} 1120w, ${colorsOnDark3x} 1680w`;
+
+# Color
+Having a consistent color palatte is one of the foundations of a unified user experience.
+These are the colors that have been chosen to represent the brand.
+
+<SprkStack
+  splitAt="huge"
+  itemSpacing="medium"
+  additionalClasses="sprk-u-mbl"
+>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
+    <img
+      srcset={colorsLightSrcSet}
+      src={colorsOnLight}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
+      alt="The brand colors on a light background."/>
+  </SprkStackItem>
+
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
+  <img
+    srcset={colorsDarkSrcSet}
+    src={colorsOnDark}
+    sizes="(min-width: 1120px) 1120px,
+          (min-width: 1680px) 1680px,
+          560px"
+    alt="The brand colors on a dark background."/>
+  </SprkStackItem>
+</SprkStack>
+
+## Color Palette
+### Red
+<ColorSwatchGrid color="red" />
+
+### Blue
+<ColorSwatchGrid color="blue" />
+
+### Green
+<ColorSwatchGrid color="green" />
+
+### Yellow
+<ColorSwatchGrid color="yellow" />
+
+### Black
+<ColorSwatchGrid color="black" />
+
+### White
+<ColorSwatchGrid color="white" />
+
+## Do's and Don'ts
+Some info about our best practices.
+
+### Do Not Mix colors
+Some info about how colors should not be mixed.
+ <img
+  src={doNotMixColors}
+  alt="Placeholder alt text for this image."/>
+
+### Do Not Overuse Red
+Some info about.
+ <img
+  src={doNotOveruseRed}
+  alt="Placeholder alt text for this image."/>
+
+### Do Not Use Accents In Large Amounts
+Some info about.
+ <img
+  src={doNotUseAccentsLarge}
+  alt="Placeholder alt text for this image."/>
+
+### Do Not Use Dark Backgrounds For Text
+Some info about.
+ <img
+  src={doNotUseDarkBgsForText}
+  alt="Placeholder alt text for this image."/>
+
+### Do Not Use Gradients
+Some info about.
+ <img
+  src={doNotUseGradients}
+  alt="Placeholder alt text for this image."/>
+
+### Do Not Make Text Illegible
+Some info about.
+ <img
+  src={doNotMakeTextIllegible}
+  alt="Placeholder alt text for this image."/>
+
+## Accessibility
+This is a paragpah on dos and sodntklajsdf.
