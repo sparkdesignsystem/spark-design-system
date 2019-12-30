@@ -52,20 +52,25 @@ SprkButton.propTypes = {
     */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
+   * Value assigned to the
    * `data-analytics` attribute on the component.
    * Intended for an outside
    * library to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Children */
+  /** Content to render inside of the SprkButton */
   children: PropTypes.node,
   /**
-   * If `true`, the button styles will be added.
+   * Applies disabled style and the
+   * disabled attribute to the element.
    */
   disabled: PropTypes.bool,
   /**
-   * Determines what type of element to render.
+   * Determines what element is rendered.
+   * If an href is provided and an element is not,
+   * an anchor tag will be rendered.
+   * If no href or element is provided,
+   * it will default to a button.
    */
   element: PropTypes.oneOfType([
     PropTypes.string,
@@ -73,25 +78,27 @@ SprkButton.propTypes = {
     PropTypes.func,
   ]),
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
+   * Value assigned
+   * to the `data-id` attribute of the
    * component. This is intended to be
    * used as a selector for automated
-   * tools. This val ue should be unique
+   * tools. This value should be unique
    * per page.
    */
   idString: PropTypes.string,
   /**
-   * If `true`, will render a spinner
-   * in the button instead of children.
+   * Will cause a spinner to be
+   * rendered in place of the button content.
    */
   loading: PropTypes.bool,
   /**
-   * Decides which button variant to render.
+   *  Will render the coresponding button style.
    */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   /**
-   * The `URL` rendered if the `href` is provided.
+   * If an href is provided and no element is provided,
+   * an anchor tag will be rendered.
+   * The actual value is what is applied to the href attribute.
    */
   href: PropTypes.string,
 };
