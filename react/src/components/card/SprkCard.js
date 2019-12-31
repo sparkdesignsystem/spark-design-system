@@ -120,7 +120,7 @@ SprkCard.propTypes = {
      */
     bodyText: PropTypes.string,
     /**
-     * Configures the call-to-action of a teaser card.
+     * Configures the call-to-action of a Teaser Card.
      */
     cta: PropTypes.shape({
       /** Extra classes on the call-to-action of Teaser Card. */
@@ -137,6 +137,14 @@ SprkCard.propTypes = {
        */
       ctaIcon: PropTypes.string,
       /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
+      ctaLinkElement: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
+      /**
        * Determinds if the CTA is a link or a button.
        * Will default to `link` if none provided.
        */
@@ -152,11 +160,11 @@ SprkCard.propTypes = {
      * Configures the main media of the Teaser Card.
      */
     media: PropTypes.shape({
-    /**
-     * Expects a space separated string
-     * of classes to be added to the
-     * media icon.
-     */
+      /**
+       * Expects a space separated string
+       * of classes to be added to the
+       * media icon.
+       */
       additionalMediaIconClasses: PropTypes.string,
       /**
        * Determines the href of the media.
@@ -164,8 +172,6 @@ SprkCard.propTypes = {
       href: PropTypes.string,
       /**
        * Determines if link renders as an Anchor tag, or router link.
-       * If an href is provided and an element is not,
-       * an anchor tag will be rendered.
        */
       mediaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       /**
@@ -173,7 +179,7 @@ SprkCard.propTypes = {
        * as the main media of the Teaser Card.
        */
       iconName: PropTypes.string,
-      /** Alternative text for the media. */
+      /** Alternative text for the main media of Teaser Card. */
       imgAlt: PropTypes.string,
       /** The source link for the media. */
       imgSrc: PropTypes.string,

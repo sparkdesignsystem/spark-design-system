@@ -49,20 +49,14 @@ const SprkCardHighlightedHeader = (props) => {
 };
 
 SprkCardHighlightedHeader.propTypes = {
+  /** Headline of the Highlighted Header Card. */
+  title: PropTypes.string,
   /**
-   * Configuration data for the Highlighted Header variant of
-   * the Card.
+   * Text inside of Highlighted Header Card.
    */
-  highlightedHeaderConfig: PropTypes.shape({
-    /**
-     * Text inside of Highlighted Header Card.
-     */
-    bodyText: PropTypes.string,
-    /** Sub-headline of the Highlighted Header Card. */
-    description: PropTypes.string,
-    /** Headline of the Highlighted Header Card. */
-    title: PropTypes.string,
-  }),
+  bodyText: PropTypes.string,
+  /** Sub-headline text of the Highlighted Header Card. */
+  description: PropTypes.string,
 };
 
 export default SprkCardHighlightedHeader;
