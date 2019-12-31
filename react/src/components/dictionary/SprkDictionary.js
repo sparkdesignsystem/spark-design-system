@@ -43,32 +43,31 @@ SprkDictionary.defaultProps = {
 
 SprkDictionary.propTypes = {
   /**
-   * The collection of key-value pairs to be rendered
-   * into the component.
+   * The collection of key-value pairs
+   * to render.
    */
   keyValuePairs: PropTypes.PropTypes.shape({
     '': '',
   }).isRequired,
   /**
-   * Determines the variant of the dictionary component to render.
-   * The only available option is `striped`.
-   * Supplying no value will cause the base variant to be used.
+   * Determines the style of dictionary component.
+   * Supplying no value will cause the base styles to be used.
    */
-  variant: PropTypes.oneOf(['striped', '']),
+  variant: PropTypes.oneOf(['striped']),
   /**
-    * The value supplied will be assigned
-    * to the `data-id` attribute on the
-    * component. This is intended to be
-    * used as a selector for automated
-    * tools. This value should be unique
-    * per page.
-    */
+   * Value assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
   /**
-    * Expects a space separated string
-    * of classes to be added to the
-    * component.
-    */
+   * Expects a space separated string
+   * of classes to be added to the
+   * Dictionary Component.
+   */
   additionalClasses: PropTypes.string,
 };
 
