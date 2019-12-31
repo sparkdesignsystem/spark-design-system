@@ -2,15 +2,13 @@
   title: Footer
 ---
 import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Footer
 
-An Alert is a way to notify users
-without interrupting their actions.
-Alerts are to appear at the top of the
-page. They consist of an icon
-(in either a success, info, or error state),
-an area for text, and an optional dismiss button.
+The Footer component provides a consistent
+place to display secondary content, navigation,
+and site information. 
 
 <ComponentPreview
   componentName="footer--default-story"
@@ -21,26 +19,35 @@ an area for text, and an optional dismiss button.
 />
 
 ### Usage
-An Accordion should be used when
-content needs to be broken down,
-but is still important enough to
-be of primary interest on the page.
-This Accordion's design is used to
-give it some visual weight
-within the design and make it
-apparent that the content is important.
+
+Nearly all applications should have a
+Footer at the bottom of every page. An
+example of an exception would be a
+marketing landing page with a unique design.
 
 ### Guidelines
-- May have timed visibility (10 seconds)
-  and/or be dismissed by the user by clicking the "x" icon.
-- If the content wraps to a new line the
-  icon on the left should remain vertically
-  centered, but the dismiss icon should
-  remain in place at the top right.
-- Should fill the width of the viewport.
-- The content should be kept short and concise.
-- Alerts can be used without the dismiss
-  button.
+
+- The Global Links section is for
+linking to our Sister Companies. 
+- The Local Links section is for
+links to pages or resources within
+the same application. 
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- Footer must have Global links
+- Footer may have Local links
+- Footer may have Social Media Links
+- Footer may have Awards, badges
+(certifications or affiliations) and disclaimers 
 
 ## Accessibility
-This is a11y stuff.
+
+The Footer is a navigation landmark for
+accessibility tools. The attribute role=”contentinfo”
+must be present. 
