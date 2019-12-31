@@ -16,19 +16,23 @@ SprkDivider.defaultProps = {
 
 SprkDivider.propTypes = {
   /**
-   * The type of element that will be rendered.
+   * Determines if link renders as a `<span>` or `<hr>`.
    */
   element: PropTypes.oneOf(['span', 'hr']).isRequired,
   /**
-   * The value supplied will be assigned
+   * Value assigned
    * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
-   * tools. This val ue should be unique
+   * tools. This value should be unique
    * per page.
    */
   idString: PropTypes.string,
-  /** Any additional classes to add to the element */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * Divider.
+   */
   additionalClasses: PropTypes.string,
 };
 
