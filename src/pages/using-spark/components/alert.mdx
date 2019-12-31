@@ -6,12 +6,9 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Alert
 
-An Alert is a way to notify users
-without interrupting their actions.
-Alerts are to appear at the top of the
-page. They consist of an icon
-(in either a success, info, or error state),
-an area for text, and an optional dismiss button.
+Alert is an unobtrusive, yet highly visible,
+way to display important information and
+provide feedback to user action. 
 
 <ComponentPreview
   componentName="alert--success"
@@ -21,26 +18,25 @@ an area for text, and an optional dismiss button.
 />
 
 ### Usage
-An Accordion should be used when
-content needs to be broken down,
-but is still important enough to
-be of primary interest on the page.
-This Accordion's design is used to
-give it some visual weight
-within the design and make it
-apparent that the content is important.
+
+Alert is used when you need to give
+information to the user or feedback
+after an action. For example, to show
+that a form submission was successful
+or to let the user know that their attention
+is needed on another section of the site.
+Alert may have timed visibility (10 seconds)
+and/or be dismissed by the user by clicking
+or tapping the Close Icon. 
 
 ### Guidelines
-- May have timed visibility (10 seconds)
-  and/or be dismissed by the user by clicking the "x" icon.
-- If the content wraps to a new line the
-  icon on the left should remain vertically
-  centered, but the dismiss icon should
-  remain in place at the top right.
-- Should fill the width of the viewport.
-- The content should be kept short and concise.
-- Alerts can be used without the dismiss
-  button.
+
+- Alert must appear above the main content
+of the page, but below the Masthead.
+- The message text of Alert should be
+clear and concise. 
+- Alert should not be used at the top of
+sidebars or other narrow layout elements. 
 
 <SprkDivider
  element="span"
@@ -51,9 +47,10 @@ apparent that the content is important.
 
 ### Information Alert
 
-Shows information that is
-important for a client to read.
-Information Alerts have a Bell icon.
+An Information Alert has a Bell Icon
+and indicates that a message is important
+for the user to read. These alerts are
+typically already on the page when the user arrives. 
 
 <ComponentPreview
   componentName="alert--info"
@@ -64,9 +61,8 @@ Information Alerts have a Bell icon.
 
 ### Success Alert
 
-These provide positive feedback to
-a user's action. Success Alerts
-have a checkmark icon.
+A Success Alert has a Checkmark Icon
+and provides positive feedback to a user’s action.
 
 <ComponentPreview
   componentName="alert--success"
@@ -77,8 +73,8 @@ have a checkmark icon.
 
 ### Fail Alert
 
-These provide negative feedback to a
-user's action. Fail Alerts have an exclamation mark icon.
+A Fail Alert has an Exclamation Icon
+and provides negative feedback to a user’s action. 
 
 <ComponentPreview
   componentName="alert--fail"
@@ -87,5 +83,16 @@ user's action. Fail Alerts have an exclamation mark icon.
   hasHTML
 />
 
+## Anatomy
+
+- Alert must have an Icon on the left side.
+- Alert must have a clear, concise
+piece of text that may contain Links.
+- Alert may have a Close Icon to
+dismiss the Alert. 
+
 ## Accessibility
-This is a11y stuff.
+
+- role=”alert” is required so that
+assistive technologies can inform
+the user that their attention is needed. 
