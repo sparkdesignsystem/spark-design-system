@@ -236,7 +236,7 @@ SprkDropdown.propTypes = {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component.
+   * SprkDropdown component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -248,6 +248,7 @@ SprkDropdown.propTypes = {
   /**
    * Expects a space separated string of
    * classes to be added to the trigger link element.
+   *
    */
   additionalTriggerClasses: PropTypes.string,
   /**
@@ -256,15 +257,18 @@ SprkDropdown.propTypes = {
    */
   additionalTriggerTextClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
+   * Value assigned to the
    * `data-analytics` attribute on the component.
    * Intended for an outside
    * library to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Incoming children. */
+  /** Content to render inside of the SprkDropdown */
   children: PropTypes.node,
-  /** Choices object that builds the dropdown contents. */
+  /**
+   * The choices object represents
+   * data that is shown inside the open dropdown
+   */
   choices: PropTypes.shape({
     /** An array of objects that describe the items in the menu. */
     items: PropTypes.arrayOf(
@@ -272,7 +276,7 @@ SprkDropdown.propTypes = {
         /** The element to render for each menu item. */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         /**
-         * Assigned to `href` of the element is `a`.
+         * Determines the href of the choice item.
          */
         href: PropTypes.string,
         /** The text inside the choice item. */
@@ -282,10 +286,13 @@ SprkDropdown.propTypes = {
   }),
   /** The text set as the default of the trigger link. */
   defaultTriggerText: PropTypes.string,
-  /** The icon type of the trigger icon. */
+  /**
+   * Determines what icon `SprkIcon` renders
+   * as the trigger icon.
+   */
   iconName: PropTypes.string,
   /**
-   * The value supplied will be assigned
+   * Value assigned
    * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
@@ -294,9 +301,10 @@ SprkDropdown.propTypes = {
    */
   idString: PropTypes.string,
   /**
-  * The value supplied will be visually hidden
-  * inside the trigger. Userful
-  * for when the `title` is empty.
+  * A value for screen readers when there isn't
+  * discernable text on the dropdown.
+  * Useful for when the `title` prop is empty
+  * and the Dropdown trigger is only an icon.
   */
   screenReaderText: PropTypes.string,
   /**
