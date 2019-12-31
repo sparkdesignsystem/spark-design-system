@@ -92,7 +92,7 @@ SprkButton.propTypes = {
    */
   loading: PropTypes.bool,
   /**
-   *  Will render the coresponding button style.
+   *  Determines the coresponding button style.
    */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   /**
