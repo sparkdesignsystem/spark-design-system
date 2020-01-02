@@ -48,6 +48,11 @@ is 54rem (864px). If the content needs of your application
 require this breakpoint to be larger or smaller, it can be
 changed in your application’s Sass file with the
 variable \`$sprk-masthead-breakpoint\`.
+- In Default Masthead the little nav is the section to the
+right of the logo, containing the navigation links and utility
+items. When the number of navigation items is too large to
+fit in one row, the Extended Masthead utilizes a second row,
+the big nav, to display the navigation items.
 - The Masthead component has 4 slots to inject markup
 into the component template.
     - \`little-nav-slot\`: Used for adding navigation
