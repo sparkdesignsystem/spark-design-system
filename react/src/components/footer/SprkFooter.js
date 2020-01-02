@@ -340,7 +340,7 @@ SprkFooter.propTypes = {
         altText: PropTypes.string.isRequired,
         /**
          * Expects a space separated string of
-         * classes to be added to the component.
+         * classes to be added to the award image.
          */
         addClasses: PropTypes.string,
        /**
