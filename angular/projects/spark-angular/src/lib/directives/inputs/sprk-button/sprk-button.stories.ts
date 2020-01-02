@@ -39,7 +39,7 @@ submit the form, the attribute \`type=”button”\` must be used.
 - If a Button submits a form, do not use \`<input type="submit">\`.
 Instead use \`<button type=”submit”>\`
 - If a Button is Disabled, you must add the \`disabled\` attribute
-in addition to the \`spark-is-Disabled\` class so that it doesn’t
+in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
 `,
     docs: { iframeHeight: 100 },
