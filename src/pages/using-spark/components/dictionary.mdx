@@ -1,0 +1,69 @@
+---
+  title: Dictionary
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Dictionary
+
+The Dictionary component displays a list of key-value pairs.
+
+<ComponentPreview
+  componentName="dictionary--default-dictionary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Use the Dictionary component when you have a small
+set of data that you want to display using key-value
+pairs. If you have a large set of data or more than
+one value per key, consider using the Table component
+instead. 
+
+### Guidelines
+
+- There should be at least two key-value pairs. 
+- The length of the text in a key should not
+exceed two lines of wrapped text. 
+- A Dictionary cannot be nested within another Dictionary. 
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Basic Dictionary
+
+Use the Basic Dictionary when there are fewer than ten rows.
+
+<ComponentPreview
+  componentName="dictionary--default-dictionary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Striped Dictionary
+
+Use the Striped Dictionary when the number of rows is
+greater than ten or when the Dictionary is wide enough
+to need an additional visual cue. 
+
+<ComponentPreview
+  componentName="dictionary--striped-dictionary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- Each row of a Dictionary contains a key on
+the left and a value on the right. 
+- On small viewports, the value is displayed
+below the key. 
