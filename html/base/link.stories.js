@@ -10,10 +10,10 @@ export default {
 ${markdownDocumentationLinkBuilder('link')}
 - Spark Link styles are for text-based links.
 Images that are links should not use Spark classes.
-- The data-id property is provided as a hook for
+- The \`data-id\` property is provided as a hook for
 automated tools. If you have multiple instances
 of the same variant of a component on the same page,
-make sure each instance has a unique data-id property
+make sure each instance has a unique \`data-id\` property
 ("link-1", "link-2", "link-3", etc).  
 `,
   },
