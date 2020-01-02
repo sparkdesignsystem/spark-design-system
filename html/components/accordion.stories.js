@@ -11,7 +11,7 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('accordion')}
-- 'data-sprk-toggle' and 'data-sprk-toggle-type' are
+- \`data-sprk-toggle\` and \`data-sprk-toggle-type\` are
 necessary attributes for this component to function.
 This will take care of visually expanding/collapsing
 the accordion as well as toggling the aria-expanded attribute. 
