@@ -22,8 +22,8 @@ ${markdownDocumentationLinkBuilder('modal')}
     - 2. The Modal – Containing the information or actions.
 - The Modal and background mask are hidden by default.
 - A Modal should not be launched from within another Modal.
-- The data-id property is provided as a hook for automated tools.
-Each instance should have a unique data-id property.
+- The \`data-id\` property is provided as a hook for automated tools.
+Each instance should have a unique \`data-id\` property.
 ("modal-choice-1", "modal-choice-2", "modal-info-1", etc).
 - Dismissing a Wait Modal is done programmatically.
 You must write your own function to toggle dismissal through the '(hide)' input.
