@@ -208,7 +208,7 @@ SprkFooter.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned
+   * Value assigned
    * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
@@ -216,21 +216,21 @@ SprkFooter.propTypes = {
    * per page.
    */
   idString: PropTypes.string,
-  /** The data for the global site items. */
+  /** Object used to configure the global items section. */
   globalItems: PropTypes.shape({
-    /** The main heading for the global section. */
+    /** Main headline for the global section. */
     heading: PropTypes.string,
-    /** The global items. */
+    /** Object used to configure each item in global items section such as `mediaType`, `src`, `description` etc. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
         /** The type of media element to render. */
         mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
         /**
-         * Assigned to `src` attribute of the image.
+         * Assigned to `src` attribute of the item's image.
          */
         src: PropTypes.string,
         /**
-         * Assigned to `href`.
+         * Assigned to `href` of item.
          */
         mediaHref: PropTypes.string,
         /**
@@ -240,7 +240,7 @@ SprkFooter.propTypes = {
         /**
          * Expects a space separated string
          * of classes to be added to the
-         * media.
+         * media of the item.
          */
         mediaAddClasses: PropTypes.string,
         /** The description of the image */
@@ -257,7 +257,7 @@ SprkFooter.propTypes = {
       }),
     ),
   }),
-  /** The data for the columns of site links. */
+  /** Constructs the columns of links in the Footer. Maximum number of columns is 3. */
   linkColumns: PropTypes.arrayOf(
     PropTypes.shape({
       /** The main heading for the column. */
@@ -274,7 +274,7 @@ SprkFooter.propTypes = {
            */
           text: PropTypes.string,
           /**
-           * Element to render, can be `a` or `Link`.
+           * Determines if link renders as an anchor tag, or router link.
            */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
           /**
@@ -288,16 +288,18 @@ SprkFooter.propTypes = {
       ),
     }),
   ),
-  /** The icons to use in the connect section. */
+  /** Constructs the Connect Icon Section. */
   connectIcons: PropTypes.shape({
-    /** The main heading for the section. */
+    /** The main headline for the section. */
     heading: PropTypes.string,
-    /** The icons. */
+    /** Configures the icons for the section. */
     icons: PropTypes.arrayOf(
       PropTypes.shape({
         /** The link `href` for the icon. */
         href: PropTypes.string,
-        /** The name of the icon. */
+        /**
+         * Determines what icon `SprkIcon` renders
+         */
         name: PropTypes.string,
         /** Text used for screen readers. */
         screenReaderText: PropTypes.string,
@@ -309,20 +311,24 @@ SprkFooter.propTypes = {
          */
         analyticsString: PropTypes.string,
         /**
-         * Element to render, can be `a` or `Link`.
+         * Determines if link renders as an anchor tag, or router link.
          */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
     ),
   }),
-  /** The awards section data. */
+  /** Configures the Awards Section. */
   awards: PropTypes.shape({
+    /** The main headline for the section. */
     heading: PropTypes.string,
+    /** Configures the images in the Awards Section. */
     images: PropTypes.arrayOf(
       PropTypes.shape({
         /** The link href for the image. */
         href: PropTypes.string,
-        /** Element to render, can be `a` or `Link`. */
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         /**
          * The image `src`.
@@ -358,10 +364,10 @@ SprkFooter.propTypes = {
     /** The title text rendered in the disclaimer. */
     disclaimerTitle: PropTypes.string,
   }),
-  /** Data used for additional icons at bottom of footer. */
+  /** Configuration used for additional icons at bottom of footer. */
   additionalIcons: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The icon name. */
+      /** The icon name `SprkIcon` will use to render. */
       name: PropTypes.string,
       /** The icon `href`. */
       href: PropTypes.string,
@@ -373,7 +379,7 @@ SprkFooter.propTypes = {
       /** Text used for screen readers. */
       screenReaderText: PropTypes.string,
       /**
-       * Element to render, can be `a` or `Link`.
+       * Determines if link renders as an anchor tag, or router link.
        */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       /**
@@ -385,9 +391,12 @@ SprkFooter.propTypes = {
       analyticsString: PropTypes.string,
     }),
   ),
-  /** The paragraphs, copyright info, etc. */
+  /** Configuration for the paragraphs of copyright info, etc. */
   paragraphs: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * The text to render in the paragraphs section.
+       */
       text: PropTypes.string,
     }),
   ),
