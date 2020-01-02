@@ -252,7 +252,9 @@ SprkFooter.propTypes = {
          * library to capture data.
          */
         analyticsString: PropTypes.string,
-        /** Element to render, can be `a` or `Link`. */
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
     ),
@@ -297,9 +299,7 @@ SprkFooter.propTypes = {
       PropTypes.shape({
         /** The link `href` for the icon. */
         href: PropTypes.string,
-        /**
-         * Determines what icon `SprkIcon` renders
-         */
+        /** Determines what icon `SprkIcon` renders */
         name: PropTypes.string,
         /** Text used for screen readers. */
         screenReaderText: PropTypes.string,

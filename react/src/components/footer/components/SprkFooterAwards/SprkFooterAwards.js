@@ -64,7 +64,9 @@ SprkFooterAwards.propTypes = {
     /** Configures the images in the Awards Section. */
     images: PropTypes.arrayOf(
       PropTypes.shape({
-        // The link href for the image
+        /**
+         *  The link href for the image
+         */
         href: PropTypes.string,
         /**
          * Determines if link renders as an anchor tag, or router link.
