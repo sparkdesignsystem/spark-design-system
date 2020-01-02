@@ -3,13 +3,21 @@ import { SparkInputContainerModule } from './sprk-input-container/sprk-input-con
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
 
 export default {
   title: 'Components/Input/Helper Text',
   component: SparkInputContainerComponent,
+  subcomponents: {
+    SprkHelperTextDirective,
+    SprkLabelDirective,
+    SprkInputDirective,
+   },
   decorators: [
     storyWrapper(
       storyContent => (

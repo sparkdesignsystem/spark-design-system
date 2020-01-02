@@ -6,10 +6,16 @@ import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.m
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 
 export default {
   title: 'Components/Input/Textarea',
   component: SparkInputContainerComponent,
+  subcomponents: {
+    SprkInputDirective,
+    SprkLabelDirective,
+   },
   decorators: [
     storyWrapper(
       storyContent => (

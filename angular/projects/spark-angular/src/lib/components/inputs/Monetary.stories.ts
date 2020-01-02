@@ -1,5 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
@@ -10,6 +12,10 @@ import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-i
 export default {
   title: 'Components/Input/Monetary',
   component: SprkIconInputContainerComponent,
+  subcomponents: {
+    SprkInputDirective,
+    SprkLabelDirective,
+   },
   decorators: [
     storyWrapper(
       storyContent => (

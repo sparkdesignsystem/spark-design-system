@@ -1,15 +1,22 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
-
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 
 export default {
   title: 'Components/Input/Percentage',
   component: SprkIconInputContainerComponent,
+  subcomponents: {
+    SprkInputDirective,
+    SprkLabelDirective,
+    SprkIconComponent,
+  },
   decorators: [
     storyWrapper(
       storyContent => (

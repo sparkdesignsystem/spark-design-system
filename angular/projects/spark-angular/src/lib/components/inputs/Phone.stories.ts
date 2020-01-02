@@ -5,11 +5,16 @@ import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
-
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 
 export default {
   title: 'Components/Input/Phone',
   component: SparkInputContainerComponent,
+  subcomponents: {
+    SprkInputDirective,
+    SprkLabelDirective,
+  },
   decorators: [
     storyWrapper(
       storyContent => (
