@@ -237,7 +237,7 @@ SprkCardTeaser.propTypes = {
        */
       ctaVariant: PropTypes.oneOf(['link', 'button']),
       /**
-       * Determines the href of the media.
+       * Determines the `href` of the media.
        */
       href: PropTypes.string,
       /** Text of the CTA. */

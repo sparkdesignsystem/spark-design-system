@@ -112,27 +112,23 @@ const SprkHighlightBoard = (props) => {
 
 SprkHighlightBoard.propTypes = {
   /**
-   * The Highlight Board will use this as the
-   * source for the main image.
+   * The source for the main image.
    */
   imgSrc: PropTypes.string,
   /**
-   * The Highlight Board will use this as
-   * the `alt` text for the main image.
+   * The `alt` text for the main image.
    */
   imgAlt: PropTypes.string,
   /**
-   * The value supplied will be rendered as the heading.
+   * The main headline for the section.
    */
   heading: PropTypes.string,
   /**
-   * The Highlight Board will use this as
-   * the text for the main call-to-action.
+   * The text for the main call-to-action.
    */
   ctaText: PropTypes.string,
   /**
-   * The Highlight Board will use this as the
-   * `href` for the main call-to-action.
+   * The `href` for the main call-to-action.
    */
   ctaHref: PropTypes.string,
   /**
@@ -163,9 +159,7 @@ SprkHighlightBoard.propTypes = {
    */
   ctaIdString2: PropTypes.string,
   /**
-   * The variation of the
-   * Highlight Board that is rendered.
-   * Can be `noImage`, `stacked`.
+   * Determines the style of Highlight Board is rendered.
    */
   variant: PropTypes.oneOf(['noImage', 'stacked']),
   /**

@@ -262,7 +262,7 @@ SprkFooter.propTypes = {
   /** Constructs the columns of links in the Footer. Maximum number of columns is 3. */
   linkColumns: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The main heading for the column. */
+      /** The main headline for the column. */
       heading: PropTypes.string,
       /**  The links for each column. */
       links: PropTypes.arrayOf(
