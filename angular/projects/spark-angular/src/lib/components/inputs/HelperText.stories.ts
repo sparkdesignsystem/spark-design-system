@@ -9,6 +9,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Helper Text',
@@ -17,6 +18,7 @@ export default {
     SprkHelperTextDirective,
     SprkLabelDirective,
     SprkInputDirective,
+    SprkFieldErrorDirective,
    },
   decorators: [
     storyWrapper(

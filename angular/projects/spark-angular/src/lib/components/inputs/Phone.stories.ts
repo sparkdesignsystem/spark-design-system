@@ -7,6 +7,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Phone',
@@ -14,6 +15,7 @@ export default {
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
+    SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(

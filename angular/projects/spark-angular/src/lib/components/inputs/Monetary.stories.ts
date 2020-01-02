@@ -7,7 +7,7 @@ import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.m
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
-
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Monetary',
@@ -15,6 +15,7 @@ export default {
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
+    SprkFieldErrorDirective,
    },
   decorators: [
     storyWrapper(

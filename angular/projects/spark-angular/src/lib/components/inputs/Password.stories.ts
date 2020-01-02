@@ -13,6 +13,7 @@ import { SprkSelectionContainerComponent } from './sprk-selection-container/sprk
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Password',
@@ -21,6 +22,7 @@ export default {
     SprkInputDirective,
     SprkSelectionInputDirective,
     SprkLabelDirective,
+    SprkFieldErrorDirective,
     SprkSelectionLabelDirective,
     SprkSelectionContainerComponent,
     SprkSelectionItemContainerComponent,

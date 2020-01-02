@@ -8,6 +8,7 @@ import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-i
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Select',
@@ -16,6 +17,7 @@ export default {
     SprkInputDirective,
     SprkLabelDirective,
     SprkIconComponent,
+    SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(

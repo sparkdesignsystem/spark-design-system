@@ -12,6 +12,7 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/SSN',
@@ -22,6 +23,7 @@ export default {
     SprkLabelDirective,
     SprkSelectionInputDirective,
     SprkSelectionLabelDirective,
+    SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(

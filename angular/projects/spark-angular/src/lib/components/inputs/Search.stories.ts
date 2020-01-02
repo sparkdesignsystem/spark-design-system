@@ -9,6 +9,7 @@ import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-i
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Search',
@@ -17,6 +18,7 @@ export default {
     SprkInputDirective,
     SprkIconComponent,
     SprkLabelDirective,
+    SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(

@@ -10,6 +10,7 @@ import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection
 import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Radio',
@@ -18,6 +19,7 @@ export default {
     SprkSelectionInputDirective,
     SprkSelectionLabelDirective,
     SprkLabelDirective,
+    SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(

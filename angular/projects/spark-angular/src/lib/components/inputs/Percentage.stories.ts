@@ -8,6 +8,7 @@ import { SprkIconInputContainerComponent } from './sprk-icon-input-container/spr
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Percentage',
@@ -16,6 +17,7 @@ export default {
     SprkInputDirective,
     SprkLabelDirective,
     SprkIconComponent,
+    SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(

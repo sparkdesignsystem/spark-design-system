@@ -11,6 +11,7 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkHugeInputContainerComponent } from '../inputs/sprk-huge-input-container/sprk-huge-input-container.component';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Huge Select',
@@ -19,6 +20,7 @@ export default {
     SprkHugeInputContainerComponent,
     SprkInputDirective,
     SprkLabelDirective,
+    SprkFieldErrorDirective,
     SprkIconComponent,
   },
   decorators: [
