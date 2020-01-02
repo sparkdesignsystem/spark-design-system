@@ -25,7 +25,39 @@ export default {
       SprkMastheadAccordionComponent,
       SprkMastheadAccordionItemComponent,
     },
-    info: markdownDocumentationLinkBuilder('masthead'),
+    info: `
+${markdownDocumentationLinkBuilder('masthead')}
+- You should configure the size of your own logo.
+By default, the logo will be automatically sized
+between the \`$sprk-masthead-logo-min-width\` (174px)
+and \`$sprk-masthead-logo-max-width\` (192px).
+You can additionally override those min and max
+settings by resetting the variables in your own Sass file.
+- The default height of the Masthead on narrow
+viewports is 81px. Your logo might require you to
+update this value in your application’s Sass file using the
+\`$sprk-masthead-narrow-height\` variable. To get the
+correct value, put your logo in the Masthead and view
+the total height at a narrow viewport size. This
+will ensure your navigation items are lined up correctly.
+- Because of the differences in Masthead design between
+narrow and wide viewports, each viewport has its own HTML.
+You must duplicate the HTML for your navigation in both places.
+- The default breakpoint between narrow and wide viewports
+is 54rem (864px). If the content needs of your application
+require this breakpoint to be larger or smaller, it can be
+changed in your application’s Sass file with the
+variable \`$sprk-masthead-breakpoint\`.
+- The Masthead component has 4 slots to inject markup
+into the component template.
+    - \`little-nav-slot\`: Used for adding navigation
+    to the Default Masthead.
+    - \`utility-slot\`: Used to add optional features
+    like account menu, sign in button, search, etc.
+    - \`logo-slot\`: Used for adding your logo.
+    - \`navItem-slot\`: Used for the link in the upper right
+    of the mobile version of the masthead (typically a sign in link)
+`,
     docs: { iframeHeight: 300 },
   },
 };
