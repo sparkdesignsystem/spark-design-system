@@ -2,16 +2,12 @@
   title: Accordion
 ---
 import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Accordion
 
-An Accordion is a simple way of showing,
-hiding and breaking down content. It
-should be used when a large group
-of related content needs to be
-separated into smaller, digestible
-chunks. An Accordion consists of a
-series of Toggle components.
+Accordion expands and collapses multiple
+sections of related content. 
 
 <ComponentPreview
   componentName="accordion--default-story"
@@ -21,19 +17,42 @@ series of Toggle components.
 />
 
 ### Usage
-An Accordion should be used when
-content needs to be broken down,
-but is still important enough to
-be of primary interest on the page.
-This Accordion's design is used to
-give it some visual weight
-within the design and make it
-apparent that the content is important.
+
+Accordion is used when you have lower-priority
+content that needs to be broken up into digestible chunks.
 
 ### Guidelines
-- Content length inside the Accordion does not have a limit.
-- Title content of the Accordion can wrap, but it is recommended
-  that it is short and to the point.
+
+- By default, all section of an Accordion are
+collapsed, so high-priority content should be avoided. 
+- Avoid complex interactions in Accordion.
+Things like forms, buttons, dropdowns, and nested
+Accordions weaken usability. 
+- Keep Accordion titles short so the text
+stays on one line. 
+- Accordion titles should be relevant to the content
+inside so the user can quickly decide if opening
+it will provide the information they need. 
+- The width of the Accordion should be
+controlled by the layout of the page. 
+- Expand/collapse is indicated by a chevron Icon,
+but the entire header area is clickable for the same action. 
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- An Accordion Item must have a left aligned title. 
+- An Accordion Item must contain content. 
+- An Accordion Item must have a right aligned
+Chevron-[Up/Down]-Circle-Two-Color Icon 
 
 ## Accessibility
-This is a11y stuf.
+
+- Can be accessed through the keyboard.
+TAB and SHIFT-TAB are used to navigate through
+Accordion titles and ENTER will expand or
+collapse each section. 

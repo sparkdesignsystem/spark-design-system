@@ -22,7 +22,15 @@ export default {
     subcomponents: {
       SprkAccordionItemComponent,
     },
-    info: markdownDocumentationLinkBuilder('accordion'),
+    info: `
+${markdownDocumentationLinkBuilder('accordion')}
+- The Accordion component in spark-angular consists of two Angular components:
+    - \`sprk-accordion\`
+    - \`sprk-accordion-item\`
+- \`sprk-accordion\` expects you to add \`sprk-accordion-item\`
+components as children. Any other content you add outside of a
+\`sprk-accordion-item\` will render, but may not be styled correctly.
+`,
     docs: { iframeHeight: 420 },
   },
 };
