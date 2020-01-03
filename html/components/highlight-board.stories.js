@@ -10,7 +10,7 @@ export default {
   },
 };
 
-export const defaultHighlightBoard = () => `
+export const defaultStory = () => `
     <div
      class="sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-u-mbm"
      data-id="highlightboard-1"
@@ -57,7 +57,7 @@ export const defaultHighlightBoard = () => `
     </div>
 `;
 
-defaultHighlightBoard.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
