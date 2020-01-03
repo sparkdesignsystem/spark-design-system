@@ -712,6 +712,10 @@ export const pricePerSqFt = () => (
   <SprkIcon iconName="price-per-sq-ft" additionalClasses="sprk-c-Icon--xl" />
 );
 
+pricePerSqFt.story = {
+  name: 'Price Per SQ FT',
+};
+
 export const print = () => (
   <SprkIcon iconName="print" additionalClasses="sprk-c-Icon--xl" />
 );
@@ -910,6 +914,10 @@ vip.story = {
 export const wifi = () => (
   <SprkIcon iconName="wifi" additionalClasses="sprk-c-Icon--xl" />
 );
+
+wifi.story = {
+  name: 'Wi-Fi',
+};
 
 export const writtenCheck = () => (
   <SprkIcon iconName="written-check" additionalClasses="sprk-c-Icon--xl" />
