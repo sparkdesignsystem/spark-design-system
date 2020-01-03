@@ -30,7 +30,7 @@ const ColorSwatchGrid = ({ color, additionalClasses }) => (
         .filter(item => {
           return (
             item.node.file.name === '_colors.scss' &&
-          item.node.group[0] === color
+            item.node.group[0] === color
           );
         })
         .map(item => (
