@@ -4,6 +4,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
   selector: '[sprkHelperText]'
 })
 export class SprkHelperTextDirective implements OnInit {
+ /**
+  * @ignore
+  */
   constructor(public ref: ElementRef) {}
 
   /**
