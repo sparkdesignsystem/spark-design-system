@@ -13,7 +13,7 @@ export default {
   },
 };
 
-export const defaultTabs = () => {
+export const defaultStory = () => {
   useEffect(() => {
     tabs();
   }, []);
@@ -102,6 +102,6 @@ export const defaultTabs = () => {
 </div>`;
 };
 
-defaultTabs.story = {
+defaultStory.story = {
   name: 'Default',
 };
