@@ -43,7 +43,7 @@ the big nav, to display the navigation items.
   },
 };
 
-export const defaultMasthead = () => {
+export const defaultStory = () => {
   useEffect(() => {
     toggle();
     masthead();
@@ -405,7 +405,7 @@ export const defaultMasthead = () => {
   `;
 };
 
-defaultMasthead.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
