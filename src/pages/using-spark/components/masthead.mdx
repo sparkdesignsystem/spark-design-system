@@ -6,8 +6,9 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Masthead
 
-The Masthead is the first component on
-a page and includes navigation elements.
+The Masthead component provides a consistent
+way to convey brand identity. It contains the
+logo and navigation elements for the application. 
 
 <ComponentPreview
   componentName="masthead--default-masthead"
@@ -19,17 +20,28 @@ a page and includes navigation elements.
 />
 
 ### Usage
-This version of the Masthead is commonly
-used when the user is signed out,
-the site has no user accounts or there
-is a small amount of navigational links.
-The big navigation (wide gray navigation bar)
-is not included in this version.
+
+Nearly all applications should have a Masthead
+at the top of every page. An example of an
+exception would be a marketing landing page
+with a unique design.  
+
+On wide viewports, the Masthead is fixed to the
+top of the screen. As the user scrolls, content
+moves under the Masthead. On narrow viewports,
+when the user scrolls, the Masthead moves off
+the top of the screen. When the user scrolls back
+up the page, the Masthead returns into view
+for easy access. 
 
 ### Guidelines
-- The Masthead is "sticky" and content will flow under it.
-- On narrow viewports when a user scrolls down the page, the masthead will become hidden.
-When the user scrolls back up towards the top of the page, the masthead will come back into view.
+
+- There is room for flexibility inside of
+the Masthead so you can combine navigation
+with other functionality (e.g. search, phone
+numbers, settings, etc.). Avoid trying to
+add too many additional features that may
+overwhelm or confuse the user.
 
 <SprkDivider
  element="span"
@@ -38,11 +50,36 @@ When the user scrolls back up towards the top of the page, the masthead will com
 
 ## Variants
 
+### Default Masthead
+
+The Default Masthead is the most compact
+way to convey brand identity and provide
+basic navigation and other features.  
+- The number of navigation items that
+can be used in the Default Masthead is
+only limited by what can fit on a single
+row on wide viewports.
+- When the number of navigation items is
+too large to fit in one row, the Extended
+Masthead must be used instead. 
+
+<ComponentPreview
+  componentName="masthead--default-masthead"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="20rem"
+  maxWidth="100%"
+/>
+
 ### Extended Masthead
 
-Shows information that is
-important for a client to read.
-Information Alerts have a Bell icon.
+The Extended Masthead moves the navigation
+items to a separate row. This allows for
+more navigation items to be used and
+additional features to be added to the first row.  
+- The number of navigation items in the Extended
+Masthead should be a minimum of 3 and maximum of 6.
 
 <ComponentPreview
   componentName="masthead--extended"
@@ -53,5 +90,15 @@ Information Alerts have a Bell icon.
   minHeight="20rem"
 />
 
+## Anatomy
+
+- Masthead must have a logo
+- Masthead may include navigation
+- Masthead has space for optional features
+e.g. phone number, sign in button, account menu,
+account selector, etc. 
+
 ## Accessibility
-This is a11y stuff.
+
+The Masthead is a navigation landmark for accessibility
+tools. The attribute `role=”banner”` must be present. 
