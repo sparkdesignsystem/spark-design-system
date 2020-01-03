@@ -129,7 +129,7 @@ invalidSearchInput.story = {
   name: 'Invalid',
 };
 
-export const disabeldSearchInput = () => ({
+export const disabledSearchInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -159,7 +159,7 @@ export const disabeldSearchInput = () => ({
   `,
 });
 
-disabeldSearchInput.story = {
+disabledSearchInput.story = {
   name: 'Disabled',
 };
 
