@@ -10,7 +10,7 @@ export default {
   },
 };
 
-export const SSNInputStory = () => `
+export const SSNInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -57,11 +57,11 @@ export const SSNInputStory = () => `
     </div>
   `;
 
-SSNInputStory.story = {
+SSNInput.story = {
   name: 'Default',
 };
 
-export const invalidSSNInputStory = () => `
+export const invalidSSNInput = () => `
     <div class="sprk-b-InputContainer">
       <label
         for="ssn"
@@ -116,11 +116,11 @@ export const invalidSSNInputStory = () => `
     </div>
   `;
 
-invalidSSNInputStory.story = {
+invalidSSNInput.story = {
   name: 'Invalid',
 };
 
-export const disabledSSNInputStory = () => `
+export const disabledSSNInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -169,6 +169,6 @@ export const disabledSSNInputStory = () => `
     </div>
   `;
 
-disabledSSNInputStory.story = {
+disabledSSNInput.story = {
   name: 'Disabled',
 };
