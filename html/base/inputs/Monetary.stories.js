@@ -10,7 +10,7 @@ export default {
   },
 };
 
-export const monetaryInputStory = () => `
+export const monetaryInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -47,11 +47,11 @@ export const monetaryInputStory = () => `
     </div>
   `;
 
-monetaryInputStory.story = {
+monetaryInput.story = {
   name: 'Default',
 };
 
-export const invalidMonetaryInputStory = () => `
+export const invalidMonetaryInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -100,11 +100,11 @@ export const invalidMonetaryInputStory = () => `
     </div>
   `;
 
-invalidMonetaryInputStory.story = {
+invalidMonetaryInput.story = {
   name: 'Invalid',
 };
 
-export const disabledMonetaryInputStory = () => `
+export const disabledMonetaryInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -142,6 +142,6 @@ export const disabledMonetaryInputStory = () => `
     </div>
   `;
 
-disabledMonetaryInputStory.story = {
+disabledMonetaryInput.story = {
   name: 'Disabled',
 };
