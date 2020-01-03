@@ -47,16 +47,68 @@ class SprkRevealInput extends Component {
 }
 
 SprkRevealInput.propTypes = {
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
+  /**
+   * Value assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
+  /**
+   * A function supplied will be passed
+   * the value of the input and then executed,
+   * if the valid prop is true. The value
+   * returned will be assigned to the value of the input.
+   */
   formatter: PropTypes.func,
+  /**
+   * Text that appears below the input,
+   * intended to provide more information to a user.
+   */
   helperText: PropTypes.string,
+  /**
+   * 	If true, will visually hide the label,
+   *  using the value of the label prop as screen reader only text.
+   */
   hiddenLabel: PropTypes.bool,
+  /**
+   * Value assigned
+   * to the `data-id` attribute of the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
+  /**
+   * The text to render inside the label element.
+   */
   label: PropTypes.string,
+  /**
+   * The name of the icon, when supplied,
+   * will be rendered inside the input element.
+   */
   leadingIcon: PropTypes.string,
+  /**
+   * If true, will render the
+   * currency icon inside the input element.
+   */
   textIcon: PropTypes.bool,
+  /**
+   * The text explaining the checkbox
+   * that toggles the visibility of the input's content.
+   */
   toggleLabel: PropTypes.string,
+  /**
+   * Determines whether to render the
+   * component in the valid or the error state.
+   */
   valid: PropTypes.bool,
 };
 
