@@ -1,3 +1,5 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Centered Column',
   decorators: [
@@ -6,8 +8,11 @@ export default {
     `,
   ],
   parameters: {
-    info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/centered-column)
+    info: `${markdownDocumentationLinkBuilder('centered-column')}
+- The \`sprk-o-CenteredColumn\` class can be applied to
+any parent element that
+is being used to contain the application contents within
+a maximum width.
     `,
   },
 };
