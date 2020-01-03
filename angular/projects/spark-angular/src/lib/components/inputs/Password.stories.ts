@@ -1,17 +1,32 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
+import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionContainerComponent } from './sprk-selection-container/sprk-selection-container.component';
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
-
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Password',
   component: SparkInputContainerComponent,
+  subcomponents: {
+    SprkInputDirective,
+    SprkSelectionInputDirective,
+    SprkLabelDirective,
+    SprkFieldErrorDirective,
+    SprkSelectionLabelDirective,
+    SprkSelectionContainerComponent,
+    SprkSelectionItemContainerComponent,
+  },
   decorators: [
     storyWrapper(
       storyContent => (

@@ -4,6 +4,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
   selector: '[sprkFieldError]'
 })
 export class SprkFieldErrorDirective implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 
   /**
