@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import ColorSwatch from './ColorSwatch';
 
-const ColorSwatchGrid = ({ color }) => (
+const ColorSwatchGrid = ({ color, additionalClasses }) => (
   <StaticQuery
     query={
         graphql`
@@ -27,20 +27,20 @@ const ColorSwatchGrid = ({ color }) => (
     `}
     render={(data) => {
       const sassColorData = data.allSassVarsJson.edges
-      .filter(item => {
-        return (
-          item.node.file.name === '_colors.scss' &&
+        .filter(item => {
+          return (
+            item.node.file.name === '_colors.scss' &&
           item.node.group[0] === color
-        );
-      })
-      .map(item => (
-        {
-          name: item.node.context.name,
-          value: item.node.context.value,
-          description: item.node.description,
-          hexValue: item.node.type,
-        }
-      ));
+          );
+        })
+        .map(item => (
+          {
+            name: item.node.context.name,
+            value: item.node.context.value,
+            description: item.node.description,
+            hexValue: item.node.type,
+          }
+        ));
 
       const swatches = sassColorData.map(swatch => {
         const {
@@ -50,11 +50,11 @@ const ColorSwatchGrid = ({ color }) => (
           hexValue,
         } = swatch;
         const formattedName = name
-        .replace(/\-/g, ' ')
-        .replace('sprk', '')
-        .split(' ').map(
-          word => word.substring(0, 1).toUpperCase() + word.substring(1)
-        ).join(' ');
+          .replace(/\-/g, ' ')
+          .replace('sprk', '')
+          .split(' ').map(
+            word => word.substring(0, 1).toUpperCase() + word.substring(1)
+          ).join(' ');
 
         return (
           <ColorSwatch
@@ -69,7 +69,7 @@ const ColorSwatchGrid = ({ color }) => (
       });
 
       return (
-        <div className="docs-o-ColorSwatchGrid">
+        <div className={['docs-o-ColorSwatchGrid', additionalClasses].join(' ')}>
           {swatches}
         </div>
       );
