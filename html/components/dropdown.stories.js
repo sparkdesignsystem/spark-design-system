@@ -13,7 +13,7 @@ export default {
   },
 };
 
-export const defaultDropdown = () => {
+export const defaultStory = () => {
   useEffect(() => {
     dropdowns();
   }, []);
@@ -67,11 +67,11 @@ export const defaultDropdown = () => {
   `;
 };
 
-defaultDropdown.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
-export const informationalDropdown = () => {
+export const informational = () => {
   useEffect(() => {
     dropdowns();
   }, []);
@@ -159,6 +159,6 @@ export const informationalDropdown = () => {
   `;
 };
 
-informationalDropdown.story = {
+informational.story = {
   name: 'Informational',
 };
