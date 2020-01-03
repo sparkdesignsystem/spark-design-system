@@ -10,13 +10,13 @@ export default {
   },
 };
 
-export const asASpanElement = () =>(`
+export const defaultStory = () =>(`
   <span
     class="sprk-c-Divider"
     data-id="divider-1"
   ></span>
 `);
 
-asASpanElement.story = {
-  name: 'As a <span>',
+defaultStory.story = {
+  name: 'Default',
 };
