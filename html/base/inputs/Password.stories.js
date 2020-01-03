@@ -10,7 +10,7 @@ export default {
   },
 };
 
-export const passwordInputStory = () => `
+export const passwordInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="password"
@@ -57,11 +57,11 @@ export const passwordInputStory = () => `
     </div>
   `;
 
-passwordInputStory.story = {
+passwordInput.story = {
   name: 'Default',
 };
 
-export const invalidPasswordInputStory = () => `
+export const invalidPasswordInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="password"
@@ -109,11 +109,11 @@ export const invalidPasswordInputStory = () => `
     </div>
   `;
 
-invalidPasswordInputStory.story = {
+invalidPasswordInput.story = {
   name: 'Invalid',
 };
 
-export const disabledPasswordInputStory = () => `
+export const disabledPasswordInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="password"
@@ -162,6 +162,6 @@ export const disabledPasswordInputStory = () => `
     </div>
   `;
 
-disabledPasswordInputStory.story = {
+disabledPasswordInput.story = {
   name: 'Disabled',
 };

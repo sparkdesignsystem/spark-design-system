@@ -57,7 +57,7 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const infoStory = () => (
+export const info = () => (
   <SprkModal
     title="Info Modal"
     isVisible={true}
@@ -68,11 +68,11 @@ export const infoStory = () => (
   </SprkModal>
 );
 
-infoStory.story = {
+info.story = {
   name: 'Info',
 };
 
-export const waitStory = () => (
+export const wait = () => (
   <SprkModal
     title="Wait Modal"
     isVisible={true}
@@ -83,6 +83,6 @@ export const waitStory = () => (
   </SprkModal>
 );
 
-waitStory.story = {
+wait.story = {
   name: 'Wait',
 };

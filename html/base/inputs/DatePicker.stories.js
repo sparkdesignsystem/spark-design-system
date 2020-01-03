@@ -14,7 +14,7 @@ export default {
   },
 };
 
-export const datePickerStory = () => {
+export const datePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
@@ -62,11 +62,11 @@ export const datePickerStory = () => {
   `;
 };
 
-datePickerStory.story = {
+datePicker.story = {
   name: 'Default',
 };
 
-export const invalidDatePickerStory = () => {
+export const invalidDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
@@ -126,11 +126,11 @@ export const invalidDatePickerStory = () => {
   `;
 };
 
-invalidDatePickerStory.story = {
+invalidDatePicker.story = {
   name: 'Invalid',
 };
 
-export const disabledDatePickerStory = () => {
+export const disabledDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
@@ -179,6 +179,6 @@ export const disabledDatePickerStory = () => {
   `;
 };
 
-disabledDatePickerStory.story = {
+disabledDatePicker.story = {
   name: 'Disabled',
 };

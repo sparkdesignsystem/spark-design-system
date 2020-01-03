@@ -90,40 +90,12 @@ export const tertiary = () => ({
   `,
 });
 
-export const disabledPrimary = () => ({
+export const disabled = () => ({
   moduleMetadata: modules,
   template: `
     <button
       disabled
-      data-id="button-disabled-primary"
-      sprkButton
-    >
-      Button
-    </button>
-  `,
-});
-
-export const disabledSecondary = () => ({
-  moduleMetadata: modules,
-  template: `
-    <button
-      disabled
-      class="sprk-c-Button--secondary"
-      data-id="button-disabled-secondary"
-      sprkButton
-    >
-      Button
-    </button>
-  `,
-});
-
-export const disabledTertiary = () => ({
-  moduleMetadata: modules,
-  template: `
-    <button
-      disabled
-      class="sprk-c-Button--tertiary"
-      data-id="button-disabled-tertiary"
+      data-id="button-disabled"
       sprkButton
     >
       Button

@@ -19,7 +19,7 @@ make sure each instance has a unique \`data-id\` property
   },
 };
 
-export const defaultLink = () => (
+export const defaultStory = () => (
   `
     <a
       class="sprk-b-Link"
@@ -32,7 +32,7 @@ export const defaultLink = () => (
   `
 );
 
-defaultLink.story = {
+defaultStory.story = {
   name: 'Default',
 };
 

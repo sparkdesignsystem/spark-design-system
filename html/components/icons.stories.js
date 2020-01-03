@@ -866,6 +866,10 @@ export const mls = () => (
   `
 );
 
+mls.story = {
+  name: 'MLS',
+};
+
 export const mobile = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
@@ -889,6 +893,10 @@ export const multiFamily = () => (
   </svg>
   `
 );
+
+multiFamily.story = {
+  name: 'Multi-Family',
+};
 
 export const multiplePages = () => (
   `
@@ -1049,6 +1057,10 @@ export const pricePerSqFt = () => (
   </svg>
   `
 );
+
+pricePerSqFt.story = {
+  name: 'Price Per SQ FT',
+};
 
 export const print = () => (
   `
@@ -1378,6 +1390,10 @@ export const vip = () => (
   `
 );
 
+vip.story = {
+  name: 'VIP',
+};
+
 export const wifi = () => (
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
@@ -1385,6 +1401,10 @@ export const wifi = () => (
   </svg>
   `
 );
+
+wifi.story = {
+  name: 'Wi-Fi',
+};
 
 export const writtenCheck = () => (
   `

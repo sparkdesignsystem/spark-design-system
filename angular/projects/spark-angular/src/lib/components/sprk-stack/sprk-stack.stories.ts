@@ -418,7 +418,7 @@ export const stackSplitLayoutMixed = () => ({
 });
 
 stackSplitLayoutMixed.story = {
-  name: 'Stack/Split - Mixed',
+  name: 'Stack/Split - Mixed Column',
   parameters: {
     docs: { iframeHeight: 400 },
   },
