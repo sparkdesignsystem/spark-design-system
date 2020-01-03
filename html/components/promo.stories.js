@@ -44,6 +44,10 @@ export const defaultStory = () => (`
   </div>
 `);
 
+defaultStory.story = {
+  name: 'Default',
+};
+
 export const flag = () => (`
   <div
     class="sprk-c-Promo sprk-c-Promo--flag  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
@@ -70,10 +74,6 @@ export const flag = () => (`
 
   </div>
 `);
-
-defaultStory.story = {
-  name: 'Default',
-};
 
 export const withImage = () => (`
   <div
