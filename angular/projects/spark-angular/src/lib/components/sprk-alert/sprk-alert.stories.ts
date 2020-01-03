@@ -69,7 +69,7 @@ fail.story = {
   },
 };
 
-export const withNoDismissButton = () => ({
+export const noDismissButton = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
