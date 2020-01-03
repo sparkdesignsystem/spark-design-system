@@ -55,7 +55,7 @@ const modules = {
   ],
 };
 
-export const datePicker = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -82,7 +82,7 @@ export const datePicker = () => ({
   `,
 });
 
-datePicker.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     docs: { iframeHeight: 400 },
