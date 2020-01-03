@@ -10,7 +10,7 @@ export default {
   },
 };
 
-export const defaultDictionary = () => (
+export const defaultStory = () => (
   `
   <div
     class="sprk-c-Dictionary sprk-b-TypeBodyTwo"
@@ -65,11 +65,11 @@ export const defaultDictionary = () => (
 </div>`
 );
 
-defaultDictionary.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
-export const stripedDictionary = () => `
+export const striped = () => `
     <div
      class="sprk-c-Dictionary sprk-c-Dictionary--striped"
      data-id="dictionary-2"
@@ -123,6 +123,6 @@ export const stripedDictionary = () => `
     </div>
   `;
 
-stripedDictionary.story = {
+striped.story = {
   name: 'Striped',
 };

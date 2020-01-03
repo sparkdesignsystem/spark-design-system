@@ -23,7 +23,7 @@ const modules = {
   imports: [SprkDictionaryModule],
 };
 
-export const defaultDictionary = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-dictionary
@@ -41,7 +41,7 @@ export const defaultDictionary = () => ({
   `
 });
 
-defaultDictionary.story = {
+defaultStory.story = {
   name: 'Default'
 };
 
