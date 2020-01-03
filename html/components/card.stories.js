@@ -33,7 +33,7 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const standoutCard = () => (
+export const standout = () => (
   `
     <div
       class="
@@ -54,10 +54,6 @@ export const standoutCard = () => (
     </div>
   `
 );
-
-standoutCard.story = {
-  name: 'Standout',
-};
 
 export const highlightedHeader = () => (
   `
@@ -116,7 +112,7 @@ highlightedHeader.story = {
   name: 'Highlighted Header',
 };
 
-export const teaserCard = () => (
+export const teaser = () => (
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -159,11 +155,7 @@ export const teaserCard = () => (
   `
 );
 
-teaserCard.story = {
-  name: 'Teaser',
-};
-
-export const teaserWithDiffElOrder = () => (
+export const teaserWithDifferentElementOrder = () => (
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -209,7 +201,7 @@ export const teaserWithDiffElOrder = () => (
   `
 );
 
-teaserWithDiffElOrder.story = {
+teaserWithDifferentElementOrder.story = {
   name: 'Teaser With Different Element Order',
 };
 

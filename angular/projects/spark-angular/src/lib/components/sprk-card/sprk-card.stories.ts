@@ -78,10 +78,6 @@ export const standout = () => ({
   `
 });
 
-standout.story = {
-  name: 'Standout',
-};
-
 export const highlightedHeader = () => ({
   moduleMetadata: modules,
   template: `
@@ -159,7 +155,7 @@ teaser.story = {
   },
 };
 
-export const twoUp = () => ({
+export const twoUpCards = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-stack
@@ -207,14 +203,14 @@ export const twoUp = () => ({
   `,
 });
 
-twoUp.story = {
+twoUpCards.story = {
   name: 'Card Layout - Two Up',
   parameters: {
     docs: { iframeHeight: 600 },
   },
 };
 
-export const threeUp = () => ({
+export const threeUpCards = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-stack
@@ -280,14 +276,14 @@ export const threeUp = () => ({
   `,
 });
 
-threeUp.story = {
+threeUpCards.story = {
   name: 'Card Layout - Three Up',
   parameters: {
     docs: { iframeHeight: 600 },
   },
 };
 
-export const fourUp = () => ({
+export const fourUpCards = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-stack
@@ -371,7 +367,7 @@ export const fourUp = () => ({
   `,
 });
 
-fourUp.story = {
+fourUpCards.story = {
   name: 'Card Layout - Four Up',
   parameters: {
     docs: { iframeHeight: 600 },

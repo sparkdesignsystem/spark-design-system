@@ -104,7 +104,7 @@ export const teaserWithDifferentElementOrder = () => (
   />
 );
 
-export const cardLayoutTwoUp = () => (
+export const twoUpCards = () => (
   <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
     <SprkCard
       idString="card-1"
@@ -157,11 +157,11 @@ export const cardLayoutTwoUp = () => (
   </section>
 );
 
-cardLayoutTwoUp.story = {
+twoUpCards.story = {
   name: 'Card Layout - Two Up',
 };
 
-export const cardLayoutThreeUp = () => (
+export const threeUpCards = () => (
   <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
     <SprkCard
       idString="card-1"
@@ -238,11 +238,11 @@ export const cardLayoutThreeUp = () => (
   </section>
 );
 
-cardLayoutThreeUp.story = {
+threeUpCards.story = {
   name: 'Card Layout - Three Up',
 };
 
-export const cardLayoutFourUp = () => (
+export const fourUpCards = () => (
   <section className="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
     <SprkCard
       idString="card-1"
@@ -343,6 +343,6 @@ export const cardLayoutFourUp = () => (
   </section>
 );
 
-cardLayoutFourUp.story = {
+fourUpCards.story = {
   name: 'Card Layout - Four Up',
 };
