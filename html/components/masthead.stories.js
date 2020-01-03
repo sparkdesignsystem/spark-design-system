@@ -3,6 +3,7 @@ import { masthead, toggleScrollEvent } from './masthead';
 import { toggle } from '../components/toggle';
 import { dropdowns } from '../components/dropdown';
 import isElementVisible from '../utilities/isElementVisible';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Masthead',
@@ -11,8 +12,34 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/masthead)
-    `,
+${markdownDocumentationLinkBuilder('masthead')}
+- You should configure the size of your own logo.
+By default, the logo will be automatically sized
+between the \`$sprk-masthead-logo-min-width\` (174px)
+and \`$sprk-masthead-logo-max-width\` (192px).
+You can additionally override those min and max
+settings by resetting the variables in your own Sass file.
+- The default height of the Masthead on narrow
+viewports is 81px. Your logo might require you to
+update this value in your application’s Sass file using the
+\`$sprk-masthead-narrow-height\` variable. To get the
+correct value, put your logo in the Masthead and view
+the total height at a narrow viewport size. This
+will ensure your navigation items are lined up correctly.
+- Because of the differences in Masthead design between
+narrow and wide viewports, each viewport has its own HTML.
+You must duplicate the HTML for your navigation in both places.
+- The default breakpoint between narrow and wide viewports
+is 54rem (864px). If the content needs of your application
+require this breakpoint to be larger or smaller, it can be
+changed in your application’s Sass file with the
+variable \`$sprk-masthead-breakpoint\`.
+- In Default Masthead the little nav is the section to the
+right of the logo, containing the navigation links and utility
+items. When the number of navigation items is too large to
+fit in one row, the Extended Masthead utilizes a second row,
+the big nav, to display the navigation items.
+`,
   },
 };
 
