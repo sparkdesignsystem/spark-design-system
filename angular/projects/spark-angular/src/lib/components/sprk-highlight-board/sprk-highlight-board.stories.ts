@@ -16,7 +16,14 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('highlight-board'),
+    info: `
+${markdownDocumentationLinkBuilder('highlight-board')}
+##### Accessibility
+- If the Buttons are being used to navigate
+to a new page, they should be \`<a>\` elements.
+If they are being used to trigger an event or action,
+then they should be \`<button>\` elements with \`aria-role=button\`.
+`,
     docs: { iframeHeight: 600 },
   },
 };
