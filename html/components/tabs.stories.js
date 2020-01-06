@@ -9,6 +9,7 @@ export default {
     story => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 300 },
     info: `
 ${markdownDocumentationLinkBuilder('tabs')}
 For this component to function properly, the

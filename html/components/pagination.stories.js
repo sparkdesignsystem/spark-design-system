@@ -8,6 +8,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 70 },
     info: `
 ${markdownDocumentationLinkBuilder('pagination')}
 - The outer container must include the \`data-sprk-pagination\`

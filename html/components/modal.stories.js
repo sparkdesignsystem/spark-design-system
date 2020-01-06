@@ -8,21 +8,22 @@ export default {
     story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 450 },
     info: `
 ${markdownDocumentationLinkBuilder('modal')}
-- There are two parts to a Modal 
+- There are two parts to a Modal
     - 1. Modal Trigger (typically in the form of a Button) - When
-    pressed, it triggers the Modal to appear. 
-    - 2. The Modal – Containing the information or actions. 
+    pressed, it triggers the Modal to appear.
+    - 2. The Modal – Containing the information or actions.
 - The Modal and background mask are hidden by default.
-- A Modal should not be launched from within another Modal. 
+- A Modal should not be launched from within another Modal.
 - The \`data-id\` property is provided as a hook for automated tools.
 Each instance should have a unique \`data-id\` property.
 ("modal-choice-1", "modal-choice-2", "modal-info-1", etc).
 - Make sure that the \`data-sprk-main\` attribute is applied to
-the main body content container or modals will not work. 
+the main body content container or modals will not work.
 - Refer to the table of HTML data attributes to make sure
-the correct attributes are applied in the correct places. 
+the correct attributes are applied in the correct places.
     `,
   },
 };

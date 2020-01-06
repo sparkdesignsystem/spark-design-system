@@ -11,6 +11,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 300 },
     info: `
 ${markdownDocumentationLinkBuilder('stepper')}
 For this component to function properly,
@@ -276,6 +277,12 @@ export const withStepDescriptions = () => {
   `;
 };
 
+withStepDescriptions.story = {
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
+};
+
 export const withDarkBackground = () => {
   useEffect(() => {
     stepper();
@@ -418,6 +425,12 @@ export const withDarkBackground = () => {
 
   </div>
   `;
+};
+
+withDarkBackground.story = {
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };
 
 export const withCarousel = () => {
@@ -630,4 +643,10 @@ export const withCarousel = () => {
     </div>
   </div>
   `;
+};
+
+withCarousel.story = {
+  parameters: {
+    docs: { iframeHeight: 800 },
+  },
 };

@@ -8,6 +8,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 320 },
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,

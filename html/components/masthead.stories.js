@@ -11,6 +11,7 @@ export default {
     story => `<div data-sprk-main>${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 300 },
     info: `
 ${markdownDocumentationLinkBuilder('masthead')}
 - You should configure the size of your own logo.
@@ -1336,3 +1337,9 @@ export const extended = () => {
     </header>
   `;
 };
+
+extended.story = {
+  parameters: {
+    docs: { iframeHeight: 450 },
+  },
+}
