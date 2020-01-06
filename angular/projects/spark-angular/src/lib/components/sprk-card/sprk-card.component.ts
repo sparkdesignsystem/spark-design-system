@@ -132,7 +132,7 @@ export class SprkCardComponent {
   /**
    * The main content
    * of the Card. Placed between
-   * the title and call-to-action.
+   * the title and call to action.
    */
   @Input()
   body: string;
@@ -187,19 +187,19 @@ export class SprkCardComponent {
   @Input()
   imgHref: string;
   /**
-   * Determines which type of call-to-action is rendered.
+   * Determines which type of call to action is rendered.
    * The available values are `link` and `button`.
    */
   @Input()
   ctaType = 'link';
   /**
-   * The text content of the call-to-action.
+   * The text content of the call to action.
    */
   @Input()
   ctaText: string;
   /**
    * The text that will be applied to the `data-analytics` attribute
-   * of the call-to-action.
+   * of the call to action.
    */
   @Input()
   ctaAnalytics: string;
@@ -216,7 +216,7 @@ export class SprkCardComponent {
   @Input()
   iconLinkAnalytics: string;
   /**
-   * The `href` value for the call-to-action.
+   * The `href` value for the call to action.
    */
   @Input()
   ctaHref: string;
@@ -230,7 +230,7 @@ export class SprkCardComponent {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * call-to-action.
+   * call to action.
    */
   @Input()
   additionalCtaClasses: string;
