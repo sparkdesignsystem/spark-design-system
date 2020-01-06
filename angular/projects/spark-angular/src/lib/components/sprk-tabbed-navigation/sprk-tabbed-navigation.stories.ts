@@ -32,7 +32,7 @@ export default {
     },
     info: `
 ${markdownDocumentationLinkBuilder('tabs')}
-- The Tabbed Navigation component makes use of the
+- The Tabs component makes use of the
 \`sprk-u-JavaScript\` class to provide a graceful
 degradation experience in environments where JavaScript
 is not enabled. If \`sprk-u-JavaScript\` is not found on
