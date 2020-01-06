@@ -29,7 +29,7 @@ to screen readers.
     - \`role=tabpanel\` to identify this control for screen readers. 
     - \`aria-labelledby\` to link the content with the associated button.
     - \`tabindex=0\` to place the control in the tab order.
-- The Tabbed Navigation component makes use of the
+- The Tabs component makes use of the
 \`sprk-u-JavaScript\` class to provide a graceful
 degradation experience in environments where JavaScript
 is not enabled. If \`sprk-u-JavaScript\` is not found on
