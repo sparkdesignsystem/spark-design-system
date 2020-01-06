@@ -6,7 +6,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "coverage": "ng test spark-angular --watch=false --code-coverage",
-    "sassdocmodifiers": "sassdoc ../html/**/_*.scss --parse > ../src/data/sass-modifiers.json",
+    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "docs:json": "compodoc --disableLifeCycleHooks -p ./tsconfig.json -e json -d .",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
     "prebuild:storybook": "npm run sassdocmodifiers",
