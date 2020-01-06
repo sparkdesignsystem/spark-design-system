@@ -1,5 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { tabs } from './tabs';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 
 export default {
   title: 'Components/Tabs',
@@ -8,8 +10,33 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/tabs)
-    `,
+${markdownDocumentationLinkBuilder('tabs')}
+For this component to function properly, the
+HTML must be structured correctly:  
+
+- The outer container must have the
+\`data-sprk-navigation=”tabs”\` attribute.
+- The buttons container must have the \`role=tablist\`
+attribute in order to correctly identify this control
+to screen readers.
+- Tabs buttons must have the following attributes:
+    - \`role=tab\` to identify this control to screen readers.
+    - \`aria-controls={id}\` to link the tab button
+    with the associated tab content.
+    - \`aria-selected=true\` when selected.
+    - \`tabindex=0\` to place the control in the tab order
+- Content panels must have the following attributes:
+    - \`role=tabpanel\` to identify this control for screen readers. 
+    - \`aria-labelledby\` to link the content with the associated button.
+    - \`tabindex=0\` to place the control in the tab order.
+- The Tabs component makes use of the
+\`sprk-u-JavaScript\` class to provide a graceful
+degradation experience in environments where JavaScript
+is not enabled. If \`sprk-u-JavaScript\` is not found on
+the \`<html>\` element of the page, the content of all Tabs
+panels will be visible. If \`sprk-u-JavaScript\` is present,
+only one content panel will be visible at a time. 
+`,
   },
 };
 
