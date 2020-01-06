@@ -79,7 +79,12 @@ SprkLink.propTypes = {
    * should be unique per page.
    */
   idString: PropTypes.string,
-  /** The value supplied will be assigned to the 'data-analytics' attribute. */
+  /**
+   * Value assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
   /**
    * A space-separated list of
@@ -89,13 +94,15 @@ SprkLink.propTypes = {
   additionalClasses: PropTypes.string,
   /** The href value for the link. */
   href: PropTypes.string,
-  /** The element that will be rendered. */
+  /**
+   * Determines if link renders as an anchor tag, or router link.
+   */
   element: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
     PropTypes.elementType
   ]),
-  /** The event that will fire when the element is clicked. */
+  /** The event that will fire when the link is clicked. */
   onClick: PropTypes.func,
 };
 
