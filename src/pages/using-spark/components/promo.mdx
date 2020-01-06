@@ -1,0 +1,103 @@
+---
+  title: Promo
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Promo
+
+Promo is a brief message and call to action
+intended to draw attention to promoted or
+related content.
+
+<ComponentPreview
+  componentName="promo--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Use Promo to draw attention to promoted or
+related content, e.g. to link a refinance
+calculator in an article on the refinance process.
+
+### Guidelines
+
+- The text content of Promo should be kept concise.
+- Keep the length of the title and subtitle to one line each.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Default 
+
+The default Promo contains text and a call-to-action.
+
+<ComponentPreview
+  componentName="promo--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Flag
+
+The Flag variant displays text near a small image.
+This variant is useful when you want to incorporate
+an image while keeping the greatest emphasis on the text. 
+
+<ComponentPreview
+  componentName="promo--flag"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### With Image
+
+The Image variant includes an image that takes up
+half the width of the Promo. This is useful when
+you want to include an image with equal prominence to the text.  
+
+To preserve the aspect ratio of Promo, the image height
+will stay consistent with the height of the text content area.
+If there isn’t room for the full width of the image it will be
+cut off on the sides without distorting the image. 
+
+<ComponentPreview
+  componentName="promo--with-image"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### With Image (Reversed)
+
+Identical to the With Image variant with the image
+on the opposite side. 
+
+<ComponentPreview
+  componentName="promo--with-reversed-image"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- Promo should have a heading.
+- Promo may have a sub-heading. 
+- Promo must have text body content. 
+- Promo should have a button. 
+- Promo may have an image. 
+
+## Accessibility
+
+- If the Promo has an image, you must add
+a descriptive `alt` attribute for screen readers. 
