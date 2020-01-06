@@ -20,7 +20,16 @@ export default {
       'SprkTabsPanel',
       'SprkTabsButton',
     ],
-    info: markdownDocumentationLinkBuilder('tab'),
+    info: `
+${markdownDocumentationLinkBuilder('tab')}
+- The Tabbed Navigation component makes use of the
+\`sprk-u-JavaScript\` class to provide a graceful
+degradation experience in environments where JavaScript
+is not enabled. If \`sprk-u-JavaScript\` is not found
+on the \`<html>\` element of the page, the content of
+all Tabs panels will be visible. If \`sprk-u-JavaScript\`
+is present, only one content panel will be visible at a time. 
+`,
   },
 
 };
