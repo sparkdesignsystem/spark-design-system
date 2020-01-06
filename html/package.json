@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --require './runner.js' './tests/*.tests.js'",
     "coverage": "nyc npm test",
-    "sassdocmodifiers": "sassdoc ../html/**/_*.scss --parse > ../src/data/sass-modifiers.json",
+    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "build": "webpack",
     "prepublishOnly": "npm run build",
     "prebuild:storybook": "npm run sassdocmodifiers",
