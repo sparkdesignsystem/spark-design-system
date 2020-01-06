@@ -113,12 +113,12 @@ export class SprkPromoComponent {
   subtitle: string;
   /**
    * Can be `link` or `button`.
-   * This determines the type for the call-to-action in the Promo body.
+   * This determines the type for the call to action in the Promo body.
    */
   @Input()
   cta: string;
   /**
-   * This determines the text for the call-to-action.
+   * This determines the text for the call to action.
    */
   @Input()
   ctaText: string;
@@ -131,7 +131,7 @@ export class SprkPromoComponent {
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the
-   * call-to-action button if `cta` is set to `button`.
+   * call to action button if `cta` is set to `button`.
    * This is intended for an outside library to capture data.
    */
   @Input()
@@ -144,7 +144,7 @@ export class SprkPromoComponent {
   /**
    * The value supplied will be assigned to
    * the `data-analytics` attribute on the
-   * call-to-action link if `cta` is set to
+   * call to action link if `cta` is set to
    * `link`. This is intended for an
    * outside library to capture data.
    */
