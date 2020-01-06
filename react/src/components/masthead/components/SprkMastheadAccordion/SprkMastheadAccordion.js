@@ -56,17 +56,43 @@ SprkMastheadAccordion.propTypes = {
    */
   idString: PropTypes.string,
   /**
-   * Used to render child `SprkMastheadAccordionItem`.
+   * Used to render children of `SprkMastheadAccordionItem`.
    */
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      /**
+       * When the link is rendered to a compatible element
+       * (narrowNav), will draw the specified icon
+       * to the left of the link text.
+       */
       leadingIcon: PropTypes.string,
+      /**
+       * Text for accordion link
+       */
       text: PropTypes.string,
+      /**
+       * Expects an array containing link objects.
+       *  Will be treated as a subnav to the link.
+       */
       subNavLinks: PropTypes.arrayOf(
         PropTypes.shape({
+          /**
+           * Determines if link renders as an anchor tag, or router link.
+           */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          /**
+           * When the link is rendered to a compatible element
+           * (narrowNav), will draw the specified icon
+           * to the left of the link text.
+           */
           leadingIcon: PropTypes.string,
+          /**
+           * text for sub na link
+           */
           text: PropTypes.string,
         }),
       ),
