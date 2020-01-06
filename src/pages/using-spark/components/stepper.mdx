@@ -6,35 +6,28 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Stepper
 
-An Accordion is a simple way of showing,
-hiding and breaking down content. It
-should be used when a large group
-of related content needs to be
-separated into smaller, digestible
-chunks. An Accordion consists of a
-series of Toggle components.
+Stepper displays a series of sequential steps
+with optional descriptions and images. 
 
 <ComponentPreview
   componentName="stepper--default-story"
   hasReact
-  hasAngular
   hasHTML
 />
 
 ### Usage
-An Accordion should be used when
-content needs to be broken down,
-but is still important enough to
-be of primary interest on the page.
-This Accordion's design is used to
-give it some visual weight
-within the design and make it
-apparent that the content is important.
+
+The Stepper is useful for displaying a high-level
+breakdown of a sequential process. Users can manually
+move between steps to access the related descriptions and images. 
 
 ### Guidelines
-- Content length inside the Accordion does not have a limit.
-- Title content of the Accordion can wrap, but it is recommended
-  that it is short and to the point.
+
+- Stepper must have a minimum of two items.
+- Only one step can be selected at a time.
+- Stepper should *not* be used as a progress indicator.
+There is currently no built-in way to mark a step as
+"completed". 
 
 <SprkDivider
  element="span"
@@ -43,33 +36,66 @@ apparent that the content is important.
 
 ## Variants
 
-### Stepper With Step Descriptions
-Info for this.
+### Default
+
+The Default Stepper is a series of steps with titles.
+
+<ComponentPreview
+  componentName="stepper--default-story"
+  hasReact
+  hasHTML
+/>
+
+### With Step Descriptions
+
+Each step can have an associated text description
+that is visible when the step is selected. 
 
 <ComponentPreview
   componentName="stepper--with-step-descriptions"
   hasReact
-  hasAngular
   hasHTML
 />
 
-### Stepper With Dark Background
-Info for this.
+### With Dark Background
+
+If Stepper is on a dark background, the
+font colors will be inverted for better legibility. 
 
 <ComponentPreview
   componentName="stepper--with-dark-background"
-  hasReact
-  hasAngular
   hasHTML
 />
 
-### Stepper With Carousel
-Info for this.
+### With Carousel
+
+In addition to descriptions, each step can have an
+associated image that is displayed in a carousel.
+The carousel rotates so that the image associated
+with the active step is always visible.  
+
+On small screens, the image will stack on top of a
+row of step indicators followed by the step heading
+and description. 
 
 <ComponentPreview
   componentName="stepper--with-carousel"
   hasHTML
 />
 
+## Anatomy
+
+- Stepper must have two or more steps.
+- Stepper must have a heading for each step.
+- Each step may include a description.
+- Each step may have an associated image
+displayed in a carousel.
+
 ## Accessibility
-This is a11y stuff.
+
+- Users can use the UP or LEFT arrow keys
+to select the previous step.
+- Users can use the DOWN or RIGHT arrow
+keys to select the next step.
+- Users can use the HOME or END keys to
+select the first or last step.
