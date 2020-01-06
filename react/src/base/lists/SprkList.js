@@ -31,7 +31,7 @@ SprkList.defaultProps = {
 };
 
 SprkList.propTypes = {
-  /** The element that will be rendered. */
+  /** Determines the type of list element is ordered or unordered. */
   element: PropTypes.oneOf(['ol', 'ul']).isRequired,
   /** The children that will be rendered inside the list. */
   children: PropTypes.node,
