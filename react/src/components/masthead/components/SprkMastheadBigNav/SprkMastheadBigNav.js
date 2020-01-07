@@ -99,9 +99,11 @@ SprkMastheadBigNav.propTypes = {
   /** Used to render navigation inside. */
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The element to render, can be 'a' or a Component like Link. */
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Classes to apply to the container of the link. */
+      /** Additional classes to apply to the container of the link. */
       additionalContainerClasses: PropTypes.string,
       /** Adds a class if the link is active. */
       isActive: PropTypes.bool,
