@@ -121,3 +121,24 @@ body {
 .sbdocs.sbdocs-content {
   max-width: $sprk-centered-column-width;
 }
+
+.sbdocs-gallery-container {
+  flex-wrap: wrap;
+}
+
+.sbdocs-gallery-container__item {
+  align-items: center;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1em 5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.sbdocs-gallery-container__item svg {
+  margin: 1rem;
+}
+

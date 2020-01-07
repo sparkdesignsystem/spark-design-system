@@ -14,7 +14,7 @@ export default {
   },
 };
 
-export const datePicker = () => {
+export const datePickerStory = () => {
   useEffect(() => {
     datePicker();
   }, []);
