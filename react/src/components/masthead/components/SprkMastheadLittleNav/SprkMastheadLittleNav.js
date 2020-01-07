@@ -88,16 +88,34 @@ class SprkMastheadLittleNav extends Component {
 }
 
 SprkMastheadLittleNav.propTypes = {
-  /** classes to be added to the masthead */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** assigned to data-analytics */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** assigned to data-id */
+  /**
+   * Value assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** used to render navigation inside */
+  /** Used to render navigation links inside the little nav */
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The element to render, can be 'a' or a Component like Link */
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       /** Classes to apply to the container of the link */
       additionalContainerClasses: PropTypes.string,
@@ -107,14 +125,23 @@ SprkMastheadLittleNav.propTypes = {
       text: PropTypes.string,
     }),
   ),
-  /** Choices object that builds the dropdown contents */
+  /**
+   * Expects a selector object that
+   * represents choices to be supplied
+   * to the selector in the wide viewport
+   * version of the masthead.
+   */
   selector: PropTypes.shape({
-    /** An array of objects that describe the items in the menu */
+    /**
+     * An array of objects that describe the items in the menu
+     */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        /** The element to render for each menu item */
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        /** Assigned to href of the element is 'a' */
+        /** Assigned to href if the element is an anchor */
         href: PropTypes.string,
         /** The text inside the item */
         text: PropTypes.string,
@@ -123,7 +150,11 @@ SprkMastheadLittleNav.propTypes = {
   }),
   /** Determines the spacing between little nav items */
   spacing: PropTypes.oneOf(['medium', 'large']),
-  /** An array of components to fill the utility area with */
+  /**
+   * Expects an array containing components
+   * to render in the utility area of littleNav,
+   * in the wide viewport version of the masthead.
+   */
   utilityContents: PropTypes.arrayOf(PropTypes.node),
 };
 
