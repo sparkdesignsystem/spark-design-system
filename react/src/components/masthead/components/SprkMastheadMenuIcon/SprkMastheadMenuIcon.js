@@ -84,7 +84,7 @@ SprkMastheadMenuIcon.propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
-   * Function to run when the Menu is clicked.
+   * Function to run when the menu icon is clicked.
    */
   toggleNarrowNav: PropTypes.func.isRequired,
 };
