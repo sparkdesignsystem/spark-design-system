@@ -127,18 +127,19 @@ body {
 }
 
 .sbdocs-gallery-container__item {
-  align-items: center;
-  border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #fff;
-  padding: 1em 5rem;
-  width: 100%;
-  height: 100%;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 12rem;
 }
 
-.sbdocs-gallery-container__item svg {
-  margin: 1rem;
+.sbdocs-gallery-container__item .sprk-c-Icon {
+  margin-bottom: 1rem;
 }
 
+.sbdocs-gallery-container__item p {
+  margin: 0 1rem;
+}
