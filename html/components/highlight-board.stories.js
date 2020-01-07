@@ -1,12 +1,24 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Highlight Board',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 600 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/highlight-board)
-    `,
+${markdownDocumentationLinkBuilder('highlight-board')}
+- Users are able to activate the buttons in Highlight Board
+using the Enter or Space keys on the keyboard.
+Make sure to include keypress handlers in your JavaScript.
+
+##### Accessibility
+- If the Buttons are being used to navigate
+to a new page, they should be \`<a>\` elements.
+If they are being used to trigger an event or action,
+then they should be \`<button>\` elements with \`aria-role=button\`.
+`,
   },
 };
 
@@ -106,6 +118,9 @@ export const noImage = () => `
 
 noImage.story = {
   name: 'No Image',
+  parameters: {
+    docs: { iframeHeight: 300 },
+  },
 };
 
 export const stacked = () => `

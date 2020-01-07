@@ -75,7 +75,7 @@ flag.story = {
   parameters: {
     docs: { iframeHeight: 300 },
   },
-}
+};
 
 export const withImage = () => ({
   moduleMetadata: modules,

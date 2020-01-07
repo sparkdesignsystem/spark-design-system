@@ -1,0 +1,51 @@
+---
+  title: Flag
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Flag
+
+The Flag object is a simple abstraction that displays an
+image or other media next to descriptive content.
+The concept comes from the
+[Nicole Sullivan’s Media Object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
+and was updated to allow vertical
+alignment and renamed the
+[Flag Object by Harry Roberts](https://csswizardry.com/2013/05/the-flag-object/).
+
+<ComponentPreview
+  componentName="flag--default-story"
+  minHeight="20rem"
+  maxWidth="100%"
+  hasHTML
+/>
+
+### Usage
+
+The Flag object is a simple concept but can
+be used any time there is an image or other
+media next to descriptive content.
+
+### Guidelines
+
+- The media can be on the left or right of the content area.
+- The content area can be vertically aligned
+to the top, middle, or the bottom of the media.
+- There are no restrictions on the content
+that can be put in the content area.
+- The Flag object can be nested inside another Flag object.
+- The spacing between the media and the content
+area can be set to any Spacing value.
+- On small viewports, the content area
+can be configured to move below the media.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- A Flag object must have a fixed image or other media.
+- A Flag object must have a flexible content area.

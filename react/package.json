@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --config ./src/jest-config.js --coverage",
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
-    "sassdocmodifiers": "sassdoc ../html/**/_*.scss --parse > ../src/data/sass-modifiers.json",
+    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "build": "rollup -c rollup.config.js",
     "storybook": "npm run prebuild:storybook && start-storybook -p 6006",
     "prebuild:storybook": "npm run test:generate-output && npm run sassdocmodifiers",

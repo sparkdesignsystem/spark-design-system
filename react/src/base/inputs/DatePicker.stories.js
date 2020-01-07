@@ -17,7 +17,7 @@ export default {
   },
 };
 
-export const datePicker = () => (
+export const defaultStory = () => (
   <SprkDatePickerInput
     name="date"
     placeholder="01/01/2019"
@@ -26,7 +26,7 @@ export const datePicker = () => (
   />
 );
 
-datePicker.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [
