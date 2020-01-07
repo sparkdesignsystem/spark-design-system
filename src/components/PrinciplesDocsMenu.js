@@ -36,8 +36,10 @@ const PrinciplesSparkDocsMenu = () => (
                   key={guide.node.parent.name}
                   className="docs-menu__collection-item">
                   <Link
-                    className="menu__link"
-                    to={`/${guide.node.parent.relativeDirectory}/${guide.node.parent.name}`}>{ guide.node.frontmatter.title || guide.node.parent.name }</Link>
+                    className="docs-menu__link"
+                    to={`/principles/${guide.node.parent.name}`}>
+                      { guide.node.frontmatter.title || guide.node.parent.name }
+                  </Link>
                 </li>
               ))}
             </ul>
