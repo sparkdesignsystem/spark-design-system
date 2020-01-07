@@ -8,6 +8,7 @@ export default {
     `,
   ],
   parameters: {
+    docs: { iframeHeight: 140 },
     info: `${markdownDocumentationLinkBuilder('centered-column')}
 - The \`sprk-o-CenteredColumn\` class can be applied to
 any parent element that
