@@ -167,18 +167,22 @@ SprkMastheadDropdown.propTypes = {
    * library to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Incoming children. */
+  /**
+   * Children to render inside of SprkMastheadDropdown
+   */
   children: PropTypes.node,
-  /** Choices object that builds the dropdown contents. */
+  /** Choices object that builds the dropdown content. */
   choices: PropTypes.shape({
     /** An array of objects that describe the items in the menu. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        /** The element to render for each menu item. */
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-        /** Assigned to `href` of the element is 'a'. */
+        /** Assigned to `href` of the dropdown item. */
         href: PropTypes.string,
-        /** The text inside the item. */
+        /** Text title for the dropdown choice. */
         text: PropTypes.string,
       }),
     ),
@@ -196,9 +200,9 @@ SprkMastheadDropdown.propTypes = {
    * per page.
    */
   idString: PropTypes.string,
-  /** The text of the optional header above the choices in the dropdown. */
+  /** The headline text of the optional header above the choices in the dropdown. */
   title: PropTypes.string,
-  /** The variant name. */
+  /** Determines the type of SprkMastheadDropdown to render. */
   variant: PropTypes.oneOf(['base', 'informational']),
 };
 
