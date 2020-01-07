@@ -167,25 +167,42 @@ SprkMastheadAccordionItem.propTypes = {
    * per page.
    */
   idString: PropTypes.string,
-  /** Decides if the outer link is the active link.*/
+  /**
+   * 	If true, denotes that the link represents the current page.
+   */
   isActive: PropTypes.bool,
   /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
   /** The name of the icon to render before the text. */
+  /**
+   * When the link is rendered to
+   * a compatible element (narrowNav),
+   * will draw the specified icon to
+   * the left of the link text.
+   */
   leadingIcon: PropTypes.string,
-  /** An array of link objects that builds the sub nav. */
+  /** Text for the Accordion Item */
+  text: PropTypes.string,
+  /**
+   * Expects an array containing link objects.
+   * Will be treated as a subnav to the link.
+   */
   subNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The element to render, could be 'a' or a Component. */
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Assigned to the href attribute if element is 'a'. */
+      /**
+       * The `href` value assigned the subNavLink item.
+       */
       href: PropTypes.string,
-      /** The element to render, could be 'a' or a Component. */
+      /**
+       * Text for SubNavLink item.
+       */
       text: PropTypes.string,
     }),
   ),
-  /** The text inside the element. */
-  text: PropTypes.string,
 };
 
 SprkMastheadAccordionItem.defaultProps = {
