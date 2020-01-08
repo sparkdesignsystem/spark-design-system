@@ -1,4 +1,22 @@
 import { create } from '@storybook/theming';
+import { getStorybookInstance } from '../getStorybookInstance';
+
+const storybookInstance = getStorybookInstance();
+let sparkLogo;
+
+switch (storybookInstance) {
+  case 'react':
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    break;
+  case 'angular':
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    break;
+  case 'html':
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    break;
+  default:
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+}
 
 export default create({
   base: 'light',
@@ -15,5 +33,5 @@ export default create({
   inputBorderRadius: 4,
   brandTitle: 'Spark Design System',
   brandUrl: 'https://sparkdesignsystem.com',
-  brandImage: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
+  brandImage: sparkLogo,
 });
