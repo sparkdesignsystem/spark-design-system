@@ -40,8 +40,8 @@ export const defaultStory = () => ({
     <sprk-award
       splitAt="tiny"
       title="Spark Award Component"
-      imgOneSrc="https://spark-assets.netlify.com/spark-placeholder.jpg"
-      imgTwoSrc="https://spark-assets.netlify.com/spark-placeholder.jpg"
+      imgOneSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
+      imgTwoSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
       imgOneAlt="placeholder!"
       imgOneHref="#nogo"
       imgTwoHref="#nogo"
