@@ -42,11 +42,20 @@ class CloseButton extends Component {
 }
 
 CloseButton.propTypes = {
-  // function to call when the button is clicked
+  /**
+   * Function to call when button is clicked
+   */
   clickAction: PropTypes.func,
-  // the icon name to render the close icon
+  /**
+   * The icon name to represent the close action
+   */
   iconName: PropTypes.string,
-  // the string rendered for data-analytics
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
 };
 

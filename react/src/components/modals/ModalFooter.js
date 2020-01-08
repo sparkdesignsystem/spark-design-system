@@ -57,14 +57,21 @@ class ModalFooter extends Component {
 }
 
 ModalFooter.propTypes = {
-  // classes to add to the class of the rendered element
+  /**
+   * The function that runs when confirm choice is clicked.
+  */
   confirmClick: PropTypes.func,
+  /**
+   * The function that runs when cancel choice is clicked.
+  */
   cancelClick: PropTypes.func,
+  /** Text to render on the confirmation button. */
   confirmText: PropTypes.string,
+  /** Text to render on the cancel button. */
   cancelText: PropTypes.string,
-  // the string to pass to the confirm button for data-analytics
+  /** The string assigned to the confirmation choice's data-analytics attribute*/
   confirmAnalyticsString: PropTypes.string,
-  // the string to pass to the cancel button for data-analytics
+  /** The string assigned to the cancel choice's data-analytics attribute*/
   cancelAnalyticsString: PropTypes.string,
 };
 

@@ -306,9 +306,9 @@ SprkModal.propTypes = {
   title: PropTypes.string,
   /** Determines style of modal to render. */
   variant: PropTypes.oneOf(['wait', 'info', 'choice']),
-  /** Text to show on the confirmation button. */
+  /** Text to render on the confirmation button. */
   confirmText: PropTypes.string,
-  /** Text to show cancel button. */
+  /** Text to render on the cancel button. */
   cancelText: PropTypes.string,
   /** Sets whether the modal is displayed. */
   isVisible: PropTypes.bool,
