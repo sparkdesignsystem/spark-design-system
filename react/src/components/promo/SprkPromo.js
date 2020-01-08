@@ -190,7 +190,7 @@ const SprkPromo = (props) => {
 
 SprkPromo.propTypes = {
   /**
-   * The children that will
+   * Content that will
    * be rendered inside the content portion
    * of the promo.
   */
@@ -198,16 +198,16 @@ SprkPromo.propTypes = {
   /** The text to appear in the subtitle section. */
   subtitle: PropTypes.string,
   /**
-   * Any additional classes (space-delimited string) to apply to the root
-   * element of the Promo.
-  */
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
   /**
-   * Any additional classes
-   * (space-delimited string) to
-   * apply to the content
-   * element of the Promo.
-  */
+   * Expects a space separated string
+   * of classes to be added to the
+   * content container of the component.
+   */
   additionalClassesContent: PropTypes.string,
   /**
    * The type of element to use
@@ -215,7 +215,7 @@ SprkPromo.propTypes = {
    * is omitted, no Call-to-Action will be rendered.
   */
   cta: PropTypes.oneOf(['button', 'link']),
-  /** The text to include in the Call-to-Action. */
+  /** The text for the Call-to-Action. */
   ctaText: PropTypes.string,
   /** The URL to navigate to when the Call-to-Action is clicked. */
   ctaHref: PropTypes.string,
@@ -241,6 +241,7 @@ SprkPromo.propTypes = {
   additionalClassesImgLink: PropTypes.string,
   /** The string to use for the data-id property on the root Promo element. */
   idString: PropTypes.string,
+  // TODO: Turn this into a variant. Issue #2347
   /** If provided, the Promo will render as the Flag variant. */
   isFlag: PropTypes.bool,
   /**
@@ -250,9 +251,8 @@ SprkPromo.propTypes = {
   */
   mediaRev: PropTypes.bool,
   /**
-   * If provided, the Promo will be
-   * rendered with the sprk-c-Promo--bordered class.
-  */
+   * 	If true, the Promo will be rendered with a border. The styles for the border are determined by `$sprk-promo-border`.
+   */
   hasBorder: PropTypes.bool,
 };
 
