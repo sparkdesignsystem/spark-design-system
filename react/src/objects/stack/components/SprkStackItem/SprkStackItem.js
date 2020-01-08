@@ -28,10 +28,10 @@ SprkStackItem.defaultProps = {
 };
 
 SprkStackItem.propTypes = {
-  /**  The children of the Stack item. */
+  /**  Content to render inside of of SprkStackItem. */
   children: PropTypes.node,
   /**
-   * The value supplied will be assigned
+   * Value assigned
    * to the `data-id` attribute on the
    * component. This is intended to be
    * used as a selector for automated
