@@ -100,27 +100,54 @@ class SprkStepperStep extends Component {
 };
 
 SprkStepperStep.propTypes = {
-  // Any additional classes (space-delimited string) to apply to the root
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  // The provided value will be assigned to the data-id attribute on the Step.
+  /**
+   * Value assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  // The provided value will be assigned to the data-analytics attribute on the Step.
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  // The value to display in the title
+  /*
+   * Text for the headline of the step
+   */
   title: PropTypes.string,
-  // If true, this step will be selected.
+  /**
+   * 	If true, this step will be selected when the component mounts. This property is changed automatically by the Stepper component when the keyboard is used to change the active step or when a step is clicked. Only one step can be selected at a time.
+   */
   isSelected: PropTypes.bool,
-  // An optional function to call when a Step is clicked. Note that this function is called before the Stepper
-  // state is updated.
+  /**
+   * This callback function will be called when the StepperStep is clicked. Note that this function is called before the Stepper state is updated.
+   */
   onClick: PropTypes.func,
-  // If true, the StepperStep will render with lighter text appropriate for displaying on a dark background.
-  // Note that this property is not documented on our docs site as it is only used internally.
+  /**
+   * If true, the StepperStep will render with lighter text appropriate for displaying on a dark background.
+   */
+  // Internal prop
   hasDarkBackground: PropTypes.bool,
-  // If true, the StepperStep will render in a way that is suitable for use with a Slider component
-  // Note that this property is not documented on our docs site as it is only used internally.
+  /**
+   * If true, the StepperStep will render in a way that is suitable for use with a Slider component
+   */
+  // Internal prop
   hasDescription: PropTypes.bool,
-  // A function to call when the component finishes rendering. Used to move the slider to the appropriate position.
-  // Note that this property is not documented on our docs site as it is only used internally.
+  /**
+   * A function to call when the component finishes rendering. Used to move the slider to the appropriate position.
+   */
+  // Internal prop
   renderCallback: PropTypes.func,
 };
 
