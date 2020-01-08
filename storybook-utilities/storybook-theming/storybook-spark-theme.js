@@ -6,16 +6,16 @@ let sparkLogo;
 
 switch (storybookInstance) {
   case 'react':
-    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-react.svg';
     break;
   case 'angular':
-    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-angular.svg';
     break;
   case 'html':
-    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-html.svg';
     break;
   default:
-    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-black-text.svg';
+    sparkLogo = 'https://spark-assets.netlify.com/spark-logo-mark.svg';
 }
 
 export default create({
