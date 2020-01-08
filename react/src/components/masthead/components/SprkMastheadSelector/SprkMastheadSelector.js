@@ -201,39 +201,71 @@ class SprkMastheadSelector extends Component {
 }
 
 SprkMastheadSelector.propTypes = {
-  /** Classes applied to the dropdown */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   additionalClasses: PropTypes.string,
-  /** Classes applied to the icon */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon.
+   */
   additionalIconClasses: PropTypes.string,
-  /** Classes applied to the link that triggers the dropdown to open */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * trigger.
+   */
   additionalTriggerClasses: PropTypes.string,
-  /** Classes applied to the text in the trigger link */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * trigger link.
+   */
   additionalTriggerTextClasses: PropTypes.string,
-  /** Assigned to data-analytics */
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** Choices object that builds the dropdown contents */
+  /** Configuration object that builds the dropdown */
   choices: PropTypes.shape({
     /** A node to render at the foot of the dropdown menu */
     footer: PropTypes.node,
     /** An array of objects that describe the items in the menu */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        /** The element to render for each menu item */
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        /** Assigned to href of the element is 'a' */
+        /**
+         * The `href` value assigned the logo's link.
+         */
         href: PropTypes.string,
-        /** The text inside the item */
+        /** The text for the masthead selector item.*/
         text: PropTypes.string,
       }),
     ).isRequired,
   }).isRequired,
-  /** Incoming children */
+  // TODO: Get rid of this, not needed
   children: PropTypes.node,
   /** The text set as the default of the trigger link */
   defaultTriggerText: PropTypes.string,
   /** The icon type of the trigger icon */
   iconName: PropTypes.string,
-  /** Assigned to data-id  */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
   /** Applies styles if the selector is flush with the sides of the viewport */
   isFlush: PropTypes.bool,
