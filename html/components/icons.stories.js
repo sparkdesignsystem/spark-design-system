@@ -53,6 +53,14 @@ function createIconExample(name) {
   return li;
 }
 
+function attachIcons(iconNames) {
+  const container = document.querySelector('.sbdocs-gallery-container');
+  container.innerHTML = '';
+  iconNames.forEach((iconName) => {
+    container.appendChild(createIconExample(iconName));
+  });
+}
+
 export const Default = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
@@ -66,24 +74,12 @@ Default.story = {
 };
 
 export const Gallery = () => {
-  let iconNames = [];
-
   window.addEventListener('sprk-icons-loaded', () => {
-    iconNames = getIcons();
-    const container = document.querySelector('.sbdocs-gallery-container');
-    container.innerHTML = '';
-    iconNames.forEach((iconName) => {
-      container.appendChild(createIconExample(iconName));
-    });
+    attachIcons(getIcons());
   });
 
   useEffect(() => {
-    iconNames = getIcons();
-    const container = document.querySelector('.sbdocs-gallery-container');
-    container.innerHTML = '';
-    iconNames.forEach((iconName) => {
-      container.appendChild(createIconExample(iconName));
-    });
+    attachIcons(getIcons());
   }, []);
 
   return (
@@ -93,4 +89,7 @@ export const Gallery = () => {
 
 Gallery.story = {
   name: 'Gallery',
+  parameters: {
+    docs: { iframeHeight: 1000 },
+  },
 };
