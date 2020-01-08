@@ -15,18 +15,14 @@ export const defaultStory = () => (
   `
     <div class="sprk-o-Flag sprk-o-Flag--stacked">
       <div class="sprk-o-Flag__figure">
-        <img
-          alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-placeholder.jpg"
-        />
+        <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
+          <use xlink:href="#camera" />
+        </svg>
       </div>
       <div class="sprk-o-Flag__body">
         <p>
           Lorem ipsum dolor. Sit amet pede. Tempus donec et.
           Suspendisse id inventore integer eum non enim diam habitant.
-          Maecenas nunc per lacus neque egestas.
-          Diam quod curabitur. Porttitor vel est id massa posuere tortor
-          fringilla est.
         </p>
       </div>
     </div>
