@@ -68,21 +68,35 @@ SprkTabsButton.propTypes = {
    */
   tabBtnChildren: PropTypes.node.isRequired,
   /**
-   * Value supplied decides if button is active.
+   * Value that determines
+   * if button is active.
    */
   isActive: PropTypes.bool,
   /** A unique ID for each tab button. */
   tabBtnId: PropTypes.string.isRequired,
-  // State passed from parent that contains an id of a btn tab
-  // when the corresponding panel should be focused
+  /**
+   * State passed from parent that contains an
+   * id of a btn tab when the corresponding panel should be focused.
+   */
   isFocused: PropTypes.bool,
-  // The aria ID to use for each tab panel so it corresponds to the button
+  /**
+   * The aria ID to use for each tab panel so it corresponds to the button
+   */
   ariaControls: PropTypes.string,
-  // A string of additional classes to be applied to the tab panel
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * tab panel.
+   */
   tabBtnAddClasses: PropTypes.string,
-  // Determines what to supply to aria-selected
+  /**
+   * Toggles the aria selected state for accessibility.
+   */
   ariaSelected: PropTypes.bool,
   // The click handler for the Tab
+  /**
+   * The function that runs upon  clicking a tab.
+   */
   onTabClick: PropTypes.func,
   // The id used for the data-id attribute
   tabBtnDataId: PropTypes.string,
