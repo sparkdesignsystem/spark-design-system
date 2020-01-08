@@ -173,7 +173,7 @@ SprkTable.propTypes = {
     PropTypes.arrayOf(PropTypes.object),
     PropTypes.arrayOf(PropTypes.array),
   ]),
-  /** A string to determine what variant of the table should render. */
+  /** Determines what variant of the table should render. */
   variant: PropTypes.oneOf([
     'default',
     'secondary',
@@ -182,13 +182,31 @@ SprkTable.propTypes = {
     'secondaryRowComparison',
     'html',
   ]),
-  /** The string to use for the data-id attribute. */
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
   idString: PropTypes.string,
-  /** Any additional classes to add to the table wrapper. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * outermost containers of the component.
+   */
   additionalContainerClasses: PropTypes.string,
-  /** Any additional classes to add to the table. */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * table.
+   */
   additionalTableClasses: PropTypes.string,
-  /** And children markup to be rendered. */
+  /**
+   * Content to render inside of components.
+   * Available only to the `html` variant.
+   */
   children: PropTypes.node,
 };
 
