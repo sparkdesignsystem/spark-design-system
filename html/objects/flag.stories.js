@@ -24,9 +24,6 @@ export const defaultStory = () => (
         <p>
           Lorem ipsum dolor. Sit amet pede. Tempus donec et.
           Suspendisse id inventore integer eum non enim diam habitant.
-          Maecenas nunc per lacus neque egestas.
-          Diam quod curabitur. Porttitor vel est id massa posuere tortor
-          fringilla est.
         </p>
       </div>
     </div>
