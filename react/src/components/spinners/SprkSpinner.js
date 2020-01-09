@@ -21,6 +21,9 @@ SprkSpinner.propTypes = {
   size: PropTypes.oneOf(['small', 'large']),
   lightness: PropTypes.oneOf(['light', 'dark']),
   additionalClasses: PropTypes.string,
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
 };
 

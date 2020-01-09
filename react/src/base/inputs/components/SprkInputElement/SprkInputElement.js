@@ -91,6 +91,9 @@ SprkInputElement.propTypes = {
   type: propTypes.string,
   iconRight: propTypes.bool,
   id: propTypes.string,
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: propTypes.string,
   leadingIcon: propTypes.string,
   textIcon: propTypes.bool,

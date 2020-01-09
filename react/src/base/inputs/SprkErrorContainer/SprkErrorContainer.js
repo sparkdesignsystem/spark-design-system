@@ -27,6 +27,9 @@ SprkErrorContainer.propTypes = {
   additionalClasses: PropTypes.string,
   analyticsString: PropTypes.string,
   id: PropTypes.string.isRequired,
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
   message: PropTypes.string.isRequired,
 };

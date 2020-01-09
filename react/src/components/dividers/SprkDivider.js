@@ -20,12 +20,7 @@ SprkDivider.propTypes = {
    */
   element: PropTypes.oneOf(['span', 'hr']).isRequired,
   /**
-   * Value assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**

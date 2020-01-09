@@ -192,12 +192,7 @@ SprkMastheadDropdown.propTypes = {
   /** The icon type of the trigger icon .*/
   iconName: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** The headline text of the optional header above the choices in the dropdown. */

@@ -221,7 +221,9 @@ SprkPromo.propTypes = {
   ctaHref: PropTypes.string,
   /** The string to use for the data-analytics attribute on the Call-to-Action */
   ctaAnalytics: PropTypes.string,
-  /** The string to use for the data-id attribute on the Call-to-Action */
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   ctaIdString: PropTypes.string,
   /**
    * The source location of the
@@ -235,11 +237,15 @@ SprkPromo.propTypes = {
   imgLinkHref: PropTypes.string,
   /** The string to use for the data-analytics attribute on the image link. */
   imgLinkAnalytics: PropTypes.string,
-  /** The string to use for the data-id attribute on the image link. */
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   imgLinkIdString: PropTypes.string,
   /** Any additional classes (space-delimited string) to apply to the image link. */
   additionalClassesImgLink: PropTypes.string,
-  /** The string to use for the data-id property on the root Promo element. */
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
   // TODO: Turn this into a variant. Issue #2347
   /** If provided, the Promo will render as the Flag variant. */
