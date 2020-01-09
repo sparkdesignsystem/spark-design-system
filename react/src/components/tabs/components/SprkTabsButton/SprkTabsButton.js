@@ -64,7 +64,7 @@ SprkTabsButton.defaultProps = {
 
 SprkTabsButton.propTypes = {
   /**
-   * The content for the button.
+   * The content to render for the button.
    */
   tabBtnChildren: PropTypes.node.isRequired,
   /**
@@ -98,9 +98,14 @@ SprkTabsButton.propTypes = {
    * The function that runs upon  clicking a tab.
    */
   onTabClick: PropTypes.func,
-  // The id used for the data-id attribute
+  /**
+   * The id used for the data-id attribute
+   */
   tabBtnDataId: PropTypes.string,
-  // The value used for the data-analytics attribute
+  /**
+   *
+   The value used for the data-analytics attribute
+   */
   tabBtnAnalytics: PropTypes.string,
 };
 
