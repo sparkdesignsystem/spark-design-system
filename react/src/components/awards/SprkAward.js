@@ -111,7 +111,9 @@ SprkAward.propTypes = {
       addClasses: PropTypes.string,
       /** Additional classes for the link wrapping the image. */
       linkAddClasses: PropTypes.string,
-      /** String used for the data-analytics attribute. */
+      /**
+       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+       */
       analyticsString: PropTypes.string,
     }),
   ).isRequired,

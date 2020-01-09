@@ -69,9 +69,13 @@ ModalFooter.propTypes = {
   confirmText: PropTypes.string,
   /** Text to render on the cancel button. */
   cancelText: PropTypes.string,
-  /** The string assigned to the confirmation choice's data-analytics attribute*/
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   confirmAnalyticsString: PropTypes.string,
-  /** The string assigned to the cancel choice's data-analytics attribute*/
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   cancelAnalyticsString: PropTypes.string,
 };
 

@@ -103,10 +103,7 @@ SprkAccordionItem.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the clickable item.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** The text for the item heading. */

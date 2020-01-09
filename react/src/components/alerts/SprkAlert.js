@@ -103,10 +103,7 @@ SprkAlert.propTypes = {
    */
   isDismissible: PropTypes.bool,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the dismiss button.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**

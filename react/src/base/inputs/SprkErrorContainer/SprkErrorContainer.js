@@ -25,6 +25,9 @@ const SprkErrorContainer = ({
 
 SprkErrorContainer.propTypes = {
   additionalClasses: PropTypes.string,
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
   id: PropTypes.string.isRequired,
   /**

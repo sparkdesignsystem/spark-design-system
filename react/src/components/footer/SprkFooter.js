@@ -241,10 +241,7 @@ SprkFooter.propTypes = {
         /** The description of the image */
         description: PropTypes.string,
         /**
-         * The value supplied will be assigned to the
-         * `data-analytics` attribute on the component.
-         * Intended for an outside
-         * library to capture data.
+         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
          */
         analyticsString: PropTypes.string,
         /**
@@ -275,10 +272,7 @@ SprkFooter.propTypes = {
            */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
           /**
-           * The value supplied will be assigned to the
-           * `data-analytics` attribute on the component.
-           * Intended for an outside
-           * library to capture data.
+           * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
            */
           analyticsString: PropTypes.string,
         }),
@@ -299,10 +293,7 @@ SprkFooter.propTypes = {
         /** Text used for screen readers. */
         screenReaderText: PropTypes.string,
         /**
-         * The value supplied will be assigned to the
-         * `data-analytics` attribute on the component.
-         * Intended for an outside
-         * library to capture data.
+         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
          */
         analyticsString: PropTypes.string,
         /**
@@ -339,10 +330,7 @@ SprkFooter.propTypes = {
          */
         addClasses: PropTypes.string,
        /**
-        * The value supplied will be assigned to the
-        * `data-analytics` attribute on the component.
-        * Intended for an outside
-        * library to capture data.
+        * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
         */
         analyticsString: PropTypes.string,
       }),
@@ -378,10 +366,7 @@ SprkFooter.propTypes = {
        */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       /**
-       * The value supplied will be assigned to the
-       * `data-analytics` attribute on the component.
-       * Intended for an outside
-       * library to capture data.
+       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
        */
       analyticsString: PropTypes.string,
     }),

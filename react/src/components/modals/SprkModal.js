@@ -330,10 +330,7 @@ SprkModal.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -345,13 +342,21 @@ SprkModal.propTypes = {
    * The icon name to use for the close button in the modal. Defaults to "close".
    */
   closeIcon: PropTypes.string,
-  /** The string to pass to the CloseButton as analyticsString */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   closeAnalyticsString: PropTypes.string,
-  /** The string to pass to the modal mask to be used for the data-analytics attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   maskAnalyticsString: PropTypes.string,
-  /** The string to pass to the modal footer for the data-analytics attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   confirmAnalyticsString: PropTypes.string,
-  /** The string to pass to the modal footer for the data-analytics attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   cancelAnalyticsString: PropTypes.string,
 };
 
