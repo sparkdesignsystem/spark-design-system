@@ -17,7 +17,7 @@ export const defaultStory = () => (
       <div class="sprk-o-Flag__figure">
         <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-updated.svg"
+          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
         />
       </div>
       <div class="sprk-o-Flag__body">
