@@ -7,7 +7,7 @@ import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-sp
 import { withTests } from '@storybook/addon-jest';
 import results from '../src/.jest-test-results.json';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
-import '../../storybook-utilities/icon-loader';
+import '../../storybook-utilities/icon-utilities/icon-loader';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { SprkTable } from '@sparkdesignsystem/spark-react';
 import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
