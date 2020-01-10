@@ -203,20 +203,22 @@ export const defaultStory = () => ({
           class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column"
         >
           <li>
-            <a
-              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+            <sprk-link
+              linkType="plain"
               href="#nogo"
+              additionalClasses="sprk-c-Masthead__link"
             >
               Item 1
-            </a>
+            </sprk-link>
           </li>
           <li>
-            <a
-              class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+            <sprk-link
+              linkType="plain"
               href="#nogo"
+              additionalClasses="sprk-c-Masthead__link"
             >
               Item 2
-            </a>
+            </sprk-link>
           </li>
         </ul>
       </div>
@@ -225,40 +227,42 @@ export const defaultStory = () => ({
         utility-slot
       >
         <li>
-          <a
-            class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+          <sprk-link
+            linkType="plain"
             href="#nogo"
+            additionalClasses="sprk-c-Masthead__link"
           >
             (555) 555-5555
-          </a>
+          </sprk-link>
         </li>
         <li>
-          <a
-            class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+          <sprk-link
+            linkType="plain"
             href="#nogo"
+            additionalClasses="sprk-c-Masthead__link"
           >
             Talk To Us
-          </a>
+          </sprk-link>
         </li>
         <li>
-          <a
-            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+          <sprk-link
             href="#nogo"
+            additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
           >
             Sign In
-          </a>
+          </sprk-link>
         </li>
       </ul>
       <div
         class="sprk-u-mas"
         narrowNavFooter
       >
-        <a
-          class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s"
+        <sprk-link
           href="#nogo"
+          additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s"
         >
           Sign In
-        </a>
+        </sprk-link>
       </div>
     </sprk-masthead>
   `,
@@ -443,12 +447,13 @@ export const extended = () => ({
               class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
               sprkDropdownFooter
             >
-              <a
-                class="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
+              <sprk-link
+                linkType="unstyled"
+                additionalClasses="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
                 href="#nogo"
               >
                 Placeholder
-              </a>
+              </sprk-link>
             </div>
           </sprk-dropdown>
         </div>
@@ -459,12 +464,13 @@ export const extended = () => ({
         class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-Stack--center-column"
       >
         <li>
-          <a
-            class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+          <sprk-link
+            linkType="plain"
+            additionalClasses="sprk-c-Masthead__link"
             href="#nogo"
           >
             Talk To Us
-          </a>
+          </sprk-link>
         </li>
         <li>
           <sprk-dropdown

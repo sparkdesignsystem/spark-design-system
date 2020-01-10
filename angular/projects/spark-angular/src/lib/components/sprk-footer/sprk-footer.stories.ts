@@ -45,25 +45,25 @@ export const defaultStory = () => ({
           links: [
             {
               text: 'About This',
-              href: '/about-this',
+              href: '#nogog',
               analyticsString: 'Link to Sub Item 1'
             },
             {
               text: 'About This Other Thing',
-              href: '/about-this-other-thing'
+              href: '#nogo'
             },
             {
               text: 'About That',
-              href: '/about-that'
+              href: '#nogo'
             },
             {
               text: 'Link Item',
-              href: '/link-item',
+              href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
             },
             {
               text: 'This Link Item',
-              href: '/this-link-item',
+              href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
             }
           ]
@@ -73,19 +73,19 @@ export const defaultStory = () => ({
           links: [
             {
               text: 'About This Other Thing',
-              href: '/learn-more-1'
+              href: '#nogo'
             },
             {
               text: 'About This',
-              href: '/learn-more-2'
+              href: '#nogo'
             },
             {
               text: 'About That',
-              href: '/learn-more-3'
+              href: '#nogo'
             },
             {
               text: 'Link Item',
-              href: '/learn-more-4',
+              href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
             }
           ]
@@ -95,25 +95,25 @@ export const defaultStory = () => ({
           links: [
             {
               text: 'Share Your Screen',
-              href: '/share-screen',
+              href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
             },
             {
               text: 'Opt Out',
-              href: '/opt-out'
+              href: '#nogo'
             },
             {
               text: 'About That',
-              href: '/about-that'
+              href: '#nogo'
             },
             {
               text: 'Disclosures and Other Things',
-              href: '/things',
+              href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
             },
             {
               text: 'We Want Your Feedback',
-              href: '/feedback',
+              href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
             }
           ]
@@ -124,7 +124,7 @@ export const defaultStory = () => ({
       [globalLinks]="[
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
-          href: '/global-1',
+          href: '#nogo',
           imgSrc:
             'https://spark-assets.netlify.com/spark-logo-updated.svg',
           analyticsString: 'link-1',
@@ -132,7 +132,7 @@ export const defaultStory = () => ({
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
-          href: '/global-2',
+          href: '#nogo',
           imgSrc:
             'https://spark-assets.netlify.com/spark-logo-updated.svg',
           imgAlt: 'Spark Placeholder Image',
@@ -140,7 +140,7 @@ export const defaultStory = () => ({
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
-          href: '/global-3',
+          href: '#nogo',
           imgSrc:
             'https://spark-assets.netlify.com/spark-logo-updated.svg',
           imgAlt: 'Spark Placeholder Image',
@@ -148,7 +148,7 @@ export const defaultStory = () => ({
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
-          href: '/global-4',
+          href: '#nogo',
           imgSrc:
             'https://spark-assets.netlify.com/spark-logo-updated.svg',
           analyticsString: 'link-4',
@@ -158,28 +158,28 @@ export const defaultStory = () => ({
 
       [socialLinks]="[
         {
-          href: '/icons-1',
+          href: '#nogo',
           icon: 'facebook-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-1',
           iconScreenReaderText: 'facebook'
         },
         {
-          href: '/icons-2',
+          href: '#nogo',
           icon: 'instagram-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-2',
           iconScreenReaderText: 'instagram'
         },
         {
-          href: '/icons-3',
+          href: '#nogo',
           icon: 'twitter-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-3',
           iconScreenReaderText: 'twitter'
         },
         {
-          href: '/icons-4',
+          href: '#nogo',
           icon: 'youtube-two-color',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-4',
@@ -189,21 +189,21 @@ export const defaultStory = () => ({
 
       [badgeLinks]="[
         {
-          href: '/badge-1',
+          href: '#nogo',
           icon: 'townhouse',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'link-1',
           iconScreenReaderText: 'townhouse'
         },
         {
-          href: '/badge-2',
+          href: '#nogo',
           icon: 'townhouse',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'link-2',
           iconScreenReaderText: 'townhouse'
         },
         {
-          href: '/badge-3',
+          href: '#nogo',
           icon: 'townhouse',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'link-3',
@@ -214,14 +214,14 @@ export const defaultStory = () => ({
       awardsHeading="Awards"
       [awards]="[
         {
-          href: '/awards-1',
+          href: '#nogo',
           imgSrc:
             'https://spark-assets.netlify.com/spark-logo-mark.svg',
           imgAlt: 'placeholder',
           analyticsString: 'awards-link-1'
         },
         {
-          href: '/awards-2',
+          href: '#nogo',
           imgSrc:
             'https://spark-assets.netlify.com/spark-logo-mark.svg',
           imgAlt: 'placeholder',
