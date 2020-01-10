@@ -15,7 +15,33 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('icon'),
+    info: `
+${markdownDocumentationLinkBuilder('icon')}
+
+The icons in Spark are the property of Quicken
+Loans and are not provided directly in our packages. You
+will need to include the Icon yourself. Visit our
+guide on Installing Spark Icons.
+
+#### Accessibility
+
+Icons can simply be decorative or intended to convey
+meaning. Each use-case has separate accessibility
+considerations.
+
+Decorative Icons are purely visual or used to reinforcing accompanying
+text.
+
+- The \`aria-hidden="true"\` attribute must be applied to any purely
+decorative icon. This ensures that a screen reader will not communicate
+unwanted meaning to the user.
+
+Standalone Icons convey meaning or imply action and do not have accompanying
+text.
+
+- All Icons contain a title attribute that screen readers will use to
+communicate the Icon’s meaning.
+`,
     docs: { iframeHeight: 90 },
   },
 };
