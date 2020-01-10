@@ -125,8 +125,8 @@ export const defaultStory = () => ({
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
           href: '/global-1',
-          icon: 'auto-loans',
-          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
+          imgSrc:
+            'https://spark-assets.netlify.com/spark-logo-updated.svg',
           analyticsString: 'link-1',
           iconScreenReaderText: 'auto loans'
         },
@@ -134,8 +134,7 @@ export const defaultStory = () => ({
           text: 'Lorem ipsum dolor sit amet, consectetur.',
           href: '/global-2',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS: 'sprk-u-Width-20',
+            'https://spark-assets.netlify.com/spark-logo-updated.svg',
           imgAlt: 'Spark Placeholder Image',
           analyticsString: 'link-2'
         },
@@ -143,26 +142,17 @@ export const defaultStory = () => ({
           text: 'Lorem ipsum dolor sit amet, consectetur.',
           href: '/global-3',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS: 'sprk-u-Width-20',
+            'https://spark-assets.netlify.com/spark-logo-updated.svg',
           imgAlt: 'Spark Placeholder Image',
           analyticsString: 'link-3'
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur.',
           href: '/global-4',
-          icon: 'auto-loans',
-          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
+          imgSrc:
+            'https://spark-assets.netlify.com/spark-logo-updated.svg',
           analyticsString: 'link-4',
           iconScreenReaderText: 'auto loans'
-        },
-        {
-          text: 'Lorem ipsum dolor sit amet, consectetur.',
-          href: '/global-5',
-          icon: 'payment-center',
-          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--stroke-current-color',
-          analyticsString: 'link-5',
-          iconScreenReaderText: 'payment center'
         }
       ]"
 
@@ -226,16 +216,14 @@ export const defaultStory = () => ({
         {
           href: '/awards-1',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS: 'sprk-u-Width-50',
+            'https://spark-assets.netlify.com/spark-logo-mark.svg',
           imgAlt: 'placeholder',
           analyticsString: 'awards-link-1'
         },
         {
           href: '/awards-2',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-placeholder.jpg',
-          imgCSS: 'sprk-u-Width-50',
+            'https://spark-assets.netlify.com/spark-logo-mark.svg',
           imgAlt: 'placeholder',
           analyticsString: 'awards-link-2'
         }
