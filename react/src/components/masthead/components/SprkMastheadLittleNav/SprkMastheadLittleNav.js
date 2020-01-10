@@ -108,7 +108,7 @@ SprkMastheadLittleNav.propTypes = {
        */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       /**
-       * A space-separated string of classes to add to the link ite.
+       * A space-separated string of classes to add to the link item.
        */
       additionalContainerClasses: PropTypes.string,
       /** Adds a class if the link is active */
