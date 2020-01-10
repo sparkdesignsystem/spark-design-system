@@ -187,15 +187,16 @@ SprkTable.propTypes = {
    */
   idString: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * outermost containers of the component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalContainerClasses: PropTypes.string,
   /**
    * Expects a space separated string
    * of classes to be added to the
    * table.
+   */
+  /**
+   * A space-separated string of classes to add to the table.
    */
   additionalTableClasses: PropTypes.string,
   /**

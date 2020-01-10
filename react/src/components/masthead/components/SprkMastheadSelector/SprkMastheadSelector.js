@@ -206,21 +206,15 @@ SprkMastheadSelector.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon.
+   * A space-separated string of classes to add to the icon.
    */
   additionalIconClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * trigger.
+   * A space-separated string of classes to add to the trigger element.
    */
   additionalTriggerClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * trigger link.
+   * A space-separated string of classes to add to the trigger text.
    */
   additionalTriggerTextClasses: PropTypes.string,
   /**

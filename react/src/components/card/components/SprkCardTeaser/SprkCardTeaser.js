@@ -210,7 +210,9 @@ SprkCardTeaser.propTypes = {
      * Configures the call-to-action of a Teaser Card.
      */
     cta: PropTypes.shape({
-      /** Extra classes on the call-to-action of Teaser Card. */
+      /**
+       * A space-separated string of classes to add to the call-to-action icon.
+       */
       additionalCtaIconClasses: PropTypes.string,
       /**
        * Value assigned to the
@@ -248,9 +250,7 @@ SprkCardTeaser.propTypes = {
      */
     media: PropTypes.shape({
       /**
-       * Expects a space separated string
-       * of classes to be added to the
-       * media icon.
+       * A space-separated string of classes to add to the media icon.
        */
       additionalMediaIconClasses: PropTypes.string,
       /**

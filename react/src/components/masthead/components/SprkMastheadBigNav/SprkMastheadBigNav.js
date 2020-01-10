@@ -93,7 +93,9 @@ SprkMastheadBigNav.propTypes = {
        * Determines if link renders as an anchor tag, or router link.
        */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Additional classes to apply to the container of the link. */
+      /**
+       * A space-separated string of classes to add to the link item.
+       */
       additionalContainerClasses: PropTypes.string,
       /** Adds a class if the link is active. */
       isActive: PropTypes.bool,
