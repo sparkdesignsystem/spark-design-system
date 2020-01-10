@@ -89,17 +89,43 @@ SprkInputElement.propTypes = {
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: propTypes.string,
+  /**
+   * Configured by parent and assigned to the `aria-describedby` attribute.
+   */
   errorContainerId: propTypes.string,
+  /**
+   * A function supplied will be passed the value of the input and then executed, if the valid prop is true. The value returned will be assigned to the value of the input.
+   */
   formatter: propTypes.func,
+  /**
+   * Determines type of Input.
+   */
   type: propTypes.string,
+  /**
+   * 	Positions the leadingIcon inside of the input to the right.
+   */
   iconRight: propTypes.bool,
+  /**
+   * Configured by parent and assigned to the `htmlFor` attribute.
+   */
   id: propTypes.string,
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: propTypes.string,
+  /**
+   * The name of the icon, when supplied,
+   * will be rendered inside the input element.
+   */
   leadingIcon: propTypes.string,
+  /**
+   * If true, will render the currency icon inside the input element.
+   */
   textIcon: propTypes.bool,
+  /**
+   * Determines whether to render the
+   * component in the valid or the error state.
+   */
   valid: propTypes.bool,
 };
 

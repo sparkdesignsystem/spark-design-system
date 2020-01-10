@@ -32,11 +32,17 @@ SprkErrorContainer.propTypes = {
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
+  /**
+   * Configured by parent and assigned to the `htmlFor` attribute.
+   */
   id: PropTypes.string.isRequired,
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * Error text to show.
+   */
   message: PropTypes.string.isRequired,
 };
 

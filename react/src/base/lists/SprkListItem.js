@@ -18,7 +18,9 @@ SprkListItem.defaultProps = {
 };
 
 SprkListItem.propTypes = {
-  // The children that will be rendered inside the list
+  /**
+   * Content to render inside list item.
+   */
   children: PropTypes.node,
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
