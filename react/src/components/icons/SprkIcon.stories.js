@@ -67,8 +67,11 @@ export const gallery = () => {
 gallery.story = {
   name: 'Gallery',
   parameters: {
-    docs: { iframeHeight: 1000 },
-  },
+    docs: {
+      inlineStories: false,
+      iframeHeight: 1000
+    },
+  }
 };
 
 
