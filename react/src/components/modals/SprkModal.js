@@ -324,9 +324,7 @@ SprkModal.propTypes = {
    */
   shouldReturnFocusOnClose: PropTypes.bool,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * modal's outermost container.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**

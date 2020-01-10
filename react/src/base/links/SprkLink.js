@@ -80,10 +80,8 @@ SprkLink.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * A space-separated list of
-   * classes that will be added
-   * to the outermost element.
-  */
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
   /** The href value for the link. */
   href: PropTypes.string,

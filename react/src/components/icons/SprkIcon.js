@@ -24,9 +24,7 @@ function SprkIcon({
 
 SprkIcon.propTypes = {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /** Incoming children. */

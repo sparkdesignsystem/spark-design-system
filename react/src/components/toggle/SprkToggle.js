@@ -91,7 +91,9 @@ SprkToggle.propTypes = {
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
   */
   analyticsString: PropTypes.string,
-  /** A string of additional classes for the Tabs component. */
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
   /** Additional classes for the title text. */
   titleAddClasses: PropTypes.string,

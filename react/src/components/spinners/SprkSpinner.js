@@ -20,6 +20,9 @@ function SprkSpinner({ size, lightness, additionalClasses, ...rest }) {
 SprkSpinner.propTypes = {
   size: PropTypes.oneOf(['small', 'large']),
   lightness: PropTypes.oneOf(['light', 'dark']),
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.

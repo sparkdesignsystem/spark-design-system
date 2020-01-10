@@ -24,7 +24,9 @@ SprkListItem.propTypes = {
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  // Any additional classes to add to the link
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
 };
 
