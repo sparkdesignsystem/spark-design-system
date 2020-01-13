@@ -196,7 +196,7 @@ const SprkPagination = (props) => {
 
 SprkPagination.propTypes = {
   /**
-   * The determinds what style of pagination to render.
+   * This determines what style of pagination to render.
    */
   variant: PropTypes.oneOf(['default', 'pager']),
   /**

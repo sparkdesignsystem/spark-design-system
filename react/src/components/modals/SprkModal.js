@@ -316,7 +316,7 @@ SprkModal.propTypes = {
   confirmClick: PropTypes.func,
   /**
    * The function that runs when the cancel choice is clicked.
-   * Cancel choices includ clicking the X, clicking the Mask, or pressing Esc.
+   * Cancel choices include clicking the x icon, Mask, or pressing Esc.
   */
   cancelClick: PropTypes.func,
   /**

@@ -62,7 +62,7 @@ ModalFooter.propTypes = {
   */
   confirmClick: PropTypes.func,
   /**
-   * The function that runs when cancel choice is clicked.
+   * The function that runs when cancel choice, the mask, or Esc is pressed.
   */
   cancelClick: PropTypes.func,
   /** Text to render on the confirmation button. */

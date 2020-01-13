@@ -75,8 +75,7 @@ SprkTabsButton.propTypes = {
   /** A unique ID for each tab button. */
   tabBtnId: PropTypes.string.isRequired,
   /**
-   * State passed from parent that contains an
-   * id of a btn tab when the corresponding panel should be focused.
+   * Determines if tab is focused.
    */
   isFocused: PropTypes.bool,
   /**
