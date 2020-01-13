@@ -142,8 +142,7 @@ SprkTextInput.propTypes = {
    */
   narrowWidth: PropTypes.bool,
   /**
-   * The name of the icon, when supplied,
-   * will be rendered inside the input element.
+   * The name of the icon to render inside the input element.
    */
   leadingIcon: PropTypes.string,
   /**

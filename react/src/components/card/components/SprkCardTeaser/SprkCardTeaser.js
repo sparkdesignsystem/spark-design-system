@@ -234,7 +234,7 @@ SprkCardTeaser.propTypes = {
         PropTypes.elementType
       ]),
       /**
-       * Determinds if the CTA is a link or a button.
+       * Determines if the CTA is a link or a button.
        * Will default to `link` if none provided.
        */
       ctaVariant: PropTypes.oneOf(['link', 'button']),

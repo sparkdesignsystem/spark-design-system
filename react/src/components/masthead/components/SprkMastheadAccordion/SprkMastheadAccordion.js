@@ -81,7 +81,7 @@ SprkMastheadAccordion.propTypes = {
            */
           leadingIcon: PropTypes.string,
           /**
-           * text for sub na link
+           * text for sub nav link
            */
           text: PropTypes.string,
         }),

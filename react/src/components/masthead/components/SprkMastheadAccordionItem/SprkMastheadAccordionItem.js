@@ -163,12 +163,9 @@ SprkMastheadAccordionItem.propTypes = {
   isActive: PropTypes.bool,
   /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
-  /** The name of the icon to render before the text. */
   /**
-   * When the link is rendered to
-   * a compatible element (narrowNav),
-   * will draw the specified icon to
-   * the left of the link text.
+   * The name of the icon to the left of the link text.
+   * Will render in compatible components like narrowNav.
    */
   leadingIcon: PropTypes.string,
   /** Text for the Accordion Item */

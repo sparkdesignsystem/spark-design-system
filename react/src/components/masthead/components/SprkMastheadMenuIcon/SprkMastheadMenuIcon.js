@@ -70,7 +70,7 @@ SprkMastheadMenuIcon.propTypes = {
    */
   idString: PropTypes.string,
   /**
-   * If `true`, the Menu will be open on first render.
+   * Determines if the Masthead Menu is open.
    */
   isOpen: PropTypes.bool,
   /**

@@ -191,11 +191,6 @@ SprkTable.propTypes = {
    */
   additionalContainerClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * table.
-   */
-  /**
    * A space-separated string of classes to add to the table.
    */
   additionalTableClasses: PropTypes.string,
