@@ -23,7 +23,7 @@ Icons can simply be decorative or intended to convey
 meaning. Each use-case has separate accessibility
 considerations.
 
-Decorative Icons are purely visual or used to reinforcing accompanying
+Decorative Icons are purely visual or used to reinforce accompanying
 text.
 
 - The \`aria-hidden="true"\` attribute must be applied to any purely
