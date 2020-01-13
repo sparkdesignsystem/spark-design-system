@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { stepper } from './stepper';
+import { stepper, bindUIEvents, positionSlider, resetSlider } from './stepper';
 import '../utilities/polyfills/classListSVG';
 import '../utilities/polyfills/CustomEvent';
 import '../utilities/polyfills/ObjectPrepend';
@@ -8,7 +8,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Stepper',
   decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
+    story => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
   ],
   parameters: {
     docs: { iframeHeight: 300 },
@@ -70,9 +70,9 @@ export const defaultStory = () => {
     aria-orientation="vertical"
   >
     <li
-    role="tab"
-    class="sprk-c-Stepper__step"
-    data-sprk-stepper="step"
+      role="tab"
+      class="sprk-c-Stepper__step"
+      data-sprk-stepper="step"
     >
       <div class="sprk-c-Stepper__step-content">
         <span
@@ -87,10 +87,10 @@ export const defaultStory = () => {
     </li>
 
     <li
-    role="tab"
-    class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
-    aria-selected="true"
-    data-sprk-stepper="step"
+      role="tab"
+      class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+      aria-selected="true"
+      data-sprk-stepper="step"
     >
       <div class="sprk-c-Stepper__step-content">
         <span
@@ -105,9 +105,9 @@ export const defaultStory = () => {
     </li>
 
     <li
-    role="tab"
-    class="sprk-c-Stepper__step"
-    data-sprk-stepper="step"
+      role="tab"
+      class="sprk-c-Stepper__step"
+      data-sprk-stepper="step"
     >
       <div class="sprk-c-Stepper__step-content">
         <span
@@ -130,6 +130,8 @@ defaultStory.story = {
 
 export const withStepDescriptions = () => {
   useEffect(() => {
+    resetSlider();
+    positionSlider();
     stepper();
   }, []);
 
