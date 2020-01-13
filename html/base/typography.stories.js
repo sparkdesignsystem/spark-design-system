@@ -8,7 +8,35 @@ export default {
   parameters: {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/foundations/typography)
-    `,
+
+- Heading elements have Typography settings automatically applied,
+but the classes can be used to change the style of a heading
+without affecting the page outline by modifying the heading
+element that is used.
+- All body copy will automatically have the style and size 
+applied by Spark. Use the classes to modify the default.
+
+##### Line-height Collision
+
+By default, line height on type will create extra
+whitespace around the top and bottom of the text.
+When the text is in a container that has padding applied,
+it appears larger than intended, due to this extra
+whitespace.  
+
+Spark automatically removes this whitespace from headings,
+but it will only be removed on body copy if the Spark
+body classes are used.  
+
+For details on how we remove the whitespace, please see this article:
+[Cropping Away Negative Impacts of Line Height](https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce)  
+
+The type sizes defined in spark all have this extra
+whitespace removed. Heading elements have this cropping
+automatically applied, where body copy will need the
+correct type classes applied. 
+`,
+    docs: { iframeHeight: 180 },
   },
 };
 

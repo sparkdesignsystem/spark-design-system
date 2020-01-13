@@ -1,0 +1,45 @@
+---
+  title: Award
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Award
+
+A responsive layout for
+showcasing Awards with a disclaimer.
+
+<ComponentPreview
+  componentName="award--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="26rem"
+  maxWidth="100%"
+/>
+
+### Usage
+
+Use Award to showcase company accolades
+with a disclaimer. Award is a
+standard component of the
+[Footer](/using-spark/components/footer).
+
+### Guidelines
+
+- The heading text is centered and can wrap to multiple lines.
+- Award images are stacked by default and
+expand to a side-by-side layout on larger viewports.
+- The Award images may be a clickable link.
+- Disclaimer content is hidden in a [Toggle](/using-spark/components/toggle) by default.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- Award must have a headline.
+- Award must have 1–2 images.
+- Award must have a disclaimer in a Toggle.

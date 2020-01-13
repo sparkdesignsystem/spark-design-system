@@ -7,6 +7,7 @@ export default {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/card)
     `,
+    docs: { iframeHeight: 200 },
   },
 };
 
@@ -31,9 +32,12 @@ export const defaultStory = () => (
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    docs: { iframeHeight: 150 },
+  },
 };
 
-export const standoutCard = () => (
+export const standout = () => (
   `
     <div
       class="
@@ -54,10 +58,6 @@ export const standoutCard = () => (
     </div>
   `
 );
-
-standoutCard.story = {
-  name: 'Standout',
-};
 
 export const highlightedHeader = () => (
   `
@@ -114,9 +114,12 @@ export const highlightedHeader = () => (
 
 highlightedHeader.story = {
   name: 'Highlighted Header',
+  parameters: {
+    docs: { iframeHeight: 300 },
+  },
 };
 
-export const teaserCard = () => (
+export const teaser = () => (
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -159,11 +162,13 @@ export const teaserCard = () => (
   `
 );
 
-teaserCard.story = {
-  name: 'Teaser',
+teaser.story = {
+  parameters: {
+    docs: { iframeHeight: 500 },
+  },
 };
 
-export const teaserWithDiffElOrder = () => (
+export const teaserWithDifferentElementOrder = () => (
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -209,8 +214,11 @@ export const teaserWithDiffElOrder = () => (
   `
 );
 
-teaserWithDiffElOrder.story = {
+teaserWithDifferentElementOrder.story = {
   name: 'Teaser With Different Element Order',
+  parameters: {
+    docs: { iframeHeight: 500 },
+  },
 };
 
 export const twoUpCards = () => (
@@ -335,6 +343,9 @@ export const twoUpCards = () => (
 
 twoUpCards.story = {
   name: 'Card Layout - Two Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };
 
 export const threeUpCards = () => (
@@ -519,6 +530,9 @@ export const threeUpCards = () => (
 
 threeUpCards.story = {
   name: 'Card Layout - Three Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };
 
 export const fourUpCards = () => (
@@ -666,4 +680,7 @@ export const fourUpCards = () => (
 
 fourUpCards.story = {
   name: 'Card Layout - Four Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };

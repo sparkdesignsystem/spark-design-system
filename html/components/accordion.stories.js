@@ -9,7 +9,19 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('accordion'),
+    info: `
+${markdownDocumentationLinkBuilder('accordion')}
+- \`data-sprk-toggle\` and \`data-sprk-toggle-type\` are
+necessary attributes for this component to function.
+This will take care of visually expanding/collapsing
+the accordion as well as toggling the \`aria-expanded\` attribute.
+- The \`data-id\` property is provided as a hook for
+automated tools. If you have multiple instances of the
+same variant of a component on the same page, make
+sure each instance has a unique \`data-id\` property
+("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc).
+`,
+    docs: { iframeHeight: 420 },
   },
 };
 

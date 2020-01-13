@@ -84,32 +84,32 @@ export class SprkHighlightBoardComponent {
   imgAlt: string;
   /**
    * The Highlight Board will use this as
-   * the text for the main call-to-action.
+   * the text for the main call to action.
    */
   @Input()
   ctaText: string;
   /**
    * The Highlight Board will use this as the
-   * `href` for the main call-to-action.
+   * `href` for the main call to action.
    */
   @Input()
   ctaHref: string;
   /**
    * The Highlight Board will use this as
-   * the text for the secondary call-to-action.
+   * the text for the secondary call to action.
    */
   @Input()
   ctaText2: string;
   /**
    * The Highlight Board will use this
    * as the `href` for the secondary
-   * call-to-action.
+   * call to action.
    */
   @Input()
   ctaHref2: string;
   /**
    * The value supplied will be assigned to
-   * the `data-analytics` attribute on the call-to-action.
+   * the `data-analytics` attribute on the call to action.
    * Intended for an outside library to capture data.
    */
   @Input()
@@ -117,7 +117,7 @@ export class SprkHighlightBoardComponent {
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the second
-   * call-to-action. Intended for an outside
+   * call to action. Intended for an outside
    * library to capture data.
    */
   @Input()

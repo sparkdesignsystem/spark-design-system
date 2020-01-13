@@ -1,7 +1,10 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
@@ -11,6 +14,12 @@ import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker
 export default {
   title: 'Components/Input/Date Picker',
   component: SparkInputContainerComponent,
+  subcomponents: {
+    SprkDatepickerDirective,
+    SprkLabelDirective,
+    SprkInputDirective,
+    SprkIconComponent,
+  },
   decorators: [
     storyWrapper(
       storyContent => (
@@ -28,9 +37,6 @@ export default {
     }
   },
   parameters: {
-    subcomponents: {
-      SprkDatepickerDirective,
-    },
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,
@@ -49,7 +55,7 @@ const modules = {
   ],
 };
 
-export const datePicker = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -76,7 +82,7 @@ export const datePicker = () => ({
   `,
 });
 
-datePicker.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     docs: { iframeHeight: 400 },

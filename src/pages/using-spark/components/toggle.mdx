@@ -1,0 +1,44 @@
+---
+  title: Toggle
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Toggle
+
+Toggle shows and hides a block of content.
+
+<ComponentPreview
+  componentName="toggle--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Use Toggle when you need to toggle the
+visibility of a block of content. For
+example, a disclaimer. 
+
+### Guidelines
+
+- By default, Toggle content is hidden,
+so high-priority content should be avoided. 
+- If you are using several Toggle components
+in succession, consider the
+[Accordion](/using-spark/components/accordion) component. 
+- The content within a Toggle should be kept
+short and relevant to its context for maximum usability. 
+- Keep the text of the Toggle trigger short. 
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- A Toggle component must have an element that
+triggers visibility of the Toggle content.
+- A Toggle component must have a content area.

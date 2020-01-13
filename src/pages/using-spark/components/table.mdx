@@ -1,0 +1,110 @@
+---
+  title: Table
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Table
+
+Tables organize and display information
+from a data set into rows and columns. 
+
+<ComponentPreview
+  componentName="table--column-comparison"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Use Table for data that is intended to be
+easily scanned and compared. If your data is
+only key value pairs, consider the
+[Dictionary](/using-spark/components/dictionary)
+component instead.
+
+### Guidelines
+
+- If the contents of a Table would cause it to exceed
+the width of the viewport, the Table will become
+horizontally scrollable.
+- The data in a Table column should be related to
+the column heading.
+- A Table cell should only contain one value.
+- Tables must only be used for tabular data, not layout.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Column Comparison
+
+Column Comparison is the default Table.
+It is useful for comparing columns of data. 
+
+<ComponentPreview
+  componentName="table--column-comparison"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Secondary Table
+
+Secondary Table reduces the visual weight of
+the headers, making the Table stand out less. 
+
+<ComponentPreview
+  componentName="table--secondary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Grouped Columns
+
+Grouped Column Table should be used when multiple columns
+have a similar theme and need to be grouped with a higher
+level header. 
+
+<ComponentPreview
+  componentName="table--grouped-columns"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Row Comparison
+
+Row Comparison adds a header to each row,
+allowing data to be grouped across rows and columns. 
+
+<ComponentPreview
+  componentName="table--row-comparison"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Secondary Row Comparison
+
+Secondary Row Comparison removes the column
+headers and adds a dedicated column for an action. 
+
+<ComponentPreview
+  componentName="table--secondary-row-comparison"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- Table must include headers (column, row, or both).
+- Secondary Row Comparison Table should include an action,
+such as a [Link](/using-spark/components/link) or
+[Button](/using-spark/components/button).

@@ -209,15 +209,15 @@ SprkPromo.propTypes = {
   additionalClassesContent: PropTypes.string,
   /**
    * The type of element to use
-   * for the Promo Call-to-Action. If this property
-   * is omitted, no Call-to-Action will be rendered.
+   * for the Promo Call to Action. If this property
+   * is omitted, no Call to Action will be rendered.
   */
   cta: PropTypes.oneOf(['button', 'link']),
   /** The text for the Call-to-Action. */
   ctaText: PropTypes.string,
-  /** The URL to navigate to when the Call-to-Action is clicked. */
+  /** The URL to navigate to when the Call to Action is clicked. */
   ctaHref: PropTypes.string,
-  /** The string to use for the data-analytics attribute on the Call-to-Action */
+  /** The string to use for the data-analytics attribute on the Call to Action */
   ctaAnalytics: PropTypes.string,
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.

@@ -1,0 +1,142 @@
+---
+  title: Button
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Button
+
+A Button represents an action or choice for the user. 
+
+### Usage
+
+Buttons are the main actionable items on a page.
+Buttons typically trigger a new UI element to appear
+on the page and are essential to submitting forms,
+beginning a new task, or navigating to the next
+step in a process.
+
+<ComponentPreview
+  componentName="button--primary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Guidelines
+
+- Effective Button text uses precise, task-specific
+action verbs like: “Add”, “Remove”, “Read Details”,
+and “Submit”. Avoid ambiguous words like “Yes”,
+“No”, “OK”, and “Click Here”.
+- Effective Button text is less than 20 characters. 
+- All button text should be in title case
+(capitalize the first letter of each word). 
+- Button text should never wrap to a second line. 
+- Button width should not exceed 280px. 
+- For navigational actions that appear within
+a line of text, use [Link](https://spark-docs.netlify.com/using-spark/components/link)
+instead of Button.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Primary Button
+
+The most important action on the page should
+use Primary Button. Effective action flows
+contain one Primary Button per page. 
+
+<ComponentPreview
+  componentName="button--primary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Secondary Button
+
+A Secondary Button typically represents the
+highest priority alternative to the Primary Button.
+There can be more than one on a page and can depict
+similar or different actions. 
+
+<ComponentPreview
+  componentName="button--secondary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Tertiary Button
+
+A Tertiary Button represents the lowest prioritized
+action on a page. They are typically used in a
+[Modal](https://spark-docs.netlify.com/using-spark/components/modal)
+to cancel a choice. They look like a text 
+[Link](https://spark-docs.netlify.com/using-spark/components/link)
+but have the same padding and focus rules as other Buttons.
+
+<ComponentPreview
+  componentName="button--tertiary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## States
+
+### Disabled
+
+A Disabled Button represents an action that is not
+currently available for the user. They imply that
+the Button would be available, given a certain set
+of circumstances. Since a user cannot interact with
+this button, consider if it’s necessary to show the
+disabled button at all. Otherwise, make it clear
+in the interface why a button is Disabled.
+
+<ComponentPreview
+  componentName="button--disabled"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Loading
+
+When data is being saved or submitted, a loading
+indicator may replace the Button text. 
+
+<ComponentPreview
+  componentName="button--spinner"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Full Width at Smaller Viewports
+
+At small viewport sizes, a Button may be used at full width.
+
+<ComponentPreview
+  componentName="button--full-width-at-small-viewport"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- A Button must contain text and/or an Icon
+
+## Accessibility
+
+- If a Button is using an `<a>` element,
+you must include a `title=””` attribute.
+- If a Button only includes an Icon with no
+text, alternative text must be provided.

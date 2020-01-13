@@ -1,0 +1,46 @@
+---
+  title: Box
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Box
+
+Box is a layout component that
+separates a group of content
+from its surroundings.
+
+<ComponentPreview
+  componentName="box--default-box"
+  hasHTML
+/>
+
+### Usage
+
+Use Box when you have a group of content that
+needs to be visually separated from other
+content on the page through padding.
+
+Since the effects of Box are only seen through
+whitespace, the example has a background
+color to illustrate how Box works.
+
+### Guidelines
+
+- By default, Box padding is set to Medium.
+- Box has 6 built in padding sizes that are paired with our Spacing values.
+  - Flush (`0px`)
+  - Tiny (`4px`, `$sprk-space-inset-xs`)
+  - Small (`8px`, `$sprk-space-inset-s`)
+  - Medium (`16px`, `$sprk-space-inset-m`)
+  - Large (`32px`, `$sprk-space-inset-l`)
+  - Huge (`64px`, `$sprk-space-inset-xl`)
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- Box is an empty container using Inset Space.

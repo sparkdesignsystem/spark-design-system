@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { pagination } from './pagination';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Pagination',
@@ -7,9 +8,31 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 70 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/pagination)
-    `,
+${markdownDocumentationLinkBuilder('pagination')}
+- The outer container must include the \`data-sprk-pagination\`
+attribute and each page \`<li>\` must include the
+\`data-sprk-pagination=”item”\` attribute. This is used
+to automatically set the \`aria-label\` on those elements. 
+- In order to use this component, you will need to write
+JavaScript handlers for the following functionality: 
+    - When a page is clicked:
+        - Set its \`aria-current\` attribute to “true” and
+        set \`aria-current\` to “false” on all other pages. 
+        - Add the \`sprk-c-Pagination__link--current\`
+        class and remove it from other page numbers. 
+        - If the current page is the first page, disable
+        the “previous” Icon chevron. 
+        - If the current page is the last page, disable
+        the “next” Icon chevron. 
+        - If there are more than 3 pages in the control,
+        insert an \`<li>\` containing an ellipsis (…) between
+        the first and current links and between the current and last links. 
+    - Developers will also need to implement the JavaScript
+    that uses the currently selected page to determine
+    which paged data to show to the user. 
+`,
   },
 };
 

@@ -60,7 +60,7 @@ export const flag = () => ({
   template: `
     <sprk-promo
       isFlag="true"
-      imgSrc="https://spark-assets.netlify.com/spark-placeholder.jpg"
+      imgSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
       imgAlt="Spark Design System Logo"
       idString="promo-2"
     >
@@ -75,7 +75,7 @@ flag.story = {
   parameters: {
     docs: { iframeHeight: 300 },
   },
-}
+};
 
 export const withImage = () => ({
   moduleMetadata: modules,

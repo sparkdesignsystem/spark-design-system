@@ -8,6 +8,7 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 400 },
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
     `,
@@ -37,14 +38,14 @@ export const defaultStory = () => {
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
-          src="https://spark-assets.netlify.com/spark-placeholder.jpg" />
+          src="https://spark-assets.netlify.com/spark-logo-updated.svg" />
       </a>
 
       <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
-          src="https://spark-assets.netlify.com/spark-placeholder.jpg" />
+          src="https://spark-assets.netlify.com/spark-logo-updated.svg" />
       </a>
     </div>
 

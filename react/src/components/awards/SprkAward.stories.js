@@ -32,14 +32,14 @@ export const defaultStory = () => (
     images={[
       {
         href: '#nogo',
-        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-logo-updated.svg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-1',
         element: 'a',
       },
       {
         href: '#nogo',
-        src: 'https://spark-assets.netlify.com/spark-placeholder.jpg',
+        src: 'https://spark-assets.netlify.com/spark-logo-updated.svg',
         alt: 'Spark Placeholder Logo',
         analyticsString: 'award-2',
         element: 'a',

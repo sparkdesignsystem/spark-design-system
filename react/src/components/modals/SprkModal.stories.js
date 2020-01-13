@@ -12,6 +12,10 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   parameters: {
+    docs: {
+      inlineStories: false,
+      iframeHeight: 450
+    },
     subcomponents: {
       Mask,
       ModalFooter,
@@ -23,7 +27,20 @@ export default {
       'Mask',
       'ModalFooter',
     ],
-    info: markdownDocumentationLinkBuilder('modal'),
+    info: `
+${markdownDocumentationLinkBuilder('modal')}
+- There are two parts to a Modal
+    - 1. Modal Trigger (typically in the form of a Button) - When
+    pressed, it triggers the Modal to appear.
+    - 2. The Modal – Containing the information or actions.
+- The Modal and background mask are hidden by default.
+- A Modal should not be launched from within another Modal.
+- The \`data-id\` property is provided as a hook for automated tools.
+Each instance should have a unique \`data-id\` property.
+("modal-choice-1", "modal-choice-2", "modal-info-1", etc).
+- Wait Modal visibility is controlled by writing a function
+that sets the value of the \`isVisible\` property.
+`,
   },
 
 };
@@ -44,7 +61,7 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const infoStory = () => (
+export const info = () => (
   <SprkModal
     title="Info Modal"
     isVisible={true}
@@ -55,11 +72,11 @@ export const infoStory = () => (
   </SprkModal>
 );
 
-infoStory.story = {
+info.story = {
   name: 'Info',
 };
 
-export const waitStory = () => (
+export const wait = () => (
   <SprkModal
     title="Wait Modal"
     isVisible={true}
@@ -70,6 +87,6 @@ export const waitStory = () => (
   </SprkModal>
 );
 
-waitStory.story = {
+wait.story = {
   name: 'Wait',
 };

@@ -3,6 +3,7 @@ import { stepper } from './stepper';
 import '../utilities/polyfills/classListSVG';
 import '../utilities/polyfills/CustomEvent';
 import '../utilities/polyfills/ObjectPrepend';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Stepper',
@@ -10,9 +11,48 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 300 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/stepper)
-    `,
+${markdownDocumentationLinkBuilder('stepper')}
+For this component to function properly,
+the HTML must be structured correctly:  
+
+- \`data-sprk-stepper=”container”\` on the \`<ol>\`.
+- \`data-sprk-stepper=”step”\` on individual steps.
+- \`data-sprk-stepper=”description”\` on the step
+description containers.
+- \`data-sprk-stepper=”heading”\` on the step
+heading elements. 
+- \`aria-selected=true\` on the active step.
+- \`aria-role=”tablist”\` on the \`<ol>\`. 
+- \`aria-role=”tab”\` on each step.
+- \`aria-role=”tabpanel”\` on the description container.
+- \`aria-labelledby\` with a value that ties the
+descriptions to the related step heading on the
+description container.
+
+When using the Carousel variant:  
+
+- \`data-sprk-carousel=”ID”\` on the carousel
+element with a unique value for ID. 
+- \`data-sprk-stepper-carousel=”id”\` on the
+\`<ol>\` with the same value as \`data-spark-carousel\`.  
+- \`data-sprk-carousel-dots\` on the container
+that will contain the clickable “dots” used to
+navigate on small viewports.
+
+Other considerations:  
+
+- The active step cannot be programmatically
+updated in the HTML implementation of Stepper.
+- Stepper makes use of the \`sprk-u-JavaScript\`
+class to provide a graceful degradation experience
+in environments where JavaScript is not enabled. 
+If \`sprk-u-JavaScript\` is not found on the \`<html>\`
+element of the page, all the steps will be visible.
+If \`sprk-u-JavaScript\` is present, only one step
+will be visible at a time.
+`,
   },
 };
 
@@ -237,6 +277,12 @@ export const withStepDescriptions = () => {
   `;
 };
 
+withStepDescriptions.story = {
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
+};
+
 export const withDarkBackground = () => {
   useEffect(() => {
     stepper();
@@ -379,6 +425,12 @@ export const withDarkBackground = () => {
 
   </div>
   `;
+};
+
+withDarkBackground.story = {
+  parameters: {
+    docs: { iframeHeight: 600 },
+  },
 };
 
 export const withCarousel = () => {
@@ -591,4 +643,10 @@ export const withCarousel = () => {
     </div>
   </div>
   `;
+};
+
+withCarousel.story = {
+  parameters: {
+    docs: { iframeHeight: 800 },
+  },
 };

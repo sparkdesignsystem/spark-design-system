@@ -2,14 +2,24 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Search',
   component: SparkInputContainerComponent,
+  subcomponents: {
+    SprkInputDirective,
+    SprkIconComponent,
+    SprkLabelDirective,
+    SprkFieldErrorDirective,
+  },
   decorators: [
     storyWrapper(
       storyContent => (
@@ -119,7 +129,7 @@ invalidSearchInput.story = {
   name: 'Invalid',
 };
 
-export const disabeldSearchInput = () => ({
+export const disabledSearchInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -149,7 +159,7 @@ export const disabeldSearchInput = () => ({
   `,
 });
 
-disabeldSearchInput.story = {
+disabledSearchInput.story = {
   name: 'Disabled',
 };
 

@@ -7,6 +7,7 @@ export default {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/promo)
     `,
+    docs: { iframeHeight: 430 },
   },
 };
 
@@ -44,6 +45,10 @@ export const defaultStory = () => (`
   </div>
 `);
 
+defaultStory.story = {
+  name: 'Default',
+};
+
 export const flag = () => (`
   <div
     class="sprk-c-Promo sprk-c-Promo--flag  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
@@ -54,7 +59,7 @@ export const flag = () => (`
       <img
         class="sprk-c-Promo__image--flag"
         alt="Spark placeholder image."
-        src="https://spark-assets.netlify.com/spark-placeholder.jpg"
+        src="https://spark-assets.netlify.com/spark-logo-updated.svg"
       >
     </a>
 
@@ -71,8 +76,10 @@ export const flag = () => (`
   </div>
 `);
 
-defaultStory.story = {
-  name: 'Default',
+flag.story = {
+  parameters: {
+    docs: { iframeHeight: 300 },
+  },
 };
 
 export const withImage = () => (`

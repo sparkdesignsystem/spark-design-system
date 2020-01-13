@@ -14,8 +14,8 @@ export default {
   },
 };
 
-export const asASpanElement = () => <SprkDivider idString="divider-1" element="span" />;
+export const defaultStory = () => <SprkDivider idString="divider-1" element="span" />;
 
-asASpanElement.story = {
-  name: 'As a <span>',
+defaultStory.story = {
+  name: 'Default',
 };

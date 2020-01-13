@@ -8,13 +8,14 @@ export default {
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 320 },
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,
   },
 };
 
-export const datePickerStory = () => {
+export const defaultStory = () => {
   useEffect(() => {
     datePicker();
   }, []);
@@ -62,11 +63,11 @@ export const datePickerStory = () => {
   `;
 };
 
-datePickerStory.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
-export const invalidDatePickerStory = () => {
+export const invalidDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
@@ -126,11 +127,11 @@ export const invalidDatePickerStory = () => {
   `;
 };
 
-invalidDatePickerStory.story = {
+invalidDatePicker.story = {
   name: 'Invalid',
 };
 
-export const disabledDatePickerStory = () => {
+export const disabledDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
@@ -179,6 +180,6 @@ export const disabledDatePickerStory = () => {
   `;
 };
 
-disabledDatePickerStory.story = {
+disabledDatePicker.story = {
   name: 'Disabled',
 };

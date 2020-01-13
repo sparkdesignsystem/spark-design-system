@@ -7,10 +7,11 @@ export default {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,
+    docs: { iframeHeight: 140 },
   },
 };
 
-export const passwordInputStory = () => `
+export const passwordInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="password"
@@ -57,11 +58,11 @@ export const passwordInputStory = () => `
     </div>
   `;
 
-passwordInputStory.story = {
+passwordInput.story = {
   name: 'Default',
 };
 
-export const invalidPasswordInputStory = () => `
+export const invalidPasswordInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="password"
@@ -109,11 +110,11 @@ export const invalidPasswordInputStory = () => `
     </div>
   `;
 
-invalidPasswordInputStory.story = {
+invalidPasswordInput.story = {
   name: 'Invalid',
 };
 
-export const disabledPasswordInputStory = () => `
+export const disabledPasswordInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="password"
@@ -162,6 +163,6 @@ export const disabledPasswordInputStory = () => `
     </div>
   `;
 
-disabledPasswordInputStory.story = {
+disabledPasswordInput.story = {
   name: 'Disabled',
 };

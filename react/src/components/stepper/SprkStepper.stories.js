@@ -15,7 +15,16 @@ export default {
       SprkStepperSlider,
       SprkStepperStep
     },
-    info: markdownDocumentationLinkBuilder('stepper'),
+    info: `
+${markdownDocumentationLinkBuilder('stepper')}
+- The React Stepper uses the index of its children
+to keep track of the active step. If you want to modify
+the index of the child steps (for example, by sorting
+them or adding more steps) you need to re-initialize
+the component so that it tracks the updated indexes.
+- The active step can be updated programmatically
+by changing the value of \`isSelected\` on the steps. 
+`,
     jest: [
       'SprkStepper',
       'SprkStepperSlider',

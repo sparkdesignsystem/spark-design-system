@@ -1,16 +1,26 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Link',
   decorators: [
     story => `<div class="sprk-o-Box">${story()}</div>`,
   ],
   parameters: {
+    docs: { iframeHeight: 80 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/link)
-    `,
+${markdownDocumentationLinkBuilder('link')}
+- Spark Link styles are for text-based links.
+Images that are links should not use Spark classes.
+- The \`data-id\` property is provided as a hook for
+automated tools. If you have multiple instances
+of the same variant of a component on the same page,
+make sure each instance has a unique \`data-id\` property
+("link-1", "link-2", "link-3", etc).
+`,
   },
 };
 
-export const defaultLink = () => (
+export const defaultStory = () => (
   `
     <a
       class="sprk-b-Link"
@@ -23,7 +33,7 @@ export const defaultLink = () => (
   `
 );
 
-defaultLink.story = {
+defaultStory.story = {
   name: 'Default',
 };
 

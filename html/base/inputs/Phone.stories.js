@@ -7,10 +7,11 @@ export default {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,
+    docs: { iframeHeight: 140 },
   },
 };
 
-export const phoneInputStory = () => `
+export const phoneInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="phone"
@@ -37,11 +38,11 @@ export const phoneInputStory = () => `
     </div>
   `;
 
-phoneInputStory.story = {
+phoneInput.story = {
   name: 'Default',
 };
 
-export const invalidPhoneInputStory = () => `
+export const invalidPhoneInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="phone"
@@ -79,11 +80,11 @@ export const invalidPhoneInputStory = () => `
     </div>
   `;
 
-invalidPhoneInputStory.story = {
+invalidPhoneInput.story = {
   name: 'Invalid',
 };
 
-export const disabledPhoneInputStory = () => `
+export const disabledPhoneInput = () => `
     <div
       class="sprk-b-InputContainer"
       data-sprk-input="phone"
@@ -111,6 +112,6 @@ export const disabledPhoneInputStory = () => `
     </div>
   `;
 
-disabledPhoneInputStory.story = {
+disabledPhoneInput.story = {
   name: 'Disabled',
 };

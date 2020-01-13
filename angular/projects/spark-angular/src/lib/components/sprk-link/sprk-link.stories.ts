@@ -17,7 +17,11 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('link'),
+    info: `
+${markdownDocumentationLinkBuilder('link')}
+- Spark Link styles are for text-based links.
+Images that are links should not use Spark classes.
+`,
     docs: { iframeHeight: 60 },
   },
 };

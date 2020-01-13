@@ -124,16 +124,18 @@ SprkHighlightBoard.propTypes = {
    */
   heading: PropTypes.string,
   /**
-   * The text for the main call-to-action.
+   * The Highlight Board will use this as
+   * the text for the main call to action.
    */
   ctaText: PropTypes.string,
   /**
-   * The `href` for the main call-to-action.
+   * The Highlight Board will use this as the
+   * `href` for the main call to action.
    */
   ctaHref: PropTypes.string,
   /**
    * The value supplied will be assigned to
-   * the `data-analytics` attribute on the call-to-action.
+   * the `data-analytics` attribute on the call to action.
    * Intended for an outside library to capture data.
    */
   ctaAnalytics: PropTypes.string,
@@ -141,21 +143,21 @@ SprkHighlightBoard.propTypes = {
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   ctaIdString: PropTypes.string,
-  /** The text for the second call-to-action. */
+  /** The text for the second call to action. */
   ctaText2: PropTypes.string,
   /**
-   * The `href` for the second call-to-action.
+   * The `href` for the second call to action.
    */
   ctaHref2: PropTypes.string,
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the second
-   * call-to-action. Intended for an outside
+   * call to action. Intended for an outside
    * library to capture data.
    */
   ctaAnalytics2: PropTypes.string,
   /**
-   * The `data-id` for the second call-to-action.
+   * The `data-id` for the second call to action.
    */
   ctaIdString2: PropTypes.string,
   /**

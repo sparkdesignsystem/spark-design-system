@@ -11,7 +11,11 @@ export default {
   component: SprkLink,
   parameters: {
     jest: ['SprkLink'],
-    info: markdownDocumentationLinkBuilder('link'),
+    info: `
+${markdownDocumentationLinkBuilder('link')}
+- Spark Link styles are for text-based links.
+Images that are links should not use Spark classes. 
+`,
   },
 };
 

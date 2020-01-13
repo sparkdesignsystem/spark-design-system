@@ -7,10 +7,11 @@ export default {
     info: `
 ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
     `,
+    docs: { iframeHeight: 140 },
   },
 };
 
-export const dateInputStory = () => `
+export const dateInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -37,11 +38,11 @@ export const dateInputStory = () => `
     </div>
   `;
 
-dateInputStory.story = {
+dateInput.story = {
   name: 'Default',
 };
 
-export const invalidDateInputStory = () => `
+export const invalidDateInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -79,11 +80,11 @@ export const invalidDateInputStory = () => `
     </div>
   `;
 
-invalidDateInputStory.story = {
+invalidDateInput.story = {
   name: 'Invalid',
 };
 
-export const disabledDateInputStory = () => `
+export const disabledDateInput = () => `
     <div
       class="sprk-b-InputContainer"
     >
@@ -111,6 +112,6 @@ export const disabledDateInputStory = () => `
     </div>
   `;
 
-disabledDateInputStory.story = {
+disabledDateInput.story = {
   name: 'Disabled',
 };

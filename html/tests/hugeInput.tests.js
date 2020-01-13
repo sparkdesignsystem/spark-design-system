@@ -98,7 +98,6 @@ describe('hugeInput tests', () => {
     input.value = 'test-value';
     const event = new window.Event('load');
     window.dispatchEvent(event);
-    console.log(input.value, 'cats');
     expect(input.classList.contains('sprk-b-TextInput--float-label')).eql(true);
   });
 

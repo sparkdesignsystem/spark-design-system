@@ -15,7 +15,7 @@
     "serve": "gatsby serve",
     "prebuild": "npm run sassdoc && npm run sassdocmodifiers",
     "sassdoc": "sassdoc ./html/settings/**/*.scss --parse > ./src/data/sass-vars.json",
-    "sassdocmodifiers": "sassdoc ./html/**/_*.scss --parse > ./src/data/sass-modifiers.json"
+    "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json"
   },
   "author": "Quicken Loans",
   "bugs": {

@@ -5,6 +5,9 @@ import TinyDatePicker from 'tiny-date-picker';
   selector: '[sprkDatepicker]'
 })
 export class SprkDatepickerDirective implements OnInit {
+  /**
+   * @ignore
+   */
   constructor(public ref: ElementRef) {}
 
   /**

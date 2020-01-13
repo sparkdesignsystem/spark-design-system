@@ -1,16 +1,26 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 import { SprkSelectionContainerComponent} from './sprk-selection-container/sprk-selection-container.component';
 import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 
 export default {
   title: 'Components/Input/Radio',
   component: SprkSelectionContainerComponent,
+  subcomponents: {
+    SprkSelectionInputDirective,
+    SprkSelectionLabelDirective,
+    SprkLabelDirective,
+    SprkFieldErrorDirective,
+  },
   decorators: [
     storyWrapper(
       storyContent => (
