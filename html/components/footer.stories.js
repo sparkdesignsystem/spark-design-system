@@ -31,7 +31,7 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                   <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
                 </a>
               </div>
@@ -43,7 +43,7 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                   <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
                 </a>
               </div>
@@ -55,7 +55,7 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                   <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
                 </a>
               </div>
@@ -67,7 +67,7 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                   <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
                 </a>
               </div>
@@ -188,7 +188,7 @@ export const defaultStory = () => {
               <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
                 <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                    <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                       <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                         <use xlink:href="#facebook-two-color" />
                       </svg>
@@ -197,7 +197,7 @@ export const defaultStory = () => {
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                    <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                       <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                         <use xlink:href="#instagram-two-color" />
                       </svg>
@@ -206,7 +206,7 @@ export const defaultStory = () => {
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                    <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                       <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                         <use xlink:href="#twitter-two-color" />
                       </svg>
@@ -215,7 +215,7 @@ export const defaultStory = () => {
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+                    <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                       <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                         <use xlink:href="#youtube-two-color" />
                       </svg>
@@ -238,7 +238,7 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
               <div class="sprk-o-Stack__item">
-                <a href="#">
+                <a href="#nogo">
                   <img
                     src="https://spark-assets.netlify.com/spark-logo-mark.svg"
                     alt="spark logo">
@@ -246,7 +246,7 @@ export const defaultStory = () => {
               </div>
 
               <div class="sprk-o-Stack__item">
-                <a href="#">
+                <a href="#nogo">
                   <img
                     src="https://spark-assets.netlify.com/spark-logo-mark.svg"
                     alt="spark logo">
@@ -256,7 +256,7 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item">
               <div data-sprk-toggle="container">
-                <a class="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon sprk-u-FontWeight--normal" data-sprk-toggle="trigger" href="#">
+                <a class="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon sprk-u-FontWeight--normal" data-sprk-toggle="trigger" href="#nogo">
                   <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
                     <use xlink:href="#chevron-down-circle-two-color"></use>
                   </svg>
@@ -299,7 +299,7 @@ export const defaultStory = () => {
 
           <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
             <li class="sprk-o-Stack__item">
-              <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                 <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                   <use xlink:href="#townhouse" />
                 </svg>
@@ -308,7 +308,7 @@ export const defaultStory = () => {
             </li>
 
             <li class="sprk-o-Stack__item">
-              <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                 <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                   <use xlink:href="#townhouse" />
                 </svg>
@@ -317,7 +317,7 @@ export const defaultStory = () => {
             </li>
 
             <li class="sprk-o-Stack__item">
-              <a class="sprk-b-Link sprk-b-Link--plain" href="#">
+              <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
                 <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l" viewBox="0 0 64 64">
                   <use xlink:href="#townhouse" />
                 </svg>
