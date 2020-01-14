@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { stepper, bindUIEvents, positionSlider, resetSlider } from './stepper';
+import { stepper } from './stepper';
 import '../utilities/polyfills/classListSVG';
 import '../utilities/polyfills/CustomEvent';
 import '../utilities/polyfills/ObjectPrepend';
@@ -130,8 +130,6 @@ defaultStory.story = {
 
 export const withStepDescriptions = () => {
   useEffect(() => {
-    resetSlider();
-    positionSlider();
     stepper();
   }, []);
 
