@@ -42,6 +42,7 @@
     "@sparkdesignsystem/spark-react": "1.1.1",
     "@storybook/addon-a11y": "^5.3.0-rc.12",
     "@storybook/addon-docs": "^5.3.0-rc.12",
+    "@storybook/addon-google-analytics": "^5.3.2",
     "@storybook/addons": "^5.3.0-rc.12",
     "@storybook/html": "^5.3.0-rc.12",
     "@storybook/preset-scss": "^1.0.2",

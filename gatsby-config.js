@@ -72,9 +72,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: 'gatsby-plugin-postcss',
       options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+        postCssPlugins: [require('postcss-preset-env')({ stage: 0 })],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: 'UA-113915182-1',
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
       },
     },
   ],
