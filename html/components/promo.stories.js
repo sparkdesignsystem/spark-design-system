@@ -36,7 +36,7 @@ export const defaultStory = () => (`
       </div>
 
       <div class="sprk-o-Stack__item">
-        <a href="#" class="sprk-c-Button">
+        <a href="#nogo" class="sprk-c-Button">
           Learn More
         </a>
       </div>
@@ -55,7 +55,7 @@ export const flag = () => (`
     data-id="promo-2"
   >
 
-    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
+    <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
       <img
         class="sprk-c-Promo__image--flag"
         alt="Spark placeholder image."
@@ -88,7 +88,7 @@ export const withImage = () => (`
     data-id="promo-3"
   >
 
-    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
+    <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.com/blue-house.jpg"
@@ -113,7 +113,7 @@ export const withImage = () => (`
       </div>
 
       <div class="sprk-o-Stack__item">
-        <a href="#" class="sprk-c-Button">
+        <a href="#nogo" class="sprk-c-Button">
           Learn More
         </a>
       </div>
@@ -145,13 +145,13 @@ export const withReversedImage = () => (`
       </div>
 
       <div class="sprk-o-Stack__item">
-        <a href="#" class="sprk-c-Button">
+        <a href="#nogo" class="sprk-c-Button">
           Learn More
         </a>
       </div>
     </div>
 
-    <a href="#" class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
+    <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.com/blue-house.jpg"
