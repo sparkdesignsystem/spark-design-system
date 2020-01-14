@@ -54,13 +54,13 @@ export const defaultStory = () => `
           sprk-o-Stack--center-column"
         >
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a class="sprk-c-Button sprk-c-Button--full@s" href="http://www.sparkdesignsystem.com">
+            <a class="sprk-c-Button sprk-c-Button--full@s" href="#nogo">
               Designers
             </a>
           </div>
 
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary" href="http://www.sparkdesignsystem.com">
+            <a class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary" href="#nogo">
               Developers
             </a>
           </div>
@@ -99,7 +99,7 @@ export const noImage = () => `
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a class="
             sprk-c-Button
-            sprk-c-Button--full@s" href="http://www.sparkdesignsystem.com">
+            sprk-c-Button--full@s" href="#nogo">
             Designers
           </a>
         </div>
@@ -107,7 +107,7 @@ export const noImage = () => `
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a
             class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary"
-            href="http://www.sparkdesignsystem.com">
+            href="#nogo">
             Developers
           </a>
         </div>
@@ -155,7 +155,7 @@ export const stacked = () => `
         sprk-o-Stack--center-row"
         >
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-          <a class="sprk-c-Button sprk-c-Button--full@s" href="http://www.sparkdesignsystem.com">
+          <a class="sprk-c-Button sprk-c-Button--full@s" href="#nogo">
             Designers
           </a>
         </div>
@@ -163,7 +163,7 @@ export const stacked = () => `
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a
             class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary"
-            href="http://www.sparkdesignsystem.com">
+            href="#nogo">
             Developers
           </a>
         </div>
