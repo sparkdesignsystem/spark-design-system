@@ -121,12 +121,13 @@ const dropdownChoices = {
       text: 'Option 2',
       value: 'option-2',
       element: 'a',
-      to: '#nogo',
+      href: '#nogo',
     },
     {
       text: 'Option 3',
       value: 'option-3',
-      to: '#nogo',
+      element: 'a',
+      href: '#nogo',
     },
   ],
 };
@@ -362,6 +363,7 @@ export const extended = () => (
     </svg>}
     utilityContents={utilityItems}
     variant="extended"
+    logoLink="#nogo"
   />
 );
 
