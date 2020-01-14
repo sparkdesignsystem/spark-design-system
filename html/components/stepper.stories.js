@@ -446,14 +446,16 @@ export const withCarousel = () => {
     } else {
       iframeWindow = window;
     }
-    const event = document.createEvent('Event');
-    event.initEvent('resize', true, true);
-    iframeWindow.addEventListener('resize', () => {
-      iframeWindow.resizeBy(0, 0);
-    }, false);
-    setTimeout(() => {
-      iframeWindow.dispatchEvent(event);
-    }, 500);
+    if (iframeWindow) {
+      const event = document.createEvent('Event');
+      event.initEvent('resize', true, true);
+      iframeWindow.addEventListener('resize', () => {
+        iframeWindow.resizeBy(0, 0);
+      }, false);
+      setTimeout(() => {
+        iframeWindow.dispatchEvent(event);
+      }, 500);
+    }
   }, []);
 
   return `
