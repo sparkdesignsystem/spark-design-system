@@ -45,9 +45,9 @@ export const defaultStory = () => ({
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
       ctaText="Designers"
-      ctaHref="https://sparkdesignsystem.com/"
+      ctaHref="#nogo"
       ctaText2="Developers"
-      ctaHref2="https://sparkdesignsystem.com/"
+      ctaHref2="#nogo"
       imgSrc="https://spark-assets.netlify.com/desktop.jpg"
       imgAlt="placeholder"
       idString="highlightboard-1"
