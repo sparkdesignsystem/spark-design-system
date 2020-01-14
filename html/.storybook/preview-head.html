@@ -18,7 +18,7 @@
     };
 
     const observer = new MutationObserver(callback);
-    const config = { childList: true, subtree: false };
+    const config = { childList: true, subtree: true };
     observer.observe(document.getElementById('root'), config);
   }, false);
 
