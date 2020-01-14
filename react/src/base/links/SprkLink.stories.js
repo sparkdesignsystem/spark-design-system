@@ -22,7 +22,7 @@ Images that are links should not use Spark classes.
 export const defaultStory = () => (
   <SprkLink
     element="a"
-    href="https://www.sparkdesignsystem.com"
+    href="#nogo"
     idString="link-1"
     analyticsString="link-default"
   >
@@ -40,7 +40,7 @@ export const simple = () => (
     variant="simple"
     analyticsString="link-simple"
     idString="link-2"
-    href="https://www.sparkdesignsystem.com"
+    href="#nogo"
   >
     Simple Link
   </SprkLink>
@@ -50,7 +50,7 @@ export const iconWithTextLink = () => (
   <SprkLink
     element="a"
     analyticsString="link-icon"
-    href="https://www.sparkdesignsystem.com"
+    href="#nogo"
     variant="has-icon"
     idString="link-3"
   >
@@ -75,7 +75,7 @@ export const disabled = () => (
     analyticsString="link-disabled"
     variant="disabled"
     idString="link-4"
-    href="https://www.sparkdesignsystem.com"
+    href="#nogo"
   >
     Disabled Link
   </SprkLink>

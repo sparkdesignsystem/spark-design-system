@@ -120,7 +120,7 @@ export const fullWidthAtExtraSmallViewport = () => (
 export const asALinkElement = () => (
   <SprkButton
     element="a"
-    href="https://www.sparkdesignsystem.com"
+    href="#nogo"
     idString="button-8"
     analyticsString="button-8-analytics"
   >
