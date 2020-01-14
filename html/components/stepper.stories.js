@@ -438,7 +438,14 @@ export const withCarousel = () => {
     stepper();
 
     // Trigger iframe window resize to address lory carousel issues
-    const iframeWindow = window.frameElement.contentWindow;
+    const iframe = window.frameElement;
+    let iframeWindow;
+    // If the preview is not inside an iFrame, target the whole window.
+    if (iframe) {
+      iframeWindow = iframe.contentWindow;
+    } else {
+      iframeWindow = window;
+    }
     const event = document.createEvent('Event');
     event.initEvent('resize', true, true);
     iframeWindow.addEventListener('resize', () => {
