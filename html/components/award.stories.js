@@ -33,7 +33,7 @@ export const defaultStory = () => {
     <div class="sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-        href="#"
+        href="#nogo"
       >
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
@@ -41,7 +41,7 @@ export const defaultStory = () => {
           src="https://spark-assets.netlify.com/spark-logo-updated.svg" />
       </a>
 
-      <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#">
+      <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#nogo">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
@@ -56,7 +56,7 @@ export const defaultStory = () => {
       <a
         class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon"
         data-sprk-toggle="trigger"
-        href="#"
+        href="#nogo"
       >
           <svg
             class="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--toggle sprk-u-mrs"
