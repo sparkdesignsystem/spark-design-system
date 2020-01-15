@@ -28,7 +28,7 @@ const components = {
   code: inlineCode,
 };
 
-const Layout = ({ children, initialContext }) => {
+const Layout = ({ children, initialContext, hasSideBar }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -57,7 +57,7 @@ const Layout = ({ children, initialContext }) => {
                 __html: data.allSparkIconSet.edges[0].node.internal.content,
               }}
             />
-            <div className="docs-layout__header">
+            <div className="docs-layout__header sprk-o-Box">
               <Header
                 context={context}
                 setContext={setContext}
@@ -65,19 +65,26 @@ const Layout = ({ children, initialContext }) => {
                 setMenuVisible={setMenuVisible}
               />
             </div>
-            <div className={classnames({
-              "docs-layout__side-bar": true,
-              "docs-layout__side-bar-mobile--visible": menuVisible
-            })}>
-              <Menu
-                components={{}}
-                context={context}
-                setContext={setContext}
-                menuVisible={menuVisible}
-                setMenuVisible={setMenuVisible}
-              />
-            </div>
-            <div className="docs-layout__content">
+
+            {hasSideBar
+              && (
+              <div className={classnames({
+                'docs-layout__side-bar': true,
+                'docs-layout__side-bar-mobile--visible': menuVisible,
+              })}
+              >
+                <Menu
+                  components={{}}
+                  context={context}
+                  setContext={setContext}
+                  menuVisible={menuVisible}
+                  setMenuVisible={setMenuVisible}
+                />
+              </div>
+)
+            }
+
+            <div className="docs-layout__content sprk-o-Box sprk-o-Box--large">
               <MDXProvider components={components}>
                 { children }
               </MDXProvider>
@@ -89,6 +96,10 @@ const Layout = ({ children, initialContext }) => {
     }
     />
   );
+};
+
+Layout.defaultProps = {
+  hasSideBar: true,
 };
 
 export default Layout;

@@ -12,8 +12,6 @@
 }
 
 .docs-layout__header {
-  padding: 1rem;
-
   @media (min-width: $doc-site-mobile-breakpoint) {
     align-self: start;
     -ms-grid-column: 1;
@@ -21,7 +19,6 @@
     grid-column: span 2;
     -ms-grid-row: 1;
     grid-row: 1 / 2;
-    padding: 2rem;
   }
 }
 
@@ -49,7 +46,6 @@
 }
 
 .docs-layout__content {
-  padding: 2rem;
   margin: 0 auto;
   width: 100%;
 
