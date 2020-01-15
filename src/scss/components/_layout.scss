@@ -2,12 +2,8 @@
   max-width: $doc-site-layout-max-width;
   position: relative;
 
-  @media (min-width: ($doc-site-layout-max-width + 2rem)) {
-    margin: 2rem auto;
-  }
-
   @media (min-width: $doc-site-mobile-breakpoint) {
-    display:-ms-grid;
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 300px 1fr;
     grid-template-columns: 300px 1fr;
