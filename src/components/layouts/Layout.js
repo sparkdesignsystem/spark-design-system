@@ -49,8 +49,9 @@ const Layout = ({ children, initialContext }) => {
     `}
       render={data => (
         <>
-          <div className="docs-layout">
+          <div className="docs-layout sprk-o-CenteredColumn">
             <div
+              className="sprk-u-Display--none"
                 // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
                 __html: data.allSparkIconSet.edges[0].node.internal.content,
