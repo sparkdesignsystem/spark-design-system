@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
+import { MDXProvider } from '@mdx-js/react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
 import Menu from '../Menu';
@@ -24,8 +26,8 @@ const components = {
   ul: Ul,
   li: Li,
   a: A,
-  code: inlineCode
-}
+  code: inlineCode,
+};
 
 const Layout = ({ children, initialContext }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
@@ -87,6 +89,14 @@ const Layout = ({ children, initialContext }) => {
       )}
     }
   />
-)};
+Layout.defaultProps = {
+  hasSideBar: true,
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
+  hasSideBar: PropTypes.bool,
+  initialContext: PropTypes.string,
+};
 
 export default Layout;
