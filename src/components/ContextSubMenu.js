@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { SprkLink } from '@sparkdesignsystem/spark-react';
 
 function ContextSubMenu({heading, collection, directory}) {
   return (
@@ -9,12 +10,13 @@ function ContextSubMenu({heading, collection, directory}) {
         { collection.map(item => (
           <li
             key={item.node.parent.name}
-            className="docs-menu__collection-item">
-            <Link
-              className="docs-menu__link"
+            className="docs-menu__collection-item sprk-u-pbs">
+            <SprkLink
+              element={Link}
+              variant='simple'
               to={`/using-spark/${directory}/${item.node.parent.name}`}>
                 { item.node.frontmatter.title || item.node.parent.name }
-            </Link>
+            </SprkLink>
           </li>
         ))}
       </ul>

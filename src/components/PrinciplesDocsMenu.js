@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
+import { SprkLink } from '@sparkdesignsystem/spark-react';
 
 const PrinciplesSparkDocsMenu = () => (
   <StaticQuery
@@ -34,12 +35,13 @@ const PrinciplesSparkDocsMenu = () => (
               { guides.map(guide => (
                 <li
                   key={guide.node.parent.name}
-                  className="docs-menu__collection-item">
-                  <Link
-                    className="docs-menu__link"
+                  className="docs-menu__collection-item sprk-u-pbs">
+                  <SprkLink
+                    element={Link}
+                    variant='simple'
                     to={`/principles/${guide.node.parent.name}`}>
                       { guide.node.frontmatter.title || guide.node.parent.name }
-                  </Link>
+                  </SprkLink>
                 </li>
               ))}
             </ul>
