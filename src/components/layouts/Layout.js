@@ -7,7 +7,6 @@ import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
-import { MDXProvider } from "@mdx-js/react";
 
 import H1 from '../markdown-render/h1';
 import H2 from '../markdown-render/h2';
@@ -48,8 +47,7 @@ const Layout = ({ children, initialContext }) => {
         }
       }
     `}
-    render={data => {
-      return(
+      render={data => (
         <>
           <div className="docs-layout">
             <div
@@ -86,17 +84,10 @@ const Layout = ({ children, initialContext }) => {
           </div>
           <Footer />
         </>
-      )}
+      )
     }
-  />
-Layout.defaultProps = {
-  hasSideBar: true,
-};
-
-Layout.propTypes = {
-  children: PropTypes.node,
-  hasSideBar: PropTypes.bool,
-  initialContext: PropTypes.string,
+    />
+  );
 };
 
 export default Layout;
