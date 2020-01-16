@@ -38,6 +38,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: 'src/pages/installing-spark.mdx',
+        name: 'installing-spark-page',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: 'src/pages/principles',
         name: 'principles-pages',
       },
@@ -47,6 +54,13 @@ module.exports = {
       options: {
         path: 'src/pages/using-spark',
         name: 'using-spark-pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: 'src/pages/using-spark.mdx',
+        name: 'using-spark-page',
       },
     },
 
@@ -65,7 +79,9 @@ module.exports = {
         defaultLayouts: {
           'homepage-pages': require.resolve('./src/components/layouts/HomepageLayout.js'),
           'installing-spark-pages': require.resolve('./src/components/layouts/InstallingSparkLayout.js'),
+          'installing-spark-page': require.resolve('./src/components/layouts/InstallingSparkLayout.js'),
           'using-spark-pages': require.resolve('./src/components/layouts/UsingSparkLayout.js'),
+          'using-spark-page': require.resolve('./src/components/layouts/UsingSparkLayout.js'),
           'principles-pages': require.resolve('./src/components/layouts/PrinciplesLayout.js'),
           default: require.resolve('./src/components/layouts/Layout.js'),
         },
