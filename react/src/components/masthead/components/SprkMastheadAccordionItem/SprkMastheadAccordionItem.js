@@ -134,16 +134,11 @@ class SprkMastheadAccordionItem extends Component {
 
 SprkMastheadAccordionItem.propTypes = {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -159,33 +154,42 @@ SprkMastheadAccordionItem.propTypes = {
    */
   href: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  /** Decides if the outer link is the active link.*/
+  /**
+   * 	If true, denotes that the link represents the current page.
+   */
   isActive: PropTypes.bool,
   /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
-  /** The name of the icon to render before the text. */
+  /**
+   * The name of the icon to the left of the link text.
+   * Will render in compatible components like narrowNav.
+   */
   leadingIcon: PropTypes.string,
-  /** An array of link objects that builds the sub nav. */
+  /** Text for the Accordion Item */
+  text: PropTypes.string,
+  /**
+   * Expects an array containing link objects.
+   * Will be treated as a subnav to the link.
+   */
   subNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
-      /** The element to render, could be 'a' or a Component. */
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Assigned to the href attribute if element is 'a'. */
+      /**
+       * The `href` value assigned the subNavLink item.
+       */
       href: PropTypes.string,
-      /** The element to render, could be 'a' or a Component. */
+      /**
+       * Text for SubNavLink item.
+       */
       text: PropTypes.string,
     }),
   ),
-  /** The text inside the element. */
-  text: PropTypes.string,
 };
 
 SprkMastheadAccordionItem.defaultProps = {

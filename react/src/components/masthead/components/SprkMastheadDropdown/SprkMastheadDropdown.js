@@ -137,48 +137,41 @@ class SprkMastheadDropdown extends Component {
 
 SprkMastheadDropdown.propTypes = {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon.
+   * A space-separated string of classes to add to the icon.
    */
   additionalIconClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * dropdown trigger link.
+   * A space-separated string of classes to add to the trigger element.
    */
   additionalTriggerClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * text inside in the trigger.
+   * A space-separated string of classes to add to the trigger text.
    */
   additionalTriggerTextClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Incoming children. */
+  /**
+   * Children to render inside of SprkMastheadDropdown
+   */
   children: PropTypes.node,
-  /** Choices object that builds the dropdown contents. */
+  /** Choices object that builds the dropdown content. */
   choices: PropTypes.shape({
     /** An array of objects that describe the items in the menu. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        /** The element to render for each menu item. */
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-        /** Assigned to `href` of the element is 'a'. */
+        /** Assigned to `href` of the dropdown item. */
         href: PropTypes.string,
-        /** The text inside the item. */
+        /** Text title for the dropdown choice. */
         text: PropTypes.string,
       }),
     ),
@@ -188,17 +181,12 @@ SprkMastheadDropdown.propTypes = {
   /** The icon type of the trigger icon .*/
   iconName: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  /** The text of the optional header above the choices in the dropdown. */
+  /** The headline text of the optional header above the choices in the dropdown. */
   title: PropTypes.string,
-  /** The variant name. */
+  /** Determines the type of SprkMastheadDropdown to render. */
   variant: PropTypes.oneOf(['base', 'informational']),
 };
 

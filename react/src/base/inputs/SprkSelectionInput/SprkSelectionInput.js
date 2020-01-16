@@ -190,23 +190,75 @@ class SprkSelectionInput extends React.Component {
 }
 
 SprkSelectionInput.propTypes = {
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
+  /**
+   * Expects an array of objects
+   * that describe the choices available to the user.
+   */
   choices: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Text tied to the rendered input element.
+       */
       label: PropTypes.string.isRequired,
+      /**
+       * Assigned to the `name` attribute
+       * of the rendered input element.
+       */
       name: PropTypes.string,
+      /**
+       * 	Assigned to the `value` attribute
+       *  of the rendered input element.
+       */
       value: PropTypes.string,
     }),
   ).isRequired,
+  /**
+   * Will render the component in its disabled state.
+   */
   disabled: PropTypes.bool,
+  /**
+   * The error message that will display
+   * while in its error state.
+   */
   errorMessage: PropTypes.string,
+  /**
+   * Text that describes the
+   * group of selection items as a whole.
+   * Applies to the checkbox and radio variants only.
+   */
   groupLabel: PropTypes.string,
+  /**
+   * 	Text that appears below the input, intended to provide more information to a user.
+   */
   helperText: PropTypes.string,
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
+  /**
+   * Determines whether to render
+   * the component in the valid or the error state.
+   */
   valid: PropTypes.bool,
+  /**
+   * Will render a blank first option. This option is only available when `variant="hugeSelect"`
+   */
   hasBlankFirstOption: PropTypes.bool,
+  /**
+   * Passes in a function that handles the onChange of the input.
+   */
   onChangeFunc: PropTypes.func,
+  /**
+   * Determines what type of input is rendered.
+   */
   variant: PropTypes.oneOf(['checkbox', 'radio', 'select', 'hugeSelect'])
     .isRequired,
 };

@@ -48,10 +48,10 @@ SprkStack.defaultProps = {
 SprkStack.propTypes = {
   children: PropTypes.node,
   /**
-   * If set, will switch the
-   * flex-direction from column
-   * to row at this point.
-  */
+   * Determines when the layout will switch
+   * `flex-direction` from `column` to `row` based on
+   * breakpoint.
+   */
   splitAt: PropTypes.oneOf([
     'extraTiny',
     'tiny',
@@ -61,7 +61,9 @@ SprkStack.propTypes = {
     'huge',
     '',
   ]),
-  /** Value determines the spacing between the items. */
+  /**
+   * Determines spacing between items.
+   */
   itemSpacing: PropTypes.oneOf([
     'tiny',
     'small',
@@ -74,9 +76,13 @@ SprkStack.propTypes = {
     'misc-d',
     '',
   ]),
-  /** The string to use for the data-id attribute. */
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
-  /** Any additional classes to add to the link. */
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
 };
 

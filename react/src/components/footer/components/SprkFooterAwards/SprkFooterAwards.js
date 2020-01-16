@@ -59,28 +59,48 @@ class SprkFooterAwards extends Component {
 
 SprkFooterAwards.propTypes = {
   awards: PropTypes.shape({
+    /** The main headline for the section. */
     heading: PropTypes.string,
+    /** Configures the images in the Awards Section. */
     images: PropTypes.arrayOf(
       PropTypes.shape({
-        // The link href for the image
+        /**
+         *  The link href for the image
+         */
         href: PropTypes.string,
-        // Element to render, can be 'a' or Link
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-        // The image src
+        /**
+         * The image `src`.
+         */
         src: PropTypes.string,
-        // Image alt text
+        /**
+         * The `alt` text for the image, icon, or `SprkIcon`.
+         */
         altText: PropTypes.string,
-        // Additional classes for the image
+        /**
+         * Expects a space separated string of
+         * classes to be added to the award image.
+         */
         addClasses: PropTypes.string,
-        // Used for the data-analytics attribute on the link wrapping the image
+       /**
+        * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+        */
         analyticsString: PropTypes.string,
       }),
     ).isRequired,
-    // The text rendered in the disclaimer
+    /** The text rendered in the disclaimer. */
     disclaimerText: PropTypes.string,
-    // Used for the data-analytics value on the title
+    /**
+     * The value supplied will be assigned to the
+     * `data-analytics` attribute on the disclaimer.
+     * Intended for an outside
+     * library to capture data.
+     */
     disclaimerAnalytics: PropTypes.string,
-    // The title text rendered in the disclaimer
+    /** The title text rendered in the disclaimer. */
     disclaimerTitle: PropTypes.string,
   }).isRequired,
 };

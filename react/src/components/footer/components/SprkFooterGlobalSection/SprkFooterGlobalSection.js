@@ -68,26 +68,42 @@ class SprkFooterGlobalSection extends Component {
 }
 
 SprkFooterGlobalSection.propTypes = {
-  // The data for the global site items
+  /** Object used to configure the global items section. */
   globalItems: PropTypes.shape({
+    /** Main headline for the global section. */
     heading: PropTypes.string,
+    /** Object used to configure each item in global items section such as `mediaType`, `src`, `description` etc. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        // The element to render for the global item's media
+        /** The type of media element to render. */
         mediaType: PropTypes.oneOf(['image', 'svg', 'SprkIcon']),
-        // Assigned to src attribute of the image
+        /**
+         * Assigned to `src` attribute of the item's image.
+         */
         src: PropTypes.string,
-        // Assigned to href
+        /**
+         * Assigned to `href` of item.
+         */
         mediaHref: PropTypes.string,
-        // The alt text for the image
+        /**
+         * The `alt` text for the image, icon, or `SprkIcon`.
+         */
         altText: PropTypes.string,
-        // Additional classes for the media
+        /**
+         * Expects a space separated string
+         * of classes to be added to the
+         * media of the item.
+         */
         mediaAddClasses: PropTypes.string,
-        // The description of the image
+        /** The description of the image */
         description: PropTypes.string,
-        // The value for the data-analytics attribute
+        /**
+         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         */
         analyticsString: PropTypes.string,
-        // Element to render, can be 'a' or Link
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
     ),

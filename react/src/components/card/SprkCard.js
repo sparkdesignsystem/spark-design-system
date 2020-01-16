@@ -56,86 +56,142 @@ const SprkCard = (props) => {
 
 SprkCard.propTypes = {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * Card Content.
+   * A space-separated string of classes to add to the card content container.
    */
   additionalContentClasses: PropTypes.string,
-  /** Takes content for a base card */
+  /** Content to render inside of SprkCard. */
   children: PropTypes.node,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * If `true`, the Standout Card styles
-   * will be applied.
+   * Determines if card style has a deeper shadow.
    */
   isStandout: PropTypes.bool,
-  /** The type of Card variant to render. */
+  // TODO: Turn this prop into a oneOf type and include the possible possibilities. It could also need a default/base variant style. Issue #2496
+  /**
+   * Determines the type of card.
+   * If none provided, it defaults to
+   * the base card style.
+   *
+   * Expects either `highlightedHeader`
+   * or `teaser`.
+   */
   variant: PropTypes.string,
-  /** Configures highlighted header */
+  /**
+   * Configurations that
+   * populate the content of SprkCard
+   * with a highlighted Header.
+   */
   highlightedHeaderConfig: PropTypes.shape({
-    /** Text inside of highlighted card */
+    /**
+     * The Highlighted Header Card's main body text.
+     */
     bodyText: PropTypes.string,
-    /** Sub-headline of card */
+    /**
+     * The Highlighted Header Card's description.
+     */
     description: PropTypes.string,
-    /** Headline of card */
+    /**
+     * The Card's title.
+     */
     title: PropTypes.string,
   }),
-  /** Configures teaser */
+  /**
+   * Configuration that populate the content of SprkCard teaser.
+   */
   teaserConfig: PropTypes.shape({
-    /** Text in the main body */
+    /**
+     * Teaser Card's body text.
+     */
     bodyText: PropTypes.string,
+    /**
+     * Configures the call-to-action of a Teaser Card.
+     */
     cta: PropTypes.shape({
-      /** Extra classes on the Call to Action of Teaser */
+      /**
+       * A space-separated string of classes to add to the call-to-action icon.
+       */
       additionalCtaIconClasses: PropTypes.string,
-      /** CTA Analytics */
+      /**
+       * Value assigned to the
+       * `data-analytics` attribute on the Call to Action.
+       * Intended for an outside
+       * library to capture data.
+      */
       ctaAnalytics: PropTypes.string,
-      /** Icon next to CTA */
+      /**
+       * Determines what icon `SprkIcon` renders next to the Call to Action.
+       */
       ctaIcon: PropTypes.string,
-      /** Anchor tag, or router link at user discretion */
-      mediaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Link or Button */
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
+      ctaLinkElement: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
+      /**
+       * Determinds if the CTA is a link or a button.
+       * Will default to `link` if none provided.
+       */
       ctaVariant: PropTypes.oneOf(['link', 'button']),
-      /** Where the cta navigates to */
+      /**
+       * Determines the href of the media.
+       */
       href: PropTypes.string,
-      /** Text of the CTA */
+      /** Text of the CTA. */
       text: PropTypes.string,
     }),
-    /** Configs for the main media of the teaser card */
+    /**
+     * Configures the main media of the Teaser Card.
+     */
     media: PropTypes.shape({
-      /** Additional classes if it's an icon */
+      /**
+       * A space-separated string of classes to add to the media icon.
+       */
       additionalMediaIconClasses: PropTypes.string,
-      /** Where media navigates to */
+      /**
+       * Determines the href of the media.
+       */
       href: PropTypes.string,
-      /** Anchor tag, or router link at user discretion */
+      /**
+       * Determines if link renders as an Anchor tag, or router link.
+       */
       mediaLinkElement: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      /** Reference name of SprkIcon */
+      /**
+       * Determines what icon `SprkIcon` renders
+       * as the main media of the Teaser Card.
+       */
       iconName: PropTypes.string,
-      /** Alternative text for image */
+      /** Alternative text for the main media of Teaser Card. */
       imgAlt: PropTypes.string,
-      /** src for image */
+      /** The source link for the media. */
       imgSrc: PropTypes.string,
-      /** Analytics id tag for image */
+      /**
+       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+       */
       mediaAnalyticsString: PropTypes.string,
-      /** Chooses if main media is img or SprkIcon */
+      /**
+       * Determines which type of media renders. Defaults to `img` if none provided.
+       */
       mediaVariant: PropTypes.oneOf(['img', 'icon']),
     }),
-    /** title of teaser card */
+    /**
+     * Text that will show as as
+     * the main headline of the Teaser Card.
+     */
     title: PropTypes.string,
-    /** Decides if title goes first */
+    /**
+     * Determines if the Teaser Card's
+     * title is at the top or below the main media.
+     */
     titleFirst: PropTypes.bool,
   }),
 };

@@ -112,17 +112,15 @@ const SprkHighlightBoard = (props) => {
 
 SprkHighlightBoard.propTypes = {
   /**
-   * The Highlight Board will use this as the
-   * source for the main image.
+   * The source for the main image.
    */
   imgSrc: PropTypes.string,
   /**
-   * The Highlight Board will use this as
-   * the `alt` text for the main image.
+   * The `alt` text for the main image.
    */
   imgAlt: PropTypes.string,
   /**
-   * The value supplied will be rendered as the heading.
+   * The main headline for the section.
    */
   heading: PropTypes.string,
   /**
@@ -142,7 +140,7 @@ SprkHighlightBoard.propTypes = {
    */
   ctaAnalytics: PropTypes.string,
   /**
-   * The `data-id` for the first call to action.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   ctaIdString: PropTypes.string,
   /** The text for the second call to action. */
@@ -163,24 +161,15 @@ SprkHighlightBoard.propTypes = {
    */
   ctaIdString2: PropTypes.string,
   /**
-   * The variation of the
-   * Highlight Board that is rendered.
-   * Can be `noImage`, `stacked`.
+   * Determines the style of Highlight Board is rendered.
    */
   variant: PropTypes.oneOf(['noImage', 'stacked']),
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
 };

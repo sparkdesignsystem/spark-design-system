@@ -300,47 +300,61 @@ class SprkModal extends Component {
 }
 
 SprkModal.propTypes = {
-  /** Incoming children for the body of the modal. */
+  /** Content to render inside modal. */
   children: PropTypes.node,
   /** The modal heading text. */
   title: PropTypes.string,
-  /** The variant of the modal. */
+  /** Determines style of modal to render. */
   variant: PropTypes.oneOf(['wait', 'info', 'choice']),
-  /** Text of confirm CTA in choice modal. */
+  /** Text to render on the confirmation button. */
   confirmText: PropTypes.string,
-  /** Text of cancel CTA in choice modal. */
+  /** Text to render on the cancel button. */
   cancelText: PropTypes.string,
   /** Sets whether the modal is displayed. */
   isVisible: PropTypes.bool,
-  /** Event for the confirm CTA in choice modal. */
+  /** The function that runs when confirm choice is clicked. */
   confirmClick: PropTypes.func,
   /**
-   * Called by internal cancel function.
-   * Triggered by the cancel CTA in choice modal,
-   * clicking the X, clicking the Mask, or pressing Escape
+   * The function that runs when the cancel choice is clicked.
+   * Cancel choices include clicking the x icon, Mask, or pressing Esc.
   */
   cancelClick: PropTypes.func,
   /**
-   * The value supplied determines if the modal will
-   * automatically set focus on the last
-   * element that had focus before the modal was opened.
-  */
+   * 	If true, focus will automatically be returned to the last-focused item when the modal is closed.
+   */
   shouldReturnFocusOnClose: PropTypes.bool,
-  /** Additional CSS classes to add to modal. */
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
-  /** Mapped to data-analytics */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** Mapped to data-id for testing purposes. */
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
-  /** The name of the icon to use for the close button. */
+  // TODO: Actually give this a default
+  /**
+   * The icon name to use for the close button in the modal. Defaults to "close".
+   */
   closeIcon: PropTypes.string,
-  /** The string to pass to the CloseButton as analyticsString */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   closeAnalyticsString: PropTypes.string,
-  /** The string to pass to the modal mask to be used for the data-analytics attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   maskAnalyticsString: PropTypes.string,
-  /** The string to pass to the modal footer for the data-analytics attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   confirmAnalyticsString: PropTypes.string,
-  /** The string to pass to the modal footer for the data-analytics attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   cancelAnalyticsString: PropTypes.string,
 };
 

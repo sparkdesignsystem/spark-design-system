@@ -60,22 +60,26 @@ class SprkFooterConnectIcons extends Component {
 }
 
 SprkFooterConnectIcons.propTypes = {
-  // The data for the global site items
+  /** Constructs the Connect Icon Section. */
   connectIcons: PropTypes.shape({
-    // The main heading for the connect secion
+    /** The main headline for the section. */
     heading: PropTypes.string,
-    // An array of icon objects
+    /** Configures the icons for the section. */
     icons: PropTypes.arrayOf(
       PropTypes.shape({
-        // The link href for the icon
+        /** The link `href` for the icon. */
         href: PropTypes.string,
-        // The name of the icon
+        /** Determines what icon `SprkIcon` renders */
         name: PropTypes.string,
-        // Text used for screen readers
+        /** Text used for screen readers. */
         screenReaderText: PropTypes.string,
-        // String used for the data-analytics attribute
+        /**
+         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         */
         analyticsString: PropTypes.string,
-        // Element to render, can be 'a' or Link
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       }),
     ).isRequired,

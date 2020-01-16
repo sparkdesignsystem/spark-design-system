@@ -195,21 +195,42 @@ const SprkPagination = (props) => {
 };
 
 SprkPagination.propTypes = {
-  /** The pagination variant type. */
+  /**
+   * This determines what style of pagination to render.
+   */
   variant: PropTypes.oneOf(['default', 'pager']),
-  /** The total number of items that the pagination component will page through. */
+  /**
+   * The total number of items that the pagination component will contain.
+   */
   totalItems: PropTypes.number.isRequired,
-  /** The number of items per page in the component. */
+  /**
+   * The number of items to display per page
+   */
   itemsPerPage: PropTypes.number.isRequired,
-  /** The current visible page of the component. */
+  /**
+   * The current visible page of the component.
+   */
   currentPage: PropTypes.number,
-  /** The callback for handling changes. */
+  /**
+   * This function will be called every time the component updates.
+   * The function should accept a single object
+   * parameter with a property called newPage
+   * containing the current page number of the pagination component.
+   *
+   * Ex: `{ newPage: 3 }`
+   */
   onChangeCallback: PropTypes.func.isRequired,
-  /** Any additional classes to include on the component. */
+  /**
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
-  /** Screenreader text for the 'previous page' icon. */
+  /**
+   * Screenreader text for the 'previous page' icon.
+   */
   nextLinkText: PropTypes.string,
-  /** Screenreader text for the 'next page' icon. */
+  /**
+   * Screenreader text for the 'next page' icon.
+   */
   prevLinkText: PropTypes.string,
   /** The data-analytics string for the individual page links. */
   analyticsStringPage: PropTypes.string,
@@ -217,7 +238,9 @@ SprkPagination.propTypes = {
   analyticsStringNext: PropTypes.string,
   /** The data-analytics string for the 'next page' link. */
   analyticsStringPrev: PropTypes.string,
-  /** The data-id string for the component. */
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
   /** The icon name to be rendered for the previous link. */
   prevIcon: PropTypes.string,

@@ -31,7 +31,7 @@ SprkList.defaultProps = {
 };
 
 SprkList.propTypes = {
-  /** The element that will be rendered. */
+  /** Determines the type of list element is ordered or unordered. */
   element: PropTypes.oneOf(['ol', 'ul']).isRequired,
   /** The children that will be rendered inside the list. */
   children: PropTypes.node,
@@ -41,18 +41,12 @@ SprkList.propTypes = {
    */
   variant: PropTypes.oneOf(['indented', 'bare']),
   /**
-   * The value supplied will be assigned to
-   * the 'data-id' attribute on the
-   * component. This is intended to be used as
-   * a selector for automated tools. This value
-   * should be unique per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated list of
-   * classes that will be added
-   * to the outermost element.
-  */
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
 };
 

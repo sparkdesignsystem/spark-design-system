@@ -72,30 +72,28 @@ SprkLink.propTypes = {
     'unstyled',
   ]),
   /**
-   * The value supplied will be assigned to
-   * the 'data-id' attribute on the
-   * component. This is intended to be used as
-   * a selector for automated tools. This value
-   * should be unique per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  /** The value supplied will be assigned to the 'data-analytics' attribute. */
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
   /**
-   * A space-separated list of
-   * classes that will be added
-   * to the outermost element.
-  */
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
   /** The href value for the link. */
   href: PropTypes.string,
-  /** The element that will be rendered. */
+  /**
+   * Determines if link renders as an anchor tag, or router link.
+   */
   element: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
     PropTypes.elementType
   ]),
-  /** The event that will fire when the element is clicked. */
+  /** The event that will fire when the link is clicked. */
   onClick: PropTypes.func,
 };
 

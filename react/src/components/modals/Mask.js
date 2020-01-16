@@ -19,9 +19,13 @@ function ModalMask({ clicked, analyticsString }) {
 }
 
 ModalMask.propTypes = {
-  // function to call when the mask is clicked
+  /**
+   * Function to call when mask is clicked
+   */
   clicked: PropTypes.func,
-  // string to render for data-analytics
+  /**
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
 };
 

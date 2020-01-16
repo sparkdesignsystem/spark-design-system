@@ -38,6 +38,10 @@ class SprkDatePickerInput extends Component {
 }
 
 SprkDatePickerInput.propTypes = {
+  /**
+   * Exposes configuration provided
+   * by tiny-date-picker, see [github](https://github.com/chrisdavies/tiny-date-picker) for documentation.
+   */
   datePickerConfig: PropTypes.shape({
     appendTo: PropTypes.node,
     lang: PropTypes.shape({

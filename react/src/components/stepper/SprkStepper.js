@@ -217,17 +217,16 @@ SprkStepper.propTypes = {
   /**
    * If true, the Stepper will be
    * rendered on a dark background.
+   * `($sprk-blue)`
   */
   hasDarkBackground: PropTypes.bool,
   /**
-   * A space-delimited list of additional CSS
-   * classes that should be applied to the Stepper.
-  */
+   * A space-separated string of classes to add to the outermost container of the component.
+   */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the data-id attribute on the Stepper.
-  */
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
   idString: PropTypes.string,
 };
 

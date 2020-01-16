@@ -230,123 +230,220 @@ class SprkMasthead extends Component {
 
 SprkMasthead.propTypes = {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Array of link objects to use in building the big nav. */
+  /**
+   * 	Expects an array of link objects,
+   *  to be represented in the navigation
+   *  of the wide viewport version of the masthead.
+   */
   bigNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      /**
+       * The text for the big nav item.
+       */
       text: PropTypes.string,
+      /**
+       * Expects an array containing link objects.
+       * Will be treated as a subnav to the link.
+       */
       subNavLinks: PropTypes.arrayOf(
         PropTypes.shape({
+          /**
+           * The text for the sub nav item.
+           */
           text: PropTypes.string,
+          /**
+           * Determines if link renders as an anchor tag, or router link.
+           */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         }),
       ),
     }),
   ),
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  /** Array of link objects to use in building the little nav. */
+  /**
+   * Expects an array of link objects,
+   * to be represented in the littleNav
+   * area of the wide viewport version of the masthead.
+   */
   littleNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      /**
+       * The text for the little nav item.
+       */
       text: PropTypes.string,
+      /**
+       * Expects an array containing link objects.
+       * Will be treated as a subnav to the link.
+       */
       subNavLinks: PropTypes.arrayOf(
         PropTypes.shape({
+          /**
+           * Determines if link renders as an anchor tag, or router link.
+           */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          /**
+           * The text for the little sub nav item.
+           */
           text: PropTypes.string,
         }),
       ),
     }),
   ),
-  /** Array of link objects to use in building the narrow nav. */
+  /**
+   * Expects an array of link objects,
+   * to be represented in the narrow nav
+   * element of the masthead component.
+   */
   narrowNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      /**
+       * The text for the narrow nav item.
+       */
       text: PropTypes.string,
+      /**
+       * Expects an array containing link objects.
+       * Will be treated as a subnav to the link.
+       */
       subNavLinks: PropTypes.arrayOf(
         PropTypes.shape({
+          /**
+           * The text for the sub narrow nav item.
+           */
           text: PropTypes.string,
+          /**
+           * Determines if link renders as an anchor tag, or router link.
+           */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
         }),
       ),
     }),
   ),
   /**
-   * Object containing an array of
-   * objects to use in building
-   * the narrow selector.
-  */
+   * Expects a narrowSelector object that
+   * represents choices to be supplied to the
+   * selector above the narrow navigation of
+   * link objects.
+   */
   narrowSelector: PropTypes.shape({
+    /** The function that runs once a choice is made. */
     choiceFunction: PropTypes.func,
+    /**
+     * 	Expects a Component to render at the foot of the open selector.
+     */
     footer: PropTypes.node,
+    /**
+     * Object that configures the items inside a narrow selector
+     */
     items: PropTypes.arrayOf(
       PropTypes.shape({
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        /**
+         * Additional text providing context for item.
+         */
         information: PropTypes.string,
+        // TODO: get rid of this -- it does nothing but add a nonvalid "text" attribute on the item
         text: PropTypes.string,
+        /**
+         * The main headline of the item
+         */
         title: PropTypes.string,
+        /**
+         * The value assigned for the selector
+         */
         value: PropTypes.string,
       }),
     ),
   }),
   /**
-   * Object containing an array of
-   * objects to use in building the selector.
-  */
+   * Expects a selector object that
+   * represents choices to be supplied
+   * to the selector in the wide viewport
+   * version of the masthead.
+   */
   selector: PropTypes.shape({
+    /** The function that runs once a choice is made. */
     choiceFunction: PropTypes.func,
+    /**
+     * 	Expects a Component to render at the foot of the open selector.
+     */
     footer: PropTypes.node,
+    /**
+     * Object that configures the items inside the selector
+     */
     items: PropTypes.arrayOf(
       PropTypes.shape({
+        /**
+         * Determines if link renders as an anchor tag, or router link.
+         */
         element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        /**
+         * Additional text providing context for item.
+         */
         information: PropTypes.string,
+        // TODO: get rid of this -- it does nothing but add a nonvalid "text" attribute on the item
         text: PropTypes.string,
+        /**
+         * The main headline of the item
+         */
         title: PropTypes.string,
+        /**
+         * The value assigned for the selector
+         */
         value: PropTypes.string,
       }),
     ),
   }),
   /**
-   * Expects a component to render the logo.
+   * The component to render into the logo area of the masthead.
    */
   siteLogo: PropTypes.node,
   /**
-   * An array containing components to
-   * render into the utility area.
+   * Expects an array containing components
+   * to render in the utility area of littleNav,
+   * in the wide viewport version of the masthead.
   */
   utilityContents: PropTypes.arrayOf(PropTypes.node),
-  /** The variant name to render. */
+  /** Determines the type of SprkMasthead to render.. */
   variant: PropTypes.oneOf(['default', 'extended']),
   /**
-   * The `href` to render for the logo link.
+   * The `href` value assigned the logo's link.
    */
   logoLink: PropTypes.string,
-  /** The element link element to render for the logo. */
+  /**
+   * Determines if link renders as an anchor tag, or router link.
+   */
   logoLinkElement: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
     PropTypes.elementType
   ]),
-  /** Expects a component to render the nav link. */
+  /**
+   * Expects a component to render in
+   * the nav-item area of the Masthead
+   * on narrow viewports.
+   */
   navLink: PropTypes.node,
 };
 

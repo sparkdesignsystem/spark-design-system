@@ -85,20 +85,13 @@ SprkAward.propTypes = {
    */
   splitAt: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /** Heading text. */
   heading: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** The image data. */
@@ -116,7 +109,9 @@ SprkAward.propTypes = {
       addClasses: PropTypes.string,
       /** Additional classes for the link wrapping the image. */
       linkAddClasses: PropTypes.string,
-      /** String used for the data-analytics attribute. */
+      /**
+       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+       */
       analyticsString: PropTypes.string,
     }),
   ).isRequired,

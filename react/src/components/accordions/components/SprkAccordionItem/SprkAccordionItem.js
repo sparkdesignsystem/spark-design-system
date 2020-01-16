@@ -103,10 +103,7 @@ SprkAccordionItem.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the clickable item.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** The text for the item heading. */
@@ -118,18 +115,11 @@ SprkAccordionItem.propTypes = {
    */
   headingAddClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**

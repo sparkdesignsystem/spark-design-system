@@ -34,39 +34,55 @@ class SprkMastheadAccordion extends React.Component {
 
 SprkMastheadAccordion.propTypes = {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * Used to render child `SprkMastheadAccordionItem`.
+   * Used to render children of `SprkMastheadAccordionItem`.
    */
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      /**
+       * Determines if link renders as an anchor tag, or router link.
+       */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      /**
+       * When the link is rendered to a compatible element
+       * (narrowNav), will draw the specified icon
+       * to the left of the link text.
+       */
       leadingIcon: PropTypes.string,
+      /**
+       * Text for accordion link
+       */
       text: PropTypes.string,
+      /**
+       * Expects an array containing link objects.
+       *  Will be treated as a subnav to the link.
+       */
       subNavLinks: PropTypes.arrayOf(
         PropTypes.shape({
+          /**
+           * Determines if link renders as an anchor tag, or router link.
+           */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          /**
+           * When the link is rendered to a compatible element
+           * (narrowNav), will draw the specified icon
+           * to the left of the link text.
+           */
           leadingIcon: PropTypes.string,
+          /**
+           * text for sub nav link
+           */
           text: PropTypes.string,
         }),
       ),
