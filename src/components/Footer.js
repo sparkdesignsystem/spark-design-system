@@ -66,9 +66,11 @@ const connectIcons = {
   ],
 }
 
+const date = new Date();
+const year = date.getFullYear();
 const paragraphs = [
    {
-     text: 'TBD Footer ©2000 – 2019... Information that we will put here.',
+     text: `©2000 – ${year} Quicken Loans Inc. All rights reserved.`,
    },
  ]
 
