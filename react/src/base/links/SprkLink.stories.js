@@ -14,7 +14,7 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('link')}
 - Spark Link styles are for text-based links.
-Images that are links should not use Spark classes. 
+Images that are links should not use Spark classes.
 `,
   },
 };
@@ -26,7 +26,7 @@ export const defaultStory = () => (
     idString="link-1"
     analyticsString="link-default"
   >
-    Base Link
+    Default Link
   </SprkLink>
 );
 

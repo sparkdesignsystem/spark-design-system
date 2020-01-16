@@ -28,7 +28,7 @@ export const defaultStory = () => (
       data-id="link-1"
       data-analytics="object.action.event"
     >
-      Base Link
+      Default Link
     </a>
   `
 );
