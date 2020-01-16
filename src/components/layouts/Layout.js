@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import { MDXProvider } from '@mdx-js/react';
-import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
 import Menu from '../Menu';
@@ -49,6 +48,12 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
     `}
       render={data => (
         <>
+          <Header
+            context={context}
+            setContext={setContext}
+            menuVisible={menuVisible}
+            setMenuVisible={setMenuVisible}
+          />
           <div className="docs-layout sprk-o-CenteredColumn">
             <div
               className="sprk-u-Display--none"
@@ -57,14 +62,6 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
                 __html: data.allSparkIconSet.edges[0].node.internal.content,
               }}
             />
-            <div className="docs-layout__header sprk-o-Box">
-              <Header
-                context={context}
-                setContext={setContext}
-                menuVisible={menuVisible}
-                setMenuVisible={setMenuVisible}
-              />
-            </div>
 
             {hasSideBar
               && (

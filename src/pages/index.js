@@ -5,6 +5,7 @@ import {
   SprkCard,
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
+import Menu from '../components/Menu';
 
 const teaserDesigners = {
   bodyText: `
@@ -147,7 +148,7 @@ const splitBreakpointCards = 'huge';
 const spacingBtwHeadingAndParagraph = 'large';
 
 const IndexPage = () => (
-  <Layout hasSideBar={false}>
+  <Layout hasSideBar={false} initialContext="homepage">
     <SprkStack itemSpacing={spacingBtwSections}>
       <SprkStackItem>
         <SprkStack

@@ -7,18 +7,6 @@
     display: grid;
     -ms-grid-columns: fit-content(300px) 1fr;
     grid-template-columns: fit-content(300px) 1fr;
-    grid-template-rows: 188px 1fr;
-  }
-}
-
-.docs-layout__header {
-  @media (min-width: $doc-site-mobile-breakpoint) {
-    align-self: start;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
-    -ms-grid-row: 1;
-    grid-row: 1 / 2;
   }
 }
 
