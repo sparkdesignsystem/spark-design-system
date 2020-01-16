@@ -20,25 +20,6 @@
   padding-left: 1rem;
 }
 
-.docs-menu__link {
-  color: $sprk-black;
-  display: block;
-  font-weight: 300;
-  padding: 0.3rem 0;
-}
-
-.docs-menu__link--main {
-  font-size: 1.2rem;
-}
-
-.docs-menu__link--active {
-  background-color: darkgrey;
-}
-
-.docs-menu__link:hover {
-  font-weight: 700;
-}
-
 .docs-menu__select {
   width: 100%;
 }
