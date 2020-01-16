@@ -1,12 +1,9 @@
 <script>
-
 const runOnPageChange = () => {
-  getNogoLinks = Array.from(document.querySelectorAll('a[href="#nogo"]'));
-  if (getNogoLinks.length > 0) {
-    getNogoLinks.forEach(link => {
-      link.addEventListener('click', (e) => {e.preventDefault();})
-    });
-  }
+  const getNogoLinks = Array.from(document.querySelectorAll('a[href="#nogo"]'));
+  getNogoLinks.forEach(link => {
+    link.addEventListener('click', (e) => {e.preventDefault();})
+  });
 }
 document.addEventListener('DOMContentLoaded',() => {
   const callback = mutationsList => {
