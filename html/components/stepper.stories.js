@@ -8,7 +8,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Stepper',
   decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
+    story => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
   ],
   parameters: {
     docs: { iframeHeight: 300 },
@@ -70,9 +70,9 @@ export const defaultStory = () => {
     aria-orientation="vertical"
   >
     <li
-    role="tab"
-    class="sprk-c-Stepper__step"
-    data-sprk-stepper="step"
+      role="tab"
+      class="sprk-c-Stepper__step"
+      data-sprk-stepper="step"
     >
       <div class="sprk-c-Stepper__step-content">
         <span
@@ -87,10 +87,10 @@ export const defaultStory = () => {
     </li>
 
     <li
-    role="tab"
-    class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
-    aria-selected="true"
-    data-sprk-stepper="step"
+      role="tab"
+      class="sprk-c-Stepper__step sprk-c-Stepper__step--selected"
+      aria-selected="true"
+      data-sprk-stepper="step"
     >
       <div class="sprk-c-Stepper__step-content">
         <span
@@ -105,9 +105,9 @@ export const defaultStory = () => {
     </li>
 
     <li
-    role="tab"
-    class="sprk-c-Stepper__step"
-    data-sprk-stepper="step"
+      role="tab"
+      class="sprk-c-Stepper__step"
+      data-sprk-stepper="step"
     >
       <div class="sprk-c-Stepper__step-content">
         <span
@@ -438,15 +438,24 @@ export const withCarousel = () => {
     stepper();
 
     // Trigger iframe window resize to address lory carousel issues
-    const iframeWindow = window.frameElement.contentWindow;
-    const event = document.createEvent('Event');
-    event.initEvent('resize', true, true);
-    iframeWindow.addEventListener('resize', () => {
-      iframeWindow.resizeBy(0, 0);
-    }, false);
-    setTimeout(() => {
-      iframeWindow.dispatchEvent(event);
-    }, 500);
+    const iframe = window.frameElement;
+    let iframeWindow;
+    // If the preview is not inside an iFrame, target the whole window.
+    if (iframe) {
+      iframeWindow = iframe.contentWindow;
+    } else {
+      iframeWindow = window;
+    }
+    if (iframeWindow) {
+      const event = document.createEvent('Event');
+      event.initEvent('resize', true, true);
+      iframeWindow.addEventListener('resize', () => {
+        iframeWindow.resizeBy(0, 0);
+      }, false);
+      setTimeout(() => {
+        iframeWindow.dispatchEvent(event);
+      }, 500);
+    }
   }, []);
 
   return `

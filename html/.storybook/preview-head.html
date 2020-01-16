@@ -1,0 +1,23 @@
+<script>
+  (() => {
+    const runOnPageChange = () => {
+      const getNogoLinks = Array.from(document.querySelectorAll('a[href="#nogo"]'));
+      getNogoLinks.forEach(link => {
+        link.addEventListener('click', (e) => { e.preventDefault(); })
+      });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const callback = mutationsList => {
+        mutationsList.forEach(mutation => {
+          if (mutation.type == 'childList') {
+            runOnPageChange();
+          }
+        })
+      };
+
+      const observer = new MutationObserver(callback);
+      const config = { childList: true, subtree: true };
+      observer.observe(document.getElementById('root'), config);
+    }, false);
+  })();
+</script>

@@ -16,7 +16,9 @@ class ComponentPreview extends React.Component {
       hasHTML,
       componentType,
       minHeight,
+      maxHeight,
       maxWidth,
+      allowScrolling,
     } = this.props;
     const iframeURL = `https://spark-sb-html.netlify.com/iframe.html?id=${componentType}-${componentName}`;
 
@@ -25,9 +27,11 @@ class ComponentPreview extends React.Component {
         <div className="sprk-u-mbl">
           <IframeResizer
             style={{
-              minHeight: minHeight,
-              maxWidth: maxWidth
+              minHeight,
+              maxHeight,
+              maxWidth,
             }}
+            scrolling={allowScrolling}
             title="Component Preview"
             className="docs-c-ComponentPreview sprk-o-Box"
             src={iframeURL}
@@ -49,16 +53,20 @@ class ComponentPreview extends React.Component {
 };
 
 ComponentPreview.propTypes = {
-  maxWidth: PropTypes.string,
-  minHeight: PropTypes.string,
   componentName: PropTypes.string,
+  componentType: PropTypes.string,
   hasAngular: PropTypes.bool,
   hasReact: PropTypes.bool,
   hasHTML: PropTypes.bool,
+  maxHeight: PropTypes.string,
+  maxWidth: PropTypes.string,
+  minHeight: PropTypes.string,
+  allowScrolling: PropTypes.bool,
 };
 
 ComponentPreview.defaultProps = {
   componentType: 'components',
+  allowScrolling: false,
 };
 
 export default ComponentPreview;

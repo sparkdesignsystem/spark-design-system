@@ -27,9 +27,9 @@ export const defaultStory = () => (
     imgAlt="desktop"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"
-    ctaHref="/gettingstarted/designers.html"
+    ctaHref="#nogo"
     ctaText2="Developers"
-    ctaHref2="/gettingstarted/developers.html"
+    ctaHref2="#nogo"
     idString="highlightboard-1"
   />
 );
@@ -43,9 +43,9 @@ export const noImage = () => (
     variant="noImage"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"
-    ctaHref="#"
+    ctaHref="#nogo"
     ctaText2="Developers"
-    ctaHref2="#"
+    ctaHref2="#nogo"
     idString="highlightboard-2"
   />
 );
@@ -61,9 +61,9 @@ export const stacked = () => (
     imgAlt="desktop"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"
-    ctaHref="/gettingstarted/designers.html"
+    ctaHref="#nogo"
     ctaText2="Developers"
-    ctaHref2="/gettingstarted/developers.html"
+    ctaHref2="#nogo"
     idString="highlightboard-3"
   />
 );

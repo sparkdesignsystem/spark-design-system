@@ -137,10 +137,10 @@ export const teaser = () => ({
       body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
       imgSrc="https://spark-assets.netlify.com/desktop.jpg"
       imgAlt="Placeholder Image"
-      imgHref="www.sparkdesignsystem.com"
+      imgHref="#nogo"
       ctaType="button"
       ctaText="Learn More"
-      ctaHref="www.sparkdesignsystem.com"
+      ctaHref="#nogo"
       ctaAnalytics="Button: Spark"
       idString="card-teaser"
     >

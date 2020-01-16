@@ -24,11 +24,11 @@ export const defaultStory = () => (
   `
     <a
       class="sprk-b-Link"
-      href="#"
+      href="#nogo"
       data-id="link-1"
       data-analytics="object.action.event"
     >
-      Simple Link
+      Default Link
     </a>
   `
 );
@@ -41,7 +41,7 @@ export const simple = () => (
   `
     <a
       class="sprk-b-Link sprk-b-Link--simple"
-      href="#"
+      href="#nogo"
       data-id="link-2"
       data-analytics="object.action.event"
     >

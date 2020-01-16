@@ -69,17 +69,17 @@ const links = [
   {
     element: 'a',
     text: 'Your Item',
-    to: '/link',
+    to: '#nogo',
   },
   {
     element: 'a',
     text: 'Your Item',
-    to: '/button',
+    to: '#nogo',
   },
   {
     element: 'a',
     text: 'Your Item',
-    to: '/link',
+    to: '#nogo',
   },
 ];
 
@@ -87,7 +87,7 @@ const addedNarrowNavLinks = [{
     element: 'a',
     leadingIcon: 'call-team-member',
     text: 'Talk To Us',
-    to: '/link',
+    to: '#nogo',
   },
   {
     leadingIcon: 'user',
@@ -98,7 +98,7 @@ const addedNarrowNavLinks = [{
       {
         element: 'a',
         text: 'Change Password',
-        to: '/link',
+        to: '#nogo',
       },
       {
         text: 'Sign Out',
@@ -115,18 +115,19 @@ const dropdownChoices = {
       text: 'Option 1',
       value: 'option-1',
       element: 'a',
-      href: '/link',
-      target: '_blank',
+      href: '#nogo',
     },
     {
       text: 'Option 2',
       value: 'option-2',
       element: 'a',
-      to: '/link',
+      href: '#nogo',
     },
     {
       text: 'Option 3',
       value: 'option-3',
+      element: 'a',
+      href: '#nogo',
     },
   ],
 };
@@ -139,12 +140,13 @@ const selector = {
       title: 'Selection Choice Title 1',
       information: 'Additional Information',
       value: 'choice-1',
+      to: '#nogo',
     },
     {
       element: 'a',
       title: 'Selection Choice Title 2',
       information: 'Additional Information',
-      to: '/button',
+      to: '#nogo',
       value: 'choice-2',
     },
   ],
@@ -255,6 +257,7 @@ export const defaultStory = () => (
     </svg>}
     utilityContents={utilityItems}
     navLink={<SprkLink variant="simple" href="#nogo" additionalClasses="sprk-c-Masthead__link">Sign In</SprkLink>}
+    logoLink='#nogo'
   />
 );
 
@@ -360,6 +363,7 @@ export const extended = () => (
     </svg>}
     utilityContents={utilityItems}
     variant="extended"
+    logoLink="#nogo"
   />
 );
 
