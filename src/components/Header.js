@@ -7,6 +7,9 @@ import {
   SprkMasthead,
 } from '@sparkdesignsystem/spark-react';
 import SiteLogo from './site-logo';
+import { useInstallingSparkData } from '../hooks/use-installing-spark';
+import { useUsingSparkData } from '../hooks/use-using-spark';
+import { usePrincipleSparkData } from '../hooks/use-principle-spark';
 
 const Header = ({ context, setContext }) => {
   const utilityItems = [
@@ -68,6 +71,30 @@ const Header = ({ context, setContext }) => {
     ),
   ];
 
+  const installingSparkPages = useInstallingSparkData().map(page => (
+    {
+      text: page.node.frontmatter.title,
+      to: `/installing-spark/${page.node.parent.name}`,
+      element: Link,
+    }
+  ));
+
+  const usingSparkPages = useUsingSparkData().map(page => (
+    {
+      text: page.node.frontmatter.title,
+      to: `/using-spark/${page.node.parent.name}`,
+      element: Link,
+    }
+  ));
+
+  const principlePages = usePrincipleSparkData().map(page => (
+    {
+      text: page.node.frontmatter.title,
+      to: `/principles/${page.node.parent.name}`,
+      element: Link,
+    }
+  ));
+
   const narrowNavLinks = [
     {
       element: Link,
@@ -76,6 +103,7 @@ const Header = ({ context, setContext }) => {
       onClick: () => {
         setContext('installing-spark');
       },
+      subNavLinks: installingSparkPages,
     },
     {
       element: Link,
@@ -84,6 +112,7 @@ const Header = ({ context, setContext }) => {
       onClick: () => {
         setContext('using-spark');
       },
+      subNavLinks: usingSparkPages,
     },
     {
       element: Link,
@@ -92,6 +121,7 @@ const Header = ({ context, setContext }) => {
       onClick: () => {
         setContext('principles');
       },
+      subNavLinks: principlePages,
     },
   ];
 
@@ -117,8 +147,6 @@ const Header = ({ context, setContext }) => {
 };
 
 Header.propTypes = {
-  menuVisible: PropTypes.bool,
-  setMenuVisible: PropTypes.func,
   context: PropTypes.string,
   setContext: PropTypes.func,
 };

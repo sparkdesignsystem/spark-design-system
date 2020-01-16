@@ -8,8 +8,8 @@ exports.onRouteUpdate = () => {
     docsearch({ // eslint-disable-line no-undef
       apiKey: '9486baf438a1d7fd0b6c982838d6f9bc',
       indexName: 'sparkdesignsystem',
-      inputSelector: '.docs-header-search input',
-      debug: 'false'
+      inputSelector: '.docs-header-search',
+      debug: 'false',
     });
   }
-}
+};
