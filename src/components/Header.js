@@ -79,13 +79,35 @@ const Header = ({ context, setContext }) => {
     }
   ));
 
-  const usingSparkPages = useUsingSparkData().map(page => (
+  const usingSparkComponents = useUsingSparkData().components.map(page => (
     {
       text: page.node.frontmatter.title,
       to: `/using-spark/${page.node.parent.name}`,
       element: Link,
     }
   ));
+
+  const usingSparkExamples = useUsingSparkData().examples.map(page => (
+    {
+      text: page.node.frontmatter.title,
+      to: `/using-spark/${page.node.parent.name}`,
+      element: Link,
+    }
+  ));
+
+  const usingSparkFoundations = useUsingSparkData().foundations.map(page => (
+    {
+      text: page.node.frontmatter.title,
+      to: `/using-spark/${page.node.parent.name}`,
+      element: Link,
+    }
+  ));
+
+  const usingSparkPages = usingSparkComponents.concat(
+    usingSparkComponents,
+    usingSparkExamples,
+    usingSparkFoundations,
+  );
 
   const principlePages = usePrincipleSparkData().map(page => (
     {
