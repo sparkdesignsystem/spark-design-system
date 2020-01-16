@@ -46,7 +46,7 @@ export const defaultStory = () => ({
       idString="link-1"
       analyticsString="object.action.event"
     >
-      Base Link
+      Default Link
     </sprk-link>
   `,
 });
