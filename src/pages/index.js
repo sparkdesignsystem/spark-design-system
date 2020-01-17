@@ -5,7 +5,6 @@ import {
   SprkCard,
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
-import Menu from '../components/Menu';
 
 const teaserDesigners = {
   bodyText: `
@@ -15,6 +14,7 @@ const teaserDesigners = {
   cta: {
     text: 'Get Started',
     ctaVariant: 'button',
+    buttonVariant: 'secondary',
     href: '/installing-spark/developers',
   },
   media: {
@@ -37,6 +37,7 @@ const teaserDevelopers = {
   cta: {
     text: 'Get Started',
     ctaVariant: 'button',
+    buttonVariant: 'secondary',
     href: 'https://sparkdesignsystem.com/',
   },
   media: {
@@ -60,6 +61,7 @@ const teaserComponents = {
   cta: {
     text: 'See All Components',
     ctaVariant: 'button',
+    buttonVariant: 'secondary',
     href: 'https://sparkdesignsystem.com/',
   },
   media: {
@@ -82,6 +84,7 @@ const teaserFundamentals = {
   cta: {
     text: 'Learn More',
     ctaVariant: 'button',
+    buttonVariant: 'secondary',
     href: 'https://sparkdesignsystem.com/',
   },
   media: {
@@ -104,6 +107,7 @@ const teaserDocumentaion = {
   cta: {
     text: 'Learn More',
     ctaVariant: 'button',
+    buttonVariant: 'secondary',
     href: 'https://sparkdesignsystem.com/',
   },
   media: {
@@ -127,6 +131,7 @@ const teaserNews = {
   cta: {
     text: 'See Latest Updates',
     ctaVariant: 'button',
+    buttonVariant: 'secondary',
     href: 'https://sparkdesignsystem.com/',
   },
   media: {
@@ -142,9 +147,6 @@ const teaserNews = {
 };
 
 const spacingBtwSections = 'huge';
-const spacingBtwCardSections = 'huge';
-const spacingBtwCards = 'huge';
-const splitBreakpointCards = 'huge';
 const spacingBtwHeadingAndParagraph = 'large';
 
 const IndexPage = () => (
