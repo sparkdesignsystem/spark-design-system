@@ -13,21 +13,23 @@ function ContextMenu({context, setContext, className, autoNav}) {
             onClick={(e) => {if (!autoNav) {e.preventDefault();} setContext('installing-spark');}}
             variant="simple"
             element={Link}
-            to="/installing-spark/setting-up-your-environment">Installing Spark</SprkLink>
+            to="/installing-spark">Installing Spark</SprkLink>
         </li>
         <li>
           <SprkLink
             additionalClasses={classnames({'docs-context-menu__item--active': context==='using-spark'})}
             onClick={(e) => {if (!autoNav) {e.preventDefault();} setContext('using-spark');}}
             variant="simple"
-            href="#nogo">Using Spark</SprkLink>
+            element={Link}
+            to="/using-spark">Using Spark</SprkLink>
         </li>
         <li>
           <SprkLink
             additionalClasses={classnames({'docs-context-menu__item--active': context==='principles'})}
             onClick={(e) => {if (!autoNav) {e.preventDefault();} setContext('principles');}}
-            variant="simple"
-            href="#nogo">Principles</SprkLink>
+            element={Link}
+            variant='simple'
+            to="/principles/design-principles">Principles</SprkLink>
         </li>
       </ul>
     </div>

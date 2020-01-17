@@ -4,7 +4,7 @@ const SiteLogo = () => (
 
   /* eslint-disable max-len */
   <svg
-    class="sprk-c-Masthead__logo"
+    className="sprk-c-Masthead__logo"
     xmlns="http://www.w3.org/2000/svg"
     width="365.4"
     height="101.35"
