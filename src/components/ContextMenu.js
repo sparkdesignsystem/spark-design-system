@@ -13,7 +13,7 @@ function ContextMenu({context, setContext, className, autoNav}) {
             onClick={(e) => {if (!autoNav) {e.preventDefault();} setContext('installing-spark');}}
             variant="simple"
             element={Link}
-            to="/install-spark">Installing Spark</SprkLink>
+            to="/installing-spark">Installing Spark</SprkLink>
         </li>
         <li>
           <SprkLink
@@ -21,7 +21,7 @@ function ContextMenu({context, setContext, className, autoNav}) {
             onClick={(e) => {if (!autoNav) {e.preventDefault();} setContext('using-spark');}}
             variant="simple"
             element={Link}
-            to="/use-spark">Using Spark</SprkLink>
+            to="/using-spark">Using Spark</SprkLink>
         </li>
         <li>
           <SprkLink
