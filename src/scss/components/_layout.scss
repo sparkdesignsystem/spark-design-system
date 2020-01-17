@@ -18,6 +18,7 @@
  * This allows us to add height to layout footer.
  */
 #___gatsby > div[role="group"][tabindex] {
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
   -ms-flex-direction: column;
