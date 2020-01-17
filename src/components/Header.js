@@ -80,7 +80,7 @@ const Header = ({ context, setContext }) => {
   const usingSparkComponents = useUsingSparkData().components.map(page => (
     {
       text: page.node.frontmatter.title,
-      to: `/using-spark/${page.node.parent.name}`,
+      to: `/using-spark/components/${page.node.parent.name}`,
       element: Link,
     }
   ));
@@ -88,7 +88,7 @@ const Header = ({ context, setContext }) => {
   const usingSparkExamples = useUsingSparkData().examples.map(page => (
     {
       text: page.node.frontmatter.title,
-      to: `/using-spark/${page.node.parent.name}`,
+      to: `/using-spark/examples/${page.node.parent.name}`,
       element: Link,
     }
   ));
@@ -96,7 +96,7 @@ const Header = ({ context, setContext }) => {
   const usingSparkFoundations = useUsingSparkData().foundations.map(page => (
     {
       text: page.node.frontmatter.title,
-      to: `/using-spark/${page.node.parent.name}`,
+      to: `/using-spark/foundations/${page.node.parent.name}`,
       element: Link,
     }
   ));
