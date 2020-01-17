@@ -10,6 +10,7 @@ import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/s
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Helper Text',
@@ -38,8 +39,8 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+${markdownDocumentationLinkBuilder('components', 'input')}
+`,
     docs: { iframeHeight: 200 },
   }
 };

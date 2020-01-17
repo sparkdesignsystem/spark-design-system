@@ -16,7 +16,7 @@ export default {
       SprkStepperStep
     },
     info: `
-${markdownDocumentationLinkBuilder('stepper')}
+${markdownDocumentationLinkBuilder('components', 'stepper')}
 - The React Stepper uses the index of its children
 to keep track of the active step. If you want to modify
 the index of the child steps (for example, by sorting

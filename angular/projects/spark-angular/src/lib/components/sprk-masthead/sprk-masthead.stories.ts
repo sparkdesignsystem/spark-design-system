@@ -26,7 +26,7 @@ export default {
       SprkMastheadAccordionItemComponent,
     },
     info: `
-${markdownDocumentationLinkBuilder('masthead')}
+${markdownDocumentationLinkBuilder('components', 'masthead')}
 - You should configure the size of your own logo.
 By default, the logo will be automatically sized
 between the \`$sprk-masthead-logo-min-width\` (174px)

@@ -19,7 +19,7 @@ export default {
     subcomponents: {
       SprkStackItemDirective,
     },
-    info: markdownDocumentationLinkBuilder('stack'),
+    info: `${markdownDocumentationLinkBuilder('components', 'stack')}`,
     docs: { iframeHeight: 180 },
   },
 };

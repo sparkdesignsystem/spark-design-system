@@ -1,3 +1,5 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Dictionary',
   decorators: [
@@ -5,7 +7,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dictionary)
+${markdownDocumentationLinkBuilder('components', 'dictionary')}
     `,
     docs: { iframeHeight: 500 },
   },

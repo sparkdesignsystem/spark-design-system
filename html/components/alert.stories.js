@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { alerts } from './alerts';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Alert',
@@ -9,7 +10,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 120 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/alert)
+${markdownDocumentationLinkBuilder('components', 'alert')}
     `,
   },
 };

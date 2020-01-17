@@ -5,6 +5,7 @@ import { SprkOrderedListComponent } from '../sprk-ordered-list/sprk-ordered-list
 import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
 import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
 import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.component';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/List',
@@ -23,7 +24,7 @@ export default {
       SprkListItemComponent,
     },
     info: `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/list)
+${markdownDocumentationLinkBuilder('components', 'list')}
     `,
     docs: { iframeHeight: 100 },
   },

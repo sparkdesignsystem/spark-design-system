@@ -13,7 +13,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 300 },
     info: `
-${markdownDocumentationLinkBuilder('stepper')}
+${markdownDocumentationLinkBuilder('components', 'stepper')}
 For this component to function properly,
 the HTML must be structured correctly:  
 

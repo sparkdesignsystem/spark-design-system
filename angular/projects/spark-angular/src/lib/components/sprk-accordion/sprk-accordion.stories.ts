@@ -23,7 +23,7 @@ export default {
       SprkAccordionItemComponent,
     },
     info: `
-${markdownDocumentationLinkBuilder('accordion')}
+${markdownDocumentationLinkBuilder('components', 'accordion')}
 - The Accordion component in spark-angular consists of two Angular components:
     - \`sprk-accordion\`
     - \`sprk-accordion-item\`

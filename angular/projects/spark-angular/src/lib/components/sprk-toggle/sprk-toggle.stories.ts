@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('toggle'),
+    info: `${markdownDocumentationLinkBuilder('components', 'toggle')}`,
     docs: { iframeHeight: 160 },
   },
 };

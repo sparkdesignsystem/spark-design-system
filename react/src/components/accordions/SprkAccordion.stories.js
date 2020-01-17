@@ -72,6 +72,6 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['SprkAccordion', 'SprkAccordionItem'] ,
-    info: markdownDocumentationLinkBuilder('accordion'),
+    info: `${markdownDocumentationLinkBuilder('components', 'accordion')}`,
   },
 };

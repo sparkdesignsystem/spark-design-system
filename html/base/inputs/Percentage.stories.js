@@ -1,4 +1,5 @@
 import '../../utilities/polyfills/classListSVG';
+import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Percentage',
@@ -7,7 +8,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('components', 'input')}
     `,
     docs: { iframeHeight: 140 },
   },

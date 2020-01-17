@@ -1,6 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Award',
@@ -10,7 +11,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 400 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/award)
+${markdownDocumentationLinkBuilder('components', 'award')}
     `,
   },
 };

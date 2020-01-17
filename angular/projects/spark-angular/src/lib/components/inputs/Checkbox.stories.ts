@@ -9,6 +9,7 @@ import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Checkbox',
@@ -35,7 +36,7 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('components', 'input')}
     `,
     docs: { iframeHeight: 200 },
   }

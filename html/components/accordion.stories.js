@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('accordion')}
+${markdownDocumentationLinkBuilder('components', 'accordion')}
 - \`data-sprk-toggle\` and \`data-sprk-toggle-type\` are
 necessary attributes for this component to function.
 This will take care of visually expanding/collapsing

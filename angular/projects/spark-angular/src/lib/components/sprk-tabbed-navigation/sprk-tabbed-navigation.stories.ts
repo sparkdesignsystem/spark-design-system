@@ -31,7 +31,7 @@ export default {
       SprkTabbedNavigationTabDirective,
     },
     info: `
-${markdownDocumentationLinkBuilder('tabs')}
+${markdownDocumentationLinkBuilder('components', 'tabs')}
 - The Tabs component makes use of the
 \`sprk-u-JavaScript\` class to provide a graceful
 degradation experience in environments where JavaScript

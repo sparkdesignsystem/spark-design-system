@@ -1,6 +1,6 @@
-const markdownDocumentationLinkBuilder = (component) => {
+const markdownDocumentationLinkBuilder = (type, component) => {
   return `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/${component})
+  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/${type}/${component})
 `;
 };
 

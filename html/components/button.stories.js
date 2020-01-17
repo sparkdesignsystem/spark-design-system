@@ -8,7 +8,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 100 },
     info: `
-${markdownDocumentationLinkBuilder('button')}
+${markdownDocumentationLinkBuilder('components', 'button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
 The Button component can use either a button (\`<button>\`)
 or anchor (\`<a>\`) HTML element. It is very important

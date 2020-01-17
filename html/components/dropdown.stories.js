@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { dropdowns } from './dropdown';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Dropdown',
@@ -8,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/dropdown)
+${markdownDocumentationLinkBuilder('components', 'dropdown')}
     `,
     docs: { iframeHeight: 200 },
   },

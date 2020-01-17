@@ -18,7 +18,7 @@ export default {
       SprkFooterGlobalSection
     },
     jest: ['SprkFooter'],
-    info: markdownDocumentationLinkBuilder('footer'),
+    info: `${markdownDocumentationLinkBuilder('components', 'footer')}`,
   },
 };
 

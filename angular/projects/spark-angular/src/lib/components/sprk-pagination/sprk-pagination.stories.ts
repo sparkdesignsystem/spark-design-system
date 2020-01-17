@@ -17,7 +17,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('pagination')}
+${markdownDocumentationLinkBuilder('components', 'pagination')}
 - The goToPage event includes the newly selected page
 in a property called “page”, while the goBack and
 goForward events include this value in a property called

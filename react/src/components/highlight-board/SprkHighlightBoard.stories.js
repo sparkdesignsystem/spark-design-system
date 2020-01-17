@@ -11,7 +11,7 @@ export default {
   parameters: {
     jest: ['SprkHighlightBoard'],
     info: `
-${markdownDocumentationLinkBuilder('highlight-board')}
+${markdownDocumentationLinkBuilder('components', 'highlight-board')}
 ##### Accessibility
 - If the Buttons are being used to navigate
 to a new page, they should be \`<a>\` elements.

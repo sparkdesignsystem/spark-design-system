@@ -1,3 +1,5 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Fundamentals/Spacing',
   decorators: [
@@ -7,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/foundations/spacing)
+${markdownDocumentationLinkBuilder('foundations', 'space')}
     `,
   },
 };

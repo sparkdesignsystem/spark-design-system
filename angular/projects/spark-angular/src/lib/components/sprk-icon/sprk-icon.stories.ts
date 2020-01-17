@@ -16,7 +16,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('icon')}
+${markdownDocumentationLinkBuilder('components', 'icon')}
 
 The icons in Spark are the property of Quicken
 Loans and are not provided directly in our packages. You
