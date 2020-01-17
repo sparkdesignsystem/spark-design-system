@@ -1,6 +1,8 @@
 .docs-layout {
+  flex: 1;
   max-width: $doc-site-layout-max-width;
   position: relative;
+  width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     display: -ms-grid;
@@ -8,6 +10,16 @@
     -ms-grid-columns: fit-content(300px) 1fr;
     grid-template-columns: fit-content(300px) 1fr;
   }
+}
+
+/*
+ * Gatsby wraps content in a weird div automatically
+ * This allows us to add height to layout footer.
+ */
+#___gatsby > div[role="group"][tabindex] {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .docs-layout__side-bar {

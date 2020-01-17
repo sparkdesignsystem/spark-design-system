@@ -23,7 +23,7 @@ const Header = ({ context, setContext }) => {
         additionalClasses="sprk-c-Masthead__link"
         variant="plain"
         element={Link}
-        to="/installing-spark/setting-up-your-environment"
+        to="/installing-spark"
       >
         Installing Spark
       </SprkLink>
@@ -38,7 +38,7 @@ const Header = ({ context, setContext }) => {
         additionalClasses="sprk-c-Masthead__link"
         variant="plain"
         element={Link}
-        to="/using-spark/foundations/color"
+        to="/using-spark"
       >
         Using Spark
       </SprkLink>
@@ -53,7 +53,7 @@ const Header = ({ context, setContext }) => {
         additionalClasses="sprk-c-Masthead__link"
         variant="plain"
         element={Link}
-        to="/principles/accessibility-guidelines"
+        to="/principles/design-principles"
       >
         Principles
       </SprkLink>

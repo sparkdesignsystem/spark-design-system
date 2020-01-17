@@ -8,14 +8,6 @@ import ContextMenu from './ContextMenu';
 
 const Menu = ({ context, setContext}) => (
   <div className="docs-menu">
-    <div className="docs-menu__context">
-      <ContextMenu
-        className="sprk-b-List sprk-b-List--bare"
-        context={context}
-        setContext={setContext}
-      />
-      <SprkDivider element="span" />
-    </div>
     { context === 'installing-spark'
       && <InstallingSparkDocsMenu/>
     }
