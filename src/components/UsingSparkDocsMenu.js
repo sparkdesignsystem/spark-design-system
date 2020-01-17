@@ -6,7 +6,7 @@ const UsingSparkDocsMenu = () => (
   <StaticQuery
     query={graphql`
       {
-        components: allMdx(filter: {fileAbsolutePath: {regex: "/src/pages/using-spark/components/"}}) {
+        components: allMdx(filter: {fileAbsolutePath: {regex: "/src/pages/using-spark/components/"}, frontmatter: {excludeFromSideNav: {ne: true}}}) {
           edges {
             node {
               id

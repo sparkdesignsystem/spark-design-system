@@ -6,7 +6,7 @@ const InstallingSparkDocsMenu = () => (
   <StaticQuery
     query={graphql`
       {
-        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/installing-spark/"}, frontmatter: {title: {ne: "Installing Spark"}}}) {
+        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/installing-spark/"}, frontmatter: {excludeFromSideNav: {ne: true}}}) {
           edges {
             node {
               id
