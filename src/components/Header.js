@@ -33,7 +33,6 @@ const Header = ({ context, setContext }) => {
         onClick={
           () => {
             setContext('using-spark');
-            console.log(context, 'using-spark');
           }
         }
         additionalClasses="sprk-c-Masthead__link"
@@ -49,7 +48,6 @@ const Header = ({ context, setContext }) => {
         onClick={
           () => {
             setContext('principles');
-            console.log(context, 'principles');
           }
         }
         additionalClasses="sprk-c-Masthead__link"

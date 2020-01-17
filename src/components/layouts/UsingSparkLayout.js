@@ -3,7 +3,7 @@ import Layout from './Layout';
 
 function UsingSparkLayout({children}) {
   return (
-    <Layout initialContext={'using-spark'}>{children}</Layout>
+    <Layout initialContext="using-spark">{children}</Layout>
   );
 }
 

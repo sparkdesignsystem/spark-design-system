@@ -148,7 +148,7 @@ const splitBreakpointCards = 'huge';
 const spacingBtwHeadingAndParagraph = 'large';
 
 const IndexPage = () => (
-  <Layout hasSideBar={false} initialContext="homepage">
+  <Layout hasSideBar={false}>
     <SprkStack itemSpacing={spacingBtwSections}>
       <SprkStackItem>
         <SprkStack
@@ -169,71 +169,40 @@ const IndexPage = () => (
             </p>
           </SprkStackItem>
         </SprkStack>
-
       </SprkStackItem>
 
       <SprkStackItem>
-        <SprkStack
-          itemSpacing={spacingBtwCardSections}
-        >
-          <SprkStackItem>
-            <SprkStack
-              itemSpacing={spacingBtwCards}
-              splitAt={splitBreakpointCards}
-            >
-              <SprkStackItem>
-                <SprkCard
-                  variant="teaser"
-                  teaserConfig={teaserDesigners}
-                />
-              </SprkStackItem>
+        <div className="docs-o-Grid docs-o-Grid--three-col">
+          <SprkCard
+            variant="teaser"
+            teaserConfig={teaserDesigners}
+          />
 
-              <SprkStackItem>
-                <SprkCard
-                  variant="teaser"
-                  teaserConfig={teaserDevelopers}
-                />
-              </SprkStackItem>
-            </SprkStack>
-          </SprkStackItem>
+          <SprkCard
+            variant="teaser"
+            teaserConfig={teaserDevelopers}
+          />
 
-          <SprkStackItem>
-            <SprkStack itemSpacing={spacingBtwCards} splitAt={splitBreakpointCards}>
-              <SprkStackItem>
-                <SprkCard
-                  variant="teaser"
-                  teaserConfig={teaserComponents}
-                />
-              </SprkStackItem>
+          <SprkCard
+            variant="teaser"
+            teaserConfig={teaserComponents}
+          />
 
-              <SprkStackItem>
-                <SprkCard
-                  variant="teaser"
-                  teaserConfig={teaserFundamentals}
-                />
-              </SprkStackItem>
-            </SprkStack>
+          <SprkCard
+            variant="teaser"
+            teaserConfig={teaserFundamentals}
+          />
 
-          </SprkStackItem>
+          <SprkCard
+            variant="teaser"
+            teaserConfig={teaserDocumentaion}
+          />
 
-          <SprkStackItem>
-            <SprkStack itemSpacing={spacingBtwCards} splitAt={splitBreakpointCards}>
-              <SprkStackItem>
-                <SprkCard
-                  variant="teaser"
-                  teaserConfig={teaserDocumentaion}
-                />
-              </SprkStackItem>
-
-              <SprkStackItem>
-                <SprkCard
-                  variant="teaser"
-                  teaserConfig={teaserNews}
-                />
-              </SprkStackItem>
-            </SprkStack>
-          </SprkStackItem>
-        </SprkStack>
+          <SprkCard
+            variant="teaser"
+            teaserConfig={teaserNews}
+          />
+        </div>
       </SprkStackItem>
     </SprkStack>
   </Layout>
