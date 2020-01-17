@@ -4,7 +4,7 @@ export const useInstallingSparkData = () => {
   const { allMdx } = useStaticQuery(
     graphql`
       {
-        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/installing-spark/"}}) {
+        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/installing-spark/"}, frontmatter: {excludeFromSideNav: {ne: true}}}) {
           edges {
             node {
               id

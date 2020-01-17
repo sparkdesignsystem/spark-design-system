@@ -27,7 +27,7 @@ function ContextMenu({ context, setContext, className, autoNav }) {
             }
             variant="simple"
             element={Link}
-            to="/installing-spark/setting-up-your-environment"
+            to="/installing-spark"
           >
             Installing Spark
           </SprkLink>
@@ -50,7 +50,7 @@ function ContextMenu({ context, setContext, className, autoNav }) {
               }
             }
             variant="simple"
-            href="#nogo"
+            href="/using-spark"
           >
             Using Spark
           </SprkLink>
@@ -68,7 +68,7 @@ function ContextMenu({ context, setContext, className, autoNav }) {
               }
             }
             variant="simple"
-            href="#nogo"
+            href="/principles/design-principles"
           >
             Principles
           </SprkLink>
