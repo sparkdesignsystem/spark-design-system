@@ -55,9 +55,12 @@
 
 .docs-o-Grid {
   display: grid;
-  gap: $sprk-space-m;
 }
 
 .docs-o-Grid--three-col {
   grid-template-columns: repeat( auto-fit, minmax(350px, 425px) );
+}
+
+.docs-o-Grid--large {
+  gap: $sprk-space-l;
 }
