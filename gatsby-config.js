@@ -38,7 +38,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: 'src/pages/installing-spark-page.mdx',
+        path: 'src/pages/install-spark.mdx',
         name: 'installing-spark-page',
       },
     },
@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: 'src/pages/using-spark-page.mdx',
+        path: 'src/pages/use-spark.mdx',
         name: 'using-spark-page',
       },
     },
