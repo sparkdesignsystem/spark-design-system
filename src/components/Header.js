@@ -60,7 +60,7 @@ const Header = ({ context, setContext }) => {
     ),
     (
       <SprkTextInput
-        additionalClasses="docs-header-search sprk-u-mbn"
+        additionalClasses="docs-header-search--wide sprk-u-mbn"
         leadingIcon="search"
         hiddenLabel
         name="InlineSearch"
