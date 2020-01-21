@@ -11,37 +11,6 @@ module.exports = ({ config }) => {
   config.node = {
     fs: 'empty'
   };
-
-  config.module.rules.push({
-    test: /\.(mjs|jsx?|tsx?)$/,
-    use: [
-      {
-        loader: 'babel-loader',
-        options: {
-          cacheDirectory: `.cache/storybook`,
-          presets: [
-            [
-              '@babel/preset-env',
-              { shippedProposals: true, useBuiltIns: 'usage', corejs: 3 },
-            ],
-            '@babel/preset-typescript',
-            '@babel/preset-react',
-          ].filter(Boolean),
-          plugins: [
-            ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-            '@babel/plugin-proposal-object-rest-spread',
-            '@babel/plugin-proposal-class-properties',
-            '@babel/plugin-syntax-dynamic-import',
-            'babel-plugin-macros',
-            '@babel/plugin-transform-react-constant-elements',
-            'babel-plugin-add-react-displayname',
-          ],
-        },
-      },
-    ],
-    exclude: [/node_modules/, /dist/],
-  });
-
   config.resolve.modules = [
     ...(config.resolve.modules || []),
     path.resolve(__dirname, '../node_modules')
