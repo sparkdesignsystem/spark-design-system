@@ -65,12 +65,10 @@
 }
 
 .docs-o-Grid {
-  display: -ms-grid;
   display: grid;
 }
 
 .docs-o-Grid--three-col {
-  -ms-grid-columns: repeat(auto-fit, minmax(350px, 425px));
   grid-template-columns: repeat(auto-fit, minmax(350px, 425px));
 }
 
