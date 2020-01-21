@@ -3,6 +3,7 @@ import {
   SprkStack,
   SprkStackItem,
   SprkCard,
+  SprkButton,
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
 
@@ -147,14 +148,14 @@ const teaserNews = {
 };
 
 const spacingBtwSections = 'huge';
-const spacingBtwHeadingAndParagraph = 'large';
+const spacingBtwHeadingAndContent = 'large';
 
 const IndexPage = () => (
   <Layout hasSideBar={false}>
     <SprkStack itemSpacing={spacingBtwSections}>
       <SprkStackItem>
         <SprkStack
-          itemSpacing={spacingBtwHeadingAndParagraph}
+          itemSpacing={spacingBtwHeadingAndContent}
         >
           <SprkStackItem>
             <h1 className="sprk-b-TypeDisplayOne sprk-u-Color--red">
@@ -205,6 +206,22 @@ const IndexPage = () => (
             teaserConfig={teaserNews}
           />
         </div>
+      </SprkStackItem>
+
+      <SprkStackItem>
+        <SprkStack itemSpacing={spacingBtwHeadingAndContent}>
+          <SprkStackItem>
+            <h2 className="sprk-b-TypeDisplayTwo sprk-u-Color--red">
+              Want To Contribute?
+            </h2>
+          </SprkStackItem>
+
+          <SprkStackItem>
+            <SprkButton variant="secondary">
+              Learn More
+            </SprkButton>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStackItem>
     </SprkStack>
   </Layout>
