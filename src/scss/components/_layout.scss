@@ -5,7 +5,9 @@
   width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: fit-content(300px) 1fr;
     grid-template-columns: fit-content(300px) 1fr;
   }
 }
