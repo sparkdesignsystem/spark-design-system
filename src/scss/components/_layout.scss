@@ -1,14 +1,11 @@
 .docs-layout {
-  -ms-flex: 1;
-  flex: 1;
+  flex: 1 0 auto;
   max-width: $doc-site-layout-max-width;
   position: relative;
   width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: fit-content(300px) 1fr;
     grid-template-columns: fit-content(300px) 1fr;
   }
 }
@@ -18,10 +15,8 @@
  * This allows us to add height to layout footer.
  */
 #___gatsby > div[role="group"][tabindex] {
-  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
