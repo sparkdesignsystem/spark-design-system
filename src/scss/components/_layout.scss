@@ -53,7 +53,6 @@
   width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
-    overflow-x: scroll;
     -ms-grid-column: 2;
     -ms-grid-row: 2;
     grid-column: 2;
