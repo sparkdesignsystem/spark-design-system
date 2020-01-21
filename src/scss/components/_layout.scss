@@ -65,11 +65,13 @@
 }
 
 .docs-o-Grid {
+  display: -ms-grid;
   display: grid;
 }
 
 .docs-o-Grid--three-col {
-  grid-template-columns: repeat( auto-fit, minmax(350px, 425px) );
+  -ms-grid-columns: repeat(auto-fit, minmax(350px, 425px));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 425px));
 }
 
 .docs-o-Grid--large {
