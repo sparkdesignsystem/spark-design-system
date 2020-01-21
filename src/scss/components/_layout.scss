@@ -1,3 +1,11 @@
+html,
+body,
+#___gatsby,
+#___gatsby > div[role="group"][tabindex] {
+  height: 100%;
+  min-height: 100%;
+}
+
 .docs-layout {
   flex: 1 0 auto;
   max-width: $doc-site-layout-max-width;
