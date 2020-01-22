@@ -11,7 +11,7 @@ import { useInstallingSparkData } from '../hooks/use-installing-spark';
 import { useUsingSparkData } from '../hooks/use-using-spark';
 import { usePrincipleSparkData } from '../hooks/use-principle-spark';
 
-const Header = ({ context, setContext }) => {
+const Header = ({ setContext }) => {
   const utilityItems = [
     (
       <SprkLink
@@ -167,7 +167,6 @@ const Header = ({ context, setContext }) => {
 };
 
 Header.propTypes = {
-  context: PropTypes.string,
   setContext: PropTypes.func,
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import { MDXProvider } from '@mdx-js/react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
 import Menu from '../Menu';
@@ -77,7 +78,7 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
                   setMenuVisible={setMenuVisible}
                 />
               </div>
-)
+              )
             }
 
             <div className="docs-layout__content sprk-o-Box sprk-o-Box--large">
@@ -96,6 +97,12 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
 
 Layout.defaultProps = {
   hasSideBar: true,
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
+  hasSideBar: PropTypes.bool,
+  initialContext: PropTypes.string,
 };
 
 export default Layout;
