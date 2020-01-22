@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import { StaticQuery, graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
-import { MDXProvider } from "@mdx-js/react";
 
 import H1 from '../markdown-render/h1';
 import H2 from '../markdown-render/h2';
@@ -14,6 +14,8 @@ import P from '../markdown-render/p';
 import Ul from '../markdown-render/ul';
 import Li from '../markdown-render/li';
 import A from '../markdown-render/a';
+import Table from '../markdown-render/table';
+import Blockquote from '../markdown-render/blockquote';
 import inlineCode from '../markdown-render/inlineCode';
 
 const components = {
@@ -24,8 +26,10 @@ const components = {
   ul: Ul,
   li: Li,
   a: A,
-  code: inlineCode
-}
+  table: Table,
+  blockquote: Blockquote,
+  code: inlineCode,
+};
 
 const Layout = ({ children, initialContext }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
