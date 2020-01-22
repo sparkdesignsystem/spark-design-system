@@ -10,7 +10,7 @@ export default {
   component: SprkAlert,
   parameters: {
     jest: ['SprkAlert'],
-    info: `${markdownDocumentationLinkBuilder('components', 'alert')}`,
+    info: `${markdownDocumentationLinkBuilder('alert')}`,
    },
 };
 

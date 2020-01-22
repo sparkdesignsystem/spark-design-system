@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkPagination'],
-    info: markdownDocumentationLinkBuilder('components', 'pagination'),
+    info: `${markdownDocumentationLinkBuilder('pagination')}`,
   },
 };
 

@@ -9,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('foundations', 'typography')}
+${markdownDocumentationLinkBuilder('typography', 'foundations')}
 
 - Heading elements have Typography settings automatically applied,
 but the classes can be used to change the style of a heading

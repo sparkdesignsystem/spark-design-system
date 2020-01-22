@@ -13,7 +13,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `${markdownDocumentationLinkBuilder('components', 'input')}`,
+    info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 

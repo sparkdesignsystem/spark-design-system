@@ -24,7 +24,7 @@ export default {
       SprkListItemComponent,
     },
     info: `
-${markdownDocumentationLinkBuilder('components', 'list')}
+${markdownDocumentationLinkBuilder('list')}
     `,
     docs: { iframeHeight: 100 },
   },

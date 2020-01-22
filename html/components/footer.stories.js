@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'footer')}
+${markdownDocumentationLinkBuilder('footer')}
     `,
     docs: { iframeHeight: 800 },
   },

@@ -18,7 +18,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'link')}
+${markdownDocumentationLinkBuilder('link')}
 - Spark Link styles are for text-based links.
 Images that are links should not use Spark classes.
 `,

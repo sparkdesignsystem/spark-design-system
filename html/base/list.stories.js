@@ -7,7 +7,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'list')}
+${markdownDocumentationLinkBuilder('list')}
     `,
     docs: { iframeHeight: 140 },
   },

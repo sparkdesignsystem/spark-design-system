@@ -11,7 +11,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkDropdown'],
-    info: `${markdownDocumentationLinkBuilder('components', 'dropdown')}`,
+    info: `${markdownDocumentationLinkBuilder('dropdown')}`,
   },
 };
 

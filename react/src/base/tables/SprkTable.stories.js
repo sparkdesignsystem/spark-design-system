@@ -11,7 +11,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkTable'],
-    info: `${markdownDocumentationLinkBuilder('components', 'table')}`,
+    info: `${markdownDocumentationLinkBuilder('table')}`,
   },
 };
 

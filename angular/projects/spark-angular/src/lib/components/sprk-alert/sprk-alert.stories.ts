@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('components', 'alert')}`,
+    info: `${markdownDocumentationLinkBuilder('alert')}`,
     docs: { iframeHeight: 120 },
   },
 };

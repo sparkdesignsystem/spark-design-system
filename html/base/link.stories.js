@@ -8,7 +8,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 80 },
     info: `
-${markdownDocumentationLinkBuilder('components', 'link')}
+${markdownDocumentationLinkBuilder('link')}
 - Spark Link styles are for text-based links.
 Images that are links should not use Spark classes.
 - The \`data-id\` property is provided as a hook for

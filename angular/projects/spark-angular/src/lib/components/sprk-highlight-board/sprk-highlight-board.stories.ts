@@ -17,7 +17,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'highlight-board')}
+${markdownDocumentationLinkBuilder('highlight-board')}
 ##### Accessibility
 - If the Buttons are being used to navigate
 to a new page, they should be \`<a>\` elements.

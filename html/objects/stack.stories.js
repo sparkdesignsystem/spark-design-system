@@ -9,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'stack')}
+${markdownDocumentationLinkBuilder('stack')}
     `,
     docs: { iframeHeight: 230 },
   },

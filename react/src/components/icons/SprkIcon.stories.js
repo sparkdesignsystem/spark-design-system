@@ -12,7 +12,7 @@ export default {
   parameters: {
     jest: ['SprkIcon'],
     info: `
-${markdownDocumentationLinkBuilder('components', 'icon')}
+${markdownDocumentationLinkBuilder('icon')}
 
 The icons in Spark are the property of Quicken
 Loans and are not provided directly in our packages. You

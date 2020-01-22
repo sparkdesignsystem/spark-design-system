@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('components', 'award')}`,
+    info: `${markdownDocumentationLinkBuilder('award')}`,
     docs: { iframeHeight: 400 },
   },
 };

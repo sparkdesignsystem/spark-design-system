@@ -9,7 +9,7 @@ export default {
   ],
   parameters: {
     docs: { iframeHeight: 140 },
-    info: `${markdownDocumentationLinkBuilder('components', 'centered-column')}
+    info: `${markdownDocumentationLinkBuilder('centered-column')}
 - The \`sprk-o-CenteredColumn\` class can be applied to
 any parent element that
 is being used to contain the application contents within

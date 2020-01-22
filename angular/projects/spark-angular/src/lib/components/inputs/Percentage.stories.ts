@@ -38,7 +38,7 @@ export default {
   },
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'input')}
+${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
   }

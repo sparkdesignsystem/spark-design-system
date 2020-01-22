@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 300 },
     info: `
-${markdownDocumentationLinkBuilder('components', 'tabs')}
+${markdownDocumentationLinkBuilder('tabs')}
 For this component to function properly, the
 HTML must be structured correctly:  
 

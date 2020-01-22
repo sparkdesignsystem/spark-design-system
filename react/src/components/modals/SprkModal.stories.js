@@ -28,7 +28,7 @@ export default {
       'ModalFooter',
     ],
     info: `
-${markdownDocumentationLinkBuilder('components', 'modal')}
+${markdownDocumentationLinkBuilder('modal')}
 - There are two parts to a Modal
     - 1. Modal Trigger (typically in the form of a Button) - When
     pressed, it triggers the Modal to appear.

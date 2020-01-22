@@ -14,7 +14,7 @@ export default {
       SprkListItem,
     },
     jest: ['SprkList, SprkListItem'],
-    info: `${markdownDocumentationLinkBuilder('components', 'list')}`,
+    info: `${markdownDocumentationLinkBuilder('list')}`,
   },
 };
 

@@ -9,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('foundations', 'space')}
+${markdownDocumentationLinkBuilder('space', 'foundations')}
     `,
   },
 };

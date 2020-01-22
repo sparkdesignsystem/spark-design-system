@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 320 },
     info: `
-${markdownDocumentationLinkBuilder('components', 'input')}
+${markdownDocumentationLinkBuilder('input')}
     `,
   },
 };

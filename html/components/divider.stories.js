@@ -7,13 +7,13 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'divider')}
+${markdownDocumentationLinkBuilder('divider')}
     `,
     docs: { iframeHeight: 60 },
   },
 };
 
-export const defaultStory = () =>(`
+export const defaultStory = () => (`
   <span
     class="sprk-c-Divider"
     data-id="divider-1"

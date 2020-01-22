@@ -9,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('components', 'dropdown')}
+${markdownDocumentationLinkBuilder('dropdown')}
     `,
     docs: { iframeHeight: 200 },
   },

@@ -16,7 +16,7 @@ export default {
     )
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('components', 'promo')}`,
+    info: `${markdownDocumentationLinkBuilder('promo')}`,
     docs: { iframeHeight: 430 },
   },
 };

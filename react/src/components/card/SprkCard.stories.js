@@ -13,7 +13,7 @@ export default {
   parameters: {
     subcomponents: { SprkCardTeaser, SprkCardHighlightedHeader },
     jest: ['SprkCard'],
-    info: `${markdownDocumentationLinkBuilder('components', 'card')}`,
+    info: `${markdownDocumentationLinkBuilder('card')}`,
   },
 };
 

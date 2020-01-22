@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 70 },
     info: `
-${markdownDocumentationLinkBuilder('components', 'pagination')}
+${markdownDocumentationLinkBuilder('pagination')}
 - The outer container must include the \`data-sprk-pagination\`
 attribute and each page \`<li>\` must include the
 \`data-sprk-pagination=”item”\` attribute. This is used

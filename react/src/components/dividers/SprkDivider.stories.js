@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkDivider'],
-    info: `${markdownDocumentationLinkBuilder('components', 'divider')}`,
+    info: `${markdownDocumentationLinkBuilder('divider')}`,
   },
 };
 

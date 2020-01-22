@@ -8,7 +8,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 600 },
     info: `
-${markdownDocumentationLinkBuilder('components', 'highlight-board')}
+${markdownDocumentationLinkBuilder('highlight-board')}
 - Users are able to activate the buttons in Highlight Board
 using the Enter or Space keys on the keyboard.
 Make sure to include keypress handlers in your JavaScript.
