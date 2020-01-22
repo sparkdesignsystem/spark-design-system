@@ -67,7 +67,6 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
               && (
               <div className={classnames({
                 'docs-layout__side-bar': true,
-                'docs-layout__side-bar-mobile--visible': menuVisible,
               })}
               >
                 <Menu
