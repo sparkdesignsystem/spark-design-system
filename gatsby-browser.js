@@ -19,4 +19,8 @@ exports.onRouteUpdate = () => {
       debug: 'false',
     });
   }
+
+  const mainContent = document.querySelector('#gatsby-focus-wrapper');
+  if (mainContent) mainContent.setAttribute('data-sprk-main', '');
+  document.getElementsByTagName('html')[0].classList.add('sprk-u-JavaScript');
 };
