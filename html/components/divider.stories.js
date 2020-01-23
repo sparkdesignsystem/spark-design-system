@@ -1,3 +1,5 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Divider',
   decorators: [
@@ -5,13 +7,13 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/divider)
+${markdownDocumentationLinkBuilder('divider')}
     `,
     docs: { iframeHeight: 60 },
   },
 };
 
-export const defaultStory = () =>(`
+export const defaultStory = () => (`
   <span
     class="sprk-c-Divider"
     data-id="divider-1"

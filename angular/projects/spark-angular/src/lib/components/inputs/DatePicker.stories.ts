@@ -10,6 +10,7 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -38,8 +39,8 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
-    `,
+${markdownDocumentationLinkBuilder('input')}
+`,
     docs: { iframeHeight: 200 },
   }
 };

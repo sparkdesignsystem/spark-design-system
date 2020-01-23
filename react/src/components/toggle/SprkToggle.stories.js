@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkToggle'],
-    info: markdownDocumentationLinkBuilder('toggle'),
+    info: `${markdownDocumentationLinkBuilder('toggle')}`,
   },
 };
 

@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { hugeInput } from '../hugeInput';
+import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Huge Text',
@@ -9,7 +10,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 140 },
   },
