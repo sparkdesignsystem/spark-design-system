@@ -148,6 +148,10 @@ SprkCard.propTypes = {
       href: PropTypes.string,
       /** Text of the CTA. */
       text: PropTypes.string,
+      /**
+       * The button variant to use for the call to action.
+       */
+      buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
     }),
     /**
      * Configures the main media of the Teaser Card.
