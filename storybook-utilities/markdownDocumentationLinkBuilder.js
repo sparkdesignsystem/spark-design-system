@@ -1,8 +1,5 @@
-const markdownDocumentationLinkBuilder = (component, type) => {
-  const directory = !type ? 'components' : type;
-  return `
-  ##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/${directory}/${component})
+const markdownDocumentationLinkBuilder = (component, type = 'components') => `
+##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/${type}/${component})
 `;
-};
 
 export { markdownDocumentationLinkBuilder };
