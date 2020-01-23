@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import { MDXProvider } from '@mdx-js/react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import { MDXProvider } from '@mdx-js/react';
 import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
