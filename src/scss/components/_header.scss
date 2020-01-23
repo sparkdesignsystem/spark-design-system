@@ -1,37 +1,30 @@
-.docs-header {
-  @media (min-width: $docs-search-wrap-breakpoint) {
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-  }
-}
-
-.docs-header__group {
-  margin: 1rem auto;
-
-  @media (min-width: $docs-search-wrap-breakpoint) {
-    align-items: center;
-    display: flex;
-    margin: 0;
-  }
-}
-
-.docs-header .sprk-b-InputContainer {
+.docs-masthead .sprk-b-InputContainer {
   margin-bottom: 0;
 }
 
-.docs-header__menu-button {
-  background: none;
-  border: none;
-  margin-right: 1rem;
-
-  @media (min-width: $doc-site-mobile-breakpoint) {
-    display: none;
-  }
+.docs-masthead .sprk-c-Masthead__content {
+  flex-wrap: wrap;
 }
 
-.docs-header__menu {
-  @media (max-width: $doc-site-mobile-breakpoint) {
-    display: none;
-  }
+.docs-masthead .sprk-c-Masthead__nav-item {
+  width: 100%;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.docs-masthead .sprk-c-Masthead__menu {
+  flex: 0 0 auto;
+}
+
+.docs-masthead .sprk-c-Masthead__branding {
+  padding-right: $sprk-space-misc-c;
+}
+
+/*
+ * Override because Gatsby
+ * wraps masthead in extra container
+ * that breaks our masthead in iOS Safari.
+ */
+.docs-masthead .sprk-c-Masthead__narrow-nav {
+  height: auto;
 }

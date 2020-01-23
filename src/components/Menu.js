@@ -3,29 +3,19 @@ import propTypes from 'prop-types';
 import InstallingSparkDocsMenu from './InstallingSparkDocsMenu';
 import UsingSparkDocsMenu from './UsingSparkDocsMenu';
 import PrinciplesSparkDocsMenu from './PrinciplesDocsMenu';
-import ContextMenu from './ContextMenu';
-import { SprkTextInput, SprkDivider } from '@sparkdesignsystem/spark-react';
 
-const Menu = ({ context, setContext}) => (
+const Menu = ({ context }) => (
   <div className="docs-menu">
-    <div className="docs-menu__context">
-      <ContextMenu
-        className="sprk-b-List sprk-b-List--bare"
-        context={context}
-        setContext={setContext}
-      />
-      <SprkDivider element="span" />
-    </div>
     { context === 'installing-spark'
-      && <InstallingSparkDocsMenu/>
+      && <InstallingSparkDocsMenu />
     }
     {
       context === 'using-spark'
-      && <UsingSparkDocsMenu/>
+      && <UsingSparkDocsMenu />
     }
     {
       context === 'principles'
-      && <PrinciplesSparkDocsMenu/>
+      && <PrinciplesSparkDocsMenu />
     }
   </div>
 );
@@ -34,4 +24,5 @@ export default Menu;
 
 Menu.propTypes = {
   links: propTypes.shape({}),
+  context: propTypes.string,
 };
