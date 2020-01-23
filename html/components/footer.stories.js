@@ -1,6 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { toggle } from '../components/toggle';
 import '../utilities/polyfills/classListSVG';
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Footer',
@@ -9,7 +10,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/footer)
+${markdownDocumentationLinkBuilder('footer')}
     `,
     docs: { iframeHeight: 800 },
   },

@@ -8,6 +8,7 @@ import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Textarea',
@@ -34,7 +35,7 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
   }

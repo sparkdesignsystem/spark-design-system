@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('dictionary'),
+    info: `${markdownDocumentationLinkBuilder('dictionary')}`,
     docs: { iframeHeight: 500 },
   },
 };

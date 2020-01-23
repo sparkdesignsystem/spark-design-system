@@ -14,7 +14,7 @@ export default {
       SprkStackItem,
     },
     jest: ['SprkStack', 'SprkStackItem'],
-    info: markdownDocumentationLinkBuilder('stack'),
+    info: `${markdownDocumentationLinkBuilder('stack')}`,
   },
 };
 
