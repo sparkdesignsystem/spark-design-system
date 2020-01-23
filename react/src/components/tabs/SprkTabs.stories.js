@@ -21,7 +21,7 @@ export default {
       'SprkTabsButton',
     ],
     info: `
-${markdownDocumentationLinkBuilder('tab')}
+${markdownDocumentationLinkBuilder('tabs')}
 - The Tabs component makes use of the
 \`sprk-u-JavaScript\` class to provide a graceful
 degradation experience in environments where JavaScript

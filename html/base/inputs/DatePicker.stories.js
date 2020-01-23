@@ -1,6 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { datePicker } from '../datePicker';
 import '../../utilities/polyfills/classListSVG';
+import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -10,7 +11,7 @@ export default {
   parameters: {
     docs: { iframeHeight: 320 },
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('input')}
     `,
   },
 };

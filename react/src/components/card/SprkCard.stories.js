@@ -13,7 +13,7 @@ export default {
   parameters: {
     subcomponents: { SprkCardTeaser, SprkCardHighlightedHeader },
     jest: ['SprkCard'],
-    info: markdownDocumentationLinkBuilder('card'),
+    info: `${markdownDocumentationLinkBuilder('card')}`,
   },
 };
 
@@ -117,6 +117,7 @@ export const twoUpCards = () => (
           text: 'Learn More',
           ctaVariant: 'button',
           href: '#nogo',
+          buttonVariant: 'secondary'
         },
         media: {
           href: '#nogo',
@@ -140,6 +141,7 @@ export const twoUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -173,6 +175,7 @@ export const threeUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -197,6 +200,7 @@ export const threeUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -221,6 +225,7 @@ export const threeUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -254,6 +259,7 @@ export const fourUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -278,6 +284,7 @@ export const fourUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -302,6 +309,7 @@ export const fourUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {
@@ -326,6 +334,7 @@ export const fourUpCards = () => (
           ctaAnalytics: 'test',
           text: 'Learn More',
           ctaVariant: 'button',
+          buttonVariant: 'secondary',
           href: '#nogo',
         },
         media: {

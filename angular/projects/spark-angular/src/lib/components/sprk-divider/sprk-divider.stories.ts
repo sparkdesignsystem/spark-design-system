@@ -14,7 +14,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('divider'),
+    info: `${markdownDocumentationLinkBuilder('divider')}`,
     docs: { iframeHeight: 60 },
   },
 };

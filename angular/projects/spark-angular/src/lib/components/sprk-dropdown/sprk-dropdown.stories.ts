@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('dropdown'),
+    info: `${markdownDocumentationLinkBuilder('dropdown')}`,
     docs: { iframeHeight: 200 },
   },
 };

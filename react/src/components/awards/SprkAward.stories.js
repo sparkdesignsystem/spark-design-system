@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     jest: ['SprkAward'] ,
-    info: markdownDocumentationLinkBuilder('award'),
+    info: `${markdownDocumentationLinkBuilder('award')}`,
   },
 };
 

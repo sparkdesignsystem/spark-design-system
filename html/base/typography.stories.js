@@ -1,3 +1,5 @@
+import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Fundamentals/Typography',
   decorators: [
@@ -7,7 +9,7 @@ export default {
   ],
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/foundations/typography)
+${markdownDocumentationLinkBuilder('typography', 'foundations')}
 
 - Heading elements have Typography settings automatically applied,
 but the classes can be used to change the style of a heading

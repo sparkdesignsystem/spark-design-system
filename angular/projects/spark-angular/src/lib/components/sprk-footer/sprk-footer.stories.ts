@@ -17,7 +17,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('footer'),
+    info: `${markdownDocumentationLinkBuilder('footer')}`,
     docs: { iframeHeight: 800 },
   },
 };
