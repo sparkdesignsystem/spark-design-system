@@ -19,3 +19,12 @@
 .docs-masthead .sprk-c-Masthead__branding {
   padding-right: $sprk-space-misc-c;
 }
+
+/*
+ * Override because Gatsby
+ * wraps masthead in extra container
+ * that breaks our masthead in iOS Safari.
+ */
+.docs-masthead .sprk-c-Masthead__narrow-nav {
+  height: auto;
+}
