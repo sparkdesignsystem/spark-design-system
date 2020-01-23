@@ -10,7 +10,7 @@ export default {
   component: SprkPromo,
   parameters: {
     jest: ['SprkPromo'],
-    info: markdownDocumentationLinkBuilder('promo'),
+    info: `${markdownDocumentationLinkBuilder('promo')}`,
   },
 };
 

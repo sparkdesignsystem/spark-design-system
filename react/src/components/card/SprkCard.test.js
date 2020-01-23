@@ -60,6 +60,36 @@ describe('SprkCard:', () => {
     expect(loadsTeaserComponent).toBe(true);
   });
 
+  it('should apply the correct button variant to cta button in teaser card', () => {
+    const wrapper = mount(
+      <SprkCard
+        variant="teaser"
+        teaserConfig={{
+          bodyText: 'Body text of a teaser card.',
+          cta: {
+            ctaAnalytics: 'test',
+            text: 'Learn More',
+            ctaVariant: 'button',
+            buttonVariant: 'tertiary',
+            href: 'https://sparkdesignsystem.com/',
+          },
+          media: {
+            href: 'https://sparkdesignsystem.com/',
+            mediaLinkElement: 'a',
+            imgAlt: 'placeholder image',
+            imgSrc:
+              'https://spark-assets.netlify.com/desktop.jpg',
+            mediaAnalyticsString: 'Card:teaser-link',
+            mediaVariant: 'img',
+          },
+          title: 'Teaser Card Title',
+          titleFirst: false,
+        }}
+      />,
+    );
+    expect(wrapper.find('.sprk-c-Button--tertiary')).length === 1;
+  });
+
   // If highlighted header, should load teaser card
   it('should load highlighted header if there is highlightedHeaderConfig', () => {
     const wrapper = mount(

@@ -10,7 +10,7 @@ export default {
   component: SprkDictionary,
   parameters: {
     jest: ['SprkDictionary'],
-    info: markdownDocumentationLinkBuilder('dictionary'),
+    info: `${markdownDocumentationLinkBuilder('dictionary')}`,
   },
 };
 

@@ -106,6 +106,7 @@ const SprkCardTeaser = (props) => {
       ctaLinkElement,
       ctaVariant,
       href,
+      buttonVariant,
       text,
       ...rest
     } = cta;
@@ -116,6 +117,10 @@ const SprkCardTeaser = (props) => {
       <TagName
         data-analytics={ctaAnalytics}
         className="sprk-c-Button"
+        className={cx('sprk-c-Button', {
+          'sprk-c-Button--secondary': buttonVariant === 'secondary',
+          'sprk-c-Button--tertiary': buttonVariant === 'tertiary',
+        })}
         href={href}
         element="a"
         {...rest}
@@ -249,6 +254,10 @@ SprkCardTeaser.propTypes = {
       href: PropTypes.string,
       /** Text of the CTA. */
       text: PropTypes.string,
+      /**
+       * The variant to use for the CTA button.
+       */
+      buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
     }),
     /**
      * Configures the main media of the Teaser Card.

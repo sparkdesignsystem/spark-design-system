@@ -8,6 +8,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Monetary',
@@ -35,7 +36,7 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
   }

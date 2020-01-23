@@ -13,6 +13,7 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/SSN',
@@ -43,7 +44,7 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
   }

@@ -1,32 +1,41 @@
+/* stylelint-disable selector-max-id */
+
+/* stylelint-disable selector-class-pattern */
+html,
+body {
+  height: 100%;
+}
+
+/* stylelint-disable string-quotes */
+body,
+#___gatsby,
+#___gatsby > div[role="group"][tabindex] {
+  min-height: 100%;
+}
+
 .docs-layout {
+  flex: 1 0 auto;
   max-width: $doc-site-layout-max-width;
   position: relative;
-
-  @media (min-width: ($doc-site-layout-max-width + 2rem)) {
-    margin: 2rem auto;
-  }
+  width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
-    display:-ms-grid;
+    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 300px 1fr;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 188px 1fr;
+    -ms-grid-columns: fit-content(300px) 1fr;
+    grid-template-columns: fit-content(300px) 1fr;
   }
 }
 
-.docs-layout__header {
-  padding: 1rem;
+/*
+ * Gatsby wraps content in a weird div automatically
+ * This allows us to add height to layout footer.
+ */
 
-  @media (min-width: $doc-site-mobile-breakpoint) {
-    align-self: start;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
-    -ms-grid-row: 1;
-    grid-row: 1 / 2;
-    padding: 2rem;
-  }
+#___gatsby > div[role="group"][tabindex] {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .docs-layout__side-bar {
@@ -34,34 +43,19 @@
 
   @media (min-width: $doc-site-mobile-breakpoint) {
     display: block;
-    padding: 2rem;
+    padding: $sprk-space-l;
     -ms-grid-column: 1;
-    -ms-grid-row: 2;
-    grid-row: 2 / 3;
+    grid-column: 1;
   }
 }
 
-.docs-layout__side-bar-mobile--visible {
-  background-color: $sprk-gray;
-  box-shadow: $sprk-card-shadow;
-  padding: 2rem;
-  display: block;
-  position: absolute;
-  top: 93px;
-  width: 100%;
-  z-index: 100;
-}
-
 .docs-layout__content {
-  padding: 2rem;
   margin: 0 auto;
   width: 100%;
 
   @media (min-width: $doc-site-mobile-breakpoint) {
-    overflow-x: scroll;
     -ms-grid-column: 2;
-    -ms-grid-row: 2;
-    grid-row: 2 / 3;
+    grid-column: 2;
   }
 }
 
@@ -70,4 +64,16 @@
 .docs-layout__content .docs-b-h2,
 .docs-layout__content .docs-b-h3 {
   padding-top: $sprk-space-l;
+}
+
+.docs-o-Grid {
+  display: grid;
+}
+
+.docs-o-Grid--three-col {
+  grid-template-columns: repeat(auto-fit, minmax(310px, 425px));
+}
+
+.docs-o-Grid--large {
+  gap: $sprk-space-l;
 }

@@ -14,6 +14,7 @@ import { SprkSelectionItemContainerModule } from './sprk-selection-item-containe
 import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Password',
@@ -45,7 +46,7 @@ export default {
   },
   parameters: {
     info: `
-##### For design and usage information check out the [documentation.](https://spark-docs.netlify.com/using-spark/components/input)
+${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
   }

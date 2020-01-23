@@ -18,7 +18,7 @@ export default {
     )
   ],
   parameters: {
-    info: markdownDocumentationLinkBuilder('card'),
+    info: `${markdownDocumentationLinkBuilder('card')}`,
     docs: { iframeHeight: 200 },
   },
 };
@@ -142,6 +142,7 @@ export const teaser = () => ({
       ctaText="Learn More"
       ctaHref="#nogo"
       ctaAnalytics="Button: Spark"
+      additionalCtaClasses="sprk-c-Button--secondary"
       idString="card-teaser"
     >
     </sprk-card>
@@ -176,6 +177,7 @@ export const twoUpCards = () => ({
            Facilisi perpetua an pri, errem commune mea at, mei prima tantas
            signiferumque at. Numquam."
          ctaType="button"
+         additionalCtaClasses="sprk-c-Button--secondary"
          ctaText="Learn More"
          title="Title"
          sprkStackItem
@@ -194,6 +196,7 @@ export const twoUpCards = () => ({
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."
           ctaType="button"
+          additionalCtaClasses="sprk-c-Button--secondary"
           ctaText="Learn More"
           title="Title"
           sprkStackItem
@@ -232,6 +235,7 @@ export const threeUpCards = () => ({
            tantas signiferumque at. Numquam."
          ctaType="button"
          ctaText="Learn More"
+         additionalCtaClasses="sprk-c-Button--secondary"
          title="Title"
          sprkStackItem
        ></sprk-card>
@@ -251,6 +255,7 @@ export const threeUpCards = () => ({
           ctaType="button"
           ctaText="Learn More"
           title="Title"
+          additionalCtaClasses="sprk-c-Button--secondary"
           sprkStackItem
         ></sprk-card>
       </div>
@@ -260,6 +265,7 @@ export const threeUpCards = () => ({
       >
         <sprk-card
           cardType="teaser"
+          additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-three-up-3"
           imgSrc="https://spark-assets.netlify.com/desktop.jpg"
@@ -297,6 +303,7 @@ export const fourUpCards = () => ({
      >
        <sprk-card
          cardType="teaser"
+         additionalCtaClasses="sprk-c-Button--secondary"
          media="img"
          idString="card-four-up-1"
          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
@@ -315,6 +322,7 @@ export const fourUpCards = () => ({
       >
         <sprk-card
           cardType="teaser"
+          additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-four-up-2"
           imgSrc="https://spark-assets.netlify.com/desktop.jpg"
@@ -333,6 +341,7 @@ export const fourUpCards = () => ({
       >
         <sprk-card
           cardType="teaser"
+          additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-four-up-3"
           imgSrc="https://spark-assets.netlify.com/desktop.jpg"
@@ -351,6 +360,7 @@ export const fourUpCards = () => ({
       >
         <sprk-card
           cardType="teaser"
+          additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-four-up-4"
           imgSrc="https://spark-assets.netlify.com/desktop.jpg"
