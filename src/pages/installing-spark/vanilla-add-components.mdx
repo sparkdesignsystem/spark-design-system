@@ -1,5 +1,85 @@
 ---
-  title: Vanilla - Add Components
+  title: HTML Adding Components Guide
 ---
 
-# Vanilla - Add Components
+# HTML Adding Components Guide 🧩
+
+This is a guide for adding a Spark component to an environment in which Spark has already been installed. This guide covers Spark components for HTML, CSS, and JavaScript environments with no JavaScript framework.
+
+This guide is Part 3 in a 3-Part series.
+
+
+
+1. Environment Setup
+
+2. Spark Installation
+
+📌 3. Add a component
+
+
+
+We also have guides for installing and using Spark in Angular and React development environments.
+
+
+
+What we'll cover in this guide:
+
+
+
+🧭 Navigating to Component HTML
+
+
+
+📘 Including Component HTML in your site
+
+
+
+You’ve already set up an environment with all the JavaScript and CSS needed for Spark components. Now you’re ready to start writing the HTML to build the structure of the components you’ll be using.
+
+## Before We Begin
+
+This guide builds on the previous guide in the series. You can download the finished project from the previous guide here.
+
+## 🧭 Navigating to Component HTML
+
+On sparkdesignsystem.com, we’ve documented all the HTML you’ll need with copy/paste examples for many variants and configurations you can use in your site.
+
+Let’s include a Spark Button component from the site.
+
+TODO: Instructions on accessing the Gatsby/Storybook site and getting to the HTML copy/paste code. Fill this section in once the site navigation is working.
+
+## 📘 Including Component HTML in Your Site
+
+Copy the sample code for the Submission Spinner component into index.html.
+
+```
+<button class="sprk-c-Button" data-sprk-spinner="click">
+
+Submit
+
+</button>
+```
+
+> Note: make sure you’re including main.js after the HTML elements in index.html. The `<script>` line should be at the bottom of the `<body>` tag.
+
+You should see a Spark Button with all the correct Spark CSS applied. When you click the button, it should correctly apply the Spark JavaScript and animate.
+
+GIF
+
+## You did it!
+
+
+
+You’re ready to start building with Spark! For additional help configuring and using Spark, check out some of our other guides:
+
+
+
+The Polyfills Guide will help you import JavaScript polyfills needed for Spark. Polyfills are needed for Spark to function across all modern browsers.
+
+For help importing the Spark SVG Icon Set, check out our Icon Installation Guide.
+
+Guidance on accessing and including the Rocket Sans font used by Spark can be found in our Font Installation Guide.
+
+Looking for help on theming Spark or modifying any of the default styles? Sounds like you’d be interested in our Spark Overrides Guide.
+
+Working with the DatePicker component? This component requires its own configuration object which is described in the Datepicker Configuration Guide.
