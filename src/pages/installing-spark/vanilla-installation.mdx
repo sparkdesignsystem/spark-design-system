@@ -4,83 +4,67 @@
 
 # HTML Spark Installation Guide ✨
 
-This is a guide for installing Spark into an existing site. This guide covers Spark installation for HTML, CSS, and JavaScript with no JavaScript framework.
-
-
+This is a guide for installing Spark into an existing site. This guide
+ covers Spark installation for HTML, CSS, and JavaScript with no JavaScript
+  framework.
 
 This guide is Part 2 in a 3-Part series.
 
-
-
 1. Environment Setup
-
 📌 2. Spark Installation
-
 3. Adding a Component
 
-
-
-We also have guides for installing and using Spark in Angular and React development environments.
-
-
+We also have guides for installing and using Spark in [Angular]() and [React]()
+ development environments.
 
 What we'll cover in this guide:
 
-🧱 Install Spark Package
+* Install Spark Package 🧱
+* Configure Spark ⚙️
 
-
-
-⚙️ Configure Spark
-
-
-
-At the end of this guide you will have all the Spark JavaScript and CSS available in your site and ready for development with Spark components.
+At the end of this guide you will have all the Spark JavaScript and CSS
+ available in your site and ready for development with Spark components.
 
 ## Before We Begin
 
-This guide builds on the previous guide in the series. You can download the finished project from the previous guide here.
+This guide builds on the [previous guide]() in the series. You can download
+ the finished project from the previous guide [here]().
 
 ## 🧱 Install Spark Package
 
-First, use npm to install the Spark package.
+First, use `npm` to install the Spark package.
 
 ```
 npm install --save-dev @sparkdesignsystem/spark
 ```
 
-This will download all the JavaScript and CSS needed to render the Spark components.
+This will download all the JavaScript and CSS needed to render the Spark
+ components.
 
+Currently these assets are in the `node_modules` folder. In order to access
+ them in your compiled website, you need to tell Webpack to import them
+ in your JavaScript.
 
-
-Currently these assets are in the node_modules folder. In order to access them in your compiled website, you need to tell Webpack to import them in your JavaScript.
-
-
-
-If you are continuing with the project that was built in the previous guide, replace the entire contents of index.js with this:
+If you are continuing with the project that was built in the previous
+guide, replace the entire contents of `index.js` with this:
 
 ```
 // tell Webpack to import the Spark JavaScript
-
 import spark from "@sparkdesignsystem/spark/es5/spark";
-
 import sparkPrerender from "@sparkdesignsystem/spark/es5/sparkPrerender";
 
-
-
 // tell Webpack to import the Spark CSS
-
 import "@sparkdesignsystem/spark/_spark.scss";
 
-
-
 // initialize Spark
-
 sparkPrerender();
-
 spark();
 ```
 
-Now when you build your website, the Spark assets will be included in the output. You can verify that this is the case by checking the compiled bundle.css and main.js in your solution. You should see the compiled Spark CSS and JavaScript.
+Now when you build your website, the Spark assets will be included in the
+ output. You can verify that this is the case by checking the compiled
+ `bundle.css` and `main.js` in your solution. You should see the compiled
+  Spark CSS and JavaScript.
 
 ```
 npm run build
@@ -92,7 +76,7 @@ IMAGE
 
 The last thing you need to do is configure your website to work with Spark.
 
-In index.html, find the body element and add the data-sprk-main attribute.
+In `index.html`, find the body element and add the `data-sprk-main` attribute.
 
 ```
 <body data-sprk-main>
@@ -100,87 +84,63 @@ In index.html, find the body element and add the data-sprk-main attribute.
 </body>
 ```
 
-> This attribute is required for some Spark components to correctly handle focus changes.
+> This attribute is required for some Spark components to correctly handle
+focus changes.
 
 ## 🎉 You did it!
 
-You now have a development environment with Spark installed and are ready to start adding Spark components. For guidance on adding HTML Spark components, check out the  Adding a Component  guide.
+You now have a development environment with Spark installed and are ready
+to start adding Spark components. For guidance on adding HTML Spark
+components, check out the [Adding a Component]() guide.
 
+If you need additional help configuring Spark for your environment,
+check out some of our other guides:
 
+* For help importing the Spark SVG Icon Set, check out our [Icon Installation Guide]().
 
-If you need additional help configuring Spark for your environment, check out some of our other guides:
-
-
-
-The Polyfills Guide will help you import JavaScript polyfills needed for Spark. Polyfills are needed for Spark to function across all modern browsers.
-
-For help importing the Spark SVG Icon Set, check out our Icon Installation Guide.
-
-Guidance on accessing and including the Rocket Sans font used by Spark can be found in our Font Installation Guide.
-
-Looking for help on theming Spark or modifying any of the default styles? Sounds like you’d be interested in our Spark Overrides Guide.
-
-Working with the DatePicker component? This component requires its own configuration object which is described in the Datepicker Configuration Guide.
+* Guidance on accessing and including the Rocket Sans font used by
+ Spark can be found in our [Font Installation Guide]().
 
 ## 🙀 Troubleshooting
 
-
-
-Uncaught ReferenceError: SPRK_CURRENT_VERSION is not defined 
-
-
+**Uncaught ReferenceError: SPRK_CURRENT_VERSION is not defined**
 
 Make sure you're importing Spark from the correct directory:
-
 
 ```
 import spark from "@sparkdesignsystem/spark/es5/spark";
 ```
 
-
 not this:
-
 
 ```
 import spark from "@sparkdesignsystem/spark/spark";
 ```
 
-
 ---
 
+**`WARN Hit error self signed certificate in certificate chain`**
 
+This is often caused by corporate firewall configurations and
+can sometimes be fixed by prefixing `npm install` with 
+`NODE_TLS_REJECT_UNAUTHORIZED=0`.
 
- WARN Hit error self signed certificate in certificate chain
-
-
-
-This is often caused by corporate firewall configurations and can sometimes be fixed by prefixing npm install with NODE_TLS_REJECT_UNAUTHORIZED=0.
-
-
-
+```
 NODE_TLS_REJECT_UNAUTHORIZED=0 npm install --save-dev @sparkdesignsystem/spark
-
-
-
----
-
-
-
-Spark js is being called but none of my components are being initialized.
-
-
-
-Make sure you are calling spark() after the DOM is loaded. You may need to move the `<script>` tag in index.html to the bottom of the file.
-
-
+```
 
 ---
 
+**Spark.js is being called but none of my components are being initialized.**
 
+Make sure you are calling `spark()` *after* the DOM is loaded. You may need
+to move the `<script>` tag in `index.html` to the bottom of the file.
 
-The Webpack build is completing without errors but spark js and css are not being applied to my site.
+---
 
+**The Webpack build is completing without errors but the Spark JavaScript and
+CSS are not being applied to my site.**
 
-
-Make sure you are referencing your JavaScript and CSS files correctly in index.html. In our example, we needed to change the import from src/index.js to main.js.
-
+Make sure you are referencing your JavaScript and CSS files correctly in 
+`index.html`. In our example, we needed to change the import from 
+`src/index.js` to `main.js`.
