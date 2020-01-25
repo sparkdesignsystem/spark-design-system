@@ -15,6 +15,8 @@ import P from '../markdown-render/p';
 import Ul from '../markdown-render/ul';
 import Li from '../markdown-render/li';
 import A from '../markdown-render/a';
+import Table from '../markdown-render/table';
+import Blockquote from '../markdown-render/blockquote';
 import inlineCode from '../markdown-render/inlineCode';
 
 const components = {
@@ -25,6 +27,8 @@ const components = {
   ul: Ul,
   li: Li,
   a: A,
+  table: Table,
+  blockquote: Blockquote,
   code: inlineCode,
 };
 
