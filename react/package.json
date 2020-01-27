@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-react",
-  "version": "1.4.0-alpha.0",
+  "version": "1.4.0-alpha.1",
   "description": "A collection of Spark Design System components in React 16+",
   "main": "dist/index.js",
   "scripts": {
@@ -58,7 +58,7 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.6.2",
     "react-animate-height": "^2.0.16",
-    "tiny-date-picker": "^3.2.8",
+    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker",
     "warning": "^4.0.3"
   }
 }
