@@ -3,7 +3,13 @@ request.open('GET', 'https://spark-assets.netlify.com/spark-core-icons.svg');
 request.send();
 request.onload = function () {
   document.querySelector('#sprk-icons').innerHTML = this.response;
-  window.dispatchEvent(new CustomEvent('sprk-icons-loaded', {
-    bubbles: true, detail: new Date(),
-  }));
+  let event;
+  if (typeof (Event) === 'function') {
+    event = new Event('sprk-icons-loaded');
+  } else {
+    event = document.createEvent('Event');
+    event.initEvent('sprk-icons-loaded', true, true);
+  }
+
+  window.dispatchEvent(event);
 };
