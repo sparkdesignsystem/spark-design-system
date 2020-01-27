@@ -52,3 +52,86 @@
 .sprk-o-Box--huge {
   padding: $sprk-box-padding-huge;
 }
+
+/* stylelint-disable selector-class-pattern */
+/// Misc A Box - Misc A padding (Default 24px)
+.sprk-o-Box--misc-a {
+  padding: $sprk-space-misc-a;
+}
+
+/// Misc B Box - Misc B padding (Default 40px)
+.sprk-o-Box--misc-b {
+  padding: $sprk-space-misc-b;
+}
+
+/// Misc C Box - Misc C padding (Default 48px)
+.sprk-o-Box--misc-c {
+  padding: $sprk-space-misc-c;
+}
+
+/// Misc D Box - Misc D padding (Default 80px)
+.sprk-o-Box--misc-d {
+  padding: $sprk-space-misc-d;
+}
+
+/* stylelint-enable selector-class-pattern */
+
+/// Inset Short Tiny Box - Extra small inset short padding
+/// (Default 2px 4px 2px 4px)
+.sprk-o-Box--inset-short-tiny {
+  padding: $sprk-space-inset-short-xs;
+}
+
+/// Inset Short Small Box - Small inset short padding
+/// (Default 4px 8px 4px 8px)
+.sprk-o-Box--inset-short-small {
+  padding: $sprk-space-inset-short-s;
+}
+
+/// Inset Short Medium Box - Medium inset short padding
+/// (Default 8px 16px 8px 16px)
+.sprk-o-Box--inset-short-medium {
+  padding: $sprk-space-inset-short-s;
+}
+
+/// Inset Short Large Box - Large inset short padding
+/// (Default 16px 32px 16px 32px)
+.sprk-o-Box--inset-short-large {
+  padding: $sprk-space-inset-short-l;
+}
+
+/// Inset Short Huge Box - Extra large inset short padding
+/// (Default 32px 64px 32px 64px)
+.sprk-o-Box--inset-short-huge {
+  padding: $sprk-space-inset-short-xl;
+}
+
+/// Inset Tall Tiny Box - Extra small inset tall padding
+/// (Default 6px 4px 6px 4px)
+.sprk-o-Box--inset-tall-tiny {
+  padding: $sprk-space-inset-tall-xs;
+}
+
+/// Inset Tall Small Box - Small inset tall padding
+/// (Default 12px 8px 12px 8px)
+.sprk-o-Box--inset-tall-small {
+  padding: $sprk-space-inset-tall-s;
+}
+
+/// Inset Tall Medium Box - Medium inset tall padding
+/// (Default 24px 16px 24px 16px)
+.sprk-o-Box--inset-tall-medium {
+  padding: $sprk-space-inset-tall-s;
+}
+
+/// Inset Tall Large Box - Large inset tall padding
+/// (Default 48px 32px 48px 32px)
+.sprk-o-Box--inset-tall-large {
+  padding: $sprk-space-inset-short-l;
+}
+
+/// Inset Tall Huge Box - Extra large inset short padding
+/// (Default 96px 64px 96px 64px)
+.sprk-o-Box--inset-tall-huge {
+  padding: $sprk-space-inset-tall-xl;
+}
