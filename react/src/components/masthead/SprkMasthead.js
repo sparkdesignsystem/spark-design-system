@@ -88,6 +88,10 @@ class SprkMasthead extends Component {
 
   closeNarrowNavMenu() {
     this.setState({ narrowNavOpen: false });
+    document.body.classList.remove('sprk-u-Overflow--hidden');
+    document.documentElement.classList.remove('sprk-u-Overflow--hidden');
+    document.body.classList.remove('sprk-u-Height--100');
+    document.documentElement.classList.remove('sprk-u-Height--100');
   }
 
   setIsScrolled() {
@@ -218,6 +222,7 @@ class SprkMasthead extends Component {
         {bigNavLinks.length > 0 && <SprkMastheadBigNav links={bigNavLinks} />}
         {narrowNavLinks.length > 0 && (
           <SprkMastheadNarrowNav
+            linkSelectionFunction={()=> {this.closeNarrowNavMenu()}}
             selector={narrowSelector}
             links={narrowNavLinks}
             isOpen={narrowNavOpen}

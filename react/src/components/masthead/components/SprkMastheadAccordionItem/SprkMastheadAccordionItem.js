@@ -29,6 +29,7 @@ class SprkMastheadAccordionItem extends Component {
     const {
       additionalClasses,
       analyticsString,
+      clickFunction,
       defaultOpen,
       element,
       href,
@@ -84,6 +85,7 @@ class SprkMastheadAccordionItem extends Component {
                   return (
                     <li key={innerId}>
                       <InnerTagName
+                        onClick={clickFunction}
                         href={
                           InnerTagName === 'a' ? innerHref || '#nogo' : undefined
                         }
@@ -103,6 +105,7 @@ class SprkMastheadAccordionItem extends Component {
         )}
         {stateLinks.length <= 0 && (
           <TagName
+            onClick={clickFunction}
             className={classNames(
               { 'sprk-c-MastheadAccordion__summary': !isButton },
               {

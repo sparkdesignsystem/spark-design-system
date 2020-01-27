@@ -5,6 +5,7 @@ import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 const SprkMastheadNarrowNav = ({
   idString,
+  linkSelectionFunction,
   isOpen,
   links,
   selector,
@@ -19,7 +20,7 @@ const SprkMastheadNarrowNav = ({
         {...rest}
       >
         {selector.items && <SprkMastheadSelector isFlush choices={selector} />}
-        <SprkMastheadAccordion links={links} />
+        <SprkMastheadAccordion linkSelectionFunction={linkSelectionFunction} links={links} />
       </nav>
     )}
   </React.Fragment>
