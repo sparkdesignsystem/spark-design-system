@@ -72,7 +72,6 @@ module.exports = {
           + '/Icons/spark-core-icons-V10.svg',
       },
     },
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
