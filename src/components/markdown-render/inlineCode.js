@@ -1,13 +1,10 @@
-import React from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import darkTheme from "prism-react-renderer/themes/duotoneDark";
+import React from 'react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import darkTheme from 'prism-react-renderer/themes/duotoneDark';
 
 const InlineCode = ({ children, className, additionalPreClasses, theme }) => {
-  let language;
-  if (className) {
-    language = className.replace(/language-/, "");
-  }
-
+  className = className ? '' : className;
+  const language = className.replace(/language-/, '');
   return (
     <Highlight
       {...defaultProps}
