@@ -39,7 +39,7 @@ communicate the Icon’s meaning.
   },
 };
 
-export const Default = () => (
+export const defaultStory = () => (
   `
   <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#access" />
@@ -47,7 +47,7 @@ export const Default = () => (
   `
 );
 
-Default.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
