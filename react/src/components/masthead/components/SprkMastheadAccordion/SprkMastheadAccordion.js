@@ -46,6 +46,10 @@ SprkMastheadAccordion.propTypes = {
    */
   idString: PropTypes.string,
   /**
+   * Expects a function that gets executed when a user clicks a link inside the Accordion.
+   */
+  linkSelectionFunction: PropTypes.func,
+  /**
    * Used to render children of `SprkMastheadAccordionItem`.
    */
   links: PropTypes.arrayOf(
@@ -91,6 +95,7 @@ SprkMastheadAccordion.propTypes = {
 };
 
 SprkMastheadAccordion.defaultProps = {
+  linkSelectionFunction: () => {},
   links: [],
 };
 

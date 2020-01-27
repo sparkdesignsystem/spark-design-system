@@ -161,6 +161,7 @@ class SprkMasthead extends Component {
       logoLink,
       logoLinkElement,
       navLink,
+      narrowNavSelectionFunction,
     } = this.props;
     const { isScrolled, narrowNavOpen, isHidden } = this.state;
 
@@ -222,7 +223,12 @@ class SprkMasthead extends Component {
         {bigNavLinks.length > 0 && <SprkMastheadBigNav links={bigNavLinks} />}
         {narrowNavLinks.length > 0 && (
           <SprkMastheadNarrowNav
-            linkSelectionFunction={()=> {this.closeNarrowNavMenu()}}
+            linkSelectionFunction={()=> {
+              if(narrowNavSelectionFunction) {
+                narrowNavSelectionFunction();
+              }
+              this.closeNarrowNavMenu()
+            }}
             selector={narrowSelector}
             links={narrowNavLinks}
             isOpen={narrowNavOpen}
@@ -309,6 +315,10 @@ SprkMasthead.propTypes = {
       ),
     }),
   ),
+  /**
+   * Expects a function to be executed when a user clicks a navigating link in the narrow nav.
+   */
+  narrowNavSelectionFunction: PropTypes.func,
   /**
    * Expects an array of link objects,
    * to be represented in the narrow nav
@@ -453,6 +463,7 @@ SprkMasthead.propTypes = {
 };
 
 SprkMasthead.defaultProps = {
+  narrowNavSelectionFunction: () => {},
   littleNavLinks: [],
   narrowNavLinks: [],
   bigNavLinks: [],

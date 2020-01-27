@@ -36,6 +36,10 @@ SprkMastheadNarrowNav.propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
+   * Expects a function to be executed when a user clicks a navigating link from the menu.
+   */
+  linkSelectionFunction: PropTypes.func,
+  /**
    * Configuration to build the links inside the Narrow Navigation.
    */
   links: PropTypes.arrayOf(
@@ -106,6 +110,7 @@ SprkMastheadNarrowNav.propTypes = {
 };
 
 SprkMastheadNarrowNav.defaultProps = {
+  linkSelectionFunction: () => {},
   idString: '',
   isOpen: false,
   selector: {},

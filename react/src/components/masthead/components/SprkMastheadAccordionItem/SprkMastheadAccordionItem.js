@@ -145,6 +145,10 @@ SprkMastheadAccordionItem.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
+   * Expects a function to be executed when a user clicks a link or a link inside the accordion item.
+   */
+  clickFunction: PropTypes.func,
+  /**
    * Decides whether the Accordion item should render open by default.
    */
   defaultOpen: PropTypes.bool,
@@ -196,6 +200,7 @@ SprkMastheadAccordionItem.propTypes = {
 };
 
 SprkMastheadAccordionItem.defaultProps = {
+  clickFunction: () => {},
   defaultOpen: false,
   element: 'a',
   isActive: false,
