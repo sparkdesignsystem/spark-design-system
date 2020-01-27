@@ -1,0 +1,87 @@
+---
+title: Fonts
+---
+
+# Getting Started with Spark Fonts
+
+The Spark Design System includes functionality for
+applying web fonts as part of your Sass build.
+You can configure your font setup using Sass
+variables and then those fonts will be included
+in the Spark CSS bundle when you build your site.
+
+## Sass variables
+
+These are the Sass variables used to configure
+Spark fonts. These variables should be set in
+your Sass build *before importing Spark*.
+
+| Sass Variable | Type | Description |
+|---|---|---|
+| `$sprk-using-webfonts` | boolean | This tells Spark that webfonts will be used. The default setting is `false`. Set to `true` to use Spark webfonts.|
+| `$sprk-font-display` | string (optional) | (Optional) This setting is used to control the behavior of text while fonts are still being loaded. The default value is `swap`, which will cause text to render using a fallback font until the custom font is available. At which point, the correct font is `swap`ped in. More info on the `font-display` property and its possible values can be found [here](https://css-tricks.com/font-display-masses/#article-header-id-1).|
+| `$sprk-webfonts` | Sass List | Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. (See below for example.)  |
+
+The `$sprk-webfonts` setting requires a series of font declarations formatted like this:
+
+```javascript
+(
+  (
+    url('https://www.example.com/MyFont-Bold.woff2') format('woff2'),
+    url('https://www.example.com/MyFont-Bold.woff') format('woff')
+  ),
+  MyFont, 700
+)
+```
+
+Here is an example of a full valid `$sprk-webfonts` object:
+
+```javascript
+$sprk-using-webfonts: true;
+$sprk-webfonts:
+(
+  (
+    url('https://www.example.com/MyFont-Bold.woff2') format('woff2'),
+    url('https://www.example.com/MyFont-Bold.woff') format('woff')
+  ),
+  MyFont, 700
+),
+(
+  (
+    url('https://www.example.com/MyFont-Medium.woff2') format('woff2'),
+    url('https://www.example.com/MyFont-Medium.woff') format('woff')
+  ),
+  MyFont, 500
+),
+(
+  (
+    url('https://www.example.com/MyFont-Regular.woff2') format('woff2'),
+    url('https://www.example.com/MyFont-Regular.woff') format('woff')
+  ),
+  MyFont, 400
+),
+(
+  (
+    url('https://www.example.com/MyFont-Light.woff2') format('woff2'),
+    url('https://www.example.com/MyFont-Light.woff') format('woff')
+  ),
+  MyFont, 300
+);
+```
+
+### Troubleshooting
+
+* Be sure to change the name of the font from “MyFont” to “RocketSans” if you are building a Rocket product.
+* All 4 font weights are used in Spark (300, 400, 500, and 700). Be sure to include all of them.
+
+### More Resources
+
+Here are examples of completed font setups in each of the frameworks supported by the Spark Design System.
+
+- [HTML](https://github.com/sparkdesignsystem/spark-starter-html/blob/master/src/style.scss)
+- [Angular](https://github.com/sparkdesignsystem/spark-starter-angular/blob/master/src/styles.scss)
+- [React](https://github.com/sparkdesignsystem/spark-starter-react/blob/master/src/styles.scss)
+
+For internal users, you can access a directory of our CDN resources here:
+
+http://shorty/sparkassetcdn
