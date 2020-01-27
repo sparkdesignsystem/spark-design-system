@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import {
+  SprkMasthead,
   SprkTextInput,
   SprkLink,
-  SprkMasthead,
 } from '@sparkdesignsystem/spark-react';
 import SiteLogo from './site-logo';
 import { useInstallingSparkData } from '../hooks/use-installing-spark';

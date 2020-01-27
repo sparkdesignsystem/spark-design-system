@@ -29,6 +29,7 @@ class SprkMastheadAccordionItem extends Component {
     const {
       additionalClasses,
       analyticsString,
+      clickFunction,
       defaultOpen,
       element,
       href,
@@ -84,6 +85,7 @@ class SprkMastheadAccordionItem extends Component {
                   return (
                     <li key={innerId}>
                       <InnerTagName
+                        onClick={clickFunction}
                         href={
                           InnerTagName === 'a' ? innerHref || '#nogo' : undefined
                         }
@@ -103,6 +105,7 @@ class SprkMastheadAccordionItem extends Component {
         )}
         {stateLinks.length <= 0 && (
           <TagName
+            onClick={clickFunction}
             className={classNames(
               { 'sprk-c-MastheadAccordion__summary': !isButton },
               {
@@ -141,6 +144,10 @@ SprkMastheadAccordionItem.propTypes = {
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
+  /**
+   * Expects a function to be executed when a user clicks a link or a link inside the accordion item.
+   */
+  clickFunction: PropTypes.func,
   /**
    * Decides whether the Accordion item should render open by default.
    */
@@ -193,6 +200,7 @@ SprkMastheadAccordionItem.propTypes = {
 };
 
 SprkMastheadAccordionItem.defaultProps = {
+  clickFunction: () => {},
   defaultOpen: false,
   element: 'a',
   isActive: false,
