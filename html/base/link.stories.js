@@ -75,7 +75,7 @@ export const disabled = () => (
       data-id="link-4"
       data-analytics="object.action.event"
     >
-      Disabled
+      Disabled Link
     </a>
   `
 );

@@ -32,7 +32,7 @@ export const info = () => {
           viewBox="0 0 64 64" aria-hidden="true" >
           <use xlink:href="#bell"></use>
         </svg>
-        <p class="sprk-c-Alert__text"> This is an informational alert.</p>
+        <p class="sprk-c-Alert__text"> This is important information.</p>
       </div>
       <button class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
         type="button"
@@ -63,7 +63,7 @@ export const success = () => {
           <use xlink:href="#check-mark"></use>
         </svg>
         <p class="sprk-c-Alert__text">
-          This is a success alert.
+          This is a success message.
         </p>
       </div>
       <button
@@ -97,7 +97,7 @@ export const fail = () => {
         <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 576 512" aria-hidden="true" >
           <use xlink:href="#exclamation"></use>
         </svg>
-        <p class="sprk-c-Alert__text"> This is a failure alert.</p>
+        <p class="sprk-c-Alert__text"> This is a failure message to alert that something was not successful.</p>
       </div>
       <button
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"

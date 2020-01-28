@@ -27,6 +27,7 @@ export const defaultStory = () => (
           sprk-o-Stack--large
         "
         >
+        Base Card Content
       </div>
     </div>
   `
@@ -56,6 +57,7 @@ export const standout = () => (
           sprk-o-Stack sprk-o-Stack--medium
         "
       >
+        Standout Card Content
       </div>
     </div>
   `
@@ -183,7 +185,7 @@ export const teaserWithDifferentElementOrder = () => (
           sprk-b-TypeDisplayFive
           "
         >
-        Title
+        Teaser Card Title
       </h3>
 
       <a href="#nogo" class="sprk-o-Stack__item">

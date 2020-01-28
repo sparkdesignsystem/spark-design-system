@@ -64,7 +64,7 @@ export const noImage = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-highlight-board
-      heading="Highlight Board Heading Example"
+      heading="Hello, Welcome To Spark Design System"
       ctaText="Learn More"
       ctaText2="Learn More"
       type="noImage"
@@ -84,7 +84,7 @@ export const stacked = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-highlight-board
-      heading="Highlight Board Heading Example"
+      heading="Hello, Welcome To Spark Design System"
       ctaText="Learn More"
       type="stacked"
       imgSrc="https://spark-assets.netlify.com/desktop.jpg"

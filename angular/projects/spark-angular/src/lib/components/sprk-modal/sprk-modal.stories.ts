@@ -66,7 +66,7 @@ export const info = () => ({
   template: `
     <sprk-modal
       [(isVisible)]="infoVisible"
-      title="For Your Information"
+      title="Info Modal"
       (hide)="toggleInfoModal($event)"
       modalType="info"
       idString="modal-info-1"
@@ -86,7 +86,7 @@ export const wait = () => ({
   template: `
     <sprk-modal
       [(isVisible)]="waitVisible"
-      title="Please wait..."
+      title="Wait Modal"
       modalType="wait"
       idString="modal-wait-1"
     >

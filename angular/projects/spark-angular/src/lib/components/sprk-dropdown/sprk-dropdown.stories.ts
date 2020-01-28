@@ -64,7 +64,7 @@ export const informational = () => ({
     <sprk-dropdown
       dropdownType="informational"
       additionalTriggerClasses="sprk-b-Link--plain"
-      triggerText="Make a Selection..."
+      triggerText="Make a selection..."
       title="My Choices"
       triggerIconType="chevron-down"
       [choices]="[{

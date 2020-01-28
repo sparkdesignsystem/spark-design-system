@@ -131,7 +131,7 @@ export class SprkPromoComponent {
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the
-   * call to action button if `cta` is set to `button`.
+   * call-to-action button if `cta` is set to `button`.
    * This is intended for an outside library to capture data.
    */
   @Input()
@@ -144,7 +144,7 @@ export class SprkPromoComponent {
   /**
    * The value supplied will be assigned to
    * the `data-analytics` attribute on the
-   * call to action link if `cta` is set to
+   * call-to-action link if `cta` is set to
    * `link`. This is intended for an
    * outside library to capture data.
    */
