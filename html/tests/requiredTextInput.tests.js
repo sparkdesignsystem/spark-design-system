@@ -5,7 +5,7 @@ import {
   requiredTextInput,
   runValidation,
   bindUIEvents,
-} from '../base/requiredTextInput';
+} from '../base/inputs/requiredTextInput';
 
 describe('requiredTextInput init', () => {
   afterEach(() => {

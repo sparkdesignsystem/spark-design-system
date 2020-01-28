@@ -1,6 +1,6 @@
-import getElements from '../utilities/getElements';
-import setInvalidTick from '../utilities/validation/setInvalidTick';
-import setValidTick from '../utilities/validation/setValidTick';
+import getElements from '../../utilities/getElements';
+import setInvalidTick from '../../utilities/validation/setInvalidTick';
+import setValidTick from '../../utilities/validation/setValidTick';
 
 const runValidation = (element) => {
   const inputs = element.querySelectorAll('input');

@@ -39,7 +39,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-award
       splitAt="tiny"
-      title="Spark Award Component"
+      title="Award Component Heading"
       imgOneSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
       imgTwoSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
       imgOneAlt="placeholder!"
