@@ -1,0 +1,91 @@
+---
+  title: List
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# List
+
+The List component groups related content,
+organized vertically.
+
+<ComponentPreview
+  componentName="list--unordered"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+- Use ordered lists when the order of
+the list items is meaningful, i.e.
+they are sequential. 
+- Use unordered lists when the order
+of the list items does not matter. 
+
+### Guidelines
+
+- A List must use the default list style
+type (e.g. a bullet or number). Do not
+substitute the default with alternative
+symbols like Emoji. 
+- A list should have at least 2 List Items. 
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Default
+
+Default List can be ordered (with leading numbers)
+or unordered (with leading bullets). 
+
+<ComponentPreview
+  componentName="list--ordered"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<ComponentPreview
+  componentName="list--unordered"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Bare
+
+Bare List can be ordered or unordered,
+but the leading symbol will not be visible
+and will not be read by screen readers. 
+
+<ComponentPreview
+  componentName="list--bare"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Indented
+
+Indented List should be used when the
+list is between blocks of text. 
+
+<ComponentPreview
+  componentName="list--indented"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Accessibility
+
+- Unless you are using the Bare variant,
+screen readers will read “bullet” before
+each List Item in an unordered list or
+the number for an ordered list.  
