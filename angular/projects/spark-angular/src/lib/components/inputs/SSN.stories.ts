@@ -45,6 +45,8 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- The value of this field contains special characters
+(-) which you may need to remove before submitting the form.
     `,
     docs: { iframeHeight: 200 },
   }

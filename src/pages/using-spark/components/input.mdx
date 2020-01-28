@@ -183,3 +183,32 @@ lines of freeform text.
   hasAngular
   hasHTML
 />
+
+### SSN Input
+
+SSN Input is used to collect a Social
+Security Number.
+- Checking "Show SSN" removes the mask
+and shows the entered value.
+- If “Show SSN” is checked, this field is
+automatically formatted to ###-##-####
+once a valid value is entered.
+- SSN Input can also be a Huge Text Input.
+For full functionality, see guidelines in
+the Huge Text Inputs section.
+- Additional engineering is required to
+reformat user input into an SSN pattern
+(###-##-####)
+  - After valid input, it should reformat
+  to having the first three numbers, a dash,
+  the next two numbers, a dash, and the last
+  four numbers.
+- Additional engineering is required for
+validation functionality.
+
+<ComponentPreview
+  componentName="input-ssn--ssn-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>

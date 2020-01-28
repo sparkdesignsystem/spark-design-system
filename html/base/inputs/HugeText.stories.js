@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { hugeInput } from '../hugeInput';
+import { hugeInput } from './hugeInput';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {

@@ -13,7 +13,11 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `${markdownDocumentationLinkBuilder('input')}`,
+    info: `
+${markdownDocumentationLinkBuilder('input')}
+- The value of this field contains special characters
+(-) which you may need to remove before submitting the form.
+`,
   },
 };
 
