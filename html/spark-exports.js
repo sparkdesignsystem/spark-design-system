@@ -2,17 +2,17 @@ import {
   dateInput,
   formatDate,
   bindUIEvents as bindDateInputUIEvents,
-} from './base/dateInput';
+} from './base/inputs/dateInput';
 import {
   datePicker,
   bindUIEvents as bindDatePickerUIEvents,
-} from './base/datePicker';
+} from './base/inputs/datePicker';
 import {
   monetaryInput,
   formatMonetary,
   bindUIEvents as bindMonetaryUIEvents,
-} from './base/monetaryInput';
-import passwordInput from './base/passwordInput';
+} from './base/inputs/monetaryInput';
+import passwordInput from './base/inputs/passwordInput';
 import {
   phoneInput,
   formatPhone,
@@ -42,7 +42,7 @@ import {
   hugeInput as hugeTextInput,
   bindUIEventsHugeInput,
   bindUIEvents as bindUIEventsHugeInputOld,
-} from './base/hugeInput';
+} from './base/inputs/hugeInput';
 import {
   alerts,
   dismissAlert,

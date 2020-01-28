@@ -1,11 +1,11 @@
 // Import all Spark components
-import { hugeInput } from './base/hugeInput';
+import { hugeInput } from './base/inputs/hugeInput';
 import { ssnInput } from './base/ssnInput';
-import passwordInput from './base/passwordInput';
-import { monetaryInput } from './base/monetaryInput';
+import passwordInput from './base/inputs/passwordInput';
+import { monetaryInput } from './base/inputs/monetaryInput';
 import { phoneInput } from './base/phoneInput';
-import { dateInput } from './base/dateInput';
-import { datePicker } from './base/datePicker';
+import { dateInput } from './base/inputs/dateInput';
+import { datePicker } from './base/inputs/datePicker';
 import { modals } from './components/modals';
 import { requiredTextInput } from './base/requiredTextInput';
 import { requiredTick } from './base/requiredTick';
