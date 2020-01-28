@@ -15,6 +15,7 @@ body,
 
 .docs-layout {
   flex: 1 0 auto;
+  margin-bottom: $sprk-space-misc-d;
   max-width: $doc-site-layout-max-width;
   position: relative;
   width: 100%;

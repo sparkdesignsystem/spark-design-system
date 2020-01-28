@@ -6,6 +6,11 @@ import {
   SprkButton,
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
+import componentsMedia from '../images/components.svg';
+import developersMedia from '../images/developers.svg';
+import fundamentalsMedia from '../images/fundamentals.svg';
+// import documentationMedia from '../../../images/do-not-use-dark-bgs-for-text.png';
+import newsMedia from '../images/news-and-updates.png';
 
 const teaserDesigners = {
   bodyText: `
@@ -23,7 +28,6 @@ const teaserDesigners = {
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
     imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
     mediaVariant: 'img',
   },
   title: 'Getting Started For Designers',
@@ -45,8 +49,7 @@ const teaserDevelopers = {
     href: 'https://sparkdesignsystem.com/',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgSrc: developersMedia,
     mediaVariant: 'img',
   },
   title: 'Getting Started For Developers',
@@ -69,7 +72,7 @@ const teaserComponents = {
     href: 'https://sparkdesignsystem.com/',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+    imgSrc: componentsMedia,
     mediaAnalyticsString: 'Card:teaser-link',
     mediaVariant: 'img',
   },
@@ -92,8 +95,7 @@ const teaserFundamentals = {
     href: 'https://sparkdesignsystem.com/',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgSrc: fundamentalsMedia,
     mediaVariant: 'img',
   },
   title: 'Fundamentals',
@@ -115,8 +117,7 @@ const teaserDocumentaion = {
     href: 'https://sparkdesignsystem.com/',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgSrc: '',
     mediaVariant: 'img',
   },
   title: 'Documentation',
@@ -139,8 +140,7 @@ const teaserNews = {
     href: 'https://sparkdesignsystem.com/',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgSrc: newsMedia,
     mediaVariant: 'img',
   },
   title: 'News and Updates',
