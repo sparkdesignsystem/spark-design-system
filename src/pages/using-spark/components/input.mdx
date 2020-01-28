@@ -1,0 +1,95 @@
+---
+  title: Input
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Input
+
+Input allows a user to enter and submit data.
+
+<ComponentPreview
+  componentName="input-text--text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Usage for Input depends on the Input type.
+Please see the Usage and Guidelines for each
+Input type. Take care to choose the appropriate
+Input type for your use case.
+
+### Guidelines
+
+- Labels and error messages should be short,
+instructional, and to the point.
+- Labels should be kept to one line.
+- If an Input needs more information than can
+be provided in the label, use Helper Text.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## States
+
+Each input has an error and disabled state.
+
+<ComponentPreview
+  componentName="input-text--invalid-text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<ComponentPreview
+  componentName="input-text--disabled-text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Variants
+
+### Text Input
+
+A Text Input allows users to enter and edit
+text. It is the most common Input type.
+
+<ComponentPreview
+  componentName="input-text--text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Huge Text Input
+
+Huge Text Input is a larger version of Text
+Input. The label is inside the Input instead
+of above it. On focus, the label animates to
+the top left of the Input and placeholder
+text takes its place.  
+
+Huge Text Input was designed for a multi-step
+form flow that presents a single Input per page.
+For this reason, Huge Text Input should only be
+used for stand-alone Inputs. An exception would
+be a set of fields that are typically together,
+like an address.
+
+#### Guidelines
+
+- Labels must be short enough to fit inside the
+Input and cannot wrap to a second line.
+- The following Inputs are currently able to use
+the Huge Text Input style:
+  - SSN Input
+  - Password Input
+  - Phone Number Input
+  - Date Input
+  - Date Picker
