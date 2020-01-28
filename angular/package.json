@@ -22,10 +22,10 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "classlist.js": "^1.1.20150312",
     "replace": "^1.1.1",
     "rxjs": "~6.4.0",
-    "classlist.js": "^1.1.20150312",
-    "tiny-date-picker": "^3.2.8",
+    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.8",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
