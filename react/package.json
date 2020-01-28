@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-react",
-  "version": "1.4.0-alpha.3",
+  "version": "1.4.0-alpha.4",
   "description": "A collection of Spark Design System components in React 16+",
   "main": "dist/index.js",
   "scripts": {
@@ -17,15 +17,13 @@
   "peerDependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "@sparkdesignsystem/spark": "^12.0.0"
+    "@sparkdesignsystem/spark": "^12.3.0-beta.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
-    "@sparkdesignsystem/spark": "^12.0.0",
-    "@sparkdesignsystem/spark-react": "1.1.1",
     "@storybook/addon-a11y": "^5.3.9",
     "@storybook/addon-docs": "^5.3.9",
     "@storybook/addon-google-analytics": "^5.3.9",
