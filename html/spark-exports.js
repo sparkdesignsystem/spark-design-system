@@ -17,26 +17,26 @@ import {
   phoneInput,
   formatPhone,
   bindUIEvents as bindPhoneInputUIEvents,
-} from './base/phoneInput';
+} from './base/inputs/phoneInput';
 import {
   requiredSelect,
   runValidation as runRequiredSelectValidation,
-} from './base/requiredSelect';
+} from './base/inputs/requiredSelect';
 import {
   requiredTextInput,
   runValidation as runRequiredTextInputValidation,
   bindUIEvents as bindRequiredTextInputUIEvents,
-} from './base/requiredTextInput';
+} from './base/inputs/requiredTextInput';
 import {
   requiredTick,
   runValidation as runRequiredTickValidation,
   bindUIEvents as bindRequiredTickUIEvents,
-} from './base/requiredTick';
+} from './base/inputs/requiredTick';
 import {
   ssnInput,
   formatSSN,
   bindUIEvents as bindSSNInputUIEvents,
-} from './base/ssnInput';
+} from './base/inputs/ssnInput';
 import {
   hugeInput,
   hugeInput as hugeTextInput,
