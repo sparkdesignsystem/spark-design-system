@@ -5,7 +5,7 @@ import {
   monetaryInput,
   formatMonetary,
   bindUIEvents,
-} from '../base/monetaryInput';
+} from '../base/inputs/monetaryInput';
 
 describe('monetaryInput init', () => {
   let div;
