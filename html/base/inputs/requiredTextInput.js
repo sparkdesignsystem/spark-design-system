@@ -1,10 +1,10 @@
-import getElements from '../utilities/getElements';
+import getElements from '../../utilities/getElements';
 import
 setValidTextInput
-  from '../utilities/validation/setValidTextInput';
+  from '../../utilities/validation/setValidTextInput';
 import
 setInvalidTextInput
-  from '../utilities/validation/setInvalidTextInput';
+  from '../../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
   const field = element.querySelector('input');

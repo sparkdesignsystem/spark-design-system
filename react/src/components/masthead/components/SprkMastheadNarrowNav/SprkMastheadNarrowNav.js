@@ -5,6 +5,7 @@ import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
 
 const SprkMastheadNarrowNav = ({
   idString,
+  linkSelectionFunction,
   isOpen,
   links,
   selector,
@@ -19,7 +20,7 @@ const SprkMastheadNarrowNav = ({
         {...rest}
       >
         {selector.items && <SprkMastheadSelector isFlush choices={selector} />}
-        <SprkMastheadAccordion links={links} />
+        <SprkMastheadAccordion linkSelectionFunction={linkSelectionFunction} links={links} />
       </nav>
     )}
   </React.Fragment>
@@ -34,6 +35,10 @@ SprkMastheadNarrowNav.propTypes = {
    * If `true`, will render the Narrow Navigation.
    */
   isOpen: PropTypes.bool,
+  /**
+   * Expects a function to be executed when a user clicks a navigating link from the menu.
+   */
+  linkSelectionFunction: PropTypes.func,
   /**
    * Configuration to build the links inside the Narrow Navigation.
    */
@@ -105,6 +110,7 @@ SprkMastheadNarrowNav.propTypes = {
 };
 
 SprkMastheadNarrowNav.defaultProps = {
+  linkSelectionFunction: () => {},
   idString: '',
   isOpen: false,
   selector: {},

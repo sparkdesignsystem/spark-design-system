@@ -111,7 +111,7 @@ SprkCard.propTypes = {
      */
     bodyText: PropTypes.string,
     /**
-     * Configures the call-to-action of a Teaser Card.
+     * Configures the call to action of a Teaser Card.
      */
     cta: PropTypes.shape({
       /**

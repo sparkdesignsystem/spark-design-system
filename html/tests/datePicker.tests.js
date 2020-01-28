@@ -21,7 +21,7 @@ describe('datePicker tests', () => {
 
   const tdpSpy = sinon.spy(tinyDatePickerStub);
 
-  const { datePicker } = proxyquire('../base/datePicker', {
+  const { datePicker } = proxyquire('../base/inputs/datePicker', {
     'tiny-date-picker': tdpSpy,
   });
 

@@ -1,13 +1,13 @@
-import toggleValue from '../utilities/toggleValue';
-import getElements from '../utilities/getElements';
+import toggleValue from '../../utilities/toggleValue';
+import getElements from '../../utilities/getElements';
 import
 setValidTextInput
-  from '../utilities/validation/setValidTextInput';
+  from '../../utilities/validation/setValidTextInput';
 import
 setInvalidTextInput
-  from '../utilities/validation/setInvalidTextInput';
+  from '../../utilities/validation/setInvalidTextInput';
 import
-runValidation from '../utilities/validation/validation-runner';
+runValidation from '../../utilities/validation/validation-runner';
 
 const formatSSN = (value) => {
   let val = value.trim().replace(/-/g, '');

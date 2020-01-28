@@ -1,7 +1,7 @@
 /* global beforeEach afterEach window document describe it */
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { phoneInput, formatPhone, bindUIEvents } from '../base/phoneInput';
+import { phoneInput, formatPhone, bindUIEvents } from '../base/inputs/phoneInput';
 
 describe('phoneInput init', () => {
   let div;

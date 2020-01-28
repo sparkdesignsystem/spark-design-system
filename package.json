@@ -9,13 +9,10 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "scripts": {
-    "build": "npm run prebuild && gatsby build",
-    "develop": "npm run prebuild && gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "prebuild": "npm run sassdoc && npm run sassdocmodifiers",
-    "sassdoc": "sassdoc ./html/settings/**/*.scss --parse > ./src/data/sass-vars.json",
-    "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json"
+    "serve": "gatsby serve"
   },
   "author": "Quicken Loans",
   "bugs": {
@@ -37,14 +34,12 @@
     "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-plugin-sharp": "^2.3.10",
     "gatsby-remark-sectionize": "^1.0.0",
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-json": "^2.2.22",
     "gatsby-transformer-remark": "^2.6.26",
-    "gatsby-transformer-sharp": "^2.2.19",
     "iframe-resizer-react": "^1.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "postcss-preset-env": "^6.7.0",
     "prism-react-renderer": "^1.0.2",
     "prop-types": "^15.7.2",
@@ -52,7 +47,6 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
-    "sassdoc": "^2.7.1",
     "shortid": "^2.2.15"
   },
   "devDependencies": {

@@ -35,12 +35,6 @@ const SprkDictionary = (props) => {
   );
 };
 
-SprkDictionary.defaultProps = {
-  variant: '',
-  idString: '',
-  additionalClasses: '',
-};
-
 SprkDictionary.propTypes = {
   /**
    * The collection of key-value pairs

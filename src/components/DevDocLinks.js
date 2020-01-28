@@ -41,7 +41,7 @@ class DevDocLinks extends React.Component {
             <SprkListItem>
               <SprkLink
                 variant="has-icon"
-                href={`https://spark-sb-html.netlify.com/?path=/story/${componentType}-${componentName}`}
+                href={`https://html.sparkdesignsystem.com/?path=/story/${componentType}-${componentName}`}
                 target="_blank"
               >
                 HTML
@@ -57,7 +57,7 @@ class DevDocLinks extends React.Component {
             <SprkListItem>
               <SprkLink
                 variant="has-icon"
-                href={`https://spark-sb-react.netlify.com/?path=/story/${componentType}-${componentName}`}
+                href={`https://react.sparkdesignsystem.com/?path=/story/${componentType}-${componentName}`}
                 target="_blank"
               >
                 React
@@ -72,7 +72,7 @@ class DevDocLinks extends React.Component {
             <SprkListItem>
               <SprkLink
                 variant="has-icon"
-                href={`https://spark-sb-angular.netlify.com/?path=/story/${componentType}-${componentName}`}
+                href={`https://angular.sparkdesignsystem.com/?path=/story/${componentType}-${componentName}`}
                 target="_blank"
               >
                 Angular
