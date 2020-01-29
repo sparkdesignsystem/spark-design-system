@@ -39,19 +39,24 @@ class SprkMasthead extends Component {
   componentDidMount() {
     this.setState({ isNarrowLayout : this.isElementVisible('.sprk-c-Masthead__menu') });
 
-    window.addEventListener('scroll', this.setIsScrolled);
-    window.addEventListener('orientationchange', this.closeNarrowNavMenu);
-    window.addEventListener('resize', this.throttledCheckLayoutOnResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.setIsScrolled);
+      window.addEventListener('orientationchange', this.closeNarrowNavMenu);
+      window.addEventListener('resize', this.throttledCheckLayoutOnResize);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.setIsScrolled, false);
-    window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
-    window.removeEventListener('orientationchange', this.closeNarrowNavMenu, false);
-    window.addEventListener('resize', this.throttledCheckLayoutOnResize, false);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('scroll', this.setIsScrolled, false);
+      window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
+      window.removeEventListener('orientationchange', this.closeNarrowNavMenu, false);
+      window.addEventListener('resize', this.throttledCheckLayoutOnResize, false);
+    }
   }
 
   isElementVisible (selector) {
+    if(typeof window === 'undefined') {return;}
     const element = document.querySelector(selector);
     if (!element) return;
     const elementDisplayValue = window.getComputedStyle(element).display;
@@ -61,6 +66,7 @@ class SprkMasthead extends Component {
   };
 
   scrollYDirection() {
+    if(typeof window === 'undefined') {return;}
     const newScrollPos = window.scrollY;
     if (newScrollPos < 0) return;
     const diff = newScrollPos - this.state.scrollPosition;
@@ -95,6 +101,7 @@ class SprkMasthead extends Component {
   }
 
   setIsScrolled() {
+    if(typeof window === 'undefined') {return;}
     if (window.scrollY >= 10) {
       this.setState({ isScrolled: true });
     } else {
@@ -138,6 +145,7 @@ class SprkMasthead extends Component {
   }
 
   toggleScrollEvent() {
+    if(typeof window === 'undefined') {return;}
     if (this.state.isNarrowLayout) {
       window.addEventListener('scroll', this.throttledCheckScrollDirection);
     } else {

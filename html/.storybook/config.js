@@ -8,7 +8,7 @@ import 'iframe-resizer/js/iframeResizer.contentWindow.min';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-utilities/icon-loader';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
-import { SprkTable } from '@sparkdesignsystem/spark-react';
+import SprkTable from '../../react/src/base/tables/SprkTable';
 import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
 
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
