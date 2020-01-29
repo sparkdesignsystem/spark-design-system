@@ -8,7 +8,24 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
-    `,
+- The value of this field contains special characters (/)
+which you may need to remove before submitting the form.
+- The \`sprk-b-InputContainer--huge\` class is available
+for use on this input. For full functionality,
+see guidelines in the
+[Huge Text Input](/docs/components-input-huge-text--huge-text-input) section.
+- Requires Additional Engineering:
+  - Validation – When input is not valid, do the following
+    - Add \`sprk-b-TextInput--error\` class to \`input\` element.
+    - Set \`aria-invalid=”true”\` and
+    \`area-describedby=”[id-of-error-container]”\` on \`input\`
+    element.
+    - Hide the error container (div with \`sprk-b-ErrorContainer\` class)
+  - Reformatting to date pattern MM/DD/YYYY - After valid
+  input, it should reformat to a two digit number month,
+  followed by a forward slash, two digit number day, followed
+  by another forward slash, and four digit number year. 
+`,
     docs: { iframeHeight: 140 },
   },
 };

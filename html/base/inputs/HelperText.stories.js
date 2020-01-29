@@ -8,6 +8,7 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- Helper text must be placed below the Input and above the error container.
     `,
     docs: { iframeHeight: 140 },
   },

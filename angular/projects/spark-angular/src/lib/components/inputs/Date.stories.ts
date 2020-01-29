@@ -37,7 +37,14 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
-    `,
+- The value of this field contains special characters (/)
+which you may need to remove before submitting the form.
+- Requires Additional Engineering:
+  - Validation
+  - Reformatting to date pattern MM/DD/YYYY - After valid
+  input, it should reformat to add commas and decimals
+  to the hundredth place.
+`,
     docs: { iframeHeight: 200 },
   }
 };

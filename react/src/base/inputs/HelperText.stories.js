@@ -13,7 +13,10 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `${markdownDocumentationLinkBuilder('input')}`,
+    info: `
+${markdownDocumentationLinkBuilder('input')}
+- Helper text must be placed below the Input and above the error container.
+`,
   },
 };
 

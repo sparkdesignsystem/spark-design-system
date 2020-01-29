@@ -13,7 +13,24 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
     ],
-    info: `${markdownDocumentationLinkBuilder('input')}`,
+    info: `
+${markdownDocumentationLinkBuilder('input')}
+- The value of this field contains special characters
+(parenthesis and -) which you may need to remove
+before submitting the form.
+- Requires Additional Engineering:
+  - Validation - The \`valid\` prop controls this
+  input’s validation state. This boolean is
+  determined by your own validation logic.
+  Validation happens before reformatting.
+  - Reformatting to phone number pattern
+  (###) ###-#### - After valid input, it
+  should reformat to add commas and decimals
+  to the hundredth place. Reformat user input
+  with the \`formatter\` prop. This prop receives
+  a function that takes the current value and returns
+  the reformatted value. 
+`,
   },
 };
 

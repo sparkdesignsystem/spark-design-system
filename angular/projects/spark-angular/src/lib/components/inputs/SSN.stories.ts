@@ -47,6 +47,13 @@ export default {
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
 (-) which you may need to remove before submitting the form.
+- Requires Additional Engineering:
+  - Show/Hide Functionality - Create a function that toggles
+  the \`type\` attribute of the input between \`text\` and \`password\`.
+  - Validation
+  - Reformatting to SSN pattern (###-##-####) - After valid
+  input, it should reformat to having the first three numbers,
+  a dash, the next two numbers, a dash, and the last four numbers.
     `,
     docs: { iframeHeight: 200 },
   }
