@@ -8,6 +8,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/spark-logo.svg',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: 'src/pages/homepage',
