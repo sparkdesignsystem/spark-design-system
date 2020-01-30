@@ -52,7 +52,6 @@ export const defaultStory = () => ({
       <sprk-accordion-item
         title="This is an accordion heading"
         additionalClasses="sprk-u-mbs"
-        isOpen="true"
         additionalHeadingClasses="sprk-b-TypeDisplaySeven"
         idString="accordion-item-1"
         analyticsString="object.action.event"

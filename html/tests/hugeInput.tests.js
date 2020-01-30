@@ -6,7 +6,7 @@ import {
   hugeInput,
   bindUIEventsHugeInput,
   bindUIEvents,
-} from '../base/hugeInput';
+} from '../base/inputs/hugeInput';
 
 describe('hugeInput tests', () => {
   let input;

@@ -213,7 +213,7 @@ SprkPromo.propTypes = {
    * is omitted, no Call to Action will be rendered.
   */
   cta: PropTypes.oneOf(['button', 'link']),
-  /** The text for the Call-to-Action. */
+  /** The text for the Call to Action. */
   ctaText: PropTypes.string,
   /** The URL to navigate to when the Call to Action is clicked. */
   ctaHref: PropTypes.string,

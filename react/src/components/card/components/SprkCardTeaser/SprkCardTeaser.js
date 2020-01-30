@@ -217,7 +217,7 @@ SprkCardTeaser.propTypes = {
      */
     bodyText: PropTypes.string,
     /**
-     * Configures the call-to-action of a Teaser Card.
+     * Configures the call to action of a Teaser Card.
      */
     cta: PropTypes.shape({
       /**
@@ -244,7 +244,7 @@ SprkCardTeaser.propTypes = {
         PropTypes.elementType
       ]),
       /**
-       * Determines if the CTA is a link or a button.
+       * Determines if the call to action is a link or a button.
        * Will default to `link` if none provided.
        */
       ctaVariant: PropTypes.oneOf(['link', 'button']),
@@ -252,10 +252,10 @@ SprkCardTeaser.propTypes = {
        * Determines the `href` of the media.
        */
       href: PropTypes.string,
-      /** Text of the CTA. */
+      /** Text of the call to action. */
       text: PropTypes.string,
       /**
-       * The variant to use for the CTA button.
+       * The variant to use for the call-to-action button.
        */
       buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
     }),

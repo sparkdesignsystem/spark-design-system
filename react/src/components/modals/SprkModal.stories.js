@@ -47,10 +47,10 @@ that sets the value of the \`isVisible\` property.
 
 export const defaultStory = () => (
   <SprkModal
-    title="Default Modal"
+    title="Are you sure?"
     isVisible={true}
-    confirmText="Confirm Text"
-    cancelText="Cancel Text"
+    confirmText="Confirm"
+    cancelText="Cancel"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.

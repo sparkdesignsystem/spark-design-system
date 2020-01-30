@@ -68,17 +68,12 @@ the big nav, to display the navigation items.
 const links = [
   {
     element: 'a',
-    text: 'Your Item',
+    text: 'Item 1',
     to: '#nogo',
   },
   {
     element: 'a',
-    text: 'Your Item',
-    to: '#nogo',
-  },
-  {
-    element: 'a',
-    text: 'Your Item',
+    text: 'Item 2',
     to: '#nogo',
   },
 ];
@@ -157,8 +152,9 @@ const selector = {
 };
 
 const utilityItems = [
+  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
   <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
-  <SprkDropdown additionalClasses="sprk-u-Right--zero sprk-u-mrm" additionalIconClasses="sprk-c-Icon--l" iconName="user-account" choices={dropdownChoices} title="My Choices" />,
+  <SprkButton element="a" href="#nogo" variant="secondary" additionalClasses="sprk-u-Right--zero sprk-u-mrm sprk-c-Button--compact">Sign In</SprkButton>,
 ];
 
 export const defaultStory = () => (

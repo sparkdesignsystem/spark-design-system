@@ -29,7 +29,7 @@
     "lodash": "^4.17.15",
     "lory.js": "^2.5.3",
     "object-fit-images": "^3.2.4",
-    "tiny-date-picker": "^3.2.6"
+    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
