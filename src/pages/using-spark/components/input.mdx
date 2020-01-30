@@ -324,3 +324,26 @@ functionality.
   hasAngular
   hasHTML
 />
+
+### Date Picker
+
+Date Picker is used for collecting a date around one
+year before or after the current date. We restrict
+the distance from the current date because it is more
+difficult for a user to find the date they need when
+they must page through dozens of months.
+- Additional engineering is required to reformat user
+input into a date pattern (MM/DD/YYYY). 
+- After valid input, it should reformat to a two digit
+number month, followed by a forward slash, two digit
+number day, followed by another forward slash, and
+four digit number year. 
+- Additional engineering is required for
+validation functionality. 
+
+<ComponentPreview
+  componentName="input-date-picker--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
