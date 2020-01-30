@@ -433,6 +433,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   isElementVisible(selector) {
+    if (typeof window === undefined) { return; }
     const element = document.querySelector(selector);
     if (!element) {
       return;
@@ -450,14 +451,16 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   scrollYDirection() {
-    const newScrollPos = window.scrollY;
-    if (newScrollPos < 0) {
-      return;
+    if (typeof window !== 'undefined') {
+      const newScrollPos = window.scrollY;
+      if (newScrollPos < 0) {
+        return;
+      }
+      const diff = newScrollPos - this.scrollPosition;
+      const direction = diff > 0 ? 'down' : 'up';
+      this.scrollPosition = newScrollPos;
+      return direction;
     }
-    const diff = newScrollPos - this.scrollPosition;
-    const direction = diff > 0 ? 'down' : 'up';
-    this.scrollPosition = newScrollPos;
-    return direction;
   }
 
   /**
