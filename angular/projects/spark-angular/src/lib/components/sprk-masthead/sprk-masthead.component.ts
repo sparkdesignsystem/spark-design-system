@@ -433,6 +433,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   isElementVisible(selector) {
+    if (typeof window === undefined) { return; }
     const element = document.querySelector(selector);
     if (!element) {
       return;
@@ -450,6 +451,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   scrollYDirection() {
+    if (typeof window !== 'undefined') { return; }
     const newScrollPos = window.scrollY;
     if (newScrollPos < 0) {
       return;
