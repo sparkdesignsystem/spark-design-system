@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { datePicker } from '../datePicker';
+import { datePicker } from './datePicker';
 import '../../utilities/polyfills/classListSVG';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
