@@ -73,4 +73,4 @@ addParameters({
   },
 });
 
-configure(require.context('..', true, /^((?![\\/]node_modules|dist[\\/]).)*\.stories\.js$/), module);
+configure(require.context('..', true, /^((?![\\/]node_modules|dist[\\/]).)*\.stories/), module);
