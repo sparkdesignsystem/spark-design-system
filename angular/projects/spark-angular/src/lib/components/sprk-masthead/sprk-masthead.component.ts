@@ -451,15 +451,16 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   scrollYDirection() {
-    if (typeof window !== 'undefined') { return; }
-    const newScrollPos = window.scrollY;
-    if (newScrollPos < 0) {
-      return;
+    if (typeof window !== 'undefined') {
+      const newScrollPos = window.scrollY;
+      if (newScrollPos < 0) {
+        return;
+      }
+      const diff = newScrollPos - this.scrollPosition;
+      const direction = diff > 0 ? 'down' : 'up';
+      this.scrollPosition = newScrollPos;
+      return direction;
     }
-    const diff = newScrollPos - this.scrollPosition;
-    const direction = diff > 0 ? 'down' : 'up';
-    this.scrollPosition = newScrollPos;
-    return direction;
   }
 
   /**
