@@ -1,0 +1,259 @@
+---
+  title: CSS Utilities
+---
+
+# CSS Utilities
+
+The Spark Design System includes many CSS utility classes for customizing and
+ extending components. These utility classes are divided into two groups:
+ [Single-Property Utilities](#single-prop) and [Multi-Property Utilities](#multi-prop).
+
+
+
+## Single-Property Utilities<a name="single-prop"></a>
+
+
+
+Single property utilities map directly to a single CSS property and value.
+They are most useful when you want to override a default value or in
+one-off situations. Be aware that all Single-Property Utilities include
+an `!important` flag in order to supersede an element's default styles.
+
+
+
+### Display and Visibility
+
+These utilities control CSS properties related to display and visibility.
+
+| Class | Description |
+|-------|-------------|
+| `sprk-u-Display--none` | Turns off the display of an element so that it has no effect on layout. |
+| `sprk-u-Display--block` | The element generates a block element box. |
+| `sprk-u-Display--inline` | The element generates one or more inline element boxes. |
+| `sprk-u-Display--inline-block` | The element generates a block element box that will be flowed with surrounding content as if it were a single inline box. |
+| `sprk-u-Visibility--hidden` | The element box is invisible, but still affects layout as normal. Screen readers will still announce this element.|
+| `sprk-u-Visibility--visible` | The element is visible. |
+
+### Floats, Position, and Alignment
+
+These utilities control CSS properties related to floating, positioning, and alignment.
+
+| Class | Description |
+|-------|-------------|
+| `sprk-u-Float--none` | The element is not floated. |
+| `sprk-u-Float--left` | Floats an element to the left. |
+| `sprk-u-Float--right` | Floats an element to the right. |
+| `sprk-u-Position--relative` | The element is positioned according to the normal flow of the document, and then offset relative to itself. |
+| `sprk-u-Position--absolute` | The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor. |
+| `sprk-u-Position--fixed` | The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport. |
+| `sprk-u-Position--static` | The element is positioned according to the normal flow of the document. |
+| `sprk-u-Top--zero` | Resets an element's top offset back to zero. |
+| `sprk-u-Bottom--zero` | Resets an element's bottom offset back to zero. |
+| `sprk-u-Left--zero` | Resets an element's left offset back to zero. |
+| `sprk-u-Right--zero` | Resets an element's right offset back to zero. |
+| `sprk-u-TextAlign--left` | Aligns text to the left of the container. |
+| `sprk-u-TextAlign--right` | Aligns text to the right of the container. |
+| `sprk-u-TextAlign--center` | Aligns text in the horizontal center of the container. |
+| `sprk-u-VerticalAlign--top` | Aligns the contents of a box to the top if it's display property is inline or table-cell. |
+| `sprk-u-VerticalAlign--middle` | Aligns the contents of a box to the vertical middle if it's display property is inline or table-cell. |
+| `sprk-u-VerticalAlign--bottom` | Aligns the contents of a box to the bottom if it's display property is inline or table-cell. |
+| `sprk-u-VerticalAlign--baseline` | Aligns the contents of a box to the baseline if it's display property is inline or table-cell. |
+
+### Typography
+
+These utilities control CSS properties related to typography.
+
+| Class | Description |
+|---|---|
+| `sprk-u-FontWeight--bold` | Sets the font weight to bold. |
+| `sprk-u-FontWeight--normal` | Sets the font weight to normal. |
+| `sprk-u-FontStyle--italic` | Sets the font style to italic. |
+| `sprk-u-FontStyle--normal` | Sets the font style to normal. |
+| `sprk-u-Measure` | Sets a max-width, intended for text. Default value is 40 rem. |
+| `sprk-u-Measure--narrow` | Sets a narrow max-width, intended for text. Default value is 25 rem. |
+| `sprk-u-TextDecoration--underline` | Sets the text decoration to underline. |
+| `sprk-u-TextDecoration--none` | Sets the text decoration to none. |
+| `sprk-u-TextTransform--uppercase` | Transforms text to uppercase. |
+| `sprk-u-TextTransform--none` | Removes text transformation for text. |
+| `sprk-u-WordWrap--break-word` | Sets word-wrap to break-word. |
+| `sprk-u-WhiteSpace--nowrap` | Sets white-space to nowrap. |
+
+### Overflow
+
+These utilities control CSS properties related to overflow, which specifies
+ how to handle content that is too large for its container.
+
+| Class | Description |
+|-------|-------------|
+| `sprk-u-Overflow--visible` | Content is not clipped and may be rendered outside the padding box. |
+| `sprk-u-Overflow--hidden` | Content is clipped if necessary to fit the padding box. No scrollbars are provided. |
+| `sprk-u-Overflow--scroll` | Content is clipped if necessary to fit the padding box. Browsers display scrollbars whether or not any content is actually clipped. |
+| `sprk-u-Overflow--auto` | If content fits inside the padding box, it looks the same as visible, but still establishes a new block-formatting context. |
+
+### Width
+
+These utilities set the width of an element to a percentage value.
+The widths are in increments of 5 from 5% to 100%.
+
+| Class | Description |
+|-------|-------------|
+| `sprk-u-Width-5` | Changes the width of the element to 5 percent. |
+| `sprk-u-Width-10` | Changes the width of the element to 10 percent. |
+| `sprk-u-Width-15` | Changes the width of the element to 15 percent. |
+| `sprk-u-Width-20` | Changes the width of the element to 20 percent. |
+| `sprk-u-Width-25` | Changes the width of the element to 25 percent. |
+| `sprk-u-Width-30` | Changes the width of the element to 30 percent. |
+| `sprk-u-Width-35` | Changes the width of the element to 35 percent. |
+| `sprk-u-Width-40` | Changes the width of the element to 40 percent. |
+| `sprk-u-Width-45` | Changes the width of the element to 45 percent. |
+| `sprk-u-Width-50` | Changes the width of the element to 50 percent. |
+| `sprk-u-Width-55` | Changes the width of the element to 55 percent. |
+| `sprk-u-Width-60` | Changes the width of the element to 60 percent. |
+| `sprk-u-Width-65` | Changes the width of the element to 65 percent. |
+| `sprk-u-Width-70` | Changes the width of the element to 70 percent. |
+| `sprk-u-Width-75` | Changes the width of the element to 75 percent. |
+| `sprk-u-Width-80` | Changes the width of the element to 80 percent. |
+| `sprk-u-Width-85` | Changes the width of the element to 85 percent. |
+| `sprk-u-Width-90` | Changes the width of the element to 90 percent. |
+| `sprk-u-Width-95` | Changes the width of the element to 95 percent. |
+| `sprk-u-Width-100` | Changes the width of the element to 100 percent. |
+
+### Spacing
+
+These utilities override the padding and margin on an element. The class name
+ format is `.sprk-u-<type><location><size>`
+
+#### Options
+
+* **type**: `p` or `m` (padding or margin)
+* **location**: which side(s) of the element to apply the class to.
+  * `a` (all)
+  * `t` (top)
+  * `r` (right)
+  * `b` (bottom)
+  * `l` (left)
+  * `h` (horizontal)
+  * `v` (vertical)
+* **size**: The size of the spacing added.
+  * `s` - small (8px)
+  * `m` - medium (16px)
+  * `l` - large (32px)
+  * `h` - huge (64px)
+  * `n` - none (0px)
+
+#### Examples
+
+| Class | Values | Description |
+|-|-|-|
+| `sprk-u-mbn` | margin-bottom: none | Sets the bottom margin to 0px. |
+| `sprk-u-phm` | padding-left: 16px; padding-right: 16px; | Sets the padding on the left and right (horizontal) to 16px. |
+| `sprk-u-mah` | margin: 64px | Sets the margin to 64px on all sides. |
+
+### Miscellaneous Spacing
+
+These utilities override the padding and margin on an element and are
+supplemental spacing sizes. The class name format is `.sprk-u-<Type><Location>--<size>`
+
+#### Options
+
+* type: `Padding` or `Margin`
+* location: `All`, `Top`, `Right`, `Bottom`, `Left`, `Horizontal`, or `Vertical`
+* size:
+  * `a` = `$sprk-space-misc-a` (24px)
+  * `b` = `$sprk-space-misc-b` (40px)
+  * `c` = `$sprk-space-misc-c` (48px)
+  * `d` = `$sprk-space-misc-d` (80px)
+
+#### Examples
+
+| Class | Values | Description |
+|-|-|-|
+| `sprk-u-MarginBottom--a` | margin-bottom: `$sprk-space-misc-a`; | Sets the bottom margin to the current value of `$sprk-space-misc-a` (24px). |
+| `sprk-u-PaddingHorizontal--b` | padding-left: `$sprk-space-misc-b`; padding-right: `$sprk-space-misc-b`; | Sets the padding on the left and right (horizontal) to `$sprk-space-misc-b` (40px). |
+| `sprk-u-MarginAll--d` | margin: `$sprk-space-misc-d`; | Sets the margin on all sides to the current value of `$sprk-space-misc-d` (80px). |
+
+### Color
+
+These utilities control CSS properties related to color and background color.
+
+| Class | Description |
+|-|-|
+| `sprk-u-Color--black` | Sets the font color to black. |
+| `sprk-u-Color--blue` | Sets the font color to blue. |
+| `sprk-u-Color--gray` | Sets the font color to gray. |
+| `sprk-u-Color--green` | Sets the font color to green. |
+| `sprk-u-Color--red` | Sets the font color to red. |
+| `sprk-u-Color--red-tint-75` | Sets the font color to red tinted at 75%. |
+| `sprk-u-Color--red-tint-50` | Sets the font color to red tinted at 50%. |
+| `sprk-u-Color--red-tint-25` | Sets the font color to red tinted at 25%. |
+| `sprk-u-Color--white` | Sets the font color to white. |
+| `sprk-u-Color--yellow` | Sets the font color to yellow. |
+| `sprk-u-BackgroundColor--black` | Sets the background color to black. |
+| `sprk-u-BackgroundColor--black-tint-75` | Sets the background color to black tinted at 75%. |
+| `sprk-u-BackgroundColor--black-tint-50` | Sets the background color to black tinted at 50%. |
+| `sprk-u-BackgroundColor--black-tint-25` | Sets the background color to black tinted at 25%. |
+| `sprk-u-BackgroundColor--gray-dark` | Sets the background color to dark gray. |
+| `sprk-u-BackgroundColor--blue` | Sets the background color to blue. |
+| `sprk-u-BackgroundColor--blue-tint-75` | Sets the background color to blue tinted at 75%. |
+| `sprk-u-BackgroundColor--blue-tint-50` | Sets the background color to blue tinted at 50%. |
+| `sprk-u-BackgroundColor--blue-tint-25` | Sets the background color to blue tinted at 25%. |
+| `sprk-u-BackgroundColor--gray` | Sets the background color to gray. |
+| `sprk-u-BackgroundColor--green` | Sets the background color to green. |
+| `sprk-u-BackgroundColor--green-dark` | Sets the background color to dark green. |
+| `sprk-u-BackgroundColor--green-tint-75` | Sets the background color to green tinted at 75%. |
+| `sprk-u-BackgroundColor--green-tint-50` | Sets the background color to green tinted at 50%. |
+| `sprk-u-BackgroundColor--green-tint-25` | Sets the background color to green tinted at 25%. |
+| `sprk-u-BackgroundColor--red` | Sets the background color to red. |
+| `sprk-u-BackgroundColor--red-tint-75` | Sets the background color to red tinted at 75%. |
+| `sprk-u-BackgroundColor--red-tint-50` | Sets the background color to red tinted at 50%. |
+| `sprk-u-BackgroundColor--red-tint-25` | Sets the background color to red tinted at 25%. |
+| `sprk-u-BackgroundColor--white` | Sets the background color to white. |
+| `sprk-u-BackgroundColor--yellow` | Sets the background color to yellow. |
+| `sprk-u-BackgroundColor--yellow-tint-75` | Sets the background color to yellow tinted at 75%. |
+| `sprk-u-BackgroundColor--yellow-tint-50` | Sets the background color to yellow tinted at 50%. |
+| `sprk-u-BackgroundColor--yellow-tint-25` | Sets the background color to yellow tinted at 25%. |
+
+### Height
+
+This utility sets the height of an element to a percentage value.
+
+| Class | Description |
+|-|-|
+| `sprk-u-Height--100` | Changes the height of the element to 100 percent. |
+
+## Multi-Property Utilities<a name="multi-prop"></a>
+
+Multi-Property Utilities combine several CSS properties and values to perform
+ common actions. They are not meant to override default styles, but aid in
+  things like accessibility and layout.
+
+### Accessibility
+
+These utilities are related to accessibility. These should be used to make the experience more accessible.
+
+| Class | Description |
+|-|-|
+| `sprk-u-ScreenReaderText` | Makes content invisible while still being read by a screen reader. |
+| `sprk-u-ShowOnFocus` | When combined with `sprk-u-ScreenReaderText` , the element will become visible on focus. This is helpful for users who only use a keyboard to navigate. An example is a "Skip to content" link that should become visible to a user on focus. |
+
+### Layout
+
+These utilities are related to layout.
+
+| Class | Description |
+|-|-|
+| `sprk-u-AbsoluteCenter` | When placed on a container, its children will align in the absolute center (vertically and horizontally) of the box. |
+| `%ClearFix` , `sprk-u-ClearFix` | Clearfix is a method of float containment. When applied to a container with floated children it forces the container to span the entire vertical extent of the children as if they weren't pulled out of the document flow by the floats. Elements that come after the Clearfixed element will no longer wrap around the floated children. The primary way to use `Clearfix` in Spark is by extending the placeholder in your Sass (e.g. `@extend %ClearFix;`). It can also be used by applying the class directly to the parent element, typically only used for debugging. |
+| `sprk-u-FullWidth` | When placed on a container, it will cause it to fill the viewport, even if it's inside a limiting container (such as `sprk-o-CenteredColumn`). |
+
+### Typography
+
+These utilities are related to typography.
+
+| Class | Description |
+|-|-|
+| `sprk-u-Truncate` | When placed on an element that contains text, it will limit the text to one line and adds an ellipsis when it overflows. |
+| `sprk-u-TextCrop--none` | When placed on an element that contains text or any of the typography classes, it will remove the text cropping and the negative margins applied by the crop. |
+
+
+
