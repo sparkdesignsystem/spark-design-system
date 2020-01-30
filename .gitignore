@@ -6,7 +6,7 @@ Thumbs.db
 npm-debug.log
 
 # Dependencies
-node_modules
+node_modules/
 
 dist/
 /public
