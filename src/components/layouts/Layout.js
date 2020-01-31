@@ -8,6 +8,7 @@ import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
 
+import SEO from '../seo';
 import H1 from '../markdown-render/h1';
 import H2 from '../markdown-render/h2';
 import H3 from '../markdown-render/h3';
@@ -35,6 +36,12 @@ const components = {
 const Layout = ({ children, initialContext, hasSideBar }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
+  const currentPagePath = /[^/]*$/.exec(location.pathname)
+    .toString()
+    .replace(/-/g, ' ')
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.substring(1))
+    .join(' ');
 
   return (
     <StaticQuery
@@ -59,6 +66,7 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
             menuVisible={menuVisible}
             setMenuVisible={setMenuVisible}
           />
+          <SEO title={currentPagePath} />
           <div className="docs-layout sprk-o-CenteredColumn">
             <div
               className="sprk-u-Display--none"

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Spark Design System',
-    description: 'Spark Design System is a system of patterns and components'
-      + 'used to create the user interface for the Quicken Loans family of'
+    description: 'Spark Design System is a system of patterns and components '
+      + 'used to create the user interface for the Quicken Loans family of '
       + 'Fintech products.',
     author: '@sparkQL',
   },
