@@ -8,8 +8,8 @@
     "coverage": "nyc npm test",
     "build": "webpack",
     "prepublishOnly": "npm run build",
-    "storybook": "start-storybook -p 7006 -s ./.storybook/static",
-    "build-storybook": "build-storybook -s ./.storybook/static"
+    "storybook": "start-storybook -p 7006 -s ../storybook-utilities/favicon",
+    "build-storybook": "build-storybook -s ../storybook-utilities/favicon"
   },
   "nyc": {
     "exclude": "tests/*.js"
