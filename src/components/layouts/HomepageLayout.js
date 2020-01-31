@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from './Layout';
 
-function HomepageLayout({children}) {
+function HomepageLayout({ children, location }) {
   return (
-    <Layout initialContext={'homepage'}>{children}</Layout>
+    <Layout initialContext={'homepage'} location={location}>{children}</Layout>
   );
 }
 

@@ -33,10 +33,11 @@ const components = {
   code: inlineCode,
 };
 
-const Layout = ({ children, initialContext, hasSideBar }) => {
+const Layout = ({ children, initialContext, hasSideBar, location }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
-  const currentPagePath = /[^/]*$/.exec(location.pathname)
+  const currentPagePath = location ? /[^/]*$/.exec(location.pathname) : 'Home';
+  const currentPageName = currentPagePath
     .toString()
     .replace(/-/g, ' ')
     .split(' ')
@@ -66,7 +67,7 @@ const Layout = ({ children, initialContext, hasSideBar }) => {
             menuVisible={menuVisible}
             setMenuVisible={setMenuVisible}
           />
-          <SEO title={currentPagePath} />
+          <SEO title={currentPageName} />
           <div className="docs-layout sprk-o-CenteredColumn">
             <div
               className="sprk-u-Display--none"
