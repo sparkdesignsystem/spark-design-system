@@ -16,7 +16,7 @@ then please remove it.
  - [ ] Build Component in Angular
  - [ ] Build Component in React
  - [ ] Unit Testing in HTML with `npm run test` in `html/` (100% coverage, 100% passing)
- - [ ] Unit Testing in Angular with `npm run test` in `angular/`(100% coverage, 100% passing)
+ - [ ] Unit Testing in Angular with `npm run test` in `angular/` (100% coverage, 100% passing)
  - [ ] Unit Testing in React with `npm run test` in `react/` (100% coverage, 100% passing)
 
 ### Accessibility
