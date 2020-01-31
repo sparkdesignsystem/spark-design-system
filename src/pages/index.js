@@ -132,16 +132,16 @@ const teaserNews = {
     text: 'See Latest Updates',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: 'https://sparkdesignsystem.com/',
+    href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
     imgSrc: newsMedia,
     mediaVariant: 'img',
   },
-  title: 'News and Updates',
+  title: 'Release Notes',
   titleFirst: false,
 };
 
