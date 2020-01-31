@@ -9,7 +9,6 @@ import Layout from '../components/layouts/Layout';
 import componentsMedia from '../images/components.svg';
 import developersMedia from '../images/developers.svg';
 import fundamentalsMedia from '../images/fundamentals.svg';
-// import documentationMedia from '../../../images/do-not-use-dark-bgs-for-text.png';
 import newsMedia from '../images/news-and-updates.png';
 
 const teaserDesigners = {
