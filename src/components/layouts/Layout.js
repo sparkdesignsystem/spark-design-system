@@ -36,7 +36,8 @@ const components = {
 const Layout = ({ children, initialContext, hasSideBar, location }) => {
   const [context, setContext] = useState(initialContext || 'homepage');
   const [menuVisible, setMenuVisible] = useState(false);
-  const currentPagePath = location ? /[^/]*$/.exec(location.pathname) : 'Home';
+  const lastPartofPath = /[^/]*$/;
+  const currentPagePath = location ? location.pathname.match(lastPartofPath) : 'Home';
   const currentPageName = currentPagePath
     .toString()
     .replace(/-/g, ' ')
