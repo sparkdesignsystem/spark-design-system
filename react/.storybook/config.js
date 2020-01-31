@@ -11,6 +11,7 @@ import '../../storybook-utilities/icon-utilities/icon-loader';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import SprkTable from '../../react/src/base/tables/SprkTable';
 import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
+import AdditionalInputInfo from '../../storybook-utilities/components/AdditionalInputInfo';
 
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
@@ -41,12 +42,18 @@ addParameters({
     },
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
+      const isInputStory = (componentName === 'Input');
       const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
       if (processedJson) {
         return (
           <DocsContainer context={context}>
             <div>
               {children}
+
+
+              {isInputStory &&
+                <AdditionalInputInfo />
+              }
 
               <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
               <SprkTable
@@ -71,6 +78,10 @@ addParameters({
           <DocsContainer context={context}>
             <div>
               {children}
+
+              {isInputStory &&
+                <AdditionalInputInfo />
+              }
             </div>
           </DocsContainer>
         )
