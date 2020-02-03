@@ -106,7 +106,11 @@ SprkMastheadLittleNav.propTypes = {
       /**
        * Determines if link renders as an anchor tag, or router link.
        */
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * A space-separated string of classes to add to the link item.
        */
@@ -132,7 +136,11 @@ SprkMastheadLittleNav.propTypes = {
         /**
          * Determines if link renders as an anchor tag, or router link.
          */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+          PropTypes.elementType
+        ]),
         /** Assigned to href if the element is an anchor */
         href: PropTypes.string,
         /** The text inside the item */

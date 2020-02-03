@@ -57,7 +57,11 @@ SprkMastheadAccordion.propTypes = {
       /**
        * Determines if link renders as an anchor tag, or router link.
        */
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * When the link is rendered to a compatible element
        * (narrowNav), will draw the specified icon
@@ -77,7 +81,11 @@ SprkMastheadAccordion.propTypes = {
           /**
            * Determines if link renders as an anchor tag, or router link.
            */
-          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          element: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func,
+            PropTypes.elementType
+          ]),
           /**
            * When the link is rendered to a compatible element
            * (narrowNav), will draw the specified icon
