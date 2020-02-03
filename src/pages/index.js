@@ -118,10 +118,10 @@ const teaserUtils = {
     text: 'Go To Utilities',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: '/using-spark/utilities',
+    href: '/using-spark/foundations/css-utilities',
   },
   media: {
-    href: '/using-spark/utilities',
+    href: '/using-spark/foundations/css-utilities',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
     imgSrc: '',
