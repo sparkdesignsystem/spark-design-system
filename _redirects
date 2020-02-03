@@ -1,0 +1,20 @@
+# transpose winter2020 sparkdesignsystem.com links to NDS
+
+# getting started
+/gettingstarted/angular               /installing-spark/angular
+/gettingstarted/design-principles     /principles/design-principles
+/gettingstarted/html                  /installing-spark/html
+/gettingstarted/react                 /installing-spark/react
+
+# fundamentals
+/patterns/fundamentals/*              /using-spark/foundations/:splat
+
+# components
+/patterns/components/*                /using-spark/components/:splat
+
+# documentation
+/docs/accessibility                   /principles/accessibility-guidelines
+/docs/change-workflow                 https://github.com/sparkdesignsystem/spark-design-system/blob/staging/CONTRIBUTING.md
+/docs/class-naming-convention         /principles/class-naming-convention
+/docs/contributions                   https://github.com/sparkdesignsystem/spark-design-system/blob/staging/CONTRIBUTING.md
+/docs/release-notes                   https://github.com/sparkdesignsystem/spark-design-system/releases
