@@ -8,25 +8,27 @@ import {
 import Layout from '../components/layouts/Layout';
 import componentsMedia from '../images/components.svg';
 import developersMedia from '../images/developers.svg';
-import fundamentalsMedia from '../images/fundamentals.svg';
-import newsMedia from '../images/news-and-updates.png';
+import designersMedia from '../images/designers.svg';
+import foundationsMedia from '../images/foundations.svg';
+import newsMedia from '../images/news-and-updates.svg';
+import utilitiesMedia from '../images/utilities.svg';
 
 const teaserDesigners = {
   bodyText: `
-    Lorem ipsum dolor sit amet,
-    doctus invenirevix te. Facilisi perpetua.
+    Get started with Design by reading the principles
+    that we use in Spark Design System.
   `,
   cta: {
     text: 'Go To Designer Basics',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: '/installing-spark/developers',
+    href: '/principles/design-principles',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: '/principles/design-principles',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+    imgSrc: designersMedia,
     mediaVariant: 'img',
   },
   title: 'Designer Basics',
@@ -45,10 +47,10 @@ const teaserDevelopers = {
     text: 'Go To Developer Basics',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: '/installing-spark/vanilla-installation',
+    href: '/installing-spark',
   },
   media: {
-    href: '/installing-spark/vanilla-installation',
+    href: '/installing-spark',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
     imgSrc: developersMedia,
@@ -84,7 +86,7 @@ const teaserComponents = {
   titleFirst: false,
 };
 
-const teaserFundamentals = {
+const teaserFoundations = {
   bodyText: `
    Looking for our brand color palette,
    typography guidelines, element spacing,
@@ -95,13 +97,13 @@ const teaserFundamentals = {
     text: 'Go To Foundations',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: '/using-spark/foundations/sass-variables',
+    href: '/using-spark/foundations/color',
   },
   media: {
-    href: '/using-spark/foundations/sass-variables',
+    href: '/using-spark/foundations/color',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: fundamentalsMedia,
+    imgSrc: foundationsMedia,
     mediaVariant: 'img',
   },
   title: 'Foundations',
@@ -124,7 +126,7 @@ const teaserUtils = {
     href: '/using-spark/foundations/css-utilities',
     mediaLinkElement: 'a',
     imgAlt: 'placeholder image',
-    imgSrc: '',
+    imgSrc: utilitiesMedia,
     mediaVariant: 'img',
   },
   title: 'Utilities',
@@ -198,7 +200,7 @@ const IndexPage = () => (
 
           <SprkCard
             variant="teaser"
-            teaserConfig={teaserFundamentals}
+            teaserConfig={teaserFoundations}
           />
 
           <SprkCard
