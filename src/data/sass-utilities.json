@@ -1,0 +1,2523 @@
+[
+  {
+    "description": "Sets the font color to black.\n",
+    "commentRange": {
+      "start": 309,
+      "end": 310
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--black",
+      "value": "color: $sprk-black !important;",
+      "line": {
+        "start": 311,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to blue.\n",
+    "commentRange": {
+      "start": 316,
+      "end": 317
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--blue",
+      "value": "color: $sprk-blue !important;",
+      "line": {
+        "start": 318,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to gray.\n",
+    "commentRange": {
+      "start": 323,
+      "end": 324
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--gray",
+      "value": "color: $sprk-gray !important;",
+      "line": {
+        "start": 325,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to green.\n",
+    "commentRange": {
+      "start": 330,
+      "end": 331
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--green",
+      "value": "color: $sprk-green !important;",
+      "line": {
+        "start": 332,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red.\n",
+    "commentRange": {
+      "start": 337,
+      "end": 338
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red",
+      "value": "color: $sprk-red !important;",
+      "line": {
+        "start": 339,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red tinted at 75%.\n",
+    "commentRange": {
+      "start": 343,
+      "end": 344
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red-tint-75",
+      "value": "color: $sprk-red-tint-75 !important;",
+      "line": {
+        "start": 345,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red tinted at 50%.\n",
+    "commentRange": {
+      "start": 349,
+      "end": 350
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red-tint-50",
+      "value": "color: $sprk-red-tint-50 !important;",
+      "line": {
+        "start": 351,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red tinted at 25%.\n",
+    "commentRange": {
+      "start": 355,
+      "end": 356
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red-tint-25",
+      "value": "color: $sprk-red-tint-25 !important;",
+      "line": {
+        "start": 357,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to white.\n",
+    "commentRange": {
+      "start": 362,
+      "end": 363
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--white",
+      "value": "color: $sprk-white !important;",
+      "line": {
+        "start": 364,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to yellow.\n",
+    "commentRange": {
+      "start": 369,
+      "end": 370
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--yellow",
+      "value": "color: $sprk-yellow !important;",
+      "line": {
+        "start": 371,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black.\n",
+    "commentRange": {
+      "start": 377,
+      "end": 378
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black",
+      "value": "background-color: $sprk-black !important;",
+      "line": {
+        "start": 379,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black tinted at 75%.\n",
+    "commentRange": {
+      "start": 383,
+      "end": 384
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black-tint-75",
+      "value": "background-color: $sprk-black-tint-75 !important;",
+      "line": {
+        "start": 385,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black tinted at 50%.\n",
+    "commentRange": {
+      "start": 389,
+      "end": 390
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black-tint-50",
+      "value": "background-color: $sprk-black-tint-50 !important;",
+      "line": {
+        "start": 391,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black tinted at 25%.\n",
+    "commentRange": {
+      "start": 395,
+      "end": 396
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black-tint-25",
+      "value": "background-color: $sprk-black-tint-25 !important;",
+      "line": {
+        "start": 397,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to dark gray.\n",
+    "commentRange": {
+      "start": 401,
+      "end": 402
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--gray-dark",
+      "value": "background-color: $sprk-gray-dark !important;",
+      "line": {
+        "start": 403,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue.\n",
+    "commentRange": {
+      "start": 407,
+      "end": 408
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue",
+      "value": "background-color: $sprk-blue !important;",
+      "line": {
+        "start": 409,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue tinted at 75%.\n",
+    "commentRange": {
+      "start": 413,
+      "end": 414
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue-tint-75",
+      "value": "background-color: $sprk-blue-tint-75 !important;",
+      "line": {
+        "start": 415,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue tinted at 50%.\n",
+    "commentRange": {
+      "start": 419,
+      "end": 420
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue-tint-50",
+      "value": "background-color: $sprk-blue-tint-50 !important;",
+      "line": {
+        "start": 421,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue tinted at 25%.\n",
+    "commentRange": {
+      "start": 425,
+      "end": 426
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue-tint-25",
+      "value": "background-color: $sprk-blue-tint-25 !important;",
+      "line": {
+        "start": 427,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to gray.\n",
+    "commentRange": {
+      "start": 431,
+      "end": 432
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--gray",
+      "value": "background-color: $sprk-gray !important;",
+      "line": {
+        "start": 433,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red.\n",
+    "commentRange": {
+      "start": 437,
+      "end": 438
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red",
+      "value": "background-color: $sprk-red !important;",
+      "line": {
+        "start": 439,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red tinted at 75%.\n",
+    "commentRange": {
+      "start": 443,
+      "end": 444
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red-tint-75",
+      "value": "background-color: $sprk-red-tint-75 !important;",
+      "line": {
+        "start": 445,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red tinted at 50%.\n",
+    "commentRange": {
+      "start": 449,
+      "end": 450
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red-tint-50",
+      "value": "background-color: $sprk-red-tint-50 !important;",
+      "line": {
+        "start": 451,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red tinted at 25%.\n",
+    "commentRange": {
+      "start": 455,
+      "end": 456
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red-tint-25",
+      "value": "background-color: $sprk-red-tint-25 !important;",
+      "line": {
+        "start": 457,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green.\n",
+    "commentRange": {
+      "start": 461,
+      "end": 462
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green",
+      "value": "background-color: $sprk-green !important;",
+      "line": {
+        "start": 463,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to dark green.\n",
+    "commentRange": {
+      "start": 467,
+      "end": 468
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-dark",
+      "value": "background-color: $sprk-green-dark !important;",
+      "line": {
+        "start": 469,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green tinted at 75%.\n",
+    "commentRange": {
+      "start": 473,
+      "end": 474
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-tint-75",
+      "value": "background-color: $sprk-green-tint-75 !important;",
+      "line": {
+        "start": 475,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green tinted at 50%.\n",
+    "commentRange": {
+      "start": 479,
+      "end": 480
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-tint-50",
+      "value": "background-color: $sprk-green-tint-50 !important;",
+      "line": {
+        "start": 481,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green tinted at 25%.\n",
+    "commentRange": {
+      "start": 485,
+      "end": 486
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-tint-25",
+      "value": "background-color: $sprk-green-tint-25 !important;",
+      "line": {
+        "start": 487,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to white.\n",
+    "commentRange": {
+      "start": 491,
+      "end": 492
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--white",
+      "value": "background-color: $sprk-white !important;",
+      "line": {
+        "start": 493,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow.\n",
+    "commentRange": {
+      "start": 497,
+      "end": 498
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow",
+      "value": "background-color: $sprk-yellow !important;",
+      "line": {
+        "start": 499,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow tinted at 75%.\n",
+    "commentRange": {
+      "start": 503,
+      "end": 504
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow-tint-75",
+      "value": "background-color: $sprk-yellow-tint-75 !important;",
+      "line": {
+        "start": 505,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow tinted at 50%.\n",
+    "commentRange": {
+      "start": 509,
+      "end": 510
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow-tint-50",
+      "value": "background-color: $sprk-yellow-tint-50 !important;",
+      "line": {
+        "start": 511,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow tinted at 25%.\n",
+    "commentRange": {
+      "start": 515,
+      "end": 516
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow-tint-25",
+      "value": "background-color: $sprk-yellow-tint-25 !important;",
+      "line": {
+        "start": 517,
+        "end": 795
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Turns off the display of an element so that it has no effect on layout.\n",
+    "commentRange": {
+      "start": 18,
+      "end": 20
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "value": "display: none !important;",
+      "line": {
+        "start": 26,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Turns off the display of an element so that it has no effect on layout.\n",
+    "commentRange": {
+      "start": 22,
+      "end": 24
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--none",
+      "value": "display: none !important;",
+      "line": {
+        "start": 26,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element generates a block element box.\n",
+    "commentRange": {
+      "start": 31,
+      "end": 32
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--block",
+      "value": "display: block !important;",
+      "line": {
+        "start": 33,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element generates one or more inline element boxes.\n",
+    "commentRange": {
+      "start": 37,
+      "end": 38
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--inline",
+      "value": "display: inline !important;",
+      "line": {
+        "start": 39,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element generates a block element box that will be flowed with surrounding content as if it were a single inline box.\n",
+    "commentRange": {
+      "start": 43,
+      "end": 44
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--inline-block",
+      "value": "display: inline-block !important;",
+      "line": {
+        "start": 45,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element box is invisible, but still affects layout as normal. Screen readers will still announce this element.\n",
+    "commentRange": {
+      "start": 49,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Visibility--hidden",
+      "value": "visibility: hidden !important;",
+      "line": {
+        "start": 51,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is visible.\n",
+    "commentRange": {
+      "start": 55,
+      "end": 56
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Visibility--visible",
+      "value": "visibility: visible !important;",
+      "line": {
+        "start": 57,
+        "end": 795
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Changes the height of the element to 100 percent.\n",
+    "commentRange": {
+      "start": 139,
+      "end": 140
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Height--100",
+      "value": "height: 100% !important;",
+      "line": {
+        "start": 141,
+        "end": 795
+      }
+    },
+    "group": [
+      "height"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the padding on the left and right (horizontal) to $sprk-space-misc-b (40px).\n",
+    "commentRange": {
+      "start": 531,
+      "end": 533
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-PaddingHorizontal--b",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 543,
+        "end": 795
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the bottom margin to the current value of $sprk-space-misc-a (24px).\n",
+    "commentRange": {
+      "start": 527,
+      "end": 529
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-MarginBottom--a",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 543,
+        "end": 795
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the margin on all sides to the current value of $sprk-space-misc-d (80px).\n",
+    "commentRange": {
+      "start": 535,
+      "end": 537
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-MarginAll--d",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 543,
+        "end": 795
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Makes content invisible while still being read by a screen reader.\n",
+    "commentRange": {
+      "start": 750,
+      "end": 751
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-ScreenReaderText",
+      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
+      "line": {
+        "start": 752,
+        "end": 795
+      }
+    },
+    "group": [
+      "multi-accessibility"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When combined with .sprk-u-ScreenReaderText the element will become visible on focus.\n",
+    "commentRange": {
+      "start": 761,
+      "end": 762
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-ShowOnFocus:focus",
+      "value": "position: static;\n  width: auto;\n  height: auto;",
+      "line": {
+        "start": 763,
+        "end": 795
+      }
+    },
+    "group": [
+      "multi-accessibility"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Clearfix is a method of float containment. When applied to a container with floated children it forces the container to span the entire vertical extent of the children as if they weren't pulled out of the document flow by the floats. Elements that come after the Clearfixed element will no longer wrap around the floated children. The primary way to use `Clearfix` in Spark is by extending the placeholder in your Sass (e.g. `@extend %ClearFix;`). It can also be used by applying the class directly to the parent element, typically only used for debugging.\n",
+    "commentRange": {
+      "start": 12,
+      "end": 13
+    },
+    "context": {
+      "type": "placeholder",
+      "name": "ClearFix",
+      "code": "\n  &::after {\n    content: '';\n    display: table;\n    clear: both;\n  }\n",
+      "line": {
+        "start": 14,
+        "end": 21
+      }
+    },
+    "group": [
+      "multi-layout"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_clearfix.scss",
+      "name": "_clearfix.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will align in the absolute center (vertically and horizontally) of the box.\n",
+    "commentRange": {
+      "start": 771,
+      "end": 772
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-AbsoluteCenter",
+      "value": "display: flex;\n  align-items: center;\n  justify-content: center;",
+      "line": {
+        "start": 773,
+        "end": 795
+      }
+    },
+    "group": [
+      "multi-layout"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, it will cause it to fill the viewport, even if it's inside a limiting container (such as sprk-o-CenteredColumn).\n",
+    "commentRange": {
+      "start": 779,
+      "end": 780
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FullWidth",
+      "value": "width: 100vw;\n  left: 50%;\n  right: 50%;\n  margin-left: -50vw;\n  margin-right: -50vw;",
+      "line": {
+        "start": 781,
+        "end": 795
+      }
+    },
+    "group": [
+      "multi-layout"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When placed on an element that contains text or any of the typography classes, it will remove the text cropping and the negative margins applied by the crop.\n",
+    "commentRange": {
+      "start": 245,
+      "end": 246
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextCrop--none",
+      "value": "&::before,\n  &::after {\n    content: none !important;\n    margin-bottom: 0 !important;\n    margin-top: 0 !important;\n  }",
+      "line": {
+        "start": 247,
+        "end": 795
+      }
+    },
+    "group": [
+      "multi-typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When placed on an element that contains text, it will limit the text to one line and adds an ellipsis when it overflows.\n",
+    "commentRange": {
+      "start": 789,
+      "end": 790
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Truncate",
+      "value": "white-space: nowrap !important;\n  overflow: hidden !important;\n  text-overflow: ellipsis !important;",
+      "line": {
+        "start": 791,
+        "end": 795
+      }
+    },
+    "group": [
+      "multi-typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Content is not clipped and may be rendered outside the padding box.\n",
+    "commentRange": {
+      "start": 284,
+      "end": 285
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--visible",
+      "value": "overflow: visible !important;",
+      "line": {
+        "start": 286,
+        "end": 795
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Content is clipped if necessary to fit the padding box. No scrollbars are provided.\n",
+    "commentRange": {
+      "start": 290,
+      "end": 291
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--hidden",
+      "value": "overflow: hidden !important;",
+      "line": {
+        "start": 292,
+        "end": 795
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Content is clipped if necessary to fit the padding box. Browsers display scrollbars whether or not any content is actually clipped.\n",
+    "commentRange": {
+      "start": 296,
+      "end": 297
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--scroll",
+      "value": "overflow: scroll !important;",
+      "line": {
+        "start": 298,
+        "end": 795
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "If content fits inside the padding box, it looks the same as visible, but still establishes a new block-formatting context.\n",
+    "commentRange": {
+      "start": 302,
+      "end": 303
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--auto",
+      "value": "overflow: auto !important;",
+      "line": {
+        "start": 304,
+        "end": 795
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is not floated.\n",
+    "commentRange": {
+      "start": 65,
+      "end": 66
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Float--none",
+      "value": "float: none !important;",
+      "line": {
+        "start": 67,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Floats an element to the left.\n",
+    "commentRange": {
+      "start": 71,
+      "end": 72
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Float--left",
+      "value": "float: left !important;",
+      "line": {
+        "start": 73,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Floats an element to the right.\n",
+    "commentRange": {
+      "start": 77,
+      "end": 78
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Float--right",
+      "value": "float: right !important;",
+      "line": {
+        "start": 79,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is positioned according to the normal flow of the document, and then offset relative to itself.\n",
+    "commentRange": {
+      "start": 87,
+      "end": 88
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--relative",
+      "value": "position: relative !important;",
+      "line": {
+        "start": 89,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor.\n",
+    "commentRange": {
+      "start": 93,
+      "end": 94
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--absolute",
+      "value": "position: absolute !important;",
+      "line": {
+        "start": 95,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport.\n",
+    "commentRange": {
+      "start": 99,
+      "end": 100
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--fixed",
+      "value": "position: fixed !important;",
+      "line": {
+        "start": 101,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is positioned according to the normal flow of the document.\n",
+    "commentRange": {
+      "start": 105,
+      "end": 106
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--static",
+      "value": "position: static !important;",
+      "line": {
+        "start": 107,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's top offset back to zero.\n",
+    "commentRange": {
+      "start": 111,
+      "end": 112
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Top--zero",
+      "value": "top: 0 !important;",
+      "line": {
+        "start": 113,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's bottom offset back to zero.\n",
+    "commentRange": {
+      "start": 117,
+      "end": 118
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Bottom--zero",
+      "value": "bottom: 0 !important;",
+      "line": {
+        "start": 119,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's left offset back to zero.\n",
+    "commentRange": {
+      "start": 123,
+      "end": 124
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Left--zero",
+      "value": "left: 0 !important;",
+      "line": {
+        "start": 125,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's right offset back to zero.\n",
+    "commentRange": {
+      "start": 129,
+      "end": 130
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Right--zero",
+      "value": "right: 0 !important;",
+      "line": {
+        "start": 131,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns text to the left of the container.\n",
+    "commentRange": {
+      "start": 151,
+      "end": 152
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextAlign--left",
+      "value": "text-align: left !important;",
+      "line": {
+        "start": 153,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns text to the right of the container.\n",
+    "commentRange": {
+      "start": 157,
+      "end": 158
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextAlign--right",
+      "value": "text-align: right !important;",
+      "line": {
+        "start": 159,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns text in the horizontal center of the container.\n",
+    "commentRange": {
+      "start": 163,
+      "end": 164
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextAlign--center",
+      "value": "text-align: center !important;",
+      "line": {
+        "start": 165,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the top if it's display property is inline or table-cell.\n",
+    "commentRange": {
+      "start": 169,
+      "end": 170
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--top",
+      "value": "vertical-align: top !important;",
+      "line": {
+        "start": 171,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the vertical middle if it's display property is inline or table-cell.\n",
+    "commentRange": {
+      "start": 175,
+      "end": 176
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--middle",
+      "value": "vertical-align: middle !important;",
+      "line": {
+        "start": 177,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the bottom if it's display property is inline or table-cell.\n",
+    "commentRange": {
+      "start": 181,
+      "end": 182
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--bottom",
+      "value": "vertical-align: bottom !important;",
+      "line": {
+        "start": 183,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the baseline if it's display property is inline or table-cell.\n",
+    "commentRange": {
+      "start": 187,
+      "end": 188
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--baseline",
+      "value": "vertical-align: baseline !important;",
+      "line": {
+        "start": 189,
+        "end": 795
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the bottom margin to 0px\n",
+    "commentRange": {
+      "start": 5,
+      "end": 7
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-mbn",
+      "value": "padding-top: 0 !important;",
+      "line": {
+        "start": 19,
+        "end": 255
+      }
+    },
+    "group": [
+      "spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_spacing.scss",
+      "name": "_spacing.scss"
+    }
+  },
+  {
+    "description": "Sets the margin on all sides to 64px\n",
+    "commentRange": {
+      "start": 13,
+      "end": 15
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-mah",
+      "value": "padding-top: 0 !important;",
+      "line": {
+        "start": 19,
+        "end": 255
+      }
+    },
+    "group": [
+      "spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_spacing.scss",
+      "name": "_spacing.scss"
+    }
+  },
+  {
+    "description": "Sets the left and right padding to 16px\n",
+    "commentRange": {
+      "start": 9,
+      "end": 11
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-phm",
+      "value": "padding-top: 0 !important;",
+      "line": {
+        "start": 19,
+        "end": 255
+      }
+    },
+    "group": [
+      "spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_spacing.scss",
+      "name": "_spacing.scss"
+    }
+  },
+  {
+    "description": "Sets the font weight to bold.\n",
+    "commentRange": {
+      "start": 197,
+      "end": 198
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontWeight--bold",
+      "value": "font-weight: bold !important;",
+      "line": {
+        "start": 199,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font weight to normal.\n",
+    "commentRange": {
+      "start": 203,
+      "end": 204
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontWeight--normal",
+      "value": "font-weight: normal !important;",
+      "line": {
+        "start": 205,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font style to italic.\n",
+    "commentRange": {
+      "start": 209,
+      "end": 210
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontStyle--italic",
+      "value": "font-style: italic !important;",
+      "line": {
+        "start": 211,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font style to normal.\n",
+    "commentRange": {
+      "start": 215,
+      "end": 216
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontStyle--normal",
+      "value": "font-style: normal !important;",
+      "line": {
+        "start": 217,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the text decoration to underline.\n",
+    "commentRange": {
+      "start": 221,
+      "end": 222
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextDecoration--underline",
+      "value": "text-decoration: underline !important;",
+      "line": {
+        "start": 223,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the text decoration to none.\n",
+    "commentRange": {
+      "start": 227,
+      "end": 228
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextDecoration--none",
+      "value": "text-decoration: none !important;",
+      "line": {
+        "start": 229,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Transforms text to uppercase.\n",
+    "commentRange": {
+      "start": 233,
+      "end": 234
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextTransform--uppercase",
+      "value": "text-transform: uppercase !important;",
+      "line": {
+        "start": 235,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Removes text transformation for text.\n",
+    "commentRange": {
+      "start": 239,
+      "end": 240
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextTransform--none",
+      "value": "text-transform: none !important;",
+      "line": {
+        "start": 241,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets word-wrap to break-word.\n",
+    "commentRange": {
+      "start": 256,
+      "end": 257
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-WordWrap--break-word",
+      "value": "word-wrap: break-word !important;",
+      "line": {
+        "start": 258,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets white-space to nowrap.\n",
+    "commentRange": {
+      "start": 262,
+      "end": 263
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-WhiteSpace--nowrap",
+      "value": "white-space: nowrap !important;",
+      "line": {
+        "start": 264,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets a max-width, intended for text. Default value is 40 rem.\n",
+    "commentRange": {
+      "start": 268,
+      "end": 269
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Measure",
+      "value": "max-width: $sprk-measure !important;",
+      "line": {
+        "start": 270,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets a narrow max-width, intended for text. Default value is 25 rem.\n",
+    "commentRange": {
+      "start": 274,
+      "end": 275
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Measure--narrow",
+      "value": "max-width: $sprk-narrow-measure !important;",
+      "line": {
+        "start": 276,
+        "end": 795
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 10,
+      "end": 10
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Clearfix is a method of float containment. When applied to a container with floated children it forces the container to span the entire vertical extent of the children as if they weren't pulled out of the document flow by the floats. Elements that come after the Clearfixed element will no longer wrap around the floated children. The primary way to use `Clearfix` in Spark is by extending the placeholder in your Sass (e.g. `@extend %ClearFix;`). It can also be used by applying the class directly to the parent element, typically only used for debugging.\n/// @group multi-layout\n%ClearFix,\n.sprk-u-ClearFix",
+      "value": "&::after {\n    content: '';\n    display: table;\n    clear: both;\n  }",
+      "line": {
+        "start": 15,
+        "end": 21
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_clearfix.scss",
+      "name": "_clearfix.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 12,
+      "end": 12
+    },
+    "context": {
+      "type": "css",
+      "name": "//\n// Display and Visibility\n///\n\n/// Turns off the display of an element so that it has no effect on layout.\n/// @group display\n/// @name .sprk-u-JavaScript, .sprk-u-HideWhenJs\n\n/// Turns off the display of an element so that it has no effect on layout.\n/// @group display\n/// @name .sprk-u-Display--none\n.sprk-u-Display--none,\n.sprk-u-JavaScript .sprk-u-HideWhenJs",
+      "value": "display: none !important;",
+      "line": {
+        "start": 26,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 16,
+      "end": 16
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Turns off the display of an element so that it has no effect on layout.\n/// @group display\n/// @name .sprk-u-JavaScript, .sprk-u-HideWhenJs\n\n/// Turns off the display of an element so that it has no effect on layout.\n/// @group display\n/// @name .sprk-u-Display--none\n.sprk-u-Display--none,\n.sprk-u-JavaScript .sprk-u-HideWhenJs",
+      "value": "display: none !important;",
+      "line": {
+        "start": 26,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 63,
+      "end": 63
+    },
+    "context": {
+      "type": "css",
+      "name": "/// The element is not floated.\n/// @group position\n.sprk-u-Float--none",
+      "value": "float: none !important;",
+      "line": {
+        "start": 67,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 85,
+      "end": 85
+    },
+    "context": {
+      "type": "css",
+      "name": "/// The element is positioned according to the normal flow of the document, and then offset relative to itself.\n/// @group position\n.sprk-u-Position--relative",
+      "value": "position: relative !important;",
+      "line": {
+        "start": 89,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 137,
+      "end": 137
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Changes the height of the element to 100 percent.\n/// @group height\n.sprk-u-Height--100",
+      "value": "height: 100% !important;",
+      "line": {
+        "start": 141,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 149,
+      "end": 149
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Aligns text to the left of the container.\n/// @group position\n.sprk-u-TextAlign--left",
+      "value": "text-align: left !important;",
+      "line": {
+        "start": 153,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 195,
+      "end": 195
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Sets the font weight to bold.\n/// @group typography\n.sprk-u-FontWeight--bold",
+      "value": "font-weight: bold !important;",
+      "line": {
+        "start": 199,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 282,
+      "end": 282
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Content is not clipped and may be rendered outside the padding box.\n/// @group overflow\n.sprk-u-Overflow--visible",
+      "value": "overflow: visible !important;",
+      "line": {
+        "start": 286,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 525,
+      "end": 525
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Sets the bottom margin to the current value of $sprk-space-misc-a (24px).\n/// @group misc-spacing\n/// @name sprk-u-MarginBottom--a\n\n/// Sets the padding on the left and right (horizontal) to $sprk-space-misc-b (40px).\n/// @group misc-spacing\n/// @name sprk-u-PaddingHorizontal--b\n\n/// Sets the margin on all sides to the current value of $sprk-space-misc-d (80px).\n/// @group misc-spacing\n/// @name sprk-u-MarginAll--d\n\n/* stylelint-disable  selector-class-pattern */\n// Misc Padding Spacing A\n.sprk-u-PaddingTop--a,\n.sprk-u-PaddingVertical--a,\n.sprk-u-PaddingAll--a",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 543,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 748,
+      "end": 748
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Makes content invisible while still being read by a screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
+      "line": {
+        "start": 752,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 744,
+      "end": 744
+    },
+    "context": {
+      "type": "css",
+      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
+      "line": {
+        "start": 752,
+        "end": 795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 14,
+      "end": 14
+    },
+    "context": {
+      "type": "css",
+      "name": "/// Changes the width of the element to 25 percent.\n/// @group width\n/// @name .sprk-u-Width-25\n\n/// Changes the width of the element to 50 percent.\n/// @group width\n/// @name .sprk-u-Width-50\n\n/// Changes the width of the element to 5 percent.\n/// @group width\n/// @name .sprk-u-Width-5\n\n$width: $width-range-start;\n\n@while $width <= $width-range-end",
+      "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
+      "line": {
+        "start": 30,
+        "end": 37
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_width.scss",
+      "name": "_width.scss"
+    }
+  },
+  {
+    "description": "Changes the width of the element to 5 percent.\n",
+    "commentRange": {
+      "start": 24,
+      "end": 26
+    },
+    "context": {
+      "type": "variable",
+      "name": ".sprk-u-Width-5",
+      "value": "$width-range-start",
+      "scope": "private",
+      "line": {
+        "start": 28,
+        "end": 28
+      }
+    },
+    "group": [
+      "width"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_width.scss",
+      "name": "_width.scss"
+    }
+  },
+  {
+    "description": "Changes the width of the element to 25 percent.\n",
+    "commentRange": {
+      "start": 16,
+      "end": 18
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Width-25",
+      "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
+      "line": {
+        "start": 30,
+        "end": 37
+      }
+    },
+    "group": [
+      "width"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_width.scss",
+      "name": "_width.scss"
+    }
+  },
+  {
+    "description": "Changes the width of the element to 50 percent.\n",
+    "commentRange": {
+      "start": 20,
+      "end": 22
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Width-50",
+      "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
+      "line": {
+        "start": 30,
+        "end": 37
+      }
+    },
+    "group": [
+      "width"
+    ],
+    "access": "public",
+    "file": {
+      "path": "_width.scss",
+      "name": "_width.scss"
+    }
+  }
+]

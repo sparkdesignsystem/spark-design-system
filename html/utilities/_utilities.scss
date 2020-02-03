@@ -14,29 +14,46 @@
 //
 // Display and Visibility
 ///
-// stylelint-disable selector-class-pattern
+
+/// Turns off the display of an element so that it has no effect on layout.
+/// @group display
+/// @name .sprk-u-JavaScript, .sprk-u-HideWhenJs
+
+/// Turns off the display of an element so that it has no effect on layout.
+/// @group display
+/// @name .sprk-u-Display--none
 .sprk-u-Display--none,
 .sprk-u-JavaScript .sprk-u-HideWhenJs {
   display: none !important;
 }
 
 // stylelint-enable
+/// The element generates a block element box.
+/// @group display
 .sprk-u-Display--block {
   display: block !important;
 }
 
+/// The element generates one or more inline element boxes.
+/// @group display
 .sprk-u-Display--inline {
   display: inline !important;
 }
 
+/// The element generates a block element box that will be flowed with surrounding content as if it were a single inline box.
+/// @group display
 .sprk-u-Display--inline-block {
   display: inline-block !important;
 }
 
+/// The element box is invisible, but still affects layout as normal. Screen readers will still announce this element.
+/// @group display
 .sprk-u-Visibility--hidden {
   visibility: hidden !important;
 }
 
+/// The element is visible.
+/// @group display
 .sprk-u-Visibility--visible {
   visibility: visible !important;
 }
@@ -44,14 +61,21 @@
 //
 // Floats
 ///
+
+/// The element is not floated.
+/// @group position
 .sprk-u-Float--none {
   float: none !important;
 }
 
+/// Floats an element to the left.
+/// @group position
 .sprk-u-Float--left {
   float: left !important;
 }
 
+/// Floats an element to the right.
+/// @group position
 .sprk-u-Float--right {
   float: right !important;
 }
@@ -59,34 +83,51 @@
 //
 // Positioning
 ///
+
+/// The element is positioned according to the normal flow of the document, and then offset relative to itself.
+/// @group position
 .sprk-u-Position--relative {
   position: relative !important;
 }
 
+/// The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor.
+/// @group position
 .sprk-u-Position--absolute {
   position: absolute !important;
 }
 
+/// The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport.
+/// @group position
 .sprk-u-Position--fixed {
   position: fixed !important;
 }
 
+/// The element is positioned according to the normal flow of the document.
+/// @group position
 .sprk-u-Position--static {
   position: static !important;
 }
 
+/// Resets an element's top offset back to zero.
+/// @group position
 .sprk-u-Top--zero {
   top: 0 !important;
 }
 
+/// Resets an element's bottom offset back to zero.
+/// @group position
 .sprk-u-Bottom--zero {
   bottom: 0 !important;
 }
 
+/// Resets an element's left offset back to zero.
+/// @group position
 .sprk-u-Left--zero {
   left: 0 !important;
 }
 
+/// Resets an element's right offset back to zero.
+/// @group position
 .sprk-u-Right--zero {
   right: 0 !important;
 }
@@ -95,7 +136,8 @@
 // Height
 ///
 
-/* stylelint-disable selector-class-pattern */
+/// Changes the height of the element to 100 percent.
+/// @group height
 .sprk-u-Height--100 {
   height: 100% !important;
 }
@@ -105,30 +147,45 @@
 //
 // Alignment
 ///
+
+/// Aligns text to the left of the container.
+/// @group position
 .sprk-u-TextAlign--left {
   text-align: left !important;
 }
 
+/// Aligns text to the right of the container.
+/// @group position
 .sprk-u-TextAlign--right {
   text-align: right !important;
 }
 
+/// Aligns text in the horizontal center of the container.
+/// @group position
 .sprk-u-TextAlign--center {
   text-align: center !important;
 }
 
+/// Aligns the contents of a box to the top if it's display property is inline or table-cell.
+/// @group position
 .sprk-u-VerticalAlign--top {
   vertical-align: top !important;
 }
 
+/// Aligns the contents of a box to the vertical middle if it's display property is inline or table-cell.
+/// @group position
 .sprk-u-VerticalAlign--middle {
   vertical-align: middle !important;
 }
 
+/// Aligns the contents of a box to the bottom if it's display property is inline or table-cell.
+/// @group position
 .sprk-u-VerticalAlign--bottom {
   vertical-align: bottom !important;
 }
 
+/// Aligns the contents of a box to the baseline if it's display property is inline or table-cell.
+/// @group position
 .sprk-u-VerticalAlign--baseline {
   vertical-align: baseline !important;
 }
@@ -136,38 +193,57 @@
 //
 // Typography
 ///
+
+/// Sets the font weight to bold.
+/// @group typography
 .sprk-u-FontWeight--bold {
   font-weight: bold !important;
 }
 
+/// Sets the font weight to normal.
+/// @group typography
 .sprk-u-FontWeight--normal {
   font-weight: normal !important;
 }
 
+/// Sets the font style to italic.
+/// @group typography
 .sprk-u-FontStyle--italic {
   font-style: italic !important;
 }
 
+/// Sets the font style to normal.
+/// @group typography
 .sprk-u-FontStyle--normal {
   font-style: normal !important;
 }
 
+/// Sets the text decoration to underline.
+/// @group typography
 .sprk-u-TextDecoration--underline {
   text-decoration: underline !important;
 }
 
+/// Sets the text decoration to none.
+/// @group typography
 .sprk-u-TextDecoration--none {
   text-decoration: none !important;
 }
 
+/// Transforms text to uppercase.
+/// @group typography
 .sprk-u-TextTransform--uppercase {
   text-transform: uppercase !important;
 }
 
+/// Removes text transformation for text.
+/// @group typography
 .sprk-u-TextTransform--none {
   text-transform: none !important;
 }
 
+/// When placed on an element that contains text or any of the typography classes, it will remove the text cropping and the negative margins applied by the crop.
+/// @group multi-typography
 .sprk-u-TextCrop--none {
   &::before,
   &::after {
@@ -177,18 +253,26 @@
   }
 }
 
+/// Sets word-wrap to break-word.
+/// @group typography
 .sprk-u-WordWrap--break-word {
   word-wrap: break-word !important;
 }
 
+/// Sets white-space to nowrap.
+/// @group typography
 .sprk-u-WhiteSpace--nowrap {
   white-space: nowrap !important;
 }
 
+/// Sets a max-width, intended for text. Default value is 40 rem.
+/// @group typography
 .sprk-u-Measure {
   max-width: $sprk-measure !important;
 }
 
+/// Sets a narrow max-width, intended for text. Default value is 25 rem.
+/// @group typography
 .sprk-u-Measure--narrow {
   max-width: $sprk-narrow-measure !important;
 }
@@ -196,157 +280,240 @@
 //
 // Overflow
 ///
+
+/// Content is not clipped and may be rendered outside the padding box.
+/// @group overflow
 .sprk-u-Overflow--visible {
   overflow: visible !important;
 }
 
+/// Content is clipped if necessary to fit the padding box. No scrollbars are provided.
+/// @group overflow
 .sprk-u-Overflow--hidden {
   overflow: hidden !important;
 }
 
+/// Content is clipped if necessary to fit the padding box. Browsers display scrollbars whether or not any content is actually clipped.
+/// @group overflow
 .sprk-u-Overflow--scroll {
   overflow: scroll !important;
 }
 
+/// If content fits inside the padding box, it looks the same as visible, but still establishes a new block-formatting context.
+/// @group overflow
 .sprk-u-Overflow--auto {
   overflow: auto !important;
 }
 
 // Colors
+/// Sets the font color to black.
+/// @group color
 .sprk-u-Color--black {
   color: $sprk-black !important;
 }
 
+// Colors
+/// Sets the font color to blue.
+/// @group color
 .sprk-u-Color--blue {
   color: $sprk-blue !important;
 }
 
+// Colors
+/// Sets the font color to gray.
+/// @group color
 .sprk-u-Color--gray {
   color: $sprk-gray !important;
 }
 
+// Colors
+/// Sets the font color to green.
+/// @group color
 .sprk-u-Color--green {
   color: $sprk-green !important;
 }
 
+// Colors
+/// Sets the font color to red.
+/// @group color
 .sprk-u-Color--red {
   color: $sprk-red !important;
 }
 
-/* stylelint-disable selector-class-pattern */
+/// Sets the font color to red tinted at 75%.
+/// @group color
 .sprk-u-Color--red-tint-75 {
   color: $sprk-red-tint-75 !important;
 }
 
+/// Sets the font color to red tinted at 50%.
+/// @group color
 .sprk-u-Color--red-tint-50 {
   color: $sprk-red-tint-50 !important;
 }
 
+/// Sets the font color to red tinted at 25%.
+/// @group color
 .sprk-u-Color--red-tint-25 {
   color: $sprk-red-tint-25 !important;
 }
 
+// Colors
+/// Sets the font color to white.
+/// @group color
 .sprk-u-Color--white {
   color: $sprk-white !important;
 }
 
+// Colors
+/// Sets the font color to yellow.
+/// @group color
 .sprk-u-Color--yellow {
   color: $sprk-yellow !important;
 }
 
 // Background color
+
+/// Sets the background color to black.
+/// @group color
 .sprk-u-BackgroundColor--black {
   background-color: $sprk-black !important;
 }
 
+/// Sets the background color to black tinted at 75%.
+/// @group color
 .sprk-u-BackgroundColor--black-tint-75 {
   background-color: $sprk-black-tint-75 !important;
 }
 
+/// Sets the background color to black tinted at 50%.
+/// @group color
 .sprk-u-BackgroundColor--black-tint-50 {
   background-color: $sprk-black-tint-50 !important;
 }
 
+/// Sets the background color to black tinted at 25%.
+/// @group color
 .sprk-u-BackgroundColor--black-tint-25 {
   background-color: $sprk-black-tint-25 !important;
 }
 
+/// Sets the background color to dark gray.
+/// @group color
 .sprk-u-BackgroundColor--gray-dark {
   background-color: $sprk-gray-dark !important;
 }
 
+/// Sets the background color to blue.
+/// @group color
 .sprk-u-BackgroundColor--blue {
   background-color: $sprk-blue !important;
 }
 
+/// Sets the background color to blue tinted at 75%.
+/// @group color
 .sprk-u-BackgroundColor--blue-tint-75 {
   background-color: $sprk-blue-tint-75 !important;
 }
 
+/// Sets the background color to blue tinted at 50%.
+/// @group color
 .sprk-u-BackgroundColor--blue-tint-50 {
   background-color: $sprk-blue-tint-50 !important;
 }
 
+/// Sets the background color to blue tinted at 25%.
+/// @group color
 .sprk-u-BackgroundColor--blue-tint-25 {
   background-color: $sprk-blue-tint-25 !important;
 }
 
+/// Sets the background color to gray.
+/// @group color
 .sprk-u-BackgroundColor--gray {
   background-color: $sprk-gray !important;
 }
 
+/// Sets the background color to red.
+/// @group color
 .sprk-u-BackgroundColor--red {
   background-color: $sprk-red !important;
 }
 
+/// Sets the background color to red tinted at 75%.
+/// @group color
 .sprk-u-BackgroundColor--red-tint-75 {
   background-color: $sprk-red-tint-75 !important;
 }
 
+/// Sets the background color to red tinted at 50%.
+/// @group color
 .sprk-u-BackgroundColor--red-tint-50 {
   background-color: $sprk-red-tint-50 !important;
 }
 
+/// Sets the background color to red tinted at 25%.
+/// @group color
 .sprk-u-BackgroundColor--red-tint-25 {
   background-color: $sprk-red-tint-25 !important;
 }
 
+/// Sets the background color to green.
+/// @group color
 .sprk-u-BackgroundColor--green {
   background-color: $sprk-green !important;
 }
 
+/// Sets the background color to dark green.
+/// @group color
 .sprk-u-BackgroundColor--green-dark {
   background-color: $sprk-green-dark !important;
 }
 
+/// Sets the background color to green tinted at 75%.
+/// @group color
 .sprk-u-BackgroundColor--green-tint-75 {
   background-color: $sprk-green-tint-75 !important;
 }
 
+/// Sets the background color to green tinted at 50%.
+/// @group color
 .sprk-u-BackgroundColor--green-tint-50 {
   background-color: $sprk-green-tint-50 !important;
 }
 
+/// Sets the background color to green tinted at 25%.
+/// @group color
 .sprk-u-BackgroundColor--green-tint-25 {
   background-color: $sprk-green-tint-25 !important;
 }
 
+/// Sets the background color to white.
+/// @group color
 .sprk-u-BackgroundColor--white {
   background-color: $sprk-white !important;
 }
 
+/// Sets the background color to yellow.
+/// @group color
 .sprk-u-BackgroundColor--yellow {
   background-color: $sprk-yellow !important;
 }
 
+/// Sets the background color to yellow tinted at 75%.
+/// @group color
 .sprk-u-BackgroundColor--yellow-tint-75 {
   background-color: $sprk-yellow-tint-75 !important;
 }
 
+/// Sets the background color to yellow tinted at 50%.
+/// @group color
 .sprk-u-BackgroundColor--yellow-tint-50 {
   background-color: $sprk-yellow-tint-50 !important;
 }
 
+/// Sets the background color to yellow tinted at 25%.
+/// @group color
 .sprk-u-BackgroundColor--yellow-tint-25 {
   background-color: $sprk-yellow-tint-25 !important;
 }
@@ -356,6 +523,18 @@
 //
 // Spacing
 ///
+
+/// Sets the bottom margin to the current value of $sprk-space-misc-a (24px).
+/// @group misc-spacing
+/// @name sprk-u-MarginBottom--a
+
+/// Sets the padding on the left and right (horizontal) to $sprk-space-misc-b (40px).
+/// @group misc-spacing
+/// @name sprk-u-PaddingHorizontal--b
+
+/// Sets the margin on all sides to the current value of $sprk-space-misc-d (80px).
+/// @group misc-spacing
+/// @name sprk-u-MarginAll--d
 
 /* stylelint-disable  selector-class-pattern */
 // Misc Padding Spacing A
@@ -568,7 +747,8 @@
 // Accessibility
 ///
 
-// Hides visually but gets read by a screen reader.
+/// Makes content invisible while still being read by a screen reader.
+/// @group multi-accessibility
 .sprk-u-ScreenReaderText {
   position: absolute;
   left: -10000px;
@@ -578,8 +758,8 @@
   overflow: hidden;
 }
 
-// When combined with `.sprk-u-ScreenReaderText` the element will become
-// visible on focus.
+/// When combined with .sprk-u-ScreenReaderText the element will become visible on focus.
+/// @group multi-accessibility
 .sprk-u-ShowOnFocus:focus {
   position: static;
   width: auto;
@@ -588,13 +768,16 @@
 
 //
 // layout
-///
+/// When placed on a container, its children will align in the absolute center (vertically and horizontally) of the box.
+/// @group multi-layout
 .sprk-u-AbsoluteCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/// When placed on a container, it will cause it to fill the viewport, even if it's inside a limiting container (such as sprk-o-CenteredColumn).
+/// @group multi-layout
 .sprk-u-FullWidth {
   width: 100vw;
   left: 50%;
@@ -603,6 +786,8 @@
   margin-right: -50vw;
 }
 
+/// When placed on an element that contains text, it will limit the text to one line and adds an ellipsis when it overflows.
+/// @group multi-typography
 .sprk-u-Truncate {
   white-space: nowrap !important;
   overflow: hidden !important;

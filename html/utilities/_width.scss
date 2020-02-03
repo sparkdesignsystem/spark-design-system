@@ -12,6 +12,19 @@ $width-step-value: 5;
 // This will generate a list of classes in the format `.sprk-u-Width-[percent]`.
 // It will generate a class for every 5% step from 5 to 100.
 ///
+
+/// Changes the width of the element to 25 percent.
+/// @group width
+/// @name .sprk-u-Width-25
+
+/// Changes the width of the element to 50 percent.
+/// @group width
+/// @name .sprk-u-Width-50
+
+/// Changes the width of the element to 5 percent.
+/// @group width
+/// @name .sprk-u-Width-5
+
 $width: $width-range-start;
 
 @while $width <= $width-range-end {
