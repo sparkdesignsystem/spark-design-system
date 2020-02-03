@@ -78,3 +78,17 @@ body,
 .docs-o-Grid--large {
   gap: $sprk-space-l;
 }
+
+// Spark override to align card btns to bottom
+.docs-c-Card .sprk-c-Card__content {
+  flex: 1;
+}
+
+.docs-c-Card .sprk-c-Card__content div.sprk-o-Stack__item {
+  display: flex;
+  flex: 1;
+}
+
+.docs-c-Card .sprk-c-Card__content div.sprk-o-Stack__item .sprk-c-Button {
+  align-self: flex-end;
+}

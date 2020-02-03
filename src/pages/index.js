@@ -184,31 +184,37 @@ const IndexPage = () => (
       <SprkStackItem>
         <div className="docs-o-Grid docs-o-Grid--three-col docs-o-Grid--large">
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserDesigners}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserDevelopers}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserComponents}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserFoundations}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserUtils}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserNews}
           />
