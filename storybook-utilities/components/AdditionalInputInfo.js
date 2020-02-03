@@ -19,7 +19,7 @@ const AdditionalInputInfo = (props) => {
 
   const TagName = headerElement;
   return (
-    <React.Fragment>
+    <>
       <TagName
         className={additionalHeaderClasses}
       >
@@ -69,7 +69,7 @@ const AdditionalInputInfo = (props) => {
           &quot;input-text-2&quot;, &quot;input-date-1&quot;, etc).
         </SprkListItem>
         {isHTMLStorybook && (
-          <React.Fragment>
+          <>
             <SprkListItem
               additionalClasses={additionalListItemClasses}
             >
@@ -110,20 +110,16 @@ const AdditionalInputInfo = (props) => {
               <code> id </code>
               attribute on the error container.
             </SprkListItem>
-          </React.Fragment>
+          </>
         )}
       </SprkList>
-    </React.Fragment>
+    </>
   );
 };
 
 AdditionalInputInfo.defaultProps = {
-  additionalHeaderClasses: undefined,
-  additionalListClasses: undefined,
-  additionalListItemClasses: undefined,
   headerElement: 'h4',
   listElement: 'ul',
-  listVariant: undefined,
 };
 
 AdditionalInputInfo.PropTypes = {
