@@ -8,6 +8,10 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- The \`sprk-b-InputContainer--huge\` class is
+available for use on this input. For full
+functionality, see guidelines in the
+[Huge Text Input](/docs/components-input-huge-text--huge-text-input) section. 
     `,
     docs: { iframeHeight: 140 },
   },

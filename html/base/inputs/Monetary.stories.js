@@ -8,6 +8,19 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- The value of this field may contain special characters (,)
+which you may need to remove before submitting the form.
+- Requires Additional Engineering:
+  - Validation – When input is not valid, do the following
+    - Add \`sprk-b-TextInput--error\` class to \`input\` element.
+    - Set \`aria-invalid=”true”\` and
+    \`area-describedby=”[id-of-error-container]”\` on
+    \`input\` element.
+    - Hide the error container (\`div\`
+    with \`sprk-b-ErrorContainer\` class)
+  - Reformatting to monetary pattern (##.##) - On
+  blur, it should reformat to add commas and
+  decimals to the hundredth place. 
     `,
     docs: { iframeHeight: 140 },
   },

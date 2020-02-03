@@ -40,6 +40,16 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- The value of this field contains special characters
+(/) which you may need to remove before submitting the form.
+- The Date Picker makes use of a 3rd party library called
+Tiny Date Picker. See the SprkDatepickerDirective tab in
+the Inputs table below for available customization options.
+- Requires Additional Engineering:
+  - Validation
+  - Reformatting to date pattern MM/DD/YYYY - After
+  valid input, it should reformat to add commas and
+  decimals to the hundredth place.
 `,
     docs: { iframeHeight: 200 },
   }
