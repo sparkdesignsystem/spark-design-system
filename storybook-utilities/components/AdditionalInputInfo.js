@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SprkList, SprkListItem } from '@sparkdesignsystem/spark-react';
+import SprkList from '../../react/src/base/lists/SprkList';
+import SprkListItem from '../../react/src/base/lists/SprkListItem';
 import { getStorybookInstance } from '../getStorybookInstance';
 
 const AdditionalInputInfo = (props) => {
