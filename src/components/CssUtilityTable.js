@@ -23,7 +23,7 @@ const CssUtilityTable = ({ group }) => (
       }
     `}
     render={data => {
-      const sassVarData = data.allSassUtilitiesJson.edges
+      const cssUtilData = data.allSassUtilitiesJson.edges
         .filter(item => {
           return (
             item.node.group[0] === group
@@ -53,7 +53,7 @@ const CssUtilityTable = ({ group }) => (
               header: "Description"
             }
           ]}
-          rows={sassVarData}
+          rows={cssUtilData}
         />
       );
     }}
