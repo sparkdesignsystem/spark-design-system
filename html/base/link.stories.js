@@ -1,4 +1,6 @@
-import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
+import {
+  markdownDocumentationLinkBuilder,
+} from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Link',
