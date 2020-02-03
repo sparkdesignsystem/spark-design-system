@@ -44,7 +44,10 @@ addParameters({
               {children}
 
               {isInputStory &&
-                <AdditionalInputInfo />
+                <AdditionalInputInfo
+                  additionalHeaderClasses='sprk-u-mbm'
+                  additionalListClasses='sprk-u-mbm'
+                />
               }
 
               <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
@@ -72,7 +75,10 @@ addParameters({
               {children}
 
               {isInputStory &&
-                <AdditionalInputInfo />
+                <AdditionalInputInfo
+                  additionalHeaderClasses='sprk-u-mbm'
+                  additionalListClasses='sprk-u-mbm'
+                />
               }
             </div>
           </DocsContainer>
