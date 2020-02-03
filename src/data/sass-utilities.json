@@ -2,16 +2,16 @@
   {
     "description": "Sets the font color to black.\n",
     "commentRange": {
-      "start": 309,
-      "end": 310
+      "start": 332,
+      "end": 333
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--black",
       "value": "color: $sprk-black !important;",
       "line": {
-        "start": 311,
-        "end": 795
+        "start": 334,
+        "end": 829
       }
     },
     "group": [
@@ -26,16 +26,16 @@
   {
     "description": "Sets the font color to blue.\n",
     "commentRange": {
-      "start": 316,
-      "end": 317
+      "start": 339,
+      "end": 340
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--blue",
       "value": "color: $sprk-blue !important;",
       "line": {
-        "start": 318,
-        "end": 795
+        "start": 341,
+        "end": 829
       }
     },
     "group": [
@@ -50,16 +50,16 @@
   {
     "description": "Sets the font color to gray.\n",
     "commentRange": {
-      "start": 323,
-      "end": 324
+      "start": 346,
+      "end": 347
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--gray",
       "value": "color: $sprk-gray !important;",
       "line": {
-        "start": 325,
-        "end": 795
+        "start": 348,
+        "end": 829
       }
     },
     "group": [
@@ -74,16 +74,16 @@
   {
     "description": "Sets the font color to green.\n",
     "commentRange": {
-      "start": 330,
-      "end": 331
+      "start": 353,
+      "end": 354
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--green",
       "value": "color: $sprk-green !important;",
       "line": {
-        "start": 332,
-        "end": 795
+        "start": 355,
+        "end": 829
       }
     },
     "group": [
@@ -98,16 +98,16 @@
   {
     "description": "Sets the font color to red.\n",
     "commentRange": {
-      "start": 337,
-      "end": 338
+      "start": 360,
+      "end": 361
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--red",
       "value": "color: $sprk-red !important;",
       "line": {
-        "start": 339,
-        "end": 795
+        "start": 362,
+        "end": 829
       }
     },
     "group": [
@@ -122,16 +122,16 @@
   {
     "description": "Sets the font color to red tinted at 75%.\n",
     "commentRange": {
-      "start": 343,
-      "end": 344
+      "start": 366,
+      "end": 367
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--red-tint-75",
       "value": "color: $sprk-red-tint-75 !important;",
       "line": {
-        "start": 345,
-        "end": 795
+        "start": 368,
+        "end": 829
       }
     },
     "group": [
@@ -146,16 +146,16 @@
   {
     "description": "Sets the font color to red tinted at 50%.\n",
     "commentRange": {
-      "start": 349,
-      "end": 350
+      "start": 372,
+      "end": 373
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--red-tint-50",
       "value": "color: $sprk-red-tint-50 !important;",
       "line": {
-        "start": 351,
-        "end": 795
+        "start": 374,
+        "end": 829
       }
     },
     "group": [
@@ -170,16 +170,16 @@
   {
     "description": "Sets the font color to red tinted at 25%.\n",
     "commentRange": {
-      "start": 355,
-      "end": 356
+      "start": 378,
+      "end": 379
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--red-tint-25",
       "value": "color: $sprk-red-tint-25 !important;",
       "line": {
-        "start": 357,
-        "end": 795
+        "start": 380,
+        "end": 829
       }
     },
     "group": [
@@ -194,16 +194,16 @@
   {
     "description": "Sets the font color to white.\n",
     "commentRange": {
-      "start": 362,
-      "end": 363
+      "start": 385,
+      "end": 386
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--white",
       "value": "color: $sprk-white !important;",
       "line": {
-        "start": 364,
-        "end": 795
+        "start": 387,
+        "end": 829
       }
     },
     "group": [
@@ -218,16 +218,16 @@
   {
     "description": "Sets the font color to yellow.\n",
     "commentRange": {
-      "start": 369,
-      "end": 370
+      "start": 392,
+      "end": 393
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Color--yellow",
       "value": "color: $sprk-yellow !important;",
       "line": {
-        "start": 371,
-        "end": 795
+        "start": 394,
+        "end": 829
       }
     },
     "group": [
@@ -242,16 +242,16 @@
   {
     "description": "Sets the background color to black.\n",
     "commentRange": {
-      "start": 377,
-      "end": 378
+      "start": 400,
+      "end": 401
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--black",
       "value": "background-color: $sprk-black !important;",
       "line": {
-        "start": 379,
-        "end": 795
+        "start": 402,
+        "end": 829
       }
     },
     "group": [
@@ -266,16 +266,16 @@
   {
     "description": "Sets the background color to black tinted at 75%.\n",
     "commentRange": {
-      "start": 383,
-      "end": 384
+      "start": 406,
+      "end": 407
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--black-tint-75",
       "value": "background-color: $sprk-black-tint-75 !important;",
       "line": {
-        "start": 385,
-        "end": 795
+        "start": 408,
+        "end": 829
       }
     },
     "group": [
@@ -290,16 +290,16 @@
   {
     "description": "Sets the background color to black tinted at 50%.\n",
     "commentRange": {
-      "start": 389,
-      "end": 390
+      "start": 412,
+      "end": 413
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--black-tint-50",
       "value": "background-color: $sprk-black-tint-50 !important;",
       "line": {
-        "start": 391,
-        "end": 795
+        "start": 414,
+        "end": 829
       }
     },
     "group": [
@@ -314,16 +314,16 @@
   {
     "description": "Sets the background color to black tinted at 25%.\n",
     "commentRange": {
-      "start": 395,
-      "end": 396
+      "start": 418,
+      "end": 419
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--black-tint-25",
       "value": "background-color: $sprk-black-tint-25 !important;",
       "line": {
-        "start": 397,
-        "end": 795
+        "start": 420,
+        "end": 829
       }
     },
     "group": [
@@ -338,16 +338,16 @@
   {
     "description": "Sets the background color to dark gray.\n",
     "commentRange": {
-      "start": 401,
-      "end": 402
+      "start": 424,
+      "end": 425
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--gray-dark",
       "value": "background-color: $sprk-gray-dark !important;",
       "line": {
-        "start": 403,
-        "end": 795
+        "start": 426,
+        "end": 829
       }
     },
     "group": [
@@ -362,16 +362,16 @@
   {
     "description": "Sets the background color to blue.\n",
     "commentRange": {
-      "start": 407,
-      "end": 408
+      "start": 430,
+      "end": 431
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--blue",
       "value": "background-color: $sprk-blue !important;",
       "line": {
-        "start": 409,
-        "end": 795
+        "start": 432,
+        "end": 829
       }
     },
     "group": [
@@ -386,16 +386,16 @@
   {
     "description": "Sets the background color to blue tinted at 75%.\n",
     "commentRange": {
-      "start": 413,
-      "end": 414
+      "start": 436,
+      "end": 437
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--blue-tint-75",
       "value": "background-color: $sprk-blue-tint-75 !important;",
       "line": {
-        "start": 415,
-        "end": 795
+        "start": 438,
+        "end": 829
       }
     },
     "group": [
@@ -410,16 +410,16 @@
   {
     "description": "Sets the background color to blue tinted at 50%.\n",
     "commentRange": {
-      "start": 419,
-      "end": 420
+      "start": 442,
+      "end": 443
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--blue-tint-50",
       "value": "background-color: $sprk-blue-tint-50 !important;",
       "line": {
-        "start": 421,
-        "end": 795
+        "start": 444,
+        "end": 829
       }
     },
     "group": [
@@ -434,16 +434,16 @@
   {
     "description": "Sets the background color to blue tinted at 25%.\n",
     "commentRange": {
-      "start": 425,
-      "end": 426
+      "start": 448,
+      "end": 449
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--blue-tint-25",
       "value": "background-color: $sprk-blue-tint-25 !important;",
       "line": {
-        "start": 427,
-        "end": 795
+        "start": 450,
+        "end": 829
       }
     },
     "group": [
@@ -458,16 +458,16 @@
   {
     "description": "Sets the background color to gray.\n",
     "commentRange": {
-      "start": 431,
-      "end": 432
+      "start": 454,
+      "end": 455
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--gray",
       "value": "background-color: $sprk-gray !important;",
       "line": {
-        "start": 433,
-        "end": 795
+        "start": 456,
+        "end": 829
       }
     },
     "group": [
@@ -482,16 +482,16 @@
   {
     "description": "Sets the background color to red.\n",
     "commentRange": {
-      "start": 437,
-      "end": 438
+      "start": 460,
+      "end": 461
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--red",
       "value": "background-color: $sprk-red !important;",
       "line": {
-        "start": 439,
-        "end": 795
+        "start": 462,
+        "end": 829
       }
     },
     "group": [
@@ -506,16 +506,16 @@
   {
     "description": "Sets the background color to red tinted at 75%.\n",
     "commentRange": {
-      "start": 443,
-      "end": 444
+      "start": 466,
+      "end": 467
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--red-tint-75",
       "value": "background-color: $sprk-red-tint-75 !important;",
       "line": {
-        "start": 445,
-        "end": 795
+        "start": 468,
+        "end": 829
       }
     },
     "group": [
@@ -530,16 +530,16 @@
   {
     "description": "Sets the background color to red tinted at 50%.\n",
     "commentRange": {
-      "start": 449,
-      "end": 450
+      "start": 472,
+      "end": 473
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--red-tint-50",
       "value": "background-color: $sprk-red-tint-50 !important;",
       "line": {
-        "start": 451,
-        "end": 795
+        "start": 474,
+        "end": 829
       }
     },
     "group": [
@@ -554,16 +554,16 @@
   {
     "description": "Sets the background color to red tinted at 25%.\n",
     "commentRange": {
-      "start": 455,
-      "end": 456
+      "start": 478,
+      "end": 479
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--red-tint-25",
       "value": "background-color: $sprk-red-tint-25 !important;",
       "line": {
-        "start": 457,
-        "end": 795
+        "start": 480,
+        "end": 829
       }
     },
     "group": [
@@ -578,16 +578,16 @@
   {
     "description": "Sets the background color to green.\n",
     "commentRange": {
-      "start": 461,
-      "end": 462
+      "start": 484,
+      "end": 485
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--green",
       "value": "background-color: $sprk-green !important;",
       "line": {
-        "start": 463,
-        "end": 795
+        "start": 486,
+        "end": 829
       }
     },
     "group": [
@@ -602,16 +602,16 @@
   {
     "description": "Sets the background color to dark green.\n",
     "commentRange": {
-      "start": 467,
-      "end": 468
+      "start": 490,
+      "end": 491
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--green-dark",
       "value": "background-color: $sprk-green-dark !important;",
       "line": {
-        "start": 469,
-        "end": 795
+        "start": 492,
+        "end": 829
       }
     },
     "group": [
@@ -626,16 +626,16 @@
   {
     "description": "Sets the background color to green tinted at 75%.\n",
     "commentRange": {
-      "start": 473,
-      "end": 474
+      "start": 496,
+      "end": 497
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--green-tint-75",
       "value": "background-color: $sprk-green-tint-75 !important;",
       "line": {
-        "start": 475,
-        "end": 795
+        "start": 498,
+        "end": 829
       }
     },
     "group": [
@@ -650,16 +650,16 @@
   {
     "description": "Sets the background color to green tinted at 50%.\n",
     "commentRange": {
-      "start": 479,
-      "end": 480
+      "start": 502,
+      "end": 503
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--green-tint-50",
       "value": "background-color: $sprk-green-tint-50 !important;",
       "line": {
-        "start": 481,
-        "end": 795
+        "start": 504,
+        "end": 829
       }
     },
     "group": [
@@ -674,16 +674,16 @@
   {
     "description": "Sets the background color to green tinted at 25%.\n",
     "commentRange": {
-      "start": 485,
-      "end": 486
+      "start": 508,
+      "end": 509
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--green-tint-25",
       "value": "background-color: $sprk-green-tint-25 !important;",
       "line": {
-        "start": 487,
-        "end": 795
+        "start": 510,
+        "end": 829
       }
     },
     "group": [
@@ -698,16 +698,16 @@
   {
     "description": "Sets the background color to white.\n",
     "commentRange": {
-      "start": 491,
-      "end": 492
+      "start": 514,
+      "end": 515
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--white",
       "value": "background-color: $sprk-white !important;",
       "line": {
-        "start": 493,
-        "end": 795
+        "start": 516,
+        "end": 829
       }
     },
     "group": [
@@ -722,16 +722,16 @@
   {
     "description": "Sets the background color to yellow.\n",
     "commentRange": {
-      "start": 497,
-      "end": 498
+      "start": 520,
+      "end": 521
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--yellow",
       "value": "background-color: $sprk-yellow !important;",
       "line": {
-        "start": 499,
-        "end": 795
+        "start": 522,
+        "end": 829
       }
     },
     "group": [
@@ -746,16 +746,16 @@
   {
     "description": "Sets the background color to yellow tinted at 75%.\n",
     "commentRange": {
-      "start": 503,
-      "end": 504
+      "start": 526,
+      "end": 527
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--yellow-tint-75",
       "value": "background-color: $sprk-yellow-tint-75 !important;",
       "line": {
-        "start": 505,
-        "end": 795
+        "start": 528,
+        "end": 829
       }
     },
     "group": [
@@ -770,16 +770,16 @@
   {
     "description": "Sets the background color to yellow tinted at 50%.\n",
     "commentRange": {
-      "start": 509,
-      "end": 510
+      "start": 532,
+      "end": 533
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--yellow-tint-50",
       "value": "background-color: $sprk-yellow-tint-50 !important;",
       "line": {
-        "start": 511,
-        "end": 795
+        "start": 534,
+        "end": 829
       }
     },
     "group": [
@@ -794,16 +794,16 @@
   {
     "description": "Sets the background color to yellow tinted at 25%.\n",
     "commentRange": {
-      "start": 515,
-      "end": 516
+      "start": 538,
+      "end": 539
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-BackgroundColor--yellow-tint-25",
       "value": "background-color: $sprk-yellow-tint-25 !important;",
       "line": {
-        "start": 517,
-        "end": 795
+        "start": 540,
+        "end": 829
       }
     },
     "group": [
@@ -827,7 +827,7 @@
       "value": "display: none !important;",
       "line": {
         "start": 26,
-        "end": 795
+        "end": 829
       }
     },
     "group": [
@@ -851,7 +851,7 @@
       "value": "display: none !important;",
       "line": {
         "start": 26,
-        "end": 795
+        "end": 829
       }
     },
     "group": [
@@ -875,7 +875,7 @@
       "value": "display: block !important;",
       "line": {
         "start": 33,
-        "end": 795
+        "end": 829
       }
     },
     "group": [
@@ -899,7 +899,7 @@
       "value": "display: inline !important;",
       "line": {
         "start": 39,
-        "end": 795
+        "end": 829
       }
     },
     "group": [
@@ -912,18 +912,18 @@
     }
   },
   {
-    "description": "The element generates a block element box that will be flowed with surrounding content as if it were a single inline box.\n",
+    "description": "The element generates a block element box that will be flowed with\nsurrounding content as if it were a single inline box.\n",
     "commentRange": {
       "start": 43,
-      "end": 44
+      "end": 45
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Display--inline-block",
       "value": "display: inline-block !important;",
       "line": {
-        "start": 45,
-        "end": 795
+        "start": 46,
+        "end": 829
       }
     },
     "group": [
@@ -936,18 +936,18 @@
     }
   },
   {
-    "description": "The element box is invisible, but still affects layout as normal. Screen readers will still announce this element.\n",
+    "description": "The element box is invisible, but still affects layout as normal.\nScreen readers will still announce this element.\n",
     "commentRange": {
-      "start": 49,
-      "end": 50
+      "start": 50,
+      "end": 52
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Visibility--hidden",
       "value": "visibility: hidden !important;",
       "line": {
-        "start": 51,
-        "end": 795
+        "start": 53,
+        "end": 829
       }
     },
     "group": [
@@ -962,16 +962,16 @@
   {
     "description": "The element is visible.\n",
     "commentRange": {
-      "start": 55,
-      "end": 56
+      "start": 57,
+      "end": 58
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Visibility--visible",
       "value": "visibility: visible !important;",
       "line": {
-        "start": 57,
-        "end": 795
+        "start": 59,
+        "end": 829
       }
     },
     "group": [
@@ -986,16 +986,16 @@
   {
     "description": "Changes the height of the element to 100 percent.\n",
     "commentRange": {
-      "start": 139,
-      "end": 140
+      "start": 148,
+      "end": 149
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Height--100",
       "value": "height: 100% !important;",
       "line": {
-        "start": 141,
-        "end": 795
+        "start": 150,
+        "end": 829
       }
     },
     "group": [
@@ -1008,18 +1008,18 @@
     }
   },
   {
-    "description": "Sets the padding on the left and right (horizontal) to $sprk-space-misc-b (40px).\n",
+    "description": "Sets the padding on the left and right (horizontal)\nto `$sprk-space-misc-b` (`40px`).\n",
     "commentRange": {
-      "start": 531,
-      "end": 533
+      "start": 555,
+      "end": 558
     },
     "context": {
       "type": "css",
       "name": "sprk-u-PaddingHorizontal--b",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
-        "start": 543,
-        "end": 795
+        "start": 569,
+        "end": 829
       }
     },
     "group": [
@@ -1032,18 +1032,18 @@
     }
   },
   {
-    "description": "Sets the bottom margin to the current value of $sprk-space-misc-a (24px).\n",
+    "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
     "commentRange": {
-      "start": 527,
-      "end": 529
+      "start": 550,
+      "end": 553
     },
     "context": {
       "type": "css",
       "name": "sprk-u-MarginBottom--a",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
-        "start": 543,
-        "end": 795
+        "start": 569,
+        "end": 829
       }
     },
     "group": [
@@ -1056,18 +1056,18 @@
     }
   },
   {
-    "description": "Sets the margin on all sides to the current value of $sprk-space-misc-d (80px).\n",
+    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
     "commentRange": {
-      "start": 535,
-      "end": 537
+      "start": 560,
+      "end": 563
     },
     "context": {
       "type": "css",
       "name": "sprk-u-MarginAll--d",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
-        "start": 543,
-        "end": 795
+        "start": 569,
+        "end": 829
       }
     },
     "group": [
@@ -1080,18 +1080,18 @@
     }
   },
   {
-    "description": "Makes content invisible while still being read by a screen reader.\n",
+    "description": "Makes content invisible while still being read by a\nscreen reader.\n",
     "commentRange": {
-      "start": 750,
-      "end": 751
+      "start": 776,
+      "end": 778
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
-        "start": 752,
-        "end": 795
+        "start": 779,
+        "end": 829
       }
     },
     "group": [
@@ -1104,18 +1104,18 @@
     }
   },
   {
-    "description": "When combined with .sprk-u-ScreenReaderText the element will become visible on focus.\n",
+    "description": "When combined with `.sprk-u-ScreenReaderText` the element\nwill become visible on focus.\n",
     "commentRange": {
-      "start": 761,
-      "end": 762
+      "start": 788,
+      "end": 790
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-ShowOnFocus:focus",
       "value": "position: static;\n  width: auto;\n  height: auto;",
       "line": {
-        "start": 763,
-        "end": 795
+        "start": 791,
+        "end": 829
       }
     },
     "group": [
@@ -1128,18 +1128,18 @@
     }
   },
   {
-    "description": "Clearfix is a method of float containment. When applied to a container with floated children it forces the container to span the entire vertical extent of the children as if they weren't pulled out of the document flow by the floats. Elements that come after the Clearfixed element will no longer wrap around the floated children. The primary way to use `Clearfix` in Spark is by extending the placeholder in your Sass (e.g. `@extend %ClearFix;`). It can also be used by applying the class directly to the parent element, typically only used for debugging.\n",
+    "description": "Clearfix is a method of float containment. When applied to a container\nwith floated children it forces the container to span the entire vertical\nextent of the children as if they weren't pulled out of the document flow\nby the floats. Elements that come after the Clearfixed element will no\nlonger wrap around the floated children. The primary way to use `Clearfix`\nin Spark is by extending the placeholder in your Sass (e.g.\n`@extend %ClearFix;`). It can also be used by applying the class directly\nto the parent element, typically only used for debugging.\n",
     "commentRange": {
       "start": 12,
-      "end": 13
+      "end": 20
     },
     "context": {
       "type": "placeholder",
       "name": "ClearFix",
       "code": "\n  &::after {\n    content: '';\n    display: table;\n    clear: both;\n  }\n",
       "line": {
-        "start": 14,
-        "end": 21
+        "start": 21,
+        "end": 28
       }
     },
     "group": [
@@ -1152,18 +1152,18 @@
     }
   },
   {
-    "description": "When placed on a container, its children will align in the absolute center (vertically and horizontally) of the box.\n",
+    "description": "When placed on a container, its children will align\nin the absolute center (vertically and horizontally)\nof the box.\n",
     "commentRange": {
-      "start": 771,
-      "end": 772
+      "start": 799,
+      "end": 802
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-AbsoluteCenter",
       "value": "display: flex;\n  align-items: center;\n  justify-content: center;",
       "line": {
-        "start": 773,
-        "end": 795
+        "start": 803,
+        "end": 829
       }
     },
     "group": [
@@ -1176,18 +1176,18 @@
     }
   },
   {
-    "description": "When placed on a container, it will cause it to fill the viewport, even if it's inside a limiting container (such as sprk-o-CenteredColumn).\n",
+    "description": "When placed on a container, it will cause it to fill\nthe viewport, even if it's inside a limiting container\n(such as `sprk-o-CenteredColumn`).\n",
     "commentRange": {
-      "start": 779,
-      "end": 780
+      "start": 809,
+      "end": 812
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-FullWidth",
       "value": "width: 100vw;\n  left: 50%;\n  right: 50%;\n  margin-left: -50vw;\n  margin-right: -50vw;",
       "line": {
-        "start": 781,
-        "end": 795
+        "start": 813,
+        "end": 829
       }
     },
     "group": [
@@ -1200,18 +1200,18 @@
     }
   },
   {
-    "description": "When placed on an element that contains text or any of the typography classes, it will remove the text cropping and the negative margins applied by the crop.\n",
+    "description": "When placed on an element that contains text or any of\nthe typography classes, it will remove the text cropping\nand the negative margins applied by the crop.\n",
     "commentRange": {
-      "start": 245,
-      "end": 246
+      "start": 258,
+      "end": 261
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextCrop--none",
       "value": "&::before,\n  &::after {\n    content: none !important;\n    margin-bottom: 0 !important;\n    margin-top: 0 !important;\n  }",
       "line": {
-        "start": 247,
-        "end": 795
+        "start": 262,
+        "end": 829
       }
     },
     "group": [
@@ -1224,18 +1224,18 @@
     }
   },
   {
-    "description": "When placed on an element that contains text, it will limit the text to one line and adds an ellipsis when it overflows.\n",
+    "description": "When placed on an element that contains text, it will\nlimit the text to one line and adds an ellipsis when\nit overflows.\n",
     "commentRange": {
-      "start": 789,
-      "end": 790
+      "start": 821,
+      "end": 824
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Truncate",
       "value": "white-space: nowrap !important;\n  overflow: hidden !important;\n  text-overflow: ellipsis !important;",
       "line": {
-        "start": 791,
-        "end": 795
+        "start": 825,
+        "end": 829
       }
     },
     "group": [
@@ -1248,18 +1248,18 @@
     }
   },
   {
-    "description": "Content is not clipped and may be rendered outside the padding box.\n",
+    "description": "Content is not clipped and may be rendered outside\nthe padding box.\n",
     "commentRange": {
-      "start": 284,
-      "end": 285
+      "start": 301,
+      "end": 303
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Overflow--visible",
       "value": "overflow: visible !important;",
       "line": {
-        "start": 286,
-        "end": 795
+        "start": 304,
+        "end": 829
       }
     },
     "group": [
@@ -1272,18 +1272,18 @@
     }
   },
   {
-    "description": "Content is clipped if necessary to fit the padding box. No scrollbars are provided.\n",
+    "description": "Content is clipped if necessary to fit the padding\nbox. No scrollbars are provided.\n",
     "commentRange": {
-      "start": 290,
-      "end": 291
+      "start": 308,
+      "end": 310
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Overflow--hidden",
       "value": "overflow: hidden !important;",
       "line": {
-        "start": 292,
-        "end": 795
+        "start": 311,
+        "end": 829
       }
     },
     "group": [
@@ -1296,18 +1296,18 @@
     }
   },
   {
-    "description": "Content is clipped if necessary to fit the padding box. Browsers display scrollbars whether or not any content is actually clipped.\n",
+    "description": "Content is clipped if necessary to fit the padding\nbox. Browsers display scrollbars whether or not any\ncontent is actually clipped.\n",
     "commentRange": {
-      "start": 296,
-      "end": 297
+      "start": 315,
+      "end": 318
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Overflow--scroll",
       "value": "overflow: scroll !important;",
       "line": {
-        "start": 298,
-        "end": 795
+        "start": 319,
+        "end": 829
       }
     },
     "group": [
@@ -1320,18 +1320,18 @@
     }
   },
   {
-    "description": "If content fits inside the padding box, it looks the same as visible, but still establishes a new block-formatting context.\n",
+    "description": "If content fits inside the padding box, it looks the\nsame as visible, but still establishes a new\nblock-formatting context.\n",
     "commentRange": {
-      "start": 302,
-      "end": 303
+      "start": 323,
+      "end": 326
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Overflow--auto",
       "value": "overflow: auto !important;",
       "line": {
-        "start": 304,
-        "end": 795
+        "start": 327,
+        "end": 829
       }
     },
     "group": [
@@ -1346,16 +1346,16 @@
   {
     "description": "The element is not floated.\n",
     "commentRange": {
-      "start": 65,
-      "end": 66
+      "start": 67,
+      "end": 68
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Float--none",
       "value": "float: none !important;",
       "line": {
-        "start": 67,
-        "end": 795
+        "start": 69,
+        "end": 829
       }
     },
     "group": [
@@ -1370,16 +1370,16 @@
   {
     "description": "Floats an element to the left.\n",
     "commentRange": {
-      "start": 71,
-      "end": 72
+      "start": 73,
+      "end": 74
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Float--left",
       "value": "float: left !important;",
       "line": {
-        "start": 73,
-        "end": 795
+        "start": 75,
+        "end": 829
       }
     },
     "group": [
@@ -1394,16 +1394,16 @@
   {
     "description": "Floats an element to the right.\n",
     "commentRange": {
-      "start": 77,
-      "end": 78
+      "start": 79,
+      "end": 80
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Float--right",
       "value": "float: right !important;",
       "line": {
-        "start": 79,
-        "end": 795
+        "start": 81,
+        "end": 829
       }
     },
     "group": [
@@ -1416,18 +1416,18 @@
     }
   },
   {
-    "description": "The element is positioned according to the normal flow of the document, and then offset relative to itself.\n",
+    "description": "The element is positioned according to the normal flow of the\ndocument, and then offset relative to itself.\n",
     "commentRange": {
-      "start": 87,
-      "end": 88
+      "start": 89,
+      "end": 91
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Position--relative",
       "value": "position: relative !important;",
       "line": {
-        "start": 89,
-        "end": 795
+        "start": 92,
+        "end": 829
       }
     },
     "group": [
@@ -1440,18 +1440,18 @@
     }
   },
   {
-    "description": "The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor.\n",
+    "description": "The element is removed from the normal document flow, and no\nspace is created for the element in the page layout. It is\npositioned relative to its closest positioned ancestor.\n",
     "commentRange": {
-      "start": 93,
-      "end": 94
+      "start": 96,
+      "end": 99
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Position--absolute",
       "value": "position: absolute !important;",
       "line": {
-        "start": 95,
-        "end": 795
+        "start": 100,
+        "end": 829
       }
     },
     "group": [
@@ -1464,18 +1464,18 @@
     }
   },
   {
-    "description": "The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport.\n",
+    "description": "The element is removed from the normal document flow, and no\nspace is created for the element in the page layout. It is\npositioned relative to the initial containing block established\nby the viewport.\n",
     "commentRange": {
-      "start": 99,
-      "end": 100
+      "start": 104,
+      "end": 108
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Position--fixed",
       "value": "position: fixed !important;",
       "line": {
-        "start": 101,
-        "end": 795
+        "start": 109,
+        "end": 829
       }
     },
     "group": [
@@ -1488,18 +1488,18 @@
     }
   },
   {
-    "description": "The element is positioned according to the normal flow of the document.\n",
+    "description": "The element is positioned according to the normal flow of the\ndocument.\n",
     "commentRange": {
-      "start": 105,
-      "end": 106
+      "start": 113,
+      "end": 115
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Position--static",
       "value": "position: static !important;",
       "line": {
-        "start": 107,
-        "end": 795
+        "start": 116,
+        "end": 829
       }
     },
     "group": [
@@ -1514,16 +1514,16 @@
   {
     "description": "Resets an element's top offset back to zero.\n",
     "commentRange": {
-      "start": 111,
-      "end": 112
+      "start": 120,
+      "end": 121
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Top--zero",
       "value": "top: 0 !important;",
       "line": {
-        "start": 113,
-        "end": 795
+        "start": 122,
+        "end": 829
       }
     },
     "group": [
@@ -1538,16 +1538,16 @@
   {
     "description": "Resets an element's bottom offset back to zero.\n",
     "commentRange": {
-      "start": 117,
-      "end": 118
+      "start": 126,
+      "end": 127
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Bottom--zero",
       "value": "bottom: 0 !important;",
       "line": {
-        "start": 119,
-        "end": 795
+        "start": 128,
+        "end": 829
       }
     },
     "group": [
@@ -1562,16 +1562,16 @@
   {
     "description": "Resets an element's left offset back to zero.\n",
     "commentRange": {
-      "start": 123,
-      "end": 124
+      "start": 132,
+      "end": 133
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Left--zero",
       "value": "left: 0 !important;",
       "line": {
-        "start": 125,
-        "end": 795
+        "start": 134,
+        "end": 829
       }
     },
     "group": [
@@ -1586,16 +1586,16 @@
   {
     "description": "Resets an element's right offset back to zero.\n",
     "commentRange": {
-      "start": 129,
-      "end": 130
+      "start": 138,
+      "end": 139
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Right--zero",
       "value": "right: 0 !important;",
       "line": {
-        "start": 131,
-        "end": 795
+        "start": 140,
+        "end": 829
       }
     },
     "group": [
@@ -1610,16 +1610,16 @@
   {
     "description": "Aligns text to the left of the container.\n",
     "commentRange": {
-      "start": 151,
-      "end": 152
+      "start": 160,
+      "end": 161
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextAlign--left",
       "value": "text-align: left !important;",
       "line": {
-        "start": 153,
-        "end": 795
+        "start": 162,
+        "end": 829
       }
     },
     "group": [
@@ -1634,16 +1634,16 @@
   {
     "description": "Aligns text to the right of the container.\n",
     "commentRange": {
-      "start": 157,
-      "end": 158
+      "start": 166,
+      "end": 167
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextAlign--right",
       "value": "text-align: right !important;",
       "line": {
-        "start": 159,
-        "end": 795
+        "start": 168,
+        "end": 829
       }
     },
     "group": [
@@ -1658,16 +1658,16 @@
   {
     "description": "Aligns text in the horizontal center of the container.\n",
     "commentRange": {
-      "start": 163,
-      "end": 164
+      "start": 172,
+      "end": 173
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextAlign--center",
       "value": "text-align: center !important;",
       "line": {
-        "start": 165,
-        "end": 795
+        "start": 174,
+        "end": 829
       }
     },
     "group": [
@@ -1680,18 +1680,18 @@
     }
   },
   {
-    "description": "Aligns the contents of a box to the top if it's display property is inline or table-cell.\n",
+    "description": "Aligns the contents of a box to the top if it's display\nproperty is `inline` or `table-cell`.\n",
     "commentRange": {
-      "start": 169,
-      "end": 170
+      "start": 178,
+      "end": 180
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-VerticalAlign--top",
       "value": "vertical-align: top !important;",
       "line": {
-        "start": 171,
-        "end": 795
+        "start": 181,
+        "end": 829
       }
     },
     "group": [
@@ -1704,18 +1704,18 @@
     }
   },
   {
-    "description": "Aligns the contents of a box to the vertical middle if it's display property is inline or table-cell.\n",
+    "description": "Aligns the contents of a box to the vertical middle if\nit's display property is `inline` or `table-cell`.\n",
     "commentRange": {
-      "start": 175,
-      "end": 176
+      "start": 185,
+      "end": 187
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-VerticalAlign--middle",
       "value": "vertical-align: middle !important;",
       "line": {
-        "start": 177,
-        "end": 795
+        "start": 188,
+        "end": 829
       }
     },
     "group": [
@@ -1728,18 +1728,18 @@
     }
   },
   {
-    "description": "Aligns the contents of a box to the bottom if it's display property is inline or table-cell.\n",
+    "description": "Aligns the contents of a box to the bottom if it's\ndisplay property is `inline` or `table-cell`.\n",
     "commentRange": {
-      "start": 181,
-      "end": 182
+      "start": 192,
+      "end": 194
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-VerticalAlign--bottom",
       "value": "vertical-align: bottom !important;",
       "line": {
-        "start": 183,
-        "end": 795
+        "start": 195,
+        "end": 829
       }
     },
     "group": [
@@ -1752,18 +1752,18 @@
     }
   },
   {
-    "description": "Aligns the contents of a box to the baseline if it's display property is inline or table-cell.\n",
+    "description": "Aligns the contents of a box to the baseline if it's\ndisplay property is `inline` or `table-cell`.\n",
     "commentRange": {
-      "start": 187,
-      "end": 188
+      "start": 199,
+      "end": 201
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-VerticalAlign--baseline",
       "value": "vertical-align: baseline !important;",
       "line": {
-        "start": 189,
-        "end": 795
+        "start": 202,
+        "end": 829
       }
     },
     "group": [
@@ -1776,7 +1776,7 @@
     }
   },
   {
-    "description": "Sets the bottom margin to 0px\n",
+    "description": "Sets the bottom margin to `0px`\n",
     "commentRange": {
       "start": 5,
       "end": 7
@@ -1800,7 +1800,7 @@
     }
   },
   {
-    "description": "Sets the margin on all sides to 64px\n",
+    "description": "Sets the margin on all sides to `64px`\n",
     "commentRange": {
       "start": 13,
       "end": 15
@@ -1824,7 +1824,7 @@
     }
   },
   {
-    "description": "Sets the left and right padding to 16px\n",
+    "description": "Sets the left and right padding to `16px`\n",
     "commentRange": {
       "start": 9,
       "end": 11
@@ -1850,16 +1850,16 @@
   {
     "description": "Sets the font weight to bold.\n",
     "commentRange": {
-      "start": 197,
-      "end": 198
+      "start": 210,
+      "end": 211
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-FontWeight--bold",
       "value": "font-weight: bold !important;",
       "line": {
-        "start": 199,
-        "end": 795
+        "start": 212,
+        "end": 829
       }
     },
     "group": [
@@ -1874,16 +1874,16 @@
   {
     "description": "Sets the font weight to normal.\n",
     "commentRange": {
-      "start": 203,
-      "end": 204
+      "start": 216,
+      "end": 217
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-FontWeight--normal",
       "value": "font-weight: normal !important;",
       "line": {
-        "start": 205,
-        "end": 795
+        "start": 218,
+        "end": 829
       }
     },
     "group": [
@@ -1898,16 +1898,16 @@
   {
     "description": "Sets the font style to italic.\n",
     "commentRange": {
-      "start": 209,
-      "end": 210
+      "start": 222,
+      "end": 223
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-FontStyle--italic",
       "value": "font-style: italic !important;",
       "line": {
-        "start": 211,
-        "end": 795
+        "start": 224,
+        "end": 829
       }
     },
     "group": [
@@ -1922,16 +1922,16 @@
   {
     "description": "Sets the font style to normal.\n",
     "commentRange": {
-      "start": 215,
-      "end": 216
+      "start": 228,
+      "end": 229
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-FontStyle--normal",
       "value": "font-style: normal !important;",
       "line": {
-        "start": 217,
-        "end": 795
+        "start": 230,
+        "end": 829
       }
     },
     "group": [
@@ -1946,16 +1946,16 @@
   {
     "description": "Sets the text decoration to underline.\n",
     "commentRange": {
-      "start": 221,
-      "end": 222
+      "start": 234,
+      "end": 235
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextDecoration--underline",
       "value": "text-decoration: underline !important;",
       "line": {
-        "start": 223,
-        "end": 795
+        "start": 236,
+        "end": 829
       }
     },
     "group": [
@@ -1970,16 +1970,16 @@
   {
     "description": "Sets the text decoration to none.\n",
     "commentRange": {
-      "start": 227,
-      "end": 228
+      "start": 240,
+      "end": 241
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextDecoration--none",
       "value": "text-decoration: none !important;",
       "line": {
-        "start": 229,
-        "end": 795
+        "start": 242,
+        "end": 829
       }
     },
     "group": [
@@ -1994,16 +1994,16 @@
   {
     "description": "Transforms text to uppercase.\n",
     "commentRange": {
-      "start": 233,
-      "end": 234
+      "start": 246,
+      "end": 247
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextTransform--uppercase",
       "value": "text-transform: uppercase !important;",
       "line": {
-        "start": 235,
-        "end": 795
+        "start": 248,
+        "end": 829
       }
     },
     "group": [
@@ -2018,16 +2018,16 @@
   {
     "description": "Removes text transformation for text.\n",
     "commentRange": {
-      "start": 239,
-      "end": 240
+      "start": 252,
+      "end": 253
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-TextTransform--none",
       "value": "text-transform: none !important;",
       "line": {
-        "start": 241,
-        "end": 795
+        "start": 254,
+        "end": 829
       }
     },
     "group": [
@@ -2040,18 +2040,18 @@
     }
   },
   {
-    "description": "Sets word-wrap to break-word.\n",
+    "description": "Sets `word-wrap` to `break-word`.\n",
     "commentRange": {
-      "start": 256,
-      "end": 257
+      "start": 271,
+      "end": 272
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-WordWrap--break-word",
       "value": "word-wrap: break-word !important;",
       "line": {
-        "start": 258,
-        "end": 795
+        "start": 273,
+        "end": 829
       }
     },
     "group": [
@@ -2064,18 +2064,18 @@
     }
   },
   {
-    "description": "Sets white-space to nowrap.\n",
+    "description": "Sets `white-space` to `nowrap`.\n",
     "commentRange": {
-      "start": 262,
-      "end": 263
+      "start": 277,
+      "end": 278
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-WhiteSpace--nowrap",
       "value": "white-space: nowrap !important;",
       "line": {
-        "start": 264,
-        "end": 795
+        "start": 279,
+        "end": 829
       }
     },
     "group": [
@@ -2088,18 +2088,18 @@
     }
   },
   {
-    "description": "Sets a max-width, intended for text. Default value is 40 rem.\n",
+    "description": "Sets a `max-width`, intended for text. Default value is\n`40 rem`.\n",
     "commentRange": {
-      "start": 268,
-      "end": 269
+      "start": 283,
+      "end": 285
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Measure",
       "value": "max-width: $sprk-measure !important;",
       "line": {
-        "start": 270,
-        "end": 795
+        "start": 286,
+        "end": 829
       }
     },
     "group": [
@@ -2112,18 +2112,18 @@
     }
   },
   {
-    "description": "Sets a narrow max-width, intended for text. Default value is 25 rem.\n",
+    "description": "Sets a narrow `max-width`, intended for text. Default\nvalue is `25 rem`.\n",
     "commentRange": {
-      "start": 274,
-      "end": 275
+      "start": 290,
+      "end": 292
     },
     "context": {
       "type": "css",
       "name": ".sprk-u-Measure--narrow",
       "value": "max-width: $sprk-narrow-measure !important;",
       "line": {
-        "start": 276,
-        "end": 795
+        "start": 293,
+        "end": 829
       }
     },
     "group": [
@@ -2143,11 +2143,11 @@
     },
     "context": {
       "type": "css",
-      "name": "/// Clearfix is a method of float containment. When applied to a container with floated children it forces the container to span the entire vertical extent of the children as if they weren't pulled out of the document flow by the floats. Elements that come after the Clearfixed element will no longer wrap around the floated children. The primary way to use `Clearfix` in Spark is by extending the placeholder in your Sass (e.g. `@extend %ClearFix;`). It can also be used by applying the class directly to the parent element, typically only used for debugging.\n/// @group multi-layout\n%ClearFix,\n.sprk-u-ClearFix",
+      "name": "/// Clearfix is a method of float containment. When applied to a container\n/// with floated children it forces the container to span the entire vertical\n/// extent of the children as if they weren't pulled out of the document flow\n/// by the floats. Elements that come after the Clearfixed element will no\n/// longer wrap around the floated children. The primary way to use `Clearfix`\n/// in Spark is by extending the placeholder in your Sass (e.g.\n/// `@extend %ClearFix;`). It can also be used by applying the class directly\n/// to the parent element, typically only used for debugging.\n/// @group multi-layout\n%ClearFix,\n.sprk-u-ClearFix",
       "value": "&::after {\n    content: '';\n    display: table;\n    clear: both;\n  }",
       "line": {
-        "start": 15,
-        "end": 21
+        "start": 22,
+        "end": 28
       }
     },
     "access": "public",
@@ -2171,7 +2171,7 @@
       "value": "display: none !important;",
       "line": {
         "start": 26,
-        "end": 795
+        "end": 829
       }
     },
     "access": "public",
@@ -2195,7 +2195,7 @@
       "value": "display: none !important;",
       "line": {
         "start": 26,
-        "end": 795
+        "end": 829
       }
     },
     "access": "public",
@@ -2210,16 +2210,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 63,
-      "end": 63
+      "start": 65,
+      "end": 65
     },
     "context": {
       "type": "css",
       "name": "/// The element is not floated.\n/// @group position\n.sprk-u-Float--none",
       "value": "float: none !important;",
       "line": {
-        "start": 67,
-        "end": 795
+        "start": 69,
+        "end": 829
       }
     },
     "access": "public",
@@ -2234,16 +2234,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 85,
-      "end": 85
+      "start": 87,
+      "end": 87
     },
     "context": {
       "type": "css",
-      "name": "/// The element is positioned according to the normal flow of the document, and then offset relative to itself.\n/// @group position\n.sprk-u-Position--relative",
+      "name": "/// The element is positioned according to the normal flow of the\n/// document, and then offset relative to itself.\n/// @group position\n.sprk-u-Position--relative",
       "value": "position: relative !important;",
       "line": {
-        "start": 89,
-        "end": 795
+        "start": 92,
+        "end": 829
       }
     },
     "access": "public",
@@ -2258,16 +2258,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 137,
-      "end": 137
+      "start": 146,
+      "end": 146
     },
     "context": {
       "type": "css",
       "name": "/// Changes the height of the element to 100 percent.\n/// @group height\n.sprk-u-Height--100",
       "value": "height: 100% !important;",
       "line": {
-        "start": 141,
-        "end": 795
+        "start": 150,
+        "end": 829
       }
     },
     "access": "public",
@@ -2282,16 +2282,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 149,
-      "end": 149
+      "start": 158,
+      "end": 158
     },
     "context": {
       "type": "css",
       "name": "/// Aligns text to the left of the container.\n/// @group position\n.sprk-u-TextAlign--left",
       "value": "text-align: left !important;",
       "line": {
-        "start": 153,
-        "end": 795
+        "start": 162,
+        "end": 829
       }
     },
     "access": "public",
@@ -2306,16 +2306,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 195,
-      "end": 195
+      "start": 208,
+      "end": 208
     },
     "context": {
       "type": "css",
       "name": "/// Sets the font weight to bold.\n/// @group typography\n.sprk-u-FontWeight--bold",
       "value": "font-weight: bold !important;",
       "line": {
-        "start": 199,
-        "end": 795
+        "start": 212,
+        "end": 829
       }
     },
     "access": "public",
@@ -2330,16 +2330,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 282,
-      "end": 282
+      "start": 299,
+      "end": 299
     },
     "context": {
       "type": "css",
-      "name": "/// Content is not clipped and may be rendered outside the padding box.\n/// @group overflow\n.sprk-u-Overflow--visible",
+      "name": "/// Content is not clipped and may be rendered outside\n/// the padding box.\n/// @group overflow\n.sprk-u-Overflow--visible",
       "value": "overflow: visible !important;",
       "line": {
-        "start": 286,
-        "end": 795
+        "start": 304,
+        "end": 829
       }
     },
     "access": "public",
@@ -2354,16 +2354,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 525,
-      "end": 525
+      "start": 548,
+      "end": 548
     },
     "context": {
       "type": "css",
-      "name": "/// Sets the bottom margin to the current value of $sprk-space-misc-a (24px).\n/// @group misc-spacing\n/// @name sprk-u-MarginBottom--a\n\n/// Sets the padding on the left and right (horizontal) to $sprk-space-misc-b (40px).\n/// @group misc-spacing\n/// @name sprk-u-PaddingHorizontal--b\n\n/// Sets the margin on all sides to the current value of $sprk-space-misc-d (80px).\n/// @group misc-spacing\n/// @name sprk-u-MarginAll--d\n\n/* stylelint-disable  selector-class-pattern */\n// Misc Padding Spacing A\n.sprk-u-PaddingTop--a,\n.sprk-u-PaddingVertical--a,\n.sprk-u-PaddingAll--a",
+      "name": "/// Sets the bottom margin to the current value of\n/// `$sprk-space-misc-a` (`24px`).\n/// @group misc-spacing\n/// @name sprk-u-MarginBottom--a\n\n/// Sets the padding on the left and right (horizontal)\n/// to `$sprk-space-misc-b` (`40px`).\n/// @group misc-spacing\n/// @name sprk-u-PaddingHorizontal--b\n\n/// Sets the margin on all sides to the current value\n/// of `$sprk-space-misc-d` (`80px`).\n/// @group misc-spacing\n/// @name sprk-u-MarginAll--d\n\n/* stylelint-disable  selector-class-pattern */\n// Misc Padding Spacing A\n.sprk-u-PaddingTop--a,\n.sprk-u-PaddingVertical--a,\n.sprk-u-PaddingAll--a",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
-        "start": 543,
-        "end": 795
+        "start": 569,
+        "end": 829
       }
     },
     "access": "public",
@@ -2378,16 +2378,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 748,
-      "end": 748
+      "start": 774,
+      "end": 774
     },
     "context": {
       "type": "css",
-      "name": "/// Makes content invisible while still being read by a screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
-        "start": 752,
-        "end": 795
+        "start": 779,
+        "end": 829
       }
     },
     "access": "public",
@@ -2402,16 +2402,16 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 744,
-      "end": 744
+      "start": 770,
+      "end": 770
     },
     "context": {
       "type": "css",
-      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
-        "start": 752,
-        "end": 795
+        "start": 779,
+        "end": 829
       }
     },
     "access": "public",

@@ -40,13 +40,15 @@
   display: inline !important;
 }
 
-/// The element generates a block element box that will be flowed with surrounding content as if it were a single inline box.
+/// The element generates a block element box that will be flowed with
+/// surrounding content as if it were a single inline box.
 /// @group display
 .sprk-u-Display--inline-block {
   display: inline-block !important;
 }
 
-/// The element box is invisible, but still affects layout as normal. Screen readers will still announce this element.
+/// The element box is invisible, but still affects layout as normal.
+/// Screen readers will still announce this element.
 /// @group display
 .sprk-u-Visibility--hidden {
   visibility: hidden !important;
@@ -84,25 +86,32 @@
 // Positioning
 ///
 
-/// The element is positioned according to the normal flow of the document, and then offset relative to itself.
+/// The element is positioned according to the normal flow of the
+/// document, and then offset relative to itself.
 /// @group position
 .sprk-u-Position--relative {
   position: relative !important;
 }
 
-/// The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor.
+/// The element is removed from the normal document flow, and no
+/// space is created for the element in the page layout. It is
+/// positioned relative to its closest positioned ancestor.
 /// @group position
 .sprk-u-Position--absolute {
   position: absolute !important;
 }
 
-/// The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport.
+/// The element is removed from the normal document flow, and no
+/// space is created for the element in the page layout. It is
+/// positioned relative to the initial containing block established
+/// by the viewport.
 /// @group position
 .sprk-u-Position--fixed {
   position: fixed !important;
 }
 
-/// The element is positioned according to the normal flow of the document.
+/// The element is positioned according to the normal flow of the
+/// document.
 /// @group position
 .sprk-u-Position--static {
   position: static !important;
@@ -166,25 +175,29 @@
   text-align: center !important;
 }
 
-/// Aligns the contents of a box to the top if it's display property is inline or table-cell.
+/// Aligns the contents of a box to the top if it's display
+/// property is `inline` or `table-cell`.
 /// @group position
 .sprk-u-VerticalAlign--top {
   vertical-align: top !important;
 }
 
-/// Aligns the contents of a box to the vertical middle if it's display property is inline or table-cell.
+/// Aligns the contents of a box to the vertical middle if
+/// it's display property is `inline` or `table-cell`.
 /// @group position
 .sprk-u-VerticalAlign--middle {
   vertical-align: middle !important;
 }
 
-/// Aligns the contents of a box to the bottom if it's display property is inline or table-cell.
+/// Aligns the contents of a box to the bottom if it's
+/// display property is `inline` or `table-cell`.
 /// @group position
 .sprk-u-VerticalAlign--bottom {
   vertical-align: bottom !important;
 }
 
-/// Aligns the contents of a box to the baseline if it's display property is inline or table-cell.
+/// Aligns the contents of a box to the baseline if it's
+/// display property is `inline` or `table-cell`.
 /// @group position
 .sprk-u-VerticalAlign--baseline {
   vertical-align: baseline !important;
@@ -242,7 +255,9 @@
   text-transform: none !important;
 }
 
-/// When placed on an element that contains text or any of the typography classes, it will remove the text cropping and the negative margins applied by the crop.
+/// When placed on an element that contains text or any of
+/// the typography classes, it will remove the text cropping
+/// and the negative margins applied by the crop.
 /// @group multi-typography
 .sprk-u-TextCrop--none {
   &::before,
@@ -253,25 +268,27 @@
   }
 }
 
-/// Sets word-wrap to break-word.
+/// Sets `word-wrap` to `break-word`.
 /// @group typography
 .sprk-u-WordWrap--break-word {
   word-wrap: break-word !important;
 }
 
-/// Sets white-space to nowrap.
+/// Sets `white-space` to `nowrap`.
 /// @group typography
 .sprk-u-WhiteSpace--nowrap {
   white-space: nowrap !important;
 }
 
-/// Sets a max-width, intended for text. Default value is 40 rem.
+/// Sets a `max-width`, intended for text. Default value is
+/// `40 rem`.
 /// @group typography
 .sprk-u-Measure {
   max-width: $sprk-measure !important;
 }
 
-/// Sets a narrow max-width, intended for text. Default value is 25 rem.
+/// Sets a narrow `max-width`, intended for text. Default
+/// value is `25 rem`.
 /// @group typography
 .sprk-u-Measure--narrow {
   max-width: $sprk-narrow-measure !important;
@@ -281,25 +298,31 @@
 // Overflow
 ///
 
-/// Content is not clipped and may be rendered outside the padding box.
+/// Content is not clipped and may be rendered outside
+/// the padding box.
 /// @group overflow
 .sprk-u-Overflow--visible {
   overflow: visible !important;
 }
 
-/// Content is clipped if necessary to fit the padding box. No scrollbars are provided.
+/// Content is clipped if necessary to fit the padding
+/// box. No scrollbars are provided.
 /// @group overflow
 .sprk-u-Overflow--hidden {
   overflow: hidden !important;
 }
 
-/// Content is clipped if necessary to fit the padding box. Browsers display scrollbars whether or not any content is actually clipped.
+/// Content is clipped if necessary to fit the padding
+/// box. Browsers display scrollbars whether or not any
+/// content is actually clipped.
 /// @group overflow
 .sprk-u-Overflow--scroll {
   overflow: scroll !important;
 }
 
-/// If content fits inside the padding box, it looks the same as visible, but still establishes a new block-formatting context.
+/// If content fits inside the padding box, it looks the
+/// same as visible, but still establishes a new
+/// block-formatting context.
 /// @group overflow
 .sprk-u-Overflow--auto {
   overflow: auto !important;
@@ -524,15 +547,18 @@
 // Spacing
 ///
 
-/// Sets the bottom margin to the current value of $sprk-space-misc-a (24px).
+/// Sets the bottom margin to the current value of
+/// `$sprk-space-misc-a` (`24px`).
 /// @group misc-spacing
 /// @name sprk-u-MarginBottom--a
 
-/// Sets the padding on the left and right (horizontal) to $sprk-space-misc-b (40px).
+/// Sets the padding on the left and right (horizontal)
+/// to `$sprk-space-misc-b` (`40px`).
 /// @group misc-spacing
 /// @name sprk-u-PaddingHorizontal--b
 
-/// Sets the margin on all sides to the current value of $sprk-space-misc-d (80px).
+/// Sets the margin on all sides to the current value
+/// of `$sprk-space-misc-d` (`80px`).
 /// @group misc-spacing
 /// @name sprk-u-MarginAll--d
 
@@ -747,7 +773,8 @@
 // Accessibility
 ///
 
-/// Makes content invisible while still being read by a screen reader.
+/// Makes content invisible while still being read by a
+/// screen reader.
 /// @group multi-accessibility
 .sprk-u-ScreenReaderText {
   position: absolute;
@@ -758,7 +785,8 @@
   overflow: hidden;
 }
 
-/// When combined with .sprk-u-ScreenReaderText the element will become visible on focus.
+/// When combined with `.sprk-u-ScreenReaderText` the element
+/// will become visible on focus.
 /// @group multi-accessibility
 .sprk-u-ShowOnFocus:focus {
   position: static;
@@ -768,7 +796,9 @@
 
 //
 // layout
-/// When placed on a container, its children will align in the absolute center (vertically and horizontally) of the box.
+/// When placed on a container, its children will align
+/// in the absolute center (vertically and horizontally)
+/// of the box.
 /// @group multi-layout
 .sprk-u-AbsoluteCenter {
   display: flex;
@@ -776,7 +806,9 @@
   justify-content: center;
 }
 
-/// When placed on a container, it will cause it to fill the viewport, even if it's inside a limiting container (such as sprk-o-CenteredColumn).
+/// When placed on a container, it will cause it to fill
+/// the viewport, even if it's inside a limiting container
+/// (such as `sprk-o-CenteredColumn`).
 /// @group multi-layout
 .sprk-u-FullWidth {
   width: 100vw;
@@ -786,7 +818,9 @@
   margin-right: -50vw;
 }
 
-/// When placed on an element that contains text, it will limit the text to one line and adds an ellipsis when it overflows.
+/// When placed on an element that contains text, it will
+/// limit the text to one line and adds an ellipsis when
+/// it overflows.
 /// @group multi-typography
 .sprk-u-Truncate {
   white-space: nowrap !important;
