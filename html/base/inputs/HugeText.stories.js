@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { hugeInput } from '../hugeInput';
+import { hugeInput } from './hugeInput';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,6 +11,10 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- The Input Label must come before the input element.
+- A placeholder is required for full functionality.
+If you do not want to show a placeholder, include
+placeholder=" " (space included) to maintain functionality. 
     `,
     docs: { iframeHeight: 140 },
   },

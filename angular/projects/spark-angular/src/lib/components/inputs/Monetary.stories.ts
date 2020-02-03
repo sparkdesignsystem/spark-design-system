@@ -37,6 +37,12 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- The value of this field may contain special characters
+(,) which you may need to remove before submitting the form.
+- Requires Additional Engineering:
+  - Validation
+  - Reformatting to monetary pattern (##.##) - On blur,
+  it should reformat to add commas and decimals to the hundredth place.
     `,
     docs: { iframeHeight: 200 },
   }

@@ -1,0 +1,349 @@
+---
+  title: Input
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Input
+
+Input allows a user to enter and submit data.
+
+<ComponentPreview
+  componentName="input-text--text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Usage for Input depends on the Input type.
+Please see the Usage and Guidelines for each
+Input type. Take care to choose the appropriate
+Input type for your use case.
+
+### Guidelines
+
+- Labels and error messages should be short,
+instructional, and to the point.
+- Labels should be kept to one line.
+- If an Input needs more information than can
+be provided in the label, use Helper Text.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## States
+
+Each input has an error and disabled state.
+
+<ComponentPreview
+  componentName="input-text--invalid-text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<ComponentPreview
+  componentName="input-text--disabled-text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Variants
+
+### Text Input
+
+A Text Input allows users to enter and edit
+text. It is the most common Input type.
+
+<ComponentPreview
+  componentName="input-text--text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Huge Text Input
+
+Huge Text Input is a larger version of Text
+Input. The label is inside the Input instead
+of above it. On focus, the label animates to
+the top left of the Input and placeholder
+text takes its place.  
+
+Huge Text Input was designed for a multi-step
+form flow that presents a single Input per page.
+For this reason, Huge Text Input should only be
+used for stand-alone Inputs. An exception would
+be a set of fields that are typically together,
+like an address.
+
+#### Guidelines
+
+- Labels must be short enough to fit inside the
+Input and cannot wrap to a second line.
+- The following Inputs are currently able to use
+the Huge Text Input style:
+  - SSN Input
+  - Password Input
+  - Phone Number Input
+  - Date Input
+  - Date Picker
+
+<ComponentPreview
+  componentName="input-huge-text--huge-text-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Checkbox
+
+Checkbox allows a user to choose more
+than one option from a list.
+
+<ComponentPreview
+  componentName="input-checkbox--checkbox"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Radio Button
+
+Radio Button allows a user to
+choose one option from a list.
+
+#### Guidelines
+
+- If the list of choices becomes too large,
+consider using a Select Box instead. 
+
+<ComponentPreview
+  componentName="input-radio--radio-button"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Select Box
+
+Allows a user to select one choice from a set of options.
+
+#### Guidelines
+
+- If there are only a few options in the set,
+consider using Radio Button. 
+- Select Box is not the same as the Dropdown
+component.
+
+<ComponentPreview
+  componentName="input-select--select-box"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Huge Select Box
+
+This is a larger version of the Select Box,
+consistent with the style of Huge Text Input.
+The label is shown inside the select. On focus,
+the label animates to the top left.  
+
+Like Huge Text Input, Huge Select was designed
+for a multi-step form flow that presents a single
+Input per page. For this reason, Huge Select Box
+should only be used for stand-alone Inputs.
+
+#### Guidelines
+
+- Labels must be short enough to fit inside the
+Input and cannot wrap to a second line.
+
+<ComponentPreview
+  componentName="input-huge-select--huge-select-box"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Textarea
+
+Textarea allows a user to enter multiple
+lines of freeform text.
+
+<ComponentPreview
+  componentName="input-textarea--textarea"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### SSN Input
+
+SSN Input is used to collect a Social
+Security Number.
+- Checking "Show SSN" removes the mask
+and shows the entered value.
+- If “Show SSN” is checked, this field is
+automatically formatted to ###-##-####
+once a valid value is entered.
+- SSN Input can also be a Huge Text Input.
+For full functionality, see guidelines in
+the Huge Text Inputs section.
+- Additional engineering is required to
+reformat user input into an SSN pattern
+(###-##-####)
+  - After valid input, it should reformat
+  to having the first three numbers, a dash,
+  the next two numbers, a dash, and the last
+  four numbers.
+- Additional engineering is required for
+validation functionality.
+
+<ComponentPreview
+  componentName="input-ssn--ssn-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Search Input
+
+Search Input allows a user to make a search query.
+
+<ComponentPreview
+  componentName="input-search--search-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Monetary Input
+
+Monetary Input is used to collect a value in US dollars.
+- This field is automatically formatted to include commas,
+a decimal, and 2 zeros (If no decimal is entered) when focus
+is removed from the field (e.g. 1,000.00).
+- Additional engineering is required to reformat user
+input into a monetary pattern (##.##)
+  - After valid input, it should reformat to add commas
+  and decimals to the hundredth place.
+- Additional engineering is required for validation functionality.
+
+<ComponentPreview
+  componentName="input-monetary--monetary-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Percentage Input
+
+Percentage Input is used to collect a percent value.
+
+<ComponentPreview
+  componentName="input-percentage--percentage-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Password Input
+
+Password Input is used for collecting a password.
+- The value is masked by default.
+- Checking "Show Password" removes the mask and
+shows the entered value.  
+- Password Input can also be a Huge Text Input.
+For full functionality, see guidelines in the
+Text Huge Inputs section.
+
+<ComponentPreview
+  componentName="input-password--password-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Helper Text
+
+Helper Text provides additional guidance that helps
+the user understand what information the input requires.
+
+<ComponentPreview
+  componentName="input-helper-text--helper-text"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Phone Input
+
+Phone Input is used to collect a phone number.
+- Additional engineering is required to reformat user
+input into a phone number pattern (###) ###-####.
+  - After valid input, it should reformat to have
+  the area code surrounded by parenthesis, a space
+  before the next three digits, and a dash before
+  the next four digits.
+- Additional engineering is required for validation functionality.
+- Phone Input can also be a Huge Text Input. For full
+functionality, see guidelines in the Text Huge Inputs section.
+
+<ComponentPreview
+  componentName="input-phone--phone-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Date Input
+
+Date Input is used for collecting a well-known date
+(e.g. birthdate) or a date in the far future or
+past (i.e. when did you move?). It does not include
+a date picker.
+- Additional engineering is required to reformat
+user input into a date pattern (MM/DD/YYYY).
+- After valid input, it should reformat to a two
+digit number month, followed by a forward slash,
+two digit number day, followed by another forward
+slash, and four digit number year.
+- Additional engineering is required for validation
+functionality.
+
+<ComponentPreview
+  componentName="input-date--date-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Date Picker
+
+Date Picker is used for collecting a date around one
+year before or after the current date. We restrict
+the distance from the current date because it is more
+difficult for a user to find the date they need when
+they must page through dozens of months.
+- Additional engineering is required to reformat user
+input into a date pattern (MM/DD/YYYY). 
+- After valid input, it should reformat to a two digit
+number month, followed by a forward slash, two digit
+number day, followed by another forward slash, and
+four digit number year. 
+- Additional engineering is required for
+validation functionality. 
+
+<ComponentPreview
+  componentName="input-date-picker--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>

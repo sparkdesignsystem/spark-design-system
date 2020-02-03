@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { hugeInput } from '../hugeInput';
+import { hugeInput } from './hugeInput';
 import '../../utilities/polyfills/classListSVG';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -11,6 +11,13 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- If a Huge Select Box will have a value on page load, add
+the class \`sprk-b-Input--has-floating-label\` to the select element.
+- If the Huge Select Box needs a blank default option on page load,
+you’ll need to remove the \`disabled\` and \`hidden\` attributes from
+the first option in the select. This will allow users to select a
+blank first option.
+- The select element must come before the label element.
     `,
     docs: { iframeHeight: 140 },
   },

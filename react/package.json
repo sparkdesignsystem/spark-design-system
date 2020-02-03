@@ -7,9 +7,9 @@
     "test": "jest --config ./src/jest-config.js --coverage",
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
     "build": "rollup -c rollup.config.js",
-    "storybook": "npm run prebuild:storybook && start-storybook -p 6006",
+    "storybook": "npm run prebuild:storybook && start-storybook -p 6006 -s ../storybook-utilities/favicon",
     "prebuild:storybook": "npm run test:generate-output",
-    "build-storybook": "npm run prebuild:storybook && build-storybook",
+    "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
     "prepublishOnly": "npm run build"
   },
   "author": "Quicken Loans",
@@ -56,7 +56,7 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.6.2",
     "react-animate-height": "^2.0.16",
-    "tiny-date-picker": "^3.2.8",
+    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
     "warning": "^4.0.3"
   }
 }

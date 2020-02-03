@@ -67,9 +67,11 @@ defaultStory.story = {
 };
 
 export const gallery = () => {
-  window.addEventListener('sprk-icons-loaded', () => {
-    attachIcons(getIcons());
-  });
+  if (typeof window !== 'undefined') {
+    window.addEventListener('sprk-icons-loaded', () => {
+      attachIcons(getIcons());
+    });
+  }
 
   setTimeout(() => { attachIcons(getIcons()); }, 100);
 

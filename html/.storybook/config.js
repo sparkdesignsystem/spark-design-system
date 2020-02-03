@@ -8,8 +8,9 @@ import 'iframe-resizer/js/iframeResizer.contentWindow.min';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-utilities/icon-loader';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
-import { SprkTable } from '@sparkdesignsystem/spark-react';
+import SprkTable from '../../react/src/base/tables/SprkTable';
 import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
+import AdditionalInputInfo from '../../storybook-utilities/components/AdditionalInputInfo';
 
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
@@ -35,6 +36,7 @@ addParameters({
     },
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
+      const isInputStory = (componentName === 'Input');
       const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
       if (processedJson) {
         return (
@@ -42,6 +44,13 @@ addParameters({
             <div>
               {children}
 
+              {isInputStory &&
+                <AdditionalInputInfo
+                  additionalHeaderClasses='sprk-u-mbm'
+                  additionalListClasses='sprk-u-mbm'
+                />
+              }
+              
               <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
               <SprkTable
                 additionalTableClasses="sprk-b-Table--spacing-medium sprk-b-Table--secondary sprk-b-Table--striped"
@@ -65,6 +74,13 @@ addParameters({
           <DocsContainer context={context}>
             <div>
               {children}
+              
+              {isInputStory &&
+                <AdditionalInputInfo
+                  additionalHeaderClasses='sprk-u-mbm'
+                  additionalListClasses='sprk-u-mbm'
+                />
+              }
             </div>
           </DocsContainer>
         )

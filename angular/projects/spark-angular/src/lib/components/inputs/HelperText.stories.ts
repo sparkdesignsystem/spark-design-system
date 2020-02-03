@@ -40,6 +40,8 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- Helper text must be placed below the Input and above the error container.
+- Helper text is marked with the \`sprkHelperText\` directive.
 `,
     docs: { iframeHeight: 200 },
   }
