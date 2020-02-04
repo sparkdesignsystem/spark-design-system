@@ -23,7 +23,7 @@ the index of the child steps (for example, by sorting
 them or adding more steps) you need to re-initialize
 the component so that it tracks the updated indexes.
 - The active step can be updated programmatically
-by changing the value of \`isSelected\` on the steps. 
+by changing the value of \`isSelected\` on the steps.
 `,
     jest: [
       'SprkStepper',
@@ -54,16 +54,47 @@ export const withStepDescriptions = () => (
     idString="stepper-descriptions"
   >
     <SprkStepperStep title="Step One" isSelected>
-      Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Step 1 Lorem ipsum dolor sit amet
+      consectetur adipisicing elit.
     </SprkStepperStep>
     <SprkStepperStep title="Step Two">
-      Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Step 2 Lorem ipsum dolor sit amet
+      consectetur adipisicing elit.
     </SprkStepperStep>
     <SprkStepperStep title="Step Three">
-      Step 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Step 3 Lorem ipsum dolor sit amet
+      consectetur adipisicing elit.
     </SprkStepperStep>
     <SprkStepperStep title="Step Four">
-      Step 4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Step 4 Lorem ipsum dolor sit amet
+      consectetur adipisicing elit.
     </SprkStepperStep>
+  </SprkStepper>
+);
+
+export const withDarkBackground = () => (
+  <SprkStepper
+    hasDarkBackground
+    idString="stepper-dark-bg"
+  >
+    <SprkStepperStep title="Step One">
+      Step 1 Lorem ipsum dolor sit amet
+      consectetur adipisicing elit.
+  </SprkStepperStep>
+    <SprkStepperStep
+      title="Step Two"
+      isSelected
+    >
+      Step 2 Lorem ipsum dolor sit
+      amet consectetur adipisicing elit.
+  </SprkStepperStep>
+    <SprkStepperStep title="Step Three">
+      Step 3 Lorem ipsum dolor sit
+      amet consectetur adipisicing elit.
+  </SprkStepperStep>
+    <SprkStepperStep title="Step Four">
+      Step 4 Lorem ipsum dolor sit
+      amet consectetur adipisicing elit.
+  </SprkStepperStep>
   </SprkStepper>
 );

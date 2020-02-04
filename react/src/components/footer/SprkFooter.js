@@ -101,7 +101,7 @@ class SprkFooter extends Component {
                           } = columnLink;
                           const TagName = element || 'a';
                           return (
-                            <li key={id} className="sprk-o-Stack__item asfsdfasdf">
+                            <li key={id} className="sprk-o-Stack__item">
                               <TagName
                                 className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
                                 href={TagName === 'a' ? href || '#nogo' : undefined}

@@ -92,3 +92,8 @@ body,
 .docs-c-Card .sprk-c-Card__content div.sprk-o-Stack__item .sprk-c-Button {
   align-self: flex-end;
 }
+
+// Override for Spark footer
+.docs-c-Footer .sprk-o-CenteredColumn {
+  max-width: $doc-site-layout-max-width;
+}
