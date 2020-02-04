@@ -155,7 +155,11 @@ SprkMastheadAccordionItem.propTypes = {
   /**
    * The element to render, could be 'a' or a Component.
    */
-  element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  element: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.elementType
+  ]),
   /**
    * Assigned to the `href` attribute if element is 'a'.
    */
@@ -186,7 +190,11 @@ SprkMastheadAccordionItem.propTypes = {
       /**
        * Determines if link renders as an anchor tag, or router link.
        */
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * The `href` value assigned the subNavLink item.
        */

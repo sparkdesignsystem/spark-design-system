@@ -266,7 +266,11 @@ SprkMasthead.propTypes = {
       /**
        * Determines if link renders as an anchor tag, or router link.
        */
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * The text for the big nav item.
        */
@@ -284,7 +288,11 @@ SprkMasthead.propTypes = {
           /**
            * Determines if link renders as an anchor tag, or router link.
            */
-          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          element: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func,
+            PropTypes.elementType
+          ]),
         }),
       ),
     }),
@@ -300,7 +308,11 @@ SprkMasthead.propTypes = {
    */
   littleNavLinks: PropTypes.arrayOf(
     PropTypes.shape({
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * The text for the little nav item.
        */
@@ -314,7 +326,11 @@ SprkMasthead.propTypes = {
           /**
            * Determines if link renders as an anchor tag, or router link.
            */
-          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          element: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func,
+            PropTypes.elementType
+          ]),
           /**
            * The text for the little sub nav item.
            */
@@ -337,7 +353,11 @@ SprkMasthead.propTypes = {
       /**
        * Determines if link renders as an anchor tag, or router link.
        */
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * The text for the narrow nav item.
        */
@@ -355,7 +375,11 @@ SprkMasthead.propTypes = {
           /**
            * Determines if link renders as an anchor tag, or router link.
            */
-          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          element: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func,
+            PropTypes.elementType
+          ]),
         }),
       ),
     }),
@@ -381,7 +405,11 @@ SprkMasthead.propTypes = {
         /**
          * Determines if link renders as an anchor tag, or router link.
          */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+          PropTypes.elementType
+        ]),
         /**
          * Additional text providing context for item.
          */
@@ -420,7 +448,11 @@ SprkMasthead.propTypes = {
         /**
          * Determines if link renders as an anchor tag, or router link.
          */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+          PropTypes.elementType
+        ]),
         /**
          * Additional text providing context for item.
          */

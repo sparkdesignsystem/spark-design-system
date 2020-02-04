@@ -168,7 +168,11 @@ SprkMastheadDropdown.propTypes = {
         /**
          * Determines if link renders as an anchor tag, or router link.
          */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.node,
+          PropTypes.elementType
+        ]),
         /** Assigned to `href` of the dropdown item. */
         href: PropTypes.string,
         /** Text title for the dropdown choice. */

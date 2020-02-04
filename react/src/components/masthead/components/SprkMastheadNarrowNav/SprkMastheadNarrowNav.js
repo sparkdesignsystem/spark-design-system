@@ -47,7 +47,11 @@ SprkMastheadNarrowNav.propTypes = {
       /**
        * Determines if link renders as an anchor tag, or router link.
        */
-      element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+      element: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func,
+        PropTypes.elementType
+      ]),
       /**
        * Text of the link
        */
@@ -63,7 +67,11 @@ SprkMastheadNarrowNav.propTypes = {
           /**
            * Determines if link renders as an anchor tag, or router link.
            */
-          element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+          element: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func,
+            PropTypes.elementType
+          ]),
         }),
       ),
     }),
@@ -89,7 +97,11 @@ SprkMastheadNarrowNav.propTypes = {
         /**
          * Determines if link renders as an anchor tag, or router link.
          */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+          PropTypes.elementType
+        ]),
         /**
          * Additional text providing context for item.
          */

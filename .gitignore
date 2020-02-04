@@ -14,8 +14,7 @@ dist/
 .cache/
 
 # Coverage Files
-packages/spark-core/.nyc_output
-packages/spark/.nyc_output
+.nyc_output/
 
 # IDE
 *~
