@@ -9,14 +9,14 @@ This guide will walk you through installing
 and using Spark on an existing Angular application.
 For help with setting up the necessary
 development environment, see the
-Angular CLI Overview.
+[Angular CLI Overview](https://angular.io/cli).
 
 This is a guide for installing Spark
 and using Spark Angular components
 on an existing Angular application.
 You can find a guide for setting up
 the necessary development
-environment in the [Angular CLI Guide]().
+environment in the [Angular CLI Guide](https://angular.io/cli).
 When setting up
 your application, make sure to
 include Angular Routing and
@@ -40,7 +40,9 @@ similar to the one created in the Angular CLI Guide.
 - Angular Routing is installed
 (not required by this guide, but it is required by Spark)
 
-You can download a repo with these prerequisites here.
+You can download a repo
+with these prerequisites
+[here](https://github.com/sparkdesignsystem/spark-starter-angular).
 
 ## Installing Spark Packages
 
@@ -49,7 +51,7 @@ and install `spark` and `spark-angular` by
 pasting the following line in a
 command line application.
 
-```
+``` bash
 npm install -save-dev @sparkdesignsystem/spark @sparkdesignsystem/spark-angular
 ```
 
@@ -58,7 +60,7 @@ as well as the `BrowserAnimationsModule`, and include
 them in `@NgModule`'s `imports` array. This file can be
 found in `your-app/src/app`.
 
-```
+``` typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -88,7 +90,7 @@ export class AppModule { }
 Next, edit `styles.scss` to `@import` the Spark
 stylesheet. This file can be found in `you-app/src`.
 
-```
+``` scss
 @import "node_modules/@sparkdesignsystem/spark/spark.scss"
 ```
 
@@ -136,7 +138,7 @@ can be found in `your-app/src/app`. You can
 delete everything in this file other
 than the final line `(<router-outlet></router-outlet>)`
 
-```
+``` markup
 <button
   (click)="checkSpinner($event)"
   sprkButton
@@ -158,17 +160,16 @@ the `AppComponent` class inside
 `app.component.ts`. This file can
 be found in `your-app/src/app`.
 
-```
+``` typescript
 export class AppComponent {
-   submitSpinning = false;
+  submitSpinning = false;
 
-   checkSpinner(event): void {
-      if (!this.submitSpinning) {
-         setSpinning(event.target, {});
-         this.submitSpinning = true;
-      }
-   }
-
+  checkSpinner(event): void {
+    if (!this.submitSpinning) {
+      setSpinning(event.target, {});
+      this.submitSpinning = true;
+    }
+  }
 }
 ```
 
@@ -178,7 +179,7 @@ library. This goes at the top
 of your component’s `.ts` file,
 in our case `app.component.ts`.
 
-```
+``` typescript
 import { setSpinning } from '@sparkdesignsystem/spark';
 ```
 
@@ -199,7 +200,7 @@ If you need additional help
 configuring Spark for your
 environment, check out some of
 our other guides and
-[email the Spark team]() with any questions.
+[email the Spark team](mailto:sparkdesignsystem@quickenloans.com) with any questions.
 
 - The [Polyfills Guide]() will help you import
 JavaScript polyfills needed for Spark.
@@ -207,7 +208,7 @@ Polyfills are needed for Spark to function
 [across all modern browsers]().
 - For help importing the Spark SVG Icon Set,
 check out our
-[Icon Installation Guide]().
+[Icon Installation Guide](/installing-spark/installing-icons).
 - Guidance on accessing and including the
 Rocket Sans font used by Spark can
-be found in our [Font Installation Guide]().
+be found in our [Font Installation Guide](/installing-spark/installing-fonts).
