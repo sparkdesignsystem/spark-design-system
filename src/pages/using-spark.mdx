@@ -7,6 +7,8 @@ import {
   SprkStackItem,
   SprkCard,
   SprkButton,
+  SprkLink,
+  SprkPromo,
 } from '@sparkdesignsystem/spark-react';
 
 # Using Spark
@@ -20,11 +22,10 @@ import {
       </SprkStackItem>
       <SprkStackItem>
         <p className="sprk-b-TypeBodyTwo sprk-u-Measure">
-          Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Sed gravida urna quis nulla ultrices,
-          sed efficitur risus elementum. Vivamus
-          semper ex a lorem sodales, rhoncus
-          rhoncus augue cursus.
+          The Spark Design System provides both usage and implementation guidelines. 
+          Browse the list of components to find the right solution for your use case. 
+          When you are ready to add a component to your application, check out the 
+          developer documentation in our Storybook sandboxes below.
         </p>
       </SprkStackItem>
     </SprkStack>
@@ -36,8 +37,7 @@ import {
           HTML Components
         </h3>
         <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          We made Spark technical documentation for our HTML
-          components available in a StorybookJS sandbox.
+          Explore the technical documentation for the HTML implementation.
         </p>
         <div className="sprk-o-Stack__item">
           <SprkButton
@@ -54,8 +54,7 @@ import {
           Angular Components
         </h3>
         <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          We made Spark technical documentation for our Angular
-          components available in a StorybookJS sandbox.
+          Explore the technical documentation for the Angular implementation.
         </p>
         <div className="sprk-o-Stack__item">
           <SprkButton
@@ -72,8 +71,7 @@ import {
           React Components
         </h3>
         <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          We made Spark technical documentation for our React
-          components available in a StorybookJS sandbox.
+          Explore the technical documentation for the React implementation.
         </p>
         <div className="sprk-o-Stack__item">
           <SprkButton
@@ -86,5 +84,26 @@ import {
         </div>
       </SprkCard>
     </div>
+  </SprkStackItem>
+  <SprkStackItem>
+    <SprkStack itemSpacing="medium">
+      <SprkStackItem>
+        <h2 className="sprk-b-TypeDisplayThree">
+          For Designers
+        </h2>
+      </SprkStackItem>
+      <SprkStackItem>
+        <p className="sprk-b-TypeBodyTwo sprk-u-Measure">
+          Browse the list of components to find the right solution for your
+          design. To get access to the Spark UI Kit, please email&nbsp;
+          <SprkLink
+            element="a"
+            href="mailto://sparkdesignsystem@quickenloans.com"
+          >
+            sparkdesignsystem@quickenloans.com
+          </SprkLink>
+        </p>
+      </SprkStackItem>
+    </SprkStack>
   </SprkStackItem>
 </SprkStack>
