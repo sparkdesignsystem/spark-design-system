@@ -38,7 +38,7 @@ npm init
 can always edit these later.
 
 You should now have a `package.json` file created. This will keep track
- of all the dependencies that your site needs to build and run.
+of all the dependencies that your site needs to build and run.
 
 3. Inside your `spark-html` folder, create a `src` folder and a `dist` folder.
 
@@ -74,7 +74,7 @@ structure should look like this:
 
 <div class="sprk-u-Measure">
   <img
-    class="sprk-u-mbm "
+    class="sprk-u-mbm"
     style="margin: auto; display: block;"
     src={folderStructure}
     alt="A dist folder containing index.html. A src folder containing index.js. A package.json in the root."/>
@@ -84,7 +84,7 @@ structure should look like this:
 
 <div class="sprk-u-Measure">
   <img
-    class="sprk-u-mbm "
+    class="sprk-u-mbm"
     style="margin: auto; display: block;"
     src={helloSpark}
     alt="Hello Spark!"/>
@@ -93,7 +93,7 @@ structure should look like this:
 ## Installing Webpack
 
 <a href="https://webpack.js.org/" target="_blank">Webpack</a> is a tool that we’ll use to
- combine all the JavaScript needed to run Spark into one file.
+combine all the JavaScript needed to run Spark into one file.
 
 7. To install Webpack, run this command.
 
@@ -102,13 +102,13 @@ npm install webpack webpack-cli --save-dev
 ```
 
 > The `--save-dev` flag indicates that these packages are required
- to compile your website, but are not necessary to run the site
- after compilation.
+to compile your website, but are not necessary to run the site
+after compilation.
 
 8. In your `package.json` file that you created in Step 2, look for
- the `scripts` section. This is a list of custom commands that npm
-  can run against your package. Add a new one for building the site
-   with Webpack:
+the `scripts` section. This is a list of custom commands that npm
+can run against your package. Add a new one for building the site
+with Webpack:
 
 ``` json
 "scripts": {
@@ -138,7 +138,7 @@ containing minified JavaScript.
 
 <div class="sprk-u-Measure">
   <img
-    class="sprk-u-mbm "
+    class="sprk-u-mbm"
     style="margin: auto; display: block;"
     src={bundledJs}
     alt="Minified JSON in main.js"/>
@@ -158,7 +158,7 @@ npm install node-sass sass-loader css-loader mini-css-extract-plugin --save-dev
 ```
 
 12. In the root directory of your project, create a new file called
- `webpack.config.js` and paste this code into it.
+`webpack.config.js` and paste this code into it.
 
 ``` javascript
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -185,15 +185,15 @@ module.exports = {
 ```
 
 13. At the top of `index.js`, add this reference to the uncompiled `scss`
- file:
+file:
 
 ``` javascript
 import "../src/style.scss"
 ```
 
 Now when Webpack compiles `index.js`, this import line will include
- your style file. It will be processed according to the rules
- we set up in the webpack config in the previous step.
+your style file. It will be processed according to the rules
+we set up in the webpack config in the previous step.
 
 14. Now let’s write some CSS to compile. Create a new file in `src`
 called `style.scss` and copy this CSS into it:
