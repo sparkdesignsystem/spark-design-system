@@ -10,7 +10,12 @@ export default {
   component: SprkAlert,
   parameters: {
     jest: ['SprkAlert'],
-    info: `${markdownDocumentationLinkBuilder('alert')}`,
+    info: `
+${markdownDocumentationLinkBuilder('alert')}
+- \`role=”alert”\` is required so that
+assistive technologies can inform
+the user that their attention is needed.
+`,
    },
 };
 
