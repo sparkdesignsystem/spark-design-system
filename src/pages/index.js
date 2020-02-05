@@ -27,7 +27,7 @@ const teaserDesigners = {
   media: {
     href: '/principles/design-principles',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
+    imgAlt: 'An illustration of a computer with a paintbrush.',
     imgSrc: designersMedia,
     mediaVariant: 'img',
   },
@@ -52,7 +52,7 @@ const teaserDevelopers = {
   media: {
     href: '/installing-spark',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
+    imgAlt: 'An illustration of a computer with code displayed.',
     imgSrc: developersMedia,
     mediaVariant: 'img',
   },
@@ -78,7 +78,7 @@ const teaserComponents = {
   media: {
     href: '/using-spark/components/button',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
+    imgAlt: 'An illustration of a graph paper and a magnifying glass.',
     imgSrc: componentsMedia,
     mediaVariant: 'img',
   },
@@ -102,7 +102,7 @@ const teaserFoundations = {
   media: {
     href: '/using-spark/foundations/color',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
+    imgAlt: 'Decorative illustrations of type and color.',
     imgSrc: foundationsMedia,
     mediaVariant: 'img',
   },
@@ -125,7 +125,7 @@ const teaserUtils = {
   media: {
     href: '/using-spark/foundations/css-utilities',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
+    imgAlt: 'Decorative illustrations of pages.',
     imgSrc: utilitiesMedia,
     mediaVariant: 'img',
   },
@@ -147,7 +147,7 @@ const teaserNews = {
   media: {
     href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
+    imgAlt: 'Decorative illustration of a clipboard.',
     imgSrc: newsMedia,
     mediaVariant: 'img',
   },

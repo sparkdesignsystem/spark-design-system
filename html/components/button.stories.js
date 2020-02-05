@@ -70,16 +70,13 @@ export const disabled = () => (
   `
 );
 
-export const spinner = () => (
+export const loading = () => (
   `
   <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner">
     <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
   </button>
   `
 );
-spinner.story = {
-  name: 'Spinner',
-};
 
 export const fullWidthAtSmallViewport = () => (
   `

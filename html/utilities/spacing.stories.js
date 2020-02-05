@@ -1,7 +1,7 @@
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
-  title: 'Fundamentals/Spacing',
+  title: 'Foundations/Spacing',
   decorators: [
     story => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
