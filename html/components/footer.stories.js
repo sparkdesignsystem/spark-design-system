@@ -11,6 +11,9 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('footer')}
+- The Footer is a navigation landmark for
+accessibility tools. The attribute \`role=”contentinfo”\`
+must be present.
     `,
     docs: { iframeHeight: 800 },
   },
@@ -38,7 +41,7 @@ export const defaultStory = () => {
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Buy a home, refinance, or manage your mortgage online with 
+                Buy a home, refinance, or manage your mortgage online with
                 America's largest mortgage lender
               </p>
             </div>

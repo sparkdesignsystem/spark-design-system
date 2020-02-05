@@ -40,6 +40,8 @@ right of the logo, containing the navigation links and utility
 items. When the number of navigation items is too large to
 fit in one row, the Extended Masthead utilizes a second row,
 the big nav, to display the navigation items.
+- The Masthead is a navigation landmark for accessibility
+tools. The attribute \`role=”banner”\` must be present.
 `,
   },
 };

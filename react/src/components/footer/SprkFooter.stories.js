@@ -18,7 +18,12 @@ export default {
       SprkFooterGlobalSection
     },
     jest: ['SprkFooter'],
-    info: `${markdownDocumentationLinkBuilder('footer')}`,
+    info: `
+${markdownDocumentationLinkBuilder('footer')}
+- The Footer is a navigation landmark for
+accessibility tools. The attribute \`role=”contentinfo”\`
+must be present.
+    `,
   },
 };
 
