@@ -16,4 +16,8 @@ $sprk-webfonts:
   text-align: left;
 }
 
+.docs-b-Table--no-wrap-first tr td:first-child {
+  white-space: nowrap;
+}
+
 /* stylelint-enable */
