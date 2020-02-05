@@ -2,142 +2,107 @@
   title: React Installation
   order: 5
 ---
-
-# React Installation ✨
-
-This is a guide for installing Spark and using Spark
- React components on an existing React site. You can
- find a guide for setting up the necessary development
- environment in the `create-react-app` Getting Started Guide.
-
- What we'll cover in this guide:
+import reactApp from '../../images/installing-spark/react/react-app.png';
+import styleCheck from '../../images/installing-spark/react/style-check.png';
+import buttonLoaded from '../../images/installing-spark/react/button-loaded.png';
 
 
+# Setting Up Spark for React
 
-🎨 Installing Sass
+This guide will walk you through installing and using Spark on an existing React site. For help with setting up the necessary development environment, see the [React App Getting Started Guide](https://create-react-app.dev/docs/getting-started).
 
+By the end of this, you’ll have all the Spark React components available in your site.
 
+## Installing Sass
+Sass is a tool that processes and compiles CSS. You’ll need to use Sass to import Spark styles into your site.
 
-🧱 Installing Spark Packages
-
-
-
-🧭 Navigating to Component Code Samples
-
-
-
-📘 Including React Components in your site
-
-At the end of this guide you will have all the Spark React components available in your site and ready for development.
-
-## 🎨 Installing Sass
-
-In order to use the Spark styles in your site, you're going to import them using a tool called Sass.
-
-
-
-Sass is a tool that processes and compiles CSS. In this step, you’re going to use Sass to import a CSS file that you can then reference in your site. In the next step, we’ll use Sass to import all the Spark CSS.
-
-
-
-Run this command to install Sass in the project:
-
+1. Run this command to install Sass:
 ```
 npm install node-sass --save-dev
 ```
-
-Rename App.css to App.scss.
-
-In App.js, update the import line to point at the new filename.
-
+2. Rename `App.css` to `App.scss`
+3. In `App.js`, update the import line to point at the new filename.
 ```
-import ‘./App.scss’
+import './App.scss'
 ```
-
-Create a new file in src called styles.scss and copy this CSS into it:
-
+4. Create a new file in src called `styles.scss` and copy this CSS into it:
 ```
 body {
-
   border: 50px solid pink;
-
 }
 ```
-
-In App.scss, add an import for this new file
-
+5. In `App.scss`, import this new file:
 ```
 @import ‘./styles.scss’;
 ```
 
-If your React server has stopped, restart it now and view your compiled React site. You should see the new CSS you’ve written included in the site along with the original React CSS.
+If your React server has stopped, restart it now and view your compiled React site. You should see the new CSS you’ve written included in the site, along with the original React CSS:
 
-IMAGE
 
-## 🧱 Installing Spark Packages
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={reactApp}
+    alt="Screenshot of Create React App running in a browser."/>
+</div>
 
-All the HTML, JavaScript, and CSS needed to run Spark React components is available in our npm packages. You can download the required packages with this command:
+## Install Spark Packages
+Now we’ll use Sass to import all the Spark CSS.
 
+6. Download the required packages with this command. It contains all of the HTML, JavaScript, and CSS needed to run Spark React components.
 ```
 npm install @sparkdesignsystem/spark @sparkdesignsystem/spark-react --save-dev
 ```
-
-Now that you have the files installed, you need to import the Spark Sass file into the main Sass file for the project (e.g., App.scss).
-
+7. Import the Spark Sass file into the main Sass file (e.g., `App.scss`).
 ```
 @import '../node_modules/@sparkdesignsystem/spark/spark.scss';
 ```
+When you build and run your website, all the Spark CSS will now be bundled into your output. You can verify this by inspecting your site’s DOM and looking for the Spark CSS. There should be a `<style>` tag in the `<head>` of your page that includes Spark’s styles.
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={styleCheck}
+    alt="Screenshot of DOM with Spark Styles"/>
+</div>
+If Spark React is installed correctly, you should see these CSS rules listed in your page’s code.
 
-Now when you build and run your website, all the Spark CSS will be bundled into your output. The easiest way to verify that this is working is to add a Spark component, which we will do in the next step. You can also verify that the Spark CSS is being included by inspecting your site’s DOM and looking for the Spark CSS. There should be a `<style>` tag in the `<head>` of your page that includes all the Spark styles.
+## Adding React Components
+Let’s add a component that will allow us to test that both Spark’s styles and functionality are working. We’ll use the [Loading Button](https://react.sparkdesignsystem.com/?path=/docs/components-button--loading) component to do this. You can find code for all Spark components at [react.sparkdesignsystem.com](https://react.sparkdesignsystem.com/).
 
-IMAGE
-
-## 🧭 Navigating to Component Code Samples
-
-On sparkdesignsystem.com, we’ve documented all the Spark components with copy/paste examples for many variants and configurations you can use in your site.
-
-Let’s include a Spark Button component from the site.
-
-TODO: Instructions on accessing the Gatsby/Storybook site and getting to the React copy/paste code. Fill this section in once the site navigation is working.
-
-## 📘 Including React Components in Your Site
-
-Add a reference to the SprkButton component at the top of App.js.
+8. Add a reference to the `SprkButton` component at the top of `App.js`.
 
 ```
 import { SprkButton } from '@sparkdesignsystem/spark-react';
 ```
 
-Copy the sample code for the Spark Button Spinner component into the return block in App.js.
-
+9. Copy the sample code into the `return` block in `App.js`.
 ```
 function App() {
-
   return (
-
     <SprkButton loading>Submit</SprkButton>
-
   );
-
 }
 ```
-
-You should see a Spark Button with the correct Spark style applied.
-
-GIF
-
-## 🎉 You did it!
-
-You’re ready to start building with Spark! For additional help configuring and using Spark, check out some of our other guides:
-
-The Polyfills Guide will help you import JavaScript polyfills needed for Spark. Polyfills are needed for Spark to function across all modern browsers.
-
-For help importing the Spark SVG Icon Set, check out our Icon Installation Guide.
-
-Guidance on accessing and including the Rocket Sans font used by Spark can be found in our Font Installation Guide.
-
-Looking for help on theming Spark or modifying any of the default styles? Sounds like you’d be interested in our Spark Overrides Guide.
-
-Working with the DatePicker component? This component requires its own configuration object which is described in the Datepicker Configuration Guide.
+You should now see a Spark Button!
 
 
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={buttonLoaded}
+    alt="Screenshot of React App with Spark Spark Button"/>
+</div>
+
+## You did it!
+You now have a development environment set up with Spark installed and you’re ready to start  building!
+
+For Spark support, you can [email the Spark team](mailto:sparkdesignsystem@quickenloans.com) with any questions and we’ll respond as quickly as possible.
+
+## Additional Topics
+Check out these guides for more information on setting up Spark:
+
+- The [Icon Installation Guide](/installing-spark/installing-icons) for importing the Spark SVG Icon Set.
+- The [Font Installation Guide](/installing-spark/installing-fonts) for instructions on using the Rocket Sans font.
