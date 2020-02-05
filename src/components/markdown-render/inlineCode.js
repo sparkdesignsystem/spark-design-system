@@ -3,7 +3,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import darkTheme from 'prism-react-renderer/themes/duotoneDark';
 
 const InlineCode = ({ children, className, additionalPreClasses, theme }) => {
-  className = className ? '' : className;
+  className = className ? className : '';
   const language = className.replace(/language-/, '');
   return (
     <Highlight
