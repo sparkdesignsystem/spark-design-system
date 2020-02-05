@@ -84,15 +84,29 @@ export const disabled = () => (
   </SprkButton>
 );
 
+class LoadingWrapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isLoading: false }
+  }
+
+  render() {
+    return  (
+      <SprkButton
+        loading={this.state.isLoading}
+        element="button"
+        idString="button-5"
+        analyticsString="button-5-analytics"
+        onClick={() => { this.setState({'isLoading': true})}}
+      >
+        Button
+      </SprkButton>
+    )
+  }
+}
+
 export const loading = () => (
-  <SprkButton
-    loading={true}
-    element="button"
-    idString="button-5"
-    analyticsString="button-5-analytics"
-  >
-    Button
-  </SprkButton>
+  <LoadingWrapper></LoadingWrapper>
 );
 
 export const fullWidthAtSmallViewport = () => (
