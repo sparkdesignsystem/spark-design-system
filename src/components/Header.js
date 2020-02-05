@@ -119,7 +119,7 @@ const Header = ({ setContext }) => {
     {
       element: Link,
       text: 'Installing Spark',
-      to: '/installing-spark/vanilla-environment-setup',
+      to: '/installing-spark/html-environment-setup',
       onClick: () => {
         setContext('installing-spark');
       },

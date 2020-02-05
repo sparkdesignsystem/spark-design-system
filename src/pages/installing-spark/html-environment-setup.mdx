@@ -11,8 +11,8 @@ import helloSpark from '../../images/installing-spark/html/hello-spark.png';
 # Setting Up Your Environment
 
 This guide is Part 1 in a 3-Part series and will walk through setting up your Spark
-development environment. You can also check out [Part 2 - HTML Installation](./vanilla-installation) and
-[Part 3 - HTML Components](./vanilla-add-components).
+development environment. You can also check out [Part 2 - Installation](./html-installation) and
+[Part 3 - Adding Components](./html-add-components).
 
 For instructions on setting up Spark in other environments, check out the guides for
 [Angular](./angular) and [React](./react) development environments.
@@ -26,7 +26,7 @@ JavaScript code and to update the JavaScript code you’re sharing.
 1. First you’ll need to make a new directory for your project, open it
 and initialize npm. You can do that with these UNIX commands.
 
-```
+``` shell
 mkdir spark-html
 
 cd spark-html
@@ -45,7 +45,7 @@ You should now have a `package.json` file created. This will keep track
 4. In the `src` folder, create a file called `index.js` and copy this code into
 it.
 
-```
+``` javascript
 function component() {
   const element = document.createElement('div');
   element.innerHTML = 'Hello, Spark!';
@@ -58,7 +58,7 @@ document.body.appendChild(component());
 5. In the `dist` folder, create a file called `index.html` and copy this code
 into it.
 
-```
+``` html
 <html>
   <head>
       <title>Hello, Spark!</title>
@@ -110,7 +110,7 @@ npm install webpack webpack-cli --save-dev
   can run against your package. Add a new one for building the site
    with Webpack:
 
-```
+``` json
 "scripts": {
   "build": "webpack"
 },
@@ -123,14 +123,13 @@ your site to use.
 9. Change the line in `index.html` where you set up the `<script>` 
 tag to look like this:
 
-
-```
+``` html
 <script src="main.js"></script>
 ```
 
 10. Build your website by running this command:
 
-```
+``` shell
 npm run build
 ```
 
@@ -161,7 +160,7 @@ npm install node-sass sass-loader css-loader mini-css-extract-plugin --save-dev
 12. In the root directory of your project, create a new file called
  `webpack.config.js` and paste this code into it.
 
-```
+``` javascript
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -188,7 +187,7 @@ module.exports = {
 13. At the top of `index.js`, add this reference to the uncompiled `scss`
  file:
 
-```
+``` javascript
 import "../src/style.scss"
 ```
 
@@ -199,7 +198,7 @@ Now when Webpack compiles `index.js`, this import line will include
 14. Now let’s write some CSS to compile. Create a new file in `src`
 called `style.scss` and copy this CSS into it:
 
-```
+``` css
 body {
   background-color: green;
 }
@@ -207,7 +206,7 @@ body {
 
 15. In `index.html`, add this reference to your new compiled CSS.
 
-```
+``` html
 <link rel="stylesheet" href="bundle.css"></link>
 ```
 
