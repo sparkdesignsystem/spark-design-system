@@ -1,3 +1,5 @@
+import { useEffect } from '@storybook/client-api';
+import { spinners } from './spinners';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -70,13 +72,17 @@ export const disabled = () => (
   `
 );
 
-export const loading = () => (
-  `
+export const loading = () => {
+  useEffect(() => {
+    spinners();
+  }, []);
+
+  return `
   <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner">
-    <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
+    Button
   </button>
-  `
-);
+  `;
+};
 
 export const fullWidthAtSmallViewport = () => (
   `
