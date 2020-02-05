@@ -6,144 +6,152 @@ import {
   SprkButton,
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
+import componentsMedia from '../images/components.svg';
+import developersMedia from '../images/developers.svg';
+import designersMedia from '../images/designers.svg';
+import foundationsMedia from '../images/foundations.svg';
+import newsMedia from '../images/news-and-updates.svg';
+import utilitiesMedia from '../images/utilities.svg';
 
 const teaserDesigners = {
   bodyText: `
-    Lorem ipsum dolor sit amet,
-    doctus invenirevix te. Facilisi perpetua.
+    Get started with Design by reading the principles
+    that we use in Spark Design System.
   `,
   cta: {
-    text: 'Get Started',
+    text: 'Go To Designer Basics',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: '/installing-spark/developers',
+    href: '/principles/design-principles',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: '/principles/design-principles',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgAlt: 'An illustration of a computer with a paintbrush.',
+    imgSrc: designersMedia,
     mediaVariant: 'img',
   },
-  title: 'Getting Started For Designers',
+  title: 'Designer Basics',
   titleFirst: false,
 };
 
 const teaserDevelopers = {
   bodyText: `
-    Lorem ipsum dolor sit amet, doctus
-    invenirevix te. Facilisi perpetua.
+    Learn how to install Spark’s
+    npm packages into the build
+    of your application. You’ll
+    also find support for setting
+    up Sass, React, Angular, and more.
   `,
   cta: {
-    text: 'Get Started',
+    text: 'Go To Developer Basics',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: 'https://sparkdesignsystem.com/',
+    href: '/installing-spark',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: '/installing-spark',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgAlt: 'An illustration of a computer with code displayed.',
+    imgSrc: developersMedia,
     mediaVariant: 'img',
   },
-  title: 'Getting Started For Developers',
+  title: 'Developer Basics',
   titleFirst: false,
 };
 
 const teaserComponents = {
   bodyText: `
-    Lorem ipsum dolor sit amet,
-    doctus invenirevix te.
-    Facilisi perpetua.
+    Explore the library of Spark
+    components and supporting
+    documentation, including
+    design guidelines, code
+    samples, and configuration
+    options.
   `,
   cta: {
-    text: 'See All Components',
+    text: 'Go To Components',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: 'https://sparkdesignsystem.com/',
+    href: '/using-spark/components/button',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: '/using-spark/components/button',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgAlt: 'An illustration of a graph paper and a magnifying glass.',
+    imgSrc: componentsMedia,
     mediaVariant: 'img',
   },
   title: 'Components',
   titleFirst: false,
 };
 
-const teaserFundamentals = {
+const teaserFoundations = {
   bodyText: `
-    Lorem ipsum dolor sit amet, doctus
-    invenirevix te. Facilisi perpetua.
+   Looking for our brand color palette,
+   typography guidelines, element spacing,
+    and other foundational style elements?
+    Start here.
   `,
   cta: {
-    text: 'Learn More',
+    text: 'Go To Foundations',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: 'https://sparkdesignsystem.com/',
+    href: '/using-spark/foundations/color',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: '/using-spark/foundations/color',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgAlt: 'Decorative illustrations of type and color.',
+    imgSrc: foundationsMedia,
     mediaVariant: 'img',
   },
-  title: 'Fundamentals',
+  title: 'Foundations',
   titleFirst: false,
 };
 
-const teaserDocumentaion = {
+const teaserUtils = {
   bodyText: `
-    Lorem ipsum dolor sit amet,
-    doctus invenirevix te. Facilisi perpetua.
+    CSS class utilities for overriding
+    values, enhancing accessibility,
+    theming, and more.
   `,
   cta: {
-    text: 'Learn More',
+    text: 'Go To Utilities',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: 'https://sparkdesignsystem.com/',
+    href: '/using-spark/foundations/css-utilities',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: '/using-spark/foundations/css-utilities',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgAlt: 'Decorative illustrations of pages.',
+    imgSrc: utilitiesMedia,
     mediaVariant: 'img',
   },
-  title: 'Documentation',
+  title: 'Utilities',
   titleFirst: false,
 };
 
 const teaserNews = {
   bodyText: `
-    Lorem ipsum dolor sit amet,
-    doctus invenirevix te.
-    Facilisi perpetua.
+    Get the latest release notes
+    and updates, as well as previous news and notes
   `,
   cta: {
-    text: 'See Latest Updates',
+    text: 'Go To News',
     ctaVariant: 'button',
     buttonVariant: 'secondary',
-    href: 'https://sparkdesignsystem.com/',
+    href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
   },
   media: {
-    href: 'https://sparkdesignsystem.com/',
+    href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
     mediaLinkElement: 'a',
-    imgAlt: 'placeholder image',
-    imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
-    mediaAnalyticsString: 'Card:teaser-link',
+    imgAlt: 'Decorative illustration of a clipboard.',
+    imgSrc: newsMedia,
     mediaVariant: 'img',
   },
-  title: 'News and Updates',
+  title: 'News And Updates',
   titleFirst: false,
 };
 
@@ -165,10 +173,9 @@ const IndexPage = () => (
 
           <SprkStackItem>
             <p className="sprk-b-TypeBodyTwo sprk-u-Measure">
-              Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Sed gravida urna quis nulla ultrices,
-              sed efficitur risus elementum. Vivamus
-              semper ex a lorem sodales, rhoncus rhoncus augue cursus.
+              Spark Design System is where we collect our best
+              solutions for how to design and build unified
+              digital experiences for the Rocket brands.
             </p>
           </SprkStackItem>
         </SprkStack>
@@ -177,31 +184,37 @@ const IndexPage = () => (
       <SprkStackItem>
         <div className="docs-o-Grid docs-o-Grid--three-col docs-o-Grid--large">
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserDesigners}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserDevelopers}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserComponents}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
-            teaserConfig={teaserFundamentals}
+            teaserConfig={teaserFoundations}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
-            teaserConfig={teaserDocumentaion}
+            teaserConfig={teaserUtils}
           />
 
           <SprkCard
+            additionalClasses="docs-c-Card"
             variant="teaser"
             teaserConfig={teaserNews}
           />
@@ -217,7 +230,10 @@ const IndexPage = () => (
           </SprkStackItem>
 
           <SprkStackItem>
-            <SprkButton variant="secondary">
+            <SprkButton
+              href="https://github.com/sparkdesignsystem/spark-design-system/blob/master/CONTRIBUTING.md"
+              variant="secondary"
+            >
               Learn More
             </SprkButton>
           </SprkStackItem>

@@ -11,6 +11,9 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('footer')}
+- The Footer is a navigation landmark for
+accessibility tools. The attribute \`role=”contentinfo”\`
+must be present.
     `,
     docs: { iframeHeight: 800 },
   },
@@ -27,54 +30,58 @@ export const defaultStory = () => {
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
             <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne">
-              Global Links
+              Our Sister Companies
             </h3>
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
+                  <img src="https://spark-assets.netlify.com/rocket_by_ql.svg" alt="Rocket Mortgage by Quicken Loans Logo">
                 </a>
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Lorem ipsum dolor sit amet, consectetur.
+                Buy a home, refinance, or manage your mortgage online with
+                America's largest mortgage lender
               </p>
             </div>
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
+                  <img src="https://spark-assets.netlify.com/rocket_loans.svg" alt="Rocket Loans Logo">
                 </a>
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Lorem ipsum dolor sit amet, consectetur.
+                Get a personal loan to consolidate debt, renovate
+                your home and more
               </p>
             </div>
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
+                  <img src="https://spark-assets.netlify.com/rocket_homes.svg" alt="Rocket Homes Logo">
                 </a>
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Lorem ipsum dolor sit amet, consectetur.
+                Get a real estate agent handpicked for you and
+                search the latest home listings
               </p>
             </div>
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/spark-logo-updated.svg" alt="spark logo">
+                  <img src="https://spark-assets.netlify.com/rocket_hq.svg" alt="Rocket HQ Logo">
                 </a>
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
-                Lorem ipsum dolor sit amet, consectetur.
+                Access tools and articles that can help
+                you reach your financial goals
               </p>
             </div>
           </div>

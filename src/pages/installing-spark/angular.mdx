@@ -2,174 +2,194 @@
   title: Angular Installation
   order: 4
 ---
+import styleCheck from '../../images/installing-spark/angular/style-check.png';
 
-# Angular Installation 📐
+# Setting Up Spark
+## For Angular
+This guide will walk you through
+installing and using Spark on an
+existing Angular application.
+For help with setting up the
+necessary development environment, see the
+[Angular CLI Overview](https://angular.io/cli).
 
-This is a guide for installing Spark and using Spark Angular components on an existing Angular application. You can find a guide for setting up the necessary development environment in the Angular CLI Guide. When setting up your application, make sure to include Angular Routing and SCSS when prompted.
+By the end of this, you’ll have all the
+Spark JavaScript and CSS available
+in your application to start
+building components.
 
-What we'll cover in this guide:
+> Note: This covers setting up Spark for
+Angular 6, 7 and 8. Spark doesn’t
+currently support Angular JS.
 
-🧱 Installing the Spark Package
+Before you begin, make sure that:
+ - You have a functioning Angular app similar
+to the one in the [Angular CLI Overview](https://angular.io/cli)
+- Sass is installed and functioning
+- Angular Routing is installed
+(not required by Angular CLI, but it is required for Spark)
 
-🧭 Discovering component code samples
+## Installing Spark Packages
 
-📘 Including Spark Angular Components in your application
+1. Start by going to your project
+directory and install `spark` and `spark-angular`
+by pasting the following line in a command line application.
 
-At the end of this guide you will have all the Spark JavaScript and CSS available in your application and be ready to build with Spark components.
-
-As of this writing, Angular 6, 7, and 8 are supported. Spark does not officially support Angular JS.
-
-## Before We Begin
-
-This guide assumes
-
-you have a functioning Angular app similar to the one created in the Angular CLI Guide
-
-Sass is installed and functioning (this is part of the Angular CLI Guide)
-
-Angular Routing is installed (not required by this guide, but it is required by Spark)
-
-You can download a repo with these prerequisites here.
-
-## 🧱 Installing Spark Packages
-
-To begin, navigate to your project directory and install spark and spark-angular by pasting the following line in a command line application.
-
-```
+``` bash
 npm install -save-dev @sparkdesignsystem/spark @sparkdesignsystem/spark-angular
 ```
 
-Edit app.module.ts to import the spark-angular library as well as the BrowserAnimationsModule, and include them in @NgModule's imports array. This file can be found in your-app/src/app.
+2. Edit `app.module.ts` to import the `spark-angular` library
+and also the `BrowserAnimationsModule`, and include
+them in `@NgModule`'s `imports` array. This file can be
+found in `your-app/src/app`.
 
-```
+``` typescript
 import { BrowserModule } from '@angular/platform-browser';
-
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-
-
-
 import { SparkAngularModule } from '@sparkdesignsystem/spark-angular';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
 @NgModule({
+  declarations: [
+    AppComponent
+  ],
 
-   declarations: [
+  imports: [
+    SparkAngularModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule
+  ],
 
-      AppComponent
-
-   ],
-
-   imports: [
-
-      SparkAngularModule,
-
-      BrowserAnimationsModule,
-
-      BrowserModule,
-
-      AppRoutingModule
-
-   ],
-
-   providers: [],
-
-   bootstrap: [AppComponent]
-
+  providers: [],
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }
 ```
 
+3. Next, edit `styles.scss` to `@import` the Spark
+stylesheet. This file can be found in `you-app/src`.
 
-Next, edit styles.scss to @import the spark stylesheet. This file can be found in you-app/src.
-
-```
+``` scss
 @import "node_modules/@sparkdesignsystem/spark/spark.scss"
 ```
 
 > Note: Importing Spark SCSS at the component level can lead to unexpected behavior.
 
-Great! Back on the command line, let’s build and run your new application by running npm run start and opening http://localhost:4200/ in your web browser. When Angular builds, Spark’s styles will be processed and bundled into the application. The best way to verify that this is working is to add a Spark component, which we will do in the next step. You can also verify that Spark’s styles are being included by opening your browser’s developer tools and inspecting the DOM. There should be a `<style>` tag in the `<head>` that includes Spark’s styles.
+4. Back on the command line, build
+and run your new application by running
+`npm run start` and opening `http://localhost:4200/`
+in your web browser. When Angular builds,
+Spark’s styles will be processed and
+bundled into the application.
 
-IMAGE GOES here
+You can verify that Spark’s
+styles are being included by
+opening your browser’s developer
+tools and inspecting the DOM.
+There should be a `<style>`
+tag in the `<head>` that includes
+Spark’s styles.
 
-## 🧭 Navigating to Component Code Samples
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    src={styleCheck}
+    alt="Screenshot of DOM with Spark Styles"/>
+</div>
 
-Now that everything is building, let’s include a Spark Button component in your application.
+## Adding Angular Components
 
-On sparkdesignsystem.com, we’ve documented all the Spark components with copy/paste examples for many variants and configurations you can use in your application.
+Now that everything is building,
+let’s add a component to your
+application that will allow us
+to test that both Spark’s styles
+and functionality are working.
+We’ll use the
+[Loading Button](https://angular.sparkdesignsystem.com/?path=/docs/components-button--loading)
+component to do this. You can
+find code for all Spark
+components at [angular.sparkdesignsystem.com](angular.sparkdesignsystem.com)
 
-TODO: Instructions on accessing the Gatsby/Storybook site and getting to the Angular copy/paste code. Fill this section in once the site navigation is more finalized.
+5. Copy the sample code inside `app.component.html`.
 
-## 📘 Including Spark Angular Components in Your Application
+This file can be found in
+`your-app/src/app`.
+You can delete everything in this
+file other than the final line (`<router-outlet></router-outlet>`) .
 
-Let's add a component to your application that will allow us to test that both Spark’s styles and functionality are working. The Spinner variant of the Button component is perfect for this.
-
-First, copy the Spinner Button example code inside app.component.html. This file can be found in your-app/src/app. You can delete everything in this file other than the final line (<router-outlet></router-outlet>)
-
-```
+``` markup
 <button
-
-   (click)="checkSpinner($event)"
-
-   sprkButton
-
+  (click)="checkSpinner($event)"
+  sprkButton
 >
-
-   Button
-
+  Button
 </button>
 ```
 
-You should now see a Spark Button in your application! It’s ok if it looks slightly cropped, that’s just because we don’t have any layout on the page.
+You should now see a Spark Button in your
+application! It might look slightly
+cropped, but that’s OK. It’s
+because we don’t yet have
+any layout on the page.
 
-Now let’s add some TypeScript to trigger the Spinner behavior. Copy this code into the AppComponent class inside app.component.ts. This file can be found in your-app/src/app.
+6. Now let’s add some TypeScript
+to trigger the Spinner
+behavior. Copy this code into
+the `AppComponent` class inside
+`app.component.ts`. This file can
+be found in `your-app/src/app`.
 
-```
+``` typescript
 export class AppComponent {
+  submitSpinning = false;
 
-   submitSpinning = false;
-
-
-
-   checkSpinner(event): void {
-
-      if (!this.submitSpinning) {
-
-         setSpinning(event.target, {});
-
-         this.submitSpinning = true;
-
-      }
-
-   }
-
+  checkSpinner(event): void {
+    if (!this.submitSpinning) {
+      setSpinning(event.target, {});
+      this.submitSpinning = true;
+    }
+  }
 }
 ```
 
-Finally, import the setSpinning utility function from the Spark library. This goes at the top of your component’s .ts file, in our case app.component.ts.
+7. Finally, import the `setSpinning`
+utility function from the Spark
+library. This goes at the top
+of your component’s `.ts` file,
+in our case `app.component.ts`.
 
-```
+``` typescript
 import { setSpinning } from '@sparkdesignsystem/spark';
 ```
 
-Head back to your web browser and click the Spark Button that you added earlier. If everything is working correctly, the text should be replaced with an animated spinner.
+8. Head back to your web browser and
+click the Spark Button that you
+added earlier. If everything's
+working correctly, the text
+should be replaced with an animated spinner.
 
 GIF GOES here
 
-## 🎉 You did it!
+## You did it!
 
-You now have a development environment with Spark installed and are ready to start adding more Spark components. If you need additional help configuring Spark for your environment, check out some of our other guides and email the Spark team with any questions.
+You now have a development
+environment set up with Spark
+installed, and you’re ready
+to start building!
+For Spark support,
+[email the Spark team](mailto:sparkdesignsystem@quickenloans.com)
+with any questions and we’ll respond
+as quickly as possible.
 
-The Polyfills Guide will help you import JavaScript polyfills needed for Spark. Polyfills are needed for Spark to function across all modern browsers.
+## Additional Topics
+Check out these guides for more information on setting up Spark:
 
-For help importing the Spark SVG Icon Set, check out our Icon Installation Guide.
-
-Guidance on accessing and including the Rocket Sans font used by Spark can be found in our Font Installation Guide.
+- The [Icon Installation Guide](/installing-spark/installing-icons)
+for importing the Spark SVG Icon Set
+- The [Font Installation Guide](/installing-spark/installing-fonts) for instructions
+on using the Rocket Sans font

@@ -17,7 +17,12 @@ export default {
     )
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('footer')}`,
+    info: `
+${markdownDocumentationLinkBuilder('footer')}
+- The Footer is a navigation landmark for
+accessibility tools. The attribute \`role=”contentinfo”\`
+must be present.
+  `,
     docs: { iframeHeight: 800 },
   },
 };
@@ -120,39 +125,39 @@ export const defaultStory = () => ({
         }
       ]"
 
-      globalHeading="Global Links"
+      globalHeading="Our Sister Companies"
       [globalLinks]="[
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur.',
+          text: 'Buy a home, refinance, or manage your mortgage online with America&#8217;s largest mortgage lender',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-logo-updated.svg',
+            'https://spark-assets.netlify.com/rocket_by_ql.svg',
           analyticsString: 'link-1',
-          iconScreenReaderText: 'auto loans'
+          imgAlt: 'Rocket Mortgage by Quicken Loans Logo'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur.',
+          text: 'Get a personal loan to consolidate debt, renovate your home and more',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-logo-updated.svg',
-          imgAlt: 'Spark Placeholder Image',
+            'https://spark-assets.netlify.com/rocket_loans.svg',
+          imgAlt: 'Rocket Loans Logo',
           analyticsString: 'link-2'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur.',
+          text: 'Get a real estate agent handpicked for you and search the latest home listings',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-logo-updated.svg',
-          imgAlt: 'Spark Placeholder Image',
+            'https://spark-assets.netlify.com/rocket_homes.svg',
+          imgAlt: 'Rocket Homes Logo',
           analyticsString: 'link-3'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur.',
+          text: 'Access tools and articles that can help you reach your financial goals',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.com/spark-logo-updated.svg',
+            'https://spark-assets.netlify.com/rocket_hq.svg',
           analyticsString: 'link-4',
-          iconScreenReaderText: 'auto loans'
+          imgAlt: 'Rocket HQ Logo'
         }
       ]"
 

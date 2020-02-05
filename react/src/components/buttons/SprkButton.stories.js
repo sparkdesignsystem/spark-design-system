@@ -15,7 +15,7 @@ ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
 The Button component can use either a button (\`<button>\`)
 or anchor (\`<a>\`) HTML element. It is very important
-for accessibility to choose the correct element.  
+for accessibility to choose the correct element.
 
 - Button should use an \`<a>\` element if it navigates to a new page.
 - Button should use a \`<button>\` element if it is performing
@@ -27,7 +27,7 @@ always use a \`<button>\` element.
 - If a Button is using an \`<a>\` element, you
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
-alternative text must be provided. 
+alternative text must be provided.
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
@@ -36,7 +36,7 @@ submit the form, the attribute \`type=”button”\` must be used.
 Instead use \`<button type=”submit”>\`
 - If a Button is Disabled, you must add the \`disabled\` attribute
 in addition to the \`sprk-is-Disabled\` class so that it doesn’t
-receive interaction. 
+receive interaction.
 `,
    },
 };
@@ -84,7 +84,7 @@ export const disabled = () => (
   </SprkButton>
 );
 
-export const spinner = () => (
+export const loading = () => (
   <SprkButton
     loading={true}
     element="button"

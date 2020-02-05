@@ -62,6 +62,8 @@ into the component template.
     - \`logo-slot\`: Used for adding your logo.
     - \`navItem-slot\`: Used for the link in the upper right
     of the mobile version of the masthead (typically a sign in link)
+- The Masthead is a navigation landmark for accessibility
+tools. The attribute \`role=”banner”\` must be present.
 `,
     docs: { iframeHeight: 300 },
   },
@@ -133,7 +135,7 @@ export const defaultStory = () => ({
         <path
           d="M252.29,92.1l1.33-1.89a8.59,8.59,0,0,0,5.95,2.23c2.85,0,4.64-1.39,4.64-3.93s-2-3.35-5-4.4C256.5,83.18,253,82,253,77.91c0-3.68,2.85-6,7-6a10,10,0,0,1,5.76,1.7l-1.08,2A8.19,8.19,0,0,0,260,74.07c-2.88,0-4.68,1.43-4.68,3.78s1.95,3.22,4.84,4.28c3.22,1.14,6.35,2.17,6.35,6.25s-3,6.2-7.13,6.2A10.58,10.58,0,0,1,252.29,92.1Z"
         />
-        <path 
+        <path
           d="M278.4,85.47v8.8h-2.29v-8.8l-7.84-13.19h2.61l6.47,10.9,6.44-10.9h2.45Z"
         />
         <path
@@ -365,7 +367,7 @@ export const extended = () => ({
         <path
           d="M252.29,92.1l1.33-1.89a8.59,8.59,0,0,0,5.95,2.23c2.85,0,4.64-1.39,4.64-3.93s-2-3.35-5-4.4C256.5,83.18,253,82,253,77.91c0-3.68,2.85-6,7-6a10,10,0,0,1,5.76,1.7l-1.08,2A8.19,8.19,0,0,0,260,74.07c-2.88,0-4.68,1.43-4.68,3.78s1.95,3.22,4.84,4.28c3.22,1.14,6.35,2.17,6.35,6.25s-3,6.2-7.13,6.2A10.58,10.58,0,0,1,252.29,92.1Z"
         />
-        <path 
+        <path
           d="M278.4,85.47v8.8h-2.29v-8.8l-7.84-13.19h2.61l6.47,10.9,6.44-10.9h2.45Z"
         />
         <path

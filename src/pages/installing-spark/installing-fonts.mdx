@@ -20,7 +20,7 @@ your Sass build *before importing Spark*.
 | Sass Variable | Type | Description |
 |---|---|---|
 | `$sprk-using-webfonts` | boolean | This tells Spark that webfonts will be used. The default setting is `false`. Set to `true` to use Spark webfonts.|
-| `$sprk-font-display` | string (optional) | (Optional) This setting is used to control the behavior of text while fonts are still being loaded. The default value is `swap`, which will cause text to render using a fallback font until the custom font is available. At which point, the correct font is `swap`ped in. More info on the `font-display` property and its possible values can be found [here](https://css-tricks.com/font-display-masses/#article-header-id-1).|
+| `$sprk-font-display` | string (optional) | (Optional) This setting is used to control the behavior of text while fonts are still being loaded. The default value is `swap`, which will cause text to render using a fallback font until the custom font is available. At which point, the correct font is `swap`ped in. More info on the `font-display` property and it's possible values can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display).|
 | `$sprk-webfonts` | Sass List | Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. (See below for example.)  |
 
 The `$sprk-webfonts` setting requires a series of font declarations formatted like this:

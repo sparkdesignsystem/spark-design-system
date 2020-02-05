@@ -39,6 +39,7 @@ be provided in the label, use Helper Text.
 
 Each input has an error and disabled state.
 
+### Error
 <ComponentPreview
   componentName="input-text--invalid-text-input"
   hasReact
@@ -46,6 +47,7 @@ Each input has an error and disabled state.
   hasHTML
 />
 
+### Disabled
 <ComponentPreview
   componentName="input-text--disabled-text-input"
   hasReact
@@ -73,7 +75,7 @@ Huge Text Input is a larger version of Text
 Input. The label is inside the Input instead
 of above it. On focus, the label animates to
 the top left of the Input and placeholder
-text takes its place.  
+text takes its place.
 
 Huge Text Input was designed for a multi-step
 form flow that presents a single Input per page.
@@ -121,7 +123,7 @@ choose one option from a list.
 #### Guidelines
 
 - If the list of choices becomes too large,
-consider using a Select Box instead. 
+consider using a Select Box instead.
 
 <ComponentPreview
   componentName="input-radio--radio-button"
@@ -137,7 +139,7 @@ Allows a user to select one choice from a set of options.
 #### Guidelines
 
 - If there are only a few options in the set,
-consider using Radio Button. 
+consider using Radio Button.
 - Select Box is not the same as the Dropdown
 component.
 
@@ -153,7 +155,7 @@ component.
 This is a larger version of the Select Box,
 consistent with the style of Huge Text Input.
 The label is shown inside the select. On focus,
-the label animates to the top left.  
+the label animates to the top left.
 
 Like Huge Text Input, Huge Select was designed
 for a multi-step form flow that presents a single
@@ -259,7 +261,7 @@ Percentage Input is used to collect a percent value.
 Password Input is used for collecting a password.
 - The value is masked by default.
 - Checking "Show Password" removes the mask and
-shows the entered value.  
+shows the entered value.
 - Password Input can also be a Huge Text Input.
 For full functionality, see guidelines in the
 Text Huge Inputs section.
@@ -333,17 +335,18 @@ the distance from the current date because it is more
 difficult for a user to find the date they need when
 they must page through dozens of months.
 - Additional engineering is required to reformat user
-input into a date pattern (MM/DD/YYYY). 
+input into a date pattern (MM/DD/YYYY).
 - After valid input, it should reformat to a two digit
 number month, followed by a forward slash, two digit
 number day, followed by another forward slash, and
-four digit number year. 
+four digit number year.
 - Additional engineering is required for
-validation functionality. 
+validation functionality.
 
 <ComponentPreview
   componentName="input-date-picker--default-story"
   hasReact
+  minHeight="30rem"
   hasAngular
   hasHTML
 />
