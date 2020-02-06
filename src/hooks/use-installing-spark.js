@@ -4,12 +4,22 @@ export const useInstallingSparkData = () => {
   const { allMdx } = useStaticQuery(
     graphql`
       {
-        allMdx(filter: {fileAbsolutePath: {regex: "/src\\/pages/installing-spark/"}, frontmatter: {excludeFromSideNav: {ne: true}}}) {
+        allMdx(
+          filter: {
+            fileAbsolutePath: { regex: "/src/pages/installing-spark/" }
+            frontmatter: { excludeFromSideNav: { ne: true } }
+          }
+          sort: {
+            fields: [frontmatter___order]
+            order: ASC
+          }
+        ) {
           edges {
             node {
               id
               frontmatter {
                 title
+                order
               }
               parent {
                 ... on File {
@@ -22,7 +32,7 @@ export const useInstallingSparkData = () => {
           }
         }
       }
-    `,
+    `
   );
   return allMdx.edges;
 };
