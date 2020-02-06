@@ -59,3 +59,5 @@ export { default as SprkModal }
   from './components/modals/SprkModal';  
 export { default as SprkStepper }
   from './components/stepper/SprkStepper';
+export { default as SprkStepperStep } 
+  from './components/stepper/components/SprkStepperStep/SprkStepperStep';
