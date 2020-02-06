@@ -47,6 +47,9 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- Requires Additional Engineering:
+  - Show/Hide Functionality - Create a function that toggles
+  the \`type\` attribute of the input between \`text\` and \`password\`.
     `,
     docs: { iframeHeight: 200 },
   }

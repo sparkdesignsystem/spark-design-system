@@ -11,7 +11,11 @@ ${markdownDocumentationLinkBuilder('input')}
 - The \`sprk-b-InputContainer--huge\` class is
 available for use on this input. For full
 functionality, see guidelines in the
-[Huge Text Input](/docs/components-input-huge-text--huge-text-input) section. 
+[Huge Text Input](/docs/components-input-huge-text--huge-text-input) section.
+- Requires Additional Engineering:
+  - Show/Hide Functionality - Create a function that toggles
+  the input element’s \`type\` attribute between \`text\` and
+  \`password\` and connect it to the checkbox.
     `,
     docs: { iframeHeight: 140 },
   },
