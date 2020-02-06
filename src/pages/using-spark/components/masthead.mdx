@@ -1,0 +1,99 @@
+---
+  title: Masthead
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Masthead
+
+The Masthead component provides a consistent
+way to convey brand identity. It contains the
+logo and navigation elements for the application.
+
+<ComponentPreview
+  componentName="masthead--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  maxWidth="100%"
+  minHeight="20rem"
+/>
+
+### Usage
+
+Nearly all applications should have a Masthead
+at the top of every page. An example of an
+exception would be a marketing landing page
+with a unique design.
+
+On wide viewports, the Masthead is fixed to the
+top of the screen. As the user scrolls, content
+moves under the Masthead. On narrow viewports,
+when the user scrolls, the Masthead moves off
+the top of the screen. When the user scrolls back
+up the page, the Masthead returns into view
+for easy access.
+
+### Guidelines
+
+- There is room for flexibility inside of
+the Masthead so you can combine navigation
+with other functionality (e.g. search, phone
+numbers, settings, etc.). Avoid trying to
+add too many additional features that may
+overwhelm or confuse the user.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Default Masthead
+
+The Default Masthead is the most compact
+way to convey brand identity and provide
+basic navigation and other features.
+- The number of navigation items that
+can be used in the Default Masthead is
+only limited by what can fit on a single
+row on wide viewports.
+- When the number of navigation items is
+too large to fit in one row, the Extended
+Masthead must be used instead.
+
+<ComponentPreview
+  componentName="masthead--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  maxWidth="100%"
+  minHeight="20rem"
+/>
+
+### Extended Masthead
+
+The Extended Masthead moves the navigation
+items to a separate row. This allows for
+more navigation items to be used and
+additional features to be added to the first row.
+- The number of navigation items in the Extended
+Masthead should be a minimum of 3 and maximum of 6.
+
+<ComponentPreview
+  componentName="masthead--extended"
+  hasReact
+  hasAngular
+  hasHTML
+  maxWidth="100%"
+  minHeight="20rem"
+/>
+
+## Anatomy
+
+- Masthead must have a logo
+- Masthead may include navigation
+- Masthead has space for optional features
+e.g. phone number, sign in button, account menu,
+account selector, etc.

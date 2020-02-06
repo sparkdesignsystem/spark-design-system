@@ -1,0 +1,23 @@
+<script>
+  (function() {
+    function runOnPageChange() {
+      var getNogoLinks = Array.prototype.slice.call(document.querySelectorAll('a[href="#nogo"]'));
+      getNogoLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) { e.preventDefault(); })
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var callback = function(mutationsList) {
+        mutationsList.forEach(function (mutation) {
+          if (mutation.type == 'childList') {
+            runOnPageChange();
+          }
+        });
+      };
+
+      var observer = new MutationObserver(callback);
+      var config = { childList: true, subtree: true };
+      observer.observe(document.getElementById('root'), config);
+    }, false);
+  })();
+</script>

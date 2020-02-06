@@ -1,0 +1,30 @@
+.docs-masthead .sprk-b-InputContainer {
+  margin-bottom: 0;
+}
+
+.docs-masthead .sprk-c-Masthead__content {
+  flex-wrap: wrap;
+}
+
+.docs-masthead .sprk-c-Masthead__nav-item {
+  width: 100%;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.docs-masthead .sprk-c-Masthead__menu {
+  flex: 0 0 auto;
+}
+
+.docs-masthead .sprk-c-Masthead__branding {
+  padding-right: $sprk-space-misc-c;
+}
+
+/*
+ * Override because Gatsby
+ * wraps masthead in extra container
+ * that breaks our masthead in iOS Safari.
+ */
+.docs-masthead .sprk-c-Masthead__narrow-nav {
+  height: auto;
+}

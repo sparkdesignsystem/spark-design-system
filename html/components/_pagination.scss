@@ -1,0 +1,91 @@
+// ==================================================================
+// Pagination
+// ==================================================================
+////
+/// @group pagination
+////
+.sprk-c-Pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $sprk-pag-max-width;
+  width: 100%;
+}
+
+// Pag links have a border when hovered
+.sprk-c-Pagination__link {
+  color: $sprk-pag-link-color;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  font-weight: $sprk-pag-link-font-weight;
+  align-items: center;
+  justify-content: center;
+  width: $sprk-pag-circle-size;
+  height: $sprk-pag-circle-size;
+  text-align: center;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $sprk-pag-link-color-hover;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $sprk-pag-selection-color;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+/// Adds styles for the
+/// currently selected pagination link.
+.sprk-c-Pagination__link--current {
+  background-color: $sprk-pag-selection-color;
+  color: $sprk-pag-selection-link-color;
+  font-weight: $sprk-pag-current-link-font-weight;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $sprk-pag-selection-link-color-hover;
+  }
+}
+
+.sprk-c-Pagination__icon {
+  color: $sprk-pag-link-color;
+
+  &:visited {
+    color: $sprk-pag-link-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $sprk-pag-selection-color;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.sprk-c-Pagination__icon.sprk-b-Link--disabled {
+  color: $sprk-black-tint-50;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: $sprk-black-tint-50;
+  }
+}

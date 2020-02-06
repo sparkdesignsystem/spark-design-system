@@ -1,0 +1,99 @@
+// ==================================================================
+// Input Component
+// ==================================================================
+
+////
+/// @group input
+////
+
+.sprk-b-TextInput,
+// TODO sprk-b-TextInput to be deprecated and replace with sprk-b-InputContainer__input
+.sprk-b-InputContainer__input {
+  box-shadow: $sprk-text-input-box-shadow;
+  border: $sprk-text-input-border;
+  border-radius: $sprk-text-input-border-radius;
+  color: $sprk-text-input-color;
+  font-family: $sprk-text-input-font-family;
+  font-size: $sprk-text-input-font-size;
+  font-weight: $sprk-text-input-font-weight;
+  line-height: $sprk-text-input-line-height;
+  height: $sprk-text-input-height;
+  outline: $sprk-text-input-outline;
+  padding: $sprk-text-input-padding;
+  transition: $sprk-text-input-transition;
+}
+
+.sprk-b-TextInput:focus {
+  border-color: $sprk-text-input-focus-border-color;
+}
+
+.sprk-b-TextInput--error,
+.sprk-b-TextInput--error:focus {
+  border-color: $sprk-text-input-error-border-color;
+}
+
+.sprk-b-TextInput[disabled] {
+  background-color: $sprk-text-input-disabled-background-color;
+  border-color: $sprk-text-input-disabled-border-color;
+  color: $sprk-text-input-disabled-color;
+  cursor: not-allowed;
+}
+
+.sprk-b-TextInput--has-svg-icon {
+  padding: $sprk-text-input-has-icon-padding;
+}
+
+.sprk-b-TextInput--has-text-icon {
+  padding: $sprk-text-input-has-text-icon-padding;
+}
+
+/// For an input that contains a SVG that is positioned to the right.
+.sprk-b-InputContainer__input--has-icon-right {
+  padding: $sprk-input-has-icon-padding-right;
+}
+
+.sprk-b-TextInput[readonly] {
+  color: $sprk-text-input-readonly-color;
+}
+
+.sprk-b-HelperText {
+  color: $sprk-helper-color;
+  font-size: $sprk-helper-font-size;
+  font-weight: $sprk-helper-font-weight;
+  line-height: $sprk-helper-line-height;
+  margin: $sprk-helper-margin;
+}
+
+// Placeholder colors
+// Chrome/Opera/Safari
+::-webkit-input-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  line-height: normal;
+  color: $sprk-placeholder-color;
+}
+
+// Firefox 19+
+::-moz-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  color: $sprk-placeholder-color;
+}
+
+// IE 10+
+:-ms-input-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  color: $sprk-placeholder-color;
+}
+
+// Firefox 18-
+:-moz-placeholder {
+  font-size: $sprk-placeholder-font-size;
+  font-weight: $sprk-placeholder-font-weight;
+  font-family: $sprk-placeholder-font-family;
+  color: $sprk-placeholder-color;
+}

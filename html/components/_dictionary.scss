@@ -1,0 +1,61 @@
+// ==================================================================
+// Dictionary
+// ==================================================================
+
+////
+/// @group dictionary
+////
+
+.sprk-c-Dictionary {
+  border: $sprk-dictionary-border;
+}
+
+.sprk-c-Dictionary__keyvaluepair {
+  width: 100%;
+  padding: $sprk-space-l / 2;
+
+  @media all and (min-width: $sprk-dictionary-breakpoint) {
+    display: table;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sprk-c-Dictionary .sprk-b-Label {
+  font-size: $sprk-dictionary-label-font-size;
+  line-height: $sprk-dictionary-label-line-height;
+  font-weight: $sprk-dictionary-label-font-weight;
+}
+
+/// Adds a background color to every
+/// even-numbered row in the dictionary.
+/// @name .sprk-c-Dictionary--striped
+
+// prettier-ignore
+.sprk-c-Dictionary--striped .sprk-c-Dictionary__keyvaluepair:nth-child(even) {
+  background-color: $sprk-dictionary-stripe-color;
+}
+
+.sprk-c-Dictionary__key,
+.sprk-c-Dictionary__value {
+  @media all and (min-width: $sprk-dictionary-breakpoint) {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+.sprk-c-Dictionary__value {
+  text-align: left;
+
+  @media all and (min-width: $sprk-dictionary-breakpoint) {
+    text-align: right;
+  }
+}
+
+.sprk-c-Dictionary__key {
+  margin-bottom: $sprk-space-xs;
+
+  @media all and (min-width: $sprk-dictionary-breakpoint) {
+    margin-bottom: 0;
+  }
+}

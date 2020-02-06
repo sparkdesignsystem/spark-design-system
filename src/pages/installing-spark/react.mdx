@@ -1,0 +1,128 @@
+---
+  title: React Installation
+  order: 5
+---
+import reactApp from '../../images/installing-spark/react/react-app.png';
+import styleCheck from '../../images/installing-spark/react/style-check.png';
+import buttonLoaded from '../../images/installing-spark/react/button-loaded.png';
+import spinnergif from '../../images/installing-spark/react/react-spinner.gif';
+
+# Installing Spark in a React Project
+
+This guide will walk you through installing and using Spark on an existing
+React site. For help with setting up the necessary development environment,
+see the [React App Getting Started Guide](https://create-react-app.dev/docs/getting-started).
+
+By the end of this, you’ll have all the Spark React components available
+in your site.
+
+## Installing Sass
+Sass is a tool that processes and compiles CSS. You’ll need to use Sass
+to import Spark styles into your site.
+
+1. Run this command to install Sass:
+```
+npm install node-sass --save-dev
+```
+2. Rename `App.css` to `App.scss`
+3. In `App.js`, update the import line to point at the new filename.
+``` javascript
+import './App.scss'
+```
+4. Create a new file in src called `styles.scss` and copy this CSS into it:
+``` css
+body {
+  border: 50px solid pink;
+}
+```
+5. In `App.scss`, import this new file:
+``` javascript
+@import ‘./styles.scss’;
+```
+
+If your React server has stopped, restart it now and view your compiled
+React site. You should see the new CSS you’ve written included in the
+site, along with the original React CSS:
+
+
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={reactApp}
+    alt="Screenshot of Create React App running in a browser."/>
+</div>
+
+## Install Spark Packages
+Now we’ll use Sass to import all the Spark CSS.
+
+6. Download the required packages with this command. It contains all
+of the HTML, JavaScript, and CSS needed to run Spark React components.
+```
+npm install @sparkdesignsystem/spark @sparkdesignsystem/spark-react --save-dev
+```
+7. Import the Spark Sass file into the main Sass file (e.g., `App.scss`).
+``` javascript
+@import '../node_modules/@sparkdesignsystem/spark/spark.scss';
+```
+When you build and run your website, all the Spark CSS will now be bundled
+into your output. You can verify this by inspecting your site’s DOM and
+looking for the Spark CSS. There should be a `<style>` tag in the `<head>`
+of your page that includes Spark’s styles.
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={styleCheck}
+    alt="Screenshot of DOM with Spark Styles"/>
+</div>
+If Spark React is installed correctly, you should see these CSS rules
+listed in your page’s code.
+
+## Adding React Components
+Let’s add a component that will allow us to test that both Spark’s styles
+and functionality are working. We’ll use
+the [Loading Button](https://react.sparkdesignsystem.com/?path=/docs/components-button--loading)
+component to do this. You can find code for all Spark components
+at [react.sparkdesignsystem.com](https://react.sparkdesignsystem.com/).
+
+8. Add a reference to the `SprkButton` component at the top
+of `App.js`.
+
+``` javascript
+import { SprkButton } from '@sparkdesignsystem/spark-react';
+```
+
+9. Copy the sample code into the `return` block in `App.js`.
+``` javascript
+function App() {
+  return (
+    <SprkButton loading>Submit</SprkButton>
+  );
+}
+```
+You should now see a Spark Button!
+
+
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={spinnergif}
+    alt="Screenshot of React App with Spark Spark Button"/>
+</div>
+
+## You did it!
+You now have a development environment set up with Spark
+installed and you’re ready to start  building!
+
+For Spark support, you can [email the Spark team](mailto:sparkdesignsystem@quickenloans.com)
+with any questions and we’ll respond as quickly as possible.
+
+## Additional Topics
+Check out these guides for more information on setting up Spark:
+
+- The [Icon Installation Guide](/installing-spark/installing-icons)
+for importing the Spark SVG Icon Set.
+- The [Font Installation Guide](/installing-spark/installing-fonts)
+for instructions on using the Rocket Sans font.

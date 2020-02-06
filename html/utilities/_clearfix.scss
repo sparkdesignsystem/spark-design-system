@@ -1,0 +1,28 @@
+// ==========================================================================
+// Clearfix
+// ==========================================================================
+
+//
+// Micro clearfix from http://cssmojo.com/latest_new_clearfix_so_far/.
+// Extend the clearfix placeholder (@extend %clearfix) to avoid
+// the .clearfix class appearing in your markup. I mostly include the
+// class for easier debugging in your browser dev tools.
+///
+
+/// Clearfix is a method of float containment. When applied to a container
+/// with floated children it forces the container to span the entire vertical
+/// extent of the children as if they weren't pulled out of the document flow
+/// by the floats. Elements that come after the Clearfixed element will no
+/// longer wrap around the floated children. The primary way to use `Clearfix`
+/// in Spark is by extending the placeholder in your Sass (e.g.
+/// `@extend %ClearFix;`). It can also be used by applying the class directly
+/// to the parent element, typically only used for debugging.
+/// @group multi-layout
+%ClearFix,
+.sprk-u-ClearFix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

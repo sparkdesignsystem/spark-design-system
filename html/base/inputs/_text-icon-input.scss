@@ -1,0 +1,18 @@
+////
+/// @group input
+////
+
+/// Text inputs with icons.
+.sprk-b-TextInputIconContainer--has-text-icon {
+  &::before {
+    content: $sprk-monetary-symbol;
+    display: block;
+    font-size: $sprk-input-text-icon-font-size;
+    font-weight: $sprk-input-text-icon-font-weight;
+    line-height: 1;
+    margin-left: $sprk-input-text-icon-offset-x;
+    position: absolute;
+    top: calc(100% - #{$sprk-input-text-icon-offset-y});
+    z-index: $sprk-input-text-icon-z-index;
+  }
+}

@@ -1,0 +1,202 @@
+---
+  title: Angular Installation
+  order: 4
+---
+import styleCheck from '../../images/installing-spark/angular/style-check.png';
+import spinnergif from '../../images/installing-spark/angular/angular-spinner.gif';
+
+# Installing Spark in an Angular Project
+
+This guide will walk you through
+installing and using Spark on an
+existing Angular application.
+For help with setting up the
+necessary development environment, see the
+[Angular CLI Overview](https://angular.io/cli).
+
+By the end of this, you’ll have all the
+Spark JavaScript and CSS available
+in your application to start
+building components.
+
+> Note: This covers setting up Spark for
+Angular 6, 7 and 8. Spark doesn’t
+currently support Angular JS.
+
+Before you begin, make sure that:
+ - You have a functioning Angular app similar
+to the one in the [Angular CLI Overview](https://angular.io/cli)
+- Sass is installed and functioning
+- Angular Routing is installed
+(not required by Angular CLI, but it is required for Spark)
+
+## Installing Spark Packages
+
+1. Start by going to your project
+directory and install `spark` and `spark-angular`
+by pasting the following line in a command line application.
+
+``` bash
+npm install -save-dev @sparkdesignsystem/spark @sparkdesignsystem/spark-angular
+```
+
+2. Edit `app.module.ts` to import the `spark-angular` library
+and also the `BrowserAnimationsModule`, and include
+them in `@NgModule`'s `imports` array. This file can be
+found in `your-app/src/app`.
+
+``` typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SparkAngularModule } from '@sparkdesignsystem/spark-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+
+  imports: [
+    SparkAngularModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule
+  ],
+
+  providers: [],
+  bootstrap: [AppComponent]
+})
+
+export class AppModule { }
+```
+
+3. Next, edit `styles.scss` to `@import` the Spark
+stylesheet. This file can be found in `you-app/src`.
+
+``` scss
+@import "node_modules/@sparkdesignsystem/spark/spark.scss"
+```
+
+> Note: Importing Spark SCSS at the component level can lead to unexpected behavior.
+
+4. Back on the command line, build
+and run your new application by running
+`npm run start` and opening `http://localhost:4200/`
+in your web browser. When Angular builds,
+Spark’s styles will be processed and
+bundled into the application.
+
+You can verify that Spark’s
+styles are being included by
+opening your browser’s developer
+tools and inspecting the DOM.
+There should be a `<style>`
+tag in the `<head>` that includes
+Spark’s styles.
+
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    src={styleCheck}
+    alt="Screenshot of DOM with Spark Styles"/>
+</div>
+
+## Adding Angular Components
+
+Now that everything is building,
+let’s add a component to your
+application that will allow us
+to test that both Spark’s styles
+and functionality are working.
+We’ll use the
+[Loading Button](https://angular.sparkdesignsystem.com/?path=/docs/components-button--loading)
+component to do this. You can
+find code for all Spark
+components at [angular.sparkdesignsystem.com](angular.sparkdesignsystem.com)
+
+5. Copy the sample code inside `app.component.html`.
+
+This file can be found in
+`your-app/src/app`.
+You can delete everything in this
+file other than the final line (`<router-outlet></router-outlet>`) .
+
+``` markup
+<button
+  (click)="checkSpinner($event)"
+  sprkButton
+>
+  Button
+</button>
+```
+
+You should now see a Spark Button in your
+application! It might look slightly
+cropped, but that’s OK. It’s
+because we don’t yet have
+any layout on the page.
+
+6. Now let’s add some TypeScript
+to trigger the Spinner
+behavior. Copy this code into
+the `AppComponent` class inside
+`app.component.ts`. This file can
+be found in `your-app/src/app`.
+
+``` typescript
+export class AppComponent {
+  submitSpinning = false;
+
+  checkSpinner(event): void {
+    if (!this.submitSpinning) {
+      setSpinning(event.target, {});
+      this.submitSpinning = true;
+    }
+  }
+}
+```
+
+7. Finally, import the `setSpinning`
+utility function from the Spark
+library. This goes at the top
+of your component’s `.ts` file,
+in our case `app.component.ts`.
+
+``` typescript
+import { setSpinning } from '@sparkdesignsystem/spark';
+```
+
+8. Head back to your web browser and
+click the Spark Button that you
+added earlier. If everything's
+working correctly, the text
+should be replaced with an animated spinner.
+
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={spinnergif}
+    alt="A Spark Button Spinner component."/>
+</div>
+
+## You did it!
+
+You now have a development
+environment set up with Spark
+installed, and you’re ready
+to start building!
+For Spark support,
+[email the Spark team](mailto:sparkdesignsystem@quickenloans.com)
+with any questions and we’ll respond
+as quickly as possible.
+
+## Additional Topics
+Check out these guides for more information on setting up Spark:
+
+- The [Icon Installation Guide](/installing-spark/installing-icons)
+for importing the Spark SVG Icon Set
+- The [Font Installation Guide](/installing-spark/installing-fonts) for instructions
+on using the Rocket Sans font

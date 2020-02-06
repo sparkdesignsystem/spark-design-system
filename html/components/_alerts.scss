@@ -1,0 +1,108 @@
+// ==================================================================
+// Alerts
+// ==================================================================
+
+//// 
+/// @group alert
+////
+
+.sprk-c-Alert {
+  align-items: center;
+  background-color: $sprk-alert-bg-color;
+  border: $sprk-alert-border;
+  box-shadow: $sprk-alert-shadow;
+  border-radius: $sprk-alert-border-radius;
+  display: flex;
+  justify-content: center;
+}
+
+/// Styles the alert as an information alert.
+.sprk-c-Alert--info {
+  background-color: $sprk-alert-bg-color-info;
+  border: $sprk-alert-border-info;
+  color: $sprk-alert-text-color-info;
+
+  .sprk-c-Alert__icon:first-child {
+    color: $sprk-alert-icon-color-info;
+  }
+
+  .sprk-c-Alert__text {
+    color: $sprk-alert-text-color-info;
+  }
+}
+
+/// Styles the alert as a success alert.
+.sprk-c-Alert--success {
+  background-color: $sprk-alert-bg-color-success;
+  border: $sprk-alert-border-success;
+  color: $sprk-alert-text-color-success;
+
+  .sprk-c-Alert__icon:first-child {
+    color: $sprk-alert-icon-color-success;
+  }
+
+  .sprk-c-Alert__text {
+    color: $sprk-alert-text-color-success;
+  }
+}
+
+/// Styles the alert as a failure alert. 
+.sprk-c-Alert--fail {
+  background-color: $sprk-alert-bg-color-fail;
+  border: $sprk-alert-border-fail;
+  color: $sprk-alert-text-color-fail;
+
+  .sprk-c-Alert__icon:first-child {
+    color: $sprk-alert-icon-color-fail;
+  }
+
+  .sprk-c-Alert__text {
+    color: $sprk-alert-text-color-fail;
+  }
+}
+
+.sprk-c-Alert__content {
+  align-items: center;
+  display: flex;
+  padding: $sprk-alert-content-padding;
+}
+
+.sprk-c-Alert__text {
+  color: $sprk-alert-color;
+  font-size: $sprk-alert-font-size;
+  font-weight: $sprk-alert-font-weight;
+  line-height: $sprk-alert-line-height;
+}
+
+.sprk-c-Alert__content,
+.sprk-c-Alert__icon .sprk-c-Icon {
+  flex: 1;
+}
+
+.sprk-c-Alert__icon {
+  flex: 0 0 auto;
+
+  &:first-child {
+    margin: $sprk-alert-icon-margin;
+  }
+}
+
+.sprk-c-Alert .sprk-c-Icon {
+  height: $sprk-alert-icon-size;
+  width: $sprk-alert-icon-size;
+}
+
+/// Adds specific styles to the icon
+/// that is used for closing the alert.
+.sprk-c-Alert__icon--dismiss {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 0;
+  color: $sprk-alert-dismiss-icon-color;
+  padding: $sprk-alert-dismiss-padding;
+}
+
+.sprk-c-Alert__icon--dismiss .sprk-c-Icon {
+  height: $sprk-alert-dismiss-icon-size;
+  width: $sprk-alert-dismiss-icon-size;
+}

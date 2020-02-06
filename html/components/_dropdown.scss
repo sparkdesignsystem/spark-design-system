@@ -1,0 +1,78 @@
+// ==================================================================
+// Dropdown
+// ==================================================================
+
+////
+/// @group dropdown
+////
+
+.sprk-c-Dropdown {
+  background-color: $sprk-white;
+  border: $sprk-dropdown-border;
+  border-radius: $sprk-border-radius;
+  box-shadow: $sprk-dropdown-shadow;
+  font-size: $sprk-dropdown-font-size;
+  max-width: $sprk-dropdown-max-width;
+  padding: ($sprk-dropdown-padding / 2) 0;
+  position: absolute;
+  margin-top: $sprk-space-xs;
+  width: auto;
+  z-index: $sprk-layer-height-m;
+}
+
+.sprk-c-Dropdown__header {
+  padding: ($sprk-dropdown-padding / 2) $sprk-dropdown-padding;
+
+  // When the dropdown has a header, this adjust its padding because the header takes over as the "first item"
+  + .sprk-c-Dropdown__links {
+    .sprk-c-Dropdown__item:first-child .sprk-c-Dropdown__link {
+      padding-top: $sprk-dropdown-padding / 2;
+    }
+  }
+}
+
+.sprk-c-Dropdown__item {
+  font-weight: $sprk-dropdown-font-weight;
+
+  &:first-child .sprk-c-Dropdown__link {
+    padding-top: $sprk-dropdown-padding / 2;
+  }
+
+  &:last-child .sprk-c-Dropdown__link {
+    padding-bottom: $sprk-dropdown-padding / 2;
+  }
+}
+
+.sprk-c-Dropdown__title {
+  color: $sprk-dropdown-title-color;
+  font-weight: $sprk-dropdown-title-font-weight;
+  font-size: $sprk-dropdown-title-font-size;
+}
+
+.sprk-c-Dropdown__footer {
+  padding: $sprk-dropdown-footer-padding;
+}
+
+.sprk-c-Dropdown__links {
+  list-style-type: none;
+}
+
+.sprk-c-Dropdown__link {
+  color: $sprk-black;
+  display: block;
+  padding: ($sprk-dropdown-padding / 2) $sprk-dropdown-padding;
+  text-decoration: none;
+  line-height: $sprk-dropdown-line-height;
+
+  &:hover {
+    background-color: $sprk-dropdown-active-background-color;
+  }
+}
+
+/// Adds styles to indicate that the dropdown
+/// link is currently active. 
+.sprk-c-Dropdown__link--active {
+  box-shadow: $sprk-dropdown-active-box-shadow;
+  border-left: $sprk-dropdown-active-border;
+  background-color: $sprk-dropdown-active-background-color;
+}

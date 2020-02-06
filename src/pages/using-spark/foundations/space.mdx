@@ -1,0 +1,115 @@
+---
+  title: Space
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Space
+
+The distance between elements and how
+these proportions affect design.
+
+### Usage
+
+Spacing values are used for padding and margin
+throughout the design system and are relative to
+the standard type size of 1em/16px. Applying one
+spacing size consistently throughout a page will
+help bring visual consistency to its layout and components.
+
+In the examples below, the gray shows padding and
+margin. These colors will not appear
+in your application.
+
+### Guidelines
+
+- There are five built in spacing sizes:
+    - Extra Small (4px, .25 rem)
+    - Small (8px, .5 rem)
+    - Medium (16px, 1rem)
+    - Large (32px, 2rem)
+    - Extra Large (64px, 4 rem)
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Inset
+
+Inset spacing adds equal padding to all
+four sides of an element. Our [Box component](/using-spark/components/box)
+is a convenient way to apply this spacing style.
+
+<ComponentPreview
+  componentName="spacing--inset-spacing"
+  componentType="foundations"
+  hasHTML
+/>
+
+### Inset Short
+
+Inset Short behaves just like Inset, except the
+top and bottom padding is reduced by 50%. For
+example, Inset Short Small has 8px of padding
+on the left and right sides, but 4px padding
+on the top and bottom.
+
+<ComponentPreview
+  componentName="spacing--inset-spacing-short"
+  componentType="foundations"
+  hasHTML
+/>
+
+### Inset Tall
+
+Inset Tall behaves just like Inset, except the
+top and bottom padding is increased by 50%. For
+example, Inset Tall Small has 8px padding on the
+left and right sides, but 12px padding on the
+top and bottom.
+
+<ComponentPreview
+  componentName="spacing--inset-spacing-tall"
+  componentType="foundations"
+  hasHTML
+/>
+
+### Stack
+
+Stack spacing adds margin to the bottom of elements.
+
+<ComponentPreview
+  componentName="spacing--stack-spacing"
+  componentType="foundations"
+  hasHTML
+/>
+
+### Inline
+
+Inline spacing proportions create consistent right
+margins to elements. Note that this utility only creates
+horizontal space. Use the Stack utility to include vertical space.
+
+<ComponentPreview
+  componentName="spacing--inline-spacing"
+  componentType="foundations"
+  hasHTML
+/>
+
+### Misc Sizes
+
+These are additional sizing proportions to supplement our existing XS-XL sizes:
+
+- Misc A (24px, 1.5rem)
+- Misc B (40px, 2.5rem)
+- Misc C (48px, 3rem)
+- Misc D (80px, 5rem)
+
+<ComponentPreview
+  componentName="spacing--inline-spacing-misc"
+  componentType="foundations"
+  hasHTML
+/>

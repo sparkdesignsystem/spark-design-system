@@ -1,0 +1,185 @@
+// ==================================================================
+// Buttons
+// ==================================================================
+
+////
+/// @group button
+////
+
+.sprk-c-Button {
+  -webkit-appearance: none;
+  background-color: $sprk-btn-background-color;
+  border-color: $sprk-btn-border-color;
+  border-radius: $sprk-btn-border-radius;
+  border-style: $sprk-btn-border-style;
+  border-width: $sprk-btn-border-width;
+  color: $sprk-btn-text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $sprk-btn-font-family;
+  font-size: $sprk-btn-font-size;
+  font-weight: $sprk-btn-font-weight;
+  letter-spacing: $sprk-btn-letter-spacing;
+  line-height: $sprk-btn-line-height;
+  margin: 0;
+  overflow: visible;
+  padding: $sprk-btn-padding;
+  text-align: center;
+  text-decoration: none;
+  transition: all $sprk-btn-transition-speed;
+  vertical-align: middle;
+  white-space: normal;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $sprk-btn-hover-background-color;
+    border-color: $sprk-btn-hover-background-color;
+    box-shadow: $sprk-btn-shadow;
+    color: $sprk-btn-hover-text-color;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $sprk-btn-text-color;
+  }
+}
+
+
+/// Reduces the padding of the normal button
+/// to $space-inset-short-m.
+.sprk-c-Button--compact {
+  padding: $sprk-space-inset-short-m;
+}
+
+/// Makes the button full width of its parent container until it flips
+/// to normal width at the $sprk-btn-breakpoint-xs breakpoint.
+/// @name .sprk-c-Button--full@xs
+.sprk-c-Button--full\@xs {
+  width: 100%;
+
+  @media screen and (min-width: $sprk-btn-breakpoint-xs) {
+    width: auto;
+  }
+}
+
+/// Makes the button full width of its parent container until it flips
+/// to normal width at the $sprk-btn-breakpoint-s breakpoint.
+/// @name .sprk-c-Button--full@s
+.sprk-c-Button--full\@sm,
+.sprk-c-Button--full\@s {
+  width: 100%;
+
+  @media screen and (min-width: $sprk-btn-breakpoint-s) {
+    width: auto;
+  }
+}
+
+/// Styles the button as the secondary variant.
+.sprk-c-Button--secondary {
+  background-color: $sprk-btn-secondary-background-color;
+  border: $sprk-btn-border-width $sprk-btn-border-style
+    $sprk-btn-secondary-border-color;
+  color: $sprk-btn-secondary-text-color;
+  letter-spacing: $sprk-btn-secondary-letter-spacing;
+
+  &:visited {
+    color: $sprk-btn-secondary-text-color;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: $sprk-btn-secondary-hover-shadow;
+    background-color: $sprk-btn-secondary-hover-background-color;
+    border: $sprk-btn-border-width $sprk-btn-border-style
+      $sprk-btn-secondary-hover-border-color;
+    color: $sprk-btn-secondary-hover-text-color;
+  }
+}
+
+/// Styles the button as the tertiary variant.
+.sprk-c-Button--tertiary {
+  background-color: $sprk-btn-tertiary-background-color;
+  box-shadow: none;
+  border: $sprk-btn-tertiary-border;
+  color: $sprk-btn-tertiary-text-color;
+  letter-spacing: $sprk-btn-tertiary-letter-spacing;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $sprk-btn-tertiary-hover-background-color;
+    color: $sprk-btn-tertiary-hover-text-color;
+    box-shadow: $sprk-btn-tertiary-hover-shadow;
+  }
+
+  &:visited {
+    color: $sprk-btn-tertiary-text-color;
+  }
+
+  &::after {
+    content: '';
+    border-bottom: $sprk-btn-tertiary-underline-width solid
+      $sprk-btn-tertiary-underline-color;
+    display: block;
+    width: 100%;
+    padding-top: $sprk-btn-tertiary-underline-padding-top;
+    margin: 0 auto;
+  }
+
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+    border-color: $sprk-btn-tertiary-hover-underline-color;
+    transition: border $sprk-btn-transition-speed ease-in-out;
+  }
+}
+
+/*
+Removes extra padding and border in Firefox when using `input type="submit"`
+*/
+.sprk-b-Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.sprk-c-Button.sprk-is-Disabled,
+.sprk-c-Button[disabled] {
+  opacity: $sprk-btn-disabled-opacity;
+  pointer-events: none;
+  box-shadow: $sprk-btn-disabled-shadow;
+  background-color: $sprk-btn-disabled-background-color;
+  border-width: $sprk-btn-disabled-border-width;
+  border-color: $sprk-btn-disabled-border-color;
+  border-style: $sprk-btn-disabled-border-style;
+  color: $sprk-btn-disabled-text-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $sprk-btn-disabled-background-color;
+    border-color: $sprk-btn-disabled-border-color;
+    color: $sprk-btn-disabled-text-color;
+  }
+
+  &:visited {
+    color: $sprk-btn-disabled-text-color;
+  }
+}
+
+.sprk-c-Button--secondary.sprk-is-Disabled,
+.sprk-c-Button--secondary[disabled] {
+  box-shadow: $sprk-btn-secondary-disabled-shadow;
+  background-color: $sprk-btn-secondary-disabled-background-color;
+  border-color: $sprk-btn-secondary-disabled-border-color;
+  color: $sprk-btn-secondary-disabled-text-color;
+}
+
+.sprk-c-Button--tertiary.sprk-is-Disabled,
+.sprk-c-Button--tertiary[disabled] {
+  box-shadow: $sprk-btn-tertiary-disabled-shadow;
+  border: $sprk-btn-tertiary-disabled-border;
+  color: $sprk-btn-tertiary-disabled-text-color;
+  background-color: $sprk-btn-tertiary-disabled-background-color;
+}

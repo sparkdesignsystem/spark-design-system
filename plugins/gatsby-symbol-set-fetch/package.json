@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-symbol-set-fetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gatsby-node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.5.0",
+    "query-string": "^6.5.0"
+  }
+}

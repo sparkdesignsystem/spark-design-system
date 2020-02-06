@@ -1,0 +1,101 @@
+// ==================================================================
+// Links
+// ==================================================================
+//
+
+////
+/// @group link
+////
+
+.sprk-b-Link {
+  color: $sprk-link-color;
+  border-bottom: $sprk-link-border-bottom;
+  font-weight: $sprk-link-font-weight;
+  position: relative;
+  text-decoration: $sprk-link-text-decoration;
+  transition: $sprk-link-transition;
+
+  &:visited {
+    color: $sprk-link-visited-color;
+    border-bottom: $sprk-link-visited-border-bottom;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-link-hover-color;
+    border-bottom: $sprk-link-hover-border-bottom;
+  }
+}
+
+/// Simple links have no underline until hovered.
+.sprk-b-Link--simple {
+  color: $sprk-link-simple-color;
+  border-bottom: $sprk-link-simple-border-bottom;
+  font-weight: $sprk-link-simple-font-weight;
+
+  &:visited {
+    border-bottom: $sprk-link-simple-visited-border-bottom;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: $sprk-link-transition;
+    color: $sprk-link-simple-hover-color;
+    border-bottom: $sprk-link-simple-hover-border-bottom;
+  }
+}
+
+/// Used when a link is next to an icon. There will not be an underline.
+.sprk-b-Link--has-icon {
+  border-bottom: $sprk-link-has-icon-border-bottom;
+  font-weight: $sprk-link-has-icon-font-weight;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border-bottom: $sprk-link-has-icon-hover-border-bottom;
+    color: $sprk-link-has-icon-hover-color-text;
+  }
+}
+
+.sprk-b-Link--has-icon .sprk-c-Icon {
+  color: $sprk-link-has-icon-color-icon;
+  stroke: $sprk-link-has-icon-color-icon;
+  fill: $sprk-link-has-icon-fill;
+}
+
+/// Disabled links have a muted color and cannot be interacted with.
+/// @name .sprk-b-Link--disabled
+.sprk-b-Link--disabled,
+.sprk-b-Link--disabled .sprk-c-Icon {
+  color: $sprk-link-disabled-color;
+  stroke: $sprk-link-disabled-color;
+  fill: $sprk-link-has-icon-fill;
+  pointer-events: none;
+  border-bottom: $sprk-link-disabled-border-bottom;
+  font-weight: $sprk-link-disabled-font-weight;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: $sprk-link-disabled-hover-border-bottom;
+    color: $sprk-link-disabled-color;
+  }
+}
+
+/// Removes the underline from links on initial state
+/// and on hover, active, focus, and visited states.
+.sprk-b-Link--plain {
+  border: $sprk-link-plain-border;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    border: $sprk-link-plain-visited-border;
+  }
+}

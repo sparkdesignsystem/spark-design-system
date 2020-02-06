@@ -1,0 +1,102 @@
+---
+  title: Stepper
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Stepper
+
+Stepper displays a series of sequential steps
+with optional descriptions and images.
+
+<ComponentPreview
+  componentName="stepper--default-story"
+  hasReact
+  hasHTML
+/>
+
+### Usage
+
+The Stepper is useful for displaying a high-level
+breakdown of a sequential process. Users can manually
+move between steps to access the related descriptions and images.
+
+### Guidelines
+
+- Stepper must have a minimum of two items.
+- Only one step can be selected at a time.
+- Stepper should *not* be used as a progress indicator.
+There is currently no built-in way to mark a step as
+"completed".
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Default
+
+The Default Stepper is a series of steps with titles.
+
+<ComponentPreview
+  componentName="stepper--default-story"
+  hasReact
+  hasHTML
+/>
+
+### With Step Descriptions
+
+Each step can have an associated text description
+that is visible when the step is selected.
+
+<ComponentPreview
+  componentName="stepper--with-step-descriptions"
+  hasReact
+  hasHTML
+/>
+
+### With Dark Background
+
+If Stepper is on a dark background, the
+font colors will be inverted for better legibility.
+
+<ComponentPreview
+  componentName="stepper--with-dark-background"
+  hasHTML
+  hasReact
+/>
+
+### With Carousel
+
+In addition to descriptions, each step can have an
+associated image that is displayed in a carousel.
+The carousel rotates so that the image associated
+with the active step is always visible.
+
+On small screens, the image will stack on top of a
+row of step indicators followed by the step heading
+and description.
+
+<ComponentPreview
+  componentName="stepper--with-carousel"
+  hasHTML
+/>
+
+## Anatomy
+
+- Stepper must have two or more steps.
+- Stepper must have a heading for each step.
+- Each step may include a description.
+- Each step may have an associated image
+displayed in a carousel.
+
+## Accessibility
+
+- Users can use the UP or LEFT arrow keys
+to select the previous step.
+- Users can use the DOWN or RIGHT arrow
+keys to select the next step.
+- Users can use the HOME or END keys to
+select the first or last step.

@@ -1,0 +1,4 @@
+dist/
+es5/
+storybook-static/
+.nyc_output/

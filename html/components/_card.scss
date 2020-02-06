@@ -1,0 +1,89 @@
+// ==================================================================
+// Card
+// ==================================================================
+
+////
+/// @group card
+////
+
+.sprk-c-Card {
+  box-shadow: $sprk-card-shadow;
+  border-radius: $sprk-card-border-radius;
+  max-width: $sprk-card-max-width;
+
+  @media all and (min-width: $sprk-card-breakpoint) {
+    box-shadow: $sprk-card-shadow-wide-viewport;
+  }
+}
+
+/// Use on cards that you would like to standout from the rest.
+.sprk-c-Card--standout {
+  box-shadow: $sprk-card-shadow-standout;
+
+  @media all and (min-width: $sprk-card-breakpoint) {
+    box-shadow: $sprk-card-shadow-standout-wide-viewport;
+  }
+}
+
+.sprk-c-Card__content,
+.sprk-c-Card__header {
+  padding: $sprk-card-content-padding;
+}
+
+.sprk-c-Card__header {
+  background-color: $sprk-card-header-bg-color;
+  color: $sprk-card-header-text-color;
+}
+
+.sprk-c-Card__media,
+.sprk-c-Card__header {
+  border-radius: $sprk-card-border-radius $sprk-card-border-radius 0 0;
+}
+
+.sprk-c-Card__container {
+  flex: 0 1 $sprk-card-max-width;
+  min-width: 0;
+}
+
+// IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@xs.sprk-c-Card {
+  @media all and (min-width: $sprk-split-breakpoint-xs) {
+    flex: 0 1 $sprk-card-max-width;
+    min-width: 0%;
+  }
+}
+
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@s.sprk-c-Card {
+  @media all and (min-width: $sprk-split-breakpoint-s) {
+    flex: 0 1 $sprk-card-max-width;
+    min-width: 0%;
+  }
+}
+
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@m.sprk-c-Card {
+  @media all and (min-width: $sprk-split-breakpoint-m) {
+    flex: 0 1 $sprk-card-max-width;
+    min-width: 0%;
+  }
+}
+
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@l.sprk-c-Card {
+  @media all and (min-width: $sprk-split-breakpoint-l) {
+    flex: 0 1 $sprk-card-max-width;
+    min-width: 0%;
+  }
+}
+
+.sprk-o-Stack__item.sprk-o-Stack__item--flex\@xl.sprk-c-Card {
+  @media all and (min-width: $sprk-split-breakpoint-xl) {
+    flex: 0 1 $sprk-card-max-width;
+    min-width: 0%;
+  }
+}
+
+/// Sets `max-width` to 100%, allowing card to fill
+/// the entire width of it's container. Best used
+/// with base cards.
+.sprk-c-Card--full {
+  max-width: 100%;
+}

@@ -1,0 +1,101 @@
+---
+  title: Highlight Board
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Highlight Board
+
+The Highlight Board component is a prominent
+way to introduce an experience and present
+the user with a clear call to action. 
+
+<ComponentPreview
+  componentName="highlight-board--default-story"
+  maxWidth="100%"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Highlight Board is typically used at
+the top of a page, below the Masthead.
+It can also be used as a call to action
+on other parts of a page. 
+
+### Guidelines
+
+- Effective use of a Highlight Board involves
+a clear, concise headline that grabs attention.
+- The background can either be an image or a solid color.
+- The headline should not exceed 2-3 lines.
+- The background image can either take up the full width
+of the site’s main container or extend to the full width
+of the viewport. 
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Default
+
+The Default Highlight Board is used to encourage engagement
+with strong imagery or a solid background color. 
+
+<ComponentPreview
+  componentName="highlight-board--default-story"
+  maxWidth="100%"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### No Image
+
+The No Image Highlight Board omits the background
+image and centers the content. 
+
+<ComponentPreview
+  componentName="highlight-board--no-image"
+  maxWidth="100%"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Stacked
+
+The Stacked Highlight Board places the image,
+content, and buttons in a vertical stack.
+This places greater emphasis on the image. 
+
+<ComponentPreview
+  componentName="highlight-board--stacked"
+  maxWidth="100%"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- Highlight Board must contain a headline.
+- Highlight Board should include one or more buttons.
+- Highlight Board may have either a background image,
+a solid background color, or no image.
+
+## Accessibility
+
+- When using a Highlight Board that includes an image,
+be sure to include a descriptive `alt` attribute.
+- When using a solid background color, the contrast ratio
+between the headline and the background must be at least 3:1.
+- To check the contrast ratio of your text on a background image,
+check out [this resource](https://webaim.org/resources/contrastchecker/).
+Use a color picker tool to test the background colors of the image
+against the test color.

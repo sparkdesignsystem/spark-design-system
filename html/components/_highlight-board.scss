@@ -1,0 +1,66 @@
+// ==================================================================
+// Highlight Board
+// ==================================================================
+
+////
+/// @group highlight board
+////
+.sprk-c-HighlightBoard {
+  background-color: $sprk-highlight-board-color;
+  position: relative;
+}
+
+.sprk-c-HighlightBoard__image {
+  object-fit: cover;
+
+  /* stylelint-disable */
+  font-family: 'object-fit: cover;'; // required by the polyfill
+
+  /* stylelint-enable */
+  height: $sprk-highlight-board-height;
+  width: 100%;
+}
+
+.sprk-c-HighlightBoard__content {
+  background-color: $sprk-highlight-board-content-box-color;
+  padding: $sprk-space-inset-tall-m;
+  text-align: center;
+  width: auto;
+
+  @media (min-width: $sprk-highlight-board-breakpoint) {
+    padding: $sprk-space-inset-tall-l;
+  }
+}
+
+.sprk-c-HighlightBoard__heading {
+  @media (max-width: $sprk-highlight-board-breakpoint) {
+    font-size: $sprk-font-size-display-three * $sprk-highlight-board-type-reduction-percentage;
+  }
+}
+
+.sprk-c-HighlightBoard__cta {
+  width: 100%;
+
+  @media (min-width: $sprk-highlight-board-breakpoint) {
+    width: auto;
+  }
+}
+
+/// Adds the styles for the Stacked Highlight Board variant.
+/// @name .sprk-c-HighlightBoard--stacked
+
+/// A Spark utility class that can be used on
+/// the Highlight Board to make it become 100% width.
+/// @name .sprk-u-FullWidth
+
+/// Adds the styles for Highlight Boards with an image.
+/// @name .sprk-c-HighlightBoard--has-image
+.sprk-c-HighlightBoard--has-image:not(.sprk-c-HighlightBoard--stacked)
+.sprk-c-HighlightBoard__content {
+  position: absolute;
+  bottom: $sprk-space-l;
+  left: $sprk-space-l;
+  max-width: $sprk-highlight-board-content-width;
+  right: $sprk-space-l;
+  text-align: left;
+}
