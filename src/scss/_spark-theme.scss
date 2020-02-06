@@ -16,6 +16,10 @@ $sprk-webfonts:
   text-align: left;
 }
 
+.docs-b-Table--no-wrap-first tr td:first-child {
+  white-space: nowrap;
+}
+
 #gatsby-focus-wrapper code {
   line-height: 1;
   white-space: nowrap;
