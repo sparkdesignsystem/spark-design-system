@@ -121,18 +121,6 @@ import spark from "@sparkdesignsystem/spark/spark";
 
 ---
 
-**Issue: `WARN Hit error self signed certificate in certificate chain`**
-
-This is often caused by corporate firewall configurations and
-can sometimes be fixed by prefixing `npm install` with 
-`NODE_TLS_REJECT_UNAUTHORIZED=0`.
-
-``` shell
-NODE_TLS_REJECT_UNAUTHORIZED=0 npm install --save-dev @sparkdesignsystem/spark
-```
-
----
-
 **Issue: Spark.js is being called, but none of my components are being initialized.**
 
 Make sure you're calling `spark()` *after* the DOM is loaded. You may need
