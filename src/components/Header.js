@@ -102,7 +102,6 @@ const Header = ({ setContext }) => {
   ));
 
   const usingSparkPages = usingSparkComponents.concat(
-    usingSparkComponents,
     usingSparkExamples,
     usingSparkFoundations,
   );
