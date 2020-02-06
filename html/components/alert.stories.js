@@ -11,7 +11,10 @@ export default {
     docs: { iframeHeight: 120 },
     info: `
 ${markdownDocumentationLinkBuilder('alert')}
-    `,
+- \`role=”alert”\` is required so that
+assistive technologies can inform
+the user that their attention is needed.
+`,
   },
 };
 
