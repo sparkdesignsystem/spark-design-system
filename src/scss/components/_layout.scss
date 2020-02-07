@@ -77,10 +77,10 @@ body,
   @media (min-width: $doc-site-mobile-breakpoint) {
     grid-template-columns: repeat(3, minmax(256px, 1fr));
   }
+}
 
-  .docs-c-Card {
-    justify-self: center;
-  }
+.docs-o-Grid--three-col .docs-c-Card {
+  justify-self: center;
 }
 
 .docs-o-Grid--large {
