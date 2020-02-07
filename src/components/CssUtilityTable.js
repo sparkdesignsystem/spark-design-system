@@ -1,6 +1,6 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import { SprkTable } from "@sparkdesignsystem/spark-react";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import { SprkTable } from '@sparkdesignsystem/spark-react';
 
 const CssUtilityTable = ({ group }) => (
   <StaticQuery
@@ -24,11 +24,9 @@ const CssUtilityTable = ({ group }) => (
     `}
     render={data => {
       const cssUtilData = data.allSassUtilitiesJson.edges
-        .filter(item => {
-          return (
-            item.node.group[0] === group
-          );
-        })
+        .filter(item => (
+          item.node.group[0] === group
+        ))
         .map(item => ({
           name: item.node.context.name,
           description: item.node.description,
@@ -41,16 +39,16 @@ const CssUtilityTable = ({ group }) => (
             sprk-b-Table--spacing-medium
             sprk-b-Table--striped-even
             sprk-u-TextAlign--right
-            sprk-u-Measure
+            docs-b-Table
           "
           columns={[
             {
-              name: "name",
-              header: "Class",
+              name: 'name',
+              header: 'Class',
             },
             {
-              name: "description",
-              header: "Description"
+              name: 'description',
+              header: 'Description',
             }
           ]}
           rows={cssUtilData}
