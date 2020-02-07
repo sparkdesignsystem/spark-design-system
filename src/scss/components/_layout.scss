@@ -73,9 +73,13 @@ body,
 
 .docs-o-Grid--three-col {
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  
+
   @media (min-width: $doc-site-mobile-breakpoint) {
     grid-template-columns: repeat(3, minmax(310px, 1fr));
+  }
+
+  .doc-c-Card {
+    justify-self: center;
   }
 }
 
