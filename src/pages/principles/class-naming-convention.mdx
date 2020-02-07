@@ -6,26 +6,28 @@
 
 The Spark Design System uses a strict class naming convention.
 This allows us to keep our classes flat, avoid conflicts,
-provide clarity, and improve legibility.  
+provide clarity, and improve legibility.
 
-This is done by combining 4 techniques:  
+This is done by combining 4 techniques:
 
 - a global namespace
 - class prefixes
 - pascal casing
-- BEM syntax  
+- BEM syntax
 
 All classes in the Spark Design System must
 adhere to this naming convention.
 
 ### Global Namespace
 
-`.sprk-`
+```
+.sprk-
+```
 
 One of the most annoying things that happens when you
 use a CSS library is class naming conflicts. You already
 use the class `.button` and the library also uses it
-and it overrides your styles.  
+and it overrides your styles.
 
 To avoid this, the Spark Design System uses a global
 namespace to ensure that it's styles don't interfere
@@ -37,7 +39,7 @@ After the global namespace, each class name has a
 prefix which gives information about what the
 class is doing.
 
-The prefixes available are:  
+The prefixes available are:
 
 - `b-` (Base) For classes that add additional
 style to base HTML elements.
@@ -59,27 +61,31 @@ server to show specific states.
 After the namespace and prefix, the main part
 of the class name doesn't stand out very well.
 For this reason we use pascal case to visually
-separate it from the rest of the name. For example:  
+separate it from the rest of the name. For example:
 
-`.sprk-c-HighlightBoard__content`
+```
+.sprk-c-HighlightBoard__content
+```
 
 ### Class Suffixes
 
 Responsive suffix classes are used when you need
 styles to be applied at specific breakpoints.
 The `@` symbol must be escaped in the stylesheet.
-For example:  
+For example:
 
-`.sprk-o-Flex@xl`
+```
+.sprk-o-Flex@xl
+```
 
 ### BEM Syntax
 
 BEM stands for "Block, Element, Modifier". It is a
 modular application development methodology whose
 naming convention has become very popular for writing
-modular, flat CSS selectors.  
+modular, flat CSS selectors.
 
-The 3 parts of BEM are:  
+The 3 parts of BEM are:
 
 - **Block**
 
@@ -87,7 +93,9 @@ The 3 parts of BEM are:
     it refers to the PascalCase part of the class.
     For example:
 
-    `.sprk-c-HighlightBoard`
+    ```
+    .sprk-c-HighlightBoard
+    ```
 
 - **Element**
 
@@ -95,11 +103,15 @@ The 3 parts of BEM are:
     by two underscores that separate it form the Block.
     For example:
 
-    `.sprk-c-HighlightBoard__content`  
+    ```
+    .sprk-c-HighlightBoard__content
+    ```
 
     The following is not allowed:
 
-    `.sprk-c-HighlightBoard__content__child-content`
+    ```
+    .sprk-c-HighlightBoard__content__child-content
+    ```
 
 - **Modifier**
 
@@ -107,11 +119,15 @@ The 3 parts of BEM are:
     It is represented by two dashes that separate it from
     the Block or Element. For example:
 
-    `.sprk-c-HighlightBoard--huge .sprk-c-HighlightBoard__content--image`
+    ```
+    .sprk-c-HighlightBoard--huge .sprk-c-HighlightBoard__content--image
+    ```
 
     The following is not allowed:
 
-    `.sprk-c-HighlightBoard--huge--red`
+    ```
+    .sprk-c-HighlightBoard--huge--red
+    ```
 
 ### Resources
 
