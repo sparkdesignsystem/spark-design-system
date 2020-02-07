@@ -1,0 +1,84 @@
+---
+  title: HTML - Adding Components
+  order: 3
+---
+
+import spinnergif from '../../images/installing-spark/html/html-spinner.gif';
+
+# Installing Spark in an HTML Project
+## Adding Spark Components
+
+Now you’re ready to start writing the HTML to build the structure
+of the components you’ll be using. Here we’ll cover how to add
+components for HTML, CSS and JavaScript environments with no
+JavaScript framework. You can follow along with the code examples
+in this guide using the sample app found in our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">starter repository</a>.
+
+This guide is Part 3 in a 3-Part series. You can also check out
+[Part 1 - Setting Up Your Environment](/installing-spark/html-environment-setup) and
+[Part 2 - Installation](/installing-spark/html-installation).
+
+For instructions on setting up Spark in other environments, check out the
+guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react) development environments.
+
+## Navigating to Component HTML
+
+1. To get started, select the <a href="/using-spark" target="_blank">Using Spark</a>
+tab at the top of this page. This is where you’ll find all the HTML you’ll
+need for the component variants and configurations you can use.
+
+2. Underneath the *Components* section in the left column, find the component
+you want to add.
+
+> **For example**: Let’s say you’re trying to add a Loading Button. You’d
+select the <a href="../using-spark/components/button" target="_blank">Button</a> component.
+
+3. Click the *HTML* link to view the HTML documentation.
+
+4. Navigate to the *Docs* tab at the top of the screen.
+
+5. Scroll down until you see the component variant you would like to
+include in your site.
+
+6. Click *Show code*.
+
+7. Copy the sample code into `index.html`.
+
+> **For example**: If you’re adding a Loading Button, you’d scroll
+down on the Button page to find <a href="https://html.sparkdesignsystem.com/?path=/docs/components-button--loading" target="_blank">Loading Button</a>.
+Then you’d copy the Loading Button code that looks like this:
+
+``` html
+<button class="sprk-c-Button" data-sprk-spinner="click">
+Submit
+</button>
+```
+
+> **Note**: Make sure you’re including `main.js` after the HTML
+elements in `index.html`. The `<script>` line should be at the
+bottom of the `<body>` tag.
+
+8. You should see the component you just installed with all the
+correct Spark CSS applied.
+
+> **For example**: If you’ve added a Loading Button
+you’ll see something like this…
+
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={spinnergif}
+    alt="A Spark Button Spinner component."/>
+</div>
+
+## You did it!
+
+You’re ready to start building with Spark!
+
+## Additional Topics
+
+* The [Icon Installation Guide](/installing-spark/installing-icons) for
+importing the Spark SVG icon set.
+* The [Font Installation Guide](/installing-spark/installing-fonts) for
+instructions on using the Rocket Sans font.

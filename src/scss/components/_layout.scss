@@ -97,3 +97,7 @@ body,
 .docs-c-Footer .sprk-o-CenteredColumn {
   max-width: $doc-site-layout-max-width;
 }
+
+.docs-b-Table .sprk-b-Table__head th:first-child {
+  width: 35%;
+}

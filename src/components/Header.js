@@ -102,7 +102,6 @@ const Header = ({ setContext }) => {
   ));
 
   const usingSparkPages = usingSparkComponents.concat(
-    usingSparkComponents,
     usingSparkExamples,
     usingSparkFoundations,
   );
@@ -119,7 +118,7 @@ const Header = ({ setContext }) => {
     {
       element: Link,
       text: 'Installing Spark',
-      to: '/installing-spark/setting-up-your-environment',
+      to: '/installing-spark/html-environment-setup',
       onClick: () => {
         setContext('installing-spark');
       },

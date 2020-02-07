@@ -3,9 +3,10 @@
   order: 4
 ---
 import styleCheck from '../../images/installing-spark/angular/style-check.png';
+import spinnergif from '../../images/installing-spark/angular/angular-spinner.gif';
 
-# Setting Up Spark
-## For Angular
+# Installing Spark in an Angular Project
+
 This guide will walk you through
 installing and using Spark on an
 existing Angular application.
@@ -25,14 +26,14 @@ currently support Angular JS.
 Before you begin, make sure that:
  - You have a functioning Angular app similar
 to the one in the [Angular CLI Overview](https://angular.io/cli)
-- Sass is installed and functioning
-- Angular Routing is installed
+- <a href="https://sass-lang.com/" target="_blank">Sass</a> is installed and functioning
+- <a href="https://angular.io/guide/router" target="_blank">Angular Routing</a> is installed
 (not required by Angular CLI, but it is required for Spark)
 
 ## Installing Spark Packages
 
 1. Start by going to your project
-directory and install `spark` and `spark-angular`
+directory and installing `spark` and `spark-angular`
 by pasting the following line in a command line application.
 
 ``` bash
@@ -72,7 +73,7 @@ export class AppModule { }
 ```
 
 3. Next, edit `styles.scss` to `@import` the Spark
-stylesheet. This file can be found in `you-app/src`.
+stylesheet. This file can be found in `your-app/src`.
 
 ``` scss
 @import "node_modules/@sparkdesignsystem/spark/spark.scss"
@@ -113,7 +114,7 @@ We’ll use the
 [Loading Button](https://angular.sparkdesignsystem.com/?path=/docs/components-button--loading)
 component to do this. You can
 find code for all Spark
-components at [angular.sparkdesignsystem.com](angular.sparkdesignsystem.com)
+components at [angular.sparkdesignsystem.com](angular.sparkdesignsystem.com).
 
 5. Copy the sample code inside `app.component.html`.
 
@@ -173,7 +174,13 @@ added earlier. If everything's
 working correctly, the text
 should be replaced with an animated spinner.
 
-GIF GOES here
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={spinnergif}
+    alt="A Spark Button Spinner component."/>
+</div>
 
 ## You did it!
 
