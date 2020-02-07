@@ -1,0 +1,75 @@
+[[redirects]]
+  from = "/gettingstarted/angular"
+  to = "/installing-spark/angular"
+  status = 301
+
+[[redirects]]
+  from = "/gettingstarted/design-principles"
+  to = "/principles/design-principles"
+  status = 301
+
+[[redirects]]
+  from = "/gettingstarted/html"
+  to = "/installing-spark/html"
+  status = 301
+
+[[redirects]]
+  from = "/gettingstarted/react"
+  to = "/installing-spark/react"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/fundamentals/grid"
+  to = "/using-spark/components/stack"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/fundamentals/layers"
+  to = "/using-spark/foundations/sass-variables"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/fundamentals/layout"
+  to = "/using-spark/components/stack"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/fundamentals/*"
+  to = "/using-spark/foundations/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/*"
+  to = "/using-spark/components/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/utilities/*"
+  to = "/using-spark/foundations/css-utilities"
+  status = 301
+
+[[redirects]]
+  from = "/docs/accessibility"
+  to = "/principles/accessibility-guidelines"
+  status = 301
+
+[[redirects]]
+  from = "/docs/change-workflow"
+  to = "https://github.com/sparkdesignsystem/spark-design-system/blob/master/CONTRIBUTING.md"
+  status = 301
+
+[[redirects]]
+  from = "/docs/class-naming-convention"
+  to = "/principles/class-naming-convention"
+  status = 301
+
+[[redirects]]
+  from = "/docs/contributions"
+  to = "https://github.com/sparkdesignsystem/spark-design-system/blob/master/CONTRIBUTING.md"
+  status = 301
+
+[[redirects]]
+  from = "/docs/release-notes"
+  to = "https://github.com/sparkdesignsystem/spark-design-system/releases"
+  status = 301
+
