@@ -1,6 +1,0 @@
-description:
-  These are the levels of elevation that elements can occupy.
-restrictions:
-  - Elements at the same layer may not occupy the same space.
-sparkPackageCore: true
-noCodeSwitch: true

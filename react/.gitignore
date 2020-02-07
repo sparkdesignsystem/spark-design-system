@@ -1,0 +1,4 @@
+dist/
+coverage/
+storybook-static/
+src/.jest-test-results.json

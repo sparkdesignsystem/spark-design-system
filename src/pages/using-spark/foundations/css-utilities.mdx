@@ -1,0 +1,155 @@
+---
+  title: CSS Utilities
+---
+import CssUtilityTable from '../../../components/CssUtilityTable';
+
+# CSS Utilities
+
+The Spark Design System includes many CSS utility classes for customizing and
+ extending components. These utility classes are divided into two groups:
+ [Single-Property Utilities](#single-prop) and [Multi-Property Utilities](#multi-prop).
+
+## Single-Property Utilities<a name="single-prop"></a>
+
+Single property utilities map directly to a single CSS property and value.
+They are most useful when you want to override a default value or in
+one-off situations. Be aware that all Single-Property Utilities include
+an `!important` flag in order to supersede an element's default styles.
+
+### Display and Visibility
+
+These utilities control CSS properties related to display and visibility.
+
+<section>
+  <CssUtilityTable group="display"/>
+</section>
+
+### Floats, Position, and Alignment
+
+These utilities control CSS properties related to floating, positioning, and alignment.
+
+<section>
+  <CssUtilityTable group="position"/>
+</section>
+
+### Typography
+
+These utilities control CSS properties related to typography.
+
+<section>
+  <CssUtilityTable group="typography"/>
+</section>
+
+### Overflow
+
+These utilities control CSS properties related to overflow, which specifies
+ how to handle content that is too large for its container.
+
+<section>
+  <CssUtilityTable group="overflow"/>
+</section>
+
+### Width
+
+These utilities set the width of an element to a percentage value.
+The widths are in increments of 5 from 5% to 100%.
+
+<section>
+  <CssUtilityTable group="width"/>
+</section>
+
+### Spacing
+
+These utilities override the padding and margin on an element. The class name
+ format is `.sprk-u-<type><location><size>`
+
+#### Options
+
+* **type**: `p` or `m` (padding or margin)
+* **location**: which side(s) of the element to apply the class to.
+  * `a` (all)
+  * `t` (top)
+  * `r` (right)
+  * `b` (bottom)
+  * `l` (left)
+  * `h` (horizontal)
+  * `v` (vertical)
+* **size**: The size of the spacing added.
+  * `s` - small (8px)
+  * `m` - medium (16px)
+  * `l` - large (32px)
+  * `h` - huge (64px)
+  * `n` - none (0px)
+
+#### Examples
+
+<section>
+  <CssUtilityTable group="spacing"/>
+</section>
+
+### Miscellaneous Spacing
+
+These utilities override the padding and margin on an element and are
+supplemental spacing sizes. The class name format is `.sprk-u-<Type><Location>--<size>`
+
+#### Options
+
+* type: `Padding` or `Margin`
+* location: `All`, `Top`, `Right`, `Bottom`, `Left`, `Horizontal`, or `Vertical`
+* size:
+  * `a` = `$sprk-space-misc-a` (24px)
+  * `b` = `$sprk-space-misc-b` (40px)
+  * `c` = `$sprk-space-misc-c` (48px)
+  * `d` = `$sprk-space-misc-d` (80px)
+
+#### Examples
+
+<section>
+  <CssUtilityTable group="misc-spacing"/>
+</section>
+
+### Color
+
+These utilities control CSS properties related to color and background color.
+
+<section>
+  <CssUtilityTable group="color"/>
+</section>
+
+### Height
+
+This utility sets the height of an element to a percentage value.
+
+<section>
+  <CssUtilityTable group="height"/>
+</section>
+
+## Multi-Property Utilities<a name="multi-prop"></a>
+
+Multi-Property Utilities combine several CSS properties and values to perform
+ common actions. They are not meant to override default styles, but aid in
+  things like accessibility and layout.
+
+### Accessibility
+
+These utilities are related to accessibility. These should be used to make the experience more accessible.
+
+<section>
+  <CssUtilityTable group="multi-accessibility"/>
+</section>
+
+### Layout
+
+These utilities are related to layout.
+
+<section>
+  <CssUtilityTable group="multi-layout"/>
+</section>
+
+### Typography
+
+These utilities are related to typography.
+
+<section>
+  <CssUtilityTable group="multi-typography"/>
+</section>

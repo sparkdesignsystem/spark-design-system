@@ -1,0 +1,61 @@
+////
+/// @group input
+////
+
+.sprk-b-Select {
+  -webkit-appearance: $sprk-select-appearance;
+  -moz-appearance: $sprk-select-appearance;
+  appearance: $sprk-select-appearance;
+  border: $sprk-select-border;
+  border-radius: $sprk-select-border-radius;
+  box-shadow: $sprk-select-box-shadow;
+  background: $sprk-select-background;
+  color: $sprk-select-color;
+  font-size: $sprk-select-font-size;
+  font-weight: $sprk-select-font-weight;
+  line-height: $sprk-select-line-height;
+  outline: $sprk-select-outline;
+  padding: $sprk-select-padding;
+  width: 100%;
+
+  &:focus {
+    border-color: $sprk-select-focus-border-color;
+  }
+
+  // Remove FF specific focusring in favor of ours
+  &:-moz-focusring {
+    color: $sprk-select-moz-focusring-color;
+    text-shadow: $sprk-select-moz-focusring-text-shadow;
+  }
+}
+
+// IE11
+.sprk-b-Select:focus::-ms-value {
+  color: $sprk-select-color;
+  background: $sprk-select-background;
+  border-color: $sprk-select-focus-border-color;
+}
+
+.sprk-b-Select::-ms-expand {
+  display: none;
+}
+
+.sprk-b-SelectContainer__icon {
+  float: right;
+  margin-top: $sprk-select-arrow-offset-y;
+  margin-right: $sprk-select-arrow-offset-x;
+  stroke-width: $sprk-select-arrow-stroke-width;
+}
+
+.sprk-b-Select[disabled] {
+  border-color: $sprk-select-disabled-border-color;
+  background-color: $sprk-select-disabled-background-color;
+  color: $sprk-select-disabled-color;
+}
+
+/// Adds select error styles.
+/// @name .sprk-b-Select--error
+.sprk-b-Select--error,
+.sprk-b-Select--error:focus {
+  border-color: $sprk-select-error-border-color;
+}

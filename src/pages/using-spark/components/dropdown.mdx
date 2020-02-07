@@ -1,0 +1,79 @@
+---
+  title: Dropdown
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Dropdown
+
+Dropdown provides multiple choices
+that cause an action when selected.
+
+<ComponentPreview
+  componentName="dropdown--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="15rem"
+/>
+
+### Usage
+
+A Dropdown displays a list of contextual options,
+triggered by an interaction with another element
+(like an Icon or Button). Once a selection is made,
+some action will occur (e.g. navigate to another page).
+
+### Guidelines
+
+- Dropdown is not the same as the HTML
+Select element and should not be used in a form.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Base
+
+Base Dropdown is primarily used as a context menu.
+For example, when the user clicks on the user
+icon in the Masthead, it opens a Base Dropdown
+with links to account settings.
+
+<ComponentPreview
+  componentName="dropdown--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="15rem"
+/>
+
+### Informational
+
+Informational Dropdown is an expanded version
+of the Base Dropdown. Each choice has a title
+and additional information. Additionally, it
+has an optional secondary action.
+
+<ComponentPreview
+  componentName="dropdown--informational"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="27rem"
+/>
+
+## Anatomy
+
+- Dropdown must have an element to trigger
+the Dropdown (e.g. a Button or Icon).
+- Dropdown must have a list of choices.
+- Dropdown may have a title above the list
+of choices.
+- Informational Dropdown must have additional
+information about each choice.
+- Informational Dropdown may have a secondary
+action at the bottom (e.g. a Link or Button).

@@ -1,0 +1,50 @@
+// ==================================================================
+// Tabbed Navigation
+// ==================================================================
+////
+/// @group Tabs
+////
+.sprk-c-Tabs__buttons {
+  color: $sprk-tab-navigation-btn-color;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: $sprk-space-m;
+
+  @media all and (min-width: $sprk-tab-navigation-breakpoint) {
+    display: flex;
+    border: 0;
+  }
+}
+
+.sprk-c-Tabs__button {
+  -webkit-appearance: none;
+  background-color: $sprk-tab-navigation-btn-bg-color;
+  border: 0;
+  border-top: $sprk-tab-navigation-btn-border-top;
+  display: block;
+  font-size: $sprk-font-size-body-one;
+  font-weight: $sprk-font-weight-body-one;
+  text-align: center;
+  text-decoration: none;
+  padding: $sprk-space-inset-short-s;
+  padding-top: $sprk-space-s;
+  padding-bottom: $sprk-space-s;
+  width: 100%;
+
+  @media all and (min-width: $sprk-tab-navigation-breakpoint) {
+    flex: 1 1 100%;
+  }
+}
+
+/// Adds active state styles to the Tab button.
+/// @name .sprk-c-Tabs__button--active
+.sprk-c-Tabs__button--active,
+.sprk-c-Tabs__button:focus {
+  background-color: $sprk-white;
+  border-top: $sprk-tab-navigation-btn-active-border-top;
+  color: $sprk-tab-navigation-btn-active-color;
+}
+
+.sprk-c-Tabs__button:hover {
+  border-top: $sprk-tab-navigation-btn-hover-border-top;
+}

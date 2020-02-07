@@ -1,0 +1,32 @@
+////
+/// @group input
+////
+
+.sprk-b-Label {
+  display: block;
+  font-family: $sprk-label-font-family;
+  font-size: $sprk-label-font-size;
+  font-weight: $sprk-label-font-weight;
+  line-height: $sprk-label-line-height;
+  padding: $sprk-label-padding;
+  margin: $sprk-label-margin;
+}
+
+.sprk-b-Label--disabled {
+  color: $sprk-label-disabled-color;
+}
+
+/// Apply when a label is used without an input.
+.sprk-b-Label--no-input {
+  padding: 0;
+  transform: none;
+}
+
+/// Used for inline labels.
+.sprk-b-Label--inline {
+  display: inline-block;
+}
+
+.sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
+  font-size: $sprk-visibility-control-label-font-size;
+}

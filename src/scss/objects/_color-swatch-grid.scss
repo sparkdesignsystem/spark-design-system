@@ -1,0 +1,5 @@
+.docs-o-ColorSwatchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
+  gap: $sprk-space-m;
+}

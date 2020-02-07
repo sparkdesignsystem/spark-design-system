@@ -1,0 +1,109 @@
+---
+  title: Card
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Card
+
+Card is a flexible container
+for grouping small chunks of related content.
+
+<ComponentPreview
+  componentName="card--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Card provides a way to present
+information quickly. While
+flexible in nature, they will
+typically have a heading and
+a call to action and be used in
+groups within a grid.
+
+### Guidelines
+
+- The content arrangement inside of a Card is intentionally flexible.
+- Card has a maximum width of `425px`.
+Using Card as full-width containers should be avoided.
+- The Standout style can be applied to any Card variant.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Base
+
+Base Card is a simple container for
+related content. There are no strict
+guidelines about what can go into a
+Card, but a clear heading and
+call to action are encouraged.
+
+<ComponentPreview
+  componentName="card--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Standout
+
+Standout Card is used to give
+visual priority to a Card.
+Any Card can have this style,
+but only one card should use it at a
+time on the same page.
+
+<ComponentPreview
+  componentName="card--standout"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Highlighted Header
+
+Highlighted Header Card supplies a
+small burst of information that
+draws focus to its header.
+
+<ComponentPreview
+  componentName="card--highlighted-header"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Teaser
+
+Teaser Card includes an
+image or illustration and a
+call to action that can be
+a [Button](/using-spark/components/button) or a [Link](/using-spark/components/link).
+
+- When using an Icon in Teaser Card, the
+content of the Card should be center aligned.
+- The Teaser Card element order can
+be changed, for example, if you’d
+like the heading to appear above the image.
+
+<ComponentPreview
+  componentName="card--teaser"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- The contents of Card are intentionally flexible.
+- Card may include a clear heading and call to action.
+- Teaser Card must have a heading, image, and call to action.

@@ -1,0 +1,48 @@
+$sprk-masthead-breakpoint: 57rem;
+$sprk-masthead-narrow-height: 198px;
+$sprk-using-webfonts: true;
+$sprk-webfonts:
+  ((url('https://spark-assets.netlify.com/RocketSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Bold.woff') format('woff')), RocketSans, 700),
+  ((url('https://spark-assets.netlify.com/RocketSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Medium.woff') format('woff')), RocketSans, 500),
+  ((url('https://spark-assets.netlify.com/RocketSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Regular.woff') format('woff')), RocketSans, 400),
+  ((url('https://spark-assets.netlify.com/RocketSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Light.woff') format('woff')), RocketSans, 300);
+
+/* stylelint-disable selector-class-pattern */
+// SprkTables only allow
+// class to be added on table container
+// unless you go full-control mode
+// and add your own html.
+.docs-b-Table--left-align-last tr td:last-child {
+  text-align: left;
+}
+
+.docs-b-Table--no-wrap-first tr td:first-child {
+  white-space: nowrap;
+}
+
+.sprk-b-Link code {
+  text-decoration: underline;
+}
+
+#gatsby-focus-wrapper code {
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 13px;
+  color: rgba(51, 51, 51, 0.9);
+  background-color: rgb(248, 248, 248);
+  margin: 0;
+  padding: 3px 5px;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(238, 238, 238);
+}
+
+.docs-b-Link--anchor {
+  display: block;
+  position: relative;
+  top: -170px;
+  visibility: hidden;
+}
+
+/* stylelint-enable */

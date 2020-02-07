@@ -1,0 +1,186 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'sprk-highlight-board',
+  template: `
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
+      <img
+        *ngIf="type !== 'noImage'"
+        class="sprk-c-HighlightBoard__image"
+        src="{{ imgSrc }}"
+        alt="{{ imgAlt }}"
+      />
+
+      <sprk-stack
+        sprkStackItem
+        itemSpacing="large"
+        additionalClasses="sprk-c-HighlightBoard__content"
+      >
+        <h1
+          sprkStackItem
+          [ngClass]="{
+            'sprk-b-TypeDisplayTwo': type === 'noImage',
+            'sprk-b-TypeDisplayOne': type !== 'noImage',
+            'sprk-c-HighlightBoard__heading': true
+          }"
+        >
+          {{ heading }}
+        </h1>
+
+        <sprk-stack
+          sprkStackItem
+          *ngIf="ctaText"
+          itemSpacing="medium"
+          splitAt="tiny"
+          additionalClasses="sprk-o-Stack--center-column {{ centerBtns }}"
+        >
+          <div sprkStackItem class="sprk-c-HighlightBoard__cta">
+            <sprk-link
+              linkType="unstyled"
+              [href]="ctaHref"
+              additionalClasses="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              [analyticsString]="analyticsStringCta"
+            >
+              {{ ctaText }}
+            </sprk-link>
+          </div>
+
+          <div
+            sprkStackItem
+            *ngIf="ctaText2"
+            class="sprk-c-HighlightBoard__cta"
+          >
+            <sprk-link
+              linkType="unstyled"
+              [href]="ctaHref2"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              [analyticsString]="analyticsStringCta2"
+            >
+              {{ ctaText2 }}
+            </sprk-link>
+          </div>
+        </sprk-stack>
+      </sprk-stack>
+    </div>
+  `
+})
+export class SprkHighlightBoardComponent {
+  /**
+   * The value supplied will be rendered as the heading.
+   */
+  @Input()
+  heading: string;
+  /**
+   * The Highlight Board will use this as the
+   * source for the main image.
+   */
+  @Input()
+  imgSrc: string;
+  /**
+   * The Highlight Board will use this as
+   * the `alt` text for the main image.
+   */
+  @Input()
+  imgAlt: string;
+  /**
+   * The Highlight Board will use this as
+   * the text for the main call to action.
+   */
+  @Input()
+  ctaText: string;
+  /**
+   * The Highlight Board will use this as the
+   * `href` for the main call to action.
+   */
+  @Input()
+  ctaHref: string;
+  /**
+   * The Highlight Board will use this as
+   * the text for the secondary call to action.
+   */
+  @Input()
+  ctaText2: string;
+  /**
+   * The Highlight Board will use this
+   * as the `href` for the secondary
+   * call to action.
+   */
+  @Input()
+  ctaHref2: string;
+  /**
+   * The value supplied will be assigned to
+   * the `data-analytics` attribute on the call to action.
+   * Intended for an outside library to capture data.
+   */
+  @Input()
+  analyticsStringCta: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the second
+   * call to action. Intended for an outside
+   * library to capture data.
+   */
+  @Input()
+  analyticsStringCta2: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
+  @Input()
+  additionalClasses: string;
+  /**
+   * The variation of the
+   * Highlight Board that is rendered.
+   * Can be `noImage`, `stacked` or not
+   * set at all. The default if not set
+   * is the default variation of the Highlight Board.
+   */
+  @Input()
+  type: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
+
+  /**
+   * @ignore
+   */
+  public centerBtns = '';
+
+  /**
+   * @ignore
+   */
+  getClasses(): string {
+    const classArray: string[] = ['sprk-c-HighlightBoard'];
+
+    switch (this.type) {
+      case 'noImage':
+        this.centerBtns = 'sprk-o-Stack--center-row';
+        break;
+      case 'stacked':
+        this.centerBtns = 'sprk-o-Stack--center-row';
+        classArray.push(
+          'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked'
+        );
+        break;
+      default:
+        classArray.push('sprk-c-HighlightBoard--has-image');
+        break;
+    }
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+}

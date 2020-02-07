@@ -1,0 +1,255 @@
+// ==========================================================================
+// Spacing overrides
+// ==========================================================================
+
+/// Sets the bottom margin to `0px`
+/// @group spacing
+/// @name .sprk-u-mbn
+
+/// Sets the left and right padding to `16px`
+/// @group spacing
+/// @name .sprk-u-phm
+
+/// Sets the margin on all sides to `64px`
+/// @group spacing
+/// @name .sprk-u-mah
+
+.sprk-u-ptn,
+.sprk-u-pvn,
+.sprk-u-pan {
+  padding-top: 0 !important;
+}
+
+.sprk-u-pts,
+.sprk-u-pvs,
+.sprk-u-pas {
+  padding-top: $sprk-space-s !important;
+}
+
+.sprk-u-ptm,
+.sprk-u-pvm,
+.sprk-u-pam {
+  padding-top: $sprk-space-m !important;
+}
+
+.sprk-u-ptl,
+.sprk-u-pvl,
+.sprk-u-pal {
+  padding-top: $sprk-space-l !important;
+}
+
+.sprk-u-pth,
+.sprk-u-pvh,
+.sprk-u-pah {
+  padding-top: $sprk-space-h !important;
+}
+
+.sprk-u-prn,
+.sprk-u-phn,
+.sprk-u-pan {
+  padding-right: 0 !important;
+}
+
+.sprk-u-prs,
+.sprk-u-phs,
+.sprk-u-pas {
+  padding-right: $sprk-space-s !important;
+}
+
+.sprk-u-prm,
+.sprk-u-phm,
+.sprk-u-pam {
+  padding-right: $sprk-space-m !important;
+}
+
+.sprk-u-prl,
+.sprk-u-phl,
+.sprk-u-pal {
+  padding-right: $sprk-space-l !important;
+}
+
+.sprk-u-prh,
+.sprk-u-phh,
+.sprk-u-pah {
+  padding-right: $sprk-space-h !important;
+}
+
+.sprk-u-pbn,
+.sprk-u-pvn,
+.sprk-u-pan {
+  padding-bottom: 0 !important;
+}
+
+.sprk-u-pbs,
+.sprk-u-pvs,
+.sprk-u-pas {
+  padding-bottom: $sprk-space-s !important;
+}
+
+.sprk-u-pbm,
+.sprk-u-pvm,
+.sprk-u-pam {
+  padding-bottom: $sprk-space-m !important;
+}
+
+.sprk-u-pbl,
+.sprk-u-pvl,
+.sprk-u-pal {
+  padding-bottom: $sprk-space-l !important;
+}
+
+.sprk-u-pbh,
+.sprk-u-pvh,
+.sprk-u-pah {
+  padding-bottom: $sprk-space-h !important;
+}
+
+.sprk-u-pln,
+.sprk-u-phn,
+.sprk-u-pan {
+  padding-left: 0 !important;
+}
+
+.sprk-u-pls,
+.sprk-u-phs,
+.sprk-u-pas {
+  padding-left: $sprk-space-s !important;
+}
+
+.sprk-u-plm,
+.sprk-u-phm,
+.sprk-u-pam {
+  padding-left: $sprk-space-m !important;
+}
+
+.sprk-u-pll,
+.sprk-u-phl,
+.sprk-u-pal {
+  padding-left: $sprk-space-l !important;
+}
+
+.sprk-u-plh,
+.sprk-u-phh,
+.sprk-u-pah {
+  padding-left: $sprk-space-h !important;
+}
+
+.sprk-u-mtn,
+.sprk-u-mvn,
+.sprk-u-man {
+  margin-top: 0 !important;
+}
+
+.sprk-u-mts,
+.sprk-u-mvs,
+.sprk-u-mas {
+  margin-top: $sprk-space-s !important;
+}
+
+.sprk-u-mtm,
+.sprk-u-mvm,
+.sprk-u-mam {
+  margin-top: $sprk-space-m !important;
+}
+
+.sprk-u-mtl,
+.sprk-u-mvl,
+.sprk-u-mal {
+  margin-top: $sprk-space-l !important;
+}
+
+.sprk-u-mth,
+.sprk-u-mvh,
+.sprk-u-mah {
+  margin-top: $sprk-space-h !important;
+}
+
+.sprk-u-mrn,
+.sprk-u-mhn,
+.sprk-u-man {
+  margin-right: 0 !important;
+}
+
+.sprk-u-mrs,
+.sprk-u-mhs,
+.sprk-u-mas {
+  margin-right: $sprk-space-s !important;
+}
+
+.sprk-u-mrm,
+.sprk-u-mhm,
+.sprk-u-mam {
+  margin-right: $sprk-space-m !important;
+}
+
+.sprk-u-mrl,
+.sprk-u-mhl,
+.sprk-u-mal {
+  margin-right: $sprk-space-l !important;
+}
+
+.sprk-u-mrh,
+.sprk-u-mhh,
+.sprk-u-mah {
+  margin-right: $sprk-space-h !important;
+}
+
+.sprk-u-mbn,
+.sprk-u-mvn,
+.sprk-u-man {
+  margin-bottom: 0 !important;
+}
+
+.sprk-u-mbs,
+.sprk-u-mvs,
+.sprk-u-mas {
+  margin-bottom: $sprk-space-s !important;
+}
+
+.sprk-u-mbm,
+.sprk-u-mvm,
+.sprk-u-mam {
+  margin-bottom: $sprk-space-m !important;
+}
+
+.sprk-u-mbl,
+.sprk-u-mvl,
+.sprk-u-mal {
+  margin-bottom: $sprk-space-l !important;
+}
+
+.sprk-u-mbh,
+.sprk-u-mvh,
+.sprk-u-mah {
+  margin-bottom: $sprk-space-h !important;
+}
+
+.sprk-u-mln,
+.sprk-u-mhn,
+.sprk-u-man {
+  margin-left: 0 !important;
+}
+
+.sprk-u-mls,
+.sprk-u-mhs,
+.sprk-u-mas {
+  margin-left: $sprk-space-s !important;
+}
+
+.sprk-u-mlm,
+.sprk-u-mhm,
+.sprk-u-mam {
+  margin-left: $sprk-space-m !important;
+}
+
+.sprk-u-mll,
+.sprk-u-mhl,
+.sprk-u-mal {
+  margin-left: $sprk-space-l !important;
+}
+
+.sprk-u-mlh,
+.sprk-u-mhh,
+.sprk-u-mah {
+  margin-left: $sprk-space-h !important;
+}

@@ -1,0 +1,254 @@
+---
+  title: Stack
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Stack
+
+Stack is a responsive layout object
+that allows you to stack content
+blocks in a single vertical column
+and split them into multiple columns
+at wider viewports.
+
+<ComponentPreview
+  componentName="stack--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+It is often desirable for blocks of content
+to be laid out in a single column on narrow
+viewports, but multiple side-by-side
+columns on wider viewports.
+The Stack component can be used
+to control these kinds of layout
+changes between viewport sizes.
+
+Stack can be used for both
+page-level and component-level
+layout. For example, you can use
+Stack to create a two-column page
+layout or within a component to
+make two buttons stack at narrow
+viewports and split next to each
+other on wider viewports.
+
+### Guidelines
+
+- Stack objects can be nested inside other Stack objects.
+- Stack Items can split into side-by-side columns at the following breakpoints:
+  - XX Small (xxs) – `320px`
+  - Extra Small (xs) – `480px`
+  - Small (s) - `680px`
+  - Medium (m) – `880px`
+  - Large (l) – `1080px`
+  - Extra Large (xl) – `1280px`
+- Stack can reverse the direction of the
+Spark Item elements. This only works when
+using the split-reverse modifier and can’t
+be used with a single column Stack.
+- Spacing between Stack Items can be set using
+the available [Spacing](/using-spark/foundations/space) sizes.
+  - Tiny - `4px`
+  - Small - `8px`
+  - Medium - `16px`
+  - Large - `32px`
+  - Huge - `64px`
+- All Stack Items inside a Stack must add
+up to 100% width or the layout will not work.
+For example, if you have a Stack Item
+set to 1/2 width you can have one more
+Stack Item at 1/2 width, two more
+at 1/4 width each, etc.
+- Stack Items don’t have any internal
+padding. To add padding, consider using the [Box Object.](/using-spark/components/box)
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Default
+
+By default, Stack Items will form a single vertical column.
+
+<ComponentPreview
+  componentName="stack--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Stack with Space Between Items
+
+Space can be added between Stack Items.
+By default the spacing is below each item.
+When the items are split, the spacing is
+on the right. The available sizes are
+tiny, small, medium, large, and huge.
+The example shows medium spacing and
+splits at the small breakpoint (“s”).
+
+<ComponentPreview
+  componentName="stack--stack-split"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with Two Columns
+
+This layout configuration splits
+into two columns at a set
+breakpoint. The example
+shows the split at extra
+small breakpoint (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-two-col"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with Three Columns
+
+This layout configuration splits into
+three columns at a set breakpoint.
+The example shows the split at
+extra small breakpoint (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-three-col"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with Four Columns
+
+This layout configuration splits
+into four columns at a set breakpoint.
+The example shows the split at extra
+small breakpoint (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-four-col"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with Five Columns
+
+This layout configuration splits
+into five columns at a set breakpoint.
+The example shows the split at
+extra small breakpoint (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-five-col"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with Six Columns
+
+This layout configuration splits into
+six columns at a set breakpoint. The
+example shows the split at extra
+small breakpoint (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-six-col"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with 75/25 Columns
+
+This layout configuration splits into
+two columns at a set breakpoint. One
+column takes up 75% and the other
+takes up 25% of the available width.
+The example shows the split at extra small (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-layout-three-fourths"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with 60/40 Columns
+
+This layout configuration splits into
+two columns at a set breakpoint.
+One column takes up 60% and the
+other takes up 40% of the
+available width. The example
+shows the split at extra small (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-layout-three-fifths"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with 70/30 Columns
+
+This layout configuration splits
+into two columns at a set breakpoint.
+One column takes up 70% and the
+other takes up 30% of the available
+width. The example shows the split
+at extra small (“xs”).
+
+<ComponentPreview
+  componentName="stack--stack-split-layout-three-tenths"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Split Stack with Mixed and Nested Columns
+
+This layout configuration shows many
+combinations in which Stack can be
+used. It’s flexibility shows that
+Stack objects can be nested inside
+of each other and even contain
+flexbox elements meant to fill
+in the remaining space.
+
+<ComponentPreview
+  componentName="stack--stack-split-layout-mixed"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+## Anatomy
+
+- Stack must have a container to wrap Stack Items.
+This container dictates spacing between items and split breakpoints.
+- Stack Items must be inside the Stack container.
+All Stack Item sizes must add up to 100% in total width.
+
+## Accessibility
+
+- Reversing the direction Stack splits
+could affect the order a screen reader
+will read the content. This can vary
+depending on device and browser
+context. Please use with caution.

@@ -1,0 +1,140 @@
+---
+  title: HTML - Installation
+  order: 2
+---
+
+import bundledSpark from '../../images/installing-spark/html/bundled-spark.png';
+
+# Installing Spark in an HTML Project
+## Installing Spark
+
+In this guide we’ll walk you through installing Spark into a site without a
+JavaScript framework. You can follow along with the code examples in this
+guide using the sample app found in the <a href="https://github.com/sparkdesignsystem/spark-starter-html/tree/without-spark" target="_blank">`without-spark` branch</a> of our
+starter repository.
+
+This guide is Part 2 in a 3-Part series. You can also check out
+[Part 1 - Setting Up Your Environment](/installing-spark/html-environment-setup) and
+[Part 3 - Adding Components](/installing-spark/html-add-components).
+
+For instructions on setting up Spark in other environments, check out the
+guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react) development environments.
+
+## Install the Spark Package
+
+1. First, use `npm` to install the Spark package. This will download the
+JavaScript and CSS needed to add the Spark components.
+
+``` shell
+npm install --save-dev @sparkdesignsystem/spark
+```
+
+2. This will download all the JavaScript and CSS needed to render the Spark
+components into your `node_modules` folder. To access
+them in your compiled website, import them in your script. Webpack will
+include them in your bundled site JavaScript.
+
+``` javascript
+// import the Spark JavaScript
+import spark from "@sparkdesignsystem/spark/es5/spark";
+import sparkPrerender from "@sparkdesignsystem/spark/es5/sparkPrerender";
+
+// optional (see below)
+import "@sparkdesignsystem/spark/es5/sparkPolyfills";
+
+// import the Spark CSS
+import "@sparkdesignsystem/spark/_spark.scss";
+
+// initialize Spark
+sparkPrerender();
+spark();
+```
+
+> **sparkPolyfills** - This file loads a few polyfills that Spark requires. If your application is already polyfilling the items below, you don't need to load this file.
+>
+>- `Promise`
+>- `Array.from`
+>- `String.includes`
+>- `Array.find`
+>- `NodeList.forEach`
+>- `classList` on SVG Elements
+
+The Spark assets will now be included when you compile your site.
+Run the following command:
+
+``` shell
+npm run build
+```
+
+You can verify that this is the case by checking the compiled `bundle.css` and
+`main.js` in your solution. The compiled Spark CSS and JavaScript will show
+here:
+
+<div class="sprk-u-Measure">
+  <img
+    class="sprk-u-mbm"
+    style="margin: auto; display: block;"
+    src={bundledSpark}
+    alt="Minified CSS in bundle.css and minified JS in main.js"/>
+</div>
+
+## Configure Spark
+
+3. Finally, in `index.html`, find the `body` element and add the 
+`data-sprk-main` attribute. This attribute is required for some
+Spark components to correctly handle focus changes.
+
+``` html
+<body data-sprk-main>
+  ...
+</body>
+```
+
+## You did it!
+
+You’re ready to start [adding components](/installing-spark/html-add-components) to
+your site.
+
+## Additional Topics
+
+* The [Icon Installation Guide](/installing-spark/installing-icons) for importing the Spark SVG icon set
+* The [Font Installation Guide](/installing-spark/installing-fonts) for instructions on using the Rocket Sans font
+
+## Troubleshooting
+
+Here are some issues that you might encounter while setting up Spark and
+how to fix them:
+
+**Issue:**
+
+```
+Uncaught ReferenceError: SPRK_CURRENT_VERSION is not defined
+```
+
+Make sure you're importing Spark from the correct directory:
+
+``` javascript
+import spark from "@sparkdesignsystem/spark/es5/spark";
+```
+
+This is not the correct directory:
+
+``` javascript
+import spark from "@sparkdesignsystem/spark/spark";
+```
+
+---
+
+**Issue: Spark.js is being called, but none of my components are being initialized.**
+
+Make sure you're calling `spark()` *after* the DOM is loaded. You may need
+to move the `<script>` tag in `index.html` to the bottom of the file.
+
+---
+
+**Issue: The Webpack build is completing without errors but Spark JS and
+CSS are not being applied to my site.**
+
+Make sure you're referencing your JavaScript and CSS files correctly in 
+`index.html`. In our example, we needed to change the import from 
+`src/index.js` to `main.js`.

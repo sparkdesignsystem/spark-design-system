@@ -1,0 +1,238 @@
+// ==================================================================
+// Tables
+// ==================================================================
+////
+/// @group Table
+////
+.sprk-b-TableContainer {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.sprk-b-Table {
+  width: 100%;
+}
+
+// Cell alignments
+[rowspan] {
+  vertical-align: middle;
+}
+
+[rowspan='1'] {
+  vertical-align: top;
+}
+
+.sprk-b-Table tbody tr {
+  border-bottom-width: $sprk-table-row-border-width;
+  border-bottom-style: $sprk-table-row-border-style;
+  border-bottom-color: $sprk-table-row-border-color;
+}
+
+.sprk-b-Table th {
+  background-color: $sprk-table-header-background-color;
+  color: $sprk-table-header-font-color;
+  font-size: $sprk-table-header-font-size;
+  font-weight: $sprk-table-header-font-weight;
+  border-right-width: $sprk-table-header-border-spacing;
+  border-right-color: $sprk-table-header-border-color;
+  border-right-style: solid;
+  text-align: $sprk-table-heading-alignment;
+}
+
+.sprk-b-Table td {
+  text-align: $sprk-table-cell-alignment;
+}
+
+.sprk-b-Table tr > th:last-of-type {
+  border-right: 0;
+}
+
+/// Adds styles for the secondary table variant.
+/// @name .sprk-b-Table--secondary
+.sprk-b-Table--secondary td {
+  text-align: $sprk-table-secondary-cell-text-alignment;
+}
+
+.sprk-b-Table--secondary thead tr {
+  border-bottom-width: $sprk-table-row-border-width;
+  border-bottom-style: $sprk-table-row-border-style;
+  border-bottom-color: $sprk-table-row-border-color;
+}
+
+.sprk-b-Table--secondary th {
+  background-color: $sprk-table-secondary-header-background-color;
+  color: $sprk-table-secondary-header-font-color;
+  text-align: $sprk-table-secondary-header-text-alignment;
+  border-right-width: $sprk-table-secondary-header-border-spacing;
+  border-right-color: $sprk-table-secondary-header-border-color;
+  border-right-style: solid;
+}
+
+/// Adds styles for the grouped table variant.
+/// @name .sprk-b-Table--grouped-columns
+.sprk-b-Table--grouped-columns .sprk-b-Table--grouped-column {
+  border: 0;
+  background-color: $sprk-table-grouped-header-background-color;
+  font-size: $sprk-table-grouped-header-font-size;
+  font-weight: $sprk-table-grouped-header-font-weight;
+}
+
+/// Adds styles for the row comparison table variant.
+/// @name .sprk-b-Table--row-comparison
+.sprk-b-Table--row-comparison .sprk-b-Table__empty-heading {
+  background-color: $sprk-table-empty-heading-background-color;
+}
+
+/// Adds styles for the secondary row comparison table variant.
+.sprk-b-Table--secondary-row-comparison {
+  border-collapse: separate;
+  border-top: 0;
+  border-bottom: 0;
+  border-spacing: $sprk-table-secondary-row-comp-row-spacing;
+  margin-top: -$sprk-table-secondary-row-comp-row-spacing;
+  margin-bottom: -$sprk-table-secondary-row-comp-row-spacing;
+}
+
+.sprk-b-Table--secondary-row-comparison td {
+  border-top-width: $sprk-table-secondary-row-comp-border-width;
+  border-top-style: $sprk-table-secondary-row-comp-border-style;
+  border-top-color: $sprk-table-secondary-row-comp-border-color;
+  border-bottom-width: $sprk-table-secondary-row-comp-border-width;
+  border-bottom-style: $sprk-table-secondary-row-comp-border-style;
+  border-bottom-color: $sprk-table-secondary-row-comp-border-color;
+}
+
+.sprk-b-Table--secondary-row-comparison tr > td:last-of-type {
+  border-right-width: $sprk-table-secondary-row-comp-border-width;
+  border-right-style: $sprk-table-secondary-row-comp-border-style;
+  border-right-color: $sprk-table-secondary-row-comp-border-color;
+}
+
+/// Forces Table cells to be equal width.
+.sprk-b-Table--fixed {
+  table-layout: fixed;
+}
+
+/// Adds stripes to even rows.
+.sprk-b-Table--striped-even {
+  tbody tr:nth-child(even) {
+    background-color: $sprk-table-stripe-color;
+  }
+}
+
+/// Removes outside column borders.
+.sprk-b-Table--bordered-columns-inside {
+  border-left-width: 0;
+
+  th,
+  td {
+    &:last-child {
+      border-right-width: 0;
+    }
+  }
+}
+
+/// Adds stripes to odd rows.
+/// @name .sprk-b-Table--striped-odd
+.sprk-b-Table--striped,
+.sprk-b-Table--striped-odd {
+  tbody tr:nth-child(odd) {
+    background-color: $sprk-table-stripe-color;
+  }
+}
+
+/// Adds large spacing to the Table items.
+.sprk-b-Table--spacing-large {
+  th,
+  td {
+    padding: $sprk-table-padding-large;
+  }
+}
+
+/// Adds medium spacing to the Table items.
+.sprk-b-Table--spacing-medium {
+  th,
+  td {
+    padding: $sprk-table-padding-medium;
+  }
+}
+
+/// Adds small spacing to the Table items.
+.sprk-b-Table--spacing-small {
+  th,
+  td {
+    padding: $sprk-table-padding-small;
+  }
+}
+
+/// Adds a borders around all sides of the Table.
+.sprk-b-Table--bordered {
+  border-top: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+  border-right: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+
+  tr {
+    border-bottom: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+  }
+
+  th,
+  td {
+    border-left: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+  }
+}
+
+/// Removes outside Table borders.
+.sprk-b-Table--bordered-inside {
+  border-top-width: 0;
+  border-right-width: 0;
+
+  tbody tr:last-child {
+    border-bottom-width: 0;
+  }
+
+  th,
+  td {
+    &:first-child {
+      border-left-width: 0;
+    }
+  }
+}
+
+/// Adds bottom borders on Table rows.
+.sprk-b-Table--bordered-rows {
+  th,
+  td {
+    border-bottom: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+  }
+}
+
+/// Removes outside row borders.
+.sprk-b-Table--bordered-rows-inside {
+  tbody tr:last-child {
+    th,
+    td {
+      border-bottom-width: 0;
+    }
+  }
+}
+
+/// Adds borders on just the columns.
+.sprk-b-Table--bordered-columns {
+  border-left: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+
+  th,
+  td {
+    border-right: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;
+  }
+}
+
+// Highlight specific row or cell
+.sprk-b-TableHighlight {
+  background-color: $sprk-table-highlight-color !important;
+  color: $sprk-table-highlight-text-color !important;
+}
+
+// Align numbers to the right. Especially useful for money.
+.sprk-b-Numerical {
+  text-align: right;
+}

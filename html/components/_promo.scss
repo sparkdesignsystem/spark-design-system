@@ -1,0 +1,58 @@
+// ==================================================================
+// Promo
+// ==================================================================
+////
+/// @group promo
+////
+.sprk-c-Promo {
+  background-color: $sprk-promo-background-color;
+  max-width: $sprk-promo-max-width;
+  margin: 0 auto;
+}
+
+/// Adds a border around the Promo.
+.sprk-c-Promo--bordered {
+  border: $sprk-promo-border;
+}
+
+.sprk-c-Promo__title {
+  font-weight: $sprk-promo-title-font-weight;
+  color: $sprk-promo-title-font-color;
+}
+
+.sprk-c-Promo__subtitle {
+  font-weight: $sprk-promo-subtitle-font-weight;
+  color: $sprk-promo-subtitle-font-color;
+}
+
+/// Adds styles for the image
+/// in the Flag Promo variant.
+.sprk-c-Promo__image--flag {
+  object-fit: cover;
+  padding: $sprk-space-inset-m;
+
+  @media (max-width: $sprk-promo-breakpoint) {
+    max-width: $sprk-promo-image-narrow-max-width;
+    max-height: $sprk-promo-image-narrow-max-height;
+  }
+}
+
+.sprk-c-Promo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media (max-width: $sprk-promo-breakpoint) {
+    max-height: $sprk-promo-image-narrow-max-height;
+  }
+}
+
+.sprk-c-Promo__content {
+  padding: $sprk-space-inset-l;
+}
+
+///	Adds styles for the Flag Promo variant.
+/// @name .sprk-c-Promo--flag
+.sprk-c-Promo--flag .sprk-c-Promo__content {
+  padding: $sprk-space-inset-m;
+}

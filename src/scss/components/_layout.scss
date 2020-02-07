@@ -1,0 +1,103 @@
+/* stylelint-disable selector-max-id */
+
+/* stylelint-disable selector-class-pattern */
+html,
+body {
+  height: 100%;
+}
+
+/* stylelint-disable string-quotes */
+body,
+#___gatsby,
+#___gatsby > div[role="group"][tabindex] {
+  min-height: 100%;
+}
+
+.docs-layout {
+  flex: 1 0 auto;
+  margin-bottom: $sprk-space-misc-d;
+  max-width: $doc-site-layout-max-width;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: fit-content(300px) 1fr;
+    grid-template-columns: fit-content(300px) 1fr;
+  }
+}
+
+/*
+ * Gatsby wraps content in a weird div automatically
+ * This allows us to add height to layout footer.
+ */
+
+#___gatsby > div[role="group"][tabindex] {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.docs-layout__side-bar {
+  display: none;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    display: block;
+    padding: $sprk-space-l;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+.docs-layout__content {
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $doc-site-mobile-breakpoint) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+}
+
+// gatsby-remark-sectionize creates the sections from md
+.docs-layout__content section,
+.docs-layout__content .docs-b-h2,
+.docs-layout__content .docs-b-h3 {
+  padding-top: $sprk-space-l;
+}
+
+.docs-o-Grid {
+  display: grid;
+}
+
+.docs-o-Grid--three-col {
+  grid-template-columns: repeat(auto-fit, minmax(310px, 425px));
+}
+
+.docs-o-Grid--large {
+  gap: $sprk-space-l;
+}
+
+// Spark override to align card btns to bottom
+.docs-c-Card .sprk-c-Card__content {
+  flex-grow: 1;
+}
+
+.docs-c-Card .sprk-c-Card__content div.sprk-o-Stack__item {
+  display: flex;
+  flex-grow: 1;
+}
+
+.docs-c-Card .sprk-c-Card__content div.sprk-o-Stack__item .sprk-c-Button {
+  align-self: flex-end;
+}
+
+// Override for Spark footer
+.docs-c-Footer .sprk-o-CenteredColumn {
+  max-width: $doc-site-layout-max-width;
+}
+
+.docs-b-Table .sprk-b-Table__head th:first-child {
+  width: 35%;
+}

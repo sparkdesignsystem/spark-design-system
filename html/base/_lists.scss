@@ -1,0 +1,20 @@
+// ==================================================================
+// Lists
+// ==================================================================
+////
+/// @group list
+////
+.sprk-b-List {
+  margin-left: $sprk-list-margin-left;
+}
+
+.sprk-b-List--bare {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/// Adds extended indentation on the list.
+.sprk-b-List--indented {
+  margin-left: $sprk-list-indented-margin-left;
+}

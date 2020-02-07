@@ -1,0 +1,19 @@
+# compiled output
+/dist
+/storybook-static
+/tmp
+documentation.json
+/out-tsc
+
+# Only exists if Bazel was run
+/bazel-out
+
+# misc
+/coverage
+/.sass-cache
+/connect.lock
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+

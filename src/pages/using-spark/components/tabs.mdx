@@ -1,0 +1,50 @@
+---
+  title: Tabs
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Tabs
+
+The Tabs component organizes multiple sections of
+related content so a client can view one section at a time. 
+
+<ComponentPreview
+  componentName="tabs--default-story"
+  maxWidth="100%"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Usage
+
+Tabs are used to navigate between multiple sections
+of related content without leaving the context of the page. 
+
+### Guidelines
+
+- There needs to be at least two Tabs buttons, but not more than seven.
+- The text of each Tabs button cannot be on two lines so must be kept short.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+- Tabs must contain Tabs buttons.
+- Each Tabs button must be connected to a content panel.
+
+## Accessibility
+
+- Clients can activate individual tabs
+using the SPACE or ENTER keys.
+- Clients can navigate through the Tabs
+with LEFT/RIGHT and UP/DOWN arrow keys.
+- Clients can jump to the first Tabs button
+with HOME and to the last Tabs button with END.
+- The TAB key moves the client into the content
+associated with the Tabs button and SHIFT+TAB
+moves focus back to the button. 

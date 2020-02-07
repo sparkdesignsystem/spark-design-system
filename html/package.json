@@ -1,0 +1,65 @@
+{
+  "name": "@sparkdesignsystem/spark",
+  "version": "12.3.0",
+  "description": "Spark is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.",
+  "main": "es5/sparkExports.js",
+  "scripts": {
+    "test": "mocha --require './runner.js' './tests/*.tests.js'",
+    "coverage": "nyc npm test",
+    "build": "webpack",
+    "prepublishOnly": "npm run build",
+    "storybook": "start-storybook -p 7006 -s ../storybook-utilities/favicon",
+    "build-storybook": "build-storybook -s ../storybook-utilities/favicon"
+  },
+  "nyc": {
+    "exclude": "tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparkdesignsystem/spark-design-system"
+  },
+  "author": "Quicken Loans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
+  },
+  "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
+  "dependencies": {
+    "dom-slider": "1.5.3",
+    "lodash": "^4.17.15",
+    "lory.js": "^2.5.3",
+    "object-fit-images": "^3.2.4",
+    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/register": "^7.0.0",
+    "@storybook/addon-a11y": "^5.3.9",
+    "@storybook/addon-docs": "^5.3.9",
+    "@storybook/addon-google-analytics": "^5.3.9",
+    "@storybook/addons": "^5.3.9",
+    "@storybook/html": "^5.3.9",
+    "@storybook/preset-scss": "^1.0.2",
+    "@storybook/theming": "^5.3.9",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.1.2",
+    "css-loader": "^3.2.0",
+    "iframe-resizer": "^4.2.3",
+    "jsdom": "^11.12.0",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.13.1",
+    "nyc": "^15.0.0",
+    "promise-polyfill": "^8.1.0",
+    "proxyquire": "^2.1.0",
+    "sass-loader": "^7.1.0",
+    "sinon": "^7.2.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
