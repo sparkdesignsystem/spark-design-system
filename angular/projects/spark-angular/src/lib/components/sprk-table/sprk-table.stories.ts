@@ -38,7 +38,9 @@ const modules = {
 export const columnComparison = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-table idString="table-1">
+    <sprk-table idString="table-1"
+      additionalTableClasses="sprk-b-Table--spacing-medium"
+    >
       <thead sprkTableHead>
         <tr>
           <th>Column Heading</th>
@@ -77,7 +79,7 @@ export const secondary = () => ({
   template: `
     <sprk-table
       idString="table-2"
-      additionalTableClasses="sprk-b-Table--secondary"
+      additionalTableClasses="sprk-b-Table--secondary sprk-b-Table--spacing-medium"
     >
       <thead sprkTableHead>
         <tr>
@@ -115,7 +117,9 @@ export const secondary = () => ({
 export const groupedColumns = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-table idString="table-3">
+    <sprk-table idString="table-3"
+      additionalTableClasses="sprk-b-Table--spacing-medium"
+    >
       <thead sprkTableHead>
         <tr>
           <th rowspan="2">Column Heading</th>
@@ -165,7 +169,9 @@ export const groupedColumns = () => ({
 export const rowComparison = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-table idString="table-4">
+    <sprk-table idString="table-4"
+      additionalTableClasses="sprk-b-Table--spacing-medium"
+    >
       <thead sprkTableHead>
         <tr>
           <th sprkTableEmptyHeading></th>
@@ -207,7 +213,9 @@ export const rowComparison = () => ({
 export const secondaryRowComparison = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-table idString="table-5">
+    <sprk-table idString="table-5"
+      additionalTableClasses="sprk-b-Table--spacing-medium"
+    >
       <tbody>
         <tr>
           <th sprkTableRowHeading>Row Heading</th>
