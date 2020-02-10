@@ -57,6 +57,8 @@ export class SprkTableComponent {
   getTableClasses(): string {
     const classArray: string[] = [
       'sprk-b-Table',
+      'sprk-b-Table--spacing-medium',
+      'sprk-b-Table--striped-even',
     ];
 
     if (this.additionalTableClasses) {
