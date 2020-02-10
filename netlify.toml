@@ -79,3 +79,9 @@
   to = "/using-spark/components/alert"
   status = 301
 
+[[redirects]]
+  from = "/patterns/components/accordions"
+  to = "/using-spark/components/accordion"
+  status = 301
+
+
