@@ -73,3 +73,9 @@
   to = "https://github.com/sparkdesignsystem/spark-design-system/releases"
   status = 301
 
+# Add redirects for pluralized component names
+[[redirects]]
+  from = "/patterns/components/alerts"
+  to = "/using-spark/components/alert"
+  status = 301
+
