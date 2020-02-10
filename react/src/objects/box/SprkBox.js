@@ -73,6 +73,7 @@ SprkBox.propTypes = {
     'misc-b',
     'misc-c',
     'misc-d',
+    '',
   ]),
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
