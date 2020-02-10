@@ -24,6 +24,11 @@
   status = 301
 
 [[redirects]]
+  from = "/patterns/fundamentals/space#stack"
+  to = "/using-spark/components/stack"
+  status = 301
+
+[[redirects]]
   from = "/patterns/fundamentals/layers"
   to = "/using-spark/foundations/sass-variables"
   status = 301
@@ -72,4 +77,62 @@
   from = "/docs/release-notes"
   to = "https://github.com/sparkdesignsystem/spark-design-system/releases"
   status = 301
+
+# Add redirects for pluralized component names
+[[redirects]]
+  from = "/patterns/components/alerts"
+  to = "/using-spark/components/alert"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/accordions"
+  to = "/using-spark/components/accordion"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/awards"
+  to = "/using-spark/components/award"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/buttons"
+  to = "/using-spark/components/button"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/dividers"
+  to = "/using-spark/components/divider"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/icons"
+  to = "/using-spark/components/icon"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/links"
+  to = "/using-spark/components/link"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/lists"
+  to = "/using-spark/components/list"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/modals"
+  to = "/using-spark/components/modal"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/tables"
+  to = "/using-spark/components/table"
+  status = 301
+
+[[redirects]]
+  from = "/patterns/components/inputs"
+  to = "/using-spark/components/input"
+  status = 301
+
+
 
