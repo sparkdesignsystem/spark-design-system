@@ -42,86 +42,86 @@ describe('SprkStack:', () => {
   });
 
   it('should set the misc-a spacing class in addition to the base class when'
-    + ' spacing is "misc-a"', () => {
-    const wrapper = shallow(<SprkBox spacing='misc-a' />);
+    + ' spacing is "miscA"', () => {
+    const wrapper = shallow(<SprkBox spacing='miscA' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--misc-a').length).toBe(1);
   });
 
   it('should set the misc-b spacing class in addition to the base class when'
-    + ' spacing is "misc-b"', () => {
-    const wrapper = shallow(<SprkBox spacing='misc-b' />);
+    + ' spacing is "miscB"', () => {
+    const wrapper = shallow(<SprkBox spacing='miscB' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--misc-b').length).toBe(1);
   });
 
   it('should set the misc-c spacing class in addition to the base class when'
-    + ' spacing is "misc-c"', () => {
-    const wrapper = shallow(<SprkBox spacing='misc-c' />);
+    + ' spacing is "miscC"', () => {
+    const wrapper = shallow(<SprkBox spacing='miscC' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--misc-c').length).toBe(1);
   });
 
   it('should set the misc-d spacing class in addition to the base class when'
-    + ' spacing is "misc-d"', () => {
-    const wrapper = shallow(<SprkBox spacing='misc-d' />);
+    + ' spacing is "miscD"', () => {
+    const wrapper = shallow(<SprkBox spacing='miscD' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--misc-d').length).toBe(1);
   });
 
   it('should set the inset-short-tiny spacing class in addition to the base class when'
-    + ' spacing is "inset-short-tiny"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-short-tiny' />);
+    + ' spacing is "insetShortTiny"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetShortTiny' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-short-tiny').length).toBe(1);
   });
 
   it('should set the inset-short-small spacing class in addition to the base class when'
-    + ' spacing is "inset-short-small"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-short-small' />);
+    + ' spacing is "insetShortSmall"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetShortSmall' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-short-small').length).toBe(1);
   });
 
   it('should set the inset-short-medium spacing class in addition to the base class when'
-    + ' spacing is "inset-short-medium"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-short-medium' />);
+    + ' spacing is "insetShortMedium"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetShortMedium' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-short-medium').length).toBe(1);
   });
 
   it('should set the inset-short-large spacing class in addition to the base class when'
-    + ' spacing is "inset-short-large"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-short-large' />);
+    + ' spacing is "insetShortLarge"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetShortLarge' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-short-large').length).toBe(1);
   });
 
   it('should set the inset-short-huge spacing class in addition to the base class when'
-    + ' spacing is "inset-short-huge"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-short-huge' />);
+    + ' spacing is "insetShortHuge"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetShortHuge' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-short-huge').length).toBe(1);
   });
 
   it('should set the inset-tall-tiny spacing class in addition to the base class when'
-    + ' spacing is "inset-tall-tiny"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-tall-tiny' />);
+    + ' spacing is "insetTallTiny"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetTallTiny' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-tall-tiny').length).toBe(1);
   });
 
   it('should set the inset-tall-small spacing class in addition to the base class when'
-    + ' spacing is "inset-tall-small"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-tall-small' />);
+    + ' spacing is "insetTallSmall"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetTallSmall' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-tall-small').length).toBe(1);
   });
 
   it('should set the inset-tall-medium spacing class in addition to the base class when'
-    + ' spacing is "inset-tall-medium"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-tall-medium' />);
+    + ' spacing is "insetTallMedium"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetTallMedium' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-tall-medium').length).toBe(1);
   });
 
   it('should set the inset-tall-large spacing class in addition to the base class when'
-    + ' spacing is "inset-tall-large"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-tall-large' />);
+    + ' spacing is "insetTallLarge"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetTallLarge' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-tall-large').length).toBe(1);
   });
 
   it('should set the inset-tall-huge spacing class in addition to the base class when'
-    + ' spacing is "inset-tall-huge"', () => {
-    const wrapper = shallow(<SprkBox spacing='inset-tall-huge' />);
+    + ' spacing is "insetTallHuge"', () => {
+    const wrapper = shallow(<SprkBox spacing='insetTallHuge' />);
     expect(wrapper.find('div.sprk-o-Box.sprk-o-Box--inset-tall-huge').length).toBe(1);
   });
 });
