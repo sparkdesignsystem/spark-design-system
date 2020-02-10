@@ -5,32 +5,32 @@ import classnames from 'classnames';
 const SprkBox = (props) => {
   const {
     children,
-    spacingSize,
+    spacing,
     additionalClasses,
     idString,
     ...other
   } = props;
 
   const classNames = classnames('sprk-o-Box', additionalClasses, {
-    'sprk-o-Box--flush': spacingSize === 'flush',
-    'sprk-o-Box--tiny': spacingSize === 'tiny',
-    'sprk-o-Box--small': spacingSize === 'small',
-    'sprk-o-Box--large': spacingSize === 'large',
-    'sprk-o-Box--huge': spacingSize === 'huge',
-    'sprk-o-Box--misc-a': spacingSize === 'misc-a',
-    'sprk-o-Box--misc-b': spacingSize === 'misc-b',
-    'sprk-o-Box--misc-c': spacingSize === 'misc-c',
-    'sprk-o-Box--misc-d': spacingSize === 'misc-d',
-    'sprk-o-Box--inset-short-tiny': spacingSize === 'inset-short-tiny',
-    'sprk-o-Box--inset-short-small': spacingSize === 'inset-short-small',
-    'sprk-o-Box--inset-short-medium': spacingSize === 'inset-short-medium',
-    'sprk-o-Box--inset-short-large': spacingSize === 'inset-short-large',
-    'sprk-o-Box--inset-short-huge': spacingSize === 'inset-short-huge',
-    'sprk-o-Box--inset-tall-tiny': spacingSize === 'inset-tall-tiny',
-    'sprk-o-Box--inset-tall-small': spacingSize === 'inset-tall-small',
-    'sprk-o-Box--inset-tall-medium': spacingSize === 'inset-tall-medium',
-    'sprk-o-Box--inset-tall-large': spacingSize === 'inset-tall-large',
-    'sprk-o-Box--inset-tall-huge': spacingSize === 'inset-tall-huge',
+    'sprk-o-Box--flush': spacing === 'flush',
+    'sprk-o-Box--tiny': spacing === 'tiny',
+    'sprk-o-Box--small': spacing === 'small',
+    'sprk-o-Box--large': spacing === 'large',
+    'sprk-o-Box--huge': spacing === 'huge',
+    'sprk-o-Box--misc-a': spacing === 'misc-a',
+    'sprk-o-Box--misc-b': spacing === 'misc-b',
+    'sprk-o-Box--misc-c': spacing === 'misc-c',
+    'sprk-o-Box--misc-d': spacing === 'misc-d',
+    'sprk-o-Box--inset-short-tiny': spacing === 'inset-short-tiny',
+    'sprk-o-Box--inset-short-small': spacing === 'inset-short-small',
+    'sprk-o-Box--inset-short-medium': spacing === 'inset-short-medium',
+    'sprk-o-Box--inset-short-large': spacing === 'inset-short-large',
+    'sprk-o-Box--inset-short-huge': spacing === 'inset-short-huge',
+    'sprk-o-Box--inset-tall-tiny': spacing === 'inset-tall-tiny',
+    'sprk-o-Box--inset-tall-small': spacing === 'inset-tall-small',
+    'sprk-o-Box--inset-tall-medium': spacing === 'inset-tall-medium',
+    'sprk-o-Box--inset-tall-large': spacing === 'inset-tall-large',
+    'sprk-o-Box--inset-tall-huge': spacing === 'inset-tall-huge',
   });
 
   return (
@@ -43,7 +43,7 @@ const SprkBox = (props) => {
 
 SprkBox.defaultProps = {
   children: '',
-  spacingSize: '',
+  spacing: '',
   idString: '',
   additionalClasses: '',
 };
@@ -53,7 +53,7 @@ SprkBox.propTypes = {
   /**
    * Determines the padding size.
    */
-  spacingSize: PropTypes.oneOf([
+  spacing: PropTypes.oneOf([
     'flush',
     'tiny',
     'small',
