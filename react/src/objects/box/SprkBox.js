@@ -38,14 +38,6 @@ const SprkBox = (props) => {
       {children}
     </div>
   );
-
-};
-
-SprkBox.defaultProps = {
-  children: '',
-  spacing: '',
-  idString: '',
-  additionalClasses: '',
 };
 
 SprkBox.propTypes = {
@@ -73,7 +65,6 @@ SprkBox.propTypes = {
     'miscB',
     'miscC',
     'miscD',
-    '',
   ]),
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
