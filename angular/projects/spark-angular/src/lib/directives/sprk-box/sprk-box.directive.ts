@@ -27,7 +27,7 @@ export class SprkBoxDirective implements OnInit {
   ;
 
   ngOnInit(): void {
-    const drinks = {
+    const spaces = {
       flush: 'sprk-o-Box--flush',
       tiny: 'sprk-o-Box--tiny',
       small: 'sprk-o-Box--small',
@@ -52,17 +52,8 @@ export class SprkBoxDirective implements OnInit {
     this.renderer.addClass(this.ref.nativeElement, 'sprk-o-Box');
 
     if (this.spacing) {
-
-      this.renderer.addClass(this.ref.nativeElement, drinks[this.spacing]);
-
+      this.renderer.addClass(this.ref.nativeElement, spaces[this.spacing]);
     }
-    // if there is spacing input
-      // let spacingClass;
-      // if (this.spacing === 'flush') {
-      //   spacingClass = 'sprk-o-Box--huge';
-      // }
-      // Simplified switch
-      // add class
   }
 
   /**
