@@ -5,8 +5,8 @@ import { SprkBoxDirective } from './sprk-box.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <div class="sprk-u-man" sprkStackItem></div>
-    <div sprkStackItem></div>
+    <div sprkBox></div>
+    <div sprkBox spacing="flush"></div>
   `
 })
 class TestComponent {}
@@ -32,5 +32,9 @@ describe('Spark Stack Item Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should apply correct spacing classes', () => {
+    expect(item2Element).toHaveClass('sprk-o-Box--flush');
   });
 });
