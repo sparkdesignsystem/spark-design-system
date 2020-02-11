@@ -60,10 +60,26 @@ describe('SprkStack:', () => {
     expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-a').length).toBe(1);
   });
 
+  it('should set the misc-a spacing class in addition to the base class when'
+    + 'itemSpacing is "miscA"', () => {
+    const wrapper = shallow(
+      <SprkStack itemSpacing="miscA" />,
+    );
+    expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-a').length).toBe(1);
+  });
+
   it('should set the misc-b spacing class in addition to the base class when'
     + 'itemSpacing is "misc-b"', () => {
     const wrapper = shallow(
       <SprkStack itemSpacing="misc-b" />,
+    );
+    expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-b').length).toBe(1);
+  });
+
+  it('should set the misc-b spacing class in addition to the base class when'
+    + 'itemSpacing is "miscB"', () => {
+    const wrapper = shallow(
+      <SprkStack itemSpacing="miscB" />,
     );
     expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-b').length).toBe(1);
   });
@@ -76,10 +92,26 @@ describe('SprkStack:', () => {
     expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-c').length).toBe(1);
   });
 
+  it('should set the misc-c spacing class in addition to the base class when'
+    + ' itemSpacing is "miscC"', () => {
+    const wrapper = shallow(
+      <SprkStack itemSpacing="miscC" />,
+    );
+    expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-c').length).toBe(1);
+  });
+
   it('should set the misc-d spacing class in addition to the base class when'
     + ' itemSpacing is "misc-d"', () => {
     const wrapper = shallow(
       <SprkStack itemSpacing="misc-d" />,
+    );
+    expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-d').length).toBe(1);
+  });
+
+  it('should set the misc-d spacing class in addition to the base class when'
+    + ' itemSpacing is "miscD"', () => {
+    const wrapper = shallow(
+      <SprkStack itemSpacing="miscD" />,
     );
     expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-d').length).toBe(1);
   });

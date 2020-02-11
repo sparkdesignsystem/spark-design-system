@@ -20,7 +20,7 @@ const SprkLink = (props) => {
     'sprk-b-Link--simple': variant === 'simple',
     'sprk-b-Link--plain': variant === 'plain',
     'sprk-b-Link--disabled': variant === 'disabled',
-    'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon',
+    'sprk-b-Link--simple sprk-b-Link--has-icon': variant === 'has-icon' || 'hasIcon',
   });
 
   let link;
@@ -67,6 +67,7 @@ SprkLink.propTypes = {
     'base',
     'simple',
     'has-icon',
+    'hasIcon',
     'plain',
     'disabled',
     'unstyled',
