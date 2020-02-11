@@ -16,17 +16,13 @@ Use Box when you have a group of content that needs to be visually separated fro
 
 Since the effects of Box are only seen through whitespace, the examples have a background color to illustrate how Box works.
 
-Box has 6 built in padding sizes that are paired with our Spacing values:
+Box has built in padding sizes that are paired with our Spacing values.
+Refer to [Class Modifiers section](#class-modifiers) for default values.
 
-- Flush (0px)
-- Tiny (4px)
-- Small (8px)
-- Medium (16px, default)
-- Large (32px)
-- Huge (64px)
+Spacing default to medium.
 
 `,
-    docs: { iframeHeight: 189 }
+    docs: { iframeHeight: 100 }
   }
 };
 
@@ -48,71 +44,3 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default'
 };
-
-export const flushBox = () => ({
-  moduleMetadata: modules,
-  template: `
-    <div
-      class="sprk-o-Box--flush"
-      sprkBox
-    >
-      Box
-    </div>
-  `
-});
-
-flushBox.story = {
-  name: 'Flush'
-};
-
-export const tiny = () => ({
-  moduleMetadata: modules,
-  template: `
-    <div
-      class="sprk-o-Box--tiny"
-      sprkBox
-    >
-      Box
-    </div>
-  `
-});
-
-export const small = () => ({
-  moduleMetadata: modules,
-  template: `
-    <div
-      class="sprk-o-Box--small"
-      sprkBox
-    >
-      Box
-    </div>
-  `
-});
-
-
-export const large = () => ({
-  moduleMetadata: modules,
-  template: `
-    <div
-      class="sprk-o-Box--large"
-      sprkBox
-    >
-      Box
-    </div>
-  `,
-});
-
-export const huge = () => ({
-  moduleMetadata: modules,
-  template: `
-    <div
-      class="sprk-o-Box--huge"
-      sprkBox
-    >
-      Box
-    </div>
-  `,
-});
-
-
-
