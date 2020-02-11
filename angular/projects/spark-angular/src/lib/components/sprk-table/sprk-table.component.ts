@@ -59,8 +59,6 @@ export class SprkTableComponent {
       'sprk-b-Table',
       'sprk-b-Table--spacing-medium',
       'sprk-b-Table--striped-even',
-      'sprk-b-Table--bordered-columns',
-      'sprk-b-Table--bordered-columns-inside'
     ];
 
     if (this.additionalTableClasses) {
