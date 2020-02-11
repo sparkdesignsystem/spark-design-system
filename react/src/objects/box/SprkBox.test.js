@@ -5,7 +5,7 @@ import SprkBox from './SprkBox';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkStack:', () => {
+describe('SprkBox:', () => {
   it('should display a div with the correct base class', () => {
     const wrapper = shallow(<SprkBox />);
     expect(wrapper.find('div.sprk-o-Box').length).toBe(1);
