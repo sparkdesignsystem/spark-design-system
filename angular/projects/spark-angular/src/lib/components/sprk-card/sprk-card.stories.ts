@@ -142,7 +142,6 @@ export const teaser = () => ({
       ctaText="Learn More"
       ctaHref="#nogo"
       ctaAnalytics="Button: Spark"
-      additionalCtaClasses="sprk-c-Button--secondary"
       idString="card-teaser"
     >
     </sprk-card>
@@ -151,6 +150,35 @@ export const teaser = () => ({
 
 teaser.story = {
   name: 'Teaser',
+  parameters: {
+    docs: { iframeHeight: 500 },
+  },
+};
+
+export const teaserWithCtaIcon = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card
+      media="img"
+      cardType="teaser"
+      title="Teaser Card Title"
+      body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
+      imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+      imgAlt="Placeholder Image"
+      imgHref="#nogo"
+      ctaType="link"
+      ctaText="Learn More"
+      ctaHref="#nogo"
+      ctaAnalytics="Button: Spark"
+      idString="card-teaser"
+      ctaIcon="chevron-right"
+    >
+    </sprk-card>
+ `
+});
+
+teaserWithCtaIcon.story = {
+  name: 'Teaser w/ CTA Icon',
   parameters: {
     docs: { iframeHeight: 500 },
   },
