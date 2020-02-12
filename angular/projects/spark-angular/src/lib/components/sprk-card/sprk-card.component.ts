@@ -57,6 +57,10 @@ import { Component, Input } from '@angular/core';
           >
             {{ ctaText }}
           </sprk-link>
+          <sprk-icon
+            *ngIf="ctaIcon && (ctaType === 'link')"
+            [iconType]="ctaIcon"
+          ></sprk-icon>
         </div>
       </div>
     </div>
@@ -187,6 +191,11 @@ export class SprkCardComponent {
   @Input()
   imgHref: string;
   /**
+   * Determines what icon `sprk-icon` renders next to the Call to Action.
+   */
+  @Input()
+  ctaIcon: string;
+  /**
    * Determines which type of call to action is rendered.
    * The available values are `link` and `button`.
    */
@@ -255,6 +264,10 @@ export class SprkCardComponent {
       ctaClassArray.push('sprk-c-Button');
     } else {
       ctaClassArray.push('sprk-b-Link');
+      if (this.ctaIcon) {
+        ctaClassArray.push('sprk-b-Link--simple');
+        ctaClassArray.push('sprk-b-Link--has-icon');
+      }
     }
 
     if (this.additionalCtaClasses) {
