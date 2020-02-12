@@ -56,11 +56,11 @@ import { Component, Input } from '@angular/core';
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
+            <sprk-icon
+              *ngIf="ctaIcon && (ctaType === 'link')"
+              [iconType]="ctaIcon"
+            ></sprk-icon>
           </sprk-link>
-          <sprk-icon
-            *ngIf="ctaIcon && (ctaType === 'link')"
-            [iconType]="ctaIcon"
-          ></sprk-icon>
         </div>
       </div>
     </div>
@@ -120,11 +120,11 @@ import { Component, Input } from '@angular/core';
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
+            <sprk-icon
+              *ngIf="ctaIcon && (ctaType === 'link')"
+              [iconType]="ctaIcon"
+            ></sprk-icon>
           </sprk-link>
-          <sprk-icon
-            *ngIf="ctaIcon && (ctaType === 'link')"
-            [iconType]="ctaIcon"
-          ></sprk-icon>
         </div>
       </div>
     </div>
