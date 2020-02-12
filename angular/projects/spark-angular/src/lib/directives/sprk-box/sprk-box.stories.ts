@@ -32,7 +32,7 @@ const modules = {
   ],
 };
 
-export const defaultStory = () => ({
+export const defaultBox = () => ({
   moduleMetadata: modules,
   template: `
     <div sprkBox>
@@ -41,6 +41,6 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
+defaultBox.story = {
   name: 'Default'
 };
