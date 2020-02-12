@@ -195,7 +195,8 @@ export class SprkCardComponent {
   @Input()
   imgHref: string;
   /**
-   * Determines what icon `sprk-icon` renders next to the Call to Action.
+   * Determines what icon `sprk-icon` renders
+   * next to the call-to-action link.
    */
   @Input()
   ctaIcon: string;
