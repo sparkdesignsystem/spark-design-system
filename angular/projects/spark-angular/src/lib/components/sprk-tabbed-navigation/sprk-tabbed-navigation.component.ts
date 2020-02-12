@@ -196,17 +196,24 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   advanceTab(tabs, tabpanels, activeClass) {
     const activeIndex = this.getActiveTabIndex(tabs, activeClass);
-    this.resetTabs(tabs, tabpanels, activeClass);
 
-    if (activeIndex + 1 <= tabs.length - 1) {
-      this.setActiveTab(
-        tabs[activeIndex + 1],
-        tabpanels[activeIndex + 1],
-        activeClass
-      );
-    } else {
-      this.setActiveTab(tabs[0], tabpanels[0], activeClass);
+    let newActiveIndex = activeIndex;
+
+    let foundNewIndex = false;
+
+    while (foundNewIndex === false){
+      if (newActiveIndex+1 >= tabs.length) {
+        newActiveIndex = -1;
+      } else if (!tabs[newActiveIndex+1].hasAttribute('disabled')){
+        newActiveIndex++;
+        foundNewIndex = true;
+      } else {
+        newActiveIndex++;
+      }
     }
+
+    this.resetTabs(tabs, tabpanels, activeClass);
+    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
   }
 
   /**
@@ -257,21 +264,23 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   retreatTab(tabs, tabpanels, activeClass) {
     const activeIndex = this.getActiveTabIndex(tabs, activeClass);
 
-    this.resetTabs(tabs, tabpanels, activeClass);
+    let newActiveIndex = activeIndex;
 
-    if (activeIndex - 1 === -1) {
-      this.setActiveTab(
-        tabs[tabs.length - 1],
-        tabpanels[tabs.length - 1],
-        activeClass
-      );
-    } else {
-      this.setActiveTab(
-        tabs[activeIndex - 1],
-        tabpanels[activeIndex - 1],
-        activeClass
-      );
+    let foundNewIndex = false;
+
+    while (foundNewIndex === false){
+      if (newActiveIndex-1 < 0) {
+        newActiveIndex = tabs.length;
+      } else if (!tabs[newActiveIndex-1].hasAttribute('disabled')){
+        newActiveIndex--;
+        foundNewIndex = true;
+      } else {
+        newActiveIndex--;
+      }
     }
+
+    this.resetTabs(tabs, tabpanels, activeClass);
+    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
   }
 
   /**

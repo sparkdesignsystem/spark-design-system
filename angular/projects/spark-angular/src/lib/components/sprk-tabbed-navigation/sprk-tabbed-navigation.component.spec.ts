@@ -14,8 +14,10 @@ import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.componen
     <sprk-tabbed-navigation>
       <button sprkTabbedNavigationTab>Tab 1</button>
       <button sprkTabbedNavigationTab [defaultActive]="true">Tab 2</button>
+      <button sprkTabbedNavigationTab>Tab 3</button>
       <div sprkTabbedNavigationPanel>Tab1 Content</div>
       <div sprkTabbedNavigationPanel [defaultActive]="true">Tab2 Content</div>
+      <div sprkTabbedNavigationPanel>Tab3 Content</div>
     </sprk-tabbed-navigation>
   `
 })
@@ -31,8 +33,10 @@ describe('SprkTabbedNavigationComponent', () => {
   let testElement;
   let testTab1;
   let testTab2;
+  let testTab3;
   let testPanel1;
   let testPanel2;
+  let testPanel3;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -61,8 +65,10 @@ describe('SprkTabbedNavigationComponent', () => {
 
     testTab1 = testElement.querySelectorAll('.sprk-c-Tabs__button')[0];
     testTab2 = testElement.querySelectorAll('.sprk-c-Tabs__button')[1];
+    testTab3 = testElement.querySelectorAll('.sprk-c-Tabs__button')[2];
     testPanel1 = testElement.querySelectorAll('.sprk-c-Tabs__content')[0];
     testPanel2 = testElement.querySelectorAll('.sprk-c-Tabs__content')[1];
+    testPanel3 = testElement.querySelectorAll('.sprk-c-Tabs__content')[2];
   });
 
   it('should create itself', () => {
@@ -117,13 +123,13 @@ describe('SprkTabbedNavigationComponent', () => {
   });
 
   it('the right arrow key should advance the tab', () => {
-    expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
+    expect(testTab3.getAttribute('aria-selected')).toEqual('false');
+    expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
     const event: Event = new Event('keydown');
     event['keyCode'] = 39;
     testElement.dispatchEvent(event);
-    expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
+    expect(testTab3.getAttribute('aria-selected')).toEqual('true');
+    expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the left arrow key should retreat the tab', () => {
@@ -154,8 +160,8 @@ describe('SprkTabbedNavigationComponent', () => {
     const event: Event = new Event('keydown');
     event['keyCode'] = 35;
     testElement.dispatchEvent(event);
-    expect(testTab2.getAttribute('aria-selected')).toEqual('true');
-    expect(testPanel2.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
+    expect(testTab3.getAttribute('aria-selected')).toEqual('true');
+    expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('should move focus into the active panel when tab is pressed and the target is a button', () => {
@@ -198,5 +204,85 @@ describe('SprkTabbedNavigationComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  it("the right arrow key should skip disabled tabs", () => {
+    testTab1.click();
+    testTab2.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 39;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("true");
+  });
+
+  it("the left arrow key should skip disabled tabs", () => {
+    testTab3.click();
+    testTab2.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 37;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("true");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("false");
+  });
+
+  it("the right arrow key should do nothing if all tabs to the right are disabled", () => {
+    testTab1.click();
+    testTab2.setAttribute("disabled", "true");
+    testTab3.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 39;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("true");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("false");
+  });
+
+  it("the left arrow key should do nothing if all tabs to the left are disabled", () => {
+    testTab3.click();
+    testTab1.setAttribute("disabled", "true");
+    testTab2.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 37;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("true");
+  });
+
+  it("the home key should pay attention to disabled tabs", () => {
+    testTab3.click();
+    testTab1.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 36;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("true");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("false");
+  });
+
+  it("the end key should pay attention to disabled tabs", () => {
+    testTab1.click();
+    testTab3.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 35;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("true");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("false");
   });
 });
