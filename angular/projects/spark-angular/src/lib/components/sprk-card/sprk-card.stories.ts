@@ -142,6 +142,7 @@ export const teaser = () => ({
       ctaText="Learn More"
       ctaHref="#nogo"
       ctaAnalytics="Button: Spark"
+      additionalCtaClasses="sprk-c-Button--secondary"
       idString="card-teaser"
     >
     </sprk-card>
