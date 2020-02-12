@@ -136,7 +136,7 @@ export class SprkCardComponent {
    * The available values are `base`, `teaser`, and `teaserHeading`.
    */
   @Input()
-  cardType = 'base';
+  cardType: 'base' | 'teaser' | 'teaserHeading' = 'base' ;
   /**
    * The main content
    * of the Card. Placed between
@@ -205,7 +205,7 @@ export class SprkCardComponent {
    * The available values are `link` and `button`.
    */
   @Input()
-  ctaType = 'link';
+  ctaType: 'link' | 'button' = 'link';
   /**
    * The text content of the call to action.
    */
