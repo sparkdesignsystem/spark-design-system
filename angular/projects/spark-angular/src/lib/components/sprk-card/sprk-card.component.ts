@@ -121,6 +121,10 @@ import { Component, Input } from '@angular/core';
           >
             {{ ctaText }}
           </sprk-link>
+          <sprk-icon
+            *ngIf="ctaIcon && (ctaType === 'link')"
+            [iconType]="ctaIcon"
+          ></sprk-icon>
         </div>
       </div>
     </div>
