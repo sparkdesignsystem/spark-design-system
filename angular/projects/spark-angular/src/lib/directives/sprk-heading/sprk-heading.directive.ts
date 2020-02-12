@@ -14,21 +14,11 @@ export class SprkHeadingDirective {
    */
   constructor() { }
 
-  /**
-   * Value will be used to select
-   * the heading style.
-   */
   @Input()
   variant: 'one' |
   'two' | 'three' |
   'four' | 'five' |
   'six' | 'seven';
-
-  /**
-   * If `true`, will set the Page Title
-   * styles on the heading.
-   */
-  @Input() isPageTitle = false;
 
   @HostBinding('class.sprk-b-TypeDisplayOne')
   get headingOne() {
@@ -58,10 +48,13 @@ export class SprkHeadingDirective {
   get headingSeven() {
     return this.variant === 'seven';
   }
+
   @HostBinding('class.sprk-b-PageTitle')
-  get pageTitle() {
-    return this.isPageTitle;
-  }
+  /**
+   * Value will be used to select
+   * the heading style.
+   */
+  @Input() isPageTitle = false;
 }
 
 
