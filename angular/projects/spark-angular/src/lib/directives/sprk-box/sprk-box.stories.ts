@@ -16,10 +16,10 @@ Use Box when you have a group of content that needs to be visually separated fro
 
 Since the effects of Box are only seen through whitespace, the examples have a background color to illustrate how Box works.
 
-Box has built in padding sizes that are paired with our Spacing values.
+Box has built in padding sizes that are paired with our Spacing values. Otherwise, it will default to medium spacing.
+
 Refer to [Class Modifiers section](#class-modifiers) for default values.
 
-Spacing default to medium.
 
 `,
     docs: { iframeHeight: 100 }
