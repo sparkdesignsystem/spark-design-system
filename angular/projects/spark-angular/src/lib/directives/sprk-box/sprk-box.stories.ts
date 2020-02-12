@@ -6,7 +6,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 export default {
   title: "Components/Box",
   component: SprkBoxDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-box-story">${storyContent}<div>`)],
+  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('box')}
