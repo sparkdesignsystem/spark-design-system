@@ -170,7 +170,7 @@ export const teaserWithCtaIcon = () => ({
       ctaType="link"
       ctaText="Learn More"
       ctaHref="#nogo"
-      ctaAnalytics="Button: Spark"
+      ctaAnalytics="Link: Spark"
       idString="card-teaser"
       ctaIcon="chevron-right"
     >
