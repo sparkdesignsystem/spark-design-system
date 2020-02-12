@@ -156,35 +156,6 @@ teaser.story = {
   },
 };
 
-export const teaserWithCtaIcon = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      media="img"
-      cardType="teaser"
-      title="Teaser Card Title"
-      body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
-      imgSrc="https://spark-assets.netlify.com/desktop.jpg"
-      imgAlt="Placeholder Image"
-      imgHref="#nogo"
-      ctaType="link"
-      ctaText="Learn More"
-      ctaHref="#nogo"
-      ctaAnalytics="Link: Spark"
-      idString="card-teaser"
-      ctaIcon="chevron-right"
-    >
-    </sprk-card>
- `
-});
-
-teaserWithCtaIcon.story = {
-  name: 'Teaser w/ CTA Icon',
-  parameters: {
-    docs: { iframeHeight: 500 },
-  },
-};
-
 export const twoUpCards = () => ({
   moduleMetadata: modules,
   template: `
