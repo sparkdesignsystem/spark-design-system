@@ -56,5 +56,3 @@ export class SprkHeadingDirective {
    */
   @Input() isPageTitle = false;
 }
-
-
