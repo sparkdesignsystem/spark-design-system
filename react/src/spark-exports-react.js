@@ -56,8 +56,10 @@ export { default as SprkAward }
 export { default as SprkCard }
   from './components/card/SprkCard';
 export { default as SprkModal }
-  from './components/modals/SprkModal';  
+  from './components/modals/SprkModal';
 export { default as SprkStepper }
   from './components/stepper/SprkStepper';
-export { default as SprkStepperStep } 
+export { default as SprkStepperStep }
   from './components/stepper/components/SprkStepperStep/SprkStepperStep';
+export { default as SprkBox }
+  from './objects/box/SprkBox';

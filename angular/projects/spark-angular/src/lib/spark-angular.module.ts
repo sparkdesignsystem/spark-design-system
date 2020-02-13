@@ -56,6 +56,7 @@ import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
 import { SprkCardModule } from './components/sprk-card/sprk-card.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';
 import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk-highlight-board.module';
+import { SprkBoxModule } from './directives/sprk-box/sprk-box.module';
 
 @NgModule({
   exports: [
@@ -106,7 +107,8 @@ import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk
     SprkToggleModule,
     SprkIconModule,
     SprkFooterModule,
-    SprkTabbedNavigationModule
+    SprkTabbedNavigationModule,
+    SprkBoxModule,
   ]
 })
 export class SparkAngularModule {}
