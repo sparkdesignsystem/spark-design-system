@@ -77,6 +77,30 @@ describe('SparkCardComponent', () => {
     );
   });
 
+  it('should add the correct classes if ctaIcon is set and ctaType is set to link', () => {
+    component.cardType = 'teaser';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.ctaIcon = 'bell';
+    component.ctaType = 'link';
+    fixture.detectChanges();
+    expect(component.getClassesCta()).toEqual(
+      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
+    );
+  });
+
+  it('should not add the ctaIcon classes if the ctaType is button', () => {
+    component.cardType = 'teaser';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.ctaIcon = 'bell';
+    component.ctaType = 'button';
+    fixture.detectChanges();
+    expect(component.getClassesCta()).toEqual(
+      'sprk-c-Button'
+    );
+  });
+
   it('should add the correct classes if cardType and additionalClasses have values', () => {
     component.cardType = 'teaser';
     component.media = 'img';
