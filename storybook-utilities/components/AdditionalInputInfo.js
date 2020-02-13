@@ -122,7 +122,7 @@ AdditionalInputInfo.defaultProps = {
   listElement: 'ul',
 };
 
-AdditionalInputInfo.PropTypes = {
+AdditionalInputInfo.propTypes = {
   /**
    * A space-separated string of classes to
    * add to the header.
