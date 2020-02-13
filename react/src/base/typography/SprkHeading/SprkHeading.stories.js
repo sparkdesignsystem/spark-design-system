@@ -1,5 +1,7 @@
 import React from 'react';
 import SprkHeading from './SprkHeading';
+import SprkText from '../SprkText/SprkText';
+
 import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -8,6 +10,9 @@ export default {
     story => <div className="sprk-o-Box">{story()}</div>
   ],
   component: SprkHeading,
+  subcomponents: {
+    SprkText,
+  },
   parameters: {
     jest: ['SprkHeading'],
     info: `
