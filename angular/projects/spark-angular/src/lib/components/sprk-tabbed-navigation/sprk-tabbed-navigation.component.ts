@@ -138,13 +138,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
         ].focus();
       }
     } else if ($event.keyCode === keys.home) {
-      this.setActiveTab(tabElements[0], panelElements[0], this.activeClass);
+      this.goToEndTab(tabElements, panelElements, this.activeClass, -1);
     } else if ($event.keyCode === keys.end) {
-      this.setActiveTab(
-        tabElements[tabElements.length - 1],
-        panelElements[panelElements.length - 1],
-        this.activeClass
-      );
+      this.goToEndTab(tabElements, panelElements, this.activeClass, 1);
     }
   }
 
@@ -270,6 +266,39 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     this.resetTabs(tabs, tabpanels, activeClass);
     // select the correct tab
     this.setActiveTab(tabs[activeIndex], tabpanels[activeIndex], activeClass);
+  }
+
+  goToEndTab(tabs, tabpanels, activeClass, direction) {
+    var newActiveIndex;
+
+    // if direction is positive, go to the right-most tab
+    if (direction > 0) {
+      newActiveIndex = tabs.length-1;
+
+    // else go to the left-most tab
+    } else {
+      newActiveIndex = 0;
+    }
+
+    let foundNewIndex = false;
+
+    // step through the tabs until we find one that isn't disabled
+    while (foundNewIndex === false){
+
+      // if this tab is not disabled
+      if (!tabs[newActiveIndex].hasAttribute('disabled')){
+
+        // stop looking for the correct tab
+        foundNewIndex = true;
+
+      // else step one tab away from the end and keep looking
+      } else {
+        newActiveIndex-=direction;
+      }
+    }
+
+    this.resetTabs(tabs, tabpanels, activeClass);
+    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
   }
 
   /**
