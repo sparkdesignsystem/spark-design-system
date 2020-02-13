@@ -3,7 +3,7 @@ import SprkText from './SprkText';
 import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
-  title: 'Components/Text',
+  title: 'Foundations/Text',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],

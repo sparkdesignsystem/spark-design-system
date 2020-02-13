@@ -4,7 +4,7 @@ import { SprkHeadingDirective } from './sprk-heading.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
-  title: 'Components/Heading',
+  title: 'Foundations/Heading',
   component: SprkHeadingDirective,
   decorators: [
     storyWrapper(
