@@ -11,8 +11,27 @@ export default {
   parameters: {
     jest: ['SprkHeading'],
     info: `
-${markdownDocumentationLinkBuilder('link')}
-- some info
+${markdownDocumentationLinkBuilder('typography', 'foundations')}
+
+##### Line-height Collision
+
+By default, line height on type will create extra
+whitespace around the top and bottom of the text.
+When the text is in a container that has padding applied,
+it appears larger than intended, due to this extra
+whitespace.
+
+Spark automatically removes this whitespace from headings,
+but it will only be removed on body copy if the Spark
+body classes are used.
+
+For details on how we remove the whitespace, please see this article:
+[Cropping Away Negative Impacts of Line Height](https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce)
+
+The type sizes defined in Spark all have this extra
+whitespace removed. Heading elements have this cropping
+automatically applied, where body copy will need the
+correct type classes applied.
 `,
   },
 };

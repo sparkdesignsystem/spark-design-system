@@ -33,7 +33,7 @@ body classes are used.
 For details on how we remove the whitespace, please see this article:
 [Cropping Away Negative Impacts of Line Height](https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce)
 
-The type sizes defined in spark all have this extra
+The type sizes defined in Spark all have this extra
 whitespace removed. Heading elements have this cropping
 automatically applied, where body copy will need the
 correct type classes applied.

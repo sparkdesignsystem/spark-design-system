@@ -19,7 +19,7 @@ const SprkText = ({
     'sprk-b-TypeBodyFour': variant === 'four',
   });
 
-  const TagName = element || 'p';
+  const TagName = element;
 
   return (
     <TagName
@@ -30,6 +30,10 @@ const SprkText = ({
       {children}
     </TagName>
   )
+};
+
+SprkText.defaultProps = {
+  element: 'p',
 };
 
 SprkText.propTypes = {

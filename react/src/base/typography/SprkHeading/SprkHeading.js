@@ -22,7 +22,7 @@ const SprkHeading = ({
     'sprk-b-PageTitle': isPageTitle,
   });
 
-  const TagName = element || 'h1';
+  const TagName = element;
 
   return (
     <TagName
@@ -41,6 +41,10 @@ SprkHeading.defaultProps = {
    * If `true`, the heading will have Page Title stles.
    */
   isPageTitle: false,
+  /**
+   * Determines what element to render.
+   */
+  element: 'h1',
 }
 
 SprkHeading.propTypes = {
