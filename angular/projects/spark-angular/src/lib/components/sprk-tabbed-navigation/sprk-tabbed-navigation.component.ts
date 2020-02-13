@@ -127,9 +127,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     const panelElements = this.panels.map(panel => panel.ref.nativeElement);
 
     if ($event.keyCode === keys.left || $event.keyCode === keys.up) {
-      this.retreatTab(tabElements, panelElements, this.activeClass);
+      this.incrementTab(tabElements, panelElements, this.activeClass, -1);
     } else if ($event.keyCode === keys.right || $event.keyCode === keys.down) {
-      this.advanceTab(tabElements, panelElements, this.activeClass);
+      this.incrementTab(tabElements, panelElements, this.activeClass, 1);
     } else if ($event.keyCode === keys.tab) {
       if ($event.target.getAttribute('role') === 'tab') {
         event.preventDefault();
@@ -194,31 +194,6 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  advanceTab(tabs, tabpanels, activeClass) {
-    const activeIndex = this.getActiveTabIndex(tabs, activeClass);
-
-    let newActiveIndex = activeIndex;
-
-    let foundNewIndex = false;
-
-    while (foundNewIndex === false){
-      if (newActiveIndex+1 >= tabs.length) {
-        newActiveIndex = -1;
-      } else if (!tabs[newActiveIndex+1].hasAttribute('disabled')){
-        newActiveIndex++;
-        foundNewIndex = true;
-      } else {
-        newActiveIndex++;
-      }
-    }
-
-    this.resetTabs(tabs, tabpanels, activeClass);
-    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
-  }
-
-  /**
-   * @ignore
-   */
   ariaOrientation(width, element) {
     // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
     if (width <= 736) {
@@ -261,26 +236,40 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  retreatTab(tabs, tabpanels, activeClass) {
-    const activeIndex = this.getActiveTabIndex(tabs, activeClass);
-
-    let newActiveIndex = activeIndex;
+  incrementTab(tabs, tabpanels, activeClass, direction) {
+    var activeIndex = this.getActiveTabIndex(tabs, activeClass);
 
     let foundNewIndex = false;
 
+    // Start looking for the next available tab
     while (foundNewIndex === false){
-      if (newActiveIndex-1 < 0) {
-        newActiveIndex = tabs.length;
-      } else if (!tabs[newActiveIndex-1].hasAttribute('disabled')){
-        newActiveIndex--;
+      // if the next tab would be off the left of the tabstrip
+      if (activeIndex + direction < 0) {
+        // loop to the end and keep looking
+        activeIndex = tabs.length;
+
+      // if the next tab would be off the right of the tabstrip
+      } else if (activeIndex + direction >= tabs.length){
+        // loop back to the beginning and keep looking
+        activeIndex = -1;
+
+      // If the next tab is not disabled
+      } else if (!tabs[activeIndex + direction].hasAttribute('disabled')){
+        // move to the next tab
+        activeIndex += direction;
+        // stop looking for the correct tab
         foundNewIndex = true;
+
       } else {
-        newActiveIndex--;
+        // move to the next tab and keep looking
+        activeIndex+= direction;
       }
     }
 
+    // deselect all tabs
     this.resetTabs(tabs, tabpanels, activeClass);
-    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
+    // select the correct tab
+    this.setActiveTab(tabs[activeIndex], tabpanels[activeIndex], activeClass);
   }
 
   /**

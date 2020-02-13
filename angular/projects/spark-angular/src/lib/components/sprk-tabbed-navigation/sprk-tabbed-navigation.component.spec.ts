@@ -246,10 +246,34 @@ describe('SprkTabbedNavigationComponent', () => {
     expect(testTab3.getAttribute("aria-selected")).toEqual("false");
   });
 
+  it("the right arrow key should loop back to the beginning if the right-most tab is selected", () => {
+    testTab3.click();
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 39;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("true");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("false");
+  });
+
   it("the left arrow key should do nothing if all tabs to the left are disabled", () => {
     testTab3.click();
     testTab1.setAttribute("disabled", "true");
     testTab2.setAttribute("disabled", "true");
+
+    const event: Event = new Event("keydown");
+    event["keyCode"] = 37;
+    testElement.dispatchEvent(event);
+
+    expect(testTab1.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab2.getAttribute("aria-selected")).toEqual("false");
+    expect(testTab3.getAttribute("aria-selected")).toEqual("true");
+  });
+
+  it("the left arrow key should loop back to the end if the left-most tab is selected", () => {
+    testTab1.click();
 
     const event: Event = new Event("keydown");
     event["keyCode"] = 37;
