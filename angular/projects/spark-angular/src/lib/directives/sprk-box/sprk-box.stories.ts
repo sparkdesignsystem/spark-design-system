@@ -18,8 +18,7 @@ Since the effects of Box are only seen through whitespace, the examples have a b
 
 Box has built in padding sizes that are paired with our Spacing values. Otherwise, it will default to medium spacing.
 
-Refer to [Class Modifiers section](#class-modifiers) for default values.
-
+Refer to [Class Modifiers section](#class-modifiers) for default pixel values.
 `,
     docs: { iframeHeight: 100 }
   }
