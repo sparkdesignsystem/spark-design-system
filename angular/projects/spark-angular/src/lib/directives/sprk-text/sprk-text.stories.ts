@@ -4,7 +4,7 @@ import { SprkTextDirective } from './sprk-text.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
-  title: 'Foundations/Text',
+  title: 'Foundations/Typography',
   component: SprkTextDirective,
   decorators: [
     storyWrapper(

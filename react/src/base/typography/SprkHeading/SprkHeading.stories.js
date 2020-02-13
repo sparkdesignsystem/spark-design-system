@@ -3,7 +3,7 @@ import SprkHeading from './SprkHeading';
 import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
-  title: 'Foundations/Heading',
+  title: 'Foundations/Typography',
   decorators: [
     story => <div className="sprk-o-Box">{story()}</div>
   ],
