@@ -45,6 +45,6 @@
   color: $sprk-tab-navigation-btn-active-color;
 }
 
-.sprk-c-Tabs__button:hover {
+.sprk-c-Tabs__button:hover:not([disabled]) {
   border-top: $sprk-tab-navigation-btn-hover-border-top;
 }
