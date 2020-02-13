@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkText from './SprkText';
-import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Text',
@@ -9,6 +9,7 @@ export default {
   ],
   component: SprkText,
   parameters: {
+    jest: ['SprkText'],
     info: `
 ${markdownDocumentationLinkBuilder('link')}
 - some info

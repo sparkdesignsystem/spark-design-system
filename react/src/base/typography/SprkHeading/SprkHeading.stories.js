@@ -1,6 +1,6 @@
 import React from 'react';
 import SprkHeading from './SprkHeading';
-import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Heading',
@@ -9,6 +9,7 @@ export default {
   ],
   component: SprkHeading,
   parameters: {
+    jest: ['SprkHeading'],
     info: `
 ${markdownDocumentationLinkBuilder('link')}
 - some info
