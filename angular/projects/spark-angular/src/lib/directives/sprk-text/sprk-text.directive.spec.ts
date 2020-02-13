@@ -5,10 +5,10 @@ import { SprkTextDirective } from './sprk-text.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <p sprkText variant="one">Text One</p>
-    <h1 sprkText variant="two">Text Two</h1>
-    <cite sprkText variant="three">Text Three</cite>
-    <small sprkText variant="four">Text Four</small>
+    <p sprkText variant="bodyOne">Text One</p>
+    <h1 sprkText variant="bodyTwo">Text Two</h1>
+    <cite sprkText variant="bodyThree">Text Three</cite>
+    <small sprkText variant="bodyFour">Text Four</small>
   `
 })
 class TestComponent { }
@@ -39,19 +39,19 @@ describe('Spark Text Directive', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should add the display one class if variant is one', () => {
+  it('should add the display one class if variant is bodyOne', () => {
     expect(el1.classList.contains('sprk-b-TypeBodyOne')).toBe(true);
   });
 
-  it('should add the display two class if variant is two', () => {
+  it('should add the display two class if variant is bodyTwo', () => {
     expect(el2.classList.contains('sprk-b-TypeBodyTwo')).toBe(true);
   });
 
-  it('should add the display three class if variant is three', () => {
+  it('should add the display three class if variant is bodyThree', () => {
     expect(el3.classList.contains('sprk-b-TypeBodyThree')).toBe(true);
   });
 
-  it('should add the display four class if variant is four', () => {
+  it('should add the display four class if variant is bodyFour', () => {
     expect(el4.classList.contains('sprk-b-TypeBodyFour')).toBe(true);
   });
 });

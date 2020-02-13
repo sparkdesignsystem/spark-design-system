@@ -15,25 +15,25 @@ export class SprkTextDirective {
   constructor() { }
 
   @Input()
-  variant: 'one' |
-    'two' | 'three' |
-    'four';
+  variant: 'bodyOne' |
+    'bodyTwo' | 'bodyThree' |
+    'bodyFour';
 
   @HostBinding('class.sprk-b-TypeBodyOne')
-  get headingOne() {
-    return this.variant === 'one';
+  get textOne() {
+    return this.variant === 'bodyOne';
   }
   @HostBinding('class.sprk-b-TypeBodyTwo')
-  get headingTwo() {
-    return this.variant === 'two';
+  get textTwo() {
+    return this.variant === 'bodyTwo';
   }
   @HostBinding('class.sprk-b-TypeBodyThree')
-  get headingThree() {
-    return this.variant === 'three';
+  get textThree() {
+    return this.variant === 'bodyThree';
   }
   @HostBinding('class.sprk-b-TypeBodyFour')
-  get headingFour() {
-    return this.variant === 'four';
+  get textFour() {
+    return this.variant === 'bodyFour';
   }
 }
 
