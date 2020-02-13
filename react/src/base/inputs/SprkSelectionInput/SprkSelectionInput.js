@@ -38,7 +38,7 @@ class SprkSelectionInput extends React.Component {
  * a value.
  */
   handleChange(e, variant) {
-    const { onChangeFunc } = this.props;
+    const { onChange } = this.props;
     const isHugeSelect = variant === 'hugeSelect';
 
     if (isHugeSelect) {
@@ -46,7 +46,7 @@ class SprkSelectionInput extends React.Component {
         selectHugeHasValue: e.target.value !== '',
       });
     }
-    if (onChangeFunc) onChangeFunc(e);
+    if (onChange) onChange(e);
   }
 
   render() {
@@ -66,7 +66,8 @@ class SprkSelectionInput extends React.Component {
       ...other
     } = this.props;
     const { choiceItems, id, selectHugeHasValue } = this.state;
-
+    const onChange = onChangeFunc ? onChangeFunc : this.props.onChange;
+    
     return (
       <div
         className={classNames('sprk-b-InputContainer', additionalClasses, {
@@ -90,6 +91,7 @@ class SprkSelectionInput extends React.Component {
                     aria-describedby={`errorcontainer-${id}`}
                     name={name}
                     value={value}
+                    onChange={onChange}
                     {...rest}
                   />
                   <label
