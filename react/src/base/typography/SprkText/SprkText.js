@@ -13,10 +13,10 @@ const SprkText = ({
 }) => {
 
   const classNames = classnames(additionalClasses, {
-    'sprk-b-TypeBodyOne': variant === 'one',
-    'sprk-b-TypeBodyTwo': variant === 'two',
-    'sprk-b-TypeBodyThree': variant === 'three',
-    'sprk-b-TypeBodyFour': variant === 'four',
+    'sprk-b-TypeBodyOne': variant === 'bodyOne',
+    'sprk-b-TypeBodyTwo': variant === 'bodyTwo',
+    'sprk-b-TypeBodyThree': variant === 'bodyThree',
+    'sprk-b-TypeBodyFour': variant === 'bodyFour',
   });
 
   const TagName = element;
@@ -50,13 +50,15 @@ SprkText.propTypes = {
     PropTypes.elementType
   ]),
   /**
-   * The type of heading variant to render.
+   * The text style to render.
+   * See [Typography](https://www.sparkdesignsystem.com/using-spark/foundations/typography)
+   * for more information on the design styles.
    */
   variant: PropTypes.oneOf([
-    'one',
-    'two',
-    'three',
-    'four',
+    'bodyOne',
+    'bodyTwo',
+    'bodyThree',
+    'bodyFour',
   ]),
   /**
    * Assigned to the `data-id` attribute

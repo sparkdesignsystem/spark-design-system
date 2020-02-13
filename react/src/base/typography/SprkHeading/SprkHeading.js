@@ -12,13 +12,13 @@ const SprkHeading = ({
   ...other
 }) => {
   const classNames = classnames(additionalClasses, {
-    'sprk-b-TypeDisplayOne': variant === 'one',
-    'sprk-b-TypeDisplayTwo': variant === 'two',
-    'sprk-b-TypeDisplayThree': variant === 'three',
-    'sprk-b-TypeDisplayFour': variant === 'four',
-    'sprk-b-TypeDisplayFive': variant === 'five',
-    'sprk-b-TypeDisplaySix': variant === 'six',
-    'sprk-b-TypeDisplaySeven': variant === 'seven',
+    'sprk-b-TypeDisplayOne': variant === 'displayOne',
+    'sprk-b-TypeDisplayTwo': variant === 'displayTwo',
+    'sprk-b-TypeDisplayThree': variant === 'displayThree',
+    'sprk-b-TypeDisplayFour': variant === 'displayFour',
+    'sprk-b-TypeDisplayFive': variant === 'displayFive',
+    'sprk-b-TypeDisplaySix': variant === 'displaySix',
+    'sprk-b-TypeDisplaySeven': variant === 'displaySeven',
     'sprk-b-PageTitle': isPageTitle,
   });
 
@@ -61,16 +61,18 @@ SprkHeading.propTypes = {
     PropTypes.elementType
   ]),
   /**
-   * The type of heading variant to render.
+   * The heading style to render.
+   * See [Typography](https://www.sparkdesignsystem.com/using-spark/foundations/typography)
+   * for more information on the design styles.
    */
   variant: PropTypes.oneOf([
-    'one',
-    'two',
-    'three',
-    'four',
-    'five',
-    'six',
-    'seven'
+    'displayOne',
+    'displayTwo',
+    'displayThree',
+    'displayFour',
+    'displayFive',
+    'displaySix',
+    'displaySeven'
   ]),
   /**
    * Assigned to the `data-id` attribute

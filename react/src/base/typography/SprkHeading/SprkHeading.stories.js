@@ -39,7 +39,7 @@ correct type classes applied.
 export const pageTitle = () => (
   <SprkHeading
     element="h1"
-    variant="two"
+    variant="displayTwo"
     isPageTitle
     idString="heading-page-title"
   >
@@ -50,7 +50,7 @@ export const pageTitle = () => (
 export const displayOne = () => (
   <SprkHeading
     element="h1"
-    variant="one"
+    variant="displayOne"
     idString="heading-one"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog
@@ -60,7 +60,7 @@ export const displayOne = () => (
 export const displayTwo = () => (
   <SprkHeading
     element="h2"
-    variant="two"
+    variant="displayTwo"
     idString="heading-two"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog
@@ -70,7 +70,7 @@ export const displayTwo = () => (
 export const displayThree = () => (
   <SprkHeading
     element="h3"
-    variant="three"
+    variant="displayThree"
     idString="heading-three"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog
@@ -80,7 +80,7 @@ export const displayThree = () => (
 export const displayFour = () => (
   <SprkHeading
     element="h4"
-    variant="four"
+    variant="displayFour"
     idString="heading-four"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog
@@ -90,7 +90,7 @@ export const displayFour = () => (
 export const displayFive = () => (
   <SprkHeading
     element="h5"
-    variant="five"
+    variant="displayFive"
     idString="heading-five"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog
@@ -100,7 +100,7 @@ export const displayFive = () => (
 export const displaySix = () => (
   <SprkHeading
     element="h6"
-    variant="six"
+    variant="displaySix"
     idString="heading-six"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog
@@ -110,7 +110,7 @@ export const displaySix = () => (
 export const displaySeven = () => (
   <SprkHeading
     element="h6"
-    variant="seven"
+    variant="displaySeven"
     idString="heading-seven"
   >
     The Quick Brown Fox Jumps Over the Lazy Dog

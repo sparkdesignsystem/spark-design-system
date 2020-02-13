@@ -38,7 +38,7 @@ correct type classes applied.
 
 export const bodyOne = () => (
   <SprkText
-    variant="one"
+    variant="bodyOne"
     idString="body-one"
   >
     Lorem ipsum dolor sit amet,
@@ -61,7 +61,7 @@ export const bodyOne = () => (
 
 export const bodyTwo = () => (
   <SprkText
-    variant="two"
+    variant="bodyTwo"
     idString="body-two"
   >
     Lorem ipsum dolor sit amet,
@@ -84,7 +84,7 @@ export const bodyTwo = () => (
 
 export const bodyThree = () => (
   <SprkText
-    variant="three"
+    variant="bodyThree"
     idString="body-three"
   >
     Lorem ipsum dolor sit amet,
@@ -107,7 +107,7 @@ export const bodyThree = () => (
 
 export const bodyFour = () => (
   <SprkText
-    variant="four"
+    variant="bodyFour"
     idString="body-four"
   >
     Lorem ipsum dolor sit amet,
