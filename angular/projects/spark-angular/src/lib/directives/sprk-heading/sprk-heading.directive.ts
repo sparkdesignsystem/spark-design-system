@@ -15,38 +15,38 @@ export class SprkHeadingDirective {
   constructor() { }
 
   @Input()
-  variant: 'one' |
-  'two' | 'three' |
-  'four' | 'five' |
-  'six' | 'seven';
+  variant: 'displayOne' |
+    'displayTwo' | 'displayThree' |
+    'displayFour' | 'displayFive' |
+    'displaySix' | 'displaySeven';
 
   @HostBinding('class.sprk-b-TypeDisplayOne')
   get headingOne() {
-    return this.variant === 'one';
+    return this.variant === 'displayOne';
   }
   @HostBinding('class.sprk-b-TypeDisplayTwo')
   get headingTwo() {
-    return this.variant === 'two';
+    return this.variant === 'displayTwo';
   }
   @HostBinding('class.sprk-b-TypeDisplayThree')
   get headingThree() {
-    return this.variant === 'three';
+    return this.variant === 'displayThree';
   }
   @HostBinding('class.sprk-b-TypeDisplayFour')
   get headingFour() {
-    return this.variant === 'four';
+    return this.variant === 'displayFour';
   }
   @HostBinding('class.sprk-b-TypeDisplayFive')
   get headingFive() {
-    return this.variant === 'five';
+    return this.variant === 'displayFive';
   }
   @HostBinding('class.sprk-b-TypeDisplaySix')
   get headingSix() {
-    return this.variant === 'six';
+    return this.variant === 'displaySix';
   }
   @HostBinding('class.sprk-b-TypeDisplaySeven')
   get headingSeven() {
-    return this.variant === 'seven';
+    return this.variant === 'displaySeven';
   }
 
   @HostBinding('class.sprk-b-PageTitle')

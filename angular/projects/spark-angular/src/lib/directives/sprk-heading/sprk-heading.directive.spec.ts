@@ -5,14 +5,14 @@ import { SprkHeadingDirective } from './sprk-heading.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <h1 sprkHeading variant="one">Heading One</h1>
-    <h2 sprkHeading variant="two">Heading Two</h2>
-    <h3 sprkHeading variant="three">Heading Three</h3>
-    <h4 sprkHeading variant="four">Heading Four</h4>
-    <h5 sprkHeading variant="five">Heading Five</h5>
-    <h6 sprkHeading variant="six">Heading Six</h6>
-    <h1 sprkHeading variant="seven">Heading Seven</h1>
-    <h1 sprkHeading variant="one" isPageTitle="true">Heading One with page title</h1>
+    <h1 sprkHeading variant="displayOne">Heading One</h1>
+    <h2 sprkHeading variant="displayTwo">Heading Two</h2>
+    <h3 sprkHeading variant="displayThree">Heading Three</h3>
+    <h4 sprkHeading variant="displayFour">Heading Four</h4>
+    <h5 sprkHeading variant="displayFive">Heading Five</h5>
+    <h6 sprkHeading variant="displaySix">Heading Six</h6>
+    <h1 sprkHeading variant="displaySeven">Heading Seven</h1>
+    <h1 sprkHeading variant="displayOne" isPageTitle="true">Heading One with page title</h1>
   `
 })
 class TestComponent { }
@@ -51,31 +51,31 @@ describe('Spark Heading Directive', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should add the display one class if variant is one', () => {
+  it('should add the display one class if variant is displayOne', () => {
     expect(el1.classList.contains('sprk-b-TypeDisplayOne')).toBe(true);
   });
 
-  it('should add the display two class if variant is two', () => {
+  it('should add the display two class if variant is displayTwo', () => {
     expect(el2.classList.contains('sprk-b-TypeDisplayTwo')).toBe(true);
   });
 
-  it('should add the display three class if variant is three', () => {
+  it('should add the display three class if variant is displayThree', () => {
     expect(el3.classList.contains('sprk-b-TypeDisplayThree')).toBe(true);
   });
 
-  it('should add the display four class if variant is four', () => {
+  it('should add the display four class if variant is displayFour', () => {
     expect(el4.classList.contains('sprk-b-TypeDisplayFour')).toBe(true);
   });
 
-  it('should add the display five class if variant is five', () => {
+  it('should add the display five class if variant is displayFive', () => {
     expect(el5.classList.contains('sprk-b-TypeDisplayFive')).toBe(true);
   });
 
-  it('should add the display six class if variant is six', () => {
+  it('should add the display six class if variant is displaySix', () => {
     expect(el6.classList.contains('sprk-b-TypeDisplaySix')).toBe(true);
   });
 
-  it('should add the display seven class if variant is seven', () => {
+  it('should add the display seven class if variant is displaySeven', () => {
     expect(el7.classList.contains('sprk-b-TypeDisplaySeven')).toBe(true);
   });
 

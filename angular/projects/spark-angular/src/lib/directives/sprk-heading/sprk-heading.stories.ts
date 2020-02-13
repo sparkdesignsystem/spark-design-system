@@ -50,7 +50,7 @@ const modules = {
 export const pageTitle = () => ({
   moduleMetadata: modules,
   template: `
-    <h1 sprkHeading variant="one" isPageTitle="true">
+    <h1 sprkHeading variant="displayTwo" isPageTitle="true">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h1>
@@ -60,7 +60,7 @@ export const pageTitle = () => ({
 export const displayOne = () => ({
   moduleMetadata: modules,
   template: `
-    <h1 sprkHeading variant="one">
+    <h1 sprkHeading variant="displayOne">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h1>
@@ -70,7 +70,7 @@ export const displayOne = () => ({
 export const displayTwo = () => ({
   moduleMetadata: modules,
   template: `
-    <h2 sprkHeading variant="two">
+    <h2 sprkHeading variant="displayTwo">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h2>
@@ -80,7 +80,7 @@ export const displayTwo = () => ({
 export const displayThree = () => ({
   moduleMetadata: modules,
   template: `
-    <h3 sprkHeading variant="three">
+    <h3 sprkHeading variant="displayThree">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h3>
@@ -90,7 +90,7 @@ export const displayThree = () => ({
 export const displayFour = () => ({
   moduleMetadata: modules,
   template: `
-    <h4 sprkHeading variant="four">
+    <h4 sprkHeading variant="displayFour">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h4>
@@ -100,7 +100,7 @@ export const displayFour = () => ({
 export const displayFive = () => ({
   moduleMetadata: modules,
   template: `
-    <h5 sprkHeading variant="five">
+    <h5 sprkHeading variant="displayFive">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h5>
@@ -110,7 +110,7 @@ export const displayFive = () => ({
 export const displaySix = () => ({
   moduleMetadata: modules,
   template: `
-    <h6 sprkHeading variant="six">
+    <h6 sprkHeading variant="displaySix">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h6>
@@ -120,7 +120,7 @@ export const displaySix = () => ({
 export const displaySeven = () => ({
   moduleMetadata: modules,
   template: `
-    <h6 sprkHeading variant="seven">
+    <h6 sprkHeading variant="displaySeven">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h6>
