@@ -20,7 +20,6 @@ Box has built in padding sizes that are paired with our Spacing values. Otherwis
 
 Refer to [Class Modifiers section](#class-modifiers) for default values.
 
-
 `,
     docs: { iframeHeight: 100 }
   }
