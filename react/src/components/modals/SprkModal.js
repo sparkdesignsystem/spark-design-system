@@ -273,7 +273,7 @@ class SprkModal extends Component {
                     additionalClasses="sprk-o-Stack__item"
                   />
                 )}
-                <div className="sprk-b-TypeBodyTwo">
+                <div className="sprk-b-TypeBodyTwo sprk-u-Width-100">
                   {children}
                 </div>
               </div>

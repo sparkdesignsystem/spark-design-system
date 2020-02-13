@@ -199,8 +199,8 @@ export const wait = () => {
               sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
           ></div>
           <p
-            class="sprk-o-Stack__item sprk-b-TypeBodyTwo" i
-            d="modalWaitContent">
+            class="sprk-o-Stack__item sprk-b-TypeBodyTwo sprk-u-Width-100"
+            id="modalWaitContent">
             Lorem ipsum dolor sit amet,
             consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.

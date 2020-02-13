@@ -90,8 +90,11 @@ export const wait = () => ({
       modalType="wait"
       idString="modal-wait-1"
     >
-      This type of modal can't be closed by the
-      user.
+      <p class="sprk-u-Width-100">
+        Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
     </sprk-modal>
   `,
   props: {
