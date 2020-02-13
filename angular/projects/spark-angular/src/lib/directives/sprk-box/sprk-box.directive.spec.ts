@@ -11,7 +11,7 @@ import { SprkBoxDirective } from './sprk-box.directive';
 })
 class TestComponent {}
 
-describe('Spark Stack Item Directive', () => {
+describe('Spark Box Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let item1Element: HTMLElement;

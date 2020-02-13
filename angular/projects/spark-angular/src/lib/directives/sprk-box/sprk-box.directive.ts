@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, Input, Renderer2, HostBinding } from '@angular/core';
+import { Directive, ElementRef, Input, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[sprkBox]'
@@ -125,5 +125,5 @@ export class SprkBoxDirective {
   /**
    * @ignore
    */
-  constructor(private renderer: Renderer2, public ref: ElementRef) {}
+  constructor(public ref: ElementRef) {}
 }
