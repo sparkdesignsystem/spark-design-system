@@ -182,7 +182,7 @@ const IndexPage = () => (
       </SprkStackItem>
 
       <SprkStackItem>
-        <div className="docs-o-Grid docs-o-Grid--three-col docs-o-Grid--large">
+        <div className="docs-o-Grid docs-o-Grid--home-page docs-o-Grid--large">
           <SprkCard
             additionalClasses="docs-c-Card"
             variant="teaser"

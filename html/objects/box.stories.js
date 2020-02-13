@@ -10,6 +10,10 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('box')}
+- By default, Box padding is set to Medium.
+- Box has 20 built in padding sizes that are paired
+with our [Spacing](/docs/foundations-spacing--inset-spacing)
+values. See the Class Modifiers for Box table below for options.
     `,
     docs: { iframeHeight: 130 },
   },

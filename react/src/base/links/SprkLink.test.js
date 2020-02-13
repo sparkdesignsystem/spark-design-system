@@ -33,6 +33,14 @@ describe('SprkLink:', () => {
     expect(wrapper.find('a').hasClass('sprk-b-Link--has-icon')).toBe(true);
   });
 
+  it('should display a link element with correct classes when variant is '
+    + 'hasIcon', () => {
+    const wrapper = shallow(<SprkLink variant="hasIcon" />);
+    expect(wrapper.find('a').hasClass('sprk-b-Link')).toBe(true);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--simple')).toBe(true);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--has-icon')).toBe(true);
+  });
+
   it('should display a link element with correct classes when variant is'
     + ' plain', () => {
     const wrapper = shallow(<SprkLink variant="plain" />);
