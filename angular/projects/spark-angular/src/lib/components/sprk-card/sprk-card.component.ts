@@ -56,6 +56,10 @@ import { Component, Input } from '@angular/core';
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
+            <sprk-icon
+              *ngIf="ctaIcon && (ctaType === 'link')"
+              [iconType]="ctaIcon"
+            ></sprk-icon>
           </sprk-link>
         </div>
       </div>
@@ -116,6 +120,10 @@ import { Component, Input } from '@angular/core';
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
+            <sprk-icon
+              *ngIf="ctaIcon && (ctaType === 'link')"
+              [iconType]="ctaIcon"
+            ></sprk-icon>
           </sprk-link>
         </div>
       </div>
@@ -128,7 +136,7 @@ export class SprkCardComponent {
    * The available values are `base`, `teaser`, and `teaserHeading`.
    */
   @Input()
-  cardType = 'base';
+  cardType: 'base' | 'teaser' | 'teaserHeading' = 'base' ;
   /**
    * The main content
    * of the Card. Placed between
@@ -187,11 +195,17 @@ export class SprkCardComponent {
   @Input()
   imgHref: string;
   /**
+   * Determines what icon `sprk-icon` renders
+   * next to the call-to-action link.
+   */
+  @Input()
+  ctaIcon: string;
+  /**
    * Determines which type of call to action is rendered.
    * The available values are `link` and `button`.
    */
   @Input()
-  ctaType = 'link';
+  ctaType: 'link' | 'button' = 'link';
   /**
    * The text content of the call to action.
    */
@@ -255,6 +269,10 @@ export class SprkCardComponent {
       ctaClassArray.push('sprk-c-Button');
     } else {
       ctaClassArray.push('sprk-b-Link');
+      if (this.ctaIcon) {
+        ctaClassArray.push('sprk-b-Link--simple');
+        ctaClassArray.push('sprk-b-Link--has-icon');
+      }
     }
 
     if (this.additionalCtaClasses) {
