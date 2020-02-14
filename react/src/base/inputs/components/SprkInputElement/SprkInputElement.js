@@ -106,7 +106,7 @@ SprkInputElement.propTypes = {
    */
   iconRight: propTypes.bool,
   /**
-   * Assigned to the `id` attribute. Automatically configured if not provided.
+   * Configured by parent and assigned to the `id` attribute.
    */
   id: propTypes.string,
   /**

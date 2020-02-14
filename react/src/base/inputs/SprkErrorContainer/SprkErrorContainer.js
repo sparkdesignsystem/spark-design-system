@@ -33,7 +33,7 @@ SprkErrorContainer.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * Assigned to the `id` attribute Automatically configured if not provided.
+   * Configured by parent and assigned to the `id` attribute.
    */
   id: PropTypes.string.isRequired,
   /**
