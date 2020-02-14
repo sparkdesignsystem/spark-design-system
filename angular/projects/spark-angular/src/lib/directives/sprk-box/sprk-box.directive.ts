@@ -8,6 +8,7 @@ export class SprkBoxDirective {
     | 'flush'
     | 'tiny'
     | 'small'
+    | 'medium'
     | 'large'
     | 'huge'
     | 'insetShortTiny'
@@ -40,6 +41,11 @@ export class SprkBoxDirective {
   @HostBinding('class.sprk-o-Box--small')
   get small() {
     return this.spacing === 'small';
+  }
+
+  @HostBinding('class.sprk-o-Box--medium')
+  get medium() {
+    return this.spacing === 'medium';
   }
 
   @HostBinding('class.sprk-o-Box--large')
