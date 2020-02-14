@@ -70,6 +70,30 @@ describe('SparkAwardComponent', () => {
     );
   });
 
+  it('should add the additionalClasses to imgOne', () => {
+    component.additionalClassesImgOne = 'test-class';
+    fixture.detectChanges();
+    expect(component.getClassesImgOne()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack__item--center-column test-class'
+    );
+  });
+
+  it('should add the additionalClasses to imgTwo', () => {
+    component.additionalClassesImgTwo = 'test-class';
+    fixture.detectChanges();
+    expect(component.getClassesImgTwo()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack__item--center-column test-class'
+    );
+  });
+
+  it('should add the correct class to images if splitAt is set', () => {
+    component.splitAt = 'small';
+    fixture.detectChanges();
+    expect(component.getImgContainerClasses()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack__item--flex@s'
+    );
+  });
+
   it('should set the data-analytics attribute given a value in the analyticsStringImgOne Input', () => {
     const str = 'One';
     component.splitAt = 'large';
