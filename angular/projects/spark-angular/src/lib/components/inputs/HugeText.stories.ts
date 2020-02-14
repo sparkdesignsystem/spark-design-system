@@ -77,6 +77,21 @@ hugeTextInput.story = {
   name: 'Default',
 };
 
+export const hugeTextInputDefaultValue = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-huge-input-container>
+      <input
+        name="text_input_huge"
+        type="text"
+        value="sakljfksdjfklsjflk;as"
+        sprkInput
+      />
+      <label sprkLabel>test</label>
+    </sprk-huge-input-container>
+  `,
+});
+
 export const invalidHugeTextInput = () => ({
   moduleMetadata: modules,
   template: `

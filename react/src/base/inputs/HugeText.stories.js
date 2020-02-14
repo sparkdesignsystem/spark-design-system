@@ -26,16 +26,6 @@ export const hugeTextInput = () => (
   />
 );
 
-export const hugeTextInputDefaultValue = () => (
-  <SprkTextInput
-    defaultValue="Cats"
-    type="hugeTextInput"
-    label="Text Input Label"
-    name="text-input-label"
-    placeholder="Huge Text Placeholder"
-  />
-);
-
 hugeTextInput.story = {
   name: 'Default',
   component: SprkTextInput,
