@@ -61,6 +61,8 @@ export { default as SprkStepper }
   from './components/stepper/SprkStepper';
 export { default as SprkStepperStep }
   from './components/stepper/components/SprkStepperStep/SprkStepperStep';
+export { default as SprkBox }
+  from './objects/box/SprkBox';
 export { default as SprkText }
   from './base/typography/SprkText/SprkText';
 export { default as SprkHeading }
