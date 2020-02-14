@@ -95,12 +95,32 @@ describe('SprkSelectionInput:', () => {
     const onCheckboxChangeMock = jest.fn();
     const wrapper = mount(
       <SprkSelectionInput
+        onChange= {onCheckboxChangeMock}
         choices={[
           {
             name: 'item-choice',
             label: 'Item 1',
             value: '1',
-            onChange: onCheckboxChangeMock,
+          },
+        ]}
+        variant="checkbox"
+      />,
+    );
+    const checkbox = wrapper.find('input[type="checkbox"]');
+    checkbox.simulate('change', { target: { value: 'test-value' } });
+    expect(onCheckboxChangeMock.mock.calls.length).toBe(1);
+  });
+
+  it('should run the supplied onChangeFunc function for checkboxes', () => {
+    const onCheckboxChangeMock = jest.fn();
+    const wrapper = mount(
+      <SprkSelectionInput
+        onChangeFunc={onCheckboxChangeMock}
+        choices={[
+          {
+            name: 'item-choice',
+            label: 'Item 1',
+            value: '1',
           },
         ]}
         variant="checkbox"
@@ -126,7 +146,38 @@ describe('SprkSelectionInput:', () => {
     expect(onChangeMock.mock.calls.length).toBe(1);
   });
 
+  it('should run the supplied onChangeFunc function for selects', () => {
+    const onChangeMock = jest.fn();
+    const wrapper = mount(
+      <SprkSelectionInput
+        choices={choices}
+        variant="select"
+        onChangeFunc={onChangeMock}
+      />,
+    );
+    const select = wrapper.find('.sprk-b-Select');
+    select.value = '1';
+    select.simulate('change', { target: { value: 'test-value' } });
+    expect(onChangeMock.mock.calls.length).toBe(1);
+  });
+
   it('should run the supplied onChange function for huge selects', () => {
+    const onChangeMock = jest.fn();
+    const wrapper = mount(
+      <SprkSelectionInput
+        choices={choices}
+        variant="hugeSelect"
+        onChange={onChangeMock}
+        defaultValue=""
+      />,
+    );
+    const select = wrapper.find('.sprk-b-Select');
+    select.value = '1';
+    select.simulate('change', { target: { value: 'test-value' } });
+    expect(onChangeMock.mock.calls.length).toBe(1);
+  });
+
+  it('should run the supplied onChangeFunc function for huge selects', () => {
     const onChangeMock = jest.fn();
     const wrapper = mount(
       <SprkSelectionInput
