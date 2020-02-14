@@ -67,7 +67,6 @@ describe('SparkCardComponent', () => {
   });
 
   it('should add the correct classes if cardType has no value, but additionalClasses does', () => {
-    component.cardType = '';
     component.body = 'Some body copy.';
     component.title = 'Title!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
