@@ -71,18 +71,18 @@ describe('SparkAwardComponent', () => {
   });
 
   it('should add the additionalClasses to imgOne', () => {
-    component.additionalClassesImgOne = 'test-class';
+    component.additionalClassesImgOne = 'test-img-one';
     fixture.detectChanges();
-    expect(component.getClassesImgOne()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack__item--center-column test-class'
+    expect(element.querySelector('img').classList.toString()).toEqual(
+      component.getClassesImgOne()
     );
   });
 
   it('should add the additionalClasses to imgTwo', () => {
-    component.additionalClassesImgTwo = 'test-class';
+    component.additionalClassesImgTwo = 'test-img-two';
     fixture.detectChanges();
-    expect(component.getClassesImgTwo()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack__item--center-column test-class'
+    expect(element.querySelectorAll('img')[1].classList.toString()).toEqual(
+      component.getClassesImgTwo()
     );
   });
 
