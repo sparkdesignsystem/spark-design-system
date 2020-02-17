@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
   gap: $sprk-space-m;
-  
+
   @media (max-width: $docs-color-swatch-three-column-breakpoint) {
     grid-template-columns: repeat(3, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
   }
