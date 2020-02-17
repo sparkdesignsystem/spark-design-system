@@ -4,10 +4,11 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from "rollup-plugin-commonjs";
 
 export default {
+  external: ['react', 'react-dom'],
   input: './src/spark-exports-react.js',
   output: {
     file: './dist/index.js',
-    format: 'es',
+    format: 'commonjs',
     globals: {
       react: 'React',
       'react-dom': 'ReactDOM'
@@ -22,6 +23,5 @@ export default {
     babel({
       exclude: path.resolve(__dirname, './node_modules')
     })
-  ],
-  external: ['react', 'react-dom'],
+  ]
 }
