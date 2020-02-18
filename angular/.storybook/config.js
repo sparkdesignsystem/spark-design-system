@@ -50,7 +50,7 @@ addParameters({
                 />
               }
 
-              <h4 className="sprk-u-mbm">Class Modifiers for {componentName}</h4>
+              <h4 className="sprk-u-mbm" id="class-modifiers">Class Modifiers for {componentName}</h4>
               <SprkTable
                 additionalTableClasses="sprk-b-Table--spacing-medium sprk-b-Table--secondary sprk-b-Table--striped"
                 columns = {[
