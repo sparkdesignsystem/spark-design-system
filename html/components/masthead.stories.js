@@ -414,9 +414,9 @@ defaultStory.story = {
 
 export const extended = () => {
   useEffect(() => {
-    dropdowns();
     toggle();
     masthead();
+    dropdowns();
 
     // Our masthead.js applies load event to `window`,
     // but doesn't work in storybook iframes
