@@ -49,6 +49,12 @@
   text-align: center;
 }
 
+// Fixes corner case with wait modal in IE 11
+// https://github.com/philipwalton/flexbugs#flexbug-2
+.sprk-c-Modal--wait .sprk-c-Modal__content {
+  width: 100%;
+}
+
 .sprk-c-Modal__header {
   display: flex;
 }

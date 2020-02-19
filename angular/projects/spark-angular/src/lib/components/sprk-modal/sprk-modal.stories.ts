@@ -90,7 +90,7 @@ export const wait = () => ({
       modalType="wait"
       idString="modal-wait-1"
     >
-      <p class="sprk-u-Width-100">
+      <p class="sprk-c-Modal__content">
         Lorem ipsum dolor sit amet,
         consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
