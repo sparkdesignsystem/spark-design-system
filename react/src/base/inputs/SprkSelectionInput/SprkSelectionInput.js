@@ -37,8 +37,7 @@ class SprkSelectionInput extends React.Component {
  * Updates state if huge selects have
  * a value.
  */
-  handleChange(e, variant) {
-    const { onChangeFunc } = this.props;
+  handleChange(e, variant, onChangeFunc) {
     const isHugeSelect = variant === 'hugeSelect';
 
     if (isHugeSelect) {
@@ -62,10 +61,11 @@ class SprkSelectionInput extends React.Component {
       valid,
       variant,
       hasBlankFirstOption,
-      onChangeFunc,
+      onChange,
       ...other
     } = this.props;
     const { choiceItems, id, selectHugeHasValue } = this.state;
+    const onChangeFunc = onChange ? onChange : this.props.onChangeFunc;
 
     return (
       <div
@@ -90,6 +90,7 @@ class SprkSelectionInput extends React.Component {
                     aria-describedby={`errorcontainer-${id}`}
                     name={name}
                     value={value}
+                    onChange={onChangeFunc}
                     {...rest}
                   />
                   <label
@@ -121,7 +122,7 @@ class SprkSelectionInput extends React.Component {
                 disabled={disabled}
                 aria-describedby={`errorcontainer-${id}`}
                 onChange={(e) => {
-                  this.handleChange(e, variant);
+                  this.handleChange(e, variant, onChangeFunc);
                 }}
                 ref={this.selectRef}
                 {...other}
@@ -255,7 +256,7 @@ SprkSelectionInput.propTypes = {
   /**
    * Passes in a function that handles the onChange of the input.
    */
-  onChangeFunc: PropTypes.func,
+  onChange: PropTypes.func,
   /**
    * Determines what type of input is rendered.
    */

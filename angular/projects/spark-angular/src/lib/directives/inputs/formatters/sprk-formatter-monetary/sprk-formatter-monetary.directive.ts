@@ -7,18 +7,14 @@ export class SprkFormatterMonetaryDirective {
 
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
-  @HostBinding('attr.value') myValue;
-
+  @HostBinding('attr.value') inputValue;
   @HostListener('blur', ['this.ref.nativeElement.value'])
-  onFocus(value) {
-    console.log(this.ref.nativeElement, 'nativeElement');
-    this.myValue = this.formatMonetary(value);
-    this.ref.nativeElement.value = this.formatMonetary(value);
+  onBlur(value) {
+    this.inputValue = this.formatMonetary(value);
     this.renderer.addClass(
       this.ref.nativeElement,
       'sprk-b-TextInput--has-value'
     );
-
   }
 
   formatMonetary(value): void {
