@@ -110,7 +110,6 @@ export const defaultStory = () => {
           </button>
         </div>
 
-
         <div
           class="
             sprk-c-Masthead__branding
