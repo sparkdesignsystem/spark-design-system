@@ -1,15 +1,24 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, HostBinding, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[sprkFormatterMonetary]'
 })
 export class SprkFormatterMonetaryDirective {
-  constructor(public ref: ElementRef) {}
 
-  @HostListener('blur', ['$event.target.value'])
+  constructor(public ref: ElementRef, private renderer: Renderer2) {}
+
+  @HostBinding('attr.value') myValue;
+
+  @HostListener('blur', ['this.ref.nativeElement.value'])
   onFocus(value) {
+    console.log(this.ref.nativeElement, 'nativeElement');
+    this.myValue = this.formatMonetary(value);
     this.ref.nativeElement.value = this.formatMonetary(value);
-    this.ref.nativeElement.classList.add('sprk-b-TextInput--has-value');
+    this.renderer.addClass(
+      this.ref.nativeElement,
+      'sprk-b-TextInput--has-value'
+    );
+
   }
 
   formatMonetary(value): void {
