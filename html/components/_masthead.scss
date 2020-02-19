@@ -97,7 +97,9 @@
 // Hide menu element and additional nav link on larger views
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__nav-item {
-  flex: 1 0 0%; /* 1 */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
     display: none;
@@ -112,7 +114,9 @@
 // Center logo branding
 .sprk-c-Masthead__branding {
   margin: 0 auto;
-  flex: 2 0 0%; /* 2 */
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: auto;
   text-align: center;
 
   @media (min-width: $sprk-masthead-breakpoint) {
