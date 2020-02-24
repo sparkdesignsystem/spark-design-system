@@ -108,8 +108,8 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   @HostListener('keydown', ['$event'])
   onKeydown($event) {
-    const isPanel = $event.target.classList.contains('sprk-c-Tabs__content');
-    if (isPanel) {
+    const isTabsButton = $event.target.classList.contains('sprk-c-Tabs__button');
+    if (!isTabsButton) {
       return;
     }
 
