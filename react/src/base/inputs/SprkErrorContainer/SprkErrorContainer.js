@@ -33,7 +33,7 @@ SprkErrorContainer.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * Configured by parent and assigned to the `htmlFor` attribute.
+   * Configured by parent and assigned to the `id` attribute.
    */
   id: PropTypes.string.isRequired,
   /**

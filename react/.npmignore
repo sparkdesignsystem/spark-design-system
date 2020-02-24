@@ -3,3 +3,4 @@ coverage/
 .storybook/
 storybook-static/
 *.stories.js
+.cache/
