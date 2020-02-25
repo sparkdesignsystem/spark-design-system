@@ -6,10 +6,12 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class SprkFormatterMonetaryDirective {
   constructor(public ref: ElementRef) {}
 
-  @HostListener('blur', ['$event.target.value'])
-  onFocus(value) {
+  @HostListener('blur', ['this.ref.nativeElement.value'])
+  onBlur(value) {
     this.ref.nativeElement.value = this.formatMonetary(value);
-    this.ref.nativeElement.classList.add('sprk-b-TextInput--has-value');
+
+    // trigger validation again after setting the value
+    this.ref.nativeElement.dispatchEvent(new Event('input'));
   }
 
   formatMonetary(value): void {
