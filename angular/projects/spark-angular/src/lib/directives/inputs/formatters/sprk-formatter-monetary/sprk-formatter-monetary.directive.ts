@@ -11,7 +11,16 @@ export class SprkFormatterMonetaryDirective {
     this.ref.nativeElement.value = this.formatMonetary(value);
 
     // trigger validation again after setting the value
-    this.ref.nativeElement.dispatchEvent(new Event('input'));
+    let event;
+
+    if (typeof Event === 'function') {
+      event = new Event('input');
+    } else {
+      event = document.createEvent('Event');
+      event.initEvent('input', true, true);
+    }
+
+    this.ref.nativeElement.dispatchEvent(event);
   }
 
   formatMonetary(value): void {
