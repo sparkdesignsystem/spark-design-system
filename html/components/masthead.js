@@ -116,7 +116,7 @@ const showSelectorMask = mastheadSelectorMask => {
 
 const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', element => {
-    const mainLayout = document.querySelector('[data-sprk-main]');
+    const mobileMenu = document.querySelector('.sprk-c-Menu');
     const masthead = document.querySelector('[data-sprk-masthead]');
     const selectorDropdown = document.querySelector(
       '[data-sprk-dropdown="dropdown-selector"]',
@@ -135,9 +135,13 @@ const bindUIEvents = () => {
      * on page and set scroll event
      */
     let isMenuVisible;
+    let isOpen;
     window.addEventListener('load', () => {
       isMenuVisible = isElementVisible('.sprk-c-Masthead__menu');
       toggleScrollEvent(isMenuVisible);
+      isOpen = !document
+      .querySelector('.sprk-c-Masthead__narrow-nav')
+      .classList.contains('sprk-u-Display--none');
     });
     /*
      * If the mobile menu visibility changes
@@ -163,11 +167,18 @@ const bindUIEvents = () => {
       addClassOnScroll(masthead, window.scrollY, 10, 'sprk-c-Masthead--scroll');
     });
 
-    mainLayout.addEventListener('focusin', () => {
-      const isOpen = !document
-        .querySelector('.sprk-c-Masthead__narrow-nav')
-        .classList.contains('sprk-u-HideWhenJs');
-      focusTrap(isOpen, nav);
+    mobileMenu.addEventListener('keydown', (event) => {
+      if(event.which !== 13 && event.which !== 32) {
+        return;
+      }
+      isOpen = !isOpen;
+      /* 
+      *  Wait for the menu open/close toggle javascript to
+      *  complete before adding focusTrap to the call stack
+      */ 
+      window.setTimeout(() => { 
+        focusTrap(isOpen, nav);
+      });
     });
 
     if (selectorTrigger && selectorDropdown) {
