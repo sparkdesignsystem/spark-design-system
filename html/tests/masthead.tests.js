@@ -118,6 +118,7 @@ describe('masthead UI Events tests', () => {
     // Create a menu button container for icon
     iconContainer = document.createElement('button');
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
+    iconContainer.classList.add('sprk-c-Menu');
 
     // Create a container div for icon
     iconContainerDiv = document.createElement('div');
@@ -308,11 +309,10 @@ describe('masthead UI Events tests', () => {
     expect(document.activeElement).eql(iconContainer);
   });
 
-  it('should focus on the first nav item when focusin is triggered on a narrow viewport when the nav is open', () => {
-    iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-nav');
-    event = new window.Event('focusin');
-    main.dispatchEvent(event);
+  it('should focus on the first nav item when click is triggered on a narrow viewport when the nav is open', () => {
+    // nav.classList.add('sprk-c-Masthead__narrow-nav');
+    event = new window.Event('click');
+    iconContainer.dispatchEvent(event);
     expect(document.activeElement).eql(navItem);
   });
 
@@ -511,6 +511,7 @@ describe('masthead no selector test', () => {
     // Create a menu button container for icon
     iconContainer = document.createElement('button');
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
+    iconContainer.classList.add('sprk-c-Menu');
 
     // Add mobile menu icon to container
     iconContainer.appendChild(icon);
