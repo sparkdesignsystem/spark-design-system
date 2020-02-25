@@ -167,10 +167,7 @@ const bindUIEvents = () => {
       addClassOnScroll(masthead, window.scrollY, 10, 'sprk-c-Masthead--scroll');
     });
 
-    mobileMenu.addEventListener('keydown', (event) => {
-      if(event.which !== 13 && event.which !== 32) {
-        return;
-      }
+    mobileMenu.addEventListener('click', () => {
       isOpen = !isOpen;
       /* 
       *  Wait for the menu open/close toggle javascript to
