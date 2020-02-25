@@ -194,7 +194,7 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should call throttledUpdateLayoutState to be called on resize', () => {
-    const spyOnResize = spyOn(component, 'throttledUpdateLayoutState');
+    const spyOnResize = jest.spyOn(component, 'throttledUpdateLayoutState');
     const resizeEvent = document.createEvent('CustomEvent');
     resizeEvent.initCustomEvent('resize', false, false, null);
     window.dispatchEvent(resizeEvent);

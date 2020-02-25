@@ -124,7 +124,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should move focus into the active panel when tab is pressed and the target is a button', () => {
     testTab2.click();
-    spyOn(testPanel2, 'focus');
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.classList.add('sprk-c-Tabs__button');
@@ -135,7 +135,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should not focus into the active panel when tab is pressed and the target is not a button', () => {
     testTab2.click();
-    spyOn(testPanel2, 'focus');
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.dispatchEvent(event);
@@ -144,7 +144,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should do nothing if an unexpected key is pressed', () => {
     testTab2.click();
-    spyOn(testPanel2, 'focus');
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
     const event: Event = new Event('keydown');
     event['keyCode'] = 8;
     testElement.dispatchEvent(event);
