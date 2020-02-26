@@ -132,7 +132,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
       this.incrementTab(tabElements, panelElements, this.activeClass, 1);
     } else if ($event.keyCode === keys.tab) {
       if ($event.target.getAttribute('role') === 'tab') {
-        event.preventDefault();
+        $event.preventDefault();
         panelElements[
           this.getActiveTabIndex(tabElements, this.activeClass)
         ].focus();
