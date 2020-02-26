@@ -16,5 +16,5 @@ module.exports = {
     "^.+\\.(ts|js|html)$": "ts-jest"
   },
   coveragePathIgnorePatterns: ["/node_modules/"],
-  coverageDirectory: '../coverage/spark-angular'
+  coverageDirectory: '<rootDir>/coverage/spark-angular'
 };
