@@ -76,6 +76,13 @@ export const percentageInput = () => ({
 
 percentageInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  }
 };
 
 export const invalidPercentageInput = () => ({
@@ -109,6 +116,14 @@ export const invalidPercentageInput = () => ({
 
 invalidPercentageInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledPercentageInput = () => ({
@@ -134,4 +149,11 @@ export const disabledPercentageInput = () => ({
 
 disabledPercentageInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

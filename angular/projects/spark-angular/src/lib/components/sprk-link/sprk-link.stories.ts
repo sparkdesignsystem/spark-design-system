@@ -53,6 +53,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-link.component'],
+  }
 };
 
 export const simple = () => ({
@@ -68,6 +71,12 @@ export const simple = () => ({
     </sprk-link>
   `,
 });
+
+simple.story = {
+  parameters: {
+    jest: ['sprk-link.component'],
+  }
+};
 
 export const iconWithTextLink = () => ({
   moduleMetadata: modules,
@@ -88,6 +97,12 @@ export const iconWithTextLink = () => ({
   `,
 });
 
+iconWithTextLink.story = {
+  parameters: {
+    jest: ['sprk-link.component'],
+  }
+};
+
 export const disabled = () => ({
   moduleMetadata: modules,
   template: `
@@ -100,3 +115,9 @@ export const disabled = () => ({
     </sprk-link>
   `,
 });
+
+disabled.story = {
+  parameters: {
+    jest: ['sprk-link.component'],
+  }
+};

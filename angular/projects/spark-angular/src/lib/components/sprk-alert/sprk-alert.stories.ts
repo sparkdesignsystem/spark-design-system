@@ -41,6 +41,12 @@ export const info = () => ({
   `,
 });
 
+info.story = {
+  parameters: {
+    jest: ['sprk-alert.component'],
+  },
+};
+
 export const success = () => ({
   moduleMetadata: modules,
   template: `
@@ -53,6 +59,12 @@ export const success = () => ({
     </sprk-alert>
   `
 });
+
+success.story = {
+  parameters: {
+    jest: ['sprk-alert.component'],
+  },
+};
 
 export const fail = () => ({
   moduleMetadata: modules,
@@ -71,6 +83,7 @@ export const fail = () => ({
 fail.story = {
   parameters: {
     docs: { iframeHeight: 235 },
+    jest: ['sprk-alert.component'],
   },
 };
 
@@ -87,3 +100,10 @@ export const noDismissButton = () => ({
     </sprk-alert>
   `
 });
+
+noDismissButton.story = {
+  parameters: {
+    jest: ['sprk-alert.component'],
+  },
+};
+

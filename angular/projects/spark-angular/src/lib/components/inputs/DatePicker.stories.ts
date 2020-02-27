@@ -97,6 +97,12 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+    ],
   }
 };
 
@@ -139,6 +145,13 @@ invalidDatePicker.story = {
   name: 'Invalid',
   parameters: {
     docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+      'sprk-field-error.directive',
+    ],
   }
 };
 
@@ -174,5 +187,11 @@ disabledDatePicker.story = {
   name: 'Disabled',
   parameters: {
     docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+    ],
   }
 };

@@ -134,6 +134,15 @@ export const checkbox = () => ({
 
 checkbox.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-selection-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidCheckbox = () => ({
@@ -223,6 +232,16 @@ export const invalidCheckbox = () => ({
 
 invalidCheckbox.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-selection-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledCheckbox = () => ({
@@ -311,4 +330,13 @@ export const disabledCheckbox = () => ({
 
 disabledCheckbox.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-selection-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

@@ -97,4 +97,7 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-accordion.component', 'sprk-accordion-item.component'],
+  },
 };

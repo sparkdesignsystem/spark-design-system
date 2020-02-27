@@ -55,6 +55,15 @@ export const unordered = () => ({
   `,
 });
 
+unordered.story = {
+  parameters: {
+    jest: [
+      'sprk-unordered-list',
+      'sprk-list-item',
+    ],
+  },
+};
+
 export const ordered = () => ({
   moduleMetadata: modules,
   template: `
@@ -71,6 +80,15 @@ export const ordered = () => ({
     </sprk-ordered-list>
   `,
 });
+
+ordered.story = {
+  parameters: {
+    jest: [
+      'sprk-ordered-list',
+      'sprk-list-item',
+    ],
+  },
+};
 
 export const indented = () => ({
   moduleMetadata: modules,
@@ -92,6 +110,15 @@ export const indented = () => ({
   `,
 });
 
+indented.story = {
+  parameters: {
+    jest: [
+      'sprk-unordered-list',
+      'sprk-list-item',
+    ],
+  },
+};
+
 export const bare = () => ({
   moduleMetadata: modules,
   template: `
@@ -111,3 +138,13 @@ export const bare = () => ({
     </sprk-unordered-list>
   `,
 });
+
+bare.story = {
+  parameters: {
+    jest: [
+      'sprk-unordered-list',
+      'sprk-list-item',
+    ],
+  },
+};
+

@@ -72,6 +72,15 @@ export const columnComparison = () => ({
   `,
 });
 
+columnComparison.story = {
+  parameters: {
+    jest: [
+      'sprk-table.component',
+      'sprk-table-head.directive',
+    ],
+  },
+};
+
 export const secondary = () => ({
   moduleMetadata: modules,
   template: `
@@ -111,6 +120,15 @@ export const secondary = () => ({
     </sprk-table>
   `,
 });
+
+secondary.story = {
+  parameters: {
+    jest: [
+      'sprk-table.component',
+      'sprk-table-head.directive',
+    ],
+  },
+};
 
 export const groupedColumns = () => ({
   moduleMetadata: modules,
@@ -162,6 +180,16 @@ export const groupedColumns = () => ({
   `,
 });
 
+groupedColumns.story = {
+  parameters: {
+    jest: [
+      'sprk-table.component',
+      'sprk-table-head.directive',
+      'sprk-table-grouped-column.directive',
+    ],
+  },
+};
+
 export const rowComparison = () => ({
   moduleMetadata: modules,
   template: `
@@ -203,6 +231,17 @@ export const rowComparison = () => ({
     </sprk-table>
   `,
 });
+
+rowComparison.story = {
+  parameters: {
+    jest: [
+      'sprk-table.component',
+      'sprk-table-head.directive',
+      'sprk-table-row-heading.directive',
+      'sprk-table-empty-heading.directive',
+    ],
+  },
+};
 
 export const secondaryRowComparison = () => ({
   moduleMetadata: modules,
@@ -258,3 +297,13 @@ export const secondaryRowComparison = () => ({
     </sprk-table>
   `,
 });
+
+secondaryRowComparison.story = {
+  parameters: {
+    jest: [
+      'sprk-table.component',
+      'sprk-table-head.directive',
+      'sprk-table-row-heading.directive',
+    ],
+  },
+};

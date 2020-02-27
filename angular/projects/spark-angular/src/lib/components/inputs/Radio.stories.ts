@@ -134,6 +134,14 @@ export const radioButton = () => ({
 
 radioButton.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-selection-item-container.component',
+      'sprk-selection-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+    ],
+  },
 };
 
 export const invalidRadioButton = () => ({
@@ -219,6 +227,15 @@ export const invalidRadioButton = () => ({
 
 invalidRadioButton.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-selection-item-container.component',
+      'sprk-selection-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledRadioButton = () => ({
@@ -303,5 +320,13 @@ export const disabledRadioButton = () => ({
 
 disabledRadioButton.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-selection-item-container.component',
+      'sprk-selection-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+    ],
+  },
 };
 

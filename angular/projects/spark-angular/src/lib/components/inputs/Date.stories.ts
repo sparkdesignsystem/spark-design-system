@@ -78,6 +78,13 @@ export const dateInput = () => ({
 
 dateInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidDateInput = () => ({
@@ -107,6 +114,14 @@ export const invalidDateInput = () => ({
 
 invalidDateInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledDateInput = () => ({
@@ -129,4 +144,11 @@ export const disabledDateInput = () => ({
 
 disabledDateInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

@@ -311,6 +311,13 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-masthead.component',
+      'sprk-masthead-accordion.component',
+      'sprk-masthead-accordion-item.component',
+    ],
+  },
 };
 
 export const extended = () => ({
@@ -706,5 +713,10 @@ export const extended = () => ({
 extended.story = {
   parameters: {
     docs: { iframeHeight: 450 },
+    jest: [
+      'sprk-masthead.component',
+      'sprk-masthead-accordion.component',
+      'sprk-masthead-accordion-item.component',
+    ],
   },
-}
+};

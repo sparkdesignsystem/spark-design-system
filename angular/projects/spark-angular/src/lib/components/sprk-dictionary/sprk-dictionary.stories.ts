@@ -42,7 +42,10 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: ['sprk-dictionary.component'],
+  },
 };
 
 export const striped = () => ({
@@ -65,5 +68,8 @@ export const striped = () => ({
 });
 
 striped.story = {
-  name: 'Striped'
+  name: 'Striped',
+  parameters: {
+    jest: ['sprk-dictionary.component'],
+  }
 };

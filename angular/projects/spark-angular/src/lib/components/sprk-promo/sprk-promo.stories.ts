@@ -52,7 +52,12 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-promo.component',
+    ],
+  },
 };
 
 export const flag = () => ({
@@ -74,6 +79,9 @@ export const flag = () => ({
 flag.story = {
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: [
+      'sprk-promo.component',
+    ],
   },
 };
 
@@ -97,6 +105,14 @@ export const withImage = () => ({
   `,
 });
 
+withImage.story = {
+  parameters: {
+    jest: [
+      'sprk-promo.component',
+    ],
+  },
+};
+
 export const withReversedImage = () => ({
   moduleMetadata: modules,
   template: `
@@ -118,4 +134,11 @@ export const withReversedImage = () => ({
   `,
 });
 
+withReversedImage.story = {
+  parameters: {
+    jest: [
+      'sprk-promo.component',
+    ],
+  },
+};
 
