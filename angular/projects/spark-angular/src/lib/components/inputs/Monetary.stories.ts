@@ -41,8 +41,7 @@ ${markdownDocumentationLinkBuilder('input')}
 - In order to use angular form validation on these inputs, add a pattern attribute containing a regular expression to the input.
 - Formatting can be turned on by adding the sprkFormatterMonetary directive to the input. Formatting is run on blur to add commas and decimals to the hundredth place.
 - When using sprkFormatterMonatery, fields should always have type="text", NOT type="number". Formatted currency (e.g. $1,234.56) is non-numeric.
-- The value of this field may contain special characters
-($ ,) which you may need to remove before submitting the form.
+- When the formatter runs, it will add non-numeric characters to the input value (commas, dollar signs, etc). Keep in mind that values may need reformatting before submitting the form.
     `,
     docs: { iframeHeight: 200 },
   }
