@@ -181,7 +181,7 @@ describe('SprkMastheadComponent', () => {
     setTimeout(() => {
       expect(component.isHidden).toBe(true);
       expect(component.scrollDirection).toBe('down');
-    }, 1000);
+    }, 3000);
   });
 
   it('should show masthead when going from small to large screen', () => {
