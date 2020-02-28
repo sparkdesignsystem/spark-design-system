@@ -38,10 +38,16 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
-- In order to use angular form validation on these inputs, add a pattern attribute containing a regular expression to the input.
-- Formatting can be turned on by adding the sprkFormatterMonetary directive to the input. Formatting is run on blur to add commas and decimals to the hundredth place.
-- When using sprkFormatterMonatery, fields should always have type="text", NOT type="number". Formatted currency (e.g. $1,234.56) is non-numeric.
-- When the formatter runs, it will add non-numeric characters to the input value (commas, dollar signs, etc). Keep in mind that values may need reformatting before submitting the form.
+- In order to use angular form validation on these inputs, add a pattern
+attribute containing a regular expression to the input.
+- Formatting can be turned on by adding the \`sprkFormatterMonetary\`
+directive to the input. Formatting is run on blur to add commas and
+decimals to the hundredth place.
+- When using \`sprkFormatterMonetary\`, fields should always have
+\`type="text"\`, NOT \`type="number"\`. Formatted currency (e.g.
+$1,234.56) is non-numeric.
+- The value of this field may contain special characters ($ ,) which
+you may need to remove before submitting the form.
     `,
     docs: { iframeHeight: 200 },
   }
@@ -161,7 +167,7 @@ export const formatting = () => ({
         #monetaryInput="ngModel"
         sprkInput
       />
-      </sprk-icon-input-container>
+    </sprk-icon-input-container>
   `
 });
 
@@ -175,8 +181,8 @@ export const validating = () => ({
         Payment
       </label>
       <input
-        class="sprk-b-TextInput--has-text-icon "
-        [ngClass] = "{'sprk-b-TextInput--error': monetaryInput.invalid}"
+        class="sprk-b-TextInput--has-text-icon"
+        [ngClass]="{'sprk-b-TextInput--error': monetaryInput.invalid}"
         name="monetary_input"
         type="text"
         pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$"
@@ -184,17 +190,16 @@ export const validating = () => ({
         #monetaryInput="ngModel"
         sprkInput
       />
-    <div
-      [hidden]="monetaryInput.valid || monetaryInput.pristine"
-      sprkFieldError
-    >
-
-      <sprk-icon
-        iconType="exclamation-filled-small"
-        additionalClasses="sprk-b-ErrorIcon"
-      ></sprk-icon>
-      <div class="sprk-b-ErrorText">Invalid amount.</div>
-    </div>
+      <div
+        [hidden]="monetaryInput.valid || monetaryInput.pristine"
+        sprkFieldError
+      >
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">Invalid amount.</div>
+      </div>
     </sprk-icon-input-container>
   `
 });
@@ -202,33 +207,33 @@ export const validating = () => ({
 export const formattingAndValidating = () => ({
   moduleMetadata: modules,
   template: `
-  <sprk-icon-input-container
-  iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
->
-  <label class="sprk-b-Label--monetary" sprkLabel>
-    Payment
-  </label>
-  <input
-    class="sprk-b-TextInput--has-text-icon"
-    [ngClass] = "{'sprk-b-TextInput--error': monetaryInput.invalid}"
-    name="monetary_input"
-    type="text"
-    pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$"
-    sprkFormatterMonetary
-    [(ngModel)]="monetary_input"
-    #monetaryInput="ngModel"
-    sprkInput
-  />
-  <div
-  [hidden]="monetaryInput.valid || monetaryInput.pristine"
-  sprkFieldError
->
-  <sprk-icon
-    iconType="exclamation-filled-small"
-    additionalClasses="sprk-b-ErrorIcon"
-  ></sprk-icon>
-  <div class="sprk-b-ErrorText">Invalid amount.</div>
-</div>
-</sprk-icon-input-container>
+    <sprk-icon-input-container
+      iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
+    >
+      <label class="sprk-b-Label--monetary" sprkLabel>
+        Payment
+      </label>
+      <input
+        class="sprk-b-TextInput--has-text-icon"
+        [ngClass]="{'sprk-b-TextInput--error': monetaryInput.invalid}"
+        name="monetary_input"
+        type="text"
+        pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$"
+        sprkFormatterMonetary
+        [(ngModel)]="monetary_input"
+        #monetaryInput="ngModel"
+        sprkInput
+      />
+      <div
+        [hidden]="monetaryInput.valid || monetaryInput.pristine"
+        sprkFieldError
+      >
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">Invalid amount.</div>
+      </div>
+    </sprk-icon-input-container>
   `
 });

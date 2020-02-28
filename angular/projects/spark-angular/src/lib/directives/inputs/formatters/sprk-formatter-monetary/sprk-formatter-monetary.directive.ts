@@ -7,7 +7,6 @@ import { Validators } from '@angular/forms';
 export class SprkFormatterMonetaryDirective {
   constructor(public ref: ElementRef) {}
 
-
   @HostListener('blur', ['this.ref.nativeElement.value'])
   onBlur(value) {
     this.ref.nativeElement.value = this.formatMonetary(value);
