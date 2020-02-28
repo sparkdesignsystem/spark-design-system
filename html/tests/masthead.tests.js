@@ -309,13 +309,6 @@ describe('masthead UI Events tests', () => {
     expect(document.activeElement).eql(iconContainer);
   });
 
-  it('should focus on the first nav item when click is triggered on a narrow viewport when the nav is open', () => {
-    // nav.classList.add('sprk-c-Masthead__narrow-nav');
-    event = new window.Event('click');
-    iconContainer.dispatchEvent(event);
-    expect(document.activeElement).eql(navItem);
-  });
-
   it('should hide the navs if orientationchange is fired', () => {
     nav.classList.remove('sprk-u-Display--none');
     event = new window.Event('orientationchange');
