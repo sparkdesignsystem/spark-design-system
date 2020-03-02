@@ -47,7 +47,6 @@ describe('masthead UI Events tests', () => {
 
   beforeEach(() => {
     main = document.createElement('div');
-    main.setAttribute('data-sprk-main', null);
 
     // Create the main Masthead element
     mastheadDiv = document.createElement('div');
@@ -479,7 +478,6 @@ describe('masthead no selector test', () => {
 
   beforeEach(() => {
     main = document.createElement('div');
-    main.setAttribute('data-sprk-main', null);
 
     // Create the main Masthead element
     mastheadDiv = document.createElement('div');
