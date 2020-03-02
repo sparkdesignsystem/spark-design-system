@@ -80,14 +80,15 @@ here:
 
 ## Configure Spark
 
-3. Finally, in `index.html`, find the `body` element and add the 
-`data-sprk-main` attribute. This attribute is required for some
+3. Finally, in `index.html`, find the main content that does not include the masthead 
+and add the `data-sprk-main` attribute. This attribute is required for some
 Spark components to correctly handle focus changes.
 
 ``` html
-<body data-sprk-main>
+<div>Masthead Placeholder</div>
+<div data-sprk-main>
   ...
-</body>
+</div>
 ```
 
 ## You did it!
