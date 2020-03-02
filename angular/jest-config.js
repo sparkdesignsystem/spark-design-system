@@ -1,7 +1,6 @@
 const { resolve } = require('path');
 
 const root = resolve(__dirname, '.');
-console.log(root, 'toort issns ')
 module.exports = {
   rootDir: root,
   setupFilesAfterEnv: ["<rootDir>/setup-jest.ts"],
