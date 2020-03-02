@@ -166,13 +166,14 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('the right arrow key should do nothing if all tabs to the right are disabled', () => {
     testTab1.click();
+    fixture.detectChanges();
     testTab2.setAttribute('disabled', 'true');
     testTab3.setAttribute('disabled', 'true');
 
-    const event: Event = new Event('keydown');
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 39;
-    testElement.dispatchEvent(event);
-
+    testTab1.dispatchEvent(event);
+    fixture.detectChanges();
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
     expect(testTab2.getAttribute('aria-selected')).toEqual('false');
     expect(testTab3.getAttribute('aria-selected')).toEqual('false');
@@ -180,150 +181,142 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('the left arrow key should do nothing if all tabs to the left are disabled', () => {
     testTab3.click();
+    fixture.detectChanges();
     testTab1.setAttribute('disabled', 'true');
     testTab2.setAttribute('disabled', 'true');
-
-    const event: Event = new Event('keydown');
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 37;
-    testElement.dispatchEvent(event);
-
+    testTab3.dispatchEvent(event);
+    fixture.detectChanges();
     expect(testTab1.getAttribute('aria-selected')).toEqual('false');
     expect(testTab2.getAttribute('aria-selected')).toEqual('false');
     expect(testTab3.getAttribute('aria-selected')).toEqual('true');
   });
 
-  // TODO: FIX THESE TESTS
-
   it('the right arrow key should advance the tab', () => {
+    testTab2.click();
+    fixture.detectChanges();
     expect(testTab3.getAttribute('aria-selected')).toEqual('false');
     expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
-    const event: Event = new Event('keydown');
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 39;
+    fixture.detectChanges();
     testTab2.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab3.getAttribute('aria-selected')).toEqual('true');
-      expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
-    }, 3000);
-
+    expect(testTab3.getAttribute('aria-selected')).toEqual('true');
+    expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the left arrow key should retreat the tab', () => {
+    testTab2.click();
+    fixture.detectChanges();
     expect(testTab1.getAttribute('aria-selected')).toEqual('false');
     expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
-    const event: Event = new Event('keydown');
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 37;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-      expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
-    }, 3000);
+    fixture.detectChanges();
+    testTab2.dispatchEvent(event);
+    expect(testTab1.getAttribute('aria-selected')).toEqual('true');
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the home key should bring active to the first tab', () => {
     testTab2.click();
+    fixture.detectChanges();
     expect(testTab1.getAttribute('aria-selected')).toEqual('false');
     expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
-    const event: Event = new Event('keydown');
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 36;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-      expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
-    }, 3000);
+    testTab2.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab1.getAttribute('aria-selected')).toEqual('true');
+    expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the end key should bring active to the last tab', () => {
     testTab1.click();
     expect(testTab1.getAttribute('aria-selected')).toEqual('true');
     expect(testPanel1.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 35;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab3.getAttribute('aria-selected')).toEqual('true');
-      expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
-    }, 3000);
+    testTab1.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab3.getAttribute('aria-selected')).toEqual('true');
+    expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
   it('the right arrow key should skip disabled tabs', () => {
     testTab1.click();
     testTab2.setAttribute('disabled', 'true');
-
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 39;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab2.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab3.getAttribute('aria-selected')).toEqual('true');
-    }, 3000);
+    testTab1.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab1.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab2.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab3.getAttribute('aria-selected')).toEqual('true');
   });
 
   it('the left arrow key should skip disabled tabs', () => {
     testTab3.click();
     testTab2.setAttribute('disabled', 'true');
-
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 37;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-      expect(testTab2.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab3.getAttribute('aria-selected')).toEqual('false');
-    }, 3000);
+    testTab3.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab1.getAttribute('aria-selected')).toEqual('true');
+    expect(testTab2.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab3.getAttribute('aria-selected')).toEqual('false');
   });
 
   it('the right arrow key should loop back to the beginning if the right-most tab is selected', () => {
     testTab3.click();
-
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 39;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('true');
-      expect(testTab2.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab3.getAttribute('aria-selected')).toEqual('false');
-    }, 3000);
+    testTab3.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab1.getAttribute('aria-selected')).toEqual('true');
+    expect(testTab2.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab3.getAttribute('aria-selected')).toEqual('false');
   });
 
   it('the left arrow key should loop back to the end if the left-most tab is selected', () => {
     testTab1.click();
-
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 37;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab2.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab3.getAttribute('aria-selected')).toEqual('true');
-    }, 3000);
+    testTab1.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab1.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab2.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab3.getAttribute('aria-selected')).toEqual('true');
   });
 
   it('the home key should pay attention to disabled tabs', () => {
     testTab3.click();
     testTab1.setAttribute('disabled', 'true');
-
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 36;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab2.getAttribute('aria-selected')).toEqual('true');
-      expect(testTab3.getAttribute('aria-selected')).toEqual('false');
-    }, 3000);
+    testTab3.dispatchEvent(event);
+    fixture.detectChanges();
+    expect(testTab1.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab2.getAttribute('aria-selected')).toEqual('true');
+    expect(testTab3.getAttribute('aria-selected')).toEqual('false');
   });
 
   it('the end key should pay attention to disabled tabs', () => {
     testTab1.click();
     testTab3.setAttribute('disabled', 'true');
-
-    const event: Event = new Event('keydown');
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 35;
-    testElement.dispatchEvent(event);
-    setTimeout(() => {
-      expect(testTab1.getAttribute('aria-selected')).toEqual('false');
-      expect(testTab2.getAttribute('aria-selected')).toEqual('true');
-      expect(testTab3.getAttribute('aria-selected')).toEqual('false');
-    }, 3000);
+    testTab1.dispatchEvent(event);
+    expect(testTab1.getAttribute('aria-selected')).toEqual('false');
+    expect(testTab2.getAttribute('aria-selected')).toEqual('true');
+    expect(testTab3.getAttribute('aria-selected')).toEqual('false');
   });
 });
