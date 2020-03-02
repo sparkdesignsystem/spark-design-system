@@ -104,6 +104,14 @@ export const SSNInput = () => ({
 
 SSNInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidSSNInput = () => ({
@@ -148,6 +156,14 @@ export const invalidSSNInput = () => ({
 
 invalidSSNInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const disabledSSNInput = () => ({
@@ -196,4 +212,12 @@ export const disabledSSNInput = () => ({
 
 disabledSSNInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

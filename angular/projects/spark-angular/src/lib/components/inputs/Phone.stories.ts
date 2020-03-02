@@ -80,6 +80,13 @@ export const phoneInput = () => ({
 
 phoneInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidPhoneInput = () => ({
@@ -110,6 +117,14 @@ export const invalidPhoneInput = () => ({
 
 invalidPhoneInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledPhoneInput = () => ({
@@ -132,4 +147,11 @@ export const disabledPhoneInput = () => ({
 
 disabledPhoneInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

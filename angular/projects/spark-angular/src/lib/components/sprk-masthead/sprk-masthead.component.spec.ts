@@ -166,19 +166,13 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should update state isHidden to true when scrollDirection is equal to down', () => {
-
     // Scroll down the page
     const scrollEvent = document.createEvent('CustomEvent');
     scrollEvent.initCustomEvent('scroll', false, false, null);
-    const expectedLeft = 0;
-    const expectedTop = 456;
-    window.document.body.style.minHeight = '9000px';
-    window.document.body.style.minWidth = '200px';
+    Object.defineProperty(window, 'scrollY', { value: 456, writable: true });
     fixture.detectChanges();
-    window.scrollTo(expectedLeft, expectedTop);
     window.dispatchEvent(scrollEvent);
-
-
+    fixture.detectChanges();
     expect(component.isHidden).toBe(true);
     expect(component.scrollDirection).toBe('down');
   });
@@ -194,7 +188,7 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should call throttledUpdateLayoutState to be called on resize', () => {
-    const spyOnResize = spyOn(component, 'throttledUpdateLayoutState');
+    const spyOnResize = jest.spyOn(component, 'throttledUpdateLayoutState');
     const resizeEvent = document.createEvent('CustomEvent');
     resizeEvent.initCustomEvent('resize', false, false, null);
     window.dispatchEvent(resizeEvent);

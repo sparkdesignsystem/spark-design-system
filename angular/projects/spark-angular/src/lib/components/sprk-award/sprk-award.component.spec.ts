@@ -9,7 +9,7 @@ import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-st
 
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 
-describe('SparkAwardComponent', () => {
+describe('SprkAwardComponent', () => {
   let component: SprkAwardComponent;
   let fixture: ComponentFixture<SprkAwardComponent>;
   let element: HTMLElement;

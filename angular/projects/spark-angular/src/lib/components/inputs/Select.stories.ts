@@ -87,6 +87,13 @@ export const selectBox = () => ({
 
 selectBox.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidSelectBox = () => ({
@@ -130,6 +137,13 @@ export const invalidSelectBox = () => ({
 
 invalidSelectBox.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const disabledSelectBox = () => ({
@@ -166,4 +180,11 @@ export const disabledSelectBox = () => ({
 
 disabledSelectBox.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

@@ -61,6 +61,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-dropdown.component'],
+  }
 };
 
 export const informational = () => ({
@@ -111,5 +114,6 @@ export const informational = () => ({
 informational.story = {
   parameters: {
     docs: { iframeHeight: 400 },
+    jest: ['sprk-dropdown.component'],
   },
 };

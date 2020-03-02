@@ -87,6 +87,13 @@ export const monetaryInput = () => ({
 
 monetaryInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidMonetaryInput = () => ({
@@ -120,6 +127,14 @@ export const invalidMonetaryInput = () => ({
 
 invalidMonetaryInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledMonetaryInput = () => ({
@@ -146,6 +161,13 @@ export const disabledMonetaryInput = () => ({
 
 disabledMonetaryInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 

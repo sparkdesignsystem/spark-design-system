@@ -3,6 +3,8 @@ import { configure, addDecorator, addParameters } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-spark-theme";
 import '../src/polyfills';
+import { withTests } from '@storybook/addon-jest';
+import results from '../src/.jest-test-results.json';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-utilities/icon-loader';
 import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
@@ -16,6 +18,12 @@ const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
 setCompodocJson(docJson);
 addDecorator(withA11y);
+addDecorator(
+  withTests({
+    filesExt: '.spec.ts',
+    results
+  }
+  ));
 addParameters({
   options: {
     theme: sparkTheme,

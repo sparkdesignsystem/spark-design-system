@@ -53,6 +53,11 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-pagination.component',
+    ],
+  },
 };
 
 export const pager = () => ({
@@ -67,3 +72,11 @@ export const pager = () => ({
     </sprk-pagination>
   `,
 });
+
+pager.story = {
+  parameters: {
+    jest: [
+      'sprk-pagination.component',
+    ],
+  },
+};
