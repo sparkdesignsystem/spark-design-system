@@ -8,7 +8,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Masthead',
   decorators: [
-    story => `<div>${story()}</div>`,
+    story => `<div>${story()}</div><div data-sprk-main></div>`,
   ],
   parameters: {
     docs: { iframeHeight: 300 },
