@@ -166,22 +166,15 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should update state isHidden to true when scrollDirection is equal to down', () => {
-
     // Scroll down the page
     const scrollEvent = document.createEvent('CustomEvent');
     scrollEvent.initCustomEvent('scroll', false, false, null);
-    const expectedLeft = 0;
-    const expectedTop = 456;
-    window.document.body.style.minHeight = '9000px';
-    window.document.body.style.minWidth = '200px';
+    Object.defineProperty(window, 'scrollY', { value: 456, writable: true });
     fixture.detectChanges();
-    window.scrollTo(expectedLeft, expectedTop);
     window.dispatchEvent(scrollEvent);
-
-    setTimeout(() => {
-      expect(component.isHidden).toBe(true);
-      expect(component.scrollDirection).toBe('down');
-    }, 3000);
+    fixture.detectChanges();
+    expect(component.isHidden).toBe(true);
+    expect(component.scrollDirection).toBe('down');
   });
 
   it('should show masthead when going from small to large screen', () => {
