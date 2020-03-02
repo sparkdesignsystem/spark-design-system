@@ -117,7 +117,6 @@ describe('masthead UI Events tests', () => {
     // Create a menu button container for icon
     iconContainer = document.createElement('button');
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
-    iconContainer.classList.add('sprk-c-Menu');
 
     // Create a container div for icon
     iconContainerDiv = document.createElement('div');
@@ -502,7 +501,6 @@ describe('masthead no selector test', () => {
     // Create a menu button container for icon
     iconContainer = document.createElement('button');
     iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
-    iconContainer.classList.add('sprk-c-Menu');
 
     // Add mobile menu icon to container
     iconContainer.appendChild(icon);

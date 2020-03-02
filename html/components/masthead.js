@@ -116,7 +116,7 @@ const showSelectorMask = mastheadSelectorMask => {
 
 const bindUIEvents = () => {
   getElements('[data-sprk-mobile-nav-trigger]', element => {
-    const mobileMenu = document.querySelector('.sprk-c-Menu');
+    const mobileMenu = document.querySelector('[data-sprk-mobile-nav-trigger="mobileNav"]');
     const masthead = document.querySelector('[data-sprk-masthead]');
     const selectorDropdown = document.querySelector(
       '[data-sprk-dropdown="dropdown-selector"]',
