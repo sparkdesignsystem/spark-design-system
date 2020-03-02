@@ -47,6 +47,7 @@ describe('masthead UI Events tests', () => {
 
   beforeEach(() => {
     main = document.createElement('div');
+    main.setAttribute('data-sprk-main', null);
 
     // Create the main Masthead element
     mastheadDiv = document.createElement('div');
@@ -307,6 +308,14 @@ describe('masthead UI Events tests', () => {
     expect(document.activeElement).eql(iconContainer);
   });
 
+  it('should focus on the first nav item when focusin is triggered on a narrow viewport when the nav is open', () => {
+    iconContainer.focus();
+    nav.classList.add('sprk-c-Masthead__narrow-nav');
+    event = new window.Event('focusin');
+    main.dispatchEvent(event);
+    expect(document.activeElement).eql(navItem);
+  });
+
   it('should hide the navs if orientationchange is fired', () => {
     nav.classList.remove('sprk-u-Display--none');
     event = new window.Event('orientationchange');
@@ -477,6 +486,7 @@ describe('masthead no selector test', () => {
 
   beforeEach(() => {
     main = document.createElement('div');
+    main.setAttribute('data-sprk-main', null);
 
     // Create the main Masthead element
     mastheadDiv = document.createElement('div');
