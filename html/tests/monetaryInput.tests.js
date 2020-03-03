@@ -1,6 +1,4 @@
 /* global window document describe it beforeEach afterEach */
-import { expect } from 'chai';
-import sinon from 'sinon';
 import {
   monetaryInput,
   formatMonetary,
@@ -23,7 +21,7 @@ describe('monetaryInput init', () => {
     sinon.spy(document, 'querySelectorAll');
     monetaryInput();
     expect(document.querySelectorAll.getCall(0)
-      .args[0]).eql('[data-sprk-input="monetary"]');
+      .args[0]).toBe('[data-sprk-input="monetary"]');
   });
 });
 
@@ -31,32 +29,32 @@ describe('formatMonetary tests', () => {
   it('one digit', () => {
     const div = document.createElement('input');
     div.value = '1';
-    expect(formatMonetary(div.value)).eql('1.00');
+    expect(formatMonetary(div.value)).toBe('1.00');
   });
   it('4 digits', () => {
     const div = document.createElement('input');
     div.value = '1234';
-    expect(formatMonetary(div.value)).eql('1,234.00');
+    expect(formatMonetary(div.value)).toBe('1,234.00');
   });
   it('7 digits', () => {
     const div = document.createElement('input');
     div.value = '1234567';
-    expect(formatMonetary(div.value)).eql('1,234,567.00');
+    expect(formatMonetary(div.value)).toBe('1,234,567.00');
   });
   it('10 digits', () => {
     const div = document.createElement('input');
     div.value = '1234567890';
-    expect(formatMonetary(div.value)).eql('1,234,567,890.00');
+    expect(formatMonetary(div.value)).toBe('1,234,567,890.00');
   });
   it('contains decimal', () => {
     const div = document.createElement('input');
     div.value = '0.10';
-    expect(formatMonetary(div.value)).eql('0.10');
+    expect(formatMonetary(div.value)).toBe('0.10');
   });
   it('contains decimal with more than 2 places, should round', () => {
     const div = document.createElement('input');
     div.value = '0.115';
-    expect(formatMonetary(div.value)).eql('0.12');
+    expect(formatMonetary(div.value)).toBe('0.12');
   });
 });
 
@@ -80,20 +78,20 @@ describe('bindUIEvents', () => {
   it('should bind the input event', () => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
-    expect(field.addEventListener.getCall(0).args[0]).eql('input');
+    expect(field.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
   it('should validate when input is triggered', () => {
     bindUIEvents(div);
     event = new window.Event('input');
     field.dispatchEvent(event);
-    expect(field.getAttribute('aria-invalid')).eql('false');
+    expect(field.getAttribute('aria-invalid')).toBe('false');
   });
 
   it('should bind the blur event', () => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
-    expect(field.addEventListener.getCall(1).args[0]).eql('blur');
+    expect(field.addEventListener.getCall(1).args[0]).toBe('blur');
   });
 
   it('should format when blur is triggered with valid input', done => {
@@ -102,7 +100,7 @@ describe('bindUIEvents', () => {
     event = new window.Event('blur');
     field.dispatchEvent(event);
     done();
-    expect(field.value).eql('123.00');
+    expect(field.value).toBe('123.00');
   });
 
   it('should not format when blur is triggered with no value', done => {
@@ -112,7 +110,7 @@ describe('bindUIEvents', () => {
     event = new window.Event('blur');
     field.dispatchEvent(event);
     done();
-    expect(field.value).eql('');
+    expect(field.value).toBe('');
   });
 
   it('should not format when blur is triggered with invalid input', done => {
@@ -122,6 +120,6 @@ describe('bindUIEvents', () => {
     event = new window.Event('blur');
     field.dispatchEvent(event);
     done();
-    expect(field.value).eql('abc');
+    expect(field.value).toBe('abc');
   });
 });

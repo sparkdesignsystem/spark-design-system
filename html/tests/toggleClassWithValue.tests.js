@@ -1,5 +1,4 @@
 /* global document describe beforeEach afterEach it */
-import { expect } from 'chai';
 import sinon from 'sinon';
 import toggleClassWithValue from '../utilities/toggleClassWithValue';
 
@@ -20,7 +19,7 @@ describe('toggleClassWithValue tests', () => {
 
   it('should bind the given event to the element', () => {
     toggleClassWithValue(input, 'test-class', 'input');
-    expect(input.addEventListener.getCall(0).args[0]).eql('input');
+    expect(input.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
   it('should add a class if the element has a value on event', () => {
@@ -28,13 +27,13 @@ describe('toggleClassWithValue tests', () => {
     input.value = 'has-value';
     event = new window.Event('input');
     input.dispatchEvent(event);
-    expect(input.classList.contains('test-class')).eql(true);
+    expect(input.classList.contains('test-class')).toBe(true);
   });
 
   it('it should remove a class if there is no value on event', () => {
     toggleClassWithValue(input, 'test-class');
     event = new window.Event('input');
     input.dispatchEvent(event);
-    expect(input.classList.contains('test-class')).eql(false);
+    expect(input.classList.contains('test-class')).toBe(false);
   });
 });

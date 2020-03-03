@@ -1,11 +1,5 @@
 /* global document describe beforeEach afterEach it  window  */
-import { expect } from 'chai';
-import {
-  dropdowns,
-  hideDropDown,
-  showDropDown,
-  toggleDropDown,
-} from '../components/dropdown';
+import { dropdowns, hideDropDown, showDropDown, toggleDropDown } from '../components/dropdown';
 
 describe('Dropdown tests', () => {
   let trigger;
@@ -77,58 +71,58 @@ describe('Dropdown tests', () => {
   it('should remove the hide class and add open class when show is called', () => {
     dropdown.classList.add('sprk-u-Display--none');
     showDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).eql(false);
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
   });
 
   it('should add the hide class and remove the open class when hide is called', () => {
     hideDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
   it('toggle should toggle the hide class and open class', () => {
     toggleDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).eql(false);
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
     toggleDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).eql(true);
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
   it('should toggle the dropdown on click', () => {
     dropdowns();
     trigger.dispatchEvent(new window.Event('click'));
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
   });
 
   it('should close the open dropdown if the outsideElement is clicked', () => {
     dropdowns();
     trigger.click();
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
     outsideElement.click();
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
   it('should update the trigger text if a choice is clicked', () => {
     dropdowns();
     trigger.click();
     choice1.click();
-    expect(triggerText.textContent).eql('choice1');
+    expect(triggerText.textContent).toBe('choice1');
   });
 
   it('should not update the trigger text if the trigger does not have a text-container and a choice is clicked', () => {
     dropdowns();
     trigger2.click();
     choice2.click();
-    expect(triggerText2.textContent).eql('trigger');
+    expect(triggerText2.textContent).toBe('trigger');
   });
 
   it('should not change the trigger text if something is clicked outside the dropdown', () => {
     dropdowns();
     trigger.click();
     outsideElement.click();
-    expect(triggerText.textContent).eql('trigger');
+    expect(triggerText.textContent).toBe('trigger');
   });
 
   it('should close the dropdown if esc is pressed', () => {
@@ -137,7 +131,7 @@ describe('Dropdown tests', () => {
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
     document.dispatchEvent(escKeyEvent);
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
   it('should not close the dropdown if a key that is not esc is pressed', () => {
@@ -146,20 +140,20 @@ describe('Dropdown tests', () => {
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 26;
     document.dispatchEvent(escKeyEvent);
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
   });
 
   it('should close the dropdown if an element outside the dropdown is focused', () => {
     dropdowns();
     trigger.click();
     document.dispatchEvent(new window.Event('focusin'));
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
   it('should not close the dropdown if an element inside the dropdown is focused', () => {
     dropdowns();
     trigger.click();
     insideElement.focus();
-    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).eql(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
   });
 });

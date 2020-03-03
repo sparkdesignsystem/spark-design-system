@@ -1,16 +1,11 @@
 /* global document describe beforeEach it */
-import { expect } from 'chai';
-import sinon from 'sinon';
-
-const proxyquire = require('proxyquire');
+jest.mock('object-fit-images', () => mockObjectFitImagesStub);
 
 describe('Highlight Board tests', () => {
   let element;
-  const objectFitImagesStub = sinon.spy();
+  const mockObjectFitImagesStub = sinon.spy();
 
-  const { highlightBoard } = proxyquire('../components/highlight-board', {
-    'object-fit-images': objectFitImagesStub,
-  });
+  const { highlightBoard } = require('../components/highlight-board');
 
   beforeEach(() => {
     element = document.createElement('img');
@@ -19,6 +14,6 @@ describe('Highlight Board tests', () => {
 
   it('should set up', () => {
     highlightBoard();
-    expect(objectFitImagesStub.calledOnce).eql(true);
+    expect(mockObjectFitImagesStub.calledOnce).toBe(true);
   });
 });

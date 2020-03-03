@@ -1,15 +1,10 @@
 /* global document beforeEach afterEach describe it window */
-import { expect } from 'chai';
-import sinon from 'sinon';
-
-const proxyquireStrict = require('proxyquire').noCallThru();
+import { proxyquireStrict} from 'proxyquire';
+jest.mock('dom-slider', () => mockDOMSliderStub);
 
 describe('Toggle init', () => {
-  const domSliderStub = {};
-  const { toggle } = proxyquireStrict(
-    '../components/toggle',
-    { 'dom-slider': domSliderStub },
-  );
+  const mockDOMSliderStub = {};
+  const { toggle } = require('../components/toggle');
 
   afterEach(() => {
     document.querySelectorAll.restore();
@@ -19,7 +14,7 @@ describe('Toggle init', () => {
     sinon.spy(document, 'querySelectorAll');
     toggle();
     expect(document.querySelectorAll
-      .getCall(0).args[0]).eql('[data-sprk-toggle="container"]');
+      .getCall(0).args[0]).toBe('[data-sprk-toggle="container"]');
   });
 });
 
@@ -33,14 +28,14 @@ describe('Toggle tests', () => {
   let containerAccordion;
   let iconAccordion;
   let iconAccordionUseElement;
-  const domSliderStub = {};
+  const mockDOMSliderStub = {};
 
   const {
     toggleIconType,
     toggleAriaExpanded,
     handleToggleClick,
     bindToggleUIEvents,
-  } = proxyquireStrict('../components/toggle', { 'dom-slider': domSliderStub });
+  } = proxyquireStrict('../components/toggle', { 'dom-slider': mockDOMSliderStub });
 
   beforeEach(() => {
     container = document.createElement('div');
@@ -114,20 +109,20 @@ describe('Toggle tests', () => {
 
   it('should toggle aria-expanded attribute for toggles', () => {
     toggleAriaExpanded(trigger);
-    expect(trigger.hasAttribute('aria-expanded')).eql(true);
+    expect(trigger.hasAttribute('aria-expanded')).toBe(true);
   });
 
   it('should add aria-expanded attribute set to false if not found on'
     + ' trigger', () => {
     triggerAccordion.removeAttribute('aria-expanded');
     toggleAriaExpanded(triggerAccordion);
-    expect(triggerAccordion.getAttribute('aria-expanded')).eql('false');
+    expect(triggerAccordion.getAttribute('aria-expanded')).toBe('false');
   });
 
   it('should toggle aria-expanded attribute to false', () => {
     toggleAriaExpanded(trigger); // Is true, makes it false
     toggleAriaExpanded(trigger); // Is false, makes it true
-    expect(trigger.hasAttribute('aria-expanded')).eql(true);
+    expect(trigger.hasAttribute('aria-expanded')).toBe(true);
   });
 
   it('should toggle accordion item open', () => {
@@ -138,9 +133,8 @@ describe('Toggle tests', () => {
       triggerAccordion,
     );
     expect(containerAccordion.classList
-      .contains('sprk-c-Accordion__item--open')).eql(true);
-    expect(iconAccordionUseElement.getAttribute('xlink:href'))
-      .eql('#chevron-up-circle-two-color');
+      .contains('sprk-c-Accordion__item--open')).toBe(true);
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe('#chevron-up-circle-two-color');
   });
 
   it('should toggle accordion open', () => {
@@ -153,9 +147,9 @@ describe('Toggle tests', () => {
       triggerAccordion,
     );
     expect(containerAccordion.classList
-      .contains('sprk-c-MastheadAccordion__item--open')).eql(true);
+      .contains('sprk-c-MastheadAccordion__item--open')).toBe(true);
     expect(iconAccordionUseElement
-      .getAttribute('xlink:href')).eql('#chevron-up-circle-two-color');
+      .getAttribute('xlink:href')).toBe('#chevron-up-circle-two-color');
   });
 
   it('should toggle accordion icon open', () => {
@@ -165,20 +159,19 @@ describe('Toggle tests', () => {
       'chevron-up-circle-two-color',
       'chevron-down-circle-two-color',
     );
-    expect(iconAccordionUseElement.getAttribute('xlink:href'))
-      .eql('#chevron-down-circle-two-color');
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe('#chevron-down-circle-two-color');
   });
 
   it('should add listener to toggle trigger', () => {
     sinon.spy(trigger, 'addEventListener');
     bindToggleUIEvents(container);
-    expect(trigger.addEventListener.getCall(0).args[0]).eql('click');
+    expect(trigger.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
   it('should add listener to Accordion toggle trigger', () => {
     sinon.spy(triggerAccordion, 'addEventListener');
     bindToggleUIEvents(containerAccordion);
-    expect(triggerAccordion.addEventListener.getCall(0).args[0]).eql('click');
+    expect(triggerAccordion.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
   it('should show details when clicked', () => {
@@ -186,13 +179,13 @@ describe('Toggle tests', () => {
     const event = new window.Event('click');
     triggerAccordion.dispatchEvent(event);
     expect(containerAccordion.classList
-      .contains('sprk-c-Accordion__item--open')).eql(true);
+      .contains('sprk-c-Accordion__item--open')).toBe(true);
   });
 
   it('should disable clicks until after slide toggle animation runs', () => {
     bindToggleUIEvents(container);
     trigger.dispatchEvent(new window.Event('click'));
-    expect(trigger.style.pointerEvents).eql('none');
+    expect(trigger.style.pointerEvents).toBe('none');
   });
 
   it('should enable clicks after slide toggle animation runs', (cb) => {
@@ -201,7 +194,7 @@ describe('Toggle tests', () => {
     trigger.dispatchEvent(event);
     trigger.dispatchEvent(event);
     setTimeout(() => {
-      expect(trigger.style.pointerEvents).eql('auto');
+      expect(trigger.style.pointerEvents).toBe('auto');
       cb();
     }, 100);
   });
@@ -209,13 +202,12 @@ describe('Toggle tests', () => {
   it('should still toggle content if icon is not present', () => {
     handleToggleClick(contentAccordion, null, null, triggerAccordion);
     expect(containerAccordion.classList
-      .contains('sprk-c-Accordion__item--open')).eql(true);
+      .contains('sprk-c-Accordion__item--open')).toBe(true);
   });
 
   it('should not add Accordion__item class if toggle is not an'
     + 'accordion', () => {
     handleToggleClick(content, null, null, trigger);
-    expect(container.classList.contains('sprk-c-Accordion__item--open'))
-      .eql(false);
+    expect(container.classList.contains('sprk-c-Accordion__item--open')).toBe(false);
   });
 });
