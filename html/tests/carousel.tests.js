@@ -10,7 +10,12 @@ jest.mock('lory.js', () => ({
   lory: mockLorySpy
 }));
 
-const { carousel, beforeLoryInit, afterLoryInit, afterLorySlide } = require('../components/carousel');
+const {
+  carousel,
+  beforeLoryInit,
+  afterLoryInit,
+  afterLorySlide
+} = require('../components/carousel');
 
 describe('Carousel tests', () => {
   let carouselContainer;
