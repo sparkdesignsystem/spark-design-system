@@ -138,7 +138,7 @@ describe('tabs UI Events tests', () => {
   });
 
   it('should activate the last tab when End is pressed', () => {
-    event = new window.Event('keydown');
+    event = new Event('keydown');
     event.keyCode = 35;
     expect(tab3.classList.contains('sprk-c-Tabs__button--active')).toBe(false);
     tabContainer.dispatchEvent(event);
@@ -146,22 +146,24 @@ describe('tabs UI Events tests', () => {
   });
 
   it('should activate the corresponding content when tab is pressed', () => {
-    event = new window.Event('keydown');
+    event = new Event('keydown');
     event.keyCode = 9;
     tab1.click();
-    expect(document.activeElement).toEqual(tab1);
+    expect(tab1.classList.contains('sprk-c-Tabs__button--active')).toBe(true);
     tabContainer.dispatchEvent(event);
-    expect(document.activeElement).toEqual(panel1);
+    expect(panel1.classList.contains('sprk-u-HideWhenJs')).toBe(false);
+    expect(panel2.classList.contains('sprk-u-HideWhenJs')).toBe(true);
+    expect(panel3.classList.contains('sprk-u-HideWhenJs')).toBe(true);
   });
 
   it(`should do nothing when a key is pressed that isnt home, end, or an arrow
    key`, () => {
-    event = new window.Event('keydown');
+    event = new Event('keydown');
     event.keyCode = 8;
     tab2.click();
-    expect(document.activeElement).toEqual(tab2);
+    expect(tab2.classList.contains('sprk-c-Tabs__button--active')).toBe(true);
     tabContainer.dispatchEvent(event);
-    expect(document.activeElement).toEqual(tab2);
+    expect(tab2.classList.contains('sprk-c-Tabs__button--active')).toBe(true);
   });
 });
 
