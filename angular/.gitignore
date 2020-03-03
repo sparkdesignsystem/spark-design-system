@@ -16,4 +16,4 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-
+src/.jest-test-results.json

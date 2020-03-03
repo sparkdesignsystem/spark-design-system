@@ -57,6 +57,14 @@ export const pageTitle = () => ({
   `
 });
 
+pageTitle.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
+
 export const displayOne = () => ({
   moduleMetadata: modules,
   template: `
@@ -66,6 +74,14 @@ export const displayOne = () => ({
     </h1>
   `
 });
+
+displayOne.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
 
 export const displayTwo = () => ({
   moduleMetadata: modules,
@@ -77,6 +93,14 @@ export const displayTwo = () => ({
   `
 });
 
+displayTwo.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
+
 export const displayThree = () => ({
   moduleMetadata: modules,
   template: `
@@ -86,6 +110,14 @@ export const displayThree = () => ({
     </h3>
   `
 });
+
+displayThree.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
 
 export const displayFour = () => ({
   moduleMetadata: modules,
@@ -97,6 +129,14 @@ export const displayFour = () => ({
   `
 });
 
+displayFour.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
+
 export const displayFive = () => ({
   moduleMetadata: modules,
   template: `
@@ -106,6 +146,14 @@ export const displayFive = () => ({
     </h5>
   `
 });
+
+displayFive.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
 
 export const displaySix = () => ({
   moduleMetadata: modules,
@@ -117,6 +165,14 @@ export const displaySix = () => ({
   `
 });
 
+displaySix.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};
+
 export const displaySeven = () => ({
   moduleMetadata: modules,
   template: `
@@ -126,3 +182,11 @@ export const displaySeven = () => ({
     </h6>
   `
 });
+
+displaySeven.story = {
+  parameters: {
+    jest: [
+      'sprk-heading.directive',
+    ],
+  },
+};

@@ -64,6 +64,14 @@ export const primary = () => ({
   `,
 });
 
+primary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
 export const secondary = () => ({
   moduleMetadata: modules,
   template: `
@@ -76,6 +84,14 @@ export const secondary = () => ({
     </button>
   `,
 });
+
+secondary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
 
 export const tertiary = () => ({
   moduleMetadata: modules,
@@ -90,6 +106,14 @@ export const tertiary = () => ({
   `,
 });
 
+tertiary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
 export const disabled = () => ({
   moduleMetadata: modules,
   template: `
@@ -102,6 +126,14 @@ export const disabled = () => ({
     </button>
   `,
 });
+
+disabled.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
 
 export const loading = () => {
   return {
@@ -116,6 +148,14 @@ export const loading = () => {
       </button>
     `,
   };
+};
+
+loading.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
 };
 
 export const fullWidthAtSmallViewport = () => {
@@ -135,6 +175,11 @@ export const fullWidthAtSmallViewport = () => {
 
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
 };
 
 export const fullWidthAtExtraSmallViewport = () => {
@@ -154,4 +199,9 @@ export const fullWidthAtExtraSmallViewport = () => {
 
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
 };

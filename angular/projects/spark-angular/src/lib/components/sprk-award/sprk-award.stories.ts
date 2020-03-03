@@ -58,4 +58,7 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-award.component'],
+  },
 };

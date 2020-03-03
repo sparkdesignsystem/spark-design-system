@@ -57,7 +57,10 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: ['sprk-highlight-board.component'],
+  }
 };
 
 export const noImage = () => ({
@@ -77,6 +80,7 @@ export const noImage = () => ({
 noImage.story = {
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: ['sprk-highlight-board.component'],
   }
 };
 
@@ -98,6 +102,7 @@ export const stacked = () => ({
 stacked.story = {
   parameters: {
     docs: { iframeHeight: 800 },
+    jest: ['sprk-highlight-board.component'],
   }
-}
+};
 

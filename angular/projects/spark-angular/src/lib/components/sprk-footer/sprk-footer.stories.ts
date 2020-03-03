@@ -266,5 +266,8 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: ['sprk-footer.component'],
+  }
 };

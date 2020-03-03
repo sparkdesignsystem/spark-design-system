@@ -58,6 +58,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     docs: { iframeHeight: 150 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -77,6 +78,12 @@ export const standout = () => ({
     </sprk-card>
   `
 });
+
+standout.story = {
+  parameters: {
+    jest: ['sprk-card.component'],
+  },
+};
 
 export const highlightedHeader = () => ({
   moduleMetadata: modules,
@@ -124,6 +131,7 @@ highlightedHeader.story = {
   name: 'Highlighted Header',
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -153,6 +161,7 @@ teaser.story = {
   name: 'Teaser',
   parameters: {
     docs: { iframeHeight: 500 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -210,6 +219,7 @@ twoUpCards.story = {
   name: 'Card Layout - Two Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -286,6 +296,7 @@ threeUpCards.story = {
   name: 'Card Layout - Three Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -381,5 +392,6 @@ fourUpCards.story = {
   name: 'Card Layout - Four Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };

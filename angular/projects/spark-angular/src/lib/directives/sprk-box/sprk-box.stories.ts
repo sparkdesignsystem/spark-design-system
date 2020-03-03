@@ -1,7 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkBoxDirective } from './sprk-box.directive';
 import { SprkBoxModule } from './sprk-box.module';
-import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Box',
@@ -28,5 +27,10 @@ export const defaultBox = () => ({
 });
 
 defaultBox.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-box.directive',
+    ],
+  },
 };

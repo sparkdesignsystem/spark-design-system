@@ -64,6 +64,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-icon.component'],
+  }
 };
 
 export const gallery = () => {
@@ -88,6 +91,7 @@ gallery.story = {
   parameters: {
     docs: {
       iframeHeight: 1000
-    }
+    },
+    jest: ['sprk-icon.component'],
   }
 };

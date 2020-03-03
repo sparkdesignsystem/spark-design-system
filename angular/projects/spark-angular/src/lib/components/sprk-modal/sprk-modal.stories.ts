@@ -59,6 +59,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-modal.component'],
+  }
 };
 
 export const info = () => ({
@@ -81,6 +84,12 @@ export const info = () => ({
   },
 });
 
+info.story = {
+  parameters: {
+    jest: ['sprk-modal.component'],
+  }
+};
+
 export const wait = () => ({
   moduleMetadata: modules,
   template: `
@@ -101,3 +110,9 @@ export const wait = () => ({
     waitVisible: true,
   },
 });
+
+wait.story = {
+  parameters: {
+    jest: ['sprk-modal.component'],
+  }
+};

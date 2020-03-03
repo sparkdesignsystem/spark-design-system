@@ -68,14 +68,6 @@
             "project": "projects/spark-angular/ng-package.json"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/spark-angular/src/test.ts",
-            "tsConfig": "projects/spark-angular/tsconfig.spec.json",
-            "karmaConfig": "projects/spark-angular/karma.conf.js"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {

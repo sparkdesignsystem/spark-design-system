@@ -66,6 +66,14 @@ export const bodyOne = () => ({
   `
 });
 
+bodyOne.story = {
+  parameters: {
+    jest: [
+      'sprk-text.directive',
+    ],
+  },
+};
+
 export const bodyTwo = () => ({
   moduleMetadata: modules,
   template: `
@@ -84,6 +92,14 @@ export const bodyTwo = () => ({
     </p>
   `
 });
+
+bodyTwo.story = {
+  parameters: {
+    jest: [
+      'sprk-text.directive',
+    ],
+  },
+};
 
 export const bodyThree = () => ({
   moduleMetadata: modules,
@@ -104,6 +120,14 @@ export const bodyThree = () => ({
   `
 });
 
+bodyThree.story = {
+  parameters: {
+    jest: [
+      'sprk-text.directive',
+    ],
+  },
+};
+
 export const bodyFour = () => ({
   moduleMetadata: modules,
   template: `
@@ -122,4 +146,12 @@ export const bodyFour = () => ({
     </p>
   `
 });
+
+bodyFour.story = {
+  parameters: {
+    jest: [
+      'sprk-text.directive',
+    ],
+  },
+};
 
