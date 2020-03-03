@@ -1,9 +1,10 @@
 /* global document beforeEach afterEach describe it window */
-import { proxyquireStrict} from 'proxyquire';
+const proxyquireStrict = require('proxyquire').noCallThru();
+const mockDOMSliderStub = {};
+
 jest.mock('dom-slider', () => mockDOMSliderStub);
 
 describe('Toggle init', () => {
-  const mockDOMSliderStub = {};
   const { toggle } = require('../components/toggle');
 
   afterEach(() => {
