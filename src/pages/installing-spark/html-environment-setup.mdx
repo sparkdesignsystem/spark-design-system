@@ -185,7 +185,16 @@ module.exports = {
 };
 ```
 
-13. At the top of `index.js`, add this reference to the uncompiled `scss`
+13. Now let’s write some CSS to compile. Create a new file in `src`
+called `style.scss` and copy this CSS into it:
+
+``` css
+body {
+  background-color: green;
+}
+```
+
+14. At the top of `index.js`, add this reference to the uncompiled `scss`
 file:
 
 ``` javascript
@@ -195,15 +204,6 @@ import "../src/style.scss"
 Now when Webpack compiles `index.js`, this import line will include
 your style file. It will be processed according to the rules
 we set up in the webpack config in the previous step.
-
-14. Now let’s write some CSS to compile. Create a new file in `src`
-called `style.scss` and copy this CSS into it:
-
-``` css
-body {
-  background-color: green;
-}
-```
 
 15. In `index.html`, add this reference to your new compiled CSS:
 
