@@ -1,7 +1,6 @@
 /* global document describe beforeEach it */
-jest.mock('object-fit-images', () => mockObjectFitImagesStub);
-
 describe('Highlight Board tests', () => {
+  jest.mock('object-fit-images', () => mockObjectFitImagesStub);
   let element;
   const mockObjectFitImagesStub = sinon.spy();
 

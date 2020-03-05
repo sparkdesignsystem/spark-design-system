@@ -1,5 +1,4 @@
 /* global window document beforeEach describe it afterEach */
-jest.mock('tiny-date-picker', () => mockTDPSpy);
 
 describe('datePicker tests', () => {
   let dp;
@@ -17,6 +16,9 @@ describe('datePicker tests', () => {
   };
 
   const mockTDPSpy = sinon.spy(tinyDatePickerStub);
+
+  jest.mock('tiny-date-picker', () => mockTDPSpy);
+
 
   const { datePicker } = require('../base/inputs/datePicker');
 
