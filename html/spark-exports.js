@@ -100,6 +100,7 @@ import {
   handleToggleClick,
   bindToggleUIEvents,
 } from './components/toggle';
+import isValidEmail from './utilities/validation/isValidEmail';
 import isValidDate from './utilities/validation/isValidDate';
 import isValidMonetary from './utilities/validation/isValidMonetary';
 import isValidPhone from './utilities/validation/isValidPhone';
@@ -204,6 +205,7 @@ export {
   toggleAriaExpanded,
   handleToggleClick,
   bindToggleUIEvents,
+  isValidEmail,
   isValidDate,
   isValidMonetary,
   isValidPhone,
