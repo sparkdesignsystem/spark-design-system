@@ -14,9 +14,6 @@
     "storybook": "npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon"
   },
-  "nyc": {
-    "exclude": "tests/*.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
