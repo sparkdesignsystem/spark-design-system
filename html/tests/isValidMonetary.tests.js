@@ -93,4 +93,8 @@ describe('isValidMonetary tests', () => {
   it('should pass leading 0', () => {
     expect(isValidMonetary('0.12')).eql(true);
   });
+
+  it('should pass trailing . with altered expression passed', () => {
+    expect(isValidMonetary('123.', /(^\$?(\d+|\d{1,3}(,\d{3})*)(\.+)?$)|^$/)).eql(true);
+  });
 });

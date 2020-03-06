@@ -52,4 +52,8 @@ describe('isValidSSN tests', () => {
   it('should pass with dashes', () => {
     expect(isValidSSN('333-33-3333')).eql(true);
   });
+
+  it('should pass on three zeros when altered expression is passed', () => {
+    expect(isValidSSN('000-12-1234', /(^(?!666|9\d{2})\d{3}([-]{0,1})(?!00)\d{2}\1(?!0{4})\2\d{4}$)|^$/)).eql(true);
+  });
 });

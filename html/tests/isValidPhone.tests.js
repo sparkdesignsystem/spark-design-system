@@ -56,4 +56,8 @@ describe('isValidPhone tests', () => {
   it('should pass on missing space', () => {
     expect(isValidPhone('(123)4567890')).eql(true);
   });
+
+  it('should pass on too short when altered expression is passed', () => {
+    expect(isValidPhone('(123)390-12', /(^(\+\d{1,2}\s)?((\(\d{3}\))|\d{3})[\s.-]?\d{3}[\s.-]?\d{2}$)|^$/)).eql(true);
+  });
 });

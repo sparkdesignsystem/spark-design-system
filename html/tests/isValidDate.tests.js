@@ -67,4 +67,8 @@ describe('isValidDate tests', () => {
   it('should fail on mixed separators', () => {
     expect(isValidDate('11/11-1999')).eql(false);
   });
+
+  it('should pass 7 digits when altered expression is passed', () => {
+    expect(isValidDate('1122020', /^((([1358]|1[02])([\/-]?)(0[1-9]|[12]\d|3[01])|(0[469]|11)([\/-]?)(0[1-9]|[12]\d|30)|02(\/?)((0?\d)|[12]\d))(\4|\7|\9)[12]\d{3})?$/)).eql(true);
+  });
 });
