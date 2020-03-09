@@ -103,6 +103,9 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['modals'],
+  }
 };
 
 export const info = () => {
@@ -163,6 +166,12 @@ export const info = () => {
   `;
 };
 
+info.story = {
+  parameters: {
+    jest: ['modals'],
+  }
+};
+
 export const wait = () => {
   useEffect(() => {
     modals();
@@ -215,4 +224,10 @@ export const wait = () => {
       tabindex="-1"
     ></div>
   `;
+};
+
+wait.story = {
+  parameters: {
+    jest: ['modals'],
+  }
 };

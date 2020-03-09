@@ -4,6 +4,8 @@ import '../../storybook-utilities/storybook-theming/_docs.scss';
 import { configure, addParameters, addDecorator } from '@storybook/html';
 import { withA11y } from '@storybook/addon-a11y';
 import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
+import { withTests } from '@storybook/addon-jest';
+import results from '../.jest-test-results.json';
 import 'iframe-resizer/js/iframeResizer.contentWindow.min';
 import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook-theming/font-loader.scss';
 import '../../storybook-utilities/icon-utilities/icon-loader';
@@ -15,6 +17,11 @@ import AdditionalInputInfo from '../../storybook-utilities/components/Additional
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
 addDecorator(withA11y);
+addDecorator(
+  withTests({
+    results
+  }
+));
 
 // Option defaults
 addParameters({

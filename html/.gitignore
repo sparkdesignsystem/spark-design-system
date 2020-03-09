@@ -2,3 +2,4 @@ dist/
 es5/
 storybook-static/
 coverage/
+.jest-test-results.json

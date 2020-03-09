@@ -114,6 +114,9 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['pagination'],
+  }
 };
 
 export const pager = () => {
@@ -158,4 +161,11 @@ export const pager = () => {
     </ul>
   </nav>
   `;
+};
+
+
+pager.story = {
+  parameters: {
+    jest: ['pagination'],
+  }
 };

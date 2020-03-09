@@ -13,7 +13,7 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('tabs')}
 For this component to function properly, the
-HTML must be structured correctly:  
+HTML must be structured correctly:
 
 - The outer container must have the
 \`data-sprk-navigation=”tabs”\` attribute.
@@ -27,7 +27,7 @@ to screen readers.
     - \`aria-selected=true\` when selected.
     - \`tabindex=0\` to place the control in the tab order
 - Content panels must have the following attributes:
-    - \`role=tabpanel\` to identify this control for screen readers. 
+    - \`role=tabpanel\` to identify this control for screen readers.
     - \`aria-labelledby\` to link the content with the associated button.
     - \`tabindex=0\` to place the control in the tab order.
 - The Tabs component makes use of the
@@ -36,7 +36,7 @@ degradation experience in environments where JavaScript
 is not enabled. If \`sprk-u-JavaScript\` is not found on
 the \`<html>\` element of the page, the content of all Tabs
 panels will be visible. If \`sprk-u-JavaScript\` is present,
-only one content panel will be visible at a time. 
+only one content panel will be visible at a time.
 `,
   },
 };
@@ -132,4 +132,7 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['tabs'],
+  }
 };
