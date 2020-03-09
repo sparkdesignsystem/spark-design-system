@@ -81,6 +81,9 @@ export const hugeSelectBox = () => {
 
 hugeSelectBox.story = {
   name: 'Default',
+  parameters: {
+    jest: ['hugeInput'],
+  },
 };
 
 export const invalidHugeSelectBox = () => {
@@ -152,6 +155,9 @@ export const invalidHugeSelectBox = () => {
 
 invalidHugeSelectBox.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['hugeInput'],
+  },
 };
 
 export const disabledHugeSelectBox = () => {
@@ -213,4 +219,7 @@ export const disabledHugeSelectBox = () => {
 
 disabledHugeSelectBox.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['hugeInput'],
+  },
 };

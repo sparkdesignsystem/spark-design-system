@@ -24,7 +24,7 @@ see guidelines in the
   - Reformatting to date pattern MM/DD/YYYY - After valid
   input, it should reformat to a two digit number month,
   followed by a forward slash, two digit number day, followed
-  by another forward slash, and four digit number year. 
+  by another forward slash, and four digit number year.
 `,
     docs: { iframeHeight: 140 },
   },
@@ -59,6 +59,9 @@ export const dateInput = () => `
 
 dateInput.story = {
   name: 'Default',
+  parameters: {
+    jest: ['dateInput'],
+  },
 };
 
 export const invalidDateInput = () => `
@@ -101,6 +104,9 @@ export const invalidDateInput = () => `
 
 invalidDateInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['dateInput'],
+  },
 };
 
 export const disabledDateInput = () => `
@@ -133,4 +139,7 @@ export const disabledDateInput = () => `
 
 disabledDateInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['dateInput'],
+  },
 };

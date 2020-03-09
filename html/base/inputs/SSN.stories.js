@@ -81,6 +81,9 @@ export const SSNInput = () => `
 
 SSNInput.story = {
   name: 'Default',
+  parameters: {
+    jest: ['ssnInput'],
+  },
 };
 
 export const invalidSSNInput = () => `
@@ -140,6 +143,9 @@ export const invalidSSNInput = () => `
 
 invalidSSNInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['ssnInput'],
+  },
 };
 
 export const disabledSSNInput = () => `
@@ -193,4 +199,7 @@ export const disabledSSNInput = () => `
 
 disabledSSNInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['ssnInput'],
+  },
 };

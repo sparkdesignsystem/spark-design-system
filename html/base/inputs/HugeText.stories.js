@@ -14,7 +14,7 @@ ${markdownDocumentationLinkBuilder('input')}
 - The Input Label must come before the input element.
 - A placeholder is required for full functionality.
 If you do not want to show a placeholder, include
-placeholder=" " (space included) to maintain functionality. 
+placeholder=" " (space included) to maintain functionality.
     `,
     docs: { iframeHeight: 140 },
   },
@@ -54,6 +54,9 @@ export const hugeTextInput = () => {
 
 hugeTextInput.story = {
   name: 'Default',
+  parameters: {
+    jest: ['hugeInput'],
+  },
 };
 
 export const invalidHugeTextInput = () => {
@@ -104,6 +107,9 @@ export const invalidHugeTextInput = () => {
 
 invalidHugeTextInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['hugeInput'],
+  },
 };
 
 export const disabledHugeTextInput = () => {
@@ -141,4 +147,7 @@ export const disabledHugeTextInput = () => {
 
 disabledHugeTextInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['hugeInput'],
+  },
 };
