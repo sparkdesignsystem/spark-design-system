@@ -1,21 +1,15 @@
-/* global document describe beforeEach afterEach it  window  */
+/* global document describe beforeEach afterEach it window */
 import
-  createElementFromString
+createElementFromString
   from '../tests/_createElementFromString';
-import { carousel as regCarousel } from '../components/carousel';
-
-const mockLorySpy = sinon.spy();
-
-jest.mock('lory.js', () => ({
-  lory: mockLorySpy
-}));
-
-const {
-  carousel,
+import {
+  carousel as regCarousel
+} from '../components/carousel';
+import {
   beforeLoryInit,
   afterLoryInit,
-  afterLorySlide
-} = require('../components/carousel');
+  afterLorySlide,
+} from '../components/carousel';
 
 describe('Carousel tests', () => {
   let carouselContainer;
@@ -74,11 +68,6 @@ describe('Carousel tests', () => {
     document.body.innerHTML = '';
   });
 
-  it('should call lory on the element passed in', () => {
-    carousel(carouselContainer);
-    expect(mockLorySpy.calledOnce).toBe(true);
-  });
-
   it('should emit sprk.carousel.slide event after sliding', () => {
     const carouselInstance = regCarousel(carouselContainer);
     let caughtEvent = false;
@@ -94,7 +83,7 @@ describe('Carousel tests', () => {
     const dot = document.createElement('div');
     dotContainer.appendChild(dot);
     const instance = {
-      slideTo: () => {},
+      slideTo: () => { },
     };
     const instanceSpy = sinon.spy(instance, 'slideTo');
 
@@ -104,14 +93,14 @@ describe('Carousel tests', () => {
   });
 
   it('beforeLoryInit shouldnt error if dotContainer is null', () => {
-    expect(beforeLoryInit(null, 4)).toEqual();
+    expect(beforeLoryInit(null, 4)).toBe();
   });
 
   it('afterLoryInit shouldnt error if dotContainer is null', () => {
-    expect(afterLoryInit(null, {})).toEqual();
+    expect(afterLoryInit(null, {})).toBe();
   });
 
   it('afterLorySlide shouldnt error if dotContainer is null', () => {
-    expect(afterLorySlide(null, {}, {})).toEqual();
+    expect(afterLorySlide(null, {}, {})).toBe();
   });
 });
