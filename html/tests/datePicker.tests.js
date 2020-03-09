@@ -19,7 +19,6 @@ describe('datePicker tests', () => {
 
   jest.mock('tiny-date-picker', () => mockTDPSpy);
 
-
   const { datePicker } = require('../base/inputs/datePicker');
 
   beforeEach(() => {
