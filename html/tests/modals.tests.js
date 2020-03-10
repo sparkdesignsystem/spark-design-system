@@ -1,6 +1,4 @@
 /* global window beforeEach afterEach document describe it */
-import sinon from 'sinon';
-import { expect } from 'chai';
 import {
   modals,
   showModal,
@@ -31,11 +29,11 @@ describe('modals init', () => {
     sinon.spy(document, 'querySelectorAll');
     sinon.spy(document, 'querySelector');
     modals();
-    expect(document.querySelector.getCall(0).args[0]).eql('[data-sprk-modal-mask="true"]');
-    expect(document.querySelector.getCall(1).args[0]).eql('[data-sprk-main]');
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-modal-trigger]');
-    expect(document.querySelectorAll.getCall(1).args[0]).eql('[data-sprk-modal]');
-    expect(document.querySelectorAll.getCall(2).args[0]).eql('[data-sprk-modal-cancel]');
+    expect(document.querySelector.getCall(0).args[0]).toBe('[data-sprk-modal-mask="true"]');
+    expect(document.querySelector.getCall(1).args[0]).toBe('[data-sprk-main]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-modal-trigger]');
+    expect(document.querySelectorAll.getCall(1).args[0]).toBe('[data-sprk-modal]');
+    expect(document.querySelectorAll.getCall(2).args[0]).toBe('[data-sprk-modal-cancel]');
   });
 });
 
@@ -126,8 +124,8 @@ describe('modal UI tests', () => {
       [defaultModal, waitModal],
       [cancelDefault],
     );
-    expect(triggerDefaultModal.addEventListener.getCall(0).args[0]).eql('click');
-    expect(triggerWaitModal.addEventListener.getCall(0).args[0]).eql('click');
+    expect(triggerDefaultModal.addEventListener.getCall(0).args[0]).toBe('click');
+    expect(triggerWaitModal.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
   it('should hide the correct modal when cancel is triggered', () => {
@@ -140,9 +138,9 @@ describe('modal UI tests', () => {
     );
     event = new window.Event('click');
     triggerDefaultModal.dispatchEvent(event);
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(false);
     cancelDefault.dispatchEvent(event);
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it('should hide the correct modal when cancel is triggered if preventDefault is not set', () => {
@@ -156,9 +154,9 @@ describe('modal UI tests', () => {
     );
     event = new window.Event('click');
     triggerDefaultModal.dispatchEvent(event);
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(false);
     cancelDefault.dispatchEvent(event);
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it('should bind a click event to each cancel', () => {
@@ -169,7 +167,7 @@ describe('modal UI tests', () => {
       [defaultModal, waitModal],
       [cancelDefault],
     );
-    expect(cancelDefault.addEventListener.getCall(0).args[0]).eql('click');
+    expect(cancelDefault.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
   it('should bind a click event to the mask, if there is a modal and a mask', () => {
@@ -180,7 +178,7 @@ describe('modal UI tests', () => {
       [defaultModal, waitModal],
       [cancelDefault],
     );
-    expect(modalMask.addEventListener.getCall(0).args[0]).eql('click');
+    expect(modalMask.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
   it('should do nothing, if there is no modal or no mask', () => {
@@ -191,7 +189,7 @@ describe('modal UI tests', () => {
       [defaultModal, waitModal],
       [cancelDefault],
     );
-    expect(modalMask.addEventListener.called).eql(false);
+    expect(modalMask.addEventListener.called).toBe(false);
   });
 
   it('should close a default modal when the mask is clicked', () => {
@@ -202,12 +200,12 @@ describe('modal UI tests', () => {
       [defaultModal, waitModal],
       [cancelDefault],
     );
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(true);
     showModal(defaultModal, modalMask, main);
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(false);
     event = new window.Event('click');
     modalMask.dispatchEvent(event);
-    expect(defaultModal.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 });
 
@@ -219,11 +217,11 @@ describe('isWaitModal tests', () => {
 
   it('should return true if the modal is of type wait', () => {
     modal.setAttribute('data-sprk-modal-type', 'wait');
-    expect(isWaitModal(modal)).eql(true);
+    expect(isWaitModal(modal)).toBe(true);
   });
 
   it('should return false if the modal is not of type wait', () => {
-    expect(isWaitModal(modal)).eql(false);
+    expect(isWaitModal(modal)).toBe(false);
   });
 });
 
@@ -313,38 +311,38 @@ describe('Modal tests', () => {
     showModal(defaultModal, modalMask, main);
     // Grab currently open modal
     const modalEl = currentOpenModal(modalsList);
-    expect(modalEl).eql(defaultModal);
+    expect(modalEl).toEqual(defaultModal);
   });
 
   it('should show the default modal, mask and set aria-hidden=true on main container', () => {
     showModal(defaultModal, modalMask, main);
 
     // showModal should remove the hide class from the modal mask
-    expect(modalMask.classList.contains(HIDE_CLASS)).eql(false);
+    expect(modalMask.classList.contains(HIDE_CLASS)).toBe(false);
 
     // showModal should remove the hide class from the modal
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(false);
 
     // showModal should add the aria-hidden attribute to main container
-    expect(main.hasAttribute('aria-hidden')).eql(true);
+    expect(main.hasAttribute('aria-hidden')).toBe(true);
   });
 
   it('showModal should do nothing if there is no mask', () => {
     showModal(defaultModal, null, main);
-    expect(defaultModal.classList.add.called).eql(false);
+    expect(defaultModal.classList.add.called).toBe(false);
   });
 
   it('should show the wait modal, mask and set aria-hidden=true on main', () => {
     showModal(waitModal, modalMask, main);
 
     // showModal should remove the hide class from the modal mask
-    expect(modalMask.classList.contains(HIDE_CLASS)).eql(false);
+    expect(modalMask.classList.contains(HIDE_CLASS)).toBe(false);
 
     // showModal should remove the hide class from the modal
-    expect(waitModal.classList.contains(HIDE_CLASS)).eql(false);
+    expect(waitModal.classList.contains(HIDE_CLASS)).toBe(false);
 
     // // showModal should add the aria-hidden attribute to main
-    expect(main.hasAttribute('aria-hidden')).eql(true);
+    expect(main.hasAttribute('aria-hidden')).toBe(true);
   });
 
   it('should hide the default modal, mask, remove aria-hidden=true on main, and send focus back to trigger element', () => {
@@ -353,21 +351,21 @@ describe('Modal tests', () => {
     hideModal(defaultModal, modalMask, main);
 
     // hideModal should remove the hide class from the modal mask
-    expect(modalMask.classList.contains(HIDE_CLASS)).eql(true);
+    expect(modalMask.classList.contains(HIDE_CLASS)).toBe(true);
 
     // hideModal should remove the hide class from the modal
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(true);
 
     // hideModal should remove the aria-hidden attribute to main
-    expect(main.hasAttribute('aria-hidden')).eql(false);
+    expect(main.hasAttribute('aria-hidden')).toBe(false);
 
     // hideModal should send focus back to trigger element
-    expect(triggerDefaultModal).eql(document.activeElement);
+    expect(triggerDefaultModal).toEqual(document.activeElement);
   });
 
   it('should return if the modal is already hidden or if the mask or main section is not defined', () => {
     hideModal(defaultModal, modalMask, main);
-    expect(modalMask.classList.add.called).eql(false);
+    expect(modalMask.classList.add.called).toBe(false);
   });
 
   it('should hide the wait modal, mask, remove aria-hidden=true on main, and send focus back to trigger element', () => {
@@ -376,16 +374,16 @@ describe('Modal tests', () => {
     hideModal(waitModal, modalMask, main);
 
     // hideModal should remove the hide class from the modal mask
-    expect(modalMask.classList.contains(HIDE_CLASS)).eql(true);
+    expect(modalMask.classList.contains(HIDE_CLASS)).toBe(true);
 
     // hideModal should remove the hide class from the modal
-    expect(waitModal.classList.contains(HIDE_CLASS)).eql(true);
+    expect(waitModal.classList.contains(HIDE_CLASS)).toBe(true);
 
     // hideModal should remove the aria-hidden attribute to main
-    expect(main.hasAttribute('aria-hidden')).eql(false);
+    expect(main.hasAttribute('aria-hidden')).toBe(false);
 
     // hideModal should send focus back to trigger element
-    expect(triggerWaitModal).eql(document.activeElement);
+    expect(triggerWaitModal).toEqual(document.activeElement);
   });
 
   it('should get all focusable elements in a modal', () => {
@@ -408,20 +406,20 @@ describe('Modal tests', () => {
     defaultModal.append(p);
     defaultModal.append(h1);
     // Should be 5 focusable elements
-    expect(getFocusableEls(defaultModal).length).eql(6);
+    expect(getFocusableEls(defaultModal).length).toBe(6);
   });
 
   it('should focus the first focusable element in the modal', () => {
     focusFirstEl(defaultModal);
     // Anchor link in default modal should be focused
     const isFocused = document.activeElement === cancelDefault;
-    expect(isFocused).eql(true);
+    expect(isFocused).toBe(true);
   });
 
   it('should do nothing if focusFirstEl contains no focusable elements', () => {
     focusFirstEl(defaultModal);
     focusFirstEl(document.createElement('div'));
-    expect(document.activeElement.outerHTML).eql('<a data-sprk-modal-cancel="exampleDefaultModal" href="#">Link</a>');
+    expect(document.activeElement.outerHTML).toBe('<a data-sprk-modal-cancel="exampleDefaultModal" href="#">Link</a>');
   });
 
   it('should determine if Tab key was pressed', () => {
@@ -429,8 +427,8 @@ describe('Modal tests', () => {
     tabKeyEvent.keyCode = 9;
     const notTabKeyEvent = new window.Event('keydown');
     notTabKeyEvent.keyCode = 13;
-    expect(isTabPressed(tabKeyEvent)).eql(true);
-    expect(isTabPressed(notTabKeyEvent)).eql(false);
+    expect(isTabPressed(tabKeyEvent)).toBe(true);
+    expect(isTabPressed(notTabKeyEvent)).toBe(false);
   });
 
   it('should determine if Escape key was pressed', () => {
@@ -438,8 +436,8 @@ describe('Modal tests', () => {
     escKeyEvent.keyCode = 27;
     const notEscKeyEvent = new window.Event('keydown');
     notEscKeyEvent.keyCode = 13;
-    expect(isEscPressed(escKeyEvent)).eql(true);
-    expect(isEscPressed(notEscKeyEvent)).eql(false);
+    expect(isEscPressed(escKeyEvent)).toBe(true);
+    expect(isEscPressed(notEscKeyEvent)).toBe(false);
   });
 
   it('should return true when modal mask is clicked', () => {
@@ -448,7 +446,7 @@ describe('Modal tests', () => {
       return e;
     });
     modalMask.click();
-    expect(isMaskClicked(event)).eql(true);
+    expect(isMaskClicked(event)).toBe(true);
   });
 
   it('should return false when modal mask is not clicked', () => {
@@ -457,7 +455,7 @@ describe('Modal tests', () => {
       return e;
     });
     cancelDefault.click();
-    expect(isMaskClicked(event)).eql(false);
+    expect(isMaskClicked(event)).toBe(false);
   });
 
   it('should determine if element is active element', () => {
@@ -465,8 +463,8 @@ describe('Modal tests', () => {
     // Give focus to cancel link
     cancelDefault.focus();
     isActiveElement(cancelDefault);
-    expect(document.activeElement).eql(cancelDefault);
-    expect(document.activeElement).to.not.eql(notActiveLink);
+    expect(document.activeElement).toEqual(cancelDefault);
+    expect(document.activeElement).not.toEqual(notActiveLink);
   });
 
   it('should perform modal key events only while a modal is open', () => {
@@ -476,19 +474,19 @@ describe('Modal tests', () => {
     // Check for open modal
     const modalEl = currentOpenModal(modalsList);
     // Check to make sure it is closed
-    expect(modalEl).eql(undefined);
+    expect(modalEl).toEqual(undefined);
     // Now throw a 'esc' key event when no modal is open
     handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
     // Check to make sure the modal is closed and that it has the hide class
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(true);
     // Now open the modal
     showModal(defaultModal, modalMask, main);
     // Check to make sure the modal is open
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(false);
     // Now throw a 'esc' key event
     handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
     // Check to make sure the modal is closed and that it has the hide class
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(true);
   });
 
   it('should do nothing when a wait modal is open and esc is pressed', () => {
@@ -499,7 +497,7 @@ describe('Modal tests', () => {
     handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, escKeyEvent);
-    expect(waitModal.classList.contains(HIDE_CLASS)).eql(false);
+    expect(waitModal.classList.contains(HIDE_CLASS)).toBe(false);
   });
 
   it('should do nothing on a key thats not tab or esc', () => {
@@ -508,7 +506,7 @@ describe('Modal tests', () => {
     QKeyEvent.keyCode = 81;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, QKeyEvent);
-    expect(document.activeElement).eql(waitModal);
+    expect(document.activeElement).toEqual(waitModal);
   });
 
   it('should return focus to the open wait modal if tab is pressed', () => {
@@ -517,7 +515,7 @@ describe('Modal tests', () => {
     tabKeyEvent.keyCode = 9;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
-    expect(document.activeElement).eql(waitModal);
+    expect(document.activeElement).toEqual(waitModal);
   });
 
   it('should return focus to the open wait modal if shift + tab is pressed', () => {
@@ -527,7 +525,7 @@ describe('Modal tests', () => {
     tabKeyEvent.shiftKey = true;
     showModal(waitModal, modalMask, main);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
-    expect(document.activeElement).eql(waitModal);
+    expect(document.activeElement).toEqual(waitModal);
   });
 
   it('should return focus to the first element if tab is pressed while the last focusable element is focused', () => {
@@ -536,9 +534,9 @@ describe('Modal tests', () => {
     tabKeyEvent.keyCode = 9;
     showModal(defaultModal, modalMask, main);
     link2.focus();
-    expect(document.activeElement).eql(link2);
+    expect(document.activeElement).toEqual(link2);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
-    expect(document.activeElement).eql(cancelDefault);
+    expect(document.activeElement).toEqual(cancelDefault);
   });
 
   it('should return focus to the first element if tab + shift is pressed while the first focusable element is focused', () => {
@@ -548,9 +546,9 @@ describe('Modal tests', () => {
     tabKeyEvent.shiftKey = true;
     showModal(defaultModal, modalMask, main);
     cancelDefault.focus();
-    expect(document.activeElement).eql(cancelDefault);
+    expect(document.activeElement).toEqual(cancelDefault);
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
-    expect(document.activeElement).eql(link2);
+    expect(document.activeElement).toEqual(link2);
   });
 
   it('should do nothing if tab + shift is pressed while the focused element is not first', () => {
@@ -561,7 +559,7 @@ describe('Modal tests', () => {
     showModal(defaultModal, modalMask, main);
     link2.focus();
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
-    expect(document.activeElement).eql(link2);
+    expect(document.activeElement).toEqual(link2);
   });
 
   it('should do nothing if tab is pressed while the focused element is not last', () => {
@@ -571,14 +569,14 @@ describe('Modal tests', () => {
     showModal(defaultModal, modalMask, main);
     cancelDefault.focus();
     handleModalKeyEvents(modalsList, modalMask, main, tabKeyEvent);
-    expect(document.activeElement).eql(cancelDefault);
+    expect(document.activeElement).toEqual(cancelDefault);
   });
 
   it('should not hide an open wait modal', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     showModal(waitModal, modalMask, main);
     handleMaskEvents(modalsList, modalMask, main, { target: modalMask, preventDefault: () => {} });
-    expect(waitModal.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(waitModal.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 
   it('should perform modal mask click event only while a modal is open', () => {
@@ -592,14 +590,14 @@ describe('Modal tests', () => {
       preventDefault: () => {},
     };
     // Check to make sure it is closed
-    expect(modalEl).eql(undefined);
+    expect(modalEl).toEqual(undefined);
     // Now open the modal
     showModal(defaultModal, modalMask, main);
     // Check to make sure the modal is open
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(false);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(false);
     // Now throw a 'esc' key event
     handleMaskEvents(modalsList, modalMask, main, modalClickEv);
     // Check to make sure the modal is closed and that it has the hide class
-    expect(defaultModal.classList.contains(HIDE_CLASS)).eql(true);
+    expect(defaultModal.classList.contains(HIDE_CLASS)).toBe(true);
   });
 });

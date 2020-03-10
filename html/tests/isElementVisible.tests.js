@@ -1,5 +1,4 @@
 /* global document describe it */
-import { expect } from 'chai';
 import isElementVisible from '../utilities/isElementVisible';
 
 describe('isElementVisible tests', () => {
@@ -16,12 +15,12 @@ describe('isElementVisible tests', () => {
   it('should return false if the style is visibility:hidden', () => {
     main.setAttribute('style', 'visibility:hidden');
     elementVisible = isElementVisible('.sprk-main');
-    expect(elementVisible).eql(false);
+    expect(elementVisible).toBe(false);
   });
 
   it('should return false if the style is display: none', () => {
     main.setAttribute('style', 'display: none');
     elementVisible = isElementVisible('.sprk-main');
-    expect(elementVisible).eql(false);
+    expect(elementVisible).toBe(false);
   });
 });

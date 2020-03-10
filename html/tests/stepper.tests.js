@@ -1,22 +1,17 @@
 /* global document window beforeEach afterEach describe it */
-import sinon from 'sinon';
-import { expect } from 'chai';
 import
   createElementFromString
   from '../tests/_createElementFromString';
 
-const proxyquire = require('proxyquire');
-
-const carouselStub = sinon.stub(() => ({
+const mockCarouselStub = sinon.stub(() => ({
   slideTo: () => {},
 }));
 
-const { stepper, positionSlider, resetSlider } = proxyquire(
-  '../components/stepper',
-  {
-    '../components/carousel': { carousel: carouselStub },
-  },
-);
+jest.mock('../components/carousel', () => ({
+  carousel: mockCarouselStub
+}));
+
+const { stepper, positionSlider, resetSlider } = require('../components/stepper');
 
 describe('stepper init', () => {
   afterEach(() => {
@@ -26,9 +21,7 @@ describe('stepper init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     stepper();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql(
-      '[data-sprk-stepper="container"]',
-    );
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-stepper="container"]');
   });
 });
 
@@ -108,117 +101,85 @@ describe('steps UI Events tests, (no descriptions)', () => {
     const sliderEl = stepperContainer.querySelectorAll(
       '.sprk-c-Stepper__slider',
     )[0];
-    expect(sliderEl).eql(undefined);
+    expect(sliderEl).toEqual(undefined);
   });
 
   it('should select step when clicked', () => {
     stepper(stepperContainer);
     const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     step1.click();
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus next step when right arrow pressed', () => {
     stepper(stepperContainer);
     const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 39;
     step3.dispatchEvent(event);
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus next step when down arrow pressed', () => {
     stepper(stepperContainer);
     const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 40;
     step3.dispatchEvent(event);
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus last step when end key pressed', () => {
     stepper(stepperContainer);
     const step3 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[2];
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 35;
     step3.dispatchEvent(event);
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus next step when left arrow pressed', () => {
     stepper(stepperContainer);
     const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 37;
     step1.dispatchEvent(event);
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus next step when up arrow pressed', () => {
     stepper(stepperContainer);
     const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 38;
     step1.dispatchEvent(event);
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus first step when home key pressed', () => {
     stepper(stepperContainer);
     const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 36;
     step1.dispatchEvent(event);
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should do nothing when other key pressed', () => {
     stepper(stepperContainer);
     const step2 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[1];
-    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
     const event = new window.Event('keydown');
     event.keyCode = 8;
     step2.dispatchEvent(event);
-    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 });
 
@@ -433,7 +394,7 @@ describe('steps UI Events tests, (descriptions)', () => {
     const sliderEl = stepperContainer.querySelectorAll(
       '.sprk-c-Stepper__slider',
     )[0];
-    expect(sliderEl).not.eql(undefined);
+    expect(sliderEl).not.toEqual(undefined);
   });
 
   it(
@@ -447,7 +408,7 @@ describe('steps UI Events tests, (descriptions)', () => {
       const event = new window.Event('resize');
       sliderEl.style.top = '25px';
       window.dispatchEvent(event);
-      expect(sliderEl.style.top).eql('25px');
+      expect(sliderEl.style.top).toBe('25px');
     },
   );
 
@@ -461,7 +422,7 @@ describe('steps UI Events tests, (descriptions)', () => {
       )[0];
       sliderEl.style.top = '25px';
       window.resizeTo(2000, 1000);
-      expect(sliderEl.style.top).eql('0px');
+      expect(sliderEl.style.top).toBe('0px');
     },
   );
 
@@ -474,9 +435,7 @@ describe('steps UI Events tests, (descriptions)', () => {
     event.detail = { index: 0 };
     carouselContainer.dispatchEvent(event);
     const step1 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[0];
-    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step1.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should set active slide to index from sprk.carousel.slide', () => {
@@ -490,23 +449,17 @@ describe('steps UI Events tests, (descriptions)', () => {
     const event = new window.Event('sprk.carousel.slide');
     event.detail = { index: 2 };
     carouselContainer.dispatchEvent(event);
-    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step3.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 
   it('should focus next step when right arrow pressed', () => {
     stepper(stepperContainer);
     const step2 = stepperContainer.querySelectorAll('.sprk-c-Stepper__step')[1];
-    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      false,
-    );
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).toBe(false);
     const event = new window.Event('keydown');
     event.keyCode = 39;
     step2.dispatchEvent(event);
-    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).eql(
-      true,
-    );
+    expect(step2.classList.contains('sprk-c-Stepper__step--selected')).toBe(true);
   });
 });
 
@@ -533,7 +486,7 @@ describe('slider position tests', () => {
       </li>
     `);
     resetSlider([step], slider, 'test');
-    expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).eql(0);
+    expect(step.querySelectorAll('.sprk-u-Visibility--hidden').length).toBe(0);
   });
 
   it('should not error if content (description) is not present', () => {
@@ -558,6 +511,6 @@ describe('slider position tests', () => {
       </li>
     `);
     positionSlider(step, undefined, slider);
-    expect(step.getAttribute('aria-selected')).eql('true');
+    expect(step.getAttribute('aria-selected')).toBe('true');
   });
 });

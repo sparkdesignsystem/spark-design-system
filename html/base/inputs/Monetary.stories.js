@@ -20,7 +20,7 @@ which you may need to remove before submitting the form.
     with \`sprk-b-ErrorContainer\` class)
   - Reformatting to monetary pattern (##.##) - On
   blur, it should reformat to add commas and
-  decimals to the hundredth place. 
+  decimals to the hundredth place.
     `,
     docs: { iframeHeight: 140 },
   },
@@ -65,6 +65,9 @@ export const monetaryInput = () => `
 
 monetaryInput.story = {
   name: 'Default',
+  parameters: {
+    jest: ['monetaryInput'],
+  },
 };
 
 export const invalidMonetaryInput = () => `

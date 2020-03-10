@@ -71,6 +71,9 @@ export const defaultStory = () => `
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['highlight-board'],
+  }
 };
 
 export const noImage = () => `
@@ -120,6 +123,7 @@ noImage.story = {
   name: 'No Image',
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: ['highlight-board'],
   },
 };
 
@@ -174,4 +178,7 @@ export const stacked = () => `
 
 stacked.story = {
   name: 'Stacked',
+  parameters: {
+    jest: ['highlight-board'],
+  },
 };

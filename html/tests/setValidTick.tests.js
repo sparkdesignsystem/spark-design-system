@@ -1,5 +1,4 @@
 /* global document describe beforeEach it */
-import { expect } from 'chai';
 import setValidTick from '../utilities/validation/setValidTick';
 
 describe('setValidTick tests', () => {
@@ -39,11 +38,11 @@ describe('setValidTick tests', () => {
   it('should empty the error container', () => {
     inputContainer.appendChild(errorContainer);
     setValidTick(inputContainer);
-    expect(errorContainer.textContent).eql('');
+    expect(errorContainer.textContent).toBe('');
   });
 
   it('should not error if there is no error container', () => {
     setValidTick(inputContainer);
-    expect(inputContainer.querySelector('.sprk-b-ErrorContainer')).eql(null);
+    expect(inputContainer.querySelector('.sprk-b-ErrorContainer')).toBe(null);
   });
 });

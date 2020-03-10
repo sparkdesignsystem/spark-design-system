@@ -1,5 +1,4 @@
 /* global document describe beforeEach it */
-import { expect } from 'chai';
 import setInvalidSelect from '../utilities/validation/setInvalidSelect';
 
 describe('setInvalidSelect tests', () => {
@@ -31,12 +30,12 @@ describe('setInvalidSelect tests', () => {
     inputContainer.appendChild(errorContainer);
     const error = 'This is an error message';
     setInvalidSelect(inputContainer, error);
-    expect(errorContainer.textContent).eql(error);
+    expect(errorContainer.textContent).toEqual(error);
   });
 
   it('should not error if there is no errorContainer', () => {
     setInvalidSelect(inputContainer, 'oops.');
-    expect(select.getAttribute('aria-invalid')).eql('true');
+    expect(select.getAttribute('aria-invalid')).toBe('true');
   });
 
   it('should support overriding the error message', () => {
@@ -45,6 +44,6 @@ describe('setInvalidSelect tests', () => {
     const newError = 'This is my custom error.';
     inputContainer.setAttribute('data-sprk-input-invalid-content', newError);
     setInvalidSelect(inputContainer, defaultError);
-    expect(errorContainer.textContent).eql(newError);
+    expect(errorContainer.textContent).toEqual(newError);
   });
 });

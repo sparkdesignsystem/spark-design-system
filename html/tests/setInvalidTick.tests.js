@@ -1,5 +1,4 @@
-/* global document describe before it */
-import { expect } from 'chai';
+/* global document describe beforeEach it */
 import setInvalidTick from '../utilities/validation/setInvalidTick';
 
 describe('setInvalidTick tests', () => {
@@ -10,7 +9,7 @@ describe('setInvalidTick tests', () => {
   let radio2;
   let errorContainer;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required', 'tick');
     errorContainer = document.createElement('span');
@@ -39,13 +38,13 @@ describe('setInvalidTick tests', () => {
   it('should set the errorContainer text', () => {
     const error = 'This is an error message';
     setInvalidTick(inputContainer, error);
-    expect(errorContainer.textContent).eql(error);
+    expect(errorContainer.textContent).toEqual(error);
   });
   it('should support overriding the error message', () => {
     const defaultError = 'This is an error message';
     const newError = 'This is my custom error.';
     inputContainer.setAttribute('data-sprk-input-invalid-content', newError);
     setInvalidTick(inputContainer, defaultError);
-    expect(errorContainer.textContent).eql(newError);
+    expect(errorContainer.textContent).toEqual(newError);
   });
 });

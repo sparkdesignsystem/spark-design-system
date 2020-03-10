@@ -1,6 +1,4 @@
 /* global beforeEach afterEach window document describe it */
-import sinon from 'sinon';
-import { expect } from 'chai';
 import { phoneInput, formatPhone, bindUIEvents } from '../base/inputs/phoneInput';
 
 describe('phoneInput init', () => {
@@ -20,7 +18,7 @@ describe('phoneInput init', () => {
     sinon.spy(document, 'querySelectorAll');
     phoneInput();
     expect(document.querySelectorAll
-      .getCall(0).args[0]).eql('[data-sprk-input="phone"]');
+      .getCall(0).args[0]).toBe('[data-sprk-input="phone"]');
   });
 });
 
@@ -44,19 +42,19 @@ describe('formatPhone tests', () => {
   it('should format the Phone in the (XXX) XXX-XXXX style', () => {
     const div = document.createElement('input');
     div.value = '1234567890';
-    expect(formatPhone(div.value)).eql('(123) 456-7890');
+    expect(formatPhone(div.value)).toBe('(123) 456-7890');
   });
 
   it('should return null on invalid input', () => {
     const div = document.createElement('input');
     div.value = 'asdf';
-    expect(formatPhone(div.value)).eql(null);
+    expect(formatPhone(div.value)).toBe(null);
   });
 
   it('should bind the input event', () => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(element);
-    expect(field.addEventListener.getCall(0).args[0]).eql('input');
+    expect(field.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
   it('should validate and format when input is triggered with valid'
@@ -64,8 +62,8 @@ describe('formatPhone tests', () => {
     bindUIEvents(element);
     event = new window.Event('input');
     field.dispatchEvent(event);
-    expect(field.getAttribute('aria-invalid')).eql('false');
-    expect(field.value).eql('(313) 373-3000');
+    expect(field.getAttribute('aria-invalid')).toBe('false');
+    expect(field.value).toBe('(313) 373-3000');
   });
 
   it('should do nothing when input is triggered with invalid input', () => {
@@ -73,14 +71,14 @@ describe('formatPhone tests', () => {
     field.value = 'asdf';
     event = new window.Event('input');
     field.dispatchEvent(event);
-    expect(field.getAttribute('aria-invalid')).eql('true');
-    expect(field.value).eql('asdf');
+    expect(field.getAttribute('aria-invalid')).toBe('true');
+    expect(field.value).toBe('asdf');
   });
 
   it('should bind the blur event', () => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(element);
-    expect(field.addEventListener.getCall(1).args[0]).eql('blur');
+    expect(field.addEventListener.getCall(1).args[0]).toBe('blur');
   });
 
   it('should validate and format when blur is triggered', (done) => {
@@ -88,9 +86,9 @@ describe('formatPhone tests', () => {
     field.value = '3133733000';
     event = new window.Event('blur');
     field.dispatchEvent(event);
-    expect(field.getAttribute('aria-invalid')).eql('false');
+    expect(field.getAttribute('aria-invalid')).toBe('false');
     done();
-    expect(field.value).eql('(313) 373-3000');
+    expect(field.value).toBe('(313) 373-3000');
   });
 
   it('should do nothing when blur is triggered with invalid input', () => {
@@ -98,7 +96,7 @@ describe('formatPhone tests', () => {
     field.value = 'asdf';
     event = new window.Event('blur');
     field.dispatchEvent(event);
-    expect(field.getAttribute('aria-invalid')).eql('true');
-    expect(field.value).eql('asdf');
+    expect(field.getAttribute('aria-invalid')).toBe('true');
+    expect(field.value).toBe('asdf');
   });
 });
