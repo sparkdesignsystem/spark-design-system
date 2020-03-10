@@ -5,7 +5,7 @@ function H1(props) {
   const id = children.toString().replace(/\s+/g, '-').toLowerCase();
   return (
     <h1
-      className="docs-b-h1 sprk-b-PageTitle sprk-b-TypeDisplayOne sprk-u-mbh sprk-u-Measure"
+      className="docs-b-h1 sprk-b-PageTitle sprk-b-TypeDisplayOne sprk-u-mbh sprk-u-Measure docs-b-Link--anchor"
       id={id}
       {...props}
     >
