@@ -26,6 +26,12 @@ import { Router } from '@angular/router';
     </a>
   `
 })
+/**
+ * @deprecate This component will be removed in
+ * a future release in favor of the `sprkLink` directive.
+ * Please use the Spark Link
+ * directive.
+ */
 export class SprkLinkComponent implements OnInit {
   /**
    * @ignore
