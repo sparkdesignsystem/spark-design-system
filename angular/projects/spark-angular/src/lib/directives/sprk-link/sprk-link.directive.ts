@@ -29,10 +29,9 @@ export class SprkLinkDirective {
 
   @HostBinding('class.sprk-b-Link--simple')
   get simple() {
-    return this.variant === 'simple';
+    return this.variant === 'simple' || this.variant === 'icon';
   }
 
-  @HostBinding('class.sprk-b-Link-simple')
   @HostBinding('class.sprk-b-Link--has-icon')
   get icon() {
     return this.variant === 'icon';

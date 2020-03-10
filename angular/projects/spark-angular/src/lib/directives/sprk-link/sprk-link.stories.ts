@@ -5,7 +5,7 @@ import { SprkLinkDirectiveModule } from './sprk-link.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
-  title: 'Components/Link Directive',
+  title: 'Components/Link',
   component: SprkLinkDirective,
   decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
   parameters: {
