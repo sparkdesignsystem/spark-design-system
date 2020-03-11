@@ -5,7 +5,7 @@ const H4 = (props) => {
   const id = children.toString().replace(/\s+/g, '-').toLowerCase();
   return (
     <>
-      <a id={id} className="docs-b-Link--anchor" />
+      <span id={id} className="docs-b-Link--anchor" />
       <h4
         className="
           docs-b-h4
