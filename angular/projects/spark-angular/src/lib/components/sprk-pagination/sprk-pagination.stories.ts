@@ -1,7 +1,5 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkPaginationModule } from './sprk-pagination.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -31,12 +29,7 @@ goForward events include this value in a property called
 const modules = {
   imports: [
     SprkPaginationModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkPaginationComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
