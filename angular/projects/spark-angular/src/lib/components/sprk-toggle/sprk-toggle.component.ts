@@ -8,14 +8,18 @@ import { toggleAnimations } from './sprk-toggle-animations';
       class="sprk-u-Overflow--hidden {{ additionalClasses }}"
       [attr.data-id]="idString"
     >
-      <sprk-link
-        linkType="simple"
-        additionalClasses="{{
-          titleFontClass
-        }} sprk-b-Link--has-icon sprk-u-TextCrop--none"
+      <a
+        sprkLink
+        variant="simple"
+        [ngClass]="{
+          titleFontClass: true,
+          'sprk-b-Link--has-icon': true,
+          'sprk-u-TextCrop--none': true
+        }"
         (click)="toggle($event)"
-        [ariaExpanded]="isOpen ? 'true' : 'false'"
+        [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [analyticsString]="analyticsString"
+        href="#"
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
@@ -24,7 +28,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
           }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
-      </sprk-link>
+        </a>
 
       <div [@toggleContent]="animState">
         <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
