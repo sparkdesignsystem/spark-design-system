@@ -74,7 +74,7 @@ export const searchInput = () => ({
       <input
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
-        type="text"
+        type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
@@ -114,7 +114,7 @@ export const invalidSearchInput = () => ({
       <input
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
-        type="text"
+        type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
@@ -163,7 +163,7 @@ export const disabledSearchInput = () => ({
       <input
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
-        type="text"
+        type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
