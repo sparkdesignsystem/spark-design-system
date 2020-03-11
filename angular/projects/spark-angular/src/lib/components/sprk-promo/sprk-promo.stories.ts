@@ -39,7 +39,7 @@ export const defaultStory = () => ({
       title="Title"
       subtitle="Subtitle"
       cta="button"
-      ctaLinkHref="foo"
+      buttonHref="#"
       ctaText="Learn More"
       hasBorder="true"
       idString="promo-1"
@@ -67,6 +67,7 @@ export const flag = () => ({
       isFlag="true"
       imgSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
       imgAlt="Spark Design System Logo"
+      imgHref="#"
       idString="promo-2"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
@@ -96,6 +97,7 @@ export const withImage = () => ({
       imgSrc="https://spark-assets.netlify.com/house.jpg"
       cta="button"
       ctaText="Learn More"
+      buttonHref="#"
       idString="promo-3"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
@@ -125,6 +127,7 @@ export const withReversedImage = () => ({
       imgHref="https://sparkdesignsystem.com"
       cta="button"
       ctaText="Learn More"
+      buttonHref="#"
       idString="promo-4"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
