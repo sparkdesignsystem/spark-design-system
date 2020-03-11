@@ -1,21 +1,13 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SprkLinkModule } from './sprk-link.module';
-import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
-import { SprkLinkComponent } from './sprk-link.component';
+import { SprkLinkDirective } from './sprk-link.directive';
+import { SprkIconModule } from '../../components/sprk-icon/sprk-icon.module';
+import { SprkLinkDirectiveModule } from './sprk-link.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Link',
-  component: SprkLinkComponent,
-  decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
-  ],
+  component: SprkLinkDirective,
+  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('link')}
@@ -28,64 +20,66 @@ Images that are links should not use Spark classes.
 
 const modules = {
   imports: [
-    SprkLinkModule,
+    SprkLinkDirectiveModule,
     SprkIconModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkLinkComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-link
+    <a
       href="#"
-      idString="link-1"
-      analyticsString="object.action.event"
+      sprkLink
+      idString="default-link"
+      analyticsString="default-link"
     >
       Default Link
-    </sprk-link>
+    </a>
   `,
 });
 
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: ['sprk-link.component'],
-  }
+    jest: [
+      'sprk-link.directive',
+    ],
+  },
 };
 
 export const simple = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-link
-      linkType="simple"
+    <a
       href="#"
-      idString="link-2"
-      analyticsString="object.action.event"
+      sprkLink
+      variant="simple"
+      idString="simple-link"
+      analyticsString="simple-link"
     >
       Simple Link
-    </sprk-link>
+    </a>
   `,
 });
 
 simple.story = {
   parameters: {
-    jest: ['sprk-link.component'],
-  }
+    jest: [
+      'sprk-link.directive',
+    ],
+  },
 };
 
 export const iconWithTextLink = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-link
-      linkType="icon"
+    <a
       href="#"
-      idString="link-3"
-      analyticsString="object.action.event"
+      sprkLink
+      variant="icon"
+      idString="icon-link"
+      analyticsString="icon-link"
     >
       <sprk-icon
         iconType="communication"
@@ -93,31 +87,36 @@ export const iconWithTextLink = () => ({
       >
       </sprk-icon>
       Message Us
-    </sprk-link>
+    </a>
   `,
 });
 
 iconWithTextLink.story = {
   parameters: {
-    jest: ['sprk-link.component'],
-  }
+    jest: [
+      'sprk-link.directive',
+    ],
+  },
 };
 
 export const disabled = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-link
+    <a
+      href="#"
+      sprkLink
       isDisabled="true"
-      idString="link-4"
-      analyticsString="object.action.event"
+      idString="disabled-link"
+      analyticsString="disabled-link"
     >
       Disabled Link
-    </sprk-link>
+    </a>
   `,
 });
 
 disabled.story = {
   parameters: {
-    jest: ['sprk-link.component'],
+    jest: ['sprk-link.directive'],
   }
 };
+
