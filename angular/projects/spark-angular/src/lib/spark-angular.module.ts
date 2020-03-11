@@ -59,6 +59,7 @@ import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk
 import { SprkBoxModule } from './directives/sprk-box/sprk-box.module';
 import { SprkTextModule } from './directives/sprk-text/sprk-text.module';
 import { SprkHeadingModule } from './directives/sprk-heading/sprk-heading.module';
+import { SprkLinkDirectiveModule } from './directives/sprk-link/sprk-link.module';
 
 @NgModule({
   exports: [
@@ -112,7 +113,8 @@ import { SprkHeadingModule } from './directives/sprk-heading/sprk-heading.module
     SprkTabbedNavigationModule,
     SprkBoxModule,
     SprkTextModule,
-    SprkHeadingModule
+    SprkHeadingModule,
+    SprkLinkDirectiveModule
   ]
 })
 export class SparkAngularModule {}
