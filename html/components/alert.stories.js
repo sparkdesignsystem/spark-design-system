@@ -48,6 +48,12 @@ export const info = () => {
   `;
 };
 
+info.story = {
+  parameters: {
+    jest: ['alerts'],
+  },
+};
+
 export const success = () => {
   useEffect(() => {
     alerts();
@@ -81,7 +87,13 @@ export const success = () => {
       </button>
     </div>
   `
-}
+};
+
+success.story = {
+  parameters: {
+    jest: ['alerts'],
+  },
+};
 
 export const fail = () => {
   useEffect(() => {
@@ -114,7 +126,13 @@ export const fail = () => {
       </button>
     </div>
   `
-}
+};
+
+fail.story = {
+  parameters: {
+    jest: ['alerts'],
+  },
+};
 
 export const noDismissButton = () => {
   useEffect(() => {
@@ -143,4 +161,10 @@ export const noDismissButton = () => {
       </div>
     </div>
   `
-}
+};
+
+noDismissButton.story = {
+  parameters: {
+    jest: ['alerts'],
+  },
+};

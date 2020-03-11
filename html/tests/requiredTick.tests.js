@@ -1,6 +1,4 @@
-/* global window document describe before beforeEach it afterEach */
-import sinon from 'sinon';
-import { expect } from 'chai';
+/* global window document describe beforeEach it afterEach */
 import { requiredTick, runValidation, bindUIEvents } from '../base/inputs/requiredTick';
 
 describe('requiredTick init', () => {
@@ -13,7 +11,7 @@ describe('requiredTick init', () => {
     requiredTick();
     expect(document
       .querySelectorAll
-      .getCall(0).args[0]).eql('[data-sprk-required-only="tick"]');
+      .getCall(0).args[0]).toBe('[data-sprk-required-only="tick"]');
   });
 });
 
@@ -24,7 +22,7 @@ describe('requiredTick runValidation tests', () => {
   let selectionContainer2;
   let radio2;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required-only', 'tick');
     const errorContainer = document.createElement('span');
@@ -52,12 +50,12 @@ describe('requiredTick runValidation tests', () => {
 
   it('should return true if the validation passes', () => {
     radio1.checked = true;
-    expect(runValidation(inputContainer)).eql(true);
+    expect(runValidation(inputContainer)).toBe(true);
   });
 
   it('should return false if the validation fails', () => {
     radio1.checked = false;
-    expect(runValidation(inputContainer)).eql(false);
+    expect(runValidation(inputContainer)).toBe(false);
   });
 });
 
@@ -105,26 +103,26 @@ describe('requiredTextInput UI Events tests', () => {
   });
 
   it('should bind the change event', () => {
-    expect(inputContainer.addEventListener.getCall(0).args[0]).eql('change');
+    expect(inputContainer.addEventListener.getCall(0).args[0]).toBe('change');
   });
 
   it('should mark error when change is triggered with no selected'
     + ' inputs', () => {
     event = new window.Event('change');
     inputContainer.dispatchEvent(event);
-    expect(errorContainer.textContent).eql('This field is required.');
+    expect(errorContainer.textContent).toBe('This field is required.');
   });
 
   it('should run validation on focusout', () => {
     event = new window.Event('focusout');
     inputContainer.dispatchEvent(event);
-    expect(errorContainer.textContent).eql('This field is required.');
+    expect(errorContainer.textContent).toBe('This field is required.');
   });
 
   it('should mark valid when input is triggered with a value', () => {
     radio1.checked = true;
     event = new window.Event('change');
     inputContainer.dispatchEvent(event);
-    expect(errorContainer.textContent).eql('');
+    expect(errorContainer.textContent).toBe('');
   });
 });

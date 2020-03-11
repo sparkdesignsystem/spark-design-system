@@ -22,7 +22,7 @@ functionality, see guidelines in the
     \`area-describedby=”[id-of-error-container]”\` on
     \`input\` element.
     - Hide the error container (div with \`sprk-b-ErrorContainer\` class)
-  - Reformatting to phone number pattern (###) ###-#### - 
+  - Reformatting to phone number pattern (###) ###-#### -
   After valid input, it should reformat to add commas
   and decimals to the hundredth place.
 `,
@@ -59,6 +59,9 @@ export const phoneInput = () => `
 
 phoneInput.story = {
   name: 'Default',
+  parameters: {
+    jest: ['phoneInput'],
+  },
 };
 
 export const invalidPhoneInput = () => `
@@ -101,6 +104,9 @@ export const invalidPhoneInput = () => `
 
 invalidPhoneInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['phoneInput'],
+  },
 };
 
 export const disabledPhoneInput = () => `
@@ -133,4 +139,7 @@ export const disabledPhoneInput = () => `
 
 disabledPhoneInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['phoneInput'],
+  },
 };

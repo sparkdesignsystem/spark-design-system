@@ -1,5 +1,4 @@
-/* global document describe before it */
-import { expect } from 'chai';
+/* global document describe beforeEach it */
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 import setValidTextInput from '../utilities/validation/setValidTextInput';
 
@@ -9,7 +8,7 @@ describe('setValidTextInput tests', () => {
   let errorText;
   let errorContainer;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     errorContainer = document.createElement('div');
     errorContainer.classList.add('sprk-b-ErrorContainer');
@@ -24,15 +23,15 @@ describe('setValidTextInput tests', () => {
 
   it('should remove the error class from the input element', () => {
     setValidTextInput(inputContainer);
-    expect(input.classList.contains('sprk-b-TextInput--error')).eql(false);
+    expect(input.classList.contains('sprk-b-TextInput--error')).toBe(false);
   });
   it('should add the correct aria classes to the input', () => {
     setValidTextInput(inputContainer);
-    expect(input.getAttribute('aria-invalid')).eql('false');
+    expect(input.getAttribute('aria-invalid')).toBe('false');
   });
 
   it('should set the errorContainer text', () => {
     setValidTextInput(inputContainer);
-    expect(errorText.textContent).eql('');
+    expect(errorText.textContent).toBe('');
   });
 });

@@ -1,6 +1,4 @@
 /* global describe it beforeEach document */
-import { expect } from 'chai';
-import sinon from 'sinon';
 import runValidation from '../utilities/validation/validation-runner';
 
 describe('validation runner', () => {
@@ -18,7 +16,7 @@ describe('validation runner', () => {
 
   it('should call the valid function if the field is valid.', () => {
     runValidation(element, field, validFunction, inValidFunction);
-    expect(validFunction.calledOnce).eql(true);
+    expect(validFunction.calledOnce).toBe(true);
   });
 
   it('should call the inValid function if the field is empty but'
@@ -27,13 +25,13 @@ describe('validation runner', () => {
     field.setAttribute('required', null);
     field.value = '';
     runValidation(element, field, validFunction, inValidFunction);
-    expect(inValidFunction.calledOnce).eql(true);
+    expect(inValidFunction.calledOnce).toBe(true);
   });
 
   it('should call the inValid function if the field is invalid.', () => {
     field.setAttribute('pattern', '(abc)?');
     field.value = '123';
     runValidation(element, field, validFunction, inValidFunction);
-    expect(inValidFunction.called).eql(true);
+    expect(inValidFunction.called).toBe(true);
   });
 });

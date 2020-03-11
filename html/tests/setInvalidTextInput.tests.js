@@ -1,5 +1,4 @@
-/* global document describe before it */
-import { expect } from 'chai';
+/* global document describe beforeEach it */
 import setInvalidTextInput from '../utilities/validation/setInvalidTextInput';
 
 describe('setInvalidTextInput tests', () => {
@@ -8,7 +7,7 @@ describe('setInvalidTextInput tests', () => {
   let input;
   let errorText;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     errorContainer = document.createElement('div');
     errorContainer.classList.add('sprk-b-ErrorContainer');
@@ -22,19 +21,19 @@ describe('setInvalidTextInput tests', () => {
 
   it('should add the error class to the input element', () => {
     setInvalidTextInput(inputContainer, 'This is an error message.');
-    expect(input.classList.contains('sprk-b-TextInput--error')).eql(true);
+    expect(input.classList.contains('sprk-b-TextInput--error')).toBe(true);
   });
 
   it('should add the correct aria classes to the input', () => {
     setInvalidTextInput(inputContainer, 'This is an error message.');
-    expect(input.getAttribute('aria-invalid')).eql('true');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
   });
 
   it('should set the errorText text', () => {
     const error = 'This is an error message';
     setInvalidTextInput(inputContainer, error);
     errorText = inputContainer.querySelector('.sprk-b-ErrorText');
-    expect(errorText.textContent).eql(error);
+    expect(errorText.textContent).toEqual(error);
   });
 
   it('should support overriding the error message', () => {
@@ -43,6 +42,6 @@ describe('setInvalidTextInput tests', () => {
     inputContainer.setAttribute('data-sprk-input-invalid-content', newError);
     setInvalidTextInput(inputContainer, defaultError);
     errorText = inputContainer.querySelector('.sprk-b-ErrorText');
-    expect(errorText.textContent).eql(newError);
+    expect(errorText.textContent).toEqual(newError);
   });
 });

@@ -70,6 +70,9 @@ export const passwordInput = () => `
 
 passwordInput.story = {
   name: 'Default',
+  parameters: {
+    jest: ['passwordInput'],
+  },
 };
 
 export const invalidPasswordInput = () => `

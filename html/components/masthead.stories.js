@@ -409,6 +409,9 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['masthead'],
+  },
 };
 
 export const extended = () => {
@@ -1342,5 +1345,6 @@ export const extended = () => {
 extended.story = {
   parameters: {
     docs: { iframeHeight: 450 },
+    jest: ['masthead'],
   },
 }

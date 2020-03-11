@@ -1,6 +1,4 @@
 /* global document describe beforeEach afterEach it  window  */
-import { expect } from 'chai';
-import sinon from 'sinon';
 import { dismissAlert, alerts, bindUIEvents } from '../components/alerts';
 
 describe('Alert tests', () => {
@@ -28,30 +26,30 @@ describe('Alert tests', () => {
 
   it('should hide alert', () => {
     dismissAlert(container);
-    expect(container.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(container.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it('should call getElements once with the correct selector', () => {
     alerts();
-    expect(document.querySelectorAll.getCall(0).args[0]).eql('[data-sprk-alert="container"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-alert="container"]');
   });
 
   it('should bind the click event if a dismiss button is present', () => {
     bindUIEvents(container);
-    expect(dismissElement.addEventListener.getCall(0).args[0]).eql('click');
+    expect(dismissElement.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
   it('should hide alert when clicked', () => {
     bindUIEvents(container);
     event = new window.Event('click');
     dismissElement.dispatchEvent(event);
-    expect(container.classList.contains('sprk-u-Display--none')).eql(true);
+    expect(container.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it('should not hide alert on click if no dismiss button found', () => {
     bindUIEvents(containerNoDismiss);
     event = new window.Event('click');
     dismissElement.dispatchEvent(event);
-    expect(container.classList.contains('sprk-u-Display--none')).eql(false);
+    expect(container.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 });

@@ -1,6 +1,4 @@
-/* global window document describe before beforeEach afterEach it */
-import sinon from 'sinon';
-import { expect } from 'chai';
+/* global window document describe beforeEach afterEach it */
 import {
   requiredTextInput,
   runValidation,
@@ -16,7 +14,7 @@ describe('requiredTextInput init', () => {
     sinon.spy(document, 'querySelectorAll');
     requiredTextInput();
     expect(document.querySelectorAll
-      .getCall(0).args[0]).eql('[data-sprk-required-only="text"]');
+      .getCall(0).args[0]).toBe('[data-sprk-required-only="text"]');
   });
 });
 
@@ -24,7 +22,7 @@ describe('required runValidation tests', () => {
   let inputContainer;
   let input;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     inputContainer.setAttribute('data-sprk-required-only', 'text');
     const errorContainer = document.createElement('span');
@@ -37,12 +35,12 @@ describe('required runValidation tests', () => {
 
   it('should return true if the validation passes', () => {
     input.value = 'anything';
-    expect(runValidation(inputContainer)).eql(true);
+    expect(runValidation(inputContainer)).toBe(true);
   });
 
   it('should return false if the validation fails', () => {
     input.value = '';
-    expect(runValidation(inputContainer)).eql(false);
+    expect(runValidation(inputContainer)).toBe(false);
   });
 });
 
@@ -75,40 +73,40 @@ describe('requiredTextInput UI Events tests', () => {
   });
 
   it('should bind the input event', () => {
-    expect(input.addEventListener.getCall(0).args[0]).eql('input');
+    expect(input.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
   it('should mark error when input is triggered with no value', () => {
     input.value = '';
     event = new window.Event('input');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('true');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
   });
 
   it('should mark valid when input is triggered with a value', () => {
     input.value = 'asdf';
     event = new window.Event('input');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('false');
-    expect(input.value).eql('asdf');
+    expect(input.getAttribute('aria-invalid')).toBe('false');
+    expect(input.value).toBe('asdf');
   });
 
   it('should bind the blur event', () => {
-    expect(input.addEventListener.getCall(1).args[0]).eql('blur');
+    expect(input.addEventListener.getCall(1).args[0]).toBe('blur');
   });
 
   it('should mark error when blur is triggered with no value', () => {
     input.value = '';
     event = new window.Event('blur');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('true');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
   });
 
   it('should mark valid when blur is triggered with a value', () => {
     input.value = 'asdf';
     event = new window.Event('blur');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('false');
-    expect(input.value).eql('asdf');
+    expect(input.getAttribute('aria-invalid')).toBe('false');
+    expect(input.value).toBe('asdf');
   });
 });
