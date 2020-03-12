@@ -16,6 +16,7 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
           class="sprk-c-MastheadAccordion__summary"
           [analyticsString]="analyticsString"
           [idString]="idString"
+          href="#"
           (click)="toggleAccordion($event)"
         >
           <span [ngClass]="getHeadingClasses()">
