@@ -19,6 +19,7 @@ export default {
 
 export const searchInput = () => (
   <SprkTextInput
+    type="search"
     leadingIcon="search"
     hiddenLabel
     name="InlineSearch"
@@ -37,6 +38,7 @@ searchInput.story = {
 
 export const invalidSearchInput = () => (
   <SprkTextInput
+    type="search"
     leadingIcon="search"
     hiddenLabel
     name="InlineSearch"
@@ -57,6 +59,7 @@ invalidSearchInput.story = {
 
 export const disabledSearchInput = () => (
   <SprkTextInput
+    type="search"
     leadingIcon="search"
     hiddenLabel
     name="InlineSearch"
