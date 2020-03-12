@@ -24,7 +24,7 @@ const modules = {
   ],
 };
 
-export const defaultCenteredColumn = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <div sprkCenteredColumn>
@@ -32,7 +32,7 @@ export const defaultCenteredColumn = () => ({
   `,
 });
 
-defaultCenteredColumn.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [

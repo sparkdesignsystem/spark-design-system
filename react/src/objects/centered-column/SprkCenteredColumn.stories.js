@@ -20,10 +20,10 @@ a maximum width.
   }
 };
 
-export const defaultCenteredColumn = () => (
+export const defaultStory = () => (
   <SprkCenteredColumn></SprkCenteredColumn>
 );
 
-defaultCenteredColumn.story = {
+defaultStory.story = {
   name: 'Default',
 };
