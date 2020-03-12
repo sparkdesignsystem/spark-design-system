@@ -10,7 +10,7 @@ import {
 @Directive({
   selector: '[sprkLink]'
 })
-export class SprkLinkDirective implements OnInit{
+export class SprkLinkDirective implements OnInit {
   /**
    * @ignore
    */
