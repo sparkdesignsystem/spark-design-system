@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding } from '@angular/core';
+import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[sprkCenteredColumn]'
@@ -8,7 +8,13 @@ export class SprkCenteredColumnDirective {
   @HostBinding('class.sprk-o-CenteredColumn') true;
 
   /**
-   * @ignore
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
    */
-  constructor(public ref: ElementRef) {}
+  @HostBinding('attr.data-id')
+  @Input() idString: string;
 }

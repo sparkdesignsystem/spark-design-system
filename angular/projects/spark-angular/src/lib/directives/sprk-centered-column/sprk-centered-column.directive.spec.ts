@@ -1,5 +1,3 @@
-
-
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkCenteredColumnDirective } from './sprk-centered-column.directive';

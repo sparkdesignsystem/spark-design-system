@@ -21,7 +21,7 @@ a maximum width.
 };
 
 export const defaultStory = () => (
-  <SprkCenteredColumn></SprkCenteredColumn>
+  <SprkCenteredColumn idString="foo"></SprkCenteredColumn>
 );
 
 defaultStory.story = {
