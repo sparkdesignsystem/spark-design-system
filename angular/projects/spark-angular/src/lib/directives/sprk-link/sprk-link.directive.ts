@@ -1,17 +1,20 @@
 import {
   Directive,
   Input,
-  HostBinding
+  HostBinding,
+  Renderer2,
+  ElementRef,
+  OnInit
 } from '@angular/core';
 
 @Directive({
   selector: '[sprkLink]'
 })
-export class SprkLinkDirective {
+export class SprkLinkDirective implements OnInit{
   /**
    * @ignore
    */
-  constructor() { }
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
   /**
    * Will cause the appropriate variant type to render.
    * If omitted, the default Spark Link class is applied.
@@ -22,25 +25,6 @@ export class SprkLinkDirective {
     | 'unstyled'
     | 'plain';
 
-  @HostBinding('class.sprk-b-Link')
-  get link() {
-    return this.variant !== 'unstyled';
-  }
-
-  @HostBinding('class.sprk-b-Link--simple')
-  get simple() {
-    return this.variant === 'simple' || this.variant === 'icon';
-  }
-
-  @HostBinding('class.sprk-b-Link--has-icon')
-  get icon() {
-    return this.variant === 'icon';
-  }
-
-  @HostBinding('class.sprk-b-Link--plain')
-  get plain() {
-    return this.variant === 'plain';
-  }
   /**
    * If `true`, will set disabled styles on the link.
    */
@@ -64,4 +48,20 @@ export class SprkLinkDirective {
    */
   @HostBinding('attr.data-id')
   @Input() idString: string;
+
+  ngOnInit() {
+    if (this.variant !== 'unstyled') {
+      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link');
+    }
+    if (this.variant === 'simple' || this.variant === 'icon') {
+      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--simple');
+    }
+    if (this.variant === 'icon') {
+      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--has-icon');
+    }
+    if (this.variant === 'plain') {
+      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--plain');
+    }
+  }
+
 }

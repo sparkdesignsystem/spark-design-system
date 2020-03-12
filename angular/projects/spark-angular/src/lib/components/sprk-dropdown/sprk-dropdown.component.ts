@@ -17,12 +17,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       }"
     >
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
-        <sprk-link
-          [additionalClasses]="getTriggerClasses()"
+        <a
+          sprkLink
+          [ngClass]="getTriggerClasses()"
           (click)="toggle($event)"
           [idString]="idString"
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
+          href="#"
           [attr.aria-label]="triggerText ? triggerText : (screenReaderText || 'Choose One')"
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
@@ -33,7 +35,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               additionalIconClasses
             }}"
           ></sprk-icon>
-        </sprk-link>
+          </a>
       </div>
 
       <div [ngClass]="getClasses()" *ngIf="isOpen">
@@ -45,12 +47,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             {{ title }}
           </h2>
 
-          <sprk-link
+          <a
+            sprkLink
             *ngIf="selector && !title"
-            linkType="plain"
-            additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+            variant="plain"
+            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             (click)="toggle($event)"
             [attr.aria-label]="title"
+            href="#"
           >
             <span
               class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
@@ -62,7 +66,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 additionalIconClasses
               }}"
             ></sprk-icon>
-          </sprk-link>
+          </a>
         </div>
 
         <ul
@@ -80,31 +84,35 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           >
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
-              <sprk-link
-                linkType="unstyled"
-                [href]="choice.href"
+              <a
+                sprkLink
+                variant="unstyled"
+                [attr.href]="choice.href"
                 [analyticsString]="choice.analyticsString"
-                additionalClasses="sprk-c-Dropdown__link {{
-                  choice.active && 'sprk-c-Dropdown__link--active'
-                }}"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
                 [attr.aria-label]="choice.text"
                 >{{ choice.text }}
-              </sprk-link>
+              </a>
             </ng-template>
             <ng-template #content>
-              <sprk-link
-                linkType="unstyled"
-                [href]="choice.href"
+              <a
+                sprkLink
+                variant="unstyled"
+                [attr.href]="choice.href"
                 [analyticsString]="choice.analyticsString"
-                additionalClasses="sprk-c-Dropdown__link {{
-                  choice.active && 'sprk-c-Dropdown__link--active'
-                }}"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
                 [attr.aria-label]="choice.content.title"
               >
                 <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
                 <p>{{ choice.content.infoLine1 }}</p>
                 <p>{{ choice.content.infoLine2 }}</p>
-              </sprk-link>
+              </a>
             </ng-template>
           </li>
         </ul>

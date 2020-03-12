@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkAwardComponent } from './sprk-award.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
@@ -16,10 +15,10 @@ describe('SprkAwardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, BrowserAnimationsModule],
+      imports: [BrowserAnimationsModule],
       declarations: [
         SprkAwardComponent,
-        SprkLinkComponent,
+        SprkLinkDirective,
         SprkToggleComponent,
         SprkStackComponent,
         SprkStackItemDirective,

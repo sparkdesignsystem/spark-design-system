@@ -10,12 +10,8 @@ import { toggleAnimations } from './sprk-toggle-animations';
     >
       <a
         sprkLink
-        variant="simple"
-        [ngClass]="{
-          titleFontClass: true,
-          'sprk-b-Link--has-icon': true,
-          'sprk-u-TextCrop--none': true
-        }"
+        variant="icon"
+        [ngClass]="getClasses()"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [analyticsString]="analyticsString"
@@ -28,7 +24,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
           }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
-        </a>
+      </a>
 
       <div [@toggleContent]="animState">
         <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
@@ -117,6 +113,17 @@ export class SprkToggleComponent implements OnInit {
     event.preventDefault();
     this.isOpen = !this.isOpen;
     this.toggleState();
+  }
+
+  /**
+   * @ignore
+   */
+  getClasses(): string {
+    const classArray: string[] = [
+      this.titleFontClass,
+      'sprk-u-TextCrop--none',
+    ];
+    return classArray.join(' ');
   }
 
   ngOnInit() {

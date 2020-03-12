@@ -1,8 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -39,10 +37,8 @@ const modules = {
   imports: [
     SprkAccordionModule,
     SprkAccordionItemModule,
-    RouterModule.forRoot([{ path: 'iframe.html', component: SprkAccordionComponent }]),
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({

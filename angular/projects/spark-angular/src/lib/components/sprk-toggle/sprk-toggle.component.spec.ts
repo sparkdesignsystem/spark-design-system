@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkToggleComponent } from './sprk-toggle.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
+import { SprkToggleComponent } from './sprk-toggle.component';
 
 describe('SprkToggleComponent', () => {
   let component: SprkToggleComponent;

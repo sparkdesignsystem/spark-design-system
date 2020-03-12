@@ -5,7 +5,11 @@ import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.mo
 import { SprkPromoComponent } from './sprk-promo.component';
 
 @NgModule({
-  imports: [CommonModule, SprkIconModule, SprkLinkDirectiveModule],
+  imports: [
+    CommonModule,
+    SprkIconModule,
+    SprkLinkDirectiveModule
+  ],
   declarations: [SprkPromoComponent],
   exports: [SprkPromoComponent]
 })
