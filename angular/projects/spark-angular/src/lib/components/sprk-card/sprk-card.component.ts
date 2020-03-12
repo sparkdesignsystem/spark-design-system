@@ -270,7 +270,6 @@ export class SprkCardComponent {
    */
   getClassesCta(): string {
     const ctaClassArray: string[] = [];
-    console.log(this.ctaType, 'cta type')
 
     if (this.ctaType === 'button') {
       ctaClassArray.push('sprk-c-Button');
