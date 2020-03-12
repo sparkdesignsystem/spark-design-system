@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import {
@@ -19,6 +20,7 @@ import {
   imports: [
     CommonModule,
     SprkIconModule,
+    RouterModule,
     SprkMastheadAccordionModule,
     SprkMastheadAccordionItemModule,
     SprkDropdownModule,

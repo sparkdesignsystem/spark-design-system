@@ -1,5 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkMastheadModule } from './sprk-masthead.module';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
@@ -72,8 +74,13 @@ const modules = {
     SprkMastheadModule,
     SprkLinkDirectiveModule,
     SprkDropdownModule,
+    RouterModule.forRoot([{
+      path: 'iframe.html',
+      component: SprkMastheadComponent,
+    }]),
     BrowserAnimationsModule,
   ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
