@@ -39,7 +39,7 @@ export const searchInput = () => `
           "
           id="search-input"
           data-id="search-input"
-          type="text"
+          type="search"
           placeholder="Search"
           aria-describedby="search--error-container"
         >
@@ -82,7 +82,7 @@ export const invalidSearchInput = () => `
           "
           id="search-input"
           data-id="search-input"
-          type="text"
+          type="search"
           placeholder="Search"
           aria-invalid="true"
           aria-describedby="search--error-container"
@@ -139,7 +139,7 @@ export const disabledSearchInput = () => `
           "
           id="search-input"
           data-id="search-input"
-          type="text"
+          type="search"
           placeholder="Search"
           aria-describedby="search--error-container"
           disabled
