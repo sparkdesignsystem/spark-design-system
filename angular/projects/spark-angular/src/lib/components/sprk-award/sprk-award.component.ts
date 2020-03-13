@@ -11,11 +11,12 @@ import { Component, Input } from '@angular/core';
         sprkStackItem
         [attr.data-id]="idString"
         class="
-        sprk-o-Stack__item
-        sprk-b-TypeDisplayFive
-        sprk-b-Measure sprk-b-Measure--narrow
-        sprk-u-TextAlign--center
-        sprk-o-Stack__item--center-column"
+          sprk-o-Stack__item
+          sprk-b-TypeDisplayFive
+          sprk-b-Measure sprk-b-Measure--narrow
+          sprk-u-TextAlign--center
+          sprk-o-Stack__item--center-column
+        "
       >
         {{ title }}
       </h2>
@@ -24,10 +25,11 @@ import { Component, Input } from '@angular/core';
         <div
           [ngClass]="getImgContainerClasses()"
         >
-          <sprk-link
-            linkType="unstyled"
-            additionalClasses="sprk-o-Stack"
-            [href]="imgOneHref"
+          <a
+            sprkLink
+            variant="unstyled"
+            class="sprk-o-Stack"
+            [attr.href]="imgOneHref"
             [analyticsString]="analyticsStringImgOne"
           >
             <img
@@ -35,15 +37,16 @@ import { Component, Input } from '@angular/core';
               alt="{{ imgOneAlt }}"
               src="{{ imgOneSrc }}"
             />
-          </sprk-link>
+          </a>
         </div>
         <div
           [ngClass]="getImgContainerClasses()"
         >
-          <sprk-link
-            linkType="unstyled"
-            additionalClasses="sprk-o-Stack"
-            [href]="imgTwoHref"
+          <a
+            sprkLink
+            variant="unstyled"
+            class="sprk-o-Stack"
+            [attr.href]="imgTwoHref"
             [analyticsString]="analyticsStringImgTwo"
           >
             <img
@@ -51,7 +54,7 @@ import { Component, Input } from '@angular/core';
               alt="{{ imgTwoAlt }}"
               src="{{ imgTwoSrc }}"
             />
-          </sprk-link>
+          </a>
         </div>
       </div>
 

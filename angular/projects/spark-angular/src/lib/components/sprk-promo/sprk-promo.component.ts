@@ -4,11 +4,12 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-promo',
   template: `
     <div [ngClass]="getClasses()" [attr.data-id]="idString">
-      <sprk-link
-        linkType="unstyled"
+      <a
+        sprkLink
+        variant="unstyled"
         *ngIf="isFlag && !mediaRev"
-        [additionalClasses]="getClassesFlag()"
-        [href]="imgHref"
+        [ngClass]="getClassesFlag()"
+        [attr.href]="imgHref"
         [analyticsString]="flagLinkAnalytics"
       >
         <img
@@ -16,20 +17,21 @@ import { Component, Input } from '@angular/core';
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}"
         />
-      </sprk-link>
-      <sprk-link
-        linkType="unstyled"
+      </a>
+      <a
+        sprkLink
+        variant="unstyled"
         *ngIf="imgSrc && !mediaRev && !isFlag"
-        [href]="imgHref"
+        [attr.href]="imgHref"
         [analyticsString]="imgLinkAnalytics"
-        [additionalClasses]="getClassesImg()"
+        [ngClass]="getClassesImg()"
       >
         <img
           class="sprk-c-Promo__image"
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}"
         />
-      </sprk-link>
+      </a>
 
       <div [ngClass]="getClassesContent()">
         <h3
@@ -48,32 +50,35 @@ import { Component, Input } from '@angular/core';
         </div>
 
         <div *ngIf="cta === 'button'" class="sprk-o-Stack__item">
-          <sprk-link
-            linkType="unstyled"
-            [href]="buttonHref"
-            additionalClasses="sprk-c-Button"
+          <a
+            sprkLink
+            variant="unstyled"
+            [attr.href]="buttonHref"
+            class="sprk-c-Button"
             [analyticsString]="buttonLinkAnalytics"
           >
             {{ ctaText }}
-          </sprk-link>
+          </a>
         </div>
 
-        <sprk-link
-          linkType="simple"
+        <a
+          sprkLink
+          variant="simple"
           *ngIf="cta === 'link'"
-          [href]="ctaLinkHref"
-          additionalClasses="sprk-o-Stack__item"
+          [attr.href]="ctaLinkHref"
+          class="sprk-o-Stack__item"
           [analyticsString]="ctaLinkAnalytics"
         >
           {{ ctaText }}
-        </sprk-link>
+        </a>
       </div>
 
-      <sprk-link
-        linkType="unstyled"
+      <a
+        sprkLink
+        variant="unstyled"
         *ngIf="isFlag && mediaRev"
-        [href]="imgHref"
-        [additionalClasses]="getClassesFlag()"
+        [attr.href]="imgHref"
+        [ngClass]="getClassesFlag()"
         [analyticsString]="flagLinkAnalytics"
       >
         <img
@@ -81,21 +86,22 @@ import { Component, Input } from '@angular/core';
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}"
         />
-      </sprk-link>
+      </a>
 
-      <sprk-link
-        linkType="unstyled"
+      <a
+        sprkLink
+        variant="unstyled"
         *ngIf="imgSrc && mediaRev && !isFlag"
-        [href]="imgHref"
+        [attr.href]="imgHref"
         [analyticsString]="imgLinkAnalytics"
-        [additionalClasses]="getClassesImg()"
+        [ngClass]="getClassesImg()"
       >
         <img
           class="sprk-c-Promo__image"
           alt="{{ imgAlt }}"
           src="{{ imgSrc }}"
         />
-      </sprk-link>
+      </a>
     </div>
   `
 })

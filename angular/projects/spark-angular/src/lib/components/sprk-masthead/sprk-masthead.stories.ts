@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadComponent } from './sprk-masthead.component';
-import { SprkLinkModule } from '../sprk-link/sprk-link.module';
+import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
@@ -72,7 +72,7 @@ tools. The attribute \`role=”banner”\` must be present.
 const modules = {
   imports: [
     SprkMastheadModule,
-    SprkLinkModule,
+    SprkLinkDirectiveModule,
     SprkDropdownModule,
     RouterModule.forRoot([{
       path: 'iframe.html',
@@ -188,14 +188,15 @@ export const defaultStory = () => ({
         />
       </svg>
 
-      <sprk-link
+      <a
+        sprkLink
         navItem-slot
-        linkType="plain"
-        additionalClasses="sprk-c-Masthead__link"
+        variant="plain"
+        class="sprk-c-Masthead__link"
         href="#nogo"
       >
         Sign In
-      </sprk-link>
+      </a>
 
       <div
         class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
@@ -205,22 +206,24 @@ export const defaultStory = () => ({
           class="sprk-c-Masthead__site-links sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large sprk-o-Stack__item--center-column"
         >
           <li>
-            <sprk-link
-              linkType="plain"
+            <a
+              sprkLink
+              variant="plain"
               href="#nogo"
-              additionalClasses="sprk-c-Masthead__link"
+              class="sprk-c-Masthead__link"
             >
               Item 1
-            </sprk-link>
+            </a>
           </li>
           <li>
-            <sprk-link
-              linkType="plain"
+            <a
+              sprkLink
+              variant="plain"
               href="#nogo"
-              additionalClasses="sprk-c-Masthead__link"
+              class="sprk-c-Masthead__link"
             >
               Item 2
-            </sprk-link>
+            </a>
           </li>
         </ul>
       </div>
@@ -229,42 +232,46 @@ export const defaultStory = () => ({
         utility-slot
       >
         <li>
-          <sprk-link
-            linkType="plain"
+          <a
+            sprkLink
+            variant="plain"
             href="#nogo"
-            additionalClasses="sprk-c-Masthead__link"
+            class="sprk-c-Masthead__link"
           >
             (555) 555-5555
-          </sprk-link>
+          </a>
         </li>
         <li>
-          <sprk-link
-            linkType="plain"
+          <a
+            sprkLink
+            variant="plain"
             href="#nogo"
-            additionalClasses="sprk-c-Masthead__link"
+            class="sprk-c-Masthead__link"
           >
             Talk To Us
-          </sprk-link>
+          </a>
         </li>
         <li>
-          <sprk-link
+          <a
+            sprkLink
             href="#nogo"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
           >
             Sign In
-          </sprk-link>
+          </a>
         </li>
       </ul>
       <div
         class="sprk-u-mas"
         narrowNavFooter
       >
-        <sprk-link
+        <a
+          sprkLink
           href="#nogo"
-          additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s"
+          class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s"
         >
           Sign In
-        </sprk-link>
+        </a>
       </div>
     </sprk-masthead>
   `,
@@ -427,14 +434,15 @@ export const extended = () => ({
         />
       </svg>
 
-      <sprk-link
+      <a
+        sprkLink
         navItem-slot
-        linkType="plain"
-        additionalClasses="sprk-c-Masthead__link"
+        variant="plain"
+        class="sprk-c-Masthead__link"
         href="#nogo"
       >
         Sign In
-      </sprk-link>
+      </a>
 
       <div
         little-nav-slot
@@ -456,13 +464,14 @@ export const extended = () => ({
               class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
               sprkDropdownFooter
             >
-              <sprk-link
-                linkType="unstyled"
-                additionalClasses="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
+              <a
+                sprkLink
+                variant="unstyled"
+                class="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
                 href="#nogo"
               >
                 Placeholder
-              </sprk-link>
+              </a>
             </div>
           </sprk-dropdown>
         </div>
@@ -473,13 +482,14 @@ export const extended = () => ({
         class="sprk-o-Stack__item sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium sprk-o-Stack--center-column"
       >
         <li>
-          <sprk-link
-            linkType="plain"
-            additionalClasses="sprk-c-Masthead__link"
+          <a
+            sprkLink
+            variant="plain"
+            class="sprk-c-Masthead__link"
             href="#nogo"
           >
             Talk To Us
-          </sprk-link>
+          </a>
         </li>
         <li>
           <sprk-dropdown

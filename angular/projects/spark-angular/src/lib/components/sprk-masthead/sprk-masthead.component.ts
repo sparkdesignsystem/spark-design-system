@@ -63,12 +63,12 @@ import {
         <div
           class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
         >
-          <sprk-link [href]="logoHref" linkType="unstyled">
+          <a sprkLink [attr.href]="logoHref" variant="unstyled">
             <ng-content select="[logo-slot]"></ng-content>
             <span class="sprk-u-ScreenReaderText">{{
               logoLinkScreenReaderText
             }}</span>
-          </sprk-link>
+          </a>
         </div>
 
         <div
@@ -123,14 +123,15 @@ import {
                 ></sprk-dropdown>
               </div>
               <div *ngIf="!link.subNav">
-                <sprk-link
-                  linkType="plain"
+                <a
+                  sprkLink
+                  variant="plain"
                   [analyticsString]="link.analyticsString"
-                  additionalClasses="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  [href]="link.href"
+                  class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  [attr.href]="link.href"
                 >
                   {{ link.text }}
-                </sprk-link>
+                </a>
               </div>
             </li>
           </ul>
@@ -166,14 +167,15 @@ import {
             class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
             sprkDropdownFooter
           >
-            <sprk-link
-              linkType="unstyled"
+            <a
+              sprkLink
+              variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
-              [href]="narrowSelector['footer'].href"
-              additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
+              [attr.href]="narrowSelector['footer'].href"
+              class="sprk-c-Button sprk-c-Button--tertiary"
             >
               {{ narrowSelector['footer'].text }}
-            </sprk-link>
+            </a>
           </div>
         </sprk-dropdown>
 
@@ -194,10 +196,11 @@ import {
                     class="sprk-c-MastheadAccordion__item"
                     *ngFor="let subNavLink of narrowLink.subNav"
                   >
-                    <sprk-link
-                      linkType="unstyled"
-                      additionalClasses="sprk-c-MastheadAccordion__summary"
-                      [href]="subNavLink.href"
+                    <a
+                      sprkLink
+                      variant="unstyled"
+                      class="sprk-c-MastheadAccordion__summary"
+                      [attr.href]="subNavLink.href"
                       [analyticsString]="subNavLink.analyticsString"
                     >
                       <sprk-icon
@@ -206,7 +209,7 @@ import {
                         *ngIf="subNavLink.leadingIcon"
                       ></sprk-icon>
                       {{ subNavLink.text }}
-                    </sprk-link>
+                    </a>
                   </li>
                 </ul>
               </sprk-masthead-accordion-item>
@@ -218,10 +221,11 @@ import {
                   'sprk-c-MastheadAccordion__item--active': narrowLink.active
                 }"
               >
-                <sprk-link
-                  linkType="unstyled"
-                  additionalClasses="sprk-c-MastheadAccordion__summary"
-                  [href]="narrowLink.href"
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  [attr.href]="narrowLink.href"
                   [analyticsString]="narrowLink.analyticsString"
                 >
                   <span class="sprk-c-MastheadAccordion__heading">
@@ -232,7 +236,7 @@ import {
                     ></sprk-icon>
                     {{ narrowLink.text }}
                   </span>
-                </sprk-link>
+                </a>
               </li>
             </div>
           </div>
