@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import {
   SprkMastheadAccordionComponent
 } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
@@ -26,7 +26,7 @@ describe('SprkMastheadComponent', () => {
       declarations: [
         SprkMastheadComponent,
         SprkIconComponent,
-        SprkLinkComponent,
+        SprkLinkDirective,
         SprkDropdownComponent,
         SprkMastheadAccordionComponent,
         SprkMastheadAccordionItemComponent

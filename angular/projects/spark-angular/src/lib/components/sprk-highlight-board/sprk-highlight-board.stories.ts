@@ -1,8 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -31,12 +29,7 @@ then they should be \`<button>\` elements with \`aria-role=button\`.
 const modules = {
   imports: [
     SprkHighlightBoardModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkHighlightBoardComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({

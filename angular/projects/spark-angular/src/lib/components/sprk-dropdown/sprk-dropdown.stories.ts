@@ -1,7 +1,5 @@
 import { SprkDropdownModule } from './sprk-dropdown.module';
-import { SprkLinkModule } from '../sprk-link/sprk-link.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
+import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -30,10 +28,8 @@ element has a popup menu.
 const modules = {
   imports: [
     SprkDropdownModule,
-    SprkLinkModule,
-    RouterModule.forRoot([{ path: 'iframe.html', component: SprkDropdownComponent }]),
+    SprkLinkDirectiveModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -99,13 +95,14 @@ export const informational = () => ({
         class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
         sprkDropdownFooter
       >
-        <sprk-link
-          linkType="unstyled"
+        <a
+          sprkLink
+          variant="unstyled"
           href="#nogo"
-          additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
+          class="sprk-c-Button sprk-c-Button--tertiary"
         >
           Go Elsewhere
-        </sprk-link>
+        </a>
       </div>
     </sprk-dropdown>
   `

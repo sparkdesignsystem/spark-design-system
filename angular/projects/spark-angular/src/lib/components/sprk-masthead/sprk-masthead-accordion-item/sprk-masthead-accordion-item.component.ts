@@ -9,12 +9,14 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
       <div
         class="sprk-u-Position--relative sprk-o-Stack__item sprk-u-Width-100"
       >
-        <sprk-link
-          linkType="unstyled"
-          [ariaControls]="accordion_controls_id"
-          additionalClasses="sprk-c-MastheadAccordion__summary"
+        <a
+          sprkLink
+          variant="unstyled"
+          [attr.aria-controls]="accordion_controls_id"
+          class="sprk-c-MastheadAccordion__summary"
           [analyticsString]="analyticsString"
           [idString]="idString"
+          href="#"
           (click)="toggleAccordion($event)"
         >
           <span [ngClass]="getHeadingClasses()">
@@ -32,7 +34,7 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
             }}"
             [iconType]="currentIconType"
           ></sprk-icon>
-        </sprk-link>
+        </a>
       </div>
 
       <div [@toggleContent]="animState">

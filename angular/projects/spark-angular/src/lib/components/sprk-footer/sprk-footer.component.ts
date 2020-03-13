@@ -34,8 +34,9 @@ import {
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"
             >
               <div class="sprk-o-Stack__item">
-                <sprk-link
-                  linkType="plain"
+                <a
+                  sprkLink
+                  variant="plain"
                   href="{{ item.href }}"
                   analyticsString="{{ item.analytics || item.analyticsString }}"
                 >
@@ -53,7 +54,7 @@ import {
                     alt="{{ item.imgAlt }}"
                     class="{{ item.imgCSS }}"
                   />
-                </sprk-link>
+                </a>
               </div>
 
               <p class="sprk-o-Stack__item sprk-b-TypeBodyFour">
@@ -84,14 +85,15 @@ import {
                     class="sprk-o-Stack__item"
                     *ngFor="let link of item.links"
                   >
-                    <sprk-link
-                      linkType="simple"
-                      additionalClasses="sprk-u-FontWeight--normal"
+                    <a
+                      sprkLink
+                      variant="simple"
+                      class="sprk-u-FontWeight--normal"
                       href="{{ link.href }}"
                       analyticsString="{{ link.analyticsString || link.analytics }}"
                     >
                       {{ link.text }}
-                    </sprk-link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -123,8 +125,9 @@ import {
                     *ngFor="let item of socialLinks"
                     class="sprk-o-Stack__item"
                   >
-                    <sprk-link
-                      linkType="plain"
+                    <a
+                      sprkLink
+                      variant="plain"
                       href="{{ item.href }}"
                       analyticsString="{{ item.analytics || item.analyticsString }}"
                     >
@@ -136,7 +139,7 @@ import {
                       <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
                         item.iconScreenReaderText
                       }}</span>
-                    </sprk-link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -164,8 +167,10 @@ import {
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
             >
               <div class="sprk-o-Stack__item" *ngFor="let award of awards">
-                <sprk-link
-                  additionalClasses="sprk-o-Stack__item"
+                <a
+                  sprkLink
+                  variant="plain"
+                  class="sprk-o-Stack__item"
                   href="{{ award.href }}"
                   analyticsString="{{ award.analytics || award.analyticsString }}"
                 >
@@ -175,7 +180,7 @@ import {
                     alt="{{ award.imgAlt }}"
                     class="{{ award.imgCSS }}"
                   />
-                </sprk-link>
+                </a>
               </div>
             </div>
 
@@ -218,8 +223,9 @@ import {
               sprk-b-List--bare"
           >
             <li *ngFor="let item of badgeLinks" class="sprk-o-Stack__item">
-              <sprk-link
-                linkType="plain"
+              <a
+                sprkLink
+                variant="plain"
                 href="{{ item.href }}"
                 analyticsString="{{ item.analytics || item.analyticsString }}"
               >
@@ -231,7 +237,7 @@ import {
                 <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
                   item.iconScreenReaderText
                 }}</span>
-              </sprk-link>
+              </a>
             </li>
           </ul>
         </div>

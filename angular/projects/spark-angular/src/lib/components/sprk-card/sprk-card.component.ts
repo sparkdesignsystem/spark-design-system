@@ -8,11 +8,12 @@ import { Component, Input } from '@angular/core';
       *ngIf="cardType === 'teaser'"
       [attr.data-id]="idString"
     >
-      <sprk-link
-        linkType="unstyled"
+      <a
+        sprkLink
+        variant="unstyled"
         *ngIf="media === 'img'"
         [href]="imgHref"
-        additionalClasses="sprk-o-Stack__item"
+        class="sprk-o-Stack__item"
         [analyticsString]="imgLinkAnalytics"
       >
         <img
@@ -20,7 +21,7 @@ import { Component, Input } from '@angular/core';
           [attr.alt]="imgAlt"
           [attr.src]="imgSrc"
         />
-      </sprk-link>
+      </a>
 
       <div
         [ngClass]="{
@@ -31,28 +32,30 @@ import { Component, Input } from '@angular/core';
           'sprk-u-TextAlign--center': media === 'icon'
         }"
       >
-        <sprk-link
-          linkType="unstyled"
+        <a
+          sprkLink
+          variant="unstyled"
           *ngIf="media === 'icon'"
-          [href]="iconHref"
-          additionalClasses="sprk-o-Stack__item sprk-u-AbsoluteCenter"
+          [attr.href]="iconHref"
+          class="sprk-o-Stack__item sprk-u-AbsoluteCenter"
           [analyticsString]="iconLinkAnalytics"
         >
           <sprk-icon
             [iconType]="iconType"
             [additionalClasses]="additionalClassesIcon"
           ></sprk-icon>
-        </sprk-link>
+        </a>
 
         <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">{{ title }}</h3>
 
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
 
         <div class="sprk-o-Stack__item">
-          <sprk-link
-            linkType="unstyled"
-            [href]="ctaHref"
-            [additionalClasses]="getClassesCta()"
+          <a
+            sprkLink
+            variant="unstyled"
+            [attr.href]="ctaHref"
+            [ngClass]="getClassesCta()"
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
@@ -60,7 +63,7 @@ import { Component, Input } from '@angular/core';
               *ngIf="ctaIcon && (ctaType === 'link')"
               [iconType]="ctaIcon"
             ></sprk-icon>
-          </sprk-link>
+          </a>
         </div>
       </div>
     </div>
@@ -87,36 +90,39 @@ import { Component, Input } from '@angular/core';
       <div
         class="sprk-o-Stack__item sprk-c-Card__content sprk-o-Stack sprk-o-Stack--medium"
       >
-        <sprk-link
-          linkType="unstyled"
+        <a
+          sprkLink
+          variant="unstyled"
           *ngIf="media === 'img'"
-          [href]="imgHref"
-          additionalClasses="sprk-o-Stack__item"
+          [attr.href]="imgHref"
+          class="sprk-o-Stack__item"
           [analyticsString]="imgLinkAnalytics"
         >
           <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
-        </sprk-link>
+        </a>
 
-        <sprk-link
+        <a
+          sprkLink
           *ngIf="media === 'icon'"
-          [href]="iconHref"
-          linkType="unstyled"
-          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--center"
+          [attr.href]="iconHref"
+          variant="unstyled"
+          class="sprk-o-Stack__item sprk-o-Stack__item--center"
           [analyticsString]="iconLinkAnalytics"
         >
           <sprk-icon
             [iconType]="iconType"
             [additionalClasses]="additionalClassesIcon"
           ></sprk-icon>
-        </sprk-link>
+        </a>
 
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">{{ body }}</p>
 
         <div class="sprk-o-Stack__item">
-          <sprk-link
-            linkType="unstyled"
-            [href]="ctaHref"
-            [additionalClasses]="getClassesCta()"
+          <a
+            sprkLink
+            variant="unstyled"
+            [attr.href]="ctaHref"
+            [ngClass]="getClassesCta()"
             [analyticsString]="ctaAnalytics"
           >
             {{ ctaText }}
@@ -124,7 +130,7 @@ import { Component, Input } from '@angular/core';
               *ngIf="ctaIcon && (ctaType === 'link')"
               [iconType]="ctaIcon"
             ></sprk-icon>
-          </sprk-link>
+          </a>
         </div>
       </div>
     </div>

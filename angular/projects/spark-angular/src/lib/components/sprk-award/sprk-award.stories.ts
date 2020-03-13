@@ -1,7 +1,5 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAwardModule } from './sprk-award.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAwardComponent } from './sprk-award.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -25,13 +23,8 @@ export default {
 const modules = {
   imports: [
     SprkAwardModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkAwardComponent,
-    }]),
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({

@@ -1,8 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
 import { SprkCardComponent } from './sprk-card.component';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -28,12 +26,7 @@ const modules = {
     SprkCardModule,
     SprkStackModule,
     SprkStackItemModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkCardComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({

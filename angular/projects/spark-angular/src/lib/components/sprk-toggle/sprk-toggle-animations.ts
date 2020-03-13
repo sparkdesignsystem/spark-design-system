@@ -16,14 +16,14 @@ export const toggleAnimations: {
       style({
         height: '0',
         overflow: 'hidden',
-        visibility: 'hidden'
+        visibility: 'hidden',
       })
     ),
     state(
       'open',
       style({
         height: '*',
-        visibility: 'visible'
+        visibility: 'visible',
       })
     ),
     transition('open <=> closed', animate('300ms ease-in'))

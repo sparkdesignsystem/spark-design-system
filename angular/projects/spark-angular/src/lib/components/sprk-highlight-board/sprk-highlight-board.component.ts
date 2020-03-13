@@ -35,14 +35,15 @@ import { Component, Input } from '@angular/core';
           additionalClasses="sprk-o-Stack--center-column {{ centerBtns }}"
         >
           <div sprkStackItem class="sprk-c-HighlightBoard__cta">
-            <sprk-link
-              linkType="unstyled"
-              [href]="ctaHref"
-              additionalClasses="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+            <a
+              sprkLink
+              variant="unstyled"
+              [attr.href]="ctaHref"
+              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta"
             >
               {{ ctaText }}
-            </sprk-link>
+            </a>
           </div>
 
           <div
@@ -50,14 +51,15 @@ import { Component, Input } from '@angular/core';
             *ngIf="ctaText2"
             class="sprk-c-HighlightBoard__cta"
           >
-            <sprk-link
-              linkType="unstyled"
-              [href]="ctaHref2"
-              additionalClasses="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+            <a
+              sprkLink
+              variant="unstyled"
+              [attr.href]="ctaHref2"
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta2"
             >
               {{ ctaText2 }}
-            </sprk-link>
+            </a>
           </div>
         </sprk-stack>
       </sprk-stack>
