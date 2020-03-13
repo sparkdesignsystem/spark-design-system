@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "npm run set-version && ng build spark-angular",
-    "test": "jest --config ./projects/spark-angular/jest.config.js --verbose=false",
+    "test": "jest --config ./projects/spark-angular/jest.config.js --verbose",
     "test:generate-output": "jest --config ./projects/spark-angular/jest.config.js --json --outputFile=./src/.jest-test-results.json",
     "test:watch": "jest -o --watch --config ./projects/spark-angular/jest.config.js",
     "lint": "ng lint",

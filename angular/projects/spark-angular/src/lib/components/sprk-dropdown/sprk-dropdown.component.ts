@@ -35,7 +35,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               additionalIconClasses
             }}"
           ></sprk-icon>
-          </a>
+        </a>
       </div>
 
       <div [ngClass]="getClasses()" *ngIf="isOpen">
