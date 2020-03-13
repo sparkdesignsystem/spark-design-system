@@ -5,7 +5,7 @@ import { SprkCenteredColumnDirective } from './sprk-centered-column.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <div sprkCenteredColumn></div>
+    <div sprkCenteredColumn idString='asdf'></div>
   `
 })
 class TestComponent {}
@@ -33,5 +33,9 @@ describe('Spark Centered Column Directive', () => {
 
   it('should have the correct base classes', () => {
     expect(element.classList.contains('sprk-o-CenteredColumn')).toBe(true);
+  });
+
+  it('should apply correct idString value to data-id', () => {
+    expect(element.getAttribute('data-id') === 'asdf').toBe(true);
   });
 });

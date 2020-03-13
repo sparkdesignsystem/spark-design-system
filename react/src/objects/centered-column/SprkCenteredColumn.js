@@ -41,7 +41,7 @@ SprkCenteredColumn.defaultProps = {
   /**
    * Determines what element to render.
    */
-  element: "div"
+  element: 'div'
 }
 
 export default SprkCenteredColumn;

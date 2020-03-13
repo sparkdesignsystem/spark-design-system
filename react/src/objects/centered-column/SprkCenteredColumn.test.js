@@ -10,4 +10,14 @@ describe('SprkCenteredColumn:', () => {
     const wrapper = shallow(<SprkCenteredColumn />);
     expect(wrapper.find('div.sprk-o-CenteredColumn').length).toBe(1);
   });
+
+  it('should add data-id correctly', () => {
+    const wrapper = shallow(<SprkCenteredColumn idString={'foo'} />);
+    expect(wrapper.find('div.sprk-o-CenteredColumn[data-id="foo"]').length).toBe(1);
+  })
+
+  it('should render with a custom element correctly', () => {
+    const wrapper = shallow(<SprkCenteredColumn element={'main'} />);
+    expect(wrapper.find('main.sprk-o-CenteredColumn').length).toBe(1);
+  })
 });
