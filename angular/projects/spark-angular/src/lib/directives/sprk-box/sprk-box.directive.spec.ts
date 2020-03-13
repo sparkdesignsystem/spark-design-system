@@ -85,8 +85,6 @@ describe('Spark Box Directive', () => {
     item18Element = fixture.nativeElement.querySelectorAll('div')[18];
     item19Element = fixture.nativeElement.querySelectorAll('div')[19];
     item20Element = fixture.nativeElement.querySelectorAll('div')[20];
-
-
   }));
 
   it('should create itself', () => {
@@ -94,83 +92,83 @@ describe('Spark Box Directive', () => {
   });
 
   it('should have the correct base classes', () => {
-    expect(item0Element.classList.contains('sprk-o-Box'));
+    expect(item0Element.classList.contains('sprk-o-Box')).toBe(true);
   });
 
   it('should apply correct spacing classes for flush spacing', () => {
-    expect(item1Element.classList.contains('sprk-o-Box--flush'));
+    expect(item1Element.classList.contains('sprk-o-Box--flush')).toBe(true);
   });
 
   it('should apply correct spacing classes for tiny spacing', () => {
-    expect(item2Element.classList.contains('sprk-o-Box--tiny'));
+    expect(item2Element.classList.contains('sprk-o-Box--tiny')).toBe(true);
   });
 
   it('should apply correct spacing classes for small spacing', () => {
-    expect(item3Element.classList.contains('sprk-o-Box--small'));
+    expect(item3Element.classList.contains('sprk-o-Box--small')).toBe(true);
   });
 
   it('should apply correct spacing classes for medium spacing', () => {
-    expect(item4Element.classList.contains('sprk-o-Box--medium'));
+    expect(item4Element.classList.contains('sprk-o-Box--medium')).toBe(true);
   });
 
   it('should apply correct spacing classes for large spacing', () => {
-    expect(item5Element.classList.contains('sprk-o-Box--large'));
+    expect(item5Element.classList.contains('sprk-o-Box--large')).toBe(true);
   });
 
   it('should apply correct spacing classes for huge spacing', () => {
-    expect(item6Element.classList.contains('sprk-o-Box--huge'));
+    expect(item6Element.classList.contains('sprk-o-Box--huge')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-tiny spacing', () => {
-    expect(item7Element.classList.contains('sprk-o-Box--inset-short-tiny'));
+    expect(item7Element.classList.contains('sprk-o-Box--inset-short-tiny')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-small spacing', () => {
-    expect(item8Element.classList.contains('sprk-o-Box--inset-short-small'));
+    expect(item8Element.classList.contains('sprk-o-Box--inset-short-small')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-medium spacing', () => {
-    expect(item9Element.classList.contains('sprk-o-Box--inset-short-medium'));
+    expect(item9Element.classList.contains('sprk-o-Box--inset-short-medium')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-large spacing', () => {
-    expect(item10Element.classList.contains('sprk-o-Box--inset-short-large'));
+    expect(item10Element.classList.contains('sprk-o-Box--inset-short-large')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-huge spacing', () => {
-    expect(item11Element.classList.contains('sprk-o-Box--inset-short-huge'));
+    expect(item11Element.classList.contains('sprk-o-Box--inset-short-huge')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-tiny spacing', () => {
-    expect(item12Element.classList.contains('sprk-o-Box--inset-tall-tiny'));
+    expect(item12Element.classList.contains('sprk-o-Box--inset-tall-tiny')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-small spacing', () => {
-    expect(item13Element.classList.contains('sprk-o-Box--inset-tall-small'));
+    expect(item13Element.classList.contains('sprk-o-Box--inset-tall-small')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-medium spacing', () => {
-    expect(item14Element.classList.contains('sprk-o-Box--inset-tall-medium'));
+    expect(item14Element.classList.contains('sprk-o-Box--inset-tall-medium')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-large spacing', () => {
-    expect(item15Element.classList.contains('sprk-o-Box--inset-tall-large'));
+    expect(item15Element.classList.contains('sprk-o-Box--inset-tall-large')).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-huge spacing', () => {
-    expect(item16Element.classList.contains('sprk-o-Box--inset-tall-huge'));
+    expect(item16Element.classList.contains('sprk-o-Box--inset-tall-huge')).toBe(true);
   });
 
   it('should apply correct spacing classes for misc-a spacing', () => {
-    expect(item17Element.classList.contains('sprk-o-Box--misc-a'));
+    expect(item17Element.classList.contains('sprk-o-Box--misc-a')).toBe(true);
   });
 
   it('should apply correct spacing classes for misc-b spacing', () => {
-    expect(item18Element.classList.contains('sprk-o-Box--misc-b'));
+    expect(item18Element.classList.contains('sprk-o-Box--misc-b')).toBe(true);
   });
 
   it('should apply correct spacing classes for misc-c spacing', () => {
-    expect(item19Element.classList.contains('sprk-o-Box--misc-c'));
+    expect(item19Element.classList.contains('sprk-o-Box--misc-c')).toBe(true);
   });
 
   it('should apply correct spacing classes for misc-d spacing', () => {
