@@ -31,7 +31,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
           }}"
           [iconType]="currentIconType"
         ></sprk-icon>
-        </a>
+      </a>
 
       <div [@toggleContent]="animState">
         <div
