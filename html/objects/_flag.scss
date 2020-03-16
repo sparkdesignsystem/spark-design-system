@@ -28,8 +28,9 @@
 /// Reverses the flag and places the
 /// image on the right of the body content.
 .sprk-o-Flag--rev {
+  flex-direction: row-reverse;
+
   > .sprk-o-Flag__figure {
-    order: 1;
     padding-right: 0;
     padding-left: $sprk-flag-gutter;
   }
