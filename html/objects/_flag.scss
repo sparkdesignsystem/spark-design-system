@@ -8,7 +8,6 @@
 
 .sprk-o-Flag {
   display: flex;
-  align-items: flex-start;
 }
 
 .sprk-o-Flag__figure {
@@ -16,7 +15,9 @@
 }
 
 .sprk-o-Flag__body {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
 
   > :last-child,
   & {
@@ -118,7 +119,7 @@
 
   /// Stacked flag at smaller screen width.
   .sprk-o-Flag--stacked {
-    flex-flow: column;
+    flex-direction: column;
 
     &.sprk-o-Flag--rev {
       > .sprk-o-Flag__figure {
