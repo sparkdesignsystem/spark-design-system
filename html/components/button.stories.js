@@ -49,7 +49,7 @@ export const primary = () => (
 export const secondary = () => (
   `
     <button class="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-secondary">
-    Button
+      Button
     </button>
   `
 );
@@ -57,7 +57,7 @@ export const secondary = () => (
 export const tertiary = () => (
   `
     <button class="sprk-c-Button sprk-c-Button--tertiary" type="button" data-id="button-tertiary">
-    Button
+      Button
     </button>
   `
 );
@@ -74,6 +74,14 @@ export const loading = () => (
   `
   <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner">
     <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
+  </button>
+  `
+);
+
+export const loadingSecondary = () => (
+  `
+  <button class="sprk-c-Button sprk-c-Button--secondary" data-sprk-spinner="click" data-id="button-spinner-dark">
+    <div class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"></div>
   </button>
   `
 );
