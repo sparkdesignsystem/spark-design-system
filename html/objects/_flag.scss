@@ -122,12 +122,6 @@
   .sprk-o-Flag--stacked {
     flex-direction: column;
 
-    &.sprk-o-Flag--rev {
-      > .sprk-o-Flag__figure {
-        order: 0;
-      }
-    }
-
     > .sprk-o-Flag__figure {
       padding-right: 0;
       padding-left: 0;
