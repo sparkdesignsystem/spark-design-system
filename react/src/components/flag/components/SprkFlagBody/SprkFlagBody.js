@@ -11,7 +11,7 @@ const SprkFlagBody = (props) => {
   } = props;
   return (
     <div
-      classname={classnames(
+      className={classnames(
         'sprk-o-Flag__body',
         additionalClasses
       )}

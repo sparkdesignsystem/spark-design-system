@@ -14,12 +14,8 @@ export default {
     jest: ['SprkFlag'],
     info: `
 ${markdownDocumentationLinkBuilder('button')}
-
-##### Accessibility
-Tabbing and screen readers are based on DOM order. Keep in mind that this reverse modifier is purely a visual change, not a DOM change. With more complex layouts, be mindful that visual and DOM order misatches will affect keyboard, magnifier, and screen reader users.
-
-##### Guidelines
-- xxxx
+###### Accessibility Considerations
+- Tabbing and screen readers are based on DOM order. Keep in mind that this reverse modifier is purely a visual change, not a DOM change. With more complex layouts, be mindful that visual and DOM order misatches will affect keyboard, magnifier, and screen reader users.
 `,
    },
 };

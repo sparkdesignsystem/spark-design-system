@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkFlag from './SprkFlag';
 
@@ -19,6 +19,14 @@ describe('SprkFlag:', () => {
     const wrapper = shallow(
       <SprkFlag additionalClasses={testClass} />
     );
-    expect(wrapper.hasClass('test')).toBe(true);
+    expect(wrapper.hasClass(testClass)).toBe(true);
+  });
+
+  it('should apply idString', () => {
+    const testId = "test";
+    const wrapper = mount(
+      <SprkFlag idString={testId}/>
+    );
+    expect(wrapper.find('[data-id="test"]').length).toBe(1);
   });
 });
