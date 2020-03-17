@@ -38,6 +38,15 @@ area can be set to any Spacing value.
 - On small viewports, the content area
 can be configured to move below the media.
 
+### Reverse Modifier
+This modifier rearranges elements of the flag so the media is to the right of the content area.
+#### Accessibility
+Tabbing and screen readers are based on DOM order. Keep in mind that this reverse modifier is purely a visual change, not a DOM change. With more complex layouts, be mindful that visual and DOM order misatches will affect keyboard, magnifier, and screen reader users.
+<ComponentPreview
+  componentName="flag--reverse"
+  hasHTML
+/>
+
 <SprkDivider
  element="span"
  additionalClasses="sprk-u-Measure"
