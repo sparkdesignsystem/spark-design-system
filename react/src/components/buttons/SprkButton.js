@@ -39,7 +39,9 @@ const SprkButton = ({
       href={TagName !== 'button' ? href : undefined}
       {...rest}
     >
-      {(loading && <SprkSpinner />) || children}
+      {(loading &&
+        <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined}/>)
+      || children}
     </TagName>
   );
 };
