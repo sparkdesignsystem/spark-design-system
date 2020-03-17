@@ -95,11 +95,23 @@ export const loading = () => (
   </SprkButton>
 );
 
-export const fullWidthAtSmallViewport = () => (
+export const loadingSecondary = () => (
   <SprkButton
+    loading={true}
+    variant="secondary"
     element="button"
     idString="button-6"
     analyticsString="button-6-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const fullWidthAtSmallViewport = () => (
+  <SprkButton
+    element="button"
+    idString="button-7"
+    analyticsString="button-7-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
     Button
@@ -109,8 +121,8 @@ export const fullWidthAtSmallViewport = () => (
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
     element="button"
-    idString="button-7"
-    analyticsString="button-7-analytics"
+    idString="button-8"
+    analyticsString="button-8-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
     Button
@@ -121,8 +133,8 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="#nogo"
-    idString="button-8"
-    analyticsString="button-8-analytics"
+    idString="button-9"
+    analyticsString="button-9-analytics"
   >
     Button
   </SprkButton>
