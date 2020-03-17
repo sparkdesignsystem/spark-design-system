@@ -7,27 +7,17 @@
 ////
 
 .sprk-o-Flag {
-  display: table;
-  width: 100%;
-}
-
-.sprk-o-Flag__body,
-.sprk-o-Flag__figure {
-  display: table-cell;
-  vertical-align: top;
+  display: flex;
 }
 
 .sprk-o-Flag__figure {
   padding-right: $sprk-flag-gutter;
-
-  > img {
-    display: block;
-    max-width: none;
-  }
 }
 
 .sprk-o-Flag__body {
-  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
 
   > :last-child,
   & {
@@ -35,15 +25,10 @@
   }
 }
 
-/// Reverses the flag and places the 
+/// Reverses the flag and places the
 /// image on the right of the body content.
 .sprk-o-Flag--rev {
-  direction: rtl;
-
-  > .sprk-o-Flag__body,
-  > .sprk-o-Flag__figure {
-    direction: ltr;
-  }
+  flex-direction: row-reverse;
 
   > .sprk-o-Flag__figure {
     padding-right: 0;
@@ -132,16 +117,10 @@
 }
 
 @media all and (max-width: $sprk-flag-stacked-breakpoint) {
-  
+
   /// Stacked flag at smaller screen width.
   .sprk-o-Flag--stacked {
-    direction: ltr;
-
-    > .sprk-o-Flag__body,
-    > .sprk-o-Flag__figure,
-    & {
-      display: block;
-    }
+    flex-direction: column;
 
     > .sprk-o-Flag__figure {
       padding-right: 0;
