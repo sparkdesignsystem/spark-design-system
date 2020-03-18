@@ -48,7 +48,8 @@ export class SprkFlagComponent {
   isReversed = false;
 
   /**
-   * The Flag component will use this 
+   * The Flag component will use this to stack
+   * the element at the `$sprk-flag-stacked-breakpoint`
    */
   @Input()
   isStacked = false;
