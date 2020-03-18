@@ -59,8 +59,7 @@ defaultStory.story = {
 
 export const reverse = () => ({
   moduleMetadata: modules,
-  template:
-  `
+  template: `
     <sprk-flag
       isReversed="true"
     >
