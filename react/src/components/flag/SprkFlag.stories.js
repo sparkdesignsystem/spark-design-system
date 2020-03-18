@@ -59,3 +59,20 @@ export const reverse = () => (
     </SprkFlagBody>
   </SprkFlag>
 );
+
+export const middleAligned = () => (
+  <SprkFlag verticalAlignment="middle">
+    <SprkFlagFigure>
+      <img
+          alt="Provide useful alternative text"
+          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+      />
+    </SprkFlagFigure>
+    <SprkFlagBody>
+      <p>
+        Lorem ipsum dolor. Sit amet pede. Tempus donec et.
+        Suspendisse id inventore integer eum non enim diam habitant.
+      </p>
+    </SprkFlagBody>
+  </SprkFlag>
+);

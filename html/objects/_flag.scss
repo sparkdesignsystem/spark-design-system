@@ -102,18 +102,12 @@
 
 /// Vertically align content to the middle.
 .sprk-o-Flag--middle {
-  > .sprk-o-Flag__body,
-  > .sprk-o-Flag__figure {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 /// Vertically align content to the bottom.
 .sprk-o-Flag--bottom {
-  > .sprk-o-Flag__body,
-  > .sprk-o-Flag__figure {
-    align-items: flex-end;
-  }
+  align-items: flex-end;
 }
 
 @media all and (max-width: $sprk-flag-stacked-breakpoint) {
