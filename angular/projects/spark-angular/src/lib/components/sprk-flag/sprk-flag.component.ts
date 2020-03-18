@@ -71,10 +71,29 @@ export class SprkFlagComponent {
   isStacked = false;
 
   /**
+   * Determines how much space between the
+   * figure and the body.
+   */
+  @Input()
+  spacing: 'flush' | 'tiny' | 'small' | 'large' | 'huge';
+
+  /**
    * @ignore
    */
   getClasses(): string {
     const classArray: string[] = ['sprk-o-Flag'];
+
+    if (this.spacing) {
+      const spacingClasses = {
+        flush: 'sprk-o-Flag--flush',
+        tiny: 'sprk-o-Flag--tiny',
+        small: 'sprk-o-Flag--small',
+        large: 'sprk-o-Flag--large',
+        huge: 'sprk-o-Flag--huge',
+      };
+
+      classArray.push(spacingClasses[this.spacing]);
+    }
 
     if (this.isReversed) {
       classArray.push('sprk-o-Flag--rev');

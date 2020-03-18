@@ -72,4 +72,44 @@ describe('SprkFlagComponent', () => {
       'sprk-o-Flag sprk-o-Flag--stacked'
     );
   });
+
+  it('should add the sprk-o-Flag--flush class when spacing="flush" is true', () => {
+    component.spacing = 'flush';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--flush'
+    );
+  });
+
+  it('should add the sprk-o-Flag--tiny class when spacing="tiny" is true', () => {
+    component.spacing = 'tiny';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--tiny'
+    );
+  });
+
+  it('should add the sprk-o-Flag--small class when spacing="small" is true', () => {
+    component.spacing = 'small';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--small'
+    );
+  });
+
+  it('should add the sprk-o-Flag--large class when spacing="large" is true', () => {
+    component.spacing = 'large';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--large'
+    );
+  });
+
+  it('should add the sprk-o-Flag--huge class when spacing="huge" is true', () => {
+    component.spacing = 'huge';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--huge'
+    );
+  });
 });
