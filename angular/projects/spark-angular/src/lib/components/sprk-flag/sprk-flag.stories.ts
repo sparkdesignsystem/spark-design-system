@@ -43,6 +43,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-flag.component'],
+  },
 };
 
 export const reverse = () => ({
@@ -65,6 +68,12 @@ export const reverse = () => ({
   `
 });
 
+reverse.story = {
+  parameters: {
+    jest: ['sprk-flag.component'],
+  },
+};
+
 export const stacked = () => ({
   moduleMetadata: modules,
   template: `
@@ -83,3 +92,9 @@ export const stacked = () => ({
     </sprk-flag>
   `
 });
+
+stacked.story = {
+  parameters: {
+    jest: ['sprk-flag.component'],
+  },
+};
