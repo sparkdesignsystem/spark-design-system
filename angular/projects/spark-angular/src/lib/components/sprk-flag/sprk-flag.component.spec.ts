@@ -42,4 +42,12 @@ describe('SprkFlagComponent', () => {
     fixture.detectChanges();
     expect(flagElement.getAttribute('data-id')).toBeNull();
   });
+
+  it('should add the sprk-o-Flag--rev class when isReversed is true', () => {
+    component.isReversed = true;
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--rev'
+    );
+  });
 });

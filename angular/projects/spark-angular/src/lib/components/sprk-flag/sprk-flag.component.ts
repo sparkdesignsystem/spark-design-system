@@ -38,10 +38,24 @@ export class SprkFlagComponent {
   idString: string;
 
   /**
+   * The Flag component will use this to decide where
+   * the figure-slot is rendered in relation to the
+   * body-slot. The default is the figure-slot is on
+   * the left of the body-slot. isReversed places the
+   * figure-slot on the right of the body-slot.
+   */
+  @Input()
+  isReversed = false;
+
+  /**
    * @ignore
    */
   getClasses(): string {
     const classArray: string[] = ['sprk-o-Flag'];
+
+    if (this.isReversed) {
+      classArray.push('sprk-o-Flag--rev');
+    }
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach(className => {
