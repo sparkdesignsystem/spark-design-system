@@ -50,4 +50,12 @@ describe('SprkFlagComponent', () => {
       'sprk-o-Flag sprk-o-Flag--rev'
     );
   });
+
+  it('should add the sprk-o-Flag--stacked class when isStacked is true', () => {
+    component.isStacked = true;
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--stacked'
+    );
+  });
 });

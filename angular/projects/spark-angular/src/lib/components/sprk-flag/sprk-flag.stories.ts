@@ -28,7 +28,9 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-flag>
+    <sprk-flag
+      isStacked="true"
+    >
       <img
         figure-slot
         alt="Provide useful alternative text"
@@ -50,7 +52,10 @@ export const reverse = () => ({
   moduleMetadata: modules,
   template:
   `
-    <sprk-flag isReversed="true">
+    <sprk-flag
+      isStacked="true"
+      isReversed="true"
+    >
         <img
           figure-slot
           alt="Provide useful alternative text"

@@ -48,6 +48,12 @@ export class SprkFlagComponent {
   isReversed = false;
 
   /**
+   * The Flag component will use this 
+   */
+  @Input()
+  isStacked = false;
+
+  /**
    * @ignore
    */
   getClasses(): string {
@@ -55,6 +61,10 @@ export class SprkFlagComponent {
 
     if (this.isReversed) {
       classArray.push('sprk-o-Flag--rev');
+    }
+
+    if (this.isStacked) {
+      classArray.push('sprk-o-Flag--stacked');
     }
 
     if (this.additionalClasses) {
