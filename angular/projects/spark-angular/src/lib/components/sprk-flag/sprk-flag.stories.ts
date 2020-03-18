@@ -14,6 +14,7 @@ export default {
     )
   ],
   parameters: {
+    docs: { iframeHeight: 200 },
     info: `
 ${markdownDocumentationLinkBuilder('flag')}
 - The Flag component has two slots to inject markup
