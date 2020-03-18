@@ -19,4 +19,12 @@ describe('SprkFlagComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('should add the correct classes if additionalClasses are supplied', () => {
+    component.additionalClasses = 'sprk-u-pam sprk-u-man';
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-u-pam sprk-u-man'
+    );
+  });
 });
