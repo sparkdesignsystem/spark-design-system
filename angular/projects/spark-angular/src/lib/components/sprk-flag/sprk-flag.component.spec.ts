@@ -73,7 +73,7 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  it('should add the sprk-o-Flag--flush class when spacing="flush" is true', () => {
+  it('should add the sprk-o-Flag--flush class when spacing="flush"', () => {
     component.spacing = 'flush';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
@@ -81,7 +81,7 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  it('should add the sprk-o-Flag--tiny class when spacing="tiny" is true', () => {
+  it('should add the sprk-o-Flag--tiny class when spacing="tiny"', () => {
     component.spacing = 'tiny';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
@@ -89,7 +89,7 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  it('should add the sprk-o-Flag--small class when spacing="small" is true', () => {
+  it('should add the sprk-o-Flag--small class when spacing="small"', () => {
     component.spacing = 'small';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
@@ -97,7 +97,7 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  it('should add the sprk-o-Flag--large class when spacing="large" is true', () => {
+  it('should add the sprk-o-Flag--large class when spacing="large"', () => {
     component.spacing = 'large';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
@@ -105,11 +105,27 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  it('should add the sprk-o-Flag--huge class when spacing="huge" is true', () => {
+  it('should add the sprk-o-Flag--huge class when spacing="huge"', () => {
     component.spacing = 'huge';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
       'sprk-o-Flag sprk-o-Flag--huge'
+    );
+  });
+
+  it('should add the sprk-o-Flag--middle class when verticalAlignment="middle"', () => {
+    component.verticalAlignment = 'middle';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--middle'
+    );
+  });
+
+  it('should add the sprk-o-Flag--bottom class when verticalAlignment="bottom"', () => {
+    component.verticalAlignment = 'bottom';
+    fixture.detectChanges();
+    expect(component.getClasses()).toEqual(
+      'sprk-o-Flag sprk-o-Flag--bottom'
     );
   });
 });

@@ -78,6 +78,12 @@ export class SprkFlagComponent {
   spacing: 'flush' | 'tiny' | 'small' | 'large' | 'huge';
 
   /**
+   * Determines the vertical alignment of content.
+   */
+  @Input()
+  verticalAlignment: 'middle' | 'bottom';
+
+  /**
    * @ignore
    */
   getClasses(): string {
@@ -93,6 +99,15 @@ export class SprkFlagComponent {
       };
 
       classArray.push(spacingClasses[this.spacing]);
+    }
+
+    if (this.verticalAlignment) {
+      const verticalAlignmentClasses = {
+        middle: 'sprk-o-Flag--middle',
+        bottom: 'sprk-o-Flag--bottom',
+      };
+
+      classArray.push(verticalAlignmentClasses[this.verticalAlignment]);
     }
 
     if (this.isReversed) {
