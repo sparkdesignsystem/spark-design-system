@@ -4,6 +4,7 @@ import { SprkFlagComponent } from './sprk-flag.component';
 describe('SprkFlagComponent', () => {
   let component: SprkFlagComponent;
   let fixture: ComponentFixture<SprkFlagComponent>;
+  let flagElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -14,6 +15,7 @@ describe('SprkFlagComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkFlagComponent);
     component = fixture.componentInstance;
+    flagElement = fixture.nativeElement.querySelector('div');
   });
 
   it('should create', () => {
@@ -26,5 +28,18 @@ describe('SprkFlagComponent', () => {
     expect(component.getClasses()).toEqual(
       'sprk-o-Flag sprk-u-pam sprk-u-man'
     );
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(flagElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.idString = null;
+    fixture.detectChanges();
+    expect(flagElement.getAttribute('data-id')).toBeNull();
   });
 });

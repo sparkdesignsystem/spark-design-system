@@ -3,7 +3,10 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-flag',
   template: `
-  <div [ngClass]="getClasses()">
+  <div
+    [ngClass]="getClasses()"
+    [attr.data-id]="idString"
+  >
     <div class="sprk-o-Flag__figure">
       <ng-content select="[figure-slot]"></ng-content>
     </div>
@@ -22,6 +25,17 @@ export class SprkFlagComponent {
    */
   @Input()
   additionalClasses: string;
+
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
 
   /**
    * @ignore
