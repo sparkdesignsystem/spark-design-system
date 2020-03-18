@@ -5,18 +5,23 @@ import classnames from 'classnames';
 const SprkFlag = (props) => {
   const {
     children,
-    variant,
+    isReverse,
+    verticalAlignment,
     idString,
     additionalClasses,
     ...other
   } = props;
+
+
 
   const flagClassNames = classnames(
     'sprk-o-Flag',
     'sprk-o-Flag--stacked',
     additionalClasses,
     {
-      'sprk-o-Flag--rev': variant === 'reverse',
+      'sprk-o-Flag--rev': isReverse,
+      'sprk-o-Flag--middle': verticalAlignment === 'middle',
+      'sprk-o-Flag--bottom': verticalAlignment === 'bottom',
     },
   );
 
@@ -29,10 +34,10 @@ const SprkFlag = (props) => {
 
 SprkFlag.propTypes = {
   /**
-   * Determines the style of dictionary component.
-   * Supplying no value will cause the base styles to be used.
+   * Reverses the order of the figure and body.
    */
-  variant: PropTypes.oneOf(['reverse']),
+  isReverse: PropTypes.bool,
+  verticalAlignment: PropTypes.oneOf(['middle', 'bottom']),
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */

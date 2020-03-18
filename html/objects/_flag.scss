@@ -104,7 +104,7 @@
 .sprk-o-Flag--middle {
   > .sprk-o-Flag__body,
   > .sprk-o-Flag__figure {
-    vertical-align: middle;
+    align-items: center;
   }
 }
 
@@ -112,7 +112,7 @@
 .sprk-o-Flag--bottom {
   > .sprk-o-Flag__body,
   > .sprk-o-Flag__figure {
-    vertical-align: bottom;
+    align-items: flex-end;
   }
 }
 
