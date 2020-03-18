@@ -14,7 +14,15 @@ export default {
     )
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('flag')}`,
+    info: `
+${markdownDocumentationLinkBuilder('flag')}
+- The Flag component has two slots to inject markup
+into the component template.
+    - \`figure-slot\`: Used for adding the media to the component.
+    - \`body-slot\`: Used for adding the body content to the component.
+- If you pass something into the Flag component that is not
+in one of the slots mentioned above, it will not render.
+`,
   },
 };
 
