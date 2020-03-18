@@ -18,7 +18,7 @@ export default {
 ${markdownDocumentationLinkBuilder('flag')}
 - The Flag component has two slots to inject markup
 into the component template.
-    - \`figure-slot\`: Used for adding the media to the component.
+    - \`media-slot\`: Used for adding the media to the component.
     - \`body-slot\`: Used for adding the body content to the component.
 - If you pass something into the Flag component that is not
 in one of the slots mentioned above, it will not render.
@@ -37,7 +37,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-flag>
       <img
-        figure-slot
+        media-slot
         alt="Provide useful alternative text"
         src="https://spark-assets.netlify.com/spark-logo-mark.svg"
       />
@@ -64,7 +64,7 @@ export const reverse = () => ({
       isReversed="true"
     >
       <img
-        figure-slot
+        media-slot
         alt="Provide useful alternative text"
         src="https://spark-assets.netlify.com/spark-logo-mark.svg"
       />
@@ -89,7 +89,7 @@ export const stacked = () => ({
       isStacked="true"
     >
       <img
-        figure-slot
+        media-slot
         alt="Provide useful alternative text"
         src="https://spark-assets.netlify.com/spark-logo-mark.svg"
       />

@@ -22,7 +22,6 @@ describe('SprkFlagComponent', () => {
     expect(component).toBeTruthy();
   });
 
-
   it('should add the correct classes if additionalClasses are supplied', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual(
@@ -30,9 +29,9 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  it('should add the correct classes if additionalFigureClasses are supplied', () => {
-    component.additionalFigureClasses = 'sprk-u-pam sprk-u-man';
-    expect(component.getFigureClasses()).toEqual(
+  it('should add the correct classes if additionalMediaClasses are supplied', () => {
+    component.additionalMediaClasses = 'sprk-u-pam sprk-u-man';
+    expect(component.getMediaClasses()).toEqual(
       'sprk-o-Flag__figure sprk-u-pam sprk-u-man'
     );
   });

@@ -3,17 +3,17 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-flag',
   template: `
-  <div
-    [ngClass]="getClasses()"
-    [attr.data-id]="idString"
-  >
-    <div [ngClass]="getFigureClasses()">
-      <ng-content select="[figure-slot]"></ng-content>
+    <div
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString"
+    >
+      <div [ngClass]="getMediaClasses()">
+        <ng-content select="[media-slot]"></ng-content>
+      </div>
+      <div [ngClass]="getBodyClasses()">
+        <ng-content select="[body-slot]"></ng-content>
+      </div>
     </div>
-    <div [ngClass]="getBodyClasses()">
-      <ng-content select="[body-slot]"></ng-content>
-    </div>
-  </div>
   `
 })
 
@@ -21,7 +21,7 @@ export class SprkFlagComponent {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component.
+   * component container.
    */
   @Input()
   additionalClasses: string;
@@ -29,10 +29,10 @@ export class SprkFlagComponent {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * container of the figure-slot.
+   * container of the media-slot.
    */
   @Input()
-  additionalFigureClasses: string;
+  additionalMediaClasses: string;
 
   /**
    * Expects a space separated string
@@ -55,10 +55,10 @@ export class SprkFlagComponent {
 
   /**
    * The Flag component will use this to decide where
-   * the figure-slot is rendered in relation to the
-   * body-slot. The default is the figure-slot is on
-   * the left of the body-slot. isReversed places the
-   * figure-slot on the right of the body-slot.
+   * the media-slot is rendered in relation to the
+   * body-slot. The default is the media-slot is on
+   * the left of the body-slot. isReversed="true" places the
+   * media-slot on the right of the body-slot.
    */
   @Input()
   isReversed = false;
@@ -72,7 +72,7 @@ export class SprkFlagComponent {
 
   /**
    * Determines how much space between the
-   * figure and the body.
+   * media and the body.
    */
   @Input()
   spacing: 'flush' | 'tiny' | 'small' | 'large' | 'huge';
@@ -126,19 +126,23 @@ export class SprkFlagComponent {
 
     return classArray.join(' ');
   }
+  /**
+   * @ignore
+   */
+  getMediaClasses(): string {
+    const mediaClassArray: string[] = ['sprk-o-Flag__figure'];
 
-  getFigureClasses(): string {
-    const figureClassArray: string[] = ['sprk-o-Flag__figure'];
-
-    if (this.additionalFigureClasses) {
-      this.additionalFigureClasses.split(' ').forEach(className => {
-        figureClassArray.push(className);
+    if (this.additionalMediaClasses) {
+      this.additionalMediaClasses.split(' ').forEach(className => {
+        mediaClassArray.push(className);
       });
     }
 
-    return figureClassArray.join(' ');
+    return mediaClassArray.join(' ');
   }
-
+  /**
+   * @ignore
+   */
   getBodyClasses(): string {
     const bodyClassArray: string[] = ['sprk-o-Flag__body'];
 
