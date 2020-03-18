@@ -6,12 +6,14 @@ import {
   HostBinding,
   OnChanges,
   Renderer2,
+  AfterViewInit,
+  SimpleChanges,
 } from '@angular/core';
 
 @Directive({
   selector: '[sprkButton]'
 })
-export class SprkButtonDirective implements OnInit, OnChanges {
+export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   /**
    * @ignore
    */
@@ -66,11 +68,24 @@ export class SprkButtonDirective implements OnInit, OnChanges {
     }
   }
 
-  ngOnChanges(): void {
+  /**
+   * Add spinner only after view has loaded.
+   * This is to allow time for the text
+   * content of the button to load so that
+   * the width value accounts for that text.
+   */
+  ngAfterViewInit() {
     if (this.isSpinning) {
       this.setSpinning(this.ref.nativeElement);
     }
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.isSpinning && !changes['isSpinning'].isFirstChange()) {
+      this.setSpinning(this.ref.nativeElement);
+    }
+  }
+
   /**
    * @ignore
    */
