@@ -1,7 +1,5 @@
 import React from 'react';
 import SprkFlag from './SprkFlag';
-import SprkFlagBody from './components/SprkFlagBody/SprkFlagBody';
-import SprkFlagFigure from './components/SprkFlagFigure/SprkFlagFigure';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {

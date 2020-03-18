@@ -11,10 +11,6 @@ export { default as SprkDropdown }
   from './components/dropdown/SprkDropdown';
 export { default as SprkFlag }
   from './components/flag/SprkFlag';
-export { default as SprkFlagFigure }
-  from './components/flag/components/SprkFlagFigure';
-export { default as SprkFlagBody }
-  from './components/flag/components/SprkFlagBody';
 export { default as SprkHighlightBoard }
   from './components/highlight-board/SprkHighlightBoard';
 export { default as SprkIcon }
