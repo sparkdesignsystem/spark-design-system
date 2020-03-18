@@ -4,9 +4,12 @@ import classnames from 'classnames';
 
 const SprkFlag = (props) => {
   const {
+    additionalBodyClasses,
+    additionalMediaClasses,
     children,
     media,
-    isReverse,
+    isReversed,
+    isStacked,
     verticalAlignment,
     idString,
     additionalClasses,
@@ -18,10 +21,10 @@ const SprkFlag = (props) => {
 
   const flagClassNames = classnames(
     'sprk-o-Flag',
-    'sprk-o-Flag--stacked',
     additionalClasses,
     {
-      'sprk-o-Flag--rev': isReverse,
+      'sprk-o-Flag--stacked': isStacked,
+      'sprk-o-Flag--rev': isReversed,
       'sprk-o-Flag--middle': verticalAlignment === 'middle',
       'sprk-o-Flag--bottom': verticalAlignment === 'bottom',
       'sprk-o-Flag--tiny': spacing === 'tiny',
@@ -33,10 +36,22 @@ const SprkFlag = (props) => {
 
   return (
     <div className={flagClassNames} data-id={idString} {...other}>
-      <div class="sprk-o-Flag__figure">
+      <div
+        className={
+          classnames(
+            'sprk-o-Flag__figure',
+            additionalMediaClasses
+          )}
+      >
         {media}
       </div>
-      <div class="sprk-o-Flag__body">
+      <div
+        className={
+          classnames(
+            'sprk-o-Flag__body',
+            additionalBodyClasses
+          )}
+      >
         {children}
       </div>
     </div>
@@ -45,13 +60,17 @@ const SprkFlag = (props) => {
 
 SprkFlag.propTypes = {
   /**
-   * Recieved a component that is the media.
+   * Recieves a component that will render media into the Flag component.
    */
   media: PropTypes.element.isRequired,
   /**
    * Reverses the order of the figure and body.
    */
-  isReverse: PropTypes.bool,
+  isReversed: PropTypes.bool,
+  /**
+   * Stacks elements at `$sprk-flag-stacked-breakpoint`
+   */
+  isStacked: PropTypes.bool,
   /**
    * Determines how much space between the figure and the body.
    */
@@ -64,6 +83,14 @@ SprkFlag.propTypes = {
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * A space-separated string of classes to add to the media container of the component.
+   */
+  additionalMediaClasses: PropTypes.string,
+  /**
+   * A space-separated string of classes to add to the body container of the component.
+   */
+  additionalBodyClasses: PropTypes.string,
   /**
    * A space-separated string of classes to add to the outermost container of the component.
    */

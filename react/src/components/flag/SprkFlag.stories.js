@@ -22,6 +22,7 @@ ${markdownDocumentationLinkBuilder('button')}
 
 export const defaultStory = () => (
   <SprkFlag
+    isStacked
     media={
       <img
           alt="Provide useful alternative text"
@@ -43,7 +44,7 @@ defaultStory.story = {
 
 export const reverse = () => (
   <SprkFlag
-    isReverse
+    isReversed
     media={
       <img
           alt="Provide useful alternative text"
