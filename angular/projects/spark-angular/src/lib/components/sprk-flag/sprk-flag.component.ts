@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
     [ngClass]="getClasses()"
     [attr.data-id]="idString"
   >
-    <div class="sprk-o-Flag__figure">
+    <div [ngClass]="getFigureClasses()">
       <ng-content select="[figure-slot]"></ng-content>
     </div>
-    <div class="sprk-o-Flag__body">
+    <div [ngClass]="getBodyClasses()">
       <ng-content select="[body-slot]"></ng-content>
     </div>
   </div>
@@ -25,6 +25,22 @@ export class SprkFlagComponent {
    */
   @Input()
   additionalClasses: string;
+
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * container of the figure-slot.
+   */
+  @Input()
+  additionalFigureClasses: string;
+
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * container of the body-slot.
+   */
+  @Input()
+  additionalBodyClasses: string;
 
   /**
    * The value supplied will be assigned
@@ -75,5 +91,29 @@ export class SprkFlagComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  getFigureClasses(): string {
+    const figureClassArray: string[] = ['sprk-o-Flag__figure'];
+
+    if (this.additionalFigureClasses) {
+      this.additionalFigureClasses.split(' ').forEach(className => {
+        figureClassArray.push(className);
+      });
+    }
+
+    return figureClassArray.join(' ');
+  }
+
+  getBodyClasses(): string {
+    const bodyClassArray: string[] = ['sprk-o-Flag__body'];
+
+    if (this.additionalBodyClasses) {
+      this.additionalBodyClasses.split(' ').forEach(className => {
+        bodyClassArray.push(className);
+      });
+    }
+
+    return bodyClassArray.join(' ');
   }
 }

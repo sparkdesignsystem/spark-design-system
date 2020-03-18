@@ -30,6 +30,20 @@ describe('SprkFlagComponent', () => {
     );
   });
 
+  it('should add the correct classes if additionalFigureClasses are supplied', () => {
+    component.additionalFigureClasses = 'sprk-u-pam sprk-u-man';
+    expect(component.getFigureClasses()).toEqual(
+      'sprk-o-Flag__figure sprk-u-pam sprk-u-man'
+    );
+  });
+
+  it('should add the correct classes if additionalBodyClasses are supplied', () => {
+    component.additionalBodyClasses = 'sprk-u-pam sprk-u-man';
+    expect(component.getBodyClasses()).toEqual(
+      'sprk-o-Flag__body sprk-u-pam sprk-u-man'
+    );
+  });
+
   it('should add data-id when idString has a value', () => {
     const testString = 'element-id';
     component.idString = testString;
