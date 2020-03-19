@@ -8,16 +8,94 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SprkFlag:', () => {
   it('should display default styles', () => {
     const wrapper = shallow(
-      <SprkFlag />
+      <SprkFlag
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+      />
     );
     expect(wrapper.hasClass('sprk-o-Flag')).toBe(true);
+  });
+
+  it('should display reversed styles', () => {
+    const wrapper = shallow(
+      <SprkFlag
+        isReversed
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+      />
+    );
+    expect(wrapper.hasClass('sprk-o-Flag--rev')).toBe(true);
+  });
+
+  it('should display stacked style', () => {
+    const wrapper = shallow(
+      <SprkFlag
+        isStacked
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+      />
+    );
     expect(wrapper.hasClass('sprk-o-Flag--stacked')).toBe(true);
+  });
+
+  it('should apply additional media classes', () => {
+    const testClass = "testMedia";
+    const wrapper = shallow(
+      <SprkFlag
+        additionalMediaClasses={testClass}
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+        additionalClasses={testClass}
+      />
+    );
+    expect(wrapper.hasClass(testClass)).toBe(true);
+  });
+
+  it('should apply additional body classes', () => {
+    const testClass = "testBody";
+    const wrapper = shallow(
+      <SprkFlag
+        additionalBodyClasses={testClass}
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+        additionalClasses={testClass}
+      />
+    );
+    expect(wrapper.hasClass(testClass)).toBe(true);
   });
 
   it('should apply additional classes', () => {
     const testClass = "test";
     const wrapper = shallow(
-      <SprkFlag additionalClasses={testClass} />
+      <SprkFlag
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+        additionalClasses={testClass}
+      />
     );
     expect(wrapper.hasClass(testClass)).toBe(true);
   });
@@ -25,7 +103,15 @@ describe('SprkFlag:', () => {
   it('should apply idString', () => {
     const testId = "test";
     const wrapper = mount(
-      <SprkFlag idString={testId}/>
+      <SprkFlag
+        media={
+          <img
+              alt="Provide useful alternative text"
+              src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          />
+        }
+        idString={testId}
+      />
     );
     expect(wrapper.find('[data-id="test"]').length).toBe(1);
   });
